@@ -10,8 +10,8 @@ SCF 无服务器云函数 Demo 代码库
 |-- Go1-helloworld     文件夹名称，也作为demo名称，最好和serverless-cloud-function-application::application::name一致。
 |   |-- config.json    配置文件可以为config.json或者config.yaml 必选
 |   |-- main           对应的入口文件 必选
-|   |-- readme.md      readme 必选
-|   `-- license.txt    license文件 必选
+|   |-- readme.md      readme 非必选
+|   `-- license.txt    license文件 非必选
 ```
 
 注：对于java语言来说入口文件是jar包，对于golang语言来说入口文件必须是可执行文件。
