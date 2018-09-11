@@ -1,0 +1,36 @@
+{
+    "serverless-cloud-function-application": {
+        "application": {
+            "name": "Go1-helloworld",
+            "description": "this is a golang demo",
+            "readme": {
+                "file": "/readme.md",
+                "content": "this is a golang demo"
+            },
+            "license": {
+                "file": "/license.txt",
+                "content": "this is this application license info"
+            },
+            "author": {
+                "name": "tencent cloud serverless team"
+            },
+            "tags": [
+                "golang"
+            ],
+            "version": "1.0.0"
+        },
+        "functions": {
+            "name": "test-function",
+            "description": "first test function",
+            "handler": "main",
+            "memorySize": 128,
+            "timeout": 3,
+            "runtime": "Go1",
+            "codeObject": {
+                "codeFile": [
+                    "main"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "serverless-cloud-function-application": {
+        "application": {
+            "name": "Nodejs6.10-helloworld",
+            "description": "This is a Nodejs6.10 hello world",
+            "readme": {
+                "file": "/readme.md",
+                "content": "This is this application readme info"
+            },
+            "license": {
+                "file": "/license.txt",
+                "content": "This is this application license info"
+            },
+            "author": {
+                "name": "Tencent Cloud Serverless Team"
+            },
+            "tags": [
+                "nodejs"
+            ],
+            "version": "1.0.0"
+        },
+        "functions": {
+            "name": "hello world function",
+            "description": "Nodejs6.10 hello world function",
+            "handler": "index.main_handler",
+            "memorySize": 128,
+            "timeout": 3,
+            "runtime": "Nodejs6.10",
+            "codeObject": {
+                "codeFile": [
+                    "index.js"
+                ]
+            }
+        }
+    }
+}

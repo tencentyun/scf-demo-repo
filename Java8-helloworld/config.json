@@ -1,0 +1,36 @@
+{
+    "serverless-cloud-function-application": {
+        "application": {
+            "name": "Java8-helloworld",
+            "description": "this is a java demo",
+            "readme": {
+                "file": "/readme.md",
+                "content": "this is a java demo"
+            },
+            "license": {
+                "file": "/license.txt",
+                "content": "this is this application license info"
+            },
+            "author": {
+                "name": "tencent cloud serverless team"
+            },
+            "tags": [
+                "java"
+            ],
+            "version": "1.0.0"
+        },
+        "functions": {
+            "name": "test-function",
+            "description": "first test function",
+            "handler": "example.Hello::mainHandler",
+            "memorySize": 128,
+            "timeout": 3,
+            "runtime": "Java8",
+            "codeObject": {
+                "codeFile": [
+                    "java-demo-1.0.0"
+                ]
+            }
+        }
+    }
+}

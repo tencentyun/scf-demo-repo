@@ -1,0 +1,32 @@
+{
+  "serverless-cloud-function-application": {
+    "application": {
+      "name": "Php5.6-helloworld",
+      "description": "This is a Php5.6 hello world",
+      "readme": {
+        "file": "/readme.md",
+        "content": "This is this application readme info"
+      },
+      "license": {
+        "file": "/license.txt",
+        "content": "This is this application license info"
+      },
+      "author": {
+        "name": "Tencent Cloud Serverless Team"
+      },
+      "tags": ["php"],
+      "version": "1.0.0"
+    },
+    "functions": {
+      "name": "hello world function",
+      "description": "Php5.6 hello world function",
+      "handler": "index.main_handler",
+      "memorySize": 128,
+      "timeout": 3,
+      "runtime": "Php5",
+      "codeObject": {
+        "codeFile": ["index.php"]
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "serverless-cloud-function-application": {
+    "application": {
+      "name": "Nodejs8.9-helloworld",
+      "description": "This is a Nodejs8.9 hello world",
+      "readme": {
+        "file": "/readme.md",
+        "content": "This is this application readme info"
+      },
+      "license": {
+        "file": "/license.txt",
+        "content": "This is this application license info"
+      },
+      "author": {
+        "name": "Tencent Cloud Serverless Team"
+      },
+      "tags": ["nodejs"],
+      "version": "1.0.0"
+    },
+    "functions": {
+      "name": "hello world function",
+      "description": "Nodejs8.9 hello world function",
+      "handler": "index.main_handler",
+      "memorySize": 128,
+      "timeout": 3,
+      "runtime": "Nodejs8.9",
+      "codeObject": {
+        "codeFile": ["index.js"]
+      }
+    }
+  }
+}
