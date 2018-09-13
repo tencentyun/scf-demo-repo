@@ -2,7 +2,7 @@
   "serverless-cloud-function-application": {
     "application": {
       "name": "Php7.2-helloworld",
-      "description": "This is a Php7.2 hello world",
+      "description": "This is a Php7.2 helloworld",
       "readme": {
         "file": "/readme.md",
         "content": "This is this application readme info"
@@ -14,8 +14,8 @@
       "author": {
         "name": "Tencent Cloud Serverless Team"
       },
-      "tags": ["php"],
-      "version": "1.0.0"
+      "tags": ["helloworld","Php7","blankfunc"],
+      "version": "1.0.1"
     },
     "functions": {
       "name": "hello world function",

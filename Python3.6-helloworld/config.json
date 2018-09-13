@@ -2,7 +2,7 @@
   "serverless-cloud-function-application": {
     "application": {
       "name": "Python3.6-helloworld",
-      "description": "This is a Python3.6 hello world",
+      "description": "This is a Python3.6 helloworld",
       "readme": {
         "file": "/readme.md",
         "content": "This is this application readme info"
@@ -14,8 +14,8 @@
       "author": {
         "name": "Tencent Cloud Serverless Team"
       },
-      "tags": ["python"],
-      "version": "1.0.0"
+      "tags": ["helloworld","Python3.6","blankfunc"],
+      "version": "1.0.1"
     },
     "functions": {
       "name": "hello world function",

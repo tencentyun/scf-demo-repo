@@ -2,10 +2,10 @@
     "serverless-cloud-function-application": {
         "application": {
             "name": "Java8-helloworld",
-            "description": "this is a java demo",
+            "description": "this is a Java8 helloworld",
             "readme": {
                 "file": "/readme.md",
-                "content": "this is a java demo"
+                "content": "this is a Java8 helloworld"
             },
             "license": {
                 "file": "/license.txt",
@@ -14,10 +14,8 @@
             "author": {
                 "name": "tencent cloud serverless team"
             },
-            "tags": [
-                "java"
-            ],
-            "version": "1.0.0"
+            "tags": ["helloworld","Java8","blankfunc"],
+            "version": "1.0.1"
         },
         "functions": {
             "name": "test-function",

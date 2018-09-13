@@ -2,7 +2,7 @@
     "serverless-cloud-function-application": {
         "application": {
             "name": "Nodejs6.10-helloworld",
-            "description": "This is a Nodejs6.10 hello world",
+            "description": "This is a Nodejs6.10 helloworld",
             "readme": {
                 "file": "/readme.md",
                 "content": "This is this application readme info"
@@ -14,10 +14,8 @@
             "author": {
                 "name": "Tencent Cloud Serverless Team"
             },
-            "tags": [
-                "nodejs"
-            ],
-            "version": "1.0.0"
+            "tags": ["helloworld","Nodejs6.10","blankfunc"],
+            "version": "1.0.1"
         },
         "functions": {
             "name": "hello world function",
