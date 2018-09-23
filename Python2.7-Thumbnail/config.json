@@ -1,0 +1,32 @@
+{
+  "serverless-cloud-function-application": {
+    "application": {
+      "name": "Python2.7-Thumbnail",
+      "description": "This is a Python2.7 图片压缩函数",
+      "readme": {
+        "file": "/readme.md",
+        "content": "This is this application readme info"
+      },
+      "license": {
+        "file": "/license.txt",
+        "content": "This is this application license info"
+      },
+      "author": {
+        "name": "Tencent Cloud Serverless Team"
+      },
+      "tags": ["Thumbnail","Python2.7","图片压缩"],
+      "version": "1.0.1"
+    },
+    "functions": {
+      "name": "Thumbnail",
+      "description": "Python2.7 从COS下载图片并实现压缩",
+      "handler": "Thumbnail.main_handler",
+      "memorySize": 128,
+      "timeout": 3,
+      "runtime": "Python2.7",
+      "codeObject": {
+        "codeFile": ["Thumbnail.py"]
+      }
+    }
+  }
+}
