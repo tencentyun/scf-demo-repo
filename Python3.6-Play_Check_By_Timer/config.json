@@ -1,0 +1,32 @@
+{
+  "serverless-cloud-function-application": {
+    "application": {
+      "name": "Python3.6-Play_Check_By_Timer",
+      "description": "This is a Python3.6 拨测告警函数",
+      "readme": {
+        "file": "/readme.md",
+        "content": "This is this application readme info"
+      },
+      "license": {
+        "file": "/license.txt",
+        "content": "This is this application license info"
+      },
+      "author": {
+        "name": "Tencent Cloud Serverless Team"
+      },
+      "tags": ["Play_Check","Python2.7","blankfunc"],
+      "version": "1.0.1"
+    },
+    "functions": {
+      "name": "Play_Check_By_Timer",
+      "description": "Python3.6 定时拨测URL并发送告警",
+      "handler": "Play_Check_By_Timer.main_handler",
+      "memorySize": 128,
+      "timeout": 10,
+      "runtime": "Python3.6",
+      "codeObject": {
+        "codeFile": ["Play_Check_By_Timer.py"]
+      }
+    }
+  }
+}
