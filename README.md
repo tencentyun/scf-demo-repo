@@ -22,7 +22,7 @@ SCF 无服务器云函数 Demo 代码库
 {
     "serverless-cloud-function-application": {
         "application": {
-            "name": "Go1-helloworld",                                   应用名称,如果是java demo的话，必须和jar文件的名称一致，其他语言不做限制。前台需要展示，请认真填写，名称要具有一定的意义
+            "name": "Go1-helloworld",                                   应用名称,如果是java demo的话，必须和jar文件的名称一致，其他语言不做限制。前台需要展示，请认真填写，名称要具有一定的意义，不支持中文。
             "description": "this is a golang demo balabala",            应用描述，主要是介绍该应用的用途、涉及到的关键技术等，用户可以通过该关键字搜索  前台需要展示，请认真填写
             "readme": {
                 "file": "readme.md",                                    readme文件
@@ -36,14 +36,14 @@ SCF 无服务器云函数 Demo 代码库
                 "name": "tencent cloud serverless team"                 作者
             },
             "tags": [
-                "Go1"                                                   标签，如CMQ、timer、kafka、http等，用户可以通过该关键字搜索  前台需要展示，请认真填写
+                "Go1"                                                   标签，如CMQ、timer、kafka、http等，用户可以通过该关键字搜索  前台需要展示，请认真填写，不支持中文
             ],
             "version": "1.0.0"                                          版本号
         },
         "functions": {
             "name": "test-function",                                    函数名称
             "description": "first test function",                       函数描述
-            "handler": "main",                                          hander 如果是一段式的话，必须和对应的二进制文件名称一致，第一段不能使用readme、license、config；如果二段式的，第一段必须是对应的入口文件名，第一段不能使用readme、license、config；三段式的话，必须是对应的handler
+            "handler": "main",                                          hander 不支持中文，如果是一段式的话，必须和对应的二进制文件名称一致，第一段不能使用readme、license、config；如果二段式的，第一段必须是对应的入口文件名，第一段不能使用readme、license、config；三段式的话，必须是对应的handler
                                                                         一段式：golang，预制内容："main"
                                                                         二段式：python，nodejs，PHP，预制内容："index.main_handler"
                                                                         三段式：java，预制内容："example.Hello::mainHandler"
