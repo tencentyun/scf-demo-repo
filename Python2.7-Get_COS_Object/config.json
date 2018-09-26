@@ -14,7 +14,7 @@
       "author": {
         "name": "Tencent Cloud Serverless Team"
       },
-      "tags": ["COS触发","Python2.7","获取COS对象信息"],
+      "tags": ["COS","Python2.7","Get_COS_Object"],
       "version": "1.0.1"
     },
     "functions": {
