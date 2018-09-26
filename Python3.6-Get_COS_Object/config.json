@@ -1,0 +1,32 @@
+{
+  "serverless-cloud-function-application": {
+    "application": {
+      "name": "Python3.6-Get_COS_Object",
+      "description": "This is a Python3.6 从COS获取配置COS触发时的Object信息",
+      "readme": {
+        "file": "/readme.md",
+        "content": "This is this application readme info"
+      },
+      "license": {
+        "file": "/license.txt",
+        "content": "This is this application license info"
+      },
+      "author": {
+        "name": "Tencent Cloud Serverless Team"
+      },
+      "tags": ["COS触发","Python3.6","获取COS对象信息"],
+      "version": "1.0.1"
+    },
+    "functions": {
+      "name": "Get_COS_Object",
+      "description": "Python3.6 从COS获取配置COS触发时的Object信息",
+      "handler": "Get_COS_Object.main_handler",
+      "memorySize": 128,
+      "timeout": 3,
+      "runtime": "Python3.6",
+      "codeObject": {
+        "codeFile": ["Get_COS_Object.py"]
+      }
+    }
+  }
+}
