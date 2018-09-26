@@ -14,7 +14,7 @@
       "author": {
         "name": "Tencent Cloud Serverless Team"
       },
-      "tags": ["SendEmail","Python3.6","邮件发送"],
+      "tags": ["SendEmail","Python3.6","CMQ"],
       "version": "1.0.1"
     },
     "functions": {

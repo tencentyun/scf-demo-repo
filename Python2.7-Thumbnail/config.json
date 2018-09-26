@@ -14,7 +14,7 @@
       "author": {
         "name": "Tencent Cloud Serverless Team"
       },
-      "tags": ["Thumbnail","Python2.7","图片压缩"],
+      "tags": ["Thumbnail","Python2.7","COS"],
       "version": "1.0.1"
     },
     "functions": {
