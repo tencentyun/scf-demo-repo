@@ -15,7 +15,7 @@
         "name": "Tencent Cloud Serverless Team"
       },
       "tags": ["Thumbnail","Python2.7","COS"],
-      "version": "1.0.1"
+      "version": "1.0.2"
     },
     "functions": {
       "name": "Thumbnail",
