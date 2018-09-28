@@ -13,12 +13,12 @@ import logging
 
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 
-appid = 1256608914  # 请替换为您的 APPID
-secret_id = u'AKIDqeHm8Jn8mEYhgWkhOwJUUj4KQPDpqj3C'  # 请替换为您的 SecretId
-secret_key = u'75rRuGRSHtKvTwMgsvnwxmTyJSODrMkx'  # 请替换为您的 SecretKey
+appid = XXXXXX  # 请替换为您的 APPID
+secret_id = u'**************'  # 请替换为您的 SecretId
+secret_key = u'*************'  # 请替换为您的 SecretKey
 region = u'ap-shanghai'                           # 请替换为您bucket 所在的地域
 token = ''
-resized_bucket = 'photo-resized-1256608914'         # 请替换为您用于存放压缩后图片的bucket
+resized_bucket = 'XXXXXX'         # 请替换为您用于存放压缩后图片的bucket
 
 config = CosConfig(Secret_id=secret_id, Secret_key=secret_key, Region=region, Token=token)
 client = CosS3Client(config)
