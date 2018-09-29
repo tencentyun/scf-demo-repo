@@ -2,15 +2,7 @@
   "serverless-cloud-function-application": {
     "application": {
       "name": "Python2.7-SendEmail_By_CMQ",
-      "description": "This is a Python2.7 通过CMQ发送邮件",
-      "readme": {
-        "file": "/readme.md",
-        "content": "This is this application readme info"
-      },
-      "license": {
-        "file": "/license.txt",
-        "content": "This is this application license info"
-      },
+      "description": "本示例通过接收 CMQ 消息队列中指定格式的消息，并根据消息内容向指定的邮箱发送邮件。",
       "author": {
         "name": "Tencent Cloud Serverless Team"
       },
@@ -19,7 +11,7 @@
     },
     "functions": {
       "name": "SendEmail",
-      "description": "Python2.7 通过CMQ发送邮件",
+      "description": "通过CMQ发送邮件",
       "handler": "sendemail.main_handler",
       "memorySize": 128,
       "timeout": 3,

@@ -2,15 +2,7 @@
   "serverless-cloud-function-application": {
     "application": {
       "name": "Python2.7-Get_COS_Object",
-      "description": "This is a Python2.7 从COS获取配置COS触发时的Object信息",
-      "readme": {
-        "file": "/readme.md",
-        "content": "This is this application readme info"
-      },
-      "license": {
-        "file": "/license.txt",
-        "content": "This is this application license info"
-      },
+      "description": "从COS获取配置COS触发时的Object信息",
       "author": {
         "name": "Tencent Cloud Serverless Team"
       },
@@ -19,7 +11,7 @@
     },
     "functions": {
       "name": "Get_COS_Object",
-      "description": "Python2.7 从COS获取配置COS触发时的Object信息",
+      "description": "从COS获取配置COS触发时的Object信息",
       "handler": "Get_COS_Object.main_handler",
       "memorySize": 128,
       "timeout": 3,

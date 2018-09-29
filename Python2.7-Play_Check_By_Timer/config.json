@@ -2,15 +2,7 @@
   "serverless-cloud-function-application": {
     "application": {
       "name": "Python2.7-Play_Check_By_Timer",
-      "description": "This is a Python2.7 拨测告警函数",
-      "readme": {
-        "file": "/readme.md",
-        "content": "This is this application readme info"
-      },
-      "license": {
-        "file": "/license.txt",
-        "content": "This is this application license info"
-      },
+      "description": "定时拨测 URL 列表中的地址，并通过邮件发送告警。",
       "author": {
         "name": "Tencent Cloud Serverless Team"
       },
@@ -19,7 +11,7 @@
     },
     "functions": {
       "name": "Play_Check_By_Timer",
-      "description": "Python2.7 定时拨测URL并发送告警",
+      "description": "定时拨测URL并发送告警",
       "handler": "Play_Check_By_Timer.main_handler",
       "memorySize": 128,
       "timeout": 10,
