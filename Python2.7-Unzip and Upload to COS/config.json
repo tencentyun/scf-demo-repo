@@ -1,0 +1,32 @@
+{
+  "serverless-cloud-function-application": {
+    "application": {
+      "name": "Python2.7-unzip_to_cos",
+      "description": "上传到COS的ZIP包，使用SCF下载并本地解压，支持带密码解压，并把解压后的文件上传到COS另一个bucket中，您还可以扩充支持RAR包的解压",
+      "readme": {
+        "file": "/readme.md",
+        "content": "This is this application readme info"
+      },
+      "license": {
+        "file": "/license.txt",
+        "content": "This is this application license info"
+      },
+      "author": {
+        "name": "Tencent Cloud Serverless Team"
+      },
+      "tags": ["COS","Python2.7","unzip_to_cos"],
+      "version": "1.0.1"
+    },
+    "functions": {
+      "name": "unzip_to_cos",
+      "description": "Python2.7 上传到COS的ZIP包，使用SCF下载并本地解压，支持带密码解压，并把解压后的文件上传到COS另一个bucket中",
+      "handler": "unzip_to_cos.main_handler",
+      "memorySize": 128,
+      "timeout": 30,
+      "runtime": "Python2.7",
+      "codeObject": {
+        "codeFile": ["unzip_to_cos.py"]
+      }
+    }
+  }
+}
