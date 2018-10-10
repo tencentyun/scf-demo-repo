@@ -2,7 +2,7 @@
   "serverless-cloud-function-application": {
     "application": {
       "name": "Python2.7-Thumbnail",
-      "description": "This is a Python2.7 图片压缩函数",
+      "description": "本示例通过配置COS触发，自动下载COS bucket中的图片，并实现图片压缩",
       "readme": {
         "file": "/readme.md",
         "content": "This is this application readme info"
@@ -19,7 +19,7 @@
     },
     "functions": {
       "name": "Thumbnail",
-      "description": "Python2.7 从COS下载图片并实现压缩",
+      "description": "本示例通过配置COS触发，自动下载COS bucket中的图片，并实现图片压缩",
       "handler": "Thumbnail.main_handler",
       "memorySize": 128,
       "timeout": 3,

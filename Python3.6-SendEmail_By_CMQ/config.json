@@ -2,7 +2,7 @@
   "serverless-cloud-function-application": {
     "application": {
       "name": "Python3.6-SendEmail_By_CMQ",
-      "description": "This is a Python3.6 通过CMQ发送邮件",
+      "description": "本示例通过配置CMQ Topic触发实现邮件发送",
       "readme": {
         "file": "/readme.md",
         "content": "This is this application readme info"
@@ -19,7 +19,7 @@
     },
     "functions": {
       "name": "SendEmail",
-      "description": "Python3.6 通过CMQ发送邮件",
+      "description": "Python3.6 本示例通过配置CMQ Topic触发实现邮件发送",
       "handler": "sendemail.main_handler",
       "memorySize": 128,
       "timeout": 3,

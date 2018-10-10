@@ -2,7 +2,7 @@
   "serverless-cloud-function-application": {
     "application": {
       "name": "Python3.6-Get_COS_Object",
-      "description": "This is a Python3.6 从COS获取配置COS触发时的Object信息",
+      "description": "从COS获取配置COS触发时的Object信息",
       "readme": {
         "file": "/readme.md",
         "content": "This is this application readme info"

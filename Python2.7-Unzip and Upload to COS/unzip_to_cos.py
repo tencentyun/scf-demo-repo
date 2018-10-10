@@ -28,7 +28,6 @@ config = CosConfig(Secret_id=secret_id, Secret_key=secret_key, Region=region, To
 client = CosS3Client(config)
 logger = logging.getLogger()
 
-
 def delete_local_file(src):
     logger.info("delete files and folders")
     if os.path.isfile(src):
@@ -53,8 +52,6 @@ def upload_loacal_file(src, zipname):
         logger.info("path is [%s]" % path)
         if os.path.isfile(path):
             logger.info("filename is [%s]" % filename)
-            # unicode(filename, 'cp936').decode('utf-8')
-            # unicode(path, 'cp936').decode('utf-8')
             response = client.put_object_from_local_file(
                 Bucket=bucket_upload,
                 LocalFilePath=path,
@@ -126,14 +123,7 @@ def main_handler(event, context):
             # logger.info("Start to extract rar")
             # rf = rarfile.RarFile(download_path)
             # rf.extractall(path=unrar_path, members=None, pwd=password)
-
-            # logger.info("Start to upload")
-            # for f in rf.infolist():
-            #     logger.info("filename is [%s]" % f.filename)
-            #     response = client.put_object_from_local_file(
-            #     Bucket=bucket_upload,
-            #     LocalFilePath = '/tmp/unrar/{}'.format(f.filename),
-            #     Key='{}/{}'.format(shotname,f.filename) )
+            # upload_loacal_file('/tmp/unzip',shotname)
 
             # start to extract zip and upload to bucket_upload
             logger.info("Start to extract zip")
@@ -146,18 +136,6 @@ def main_handler(event, context):
                 listzipfilesinfo(download_path, unzip_path)
                 logger.info("Extract success")
                 upload_loacal_file('/tmp/unzip', shotname)
-                # try:
-                #     for filename in zf.namelist():
-                #         bytes=zf.read(filename)
-                #         rename = unicode(filename, 'cp936').decode('utf-8')
-                #         logger.info('File:[%s] Size:[%s]'%(rename,len(bytes)))
-                #         # unicode(file_info.filename,'cp936').encode("utf8")
-                #         # logger.info("filename is [%s]" % rename)
-                # finally:
-                #     # zf.extractall(unzip_path,None,password)
-                #     listzipfilesinfo(download_path,unzip_path)
-                #     zf.close()
-                #     upload_loacal_file(unzip_path,shotname)
             else:
                 delete_local_file(str(download_path))
                 return "Extract fail.This is not a zip file"
