@@ -1,0 +1,24 @@
+{
+  "serverless-cloud-function-application": {
+    "application": {
+      "name": "Python2.7-ES_curator_clear",
+      "description": "此示例通过使用 ElasticSearch curator 库，实现了 ES 索引的删除清理。可为其配置定时触发器后，定时执行并清理 ES 内索引。",
+      "author": {
+        "name": "Tencent Cloud Serverless Team"
+      },
+      "tags": ["elasticsearch","curator","python2.7","timer"],
+      "version": "1.0.0"
+    },
+    "functions": {
+      "name": "escurator",
+      "description": "此函数通过使用 ElasticSearch 的 curator 库，实现了 ES 索引的删除清理。",
+      "handler": "index.main_handler",
+      "memorySize": 128,
+      "timeout": 10,
+      "runtime": "Python2.7",
+      "codeObject": {
+        "codeFile": ["./*"]
+      }
+    }
+  }
+}

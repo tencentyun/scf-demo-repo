@@ -1,0 +1,24 @@
+{
+  "serverless-cloud-function-application": {
+    "application": {
+      "name": "Python2.7-ES_Write",
+      "description": "此示例通过使用ElasticSearch库，实现了将随机数写入ES。可为其配置定时触发器后，定时执行。",
+      "author": {
+        "name": "Tencent Cloud Serverless Team"
+      },
+      "tags": ["elasticsearch","python2.7","timer"],
+      "version": "1.0.0"
+    },
+    "functions": {
+      "name": "escurator",
+      "description": "此函数通过使用ElasticSearch库，实现了将随机数写入ES。可为其配置定时触发器后，定时执行。",
+      "handler": "index.main_handler",
+      "memorySize": 128,
+      "timeout": 10,
+      "runtime": "Python2.7",
+      "codeObject": {
+        "codeFile": ["./*"]
+      }
+    }
+  }
+}
