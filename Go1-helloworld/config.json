@@ -15,7 +15,7 @@
                 "name": "tencent cloud serverless team"
             },
             "tags": ["helloworld","Go1","blankfunc"],
-            "version": "1.0.1"
+            "version": "1.0.2"
         },
         "functions": {
             "name": "test-function",
