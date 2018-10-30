@@ -1,0 +1,32 @@
+{
+  "serverless-cloud-function-application": {
+    "application": {
+      "name": "Php7.2-ApiGateway",
+      "description": "本示例接收并处理来自API网关的请求.",
+      "readme": {
+        "file": "/readme.md",
+        "content": "本示例接收并处理来自API网关的请求。"
+      },
+      "license": {
+        "file": "/license.txt",
+        "content": "This is this application license info"
+      },
+      "author": {
+        "name": "Tencent Cloud Serverless Team"
+      },
+      "tags": ["ApiGateway","Php7"],
+      "version": "1.0.0"
+    },
+    "functions": {
+      "name": "Php7.2-ApiGateway function",
+      "description": "Php7.2-ApiGateway function",
+      "handler": "apigw.main_handler",
+      "memorySize": 128,
+      "timeout": 5,
+      "runtime": "Php7",
+      "codeObject": {
+        "codeFile": ["./*"]
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "serverless-cloud-function-application": {
+    "application": {
+      "name": "Php7.2-Sync_Backup",
+      "description": "此示例使用COS作为触发器，在用户上传文件到指定bucket时，将该文件复制到另一个用于备份的bucket存储",
+      "readme": {
+        "file": "/readme.md",
+        "content": "此示例使用COS作为触发器，在用户上传文件到指定bucket时，将该文件复制到另一个用于备份的bucket存储"
+      },
+      "license": {
+        "file": "/license.txt",
+        "content": "This is this application license info"
+      },
+      "author": {
+        "name": "Tencent Cloud Serverless Team"
+      },
+      "tags": ["COS","Php7","Backup"],
+      "version": "1.0.0"
+    },
+    "functions": {
+      "name": "Php7.2-Sync_Backup function",
+      "description": "Php7.2-Sync_Backup function",
+      "handler": "sync_backup.main_handler",
+      "memorySize": 128,
+      "timeout": 10,
+      "runtime": "Php7",
+      "codeObject": {
+        "codeFile": ["./*"]
+      }
+    }
+  }
+}

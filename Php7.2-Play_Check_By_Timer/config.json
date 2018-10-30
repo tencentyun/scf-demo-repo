@@ -1,0 +1,32 @@
+{
+  "serverless-cloud-function-application": {
+    "application": {
+      "name": "Php7.2-Play_Check_By_Timer",
+      "description": "定时拨测 URL 列表中的地址，并通过邮件发送告警。",
+      "readme": {
+        "file": "/readme.md",
+        "content": "定时拨测 URL 列表中的地址，并通过邮件发送告警。"
+      },
+      "license": {
+        "file": "/license.txt",
+        "content": "This is this application license info"
+      },
+      "author": {
+        "name": "Tencent Cloud Serverless Team"
+      },
+      "tags": ["Play_Check","Php7","Timer"],
+      "version": "1.0.0"
+    },
+    "functions": {
+      "name": "Php7.2-Play_Check_By_Timer function",
+      "description": "Php7.2-Play_Check_By_Timer function",
+      "handler": "play_check_by_timer.main_handler",
+      "memorySize": 128,
+      "timeout": 10,
+      "runtime": "Php7",
+      "codeObject": {
+        "codeFile": ["./*"]
+      }
+    }
+  }
+}
