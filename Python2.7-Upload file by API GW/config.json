@@ -1,0 +1,32 @@
+{
+  "serverless-cloud-function-application": {
+    "application": {
+      "name": "Python2.7-upload file to COS by API GW",
+      "description": "通过API网关上传文件到SCF，并由SCF实现写COS:上传文件的大小最好不要超过4MB",
+      "readme": {
+        "file": "/readme.md",
+        "content": "This is this application readme info"
+      },
+      "license": {
+        "file": "/license.txt",
+        "content": "This is this application license info"
+      },
+      "author": {
+        "name": "Tencent Cloud Serverless Team"
+      },
+      "tags": ["COS","Python2.7","unzip_to_cos"],
+      "version": "1.0.1"
+    },
+    "functions": {
+      "name": "unzip_to_cos",
+      "description": "Python2.7 通过API网关上传文件到SCF，并由SCF实现写COS:上传文件的大小最好不要超过4MB",
+      "handler": "upload_file_to_COS_by_APIGW.main_handler",
+      "memorySize": 128,
+      "timeout": 30,
+      "runtime": "Python2.7",
+      "codeObject": {
+        "codeFile": ["upload_file_to_COS_by_APIGW.py"]
+      }
+    }
+  }
+}
