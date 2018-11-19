@@ -3,10 +3,13 @@ import os
 import logging
 import datetime
 import base64
+import requests
 from qcloud_cos_v5 import CosConfig
 from qcloud_cos_v5 import CosS3Client
 from qcloud_cos_v5 import CosServiceError
 from qcloud_cos_v5 import CosClientError
+from qcloud_image import Client
+from qcloud_image import CIUrl, CIFile, CIBuffer, CIUrls, CIFiles, CIBuffers
 import sys
 
 print('Loading function')
@@ -18,7 +21,7 @@ secret_id = u'**************'  # 请替换为您的 SecretId
 secret_key = u'*************'  # 请替换为您的 SecretKey
 region = u'ap-shanghai'        # 请替换为您函数所在的地域
 token = ''
-bucket_upload = 'test-ai-mason-1256608914' # 请替换为您要用来存放文件的bucket名
+bucket_upload = 'test-ai-mason-1256608914' # 请替换为您要用来存放图片的bucket名
 
 config = CosConfig(Secret_id=secret_id, Secret_key=secret_key, Region=region, Token=token)
 client_cos = CosS3Client(config)
@@ -63,12 +66,23 @@ def main_handler(event, context):
         Key='{}'.format(file_name))
     logger.info("upload to cos result is : %s" % res_cos)
 
+    # start to detection
+    logger.info("Start to detection")
+    client_ai = Client(appid, secret_id, secret_key,bucket_upload)
+    client_ai.use_http()
+    client_ai.set_timeout(30)
+    res_ai = client_ai.word_detect(CIFile(local_path))
+    res_text = "  "
+    print len(res_ai["data"]["items"])
+    for i in range(len(res_ai["data"]["items"])):
+        res_text = res_text + str(res_ai["data"]["items"][i]["itemstring"].encode('utf-8'))
+
     delete_local_file(local_path)
     response = {
         "isBase64": False,
         "statusCode": 200,
         "headers": {"Content-Type": "text", "Access-Control-Allow-Origin": "*"},
-        "body": "Upload to COS success"
+        "body": res_text
     }
 
     return response

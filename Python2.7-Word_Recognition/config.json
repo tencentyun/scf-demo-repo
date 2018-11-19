@@ -2,8 +2,8 @@
   "serverless-cloud-function-application": {
     "application":{
       "Chinese":{
-        "name": "通过API网关上传文件",
-        "description": "本示例使用 API 网关触发器和云函数快速构建web后台，实现从前端通过API上传文件到云函数，并下载文件到云函数的本地目录/tmp，然后上传到COS bucket",
+        "name": "图片转文字",
+        "description": "本示例使用 API 网关触发器和云函数快速构建web后台，实现图片中文字识别的功能；用户通过 API 网关上传图片文件，上传后的文件会保存在COS，并调用AI接口实现文字识别，把结果返回前端",
         "attention": "该云函数使用了API 网关触发器，并使用了集成响应功能，返回值需要构造为Json格式；另外在使用本示例代码时需要在函数里修改用户的appid、secret_id、secret_key",
         "readme": {
             "file": "",
@@ -18,9 +18,9 @@
         }
       },
       "English":{
-        "name": "upload_file_to_COS_by_APIGW",
-        "description": "This demo uses API GW trigger and SCF to build WEB backend service.It can upload object to SCF by API GW",
-        "attention": "This demo has been used api gw and integrated response function. So the return value should be json format based on the requirement.And please rember to change the appid,secret_id,secret_key",
+        "name": "Word_Recognition",
+        "description": "This demo uses API GW trigger and SCF to build WEB backend service.It can realize word recognition from picture",
+        "attention": "This demo has been used api gw and integrated response function. So the return value should be json format based on the requirement",
         "readme": {
             "file": "",  // readme file
             "content": ""  //content of readme
@@ -42,21 +42,21 @@
             "isBase64": False,
             "statusCode": 200,
             "headers": {"Content-Type": "text", "Access-Control-Allow-Origin": "*"},
-            "body": "Upload to COS success" //the content of word recognition
+            "body": res_text  //the content of word recognition
           }
         },
-      "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-Upload file by API GW",  //demo的git下载链接
+      "download_address":"demo的git下载链接",  //demo的git下载链接
       "tags":[
-              "apigw", "Python2.7", "upload"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
+              "apigw", "Python2.7", "Word_Recognition"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.0.3"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+      "version": "1.0.1"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
-      "name": "upload_file_to_COS_by_APIGW",  // 函数名称，只支持英文
-      "description": "本示例使用 API 网关触发器和云函数快速构建web后台，实现从前端通过API上传文件到云函数，并下载文件到云函数的本地目录/tmp，然后上传到COS bucket",
-      "handler":"upload_file_to_COS_by_APIGW.main_handler",
+      "name": "Word_Recognition",  // 函数名称，只支持英文
+      "description": "本示例使用 API 网关触发器和云函数快速构建web后台，实现图片中文字识别的功能；用户通过 API 网关上传图片文件，上传后的文件会保存在COS，并调用AI接口实现文字识别，把结果返回前端",
+      "handler":"Word_Recognition.main_handler",
       "memorySize": 128,  // 运行配置内存
-      "timeout": 30,  // 运行超时时间
+      "timeout": 3,  // 运行超时时间
       "runtime": "Python2.7", //运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
       "Environment":{
       },      // 可选，用于定义环境变量
@@ -74,10 +74,10 @@
       },      // 可选， 用于配置云函数访问 VPC 私有网络。
       "codeObject": {
           "codeFile": [
-              "upload_file_to_COS_by_APIGW.py"
+              "Word_Recognition.py"
           ],
           "CodeUri":[     // 代码下载地址，和download_address保持一致
-              "https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-Upload file by API GW"
+              ""
           ]
       }
     }
