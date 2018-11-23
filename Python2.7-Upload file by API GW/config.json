@@ -39,7 +39,7 @@
         },
         "output parameters":{
           "response":{
-            "isBase64": False,
+            "isBase64Encoded": False,
             "statusCode": 200,
             "headers": {"Content-Type": "text", "Access-Control-Allow-Origin": "*"},
             "body": "Upload to COS success" //the content of word recognition

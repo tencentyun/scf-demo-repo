@@ -79,7 +79,7 @@ def main_handler(event, context):
 
     delete_local_file(local_path)
     response = {
-        "isBase64": False,
+        "isBase64Encoded": False,
         "statusCode": 200,
         "headers": {"Content-Type": "text", "Access-Control-Allow-Origin": "*"},
         "body": res_text
