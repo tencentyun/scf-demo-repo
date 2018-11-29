@@ -37,7 +37,7 @@
         },
         "output parameters":{
           "response":{
-            "isBase64Encoded": false,
+            "isBase64Encoded": "False",
             "statusCode": 200,
             "headers": {"Content-Type": "text/html"},
             "body": "$content" //the content of return msg

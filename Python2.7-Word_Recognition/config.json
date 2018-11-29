@@ -39,10 +39,10 @@
         },
         "output parameters":{
           "response":{
-            "isBase64Encoded": False,
+            "isBase64Encoded": "False",
             "statusCode": 200,
             "headers": {"Content-Type": "text", "Access-Control-Allow-Origin": "*"},
-            "body": res_text  //the content of word recognition
+            "body": "res_text"  //the content of word recognition
           }
         },
       "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-Word_Recognition",  //demo的git下载链接

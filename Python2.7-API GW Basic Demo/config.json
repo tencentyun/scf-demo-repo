@@ -39,7 +39,7 @@
         },
         "output parameters":{
           "response":{
-            "isBase64Encoded": False,
+            "isBase64Encoded": "False",
             "statusCode": 200,
             "headers": {"Content-Type": "text", "Access-Control-Allow-Origin": "*"},
             "body": "API GW Test Success" //the content of word recognition
