@@ -35,7 +35,7 @@
       },
       "input_parameters":{
         },
-        "output parameters":{
+        "output_parameters":{
           "response":{
             "isBase64Encoded": "False",
             "statusCode": 200,

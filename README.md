@@ -74,7 +74,7 @@ python
     },
     "input_parameters":{
     },    #the description of input parameters.
-    "output_parameters":{        #the description of output parameters.
+    "output_parameters":{        #the description of output_parameters.
         {
             "isBase64": False,
             "statusCode": 200,

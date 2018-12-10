@@ -35,7 +35,7 @@
       },
       "input_parameters":{
         },
-        "output parameters":{
+        "output_parameters":{
         },
       "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Nodejs8.9-helloworld",  //demo的git下载链接
       "tags":[
