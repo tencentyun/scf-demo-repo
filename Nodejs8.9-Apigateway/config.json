@@ -1,0 +1,81 @@
+{
+  "serverless-cloud-function-application": {
+    "application": {
+      "Chinese": {
+        "name": "API 网关基础示例",
+        "description": "本示例主要演示当配置 API 网关触发器的时候，怎样去构造返回的 json 数据结构",
+        "attention": "无",
+        "readme": {
+          "file": "",
+          "content": ""
+        },
+        "license": {
+          "file": "",
+          "content": "公开"
+        },
+        "author": {
+          "name": "腾讯云无服务器云函数团队"
+        }
+      },
+      "English": {
+        "name": "API_GW_Basic_Demo",
+        "description": "This demo is mainly to show how to build return value",
+        "attention": "No",
+        "readme": {
+          "file": "", // readme file
+          "content": "" //content of readme
+        },
+        "license": {
+          "file": "", // license file
+          "content": "Open" //content of license
+        },
+        "author": {
+          "name": "Tencent Cloud Serverless Team" // author
+        }
+      },
+      "input_parameters": {},
+      "output_parameters": {
+        "response": {
+          "isBase64Encoded": "False",
+          "statusCode": 200,
+          "headers": { "Content-Type": "text/html" },
+          "body": "$content" //the content of return msg
+        }
+      },
+      "download_address": "https://github.com/tencentyun/scf-demo-repo/tree/master/Nodejs8.9-Apigateway", //demo的git下载链接
+      "tags": [
+        "Nodejs8.9",
+        "API GW",
+        "API" // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
+      ],
+      "version": "1.0.5" //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+    },
+    "functions": {
+      "name": "API_GW_Basic_Demo", // 函数名称，只支持英文
+      "description": "本示例主要演示当配置 API 网关触发器的时候，怎样去构造返回的 json 数据结构",
+      "handler": "index.main_handler",
+      "memorySize": 128, // 运行配置内存
+      "timeout": 3, // 运行超时时间
+      "runtime": "Nodejs8.9", //运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
+      "Environment": {}, // 可选，用于定义环境变量
+      "Events": {
+        "Type": "TencentCloud::Serverless::Api",
+        "Properties": {
+          "Path": "/Word_Recognition",
+          "StageName": "release",
+          "HttpMethod": "ANY",
+          "ServiceName": "SCF_API_SERVICE",
+          "Auth": "FALSE" //"FALSE"表示免鉴权，“TRUE”表示需要秘钥对
+        }
+      }, // 可选，用于定义触发此函数的事件源
+      "VpcConfig": {}, // 可选， 用于配置云函数访问 VPC 私有网络。
+      "codeObject": {
+        "codeFile": ["index.js"],
+        "CodeUri": [
+          // 代码下载地址，和download_address保持一致
+          "https://github.com/tencentyun/scf-demo-repo/tree/master/Nodejs8.9-Apigateway"
+        ]
+      }
+    }
+  }
+}
