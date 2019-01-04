@@ -34,11 +34,11 @@
         }
       },
       "input_parameters":{
-          "event":"",
-          "context":""
-        },
-        "output_parameters":{
-        },
+        "event":"",
+        "context":""
+      },
+      "output_parameters":{
+      },
       "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-Ckafca_SCF_COS",  //demo的git下载链接
       "tags":[
               "Ckafka", "Python2.7", "COS"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文

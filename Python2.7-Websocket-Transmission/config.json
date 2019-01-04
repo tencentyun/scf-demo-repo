@@ -2,9 +2,9 @@
   "serverless-cloud-function-application": {
     "application":{
       "Chinese":{
-        "name": "API网关触发器基础范例",
-        "description": "本示例演示 API 网关使用的基础方法，主要展示在集成响应下（通过云函数控制台创建的API网关触发器默认启用集成响应），怎样构造返回值",
-        "attention": "该云函数使用了API 网关触发器，并使用了集成响应功能，返回值需要构造为Json格式",
+        "name": "Websocket传输函数",
+        "description": "本示例基于 API 网关实现websocket功能，API网关和云函数一起构成websocket的Server端，由API网关承载和Client端的长连接。websocket一共需要3类函数承载，分别是注册函数、传输函数和清理函数，本函数为传输函数。",
+        "attention": "在使用本示例时，请在控制台上更改 API 网关的反向推送地址，数据库相关信息等。详情请参考【产品文档-》操作指南-》API网关触发器-》Websocket】",
         "readme": {
             "file": "",
             "content": ""
@@ -18,9 +18,9 @@
         }
       },
       "English":{
-        "name": "APIGW Basic Demo",
-        "description": "This demo uses API GW trigger and SCF to build WEB backend service.It is mainly to show how to build return value",
-        "attention": "This demo has been used api gw and integrated response function. So the return value should be json format based on the requirement.",
+        "name": "Websocket_Transmission_Demo",
+        "description": "This demo uses API GW and SCF to build websocket. This is transmission function",
+        "attention": "API GW and SCF together build websocket server",
         "readme": {
             "file": "",  // readme file
             "content": ""  //content of readme
@@ -34,50 +34,43 @@
         }
       },
       "input_parameters":{
-          "event":"",
-          "context":""
-        },
-        "output_parameters":{
-          "response":{
-            "isBase64Encoded": "False",
-            "statusCode": 200,
-            "headers": {"Content-Type": "text", "Access-Control-Allow-Origin": "*"},
-            "body": "API GW Test Success" //the content of word recognition
+        "event":{
+          "websocket":{
+            "action":"data recv",
+            "secConnectionID":"xawexasdfewezdfsdfeasdfffa==",
+            "dataType":"text",
+            "data":"xxx"
           }
         },
-      "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-API GW Basic Demo",  //demo的git下载链接
+        "context":""
+      },
+      "output_parameters":{
+      },
+      "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-Websocket-Transmission",  //demo的git下载链接
       "tags":[
-              "apigw", "Python2.7", "basic"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
+              "apigw", "Python2.7", "websocket"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.0.5"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+      "version": "1.1"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
-      "name": "api_gw_basic_demo",  // 函数名称，只支持英文
-      "description": "本示例演示 API 网关使用的基础方法，主要展示在集成响应下（通过云函数控制台创建的API网关触发器默认启用集成响应），怎样构造返回值",
-      "handler":"api_gw_basic_demo.main_handler",
+      "name": "websocket_transmission",  // 函数名称，只支持英文
+      "description": "本示例基于 API 网关实现websocket功能，API网关和云函数一起构成websocket的Server端，由API网关承载和Client端的长连接。websocket一共需要3类函数承载，分别是注册函数、传输函数和清理函数，本函数为传输函数。",
+      "handler":"websocket_transmission.main_handler",
       "memorySize": 128,  // 运行配置内存
       "timeout": 3,  // 运行超时时间
       "runtime": "Python2.7", //运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
       "Environment":{
       },      // 可选，用于定义环境变量
       "Events":{
-        "Type": "TencentCloud::Serverless::Api",
-        "Properties":{
-          "Path": "/api_gw_basic_demo",
-          "StageName": "release",
-          "HttpMethod": "ANY",
-          "ServiceName":"SCF_API_SERVICE",
-          "Auth":"FALSE" //"FALSE"表示免鉴权，“TRUE”表示需要秘钥对
-        }
       },      // 可选，用于定义触发此函数的事件源
       "VpcConfig":{
       },      // 可选， 用于配置云函数访问 VPC 私有网络。
       "codeObject": {
           "codeFile": [
-              "api_gw_basic_demo.py"
+              "websocket_transmission.py"
           ],
           "CodeUri":[     // 代码下载地址，和download_address保持一致
-              "https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-API GW Basic Demo"
+              "https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-Websocket-Transmission"
           ]
       }
     }

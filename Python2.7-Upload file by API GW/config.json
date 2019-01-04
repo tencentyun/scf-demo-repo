@@ -36,15 +36,15 @@
       "input_parameters":{
           "event":"",
           "context":""
-        },
-        "output_parameters":{
-          "response":{
-            "isBase64Encoded": "False",
-            "statusCode": 200,
-            "headers": {"Content-Type": "text", "Access-Control-Allow-Origin": "*"},
-            "body": "Upload to COS success" //the content of word recognition
-          }
-        },
+       },
+      "output_parameters":{
+        "response":{
+          "isBase64Encoded": "False",
+          "statusCode": 200,
+          "headers": {"Content-Type": "text", "Access-Control-Allow-Origin": "*"},
+          "body": "Upload to COS success" //the content of word recognition
+        }
+      },
       "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-Upload file by API GW",  //demo的git下载链接
       "tags":[
               "apigw", "Python2.7", "upload"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
