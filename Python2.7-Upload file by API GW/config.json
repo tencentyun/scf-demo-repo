@@ -1,31 +1,84 @@
 {
   "serverless-cloud-function-application": {
-    "application": {
-      "name": "Python2.7-upload file to COS by API GW",
-      "description": "通过API网关上传文件到SCF，并由SCF实现写COS:上传文件的大小最好不要超过4MB",
-      "readme": {
-        "file": "/readme.md",
-        "content": "This is this application readme info"
+    "application":{
+      "Chinese":{
+        "name": "通过API网关上传文件",
+        "description": "本示例使用 API 网关触发器和云函数快速构建web后台，实现从前端通过API上传文件到云函数，并下载文件到云函数的本地目录/tmp，然后上传到COS bucket",
+        "attention": "该云函数使用了API 网关触发器，并使用了集成响应功能，返回值需要构造为Json格式；另外在使用本示例代码时需要在函数里修改用户的appid、secret_id、secret_key",
+        "readme": {
+            "file": "",
+            "content": ""
+        },
+        "license": {
+            "file": "",
+            "content": "公开"
+        },
+        "author": {
+            "name": "腾讯云无服务器云函数团队"
+        }
       },
-      "license": {
-        "file": "/license.txt",
-        "content": "This is this application license info"
+      "English":{
+        "name": "upload_file_to_COS_by_APIGW",
+        "description": "This demo uses API GW trigger and SCF to build WEB backend service.It can upload object to SCF by API GW",
+        "attention": "This demo has been used api gw and integrated response function. So the return value should be json format based on the requirement.And please rember to change the appid,secret_id,secret_key",
+        "readme": {
+            "file": "",  // readme file
+            "content": ""  //content of readme
+        },
+        "license": {
+            "file": "",  // license file
+            "content": "Open"  //content of license
+        },
+        "author": {
+            "name": "Tencent Cloud Serverless Team"  // author
+        }
       },
-      "author": {
-        "name": "Tencent Cloud Serverless Team"
+      "input_parameters":{
+          "event":"",
+          "context":""
+       },
+      "output_parameters":{
+        "response":{
+          "isBase64Encoded": "False",
+          "statusCode": 200,
+          "headers": {"Content-Type": "text", "Access-Control-Allow-Origin": "*"},
+          "body": "Upload to COS success" //the content of word recognition
+        }
       },
-      "tags": ["COS","Python2.7","unzip_to_cos"],
-      "version": "1.0.1"
+      "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-Upload file by API GW",  //demo的git下载链接
+      "tags":[
+              "apigw", "Python2.7", "upload"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
+      ],
+      "version": "1.0.3"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
-      "name": "unzip_to_cos",
-      "description": "Python2.7 通过API网关上传文件到SCF，并由SCF实现写COS:上传文件的大小最好不要超过4MB",
-      "handler": "upload_file_to_COS_by_APIGW.main_handler",
-      "memorySize": 128,
-      "timeout": 30,
-      "runtime": "Python2.7",
+      "name": "upload_file_to_COS_by_APIGW",  // 函数名称，只支持英文
+      "description": "本示例使用 API 网关触发器和云函数快速构建web后台，实现从前端通过API上传文件到云函数，并下载文件到云函数的本地目录/tmp，然后上传到COS bucket",
+      "handler":"upload_file_to_COS_by_APIGW.main_handler",
+      "memorySize": 128,  // 运行配置内存
+      "timeout": 30,  // 运行超时时间
+      "runtime": "Python2.7", //运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
+      "Environment":{
+      },      // 可选，用于定义环境变量
+      "Events":{
+        "Type": "TencentCloud::Serverless::Api",
+        "Properties":{
+          "Path": "/Word_Recognition",
+          "StageName": "release",
+          "HttpMethod": "ANY",
+          "ServiceName":"SCF_API_SERVICE",
+          "Auth":"FALSE" //"FALSE"表示免鉴权，“TRUE”表示需要秘钥对
+        }
+      },      // 可选，用于定义触发此函数的事件源
+      "VpcConfig":{
+      },      // 可选， 用于配置云函数访问 VPC 私有网络。
       "codeObject": {
-        "codeFile": ["upload_file_to_COS_by_APIGW.py"]
+          "codeFile": [
+              "upload_file_to_COS_by_APIGW.py"
+          ],
+          "CodeUri":[     // 代码下载地址，和download_address保持一致
+              "https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-Upload file by API GW"
+          ]
       }
     }
   }

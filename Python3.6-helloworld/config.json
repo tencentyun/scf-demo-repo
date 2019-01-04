@@ -1,31 +1,70 @@
 {
   "serverless-cloud-function-application": {
-    "application": {
-      "name": "Python3.6-helloworld",
-      "description": "This is a Python3.6 helloworld",
-      "readme": {
-        "file": "/readme.md",
-        "content": "This is this application readme info"
+    "application":{
+      "Chinese":{
+        "name": "helloworld",
+        "description": "helloworld 空白模板函数",
+        "attention": "无",
+        "readme": {
+            "file": "",
+            "content": ""
+        },
+        "license": {
+            "file": "",
+            "content": "公开"
+        },
+        "author": {
+            "name": "腾讯云无服务器云函数团队"
+        }
       },
-      "license": {
-        "file": "/license.txt",
-        "content": "This is this application license info"
+      "English":{
+        "name": "helloworld",
+        "description": "This is helloworld function",
+        "attention": "No",
+        "readme": {
+            "file": "",  // readme file
+            "content": ""  //content of readme
+        },
+        "license": {
+            "file": "",  // license file
+            "content": "Open"  //content of license
+        },
+        "author": {
+            "name": "Tencent Cloud Serverless Team"  // author
+        }
       },
-      "author": {
-        "name": "Tencent Cloud Serverless Team"
+      "input_parameters":{
+        "event":"",
+        "context":""
       },
-      "tags": ["helloworld","Python3.6","blankfunc"],
-      "version": "1.0.1"
+      "output_parameters":{
+      },
+      "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Python3.6-helloworld",  //demo的git下载链接
+      "tags":[
+              "Python3.6", "helloworld"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
+      ],
+      "version": "1.0.2"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
-      "name": "hello world function",
-      "description": "Python3.6 hello world function",
-      "handler": "index.main_handler",
-      "memorySize": 128,
-      "timeout": 3,
-      "runtime": "Python3.6",
+      "name": "helloworld",  // 函数名称，只支持英文
+      "description": "helloworld 空白模板函数",
+      "handler":"index.main_handler",
+      "memorySize": 128,  // 运行配置内存
+      "timeout": 3,  // 运行超时时间
+      "runtime": "Python3.6", //运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
+      "Environment":{
+      },      // 可选，用于定义环境变量
+      "Events":{
+      },      // 可选，用于定义触发此函数的事件源
+      "VpcConfig":{
+      },      // 可选， 用于配置云函数访问 VPC 私有网络。
       "codeObject": {
-        "codeFile": ["index.py"]
+          "codeFile": [
+              "index.py"
+          ],
+          "CodeUri":[     // 代码下载地址，和download_address保持一致
+              "https://github.com/tencentyun/scf-demo-repo/tree/master/Python3.6-helloworld"
+          ]
       }
     }
   }
