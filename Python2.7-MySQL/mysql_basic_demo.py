@@ -19,45 +19,59 @@ logger.setLevel(level=logging.INFO)
 #更改时区为北京时区
 tz = pytz.timezone('Asia/Shanghai')
 
+g_connection = None
+g_connection_errno = 0;
+def connect_mysql():
+    global g_connection
+    global g_connection_errno
+    try:
+        g_connection = pymysql.connect(host=Host,
+                                     user=User,
+                                     password=Password,
+                                     port=Port,
+                                     db=DB,
+                                     charset='utf8',
+                                     cursorclass=pymysql.cursors.DictCursor)
+    except Exception as e:
+        g_connection = None
+        g_connection_errno = e[0]
+        print("connect database error:%s"%e)
+
 print("connect database")
-connection = pymysql.connect(host=Host,
-                             user=User,
-                             password=Password,
-                             port=Port,
-                             db=DB,
-                             charset='utf8',
-                             cursorclass=pymysql.cursors.DictCursor)
-
-
+connect_mysql()
 def main_handler(event, context):
     print('Start function')
     print("{%s}" % datetime.datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S"))
-    try:
-        with connection.cursor() as cursor:
-            sql = 'show databases'
-            cursor.execute(sql)
-            res = cursor.fetchall()
-            print res
+    print("g_connection is %s" % g_connection)
+    if not g_connection:
+        connect_mysql()
+        if not g_connection:
+            return {"code": 409, "errorMsg": "internal error %s" % g_connection_errno}
 
-            sql = 'use %s'%DB
-            cursor.execute(sql)
+    with g_connection.cursor() as cursor:
+        sql = 'show databases'
+        cursor.execute(sql)
+        res = cursor.fetchall()
+        print res
 
-            #创建数据表
-            cursor.execute("DROP TABLE IF EXISTS Test")
-            cursor.execute("CREATE TABLE Test (Msg TEXT NOT NULL,Time Datetime)")
+        sql = 'use %s'%DB
+        cursor.execute(sql)
 
-            time = datetime.datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S")
-            sql = "insert INTO Test (`Msg`, `Time`) VALUES (%s, %s)"
-            cursor.execute(sql, ("test", time))
-            connection.commit()
+        #创建数据表
+        cursor.execute("DROP TABLE IF EXISTS Test")
+        cursor.execute("CREATE TABLE Test (Msg TEXT NOT NULL,Time Datetime)")
 
-            sql = "select count(*) from Test"
-            cursor.execute(sql)
-            result = cursor.fetchall()
-            print(result)
+        time = datetime.datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S")
+        sql = "insert INTO Test (`Msg`, `Time`) VALUES (%s, %s)"
+        cursor.execute(sql, ("test", time))
+        g_connection.commit()
 
-    finally:
-        connection.close()
+        sql = "select count(*) from Test"
+        cursor.execute(sql)
+        result = cursor.fetchall()
+        print(result)
+    cursor.close()
+
 
     print("{%s}" % datetime.datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S"))
 
