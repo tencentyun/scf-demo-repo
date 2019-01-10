@@ -47,6 +47,10 @@ def delete_local_file(src):
 
 def main_handler(event, context):
     logger.info("start main handler")
+    if "requestContext" not in event.keys():
+        return {"code": 410, "errorMsg": "event is not come from api gateway"}
+    if event["body"] == "":
+        return {"code": 412, "errorMsg": "there is no file from api gateway"}
 
     # save api gateway file to local temp file
     logger.info("Start to download images from APIGW")
