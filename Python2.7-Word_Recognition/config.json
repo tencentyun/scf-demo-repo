@@ -56,7 +56,7 @@
       "description": "本示例使用 API 网关触发器和云函数快速构建web后台，实现图片中文字识别的功能；用户通过 API 网关上传图片文件，上传后的文件会保存在COS，并调用AI接口实现文字识别，把结果返回前端",
       "handler":"Word_Recognition.main_handler",
       "memorySize": 128,  // 运行配置内存
-      "timeout": 3,  // 运行超时时间
+      "timeout": 10,  // 运行超时时间
       "runtime": "Python2.7", //运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
       "Environment":{
       },      // 可选，用于定义环境变量
