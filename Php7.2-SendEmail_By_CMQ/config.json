@@ -4,7 +4,7 @@
       "Chinese":{
         "name": "通过消息队列发送邮件",
         "description": "本示例通过接收 CMQ 消息队列中指定格式的消息，并根据消息内容向指定的邮箱发送邮件",
-        "attention": "需要配置 CMQ 触发器、配置发送邮箱、修改接收邮件的邮箱列表；注意CMQ的消息体结构",
+        "attention": "需要配置 CMQ 触发器、配置发送邮箱、修改接收邮件的邮箱列表，注意CMQ的消息体结构",
         "readme": {
             "file": "",
             "content": ""
@@ -34,7 +34,7 @@
         }
       },
       "input_parameters":{
-        //CMQ Topic中的消息体结构：
+        //CMQ Topic中的消息体结构
           "event":{
             "fromAddr":"xxx@qq.com",
             "toAddr":"xxx@qq.com",
