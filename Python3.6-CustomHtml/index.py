@@ -2,12 +2,12 @@
 # -*- coding:utf-8 -*-
 
 def render_template(html, keys={}):
-    for k, v in keys.iteritems():
+    for k, v in keys.items():
         html = html.replace("${" + k + "}", v)
     return html
 
 def main_handler(event, context):
-    f = open("./index.html")
+    f = open("./index.html",encoding='utf-8')
     html = f.read()
     keys = {
         "master": "腾讯云云函数团队", # 您的名称
