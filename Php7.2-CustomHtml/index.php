@@ -17,7 +17,7 @@ function main_handler($event, $context) {
     $html = fread($fileHandle, filesize($filePath));
 
     $html = renderTpl($html,[
-        "master"=> '深圳腾讯科技公司', // 您的名称
+        "master"=> '腾讯云云函数团队', // 您的名称
         "centralCouplet"=> '年年有余', // 横批
         "upCouplet"=> '千年迎新春', // 上联
         "downCouplet"=> '瑞雪兆丰年' // 下联
