@@ -1,19 +1,16 @@
 <?php
 
-$gl = 1;
-
 function renderTpl($tpl,$variables){
     foreach ($variables as $key => $value) {
         $regex = '/\$\{'.$key.'\}/';
         $tpl = preg_replace($regex,$value,$tpl);
     }
-    echo $tpl;
     return $tpl;
 }
 
 function main_handler($event, $context) {
-    $filePath = dirname(__FILE__)."/index.html";
-    $fileHandle = fopen($filePath, "a+");
+    $file_path = __DIR__."/index.html";
+    $fileHandle = fopen($filePath, "r");
     $html = fread($fileHandle, filesize($filePath));
 
     $html = renderTpl($html,[
