@@ -37,11 +37,11 @@
         },
         "output_parameters":{
         },
-      "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Php7.2-Play_Check_By_Timer",  //demo的git下载链接
+      "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Php7-Play_Check_By_Timer",  //demo的git下载链接
       "tags":[
-              "url","Php7.2","Timer"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
+              "url","Php7","Timer"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.0.5"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+      "version": "1.1"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
       "name": "dial_url_by_timer",  // 函数名称，只支持英文
@@ -49,7 +49,7 @@
       "handler":"dial_url_by_timer.main_handler",
       "memorySize": 128,  // 运行配置内存
       "timeout": 10,  // 运行超时时间
-      "runtime": "Php7.2", //运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
+      "runtime": "Php7", //运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
       "Environment":{
       },      // 可选，用于定义环境变量
       "Events":{
@@ -66,7 +66,7 @@
               "dial_url_by_timer.php"
           ],
           "CodeUri":[     // 代码下载地址，和download_address保持一致
-              "https://github.com/tencentyun/scf-demo-repo/tree/master/Php7.2-Play_Check_By_Timer"
+              "https://github.com/tencentyun/scf-demo-repo/tree/master/Php7-Play_Check_By_Timer"
           ]
       }
     }

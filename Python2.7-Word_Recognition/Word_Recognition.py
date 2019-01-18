@@ -3,7 +3,6 @@ import os
 import logging
 import datetime
 import base64
-import requests
 from qcloud_cos_v5 import CosConfig
 from qcloud_cos_v5 import CosS3Client
 from qcloud_cos_v5 import CosServiceError
@@ -15,17 +14,18 @@ import sys
 print('Loading function')
 
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
-
-appid = '1256608914'  # 请替换为您的 APPID
-secret_id = u'**************'  # 请替换为您的 SecretId
-secret_key = u'*************'  # 请替换为您的 SecretKey
-region = u'ap-shanghai'        # 请替换为您函数所在的地域
-token = ''
-bucket_upload = 'test-ai-mason-1256608914' # 请替换为您要用来存放图片的bucket名
-
-config = CosConfig(Secret_id=secret_id, Secret_key=secret_key, Region=region, Token=token)
-client_cos = CosS3Client(config)
 logger = logging.getLogger()
+logger.setLevel(level=logging.INFO)
+
+appid = os.environ.get('appid')  # 请在函数配置中添加环境变量appid，并填入您的 APPID
+secret_id = os.environ.get('secret_id')  # 请在函数配置中添加环境变量secret_id，并填入您的 SecretId
+secret_key = os.environ.get('secret_key')  # 请在函数配置中添加环境变量secret_key，并填入您的 SecretKey
+bucket_region = os.environ.get('bucket_region') # 请在函数配置中添加环境变量bucket_region，并填入您COS Bucket所在的地域
+token = ''
+bucket_upload = os.environ.get('bucket_upload')  # 请在函数配置中添加环境变量bucket_upload，并填入您要用来存放图片的Bucket名
+
+config = CosConfig(Secret_id=secret_id, Secret_key=secret_key, Region=bucket_region, Token=token)
+client_cos = CosS3Client(config)
 
 
 def delete_local_file(src):
@@ -47,6 +47,10 @@ def delete_local_file(src):
 
 def main_handler(event, context):
     logger.info("start main handler")
+    if "requestContext" not in event.keys():
+        return {"code": 410, "errorMsg": "event is not come from api gateway"}
+    if event["body"] == "":
+        return {"code": 412, "errorMsg": "there is no file from api gateway"}
 
     # save api gateway file to local temp file
     logger.info("Start to download images from APIGW")

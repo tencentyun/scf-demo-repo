@@ -4,7 +4,7 @@
       "Chinese":{
         "name": "从对象存储获取文件",
         "description": "本示例配置了 COS 触发器，当有文件上传到对应的 COS bucket时，会触发云函数执行，并把文件下载到本地临时目录，用做后续处理",
-        "attention": "该云函数需要配置 COS 触发器；另外在使用本示例代码时需要在函数里修改 appid、secret_id、secret_key",
+        "attention": "该云函数需要配置 COS 触发器，另外在使用本示例代码时需要在函数里修改 appid、secret_id、secret_key",
         "readme": {
             "file": "",
             "content": ""
@@ -43,7 +43,7 @@
       "tags":[
               "cos", "Python2.7", "object"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.0.2"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+      "version": "1.0.3"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
       "name": "Get_COS_Object",  // 函数名称，只支持英文

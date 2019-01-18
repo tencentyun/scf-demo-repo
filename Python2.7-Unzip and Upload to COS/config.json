@@ -4,7 +4,7 @@
       "Chinese":{
         "name": "ZIP包解压",
         "description": "本示例通过配置COS触发，上传到COS的ZIP包，使用SCF下载并本地解压，支持带密码解压，支持中文字段解压，并把解压后的文件上传到COS另一个bucket中，您还可以扩充支持RAR包的解压",
-        "attention": "该云函数需要配置 COS 触发器；另外在使用本示例代码时需要在函数里修改 appid、secret_id、secret_key、需要接收解压后文件的bucket、压缩包的解压密码",
+        "attention": "该云函数需要配置 COS 触发器，另外在使用本示例代码时需要在函数里修改 appid、secret_id、secret_key、需要接收解压后文件的bucket、压缩包的解压密码",
         "readme": {
             "file": "",
             "content": ""
@@ -43,7 +43,7 @@
       "tags":[
               "cos", "Python2.7", "unzip"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.0.3"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+      "version": "1.0.4"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
       "name": "unzip_to_cos",  // 函数名称，只支持英文

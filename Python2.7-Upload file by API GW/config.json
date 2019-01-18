@@ -4,7 +4,7 @@
       "Chinese":{
         "name": "通过API网关上传文件",
         "description": "本示例使用 API 网关触发器和云函数快速构建web后台，实现从前端通过API上传文件到云函数，并下载文件到云函数的本地目录/tmp，然后上传到COS bucket",
-        "attention": "该云函数使用了API 网关触发器，并使用了集成响应功能，返回值需要构造为Json格式；另外在使用本示例代码时需要在函数里修改用户的appid、secret_id、secret_key",
+        "attention": "该云函数使用了API 网关触发器，并使用了集成响应功能，返回值需要构造为Json格式，另外在使用本示例代码时需要在函数里修改用户的appid、secret_id、secret_key",
         "readme": {
             "file": "",
             "content": ""
@@ -49,7 +49,7 @@
       "tags":[
               "apigw", "Python2.7", "upload"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.0.3"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+      "version": "1.0.4"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
       "name": "upload_file_to_COS_by_APIGW",  // 函数名称，只支持英文
