@@ -47,31 +47,32 @@ exports.main_handler = async (event, context, callback) => {
     key = key.replace(`/${APPID}/${record['cos']['cosBucket']['name']}/`, '') // 抽取出图片的名称
     console.log('Key is: ', key)
     const downloadPath = `/tmp/${key}`
-    try {
-      promiseArr.push(
-        cosInst
-          .getObjectPromise({
-            Bucket: bucket,
-            Region: REGION,
-            Key: key
-          })
-          .then(res => {
-            fs.writeFileSync(downloadPath, res['Body'])
-            console.log('Download file success: ', key)
-          })
-          .catch(e => {
-            throw e
-          })
-      )
-    } catch (e) {
-      console.log(
-        `Error getting object ${key} from bucket ${bucket}. Error message: ${JSON.stringify(
-          e
-        )}`
-      )
-      return 'Fail'
+    promiseArr.push(
+      cosInst
+        .getObjectPromise({
+          Bucket: bucket,
+          Region: REGION,
+          Key: key
+        })
+        .then(res => {
+          fs.writeFileSync(downloadPath, res['Body'])
+          console.log('Download file success: ', key)
+        })
+        .catch(e => {
+          throw (
+            `Error getting object ${key} from bucket ${bucket}. Error message: ${JSON.stringify(
+              e
+            )}`
+          )
+        })
+    )
     }
   }
-  await Promise.all(promiseArr)
-  return 'Success'
+  try {
+    await Promise.all(promiseArr)
+    return 'Success'
+  } catch(e) {
+    console.log(e)
+    return 'Fail'
+  }
 }
