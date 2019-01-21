@@ -10,23 +10,20 @@ function renderTpl($tpl,$variables){
 
 function main_handler($event, $context) {
     $file_path = __DIR__."/index.html";
-    $fileHandle = fopen($filePath, "r");
-    $html = fread($fileHandle, filesize($filePath));
-
-    $html = renderTpl($html,[
-        "master"=> '腾讯云云函数团队', // 您的名称
-        "centralCouplet"=> '年年有余', // 横批
-        "upCouplet"=> '千年迎新春', // 上联
-        "downCouplet"=> '瑞雪兆丰年' // 下联
-    ]);
-
-    fclose($fileHandle);
-
-    return  [
-        "isBase64Encoded"=> false,
-        "statusCode"=> 200,
-        "headers"=> [ 'Content-Type'=> 'text/html' ],
-        "body"=> $html
-    ];
+	$fp = fopen($file_path,"r");
+	$str = fread($fp,filesize($file_path));
+	fclose($fp);
+    $str = renderTpl($str,array(
+        master=>'腾讯云云函数团队',
+        centralCouplet=>'年年有余',
+        upCouplet=>'千年迎新春',
+        downCouplet=>'瑞雪兆丰年'
+    ));
+	return array(
+		'isBase64Encoded' => false,
+		'statusCode' => 200,
+		'headers' => array('Content-Type' => 'text/html'),
+		'body' => $str
+	);
 }
 ?>
