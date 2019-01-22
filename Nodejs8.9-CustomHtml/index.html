@@ -65,6 +65,18 @@
       </div>
     </div>
     <script src="https://img.qcloud.com/qcloud/iaas_web/build/jquery.min.js"></script>
+    <script>
+      //手机访问判断
+      if (
+        /AppleWebKit.*Mobile/i.test(navigator.userAgent) ||
+        /MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(
+          navigator.userAgent
+        )
+      ) {
+      } else {
+        $('.scf-act-wrap').addClass('pc-open')
+      }
+    </script>
     <script type="text/javascript">
       $('.btn-one-more').click(function() {
         const coupletNode = $('.couplet')
