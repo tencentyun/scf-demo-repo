@@ -9,7 +9,7 @@ function renderTpl($tpl,$variables){
 }
 
 function main_handler($event, $context) {
-    $file_path = __DIR__."/index.html";
+    $file_path = __DIR__."/demo.html";
 	$fp = fopen($file_path,"r");
 	$str = fread($fp,filesize($file_path));
 	fclose($fp);

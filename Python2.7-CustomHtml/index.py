@@ -7,7 +7,7 @@ def render_template(html, keys={}):
     return html
 
 def main_handler(event, context):
-    f = open("./index.html")
+    f = open("./demo.html")
     html = f.read()
     keys = {
         "master": "腾讯云云函数团队", # 您的名称
