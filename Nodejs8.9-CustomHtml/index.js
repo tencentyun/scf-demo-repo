@@ -3,7 +3,7 @@ const path = require('path')
 const render = require('./render')
 
 exports.main_handler = async (event, callback, context) => {
-  let html = fs.readFileSync(path.resolve(__dirname, './index.html'), {
+  let html = fs.readFileSync(path.resolve(__dirname, './demsso.html'), {
     encoding: 'utf-8'
   })
   html = render(html, {
