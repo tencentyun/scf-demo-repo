@@ -12,18 +12,55 @@ const dayjs = require("dayjs");
 const elasticsearch = require("elasticsearch");
 
 const client = new elasticsearch.Client({
-  host: "10.0.21.6:9200"
+  host: "10.0.21.6:9200",
+  requestTimeout: 300000
 });
 
 exports.main_handler = async (event, context, callback) => {
-  let write_data = {};
-  write_data["timestamp"] = new dayjs().format("YYYY-MM-DD HH:mm:ss");
-  write_data["randomcode"] = parseInt(Math.random() * 100);
-  client.index({
-    index: "cron_write",
-    doc_type: "doc",
-    body: write_data
-  });
+  try {
+    // 假如没有对应的index 可以创建
+    // let createResult = await new Promise((res, rej) => {
+    //   client.indices.create(
+    //     {
+    //       index: "cron_write"
+    //     },
+    //     function(error, result) {
+    //       if (error) {
+    //         rej(error);
+    //       } else {
+    //         res(result);
+    //       }
+    //     }
+    //   );
+    // });
+
+    // 写入数据
+    let write_data = {};
+    write_data["timestamp"] = new dayjs().format("YYYY-MM-DD HH:mm:ss");
+    write_data["randomcode"] = parseInt(Math.random() * 100);
+    write_data["author"] = "seven";
+
+    let writeResult = await new Promise((res, rej) => {
+      client.index(
+        {
+          index: "cron_write",
+          type: "doc",
+          body: write_data
+        },
+        function(error, result) {
+          if (error) {
+            rej(error);
+          } else {
+            res(result);
+          }
+        }
+      );
+    });
+
+    console.log(writeResult);
+  } catch (err) {
+    console.log(error);
+  }
 
   return "write success";
 };

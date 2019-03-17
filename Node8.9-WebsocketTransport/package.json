@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.18.0",
     "dayjs": "^1.8.10",
     "mysql": "^2.16.0",
     "request": "^2.88.0"

@@ -7,16 +7,16 @@
 // API网关的反向推送链接
 const sendbackHost = "*******";
 // MySql数据库账号信息,需要提前创建好数据库和表单,表单中新建2列：`ConnectionID`, `Date`
-const Host = "10.0.1.148";
+const Host = "gz-cdb-k0u4l0vj.sql.tencentcdb.com";
 const User = "root";
 const Password = "root12345";
-const Port = 3306;
+const Port = 61631;
 const DB = "SCF_Demo";
 const Table = "ConnectionID_List";
 
 const mysql = require("mysql");
 const dayjs = require("dayjs");
-const request = require("request");
+const http = require("http");
 
 function wrapPromise(connection, sql) {
   return new Promise((res, rej) => {
@@ -38,7 +38,7 @@ async function deleteConnectionId(connectionID) {
     port: Port
   });
 
-  let querySpl = `delete from ${Table} where ConnectionID = ${connectionID}`;
+  let querySpl = `delete from ${Table} where ConnectionID = '${connectionID}'`;
 
   let queryResult = await wrapPromise(connection, querySpl);
   connection.end();
@@ -52,21 +52,43 @@ function close(connectionId) {
   retmsg["websocket"] = {};
   retmsg["websocket"]["action"] = "closing";
   retmsg["websocket"]["secConnectionID"] = connectionId;
-  // console.log(`send ${JSON.stringify(data)} to ${connectionId}`);
 
-  request.post(
-    {
-      url: sendbackHost,
-      json: true,
-      body: retmsg
-    },
-    (err, response, body) => {
-      if (err) {
-        console.log(err);
+  let postData = JSON.stringify(retmsg)
+
+  await new Promise((resolve, rej) => {
+    const req = http.request(
+      {
+        method: "POST",
+        host: "set-gwm9thyc.cb-guangzhou.apigateway.tencentyun.com",
+        path: "/api-5yfnt5lw",
+        headers: {
+          "Content-Type": "application/json",
+          "Content-Length": Buffer.byteLength(postData)
+        }
+      },
+      res => {
+        console.log(`STATUS: ${res.statusCode}`);
+        console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
+        res.setEncoding("utf8");
+        res.on("data", chunk => {
+          console.log(`BODY: ${chunk}`);
+        });
+        res.on("end", () => {
+          console.log("No more data in response.");
+        });
+        resolve();
       }
-      console.log(body);
-    }
-  );
+    );
+
+    req.on("error", e => {
+      console.error(`problem with request: ${e.message}`);
+    });
+
+    // write data to request body
+    req.write(postData);
+
+    req.end();
+  });
 }
 
 exports.main_handler = async (event, context, callback) => {

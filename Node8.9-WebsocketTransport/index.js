@@ -5,18 +5,21 @@
 ***************************************************/
 
 // API网关的反向推送链接
-const sendbackHost = "*******";
+const sendbackHost =
+  "http://set-gwm9thyc.cb-guangzhou.apigateway.tencentyun.com/api-5yfnt5lw";
 // MySql数据库账号信息,需要提前创建好数据库和表单,表单中新建2列：`ConnectionID`, `Date`
-const Host = "10.0.1.148";
+const Host = "gz-cdb-k0u4l0vj.sql.tencentcdb.com";
 const User = "root";
 const Password = "root12345";
-const Port = 3306;
+const Port = 61631;
 const DB = "SCF_Demo";
 const Table = "ConnectionID_List";
 
 const mysql = require("mysql");
 const dayjs = require("dayjs");
 const request = require("request");
+const axios = require("axios");
+const http = require("http");
 
 function wrapPromise(connection, sql) {
   return new Promise((res, rej) => {
@@ -41,36 +44,57 @@ async function getConnectionIdList() {
   let querySpl = `select * from ${Table}`;
 
   let queryResult = await wrapPromise(connection, querySpl);
-  connection.close();
+  connection.end();
+
+  console.log(queryResult);
 
   return queryResult;
 }
 
-function send(connectionId, data) {
+async function send(connectionId, data) {
   let retmsg = {};
   retmsg["websocket"] = {};
   retmsg["websocket"]["action"] = "data send";
   retmsg["websocket"]["secConnectionID"] = connectionId;
   retmsg["websocket"]["dataType"] = "text";
   retmsg["websocket"]["data"] = data;
-  console.log(`send ${JSON.stringify(data)} to ${connectionId}`);
 
-  // 用request 来发一下包
-  // requests.post(sendbackHost, (json = retmsg));
+  let postData = JSON.stringify(retmsg);
 
-  request.post(
-    {
-      url: sendbackHost,
-      json: true,
-      body: retmsg
-    },
-    (err, response, body) => {
-      if (err) {
-        console.log(err);
+  await new Promise((resolve, rej) => {
+    const req = http.request(
+      {
+        method: "POST",
+        host: "set-gwm9thyc.cb-guangzhou.apigateway.tencentyun.com",
+        path: "/api-5yfnt5lw",
+        headers: {
+          "Content-Type": "application/json",
+          "Content-Length": Buffer.byteLength(postData)
+        }
+      },
+      res => {
+        console.log(`STATUS: ${res.statusCode}`);
+        console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
+        res.setEncoding("utf8");
+        res.on("data", chunk => {
+          console.log(`BODY: ${chunk}`);
+        });
+        res.on("end", () => {
+          console.log("No more data in response.");
+        });
+        resolve();
       }
-      console.log(body);
-    }
-  );
+    );
+
+    req.on("error", e => {
+      console.error(`problem with request: ${e.message}`);
+    });
+
+    // write data to request body
+    req.write(postData);
+
+    req.end();
+  });
 }
 
 exports.main_handler = async (event, context, callback) => {
@@ -90,16 +114,15 @@ exports.main_handler = async (event, context, callback) => {
 
   let count = connectionIdList.length;
 
-  let data =
-    event["websocket"]["data"] + "(===Online people:" + str(count) + "===)";
+  let data = event["websocket"]["data"] + "(===Online people:" + count + "===)";
 
   console.log("Finish DB Request", new dayjs().format("YYYY-MM-DD HH:mm:ss"));
 
-  connectionIdList.forEach(id => {
-    if (id !== connectionID) {
-      send(id, data);
-    }
-  });
+  // connectionIdList.forEach(id => {
+  // if (id !== connectionID) {
+  await send(connectionID, data);
+  // }
+  // });
 
   return "send success";
 };

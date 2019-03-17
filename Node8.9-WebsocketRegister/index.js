@@ -5,12 +5,11 @@
 ***************************************************/
 
 // API网关的反向推送链接
-const sendbackHost = "*******";
 // MySql数据库账号信息,需要提前创建好数据库和表单,表单中新建2列：`ConnectionID`, `Date`
-const Host = "10.0.1.148";
+const Host = "gz-cdb-k0u4l0vj.sql.tencentcdb.com";
 const User = "root";
 const Password = "root12345";
-const Port = 3306;
+const Port = 61631;
 const DB = "SCF_Demo";
 const Table = "ConnectionID_List";
 
@@ -70,15 +69,15 @@ exports.main_handler = async (event, context, callback) => {
     secConnectionID: connectionID
   };
 
-  if (event["websocket"]["secWebSocketProtocol"]) {
-    retmsg["websocket"]["secWebSocketProtocol"] =
-      event["websocket"]["secWebSocketProtocol"];
-  }
+  // if (event["websocket"]["secWebSocketProtocol"]) {
+  //   retmsg["websocket"]["secWebSocketProtocol"] =
+  //     event["websocket"]["secWebSocketProtocol"];
+  // }
 
-  if (event["websocket"]["secWebSocketExtensions"]) {
-    retmsg["websocket"]["secWebSocketExtensions"] =
-      event["websocket"]["secWebSocketExtensions"];
-  }
+  // if (event["websocket"]["secWebSocketExtensions"]) {
+  //   retmsg["websocket"]["secWebSocketExtensions"] =
+  //     event["websocket"]["secWebSocketExtensions"];
+  // }
 
   // 在数据库中记录新的connectionID
   console.log("Start DB Request", new dayjs().format("YYYY-MM-DD HH:mm:ss"));
