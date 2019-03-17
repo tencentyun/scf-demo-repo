@@ -5,20 +5,17 @@
 ***************************************************/
 
 // API网关的反向推送链接
-const sendbackHost =
-  "http://set-gwm9thyc.cb-guangzhou.apigateway.tencentyun.com/api-5yfnt5lw";
+const sendbackHost = "**";
 // MySql数据库账号信息,需要提前创建好数据库和表单,表单中新建2列：`ConnectionID`, `Date`
-const Host = "gz-cdb-k0u4l0vj.sql.tencentcdb.com";
-const User = "root";
-const Password = "root12345";
+const Host = "**";
+const User = "**";
+const Password = "**";
 const Port = 61631;
 const DB = "SCF_Demo";
 const Table = "ConnectionID_List";
 
 const mysql = require("mysql");
 const dayjs = require("dayjs");
-const request = require("request");
-const axios = require("axios");
 const http = require("http");
 
 function wrapPromise(connection, sql) {
@@ -44,9 +41,8 @@ async function getConnectionIdList() {
   let querySpl = `select * from ${Table}`;
 
   let queryResult = await wrapPromise(connection, querySpl);
-  connection.end();
 
-  console.log(queryResult);
+  connection.end();
 
   return queryResult;
 }
@@ -65,8 +61,8 @@ async function send(connectionId, data) {
     const req = http.request(
       {
         method: "POST",
-        host: "set-gwm9thyc.cb-guangzhou.apigateway.tencentyun.com",
-        path: "/api-5yfnt5lw",
+        host: "**", // 反向推送地址host
+        path: "**", // 反向推送地址路径
         headers: {
           "Content-Type": "application/json",
           "Content-Length": Buffer.byteLength(postData)
@@ -118,11 +114,7 @@ exports.main_handler = async (event, context, callback) => {
 
   console.log("Finish DB Request", new dayjs().format("YYYY-MM-DD HH:mm:ss"));
 
-  // connectionIdList.forEach(id => {
-  // if (id !== connectionID) {
   await send(connectionID, data);
-  // }
-  // });
 
   return "send success";
 };
