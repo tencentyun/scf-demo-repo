@@ -19,8 +19,8 @@
       },
       "English": {
         "name": "websocket register function",
-        "description": "This function will collect message from ckafka, then upload it to cos",
-        "attention": "You need to config ckafka trigger and create your bucket in cos",
+        "description": "",
+        "attention": "",
         "readme": {
           "file": "", // readme file
           "content": "" //content of readme
@@ -38,7 +38,7 @@
         "context": ""
       },
       "output_parameters": {},
-      "download_address": "https://github.com/tencentyun/scf-demo-repo/tree/master/Node8.9_KafkaToCos", //demo的git下载链接
+      "download_address": "https://github.com/tencentyun/scf-demo-repo/tree/master/Node8.9_WebsocketRegister", //demo的git下载链接
       "tags": [
         "apigateway",
         "Nodejs8.9",

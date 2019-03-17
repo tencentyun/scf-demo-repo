@@ -6,9 +6,9 @@
 
 // API网关的反向推送链接
 // MySql数据库账号信息,需要提前创建好数据库和表单,表单中新建2列：`ConnectionID`, `Date`
-const Host = "gz-cdb-k0u4l0vj.sql.tencentcdb.com";
-const User = "root";
-const Password = "root12345";
+const Host = "**";
+const User = "**";
+const Password = "**";
 const Port = 61631;
 const DB = "SCF_Demo";
 const Table = "ConnectionID_List";
@@ -43,10 +43,10 @@ async function record_connectionID(connectionID) {
   const now = new dayjs();
   const nowStr = now.format("YYYY-MM-DD HH:mm:ss");
 
-  let addsql = `insert INTO ${Table} (\`ConnectionID\`, \`Date\`) VALUES (${connectionID}, ${nowStr})`;
+  let addsql = `insert INTO ${Table} (\`ConnectionID\`, \`Date\`) VALUES ('${connectionID}', '${nowStr}')`;
 
   await wrapPromise(connection, addsql);
-  connection.close();
+  connection.end();
 }
 
 exports.main_handler = async (event, context, callback) => {
@@ -68,16 +68,6 @@ exports.main_handler = async (event, context, callback) => {
     action: "connecting",
     secConnectionID: connectionID
   };
-
-  // if (event["websocket"]["secWebSocketProtocol"]) {
-  //   retmsg["websocket"]["secWebSocketProtocol"] =
-  //     event["websocket"]["secWebSocketProtocol"];
-  // }
-
-  // if (event["websocket"]["secWebSocketExtensions"]) {
-  //   retmsg["websocket"]["secWebSocketExtensions"] =
-  //     event["websocket"]["secWebSocketExtensions"];
-  // }
 
   // 在数据库中记录新的connectionID
   console.log("Start DB Request", new dayjs().format("YYYY-MM-DD HH:mm:ss"));

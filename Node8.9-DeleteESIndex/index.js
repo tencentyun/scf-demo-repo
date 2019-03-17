@@ -12,7 +12,7 @@
 const elasticsearch = require("elasticsearch");
 
 const client = new elasticsearch.Client({
-  host: "10.0.21.6:9200",
+  host: "**",
   requestTimeout: 300000
 });
 

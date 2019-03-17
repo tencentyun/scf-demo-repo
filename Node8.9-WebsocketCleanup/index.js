@@ -7,9 +7,9 @@
 // API网关的反向推送链接
 const sendbackHost = "*******";
 // MySql数据库账号信息,需要提前创建好数据库和表单,表单中新建2列：`ConnectionID`, `Date`
-const Host = "gz-cdb-k0u4l0vj.sql.tencentcdb.com";
-const User = "root";
-const Password = "root12345";
+const Host = "**";
+const User = "**";
+const Password = "**";
 const Port = 61631;
 const DB = "SCF_Demo";
 const Table = "ConnectionID_List";
@@ -59,8 +59,8 @@ function close(connectionId) {
     const req = http.request(
       {
         method: "POST",
-        host: "set-gwm9thyc.cb-guangzhou.apigateway.tencentyun.com",
-        path: "/api-5yfnt5lw",
+        host: "**", // 反向推送的host
+        path: "**", // 反向推送的路径
         headers: {
           "Content-Type": "application/json",
           "Content-Length": Buffer.byteLength(postData)
