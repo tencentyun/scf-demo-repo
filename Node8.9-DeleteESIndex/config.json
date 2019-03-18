@@ -2,7 +2,7 @@
   "serverless-cloud-function-application": {
     "application": {
       "Chinese": {
-        "name": "ES写入函数",
+        "name": "删除ES索引",
         "description": "本示例通过使用ElasticSearch库，实现了将随机数写入ES。可为其配置定时触发器后，定时执行",
         "attention": "",
         "readme": {
@@ -44,7 +44,7 @@
         "Nodejs8.9",
         "timer" // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.0.3" //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+      "version": "1.1.0" //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
       "name": "Delete_es_index", // 函数名称，只支持英文
