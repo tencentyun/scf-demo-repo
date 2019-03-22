@@ -2,7 +2,7 @@
   "serverless-cloud-function-application": {
     "application": {
       "Chinese": {
-        "name": "API 网关返回自定义html页面",
+        "name": "API 网关返回 Web 页面",
         "description": "本示例主要通过 SCF 结合 API 网关，快速实现一个对公网服务的 Web 页面。",
         "attention": "无",
         "readme": {
@@ -18,7 +18,7 @@
         }
       },
       "English": {
-        "name": "API_GW_Html_Demo",
+        "name": "API_GW_WebPage_Demo",
         "description": "This demo is mainly to show how to set up personal web page in serverless with apigateway",
         "attention": "No",
         "readme": {
@@ -48,10 +48,10 @@
         "API GW",
         "Web Page" // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.0.0" //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+      "version": "1.0.1" //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
-      "name": "API_GW_Html_Demo", // 函数名称，只支持英文
+      "name": "API_GW_WebPage_Demo", // 函数名称，只支持英文
       "description": "本示例主要通过 SCF 结合 API 网关，快速实现一个对公网服务的 Web 页面。",
       "handler": "index.main_handler",
       "memorySize": 128, // 运行配置内存
