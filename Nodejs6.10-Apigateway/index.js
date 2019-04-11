@@ -4,12 +4,14 @@
 ***************************************************/
 
 exports.main_handler = (event, context, callback) => {
-  const { requestContext } = event
+  console.log('start main handler')
+
+  const body = 'API GW Test Success'
 
   return {
-    isBase64Encoded: 'False',
-    statusCode: 200,
-    headers: { 'Content-Type': 'text/html' },
-    body: requestContext ? 'API GW Test' : 'event is not come from api gateway'
-  }
+        "isBase64": false,
+        "statusCode": 200,
+        "headers": {"Content-Type": "text", "Access-Control-Allow-Origin": "*"},
+        "body": body
+    }
 }
