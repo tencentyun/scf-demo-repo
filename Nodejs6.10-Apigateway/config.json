@@ -3,8 +3,8 @@
     "application": {
       "Chinese": {
         "name": "API 网关基础示例",
-        "description": "本示例主要演示当配置 API 网关触发器的时候，怎样去构造返回的 json 数据结构",
-        "attention": "无",
+        "description": "本示例演示 API 网关使用的基础方法，主要展示在集成响应下（通过云函数控制台创建的API网关触发器默认启用集成响应），怎样构造返回值",
+        "attention": "该云函数使用了API 网关触发器，并使用了集成响应功能，返回值需要构造为Json格式",
         "readme": {
           "file": "",
           "content": ""
@@ -19,8 +19,8 @@
       },
       "English": {
         "name": "API_GW_Basic_Demo",
-        "description": "This demo is mainly to show how to build return value",
-        "attention": "No",
+        "description": "This demo uses API GW trigger and SCF to build WEB backend service.It is mainly to show how to build return value",
+        "attention": "This demo has been used api gw and integrated response function. So the return value should be json format based on the requirement.",
         "readme": {
           "file": "", // readme file
           "content": "" //content of readme
@@ -36,7 +36,7 @@
       "input_parameters": {},
       "output_parameters": {
         "response": {
-          "isBase64Encoded": "False",
+          "isBase64Encoded": false,
           "statusCode": 200,
           "headers": { "Content-Type": "text/html" },
           "body": "$content" //the content of return msg
@@ -48,11 +48,11 @@
         "API GW",
         "API" // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.0.5" //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+      "version": "1.0.6" //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
       "name": "API_GW_Basic_Demo", // 函数名称，只支持英文
-      "description": "本示例主要演示当配置 API 网关触发器的时候，怎样去构造返回的 json 数据结构",
+      "description": "本示例演示 API 网关使用的基础方法，主要展示在集成响应下（通过云函数控制台创建的API网关触发器默认启用集成响应），怎样构造返回值",
       "handler": "index.main_handler",
       "memorySize": 128, // 运行配置内存
       "timeout": 3, // 运行超时时间
