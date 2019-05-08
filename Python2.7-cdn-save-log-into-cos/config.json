@@ -2,8 +2,8 @@
   "serverless-cloud-function-application": {
     "application":{
       "Chinese":{
-        "name": "CDN日志存储函数",
-        "description": "本示例介绍如何把CDN的日志拉取并存储到对象存储，一共需要创建2个函数，任务分发函数和存储函数，通过任务分发函数调用存储函数完成日志存储，该函数为日志存储函数",
+        "name": "下载URL文件并存储到COS",
+        "description": "本示例介绍了如何使用流式分片的方式，下载URL文件并存储到COS汇总。该函数可以用于实现CDN日志存储等功能。",
         "attention": "无",
         "readme": {
             "file": "",
@@ -34,16 +34,20 @@
         }
       },
       "input_parameters":{
-        "event":"",
-        "context":""
+        "url":"https://mat1.gtimg.com/pingjs/ext2020/qqindex2018/dist/img/qq_logo_2x.png",
+        "cos_region": "ap-chengdu",
+        "cos_bucket": "bucketname-1251000000",
+        "cos_key":    "/demo/logo.png",
+        "secret_id":  "*********************",
+        "secret_key": "*******************"
       },
       "output_parameters":{
       },
       "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master",  //demo的git下载链接
       "tags":[
-              "CDN", "Python2.7", "Log"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
+              "CDN", "Python2.7", "COS"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.0"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+      "version": "1.1"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
       "name": "cdn-save-log-into-cos",  // 函数名称，只支持英文
