@@ -18,9 +18,9 @@
         }
       },
       "English":{
-        "name": " ",
-        "description": " ",
-        "attention": " ",
+        "name": "cdn-dispatch-log-jobs",
+        "description": "get CDN logs by url and upload to COS. this is control function.",
+        "attention": "Please change the configuration from line 134 before you use it ",
         "readme": {
             "file": "",  // readme file
             "content": ""  //content of readme

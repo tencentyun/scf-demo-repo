@@ -18,9 +18,9 @@
         }
       },
       "English":{
-        "name": " ",
-        "description": " ",
-        "attention": " ",
+        "name": "cdn-save-log-into-cos",
+        "description": "Get logs by url and upload to COS by streaming.",
+        "attention": "NA",
         "readme": {
             "file": "",  // readme file
             "content": ""  //content of readme
