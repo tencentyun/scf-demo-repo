@@ -23,7 +23,7 @@ const EMAIL_NOTIFY_LIST = ['******@qq.com', '******@qq.com']
 // 拨测失败后，发出告警邮件的邮箱，请根据您自身设置的邮箱地址进行修改
 const FROM_ADDR = '******@qq.com'
 
-// 拨测失败后，发出告警邮件的邮箱，请根据您自身设置的邮箱地址进行修改
+// 拨测网址列表
 const TEST_URL_LIST = ['http://wrong.tencent.com', 'http://www.qq.com']
 
 /**简易CMQ-SDK */
