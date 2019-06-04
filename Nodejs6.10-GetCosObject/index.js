@@ -66,7 +66,6 @@ exports.main_handler = (event, context, callback) => {
           )
         })
     )
-    }
   }
   Promise.all(promiseArr).then(() => callback(null, 'Success').catch(e=>callback(e,'Fail')))
 }
