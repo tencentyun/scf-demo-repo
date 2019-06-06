@@ -3,12 +3,16 @@ import os
 import logging
 import datetime
 import base64
+import json
 from qcloud_cos_v5 import CosConfig
 from qcloud_cos_v5 import CosS3Client
 from qcloud_cos_v5 import CosServiceError
 from qcloud_cos_v5 import CosClientError
-from qcloud_image import Client
-from qcloud_image import CIUrl, CIFile, CIBuffer, CIUrls, CIFiles, CIBuffers
+from tencentcloud.common import credential
+from tencentcloud.common.profile.client_profile import ClientProfile
+from tencentcloud.common.profile.http_profile import HttpProfile
+from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException 
+from tencentcloud.ocr.v20181119 import ocr_client, models 
 import sys
 
 print('Loading function')
@@ -17,16 +21,8 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
-appid = os.environ.get('appid')  # 请在函数配置中添加环境变量appid，并填入您的 APPID
-secret_id = os.environ.get('secret_id')  # 请在函数配置中添加环境变量secret_id，并填入您的 SecretId
-secret_key = os.environ.get('secret_key')  # 请在函数配置中添加环境变量secret_key，并填入您的 SecretKey
 bucket_region = os.environ.get('bucket_region') # 请在函数配置中添加环境变量bucket_region，并填入您COS Bucket所在的地域
-token = ''
 bucket_upload = os.environ.get('bucket_upload')  # 请在函数配置中添加环境变量bucket_upload，并填入您要用来存放图片的Bucket名
-
-config = CosConfig(Secret_id=secret_id, Secret_key=secret_key, Region=bucket_region, Token=token)
-client_cos = CosS3Client(config)
-
 
 def delete_local_file(src):
     logger.info("delete files and folders")
@@ -49,8 +45,13 @@ def main_handler(event, context):
     logger.info("start main handler")
     if "requestContext" not in event.keys():
         return {"code": 410, "errorMsg": "event is not come from api gateway"}
-    if event["body"] == "":
-        return {"code": 412, "errorMsg": "there is no file from api gateway"}
+    if "body" not in event.keys():
+        return {
+            "isBase64Encoded": False,
+            "statusCode": 200,
+            "headers": {"Content-Type": "text", "Access-Control-Allow-Origin": "*"},
+            "body": "there is no file from api gateway"
+        }
 
     # save api gateway file to local temp file
     logger.info("Start to download images from APIGW")
@@ -63,8 +64,13 @@ def main_handler(event, context):
         wfile.write(base64.b64decode(event['body']))
 
     # start to upload to cos
+    secret_id = os.environ.get('TENCENTCLOUD_SECRETID')      # 使用环境变量中的 secretId
+    secret_key = os.environ.get('TENCENTCLOUD_SECRETKEY')    # 使用环境变量中的 secretKey
+    token = os.environ.get('TENCENTCLOUD_SESSIONTOKEN') 
+    config = CosConfig(Region=bucket_region, SecretId=secret_id, SecretKey=secret_key, Token=token,)
+    cos_client = CosS3Client(config)
     logger.info("Start to upload images to cos")
-    res_cos = client_cos.put_object_from_local_file(
+    res_cos = cos_client.put_object_from_local_file(
         Bucket=bucket_upload,
         LocalFilePath=local_path,
         Key='{}'.format(file_name))
@@ -72,14 +78,27 @@ def main_handler(event, context):
 
     # start to detection
     logger.info("Start to detection")
-    client_ai = Client(appid, secret_id, secret_key,bucket_upload)
-    client_ai.use_http()
-    client_ai.set_timeout(30)
-    res_ai = client_ai.word_detect(CIFile(local_path))
-    res_text = "  "
-    print len(res_ai["data"]["items"])
-    for i in range(len(res_ai["data"]["items"])):
-        res_text = res_text + str(res_ai["data"]["items"][i]["itemstring"].encode('utf-8'))
+    try: 
+        cred = credential.Credential(secret_id,secret_key,token) 
+        httpProfile = HttpProfile()
+        httpProfile.endpoint = "ocr.tencentcloudapi.com"
+
+        clientProfile = ClientProfile()
+        clientProfile.httpProfile = httpProfile
+        client = ocr_client.OcrClient(cred, "ap-beijing", clientProfile)
+        req = models.GeneralBasicOCRRequest()
+        params = '{"ImageBase64":"%s"}'%event['body']
+        req.from_json_string(params)
+        resp = client.GeneralBasicOCR(req) 
+        res_ai = json.loads(resp.to_json_string())
+        res_text = " "
+        print len(res_ai["TextDetections"])
+        for i in range(len(res_ai["TextDetections"])):
+            res_text = res_text + str(res_ai["TextDetections"][i]["DetectedText"].encode('utf-8'))
+
+    except TencentCloudSDKException as err: 
+        print(err) 
+    
 
     delete_local_file(local_path)
     response = {
