@@ -6,7 +6,7 @@ import curator
 esServer = "10.16.16.137:9200"  # 修改为 es server 地址+端口
 esPrefix = "cron-"              # 查找的 index 索引前缀
 esCuratorTimeStr = "%Y%m%d%H"   # 索引中的时间格式
-esCuratorTimeUnit = "hour"      # 过滤清理的时间单位
+esCuratorTimeUnit = "hours"     # 过滤清理的时间单位,days,months
 esCuratorTimeCount = 8          # 时间间隔
 
 # 如上示例可以清理 索引格式类似为 index-2018101113 ，当前时间的8个小时前的索引
