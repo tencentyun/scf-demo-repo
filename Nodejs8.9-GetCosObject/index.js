@@ -66,8 +66,8 @@ exports.main_handler = async (event, context, callback) => {
           )
         })
     )
-    }
-  }
+   }
+  
   try {
     await Promise.all(promiseArr)
     return 'Success'
