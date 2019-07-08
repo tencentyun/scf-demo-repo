@@ -70,7 +70,7 @@ def main_handler(event, context):
         cursor.execute(sql)
         result = cursor.fetchall()
         print(result)
-    cursor.close()
+        cursor.close()
 
 
     print("{%s}" % datetime.datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S"))
