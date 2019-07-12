@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
+import os
 
-host = '数据库地址'
-port = 数据库端口
-user = '数据库用户名'
-pas = '数据库用户密码'
-db = '数据库名'
-
+host = os.environ.get('MYSQL_HOST')
+port = int(os.environ.get('MYSQL_PORT'))
+user = os.environ.get('MYSQL_USER')
+pas = os.environ.get('MYSQL_PASS')
+db = os.environ.get('MYSQL_DB')
 
 
 def main_handler(event, context):

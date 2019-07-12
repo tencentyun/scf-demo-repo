@@ -3,7 +3,7 @@
     "application": {
       "Chinese": {
         "name": "scfblog",
-        "description": "本示例主要通过 SCF 结合 API 网关，快速实现一个对公网服务的 博客。",
+        "description": "本示例主要通过 SCF 结合 API 网关，快速实现一个对公网服务的博客。",
         "attention": "无",
         "readme": {
           "file": "",
