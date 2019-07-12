@@ -1,0 +1,24 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - SCFr</title>
+<link rel="stylesheet" href="?function=style">
+<nav>
+    <h1><a href="?function=indexes">SCFr</a></h1>
+    <ul>
+        {% if data.user %}
+        <li><span>{{ data.user['username'] }}</span>
+        <li><a href="?function=logout">Log Out</a>
+        {% else %}
+        <li><a href="?function=register">Register</a>
+        <li><a href="?function=login">Log In</a>
+        {% endif %}
+    </ul>
+</nav>
+<section class="content">
+    <header>
+        {% block header %}{% endblock %}
+    </header>
+    {% for message in flashed_messages %}
+    <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% block content %}{% endblock %}
+</section>
