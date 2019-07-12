@@ -37,17 +37,14 @@ def main_handler(event, context):
             cursor.execute(sql, (username,))
             user = cursor.fetchone()
 
-
-        if user is None:
-            error = "Incorrect username."
-
         hash_SHA256 = SHA256.new()
         hash_SHA256.update(password.encode(encoding='utf-8'))
         password_hash = hash_SHA256.hexdigest()
 
-        if user["password"] != password_hash:
+        if user is None:
+            error = "Incorrect username."
+        elif user["password"] != password_hash:
             error = "Incorrect password."
-
 
         if error is None:
             # the name is available, store it in the database and go to

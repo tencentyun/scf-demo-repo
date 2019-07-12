@@ -9,17 +9,16 @@ env = Environment(
     autoescape=select_autoescape(['html'])
 )
 
-def read_session_UUID(cookie):
+def load_logged_in_user(cookie):
+    """If a user id is stored in the session, load the user object from
+    the database into ``data.user``."""
+
     x = cookie.find('sessionUUID=')
     if x != -1:
-        b = cookie[x + 12:x + 48]
+        sessionUUID = cookie[x + 12:x + 48]
     else:
-        b = None
-    return b
+        sessionUUID = None
 
-def load_logged_in_user(sessionUUID):
-    """If a user id is stored in the session, load the user object from
-    the database into ``g.user``."""
     db = get_db()
 
     if sessionUUID is None:
@@ -62,12 +61,7 @@ def main_handler(event, context):
         cookie = None
 
     if cookie:
-        sessionUUID = read_session_UUID(cookie)
-    else:
-        sessionUUID = None
-
-    if sessionUUID:
-        user = load_logged_in_user(sessionUUID)
+        user = load_logged_in_user(cookie)
     else:
         user = None
 

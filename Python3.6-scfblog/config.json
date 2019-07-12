@@ -2,7 +2,7 @@
   "serverless-cloud-function-application": {
     "application": {
       "Chinese": {
-        "name": "SCFr 博客 DEMO",
+        "name": "scfblog",
         "description": "本示例主要通过 SCF 结合 API 网关，快速实现一个对公网服务的 博客。",
         "attention": "无",
         "readme": {
@@ -18,7 +18,7 @@
         }
       },
       "English": {
-        "name": "SCFr",
+        "name": "scfblog",
         "description": "This example mainly through SCF combined with API gateway, fast implementation of a blog on Web services.",
         "attention": "No",
         "readme": {
@@ -42,17 +42,17 @@
           "body": "$content" //the content of return msg
         }
       },
-      "download_address": "https://github.com/tencentyun/scf-demo-repo/tree/master/Python3.6-SCFr", //demo的git下载链接
+      "download_address": "https://github.com/tencentyun/scf-demo-repo/tree/master/Python3.6-scfblog", //demo的git下载链接
       "tags": [
         "Python3.6",
         "API GW",
-        "Web Page" // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
+        "blog" // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.0.2" //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+      "version": "1.0.0" //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
-      "name": "API_GW_WebPage_Demo", // 函数名称，只支持英文
-      "description": "本示例主要通过 SCF 结合 API 网关，快速实现一个对公网服务的 Web 页面。",
+      "name": "scfblog", // 函数名称，只支持英文
+      "description": "本示例主要通过 SCF 结合 API 网关，快速实现一个对公网服务的 博客。",
       "handler": "index.main_handler",
       "memorySize": 128, // 运行配置内存
       "timeout": 3, // 运行超时时间
@@ -61,7 +61,7 @@
       "Events": {
         "Type": "TencentCloud::Serverless::Api",
         "Properties": {
-          "Path": "/WebSite",
+          "Path": "/blog",
           "StageName": "release",
           "HttpMethod": "ANY",
           "ServiceName": "SCF_API_SERVICE",
@@ -73,7 +73,7 @@
         "codeFile": ["index.py"],
         "CodeUri": [
           // 代码下载地址，和download_address保持一致
-          "https://github.com/tencentyun/scf-demo-repo/tree/master/Python3.6-WebPageDemo"
+          "https://github.com/tencentyun/scf-demo-repo/tree/master/Python3.6-scfblog"
         ]
       }
     }
