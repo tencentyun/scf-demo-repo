@@ -8,7 +8,7 @@ function main_handler($event, $context) {
     $host_name = $event['headers']['host'];
     $serviceId = $event['requestContext']['serviceId'];
     if ( $serviceId === substr($host_name,0,strlen($serviceId)) ) {
-        $path = substr($event['path'], strlen('/' . $function_name));
+        $path = substr($event['path'], strlen('/' . $function_name . '/'));
     } else {
         $path = substr($event['path'], strlen($event['requestContext']['path']));
     }
