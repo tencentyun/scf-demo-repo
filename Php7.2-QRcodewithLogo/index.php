@@ -3,8 +3,16 @@ include "phpqrcode.php";
 
 function main_handler($event, $context) {
 	$event = json_decode(json_encode($event), true);
+    $context = json_decode(json_encode($context), true);
+    $function_name = $context['function_name'];
+    $host_name = $event['headers']['host'];
+    $serviceId = $event['requestContext']['serviceId'];
+    if ( $serviceId === substr($host_name,0,strlen($serviceId)) ) {
+        $path = substr($event['path'], strlen('/' . $function_name));
+    } else {
+        $path = substr($event['path'], strlen($event['requestContext']['path']));
+    }
     $_GET = $event['queryString'];
-    $_PATH = substr($event['path'], strlen($event['requestContext']['path']));
     $_POSTbody = explode("&",$event['body']);
     foreach ($_POSTbody as $postvalues){
         $tmp=explode("=",$postvalues);
@@ -15,7 +23,7 @@ function main_handler($event, $context) {
         $value = key($_GET); // 取链接后?queryString提交的值
     }
     if($value == ""){
-        $value = $_PATH; // 直接取链接后非域名部分的值
+        $value = $path; // 直接取链接后非域名部分的值
     }
     $value=urldecode($value);
 
