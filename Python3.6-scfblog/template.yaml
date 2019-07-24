@@ -1,0 +1,30 @@
+Resources:
+  default:
+    Type: TencentCloud::Serverless::Namespace
+    scfblog:
+      Type: TencentCloud::Serverless::Function
+      Properties:
+        CodeUri: ./
+        Description: 本示例主要通过 SCF 结合 API 网关，快速实现一个对公网服务的博客。
+        Environment:
+          Variables:
+            MYSQL_HOST: '' # 数据库地址
+            MYSQL_PORT: '' # 数据库端口
+            MYSQL_USER: '' # 数据库用户名
+            MYSQL_PASS: '' # 数据库用户密码
+            MYSQL_DB: '' # 数据库名
+        Handler: index.main_handler
+        MemorySize: 128
+        Runtime: Python3.6
+        Timeout: 3
+        Events:
+            scfblog_apigw:  # ${FunctionName} + '_apigw'
+                Type: APIGW
+                Properties:
+                    StageName: release
+                    HttpMethod: ANY
+                    IntegratedResponse: True
+
+Globals:
+  Function:
+    Timeout: 10
