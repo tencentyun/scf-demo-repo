@@ -1,0 +1,11 @@
+{
+  "name": "node8.9-qiniu-uploadtoken",
+  "version": "1.0.0",
+  "description": "scf 获取七牛云Token",
+  "main": "index.js",
+  "author": "nanhupatar",
+  "license": "MIT",
+  "dependencies": {
+    "qiniu": "^7.2.2"
+  }
+}
