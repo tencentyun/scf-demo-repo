@@ -37,6 +37,10 @@
             top: 5px;
             right: 5px;
         }
+
+        .mask-container {
+            display: none
+        }
     </style>
 </head>
 
@@ -44,6 +48,7 @@
     <div class="vscode-act-wrap">
         <img src="https://imgcontainer-1253309074.cos.ap-guangzhou.myqcloud.com/bg.jpg" crossorigin="anonymous" style="
             width: 100%;
+            height: 100%;
             position: absolute;
             z-index: -1;
             top: 0;
@@ -51,8 +56,8 @@
         ">
         <div class="vscode-act-content">
             <!-- 上logo -->
-            <i class="p-logos"><img src="https://imgcontainer-1253309074.cos.ap-guangzhou.myqcloud.com/logo.svg"
-                    alt=""></i>
+            <i class="p-logos"><img src="https://imgcontainer-1253309074.cos.ap-guangzhou.myqcloud.com/logo.png" alt=""
+                    crossorigin="anonymous"></i>
 
             <div class="wrap-inner">
                 <div class="vs-time-line">
@@ -62,7 +67,7 @@
                 </div>
                 <div class="vs-main-img">
                     <span class="nation-day"><img
-                            src="https://imgcontainer-1253309074.cos.ap-guangzhou.myqcloud.com/national-day.svg" alt=""
+                            src="https://imgcontainer-1253309074.cos.ap-guangzhou.myqcloud.com/national-day.png" alt=""
                             crossorigin="anonymous" /></span>
                     <span class="nation-day-img"><img
                             src="https://imgcontainer-1253309074.cos.ap-guangzhou.myqcloud.com/main-img.jpg" alt=""
@@ -89,6 +94,14 @@
             </div>
             <div class="save-img"><button class="vs-btn" id="js-btn"><i class="vs-icon-download"></i>保存图片</button></div>
             <div class="bottom-tips" style="display: none">长按识别二维码定制专属海报</div>
+            <div class="mask-container">
+                <div class="vs-mask"></div>
+                <div class="vs-screenshot-wrap">
+                </div>
+                <div class="vs-toast" style="display: none">
+                    <i class="icon-press"></i>长按保存图片
+                </div>
+            </div>
         </div>
 
         <div id="preview" class="preview-container"></div>
@@ -98,18 +111,17 @@
         </div>
     </div>
     <script src="https://img.qcloud.com/qcloud/iaas_web/build/jquery.min.js"></script>
+    <script src="https://img.qcloud.com/qcloud/iaas_web/build/fileSaver.min.js"></script>
     <script src="https://img.qcloud.com/qcloud/iaas_web/build/canvas2image.min.js"></script>
     <script src="https://img.qcloud.com/qcloud/iaas_web/build/es6-promise.min.js"></script>
     <script src="https://img.qcloud.com/qcloud/iaas_web/build/html2canvas.min.js"></script>
     <script>
         //手机访问判断
-        if (
-            /AppleWebKit.*Mobile/i.test(navigator.userAgent) ||
+        const isMobile = /AppleWebKit.*Mobile/i.test(navigator.userAgent) ||
             /MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(
                 navigator.userAgent
             )
-        ) {
-        } else {
+        if (!isMobile) {
             $(document.body).addClass('pc-open')
         }
     </script>
@@ -129,21 +141,19 @@
         };
 
         function saveFile(data, filename) {
-            const save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
-            save_link.href = data;
-            save_link.download = filename;
-
-            const event = document.createEvent('MouseEvents');
-            event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-            save_link.dispatchEvent(event);
+            const blob = new Blob([data], { type: "text/plain;charset=utf-8" });
+            saveAs(blob, "vscodeAct.jpg");
         }
 
         function drawCanvas() {
+            const scrollWidth = window.innerWidth - document.body.offsetWidth
+            const scrollHeight = document.body.offsetHeight - document.body.clientHeight
+
             /*图片跨域及截图模糊处理*/
             let shareContent = $('.vscode-act-wrap')[0],//需要截图的包裹的（原生的）DOM 对象
                 computedContent = window.getComputedStyle(shareContent),
-                width = parseValue(computedContent.width),//shareContent.offsetWidth; //获取dom 宽度
-                height = parseValue(computedContent.height),//shareContent.offsetHeight; //获取dom 高度
+                width = parseValue(shareContent.offsetWidth),//shareContent.offsetWidth; //获取dom 宽度
+                height = parseValue(shareContent.offsetHeight),//shareContent.offsetHeight; //获取dom 高度
                 canvas = document.createElement("canvas"), //创建一个canvas节点
                 scale = DPR(); //定义任意放大倍数 支持小数
             canvas.width = width * scale; //定义canvas 宽度 * 缩放
@@ -158,7 +168,9 @@
                 width: width, //dom 原始宽度
                 height: height,
                 useCORS: true, // 【重要】开启跨域配置
-                onclone: (doc, b, c) => {
+                scrollX: -scrollWidth / 2,
+                scrollY: -Math.ceil(scrollHeight),
+                onclone: function (doc, b, c) {
                     $(doc.querySelector('.qrcode')).show()
                     $(doc.querySelector('.bottom-tips')).show()
                     $(doc.querySelector('.save-img')).hide()
@@ -173,10 +185,14 @@
             $(this).parent("#dialog-container").fadeOut()
         })
 
+        let flag = false
         $("#js-btn").click(function () {
+            if (flag) return
+            flag = true
             const el = $('.vscode-act-wrap')
             drawCanvas()
-                .then(canvas => {
+                .then(function (canvas) {
+
                     const img = new Image()
                     // 将 canvas 导出成 base64
                     img.src = canvas.toDataURL('image/jpeg', 1.0)
@@ -189,21 +205,24 @@
                     context.msImageSmoothingEnabled = false;
                     context.imageSmoothingEnabled = false;
 
-                    $("#preview").append(img)
-                    $('.vscode-act-content').hide()
-                    $("#preview img").css({
+                    $(".mask-container .vs-screenshot-wrap").append(img)
+                    $(".vs-screenshot-wrap img").css({
                         width: canvas.width / DPR() + 'px',
                         height: canvas.height / DPR() + 'px'
                     })
-                    $("#preview").fadeIn(0.5, () => {
-                        $("#dialog-container").fadeIn().children('#dialog-body').html("可以截图了哦~")
-                        setTimeout(() => $("#dialog-container").hide(), 3000)
-                    })
 
+                    $('.mask-container').fadeIn()
+                    if (isMobile) {
+                        $('.mask-container .vs-toast').fadeIn(500, function () {
+                            $('.mask-container .vs-toast').fadeOut(3000)
+                        })
+                    }
+                    flag = false
                     saveFile(img.src, 'vscodeAct.jpg')
                 })
-                .catch(e => {
-                    $("#dialog-container").fadeIn().children('#dialog-body').html(e && e.message || '当前浏览器不支持保存图片的功能')
+                .catch(function (e) {
+                    console.log(e)
+                    alert('当前浏览器不支持保存图片的功能')
                 })
         })
     </script>
