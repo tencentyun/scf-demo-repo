@@ -3,8 +3,8 @@
     "application": {
       "Chinese": {
         "name": "国庆 SCF 运营推广活动 Demo",
-        "description": "待产品补充。",
-        "attention": "待产品补充。",
+        "description": "本示例主要演示如何配置 API 网关触发器返回自定义 html 页面",
+        "attention": "",
         "readme": {
           "file": "",
           "content": ""
@@ -19,8 +19,8 @@
       },
       "English": {
         "name": "To be added.",
-        "description": "To be added.",
-        "attention": "To be added.",
+        "description": "This demo is mainly to show how to return custom html in serverless",
+        "attention": "",
         "readme": {
           "file": "", // readme file
           "content": "" //content of readme
@@ -43,7 +43,7 @@
         "Vscode",
         "Nodejs8.9" // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.0.1" //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+      "version": "1.0.2" //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
       "name": "To be added.", // 函数名称，只支持英文
