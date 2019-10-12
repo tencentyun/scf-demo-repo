@@ -44,9 +44,9 @@ if($value != ""){
     $value=urldecode($value);
     $logo = __DIR__ . '/logo.png'; // 对上传到SCF的资源的引用
     $remoteaddr=str_replace(":","_",$event['requestContext']['sourceIp']); // 以后IPV6的处理
-    $QR = "tmp/".date("Ymd-His")."-".$remoteaddr."-base.png"; // 对tmp临时文件夹的使用
+    $QR = "/tmp/".date("Ymd-His")."-".$remoteaddr."-base.png"; // 对tmp临时文件夹的使用
     $base = $QR;
-    $last = "tmp/".date("Ymd-His")."-".$remoteaddr."-last.png";
+    $last = "/tmp/".date("Ymd-His")."-".$remoteaddr."-last.png";
     $errorCorrectionLevel = 'H';
     $matrixPointSize = 15; 
     QRcode::png($value, $QR, $errorCorrectionLevel, $matrixPointSize, 1, $color1); // 生成不带LOGO的二维码图片,放在$QR中
