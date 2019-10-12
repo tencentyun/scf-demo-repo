@@ -5,17 +5,17 @@
 */
 //有选择地添加以下某些环境变量来做设置：
 /*
-sitename       ：网站的名称，不添加会显示为‘请在环境变量添加sitename’
-admin          ：管理密码，不添加时不显示登录页面且无法登录
-adminloginpage ：管理登录的页面不再是'?admin'，而是此设置的值。如果设置，登录按钮及页面隐藏；
-public_path    ：使用API长链接访问时，显示网盘文件的路径，不设置时默认为根目录；
-           　　　不能是private_path的上级（public看到的不能比private多，要么看到的就不一样）
-private_path   ：使用自定义域名访问时，显示网盘文件的路径，不设置时默认为根目录
-domain_path    ：格式为a1.com=/dir/path1&b1.com=/path2，比private_path优先。
-imgup_path     ：设置图床路径，不设置这个值时该目录内容会正常列文件出来，设置后只有上传界面，不显示其中文件（登录后显示）
-passfile       ：自定义密码文件的名字，可以是'.password'，也可以是'aaaa.txt'等等；
-        　       密码是这个文件的内容，可以空格、可以中文；列目录时不会显示，只有知道密码才能查看或下载此文件。
-t1,t2,t3,t4,t5,t6,t7：把refresh_token按128字节切开来放在环境变量，方便更新版本
+sitename       ：网站的名称，不添加会显示为‘请在环境变量添加sitename’。  
+admin          ：管理密码，不添加时不显示登录页面且无法登录。  
+adminloginpage ：管理登录的页面不再是'?admin'，而是此设置的值。如果设置，登录按钮及页面隐藏。  
+public_path    ：使用API长链接访问时，显示网盘文件的路径，不设置时默认为根目录；  
+           　　　不能是private_path的上级（public看到的不能比private多，要么看到的就不一样）。  
+private_path   ：使用自定义域名访问时，显示网盘文件的路径，不设置时默认为根目录。  
+domain_path    ：格式为a1.com=/dir/path1&b1.com=/path2，比private_path优先。  
+imgup_path     ：设置图床路径，不设置这个值时该目录内容会正常列文件出来，设置后只有上传界面，不显示其中文件（登录后显示）。  
+passfile       ：自定义密码文件的名字，可以是'.password'，也可以是'aaaa.txt'等等；  
+        　       密码是这个文件的内容，可以空格、可以中文；列目录时不会显示，只有知道密码才能查看或下载此文件。  
+t1,t2,t3,t4,t5,t6,t7：把refresh_token按128字节切开来放在环境变量，方便更新版本。  
 */
 include 'vendor/autoload.php';
 include 'functions.php';
@@ -52,6 +52,7 @@ function main_handler($event, $context)
     unset($_GET);
     unset($_COOKIE);
     unset($_SERVER);
+    date_default_timezone_set(get_timezone($_COOKIE['timezone']));
     $function_name = $context['function_name'];
     $config['function_name'] = $function_name;
     $host_name = $event['headers']['host'];
@@ -76,8 +77,7 @@ function main_handler($event, $context)
         $config['list_path'] = $public_path;
         $path = substr($event['path'], strlen('/'.$function_name.'/'));
     } else {
-        $config['base_path'] = '/';
-        if (empty($config['base_path'])) $config['base_path'] = '/';
+        $config['base_path'] = $event['requestContext']['path'];
         $config['list_path'] = $private_path;
         $path = substr($event['path'], strlen($event['requestContext']['path']));
     }
@@ -132,11 +132,7 @@ function main_handler($event, $context)
     </script>
     ', 'Error', 500);
     }
-    if ($_COOKIE[$function_name.'admin']==md5(getenv('admin')) && getenv('admin')!='' ) {
-        $config['admin']=1;
-    } else {
-        $config['admin']=0;
-    }
+
     if (getenv('adminloginpage')=='') {
         $adminloginpage = 'admin';
     } else {
@@ -149,71 +145,25 @@ function main_handler($event, $context)
             $url = path_format($_SERVER['PHP_SELF'] . '/');
         }
         if (getenv('admin')!='') {
-            if ($_POST['password1']==getenv('admin')) return adminform($function_name.'admin',md5($_POST['password1']),$url);
-            return adminform();
+            if ($_POST['password1']==getenv('admin')) {
+                return adminform($function_name.'admin',md5($_POST['password1']),$url);
+            } else return adminform();
         } else {
-            return output('', 302, false, [ 'Location' => $url ]);
+            return output('', 302, [ 'Location' => $url ]);
         }
     }
+    if (getenv('admin')!='') if ($_COOKIE[$function_name.'admin']==md5(getenv('admin')) || $_POST['password1']==getenv('admin') ) {
+        $config['admin']=1;
+    } else {
+        $config['admin']=0;
+    }
+
     $config['ajax']=0;
     if ($event['headers']['x-requested-with']=='XMLHttpRequest') {
         $config['ajax']=1;
     }
 
     return list_files($path);
-}
-
-function config_oauth()
-{
-    global $oauth;
-    if ($oauth['onedrive_ver']==0) {
-        // 0 默认（支持商业版与个人版）
-        // https://portal.azure.com
-        $oauth['client_id'] = '4da3e7f2-bf6d-467c-aaf0-578078f0bf7c';
-        $oauth['client_secret'] = '7/+ykq2xkfx:.DWjacuIRojIaaWL0QI6';
-        $oauth['oauth_url'] = 'https://login.microsoftonline.com/common/oauth2/v2.0/';
-        $oauth['api_url'] = 'https://graph.microsoft.com/v1.0/me/drive/root';
-        $oauth['scope'] = 'https://graph.microsoft.com/Files.ReadWrite.All offline_access';
-    }
-    if ($oauth['onedrive_ver']==1) {
-        // 1 世纪互联
-        // https://portal.azure.cn
-        $oauth['client_id'] = '04c3ca0b-8d07-4773-85ad-98b037d25631';
-        $oauth['client_secret'] = 'h8@B7kFVOmj0+8HKBWeNTgl@pU/z4yLB';
-        $oauth['oauth_url'] = 'https://login.partner.microsoftonline.cn/common/oauth2/v2.0/';
-        $oauth['api_url'] = 'https://microsoftgraph.chinacloudapi.cn/v1.0/me/drive/root';
-        $oauth['scope'] = 'https://microsoftgraph.chinacloudapi.cn/Files.ReadWrite.All offline_access';
-    }
-    $oauth['client_secret'] = urlencode($oauth['client_secret']);
-    $oauth['scope'] = urlencode($oauth['scope']);
-}
-
-function get_refresh_token($code)
-{
-    global $oauth;
-    $ret = json_decode(curl_request(
-        $oauth['oauth_url'] . 'token',
-        'client_id='. $oauth['client_id'] .'&client_secret='. $oauth['client_secret'] .'&grant_type=authorization_code&requested_token_use=on_behalf_of&redirect_uri='. $oauth['redirect_uri'] .'&code=' . $code), true);
-    if (isset($ret['refresh_token'])) {
-        $tmptoken=$ret['refresh_token'];
-        $str = 'split:<br>';
-        for ($i=1;strlen($tmptoken)>0;$i++) {
-            $str .= 't' . $i . ':<textarea readonly style="width: 95%">' . substr($tmptoken,0,128) . '</textarea>';
-            $tmptoken=substr($tmptoken,128);
-        }
-        return '<table width=100%><tr>
-        <td>' . $str . '</td>
-        <td width=50%>refresh_token:<textarea readonly style="width: 100%;">' . $ret['refresh_token'] . '</textarea></td>
-        </tr></table><br><br>
-        Please add t1-t'.--$i.' to environments
-        <script>
-            var texta=document.getElementsByTagName(\'textarea\');
-            for(i=0;i<texta.length;i++) {
-                texta[i].style.height = texta[i].scrollHeight + \'px\';
-            }
-        </script>';
-    }
-    return '<pre>' . json_encode($ret, JSON_PRETTY_PRINT) . '</pre>';
 }
 
 function fetch_files($path = '/')
@@ -415,9 +365,7 @@ function list_files($path)
     if (isset($files['file']) && !$is_preview) {
         // is file && not preview mode
         if ($config['ishidden']<4) {
-            return output('', 302, false, [
-                'Location' => $files['@microsoft.graph.downloadUrl']
-            ]);
+            return output('', 302, [ 'Location' => $files['@microsoft.graph.downloadUrl'] ]);
         }
     }
     return render_list($path, $files);
@@ -428,15 +376,24 @@ function adminform($name = '', $pass = '', $path = '')
     $statusCode = 401;
     $html = '<html><head><title>管理登录</title><meta charset=utf-8></head>';
     if ($name!=''&&$pass!='') {
-        $html .= '<script type="text/javascript">
+        /*$html .= '<script type="text/javascript">
             var expd = new Date();
             expd.setTime(expd.getTime()+(1*60*60*1000));
             var expires = "expires="+expd.toGMTString();
             document.cookie="'.$name.'='.$pass.';"+expires;
             //path='.$path.';
             location.href=location.protocol + "//" + location.host + "'.$path.'";
-</script>';
+</script>';*/
+        $html .= '<body>登录成功，正在跳转</body></html>';
         $statusCode = 302;
+        date_default_timezone_set('UTC');
+        $header = [
+            'Set-Cookie' => $name.'='.$pass.'; expires='.date(DATE_COOKIE,strtotime('+1hour')),
+            'Location' => $path,
+            'Content-Type' => 'text/html'
+        ];
+        return output($html,$statusCode,$header);
+        // return $name.'='.$pass.'; expires='.date(DATE_COOKIE,strtotime('+1hour'));
     }
     $html .= '
     <body>
@@ -467,7 +424,7 @@ function guestupload($path)
             // 重命名为MD5加后缀
         $filename = spurlencode($_POST['upload_filename']);
         $ext = strtolower(substr($filename, strrpos($filename, '.')));
-        $tmpfilename = "tmp/".date("Ymd-His")."-".$filename;
+        $tmpfilename = "/tmp/".date("Ymd-His")."-".$filename;
         $tmpfile=fopen($tmpfilename,'wb');
         fwrite($tmpfile,$data);
         fclose($tmpfile);
@@ -481,7 +438,7 @@ function guestupload($path)
         echo $result;
         $resultarry = json_decode($result,true);
         if (isset($resultarry['error'])) return message($resultarry['error']['message']. '<hr><a href="javascript:history.back(-1)">上一页</a>','错误',403);
-        return output('', 302, false, [ 'Location' => $locationurl ]);
+        return output('', 302, [ 'Location' => $locationurl ]);
     } else {
         return message('Please upload from source site!');
     }
@@ -671,28 +628,11 @@ function get_thumbnails_url($path = '/')
     return output('', 404);
 }
 
-function clearbehindvalue($path,$page1,$maxpage,$pageinfocache)
-{
-    for ($page=$page1+1;$page<$maxpage;$page++) {
-        $pageinfocache['nextlink_' . $path . '_page_' . $page] = '';
-    }
-    return $pageinfocache;
-}
-
-function encode_str_replace($str)
-{
-    $str = str_replace('&','&amp;',$str);
-    $str = str_replace('+','%2B',$str);
-    $str = str_replace('#','%23',$str);
-    return $str;
-}
-
 function render_list($path, $files)
 {
     global $config;
     @ob_start();
-    date_default_timezone_set('Asia/Shanghai');
-    if ($_COOKIE['timezone']!=' 0800') date_default_timezone_set(get_timezone($_COOKIE['timezone']));
+
     $path = str_replace('%20','%2520',$path);
     $path = str_replace('+','%2B',$path);
     $path = str_replace('&','&amp;',path_format(urldecode($path))) ;
@@ -1208,9 +1148,11 @@ function render_list($path, $files)
             sort=0;
             return;
         } else return;
-        if (string=='time' && sort==1) return;
-        if (string=='size' && sort==2) return;
+        // if (string=='time' && sort==1) return;
+        // if (string=='size' && sort==2) return;
+        sort1=sort;
         sortby('a');
+        sort=sort1;
         var a=[];
         for (i = 1; i <= <?php echo $filenum?$filenum:0;?>; i++) {
             a[i]=i;
@@ -1219,8 +1161,16 @@ function render_list($path, $files)
                 for (j = 1; j < i; j++) {
                     if (!!document.getElementById('folder_'+string+a[j])) {
                         var c=false;
-                        if (string=='time') c=(td1.innerText < document.getElementById('folder_'+string+a[j]).innerText);
-                        if (string=='size') c=(size_reformat(td1.innerText) < size_reformat(document.getElementById('folder_'+string+a[j]).innerText));
+                        if (string=='time') if (sort==-1) {
+                            c=(td1.innerText < document.getElementById('folder_'+string+a[j]).innerText);
+                        } else {
+                            c=(td1.innerText > document.getElementById('folder_'+string+a[j]).innerText);
+                        }
+                        if (string=='size') if (sort==2) {
+                            c=(size_reformat(td1.innerText) < size_reformat(document.getElementById('folder_'+string+a[j]).innerText));
+                        } else {
+                            c=(size_reformat(td1.innerText) > size_reformat(document.getElementById('folder_'+string+a[j]).innerText));
+                        }
                         if (c) {
                             document.getElementById('tr'+i).parentNode.insertBefore(document.getElementById('tr'+i),document.getElementById('tr'+a[j]));
                             for (k = i; k > j; k--) {
@@ -1237,8 +1187,16 @@ function render_list($path, $files)
                 for (j = 1; j < i; j++) {
                     if (!!document.getElementById('file_'+string+a[j])) {
                         var c=false;
-                        if (string=='time') c=(td1.innerText < document.getElementById('file_'+string+a[j]).innerText);
-                        if (string=='size') c=(size_reformat(td1.innerText) < size_reformat(document.getElementById('file_'+string+a[j]).innerText));
+                        if (string=='time') if (sort==-1) {
+                            c=(td1.innerText < document.getElementById('file_'+string+a[j]).innerText);
+                        } else {
+                            c=(td1.innerText > document.getElementById('file_'+string+a[j]).innerText);
+                        }
+                        if (string=='size') if (sort==2) {
+                            c=(size_reformat(td1.innerText) < size_reformat(document.getElementById('file_'+string+a[j]).innerText));
+                        } else {
+                            c=(size_reformat(td1.innerText) > size_reformat(document.getElementById('file_'+string+a[j]).innerText));
+                        }
                         if (c) {
                             document.getElementById('tr'+i).parentNode.insertBefore(document.getElementById('tr'+i),document.getElementById('tr'+a[j]));
                             for (k = i; k > j; k--) {
@@ -1251,8 +1209,16 @@ function render_list($path, $files)
                 }
             }
         }
-        if (string=='time') sort=1;
-        if (string=='size') sort=2;
+        if (string=='time') if (sort==-1) {
+            sort=1;
+        } else {
+            sort=-1;
+        }
+        if (string=='size') if (sort==2) {
+            sort=-2;
+        } else {
+            sort=2;
+        }
     }
     function size_reformat(str) {
         if (str.substr(-1)==' ') str=str.substr(0,str.length-1);
@@ -1263,7 +1229,7 @@ function render_list($path, $files)
         return num;
     }
 <?php
-    if ($config['ishidden']==2) { //有密码写目录密码 ?>
+    /*if ($config['ishidden']==2) { //有密码写目录密码 ?>
     var $ishidden = '<?php echo $config['ishidden']; ?>';
     var $hiddenpass = '<?php echo md5($_POST['password1']);?>';
     if ($ishidden==2) {
@@ -1272,7 +1238,7 @@ function render_list($path, $files)
         var expires = "expires="+expd.toGMTString();
         document.cookie="password="+$hiddenpass+";"+expires;
     }
-<?php }
+<?php }*/
     if ($_COOKIE['timezone']=='') { //无时区写时区 ?>
     var nowtime= new Date();
     var timezone = 0-nowtime.getTimezoneOffset()/60;
@@ -1765,5 +1731,6 @@ function render_list($path, $files)
 </html>
 <?php
     $html=ob_get_clean();
+    if ($_SERVER['Set-Cookie']!='') return output($html, $statusCode, [ 'Set-Cookie' => $_SERVER['Set-Cookie'], 'Content-Type' => 'text/html' ]);
     return output($html,$statusCode);
 }
