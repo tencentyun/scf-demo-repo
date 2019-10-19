@@ -18,7 +18,7 @@
         }
       },
       "English": {
-        "name": "To be added.",
+        "name": "VscodeAct",
         "description": "This demo is mainly to show how to return custom html in serverless",
         "attention": "",
         "readme": {
@@ -43,17 +43,24 @@
         "Vscode",
         "Nodejs8.9" // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.0.2" //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+      "version": "1.0.3" //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
-      "name": "To be added.", // 函数名称，只支持英文
-      "description": "To be added.",
+      "name": "VscodeAct", // 函数名称，只支持英文
+      "description": "本示例主要演示如何配置 API 网关触发器返回自定义 html 页面",
       "handler": "index.main_handler",
       "memorySize": 128, // 运行配置内存
       "timeout": 5, // 运行超时时间
       "runtime": "Nodejs8.9", //运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
       "Environment": {}, // 可选，用于定义环境变量
-      "Events": {}, // 可选，用于定义触发此函数的事件源
+      "Events": {
+        "Type": "TencentCloud::Serverless::Api",
+        "Properties": {
+          "StageName": "release",
+          "HttpMethod": "ANY",
+          "ServiceName": "SCF_API_SERVICE"
+        }
+      }, // 可选，用于定义触发此函数的事件源
       "VpcConfig": {}, // 可选， 用于配置云函数访问 VPC 私有网络。
       "codeObject": {
         "codeFile": [
