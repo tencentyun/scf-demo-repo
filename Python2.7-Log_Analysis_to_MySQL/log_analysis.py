@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
-#需要在环境变量中添加相应的配置
+# Need to add the appropriate configuration in environment variables. 需要在环境变量中添加相应的配置
 DB_HOST = os.getenv('dbhost') #'sh-cdb-irye027y.sql.tencentcdb.com'
 DB_PORT = os.getenv('dbport') #'63374'
 DB_USER = os.getenv('dbuser') #'root'
@@ -30,8 +30,8 @@ def main_handler(event, context):
    
     print("Start Request {}", datetime.fromtimestamp(time()).strftime('%Y-%m-%d %H:%M:%S'))
 
-    secret_id = os.environ.get('TENCENTCLOUD_SECRETID')      # 使用环境变量中的 secretId
-    secret_key = os.environ.get('TENCENTCLOUD_SECRETKEY')    # 使用环境变量中的 secretKey
+    secret_id = os.environ.get('TENCENTCLOUD_SECRETID')      # Using the secterId in environment variables. 使用环境变量中的 secretId
+    secret_key = os.environ.get('TENCENTCLOUD_SECRETKEY')    # Using the secretKey in environment variables.使用环境变量中的 secretKey
     token = os.environ.get('TENCENTCLOUD_SESSIONTOKEN') 
     appid = event['Records'][0]['cos']['cosBucket']['appid']
     config = CosConfig(Region=REGION, SecretId=secret_id, SecretKey=secret_key, Token=token,)
