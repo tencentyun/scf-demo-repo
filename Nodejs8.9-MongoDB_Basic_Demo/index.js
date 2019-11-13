@@ -8,7 +8,7 @@ var mongoClient = mongodb.MongoClient,
 
 const connect = promisify(mongodb.connect)
 
-// 拼接 URI
+// URL combination
 var url = 'mongodb://mason_mongodb:mason12345@10.10.11.19:27017/admin';
 
 exports.main_handler = async (event, context, callback) => {
