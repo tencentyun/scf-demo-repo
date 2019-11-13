@@ -14,8 +14,9 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
-# API网关的反向推送链接
+# The reverse push link for API gateway. API网关的反向推送链接
 sendbackHost = "*******"
+# MySql database account information, you need to create a database and form in advance, the new two columns in the form: `ConnectionID`, `Date` 
 # MySql数据库账号信息,需要提前创建好数据库和表单,表单中新建2列：`ConnectionID`, `Date`
 Host = '******'
 User = '****'
@@ -24,10 +25,10 @@ Port = 63054
 DB = u'SCF_Demo'
 Table = u'ConnectionID_List'
 
-#更改时区为北京时区
+# Changing the time zone to Beijing. 更改时区为北京时区
 tz = pytz.timezone('Asia/Shanghai')
 
-# 查询数据库中的connectionID并删除
+# Looking up and deleting the 'connectionID' in the database. 查询数据库中的connectionID并删除
 def delete_connectionID(connectionID):
     print('Start delete_connectionID function')
     print("connectionID is %s"%connectionID)
@@ -49,7 +50,7 @@ def delete_connectionID(connectionID):
         connection.close()
 
 
-# 主动发送断开信息
+# Sending disconnection information proactively. 主动发送断开信息
 def close(connectionID):
     retmsg = {}
     retmsg['websocket'] = {}
