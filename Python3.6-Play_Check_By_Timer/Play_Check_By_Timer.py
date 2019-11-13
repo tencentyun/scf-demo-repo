@@ -14,13 +14,13 @@ import smtplib
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
-# 第三方 SMTP 服务，用于发送告警邮件
-mail_host = "smtp.qq.com"       # SMTP服务器,如QQ邮箱，需要在账户里开启SMTP服务
-mail_user = "XXXXXXXXX@qq.com"  # 用户名
-mail_pass = "****************"  # 口令，SMTP服务密码
-mail_port = 465  # SMTP服务端口
+# Third-party SMTP service for sending alert emails. 第三方 SMTP 服务，用于发送告警邮件
+mail_host = "smtp.qq.com"       # SMTP server, such as QQ mailbox, need to open SMTP service in the account. SMTP服务器,如QQ邮箱，需要在账户里开启SMTP服务
+mail_user = "XXXXXXXXX@qq.com"  # Username 用户名
+mail_pass = "****************"  # Password, SMTP service password. 口令，SMTP服务密码
+mail_port = 465  # SMTP service port. SMTP服务端口
 
-# 需要拨测的URL地址
+# The URL address need to dial test. 需要拨测的URL地址
 test_url_list = [
     "http://www.baidu.com",
     "http://www.qq.com",
@@ -28,7 +28,7 @@ test_url_list = [
     "http://unkownurl.com"
 ]
 
-# 告警邮件通知列表
+# The notification list of alert emails. 告警邮件通知列表
 email_notify_list = {
     "XXXXXXXXX@qq.com",
     "XXXXXXXXX@qq.com"
