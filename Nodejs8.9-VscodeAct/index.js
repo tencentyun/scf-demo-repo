@@ -7,9 +7,9 @@ exports.main_handler = async (event, context,callback ) => {
     encoding: 'utf-8'
   })
   html = render(html, {
-    appropriate:"奋发向上", // 适宜
-    avoid: "懒惰消极", // 避免
-    from: "超级无敌美少女" // 您的姓名/昵称
+    appropriate:"Active", // appropriate
+    avoid: "Negative", // avoid
+    from: "Alice" // your name
   })
   return {
     isBase64Encoded: false,
