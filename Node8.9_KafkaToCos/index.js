@@ -1,16 +1,16 @@
 /**************************************************
-公有云 - 获取ckafka的数据写入cos
-参考: 
-1. https://cloud.tencent.com/document/product/583/17530- SCF ckafka触发器设置相关文档
+Node8.9-KafkaToCos
+Reference: 
+1. https://cloud.tencent.com/document/product/583/17530- SCF ckafka trigger document
 ***************************************************/
 
 const fs = require("fs")
 const cos = require("cos-nodejs-sdk-v5")
 const local_path = "/tmp/local_file.txt"
 const config = {
-  appId: '', // 请替换为您的腾讯云Appid
-  secretId: '', // 请替换为您的 SecretId
-  secretKey: '', // 请替换为您的 SecretKey
+  appId: '', // Replace it with your Appid please, 请替换为您的腾讯云Appid
+  secretId: '', // Replace it with your SecretId please, 请替换为您的 SecretId
+  secretKey: '', // Replace it with your SecretKey please, 请替换为您的 SecretKey
   bucketName: ''
 }
 
@@ -40,7 +40,7 @@ exports.main_handler = async (event, context, callback) => {
   
     out.end()
   
-    // 上传到cos
+    // Upload it into cos, 上传到cos
     await putCosObject(cosSdk, {
       Bucket: `${config.appId}-${config.bucketName}`,
       Region: 'ap-guangzhou',
@@ -48,7 +48,7 @@ exports.main_handler = async (event, context, callback) => {
       Body: fs.createReadStream(local_path)
     })
   
-    console.log('cos上传成功')
+    console.log('uploading succeed')
     return true
   } catch (err) {
     console.log(err)
