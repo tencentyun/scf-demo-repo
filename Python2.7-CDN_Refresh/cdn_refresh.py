@@ -27,11 +27,11 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
-appid = '1253970226'  # 请替换为您的 APPID
-secret_id = 'xxxxxxxxx'  # 请替换为您的 SecretId
-secret_key ='xxxxxxxxx'  # 请替换为您的 SecretKey
-region = u'ap-beijing'  # 请替换为您bucket 所在的地域
-url_host = 'http://mason-test-1253970226.file.myqcloud.com' # 请替换为您要加速的bucket域名，具体的文件路径在main函数里拼装
+appid = '1253970226'  # Please replace with your APPID. 请替换为您的 APPID
+secret_id = 'xxxxxxxxx'  # Please replace with your SecretId. 请替换为您的 SecretId
+secret_key ='xxxxxxxxx'  # Please replace with your SecretKey. 请替换为您的 SecretKey
+region = u'ap-beijing'  # Please replace with the region where your bucket located.请替换为您bucket 所在的地域
+url_host = 'http://mason-test-1253970226.file.myqcloud.com' # Please replace it with the bucket domain name you want to speed up. The specific file path is assembled in the main function.请替换为您要加速的bucket域名，具体的文件路径在main函数里拼装
 
 token = ''
 config = CosConfig(Secret_id=secret_id, Secret_key=secret_key, Region=region, Token=token)
@@ -116,11 +116,11 @@ def main_handler(event, context):
             if key[-1] == '/':
                 print ("No need refresh")
                 return "No need refresh"
-            #拼装待刷新的url地址
+            # Assembling the url address to be refreshed. 拼装待刷新的url地址
             rel_url = url_host + '/' + key
             logger.info("rel_url is " + rel_url)
 
-            #调用刷新函数
+            #Calling refresh function. 调用刷新函数
             request = Request(secret_id, secret_key)
             res = request.send(rel_url)
 

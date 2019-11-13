@@ -8,9 +8,9 @@ function main_handler($event, $context) {
     $host_name = $event['headers']['host'];
     $serviceId = $event['requestContext']['serviceId'];
     if ( $serviceId === substr($host_name,0,strlen($serviceId)) ) {
-        $path = substr($event['path'], strlen('/' . $function_name . '/')); // 使用API网关长链接时
+        $path = substr($event['path'], strlen('/' . $function_name . '/')); // When using the API Gateway long link. 使用API网关长链接时
     } else {
-        $path = substr($event['path'], strlen($event['requestContext']['path'])); // 使用自定义域名时
+        $path = substr($event['path'], strlen($event['requestContext']['path'])); // When using a custom domain name. 使用自定义域名时
     }
     $_GET = $event['queryString'];
     $_POSTbody = explode("&",$event['body']);
@@ -18,15 +18,15 @@ function main_handler($event, $context) {
         $tmp=explode("=",$postvalues);
         $_POST[$tmp[0]]=$tmp[1];
     }
-    $value = $_POST['key']; // 取表格POST提交的值，优先
-    if($value == "") $value = key($_GET); // 取链接后?queryString提交的值
-    if($value == "") $value = $path; // 直接取链接后非域名部分的值
+    $value = $_POST['key']; // Give priority to the value submitted by the form POST. 取表格POST提交的值，优先
+    if($value == "") $value = key($_GET); // Take the value submitted by '?queryString' after the link. 取链接后?queryString提交的值
+    if($value == "") $value = $path; // Directly fetch the value of the non-domain name part of the link. 直接取链接后非域名部分的值
 
     @ob_start();
 ?>
 <!DOCTYPE html>
 <head>
-    <title>二维码</title>
+    <title>Generate QR code</title>
     <meta charset=utf-8>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
 </head>
@@ -35,21 +35,21 @@ function main_handler($event, $context) {
     <form name="form1" method="POST" action="">
         <tr>
             <td><textarea name="key" cols="45" rows="8"><?php echo $value;?></textarea></td>
-            <td><input name="Submit1" type="submit" value="生成二维码"></td>
+            <td><input name="Submit1" type="submit" value="Generate QR code"></td> 
         </tr>
     </form>
 </table>
 <?php
 if($value != ""){
     $value=urldecode($value);
-    $logo = __DIR__ . '/logo.png'; // 对上传到SCF的资源的引用
-    $remoteaddr=str_replace(":","_",$event['requestContext']['sourceIp']); // 以后IPV6的处理
-    $QR = "tmp/".date("Ymd-His")."-".$remoteaddr."-base.png"; // 对tmp临时文件夹的使用
+    $logo = __DIR__ . '/logo.png'; // Referring to resources uploaded to SCF. 对上传到SCF的资源的引用
+    $remoteaddr=str_replace(":","_",$event['requestContext']['sourceIp']); // IPV6 processing. 以后IPV6的处理
+    $QR = "tmp/".date("Ymd-His")."-".$remoteaddr."-base.png"; // Using temp temporary folder. 对tmp临时文件夹的使用
     $base = $QR;
     $last = "tmp/".date("Ymd-His")."-".$remoteaddr."-last.png";
     $errorCorrectionLevel = 'H';
     $matrixPointSize = 15; 
-    QRcode::png($value, $QR, $errorCorrectionLevel, $matrixPointSize, 1, $color1); // 生成不带LOGO的二维码图片,放在$QR中
+    QRcode::png($value, $QR, $errorCorrectionLevel, $matrixPointSize, 1, $color1); // Generating a QR code image without LOGO and put it in '$QR'. 生成不带LOGO的二维码图片,放在$QR中
 
     $QR = imagecreatefromstring(file_get_contents($QR));  
     $logo = imagecreatefromstring(file_get_contents($logo)); 
@@ -64,7 +64,7 @@ if($value != ""){
     $from_height = ($QR_height - $logo_qr_height) / 2;
     imagecopyresampled($QR, $logo, $from_width, $from_height, 0, 0, $logo_qr_width, $logo_qr_height, $logo_width, $logo_height);
 
-    imagepng($QR,$last); // 生成最终的文件，放在$last中
+    imagepng($QR,$last); // Generating the final file and put it in '$last'. 生成最终的文件，放在$last中
     echo '<img src="'. base64EncodeImage($last) .'">';
 
     unlink($last);
@@ -74,7 +74,7 @@ if($value != ""){
 </body>
 </html>
 <?php
-    // 返回html网页
+    // Return to html page. 返回html网页
     $html=ob_get_clean();
     $statusCode=200;
     $isBase64Encoded = false;
