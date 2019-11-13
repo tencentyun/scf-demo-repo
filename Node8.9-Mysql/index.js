@@ -1,9 +1,9 @@
 
 /**************************************************
-公有云 - 通过apigw调用云函数, 操作腾讯云mysql数据库
-参考: mysql相关api---https://www.npmjs.com/package/mysql
-参考: 如何访问云数据库---https://cloud.tencent.com/document/product/236/3130
-参考: api网关如何对接scf---https://cloud.tencent.com/document/product/628/11983
+Node8.9-Mysql
+Reference: mysql api---https://www.npmjs.com/package/mysql
+Reference: How to access database---https://cloud.tencent.com/document/product/236/3130
+Reference: How to connect api gateway with scf---https://cloud.tencent.com/document/product/628/11983
 ***************************************************/
 
 function wrapPromise(connection, sql) {
@@ -21,10 +21,10 @@ function wrapPromise(connection, sql) {
 exports.main_handler = async (event, context, callback) => {
   const mysql = require('mysql');
   const connection = mysql.createConnection({
-    host: 'xxxx', // 云数据库实例ip地址
-    user: 'xxx', // 云数据库用户名，如root
-    password: 'xxx', // 云数据库密码
-    database: 'xxx' // 数据库名称
+    host: 'xxxx', // The ip address of cloud database instance, 云数据库实例ip地址
+    user: 'xxx', // The name of cloud database, for example, root, 云数据库用户名，如root
+    password: 'xxx', // Password of cloud database, 云数据库密码
+    database: 'xxx' // Name of the cloud database, 数据库名称
   });
 
   connection.connect();

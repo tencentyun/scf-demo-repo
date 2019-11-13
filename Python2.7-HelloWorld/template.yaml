@@ -3,7 +3,7 @@ Resources:
     HowToUploadDemo:
       Properties:
         CodeUri: .
-        Description: helloworld 空白模板函数
+        Description: helloworld blank template functiion 空白模板函数
         Environment:
           Variables: {}
         Events: {}

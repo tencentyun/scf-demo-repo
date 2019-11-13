@@ -1,10 +1,10 @@
 "use strict";
 /**************************************************
-公有云 - api网关 把数据写入es
-参考: https://cloud.tencent.com/document/product/583/32553
+Node8.9-DeleteESIndex
+Reference: https://cloud.tencent.com/document/product/583/32553
 ***************************************************/
 
-// es集群的主机地址
+// The host's address of es, es集群的主机地址
 // const Host = "10.0.1.148";
 // const Port = "80";
 
@@ -16,15 +16,15 @@ const client = new elasticsearch.Client({
   requestTimeout: 300000
 });
 
-const esPrefix = "cron-"; // 查找的 index 索引前缀
-const esCuratorTimeStr = "%Y%m%d%H"; // 索引中的时间格式
-const esCuratorTimeUnit = "hour"; // 过滤清理的时间单位
-const esCuratorTimeCount = 8; // 时间间隔
+const esPrefix = "cron-"; // The prefix of the index, 查找的 index 索引前缀
+const esCuratorTimeStr = "%Y%m%d%H"; // The time format, 索引中的时间格式
+const esCuratorTimeUnit = "hour"; // The filtering time unit, 过滤清理的时间单位
+const esCuratorTimeCount = 8; // The time interval, 时间间隔
 
 exports.main_handler = async (event, context, callback) => {
-  // 索引删除
+  // Deleting index, 索引删除
   try {
-    // 获取所有的index
+    // Get all the index, 获取所有的index
     let result = await new Promise((res, rej) => {
       client.cat.indices(
         {
@@ -40,7 +40,7 @@ exports.main_handler = async (event, context, callback) => {
       );
     });
 
-    // 删除index
+    // Delete index
     await new Promise((res, rej) => {
       client.indices.delete(
         {
@@ -55,7 +55,7 @@ exports.main_handler = async (event, context, callback) => {
         }
       );
     });
-    // 删除
+    // Deleted
   } catch (err) {
     console.log(err);
   }

@@ -17,7 +17,7 @@ import sys
 import base64
 
 print('Loading function')
-region = u'ap-beijing'         # 根据实际情况，修改地域
+region = u'ap-beijing'         # Modify the area according to the actual situation. 根据实际情况，修改地域
 
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()

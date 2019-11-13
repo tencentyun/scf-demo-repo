@@ -1,10 +1,12 @@
 /**************************************************
-公有云 - COS下载ZIP包解压再上传
+Node8.9-UnzipAndUploadToCOS
 TIPS: 
-1. cos-nodejs-sdk-v5暂不支持promise和async/await用法
-参考: 
-1. https://github.com/tencentyun/scf-demo-repo - COS下载ZIP包解压再上传的DEMO仓库
-2. https://cloud.tencent.com/document/product/436/12264 - COS-NODE-SDK文档
+1.cos-nodejs-sdk-v5 do not support the use of promise and async/await
+  cos-nodejs-sdk-v5暂不支持promise和async/await用法
+
+Reference: 
+1. https://github.com/tencentyun/scf-demo-repo - the uploaded demo repo
+2. https://cloud.tencent.com/document/product/436/12264 - COS-NODE-SDK document
 ***************************************************/
 
 const fs = require('fs')
@@ -13,20 +15,20 @@ const unzipper = require('unzipper')
 const COS = require('cos-nodejs-sdk-v5')
 
 const config = {
-  appId: '', // 请替换为您的腾讯云Appid
-  secretId: '', // 请替换为您的 SecretId
-  secretKey: '' // 请替换为您的 SecretKey
+  appId: '', // Replace it with your Appid please, 请替换为您的腾讯云Appid
+  secretId: '', // Replace it with your SecretId please, 请替换为您的 SecretId
+  secretKey: '', // Replace it with your SecretKey please, 请替换为您的 SecretKey
 }
 
-// cosSDK初始化
+// cosSDK initialization
 const cos = new COS({
   SecretId: config.secretId,
   SecretKey: config.secretKey
 })
 
 
-const REGION = 'ap-guangzhou' // 请替换为您bucket所在的地域
-const BUCKET_UPLOAD = 'test1' // 请替换为解压后需要长传的bucket名
+const REGION = 'ap-guangzhou' // Replace it with your bucket's reigon , 请替换为您bucket所在的地域
+const BUCKET_UPLOAD = 'test1' // Replace it with your uploading bucket's name, 请替换为解压后需要长传的bucket名
 const TEMP_PATH = '/tmp'
 
 const traversal = function(dir) {
@@ -48,6 +50,7 @@ exports.main_handler = async (event, context, callback) => {
   console.log('Start main handler')
   let promiseArr = []
   /**
+   * Get original data from uploaded pictures and write into temporary directory /tmp/
    * 从cos上传的图片中，获取元数据，并写入到临时目录/tmp/中
    */
   for (let record of event['Records']) {
@@ -57,7 +60,7 @@ exports.main_handler = async (event, context, callback) => {
     const { name: fileName, appid: appId } = cosBucket
     const bucket = `${fileName}-${appId}`
     let key = cosObject.key
-    key = key.replace(`/${appId}/${fileName}/`, '') // 抽取出图片的名称
+    key = key.replace(`/${appId}/${fileName}/`, '') // Extract the name of picture, 抽取出图片的名称
     console.log('Key is: ', key)
     if (!key.endsWith('.zip')) {
       console.log('Extract fail.This is not a zip file: ', key)

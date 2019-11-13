@@ -1,6 +1,6 @@
 'use strict'
 /**************************************************
-公有云 - API网关触发云函数
+Nodejs6.10-Apigateway
 ***************************************************/
 
 exports.main_handler = (event, context, callback) => {

@@ -1,11 +1,12 @@
 "use strict";
 /**************************************************
-公有云 - api网关 webscoket注册函数
-参考: https://cloud.tencent.com/document/product/583/32553
+Node8.9-WebsocketTransport
+Reference: https://cloud.tencent.com/document/product/583/32553
 ***************************************************/
 
-// API网关的反向推送链接
+// The url of API gateway's send back host, API网关的反向推送链接
 const sendbackHost = "**";
+// The information of MySql host, you need to build the database and forms in priority, there are 2 columns: `ConnectionID`, `Date`
 // MySql数据库账号信息,需要提前创建好数据库和表单,表单中新建2列：`ConnectionID`, `Date`
 const Host = "**";
 const User = "**";
@@ -61,8 +62,8 @@ async function send(connectionId, data) {
     const req = http.request(
       {
         method: "POST",
-        host: "**", // 反向推送地址host
-        path: "**", // 反向推送地址路径
+        host: "**", // Secd back host, 反向推送地址host
+        path: "**", // Send back path, 反向推送地址路径
         headers: {
           "Content-Type": "application/json",
           "Content-Length": Buffer.byteLength(postData)

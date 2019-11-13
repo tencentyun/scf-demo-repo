@@ -1,10 +1,10 @@
 "use strict";
 /**************************************************
-公有云 - api网关 把数据写入es
-参考: https://cloud.tencent.com/document/product/583/32553
+Node8.9-WriteToES
+Reference: https://cloud.tencent.com/document/product/583/32553
 ***************************************************/
 
-// es集群的主机地址
+// The host address of es cluster, es集群的主机地址
 // const Host = "10.0.1.148";
 // const Port = "80";
 
@@ -18,7 +18,7 @@ const client = new elasticsearch.Client({
 
 exports.main_handler = async (event, context, callback) => {
   try {
-    // 假如没有对应的index 可以创建
+    // If there is no corresponding index:
     // let createResult = await new Promise((res, rej) => {
     //   client.indices.create(
     //     {
@@ -34,7 +34,7 @@ exports.main_handler = async (event, context, callback) => {
     //   );
     // });
 
-    // 写入数据
+    // Write in data, 写入数据
     let write_data = {};
     write_data["timestamp"] = new dayjs().format("YYYY-MM-DD HH:mm:ss");
     write_data["randomcode"] = parseInt(Math.random() * 100);
