@@ -4,7 +4,7 @@ import pymongo
 import random
 
 def main_handler(event,context):
-    # 替换成自己的地址
+    # Replace 'mongodbUri' with your address. 替换成自己的地址
     mongodbUri = 'mongodb://mason_mongodb:mason@10.10.11.19:27017/admin' 
 
     client = pymongo.MongoClient(mongodbUri)
