@@ -1,7 +1,7 @@
 'use strict'
 /**************************************************
-公有云 - 图片压缩
-Tips: 调用腾讯云数据万象接口对图片进行压缩，参考: https://cloud.tencent.com/document/product/460/6925
+Nodejs6.10-Thunbnail
+Reference: https://cloud.tencent.com/document/product/460/6925
 ***************************************************/
 
 const path = require('path')
@@ -17,10 +17,10 @@ exports.main_handler = (event, context, callback) => {
 
   const compressedUrl = path.join(url + '?imageMogr2/rquality/', quality)
 
-  console.log('入参:', event)
-  console.log('图片地址:', url)
-  console.log('图片压缩比:', quality)
-  console.log('压缩后图片地址:', compressedUrl)
+  console.log('Input param:', event)
+  console.log('URL:', url)
+  console.log('Compression ratio:', quality)
+  console.log('Compressed picture Url:', compressedUrl)
 
   return compressedUrl
 }
