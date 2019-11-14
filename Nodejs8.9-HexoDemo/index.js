@@ -16,7 +16,7 @@ const serveConfig = {
 }
 
 /**************************************************
-静态站demo							
+Static website demo							
 ***************************************************/
 exports.main_handler = async (event, context, callback) => {
   let type = mime.lookup(event.path),

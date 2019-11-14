@@ -16,13 +16,13 @@ sys.setdefaultencoding('utf8')
 
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 
-appid = 1256608914  # 请替换为您的 APPID
-secret_id = u'**************'  # 请替换为您的 SecretId
-secret_key = u'************'  # 请替换为您的 SecretKey
+appid = 1256608914  #  Please replace with your APPID. 请替换为您的 APPID
+secret_id = u'**************'  # Please replace with your SecretId. 请替换为您的 SecretId
+secret_key = u'************'  # Please replace with your SecretKey. 请替换为您的 SecretKey
 region = u'ap-shanghai'
 token = ''
-bucket_upload = 'unrar-download-1256608914'  # 请替换为解压后需要长传的bucket名
-password = '12345'  # 请替换为压缩包的解压密码
+bucket_upload = 'unrar-download-1256608914'  # Please replace with the bucket name which will be used after uncompressing. 请替换为解压后需要上传的bucket名
+password = '12345'  # Please replace the decompression password of the compressed package. 请替换为压缩包的解压密码
 
 config = CosConfig(Secret_id=secret_id, Secret_key=secret_key, Region=region, Token=token)
 client = CosS3Client(config)
@@ -96,12 +96,12 @@ def main_handler(event, context):
             key = record['cos']['cosObject']['key']
             key = key.replace('/' + str(appid) + '/' + record['cos']['cosBucket']['name'] + '/', '', 1)
             download_path = '/tmp/{}'.format(key.encode('gb18030'))
-            # 创建本地解压路径
+            # Creating local path for uncompressing. 创建本地解压路径
             isExists = os.path.exists('/tmp/unzip')
             if not isExists:
                 os.mkdir('/tmp/unzip')
             unzip_path = '/tmp/unzip'
-            # 提取文件名 shotname
+            # Extracing file name. 提取文件名 shotname
             (filepath, tempfilename) = os.path.split(key);
             (shotname, extension) = os.path.splitext(tempfilename);
             logger.info("Object name is [%s]" % shotname)

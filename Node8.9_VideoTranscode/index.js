@@ -25,11 +25,11 @@ const RetryNum = 3;
 //上传事件处理函数
 exports.main_handler = async (event, context, callback, cusConfig) => {
   try {
-    console.log("检测到COS事件");
+    console.log("COS event detected");
     if (event && event.Records && Array.isArray(event.Records)) {
       for (let record of event.Records) {
         if (config.param.output.bucket == record.cos.cosBucket.name) {
-          console.error("禁止输入bucket与输出bucket相同");
+          console.error("Input bucket and output bucket should be different!");
           continue;
         }
 
@@ -72,19 +72,19 @@ async function transcode(record) {
         result = await requestTranscode(genQueryUrl(record));
       } catch (err) {
         console.error(err);
-        console.error("请求失败，重试");
+        console.error("Request failed, please try again");
         continue;
       }
       break;
     }
 
     if (result == null) {
-      console.error("请求发出错误！！！");
+      console.error("ERROR!");
       for (let item of items) {
         item.resMessage = "error";
       }
     } else {
-      console.log("请求发出成功");
+      console.log("Succeed");
       console.log(result);
       for (let item of items) {
         item.resCode = result.code;
@@ -99,7 +99,7 @@ async function transcode(record) {
 
 async function handleInputRecord(record) {
   //只监控文件上传
-  console.log("检测到文件上传");
+  console.log("File detected");
   if (!isValid(record)) {
     return;
   }
@@ -107,7 +107,7 @@ async function handleInputRecord(record) {
   if (transcodeCheck(config)) {
     await transcode(record);
   } else {
-    console.log("转码参数错误");
+    console.log("Transcode error");
   }
 }
 
@@ -127,6 +127,7 @@ let videoExtends = new Set([
   ".dat"
 ]);
 
+//Filtering files that aren't videos
 //过滤非视频文件
 function isValid(record) {
   let objectKey = new ObjectKey(record.cos.cosObject.key);
@@ -137,7 +138,7 @@ function isValid(record) {
 
   let contentType = record.cos.cosObject.meta["Content-Type"];
   if (contentType.indexOf("video") != 0) {
-    console.log("忽略非视频文件");
+    console.log("Neglecting non-video files");
     return false;
   }
   return true;
@@ -162,6 +163,7 @@ class ObjectKey {
   }
 }
 
+//Transcodind request
 //请求视频转码
 function requestTranscode(queryUrl) {
   return new Promise(function (resolve, reject) {
@@ -169,7 +171,7 @@ function requestTranscode(queryUrl) {
     if (config.PROXY) {
       proxy = config.PROXY;
     }
-    console.log("开始请求");
+    console.log("Requesting start");
     request({ url: queryUrl, timeout: 5000, proxy }, function (
       error,
       response,
@@ -178,11 +180,11 @@ function requestTranscode(queryUrl) {
       //记录日志
       if (error) {
         reject(error);
-        console.log("请求失败", error);
+        console.log("Requesting failed", error);
       } else {
         try {
           body = JSON.parse(body);
-          console.log("请求成功", body);
+          console.log("Requesting succeed", body);
           if (body.code == 0) {
             resolve(body);
           } else {
@@ -215,10 +217,10 @@ function genQueryUrl(record) {
   params["Timestamp"] = Math.round(Date.now() / 1000);
   params["Nonce"] = Math.round(Math.random() * 65535);
   params["SecretId"] = config.SecretId;
-  console.log("生成参数");
+  console.log("params generating");
   console.log(params);
   let queryUrl = genUrl(params, config.SecretKey);
-  console.log("生成请求");
+  console.log("query genertating");
   console.log(queryUrl);
   return queryUrl;
 }

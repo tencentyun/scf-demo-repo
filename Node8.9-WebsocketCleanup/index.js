@@ -1,11 +1,12 @@
 "use strict";
 /**************************************************
-公有云 - api网关 webscoket注册函数
-参考: https://cloud.tencent.com/document/product/583/32553
+Node8.9-WebsocketCleanup
+Reference: https://cloud.tencent.com/document/product/583/32553
 ***************************************************/
 
-// API网关的反向推送链接
+// The url of API gateway's send back host, API网关的反向推送链接
 const sendbackHost = "*******";
+// The information of MySql host, you need to build the database and forms in priority, there are 2 columns: `ConnectionID`, `Date`
 // MySql数据库账号信息,需要提前创建好数据库和表单,表单中新建2列：`ConnectionID`, `Date`
 const Host = "**";
 const User = "**";
@@ -59,8 +60,8 @@ function close(connectionId) {
     const req = http.request(
       {
         method: "POST",
-        host: "**", // 反向推送的host
-        path: "**", // 反向推送的路径
+        host: "**", // Send back host
+        path: "**", // Send back path
         headers: {
           "Content-Type": "application/json",
           "Content-Length": Buffer.byteLength(postData)
@@ -106,7 +107,7 @@ exports.main_handler = async (event, context, callback) => {
 
   await deleteConnectionId(connectionID);
 
-  // 如果是主动断开连接
+  // If breaking down the connection by client, 如果是主动断开连接
   // await close(connectionID)
 
   console.log("Finish DB Request", new dayjs().format("YYYY-MM-DD HH:mm:ss"));
