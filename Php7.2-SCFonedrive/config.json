@@ -2,8 +2,8 @@
   "serverless-cloud-function-application": {
     "application": {
       "Chinese": {
-        "name": "获取数据生成二维码并结合API网关示例",
-        "description": "本示例主要展示在SCF中对各种资源的引用方法，包括include php文件、调用上传到SCF中的非php文件、使用/tmp临时目录，另外展示了SCF中3种获取用户提交数据的方法",
+        "name": "获取onedrive信息并结合API网关展示",
+        "description": "获取onedrive信息并结合API网关展示",
         "attention": "该云函数使用了API网关触发器，并使用了集成响应功能，返回值需要构造为Json格式",
         "readme": {
           "file": "",
@@ -18,8 +18,8 @@
         }
       },
       "English": {
-        "name": "Get_Value_Create_QRcode_API_GW_Demo",
-        "description": "This demo is mainly to show how to use resources, and how to get values from the web users",
+        "name": "SCF_onedrive_index",
+        "description": "This application is a list for your onedrive",
         "attention": "This demo has been used api gw and integrated response function. So the return value should be json format based on the requirement.",
         "readme": {
           "file": "", // readme file
@@ -42,26 +42,23 @@
           "body": "$content" //the content of return msg
         }
       },
-      "download_address": "https://github.com/tencentyun/scf-demo-repo/tree/master/Php7.2-QRcodewithLogo", // Demo's git download url.
+      "download_address": "https://github.com/tencentyun/scf-demo-repo/tree/master/Php7.2-SCFonedrive", // Demo's git download url. Demo的git下载链接
       "tags": [
         "Php7",
         "API GW",
         "API",
-        "$_POST",
-        "$_GET",
-        "path",
-        "QRcode"
+        "onedrive"
         // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on.
         // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "0.3"
+      "version": "0.1"
       // Version number, which identifies the demo version status. 
       // Demo will not to update to the page if the version number unmodified.
       // 版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
-      "name": "QRcodewithLogo", // Function name which only be in English. 函数名称，只支持英文
-      "description": "This demo is mainly to show how to use resources, and how to get values from the web users. 本示例主要展示在SCF中对各种资源的引用方法，包括include php文件、调用上传到SCF中的非php文件、使用/tmp临时目录，另外展示了SCF中3种获取用户提交数据的方法",
+      "name": "SCFonedrive", // Function name which only be in English. 函数名称，只支持英文
+      "description": "This application is a list of your onedrive. 获取onedrive信息并结合API网关展示",
       "handler": "index.main_handler",
       "memorySize": 128, // Running memory. 运行配置内存
       "timeout": 10, // Running timeout. 运行超时时间
@@ -82,7 +79,7 @@
         "codeFile": ["index.php"],
         "CodeUri": [
           // Code download url which should be same as 'download_address'. 代码下载地址，和download_address保持一致
-          "https://github.com/tencentyun/scf-demo-repo/tree/master/Php7.2-QRcodewithLogo"
+          "https://github.com/tencentyun/scf-demo-repo/tree/master/Php7.2-SCFonedrive"
         ]
       }
     }

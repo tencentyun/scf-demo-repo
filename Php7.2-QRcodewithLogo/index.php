@@ -4,6 +4,7 @@ include "phpqrcode.php";
 function main_handler($event, $context) {
     $event = json_decode(json_encode($event), true);
     $context = json_decode(json_encode($context), true);
+    echo "<!--".json_encode($event)."-->";
     $function_name = $context['function_name'];
     $host_name = $event['headers']['host'];
     $serviceId = $event['requestContext']['serviceId'];
@@ -21,7 +22,7 @@ function main_handler($event, $context) {
     $value = $_POST['key']; // Give priority to the value submitted by the form POST. 取表格POST提交的值，优先
     if($value == "") $value = key($_GET); // Take the value submitted by '?queryString' after the link. 取链接后?queryString提交的值
     if($value == "") $value = $path; // Directly fetch the value of the non-domain name part of the link. 直接取链接后非域名部分的值
-
+    $value=urldecode($value);
     @ob_start();
 ?>
 <!DOCTYPE html>
@@ -35,18 +36,17 @@ function main_handler($event, $context) {
     <form name="form1" method="POST" action="">
         <tr>
             <td><textarea name="key" cols="45" rows="8"><?php echo $value;?></textarea></td>
-            <td><input name="Submit1" type="submit" value="Generate QR code"></td> 
+            <td><input name="Submit1" type="submit" value="Generate QR code"></td>
         </tr>
     </form>
 </table>
 <?php
 if($value != ""){
-    $value=urldecode($value);
     $logo = __DIR__ . '/logo.png'; // Referring to resources uploaded to SCF. 对上传到SCF的资源的引用
     $remoteaddr=str_replace(":","_",$event['requestContext']['sourceIp']); // IPV6 processing. 以后IPV6的处理
-    $QR = "tmp/".date("Ymd-His")."-".$remoteaddr."-base.png"; // Using temp temporary folder. 对tmp临时文件夹的使用
+    $QR = "/tmp/".date("Ymd-His")."-".$remoteaddr."-base.png"; // Using '/tmp' temporary folder. 对tmp临时文件夹的使用
     $base = $QR;
-    $last = "tmp/".date("Ymd-His")."-".$remoteaddr."-last.png";
+    $last = "/tmp/".date("Ymd-His")."-".$remoteaddr."-last.png";
     $errorCorrectionLevel = 'H';
     $matrixPointSize = 15; 
     QRcode::png($value, $QR, $errorCorrectionLevel, $matrixPointSize, 1, $color1); // Generating a QR code image without LOGO and put it in '$QR'. 生成不带LOGO的二维码图片,放在$QR中
@@ -57,7 +57,7 @@ if($value != ""){
     $QR_height = imagesy($QR);  
     $logo_width = imagesx($logo);  
     $logo_height = imagesy($logo);  
-    $logo_qr_width = $QR_width / 2.2;
+    $logo_qr_width = $QR_width / 3.3;
     $scale = $logo_width / $logo_qr_width;
     $logo_qr_height = $logo_height / $scale;  
     $from_width = ($QR_width - $logo_qr_width) / 2;  
@@ -74,13 +74,12 @@ if($value != ""){
 </body>
 </html>
 <?php
-    // Return to html page. 返回html网页
+    // Return a html page. 返回html网页
     $html=ob_get_clean();
     $statusCode=200;
     $isBase64Encoded = false;
     $headers = ['Content-Type' => 'text/html'];
     $value="";
-    echo "\n<!--".json_encode($event)."-->\n";
     return [
         'isBase64Encoded' => $isBase64Encoded,
         'statusCode' => $statusCode,
