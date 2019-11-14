@@ -22,7 +22,7 @@ function main_handler($event, $context) {
     $value = $_POST['key']; // Give priority to the value submitted by the form POST. 取表格POST提交的值，优先
     if($value == "") $value = key($_GET); // Take the value submitted by '?queryString' after the link. 取链接后?queryString提交的值
     if($value == "") $value = $path; // Directly fetch the value of the non-domain name part of the link. 直接取链接后非域名部分的值
-
+    $value=urldecode($value);
     @ob_start();
 ?>
 <!DOCTYPE html>
@@ -42,7 +42,6 @@ function main_handler($event, $context) {
 </table>
 <?php
 if($value != ""){
-    $value=urldecode($value);
     $logo = __DIR__ . '/logo.png'; // Referring to resources uploaded to SCF. 对上传到SCF的资源的引用
     $remoteaddr=str_replace(":","_",$event['requestContext']['sourceIp']); // IPV6 processing. 以后IPV6的处理
     $QR = "/tmp/".date("Ymd-His")."-".$remoteaddr."-base.png"; // Using '/tmp' temporary folder. 对tmp临时文件夹的使用
@@ -58,7 +57,7 @@ if($value != ""){
     $QR_height = imagesy($QR);  
     $logo_width = imagesx($logo);  
     $logo_height = imagesy($logo);  
-    $logo_qr_width = $QR_width / 2.2;
+    $logo_qr_width = $QR_width / 3.3;
     $scale = $logo_width / $logo_qr_width;
     $logo_qr_height = $logo_height / $scale;  
     $from_width = ($QR_width - $logo_qr_width) / 2;  
