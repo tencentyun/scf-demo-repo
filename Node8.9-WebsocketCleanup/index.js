@@ -47,7 +47,7 @@ async function deleteConnectionId(connectionID) {
   return queryResult;
 }
 
-function close(connectionId) {
+async function close(connectionId) {
   let retmsg = {};
   retmsg = {};
   retmsg["websocket"] = {};
