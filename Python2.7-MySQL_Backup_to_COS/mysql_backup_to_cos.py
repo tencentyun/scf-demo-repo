@@ -20,7 +20,8 @@ DB_NAME = os.getenv('dbname') #'cAuth'
 REGION = os.getenv('cosregion') #'ap-shanghai'
 BACKUP_BUCKET = os.getenv('cosbucket') #"dbbackup-1253970226"
 
-BACKUP_PATH = '/tmp'
+BACKUP_PATH = '/tmp' # can only fill in the / tmp directory, because the cloud function operating environment only has the / tmp directory for reading and writing.
+                     # 仅能填写 /tmp 目录，因为云函数运行环境仅有 /tmp 目录可读写。
 
 def backup2cos(client,filepath, bucket, key):
     res_cos = client.put_object_from_local_file(
