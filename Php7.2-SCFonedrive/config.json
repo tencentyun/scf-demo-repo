@@ -2,7 +2,7 @@
   "serverless-cloud-function-application": {
     "application": {
       "Chinese": {
-        "name": "获取onedrive信息并结合API网关展示",
+        "name": "SCF_onedrive",
         "description": "获取onedrive信息并结合API网关展示",
         "attention": "该云函数使用了API网关触发器，并使用了集成响应功能，返回值需要构造为Json格式",
         "readme": {
@@ -46,12 +46,11 @@
       "tags": [
         "Php7",
         "API GW",
-        "API",
         "onedrive"
         // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on.
         // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "0.1"
+      "version": "0.2"
       // Version number, which identifies the demo version status. 
       // Demo will not to update to the page if the version number unmodified.
       // 版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
@@ -61,7 +60,7 @@
       "description": "This application is a list of your onedrive. 获取onedrive信息并结合API网关展示",
       "handler": "index.main_handler",
       "memorySize": 128, // Running memory. 运行配置内存
-      "timeout": 10, // Running timeout. 运行超时时间
+      "timeout": 30, // Running timeout. 运行超时时间
       "runtime": "Php7", // Runtime which users can search demo by this keyword. 运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
       "Environment": {}, // Optional, used to define environment variables. 可选，用于定义环境变量
       "Events": {
