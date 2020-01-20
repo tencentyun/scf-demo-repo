@@ -30,58 +30,23 @@ function GetPathSetting($event, $context)
     $_SERVER['function_name'] = $context['function_name'];
     $_SERVER['namespace'] = $context['namespace'];
     $host_name = $event['headers']['host'];
+    $_SERVER['HTTP_HOST'] = $host_name;
     $serviceId = $event['requestContext']['serviceId'];
-    $public_path = path_format(getenv('public_path'));
-    $private_path = path_format(getenv('private_path'));
-    $domain_path = getenv('domain_path');
-    $tmp_path='';
-    if ($domain_path!='') {
-        $tmp = explode("|",$domain_path);
-        foreach ($tmp as $multidomain_paths){
-            $pos = strpos($multidomain_paths,":");
-            $tmp_path = path_format(substr($multidomain_paths,$pos+1));
-            if (substr($multidomain_paths,0,$pos)==$host_name) $private_path=$tmp_path;
-        }
-    }
-    // public_path is not Parent Dir of private_path. public_path 不能是 private_path 的上级目录。
-    if ($tmp_path!='') if ($public_path == substr($tmp_path,0,strlen($public_path))) $public_path=$tmp_path;
-    if ($public_path == substr($private_path,0,strlen($public_path))) $public_path=$private_path;
     if ( $serviceId === substr($host_name,0,strlen($serviceId)) ) {
         $_SERVER['base_path'] = '/'.$event['requestContext']['stage'].'/'.$_SERVER['function_name'].'/';
-        $_SERVER['list_path'] = $public_path;
         $_SERVER['Region'] = substr($host_name, strpos($host_name, '.')+1);
         $_SERVER['Region'] = substr($_SERVER['Region'], 0, strpos($_SERVER['Region'], '.'));
         $path = substr($event['path'], strlen('/'.$_SERVER['function_name'].'/'));
     } else {
         $_SERVER['base_path'] = $event['requestContext']['path'];
-        $_SERVER['list_path'] = $private_path;
         $_SERVER['Region'] = getenv('Region');
         $path = substr($event['path'], strlen($event['requestContext']['path']));
     }
     if (substr($path,-1)=='/') $path=substr($path,0,-1);
-    if (empty($_SERVER['list_path'])) {
-        $_SERVER['list_path'] = '/';
-    } else {
-        $_SERVER['list_path'] = spurlencode($_SERVER['list_path'],'/') ;
-    }
     $_SERVER['is_guestup_path'] = is_guestup_path($path);
     $_SERVER['PHP_SELF'] = path_format($_SERVER['base_path'] . $path);
     $_SERVER['REMOTE_ADDR'] = $event['requestContext']['sourceIp'];
-    $_SERVER['ajax']=0;
-    if ($event['headers']['x-requested-with']=='XMLHttpRequest') {
-        $_SERVER['ajax']=1;
-    }
-/*
-    $referer = $event['headers']['referer'];
-    $tmpurl = substr($referer,strpos($referer,'//')+2);
-    $refererhost = substr($tmpurl,0,strpos($tmpurl,'/'));
-    if ($refererhost==$host_name) {
-        // Guest only upload from this site. 仅游客上传用，referer不对就空值，无法上传
-        $_SERVER['current_url'] = substr($referer,0,strpos($referer,'//')) . '//' . $host_name.$_SERVER['PHP_SELF'];
-    } else {
-        $_SERVER['current_url'] = '';
-    }
-*/
+    $_SERVER['HTTP_X_REQUESTED_WITH'] = $event['headers']['x-requested-with'];
     return $path;
 }
 
@@ -138,8 +103,11 @@ function get_refresh_token()
         </script>';
             setConfig([ 'refresh_token' => $tmptoken ]);
             savecache('access_token', $ret['access_token'], $ret['expires_in'] - 60);
+            $trynum = 0;
+            while( json_decode(getfunctioninfo($_SERVER['function_name'], $_SERVER['Region'], $_SERVER['namespace'], getConfig('SecretId'), getConfig('SecretKey')),true)['Response']['Status']!='Active' ) echo '
+'.++$trynum;
             $str .= '
-            <meta http-equiv="refresh" content="5;URL=' . $url . '">';
+            <meta http-equiv="refresh" content="2;URL=' . $url . '">';
             return message($str, getconstStr('WaitJumpIndex'));
         }
         return message('<pre>' . $tmp['body'] . '</pre>', $tmp['stat']);
@@ -167,7 +135,7 @@ function get_refresh_token()
                 $tmp['client_id'] = $_POST['client_id'];
                 $tmp['client_secret'] = $_POST['client_secret'];
             }
-            $response = setConfig($tmp);
+            $response = json_decode( setConfig($tmp), true )['Response'];
             $title = getconstStr('MayinEnv');
             $html = getconstStr('Wait') . ' 3s<meta http-equiv="refresh" content="3;URL=' . $url . '?install3">';
             if (isset($response['Error'])) {
@@ -175,7 +143,7 @@ function get_refresh_token()
 ' . $response['Error']['Message'] . '<br><br>
 function_name:' . $_SERVER['function_name'] . '<br>
 Region:' . $_SERVER['Region'] . '<br>
-namespace:' . $Namespace . '<br>
+namespace:' . $_SERVER['namespace'] . '<br>
 <button onclick="location.href = location.href;">'.getconstStr('Reflesh').'</button>';
                 $title = 'Error';
             }
@@ -197,13 +165,13 @@ namespace:' . $Namespace . '<br>
                 $tmp['SecretKey'] = $SecretKey;
             }
             echo SetbaseConfig($_SERVER['function_name'], $_SERVER['Region'], $_SERVER['namespace'], $SecretId, $SecretKey);
-            $response = updateEnvironment($tmp, $_SERVER['function_name'], $_SERVER['Region'], $_SERVER['namespace'], $SecretId, $SecretKey);
+            $response = json_decode( updateEnvironment($tmp, $_SERVER['function_name'], $_SERVER['Region'], $_SERVER['namespace'], $SecretId, $SecretKey), true)['Response'];
             if (isset($response['Error'])) {
                 $html = $response['Error']['Code'] . '<br>
 ' . $response['Error']['Message'] . '<br><br>
 function_name:' . $_SERVER['function_name'] . '<br>
 Region:' . $_SERVER['Region'] . '<br>
-namespace:' . $Namespace . '<br>
+namespace:' . $_SERVER['namespace'] . '<br>
 <button onclick="location.href = location.href;">'.getconstStr('Reflesh').'</button>';
                 $title = 'Error';
             } else {
@@ -335,6 +303,9 @@ function getfunctioninfo($function_name, $Region, $Namespace, $SecretId, $Secret
 function updateEnvironment($Envs, $function_name, $Region, $Namespace, $SecretId, $SecretKey)
 {
     //print_r($Envs);
+    $trynum = 0;
+    while( json_decode(getfunctioninfo($_SERVER['function_name'], $_SERVER['Region'], $_SERVER['namespace'], $SecretId, $SecretKey),true)['Response']['Status']!='Active' ) echo '
+'.++$trynum;
     //json_decode($a,true)['Response']['Environment']['Variables'][0]['Key']
     $tmp = json_decode(getfunctioninfo($function_name, $Region, $Namespace, $SecretId, $SecretKey),true)['Response']['Environment']['Variables'];
     foreach ($tmp as $tmp1) {
@@ -437,6 +408,9 @@ namespace:' . $namespace . '<br>
 <button onclick="location.href = location.href;">'.getconstStr('Reflesh').'</button>';
             $title = 'Error';
         } else {
+            $trynum = 0;
+            while( json_decode(getfunctioninfo($function_name, $_SERVER['Region'], $_SERVER['namespace'], getConfig('SecretId'), getConfig('SecretKey')),true)['Response']['Status']!='Active' ) echo '
+'.++$trynum;
             $html .= getconstStr('UpdateSuccess') . '<br>
 <button onclick="location.href = location.href;">'.getconstStr('Reflesh').'</button>';
             $title = getconstStr('Setup');
@@ -459,17 +433,20 @@ namespace:' . $namespace . '<br>
             }
             $tmp['domain_path'] = $tmparr;
         }*/
-        $response = setConfig($tmp);
+        $response = json_decode( setConfig($tmp), true )['Response'];
         if (isset($response['Error'])) {
                 $html = $response['Error']['Code'] . '<br>
 ' . $response['Error']['Message'] . '<br><br>
 function_name:' . $_SERVER['function_name'] . '<br>
 Region:' . $_SERVER['Region'] . '<br>
-namespace:' . $Namespace . '<br>
+namespace:' . $_SERVER['namespace'] . '<br>
 <button onclick="location.href = location.href;">'.getconstStr('Reflesh').'</button>';
                 $title = 'Error';
             } else {
-                sleep(3);
+                $trynum = 0;
+                while( json_decode(getfunctioninfo($function_name, $_SERVER['Region'], $_SERVER['namespace'], getConfig('SecretId'), getConfig('SecretKey')),true)['Response']['Status']!='Active' ) echo '
+'.++$trynum;
+                //sleep(3);
             $html .= '<script>location.href=location.href</script>';
             $title = getconstStr('Setup');
         }
@@ -515,7 +492,8 @@ namespace:' . $Namespace . '<br>
         <tr>
             <td><label>' . $key . '</label></td>
             <td width=100%>
-                <select name="' . $key .'">';
+                <select name="' . $key .'">
+                <option value=""></option>';
             foreach ($theme_arr as $v1) {
                 if ($v1!='.' && $v1!='..') $html .= '
                     <option value="'.$v1.'" '.($v1==getConfig($key)?'selected="selected"':'').'>'.$v1.'</option>';
