@@ -65,7 +65,7 @@ function parseUrl({ url }) {
 }
 
 /**
- * init cos-nodejs-sdk-v5 instance，append promisify methods
+ * init cos-nodejs-sdk-v5 instance，append promisify methods add retry logic
  */
 function initCosInstance({ SecretId, SecretKey, XCosSecurityToken, ...args }) {
   const cosInstance = new COS({
@@ -78,7 +78,10 @@ function initCosInstance({ SecretId, SecretKey, XCosSecurityToken, ...args }) {
   for (let key of keys) {
     const value = cosInstance[key]
     if (isFunction(value)) {
-      cosInstance[`${key}Promise`] = promisify(value)
+      cosInstance[`${key}Promise`] = retry({
+        maxTryTime: 3,
+        func: promisify(value).bind(cosInstance)
+      })
     }
   }
   return cosInstance
@@ -89,11 +92,10 @@ function initCosInstance({ SecretId, SecretKey, XCosSecurityToken, ...args }) {
  */
 function getBatchLimit({
   runtimeBuffer = 10 * 1024 * 1024,
-  reserveBuffer = 0,
-  reserveRate = 0
+  reserveRate = 0,
+  totalMem = 896 * 1024 * 1024
 }) {
-  reserveBuffer = reserveBuffer || reserveRate * os.totalmem()
-  return Math.floor((os.freemem() - reserveBuffer) / runtimeBuffer)
+  return Math.floor((1 - reserveRate) * totalMem / runtimeBuffer)
 }
 
 /**
@@ -239,6 +241,26 @@ function logger({ title = '', content = '', data = {}, print = true }) {
   return result
 }
 
+
+/**
+ * retry logic
+ */
+function retry({ maxTryTime = 3, func }) {
+  return async (...args) => {
+    let err, tryTime = 0
+    while (tryTime < maxTryTime) {
+      tryTime++
+      try {
+        const res = await func(...args)
+        return res
+      } catch (e) {
+        err = e
+      }
+    }
+    throw err
+  }
+}
+
 module.exports = {
   getParams,
   initCosInstance,
@@ -248,5 +270,6 @@ module.exports = {
   getTaskName,
   getReason,
   getLogs,
-  logger
+  logger,
+  retry
 }

@@ -43,7 +43,12 @@ class UnzipFile {
         lazyEntries,
         autoClose,
         decodeStrings
-      }, (error, zipFile) => {
+      }, async (error, zipFile) => {
+        // init central directory start offset
+        await reader.initCentralDir({
+          centralDirStart: zipFile.readEntryCursor
+        })
+
         if (error) {
           reject({
             error,
@@ -78,6 +83,7 @@ class UnzipFile {
       })
 
       this.zipFile.on('error', err => {
+        console.log(err)
         tryTime ++
         if (tryTime >= this.maxTryTime) {
           reject(err)

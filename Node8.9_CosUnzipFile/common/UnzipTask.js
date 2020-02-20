@@ -10,6 +10,7 @@ const PUT_OBJECT_LIMIT = 5 * GB
 class UnzipTask {
   constructor({
     cosInstance,
+    totalMem,
     Bucket,
     Region,
     Key,
@@ -21,6 +22,7 @@ class UnzipTask {
     const { basename, extname } = parseFileName(Key)
     extend(this, {
       cosInstance,
+      totalMem,
       Bucket,
       Region,
       Key,
@@ -38,11 +40,12 @@ class UnzipTask {
       return
     }
 
-    const { cosInstance, Bucket, Region, Key, maxTryTime } = this
+    const { cosInstance, totalMem, Bucket, Region, Key, maxTryTime } = this
 
     const batchLimit = getBatchLimit({
       runtimeBuffer: 10 * 1024 * 1024,
-      reserveRate: 0.2
+      reserveRate: 0.2,
+      totalMem
     })
 
     const unzipFile = this.unzipFile = new UnzipFile({ cosInstance, Bucket, Region, Key, maxTryTime })
@@ -53,9 +56,8 @@ class UnzipTask {
 
     try {
       entries = await unzipFile.getEntries()
-      list = entries.map(entry => {
-        return { entry }
-      })
+      console.log(`zip file entries count is ${entries.length}`)
+      list = entries.map(entry => ({ entry }))
     } catch (error) {
       throw {
         error,

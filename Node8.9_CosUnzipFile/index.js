@@ -14,6 +14,7 @@ const {
 exports.main_handler = async (event, context, callback) => {
   let currentTask = null, isTimeout = false
   const duration = context.time_limit_in_ms - 20 * 1000
+  const totalMem = context.memory_limit_in_mb * 1 * 1024 * 1024
 
   /**
    * set a timer to terminate the unzip task, ensure log message is printed
@@ -64,6 +65,7 @@ exports.main_handler = async (event, context, callback) => {
   const taskList = objectList.map(({ Bucket, Region, Key }) => {
     return new UnzipTask({
       cosInstance,
+      totalMem,
       Bucket,
       Region,
       Key,

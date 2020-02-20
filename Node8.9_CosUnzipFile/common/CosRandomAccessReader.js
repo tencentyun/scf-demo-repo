@@ -12,12 +12,18 @@ class CosRandomAccessReader extends RandomAccessReader {
     Key,
     Expires = 900 * 1000,
     Sign = true,
-
     requestTimeout = 900 * 1000,
+
+    localSizeLimit = 450 * 1024 * 1024,
+
     totalSize = 0,
     localFdSlicer = null,
-    localSizeLimit = 400 * 1024 * 1024,
-    localPath = '/tmp/temp.zip'
+    localPath = '/tmp/temp.zip',
+
+    centralDirSize = 0,
+    centralDirStart = 0,
+    localCentralDirFdSlicer = null,
+    localCentralDirPath = '/tmp/temp_central_dir.zip'
   }) {
     super()
     const objectUrl = cosInstance.getObjectUrl({
@@ -33,12 +39,18 @@ class CosRandomAccessReader extends RandomAccessReader {
       Region,
       Key,
       objectUrl,
-
       requestTimeout,
+
+      localSizeLimit,
+
       totalSize,
       localFdSlicer,
-      localSizeLimit,
-      localPath
+      localPath,
+
+      centralDirSize,
+      centralDirStart,
+      localCentralDirFdSlicer,
+      localCentralDirPath
     })
   }
 
@@ -55,6 +67,7 @@ class CosRandomAccessReader extends RandomAccessReader {
     try {
       const { headers } = await cosInstance.headObjectPromise({ Bucket, Region, Key })
       this.totalSize = headers['content-length'] * 1
+      console.log(`whole zip file size is ${this.totalSize}`)
     } catch (error) {
       throw {
         error,
@@ -63,48 +76,97 @@ class CosRandomAccessReader extends RandomAccessReader {
     }
 
     if (this.totalSize <= localSizeLimit) {
-      try {
-        await cosInstance.getObjectPromise({
-          Bucket,
-          Region,
-          Key,
-          Output: fs.createWriteStream(localPath)
-        })
-      } catch (error) {
-        throw {
-          error,
-          trace: 'CosRandomAccessReader.cosInstance.getObjectPromise'
-        }
-      }
-
-      try {
-        await this.getFdSlicer()
-      } catch (error) {
-        throw {
-          error,
-          trace: 'CosRandomAccessReader.getFdSlicer'
-        }
-      }
+      await this.downloadFileAndInitSlicer({
+        filePath: localPath,
+        fdSlicerKey: 'localFdSlicer'
+      })
+      console.log(`whole zip file is downloaded, size is ${this.totalSize}`)
     }
     return this.totalSize
   }
 
-  getFdSlicer() {
+  /**
+   * try to download zip file central directory
+   * try to init central directory fdSlicer
+   */
+  async initCentralDir({ centralDirStart }) {
+    this.centralDirStart = centralDirStart
+    this.centralDirSize = this.totalSize - centralDirStart
+
+    if (!this.localFdSlicer && this.centralDirSize <= this.localSizeLimit) {
+      await this.downloadFileAndInitSlicer({
+        headers: {
+          Range: `bytes=${this.centralDirStart}-`
+        },
+        filePath: this.localCentralDirPath,
+        fdSlicerKey: 'localCentralDirFdSlicer'
+      })
+      console.log(`zip file central directory is downloaded, size is ${this.centralDirSize}`)
+    }
+  }
+
+  // download file to local disk and init the fdSlicer
+  async downloadFileAndInitSlicer({
+    filePath,
+    fdSlicerKey,
+    headers = {}
+  }) {
+    const {
+      cosInstance,
+      Bucket,
+      Region,
+      Key
+    } = this
+    try {
+      await cosInstance.getObjectPromise({
+        Bucket,
+        Region,
+        Key,
+        Headers: headers,
+        Output: fs.createWriteStream(filePath)
+      })
+    } catch (error) {
+      throw {
+        error,
+        trace: 'CosRandomAccessReader.cosInstance.getObjectPromise'
+      }
+    }
+
+    try {
+      this[fdSlicerKey] = await this.getFdSlicer({ filePath })
+    } catch (error) {
+      throw {
+        error,
+        trace: 'CosRandomAccessReader.getFdSlicer'
+      }
+    }
+  }
+
+  getFdSlicer({ filePath }) {
     return new Promise((resolve, reject) => {
-      fs.open(this.localPath, 'r', (err, fd) => {
+      fs.open(filePath, 'r', (err, fd) => {
         if (err) {
           reject(err)
         } else {
-          this.localFdSlicer = FdSlicer.createFromFd(fd)
-          resolve()
+          resolve(FdSlicer.createFromFd(fd))
         }
       })
     })
   }
 
+  /**
+   * if the whole file is downloaded, read it from disk
+   * else if the central directory is downloaded, and now is trying to read sub file meta data, read it from disk
+   * else read it from request
+   */
   getRangeStream({ start, end }) {
     if (this.localFdSlicer) {
       return this.localFdSlicer.createReadStream({ start, end })
+    } else if (this.localCentralDirFdSlicer && start >= this.centralDirStart) {
+      return this.localCentralDirFdSlicer.createReadStream({
+        start: start - this.centralDirStart,
+        end: end - this.centralDirStart
+      })
     } else {
       return request({
         url: this.objectUrl,
