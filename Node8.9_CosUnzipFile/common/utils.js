@@ -3,19 +3,18 @@
 const COS = require('cos-nodejs-sdk-v5')
 const path = require('path')
 const URL = require('url')
-const os = require('os')
 const jschardet = require('jschardet')
 const legacy = require('legacy-encoding')
-const { promisify } = require('util')
+const { promisify, inspect } = require('util')
 const { isFunction, isString, isObject } = require('lodash')
 
 const ERROR_TRACE_MAP = {
-  'CosRandomAccessReader.cosInstance.headObjectPromise': 'zip file head object fail',
+  'CosRandomAccessReader.cosInstance.headObjectRetryPromise': 'zip file head object fail',
   'CosRandomAccessReader.cosInstance.getObjectPromise': 'zip file get object fail',
   'CosRandomAccessReader.getFdSlicer': 'zip file get file descriptor fail',
-  'UnzipFile.cosInstance.putObject': 'sub file put object fail',
-  'UnzipFile.init.yauzl.fromRandomAccessReader': 'zip file parse error, it may be broken',
-  'UnzipTask.unzipFile.getEntries': 'zip file get sub file entry fail'
+  'UnzipFile.init.yauzl.fromRandomAccessReaderRetryPromise': 'zip file parse error, it may be broken',
+  'UnzipTask.unzipFile.getEntries': 'zip file get sub file entry fail',
+  'UnzipTask.unzipFile.cosInstance.unzipOneTask': 'sub file put object fail'
 }
 
 /**
@@ -65,7 +64,26 @@ function parseUrl({ url }) {
 }
 
 /**
- * init cos-nodejs-sdk-v5 instance，append promisify methods
+ * append promisify or retry logic methods
+ */
+function appendFunction({
+  target = {},
+  keys = [],
+  maxTryTime = 1,
+  promisify: needPromisify = true
+}) {
+  const suffix = `${maxTryTime > 1 ? 'Retry' : ''}${needPromisify ? 'Promise' : ''}`
+  for (const key of keys) {
+    const value = target[key]
+    if (isFunction(value)) {
+      const func = needPromisify ? promisify(value).bind(target) : value.bind(target)
+      target[`${key}${suffix}`] = retry({ maxTryTime, func }) 
+    }
+  }
+}
+
+/**
+ * init cos-nodejs-sdk-v5 instance，append promisify methods add retry logic
  */
 function initCosInstance({ SecretId, SecretKey, XCosSecurityToken, ...args }) {
   const cosInstance = new COS({
@@ -74,13 +92,21 @@ function initCosInstance({ SecretId, SecretKey, XCosSecurityToken, ...args }) {
     XCosSecurityToken,
     ...args
   })
+
   const keys = Object.keys(COS.prototype)
-  for (let key of keys) {
-    const value = cosInstance[key]
-    if (isFunction(value)) {
-      cosInstance[`${key}Promise`] = promisify(value)
-    }
-  }
+  const noRetryKeys = ['getObject', 'putObject']
+
+  appendFunction({
+    target: cosInstance,
+    keys: noRetryKeys,
+    maxTryTime: 1
+  })
+
+  appendFunction({
+    target: cosInstance,
+    keys: keys.filter(key => !noRetryKeys.includes(key)),
+    maxTryTime: 3
+  })
   return cosInstance
 }
 
@@ -89,11 +115,10 @@ function initCosInstance({ SecretId, SecretKey, XCosSecurityToken, ...args }) {
  */
 function getBatchLimit({
   runtimeBuffer = 10 * 1024 * 1024,
-  reserveBuffer = 0,
-  reserveRate = 0
+  reserveRate = 0,
+  totalMem = 896 * 1024 * 1024
 }) {
-  reserveBuffer = reserveBuffer || reserveRate * os.totalmem()
-  return Math.floor((os.freemem() - reserveBuffer) / runtimeBuffer)
+  return Math.floor((1 - reserveRate) * totalMem / runtimeBuffer)
 }
 
 /**
@@ -159,9 +184,9 @@ function getReason(error) {
 /**
  * get error logs
  */
-function getLogs(err) {
+function getLogs(err, entry) {
   const cosLogs = getCosLogs(err)
-  const otherLogs = getOtherLogs(err)
+  const otherLogs = getOtherLogs(err, entry)
   return cosLogs.length ? cosLogs : otherLogs
 }
 
@@ -197,12 +222,18 @@ function getCosLogs(err) {
 /**
  * get other error logs
  */
-function getOtherLogs(err) {
+function getOtherLogs(err, entry) {
   try {
     if (err === 'isTimeout' || (err.error && err.error === 'single sub file can not larger than 5 GB')) {
       return []
     } else if (isString(err)) {
       return [err]
+    } else if (isObject(err)) {
+      if (entry) {
+        return [`Key: ${entry.fileNameStr}`, inspect(err, { depth: 20 })] 
+      } else {
+        return [inspect(err, { depth: 20 })]
+      }
     } else {
       return [JSON.stringify(err)]
     }
@@ -239,8 +270,29 @@ function logger({ title = '', content = '', data = {}, print = true }) {
   return result
 }
 
+
+/**
+ * retry logic
+ */
+function retry({ maxTryTime = 3, func }) {
+  return async (...args) => {
+    let err, tryTime = 0
+    while (tryTime < maxTryTime) {
+      tryTime++
+      try {
+        const res = await func(...args)
+        return res
+      } catch (e) {
+        err = e
+      }
+    }
+    throw err
+  }
+}
+
 module.exports = {
   getParams,
+  appendFunction,
   initCosInstance,
   getBatchLimit,
   bufferToString,
@@ -248,5 +300,6 @@ module.exports = {
   getTaskName,
   getReason,
   getLogs,
-  logger
+  logger,
+  retry
 }

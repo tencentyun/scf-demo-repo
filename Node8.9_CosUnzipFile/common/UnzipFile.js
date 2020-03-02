@@ -1,7 +1,7 @@
 const yauzl = require('yauzl')
 const CosRandomAccessReader = require('./CosRandomAccessReader')
-const { extend, noop } = require('lodash')
-const { bufferToString } = require('./utils')
+const { extend } = require('lodash')
+const { bufferToString, appendFunction } = require('./utils')
 
 class UnzipFile {
   constructor({
@@ -20,41 +20,42 @@ class UnzipFile {
       zipFile,
       maxTryTime
     })
+
+    appendFunction({
+      target: yauzl,
+      keys: ['fromRandomAccessReader'],
+      maxTryTime
+    })
   }
 
-  init({
+  async init({
     lazyEntries = true,
     autoClose = false,
     decodeStrings = false
   } = {}) {
-    return new Promise(async (resolve, reject) => {
-      const { cosInstance, Bucket, Region, Key } = this
-      const reader = new CosRandomAccessReader({ cosInstance, Bucket, Region, Key })
-      let totalSize = 0
+    const { cosInstance, Bucket, Region, Key, maxTryTime } = this
+  
+    const reader = new CosRandomAccessReader({ cosInstance, Bucket, Region, Key, maxTryTime })
 
-      try {
-        totalSize = await reader.getTotalSize()
-      } catch (err) {
-        reject(err)
-        return
-      }
+    const totalSize = await reader.getTotalSize()
 
-      yauzl.fromRandomAccessReader(reader, totalSize, {
+    try {
+      this.zipFile = await yauzl.fromRandomAccessReaderRetryPromise(reader, totalSize, {
         lazyEntries,
         autoClose,
         decodeStrings
-      }, (error, zipFile) => {
-        if (error) {
-          reject({
-            error,
-            trace: 'UnzipFile.init.yauzl.fromRandomAccessReader'
-          })
-        } else {
-          this.zipFile = zipFile
-          resolve(this.zipFile)
-        }
       })
-    })
+      appendFunction({
+        target: this.zipFile,
+        keys: ['openReadStream'],
+        maxTryTime: 1
+      })
+    } catch (error) {
+      throw {
+        error,
+        trace: 'UnzipFile.init.yauzl.fromRandomAccessReaderRetryPromise'
+      }
+    }
   }
 
   getEntries() {
@@ -68,17 +69,18 @@ class UnzipFile {
         if (this.zipFile.isOpen) {
           this.zipFile.readEntry()
         } else {
-          reject()
+          reject({ isOpen: false })
         }
       })
 
       this.zipFile.on('end', () => {
-        this.zipFile.on('error', noop)
+        this.zipFile.removeAllListeners('error')
         resolve(entries)
       })
 
       this.zipFile.on('error', err => {
-        tryTime ++
+        tryTime++
+        console.log(`on entry error, index: ${entries.length}, tryTime: ${tryTime}`)
         if (tryTime >= this.maxTryTime) {
           reject(err)
         } else {
@@ -90,31 +92,27 @@ class UnzipFile {
     })
   }
 
-  getStream(entry) {
-    return new Promise((resolve, reject) => {
-      if (/\/$/.test(entry.fileNameStr)) {
-        process.nextTick(() => {
-          resolve(Buffer.from(''))
-        })
-        return
-      }
-      this.zipFile.openReadStream(entry, (err, stream) => {
-        if (!this.zipFile.isOpen) {
-          reject()
-          return
-        }
-        if (err) {
-          reject(err)
-        } else {
-          resolve(stream)
-        }
-      })
-    })
+  async getStream(entry) {
+    if (/\/$/.test(entry.fileNameStr)) {
+      return Buffer.from('')
+    }
+
+    if (!this.zipFile.isOpen) {
+      throw { isOpen: false }
+    }
+
+    const stream = await this.zipFile.openReadStreamPromise(entry)
+
+    if (!this.zipFile.isOpen) {
+      throw { isOpen: false }
+    }
+
+    return stream
   }
 
   close() {
     if (this.zipFile && this.zipFile.isOpen) {
-      this.zipFile.on('error', noop)
+      this.zipFile.removeAllListeners('error')
       this.zipFile.close()
     }
   }

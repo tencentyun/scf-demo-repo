@@ -1,7 +1,7 @@
 const path = require('path')
 const TaskManager = require('./TaskManager')
 const UnzipFile = require('./UnzipFile')
-const { parseFileName, getBatchLimit } = require('./utils')
+const { parseFileName, getBatchLimit, appendFunction } = require('./utils')
 const { extend } = require('lodash')
 
 const GB = 1024 * 1024 * 1024
@@ -10,6 +10,7 @@ const PUT_OBJECT_LIMIT = 5 * GB
 class UnzipTask {
   constructor({
     cosInstance,
+    totalMem,
     Bucket,
     Region,
     Key,
@@ -21,6 +22,7 @@ class UnzipTask {
     const { basename, extname } = parseFileName(Key)
     extend(this, {
       cosInstance,
+      totalMem,
       Bucket,
       Region,
       Key,
@@ -31,6 +33,13 @@ class UnzipTask {
       basename,
       extname
     })
+
+    appendFunction({
+      target: this,
+      keys: ['unzipOneTask'],
+      promisify: false,
+      maxTryTime
+    })
   }
 
   async initTaskManager() {
@@ -38,24 +47,24 @@ class UnzipTask {
       return
     }
 
-    const { cosInstance, Bucket, Region, Key, maxTryTime } = this
+    const { cosInstance, totalMem, Bucket, Region, Key, maxTryTime } = this
 
     const batchLimit = getBatchLimit({
       runtimeBuffer: 10 * 1024 * 1024,
-      reserveRate: 0.2
+      reserveRate: 0.2,
+      totalMem
     })
 
     const unzipFile = this.unzipFile = new UnzipFile({ cosInstance, Bucket, Region, Key, maxTryTime })
-
+  
     await unzipFile.init()
 
     let entries, list
 
     try {
       entries = await unzipFile.getEntries()
-      list = entries.map(entry => {
-        return { entry }
-      })
+      console.log(`zip file entries count is ${entries.length}`)
+      list = entries.map((entry, index) => ({ entry, index }))
     } catch (error) {
       throw {
         error,
@@ -72,8 +81,10 @@ class UnzipTask {
           return
         }
         try {
-          await this.unzipOneTask({ task, onFinish })
+          const res = await this.unzipOneTaskRetry({ task })
+          onFinish(null, res)
         } catch (error) {
+          console.log(`fileIndex: ${task.index}`, task.entry, error)
           onFinish(error)
         }
       },
@@ -82,44 +93,34 @@ class UnzipTask {
     })
   }
 
-  async unzipOneTask({ task, onFinish, tryTime = 1 }) {
+  async unzipOneTask({ task }) {
     const {
       cosInstance,
       targetBucket,
       targetRegion,
       targetPrefix,
       basename,
-      unzipFile,
-      maxTryTime
+      unzipFile
     } = this
 
     const Key = path.join(targetPrefix, basename, task.entry.fileNameStr).replace(/\\/g, '\/')
 
-    const Body = await unzipFile.getStream(task.entry)
-
-    cosInstance.putObject({
-      Bucket: targetBucket,
-      Region: targetRegion,
-      Key,
-      Body
-    }, (err, ...args) => {
-      if (err && tryTime < maxTryTime) {
-        process.nextTick(() => {
-          this.unzipOneTask({
-            task,
-            onFinish,
-            tryTime: tryTime + 1
-          })
-        })
-      } else {
-        const error = err ? {
-          error: err,
-          Key,
-          trace: 'UnzipFile.cosInstance.putObject'
-        }: null
-        onFinish(error, ...args)
+    try {
+      const Body = await unzipFile.getStream(task.entry)
+      const res = await cosInstance.putObjectPromise({
+        Bucket: targetBucket,
+        Region: targetRegion,
+        Key,
+        Body
+      })
+      return res
+    } catch (error) {
+      throw {
+        error,
+        Key,
+        trace: 'UnzipTask.unzipFile.cosInstance.unzipOneTask'
       }
-    })
+    }
   }
 
   async run() {

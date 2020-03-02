@@ -1,7 +1,7 @@
 'use strict'
 
 const UnzipTask = require('./common/UnzipTask')
-const { isString, replace } = require('lodash')
+const { replace } = require('lodash')
 const {
   getParams,
   initCosInstance,
@@ -14,6 +14,7 @@ const {
 exports.main_handler = async (event, context, callback) => {
   let currentTask = null, isTimeout = false
   const duration = context.time_limit_in_ms - 20 * 1000
+  const totalMem = context.memory_limit_in_mb * 1 * 1024 * 1024
 
   /**
    * set a timer to terminate the unzip task, ensure log message is printed
@@ -57,13 +58,13 @@ exports.main_handler = async (event, context, callback) => {
     throw new Error(`SecretId, SecretKey or XCosSecurityToken is missing`)
   }
   const cosInstance = initCosInstance({ SecretId, SecretKey, XCosSecurityToken })
-
   /**
    * run unzip task
    */
   const taskList = objectList.map(({ Bucket, Region, Key }) => {
     return new UnzipTask({
       cosInstance,
+      totalMem,
       Bucket,
       Region,
       Key,
@@ -112,14 +113,14 @@ exports.main_handler = async (event, context, callback) => {
       hasFail = true
     } else if (list) {
       let total = 0, success = 0, errorTips = []
-      list.forEach(({ status, error }) => {
+      list.forEach(({ status, error, entry }) => {
         if (status === 'success') {
           success++
         }
         total++
         if (error) {
           errorTips.push(`Reason: ${getReason(error)}`)
-          errorTips.push(...getLogs(error))
+          errorTips.push(...getLogs(error, entry))
         }
       })
       const status = success === total ? 'success' : 'fail'
