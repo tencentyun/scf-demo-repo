@@ -168,7 +168,7 @@ function getTaskName({ Bucket, Region, Key }) {
  */
 function getReason(error) {
   if (error === 'isTimeout') {
-    return 'serverless cloud function timeout'
+    return 'serverless cloud function timeout, with 20 seconds buffer'
   } else if (isString(error)) {
     return error
   } else if (error.trace) {
