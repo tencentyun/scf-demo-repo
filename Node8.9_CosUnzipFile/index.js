@@ -16,6 +16,10 @@ exports.main_handler = async (event, context, callback) => {
   const duration = context.time_limit_in_ms - 20 * 1000
   const totalMem = context.memory_limit_in_mb * 1 * 1024 * 1024
 
+  if (duration <= 0) {
+    throw new Error(`time limit can not less than 20 seconds`)
+  }
+
   /**
    * set a timer to terminate the unzip task, ensure log message is printed
    */
