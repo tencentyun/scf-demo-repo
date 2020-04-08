@@ -115,7 +115,6 @@ class KafkaToCos(object):
             response = self.client.put_object_from_local_file(Bucket=self.bucket_address, LocalFilePath=local_path,
                                                               Key=key)
             logger.debug("upload result is [%s]" % response)
-            self.delete_local_file(local_path)
             return True
         else:
             logger.error("Upload fail")
@@ -213,7 +212,12 @@ class KafkaToCos(object):
                 if os.path.getsize(local_path) >= self.partition_max_to_cos_bytes:
                     logger.info("already reach partition_max_to_cos_bytes, file length: %s",
                                 str(os.path.getsize(local_path)))
-                    break
+                    status = self.upload_local_file(local_path)
+                    if status is False:
+                        print("partition_max_to_cos_bytes failed to cos  time:" + str(int(time.time())))
+                        return "partition_max_to_cos_bytes failed to cos"
+                    consumer.commit_offsets()
+                    f.truncate()
                 if int(time.time()) - start_time >= self.partition_max_timeout_ms - max_to_cos_time:
                     logger.info("already reach partition_max_timeout, cost time: %s",
                                 str(int(time.time()) - start_time))
@@ -232,6 +236,7 @@ class KafkaToCos(object):
                         return "failed to cos"
             consumer.commit_offsets()
             consumer.stop()
+            self.delete_local_file(local_path)
             logger.info("end time:%s", str(int(time.time())))
             return "success"
         except ConsumerStoppedException as err:
