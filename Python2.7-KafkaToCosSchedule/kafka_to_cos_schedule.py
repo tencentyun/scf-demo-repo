@@ -72,7 +72,7 @@ def main_handler(event, context):
         for partition_id in range(partition_num):
             logger.debug("job-------:" + str(partition_id))
             p = Process(target=kafka_consumer_api_handler, name='kafka_consumer_api_handler(%s)' % "",
-                        args=(cred, instance_id, topic_id, partition_id, region, consumer_function_name))
+                        args=(cred, partition_id, region, consumer_function_name))
             process_list.append(p)
 
         for p in process_list:

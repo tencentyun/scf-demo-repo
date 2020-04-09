@@ -179,7 +179,7 @@ class KafkaToCos(object):
         client = KafkaClient(hosts=self.kafka_address)
         msg_consumed_count = 0
         reset_offset_on_start_status = False
-        topic = client.topics["kafkaToCos".encode()]
+        topic = client.topics[self.topic_name.encode()]
         partitions = topic.partitions
 
         if self.offset_type.lower() == 'earliest':
@@ -226,14 +226,14 @@ class KafkaToCos(object):
                     logger.info("already reach consumer_timeout_ms, cost: %s", str(int(time.time()) - start_time))
                     break
 
-                f.close()
-                logger.info("consumer finished, cost time: %s", str(int(time.time()) - start_time))
-                logger.info("msg num: %s" + str(msg_consumed_count))
-                if msg_consumed_count > 0:
-                    status = self.upload_local_file(local_path)
-                    if status is False:
-                        logger.error("failed to cos  time: %s", str(int(time.time())))
-                        return "failed to cos"
+            f.close()
+            logger.info("consumer finished, cost time: %s", str(int(time.time()) - start_time))
+            logger.info("msg num: %s", str(msg_consumed_count))
+            if msg_consumed_count > 0:
+                status = self.upload_local_file(local_path)
+                if status is False:
+                    logger.error("failed to cos  time: %s", str(int(time.time())))
+                    return "failed to cos"
             consumer.commit_offsets()
             consumer.stop()
             self.delete_local_file(local_path)
