@@ -14,7 +14,7 @@ logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
 
-def kafka_consumer_api_handler(cred, partition_id, region, consumer_function_name):
+def kafka_consumer_api_handler(cred, partition_id, region, consumer_function_name, namespace):
     try:
 
         # 实例化要请求产品的client对象，以及函数所在的地域
@@ -25,6 +25,7 @@ def kafka_consumer_api_handler(cred, partition_id, region, consumer_function_nam
         # 调用接口，发起请求，并打印返回结果
         req = scf_models.InvokeRequest()
         req.FunctionName = function_name
+        req.Namespace = namespace
         req.InvocationType = "Event"
         client_param = {"partition_id": partition_id}
         req.ClientContext = json.dumps(client_param)
@@ -46,9 +47,9 @@ def main_handler(event, context):
         token = os.getenv("TENCENTCLOUD_SESSIONTOKEN")
         instance_id = os.getenv("instance_id")
         topic_name = os.getenv("topic_name")
-        topic_id = os.getenv("topic_id")
         region = os.getenv("region")
         consumer_function_name = os.getenv("consumer_function_name")
+        namespace = context["namespace"]
         cred = credential.Credential(secret_id, secret_key, token)
 
         # 实例化要请求kafka的client对象
@@ -72,7 +73,7 @@ def main_handler(event, context):
         for partition_id in range(partition_num):
             logger.debug("job-------:" + str(partition_id))
             p = Process(target=kafka_consumer_api_handler, name='kafka_consumer_api_handler(%s)' % "",
-                        args=(cred, partition_id, region, consumer_function_name))
+                        args=(cred, partition_id, region, consumer_function_name, namespace))
             process_list.append(p)
 
         for p in process_list:
