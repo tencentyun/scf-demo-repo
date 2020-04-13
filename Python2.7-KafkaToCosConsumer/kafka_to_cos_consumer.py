@@ -217,6 +217,7 @@ class KafkaToCos(object):
                         print("partition_max_to_cos_bytes failed to cos  time:" + str(int(time.time())))
                         return "partition_max_to_cos_bytes failed to cos"
                     consumer.commit_offsets()
+                    f.seek(0)
                     f.truncate()
                 if int(time.time()) - start_time >= self.partition_max_timeout_ms - max_to_cos_time:
                     logger.info("already reach partition_max_timeout, cost time: %s",

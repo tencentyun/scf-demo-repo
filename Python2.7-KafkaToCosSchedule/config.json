@@ -2,7 +2,7 @@
     "serverless-cloud-function-application": {
         "application": {
             "Chinese": {
-                "name": "CKAFKA数据备份到COS 2",
+                "name": "CKAFKA数据备份到COS--SCHEDULE",
                 "description": "本示例会获取Ckafka 的分区数，并根据分区并发调用consumer函数。",
         "attention": "在使用本示例代码时需要传递相关函数的环境变量,本实例由两个函数组成。",
         "readme": {
