@@ -111,9 +111,9 @@ class KafkaToCos(object):
             # response = self.client.upload_file(Bucket=self.bucket_address, Key=key, LocalFilePath=local_path,
             #                                    PartSize=part_size,
             #                                    MAXThread=part_size)
-            # 不分块 小于5G
+            # 不分块 小于5G,STANDARD_IA：低频存储
             response = self.client.put_object_from_local_file(Bucket=self.bucket_address, LocalFilePath=local_path,
-                                                              Key=key)
+                                                              Key=key, StorageClass="STANDARD_IA")
             logger.debug("upload result is [%s]" % response)
             return True
         else:
