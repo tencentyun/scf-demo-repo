@@ -13,11 +13,11 @@ from pykafka.common import OffsetType
 
 to_cos_bytes_up_limit = 1024 * 1024 * 1024 * 10
 to_cos_bytes_down_limit = 1
-partition_max_timeout_ms_up_limit = 60 * 30 * 1000
-partition_max_timeout_ms_down_limit = 60 * 3 * 1000
+partition_max_timeout_ms_up_limit = 60 * 60 * 1000
+partition_max_timeout_ms_down_limit = 60 * 5 * 1000
 part_bytes_down_limit = 10 * 1024 * 1024
 part_size_up_limit = 10000
-max_to_cos_time_s = 15
+max_to_cos_time_s = 5
 
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
@@ -86,11 +86,13 @@ class KafkaToCos(object):
 
     # Uploading file to COS. 上传文件到COS
     def upload_local_file(self, local_path):
-        logger.info("Start to upload time: %s", str(int(time.time())))
+        start_time = int(time.time())
+        logger.info("Start to upload time: %s", str(start_time))
         logger.info("local file sizes: %s", str(os.path.getsize(local_path)))
 
         if os.path.getsize(local_path) <= 0:
-            return False
+            logger.info("local file is empty")
+            return True
         # 判断文件名是否存在
         if os.path.isfile(local_path):
             logger.info("local_filename is [%s]" % local_path)
@@ -115,6 +117,7 @@ class KafkaToCos(object):
             response = self.client.put_object_from_local_file(Bucket=self.bucket_address, LocalFilePath=local_path,
                                                               Key=key, StorageClass="STANDARD_IA")
             logger.debug("upload result is [%s]" % response)
+            logger.info("upload cost time: %s", str(int(time.time()) - start_time))
             return True
         else:
             logger.error("Upload fail")
@@ -159,10 +162,9 @@ class KafkaToCos(object):
             return str(err)
 
     def calculation_max_to_cos_time(self):
-        # 根据函数timeout时间（1min, 5min，10min，，60min）以及 toCos的带宽（40+M）推算出对应toCos的最大预留时间
-        # 容器最大3G 内存,toCos最长时间60s
-        if self.partition_max_timeout_ms / 1000 >= 5 * 60:
-            return 60
+        # 根据函数每次toCos的包大小（50M, 100M，150M，，500M）以及 toCos的带宽推算出对应toCos的最大预留时间
+        if self.partition_max_to_cos_bytes > 50 * 1024 * 1024:
+            return max_to_cos_time_s + (self.partition_max_to_cos_bytes / 50 * 1024 * 1024)
         else:
             return max_to_cos_time_s
 
@@ -219,12 +221,13 @@ class KafkaToCos(object):
                     consumer.commit_offsets()
                     f.seek(0)
                     f.truncate()
-                if int(time.time()) - start_time >= self.partition_max_timeout_ms - max_to_cos_time:
+                if int(time.time()) - start_time >= self.partition_max_timeout_ms / 1000 - max_to_cos_time:
                     logger.info("already reach partition_max_timeout, cost time: %s",
                                 str(int(time.time()) - start_time))
                     break
                 if msg is None:
-                    logger.info("already reach consumer_timeout_ms, cost: %s", str(int(time.time()) - start_time))
+                    logger.info("already reach kafka consumer timeout, cost_time: %s",
+                                str(int(time.time()) - start_time))
                     break
 
             f.close()
