@@ -11,13 +11,12 @@ from pykafka.exceptions import ConsumerStoppedException
 from pykafka.client import KafkaClient
 from pykafka.common import OffsetType
 
-to_cos_bytes_up_limit = 1024 * 1024 * 1024 * 10
-to_cos_bytes_down_limit = 1
-partition_max_timeout_ms_up_limit = 60 * 60 * 1000
-partition_max_timeout_ms_down_limit = 60 * 5 * 1000
-part_bytes_down_limit = 10 * 1024 * 1024
-part_size_up_limit = 10000
-max_to_cos_time_s = 5
+to_cos_bytes_up_limit = 1024 * 1024 * 500  # 每次最大投递cos包大小 500M
+to_cos_bytes_down_limit = 1  # 每次最小投递cos包大小 1B
+partition_max_timeout_ms_up_limit = 15 * 60 * 1000  # 最大timeout时间
+partition_max_timeout_ms_down_limit = 5 * 60 * 1000  # 最小timeout时间
+max_to_cos_time_s = 5  # 最小timeout时间
+consumer_timeout_ms = 3000  # 默认partition多久时间没消息就退出
 
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
@@ -30,7 +29,8 @@ class KafkaToCos(object):
 
     def __init__(self, kafka_instance_id, topic_name, topic_id, kafka_address, bucket_address,
                  partition_max_to_cos_bytes,
-                 partition_max_timeout_ms, partition_id, group_id, offset_type, region, secret_id, secret_key,
+                 partition_max_timeout_ms, partition_id, consumer_timeout_ms, group_id, offset_type, region, secret_id,
+                 secret_key,
                  token=None):
         self.topic_name = topic_name
         self.topic_id = topic_id
@@ -40,6 +40,7 @@ class KafkaToCos(object):
         self.partition_max_to_cos_bytes = partition_max_to_cos_bytes
         self.partition_max_timeout_ms = partition_max_timeout_ms
         self.partition_id = partition_id
+        self.consumer_timeout_ms = consumer_timeout_ms
         self.group_id = group_id
         self.offset_type = offset_type
         config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, Token=token)  # 获取配置对象
@@ -100,20 +101,7 @@ class KafkaToCos(object):
             while self.check_cos_file(key) is True:
                 key = self.object_key_generate()
             logger.debug("cos_object_name is: [%s]", key)
-
-            # 分块upload
-            # 求part_size 大小
-            # if os.path.getsize(local_path) <= part_bytes_down_limit:
-            #     part_size = 1
-            # else:
-            #     part_size = os.path.getsize(local_path) / part_bytes_down_limit
-            #     if part_size > part_size_up_limit:
-            #         part_size = part_size_up_limit
-            # logger.debug("file part_size: %s", str(part_size))
-            # response = self.client.upload_file(Bucket=self.bucket_address, Key=key, LocalFilePath=local_path,
-            #                                    PartSize=part_size,
-            #                                    MAXThread=part_size)
-            # 不分块 小于5G,STANDARD_IA：低频存储
+            # 简单上传,STANDARD_IA：低频存储
             response = self.client.put_object_from_local_file(Bucket=self.bucket_address, LocalFilePath=local_path,
                                                               Key=key, StorageClass="STANDARD_IA")
             logger.debug("upload result is [%s]" % response)
@@ -140,8 +128,15 @@ class KafkaToCos(object):
                 return "partition_max_to_cos_bytes is empty"
             if self.partition_max_timeout_ms is None:
                 return "partition_max_timeout is empty"
+            if self.consumer_timeout_ms is None:
+                return "consumer_timeout_ms is empty"
             if self.offset_type is None:
                 self.offset_type = "earliest"
+
+            # 验证consumer_timeout_ms 取值
+            self.consumer_timeout_ms = int(self.consumer_timeout_ms)
+            if self.consumer_timeout_ms <= 0:
+                self.consumer_timeout_ms = consumer_timeout_ms
 
             # 验证partition_max_to_cos_bytes 取值
             self.partition_max_to_cos_bytes = int(self.partition_max_to_cos_bytes)
@@ -150,7 +145,7 @@ class KafkaToCos(object):
             if self.partition_max_to_cos_bytes <= 0:
                 self.partition_max_to_cos_bytes = to_cos_bytes_down_limit
 
-            # 验证partition_max_to_cos_bytes 取值
+            # 验证partition_max_timeout_ms 取值
             self.partition_max_timeout_ms = int(self.partition_max_timeout_ms)
             if self.partition_max_timeout_ms > partition_max_timeout_ms_up_limit:
                 self.partition_max_timeout_ms = partition_max_timeout_ms_up_limit
@@ -198,7 +193,7 @@ class KafkaToCos(object):
 
         consumer = topic.get_simple_consumer(consumer_group=self.group_id,
                                              partitions={partitions.get(self.partition_id)},
-                                             consumer_timeout_ms=1000,
+                                             consumer_timeout_ms=self.consumer_timeout_ms,
                                              auto_commit_enable=False,
                                              auto_offset_reset=start_offset,
                                              reset_offset_on_start=reset_offset_on_start_status,
@@ -265,12 +260,14 @@ def main_handler(event, context):
     kafka_address = os.getenv("kafka_address")
     bucket_address = os.getenv("bucket_address")
     partition_max_to_cos_bytes = os.getenv("partition_max_to_cos_bytes")
+    consumer_timeout_ms = os.getenv("consumer_timeout_ms")
     offset_type = os.getenv("offset_type")
 
     kafka_to_cos = KafkaToCos(kafka_instance_id, topic_name, topic_id, kafka_address, bucket_address,
                               partition_max_to_cos_bytes,
                               partition_max_timeout_ms,
                               partition_id,
+                              consumer_timeout_ms,
                               group_id,
                               offset_type,
                               region,
