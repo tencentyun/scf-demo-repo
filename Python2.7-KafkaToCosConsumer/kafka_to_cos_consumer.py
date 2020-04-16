@@ -159,7 +159,7 @@ class KafkaToCos(object):
     def calculation_max_to_cos_time(self):
         # 根据函数每次toCos的包大小（50M, 100M，150M，，500M）以及 toCos的带宽推算出对应toCos的最大预留时间
         if self.partition_max_to_cos_bytes > 50 * 1024 * 1024:
-            return max_to_cos_time_s + (self.partition_max_to_cos_bytes / 50 * 1024 * 1024)
+            return max_to_cos_time_s + (self.partition_max_to_cos_bytes / (50 * 1024 * 1024))
         else:
             return max_to_cos_time_s
 
