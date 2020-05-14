@@ -58,12 +58,13 @@
       "timeout": 60,  // Running timeout.  运行超时时间
       "runtime": "Python3.6", // Runtime which users can search demo by this keyword. 运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
       "Environment":{
-		"DB_DATABASE":"database", // 必填，函数环境变量
-		"DB_HOST":"host", // 必填，函数环境变量
-		"DB_USER":"user", // 必填，函数环境变量
-		"DB_PASSWORD":"pwd", // 必填，函数环境变量
-		"DB_SCHEMA":"schema", // 必填，函数环境变量
-		"DB_TABLE":"table" // 必填，函数环境变量
+		      "DB_DATABASE":"database", // 必填，函数环境变量
+	       	"DB_HOST":"host", // 必填，函数环境变量
+		      "DB_USER":"user", // 必填，函数环境变量
+		      "DB_PASSWORD":"pwd", // 必填，函数环境变量
+		      "DB_SCHEMA":"schema", // 必填，函数环境变量
+		      "DB_TABLE":"table" // 必填，函数环境变量
+
       },      
       "Events":{
       },      // Optional, used define the event source that triggers this function. 可选，用于定义触发此函数的事件源
