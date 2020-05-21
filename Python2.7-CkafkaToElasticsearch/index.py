@@ -6,7 +6,7 @@ from elasticsearch import helpers
 
 esServer = "http://172.16.16.53:9200"  # 修改为 es server 地址+端口 E.g. http://172.16.16.53:9200
 esUsr = "elastic" # 修改为 es 用户名 E.g. elastic
-esPw = "Cc131111" # 修改为 es 密码 E.g. PW2312321321
+esPw = "PW123" # 修改为 es 密码 E.g. PW2312321321
 esIndex = "pre1"  # es 的 index 设置
 
 # ... or specify common parameters as kwargs
