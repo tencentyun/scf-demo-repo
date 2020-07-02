@@ -1,6 +1,6 @@
 # scf-demo-repo
 
-SCF 无服务器云函数 Demo 代码库
+SCF 云函数 Demo 代码库
 
 # Demo说明
 

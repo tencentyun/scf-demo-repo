@@ -1,3 +1,4 @@
+# readme :  https://cloud.tencent.com/document/product/583/30589
 # -*- coding: utf-8 -*-
 import os
 import logging
