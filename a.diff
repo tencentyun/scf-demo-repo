@@ -1,0 +1,2473 @@
+commit 1b1f28e5aa843d1ea9196608ff5aff3f539bfb6a
+Author: liting <liting@matchvs.com>
+Date:   Thu Jul 2 21:33:12 2020 +0800
+
+    template.yaml to serverless.yaml 1.1
+
+diff --git a/.DS_Store b/.DS_Store
+new file mode 100644
+index 00000000..079a34b1
+Binary files /dev/null and b/.DS_Store differ
+diff --git a/Go1-helloworld/serverless.yaml b/Go1-helloworld/serverless.yaml
+new file mode 100644
+index 00000000..f21b0a79
+--- /dev/null
++++ b/Go1-helloworld/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_helloworld
++org: app
++app: helloworld
++stage: dev
++inputs:
++  name: helloworld
++  src: ./
++  description: helloworld 空白模板函数
++  handler: main
++  runtime: Go1
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Java8-helloworld/serverless.yaml b/Java8-helloworld/serverless.yaml
+new file mode 100644
+index 00000000..d6e53e15
+--- /dev/null
++++ b/Java8-helloworld/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_helloworld
++org: app
++app: helloworld
++stage: dev
++inputs:
++  name: helloworld
++  src: ./
++  description: helloworld blank template
++  handler: 'example.Hello::mainHandler'
++  runtime: Java8
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Node8.9-DeleteESIndex/serverless.yaml b/Node8.9-DeleteESIndex/serverless.yaml
+new file mode 100644
+index 00000000..0ee99037
+--- /dev/null
++++ b/Node8.9-DeleteESIndex/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_Delete_es_index
++org: app
++app: Delete_es_index
++stage: dev
++inputs:
++  name: Delete_es_index
++  src: ./
++  description: 本示例通过使用ElasticSearch库，删除ES索引
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Node8.9-Mysql/serverless.yaml b/Node8.9-Mysql/serverless.yaml
+new file mode 100644
+index 00000000..5578cd27
+--- /dev/null
++++ b/Node8.9-Mysql/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_Operate_Mysql
++org: app
++app: Operate_Mysql
++stage: dev
++inputs:
++  name: Operate_Mysql
++  src: ./
++  description: 本示例通过mysql Node客户端，操作云Mysql
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Node8.9-WebsocketCleanup/serverless.yaml b/Node8.9-WebsocketCleanup/serverless.yaml
+new file mode 100644
+index 00000000..eb4a992a
+--- /dev/null
++++ b/Node8.9-WebsocketCleanup/serverless.yaml
+@@ -0,0 +1,17 @@
++component: scf
++name: ap-guangzhou_default_webscoket_cleanup_fun
++org: app
++app: webscoket_cleanup_fun
++stage: dev
++inputs:
++  name: webscoket_cleanup_fun
++  src: ./
++  description: >-
++    本示例基于 API
++    网关实现websocket功能，API网关和云函数一起构成websocket的Server端，由API网关承载和Client端的长连接。websocket一共需要3类函数承载，分别是注册函数、传输函数和清理函数，本函数为清理函数。
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Node8.9-WebsocketRegister/serverless.yaml b/Node8.9-WebsocketRegister/serverless.yaml
+new file mode 100644
+index 00000000..eb2c5606
+--- /dev/null
++++ b/Node8.9-WebsocketRegister/serverless.yaml
+@@ -0,0 +1,17 @@
++component: scf
++name: ap-guangzhou_default_webscoket_register_fun
++org: app
++app: webscoket_register_fun
++stage: dev
++inputs:
++  name: webscoket_register_fun
++  src: ./
++  description: >-
++    本示例基于 API
++    网关实现websocket功能，API网关和云函数一起构成websocket的Server端，由API网关承载和Client端的长连接。websocket一共需要3类函数承载，分别是注册函数、传输函数和清理函数，本函数为注册函数。
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Node8.9-WebsocketTransport/serverless.yaml b/Node8.9-WebsocketTransport/serverless.yaml
+new file mode 100644
+index 00000000..5e31a26e
+--- /dev/null
++++ b/Node8.9-WebsocketTransport/serverless.yaml
+@@ -0,0 +1,17 @@
++component: scf
++name: ap-guangzhou_default_webscoket_transport_fun
++org: app
++app: webscoket_transport_fun
++stage: dev
++inputs:
++  name: webscoket_transport_fun
++  src: ./
++  description: >-
++    本示例基于 API
++    网关实现websocket功能，API网关和云函数一起构成websocket的Server端，由API网关承载和Client端的长连接。websocket一共需要3类函数承载，分别是注册函数、传输函数和清理函数，本函数为传输函数。
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Node8.9-WriteToES/serverless.yaml b/Node8.9-WriteToES/serverless.yaml
+new file mode 100644
+index 00000000..ec95f7bf
+--- /dev/null
++++ b/Node8.9-WriteToES/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_WriteToES
++org: app
++app: WriteToES
++stage: dev
++inputs:
++  name: WriteToES
++  src: ./
++  description: 本示例通过使用ElasticSearch库，实现了将随机数写入ES。可为其配置定时触发器后，定时执行
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Node8.9_CosMergeFile/serverless.yaml b/Node8.9_CosMergeFile/serverless.yaml
+new file mode 100644
+index 00000000..7ee78960
+--- /dev/null
++++ b/Node8.9_CosMergeFile/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_Cos_Merge_File
++org: app
++app: Cos_Merge_File
++stage: dev
++inputs:
++  name: Cos_Merge_File
++  src: ./
++  description: 本示例通过从源bucket下载多个小文件，合并之后，上传到另一个bucket
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Node8.9_Kafka/serverless.yaml b/Node8.9_Kafka/serverless.yaml
+new file mode 100644
+index 00000000..27f96cef
+--- /dev/null
++++ b/Node8.9_Kafka/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_ckafka
++org: app
++app: ckafka
++stage: dev
++inputs:
++  name: ckafka
++  src: ./
++  description: 本示例通过kafka node客户端，给kafka发消息
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Node8.9_KafkaToCos/serverless.yaml b/Node8.9_KafkaToCos/serverless.yaml
+new file mode 100644
+index 00000000..cb2b5f93
+--- /dev/null
++++ b/Node8.9_KafkaToCos/serverless.yaml
+@@ -0,0 +1,24 @@
++component: scf
++name: ap-guangzhou_default_Kafka_To_Cos
++org: app
++app: Kafka_To_Cos
++stage: dev
++inputs:
++  name: Kafka_To_Cos
++  src: ./
++  description: 本示例通过配置kafka触发器，从kafka接收到消息后，写入文件并上传到cos中
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++    - ckafka: # ckafka触发器
++        name: # input Ckafka  trigger name
++        parameters:
++          name: # input Ckafka Instance id        
++          topic: # input Ckafka Topic name  
++          maxMsgNum: 100
++          offset: latest
++          enable: true
+diff --git a/Node8.9_OperateRedis/serverless.yaml b/Node8.9_OperateRedis/serverless.yaml
+new file mode 100644
+index 00000000..6df22afe
+--- /dev/null
++++ b/Node8.9_OperateRedis/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_Operate_Credis
++org: app
++app: Operate_Credis
++stage: dev
++inputs:
++  name: Operate_Credis
++  src: ./
++  description: 本示例通过redis node客户端，操作credis数据库
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Node8.9_UnzipAndUploadToCOS/serverless.yaml b/Node8.9_UnzipAndUploadToCOS/serverless.yaml
+new file mode 100644
+index 00000000..99a33b5d
+--- /dev/null
++++ b/Node8.9_UnzipAndUploadToCOS/serverless.yaml
+@@ -0,0 +1,27 @@
++component: scf
++name: ap-guangzhou_default_Unzip
++org: app
++app: Unzip
++stage: dev
++inputs:
++  name: Unzip
++  src: ./
++  description: >-
++    本示例通过配置COS触发，上传到COS的ZIP包，使用SCF下载并本地解压，支持带密码解压，支持中文字段解压，并把解压后的文件上传到COS另一个bucket中，您还可以扩充支持RAR包的解压
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++     - cos: # cos触发器
++        name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++        parameters:
++          bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++          filter:
++            prefix: 
++            suffix: 
++          events: cos:ObjectCreated:*
++          enable: true
++
+diff --git a/Node8.9_VideoTranscode/serverless.yaml b/Node8.9_VideoTranscode/serverless.yaml
+new file mode 100644
+index 00000000..35de0579
+--- /dev/null
++++ b/Node8.9_VideoTranscode/serverless.yaml
+@@ -0,0 +1,25 @@
++component: scf
++name: ap-guangzhou_default_Video_Transcode
++org: app
++app: Video_Transcode
++stage: dev
++inputs:
++  name: Video_Transcode
++  src: ./
++  description: 本示例通过配置COS触发器，当你在通过上传视频文件到cos时，通过云点播提供的接口，进行视频转码，并写入目标bucket中
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++     - cos: # cos触发器
++        name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++        parameters:
++          bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++          filter:
++            prefix: 
++            suffix: 
++          events: cos:ObjectCreated:*
++          enable: true
+diff --git a/Node8.9_WordRecognition/serverless.yaml b/Node8.9_WordRecognition/serverless.yaml
+new file mode 100644
+index 00000000..ccc13ed0
+--- /dev/null
++++ b/Node8.9_WordRecognition/serverless.yaml
+@@ -0,0 +1,29 @@
++component: scf
++name: ap-guangzhou_default_Word_Recognition
++org: app
++app: Word_Recognition
++stage: dev
++inputs:
++  name: Word_Recognition
++  src: ./
++  description: 本示例通过配置COS触发或API网关触发，利用优图提供的能力，进行文字识别
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++     - apigw: # api网关触发器
++        name: serverless
++        serviceId: # input API gateway serviceId
++        parameters:
++          protocols:
++            - http
++          description: the serverless service
++          environment: release
++          endpoints:
++            - path: /
++              method: GET
++              function:
++                isIntegratedResponse: TRUE
+diff --git a/Nodejs10.15-helloworld/serverless.yaml b/Nodejs10.15-helloworld/serverless.yaml
+new file mode 100644
+index 00000000..a350ca9b
+--- /dev/null
++++ b/Nodejs10.15-helloworld/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_helloworld
++org: app
++app: helloworld
++stage: dev
++inputs:
++  name: helloworld
++  src: ./
++  description: helloworld 空白模板函数
++  handler: index.main_handler
++  runtime: Nodejs10.15
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Nodejs12.16-helloworld/serverless.yaml b/Nodejs12.16-helloworld/serverless.yaml
+new file mode 100644
+index 00000000..c5656871
+--- /dev/null
++++ b/Nodejs12.16-helloworld/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_helloworld
++org: app
++app: helloworld
++stage: dev
++inputs:
++  name: helloworld
++  src: ./
++  description: helloworld 空白模板函数
++  handler: index.main_handler
++  runtime: Nodejs12.16
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Nodejs6.10-Apigateway/serverless.yaml b/Nodejs6.10-Apigateway/serverless.yaml
+new file mode 100644
+index 00000000..9b21ca05
+--- /dev/null
++++ b/Nodejs6.10-Apigateway/serverless.yaml
+@@ -0,0 +1,29 @@
++component: scf
++name: ap-guangzhou_default_API_GW_Basic_Demo
++org: app
++app: API_GW_Basic_Demo
++stage: dev
++inputs:
++  name: API_GW_Basic_Demo
++  src: ./
++  description: 本示例演示 API 网关使用的基础方法，主要展示在集成响应下（通过云函数控制台创建的API网关触发器默认启用集成响应），怎样构造返回值
++  handler: index.main_handler
++  runtime: Nodejs6.10
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++     - apigw: # api网关触发器
++        name: serverless
++        serviceId: # input API gateway serviceId
++        parameters:
++          protocols:
++            - http
++          description: the serverless service
++          environment: release
++          endpoints:
++            - path: /
++              method: GET
++              function:
++                isIntegratedResponse: TRUE
+diff --git a/Nodejs6.10-AutomatedTesting/serverless.yaml b/Nodejs6.10-AutomatedTesting/serverless.yaml
+new file mode 100644
+index 00000000..44373b3a
+--- /dev/null
++++ b/Nodejs6.10-AutomatedTesting/serverless.yaml
+@@ -0,0 +1,23 @@
++component: scf
++name: ap-guangzhou_default_dial_url_by_timer
++org: app
++app: dial_url_by_timer
++stage: dev
++inputs:
++  name: dial_url_by_timer
++  src: ./
++  description: 本示例主要演示定时拨测 URL 列表中的地址，当拨测失败时，通过邮件发送告警
++  handler: index.main_handler
++  runtime: Nodejs6.10
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events: # 触发器
++    - timer: # 定时触发器
++        name: timer
++        parameters:
++          cronExpression: '0 */5 * * * * *' # 每5分钟触发一次
++          enable: true
++          argument: argument # 额外的参数
++
+diff --git a/Nodejs6.10-GetCosObject/serverless.yaml b/Nodejs6.10-GetCosObject/serverless.yaml
+new file mode 100644
+index 00000000..6941ca8e
+--- /dev/null
++++ b/Nodejs6.10-GetCosObject/serverless.yaml
+@@ -0,0 +1,25 @@
++component: scf
++name: ap-guangzhou_default_Get_COS_Object
++org: app
++app: Get_COS_Object
++stage: dev
++inputs:
++  name: Get_COS_Object
++  src: ./
++  description: 本示例配置了 COS 触发器，当有文件上传到对应的 COS bucket时，会触发云函数执行，并把文件下载到本地临时目录，用做后续处理
++  handler: index.main_handler
++  runtime: Nodejs6.10
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 5
++  events:
++     - cos: # cos触发器
++        name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++        parameters:
++          bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++          filter:
++            prefix: 
++            suffix: 
++          events: cos:ObjectCreated:*
++          enable: true
+diff --git a/Nodejs6.10-SendMail/serverless.yaml b/Nodejs6.10-SendMail/serverless.yaml
+new file mode 100644
+index 00000000..9dd26ed9
+--- /dev/null
++++ b/Nodejs6.10-SendMail/serverless.yaml
+@@ -0,0 +1,21 @@
++component: scf
++name: ap-guangzhou_default_SendEmail_By_CMQ
++org: app
++app: SendEmail_By_CMQ
++stage: dev
++inputs:
++  name: SendEmail_By_CMQ
++  src: ./
++  description: 本示例通过接收 CMQ 消息队列中指定格式的消息，并根据消息内容向指定的邮箱发送邮件
++  handler: index.main_handler
++  runtime: Nodejs6.10
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++    - cmq: # CMQ Topic 触发器
++       name: # input CMQ trigger  name //e.g. test
++       parameters:
++          name: # input CMQ Topic name //e.g. topicxxx
++          enable: true
+diff --git a/Nodejs6.10-Thumbnail/serverless.yaml b/Nodejs6.10-Thumbnail/serverless.yaml
+new file mode 100644
+index 00000000..8d8ede51
+--- /dev/null
++++ b/Nodejs6.10-Thumbnail/serverless.yaml
+@@ -0,0 +1,25 @@
++component: scf
++name: ap-guangzhou_default_Thumbnail
++org: app
++app: Thumbnail
++stage: dev
++inputs:
++  name: Thumbnail
++  src: ./
++  description: 本示例配置了 COS 触发器，当有文件上传到对应的 COS bucket时，会触发云函数执行，并把文件下载到本地临时目录，用做后续处理
++  handler: index.main_handler
++  runtime: Nodejs6.10
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 5
++  events:
++     - cos: # cos触发器
++        name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++        parameters:
++          bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++          filter:
++            prefix: 
++            suffix: 
++          events: cos:ObjectCreated:*
++          enable: true
+diff --git a/Nodejs6.10-helloworld/serverless.yaml b/Nodejs6.10-helloworld/serverless.yaml
+new file mode 100644
+index 00000000..89193ec3
+--- /dev/null
++++ b/Nodejs6.10-helloworld/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_helloworld
++org: app
++app: helloworld
++stage: dev
++inputs:
++  name: helloworld
++  src: ./
++  description: helloworld 空白模板函数
++  handler: index.main_handler
++  runtime: Nodejs6.10
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Nodejs8.9-Apigateway/serverless.yaml b/Nodejs8.9-Apigateway/serverless.yaml
+new file mode 100644
+index 00000000..72129f39
+--- /dev/null
++++ b/Nodejs8.9-Apigateway/serverless.yaml
+@@ -0,0 +1,33 @@
++component: scf
++name: ap-guangzhou_default_API_GW_Basic_Demo
++org: app
++app: API_GW_Basic_Demo
++stage: dev
++inputs:
++  name: API_GW_Basic_Demo
++  src: ./
++  description: 本示例主要演示当配置 API 网关触发器的时候，怎样去构造返回的 json 数据结构
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++     - apigw: # api网关触发器
++        name: serverless
++        serviceId: # input API gateway serviceId
++        parameters:
++          protocols:
++            - http
++          description: the serverless service
++          environment: release
++          endpoints:
++            - path: /
++              method: GET
++              function:
++                isIntegratedResponse: TRUE
++
++                
++    
++  
+diff --git a/Nodejs8.9-AutomatedTesting/serverless.yaml b/Nodejs8.9-AutomatedTesting/serverless.yaml
+new file mode 100644
+index 00000000..4cb0d163
+--- /dev/null
++++ b/Nodejs8.9-AutomatedTesting/serverless.yaml
+@@ -0,0 +1,23 @@
++component: scf
++name: ap-guangzhou_default_dial_url_by_timer
++org: app
++app: dial_url_by_timer
++stage: dev
++inputs:
++  name: dial_url_by_timer
++  src: ./
++  description: 本示例主要演示定时拨测 URL 列表中的地址，当拨测失败时，通过邮件发送告警
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 10
++  events: # 触发器
++    - timer: # 定时触发器
++        name: timer
++        parameters:
++          cronExpression: '0 */5 * * * * *' # 每5分钟触发一次
++          enable: true
++          argument: argument # 额外的参数
++
+diff --git a/Nodejs8.9-GetCosObject/serverless.yaml b/Nodejs8.9-GetCosObject/serverless.yaml
+new file mode 100644
+index 00000000..fffa395e
+--- /dev/null
++++ b/Nodejs8.9-GetCosObject/serverless.yaml
+@@ -0,0 +1,27 @@
++component: scf
++name: ap-guangzhou_default_Get_COS_Object
++org: app
++app: Get_COS_Object
++stage: dev
++inputs:
++  name: Get_COS_Object
++  src: ./
++  description: 本示例配置了 COS 触发器，当有文件上传到对应的 COS bucket时，会触发云函数执行，并把文件下载到本地临时目录，用做后续处理
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 5
++  events:
++     - cos: # cos触发器
++        name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++        parameters:
++          bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++          filter:
++            prefix: 
++            suffix: 
++          events: cos:ObjectCreated:*
++          enable: true
++
++
+diff --git a/Nodejs8.9-HexoDemo/serverless.yaml b/Nodejs8.9-HexoDemo/serverless.yaml
+new file mode 100644
+index 00000000..12b15f96
+--- /dev/null
++++ b/Nodejs8.9-HexoDemo/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_API_GW_Hexo_Demo
++org: app
++app: API_GW_Hexo_Demo
++stage: dev
++inputs:
++  name: API_GW_Hexo_Demo
++  src: ./
++  description: 本示例主要通过 SCF 结合 API 网关，快速实现一个基于hexo的静态站点。
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Nodejs8.9-MongoDB_Basic_Demo/serverless.yaml b/Nodejs8.9-MongoDB_Basic_Demo/serverless.yaml
+new file mode 100644
+index 00000000..46795ab2
+--- /dev/null
++++ b/Nodejs8.9-MongoDB_Basic_Demo/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_mongodb_basic_demo
++org: app
++app: mongodb_basic_demo
++stage: dev
++inputs:
++  name: mongodb_basic_demo
++  src: ./
++  description: 本示例演示基于API网关提供博客内的文章查询和文章内容，您可以扩展函数来实现 Web 后端服务
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Nodejs8.9-SendMail/serverless.yaml b/Nodejs8.9-SendMail/serverless.yaml
+new file mode 100644
+index 00000000..6e5d7f36
+--- /dev/null
++++ b/Nodejs8.9-SendMail/serverless.yaml
+@@ -0,0 +1,21 @@
++component: scf
++name: ap-guangzhou_default_SendEmail_By_CMQ
++org: app
++app: SendEmail_By_CMQ
++stage: dev
++inputs:
++  name: SendEmail_By_CMQ
++  src: ./
++  description: 本示例通过接收 CMQ 消息队列中指定格式的消息，并根据消息内容向指定的邮箱发送邮件
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++    - cmq: # CMQ Topic 触发器
++       name: # input CMQ trigger  name //e.g. test
++       parameters:
++          name: # input CMQ Topic name //e.g. topicxxx
++          enable: true
+diff --git a/Nodejs8.9-Thumbnail/serverless.yaml b/Nodejs8.9-Thumbnail/serverless.yaml
+new file mode 100644
+index 00000000..9bbd63c4
+--- /dev/null
++++ b/Nodejs8.9-Thumbnail/serverless.yaml
+@@ -0,0 +1,25 @@
++component: scf
++name: ap-guangzhou_default_Thumbnail
++org: app
++app: Thumbnail
++stage: dev
++inputs:
++  name: Thumbnail
++  src: ./
++  description: 本示例配置了 COS 触发器，当有文件上传到对应的 COS bucket时，会触发云函数执行，并把文件下载到本地临时目录，用做后续处理
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++     - cos: # cos触发器
++        name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++        parameters:
++          bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++          filter:
++            prefix: 
++            suffix: 
++          events: cos:ObjectCreated:*
++          enable: true
+diff --git a/Nodejs8.9-WebPageDemo/serverless.yaml b/Nodejs8.9-WebPageDemo/serverless.yaml
+new file mode 100644
+index 00000000..93a6a588
+--- /dev/null
++++ b/Nodejs8.9-WebPageDemo/serverless.yaml
+@@ -0,0 +1,30 @@
++component: scf
++name: ap-guangzhou_default_API_GW_WebPage_Demo
++org: app
++app: API_GW_WebPage_Demo
++stage: dev
++inputs:
++  name: API_GW_WebPage_Demo
++  src: ./
++  description: 本示例主要通过 SCF 结合 API 网关，快速实现一个对公网服务的 Web 页面。
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++     - apigw: # api网关触发器
++        name: serverless
++        serviceId: # input API gateway serviceId
++        parameters:
++          protocols:
++            - http
++          description: the serverless service
++          environment: release
++          endpoints:
++            - path: /
++              method: GET
++              function:
++                isIntegratedResponse: TRUE
++
+diff --git a/Nodejs8.9-helloworld/serverless.yaml b/Nodejs8.9-helloworld/serverless.yaml
+new file mode 100644
+index 00000000..b6265c4f
+--- /dev/null
++++ b/Nodejs8.9-helloworld/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_helloworld
++org: app
++app: helloworld
++stage: dev
++inputs:
++  name: helloworld
++  src: ./
++  description: helloworld 空白模板函数
++  handler: index.main_handler
++  runtime: Nodejs8.9
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Php5.6-helloworld/serverless.yaml b/Php5.6-helloworld/serverless.yaml
+new file mode 100644
+index 00000000..e454570e
+--- /dev/null
++++ b/Php5.6-helloworld/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_helloworld
++org: app
++app: helloworld
++stage: dev
++inputs:
++  name: helloworld
++  src: ./
++  description: helloworld 空白模板函数
++  handler: index.main_handler
++  runtime: Php5
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Php7.2-ApiGateway/serverless.yaml b/Php7.2-ApiGateway/serverless.yaml
+new file mode 100644
+index 00000000..f9d900cd
+--- /dev/null
++++ b/Php7.2-ApiGateway/serverless.yaml
+@@ -0,0 +1,30 @@
++component: scf
++name: ap-guangzhou_default_API_GW_Basic_Demo
++org: app
++app: API_GW_Basic_Demo
++stage: dev
++inputs:
++  name: API_GW_Basic_Demo
++  src: ./
++  description: 本示例演示 API 网关使用的基础方法，主要展示在集成响应下（通过云函数控制台创建的API网关触发器默认启用集成响应），怎样构造返回值
++  handler: apigw.main_handler
++  runtime: Php7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++     - apigw: # api网关触发器
++        name: serverless
++        serviceId: # input API gateway serviceId
++        parameters:
++          protocols:
++            - http
++          description: the serverless service
++          environment: release
++          endpoints:
++            - path: /
++              method: GET
++              function:
++                isIntegratedResponse: TRUE
++
+diff --git a/Php7.2-Play_Check_By_Timer/serverless.yaml b/Php7.2-Play_Check_By_Timer/serverless.yaml
+new file mode 100644
+index 00000000..5fe3064b
+--- /dev/null
++++ b/Php7.2-Play_Check_By_Timer/serverless.yaml
+@@ -0,0 +1,23 @@
++component: scf
++name: ap-guangzhou_default_dial_url_by_timer
++org: app
++app: dial_url_by_timer
++stage: dev
++inputs:
++  name: dial_url_by_timer
++  src: ./
++  description: 本示例主要演示定时拨测 URL 列表中的地址，当拨测失败时，通过邮件发送告警
++  handler: dial_url_by_timer.main_handler
++  runtime: Php7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 10
++  events: # 触发器
++    - timer: # 定时触发器
++        name: timer
++        parameters:
++          cronExpression: '0 */5 * * * * *' # 每5分钟触发一次
++          enable: true
++          argument: argument # 额外的参数
++
+diff --git a/Php7.2-QRcodewithLogo/serverless.yaml b/Php7.2-QRcodewithLogo/serverless.yaml
+new file mode 100644
+index 00000000..c813a3fe
+--- /dev/null
++++ b/Php7.2-QRcodewithLogo/serverless.yaml
+@@ -0,0 +1,34 @@
++component: scf
++name: ap-guangzhou_default_QRcodewithLogo
++org: app
++app: QRcodewithLogo
++stage: dev
++inputs:
++  name: QRcodewithLogo
++  src: ./
++  description: >-
++    This demo is mainly to show how to use resources, how to get values from the
++    web users, and how to return a web or a file.
++    本示例主要展示在SCF中对各种资源的引用方法，包括include
++    php文件、调用上传到SCF中的非php文件、使用/tmp临时目录，同时展示了SCF中3种获取用户提交数据的方法，最后演示如何返回一个网页或文件。
++  handler: index.main_handler
++  runtime: Php7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 10
++  events:
++     - apigw: # api网关触发器
++        name: serverless
++        serviceId: # input API gateway serviceId
++        parameters:
++          protocols:
++            - http
++          description: the serverless service
++          environment: release
++          endpoints:
++            - path: /
++              method: GET
++              function:
++                isIntegratedResponse: TRUE
++
+diff --git a/Php7.2-SCFonedrive/serverless.yaml b/Php7.2-SCFonedrive/serverless.yaml
+new file mode 100644
+index 00000000..9385d3ef
+--- /dev/null
++++ b/Php7.2-SCFonedrive/serverless.yaml
+@@ -0,0 +1,29 @@
++component: scf
++name: ap-guangzhou_default_SCFonedrive
++org: app
++app: SCFonedrive
++stage: dev
++inputs:
++  name: SCFonedrive
++  src: ./
++  description: This application is a list of your onedrive. 获取onedrive信息并结合API网关展示
++  handler: index.main_handler
++  runtime: Php7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 30
++  events:
++     - apigw: # api网关触发器
++        name: serverless
++        serviceId: # input API gateway serviceId
++        parameters:
++          protocols:
++            - http
++          description: the serverless service
++          environment: release
++          endpoints:
++            - path: /
++              method: GET
++              function:
++                isIntegratedResponse: TRUE
+diff --git a/Php7.2-SendEmail_By_CMQ/serverless.yaml b/Php7.2-SendEmail_By_CMQ/serverless.yaml
+new file mode 100644
+index 00000000..b9872539
+--- /dev/null
++++ b/Php7.2-SendEmail_By_CMQ/serverless.yaml
+@@ -0,0 +1,24 @@
++component: scf
++name: ap-guangzhou_default_SendEmail_By_CMQ
++org: app
++app: SendEmail_By_CMQ
++stage: dev
++inputs:
++  name: SendEmail_By_CMQ
++  src: ./
++  description: 本示例通过接收 CMQ 消息队列中指定格式的消息，并根据消息内容向指定的邮箱发送邮件
++  handler: cmq_email.main_handler
++  runtime: Php7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++    - cmq: # CMQ Topic 触发器
++       name: # input CMQ trigger  name //e.g. test
++       parameters:
++          name: # input CMQ Topic name //e.g. topicxxx
++          enable: true
++
++  
++
+diff --git a/Php7.2-Sync_Backup/serverless.yaml b/Php7.2-Sync_Backup/serverless.yaml
+new file mode 100644
+index 00000000..e2347831
+--- /dev/null
++++ b/Php7.2-Sync_Backup/serverless.yaml
+@@ -0,0 +1,29 @@
++component: scf
++name: ap-guangzhou_default_COS_Sync_Backup
++org: app
++app: COS_Sync_Backup
++stage: dev
++inputs:
++  name: COS_Sync_Backup
++  src: ./
++  description: >-
++    This demo will backup the COS bucket object to another bucket when you
++    upload the file. 此示例使用COS作为触发器，在用户上传文件到指定bucket时，将该文件复制到另一个用于备份的bucket存储
++  handler: sync_backup.main_handler
++  runtime: Php7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 10
++  events:
++     - cos: # cos触发器
++        name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++        parameters:
++          bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++          filter:
++            prefix: 
++            suffix: 
++          events: cos:ObjectCreated:*
++          enable: true
++
++
+diff --git a/Php7.2-WebPageDemo/serverless.yaml b/Php7.2-WebPageDemo/serverless.yaml
+new file mode 100644
+index 00000000..13e017cf
+--- /dev/null
++++ b/Php7.2-WebPageDemo/serverless.yaml
+@@ -0,0 +1,31 @@
++component: scf
++name: ap-guangzhou_default_API_GW_WebPage_Demo
++org: app
++app: API_GW_WebPage_Demo
++stage: dev
++inputs:
++  name: API_GW_WebPage_Demo
++  src: ./
++  description: >-
++    This demo is mainly to show how to set up personal web page in serverless
++    with apigateway. 本示例主要通过 SCF 结合 API 网关，快速实现一个对公网服务的 Web 页面。
++  handler: index.main_handler
++  runtime: Php7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++     - apigw: # api网关触发器
++        name: serverless
++        serviceId: # input API gateway serviceId
++        parameters:
++          protocols:
++            - http
++          description: the serverless service
++          environment: release
++          endpoints:
++            - path: /
++              method: GET
++              function:
++                isIntegratedResponse: TRUE
+diff --git a/Php7.2-helloworld/serverless.yaml b/Php7.2-helloworld/serverless.yaml
+new file mode 100644
+index 00000000..b06b060e
+--- /dev/null
++++ b/Php7.2-helloworld/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_helloworld
++org: app
++app: helloworld
++stage: dev
++inputs:
++  name: helloworld
++  src: ./
++  description: helloworld 空白模板函数
++  handler: index.main_handler
++  runtime: Php7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Php7.2-helloworld/template.yaml b/Php7.2-helloworld/template.yaml
+new file mode 100644
+index 00000000..5f44e4e7
+--- /dev/null
++++ b/Php7.2-helloworld/template.yaml
+@@ -0,0 +1,12 @@
++Resources:
++  default:
++    Type: TencentCloud::Serverless::Namespace
++    helloworld:
++      Type: TencentCloud::Serverless::Function
++      Properties:
++        Description: helloworld 空白模板函数
++        MemorySize: 128
++        Handler: index.main_handler
++        Timeout: 3
++        CodeUri: ./
++        Runtime: Php7
+diff --git a/Python2.7-API GW Basic Demo/serverless.yaml b/Python2.7-API GW Basic Demo/serverless.yaml
+new file mode 100644
+index 00000000..a2cbe905
+--- /dev/null
++++ b/Python2.7-API GW Basic Demo/serverless.yaml	
+@@ -0,0 +1,30 @@
++component: scf
++name: ap-guangzhou_default_api_gw_basic_demo
++org: app
++app: api_gw_basic_demo
++stage: dev
++inputs:
++  name: api_gw_basic_demo
++  src: ./
++  description: 本示例演示 API 网关使用的基础方法，主要展示在集成响应下（通过云函数控制台创建的API网关触发器默认启用集成响应），怎样构造返回值
++  handler: api_gw_basic_demo.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++     - apigw: # api网关触发器
++        name: serverless
++        serviceId: # input API gateway serviceId
++        parameters:
++          protocols:
++            - http
++          description: the serverless service
++          environment: release
++          endpoints:
++            - path: /
++              method: GET
++              function:
++                isIntegratedResponse: TRUE
++
+diff --git a/Python2.7-CDN_Refresh/serverless.yaml b/Python2.7-CDN_Refresh/serverless.yaml
+new file mode 100644
+index 00000000..93f5f12d
+--- /dev/null
++++ b/Python2.7-CDN_Refresh/serverless.yaml
+@@ -0,0 +1,17 @@
++component: scf
++name: ap-guangzhou_default_cdn_refresh
++org: app
++app: cdn_refresh
++stage: dev
++inputs:
++  name: cdn_refresh
++  src: ./
++  description: >-
++    This demo uses COS trigger and SCF to refresh CDN automaticly. 本示例使用 COS
++    触发器，完成CDN缓存自动刷新动作
++  handler: cdn_refresh.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Python2.7-CDN_Refresh/template.yaml b/Python2.7-CDN_Refresh/template.yaml
+new file mode 100644
+index 00000000..4940c8aa
+--- /dev/null
++++ b/Python2.7-CDN_Refresh/template.yaml
+@@ -0,0 +1,13 @@
++Resources:
++  default:
++    Type: TencentCloud::Serverless::Namespace
++    cdn_refresh:
++      Type: TencentCloud::Serverless::Function
++      Properties:
++        Description: This demo uses COS trigger and SCF to refresh CDN automaticly.
++          本示例使用 COS 触发器，完成CDN缓存自动刷新动作
++        MemorySize: 128
++        Handler: cdn_refresh.main_handler
++        Timeout: 3
++        CodeUri: ./
++        Runtime: Python2.7
+diff --git a/Python2.7-CkafkaToElasticsearch/serverless.yaml b/Python2.7-CkafkaToElasticsearch/serverless.yaml
+new file mode 100644
+index 00000000..c078f49a
+--- /dev/null
++++ b/Python2.7-CkafkaToElasticsearch/serverless.yaml
+@@ -0,0 +1,29 @@
++component: scf
++name: ap-guangzhou_default_Ckafka To Elasticsearch
++org: app
++app: Ckafka To Elasticsearch
++stage: dev
++inputs:
++  name: Ckafka To Elasticsearch
++  src: ./
++  description: >-
++    This demo will connect Ckafca and consume message automatically. The SCF
++    will write each message to txt by each line. Then SCF will name this file by
++    time and upload this txt to COS bucket.
++    本示例会根据触发器配置的最大批量消息数去触发云函数运行，云函数每次运行都会创建一个以时间戳加随机数为名字的文本文件，并把拉取到的 Ckafca
++    消息换行写入文本文件。最后把写好的文件上传到 COS bucket，并以小时为单位在 COS bucket 中创建文件夹。
++  handler: index.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 5
++  events:
++    - ckafka: # ckafka触发器
++        name: # input Ckafka  trigger name
++        parameters:
++          name: # input Ckafka Instance id        
++          topic: # input Ckafka Topic name  
++          maxMsgNum: 100
++          offset: latest
++          enable: true
+diff --git a/Python2.7-CkafkaToMysql/serverless.yaml b/Python2.7-CkafkaToMysql/serverless.yaml
+new file mode 100644
+index 00000000..94a2aa72
+--- /dev/null
++++ b/Python2.7-CkafkaToMysql/serverless.yaml
+@@ -0,0 +1,24 @@
++component: scf
++name: ap-guangzhou_default_kafka_to_cos_consumer
++org: app
++app: kafka_to_cos_consumer
++stage: dev
++inputs:
++  name: kafka_to_cos_consumer
++  src: ./
++  description: CKAFKA data backup to COS. CKAFKA数据备份到COS
++  handler: kafka_to_cos_consumer.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 300
++  events:
++    - ckafka: # ckafka触发器
++        name: # input Ckafka  trigger name
++        parameters:
++          name: # input Ckafka Instance id        
++          topic: # input Ckafka Topic name  
++          maxMsgNum: 100
++          offset: latest
++          enable: true
+diff --git a/Python2.7-CkafkaTriggerTemplate/serverless.yaml b/Python2.7-CkafkaTriggerTemplate/serverless.yaml
+new file mode 100644
+index 00000000..3d21551f
+--- /dev/null
++++ b/Python2.7-CkafkaTriggerTemplate/serverless.yaml
+@@ -0,0 +1,29 @@
++component: scf
++name: ap-guangzhou_default_CkafkaTriggerTemplate
++org: app
++app: CkafkaTriggerTemplate
++stage: dev
++inputs:
++  name: CkafkaTriggerTemplate
++  src: ./
++  description: >-
++    This demo will connect Ckafca and consume message automatically. The SCF
++    will write each message to txt by each line. Then SCF will name this file by
++    time and upload this txt to COS bucket.
++    本示例会根据触发器配置的最大批量消息数去触发云函数运行，云函数每次运行都会创建一个以时间戳加随机数为名字的文本文件，并把拉取到的 Ckafca
++    消息换行写入文本文件。最后把写好的文件上传到 COS bucket，并以小时为单位在 COS bucket 中创建文件夹。
++  handler: index.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 5
++  events:
++    - ckafka: # ckafka触发器
++        name: # input Ckafka  trigger name
++        parameters:
++          name: # input Ckafka Instance id        
++          topic: # input Ckafka Topic name  
++          maxMsgNum: 100
++          offset: latest
++          enable: true
+diff --git a/Python2.7-Ckafka_SCF_COS/serverless.yaml b/Python2.7-Ckafka_SCF_COS/serverless.yaml
+new file mode 100644
+index 00000000..0370fe72
+--- /dev/null
++++ b/Python2.7-Ckafka_SCF_COS/serverless.yaml
+@@ -0,0 +1,29 @@
++component: scf
++name: ap-guangzhou_default_Ckafka_SCF_COS
++org: app
++app: Ckafka_SCF_COS
++stage: dev
++inputs:
++  name: Ckafka_SCF_COS
++  src: ./
++  description: >-
++    This demo will connect Ckafca and consume message automatically. The SCF
++    will write each message to txt by each line. Then SCF will name this file by
++    time and upload this txt to COS bucket.
++    本示例会根据触发器配置的最大批量消息数去触发云函数运行，云函数每次运行都会创建一个以时间戳加随机数为名字的文本文件，并把拉取到的 Ckafca
++    消息换行写入文本文件。最后把写好的文件上传到 COS bucket，并以小时为单位在 COS bucket 中创建文件夹。
++  handler: Ckafka_SCF_COS.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 5
++  events:
++    - ckafka: # ckafka触发器
++        name: # input Ckafka  trigger name
++        parameters:
++          name: # input Ckafka Instance id        
++          topic: # input Ckafka Topic name  
++          maxMsgNum: 100
++          offset: latest
++          enable: true
+diff --git a/Python2.7-CustomHtml/serverless.yaml b/Python2.7-CustomHtml/serverless.yaml
+new file mode 100644
+index 00000000..41cd2a50
+--- /dev/null
++++ b/Python2.7-CustomHtml/serverless.yaml
+@@ -0,0 +1,31 @@
++component: scf
++name: ap-guangzhou_default_API_GW_Html_Demo
++org: app
++app: API_GW_Html_Demo
++stage: dev
++inputs:
++  name: API_GW_Html_Demo
++  src: ./
++  description: >-
++    This demo is mainly to show how to return custom html in serverless.
++    本示例主要演示如何配置 API 网关触发器返回自定义的html页面
++  handler: index.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++     - apigw: # api网关触发器
++        name: serverless
++        serviceId: # input API gateway serviceId
++        parameters:
++          protocols:
++            - http
++          description: the serverless service
++          environment: release
++          endpoints:
++            - path: /
++              method: GET
++              function:
++                isIntegratedResponse: TRUE
+diff --git a/Python2.7-ES_Write/serverless.yaml b/Python2.7-ES_Write/serverless.yaml
+new file mode 100644
+index 00000000..f067d3ea
+--- /dev/null
++++ b/Python2.7-ES_Write/serverless.yaml
+@@ -0,0 +1,17 @@
++component: scf
++name: ap-guangzhou_default_escurator
++org: app
++app: escurator
++stage: dev
++inputs:
++  name: escurator
++  src: ./
++  description: >-
++    This demo uses ElasticSearch and timer trigger to write random number to ES.
++    本示例通过使用ElasticSearch库，实现了将随机数写入ES。可为其配置定时触发器后，定时执行
++  handler: index.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 10
+diff --git a/Python2.7-ES_curator_clear/serverless.yaml b/Python2.7-ES_curator_clear/serverless.yaml
+new file mode 100644
+index 00000000..9427d92a
+--- /dev/null
++++ b/Python2.7-ES_curator_clear/serverless.yaml
+@@ -0,0 +1,17 @@
++component: scf
++name: ap-guangzhou_default_ES_curator_clear
++org: app
++app: ES_curator_clear
++stage: dev
++inputs:
++  name: ES_curator_clear
++  src: ./
++  description: >-
++    This demo uses ElasticSearch curator and timer trigger to clear index of ES.
++    通过使用 ElasticSearch curator 库，实现了 ES 索引的删除清理。可为其配置定时触发器后，定时执行并清理 ES 内索引
++  handler: index.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 10
+diff --git a/Python2.7-Get_COS_Object/serverless.yaml b/Python2.7-Get_COS_Object/serverless.yaml
+new file mode 100644
+index 00000000..d867cd1d
+--- /dev/null
++++ b/Python2.7-Get_COS_Object/serverless.yaml
+@@ -0,0 +1,28 @@
++component: scf
++name: ap-guangzhou_default_Get_COS_Object
++org: app
++app: Get_COS_Object
++stage: dev
++inputs:
++  name: Get_COS_Object
++  src: ./
++  description: >-
++    This demo need to config COS trigger. When object has been upload to COS
++    bucket, the SCF will download it to /tmp. 本示例配置了 COS 触发器，当有文件上传到对应的 COS
++    bucket时，会触发云函数执行，并把文件下载到本地临时目录，用做后续处理
++  handler: Get_COS_Object.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 5
++  events:
++     - cos: # cos触发器
++        name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++        parameters:
++          bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++          filter:
++            prefix: 
++            suffix: 
++          events: cos:ObjectCreated:*
++          enable: true
+\ No newline at end of file
+diff --git a/Python2.7-IDCard_Detect_by_AI/serverless.yaml b/Python2.7-IDCard_Detect_by_AI/serverless.yaml
+new file mode 100644
+index 00000000..a961d676
+--- /dev/null
++++ b/Python2.7-IDCard_Detect_by_AI/serverless.yaml
+@@ -0,0 +1,25 @@
++component: scf
++name: ap-guangzhou_default_idcard_detection
++org: app
++app: idcard_detection
++stage: dev
++inputs:
++  name: idcard_detection
++  src: ./
++  description: idcard_detection. 本示例使用 COS 触发器，并调用AI接口实现身份证识别
++  handler: idcard_detection.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 5
++  events:
++     - cos: # cos触发器
++        name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++        parameters:
++          bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++          filter:
++            prefix: 
++            suffix: 
++          events: cos:ObjectCreated:*
++          enable: true
+diff --git a/Python2.7-KafkaToCosConsumer/serverless.yaml b/Python2.7-KafkaToCosConsumer/serverless.yaml
+new file mode 100644
+index 00000000..94a2aa72
+--- /dev/null
++++ b/Python2.7-KafkaToCosConsumer/serverless.yaml
+@@ -0,0 +1,24 @@
++component: scf
++name: ap-guangzhou_default_kafka_to_cos_consumer
++org: app
++app: kafka_to_cos_consumer
++stage: dev
++inputs:
++  name: kafka_to_cos_consumer
++  src: ./
++  description: CKAFKA data backup to COS. CKAFKA数据备份到COS
++  handler: kafka_to_cos_consumer.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 300
++  events:
++    - ckafka: # ckafka触发器
++        name: # input Ckafka  trigger name
++        parameters:
++          name: # input Ckafka Instance id        
++          topic: # input Ckafka Topic name  
++          maxMsgNum: 100
++          offset: latest
++          enable: true
+diff --git a/Python2.7-KafkaToCosSchedule/serverless.yaml b/Python2.7-KafkaToCosSchedule/serverless.yaml
+new file mode 100644
+index 00000000..d855b3ab
+--- /dev/null
++++ b/Python2.7-KafkaToCosSchedule/serverless.yaml
+@@ -0,0 +1,25 @@
++component: scf
++name: ap-guangzhou_default_kafka_to_cos_schedule
++org: app
++app: kafka_to_cos_schedule
++stage: dev
++inputs:
++  name: kafka_to_cos_schedule
++  src: ./
++  description: CKAFKA data backup to COS. CKAFKA数据备份到COS
++  handler: kafka_to_cos_schedule.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 10
++  events:
++    - ckafka: # ckafka触发器
++        name: # input Ckafka  trigger name
++        parameters:
++          name: # input Ckafka Instance id        
++          topic: # input Ckafka Topic name  
++          maxMsgNum: 100
++          offset: latest
++          enable: true
++
+diff --git a/Python2.7-Log_Analysis_to_MySQL/serverless.yaml b/Python2.7-Log_Analysis_to_MySQL/serverless.yaml
+new file mode 100644
+index 00000000..59d8ca5b
+--- /dev/null
++++ b/Python2.7-Log_Analysis_to_MySQL/serverless.yaml
+@@ -0,0 +1,27 @@
++component: scf
++name: ap-guangzhou_default_log_analysis
++org: app
++app: log_analysis
++stage: dev
++inputs:
++  name: log_analysis
++  src: ./
++  description: >-
++    This demo shows downloading log files from COS, using cloud function
++    analysis and writing to MySql. 本示例展示了从COS下载日志文件，使用云函数分析后写入MySql
++  handler: log_analysis.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 10
++  events:
++     - cos: # cos触发器
++        name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++        parameters:
++          bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++          filter:
++            prefix: 
++            suffix: 
++          events: cos:ObjectCreated:*
++          enable: true
+diff --git a/Python2.7-MapReduce_Map/serverless.yaml b/Python2.7-MapReduce_Map/serverless.yaml
+new file mode 100644
+index 00000000..fa1f7803
+--- /dev/null
++++ b/Python2.7-MapReduce_Map/serverless.yaml
+@@ -0,0 +1,18 @@
++component: scf
++name: ap-guangzhou_default_map_function
++org: app
++app: map_function
++stage: dev
++inputs:
++  name: map_function
++  src: ./
++  description: >-
++    his is one of the MapReduce function which is map_function.
++    本示例Demo演示怎么利用COS来做MapReduce，一共需要2个函数：map_function和reduce_function，3个COS
++    Bucket：srcmr、middlestagebucket 和 destmr
++  handler: map_function.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Python2.7-MapReduce_Map/template.yaml b/Python2.7-MapReduce_Map/template.yaml
+new file mode 100644
+index 00000000..1b1c46d9
+--- /dev/null
++++ b/Python2.7-MapReduce_Map/template.yaml
+@@ -0,0 +1,13 @@
++Resources:
++  default:
++    Type: TencentCloud::Serverless::Namespace
++    map_function:
++      Type: TencentCloud::Serverless::Function
++      Properties:
++        Description: his is one of the MapReduce function which is map_function. 本示例Demo演示怎么利用COS来做MapReduce，一共需要2个函数：map_function和reduce_function，3个COS
++          Bucket：srcmr、middlestagebucket 和 destmr
++        MemorySize: 128
++        Handler: map_function.main_handler
++        Timeout: 3
++        CodeUri: ./
++        Runtime: Python2.7
+diff --git a/Python2.7-MapReduce_Reduce/serverless.yaml b/Python2.7-MapReduce_Reduce/serverless.yaml
+new file mode 100644
+index 00000000..dee2b8cb
+--- /dev/null
++++ b/Python2.7-MapReduce_Reduce/serverless.yaml
+@@ -0,0 +1,18 @@
++component: scf
++name: ap-guangzhou_default_reduce_function
++org: app
++app: reduce_function
++stage: dev
++inputs:
++  name: reduce_function
++  src: ./
++  description: >-
++    This is one of the MapReduce function which is map_function.
++    本示例Demo演示怎么利用COS来做MapReduce，一共需要2个函数：map_function和reduce_function，3个COS
++    Bucket：srcmr、middlestagebucket 和 destmr
++  handler: reduce_function.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Python2.7-MapReduce_Reduce/template.yaml b/Python2.7-MapReduce_Reduce/template.yaml
+new file mode 100644
+index 00000000..ae003019
+--- /dev/null
++++ b/Python2.7-MapReduce_Reduce/template.yaml
+@@ -0,0 +1,14 @@
++Resources:
++  default:
++    Type: TencentCloud::Serverless::Namespace
++    reduce_function:
++      Type: TencentCloud::Serverless::Function
++      Properties:
++        Description: This is one of the MapReduce function which is map_function.
++          本示例Demo演示怎么利用COS来做MapReduce，一共需要2个函数：map_function和reduce_function，3个COS
++          Bucket：srcmr、middlestagebucket 和 destmr
++        MemorySize: 128
++        Handler: reduce_function.main_handler
++        Timeout: 3
++        CodeUri: ./
++        Runtime: Python2.7
+diff --git a/Python2.7-MongoDB_Basic_Demo/serverless.yaml b/Python2.7-MongoDB_Basic_Demo/serverless.yaml
+new file mode 100644
+index 00000000..20438d1a
+--- /dev/null
++++ b/Python2.7-MongoDB_Basic_Demo/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_mongodb_basic_demo
++org: app
++app: mongodb_basic_demo
++stage: dev
++inputs:
++  name: mongodb_basic_demo
++  src: ./
++  description: mongodb_basic_demo. 本示例演示基于API网关提供博客内的文章查询和文章内容，您可以扩展函数来实现 Web 后端服务
++  handler: index.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Python2.7-MySQL/serverless.yaml b/Python2.7-MySQL/serverless.yaml
+new file mode 100644
+index 00000000..296155de
+--- /dev/null
++++ b/Python2.7-MySQL/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_mysql_basic_demo
++org: app
++app: mysql_basic_demo
++stage: dev
++inputs:
++  name: mysql_basic_demo
++  src: ./
++  description: This demo shows how to operate mysql. 本示例展示了MySQL的基础使用方法，用户可根据实际业务配合触发器一起使用
++  handler: mysql_basic_demo.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Python2.7-MySQL_Backup_to_COS/serverless.yaml b/Python2.7-MySQL_Backup_to_COS/serverless.yaml
+new file mode 100644
+index 00000000..7be9295b
+--- /dev/null
++++ b/Python2.7-MySQL_Backup_to_COS/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_mysql_backup_to_cos
++org: app
++app: mysql_backup_to_cos
++stage: dev
++inputs:
++  name: mysql_backup_to_cos
++  src: ./
++  description: MySQL data backup to COS. MySQL数据备份到COS
++  handler: mysql_backup_to_cos.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Python2.7-Play_Check_By_Timer/serverless.yaml b/Python2.7-Play_Check_By_Timer/serverless.yaml
+new file mode 100644
+index 00000000..a24e167e
+--- /dev/null
++++ b/Python2.7-Play_Check_By_Timer/serverless.yaml
+@@ -0,0 +1,25 @@
++component: scf
++name: ap-guangzhou_default_ES_curator_clear
++org: app
++app: ES_curator_clear
++stage: dev
++inputs:
++  name: ES_curator_clear
++  src: ./
++  description: >-
++    This demo will use timer trigger to check url list. If there are wrong
++    lists, it will send alarm by email. 本示例代码的功能是定时拨测 URL 列表中的地址，并通过邮件发送告警
++  handler: Play_Check_By_Timer.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 10
++  events: # 触发器
++    - timer: # 定时触发器
++        name: timer
++        parameters:
++          cronExpression: '0 */5 * * * * *' # 每5分钟触发一次
++          enable: true
++          argument: argument # 额外的参数
++
+diff --git a/Python2.7-SendEmail_By_CMQ/serverless.yaml b/Python2.7-SendEmail_By_CMQ/serverless.yaml
+new file mode 100644
+index 00000000..ed1da019
+--- /dev/null
++++ b/Python2.7-SendEmail_By_CMQ/serverless.yaml
+@@ -0,0 +1,23 @@
++component: scf
++name: ap-guangzhou_default_SendEmail_By_CMQ
++org: app
++app: SendEmail_By_CMQ
++stage: dev
++inputs:
++  name: SendEmail_By_CMQ
++  src: ./
++  description: >-
++    This function will be trigged by CMQ and send email. 本示例通过接收 CMQ
++    消息队列中指定格式的消息，并根据消息内容向指定的邮箱发送邮件
++  handler: sendemail.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++    - cmq: # CMQ Topic 触发器
++       name: # input CMQ trigger  name //e.g. test
++       parameters:
++          name: # input CMQ Topic name //e.g. topicxxx
++          enable: true
+diff --git a/Python2.7-Thumbnail/serverless.yaml b/Python2.7-Thumbnail/serverless.yaml
+new file mode 100644
+index 00000000..33d16609
+--- /dev/null
++++ b/Python2.7-Thumbnail/serverless.yaml
+@@ -0,0 +1,30 @@
++component: scf
++name: ap-guangzhou_default_Thumbnail
++org: app
++app: Thumbnail
++stage: dev
++inputs:
++  name: Thumbnail
++  src: ./
++  description: >-
++    This demo need to config COS trigger. When object has been upload to COS
++    bucket, the SCF will download it to /tmp and compress it. 本示例配置了 COS
++    触发器，当有文件上传到对应的 COS bucket时，会触发云函数执行，并把文件下载到本地临时目录，用做后续处理
++  handler: Thumbnail.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 5
++  events:
++     - cos: # cos触发器
++        name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++        parameters:
++          bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++          filter:
++            prefix: 
++            suffix: 
++          events: cos:ObjectCreated:*
++          enable: true
++
++
+diff --git a/Python2.7-UnpackAndUploadToCOS/serverless.yaml b/Python2.7-UnpackAndUploadToCOS/serverless.yaml
+new file mode 100644
+index 00000000..c33bc898
+--- /dev/null
++++ b/Python2.7-UnpackAndUploadToCOS/serverless.yaml
+@@ -0,0 +1,27 @@
++component: scf
++name: ap-guangzhou_default_unpack_to_cos
++org: app
++app: unpack_to_cos
++stage: dev
++inputs:
++  name: unpack_to_cos
++  src: ./
++  description: >-
++    本示例通过配置COS触发，上传到COS的压缩包，使用SCF下载并本地解压，支持中文字段解压，并把解压后的文件上传到COS另一个targetBucket环境变量指定的存储桶中，支持如下压缩格式：ZIP,
++    RAR, 7Z, BZIP2, GZIP, TAR, XZ
++  handler: unpack_to_cos.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 900
++  events:
++     - cos: # cos触发器
++        name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++        parameters:
++          bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++          filter:
++            prefix: 
++            suffix: 
++          events: cos:ObjectCreated:*
++          enable: true
+diff --git a/Python2.7-Upload file by API GW/serverless.yaml b/Python2.7-Upload file by API GW/serverless.yaml
+new file mode 100644
+index 00000000..9660dd60
+--- /dev/null
++++ b/Python2.7-Upload file by API GW/serverless.yaml	
+@@ -0,0 +1,33 @@
++component: scf
++name: ap-guangzhou_default_upload_file_to_COS_by_APIGW
++org: app
++app: upload_file_to_COS_by_APIGW
++stage: dev
++inputs:
++  name: upload_file_to_COS_by_APIGW
++  src: ./
++  description: >-
++    This demo uses API GW trigger and SCF to build WEB backend service.It can
++    upload object to SCF by API GW. 本示例使用 API
++    网关触发器和云函数快速构建web后台，实现从前端通过API上传文件到云函数，并下载文件到云函数的本地目录/tmp，然后上传到COS bucket
++  handler: upload_file_to_COS_by_APIGW.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 30
++  events:
++     - apigw: # api网关触发器
++        name: serverless
++        serviceId: # input API gateway serviceId
++        parameters:
++          protocols:
++            - http
++          description: the serverless service
++          environment: release
++          endpoints:
++            - path: /
++              method: GET
++              function:
++                isIntegratedResponse: TRUE
++
+diff --git a/Python2.7-Websocket-Delete/serverless.yaml b/Python2.7-Websocket-Delete/serverless.yaml
+new file mode 100644
+index 00000000..53c5a5de
+--- /dev/null
++++ b/Python2.7-Websocket-Delete/serverless.yaml
+@@ -0,0 +1,18 @@
++component: scf
++name: ap-guangzhou_default_websocket_delete
++org: app
++app: websocket_delete
++stage: dev
++inputs:
++  name: websocket_delete
++  src: ./
++  description: >-
++    This demo uses API GW and SCF to build websocket. This is delete function.
++    本示例基于 API
++    网关实现websocket功能，API网关和云函数一起构成websocket的Server端，由API网关承载和Client端的长连接。websocket一共需要3类函数承载，分别是注册函数、传输函数和清理函数，本函数为清理函数。
++  handler: websocket_delete.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Python2.7-Websocket-Delete/template.yaml b/Python2.7-Websocket-Delete/template.yaml
+new file mode 100644
+index 00000000..efba69eb
+--- /dev/null
++++ b/Python2.7-Websocket-Delete/template.yaml
+@@ -0,0 +1,13 @@
++Resources:
++  default:
++    websocket_delete:
++      Type: TencentCloud::Serverless::Function
++      Properties:
++        Description: This demo uses API GW and SCF to build websocket. This is delete
++          function. 本示例基于 API 网关实现websocket功能，API网关和云函数一起构成websocket的Server端，由API网关承载和Client端的长连接。websocket一共需要3类函数承载，分别是注册函数、传输函数和清理函数，本函数为清理函数。
++        MemorySize: 128
++        Handler: websocket_delete.main_handler
++        Timeout: 3
++        CodeUri: ./
++        Runtime: Python2.7
++    Type: TencentCloud::Serverless::Namespace
+diff --git a/Python2.7-Websocket-Register/serverless.yaml b/Python2.7-Websocket-Register/serverless.yaml
+new file mode 100644
+index 00000000..716067ba
+--- /dev/null
++++ b/Python2.7-Websocket-Register/serverless.yaml
+@@ -0,0 +1,18 @@
++component: scf
++name: ap-guangzhou_default_websocket_register
++org: app
++app: websocket_register
++stage: dev
++inputs:
++  name: websocket_register
++  src: ./
++  description: >-
++    This demo uses API GW and SCF to build websocket. This is register function.
++    本示例基于 API
++    网关实现websocket功能，API网关和云函数一起构成websocket的Server端，由API网关承载和Client端的长连接。websocket一共需要3类函数承载，分别是注册函数、传输函数和清理函数，本函数为注册函数。
++  handler: websocket_register.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Python2.7-Websocket-Register/template.yaml b/Python2.7-Websocket-Register/template.yaml
+new file mode 100644
+index 00000000..8cbe4462
+--- /dev/null
++++ b/Python2.7-Websocket-Register/template.yaml
+@@ -0,0 +1,13 @@
++Resources:
++  default:
++    websocket_register:
++      Type: TencentCloud::Serverless::Function
++      Properties:
++        Description: This demo uses API GW and SCF to build websocket. This is register
++          function. 本示例基于 API 网关实现websocket功能，API网关和云函数一起构成websocket的Server端，由API网关承载和Client端的长连接。websocket一共需要3类函数承载，分别是注册函数、传输函数和清理函数，本函数为注册函数。
++        MemorySize: 128
++        Handler: websocket_register.main_handler
++        Timeout: 3
++        CodeUri: ./
++        Runtime: Python2.7
++    Type: TencentCloud::Serverless::Namespace
+diff --git a/Python2.7-Websocket-Transmission/serverless.yaml b/Python2.7-Websocket-Transmission/serverless.yaml
+new file mode 100644
+index 00000000..87e089a7
+--- /dev/null
++++ b/Python2.7-Websocket-Transmission/serverless.yaml
+@@ -0,0 +1,18 @@
++component: scf
++name: ap-guangzhou_default_websocket_transmission
++org: app
++app: websocket_transmission
++stage: dev
++inputs:
++  name: websocket_transmission
++  src: ./
++  description: >-
++    This demo uses API GW and SCF to build websocket. This is transmission
++    function. 本示例基于 API
++    网关实现websocket功能，API网关和云函数一起构成websocket的Server端，由API网关承载和Client端的长连接。websocket一共需要3类函数承载，分别是注册函数、传输函数和清理函数，本函数为传输函数。
++  handler: websocket_transmission.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Python2.7-Websocket-Transmission/template.yaml b/Python2.7-Websocket-Transmission/template.yaml
+new file mode 100644
+index 00000000..7ec6d6d4
+--- /dev/null
++++ b/Python2.7-Websocket-Transmission/template.yaml
+@@ -0,0 +1,13 @@
++Resources:
++  default:
++    websocket_transmission:
++      Type: TencentCloud::Serverless::Function
++      Properties:
++        Description: This demo uses API GW and SCF to build websocket. This is transmission
++          function. 本示例基于 API 网关实现websocket功能，API网关和云函数一起构成websocket的Server端，由API网关承载和Client端的长连接。websocket一共需要3类函数承载，分别是注册函数、传输函数和清理函数，本函数为传输函数。
++        MemorySize: 128
++        Handler: websocket_transmission.main_handler
++        Timeout: 3
++        CodeUri: ./
++        Runtime: Python2.7
++    Type: TencentCloud::Serverless::Namespace
+diff --git a/Python2.7-Word_Recognition/serverless.yaml b/Python2.7-Word_Recognition/serverless.yaml
+new file mode 100644
+index 00000000..83d7f7c8
+--- /dev/null
++++ b/Python2.7-Word_Recognition/serverless.yaml
+@@ -0,0 +1,34 @@
++component: scf
++name: ap-guangzhou_default_Word_Recognition
++org: app
++app: Word_Recognition
++stage: dev
++inputs:
++  name: Word_Recognition
++  src: ./
++  description: >-
++    This demo uses API GW trigger and SCF to build WEB backend service.It can
++    realize word recognition from picture. 本示例使用 API
++    网关触发器和云函数快速构建web后台，实现图片中文字识别的功能，用户通过 API
++    网关上传图片文件，上传后的文件会保存在COS，并调用AI接口实现文字识别，把结果返回前端
++  handler: Word_Recognition.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 10
++  events:
++     - apigw: # api网关触发器
++        name: serverless
++        serviceId: # input API gateway serviceId
++        parameters:
++          protocols:
++            - http
++          description: the serverless service
++          environment: release
++          endpoints:
++            - path: /
++              method: GET
++              function:
++                isIntegratedResponse: TRUE
++
+diff --git a/Python2.7-cdn-dispatch-log-jobs/serverless.yaml b/Python2.7-cdn-dispatch-log-jobs/serverless.yaml
+new file mode 100644
+index 00000000..9f2bee6e
+--- /dev/null
++++ b/Python2.7-cdn-dispatch-log-jobs/serverless.yaml
+@@ -0,0 +1,17 @@
++component: scf
++name: ap-guangzhou_default_cdn-dispatch-log-jobs
++org: app
++app: cdn-dispatch-log-jobs
++stage: dev
++inputs:
++  name: cdn-dispatch-log-jobs
++  src: ./
++  description: >-
++    get CDN logs by url and upload to COS. this is control function.
++    本示例介绍如何把CDN的日志拉取并存储到对象存储，一共需要创建2个函数，任务分发函数和存储函数，通过任务分发函数调用“下载URL文件并存储到COS”函数完成日志存储，该函数为任务分发函数
++  handler: index.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 300
+diff --git a/Python2.7-cdn-dispatch-log-jobs/template.yaml b/Python2.7-cdn-dispatch-log-jobs/template.yaml
+new file mode 100644
+index 00000000..154b0a03
+--- /dev/null
++++ b/Python2.7-cdn-dispatch-log-jobs/template.yaml
+@@ -0,0 +1,13 @@
++Resources:
++  default:
++    cdn-dispatch-log-jobs:
++      Type: TencentCloud::Serverless::Function
++      Properties:
++        Description: get CDN logs by url and upload to COS. this is control function.
++          本示例介绍如何把CDN的日志拉取并存储到对象存储，一共需要创建2个函数，任务分发函数和存储函数，通过任务分发函数调用“下载URL文件并存储到COS”函数完成日志存储，该函数为任务分发函数
++        MemorySize: 128
++        Handler: index.main_handler
++        Timeout: 300
++        CodeUri: ./
++        Runtime: Python2.7
++    Type: TencentCloud::Serverless::Namespace
+diff --git a/Python2.7-cdn-save-log-into-cos/serverless.yaml b/Python2.7-cdn-save-log-into-cos/serverless.yaml
+new file mode 100644
+index 00000000..7632696f
+--- /dev/null
++++ b/Python2.7-cdn-save-log-into-cos/serverless.yaml
+@@ -0,0 +1,17 @@
++component: scf
++name: ap-guangzhou_default_cdn-save-log-into-cos
++org: app
++app: cdn-save-log-into-cos
++stage: dev
++inputs:
++  name: cdn-save-log-into-cos
++  src: ./
++  description: >-
++    Get logs by url and upload to COS by streaming.
++    本示例介绍如何把CDN的日志拉取并存储到对象存储，一共需要创建2个函数，任务分发函数和存储函数，通过任务分发函数调用存储函数完成日志存储，该函数为日志存储函数
++  handler: index.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 300
+diff --git a/Python2.7-cdn-save-log-into-cos/template.yaml b/Python2.7-cdn-save-log-into-cos/template.yaml
+new file mode 100644
+index 00000000..14434b54
+--- /dev/null
++++ b/Python2.7-cdn-save-log-into-cos/template.yaml
+@@ -0,0 +1,12 @@
++Resources:
++  default:
++    cdn-save-log-into-cos:
++      Type: TencentCloud::Serverless::Function
++      Properties:
++        Description: Get logs by url and upload to COS by streaming. 本示例介绍如何把CDN的日志拉取并存储到对象存储，一共需要创建2个函数，任务分发函数和存储函数，通过任务分发函数调用存储函数完成日志存储，该函数为日志存储函数
++        MemorySize: 128
++        Handler: index.main_handler
++        Timeout: 300
++        CodeUri: ./
++        Runtime: Python2.7
++    Type: TencentCloud::Serverless::Namespace
+diff --git a/Python2.7-helloworld/serverless.yaml b/Python2.7-helloworld/serverless.yaml
+new file mode 100644
+index 00000000..49114e73
+--- /dev/null
++++ b/Python2.7-helloworld/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_helloworld
++org: app
++app: helloworld
++stage: dev
++inputs:
++  name: helloworld
++  src: ./
++  description: helloworld blank template function. Helloworld 空白模板函数
++  handler: index.main_handler
++  runtime: Python2.7
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
+diff --git a/Python3.6-API_Service/serverless.yaml b/Python3.6-API_Service/serverless.yaml
+new file mode 100644
+index 00000000..8ea6f064
+--- /dev/null
++++ b/Python3.6-API_Service/serverless.yaml
+@@ -0,0 +1,32 @@
++component: scf
++name: ap-guangzhou_default_api_service
++org: app
++app: api_service
++stage: dev
++inputs:
++  name: api_service
++  src: ./
++  description: >-
++    This demo uses API GW to provide API service. You can expand to do WEB API
++    based on this. 本示例演示基于API网关提供博客内的文章查询和文章内容，您可以扩展函数来实现 Web 后端服务
++  handler: api_service.main_handler
++  runtime: Python3.6
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++     - apigw: # api网关触发器
++        name: serverless
++        serviceId: # input API gateway serviceId
++        parameters:
++          protocols:
++            - http
++          description: the serverless service
++          environment: release
++          endpoints:
++            - path: /
++              method: GET
++              function:
++                isIntegratedResponse: TRUE
++
+diff --git a/Python3.6-Get_COS_Object/serverless.yaml b/Python3.6-Get_COS_Object/serverless.yaml
+new file mode 100644
+index 00000000..2994a059
+--- /dev/null
++++ b/Python3.6-Get_COS_Object/serverless.yaml
+@@ -0,0 +1,29 @@
++component: scf
++name: ap-guangzhou_default_Get_COS_Object
++org: app
++app: Get_COS_Object
++stage: dev
++inputs:
++  name: Get_COS_Object
++  src: ./
++  description: >-
++    This demo need to config COS trigger. When object has been upload to COS
++    bucket, the SCF will download it to /tmp. 本示例配置了 COS 触发器，当有文件上传到对应的 COS
++    bucket时，会触发云函数执行，并把文件下载到本地临时目录，用做后续处理
++  handler: Get_COS_Object.main_handler
++  runtime: Python3.6
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 5
++  events:
++     - cos: # cos触发器
++        name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++        parameters:
++          bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
++          filter:
++            prefix: 
++            suffix: 
++          events: cos:ObjectCreated:*
++          enable: true
++
+diff --git a/Python3.6-KafkaToCDWByTrigger/serverless.yaml b/Python3.6-KafkaToCDWByTrigger/serverless.yaml
+new file mode 100644
+index 00000000..3f92cffe
+--- /dev/null
++++ b/Python3.6-KafkaToCDWByTrigger/serverless.yaml
+@@ -0,0 +1,16 @@
++component: scf
++name: ap-guangzhou_default_kafkaDataLoadTocdw
++org: app
++app: kafka
++stage: dev
++inputs:
++  name: kafkaDataLoadTocdw
++  src: ./
++  description: kafka data load to cdw
++  handler: kafka_to_cdw_by_trigger.main_handler
++  runtime: Python3.6
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 60
++
+diff --git a/Python3.6-KafkaToCDWConsumer/serverless.yaml b/Python3.6-KafkaToCDWConsumer/serverless.yaml
+new file mode 100644
+index 00000000..8c479c70
+--- /dev/null
++++ b/Python3.6-KafkaToCDWConsumer/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_kafka_to_cdw_consumer
++org: app
++app: kafka_to_cdw_consumer
++stage: dev
++inputs:
++  name: kafka_to_cdw_consumer
++  src: ./
++  description: kafka data load to cdw
++  handler: kafka_to_cdw_consumer.main_handler
++  runtime: Python3.6
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 60
+diff --git a/Python3.6-Play_Check_By_Timer/serverless.yaml b/Python3.6-Play_Check_By_Timer/serverless.yaml
+new file mode 100644
+index 00000000..4895ecc6
+--- /dev/null
++++ b/Python3.6-Play_Check_By_Timer/serverless.yaml
+@@ -0,0 +1,24 @@
++component: scf
++name: ap-guangzhou_default_ES_curator_clear
++org: app
++app: ES_curator_clear
++stage: dev
++inputs:
++  name: ES_curator_clear
++  src: ./
++  description: >-
++    This demo will use timer trigger to check url list. If there are wrong
++    lists, it will send alarm by email. 本示例代码的功能是定时拨测 URL 列表中的地址，并通过邮件发送告警
++  handler: Play_Check_By_Timer.main_handler
++  runtime: Python3.6
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 10
++  events: # 触发器
++    - timer: # 定时触发器
++        name: timer
++        parameters:
++          cronExpression: '0 */5 * * * * *' # 每5分钟触发一次
++          enable: true
++          argument: argument # 额外的参数
+\ No newline at end of file
+diff --git a/Python3.6-SendEmail_By_CMQ/serverless.yaml b/Python3.6-SendEmail_By_CMQ/serverless.yaml
+new file mode 100644
+index 00000000..3b74e2f4
+--- /dev/null
++++ b/Python3.6-SendEmail_By_CMQ/serverless.yaml
+@@ -0,0 +1,23 @@
++component: scf
++name: ap-guangzhou_default_SendEmail_By_CMQ
++org: app
++app: SendEmail_By_CMQ
++stage: dev
++inputs:
++  name: SendEmail_By_CMQ
++  src: ./
++  description: >-
++    This function will be trigged by CMQ and send email. 本示例通过接收 CMQ
++    消息队列中指定格式的消息，并根据消息内容向指定的邮箱发送邮件
++  handler: sendemail.main_handler
++  runtime: Python3.6
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++    - cmq: # CMQ Topic 触发器
++       name: # input CMQ trigger  name //e.g. test
++       parameters:
++          name: # input CMQ Topic name //e.g. topicxxx
++          enable: true
+\ No newline at end of file
+diff --git a/Python3.6-WebPageDemo/serverless.yaml b/Python3.6-WebPageDemo/serverless.yaml
+new file mode 100644
+index 00000000..dda2ceee
+--- /dev/null
++++ b/Python3.6-WebPageDemo/serverless.yaml
+@@ -0,0 +1,31 @@
++component: scf
++name: ap-guangzhou_default_API_GW_WebPage_Demo
++org: app
++app: API_GW_WebPage_Demo
++stage: dev
++inputs:
++  name: API_GW_WebPage_Demo
++  src: ./
++  description: >-
++    This demo is mainly to show how to set up personal web page in serverless
++    with apigateway. 本示例主要通过 SCF 结合 API 网关，快速实现一个对公网服务的 Web 页面。
++  handler: index.main_handler
++  runtime: Python3.6
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
++  events:
++     - apigw: # api网关触发器
++        name: serverless
++        serviceId: # input API gateway serviceId
++        parameters:
++          protocols:
++            - http
++          description: the serverless service
++          environment: release
++          endpoints:
++            - path: /
++              method: GET
++              function:
++                isIntegratedResponse: TRUE
+diff --git a/Python3.6-Word_Recognition/serverless.yaml b/Python3.6-Word_Recognition/serverless.yaml
+new file mode 100644
+index 00000000..c09d6ab1
+--- /dev/null
++++ b/Python3.6-Word_Recognition/serverless.yaml
+@@ -0,0 +1,33 @@
++component: scf
++name: ap-guangzhou_default_Word_Recognition
++org: app
++app: Word_Recognition
++stage: dev
++inputs:
++  name: Word_Recognition
++  src: ./
++  description: >-
++    This demo uses API GW trigger and SCF to build WEB backend service.It can
++    realize word recognition from picture. 本示例使用 API
++    网关触发器和云函数快速构建web后台，实现图片中文字识别的功能，用户通过 API
++    网关上传图片文件，上传后的文件会保存在COS，并调用AI接口实现文字识别，把结果返回前端
++  handler: Word_Recognition.main_handler
++  runtime: Python3.6
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 5
++  events:
++     - apigw: # api网关触发器
++        name: serverless
++        serviceId: # input API gateway serviceId
++        parameters:
++          protocols:
++            - http
++          description: the serverless service
++          environment: release
++          endpoints:
++            - path: /
++              method: GET
++              function:
++                isIntegratedResponse: TRUE
+diff --git a/Python3.6-helloworld/serverless.yaml b/Python3.6-helloworld/serverless.yaml
+new file mode 100644
+index 00000000..56e67936
+--- /dev/null
++++ b/Python3.6-helloworld/serverless.yaml
+@@ -0,0 +1,15 @@
++component: scf
++name: ap-guangzhou_default_helloworld
++org: app
++app: helloworld
++stage: dev
++inputs:
++  name: helloworld
++  src: ./
++  description: helloworld blank template function. Helloworld空白模板函数
++  handler: index.main_handler
++  runtime: Python3.6
++  namespace: default
++  region: ap-guangzhou
++  memorySize: 128
++  timeout: 3
