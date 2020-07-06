@@ -1,0 +1,49 @@
+{
+	"serverless-cloud-function-application": {
+		"application": {
+			"Chinese": {
+				"name": "短信验证码登录",
+				"description": "本示例通过腾讯云短信实现发送验证码，并校验验证码以实现登录",
+				"attention": "",
+				"readme": {
+					"file": "",
+					"content": ""
+				},
+				"license": {
+					"file": "",
+					"content": "公开"
+				},
+				"author": {
+					"name": "腾讯云无服务器云函数团队"
+				}
+			},
+			"English": {
+				"name": "SmsVerificationCode",
+				"description": "This function will operate mysql by client for Node.js",
+				"attention": "",
+				"readme": {
+					"file": "",
+					"content": ""
+				},
+				"license": {
+					"file": "",
+					"content": "Open"
+				},
+				"author": {
+					"name": "Tencent Cloud Serverless Team"
+				}
+			},
+			"input_parameters": {
+				"event": "",
+				"context": ""
+			},
+			"output_parameters": {},
+			"download_address": "https://github.com/tencentyun/scf-demo-repo/tree/master/Node8.9-SmsVerificationCode",
+			"tags": [
+				"Sms",
+				"Nodejs8.9"
+			],
+			"version": "1.0.3"
+		}
+	}
+}
