@@ -1,7 +1,13 @@
 
 /**************************************************
-功能：1.发送短信 2.登录（校验短信验证码）
+* 功能：1.发送短信 2.登录（校验短信验证码）
+* 函数运行的前提条件： 
+1.创建模板函数后，请先添加函数运行角色，并给该角色关联短信QcloudSMSFullAccess权限。
+2.本服务用到redis存储验证码，请先申请redis资源，并将redis的host和密码设置成环境变量。
+3.去云短信控制台申请短信模板和签名
+* 详细请参考：https://github.com/tencentyun/scf-demo-repo/tree/master/Nodejs8.9-SmsVerificationCode
 ***************************************************/
+
 'use strict';
 const redis = require('ioredis');
 const tencentcloud = require('tencentcloud-sdk-nodejs');
