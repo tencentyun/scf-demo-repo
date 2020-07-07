@@ -35,6 +35,9 @@
 到[云数据库](https://console.cloud.tencent.com/redis)控制台申请redis资源，然后将申请到的redis实例的host和password添加到云函数的环境变量中。
 ![](https://main.qcloudimg.com/raw/2a3eca4ea7a26829b9a37b01d3257fdc.png)
 
+#### 私有网络VPC配置
+腾讯云云函数默认部署在公共网络中，如果要访问redis资源，需在云函数控制台基础配置里启用私有网络。详情参考[私有网络通信](https://cloud.tencent.com/document/product/583/19703)
+
 ### 错误码
 | 字段 |说明|
 | ----- | ----- |
