@@ -11,6 +11,7 @@ logger.setLevel(level=logging.INFO)
 
 ## 各种系统常量，以下常量均可通过同名环境变量进行覆盖
 MSG_SEPARATOR = ',' #kafka中消息的分隔符
+MSG_NULL = '\\N' #kafka中消息的null值
 DB_PORT = 5436 #CDW的端口，默认应该是5436
 
 def init_cdw_client():
@@ -26,22 +27,22 @@ def init_cdw_client():
 def check_param():
     if os.getenv("DB_DATABASE") is None:
         logger.error("need environment variable DB_DATABASE")
-        return False
+        raise Exception('check param fail')
     if os.getenv("DB_HOST") is None:
         logger.error("need environment variable DB_HOST")
-        return False
+        raise Exception('check param fail')
     if os.getenv("DB_USER") is None:
         logger.error("need environment variable DB_USER")
-        return False
+        raise Exception('check param fail')
     if os.getenv("DB_PASSWORD") is None:
         logger.error("need environment variable DB_PASSWORD")
-        return False
+        raise Exception('check param fail')
     if os.getenv("DB_SCHEMA") is None:
         logger.error("need environment variable DB_SCHEMA")
-        return False
+        raise Exception('check param fail')
     if os.getenv("DB_TABLE") is None:
         logger.error("need environment variable DB_TABLE")
-        return False
+        raise Exception('check param fail')
 
     return True
 
@@ -68,8 +69,9 @@ def main_handler(event, context):
     schema = os.getenv("DB_SCHEMA")
     table = os.getenv("DB_TABLE")
     msg_separator = os.getenv("MSG_SEPARATOR", MSG_SEPARATOR)
+    msg_null = os.getenv("MSG_NULL", MSG_NULL)
     sio.seek(0)
-    ret = cdw_client.copy_from(sio, schema+"."+table, msg_separator)
+    ret = cdw_client.copy_from(sio, schema+"."+table, msg_separator, msg_null)
     if ret == False:
         # copy是一个事务，要么全部成功，要么全部失败，copy失败，抛出异常，让平台重试
         sio.close()
