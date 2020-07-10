@@ -15,8 +15,8 @@ inputs:
   environment:
     variables:
       #需要替换的字段
-      url_cdn: 'https://serverless-demo-1256608914.file.myqcloud.com'
-      region: ap-shanghai
+      url_cdn: #'https://serverless-demo-1256608914.file.myqcloud.com'
+      region: #ap-shanghai
   
   events:
     #cos触发器配置
