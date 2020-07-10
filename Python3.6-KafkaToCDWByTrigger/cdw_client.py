@@ -24,7 +24,7 @@ class CDWClient(object):
         return conn
 
 
-    def copy_from(self, sio: IOBase, table: str, sep: str):
+    def copy_from(self, sio: IOBase, table: str, sep: str, fnull: str):
         conn = None
         cur = None
         try:
@@ -32,7 +32,7 @@ class CDWClient(object):
 
             conn = self.get_connection()
             cur = conn.cursor()
-            cur.copy_from(sio, table, sep)
+            cur.copy_from(sio, table, sep, fnull)
             conn.commit()
 
             logger.info("copy table:[%s] success, cost time :[%ds]", table, int(time.time()) - start_time)
