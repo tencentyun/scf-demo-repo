@@ -76,7 +76,7 @@ python
     },    #the description of input parameters.
     "output_parameters":{        #the description of output_parameters.
         {
-            "isBase64": False,
+            "isBase64Encoded": False,
             "statusCode": 200,
             "headers": {"Content-Type":"text/html"},
             "body": "<html><body><h1>Heading</h1><p>Paragraph.</p></body></html>"

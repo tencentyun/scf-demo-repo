@@ -9,7 +9,7 @@ exports.main_handler = (event, context, callback) => {
   const body = 'API GW Test Success'
 
   return {
-        "isBase64": false,
+        "isBase64Encoded": false,
         "statusCode": 200,
         "headers": {"Content-Type": "text", "Access-Control-Allow-Origin": "*"},
         "body": body
