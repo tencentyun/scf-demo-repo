@@ -15,7 +15,7 @@ def main_handler(event, context):
     body = 'API GW Test Success'
 
     response = {
-        "isBase64": False,
+        "isBase64Encoded": False,
         "statusCode": 200,
         "headers": {"Content-Type": "text", "Access-Control-Allow-Origin": "*"},
         "body": body
