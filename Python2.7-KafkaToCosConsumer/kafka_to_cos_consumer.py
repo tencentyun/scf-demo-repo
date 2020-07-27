@@ -184,7 +184,8 @@ class KafkaToCos(object):
         elif self.offset_type.lower() == 'latest':
             start_offset = OffsetType.LATEST
         else:
-            offsets = topic.fetch_offset_limits(int(self.offset_type))
+            tm = datetime.datetime.fromtimestamp(int(self.offset_type)/1000) 
+            offsets = topic.fetch_offset_limits(tm)
             if len(offsets[self.partition_id].offset) == 0:
                 start_offset = OffsetType.LATEST
             else:
