@@ -43,7 +43,7 @@
           "Sms",
           "Nodejs8.9"
         ],
-        "version": "1.0.7" 
+        "version": "1.0.8" 
         // Version number, which identifies the demo version status. 
         // Demo will not to update to the page if the version number unmodified.
         //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
