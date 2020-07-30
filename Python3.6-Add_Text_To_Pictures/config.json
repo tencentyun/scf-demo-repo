@@ -2,8 +2,8 @@
   "serverless-cloud-function-application": {
     "application":{
       "Chinese":{
-        "name": "图片添加文字/水印",
-        "description": "本示例演示从http api post姓名到云函数，在云函数中给邀请函添加姓名，并把处理后的图片上传COS，返回下载地址到调用端",
+        "name": "自定义邀请函",
+        "description": "使用API网关+云函数构建REST API，提供图片上添加文字的功能，并把HTML页面部署至对象存储，提供静态网站服务；当在网页上输入文字时，生成定制化的邀请函",
         "attention": "1. 本示例需要在环境变量配置COS的bucket信息，并设置API网关触发器配合使用；2. 另外在函数配置中会使用运行角色来操作COS资源，需要确保有cos bucket的对象上传权限；3. 源文件所在bucket需要设置为公有读私有写。",
         "readme": {
             "file": "",
@@ -41,7 +41,7 @@
       },
       "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Python3.6-Add_Text_To_Pictures",  // Demo's git download url. demo的git下载链接
       "tags":[
-              "PIL", "Python3.6", "picture"  
+              "HTTP", "Python3.6", "REST API","PIL"  
               // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on.
               // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
