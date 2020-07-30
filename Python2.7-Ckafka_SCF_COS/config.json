@@ -2,8 +2,8 @@
   "serverless-cloud-function-application": {
     "application":{
       "Chinese":{
-        "name": "Ckafka 消息投递 COS",
-        "description": "本示例会根据触发器配置的最大批量消息数去触发云函数运行，云函数每次运行都会创建一个以时间戳加随机数为名字的文本文件，并把拉取到的 Ckafca 消息换行写入文本文件。最后把写好的文件上传到 COS bucket，并以小时为单位在 COS bucket 中创建文件夹。",
+        "name": "Ckafka 消息转储至 COS",
+        "description": "使用 Ckafka 触发器将消息转储至指定的 COS 存储桶",
         "attention": "在使用本示例代码时需要在函数里修改用户的appid、secret_id、secret_key、bucket名",
         "readme": {
             "file": "",
@@ -41,7 +41,7 @@
       },
       "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-Ckafca_SCF_COS",  // Demo's git download url. demo的git下载链接
       "tags":[
-              "Ckafka", "Python2.7", "COS"  
+              "Ckafka", "Python2.7", "COS","consumer"  
               // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on.
               // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
