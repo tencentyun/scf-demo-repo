@@ -2,8 +2,8 @@
   "serverless-cloud-function-application": {
     "application":{
       "Chinese":{
-        "name": "Ckafka To Elasticsearch 示例",
-        "description": "本示例主要通过 SCF 结合 Elasticsearch，快速实现Ckafka TO Elasticsearch场景。",
+        "name": "Ckafka 消息转储至 ES",
+        "description": "使用Ckafka+云函数+ES，提供日志转存和清洗能力，替代Logstash，成本更低，支持功能自定义",
         "attention": "在使用本示例代码时需要在函数里修改相关参数",
         "readme": {
             "file": "",
@@ -41,7 +41,7 @@
       },
       "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-CkafkaToElasticsearch",  // Demo's git download url. demo的git下载链接
       "tags":[
-              "Ckafka", "Python2.7", "Elasticsearch"  
+              "Ckafka", "Python2.7", "ES","Logstash"
               // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on.
               // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
