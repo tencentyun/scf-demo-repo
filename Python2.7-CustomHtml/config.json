@@ -2,8 +2,8 @@
   "serverless-cloud-function-application": {
     "application": {
       "Chinese": {
-        "name": "API 网关返回自定义html页面",
-        "description": "本示例主要演示如何配置 API 网关触发器返回自定义的html页面",
+        "name": "静态页面托管",
+        "description": "将HTML页面部署至云函数，配合使用 API 网关触发器可迅速实现静态页面托管和访问",
         "attention": "无",
         "readme": {
           "file": "",
@@ -45,8 +45,9 @@
       "download_address": "https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-CustomHtml", //Demo's git download url. demo的git下载链接
       "tags": [
         "Python2.7",
-        "API GW",
-        "Custom Html" 
+        "HTTP",
+        "HTML",
+        "API GW"
         // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on.
         // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
