@@ -2,8 +2,8 @@
   "serverless-cloud-function-application": {
     "application":{
       "Chinese":{
-        "name": "压缩包解压",
-        "description": "本示例通过配置COS触发，上传到COS的压缩包，使用SCF下载并本地解压，支持中文字段解压，并把解压后的文件上传到COS另一个targetBucket环境变量指定的存储桶中，支持如下压缩格式：ZIP, RAR, 7Z, BZIP2, GZIP, TAR, XZ",
+        "name": "文件解压缩",
+        "description": "上传压缩包至COS时，可触发云函数下载压缩包并解压，并把解压后的文件上传到COS另一个targetBucket环境变量指定的存储桶中，支持如下压缩格式：ZIP, RAR, 7Z, BZIP2, GZIP, TAR, XZ",
         "attention": "该云函数需要配置COS触发器，解压后的文件总大小要<500M，另外在使用本示例代码时需要函数运行角色有读写COS的权限。需要设置如下环境变量：targetBucket-目标存储桶名称，targetPrefix-目标存储桶前缀, targetRegion-目标存储桶地域, suffix-解压的后缀",
         "readme": {
             "file": "",
@@ -41,7 +41,7 @@
       },
       "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-UnpackAndUploadToCOS",  //demo的git下载链接
       "tags":[
-              "cos", "Python2.7", "unzip", "archive","CosUnpackDemo"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
+              "COS", "Python2.7", "UNZIP", "archive","CosUnpackDemo"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
       "version": "1.0.0"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
