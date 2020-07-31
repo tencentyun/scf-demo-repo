@@ -4,7 +4,7 @@
       "Chinese":{
         "name": "Ckafka 消息转储至 ES",
         "description": "使用Ckafka+云函数+ES+Kibana，提供日志转存和清洗能力，替代Logstash，成本更低，支持功能自定义",
-        "attention": "在使用本示例代码时需要在函数配置里添加环境变量和VPC配置；环境变量：ES_Address，ES_User，ES_Password，可选填入ES_Index_KeyWord，ES_Log_IgnoreWord，ES_Index_TimeFormat",
+        "attention": "在使用本示例代码时需要在函数配置里添加环境变量和VPC配置；环境变量：ES_Address，ES_User，ES_Password，ES_Index_KeyWord，可选填入ES_Log_IgnoreWord，ES_Index_TimeFormat",
         "readme": {
             "file": "",
             "content": ""
@@ -45,7 +45,7 @@
               // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on.
               // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.5"
+      "version": "1.7"
       // Version number, which identifies the demo version status. 
       // Demo will not to update to the page if the version number unmodified.
       //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面

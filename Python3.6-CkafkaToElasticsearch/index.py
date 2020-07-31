@@ -12,8 +12,8 @@ from elasticsearch.helpers import bulk
 ES_Address = os.getenv('ES_Address')
 ES_User = os.getenv('ES_User')
 ES_Password = os.getenv('ES_Password')
+ES_Index_KeyWord = os.getenv('ES_Index_KeyWord') #建立索引的前缀关键词，如填Log
 #可选配参数
-ES_Index_KeyWord = os.getenv('ES_Index_KeyWord') #建立索引的前缀关键词，可缺省，如填Log
 ES_Log_IgnoreWord = os.getenv('ES_Log_IgnoreWord')  #需要删除的关键词，缺省则全量写入，如填name,password
 ES_Index_TimeFormat = os.getenv('ES_Index_TimeFormat') #按照天或者小时设置Index，缺省则按照天建立索引，如填hour
 
