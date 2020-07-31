@@ -3,7 +3,7 @@
     "application":{
       "Chinese":{
         "name": "音视频转码",
-        "description": "本示例演示从COS（对象存储）或者网关触发云函数，获取源文件下载地址，并基于ffmpeg，采用HTTP读流的方式进行转码；并把转码后的文件上传到COS",
+        "description": "使用COS+云函数+ASR+CFS（可选），快速构建音视频转码服务；凭借 ffmpeg，还可以扩展支持自定义的转码能力",
         "attention": "1. 本示例需要在环境变量配置COS的bucket信息，并设置COS触发器或者API网关触发器配合使用；2. 另外在函数配置中会使用运行角色来操作COS资源，需要确保有cos bucket的对象上传权限；3. 源文件所在bucket需要设置为公有读私有写。",
         "readme": {
             "file": "",
@@ -41,11 +41,11 @@
       },
       "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Python3.6-Transcode",  // Demo's git download url. demo的git下载链接
       "tags":[
-              "ffmpeg", "Python3.6", "transcode"  
+              "COS", "Python3.6", "ffmpeg","CFS"  
               // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on.
               // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.0"  
+      "version": "1.1"  
       // Version number, which identifies the demo version status. 
       // Demo will not to update to the page if the version number unmodified.
       //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
