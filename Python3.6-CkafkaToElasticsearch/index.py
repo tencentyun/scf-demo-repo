@@ -24,9 +24,9 @@ logger.setLevel(logging.INFO)
 es = Elasticsearch([ES_Address], http_auth=(ES_User, ES_Password))
 
 if ES_Index_TimeFormat == "hour":
-    time_format = "%Y-%m-%d-%H"
+    ES_Index_TimeFormat = "%Y-%m-%d-%H"
 else:
-    time_format = "%Y-%m-%d"
+    ES_Index_TimeFormat = "%Y-%m-%d"
 
 #日志清洗逻辑，可自行修改
 def deallog(log):    
