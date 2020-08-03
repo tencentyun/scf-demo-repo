@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
+# readme ：https://cloud.tencent.com/document/product/583/32996
 
 def render_template(html, keys={}):
     for k, v in keys.iteritems():
