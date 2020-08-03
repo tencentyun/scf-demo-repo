@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf8 -*-
+# readme:https://cloud.tencent.com/document/product/583/47077
 import os
 import json
 import datetime
