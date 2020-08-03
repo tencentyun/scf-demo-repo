@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# readme：https://cloud.tencent.com/document/product/583/47076
 import os
 import sys
 import os.path
