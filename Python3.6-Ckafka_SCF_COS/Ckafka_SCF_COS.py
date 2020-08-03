@@ -1,4 +1,5 @@
 # -*- coding=utf-8
+#readme : https://cloud.tencent.com/document/product/583/30722
 import os
 import logging
 import datetime
