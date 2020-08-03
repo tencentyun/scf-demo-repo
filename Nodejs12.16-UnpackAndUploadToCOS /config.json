@@ -43,12 +43,12 @@
       "tags":[
               "COS", "Nodejs12.16", "UNZIP"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.0.0"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+      "version": "1.0.1"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
     },
     "functions": {
       "name": "unpack_to_cos",  // 函数名称，只支持英文
       "description": "本示例通过配置COS触发，上传到COS的压缩包，使用SCF下载并本地解压，支持中文字段解压，并把解压后的文件上传到COS另一个targetBucket环境变量指定的存储桶中，支持如下压缩格式：ZIP, RAR, 7Z, BZIP2, GZIP, TAR, XZ",
-      "handler":"unpack_to_cos.main_handler",
+      "handler":"index.main_handler",
       "memorySize": 128,  // 运行配置内存
       "timeout": 900,  // 运行超时时间，15分钟
       "runtime": "Nodejs12.16", //运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
