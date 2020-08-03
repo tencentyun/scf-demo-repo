@@ -28,7 +28,7 @@ exports.main_handler = async (event, context, callback) => {
   console.log('Start main handler')
   const targetRegion = process.env.targetRegion
   const targetBucket = process.env['targetBucket']
-  const targetSuffix = process.env['targetSuffix'] || ''
+  const targetPrefix = process.env['targetPrefix'] || ''
 
   const secretId = process.env['TENCENTCLOUD_SECRETID']    
   const secretKey = process.env['TENCENTCLOUD_SECRETKEY']    
@@ -98,9 +98,9 @@ exports.main_handler = async (event, context, callback) => {
 
       promiseArr = files.map(file => {
         const params = {
-          Bucket: `${targetBucket}-${appId}`,
+          Bucket: targetBucket,
           Region: targetRegion,
-          Key: `${targetSuffix}${file.replace(extractPath, '')}`,
+          Key: path.join(targetPrefix, file.replace(extractPath, '')),
           Body: fs.readFileSync(file)
         }
         return putObjectSync(params)
