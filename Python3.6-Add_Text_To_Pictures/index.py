@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# readme : https://cloud.tencent.com/document/product/583/47075
 import os
 from qcloud_cos_v5 import CosConfig
 from qcloud_cos_v5 import CosS3Client
