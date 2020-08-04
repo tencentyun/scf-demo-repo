@@ -1,6 +1,9 @@
-/**
- * readme ：https://cloud.tencent.com/document/product/583/32996
- */
+/*************************************************************************
+*****                                                                *****
+*****    使用教程/readme ：                                            *****
+*****    https://cloud.tencent.com/document/product/583/32996        *****
+*****                                                                *****
+**************************************************************************/
 const fs = require('fs')
 const path = require('path')
 const render = require('./render')

@@ -1,6 +1,11 @@
-/**
- * readme ：https://cloud.tencent.com/document/product/583/47071
- */
+
+/*************************************************************************
+*****                                                                *****
+*****    使用教程/readme ：                                            *****
+*****    https://cloud.tencent.com/document/product/583/47071        *****
+*****                                                                *****
+**************************************************************************/
+
 const COS = require('cos-nodejs-sdk-v5');
 const fs = require('fs')
 const child_process = require('child_process')

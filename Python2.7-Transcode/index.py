@@ -1,4 +1,12 @@
-# readme : https://cloud.tencent.com/document/product/583/47071
+
+
+#####----------------------------------------------------------------#####
+#####                                                                #####
+#####   使用教程/readme:                                              #####
+#####   https://cloud.tencent.com/document/product/583/47071         #####
+#####                                                                #####
+#####----------------------------------------------------------------#####
+
 import os
 import subprocess
 from qcloud_cos_v5 import CosConfig

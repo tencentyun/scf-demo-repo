@@ -1,6 +1,10 @@
-/**
- * readme ：https://cloud.tencent.com/document/product/583/30722
- */
+/*************************************************************************
+*****                                                                *****
+*****    使用教程/readme ：                                            *****
+*****    https://cloud.tencent.com/document/product/583/30722        *****
+*****                                                                *****
+**************************************************************************/
+
 const fs = require("fs")
 const cos = require("cos-nodejs-sdk-v5")
 const local_path = "/tmp/local_file.txt"

@@ -1,6 +1,10 @@
-/**
- * readme ：https://cloud.tencent.com/document/product/583/47075
- */
+/*************************************************************************
+*****                                                                *****
+*****    使用教程/readme ：                                            *****
+*****    https://cloud.tencent.com/document/product/583/47075        *****
+*****                                                                *****
+**************************************************************************/
+
 const COS = require('cos-nodejs-sdk-v5');
 const TextToSVG = require('text-to-svg');
 const util = require('util');
