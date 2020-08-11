@@ -9,7 +9,7 @@
 #####----------------------------------------------------------------#####
 
 def render_template(html, keys={}):
-    for k, v in keys.iteritems():
+    for k, v in keys.items():
         html = html.replace("${" + k + "}", v)
     return html
 
