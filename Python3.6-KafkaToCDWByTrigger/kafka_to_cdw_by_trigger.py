@@ -13,6 +13,8 @@ logger.setLevel(level=logging.INFO)
 MSG_SEPARATOR = ',' #kafka中消息的分隔符
 MSG_NULL = '\\N' #kafka中消息的null值
 DB_PORT = 5436 #CDW的端口，默认应该是5436
+ENABLE_DEBUG = '0' #打开该设置，会打印debug信息，包括格式错误日志
+REPLACE_0X00 = '0' #打开该设置，会替换字符串中的0x00，会有一定的额外开销
 
 def init_cdw_client():
     host = os.getenv("DB_HOST")
@@ -51,6 +53,7 @@ def main_handler(event, context):
     ret = check_param()
     if ret == False:
         return "done"
+    
 
     # 初始化
     cdw_client = init_cdw_client()
@@ -59,10 +62,20 @@ def main_handler(event, context):
     sio = StringIO()
     msg_consumed_count = 0
     start_time = int(time.time())
-    for record in event["Records"]:
-        msg_consumed_count += 1
-        sio.write(record["Ckafka"]["msgBody"])
-        sio.write('\n')
+
+    # 是否替换0x00
+    replace_0x00 = os.getenv("REPLACE_0X00", REPLACE_0X00)
+    if replace_0x00 == '1':
+        for record in event["Records"]:
+            msg_consumed_count += 1
+            sio.write(record["Ckafka"]["msgBody"].replace('\x00',''))
+            sio.write('\n')
+    else:
+        for record in event["Records"]:
+            msg_consumed_count += 1
+            sio.write(record["Ckafka"]["msgBody"])
+            sio.write('\n')
+
     logger.info("get msg num: [%d] from event, cost time: [%ds]", msg_consumed_count, int(time.time()) - start_time)
 
     # 将数据copy到cdw中
@@ -70,11 +83,19 @@ def main_handler(event, context):
     table = os.getenv("DB_TABLE")
     msg_separator = os.getenv("MSG_SEPARATOR", MSG_SEPARATOR)
     msg_null = os.getenv("MSG_NULL", MSG_NULL)
+    enable_debug = os.getenv("ENABLE_DEBUG", ENABLE_DEBUG)
     sio.seek(0)
     ret = cdw_client.copy_from(sio, schema+"."+table, msg_separator, msg_null)
     if ret == False:
         # copy是一个事务，要么全部成功，要么全部失败，copy失败，抛出异常，让平台重试
         sio.close()
+
+        # 如果配置debug，把这一批所有读取的信息都打印出来
+        if enable_debug == '1':
+            logger.error("kafka msg as follow:")
+            for record in event['Records']:
+                logger.error(record["Ckafka"]["msgBody"])
+
         raise Exception('copy fail')
     sio.close()
 
