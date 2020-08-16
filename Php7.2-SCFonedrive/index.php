@@ -116,6 +116,13 @@ function handler($event, $context)
 
     } elseif ($_SERVER['BCE_CFC_RUNTIME_NAME']=='php7') {
         // Baidu CFC
+        //$html = '<pre>'. json_encode($event, JSON_PRETTY_PRINT).'</pre>';
+        //$html .= '<pre>'. json_encode($context, JSON_PRETTY_PRINT).'</pre>';
+        //$html .= '<pre>'. json_encode($_SERVER, JSON_PRETTY_PRINT).'</pre>';
+        //$html .= $event['path'];
+        //$html .= $context['functionBrn'];
+        //return json_encode(output($html), JSON_FORCE_OBJECT);
+
         printInput($event, $context);
         unset($_POST);
         unset($_GET);
