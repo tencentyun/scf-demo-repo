@@ -2,7 +2,7 @@
   "serverless-cloud-function-application": {
     "application": {
       "Chinese": {
-        "name": "onedrive with SCF",
+        "name": "Onedrive with SCF",
         "description": "获取onedrive信息并结合API网关展示",
         "attention": "该云函数使用了API网关触发器，并使用了集成响应功能，返回值需要构造为Json格式",
         "readme": {
@@ -50,7 +50,7 @@
         // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on.
         // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "0.3"
+      "version": "0.4"
       // Version number, which identifies the demo version status. 
       // Demo will not to update to the page if the version number unmodified.
       // 版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
