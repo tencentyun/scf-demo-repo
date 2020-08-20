@@ -10,7 +10,7 @@ logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
 ## 各种系统常量，以下常量均可通过同名环境变量进行覆盖
-MSG_SEPARATOR = ',' #kafka中消息的分隔符
+MSG_SEPARATOR_ASCII = 39 #kafka中消息的分隔符的ascii码
 MSG_NULL = '\\N' #kafka中消息的null值
 DB_PORT = 5436 #CDW的端口，默认应该是5436
 ENABLE_DEBUG = '0' #打开该设置，会打印debug信息，包括格式错误日志
@@ -81,11 +81,11 @@ def main_handler(event, context):
     # 将数据copy到cdw中
     schema = os.getenv("DB_SCHEMA")
     table = os.getenv("DB_TABLE")
-    msg_separator = os.getenv("MSG_SEPARATOR", MSG_SEPARATOR)
+    msg_separator_ascii = int(os.getenv("MSG_SEPARATOR_ASCII", MSG_SEPARATOR_ASCII))
     msg_null = os.getenv("MSG_NULL", MSG_NULL)
     enable_debug = os.getenv("ENABLE_DEBUG", ENABLE_DEBUG)
     sio.seek(0)
-    ret = cdw_client.copy_from(sio, schema+"."+table, msg_separator, msg_null)
+    ret = cdw_client.copy_from(sio, schema+"."+table, chr(msg_separator_ascii), msg_null)
     if ret == False:
         # copy是一个事务，要么全部成功，要么全部失败，copy失败，抛出异常，让平台重试
         sio.close()
