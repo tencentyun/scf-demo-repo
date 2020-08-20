@@ -45,6 +45,9 @@ class KafkaToKafka(object):
         try:
             for record in records:
                 key = record["Ckafka"]["msgKey"]
+                # 当 key 为 "" 或者为 "None" 时，要传入key=None，这样python kafka库会随机选取一个partition写入消息
+                if key == "" or key == "None":
+                    key = None
                 value = record["Ckafka"]["msgBody"]
 
                 # 也可以对消息进行处理后再转存
