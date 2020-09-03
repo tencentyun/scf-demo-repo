@@ -4,7 +4,7 @@
       "Chinese": {
         "name": "zip格式文件解压",
         "description": "本示例通过从源bucket下载zip格式文件，解压之后，上传到另一个bucket",
-        "attention": "",
+        "attention": "请前往 COS 控制台进行配置，参考文档：https://cloud.tencent.com/document/product/436/42893",
         "readme": {
           "file": "",
           "content": ""
@@ -20,7 +20,7 @@
       "English": {
         "name": "Unzip_File",
         "description": "This function will download zip file from source bucket, unzip them, and upload to target bucket",
-        "attention": "",
+        "attention": "Please go to COS Console, for more information: https://intl.cloud.tencent.com/zh/document/product/436/35663",
         "readme": {
           "file": "", // readme file
           "content": "" //content of readme
@@ -46,7 +46,7 @@
         // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on
         // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.0.6"
+      "version": "1.0.7"
       // Version number, which identifies the demo version status.
       // Demo will not to update to the page if the version number unmodified.
       //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
