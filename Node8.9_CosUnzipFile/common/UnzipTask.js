@@ -17,6 +17,7 @@ class UnzipTask {
     targetBucket,
     targetRegion,
     targetPrefix,
+    extraRootDir,
     maxTryTime = 3
   }) {
     const { basename, extname } = parseFileName(Key)
@@ -29,6 +30,7 @@ class UnzipTask {
       targetBucket,
       targetRegion,
       targetPrefix,
+      extraRootDir,
       maxTryTime,
       basename,
       extname
@@ -99,11 +101,16 @@ class UnzipTask {
       targetBucket,
       targetRegion,
       targetPrefix,
+      extraRootDir,
       basename,
       unzipFile
     } = this
 
-    const Key = path.join(targetPrefix, basename, task.entry.fileNameStr).replace(/\\/g, '\/')
+    let Key = path.join(targetPrefix, task.entry.fileNameStr).replace(/\\/g, '\/')
+
+    if (extraRootDir === 'fileBaseName') {
+      Key = path.join(targetPrefix, basename, task.entry.fileNameStr).replace(/\\/g, '\/')
+    }
 
     try {
       const Body = await unzipFile.getStream(task.entry)

@@ -38,6 +38,7 @@ exports.main_handler = async (event, context, callback) => {
     targetBucket,
     targetRegion,
     targetPrefix,
+    extraRootDir,
     SecretId,
     SecretKey,
     XCosSecurityToken
@@ -50,6 +51,7 @@ exports.main_handler = async (event, context, callback) => {
       targetBucket,
       targetRegion,
       targetPrefix,
+      extraRootDir,
       duration,
       event
     }
@@ -74,7 +76,8 @@ exports.main_handler = async (event, context, callback) => {
       Key,
       targetBucket,
       targetRegion,
-      targetPrefix
+      targetPrefix,
+      extraRootDir
     })
   })
   const resultList = []

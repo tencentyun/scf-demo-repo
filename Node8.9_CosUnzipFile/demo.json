@@ -4,7 +4,7 @@
       "Chinese": {
         "name": "zip格式文件解压",
         "description": "本示例通过从源bucket下载zip格式文件，解压之后，上传到另一个bucket",
-        "attention": "",
+        "attention": "请前往 COS 控制台进行配置，参考文档：https://cloud.tencent.com/document/product/436/42893",
         "readme": {
           "file": "",
           "content": ""
@@ -20,7 +20,7 @@
       "English": {
         "name": "Unzip_File",
         "description": "This function will download zip file from source bucket, unzip them, and upload to target bucket",
-        "attention": "",
+        "attention": "Please go to COS Console, for more information: https://intl.cloud.tencent.com/zh/document/product/436/35663",
         "readme": {
           "file": "",
           "content": ""
@@ -40,7 +40,7 @@
       "output_parameters": {},
       "download_address": "https://github.com/tencentyun/scf-demo-repo/tree/master/Node8.9_CosUnzipFile",
       "tags": ["Unzip", "Nodejs8.9", "unzip file"],
-      "version": "1.0.6"
+      "version": "1.0.7"
     }
   }
 }

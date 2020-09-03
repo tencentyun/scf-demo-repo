@@ -32,7 +32,8 @@ function getParams({
     env: {
       targetBucket,
       targetRegion,
-      targetPrefix,
+      targetPrefix = '',
+      extraRootDir = 'fileBaseName',
       TENCENTCLOUD_SECRETID: SecretId,
       TENCENTCLOUD_SECRETKEY: SecretKey,
       TENCENTCLOUD_SESSIONTOKEN: XCosSecurityToken
@@ -44,6 +45,7 @@ function getParams({
     targetBucket,
     targetRegion,
     targetPrefix,
+    extraRootDir,
     SecretId,
     SecretKey,
     XCosSecurityToken
