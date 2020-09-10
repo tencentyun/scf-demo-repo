@@ -3,7 +3,7 @@
     "application":{
       "Chinese":{
         "name": "helloworld",
-        "description": "helloworld 空白模板函数",
+        "description": "helloworld 空白模板函数", // helloworld 空白模板函数
         "attention": "无",
         "readme": {
             "file": "",
