@@ -26,9 +26,9 @@ class TkeClient(AbstractClient):
 
 
     def AddExistedInstances(self, request):
-        """添加已经存在的实例到集群
+        """添加已經存在的實例到集群
 
-        :param request: 调用AddExistedInstances所需参数的结构体。
+        :param request: 調用AddExistedInstances所需參數的結構體。
         :type request: :class:`tencentcloud.tke.v20180525.models.AddExistedInstancesRequest`
         :rtype: :class:`tencentcloud.tke.v20180525.models.AddExistedInstancesResponse`
 
@@ -54,9 +54,9 @@ class TkeClient(AbstractClient):
 
 
     def CreateCluster(self, request):
-        """创建集群
+        """創建集群
 
-        :param request: 调用CreateCluster所需参数的结构体。
+        :param request: 調用CreateCluster所需參數的結構體。
         :type request: :class:`tencentcloud.tke.v20180525.models.CreateClusterRequest`
         :rtype: :class:`tencentcloud.tke.v20180525.models.CreateClusterResponse`
 
@@ -82,9 +82,9 @@ class TkeClient(AbstractClient):
 
 
     def DeleteClusterInstances(self, request):
-        """删除集群中的实例
+        """删除集群中的實例
 
-        :param request: 调用DeleteClusterInstances所需参数的结构体。
+        :param request: 調用DeleteClusterInstances所需參數的結構體。
         :type request: :class:`tencentcloud.tke.v20180525.models.DeleteClusterInstancesRequest`
         :rtype: :class:`tencentcloud.tke.v20180525.models.DeleteClusterInstancesResponse`
 
@@ -110,9 +110,9 @@ class TkeClient(AbstractClient):
 
 
     def DescribeClusterInstances(self, request):
-        """查询集群下节点实例信息
+        """查詢集群下節點實例訊息
 
-        :param request: 调用DescribeClusterInstances所需参数的结构体。
+        :param request: 調用DescribeClusterInstances所需參數的結構體。
         :type request: :class:`tencentcloud.tke.v20180525.models.DescribeClusterInstancesRequest`
         :rtype: :class:`tencentcloud.tke.v20180525.models.DescribeClusterInstancesResponse`
 
@@ -138,9 +138,9 @@ class TkeClient(AbstractClient):
 
 
     def DescribeClusters(self, request):
-        """查询集群列表
+        """查詢集群清單
 
-        :param request: 调用DescribeClusters所需参数的结构体。
+        :param request: 調用DescribeClusters所需參數的結構體。
         :type request: :class:`tencentcloud.tke.v20180525.models.DescribeClustersRequest`
         :rtype: :class:`tencentcloud.tke.v20180525.models.DescribeClustersResponse`
 

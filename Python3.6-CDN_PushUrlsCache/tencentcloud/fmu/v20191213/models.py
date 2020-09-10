@@ -17,28 +17,28 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class BeautifyPicRequest(AbstractModel):
-    """BeautifyPic请求参数结构体
+    """BeautifyPic請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Image: 图片 base64 数据，base64 编码后大小不可超过5M。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Image: 圖片 base64 數據，base64 編碼後大小不可超過5M。 
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
-        :param Url: 图片的 Url 。对应图片 base64 编码后大小不可超过5M。 
-Url、Image必须提供一个，如果都提供，只使用 Url。  
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。  
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Url: 圖片的 Url 。對應圖片 base64 編碼後大小不可超過5M。 
+Url、Image必須提供一個，如果都提供，只使用 Url。  
+圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。  
+非Top Cloud 儲存的Url速度和穩定性可能受一定影響。 
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
-        :param Whitening: 美白程度，取值范围[0,100]。0不美白，100代表最高程度。默认值30。
+        :param Whitening: 美白程度，取值範圍[0,100]。0不美白，100代表最高程度。預設值30。
         :type Whitening: int
-        :param Smoothing: 磨皮程度，取值范围[0,100]。0不磨皮，100代表最高程度。默认值10。
+        :param Smoothing: 磨皮程度，取值範圍[0,100]。0不磨皮，100代表最高程度。預設值10。
         :type Smoothing: int
-        :param FaceLifting: 瘦脸程度，取值范围[0,100]。0不瘦脸，100代表最高程度。默认值70。
+        :param FaceLifting: 瘦臉程度，取值範圍[0,100]。0不瘦臉，100代表最高程度。預設值70。
         :type FaceLifting: int
-        :param EyeEnlarging: 大眼程度，取值范围[0,100]。0不大眼，100代表最高程度。默认值70。
+        :param EyeEnlarging: 大眼程度，取值範圍[0,100]。0不大眼，100代表最高程度。預設值70。
         :type EyeEnlarging: int
         """
         self.Image = None
@@ -59,15 +59,15 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
 
 class BeautifyPicResponse(AbstractModel):
-    """BeautifyPic返回参数结构体
+    """BeautifyPic返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResultImage: 处理后的图片 base64 数据。
+        :param ResultImage: 處理後的圖片 base64 數據。
         :type ResultImage: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResultImage = None
@@ -80,15 +80,15 @@ class BeautifyPicResponse(AbstractModel):
 
 
 class CreateModelRequest(AbstractModel):
-    """CreateModel请求参数结构体
+    """CreateModel請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LUTFile: 用于试唇色，要求必须是LUT 格式的cube文件转换成512*512的PNG图片。查看 [LUT文件的使用说明](https://cloud.tencent.com/document/product/1172/41701)。了解 [cube文件转png图片小工具](http://yyb.gtimg.com/aiplat/static/qcloud-cube-to-png.html)。
+        :param LUTFile: 用于試唇色，要求必須是LUT 格式的cube文件轉換成512*512的PNG圖片。檢視 [LUT文件的使用說明](https://cloud.tencent.com/document/product/1172/41701)。了解 [cube文件轉png圖片小工具](http://yyb.gtimg.com/aiplat/static/qcloud-cube-to-png.html)。
         :type LUTFile: str
-        :param Description: 文件描述信息，可用于备注。
+        :param Description: 文件描述訊息，可用于備注。
         :type Description: str
         """
         self.LUTFile = None
@@ -101,7 +101,7 @@ class CreateModelRequest(AbstractModel):
 
 
 class CreateModelResponse(AbstractModel):
-    """CreateModel返回参数结构体
+    """CreateModel返回參數結構體
 
     """
 
@@ -109,7 +109,7 @@ class CreateModelResponse(AbstractModel):
         """
         :param ModelId: 唇色素材ID。
         :type ModelId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ModelId = None
@@ -122,7 +122,7 @@ class CreateModelResponse(AbstractModel):
 
 
 class DeleteModelRequest(AbstractModel):
-    """DeleteModel请求参数结构体
+    """DeleteModel請求參數結構體
 
     """
 
@@ -139,13 +139,13 @@ class DeleteModelRequest(AbstractModel):
 
 
 class DeleteModelResponse(AbstractModel):
-    """DeleteModel返回参数结构体
+    """DeleteModel返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -156,19 +156,19 @@ class DeleteModelResponse(AbstractModel):
 
 
 class FaceRect(AbstractModel):
-    """人脸框信息
+    """人臉框訊息
 
     """
 
     def __init__(self):
         """
-        :param X: 人脸框左上角横坐标。
+        :param X: 人臉框左上角橫坐标。
         :type X: int
-        :param Y: 人脸框左上角纵坐标。
+        :param Y: 人臉框左上角縱坐标。
         :type Y: int
-        :param Width: 人脸框宽度。
+        :param Width: 人臉框寬度。
         :type Width: int
-        :param Height: 人脸框高度。
+        :param Height: 人臉框高度。
         :type Height: int
         """
         self.X = None
@@ -185,15 +185,15 @@ class FaceRect(AbstractModel):
 
 
 class GetModelListRequest(AbstractModel):
-    """GetModelList请求参数结构体
+    """GetModelList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 起始序号，默认值为0。
+        :param Offset: 起始序号，預設值爲0。
         :type Offset: int
-        :param Limit: 返回数量，默认值为10，最大值为100。
+        :param Limit: 返回數量，預設值爲10，最大值爲100。
         :type Limit: int
         """
         self.Offset = None
@@ -206,18 +206,18 @@ class GetModelListRequest(AbstractModel):
 
 
 class GetModelListResponse(AbstractModel):
-    """GetModelList返回参数结构体
+    """GetModelList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ModelIdNum: 唇色素材总数量。
+        :param ModelIdNum: 唇色素材總數量。
         :type ModelIdNum: int
-        :param ModelInfos: 素材数据
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ModelInfos: 素材數據
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ModelInfos: list of ModelInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ModelIdNum = None
@@ -237,19 +237,19 @@ class GetModelListResponse(AbstractModel):
 
 
 class LipColorInfo(AbstractModel):
-    """唇色信息
+    """唇色訊息
 
     """
 
     def __init__(self):
         """
-        :param RGBA: 使用RGBA模型试唇色。
+        :param RGBA: 使用RGBA模型試唇色。
         :type RGBA: :class:`tencentcloud.fmu.v20191213.models.RGBAInfo`
-        :param ModelId: 使用已注册的 LUT 文件试唇色。  
-ModelId 和 RGBA 两个参数只需提供一个，若都提供只使用 ModelId。
+        :param ModelId: 使用已注冊的 LUT 文件試唇色。  
+ModelId 和 RGBA 兩個參數只需提供一個，若都提供只使用 ModelId。
         :type ModelId: str
-        :param FaceRect: 人脸框位置。若不输入则选择 Image 或 Url 中面积最大的人脸。  
-您可以通过 [人脸检测与分析](https://cloud.tencent.com/document/api/867/32800)  接口获取人脸框位置信息。
+        :param FaceRect: 人臉框位置。若不輸入則選擇 Image 或 Url 中面積最大的人臉。  
+您可以通過 [人臉檢測與分析](https://cloud.tencent.com/document/api/867/32800)  介面獲取人臉框位置訊息。
         :type FaceRect: :class:`tencentcloud.fmu.v20191213.models.FaceRect`
         """
         self.RGBA = None
@@ -268,7 +268,7 @@ ModelId 和 RGBA 两个参数只需提供一个，若都提供只使用 ModelId�
 
 
 class ModelInfo(AbstractModel):
-    """LUT素材信息
+    """LUT素材訊息
 
     """
 
@@ -276,9 +276,9 @@ class ModelInfo(AbstractModel):
         """
         :param ModelId: 唇色素材ID
         :type ModelId: str
-        :param LUTFileUrl: 唇色素材 url 。 LUT 文件 url 5分钟有效。
+        :param LUTFileUrl: 唇色素材 url 。 LUT 文件 url 5分鍾有效。
         :type LUTFileUrl: str
-        :param Description: 文件描述信息。
+        :param Description: 文件描述訊息。
         :type Description: str
         """
         self.ModelId = None
@@ -293,19 +293,19 @@ class ModelInfo(AbstractModel):
 
 
 class RGBAInfo(AbstractModel):
-    """RGBA通道信息
+    """RGBA通道訊息
 
     """
 
     def __init__(self):
         """
-        :param R: R通道数值。[0,255]。
+        :param R: R通道數值。[0,255]。
         :type R: int
-        :param G: G通道数值。[0,255]。
+        :param G: G通道數值。[0,255]。
         :type G: int
-        :param B: B通道数值。[0,255]。
+        :param B: B通道數值。[0,255]。
         :type B: int
-        :param A: A通道数值。[0,100]。建议取值50。
+        :param A: A通道數值。[0,100]。建議取值50。
         :type A: int
         """
         self.R = None
@@ -322,23 +322,23 @@ class RGBAInfo(AbstractModel):
 
 
 class TryLipstickPicRequest(AbstractModel):
-    """TryLipstickPic请求参数结构体
+    """TryLipstickPic請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LipColorInfos: 唇色信息。 
-您可以输入最多3个 LipColorInfo 来实现给一张图中的最多3张人脸试唇色。
+        :param LipColorInfos: 唇色訊息。 
+您可以輸入最多3個 LipColorInfo 來實現給一張圖中的最多3張人臉試唇色。
         :type LipColorInfos: list of LipColorInfo
-        :param Image: 图片 base64 数据，base64 编码后大小不可超过6M。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Image: 圖片 base64 數據，base64 編碼後大小不可超過6M。 
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
-        :param Url: 图片的 Url ，对应图片 base64 编码后大小不可超过6M。 
-图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片存储于腾讯云的 Url 可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Url: 圖片的 Url ，對應圖片 base64 編碼後大小不可超過6M。 
+圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
+圖片儲存于Top Cloud 的 Url 可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+非Top Cloud 儲存的Url速度和穩定性可能受一定影響。 
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
         """
         self.LipColorInfos = None
@@ -358,15 +358,15 @@ class TryLipstickPicRequest(AbstractModel):
 
 
 class TryLipstickPicResponse(AbstractModel):
-    """TryLipstickPic返回参数结构体
+    """TryLipstickPic返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResultImage: 结果图片Base64信息。
+        :param ResultImage: 結果圖片Base64訊息。
         :type ResultImage: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResultImage = None

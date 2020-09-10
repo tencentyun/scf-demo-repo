@@ -17,33 +17,33 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class Activity(AbstractModel):
-    """计算环境的创建或销毁活动
+    """計算環境的創建或銷毀活動
 
     """
 
     def __init__(self):
         """
-        :param ActivityId: 活动ID
+        :param ActivityId: 活動ID
         :type ActivityId: str
-        :param ComputeNodeId: 计算节点ID
+        :param ComputeNodeId: 計算節點ID
         :type ComputeNodeId: str
-        :param ComputeNodeActivityType: 计算节点活动类型，创建或者销毁
+        :param ComputeNodeActivityType: 計算節點活動類型，創建或者銷毀
         :type ComputeNodeActivityType: str
-        :param EnvId: 计算环境ID
+        :param EnvId: 計算環境ID
         :type EnvId: str
         :param Cause: 起因
         :type Cause: str
-        :param ActivityState: 活动状态
+        :param ActivityState: 活動狀态
         :type ActivityState: str
-        :param StateReason: 状态原因
+        :param StateReason: 狀态原因
         :type StateReason: str
-        :param StartTime: 活动开始时间
+        :param StartTime: 活動開始時間
         :type StartTime: str
-        :param EndTime: 活动结束时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EndTime: 活動結束時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EndTime: str
-        :param InstanceId: 云服务器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceId: 雲伺服器實例ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceId: str
         """
         self.ActivityId = None
@@ -72,17 +72,17 @@ class Activity(AbstractModel):
 
 
 class AgentRunningMode(AbstractModel):
-    """agent运行模式
+    """agent運作模式
 
     """
 
     def __init__(self):
         """
-        :param Scene: 场景类型，支持WINDOWS
+        :param Scene: 場景類型，支援WINDOWS
         :type Scene: str
-        :param User: 运行Agent的User
+        :param User: 運作Agent的User
         :type User: str
-        :param Session: 运行Agent的Session
+        :param Session: 運作Agent的Session
         :type Session: str
         """
         self.Scene = None
@@ -97,19 +97,19 @@ class AgentRunningMode(AbstractModel):
 
 
 class AnonymousComputeEnv(AbstractModel):
-    """计算环境
+    """計算環境
 
     """
 
     def __init__(self):
         """
-        :param EnvType: 计算环境管理类型
+        :param EnvType: 計算環境管理類型
         :type EnvType: str
-        :param EnvData: 计算环境具体参数
+        :param EnvData: 計算環境具體參數
         :type EnvData: :class:`tencentcloud.batch.v20170312.models.EnvData`
-        :param MountDataDisks: 数据盘挂载选项
+        :param MountDataDisks: 數據盤掛載選項
         :type MountDataDisks: list of MountDataDisk
-        :param AgentRunningMode: agent运行模式，适用于Windows系统
+        :param AgentRunningMode: agent運作模式，适用于Windows系統
         :type AgentRunningMode: :class:`tencentcloud.batch.v20170312.models.AgentRunningMode`
         """
         self.EnvType = None
@@ -135,19 +135,19 @@ class AnonymousComputeEnv(AbstractModel):
 
 
 class Application(AbstractModel):
-    """应用程序信息
+    """應用程式訊息
 
     """
 
     def __init__(self):
         """
-        :param Command: 任务执行命令
+        :param Command: 任務執行命令
         :type Command: str
-        :param DeliveryForm: 应用程序的交付方式，包括PACKAGE、LOCAL 两种取值，分别指远程存储的软件包、计算环境本地。
+        :param DeliveryForm: 應用程式的交付方式，包括PACKAGE、LOCAL 兩種取值，分别指遠端儲存的軟體包、計算環境本地。
         :type DeliveryForm: str
-        :param PackagePath: 应用程序软件包的远程存储路径
+        :param PackagePath: 應用程式軟體包的遠端儲存路徑
         :type PackagePath: str
-        :param Docker: 应用使用Docker的相关配置。在使用Docker配置的情况下，DeliveryForm 为 LOCAL 表示直接使用Docker镜像内部的应用软件，通过Docker方式运行；DeliveryForm 为 PACKAGE，表示将远程应用包注入到Docker镜像后，通过Docker方式运行。为避免Docker不同版本的兼容性问题，Docker安装包及相关依赖由Batch统一负责，对于已安装Docker的自定义镜像，请卸载后再使用Docker特性。
+        :param Docker: 應用使用Docker的相關配置。在使用Docker配置的情況下，DeliveryForm 爲 LOCAL 表示直接使用Docker映像内部的應用軟體，通過Docker方式運作；DeliveryForm 爲 PACKAGE，表示将遠端應用包注入到Docker映像後，通過Docker方式運作。爲避免Docker不同版本的相容性問題，Docker安裝包及相關依賴由Batch統一負責，對于已安裝Docker的自定義映像，請卸載後再使用Docker特性。
         :type Docker: :class:`tencentcloud.batch.v20170312.models.Docker`
         """
         self.Command = None
@@ -166,13 +166,13 @@ class Application(AbstractModel):
 
 
 class Authentication(AbstractModel):
-    """授权认证信息
+    """授權認證訊息
 
     """
 
     def __init__(self):
         """
-        :param Scene: 授权场景，例如COS
+        :param Scene: 授權場景，例如COS
         :type Scene: str
         :param SecretId: SecretId
         :type SecretId: str
@@ -191,37 +191,37 @@ class Authentication(AbstractModel):
 
 
 class ComputeEnvCreateInfo(AbstractModel):
-    """计算环境创建信息。
+    """計算環境創建訊息。
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 计算环境 ID
+        :param EnvId: 計算環境 ID
         :type EnvId: str
-        :param EnvName: 计算环境名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EnvName: 計算環境名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EnvName: str
-        :param EnvDescription: 计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EnvDescription: 計算環境描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EnvDescription: str
-        :param EnvType: 计算环境类型，仅支持“MANAGED”类型
+        :param EnvType: 計算環境類型，僅支援“MANAGED”類型
         :type EnvType: str
-        :param EnvData: 计算环境参数
+        :param EnvData: 計算環境參數
         :type EnvData: :class:`tencentcloud.batch.v20170312.models.EnvData`
-        :param MountDataDisks: 数据盘挂载选项
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MountDataDisks: 數據盤掛載選項
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MountDataDisks: list of MountDataDisk
-        :param InputMappings: 输入映射
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InputMappings: 輸入映射
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InputMappings: list of InputMapping
-        :param Authentications: 授权信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Authentications: 授權訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Authentications: list of Authentication
-        :param Notifications: 通知信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Notifications: 通知訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Notifications: list of Notification
-        :param DesiredComputeNodeCount: 计算节点期望个数
+        :param DesiredComputeNodeCount: 計算節點期望個數
         :type DesiredComputeNodeCount: int
         """
         self.EnvId = None
@@ -272,13 +272,13 @@ class ComputeEnvCreateInfo(AbstractModel):
 
 
 class ComputeEnvData(AbstractModel):
-    """计算环境属性数据
+    """計算環境屬性數據
 
     """
 
     def __init__(self):
         """
-        :param InstanceTypes: CVM实例类型列表
+        :param InstanceTypes: CVM實例類型清單
         :type InstanceTypes: list of str
         """
         self.InstanceTypes = None
@@ -289,25 +289,25 @@ class ComputeEnvData(AbstractModel):
 
 
 class ComputeEnvView(AbstractModel):
-    """计算环境信息
+    """計算環境訊息
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 计算环境ID
+        :param EnvId: 計算環境ID
         :type EnvId: str
-        :param EnvName: 计算环境名称
+        :param EnvName: 計算環境名稱
         :type EnvName: str
-        :param Placement: 位置信息
+        :param Placement: 位置訊息
         :type Placement: :class:`tencentcloud.batch.v20170312.models.Placement`
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param ComputeNodeMetrics: 计算节点统计指标
+        :param ComputeNodeMetrics: 計算節點統計指标
         :type ComputeNodeMetrics: :class:`tencentcloud.batch.v20170312.models.ComputeNodeMetrics`
-        :param EnvType: 计算环境类型
+        :param EnvType: 計算環境類型
         :type EnvType: str
-        :param DesiredComputeNodeCount: 计算节点期望个数
+        :param DesiredComputeNodeCount: 計算節點期望個數
         :type DesiredComputeNodeCount: int
         """
         self.EnvId = None
@@ -334,31 +334,31 @@ class ComputeEnvView(AbstractModel):
 
 
 class ComputeNode(AbstractModel):
-    """计算节点
+    """計算節點
 
     """
 
     def __init__(self):
         """
-        :param ComputeNodeId: 计算节点ID
+        :param ComputeNodeId: 計算節點ID
         :type ComputeNodeId: str
-        :param ComputeNodeInstanceId: 计算节点实例ID，对于CVM场景，即为CVM的InstanceId
+        :param ComputeNodeInstanceId: 計算節點實例ID，對于CVM場景，即爲CVM的InstanceId
         :type ComputeNodeInstanceId: str
-        :param ComputeNodeState: 计算节点状态
+        :param ComputeNodeState: 計算節點狀态
         :type ComputeNodeState: str
-        :param Cpu: CPU核数
+        :param Cpu: CPU核數
         :type Cpu: int
-        :param Mem: 内存容量，单位GiB
+        :param Mem: 内存容量，單位GiB
         :type Mem: int
-        :param ResourceCreatedTime: 资源创建完成时间
+        :param ResourceCreatedTime: 資源創建完成時間
         :type ResourceCreatedTime: str
-        :param TaskInstanceNumAvailable: 计算节点运行  TaskInstance 可用容量。0表示计算节点忙碌。
+        :param TaskInstanceNumAvailable: 計算節點運作  TaskInstance 可用容量。0表示計算節點忙碌。
         :type TaskInstanceNumAvailable: int
         :param AgentVersion: Batch Agent 版本
         :type AgentVersion: str
-        :param PrivateIpAddresses: 实例内网IP
+        :param PrivateIpAddresses: 實例内網IP
         :type PrivateIpAddresses: list of str
-        :param PublicIpAddresses: 实例公网IP
+        :param PublicIpAddresses: 實例公網IP
         :type PublicIpAddresses: list of str
         """
         self.ComputeNodeId = None
@@ -387,25 +387,25 @@ class ComputeNode(AbstractModel):
 
 
 class ComputeNodeMetrics(AbstractModel):
-    """计算节点统计指标
+    """計算節點統計指标
 
     """
 
     def __init__(self):
         """
-        :param SubmittedCount: 已经完成提交的计算节点数量
+        :param SubmittedCount: 已經完成提交的計算節點數量
         :type SubmittedCount: int
-        :param CreatingCount: 创建中的计算节点数量
+        :param CreatingCount: 創建中的計算節點數量
         :type CreatingCount: int
-        :param CreationFailedCount: 创建失败的计算节点数量
+        :param CreationFailedCount: 創建失敗的計算節點數量
         :type CreationFailedCount: int
-        :param CreatedCount: 完成创建的计算节点数量
+        :param CreatedCount: 完成創建的計算節點數量
         :type CreatedCount: int
-        :param RunningCount: 运行中的计算节点数量
+        :param RunningCount: 運作中的計算節點數量
         :type RunningCount: int
-        :param DeletingCount: 销毁中的计算节点数量
+        :param DeletingCount: 銷毀中的計算節點數量
         :type DeletingCount: int
-        :param AbnormalCount: 异常的计算节点数量
+        :param AbnormalCount: 異常的計算節點數量
         :type AbnormalCount: int
         """
         self.SubmittedCount = None
@@ -428,17 +428,17 @@ class ComputeNodeMetrics(AbstractModel):
 
 
 class CreateComputeEnvRequest(AbstractModel):
-    """CreateComputeEnv请求参数结构体
+    """CreateComputeEnv請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ComputeEnv: 计算环境信息
+        :param ComputeEnv: 計算環境訊息
         :type ComputeEnv: :class:`tencentcloud.batch.v20170312.models.NamedComputeEnv`
-        :param Placement: 位置信息
+        :param Placement: 位置訊息
         :type Placement: :class:`tencentcloud.batch.v20170312.models.Placement`
-        :param ClientToken: 用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+        :param ClientToken: 用于保證請求幂等性的字串。該字串由用戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
         :type ClientToken: str
         """
         self.ComputeEnv = None
@@ -457,15 +457,15 @@ class CreateComputeEnvRequest(AbstractModel):
 
 
 class CreateComputeEnvResponse(AbstractModel):
-    """CreateComputeEnv返回参数结构体
+    """CreateComputeEnv返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 计算环境ID
+        :param EnvId: 計算環境ID
         :type EnvId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.EnvId = None
@@ -478,17 +478,17 @@ class CreateComputeEnvResponse(AbstractModel):
 
 
 class CreateTaskTemplateRequest(AbstractModel):
-    """CreateTaskTemplate请求参数结构体
+    """CreateTaskTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskTemplateName: 任务模板名称
+        :param TaskTemplateName: 任務範本名稱
         :type TaskTemplateName: str
-        :param TaskTemplateInfo: 任务模板内容，参数要求与任务一致
+        :param TaskTemplateInfo: 任務範本内容，參數要求與任務一緻
         :type TaskTemplateInfo: :class:`tencentcloud.batch.v20170312.models.Task`
-        :param TaskTemplateDescription: 任务模板描述
+        :param TaskTemplateDescription: 任務範本描述
         :type TaskTemplateDescription: str
         """
         self.TaskTemplateName = None
@@ -505,15 +505,15 @@ class CreateTaskTemplateRequest(AbstractModel):
 
 
 class CreateTaskTemplateResponse(AbstractModel):
-    """CreateTaskTemplate返回参数结构体
+    """CreateTaskTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskTemplateId: 任务模板ID
+        :param TaskTemplateId: 任務範本ID
         :type TaskTemplateId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskTemplateId = None
@@ -526,27 +526,27 @@ class CreateTaskTemplateResponse(AbstractModel):
 
 
 class DataDisk(AbstractModel):
-    """描述了数据盘的信息
+    """描述了數據盤的訊息
 
     """
 
     def __init__(self):
         """
-        :param DiskSize: 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+        :param DiskSize: 數據盤大小，單位：GB。最小調整步長爲10G，不同數據盤類型取值範圍不同，具體限制詳見：[CVM實例配置](/document/product/213/2177)。預設值爲0，表示不購買數據盤。更多限制詳見産品文件。
         :type DiskSize: int
-        :param DiskType: 数据盘类型。数据盘类型限制详见[CVM实例配置](/document/product/213/2177)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><br>默认取值：LOCAL_BASIC。<br><br>该参数对`ResizeInstanceDisk`接口无效。
+        :param DiskType: 數據盤類型。數據盤類型限制詳見[CVM實例配置](/document/product/213/2177)。取值範圍：<br><li>LOCAL_BASIC：本地硬碟<br><li>LOCAL_SSD：本地SSD硬碟<br><li>CLOUD_BASIC：普通雲硬碟<br><li>CLOUD_PREMIUM：高效能雲硬碟<br><li>CLOUD_SSD：SSD雲硬碟<br><br>預設取值：LOCAL_BASIC。<br><br>該參數對`ResizeInstanceDisk`介面無效。
         :type DiskType: str
-        :param DiskId: 数据盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。
+        :param DiskId: 數據盤ID。LOCAL_BASIC 和 LOCAL_SSD 類型沒有ID。暫時不支援該參數。
         :type DiskId: str
-        :param DeleteWithInstance: 数据盘是否随子机销毁。取值范围：
-<li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘
-<li>FALSE：子机销毁时，保留数据盘<br>
-默认取值：TRUE<br>
-该参数目前仅用于 `RunInstances` 接口。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DeleteWithInstance: 數據盤是否随子機銷毀。取值範圍：
+<li>TRUE：子機銷毀時，銷毀數據盤，只支援按小時後付費雲盤
+<li>FALSE：子機銷毀時，保留數據盤<br>
+預設取值：TRUE<br>
+該參數目前僅用于 `RunInstances` 介面。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeleteWithInstance: bool
-        :param SnapshotId: 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SnapshotId: 數據盤快照ID。選擇的數據盤快照大小需小於數據盤大小。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SnapshotId: str
         """
         self.DiskSize = None
@@ -565,13 +565,13 @@ class DataDisk(AbstractModel):
 
 
 class DeleteComputeEnvRequest(AbstractModel):
-    """DeleteComputeEnv请求参数结构体
+    """DeleteComputeEnv請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 计算环境ID
+        :param EnvId: 計算環境ID
         :type EnvId: str
         """
         self.EnvId = None
@@ -582,13 +582,13 @@ class DeleteComputeEnvRequest(AbstractModel):
 
 
 class DeleteComputeEnvResponse(AbstractModel):
-    """DeleteComputeEnv返回参数结构体
+    """DeleteComputeEnv返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -599,13 +599,13 @@ class DeleteComputeEnvResponse(AbstractModel):
 
 
 class DeleteJobRequest(AbstractModel):
-    """DeleteJob请求参数结构体
+    """DeleteJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 作业ID
+        :param JobId: 作業ID
         :type JobId: str
         """
         self.JobId = None
@@ -616,13 +616,13 @@ class DeleteJobRequest(AbstractModel):
 
 
 class DeleteJobResponse(AbstractModel):
-    """DeleteJob返回参数结构体
+    """DeleteJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -633,13 +633,13 @@ class DeleteJobResponse(AbstractModel):
 
 
 class DeleteTaskTemplatesRequest(AbstractModel):
-    """DeleteTaskTemplates请求参数结构体
+    """DeleteTaskTemplates請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskTemplateIds: 用于删除任务模板信息
+        :param TaskTemplateIds: 用于删除任務範本訊息
         :type TaskTemplateIds: list of str
         """
         self.TaskTemplateIds = None
@@ -650,13 +650,13 @@ class DeleteTaskTemplatesRequest(AbstractModel):
 
 
 class DeleteTaskTemplatesResponse(AbstractModel):
-    """DeleteTaskTemplates返回参数结构体
+    """DeleteTaskTemplates返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -667,15 +667,15 @@ class DeleteTaskTemplatesResponse(AbstractModel):
 
 
 class Dependence(AbstractModel):
-    """依赖关系
+    """依賴關系
 
     """
 
     def __init__(self):
         """
-        :param StartTask: 依赖关系的起点任务名称
+        :param StartTask: 依賴關系的起點任務名稱
         :type StartTask: str
-        :param EndTask: 依赖关系的终点任务名称
+        :param EndTask: 依賴關系的終點任務名稱
         :type EndTask: str
         """
         self.StartTask = None
@@ -688,15 +688,15 @@ class Dependence(AbstractModel):
 
 
 class DescribeAvailableCvmInstanceTypesRequest(AbstractModel):
-    """DescribeAvailableCvmInstanceTypes请求参数结构体
+    """DescribeAvailableCvmInstanceTypes請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 过滤条件。
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
-<li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
+        :param Filters: 過濾條件。
+<li> zone - String - 是否必填：否 -（過濾條件）按照可用區過濾。</li>
+<li> instance-family String - 是否必填：否 -（過濾條件）按照機型系列過濾。實例機型系列形如：S1、I1、M1等。</li>
         :type Filters: list of Filter
         """
         self.Filters = None
@@ -712,15 +712,15 @@ class DescribeAvailableCvmInstanceTypesRequest(AbstractModel):
 
 
 class DescribeAvailableCvmInstanceTypesResponse(AbstractModel):
-    """DescribeAvailableCvmInstanceTypes返回参数结构体
+    """DescribeAvailableCvmInstanceTypes返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceTypeConfigSet: 机型配置数组
+        :param InstanceTypeConfigSet: 機型配置數組
         :type InstanceTypeConfigSet: list of InstanceTypeConfig
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceTypeConfigSet = None
@@ -738,20 +738,20 @@ class DescribeAvailableCvmInstanceTypesResponse(AbstractModel):
 
 
 class DescribeComputeEnvActivitiesRequest(AbstractModel):
-    """DescribeComputeEnvActivities请求参数结构体
+    """DescribeComputeEnvActivities請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 计算环境ID
+        :param EnvId: 計算環境ID
         :type EnvId: str
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 返回数量
+        :param Limit: 返回數量
         :type Limit: int
-        :param Filters: 过滤条件
-<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
+        :param Filters: 過濾條件
+<li> compute-node-id - String - 是否必填：否 -（過濾條件）按照計算節點ID過濾。</li>
         :type Filters: :class:`tencentcloud.batch.v20170312.models.Filter`
         """
         self.EnvId = None
@@ -770,17 +770,17 @@ class DescribeComputeEnvActivitiesRequest(AbstractModel):
 
 
 class DescribeComputeEnvActivitiesResponse(AbstractModel):
-    """DescribeComputeEnvActivities返回参数结构体
+    """DescribeComputeEnvActivities返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ActivitySet: 计算环境中的活动列表
+        :param ActivitySet: 計算環境中的活動清單
         :type ActivitySet: list of Activity
-        :param TotalCount: 活动数量
+        :param TotalCount: 活動數量
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ActivitySet = None
@@ -800,13 +800,13 @@ class DescribeComputeEnvActivitiesResponse(AbstractModel):
 
 
 class DescribeComputeEnvCreateInfoRequest(AbstractModel):
-    """DescribeComputeEnvCreateInfo请求参数结构体
+    """DescribeComputeEnvCreateInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 计算环境ID
+        :param EnvId: 計算環境ID
         :type EnvId: str
         """
         self.EnvId = None
@@ -817,34 +817,34 @@ class DescribeComputeEnvCreateInfoRequest(AbstractModel):
 
 
 class DescribeComputeEnvCreateInfoResponse(AbstractModel):
-    """DescribeComputeEnvCreateInfo返回参数结构体
+    """DescribeComputeEnvCreateInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 计算环境 ID
+        :param EnvId: 計算環境 ID
         :type EnvId: str
-        :param EnvName: 计算环境名称
+        :param EnvName: 計算環境名稱
         :type EnvName: str
-        :param EnvDescription: 计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EnvDescription: 計算環境描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EnvDescription: str
-        :param EnvType: 计算环境类型，仅支持“MANAGED”类型
+        :param EnvType: 計算環境類型，僅支援“MANAGED”類型
         :type EnvType: str
-        :param EnvData: 计算环境参数
+        :param EnvData: 計算環境參數
         :type EnvData: :class:`tencentcloud.batch.v20170312.models.EnvData`
-        :param MountDataDisks: 数据盘挂载选项
+        :param MountDataDisks: 數據盤掛載選項
         :type MountDataDisks: list of MountDataDisk
-        :param InputMappings: 输入映射
+        :param InputMappings: 輸入映射
         :type InputMappings: list of InputMapping
-        :param Authentications: 授权信息
+        :param Authentications: 授權訊息
         :type Authentications: list of Authentication
-        :param Notifications: 通知信息
+        :param Notifications: 通知訊息
         :type Notifications: list of Notification
-        :param DesiredComputeNodeCount: 计算节点期望个数
+        :param DesiredComputeNodeCount: 計算節點期望個數
         :type DesiredComputeNodeCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.EnvId = None
@@ -897,22 +897,22 @@ class DescribeComputeEnvCreateInfoResponse(AbstractModel):
 
 
 class DescribeComputeEnvCreateInfosRequest(AbstractModel):
-    """DescribeComputeEnvCreateInfos请求参数结构体
+    """DescribeComputeEnvCreateInfos請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvIds: 计算环境ID
+        :param EnvIds: 計算環境ID
         :type EnvIds: list of str
-        :param Filters: 过滤条件
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
-<li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
-<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
+        :param Filters: 過濾條件
+<li> zone - String - 是否必填：否 -（過濾條件）按照可用區過濾。</li>
+<li> env-id - String - 是否必填：否 -（過濾條件）按照計算環境ID過濾。</li>
+<li> env-name - String - 是否必填：否 -（過濾條件）按照計算環境名稱過濾。</li>
         :type Filters: list of Filter
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 返回数量
+        :param Limit: 返回數量
         :type Limit: int
         """
         self.EnvIds = None
@@ -934,17 +934,17 @@ class DescribeComputeEnvCreateInfosRequest(AbstractModel):
 
 
 class DescribeComputeEnvCreateInfosResponse(AbstractModel):
-    """DescribeComputeEnvCreateInfos返回参数结构体
+    """DescribeComputeEnvCreateInfos返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 计算环境数量
+        :param TotalCount: 計算環境數量
         :type TotalCount: int
-        :param ComputeEnvCreateInfoSet: 计算环境创建信息列表
+        :param ComputeEnvCreateInfoSet: 計算環境創建訊息清單
         :type ComputeEnvCreateInfoSet: list of ComputeEnvCreateInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -964,13 +964,13 @@ class DescribeComputeEnvCreateInfosResponse(AbstractModel):
 
 
 class DescribeComputeEnvRequest(AbstractModel):
-    """DescribeComputeEnv请求参数结构体
+    """DescribeComputeEnv請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 计算环境ID
+        :param EnvId: 計算環境ID
         :type EnvId: str
         """
         self.EnvId = None
@@ -981,29 +981,29 @@ class DescribeComputeEnvRequest(AbstractModel):
 
 
 class DescribeComputeEnvResponse(AbstractModel):
-    """DescribeComputeEnv返回参数结构体
+    """DescribeComputeEnv返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 计算环境ID
+        :param EnvId: 計算環境ID
         :type EnvId: str
-        :param EnvName: 计算环境名称
+        :param EnvName: 計算環境名稱
         :type EnvName: str
-        :param Placement: 位置信息
+        :param Placement: 位置訊息
         :type Placement: :class:`tencentcloud.batch.v20170312.models.Placement`
-        :param CreateTime: 计算环境创建时间
+        :param CreateTime: 計算環境創建時間
         :type CreateTime: str
-        :param ComputeNodeSet: 计算节点列表信息
+        :param ComputeNodeSet: 計算節點清單訊息
         :type ComputeNodeSet: list of ComputeNode
-        :param ComputeNodeMetrics: 计算节点统计指标
+        :param ComputeNodeMetrics: 計算節點統計指标
         :type ComputeNodeMetrics: :class:`tencentcloud.batch.v20170312.models.ComputeNodeMetrics`
-        :param DesiredComputeNodeCount: 计算节点期望个数
+        :param DesiredComputeNodeCount: 計算節點期望個數
         :type DesiredComputeNodeCount: int
-        :param EnvType: 计算环境类型
+        :param EnvType: 計算環境類型
         :type EnvType: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.EnvId = None
@@ -1039,22 +1039,22 @@ class DescribeComputeEnvResponse(AbstractModel):
 
 
 class DescribeComputeEnvsRequest(AbstractModel):
-    """DescribeComputeEnvs请求参数结构体
+    """DescribeComputeEnvs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvIds: 计算环境ID
+        :param EnvIds: 計算環境ID
         :type EnvIds: list of str
-        :param Filters: 过滤条件
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
-<li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
-<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
+        :param Filters: 過濾條件
+<li> zone - String - 是否必填：否 -（過濾條件）按照可用區過濾。</li>
+<li> env-id - String - 是否必填：否 -（過濾條件）按照計算環境ID過濾。</li>
+<li> env-name - String - 是否必填：否 -（過濾條件）按照計算環境名稱過濾。</li>
         :type Filters: list of Filter
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 返回数量
+        :param Limit: 返回數量
         :type Limit: int
         """
         self.EnvIds = None
@@ -1076,17 +1076,17 @@ class DescribeComputeEnvsRequest(AbstractModel):
 
 
 class DescribeComputeEnvsResponse(AbstractModel):
-    """DescribeComputeEnvs返回参数结构体
+    """DescribeComputeEnvs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ComputeEnvSet: 计算环境列表
+        :param ComputeEnvSet: 計算環境清單
         :type ComputeEnvSet: list of ComputeEnvView
-        :param TotalCount: 计算环境数量
+        :param TotalCount: 計算環境數量
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ComputeEnvSet = None
@@ -1106,17 +1106,17 @@ class DescribeComputeEnvsResponse(AbstractModel):
 
 
 class DescribeCvmZoneInstanceConfigInfosRequest(AbstractModel):
-    """DescribeCvmZoneInstanceConfigInfos请求参数结构体
+    """DescribeCvmZoneInstanceConfigInfos請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 过滤条件。
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
-<li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
-<li> instance-type - String - 是否必填：否 - （过滤条件）按照机型过滤。</li>
-<li> instance-charge-type - String - 是否必填：否 -（过滤条件）按照实例计费模式过滤。 ( POSTPAID_BY_HOUR：表示后付费，即按量计费机型 | SPOTPAID：表示竞价付费机型。 )  </li>
+        :param Filters: 過濾條件。
+<li> zone - String - 是否必填：否 -（過濾條件）按照可用區過濾。</li>
+<li> instance-family String - 是否必填：否 -（過濾條件）按照機型系列過濾。實例機型系列形如：S1、I1、M1等。</li>
+<li> instance-type - String - 是否必填：否 - （過濾條件）按照機型過濾。</li>
+<li> instance-charge-type - String - 是否必填：否 -（過濾條件）按照實例計費模式過濾。 ( POSTPAID_BY_HOUR：表示後付費，即按量計費機型 | SPOTPAID：表示競價付費機型。 )  </li>
         :type Filters: list of Filter
         """
         self.Filters = None
@@ -1132,15 +1132,15 @@ class DescribeCvmZoneInstanceConfigInfosRequest(AbstractModel):
 
 
 class DescribeCvmZoneInstanceConfigInfosResponse(AbstractModel):
-    """DescribeCvmZoneInstanceConfigInfos返回参数结构体
+    """DescribeCvmZoneInstanceConfigInfos返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceTypeQuotaSet: 可用区机型配置列表。
+        :param InstanceTypeQuotaSet: 可用區機型配置清單。
         :type InstanceTypeQuotaSet: list of InstanceTypeQuotaItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceTypeQuotaSet = None
@@ -1158,21 +1158,21 @@ class DescribeCvmZoneInstanceConfigInfosResponse(AbstractModel):
 
 
 class DescribeInstanceCategoriesRequest(AbstractModel):
-    """DescribeInstanceCategories请求参数结构体
+    """DescribeInstanceCategories請求參數結構體
 
     """
 
 
 class DescribeInstanceCategoriesResponse(AbstractModel):
-    """DescribeInstanceCategories返回参数结构体
+    """DescribeInstanceCategories返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceCategorySet: CVM实例分类列表
+        :param InstanceCategorySet: CVM實例分類清單
         :type InstanceCategorySet: list of InstanceCategoryItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceCategorySet = None
@@ -1190,13 +1190,13 @@ class DescribeInstanceCategoriesResponse(AbstractModel):
 
 
 class DescribeJobRequest(AbstractModel):
-    """DescribeJob请求参数结构体
+    """DescribeJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 作业标识
+        :param JobId: 作業标識
         :type JobId: str
         """
         self.JobId = None
@@ -1207,37 +1207,37 @@ class DescribeJobRequest(AbstractModel):
 
 
 class DescribeJobResponse(AbstractModel):
-    """DescribeJob返回参数结构体
+    """DescribeJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 作业ID
+        :param JobId: 作業ID
         :type JobId: str
-        :param JobName: 作业名称
+        :param JobName: 作業名稱
         :type JobName: str
-        :param Zone: 可用区信息
+        :param Zone: 可用區訊息
         :type Zone: str
-        :param Priority: 作业优先级
+        :param Priority: 作業優先級
         :type Priority: int
-        :param JobState: 作业状态
+        :param JobState: 作業狀态
         :type JobState: str
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param EndTime: 结束时间
+        :param EndTime: 結束時間
         :type EndTime: str
-        :param TaskSet: 任务视图信息
+        :param TaskSet: 任務視圖訊息
         :type TaskSet: list of TaskView
-        :param DependenceSet: 任务间依赖信息
+        :param DependenceSet: 任務間依賴訊息
         :type DependenceSet: list of Dependence
-        :param TaskMetrics: 任务统计指标
+        :param TaskMetrics: 任務統計指标
         :type TaskMetrics: :class:`tencentcloud.batch.v20170312.models.TaskMetrics`
-        :param TaskInstanceMetrics: 任务实例统计指标
+        :param TaskInstanceMetrics: 任務實例統計指标
         :type TaskInstanceMetrics: :class:`tencentcloud.batch.v20170312.models.TaskInstanceView`
-        :param StateReason: 作业失败原因
+        :param StateReason: 作業失敗原因
         :type StateReason: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.JobId = None
@@ -1286,13 +1286,13 @@ class DescribeJobResponse(AbstractModel):
 
 
 class DescribeJobSubmitInfoRequest(AbstractModel):
-    """DescribeJobSubmitInfo请求参数结构体
+    """DescribeJobSubmitInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 作业ID
+        :param JobId: 作業ID
         :type JobId: str
         """
         self.JobId = None
@@ -1303,25 +1303,25 @@ class DescribeJobSubmitInfoRequest(AbstractModel):
 
 
 class DescribeJobSubmitInfoResponse(AbstractModel):
-    """DescribeJobSubmitInfo返回参数结构体
+    """DescribeJobSubmitInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 作业ID
+        :param JobId: 作業ID
         :type JobId: str
-        :param JobName: 作业名称
+        :param JobName: 作業名稱
         :type JobName: str
-        :param JobDescription: 作业描述
+        :param JobDescription: 作業描述
         :type JobDescription: str
-        :param Priority: 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+        :param Priority: 作業優先級，任務（Task）和任務實例（TaskInstance）會繼承作業優先級
         :type Priority: int
-        :param Tasks: 任务信息
+        :param Tasks: 任務訊息
         :type Tasks: list of Task
-        :param Dependences: 依赖信息
+        :param Dependences: 依賴訊息
         :type Dependences: list of Dependence
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.JobId = None
@@ -1354,23 +1354,23 @@ class DescribeJobSubmitInfoResponse(AbstractModel):
 
 
 class DescribeJobsRequest(AbstractModel):
-    """DescribeJobs请求参数结构体
+    """DescribeJobs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobIds: 作业ID
+        :param JobIds: 作業ID
         :type JobIds: list of str
-        :param Filters: 过滤条件
-<li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
-<li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
-<li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+        :param Filters: 過濾條件
+<li> job-id - String - 是否必填：否 -（過濾條件）按照作業ID過濾。</li>
+<li> job-name - String - 是否必填：否 -（過濾條件）按照作業名稱過濾。</li>
+<li> job-state - String - 是否必填：否 -（過濾條件）按照作業狀态過濾。</li>
+<li> zone - String - 是否必填：否 -（過濾條件）按照可用區過濾。</li>
         :type Filters: list of Filter
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 返回数量
+        :param Limit: 返回數量
         :type Limit: int
         """
         self.JobIds = None
@@ -1392,17 +1392,17 @@ class DescribeJobsRequest(AbstractModel):
 
 
 class DescribeJobsResponse(AbstractModel):
-    """DescribeJobs返回参数结构体
+    """DescribeJobs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobSet: 作业列表
+        :param JobSet: 作業清單
         :type JobSet: list of JobView
-        :param TotalCount: 符合条件的作业数量
+        :param TotalCount: 符合條件的作業數量
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.JobSet = None
@@ -1422,21 +1422,21 @@ class DescribeJobsResponse(AbstractModel):
 
 
 class DescribeTaskLogsRequest(AbstractModel):
-    """DescribeTaskLogs请求参数结构体
+    """DescribeTaskLogs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 作业ID
+        :param JobId: 作業ID
         :type JobId: str
-        :param TaskName: 任务名称
+        :param TaskName: 任務名稱
         :type TaskName: str
-        :param TaskInstanceIndexes: 任务实例集合
+        :param TaskInstanceIndexes: 任務實例集合
         :type TaskInstanceIndexes: list of int non-negative
-        :param Offset: 起始任务实例
+        :param Offset: 起始任務實例
         :type Offset: int
-        :param Limit: 最大任务实例数
+        :param Limit: 最大任務實例數
         :type Limit: int
         """
         self.JobId = None
@@ -1455,17 +1455,17 @@ class DescribeTaskLogsRequest(AbstractModel):
 
 
 class DescribeTaskLogsResponse(AbstractModel):
-    """DescribeTaskLogs返回参数结构体
+    """DescribeTaskLogs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 任务实例总数
+        :param TotalCount: 任務實例總數
         :type TotalCount: int
-        :param TaskInstanceLogSet: 任务实例日志详情集合
+        :param TaskInstanceLogSet: 任務實例日志詳情集合
         :type TaskInstanceLogSet: list of TaskInstanceLog
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1485,22 +1485,22 @@ class DescribeTaskLogsResponse(AbstractModel):
 
 
 class DescribeTaskRequest(AbstractModel):
-    """DescribeTask请求参数结构体
+    """DescribeTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 作业ID
+        :param JobId: 作業ID
         :type JobId: str
-        :param TaskName: 任务名称
+        :param TaskName: 任務名稱
         :type TaskName: str
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 返回数量。默认取值100，最大取值1000。
+        :param Limit: 返回數量。預設取值100，最大取值1000。
         :type Limit: int
-        :param Filters: 过滤条件，详情如下：
-<li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li>
+        :param Filters: 過濾條件，詳情如下：
+<li> task-instance-type - String - 是否必填： 否 - 按照任務實例狀态進行過濾（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可運作；STARTING：啓動中；RUNNING：運作中；SUCCEED：成功；FAILED：失敗；FAILED_INTERRUPTED：失敗後保留實例）。</li>
         :type Filters: list of Filter
         """
         self.JobId = None
@@ -1524,29 +1524,29 @@ class DescribeTaskRequest(AbstractModel):
 
 
 class DescribeTaskResponse(AbstractModel):
-    """DescribeTask返回参数结构体
+    """DescribeTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 作业ID
+        :param JobId: 作業ID
         :type JobId: str
-        :param TaskName: 任务名称
+        :param TaskName: 任務名稱
         :type TaskName: str
-        :param TaskState: 任务状态
+        :param TaskState: 任務狀态
         :type TaskState: str
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param EndTime: 结束时间
+        :param EndTime: 結束時間
         :type EndTime: str
-        :param TaskInstanceTotalCount: 任务实例总数
+        :param TaskInstanceTotalCount: 任務實例總數
         :type TaskInstanceTotalCount: int
-        :param TaskInstanceSet: 任务实例信息
+        :param TaskInstanceSet: 任務實例訊息
         :type TaskInstanceSet: list of TaskInstanceView
-        :param TaskInstanceMetrics: 任务实例统计指标
+        :param TaskInstanceMetrics: 任務實例統計指标
         :type TaskInstanceMetrics: :class:`tencentcloud.batch.v20170312.models.TaskInstanceMetrics`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.JobId = None
@@ -1580,20 +1580,20 @@ class DescribeTaskResponse(AbstractModel):
 
 
 class DescribeTaskTemplatesRequest(AbstractModel):
-    """DescribeTaskTemplates请求参数结构体
+    """DescribeTaskTemplates請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskTemplateIds: 任务模板ID
+        :param TaskTemplateIds: 任務範本ID
         :type TaskTemplateIds: list of str
-        :param Filters: 过滤条件
-<li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
+        :param Filters: 過濾條件
+<li> task-template-name - String - 是否必填：否 -（過濾條件）按照任務範本名稱過濾。</li>
         :type Filters: list of Filter
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 返回数量
+        :param Limit: 返回數量
         :type Limit: int
         """
         self.TaskTemplateIds = None
@@ -1615,17 +1615,17 @@ class DescribeTaskTemplatesRequest(AbstractModel):
 
 
 class DescribeTaskTemplatesResponse(AbstractModel):
-    """DescribeTaskTemplates返回参数结构体
+    """DescribeTaskTemplates返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskTemplateSet: 任务模板列表
+        :param TaskTemplateSet: 任務範本清單
         :type TaskTemplateSet: list of TaskTemplateView
-        :param TotalCount: 任务模板数量
+        :param TotalCount: 任務範本數量
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskTemplateSet = None
@@ -1645,19 +1645,19 @@ class DescribeTaskTemplatesResponse(AbstractModel):
 
 
 class Docker(AbstractModel):
-    """Docker容器信息
+    """Docker容器訊息
 
     """
 
     def __init__(self):
         """
-        :param User: Docker Hub 用户名或 Tencent Registry 用户名
+        :param User: Docker Hub 用戶名或 Tencent Registry 用戶名
         :type User: str
-        :param Password: Docker Hub 密码或 Tencent Registry 密码
+        :param Password: Docker Hub 密碼或 Tencent Registry 密碼
         :type Password: str
-        :param Image: Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
+        :param Image: Docker Hub填寫“[user/repo]:[tag]”，Tencent Registry填寫“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
         :type Image: str
-        :param Server: Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
+        :param Server: Docker Hub 可以不填，但确保具有公網訪問能力。或者是 Tencent Registry 服務網址“ccr.ccs.tencentyun.com”
         :type Server: str
         """
         self.User = None
@@ -1674,15 +1674,15 @@ class Docker(AbstractModel):
 
 
 class EnhancedService(AbstractModel):
-    """描述了实例的增强服务启用情况与其设置，如云安全，云监控等实例 Agent
+    """描述了實例的增強服務啓用情況與其設置，如雲安全，雲監控等實例 Agent
 
     """
 
     def __init__(self):
         """
-        :param SecurityService: 开启云安全服务。若不指定该参数，则默认开启云安全服务。
+        :param SecurityService: 開啓雲安全服務。若不指定該參數，則預設開啓雲安全服務。
         :type SecurityService: :class:`tencentcloud.batch.v20170312.models.RunSecurityServiceEnabled`
-        :param MonitorService: 开启云监控服务。若不指定该参数，则默认开启云监控服务。
+        :param MonitorService: 開啓雲監控服務。若不指定該參數，則預設開啓雲監控服務。
         :type MonitorService: :class:`tencentcloud.batch.v20170312.models.RunMonitorServiceEnabled`
         """
         self.SecurityService = None
@@ -1699,43 +1699,43 @@ class EnhancedService(AbstractModel):
 
 
 class EnvData(AbstractModel):
-    """计算环境数据
+    """計算環境數據
 
     """
 
     def __init__(self):
         """
-        :param InstanceType: CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
+        :param InstanceType: CVM實例類型，不能與InstanceTypes和InstanceTypeOptions同時出現。
         :type InstanceType: str
-        :param ImageId: CVM镜像ID
+        :param ImageId: CVM映像ID
         :type ImageId: str
-        :param SystemDisk: 实例系统盘配置信息
+        :param SystemDisk: 實例系統盤配置訊息
         :type SystemDisk: :class:`tencentcloud.batch.v20170312.models.SystemDisk`
-        :param DataDisks: 实例数据盘配置信息
+        :param DataDisks: 實例數據盤配置訊息
         :type DataDisks: list of DataDisk
-        :param VirtualPrivateCloud: 私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。
+        :param VirtualPrivateCloud: 私有網絡相關訊息配置，與Zones和VirtualPrivateClouds不能同時指定。
         :type VirtualPrivateCloud: :class:`tencentcloud.batch.v20170312.models.VirtualPrivateCloud`
-        :param InternetAccessible: 公网带宽相关信息设置
+        :param InternetAccessible: 公網頻寬相關訊息設置
         :type InternetAccessible: :class:`tencentcloud.batch.v20170312.models.InternetAccessible`
-        :param InstanceName: CVM实例显示名称
+        :param InstanceName: CVM實例顯示名稱
         :type InstanceName: str
-        :param LoginSettings: 实例登录设置
+        :param LoginSettings: 實例登入設置
         :type LoginSettings: :class:`tencentcloud.batch.v20170312.models.LoginSettings`
-        :param SecurityGroupIds: 实例所属安全组
+        :param SecurityGroupIds: 實例所屬安全組
         :type SecurityGroupIds: list of str
-        :param EnhancedService: 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
+        :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
         :type EnhancedService: :class:`tencentcloud.batch.v20170312.models.EnhancedService`
-        :param InstanceChargeType: CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
+        :param InstanceChargeType: CVM實例計費類型<br><li>POSTPAID_BY_HOUR：按小時後付費<br><li>SPOTPAID：競價付費<br>預設值：POSTPAID_BY_HOUR。
         :type InstanceChargeType: str
-        :param InstanceMarketOptions: 实例的市场相关选项，如竞价实例相关参数
+        :param InstanceMarketOptions: 實例的市場相關選項，如競價實例相關參數
         :type InstanceMarketOptions: :class:`tencentcloud.batch.v20170312.models.InstanceMarketOptionsRequest`
-        :param InstanceTypes: CVM实例类型列表，不能与InstanceType和InstanceTypeOptions同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
+        :param InstanceTypes: CVM實例類型清單，不能與InstanceType和InstanceTypeOptions同時出現。指定該欄位後，計算節點按照機型先後順序依次嘗試創建，直到實例創建成功，結束遍曆過程。最多支援10個機型。
         :type InstanceTypes: list of str
-        :param InstanceTypeOptions: CVM实例机型配置。不能与InstanceType和InstanceTypes同时出现。
+        :param InstanceTypeOptions: CVM實例機型配置。不能與InstanceType和InstanceTypes同時出現。
         :type InstanceTypeOptions: :class:`tencentcloud.batch.v20170312.models.InstanceTypeOptions`
-        :param Zones: 可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
+        :param Zones: 可用區清單，支援跨可用區創建CVM實例。與VirtualPrivateCloud和VirtualPrivateClouds不能同時指定。
         :type Zones: list of str
-        :param VirtualPrivateClouds: 私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
+        :param VirtualPrivateClouds: 私有網絡清單，支援跨私有網絡創建CVM實例。與VirtualPrivateCloud和Zones不能同時指定。
         :type VirtualPrivateClouds: list of VirtualPrivateCloud
         """
         self.InstanceType = None
@@ -1800,15 +1800,15 @@ class EnvData(AbstractModel):
 
 
 class EnvVar(AbstractModel):
-    """环境变量
+    """環境變量
 
     """
 
     def __init__(self):
         """
-        :param Name: 环境变量名称
+        :param Name: 環境變量名稱
         :type Name: str
-        :param Value: 环境变量取值
+        :param Value: 環境變量取值
         :type Value: str
         """
         self.Name = None
@@ -1827,9 +1827,9 @@ class EventConfig(AbstractModel):
 
     def __init__(self):
         """
-        :param EventName: 事件类型，包括：<br/><li>“JOB_RUNNING”：作业运行，适用于"SubmitJob"。</li><li>“JOB_SUCCEED”：作业成功，适用于"SubmitJob"。</li><li>“JOB_FAILED”：作业失败，适用于"SubmitJob"。</li><li>“JOB_FAILED_INTERRUPTED”：作业失败，保留实例，适用于"SubmitJob"。</li><li>“TASK_RUNNING”：任务运行，适用于"SubmitJob"。</li><li>“TASK_SUCCEED”：任务成功，适用于"SubmitJob"。</li><li>“TASK_FAILED”：任务失败，适用于"SubmitJob"。</li><li>“TASK_FAILED_INTERRUPTED”：任务失败，保留实例，适用于"SubmitJob"。</li><li>“TASK_INSTANCE_RUNNING”：任务实例运行，适用于"SubmitJob"。</li><li>“TASK_INSTANCE_SUCCEED”：任务实例成功，适用于"SubmitJob"。</li><li>“TASK_INSTANCE_FAILED”：任务实例失败，适用于"SubmitJob"。</li><li>“TASK_INSTANCE_FAILED_INTERRUPTED”：任务实例失败，保留实例，适用于"SubmitJob"。</li><li>“COMPUTE_ENV_CREATED”：计算环境已创建，适用于"CreateComputeEnv"。</li><li>“COMPUTE_ENV_DELETED”：计算环境已删除，适用于"CreateComputeEnv"。</li><li>“COMPUTE_NODE_CREATED”：计算节点已创建，适用于"CreateComputeEnv"和"SubmitJob"。</li><li>“COMPUTE_NODE_CREATION_FAILED”：计算节点创建失败，适用于"CreateComputeEnv"和"SubmitJob"。</li><li>“COMPUTE_NODE_RUNNING”：计算节点运行中，适用于"CreateComputeEnv"和"SubmitJob"。</li><li>“COMPUTE_NODE_ABNORMAL”：计算节点异常，适用于"CreateComputeEnv"和"SubmitJob"。</li><li>“COMPUTE_NODE_DELETING”：计算节点已删除，适用于"CreateComputeEnv"和"SubmitJob"。</li>
+        :param EventName: 事件類型，包括：<br/><li>“JOB_RUNNING”：作業運作，适用于"SubmitJob"。</li><li>“JOB_SUCCEED”：作業成功，适用于"SubmitJob"。</li><li>“JOB_FAILED”：作業失敗，适用于"SubmitJob"。</li><li>“JOB_FAILED_INTERRUPTED”：作業失敗，保留實例，适用于"SubmitJob"。</li><li>“TASK_RUNNING”：任務運作，适用于"SubmitJob"。</li><li>“TASK_SUCCEED”：任務成功，适用于"SubmitJob"。</li><li>“TASK_FAILED”：任務失敗，适用于"SubmitJob"。</li><li>“TASK_FAILED_INTERRUPTED”：任務失敗，保留實例，适用于"SubmitJob"。</li><li>“TASK_INSTANCE_RUNNING”：任務實例運作，适用于"SubmitJob"。</li><li>“TASK_INSTANCE_SUCCEED”：任務實例成功，适用于"SubmitJob"。</li><li>“TASK_INSTANCE_FAILED”：任務實例失敗，适用于"SubmitJob"。</li><li>“TASK_INSTANCE_FAILED_INTERRUPTED”：任務實例失敗，保留實例，适用于"SubmitJob"。</li><li>“COMPUTE_ENV_CREATED”：計算環境已創建，适用于"CreateComputeEnv"。</li><li>“COMPUTE_ENV_DELETED”：計算環境已删除，适用于"CreateComputeEnv"。</li><li>“COMPUTE_NODE_CREATED”：計算節點已創建，适用于"CreateComputeEnv"和"SubmitJob"。</li><li>“COMPUTE_NODE_CREATION_FAILED”：計算節點創建失敗，适用于"CreateComputeEnv"和"SubmitJob"。</li><li>“COMPUTE_NODE_RUNNING”：計算節點運作中，适用于"CreateComputeEnv"和"SubmitJob"。</li><li>“COMPUTE_NODE_ABNORMAL”：計算節點異常，适用于"CreateComputeEnv"和"SubmitJob"。</li><li>“COMPUTE_NODE_DELETING”：計算節點已删除，适用于"CreateComputeEnv"和"SubmitJob"。</li>
         :type EventName: str
-        :param EventVars: 自定义键值对
+        :param EventVars: 自定義鍵值對
         :type EventVars: list of EventVar
         """
         self.EventName = None
@@ -1847,15 +1847,15 @@ class EventConfig(AbstractModel):
 
 
 class EventVar(AbstractModel):
-    """自定义键值对
+    """自定義鍵值對
 
     """
 
     def __init__(self):
         """
-        :param Name: 自定义键
+        :param Name: 自定義鍵
         :type Name: str
-        :param Value: 自定义值
+        :param Value: 自定義值
         :type Value: str
         """
         self.Name = None
@@ -1868,20 +1868,20 @@ class EventVar(AbstractModel):
 
 
 class Externals(AbstractModel):
-    """扩展数据
+    """擴展數據
 
     """
 
     def __init__(self):
         """
-        :param ReleaseAddress: 释放地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ReleaseAddress: 釋放網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ReleaseAddress: bool
-        :param UnsupportNetworks: 不支持的网络类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UnsupportNetworks: 不支援的網絡類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UnsupportNetworks: list of str
-        :param StorageBlockAttr: HDD本地存储属性
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StorageBlockAttr: HDD本地儲存屬性
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StorageBlockAttr: :class:`tencentcloud.batch.v20170312.models.StorageBlock`
         """
         self.ReleaseAddress = None
@@ -1898,11 +1898,11 @@ class Externals(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """>描述键值对过滤器，用于条件过滤查询。例如过滤ID、名称、状态等
-    > * 若存在多个`Filter`时，`Filter`间的关系为逻辑与（`AND`）关系。
-    > * 若同一个`Filter`存在多个`Values`，同一`Filter`下`Values`间的关系为逻辑或（`OR`）关系。
+    """>描述鍵值對過濾器，用于條件過濾查詢。例如過濾ID、名稱、狀态等
+    > * 若存在多個`Filter`時，`Filter`間的關系爲邏輯與（`AND`）關系。
+    > * 若同一個`Filter`存在多個`Values`，同一`Filter`下`Values`間的關系爲邏輯或（`OR`）關系。
     >
-    > 以[DescribeInstances](https://cloud.tencent.com/document/api/213/15728)接口的`Filter`为例。若我们需要查询可用区（`zone`）为广州一区 ***并且*** 实例计费模式（`instance-charge-type`）为包年包月 ***或者*** 按量计费的实例时，可如下实现：
+    > 以[DescribeInstances](https://cloud.tencent.com/document/api/213/15728)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲廣州一區 ***并且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
     ```
     Filters.0.Name=zone
     &Filters.0.Values.0=ap-guangzhou-1
@@ -1915,9 +1915,9 @@ class Filter(AbstractModel):
 
     def __init__(self):
         """
-        :param Name: 需要过滤的字段。
+        :param Name: 需要過濾的欄位。
         :type Name: str
-        :param Values: 字段的过滤值。
+        :param Values: 欄位的過濾值。
         :type Values: list of str
         """
         self.Name = None
@@ -1930,17 +1930,17 @@ class Filter(AbstractModel):
 
 
 class InputMapping(AbstractModel):
-    """输入映射
+    """輸入映射
 
     """
 
     def __init__(self):
         """
-        :param SourcePath: 源端路径
+        :param SourcePath: 源端路徑
         :type SourcePath: str
-        :param DestinationPath: 目的端路径
+        :param DestinationPath: 目的端路徑
         :type DestinationPath: str
-        :param MountOptionParameter: 挂载配置项参数
+        :param MountOptionParameter: 掛載配置項參數
         :type MountOptionParameter: str
         """
         self.SourcePath = None
@@ -1955,15 +1955,15 @@ class InputMapping(AbstractModel):
 
 
 class InstanceCategoryItem(AbstractModel):
-    """实例分类列表
+    """實例分類清單
 
     """
 
     def __init__(self):
         """
-        :param InstanceCategory: 实例类型名
+        :param InstanceCategory: 實例類型名
         :type InstanceCategory: str
-        :param InstanceFamilySet: 实例族列表
+        :param InstanceFamilySet: 實例族清單
         :type InstanceFamilySet: list of str
         """
         self.InstanceCategory = None
@@ -1976,15 +1976,15 @@ class InstanceCategoryItem(AbstractModel):
 
 
 class InstanceMarketOptionsRequest(AbstractModel):
-    """竞价请求相关选项
+    """競價請求相關選項
 
     """
 
     def __init__(self):
         """
-        :param SpotOptions: 竞价相关选项
+        :param SpotOptions: 競價相關選項
         :type SpotOptions: :class:`tencentcloud.batch.v20170312.models.SpotMarketOptions`
-        :param MarketType: 市场选项类型，当前只支持取值：spot
+        :param MarketType: 市場選項類型，當前只支援取值：spot
         :type MarketType: str
         """
         self.SpotOptions = None
@@ -1999,21 +1999,21 @@ class InstanceMarketOptionsRequest(AbstractModel):
 
 
 class InstanceTypeConfig(AbstractModel):
-    """批量计算可用的InstanceTypeConfig信息
+    """批次計算可用的InstanceTypeConfig訊息
 
     """
 
     def __init__(self):
         """
-        :param Mem: 内存容量，单位：`GB`。
+        :param Mem: 内存容量，單位：`GB`。
         :type Mem: int
-        :param Cpu: CPU核数，单位：核。
+        :param Cpu: CPU核數，單位：核。
         :type Cpu: int
-        :param InstanceType: 实例机型。
+        :param InstanceType: 實例機型。
         :type InstanceType: str
-        :param Zone: 可用区。
+        :param Zone: 可用區。
         :type Zone: str
-        :param InstanceFamily: 实例机型系列。
+        :param InstanceFamily: 實例機型系列。
         :type InstanceFamily: str
         """
         self.Mem = None
@@ -2032,17 +2032,17 @@ class InstanceTypeConfig(AbstractModel):
 
 
 class InstanceTypeOptions(AbstractModel):
-    """实例机型配置。
+    """實例機型配置。
 
     """
 
     def __init__(self):
         """
-        :param CPU: CPU核数。
+        :param CPU: CPU核數。
         :type CPU: int
-        :param Memory: 内存值，单位GB。
+        :param Memory: 内存值，單位GB。
         :type Memory: int
-        :param InstanceCategories: 实例机型类别，可选参数：“ALL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
+        :param InstanceCategories: 實例機型類别，可選參數：“ALL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE_2”和“COMPUTE_3”。預設值“ALL”。
         :type InstanceCategories: list of str
         """
         self.CPU = None
@@ -2057,36 +2057,36 @@ class InstanceTypeOptions(AbstractModel):
 
 
 class InstanceTypeQuotaItem(AbstractModel):
-    """描述实例机型配额信息。
+    """描述實例機型配額訊息。
 
     """
 
     def __init__(self):
         """
-        :param Zone: 可用区。
+        :param Zone: 可用區。
         :type Zone: str
-        :param InstanceType: 实例机型。
+        :param InstanceType: 實例機型。
         :type InstanceType: str
-        :param InstanceChargeType: 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付费，即只对CDH计费，不对CDH上的实例计费。
+        :param InstanceChargeType: 實例計費模式。取值範圍： <br><li>PREPAID：表示預付費，即包年包月<br><li>POSTPAID_BY_HOUR：表示後付費，即按量計費<br><li>CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付費，即只對CDH計費，不對CDH上的實例計費。
         :type InstanceChargeType: str
-        :param NetworkCard: 网卡类型，例如：25代表25G网卡
+        :param NetworkCard: 網卡類型，例如：25代表25G網卡
         :type NetworkCard: int
-        :param Externals: 扩展属性。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Externals: 擴展屬性。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Externals: :class:`tencentcloud.batch.v20170312.models.Externals`
-        :param Cpu: 实例的CPU核数，单位：核。
+        :param Cpu: 實例的CPU核數，單位：核。
         :type Cpu: int
-        :param Memory: 实例内存容量，单位：`GB`。
+        :param Memory: 實例内存容量，單位：`GB`。
         :type Memory: int
-        :param InstanceFamily: 实例机型系列。
+        :param InstanceFamily: 實例機型系列。
         :type InstanceFamily: str
-        :param TypeName: 机型名称。
+        :param TypeName: 機型名稱。
         :type TypeName: str
-        :param LocalDiskTypeList: 本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
+        :param LocalDiskTypeList: 本地磁盤規格清單。當該參數返回爲空值時，表示當前情況下無法創建本地盤。
         :type LocalDiskTypeList: list of LocalDiskType
-        :param Status: 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
+        :param Status: 實例是否售賣。取值範圍： <br><li>SELL：表示實例可購買<br><li>SOLD_OUT：表示實例已售罄。
         :type Status: str
-        :param Price: 实例的售卖价格。
+        :param Price: 實例的售賣價格。
         :type Price: :class:`tencentcloud.batch.v20170312.models.ItemPrice`
         """
         self.Zone = None
@@ -2128,19 +2128,19 @@ class InstanceTypeQuotaItem(AbstractModel):
 
 
 class InternetAccessible(AbstractModel):
-    """描述了实例的公网可访问性，声明了实例的公网使用计费模式，最大带宽等
+    """描述了實例的公網可訪問性，聲明了實例的公網使用計費模式，最大頻寬等
 
     """
 
     def __init__(self):
         """
-        :param InternetChargeType: 网络计费类型。取值范围：<br><li>BANDWIDTH_PREPAID：预付费按带宽结算<br><li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费<br><li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费<br><li>BANDWIDTH_PACKAGE：带宽包用户<br>默认取值：非带宽包用户默认与子机付费类型保持一致。
+        :param InternetChargeType: 網絡計費類型。取值範圍：<br><li>BANDWIDTH_PREPAID：預付費按頻寬結算<br><li>TRAFFIC_POSTPAID_BY_HOUR：流量按小時後付費<br><li>BANDWIDTH_POSTPAID_BY_HOUR：頻寬按小時後付費<br><li>BANDWIDTH_PACKAGE：頻寬包用戶<br>預設取值：非頻寬包用戶預設與子機付費類型保持一緻。
         :type InternetChargeType: str
-        :param InternetMaxBandwidthOut: 公网出带宽上限，单位：Mbps。默认值：0Mbps。不同机型带宽上限范围不一致，具体限制详见[购买网络带宽](/document/product/213/509)。
+        :param InternetMaxBandwidthOut: 公網出頻寬上限，單位：Mbps。預設值：0Mbps。不同機型頻寬上限範圍不一緻，具體限制詳見[購買網絡頻寬](/document/product/213/509)。
         :type InternetMaxBandwidthOut: int
-        :param PublicIpAssigned: 是否分配公网IP。取值范围：<br><li>TRUE：表示分配公网IP<br><li>FALSE：表示不分配公网IP<br><br>当公网带宽大于0Mbps时，可自由选择开通与否，默认开通公网IP；当公网带宽为0，则不允许分配公网IP。
+        :param PublicIpAssigned: 是否分配公網IP。取值範圍：<br><li>TRUE：表示分配公網IP<br><li>FALSE：表示不分配公網IP<br><br>當公網頻寬大于0Mbps時，可自由選擇開通與否，預設開通公網IP；當公網頻寬爲0，則不允許分配公網IP。
         :type PublicIpAssigned: bool
-        :param BandwidthPackageId: 带宽包ID。可通过[`DescribeBandwidthPackages`](https://cloud.tencent.com/document/api/215/19209)接口返回值中的`BandwidthPackageId`获取。
+        :param BandwidthPackageId: 頻寬包ID。可通過[`DescribeBandwidthPackages`](https://cloud.tencent.com/document/api/215/19209)介面返回值中的`BandwidthPackageId`獲取。
         :type BandwidthPackageId: str
         """
         self.InternetChargeType = None
@@ -2157,23 +2157,23 @@ class InternetAccessible(AbstractModel):
 
 
 class ItemPrice(AbstractModel):
-    """描述了单项的价格信息
+    """描述了單項的價格訊息
 
     """
 
     def __init__(self):
         """
-        :param UnitPrice: 后续单价，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UnitPrice: 後續單價，單位：元。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UnitPrice: float
-        :param ChargeUnit: 后续计价单元，可取值范围： <br><li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）：<br><li>GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ChargeUnit: 後續計價單元，可取值範圍： <br><li>HOUR：表示計價單元是按每小時來計算。當前涉及該計價單元的場景有：實例按小時後付費（POSTPAID_BY_HOUR）、頻寬按小時後付費（BANDWIDTH_POSTPAID_BY_HOUR）：<br><li>GB：表示計價單元是按每GB來計算。當前涉及該計價單元的場景有：流量按小時後付費（TRAFFIC_POSTPAID_BY_HOUR）。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ChargeUnit: str
-        :param OriginalPrice: 预支费用的原价，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OriginalPrice: 預支費用的原價，單位：元。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OriginalPrice: float
-        :param DiscountPrice: 预支费用的折扣价，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DiscountPrice: 預支費用的折扣價，單位：元。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DiscountPrice: float
         """
         self.UnitPrice = None
@@ -2190,27 +2190,27 @@ class ItemPrice(AbstractModel):
 
 
 class Job(AbstractModel):
-    """作业
+    """作業
 
     """
 
     def __init__(self):
         """
-        :param Tasks: 任务信息
+        :param Tasks: 任務訊息
         :type Tasks: list of Task
-        :param JobName: 作业名称
+        :param JobName: 作業名稱
         :type JobName: str
-        :param JobDescription: 作业描述
+        :param JobDescription: 作業描述
         :type JobDescription: str
-        :param Priority: 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+        :param Priority: 作業優先級，任務（Task）和任務實例（TaskInstance）會繼承作業優先級
         :type Priority: int
-        :param Dependences: 依赖信息
+        :param Dependences: 依賴訊息
         :type Dependences: list of Dependence
-        :param Notifications: 通知信息
+        :param Notifications: 通知訊息
         :type Notifications: list of Notification
-        :param TaskExecutionDependOn: 对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
+        :param TaskExecutionDependOn: 對于存在依賴關系的任務中，後序任務執行對于前序任務的依賴條件。取值範圍包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，預設值爲PRE_TASK_SUCCEED。
         :type TaskExecutionDependOn: str
-        :param StateIfCreateCvmFailed: 表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
+        :param StateIfCreateCvmFailed: 表示創建 CVM 失敗按照何種策略處理。取值範圍包括 FAILED，RUNNABLE。FAILED 表示創建 CVM 失敗按照一次執行失敗處理，RUNNABLE 表示創建 CVM 失敗按照繼續等待處理。預設值爲FAILED。StateIfCreateCvmFailed對于提交的指定計算環境的作業無效。
         :type StateIfCreateCvmFailed: str
         """
         self.Tasks = None
@@ -2250,29 +2250,29 @@ class Job(AbstractModel):
 
 
 class JobView(AbstractModel):
-    """作业信息
+    """作業訊息
 
     """
 
     def __init__(self):
         """
-        :param JobId: 作业ID
+        :param JobId: 作業ID
         :type JobId: str
-        :param JobName: 作业名称
+        :param JobName: 作業名稱
         :type JobName: str
-        :param JobState: 作业状态
+        :param JobState: 作業狀态
         :type JobState: str
-        :param Priority: 作业优先级
+        :param Priority: 作業優先級
         :type Priority: int
-        :param Placement: 位置信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Placement: 位置訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Placement: :class:`tencentcloud.batch.v20170312.models.Placement`
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param EndTime: 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EndTime: 結束時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EndTime: str
-        :param TaskMetrics: 任务统计指标
+        :param TaskMetrics: 任務統計指标
         :type TaskMetrics: :class:`tencentcloud.batch.v20170312.models.TaskMetrics`
         """
         self.JobId = None
@@ -2301,19 +2301,19 @@ class JobView(AbstractModel):
 
 
 class LocalDiskType(AbstractModel):
-    """本地磁盘规格
+    """本地磁盤規格
 
     """
 
     def __init__(self):
         """
-        :param Type: 本地磁盘类型。
+        :param Type: 本地磁盤類型。
         :type Type: str
-        :param PartitionType: 本地磁盘属性。
+        :param PartitionType: 本地磁盤屬性。
         :type PartitionType: str
-        :param MinSize: 本地磁盘最小值。
+        :param MinSize: 本地磁盤最小值。
         :type MinSize: int
-        :param MaxSize: 本地磁盘最大值。
+        :param MaxSize: 本地磁盤最大值。
         :type MaxSize: int
         """
         self.Type = None
@@ -2330,20 +2330,20 @@ class LocalDiskType(AbstractModel):
 
 
 class LoginSettings(AbstractModel):
-    """描述了实例登录相关配置与信息。
+    """描述了實例登入相關配置與訊息。
 
     """
 
     def __init__(self):
         """
-        :param Password: 实例登录密码。不同操作系统类型密码复杂度限制不一样，具体如下：<br><li>Linux实例密码必须8到16位，至少包括两项[a-z，A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? / ]中的特殊符号。<br><li>Windows实例密码必须12到16位，至少包括三项[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = { } [ ] : ; ' , . ? /]中的特殊符号。<br><br>若不指定该参数，则由系统随机生成密码，并通过站内信方式通知到用户。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>Linux實例密碼必須8到16位，至少包括兩項[a-z，A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? / ]中的特殊符号。<br><li>Windows實例密碼必須12到16位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = { } [ ] : ; ' , . ? /]中的特殊符号。<br><br>若不指定該參數，則由系統随機生成密碼，并通過站内信方式通知到用戶。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Password: str
-        :param KeyIds: 密钥ID列表。关联密钥后，就可以通过对应的私钥来访问实例；KeyId可通过接口DescribeKeyPairs获取，密钥与密码不能同时指定，同时Windows操作系统不支持指定密钥。当前仅支持购买的时候指定一个密钥。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param KeyIds: 金鑰ID清單。關聯金鑰後，就可以通過對應的私鑰來訪問實例；KeyId可通過介面DescribeKeyPairs獲取，金鑰與密碼不能同時指定，同時Windows作業系統不支援指定金鑰。當前僅支援購買的時候指定一個金鑰。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type KeyIds: list of str
-        :param KeepImageLogin: 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：<br><li>TRUE：表示保持镜像的登录设置<br><li>FALSE：表示不保持镜像的登录设置<br><br>默认取值：FALSE。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param KeepImageLogin: 保持映像的原始設置。該參數與Password或KeyIds.N不能同時指定。只有使用自定義映像、共享映像或外部導入映像創建實例時才能指定該參數爲TRUE。取值範圍：<br><li>TRUE：表示保持映像的登入設置<br><li>FALSE：表示不保持映像的登入設置<br><br>預設取值：FALSE。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type KeepImageLogin: str
         """
         self.Password = None
@@ -2358,21 +2358,21 @@ class LoginSettings(AbstractModel):
 
 
 class ModifyComputeEnvRequest(AbstractModel):
-    """ModifyComputeEnv请求参数结构体
+    """ModifyComputeEnv請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 计算环境ID
+        :param EnvId: 計算環境ID
         :type EnvId: str
-        :param DesiredComputeNodeCount: 计算节点期望个数
+        :param DesiredComputeNodeCount: 計算節點期望個數
         :type DesiredComputeNodeCount: int
-        :param EnvName: 计算环境名称
+        :param EnvName: 計算環境名稱
         :type EnvName: str
-        :param EnvDescription: 计算环境描述
+        :param EnvDescription: 計算環境描述
         :type EnvDescription: str
-        :param EnvData: 计算环境属性数据
+        :param EnvData: 計算環境屬性數據
         :type EnvData: :class:`tencentcloud.batch.v20170312.models.ComputeEnvData`
         """
         self.EnvId = None
@@ -2393,13 +2393,13 @@ class ModifyComputeEnvRequest(AbstractModel):
 
 
 class ModifyComputeEnvResponse(AbstractModel):
-    """ModifyComputeEnv返回参数结构体
+    """ModifyComputeEnv返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2410,19 +2410,19 @@ class ModifyComputeEnvResponse(AbstractModel):
 
 
 class ModifyTaskTemplateRequest(AbstractModel):
-    """ModifyTaskTemplate请求参数结构体
+    """ModifyTaskTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskTemplateId: 任务模板ID
+        :param TaskTemplateId: 任務範本ID
         :type TaskTemplateId: str
-        :param TaskTemplateName: 任务模板名称
+        :param TaskTemplateName: 任務範本名稱
         :type TaskTemplateName: str
-        :param TaskTemplateDescription: 任务模板描述
+        :param TaskTemplateDescription: 任務範本描述
         :type TaskTemplateDescription: str
-        :param TaskTemplateInfo: 任务模板信息
+        :param TaskTemplateInfo: 任務範本訊息
         :type TaskTemplateInfo: :class:`tencentcloud.batch.v20170312.models.Task`
         """
         self.TaskTemplateId = None
@@ -2441,13 +2441,13 @@ class ModifyTaskTemplateRequest(AbstractModel):
 
 
 class ModifyTaskTemplateResponse(AbstractModel):
-    """ModifyTaskTemplate返回参数结构体
+    """ModifyTaskTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2458,15 +2458,15 @@ class ModifyTaskTemplateResponse(AbstractModel):
 
 
 class MountDataDisk(AbstractModel):
-    """数据盘挂载选项
+    """數據盤掛載選項
 
     """
 
     def __init__(self):
         """
-        :param LocalPath: 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
+        :param LocalPath: 掛載點，Linux系統合法路徑，或Windows系統盤符,比如"H:\\"
         :type LocalPath: str
-        :param FileSystemType: 文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
+        :param FileSystemType: 文件系統類型，Linux系統下支援"EXT3"和"EXT4"兩種，預設"EXT3"；Windows系統下僅支援"NTFS"
         :type FileSystemType: str
         """
         self.LocalPath = None
@@ -2479,33 +2479,33 @@ class MountDataDisk(AbstractModel):
 
 
 class NamedComputeEnv(AbstractModel):
-    """计算环境
+    """計算環境
 
     """
 
     def __init__(self):
         """
-        :param EnvName: 计算环境名称
+        :param EnvName: 計算環境名稱
         :type EnvName: str
-        :param DesiredComputeNodeCount: 计算节点期望个数
+        :param DesiredComputeNodeCount: 計算節點期望個數
         :type DesiredComputeNodeCount: int
-        :param EnvDescription: 计算环境描述
+        :param EnvDescription: 計算環境描述
         :type EnvDescription: str
-        :param EnvType: 计算环境管理类型
+        :param EnvType: 計算環境管理類型
         :type EnvType: str
-        :param EnvData: 计算环境具体参数
+        :param EnvData: 計算環境具體參數
         :type EnvData: :class:`tencentcloud.batch.v20170312.models.EnvData`
-        :param MountDataDisks: 数据盘挂载选项
+        :param MountDataDisks: 數據盤掛載選項
         :type MountDataDisks: list of MountDataDisk
-        :param Authentications: 授权信息
+        :param Authentications: 授權訊息
         :type Authentications: list of Authentication
-        :param InputMappings: 输入映射信息
+        :param InputMappings: 輸入映射訊息
         :type InputMappings: list of InputMapping
-        :param AgentRunningMode: agent运行模式，适用于Windows系统
+        :param AgentRunningMode: agent運作模式，适用于Windows系統
         :type AgentRunningMode: :class:`tencentcloud.batch.v20170312.models.AgentRunningMode`
-        :param Notifications: 通知信息
+        :param Notifications: 通知訊息
         :type Notifications: :class:`tencentcloud.batch.v20170312.models.Notification`
-        :param ActionIfComputeNodeInactive: 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
+        :param ActionIfComputeNodeInactive: 非活躍節點處理策略，預設“RECREATE”，即對于實例創建失敗或異常退還的計算節點，定期重新創建實例資源。
         :type ActionIfComputeNodeInactive: str
         """
         self.EnvName = None
@@ -2557,13 +2557,13 @@ class NamedComputeEnv(AbstractModel):
 
 
 class Notification(AbstractModel):
-    """通知信息
+    """通知訊息
 
     """
 
     def __init__(self):
         """
-        :param TopicName: CMQ主题名字，要求主题名有效且关联订阅
+        :param TopicName: CMQ主題名字，要求主題名有效且關聯訂閱
         :type TopicName: str
         :param EventConfigs: 事件配置
         :type EventConfigs: list of EventConfig
@@ -2583,15 +2583,15 @@ class Notification(AbstractModel):
 
 
 class OutputMapping(AbstractModel):
-    """输出映射
+    """輸出映射
 
     """
 
     def __init__(self):
         """
-        :param SourcePath: 源端路径
+        :param SourcePath: 源端路徑
         :type SourcePath: str
-        :param DestinationPath: 目的端路径
+        :param DestinationPath: 目的端路徑
         :type DestinationPath: str
         """
         self.SourcePath = None
@@ -2604,17 +2604,17 @@ class OutputMapping(AbstractModel):
 
 
 class OutputMappingConfig(AbstractModel):
-    """输出映射配置
+    """輸出映射配置
 
     """
 
     def __init__(self):
         """
-        :param Scene: 存储类型，仅支持COS
+        :param Scene: 儲存類型，僅支援COS
         :type Scene: str
-        :param WorkerNum: 并行worker数量
+        :param WorkerNum: 並行worker數量
         :type WorkerNum: int
-        :param WorkerPartSize: worker分块大小
+        :param WorkerPartSize: worker分塊大小
         :type WorkerPartSize: int
         """
         self.Scene = None
@@ -2629,19 +2629,19 @@ class OutputMappingConfig(AbstractModel):
 
 
 class Placement(AbstractModel):
-    """描述了实例的抽象位置，包括其所在的可用区，所属的项目，宿主机（仅CDH产品可用），母机ip等
+    """描述了實例的抽象位置，包括其所在的可用區，所屬的項目，宿主機（僅CDH産品可用），母機ip等
 
     """
 
     def __init__(self):
         """
-        :param Zone: 实例所属的[可用区](/document/product/213/9452#zone)ID。该参数也可以通过调用  [DescribeZones](/document/api/213/9455) 的返回值中的Zone字段来获取。
+        :param Zone: 實例所屬的[可用區](/document/product/213/9452#zone)ID。該參數也可以通過調用  [DescribeZones](/document/api/213/9455) 的返回值中的Zone欄位來獲取。
         :type Zone: str
-        :param ProjectId: 实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。
+        :param ProjectId: 實例所屬項目ID。該參數可以通過調用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 欄位來獲取。不填爲預設項目。
         :type ProjectId: int
-        :param HostIds: 实例所属的专用宿主机ID列表。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。
+        :param HostIds: 實例所屬的專用宿主機ID清單。如果您有購買專用宿主機并且指定了該參數，則您購買的實例就會随機的佈署在這些專用宿主機上。
         :type HostIds: list of str
-        :param HostIps: 指定母机ip生产子机
+        :param HostIps: 指定母機ip生産子機
         :type HostIps: list of str
         """
         self.Zone = None
@@ -2658,19 +2658,19 @@ class Placement(AbstractModel):
 
 
 class RedirectInfo(AbstractModel):
-    """重定向信息
+    """重定向訊息
 
     """
 
     def __init__(self):
         """
-        :param StdoutRedirectPath: 标准输出重定向路径
+        :param StdoutRedirectPath: 标準輸出重定向路徑
         :type StdoutRedirectPath: str
-        :param StderrRedirectPath: 标准错误重定向路径
+        :param StderrRedirectPath: 标準錯誤重定向路徑
         :type StderrRedirectPath: str
-        :param StdoutRedirectFileName: 标准输出重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+        :param StdoutRedirectFileName: 标準輸出重定向文件名，支援三個占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
         :type StdoutRedirectFileName: str
-        :param StderrRedirectFileName: 标准错误重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+        :param StderrRedirectFileName: 标準錯誤重定向文件名，支援三個占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
         :type StderrRedirectFileName: str
         """
         self.StdoutRedirectPath = None
@@ -2687,19 +2687,19 @@ class RedirectInfo(AbstractModel):
 
 
 class RedirectLocalInfo(AbstractModel):
-    """本地重定向信息
+    """本地重定向訊息
 
     """
 
     def __init__(self):
         """
-        :param StdoutLocalPath: 标准输出重定向本地路径
+        :param StdoutLocalPath: 标準輸出重定向本地路徑
         :type StdoutLocalPath: str
-        :param StderrLocalPath: 标准错误重定向本地路径
+        :param StderrLocalPath: 标準錯誤重定向本地路徑
         :type StderrLocalPath: str
-        :param StdoutLocalFileName: 标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+        :param StdoutLocalFileName: 标準輸出重定向本地文件名，支援三個占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
         :type StdoutLocalFileName: str
-        :param StderrLocalFileName: 标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+        :param StderrLocalFileName: 标準錯誤重定向本地文件名，支援三個占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
         :type StderrLocalFileName: str
         """
         self.StdoutLocalPath = None
@@ -2716,13 +2716,13 @@ class RedirectLocalInfo(AbstractModel):
 
 
 class RetryJobsRequest(AbstractModel):
-    """RetryJobs请求参数结构体
+    """RetryJobs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobIds: 作业ID列表。
+        :param JobIds: 作業ID清單。
         :type JobIds: list of str
         """
         self.JobIds = None
@@ -2733,13 +2733,13 @@ class RetryJobsRequest(AbstractModel):
 
 
 class RetryJobsResponse(AbstractModel):
-    """RetryJobs返回参数结构体
+    """RetryJobs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2750,13 +2750,13 @@ class RetryJobsResponse(AbstractModel):
 
 
 class RunMonitorServiceEnabled(AbstractModel):
-    """描述了 “云监控” 服务相关的信息
+    """描述了 “雲監控” 服務相關的訊息
 
     """
 
     def __init__(self):
         """
-        :param Enabled: 是否开启[云监控](/document/product/248)服务。取值范围：<br><li>TRUE：表示开启云监控服务<br><li>FALSE：表示不开启云监控服务<br><br>默认取值：TRUE。
+        :param Enabled: 是否開啓[雲監控](/document/product/248)服務。取值範圍：<br><li>TRUE：表示開啓雲監控服務<br><li>FALSE：表示不開啓雲監控服務<br><br>預設取值：TRUE。
         :type Enabled: bool
         """
         self.Enabled = None
@@ -2767,13 +2767,13 @@ class RunMonitorServiceEnabled(AbstractModel):
 
 
 class RunSecurityServiceEnabled(AbstractModel):
-    """描述了 “云安全” 服务相关的信息
+    """描述了 “雲安全” 服務相關的訊息
 
     """
 
     def __init__(self):
         """
-        :param Enabled: 是否开启[云安全](/document/product/296)服务。取值范围：<br><li>TRUE：表示开启云安全服务<br><li>FALSE：表示不开启云安全服务<br><br>默认取值：TRUE。
+        :param Enabled: 是否開啓[雲安全](/document/product/296)服務。取值範圍：<br><li>TRUE：表示開啓雲安全服務<br><li>FALSE：表示不開啓雲安全服務<br><br>預設取值：TRUE。
         :type Enabled: bool
         """
         self.Enabled = None
@@ -2784,15 +2784,15 @@ class RunSecurityServiceEnabled(AbstractModel):
 
 
 class SpotMarketOptions(AbstractModel):
-    """竞价相关选项
+    """競價相關選項
 
     """
 
     def __init__(self):
         """
-        :param MaxPrice: 竞价出价
+        :param MaxPrice: 競價出價
         :type MaxPrice: str
-        :param SpotInstanceType: 竞价请求类型，当前仅支持类型：one-time
+        :param SpotInstanceType: 競價請求類型，當前僅支援類型：one-time
         :type SpotInstanceType: str
         """
         self.MaxPrice = None
@@ -2805,20 +2805,20 @@ class SpotMarketOptions(AbstractModel):
 
 
 class StorageBlock(AbstractModel):
-    """HDD的本地存储信息
+    """HDD的本地儲存訊息
 
     """
 
     def __init__(self):
         """
-        :param Type: HDD本地存储类型，值为：LOCAL_PRO.
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Type: HDD本地儲存類型，值爲：LOCAL_PRO.
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Type: str
-        :param MinSize: HDD本地存储的最小容量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MinSize: HDD本地儲存的最小容量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MinSize: int
-        :param MaxSize: HDD本地存储的最大容量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MaxSize: HDD本地儲存的最大容量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxSize: int
         """
         self.Type = None
@@ -2833,17 +2833,17 @@ class StorageBlock(AbstractModel):
 
 
 class SubmitJobRequest(AbstractModel):
-    """SubmitJob请求参数结构体
+    """SubmitJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Placement: 作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
+        :param Placement: 作業所提交的位置訊息。通過該參數可以指定作業關聯CVM所屬可用區等訊息。
         :type Placement: :class:`tencentcloud.batch.v20170312.models.Placement`
-        :param Job: 作业信息
+        :param Job: 作業訊息
         :type Job: :class:`tencentcloud.batch.v20170312.models.Job`
-        :param ClientToken: 用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+        :param ClientToken: 用于保證請求幂等性的字串。該字串由用戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
         :type ClientToken: str
         """
         self.Placement = None
@@ -2862,15 +2862,15 @@ class SubmitJobRequest(AbstractModel):
 
 
 class SubmitJobResponse(AbstractModel):
-    """SubmitJob返回参数结构体
+    """SubmitJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 当通过本接口来提交作业时会返回该参数，表示一个作业ID。返回作业ID列表并不代表作业解析/运行成功，可根据 DescribeJob 接口查询其状态。
+        :param JobId: 當通過本介面來提交作業時會返回該參數，表示一個作業ID。返回作業ID清單并不代表作業解析/運作成功，可根據 DescribeJob 介面查詢其狀态。
         :type JobId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.JobId = None
@@ -2883,17 +2883,17 @@ class SubmitJobResponse(AbstractModel):
 
 
 class SystemDisk(AbstractModel):
-    """描述了操作系统所在块设备即系统盘的信息
+    """描述了作業系統所在塊設備即系統盤的訊息
 
     """
 
     def __init__(self):
         """
-        :param DiskType: 系统盘类型。系统盘类型限制详见[CVM实例配置](/document/product/213/2177)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><br>默认取值：CLOUD_BASIC。
+        :param DiskType: 系統盤類型。系統盤類型限制詳見[CVM實例配置](/document/product/213/2177)。取值範圍：<br><li>LOCAL_BASIC：本地硬碟<br><li>LOCAL_SSD：本地SSD硬碟<br><li>CLOUD_BASIC：普通雲硬碟<br><li>CLOUD_SSD：SSD雲硬碟<br><li>CLOUD_PREMIUM：高效能雲硬碟<br><br>預設取值：CLOUD_BASIC。
         :type DiskType: str
-        :param DiskId: 系统盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。
+        :param DiskId: 系統盤ID。LOCAL_BASIC 和 LOCAL_SSD 類型沒有ID。暫時不支援該參數。
         :type DiskId: str
-        :param DiskSize: 系统盘大小，单位：GB。默认值为 50
+        :param DiskSize: 系統盤大小，單位：GB。預設值爲 50
         :type DiskSize: int
         """
         self.DiskType = None
@@ -2908,45 +2908,45 @@ class SystemDisk(AbstractModel):
 
 
 class Task(AbstractModel):
-    """任务
+    """任務
 
     """
 
     def __init__(self):
         """
-        :param Application: 应用程序信息
+        :param Application: 應用程式訊息
         :type Application: :class:`tencentcloud.batch.v20170312.models.Application`
-        :param TaskName: 任务名称，在一个作业内部唯一
+        :param TaskName: 任務名稱，在一個作業内部唯一
         :type TaskName: str
-        :param TaskInstanceNum: 任务实例运行个数
+        :param TaskInstanceNum: 任務實例運作個數
         :type TaskInstanceNum: int
-        :param ComputeEnv: 运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+        :param ComputeEnv: 運作環境訊息，ComputeEnv 和 EnvId 必須指定一個（且只有一個）參數。
         :type ComputeEnv: :class:`tencentcloud.batch.v20170312.models.AnonymousComputeEnv`
-        :param EnvId: 计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+        :param EnvId: 計算環境ID，ComputeEnv 和 EnvId 必須指定一個（且只有一個）參數。
         :type EnvId: str
-        :param RedirectInfo: 重定向信息
+        :param RedirectInfo: 重定向訊息
         :type RedirectInfo: :class:`tencentcloud.batch.v20170312.models.RedirectInfo`
-        :param RedirectLocalInfo: 重定向本地信息
+        :param RedirectLocalInfo: 重定向本地訊息
         :type RedirectLocalInfo: :class:`tencentcloud.batch.v20170312.models.RedirectLocalInfo`
-        :param InputMappings: 输入映射
+        :param InputMappings: 輸入映射
         :type InputMappings: list of InputMapping
-        :param OutputMappings: 输出映射
+        :param OutputMappings: 輸出映射
         :type OutputMappings: list of OutputMapping
-        :param OutputMappingConfigs: 输出映射配置
+        :param OutputMappingConfigs: 輸出映射配置
         :type OutputMappingConfigs: list of OutputMappingConfig
-        :param EnvVars: 自定义环境变量
+        :param EnvVars: 自定義環境變量
         :type EnvVars: list of EnvVar
-        :param Authentications: 授权信息
+        :param Authentications: 授權訊息
         :type Authentications: list of Authentication
-        :param FailedAction: TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+        :param FailedAction: TaskInstance失敗後處理方式，取值包括TERMINATE（預設）、INTERRUPT、FAST_INTERRUPT。
         :type FailedAction: str
-        :param MaxRetryCount: 任务失败后的最大重试次数，默认为0
+        :param MaxRetryCount: 任務失敗後的最大重試次數，預設爲0
         :type MaxRetryCount: int
-        :param Timeout: 任务启动后的超时时间，单位秒，默认为86400秒
+        :param Timeout: 任務啓動後的超時時間，單位秒，預設爲86400秒
         :type Timeout: int
-        :param MaxConcurrentNum: 任务最大并发数限制，默认没有限制。
+        :param MaxConcurrentNum: 任務最大并發數限制，預設沒有限制。
         :type MaxConcurrentNum: int
-        :param RestartComputeNode: 任务完成后，重启计算节点。适用于指定计算环境执行任务。
+        :param RestartComputeNode: 任務完成後，重啓計算節點。适用于指定計算環境執行任務。
         :type RestartComputeNode: bool
         """
         self.Application = None
@@ -3022,31 +3022,31 @@ class Task(AbstractModel):
 
 
 class TaskInstanceLog(AbstractModel):
-    """任务实例日志详情。
+    """任務實例日志詳情。
 
     """
 
     def __init__(self):
         """
-        :param TaskInstanceIndex: 任务实例
+        :param TaskInstanceIndex: 任務實例
         :type TaskInstanceIndex: int
-        :param StdoutLog: 标准输出日志（Base64编码）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StdoutLog: 标準輸出日志（Base64編碼）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StdoutLog: str
-        :param StderrLog: 标准错误日志（Base64编码）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StderrLog: 标準錯誤日志（Base64編碼）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StderrLog: str
-        :param StdoutRedirectPath: 标准输出重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StdoutRedirectPath: 标準輸出重定向路徑
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StdoutRedirectPath: str
-        :param StderrRedirectPath: 标准错误重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StderrRedirectPath: 标準錯誤重定向路徑
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StderrRedirectPath: str
-        :param StdoutRedirectFileName: 标准输出重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StdoutRedirectFileName: 标準輸出重定向文件名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StdoutRedirectFileName: str
-        :param StderrRedirectFileName: 标准错误重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StderrRedirectFileName: 标準錯誤重定向文件名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StderrRedirectFileName: str
         """
         self.TaskInstanceIndex = None
@@ -3069,27 +3069,27 @@ class TaskInstanceLog(AbstractModel):
 
 
 class TaskInstanceMetrics(AbstractModel):
-    """任务实例统计指标
+    """任務實例統計指标
 
     """
 
     def __init__(self):
         """
-        :param SubmittedCount: Submitted个数
+        :param SubmittedCount: Submitted個數
         :type SubmittedCount: int
-        :param PendingCount: Pending个数
+        :param PendingCount: Pending個數
         :type PendingCount: int
-        :param RunnableCount: Runnable个数
+        :param RunnableCount: Runnable個數
         :type RunnableCount: int
-        :param StartingCount: Starting个数
+        :param StartingCount: Starting個數
         :type StartingCount: int
-        :param RunningCount: Running个数
+        :param RunningCount: Running個數
         :type RunningCount: int
-        :param SucceedCount: Succeed个数
+        :param SucceedCount: Succeed個數
         :type SucceedCount: int
-        :param FailedInterruptedCount: FailedInterrupted个数
+        :param FailedInterruptedCount: FailedInterrupted個數
         :type FailedInterruptedCount: int
-        :param FailedCount: Failed个数
+        :param FailedCount: Failed個數
         :type FailedCount: int
         """
         self.SubmittedCount = None
@@ -3114,38 +3114,38 @@ class TaskInstanceMetrics(AbstractModel):
 
 
 class TaskInstanceView(AbstractModel):
-    """任务实例视图信息
+    """任務實例視圖訊息
 
     """
 
     def __init__(self):
         """
-        :param TaskInstanceIndex: 任务实例索引
+        :param TaskInstanceIndex: 任務實例索引
         :type TaskInstanceIndex: int
-        :param TaskInstanceState: 任务实例状态
+        :param TaskInstanceState: 任務實例狀态
         :type TaskInstanceState: str
-        :param ExitCode: 应用程序执行结束的exit code
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ExitCode: 應用程式執行結束的exit code
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ExitCode: int
-        :param StateReason: 任务实例状态原因，任务实例失败时，会记录失败原因
+        :param StateReason: 任務實例狀态原因，任務實例失敗時，會記錄失敗原因
         :type StateReason: str
-        :param ComputeNodeInstanceId: 任务实例运行时所在计算节点（例如CVM）的InstanceId。任务实例未运行或者完结时，本字段为空。任务实例重试时，本字段会随之变化
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ComputeNodeInstanceId: 任務實例運作時所在計算節點（例如CVM）的InstanceId。任務實例未運作或者完結時，本欄位爲空。任務實例重試時，本欄位會随之變化
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ComputeNodeInstanceId: str
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param LaunchTime: 启动时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LaunchTime: 啓動時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LaunchTime: str
-        :param RunningTime: 开始运行时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RunningTime: 開始運作時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RunningTime: str
-        :param EndTime: 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EndTime: 結束時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EndTime: str
-        :param RedirectInfo: 重定向信息
+        :param RedirectInfo: 重定向訊息
         :type RedirectInfo: :class:`tencentcloud.batch.v20170312.models.RedirectInfo`
-        :param StateDetailedReason: 任务实例状态原因详情，任务实例失败时，会记录失败原因
+        :param StateDetailedReason: 任務實例狀态原因詳情，任務實例失敗時，會記錄失敗原因
         :type StateDetailedReason: str
         """
         self.TaskInstanceIndex = None
@@ -3178,27 +3178,27 @@ class TaskInstanceView(AbstractModel):
 
 
 class TaskMetrics(AbstractModel):
-    """任务统计指标
+    """任務統計指标
 
     """
 
     def __init__(self):
         """
-        :param SubmittedCount: Submitted个数
+        :param SubmittedCount: Submitted個數
         :type SubmittedCount: int
-        :param PendingCount: Pending个数
+        :param PendingCount: Pending個數
         :type PendingCount: int
-        :param RunnableCount: Runnable个数
+        :param RunnableCount: Runnable個數
         :type RunnableCount: int
-        :param StartingCount: Starting个数
+        :param StartingCount: Starting個數
         :type StartingCount: int
-        :param RunningCount: Running个数
+        :param RunningCount: Running個數
         :type RunningCount: int
-        :param SucceedCount: Succeed个数
+        :param SucceedCount: Succeed個數
         :type SucceedCount: int
-        :param FailedInterruptedCount: FailedInterrupted个数
+        :param FailedInterruptedCount: FailedInterrupted個數
         :type FailedInterruptedCount: int
-        :param FailedCount: Failed个数
+        :param FailedCount: Failed個數
         :type FailedCount: int
         """
         self.SubmittedCount = None
@@ -3223,21 +3223,21 @@ class TaskMetrics(AbstractModel):
 
 
 class TaskTemplateView(AbstractModel):
-    """任务模板信息
+    """任務範本訊息
 
     """
 
     def __init__(self):
         """
-        :param TaskTemplateId: 任务模板ID
+        :param TaskTemplateId: 任務範本ID
         :type TaskTemplateId: str
-        :param TaskTemplateName: 任务模板名称
+        :param TaskTemplateName: 任務範本名稱
         :type TaskTemplateName: str
-        :param TaskTemplateDescription: 任务模板描述
+        :param TaskTemplateDescription: 任務範本描述
         :type TaskTemplateDescription: str
-        :param TaskTemplateInfo: 任务模板信息
+        :param TaskTemplateInfo: 任務範本訊息
         :type TaskTemplateInfo: :class:`tencentcloud.batch.v20170312.models.Task`
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
         """
         self.TaskTemplateId = None
@@ -3258,20 +3258,20 @@ class TaskTemplateView(AbstractModel):
 
 
 class TaskView(AbstractModel):
-    """任务视图信息
+    """任務視圖訊息
 
     """
 
     def __init__(self):
         """
-        :param TaskName: 任务名称
+        :param TaskName: 任務名稱
         :type TaskName: str
-        :param TaskState: 任务状态
+        :param TaskState: 任務狀态
         :type TaskState: str
-        :param CreateTime: 开始时间
+        :param CreateTime: 開始時間
         :type CreateTime: str
-        :param EndTime: 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EndTime: 結束時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EndTime: str
         """
         self.TaskName = None
@@ -3288,15 +3288,15 @@ class TaskView(AbstractModel):
 
 
 class TerminateComputeNodeRequest(AbstractModel):
-    """TerminateComputeNode请求参数结构体
+    """TerminateComputeNode請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 计算环境ID
+        :param EnvId: 計算環境ID
         :type EnvId: str
-        :param ComputeNodeId: 计算节点ID
+        :param ComputeNodeId: 計算節點ID
         :type ComputeNodeId: str
         """
         self.EnvId = None
@@ -3309,13 +3309,13 @@ class TerminateComputeNodeRequest(AbstractModel):
 
 
 class TerminateComputeNodeResponse(AbstractModel):
-    """TerminateComputeNode返回参数结构体
+    """TerminateComputeNode返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3326,15 +3326,15 @@ class TerminateComputeNodeResponse(AbstractModel):
 
 
 class TerminateComputeNodesRequest(AbstractModel):
-    """TerminateComputeNodes请求参数结构体
+    """TerminateComputeNodes請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 计算环境ID
+        :param EnvId: 計算環境ID
         :type EnvId: str
-        :param ComputeNodeIds: 计算节点ID列表
+        :param ComputeNodeIds: 計算節點ID清單
         :type ComputeNodeIds: list of str
         """
         self.EnvId = None
@@ -3347,13 +3347,13 @@ class TerminateComputeNodesRequest(AbstractModel):
 
 
 class TerminateComputeNodesResponse(AbstractModel):
-    """TerminateComputeNodes返回参数结构体
+    """TerminateComputeNodes返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3364,13 +3364,13 @@ class TerminateComputeNodesResponse(AbstractModel):
 
 
 class TerminateJobRequest(AbstractModel):
-    """TerminateJob请求参数结构体
+    """TerminateJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 作业ID
+        :param JobId: 作業ID
         :type JobId: str
         """
         self.JobId = None
@@ -3381,13 +3381,13 @@ class TerminateJobRequest(AbstractModel):
 
 
 class TerminateJobResponse(AbstractModel):
-    """TerminateJob返回参数结构体
+    """TerminateJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3398,17 +3398,17 @@ class TerminateJobResponse(AbstractModel):
 
 
 class TerminateTaskInstanceRequest(AbstractModel):
-    """TerminateTaskInstance请求参数结构体
+    """TerminateTaskInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 作业ID
+        :param JobId: 作業ID
         :type JobId: str
-        :param TaskName: 任务名称
+        :param TaskName: 任務名稱
         :type TaskName: str
-        :param TaskInstanceIndex: 任务实例索引
+        :param TaskInstanceIndex: 任務實例索引
         :type TaskInstanceIndex: int
         """
         self.JobId = None
@@ -3423,13 +3423,13 @@ class TerminateTaskInstanceRequest(AbstractModel):
 
 
 class TerminateTaskInstanceResponse(AbstractModel):
-    """TerminateTaskInstance返回参数结构体
+    """TerminateTaskInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3440,19 +3440,19 @@ class TerminateTaskInstanceResponse(AbstractModel):
 
 
 class VirtualPrivateCloud(AbstractModel):
-    """描述了VPC相关信息，包括子网，IP信息等
+    """描述了VPC相關訊息，包括子網，IP訊息等
 
     """
 
     def __init__(self):
         """
-        :param VpcId: 私有网络ID，形如`vpc-xxx`。有效的VpcId可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc?rid=1)查询；也可以调用接口 [DescribeVpcEx](/document/api/215/1372) ，从接口返回中的`unVpcId`字段获取。若在创建子机时VpcId与SubnetId同时传入`DEFAULT`，则强制使用默认vpc网络。
+        :param VpcId: 私有網絡ID，形如`vpc-xxx`。有效的VpcId可通過登入[控制台](https://console.cloud.tencent.com/vpc/vpc?rid=1)查詢；也可以調用介面 [DescribeVpcEx](/document/api/215/1372) ，從介面返回中的`unVpcId`欄位獲取。若在創建子機時VpcId與SubnetId同時傳入`DEFAULT`，則強制使用預設vpc網絡。
         :type VpcId: str
-        :param SubnetId: 私有网络子网ID，形如`subnet-xxx`。有效的私有网络子网ID可通过登录[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口  [DescribeSubnets](/document/api/215/15784) ，从接口返回中的`unSubnetId`字段获取。若在创建子机时SubnetId与VpcId同时传入`DEFAULT`，则强制使用默认vpc网络。
+        :param SubnetId: 私有網絡子網ID，形如`subnet-xxx`。有效的私有網絡子網ID可通過登入[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查詢；也可以調用介面  [DescribeSubnets](/document/api/215/15784) ，從介面返回中的`unSubnetId`欄位獲取。若在創建子機時SubnetId與VpcId同時傳入`DEFAULT`，則強制使用預設vpc網絡。
         :type SubnetId: str
-        :param AsVpcGateway: 是否用作公网网关。公网网关只有在实例拥有公网IP以及处于私有网络下时才能正常使用。取值范围：<br><li>TRUE：表示用作公网网关<br><li>FALSE：表示不用作公网网关<br><br>默认取值：FALSE。
+        :param AsVpcGateway: 是否用作公網閘道。公網閘道只有在實例擁有公網IP以及處于私有網絡下時才能正常使用。取值範圍：<br><li>TRUE：表示用作公網閘道<br><li>FALSE：表示不用作公網閘道<br><br>預設取值：FALSE。
         :type AsVpcGateway: bool
-        :param PrivateIpAddresses: 私有网络子网 IP 数组，在创建实例、修改实例vpc属性操作中可使用此参数。当前仅批量创建多台实例时支持传入相同子网的多个 IP。
+        :param PrivateIpAddresses: 私有網絡子網 IP 數組，在創建實例、修改實例vpc屬性操作中可使用此參數。當前僅批次創建多台實例時支援傳入相同子網的多個 IP。
         :type PrivateIpAddresses: list of str
         """
         self.VpcId = None

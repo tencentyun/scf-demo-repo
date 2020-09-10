@@ -8,7 +8,7 @@ inputs:
   src: ./
   description: >-
     This demo will backup the COS bucket object to another bucket when you
-    upload the file. 此示例使用COS作为触发器，在用户上传文件到指定bucket时，将该文件复制到另一个用于备份的bucket存储
+    upload the file. 此範例使用COS作爲觸發器，在用戶上傳文件到指定bucket時，将該文件複制到另一個用于備份的bucket儲存
   handler: sync_backup.main_handler
   runtime: Php7
   namespace: default
@@ -16,7 +16,7 @@ inputs:
   memorySize: 128
   timeout: 10
   events:
-     - cos: # cos触发器
+     - cos: # cos觸發器
         name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
         parameters:
           bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
@@ -25,5 +25,4 @@ inputs:
             suffix: 
           events: cos:ObjectCreated:*
           enable: true
-
 

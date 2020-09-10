@@ -9,11 +9,11 @@
 #     and can be modified to fill in the specified domain name list if necessary.                                               #
 # 2. This function needs to configure a timing trigger with a trigger period of 1 hour.                                         #
 # -------------------------------------------------------------------------------------                                         #
-# 1.    在第143行的config变量中，填写对应的配置信息。                                                                                 #
-#     secret_id、secret_key、cos_region、cos_bucket、scf_region等字段需填写；                                                       #
-#     scf_function 即存储函数名：cdn-save-log-into-cos，函数地域即函数所在地域；                                                       #
-#     cdn_host 的默认值为空数组（即保存账号下所有域名的日志），如有需要可以修改填入指定域名列表。                                             #
-# 2. 该函数需要配置定时触发器，触发周期为1小时。                                                                                       #
+# 1.    在第143行的config變量中，填寫對應的配置訊息。                                                                                 #
+#     secret_id、secret_key、cos_region、cos_bucket、scf_region等欄位需填寫；                                                       #
+#     scf_function 即儲存函數名：cdn-save-log-into-cos，函數地域即函數所在地域；                                                       #
+#     cdn_host 的預設值爲空數組（即保存賬号下所有域名的日志），如有需要可以修改填入指定域名清單。                                             #
+# 2. 該函數需要配置定時觸發器，觸發週期爲1小時。                                                                                       #
 #################################################################################################################################
 
 import re
@@ -50,7 +50,7 @@ class Job:
         self.cos_path = config['cos_path']
 
     def get_cdn_log_urls(self, host):
-        '''Getting the log download link for CDN （获取CDN的日志下载链接）'''
+        '''Getting the log download link for CDN （獲取CDN的日志下載連結）'''
         CDN_LOG_STABLE_HOURS = 12+1
         CDN_LOG_SAVE_HOURS   = 1
         now = datetime.datetime.now()
@@ -76,7 +76,7 @@ class Job:
         return urls
 
     def get_cdn_hosts(self):
-        '''Getting a list of all domain names under the account （获取账号下全部域名列表）'''
+        '''Getting a list of all domain names under the account （獲取賬号下全部域名清單）'''
         action = "DescribeCdnHosts"
         end = datetime.datetime.now()
         start = end - datetime.timedelta(days=1)
@@ -95,8 +95,8 @@ class Job:
     def get_cos_key(self, url):
         '''
         Parsing the URL to generate the storage path of COS format. The URL format is: /day/hour/dayhour-host.gz
-        解析URL，生成COS上的存储路径格式
-        URL格式为： /day/hour/dayhour-host.gz
+        解析URL，生成COS上的儲存路徑格式
+        URL格式爲： /day/hour/dayhour-host.gz
         '''
         parts = urlparse.urlparse(url)
         r = r'/(?P<day>[^/]*)/(?P<hour>[^/]*)/(?P<filename>[^-]*-(?P<host>[^/]*).gz)'
@@ -112,12 +112,12 @@ class Job:
         event.update({"url": url, "cos_key": self.get_cos_key(url) })
         action = "Invoke"
         action_params = {
-            'InvocationType': "Event", # asynchronous 异步
+            'InvocationType': "Event", # asynchronous 異步
             'FunctionName': self.config['scf_function'],
             'ClientContext': json.dumps(event),
         }
 
-        # Calling the interface, initiating the request, and printing the returned result. 调用接口，发起请求，并打印返回结果
+        # Calling the interface, initiating the request, and printing the returned result. 調用介面，發起請求，并列印返回結果
         try:
             ret = self.scf_client.call(action, action_params)
             print(json.loads(ret)["Response"]["Result"]["RetMsg"])
@@ -144,17 +144,17 @@ def run_app():
         'secret_id':    'xxxxx',
         'secret_key':   'xxxxx',
 
-        # The region of COS bucket. COS存储桶的区域
+        # The region of COS bucket. COS儲存桶的區域
         'cos_region':   'ap-xxxx',
         'cos_bucket':   'xxxxxxx-1251002854',
         'cos_path':     '/cdnlog/%(host)s/%(day)s/%(filename)s',
 
-        # SCF configuration, region and function names need to be consistent with the storage function. SCF配置，地域和函数名字需要和存储函数保持一致
+        # SCF configuration, region and function names need to be consistent with the storage function. SCF配置，地域和函數名字需要和儲存函數保持一緻
         'scf_region':   'ap-xxxx', 
         'scf_function': 'cdn-save-log-into-cos',
 
         # CDN configuration. CDN配置
-        # If the domain name list is empty, it means to synchronize the logs of all domain names under the entire account. 如果域名列表为空，则表示同步整个账号下全部域名的日志
+        # If the domain name list is empty, it means to synchronize the logs of all domain names under the entire account. 如果域名清單爲空，則表示同步整個賬号下全部域名的日志
         'cdn_host':     [],
         #'cdn_host':     ['tx-cdn.talebook.org','js.talebook.org'],
     }

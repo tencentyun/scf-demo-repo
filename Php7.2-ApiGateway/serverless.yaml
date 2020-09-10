@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: API_GW_Basic_Demo
   src: ./
-  description: 本示例演示 API 网关使用的基础方法，主要展示在集成响应下（通过云函数控制台创建的API网关触发器默认启用集成响应），怎样构造返回值
+  description: 本範例演示 API 閘道使用的基礎方法，主要展示在內建響應下（通過雲函數控制台創建的API閘道觸發器預設啓用內建響應），怎樣構造返回值
   handler: apigw.main_handler
   runtime: Php7
   namespace: default
@@ -14,7 +14,7 @@ inputs:
   memorySize: 128
   timeout: 3
   events:
-     - apigw: # api网关触发器
+     - apigw: # api閘道觸發器
         name: serverless
         serviceId: # input API gateway serviceId
         parameters:
@@ -27,4 +27,3 @@ inputs:
               method: GET
               function:
                 isIntegratedResponse: TRUE
-

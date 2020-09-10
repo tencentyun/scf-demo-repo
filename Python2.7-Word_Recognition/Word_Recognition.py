@@ -21,8 +21,8 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
-bucket_region = os.environ.get('bucket_region') # Adding the environment variable 'bucket_region' to the function configuration and fill in the area where your COS Bucket is located.请在函数配置中添加环境变量bucket_region，并填入您COS Bucket所在的地域
-bucket_upload = os.environ.get('bucket_upload')  # Adding the environment variable 'bucket_upload' to the function configuration and fill in the bucket name which is used to storage pictures. 请在函数配置中添加环境变量bucket_upload，并填入您要用来存放图片的Bucket名
+bucket_region = os.environ.get('bucket_region') # Adding the environment variable 'bucket_region' to the function configuration and fill in the area where your COS Bucket is located.請在函數配置中添加環境變量bucket_region，并填入您COS Bucket所在的地域
+bucket_upload = os.environ.get('bucket_upload')  # Adding the environment variable 'bucket_upload' to the function configuration and fill in the bucket name which is used to storage pictures. 請在函數配置中添加環境變量bucket_upload，并填入您要用來存放圖片的Bucket名
 
 def delete_local_file(src):
     logger.info("delete files and folders")
@@ -64,8 +64,8 @@ def main_handler(event, context):
         wfile.write(base64.b64decode(event['body']))
 
     # start to upload to cos
-    secret_id = os.environ.get('TENCENTCLOUD_SECRETID')      # Using the secterId in environment variables. 使用环境变量中的 secretId
-    secret_key = os.environ.get('TENCENTCLOUD_SECRETKEY')    # Using the secretKey in environment variables. 使用环境变量中的 secretKey
+    secret_id = os.environ.get('TENCENTCLOUD_SECRETID')      # Using the secterId in environment variables. 使用環境變量中的 secretId
+    secret_key = os.environ.get('TENCENTCLOUD_SECRETKEY')    # Using the secretKey in environment variables. 使用環境變量中的 secretKey
     token = os.environ.get('TENCENTCLOUD_SESSIONTOKEN') 
     config = CosConfig(Region=bucket_region, SecretId=secret_id, SecretKey=secret_key, Token=token,)
     cos_client = CosS3Client(config)

@@ -258,4 +258,3 @@ class DummyConnectionPool(ConnectionPool):
         pass
     mark_dead = mark_live = resurrect = _noop
 
-

@@ -26,7 +26,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def CallDeviceActionAsync(self, request):
-        """提供给用户异步调用设备动作的能力
+        """提供給用戶異步調用設備動作的能力
 
         :param request: Request instance for CallDeviceActionAsync.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.CallDeviceActionAsyncRequest`
@@ -54,7 +54,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def CallDeviceActionSync(self, request):
-        """为用户提供同步调用设备动作的能力。
+        """爲用戶提供同步調用設備動作的能力。
 
         :param request: Request instance for CallDeviceActionSync.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.CallDeviceActionSyncRequest`
@@ -82,7 +82,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def ControlDeviceData(self, request):
-        """根据设备产品ID、设备名称，设置控制设备的属性数据。
+        """根據設備産品ID、設備名稱，設置控制設備的屬性數據。
 
         :param request: Request instance for ControlDeviceData.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.ControlDeviceDataRequest`
@@ -110,7 +110,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def CreateDevice(self, request):
-        """创建设备
+        """創建設備
 
         :param request: Request instance for CreateDevice.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.CreateDeviceRequest`
@@ -138,7 +138,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def CreateProject(self, request):
-        """为用户提供新建项目的能力，用于集中管理产品和应用。
+        """爲用戶提供新建項目的能力，用于集中管理産品和應用。
 
         :param request: Request instance for CreateProject.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.CreateProjectRequest`
@@ -166,7 +166,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def CreateStudioProduct(self, request):
-        """为用户提供新建产品的能力，用于管理用户的设备
+        """爲用戶提供新建産品的能力，用于管理用戶的設備
 
         :param request: Request instance for CreateStudioProduct.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.CreateStudioProductRequest`
@@ -194,7 +194,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def DeleteDevice(self, request):
-        """删除设备
+        """删除設備
 
         :param request: Request instance for DeleteDevice.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DeleteDeviceRequest`
@@ -222,7 +222,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def DeleteProject(self, request):
-        """提供删除某个项目的能力
+        """提供删除某個項目的能力
 
         :param request: Request instance for DeleteProject.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DeleteProjectRequest`
@@ -250,7 +250,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def DeleteStudioProduct(self, request):
-        """提供删除某个项目下产品的能力
+        """提供删除某個項目下産品的能力
 
         :param request: Request instance for DeleteStudioProduct.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DeleteStudioProductRequest`
@@ -278,7 +278,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def DescribeDevice(self, request):
-        """用于查看某个设备的详细信息
+        """用于檢視某個設備的詳細訊息
 
         :param request: Request instance for DescribeDevice.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeDeviceRequest`
@@ -306,7 +306,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def DescribeDeviceData(self, request):
-        """根据设备产品ID、设备名称，获取设备上报的属性数据。
+        """根據設備産品ID、設備名稱，獲取設備上報的屬性數據。
 
         :param request: Request instance for DescribeDeviceData.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeDeviceDataRequest`
@@ -334,7 +334,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def DescribeDeviceDataHistory(self, request):
-        """获取设备在指定时间范围内上报的历史数据。
+        """獲取設備在指定時間範圍内上報的曆史數據。
 
         :param request: Request instance for DescribeDeviceDataHistory.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeDeviceDataHistoryRequest`
@@ -362,7 +362,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def DescribeModelDefinition(self, request):
-        """查询产品配置的数据模板信息
+        """查詢産品配置的數據範本訊息
 
         :param request: Request instance for DescribeModelDefinition.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeModelDefinitionRequest`
@@ -390,7 +390,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def DescribeProject(self, request):
-        """查询项目详情
+        """查詢項目詳情
 
         :param request: Request instance for DescribeProject.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeProjectRequest`
@@ -418,7 +418,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def DescribeStudioProduct(self, request):
-        """提供查看茶品详细信息的能力，包括产品的ID、数据协议、认证类型等重要参数
+        """提供檢視茶品詳細訊息的能力，包括産品的ID、數據協議、認證類型等重要參數
 
         :param request: Request instance for DescribeStudioProduct.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeStudioProductRequest`
@@ -446,7 +446,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def GetDeviceList(self, request):
-        """用于查询某个产品下的设备列表
+        """用于查詢某個産品下的設備清單
 
         :param request: Request instance for GetDeviceList.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.GetDeviceListRequest`
@@ -474,7 +474,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def GetProjectList(self, request):
-        """提供查询用户所创建的项目列表查询功能。
+        """提供查詢用戶所創建的項目清單查詢功能。
 
         :param request: Request instance for GetProjectList.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.GetProjectListRequest`
@@ -502,7 +502,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def GetStudioProductList(self, request):
-        """提供查询某个项目下所有产品信息的能力。
+        """提供查詢某個項目下所有産品訊息的能力。
 
         :param request: Request instance for GetStudioProductList.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.GetStudioProductListRequest`
@@ -530,7 +530,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def ListEventHistory(self, request):
-        """获取设备的历史事件
+        """獲取設備的曆史事件
 
         :param request: Request instance for ListEventHistory.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.ListEventHistoryRequest`
@@ -558,7 +558,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def ModifyModelDefinition(self, request):
-        """提供修改产品的数据模板的能力
+        """提供修改産品的數據範本的能力
 
         :param request: Request instance for ModifyModelDefinition.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.ModifyModelDefinitionRequest`
@@ -586,7 +586,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def ModifyProject(self, request):
-        """修改项目
+        """修改項目
 
         :param request: Request instance for ModifyProject.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.ModifyProjectRequest`
@@ -614,7 +614,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def ModifyStudioProduct(self, request):
-        """提供修改产品的名称和描述等信息的能力，对于已发布产品不允许进行修改。
+        """提供修改産品的名稱和描述等訊息的能力，對于已發布産品不允許進行修改。
 
         :param request: Request instance for ModifyStudioProduct.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.ModifyStudioProductRequest`
@@ -642,7 +642,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def ReleaseStudioProduct(self, request):
-        """产品开发完成并测试通过后，通过发布产品将产品设置为发布状态
+        """産品開發完成并測試通過後，通過發布産品将産品設置爲發布狀态
 
         :param request: Request instance for ReleaseStudioProduct.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.ReleaseStudioProductRequest`
@@ -670,7 +670,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def SearchStudioProduct(self, request):
-        """提供根据产品名称查找产品的能力
+        """提供根據産品名稱查找産品的能力
 
         :param request: Request instance for SearchStudioProduct.
         :type request: :class:`tencentcloud.iotexplorer.v20190423.models.SearchStudioProductRequest`

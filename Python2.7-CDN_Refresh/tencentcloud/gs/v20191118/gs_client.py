@@ -26,7 +26,7 @@ class GsClient(AbstractClient):
 
 
     def CreateSession(self, request):
-        """创建会话
+        """創建會話
 
         :param request: Request instance for CreateSession.
         :type request: :class:`tencentcloud.gs.v20191118.models.CreateSessionRequest`
@@ -54,7 +54,7 @@ class GsClient(AbstractClient):
 
 
     def DescribeWorkers(self, request):
-        """查询空闲机器数量
+        """查詢空閑機器數量
 
         :param request: Request instance for DescribeWorkers.
         :type request: :class:`tencentcloud.gs.v20191118.models.DescribeWorkersRequest`
@@ -82,7 +82,7 @@ class GsClient(AbstractClient):
 
 
     def DescribeWorkersInfo(self, request):
-        """获取机器信息
+        """獲取機器訊息
 
         :param request: Request instance for DescribeWorkersInfo.
         :type request: :class:`tencentcloud.gs.v20191118.models.DescribeWorkersInfoRequest`
@@ -110,7 +110,7 @@ class GsClient(AbstractClient):
 
 
     def EnterQueue(self, request):
-        """进入排队锁定机器
+        """進入排隊鎖定機器
 
         :param request: Request instance for EnterQueue.
         :type request: :class:`tencentcloud.gs.v20191118.models.EnterQueueRequest`
@@ -138,7 +138,7 @@ class GsClient(AbstractClient):
 
 
     def ModifyWorkers(self, request):
-        """修改机器信息
+        """修改機器訊息
 
         :param request: Request instance for ModifyWorkers.
         :type request: :class:`tencentcloud.gs.v20191118.models.ModifyWorkersRequest`
@@ -166,7 +166,7 @@ class GsClient(AbstractClient):
 
 
     def QuitQueue(self, request):
-        """退出排队
+        """登出排隊
 
         :param request: Request instance for QuitQueue.
         :type request: :class:`tencentcloud.gs.v20191118.models.QuitQueueRequest`
@@ -194,7 +194,7 @@ class GsClient(AbstractClient):
 
 
     def StopGame(self, request):
-        """强制退出游戏
+        """強制登出遊戲
 
         :param request: Request instance for StopGame.
         :type request: :class:`tencentcloud.gs.v20191118.models.StopGameRequest`
@@ -222,7 +222,7 @@ class GsClient(AbstractClient):
 
 
     def TrylockWorker(self, request):
-        """尝试锁定机器
+        """嘗試鎖定機器
 
         :param request: Request instance for TrylockWorker.
         :type request: :class:`tencentcloud.gs.v20191118.models.TrylockWorkerRequest`

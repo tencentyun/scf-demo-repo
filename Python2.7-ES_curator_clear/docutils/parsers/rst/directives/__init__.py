@@ -415,4 +415,3 @@ def value_or(values, other):
         else:
             return other(argument)
     return auto_or_other
-

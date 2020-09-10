@@ -167,4 +167,3 @@ class ClusterClient(NamespacedClient):
         """
         return self.transport.perform_request('GET',
             '/_cluster/allocation/explain', params=params, body=body)
-

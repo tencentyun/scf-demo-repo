@@ -26,11 +26,11 @@ class LiveClient(AbstractClient):
 
 
     def AddDelayLiveStream(self, request):
-        """对流设置延播时间
-        注意：如果在推流前设置延播，需要提前5分钟设置。
-        目前该接口只支持流粒度的，域名及应用粒度功能支持当前开发中。
+        """對流設置延播時間
+        注意：如果在推流前設置延播，需要提前5分鍾設置。
+        目前該介面只支援流粒度的，域名及應用粒度功能支援當前開發中。
 
-        :param request: 调用AddDelayLiveStream所需参数的结构体。
+        :param request: 調用AddDelayLiveStream所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.AddDelayLiveStreamRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.AddDelayLiveStreamResponse`
 
@@ -56,9 +56,9 @@ class LiveClient(AbstractClient):
 
 
     def AddLiveDomain(self, request):
-        """添加域名，一次只能提交一个域名。域名必须已备案。
+        """添加域名，一次只能提交一個域名。域名必須已備案。
 
-        :param request: 调用AddLiveDomain所需参数的结构体。
+        :param request: 調用AddLiveDomain所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.AddLiveDomainRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.AddLiveDomainResponse`
 
@@ -84,9 +84,9 @@ class LiveClient(AbstractClient):
 
 
     def AddLiveWatermark(self, request):
-        """添加水印，成功返回水印id后，需要调用[CreateLiveWatermarkRule](/document/product/267/32629)接口将水印id绑定到流使用。
+        """添加浮水印，成功返回水印id後，需要調用[CreateLiveWatermarkRule](/document/product/267/32629)介面将水印id綁定到流使用。
 
-        :param request: 调用AddLiveWatermark所需参数的结构体。
+        :param request: 調用AddLiveWatermark所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.AddLiveWatermarkRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.AddLiveWatermarkResponse`
 
@@ -112,9 +112,9 @@ class LiveClient(AbstractClient):
 
 
     def BindLiveDomainCert(self, request):
-        """域名绑定证书
+        """域名綁定證書
 
-        :param request: 调用BindLiveDomainCert所需参数的结构体。
+        :param request: 調用BindLiveDomainCert所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.BindLiveDomainCertRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.BindLiveDomainCertResponse`
 
@@ -140,10 +140,10 @@ class LiveClient(AbstractClient):
 
 
     def CreateLiveCallbackRule(self, request):
-        """创建回调规则，需要先调用[CreateLiveCallbackTemplate](/document/product/267/32637)接口创建回调模板，将返回的模板id绑定到域名/路径进行使用。
-        <br>回调协议相关文档：[事件消息通知](/document/product/267/32744)。
+        """創建回調規則，需要先調用[CreateLiveCallbackTemplate](/document/product/267/32637)介面創建回調範本，将返回的範本id綁定到域名/路徑進行使用。
+        <br>回調協議相關文件：[事件訊息通知](/document/product/267/32744)。
 
-        :param request: 调用CreateLiveCallbackRule所需参数的结构体。
+        :param request: 調用CreateLiveCallbackRule所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveCallbackRuleRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveCallbackRuleResponse`
 
@@ -169,10 +169,10 @@ class LiveClient(AbstractClient):
 
 
     def CreateLiveCallbackTemplate(self, request):
-        """创建回调模板，成功返回模板id后，需要调用[CreateLiveCallbackRule](/document/product/267/32638)接口将模板id绑定到域名/路径使用。
-        <br>回调协议相关文档：[事件消息通知](/document/product/267/32744)。
+        """創建回調範本，成功返回範本id後，需要調用[CreateLiveCallbackRule](/document/product/267/32638)介面将範本id綁定到域名/路徑使用。
+        <br>回調協議相關文件：[事件訊息通知](/document/product/267/32744)。
 
-        :param request: 调用CreateLiveCallbackTemplate所需参数的结构体。
+        :param request: 調用CreateLiveCallbackTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveCallbackTemplateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveCallbackTemplateResponse`
 
@@ -198,9 +198,9 @@ class LiveClient(AbstractClient):
 
 
     def CreateLiveCert(self, request):
-        """添加证书
+        """添加證書
 
-        :param request: 调用CreateLiveCert所需参数的结构体。
+        :param request: 調用CreateLiveCert所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveCertRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveCertResponse`
 
@@ -227,20 +227,20 @@ class LiveClient(AbstractClient):
 
     def CreateLiveRecord(self, request):
         """- 使用前提
-          1. 录制文件存放于点播平台，所以用户如需使用录制功能，需首先自行开通点播服务。
-          2. 录制文件存放后相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，具体请参考 [对应文档](https://cloud.tencent.com/document/product/266/2838)。
+          1. 錄制文件存放于點播平台，所以用戶如需使用錄制功能，需首先自行開通點播服務。
+          2. 錄制文件存放後相關費用（含儲存以及下行播放流量）按照點播平台計費方式收取，具體請參考 [對應文件](https://cloud.tencent.com/document/product/266/2838)。
 
-        - 模式说明
-          该接口支持两种录制模式：
-          1. 定时录制模式【默认模式】。
-            需要传入开始时间与结束时间，录制任务根据时间自动开始与结束。
-          2. 实时视频录制模式。
-            忽略传入的开始时间，在录制任务创建后立即开始录制，录制时长支持最大为30分钟，如果传入的结束时间与当前时间差大于30分钟，则按30分钟计算，实时视频录制主要用于录制精彩视频场景，时长建议控制在5分钟以内。
+        - 模式說明
+          該介面支援兩種錄制模式：
+          1. 定時錄制模式【預設模式】。
+            需要傳入開始時間與結束時間，錄制任務根據時間自動開始與結束。
+          2. 實時視訊錄制模式。
+            忽略傳入的開始時間，在錄制任務創建後立即開始錄制，錄制時長支援最大爲30分鍾，如果傳入的結束時間與當前時間差大于30分鍾，則按30分鍾計算，實時視訊錄制主要用于錄制精彩視訊場景，時長建議控制在5分鍾以内。
 
-        - 注意事项
-          1. 调用接口超时设置应大于3秒，小于3秒重试以及频繁调用都有可能产生重复录制任务。
+        - 注意事項
+          1. 調用介面超時設置應大于3秒，小於3秒重試以及頻繁調用都有可能産生重複錄制任務。
 
-        :param request: 调用CreateLiveRecord所需参数的结构体。
+        :param request: 調用CreateLiveRecord所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveRecordRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveRecordResponse`
 
@@ -266,10 +266,10 @@ class LiveClient(AbstractClient):
 
 
     def CreateLiveRecordRule(self, request):
-        """创建录制规则，需要先调用[CreateLiveRecordTemplate](/document/product/267/32614)接口创建录制模板，将返回的模板id绑定到流使用。
-        <br>录制相关文档：[直播录制](/document/product/267/32739)。
+        """創建錄制規則，需要先調用[CreateLiveRecordTemplate](/document/product/267/32614)介面創建錄制範本，将返回的範本id綁定到流使用。
+        <br>錄制相關文件：[直播錄制](/document/product/267/32739)。
 
-        :param request: 调用CreateLiveRecordRule所需参数的结构体。
+        :param request: 調用CreateLiveRecordRule所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveRecordRuleRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveRecordRuleResponse`
 
@@ -295,10 +295,10 @@ class LiveClient(AbstractClient):
 
 
     def CreateLiveRecordTemplate(self, request):
-        """创建录制模板，成功返回模板id后，需要调用[CreateLiveRecordRule](/document/product/267/32615)接口，将模板id绑定到流进行使用。
-        <br>录制相关文档：[直播录制](/document/product/267/32739)。
+        """創建錄制範本，成功返回範本id後，需要調用[CreateLiveRecordRule](/document/product/267/32615)介面，将範本id綁定到流進行使用。
+        <br>錄制相關文件：[直播錄制](/document/product/267/32739)。
 
-        :param request: 调用CreateLiveRecordTemplate所需参数的结构体。
+        :param request: 調用CreateLiveRecordTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveRecordTemplateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveRecordTemplateResponse`
 
@@ -324,10 +324,10 @@ class LiveClient(AbstractClient):
 
 
     def CreateLiveSnapshotRule(self, request):
-        """创建截图规则，需要先调用[CreateLiveSnapshotTemplate](/document/product/267/32624)接口创建截图模板，然后将返回的模板id绑定到流进行使用。
-        <br>截图相关文档：[直播截图](/document/product/267/32737)。
+        """創建截圖規則，需要先調用[CreateLiveSnapshotTemplate](/document/product/267/32624)介面創建截圖範本，然後将返回的範本id綁定到流進行使用。
+        <br>截圖相關文件：[直播截圖](/document/product/267/32737)。
 
-        :param request: 调用CreateLiveSnapshotRule所需参数的结构体。
+        :param request: 調用CreateLiveSnapshotRule所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveSnapshotRuleRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveSnapshotRuleResponse`
 
@@ -353,10 +353,10 @@ class LiveClient(AbstractClient):
 
 
     def CreateLiveSnapshotTemplate(self, request):
-        """创建截图模板，成功返回模板id后，需要调用[CreateLiveSnapshotRule](/document/product/267/32625)接口，将模板id绑定到流使用。
-        <br>截图相关文档：[直播截图](/document/product/267/32737)。
+        """創建截圖範本，成功返回範本id後，需要調用[CreateLiveSnapshotRule](/document/product/267/32625)介面，将範本id綁定到流使用。
+        <br>截圖相關文件：[直播截圖](/document/product/267/32737)。
 
-        :param request: 调用CreateLiveSnapshotTemplate所需参数的结构体。
+        :param request: 調用CreateLiveSnapshotTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveSnapshotTemplateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveSnapshotTemplateResponse`
 
@@ -382,10 +382,10 @@ class LiveClient(AbstractClient):
 
 
     def CreateLiveTranscodeRule(self, request):
-        """创建转码规则，需要先调用[CreateLiveTranscodeTemplate](/document/product/267/32646)接口创建转码模板，将返回的模板id绑定到流使用。
-        <br>转码相关文档：[直播转封装及转码](/document/product/267/32736)。
+        """創建轉碼規則，需要先調用[CreateLiveTranscodeTemplate](/document/product/267/32646)介面創建轉碼範本，将返回的範本id綁定到流使用。
+        <br>轉碼相關文件：[直播轉封裝及轉碼](/document/product/267/32736)。
 
-        :param request: 调用CreateLiveTranscodeRule所需参数的结构体。
+        :param request: 調用CreateLiveTranscodeRule所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveTranscodeRuleRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveTranscodeRuleResponse`
 
@@ -411,10 +411,10 @@ class LiveClient(AbstractClient):
 
 
     def CreateLiveTranscodeTemplate(self, request):
-        """创建转码模板，成功返回模板id后，需要调用[CreateLiveTranscodeRule](/document/product/267/32647)接口，将返回的模板id绑定到流使用。
-        <br>转码相关文档：[直播转封装及转码](/document/product/267/32736)。
+        """創建轉碼範本，成功返回範本id後，需要調用[CreateLiveTranscodeRule](/document/product/267/32647)介面，将返回的範本id綁定到流使用。
+        <br>轉碼相關文件：[直播轉封裝及轉碼](/document/product/267/32736)。
 
-        :param request: 调用CreateLiveTranscodeTemplate所需参数的结构体。
+        :param request: 調用CreateLiveTranscodeTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveTranscodeTemplateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveTranscodeTemplateResponse`
 
@@ -440,9 +440,9 @@ class LiveClient(AbstractClient):
 
 
     def CreateLiveWatermarkRule(self, request):
-        """创建水印规则，需要先调用[AddLiveWatermark](/document/product/267/30154)接口添加水印，将返回的水印id绑定到流使用。
+        """創建浮水印規則，需要先調用[AddLiveWatermark](/document/product/267/30154)介面添加水印，将返回的水印id綁定到流使用。
 
-        :param request: 调用CreateLiveWatermarkRule所需参数的结构体。
+        :param request: 調用CreateLiveWatermarkRule所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveWatermarkRuleRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveWatermarkRuleResponse`
 
@@ -468,13 +468,13 @@ class LiveClient(AbstractClient):
 
 
     def CreatePullStreamConfig(self, request):
-        """创建临时拉流转推任务，目前限制添加10条任务。
+        """創建臨時拉流轉推任務，目前限制添加10條任務。
 
-        注意：该接口用于创建临时拉流转推任务，
-        拉流源地址即FromUrl 可以是腾讯或非腾讯数据源，
-        但转推目标地址即ToUrl 目前限制为已注册的腾讯直播域名。
+        注意：該介面用于創建臨時拉流轉推任務，
+        拉流源網址即FromUrl 可以是騰訊或非騰訊數據源，
+        但轉推目标網址即ToUrl 目前限制爲已注冊的騰訊直播域名。
 
-        :param request: 调用CreatePullStreamConfig所需参数的结构体。
+        :param request: 調用CreatePullStreamConfig所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.CreatePullStreamConfigRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.CreatePullStreamConfigResponse`
 
@@ -500,9 +500,9 @@ class LiveClient(AbstractClient):
 
 
     def DeleteLiveCallbackRule(self, request):
-        """删除回调规则
+        """删除回調規則
 
-        :param request: 调用DeleteLiveCallbackRule所需参数的结构体。
+        :param request: 調用DeleteLiveCallbackRule所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveCallbackRuleRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveCallbackRuleResponse`
 
@@ -528,9 +528,9 @@ class LiveClient(AbstractClient):
 
 
     def DeleteLiveCallbackTemplate(self, request):
-        """删除回调模板
+        """删除回調範本
 
-        :param request: 调用DeleteLiveCallbackTemplate所需参数的结构体。
+        :param request: 調用DeleteLiveCallbackTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveCallbackTemplateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveCallbackTemplateResponse`
 
@@ -556,9 +556,9 @@ class LiveClient(AbstractClient):
 
 
     def DeleteLiveCert(self, request):
-        """删除域名对应的证书
+        """删除域名對應的證書
 
-        :param request: 调用DeleteLiveCert所需参数的结构体。
+        :param request: 調用DeleteLiveCert所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveCertRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveCertResponse`
 
@@ -586,7 +586,7 @@ class LiveClient(AbstractClient):
     def DeleteLiveDomain(self, request):
         """删除已添加的直播域名
 
-        :param request: 调用DeleteLiveDomain所需参数的结构体。
+        :param request: 調用DeleteLiveDomain所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveDomainRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveDomainResponse`
 
@@ -612,9 +612,9 @@ class LiveClient(AbstractClient):
 
 
     def DeleteLiveRecord(self, request):
-        """用于删除录制任务。
+        """用于删除錄制任務。
 
-        :param request: 调用DeleteLiveRecord所需参数的结构体。
+        :param request: 調用DeleteLiveRecord所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveRecordRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveRecordResponse`
 
@@ -640,9 +640,9 @@ class LiveClient(AbstractClient):
 
 
     def DeleteLiveRecordRule(self, request):
-        """删除录制规则
+        """删除錄制規則
 
-        :param request: 调用DeleteLiveRecordRule所需参数的结构体。
+        :param request: 調用DeleteLiveRecordRule所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveRecordRuleRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveRecordRuleResponse`
 
@@ -668,9 +668,9 @@ class LiveClient(AbstractClient):
 
 
     def DeleteLiveRecordTemplate(self, request):
-        """删除录制模板
+        """删除錄制範本
 
-        :param request: 调用DeleteLiveRecordTemplate所需参数的结构体。
+        :param request: 調用DeleteLiveRecordTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveRecordTemplateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveRecordTemplateResponse`
 
@@ -696,9 +696,9 @@ class LiveClient(AbstractClient):
 
 
     def DeleteLiveSnapshotRule(self, request):
-        """删除截图规则
+        """删除截圖規則
 
-        :param request: 调用DeleteLiveSnapshotRule所需参数的结构体。
+        :param request: 調用DeleteLiveSnapshotRule所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveSnapshotRuleRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveSnapshotRuleResponse`
 
@@ -724,9 +724,9 @@ class LiveClient(AbstractClient):
 
 
     def DeleteLiveSnapshotTemplate(self, request):
-        """删除截图模板
+        """删除截圖範本
 
-        :param request: 调用DeleteLiveSnapshotTemplate所需参数的结构体。
+        :param request: 調用DeleteLiveSnapshotTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveSnapshotTemplateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveSnapshotTemplateResponse`
 
@@ -752,9 +752,9 @@ class LiveClient(AbstractClient):
 
 
     def DeleteLiveTranscodeRule(self, request):
-        """删除转码规则
+        """删除轉碼規則
 
-        :param request: 调用DeleteLiveTranscodeRule所需参数的结构体。
+        :param request: 調用DeleteLiveTranscodeRule所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveTranscodeRuleRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveTranscodeRuleResponse`
 
@@ -780,9 +780,9 @@ class LiveClient(AbstractClient):
 
 
     def DeleteLiveTranscodeTemplate(self, request):
-        """删除转码模板
+        """删除轉碼範本
 
-        :param request: 调用DeleteLiveTranscodeTemplate所需参数的结构体。
+        :param request: 調用DeleteLiveTranscodeTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveTranscodeTemplateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveTranscodeTemplateResponse`
 
@@ -808,9 +808,9 @@ class LiveClient(AbstractClient):
 
 
     def DeleteLiveWatermark(self, request):
-        """删除水印
+        """删除浮水印
 
-        :param request: 调用DeleteLiveWatermark所需参数的结构体。
+        :param request: 調用DeleteLiveWatermark所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveWatermarkRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveWatermarkResponse`
 
@@ -836,9 +836,9 @@ class LiveClient(AbstractClient):
 
 
     def DeleteLiveWatermarkRule(self, request):
-        """删除水印规则
+        """删除浮水印規則
 
-        :param request: 调用DeleteLiveWatermarkRule所需参数的结构体。
+        :param request: 調用DeleteLiveWatermarkRule所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveWatermarkRuleRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveWatermarkRuleResponse`
 
@@ -866,7 +866,7 @@ class LiveClient(AbstractClient):
     def DeletePullStreamConfig(self, request):
         """删除直播拉流配置
 
-        :param request: 调用DeletePullStreamConfig所需参数的结构体。
+        :param request: 調用DeletePullStreamConfig所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DeletePullStreamConfigRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DeletePullStreamConfigResponse`
 
@@ -892,9 +892,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveCallbackRules(self, request):
-        """获取回调规则列表
+        """獲取回調規則清單
 
-        :param request: 调用DescribeLiveCallbackRules所需参数的结构体。
+        :param request: 調用DescribeLiveCallbackRules所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveCallbackRulesRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveCallbackRulesResponse`
 
@@ -920,9 +920,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveCallbackTemplate(self, request):
-        """获取单个回调模板
+        """獲取單個回調範本
 
-        :param request: 调用DescribeLiveCallbackTemplate所需参数的结构体。
+        :param request: 調用DescribeLiveCallbackTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveCallbackTemplateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveCallbackTemplateResponse`
 
@@ -948,9 +948,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveCallbackTemplates(self, request):
-        """获取回调模板列表
+        """獲取回調範本清單
 
-        :param request: 调用DescribeLiveCallbackTemplates所需参数的结构体。
+        :param request: 調用DescribeLiveCallbackTemplates所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveCallbackTemplatesRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveCallbackTemplatesResponse`
 
@@ -976,9 +976,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveCert(self, request):
-        """获取证书信息
+        """獲驗證書訊息
 
-        :param request: 调用DescribeLiveCert所需参数的结构体。
+        :param request: 調用DescribeLiveCert所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveCertRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveCertResponse`
 
@@ -1004,9 +1004,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveCerts(self, request):
-        """获取证书信息列表
+        """獲驗證書訊息清單
 
-        :param request: 调用DescribeLiveCerts所需参数的结构体。
+        :param request: 調用DescribeLiveCerts所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveCertsRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveCertsResponse`
 
@@ -1032,9 +1032,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveDomain(self, request):
-        """查询直播域名信息。
+        """查詢直播域名訊息。
 
-        :param request: 调用DescribeLiveDomain所需参数的结构体。
+        :param request: 調用DescribeLiveDomain所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveDomainRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveDomainResponse`
 
@@ -1060,9 +1060,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveDomainCert(self, request):
-        """获取域名证书信息
+        """獲取域名證書訊息
 
-        :param request: 调用DescribeLiveDomainCert所需参数的结构体。
+        :param request: 調用DescribeLiveDomainCert所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveDomainCertRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveDomainCertResponse`
 
@@ -1088,9 +1088,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveDomains(self, request):
-        """根据域名状态、类型等信息查询用户的域名信息
+        """根據域名狀态、類型等訊息查詢用戶的域名訊息
 
-        :param request: 调用DescribeLiveDomains所需参数的结构体。
+        :param request: 調用DescribeLiveDomains所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveDomainsRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveDomainsResponse`
 
@@ -1116,9 +1116,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveForbidStreamList(self, request):
-        """获取禁推流列表
+        """獲取禁推流清單
 
-        :param request: 调用DescribeLiveForbidStreamList所需参数的结构体。
+        :param request: 調用DescribeLiveForbidStreamList所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveForbidStreamListRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveForbidStreamListResponse`
 
@@ -1144,9 +1144,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLivePlayAuthKey(self, request):
-        """查询播放鉴权key
+        """查詢播放鑒權key
 
-        :param request: 调用DescribeLivePlayAuthKey所需参数的结构体。
+        :param request: 調用DescribeLivePlayAuthKey所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLivePlayAuthKeyRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLivePlayAuthKeyResponse`
 
@@ -1172,9 +1172,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLivePushAuthKey(self, request):
-        """查询直播推流鉴权key
+        """查詢直播推流鑒權key
 
-        :param request: 调用DescribeLivePushAuthKey所需参数的结构体。
+        :param request: 調用DescribeLivePushAuthKey所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLivePushAuthKeyRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLivePushAuthKeyResponse`
 
@@ -1200,9 +1200,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveRecordRules(self, request):
-        """获取录制规则列表
+        """獲取錄制規則清單
 
-        :param request: 调用DescribeLiveRecordRules所需参数的结构体。
+        :param request: 調用DescribeLiveRecordRules所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveRecordRulesRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveRecordRulesResponse`
 
@@ -1228,9 +1228,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveRecordTemplate(self, request):
-        """获取单个录制模板
+        """獲取單個錄制範本
 
-        :param request: 调用DescribeLiveRecordTemplate所需参数的结构体。
+        :param request: 調用DescribeLiveRecordTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveRecordTemplateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveRecordTemplateResponse`
 
@@ -1256,9 +1256,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveRecordTemplates(self, request):
-        """获取录制模板列表
+        """獲取錄制範本清單
 
-        :param request: 调用DescribeLiveRecordTemplates所需参数的结构体。
+        :param request: 調用DescribeLiveRecordTemplates所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveRecordTemplatesRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveRecordTemplatesResponse`
 
@@ -1284,9 +1284,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveSnapshotRules(self, request):
-        """获取截图规则列表
+        """獲取截圖規則清單
 
-        :param request: 调用DescribeLiveSnapshotRules所需参数的结构体。
+        :param request: 調用DescribeLiveSnapshotRules所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveSnapshotRulesRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveSnapshotRulesResponse`
 
@@ -1312,9 +1312,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveSnapshotTemplate(self, request):
-        """获取单个截图模板
+        """獲取單個截圖範本
 
-        :param request: 调用DescribeLiveSnapshotTemplate所需参数的结构体。
+        :param request: 調用DescribeLiveSnapshotTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveSnapshotTemplateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveSnapshotTemplateResponse`
 
@@ -1340,9 +1340,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveSnapshotTemplates(self, request):
-        """获取截图模板列表
+        """獲取截圖範本清單
 
-        :param request: 调用DescribeLiveSnapshotTemplates所需参数的结构体。
+        :param request: 調用DescribeLiveSnapshotTemplates所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveSnapshotTemplatesRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveSnapshotTemplatesResponse`
 
@@ -1368,11 +1368,11 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveStreamEventList(self, request):
-        """用于查询推断流事件。
+        """用于查詢推斷流事件。
 
-        注意：该接口可通过使用IsFilter进行过滤，返回推流历史记录。
+        注意：該介面可通過使用IsFilter進行過濾，返回推流曆史記錄。
 
-        :param request: 调用DescribeLiveStreamEventList所需参数的结构体。
+        :param request: 調用DescribeLiveStreamEventList所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamEventListRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamEventListResponse`
 
@@ -1398,9 +1398,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveStreamOnlineInfo(self, request):
-        """查询在线推流信息列表
+        """查詢在線推流訊息清單
 
-        :param request: 调用DescribeLiveStreamOnlineInfo所需参数的结构体。
+        :param request: 調用DescribeLiveStreamOnlineInfo所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamOnlineInfoRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamOnlineInfoResponse`
 
@@ -1426,9 +1426,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveStreamOnlineList(self, request):
-        """返回正在直播中的流列表
+        """返回正在直播中的流清單
 
-        :param request: 调用DescribeLiveStreamOnlineList所需参数的结构体。
+        :param request: 調用DescribeLiveStreamOnlineList所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamOnlineListRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamOnlineListResponse`
 
@@ -1454,9 +1454,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveStreamPublishedList(self, request):
-        """返回已经推过流的流列表
+        """返回已經推過流的流清單
 
-        :param request: 调用DescribeLiveStreamPublishedList所需参数的结构体。
+        :param request: 調用DescribeLiveStreamPublishedList所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamPublishedListRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamPublishedListResponse`
 
@@ -1482,9 +1482,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveStreamPushInfoList(self, request):
-        """查询所有实时流的推流信息，包括客户端IP，服务端IP，帧率，码率，域名，开始推流时间。
+        """查詢所有實時流的推流訊息，包括用戶端IP，服務端IP，幀率，碼率，域名，開始推流時間。
 
-        :param request: 调用DescribeLiveStreamPushInfoList所需参数的结构体。
+        :param request: 調用DescribeLiveStreamPushInfoList所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamPushInfoListRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamPushInfoListResponse`
 
@@ -1510,9 +1510,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveStreamState(self, request):
-        """返回直播中、无推流或者禁播等状态
+        """返回直播中、無推流或者禁播等狀态
 
-        :param request: 调用DescribeLiveStreamState所需参数的结构体。
+        :param request: 調用DescribeLiveStreamState所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamStateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamStateResponse`
 
@@ -1538,10 +1538,10 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveTranscodeDetailInfo(self, request):
-        """支持查询某天的转码详细信息。
-        注意：当前只支持查询近30天内某天的详细数据。
+        """支援查詢某天的轉碼詳細訊息。
+        注意：當前只支援查詢近30天内某天的詳細數據。
 
-        :param request: 调用DescribeLiveTranscodeDetailInfo所需参数的结构体。
+        :param request: 調用DescribeLiveTranscodeDetailInfo所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveTranscodeDetailInfoRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveTranscodeDetailInfoResponse`
 
@@ -1567,9 +1567,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveTranscodeRules(self, request):
-        """获取转码规则列表
+        """獲取轉碼規則清單
 
-        :param request: 调用DescribeLiveTranscodeRules所需参数的结构体。
+        :param request: 調用DescribeLiveTranscodeRules所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveTranscodeRulesRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveTranscodeRulesResponse`
 
@@ -1595,9 +1595,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveTranscodeTemplate(self, request):
-        """获取单个转码模板
+        """獲取單個轉碼範本
 
-        :param request: 调用DescribeLiveTranscodeTemplate所需参数的结构体。
+        :param request: 調用DescribeLiveTranscodeTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveTranscodeTemplateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveTranscodeTemplateResponse`
 
@@ -1623,9 +1623,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveTranscodeTemplates(self, request):
-        """获取转码模板列表
+        """獲取轉碼範本清單
 
-        :param request: 调用DescribeLiveTranscodeTemplates所需参数的结构体。
+        :param request: 調用DescribeLiveTranscodeTemplates所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveTranscodeTemplatesRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveTranscodeTemplatesResponse`
 
@@ -1651,9 +1651,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveWatermark(self, request):
-        """获取单个水印信息
+        """獲取單個浮水印訊息
 
-        :param request: 调用DescribeLiveWatermark所需参数的结构体。
+        :param request: 調用DescribeLiveWatermark所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveWatermarkRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveWatermarkResponse`
 
@@ -1679,9 +1679,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveWatermarkRules(self, request):
-        """获取水印规则列表
+        """獲取浮水印規則清單
 
-        :param request: 调用DescribeLiveWatermarkRules所需参数的结构体。
+        :param request: 調用DescribeLiveWatermarkRules所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveWatermarkRulesRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveWatermarkRulesResponse`
 
@@ -1707,9 +1707,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveWatermarks(self, request):
-        """查询水印列表
+        """查詢浮水印清單
 
-        :param request: 调用DescribeLiveWatermarks所需参数的结构体。
+        :param request: 調用DescribeLiveWatermarks所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveWatermarksRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveWatermarksResponse`
 
@@ -1735,9 +1735,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLogDownloadList(self, request):
-        """批量获取日志URL。
+        """批次獲取日志URL。
 
-        :param request: 调用DescribeLogDownloadList所需参数的结构体。
+        :param request: 調用DescribeLogDownloadList所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeLogDownloadListRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLogDownloadListResponse`
 
@@ -1763,9 +1763,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeProIspPlaySumInfoList(self, request):
-        """查询某段时间内每个省份每个运营商的平均每秒流量，总流量，总请求数信息。
+        """查詢某段時間内每個省份每個運營商的平均每秒流量，總流量，總請求數訊息。
 
-        :param request: 调用DescribeProIspPlaySumInfoList所需参数的结构体。
+        :param request: 調用DescribeProIspPlaySumInfoList所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeProIspPlaySumInfoListRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeProIspPlaySumInfoListResponse`
 
@@ -1791,9 +1791,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeProvinceIspPlayInfoList(self, request):
-        """查询某省份某运营商下行播放数据，包括带宽，流量，请求数，并发连接数信息。
+        """查詢某省份某運營商下行播放數據，包括頻寬，流量，請求數，并發連接數訊息。
 
-        :param request: 调用DescribeProvinceIspPlayInfoList所需参数的结构体。
+        :param request: 調用DescribeProvinceIspPlayInfoList所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeProvinceIspPlayInfoListRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeProvinceIspPlayInfoListResponse`
 
@@ -1819,9 +1819,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribePullStreamConfigs(self, request):
-        """查询拉流配置
+        """查詢拉流配置
 
-        :param request: 调用DescribePullStreamConfigs所需参数的结构体。
+        :param request: 調用DescribePullStreamConfigs所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribePullStreamConfigsRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribePullStreamConfigsResponse`
 
@@ -1847,9 +1847,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeStreamDayPlayInfoList(self, request):
-        """查询天维度每条流的播放数据，包括总流量等。
+        """查詢天維度每條流的播放數據，包括總流量等。
 
-        :param request: 调用DescribeStreamDayPlayInfoList所需参数的结构体。
+        :param request: 調用DescribeStreamDayPlayInfoList所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeStreamDayPlayInfoListRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeStreamDayPlayInfoListResponse`
 
@@ -1875,9 +1875,9 @@ class LiveClient(AbstractClient):
 
 
     def DescribeStreamPlayInfoList(self, request):
-        """查询播放数据，支持按流名称查询详细播放数据，也可按播放域名查询详细总数据。
+        """查詢播放數據，支援按流名稱查詢詳細播放數據，也可按播放域名查詢詳細總數據。
 
-        :param request: 调用DescribeStreamPlayInfoList所需参数的结构体。
+        :param request: 調用DescribeStreamPlayInfoList所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DescribeStreamPlayInfoListRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DescribeStreamPlayInfoListResponse`
 
@@ -1903,9 +1903,9 @@ class LiveClient(AbstractClient):
 
 
     def DropLiveStream(self, request):
-        """断开推流连接，但可以重新推流
+        """斷開推流連接，但可以重新推流
 
-        :param request: 调用DropLiveStream所需参数的结构体。
+        :param request: 調用DropLiveStream所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.DropLiveStreamRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.DropLiveStreamResponse`
 
@@ -1931,9 +1931,9 @@ class LiveClient(AbstractClient):
 
 
     def EnableLiveDomain(self, request):
-        """启用状态为停用的直播域名
+        """啓用狀态爲停用的直播域名
 
-        :param request: 调用EnableLiveDomain所需参数的结构体。
+        :param request: 調用EnableLiveDomain所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.EnableLiveDomainRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.EnableLiveDomainResponse`
 
@@ -1959,9 +1959,9 @@ class LiveClient(AbstractClient):
 
 
     def ForbidLiveDomain(self, request):
-        """停用使用某个直播域名
+        """停用使用某個直播域名
 
-        :param request: 调用ForbidLiveDomain所需参数的结构体。
+        :param request: 調用ForbidLiveDomain所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.ForbidLiveDomainRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.ForbidLiveDomainResponse`
 
@@ -1987,9 +1987,9 @@ class LiveClient(AbstractClient):
 
 
     def ForbidLiveStream(self, request):
-        """禁止某条流的推送，可以预设某个时刻将流恢复。
+        """禁止某條流的推送，可以預設某個時刻将流恢複。
 
-        :param request: 调用ForbidLiveStream所需参数的结构体。
+        :param request: 調用ForbidLiveStream所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.ForbidLiveStreamRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.ForbidLiveStreamResponse`
 
@@ -2015,9 +2015,9 @@ class LiveClient(AbstractClient):
 
 
     def ModifyLiveCallbackTemplate(self, request):
-        """修改回调模板
+        """修改回調範本
 
-        :param request: 调用ModifyLiveCallbackTemplate所需参数的结构体。
+        :param request: 調用ModifyLiveCallbackTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.ModifyLiveCallbackTemplateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLiveCallbackTemplateResponse`
 
@@ -2043,9 +2043,9 @@ class LiveClient(AbstractClient):
 
 
     def ModifyLiveCert(self, request):
-        """修改证书
+        """修改證書
 
-        :param request: 调用ModifyLiveCert所需参数的结构体。
+        :param request: 調用ModifyLiveCert所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.ModifyLiveCertRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLiveCertResponse`
 
@@ -2071,9 +2071,9 @@ class LiveClient(AbstractClient):
 
 
     def ModifyLiveDomainCert(self, request):
-        """修改域名和证书绑定信息
+        """修改域名和證書綁定訊息
 
-        :param request: 调用ModifyLiveDomainCert所需参数的结构体。
+        :param request: 調用ModifyLiveDomainCert所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.ModifyLiveDomainCertRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLiveDomainCertResponse`
 
@@ -2099,9 +2099,9 @@ class LiveClient(AbstractClient):
 
 
     def ModifyLivePlayAuthKey(self, request):
-        """修改播放鉴权key
+        """修改播放鑒權key
 
-        :param request: 调用ModifyLivePlayAuthKey所需参数的结构体。
+        :param request: 調用ModifyLivePlayAuthKey所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.ModifyLivePlayAuthKeyRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLivePlayAuthKeyResponse`
 
@@ -2127,9 +2127,9 @@ class LiveClient(AbstractClient):
 
 
     def ModifyLivePlayDomain(self, request):
-        """修改播放域名信息
+        """修改播放域名訊息
 
-        :param request: 调用ModifyLivePlayDomain所需参数的结构体。
+        :param request: 調用ModifyLivePlayDomain所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.ModifyLivePlayDomainRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLivePlayDomainResponse`
 
@@ -2155,9 +2155,9 @@ class LiveClient(AbstractClient):
 
 
     def ModifyLivePushAuthKey(self, request):
-        """修改直播推流鉴权key
+        """修改直播推流鑒權key
 
-        :param request: 调用ModifyLivePushAuthKey所需参数的结构体。
+        :param request: 調用ModifyLivePushAuthKey所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.ModifyLivePushAuthKeyRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLivePushAuthKeyResponse`
 
@@ -2183,9 +2183,9 @@ class LiveClient(AbstractClient):
 
 
     def ModifyLiveRecordTemplate(self, request):
-        """修改录制模板配置
+        """修改錄制範本配置
 
-        :param request: 调用ModifyLiveRecordTemplate所需参数的结构体。
+        :param request: 調用ModifyLiveRecordTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.ModifyLiveRecordTemplateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLiveRecordTemplateResponse`
 
@@ -2211,9 +2211,9 @@ class LiveClient(AbstractClient):
 
 
     def ModifyLiveSnapshotTemplate(self, request):
-        """修改截图模板配置
+        """修改截圖範本配置
 
-        :param request: 调用ModifyLiveSnapshotTemplate所需参数的结构体。
+        :param request: 調用ModifyLiveSnapshotTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.ModifyLiveSnapshotTemplateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLiveSnapshotTemplateResponse`
 
@@ -2239,9 +2239,9 @@ class LiveClient(AbstractClient):
 
 
     def ModifyLiveTranscodeTemplate(self, request):
-        """修改转码模板配置
+        """修改轉碼範本配置
 
-        :param request: 调用ModifyLiveTranscodeTemplate所需参数的结构体。
+        :param request: 調用ModifyLiveTranscodeTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.ModifyLiveTranscodeTemplateRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLiveTranscodeTemplateResponse`
 
@@ -2269,7 +2269,7 @@ class LiveClient(AbstractClient):
     def ModifyPullStreamConfig(self, request):
         """更新拉流配置
 
-        :param request: 调用ModifyPullStreamConfig所需参数的结构体。
+        :param request: 調用ModifyPullStreamConfig所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.ModifyPullStreamConfigRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.ModifyPullStreamConfigResponse`
 
@@ -2295,9 +2295,9 @@ class LiveClient(AbstractClient):
 
 
     def ModifyPullStreamStatus(self, request):
-        """修改直播拉流配置状态
+        """修改直播拉流配置狀态
 
-        :param request: 调用ModifyPullStreamStatus所需参数的结构体。
+        :param request: 調用ModifyPullStreamStatus所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.ModifyPullStreamStatusRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.ModifyPullStreamStatusResponse`
 
@@ -2323,9 +2323,9 @@ class LiveClient(AbstractClient):
 
 
     def ResumeDelayLiveStream(self, request):
-        """恢复延迟播放设置
+        """恢複延遲播放設置
 
-        :param request: 调用ResumeDelayLiveStream所需参数的结构体。
+        :param request: 調用ResumeDelayLiveStream所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.ResumeDelayLiveStreamRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.ResumeDelayLiveStreamResponse`
 
@@ -2351,9 +2351,9 @@ class LiveClient(AbstractClient):
 
 
     def ResumeLiveStream(self, request):
-        """恢复某条流的推送。
+        """恢複某條流的推送。
 
-        :param request: 调用ResumeLiveStream所需参数的结构体。
+        :param request: 調用ResumeLiveStream所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.ResumeLiveStreamRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.ResumeLiveStreamResponse`
 
@@ -2379,9 +2379,9 @@ class LiveClient(AbstractClient):
 
 
     def SetLiveWatermarkStatus(self, request):
-        """设置水印是否启用
+        """設置浮水印是否啓用
 
-        :param request: 调用SetLiveWatermarkStatus所需参数的结构体。
+        :param request: 調用SetLiveWatermarkStatus所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.SetLiveWatermarkStatusRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.SetLiveWatermarkStatusResponse`
 
@@ -2407,9 +2407,9 @@ class LiveClient(AbstractClient):
 
 
     def StopLiveRecord(self, request):
-        """说明：录制后的文件存放于点播平台。用户如需使用录制功能，需首先自行开通点播账号并确保账号可用。录制文件存放后，相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，请参考对应文档。
+        """說明：錄制後的文件存放于點播平台。用戶如需使用錄制功能，需首先自行開通點播賬号并确保賬号可用。錄制文件存放後，相關費用（含儲存以及下行播放流量）按照點播平台計費方式收取，請參考對應文件。
 
-        :param request: 调用StopLiveRecord所需参数的结构体。
+        :param request: 調用StopLiveRecord所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.StopLiveRecordRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.StopLiveRecordResponse`
 
@@ -2435,9 +2435,9 @@ class LiveClient(AbstractClient):
 
 
     def UnBindLiveDomainCert(self, request):
-        """解绑域名证书
+        """解綁域名證書
 
-        :param request: 调用UnBindLiveDomainCert所需参数的结构体。
+        :param request: 調用UnBindLiveDomainCert所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.UnBindLiveDomainCertRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.UnBindLiveDomainCertResponse`
 
@@ -2463,9 +2463,9 @@ class LiveClient(AbstractClient):
 
 
     def UpdateLiveWatermark(self, request):
-        """更新水印
+        """更新浮水印
 
-        :param request: 调用UpdateLiveWatermark所需参数的结构体。
+        :param request: 調用UpdateLiveWatermark所需參數的結構體。
         :type request: :class:`tencentcloud.live.v20180801.models.UpdateLiveWatermarkRequest`
         :rtype: :class:`tencentcloud.live.v20180801.models.UpdateLiveWatermarkResponse`
 

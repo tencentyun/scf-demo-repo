@@ -17,23 +17,23 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CreateSessionRequest(AbstractModel):
-    """CreateSession请求参数结构体
+    """CreateSession請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClientSession: 客户端session信息，从JSSDK请求中获得
+        :param ClientSession: 用戶端session訊息，從JSSDK請求中獲得
         :type ClientSession: str
-        :param GameId: 游戏ID
+        :param GameId: 遊戲ID
         :type GameId: str
-        :param UserId: 游戏用户ID
+        :param UserId: 遊戲用戶ID
         :type UserId: str
-        :param GameParas: 游戏参数
+        :param GameParas: 遊戲參數
         :type GameParas: str
-        :param GameRegion: 游戏区域
+        :param GameRegion: 遊戲區域
         :type GameRegion: str
-        :param ImageUrl: 背景图url
+        :param ImageUrl: 背景圖url
         :type ImageUrl: str
         :param Resolution: 分辨率
         :type Resolution: str
@@ -58,15 +58,15 @@ class CreateSessionRequest(AbstractModel):
 
 
 class CreateSessionResponse(AbstractModel):
-    """CreateSession返回参数结构体
+    """CreateSession返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ServerSession: 服务端session信息，返回给JSSDK
+        :param ServerSession: 服務端session訊息，返回給JSSDK
         :type ServerSession: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ServerSession = None
@@ -79,21 +79,21 @@ class CreateSessionResponse(AbstractModel):
 
 
 class DayStreamPlayInfo(AbstractModel):
-    """流播放信息
+    """流播放訊息
 
     """
 
     def __init__(self):
         """
-        :param Bandwidth: 带宽（单位Mbps）。
+        :param Bandwidth: 頻寬（單位Mbps）。
         :type Bandwidth: float
-        :param Flux: 流量 （单位MB）。
+        :param Flux: 流量 （單位MB）。
         :type Flux: float
-        :param Online: 在线人数。
+        :param Online: 在線人數。
         :type Online: int
-        :param Request: 请求数。
+        :param Request: 請求數。
         :type Request: int
-        :param Time: 数据时间点，格式：yyyy-mm-dd HH:MM:SS。
+        :param Time: 數據時間點，格式：yyyy-mm-dd HH:MM:SS。
         :type Time: str
         """
         self.Bandwidth = None
@@ -112,22 +112,22 @@ class DayStreamPlayInfo(AbstractModel):
 
 
 class DescribeStreamPlayInfoListRequest(AbstractModel):
-    """DescribeStreamPlayInfoList请求参数结构体
+    """DescribeStreamPlayInfoList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EndTime: 结束时间，北京时间，格式：2019-04-28 10:36:00
-结束时间 和 开始时间  必须在同一天内。
+        :param EndTime: 結束時間，北京時間，格式：2019-04-28 10:36:00
+結束時間 和 開始時間  必須在同一天内。
         :type EndTime: str
         :param PlayDomain: 播放域名。
         :type PlayDomain: str
-        :param StartTime: 开始时间，北京时间，格式：2019-04-28 10:36:00
-当前时间 和 开始时间 间隔不超过30天。
+        :param StartTime: 開始時間，北京時間，格式：2019-04-28 10:36:00
+當前時間 和 開始時間 間隔不超過30天。
         :type StartTime: str
-        :param StreamName: 流名称，精确匹配。
-若不填，则为查询总体播放数据。
+        :param StreamName: 流名稱，精确比對。
+若不填，則爲查詢總體播放數據。
         :type StreamName: str
         """
         self.EndTime = None
@@ -144,15 +144,15 @@ class DescribeStreamPlayInfoListRequest(AbstractModel):
 
 
 class DescribeStreamPlayInfoListResponse(AbstractModel):
-    """DescribeStreamPlayInfoList返回参数结构体
+    """DescribeStreamPlayInfoList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DataInfoList: 统计信息列表。
+        :param DataInfoList: 統計訊息清單。
         :type DataInfoList: list of DayStreamPlayInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DataInfoList = None
@@ -170,25 +170,25 @@ class DescribeStreamPlayInfoListResponse(AbstractModel):
 
 
 class DescribeWorkersRequest(AbstractModel):
-    """DescribeWorkers请求参数结构体
+    """DescribeWorkers請求參數結構體
 
     """
 
 
 class DescribeWorkersResponse(AbstractModel):
-    """DescribeWorkers返回参数结构体
+    """DescribeWorkers返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RegionDetail: 各个区域的机器情况
+        :param RegionDetail: 各個區域的機器情況
         :type RegionDetail: list of WorkerRegionInfo
-        :param Idle: 空闲机器总数量
+        :param Idle: 空閑機器總數量
         :type Idle: int
-        :param RegionNum: 区域个数
+        :param RegionNum: 區域個數
         :type RegionNum: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RegionDetail = None
@@ -210,20 +210,20 @@ class DescribeWorkersResponse(AbstractModel):
 
 
 class ForbidLiveStreamRequest(AbstractModel):
-    """ForbidLiveStream请求参数结构体
+    """ForbidLiveStream請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AppName: 应用名称。
+        :param AppName: 應用名稱。
         :type AppName: str
         :param DomainName: 您的推流域名。
         :type DomainName: str
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param ResumeTime: 恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
-注意：默认禁播90天，且最长支持禁播90天。
+        :param ResumeTime: 恢複流的時間。UTC 格式，例如：2018-11-29T19:00:00Z。
+注意：預設禁播90天，且最長支援禁播90天。
         :type ResumeTime: str
         """
         self.AppName = None
@@ -240,13 +240,13 @@ class ForbidLiveStreamRequest(AbstractModel):
 
 
 class ForbidLiveStreamResponse(AbstractModel):
-    """ForbidLiveStream返回参数结构体
+    """ForbidLiveStream返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -257,19 +257,19 @@ class ForbidLiveStreamResponse(AbstractModel):
 
 
 class RegisterIMRequest(AbstractModel):
-    """RegisterIM请求参数结构体
+    """RegisterIM請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Nickname: 用户昵称
+        :param Nickname: 用戶昵稱
         :type Nickname: str
-        :param UserId: 用户唯一ID，建议采用用户小程序OpenID加盐形式
+        :param UserId: 用戶唯一ID，建議采用用戶小程式OpenID加鹽形式
         :type UserId: str
-        :param HeadImgUrl: 用户头像URL
+        :param HeadImgUrl: 用戶頭像URL
         :type HeadImgUrl: str
-        :param Level: 用户身份，默认值：0，表示无特殊身份
+        :param Level: 用戶身份，預設值：0，表示無特殊身份
         :type Level: int
         """
         self.Nickname = None
@@ -286,15 +286,15 @@ class RegisterIMRequest(AbstractModel):
 
 
 class RegisterIMResponse(AbstractModel):
-    """RegisterIM返回参数结构体
+    """RegisterIM返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param UserKey: 用来传递给插件的关键字段
+        :param UserKey: 用來傳遞給插件的關鍵欄位
         :type UserKey: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.UserKey = None
@@ -307,13 +307,13 @@ class RegisterIMResponse(AbstractModel):
 
 
 class StopGameRequest(AbstractModel):
-    """StopGame请求参数结构体
+    """StopGame請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param UserId: 游戏用户ID
+        :param UserId: 遊戲用戶ID
         :type UserId: str
         """
         self.UserId = None
@@ -324,13 +324,13 @@ class StopGameRequest(AbstractModel):
 
 
 class StopGameResponse(AbstractModel):
-    """StopGame返回参数结构体
+    """StopGame返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -341,15 +341,15 @@ class StopGameResponse(AbstractModel):
 
 
 class WorkerRegionInfo(AbstractModel):
-    """worker的区域信息
+    """worker的區域訊息
 
     """
 
     def __init__(self):
         """
-        :param Idle: 该区域空闲机器数量
+        :param Idle: 該區域空閑機器數量
         :type Idle: int
-        :param Region: 区域
+        :param Region: 區域
         :type Region: str
         """
         self.Idle = None

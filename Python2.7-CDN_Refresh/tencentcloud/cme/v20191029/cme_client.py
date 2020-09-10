@@ -26,7 +26,7 @@ class CmeClient(AbstractClient):
 
 
     def AddTeamMember(self, request):
-        """向一个团队中团队成员，并且指定成员的角色。
+        """向一個團隊中團隊成員，并且指定成員的角色。
 
         :param request: Request instance for AddTeamMember.
         :type request: :class:`tencentcloud.cme.v20191029.models.AddTeamMemberRequest`
@@ -54,9 +54,9 @@ class CmeClient(AbstractClient):
 
 
     def CreateClass(self, request):
-        """新增分类，用于管理素材。
-        <li>分类层数不能超过10；</li>
-        <li>子分类数不能超过10。</li>
+        """新增分類，用于管理素材。
+        <li>分類層數不能超過10；</li>
+        <li>子分類數不能超過10。</li>
 
         :param request: Request instance for CreateClass.
         :type request: :class:`tencentcloud.cme.v20191029.models.CreateClassRequest`
@@ -84,7 +84,7 @@ class CmeClient(AbstractClient):
 
 
     def CreateLink(self, request):
-        """创建素材链接或分类路径链接，将源资源信息链接到目标。
+        """創建素材連結或分類路徑連結，将源資源訊息連結到目标。
 
         :param request: Request instance for CreateLink.
         :type request: :class:`tencentcloud.cme.v20191029.models.CreateLinkRequest`
@@ -112,7 +112,7 @@ class CmeClient(AbstractClient):
 
 
     def CreateProject(self, request):
-        """创建云剪的编辑项目，支持创建视频剪辑及直播剪辑两大类项目。
+        """創建雲剪的編輯項目，支援創建視訊剪輯及直播剪輯兩大類項目。
 
         :param request: Request instance for CreateProject.
         :type request: :class:`tencentcloud.cme.v20191029.models.CreateProjectRequest`
@@ -140,7 +140,7 @@ class CmeClient(AbstractClient):
 
 
     def CreateTeam(self, request):
-        """创建一个团队。
+        """創建一個團隊。
 
         :param request: Request instance for CreateTeam.
         :type request: :class:`tencentcloud.cme.v20191029.models.CreateTeamRequest`
@@ -168,9 +168,9 @@ class CmeClient(AbstractClient):
 
 
     def DeleteClass(self, request):
-        """删除分类信息，删除时检验下述限制：
-        <li>分类路径必须存在；</li>
-        <li>分类下没有绑定素材。</li>
+        """删除分類訊息，删除時檢驗下述限制：
+        <li>分類路徑必須存在；</li>
+        <li>分類下沒有綁定素材。</li>
 
         :param request: Request instance for DeleteClass.
         :type request: :class:`tencentcloud.cme.v20191029.models.DeleteClassRequest`
@@ -198,7 +198,7 @@ class CmeClient(AbstractClient):
 
 
     def DeleteLoginStatus(self, request):
-        """删除用户登录态，使用户登出云剪平台。
+        """删除用戶登入态，使用戶登出雲剪平台。
 
         :param request: Request instance for DeleteLoginStatus.
         :type request: :class:`tencentcloud.cme.v20191029.models.DeleteLoginStatusRequest`
@@ -226,7 +226,7 @@ class CmeClient(AbstractClient):
 
 
     def DeleteMaterial(self, request):
-        """根据素材 Id 删除素材。
+        """根據素材 Id 删除素材。
 
         :param request: Request instance for DeleteMaterial.
         :type request: :class:`tencentcloud.cme.v20191029.models.DeleteMaterialRequest`
@@ -254,7 +254,7 @@ class CmeClient(AbstractClient):
 
 
     def DeleteProject(self, request):
-        """删除云剪编辑项目。
+        """删除雲剪編輯項目。
 
         :param request: Request instance for DeleteProject.
         :type request: :class:`tencentcloud.cme.v20191029.models.DeleteProjectRequest`
@@ -282,9 +282,9 @@ class CmeClient(AbstractClient):
 
 
     def DeleteTeam(self, request):
-        """删除一个团队。
-        <li>要删除的团队必须没有归属的素材；</li>
-        <li>要删除的团队必须没有归属的分类。</li>
+        """删除一個團隊。
+        <li>要删除的團隊必須沒有歸屬的素材；</li>
+        <li>要删除的團隊必須沒有歸屬的分類。</li>
 
         :param request: Request instance for DeleteTeam.
         :type request: :class:`tencentcloud.cme.v20191029.models.DeleteTeamRequest`
@@ -312,7 +312,7 @@ class CmeClient(AbstractClient):
 
 
     def DeleteTeamMembers(self, request):
-        """将团队成员从团队中删除，默认只有 Owner 及管理员才有此权限。
+        """将團隊成員從團隊中删除，預設只有 Owner 及管理員才有此權限。
 
         :param request: Request instance for DeleteTeamMembers.
         :type request: :class:`tencentcloud.cme.v20191029.models.DeleteTeamMembersRequest`
@@ -340,7 +340,7 @@ class CmeClient(AbstractClient):
 
 
     def DescribeClass(self, request):
-        """获取指定归属者下所有的分类信息。
+        """獲取指定歸屬者下所有的分類訊息。
 
         :param request: Request instance for DescribeClass.
         :type request: :class:`tencentcloud.cme.v20191029.models.DescribeClassRequest`
@@ -368,7 +368,7 @@ class CmeClient(AbstractClient):
 
 
     def DescribeJoinTeams(self, request):
-        """获取指定的团队成员所加入的团队列表。
+        """獲取指定的團隊成員所加入的團隊清單。
 
         :param request: Request instance for DescribeJoinTeams.
         :type request: :class:`tencentcloud.cme.v20191029.models.DescribeJoinTeamsRequest`
@@ -396,7 +396,7 @@ class CmeClient(AbstractClient):
 
 
     def DescribeLoginStatus(self, request):
-        """查询指定用户的登录态。
+        """查詢指定用戶的登入态。
 
         :param request: Request instance for DescribeLoginStatus.
         :type request: :class:`tencentcloud.cme.v20191029.models.DescribeLoginStatusRequest`
@@ -424,7 +424,7 @@ class CmeClient(AbstractClient):
 
 
     def DescribeMaterials(self, request):
-        """根据素材 Id 批量获取素材详情。
+        """根據素材 Id 批次獲取素材詳情。
 
         :param request: Request instance for DescribeMaterials.
         :type request: :class:`tencentcloud.cme.v20191029.models.DescribeMaterialsRequest`
@@ -452,7 +452,7 @@ class CmeClient(AbstractClient):
 
 
     def DescribeProjects(self, request):
-        """支持根据多种条件过滤出项目列表。
+        """支援根據多種條件過濾出項目清單。
 
         :param request: Request instance for DescribeProjects.
         :type request: :class:`tencentcloud.cme.v20191029.models.DescribeProjectsRequest`
@@ -480,7 +480,7 @@ class CmeClient(AbstractClient):
 
 
     def DescribeResourceAuthorization(self, request):
-        """查询指定资源的授权列表。
+        """查詢指定資源的授權清單。
 
         :param request: Request instance for DescribeResourceAuthorization.
         :type request: :class:`tencentcloud.cme.v20191029.models.DescribeResourceAuthorizationRequest`
@@ -508,7 +508,7 @@ class CmeClient(AbstractClient):
 
 
     def DescribeSharedSpace(self, request):
-        """获取共享空间。当实体A对实体B授权某资源以后，实体B的共享空间就会增加实体A。
+        """獲取共享空間。當實體A對實體B授權某資源以後，實體B的共享空間就會增加實體A。
 
         :param request: Request instance for DescribeSharedSpace.
         :type request: :class:`tencentcloud.cme.v20191029.models.DescribeSharedSpaceRequest`
@@ -536,9 +536,9 @@ class CmeClient(AbstractClient):
 
 
     def DescribeTaskDetail(self, request):
-        """获取任务详情信息，包含下面几个部分：
-        <li>任务基础信息：包括任务状态、错误信息、创建时间等；</li>
-        <li>导出项目输出信息：包括输出的素材 Id 等。</li>
+        """獲取任務詳情訊息，包含下面幾個部分：
+        <li>任務基礎訊息：包括任務狀态、錯誤訊息、創建時間等；</li>
+        <li>導出項目輸出訊息：包括輸出的素材 Id 等。</li>
 
         :param request: Request instance for DescribeTaskDetail.
         :type request: :class:`tencentcloud.cme.v20191029.models.DescribeTaskDetailRequest`
@@ -566,7 +566,7 @@ class CmeClient(AbstractClient):
 
 
     def DescribeTasks(self, request):
-        """获取任务列表，支持条件筛选，返回对应的任务基础信息列表。
+        """獲取任務清單，支援條件篩選，返回對應的任務基礎訊息清單。
 
         :param request: Request instance for DescribeTasks.
         :type request: :class:`tencentcloud.cme.v20191029.models.DescribeTasksRequest`
@@ -594,7 +594,7 @@ class CmeClient(AbstractClient):
 
 
     def DescribeTeamMembers(self, request):
-        """获取指定成员 ID 的信息，同时支持拉取所有团队成员信息。
+        """獲取指定成員 ID 的訊息，同時支援拉取所有團隊成員訊息。
 
         :param request: Request instance for DescribeTeamMembers.
         :type request: :class:`tencentcloud.cme.v20191029.models.DescribeTeamMembersRequest`
@@ -622,7 +622,7 @@ class CmeClient(AbstractClient):
 
 
     def DescribeTeams(self, request):
-        """获取指定团队的信息。
+        """獲取指定團隊的訊息。
 
         :param request: Request instance for DescribeTeams.
         :type request: :class:`tencentcloud.cme.v20191029.models.DescribeTeamsRequest`
@@ -650,7 +650,7 @@ class CmeClient(AbstractClient):
 
 
     def ExportVideoEditProject(self, request):
-        """导出视频编辑项目，支持指定输出的模板。
+        """導出視訊編輯項目，支援指定輸出的範本。
 
         :param request: Request instance for ExportVideoEditProject.
         :type request: :class:`tencentcloud.cme.v20191029.models.ExportVideoEditProjectRequest`
@@ -678,7 +678,7 @@ class CmeClient(AbstractClient):
 
 
     def FlattenListMedia(self, request):
-        """平铺分类路径下及其子分类下的所有素材。
+        """平鋪分類路徑下及其子分類下的所有素材。
 
         :param request: Request instance for FlattenListMedia.
         :type request: :class:`tencentcloud.cme.v20191029.models.FlattenListMediaRequest`
@@ -706,7 +706,7 @@ class CmeClient(AbstractClient):
 
 
     def GrantResourceAuthorization(self, request):
-        """资源所属实体对目标实体授予目标资源的相应权限。
+        """資源所屬實體對目标實體授予目标資源的相應權限。
 
         :param request: Request instance for GrantResourceAuthorization.
         :type request: :class:`tencentcloud.cme.v20191029.models.GrantResourceAuthorizationRequest`
@@ -734,7 +734,7 @@ class CmeClient(AbstractClient):
 
 
     def ImportMaterial(self, request):
-        """将云点播媒资文件导入到云剪素材库。
+        """将雲點播媒資文件導入到雲剪素材庫。
 
         :param request: Request instance for ImportMaterial.
         :type request: :class:`tencentcloud.cme.v20191029.models.ImportMaterialRequest`
@@ -762,7 +762,7 @@ class CmeClient(AbstractClient):
 
 
     def ImportMediaToProject(self, request):
-        """将云点播中的媒资添加到素材库中，供后续视频编辑使用。
+        """将雲點播中的媒資添加到素材庫中，供後續視訊編輯使用。
 
         :param request: Request instance for ImportMediaToProject.
         :type request: :class:`tencentcloud.cme.v20191029.models.ImportMediaToProjectRequest`
@@ -790,7 +790,7 @@ class CmeClient(AbstractClient):
 
 
     def ListMedia(self, request):
-        """浏览当前分类路径下的资源，包括素材和子分类。
+        """浏覽當前分類路徑下的資源，包括素材和子分類。
 
         :param request: Request instance for ListMedia.
         :type request: :class:`tencentcloud.cme.v20191029.models.ListMediaRequest`
@@ -818,7 +818,7 @@ class CmeClient(AbstractClient):
 
 
     def ModifyMaterial(self, request):
-        """修改素材信息，支持修改素材名称、分类路径、标签等信息。
+        """修改素材訊息，支援修改素材名稱、分類路徑、标簽等訊息。
 
         :param request: Request instance for ModifyMaterial.
         :type request: :class:`tencentcloud.cme.v20191029.models.ModifyMaterialRequest`
@@ -846,7 +846,7 @@ class CmeClient(AbstractClient):
 
 
     def ModifyProject(self, request):
-        """修改云剪编辑项目的信息。
+        """修改雲剪編輯項目的訊息。
 
         :param request: Request instance for ModifyProject.
         :type request: :class:`tencentcloud.cme.v20191029.models.ModifyProjectRequest`
@@ -874,8 +874,8 @@ class CmeClient(AbstractClient):
 
 
     def ModifyTeam(self, request):
-        """修改团队信息，目前支持修改的操作有：
-        <li>修改团队名称。</li>
+        """修改團隊訊息，目前支援修改的操作有：
+        <li>修改團隊名稱。</li>
 
         :param request: Request instance for ModifyTeam.
         :type request: :class:`tencentcloud.cme.v20191029.models.ModifyTeamRequest`
@@ -903,7 +903,7 @@ class CmeClient(AbstractClient):
 
 
     def ModifyTeamMember(self, request):
-        """修改团队成员信息，包括成员备注、角色等。
+        """修改團隊成員訊息，包括成員備注、角色等。
 
         :param request: Request instance for ModifyTeamMember.
         :type request: :class:`tencentcloud.cme.v20191029.models.ModifyTeamMemberRequest`
@@ -931,8 +931,8 @@ class CmeClient(AbstractClient):
 
 
     def MoveClass(self, request):
-        """移动某一个分类到另外一个分类下，也可用于分类重命名。
-        <li>如果 SourceClassPath = /素材/视频/NBA，DestinationClassPath = /素材/视频/篮球，当 DestinationClassPath 不存在时候，操作结果为重命名 ClassPath，如果 DestinationClassPath 存在时候，操作结果为产生新目录 /素材/视频/篮球/NBA。</li>
+        """移動某一個分類到另外一個分類下，也可用于分類重命名。
+        <li>如果 SourceClassPath = /素材/視訊/NBA，DestinationClassPath = /素材/視訊/籃球，當 DestinationClassPath 不存在時候，操作結果爲重命名 ClassPath，如果 DestinationClassPath 存在時候，操作結果爲産生新目錄 /素材/視訊/籃球/NBA。</li>
 
         :param request: Request instance for MoveClass.
         :type request: :class:`tencentcloud.cme.v20191029.models.MoveClassRequest`
@@ -960,7 +960,7 @@ class CmeClient(AbstractClient):
 
 
     def RevokeResourceAuthorization(self, request):
-        """资源所属实体对目标实体回收目标资源的相应权限，若原本没有相应权限则不产生变更。
+        """資源所屬實體對目标實體回收目标資源的相應權限，若原本沒有相應權限則不産生變更。
 
         :param request: Request instance for RevokeResourceAuthorization.
         :type request: :class:`tencentcloud.cme.v20191029.models.RevokeResourceAuthorizationRequest`
@@ -988,7 +988,7 @@ class CmeClient(AbstractClient):
 
 
     def SearchMaterial(self, request):
-        """根据检索条件搜索素材，返回素材的基本信息。
+        """根據檢索條件搜索素材，返回素材的基本訊息。
 
         :param request: Request instance for SearchMaterial.
         :type request: :class:`tencentcloud.cme.v20191029.models.SearchMaterialRequest`

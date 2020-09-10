@@ -26,9 +26,9 @@ class MspClient(AbstractClient):
 
 
     def DeregisterMigrationTask(self, request):
-        """取消注册迁移任务
+        """取消注冊遷移任務
 
-        :param request: 调用DeregisterMigrationTask所需参数的结构体。
+        :param request: 調用DeregisterMigrationTask所需參數的結構體。
         :type request: :class:`tencentcloud.msp.v20180319.models.DeregisterMigrationTaskRequest`
         :rtype: :class:`tencentcloud.msp.v20180319.models.DeregisterMigrationTaskResponse`
 
@@ -54,9 +54,9 @@ class MspClient(AbstractClient):
 
 
     def DescribeMigrationTask(self, request):
-        """获取指定迁移任务详情
+        """獲取指定遷移任務詳情
 
-        :param request: 调用DescribeMigrationTask所需参数的结构体。
+        :param request: 調用DescribeMigrationTask所需參數的結構體。
         :type request: :class:`tencentcloud.msp.v20180319.models.DescribeMigrationTaskRequest`
         :rtype: :class:`tencentcloud.msp.v20180319.models.DescribeMigrationTaskResponse`
 
@@ -82,9 +82,9 @@ class MspClient(AbstractClient):
 
 
     def ListMigrationProject(self, request):
-        """获取迁移项目名称列表
+        """獲取遷移項目名稱清單
 
-        :param request: 调用ListMigrationProject所需参数的结构体。
+        :param request: 調用ListMigrationProject所需參數的結構體。
         :type request: :class:`tencentcloud.msp.v20180319.models.ListMigrationProjectRequest`
         :rtype: :class:`tencentcloud.msp.v20180319.models.ListMigrationProjectResponse`
 
@@ -110,9 +110,9 @@ class MspClient(AbstractClient):
 
 
     def ListMigrationTask(self, request):
-        """获取迁移任务列表
+        """獲取遷移任務清單
 
-        :param request: 调用ListMigrationTask所需参数的结构体。
+        :param request: 調用ListMigrationTask所需參數的結構體。
         :type request: :class:`tencentcloud.msp.v20180319.models.ListMigrationTaskRequest`
         :rtype: :class:`tencentcloud.msp.v20180319.models.ListMigrationTaskResponse`
 
@@ -138,9 +138,9 @@ class MspClient(AbstractClient):
 
 
     def ModifyMigrationTaskBelongToProject(self, request):
-        """更改迁移任务所属项目
+        """更改遷移任務所屬項目
 
-        :param request: 调用ModifyMigrationTaskBelongToProject所需参数的结构体。
+        :param request: 調用ModifyMigrationTaskBelongToProject所需參數的結構體。
         :type request: :class:`tencentcloud.msp.v20180319.models.ModifyMigrationTaskBelongToProjectRequest`
         :rtype: :class:`tencentcloud.msp.v20180319.models.ModifyMigrationTaskBelongToProjectResponse`
 
@@ -166,9 +166,9 @@ class MspClient(AbstractClient):
 
 
     def ModifyMigrationTaskStatus(self, request):
-        """更新迁移任务状态
+        """更新遷移任務狀态
 
-        :param request: 调用ModifyMigrationTaskStatus所需参数的结构体。
+        :param request: 調用ModifyMigrationTaskStatus所需參數的結構體。
         :type request: :class:`tencentcloud.msp.v20180319.models.ModifyMigrationTaskStatusRequest`
         :rtype: :class:`tencentcloud.msp.v20180319.models.ModifyMigrationTaskStatusResponse`
 
@@ -194,9 +194,9 @@ class MspClient(AbstractClient):
 
 
     def RegisterMigrationTask(self, request):
-        """注册迁移任务
+        """注冊遷移任務
 
-        :param request: 调用RegisterMigrationTask所需参数的结构体。
+        :param request: 調用RegisterMigrationTask所需參數的結構體。
         :type request: :class:`tencentcloud.msp.v20180319.models.RegisterMigrationTaskRequest`
         :rtype: :class:`tencentcloud.msp.v20180319.models.RegisterMigrationTaskResponse`
 

@@ -26,9 +26,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def AttachInstances(self, request):
-        """本接口（AttachInstances）用于将 CVM 实例添加到伸缩组。
+        """本介面（AttachInstances）用于将 CVM 實例添加到伸縮組。
 
-        :param request: 调用AttachInstances所需参数的结构体。
+        :param request: 調用AttachInstances所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.AttachInstancesRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.AttachInstancesResponse`
 
@@ -54,11 +54,11 @@ class AutoscalingClient(AbstractClient):
 
 
     def CompleteLifecycleAction(self, request):
-        """本接口（CompleteLifecycleAction）用于完成生命周期动作。
+        """本介面（CompleteLifecycleAction）用于完成生命週期動作。
 
-        * 用户通过调用本接口，指定一个具体的生命周期挂钩的结果（“CONITNUE”或者“ABANDON”）。如果一直不调用本接口，则生命周期挂钩会在超时后按照“DefaultResult”进行处理。
+        * 用戶通過調用本介面，指定一個具體的生命週期挂鈎的結果（“CONITNUE”或者“ABANDON”）。如果一直不調用本介面，則生命週期挂鈎會在超時後按照“DefaultResult”進行處理。
 
-        :param request: 调用CompleteLifecycleAction所需参数的结构体。
+        :param request: 調用CompleteLifecycleAction所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.CompleteLifecycleActionRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CompleteLifecycleActionResponse`
 
@@ -84,9 +84,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def CreateAutoScalingGroup(self, request):
-        """本接口（CreateAutoScalingGroup）用于创建伸缩组
+        """本介面（CreateAutoScalingGroup）用于創建伸縮組
 
-        :param request: 调用CreateAutoScalingGroup所需参数的结构体。
+        :param request: 調用CreateAutoScalingGroup所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.CreateAutoScalingGroupRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CreateAutoScalingGroupResponse`
 
@@ -112,13 +112,13 @@ class AutoscalingClient(AbstractClient):
 
 
     def CreateLaunchConfiguration(self, request):
-        """本接口（CreateLaunchConfiguration）用于创建新的启动配置。
+        """本介面（CreateLaunchConfiguration）用于創建新的啓動配置。
 
-        * 启动配置，可以通过 `ModifyLaunchConfigurationAttributes` 修改少量字段。如需使用新的启动配置，建议重新创建启动配置。
+        * 啓動配置，可以通過 `ModifyLaunchConfigurationAttributes` 修改少量欄位。如需使用新的啓動配置，建議重新創建啓動配置。
 
-        * 每个项目最多只能创建20个启动配置，详见[使用限制](https://cloud.tencent.com/document/product/377/3120)。
+        * 每個項目最多只能創建20個啓動配置，詳見[使用限制](https://cloud.tencent.com/document/product/377/3120)。
 
-        :param request: 调用CreateLaunchConfiguration所需参数的结构体。
+        :param request: 調用CreateLaunchConfiguration所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.CreateLaunchConfigurationRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CreateLaunchConfigurationResponse`
 
@@ -144,9 +144,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def CreateLifecycleHook(self, request):
-        """本接口（CreateLifecycleHook）用于创建生命周期挂钩。
+        """本介面（CreateLifecycleHook）用于創建生命週期挂鈎。
 
-        * 您可以为生命周期挂钩配置消息通知，弹性伸缩会通知您的CMQ消息队列，通知内容形如：
+        * 您可以爲生命週期挂鈎配置訊息通知，彈性伸縮會通知您的CMQ訊息隊列，通知内容形如：
 
         ```
         {
@@ -164,7 +164,7 @@ class AutoscalingClient(AbstractClient):
         }
         ```
 
-        :param request: 调用CreateLifecycleHook所需参数的结构体。
+        :param request: 調用CreateLifecycleHook所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.CreateLifecycleHookRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CreateLifecycleHookResponse`
 
@@ -190,9 +190,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def CreateNotificationConfiguration(self, request):
-        """本接口（CreateNotificationConfiguration）用于创建通知。
+        """本介面（CreateNotificationConfiguration）用于創建通知。
 
-        :param request: 调用CreateNotificationConfiguration所需参数的结构体。
+        :param request: 調用CreateNotificationConfiguration所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.CreateNotificationConfigurationRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CreateNotificationConfigurationResponse`
 
@@ -218,9 +218,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def CreatePaiInstance(self, request):
-        """本接口 (CreatePaiInstance) 用于创建一个指定配置的PAI实例。
+        """本介面 (CreatePaiInstance) 用于創建一個指定配置的PAI實例。
 
-        :param request: 调用CreatePaiInstance所需参数的结构体。
+        :param request: 調用CreatePaiInstance所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.CreatePaiInstanceRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CreatePaiInstanceResponse`
 
@@ -246,9 +246,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def CreateScalingPolicy(self, request):
-        """本接口（CreateScalingPolicy）用于创建告警触发策略。
+        """本介面（CreateScalingPolicy）用于創建告警觸發策略。
 
-        :param request: 调用CreateScalingPolicy所需参数的结构体。
+        :param request: 調用CreateScalingPolicy所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.CreateScalingPolicyRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CreateScalingPolicyResponse`
 
@@ -274,9 +274,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def CreateScheduledAction(self, request):
-        """本接口（CreateScheduledAction）用于创建定时任务。
+        """本介面（CreateScheduledAction）用于創建定時任務。
 
-        :param request: 调用CreateScheduledAction所需参数的结构体。
+        :param request: 調用CreateScheduledAction所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.CreateScheduledActionRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CreateScheduledActionResponse`
 
@@ -302,9 +302,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def DeleteAutoScalingGroup(self, request):
-        """本接口（DeleteAutoScalingGroup）用于删除指定伸缩组，删除前提是伸缩组内无实例且当前未在执行伸缩活动。
+        """本介面（DeleteAutoScalingGroup）用于删除指定伸縮組，删除前提是伸縮組内無實例且當前未在執行伸縮活動。
 
-        :param request: 调用DeleteAutoScalingGroup所需参数的结构体。
+        :param request: 調用DeleteAutoScalingGroup所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DeleteAutoScalingGroupRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DeleteAutoScalingGroupResponse`
 
@@ -330,11 +330,11 @@ class AutoscalingClient(AbstractClient):
 
 
     def DeleteLaunchConfiguration(self, request):
-        """本接口（DeleteLaunchConfiguration）用于删除启动配置。
+        """本介面（DeleteLaunchConfiguration）用于删除啓動配置。
 
-        * 若启动配置在伸缩组中属于生效状态，则该启动配置不允许删除。
+        * 若啓動配置在伸縮組中屬于生效狀态，則該啓動配置不允許删除。
 
-        :param request: 调用DeleteLaunchConfiguration所需参数的结构体。
+        :param request: 調用DeleteLaunchConfiguration所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DeleteLaunchConfigurationRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DeleteLaunchConfigurationResponse`
 
@@ -360,9 +360,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def DeleteLifecycleHook(self, request):
-        """本接口（DeleteLifecycleHook）用于删除生命周期挂钩。
+        """本介面（DeleteLifecycleHook）用于删除生命週期挂鈎。
 
-        :param request: 调用DeleteLifecycleHook所需参数的结构体。
+        :param request: 調用DeleteLifecycleHook所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DeleteLifecycleHookRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DeleteLifecycleHookResponse`
 
@@ -388,9 +388,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def DeleteNotificationConfiguration(self, request):
-        """本接口（DeleteNotificationConfiguration）用于删除特定的通知。
+        """本介面（DeleteNotificationConfiguration）用于删除特定的通知。
 
-        :param request: 调用DeleteNotificationConfiguration所需参数的结构体。
+        :param request: 調用DeleteNotificationConfiguration所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DeleteNotificationConfigurationRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DeleteNotificationConfigurationResponse`
 
@@ -416,9 +416,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def DeleteScalingPolicy(self, request):
-        """本接口（DeleteScalingPolicy）用于删除告警触发策略。
+        """本介面（DeleteScalingPolicy）用于删除告警觸發策略。
 
-        :param request: 调用DeleteScalingPolicy所需参数的结构体。
+        :param request: 調用DeleteScalingPolicy所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DeleteScalingPolicyRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DeleteScalingPolicyResponse`
 
@@ -444,9 +444,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def DeleteScheduledAction(self, request):
-        """本接口（DeleteScheduledAction）用于删除特定的定时任务。
+        """本介面（DeleteScheduledAction）用于删除特定的定時任務。
 
-        :param request: 调用DeleteScheduledAction所需参数的结构体。
+        :param request: 調用DeleteScheduledAction所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DeleteScheduledActionRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DeleteScheduledActionResponse`
 
@@ -472,9 +472,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def DescribeAccountLimits(self, request):
-        """本接口（DescribeAccountLimits）用于查询用户账户在弹性伸缩中的资源限制。
+        """本介面（DescribeAccountLimits）用于查詢用戶帳戶在彈性伸縮中的資源限制。
 
-        :param request: 调用DescribeAccountLimits所需参数的结构体。
+        :param request: 調用DescribeAccountLimits所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAccountLimitsRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAccountLimitsResponse`
 
@@ -500,9 +500,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def DescribeAutoScalingActivities(self, request):
-        """本接口（DescribeAutoScalingActivities）用于查询伸缩组的伸缩活动记录。
+        """本介面（DescribeAutoScalingActivities）用于查詢伸縮組的伸縮活動記錄。
 
-        :param request: 调用DescribeAutoScalingActivities所需参数的结构体。
+        :param request: 調用DescribeAutoScalingActivities所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAutoScalingActivitiesRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAutoScalingActivitiesResponse`
 
@@ -528,12 +528,12 @@ class AutoscalingClient(AbstractClient):
 
 
     def DescribeAutoScalingGroups(self, request):
-        """本接口（DescribeAutoScalingGroups）用于查询伸缩组信息。
+        """本介面（DescribeAutoScalingGroups）用于查詢伸縮組訊息。
 
-        * 可以根据伸缩组ID、伸缩组名称或者启动配置ID等信息来查询伸缩组的详细信息。过滤信息详细请见过滤器`Filter`。
-        * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的伸缩组。
+        * 可以根據伸縮組ID、伸縮組名稱或者啓動配置ID等訊息來查詢伸縮組的詳細訊息。過濾訊息詳細請見過濾器`Filter`。
+        * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的伸縮組。
 
-        :param request: 调用DescribeAutoScalingGroups所需参数的结构体。
+        :param request: 調用DescribeAutoScalingGroups所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAutoScalingGroupsRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAutoScalingGroupsResponse`
 
@@ -559,12 +559,12 @@ class AutoscalingClient(AbstractClient):
 
 
     def DescribeAutoScalingInstances(self, request):
-        """本接口（DescribeAutoScalingInstances）用于查询弹性伸缩关联实例的信息。
+        """本介面（DescribeAutoScalingInstances）用于查詢彈性伸縮關聯實例的訊息。
 
-        * 可以根据实例ID、伸缩组ID等信息来查询实例的详细信息。过滤信息详细请见过滤器`Filter`。
-        * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的实例。
+        * 可以根據實例ID、伸縮組ID等訊息來查詢實例的詳細訊息。過濾訊息詳細請見過濾器`Filter`。
+        * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的實例。
 
-        :param request: 调用DescribeAutoScalingInstances所需参数的结构体。
+        :param request: 調用DescribeAutoScalingInstances所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAutoScalingInstancesRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAutoScalingInstancesResponse`
 
@@ -590,12 +590,12 @@ class AutoscalingClient(AbstractClient):
 
 
     def DescribeLaunchConfigurations(self, request):
-        """本接口（DescribeLaunchConfigurations）用于查询启动配置的信息。
+        """本介面（DescribeLaunchConfigurations）用于查詢啓動配置的訊息。
 
-        * 可以根据启动配置ID、启动配置名称等信息来查询启动配置的详细信息。过滤信息详细请见过滤器`Filter`。
-        * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的启动配置。
+        * 可以根據啓動配置ID、啓動配置名稱等訊息來查詢啓動配置的詳細訊息。過濾訊息詳細請見過濾器`Filter`。
+        * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的啓動配置。
 
-        :param request: 调用DescribeLaunchConfigurations所需参数的结构体。
+        :param request: 調用DescribeLaunchConfigurations所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeLaunchConfigurationsRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeLaunchConfigurationsResponse`
 
@@ -621,12 +621,12 @@ class AutoscalingClient(AbstractClient):
 
 
     def DescribeLifecycleHooks(self, request):
-        """本接口（DescribeLifecycleHooks）用于查询生命周期挂钩信息。
+        """本介面（DescribeLifecycleHooks）用于查詢生命週期挂鈎訊息。
 
-        * 可以根据伸缩组ID、生命周期挂钩ID或者生命周期挂钩名称等信息来查询生命周期挂钩的详细信息。过滤信息详细请见过滤器`Filter`。
-        * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的生命周期挂钩。
+        * 可以根據伸縮組ID、生命週期挂鈎ID或者生命週期挂鈎名稱等訊息來查詢生命週期挂鈎的詳細訊息。過濾訊息詳細請見過濾器`Filter`。
+        * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的生命週期挂鈎。
 
-        :param request: 调用DescribeLifecycleHooks所需参数的结构体。
+        :param request: 調用DescribeLifecycleHooks所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeLifecycleHooksRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeLifecycleHooksResponse`
 
@@ -652,12 +652,12 @@ class AutoscalingClient(AbstractClient):
 
 
     def DescribeNotificationConfigurations(self, request):
-        """本接口 (DescribeNotificationConfigurations) 用于查询一个或多个通知的详细信息。
+        """本介面 (DescribeNotificationConfigurations) 用于查詢一個或多個通知的詳細訊息。
 
-        可以根据通知ID、伸缩组ID等信息来查询通知的详细信息。过滤信息详细请见过滤器`Filter`。
-        如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的通知。
+        可以根據通知ID、伸縮組ID等訊息來查詢通知的詳細訊息。過濾訊息詳細請見過濾器`Filter`。
+        如果參數爲空，返回當前用戶一定數量（Limit所指定的數量，預設爲20）的通知。
 
-        :param request: 调用DescribeNotificationConfigurations所需参数的结构体。
+        :param request: 調用DescribeNotificationConfigurations所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeNotificationConfigurationsRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeNotificationConfigurationsResponse`
 
@@ -683,12 +683,12 @@ class AutoscalingClient(AbstractClient):
 
 
     def DescribePaiInstances(self, request):
-        """本接口（DescribePaiInstances）用于查询PAI实例信息。
+        """本介面（DescribePaiInstances）用于查詢PAI實例訊息。
 
-        * 可以根据实例ID、实例域名等信息来查询PAI实例的详细信息。过滤信息详细请见过滤器`Filter`。
-        * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的PAI实例。
+        * 可以根據實例ID、實例域名等訊息來查詢PAI實例的詳細訊息。過濾訊息詳細請見過濾器`Filter`。
+        * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的PAI實例。
 
-        :param request: 调用DescribePaiInstances所需参数的结构体。
+        :param request: 調用DescribePaiInstances所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribePaiInstancesRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribePaiInstancesResponse`
 
@@ -714,9 +714,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def DescribeScalingPolicies(self, request):
-        """本接口（DescribeScalingPolicies）用于查询告警触发策略。
+        """本介面（DescribeScalingPolicies）用于查詢告警觸發策略。
 
-        :param request: 调用DescribeScalingPolicies所需参数的结构体。
+        :param request: 調用DescribeScalingPolicies所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeScalingPoliciesRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeScalingPoliciesResponse`
 
@@ -742,12 +742,12 @@ class AutoscalingClient(AbstractClient):
 
 
     def DescribeScheduledActions(self, request):
-        """本接口 (DescribeScheduledActions) 用于查询一个或多个定时任务的详细信息。
+        """本介面 (DescribeScheduledActions) 用于查詢一個或多個定時任務的詳細訊息。
 
-        * 可以根据定时任务ID、定时任务名称或者伸缩组ID等信息来查询定时任务的详细信息。过滤信息详细请见过滤器`Filter`。
-        * 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的定时任务。
+        * 可以根據定時任務ID、定時任務名稱或者伸縮組ID等訊息來查詢定時任務的詳細訊息。過濾訊息詳細請見過濾器`Filter`。
+        * 如果參數爲空，返回當前用戶一定數量（Limit所指定的數量，預設爲20）的定時任務。
 
-        :param request: 调用DescribeScheduledActions所需参数的结构体。
+        :param request: 調用DescribeScheduledActions所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeScheduledActionsRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeScheduledActionsResponse`
 
@@ -773,9 +773,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def DetachInstances(self, request):
-        """本接口（DetachInstances）用于从伸缩组移出 CVM 实例，本接口不会销毁实例。
+        """本介面（DetachInstances）用于從伸縮組移出 CVM 實例，本介面不會銷毀實例。
 
-        :param request: 调用DetachInstances所需参数的结构体。
+        :param request: 調用DetachInstances所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DetachInstancesRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DetachInstancesResponse`
 
@@ -801,9 +801,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def DisableAutoScalingGroup(self, request):
-        """本接口（DisableAutoScalingGroup）用于停用指定伸缩组。
+        """本介面（DisableAutoScalingGroup）用于停用指定伸縮組。
 
-        :param request: 调用DisableAutoScalingGroup所需参数的结构体。
+        :param request: 調用DisableAutoScalingGroup所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.DisableAutoScalingGroupRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DisableAutoScalingGroupResponse`
 
@@ -829,9 +829,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def EnableAutoScalingGroup(self, request):
-        """本接口（EnableAutoScalingGroup）用于启用指定伸缩组。
+        """本介面（EnableAutoScalingGroup）用于啓用指定伸縮組。
 
-        :param request: 调用EnableAutoScalingGroup所需参数的结构体。
+        :param request: 調用EnableAutoScalingGroup所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.EnableAutoScalingGroupRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.EnableAutoScalingGroupResponse`
 
@@ -857,9 +857,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def ModifyAutoScalingGroup(self, request):
-        """本接口（ModifyAutoScalingGroup）用于修改伸缩组。
+        """本介面（ModifyAutoScalingGroup）用于修改伸縮組。
 
-        :param request: 调用ModifyAutoScalingGroup所需参数的结构体。
+        :param request: 調用ModifyAutoScalingGroup所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.ModifyAutoScalingGroupRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.ModifyAutoScalingGroupResponse`
 
@@ -885,9 +885,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def ModifyDesiredCapacity(self, request):
-        """本接口（ModifyDesiredCapacity）用于修改指定伸缩组的期望实例数
+        """本介面（ModifyDesiredCapacity）用于修改指定伸縮組的期望實例數
 
-        :param request: 调用ModifyDesiredCapacity所需参数的结构体。
+        :param request: 調用ModifyDesiredCapacity所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.ModifyDesiredCapacityRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.ModifyDesiredCapacityResponse`
 
@@ -913,12 +913,12 @@ class AutoscalingClient(AbstractClient):
 
 
     def ModifyLaunchConfigurationAttributes(self, request):
-        """本接口（ModifyLaunchConfigurationAttributes）用于修改启动配置部分属性。
+        """本介面（ModifyLaunchConfigurationAttributes）用于修改啓動配置部分屬性。
 
-        * 修改启动配置后，已经使用该启动配置扩容的存量实例不会发生变更，此后使用该启动配置的新增实例会按照新的配置进行扩容。
-        * 本接口支持修改部分简单类型。
+        * 修改啓動配置後，已經使用該啓動配置擴容的存量實例不會發生變更，此後使用該啓動配置的新增實例會按照新的配置進行擴容。
+        * 本介面支援修改部分簡單類型。
 
-        :param request: 调用ModifyLaunchConfigurationAttributes所需参数的结构体。
+        :param request: 調用ModifyLaunchConfigurationAttributes所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.ModifyLaunchConfigurationAttributesRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.ModifyLaunchConfigurationAttributesResponse`
 
@@ -944,13 +944,13 @@ class AutoscalingClient(AbstractClient):
 
 
     def ModifyLoadBalancers(self, request):
-        """本接口（ModifyLoadBalancers）用于修改伸缩组的负载均衡器。
+        """本介面（ModifyLoadBalancers）用于修改伸縮組的負載均衡器。
 
-        * 本接口用于为伸缩组指定新的负载均衡器配置，采用“完全覆盖”风格，无论之前配置如何，统一按照接口参数配置为新的负载均衡器。
-        * 如果要为伸缩组清空负载均衡器，则在调用本接口时仅指定伸缩组ID，不指定具体负载均衡器。
-        * 本接口会立即修改伸缩组的负载均衡器，并生成一个伸缩活动，异步修改存量实例的负载均衡器。
+        * 本介面用于爲伸縮組指定新的負載均衡器配置，采用“完全函蓋”風格，無論之前配置如何，統一按照介面參數配置爲新的負載均衡器。
+        * 如果要爲伸縮組清空負載均衡器，則在調用本介面時僅指定伸縮組ID，不指定具體負載均衡器。
+        * 本介面會立即修改伸縮組的負載均衡器，并生成一個伸縮活動，異步修改存量實例的負載均衡器。
 
-        :param request: 调用ModifyLoadBalancers所需参数的结构体。
+        :param request: 調用ModifyLoadBalancers所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.ModifyLoadBalancersRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.ModifyLoadBalancersResponse`
 
@@ -976,9 +976,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def ModifyNotificationConfiguration(self, request):
-        """本接口（ModifyNotificationConfiguration）用于修改通知。
+        """本介面（ModifyNotificationConfiguration）用于修改通知。
 
-        :param request: 调用ModifyNotificationConfiguration所需参数的结构体。
+        :param request: 調用ModifyNotificationConfiguration所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.ModifyNotificationConfigurationRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.ModifyNotificationConfigurationResponse`
 
@@ -1004,9 +1004,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def ModifyScalingPolicy(self, request):
-        """本接口（ModifyScalingPolicy）用于修改告警触发策略。
+        """本介面（ModifyScalingPolicy）用于修改告警觸發策略。
 
-        :param request: 调用ModifyScalingPolicy所需参数的结构体。
+        :param request: 調用ModifyScalingPolicy所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.ModifyScalingPolicyRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.ModifyScalingPolicyResponse`
 
@@ -1032,9 +1032,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def ModifyScheduledAction(self, request):
-        """本接口（ModifyScheduledAction）用于修改定时任务。
+        """本介面（ModifyScheduledAction）用于修改定時任務。
 
-        :param request: 调用ModifyScheduledAction所需参数的结构体。
+        :param request: 調用ModifyScheduledAction所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.ModifyScheduledActionRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.ModifyScheduledActionResponse`
 
@@ -1060,9 +1060,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def PreviewPaiDomainName(self, request):
-        """本接口（PreviewPaiDomainName）用于预览PAI实例域名。
+        """本介面（PreviewPaiDomainName）用于預覽PAI實例域名。
 
-        :param request: 调用PreviewPaiDomainName所需参数的结构体。
+        :param request: 調用PreviewPaiDomainName所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.PreviewPaiDomainNameRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.PreviewPaiDomainNameResponse`
 
@@ -1088,9 +1088,9 @@ class AutoscalingClient(AbstractClient):
 
 
     def RemoveInstances(self, request):
-        """本接口（RemoveInstances）用于从伸缩组删除 CVM 实例。根据当前的产品逻辑，如果实例由弹性伸缩自动创建，则实例会被销毁；如果实例系创建后加入伸缩组的，则会从伸缩组中移除，保留实例。
+        """本介面（RemoveInstances）用于從伸縮組删除 CVM 實例。根據當前的産品邏輯，如果實例由彈性伸縮自動創建，則實例會被銷毀；如果實例系創建後加入伸縮組的，則會從伸縮組中移除，保留實例。
 
-        :param request: 调用RemoveInstances所需参数的结构体。
+        :param request: 調用RemoveInstances所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.RemoveInstancesRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.RemoveInstancesResponse`
 
@@ -1116,10 +1116,10 @@ class AutoscalingClient(AbstractClient):
 
 
     def SetInstancesProtection(self, request):
-        """本接口（SetInstancesProtection）用于设置实例移除保护。
-        子机设置为移除保护之后，当发生不健康替换、报警策略、期望值变更等触发缩容时，将不对此子机缩容操作。
+        """本介面（SetInstancesProtection）用于設置實例移除保護。
+        子機設置爲移除保護之後，當發生不健康替換、報警策略、期望值變更等觸發縮容時，将不對此子機縮容操作。
 
-        :param request: 调用SetInstancesProtection所需参数的结构体。
+        :param request: 調用SetInstancesProtection所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.SetInstancesProtectionRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.SetInstancesProtectionResponse`
 
@@ -1145,11 +1145,11 @@ class AutoscalingClient(AbstractClient):
 
 
     def UpgradeLaunchConfiguration(self, request):
-        """本接口（UpgradeLaunchConfiguration）用于升级启动配置。
+        """本介面（UpgradeLaunchConfiguration）用于升級啓動配置。
 
-        * 本接口用于升级启动配置，采用“完全覆盖”风格，无论之前参数如何，统一按照接口参数设置为新的配置。对于非必填字段，不填写则按照默认值赋值。
+        * 本介面用于升級啓動配置，采用“完全函蓋”風格，無論之前參數如何，統一按照介面參數設置爲新的配置。對于非必填欄位，不填寫則按照預設值賦值。
 
-        :param request: 调用UpgradeLaunchConfiguration所需参数的结构体。
+        :param request: 調用UpgradeLaunchConfiguration所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.UpgradeLaunchConfigurationRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.UpgradeLaunchConfigurationResponse`
 
@@ -1175,11 +1175,11 @@ class AutoscalingClient(AbstractClient):
 
 
     def UpgradeLifecycleHook(self, request):
-        """本接口（UpgradeLifecycleHook）用于升级生命周期挂钩。
+        """本介面（UpgradeLifecycleHook）用于升級生命週期挂鈎。
 
-        * 本接口用于升级生命周期挂钩，采用“完全覆盖”风格，无论之前参数如何，统一按照接口参数设置为新的配置。对于非必填字段，不填写则按照默认值赋值。
+        * 本介面用于升級生命週期挂鈎，采用“完全函蓋”風格，無論之前參數如何，統一按照介面參數設置爲新的配置。對于非必填欄位，不填寫則按照預設值賦值。
 
-        :param request: 调用UpgradeLifecycleHook所需参数的结构体。
+        :param request: 調用UpgradeLifecycleHook所需參數的結構體。
         :type request: :class:`tencentcloud.autoscaling.v20180419.models.UpgradeLifecycleHookRequest`
         :rtype: :class:`tencentcloud.autoscaling.v20180419.models.UpgradeLifecycleHookResponse`
 

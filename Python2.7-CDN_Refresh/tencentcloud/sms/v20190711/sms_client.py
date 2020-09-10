@@ -26,8 +26,8 @@ class SmsClient(AbstractClient):
 
 
     def AddSmsSign(self, request):
-        """添加短信签名，申请之前请先认证参阅 [腾讯云短信签名审核标准](https://cloud.tencent.com/document/product/382/39022)。
-        >⚠️注意：个人认证用户不支持使用 API 申请短信签名，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629)，如果为个人认证请登录控制台申请短信签名，具体操作请参阅 [创建短信签名](https://cloud.tencent.com/document/product/382/36136#Sign)。
+        """添加簡訊簽名，申請之前請先認證參閱 [Top Cloud 簡訊簽名審核标準](https://cloud.tencent.com/document/product/382/39022)。
+        >⚠️注意：個人認證用戶不支援使用 API 申請簡訊簽名，請參閱了解 [實名認證基本介紹](https://cloud.tencent.com/document/product/378/3629)，如果爲個人認證請登入控制台申請簡訊簽名，具體操作請參閱 [創建簡訊簽名](https://cloud.tencent.com/document/product/382/36136#Sign)。
 
         :param request: Request instance for AddSmsSign.
         :type request: :class:`tencentcloud.sms.v20190711.models.AddSmsSignRequest`
@@ -55,8 +55,8 @@ class SmsClient(AbstractClient):
 
 
     def AddSmsTemplate(self, request):
-        """添加短信模版，申请之前请先认证参阅 [腾讯云短信正文模版审核标准](https://cloud.tencent.com/document/product/382/39023)。
-        >⚠️注意：个人认证用户不支持使用 API 申请短信正文模版，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629)，如果为个人认证请登录控制台申请短信正文模版，具体操作请参阅 [创建短信正文模版](https://cloud.tencent.com/document/product/382/36136#Template)。
+        """添加簡訊模版，申請之前請先認證參閱 [Top Cloud 簡訊正文模版審核标準](https://cloud.tencent.com/document/product/382/39023)。
+        >⚠️注意：個人認證用戶不支援使用 API 申請簡訊正文模版，請參閱了解 [實名認證基本介紹](https://cloud.tencent.com/document/product/378/3629)，如果爲個人認證請登入控制台申請簡訊正文模版，具體操作請參閱 [創建簡訊正文模版](https://cloud.tencent.com/document/product/382/36136#Template)。
 
         :param request: Request instance for AddSmsTemplate.
         :type request: :class:`tencentcloud.sms.v20190711.models.AddSmsTemplateRequest`
@@ -84,7 +84,7 @@ class SmsClient(AbstractClient):
 
 
     def CallbackStatusStatistics(self, request):
-        """统计用户回执的数据。
+        """統計用戶回執的數據。
 
         :param request: Request instance for CallbackStatusStatistics.
         :type request: :class:`tencentcloud.sms.v20190711.models.CallbackStatusStatisticsRequest`
@@ -112,7 +112,7 @@ class SmsClient(AbstractClient):
 
 
     def DeleteSmsSign(self, request):
-        """>⚠️注意：个人认证用户不支持使用 API 删除短信签名，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629)，请登录控制台删除短信签名，具体操作请参阅 [短信签名操作](https://cloud.tencent.com/document/product/382/36136#Sign) 中查看删除短信签名须知。
+        """>⚠️注意：個人認證用戶不支援使用 API 删除簡訊簽名，請參閱了解 [實名認證基本介紹](https://cloud.tencent.com/document/product/378/3629)，請登入控制台删除簡訊簽名，具體操作請參閱 [簡訊簽名操作](https://cloud.tencent.com/document/product/382/36136#Sign) 中檢視删除簡訊簽名須知。
 
         :param request: Request instance for DeleteSmsSign.
         :type request: :class:`tencentcloud.sms.v20190711.models.DeleteSmsSignRequest`
@@ -140,7 +140,7 @@ class SmsClient(AbstractClient):
 
 
     def DeleteSmsTemplate(self, request):
-        """>⚠️注意：个人认证用户不支持使用 API 删除短信正文模版，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629)，请登录控制台删除短信正文模版，具体操作请参阅 [短信正文模版操作](https://cloud.tencent.com/document/product/382/36136#Template) 中查看删除短信正文模版须知。
+        """>⚠️注意：個人認證用戶不支援使用 API 删除簡訊正文模版，請參閱了解 [實名認證基本介紹](https://cloud.tencent.com/document/product/378/3629)，請登入控制台删除簡訊正文模版，具體操作請參閱 [簡訊正文模版操作](https://cloud.tencent.com/document/product/382/36136#Template) 中檢視删除簡訊正文模版須知。
 
         :param request: Request instance for DeleteSmsTemplate.
         :type request: :class:`tencentcloud.sms.v20190711.models.DeleteSmsTemplateRequest`
@@ -168,7 +168,7 @@ class SmsClient(AbstractClient):
 
 
     def DescribeSmsSignList(self, request):
-        """>⚠️注意：个人认证用户不支持使用 API 查询短信签名，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629)。
+        """>⚠️注意：個人認證用戶不支援使用 API 查詢簡訊簽名，請參閱了解 [實名認證基本介紹](https://cloud.tencent.com/document/product/378/3629)。
 
         :param request: Request instance for DescribeSmsSignList.
         :type request: :class:`tencentcloud.sms.v20190711.models.DescribeSmsSignListRequest`
@@ -196,7 +196,7 @@ class SmsClient(AbstractClient):
 
 
     def DescribeSmsTemplateList(self, request):
-        """>⚠️注意：个人认证用户不支持使用 API 查询短信正文模版，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629)。
+        """>⚠️注意：個人認證用戶不支援使用 API 查詢簡訊正文模版，請參閱了解 [實名認證基本介紹](https://cloud.tencent.com/document/product/378/3629)。
 
         :param request: Request instance for DescribeSmsTemplateList.
         :type request: :class:`tencentcloud.sms.v20190711.models.DescribeSmsTemplateListRequest`
@@ -224,9 +224,9 @@ class SmsClient(AbstractClient):
 
 
     def ModifySmsSign(self, request):
-        """修改短信签名，修改之前请先认证参阅 [腾讯云短信签名审核标准](https://cloud.tencent.com/document/product/382/39022)。
-        >- ⚠️注意：个人认证用户不支持使用 API 修改短信签名，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629)，如果为个人认证请登录控制台修改短信签名。
-        >- 修改短信签名，仅当签名为待审核或已拒绝状态时，才能进行修改，已审核通过的签名不支持修改。
+        """修改簡訊簽名，修改之前請先認證參閱 [Top Cloud 簡訊簽名審核标準](https://cloud.tencent.com/document/product/382/39022)。
+        >- ⚠️注意：個人認證用戶不支援使用 API 修改簡訊簽名，請參閱了解 [實名認證基本介紹](https://cloud.tencent.com/document/product/378/3629)，如果爲個人認證請登入控制台修改簡訊簽名。
+        >- 修改簡訊簽名，僅當簽名爲待審核或已拒絕狀态時，才能進行修改，已審核通過的簽名不支援修改。
 
         :param request: Request instance for ModifySmsSign.
         :type request: :class:`tencentcloud.sms.v20190711.models.ModifySmsSignRequest`
@@ -254,9 +254,9 @@ class SmsClient(AbstractClient):
 
 
     def ModifySmsTemplate(self, request):
-        """修改短信正文模版，修改之前请先认真参阅 [腾讯云短信正文模版审核标准](https://cloud.tencent.com/document/product/382/39023)。
-        >- ⚠️注意：个人认证用户不支持使用 API 修改短信正文模版，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629)，如果为个人认证请登录控制台修改短信正文模版。
-        >- 修改短信签名，仅当正文模版为待审核或已拒绝状态时，才能进行修改，已审核通过的正文模版不支持修改。
+        """修改簡訊正文模版，修改之前請先認真參閱 [Top Cloud 簡訊正文模版審核标準](https://cloud.tencent.com/document/product/382/39023)。
+        >- ⚠️注意：個人認證用戶不支援使用 API 修改簡訊正文模版，請參閱了解 [實名認證基本介紹](https://cloud.tencent.com/document/product/378/3629)，如果爲個人認證請登入控制台修改簡訊正文模版。
+        >- 修改簡訊簽名，僅當正文模版爲待審核或已拒絕狀态時，才能進行修改，已審核通過的正文模版不支援修改。
 
         :param request: Request instance for ModifySmsTemplate.
         :type request: :class:`tencentcloud.sms.v20190711.models.ModifySmsTemplateRequest`
@@ -284,8 +284,8 @@ class SmsClient(AbstractClient):
 
 
     def PullSmsReplyStatus(self, request):
-        """拉取短信回复状态。
-        目前也支持 [配置回复回调](https://cloud.tencent.com/document/product/382/42907) 的方式来获取上行回复。
+        """拉取簡訊回複狀态。
+        目前也支援 [配置回複回調](https://cloud.tencent.com/document/product/382/42907) 的方式來獲取上行回複。
 
         :param request: Request instance for PullSmsReplyStatus.
         :type request: :class:`tencentcloud.sms.v20190711.models.PullSmsReplyStatusRequest`
@@ -313,8 +313,8 @@ class SmsClient(AbstractClient):
 
 
     def PullSmsReplyStatusByPhoneNumber(self, request):
-        """拉取单个号码短信回复状态。
-        目前也支持 [配置回复回调](https://cloud.tencent.com/document/product/382/42907) 的方式来获取上行回复。
+        """拉取單個号碼簡訊回複狀态。
+        目前也支援 [配置回複回調](https://cloud.tencent.com/document/product/382/42907) 的方式來獲取上行回複。
 
         :param request: Request instance for PullSmsReplyStatusByPhoneNumber.
         :type request: :class:`tencentcloud.sms.v20190711.models.PullSmsReplyStatusByPhoneNumberRequest`
@@ -342,8 +342,8 @@ class SmsClient(AbstractClient):
 
 
     def PullSmsSendStatus(self, request):
-        """拉取短信下发状态。
-        >- 目前也支持 [配置回调](https://cloud.tencent.com/document/product/382/37809#.E8.AE.BE.E7.BD.AE.E4.BA.8B.E4.BB.B6.E5.9B.9E.E8.B0.83.E9.85.8D.E7.BD.AE) 的方式来获取下发状态。
+        """拉取簡訊下發狀态。
+        >- 目前也支援 [配置回調](https://cloud.tencent.com/document/product/382/37809#.E8.AE.BE.E7.BD.AE.E4.BA.8B.E4.BB.B6.E5.9B.9E.E8.B0.83.E9.85.8D.E7.BD.AE) 的方式來獲取下發狀态。
 
         :param request: Request instance for PullSmsSendStatus.
         :type request: :class:`tencentcloud.sms.v20190711.models.PullSmsSendStatusRequest`
@@ -371,8 +371,8 @@ class SmsClient(AbstractClient):
 
 
     def PullSmsSendStatusByPhoneNumber(self, request):
-        """拉取单个号码短信下发状态。
-        >- 目前也支持 [配置回调](https://cloud.tencent.com/document/product/382/37809#.E8.AE.BE.E7.BD.AE.E4.BA.8B.E4.BB.B6.E5.9B.9E.E8.B0.83.E9.85.8D.E7.BD.AE) 的方式来获取下发状态。
+        """拉取單個号碼簡訊下發狀态。
+        >- 目前也支援 [配置回調](https://cloud.tencent.com/document/product/382/37809#.E8.AE.BE.E7.BD.AE.E4.BA.8B.E4.BB.B6.E5.9B.9E.E8.B0.83.E9.85.8D.E7.BD.AE) 的方式來獲取下發狀态。
 
         :param request: Request instance for PullSmsSendStatusByPhoneNumber.
         :type request: :class:`tencentcloud.sms.v20190711.models.PullSmsSendStatusByPhoneNumberRequest`
@@ -400,7 +400,7 @@ class SmsClient(AbstractClient):
 
 
     def SendSms(self, request):
-        """短信发送接口，用户给用户发短信验证码、通知类短信或营销短信。
+        """簡訊發送介面，用戶給用戶發簡訊驗證碼、通知類簡訊或營銷簡訊。
 
 
         :param request: Request instance for SendSms.
@@ -429,7 +429,7 @@ class SmsClient(AbstractClient):
 
 
     def SendStatusStatistics(self, request):
-        """统计用户发送短信的数据。
+        """統計用戶發送簡訊的數據。
 
         :param request: Request instance for SendStatusStatistics.
         :type request: :class:`tencentcloud.sms.v20190711.models.SendStatusStatisticsRequest`
@@ -457,7 +457,7 @@ class SmsClient(AbstractClient):
 
 
     def SmsPackagesStatistics(self, request):
-        """用户套餐包信息统计。
+        """用戶套餐包訊息統計。
 
         :param request: Request instance for SmsPackagesStatistics.
         :type request: :class:`tencentcloud.sms.v20190711.models.SmsPackagesStatisticsRequest`

@@ -17,16 +17,16 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AutoSummarizationRequest(AbstractModel):
-    """AutoSummarization请求参数结构体
+    """AutoSummarization請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Text: 待处理的文本（仅支持UTF-8格式，不超过2000字）
+        :param Text: 待處理的文本（僅支援UTF-8格式，不超過2000字）
         :type Text: str
-        :param Length: 指定摘要的长度上限（默认值为200）
-注：为保证摘要的可读性，最终生成的摘要长度会低于指定的长度上限。
+        :param Length: 指定摘要的長度上限（預設值爲200）
+注：爲保證摘要的可讀性，最終生成的摘要長度會低于指定的長度上限。
         :type Length: int
         """
         self.Text = None
@@ -39,15 +39,15 @@ class AutoSummarizationRequest(AbstractModel):
 
 
 class AutoSummarizationResponse(AbstractModel):
-    """AutoSummarization返回参数结构体
+    """AutoSummarization返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Summary: 文本摘要结果
+        :param Summary: 文本摘要結果
         :type Summary: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Summary = None
@@ -60,17 +60,17 @@ class AutoSummarizationResponse(AbstractModel):
 
 
 class CCIToken(AbstractModel):
-    """文本纠错结果
+    """文本糾錯結果
 
     """
 
     def __init__(self):
         """
-        :param BeginOffset: 错别字的起始位置，从0开始
+        :param BeginOffset: 錯别字的起始位置，從0開始
         :type BeginOffset: int
-        :param CorrectWord: 错别字纠错结果
+        :param CorrectWord: 錯别字糾錯結果
         :type CorrectWord: str
-        :param Word: 错别字内容
+        :param Word: 錯别字内容
         :type Word: str
         """
         self.BeginOffset = None
@@ -85,17 +85,17 @@ class CCIToken(AbstractModel):
 
 
 class ChatBotRequest(AbstractModel):
-    """ChatBot请求参数结构体
+    """ChatBot請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Query: 用户请求的query
+        :param Query: 用戶請求的query
         :type Query: str
-        :param Flag: 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
+        :param Flag: 0: 通用閑聊, 1:兒童閑聊, 預設是通用閑聊
         :type Flag: int
-        :param OpenId: 服务的id,  主要用于儿童闲聊接口，比如手Q的openid
+        :param OpenId: 服務的id,  主要用于兒童閑聊介面，比如手Q的openid
         :type OpenId: str
         """
         self.Query = None
@@ -110,17 +110,17 @@ class ChatBotRequest(AbstractModel):
 
 
 class ChatBotResponse(AbstractModel):
-    """ChatBot返回参数结构体
+    """ChatBot返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Confidence: 对于当前输出回复的自信度
+        :param Confidence: 對于當前輸出回複的自信度
         :type Confidence: float
-        :param Reply: 闲聊回复
+        :param Reply: 閑聊回複
         :type Reply: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Confidence = None
@@ -135,19 +135,19 @@ class ChatBotResponse(AbstractModel):
 
 
 class ClassificationResult(AbstractModel):
-    """文本分类结果
+    """文本分類結果
 
     """
 
     def __init__(self):
         """
-        :param FirstClassName: 一级分类名称
+        :param FirstClassName: 一級分類名稱
         :type FirstClassName: str
-        :param FirstClassProbability: 一级分类概率
+        :param FirstClassProbability: 一級分類概率
         :type FirstClassProbability: float
-        :param SecondClassName: 二级分类名称
+        :param SecondClassName: 二級分類名稱
         :type SecondClassName: str
-        :param SecondClassProbability: 二级分类概率
+        :param SecondClassProbability: 二級分類概率
         :type SecondClassProbability: float
         """
         self.FirstClassName = None
@@ -164,13 +164,13 @@ class ClassificationResult(AbstractModel):
 
 
 class DependencyParsingRequest(AbstractModel):
-    """DependencyParsing请求参数结构体
+    """DependencyParsing請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Text: 待分析的文本（仅支持UTF-8格式，不超过200字）
+        :param Text: 待分析的文本（僅支援UTF-8格式，不超過200字）
         :type Text: str
         """
         self.Text = None
@@ -181,30 +181,30 @@ class DependencyParsingRequest(AbstractModel):
 
 
 class DependencyParsingResponse(AbstractModel):
-    """DependencyParsing返回参数结构体
+    """DependencyParsing返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DpTokens: 句法依存分析结果，其中句法依存关系的类型包括：
-<li>主谓关系，eg: 我送她一束花 (我 <-- 送)
-<li>动宾关系，eg: 我送她一束花 (送 --> 花)
-<li>间宾关系，eg: 我送她一束花 (送 --> 她)
-<li>前置宾语，eg: 他什么书都读 (书 <-- 读)
-<li>兼语，eg: 他请我吃饭 (请 --> 我)
-<li>定中关系，eg: 红苹果 (红 <-- 苹果)
-<li>状中结构，eg: 非常美丽 (非常 <-- 美丽)
-<li>动补结构，eg: 做完了作业 (做 --> 完)
-<li>并列关系，eg: 大山和大海 (大山 --> 大海)
-<li>介宾关系，eg: 在贸易区内 (在 --> 内)
-<li>左附加关系，eg: 大山和大海 (和 <-- 大海)
-<li>右附加关系，eg: 孩子们 (孩子 --> 们)
-<li>独立结构，eg: 两个单句在结构上彼此独立
-<li>标点符号，eg: 。
-<li>核心关系，eg: 整个句子的核心
+        :param DpTokens: 句法依存分析結果，其中句法依存關系的類型包括：
+<li>主謂關系，eg: 我送她一束花 (我 <-- 送)
+<li>動賓關系，eg: 我送她一束花 (送 --> 花)
+<li>間賓關系，eg: 我送她一束花 (送 --> 她)
+<li>前置賓語，eg: 他什麽書都讀 (書 <-- 讀)
+<li>兼語，eg: 他請我吃飯 (請 --> 我)
+<li>定中關系，eg: 紅蘋果 (紅 <-- 蘋果)
+<li>狀中結構，eg: 非常美麗 (非常 <-- 美麗)
+<li>動補結構，eg: 做完了作業 (做 --> 完)
+<li>并列關系，eg: 大山和大海 (大山 --> 大海)
+<li>介賓關系，eg: 在貿易區内 (在 --> 内)
+<li>左附加關系，eg: 大山和大海 (和 <-- 大海)
+<li>右附加關系，eg: 孩子們 (孩子 --> 們)
+<li>獨立結構，eg: 兩個單句在結構上彼此獨立
+<li>标點符号，eg: 。
+<li>核心關系，eg: 整個句子的核心
         :type DpTokens: list of DpToken
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DpTokens = None
@@ -222,13 +222,13 @@ class DependencyParsingResponse(AbstractModel):
 
 
 class DescribeEntityRequest(AbstractModel):
-    """DescribeEntity请求参数结构体
+    """DescribeEntity請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EntityName: 实体名称
+        :param EntityName: 實體名稱
         :type EntityName: str
         """
         self.EntityName = None
@@ -239,15 +239,15 @@ class DescribeEntityRequest(AbstractModel):
 
 
 class DescribeEntityResponse(AbstractModel):
-    """DescribeEntity返回参数结构体
+    """DescribeEntity返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Content: 返回查询实体相关信息
+        :param Content: 返回查詢實體相關訊息
         :type Content: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Content = None
@@ -260,15 +260,15 @@ class DescribeEntityResponse(AbstractModel):
 
 
 class DescribeRelationRequest(AbstractModel):
-    """DescribeRelation请求参数结构体
+    """DescribeRelation請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LeftEntityName: 输入第一个实体
+        :param LeftEntityName: 輸入第一個實體
         :type LeftEntityName: str
-        :param RightEntityName: 输入第二个实体
+        :param RightEntityName: 輸入第二個實體
         :type RightEntityName: str
         """
         self.LeftEntityName = None
@@ -281,15 +281,15 @@ class DescribeRelationRequest(AbstractModel):
 
 
 class DescribeRelationResponse(AbstractModel):
-    """DescribeRelation返回参数结构体
+    """DescribeRelation返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Content: 返回查询实体间的关系
+        :param Content: 返回查詢實體間的關系
         :type Content: list of EntityRelationContent
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Content = None
@@ -307,13 +307,13 @@ class DescribeRelationResponse(AbstractModel):
 
 
 class DescribeTripleRequest(AbstractModel):
-    """DescribeTriple请求参数结构体
+    """DescribeTriple請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TripleCondition: 三元组查询条件
+        :param TripleCondition: 三元組查詢條件
         :type TripleCondition: str
         """
         self.TripleCondition = None
@@ -324,15 +324,15 @@ class DescribeTripleRequest(AbstractModel):
 
 
 class DescribeTripleResponse(AbstractModel):
-    """DescribeTriple返回参数结构体
+    """DescribeTriple返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Content: 返回三元组信息
+        :param Content: 返回三元組訊息
         :type Content: list of TripleContent
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Content = None
@@ -350,19 +350,19 @@ class DescribeTripleResponse(AbstractModel):
 
 
 class DpToken(AbstractModel):
-    """句法依存分析结果，包括基础词，基础词的序号，当前词父节点的序号，句法依存关系的类型
+    """句法依存分析結果，包括基礎詞，基礎詞的序号，當前詞父節點的序号，句法依存關系的類型
 
     """
 
     def __init__(self):
         """
-        :param HeadId: 当前词父节点的序号
+        :param HeadId: 當前詞父節點的序号
         :type HeadId: int
-        :param Id: 基础词的序号
+        :param Id: 基礎詞的序号
         :type Id: int
-        :param Relation: 句法依存关系的类型
+        :param Relation: 句法依存關系的類型
         :type Relation: str
-        :param Word: 基础词
+        :param Word: 基礎詞
         :type Word: str
         """
         self.HeadId = None
@@ -379,17 +379,17 @@ class DpToken(AbstractModel):
 
 
 class EntityRelationContent(AbstractModel):
-    """返回的实体关系查询结果详细内容
+    """返回的實體關系查詢結果詳細内容
 
     """
 
     def __init__(self):
         """
-        :param Object: 实体关系查询返回关系的object
+        :param Object: 實體關系查詢返回關系的object
         :type Object: list of EntityRelationObject
-        :param Subject: 实体关系查询返回关系的subject
+        :param Subject: 實體關系查詢返回關系的subject
         :type Subject: list of EntityRelationSubject
-        :param Relation: 实体关系查询返回的关系名称
+        :param Relation: 實體關系查詢返回的關系名稱
         :type Relation: str
         """
         self.Object = None
@@ -414,17 +414,17 @@ class EntityRelationContent(AbstractModel):
 
 
 class EntityRelationObject(AbstractModel):
-    """实体关系查询返回的Object类型
+    """實體關系查詢返回的Object類型
 
     """
 
     def __init__(self):
         """
-        :param Id: object对应id
+        :param Id: object對應id
         :type Id: list of str
-        :param Name: object对应name
+        :param Name: object對應name
         :type Name: list of str
-        :param Popular: object对应popular值
+        :param Popular: object對應popular值
         :type Popular: list of int
         """
         self.Id = None
@@ -439,17 +439,17 @@ class EntityRelationObject(AbstractModel):
 
 
 class EntityRelationSubject(AbstractModel):
-    """实体关系查询返回Subject
+    """實體關系查詢返回Subject
 
     """
 
     def __init__(self):
         """
-        :param Id: Subject对应id
+        :param Id: Subject對應id
         :type Id: list of str
-        :param Name: Subject对应name
+        :param Name: Subject對應name
         :type Name: list of str
-        :param Popular: Subject对应popular
+        :param Popular: Subject對應popular
         :type Popular: list of int
         """
         self.Id = None
@@ -464,15 +464,15 @@ class EntityRelationSubject(AbstractModel):
 
 
 class Keyword(AbstractModel):
-    """关键词提取结果
+    """關鍵詞提取結果
 
     """
 
     def __init__(self):
         """
-        :param Score: 权重
+        :param Score: 權重
         :type Score: float
-        :param Word: 关键词
+        :param Word: 關鍵詞
         :type Word: str
         """
         self.Score = None
@@ -485,15 +485,15 @@ class Keyword(AbstractModel):
 
 
 class KeywordsExtractionRequest(AbstractModel):
-    """KeywordsExtraction请求参数结构体
+    """KeywordsExtraction請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Text: 待处理的文本（仅支持UTF-8格式，不超过10000字）
+        :param Text: 待處理的文本（僅支援UTF-8格式，不超過10000字）
         :type Text: str
-        :param Num: 指定关键词个数上限（默认值为5）
+        :param Num: 指定關鍵詞個數上限（預設值爲5）
         :type Num: int
         """
         self.Text = None
@@ -506,15 +506,15 @@ class KeywordsExtractionRequest(AbstractModel):
 
 
 class KeywordsExtractionResponse(AbstractModel):
-    """KeywordsExtraction返回参数结构体
+    """KeywordsExtraction返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Keywords: 关键词提取结果
+        :param Keywords: 關鍵詞提取結果
         :type Keywords: list of Keyword
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Keywords = None
@@ -532,17 +532,17 @@ class KeywordsExtractionResponse(AbstractModel):
 
 
 class LexicalAnalysisRequest(AbstractModel):
-    """LexicalAnalysis请求参数结构体
+    """LexicalAnalysis請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Text: 待分析的文本（仅支持UTF-8格式，不超过500字）
+        :param Text: 待分析的文本（僅支援UTF-8格式，不超過500字）
         :type Text: str
-        :param Flag: 词法分析模式（默认取2值）：
-1、高精度（混合粒度分词能力）；
-2、高性能（单粒度分词能力）；
+        :param Flag: 詞法分析模式（預設取2值）：
+1、高精度（混合粒度分詞能力）；
+2、高效能（單粒度分詞能力）；
         :type Flag: int
         """
         self.Text = None
@@ -555,20 +555,20 @@ class LexicalAnalysisRequest(AbstractModel):
 
 
 class LexicalAnalysisResponse(AbstractModel):
-    """LexicalAnalysis返回参数结构体
+    """LexicalAnalysis返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NerTokens: 命名实体识别结果。取值范围：
+        :param NerTokens: 命名實體識别結果。取值範圍：
 <li>PER：表示人名</li>
 <li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li>
+<li>ORG：表示機構團體名</li>
         :type NerTokens: list of NerToken
-        :param PosTokens: 分词&词性标注结果（词性表请参见附录）
+        :param PosTokens: 分詞&詞性标注結果（詞性表請參見附錄）
         :type PosTokens: list of PosToken
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.NerTokens = None
@@ -593,7 +593,7 @@ class LexicalAnalysisResponse(AbstractModel):
 
 
 class NerToken(AbstractModel):
-    """命名实体识别结果
+    """命名實體識别結果
 
     """
 
@@ -601,11 +601,11 @@ class NerToken(AbstractModel):
         """
         :param BeginOffset: 起始位置
         :type BeginOffset: int
-        :param Length: 长度
+        :param Length: 長度
         :type Length: int
-        :param Type: 命名实体类型
+        :param Type: 命名實體類型
         :type Type: str
-        :param Word: 基础词
+        :param Word: 基礎詞
         :type Word: str
         """
         self.BeginOffset = None
@@ -622,7 +622,7 @@ class NerToken(AbstractModel):
 
 
 class PosToken(AbstractModel):
-    """分词&词性标注结果
+    """分詞&詞性标注結果
 
     """
 
@@ -630,11 +630,11 @@ class PosToken(AbstractModel):
         """
         :param BeginOffset: 起始位置
         :type BeginOffset: int
-        :param Length: 长度
+        :param Length: 長度
         :type Length: int
-        :param Pos: 词性
+        :param Pos: 詞性
         :type Pos: str
-        :param Word: 基础词
+        :param Word: 基礎詞
         :type Word: str
         """
         self.BeginOffset = None
@@ -651,13 +651,13 @@ class PosToken(AbstractModel):
 
 
 class SentenceEmbeddingRequest(AbstractModel):
-    """SentenceEmbedding请求参数结构体
+    """SentenceEmbedding請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Text: 输入的文本（仅支持UTF-8格式，不超过500字）
+        :param Text: 輸入的文本（僅支援UTF-8格式，不超過500字）
         :type Text: str
         """
         self.Text = None
@@ -668,17 +668,17 @@ class SentenceEmbeddingRequest(AbstractModel):
 
 
 class SentenceEmbeddingResponse(AbstractModel):
-    """SentenceEmbedding返回参数结构体
+    """SentenceEmbedding返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Dimension: 句向量的维度
+        :param Dimension: 句向量的維度
         :type Dimension: int
-        :param Vector: 句向量数组
+        :param Vector: 句向量數組
         :type Vector: list of float
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Dimension = None
@@ -693,15 +693,15 @@ class SentenceEmbeddingResponse(AbstractModel):
 
 
 class SentenceSimilarityRequest(AbstractModel):
-    """SentenceSimilarity请求参数结构体
+    """SentenceSimilarity請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SrcText: 计算相似度的源句子（仅支持UTF-8格式，不超过500字）
+        :param SrcText: 計算相似度的源句子（僅支援UTF-8格式，不超過500字）
         :type SrcText: str
-        :param TargetText: 计算相似度的目标句子（仅支持UTF-8格式，不超过500字）
+        :param TargetText: 計算相似度的目标句子（僅支援UTF-8格式，不超過500字）
         :type TargetText: str
         """
         self.SrcText = None
@@ -714,15 +714,15 @@ class SentenceSimilarityRequest(AbstractModel):
 
 
 class SentenceSimilarityResponse(AbstractModel):
-    """SentenceSimilarity返回参数结构体
+    """SentenceSimilarity返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Similarity: 两个文本的相似度
+        :param Similarity: 兩個文本的相似度
         :type Similarity: float
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Similarity = None
@@ -735,19 +735,19 @@ class SentenceSimilarityResponse(AbstractModel):
 
 
 class SentimentAnalysisRequest(AbstractModel):
-    """SentimentAnalysis请求参数结构体
+    """SentimentAnalysis請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Text: 待分析的文本（仅支持UTF-8格式，不超过200字）
+        :param Text: 待分析的文本（僅支援UTF-8格式，不超過200字）
         :type Text: str
-        :param Flag: 文本所属类型（默认取4值）：
-1、商品评论类
-2、社交类
-3、美食酒店类
-4、通用领域类
+        :param Flag: 文本所屬類型（預設取4值）：
+1、商品評論類
+2、社交類
+3、美食酒店類
+4、通用領域類
         :type Flag: int
         """
         self.Text = None
@@ -760,19 +760,19 @@ class SentimentAnalysisRequest(AbstractModel):
 
 
 class SentimentAnalysisResponse(AbstractModel):
-    """SentimentAnalysis返回参数结构体
+    """SentimentAnalysis返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Negative: 负面情感概率
+        :param Negative: 負面情感概率
         :type Negative: float
         :param Positive: 正面情感概率
         :type Positive: float
-        :param Sentiment: 情感属性
+        :param Sentiment: 情感屬性
         :type Sentiment: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Negative = None
@@ -789,15 +789,15 @@ class SentimentAnalysisResponse(AbstractModel):
 
 
 class SimilarWordsRequest(AbstractModel):
-    """SimilarWords请求参数结构体
+    """SimilarWords請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Text: 输入的词语（仅支持UTF-8格式，不超过20字）
+        :param Text: 輸入的詞語（僅支援UTF-8格式，不超過20字）
         :type Text: str
-        :param WordNumber: 相似词个数；取值范围：1-200，默认为10；
+        :param WordNumber: 相似詞個數；取值範圍：1-200，預設爲10；
         :type WordNumber: int
         """
         self.Text = None
@@ -810,15 +810,15 @@ class SimilarWordsRequest(AbstractModel):
 
 
 class SimilarWordsResponse(AbstractModel):
-    """SimilarWords返回参数结构体
+    """SimilarWords返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SimilarWords: 相似词数组
+        :param SimilarWords: 相似詞數組
         :type SimilarWords: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SimilarWords = None
@@ -831,17 +831,17 @@ class SimilarWordsResponse(AbstractModel):
 
 
 class TextClassificationRequest(AbstractModel):
-    """TextClassification请求参数结构体
+    """TextClassification請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Text: 待分类的文本（仅支持UTF-8格式，不超过10000字）
+        :param Text: 待分類的文本（僅支援UTF-8格式，不超過10000字）
         :type Text: str
-        :param Flag: 领域分类体系（默认取1值）：
-1、通用领域
-2、新闻领域
+        :param Flag: 領域分類體系（預設取1值）：
+1、通用領域
+2、新聞領域
         :type Flag: int
         """
         self.Text = None
@@ -854,15 +854,15 @@ class TextClassificationRequest(AbstractModel):
 
 
 class TextClassificationResponse(AbstractModel):
-    """TextClassification返回参数结构体
+    """TextClassification返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Classes: 文本分类结果（文本分类映射表请参见附录）
+        :param Classes: 文本分類結果（文本分類映射表請參見附錄）
         :type Classes: list of ClassificationResult
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Classes = None
@@ -880,13 +880,13 @@ class TextClassificationResponse(AbstractModel):
 
 
 class TextCorrectionRequest(AbstractModel):
-    """TextCorrection请求参数结构体
+    """TextCorrection請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Text: 待纠错的文本（仅支持UTF-8格式，不超过2000字）
+        :param Text: 待糾錯的文本（僅支援UTF-8格式，不超過2000字）
         :type Text: str
         """
         self.Text = None
@@ -897,17 +897,17 @@ class TextCorrectionRequest(AbstractModel):
 
 
 class TextCorrectionResponse(AbstractModel):
-    """TextCorrection返回参数结构体
+    """TextCorrection返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CCITokens: 纠错详情
+        :param CCITokens: 糾錯詳情
         :type CCITokens: list of CCIToken
-        :param ResultText: 纠错后的文本
+        :param ResultText: 糾錯後的文本
         :type ResultText: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CCITokens = None
@@ -927,19 +927,19 @@ class TextCorrectionResponse(AbstractModel):
 
 
 class TripleContent(AbstractModel):
-    """三元组查询返回的元记录
+    """三元組查詢返回的元記錄
 
     """
 
     def __init__(self):
         """
-        :param Id: 实体id
+        :param Id: 實體id
         :type Id: str
-        :param Name: 实体名称
+        :param Name: 實體名稱
         :type Name: str
-        :param Order: 实体order
+        :param Order: 實體order
         :type Order: int
-        :param Popular: 实体流行度
+        :param Popular: 實體流行度
         :type Popular: int
         """
         self.Id = None
@@ -956,13 +956,13 @@ class TripleContent(AbstractModel):
 
 
 class WordEmbeddingRequest(AbstractModel):
-    """WordEmbedding请求参数结构体
+    """WordEmbedding請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Text: 输入的词语（仅支持UTF-8格式，不超过20字）
+        :param Text: 輸入的詞語（僅支援UTF-8格式，不超過20字）
         :type Text: str
         """
         self.Text = None
@@ -973,17 +973,17 @@ class WordEmbeddingRequest(AbstractModel):
 
 
 class WordEmbeddingResponse(AbstractModel):
-    """WordEmbedding返回参数结构体
+    """WordEmbedding返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Dimension: 词向量的维度
+        :param Dimension: 詞向量的維度
         :type Dimension: int
-        :param Vector: 词向量数组
+        :param Vector: 詞向量數組
         :type Vector: list of float
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Dimension = None
@@ -998,15 +998,15 @@ class WordEmbeddingResponse(AbstractModel):
 
 
 class WordSimilarityRequest(AbstractModel):
-    """WordSimilarity请求参数结构体
+    """WordSimilarity請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SrcWord: 计算相似度的源词（仅支持UTF-8格式，不超过20字）
+        :param SrcWord: 計算相似度的源詞（僅支援UTF-8格式，不超過20字）
         :type SrcWord: str
-        :param TargetWord: 计算相似度的目标词（仅支持UTF-8格式，不超过20字）
+        :param TargetWord: 計算相似度的目标詞（僅支援UTF-8格式，不超過20字）
         :type TargetWord: str
         """
         self.SrcWord = None
@@ -1019,15 +1019,15 @@ class WordSimilarityRequest(AbstractModel):
 
 
 class WordSimilarityResponse(AbstractModel):
-    """WordSimilarity返回参数结构体
+    """WordSimilarity返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Similarity: 两个词语的相似度
+        :param Similarity: 兩個詞語的相似度
         :type Similarity: float
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Similarity = None

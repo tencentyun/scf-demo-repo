@@ -341,4 +341,3 @@ def run_and_exit(*args, **kwargs):
     if fails:
         sys.exit(1)
     sys.exit(0)
-

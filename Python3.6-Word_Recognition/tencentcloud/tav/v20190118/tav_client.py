@@ -26,9 +26,9 @@ class TavClient(AbstractClient):
 
 
     def GetLocalEngine(self, request):
-        """获取TAV本地引擎
+        """獲取TAV本地引擎
 
-        :param request: 调用GetLocalEngine所需参数的结构体。
+        :param request: 調用GetLocalEngine所需參數的結構體。
         :type request: :class:`tencentcloud.tav.v20190118.models.GetLocalEngineRequest`
         :rtype: :class:`tencentcloud.tav.v20190118.models.GetLocalEngineResponse`
 
@@ -54,9 +54,9 @@ class TavClient(AbstractClient):
 
 
     def GetScanResult(self, request):
-        """tav文件上传扫描结果查询
+        """tav文件上傳掃描結果查詢
 
-        :param request: 调用GetScanResult所需参数的结构体。
+        :param request: 調用GetScanResult所需參數的結構體。
         :type request: :class:`tencentcloud.tav.v20190118.models.GetScanResultRequest`
         :rtype: :class:`tencentcloud.tav.v20190118.models.GetScanResultResponse`
 
@@ -82,9 +82,9 @@ class TavClient(AbstractClient):
 
 
     def ScanFile(self, request):
-        """tav文件上传扫描
+        """tav文件上傳掃描
 
-        :param request: 调用ScanFile所需参数的结构体。
+        :param request: 調用ScanFile所需參數的結構體。
         :type request: :class:`tencentcloud.tav.v20190118.models.ScanFileRequest`
         :rtype: :class:`tencentcloud.tav.v20190118.models.ScanFileResponse`
 
@@ -110,9 +110,9 @@ class TavClient(AbstractClient):
 
 
     def ScanFileHash(self, request):
-        """通过文件哈希值获取文件黑白属性
+        """通過文件哈希值獲取文件黑白屬性
 
-        :param request: 调用ScanFileHash所需参数的结构体。
+        :param request: 調用ScanFileHash所需參數的結構體。
         :type request: :class:`tencentcloud.tav.v20190118.models.ScanFileHashRequest`
         :rtype: :class:`tencentcloud.tav.v20190118.models.ScanFileHashResponse`
 

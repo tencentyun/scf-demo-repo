@@ -54,4 +54,3 @@ typedef struct {
 
 static void* PyFONT_C_API[PYGAMEAPI_FONT_NUMSLOTS] = {NULL};
 #endif
-

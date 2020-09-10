@@ -2,11 +2,11 @@
 
 require 'cos-php-sdk-v5/vendor/autoload.php';
 
-$appid = XXXXXXXX;  # 请替换为您的 APPID
-$secret_id = '************';  # 请替换为您的 SecretId
-$secret_key = '************';  # 请替换为您的 SecretKey
+$appid = XXXXXXXX;  # 請替換爲您的 APPID
+$secret_id = '************';  # 請替換爲您的 SecretId
+$secret_key = '************';  # 請替換爲您的 SecretKey
 $region = 'ap-guangzhou';
-$backup_bucket = "XXXX".'-'.$appid;  # 请替换为您用于存放压缩后图片的bucket
+$backup_bucket = "XXXX".'-'.$appid;  # 請替換爲您用于存放壓縮後圖片的bucket
 
 $cosClient = new Qcloud\Cos\Client(array('region' => $region,
     'credentials'=> array(

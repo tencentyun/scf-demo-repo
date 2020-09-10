@@ -26,7 +26,7 @@ class FmuClient(AbstractClient):
 
 
     def BeautifyPic(self, request):
-        """用户上传一张人脸图片，精准定位五官，实现美肤、亮肤、祛痘等美颜功能。
+        """用戶上傳一張人臉圖片，精準定位五官，實現美膚、亮膚、祛痘等美顔功能。
 
         :param request: Request instance for BeautifyPic.
         :type request: :class:`tencentcloud.fmu.v20191213.models.BeautifyPicRequest`
@@ -54,9 +54,9 @@ class FmuClient(AbstractClient):
 
 
     def CreateModel(self, request):
-        """在使用LUT素材的modelid实现试唇色前，您需要先上传 LUT 格式的cube文件注册唇色ID。查看 [LUT文件的使用说明](https://cloud.tencent.com/document/product/1172/41701)。
+        """在使用LUT素材的modelid實現試唇色前，您需要先上傳 LUT 格式的cube文件注冊唇色ID。檢視 [LUT文件的使用說明](https://cloud.tencent.com/document/product/1172/41701)。
 
-        注：您也可以直接使用 [试唇色接口](https://cloud.tencent.com/document/product/1172/40706)，通过输入RGBA模型数值的方式指定唇色，更简单易用。
+        注：您也可以直接使用 [試唇色介面](https://cloud.tencent.com/document/product/1172/40706)，通過輸入RGBA模型數值的方式指定唇色，更簡單易用。
 
         :param request: Request instance for CreateModel.
         :type request: :class:`tencentcloud.fmu.v20191213.models.CreateModelRequest`
@@ -84,7 +84,7 @@ class FmuClient(AbstractClient):
 
 
     def DeleteModel(self, request):
-        """删除已注册的唇色素材。
+        """删除已注冊的唇色素材。
 
         :param request: Request instance for DeleteModel.
         :type request: :class:`tencentcloud.fmu.v20191213.models.DeleteModelRequest`
@@ -112,7 +112,7 @@ class FmuClient(AbstractClient):
 
 
     def GetModelList(self, request):
-        """查询已注册的唇色素材。
+        """查詢已注冊的唇色素材。
 
         :param request: Request instance for GetModelList.
         :type request: :class:`tencentcloud.fmu.v20191213.models.GetModelListRequest`
@@ -140,14 +140,14 @@ class FmuClient(AbstractClient):
 
 
     def TryLipstickPic(self, request):
-        """对图片中的人脸嘴唇进行着色，最多支持同时对一张图中的3张人脸进行试唇色。
+        """對圖片中的人臉嘴唇進行着色，最多支援同時對一張圖中的3張人臉進行試唇色。
 
-        您可以通过事先注册在腾讯云的唇色素材（LUT文件）改变图片中的人脸唇色，也可以输入RGBA模型数值。
+        您可以通過事先注冊在Top Cloud 的唇色素材（LUT文件）改變圖片中的人臉唇色，也可以輸入RGBA模型數值。
 
-        为了更好的效果，建议您使用事先注册在腾讯云的唇色素材（LUT文件）。
+        爲了更好的效果，建議您使用事先注冊在Top Cloud 的唇色素材（LUT文件）。
 
         >
-        - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        - 公共參數中的簽名方式請使用V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for TryLipstickPic.
         :type request: :class:`tencentcloud.fmu.v20191213.models.TryLipstickPicRequest`

@@ -17,15 +17,15 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class Canvas(AbstractModel):
-    """混流画布参数
+    """混流畫布參數
 
     """
 
     def __init__(self):
         """
-        :param LayoutParams: 混流画布宽高配置
+        :param LayoutParams: 混流畫布寬高配置
         :type LayoutParams: :class:`tencentcloud.tiw.v20190919.models.LayoutParams`
-        :param BackgroundColor: 背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
+        :param BackgroundColor: 背景顔色，預設爲黑色，格式爲RGB格式，如紅色爲"#FF0000"
         :type BackgroundColor: str
         """
         self.LayoutParams = None
@@ -40,16 +40,16 @@ class Canvas(AbstractModel):
 
 
 class Concat(AbstractModel):
-    """实时录制视频拼接参数
+    """實時錄制視訊拼接參數
 
     """
 
     def __init__(self):
         """
-        :param Enabled: 是否开启拼接功能
-在开启了视频拼接功能的情况下，实时录制服务会把同一个用户因为暂停导致的多段视频拼接成一个视频
+        :param Enabled: 是否開啓拼接功能
+在開啓了視訊拼接功能的情況下，實時錄制服務會把同一個用戶因爲暫停導緻的多段視訊拼接成一個視訊
         :type Enabled: bool
-        :param Image: 视频拼接时使用的垫片图片下载地址，不填默认用全黑的图片进行视频垫片
+        :param Image: 視訊拼接時使用的墊片圖片下載網址，不填預設用全黑的圖片進行視訊墊片
         :type Image: str
         """
         self.Enabled = None
@@ -62,31 +62,31 @@ class Concat(AbstractModel):
 
 
 class CreateTranscodeRequest(AbstractModel):
-    """CreateTranscode请求参数结构体
+    """CreateTranscode請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SdkAppId: 客户的SdkAppId
+        :param SdkAppId: 客戶的SdkAppId
         :type SdkAppId: int
-        :param Url: 需要进行转码文件地址
+        :param Url: 需要進行轉碼文件網址
         :type Url: str
-        :param IsStaticPPT: 是否为静态PPT，默认为False；
-如果IsStaticPPT为False，后缀名为.ppt或.pptx的文档会动态转码成HTML5页面，其他格式的文档会静态转码成图片；如果IsStaticPPT为True，所有格式的文档会静态转码成图片；
+        :param IsStaticPPT: 是否爲靜态PPT，預設爲False；
+如果IsStaticPPT爲False，後綴名爲.ppt或.pptx的文件會動态轉碼成HTML5頁面，其他格式的文件會靜态轉碼成圖片；如果IsStaticPPT爲True，所有格式的文件會靜态轉碼成圖片；
         :type IsStaticPPT: bool
-        :param MinResolution: 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+        :param MinResolution: 轉碼後文件的最小分辨率，不傳、傳空字串或分辨率格式錯誤則使用文件原分辨率
 
-注意分辨率宽高中间为英文字母"xyz"的"x"
+注意分辨率寬高中間爲英文字母"xyz"的"x"
         :type MinResolution: str
-        :param ThumbnailResolution: 动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution
+        :param ThumbnailResolution: 動态PPT轉碼可以爲文件生成該分辨率的縮略圖，不傳、傳空字串或分辨率格式錯誤則不生成縮略圖，分辨率格式同MinResolution
 
-静态转码这个参数不起作用
+靜态轉碼這個參數不起作用
         :type ThumbnailResolution: str
-        :param CompressFileType: 转码文件压缩格式，不传、传空字符串或不是指定的格式则不生成压缩文件，目前支持如下压缩格式：
+        :param CompressFileType: 轉碼文件壓縮格式，不傳、傳空字串或不是指定的格式則不生成壓縮文件，目前支援如下壓縮格式：
 
-zip： 生成`.zip`压缩包
-tar.gz： 生成`.tar.gz`压缩包
+zip： 生成`.zip`壓縮包
+tar.gz： 生成`.tar.gz`壓縮包
         :type CompressFileType: str
         """
         self.SdkAppId = None
@@ -107,15 +107,15 @@ tar.gz： 生成`.tar.gz`压缩包
 
 
 class CreateTranscodeResponse(AbstractModel):
-    """CreateTranscode返回参数结构体
+    """CreateTranscode返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 文档转码任务的唯一标识Id，用于查询该任务的进度以及转码结果
+        :param TaskId: 文件轉碼任務的唯一标識Id，用于查詢該任務的進度以及轉碼結果
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -128,15 +128,15 @@ class CreateTranscodeResponse(AbstractModel):
 
 
 class CustomLayout(AbstractModel):
-    """自定义混流布局参数
+    """自定義混流布局參數
 
     """
 
     def __init__(self):
         """
-        :param Canvas: 混流画布参数
+        :param Canvas: 混流畫布參數
         :type Canvas: :class:`tencentcloud.tiw.v20190919.models.Canvas`
-        :param InputStreamList: 流布局参数，每路流的布局不能超出画布区域
+        :param InputStreamList: 流布局參數，每路流的布局不能超出畫布區域
         :type InputStreamList: list of StreamLayout
         """
         self.Canvas = None
@@ -156,13 +156,13 @@ class CustomLayout(AbstractModel):
 
 
 class DescribeOnlineRecordCallbackRequest(AbstractModel):
-    """DescribeOnlineRecordCallback请求参数结构体
+    """DescribeOnlineRecordCallback請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SdkAppId: 应用的SdkAppId
+        :param SdkAppId: 應用的SdkAppId
         :type SdkAppId: int
         """
         self.SdkAppId = None
@@ -173,15 +173,15 @@ class DescribeOnlineRecordCallbackRequest(AbstractModel):
 
 
 class DescribeOnlineRecordCallbackResponse(AbstractModel):
-    """DescribeOnlineRecordCallback返回参数结构体
+    """DescribeOnlineRecordCallback返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Callback: 实时录制事件回调地址，如果未设置回调地址，该字段为空字符串
+        :param Callback: 實時錄制事件回調網址，如果未設置回調網址，該欄位爲空字串
         :type Callback: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Callback = None
@@ -194,15 +194,15 @@ class DescribeOnlineRecordCallbackResponse(AbstractModel):
 
 
 class DescribeOnlineRecordRequest(AbstractModel):
-    """DescribeOnlineRecord请求参数结构体
+    """DescribeOnlineRecord請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SdkAppId: 客户的SdkAppId
+        :param SdkAppId: 客戶的SdkAppId
         :type SdkAppId: int
-        :param TaskId: 实时录制任务Id
+        :param TaskId: 實時錄制任務Id
         :type TaskId: str
         """
         self.SdkAppId = None
@@ -215,45 +215,45 @@ class DescribeOnlineRecordRequest(AbstractModel):
 
 
 class DescribeOnlineRecordResponse(AbstractModel):
-    """DescribeOnlineRecord返回参数结构体
+    """DescribeOnlineRecord返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FinishReason: 录制结束原因，
-- AUTO: 房间内长时间没有音视频上行及白板操作导致自动停止录制
-- USER_CALL: 主动调用了停止录制接口
-- EXCEPTION: 录制异常结束
+        :param FinishReason: 錄制結束原因，
+- AUTO: 房間内長時間沒有影音上行及白板操作導緻自動停止錄制
+- USER_CALL: 主動調用了停止錄制介面
+- EXCEPTION: 錄制異常結束
         :type FinishReason: str
-        :param TaskId: 需要查询结果的录制任务Id
+        :param TaskId: 需要查詢結果的錄制任務Id
         :type TaskId: str
-        :param Status: 录制任务状态
-- PREPARED: 表示录制正在准备中（进房/启动录制服务等操作）
-- RECORDING: 表示录制已开始
-- PAUSED: 表示录制已暂停
-- STOPPED: 表示录制已停止，正在处理并上传视频
-- FINISHED: 表示视频处理并上传完成，成功生成录制结果
+        :param Status: 錄制任務狀态
+- PREPARED: 表示錄制正在準備中（進房/啓動錄制服務等操作）
+- RECORDING: 表示錄制已開始
+- PAUSED: 表示錄制已暫停
+- STOPPED: 表示錄制已停止，正在處理并上傳視訊
+- FINISHED: 表示視訊處理并上傳完成，成功生成錄制結果
         :type Status: str
-        :param RoomId: 房间号
+        :param RoomId: 房間号
         :type RoomId: int
-        :param GroupId: 白板的群组 Id
+        :param GroupId: 白板的群組 Id
         :type GroupId: str
-        :param RecordUserId: 录制用户Id
+        :param RecordUserId: 錄制用戶Id
         :type RecordUserId: str
-        :param RecordStartTime: 实际开始录制时间，Unix 时间戳，单位秒
+        :param RecordStartTime: 實際開始錄制時間，Unix 時間戳，單位秒
         :type RecordStartTime: int
-        :param RecordStopTime: 实际停止录制时间，Unix 时间戳，单位秒
+        :param RecordStopTime: 實際停止錄制時間，Unix 時間戳，單位秒
         :type RecordStopTime: int
-        :param TotalTime: 回放视频总时长（单位：毫秒）
+        :param TotalTime: 回放視訊總時長（單位：毫秒）
         :type TotalTime: int
-        :param ExceptionCnt: 录制过程中出现异常的次数
+        :param ExceptionCnt: 錄制過程中出現異常的次數
         :type ExceptionCnt: int
-        :param OmittedDurations: 拼接视频中被忽略的时间段，只有开启视频拼接功能的时候，这个参数才是有效的
+        :param OmittedDurations: 拼接視訊中被忽略的時間段，只有開啓視訊拼接功能的時候，這個參數才是有效的
         :type OmittedDurations: list of OmittedDuration
-        :param VideoInfos: 录制视频列表
+        :param VideoInfos: 錄制視訊清單
         :type VideoInfos: list of VideoInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FinishReason = None
@@ -298,13 +298,13 @@ class DescribeOnlineRecordResponse(AbstractModel):
 
 
 class DescribeTranscodeCallbackRequest(AbstractModel):
-    """DescribeTranscodeCallback请求参数结构体
+    """DescribeTranscodeCallback請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SdkAppId: 应用的SdkAppId
+        :param SdkAppId: 應用的SdkAppId
         :type SdkAppId: int
         """
         self.SdkAppId = None
@@ -315,15 +315,15 @@ class DescribeTranscodeCallbackRequest(AbstractModel):
 
 
 class DescribeTranscodeCallbackResponse(AbstractModel):
-    """DescribeTranscodeCallback返回参数结构体
+    """DescribeTranscodeCallback返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Callback: 文档转码回调地址
+        :param Callback: 文件轉碼回調網址
         :type Callback: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Callback = None
@@ -336,15 +336,15 @@ class DescribeTranscodeCallbackResponse(AbstractModel):
 
 
 class DescribeTranscodeRequest(AbstractModel):
-    """DescribeTranscode请求参数结构体
+    """DescribeTranscode請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SdkAppId: 客户的SdkAppId
+        :param SdkAppId: 客戶的SdkAppId
         :type SdkAppId: int
-        :param TaskId: 文档转码任务的唯一标识Id
+        :param TaskId: 文件轉碼任務的唯一标識Id
         :type TaskId: str
         """
         self.SdkAppId = None
@@ -357,42 +357,42 @@ class DescribeTranscodeRequest(AbstractModel):
 
 
 class DescribeTranscodeResponse(AbstractModel):
-    """DescribeTranscode返回参数结构体
+    """DescribeTranscode返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Pages: 文档的总页数
+        :param Pages: 文件的總頁數
         :type Pages: int
-        :param Progress: 转码的当前进度,取值范围为0~100
+        :param Progress: 轉碼的當前進度,取值範圍爲0~100
         :type Progress: int
-        :param Resolution: 文档的分辨率
+        :param Resolution: 文件的分辨率
         :type Resolution: str
-        :param ResultUrl: 转码完成后结果的URL
-动态转码：PPT转动态H5的链接
-静态转码：文档每一页的图片URL前缀，比如，该URL前缀为`http://example.com/g0jb42ps49vtebjshilb/`，那么文档第1页的图片URL为
-`http://example.com/g0jb42ps49vtebjshilb/1.jpg`，其它页以此类推
+        :param ResultUrl: 轉碼完成後結果的URL
+動态轉碼：PPT轉動态H5的連結
+靜态轉碼：文件每一頁的圖片URL前綴，比如，該URL前綴爲`http://example.com/g0jb42ps49vtebjshilb/`，那麽文件第1頁的圖片URL爲
+`http://example.com/g0jb42ps49vtebjshilb/1.jpg`，其它頁以此類推
         :type ResultUrl: str
-        :param Status: 任务的当前状态
-- QUEUED: 正在排队等待转换
-- PROCESSING: 转换中
-- FINISHED: 转换完成
+        :param Status: 任務的當前狀态
+- QUEUED: 正在排隊等待轉換
+- PROCESSING: 轉換中
+- FINISHED: 轉換完成
         :type Status: str
-        :param TaskId: 转码任务的唯一标识Id
+        :param TaskId: 轉碼任務的唯一标識Id
         :type TaskId: str
-        :param Title: 文档的文件名
+        :param Title: 文件的文件名
         :type Title: str
-        :param ThumbnailUrl: 缩略图URL前缀，比如，该URL前缀为`http://example.com/g0jb42ps49vtebjshilb/ `，那么动态PPT第1页的缩略图URL为
-`http://example.com/g0jb42ps49vtebjshilb/1.jpg`，其它页以此类推
+        :param ThumbnailUrl: 縮略圖URL前綴，比如，該URL前綴爲`http://example.com/g0jb42ps49vtebjshilb/ `，那麽動态PPT第1頁的縮略圖URL爲
+`http://example.com/g0jb42ps49vtebjshilb/1.jpg`，其它頁以此類推
 
-如果发起文档转码请求参数中带了ThumbnailResolution参数，并且转码类型为动态转码，该参数不为空，其余情况该参数为空字符串
+如果發起文件轉碼請求參數中帶了ThumbnailResolution參數，并且轉碼類型爲動态轉碼，該參數不爲空，其餘情況該參數爲空字串
         :type ThumbnailUrl: str
-        :param ThumbnailResolution: 动态转码缩略图生成分辨率
+        :param ThumbnailResolution: 動态轉碼縮略圖生成分辨率
         :type ThumbnailResolution: str
-        :param CompressFileUrl: 转码压缩文件下载的URL，如果发起文档转码请求参数中`CompressFileType`为空或者不是支持的压缩格式，该参数为空字符串
+        :param CompressFileUrl: 轉碼壓縮文件下載的URL，如果發起文件轉碼請求參數中`CompressFileType`爲空或者不是支援的壓縮格式，該參數爲空字串
         :type CompressFileUrl: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Pages = None
@@ -423,22 +423,22 @@ class DescribeTranscodeResponse(AbstractModel):
 
 
 class LayoutParams(AbstractModel):
-    """自定义混流配置布局参数
+    """自定義混流配置布局參數
 
     """
 
     def __init__(self):
         """
-        :param Width: 流画面宽，取值范围[2,3000]
+        :param Width: 流畫面寬，取值範圍[2,3000]
         :type Width: int
-        :param Height: 流画面高，取值范围[2,3000]
+        :param Height: 流畫面高，取值範圍[2,3000]
         :type Height: int
-        :param X: 当前画面左上角顶点相对于Canvas左上角顶点的x轴偏移量，默认为0，取值范围[0,3000]
+        :param X: 當前畫面左上角頂點相對于Canvas左上角頂點的x軸偏移量，預設爲0，取值範圍[0,3000]
         :type X: int
-        :param Y: 当前画面左上角顶点相对于Canvas左上角顶点的y轴偏移量，默认为0， 取值范围[0,3000]
+        :param Y: 當前畫面左上角頂點相對于Canvas左上角頂點的y軸偏移量，預設爲0， 取值範圍[0,3000]
         :type Y: int
-        :param ZOrder: 画面z轴位置，默认为0
-z轴确定了重叠画面的遮盖顺序，z轴值大的画面处于顶层
+        :param ZOrder: 畫面z軸位置，預設爲0
+z軸确定了重疊畫面的遮蓋順序，z軸值大的畫面處于頂層
         :type ZOrder: int
         """
         self.Width = None
@@ -463,19 +463,19 @@ class MixStream(AbstractModel):
 
     def __init__(self):
         """
-        :param Enabled: 是否开启混流
+        :param Enabled: 是否開啓混流
         :type Enabled: bool
-        :param DisableAudio: 是否禁用音频混流
+        :param DisableAudio: 是否禁用音訊混流
         :type DisableAudio: bool
-        :param ModelId: 内置混流布局模板ID, 取值 [1, 2], 区别见内置混流布局模板样式示例说明
-在没有填Custom字段时候，ModelId是必填的
+        :param ModelId: 内置混流布局範本ID, 取值 [1, 2], 區别見内置混流布局範本樣式範例說明
+在沒有填Custom欄位時候，ModelId是必填的
         :type ModelId: int
-        :param TeacherId: 老师用户ID
-此字段只有在ModelId填了的情况下生效
-填写TeacherId的效果是把指定为TeacherId的用户视频流显示在内置模板的第一个小画面中
+        :param TeacherId: 老師用戶ID
+此欄位只有在ModelId填了的情況下生效
+填寫TeacherId的效果是把指定爲TeacherId的用戶視訊流顯示在内置範本的第一個小畫面中
         :type TeacherId: str
-        :param Custom: 自定义混流布局参数
-当此字段存在时，ModelId 及 TeacherId 字段将被忽略
+        :param Custom: 自定義混流布局參數
+當此欄位存在時，ModelId 及 TeacherId 欄位将被忽略
         :type Custom: :class:`tencentcloud.tiw.v20190919.models.CustomLayout`
         """
         self.Enabled = None
@@ -496,17 +496,17 @@ class MixStream(AbstractModel):
 
 
 class OmittedDuration(AbstractModel):
-    """拼接视频中被忽略的时间段
+    """拼接視訊中被忽略的時間段
 
     """
 
     def __init__(self):
         """
-        :param VideoTime: 录制暂停时间戳对应的视频播放时间(单位: 毫秒)
+        :param VideoTime: 錄制暫停時間戳對應的視訊播放時間(單位: 毫秒)
         :type VideoTime: int
-        :param PauseTime: 录制暂停时间戳(单位: 毫秒)
+        :param PauseTime: 錄制暫停時間戳(單位: 毫秒)
         :type PauseTime: int
-        :param ResumeTime: 录制恢复时间戳(单位: 毫秒)
+        :param ResumeTime: 錄制恢複時間戳(單位: 毫秒)
         :type ResumeTime: int
         """
         self.VideoTime = None
@@ -521,15 +521,15 @@ class OmittedDuration(AbstractModel):
 
 
 class PauseOnlineRecordRequest(AbstractModel):
-    """PauseOnlineRecord请求参数结构体
+    """PauseOnlineRecord請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SdkAppId: 客户的SdkAppId
+        :param SdkAppId: 客戶的SdkAppId
         :type SdkAppId: int
-        :param TaskId: 实时录制任务 Id
+        :param TaskId: 實時錄制任務 Id
         :type TaskId: str
         """
         self.SdkAppId = None
@@ -542,13 +542,13 @@ class PauseOnlineRecordRequest(AbstractModel):
 
 
 class PauseOnlineRecordResponse(AbstractModel):
-    """PauseOnlineRecord返回参数结构体
+    """PauseOnlineRecord返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -559,15 +559,15 @@ class PauseOnlineRecordResponse(AbstractModel):
 
 
 class ResumeOnlineRecordRequest(AbstractModel):
-    """ResumeOnlineRecord请求参数结构体
+    """ResumeOnlineRecord請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SdkAppId: 客户的SdkAppId
+        :param SdkAppId: 客戶的SdkAppId
         :type SdkAppId: int
-        :param TaskId: 恢复录制的实时录制任务 Id
+        :param TaskId: 恢複錄制的實時錄制任務 Id
         :type TaskId: str
         """
         self.SdkAppId = None
@@ -580,13 +580,13 @@ class ResumeOnlineRecordRequest(AbstractModel):
 
 
 class ResumeOnlineRecordResponse(AbstractModel):
-    """ResumeOnlineRecord返回参数结构体
+    """ResumeOnlineRecord返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -597,15 +597,15 @@ class ResumeOnlineRecordResponse(AbstractModel):
 
 
 class SetOnlineRecordCallbackRequest(AbstractModel):
-    """SetOnlineRecordCallback请求参数结构体
+    """SetOnlineRecordCallback請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SdkAppId: 客户的SdkAppId
+        :param SdkAppId: 客戶的SdkAppId
         :type SdkAppId: int
-        :param Callback: 实时录制任务结果回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持 http或https协议，即回调地址以http://或https://开头
+        :param Callback: 實時錄制任務結果回調網址，如果傳空字串會删除原來的回調網址配置，回調網址僅支援 http或https協議，即回調網址以http://或https://開頭
         :type Callback: str
         """
         self.SdkAppId = None
@@ -618,13 +618,13 @@ class SetOnlineRecordCallbackRequest(AbstractModel):
 
 
 class SetOnlineRecordCallbackResponse(AbstractModel):
-    """SetOnlineRecordCallback返回参数结构体
+    """SetOnlineRecordCallback返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -635,15 +635,15 @@ class SetOnlineRecordCallbackResponse(AbstractModel):
 
 
 class SetTranscodeCallbackRequest(AbstractModel):
-    """SetTranscodeCallback请求参数结构体
+    """SetTranscodeCallback請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SdkAppId: 客户的SdkAppId
+        :param SdkAppId: 客戶的SdkAppId
         :type SdkAppId: int
-        :param Callback: 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
+        :param Callback: 文件轉碼進度回調網址，如果傳空字串會删除原來的回調網址配置，回調網址僅支援http或https協議，即回調網址以http://或https://開頭
         :type Callback: str
         """
         self.SdkAppId = None
@@ -656,13 +656,13 @@ class SetTranscodeCallbackRequest(AbstractModel):
 
 
 class SetTranscodeCallbackResponse(AbstractModel):
-    """SetTranscodeCallback返回参数结构体
+    """SetTranscodeCallback返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -673,37 +673,37 @@ class SetTranscodeCallbackResponse(AbstractModel):
 
 
 class StartOnlineRecordRequest(AbstractModel):
-    """StartOnlineRecord请求参数结构体
+    """StartOnlineRecord請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SdkAppId: 客户的SdkAppId
+        :param SdkAppId: 客戶的SdkAppId
         :type SdkAppId: int
-        :param RoomId: 需要录制的房间号
+        :param RoomId: 需要錄制的房間号
         :type RoomId: int
-        :param RecordUserId: 用于实时录制服务进房的用户Id，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId}` 与录制房间号对应，`${Random}`为一个随机字符串。
-实时录制服务会使用这个用户Id进房进行录制房间内的音视频与白板，为了防止进房冲突，请保证此 用户Id不重复
+        :param RecordUserId: 用于實時錄制服務進房的用戶Id，格式爲`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId}` 與錄制房間号對應，`${Random}`爲一個随機字串。
+實時錄制服務會使用這個用戶Id進房進行錄制房間内的影音與白板，爲了防止進房沖突，請保證此 用戶Id不重複
         :type RecordUserId: str
-        :param RecordUserSig: 与RecordUserId对应的签名
+        :param RecordUserSig: 與RecordUserId對應的簽名
         :type RecordUserSig: str
-        :param GroupId: 白板的 IM 群组 Id，默认同房间号
+        :param GroupId: 白板的 IM 群組 Id，預設同房間号
         :type GroupId: str
-        :param Concat: 实时录制视频拼接参数
+        :param Concat: 實時錄制視訊拼接參數
         :type Concat: :class:`tencentcloud.tiw.v20190919.models.Concat`
-        :param Whiteboard: 实时录制白板参数，例如白板宽高等
+        :param Whiteboard: 實時錄制白板參數，例如白板寬高等
         :type Whiteboard: :class:`tencentcloud.tiw.v20190919.models.Whiteboard`
-        :param MixStream: 实时录制混流参数
-特别说明：
-1. 混流功能需要根据额外开通， 请联系腾讯云互动白板客服人员
-2. 使用混流功能，必须提供 Extras 参数，且 Extras 参数中必须包含 "MIX_STREAM"
+        :param MixStream: 實時錄制混流參數
+特别說明：
+1. 混流功能需要根據額外開通， 請聯系Top Cloud 互動白板客服人員
+2. 使用混流功能，必須提供 Extras 參數，且 Extras 參數中必須包含 "MIX_STREAM"
         :type MixStream: :class:`tencentcloud.tiw.v20190919.models.MixStream`
-        :param Extras: 使用到的高级功能列表
-可以选值列表：
+        :param Extras: 使用到的高級功能清單
+可以選值清單：
 MIX_STREAM - 混流功能
         :type Extras: list of str
-        :param AudioFileNeeded: 是否需要在结果回调中返回各路流的纯音频录制文件，文件格式为mp3
+        :param AudioFileNeeded: 是否需要在結果回調中返回各路流的純音訊錄制文件，文件格式爲mp3
         :type AudioFileNeeded: bool
         """
         self.SdkAppId = None
@@ -738,15 +738,15 @@ MIX_STREAM - 混流功能
 
 
 class StartOnlineRecordResponse(AbstractModel):
-    """StartOnlineRecord返回参数结构体
+    """StartOnlineRecord返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 实时录制的任务Id
+        :param TaskId: 實時錄制的任務Id
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -759,15 +759,15 @@ class StartOnlineRecordResponse(AbstractModel):
 
 
 class StopOnlineRecordRequest(AbstractModel):
-    """StopOnlineRecord请求参数结构体
+    """StopOnlineRecord請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SdkAppId: 客户的SdkAppId
+        :param SdkAppId: 客戶的SdkAppId
         :type SdkAppId: int
-        :param TaskId: 需要停止录制的任务 Id
+        :param TaskId: 需要停止錄制的任務 Id
         :type TaskId: str
         """
         self.SdkAppId = None
@@ -780,13 +780,13 @@ class StopOnlineRecordRequest(AbstractModel):
 
 
 class StopOnlineRecordResponse(AbstractModel):
-    """StopOnlineRecord返回参数结构体
+    """StopOnlineRecord返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -797,22 +797,22 @@ class StopOnlineRecordResponse(AbstractModel):
 
 
 class StreamLayout(AbstractModel):
-    """流布局参数
+    """流布局參數
 
     """
 
     def __init__(self):
         """
-        :param LayoutParams: 流布局配置参数
+        :param LayoutParams: 流布局配置參數
         :type LayoutParams: :class:`tencentcloud.tiw.v20190919.models.LayoutParams`
-        :param InputStreamId: 视频流ID
-流ID的取值含义如下：
-1. tic_record_user - 表示当前画面用于显示白板视频流
-2. tic_substream - 表示当前画面用于显示辅路视频流
-3. 特定用户ID - 表示当前画面用于显示指定用户的视频流
-4. 不填 - 表示当前画面用于备选，当有新的视频流加入时，会从这些备选的空位中选择一个没有被占用的位置来显示新的视频流画面
+        :param InputStreamId: 視訊流ID
+流ID的取值含義如下：
+1. tic_record_user - 表示當前畫面用于顯示白板視訊流
+2. tic_substream - 表示當前畫面用于顯示輔路視訊流
+3. 特定用戶ID - 表示當前畫面用于顯示指定用戶的視訊流
+4. 不填 - 表示當前畫面用于備選，當有新的視訊流加入時，會從這些備選的空位中選擇一個沒有被占用的位置來顯示新的視訊流畫面
         :type InputStreamId: str
-        :param BackgroundColor: 背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
+        :param BackgroundColor: 背景顔色，預設爲黑色，格式爲RGB格式，如紅色爲"#FF0000"
         :type BackgroundColor: str
         """
         self.LayoutParams = None
@@ -829,32 +829,32 @@ class StreamLayout(AbstractModel):
 
 
 class VideoInfo(AbstractModel):
-    """视频信息
+    """視訊訊息
 
     """
 
     def __init__(self):
         """
-        :param VideoPlayTime: 视频开始播放的时间（单位：毫秒）
+        :param VideoPlayTime: 視訊開始播放的時間（單位：毫秒）
         :type VideoPlayTime: int
-        :param VideoSize: 视频大小（字节）
+        :param VideoSize: 視訊大小（位元）
         :type VideoSize: int
-        :param VideoFormat: 视频格式
+        :param VideoFormat: 視訊格式
         :type VideoFormat: str
-        :param VideoDuration: 视频播放时长（单位：毫秒）
+        :param VideoDuration: 視訊播放時長（單位：毫秒）
         :type VideoDuration: int
-        :param VideoUrl: 视频文件URL
+        :param VideoUrl: 視訊文件URL
         :type VideoUrl: str
-        :param VideoId: 视频文件Id
+        :param VideoId: 視訊文件Id
         :type VideoId: str
-        :param VideoType: 视频流类型 
-- 0：摄像头视频 
-- 1：屏幕分享视频
-- 2：白板视频 
-- 3：混流视频
-- 4：纯音频（mp3)
+        :param VideoType: 視訊流類型 
+- 0：攝像頭視訊 
+- 1：螢幕分享視訊
+- 2：白板視訊 
+- 3：混流視訊
+- 4：純音訊（mp3)
         :type VideoType: int
-        :param UserId: 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型、辅路视频tic_substream_用户Id）
+        :param UserId: 攝像頭/螢幕分享視訊所屬用戶的 Id（白板視訊爲空、混流視訊tic_mixstream_房間号_混流布局類型、輔路視訊tic_substream_用戶Id）
         :type UserId: str
         """
         self.VideoPlayTime = None
@@ -879,17 +879,17 @@ class VideoInfo(AbstractModel):
 
 
 class Whiteboard(AbstractModel):
-    """实时录制白板参数，例如白板宽高等
+    """實時錄制白板參數，例如白板寬高等
 
     """
 
     def __init__(self):
         """
-        :param Width: 实时录制结果里白板视频宽，默认为1280
+        :param Width: 實時錄制結果裏白板視訊寬，預設爲1280
         :type Width: int
-        :param Height: 实时录制结果里白板视频高，默认为960
+        :param Height: 實時錄制結果裏白板視訊高，預設爲960
         :type Height: int
-        :param InitParam: 白板初始化参数，透传到白板 SDK
+        :param InitParam: 白板初始化參數，透傳到白板 SDK
         :type InitParam: str
         """
         self.Width = None

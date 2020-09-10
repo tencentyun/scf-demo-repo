@@ -441,4 +441,3 @@ class CatClient(NamespacedClient):
         """
         return self.transport.perform_request('GET', _make_path('_cat',
             'templates', name), params=params)
-

@@ -4,7 +4,7 @@ Node8.9-WriteToES
 Reference: https://cloud.tencent.com/document/product/583/32553
 ***************************************************/
 
-// The host address of es cluster, es集群的主机地址
+// The host address of es cluster, es集群的主機網址
 // const Host = "10.0.1.148";
 // const Port = "80";
 
@@ -34,7 +34,7 @@ exports.main_handler = async (event, context, callback) => {
     //   );
     // });
 
-    // Write in data, 写入数据
+    // Write in data, 寫入數據
     let write_data = {};
     write_data["timestamp"] = new dayjs().format("YYYY-MM-DD HH:mm:ss");
     write_data["randomcode"] = parseInt(Math.random() * 100);

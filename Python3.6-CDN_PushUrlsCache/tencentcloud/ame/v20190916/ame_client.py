@@ -26,7 +26,7 @@ class AmeClient(AbstractClient):
 
 
     def DescribeItems(self, request):
-        """分类内容下歌曲列表获取，根据CategoryID或CategoryCode
+        """分類内容下歌曲清單獲取，根據CategoryID或CategoryCode
 
         :param request: Request instance for DescribeItems.
         :type request: :class:`tencentcloud.ame.v20190916.models.DescribeItemsRequest`
@@ -54,7 +54,7 @@ class AmeClient(AbstractClient):
 
 
     def DescribeLyric(self, request):
-        """根据接口的模式及歌曲ID来取得歌词信息。
+        """根據介面的模式及歌曲ID來取得歌詞訊息。
 
         :param request: Request instance for DescribeLyric.
         :type request: :class:`tencentcloud.ame.v20190916.models.DescribeLyricRequest`
@@ -82,7 +82,7 @@ class AmeClient(AbstractClient):
 
 
     def DescribeMusic(self, request):
-        """根据接口的模式及歌曲ID来取得对应权限的歌曲播放地址等信息。
+        """根據介面的模式及歌曲ID來取得對應權限的歌曲播放網址等訊息。
 
         :param request: Request instance for DescribeMusic.
         :type request: :class:`tencentcloud.ame.v20190916.models.DescribeMusicRequest`
@@ -110,7 +110,7 @@ class AmeClient(AbstractClient):
 
 
     def DescribeStations(self, request):
-        """获取素材库列表时使用
+        """獲取素材庫清單時使用
 
         :param request: Request instance for DescribeStations.
         :type request: :class:`tencentcloud.ame.v20190916.models.DescribeStationsRequest`
@@ -138,7 +138,7 @@ class AmeClient(AbstractClient):
 
 
     def ReportData(self, request):
-        """客户上报用户数据功能，为了更好的为用户提供优质服务
+        """客戶上報用戶數據功能，爲了更好的爲用戶提供優質服務
 
         :param request: Request instance for ReportData.
         :type request: :class:`tencentcloud.ame.v20190916.models.ReportDataRequest`

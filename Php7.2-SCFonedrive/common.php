@@ -241,7 +241,7 @@ function main($path)
         }
     if (isset($_GET['setup']))
         if ($_SERVER['admin']) {
-            // setup Environments. 设置，对环境变量操作
+            // setup Environments. 設置，對環境變量操作
             return EnvOpt($_SERVER['needUpdate']);
         } else {
             $url = path_format($_SERVER['PHP_SELF'] . '/');
@@ -298,7 +298,7 @@ function main($path)
 
         if ($_SERVER['ajax']) {
             if ($_GET['action']=='del_upload_cache') {
-                // del '.tmp' without login. 无需登录即可删除.tmp后缀文件
+                // del '.tmp' without login. 無需登入即可删除.tmp後綴文件
                 error_log('del.tmp:GET,'.json_encode($_GET,JSON_PRETTY_PRINT));
                 $tmp = splitlast($_GET['filename'], '/');
                 if ($tmp[1]!='') {
@@ -315,7 +315,7 @@ function main($path)
             }
             if ($_GET['action']=='uploaded_rename') {
                 // rename .scfupload file without login.
-                // 无需登录即可重命名.scfupload后缀文件，filemd5为用户提交，可被构造，问题不大，以后处理
+                // 無需登入即可重命名.scfupload後綴文件，filemd5爲用戶提交，可被構造，問題不大，以後處理
                 $oldname = spurlencode($_GET['filename']);
                 $pos = strrpos($oldname, '.');
                 if ($pos>0) $ext = strtolower(substr($oldname, $pos));
@@ -1071,7 +1071,7 @@ function adminoperate($path)
         return output($result['body'], $result['stat']);
     }
     if (isset($_GET['move_folder'])) {
-        // move 移动
+        // move 移動
         $moveable = 1;
         if ($path == '/' && $_GET['move_folder'] == '/../') $moveable=0;
         if ($_GET['move_folder'] == $_GET['move_name']) $moveable=0;
@@ -1092,7 +1092,7 @@ function adminoperate($path)
         }
     }
     if (isset($_GET['copy_name'])) {
-        // copy 复制
+        // copy 複制
         $filename = spurlencode($_GET['copy_name']);
         $filename = path_format($path1 . '/' . $filename);
         $namearr = splitlast($_GET['copy_name'], '.');
@@ -1128,9 +1128,9 @@ function adminoperate($path)
         return output($result['body'], $result['stat']);
     }
     if (isset($_POST['editfile'])) {
-        // edit 编辑
+        // edit 編輯
         $data = $_POST['editfile'];
-        /*TXT一般不会超过4M，不用二段上传
+        /*TXT一般不會超過4M，不用二段上傳
         $filename = $path1 . ':/createUploadSession';
         $response=MSAPI('POST',$filename,'{"item": { "@microsoft.graph.conflictBehavior": "replace"  }}',$_SERVER['access_token']);
         $uploadurl=json_decode($response,true)['uploadUrl'];
@@ -1379,7 +1379,7 @@ function fetch_files_children($files, $path, $page)
     $cachefilename = '.SCFcache_'.$_SERVER['function_name'];
     $maxpage = ceil($files['folder']['childCount']/200);
     if (!($files['children'] = getcache('files_' . $path . '_page_' . $page))) {
-        // down cache file get jump info. 下载cache文件获取跳页链接
+        // down cache file get jump info. 下載cache文件獲取跳頁連結
         $cachefile = fetch_files(path_format($path1 . '/' .$cachefilename));
         if ($cachefile['size']>0) {
             $pageinfo = curl_request($cachefile[$_SERVER['DownurlStrName']])['body'];
@@ -2738,7 +2738,7 @@ function render_list($path = '', $files = '')
             $html = str_replace('{{.RawData}}', base64_encode($str), $html);
         }
 
-        // 最后清除换行
+        // 最後清除換行
         while (strpos($html, "\r\n\r\n")) $html = str_replace("\r\n\r\n", "\r\n", $html);
         //while (strpos($html, "\r\r")) $html = str_replace("\r\r", "\r", $html);
         while (strpos($html, "\n\n")) $html = str_replace("\n\n", "\n", $html);

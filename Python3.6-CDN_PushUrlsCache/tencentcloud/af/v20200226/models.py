@@ -17,66 +17,66 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class QueryAntiFraudRequest(AbstractModel):
-    """QueryAntiFraud请求参数结构体
+    """QueryAntiFraud請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PhoneNumber: 电话号码(五选二)
+        :param PhoneNumber: 電話号碼(五選二)
         :type PhoneNumber: str
-        :param IdNumber: Id(五选二)
+        :param IdNumber: Id(五選二)
         :type IdNumber: str
-        :param BankCardNumber: 银行卡号(五选二)
+        :param BankCardNumber: 銀行卡号(五選二)
         :type BankCardNumber: str
-        :param UserIp: 用户请求来源 IP(五选二)
+        :param UserIp: 用戶請求來源 IP(五選二)
         :type UserIp: str
-        :param Imei: 国际移动设备识别码(五选二)
+        :param Imei: 國際移動設備識别碼(五選二)
         :type Imei: str
-        :param Idfa: ios 系统广告标示符(五选二)
+        :param Idfa: ios 系統廣告标示符(五選二)
         :type Idfa: str
-        :param Scene: 业务场景 ID，需要找技术对接
+        :param Scene: 業務場景 ID，需要找技術對接
         :type Scene: str
         :param Name: 姓名
         :type Name: str
-        :param EmailAddress: 用户邮箱地址
+        :param EmailAddress: 用戶電子信箱網址
         :type EmailAddress: str
-        :param Address: 用户住址
+        :param Address: 用戶住址
         :type Address: str
-        :param Mac: MAC 地址
+        :param Mac: MAC 網址
         :type Mac: str
-        :param Imsi: 国际移动用户识别码
+        :param Imsi: 國際移動用戶識别碼
         :type Imsi: str
-        :param AccountType: 关联的腾讯帐号 QQ：1；
-开放帐号微信： 2；
+        :param AccountType: 關聯的騰訊帳号 QQ：1；
+開放帳号微信： 2；
         :type AccountType: str
-        :param Uid: 可选的 QQ 或微信 openid
+        :param Uid: 可選的 QQ 或微信 openid
         :type Uid: str
-        :param AppIdU: qq 或微信分配给网站或应用的 appid，用来
-唯一标识网站或应用
+        :param AppIdU: qq 或微信分配給網站或應用的 appid，用來
+唯一标識網站或應用
         :type AppIdU: str
         :param WifiMac: WIFI MAC
         :type WifiMac: str
-        :param WifiSSID: WIFI 服务集标识
+        :param WifiSSID: WIFI 服務集标識
         :type WifiSSID: str
         :param WifiBSSID: WIFI-BSSID
         :type WifiBSSID: str
-        :param BusinessId: 业务 ID，在多个业务中使用此服务，通过此
-ID 区分统计数据
+        :param BusinessId: 業務 ID，在多個業務中使用此服務，通過此
+ID 區分統計數據
         :type BusinessId: str
-        :param IdCryptoType: Id加密类型
-0：不加密（默认值）
+        :param IdCryptoType: Id加密類型
+0：不加密（預設值）
 1：md5
 2：sha256
 3：SM3
         :type IdCryptoType: str
-        :param PhoneCryptoType: 手机号加密类型
-0：不加密（默认值）
+        :param PhoneCryptoType: 手機号加密類型
+0：不加密（預設值）
 1：md5, 2：sha256
 3：SM3
         :type PhoneCryptoType: str
-        :param NameCryptoType: 姓名加密类型
-0：不加密（默认值）
+        :param NameCryptoType: 姓名加密類型
+0：不加密（預設值）
 1：md5
 2：sha256
 3：SM3
@@ -132,24 +132,24 @@ ID 区分统计数据
 
 
 class QueryAntiFraudResponse(AbstractModel):
-    """QueryAntiFraud返回参数结构体
+    """QueryAntiFraud返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Found: 表示该条记录能否查到：1为能查到，-1为查不到
+        :param Found: 表示該條記錄能否查到：1爲能查到，-1爲查不到
         :type Found: int
-        :param IdFound: 表示该条Id能否查到：1为能查到，-1为查不到
+        :param IdFound: 表示該條Id能否查到：1爲能查到，-1爲查不到
         :type IdFound: int
-        :param RiskScore: 0~100;值越高 欺诈可能性越大
+        :param RiskScore: 0~100;值越高 欺詐可能性越大
         :type RiskScore: int
-        :param RiskInfo: 扩展字段，对风险类型的说明
+        :param RiskInfo: 擴展欄位，對風險類型的說明
         :type RiskInfo: list of RiskDetail
-        :param CodeDesc: 业务侧错误码。成功时返回Success，错误时返回具体业务错误原因。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CodeDesc: 業務側錯誤碼。成功時返回Success，錯誤時返回具體業務錯誤原因。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CodeDesc: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Found = None
@@ -175,13 +175,13 @@ class QueryAntiFraudResponse(AbstractModel):
 
 
 class RiskDetail(AbstractModel):
-    """扩展字段，对风险类型的说明
+    """擴展欄位，對風險類型的說明
 
     """
 
     def __init__(self):
         """
-        :param RiskCode: 风险码
+        :param RiskCode: 風險碼
         :type RiskCode: int
         """
         self.RiskCode = None

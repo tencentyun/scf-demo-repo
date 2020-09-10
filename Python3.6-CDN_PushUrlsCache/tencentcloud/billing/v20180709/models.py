@@ -17,27 +17,27 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class ActionSummaryOverviewItem(AbstractModel):
-    """按交易类型汇总消费详情
+    """按交易類型匯總消費詳情
 
     """
 
     def __init__(self):
         """
-        :param ActionType: 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
+        :param ActionType: 交易類型：包年包月新購/續約/升降配/退款、按量計費扣費、調賬補償/扣費等類型
         :type ActionType: str
-        :param ActionTypeName: 交易类型名称
+        :param ActionTypeName: 交易類型名稱
         :type ActionTypeName: str
-        :param RealTotalCost: 实际花费
+        :param RealTotalCost: 實際花費
         :type RealTotalCost: str
-        :param RealTotalCostRatio: 费用所占百分比，两位小数
+        :param RealTotalCostRatio: 費用所占百分比，兩位小數
         :type RealTotalCostRatio: str
-        :param CashPayAmount: 现金金额
+        :param CashPayAmount: 現金金額
         :type CashPayAmount: str
-        :param IncentivePayAmount: 赠送金金额
+        :param IncentivePayAmount: 贈送金金額
         :type IncentivePayAmount: str
-        :param VoucherPayAmount: 代金券金额
+        :param VoucherPayAmount: 代金券金額
         :type VoucherPayAmount: str
-        :param BillMonth: 账单月份，格式2019-08
+        :param BillMonth: 帳單月份，格式2019-08
         :type BillMonth: str
         """
         self.ActionType = None
@@ -62,41 +62,41 @@ class ActionSummaryOverviewItem(AbstractModel):
 
 
 class BillDetail(AbstractModel):
-    """账单明细数据对象
+    """帳單明細數據對象
 
     """
 
     def __init__(self):
         """
-        :param BusinessCodeName: 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+        :param BusinessCodeName: 産品名稱：雲産品大類，如雲伺服器CVM、雲資料庫MySQL
         :type BusinessCodeName: str
-        :param ProductCodeName: 子产品名称：云产品子类，如云服务器CVM-标准型S1
+        :param ProductCodeName: 子産品名稱：雲産品子類，如雲伺服器CVM-标準型S1
         :type ProductCodeName: str
-        :param PayModeName: 计费模式：包年包月和按量计费
+        :param PayModeName: 計費模式：包年包月和按量計費
         :type PayModeName: str
-        :param ProjectName: 项目:资源所属项目
+        :param ProjectName: 項目:資源所屬項目
         :type ProjectName: str
-        :param RegionName: 区域：资源所属地域，如华南地区（广州）
+        :param RegionName: 區域：資源所屬地域，如華南地區（廣州）
         :type RegionName: str
-        :param ZoneName: 可用区：资源所属可用区，如广州三区
+        :param ZoneName: 可用區：資源所屬可用區，如廣州三區
         :type ZoneName: str
-        :param ResourceId: 资源实例ID
+        :param ResourceId: 資源實例ID
         :type ResourceId: str
-        :param ResourceName: 实例名称
+        :param ResourceName: 實例名稱
         :type ResourceName: str
-        :param ActionTypeName: 交易类型
+        :param ActionTypeName: 交易類型
         :type ActionTypeName: str
-        :param OrderId: 订单ID
+        :param OrderId: 訂單ID
         :type OrderId: str
         :param BillId: 交易ID
         :type BillId: str
-        :param PayTime: 扣费时间
+        :param PayTime: 扣費時間
         :type PayTime: str
-        :param FeeBeginTime: 开始使用时间
+        :param FeeBeginTime: 開始使用時間
         :type FeeBeginTime: str
-        :param FeeEndTime: 结束使用时间
+        :param FeeEndTime: 結束使用時間
         :type FeeEndTime: str
-        :param ComponentSet: 组件列表
+        :param ComponentSet: 元件清單
         :type ComponentSet: list of BillDetailComponent
         :param PayerUin: 支付者UIN
         :type PayerUin: str
@@ -104,20 +104,20 @@ class BillDetail(AbstractModel):
         :type OwnerUin: str
         :param OperateUin: 操作者UIN
         :type OperateUin: str
-        :param Tags: Tag 信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Tags: Tag 訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of BillTagInfo
-        :param BusinessCode: 商品名称代码（未开放的字段）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BusinessCode: 商品名稱代碼（未開放的欄位）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BusinessCode: str
-        :param ProductCode: 子商品名称代码 （未开放的字段）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProductCode: 子商品名稱代碼 （未開放的欄位）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProductCode: str
-        :param ActionType: 交易类型代码（未开放的字段）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ActionType: 交易類型代碼（未開放的欄位）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ActionType: str
-        :param RegionId: 区域ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RegionId: 區域ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RegionId: str
         """
         self.BusinessCodeName = None
@@ -182,52 +182,52 @@ class BillDetail(AbstractModel):
 
 
 class BillDetailComponent(AbstractModel):
-    """账单明细组件对象
+    """帳單明細元件對象
 
     """
 
     def __init__(self):
         """
-        :param ComponentCodeName: 组件类型:资源组件类型的名称，如内存、硬盘等
+        :param ComponentCodeName: 元件類型:資源元件類型的名稱，如内存、硬碟等
         :type ComponentCodeName: str
-        :param ItemCodeName: 组件名称:资源组件的名称，如云数据库MySQL-内存等
+        :param ItemCodeName: 元件名稱:資源元件的名稱，如雲資料庫MySQL-内存等
         :type ItemCodeName: str
-        :param SinglePrice: 组件刊例价:资源组件的原始价格，保持原始粒度
+        :param SinglePrice: 元件刊例價:資源元件的原始價格，保持原始粒度
         :type SinglePrice: str
-        :param SpecifiedPrice: 组件指定价
+        :param SpecifiedPrice: 元件指定價
         :type SpecifiedPrice: str
-        :param PriceUnit: 价格单位
+        :param PriceUnit: 價格單位
         :type PriceUnit: str
-        :param UsedAmount: 组件用量
+        :param UsedAmount: 元件用量
         :type UsedAmount: str
-        :param UsedAmountUnit: 组件用量单位
+        :param UsedAmountUnit: 元件用量單位
         :type UsedAmountUnit: str
-        :param TimeSpan: 使用时长
+        :param TimeSpan: 使用時長
         :type TimeSpan: str
-        :param TimeUnitName: 时长单位
+        :param TimeUnitName: 時長單位
         :type TimeUnitName: str
-        :param Cost: 组件原价
+        :param Cost: 元件原價
         :type Cost: str
         :param Discount: 折扣率
         :type Discount: str
-        :param ReduceType: 优惠类型
+        :param ReduceType: 優惠類型
         :type ReduceType: str
-        :param RealCost: 优惠后总价
+        :param RealCost: 優惠後總價
         :type RealCost: str
-        :param VoucherPayAmount: 代金券支付金额
+        :param VoucherPayAmount: 代金券支付金額
         :type VoucherPayAmount: str
-        :param CashPayAmount: 现金支付金额
+        :param CashPayAmount: 現金支付金額
         :type CashPayAmount: str
-        :param IncentivePayAmount: 赠送账户支付金额
+        :param IncentivePayAmount: 贈送帳戶支付金額
         :type IncentivePayAmount: str
-        :param ItemCode: 组件类型代码（未开放的字段）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ItemCode: 元件類型代碼（未開放的欄位）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ItemCode: str
-        :param ComponentCode: 组件名称代码（未开放的字段）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ComponentCode: 元件名稱代碼（未開放的欄位）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ComponentCode: str
-        :param ContractPrice: 合同价
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ContractPrice: 合同價
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ContractPrice: str
         """
         self.ComponentCodeName = None
@@ -274,78 +274,78 @@ class BillDetailComponent(AbstractModel):
 
 
 class BillResourceSummary(AbstractModel):
-    """账单资源汇总数据对象
+    """帳單資源匯總數據對象
 
     """
 
     def __init__(self):
         """
-        :param BusinessCodeName: 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+        :param BusinessCodeName: 産品名稱：雲産品大類，如雲伺服器CVM、雲資料庫MySQL
         :type BusinessCodeName: str
-        :param ProductCodeName: 子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+        :param ProductCodeName: 子産品：雲産品子類，如雲伺服器CVM-标準型S1， 當沒有獲取到子産品名稱時，返回"-"
         :type ProductCodeName: str
-        :param PayModeName: 计费模式：包年包月和按量计费
+        :param PayModeName: 計費模式：包年包月和按量計費
         :type PayModeName: str
-        :param ProjectName: 项目
+        :param ProjectName: 項目
         :type ProjectName: str
         :param RegionName: 地域
         :type RegionName: str
-        :param ZoneName: 可用区
+        :param ZoneName: 可用區
         :type ZoneName: str
-        :param ResourceId: 资源实例ID
+        :param ResourceId: 資源實例ID
         :type ResourceId: str
-        :param ResourceName: 资源实例名称
+        :param ResourceName: 資源實例名稱
         :type ResourceName: str
-        :param ActionTypeName: 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
+        :param ActionTypeName: 交易類型：包年包月新購/續約/升降配/退款、按量計費扣費、調賬補償/扣費等類型
         :type ActionTypeName: str
-        :param OrderId: 订单ID
+        :param OrderId: 訂單ID
         :type OrderId: str
-        :param PayTime: 扣费时间
+        :param PayTime: 扣費時間
         :type PayTime: str
-        :param FeeBeginTime: 开始使用时间
+        :param FeeBeginTime: 開始使用時間
         :type FeeBeginTime: str
-        :param FeeEndTime: 结束使用时间
+        :param FeeEndTime: 結束使用時間
         :type FeeEndTime: str
         :param ConfigDesc: 配置描述
         :type ConfigDesc: str
-        :param ExtendField1: 扩展字段1
+        :param ExtendField1: 擴展欄位1
         :type ExtendField1: str
-        :param ExtendField2: 扩展字段2
+        :param ExtendField2: 擴展欄位2
         :type ExtendField2: str
-        :param TotalCost: 原价，单位为元
+        :param TotalCost: 原價，單位爲元
         :type TotalCost: str
         :param Discount: 折扣率
         :type Discount: str
-        :param ReduceType: 优惠类型
+        :param ReduceType: 優惠類型
         :type ReduceType: str
-        :param RealTotalCost: 优惠后总价，单位为元
+        :param RealTotalCost: 優惠後總價，單位爲元
         :type RealTotalCost: str
-        :param VoucherPayAmount: 代金券支付金额，单位为元
+        :param VoucherPayAmount: 代金券支付金額，單位爲元
         :type VoucherPayAmount: str
-        :param CashPayAmount: 现金账户支付金额，单位为元
+        :param CashPayAmount: 現金帳戶支付金額，單位爲元
         :type CashPayAmount: str
-        :param IncentivePayAmount: 赠送账户支付金额，单位为元
+        :param IncentivePayAmount: 贈送帳戶支付金額，單位爲元
         :type IncentivePayAmount: str
-        :param ExtendField3: 扩展字段3
+        :param ExtendField3: 擴展欄位3
         :type ExtendField3: str
-        :param ExtendField4: 扩展字段4
+        :param ExtendField4: 擴展欄位4
         :type ExtendField4: str
-        :param ExtendField5: 扩展字段5
+        :param ExtendField5: 擴展欄位5
         :type ExtendField5: str
-        :param Tags: Tag 信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Tags: Tag 訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of BillTagInfo
         :param PayerUin: 付款方uin
         :type PayerUin: str
-        :param OwnerUin: 资源所有者uin,无值则返回"-"
+        :param OwnerUin: 資源所有者uin,無值則返回"-"
         :type OwnerUin: str
-        :param OperateUin: 操作者uin,无值则返回"-"
+        :param OperateUin: 操作者uin,無值則返回"-"
         :type OperateUin: str
-        :param BusinessCode: 商品名称代码
+        :param BusinessCode: 商品名稱代碼
         :type BusinessCode: str
-        :param ProductCode: 子商品名称代码
+        :param ProductCode: 子商品名稱代碼
         :type ProductCode: str
-        :param RegionId: 区域ID
+        :param RegionId: 區域ID
         :type RegionId: int
         """
         self.BusinessCodeName = None
@@ -425,15 +425,15 @@ class BillResourceSummary(AbstractModel):
 
 
 class BillTagInfo(AbstractModel):
-    """账单 Tag 信息
+    """帳單 Tag 訊息
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 分账标签键
+        :param TagKey: 分賬标簽鍵
         :type TagKey: str
-        :param TagValue: 标签值
+        :param TagValue: 标簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -446,29 +446,29 @@ class BillTagInfo(AbstractModel):
 
 
 class BillTransactionInfo(AbstractModel):
-    """收支明细的流水信息
+    """收支明細的流水訊息
 
     """
 
     def __init__(self):
         """
-        :param ActionType: 收支类型：deduct 扣费, recharge 充值, return 退费， block 冻结, unblock 解冻
+        :param ActionType: 收支類型：deduct 扣費, recharge 儲值, return 退費， block 鎖定, unblock 取消鎖定
         :type ActionType: str
-        :param Amount: 流水金额，单位（分）；正数表示入账，负数表示出账
+        :param Amount: 流水金額，單位（分）；正數表示入賬，負數表示出賬
         :type Amount: int
-        :param Balance: 可用余额，单位（分）；正数表示入账，负数表示出账
+        :param Balance: 可用餘額，單位（分）；正數表示入賬，負數表示出賬
         :type Balance: int
         :param BillId: 流水号，如20190131020000236005203583326401
         :type BillId: str
-        :param OperationInfo: 描述信息
+        :param OperationInfo: 描述訊息
         :type OperationInfo: str
-        :param OperationTime: 操作时间"2019-01-31 23:35:10.000"
+        :param OperationTime: 操作時間"2019-01-31 23:35:10.000"
         :type OperationTime: str
-        :param Cash: 现金账户余额，单位（分）
+        :param Cash: 現金帳戶餘額，單位（分）
         :type Cash: int
-        :param Incentive: 赠送金余额，单位（分）
+        :param Incentive: 贈送金餘額，單位（分）
         :type Incentive: int
-        :param Freezing: 冻结余额，单位（分）
+        :param Freezing: 鎖定餘額，單位（分）
         :type Freezing: int
         """
         self.ActionType = None
@@ -495,28 +495,28 @@ class BillTransactionInfo(AbstractModel):
 
 
 class BusinessSummaryOverviewItem(AbstractModel):
-    """按产品汇总产品详情
+    """按産品匯總産品詳情
 
     """
 
     def __init__(self):
         """
-        :param BusinessCode: 产品码
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BusinessCode: 産品碼
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BusinessCode: str
-        :param BusinessCodeName: 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+        :param BusinessCodeName: 産品名稱：雲産品大類，如雲伺服器CVM、雲資料庫MySQL
         :type BusinessCodeName: str
-        :param RealTotalCost: 实际花费
+        :param RealTotalCost: 實際花費
         :type RealTotalCost: str
-        :param RealTotalCostRatio: 费用所占百分比，两位小数
+        :param RealTotalCostRatio: 費用所占百分比，兩位小數
         :type RealTotalCostRatio: str
-        :param CashPayAmount: 现金金额
+        :param CashPayAmount: 現金金額
         :type CashPayAmount: str
-        :param IncentivePayAmount: 赠送金金额
+        :param IncentivePayAmount: 贈送金金額
         :type IncentivePayAmount: str
-        :param VoucherPayAmount: 代金券金额
+        :param VoucherPayAmount: 代金券金額
         :type VoucherPayAmount: str
-        :param BillMonth: 账单月份，格式2019-08
+        :param BillMonth: 帳單月份，格式2019-08
         :type BillMonth: str
         """
         self.BusinessCode = None
@@ -541,19 +541,19 @@ class BusinessSummaryOverviewItem(AbstractModel):
 
 
 class BusinessSummaryTotal(AbstractModel):
-    """按产品汇总总费用
+    """按産品匯總總費用
 
     """
 
     def __init__(self):
         """
-        :param RealTotalCost: 总花费
+        :param RealTotalCost: 總花費
         :type RealTotalCost: str
-        :param VoucherPayAmount: 代金券金额
+        :param VoucherPayAmount: 代金券金額
         :type VoucherPayAmount: str
-        :param IncentivePayAmount: 赠送金金额
+        :param IncentivePayAmount: 贈送金金額
         :type IncentivePayAmount: str
-        :param CashPayAmount: 现金金额
+        :param CashPayAmount: 現金金額
         :type CashPayAmount: str
         """
         self.RealTotalCost = None
@@ -570,15 +570,15 @@ class BusinessSummaryTotal(AbstractModel):
 
 
 class ConditionBusiness(AbstractModel):
-    """产品过滤条件
+    """産品過濾條件
 
     """
 
     def __init__(self):
         """
-        :param BusinessCode: 产品码
+        :param BusinessCode: 産品碼
         :type BusinessCode: str
-        :param BusinessCodeName: 产品名称
+        :param BusinessCodeName: 産品名稱
         :type BusinessCodeName: str
         """
         self.BusinessCode = None
@@ -591,15 +591,15 @@ class ConditionBusiness(AbstractModel):
 
 
 class ConditionPayMode(AbstractModel):
-    """付费模式过滤条件
+    """付費模式過濾條件
 
     """
 
     def __init__(self):
         """
-        :param PayMode: 付费模式
+        :param PayMode: 付費模式
         :type PayMode: str
-        :param PayModeName: 付费模式名称
+        :param PayModeName: 付費模式名稱
         :type PayModeName: str
         """
         self.PayMode = None
@@ -612,15 +612,15 @@ class ConditionPayMode(AbstractModel):
 
 
 class ConditionProject(AbstractModel):
-    """项目过滤条件
+    """項目過濾條件
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: str
-        :param ProjectName: 项目名称
+        :param ProjectName: 項目名稱
         :type ProjectName: str
         """
         self.ProjectId = None
@@ -633,7 +633,7 @@ class ConditionProject(AbstractModel):
 
 
 class ConditionRegion(AbstractModel):
-    """地域过滤条件
+    """地域過濾條件
 
     """
 
@@ -641,7 +641,7 @@ class ConditionRegion(AbstractModel):
         """
         :param RegionId: 地域ID
         :type RegionId: str
-        :param RegionName: 地域名称
+        :param RegionName: 地域名稱
         :type RegionName: str
         """
         self.RegionId = None
@@ -654,49 +654,49 @@ class ConditionRegion(AbstractModel):
 
 
 class Conditions(AbstractModel):
-    """账单筛选条件对象
+    """帳單篩選條件對象
 
     """
 
     def __init__(self):
         """
-        :param TimeRange: 只支持6和12两个值
+        :param TimeRange: 只支援6和12兩個值
         :type TimeRange: int
-        :param BusinessCode: 产品编码
+        :param BusinessCode: 産品編碼
         :type BusinessCode: str
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: int
         :param RegionId: 地域ID
         :type RegionId: int
-        :param PayMode: 付费模式，可选prePay和postPay
+        :param PayMode: 付費模式，可選prePay和postPay
         :type PayMode: str
-        :param ResourceKeyword: 资源关键字
+        :param ResourceKeyword: 資源關鍵字
         :type ResourceKeyword: str
-        :param BusinessCodes: 产品编码
+        :param BusinessCodes: 産品編碼
         :type BusinessCodes: list of str
-        :param ProductCodes: 子产品编码
+        :param ProductCodes: 子産品編碼
         :type ProductCodes: list of str
         :param RegionIds: 地域ID
         :type RegionIds: list of int
-        :param ProjectIds: 项目ID
+        :param ProjectIds: 項目ID
         :type ProjectIds: list of int
-        :param PayModes: 付费模式，可选prePay和postPay
+        :param PayModes: 付費模式，可選prePay和postPay
         :type PayModes: list of str
-        :param ActionTypes: 交易类型
+        :param ActionTypes: 交易類型
         :type ActionTypes: list of str
         :param HideFreeCost: 是否隐藏0元流水
         :type HideFreeCost: int
-        :param OrderByCost: 排序规则，可选desc和asc
+        :param OrderByCost: 排序規則，可選desc和asc
         :type OrderByCost: str
         :param BillIds: 交易ID
         :type BillIds: list of str
-        :param ComponentCodes: 组件编码
+        :param ComponentCodes: 元件編碼
         :type ComponentCodes: list of str
         :param FileIds: 文件ID
         :type FileIds: list of str
-        :param FileTypes: 文件类型
+        :param FileTypes: 文件類型
         :type FileTypes: list of str
-        :param Status: 状态
+        :param Status: 狀态
         :type Status: list of int non-negative
         """
         self.TimeRange = None
@@ -743,19 +743,19 @@ class Conditions(AbstractModel):
 
 
 class ConsumptionBusinessSummaryDataItem(AbstractModel):
-    """消耗按产品汇总详情
+    """消耗按産品匯總詳情
 
     """
 
     def __init__(self):
         """
-        :param BusinessCode: 产品码
+        :param BusinessCode: 産品碼
         :type BusinessCode: str
-        :param BusinessCodeName: 产品名称
+        :param BusinessCodeName: 産品名稱
         :type BusinessCodeName: str
-        :param RealTotalCost: 折后总价
+        :param RealTotalCost: 折後總價
         :type RealTotalCost: str
-        :param Trend: 费用趋势
+        :param Trend: 費用趨勢
         :type Trend: :class:`tencentcloud.billing.v20180709.models.ConsumptionSummaryTrend`
         """
         self.BusinessCode = None
@@ -774,21 +774,21 @@ class ConsumptionBusinessSummaryDataItem(AbstractModel):
 
 
 class ConsumptionProjectSummaryDataItem(AbstractModel):
-    """消耗按项目汇总详情
+    """消耗按項目匯總詳情
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: str
-        :param ProjectName: 项目名称
+        :param ProjectName: 項目名稱
         :type ProjectName: str
-        :param RealTotalCost: 折后总价
+        :param RealTotalCost: 折後總價
         :type RealTotalCost: str
-        :param Trend: 趋势
+        :param Trend: 趨勢
         :type Trend: :class:`tencentcloud.billing.v20180709.models.ConsumptionSummaryTrend`
-        :param Business: 产品消耗详情
+        :param Business: 産品消耗詳情
         :type Business: list of ConsumptionBusinessSummaryDataItem
         """
         self.ProjectId = None
@@ -814,7 +814,7 @@ class ConsumptionProjectSummaryDataItem(AbstractModel):
 
 
 class ConsumptionRegionSummaryDataItem(AbstractModel):
-    """消耗按地域汇总详情
+    """消耗按地域匯總詳情
 
     """
 
@@ -822,13 +822,13 @@ class ConsumptionRegionSummaryDataItem(AbstractModel):
         """
         :param RegionId: 地域ID
         :type RegionId: str
-        :param RegionName: 地域名称
+        :param RegionName: 地域名稱
         :type RegionName: str
-        :param RealTotalCost: 折后总价
+        :param RealTotalCost: 折後總價
         :type RealTotalCost: str
-        :param Trend: 趋势
+        :param Trend: 趨勢
         :type Trend: :class:`tencentcloud.billing.v20180709.models.ConsumptionSummaryTrend`
-        :param Business: 产品消费详情
+        :param Business: 産品消費詳情
         :type Business: list of ConsumptionBusinessSummaryDataItem
         """
         self.RegionId = None
@@ -854,19 +854,19 @@ class ConsumptionRegionSummaryDataItem(AbstractModel):
 
 
 class ConsumptionResourceSummaryConditionValue(AbstractModel):
-    """消耗按资源汇总过滤条件
+    """消耗按資源匯總過濾條件
 
     """
 
     def __init__(self):
         """
-        :param Business: 产品列表
+        :param Business: 産品清單
         :type Business: list of ConditionBusiness
-        :param Project: 项目列表
+        :param Project: 項目清單
         :type Project: list of ConditionProject
-        :param Region: 地域列表
+        :param Region: 地域清單
         :type Region: list of ConditionRegion
-        :param PayMode: 付费模式列表
+        :param PayMode: 付費模式清單
         :type PayMode: list of ConditionPayMode
         """
         self.Business = None
@@ -903,37 +903,37 @@ class ConsumptionResourceSummaryConditionValue(AbstractModel):
 
 
 class ConsumptionResourceSummaryDataItem(AbstractModel):
-    """消耗按资源汇总详情
+    """消耗按資源匯總詳情
 
     """
 
     def __init__(self):
         """
-        :param ResourceId: 资源ID
+        :param ResourceId: 資源ID
         :type ResourceId: str
-        :param ResourceName: 资源名称
+        :param ResourceName: 資源名稱
         :type ResourceName: str
-        :param RealTotalCost: 折后总价
+        :param RealTotalCost: 折後總價
         :type RealTotalCost: str
-        :param CashPayAmount: 现金花费
+        :param CashPayAmount: 現金花費
         :type CashPayAmount: str
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: str
-        :param ProjectName: 项目名称
+        :param ProjectName: 項目名稱
         :type ProjectName: str
         :param RegionId: 地域ID
         :type RegionId: str
-        :param RegionName: 地域名称
+        :param RegionName: 地域名稱
         :type RegionName: str
-        :param PayMode: 付费模式
+        :param PayMode: 付費模式
         :type PayMode: str
-        :param PayModeName: 付费模式名称
+        :param PayModeName: 付費模式名稱
         :type PayModeName: str
-        :param BusinessCode: 产品码
+        :param BusinessCode: 産品碼
         :type BusinessCode: str
-        :param BusinessCodeName: 产品名称
+        :param BusinessCodeName: 産品名稱
         :type BusinessCodeName: str
-        :param ConsumptionTypeName: 消耗类型
+        :param ConsumptionTypeName: 消耗類型
         :type ConsumptionTypeName: str
         """
         self.ResourceId = None
@@ -968,13 +968,13 @@ class ConsumptionResourceSummaryDataItem(AbstractModel):
 
 
 class ConsumptionSummaryTotal(AbstractModel):
-    """消耗汇总详情
+    """消耗匯總詳情
 
     """
 
     def __init__(self):
         """
-        :param RealTotalCost: 折后总价
+        :param RealTotalCost: 折後總價
         :type RealTotalCost: str
         """
         self.RealTotalCost = None
@@ -985,16 +985,16 @@ class ConsumptionSummaryTotal(AbstractModel):
 
 
 class ConsumptionSummaryTrend(AbstractModel):
-    """消耗费用趋势
+    """消耗費用趨勢
 
     """
 
     def __init__(self):
         """
-        :param Type: 趋势类型，upward上升/downward下降/none无
+        :param Type: 趨勢類型，upward上升/downward下降/none無
         :type Type: str
-        :param Value: 趋势值，Type为none是该字段值为null
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Value: 趨勢值，Type爲none是該欄位值爲null
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Value: str
         """
         self.Type = None
@@ -1007,35 +1007,35 @@ class ConsumptionSummaryTrend(AbstractModel):
 
 
 class CostComponentSet(AbstractModel):
-    """消耗组件明细
+    """消耗元件明細
 
     """
 
     def __init__(self):
         """
-        :param ComponentCodeName: 组件类型名称
+        :param ComponentCodeName: 元件類型名稱
         :type ComponentCodeName: str
-        :param ItemCodeName: 组件名称
+        :param ItemCodeName: 元件名稱
         :type ItemCodeName: str
-        :param SinglePrice: 刊例价
+        :param SinglePrice: 刊例價
         :type SinglePrice: str
-        :param PriceUnit: 刊例价单位
+        :param PriceUnit: 刊例價單位
         :type PriceUnit: str
         :param UsedAmount: 用量
         :type UsedAmount: str
-        :param UsedAmountUnit: 用量单位
+        :param UsedAmountUnit: 用量單位
         :type UsedAmountUnit: str
-        :param Cost: 原价
+        :param Cost: 原價
         :type Cost: str
         :param Discount: 折扣
         :type Discount: str
-        :param RealCost: 折后价
+        :param RealCost: 折後價
         :type RealCost: str
-        :param VoucherPayAmount: 代金券支付金额
+        :param VoucherPayAmount: 代金券支付金額
         :type VoucherPayAmount: str
-        :param CashPayAmount: 现金支付金额
+        :param CashPayAmount: 現金支付金額
         :type CashPayAmount: str
-        :param IncentivePayAmount: 赠送金支付金额
+        :param IncentivePayAmount: 贈送金支付金額
         :type IncentivePayAmount: str
         """
         self.ComponentCodeName = None
@@ -1068,7 +1068,7 @@ class CostComponentSet(AbstractModel):
 
 
 class CostDetail(AbstractModel):
-    """消耗明细数据类型
+    """消耗明細數據類型
 
     """
 
@@ -1076,36 +1076,36 @@ class CostDetail(AbstractModel):
         """
         :param PayerUin: 支付者uin
         :type PayerUin: str
-        :param BusinessCodeName: 业务名称
+        :param BusinessCodeName: 業務名稱
         :type BusinessCodeName: str
-        :param ProductCodeName: 产品名称
+        :param ProductCodeName: 産品名稱
         :type ProductCodeName: str
-        :param PayModeName: 计费模式名称
+        :param PayModeName: 計費模式名稱
         :type PayModeName: str
-        :param ProjectName: 项目名称
+        :param ProjectName: 項目名稱
         :type ProjectName: str
-        :param RegionName: 区域名称
+        :param RegionName: 區域名稱
         :type RegionName: str
-        :param ZoneName: 地区名称
+        :param ZoneName: 地區名稱
         :type ZoneName: str
-        :param ResourceId: 资源id
+        :param ResourceId: 資源id
         :type ResourceId: str
-        :param ResourceName: 资源名称
+        :param ResourceName: 資源名稱
         :type ResourceName: str
-        :param ActionTypeName: 类型名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ActionTypeName: 類型名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ActionTypeName: str
-        :param OrderId: 订单id
+        :param OrderId: 訂單id
         :type OrderId: str
         :param BillId: 交易id
         :type BillId: str
-        :param FeeBeginTime: 费用开始时间
+        :param FeeBeginTime: 費用開始時間
         :type FeeBeginTime: str
-        :param FeeEndTime: 费用结束时间
+        :param FeeEndTime: 費用結束時間
         :type FeeEndTime: str
-        :param ComponentSet: 组件明细
+        :param ComponentSet: 元件明細
         :type ComponentSet: list of CostComponentSet
-        :param ProductCode: 产品代码
+        :param ProductCode: 産品代碼
         :type ProductCode: str
         """
         self.PayerUin = None
@@ -1151,48 +1151,48 @@ class CostDetail(AbstractModel):
 
 
 class Deal(AbstractModel):
-    """订单数据对象
+    """訂單數據對象
 
     """
 
     def __init__(self):
         """
-        :param OrderId: 订单号
+        :param OrderId: 訂單号
         :type OrderId: str
-        :param Status: 订单状态
+        :param Status: 訂單狀态
         :type Status: int
         :param Payer: 支付者
         :type Payer: str
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param Creator: 创建人
+        :param Creator: 創建人
         :type Creator: str
-        :param RealTotalCost: 实际支付金额（分）
+        :param RealTotalCost: 實際支付金額（分）
         :type RealTotalCost: int
-        :param VoucherDecline: 代金券抵扣金额（分）
+        :param VoucherDecline: 代金券抵扣金額（分）
         :type VoucherDecline: int
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: int
-        :param GoodsCategoryId: 产品分类ID
+        :param GoodsCategoryId: 産品分類ID
         :type GoodsCategoryId: int
-        :param ProductInfo: 产品详情
+        :param ProductInfo: 産品詳情
         :type ProductInfo: list of ProductInfo
-        :param TimeSpan: 时长
+        :param TimeSpan: 時長
         :type TimeSpan: float
-        :param TimeUnit: 时间单位
+        :param TimeUnit: 時間單位
         :type TimeUnit: str
-        :param Currency: 货币单位
+        :param Currency: 貨币單位
         :type Currency: str
         :param Policy: 折扣率
         :type Policy: float
-        :param Price: 单价（分）
+        :param Price: 單價（分）
         :type Price: float
-        :param TotalCost: 原价（分）
+        :param TotalCost: 原價（分）
         :type TotalCost: float
-        :param ProductCode: 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProductCode: 産品編碼
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProductCode: str
-        :param SubProductCode: 子产品编码
+        :param SubProductCode: 子産品編碼
         :type SubProductCode: str
         """
         self.OrderId = None
@@ -1242,21 +1242,21 @@ class Deal(AbstractModel):
 
 
 class DescribeAccountBalanceRequest(AbstractModel):
-    """DescribeAccountBalance请求参数结构体
+    """DescribeAccountBalance請求參數結構體
 
     """
 
 
 class DescribeAccountBalanceResponse(AbstractModel):
-    """DescribeAccountBalance返回参数结构体
+    """DescribeAccountBalance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Balance: 云账户信息中的”展示可用余额”字段，单位为"分"
+        :param Balance: 雲帳戶訊息中的”展示可用餘額”欄位，單位爲"分"
         :type Balance: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Balance = None
@@ -1269,7 +1269,7 @@ class DescribeAccountBalanceResponse(AbstractModel):
 
 
 class DescribeBillDetailRequest(AbstractModel):
-    """DescribeBillDetail请求参数结构体
+    """DescribeBillDetail請求參數結構體
 
     """
 
@@ -1277,26 +1277,26 @@ class DescribeBillDetailRequest(AbstractModel):
         """
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 数量，最大值为100
+        :param Limit: 數量，最大值爲100
         :type Limit: int
-        :param PeriodType: 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
+        :param PeriodType: 週期類型，byUsedTime按計費週期/byPayTime按扣費週期。需要與費用中心該月份帳單的週期保持一緻。您可前往[帳單概覽](https://console.cloud.tencent.com/expense/bill/overview)頁面頂部檢視确認您的帳單統計週期類型。
         :type PeriodType: str
-        :param Month: 月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+        :param Month: 月份，格式爲yyyy-mm，Month和BeginTime&EndTime必傳一個，如果有傳BeginTime&EndTime則Month欄位無效。不能早于開通帳單2.0的月份，最多可拉取24個月内的數據。
         :type Month: str
-        :param BeginTime: 周期开始时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。(不支持跨月查询)
+        :param BeginTime: 週期開始時間，格式爲Y-m-d H:i:s，Month和BeginTime&EndTime必傳一個，如果有該欄位則Month欄位無效。BeginTime和EndTime必須一起傳。不能早于開通帳單2.0的月份，最多可拉取24個月内的數據。(不支援跨月查詢)
         :type BeginTime: str
-        :param EndTime: 周期结束时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。（不支持跨月查询）
+        :param EndTime: 週期結束時間，格式爲Y-m-d H:i:s，Month和BeginTime&EndTime必傳一個，如果有該欄位則Month欄位無效。BeginTime和EndTime必須一起傳。不能早于開通帳單2.0的月份，最多可拉取24個月内的數據。（不支援跨月查詢）
         :type EndTime: str
-        :param NeedRecordNum: 是否需要访问列表的总记录数，用于前端分页
+        :param NeedRecordNum: 是否需要訪問清單的總記錄數，用于前端分頁
 1-表示需要， 0-表示不需要
         :type NeedRecordNum: int
-        :param ProductCode: 查询指定产品信息
+        :param ProductCode: 查詢指定産品訊息
         :type ProductCode: str
-        :param PayMode: 付费模式 prePay/postPay
+        :param PayMode: 付費模式 prePay/postPay
         :type PayMode: str
-        :param ResourceId: 查询指定资源信息
+        :param ResourceId: 查詢指定資源訊息
         :type ResourceId: str
-        :param ActionType: 查询交易类型。如 按量计费日结，按量计费小时结 等
+        :param ActionType: 查詢交易類型。如 按量計費日結，按量計費小時結 等
         :type ActionType: str
         """
         self.Offset = None
@@ -1327,18 +1327,18 @@ class DescribeBillDetailRequest(AbstractModel):
 
 
 class DescribeBillDetailResponse(AbstractModel):
-    """DescribeBillDetail返回参数结构体
+    """DescribeBillDetail返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DetailSet: 详情列表
+        :param DetailSet: 詳情清單
         :type DetailSet: list of BillDetail
-        :param Total: 总记录数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Total: 總記錄數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Total: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DetailSet = None
@@ -1358,25 +1358,25 @@ class DescribeBillDetailResponse(AbstractModel):
 
 
 class DescribeBillListRequest(AbstractModel):
-    """DescribeBillList请求参数结构体
+    """DescribeBillList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 查询范围的起始时间（包含）
+        :param StartTime: 查詢範圍的起始時間（包含）
         :type StartTime: str
-        :param EndTime: 查询范围的结束时间（包含）
+        :param EndTime: 查詢範圍的結束時間（包含）
         :type EndTime: str
-        :param Offset: 翻页偏移量，初始值为0
+        :param Offset: 翻頁偏移量，初始值爲0
         :type Offset: int
-        :param Limit: 每页的限制数量
+        :param Limit: 每頁的限制數量
         :type Limit: int
-        :param PayType: 交易类型： all所有交易类型，recharge充值，return退款，unblock解冻，agentin资金转入，advanced垫付，cash提现，deduct扣费，block冻结，agentout资金转出，repay垫付回款，repayment还款(仅国际信用账户)，adj_refund调增(仅国际信用账户)，adj_deduct调减(仅国际信用账户)
+        :param PayType: 交易類型： all所有交易類型，recharge儲值，return退款，unblock取消鎖定，agentin資金轉入，advanced墊付，cash提現，deduct扣費，block鎖定，agentout資金轉出，repay墊付回款，repayment還款(僅國際信用帳戶)，adj_refund調增(僅國際信用帳戶)，adj_deduct調減(僅國際信用帳戶)
         :type PayType: list of str
-        :param SubPayType: 扣费模式，当所选的交易类型中包含扣费deduct时有意义： all所有扣费类型，trade预付费支付，hour_h按量小时结，hour_d按量日结，hour_m按量月结，decompensate调账扣费，other其他扣费
+        :param SubPayType: 扣費模式，當所選的交易類型中包含扣費deduct時有意義： all所有扣費類型，trade預付費支付，hour_h按量小時結，hour_d按量日結，hour_m按量月結，decompensate調賬扣費，other其他扣費
         :type SubPayType: list of str
-        :param WithZeroAmount: 是否返回0元交易金额的交易项，取值：0-不返回，1-返回。不传该参数则不返回
+        :param WithZeroAmount: 是否返回0元交易金額的交易項，取值：0-不返回，1-返回。不傳該參數則不返回
         :type WithZeroAmount: int
         """
         self.StartTime = None
@@ -1399,27 +1399,27 @@ class DescribeBillListRequest(AbstractModel):
 
 
 class DescribeBillListResponse(AbstractModel):
-    """DescribeBillList返回参数结构体
+    """DescribeBillList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TransactionList: 收支明细列表
+        :param TransactionList: 收支明細清單
         :type TransactionList: list of BillTransactionInfo
-        :param Total: 总条数
+        :param Total: 總條數
         :type Total: int
-        :param ReturnAmount: 退费总额，单位（分）
+        :param ReturnAmount: 退費總額，單位（分）
         :type ReturnAmount: float
-        :param RechargeAmount: 充值总额，单位（分）
+        :param RechargeAmount: 儲值總額，單位（分）
         :type RechargeAmount: float
-        :param BlockAmount: 冻结总额，单位（分）
+        :param BlockAmount: 鎖定總額，單位（分）
         :type BlockAmount: float
-        :param UnblockAmount: 解冻总额，单位（分）
+        :param UnblockAmount: 取消鎖定總額，單位（分）
         :type UnblockAmount: float
-        :param DeductAmount: 扣费总额，单位（分）
+        :param DeductAmount: 扣費總額，單位（分）
         :type DeductAmount: float
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TransactionList = None
@@ -1449,7 +1449,7 @@ class DescribeBillListResponse(AbstractModel):
 
 
 class DescribeBillResourceSummaryRequest(AbstractModel):
-    """DescribeBillResourceSummary请求参数结构体
+    """DescribeBillResourceSummary請求參數結構體
 
     """
 
@@ -1457,16 +1457,16 @@ class DescribeBillResourceSummaryRequest(AbstractModel):
         """
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 数量，最大值为1000
+        :param Limit: 數量，最大值爲1000
         :type Limit: int
-        :param PeriodType: 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
+        :param PeriodType: 週期類型，byUsedTime按計費週期/byPayTime按扣費週期。需要與費用中心該月份帳單的週期保持一緻。您可前往[帳單概覽](https://console.cloud.tencent.com/expense/bill/overview)頁面頂部檢視确認您的帳單統計週期類型。
         :type PeriodType: str
-        :param Month: 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+        :param Month: 月份，格式爲yyyy-mm。不能早于開通帳單2.0的月份，最多可拉取24個月内的數據。
         :type Month: str
-        :param NeedRecordNum: 是否需要访问列表的总记录数，用于前端分页
+        :param NeedRecordNum: 是否需要訪問清單的總記錄數，用于前端分頁
 1-表示需要， 0-表示不需要
         :type NeedRecordNum: int
-        :param ActionType: 查询交易类型。如 按量计费日结，按量计费小时结 等
+        :param ActionType: 查詢交易類型。如 按量計費日結，按量計費小時結 等
         :type ActionType: str
         """
         self.Offset = None
@@ -1487,18 +1487,18 @@ class DescribeBillResourceSummaryRequest(AbstractModel):
 
 
 class DescribeBillResourceSummaryResponse(AbstractModel):
-    """DescribeBillResourceSummary返回参数结构体
+    """DescribeBillResourceSummary返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResourceSummarySet: 资源汇总列表
+        :param ResourceSummarySet: 資源匯總清單
         :type ResourceSummarySet: list of BillResourceSummary
-        :param Total: 资源汇总列表总数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Total: 資源匯總清單總數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Total: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResourceSummarySet = None
@@ -1518,17 +1518,17 @@ class DescribeBillResourceSummaryResponse(AbstractModel):
 
 
 class DescribeBillSummaryByPayModeRequest(AbstractModel):
-    """DescribeBillSummaryByPayMode请求参数结构体
+    """DescribeBillSummaryByPayMode請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PayerUin: 查询账单数据的用户UIN
+        :param PayerUin: 查詢帳單數據的用戶UIN
         :type PayerUin: str
-        :param BeginTime: 目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
+        :param BeginTime: 目前只支援傳當月開始，且必須和EndTime爲相同月份，例 2018-09-01 00:00:00
         :type BeginTime: str
-        :param EndTime: 目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
+        :param EndTime: 目前只支援傳當月結束，且必須和BeginTime爲相同月份，例 2018-09-30 23:59:59
         :type EndTime: str
         """
         self.PayerUin = None
@@ -1543,18 +1543,18 @@ class DescribeBillSummaryByPayModeRequest(AbstractModel):
 
 
 class DescribeBillSummaryByPayModeResponse(AbstractModel):
-    """DescribeBillSummaryByPayMode返回参数结构体
+    """DescribeBillSummaryByPayMode返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Ready: 数据是否准备好，0未准备好，1准备好
+        :param Ready: 數據是否準備好，0未準備好，1準備好
         :type Ready: int
-        :param SummaryOverview: 各付费模式花费分布详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SummaryOverview: 各付費模式花費分布詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SummaryOverview: list of PayModeSummaryOverviewItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Ready = None
@@ -1574,17 +1574,17 @@ class DescribeBillSummaryByPayModeResponse(AbstractModel):
 
 
 class DescribeBillSummaryByProductRequest(AbstractModel):
-    """DescribeBillSummaryByProduct请求参数结构体
+    """DescribeBillSummaryByProduct請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PayerUin: 查询账单数据的用户UIN
+        :param PayerUin: 查詢帳單數據的用戶UIN
         :type PayerUin: str
-        :param BeginTime: 目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
+        :param BeginTime: 目前只支援傳當月開始，且必須和EndTime爲相同月份，例 2018-09-01 00:00:00
         :type BeginTime: str
-        :param EndTime: 目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
+        :param EndTime: 目前只支援傳當月結束，且必須和BeginTime爲相同月份，例 2018-09-30 23:59:59
         :type EndTime: str
         """
         self.PayerUin = None
@@ -1599,21 +1599,21 @@ class DescribeBillSummaryByProductRequest(AbstractModel):
 
 
 class DescribeBillSummaryByProductResponse(AbstractModel):
-    """DescribeBillSummaryByProduct返回参数结构体
+    """DescribeBillSummaryByProduct返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Ready: 数据是否准备好，0未准备好，1准备好
+        :param Ready: 數據是否準備好，0未準備好，1準備好
         :type Ready: int
-        :param SummaryTotal: 总花费详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SummaryTotal: 總花費詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SummaryTotal: :class:`tencentcloud.billing.v20180709.models.BusinessSummaryTotal`
-        :param SummaryOverview: 各产品花费分布
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SummaryOverview: 各産品花費分布
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SummaryOverview: list of BusinessSummaryOverviewItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Ready = None
@@ -1637,17 +1637,17 @@ class DescribeBillSummaryByProductResponse(AbstractModel):
 
 
 class DescribeBillSummaryByProjectRequest(AbstractModel):
-    """DescribeBillSummaryByProject请求参数结构体
+    """DescribeBillSummaryByProject請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PayerUin: 查询账单数据的用户UIN
+        :param PayerUin: 查詢帳單數據的用戶UIN
         :type PayerUin: str
-        :param BeginTime: 目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
+        :param BeginTime: 目前只支援傳當月開始，且必須和EndTime爲相同月份，例 2018-09-01 00:00:00
         :type BeginTime: str
-        :param EndTime: 目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
+        :param EndTime: 目前只支援傳當月結束，且必須和BeginTime爲相同月份，例 2018-09-30 23:59:59
         :type EndTime: str
         """
         self.PayerUin = None
@@ -1662,18 +1662,18 @@ class DescribeBillSummaryByProjectRequest(AbstractModel):
 
 
 class DescribeBillSummaryByProjectResponse(AbstractModel):
-    """DescribeBillSummaryByProject返回参数结构体
+    """DescribeBillSummaryByProject返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Ready: 数据是否准备好，0未准备好，1准备好
+        :param Ready: 數據是否準備好，0未準備好，1準備好
         :type Ready: int
-        :param SummaryOverview: 各项目花费分布详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SummaryOverview: 各項目花費分布詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SummaryOverview: list of ProjectSummaryOverviewItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Ready = None
@@ -1693,17 +1693,17 @@ class DescribeBillSummaryByProjectResponse(AbstractModel):
 
 
 class DescribeBillSummaryByRegionRequest(AbstractModel):
-    """DescribeBillSummaryByRegion请求参数结构体
+    """DescribeBillSummaryByRegion請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PayerUin: 查询账单数据的用户UIN
+        :param PayerUin: 查詢帳單數據的用戶UIN
         :type PayerUin: str
-        :param BeginTime: 目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
+        :param BeginTime: 目前只支援傳當月開始，且必須和EndTime爲相同月份，例 2018-09-01 00:00:00
         :type BeginTime: str
-        :param EndTime: 目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
+        :param EndTime: 目前只支援傳當月結束，且必須和BeginTime爲相同月份，例 2018-09-30 23:59:59
         :type EndTime: str
         """
         self.PayerUin = None
@@ -1718,18 +1718,18 @@ class DescribeBillSummaryByRegionRequest(AbstractModel):
 
 
 class DescribeBillSummaryByRegionResponse(AbstractModel):
-    """DescribeBillSummaryByRegion返回参数结构体
+    """DescribeBillSummaryByRegion返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Ready: 数据是否准备好，0未准备好，1准备好
+        :param Ready: 數據是否準備好，0未準備好，1準備好
         :type Ready: int
-        :param SummaryOverview: 各地域花费分布详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SummaryOverview: 各地域花費分布詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SummaryOverview: list of RegionSummaryOverviewItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Ready = None
@@ -1749,19 +1749,19 @@ class DescribeBillSummaryByRegionResponse(AbstractModel):
 
 
 class DescribeBillSummaryByTagRequest(AbstractModel):
-    """DescribeBillSummaryByTag请求参数结构体
+    """DescribeBillSummaryByTag請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PayerUin: 查询账单数据的用户UIN
+        :param PayerUin: 查詢帳單數據的用戶UIN
         :type PayerUin: str
-        :param BeginTime: 目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
+        :param BeginTime: 目前只支援傳當月開始，且必須和EndTime爲相同月份，例 2018-09-01 00:00:00
         :type BeginTime: str
-        :param EndTime: 目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
+        :param EndTime: 目前只支援傳當月結束，且必須和BeginTime爲相同月份，例 2018-09-30 23:59:59
         :type EndTime: str
-        :param TagKey: 分账标签键
+        :param TagKey: 分賬标簽鍵
         :type TagKey: str
         """
         self.PayerUin = None
@@ -1778,18 +1778,18 @@ class DescribeBillSummaryByTagRequest(AbstractModel):
 
 
 class DescribeBillSummaryByTagResponse(AbstractModel):
-    """DescribeBillSummaryByTag返回参数结构体
+    """DescribeBillSummaryByTag返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Ready: 数据是否准备好，0未准备好，1准备好
+        :param Ready: 數據是否準備好，0未準備好，1準備好
         :type Ready: int
-        :param SummaryOverview: 各标签值花费分布详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SummaryOverview: 各标簽值花費分布詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SummaryOverview: list of TagSummaryOverviewItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Ready = None
@@ -1809,30 +1809,30 @@ class DescribeBillSummaryByTagResponse(AbstractModel):
 
 
 class DescribeCostDetailRequest(AbstractModel):
-    """DescribeCostDetail请求参数结构体
+    """DescribeCostDetail請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Limit: 数量，最大值为100
+        :param Limit: 數量，最大值爲100
         :type Limit: int
         :param Offset: 偏移量
         :type Offset: int
-        :param BeginTime: 周期开始时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通成本分析的月份，最多可拉取24个月内的数据。
+        :param BeginTime: 週期開始時間，格式爲Y-m-d H:i:s，Month和BeginTime&EndTime必傳一個，如果有該欄位則Month欄位無效。BeginTime和EndTime必須一起傳。不能早于開通成本分析的月份，最多可拉取24個月内的數據。
         :type BeginTime: str
-        :param EndTime: 周期结束时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通成本分析的月份，最多可拉取24个月内的数据。
+        :param EndTime: 週期結束時間，格式爲Y-m-d H:i:s，Month和BeginTime&EndTime必傳一個，如果有該欄位則Month欄位無效。BeginTime和EndTime必須一起傳。不能早于開通成本分析的月份，最多可拉取24個月内的數據。
         :type EndTime: str
-        :param NeedRecordNum: 是否需要访问列表的总记录数，用于前端分页
+        :param NeedRecordNum: 是否需要訪問清單的總記錄數，用于前端分頁
 1-表示需要， 0-表示不需要
         :type NeedRecordNum: int
-        :param Month: 月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通成本分析的月份，最多可拉取24个月内的数据。
+        :param Month: 月份，格式爲yyyy-mm，Month和BeginTime&EndTime必傳一個，如果有傳BeginTime&EndTime則Month欄位無效。不能早于開通成本分析的月份，最多可拉取24個月内的數據。
         :type Month: str
-        :param ProductCode: 查询指定产品信息
+        :param ProductCode: 查詢指定産品訊息
         :type ProductCode: str
-        :param PayMode: 付费模式 prePay/postPay
+        :param PayMode: 付費模式 prePay/postPay
         :type PayMode: str
-        :param ResourceId: 查询指定资源信息
+        :param ResourceId: 查詢指定資源訊息
         :type ResourceId: str
         """
         self.Limit = None
@@ -1859,19 +1859,19 @@ class DescribeCostDetailRequest(AbstractModel):
 
 
 class DescribeCostDetailResponse(AbstractModel):
-    """DescribeCostDetail返回参数结构体
+    """DescribeCostDetail返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DetailSet: 消耗明细
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DetailSet: 消耗明細
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DetailSet: list of CostDetail
-        :param Total: 记录数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Total: 記錄數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Total: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DetailSet = None
@@ -1891,23 +1891,23 @@ class DescribeCostDetailResponse(AbstractModel):
 
 
 class DescribeCostSummaryByProductRequest(AbstractModel):
-    """DescribeCostSummaryByProduct请求参数结构体
+    """DescribeCostSummaryByProduct請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PayerUin: 查询账单数据的用户UIN
+        :param PayerUin: 查詢帳單數據的用戶UIN
         :type PayerUin: str
-        :param BeginTime: 目前只支持传当月1号 00:00:00，且必须和EndTime为相同月份，不支持跨月查询，例 2018-09-01 00:00:00
+        :param BeginTime: 目前只支援傳當月1号 00:00:00，且必須和EndTime爲相同月份，不支援跨月查詢，例 2018-09-01 00:00:00
         :type BeginTime: str
-        :param EndTime: 目前只支持传当月最后一天 23:59:59，且必须和BeginTime为相同月份，不支持跨月查询，例 2018-09-30 23:59:59
+        :param EndTime: 目前只支援傳當月最後一天 23:59:59，且必須和BeginTime爲相同月份，不支援跨月查詢，例 2018-09-30 23:59:59
         :type EndTime: str
-        :param Limit: 每次获取数据量
+        :param Limit: 每次獲取數據量
         :type Limit: int
         :param Offset: 偏移量
         :type Offset: int
-        :param NeedRecordNum: 是否需要返回记录数量，0不需要，1需要，默认不需要
+        :param NeedRecordNum: 是否需要返回記錄數量，0不需要，1需要，預設不需要
         :type NeedRecordNum: int
         """
         self.PayerUin = None
@@ -1928,23 +1928,23 @@ class DescribeCostSummaryByProductRequest(AbstractModel):
 
 
 class DescribeCostSummaryByProductResponse(AbstractModel):
-    """DescribeCostSummaryByProduct返回参数结构体
+    """DescribeCostSummaryByProduct返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Ready: 数据是否准备好，0未准备好，1准备好
+        :param Ready: 數據是否準備好，0未準備好，1準備好
         :type Ready: int
-        :param Total: 消耗详情
+        :param Total: 消耗詳情
         :type Total: :class:`tencentcloud.billing.v20180709.models.ConsumptionSummaryTotal`
-        :param Data: 消耗按产品汇总详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 消耗按産品匯總詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: list of ConsumptionBusinessSummaryDataItem
-        :param RecordNum: 记录数量，NeedRecordNum为0是返回null
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RecordNum: 記錄數量，NeedRecordNum爲0是返回null
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RecordNum: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Ready = None
@@ -1970,23 +1970,23 @@ class DescribeCostSummaryByProductResponse(AbstractModel):
 
 
 class DescribeCostSummaryByProjectRequest(AbstractModel):
-    """DescribeCostSummaryByProject请求参数结构体
+    """DescribeCostSummaryByProject請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PayerUin: 查询账单数据的用户UIN
+        :param PayerUin: 查詢帳單數據的用戶UIN
         :type PayerUin: str
-        :param BeginTime: 目前只支持传当月1号 00:00:00，且必须和EndTime为相同月份，不支持跨月查询，例 2018-09-01 00:00:00
+        :param BeginTime: 目前只支援傳當月1号 00:00:00，且必須和EndTime爲相同月份，不支援跨月查詢，例 2018-09-01 00:00:00
         :type BeginTime: str
-        :param EndTime: 目前只支持传当月最后一天 23:59:59，且必须和BeginTime为相同月份，不支持跨月查询，例 2018-09-30 23:59:59
+        :param EndTime: 目前只支援傳當月最後一天 23:59:59，且必須和BeginTime爲相同月份，不支援跨月查詢，例 2018-09-30 23:59:59
         :type EndTime: str
-        :param Limit: 每次获取数据量
+        :param Limit: 每次獲取數據量
         :type Limit: int
         :param Offset: 偏移量
         :type Offset: int
-        :param NeedRecordNum: 是否需要返回记录数量，0不需要，1需要，默认不需要
+        :param NeedRecordNum: 是否需要返回記錄數量，0不需要，1需要，預設不需要
         :type NeedRecordNum: int
         """
         self.PayerUin = None
@@ -2007,21 +2007,21 @@ class DescribeCostSummaryByProjectRequest(AbstractModel):
 
 
 class DescribeCostSummaryByProjectResponse(AbstractModel):
-    """DescribeCostSummaryByProject返回参数结构体
+    """DescribeCostSummaryByProject返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Ready: 数据是否准备好，0未准备好，1准备好
+        :param Ready: 數據是否準備好，0未準備好，1準備好
         :type Ready: int
-        :param Total: 消耗详情
+        :param Total: 消耗詳情
         :type Total: :class:`tencentcloud.billing.v20180709.models.ConsumptionSummaryTotal`
-        :param Data: 消耗按业务汇总详情
+        :param Data: 消耗按業務匯總詳情
         :type Data: list of ConsumptionProjectSummaryDataItem
-        :param RecordNum: 记录数量，NeedRecordNum为0是返回null
+        :param RecordNum: 記錄數量，NeedRecordNum爲0是返回null
         :type RecordNum: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Ready = None
@@ -2047,23 +2047,23 @@ class DescribeCostSummaryByProjectResponse(AbstractModel):
 
 
 class DescribeCostSummaryByRegionRequest(AbstractModel):
-    """DescribeCostSummaryByRegion请求参数结构体
+    """DescribeCostSummaryByRegion請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PayerUin: 查询账单数据的用户UIN
+        :param PayerUin: 查詢帳單數據的用戶UIN
         :type PayerUin: str
-        :param BeginTime: 目前只支持传当月1号 00:00:00，且必须和EndTime为相同月份，不支持跨月查询，例 2018-09-01 00:00:00
+        :param BeginTime: 目前只支援傳當月1号 00:00:00，且必須和EndTime爲相同月份，不支援跨月查詢，例 2018-09-01 00:00:00
         :type BeginTime: str
-        :param EndTime: 目前只支持传当月最后一天 23:59:59，且必须和BeginTime为相同月份，不支持跨月查询，例 2018-09-30 23:59:59
+        :param EndTime: 目前只支援傳當月最後一天 23:59:59，且必須和BeginTime爲相同月份，不支援跨月查詢，例 2018-09-30 23:59:59
         :type EndTime: str
-        :param Limit: 每次获取数据量
+        :param Limit: 每次獲取數據量
         :type Limit: int
         :param Offset: 偏移量
         :type Offset: int
-        :param NeedRecordNum: 是否需要返回记录数量，0不需要，1需要，默认不需要
+        :param NeedRecordNum: 是否需要返回記錄數量，0不需要，1需要，預設不需要
         :type NeedRecordNum: int
         """
         self.PayerUin = None
@@ -2084,22 +2084,22 @@ class DescribeCostSummaryByRegionRequest(AbstractModel):
 
 
 class DescribeCostSummaryByRegionResponse(AbstractModel):
-    """DescribeCostSummaryByRegion返回参数结构体
+    """DescribeCostSummaryByRegion返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Ready: 数据是否准备好，0未准备好，1准备好
+        :param Ready: 數據是否準備好，0未準備好，1準備好
         :type Ready: int
-        :param Total: 消耗详情
+        :param Total: 消耗詳情
         :type Total: :class:`tencentcloud.billing.v20180709.models.ConsumptionSummaryTotal`
-        :param Data: 消耗按地域汇总详情
+        :param Data: 消耗按地域匯總詳情
         :type Data: list of ConsumptionRegionSummaryDataItem
-        :param RecordNum: 记录数量，NeedRecordNum为0是返回null
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RecordNum: 記錄數量，NeedRecordNum爲0是返回null
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RecordNum: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Ready = None
@@ -2125,27 +2125,27 @@ class DescribeCostSummaryByRegionResponse(AbstractModel):
 
 
 class DescribeCostSummaryByResourceRequest(AbstractModel):
-    """DescribeCostSummaryByResource请求参数结构体
+    """DescribeCostSummaryByResource請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PayerUin: 查询账单数据的用户UIN
+        :param PayerUin: 查詢帳單數據的用戶UIN
         :type PayerUin: str
-        :param BeginTime: 目前只支持传当月1号 00:00:00，且必须和EndTime为相同月份，不支持跨月查询，例 2018-09-01 00:00:00
+        :param BeginTime: 目前只支援傳當月1号 00:00:00，且必須和EndTime爲相同月份，不支援跨月查詢，例 2018-09-01 00:00:00
         :type BeginTime: str
-        :param EndTime: 目前只支持传当月最后一天 23:59:59，且必须和BeginTime为相同月份，不支持跨月查询，例 2018-09-30 23:59:59
+        :param EndTime: 目前只支援傳當月最後一天 23:59:59，且必須和BeginTime爲相同月份，不支援跨月查詢，例 2018-09-30 23:59:59
         :type EndTime: str
-        :param Limit: 每次获取数据量
+        :param Limit: 每次獲取數據量
         :type Limit: int
         :param Offset: 偏移量
         :type Offset: int
-        :param NeedRecordNum: 是否需要返回记录数量，0不需要，1需要，默认不需要
+        :param NeedRecordNum: 是否需要返回記錄數量，0不需要，1需要，預設不需要
         :type NeedRecordNum: int
-        :param NeedConditionValue: 是否需要返回过滤条件，0不需要，1需要，默认不需要
+        :param NeedConditionValue: 是否需要返回過濾條件，0不需要，1需要，預設不需要
         :type NeedConditionValue: int
-        :param Conditions: 过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc）
+        :param Conditions: 過濾條件，只支援ResourceKeyword(資源關鍵字，支援資源id及資源名稱模糊查詢)，ProjectIds（項目id），RegionIds(地域id)，PayModes(付費模式，可選prePay和postPay)，HideFreeCost（是否隐藏0元流水，可選0和1），OrderByCost（按費用排序規則，可選desc和asc）
         :type Conditions: :class:`tencentcloud.billing.v20180709.models.Conditions`
         """
         self.PayerUin = None
@@ -2172,27 +2172,27 @@ class DescribeCostSummaryByResourceRequest(AbstractModel):
 
 
 class DescribeCostSummaryByResourceResponse(AbstractModel):
-    """DescribeCostSummaryByResource返回参数结构体
+    """DescribeCostSummaryByResource返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Ready: 数据是否准备好，0未准备好，1准备好
+        :param Ready: 數據是否準備好，0未準備好，1準備好
         :type Ready: int
-        :param Total: 消耗详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Total: 消耗詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Total: :class:`tencentcloud.billing.v20180709.models.ConsumptionSummaryTotal`
-        :param ConditionValue: 过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConditionValue: 過濾條件
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConditionValue: :class:`tencentcloud.billing.v20180709.models.ConsumptionResourceSummaryConditionValue`
-        :param RecordNum: 记录数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RecordNum: 記錄數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RecordNum: int
-        :param Data: 资源消耗详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 資源消耗詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: list of ConsumptionResourceSummaryDataItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Ready = None
@@ -2222,35 +2222,35 @@ class DescribeCostSummaryByResourceResponse(AbstractModel):
 
 
 class DescribeDealsByCondRequest(AbstractModel):
-    """DescribeDealsByCond请求参数结构体
+    """DescribeDealsByCond請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 开始时间
+        :param StartTime: 開始時間
         :type StartTime: str
-        :param EndTime: 结束时间
+        :param EndTime: 結束時間
         :type EndTime: str
-        :param Limit: 一页多少条数据，默认是20条，最大不超过1000
+        :param Limit: 一頁多少條數據，預設是20條，最大不超過1000
         :type Limit: int
-        :param Offset: 第多少页，从0开始，默认是0
+        :param Offset: 第多少頁，從0開始，預設是0
         :type Offset: int
-        :param Status: 订单状态,默认为4（成功的订单）
-订单的状态
+        :param Status: 訂單狀态,預設爲4（成功的訂單）
+訂單的狀态
 1：未支付
-2：已支付3：发货中
-4：已发货
-5：发货失败
+2：已支付3：發貨中
+4：已發貨
+5：發貨失敗
 6：已退款
-7：已关单
-8：订单过期
-9：订单已失效
-10：产品已失效
-11：代付拒绝
+7：已關單
+8：訂單過期
+9：訂單已失效
+10：産品已失效
+11：代付拒絕
 12：支付中
         :type Status: int
-        :param OrderId: 订单号
+        :param OrderId: 訂單号
         :type OrderId: str
         """
         self.StartTime = None
@@ -2271,17 +2271,17 @@ class DescribeDealsByCondRequest(AbstractModel):
 
 
 class DescribeDealsByCondResponse(AbstractModel):
-    """DescribeDealsByCond返回参数结构体
+    """DescribeDealsByCond返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Deals: 订单列表
+        :param Deals: 訂單清單
         :type Deals: list of Deal
-        :param TotalCount: 订单总数
+        :param TotalCount: 訂單總數
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Deals = None
@@ -2301,42 +2301,42 @@ class DescribeDealsByCondResponse(AbstractModel):
 
 
 class DescribeDosageDetailByDateRequest(AbstractModel):
-    """DescribeDosageDetailByDate请求参数结构体
+    """DescribeDosageDetailByDate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartDate: 查询账单开始日期，如 2019-01-01
+        :param StartDate: 查詢帳單開始日期，如 2019-01-01
         :type StartDate: str
-        :param EndDate: 查询账单结束日期，如 2019-01-01， 时间跨度不超过7天
+        :param EndDate: 查詢帳單結束日期，如 2019-01-01， 時間跨度不超過7天
         :type EndDate: str
-        :param ProductCode: 互动直播：
-10194   互动直播-核心机房           :
-10195   互动直播-边缘机房
+        :param ProductCode: 互動直播：
+10194   互動直播-核心機房           :
+10195   互動直播-邊緣機房
 
-cdn业务：
-10180：CDN静态加速流量(国内)
-10181：CDN静态加速带宽(国内)
-10182：CDN静态加速普通流量
-10183：CDN静态加速普通带宽
-10231：CDN静态加速流量(海外)
-10232：CDN静态加速带宽(海外)
+cdn業務：
+10180：CDN靜态加速流量(國内)
+10181：CDN靜态加速頻寬(國内)
+10182：CDN靜态加速普通流量
+10183：CDN靜态加速普通頻寬
+10231：CDN靜态加速流量(海外)
+10232：CDN靜态加速頻寬(海外)
 
-100967：弹性公网IP-按流量计费
-101065：公网负载均衡-按流量计费
+100967：彈性公網IP-按流量計費
+101065：公網負載均衡-按流量計費
 
-视频直播
-10226 视频直播流量(国内)
-10227 视频直播带宽(国内)
-100763 视频直播流量(海外)
-100762 视频直播宽带(海外)
+視訊直播
+10226 視訊直播流量(國内)
+10227 視訊直播頻寬(國内)
+100763 視訊直播流量(海外)
+100762 視訊直播寬帶(海外)
         :type ProductCode: str
-        :param Domain: 查询域名 例如 www.qq.com
-非CDN业务查询时值为空
+        :param Domain: 查詢域名 例如 www.qq.com
+非CDN業務查詢時值爲空
         :type Domain: str
-        :param InstanceID: 1、如果为空，则返回EIP或CLB所有实例的明细；
-2、如果传入实例名，则返回该实例明细
+        :param InstanceID: 1、如果爲空，則返回EIP或CLB所有實例的明細；
+2、如果傳入實例名，則返回該實例明細
         :type InstanceID: str
         """
         self.StartDate = None
@@ -2355,25 +2355,25 @@ cdn业务：
 
 
 class DescribeDosageDetailByDateResponse(AbstractModel):
-    """DescribeDosageDetailByDate返回参数结构体
+    """DescribeDosageDetailByDate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Unit: 计量单位
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Unit: 計量單位
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Unit: str
-        :param DetailSets: 用量数组
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DetailSets: 用量數組
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DetailSets: list of DetailSet
-        :param RetCode: 错误码
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RetCode: 錯誤碼
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RetCode: int
-        :param RetMsg: 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RetMsg: 錯誤訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RetMsg: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Unit = None
@@ -2397,13 +2397,13 @@ class DescribeDosageDetailByDateResponse(AbstractModel):
 
 
 class DetailPoint(AbstractModel):
-    """由时间和值组成的数据结构
+    """由時間和值組成的數據結構
 
     """
 
     def __init__(self):
         """
-        :param Time: 时间
+        :param Time: 時間
         :type Time: str
         :param Value: 值
         :type Value: str
@@ -2418,7 +2418,7 @@ class DetailPoint(AbstractModel):
 
 
 class DetailSet(AbstractModel):
-    """由域名和使用明细组成的数据结构
+    """由域名和使用明細組成的數據結構
 
     """
 
@@ -2426,10 +2426,10 @@ class DetailSet(AbstractModel):
         """
         :param Domain: 域名
         :type Domain: str
-        :param DetailPoints: 使用数据明细
+        :param DetailPoints: 使用數據明細
         :type DetailPoints: list of DetailPoint
-        :param InstanceID: 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceID: 實例ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceID: str
         """
         self.Domain = None
@@ -2449,17 +2449,17 @@ class DetailSet(AbstractModel):
 
 
 class PayDealsRequest(AbstractModel):
-    """PayDeals请求参数结构体
+    """PayDeals請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param OrderIds: 需要支付的一个或者多个订单号
+        :param OrderIds: 需要支付的一個或者多個訂單号
         :type OrderIds: list of str
-        :param AutoVoucher: 是否自动使用代金券,1:是,0否,默认0
+        :param AutoVoucher: 是否自動使用代金券,1:是,0否,預設0
         :type AutoVoucher: int
-        :param VoucherIds: 代金券ID列表,目前仅支持指定一张代金券
+        :param VoucherIds: 代金券ID清單,目前僅支援指定一張代金券
         :type VoucherIds: list of str
         """
         self.OrderIds = None
@@ -2474,17 +2474,17 @@ class PayDealsRequest(AbstractModel):
 
 
 class PayDealsResponse(AbstractModel):
-    """PayDeals返回参数结构体
+    """PayDeals返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param OrderIds: 此次操作支付成功的订单号数组
+        :param OrderIds: 此次操作支付成功的訂單号數組
         :type OrderIds: list of str
-        :param ResourceIds: 此次操作支付成功的资源Id数组
+        :param ResourceIds: 此次操作支付成功的資源Id數組
         :type ResourceIds: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.OrderIds = None
@@ -2499,27 +2499,27 @@ class PayDealsResponse(AbstractModel):
 
 
 class PayModeSummaryOverviewItem(AbstractModel):
-    """按付费模式汇总消费详情
+    """按付費模式匯總消費詳情
 
     """
 
     def __init__(self):
         """
-        :param PayMode: 付费模式
+        :param PayMode: 付費模式
         :type PayMode: str
-        :param PayModeName: 付费模式名称
+        :param PayModeName: 付費模式名稱
         :type PayModeName: str
-        :param RealTotalCost: 实际花费
+        :param RealTotalCost: 實際花費
         :type RealTotalCost: str
-        :param RealTotalCostRatio: 费用所占百分比，两位小数
+        :param RealTotalCostRatio: 費用所占百分比，兩位小數
         :type RealTotalCostRatio: str
-        :param Detail: 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
+        :param Detail: 按交易類型：包年包月新購/續約/升降配/退款、按量計費扣費、調賬補償/扣費等類型匯總消費詳情
         :type Detail: list of ActionSummaryOverviewItem
-        :param CashPayAmount: 现金金额
+        :param CashPayAmount: 現金金額
         :type CashPayAmount: str
-        :param IncentivePayAmount: 赠送金金额
+        :param IncentivePayAmount: 贈送金金額
         :type IncentivePayAmount: str
-        :param VoucherPayAmount: 代金券金额
+        :param VoucherPayAmount: 代金券金額
         :type VoucherPayAmount: str
         """
         self.PayMode = None
@@ -2549,15 +2549,15 @@ class PayModeSummaryOverviewItem(AbstractModel):
 
 
 class ProductInfo(AbstractModel):
-    """商品详细信息
+    """商品詳細訊息
 
     """
 
     def __init__(self):
         """
-        :param Name: 商品详情名称标识
+        :param Name: 商品詳情名稱标識
         :type Name: str
-        :param Value: 商品详情
+        :param Value: 商品詳情
         :type Value: str
         """
         self.Name = None
@@ -2570,27 +2570,27 @@ class ProductInfo(AbstractModel):
 
 
 class ProjectSummaryOverviewItem(AbstractModel):
-    """按项目汇总消费详情
+    """按項目匯總消費詳情
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: str
-        :param ProjectName: 项目名称
+        :param ProjectName: 項目名稱
         :type ProjectName: str
-        :param RealTotalCost: 实际花费
+        :param RealTotalCost: 實際花費
         :type RealTotalCost: str
-        :param RealTotalCostRatio: 费用所占百分比，两位小数
+        :param RealTotalCostRatio: 費用所占百分比，兩位小數
         :type RealTotalCostRatio: str
-        :param CashPayAmount: 现金金额
+        :param CashPayAmount: 現金金額
         :type CashPayAmount: str
-        :param IncentivePayAmount: 赠送金金额
+        :param IncentivePayAmount: 贈送金金額
         :type IncentivePayAmount: str
-        :param VoucherPayAmount: 代金券金额
+        :param VoucherPayAmount: 代金券金額
         :type VoucherPayAmount: str
-        :param BillMonth: 账单月份，格式2019-08
+        :param BillMonth: 帳單月份，格式2019-08
         :type BillMonth: str
         """
         self.ProjectId = None
@@ -2615,28 +2615,28 @@ class ProjectSummaryOverviewItem(AbstractModel):
 
 
 class RegionSummaryOverviewItem(AbstractModel):
-    """按地域汇总消费详情
+    """按地域匯總消費詳情
 
     """
 
     def __init__(self):
         """
         :param RegionId: 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RegionId: str
-        :param RegionName: 地域名称
+        :param RegionName: 地域名稱
         :type RegionName: str
-        :param RealTotalCost: 实际花费
+        :param RealTotalCost: 實際花費
         :type RealTotalCost: str
-        :param RealTotalCostRatio: 费用所占百分比，两位小数
+        :param RealTotalCostRatio: 費用所占百分比，兩位小數
         :type RealTotalCostRatio: str
-        :param CashPayAmount: 现金金额
+        :param CashPayAmount: 現金金額
         :type CashPayAmount: str
-        :param IncentivePayAmount: 赠送金金额
+        :param IncentivePayAmount: 贈送金金額
         :type IncentivePayAmount: str
-        :param VoucherPayAmount: 代金券金额
+        :param VoucherPayAmount: 代金券金額
         :type VoucherPayAmount: str
-        :param BillMonth: 账单月份，格式2019-08
+        :param BillMonth: 帳單月份，格式2019-08
         :type BillMonth: str
         """
         self.RegionId = None
@@ -2661,20 +2661,20 @@ class RegionSummaryOverviewItem(AbstractModel):
 
 
 class TagSummaryOverviewItem(AbstractModel):
-    """按标签汇总消费详情
+    """按标簽匯總消費詳情
 
     """
 
     def __init__(self):
         """
-        :param TagValue: 标签值
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagValue: 标簽值
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagValue: str
-        :param RealTotalCost: 实际花费
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RealTotalCost: 實際花費
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RealTotalCost: str
-        :param RealTotalCostRatio: 费用所占百分比，两位小数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RealTotalCostRatio: 費用所占百分比，兩位小數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RealTotalCostRatio: str
         """
         self.TagValue = None

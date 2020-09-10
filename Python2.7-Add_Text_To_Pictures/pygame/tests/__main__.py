@@ -130,4 +130,3 @@ if options.interactive:
 # Run the test suite.
 run_and_exit(*args, **kwds)
 
-

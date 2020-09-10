@@ -26,7 +26,7 @@ class BizliveClient(AbstractClient):
 
 
     def CreateSession(self, request):
-        """创建会话
+        """創建會話
 
         :param request: Request instance for CreateSession.
         :type request: :class:`tencentcloud.bizlive.v20190313.models.CreateSessionRequest`
@@ -54,7 +54,7 @@ class BizliveClient(AbstractClient):
 
 
     def DescribeStreamPlayInfoList(self, request):
-        """查询播放数据，支持按流名称查询详细播放数据，也可按播放域名查询详细总数据。
+        """查詢播放數據，支援按流名稱查詢詳細播放數據，也可按播放域名查詢詳細總數據。
 
         :param request: Request instance for DescribeStreamPlayInfoList.
         :type request: :class:`tencentcloud.bizlive.v20190313.models.DescribeStreamPlayInfoListRequest`
@@ -82,7 +82,7 @@ class BizliveClient(AbstractClient):
 
 
     def DescribeWorkers(self, request):
-        """查询空闲机器数量
+        """查詢空閑機器數量
 
         :param request: Request instance for DescribeWorkers.
         :type request: :class:`tencentcloud.bizlive.v20190313.models.DescribeWorkersRequest`
@@ -110,7 +110,7 @@ class BizliveClient(AbstractClient):
 
 
     def ForbidLiveStream(self, request):
-        """禁止某条流的推送，可以预设某个时刻将流恢复。
+        """禁止某條流的推送，可以預設某個時刻将流恢複。
 
         :param request: Request instance for ForbidLiveStream.
         :type request: :class:`tencentcloud.bizlive.v20190313.models.ForbidLiveStreamRequest`
@@ -138,7 +138,7 @@ class BizliveClient(AbstractClient):
 
 
     def RegisterIM(self, request):
-        """注册聊天室
+        """注冊聊天室
 
         :param request: Request instance for RegisterIM.
         :type request: :class:`tencentcloud.bizlive.v20190313.models.RegisterIMRequest`
@@ -166,7 +166,7 @@ class BizliveClient(AbstractClient):
 
 
     def StopGame(self, request):
-        """强制退出游戏
+        """強制登出遊戲
 
         :param request: Request instance for StopGame.
         :type request: :class:`tencentcloud.bizlive.v20190313.models.StopGameRequest`

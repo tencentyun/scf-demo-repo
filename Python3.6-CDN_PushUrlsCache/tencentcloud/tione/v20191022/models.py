@@ -23,14 +23,14 @@ class AlgorithmSpecification(AbstractModel):
 
     def __init__(self):
         """
-        :param TrainingImageName: 镜像名字
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TrainingImageName: 映像名字
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TrainingImageName: str
-        :param TrainingInputMode: 输入模式File|Pipe
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TrainingInputMode: 輸入模式File|Pipe
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TrainingInputMode: str
         :param AlgorithmName: 算法名字
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AlgorithmName: str
         """
         self.TrainingImageName = None
@@ -45,21 +45,21 @@ class AlgorithmSpecification(AbstractModel):
 
 
 class CodeRepoSummary(AbstractModel):
-    """存储库列表
+    """儲存庫清單
 
     """
 
     def __init__(self):
         """
-        :param CreationTime: 创建时间
+        :param CreationTime: 創建時間
         :type CreationTime: str
-        :param LastModifiedTime: 更新时间
+        :param LastModifiedTime: 更新時間
         :type LastModifiedTime: str
-        :param CodeRepositoryName: 存储库名称
+        :param CodeRepositoryName: 儲存庫名稱
         :type CodeRepositoryName: str
         :param GitConfig: Git配置
         :type GitConfig: :class:`tencentcloud.tione.v20191022.models.GitConfig`
-        :param NoSecret: 是否有Git凭证
+        :param NoSecret: 是否有Git憑證
         :type NoSecret: bool
         """
         self.CreationTime = None
@@ -80,23 +80,23 @@ class CodeRepoSummary(AbstractModel):
 
 
 class CosDataSource(AbstractModel):
-    """cos路径
+    """cos路徑
 
     """
 
     def __init__(self):
         """
         :param Bucket: cos桶
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Bucket: str
         :param KeyPrefix: cos文件key
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type KeyPrefix: str
-        :param DataDistributionType: 分布式数据下载方式
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DataDistributionType: 分布式數據下載方式
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DataDistributionType: str
-        :param DataType: 数据类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DataType: 數據類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DataType: str
         """
         self.Bucket = None
@@ -113,17 +113,17 @@ class CosDataSource(AbstractModel):
 
 
 class CreateCodeRepositoryRequest(AbstractModel):
-    """CreateCodeRepository请求参数结构体
+    """CreateCodeRepository請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CodeRepositoryName: 存储库名称
+        :param CodeRepositoryName: 儲存庫名稱
         :type CodeRepositoryName: str
-        :param GitConfig: Git相关配置
+        :param GitConfig: Git相關配置
         :type GitConfig: :class:`tencentcloud.tione.v20191022.models.GitConfig`
-        :param GitSecret: Git凭证
+        :param GitSecret: Git憑證
         :type GitSecret: :class:`tencentcloud.tione.v20191022.models.GitSecret`
         """
         self.CodeRepositoryName = None
@@ -142,15 +142,15 @@ class CreateCodeRepositoryRequest(AbstractModel):
 
 
 class CreateCodeRepositoryResponse(AbstractModel):
-    """CreateCodeRepository返回参数结构体
+    """CreateCodeRepository返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CodeRepositoryName: 存储库名称
+        :param CodeRepositoryName: 儲存庫名稱
         :type CodeRepositoryName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CodeRepositoryName = None
@@ -163,31 +163,31 @@ class CreateCodeRepositoryResponse(AbstractModel):
 
 
 class CreateNotebookInstanceRequest(AbstractModel):
-    """CreateNotebookInstance请求参数结构体
+    """CreateNotebookInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookInstanceName: Notebook实例名称
+        :param NotebookInstanceName: Notebook實例名稱
         :type NotebookInstanceName: str
-        :param InstanceType: Notebook算力类型
+        :param InstanceType: Notebook算力類型
         :type InstanceType: str
-        :param VolumeSizeInGB: 数据卷大小(GB)
+        :param VolumeSizeInGB: 數據卷大小(GB)
         :type VolumeSizeInGB: int
-        :param DirectInternetAccess: 外网访问权限，可取值Enabled/Disabled
+        :param DirectInternetAccess: 外網訪問權限，可取值Enabled/Disabled
         :type DirectInternetAccess: str
-        :param RootAccess: Root用户权限，可取值Enabled/Disabled
+        :param RootAccess: Root用戶權限，可取值Enabled/Disabled
         :type RootAccess: str
-        :param SubnetId: 子网ID
+        :param SubnetId: 子網ID
         :type SubnetId: str
-        :param LifecycleScriptsName: 生命周期脚本名称
+        :param LifecycleScriptsName: 生命週期腳本名稱
         :type LifecycleScriptsName: str
-        :param DefaultCodeRepository: 默认存储库名称
-可以是已创建的存储库名称或者已https://开头的公共git库
+        :param DefaultCodeRepository: 預設儲存庫名稱
+可以是已創建的儲存庫名稱或者已https://開頭的公共git庫
         :type DefaultCodeRepository: str
-        :param AdditionalCodeRepositories: 其他存储库列表
-每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+        :param AdditionalCodeRepositories: 其他儲存庫清單
+每個元素可以是已創建的儲存庫名稱或者已https://開頭的公共git庫
         :type AdditionalCodeRepositories: list of str
         """
         self.NotebookInstanceName = None
@@ -214,15 +214,15 @@ class CreateNotebookInstanceRequest(AbstractModel):
 
 
 class CreateNotebookInstanceResponse(AbstractModel):
-    """CreateNotebookInstance返回参数结构体
+    """CreateNotebookInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookInstanceName: Notebook实例名字
+        :param NotebookInstanceName: Notebook實例名字
         :type NotebookInstanceName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.NotebookInstanceName = None
@@ -235,17 +235,17 @@ class CreateNotebookInstanceResponse(AbstractModel):
 
 
 class CreateNotebookLifecycleScriptRequest(AbstractModel):
-    """CreateNotebookLifecycleScript请求参数结构体
+    """CreateNotebookLifecycleScript請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookLifecycleScriptsName: Notebook生命周期脚本名称
+        :param NotebookLifecycleScriptsName: Notebook生命週期腳本名稱
         :type NotebookLifecycleScriptsName: str
-        :param CreateScript: 创建脚本，base64编码格式
+        :param CreateScript: 創建腳本，base64編碼格式
         :type CreateScript: str
-        :param StartScript: 启动脚本，base64编码格式
+        :param StartScript: 啓動腳本，base64編碼格式
         :type StartScript: str
         """
         self.NotebookLifecycleScriptsName = None
@@ -260,15 +260,15 @@ class CreateNotebookLifecycleScriptRequest(AbstractModel):
 
 
 class CreateNotebookLifecycleScriptResponse(AbstractModel):
-    """CreateNotebookLifecycleScript返回参数结构体
+    """CreateNotebookLifecycleScript返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookLifecycleScriptsName: 生命周期脚本名称
+        :param NotebookLifecycleScriptsName: 生命週期腳本名稱
         :type NotebookLifecycleScriptsName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.NotebookLifecycleScriptsName = None
@@ -281,15 +281,15 @@ class CreateNotebookLifecycleScriptResponse(AbstractModel):
 
 
 class CreatePresignedNotebookInstanceUrlRequest(AbstractModel):
-    """CreatePresignedNotebookInstanceUrl请求参数结构体
+    """CreatePresignedNotebookInstanceUrl請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookInstanceName: Notebook实例名称
+        :param NotebookInstanceName: Notebook實例名稱
         :type NotebookInstanceName: str
-        :param SessionExpirationDurationInSeconds: session有效时间，秒
+        :param SessionExpirationDurationInSeconds: session有效時間，秒
         :type SessionExpirationDurationInSeconds: int
         """
         self.NotebookInstanceName = None
@@ -302,15 +302,15 @@ class CreatePresignedNotebookInstanceUrlRequest(AbstractModel):
 
 
 class CreatePresignedNotebookInstanceUrlResponse(AbstractModel):
-    """CreatePresignedNotebookInstanceUrl返回参数结构体
+    """CreatePresignedNotebookInstanceUrl返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AuthorizedUrl: 授权url
+        :param AuthorizedUrl: 授權url
         :type AuthorizedUrl: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AuthorizedUrl = None
@@ -323,31 +323,31 @@ class CreatePresignedNotebookInstanceUrlResponse(AbstractModel):
 
 
 class CreateTrainingJobRequest(AbstractModel):
-    """CreateTrainingJob请求参数结构体
+    """CreateTrainingJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AlgorithmSpecification: 算法镜像配置
+        :param AlgorithmSpecification: 算法映像配置
         :type AlgorithmSpecification: :class:`tencentcloud.tione.v20191022.models.AlgorithmSpecification`
-        :param InputDataConfig: 输入数据配置
+        :param InputDataConfig: 輸入數據配置
         :type InputDataConfig: list of InputDataConfig
-        :param OutputDataConfig: 输出数据配置
+        :param OutputDataConfig: 輸出數據配置
         :type OutputDataConfig: :class:`tencentcloud.tione.v20191022.models.OutputDataConfig`
-        :param ResourceConfig: 资源实例配置
+        :param ResourceConfig: 資源實例配置
         :type ResourceConfig: :class:`tencentcloud.tione.v20191022.models.ResourceConfig`
-        :param TrainingJobName: 训练任务名称
+        :param TrainingJobName: 訓練任務名稱
         :type TrainingJobName: str
-        :param StoppingCondition: 中止条件
+        :param StoppingCondition: 中止條件
         :type StoppingCondition: :class:`tencentcloud.tione.v20191022.models.StoppingCondition`
-        :param VpcConfig: 私有网络配置
+        :param VpcConfig: 私有網絡配置
         :type VpcConfig: :class:`tencentcloud.tione.v20191022.models.VpcConfig`
-        :param HyperParameters: 算法超级参数
+        :param HyperParameters: 算法超級參數
         :type HyperParameters: str
-        :param EnvConfig: 环境变量配置
+        :param EnvConfig: 環境變量配置
         :type EnvConfig: list of EnvConfig
-        :param RoleName: 角色名称
+        :param RoleName: 角色名稱
         :type RoleName: str
         """
         self.AlgorithmSpecification = None
@@ -396,15 +396,15 @@ class CreateTrainingJobRequest(AbstractModel):
 
 
 class CreateTrainingJobResponse(AbstractModel):
-    """CreateTrainingJob返回参数结构体
+    """CreateTrainingJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TrainingJobName: 训练任务名称
+        :param TrainingJobName: 訓練任務名稱
         :type TrainingJobName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TrainingJobName = None
@@ -417,17 +417,17 @@ class CreateTrainingJobResponse(AbstractModel):
 
 
 class DataSource(AbstractModel):
-    """数据源
+    """數據源
 
     """
 
     def __init__(self):
         """
-        :param CosDataSource: cos数据源
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CosDataSource: cos數據源
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CosDataSource: :class:`tencentcloud.tione.v20191022.models.CosDataSource`
-        :param FileSystemDataSource: 文件系统输入源
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FileSystemDataSource: 文件系統輸入源
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FileSystemDataSource: :class:`tencentcloud.tione.v20191022.models.FileSystemDataSource`
         """
         self.CosDataSource = None
@@ -444,13 +444,13 @@ class DataSource(AbstractModel):
 
 
 class DeleteCodeRepositoryRequest(AbstractModel):
-    """DeleteCodeRepository请求参数结构体
+    """DeleteCodeRepository請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CodeRepositoryName: 存储库名称
+        :param CodeRepositoryName: 儲存庫名稱
         :type CodeRepositoryName: str
         """
         self.CodeRepositoryName = None
@@ -461,15 +461,15 @@ class DeleteCodeRepositoryRequest(AbstractModel):
 
 
 class DeleteCodeRepositoryResponse(AbstractModel):
-    """DeleteCodeRepository返回参数结构体
+    """DeleteCodeRepository返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CodeRepositoryName: 存储库名称
+        :param CodeRepositoryName: 儲存庫名稱
         :type CodeRepositoryName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CodeRepositoryName = None
@@ -482,13 +482,13 @@ class DeleteCodeRepositoryResponse(AbstractModel):
 
 
 class DeleteNotebookInstanceRequest(AbstractModel):
-    """DeleteNotebookInstance请求参数结构体
+    """DeleteNotebookInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookInstanceName: Notebook实例名称
+        :param NotebookInstanceName: Notebook實例名稱
         :type NotebookInstanceName: str
         """
         self.NotebookInstanceName = None
@@ -499,13 +499,13 @@ class DeleteNotebookInstanceRequest(AbstractModel):
 
 
 class DeleteNotebookInstanceResponse(AbstractModel):
-    """DeleteNotebookInstance返回参数结构体
+    """DeleteNotebookInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -516,15 +516,15 @@ class DeleteNotebookInstanceResponse(AbstractModel):
 
 
 class DeleteNotebookLifecycleScriptRequest(AbstractModel):
-    """DeleteNotebookLifecycleScript请求参数结构体
+    """DeleteNotebookLifecycleScript請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookLifecycleScriptsName: 生命周期脚本名称
+        :param NotebookLifecycleScriptsName: 生命週期腳本名稱
         :type NotebookLifecycleScriptsName: str
-        :param Forcible: 是否忽略已关联的 notebook 实例强行删除生命周期脚本，默认 false
+        :param Forcible: 是否忽略已關聯的 notebook 實例強行删除生命週期腳本，預設 false
         :type Forcible: bool
         """
         self.NotebookLifecycleScriptsName = None
@@ -537,13 +537,13 @@ class DeleteNotebookLifecycleScriptRequest(AbstractModel):
 
 
 class DeleteNotebookLifecycleScriptResponse(AbstractModel):
-    """DeleteNotebookLifecycleScript返回参数结构体
+    """DeleteNotebookLifecycleScript返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -554,23 +554,23 @@ class DeleteNotebookLifecycleScriptResponse(AbstractModel):
 
 
 class DescribeCodeRepositoriesRequest(AbstractModel):
-    """DescribeCodeRepositories请求参数结构体
+    """DescribeCodeRepositories請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回数量，默认为20
+        :param Limit: 返回數量，預設爲20
         :type Limit: int
-        :param Filters: 过滤条件。
-instance-name - String - 是否必填：否 -（过滤条件）按照名称过滤。
-search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
+        :param Filters: 過濾條件。
+instance-name - String - 是否必填：否 -（過濾條件）按照名稱過濾。
+search-by-name - String - 是否必填：否 -（過濾條件）按照名稱檢索，模糊比對。
         :type Filters: list of Filter
-        :param SortOrder: 排序规则。默认取Descending
-Descending 按更新时间降序
-Ascending 按更新时间升序
+        :param SortOrder: 排序規則。預設取Descending
+Descending 按更新時間降序
+Ascending 按更新時間升序
         :type SortOrder: str
         """
         self.Offset = None
@@ -592,18 +592,18 @@ Ascending 按更新时间升序
 
 
 class DescribeCodeRepositoriesResponse(AbstractModel):
-    """DescribeCodeRepositories返回参数结构体
+    """DescribeCodeRepositories返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 存储库总数目
+        :param TotalCount: 儲存庫總數目
         :type TotalCount: int
-        :param CodeRepoSet: 存储库列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CodeRepoSet: 儲存庫清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CodeRepoSet: list of CodeRepoSummary
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -623,13 +623,13 @@ class DescribeCodeRepositoriesResponse(AbstractModel):
 
 
 class DescribeCodeRepositoryRequest(AbstractModel):
-    """DescribeCodeRepository请求参数结构体
+    """DescribeCodeRepository請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CodeRepositoryName: 存储库名称
+        :param CodeRepositoryName: 儲存庫名稱
         :type CodeRepositoryName: str
         """
         self.CodeRepositoryName = None
@@ -640,23 +640,23 @@ class DescribeCodeRepositoryRequest(AbstractModel):
 
 
 class DescribeCodeRepositoryResponse(AbstractModel):
-    """DescribeCodeRepository返回参数结构体
+    """DescribeCodeRepository返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CreationTime: 创建时间
+        :param CreationTime: 創建時間
         :type CreationTime: str
-        :param LastModifiedTime: 更新时间
+        :param LastModifiedTime: 更新時間
         :type LastModifiedTime: str
-        :param CodeRepositoryName: 存储库名称
+        :param CodeRepositoryName: 儲存庫名稱
         :type CodeRepositoryName: str
-        :param GitConfig: Git存储配置
+        :param GitConfig: Git儲存配置
         :type GitConfig: :class:`tencentcloud.tione.v20191022.models.GitConfig`
-        :param NoSecret: 是否有Git凭证
+        :param NoSecret: 是否有Git憑證
         :type NoSecret: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CreationTime = None
@@ -679,13 +679,13 @@ class DescribeCodeRepositoryResponse(AbstractModel):
 
 
 class DescribeNotebookInstanceRequest(AbstractModel):
-    """DescribeNotebookInstance请求参数结构体
+    """DescribeNotebookInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookInstanceName: Notebook实例名称
+        :param NotebookInstanceName: Notebook實例名稱
         :type NotebookInstanceName: str
         """
         self.NotebookInstanceName = None
@@ -696,62 +696,62 @@ class DescribeNotebookInstanceRequest(AbstractModel):
 
 
 class DescribeNotebookInstanceResponse(AbstractModel):
-    """DescribeNotebookInstance返回参数结构体
+    """DescribeNotebookInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookInstanceName: Notebook实例名称
+        :param NotebookInstanceName: Notebook實例名稱
         :type NotebookInstanceName: str
-        :param InstanceType: Notebook算力资源类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceType: Notebook算力資源類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceType: str
-        :param RoleArn: 角色的资源描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RoleArn: 角色的資源描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RoleArn: str
-        :param DirectInternetAccess: 外网访问权限
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DirectInternetAccess: 外網訪問權限
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DirectInternetAccess: str
-        :param RootAccess: Root用户权限
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RootAccess: Root用戶權限
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RootAccess: str
-        :param SubnetId: 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubnetId: 子網ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetId: str
-        :param VolumeSizeInGB: 数据卷大小(GB)
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VolumeSizeInGB: 數據卷大小(GB)
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VolumeSizeInGB: int
-        :param FailureReason: 创建失败原因
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FailureReason: 創建失敗原因
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FailureReason: str
-        :param CreationTime: Notebook实例创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreationTime: Notebook實例創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreationTime: str
-        :param LastModifiedTime: Notebook实例最近修改时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LastModifiedTime: Notebook實例最近修改時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LastModifiedTime: str
-        :param LogUrl: Notebook实例日志链接
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LogUrl: Notebook實例日志連結
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LogUrl: str
-        :param NotebookInstanceStatus: Notebook实例状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NotebookInstanceStatus: Notebook實例狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NotebookInstanceStatus: str
-        :param InstanceId: Notebook实例ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceId: Notebook實例ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceId: str
-        :param LifecycleScriptsName: notebook生命周期脚本名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LifecycleScriptsName: notebook生命週期腳本名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LifecycleScriptsName: str
-        :param DefaultCodeRepository: 默认存储库名称
-可以是已创建的存储库名称或者已https://开头的公共git库
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DefaultCodeRepository: 預設儲存庫名稱
+可以是已創建的儲存庫名稱或者已https://開頭的公共git庫
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DefaultCodeRepository: str
-        :param AdditionalCodeRepositories: 其他存储库列表
-每个元素可以是已创建的存储库名称或者已https://开头的公共git库
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AdditionalCodeRepositories: 其他儲存庫清單
+每個元素可以是已創建的儲存庫名稱或者已https://開頭的公共git庫
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AdditionalCodeRepositories: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.NotebookInstanceName = None
@@ -794,7 +794,7 @@ class DescribeNotebookInstanceResponse(AbstractModel):
 
 
 class DescribeNotebookInstancesRequest(AbstractModel):
-    """DescribeNotebookInstances请求参数结构体
+    """DescribeNotebookInstances請求參數結構體
 
     """
 
@@ -802,20 +802,20 @@ class DescribeNotebookInstancesRequest(AbstractModel):
         """
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 限制数目
+        :param Limit: 限制數目
         :type Limit: int
-        :param SortOrder: 排序规则。默认取Descending
-Descending 按更新时间降序
-Ascending 按更新时间升序
+        :param SortOrder: 排序規則。預設取Descending
+Descending 按更新時間降序
+Ascending 按更新時間升序
         :type SortOrder: str
-        :param Filters: 过滤条件。
-instance-name - String - 是否必填：否 -（过滤条件）按照名称过滤。
-search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
-lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
-default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
-additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
+        :param Filters: 過濾條件。
+instance-name - String - 是否必填：否 -（過濾條件）按照名稱過濾。
+search-by-name - String - 是否必填：否 -（過濾條件）按照名稱檢索，模糊比對。
+lifecycle-name - String - 是否必填：否 -（過濾條件）按照生命週期腳本名稱過濾。
+default-code-repo-name - String - 是否必填：否 -（過濾條件）按照預設儲存庫名稱過濾。
+additional-code-repo-name - String - 是否必填：否 -（過濾條件）按照其他儲存庫名稱過濾。
         :type Filters: list of Filter
-        :param SortBy: 【废弃字段】排序字段
+        :param SortBy: 【廢棄欄位】排序欄位
         :type SortBy: str
         """
         self.Offset = None
@@ -839,17 +839,17 @@ additional-code-repo-name - String - 是否必填：否 -（过滤条件）按�
 
 
 class DescribeNotebookInstancesResponse(AbstractModel):
-    """DescribeNotebookInstances返回参数结构体
+    """DescribeNotebookInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookInstanceSet: Notebook实例列表
+        :param NotebookInstanceSet: Notebook實例清單
         :type NotebookInstanceSet: list of NotebookInstanceSummary
-        :param TotalCount: Notebook实例总数目
+        :param TotalCount: Notebook實例總數目
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.NotebookInstanceSet = None
@@ -869,13 +869,13 @@ class DescribeNotebookInstancesResponse(AbstractModel):
 
 
 class DescribeNotebookLifecycleScriptRequest(AbstractModel):
-    """DescribeNotebookLifecycleScript请求参数结构体
+    """DescribeNotebookLifecycleScript請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookLifecycleScriptsName: 生命周期脚本名称
+        :param NotebookLifecycleScriptsName: 生命週期腳本名稱
         :type NotebookLifecycleScriptsName: str
         """
         self.NotebookLifecycleScriptsName = None
@@ -886,25 +886,25 @@ class DescribeNotebookLifecycleScriptRequest(AbstractModel):
 
 
 class DescribeNotebookLifecycleScriptResponse(AbstractModel):
-    """DescribeNotebookLifecycleScript返回参数结构体
+    """DescribeNotebookLifecycleScript返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookLifecycleScriptsName: 生命周期脚本名称
+        :param NotebookLifecycleScriptsName: 生命週期腳本名稱
         :type NotebookLifecycleScriptsName: str
-        :param CreateScript: 创建脚本
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateScript: 創建腳本
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateScript: str
-        :param StartScript: 启动脚本
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StartScript: 啓動腳本
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StartScript: str
-        :param CreationTime: 创建时间
+        :param CreationTime: 創建時間
         :type CreationTime: str
-        :param LastModifiedTime: 最后修改时间
+        :param LastModifiedTime: 最後修改時間
         :type LastModifiedTime: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.NotebookLifecycleScriptsName = None
@@ -925,23 +925,23 @@ class DescribeNotebookLifecycleScriptResponse(AbstractModel):
 
 
 class DescribeNotebookLifecycleScriptsRequest(AbstractModel):
-    """DescribeNotebookLifecycleScripts请求参数结构体
+    """DescribeNotebookLifecycleScripts請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回数量，默认为20
+        :param Limit: 返回數量，預設爲20
         :type Limit: int
-        :param Filters: 过滤条件。
-instance-name - String - 是否必填：否 -（过滤条件）按照名称过滤。
-search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
+        :param Filters: 過濾條件。
+instance-name - String - 是否必填：否 -（過濾條件）按照名稱過濾。
+search-by-name - String - 是否必填：否 -（過濾條件）按照名稱檢索，模糊比對。
         :type Filters: list of Filter
-        :param SortOrder: 排序规则。默认取Descending
-Descending 按更新时间降序
-Ascending 按更新时间升序
+        :param SortOrder: 排序規則。預設取Descending
+Descending 按更新時間降序
+Ascending 按更新時間升序
         :type SortOrder: str
         """
         self.Offset = None
@@ -963,17 +963,17 @@ Ascending 按更新时间升序
 
 
 class DescribeNotebookLifecycleScriptsResponse(AbstractModel):
-    """DescribeNotebookLifecycleScripts返回参数结构体
+    """DescribeNotebookLifecycleScripts返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookLifecycleScriptsSet: Notebook生命周期脚本列表
+        :param NotebookLifecycleScriptsSet: Notebook生命週期腳本清單
         :type NotebookLifecycleScriptsSet: list of NotebookLifecycleScriptsSummary
-        :param TotalCount: Notebook生命周期脚本总数量
+        :param TotalCount: Notebook生命週期腳本總數量
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.NotebookLifecycleScriptsSet = None
@@ -993,13 +993,13 @@ class DescribeNotebookLifecycleScriptsResponse(AbstractModel):
 
 
 class DescribeTrainingJobRequest(AbstractModel):
-    """DescribeTrainingJob请求参数结构体
+    """DescribeTrainingJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TrainingJobName: 训练任务名称
+        :param TrainingJobName: 訓練任務名稱
         :type TrainingJobName: str
         """
         self.TrainingJobName = None
@@ -1010,56 +1010,56 @@ class DescribeTrainingJobRequest(AbstractModel):
 
 
 class DescribeTrainingJobResponse(AbstractModel):
-    """DescribeTrainingJob返回参数结构体
+    """DescribeTrainingJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AlgorithmSpecification: 算法镜像配置
+        :param AlgorithmSpecification: 算法映像配置
         :type AlgorithmSpecification: :class:`tencentcloud.tione.v20191022.models.AlgorithmSpecification`
-        :param TrainingJobName: 任务名称
+        :param TrainingJobName: 任務名稱
         :type TrainingJobName: str
-        :param HyperParameters: 算法超级参数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HyperParameters: 算法超級參數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HyperParameters: str
-        :param InputDataConfig: 输入数据配置
+        :param InputDataConfig: 輸入數據配置
         :type InputDataConfig: list of InputDataConfig
-        :param OutputDataConfig: 输出数据配置
+        :param OutputDataConfig: 輸出數據配置
         :type OutputDataConfig: :class:`tencentcloud.tione.v20191022.models.OutputDataConfig`
-        :param StoppingCondition: 中止条件
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StoppingCondition: 中止條件
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StoppingCondition: :class:`tencentcloud.tione.v20191022.models.StoppingCondition`
-        :param ResourceConfig: 计算实例配置
+        :param ResourceConfig: 計算實例配置
         :type ResourceConfig: :class:`tencentcloud.tione.v20191022.models.ResourceConfig`
-        :param VpcConfig: 私有网络配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VpcConfig: 私有網絡配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcConfig: :class:`tencentcloud.tione.v20191022.models.VpcConfig`
-        :param FailureReason: 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FailureReason: 失敗原因
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FailureReason: str
-        :param LastModifiedTime: 最近修改时间
+        :param LastModifiedTime: 最近修改時間
         :type LastModifiedTime: str
-        :param TrainingStartTime: 任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TrainingStartTime: 任務開始時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TrainingStartTime: str
-        :param TrainingEndTime: 任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TrainingEndTime: 任務完成時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TrainingEndTime: str
-        :param ModelArtifacts: 模型输出配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ModelArtifacts: 模型輸出配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ModelArtifacts: :class:`tencentcloud.tione.v20191022.models.ModelArtifacts`
-        :param SecondaryStatus: 详细状态
+        :param SecondaryStatus: 詳細狀态
         :type SecondaryStatus: str
-        :param SecondaryStatusTransitions: 详细状态事件记录
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SecondaryStatusTransitions: 詳細狀态事件記錄
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SecondaryStatusTransitions: list of SecondaryStatusTransition
-        :param RoleName: 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RoleName: 角色名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RoleName: str
-        :param TrainingJobStatus: 任务状态
+        :param TrainingJobStatus: 任務狀态
         :type TrainingJobStatus: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AlgorithmSpecification = None
@@ -1126,13 +1126,13 @@ class DescribeTrainingJobResponse(AbstractModel):
 
 
 class EnvConfig(AbstractModel):
-    """环境变量
+    """環境變量
 
     """
 
     def __init__(self):
         """
-        :param Name: 名称
+        :param Name: 名稱
         :type Name: str
         :param Value: 值
         :type Value: str
@@ -1147,23 +1147,23 @@ class EnvConfig(AbstractModel):
 
 
 class FileSystemDataSource(AbstractModel):
-    """文件系统输入数据源
+    """文件系統輸入數據源
 
     """
 
     def __init__(self):
         """
-        :param DirectoryPath: 文件系统目录
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DirectoryPath: 文件系統目錄
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DirectoryPath: str
-        :param FileSystemType: 文件系统类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FileSystemType: 文件系統類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FileSystemType: str
-        :param FileSystemAccessMode: 文件系统访问模式
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FileSystemAccessMode: 文件系統訪問模式
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FileSystemAccessMode: str
-        :param FileSystemId: 文件系统ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FileSystemId: 文件系統ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FileSystemId: str
         """
         self.DirectoryPath = None
@@ -1180,15 +1180,15 @@ class FileSystemDataSource(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """过滤器
+    """過濾器
 
     """
 
     def __init__(self):
         """
-        :param Name: 过滤字段名称
+        :param Name: 過濾欄位名稱
         :type Name: str
-        :param Values: 过滤字段取值
+        :param Values: 過濾欄位取值
         :type Values: list of str
         """
         self.Name = None
@@ -1201,16 +1201,16 @@ class Filter(AbstractModel):
 
 
 class GitConfig(AbstractModel):
-    """存储库Git相关配置
+    """儲存庫Git相關配置
 
     """
 
     def __init__(self):
         """
-        :param RepositoryUrl: git地址
+        :param RepositoryUrl: git網址
         :type RepositoryUrl: str
-        :param Branch: 代码分支
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Branch: 代碼分支
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Branch: str
         """
         self.RepositoryUrl = None
@@ -1223,17 +1223,17 @@ class GitConfig(AbstractModel):
 
 
 class GitSecret(AbstractModel):
-    """Git凭证
+    """Git憑證
 
     """
 
     def __init__(self):
         """
-        :param NoSecret: 无秘钥，默认选项
+        :param NoSecret: 無秘鑰，預設選項
         :type NoSecret: bool
-        :param Secret: Git用户名密码base64编码后的字符串
-编码前的内容应为Json字符串，如
-{"UserName": "用户名", "Password":"密码"}
+        :param Secret: Git用戶名密碼base64編碼後的字串
+編碼前的内容應爲Json字串，如
+{"UserName": "用戶名", "Password":"密碼"}
         :type Secret: str
         """
         self.NoSecret = None
@@ -1246,23 +1246,23 @@ class GitSecret(AbstractModel):
 
 
 class InputDataConfig(AbstractModel):
-    """输入数据配置
+    """輸入數據配置
 
     """
 
     def __init__(self):
         """
         :param ChannelName: 通道名
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ChannelName: str
-        :param DataSource: 数据源配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DataSource: 數據源配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DataSource: :class:`tencentcloud.tione.v20191022.models.DataSource`
-        :param InputMode: 输入类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InputMode: 輸入類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InputMode: str
-        :param ContentType: 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ContentType: 文件類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ContentType: str
         """
         self.ChannelName = None
@@ -1281,14 +1281,14 @@ class InputDataConfig(AbstractModel):
 
 
 class ModelArtifacts(AbstractModel):
-    """模型输出
+    """模型輸出
 
     """
 
     def __init__(self):
         """
-        :param CosModelArtifacts: cos输出路径
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CosModelArtifacts: cos輸出路徑
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CosModelArtifacts: str
         """
         self.CosModelArtifacts = None
@@ -1299,29 +1299,29 @@ class ModelArtifacts(AbstractModel):
 
 
 class NotebookInstanceSummary(AbstractModel):
-    """notebook实例概览
+    """notebook實例概覽
 
     """
 
     def __init__(self):
         """
-        :param CreationTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreationTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreationTime: str
-        :param LastModifiedTime: 最近修改时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LastModifiedTime: 最近修改時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LastModifiedTime: str
-        :param NotebookInstanceName: notebook实例名字
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NotebookInstanceName: notebook實例名字
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NotebookInstanceName: str
-        :param NotebookInstanceStatus: notebook实例状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NotebookInstanceStatus: notebook實例狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NotebookInstanceStatus: str
-        :param InstanceType: 算力类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceType: 算力類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceType: str
         :param InstanceId: 算力Id
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceId: str
         """
         self.CreationTime = None
@@ -1342,17 +1342,17 @@ class NotebookInstanceSummary(AbstractModel):
 
 
 class NotebookLifecycleScriptsSummary(AbstractModel):
-    """notebook生命周期脚本实例概览
+    """notebook生命週期腳本實例概覽
 
     """
 
     def __init__(self):
         """
-        :param NotebookLifecycleScriptsName: notebook生命周期脚本名称
+        :param NotebookLifecycleScriptsName: notebook生命週期腳本名稱
         :type NotebookLifecycleScriptsName: str
-        :param CreationTime: 创建时间
+        :param CreationTime: 創建時間
         :type CreationTime: str
-        :param LastModifiedTime: 修改时间
+        :param LastModifiedTime: 修改時間
         :type LastModifiedTime: str
         """
         self.NotebookLifecycleScriptsName = None
@@ -1367,17 +1367,17 @@ class NotebookLifecycleScriptsSummary(AbstractModel):
 
 
 class OutputDataConfig(AbstractModel):
-    """输出数据配置
+    """輸出數據配置
 
     """
 
     def __init__(self):
         """
         :param CosOutputBucket: cos桶
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CosOutputBucket: str
         :param CosOutputKeyPrefix: cos文件key
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CosOutputKeyPrefix: str
         """
         self.CosOutputBucket = None
@@ -1390,20 +1390,20 @@ class OutputDataConfig(AbstractModel):
 
 
 class ResourceConfig(AbstractModel):
-    """计算资源配置
+    """計算資源配置
 
     """
 
     def __init__(self):
         """
-        :param InstanceCount: 计算实例数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceCount: 計算實例數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceCount: int
-        :param InstanceType: 计算实例类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceType: 計算實例類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceType: str
-        :param VolumeSizeInGB: 挂载CBS大小（GB）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VolumeSizeInGB: 掛載CBS大小（GB）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VolumeSizeInGB: int
         """
         self.InstanceCount = None
@@ -1418,23 +1418,23 @@ class ResourceConfig(AbstractModel):
 
 
 class SecondaryStatusTransition(AbstractModel):
-    """二级状态流水
+    """二級狀态流水
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 状态开始时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StartTime: 狀态開始時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StartTime: str
-        :param EndTime: 状态结束时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EndTime: 狀态結束時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EndTime: str
-        :param Status: 状态名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Status: 狀态名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: str
-        :param StatusMessage: 状态详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StatusMessage: 狀态詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StatusMessage: str
         """
         self.StartTime = None
@@ -1451,13 +1451,13 @@ class SecondaryStatusTransition(AbstractModel):
 
 
 class StartNotebookInstanceRequest(AbstractModel):
-    """StartNotebookInstance请求参数结构体
+    """StartNotebookInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookInstanceName: Notebook实例名称
+        :param NotebookInstanceName: Notebook實例名稱
         :type NotebookInstanceName: str
         """
         self.NotebookInstanceName = None
@@ -1468,13 +1468,13 @@ class StartNotebookInstanceRequest(AbstractModel):
 
 
 class StartNotebookInstanceResponse(AbstractModel):
-    """StartNotebookInstance返回参数结构体
+    """StartNotebookInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1485,13 +1485,13 @@ class StartNotebookInstanceResponse(AbstractModel):
 
 
 class StopNotebookInstanceRequest(AbstractModel):
-    """StopNotebookInstance请求参数结构体
+    """StopNotebookInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookInstanceName: Notebook实例名称
+        :param NotebookInstanceName: Notebook實例名稱
         :type NotebookInstanceName: str
         """
         self.NotebookInstanceName = None
@@ -1502,13 +1502,13 @@ class StopNotebookInstanceRequest(AbstractModel):
 
 
 class StopNotebookInstanceResponse(AbstractModel):
-    """StopNotebookInstance返回参数结构体
+    """StopNotebookInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1519,13 +1519,13 @@ class StopNotebookInstanceResponse(AbstractModel):
 
 
 class StopTrainingJobRequest(AbstractModel):
-    """StopTrainingJob请求参数结构体
+    """StopTrainingJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TrainingJobName: 训练任务名称
+        :param TrainingJobName: 訓練任務名稱
         :type TrainingJobName: str
         """
         self.TrainingJobName = None
@@ -1536,13 +1536,13 @@ class StopTrainingJobRequest(AbstractModel):
 
 
 class StopTrainingJobResponse(AbstractModel):
-    """StopTrainingJob返回参数结构体
+    """StopTrainingJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1553,14 +1553,14 @@ class StopTrainingJobResponse(AbstractModel):
 
 
 class StoppingCondition(AbstractModel):
-    """终止条件
+    """終止條件
 
     """
 
     def __init__(self):
         """
-        :param MaxRuntimeInSeconds: 最长运行运行时间（秒）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MaxRuntimeInSeconds: 最長運作運作時間（秒）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxRuntimeInSeconds: int
         """
         self.MaxRuntimeInSeconds = None
@@ -1571,15 +1571,15 @@ class StoppingCondition(AbstractModel):
 
 
 class UpdateCodeRepositoryRequest(AbstractModel):
-    """UpdateCodeRepository请求参数结构体
+    """UpdateCodeRepository請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CodeRepositoryName: 查询存储库名称
+        :param CodeRepositoryName: 查詢儲存庫名稱
         :type CodeRepositoryName: str
-        :param GitSecret: Git凭证
+        :param GitSecret: Git憑證
         :type GitSecret: :class:`tencentcloud.tione.v20191022.models.GitSecret`
         """
         self.CodeRepositoryName = None
@@ -1594,15 +1594,15 @@ class UpdateCodeRepositoryRequest(AbstractModel):
 
 
 class UpdateCodeRepositoryResponse(AbstractModel):
-    """UpdateCodeRepository返回参数结构体
+    """UpdateCodeRepository返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CodeRepositoryName: 存储库名称
+        :param CodeRepositoryName: 儲存庫名稱
         :type CodeRepositoryName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CodeRepositoryName = None
@@ -1615,40 +1615,40 @@ class UpdateCodeRepositoryResponse(AbstractModel):
 
 
 class UpdateNotebookInstanceRequest(AbstractModel):
-    """UpdateNotebookInstance请求参数结构体
+    """UpdateNotebookInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookInstanceName: Notebook实例名称
+        :param NotebookInstanceName: Notebook實例名稱
         :type NotebookInstanceName: str
-        :param RoleArn: 角色的资源描述
+        :param RoleArn: 角色的資源描述
         :type RoleArn: str
-        :param RootAccess: Root访问权限
+        :param RootAccess: Root訪問權限
         :type RootAccess: str
-        :param VolumeSizeInGB: 数据卷大小(GB)
+        :param VolumeSizeInGB: 數據卷大小(GB)
         :type VolumeSizeInGB: int
-        :param InstanceType: 算力资源类型
+        :param InstanceType: 算力資源類型
         :type InstanceType: str
-        :param LifecycleScriptsName: notebook生命周期脚本名称
+        :param LifecycleScriptsName: notebook生命週期腳本名稱
         :type LifecycleScriptsName: str
-        :param DisassociateLifecycleScript: 是否解绑生命周期脚本，默认 false。
-如果本来就没有绑定脚本，则忽略此参数；
-如果本来有绑定脚本，此参数为 true 则解绑；
-如果本来有绑定脚本，此参数为 false，则需要额外填入 LifecycleScriptsName
+        :param DisassociateLifecycleScript: 是否解綁生命週期腳本，預設 false。
+如果本來就沒有綁定腳本，則忽略此參數；
+如果本來有綁定腳本，此參數爲 true 則解綁；
+如果本來有綁定腳本，此參數爲 false，則需要額外填入 LifecycleScriptsName
         :type DisassociateLifecycleScript: bool
-        :param DefaultCodeRepository: 默认存储库名称
-可以是已创建的存储库名称或者已https://开头的公共git库
+        :param DefaultCodeRepository: 預設儲存庫名稱
+可以是已創建的儲存庫名稱或者已https://開頭的公共git庫
         :type DefaultCodeRepository: str
-        :param AdditionalCodeRepositories: 其他存储库列表
-每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+        :param AdditionalCodeRepositories: 其他儲存庫清單
+每個元素可以是已創建的儲存庫名稱或者已https://開頭的公共git庫
         :type AdditionalCodeRepositories: list of str
-        :param DisassociateDefaultCodeRepository: 是否取消关联默认存储库，默认false
-该值为true时，DefaultCodeRepository将被忽略
+        :param DisassociateDefaultCodeRepository: 是否取消關聯預設儲存庫，預設false
+該值爲true時，DefaultCodeRepository将被忽略
         :type DisassociateDefaultCodeRepository: bool
-        :param DisassociateAdditionalCodeRepositories: 是否取消关联其他存储库，默认false
-该值为true时，AdditionalCodeRepositories将被忽略
+        :param DisassociateAdditionalCodeRepositories: 是否取消關聯其他儲存庫，預設false
+該值爲true時，AdditionalCodeRepositories将被忽略
         :type DisassociateAdditionalCodeRepositories: bool
         """
         self.NotebookInstanceName = None
@@ -1679,13 +1679,13 @@ class UpdateNotebookInstanceRequest(AbstractModel):
 
 
 class UpdateNotebookInstanceResponse(AbstractModel):
-    """UpdateNotebookInstance返回参数结构体
+    """UpdateNotebookInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1696,17 +1696,17 @@ class UpdateNotebookInstanceResponse(AbstractModel):
 
 
 class UpdateNotebookLifecycleScriptRequest(AbstractModel):
-    """UpdateNotebookLifecycleScript请求参数结构体
+    """UpdateNotebookLifecycleScript請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NotebookLifecycleScriptsName: notebook生命周期脚本名称
+        :param NotebookLifecycleScriptsName: notebook生命週期腳本名稱
         :type NotebookLifecycleScriptsName: str
-        :param CreateScript: 创建脚本
+        :param CreateScript: 創建腳本
         :type CreateScript: str
-        :param StartScript: 启动脚本
+        :param StartScript: 啓動腳本
         :type StartScript: str
         """
         self.NotebookLifecycleScriptsName = None
@@ -1721,13 +1721,13 @@ class UpdateNotebookLifecycleScriptRequest(AbstractModel):
 
 
 class UpdateNotebookLifecycleScriptResponse(AbstractModel):
-    """UpdateNotebookLifecycleScript返回参数结构体
+    """UpdateNotebookLifecycleScript返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1744,11 +1744,11 @@ class VpcConfig(AbstractModel):
 
     def __init__(self):
         """
-        :param SecurityGroupIds: 安全组id
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SecurityGroupIds: 安全組id
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SecurityGroupIds: list of str
-        :param SubnetId: 子网id
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubnetId: 子網id
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetId: str
         """
         self.SecurityGroupIds = None

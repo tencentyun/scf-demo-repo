@@ -17,21 +17,21 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CheckVcodeRequest(AbstractModel):
-    """CheckVcode请求参数结构体
+    """CheckVcode請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名VerifyCode
+        :param Module: 模組名VerifyCode
         :type Module: str
         :param Operation: 操作名CheckVcode
         :type Operation: str
-        :param AccountResId: 帐号ID
+        :param AccountResId: 帳号ID
         :type AccountResId: str
         :param ContractResId: 合同ID
         :type ContractResId: str
-        :param VerifyCode: 验证码
+        :param VerifyCode: 驗證碼
         :type VerifyCode: str
         """
         self.Module = None
@@ -50,13 +50,13 @@ class CheckVcodeRequest(AbstractModel):
 
 
 class CheckVcodeResponse(AbstractModel):
-    """CheckVcode返回参数结构体
+    """CheckVcode返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -67,27 +67,27 @@ class CheckVcodeResponse(AbstractModel):
 
 
 class CreateContractByUploadRequest(AbstractModel):
-    """CreateContractByUpload请求参数结构体
+    """CreateContractByUpload請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名ContractMng
+        :param Module: 模組名ContractMng
         :type Module: str
         :param Operation: 操作名CreateContractByUpload
         :type Operation: str
-        :param SignInfos: 签署人信息
+        :param SignInfos: 簽署人訊息
         :type SignInfos: list of SignInfo
-        :param ContractFile: 合同上传链接地址
+        :param ContractFile: 合同上傳連結網址
         :type ContractFile: str
-        :param ContractName: 合同名称
+        :param ContractName: 合同名稱
         :type ContractName: str
-        :param Initiator: 合同发起方帐号ID
+        :param Initiator: 合同發起方帳号ID
         :type Initiator: str
-        :param Remarks: 备注
+        :param Remarks: 備注
         :type Remarks: str
-        :param ExpireTime: 过期时间
+        :param ExpireTime: 過期時間
         :type ExpireTime: str
         """
         self.Module = None
@@ -117,15 +117,15 @@ class CreateContractByUploadRequest(AbstractModel):
 
 
 class CreateContractByUploadResponse(AbstractModel):
-    """CreateContractByUpload返回参数结构体
+    """CreateContractByUpload返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -138,31 +138,31 @@ class CreateContractByUploadResponse(AbstractModel):
 
 
 class CreateEnterpriseAccountRequest(AbstractModel):
-    """CreateEnterpriseAccount请求参数结构体
+    """CreateEnterpriseAccount請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名AccountMng
+        :param Module: 模組名AccountMng
         :type Module: str
         :param Operation: 操作名CreateEnterpriseAccount
         :type Operation: str
-        :param Name: 企业用户名称
+        :param Name: 企業用戶名稱
         :type Name: str
-        :param IdentType: 企业用户证件类型，8代表营业执照
+        :param IdentType: 企業用戶證件類型，8代表營業執照
         :type IdentType: int
-        :param IdentNo: 企业用户营业执照号码
+        :param IdentNo: 企業用戶營業執照号碼
         :type IdentNo: str
-        :param MobilePhone: 企业联系人手机号
+        :param MobilePhone: 企業聯系人手機号
         :type MobilePhone: str
-        :param TransactorName: 经办人姓名
+        :param TransactorName: 經辦人姓名
         :type TransactorName: str
-        :param TransactorIdentType: 经办人证件类型，0代表身份证
+        :param TransactorIdentType: 經辦人證件類型，0代表身份證
         :type TransactorIdentType: int
-        :param TransactorIdentNo: 经办人证件号码
+        :param TransactorIdentNo: 經辦人證件号碼
         :type TransactorIdentNo: str
-        :param TransactorPhone: 经办人手机号
+        :param TransactorPhone: 經辦人手機号
         :type TransactorPhone: str
         """
         self.Module = None
@@ -191,15 +191,15 @@ class CreateEnterpriseAccountRequest(AbstractModel):
 
 
 class CreateEnterpriseAccountResponse(AbstractModel):
-    """CreateEnterpriseAccount返回参数结构体
+    """CreateEnterpriseAccount返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccountResId: 帐号ID
+        :param AccountResId: 帳号ID
         :type AccountResId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AccountResId = None
@@ -212,23 +212,23 @@ class CreateEnterpriseAccountResponse(AbstractModel):
 
 
 class CreatePersonalAccountRequest(AbstractModel):
-    """CreatePersonalAccount请求参数结构体
+    """CreatePersonalAccount請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名AccountMng
+        :param Module: 模組名AccountMng
         :type Module: str
         :param Operation: 操作名CreatePersonalAccount
         :type Operation: str
-        :param Name: 个人用户姓名
+        :param Name: 個人用戶姓名
         :type Name: str
-        :param IdentType: 个人用户证件类型。0代表身份证
+        :param IdentType: 個人用戶證件類型。0代表身份證
         :type IdentType: int
-        :param IdentNo: 个人用户证件号码
+        :param IdentNo: 個人用戶證件号碼
         :type IdentNo: str
-        :param MobilePhone: 个人用户手机号
+        :param MobilePhone: 個人用戶手機号
         :type MobilePhone: str
         """
         self.Module = None
@@ -249,15 +249,15 @@ class CreatePersonalAccountRequest(AbstractModel):
 
 
 class CreatePersonalAccountResponse(AbstractModel):
-    """CreatePersonalAccount返回参数结构体
+    """CreatePersonalAccount返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccountResId: 账号ID
+        :param AccountResId: 賬号ID
         :type AccountResId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AccountResId = None
@@ -270,21 +270,21 @@ class CreatePersonalAccountResponse(AbstractModel):
 
 
 class CreateSealRequest(AbstractModel):
-    """CreateSeal请求参数结构体
+    """CreateSeal請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名SealMng
+        :param Module: 模組名SealMng
         :type Module: str
         :param Operation: 操作名CreateSeal
         :type Operation: str
-        :param AccountResId: 帐号ID
+        :param AccountResId: 帳号ID
         :type AccountResId: str
-        :param ImgUrl: 签章链接，图片必须为png格式
+        :param ImgUrl: 簽章連結，圖片必須爲png格式
         :type ImgUrl: str
-        :param ImgData: 图片数据，base64编码
+        :param ImgData: 圖片數據，base64編碼
         :type ImgData: str
         """
         self.Module = None
@@ -303,15 +303,15 @@ class CreateSealRequest(AbstractModel):
 
 
 class CreateSealResponse(AbstractModel):
-    """CreateSeal返回参数结构体
+    """CreateSeal返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SealResId: 签章ID
+        :param SealResId: 簽章ID
         :type SealResId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SealResId = None
@@ -324,17 +324,17 @@ class CreateSealResponse(AbstractModel):
 
 
 class DeleteAccountRequest(AbstractModel):
-    """DeleteAccount请求参数结构体
+    """DeleteAccount請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名AccountMng
+        :param Module: 模組名AccountMng
         :type Module: str
         :param Operation: 操作名DeleteAccount
         :type Operation: str
-        :param AccountList: 帐号ID列表
+        :param AccountList: 帳号ID清單
         :type AccountList: list of str
         """
         self.Module = None
@@ -349,17 +349,17 @@ class DeleteAccountRequest(AbstractModel):
 
 
 class DeleteAccountResponse(AbstractModel):
-    """DeleteAccount返回参数结构体
+    """DeleteAccount返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DelSuccessList: 删除成功帐号ID列表
+        :param DelSuccessList: 删除成功帳号ID清單
         :type DelSuccessList: list of str
-        :param DelFailedList: 删除失败帐号ID列表
+        :param DelFailedList: 删除失敗帳号ID清單
         :type DelFailedList: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DelSuccessList = None
@@ -374,19 +374,19 @@ class DeleteAccountResponse(AbstractModel):
 
 
 class DeleteSealRequest(AbstractModel):
-    """DeleteSeal请求参数结构体
+    """DeleteSeal請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名SealMng
+        :param Module: 模組名SealMng
         :type Module: str
         :param Operation: 操作名DeleteSeal
         :type Operation: str
-        :param AccountResId: 帐号ID
+        :param AccountResId: 帳号ID
         :type AccountResId: str
-        :param SealResId: 签章ID
+        :param SealResId: 簽章ID
         :type SealResId: str
         """
         self.Module = None
@@ -403,15 +403,15 @@ class DeleteSealRequest(AbstractModel):
 
 
 class DeleteSealResponse(AbstractModel):
-    """DeleteSeal返回参数结构体
+    """DeleteSeal返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SealResId: 签章ID
+        :param SealResId: 簽章ID
         :type SealResId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SealResId = None
@@ -424,17 +424,17 @@ class DeleteSealResponse(AbstractModel):
 
 
 class DescribeTaskStatusRequest(AbstractModel):
-    """DescribeTaskStatus请求参数结构体
+    """DescribeTaskStatus請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名CommonMng
+        :param Module: 模組名CommonMng
         :type Module: str
         :param Operation: 操作名DescribeTaskStatus
         :type Operation: str
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: int
         """
         self.Module = None
@@ -449,17 +449,17 @@ class DescribeTaskStatusRequest(AbstractModel):
 
 
 class DescribeTaskStatusResponse(AbstractModel):
-    """DescribeTaskStatus返回参数结构体
+    """DescribeTaskStatus返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskResult: 任务结果
+        :param TaskResult: 任務結果
         :type TaskResult: str
-        :param TaskType: 任务类型，010代表合同上传结果，020代表合同下载结果
+        :param TaskType: 任務類型，010代表合同上傳結果，020代表合同下載結果
         :type TaskType: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskResult = None
@@ -474,13 +474,13 @@ class DescribeTaskStatusResponse(AbstractModel):
 
 
 class DownloadContractRequest(AbstractModel):
-    """DownloadContract请求参数结构体
+    """DownloadContract請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名ContractMng
+        :param Module: 模組名ContractMng
         :type Module: str
         :param Operation: 操作名DownloadContract
         :type Operation: str
@@ -499,15 +499,15 @@ class DownloadContractRequest(AbstractModel):
 
 
 class DownloadContractResponse(AbstractModel):
-    """DownloadContract返回参数结构体
+    """DownloadContract返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -520,19 +520,19 @@ class DownloadContractResponse(AbstractModel):
 
 
 class SendVcodeRequest(AbstractModel):
-    """SendVcode请求参数结构体
+    """SendVcode請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名VerifyCode
+        :param Module: 模組名VerifyCode
         :type Module: str
         :param Operation: 操作名SendVcode
         :type Operation: str
         :param ContractResId: 合同ID
         :type ContractResId: str
-        :param AccountResId: 帐号ID
+        :param AccountResId: 帳号ID
         :type AccountResId: str
         """
         self.Module = None
@@ -549,13 +549,13 @@ class SendVcodeRequest(AbstractModel):
 
 
 class SendVcodeResponse(AbstractModel):
-    """SendVcode返回参数结构体
+    """SendVcode返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -566,31 +566,31 @@ class SendVcodeResponse(AbstractModel):
 
 
 class SignContractByCoordinateRequest(AbstractModel):
-    """SignContractByCoordinate请求参数结构体
+    """SignContractByCoordinate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名ContractMng
+        :param Module: 模組名ContractMng
         :type Module: str
         :param Operation: 操作名SignContractByCoordinate
         :type Operation: str
         :param ContractResId: 合同ID
         :type ContractResId: str
-        :param AccountResId: 帐户ID
+        :param AccountResId: 帳戶ID
         :type AccountResId: str
-        :param AuthorizationTime: 授权时间，格式为年月日时分秒，例20160801095509
+        :param AuthorizationTime: 授權時間，格式爲年月日時分秒，例20160801095509
         :type AuthorizationTime: str
-        :param Position: 授权IP地址
+        :param Position: 授權IP網址
         :type Position: str
-        :param SignLocations: 签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
+        :param SignLocations: 簽署坐标，坐标原點在文件左下角，坐标單位爲磅，坐标不得超過合同文件邊界
         :type SignLocations: list of SignLocation
         :param SealResId: 印章ID
         :type SealResId: str
-        :param CertType: 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+        :param CertType: 選用證書類型：1  表示RSA證書， 2 表示國密證書， 參數不傳時預設爲1
         :type CertType: int
-        :param ImageData: 签名图片，base64编码
+        :param ImageData: 簽名圖片，base64編碼
         :type ImageData: str
         """
         self.Module = None
@@ -624,13 +624,13 @@ class SignContractByCoordinateRequest(AbstractModel):
 
 
 class SignContractByCoordinateResponse(AbstractModel):
-    """SignContractByCoordinate返回参数结构体
+    """SignContractByCoordinate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -641,31 +641,31 @@ class SignContractByCoordinateResponse(AbstractModel):
 
 
 class SignContractByKeywordRequest(AbstractModel):
-    """SignContractByKeyword请求参数结构体
+    """SignContractByKeyword請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名ContractMng
+        :param Module: 模組名ContractMng
         :type Module: str
         :param Operation: 操作名SignContractByKeyword
         :type Operation: str
         :param ContractResId: 合同ID
         :type ContractResId: str
-        :param AccountResId: 账户ID
+        :param AccountResId: 帳戶ID
         :type AccountResId: str
-        :param AuthorizationTime: 授权时间，格式为年月日时分秒，例20160801095509
+        :param AuthorizationTime: 授權時間，格式爲年月日時分秒，例20160801095509
         :type AuthorizationTime: str
-        :param Position: 授权IP地址
+        :param Position: 授權IP網址
         :type Position: str
-        :param SignKeyword: 签署关键字，偏移坐标原点为关键字中心
+        :param SignKeyword: 簽署關鍵字，偏移坐标原點爲關鍵字中心
         :type SignKeyword: :class:`tencentcloud.ds.v20180523.models.SignKeyword`
-        :param SealResId: 签章ID
+        :param SealResId: 簽章ID
         :type SealResId: str
-        :param CertType: 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+        :param CertType: 選用證書類型：1  表示RSA證書， 2 表示國密證書， 參數不傳時預設爲1
         :type CertType: int
-        :param ImageData: 签名图片，base64编码
+        :param ImageData: 簽名圖片，base64編碼
         :type ImageData: str
         """
         self.Module = None
@@ -696,13 +696,13 @@ class SignContractByKeywordRequest(AbstractModel):
 
 
 class SignContractByKeywordResponse(AbstractModel):
-    """SignContractByKeyword返回参数结构体
+    """SignContractByKeyword返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -713,25 +713,25 @@ class SignContractByKeywordResponse(AbstractModel):
 
 
 class SignInfo(AbstractModel):
-    """签署人信息
+    """簽署人訊息
 
     """
 
     def __init__(self):
         """
-        :param AccountResId: 账户ID
+        :param AccountResId: 帳戶ID
         :type AccountResId: str
-        :param AuthorizationTime: 授权时间，格式为年月日时分秒，例20160801095509
+        :param AuthorizationTime: 授權時間，格式爲年月日時分秒，例20160801095509
         :type AuthorizationTime: str
-        :param Location: 授权IP地址
+        :param Location: 授權IP網址
         :type Location: str
-        :param SealId: 签章ID
+        :param SealId: 簽章ID
         :type SealId: str
-        :param ImageData: 签名图片，优先级比SealId高
+        :param ImageData: 簽名圖片，優先級比SealId高
         :type ImageData: str
-        :param CertType: 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+        :param CertType: 預設值：1  表示RSA證書， 2 表示國密證書， 參數不傳時預設爲1
         :type CertType: int
-        :param SignLocation: 签名域的标签值
+        :param SignLocation: 簽名域的标簽值
         :type SignLocation: str
         """
         self.AccountResId = None
@@ -754,21 +754,21 @@ class SignInfo(AbstractModel):
 
 
 class SignKeyword(AbstractModel):
-    """签署关键字信息
+    """簽署關鍵字訊息
 
     """
 
     def __init__(self):
         """
-        :param Keyword: 关键字
+        :param Keyword: 關鍵字
         :type Keyword: str
-        :param OffsetCoordX: X轴偏移坐标
+        :param OffsetCoordX: X軸偏移坐标
         :type OffsetCoordX: str
-        :param OffsetCoordY: Y轴偏移坐标
+        :param OffsetCoordY: Y軸偏移坐标
         :type OffsetCoordY: str
-        :param ImageWidth: 签章突破宽度
+        :param ImageWidth: 簽章突破寬度
         :type ImageWidth: str
-        :param ImageHeight: 签章图片高度
+        :param ImageHeight: 簽章圖片高度
         :type ImageHeight: str
         """
         self.Keyword = None
@@ -787,21 +787,21 @@ class SignKeyword(AbstractModel):
 
 
 class SignLocation(AbstractModel):
-    """签署坐标对象
+    """簽署坐标對象
 
     """
 
     def __init__(self):
         """
-        :param SignOnPage: 签名域页数
+        :param SignOnPage: 簽名域頁數
         :type SignOnPage: str
-        :param SignLocationLBX: 签名域左下角X轴坐标轴
+        :param SignLocationLBX: 簽名域左下角X軸坐标軸
         :type SignLocationLBX: str
-        :param SignLocationLBY: 签名域左下角Y轴坐标轴
+        :param SignLocationLBY: 簽名域左下角Y軸坐标軸
         :type SignLocationLBY: str
-        :param SignLocationRUX: 签名域右上角X轴坐标轴
+        :param SignLocationRUX: 簽名域右上角X軸坐标軸
         :type SignLocationRUX: str
-        :param SignLocationRUY: 签名域右上角Y轴坐标轴
+        :param SignLocationRUY: 簽名域右上角Y軸坐标軸
         :type SignLocationRUY: str
         """
         self.SignOnPage = None

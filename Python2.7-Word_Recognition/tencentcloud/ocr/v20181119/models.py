@@ -17,22 +17,22 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class ArithmeticOCRRequest(AbstractModel):
-    """ArithmeticOCR请求参数结构体
+    """ArithmeticOCR請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageBase64: 图片的 Base64 值。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        :param ImageBase64: 圖片的 Base64 值。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經Base64編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片的 ImageUrl、ImageBase64 必須提供一個，如果都提供，只使用 ImageUrl。
         :type ImageBase64: str
-        :param ImageUrl: 图片的 Url 地址。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        :param ImageUrl: 圖片的 Url 網址。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
         self.ImageBase64 = None
@@ -45,15 +45,15 @@ class ArithmeticOCRRequest(AbstractModel):
 
 
 class ArithmeticOCRResponse(AbstractModel):
-    """ArithmeticOCR返回参数结构体
+    """ArithmeticOCR返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TextDetections: 检测到的文本信息，具体内容请点击左侧链接。
+        :param TextDetections: 檢測到的文本訊息，具體内容請點擊左側連結。
         :type TextDetections: list of TextArithmetic
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TextDetections = None
@@ -77,9 +77,9 @@ class Coord(AbstractModel):
 
     def __init__(self):
         """
-        :param X: 横坐标
+        :param X: 橫坐标
         :type X: int
-        :param Y: 纵坐标
+        :param Y: 縱坐标
         :type Y: int
         """
         self.X = None
@@ -92,22 +92,22 @@ class Coord(AbstractModel):
 
 
 class EnglishOCRRequest(AbstractModel):
-    """EnglishOCR请求参数结构体
+    """EnglishOCR請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageBase64: 图片的 Base64 值。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        :param ImageBase64: 圖片的 Base64 值。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經Base64編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片的 ImageUrl、ImageBase64 必須提供一個，如果都提供，只使用 ImageUrl。
         :type ImageBase64: str
-        :param ImageUrl: 图片的 Url 地址。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        :param ImageUrl: 圖片的 Url 網址。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
         self.ImageBase64 = None
@@ -120,15 +120,15 @@ class EnglishOCRRequest(AbstractModel):
 
 
 class EnglishOCRResponse(AbstractModel):
-    """EnglishOCR返回参数结构体
+    """EnglishOCR返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TextDetections: 检测到的文本信息，具体内容请点击左侧链接。
+        :param TextDetections: 檢測到的文本訊息，具體内容請點擊左側連結。
         :type TextDetections: list of TextDetectionEn
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TextDetections = None
@@ -146,22 +146,22 @@ class EnglishOCRResponse(AbstractModel):
 
 
 class GeneralAccurateOCRRequest(AbstractModel):
-    """GeneralAccurateOCR请求参数结构体
+    """GeneralAccurateOCR請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageBase64: 图片的 Base64 值。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        :param ImageBase64: 圖片的 Base64 值。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經Base64編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片的 ImageUrl、ImageBase64 必須提供一個，如果都提供，只使用 ImageUrl。
         :type ImageBase64: str
-        :param ImageUrl: 图片的 Url 地址。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        :param ImageUrl: 圖片的 Url 網址。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
         self.ImageBase64 = None
@@ -174,15 +174,15 @@ class GeneralAccurateOCRRequest(AbstractModel):
 
 
 class GeneralAccurateOCRResponse(AbstractModel):
-    """GeneralAccurateOCR返回参数结构体
+    """GeneralAccurateOCR返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TextDetections: 检测到的文本信息，具体内容请点击左侧链接。
+        :param TextDetections: 檢測到的文本訊息，具體内容請點擊左側連結。
         :type TextDetections: list of TextDetection
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TextDetections = None
@@ -200,24 +200,24 @@ class GeneralAccurateOCRResponse(AbstractModel):
 
 
 class GeneralBasicOCRRequest(AbstractModel):
-    """GeneralBasicOCR请求参数结构体
+    """GeneralBasicOCR請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageBase64: 图片的 Base64 值。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        :param ImageBase64: 圖片的 Base64 值。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經Base64編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片的 ImageUrl、ImageBase64 必須提供一個，如果都提供，只使用 ImageUrl。
         :type ImageBase64: str
-        :param ImageUrl: 图片的 Url 地址。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        :param ImageUrl: 圖片的 Url 網址。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
-        :param Scene: 保留字段。
+        :param Scene: 保留欄位。
         :type Scene: str
         """
         self.ImageBase64 = None
@@ -232,18 +232,18 @@ class GeneralBasicOCRRequest(AbstractModel):
 
 
 class GeneralBasicOCRResponse(AbstractModel):
-    """GeneralBasicOCR返回参数结构体
+    """GeneralBasicOCR返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TextDetections: 检测到的文本信息，具体内容请点击左侧链接。
+        :param TextDetections: 檢測到的文本訊息，具體内容請點擊左側連結。
         :type TextDetections: list of TextDetection
-        :param Language: 检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
-返回结果含义为：zh-中英混合，jap-日文，kor-韩文。
+        :param Language: 檢測到的語言，目前支援的語種範圍爲：簡體中文、繁體中文、英文、日文、韓文。未來将陸續新增對更多語種的支援。
+返回結果含義爲：zh-中英混合，jap-日文，kor-韓文。
         :type Language: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TextDetections = None
@@ -263,22 +263,22 @@ class GeneralBasicOCRResponse(AbstractModel):
 
 
 class GeneralFastOCRRequest(AbstractModel):
-    """GeneralFastOCR请求参数结构体
+    """GeneralFastOCR請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageBase64: 图片的 Base64 值。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        :param ImageBase64: 圖片的 Base64 值。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經Base64編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片的 ImageUrl、ImageBase64 必須提供一個，如果都提供，只使用 ImageUrl。
         :type ImageBase64: str
-        :param ImageUrl: 图片的 Url 地址。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        :param ImageUrl: 圖片的 Url 網址。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
         self.ImageBase64 = None
@@ -291,18 +291,18 @@ class GeneralFastOCRRequest(AbstractModel):
 
 
 class GeneralFastOCRResponse(AbstractModel):
-    """GeneralFastOCR返回参数结构体
+    """GeneralFastOCR返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TextDetections: 检测到的文本信息，具体内容请点击左侧链接。
+        :param TextDetections: 檢測到的文本訊息，具體内容請點擊左側連結。
         :type TextDetections: list of TextDetection
-        :param Language: 检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
-返回结果含义为：zh - 中英混合，jap - 日文，kor - 韩文。
+        :param Language: 檢測到的語言，目前支援的語種範圍爲：簡體中文、繁體中文、英文、日文、韓文。未來将陸續新增對更多語種的支援。
+返回結果含義爲：zh - 中英混合，jap - 日文，kor - 韓文。
         :type Language: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TextDetections = None
@@ -322,36 +322,36 @@ class GeneralFastOCRResponse(AbstractModel):
 
 
 class IDCardOCRRequest(AbstractModel):
-    """IDCardOCR请求参数结构体
+    """IDCardOCR請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageBase64: 图片的 Base64 值。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        :param ImageBase64: 圖片的 Base64 值。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經Base64編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片的 ImageUrl、ImageBase64 必須提供一個，如果都提供，只使用 ImageUrl。
         :type ImageBase64: str
-        :param ImageUrl: 图片的 Url 地址。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        :param ImageUrl: 圖片的 Url 網址。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
-        :param CardSide: FRONT 为身份证有照片的一面（人像面），
-BACK 为身份证有国徽的一面（国徽面）。
+        :param CardSide: FRONT 爲身份證有照片的一面（人像面），
+BACK 爲身份證有國徽的一面（國徽面）。
         :type CardSide: str
-        :param Config: 可选字段，根据需要选择是否请求对应字段。
-目前包含的字段为：
-CropIdCard，身份证照片裁剪，bool 类型，
-CropPortrait，人像照片裁剪，bool 类型，
-CopyWarn，复印件告警，bool 类型，
-ReshootWarn，翻拍告警，bool 类型。
+        :param Config: 可選欄位，根據需要選擇是否請求對應欄位。
+目前包含的欄位爲：
+CropIdCard，身份證照片裁剪，bool 類型，
+CropPortrait，人像照片裁剪，bool 類型，
+CopyWarn，影印件告警，bool 類型，
+ReshootWarn，翻拍告警，bool 類型。
 
-SDK 设置方式参考：
+SDK 設置方式參考：
 Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
-API 3.0 Explorer 设置方式参考：
+API 3.0 Explorer 設置方式參考：
 Config = {"CropIdCard":true,"CropPortrait":true}
         :type Config: str
         """
@@ -369,7 +369,7 @@ Config = {"CropIdCard":true,"CropPortrait":true}
 
 
 class IDCardOCRResponse(AbstractModel):
-    """IDCardOCR返回参数结构体
+    """IDCardOCR返回參數結構體
 
     """
 
@@ -383,24 +383,24 @@ class IDCardOCRResponse(AbstractModel):
         :type Nation: str
         :param Birth: 出生日期（人像面）
         :type Birth: str
-        :param Address: 地址（人像面）
+        :param Address: 網址（人像面）
         :type Address: str
-        :param IdNum: 身份证号（人像面）
+        :param IdNum: 身份證号（人像面）
         :type IdNum: str
-        :param Authority: 发证机关（国徽面）
+        :param Authority: 發證機關（國徽面）
         :type Authority: str
-        :param ValidDate: 证件有效期（国徽面）
+        :param ValidDate: 證件有效期（國徽面）
         :type ValidDate: str
-        :param AdvancedInfo: 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3。目前支持的扩展字段为：
-IdCard，身份证照片，请求 CropIdCard 时返回；
-Portrait，人像照片，请求 CropPortrait 时返回；
-WarnInfos，告警信息（Code - 告警码，Msg - 告警信息内容），识别出翻拍件或复印件时返回。
+        :param AdvancedInfo: 擴展訊息，根據請求的可選欄位返回對應内容，不請求則不返回，具體輸入參考範例3。目前支援的擴展欄位爲：
+IdCard，身份證照片，請求 CropIdCard 時返回；
+Portrait，人像照片，請求 CropPortrait 時返回；
+WarnInfos，告警訊息（Code - 告警碼，Msg - 告警訊息内容），識别出翻拍件或影印件時返回。
 
-Code 告警码列表和释义：
--9103	身份证翻拍告警，
--9102	身份证复印件告警。
+Code 告警碼清單和釋義：
+-9103	身份證翻拍告警，
+-9102	身份證影印件告警。
         :type AdvancedInfo: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Name = None
@@ -429,22 +429,22 @@ Code 告警码列表和释义：
 
 
 class TableOCRRequest(AbstractModel):
-    """TableOCR请求参数结构体
+    """TableOCR請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageBase64: 图片的 Base64 值。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        :param ImageBase64: 圖片的 Base64 值。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經Base64編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片的 ImageUrl、ImageBase64 必須提供一個，如果都提供，只使用 ImageUrl。
         :type ImageBase64: str
-        :param ImageUrl: 图片的 Url 地址。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        :param ImageUrl: 圖片的 Url 網址。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
         self.ImageBase64 = None
@@ -457,17 +457,17 @@ class TableOCRRequest(AbstractModel):
 
 
 class TableOCRResponse(AbstractModel):
-    """TableOCR返回参数结构体
+    """TableOCR返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TextDetections: 检测到的文本信息，具体内容请点击左侧链接。
+        :param TextDetections: 檢測到的文本訊息，具體内容請點擊左側連結。
         :type TextDetections: list of TextTable
-        :param Data: Base64 编码后的 Excel 数据。
+        :param Data: Base64 編碼後的 Excel 數據。
         :type Data: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TextDetections = None
@@ -487,22 +487,22 @@ class TableOCRResponse(AbstractModel):
 
 
 class TextArithmetic(AbstractModel):
-    """算式识别结果
+    """算式識别結果
 
     """
 
     def __init__(self):
         """
-        :param DetectedText: 识别出的文本行内容
+        :param DetectedText: 識别出的文本行内容
         :type DetectedText: str
-        :param Result: 结果
+        :param Result: 結果
         :type Result: bool
         :param Confidence: 置信度 0 ~100
         :type Confidence: int
-        :param Polygon: 文本行坐标，以四个顶点坐标表示
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Polygon: 文本行坐标，以四個頂點坐标表示
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Polygon: list of Coord
-        :param AdvancedInfo: 此字段为扩展字段。
+        :param AdvancedInfo: 此欄位爲擴展欄位。
         :type AdvancedInfo: str
         """
         self.DetectedText = None
@@ -526,21 +526,21 @@ class TextArithmetic(AbstractModel):
 
 
 class TextDetection(AbstractModel):
-    """文字识别结果
+    """文字識别結果
 
     """
 
     def __init__(self):
         """
-        :param DetectedText: 识别出的文本行内容
+        :param DetectedText: 識别出的文本行内容
         :type DetectedText: str
         :param Confidence: 置信度 0 ~100
         :type Confidence: int
-        :param Polygon: 文本行坐标，以四个顶点坐标表示
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Polygon: 文本行坐标，以四個頂點坐标表示
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Polygon: list of Coord
-        :param AdvancedInfo: 此字段为扩展字段。
-GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
+        :param AdvancedInfo: 此欄位爲擴展欄位。
+GeneralBasicOcr介面返回段落訊息Parag，包含ParagNo。
         :type AdvancedInfo: str
         """
         self.DetectedText = None
@@ -562,20 +562,20 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
 
 
 class TextDetectionEn(AbstractModel):
-    """英文识别结果
+    """英文識别結果
 
     """
 
     def __init__(self):
         """
-        :param DetectedText: 识别出的文本行内容
+        :param DetectedText: 識别出的文本行内容
         :type DetectedText: str
         :param Confidence: 置信度 0 ~100
         :type Confidence: int
-        :param Polygon: 文本行坐标，以四个顶点坐标表示
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Polygon: 文本行坐标，以四個頂點坐标表示
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Polygon: list of Coord
-        :param AdvancedInfo: 此字段为扩展字段。目前EnglishOCR接口返回内容为空。
+        :param AdvancedInfo: 此欄位爲擴展欄位。目前EnglishOCR介面返回内容爲空。
         :type AdvancedInfo: str
         """
         self.DetectedText = None
@@ -597,29 +597,29 @@ class TextDetectionEn(AbstractModel):
 
 
 class TextTable(AbstractModel):
-    """表格识别结果
+    """表格識别結果
 
     """
 
     def __init__(self):
         """
-        :param ColTl: 单元格左上角的列索引
+        :param ColTl: 單元格左上角的列索引
         :type ColTl: int
-        :param RowTl: 单元格左上角的行索引
+        :param RowTl: 單元格左上角的行索引
         :type RowTl: int
-        :param ColBr: 单元格右下角的列索引
+        :param ColBr: 單元格右下角的列索引
         :type ColBr: int
-        :param RowBr: 单元格右下角的行索引
+        :param RowBr: 單元格右下角的行索引
         :type RowBr: int
-        :param Text: 单元格文字
+        :param Text: 單元格文字
         :type Text: str
-        :param Type: 单元格类型，包含body（表格主体）、header（表头）、footer（表尾）三种
+        :param Type: 單元格類型，包含body（表格主體）、header（表頭）、footer（表尾）三種
         :type Type: str
         :param Confidence: 置信度 0 ~100
         :type Confidence: int
-        :param Polygon: 文本行坐标，以四个顶点坐标表示
+        :param Polygon: 文本行坐标，以四個頂點坐标表示
         :type Polygon: list of Coord
-        :param AdvancedInfo: 此字段为扩展字段
+        :param AdvancedInfo: 此欄位爲擴展欄位
         :type AdvancedInfo: str
         """
         self.ColTl = None
@@ -651,7 +651,7 @@ class TextTable(AbstractModel):
 
 
 class TextWaybill(AbstractModel):
-    """运单识别结果
+    """運單識别結果
 
     """
 
@@ -659,17 +659,17 @@ class TextWaybill(AbstractModel):
         """
         :param RecName: 收件人姓名
         :type RecName: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
-        :param RecNum: 收件人手机号
+        :param RecNum: 收件人手機号
         :type RecNum: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
-        :param RecAddr: 收件人地址
+        :param RecAddr: 收件人網址
         :type RecAddr: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
         :param SenderName: 寄件人姓名
         :type SenderName: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
-        :param SenderNum: 寄件人手机号
+        :param SenderNum: 寄件人手機号
         :type SenderNum: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
-        :param SenderAddr: 寄件人地址
+        :param SenderAddr: 寄件人網址
         :type SenderAddr: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
-        :param WaybillNum: 运单号
+        :param WaybillNum: 運單号
         :type WaybillNum: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
         """
         self.RecName = None
@@ -706,22 +706,22 @@ class TextWaybill(AbstractModel):
 
 
 class VinOCRRequest(AbstractModel):
-    """VinOCR请求参数结构体
+    """VinOCR請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageBase64: 图片的 Base64 值。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        :param ImageBase64: 圖片的 Base64 值。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經Base64編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片的 ImageUrl、ImageBase64 必須提供一個，如果都提供，只使用 ImageUrl。
         :type ImageBase64: str
-        :param ImageUrl: 图片的 Url 地址。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        :param ImageUrl: 圖片的 Url 網址。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
         self.ImageBase64 = None
@@ -734,15 +734,15 @@ class VinOCRRequest(AbstractModel):
 
 
 class VinOCRResponse(AbstractModel):
-    """VinOCR返回参数结构体
+    """VinOCR返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Vin: 检测到的车辆 VIN 码。
+        :param Vin: 檢測到的車輛 VIN 碼。
         :type Vin: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Vin = None
@@ -755,22 +755,22 @@ class VinOCRResponse(AbstractModel):
 
 
 class WaybillOCRRequest(AbstractModel):
-    """WaybillOCR请求参数结构体
+    """WaybillOCR請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageBase64: 图片的 Base64 值。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        :param ImageBase64: 圖片的 Base64 值。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經Base64編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片的 ImageUrl、ImageBase64 必須提供一個，如果都提供，只使用 ImageUrl。
         :type ImageBase64: str
-        :param ImageUrl: 图片的 Url 地址。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        :param ImageUrl: 圖片的 Url 網址。
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
         self.ImageBase64 = None
@@ -783,16 +783,16 @@ class WaybillOCRRequest(AbstractModel):
 
 
 class WaybillOCRResponse(AbstractModel):
-    """WaybillOCR返回参数结构体
+    """WaybillOCR返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TextDetections: 检测到的文本信息，具体内容请点击左侧链接。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TextDetections: 檢測到的文本訊息，具體内容請點擊左側連結。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TextDetections: :class:`tencentcloud.ocr.v20181119.models.TextWaybill`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TextDetections = None
@@ -807,13 +807,13 @@ class WaybillOCRResponse(AbstractModel):
 
 
 class WaybillObj(AbstractModel):
-    """运单识别对象
+    """運單識别對象
 
     """
 
     def __init__(self):
         """
-        :param Text: 识别出的文本行内容
+        :param Text: 識别出的文本行内容
         :type Text: str
         """
         self.Text = None

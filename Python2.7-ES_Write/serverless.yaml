@@ -8,7 +8,7 @@ inputs:
   src: ./
   description: >-
     This demo uses ElasticSearch and timer trigger to write random number to ES.
-    本示例通过使用ElasticSearch库，实现了将随机数写入ES。可为其配置定时触发器后，定时执行
+    本範例通過使用ElasticSearch庫，實現了将随機數寫入ES。可爲其配置定時觸發器後，定時執行
   handler: index.main_handler
   runtime: Python2.7
   namespace: default

@@ -9,30 +9,30 @@ inputs:
   src: 
     src: ./
   runtime: Python2.7
-  region: ap-shanghai #需要替换的字段
+  region: ap-shanghai #需要替換的欄位
   handler: index.main_handler
   memorySize: 3072
   timeout: 300
-  role: SCF_QcsRole   #需要授权：cos bucket文件读写，cdn预热/刷新权限
-  vpcConfig: # 私有网络配置
-    subnetId: 'subnet-03jndatv'  #需要替换的字段
-    vpcId: 'vpc-9mp2jk1a'  #需要替换的字段
+  role: SCF_QcsRole   #需要授權：cos bucket文件讀寫，cdn預熱/重新整理權限
+  vpcConfig: # 私有網絡配置
+    subnetId: 'subnet-03jndatv'  #需要替換的欄位
+    vpcId: 'vpc-9mp2jk1a'  #需要替換的欄位
   environment:
     variables:
-      #region: ap-shanghai  #需要替换的字段
-      #target_bucket: serverless-demo-1256608914  #需要替换的字段
-      #target_path: /transcode  #需要替换的字段
+      #region: ap-shanghai  #需要替換的欄位
+      #target_bucket: serverless-demo-1256608914  #需要替換的欄位
+      #target_path: /transcode  #需要替換的欄位
   events:
-    #cos触发器，上传音视频触发SCF进行处理
+    #cos觸發器，上傳影音觸發SCF進行處理
     - cos:
-        name: serverless-demo-1256608914.cos.ap-shanghai.myqcloud.com   #需要替换的字段
+        name: serverless-demo-1256608914.cos.ap-shanghai.myqcloud.com   #需要替換的欄位
         parameters:
-          bucket: serverless-demo-1256608914.cos.ap-shanghai.myqcloud.com  #需要替换的字段
+          bucket: serverless-demo-1256608914.cos.ap-shanghai.myqcloud.com  #需要替換的欄位
           filter:
-            prefix: source-video/   #可选，前缀过滤，需要替换的字段
+            prefix: source-video/   #可選，前綴過濾，需要替換的欄位
           events: cos:ObjectCreated:*
           enable: true
-    # apigw触发器，post http源文件地址
+    # apigw觸發器，post http源文件網址
     - apigw:
         name: serverless_days_workshop_transcode
         parameters:
@@ -47,5 +47,4 @@ inputs:
               method: ANY
               enableCORS: TRUE
               serviceTimeout: 300
-
 

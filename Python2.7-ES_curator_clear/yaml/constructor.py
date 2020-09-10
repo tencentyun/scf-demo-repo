@@ -672,4 +672,3 @@ Constructor.add_multi_constructor(
 Constructor.add_multi_constructor(
     u'tag:yaml.org,2002:python/object/new:',
     Constructor.construct_python_object_new)
-

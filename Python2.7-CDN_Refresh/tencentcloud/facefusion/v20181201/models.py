@@ -17,24 +17,24 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class FaceFusionRequest(AbstractModel):
-    """FaceFusion请求参数结构体
+    """FaceFusion請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 活动 ID，请在人脸融合控制台查看。
+        :param ProjectId: 活動 ID，請在人臉融合控制台檢視。
         :type ProjectId: str
-        :param ModelId: 素材 ID，请在人脸融合控制台查看。
+        :param ModelId: 素材 ID，請在人臉融合控制台檢視。
         :type ModelId: str
-        :param Image: 图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理；请勿在 base64 数据中包含头部，如“data:image/jpeg;base64,”。
+        :param Image: 圖片 base64 數據。請确保人臉爲正臉，無旋轉。若某些手機拍攝後人臉被旋轉，請使用圖片的 EXIF 訊息對圖片進行旋轉處理；請勿在 base64 數據中包含頭部，如“data:image/jpeg;base64,”。
         :type Image: str
-        :param RspImgType: 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
+        :param RspImgType: 返回圖像方式（url 或 base64) ，二選一。url有效期爲30天。
         :type RspImgType: str
-        :param PornDetect: 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
+        :param PornDetect: 曆史遺留欄位，無需填寫。因爲融合只需提取人臉特征，不需要鑒黃。
         :type PornDetect: int
-        :param CelebrityIdentify: 0表示不需要鉴政，1表示需要鉴政。默认值为0。
-请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
+        :param CelebrityIdentify: 0表示不需要鑒政，1表示需要鑒政。預設值爲0。
+請注意，鑒政服務開啓後，您需要根據返回結果自行判斷是否調整您的業務邏輯。例如提示您的用戶圖片非法，請更換圖片。
         :type CelebrityIdentify: int
         """
         self.ProjectId = None
@@ -55,17 +55,17 @@ class FaceFusionRequest(AbstractModel):
 
 
 class FaceFusionResponse(AbstractModel):
-    """FaceFusion返回参数结构体
+    """FaceFusion返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Image: RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+        :param Image: RspImgType 爲 url 時，返回結果的 url， RspImgType 爲 base64 時返回 base64 數據。
         :type Image: str
-        :param ReviewResultSet: 鉴政结果
+        :param ReviewResultSet: 鑒政結果
         :type ReviewResultSet: list of FuseFaceReviewResult
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Image = None
@@ -85,19 +85,19 @@ class FaceFusionResponse(AbstractModel):
 
 
 class FaceRect(AbstractModel):
-    """人脸框信息
+    """人臉框訊息
 
     """
 
     def __init__(self):
         """
-        :param X: 人脸框左上角横坐标。
+        :param X: 人臉框左上角橫坐标。
         :type X: int
-        :param Y: 人脸框左上角纵坐标。
+        :param Y: 人臉框左上角縱坐标。
         :type Y: int
-        :param Width: 人脸框宽度。
+        :param Width: 人臉框寬度。
         :type Width: int
-        :param Height: 人脸框高度。
+        :param Height: 人臉框高度。
         :type Height: int
         """
         self.X = None
@@ -114,28 +114,28 @@ class FaceRect(AbstractModel):
 
 
 class FuseFaceRequest(AbstractModel):
-    """FuseFace请求参数结构体
+    """FuseFace請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 活动 ID，请在人脸融合控制台查看。
+        :param ProjectId: 活動 ID，請在人臉融合控制台檢視。
         :type ProjectId: str
-        :param ModelId: 素材 ID，请在人脸融合控制台查看。
+        :param ModelId: 素材 ID，請在人臉融合控制台檢視。
         :type ModelId: str
-        :param RspImgType: 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
+        :param RspImgType: 返回圖像方式（url 或 base64) ，二選一。url有效期爲30天。
         :type RspImgType: str
-        :param MergeInfos: 用户人脸图片、素材模板图的人脸位置信息。
+        :param MergeInfos: 用戶人臉圖片、素材範本圖的人臉位置訊息。
         :type MergeInfos: list of MergeInfo
-        :param FuseProfileDegree: 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中脸型参数数值。（换脸版算法暂不支持此参数调整）
+        :param FuseProfileDegree: 臉型融合比例，數值越高，融合後的臉型越像素材人物。取值範圍[0,100] 
+若此參數不填寫，則使用人臉融合控制台中臉型參數數值。（換臉版算法暫不支援此參數調整）
         :type FuseProfileDegree: int
-        :param FuseFaceDegree: 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中五官参数数值。（换脸版算法暂不支持此参数调整）
+        :param FuseFaceDegree: 五官融合比例，數值越高，融合後的五官越像素材人物。取值範圍[0,100] 
+若此參數不填寫，則使用人臉融合控制台中五官參數數值。（換臉版算法暫不支援此參數調整）
         :type FuseFaceDegree: int
-        :param CelebrityIdentify: 0表示不需要鉴政，1表示需要鉴政。默认值为0。
-请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
+        :param CelebrityIdentify: 0表示不需要鑒政，1表示需要鑒政。預設值爲0。
+請注意，鑒政服務開啓後，您需要根據返回結果自行判斷是否調整您的業務邏輯。例如提示您的用戶圖片非法，請更換圖片。
         :type CelebrityIdentify: int
         """
         self.ProjectId = None
@@ -163,18 +163,18 @@ class FuseFaceRequest(AbstractModel):
 
 
 class FuseFaceResponse(AbstractModel):
-    """FuseFace返回参数结构体
+    """FuseFace返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FusedImage: RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+        :param FusedImage: RspImgType 爲 url 時，返回結果的 url， RspImgType 爲 base64 時返回 base64 數據。
         :type FusedImage: str
-        :param ReviewResultSet: 鉴政结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ReviewResultSet: 鑒政結果。該數組的順序和請求中mergeinfo的順序一緻，一一對應
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ReviewResultSet: list of FuseFaceReviewResult
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FusedImage = None
@@ -194,25 +194,25 @@ class FuseFaceResponse(AbstractModel):
 
 
 class FuseFaceReviewDetail(AbstractModel):
-    """人脸融合鉴黄鉴政人脸信息
+    """人臉融合鑒黃鑒政人臉訊息
 
     """
 
     def __init__(self):
         """
-        :param Field: 保留字段
+        :param Field: 保留欄位
         :type Field: str
-        :param Label: 人员名称
+        :param Label: 人員名稱
         :type Label: str
-        :param Confidence: 对应识别label的置信度，分数越高意味涉政可能性越大。 
-0到70，Suggestion建议为PASS； 
-70到80，Suggestion建议为REVIEW； 
-80到100，Suggestion建议为BLOCK。
+        :param Confidence: 對應識别label的置信度，分數越高意味涉政可能性越大。 
+0到70，Suggestion建議爲PASS； 
+70到80，Suggestion建議爲REVIEW； 
+80到100，Suggestion建議爲BLOCK。
         :type Confidence: float
-        :param Suggestion: 识别场景的审核结论：  
+        :param Suggestion: 識别場景的審核結論：  
 PASS：正常 
 REVIEW：疑似  
-BLOCK：违规
+BLOCK：違規
         :type Suggestion: str
         """
         self.Field = None
@@ -229,23 +229,23 @@ BLOCK：违规
 
 
 class FuseFaceReviewResult(AbstractModel):
-    """人脸融合鉴黄鉴政返回参数item
+    """人臉融合鑒黃鑒政返回參數item
 
     """
 
     def __init__(self):
         """
-        :param Category: 保留字段
+        :param Category: 保留欄位
         :type Category: str
-        :param Code: 状态码， 0为处理成功，其他值为处理失败
+        :param Code: 狀态碼， 0爲處理成功，其他值爲處理失敗
         :type Code: str
-        :param CodeDescription: 对应状态码信息描述
+        :param CodeDescription: 對應狀态碼訊息描述
         :type CodeDescription: str
-        :param Confidence: 保留字段
+        :param Confidence: 保留欄位
         :type Confidence: float
-        :param Suggestion: 保留字段
+        :param Suggestion: 保留欄位
         :type Suggestion: str
-        :param DetailSet: 审核详细内容
+        :param DetailSet: 審核詳細内容
         :type DetailSet: list of FuseFaceReviewDetail
         """
         self.Category = None
@@ -271,19 +271,19 @@ class FuseFaceReviewResult(AbstractModel):
 
 
 class MergeInfo(AbstractModel):
-    """人脸图片和待被融合的素材模板图的人脸位置信息。
+    """人臉圖片和待被融合的素材範本圖的人臉位置訊息。
 
     """
 
     def __init__(self):
         """
-        :param Image: 输入图片base64
+        :param Image: 輸入圖片base64
         :type Image: str
-        :param Url: 输入图片url
+        :param Url: 輸入圖片url
         :type Url: str
-        :param InputImageFaceRect: 上传的图片人脸位置信息（人脸框）
+        :param InputImageFaceRect: 上傳的圖片人臉位置訊息（人臉框）
         :type InputImageFaceRect: :class:`tencentcloud.facefusion.v20181201.models.FaceRect`
-        :param TemplateFaceID: 控制台上传的素材人脸ID
+        :param TemplateFaceID: 控制台上傳的素材人臉ID
         :type TemplateFaceID: str
         """
         self.Image = None

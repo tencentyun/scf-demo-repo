@@ -23,10 +23,10 @@ class Album(AbstractModel):
 
     def __init__(self):
         """
-        :param AlbumName: 专辑名
+        :param AlbumName: 專輯名
         :type AlbumName: str
-        :param ImagePathMap: 专辑图片大小及类别
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ImagePathMap: 專輯圖片大小及類别
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ImagePathMap: list of ImagePath
         """
         self.AlbumName = None
@@ -61,7 +61,7 @@ class Artist(AbstractModel):
 
 
 class DataInfo(AbstractModel):
-    """数据信息
+    """數據訊息
 
     """
 
@@ -71,11 +71,11 @@ class DataInfo(AbstractModel):
         :type Name: str
         :param Version: 歌曲版本
         :type Version: str
-        :param Duration: 歌曲总时长（非试听时长）
+        :param Duration: 歌曲總時長（非試聽時長）
         :type Duration: str
-        :param AuditionBegin: 试听开始时间
+        :param AuditionBegin: 試聽開始時間
         :type AuditionBegin: int
-        :param AuditionEnd: 试听结束时间
+        :param AuditionEnd: 試聽結束時間
         :type AuditionEnd: int
         """
         self.Name = None
@@ -94,19 +94,19 @@ class DataInfo(AbstractModel):
 
 
 class DescribeItemsRequest(AbstractModel):
-    """DescribeItems请求参数结构体
+    """DescribeItems請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: offset (Default = 0)，(当前页-1) * Limit
+        :param Offset: offset (Default = 0)，(當前頁-1) * Limit
         :type Offset: int
-        :param Limit: 条数，必须大于0，最大值为30
+        :param Limit: 條數，必須大于0，最大值爲30
         :type Limit: int
-        :param CategoryId: （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
+        :param CategoryId: （電台/歌單）ID，CategoryId和CategoryCode兩個必傳1個，可以從<a href="https://cloud.tencent.com/document/product/1155/40109">獲取分類内容（Station）清單介面</a>中獲取。
         :type CategoryId: str
-        :param CategoryCode: （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
+        :param CategoryCode: （電台/歌單）ID，CategoryId和CategoryCode兩個必傳1個，可以從<a href="https://cloud.tencent.com/document/product/1155/40109">獲取分類内容（Station）清單介面</a>中獲取。
         :type CategoryCode: str
         """
         self.Offset = None
@@ -123,25 +123,25 @@ class DescribeItemsRequest(AbstractModel):
 
 
 class DescribeItemsResponse(AbstractModel):
-    """DescribeItems返回参数结构体
+    """DescribeItems返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 分页偏移量
+        :param Offset: 分頁偏移量
         :type Offset: int
-        :param Size: 当前页歌曲数量
+        :param Size: 當前頁歌曲數量
         :type Size: int
-        :param Total: 总数据条数
+        :param Total: 總數據條數
         :type Total: int
-        :param HaveMore: 剩余数量（total-offset-size），通过这个值判断是否
-还有下一页
+        :param HaveMore: 剩餘數量（total-offset-size），通過這個值判斷是否
+還有下一頁
         :type HaveMore: int
-        :param Items: Items 歌曲列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Items: Items 歌曲清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Items: list of Item
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Offset = None
@@ -167,7 +167,7 @@ class DescribeItemsResponse(AbstractModel):
 
 
 class DescribeLyricRequest(AbstractModel):
-    """DescribeLyric请求参数结构体
+    """DescribeLyric請求參數結構體
 
     """
 
@@ -175,7 +175,7 @@ class DescribeLyricRequest(AbstractModel):
         """
         :param ItemId: 歌曲ID
         :type ItemId: str
-        :param SubItemType: 歌词格式，可选项，可不填写，目前填写只能填LRC-LRC。该字段为预留的扩展字段。后续如果不填，会返回歌曲的所有格式的歌词。如果填写某个正确的格式，则只返回该格式的歌词。
+        :param SubItemType: 歌詞格式，可選項，可不填寫，目前填寫只能填LRC-LRC。該欄位爲預留的擴展欄位。後續如果不填，會返回歌曲的所有格式的歌詞。如果填寫某個正确的格式，則只返回該格式的歌詞。
         :type SubItemType: str
         """
         self.ItemId = None
@@ -188,16 +188,16 @@ class DescribeLyricRequest(AbstractModel):
 
 
 class DescribeLyricResponse(AbstractModel):
-    """DescribeLyric返回参数结构体
+    """DescribeLyric返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Lyric: 歌词详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Lyric: 歌詞詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Lyric: :class:`tencentcloud.ame.v20190916.models.Lyric`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Lyric = None
@@ -212,7 +212,7 @@ class DescribeLyricResponse(AbstractModel):
 
 
 class DescribeMusicRequest(AbstractModel):
-    """DescribeMusic请求参数结构体
+    """DescribeMusic請求參數結構體
 
     """
 
@@ -220,9 +220,9 @@ class DescribeMusicRequest(AbstractModel):
         """
         :param ItemId: 歌曲ID
         :type ItemId: str
-        :param IdentityId: 在应用前端播放音乐C端用户的唯一标识。无需是账户信息，用户唯一标识即可。
+        :param IdentityId: 在應用前端播放音樂C端用戶的唯一标識。無需是帳戶訊息，用戶唯一标識即可。
         :type IdentityId: str
-        :param SubItemType: 填 MP3-64K-FTD-P 获取歌曲热门片段
+        :param SubItemType: 填 MP3-64K-FTD-P 獲取歌曲熱門片段
         :type SubItemType: str
         :param Ssl: CDN URL Protocol:HTTP or HTTPS/SSL
 Values:Y , N(default)
@@ -242,16 +242,16 @@ Values:Y , N(default)
 
 
 class DescribeMusicResponse(AbstractModel):
-    """DescribeMusic返回参数结构体
+    """DescribeMusic返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Music: 音乐相关信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Music: 音樂相關訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Music: :class:`tencentcloud.ame.v20190916.models.Music`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Music = None
@@ -266,15 +266,15 @@ class DescribeMusicResponse(AbstractModel):
 
 
 class DescribeStationsRequest(AbstractModel):
-    """DescribeStations请求参数结构体
+    """DescribeStations請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Limit: 条数，必须大于0
+        :param Limit: 條數，必須大于0
         :type Limit: int
-        :param Offset: offset (Default = 0)，(当前页-1) * Limit
+        :param Offset: offset (Default = 0)，(當前頁-1) * Limit
         :type Offset: int
         """
         self.Limit = None
@@ -287,24 +287,24 @@ class DescribeStationsRequest(AbstractModel):
 
 
 class DescribeStationsResponse(AbstractModel):
-    """DescribeStations返回参数结构体
+    """DescribeStations返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Total: 总数量
+        :param Total: 總數量
         :type Total: int
-        :param Offset: 分页偏移量
+        :param Offset: 分頁偏移量
         :type Offset: int
-        :param Size: 当前页station数量
+        :param Size: 當前頁station數量
         :type Size: int
-        :param HaveMore: 剩余数量（total-offset-size），通过这个值判断是否还有下一页
+        :param HaveMore: 剩餘數量（total-offset-size），通過這個值判斷是否還有下一頁
         :type HaveMore: int
-        :param Stations: Stations 素材库列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Stations: Stations 素材庫清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Stations: list of Station
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Total = None
@@ -330,17 +330,17 @@ class DescribeStationsResponse(AbstractModel):
 
 
 class ImagePath(AbstractModel):
-    """图片路径
+    """圖片路徑
 
     """
 
     def __init__(self):
         """
-        :param Key: station图片大小及类别
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Key: station圖片大小及類别
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Key: str
-        :param Value: station图片地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Value: station圖片網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Value: str
         """
         self.Key = None
@@ -362,13 +362,13 @@ class Item(AbstractModel):
         :param ItemID: Song ID
         :type ItemID: str
         :param DataInfo: Song info
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DataInfo: :class:`tencentcloud.ame.v20190916.models.DataInfo`
-        :param Album: 专辑信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Album: 專輯訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Album: :class:`tencentcloud.ame.v20190916.models.Album`
-        :param Artists: 多个歌手集合
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Artists: 多個歌手集合
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Artists: list of Artist
         """
         self.ItemID = None
@@ -394,17 +394,17 @@ class Item(AbstractModel):
 
 
 class Lyric(AbstractModel):
-    """歌词信息
+    """歌詞訊息
 
     """
 
     def __init__(self):
         """
-        :param Url: 歌词cdn地址
+        :param Url: 歌詞cdn網址
         :type Url: str
-        :param FileNameExt: 歌词后缀名
+        :param FileNameExt: 歌詞後綴名
         :type FileNameExt: str
-        :param SubItemType: 歌词类型
+        :param SubItemType: 歌詞類型
         :type SubItemType: str
         """
         self.Url = None
@@ -419,26 +419,26 @@ class Lyric(AbstractModel):
 
 
 class Music(AbstractModel):
-    """音乐详情
+    """音樂詳情
 
     """
 
     def __init__(self):
         """
-        :param Url: 音乐播放链接相对路径，必须通过在正版曲库直通车控制台上登记的域名进行拼接。
+        :param Url: 音樂播放連結相對路徑，必須通過在正版曲庫直通車控制台上登記的域名進行拼接。
         :type Url: str
-        :param FileSize: 音频文件大小
+        :param FileSize: 音訊文件大小
         :type FileSize: int
-        :param FileExtension: 音频文件类型
+        :param FileExtension: 音訊文件類型
         :type FileExtension: str
-        :param AuditionBegin: Song fragment start.试听片段开始时间，试听时长为auditionEnd-auditionBegin
+        :param AuditionBegin: Song fragment start.試聽片段開始時間，試聽時長爲auditionEnd-auditionBegin
 Unit :ms
         :type AuditionBegin: int
-        :param AuditionEnd: Song fragment end.试听片段结束时间, 试听时长为auditionEnd-auditionBegin
+        :param AuditionEnd: Song fragment end.試聽片段結束時間, 試聽時長爲auditionEnd-auditionBegin
 Unit :ms
         :type AuditionEnd: int
-        :param FullUrl: 音乐播放链接全路径，前提是在正版曲库直通车控制台添加过域名，否则返回空字符。
-如果添加过多个域名只返回第一个添加域名的播放全路径。
+        :param FullUrl: 音樂播放連結全路徑，前提是在正版曲庫直通車控制台添加過域名，否則返回空字元。
+如果添加過多個域名只返回第一個添加域名的播放全路徑。
         :type FullUrl: str
         """
         self.Url = None
@@ -459,24 +459,24 @@ Unit :ms
 
 
 class ReportDataRequest(AbstractModel):
-    """ReportData请求参数结构体
+    """ReportData請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ReportData: 上报数据
-注:reportData为客户端压缩后的上报数据进行16进制转换的字符串数据
-压缩说明：
-a) 上报的json格式字符串通过流的转换（ByteArrayInputStream, java.util.zip.GZIPOutputStream），获取到压缩后的字节数组。
-b) 将压缩后的字节数组转成16进制字符串。
+        :param ReportData: 上報數據
+注:reportData爲用戶端壓縮後的上報數據進行16進制轉換的字串數據
+壓縮說明：
+a) 上報的json格式字串通過流的轉換（ByteArrayInputStream, java.util.zip.GZIPOutputStream），獲取到壓縮後的位元數組。
+b) 将壓縮後的位元數組轉成16進制字串。
 
-reportData由两部分数据组成：
-1）report_type（上报类型）
-2）data（歌曲上报数据）
-不同的report_type对应的data数据结构不一样。
+reportData由兩部分數據組成：
+1）report_type（上報類型）
+2）data（歌曲上報數據）
+不同的report_type對應的data數據結構不一樣。
 
-详细说明请参考文档reportdata.docx：
+詳細說明請參考文件reportdata.docx：
 https://github.com/ame-demo/doc
         :type ReportData: str
         """
@@ -488,13 +488,13 @@ https://github.com/ame-demo/doc
 
 
 class ReportDataResponse(AbstractModel):
-    """ReportData返回参数结构体
+    """ReportData返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -505,7 +505,7 @@ class ReportDataResponse(AbstractModel):
 
 
 class Station(AbstractModel):
-    """分类内容
+    """分類内容
 
     """
 
@@ -514,16 +514,16 @@ class Station(AbstractModel):
         :param CategoryID: StationID
         :type CategoryID: str
         :param CategoryCode: Station MCCode
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CategoryCode: str
         :param Name: Category Name
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Name: str
-        :param Rank: Station的排序值，供参考（返回结果已按其升序）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Rank: Station的排序值，供參考（返回結果已按其升序）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Rank: int
-        :param ImagePathMap: station图片集合
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ImagePathMap: station圖片集合
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ImagePathMap: list of ImagePath
         """
         self.CategoryID = None

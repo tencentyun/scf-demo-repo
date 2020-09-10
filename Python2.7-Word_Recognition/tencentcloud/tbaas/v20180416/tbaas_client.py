@@ -26,9 +26,9 @@ class TbaasClient(AbstractClient):
 
 
     def GetBlockList(self, request):
-        """查看当前网络下的所有区块列表，分页展示
+        """檢視當前網絡下的所有區塊清單，分頁展示
 
-        :param request: 调用GetBlockList所需参数的结构体。
+        :param request: 調用GetBlockList所需參數的結構體。
         :type request: :class:`tencentcloud.tbaas.v20180416.models.GetBlockListRequest`
         :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetBlockListResponse`
 
@@ -54,9 +54,9 @@ class TbaasClient(AbstractClient):
 
 
     def GetClusterSummary(self, request):
-        """获取区块链网络概要
+        """獲取區塊鏈網絡概要
 
-        :param request: 调用GetClusterSummary所需参数的结构体。
+        :param request: 調用GetClusterSummary所需參數的結構體。
         :type request: :class:`tencentcloud.tbaas.v20180416.models.GetClusterSummaryRequest`
         :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetClusterSummaryResponse`
 
@@ -82,9 +82,9 @@ class TbaasClient(AbstractClient):
 
 
     def GetInvokeTx(self, request):
-        """Invoke异步调用结果查询
+        """Invoke異步調用結果查詢
 
-        :param request: 调用GetInvokeTx所需参数的结构体。
+        :param request: 調用GetInvokeTx所需參數的結構體。
         :type request: :class:`tencentcloud.tbaas.v20180416.models.GetInvokeTxRequest`
         :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetInvokeTxResponse`
 
@@ -110,9 +110,9 @@ class TbaasClient(AbstractClient):
 
 
     def GetLatesdTransactionList(self, request):
-        """获取最新交易列表
+        """獲取最新交易清單
 
-        :param request: 调用GetLatesdTransactionList所需参数的结构体。
+        :param request: 調用GetLatesdTransactionList所需參數的結構體。
         :type request: :class:`tencentcloud.tbaas.v20180416.models.GetLatesdTransactionListRequest`
         :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetLatesdTransactionListResponse`
 
@@ -140,7 +140,7 @@ class TbaasClient(AbstractClient):
     def Invoke(self, request):
         """新增交易
 
-        :param request: 调用Invoke所需参数的结构体。
+        :param request: 調用Invoke所需參數的結構體。
         :type request: :class:`tencentcloud.tbaas.v20180416.models.InvokeRequest`
         :rtype: :class:`tencentcloud.tbaas.v20180416.models.InvokeResponse`
 
@@ -166,9 +166,9 @@ class TbaasClient(AbstractClient):
 
 
     def Query(self, request):
-        """查询交易
+        """查詢交易
 
-        :param request: 调用Query所需参数的结构体。
+        :param request: 調用Query所需參數的結構體。
         :type request: :class:`tencentcloud.tbaas.v20180416.models.QueryRequest`
         :rtype: :class:`tencentcloud.tbaas.v20180416.models.QueryResponse`
 

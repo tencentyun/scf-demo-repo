@@ -76,5 +76,5 @@ class KafkaConsumer(object):
         except ConsumerStoppedException as e:
             logger.info("consumer fail, cost time: [%ds], error msg:[%s]", int(time.time()) - int(start_time), e) 
         finally:
-            # file write会偏移pos，导致无法读取数据
+            # file write會偏移pos，導緻無法讀取數據
             self.sio.seek(0)

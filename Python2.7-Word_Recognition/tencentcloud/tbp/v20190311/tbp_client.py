@@ -26,9 +26,9 @@ class TbpClient(AbstractClient):
 
 
     def PostAudio(self, request):
-        """机器人会话接口，接收音频信息，传递给后台机器人
+        """機器人會話介面，接收音訊訊息，傳遞給後台機器人
 
-        :param request: 调用PostAudio所需参数的结构体。
+        :param request: 調用PostAudio所需參數的結構體。
         :type request: :class:`tencentcloud.tbp.v20190311.models.PostAudioRequest`
         :rtype: :class:`tencentcloud.tbp.v20190311.models.PostAudioResponse`
 
@@ -54,9 +54,9 @@ class TbpClient(AbstractClient):
 
 
     def PostText(self, request):
-        """机器人会话接口，接收文本信息，传递给后台机器人
+        """機器人會話介面，接收文本訊息，傳遞給後台機器人
 
-        :param request: 调用PostText所需参数的结构体。
+        :param request: 調用PostText所需參數的結構體。
         :type request: :class:`tencentcloud.tbp.v20190311.models.PostTextRequest`
         :rtype: :class:`tencentcloud.tbp.v20190311.models.PostTextResponse`
 
@@ -82,9 +82,9 @@ class TbpClient(AbstractClient):
 
 
     def Reset(self, request):
-        """对当前机器人的会话状态进行复位
+        """對當前機器人的會話狀态進行複位
 
-        :param request: 调用Reset所需参数的结构体。
+        :param request: 調用Reset所需參數的結構體。
         :type request: :class:`tencentcloud.tbp.v20190311.models.ResetRequest`
         :rtype: :class:`tencentcloud.tbp.v20190311.models.ResetResponse`
 

@@ -143,4 +143,3 @@ if __name__ == "__main__":
     pygame.examples.camera.main()
 
     
-

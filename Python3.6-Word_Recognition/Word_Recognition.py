@@ -30,7 +30,7 @@ def main_handler(event, context):
             "body": "there is no file from api gateway"
         }
 
-    # The image format uploaded from the gateway has been encoded with Base64, which can be directly obtained from event['body'].从网关上传的图片格式已经做过Base64，在event['body']里可以直接获取
+    # The image format uploaded from the gateway has been encoded with Base64, which can be directly obtained from event['body'].從閘道上傳的圖片格式已經做過Base64，在event['body']裏可以直接獲取
     logger.info("Start to detection")
     try: 
         secret_id = os.environ.get('TENCENTCLOUD_SECRETID')     

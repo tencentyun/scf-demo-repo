@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: Word_Recognition
   src: ./
-  description: 本示例通过配置COS触发或API网关触发，利用优图提供的能力，进行文字识别
+  description: 本範例通過配置COS觸發或API閘道觸發，利用優圖提供的能力，進行文字識别
   handler: index.main_handler
   runtime: Nodejs8.9
   namespace: default
@@ -14,7 +14,7 @@ inputs:
   memorySize: 128
   timeout: 3
   events:
-     - apigw: # api网关触发器
+     - apigw: # api閘道觸發器
         name: serverless
         serviceId: # input API gateway serviceId
         parameters:

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # The user needs to create two COS Buckets, one for uploading the original pictures, and configurated as a trigger of SCF and the other for receiving the compressed pictures.
-# 用户需要创建2个COS Bucket，一个用于上传原始图片，并配置SCF为该COS Bucket触发，另一个用于接收压缩后的图片
+# 用戶需要創建2個COS Bucket，一個用于上傳原始圖片，并配置SCF爲該COS Bucket觸發，另一個用于接收壓縮後的圖片
 
 import os
 from PIL import Image
@@ -14,24 +14,24 @@ import logging
 
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 
-appid = XXXXXX  # Please replace with your APPID. 请替换为您的 APPID
-secret_id = u'**************'  # Please replace with your SecretId. 请替换为您的 SecretId
-secret_key = u'*************'  # Please replace with your SecretKey. 请替换为您的 SecretKey
-region = u'ap-shanghai'        # Please replace with the region where your COS bucket located. 请替换为您bucket 所在的地域
+appid = XXXXXX  # Please replace with your APPID. 請替換爲您的 APPID
+secret_id = u'**************'  # Please replace with your SecretId. 請替換爲您的 SecretId
+secret_key = u'*************'  # Please replace with your SecretKey. 請替換爲您的 SecretKey
+region = u'ap-shanghai'        # Please replace with the region where your COS bucket located. 請替換爲您bucket 所在的地域
 token = ''
-resized_bucket = 'XXXXXX'         # Please replace with the bucket you use to store the compressed pictures. 请替换为您用于存放压缩后图片的bucket
+resized_bucket = 'XXXXXX'         # Please replace with the bucket you use to store the compressed pictures. 請替換爲您用于存放壓縮後圖片的bucket
 
 config = CosConfig(Secret_id=secret_id, Secret_key=secret_key, Region=region, Token=token)
 client = CosS3Client(config)
 logger = logging.getLogger()
 
-#Compressing the length and width of the image to 1/2 of the original image. 把图片长、宽压缩至原有图片的1/2
+#Compressing the length and width of the image to 1/2 of the original image. 把圖片長、寬壓縮至原有圖片的1/2
 def resize_image(image_path, resized_path):
     with Image.open(image_path) as image:
         image.thumbnail(tuple(x / 2 for x in image.size))
         image.save(resized_path)
 
-# Deleting the image downloaded to local. 把下载到本地的图片删除
+# Deleting the image downloaded to local. 把下載到本地的圖片删除
 def delete_local_file(src):
     logger.info("delete files and folders")
     if os.path.isfile(src):

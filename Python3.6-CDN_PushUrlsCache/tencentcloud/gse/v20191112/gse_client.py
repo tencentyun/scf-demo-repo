@@ -26,7 +26,7 @@ class GseClient(AbstractClient):
 
 
     def CreateGameServerSession(self, request):
-        """本接口（CreateGameServerSession）用于创建游戏服务会话
+        """本介面（CreateGameServerSession）用于創建遊戲服務會話
 
         :param request: Request instance for CreateGameServerSession.
         :type request: :class:`tencentcloud.gse.v20191112.models.CreateGameServerSessionRequest`
@@ -54,7 +54,7 @@ class GseClient(AbstractClient):
 
 
     def DescribeGameServerSessionDetails(self, request):
-        """本接口（DescribeGameServerSessionDetails）用于查询游戏服务器会话详情列表
+        """本介面（DescribeGameServerSessionDetails）用于查詢遊戲服務器會話詳情清單
 
         :param request: Request instance for DescribeGameServerSessionDetails.
         :type request: :class:`tencentcloud.gse.v20191112.models.DescribeGameServerSessionDetailsRequest`
@@ -82,7 +82,7 @@ class GseClient(AbstractClient):
 
 
     def DescribeGameServerSessionPlacement(self, request):
-        """本接口（DescribeGameServerSessionPlacement）用于查询游戏服务器会话的放置
+        """本介面（DescribeGameServerSessionPlacement）用于查詢遊戲服務器會話的放置
 
         :param request: Request instance for DescribeGameServerSessionPlacement.
         :type request: :class:`tencentcloud.gse.v20191112.models.DescribeGameServerSessionPlacementRequest`
@@ -110,7 +110,7 @@ class GseClient(AbstractClient):
 
 
     def DescribeGameServerSessions(self, request):
-        """本接口（DescribeGameServerSessions）用于查询游戏服务器会话列表
+        """本介面（DescribeGameServerSessions）用于查詢遊戲服務器會話清單
 
         :param request: Request instance for DescribeGameServerSessions.
         :type request: :class:`tencentcloud.gse.v20191112.models.DescribeGameServerSessionsRequest`
@@ -138,7 +138,7 @@ class GseClient(AbstractClient):
 
 
     def DescribeInstances(self, request):
-        """用于查询服务器实例列表
+        """用于查詢服務器實例清單
 
         :param request: Request instance for DescribeInstances.
         :type request: :class:`tencentcloud.gse.v20191112.models.DescribeInstancesRequest`
@@ -166,7 +166,7 @@ class GseClient(AbstractClient):
 
 
     def DescribePlayerSessions(self, request):
-        """本接口（DescribePlayerSessions）用于获取玩家会话列表
+        """本介面（DescribePlayerSessions）用于獲取玩家會話清單
 
         :param request: Request instance for DescribePlayerSessions.
         :type request: :class:`tencentcloud.gse.v20191112.models.DescribePlayerSessionsRequest`
@@ -194,7 +194,7 @@ class GseClient(AbstractClient):
 
 
     def GetGameServerSessionLogUrl(self, request):
-        """本接口（GetGameServerSessionLogUrl）用于获取游戏服务器会话的日志URL
+        """本介面（GetGameServerSessionLogUrl）用于獲取遊戲服務器會話的日志URL
 
         :param request: Request instance for GetGameServerSessionLogUrl.
         :type request: :class:`tencentcloud.gse.v20191112.models.GetGameServerSessionLogUrlRequest`
@@ -222,7 +222,7 @@ class GseClient(AbstractClient):
 
 
     def GetInstanceAccess(self, request):
-        """获取实例登录所需要的凭据
+        """獲取實例登入所需要的憑據
 
         :param request: Request instance for GetInstanceAccess.
         :type request: :class:`tencentcloud.gse.v20191112.models.GetInstanceAccessRequest`
@@ -250,7 +250,7 @@ class GseClient(AbstractClient):
 
 
     def JoinGameServerSession(self, request):
-        """本接口（JoinGameServerSession）用于加入游戏服务器会话
+        """本介面（JoinGameServerSession）用于加入遊戲服務器會話
 
         :param request: Request instance for JoinGameServerSession.
         :type request: :class:`tencentcloud.gse.v20191112.models.JoinGameServerSessionRequest`
@@ -278,7 +278,7 @@ class GseClient(AbstractClient):
 
 
     def SearchGameServerSessions(self, request):
-        """本接口（SearchGameServerSessions）用于搜索游戏服务器会话列表
+        """本介面（SearchGameServerSessions）用于搜索遊戲服務器會話清單
 
         :param request: Request instance for SearchGameServerSessions.
         :type request: :class:`tencentcloud.gse.v20191112.models.SearchGameServerSessionsRequest`
@@ -306,7 +306,7 @@ class GseClient(AbstractClient):
 
 
     def StartGameServerSessionPlacement(self, request):
-        """本接口（StartGameServerSessionPlacement）用于开始放置游戏服务器会话
+        """本介面（StartGameServerSessionPlacement）用于開始放置遊戲服務器會話
 
         :param request: Request instance for StartGameServerSessionPlacement.
         :type request: :class:`tencentcloud.gse.v20191112.models.StartGameServerSessionPlacementRequest`
@@ -334,7 +334,7 @@ class GseClient(AbstractClient):
 
 
     def StopGameServerSessionPlacement(self, request):
-        """本接口（StopGameServerSessionPlacement）用于停止放置游戏服务器会话
+        """本介面（StopGameServerSessionPlacement）用于停止放置遊戲服務器會話
 
         :param request: Request instance for StopGameServerSessionPlacement.
         :type request: :class:`tencentcloud.gse.v20191112.models.StopGameServerSessionPlacementRequest`
@@ -362,7 +362,7 @@ class GseClient(AbstractClient):
 
 
     def UpdateGameServerSession(self, request):
-        """本接口（UpdateGameServerSession）用于更新游戏服务器会话
+        """本介面（UpdateGameServerSession）用于更新遊戲服務器會話
 
         :param request: Request instance for UpdateGameServerSession.
         :type request: :class:`tencentcloud.gse.v20191112.models.UpdateGameServerSessionRequest`

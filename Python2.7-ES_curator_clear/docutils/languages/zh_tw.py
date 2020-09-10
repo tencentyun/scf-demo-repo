@@ -19,7 +19,7 @@ labels = {
       'author': u'\u4f5c\u8005', # '作者' <-- Chinese word
       'authors': u'\u4f5c\u8005\u7fa4', # '作者群',
       'organization': u'\u7d44\u7e54', # '組織',
-      'address': u'\u5730\u5740', # '地址',
+      'address': u'\u5730\u5740', # '網址',
       'contact': u'\u9023\u7d61', # '連絡',
       'version': u'\u7248\u672c', # '版本',
       'revision': u'\u4fee\u8a02', # '修訂',

@@ -26,7 +26,7 @@ class CloudhsmClient(AbstractClient):
 
 
     def DescribeHSMBySubnetId(self, request):
-        """通过SubnetId获取Hsm资源数
+        """通過SubnetId獲取Hsm資源數
 
         :param request: Request instance for DescribeHSMBySubnetId.
         :type request: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeHSMBySubnetIdRequest`
@@ -54,7 +54,7 @@ class CloudhsmClient(AbstractClient):
 
 
     def DescribeHSMByVpcId(self, request):
-        """通过VpcId获取Hsm资源数
+        """通過VpcId獲取Hsm資源數
 
         :param request: Request instance for DescribeHSMByVpcId.
         :type request: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeHSMByVpcIdRequest`
@@ -82,7 +82,7 @@ class CloudhsmClient(AbstractClient):
 
 
     def DescribeSubnet(self, request):
-        """查询子网列表
+        """查詢子網清單
 
         :param request: Request instance for DescribeSubnet.
         :type request: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeSubnetRequest`
@@ -110,7 +110,7 @@ class CloudhsmClient(AbstractClient):
 
 
     def DescribeUsg(self, request):
-        """根据用户的AppId获取用户安全组列表
+        """根據用戶的AppId獲取用戶安全組清單
 
         :param request: Request instance for DescribeUsg.
         :type request: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeUsgRequest`
@@ -138,7 +138,7 @@ class CloudhsmClient(AbstractClient):
 
 
     def DescribeUsgRule(self, request):
-        """获取安全组详情
+        """獲取安全組詳情
 
         :param request: Request instance for DescribeUsgRule.
         :type request: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeUsgRuleRequest`
@@ -166,7 +166,7 @@ class CloudhsmClient(AbstractClient):
 
 
     def DescribeVpc(self, request):
-        """查询用户的私有网络列表
+        """查詢用戶的私有網絡清單
 
         :param request: Request instance for DescribeVpc.
         :type request: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeVpcRequest`
@@ -194,7 +194,7 @@ class CloudhsmClient(AbstractClient):
 
 
     def DescribeVsmAttributes(self, request):
-        """获取VSM属性
+        """獲取VSM屬性
 
         :param request: Request instance for DescribeVsmAttributes.
         :type request: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeVsmAttributesRequest`
@@ -222,7 +222,7 @@ class CloudhsmClient(AbstractClient):
 
 
     def DescribeVsms(self, request):
-        """获取用户VSM列表
+        """獲取用戶VSM清單
 
         :param request: Request instance for DescribeVsms.
         :type request: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeVsmsRequest`
@@ -250,7 +250,7 @@ class CloudhsmClient(AbstractClient):
 
 
     def InquiryPriceBuyVsm(self, request):
-        """购买询价接口
+        """購買詢價介面
 
         :param request: Request instance for InquiryPriceBuyVsm.
         :type request: :class:`tencentcloud.cloudhsm.v20191112.models.InquiryPriceBuyVsmRequest`
@@ -278,7 +278,7 @@ class CloudhsmClient(AbstractClient):
 
 
     def ModifyVsmAttributes(self, request):
-        """修改VSM属性
+        """修改VSM屬性
 
         :param request: Request instance for ModifyVsmAttributes.
         :type request: :class:`tencentcloud.cloudhsm.v20191112.models.ModifyVsmAttributesRequest`

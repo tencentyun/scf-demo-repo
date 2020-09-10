@@ -26,7 +26,7 @@ class AaiClient(AbstractClient):
 
 
     def Chat(self, request):
-        """提供基于文本的基础聊天能力，可以让您的应用快速拥有具备深度语义理解的机器聊天功能。
+        """提供基于文本的基礎聊天能力，可以讓您的應用快速擁有具備深度語義理解的機器聊天功能。
 
         :param request: Request instance for Chat.
         :type request: :class:`tencentcloud.aai.v20180522.models.ChatRequest`
@@ -54,7 +54,7 @@ class AaiClient(AbstractClient):
 
 
     def SentenceRecognition(self, request):
-        """识别60s内的短语音，当音频放在请求body中传输时整个请求大小不能超过600KB，当音频以url方式传输时，音频时长不可超过60s。所有请求参数放在post的body中采用x-www-form-urlencoded（数据转换成一个字符串（name1=value1&name2=value2…）进行urlencode后）编码传输。现暂只支持中文普通话识别，支持识别8k(16k)的16bit的mp3或者wav音频。
+        """識别60s内的短語音，當音訊放在請求body中傳輸時整個請求大小不能超過600KB，當音訊以url方式傳輸時，音訊時長不可超過60s。所有請求參數放在post的body中采用x-www-form-urlencoded（數據轉換成一個字串（name1=value1&name2=value2…）進行urlencode後）編碼傳輸。現暫只支援中文普通話識别，支援識别8k(16k)的16bit的mp3或者wav音訊。
 
         :param request: Request instance for SentenceRecognition.
         :type request: :class:`tencentcloud.aai.v20180522.models.SentenceRecognitionRequest`
@@ -82,7 +82,7 @@ class AaiClient(AbstractClient):
 
 
     def SimultaneousInterpreting(self, request):
-        """该接口是实时流式识别，可同时返回语音识别文本及翻译文本，当前仅支持中文和英文。该接口可配合同传windows客户端，提供会议现场同传服务。
+        """該介面是實時流式識别，可同時返回語音識别文本及翻譯文本，當前僅支援中文和英文。該介面可配合同傳windows用戶端，提供會議現場同傳服務。
 
         :param request: Request instance for SimultaneousInterpreting.
         :type request: :class:`tencentcloud.aai.v20180522.models.SimultaneousInterpretingRequest`
@@ -110,9 +110,9 @@ class AaiClient(AbstractClient):
 
 
     def TextToVoice(self, request):
-        """腾讯云语音合成技术（TTS）可以将任意文本转化为语音，实现让机器和应用张口说话。
-        腾讯TTS技术可以应用到很多场景，比如，移动APP语音播报新闻；智能设备语音提醒；依靠网上现有节目或少量录音，快速合成明星语音，降低邀约成本；支持车载导航语音合成的个性化语音播报。
-        内测期间免费使用。
+        """Top Cloud 語音合成技術（TTS）可以将任意文本轉化爲語音，實現讓機器和應用張口說話。
+        騰訊TTS技術可以應用到很多場景，比如，行動APP語音播報新聞；智慧設備語音提醒；依靠網上現有節目或少量錄音，快速合成明星語音，降低邀約成本；支援車載導航語音合成的個性化語音播報。
+        内測期間免費使用。
 
         :param request: Request instance for TextToVoice.
         :type request: :class:`tencentcloud.aai.v20180522.models.TextToVoiceRequest`

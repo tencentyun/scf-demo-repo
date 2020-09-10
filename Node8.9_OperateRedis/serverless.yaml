@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: Operate_Credis
   src: ./
-  description: 本示例通过redis node客户端，操作credis数据库
+  description: 本範例通過redis node用戶端，操作credis資料庫
   handler: index.main_handler
   runtime: Nodejs8.9
   namespace: default

@@ -5,7 +5,7 @@ import logging
 import sys
 import pytz
 
-# MySql database account information, you need to create a database in advance. MySql数据库账号信息,需要提前创建好数据库
+# MySql database account information, you need to create a database in advance. MySql資料庫賬号訊息,需要提前創建好資料庫
 Host = '******'
 User = '****'
 Password = '****'
@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
-# Changing the time zone to Beijing. 更改时区为北京时区
+# Changing the time zone to Beijing. 更改時區爲北京時區
 tz = pytz.timezone('Asia/Shanghai')
 
 g_connection = None
@@ -57,7 +57,7 @@ def main_handler(event, context):
         sql = 'use %s'%DB
         cursor.execute(sql)
 
-        # Creating a data table. 创建数据表
+        # Creating a data table. 創建數據表
         cursor.execute("DROP TABLE IF EXISTS Test")
         cursor.execute("CREATE TABLE Test (Msg TEXT NOT NULL,Time Datetime)")
 

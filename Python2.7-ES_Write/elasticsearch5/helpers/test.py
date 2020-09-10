@@ -57,4 +57,3 @@ class ElasticsearchTestCase(TestCase):
             version_string = self.client.info()['version']['number']
             self._es_version = _get_version(version_string)
         return self._es_version
-

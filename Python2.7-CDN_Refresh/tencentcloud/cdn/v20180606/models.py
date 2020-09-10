@@ -17,7 +17,7 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AddCdnDomainRequest(AbstractModel):
-    """AddCdnDomain请求参数结构体
+    """AddCdnDomain請求參數結構體
 
     """
 
@@ -25,71 +25,71 @@ class AddCdnDomainRequest(AbstractModel):
         """
         :param Domain: 域名
         :type Domain: str
-        :param ServiceType: 加速域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速
+        :param ServiceType: 加速域名業務類型
+web：靜态加速
+download：下載加速
+media：流媒體點播加速
         :type ServiceType: str
         :param Origin: 源站配置
         :type Origin: :class:`tencentcloud.cdn.v20180606.models.Origin`
-        :param ProjectId: 项目 ID，默认为 0，代表【默认项目】
+        :param ProjectId: 項目 ID，預設爲 0，代表【預設項目】
         :type ProjectId: int
-        :param IpFilter: IP 黑白名单配置
+        :param IpFilter: IP 黑白名單配置
         :type IpFilter: :class:`tencentcloud.cdn.v20180606.models.IpFilter`
-        :param IpFreqLimit: IP 限频配置
+        :param IpFreqLimit: IP 限頻配置
         :type IpFreqLimit: :class:`tencentcloud.cdn.v20180606.models.IpFreqLimit`
-        :param StatusCodeCache: 状态码缓存配置
+        :param StatusCodeCache: 狀态碼快取配置
         :type StatusCodeCache: :class:`tencentcloud.cdn.v20180606.models.StatusCodeCache`
-        :param Compression: 智能压缩配置
+        :param Compression: 智慧壓縮配置
         :type Compression: :class:`tencentcloud.cdn.v20180606.models.Compression`
-        :param BandwidthAlert: 带宽封顶配置
+        :param BandwidthAlert: 頻寬封頂配置
         :type BandwidthAlert: :class:`tencentcloud.cdn.v20180606.models.BandwidthAlert`
         :param RangeOriginPull: Range 回源配置
         :type RangeOriginPull: :class:`tencentcloud.cdn.v20180606.models.RangeOriginPull`
         :param FollowRedirect: 301/302 回源跟随配置。
         :type FollowRedirect: :class:`tencentcloud.cdn.v20180606.models.FollowRedirect`
-        :param ErrorPage: 错误码重定向配置（功能灰度中，尚未全量）
+        :param ErrorPage: 錯誤碼重定向配置（功能灰度中，尚未全量）
         :type ErrorPage: :class:`tencentcloud.cdn.v20180606.models.ErrorPage`
-        :param RequestHeader: 请求头部配置
+        :param RequestHeader: 請求頭部配置
         :type RequestHeader: :class:`tencentcloud.cdn.v20180606.models.RequestHeader`
-        :param ResponseHeader: 响应头部配置
+        :param ResponseHeader: 響應頭部配置
         :type ResponseHeader: :class:`tencentcloud.cdn.v20180606.models.ResponseHeader`
-        :param DownstreamCapping: 下载速度配置
+        :param DownstreamCapping: 下載速度配置
         :type DownstreamCapping: :class:`tencentcloud.cdn.v20180606.models.DownstreamCapping`
-        :param CacheKey: 节点缓存键配置
+        :param CacheKey: 節點快取鍵配置
         :type CacheKey: :class:`tencentcloud.cdn.v20180606.models.CacheKey`
-        :param ResponseHeaderCache: 头部缓存配置
+        :param ResponseHeaderCache: 頭部快取配置
         :type ResponseHeaderCache: :class:`tencentcloud.cdn.v20180606.models.ResponseHeaderCache`
-        :param VideoSeek: 视频拖拽配置
+        :param VideoSeek: 視訊拖拽配置
         :type VideoSeek: :class:`tencentcloud.cdn.v20180606.models.VideoSeek`
-        :param Cache: 缓存过期时间配置
+        :param Cache: 快取過期時間配置
         :type Cache: :class:`tencentcloud.cdn.v20180606.models.Cache`
-        :param OriginPullOptimization: 跨国链路优化配置
+        :param OriginPullOptimization: 跨國鏈路優化配置
         :type OriginPullOptimization: :class:`tencentcloud.cdn.v20180606.models.OriginPullOptimization`
         :param Https: Https 加速配置
         :type Https: :class:`tencentcloud.cdn.v20180606.models.Https`
-        :param Authentication: 时间戳防盗链配置
+        :param Authentication: 時間戳防盜鏈配置
         :type Authentication: :class:`tencentcloud.cdn.v20180606.models.Authentication`
-        :param Seo: SEO 优化配置
+        :param Seo: SEO 優化配置
         :type Seo: :class:`tencentcloud.cdn.v20180606.models.Seo`
-        :param ForceRedirect: 访问协议强制跳转配置
+        :param ForceRedirect: 訪問協議強制跳轉配置
         :type ForceRedirect: :class:`tencentcloud.cdn.v20180606.models.ForceRedirect`
-        :param Referer: Referer 防盗链配置
+        :param Referer: Referer 防盜鏈配置
         :type Referer: :class:`tencentcloud.cdn.v20180606.models.Referer`
-        :param MaxAge: 浏览器缓存配置（功能灰度中，尚未全量）
+        :param MaxAge: 浏覽器快取配置（功能灰度中，尚未全量）
         :type MaxAge: :class:`tencentcloud.cdn.v20180606.models.MaxAge`
         :param Ipv6: Ipv6 配置（功能灰度中，尚未全量）
         :type Ipv6: :class:`tencentcloud.cdn.v20180606.models.Ipv6`
-        :param SpecificConfig: 地域属性特殊配置
-适用于域名境内加速、境外加速配置不一致场景
+        :param SpecificConfig: 地域屬性特殊配置
+适用于域名境内加速、境外加速配置不一緻場景
         :type SpecificConfig: :class:`tencentcloud.cdn.v20180606.models.SpecificConfig`
-        :param Area: 域名加速区域
-mainland：中国境内加速
-overseas：中国境外加速
+        :param Area: 域名加速區域
+mainland：中國境内加速
+overseas：中國境外加速
 global：全球加速
-使用中国境外加速、全球加速时，需要先开通中国境外加速服务
+使用中國境外加速、全球加速時，需要先開通中國境外加速服務
         :type Area: str
-        :param OriginPullTimeout: 回源超时配置
+        :param OriginPullTimeout: 回源超時配置
         :type OriginPullTimeout: :class:`tencentcloud.cdn.v20180606.models.OriginPullTimeout`
         """
         self.Domain = None
@@ -210,13 +210,13 @@ global：全球加速
 
 
 class AddCdnDomainResponse(AbstractModel):
-    """AddCdnDomain返回参数结构体
+    """AddCdnDomain返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -227,31 +227,31 @@ class AddCdnDomainResponse(AbstractModel):
 
 
 class AdvanceCacheRule(AbstractModel):
-    """缓存配置高级版本规则
+    """快取配置高級版本規則
 
     """
 
     def __init__(self):
         """
-        :param CacheType: 规则类型：
+        :param CacheType: 規則類型：
 all：所有文件生效
-file：指定文件后缀生效
-directory：指定路径生效
-path：指定绝对路径生效
-default：源站未返回 max-age 情况下的缓存规则
-注意：此字段可能返回 null，表示取不到有效值。
+file：指定文件後綴生效
+directory：指定路徑生效
+path：指定絕對路徑生效
+default：源站未返回 max-age 情況下的快取規則
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CacheType: str
-        :param CacheContents: 对应类型下的匹配内容：
-all 时填充 *
-file 时填充后缀名，如 jpg、txt
-directory 时填充路径，如 /xxx/test/
-path 时填充绝对路径，如 /xxx/test.html
-default 时填充 "no max-age"
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CacheContents: 對應類型下的比對内容：
+all 時填充 *
+file 時填充後綴名，如 jpg、txt
+directory 時填充路徑，如 /xxx/test/
+path 時填充絕對路徑，如 /xxx/test.html
+default 時填充 "no max-age"
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CacheContents: list of str
-        :param CacheTime: 缓存过期时间
-单位为秒，最大可设置为 365 天
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CacheTime: 快取過期時間
+單位爲秒，最大可設置爲 365 天
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CacheTime: int
         """
         self.CacheType = None
@@ -266,28 +266,28 @@ default 时填充 "no max-age"
 
 
 class AdvancedCache(AbstractModel):
-    """缓存过期配置高级版（功能灰度中，尚未全量）
-    注意：该版本不支持设置首页缓存规则
+    """快取過期配置高級版（功能灰度中，尚未全量）
+    注意：該版本不支援設置首頁快取規則
 
     """
 
     def __init__(self):
         """
-        :param CacheRules: 缓存过期规则
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CacheRules: 快取過期規則
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CacheRules: list of AdvanceCacheRule
-        :param IgnoreCacheControl: 强制缓存配置
-on：开启
-off：关闭
-开启时，源站返回 no-cache、no-store 头部时，仍按照缓存过期规则进行节点缓存
-默认为关闭状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IgnoreCacheControl: 強制快取配置
+on：開啓
+off：關閉
+開啓時，源站返回 no-cache、no-store 頭部時，仍按照快取過期規則進行節點快取
+預設爲關閉狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IgnoreCacheControl: str
-        :param IgnoreSetCookie: 忽略源站的 Set-Cookie 头部
-on：开启
-off：关闭
-默认为关闭状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IgnoreSetCookie: 忽略源站的 Set-Cookie 頭部
+on：開啓
+off：關閉
+預設爲關閉狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IgnoreSetCookie: str
         """
         self.CacheRules = None
@@ -307,28 +307,28 @@ off：关闭
 
 
 class Authentication(AbstractModel):
-    """时间戳防盗链配置
+    """時間戳防盜鏈配置
 
     """
 
     def __init__(self):
         """
-        :param Switch: 防盗链配置开关
-on：开启
-off：关闭
-开启时必须且只配置一种模式，其余模式需要设置为 null
+        :param Switch: 防盜鏈配置開關
+on：開啓
+off：關閉
+開啓時必須且只配置一種模式，其餘模式需要設置爲 null
         :type Switch: str
-        :param TypeA: 时间戳防盗链模式 A 配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TypeA: 時間戳防盜鏈模式 A 配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TypeA: :class:`tencentcloud.cdn.v20180606.models.AuthenticationTypeA`
-        :param TypeB: 时间戳防盗链模式 B 配置（模式 B 后台升级中，暂时不支持配置）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TypeB: 時間戳防盜鏈模式 B 配置（模式 B 後台升級中，暫時不支援配置）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TypeB: :class:`tencentcloud.cdn.v20180606.models.AuthenticationTypeB`
-        :param TypeC: 时间戳防盗链模式 C 配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TypeC: 時間戳防盜鏈模式 C 配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TypeC: :class:`tencentcloud.cdn.v20180606.models.AuthenticationTypeC`
-        :param TypeD: 时间戳防盗链模式 D 配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TypeD: 時間戳防盜鏈模式 D 配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TypeD: :class:`tencentcloud.cdn.v20180606.models.AuthenticationTypeD`
         """
         self.Switch = None
@@ -355,32 +355,32 @@ off：关闭
 
 
 class AuthenticationTypeA(AbstractModel):
-    """时间戳防盗链模式 A 配置
-    时间戳防盗链模式 A 的访问 URL 格式为：http://DomainName/Filename?sign=timestamp-rand-uid-md5hash
-    其中 timestamp 为十进制 UNIX 时间戳；
-    rand 为随机字符串，0 ~ 100 位大小写字母与数字组成；
-    uid 为 0；
-    md5hash：MD5（文件路径-timestamp-rand-uid-自定义密钥）
+    """時間戳防盜鏈模式 A 配置
+    時間戳防盜鏈模式 A 的訪問 URL 格式爲：http://DomainName/Filename?sign=timestamp-rand-uid-md5hash
+    其中 timestamp 爲十進制 UNIX 時間戳；
+    rand 爲随機字串，0 ~ 100 位大小寫字母與數字組成；
+    uid 爲 0；
+    md5hash：MD5（文件路徑-timestamp-rand-uid-自定義金鑰）
 
     """
 
     def __init__(self):
         """
-        :param SecretKey: 计算签名的密钥
-仅允许大小写字母与数字，长度 6~32 位
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SecretKey: 計算簽名的金鑰
+僅允許大小寫字母與數字，長度 6~32 位
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SecretKey: str
-        :param SignParam: 签名参数名设置
-仅允许大小写字母、数字或下划线，长度 1~100 位，不能以数字开头
+        :param SignParam: 簽名參數名設置
+僅允許大小寫字母、數字或下劃線，長度 1~100 位，不能以數字開頭
         :type SignParam: str
-        :param ExpireTime: 签名过期时间设置
-单位为秒，最大可设置为 31536000
+        :param ExpireTime: 簽名過期時間設置
+單位爲秒，最大可設置爲 31536000
         :type ExpireTime: int
-        :param FileExtensions: 鉴权/不做鉴权的文件扩展名列表设置
-如果包含字符 *  则表示所有文件
+        :param FileExtensions: 鑒權/不做鑒權的文件擴展名清單設置
+如果包含字元 *  則表示所有文件
         :type FileExtensions: list of str
-        :param FilterType: whitelist：白名单，表示对除了 FileExtensions 列表之外的所有类型进行鉴权
-blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
+        :param FilterType: whitelist：白名單，表示對除了 FileExtensions 清單之外的所有類型進行鑒權
+blacklist：黑名單，表示僅對 FileExtensions 中的類型進行鑒權
         :type FilterType: str
         """
         self.SecretKey = None
@@ -399,24 +399,24 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
 
 
 class AuthenticationTypeB(AbstractModel):
-    """时间戳防盗链模式 B 配置（B 模式正在进行平台升级，暂不支持配置）
+    """時間戳防盜鏈模式 B 配置（B 模式正在進行平台升級，暫不支援配置）
 
     """
 
     def __init__(self):
         """
-        :param SecretKey: 计算签名的密钥
-仅允许大小写字母与数字，长度 6~32 位
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SecretKey: 計算簽名的金鑰
+僅允許大小寫字母與數字，長度 6~32 位
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SecretKey: str
-        :param ExpireTime: 签名过期时间设置
-单位为秒，最大可设置为 31536000
+        :param ExpireTime: 簽名過期時間設置
+單位爲秒，最大可設置爲 31536000
         :type ExpireTime: int
-        :param FileExtensions: 鉴权/不做鉴权的文件扩展名列表设置
-如果包含字符 *  则表示所有文件
+        :param FileExtensions: 鑒權/不做鑒權的文件擴展名清單設置
+如果包含字元 *  則表示所有文件
         :type FileExtensions: list of str
-        :param FilterType: whitelist：白名单，表示对除了 FileExtensions 列表之外的所有类型进行鉴权
-blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
+        :param FilterType: whitelist：白名單，表示對除了 FileExtensions 清單之外的所有類型進行鑒權
+blacklist：黑名單，表示僅對 FileExtensions 中的類型進行鑒權
         :type FilterType: str
         """
         self.SecretKey = None
@@ -433,27 +433,27 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
 
 
 class AuthenticationTypeC(AbstractModel):
-    """时间戳防盗链模式 C 配置
-    时间戳防盗链模式 C 的访问 URL 格式为：http://DomainName/md5hash/timestamp/FileName
-    其中 timestamp 为十六进制 UNIX 时间戳；
-    md5hash：MD5（自定义密钥 + 文件路径 + timestamp）
+    """時間戳防盜鏈模式 C 配置
+    時間戳防盜鏈模式 C 的訪問 URL 格式爲：http://DomainName/md5hash/timestamp/FileName
+    其中 timestamp 爲十六進制 UNIX 時間戳；
+    md5hash：MD5（自定義金鑰 + 文件路徑 + timestamp）
 
     """
 
     def __init__(self):
         """
-        :param SecretKey: 计算签名的密钥
-仅允许大小写字母与数字，长度 6~32 位
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SecretKey: 計算簽名的金鑰
+僅允許大小寫字母與數字，長度 6~32 位
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SecretKey: str
-        :param ExpireTime: 签名过期时间设置
-单位为秒，最大可设置为 31536000
+        :param ExpireTime: 簽名過期時間設置
+單位爲秒，最大可設置爲 31536000
         :type ExpireTime: int
-        :param FileExtensions: 鉴权/不做鉴权的文件扩展名列表设置
-如果包含字符 *  则表示所有文件
+        :param FileExtensions: 鑒權/不做鑒權的文件擴展名清單設置
+如果包含字元 *  則表示所有文件
         :type FileExtensions: list of str
-        :param FilterType: whitelist：白名单，表示对除了 FileExtensions 列表之外的所有类型进行鉴权
-blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
+        :param FilterType: whitelist：白名單，表示對除了 FileExtensions 清單之外的所有類型進行鑒權
+blacklist：黑名單，表示僅對 FileExtensions 中的類型進行鑒權
         :type FilterType: str
         """
         self.SecretKey = None
@@ -470,37 +470,37 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
 
 
 class AuthenticationTypeD(AbstractModel):
-    """时间戳防盗链模式 D 配置
-    时间戳防盗链模式 D 的访问 URL 格式为：http://DomainName/FileName?sign=md5hash&t=timestamp
-    其中 timestamp 为十进制或十六进制 UNIX 时间戳；
-    md5hash：MD5（自定义密钥 + 文件路径 + timestamp）
+    """時間戳防盜鏈模式 D 配置
+    時間戳防盜鏈模式 D 的訪問 URL 格式爲：http://DomainName/FileName?sign=md5hash&t=timestamp
+    其中 timestamp 爲十進制或十六進制 UNIX 時間戳；
+    md5hash：MD5（自定義金鑰 + 文件路徑 + timestamp）
 
     """
 
     def __init__(self):
         """
-        :param SecretKey: 计算签名的密钥
-仅允许大小写字母与数字，长度 6~32 位
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SecretKey: 計算簽名的金鑰
+僅允許大小寫字母與數字，長度 6~32 位
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SecretKey: str
-        :param ExpireTime: 签名过期时间设置
-单位为秒，最大可设置为 31536000
+        :param ExpireTime: 簽名過期時間設置
+單位爲秒，最大可設置爲 31536000
         :type ExpireTime: int
-        :param FileExtensions: 鉴权/不做鉴权的文件扩展名列表设置
-如果包含字符 *  则表示所有文件
+        :param FileExtensions: 鑒權/不做鑒權的文件擴展名清單設置
+如果包含字元 *  則表示所有文件
         :type FileExtensions: list of str
-        :param FilterType: whitelist：白名单，表示对除了 FileExtensions 列表之外的所有类型进行鉴权
-blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
+        :param FilterType: whitelist：白名單，表示對除了 FileExtensions 清單之外的所有類型進行鑒權
+blacklist：黑名單，表示僅對 FileExtensions 中的類型進行鑒權
         :type FilterType: str
-        :param SignParam: 签名参数名设置
-仅允许大小写字母、数字或下划线，长度 1~100 位，不能以数字开头
+        :param SignParam: 簽名參數名設置
+僅允許大小寫字母、數字或下劃線，長度 1~100 位，不能以數字開頭
         :type SignParam: str
-        :param TimeParam: 时间戳参数名设置
-仅允许大小写字母、数字或下划线，长度 1~100 位，不能以数字开头
+        :param TimeParam: 時間戳參數名設置
+僅允許大小寫字母、數字或下劃線，長度 1~100 位，不能以數字開頭
         :type TimeParam: str
-        :param TimeFormat: 时间戳进制设置
-dec：十进制
-hex：十六进制
+        :param TimeFormat: 時間戳進制設置
+dec：十進制
+hex：十六進制
         :type TimeFormat: str
         """
         self.SecretKey = None
@@ -523,19 +523,19 @@ hex：十六进制
 
 
 class AwsPrivateAccess(AbstractModel):
-    """s3源站回源鉴权。
+    """s3源站回源鑒權。
 
     """
 
     def __init__(self):
         """
-        :param Switch: 开关，on/off。
+        :param Switch: 開關，on/off。
         :type Switch: str
-        :param AccessKey: 访问ID。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AccessKey: 訪問ID。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AccessKey: str
-        :param SecretKey: 密钥。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SecretKey: 金鑰。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SecretKey: str
         """
         self.Switch = None
@@ -550,26 +550,26 @@ class AwsPrivateAccess(AbstractModel):
 
 
 class BandwidthAlert(AbstractModel):
-    """带宽封顶配置，默认为关闭状态
+    """頻寬封頂配置，預設爲關閉狀态
 
     """
 
     def __init__(self):
         """
-        :param Switch: 带宽封顶配置开关
-on：开启
-off：关闭
+        :param Switch: 頻寬封頂配置開關
+on：開啓
+off：關閉
         :type Switch: str
-        :param BpsThreshold: 带宽封顶阈值，单位为bps
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BpsThreshold: 頻寬封頂阈值，單位爲bps
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BpsThreshold: int
-        :param CounterMeasure: 达到阈值后的操作
-RESOLVE_DNS_TO_ORIGIN：直接回源，仅自有源站域名支持
-RETURN_404：全部请求返回 404
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CounterMeasure: 達到阈值後的操作
+RESOLVE_DNS_TO_ORIGIN：直接回源，僅自有源站域名支援
+RETURN_404：全部請求返回 404
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CounterMeasure: str
-        :param LastTriggerTime: 上次触发带宽封顶阈值的时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LastTriggerTime: 上次觸發頻寬封頂阈值的時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LastTriggerTime: str
         """
         self.Switch = None
@@ -586,7 +586,7 @@ RETURN_404：全部请求返回 404
 
 
 class BriefDomain(AbstractModel):
-    """域名基础配置信息，含 CNAME、状态、业务类型、加速区域、创建时间、更新时间、源站配置等。
+    """域名基礎配置訊息，含 CNAME、狀态、業務類型、加速區域、創建時間、更新時間、源站配置等。
 
     """
 
@@ -594,51 +594,51 @@ class BriefDomain(AbstractModel):
         """
         :param ResourceId: 域名 ID
         :type ResourceId: str
-        :param AppId: 腾讯云账号 ID
+        :param AppId: Top Cloud 賬号 ID
         :type AppId: int
         :param Domain: 加速域名
         :type Domain: str
-        :param Cname: 域名对应的 CNAME 地址
+        :param Cname: 域名對應的 CNAME 網址
         :type Cname: str
-        :param Status: 加速服务状态
-rejected：域名审核未通过，域名备案过期/被注销导致
+        :param Status: 加速服務狀态
+rejected：域名審核未通過，域名備案過期/被注銷導緻
 processing：部署中
-online：已启动
-offline：已关闭
+online：已啓動
+offline：已關閉
         :type Status: str
-        :param ProjectId: 项目 ID，可前往腾讯云项目管理页面查看
+        :param ProjectId: 項目 ID，可前往Top Cloud 項目管理頁面檢視
         :type ProjectId: int
-        :param ServiceType: 域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速
+        :param ServiceType: 域名業務類型
+web：靜态加速
+download：下載加速
+media：流媒體點播加速
         :type ServiceType: str
-        :param CreateTime: 域名创建时间
+        :param CreateTime: 域名創建時間
         :type CreateTime: str
-        :param UpdateTime: 域名更新时间
+        :param UpdateTime: 域名更新時間
         :type UpdateTime: str
-        :param Origin: 源站配置详情
+        :param Origin: 源站配置詳情
         :type Origin: :class:`tencentcloud.cdn.v20180606.models.Origin`
-        :param Disable: 域名封禁状态
-normal：正常状态
-overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
-malicious：域名出现恶意行为，强制关闭加速服务
-ddos：域名被大规模 DDoS 攻击，关闭加速服务
-idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
-unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
-capping：触发配置的带宽阈值上限
-readonly：域名存在特殊配置，被锁定
+        :param Disable: 域名封禁狀态
+normal：正常狀态
+overdue：賬号欠費導緻域名關閉，儲值完成後可自行啓動加速服務
+malicious：域名出現惡意行爲，強制關閉加速服務
+ddos：域名被大規模 DDoS 攻擊，關閉加速服務
+idle：域名超過 90 天内無任何操作、數據産生，判定爲不活躍域名自動關閉加速服務，可自行啓動加速服務
+unlicensed：域名未備案/備案注銷，自動關閉加速服務，備案完成後可自行啓動加速服務
+capping：觸發配置的頻寬阈值上限
+readonly：域名存在特殊配置，被鎖定
         :type Disable: str
-        :param Area: 加速区域
-mainland：中国境内加速
-overseas：中国境外加速
+        :param Area: 加速區域
+mainland：中國境内加速
+overseas：中國境外加速
 global：全球加速
         :type Area: str
-        :param Readonly: 域名锁定状态
-normal：未锁定
-mainland：中国境内锁定
-overseas：中国境外锁定
-global：全球锁定
+        :param Readonly: 域名鎖定狀态
+normal：未鎖定
+mainland：中國境内鎖定
+overseas：中國境外鎖定
+global：全球鎖定
         :type Readonly: str
         """
         self.ResourceId = None
@@ -675,19 +675,19 @@ global：全球锁定
 
 
 class Cache(AbstractModel):
-    """节点缓存过期时间配置，分为以下两种：
-    + 基础版缓存过期规则配置
-    + 高级版缓存过期规则配置
+    """節點快取過期時間配置，分爲以下兩種：
+    + 基礎版快取過期規則配置
+    + 高級版快取過期規則配置
 
     """
 
     def __init__(self):
         """
-        :param SimpleCache: 基础缓存过期时间配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SimpleCache: 基礎快取過期時間配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SimpleCache: :class:`tencentcloud.cdn.v20180606.models.SimpleCache`
-        :param AdvancedCache: 高级缓存过期时间配置（功能灰度中，尚未全量）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AdvancedCache: 高級快取過期時間配置（功能灰度中，尚未全量）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AdvancedCache: :class:`tencentcloud.cdn.v20180606.models.AdvancedCache`
         """
         self.SimpleCache = None
@@ -704,15 +704,15 @@ class Cache(AbstractModel):
 
 
 class CacheKey(AbstractModel):
-    """缓存键配置（过滤参数配置）
+    """快取鍵配置（過濾參數配置）
 
     """
 
     def __init__(self):
         """
-        :param FullUrlCache: 是否开启全路径缓存
-on：开启全路径缓存（即关闭参数过滤）
-off：关闭全路径缓存（即开启参数过滤）
+        :param FullUrlCache: 是否開啓全路徑快取
+on：開啓全路徑快取（即關閉參數過濾）
+off：關閉全路徑快取（即開啓參數過濾）
         :type FullUrlCache: str
         """
         self.FullUrlCache = None
@@ -723,17 +723,17 @@ off：关闭全路径缓存（即开启参数过滤）
 
 
 class CacheOptResult(AbstractModel):
-    """违规资源封禁/解封返回类型
+    """違規資源封禁/解封返回類型
 
     """
 
     def __init__(self):
         """
-        :param SuccessUrls: 成功的url列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SuccessUrls: 成功的url清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SuccessUrls: list of str
-        :param FailUrls: 失败的url列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FailUrls: 失敗的url清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FailUrls: list of str
         """
         self.SuccessUrls = None
@@ -746,25 +746,25 @@ class CacheOptResult(AbstractModel):
 
 
 class CappingRule(AbstractModel):
-    """下行限速配置规则，最多可配置 100 条
+    """下行限速配置規則，最多可配置 100 條
 
     """
 
     def __init__(self):
         """
-        :param RuleType: 规则类型：
+        :param RuleType: 規則類型：
 all：所有文件生效
-file：指定文件后缀生效
-directory：指定路径生效
-path：指定绝对路径生效
+file：指定文件後綴生效
+directory：指定路徑生效
+path：指定絕對路徑生效
         :type RuleType: str
-        :param RulePaths: RuleType 对应类型下的匹配内容： 
-all 时填充 *
-file 时填充后缀名，如 jpg、txt
-directory 时填充路径，如 /xxx/test/
-path 时填充绝对路径，如 /xxx/test.html
+        :param RulePaths: RuleType 對應類型下的比對内容： 
+all 時填充 *
+file 時填充後綴名，如 jpg、txt
+directory 時填充路徑，如 /xxx/test/
+path 時填充絕對路徑，如 /xxx/test.html
         :type RulePaths: list of str
-        :param KBpsThreshold: 下行速度值设置，单位为 KB/s
+        :param KBpsThreshold: 下行速度值設置，單位爲 KB/s
         :type KBpsThreshold: int
         """
         self.RuleType = None
@@ -779,27 +779,27 @@ path 时填充绝对路径，如 /xxx/test.html
 
 
 class CdnData(AbstractModel):
-    """访问明细数据类型
+    """訪問明細數據類型
 
     """
 
     def __init__(self):
         """
-        :param Metric: 查询指定的指标名称：
-flux：流量，单位为 byte
-bandwidth：带宽，单位为 bps
-request：请求数，单位为 次
-fluxHitRate：流量命中率，单位为 %
-statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 个
-2XX：返回 2XX 状态码汇总及各 2 开头状态码数据，单位为 个
-3XX：返回 3XX 状态码汇总及各 3 开头状态码数据，单位为 个
-4XX：返回 4XX 状态码汇总及各 4 开头状态码数据，单位为 个
-5XX：返回 5XX 状态码汇总及各 5 开头状态码数据，单位为 个
-或指定查询的某一具体状态码
+        :param Metric: 查詢指定的指标名稱：
+flux：流量，單位爲 byte
+bandwidth：頻寬，單位爲 bps
+request：請求數，單位爲 次
+fluxHitRate：流量命中率，單位爲 %
+statusCode：狀态碼，返回 2XX、3XX、4XX、5XX 匯總數據，單位爲 個
+2XX：返回 2XX 狀态碼匯總及各 2 開頭狀态碼數據，單位爲 個
+3XX：返回 3XX 狀态碼匯總及各 3 開頭狀态碼數據，單位爲 個
+4XX：返回 4XX 狀态碼匯總及各 4 開頭狀态碼數據，單位爲 個
+5XX：返回 5XX 狀态碼匯總及各 5 開頭狀态碼數據，單位爲 個
+或指定查詢的某一具體狀态碼
         :type Metric: str
-        :param DetailData: 明细数据组合
+        :param DetailData: 明細數據組合
         :type DetailData: list of TimestampData
-        :param SummarizedData: 汇总数据组合
+        :param SummarizedData: 匯總數據組合
         :type SummarizedData: :class:`tencentcloud.cdn.v20180606.models.SummarizedData`
         """
         self.Metric = None
@@ -821,27 +821,27 @@ statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 �
 
 
 class CdnIp(AbstractModel):
-    """IP 属性信息
+    """IP 屬性訊息
 
     """
 
     def __init__(self):
         """
-        :param Ip: 指定查询的 IP
+        :param Ip: 指定查詢的 IP
         :type Ip: str
-        :param Platform: IP 归属：
-yes：节点归属于腾讯云 CDN
-no：节点不属于腾讯云 CDN
+        :param Platform: IP 歸屬：
+yes：節點歸屬于Top Cloud  CDN
+no：節點不屬于Top Cloud  CDN
         :type Platform: str
-        :param Location: 节点所处的省份/国家
-unknown 表示节点位置未知
+        :param Location: 節點所處的省份/國家
+unknown 表示節點位置未知
         :type Location: str
-        :param History: 节点上下线历史记录
+        :param History: 節點上下線曆史記錄
         :type History: list of CdnIpHistory
-        :param Area: 节点的所在区域
-mainland：中国境内加速节点
-overseas：中国境外加速节点
-unknown：服务地域无法获取
+        :param Area: 節點的所在區域
+mainland：中國境内加速節點
+overseas：中國境外加速節點
+unknown：服務地域無法獲取
         :type Area: str
         """
         self.Ip = None
@@ -865,19 +865,19 @@ unknown：服务地域无法获取
 
 
 class CdnIpHistory(AbstractModel):
-    """CDN 节点上下线历史记录
+    """CDN 節點上下線曆史記錄
 
     """
 
     def __init__(self):
         """
-        :param Status: 操作类型
-online：节点上线
-offline：节点下线
+        :param Status: 操作類型
+online：節點上線
+offline：節點下線
         :type Status: str
-        :param Datetime: 操作类型对应的操作时间
-当该值为 null 时表示无历史状态变更记录
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Datetime: 操作類型對應的操作時間
+當該值爲 null 時表示無曆史狀态變更記錄
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Datetime: str
         """
         self.Status = None
@@ -890,26 +890,26 @@ offline：节点下线
 
 
 class ClientCert(AbstractModel):
-    """https 客户端证书配置
+    """https 用戶端證書配置
 
     """
 
     def __init__(self):
         """
-        :param Certificate: 客户端证书
-PEM 格式，需要进行 Base 64 编码
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Certificate: 用戶端證書
+PEM 格式，需要進行 Base 64 編碼
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Certificate: str
-        :param CertName: 客户端证书名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CertName: 用戶端證書名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CertName: str
-        :param ExpireTime: 证书过期时间
-作为入参时无需填充
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ExpireTime: 證書過期時間
+作爲入參時無需填充
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ExpireTime: str
-        :param DeployTime: 证书颁发时间
-作为入参时无需填充
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DeployTime: 證書頒發時間
+作爲入參時無需填充
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeployTime: str
         """
         self.Certificate = None
@@ -926,23 +926,23 @@ PEM 格式，需要进行 Base 64 编码
 
 
 class ClsLogObject(AbstractModel):
-    """CLS日志搜索对象
+    """CLS日志搜索對象
 
     """
 
     def __init__(self):
         """
-        :param TopicId: 主题ID
+        :param TopicId: 主題ID
         :type TopicId: str
-        :param TopicName: 主题名字
+        :param TopicName: 主題名字
         :type TopicName: str
-        :param Timestamp: 日志时间
+        :param Timestamp: 日志時間
         :type Timestamp: str
         :param Content: 日志内容
         :type Content: str
-        :param Filename: 采集路径
+        :param Filename: 采集路徑
         :type Filename: str
-        :param Source: 日志来源设备
+        :param Source: 日志來源設備
         :type Source: str
         """
         self.TopicId = None
@@ -963,17 +963,17 @@ class ClsLogObject(AbstractModel):
 
 
 class ClsSearchLogs(AbstractModel):
-    """Cls日志搜索结果
+    """Cls日志搜索結果
 
     """
 
     def __init__(self):
         """
-        :param Context: 获取更多检索结果的游标
+        :param Context: 獲取更多檢索結果的遊标
         :type Context: str
-        :param Listover: 搜索结果是否已经全部返回
+        :param Listover: 搜索結果是否已經全部返回
         :type Listover: bool
-        :param Results: 日志内容信息
+        :param Results: 日志内容訊息
         :type Results: list of ClsLogObject
         """
         self.Context = None
@@ -993,14 +993,14 @@ class ClsSearchLogs(AbstractModel):
 
 
 class Compatibility(AbstractModel):
-    """是否兼容旧版配置
+    """是否兼容舊版配置
 
     """
 
     def __init__(self):
         """
-        :param Code: 兼容标志状态码。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Code: 兼容标志狀态碼。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Code: int
         """
         self.Code = None
@@ -1011,18 +1011,18 @@ class Compatibility(AbstractModel):
 
 
 class Compression(AbstractModel):
-    """智能压缩配置，默认对 js、html、css、xml、json、shtml、htm 后缀且大小为 256 ~ 2097152 字节的文件进行 GZIP 压缩
+    """智慧壓縮配置，預設對 js、html、css、xml、json、shtml、htm 後綴且大小爲 256 ~ 2097152 位元的文件進行 GZIP 壓縮
 
     """
 
     def __init__(self):
         """
-        :param Switch: 智能压缩配置开关
-on：开启
-off：关闭
+        :param Switch: 智慧壓縮配置開關
+on：開啓
+off：關閉
         :type Switch: str
-        :param CompressionRules: 压缩规则数组
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CompressionRules: 壓縮規則數組
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CompressionRules: list of CompressionRule
         """
         self.Switch = None
@@ -1040,30 +1040,30 @@ off：关闭
 
 
 class CompressionRule(AbstractModel):
-    """压缩规则配置，最多可设置 100 条
+    """壓縮規則配置，最多可設置 100 條
 
     """
 
     def __init__(self):
         """
-        :param Compress: true：需要设置为 ture，启用压缩
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Compress: true：需要設置爲 ture，啓用壓縮
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Compress: bool
-        :param FileExtensions: 根据文件后缀类型压缩
+        :param FileExtensions: 根據文件後綴類型壓縮
 例如 jpg、txt
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FileExtensions: list of str
-        :param MinLength: 触发压缩的文件长度最小值，单位为字节数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MinLength: 觸發壓縮的文件長度最小值，單位爲位元數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MinLength: int
-        :param MaxLength: 触发压缩的文件长度最大值，单位为字节数
-最大可设置为 30MB
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MaxLength: 觸發壓縮的文件長度最大值，單位爲位元數
+最大可設置爲 30MB
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxLength: int
-        :param Algorithms: 文件压缩算法
-gzip：指定 GZIP 压缩
-brotli：需要同时指定 GZIP 压缩才可启用
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Algorithms: 文件壓縮算法
+gzip：指定 GZIP 壓縮
+brotli：需要同時指定 GZIP 壓縮才可啓用
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Algorithms: list of str
         """
         self.Compress = None
@@ -1082,19 +1082,19 @@ brotli：需要同时指定 GZIP 压缩才可启用
 
 
 class CreateClsLogTopicRequest(AbstractModel):
-    """CreateClsLogTopic请求参数结构体
+    """CreateClsLogTopic請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TopicName: 日志主题名称
+        :param TopicName: 日志主題名稱
         :type TopicName: str
         :param LogsetId: 日志集ID
         :type LogsetId: str
-        :param Channel: 接入渠道，默认值为cdn
+        :param Channel: 接入管道，預設值爲cdn
         :type Channel: str
-        :param DomainAreaConfigs: 域名区域信息
+        :param DomainAreaConfigs: 域名區域訊息
         :type DomainAreaConfigs: list of DomainAreaConfig
         """
         self.TopicName = None
@@ -1116,13 +1116,13 @@ class CreateClsLogTopicRequest(AbstractModel):
 
 
 class CreateClsLogTopicResponse(AbstractModel):
-    """CreateClsLogTopic返回参数结构体
+    """CreateClsLogTopic返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1133,14 +1133,14 @@ class CreateClsLogTopicResponse(AbstractModel):
 
 
 class DeleteCdnDomainRequest(AbstractModel):
-    """DeleteCdnDomain请求参数结构体
+    """DeleteCdnDomain請求參數結構體
 
     """
 
     def __init__(self):
         """
         :param Domain: 域名
-域名状态需要为【已停用】
+域名狀态需要爲【已停用】
         :type Domain: str
         """
         self.Domain = None
@@ -1151,13 +1151,13 @@ class DeleteCdnDomainRequest(AbstractModel):
 
 
 class DeleteCdnDomainResponse(AbstractModel):
-    """DeleteCdnDomain返回参数结构体
+    """DeleteCdnDomain返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1168,17 +1168,17 @@ class DeleteCdnDomainResponse(AbstractModel):
 
 
 class DeleteClsLogTopicRequest(AbstractModel):
-    """DeleteClsLogTopic请求参数结构体
+    """DeleteClsLogTopic請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TopicId: 日志主题ID
+        :param TopicId: 日志主題ID
         :type TopicId: str
         :param LogsetId: 日志集ID
         :type LogsetId: str
-        :param Channel: 接入渠道，默认值为cdn
+        :param Channel: 接入管道，預設值爲cdn
         :type Channel: str
         """
         self.TopicId = None
@@ -1193,13 +1193,13 @@ class DeleteClsLogTopicRequest(AbstractModel):
 
 
 class DeleteClsLogTopicResponse(AbstractModel):
-    """DeleteClsLogTopic返回参数结构体
+    """DeleteClsLogTopic返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1210,46 +1210,46 @@ class DeleteClsLogTopicResponse(AbstractModel):
 
 
 class DescribeBillingDataRequest(AbstractModel):
-    """DescribeBillingData请求参数结构体
+    """DescribeBillingData請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
-根据指定时间粒度参数不同，会进行向前取整，如指定起始时间为 2018-09-04 10:40:00 按小时粒度查询，返回的第一个数据对应时间点为 2018-09-04 10:00:00
-起始时间与结束时间间隔小于等于 90 天
+        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:00，返回結果大于等于指定時間
+根據指定時間粒度參數不同，會進行向前取整，如指定起始時間爲 2018-09-04 10:40:00 按小時粒度查詢，返回的第一個數據對應時間點爲 2018-09-04 10:00:00
+起始時間與結束時間間隔小於等于 90 天
         :type StartTime: str
-        :param EndTime: 查询结束时间，如：2018-09-04 10:40:00，返回结果小于等于指定时间
-根据指定时间粒度参数不同，会进行向前取整，如指定结束时间为  2018-09-04 10:40:00 按小时粒度查询时，返回的最后一个数据对应时间点为 2018-09-04 10:00:00
-起始时间与结束时间间隔小于等于 90 天
+        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:00，返回結果小於等于指定時間
+根據指定時間粒度參數不同，會進行向前取整，如指定結束時間爲  2018-09-04 10:40:00 按小時粒度查詢時，返回的最後一個數據對應時間點爲 2018-09-04 10:00:00
+起始時間與結束時間間隔小於等于 90 天
         :type EndTime: str
-        :param Interval: 时间粒度，支持模式如下：
-min：1 分钟粒度，查询区间需要小于等于 24 小时
-5min：5 分钟粒度，查询区间需要小于等于 31 天
-hour：1 小时粒度，查询区间需要小于等于 31 天内
-day：天粒度，查询区间需要大于 31 天
+        :param Interval: 時間粒度，支援模式如下：
+min：1 分鍾粒度，查詢區間需要小於等于 24 小時
+5min：5 分鍾粒度，查詢區間需要小於等于 31 天
+hour：1 小時粒度，查詢區間需要小於等于 31 天内
+day：天粒度，查詢區間需要大于 31 天
 
-Area 字段为 overseas 时暂不支持1分钟粒度数据查询
+Area 欄位爲 overseas 時暫不支援1分鍾粒度數據查詢
         :type Interval: str
-        :param Domain: 指定域名查询计费数据
+        :param Domain: 指定域名查詢計費數據
         :type Domain: str
-        :param Project: 指定项目 ID 查询，[前往查看项目 ID](https://console.cloud.tencent.com/project)
-若 Domain 参数填充了具体域名信息，则返回该域名的计费数据，而非指定项目计费数据
+        :param Project: 指定項目 ID 查詢，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+若 Domain 參數填充了具體域名訊息，則返回該域名的計費數據，而非指定項目計費數據
         :type Project: int
-        :param Area: 指定加速区域查询计费数据：
-mainland：中国境内
-overseas：中国境外
-不填充时，默认为 mainland
+        :param Area: 指定加速區域查詢計費數據：
+mainland：中國境内
+overseas：中國境外
+不填充時，預設爲 mainland
         :type Area: str
-        :param District: Area 为 overseas 时，指定国家/地区查询
-省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
-不填充时，查询所有国家/地区
+        :param District: Area 爲 overseas 時，指定國家/地區查詢
+省份、國家/地區編碼可以檢視 [省份編碼映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+不填充時，查詢所有國家/地區
         :type District: int
-        :param Metric: 计费统计类型
-flux：计费流量
-bandwidth：计费带宽
-默认为 bandwidth
+        :param Metric: 計費統計類型
+flux：計費流量
+bandwidth：計費頻寬
+預設爲 bandwidth
         :type Metric: str
         """
         self.StartTime = None
@@ -1274,21 +1274,21 @@ bandwidth：计费带宽
 
 
 class DescribeBillingDataResponse(AbstractModel):
-    """DescribeBillingData返回参数结构体
+    """DescribeBillingData返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Interval: 时间粒度，根据查询时传递参数指定：
-min：1 分钟粒度
-5min：5 分钟粒度
-hour：1 小时粒度
+        :param Interval: 時間粒度，根據查詢時傳遞參數指定：
+min：1 分鍾粒度
+5min：5 分鍾粒度
+hour：1 小時粒度
 day：天粒度
         :type Interval: str
-        :param Data: 数据明细
+        :param Data: 數據明細
         :type Data: list of ResourceBillingData
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Interval = None
@@ -1308,76 +1308,76 @@ day：天粒度
 
 
 class DescribeCdnDataRequest(AbstractModel):
-    """DescribeCdnData请求参数结构体
+    """DescribeCdnData請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
-根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:00 在按 1 小时的时间粒度查询时，返回的第一个数据对应时间点为 2018-09-04 10:00:00
-起始时间与结束时间间隔小于等于 90 天
+        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:00，返回結果大于等于指定時間
+根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:00 在按 1 小時的時間粒度查詢時，返回的第一個數據對應時間點爲 2018-09-04 10:00:00
+起始時間與結束時間間隔小於等于 90 天
         :type StartTime: str
-        :param EndTime: 查询结束时间，如：2018-09-04 10:40:00，返回结果小于等于指定时间
-根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:00 在按 1 小时的时间粒度查询时，返回的最后一个数据对应时间点为 2018-09-04 10:00:00
-起始时间与结束时间间隔小于等于 90 天
+        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:00，返回結果小於等于指定時間
+根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:00 在按 1 小時的時間粒度查詢時，返回的最後一個數據對應時間點爲 2018-09-04 10:00:00
+起始時間與結束時間間隔小於等于 90 天
         :type EndTime: str
-        :param Metric: 指定查询指标，支持的类型有：
-flux：流量，单位为 byte
-bandwidth：带宽，单位为 bps
-request：请求数，单位为 次
-fluxHitRate：流量命中率，单位为 %
-statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 个
-2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 个
-3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 个
-4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 个
-5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 个
-支持指定具体状态码查询，若未产生过，则返回为空
+        :param Metric: 指定查詢指标，支援的類型有：
+flux：流量，單位爲 byte
+bandwidth：頻寬，單位爲 bps
+request：請求數，單位爲 次
+fluxHitRate：流量命中率，單位爲 %
+statusCode：狀态碼，返回 2xx、3xx、4xx、5xx 匯總數據，單位爲 個
+2xx：返回 2xx 狀态碼匯總及各 2 開頭狀态碼數據，單位爲 個
+3xx：返回 3xx 狀态碼匯總及各 3 開頭狀态碼數據，單位爲 個
+4xx：返回 4xx 狀态碼匯總及各 4 開頭狀态碼數據，單位爲 個
+5xx：返回 5xx 狀态碼匯總及各 5 開頭狀态碼數據，單位爲 個
+支援指定具體狀态碼查詢，若未産生過，則返回爲空
         :type Metric: str
-        :param Domains: 指定查询域名列表
-最多可一次性查询 30 个加速域名明细
+        :param Domains: 指定查詢域名清單
+最多可一次性查詢 30 個加速域名明細
         :type Domains: list of str
-        :param Project: 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
-未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
+        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Project: int
-        :param Interval: 时间粒度，支持以下几种模式：
-min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据（指定查询服务地域为中国境外时不支持 1 分钟粒度）
-5min：5 分钟粒度，指定查询区间 31 天内（含 31 天），可返回 5 分钟粒度明细数据
-hour：1 小时粒度，指定查询区间 31 天内（含 31 天），可返回 1 小时粒度明细数据
-day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数据
+        :param Interval: 時間粒度，支援以下幾種模式：
+min：1 分鍾粒度，指定查詢區間 24 小時内（含 24 小時），可返回 1 分鍾粒度明細數據（指定查詢服務地域爲中國境外時不支援 1 分鍾粒度）
+5min：5 分鍾粒度，指定查詢區間 31 天内（含 31 天），可返回 5 分鍾粒度明細數據
+hour：1 小時粒度，指定查詢區間 31 天内（含 31 天），可返回 1 小時粒度明細數據
+day：天粒度，指定查詢區間大于 31 天，可返回天粒度明細數據
         :type Interval: str
-        :param Detail: 多域名查询时，默认（false)返回多个域名的汇总数据
-可按需指定为 true，返回每一个 Domain 的明细数据（statusCode 指标暂不支持）
+        :param Detail: 多域名查詢時，預設（false)返回多個域名的匯總數據
+可按需指定爲 true，返回每一個 Domain 的明細數據（statusCode 指标暫不支援）
         :type Detail: bool
-        :param Isp: 查询中国境内CDN数据时，指定运营商查询，不填充表示查询所有运营商
-运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-指定运营商查询时，不可同时指定省份、IP协议查询
+        :param Isp: 查詢中國境内CDN數據時，指定運營商查詢，不填充表示查詢所有運營商
+運營商編碼可以檢視 [運營商編碼映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+指定運營商查詢時，不可同時指定省份、IP協議查詢
         :type Isp: int
-        :param District: 查询中国境内CDN数据时，指定省份查询，不填充表示查询所有省份
-查询中国境外CDN数据时，指定国家/地区查询，不填充表示查询所有国家/地区
-省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-指定（中国境内）省份查询时，不可同时指定运营商、IP协议查询
+        :param District: 查詢中國境内CDN數據時，指定省份查詢，不填充表示查詢所有省份
+查詢中國境外CDN數據時，指定國家/地區查詢，不填充表示查詢所有國家/地區
+省份、國家/地區編碼可以檢視 [省份編碼映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+指定（中國境内）省份查詢時，不可同時指定運營商、IP協議查詢
         :type District: int
-        :param Protocol: 指定协议查询，不填充表示查询所有协议
-all：所有协议
-http：指定查询 HTTP 对应指标
-https：指定查询 HTTPS 对应指标
+        :param Protocol: 指定協議查詢，不填充表示查詢所有協議
+all：所有協議
+http：指定查詢 HTTP 對應指标
+https：指定查詢 HTTPS 對應指标
         :type Protocol: str
-        :param DataSource: 指定数据源查询，白名单功能
+        :param DataSource: 指定數據源查詢，白名單功能
         :type DataSource: str
-        :param IpProtocol: 指定IP协议查询，不填充表示查询所有协议
-all：所有协议
-ipv4：指定查询 ipv4 对应指标
-ipv6：指定查询 ipv6 对应指标
-指定IP协议查询时，不可同时指定省份、运营商查询
+        :param IpProtocol: 指定IP協議查詢，不填充表示查詢所有協議
+all：所有協議
+ipv4：指定查詢 ipv4 對應指标
+ipv6：指定查詢 ipv6 對應指标
+指定IP協議查詢時，不可同時指定省份、運營商查詢
         :type IpProtocol: str
-        :param Area: 指定服务地域查询，不填充表示查询中国境内CDN数据
-mainland：指定查询中国境内 CDN 数据
-overseas：指定查询中国境外 CDN 数据
+        :param Area: 指定服務地域查詢，不填充表示查詢中國境内CDN數據
+mainland：指定查詢中國境内 CDN 數據
+overseas：指定查詢中國境外 CDN 數據
         :type Area: str
-        :param AreaType: 查询中国境外CDN数据时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas 时可用）
-server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
-client：指定查询客户端地区（用户请求终端所在地区）数据
+        :param AreaType: 查詢中國境外CDN數據時，可指定地區類型查詢，不填充表示查詢服務地區數據（僅在 Area 爲 overseas 時可用）
+server：指定查詢服務地區（Top Cloud  CDN 節點服務器所在地區）數據
+client：指定查詢用戶端地區（用戶請求終端所在地區）數據
         :type AreaType: str
         """
         self.StartTime = None
@@ -1414,21 +1414,21 @@ client：指定查询客户端地区（用户请求终端所在地区）数据
 
 
 class DescribeCdnDataResponse(AbstractModel):
-    """DescribeCdnData返回参数结构体
+    """DescribeCdnData返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Interval: 返回数据的时间粒度，查询时指定：
-min：1 分钟粒度
-5min：5 分钟粒度
-hour：1 小时粒度
+        :param Interval: 返回數據的時間粒度，查詢時指定：
+min：1 分鍾粒度
+5min：5 分鍾粒度
+hour：1 小時粒度
 day：天粒度
         :type Interval: str
-        :param Data: 指定条件查询得到的数据明细
+        :param Data: 指定條件查詢得到的數據明細
         :type Data: list of ResourceData
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Interval = None
@@ -1448,27 +1448,27 @@ day：天粒度
 
 
 class DescribeCdnDomainLogsRequest(AbstractModel):
-    """DescribeCdnDomainLogs请求参数结构体
+    """DescribeCdnDomainLogs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Domain: 指定域名查询
+        :param Domain: 指定域名查詢
         :type Domain: str
-        :param StartTime: 开始时间，如 2019-09-04 00:00:00
+        :param StartTime: 開始時間，如 2019-09-04 00:00:00
         :type StartTime: str
-        :param EndTime: 结束时间，如 2019-09-04 12:00:00
+        :param EndTime: 結束時間，如 2019-09-04 12:00:00
         :type EndTime: str
-        :param Offset: 分页查询偏移量，默认为 0 （第一页）
+        :param Offset: 分頁查詢偏移量，預設爲 0 （第一頁）
         :type Offset: int
-        :param Limit: 分页查询限制数目，默认为 100，最大为 1000
+        :param Limit: 分頁查詢限制數目，預設爲 100，最大爲 1000
         :type Limit: int
-        :param Area: 指定区域下载日志
-mainland：获取境内加速日志包下载链接
-overseas：获取境外加速日志包下载链接
-global：同时获取境内、境外加速日志包下载链接（分开打包）
-不指定时默认为 mainland
+        :param Area: 指定區域下載日志
+mainland：獲取境内加速日志包下載連結
+overseas：獲取境外加速日志包下載連結
+global：同時獲取境内、境外加速日志包下載連結（分開打包）
+不指定時預設爲 mainland
         :type Area: str
         """
         self.Domain = None
@@ -1489,17 +1489,17 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
 
 
 class DescribeCdnDomainLogsResponse(AbstractModel):
-    """DescribeCdnDomainLogs返回参数结构体
+    """DescribeCdnDomainLogs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DomainLogs: 日志包下载链接
+        :param DomainLogs: 日志包下載連結
         :type DomainLogs: list of DomainLog
-        :param TotalCount: 查询到的总条数
+        :param TotalCount: 查詢到的總條數
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DomainLogs = None
@@ -1519,13 +1519,13 @@ class DescribeCdnDomainLogsResponse(AbstractModel):
 
 
 class DescribeCdnIpRequest(AbstractModel):
-    """DescribeCdnIp请求参数结构体
+    """DescribeCdnIp請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Ips: 需要查询的 IP 列表
+        :param Ips: 需要查詢的 IP 清單
         :type Ips: list of str
         """
         self.Ips = None
@@ -1536,15 +1536,15 @@ class DescribeCdnIpRequest(AbstractModel):
 
 
 class DescribeCdnIpResponse(AbstractModel):
-    """DescribeCdnIp返回参数结构体
+    """DescribeCdnIp返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Ips: 查询的节点归属详情。
+        :param Ips: 查詢的節點歸屬詳情。
         :type Ips: list of CdnIp
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Ips = None
@@ -1562,13 +1562,13 @@ class DescribeCdnIpResponse(AbstractModel):
 
 
 class DescribeCertDomainsRequest(AbstractModel):
-    """DescribeCertDomains请求参数结构体
+    """DescribeCertDomains請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Cert: PEM格式证书Base64编码后的字符串
+        :param Cert: PEM格式證書Base64編碼後的字串
         :type Cert: str
         """
         self.Cert = None
@@ -1579,19 +1579,19 @@ class DescribeCertDomainsRequest(AbstractModel):
 
 
 class DescribeCertDomainsResponse(AbstractModel):
-    """DescribeCertDomains返回参数结构体
+    """DescribeCertDomains返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Domains: 已接入CDN的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Domains: 已接入CDN的域名清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Domains: list of str
-        :param CertifiedDomains: CDN已配置证书的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CertifiedDomains: CDN已配置證書的域名清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CertifiedDomains: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Domains = None
@@ -1606,19 +1606,19 @@ class DescribeCertDomainsResponse(AbstractModel):
 
 
 class DescribeDomainsConfigRequest(AbstractModel):
-    """DescribeDomainsConfig请求参数结构体
+    """DescribeDomainsConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 分页查询偏移量，默认为 0 （第一页）
+        :param Offset: 分頁查詢偏移量，預設爲 0 （第一頁）
         :type Offset: int
-        :param Limit: 分页查询限制数目，默认为 100，最大可设置为 1000
+        :param Limit: 分頁查詢限制數目，預設爲 100，最大可設置爲 1000
         :type Limit: int
-        :param Filters: 查询条件过滤器，复杂类型
+        :param Filters: 查詢條件過濾器，複雜類型
         :type Filters: list of DomainFilter
-        :param Sort: 排序规则
+        :param Sort: 排序規則
         :type Sort: :class:`tencentcloud.cdn.v20180606.models.Sort`
         """
         self.Offset = None
@@ -1642,18 +1642,18 @@ class DescribeDomainsConfigRequest(AbstractModel):
 
 
 class DescribeDomainsConfigResponse(AbstractModel):
-    """DescribeDomainsConfig返回参数结构体
+    """DescribeDomainsConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Domains: 域名列表
+        :param Domains: 域名清單
         :type Domains: list of DetailDomain
-        :param TotalNumber: 符合查询条件的域名总数
-用于分页查询
+        :param TotalNumber: 符合查詢條件的域名總數
+用于分頁查詢
         :type TotalNumber: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Domains = None
@@ -1673,17 +1673,17 @@ class DescribeDomainsConfigResponse(AbstractModel):
 
 
 class DescribeDomainsRequest(AbstractModel):
-    """DescribeDomains请求参数结构体
+    """DescribeDomains請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 分页查询偏移量，默认为 0 （第一页）
+        :param Offset: 分頁查詢偏移量，預設爲 0 （第一頁）
         :type Offset: int
-        :param Limit: 分页查询限制数目，默认为 100，最大可设置为 1000
+        :param Limit: 分頁查詢限制數目，預設爲 100，最大可設置爲 1000
         :type Limit: int
-        :param Filters: 查询条件过滤器，复杂类型
+        :param Filters: 查詢條件過濾器，複雜類型
         :type Filters: list of DomainFilter
         """
         self.Offset = None
@@ -1703,18 +1703,18 @@ class DescribeDomainsRequest(AbstractModel):
 
 
 class DescribeDomainsResponse(AbstractModel):
-    """DescribeDomains返回参数结构体
+    """DescribeDomains返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Domains: 域名列表
+        :param Domains: 域名清單
         :type Domains: list of BriefDomain
-        :param TotalNumber: 符合查询条件的域名总数
-用于分页查询
+        :param TotalNumber: 符合查詢條件的域名總數
+用于分頁查詢
         :type TotalNumber: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Domains = None
@@ -1734,7 +1734,7 @@ class DescribeDomainsResponse(AbstractModel):
 
 
 class DescribeImageConfigRequest(AbstractModel):
-    """DescribeImageConfig请求参数结构体
+    """DescribeImageConfig請求參數結構體
 
     """
 
@@ -1751,22 +1751,22 @@ class DescribeImageConfigRequest(AbstractModel):
 
 
 class DescribeImageConfigResponse(AbstractModel):
-    """DescribeImageConfig返回参数结构体
+    """DescribeImageConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
         :param WebpAdapter: WebpAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type WebpAdapter: :class:`tencentcloud.cdn.v20180606.models.WebpAdapter`
         :param TpgAdapter: TpgAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TpgAdapter: :class:`tencentcloud.cdn.v20180606.models.TpgAdapter`
         :param GuetzliAdapter: GuetzliAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GuetzliAdapter: :class:`tencentcloud.cdn.v20180606.models.GuetzliAdapter`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.WebpAdapter = None
@@ -1789,7 +1789,7 @@ class DescribeImageConfigResponse(AbstractModel):
 
 
 class DescribeIpStatusRequest(AbstractModel):
-    """DescribeIpStatus请求参数结构体
+    """DescribeIpStatus請求參數結構體
 
     """
 
@@ -1797,10 +1797,10 @@ class DescribeIpStatusRequest(AbstractModel):
         """
         :param Domain: 加速域名
         :type Domain: str
-        :param Layer: 节点类型：
-edge：表示边缘节点
-last：表示回源层节点
-不填充情况下，默认返回边缘节点信息
+        :param Layer: 節點類型：
+edge：表示邊緣節點
+last：表示回源層節點
+不填充情況下，預設返回邊緣節點訊息
         :type Layer: str
         """
         self.Domain = None
@@ -1813,17 +1813,17 @@ last：表示回源层节点
 
 
 class DescribeIpStatusResponse(AbstractModel):
-    """DescribeIpStatus返回参数结构体
+    """DescribeIpStatus返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Ips: 节点列表
+        :param Ips: 節點清單
         :type Ips: list of IpStatus
-        :param TotalCount: 节点总个数
+        :param TotalCount: 節點總個數
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Ips = None
@@ -1843,26 +1843,26 @@ class DescribeIpStatusResponse(AbstractModel):
 
 
 class DescribeIpVisitRequest(AbstractModel):
-    """DescribeIpVisit请求参数结构体
+    """DescribeIpVisit請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 查询起始时间，如：2018-09-04 10:40:10，返回结果大于等于指定时间
-根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:10 在按 5 分钟的时间粒度查询时，返回的第一个数据对应时间点为 2018-09-04 10:40:00
+        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:10，返回結果大于等于指定時間
+根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:10 在按 5 分鍾的時間粒度查詢時，返回的第一個數據對應時間點爲 2018-09-04 10:40:00
         :type StartTime: str
-        :param EndTime: 查询结束时间，如：2018-09-04 10:40:10，返回结果小于等于指定时间
-根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:10 在按 5 分钟的时间粒度查询时，返回的最后一个数据对应时间点为 2018-09-04 10:40:00
+        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:10，返回結果小於等于指定時間
+根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:10 在按 5 分鍾的時間粒度查詢時，返回的最後一個數據對應時間點爲 2018-09-04 10:40:00
         :type EndTime: str
-        :param Domains: 指定查询域名列表，最多可一次性查询 30 个加速域名明细
+        :param Domains: 指定查詢域名清單，最多可一次性查詢 30 個加速域名明細
         :type Domains: list of str
-        :param Project: 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
-未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
+        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Project: int
-        :param Interval: 时间粒度，支持以下几种模式：
-5min：5 分钟粒度，查询时间区间 24 小时内，默认返回 5 分钟粒度活跃用户数
-day：天粒度，查询时间区间大于 1 天时，默认返回天粒度活跃用户数
+        :param Interval: 時間粒度，支援以下幾種模式：
+5min：5 分鍾粒度，查詢時間區間 24 小時内，預設返回 5 分鍾粒度活躍用戶數
+day：天粒度，查詢時間區間大于 1 天時，預設返回天粒度活躍用戶數
         :type Interval: str
         """
         self.StartTime = None
@@ -1881,17 +1881,17 @@ day：天粒度，查询时间区间大于 1 天时，默认返回天粒度活�
 
 
 class DescribeIpVisitResponse(AbstractModel):
-    """DescribeIpVisit返回参数结构体
+    """DescribeIpVisit返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Interval: 数据统计的时间粒度，支持5min,  day，分别表示5分钟，1天的时间粒度。
+        :param Interval: 數據統計的時間粒度，支援5min,  day，分别表示5分鍾，1天的時間粒度。
         :type Interval: str
-        :param Data: 各个资源的回源数据详情。
+        :param Data: 各個資源的回源數據詳情。
         :type Data: list of ResourceData
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Interval = None
@@ -1911,15 +1911,15 @@ class DescribeIpVisitResponse(AbstractModel):
 
 
 class DescribeMapInfoRequest(AbstractModel):
-    """DescribeMapInfo请求参数结构体
+    """DescribeMapInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Name: 映射查询类别：
-isp：运营商映射查询
-district：省份（中国境内）、国家/地区（中国境外）映射查询
+        :param Name: 映射查詢類别：
+isp：運營商映射查詢
+district：省份（中國境内）、國家/地區（中國境外）映射查詢
         :type Name: str
         """
         self.Name = None
@@ -1930,21 +1930,21 @@ district：省份（中国境内）、国家/地区（中国境外）映射查�
 
 
 class DescribeMapInfoResponse(AbstractModel):
-    """DescribeMapInfo返回参数结构体
+    """DescribeMapInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MapInfoList: 映射关系数组。
+        :param MapInfoList: 映射關系數組。
         :type MapInfoList: list of MapInfo
-        :param ServerRegionRelation: 服务端区域id和子区域id的映射关系。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ServerRegionRelation: 服務端區域id和子區域id的映射關系。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ServerRegionRelation: list of RegionMapRelation
-        :param ClientRegionRelation: 客户端区域id和子区域id的映射关系。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClientRegionRelation: 用戶端區域id和子區域id的映射關系。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClientRegionRelation: list of RegionMapRelation
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.MapInfoList = None
@@ -1976,50 +1976,50 @@ class DescribeMapInfoResponse(AbstractModel):
 
 
 class DescribeOriginDataRequest(AbstractModel):
-    """DescribeOriginData请求参数结构体
+    """DescribeOriginData請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
-根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:00 在按 1 小时的时间粒度查询时，返回的第一个数据对应时间点为 2018-09-04 10:00:00
-起始时间与结束时间间隔小于等于 90 天
+        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:00，返回結果大于等于指定時間
+根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:00 在按 1 小時的時間粒度查詢時，返回的第一個數據對應時間點爲 2018-09-04 10:00:00
+起始時間與結束時間間隔小於等于 90 天
         :type StartTime: str
-        :param EndTime: 查询结束时间，如：2018-09-04 10:40:00，返回结果小于等于指定时间
-根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:00 在按 1 小时的时间粒度查询时，返回的最后一个数据对应时间点为 2018-09-04 10:00:00
-起始时间与结束时间间隔小于等于 90 天
+        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:00，返回結果小於等于指定時間
+根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:00 在按 1 小時的時間粒度查詢時，返回的最後一個數據對應時間點爲 2018-09-04 10:00:00
+起始時間與結束時間間隔小於等于 90 天
         :type EndTime: str
-        :param Metric: 指定查询指标，支持的类型有：
-flux：回源流量，单位为 byte
-bandwidth：回源带宽，单位为 bps
-request：回源请求数，单位为 次
-failRequest：回源失败请求数，单位为 次
-failRate：回源失败率，单位为 %
-statusCode：回源状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 个
-2xx：返回 2xx 回源状态码汇总及各 2 开头回源状态码数据，单位为 个
-3xx：返回 3xx 回源状态码汇总及各 3 开头回源状态码数据，单位为 个
-4xx：返回 4xx 回源状态码汇总及各 4 开头回源状态码数据，单位为 个
-5xx：返回 5xx 回源状态码汇总及各 5 开头回源状态码数据，单位为 个
-支持指定具体状态码查询，若未产生过，则返回为空
+        :param Metric: 指定查詢指标，支援的類型有：
+flux：回源流量，單位爲 byte
+bandwidth：回源頻寬，單位爲 bps
+request：回源請求數，單位爲 次
+failRequest：回源失敗請求數，單位爲 次
+failRate：回源失敗率，單位爲 %
+statusCode：回源狀态碼，返回 2xx、3xx、4xx、5xx 匯總數據，單位爲 個
+2xx：返回 2xx 回源狀态碼匯總及各 2 開頭回源狀态碼數據，單位爲 個
+3xx：返回 3xx 回源狀态碼匯總及各 3 開頭回源狀态碼數據，單位爲 個
+4xx：返回 4xx 回源狀态碼匯總及各 4 開頭回源狀态碼數據，單位爲 個
+5xx：返回 5xx 回源狀态碼匯總及各 5 開頭回源狀态碼數據，單位爲 個
+支援指定具體狀态碼查詢，若未産生過，則返回爲空
         :type Metric: str
-        :param Domains: 指定查询域名列表，最多可一次性查询 30 个加速域名明细
+        :param Domains: 指定查詢域名清單，最多可一次性查詢 30 個加速域名明細
         :type Domains: list of str
-        :param Project: 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
-未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
+        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Project: int
-        :param Interval: 时间粒度，支持以下几种模式：
-min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据（指定查询服务地域为中国境外时不支持 1 分钟粒度）
-5min：5 分钟粒度，指定查询区间 31 天内（含 31 天），可返回 5 分钟粒度明细数据
-hour：1 小时粒度，指定查询区间 31 天内（含 31 天），可返回 1 小时粒度明细数据
-day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数据
+        :param Interval: 時間粒度，支援以下幾種模式：
+min：1 分鍾粒度，指定查詢區間 24 小時内（含 24 小時），可返回 1 分鍾粒度明細數據（指定查詢服務地域爲中國境外時不支援 1 分鍾粒度）
+5min：5 分鍾粒度，指定查詢區間 31 天内（含 31 天），可返回 5 分鍾粒度明細數據
+hour：1 小時粒度，指定查詢區間 31 天内（含 31 天），可返回 1 小時粒度明細數據
+day：天粒度，指定查詢區間大于 31 天，可返回天粒度明細數據
         :type Interval: str
-        :param Detail: Domains 传入多个时，默认（false)返回多个域名的汇总数据
-可按需指定为 true，返回每一个 Domain 的明细数据（statusCode 指标暂不支持）
+        :param Detail: Domains 傳入多個時，預設（false)返回多個域名的匯總數據
+可按需指定爲 true，返回每一個 Domain 的明細數據（statusCode 指标暫不支援）
         :type Detail: bool
-        :param Area: 指定服务地域查询，不填充表示查询中国境内 CDN 数据
-mainland：指定查询中国境内 CDN 数据
-overseas：指定查询中国境外 CDN 数据
+        :param Area: 指定服務地域查詢，不填充表示查詢中國境内 CDN 數據
+mainland：指定查詢中國境内 CDN 數據
+overseas：指定查詢中國境外 CDN 數據
         :type Area: str
         """
         self.StartTime = None
@@ -2044,17 +2044,17 @@ overseas：指定查询中国境外 CDN 数据
 
 
 class DescribeOriginDataResponse(AbstractModel):
-    """DescribeOriginData返回参数结构体
+    """DescribeOriginData返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Interval: 数据统计的时间粒度，支持min, 5min, hour, day，分别表示1分钟，5分钟，1小时和1天的时间粒度。
+        :param Interval: 數據統計的時間粒度，支援min, 5min, hour, day，分别表示1分鍾，5分鍾，1小時和1天的時間粒度。
         :type Interval: str
-        :param Data: 各个资源的回源数据详情。
+        :param Data: 各個資源的回源數據詳情。
         :type Data: list of ResourceOriginData
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Interval = None
@@ -2074,16 +2074,16 @@ class DescribeOriginDataResponse(AbstractModel):
 
 
 class DescribePayTypeRequest(AbstractModel):
-    """DescribePayType请求参数结构体
+    """DescribePayType請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Area: 指定服务地域查询
-mainland：境内计费方式查询
-overseas：境外计费方式查询
-未填充时默认为 mainland
+        :param Area: 指定服務地域查詢
+mainland：境内計費方式查詢
+overseas：境外計費方式查詢
+未填充時預設爲 mainland
         :type Area: str
         """
         self.Area = None
@@ -2094,37 +2094,37 @@ overseas：境外计费方式查询
 
 
 class DescribePayTypeResponse(AbstractModel):
-    """DescribePayType返回参数结构体
+    """DescribePayType返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PayType: 计费类型：
-flux：流量计费
-bandwidth：带宽计费
-日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
+        :param PayType: 計費類型：
+flux：流量計費
+bandwidth：頻寬計費
+日結計費方式切換時，若當日産生消耗，則此欄位表示第二天即将生效的計費方式，若未産生消耗，則表示已經生效的計費方式。
         :type PayType: str
-        :param BillingCycle: 计费周期：
-day：日结计费
-month：月结计费
+        :param BillingCycle: 計費週期：
+day：日結計費
+month：月結計費
         :type BillingCycle: str
-        :param StatType: 计费方式：
-monthMax：日峰值月平均计费，月结模式
-day95：日 95 带宽计费，月结模式
-month95：月95带宽计费，月结模式
-sum：总流量计费，日结与月结均有流量计费模式
-max：峰值带宽计费，日结模式
+        :param StatType: 計費方式：
+monthMax：日峰值月平均計費，月結模式
+day95：日 95 頻寬計費，月結模式
+month95：月95頻寬計費，月結模式
+sum：總流量計費，日結與月結均有流量計費模式
+max：峰值頻寬計費，日結模式
         :type StatType: str
-        :param RegionType: 境外计费类型：
-all：全地区统一计费
-multiple：分地区计费
+        :param RegionType: 境外計費類型：
+all：全地區統一計費
+multiple：分地區計費
         :type RegionType: str
-        :param CurrentPayType: 当前生效计费类型：
-flux：流量计费
-bandwidth：带宽计费
+        :param CurrentPayType: 當前生效計費類型：
+flux：流量計費
+bandwidth：頻寬計費
         :type CurrentPayType: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PayType = None
@@ -2145,23 +2145,23 @@ bandwidth：带宽计费
 
 
 class DescribePurgeQuotaRequest(AbstractModel):
-    """DescribePurgeQuota请求参数结构体
+    """DescribePurgeQuota請求參數結構體
 
     """
 
 
 class DescribePurgeQuotaResponse(AbstractModel):
-    """DescribePurgeQuota返回参数结构体
+    """DescribePurgeQuota返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param UrlPurge: URL刷新用量及配额。
+        :param UrlPurge: URL重新整理用量及配額。
         :type UrlPurge: list of Quota
-        :param PathPurge: 目录刷新用量及配额。
+        :param PathPurge: 目錄重新整理用量及配額。
         :type PathPurge: list of Quota
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.UrlPurge = None
@@ -2186,35 +2186,35 @@ class DescribePurgeQuotaResponse(AbstractModel):
 
 
 class DescribePurgeTasksRequest(AbstractModel):
-    """DescribePurgeTasks请求参数结构体
+    """DescribePurgeTasks請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PurgeType: 指定刷新类型查询
-url：url 刷新记录
-path：目录刷新记录
+        :param PurgeType: 指定重新整理類型查詢
+url：url 重新整理記錄
+path：目錄重新整理記錄
         :type PurgeType: str
-        :param StartTime: 根据时间区间查询时，填充开始时间，如 2018-08-08 00:00:00
+        :param StartTime: 根據時間區間查詢時，填充開始時間，如 2018-08-08 00:00:00
         :type StartTime: str
-        :param EndTime: 根据时间区间查询时，填充结束时间，如 2018-08-08 23:59:59
+        :param EndTime: 根據時間區間查詢時，填充結束時間，如 2018-08-08 23:59:59
         :type EndTime: str
-        :param TaskId: 根据任务 ID 查询时，填充任务 ID
-查询时任务 ID 与起始时间必须填充一项
+        :param TaskId: 根據任務 ID 查詢時，填充任務 ID
+查詢時任務 ID 與起始時間必須填充一項
         :type TaskId: str
-        :param Offset: 分页查询偏移量，默认为 0 （第一页）
+        :param Offset: 分頁查詢偏移量，預設爲 0 （第一頁）
         :type Offset: int
-        :param Limit: 分页查询限制数目，默认为 20
+        :param Limit: 分頁查詢限制數目，預設爲 20
         :type Limit: int
-        :param Keyword: 支持域名过滤，或 http(s):// 开头完整 URL 过滤
+        :param Keyword: 支援域名過濾，或 http(s):// 開頭完整 URL 過濾
         :type Keyword: str
-        :param Status: 指定任务状态查询
-fail：刷新失败
-done：刷新成功
-process：刷新中
+        :param Status: 指定任務狀态查詢
+fail：重新整理失敗
+done：重新整理成功
+process：重新整理中
         :type Status: str
-        :param Area: 指定刷新地域查询
+        :param Area: 指定重新整理地域查詢
 mainland：境内
 overseas：境外
 global：全球
@@ -2244,19 +2244,19 @@ global：全球
 
 
 class DescribePurgeTasksResponse(AbstractModel):
-    """DescribePurgeTasks返回参数结构体
+    """DescribePurgeTasks返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PurgeLogs: 详细刷新记录
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PurgeLogs: 詳細重新整理記錄
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PurgeLogs: list of PurgeTask
-        :param TotalCount: 任务总数，用于分页
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 任務總數，用于分頁
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PurgeLogs = None
@@ -2276,21 +2276,21 @@ class DescribePurgeTasksResponse(AbstractModel):
 
 
 class DescribePushQuotaRequest(AbstractModel):
-    """DescribePushQuota请求参数结构体
+    """DescribePushQuota請求參數結構體
 
     """
 
 
 class DescribePushQuotaResponse(AbstractModel):
-    """DescribePushQuota返回参数结构体
+    """DescribePushQuota返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param UrlPush: Url预热用量及配额。
+        :param UrlPush: Url預熱用量及配額。
         :type UrlPush: list of Quota
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.UrlPush = None
@@ -2308,34 +2308,34 @@ class DescribePushQuotaResponse(AbstractModel):
 
 
 class DescribePushTasksRequest(AbstractModel):
-    """DescribePushTasks请求参数结构体
+    """DescribePushTasks請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 开始时间，如2018-08-08 00:00:00。
+        :param StartTime: 開始時間，如2018-08-08 00:00:00。
         :type StartTime: str
-        :param EndTime: 结束时间，如2018-08-08 23:59:59。
+        :param EndTime: 結束時間，如2018-08-08 23:59:59。
         :type EndTime: str
-        :param TaskId: 指定任务 ID 查询
-TaskId 和起始时间必须指定一项
+        :param TaskId: 指定任務 ID 查詢
+TaskId 和起始時間必須指定一項
         :type TaskId: str
-        :param Keyword: 查询关键字，请输入域名或 http(s):// 开头完整 URL
+        :param Keyword: 查詢關鍵字，請輸入域名或 http(s):// 開頭完整 URL
         :type Keyword: str
-        :param Offset: 分页查询偏移量，默认为 0 （第一页）
+        :param Offset: 分頁查詢偏移量，預設爲 0 （第一頁）
         :type Offset: int
-        :param Limit: 分页查询限制数目，默认为 20
+        :param Limit: 分頁查詢限制數目，預設爲 20
         :type Limit: int
-        :param Area: 指定地区查询预热纪录
+        :param Area: 指定地區查詢預熱紀錄
 mainland：境内
 overseas：境外
 global：全球
         :type Area: str
-        :param Status: 指定任务状态查询
-fail：预热失败
-done：预热成功
-process：预热中
+        :param Status: 指定任務狀态查詢
+fail：預熱失敗
+done：預熱成功
+process：預熱中
         :type Status: str
         """
         self.StartTime = None
@@ -2360,19 +2360,19 @@ process：预热中
 
 
 class DescribePushTasksResponse(AbstractModel):
-    """DescribePushTasks返回参数结构体
+    """DescribePushTasks返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PushLogs: 预热历史记录
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PushLogs: 預熱曆史記錄
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PushLogs: list of PushTask
-        :param TotalCount: 任务总数，用于分页
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 任務總數，用于分頁
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PushLogs = None
@@ -2392,30 +2392,30 @@ class DescribePushTasksResponse(AbstractModel):
 
 
 class DescribeReportDataRequest(AbstractModel):
-    """DescribeReportData请求参数结构体
+    """DescribeReportData請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 查询起始时间
+        :param StartTime: 查詢起始時間
         :type StartTime: str
-        :param EndTime: 查询结束时间
+        :param EndTime: 查詢結束時間
         :type EndTime: str
-        :param ReportType: 报表类型
-daily：日报表
-weekly：周报表
-monthly：月报表
+        :param ReportType: 報表類型
+daily：日報表
+weekly：周報表
+monthly：月報表
         :type ReportType: str
-        :param Area: 域名加速区域
-mainland：中国境内
-overseas：中国境外
+        :param Area: 域名加速區域
+mainland：中國境内
+overseas：中國境外
         :type Area: str
-        :param Offset: 偏移量，默认0。
+        :param Offset: 偏移量，預設0。
         :type Offset: int
-        :param Limit: 数据个数，默认1000。
+        :param Limit: 數據個數，預設1000。
         :type Limit: int
-        :param Project: 按项目ID筛选
+        :param Project: 按項目ID篩選
         :type Project: int
         """
         self.StartTime = None
@@ -2438,17 +2438,17 @@ overseas：中国境外
 
 
 class DescribeReportDataResponse(AbstractModel):
-    """DescribeReportData返回参数结构体
+    """DescribeReportData返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DomainReport: 域名维度数据详情
+        :param DomainReport: 域名維度數據詳情
         :type DomainReport: list of ReportData
-        :param ProjectReport: 项目维度数据详情
+        :param ProjectReport: 項目維度數據詳情
         :type ProjectReport: list of ReportData
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DomainReport = None
@@ -2473,15 +2473,15 @@ class DescribeReportDataResponse(AbstractModel):
 
 
 class DescribeTrafficPackagesRequest(AbstractModel):
-    """DescribeTrafficPackages请求参数结构体
+    """DescribeTrafficPackages請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 分页查询起始地址，默认 0（第一页）
+        :param Offset: 分頁查詢起始網址，預設 0（第一頁）
         :type Offset: int
-        :param Limit: 分页查询记录个数，默认100，最大1000
+        :param Limit: 分頁查詢記錄個數，預設100，最大1000
         :type Limit: int
         """
         self.Offset = None
@@ -2494,21 +2494,21 @@ class DescribeTrafficPackagesRequest(AbstractModel):
 
 
 class DescribeTrafficPackagesResponse(AbstractModel):
-    """DescribeTrafficPackages返回参数结构体
+    """DescribeTrafficPackages返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 流量包总个数
+        :param TotalCount: 流量包總個數
         :type TotalCount: int
-        :param TrafficPackages: 流量包详情
+        :param TrafficPackages: 流量包詳情
         :type TrafficPackages: list of TrafficPackage
-        :param ExpiringCount: 即将过期的流量包个数（7天内）
+        :param ExpiringCount: 即将過期的流量包個數（7天内）
         :type ExpiringCount: int
-        :param EnabledCount: 有效流量包个数
+        :param EnabledCount: 有效流量包個數
         :type EnabledCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -2532,17 +2532,17 @@ class DescribeTrafficPackagesResponse(AbstractModel):
 
 
 class DescribeUrlViolationsRequest(AbstractModel):
-    """DescribeUrlViolations请求参数结构体
+    """DescribeUrlViolations請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 分页查询偏移量，默认为 0 （第一页）
+        :param Offset: 分頁查詢偏移量，預設爲 0 （第一頁）
         :type Offset: int
-        :param Limit: 分页查询限制数目，默认为 100
+        :param Limit: 分頁查詢限制數目，預設爲 100
         :type Limit: int
-        :param Domains: 指定的域名查询
+        :param Domains: 指定的域名查詢
         :type Domains: list of str
         """
         self.Offset = None
@@ -2557,18 +2557,18 @@ class DescribeUrlViolationsRequest(AbstractModel):
 
 
 class DescribeUrlViolationsResponse(AbstractModel):
-    """DescribeUrlViolations返回参数结构体
+    """DescribeUrlViolations返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param UrlRecordList: 违规 URL 详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UrlRecordList: 違規 URL 詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UrlRecordList: list of ViolationUrl
-        :param TotalCount: 记录总数，用于分页
+        :param TotalCount: 記錄總數，用于分頁
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.UrlRecordList = None
@@ -2588,7 +2588,7 @@ class DescribeUrlViolationsResponse(AbstractModel):
 
 
 class DetailDomain(AbstractModel):
-    """加速域名全量配置信息
+    """加速域名全量配置訊息
 
     """
 
@@ -2596,142 +2596,142 @@ class DetailDomain(AbstractModel):
         """
         :param ResourceId: 域名 ID
         :type ResourceId: str
-        :param AppId: 腾讯云账号ID
+        :param AppId: Top Cloud 賬号ID
         :type AppId: int
         :param Domain: 加速域名
         :type Domain: str
-        :param Cname: 域名对应的 CNAME 地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Cname: 域名對應的 CNAME 網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Cname: str
-        :param Status: 加速服务状态
-rejected：域名审核未通过，域名备案过期/被注销导致
+        :param Status: 加速服務狀态
+rejected：域名審核未通過，域名備案過期/被注銷導緻
 processing：部署中
-online：已启动
-offline：已关闭
+online：已啓動
+offline：已關閉
         :type Status: str
-        :param ProjectId: 项目 ID，可前往腾讯云项目管理页面查看
+        :param ProjectId: 項目 ID，可前往Top Cloud 項目管理頁面檢視
         :type ProjectId: int
-        :param ServiceType: 域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速
+        :param ServiceType: 域名業務類型
+web：靜态加速
+download：下載加速
+media：流媒體點播加速
         :type ServiceType: str
-        :param CreateTime: 域名创建时间
+        :param CreateTime: 域名創建時間
         :type CreateTime: str
-        :param UpdateTime: 域名更新时间
+        :param UpdateTime: 域名更新時間
         :type UpdateTime: str
         :param Origin: 源站配置
         :type Origin: :class:`tencentcloud.cdn.v20180606.models.Origin`
-        :param IpFilter: IP 黑白名单配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IpFilter: IP 黑白名單配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IpFilter: :class:`tencentcloud.cdn.v20180606.models.IpFilter`
-        :param IpFreqLimit: IP 访问限频配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IpFreqLimit: IP 訪問限頻配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IpFreqLimit: :class:`tencentcloud.cdn.v20180606.models.IpFreqLimit`
-        :param StatusCodeCache: 状态码缓存配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StatusCodeCache: 狀态碼快取配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StatusCodeCache: :class:`tencentcloud.cdn.v20180606.models.StatusCodeCache`
-        :param Compression: 智能压缩配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Compression: 智慧壓縮配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Compression: :class:`tencentcloud.cdn.v20180606.models.Compression`
-        :param BandwidthAlert: 带宽封顶配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BandwidthAlert: 頻寬封頂配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BandwidthAlert: :class:`tencentcloud.cdn.v20180606.models.BandwidthAlert`
         :param RangeOriginPull: Range 回源配置
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RangeOriginPull: :class:`tencentcloud.cdn.v20180606.models.RangeOriginPull`
-        :param FollowRedirect: 301/302 回源自动跟随配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FollowRedirect: 301/302 回源自動跟随配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FollowRedirect: :class:`tencentcloud.cdn.v20180606.models.FollowRedirect`
-        :param ErrorPage: 自定义错误页面配置（功能灰度中，敬请期待）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ErrorPage: 自定義錯誤頁面配置（功能灰度中，敬請期待）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ErrorPage: :class:`tencentcloud.cdn.v20180606.models.ErrorPage`
-        :param RequestHeader: 自定义请求头部配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RequestHeader: 自定義請求頭部配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RequestHeader: :class:`tencentcloud.cdn.v20180606.models.RequestHeader`
-        :param ResponseHeader: 自定义响应头部配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResponseHeader: 自定義響應頭部配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResponseHeader: :class:`tencentcloud.cdn.v20180606.models.ResponseHeader`
-        :param DownstreamCapping: 单链接下行限速配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DownstreamCapping: 單連結下行限速配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DownstreamCapping: :class:`tencentcloud.cdn.v20180606.models.DownstreamCapping`
-        :param CacheKey: 带参/不带参缓存配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CacheKey: 帶參/不帶參快取配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CacheKey: :class:`tencentcloud.cdn.v20180606.models.CacheKey`
-        :param ResponseHeaderCache: 源站头部缓存配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResponseHeaderCache: 源站頭部快取配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResponseHeaderCache: :class:`tencentcloud.cdn.v20180606.models.ResponseHeaderCache`
-        :param VideoSeek: 视频拖拽配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VideoSeek: 視訊拖拽配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VideoSeek: :class:`tencentcloud.cdn.v20180606.models.VideoSeek`
-        :param Cache: 节点缓存过期规则配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Cache: 節點快取過期規則配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Cache: :class:`tencentcloud.cdn.v20180606.models.Cache`
-        :param OriginPullOptimization: 跨国链路优化配置（功能灰度中，敬请期待）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OriginPullOptimization: 跨國鏈路優化配置（功能灰度中，敬請期待）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OriginPullOptimization: :class:`tencentcloud.cdn.v20180606.models.OriginPullOptimization`
-        :param Https: Https 加速相关配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Https: Https 加速相關配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Https: :class:`tencentcloud.cdn.v20180606.models.Https`
-        :param Authentication: 时间戳防盗链配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Authentication: 時間戳防盜鏈配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Authentication: :class:`tencentcloud.cdn.v20180606.models.Authentication`
-        :param Seo: SEO 优化配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Seo: SEO 優化配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Seo: :class:`tencentcloud.cdn.v20180606.models.Seo`
-        :param Disable: 域名封禁状态
-normal：正常状态
-overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
-malicious：域名出现恶意行为，强制关闭加速服务
-ddos：域名被大规模 DDoS 攻击，关闭加速服务
-idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
-unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
-capping：触发配置的带宽阈值上限
-readonly：域名存在特殊配置，被锁定
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Disable: 域名封禁狀态
+normal：正常狀态
+overdue：賬号欠費導緻域名關閉，儲值完成後可自行啓動加速服務
+malicious：域名出現惡意行爲，強制關閉加速服務
+ddos：域名被大規模 DDoS 攻擊，關閉加速服務
+idle：域名超過 90 天内無任何操作、數據産生，判定爲不活躍域名自動關閉加速服務，可自行啓動加速服務
+unlicensed：域名未備案/備案注銷，自動關閉加速服務，備案完成後可自行啓動加速服務
+capping：觸發配置的頻寬阈值上限
+readonly：域名存在特殊配置，被鎖定
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Disable: str
-        :param ForceRedirect: 访问协议强制跳转配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ForceRedirect: 訪問協議強制跳轉配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ForceRedirect: :class:`tencentcloud.cdn.v20180606.models.ForceRedirect`
-        :param Referer: Referer 防盗链配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Referer: Referer 防盜鏈配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Referer: :class:`tencentcloud.cdn.v20180606.models.Referer`
-        :param MaxAge: 浏览器缓存过期规则配置（功能灰度中，敬请期待）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MaxAge: 浏覽器快取過期規則配置（功能灰度中，敬請期待）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxAge: :class:`tencentcloud.cdn.v20180606.models.MaxAge`
-        :param Ipv6: Ipv6 配置（功能灰度中，敬请期待）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Ipv6: Ipv6 配置（功能灰度中，敬請期待）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Ipv6: :class:`tencentcloud.cdn.v20180606.models.Ipv6`
-        :param Compatibility: 是否兼容旧版本配置（内部兼容性字段）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Compatibility: 是否兼容舊版本配置（内部相容性欄位）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Compatibility: :class:`tencentcloud.cdn.v20180606.models.Compatibility`
-        :param SpecificConfig: 区域特殊配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SpecificConfig: 區域特殊配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SpecificConfig: :class:`tencentcloud.cdn.v20180606.models.SpecificConfig`
-        :param Area: 加速区域
-mainland：中国境内加速
-overseas：中国境外加速
+        :param Area: 加速區域
+mainland：中國境内加速
+overseas：中國境外加速
 global：全球加速
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Area: str
-        :param Readonly: 域名锁定状态
-normal：未锁定
-mainland：中国境内锁定
-overseas：中国境外锁定
-global：全球锁定
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Readonly: 域名鎖定狀态
+normal：未鎖定
+mainland：中國境内鎖定
+overseas：中國境外鎖定
+global：全球鎖定
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Readonly: str
-        :param OriginPullTimeout: 回源超时配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OriginPullTimeout: 回源超時配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OriginPullTimeout: :class:`tencentcloud.cdn.v20180606.models.OriginPullTimeout`
-        :param AwsPrivateAccess: 回源S3鉴权配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AwsPrivateAccess: 回源S3鑒權配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AwsPrivateAccess: :class:`tencentcloud.cdn.v20180606.models.AwsPrivateAccess`
         :param SecurityConfig: Scdn配置
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SecurityConfig: :class:`tencentcloud.cdn.v20180606.models.SecurityConfig`
         :param ImageOptimization: ImageOptimization配置
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ImageOptimization: :class:`tencentcloud.cdn.v20180606.models.ImageOptimization`
         """
         self.ResourceId = None
@@ -2884,14 +2884,14 @@ global：全球锁定
 
 
 class DisableCachesRequest(AbstractModel):
-    """DisableCaches请求参数结构体
+    """DisableCaches請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Urls: 需要禁用的 URL 列表
-每次最多可提交 100 条，每日最多可提交 3000 条
+        :param Urls: 需要禁用的 URL 清單
+每次最多可提交 100 條，每日最多可提交 3000 條
         :type Urls: list of str
         """
         self.Urls = None
@@ -2902,16 +2902,16 @@ class DisableCachesRequest(AbstractModel):
 
 
 class DisableCachesResponse(AbstractModel):
-    """DisableCaches返回参数结构体
+    """DisableCaches返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CacheOptResult: 提交结果
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CacheOptResult: 提交結果
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CacheOptResult: :class:`tencentcloud.cdn.v20180606.models.CacheOptResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CacheOptResult = None
@@ -2926,7 +2926,7 @@ class DisableCachesResponse(AbstractModel):
 
 
 class DisableClsLogTopicRequest(AbstractModel):
-    """DisableClsLogTopic请求参数结构体
+    """DisableClsLogTopic請求參數結構體
 
     """
 
@@ -2934,9 +2934,9 @@ class DisableClsLogTopicRequest(AbstractModel):
         """
         :param LogsetId: 日志集ID
         :type LogsetId: str
-        :param TopicId: 日志主题ID
+        :param TopicId: 日志主題ID
         :type TopicId: str
-        :param Channel: 接入渠道，默认值为cdn
+        :param Channel: 接入管道，預設值爲cdn
         :type Channel: str
         """
         self.LogsetId = None
@@ -2951,13 +2951,13 @@ class DisableClsLogTopicRequest(AbstractModel):
 
 
 class DisableClsLogTopicResponse(AbstractModel):
-    """DisableClsLogTopic返回参数结构体
+    """DisableClsLogTopic返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2968,7 +2968,7 @@ class DisableClsLogTopicResponse(AbstractModel):
 
 
 class DomainAreaConfig(AbstractModel):
-    """域名地区配置
+    """域名地區配置
 
     """
 
@@ -2976,7 +2976,7 @@ class DomainAreaConfig(AbstractModel):
         """
         :param Domain: 域名
         :type Domain: str
-        :param Area: 地区列表，其中元素可为mainland/overseas
+        :param Area: 地區清單，其中元素可爲mainland/overseas
         :type Area: list of str
         """
         self.Domain = None
@@ -2989,29 +2989,29 @@ class DomainAreaConfig(AbstractModel):
 
 
 class DomainFilter(AbstractModel):
-    """域名查询时过滤条件。
+    """域名查詢時過濾條件。
 
     """
 
     def __init__(self):
         """
-        :param Name: 过滤字段名，支持的列表如下：
+        :param Name: 過濾欄位名，支援的清單如下：
 - origin：主源站。
 - domain：域名。
 - resourceId：域名id。
-- status：域名状态，online，offline或processing。
-- serviceType：业务类型，web，download或media。
-- projectId：项目ID。
-- domainType：主源站类型，cname表示自有源，cos表示cos接入。
-- fullUrlCache：全路径缓存，on或off。
+- status：域名狀态，online，offline或processing。
+- serviceType：業務類型，web，download或media。
+- projectId：項目ID。
+- domainType：主源站類型，cname表示自有源，cos表示cos接入。
+- fullUrlCache：全路徑快取，on或off。
 - https：是否配置https，on，off或processing。
-- originPullProtocol：回源协议类型，支持http，follow或https。
-- tagKey：标签键。
+- originPullProtocol：回源協議類型，支援http，follow或https。
+- tagKey：标簽鍵。
         :type Name: str
-        :param Value: 过滤字段值。
+        :param Value: 過濾欄位值。
         :type Value: list of str
-        :param Fuzzy: 是否启用模糊查询，仅支持过滤字段名为origin，domain。
-模糊查询时，Value长度最大为1，否则Value长度最大为5。
+        :param Fuzzy: 是否啓用模糊查詢，僅支援過濾欄位名爲origin，domain。
+模糊查詢時，Value長度最大爲1，否則Value長度最大爲5。
         :type Fuzzy: bool
         """
         self.Name = None
@@ -3026,19 +3026,19 @@ class DomainFilter(AbstractModel):
 
 
 class DomainLog(AbstractModel):
-    """日志包下载链接详情
+    """日志包下載連結詳情
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 日志包起始时间
+        :param StartTime: 日志包起始時間
         :type StartTime: str
-        :param EndTime: 日志包结束时间
+        :param EndTime: 日志包結束時間
         :type EndTime: str
-        :param LogPath: 日志包下载链接
+        :param LogPath: 日志包下載連結
         :type LogPath: str
-        :param Area: 日志包对应加速区域
+        :param Area: 日志包對應加速區域
 mainland：境内
 overseas：境外
         :type Area: str
@@ -3061,18 +3061,18 @@ overseas：境外
 
 
 class DownstreamCapping(AbstractModel):
-    """单链接下行限速配置，默认为关闭状态
+    """單連結下行限速配置，預設爲關閉狀态
 
     """
 
     def __init__(self):
         """
-        :param Switch: 下行速度配置开关
-on：开启
-off：关闭
+        :param Switch: 下行速度配置開關
+on：開啓
+off：關閉
         :type Switch: str
-        :param CappingRules: 下行限速规则
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CappingRules: 下行限速規則
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CappingRules: list of CappingRule
         """
         self.Switch = None
@@ -3090,13 +3090,13 @@ off：关闭
 
 
 class EnableCachesRequest(AbstractModel):
-    """EnableCaches请求参数结构体
+    """EnableCaches請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Urls: 解封 URL 列表
+        :param Urls: 解封 URL 清單
         :type Urls: list of str
         """
         self.Urls = None
@@ -3107,16 +3107,16 @@ class EnableCachesRequest(AbstractModel):
 
 
 class EnableCachesResponse(AbstractModel):
-    """EnableCaches返回参数结构体
+    """EnableCaches返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CacheOptResult: 结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CacheOptResult: 結果清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CacheOptResult: :class:`tencentcloud.cdn.v20180606.models.CacheOptResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CacheOptResult = None
@@ -3131,7 +3131,7 @@ class EnableCachesResponse(AbstractModel):
 
 
 class EnableClsLogTopicRequest(AbstractModel):
-    """EnableClsLogTopic请求参数结构体
+    """EnableClsLogTopic請求參數結構體
 
     """
 
@@ -3139,9 +3139,9 @@ class EnableClsLogTopicRequest(AbstractModel):
         """
         :param LogsetId: 日志集ID
         :type LogsetId: str
-        :param TopicId: 日志主题ID
+        :param TopicId: 日志主題ID
         :type TopicId: str
-        :param Channel: 接入渠道，默认值为cdn
+        :param Channel: 接入管道，預設值爲cdn
         :type Channel: str
         """
         self.LogsetId = None
@@ -3156,13 +3156,13 @@ class EnableClsLogTopicRequest(AbstractModel):
 
 
 class EnableClsLogTopicResponse(AbstractModel):
-    """EnableClsLogTopic返回参数结构体
+    """EnableClsLogTopic返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3173,19 +3173,19 @@ class EnableClsLogTopicResponse(AbstractModel):
 
 
 class ErrorPage(AbstractModel):
-    """状态码重定向配置，默认为关闭状态（功能灰度中，尚未全量）
+    """狀态碼重定向配置，預設爲關閉狀态（功能灰度中，尚未全量）
 
     """
 
     def __init__(self):
         """
-        :param Switch: 状态码重定向配置开关
-on：开启
-off：关闭
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Switch: 狀态碼重定向配置開關
+on：開啓
+off：關閉
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Switch: str
-        :param PageRules: 状态码重定向规则配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PageRules: 狀态碼重定向規則配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PageRules: list of ErrorPageRule
         """
         self.Switch = None
@@ -3203,20 +3203,20 @@ off：关闭
 
 
 class ErrorPageRule(AbstractModel):
-    """状态码重定向规则配置
+    """狀态碼重定向規則配置
 
     """
 
     def __init__(self):
         """
-        :param StatusCode: 状态码
-支持 400、403、404、500
+        :param StatusCode: 狀态碼
+支援 400、403、404、500
         :type StatusCode: int
-        :param RedirectCode: 重定向状态码设置
-支持 301 或 302
+        :param RedirectCode: 重定向狀态碼設置
+支援 301 或 302
         :type RedirectCode: int
         :param RedirectUrl: 重定向 URL
-需要为完整跳转路径，如 https://www.test.com/error.html
+需要爲完整跳轉路徑，如 https://www.test.com/error.html
         :type RedirectUrl: str
         """
         self.StatusCode = None
@@ -3231,15 +3231,15 @@ class ErrorPageRule(AbstractModel):
 
 
 class FollowRedirect(AbstractModel):
-    """回源 301/302 状态码自动跟随配置，默认为关闭状态
+    """回源 301/302 狀态碼自動跟随配置，預設爲關閉狀态
 
     """
 
     def __init__(self):
         """
-        :param Switch: 回源跟随开关
-on：开启
-off：关闭
+        :param Switch: 回源跟随開關
+on：開啓
+off：關閉
         :type Switch: str
         """
         self.Switch = None
@@ -3250,25 +3250,25 @@ off：关闭
 
 
 class ForceRedirect(AbstractModel):
-    """访问协议强制跳转配置，默认为关闭状态
+    """訪問協議強制跳轉配置，預設爲關閉狀态
 
     """
 
     def __init__(self):
         """
-        :param Switch: 访问强制跳转配置开关
-on：开启
-off：关闭
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Switch: 訪問強制跳轉配置開關
+on：開啓
+off：關閉
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Switch: str
-        :param RedirectType: 访问强制跳转类型
-http：强制 http 跳转
-https：强制 https 跳转
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RedirectType: 訪問強制跳轉類型
+http：強制 http 跳轉
+https：強制 https 跳轉
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RedirectType: str
-        :param RedirectStatusCode: 强制跳转时返回状态码 
-支持 301、302
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RedirectStatusCode: 強制跳轉時返回狀态碼 
+支援 301、302
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RedirectStatusCode: int
         """
         self.Switch = None
@@ -3283,25 +3283,25 @@ https：强制 https 跳转
 
 
 class GetDisableRecordsRequest(AbstractModel):
-    """GetDisableRecords请求参数结构体
+    """GetDisableRecords請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 开始时间，如：2018-12-12 10:24:00。
+        :param StartTime: 開始時間，如：2018-12-12 10:24:00。
         :type StartTime: str
-        :param EndTime: 结束时间，如：2018-12-14 10:24:00。
+        :param EndTime: 結束時間，如：2018-12-14 10:24:00。
         :type EndTime: str
-        :param Url: 指定 URL 查询
+        :param Url: 指定 URL 查詢
         :type Url: str
-        :param Status: URL 当前状态
-disable：当前仍为禁用状态，访问返回 403
-enable：当前为可用状态，已解禁，可正常访问
+        :param Status: URL 當前狀态
+disable：當前仍爲禁用狀态，訪問返回 403
+enable：當前爲可用狀态，已解禁，可正常訪問
         :type Status: str
-        :param Offset: 分页查询偏移量，默认为 0 （第一页）。
+        :param Offset: 分頁查詢偏移量，預設爲 0 （第一頁）。
         :type Offset: int
-        :param Limit: 分页查询限制数目，默认为20。
+        :param Limit: 分頁查詢限制數目，預設爲20。
         :type Limit: int
         """
         self.StartTime = None
@@ -3322,19 +3322,19 @@ enable：当前为可用状态，已解禁，可正常访问
 
 
 class GetDisableRecordsResponse(AbstractModel):
-    """GetDisableRecords返回参数结构体
+    """GetDisableRecords返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param UrlRecordList: 封禁历史记录
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UrlRecordList: 封禁曆史記錄
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UrlRecordList: list of UrlRecord
-        :param TotalCount: 任务总数，用于分页
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 任務總數，用于分頁
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.UrlRecordList = None
@@ -3354,14 +3354,14 @@ class GetDisableRecordsResponse(AbstractModel):
 
 
 class GuetzliAdapter(AbstractModel):
-    """图片优化-GuetzliAdapter配置
+    """圖片優化-GuetzliAdapter配置
 
     """
 
     def __init__(self):
         """
-        :param Switch: 开关，"on/off"
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Switch: 開關，"on/off"
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Switch: str
         """
         self.Switch = None
@@ -3372,39 +3372,39 @@ class GuetzliAdapter(AbstractModel):
 
 
 class HttpHeaderPathRule(AbstractModel):
-    """Http 头部设置规则，最多可设置 100 条
+    """Http 頭部設置規則，最多可設置 100 條
 
     """
 
     def __init__(self):
         """
-        :param HeaderMode: http 头部设置方式
-add：添加头部，若已存在头部，则会存在重复头部
-set：仅回源头部配置支持，若头部已存在则会覆盖原有头部值，若不存在，则会增加该头部及值
-del：删除头部
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HeaderMode: http 頭部設置方式
+add：添加頭部，若已存在頭部，則會存在重複頭部
+set：僅回源頭部配置支援，若頭部已存在則會函蓋原有頭部值，若不存在，則會增加該頭部及值
+del：删除頭部
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HeaderMode: str
-        :param HeaderName: http 头部名称，最多可设置 100 个字符
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HeaderName: http 頭部名稱，最多可設置 100 個字元
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HeaderName: str
-        :param HeaderValue: http 头部值，最多可设置 1000 个字符
-Mode 为 del 时非必填
-Mode 为 add/set 时必填
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HeaderValue: http 頭部值，最多可設置 1000 個字元
+Mode 爲 del 時非必填
+Mode 爲 add/set 時必填
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HeaderValue: str
-        :param RuleType: 规则类型：
+        :param RuleType: 規則類型：
 all：所有文件生效
-file：指定文件后缀生效
-directory：指定路径生效
-path：指定绝对路径生效
-注意：此字段可能返回 null，表示取不到有效值。
+file：指定文件後綴生效
+directory：指定路徑生效
+path：指定絕對路徑生效
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RuleType: str
-        :param RulePaths: RuleType 对应类型下的匹配内容：
-all 时填充 *
-file 时填充后缀名，如 jpg、txt
-directory 时填充路径，如 /xxx/test/
-path 时填充绝对路径，如 /xxx/test.html
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RulePaths: RuleType 對應類型下的比對内容：
+all 時填充 *
+file 時填充後綴名，如 jpg、txt
+directory 時填充路徑，如 /xxx/test/
+path 時填充絕對路徑，如 /xxx/test.html
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RulePaths: list of str
         """
         self.HeaderMode = None
@@ -3423,53 +3423,53 @@ path 时填充绝对路径，如 /xxx/test.html
 
 
 class Https(AbstractModel):
-    """域名 https 加速配置，默认为关闭状态
+    """域名 https 加速配置，預設爲關閉狀态
 
     """
 
     def __init__(self):
         """
-        :param Switch: https 配置开关
-on：开启
-off：关闭
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Switch: https 配置開關
+on：開啓
+off：關閉
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Switch: str
-        :param Http2: http2 配置开关
-on：开启
-off：关闭
-初次启用 https 加速会默认开启 http2 配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Http2: http2 配置開關
+on：開啓
+off：關閉
+初次啓用 https 加速會預設開啓 http2 配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Http2: str
-        :param OcspStapling: OCSP 配置开关
-on：开启
-off：关闭
-默认为关闭状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OcspStapling: OCSP 配置開關
+on：開啓
+off：關閉
+預設爲關閉狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OcspStapling: str
-        :param VerifyClient: 客户端证书校验功能
-on：开启
-off：关闭
-默认为关闭状态，开启时需要上传客户端证书信息，该配置项目前在灰度中，尚未全量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VerifyClient: 用戶端證書校驗功能
+on：開啓
+off：關閉
+預設爲關閉狀态，開啓時需要上傳用戶端證書訊息，該配置項目前在灰度中，尚未全量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VerifyClient: str
-        :param CertInfo: 服务端证书配置信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CertInfo: 服務端證書配置訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CertInfo: :class:`tencentcloud.cdn.v20180606.models.ServerCert`
-        :param ClientCertInfo: 客户端证书配置信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClientCertInfo: 用戶端證書配置訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClientCertInfo: :class:`tencentcloud.cdn.v20180606.models.ClientCert`
-        :param Spdy: Spdy 配置开关
-on：开启
-off：关闭
-默认为关闭状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Spdy: Spdy 配置開關
+on：開啓
+off：關閉
+預設爲關閉狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Spdy: str
-        :param SslStatus: https 证书部署状态
-closed：已关闭
+        :param SslStatus: https 證書佈署狀态
+closed：已關閉
 deploying：部署中
 deployed：部署成功
-failed：部署失败
-注意：此字段可能返回 null，表示取不到有效值。
+failed：佈署失敗
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SslStatus: str
         """
         self.Switch = None
@@ -3505,13 +3505,13 @@ class ImageOptimization(AbstractModel):
     def __init__(self):
         """
         :param WebpAdapter: WebpAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type WebpAdapter: :class:`tencentcloud.cdn.v20180606.models.WebpAdapter`
         :param TpgAdapter: TpgAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TpgAdapter: :class:`tencentcloud.cdn.v20180606.models.TpgAdapter`
         :param GuetzliAdapter: GuetzliAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GuetzliAdapter: :class:`tencentcloud.cdn.v20180606.models.GuetzliAdapter`
         """
         self.WebpAdapter = None
@@ -3532,25 +3532,25 @@ class ImageOptimization(AbstractModel):
 
 
 class IpFilter(AbstractModel):
-    """IP 黑白名单配置，默认为关闭状态
+    """IP 黑白名單配置，預設爲關閉狀态
 
     """
 
     def __init__(self):
         """
-        :param Switch: IP 黑白名单配置开关
-on：开启
-off：关闭
+        :param Switch: IP 黑白名單配置開關
+on：開啓
+off：關閉
         :type Switch: str
-        :param FilterType: IP 黑白名单类型
-whitelist：白名单
-blacklist：黑名单
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FilterType: IP 黑白名單類型
+whitelist：白名單
+blacklist：黑名單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FilterType: str
-        :param Filters: IP 黑白名单列表
-支持 X.X.X.X 形式 IP，或 /8、 /16、/24 形式网段
-最多可填充 50 个白名单或 50 个黑名单
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Filters: IP 黑白名單清單
+支援 X.X.X.X 形式 IP，或 /8、 /16、/24 形式網段
+最多可填充 50 個白名單或 50 個黑名單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Filters: list of str
         """
         self.Switch = None
@@ -3565,19 +3565,19 @@ blacklist：黑名单
 
 
 class IpFreqLimit(AbstractModel):
-    """单节点单 IP 访问限频配置，默认为关闭状态
+    """單節點單 IP 訪問限頻配置，預設爲關閉狀态
 
     """
 
     def __init__(self):
         """
-        :param Switch: IP 限频配置开关
-on：开启
-off：关闭
+        :param Switch: IP 限頻配置開關
+on：開啓
+off：關閉
         :type Switch: str
-        :param Qps: 设置每秒请求数限制
-超出限制的请求会直接返回 514
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Qps: 設置每秒請求數限制
+超出限制的請求會直接返回 514
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Qps: int
         """
         self.Switch = None
@@ -3590,23 +3590,23 @@ off：关闭
 
 
 class IpStatus(AbstractModel):
-    """节点 IP 信息
+    """節點 IP 訊息
 
     """
 
     def __init__(self):
         """
-        :param Ip: 节点 IP
+        :param Ip: 節點 IP
         :type Ip: str
-        :param District: 节点所属区域
+        :param District: 節點所屬區域
         :type District: str
-        :param Isp: 节点所属运营商
+        :param Isp: 節點所屬運營商
         :type Isp: str
-        :param City: 节点所在城市
+        :param City: 節點所在城市
         :type City: str
-        :param Status: 节点状态
-online：上线状态，正常调度服务中
-offline：下线状态
+        :param Status: 節點狀态
+online：上線狀态，正常調度服務中
+offline：下線狀态
         :type Status: str
         """
         self.Ip = None
@@ -3625,14 +3625,14 @@ offline：下线状态
 
 
 class Ipv6(AbstractModel):
-    """Ipv6启用配置，不可更改
+    """Ipv6啓用配置，不可更改
 
     """
 
     def __init__(self):
         """
-        :param Switch: 域名是否开启ipv6功能，on或off。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Switch: 域名是否開啓ipv6功能，on或off。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Switch: str
         """
         self.Switch = None
@@ -3643,13 +3643,13 @@ class Ipv6(AbstractModel):
 
 
 class ListClsLogTopicsRequest(AbstractModel):
-    """ListClsLogTopics请求参数结构体
+    """ListClsLogTopics請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Channel: 接入渠道，默认值为cdn
+        :param Channel: 接入管道，預設值爲cdn
         :type Channel: str
         """
         self.Channel = None
@@ -3660,18 +3660,18 @@ class ListClsLogTopicsRequest(AbstractModel):
 
 
 class ListClsLogTopicsResponse(AbstractModel):
-    """ListClsLogTopics返回参数结构体
+    """ListClsLogTopics返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Logset: 日志集信息
+        :param Logset: 日志集訊息
         :type Logset: :class:`tencentcloud.cdn.v20180606.models.LogSetInfo`
-        :param Topics: 日志主题信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Topics: 日志主題訊息清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Topics: list of TopicInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Logset = None
@@ -3693,7 +3693,7 @@ class ListClsLogTopicsResponse(AbstractModel):
 
 
 class ListClsTopicDomainsRequest(AbstractModel):
-    """ListClsTopicDomains请求参数结构体
+    """ListClsTopicDomains請求參數結構體
 
     """
 
@@ -3701,9 +3701,9 @@ class ListClsTopicDomainsRequest(AbstractModel):
         """
         :param LogsetId: 日志集ID
         :type LogsetId: str
-        :param TopicId: 日志主题ID
+        :param TopicId: 日志主題ID
         :type TopicId: str
-        :param Channel: 接入渠道，默认值为cdn
+        :param Channel: 接入管道，預設值爲cdn
         :type Channel: str
         """
         self.LogsetId = None
@@ -3718,28 +3718,28 @@ class ListClsTopicDomainsRequest(AbstractModel):
 
 
 class ListClsTopicDomainsResponse(AbstractModel):
-    """ListClsTopicDomains返回参数结构体
+    """ListClsTopicDomains返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AppId: 开发者ID
+        :param AppId: 開發者ID
         :type AppId: int
-        :param Channel: 渠道
+        :param Channel: 管道
         :type Channel: str
         :param LogsetId: 日志集ID
         :type LogsetId: str
-        :param TopicId: 日志主题ID
+        :param TopicId: 日志主題ID
         :type TopicId: str
-        :param DomainAreaConfigs: 域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名
+        :param DomainAreaConfigs: 域名區域配置，其中可能含有已删除的域名，如果要再傳回ManageClsTopicDomains介面，需要結合ListCdnDomains介面排除掉已删除的域名
         :type DomainAreaConfigs: list of DomainAreaConfig
-        :param TopicName: 日志主题名称
+        :param TopicName: 日志主題名稱
         :type TopicName: str
-        :param UpdateTime: 日志主题最近更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdateTime: 日志主題最近更新時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdateTime: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AppId = None
@@ -3769,63 +3769,63 @@ class ListClsTopicDomainsResponse(AbstractModel):
 
 
 class ListTopDataRequest(AbstractModel):
-    """ListTopData请求参数结构体
+    """ListTopData請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 查询起始日期，如：2018-09-09
-仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
-返回大于等于起始日期当天 00:00:00 点产生的数据
-仅支持 90 天内数据查询
+        :param StartTime: 查詢起始日期，如：2018-09-09
+僅支援按天粒度的數據查詢，取入參中的天訊息作爲起始日期
+返回大于等于起始日期當天 00:00:00 點産生的數據
+僅支援 90 天内數據查詢
         :type StartTime: str
-        :param EndTime: 查询结束日期，如：2018-09-10
-仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
-返回小于等于结束日期当天 23:59:59 产生的数据
+        :param EndTime: 查詢結束日期，如：2018-09-10
+僅支援按天粒度的數據查詢，取入參中的天訊息作爲結束日期
+返回小於等于結束日期當天 23:59:59 産生的數據
 EndTime 需要大于等于 StartTime
         :type EndTime: str
-        :param Metric: 排序对象，支持以下几种形式：
-url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
-path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
-district：省份、国家/地区排序，支持的 Filter 为 flux、request
-isp：运营商排序，支持的 Filter 为 flux、request
-host：域名访问数据排序，支持的 Filter 为：flux、request、bandwidth、fluxHitRate、2XX、3XX、4XX、5XX、statusCode
-originHost：域名回源数据排序，支持的 Filter 为 flux、request、bandwidth、origin_2XX、origin_3XX、origin_4XX、origin_5XX、OriginStatusCode
+        :param Metric: 排序對象，支援以下幾種形式：
+url：訪問 URL 排序，帶參數統計，支援的 Filter 爲 flux、request
+path：訪問 URL 排序，不帶參數統計，支援的 Filter 爲 flux、request（白名單功能）
+district：省份、國家/地區排序，支援的 Filter 爲 flux、request
+isp：運營商排序，支援的 Filter 爲 flux、request
+host：域名訪問數據排序，支援的 Filter 爲：flux、request、bandwidth、fluxHitRate、2XX、3XX、4XX、5XX、statusCode
+originHost：域名回源數據排序，支援的 Filter 爲 flux、request、bandwidth、origin_2XX、origin_3XX、origin_4XX、origin_5XX、OriginStatusCode
         :type Metric: str
-        :param Filter: 排序使用的指标名称：
-flux：Metric 为 host 时指代访问流量，originHost 时指代回源流量
-bandwidth：Metric 为 host 时指代访问带宽，originHost 时指代回源带宽
-request：Metric 为 host 时指代访问请求数，originHost 时指代回源请求数
+        :param Filter: 排序使用的指标名稱：
+flux：Metric 爲 host 時指代訪問流量，originHost 時指代回源流量
+bandwidth：Metric 爲 host 時指代訪問頻寬，originHost 時指代回源頻寬
+request：Metric 爲 host 時指代訪問請求數，originHost 時指代回源請求數
 fluxHitRate：平均流量命中率
-2XX：访问 2XX 状态码
-3XX：访问 3XX 状态码
-4XX：访问 4XX 状态码
-5XX：访问 5XX 状态码
-origin_2XX：回源 2XX 状态码
-origin_3XX：回源 3XX 状态码
-origin_4XX：回源 4XX 状态码
-origin_5XX：回源 5XX 状态码
-statusCode：指定访问状态码统计，在 Code 参数中填充指定状态码
-OriginStatusCode：指定回源状态码统计，在 Code 参数中填充指定状态码
+2XX：訪問 2XX 狀态碼
+3XX：訪問 3XX 狀态碼
+4XX：訪問 4XX 狀态碼
+5XX：訪問 5XX 狀态碼
+origin_2XX：回源 2XX 狀态碼
+origin_3XX：回源 3XX 狀态碼
+origin_4XX：回源 4XX 狀态碼
+origin_5XX：回源 5XX 狀态碼
+statusCode：指定訪問狀态碼統計，在 Code 參數中填充指定狀态碼
+OriginStatusCode：指定回源狀态碼統計，在 Code 參數中填充指定狀态碼
         :type Filter: str
-        :param Domains: 指定查询域名列表，最多可一次性查询 30 个加速域名明细
+        :param Domains: 指定查詢域名清單，最多可一次性查詢 30 個加速域名明細
         :type Domains: list of str
-        :param Project: 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
-未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
+        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Project: int
-        :param Detail: 多域名查询时，默认（false)返回所有域名汇总排序结果
-Metric 为 url、path、district、isp，Filter 为 flux、request 时，可设置为 true，返回每一个 Domain 的排序数据
+        :param Detail: 多域名查詢時，預設（false)返回所有域名匯總排序結果
+Metric 爲 url、path、district、isp，Filter 爲 flux、request 時，可設置爲 true，返回每一個 Domain 的排序數據
         :type Detail: bool
-        :param Code: Filter 为 statusCode、OriginStatusCode 时，填充指定状态码查询排序结果
+        :param Code: Filter 爲 statusCode、OriginStatusCode 時，填充指定狀态碼查詢排序結果
         :type Code: str
-        :param Area: 指定服务地域查询，不填充表示查询中国境内 CDN 数据
-mainland：指定查询中国境内 CDN 数据
-overseas：指定查询中国境外 CDN 数据，支持的 Metric 为 url、district、host、originHost，当 Metric 为 originHost 时仅支持 flux、request、bandwidth Filter
+        :param Area: 指定服務地域查詢，不填充表示查詢中國境内 CDN 數據
+mainland：指定查詢中國境内 CDN 數據
+overseas：指定查詢中國境外 CDN 數據，支援的 Metric 爲 url、district、host、originHost，當 Metric 爲 originHost 時僅支援 flux、request、bandwidth Filter
         :type Area: str
-        :param AreaType: 查询中国境外CDN数据，且仅当 Metric 为 district 或 host 时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas，且 Metric 是 district 或 host 时可用）
-server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
-client：指定查询客户端地区（用户请求终端所在地区）数据，当 Metric 为 host 时仅支持 flux、request、bandwidth Filter
+        :param AreaType: 查詢中國境外CDN數據，且僅當 Metric 爲 district 或 host 時，可指定地區類型查詢，不填充表示查詢服務地區數據（僅在 Area 爲 overseas，且 Metric 是 district 或 host 時可用）
+server：指定查詢服務地區（Top Cloud  CDN 節點服務器所在地區）數據
+client：指定查詢用戶端地區（用戶請求終端所在地區）數據，當 Metric 爲 host 時僅支援 flux、request、bandwidth Filter
         :type AreaType: str
         """
         self.StartTime = None
@@ -3854,15 +3854,15 @@ client：指定查询客户端地区（用户请求终端所在地区）数据�
 
 
 class ListTopDataResponse(AbstractModel):
-    """ListTopData返回参数结构体
+    """ListTopData返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 各个资源的Top 访问数据详情。
+        :param Data: 各個資源的Top 訪問數據詳情。
         :type Data: list of TopData
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -3880,28 +3880,28 @@ class ListTopDataResponse(AbstractModel):
 
 
 class LogSetInfo(AbstractModel):
-    """日志集信息
+    """日志集訊息
 
     """
 
     def __init__(self):
         """
-        :param AppId: 开发者ID
+        :param AppId: 開發者ID
         :type AppId: int
-        :param Channel: 渠道
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Channel: 管道
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Channel: str
         :param LogsetId: 日志集ID
         :type LogsetId: str
         :param LogsetName: 日志集名字
         :type LogsetName: str
-        :param IsDefault: 是否默认日志集
+        :param IsDefault: 是否預設日志集
         :type IsDefault: int
-        :param LogsetSavePeriod: 日志保存时间，单位为天
+        :param LogsetSavePeriod: 日志保存時間，單位爲天
         :type LogsetSavePeriod: int
-        :param CreateTime: 创建日期
+        :param CreateTime: 創建日期
         :type CreateTime: str
-        :param Region: 区域
+        :param Region: 區域
         :type Region: str
         """
         self.AppId = None
@@ -3926,7 +3926,7 @@ class LogSetInfo(AbstractModel):
 
 
 class MainlandConfig(AbstractModel):
-    """域名国内地区特殊配置。分地区特殊配置。UpdateDomainConfig接口只支持修改部分分地区配置，为了兼容旧版本配置，本类型会列出旧版本所有可能存在差异的配置列表，支持修改的配置列表如下：
+    """域名國内地區特殊配置。分地區特殊配置。UpdateDomainConfig介面只支援修改部分分地區配置，爲了兼容舊版本配置，本類型會列出舊版本所有可能存在差異的配置清單，支援修改的配置清單如下：
     + Authentication
     + BandwidthAlert
     + ErrorPage
@@ -3938,77 +3938,77 @@ class MainlandConfig(AbstractModel):
 
     def __init__(self):
         """
-        :param Authentication: 时间戳防盗链配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Authentication: 時間戳防盜鏈配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Authentication: :class:`tencentcloud.cdn.v20180606.models.Authentication`
-        :param BandwidthAlert: 带宽封顶配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BandwidthAlert: 頻寬封頂配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BandwidthAlert: :class:`tencentcloud.cdn.v20180606.models.BandwidthAlert`
-        :param Cache: 缓存规则配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Cache: 快取規則配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Cache: :class:`tencentcloud.cdn.v20180606.models.Cache`
-        :param CacheKey: 缓存相关配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CacheKey: 快取相關配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CacheKey: :class:`tencentcloud.cdn.v20180606.models.CacheKey`
-        :param Compression: 智能压缩配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Compression: 智慧壓縮配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Compression: :class:`tencentcloud.cdn.v20180606.models.Compression`
-        :param DownstreamCapping: 下载限速配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DownstreamCapping: 下載限速配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DownstreamCapping: :class:`tencentcloud.cdn.v20180606.models.DownstreamCapping`
-        :param ErrorPage: 错误码重定向配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ErrorPage: 錯誤碼重定向配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ErrorPage: :class:`tencentcloud.cdn.v20180606.models.ErrorPage`
-        :param FollowRedirect: 301和302自动回源跟随配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FollowRedirect: 301和302自動回源跟随配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FollowRedirect: :class:`tencentcloud.cdn.v20180606.models.FollowRedirect`
-        :param ForceRedirect: 访问协议强制跳转配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ForceRedirect: 訪問協議強制跳轉配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ForceRedirect: :class:`tencentcloud.cdn.v20180606.models.ForceRedirect`
         :param Https: Https配置。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Https: :class:`tencentcloud.cdn.v20180606.models.Https`
-        :param IpFilter: IP黑白名单配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IpFilter: IP黑白名單配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IpFilter: :class:`tencentcloud.cdn.v20180606.models.IpFilter`
-        :param IpFreqLimit: IP限频配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IpFreqLimit: IP限頻配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IpFreqLimit: :class:`tencentcloud.cdn.v20180606.models.IpFreqLimit`
-        :param MaxAge: 浏览器缓存规则配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MaxAge: 浏覽器快取規則配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxAge: :class:`tencentcloud.cdn.v20180606.models.MaxAge`
         :param Origin: 源站配置。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Origin: :class:`tencentcloud.cdn.v20180606.models.Origin`
-        :param OriginPullOptimization: 跨国优化配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OriginPullOptimization: 跨國優化配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OriginPullOptimization: :class:`tencentcloud.cdn.v20180606.models.OriginPullOptimization`
         :param RangeOriginPull: Range回源配置。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RangeOriginPull: :class:`tencentcloud.cdn.v20180606.models.RangeOriginPull`
-        :param Referer: 防盗链配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Referer: 防盜鏈配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Referer: :class:`tencentcloud.cdn.v20180606.models.Referer`
-        :param RequestHeader: 回源请求头部配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RequestHeader: 回源請求頭部配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RequestHeader: :class:`tencentcloud.cdn.v20180606.models.RequestHeader`
-        :param ResponseHeader: 源站响应头部配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResponseHeader: 源站響應頭部配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResponseHeader: :class:`tencentcloud.cdn.v20180606.models.ResponseHeader`
-        :param ResponseHeaderCache: 遵循源站缓存头部配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResponseHeaderCache: 遵循源站快取頭部配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResponseHeaderCache: :class:`tencentcloud.cdn.v20180606.models.ResponseHeaderCache`
-        :param Seo: seo优化配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Seo: seo優化配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Seo: :class:`tencentcloud.cdn.v20180606.models.Seo`
-        :param ServiceType: 域名业务类型，web，download，media分别表示静态加速，下载加速和流媒体加速。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ServiceType: 域名業務類型，web，download，media分别表示靜态加速，下載加速和流媒體加速。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ServiceType: str
-        :param StatusCodeCache: 状态码缓存配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StatusCodeCache: 狀态碼快取配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StatusCodeCache: :class:`tencentcloud.cdn.v20180606.models.StatusCodeCache`
-        :param VideoSeek: 视频拖拽配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VideoSeek: 視訊拖拽配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VideoSeek: :class:`tencentcloud.cdn.v20180606.models.VideoSeek`
         """
         self.Authentication = None
@@ -4111,7 +4111,7 @@ class MainlandConfig(AbstractModel):
 
 
 class ManageClsTopicDomainsRequest(AbstractModel):
-    """ManageClsTopicDomains请求参数结构体
+    """ManageClsTopicDomains請求參數結構體
 
     """
 
@@ -4119,11 +4119,11 @@ class ManageClsTopicDomainsRequest(AbstractModel):
         """
         :param LogsetId: 日志集ID
         :type LogsetId: str
-        :param TopicId: 日志主题ID
+        :param TopicId: 日志主題ID
         :type TopicId: str
-        :param Channel: 接入渠道，默认值为cdn
+        :param Channel: 接入管道，預設值爲cdn
         :type Channel: str
-        :param DomainAreaConfigs: 域名区域配置，注意：如果此字段为空，则表示解绑对应主题下的所有域名
+        :param DomainAreaConfigs: 域名區域配置，注意：如果此欄位爲空，則表示解綁對應主題下的所有域名
         :type DomainAreaConfigs: list of DomainAreaConfig
         """
         self.LogsetId = None
@@ -4145,13 +4145,13 @@ class ManageClsTopicDomainsRequest(AbstractModel):
 
 
 class ManageClsTopicDomainsResponse(AbstractModel):
-    """ManageClsTopicDomains返回参数结构体
+    """ManageClsTopicDomains返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4162,15 +4162,15 @@ class ManageClsTopicDomainsResponse(AbstractModel):
 
 
 class MapInfo(AbstractModel):
-    """名称与ID映射关系
+    """名稱與ID映射關系
 
     """
 
     def __init__(self):
         """
-        :param Id: 对象 Id
+        :param Id: 對象 Id
         :type Id: int
-        :param Name: 对象名称
+        :param Name: 對象名稱
         :type Name: str
         """
         self.Id = None
@@ -4183,19 +4183,19 @@ class MapInfo(AbstractModel):
 
 
 class MaxAge(AbstractModel):
-    """浏览器缓存规则配置，用于设置 MaxAge 默认值，默认为关闭状态（功能灰度中，尚未全量）
+    """浏覽器快取規則配置，用于設置 MaxAge 預設值，預設爲關閉狀态（功能灰度中，尚未全量）
 
     """
 
     def __init__(self):
         """
-        :param Switch: 浏览器缓存配置开关
-on：开启
-off：关闭
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Switch: 浏覽器快取配置開關
+on：開啓
+off：關閉
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Switch: str
-        :param MaxAgeRules: MaxAge 规则
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MaxAgeRules: MaxAge 規則
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxAgeRules: list of MaxAgeRule
         """
         self.Switch = None
@@ -4213,25 +4213,25 @@ off：关闭
 
 
 class MaxAgeRule(AbstractModel):
-    """MagAge 规则配置
+    """MagAge 規則配置
 
     """
 
     def __init__(self):
         """
-        :param MaxAgeType: 规则类型：
+        :param MaxAgeType: 規則類型：
 all：所有文件生效
-file：指定文件后缀生效
-directory：指定路径生效
-path：指定绝对路径生效
+file：指定文件後綴生效
+directory：指定路徑生效
+path：指定絕對路徑生效
         :type MaxAgeType: str
-        :param MaxAgeContents: MaxAgeType 对应类型下的匹配内容：
-all 时填充 *
-file 时填充后缀名，如 jpg、txt
-directory 时填充路径，如 /xxx/test/
-path 时填充绝对路径，如 /xxx/test.html
+        :param MaxAgeContents: MaxAgeType 對應類型下的比對内容：
+all 時填充 *
+file 時填充後綴名，如 jpg、txt
+directory 時填充路徑，如 /xxx/test/
+path 時填充絕對路徑，如 /xxx/test.html
         :type MaxAgeContents: list of str
-        :param MaxAgeTime: MaxAge 时间设置，单位秒
+        :param MaxAgeTime: MaxAge 時間設置，單位秒
         :type MaxAgeTime: int
         """
         self.MaxAgeType = None
@@ -4246,63 +4246,63 @@ path 时填充绝对路径，如 /xxx/test.html
 
 
 class Origin(AbstractModel):
-    """源站配置复杂类型，支持以下配置：
-    + 源站指定为单个域名
-    + 源站指定为多个 IP，可配置端口（1~65535），可配置权重（1~100），格式为 IP:端口:权重
+    """源站配置複雜類型，支援以下配置：
+    + 源站指定爲單個域名
+    + 源站指定爲多個 IP，可配置端口（1~65535），可配置權重（1~100），格式爲 IP:端口:權重
     + 回源域名配置
-    + 对象存储（COS）作为源站
-    + 热备源站指定为单个域名
-    + 热备源站指定为多个 IP，可配置端口（1~65535），暂不支持权重配置
-    + 热备源站回源域名配置
+    + 物件儲存（COS）作爲源站
+    + 熱備源站指定爲單個域名
+    + 熱備源站指定爲多個 IP，可配置端口（1~65535），暫不支援權重配置
+    + 熱備源站回源域名配置
 
     """
 
     def __init__(self):
         """
-        :param Origins: 主源站列表
-修改源站时，需要同时填充对应的 OriginType
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Origins: 主源站清單
+修改源站時，需要同時填充對應的 OriginType
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Origins: list of str
-        :param OriginType: 主源站类型
-入参支持以下几种类型：
-domain：域名类型
-cos：对象存储源站
-ip：IP 列表作为源站
-ipv6：源站列表为一个单独的 IPv6 地址
-ip_ipv6：源站列表为多个 IPv4 地址和一个 IPv6 地址
-出参增加以下几种类型：
-image：数据万象源站
-ftp：历史 FTP 托管源源站，现已不维护
-修改 Origins 时需要同时填充对应的 OriginType
-IPv6 功能目前尚未全量，需要先申请试用
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OriginType: 主源站類型
+入參支援以下幾種類型：
+domain：域名類型
+cos：物件儲存源站
+ip：IP 清單作爲源站
+ipv6：源站清單爲一個單獨的 IPv6 網址
+ip_ipv6：源站清單爲多個 IPv4 網址和一個 IPv6 網址
+出參增加以下幾種類型：
+image：數據萬象源站
+ftp：曆史 FTP 托管源源站，現已不維護
+修改 Origins 時需要同時填充對應的 OriginType
+IPv6 功能目前尚未全量，需要先申請試用
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OriginType: str
-        :param ServerName: 回主源站时 Host 头部，不填充则默认为加速域名
-若接入的是泛域名，则回源 Host 默认为访问时的子域名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ServerName: 回主源站時 Host 頭部，不填充則預設爲加速域名
+若接入的是泛域名，則回源 Host 預設爲訪問時的子域名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ServerName: str
-        :param CosPrivateAccess: OriginType 为对象存储（COS）时，可以指定是否允许访问私有 bucket
-注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CosPrivateAccess: OriginType 爲物件儲存（COS）時，可以指定是否允許訪問私有 bucket
+注意：需要先授權 CDN 訪問該私有 Bucket 的權限後，才可開啓此配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CosPrivateAccess: str
-        :param OriginPullProtocol: 回源协议配置
-http：强制 http 回源
-follow：协议跟随回源
-https：强制 https 回源，https 回源时仅支持源站 443 端口
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OriginPullProtocol: 回源協議配置
+http：強制 http 回源
+follow：協議跟随回源
+https：強制 https 回源，https 回源時僅支援源站 443 端口
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OriginPullProtocol: str
-        :param BackupOrigins: 备源站列表
-修改备源站时，需要同时填充对应的 BackupOriginType
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BackupOrigins: 備源站清單
+修改備源站時，需要同時填充對應的 BackupOriginType
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BackupOrigins: list of str
-        :param BackupOriginType: 备源站类型，支持以下类型：
-domain：域名类型
-ip：IP 列表作为源站
-修改 BackupOrigins 时需要同时填充对应的 BackupOriginType
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BackupOriginType: 備源站類型，支援以下類型：
+domain：域名類型
+ip：IP 清單作爲源站
+修改 BackupOrigins 時需要同時填充對應的 BackupOriginType
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BackupOriginType: str
-        :param BackupServerName: 回备源站时 Host 头部，不填充则默认为主源站的 ServerName
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BackupServerName: 回備源站時 Host 頭部，不填充則預設爲主源站的 ServerName
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BackupServerName: str
         """
         self.Origins = None
@@ -4327,20 +4327,20 @@ ip：IP 列表作为源站
 
 
 class OriginPullOptimization(AbstractModel):
-    """跨国回源优化配置，默认为关闭状态（功能灰度中，尚未全量）
+    """跨國回源優化配置，預設爲關閉狀态（功能灰度中，尚未全量）
 
     """
 
     def __init__(self):
         """
-        :param Switch: 跨国回源优化配置开关
-on：开启
-off：关闭
+        :param Switch: 跨國回源優化配置開關
+on：開啓
+off：關閉
         :type Switch: str
-        :param OptimizationType: 跨国类型
+        :param OptimizationType: 跨國類型
 OVToCN：境外回源境内
 CNToOV：境内回源境外
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OptimizationType: str
         """
         self.Switch = None
@@ -4353,17 +4353,17 @@ CNToOV：境内回源境外
 
 
 class OriginPullTimeout(AbstractModel):
-    """回源超时配置
+    """回源超時配置
 
     """
 
     def __init__(self):
         """
-        :param ConnectTimeout: 回源建连超时时间，单位为秒，要求5~60之间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConnectTimeout: 回源建連超時時間，單位爲秒，要求5~60之間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConnectTimeout: int
-        :param ReceiveTimeout: 回源接收超时时间，单位为秒，要求10 ~ 60之间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ReceiveTimeout: 回源接收超時時間，單位爲秒，要求10 ~ 60之間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ReceiveTimeout: int
         """
         self.ConnectTimeout = None
@@ -4376,7 +4376,7 @@ class OriginPullTimeout(AbstractModel):
 
 
 class OverseaConfig(AbstractModel):
-    """域名海外地区特殊配置。UpdateDomainConfig接口只支持修改部分分地区配置，为了兼容旧版本配置，本类型会列出旧版本所有可能存在差异的配置列表，支持修改的配置列表如下：
+    """域名海外地區特殊配置。UpdateDomainConfig介面只支援修改部分分地區配置，爲了兼容舊版本配置，本類型會列出舊版本所有可能存在差異的配置清單，支援修改的配置清單如下：
     + Authentication
     + BandwidthAlert
     + ErrorPage
@@ -4388,77 +4388,77 @@ class OverseaConfig(AbstractModel):
 
     def __init__(self):
         """
-        :param Authentication: 时间戳防盗链配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Authentication: 時間戳防盜鏈配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Authentication: :class:`tencentcloud.cdn.v20180606.models.Authentication`
-        :param BandwidthAlert: 带宽封顶配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BandwidthAlert: 頻寬封頂配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BandwidthAlert: :class:`tencentcloud.cdn.v20180606.models.BandwidthAlert`
-        :param Cache: 缓存规则配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Cache: 快取規則配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Cache: :class:`tencentcloud.cdn.v20180606.models.Cache`
-        :param CacheKey: 缓存相关配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CacheKey: 快取相關配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CacheKey: :class:`tencentcloud.cdn.v20180606.models.CacheKey`
-        :param Compression: 智能压缩配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Compression: 智慧壓縮配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Compression: :class:`tencentcloud.cdn.v20180606.models.Compression`
-        :param DownstreamCapping: 下载限速配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DownstreamCapping: 下載限速配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DownstreamCapping: :class:`tencentcloud.cdn.v20180606.models.DownstreamCapping`
-        :param ErrorPage: 错误码重定向配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ErrorPage: 錯誤碼重定向配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ErrorPage: :class:`tencentcloud.cdn.v20180606.models.ErrorPage`
-        :param FollowRedirect: 301和302自动回源跟随配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FollowRedirect: 301和302自動回源跟随配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FollowRedirect: :class:`tencentcloud.cdn.v20180606.models.FollowRedirect`
-        :param ForceRedirect: 访问协议强制跳转配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ForceRedirect: 訪問協議強制跳轉配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ForceRedirect: :class:`tencentcloud.cdn.v20180606.models.ForceRedirect`
         :param Https: Https配置。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Https: :class:`tencentcloud.cdn.v20180606.models.Https`
-        :param IpFilter: IP黑白名单配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IpFilter: IP黑白名單配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IpFilter: :class:`tencentcloud.cdn.v20180606.models.IpFilter`
-        :param IpFreqLimit: IP限频配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IpFreqLimit: IP限頻配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IpFreqLimit: :class:`tencentcloud.cdn.v20180606.models.IpFreqLimit`
-        :param MaxAge: 浏览器缓存规则配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MaxAge: 浏覽器快取規則配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxAge: :class:`tencentcloud.cdn.v20180606.models.MaxAge`
         :param Origin: 源站配置。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Origin: :class:`tencentcloud.cdn.v20180606.models.Origin`
-        :param OriginPullOptimization: 跨国优化配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OriginPullOptimization: 跨國優化配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OriginPullOptimization: :class:`tencentcloud.cdn.v20180606.models.OriginPullOptimization`
         :param RangeOriginPull: Range回源配置。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RangeOriginPull: :class:`tencentcloud.cdn.v20180606.models.RangeOriginPull`
-        :param Referer: 防盗链配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Referer: 防盜鏈配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Referer: :class:`tencentcloud.cdn.v20180606.models.Referer`
-        :param RequestHeader: 回源请求头部配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RequestHeader: 回源請求頭部配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RequestHeader: :class:`tencentcloud.cdn.v20180606.models.RequestHeader`
-        :param ResponseHeader: 源站响应头部配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResponseHeader: 源站響應頭部配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResponseHeader: :class:`tencentcloud.cdn.v20180606.models.ResponseHeader`
-        :param ResponseHeaderCache: 遵循源站缓存头部配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResponseHeaderCache: 遵循源站快取頭部配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResponseHeaderCache: :class:`tencentcloud.cdn.v20180606.models.ResponseHeaderCache`
-        :param Seo: seo优化配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Seo: seo優化配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Seo: :class:`tencentcloud.cdn.v20180606.models.Seo`
-        :param ServiceType: 域名业务类型，web，download，media分别表示静态加速，下载加速和流媒体加速。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ServiceType: 域名業務類型，web，download，media分别表示靜态加速，下載加速和流媒體加速。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ServiceType: str
-        :param StatusCodeCache: 状态码缓存配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StatusCodeCache: 狀态碼快取配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StatusCodeCache: :class:`tencentcloud.cdn.v20180606.models.StatusCodeCache`
-        :param VideoSeek: 视频拖拽配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VideoSeek: 視訊拖拽配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VideoSeek: :class:`tencentcloud.cdn.v20180606.models.VideoSeek`
         """
         self.Authentication = None
@@ -4561,17 +4561,17 @@ class OverseaConfig(AbstractModel):
 
 
 class PurgePathCacheRequest(AbstractModel):
-    """PurgePathCache请求参数结构体
+    """PurgePathCache請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Paths: 目录列表，需要包含协议头部 http:// 或 https://
+        :param Paths: 目錄清單，需要包含協議頭部 http:// 或 https://
         :type Paths: list of str
-        :param FlushType: 刷新类型
-flush：刷新产生更新的资源
-delete：刷新全部资源
+        :param FlushType: 重新整理類型
+flush：重新整理産生更新的資源
+delete：重新整理全部資源
         :type FlushType: str
         """
         self.Paths = None
@@ -4584,15 +4584,15 @@ delete：刷新全部资源
 
 
 class PurgePathCacheResponse(AbstractModel):
-    """PurgePathCache返回参数结构体
+    """PurgePathCache返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 刷新任务 ID，同一批次提交的目录共用一个任务 ID
+        :param TaskId: 重新整理任務 ID，同一批次提交的目錄共用一個任務 ID
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -4605,30 +4605,30 @@ class PurgePathCacheResponse(AbstractModel):
 
 
 class PurgeTask(AbstractModel):
-    """刷新任务详情
+    """重新整理任務詳情
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 刷新任务 ID
+        :param TaskId: 重新整理任務 ID
         :type TaskId: str
-        :param Url: 刷新 URL
+        :param Url: 重新整理 URL
         :type Url: str
-        :param Status: 刷新任务状态
-fail：刷新失败
-done：刷新成功
-process：刷新中
+        :param Status: 重新整理任務狀态
+fail：重新整理失敗
+done：重新整理成功
+process：重新整理中
         :type Status: str
-        :param PurgeType: 刷新类型
-url：URL 刷新
-path：目录刷新
+        :param PurgeType: 重新整理類型
+url：URL 重新整理
+path：目錄重新整理
         :type PurgeType: str
-        :param FlushType: 刷新方式
-flush：刷新更新资源（仅目录刷新时有此类型）
-delete：刷新全部资源
+        :param FlushType: 重新整理方式
+flush：重新整理更新資源（僅目錄重新整理時有此類型）
+delete：重新整理全部資源
         :type FlushType: str
-        :param CreateTime: 刷新任务提交时间
+        :param CreateTime: 重新整理任務提交時間
         :type CreateTime: str
         """
         self.TaskId = None
@@ -4649,13 +4649,13 @@ delete：刷新全部资源
 
 
 class PurgeUrlsCacheRequest(AbstractModel):
-    """PurgeUrlsCache请求参数结构体
+    """PurgeUrlsCache請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Urls: URL 列表，需要包含协议头部 http:// 或 https://
+        :param Urls: URL 清單，需要包含協議頭部 http:// 或 https://
         :type Urls: list of str
         """
         self.Urls = None
@@ -4666,15 +4666,15 @@ class PurgeUrlsCacheRequest(AbstractModel):
 
 
 class PurgeUrlsCacheResponse(AbstractModel):
-    """PurgeUrlsCache返回参数结构体
+    """PurgeUrlsCache返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 刷新任务 ID，同一批次提交的 URL 共用一个任务 ID
+        :param TaskId: 重新整理任務 ID，同一批次提交的 URL 共用一個任務 ID
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -4687,32 +4687,32 @@ class PurgeUrlsCacheResponse(AbstractModel):
 
 
 class PushTask(AbstractModel):
-    """预热任务详情
+    """預熱任務詳情
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 预热任务 ID
+        :param TaskId: 預熱任務 ID
         :type TaskId: str
-        :param Url: 预热 URL
+        :param Url: 預熱 URL
         :type Url: str
-        :param Status: 预热任务状态
-fail：预热失败
-done：预热成功
-process：预热中
+        :param Status: 預熱任務狀态
+fail：預熱失敗
+done：預熱成功
+process：預熱中
         :type Status: str
-        :param Percent: 预热进度百分比
+        :param Percent: 預熱進度百分比
         :type Percent: int
-        :param CreateTime: 预热任务提交时间
+        :param CreateTime: 預熱任務提交時間
         :type CreateTime: str
-        :param Area: 预热区域
+        :param Area: 預熱區域
 mainland：境内
 overseas：境外
 global：全球
         :type Area: str
-        :param UpdateTime: 预热任务更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdateTime: 預熱任務更新時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdateTime: str
         """
         self.TaskId = None
@@ -4735,22 +4735,22 @@ global：全球
 
 
 class PushUrlsCacheRequest(AbstractModel):
-    """PushUrlsCache请求参数结构体
+    """PushUrlsCache請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Urls: URL 列表，需要包含协议头部 http:// 或 https://
+        :param Urls: URL 清單，需要包含協議頭部 http:// 或 https://
         :type Urls: list of str
-        :param UserAgent: 指定预热请求回源时 HTTP 请求的 User-Agent 头部
-默认为 TencentCdn
+        :param UserAgent: 指定預熱請求回源時 HTTP 請求的 User-Agent 頭部
+預設爲 TencentCdn
         :type UserAgent: str
-        :param Area: 预热生效区域
-mainland：预热至境内节点
-overseas：预热至境外节点
-global：预热全球节点
-不填充情况下，默认为 mainland， URL 中域名必须在对应区域启用了加速服务才能提交对应区域的预热任务
+        :param Area: 預熱生效區域
+mainland：預熱至境内節點
+overseas：預熱至境外節點
+global：預熱全球節點
+不填充情況下，預設爲 mainland， URL 中域名必須在對應區域啓用了加速服務才能提交對應區域的預熱任務
         :type Area: str
         """
         self.Urls = None
@@ -4765,15 +4765,15 @@ global：预热全球节点
 
 
 class PushUrlsCacheResponse(AbstractModel):
-    """PushUrlsCache返回参数结构体
+    """PushUrlsCache返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 此批提交的任务 ID
+        :param TaskId: 此批提交的任務 ID
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -4786,19 +4786,19 @@ class PushUrlsCacheResponse(AbstractModel):
 
 
 class Quota(AbstractModel):
-    """刷新/预热 可用量及配额
+    """重新整理/預熱 可用量及配額
 
     """
 
     def __init__(self):
         """
-        :param Batch: 单次批量提交配额上限。
+        :param Batch: 單次批次提交配額上限。
         :type Batch: int
-        :param Total: 每日提交配额上限。
+        :param Total: 每日提交配額上限。
         :type Total: int
-        :param Available: 每日剩余的可提交配额。
+        :param Available: 每日剩餘的可提交配額。
         :type Available: int
-        :param Area: 配额的区域。
+        :param Area: 配額的區域。
         :type Area: str
         """
         self.Batch = None
@@ -4815,15 +4815,15 @@ class Quota(AbstractModel):
 
 
 class RangeOriginPull(AbstractModel):
-    """分片回源配置，默认为开启状态
+    """分片回源配置，預設爲開啓狀态
 
     """
 
     def __init__(self):
         """
-        :param Switch: 分片回源配置开关
-on：开启
-off：关闭
+        :param Switch: 分片回源配置開關
+on：開啓
+off：關閉
         :type Switch: str
         """
         self.Switch = None
@@ -4834,18 +4834,18 @@ off：关闭
 
 
 class Referer(AbstractModel):
-    """Referer 黑白名单配置，默认为关闭状态
+    """Referer 黑白名單配置，預設爲關閉狀态
 
     """
 
     def __init__(self):
         """
-        :param Switch: referer 黑白名单配置开关
-on：开启
-off：关闭
+        :param Switch: referer 黑白名單配置開關
+on：開啓
+off：關閉
         :type Switch: str
-        :param RefererRules: referer 黑白名单配置规则
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RefererRules: referer 黑白名單配置規則
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RefererRules: list of RefererRule
         """
         self.Switch = None
@@ -4863,33 +4863,33 @@ off：关闭
 
 
 class RefererRule(AbstractModel):
-    """Referer 黑白名单配置规则，针对特定资源生效
+    """Referer 黑白名單配置規則，針對特定資源生效
 
     """
 
     def __init__(self):
         """
-        :param RuleType: 规则类型：
+        :param RuleType: 規則類型：
 all：所有文件生效
-file：指定文件后缀生效
-directory：指定路径生效
-path：指定绝对路径生效
+file：指定文件後綴生效
+directory：指定路徑生效
+path：指定絕對路徑生效
         :type RuleType: str
-        :param RulePaths: RuleType 对应类型下的匹配内容：
-all 时填充 *
-file 时填充后缀名，如 jpg、txt
-directory 时填充路径，如 /xxx/test/
-path 时填充绝对路径，如 /xxx/test.html
+        :param RulePaths: RuleType 對應類型下的比對内容：
+all 時填充 *
+file 時填充後綴名，如 jpg、txt
+directory 時填充路徑，如 /xxx/test/
+path 時填充絕對路徑，如 /xxx/test.html
         :type RulePaths: list of str
-        :param RefererType: referer 配置类型
-whitelist：白名单
-blacklist：黑名单
+        :param RefererType: referer 配置類型
+whitelist：白名單
+blacklist：黑名單
         :type RefererType: str
-        :param Referers: referer 内容列表列表
+        :param Referers: referer 内容清單清單
         :type Referers: list of str
-        :param AllowEmpty: 是否允许空 referer
-true：允许空 referer
-false：不允许空 referer
+        :param AllowEmpty: 是否允許空 referer
+true：允許空 referer
+false：不允許空 referer
         :type AllowEmpty: bool
         """
         self.RuleType = None
@@ -4908,15 +4908,15 @@ false：不允许空 referer
 
 
 class RegionMapRelation(AbstractModel):
-    """区域映射id和子区域id的关联信息。
+    """區域映射id和子區域id的關聯訊息。
 
     """
 
     def __init__(self):
         """
-        :param RegionId: 区域ID。
+        :param RegionId: 區域ID。
         :type RegionId: int
-        :param SubRegionIdList: 子区域ID列表
+        :param SubRegionIdList: 子區域ID清單
         :type SubRegionIdList: list of int
         """
         self.RegionId = None
@@ -4929,23 +4929,23 @@ class RegionMapRelation(AbstractModel):
 
 
 class ReportData(AbstractModel):
-    """CDN报表数据
+    """CDN報表數據
 
     """
 
     def __init__(self):
         """
-        :param ResourceId: 项目ID/域名ID。
+        :param ResourceId: 項目ID/域名ID。
         :type ResourceId: str
-        :param Resource: 项目名称/域名。
+        :param Resource: 項目名稱/域名。
         :type Resource: str
-        :param Value: 流量总和/带宽最大值，单位分别为bytes，bps。
+        :param Value: 流量總和/頻寬最大值，單位分别爲bytes，bps。
         :type Value: int
-        :param Percentage: 单个资源占总体百分比。
+        :param Percentage: 單個資源占總體百分比。
         :type Percentage: float
-        :param BillingValue: 计费流量总和/计费带宽最大值，单位分别为bytes，bps。
+        :param BillingValue: 計費流量總和/計費頻寬最大值，單位分别爲bytes，bps。
         :type BillingValue: int
-        :param BillingPercentage: 计费数值占总体百分比。
+        :param BillingPercentage: 計費數值占總體百分比。
         :type BillingPercentage: float
         """
         self.ResourceId = None
@@ -4966,18 +4966,18 @@ class ReportData(AbstractModel):
 
 
 class RequestHeader(AbstractModel):
-    """自定义请求头配置，默认为关闭状态
+    """自定義請求頭配置，預設爲關閉狀态
 
     """
 
     def __init__(self):
         """
-        :param Switch: 自定义请求头配置开关
-on：开启
-off：关闭
+        :param Switch: 自定義請求頭配置開關
+on：開啓
+off：關閉
         :type Switch: str
-        :param HeaderRules: 自定义请求头配置规则
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HeaderRules: 自定義請求頭配置規則
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HeaderRules: list of HttpHeaderPathRule
         """
         self.Switch = None
@@ -4995,19 +4995,19 @@ off：关闭
 
 
 class ResourceBillingData(AbstractModel):
-    """计费数据明细
+    """計費數據明細
 
     """
 
     def __init__(self):
         """
-        :param Resource: 资源名称，根据查询条件不同分为以下几类：
-某一个具体域名：表示该域名明细数据
-multiDomains：表示多域名汇总明细数据
-某一个项目 ID：指定项目查询时，显示为项目 ID
-all：账号维度数据明细
+        :param Resource: 資源名稱，根據查詢條件不同分爲以下幾類：
+某一個具體域名：表示該域名明細數據
+multiDomains：表示多域名匯總明細數據
+某一個項目 ID：指定項目查詢時，顯示爲項目 ID
+all：賬号維度數據明細
         :type Resource: str
-        :param BillingData: 计费数据详情
+        :param BillingData: 計費數據詳情
         :type BillingData: list of CdnData
         """
         self.Resource = None
@@ -5025,19 +5025,19 @@ all：账号维度数据明细
 
 
 class ResourceData(AbstractModel):
-    """查询对象及其对应的访问明细数据
+    """查詢對象及其對應的訪問明細數據
 
     """
 
     def __init__(self):
         """
-        :param Resource: 资源名称，根据查询条件不同分为以下几类：
-具体域名：表示该域名明细数据
-multiDomains：表示多域名汇总明细数据
-项目 ID：指定项目查询时，显示为项目 ID
-all：账号维度明细数据
+        :param Resource: 資源名稱，根據查詢條件不同分爲以下幾類：
+具體域名：表示該域名明細數據
+multiDomains：表示多域名匯總明細數據
+項目 ID：指定項目查詢時，顯示爲項目 ID
+all：賬号維度明細數據
         :type Resource: str
-        :param CdnData: 资源对应的数据明细
+        :param CdnData: 資源對應的數據明細
         :type CdnData: list of CdnData
         """
         self.Resource = None
@@ -5055,19 +5055,19 @@ all：账号维度明细数据
 
 
 class ResourceOriginData(AbstractModel):
-    """查询对象及其对应的回源明细数据
+    """查詢對象及其對應的回源明細數據
 
     """
 
     def __init__(self):
         """
-        :param Resource: 资源名称，根据查询条件不同分为以下几类：
-具体域名：表示该域名明细数据
-multiDomains：表示多域名汇总明细数据
-项目 ID：指定项目查询时，显示为项目 ID
-all：账号维度明细数据
+        :param Resource: 資源名稱，根據查詢條件不同分爲以下幾類：
+具體域名：表示該域名明細數據
+multiDomains：表示多域名匯總明細數據
+項目 ID：指定項目查詢時，顯示爲項目 ID
+all：賬号維度明細數據
         :type Resource: str
-        :param OriginData: 回源数据详情
+        :param OriginData: 回源數據詳情
         :type OriginData: list of CdnData
         """
         self.Resource = None
@@ -5085,18 +5085,18 @@ all：账号维度明细数据
 
 
 class ResponseHeader(AbstractModel):
-    """自定义响应头配置，默认为关闭状态
+    """自定義響應頭配置，預設爲關閉狀态
 
     """
 
     def __init__(self):
         """
-        :param Switch: 自定义响应头开关
-on：开启
-off：关闭
+        :param Switch: 自定義響應頭開關
+on：開啓
+off：關閉
         :type Switch: str
-        :param HeaderRules: 自定义响应头规则
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HeaderRules: 自定義響應頭規則
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HeaderRules: list of HttpHeaderPathRule
         """
         self.Switch = None
@@ -5114,15 +5114,15 @@ off：关闭
 
 
 class ResponseHeaderCache(AbstractModel):
-    """源站头部缓存配置，默认为开启状态，缓存所有头部信息
+    """源站頭部快取配置，預設爲開啓狀态，快取所有頭部訊息
 
     """
 
     def __init__(self):
         """
-        :param Switch: 源站头部缓存开关
-on：开启
-off：关闭
+        :param Switch: 源站頭部快取開關
+on：開啓
+off：關閉
         :type Switch: str
         """
         self.Switch = None
@@ -5133,29 +5133,29 @@ off：关闭
 
 
 class SearchClsLogRequest(AbstractModel):
-    """SearchClsLog请求参数结构体
+    """SearchClsLog請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LogsetId: 需要查询的日志集ID
+        :param LogsetId: 需要查詢的日志集ID
         :type LogsetId: str
-        :param TopicIds: 需要查询的日志主题ID组合，以逗号分隔
+        :param TopicIds: 需要查詢的日志主題ID組合，以逗号分隔
         :type TopicIds: str
-        :param StartTime: 需要查询的日志的起始时间，格式 YYYY-mm-dd HH:MM:SS
+        :param StartTime: 需要查詢的日志的起始時間，格式 YYYY-mm-dd HH:MM:SS
         :type StartTime: str
-        :param EndTime: 需要查询的日志的结束时间，格式 YYYY-mm-dd HH:MM:SS
+        :param EndTime: 需要查詢的日志的結束時間，格式 YYYY-mm-dd HH:MM:SS
         :type EndTime: str
-        :param Limit: 单次要返回的日志条数，单次返回的最大条数为100
+        :param Limit: 單次要返回的日志條數，單次返回的最大條數爲100
         :type Limit: int
-        :param Channel: 接入渠道，默认值为cdn
+        :param Channel: 接入管道，預設值爲cdn
         :type Channel: str
-        :param Query: 需要查询的内容，详情请参考https://cloud.tencent.com/document/product/614/16982
+        :param Query: 需要查詢的内容，詳情請參考https://cloud.tencent.com/document/product/614/16982
         :type Query: str
-        :param Context: 加载更多使用，透传上次返回的 context 值，获取后续的日志内容，通过游标最多可获取10000条，请尽可能缩小时间范围
+        :param Context: 加載更多使用，透傳上次返回的 context 值，獲取後續的日志内容，通過遊标最多可獲取10000條，請盡可能縮小時間範圍
         :type Context: str
-        :param Sort: 按日志时间排序， asc（升序）或者 desc（降序），默认为 desc
+        :param Sort: 按日志時間排序， asc（升序）或者 desc（降序），預設爲 desc
         :type Sort: str
         """
         self.LogsetId = None
@@ -5182,15 +5182,15 @@ class SearchClsLogRequest(AbstractModel):
 
 
 class SearchClsLogResponse(AbstractModel):
-    """SearchClsLog返回参数结构体
+    """SearchClsLog返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Logs: 查询结果
+        :param Logs: 查詢結果
         :type Logs: :class:`tencentcloud.cdn.v20180606.models.ClsSearchLogs`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Logs = None
@@ -5205,7 +5205,7 @@ class SearchClsLogResponse(AbstractModel):
 
 
 class SecurityConfig(AbstractModel):
-    """scdn相关的配置
+    """scdn相關的配置
 
     """
 
@@ -5222,16 +5222,16 @@ class SecurityConfig(AbstractModel):
 
 
 class Seo(AbstractModel):
-    """SEO 搜索引擎优化配置，默认为关闭状态
+    """SEO 搜索引擎優化配置，預設爲關閉狀态
 
     """
 
     def __init__(self):
         """
-        :param Switch: SEO 配置开关
-on：开启
-off：关闭
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Switch: SEO 配置開關
+on：開啓
+off：關閉
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Switch: str
         """
         self.Switch = None
@@ -5242,41 +5242,41 @@ off：关闭
 
 
 class ServerCert(AbstractModel):
-    """https 加速服务端证书配置：
-    + 支持使用托管至 SSL 证书管理的证书进行部署
-    + 支持上传 PEM 格式的证书进行部署
-    注意：上传 PEM 证书时，需要进行 Base 64 编码
+    """https 加速服務端證書配置：
+    + 支援使用托管至 SSL 證書管理的證書進行佈署
+    + 支援上傳 PEM 格式的證書進行佈署
+    注意：上傳 PEM 證書時，需要進行 Base 64 編碼
 
     """
 
     def __init__(self):
         """
-        :param CertId: 服务器证书 ID
-在 SSL 证书管理进行证书托管时自动生成
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CertId: 服務器證書 ID
+在 SSL 證書管理進行證書托管時自動生成
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CertId: str
-        :param CertName: 服务器证书名称
-在 SSL 证书管理进行证书托管时自动生成
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CertName: 服務器證書名稱
+在 SSL 證書管理進行證書托管時自動生成
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CertName: str
-        :param Certificate: 服务器证书信息
-上传自有证书时必填，需要包含完整的证书链
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Certificate: 服務器證書訊息
+上傳自有證書時必填，需要包含完整的證書鏈
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Certificate: str
-        :param PrivateKey: 服务器密钥信息
-上传自有证书时必填
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PrivateKey: 服務器金鑰訊息
+上傳自有證書時必填
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PrivateKey: str
-        :param ExpireTime: 证书过期时间
-作为入参配置时无需填充
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ExpireTime: 證書過期時間
+作爲入參配置時無需填充
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ExpireTime: str
-        :param DeployTime: 证书颁发时间
-作为入参配置时无需填充
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DeployTime: 證書頒發時間
+作爲入參配置時無需填充
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeployTime: str
-        :param Message: 证书备注信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Message: 證書備注訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Message: str
         """
         self.CertId = None
@@ -5299,42 +5299,42 @@ class ServerCert(AbstractModel):
 
 
 class SimpleCache(AbstractModel):
-    """缓存配置基础版本
-    默认情况下所有文件缓存过期时间为 30 天
-    默认情况下静态加速类型的域名 .php;.jsp;.asp;.aspx 不缓存
-    注意：该版本不支持设置源站未返回 max-age 情况下的缓存过期规则设置
+    """快取配置基礎版本
+    預設情況下所有文件快取過期時間爲 30 天
+    預設情況下靜态加速類型的域名 .php;.jsp;.asp;.aspx 不快取
+    注意：該版本不支援設置源站未返回 max-age 情況下的快取過期規則設置
 
     """
 
     def __init__(self):
         """
-        :param CacheRules: 缓存过期时间规则
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CacheRules: 快取過期時間規則
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CacheRules: list of SimpleCacheRule
         :param FollowOrigin: 遵循源站 Cache-Control: max-age 配置
-on：开启
-off：关闭
-开启后，未能匹配 CacheRules 规则的资源将根据源站返回的 max-age 值进行节点缓存；匹配了 CacheRules 规则的资源将按照 CacheRules 中设置的缓存过期时间在节点进行缓存
-与 CompareMaxAge 冲突，不能同时开启
-注意：此字段可能返回 null，表示取不到有效值。
+on：開啓
+off：關閉
+開啓後，未能比對 CacheRules 規則的資源将根據源站返回的 max-age 值進行節點快取；比對了 CacheRules 規則的資源将按照 CacheRules 中設置的快取過期時間在節點進行快取
+與 CompareMaxAge 沖突，不能同時開啓
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FollowOrigin: str
-        :param IgnoreCacheControl: 强制缓存
-on：开启
-off：关闭
-默认为关闭状态，开启后，源站发挥的 no-store、no-cache 资源，也将按照 CacheRules 规则进行缓存
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IgnoreCacheControl: 強制快取
+on：開啓
+off：關閉
+預設爲關閉狀态，開啓後，源站發揮的 no-store、no-cache 資源，也将按照 CacheRules 規則進行快取
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IgnoreCacheControl: str
-        :param IgnoreSetCookie: 忽略源站的Set-Cookie头部
-on：开启
-off：关闭
-默认为关闭状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IgnoreSetCookie: 忽略源站的Set-Cookie頭部
+on：開啓
+off：關閉
+預設爲關閉狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IgnoreSetCookie: str
-        :param CompareMaxAge: 高级缓存过期配置，开启时会对比源站返回的 max-age 值与 CacheRules 中设置的缓存过期时间，取最小值在节点进行缓存
-on：开启
-off：关闭
-默认为关闭状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CompareMaxAge: 高級快取過期配置，開啓時會對比源站返回的 max-age 值與 CacheRules 中設置的快取過期時間，取最小值在節點進行快取
+on：開啓
+off：關閉
+預設爲關閉狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CompareMaxAge: str
         """
         self.CacheRules = None
@@ -5358,28 +5358,28 @@ off：关闭
 
 
 class SimpleCacheRule(AbstractModel):
-    """缓存过期规则配置
+    """快取過期規則配置
 
     """
 
     def __init__(self):
         """
-        :param CacheType: 规则类型：
+        :param CacheType: 規則類型：
 all：所有文件生效
-file：指定文件后缀生效
-directory：指定路径生效
-path：指定绝对路径生效
-index：首页
+file：指定文件後綴生效
+directory：指定路徑生效
+path：指定絕對路徑生效
+index：首頁
         :type CacheType: str
-        :param CacheContents: CacheType 对应类型下的匹配内容：
-all 时填充 *
-file 时填充后缀名，如 jpg、txt
-directory 时填充路径，如 /xxx/test/
-path 时填充绝对路径，如 /xxx/test.html
-index 时填充 /
+        :param CacheContents: CacheType 對應類型下的比對内容：
+all 時填充 *
+file 時填充後綴名，如 jpg、txt
+directory 時填充路徑，如 /xxx/test/
+path 時填充絕對路徑，如 /xxx/test.html
+index 時填充 /
         :type CacheContents: list of str
-        :param CacheTime: 缓存过期时间设置
-单位为秒，最大可设置为 365 天
+        :param CacheTime: 快取過期時間設置
+單位爲秒，最大可設置爲 365 天
         :type CacheTime: int
         """
         self.CacheType = None
@@ -5394,17 +5394,17 @@ index 时填充 /
 
 
 class Sort(AbstractModel):
-    """查询结果排序条件
+    """查詢結果排序條件
 
     """
 
     def __init__(self):
         """
-        :param Key: 排序字段，当前支持：
-createTime，域名创建时间
-certExpireTime，证书过期时间
+        :param Key: 排序欄位，當前支援：
+createTime，域名創建時間
+certExpireTime，證書過期時間
         :type Key: str
-        :param Sequence: asc/desc，默认desc。
+        :param Sequence: asc/desc，預設desc。
         :type Sequence: str
         """
         self.Key = None
@@ -5417,17 +5417,17 @@ certExpireTime，证书过期时间
 
 
 class SpecificConfig(AbstractModel):
-    """域名国内海外分地区特殊配置。
+    """域名國内海外分地區特殊配置。
 
     """
 
     def __init__(self):
         """
-        :param Mainland: 国内特殊配置。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Mainland: 國内特殊配置。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Mainland: :class:`tencentcloud.cdn.v20180606.models.MainlandConfig`
         :param Overseas: 海外特殊配置。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Overseas: :class:`tencentcloud.cdn.v20180606.models.OverseaConfig`
         """
         self.Mainland = None
@@ -5444,14 +5444,14 @@ class SpecificConfig(AbstractModel):
 
 
 class StartCdnDomainRequest(AbstractModel):
-    """StartCdnDomain请求参数结构体
+    """StartCdnDomain請求參數結構體
 
     """
 
     def __init__(self):
         """
         :param Domain: 域名
-域名状态需要为【已停用】
+域名狀态需要爲【已停用】
         :type Domain: str
         """
         self.Domain = None
@@ -5462,13 +5462,13 @@ class StartCdnDomainRequest(AbstractModel):
 
 
 class StartCdnDomainResponse(AbstractModel):
-    """StartCdnDomain返回参数结构体
+    """StartCdnDomain返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -5479,19 +5479,19 @@ class StartCdnDomainResponse(AbstractModel):
 
 
 class StatusCodeCache(AbstractModel):
-    """状态码缓存过期配置，默认情况下会对 404 状态码缓存 10 秒
+    """狀态碼快取過期配置，預設情況下會對 404 狀态碼快取 10 秒
 
     """
 
     def __init__(self):
         """
-        :param Switch: 状态码缓存过期配置开关
-on：开启
-off：关闭
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Switch: 狀态碼快取過期配置開關
+on：開啓
+off：關閉
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Switch: str
-        :param CacheRules: 状态码缓存过期规则明细
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CacheRules: 狀态碼快取過期規則明細
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CacheRules: list of StatusCodeCacheRule
         """
         self.Switch = None
@@ -5509,16 +5509,16 @@ off：关闭
 
 
 class StatusCodeCacheRule(AbstractModel):
-    """状态码缓存过期时间规则配置
+    """狀态碼快取過期時間規則配置
 
     """
 
     def __init__(self):
         """
-        :param StatusCode: http 状态码
-支持 403、404 状态码
+        :param StatusCode: http 狀态碼
+支援 403、404 狀态碼
         :type StatusCode: str
-        :param CacheTime: 状态码缓存过期时间，单位秒
+        :param CacheTime: 狀态碼快取過期時間，單位秒
         :type CacheTime: int
         """
         self.StatusCode = None
@@ -5531,14 +5531,14 @@ class StatusCodeCacheRule(AbstractModel):
 
 
 class StopCdnDomainRequest(AbstractModel):
-    """StopCdnDomain请求参数结构体
+    """StopCdnDomain請求參數結構體
 
     """
 
     def __init__(self):
         """
         :param Domain: 域名
-域名需要为【已启动】状态
+域名需要爲【已啓動】狀态
         :type Domain: str
         """
         self.Domain = None
@@ -5549,13 +5549,13 @@ class StopCdnDomainRequest(AbstractModel):
 
 
 class StopCdnDomainResponse(AbstractModel):
-    """StopCdnDomain返回参数结构体
+    """StopCdnDomain返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -5566,18 +5566,18 @@ class StopCdnDomainResponse(AbstractModel):
 
 
 class SummarizedData(AbstractModel):
-    """明细数据的汇总值，各指标根据其特性不同拥有不同汇总方式
+    """明細數據的匯總值，各指标根據其特性不同擁有不同匯總方式
 
     """
 
     def __init__(self):
         """
-        :param Name: 汇总方式，存在以下几种：
+        :param Name: 匯總方式，存在以下幾種：
 sum：累加求和
-max：最大值，带宽模式下，采用 5 分钟粒度汇总数据，计算峰值带宽
+max：最大值，頻寬模式下，采用 5 分鍾粒度匯總數據，計算峰值頻寬
 avg：平均值
         :type Name: str
-        :param Value: 汇总后的数据值
+        :param Value: 匯總後的數據值
         :type Value: float
         """
         self.Name = None
@@ -5590,16 +5590,16 @@ avg：平均值
 
 
 class TimestampData(AbstractModel):
-    """时间戳与其对应的数值
+    """時間戳與其對應的數值
 
     """
 
     def __init__(self):
         """
-        :param Time: 数据统计时间点，采用向前汇总模式
-以 5 分钟粒度为例，13:35:00 时间点代表的统计数据区间为 13:35:00 至 13:39:59
+        :param Time: 數據統計時間點，采用向前匯總模式
+以 5 分鍾粒度爲例，13:35:00 時間點代表的統計數據區間爲 13:35:00 至 13:39:59
         :type Time: str
-        :param Value: 数据值
+        :param Value: 數據值
         :type Value: float
         """
         self.Time = None
@@ -5612,19 +5612,19 @@ class TimestampData(AbstractModel):
 
 
 class TopData(AbstractModel):
-    """排序类型数据结构
+    """排序類型數據結構
 
     """
 
     def __init__(self):
         """
-        :param Resource: 资源名称，根据查询条件不同分为以下几类：
-具体域名：表示该域名明细数据
-multiDomains：表示多域名汇总明细数据
-项目 ID：指定项目查询时，显示为项目 ID
-all：账号维度明细数据
+        :param Resource: 資源名稱，根據查詢條件不同分爲以下幾類：
+具體域名：表示該域名明細數據
+multiDomains：表示多域名匯總明細數據
+項目 ID：指定項目查詢時，顯示爲項目 ID
+all：賬号維度明細數據
         :type Resource: str
-        :param DetailData: 排序结果详情
+        :param DetailData: 排序結果詳情
         :type DetailData: list of TopDetailData
         """
         self.Resource = None
@@ -5642,15 +5642,15 @@ all：账号维度明细数据
 
 
 class TopDetailData(AbstractModel):
-    """排序类型的数据结构
+    """排序類型的數據結構
 
     """
 
     def __init__(self):
         """
-        :param Name: 数据类型的名称
+        :param Name: 數據類型的名稱
         :type Name: str
-        :param Value: 数据值
+        :param Value: 數據值
         :type Value: float
         """
         self.Name = None
@@ -5663,20 +5663,20 @@ class TopDetailData(AbstractModel):
 
 
 class TopicInfo(AbstractModel):
-    """CLS主题信息
+    """CLS主題訊息
 
     """
 
     def __init__(self):
         """
-        :param TopicId: 主题ID
+        :param TopicId: 主題ID
         :type TopicId: str
-        :param TopicName: 主题名字
+        :param TopicName: 主題名字
         :type TopicName: str
-        :param Enabled: 是否启用投递
+        :param Enabled: 是否啓用投遞
         :type Enabled: int
-        :param CreateTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
         """
         self.TopicId = None
@@ -5693,14 +5693,14 @@ class TopicInfo(AbstractModel):
 
 
 class TpgAdapter(AbstractModel):
-    """图片优化-TpgAdapter配置
+    """圖片優化-TpgAdapter配置
 
     """
 
     def __init__(self):
         """
-        :param Switch: 开关，"on/off"
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Switch: 開關，"on/off"
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Switch: str
         """
         self.Switch = None
@@ -5719,28 +5719,28 @@ class TrafficPackage(AbstractModel):
         """
         :param Id: 流量包 Id
         :type Id: int
-        :param Type: 流量包类型
+        :param Type: 流量包類型
         :type Type: str
-        :param Bytes: 流量包大小（单位为 Byte）
+        :param Bytes: 流量包大小（單位爲 Byte）
         :type Bytes: int
-        :param BytesUsed: 已消耗流量（单位为 Byte）
+        :param BytesUsed: 已消耗流量（單位爲 Byte）
         :type BytesUsed: int
-        :param Status: 流量包状态
-enabled：已启用
-expired：已过期
-disabled：未启用
+        :param Status: 流量包狀态
+enabled：已啓用
+expired：已過期
+disabled：未啓用
         :type Status: str
-        :param CreateTime: 流量包发放时间
+        :param CreateTime: 流量包發放時間
         :type CreateTime: str
-        :param EnableTime: 流量包生效时间
+        :param EnableTime: 流量包生效時間
         :type EnableTime: str
-        :param ExpireTime: 流量包过期时间
+        :param ExpireTime: 流量包過期時間
         :type ExpireTime: str
-        :param ContractExtension: 流量包是否续订
+        :param ContractExtension: 流量包是否續訂
         :type ContractExtension: bool
-        :param AutoExtension: 流量包是否自动续订
+        :param AutoExtension: 流量包是否自動續訂
         :type AutoExtension: bool
-        :param Channel: 流量包来源
+        :param Channel: 流量包來源
         :type Channel: str
         """
         self.Id = None
@@ -5771,7 +5771,7 @@ disabled：未启用
 
 
 class UpdateDomainConfigRequest(AbstractModel):
-    """UpdateDomainConfig请求参数结构体
+    """UpdateDomainConfig請求參數結構體
 
     """
 
@@ -5779,70 +5779,70 @@ class UpdateDomainConfigRequest(AbstractModel):
         """
         :param Domain: 域名
         :type Domain: str
-        :param ProjectId: 项目 ID
+        :param ProjectId: 項目 ID
         :type ProjectId: int
         :param Origin: 源站配置
         :type Origin: :class:`tencentcloud.cdn.v20180606.models.Origin`
-        :param IpFilter: IP 黑白名单配置
+        :param IpFilter: IP 黑白名單配置
         :type IpFilter: :class:`tencentcloud.cdn.v20180606.models.IpFilter`
-        :param IpFreqLimit: IP 限频配置
+        :param IpFreqLimit: IP 限頻配置
         :type IpFreqLimit: :class:`tencentcloud.cdn.v20180606.models.IpFreqLimit`
-        :param StatusCodeCache: 状态码缓存配置
+        :param StatusCodeCache: 狀态碼快取配置
         :type StatusCodeCache: :class:`tencentcloud.cdn.v20180606.models.StatusCodeCache`
-        :param Compression: 智能压缩配置
+        :param Compression: 智慧壓縮配置
         :type Compression: :class:`tencentcloud.cdn.v20180606.models.Compression`
-        :param BandwidthAlert: 带宽封顶配置
+        :param BandwidthAlert: 頻寬封頂配置
         :type BandwidthAlert: :class:`tencentcloud.cdn.v20180606.models.BandwidthAlert`
         :param RangeOriginPull: Range 回源配置
         :type RangeOriginPull: :class:`tencentcloud.cdn.v20180606.models.RangeOriginPull`
         :param FollowRedirect: 301/302 回源跟随配置
         :type FollowRedirect: :class:`tencentcloud.cdn.v20180606.models.FollowRedirect`
-        :param ErrorPage: 错误码重定向配置（功能灰度中，尚未全量）
+        :param ErrorPage: 錯誤碼重定向配置（功能灰度中，尚未全量）
         :type ErrorPage: :class:`tencentcloud.cdn.v20180606.models.ErrorPage`
-        :param RequestHeader: 请求头部配置
+        :param RequestHeader: 請求頭部配置
         :type RequestHeader: :class:`tencentcloud.cdn.v20180606.models.RequestHeader`
-        :param ResponseHeader: 响应头部配置
+        :param ResponseHeader: 響應頭部配置
         :type ResponseHeader: :class:`tencentcloud.cdn.v20180606.models.ResponseHeader`
-        :param DownstreamCapping: 下载速度配置
+        :param DownstreamCapping: 下載速度配置
         :type DownstreamCapping: :class:`tencentcloud.cdn.v20180606.models.DownstreamCapping`
-        :param CacheKey: 节点缓存键配置
+        :param CacheKey: 節點快取鍵配置
         :type CacheKey: :class:`tencentcloud.cdn.v20180606.models.CacheKey`
-        :param ResponseHeaderCache: 头部缓存配置
+        :param ResponseHeaderCache: 頭部快取配置
         :type ResponseHeaderCache: :class:`tencentcloud.cdn.v20180606.models.ResponseHeaderCache`
-        :param VideoSeek: 视频拖拽配置
+        :param VideoSeek: 視訊拖拽配置
         :type VideoSeek: :class:`tencentcloud.cdn.v20180606.models.VideoSeek`
-        :param Cache: 缓存过期时间配置
+        :param Cache: 快取過期時間配置
         :type Cache: :class:`tencentcloud.cdn.v20180606.models.Cache`
-        :param OriginPullOptimization: 跨国链路优化配置
+        :param OriginPullOptimization: 跨國鏈路優化配置
         :type OriginPullOptimization: :class:`tencentcloud.cdn.v20180606.models.OriginPullOptimization`
         :param Https: Https 加速配置
         :type Https: :class:`tencentcloud.cdn.v20180606.models.Https`
-        :param Authentication: 时间戳防盗链配置
+        :param Authentication: 時間戳防盜鏈配置
         :type Authentication: :class:`tencentcloud.cdn.v20180606.models.Authentication`
-        :param Seo: SEO 优化配置
+        :param Seo: SEO 優化配置
         :type Seo: :class:`tencentcloud.cdn.v20180606.models.Seo`
-        :param ForceRedirect: 访问协议强制跳转配置
+        :param ForceRedirect: 訪問協議強制跳轉配置
         :type ForceRedirect: :class:`tencentcloud.cdn.v20180606.models.ForceRedirect`
-        :param Referer: Referer 防盗链配置
+        :param Referer: Referer 防盜鏈配置
         :type Referer: :class:`tencentcloud.cdn.v20180606.models.Referer`
-        :param MaxAge: 浏览器缓存配置（功能灰度中，尚未全量）
+        :param MaxAge: 浏覽器快取配置（功能灰度中，尚未全量）
         :type MaxAge: :class:`tencentcloud.cdn.v20180606.models.MaxAge`
-        :param ServiceType: 域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速
+        :param ServiceType: 域名業務類型
+web：靜态加速
+download：下載加速
+media：流媒體點播加速
         :type ServiceType: str
-        :param SpecificConfig: 地域属性特殊配置
-适用于域名境内加速、境外加速配置不一致场景
+        :param SpecificConfig: 地域屬性特殊配置
+适用于域名境内加速、境外加速配置不一緻場景
         :type SpecificConfig: :class:`tencentcloud.cdn.v20180606.models.SpecificConfig`
-        :param Area: 域名加速区域
-mainland：中国境内加速
-overseas：中国境外加速
+        :param Area: 域名加速區域
+mainland：中國境内加速
+overseas：中國境外加速
 global：全球加速
         :type Area: str
-        :param OriginPullTimeout: 回源超时配置
+        :param OriginPullTimeout: 回源超時配置
         :type OriginPullTimeout: :class:`tencentcloud.cdn.v20180606.models.OriginPullTimeout`
-        :param AwsPrivateAccess: 回源S3私有鉴权
+        :param AwsPrivateAccess: 回源S3私有鑒權
         :type AwsPrivateAccess: :class:`tencentcloud.cdn.v20180606.models.AwsPrivateAccess`
         """
         self.Domain = None
@@ -5963,13 +5963,13 @@ global：全球加速
 
 
 class UpdateDomainConfigResponse(AbstractModel):
-    """UpdateDomainConfig返回参数结构体
+    """UpdateDomainConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -5980,7 +5980,7 @@ class UpdateDomainConfigResponse(AbstractModel):
 
 
 class UpdateImageConfigRequest(AbstractModel):
-    """UpdateImageConfig请求参数结构体
+    """UpdateImageConfig請求參數結構體
 
     """
 
@@ -5988,11 +5988,11 @@ class UpdateImageConfigRequest(AbstractModel):
         """
         :param Domain: 域名
         :type Domain: str
-        :param WebpAdapter: WebpAdapter配置项
+        :param WebpAdapter: WebpAdapter配置項
         :type WebpAdapter: :class:`tencentcloud.cdn.v20180606.models.WebpAdapter`
-        :param TpgAdapter: TpgAdapter配置项
+        :param TpgAdapter: TpgAdapter配置項
         :type TpgAdapter: :class:`tencentcloud.cdn.v20180606.models.TpgAdapter`
-        :param GuetzliAdapter: GuetzliAdapter配置项
+        :param GuetzliAdapter: GuetzliAdapter配置項
         :type GuetzliAdapter: :class:`tencentcloud.cdn.v20180606.models.GuetzliAdapter`
         """
         self.Domain = None
@@ -6015,13 +6015,13 @@ class UpdateImageConfigRequest(AbstractModel):
 
 
 class UpdateImageConfigResponse(AbstractModel):
-    """UpdateImageConfig返回参数结构体
+    """UpdateImageConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -6032,15 +6032,15 @@ class UpdateImageConfigResponse(AbstractModel):
 
 
 class UpdatePayTypeRequest(AbstractModel):
-    """UpdatePayType请求参数结构体
+    """UpdatePayType請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Area: 计费区域，mainland或overseas。
+        :param Area: 計費區域，mainland或overseas。
         :type Area: str
-        :param PayType: 计费类型，flux或bandwidth。
+        :param PayType: 計費類型，flux或bandwidth。
         :type PayType: str
         """
         self.Area = None
@@ -6053,13 +6053,13 @@ class UpdatePayTypeRequest(AbstractModel):
 
 
 class UpdatePayTypeResponse(AbstractModel):
-    """UpdatePayType返回参数结构体
+    """UpdatePayType返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -6070,23 +6070,23 @@ class UpdatePayTypeResponse(AbstractModel):
 
 
 class UrlRecord(AbstractModel):
-    """封禁url的详细信息
+    """封禁url的詳細訊息
 
     """
 
     def __init__(self):
         """
-        :param Status: 状态(disable表示封禁，enable表示解封)
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Status: 狀态(disable表示封禁，enable表示解封)
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: str
-        :param RealUrl: 对应的url
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RealUrl: 對應的url
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RealUrl: str
-        :param CreateTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
-        :param UpdateTime: 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdateTime: 更新時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdateTime: str
         """
         self.Status = None
@@ -6103,15 +6103,15 @@ class UrlRecord(AbstractModel):
 
 
 class VideoSeek(AbstractModel):
-    """视频拖拽配置，默认为关闭状态
+    """視訊拖拽配置，預設爲關閉狀态
 
     """
 
     def __init__(self):
         """
-        :param Switch: 视频拖拽开关
-on：开启
-off：关闭
+        :param Switch: 視訊拖拽開關
+on：開啓
+off：關閉
         :type Switch: str
         """
         self.Switch = None
@@ -6122,7 +6122,7 @@ off：关闭
 
 
 class ViolationUrl(AbstractModel):
-    """违规 URL 详情
+    """違規 URL 詳情
 
     """
 
@@ -6130,20 +6130,20 @@ class ViolationUrl(AbstractModel):
         """
         :param Id: ID
         :type Id: int
-        :param RealUrl: 违规资源原始访问 URL
+        :param RealUrl: 違規資源原始訪問 URL
         :type RealUrl: str
-        :param DownloadUrl: 快照路径，用于控制台展示违规内容快照
+        :param DownloadUrl: 快照路徑，用于控制台展示違規内容快照
         :type DownloadUrl: str
-        :param UrlStatus: 违规资源当前状态
+        :param UrlStatus: 違規資源當前狀态
 forbid：已封禁
 release：已解封
-delay ： 延迟处理
-reject ：申诉驳回，状态仍为封禁态
-complain：申诉进行中
+delay ： 延遲處理
+reject ：申訴駁回，狀态仍爲封禁态
+complain：申訴進行中
         :type UrlStatus: str
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param UpdateTime: 更新时间
+        :param UpdateTime: 更新時間
         :type UpdateTime: str
         """
         self.Id = None
@@ -6164,14 +6164,14 @@ complain：申诉进行中
 
 
 class WebpAdapter(AbstractModel):
-    """图片优化-WebpAdapter配置
+    """圖片優化-WebpAdapter配置
 
     """
 
     def __init__(self):
         """
-        :param Switch: 开关，"on/off"
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Switch: 開關，"on/off"
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Switch: str
         """
         self.Switch = None

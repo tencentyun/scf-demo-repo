@@ -17,15 +17,15 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class ClearTablesRequest(AbstractModel):
-    """ClearTables请求参数结构体
+    """ClearTables請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: 表所属集群实例ID
+        :param ClusterId: 表所屬集群實例ID
         :type ClusterId: str
-        :param SelectedTables: 待清理表信息列表
+        :param SelectedTables: 待清理表訊息清單
         :type SelectedTables: list of SelectedTableInfoNew
         """
         self.ClusterId = None
@@ -43,17 +43,17 @@ class ClearTablesRequest(AbstractModel):
 
 
 class ClearTablesResponse(AbstractModel):
-    """ClearTables返回参数结构体
+    """ClearTables返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 清除表结果数量
+        :param TotalCount: 清除表結果數量
         :type TotalCount: int
-        :param TableResults: 清除表结果列表
+        :param TableResults: 清除表結果清單
         :type TableResults: list of TableResultNew
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -73,40 +73,40 @@ class ClearTablesResponse(AbstractModel):
 
 
 class ClusterInfo(AbstractModel):
-    """集群详细信息
+    """集群詳細訊息
 
     """
 
     def __init__(self):
         """
-        :param ClusterName: 集群名称
+        :param ClusterName: 集群名稱
         :type ClusterName: str
         :param ClusterId: 集群ID
         :type ClusterId: str
         :param Region: 集群所在地域
         :type Region: str
-        :param IdlType: 集群数据描述语言类型，如：`PROTO`,`TDR`或`MIX`
+        :param IdlType: 集群數據描述語言類型，如：`PROTO`,`TDR`或`MIX`
         :type IdlType: str
-        :param NetworkType: 网络类型
+        :param NetworkType: 網絡類型
         :type NetworkType: str
-        :param VpcId: 集群关联的用户私有网络实例ID
+        :param VpcId: 集群關聯的用戶私有網絡實例ID
         :type VpcId: str
-        :param SubnetId: 集群关联的用户子网实例ID
+        :param SubnetId: 集群關聯的用戶子網實例ID
         :type SubnetId: str
-        :param CreatedTime: 创建时间
+        :param CreatedTime: 創建時間
         :type CreatedTime: str
-        :param Password: 集群密码
+        :param Password: 集群密碼
         :type Password: str
-        :param PasswordStatus: 密码状态
+        :param PasswordStatus: 密碼狀态
         :type PasswordStatus: str
-        :param ApiAccessId: TcaplusDB SDK连接参数，接入ID
+        :param ApiAccessId: TcaplusDB SDK連接參數，接入ID
         :type ApiAccessId: str
-        :param ApiAccessIp: TcaplusDB SDK连接参数，接入地址
+        :param ApiAccessIp: TcaplusDB SDK連接參數，接入網址
         :type ApiAccessIp: str
-        :param ApiAccessPort: TcaplusDB SDK连接参数，接入端口
+        :param ApiAccessPort: TcaplusDB SDK連接參數，接入端口
         :type ApiAccessPort: int
-        :param OldPasswordExpireTime: 如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OldPasswordExpireTime: 如果PasswordStatus是unmodifiable說明有舊密碼還未過期，此欄位将顯示舊密碼過期的時間，否則爲空
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OldPasswordExpireTime: str
         """
         self.ClusterName = None
@@ -143,7 +143,7 @@ class ClusterInfo(AbstractModel):
 
 
 class CompareIdlFilesRequest(AbstractModel):
-    """CompareIdlFiles请求参数结构体
+    """CompareIdlFiles請求參數結構體
 
     """
 
@@ -151,11 +151,11 @@ class CompareIdlFilesRequest(AbstractModel):
         """
         :param ClusterId: 待修改表格所在集群ID
         :type ClusterId: str
-        :param SelectedTables: 待修改表格列表
+        :param SelectedTables: 待修改表格清單
         :type SelectedTables: list of SelectedTableInfoNew
-        :param ExistingIdlFiles: 选中的已上传IDL文件列表，与NewIdlFiles必选其一
+        :param ExistingIdlFiles: 選中的已上傳IDL文件清單，與NewIdlFiles必選其一
         :type ExistingIdlFiles: list of IdlFileInfo
-        :param NewIdlFiles: 本次上传IDL文件列表，与ExistingIdlFiles必选其一
+        :param NewIdlFiles: 本次上傳IDL文件清單，與ExistingIdlFiles必選其一
         :type NewIdlFiles: list of IdlFileInfo
         """
         self.ClusterId = None
@@ -187,19 +187,19 @@ class CompareIdlFilesRequest(AbstractModel):
 
 
 class CompareIdlFilesResponse(AbstractModel):
-    """CompareIdlFiles返回参数结构体
+    """CompareIdlFiles返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param IdlFiles: 本次上传校验所有的IDL文件信息列表
+        :param IdlFiles: 本次上傳校驗所有的IDL文件訊息清單
         :type IdlFiles: list of IdlFileInfo
-        :param TotalCount: 本次校验合法的表格数量
+        :param TotalCount: 本次校驗合法的表格數量
         :type TotalCount: int
-        :param TableInfos: 读取IDL描述文件后,根据用户指示的所选中表格解析校验结果
+        :param TableInfos: 讀取IDL描述文件後,根據用戶指示的所選中表格解析校驗結果
         :type TableInfos: list of ParsedTableInfoNew
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.IdlFiles = None
@@ -226,17 +226,17 @@ class CompareIdlFilesResponse(AbstractModel):
 
 
 class CreateBackupRequest(AbstractModel):
-    """CreateBackup请求参数结构体
+    """CreateBackup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: 待创建备份表所属集群ID
+        :param ClusterId: 待創建備份表所屬集群ID
         :type ClusterId: str
-        :param SelectedTables: 待创建备份表信息列表
+        :param SelectedTables: 待創建備份表訊息清單
         :type SelectedTables: list of SelectedTableInfoNew
-        :param Remark: 备注信息
+        :param Remark: 備注訊息
         :type Remark: str
         """
         self.ClusterId = None
@@ -256,15 +256,15 @@ class CreateBackupRequest(AbstractModel):
 
 
 class CreateBackupResponse(AbstractModel):
-    """CreateBackup返回参数结构体
+    """CreateBackup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskIds: 创建的备份任务ID列表
+        :param TaskIds: 創建的備份任務ID清單
         :type TaskIds: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskIds = None
@@ -277,21 +277,21 @@ class CreateBackupResponse(AbstractModel):
 
 
 class CreateClusterRequest(AbstractModel):
-    """CreateCluster请求参数结构体
+    """CreateCluster請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param IdlType: 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
+        :param IdlType: 集群數據描述語言類型，如：`PROTO`，`TDR`或`MIX`
         :type IdlType: str
-        :param ClusterName: 集群名称，可使用中文或英文字符，最大长度32个字符
+        :param ClusterName: 集群名稱，可使用中文或英文字元，最大長度32個字元
         :type ClusterName: str
-        :param VpcId: 集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z
+        :param VpcId: 集群所綁定的私有網絡實例ID，形如：vpc-f49l6u0z
         :type VpcId: str
-        :param SubnetId: 集群所绑定的子网实例ID，形如：subnet-pxir56ns
+        :param SubnetId: 集群所綁定的子網實例ID，形如：subnet-pxir56ns
         :type SubnetId: str
-        :param Password: 集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
+        :param Password: 集群訪問密碼，必須是a-zA-Z0-9的字元,且必須包含數字和大小寫字母
         :type Password: str
         """
         self.IdlType = None
@@ -310,7 +310,7 @@ class CreateClusterRequest(AbstractModel):
 
 
 class CreateClusterResponse(AbstractModel):
-    """CreateCluster返回参数结构体
+    """CreateCluster返回參數結構體
 
     """
 
@@ -318,7 +318,7 @@ class CreateClusterResponse(AbstractModel):
         """
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ClusterId = None
@@ -331,17 +331,17 @@ class CreateClusterResponse(AbstractModel):
 
 
 class CreateTableGroupRequest(AbstractModel):
-    """CreateTableGroup请求参数结构体
+    """CreateTableGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: 表格组所属集群ID
+        :param ClusterId: 表格組所屬集群ID
         :type ClusterId: str
-        :param TableGroupName: 表格组名称，可以采用中文、英文或数字字符，最大长度32个字符
+        :param TableGroupName: 表格組名稱，可以采用中文、英文或數字字元，最大長度32個字元
         :type TableGroupName: str
-        :param TableGroupId: 表格组ID，可以由用户指定，但在同一个集群内不能重复，如果不指定则采用自增的模式
+        :param TableGroupId: 表格組ID，可以由用戶指定，但在同一個集群内不能重複，如果不指定則采用自增的模式
         :type TableGroupId: str
         """
         self.ClusterId = None
@@ -356,15 +356,15 @@ class CreateTableGroupRequest(AbstractModel):
 
 
 class CreateTableGroupResponse(AbstractModel):
-    """CreateTableGroup返回参数结构体
+    """CreateTableGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TableGroupId: 创建成功的表格组ID
+        :param TableGroupId: 創建成功的表格組ID
         :type TableGroupId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TableGroupId = None
@@ -377,17 +377,17 @@ class CreateTableGroupResponse(AbstractModel):
 
 
 class CreateTablesRequest(AbstractModel):
-    """CreateTables请求参数结构体
+    """CreateTables請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: 待创建表格所属集群ID
+        :param ClusterId: 待創建表格所屬集群ID
         :type ClusterId: str
-        :param IdlFiles: 用户选定的建表格IDL文件列表
+        :param IdlFiles: 用戶選定的建表格IDL文件清單
         :type IdlFiles: list of IdlFileInfo
-        :param SelectedTables: 待创建表格信息列表
+        :param SelectedTables: 待創建表格訊息清單
         :type SelectedTables: list of SelectedTableInfoNew
         """
         self.ClusterId = None
@@ -412,17 +412,17 @@ class CreateTablesRequest(AbstractModel):
 
 
 class CreateTablesResponse(AbstractModel):
-    """CreateTables返回参数结构体
+    """CreateTables返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 批量创建表格结果数量
+        :param TotalCount: 批次創建表格結果數量
         :type TotalCount: int
-        :param TableResults: 批量创建表格结果列表
+        :param TableResults: 批次創建表格結果清單
         :type TableResults: list of TableResultNew
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -442,7 +442,7 @@ class CreateTablesResponse(AbstractModel):
 
 
 class DeleteClusterRequest(AbstractModel):
-    """DeleteCluster请求参数结构体
+    """DeleteCluster請求參數結構體
 
     """
 
@@ -459,15 +459,15 @@ class DeleteClusterRequest(AbstractModel):
 
 
 class DeleteClusterResponse(AbstractModel):
-    """DeleteCluster返回参数结构体
+    """DeleteCluster返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 删除集群生成的任务ID
+        :param TaskId: 删除集群生成的任務ID
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -480,15 +480,15 @@ class DeleteClusterResponse(AbstractModel):
 
 
 class DeleteIdlFilesRequest(AbstractModel):
-    """DeleteIdlFiles请求参数结构体
+    """DeleteIdlFiles請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: IDL所属集群ID
+        :param ClusterId: IDL所屬集群ID
         :type ClusterId: str
-        :param IdlFiles: 待删除的IDL文件信息列表
+        :param IdlFiles: 待删除的IDL文件訊息清單
         :type IdlFiles: list of IdlFileInfo
         """
         self.ClusterId = None
@@ -506,17 +506,17 @@ class DeleteIdlFilesRequest(AbstractModel):
 
 
 class DeleteIdlFilesResponse(AbstractModel):
-    """DeleteIdlFiles返回参数结构体
+    """DeleteIdlFiles返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 结果记录数量
+        :param TotalCount: 結果記錄數量
         :type TotalCount: int
-        :param IdlFileInfos: 删除结果
+        :param IdlFileInfos: 删除結果
         :type IdlFileInfos: list of IdlFileInfoWithoutContent
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -536,15 +536,15 @@ class DeleteIdlFilesResponse(AbstractModel):
 
 
 class DeleteTableGroupRequest(AbstractModel):
-    """DeleteTableGroup请求参数结构体
+    """DeleteTableGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: 表格组所属的集群ID
+        :param ClusterId: 表格組所屬的集群ID
         :type ClusterId: str
-        :param TableGroupId: 表格组ID
+        :param TableGroupId: 表格組ID
         :type TableGroupId: str
         """
         self.ClusterId = None
@@ -557,15 +557,15 @@ class DeleteTableGroupRequest(AbstractModel):
 
 
 class DeleteTableGroupResponse(AbstractModel):
-    """DeleteTableGroup返回参数结构体
+    """DeleteTableGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 删除表格组所创建的任务ID
+        :param TaskId: 删除表格組所創建的任務ID
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -578,7 +578,7 @@ class DeleteTableGroupResponse(AbstractModel):
 
 
 class DeleteTablesRequest(AbstractModel):
-    """DeleteTables请求参数结构体
+    """DeleteTables請求參數結構體
 
     """
 
@@ -586,7 +586,7 @@ class DeleteTablesRequest(AbstractModel):
         """
         :param ClusterId: 待删除表所在集群ID
         :type ClusterId: str
-        :param SelectedTables: 待删除表信息列表
+        :param SelectedTables: 待删除表訊息清單
         :type SelectedTables: list of SelectedTableInfoNew
         """
         self.ClusterId = None
@@ -604,17 +604,17 @@ class DeleteTablesRequest(AbstractModel):
 
 
 class DeleteTablesResponse(AbstractModel):
-    """DeleteTables返回参数结构体
+    """DeleteTables返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 删除表结果数量
+        :param TotalCount: 删除表結果數量
         :type TotalCount: int
-        :param TableResults: 删除表结果详情列表
+        :param TableResults: 删除表結果詳情清單
         :type TableResults: list of TableResultNew
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -634,19 +634,19 @@ class DeleteTablesResponse(AbstractModel):
 
 
 class DescribeClustersRequest(AbstractModel):
-    """DescribeClusters请求参数结构体
+    """DescribeClusters請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterIds: 指定查询的集群ID列表
+        :param ClusterIds: 指定查詢的集群ID清單
         :type ClusterIds: list of str
-        :param Filters: 查询过滤条件
+        :param Filters: 查詢過濾條件
         :type Filters: list of Filter
-        :param Offset: 查询列表偏移量
+        :param Offset: 查詢清單偏移量
         :type Offset: int
-        :param Limit: 查询列表返回记录数，默认值20
+        :param Limit: 查詢清單返回記錄數，預設值20
         :type Limit: int
         """
         self.ClusterIds = None
@@ -668,17 +668,17 @@ class DescribeClustersRequest(AbstractModel):
 
 
 class DescribeClustersResponse(AbstractModel):
-    """DescribeClusters返回参数结构体
+    """DescribeClusters返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 集群实例数
+        :param TotalCount: 集群實例數
         :type TotalCount: int
-        :param Clusters: 集群实例列表
+        :param Clusters: 集群實例清單
         :type Clusters: list of ClusterInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -698,21 +698,21 @@ class DescribeClustersResponse(AbstractModel):
 
 
 class DescribeIdlFileInfosRequest(AbstractModel):
-    """DescribeIdlFileInfos请求参数结构体
+    """DescribeIdlFileInfos請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: 文件所属集群ID
+        :param ClusterId: 文件所屬集群ID
         :type ClusterId: str
-        :param TableGroupIds: 文件所属表格组ID
+        :param TableGroupIds: 文件所屬表格組ID
         :type TableGroupIds: list of str
-        :param IdlFileIds: 指定文件ID列表
+        :param IdlFileIds: 指定文件ID清單
         :type IdlFileIds: list of str
-        :param Offset: 查询列表偏移量
+        :param Offset: 查詢清單偏移量
         :type Offset: int
-        :param Limit: 查询列表返回记录数
+        :param Limit: 查詢清單返回記錄數
         :type Limit: int
         """
         self.ClusterId = None
@@ -731,17 +731,17 @@ class DescribeIdlFileInfosRequest(AbstractModel):
 
 
 class DescribeIdlFileInfosResponse(AbstractModel):
-    """DescribeIdlFileInfos返回参数结构体
+    """DescribeIdlFileInfos返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 文件数量
+        :param TotalCount: 文件數量
         :type TotalCount: int
-        :param IdlFileInfos: 文件详情列表
+        :param IdlFileInfos: 文件詳情清單
         :type IdlFileInfos: list of IdlFileInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -761,23 +761,23 @@ class DescribeIdlFileInfosResponse(AbstractModel):
 
 
 class DescribeRegionsRequest(AbstractModel):
-    """DescribeRegions请求参数结构体
+    """DescribeRegions請求參數結構體
 
     """
 
 
 class DescribeRegionsResponse(AbstractModel):
-    """DescribeRegions返回参数结构体
+    """DescribeRegions返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 可用区详情结果数量
+        :param TotalCount: 可用區詳情結果數量
         :type TotalCount: int
-        :param RegionInfos: 可用区详情结果列表
+        :param RegionInfos: 可用區詳情結果清單
         :type RegionInfos: list of RegionInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -797,21 +797,21 @@ class DescribeRegionsResponse(AbstractModel):
 
 
 class DescribeTableGroupsRequest(AbstractModel):
-    """DescribeTableGroups请求参数结构体
+    """DescribeTableGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: 表格组所属集群ID
+        :param ClusterId: 表格組所屬集群ID
         :type ClusterId: str
-        :param TableGroupIds: 表格组ID列表
+        :param TableGroupIds: 表格組ID清單
         :type TableGroupIds: list of str
-        :param Filters: 过滤条件，本接口支持：TableGroupName，TableGroupId
+        :param Filters: 過濾條件，本介面支援：TableGroupName，TableGroupId
         :type Filters: list of Filter
-        :param Offset: 查询列表偏移量
+        :param Offset: 查詢清單偏移量
         :type Offset: int
-        :param Limit: 查询列表返回记录数
+        :param Limit: 查詢清單返回記錄數
         :type Limit: int
         """
         self.ClusterId = None
@@ -835,17 +835,17 @@ class DescribeTableGroupsRequest(AbstractModel):
 
 
 class DescribeTableGroupsResponse(AbstractModel):
-    """DescribeTableGroups返回参数结构体
+    """DescribeTableGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 表格组数量
+        :param TotalCount: 表格組數量
         :type TotalCount: int
-        :param TableGroups: 表格组信息列表
+        :param TableGroups: 表格組訊息清單
         :type TableGroups: list of TableGroupInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -865,21 +865,21 @@ class DescribeTableGroupsResponse(AbstractModel):
 
 
 class DescribeTablesInRecycleRequest(AbstractModel):
-    """DescribeTablesInRecycle请求参数结构体
+    """DescribeTablesInRecycle請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: 待查询表格所属集群ID
+        :param ClusterId: 待查詢表格所屬集群ID
         :type ClusterId: str
-        :param TableGroupIds: 待查询表格所属表格组ID列表
+        :param TableGroupIds: 待查詢表格所屬表格組ID清單
         :type TableGroupIds: list of str
-        :param Filters: 过滤条件，本接口支持：TableName，TableInstanceId
+        :param Filters: 過濾條件，本介面支援：TableName，TableInstanceId
         :type Filters: list of Filter
-        :param Offset: 查询结果偏移量
+        :param Offset: 查詢結果偏移量
         :type Offset: int
-        :param Limit: 查询结果返回记录数量
+        :param Limit: 查詢結果返回記錄數量
         :type Limit: int
         """
         self.ClusterId = None
@@ -903,17 +903,17 @@ class DescribeTablesInRecycleRequest(AbstractModel):
 
 
 class DescribeTablesInRecycleResponse(AbstractModel):
-    """DescribeTablesInRecycle返回参数结构体
+    """DescribeTablesInRecycle返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 表格数量
+        :param TotalCount: 表格數量
         :type TotalCount: int
-        :param TableInfos: 表格详情结果列表
+        :param TableInfos: 表格詳情結果清單
         :type TableInfos: list of TableInfoNew
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -933,23 +933,23 @@ class DescribeTablesInRecycleResponse(AbstractModel):
 
 
 class DescribeTablesRequest(AbstractModel):
-    """DescribeTables请求参数结构体
+    """DescribeTables請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: 待查询表格所属集群ID
+        :param ClusterId: 待查詢表格所屬集群ID
         :type ClusterId: str
-        :param TableGroupIds: 待查询表格所属表格组ID列表
+        :param TableGroupIds: 待查詢表格所屬表格組ID清單
         :type TableGroupIds: list of str
-        :param SelectedTables: 待查询表格信息列表
+        :param SelectedTables: 待查詢表格訊息清單
         :type SelectedTables: list of SelectedTableInfoNew
-        :param Filters: 过滤条件，本接口支持：TableName，TableInstanceId
+        :param Filters: 過濾條件，本介面支援：TableName，TableInstanceId
         :type Filters: list of Filter
-        :param Offset: 查询结果偏移量
+        :param Offset: 查詢結果偏移量
         :type Offset: int
-        :param Limit: 查询结果返回记录数量
+        :param Limit: 查詢結果返回記錄數量
         :type Limit: int
         """
         self.ClusterId = None
@@ -980,17 +980,17 @@ class DescribeTablesRequest(AbstractModel):
 
 
 class DescribeTablesResponse(AbstractModel):
-    """DescribeTables返回参数结构体
+    """DescribeTables返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 表格数量
+        :param TotalCount: 表格數量
         :type TotalCount: int
-        :param TableInfos: 表格详情结果列表
+        :param TableInfos: 表格詳情結果清單
         :type TableInfos: list of TableInfoNew
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1010,21 +1010,21 @@ class DescribeTablesResponse(AbstractModel):
 
 
 class DescribeTasksRequest(AbstractModel):
-    """DescribeTasks请求参数结构体
+    """DescribeTasks請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterIds: 需要查询任务所属的集群ID列表
+        :param ClusterIds: 需要查詢任務所屬的集群ID清單
         :type ClusterIds: list of str
-        :param TaskIds: 需要查询的任务ID列表
+        :param TaskIds: 需要查詢的任務ID清單
         :type TaskIds: list of str
-        :param Filters: 过滤条件，本接口支持：Content，TaskType, Operator, Time
+        :param Filters: 過濾條件，本介面支援：Content，TaskType, Operator, Time
         :type Filters: list of Filter
-        :param Offset: 查询列表偏移量
+        :param Offset: 查詢清單偏移量
         :type Offset: int
-        :param Limit: 查询列表返回记录数
+        :param Limit: 查詢清單返回記錄數
         :type Limit: int
         """
         self.ClusterIds = None
@@ -1048,17 +1048,17 @@ class DescribeTasksRequest(AbstractModel):
 
 
 class DescribeTasksResponse(AbstractModel):
-    """DescribeTasks返回参数结构体
+    """DescribeTasks返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 任务数量
+        :param TotalCount: 任務數量
         :type TotalCount: int
-        :param TaskInfos: 查询到的任务详情列表
+        :param TaskInfos: 查詢到的任務詳情清單
         :type TaskInfos: list of TaskInfoNew
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1078,21 +1078,21 @@ class DescribeTasksResponse(AbstractModel):
 
 
 class DescribeUinInWhitelistRequest(AbstractModel):
-    """DescribeUinInWhitelist请求参数结构体
+    """DescribeUinInWhitelist請求參數結構體
 
     """
 
 
 class DescribeUinInWhitelistResponse(AbstractModel):
-    """DescribeUinInWhitelist返回参数结构体
+    """DescribeUinInWhitelist返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 查询结果：`FALSE` 否；`TRUE` 是
+        :param Result: 查詢結果：`FALSE` 否；`TRUE` 是
         :type Result: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1105,15 +1105,15 @@ class DescribeUinInWhitelistResponse(AbstractModel):
 
 
 class ErrorInfo(AbstractModel):
-    """描述每个实例（应用，大区或表）处理过程中可能出现的错误详情。
+    """描述每個實例（應用，大區或表）處理過程中可能出現的錯誤詳情。
 
     """
 
     def __init__(self):
         """
-        :param Code: 错误码
+        :param Code: 錯誤碼
         :type Code: str
-        :param Message: 错误信息
+        :param Message: 錯誤訊息
         :type Message: str
         """
         self.Code = None
@@ -1126,15 +1126,15 @@ class ErrorInfo(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """过滤条件
+    """過濾條件
 
     """
 
     def __init__(self):
         """
-        :param Name: 过滤字段名
+        :param Name: 過濾欄位名
         :type Name: str
-        :param Value: 过滤字段值
+        :param Value: 過濾欄位值
         :type Value: str
         """
         self.Name = None
@@ -1147,25 +1147,25 @@ class Filter(AbstractModel):
 
 
 class IdlFileInfo(AbstractModel):
-    """表定义描述文件详情，包含文件内容
+    """表定義描述文件詳情，包含文件内容
 
     """
 
     def __init__(self):
         """
-        :param FileName: 文件名称，不包含扩展名
+        :param FileName: 文件名稱，不包含擴展名
         :type FileName: str
-        :param FileType: 数据描述语言（IDL）类型
+        :param FileType: 數據描述語言（IDL）類型
         :type FileType: str
-        :param FileExtType: 文件扩展名
+        :param FileExtType: 文件擴展名
         :type FileExtType: str
         :param FileSize: 文件大小（Bytes）
         :type FileSize: int
-        :param FileId: 文件ID，对于已上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FileId: 文件ID，對于已上傳的文件有意義
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FileId: int
-        :param FileContent: 文件内容，对于本次新上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FileContent: 文件内容，對于本次新上傳的文件有意義
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FileContent: str
         """
         self.FileName = None
@@ -1186,29 +1186,29 @@ class IdlFileInfo(AbstractModel):
 
 
 class IdlFileInfoWithoutContent(AbstractModel):
-    """表定义描述文件详情，不包含文件内容
+    """表定義描述文件詳情，不包含文件内容
 
     """
 
     def __init__(self):
         """
-        :param FileName: 文件名称，不包含扩展名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FileName: 文件名稱，不包含擴展名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FileName: str
-        :param FileType: 数据描述语言（IDL）类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FileType: 數據描述語言（IDL）類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FileType: str
-        :param FileExtType: 文件扩展名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FileExtType: 文件擴展名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FileExtType: str
         :param FileSize: 文件大小（Bytes）
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FileSize: int
         :param FileId: 文件ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FileId: int
-        :param Error: 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Error: 錯誤訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Error: :class:`tencentcloud.tcaplusdb.v20190823.models.ErrorInfo`
         """
         self.FileName = None
@@ -1231,15 +1231,15 @@ class IdlFileInfoWithoutContent(AbstractModel):
 
 
 class ModifyClusterNameRequest(AbstractModel):
-    """ModifyClusterName请求参数结构体
+    """ModifyClusterName請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: 需要修改名称的集群ID
+        :param ClusterId: 需要修改名稱的集群ID
         :type ClusterId: str
-        :param ClusterName: 需要修改的集群名称，可使用中文或英文字符，最大长度32个字符
+        :param ClusterName: 需要修改的集群名稱，可使用中文或英文字元，最大長度32個字元
         :type ClusterName: str
         """
         self.ClusterId = None
@@ -1252,13 +1252,13 @@ class ModifyClusterNameRequest(AbstractModel):
 
 
 class ModifyClusterNameResponse(AbstractModel):
-    """ModifyClusterName返回参数结构体
+    """ModifyClusterName返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1269,21 +1269,21 @@ class ModifyClusterNameResponse(AbstractModel):
 
 
 class ModifyClusterPasswordRequest(AbstractModel):
-    """ModifyClusterPassword请求参数结构体
+    """ModifyClusterPassword請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: 需要修改密码的集群ID
+        :param ClusterId: 需要修改密碼的集群ID
         :type ClusterId: str
-        :param OldPassword: 集群旧密码
+        :param OldPassword: 集群舊密碼
         :type OldPassword: str
-        :param OldPasswordExpireTime: 集群旧密码预期失效时间
+        :param OldPasswordExpireTime: 集群舊密碼預期失效時間
         :type OldPasswordExpireTime: str
-        :param NewPassword: 集群新密码，密码必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
+        :param NewPassword: 集群新密碼，密碼必須是a-zA-Z0-9的字元,且必須包含數字和大小寫字母
         :type NewPassword: str
-        :param Mode: 更新模式： `1` 更新密码；`2` 更新旧密码失效时间，默认为`1` 模式
+        :param Mode: 更新模式： `1` 更新密碼；`2` 更新舊密碼失效時間，預設爲`1` 模式
         :type Mode: str
         """
         self.ClusterId = None
@@ -1302,13 +1302,13 @@ class ModifyClusterPasswordRequest(AbstractModel):
 
 
 class ModifyClusterPasswordResponse(AbstractModel):
-    """ModifyClusterPassword返回参数结构体
+    """ModifyClusterPassword返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1319,17 +1319,17 @@ class ModifyClusterPasswordResponse(AbstractModel):
 
 
 class ModifyTableGroupNameRequest(AbstractModel):
-    """ModifyTableGroupName请求参数结构体
+    """ModifyTableGroupName請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: 表格组所属的集群ID
+        :param ClusterId: 表格組所屬的集群ID
         :type ClusterId: str
-        :param TableGroupId: 待修改名称的表格组ID
+        :param TableGroupId: 待修改名稱的表格組ID
         :type TableGroupId: str
-        :param TableGroupName: 新的表格组名称，可以使用中英文字符和符号
+        :param TableGroupName: 新的表格組名稱，可以使用中英文字元和符号
         :type TableGroupName: str
         """
         self.ClusterId = None
@@ -1344,13 +1344,13 @@ class ModifyTableGroupNameRequest(AbstractModel):
 
 
 class ModifyTableGroupNameResponse(AbstractModel):
-    """ModifyTableGroupName返回参数结构体
+    """ModifyTableGroupName返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1361,15 +1361,15 @@ class ModifyTableGroupNameResponse(AbstractModel):
 
 
 class ModifyTableMemosRequest(AbstractModel):
-    """ModifyTableMemos请求参数结构体
+    """ModifyTableMemos請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: 表所属集群实例ID
+        :param ClusterId: 表所屬集群實例ID
         :type ClusterId: str
-        :param TableMemos: 选定表详情列表
+        :param TableMemos: 選定表詳情清單
         :type TableMemos: list of SelectedTableInfoNew
         """
         self.ClusterId = None
@@ -1387,17 +1387,17 @@ class ModifyTableMemosRequest(AbstractModel):
 
 
 class ModifyTableMemosResponse(AbstractModel):
-    """ModifyTableMemos返回参数结构体
+    """ModifyTableMemos返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 表备注修改结果数量
+        :param TotalCount: 表備注修改結果數量
         :type TotalCount: int
-        :param TableResults: 表备注修改结果列表
+        :param TableResults: 表備注修改結果清單
         :type TableResults: list of TableResultNew
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1417,15 +1417,15 @@ class ModifyTableMemosResponse(AbstractModel):
 
 
 class ModifyTableQuotasRequest(AbstractModel):
-    """ModifyTableQuotas请求参数结构体
+    """ModifyTableQuotas請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: 带扩缩容表所属集群ID
+        :param ClusterId: 帶擴縮容表所屬集群ID
         :type ClusterId: str
-        :param TableQuotas: 已选中待修改的表配额列表
+        :param TableQuotas: 已選中待修改的表配額清單
         :type TableQuotas: list of SelectedTableInfoNew
         """
         self.ClusterId = None
@@ -1443,17 +1443,17 @@ class ModifyTableQuotasRequest(AbstractModel):
 
 
 class ModifyTableQuotasResponse(AbstractModel):
-    """ModifyTableQuotas返回参数结构体
+    """ModifyTableQuotas返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 扩缩容结果数量
+        :param TotalCount: 擴縮容結果數量
         :type TotalCount: int
-        :param TableResults: 扩缩容结果列表
+        :param TableResults: 擴縮容結果清單
         :type TableResults: list of TableResultNew
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1473,7 +1473,7 @@ class ModifyTableQuotasResponse(AbstractModel):
 
 
 class ModifyTablesRequest(AbstractModel):
-    """ModifyTables请求参数结构体
+    """ModifyTables請求參數結構體
 
     """
 
@@ -1481,9 +1481,9 @@ class ModifyTablesRequest(AbstractModel):
         """
         :param ClusterId: 待修改表格所在集群ID
         :type ClusterId: str
-        :param IdlFiles: 选中的改表IDL文件
+        :param IdlFiles: 選中的改表IDL文件
         :type IdlFiles: list of IdlFileInfo
-        :param SelectedTables: 待改表格列表
+        :param SelectedTables: 待改表格清單
         :type SelectedTables: list of SelectedTableInfoNew
         """
         self.ClusterId = None
@@ -1508,17 +1508,17 @@ class ModifyTablesRequest(AbstractModel):
 
 
 class ModifyTablesResponse(AbstractModel):
-    """ModifyTables返回参数结构体
+    """ModifyTables返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 修改表结果数量
+        :param TotalCount: 修改表結果數量
         :type TotalCount: int
-        :param TableResults: 修改表结果列表
+        :param TableResults: 修改表結果清單
         :type TableResults: list of TableResultNew
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1538,65 +1538,65 @@ class ModifyTablesResponse(AbstractModel):
 
 
 class ParsedTableInfoNew(AbstractModel):
-    """从IDL表描述文件中解析出来的表信息
+    """從IDL表描述文件中解析出來的表訊息
 
     """
 
     def __init__(self):
         """
-        :param TableIdlType: 表格描述语言类型：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableIdlType: 表格描述語言類型：`PROTO`或`TDR`
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableIdlType: str
-        :param TableInstanceId: 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableInstanceId: 表格實例ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableInstanceId: str
-        :param TableName: 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableName: 表格名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableName: str
-        :param TableType: 表格数据结构类型：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableType: 表格數據結構類型：`GENERIC`或`LIST`
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableType: str
-        :param KeyFields: 主键字段信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param KeyFields: 主鍵欄位訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type KeyFields: str
-        :param OldKeyFields: 原主键字段信息，改表校验时有效
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OldKeyFields: 原主鍵欄位訊息，改表校驗時有效
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OldKeyFields: str
-        :param ValueFields: 非主键字段信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ValueFields: 非主鍵欄位訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ValueFields: str
-        :param OldValueFields: 原非主键字段信息，改表校验时有效
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OldValueFields: 原非主鍵欄位訊息，改表校驗時有效
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OldValueFields: str
-        :param TableGroupId: 所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableGroupId: 所屬表格組ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableGroupId: str
-        :param SumKeyFieldSize: 主键字段总大小
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SumKeyFieldSize: 主鍵欄位總大小
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SumKeyFieldSize: int
-        :param SumValueFieldSize: 非主键字段总大小
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SumValueFieldSize: 非主鍵欄位總大小
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SumValueFieldSize: int
-        :param IndexKeySet: 索引键集合
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IndexKeySet: 索引鍵集合
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IndexKeySet: str
         :param ShardingKeySet: 分表因子集合
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ShardingKeySet: str
         :param TdrVersion: TDR版本号
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TdrVersion: int
-        :param Error: 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Error: 錯誤訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Error: :class:`tencentcloud.tcaplusdb.v20190823.models.ErrorInfo`
-        :param ListElementNum: LIST类型表格元素个数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ListElementNum: LIST類型表格元素個數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ListElementNum: int
-        :param SortFieldNum: SORTLIST类型表格排序字段个数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SortFieldNum: SORTLIST類型表格排序欄位個數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SortFieldNum: int
-        :param SortRule: SORTLIST类型表格排序顺序
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SortRule: SORTLIST類型表格排序順序
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SortRule: int
         """
         self.TableIdlType = None
@@ -1643,7 +1643,7 @@ class ParsedTableInfoNew(AbstractModel):
 
 
 class RecoverRecycleTablesRequest(AbstractModel):
-    """RecoverRecycleTables请求参数结构体
+    """RecoverRecycleTables請求參數結構體
 
     """
 
@@ -1651,7 +1651,7 @@ class RecoverRecycleTablesRequest(AbstractModel):
         """
         :param ClusterId: 表所在集群ID
         :type ClusterId: str
-        :param SelectedTables: 待恢复表信息
+        :param SelectedTables: 待恢複表訊息
         :type SelectedTables: list of SelectedTableInfoNew
         """
         self.ClusterId = None
@@ -1669,17 +1669,17 @@ class RecoverRecycleTablesRequest(AbstractModel):
 
 
 class RecoverRecycleTablesResponse(AbstractModel):
-    """RecoverRecycleTables返回参数结构体
+    """RecoverRecycleTables返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 恢复表结果数量
+        :param TotalCount: 恢複表結果數量
         :type TotalCount: int
-        :param TableResults: 恢复表信息列表
+        :param TableResults: 恢複表訊息清單
         :type TableResults: list of TableResultNew
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1699,7 +1699,7 @@ class RecoverRecycleTablesResponse(AbstractModel):
 
 
 class RegionInfo(AbstractModel):
-    """TcaplusDB服务地域信息详情
+    """TcaplusDB服務地域訊息詳情
 
     """
 
@@ -1707,7 +1707,7 @@ class RegionInfo(AbstractModel):
         """
         :param RegionName: 地域Ap-Code
         :type RegionName: str
-        :param RegionAbbr: 地域缩写
+        :param RegionAbbr: 地域縮寫
         :type RegionAbbr: str
         :param RegionId: 地域ID
         :type RegionId: int
@@ -1724,19 +1724,19 @@ class RegionInfo(AbstractModel):
 
 
 class RollbackTablesRequest(AbstractModel):
-    """RollbackTables请求参数结构体
+    """RollbackTables請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: 待回档表格所在集群ID
+        :param ClusterId: 待回檔表格所在集群ID
         :type ClusterId: str
-        :param SelectedTables: 待回档表格列表
+        :param SelectedTables: 待回檔表格清單
         :type SelectedTables: list of SelectedTableInfoNew
-        :param RollbackTime: 待回档时间
+        :param RollbackTime: 待回檔時間
         :type RollbackTime: str
-        :param Mode: 回档模式，支持：`KEYS`
+        :param Mode: 回檔模式，支援：`KEYS`
         :type Mode: str
         """
         self.ClusterId = None
@@ -1758,17 +1758,17 @@ class RollbackTablesRequest(AbstractModel):
 
 
 class RollbackTablesResponse(AbstractModel):
-    """RollbackTables返回参数结构体
+    """RollbackTables返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 表格回档任务结果数量
+        :param TotalCount: 表格回檔任務結果數量
         :type TotalCount: int
-        :param TableResults: 表格回档任务结果列表
+        :param TableResults: 表格回檔任務結果清單
         :type TableResults: list of TableRollbackResultNew
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1788,39 +1788,39 @@ class RollbackTablesResponse(AbstractModel):
 
 
 class SelectedTableInfoNew(AbstractModel):
-    """被选中的表信息
+    """被選中的表訊息
 
     """
 
     def __init__(self):
         """
-        :param TableGroupId: 表所属表格组ID
+        :param TableGroupId: 表所屬表格組ID
         :type TableGroupId: str
-        :param TableName: 表格名称
+        :param TableName: 表格名稱
         :type TableName: str
-        :param TableInstanceId: 表实例ID
+        :param TableInstanceId: 表實例ID
         :type TableInstanceId: str
-        :param TableIdlType: 表格描述语言类型：`PROTO`或`TDR`
+        :param TableIdlType: 表格描述語言類型：`PROTO`或`TDR`
         :type TableIdlType: str
-        :param TableType: 表格数据结构类型：`GENERIC`或`LIST`
+        :param TableType: 表格數據結構類型：`GENERIC`或`LIST`
         :type TableType: str
-        :param ListElementNum: LIST表元素个数
+        :param ListElementNum: LIST表元素個數
         :type ListElementNum: int
-        :param ReservedVolume: 表格预留容量（GB）
+        :param ReservedVolume: 表格預留容量（GB）
         :type ReservedVolume: int
-        :param ReservedReadQps: 表格预留读QPS
+        :param ReservedReadQps: 表格預留讀QPS
         :type ReservedReadQps: int
-        :param ReservedWriteQps: 表格预留写QPS
+        :param ReservedWriteQps: 表格預留寫QPS
         :type ReservedWriteQps: int
-        :param Memo: 表格备注信息
+        :param Memo: 表格備注訊息
         :type Memo: str
-        :param FileName: Key回档文件名，回档专用
+        :param FileName: Key回檔文件名，回檔專用
         :type FileName: str
-        :param FileExtType: Key回档文件扩展名，回档专用
+        :param FileExtType: Key回檔文件擴展名，回檔專用
         :type FileExtType: str
-        :param FileSize: Key回档文件大小，回档专用
+        :param FileSize: Key回檔文件大小，回檔專用
         :type FileSize: int
-        :param FileContent: Key回档文件内容，回档专用
+        :param FileContent: Key回檔文件内容，回檔專用
         :type FileContent: str
         """
         self.TableGroupId = None
@@ -1857,21 +1857,21 @@ class SelectedTableInfoNew(AbstractModel):
 
 
 class TableGroupInfo(AbstractModel):
-    """表格组详细信息
+    """表格組詳細訊息
 
     """
 
     def __init__(self):
         """
-        :param TableGroupId: 表格组ID
+        :param TableGroupId: 表格組ID
         :type TableGroupId: str
-        :param TableGroupName: 表格组名称
+        :param TableGroupName: 表格組名稱
         :type TableGroupName: str
-        :param CreatedTime: 表格组创建时间
+        :param CreatedTime: 表格組創建時間
         :type CreatedTime: str
-        :param TableCount: 表格组包含的表格数量
+        :param TableCount: 表格組包含的表格數量
         :type TableCount: int
-        :param TotalSize: 表格组包含的表格存储总量（MB）
+        :param TotalSize: 表格組包含的表格儲存總量（MB）
         :type TotalSize: int
         """
         self.TableGroupId = None
@@ -1890,92 +1890,92 @@ class TableGroupInfo(AbstractModel):
 
 
 class TableInfoNew(AbstractModel):
-    """表格详情信息
+    """表格詳情訊息
 
     """
 
     def __init__(self):
         """
-        :param TableName: 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableName: 表格名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableName: str
-        :param TableInstanceId: 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableInstanceId: 表格實例ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableInstanceId: str
-        :param TableType: 表格数据结构类型，如：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableType: 表格數據結構類型，如：`GENERIC`或`LIST`
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableType: str
-        :param TableIdlType: 表格数据描述语言（IDL）类型，如：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableIdlType: 表格數據描述語言（IDL）類型，如：`PROTO`或`TDR`
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableIdlType: str
-        :param ClusterId: 表格所属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterId: 表格所屬集群ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterId: str
-        :param ClusterName: 表格所属集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterName: 表格所屬集群名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterName: str
-        :param TableGroupId: 表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableGroupId: 表格所屬表格組ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableGroupId: str
-        :param TableGroupName: 表格所属表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableGroupName: 表格所屬表格組名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableGroupName: str
-        :param KeyStruct: 表格主键字段结构json字符串
-注意：此字段可能返回 null，表示取不到有效值。
+        :param KeyStruct: 表格主鍵欄位結構json字串
+注意：此欄位可能返回 null，表示取不到有效值。
         :type KeyStruct: str
-        :param ValueStruct: 表格非主键字段结构json字符串
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ValueStruct: 表格非主鍵欄位結構json字串
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ValueStruct: str
-        :param ShardingKeySet: 表格分表因子集合，对PROTO类型表格有效
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ShardingKeySet: 表格分表因子集合，對PROTO類型表格有效
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ShardingKeySet: str
-        :param IndexStruct: 表格索引键字段集合，对PROTO类型表格有效
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IndexStruct: 表格索引鍵欄位集合，對PROTO類型表格有效
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IndexStruct: str
-        :param ListElementNum: LIST类型表格元素个数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ListElementNum: LIST類型表格元素個數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ListElementNum: int
-        :param IdlFiles: 表格所关联IDL文件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IdlFiles: 表格所關聯IDL文件訊息清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IdlFiles: list of IdlFileInfo
-        :param ReservedVolume: 表格预留容量（GB）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ReservedVolume: 表格預留容量（GB）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ReservedVolume: int
-        :param ReservedReadQps: 表格预留读QPS
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ReservedReadQps: 表格預留讀QPS
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ReservedReadQps: int
-        :param ReservedWriteQps: 表格预留写QPS
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ReservedWriteQps: 表格預留寫QPS
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ReservedWriteQps: int
-        :param TableSize: 表格实际数据量大小（MB）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableSize: 表格實際數據量大小（MB）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableSize: int
-        :param Status: 表格状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Status: 表格狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: str
-        :param CreatedTime: 表格创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreatedTime: 表格創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreatedTime: str
-        :param UpdatedTime: 表格最后一次修改时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdatedTime: 表格最後一次修改時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdatedTime: str
-        :param Memo: 表格备注信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Memo: 表格備注訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Memo: str
-        :param Error: 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Error: 錯誤訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Error: :class:`tencentcloud.tcaplusdb.v20190823.models.ErrorInfo`
-        :param ApiAccessId: TcaplusDB SDK数据访问接入ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApiAccessId: TcaplusDB SDK數據訪問接入ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApiAccessId: str
-        :param SortFieldNum: SORTLIST类型表格排序字段个数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SortFieldNum: SORTLIST類型表格排序欄位個數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SortFieldNum: int
-        :param SortRule: SORTLIST类型表格排序顺序
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SortRule: SORTLIST類型表格排序順序
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SortRule: int
-        :param DbClusterInfoStruct: 表格分布式索引信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DbClusterInfoStruct: 表格分布式索引訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DbClusterInfoStruct: str
         """
         self.TableName = None
@@ -2045,35 +2045,35 @@ class TableInfoNew(AbstractModel):
 
 
 class TableResultNew(AbstractModel):
-    """表处理结果信息
+    """表處理結果訊息
 
     """
 
     def __init__(self):
         """
-        :param TableInstanceId: 表格实例ID，形如：tcaplus-3be64cbb
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableInstanceId: 表格實例ID，形如：tcaplus-3be64cbb
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableInstanceId: str
-        :param TaskId: 任务ID，对于创建单任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TaskId: 任務ID，對于創建單任務的介面有效
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskId: str
-        :param TableName: 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableName: 表格名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableName: str
-        :param TableType: 表格数据结构类型，如：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableType: 表格數據結構類型，如：`GENERIC`或`LIST`
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableType: str
-        :param TableIdlType: 表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableIdlType: 表數據描述語言（IDL）類型，如：`PROTO`或`TDR`
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableIdlType: str
-        :param TableGroupId: 表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableGroupId: 表格所屬表格組ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableGroupId: str
-        :param Error: 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Error: 錯誤訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Error: :class:`tencentcloud.tcaplusdb.v20190823.models.ErrorInfo`
-        :param TaskIds: 任务ID列表，对于创建多任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TaskIds: 任務ID清單，對于創建多任務的介面有效
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskIds: list of str
         """
         self.TableInstanceId = None
@@ -2100,44 +2100,44 @@ class TableResultNew(AbstractModel):
 
 
 class TableRollbackResultNew(AbstractModel):
-    """表格回档结果信息
+    """表格回檔結果訊息
 
     """
 
     def __init__(self):
         """
-        :param TableInstanceId: 表格实例ID，形如：tcaplus-3be64cbb
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableInstanceId: 表格實例ID，形如：tcaplus-3be64cbb
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableInstanceId: str
-        :param TaskId: 任务ID，对于创建单任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TaskId: 任務ID，對于創建單任務的介面有效
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskId: str
-        :param TableName: 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableName: 表格名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableName: str
-        :param TableType: 表格数据结构类型，如：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableType: 表格數據結構類型，如：`GENERIC`或`LIST`
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableType: str
-        :param TableIdlType: 表格数据描述语言（IDL）类型，如：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableIdlType: 表格數據描述語言（IDL）類型，如：`PROTO`或`TDR`
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableIdlType: str
-        :param TableGroupId: 表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TableGroupId: 表格所屬表格組ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TableGroupId: str
-        :param Error: 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Error: 錯誤訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Error: :class:`tencentcloud.tcaplusdb.v20190823.models.ErrorInfo`
-        :param TaskIds: 任务ID列表，对于创建多任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TaskIds: 任務ID清單，對于創建多任務的介面有效
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskIds: list of str
-        :param FileId: 上传的key文件ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FileId: 上傳的key文件ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FileId: str
-        :param SuccKeyNum: 校验成功Key数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SuccKeyNum: 校驗成功Key數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SuccKeyNum: int
-        :param TotalKeyNum: Key文件中包含总的Key数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalKeyNum: Key文件中包含總的Key數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalKeyNum: int
         """
         self.TableInstanceId = None
@@ -2170,31 +2170,31 @@ class TableRollbackResultNew(AbstractModel):
 
 
 class TaskInfoNew(AbstractModel):
-    """任务信息详情
+    """任務訊息詳情
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: str
-        :param TaskType: 任务类型
+        :param TaskType: 任務類型
         :type TaskType: str
-        :param TransId: 任务所关联的TcaplusDB内部事务ID
+        :param TransId: 任務所關聯的TcaplusDB内部事務ID
         :type TransId: str
-        :param ClusterId: 任务所属集群ID
+        :param ClusterId: 任務所屬集群ID
         :type ClusterId: str
-        :param ClusterName: 任务所属集群名称
+        :param ClusterName: 任務所屬集群名稱
         :type ClusterName: str
-        :param Progress: 任务进度
+        :param Progress: 任務進度
         :type Progress: int
-        :param StartTime: 任务创建时间
+        :param StartTime: 任務創建時間
         :type StartTime: str
-        :param UpdateTime: 任务最后更新时间
+        :param UpdateTime: 任務最後更新時間
         :type UpdateTime: str
         :param Operator: 操作者
         :type Operator: str
-        :param Content: 任务详情
+        :param Content: 任務詳情
         :type Content: str
         """
         self.TaskId = None
@@ -2223,19 +2223,19 @@ class TaskInfoNew(AbstractModel):
 
 
 class VerifyIdlFilesRequest(AbstractModel):
-    """VerifyIdlFiles请求参数结构体
+    """VerifyIdlFiles請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterId: 待创建表格的集群ID
+        :param ClusterId: 待創建表格的集群ID
         :type ClusterId: str
-        :param TableGroupId: 待创建表格的表格组ID
+        :param TableGroupId: 待創建表格的表格組ID
         :type TableGroupId: str
-        :param ExistingIdlFiles: 曾经上传过的IDL文件信息列表，与NewIdlFiles至少有一者
+        :param ExistingIdlFiles: 曾經上傳過的IDL文件訊息清單，與NewIdlFiles至少有一者
         :type ExistingIdlFiles: list of IdlFileInfo
-        :param NewIdlFiles: 待上传的IDL文件信息列表，与ExistingIdlFiles至少有一者
+        :param NewIdlFiles: 待上傳的IDL文件訊息清單，與ExistingIdlFiles至少有一者
         :type NewIdlFiles: list of IdlFileInfo
         """
         self.ClusterId = None
@@ -2262,19 +2262,19 @@ class VerifyIdlFilesRequest(AbstractModel):
 
 
 class VerifyIdlFilesResponse(AbstractModel):
-    """VerifyIdlFiles返回参数结构体
+    """VerifyIdlFiles返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param IdlFiles: 本次上传校验所有的IDL文件信息列表
+        :param IdlFiles: 本次上傳校驗所有的IDL文件訊息清單
         :type IdlFiles: list of IdlFileInfo
-        :param TotalCount: 读取IDL描述文件后解析出的合法表数量，不包含已经创建的表
+        :param TotalCount: 讀取IDL描述文件後解析出的合法表數量，不包含已經創建的表
         :type TotalCount: int
-        :param TableInfos: 读取IDL描述文件后解析出的合法表列表，不包含已经创建的表
+        :param TableInfos: 讀取IDL描述文件後解析出的合法表清單，不包含已經創建的表
         :type TableInfos: list of ParsedTableInfoNew
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.IdlFiles = None

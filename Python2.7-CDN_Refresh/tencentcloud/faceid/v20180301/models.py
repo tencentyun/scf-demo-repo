@@ -17,7 +17,7 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class BankCard2EVerificationRequest(AbstractModel):
-    """BankCard2EVerification请求参数结构体
+    """BankCard2EVerification請求參數結構體
 
     """
 
@@ -25,7 +25,7 @@ class BankCard2EVerificationRequest(AbstractModel):
         """
         :param Name: 姓名
         :type Name: str
-        :param BankCard: 银行卡
+        :param BankCard: 銀行卡
         :type BankCard: str
         """
         self.Name = None
@@ -38,36 +38,36 @@ class BankCard2EVerificationRequest(AbstractModel):
 
 
 class BankCard2EVerificationResponse(AbstractModel):
-    """BankCard2EVerification返回参数结构体
+    """BankCard2EVerification返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 认证结果码
-计费结果码：
-  '0': '认证通过'
-  '-1': '认证未通过'
- '-4': '持卡人信息有误'
-  '-5': '未开通无卡支付'
-  '-6': '此卡被没收'
-  '-7': '无效卡号'
-  '-8': '此卡无对应发卡行'
-  '-9': '该卡未初始化或睡眠卡'
+        :param Result: 認證結果碼
+計費結果碼：
+  '0': '認證通過'
+  '-1': '認證未通過'
+ '-4': '持卡人訊息有誤'
+  '-5': '未開通無卡支付'
+  '-6': '此卡被沒收'
+  '-7': '無效卡号'
+  '-8': '此卡無對應發卡行'
+  '-9': '該卡未初始化或睡眠卡'
   '-10': '作弊卡、吞卡'
   '-11': '此卡已挂失'
-  '-12': '该卡已过期'
+  '-12': '該卡已過期'
   '-13': '受限制的卡'
-  '-14': '密码错误次数超限'
-  '-15': '发卡行不支持此交易'
-不计费结果码：
-  '-2': '姓名校验不通过'
-  '-3': '银行卡号码有误'
-  '-16': '验证中心服务繁忙'
+  '-14': '密碼錯誤次數超限'
+  '-15': '發卡行不支援此交易'
+不計費結果碼：
+  '-2': '姓名校驗不通過'
+  '-3': '銀行卡号碼有誤'
+  '-16': '驗證中心服務繁忙'
         :type Result: str
-        :param Description: 业务结果描述。
+        :param Description: 業務結果描述。
         :type Description: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -82,7 +82,7 @@ class BankCard2EVerificationResponse(AbstractModel):
 
 
 class BankCard4EVerificationRequest(AbstractModel):
-    """BankCard4EVerification请求参数结构体
+    """BankCard4EVerification請求參數結構體
 
     """
 
@@ -90,14 +90,14 @@ class BankCard4EVerificationRequest(AbstractModel):
         """
         :param Name: 姓名
         :type Name: str
-        :param BankCard: 银行卡
+        :param BankCard: 銀行卡
         :type BankCard: str
-        :param Phone: 手机号码
+        :param Phone: 手機号碼
         :type Phone: str
-        :param IdCard: 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
+        :param IdCard: 開戶證件号，與CertType參數的證件類型一緻，如：身份證，則傳入身份證号。
         :type IdCard: str
-        :param CertType: 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
+        :param CertType: 證件類型，請确認該證件爲開戶時使用的證件類型，未用于開戶的證件訊息不支援驗證。
+目前預設：0 身份證，其他證件類型需求可以聯系小助手faceid001确認。
         :type CertType: int
         """
         self.Name = None
@@ -116,38 +116,38 @@ class BankCard4EVerificationRequest(AbstractModel):
 
 
 class BankCard4EVerificationResponse(AbstractModel):
-    """BankCard4EVerification返回参数结构体
+    """BankCard4EVerification返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 认证结果码
-收费结果码：
-'0': '认证通过'
-'-1': '认证未通过'
-'-6': '持卡人信息有误'
-'-7': '未开通无卡支付'
-'-8': '此卡被没收'
-'-9': '无效卡号'
-'-10': '此卡无对应发卡行'
-'-11': '该卡未初始化或睡眠卡'
+        :param Result: 認證結果碼
+收費結果碼：
+'0': '認證通過'
+'-1': '認證未通過'
+'-6': '持卡人訊息有誤'
+'-7': '未開通無卡支付'
+'-8': '此卡被沒收'
+'-9': '無效卡号'
+'-10': '此卡無對應發卡行'
+'-11': '該卡未初始化或睡眠卡'
 '-12': '作弊卡、吞卡'
 '-13': '此卡已挂失'
-'-14': '该卡已过期'
+'-14': '該卡已過期'
 '-15': '受限制的卡'
-'-16': '密码错误次数超限'
-'-17': '发卡行不支持此交易'
-不收费结果码：
-'-2': '姓名校验不通过'
-'-3': '身份证号码有误'
-'-4': '银行卡号码有误'
-'-5': '手机号码不合法'
-'-18': '验证中心服务繁忙'
+'-16': '密碼錯誤次數超限'
+'-17': '發卡行不支援此交易'
+不收費結果碼：
+'-2': '姓名校驗不通過'
+'-3': '身份證号碼有誤'
+'-4': '銀行卡号碼有誤'
+'-5': '手機号碼不合法'
+'-18': '驗證中心服務繁忙'
         :type Result: str
-        :param Description: 业务结果描述。
+        :param Description: 業務結果描述。
         :type Description: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -162,20 +162,20 @@ class BankCard4EVerificationResponse(AbstractModel):
 
 
 class BankCardVerificationRequest(AbstractModel):
-    """BankCardVerification请求参数结构体
+    """BankCardVerification請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param IdCard: 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
+        :param IdCard: 開戶證件号，與CertType參數的證件類型一緻，如：身份證，則傳入身份證号。
         :type IdCard: str
         :param Name: 姓名
         :type Name: str
-        :param BankCard: 银行卡
+        :param BankCard: 銀行卡
         :type BankCard: str
-        :param CertType: 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
+        :param CertType: 證件類型，請确認該證件爲開戶時使用的證件類型，未用于開戶的證件訊息不支援驗證。
+目前預設：0 身份證，其他證件類型需求可以聯系小助手faceid001确認。
         :type CertType: int
         """
         self.IdCard = None
@@ -192,37 +192,37 @@ class BankCardVerificationRequest(AbstractModel):
 
 
 class BankCardVerificationResponse(AbstractModel):
-    """BankCardVerification返回参数结构体
+    """BankCardVerification返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 认证结果码
-收费结果码：
-'0': '认证通过'
-'-1': '认证未通过'
-'-5': '持卡人信息有误'
-'-6': '未开通无卡支付'
-'-7': '此卡被没收'
-'-8': '无效卡号'
-'-9': '此卡无对应发卡行'
-'-10': '该卡未初始化或睡眠卡'
+        :param Result: 認證結果碼
+收費結果碼：
+'0': '認證通過'
+'-1': '認證未通過'
+'-5': '持卡人訊息有誤'
+'-6': '未開通無卡支付'
+'-7': '此卡被沒收'
+'-8': '無效卡号'
+'-9': '此卡無對應發卡行'
+'-10': '該卡未初始化或睡眠卡'
 '-11': '作弊卡、吞卡'
 '-12': '此卡已挂失'
-'-13': '该卡已过期'
+'-13': '該卡已過期'
 '-14': '受限制的卡'
-'-15': '密码错误次数超限'
-'-16': '发卡行不支持此交易'
-不收费结果码：
-'-2': '姓名校验不通过'
-'-3': '身份证号码有误'
-'-4': '银行卡号码有误'
-'-17': '验证中心服务繁忙'
+'-15': '密碼錯誤次數超限'
+'-16': '發卡行不支援此交易'
+不收費結果碼：
+'-2': '姓名校驗不通過'
+'-3': '身份證号碼有誤'
+'-4': '銀行卡号碼有誤'
+'-17': '驗證中心服務繁忙'
         :type Result: str
-        :param Description: 业务结果描述。
+        :param Description: 業務結果描述。
         :type Description: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -237,27 +237,27 @@ class BankCardVerificationResponse(AbstractModel):
 
 
 class DetectAuthRequest(AbstractModel):
-    """DetectAuth请求参数结构体
+    """DetectAuth請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RuleId: 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
+        :param RuleId: 用于細分客戶使用場景，申請開通服務後，可以在Top Cloud 慧眼人臉核身控制台（https://console.cloud.tencent.com/faceid） 自助接入裏面創建，審核通過後即可調用。如有疑問，請加慧眼小助手微信（faceid001）進行咨詢。
         :type RuleId: str
-        :param TerminalType: 本接口不需要传递此参数。
+        :param TerminalType: 本介面不需要傳遞此參數。
         :type TerminalType: str
-        :param IdCard: 身份标识（未使用OCR服务时，必须传入）。
-规则：a-zA-Z0-9组合。最长长度32位。
+        :param IdCard: 身份标識（未使用OCR服務時，必須傳入）。
+規則：a-zA-Z0-9組合。最長長度32位。
         :type IdCard: str
-        :param Name: 姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
+        :param Name: 姓名。（未使用OCR服務時，必須傳入）最長長度32位。中文請使用UTF-8編碼。
         :type Name: str
-        :param RedirectUrl: 认证结束后重定向的回调链接地址。最长长度1024位。
+        :param RedirectUrl: 認證結束後重定向的回調連結網址。最長長度1024位。
         :type RedirectUrl: str
-        :param Extra: 透传字段，在获取验证结果时返回。
+        :param Extra: 透傳欄位，在獲取驗證結果時返回。
         :type Extra: str
-        :param ImageBase64: 用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+        :param ImageBase64: 用于人臉比對的照片，圖片的BASE64值；
+BASE64編碼後的圖片數據大小不超過3M，僅支援jpg、png格式。
         :type ImageBase64: str
         """
         self.RuleId = None
@@ -280,18 +280,18 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
 
 
 class DetectAuthResponse(AbstractModel):
-    """DetectAuth返回参数结构体
+    """DetectAuth返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Url: 用于发起核身流程的URL，仅微信H5场景使用。
+        :param Url: 用于發起核身流程的URL，僅微信H5場景使用。
         :type Url: str
-        :param BizToken: 一次核身流程的标识，有效时间为7,200秒；
-完成核身后，可用该标识获取验证结果信息。
+        :param BizToken: 一次核身流程的标識，有效時間爲7,200秒；
+完成核身後，可用該标識獲取驗證結果訊息。
         :type BizToken: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Url = None
@@ -306,47 +306,47 @@ class DetectAuthResponse(AbstractModel):
 
 
 class DetectDetail(AbstractModel):
-    """活体一比一详情
+    """活體一比一詳情
 
     """
 
     def __init__(self):
         """
-        :param ReqTime: 请求时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ReqTime: 請求時間戳。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ReqTime: str
-        :param Seq: 本次活体一比一请求的唯一标记。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Seq: 本次活體一比一請求的唯一标記。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Seq: str
-        :param Idcard: 参与本次活体一比一的身份证号。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Idcard: 參與本次活體一比一的身份證号。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Idcard: str
-        :param Name: 参与本次活体一比一的姓名。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Name: 參與本次活體一比一的姓名。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Name: str
-        :param Sim: 本次活体一比一的相似度。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Sim: 本次活體一比一的相似度。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Sim: str
-        :param IsNeedCharge: 本次活体一比一是否收费
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsNeedCharge: 本次活體一比一是否收費
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsNeedCharge: bool
-        :param Errcode: 本次活体一比一最终结果。0为成功
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Errcode: 本次活體一比一最終結果。0爲成功
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Errcode: int
-        :param Errmsg: 本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Errmsg: 本次活體一比一最終結果描述。（僅描述用，文案更新時不會通知。）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Errmsg: str
-        :param Livestatus: 本次活体结果。0为成功
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Livestatus: 本次活體結果。0爲成功
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Livestatus: int
-        :param Livemsg: 本次活体结果描述。（仅描述用，文案更新时不会通知。）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Livemsg: 本次活體結果描述。（僅描述用，文案更新時不會通知。）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Livemsg: str
-        :param Comparestatus: 本次一比一结果。0为成功
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Comparestatus: 本次一比一結果。0爲成功
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Comparestatus: int
-        :param Comparemsg: 本次一比一结果描述。（仅描述用，文案更新时不会通知。）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Comparemsg: 本次一比一結果描述。（僅描述用，文案更新時不會通知。）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Comparemsg: str
         """
         self.ReqTime = None
@@ -379,17 +379,17 @@ class DetectDetail(AbstractModel):
 
 
 class DetectInfoBestFrame(AbstractModel):
-    """核身最佳帧信息
+    """核身最佳幀訊息
 
     """
 
     def __init__(self):
         """
-        :param BestFrame: 活体比对最佳帧。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BestFrame: 活體比對最佳幀。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BestFrame: str
-        :param BestFrames: 自截帧。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BestFrames: 自截幀。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BestFrames: list of str
         """
         self.BestFrame = None
@@ -402,26 +402,26 @@ class DetectInfoBestFrame(AbstractModel):
 
 
 class DetectInfoIdCardData(AbstractModel):
-    """核身身份证图片信息
+    """核身身份證圖片訊息
 
     """
 
     def __init__(self):
         """
-        :param OcrFront: OCR正面照片的base64编码。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OcrFront: OCR正面照片的base64編碼。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OcrFront: str
-        :param OcrBack: OCR反面照片的base64编码
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OcrBack: OCR反面照片的base64編碼
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OcrBack: str
-        :param ProcessedFrontImage: 旋转裁边后的正面照片base64编码。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProcessedFrontImage: 旋轉裁邊後的正面照片base64編碼。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProcessedFrontImage: str
-        :param ProcessedBackImage: 旋转裁边后的背面照片base64编码。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProcessedBackImage: 旋轉裁邊後的背面照片base64編碼。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProcessedBackImage: str
-        :param Avatar: 身份证正面人像图base64编码。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Avatar: 身份證正面人像圖base64編碼。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Avatar: str
         """
         self.OcrFront = None
@@ -440,74 +440,74 @@ class DetectInfoIdCardData(AbstractModel):
 
 
 class DetectInfoText(AbstractModel):
-    """核身文本信息
+    """核身文本訊息
 
     """
 
     def __init__(self):
         """
-        :param ErrCode: 本次流程最终验证结果。0为成功
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ErrCode: 本次流程最終驗證結果。0爲成功
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ErrCode: int
-        :param ErrMsg: 本次流程最终验证结果描述。（仅描述用，文案更新时不会通知。）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ErrMsg: 本次流程最終驗證結果描述。（僅描述用，文案更新時不會通知。）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ErrMsg: str
-        :param IdCard: 本次验证使用的身份证号。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IdCard: 本次驗證使用的身份證号。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IdCard: str
-        :param Name: 本次验证使用的姓名。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Name: 本次驗證使用的姓名。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Name: str
-        :param OcrNation: Ocr识别结果。民族。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OcrNation: Ocr識别結果。民族。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OcrNation: str
-        :param OcrAddress: Ocr识别结果。家庭住址。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OcrAddress: Ocr識别結果。家庭住址。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OcrAddress: str
-        :param OcrBirth: Ocr识别结果。生日。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OcrBirth: Ocr識别結果。生日。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OcrBirth: str
-        :param OcrAuthority: Ocr识别结果。签发机关。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OcrAuthority: Ocr識别結果。簽發機關。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OcrAuthority: str
-        :param OcrValidDate: Ocr识别结果。有效日期。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OcrValidDate: Ocr識别結果。有效日期。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OcrValidDate: str
-        :param OcrName: Ocr识别结果。姓名。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OcrName: Ocr識别結果。姓名。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OcrName: str
-        :param OcrIdCard: Ocr识别结果。身份证号。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OcrIdCard: Ocr識别結果。身份證号。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OcrIdCard: str
-        :param OcrGender: Ocr识别结果。性别。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OcrGender: Ocr識别結果。性别。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OcrGender: str
-        :param LiveStatus: 本次流程最终活体结果。0为成功
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LiveStatus: 本次流程最終活體結果。0爲成功
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LiveStatus: int
-        :param LiveMsg: 本次流程最终活体结果描述。（仅描述用，文案更新时不会通知。）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LiveMsg: 本次流程最終活體結果描述。（僅描述用，文案更新時不會通知。）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LiveMsg: str
-        :param Comparestatus: 本次流程最终一比一结果。0为成功
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Comparestatus: 本次流程最終一比一結果。0爲成功
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Comparestatus: int
-        :param Comparemsg: 本次流程最终一比一结果描述。（仅描述用，文案更新时不会通知。）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Comparemsg: 本次流程最終一比一結果描述。（僅描述用，文案更新時不會通知。）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Comparemsg: str
-        :param Sim: 本次流程活体一比一的分数。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Sim: 本次流程活體一比一的分數。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Sim: str
-        :param Location: 地理位置经纬度。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Location: 地理位置經緯度。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Location: str
-        :param Extra: Auth接口带入额外信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Extra: Auth介面帶入額外訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Extra: str
-        :param LivenessDetail: 本次流程进行的活体一比一流水。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LivenessDetail: 本次流程進行的活體一比一流水。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LivenessDetail: list of DetectDetail
-        :param Mobile: 手机号码。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Mobile: 手機号碼。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Mobile: str
         """
         self.ErrCode = None
@@ -563,14 +563,14 @@ class DetectInfoText(AbstractModel):
 
 
 class DetectInfoVideoData(AbstractModel):
-    """核身视频信息
+    """核身視訊訊息
 
     """
 
     def __init__(self):
         """
-        :param LivenessVideo: 活体视频的base64编码
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LivenessVideo: 活體視訊的base64編碼
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LivenessVideo: str
         """
         self.LivenessVideo = None
@@ -581,21 +581,21 @@ class DetectInfoVideoData(AbstractModel):
 
 
 class GetActionSequenceRequest(AbstractModel):
-    """GetActionSequence请求参数结构体
+    """GetActionSequence請求參數結構體
 
     """
 
 
 class GetActionSequenceResponse(AbstractModel):
-    """GetActionSequence返回参数结构体
+    """GetActionSequence返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ActionSequence: 动作顺序(2,1 or 1,2) 。1代表张嘴，2代表闭眼。
+        :param ActionSequence: 動作順序(2,1 or 1,2) 。1代表張嘴，2代表閉眼。
         :type ActionSequence: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ActionSequence = None
@@ -608,25 +608,25 @@ class GetActionSequenceResponse(AbstractModel):
 
 
 class GetDetectInfoEnhancedRequest(AbstractModel):
-    """GetDetectInfoEnhanced请求参数结构体
+    """GetDetectInfoEnhanced請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BizToken: 人脸核身流程的标识，调用DetectAuth接口时生成。
+        :param BizToken: 人臉核身流程的标識，調用DetectAuth介面時生成。
         :type BizToken: str
-        :param RuleId: 用于细分客户使用场景，由腾讯侧在线下对接时分配。
+        :param RuleId: 用于細分客戶使用場景，由騰訊側在線下對接時分配。
         :type RuleId: str
-        :param InfoType: 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息；4：视频信息）。
-如 134表示拉取文本类、视频最佳截图信息、视频信息。
-默认值：0
+        :param InfoType: 指定拉取的結果訊息，取值（0：全部；1：文本類；2：身份證訊息；3：視訊最佳截圖訊息；4：視訊訊息）。
+如 134表示拉取文本類、視訊最佳截圖訊息、視訊訊息。
+預設值：0
         :type InfoType: str
-        :param BestFramesCount: 从活体视频中截取一定张数的最佳帧。默认为0，最大为10，超出10的最多只给10张。（InfoType需要包含3）
+        :param BestFramesCount: 從活體視訊中截取一定張數的最佳幀。預設爲0，最大爲10，超出10的最多只給10張。（InfoType需要包含3）
         :type BestFramesCount: int
-        :param IsCutIdCardImage: 是否对身份证照片进行裁边。默认为false。（InfoType需要包含2）
+        :param IsCutIdCardImage: 是否對身份證照片進行裁邊。預設爲false。（InfoType需要包含2）
         :type IsCutIdCardImage: bool
-        :param IsNeedIdCardAvatar: 是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
+        :param IsNeedIdCardAvatar: 是否需要從身份證中摳出頭像。預設爲false。（InfoType需要包含2）
         :type IsNeedIdCardAvatar: bool
         """
         self.BizToken = None
@@ -647,25 +647,25 @@ class GetDetectInfoEnhancedRequest(AbstractModel):
 
 
 class GetDetectInfoEnhancedResponse(AbstractModel):
-    """GetDetectInfoEnhanced返回参数结构体
+    """GetDetectInfoEnhanced返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Text: 文本类信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Text: 文本類訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Text: :class:`tencentcloud.faceid.v20180301.models.DetectInfoText`
-        :param IdCardData: 身份证照片信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IdCardData: 身份證照片訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IdCardData: :class:`tencentcloud.faceid.v20180301.models.DetectInfoIdCardData`
-        :param BestFrame: 最佳帧信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BestFrame: 最佳幀訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BestFrame: :class:`tencentcloud.faceid.v20180301.models.DetectInfoBestFrame`
-        :param VideoData: 视频信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VideoData: 視訊訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VideoData: :class:`tencentcloud.faceid.v20180301.models.DetectInfoVideoData`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Text = None
@@ -692,19 +692,19 @@ class GetDetectInfoEnhancedResponse(AbstractModel):
 
 
 class GetDetectInfoRequest(AbstractModel):
-    """GetDetectInfo请求参数结构体
+    """GetDetectInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BizToken: 人脸核身流程的标识，调用DetectAuth接口时生成。
+        :param BizToken: 人臉核身流程的标識，調用DetectAuth介面時生成。
         :type BizToken: str
-        :param RuleId: 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
+        :param RuleId: 用于細分客戶使用場景，申請開通服務後，可以在Top Cloud 慧眼人臉核身控制台（https://console.cloud.tencent.com/faceid） 自助接入裏面創建，審核通過後即可調用。如有疑問，請加慧眼小助手微信（faceid001）進行咨詢。
         :type RuleId: str
-        :param InfoType: 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
-如 134表示拉取文本类、视频最佳截图照片、视频。
-默认值：0
+        :param InfoType: 指定拉取的結果訊息，取值（0：全部；1：文本類；2：身份證正反面；3：視訊最佳截圖照片；4：視訊）。
+如 134表示拉取文本類、視訊最佳截圖照片、視訊。
+預設值：0
         :type InfoType: str
         """
         self.BizToken = None
@@ -719,54 +719,54 @@ class GetDetectInfoRequest(AbstractModel):
 
 
 class GetDetectInfoResponse(AbstractModel):
-    """GetDetectInfo返回参数结构体
+    """GetDetectInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DetectInfo: JSON字符串。
+        :param DetectInfo: JSON字串。
 {
-  // 文本类信息
+  // 文本類訊息
   "Text": {
-    "ErrCode": null,      // 本次核身最终结果。0为成功
-    "ErrMsg": null,       // 本次核身最终结果信息描述。
-    "IdCard": "",         // 本次核身最终获得的身份证号。
-    "Name": "",           // 本次核身最终获得的姓名。
-    "OcrNation": null,    // ocr阶段获取的民族
-    "OcrAddress": null,   // ocr阶段获取的地址
-    "OcrBirth": null,     // ocr阶段获取的出生信息
-    "OcrAuthority": null, // ocr阶段获取的证件签发机关
-    "OcrValidDate": null, // ocr阶段获取的证件有效期
-    "OcrName": null,      // ocr阶段获取的姓名
-    "OcrIdCard": null,    // ocr阶段获取的身份证号
-    "OcrGender": null,    // ocr阶段获取的性别
-    "LiveStatus": null,   // 活体检测阶段的错误码。0为成功
-    "LiveMsg": null,      // 活体检测阶段的错误信息
-    "Comparestatus": null,// 一比一阶段的错误码。0为成功
-    "Comparemsg": null,   // 一比一阶段的错误信息
-    "Location": null, // 地理位置信息
-    "Extra": "",          // DetectAuth结果传进来的Extra信息
-    "Detail": {           // 活体一比一信息详情
+    "ErrCode": null,      // 本次核身最終結果。0爲成功
+    "ErrMsg": null,       // 本次核身最終結果訊息描述。
+    "IdCard": "",         // 本次核身最終獲得的身份證号。
+    "Name": "",           // 本次核身最終獲得的姓名。
+    "OcrNation": null,    // ocr階段獲取的民族
+    "OcrAddress": null,   // ocr階段獲取的網址
+    "OcrBirth": null,     // ocr階段獲取的出生訊息
+    "OcrAuthority": null, // ocr階段獲取的證件簽發機關
+    "OcrValidDate": null, // ocr階段獲取的證件有效期
+    "OcrName": null,      // ocr階段獲取的姓名
+    "OcrIdCard": null,    // ocr階段獲取的身份證号
+    "OcrGender": null,    // ocr階段獲取的性别
+    "LiveStatus": null,   // 活體檢測階段的錯誤碼。0爲成功
+    "LiveMsg": null,      // 活體檢測階段的錯誤訊息
+    "Comparestatus": null,// 一比一階段的錯誤碼。0爲成功
+    "Comparemsg": null,   // 一比一階段的錯誤訊息
+    "Location": null, // 地理位置訊息
+    "Extra": "",          // DetectAuth結果傳進來的Extra訊息
+    "Detail": {           // 活體一比一訊息詳情
       "LivenessData": []
     }
   },
-  // 身份证正反面照片Base64
+  // 身份證正反面照片Base64
   "IdCardData": {
     "OcrFront": null,
     "OcrBack": null
   },
-  // 视频最佳帧截图Base64
+  // 視訊最佳幀截圖Base64
   "BestFrame": {
     "BestFrame": null
   },
-  // 活体视频Base64
+  // 活體視訊Base64
   "VideoData": {
     "LivenessVideo": null
   }
 }
         :type DetectInfo: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DetectInfo = None
@@ -779,21 +779,21 @@ class GetDetectInfoResponse(AbstractModel):
 
 
 class GetLiveCodeRequest(AbstractModel):
-    """GetLiveCode请求参数结构体
+    """GetLiveCode請求參數結構體
 
     """
 
 
 class GetLiveCodeResponse(AbstractModel):
-    """GetLiveCode返回参数结构体
+    """GetLiveCode返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LiveCode: 数字验证码，如：1234
+        :param LiveCode: 數字驗證碼，如：1234
         :type LiveCode: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.LiveCode = None
@@ -806,26 +806,26 @@ class GetLiveCodeResponse(AbstractModel):
 
 
 class IdCardOCRVerificationRequest(AbstractModel):
-    """IdCardOCRVerification请求参数结构体
+    """IdCardOCRVerification請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param IdCard: 身份证号
-姓名和身份证号、ImageBase64、ImageUrl三者必须提供其中之一。若都提供了，则按照姓名和身份证号>ImageBase64>ImageUrl的优先级使用参数。
+        :param IdCard: 身份證号
+姓名和身份證号、ImageBase64、ImageUrl三者必須提供其中之一。若都提供了，則按照姓名和身份證号>ImageBase64>ImageUrl的優先級使用參數。
         :type IdCard: str
         :param Name: 姓名
         :type Name: str
-        :param ImageBase64: 身份证人像面的 Base64 值
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
+        :param ImageBase64: 身份證人像面的 Base64 值
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經Base64編碼後不超過 3M。圖片下載時間不超過 3 秒。
         :type ImageBase64: str
-        :param ImageUrl: 身份证人像面的 Url 地址
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        :param ImageUrl: 身份證人像面的 Url 網址
+支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
+支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
+圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
         self.IdCard = None
@@ -842,41 +842,41 @@ class IdCardOCRVerificationRequest(AbstractModel):
 
 
 class IdCardOCRVerificationResponse(AbstractModel):
-    """IdCardOCRVerification返回参数结构体
+    """IdCardOCRVerification返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 认证结果码，收费情况如下。
-收费结果码：
-0: 姓名和身份证号一致
--1: 姓名和身份证号不一致
-不收费结果码：
--2: 非法身份证号（长度、校验位等不正确）
--3: 非法姓名（长度、格式等不正确）
--4: 证件库服务异常
--5: 证件库中无此身份证记录
+        :param Result: 認證結果碼，收費情況如下。
+收費結果碼：
+0: 姓名和身份證号一緻
+-1: 姓名和身份證号不一緻
+不收費結果碼：
+-2: 非法身份證号（長度、校驗位等不正确）
+-3: 非法姓名（長度、格式等不正确）
+-4: 證件庫服務異常
+-5: 證件庫中無此身份證記錄
         :type Result: str
-        :param Description: 业务结果描述。
+        :param Description: 業務結果描述。
         :type Description: str
-        :param Name: 用于验证的姓名
+        :param Name: 用于驗證的姓名
         :type Name: str
-        :param IdCard: 用于验证的身份证号
+        :param IdCard: 用于驗證的身份證号
         :type IdCard: str
         :param Sex: OCR得到的性别
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Sex: str
         :param Nation: OCR得到的民族
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Nation: str
         :param Birth: OCR得到的生日
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Birth: str
-        :param Address: OCR得到的地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Address: OCR得到的網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Address: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -903,13 +903,13 @@ class IdCardOCRVerificationResponse(AbstractModel):
 
 
 class IdCardVerificationRequest(AbstractModel):
-    """IdCardVerification请求参数结构体
+    """IdCardVerification請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param IdCard: 身份证号
+        :param IdCard: 身份證号
         :type IdCard: str
         :param Name: 姓名
         :type Name: str
@@ -924,25 +924,25 @@ class IdCardVerificationRequest(AbstractModel):
 
 
 class IdCardVerificationResponse(AbstractModel):
-    """IdCardVerification返回参数结构体
+    """IdCardVerification返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 认证结果码，收费情况如下。
-收费结果码：
-0: 姓名和身份证号一致
--1: 姓名和身份证号不一致
-不收费结果码：
--2: 非法身份证号（长度、校验位等不正确）
--3: 非法姓名（长度、格式等不正确）
--4: 证件库服务异常
--5: 证件库中无此身份证记录
+        :param Result: 認證結果碼，收費情況如下。
+收費結果碼：
+0: 姓名和身份證号一緻
+-1: 姓名和身份證号不一緻
+不收費結果碼：
+-2: 非法身份證号（長度、校驗位等不正确）
+-3: 非法姓名（長度、格式等不正确）
+-4: 證件庫服務異常
+-5: 證件庫中無此身份證記錄
         :type Result: str
-        :param Description: 业务结果描述。
+        :param Description: 業務結果描述。
         :type Description: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -957,20 +957,20 @@ class IdCardVerificationResponse(AbstractModel):
 
 
 class ImageRecognitionRequest(AbstractModel):
-    """ImageRecognition请求参数结构体
+    """ImageRecognition請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param IdCard: 身份证号
+        :param IdCard: 身份證号
         :type IdCard: str
-        :param Name: 姓名。中文请使用UTF-8编码。
+        :param Name: 姓名。中文請使用UTF-8編碼。
         :type Name: str
-        :param ImageBase64: 用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+        :param ImageBase64: 用于人臉比對的照片，圖片的BASE64值；
+BASE64編碼後的圖片數據大小不超過3M，僅支援jpg、png格式。
         :type ImageBase64: str
-        :param Optional: 本接口不需要传递此参数。
+        :param Optional: 本介面不需要傳遞此參數。
         :type Optional: str
         """
         self.IdCard = None
@@ -987,19 +987,19 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
 
 
 class ImageRecognitionResponse(AbstractModel):
-    """ImageRecognition返回参数结构体
+    """ImageRecognition返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Sim: 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+        :param Sim: 相似度，取值範圍 [0.00, 100.00]。推薦相似度大于等于70時可判斷爲同一人，可根據具體場景自行調整阈值（阈值70的誤通過率爲千分之一，阈值80的誤通過率是萬分之一）
         :type Sim: float
-        :param Result: 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+        :param Result: 業務錯誤碼，成功情況返回Success, 錯誤情況請參考下方錯誤碼 清單中FailedOperation部分
         :type Result: str
-        :param Description: 业务结果描述。
+        :param Description: 業務結果描述。
         :type Description: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Sim = None
@@ -1016,26 +1016,26 @@ class ImageRecognitionResponse(AbstractModel):
 
 
 class LivenessCompareRequest(AbstractModel):
-    """LivenessCompare请求参数结构体
+    """LivenessCompare請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageBase64: 用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+        :param ImageBase64: 用于人臉比對的照片，圖片的BASE64值；
+BASE64編碼後的圖片數據大小不超過3M，僅支援jpg、png格式。
         :type ImageBase64: str
-        :param VideoBase64: 用于活体检测的视频，视频的BASE64值；
-BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
+        :param VideoBase64: 用于活體檢測的視訊，視訊的BASE64值；
+BASE64編碼後的大小不超過5M，支援mp4、avi、flv格式。
         :type VideoBase64: str
-        :param LivenessType: 活体检测类型，取值：LIP/ACTION/SILENT。
-LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
+        :param LivenessType: 活體檢測類型，取值：LIP/ACTION/SILENT。
+LIP爲數字模式，ACTION爲動作模式，SILENT爲靜默模式，三種模式選擇一種傳入。
         :type LivenessType: str
-        :param ValidateData: 数字模式传参：数字验证码(1234)，需先调用接口获取数字验证码；
-动作模式传参：传动作顺序(2,1 or 1,2)，需先调用接口获取动作顺序；
-静默模式传参：空。
+        :param ValidateData: 數字模式傳參：數字驗證碼(1234)，需先調用介面獲取數字驗證碼；
+動作模式傳參：傳動作順序(2,1 or 1,2)，需先調用介面獲取動作順序；
+靜默模式傳參：空。
         :type ValidateData: str
-        :param Optional: 本接口不需要传递此参数。
+        :param Optional: 本介面不需要傳遞此參數。
         :type Optional: str
         """
         self.ImageBase64 = None
@@ -1054,21 +1054,21 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 
 
 class LivenessCompareResponse(AbstractModel):
-    """LivenessCompare返回参数结构体
+    """LivenessCompare返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BestFrameBase64: 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
+        :param BestFrameBase64: 驗證通過後的視訊最佳截圖照片，照片爲BASE64編碼後的值，jpg格式。
         :type BestFrameBase64: str
-        :param Sim: 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）。
+        :param Sim: 相似度，取值範圍 [0.00, 100.00]。推薦相似度大于等于70時可判斷爲同一人，可根據具體場景自行調整阈值（阈值70的誤通過率爲千分之一，阈值80的誤通過率是萬分之一）。
         :type Sim: float
-        :param Result: 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+        :param Result: 業務錯誤碼，成功情況返回Success, 錯誤情況請參考下方錯誤碼 清單中FailedOperation部分
         :type Result: str
-        :param Description: 业务结果描述。
+        :param Description: 業務結果描述。
         :type Description: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.BestFrameBase64 = None
@@ -1087,27 +1087,27 @@ class LivenessCompareResponse(AbstractModel):
 
 
 class LivenessRecognitionRequest(AbstractModel):
-    """LivenessRecognition请求参数结构体
+    """LivenessRecognition請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param IdCard: 身份证号
+        :param IdCard: 身份證号
         :type IdCard: str
-        :param Name: 姓名。中文请使用UTF-8编码。
+        :param Name: 姓名。中文請使用UTF-8編碼。
         :type Name: str
-        :param VideoBase64: 用于活体检测的视频，视频的BASE64值；
-BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
+        :param VideoBase64: 用于活體檢測的視訊，視訊的BASE64值；
+BASE64編碼後的大小不超過5M，支援mp4、avi、flv格式。
         :type VideoBase64: str
-        :param LivenessType: 活体检测类型，取值：LIP/ACTION/SILENT。
-LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
+        :param LivenessType: 活體檢測類型，取值：LIP/ACTION/SILENT。
+LIP爲數字模式，ACTION爲動作模式，SILENT爲靜默模式，三種模式選擇一種傳入。
         :type LivenessType: str
-        :param ValidateData: 数字模式传参：数字验证码(1234)，需先调用接口获取数字验证码；
-动作模式传参：传动作顺序(2,1 or 1,2)，需先调用接口获取动作顺序；
-静默模式传参：空。
+        :param ValidateData: 數字模式傳參：數字驗證碼(1234)，需先調用介面獲取數字驗證碼；
+動作模式傳參：傳動作順序(2,1 or 1,2)，需先調用介面獲取動作順序；
+靜默模式傳參：空。
         :type ValidateData: str
-        :param Optional: 本接口不需要传递此参数。
+        :param Optional: 本介面不需要傳遞此參數。
         :type Optional: str
         """
         self.IdCard = None
@@ -1128,21 +1128,21 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 
 
 class LivenessRecognitionResponse(AbstractModel):
-    """LivenessRecognition返回参数结构体
+    """LivenessRecognition返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BestFrameBase64: 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
+        :param BestFrameBase64: 驗證通過後的視訊最佳截圖照片，照片爲BASE64編碼後的值，jpg格式。
         :type BestFrameBase64: str
-        :param Sim: 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+        :param Sim: 相似度，取值範圍 [0.00, 100.00]。推薦相似度大于等于70時可判斷爲同一人，可根據具體場景自行調整阈值（阈值70的誤通過率爲千分之一，阈值80的誤通過率是萬分之一）
         :type Sim: float
-        :param Result: 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+        :param Result: 業務錯誤碼，成功情況返回Success, 錯誤情況請參考下方錯誤碼 清單中FailedOperation部分
         :type Result: str
-        :param Description: 业务结果描述。
+        :param Description: 業務結果描述。
         :type Description: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.BestFrameBase64 = None
@@ -1161,23 +1161,23 @@ class LivenessRecognitionResponse(AbstractModel):
 
 
 class LivenessRequest(AbstractModel):
-    """Liveness请求参数结构体
+    """Liveness請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VideoBase64: 用于活体检测的视频，视频的BASE64值；
-BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
+        :param VideoBase64: 用于活體檢測的視訊，視訊的BASE64值；
+BASE64編碼後的大小不超過5M，支援mp4、avi、flv格式。
         :type VideoBase64: str
-        :param LivenessType: 活体检测类型，取值：LIP/ACTION/SILENT。
-LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
+        :param LivenessType: 活體檢測類型，取值：LIP/ACTION/SILENT。
+LIP爲數字模式，ACTION爲動作模式，SILENT爲靜默模式，三種模式選擇一種傳入。
         :type LivenessType: str
-        :param ValidateData: 数字模式传参：数字验证码(1234)，需先调用接口获取数字验证码；
-动作模式传参：传动作顺序(2,1 or 1,2)，需先调用接口获取动作顺序；
-静默模式传参：不需要传递此参数。
+        :param ValidateData: 數字模式傳參：數字驗證碼(1234)，需先調用介面獲取數字驗證碼；
+動作模式傳參：傳動作順序(2,1 or 1,2)，需先調用介面獲取動作順序；
+靜默模式傳參：不需要傳遞此參數。
         :type ValidateData: str
-        :param Optional: 本接口不需要传递此参数。
+        :param Optional: 本介面不需要傳遞此參數。
         :type Optional: str
         """
         self.VideoBase64 = None
@@ -1194,19 +1194,19 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 
 
 class LivenessResponse(AbstractModel):
-    """Liveness返回参数结构体
+    """Liveness返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BestFrameBase64: 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
+        :param BestFrameBase64: 驗證通過後的視訊最佳截圖照片，照片爲BASE64編碼後的值，jpg格式。
         :type BestFrameBase64: str
-        :param Result: 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+        :param Result: 業務錯誤碼，成功情況返回Success, 錯誤情況請參考下方錯誤碼 清單中FailedOperation部分
         :type Result: str
-        :param Description: 业务结果描述。
+        :param Description: 業務結果描述。
         :type Description: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.BestFrameBase64 = None
@@ -1223,21 +1223,21 @@ class LivenessResponse(AbstractModel):
 
 
 class MinorsVerificationRequest(AbstractModel):
-    """MinorsVerification请求参数结构体
+    """MinorsVerification請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Type: 参与校验的参数类型。
-0：使用手机号进行校验；
-1：使用姓名与身份证号进行校验。
+        :param Type: 參與校驗的參數類型。
+0：使用手機号進行校驗；
+1：使用姓名與身份證号進行校驗。
         :type Type: str
-        :param Mobile: 手机号，11位数字，
+        :param Mobile: 手機号，11位數字，
 特别提示：
-手机号验证只限制在腾讯健康守护可信模型覆盖的数据范围内，与手机号本身在运营商是否实名无关联，不在范围会提示“手机号未实名”，建议客户与传入姓名和身份证号信息组合使用。
+手機号驗證只限制在騰訊健康守護可信模型函蓋的數據範圍内，與手機号本身在運營商是否實名無關聯，不在範圍會提示“手機号未實名”，建議客戶與傳入姓名和身份證号訊息組合使用。
         :type Mobile: str
-        :param IdCard: 身份证号码。
+        :param IdCard: 身份證号碼。
         :type IdCard: str
         :param Name: 姓名。
         :type Name: str
@@ -1256,32 +1256,32 @@ class MinorsVerificationRequest(AbstractModel):
 
 
 class MinorsVerificationResponse(AbstractModel):
-    """MinorsVerification返回参数结构体
+    """MinorsVerification返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 结果码，收费情况如下。
-收费结果码：
+        :param Result: 結果碼，收費情況如下。
+收費結果碼：
 0: 成年
 -1: 未成年
--2: 手机号未实名
--3: 姓名和身份证号不一致
+-2: 手機号未實名
+-3: 姓名和身份證号不一緻
 
-不收费结果码：
--4: 非法身份证号（长度、校验位等不正确）
--5: 非法姓名（长度、格式等不正确）
--6: 数据源服务异常
--7: 数据源中无此身份证记录
--8: 公安比对系统升级中，请稍后再试
+不收費結果碼：
+-4: 非法身份證号（長度、校驗位等不正确）
+-5: 非法姓名（長度、格式等不正确）
+-6: 數據源服務異常
+-7: 數據源中無此身份證記錄
+-8: 警察比對系統升級中，請稍後再試
         :type Result: str
-        :param Description: 业务结果描述。
+        :param Description: 業務結果描述。
         :type Description: str
-        :param AgeRange: 当结果码为0或者-1时，该字段的值为年龄区间。
-格式为[a,b)，表示年龄在a岁以上（包括a岁），b岁以下（不包括b岁）。若b为+时表示没有上限。
+        :param AgeRange: 當結果碼爲0或者-1時，該欄位的值爲年齡區間。
+格式爲[a,b)，表示年齡在a歲以上（包括a歲），b歲以下（不包括b歲）。若b爲+時表示沒有上限。
         :type AgeRange: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1298,13 +1298,13 @@ class MinorsVerificationResponse(AbstractModel):
 
 
 class MobileNetworkTimeVerificationRequest(AbstractModel):
-    """MobileNetworkTimeVerification请求参数结构体
+    """MobileNetworkTimeVerification請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Mobile: 手机号码。不支持电信手机号。
+        :param Mobile: 手機号碼。不支援電信手機号。
         :type Mobile: str
         """
         self.Mobile = None
@@ -1315,27 +1315,27 @@ class MobileNetworkTimeVerificationRequest(AbstractModel):
 
 
 class MobileNetworkTimeVerificationResponse(AbstractModel):
-    """MobileNetworkTimeVerification返回参数结构体
+    """MobileNetworkTimeVerification返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 认证结果码，收费情况如下。
-收费结果码：
+        :param Result: 認證結果碼，收費情況如下。
+收費結果碼：
 0: 成功
--2: 手机号不存在
--3: 手机号存在，但无法查询到在网时长
-不收费结果码：
--1: 手机号格式不正确
--4: 验证中心服务繁忙
+-2: 手機号不存在
+-3: 手機号存在，但無法查詢到在網時長
+不收費結果碼：
+-1: 手機号格式不正确
+-4: 驗證中心服務繁忙
         :type Result: str
-        :param Description: 业务结果描述。
+        :param Description: 業務結果描述。
         :type Description: str
-        :param Range: 在网时长区间。
-格式为(a,b]，表示在网时长在a个月以上，b个月以下。若b为+时表示没有上限。
+        :param Range: 在網時長區間。
+格式爲(a,b]，表示在網時長在a個月以上，b個月以下。若b爲+時表示沒有上限。
         :type Range: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1352,13 +1352,13 @@ class MobileNetworkTimeVerificationResponse(AbstractModel):
 
 
 class MobileStatusRequest(AbstractModel):
-    """MobileStatus请求参数结构体
+    """MobileStatus請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Mobile: 手机号码
+        :param Mobile: 手機号碼
         :type Mobile: str
         """
         self.Mobile = None
@@ -1369,31 +1369,31 @@ class MobileStatusRequest(AbstractModel):
 
 
 class MobileStatusResponse(AbstractModel):
-    """MobileStatus返回参数结构体
+    """MobileStatus返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 认证结果码，收费情况如下。
-收费结果码：
+        :param Result: 認證結果碼，收費情況如下。
+收費結果碼：
 0：成功
-不收费结果码：
--1：未查询到结果
--2：手机号格式不正确
--3：验证中心服务繁忙
+不收費結果碼：
+-1：未查詢到結果
+-2：手機号格式不正确
+-3：驗證中心服務繁忙
         :type Result: str
-        :param Description: 业务结果描述。
+        :param Description: 業務結果描述。
         :type Description: str
-        :param StatusCode: 状态码：
+        :param StatusCode: 狀态碼：
 0：正常
-1：停机
-2：销号
+1：停機
+2：銷号
 3：空号
-4：不在网
-99：未知状态
+4：不在網
+99：未知狀态
         :type StatusCode: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1410,17 +1410,17 @@ class MobileStatusResponse(AbstractModel):
 
 
 class PhoneVerificationRequest(AbstractModel):
-    """PhoneVerification请求参数结构体
+    """PhoneVerification請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param IdCard: 身份证号
+        :param IdCard: 身份證号
         :type IdCard: str
         :param Name: 姓名
         :type Name: str
-        :param Phone: 手机号
+        :param Phone: 手機号
         :type Phone: str
         """
         self.IdCard = None
@@ -1435,29 +1435,29 @@ class PhoneVerificationRequest(AbstractModel):
 
 
 class PhoneVerificationResponse(AbstractModel):
-    """PhoneVerification返回参数结构体
+    """PhoneVerification返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 认证结果码:
-0: 认证通过
--1: 手机号已实名，但是身份证和姓名均与实名信息不一致 
--2: 手机号已实名，手机号和证件号一致，姓名不一致
--3: 手机号已实名，手机号和姓名一致，身份证不一致
--4: 信息不一致
--5: 手机号未实名
--6: 手机号码不合法
--7: 身份证号码有误
--8: 姓名校验不通过
--9: 没有记录
--10: 认证未通过
--11: 验证中心服务繁忙
+        :param Result: 認證結果碼:
+0: 認證通過
+-1: 手機号已實名，但是身份證和姓名均與實名訊息不一緻 
+-2: 手機号已實名，手機号和證件号一緻，姓名不一緻
+-3: 手機号已實名，手機号和姓名一緻，身份證不一緻
+-4: 訊息不一緻
+-5: 手機号未實名
+-6: 手機号碼不合法
+-7: 身份證号碼有誤
+-8: 姓名校驗不通過
+-9: 沒有記錄
+-10: 認證未通過
+-11: 驗證中心服務繁忙
         :type Result: str
-        :param Description: 业务结果描述。
+        :param Description: 業務結果描述。
         :type Description: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None

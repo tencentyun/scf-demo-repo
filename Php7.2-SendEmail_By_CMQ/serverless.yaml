@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: SendEmail_By_CMQ
   src: ./
-  description: 本示例通过接收 CMQ 消息队列中指定格式的消息，并根据消息内容向指定的邮箱发送邮件
+  description: 本範例通過接收 CMQ 訊息隊列中指定格式的訊息，并根據訊息内容向指定的電子信箱發送郵件
   handler: cmq_email.main_handler
   runtime: Php7
   namespace: default
@@ -14,11 +14,10 @@ inputs:
   memorySize: 128
   timeout: 3
   events:
-    - cmq: # CMQ Topic 触发器
+    - cmq: # CMQ Topic 觸發器
        name: # input CMQ trigger  name //e.g. test
        parameters:
           name: # input CMQ Topic name //e.g. topicxxx
           enable: true
 
   
-

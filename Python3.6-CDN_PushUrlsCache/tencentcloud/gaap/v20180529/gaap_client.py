@@ -26,7 +26,7 @@ class GaapClient(AbstractClient):
 
 
     def AddRealServers(self, request):
-        """添加源站(服务器)信息，支持IP或域名
+        """添加源站(服務器)訊息，支援IP或域名
 
         :param request: Request instance for AddRealServers.
         :type request: :class:`tencentcloud.gaap.v20180529.models.AddRealServersRequest`
@@ -54,8 +54,8 @@ class GaapClient(AbstractClient):
 
 
     def BindListenerRealServers(self, request):
-        """本接口（BindListenerRealServers）用于TCP/UDP监听器绑定解绑源站。
-        注意：本接口会解绑之前绑定的源站，绑定本次调用所选择的源站。例如：原来绑定的源站为A，B，C，本次调用的选择绑定的源站为C，D，E，那么调用后所绑定的源站为C，D，E。
+        """本介面（BindListenerRealServers）用于TCP/UDP監聽器綁定解綁源站。
+        注意：本介面會解綁之前綁定的源站，綁定本次調用所選擇的源站。例如：原來綁定的源站爲A，B，C，本次調用的選擇綁定的源站爲C，D，E，那麽調用後所綁定的源站爲C，D，E。
 
         :param request: Request instance for BindListenerRealServers.
         :type request: :class:`tencentcloud.gaap.v20180529.models.BindListenerRealServersRequest`
@@ -83,7 +83,7 @@ class GaapClient(AbstractClient):
 
 
     def BindRuleRealServers(self, request):
-        """该接口用于7层监听器的转发规则绑定源站。注意：本接口会解绑之前绑定的源站，绑定本次调用所选择的源站。
+        """該介面用于7層監聽器的轉發規則綁定源站。注意：本介面會解綁之前綁定的源站，綁定本次調用所選擇的源站。
 
         :param request: Request instance for BindRuleRealServers.
         :type request: :class:`tencentcloud.gaap.v20180529.models.BindRuleRealServersRequest`
@@ -111,7 +111,7 @@ class GaapClient(AbstractClient):
 
 
     def CheckProxyCreate(self, request):
-        """本接口(CheckProxyCreate)用于查询能否创建指定配置的加速通道。
+        """本介面(CheckProxyCreate)用于查詢能否創建指定配置的加速通道。
 
         :param request: Request instance for CheckProxyCreate.
         :type request: :class:`tencentcloud.gaap.v20180529.models.CheckProxyCreateRequest`
@@ -139,7 +139,7 @@ class GaapClient(AbstractClient):
 
 
     def CloseProxies(self, request):
-        """本接口（CloseProxies）用于关闭通道。通道关闭后，不再产生流量，但每天仍然收取通道基础配置费用。
+        """本介面（CloseProxies）用于關閉通道。通道關閉後，不再産生流量，但每天仍然收取通道基礎配置費用。
 
         :param request: Request instance for CloseProxies.
         :type request: :class:`tencentcloud.gaap.v20180529.models.CloseProxiesRequest`
@@ -167,7 +167,7 @@ class GaapClient(AbstractClient):
 
 
     def CloseSecurityPolicy(self, request):
-        """关闭安全策略
+        """關閉安全策略
 
         :param request: Request instance for CloseSecurityPolicy.
         :type request: :class:`tencentcloud.gaap.v20180529.models.CloseSecurityPolicyRequest`
@@ -195,7 +195,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateCertificate(self, request):
-        """本接口（CreateCertificate）用于创建Gaap相关证书和配置文件，包括基础认证配置文件，客户端CA证书，服务器SSL证书，Gaap SSL证书以及源站CA证书。
+        """本介面（CreateCertificate）用于創建Gaap相關證書和配置文件，包括基礎認證配置文件，用戶端CA證書，服務器SSL證書，Gaap SSL證書以及源站CA證書。
 
         :param request: Request instance for CreateCertificate.
         :type request: :class:`tencentcloud.gaap.v20180529.models.CreateCertificateRequest`
@@ -223,8 +223,8 @@ class GaapClient(AbstractClient):
 
 
     def CreateDomain(self, request):
-        """本接口（CreateDomain）用于创建HTTP/HTTPS监听器的访问域名，客户端请求通过访问该域名来请求后端业务。
-        该接口仅支持version3.0的通道。
+        """本介面（CreateDomain）用于創建HTTP/HTTPS監聽器的訪問域名，用戶端請求通過訪問該域名來請求後端業務。
+        該介面僅支援version3.0的通道。
 
         :param request: Request instance for CreateDomain.
         :type request: :class:`tencentcloud.gaap.v20180529.models.CreateDomainRequest`
@@ -252,7 +252,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateDomainErrorPageInfo(self, request):
-        """定制域名指定错误码的错误响应
+        """定制域名指定錯誤碼的錯誤響應
 
         :param request: Request instance for CreateDomainErrorPageInfo.
         :type request: :class:`tencentcloud.gaap.v20180529.models.CreateDomainErrorPageInfoRequest`
@@ -280,7 +280,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateHTTPListener(self, request):
-        """该接口（CreateHTTPListener）用于在通道实例下创建HTTP协议类型的监听器。
+        """該介面（CreateHTTPListener）用于在通道實例下創建HTTP協議類型的監聽器。
 
         :param request: Request instance for CreateHTTPListener.
         :type request: :class:`tencentcloud.gaap.v20180529.models.CreateHTTPListenerRequest`
@@ -308,7 +308,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateHTTPSListener(self, request):
-        """该接口（CreateHTTPSListener）用于在通道实例下创建HTTPS协议类型的监听器。
+        """該介面（CreateHTTPSListener）用于在通道實例下創建HTTPS協議類型的監聽器。
 
         :param request: Request instance for CreateHTTPSListener.
         :type request: :class:`tencentcloud.gaap.v20180529.models.CreateHTTPSListenerRequest`
@@ -336,7 +336,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateProxy(self, request):
-        """本接口（CreateProxy）用于创建/复制一个指定配置的加速通道。当复制通道时，需要设置新通道的基本配置参数，并设置ClonedProxyId来指定被复制的通道。
+        """本介面（CreateProxy）用于創建/複制一個指定配置的加速通道。當複制通道時，需要設置新通道的基本配置參數，并設置ClonedProxyId來指定被複制的通道。
 
         :param request: Request instance for CreateProxy.
         :type request: :class:`tencentcloud.gaap.v20180529.models.CreateProxyRequest`
@@ -364,7 +364,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateProxyGroup(self, request):
-        """本接口（CreateProxyGroup）用于创建通道组。
+        """本介面（CreateProxyGroup）用于創建通道組。
 
         :param request: Request instance for CreateProxyGroup.
         :type request: :class:`tencentcloud.gaap.v20180529.models.CreateProxyGroupRequest`
@@ -392,7 +392,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateProxyGroupDomain(self, request):
-        """本接口（CreateProxyGroupDomain）用于创建通道组域名，并开启域名解析。
+        """本介面（CreateProxyGroupDomain）用于創建通道組域名，并開啓域名解析。
 
         :param request: Request instance for CreateProxyGroupDomain.
         :type request: :class:`tencentcloud.gaap.v20180529.models.CreateProxyGroupDomainRequest`
@@ -420,7 +420,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateRule(self, request):
-        """该接口（CreateRule）用于创建HTTP/HTTPS监听器转发规则。
+        """該介面（CreateRule）用于創建HTTP/HTTPS監聽器轉發規則。
 
         :param request: Request instance for CreateRule.
         :type request: :class:`tencentcloud.gaap.v20180529.models.CreateRuleRequest`
@@ -448,7 +448,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateSecurityPolicy(self, request):
-        """创建安全策略
+        """創建安全策略
 
         :param request: Request instance for CreateSecurityPolicy.
         :type request: :class:`tencentcloud.gaap.v20180529.models.CreateSecurityPolicyRequest`
@@ -476,7 +476,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateSecurityRules(self, request):
-        """添加安全策略规则
+        """添加安全策略規則
 
         :param request: Request instance for CreateSecurityRules.
         :type request: :class:`tencentcloud.gaap.v20180529.models.CreateSecurityRulesRequest`
@@ -504,7 +504,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateTCPListeners(self, request):
-        """该接口（CreateTCPListeners）用于批量创建单通道或者通道组的TCP协议类型的监听器。
+        """該介面（CreateTCPListeners）用于批次創建單通道或者通道組的TCP協議類型的監聽器。
 
         :param request: Request instance for CreateTCPListeners.
         :type request: :class:`tencentcloud.gaap.v20180529.models.CreateTCPListenersRequest`
@@ -532,7 +532,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateUDPListeners(self, request):
-        """该接口（CreateUDPListeners）用于批量创建单通道或者通道组的UDP协议类型的监听器。
+        """該介面（CreateUDPListeners）用于批次創建單通道或者通道組的UDP協議類型的監聽器。
 
         :param request: Request instance for CreateUDPListeners.
         :type request: :class:`tencentcloud.gaap.v20180529.models.CreateUDPListenersRequest`
@@ -560,7 +560,7 @@ class GaapClient(AbstractClient):
 
 
     def DeleteCertificate(self, request):
-        """本接口（DeleteCertificate）用于删除证书。
+        """本介面（DeleteCertificate）用于删除證書。
 
         :param request: Request instance for DeleteCertificate.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DeleteCertificateRequest`
@@ -588,7 +588,7 @@ class GaapClient(AbstractClient):
 
 
     def DeleteDomain(self, request):
-        """本接口（DeleteDomain）仅适用于7层监听器，用于删除该监听器下对应域名及域名下的所有规则，所有已绑定源站的规则将自动解绑。
+        """本介面（DeleteDomain）僅适用于7層監聽器，用于删除該監聽器下對應域名及域名下的所有規則，所有已綁定源站的規則将自動解綁。
 
         :param request: Request instance for DeleteDomain.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DeleteDomainRequest`
@@ -616,7 +616,7 @@ class GaapClient(AbstractClient):
 
 
     def DeleteDomainErrorPageInfo(self, request):
-        """删除域名的定制错误
+        """删除域名的定制錯誤
 
         :param request: Request instance for DeleteDomainErrorPageInfo.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DeleteDomainErrorPageInfoRequest`
@@ -644,7 +644,7 @@ class GaapClient(AbstractClient):
 
 
     def DeleteListeners(self, request):
-        """该接口（DeleteListeners）用于批量删除通道或通道组的监听器，包括4/7层监听器。
+        """該介面（DeleteListeners）用于批次删除通道或通道組的監聽器，包括4/7層監聽器。
 
         :param request: Request instance for DeleteListeners.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DeleteListenersRequest`
@@ -672,7 +672,7 @@ class GaapClient(AbstractClient):
 
 
     def DeleteProxyGroup(self, request):
-        """本接口（DeleteProxyGroup）用于删除通道组。
+        """本介面（DeleteProxyGroup）用于删除通道組。
 
         :param request: Request instance for DeleteProxyGroup.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DeleteProxyGroupRequest`
@@ -700,7 +700,7 @@ class GaapClient(AbstractClient):
 
 
     def DeleteRule(self, request):
-        """该接口（DeleteRule）用于删除HTTP/HTTPS监听器的转发规则。
+        """該介面（DeleteRule）用于删除HTTP/HTTPS監聽器的轉發規則。
 
         :param request: Request instance for DeleteRule.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DeleteRuleRequest`
@@ -756,7 +756,7 @@ class GaapClient(AbstractClient):
 
 
     def DeleteSecurityRules(self, request):
-        """删除安全策略规则
+        """删除安全策略規則
 
         :param request: Request instance for DeleteSecurityRules.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DeleteSecurityRulesRequest`
@@ -784,7 +784,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeAccessRegions(self, request):
-        """本接口（DescribeAccessRegions）用于查询加速区域，即客户端接入区域。
+        """本介面（DescribeAccessRegions）用于查詢加速區域，即用戶端接入區域。
 
         :param request: Request instance for DescribeAccessRegions.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeAccessRegionsRequest`
@@ -812,7 +812,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeAccessRegionsByDestRegion(self, request):
-        """本接口（DescribeAccessRegionsByDestRegion）根据源站区域查询可用的加速区域列表
+        """本介面（DescribeAccessRegionsByDestRegion）根據源站區域查詢可用的加速區域清單
 
         :param request: Request instance for DescribeAccessRegionsByDestRegion.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeAccessRegionsByDestRegionRequest`
@@ -840,7 +840,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeCertificateDetail(self, request):
-        """本接口（DescribeCertificateDetail）用于查询证书详情，包括证书ID，证书名字，证书类型，证书内容以及密钥等信息。
+        """本介面（DescribeCertificateDetail）用于查詢證書詳情，包括證書ID，證書名字，證書類型，證書内容以及金鑰等訊息。
 
         :param request: Request instance for DescribeCertificateDetail.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeCertificateDetailRequest`
@@ -868,7 +868,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeCertificates(self, request):
-        """本接口（DescribeCertificates）用来查询可以使用的证书列表。
+        """本介面（DescribeCertificates）用來查詢可以使用的證書清單。
 
         :param request: Request instance for DescribeCertificates.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeCertificatesRequest`
@@ -896,7 +896,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeCountryAreaMapping(self, request):
-        """本接口（DescribeCountryAreaMapping）用于获取国家地区编码映射表。
+        """本介面（DescribeCountryAreaMapping）用于獲取國家地區編碼映射表。
 
         :param request: Request instance for DescribeCountryAreaMapping.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeCountryAreaMappingRequest`
@@ -924,7 +924,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeDestRegions(self, request):
-        """本接口（DescribeDestRegions）用于查询源站区域，即源站服务器所在区域。
+        """本介面（DescribeDestRegions）用于查詢源站區域，即源站服務器所在區域。
 
         :param request: Request instance for DescribeDestRegions.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeDestRegionsRequest`
@@ -952,7 +952,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeDomainErrorPageInfo(self, request):
-        """查询目前定制域名的错误响应
+        """查詢目前定制域名的錯誤響應
 
         :param request: Request instance for DescribeDomainErrorPageInfo.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeDomainErrorPageInfoRequest`
@@ -980,7 +980,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeDomainErrorPageInfoByIds(self, request):
-        """根据定制错误ID查询错误响应
+        """根據定制錯誤ID查詢錯誤響應
 
         :param request: Request instance for DescribeDomainErrorPageInfoByIds.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeDomainErrorPageInfoByIdsRequest`
@@ -1008,7 +1008,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeGroupAndStatisticsProxy(self, request):
-        """该接口为内部接口，用于查询可以获取统计数据的通道组和通道信息
+        """該介面爲内部介面，用于查詢可以獲取統計數據的通道組和通道訊息
 
         :param request: Request instance for DescribeGroupAndStatisticsProxy.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeGroupAndStatisticsProxyRequest`
@@ -1036,7 +1036,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeGroupDomainConfig(self, request):
-        """本接口（DescribeGroupDomainConfig）用于获取通道组域名解析配置详情。
+        """本介面（DescribeGroupDomainConfig）用于獲取通道組域名解析配置詳情。
 
         :param request: Request instance for DescribeGroupDomainConfig.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeGroupDomainConfigRequest`
@@ -1064,7 +1064,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeHTTPListeners(self, request):
-        """该接口（DescribeHTTPListeners）用来查询HTTP监听器信息。
+        """該介面（DescribeHTTPListeners）用來查詢HTTP監聽器訊息。
 
         :param request: Request instance for DescribeHTTPListeners.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeHTTPListenersRequest`
@@ -1092,7 +1092,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeHTTPSListeners(self, request):
-        """本接口（DescribeHTTPSListeners）用来查询HTTPS监听器信息。
+        """本介面（DescribeHTTPSListeners）用來查詢HTTPS監聽器訊息。
 
         :param request: Request instance for DescribeHTTPSListeners.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeHTTPSListenersRequest`
@@ -1120,7 +1120,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeListenerRealServers(self, request):
-        """该接口（DescribeListenerRealServers）用于查询TCP/UDP监听器源站列表，包括该监听器已经绑定的源站列表以及可以绑定的源站列表。
+        """該介面（DescribeListenerRealServers）用于查詢TCP/UDP監聽器源站清單，包括該監聽器已經綁定的源站清單以及可以綁定的源站清單。
 
         :param request: Request instance for DescribeListenerRealServers.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeListenerRealServersRequest`
@@ -1148,7 +1148,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeListenerStatistics(self, request):
-        """该接口用于查询监听器统计数据，包括出入带宽，出入包量，并发数据。支持300秒, 3600秒和86400秒的细粒度，取值为细粒度范围内最大值。
+        """該介面用于查詢監聽器統計數據，包括出入頻寬，出入包量，并發數據。支援300秒, 3600秒和86400秒的細粒度，取值爲細粒度範圍内最大值。
 
         :param request: Request instance for DescribeListenerStatistics.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeListenerStatisticsRequest`
@@ -1176,7 +1176,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeProxies(self, request):
-        """本接口（DescribeProxies）用于查询通道实例列表。
+        """本介面（DescribeProxies）用于查詢通道實例清單。
 
         :param request: Request instance for DescribeProxies.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeProxiesRequest`
@@ -1204,7 +1204,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeProxiesStatus(self, request):
-        """本接口（DescribeProxiesStatus）用于查询通道状态列表。
+        """本介面（DescribeProxiesStatus）用于查詢通道狀态清單。
 
         :param request: Request instance for DescribeProxiesStatus.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeProxiesStatusRequest`
@@ -1232,7 +1232,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeProxyAndStatisticsListeners(self, request):
-        """该接口为内部接口，用于查询可以获取统计数据的通道和监听器信息
+        """該介面爲内部介面，用于查詢可以獲取統計數據的通道和監聽器訊息
 
         :param request: Request instance for DescribeProxyAndStatisticsListeners.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyAndStatisticsListenersRequest`
@@ -1260,7 +1260,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeProxyDetail(self, request):
-        """本接口（DescribeProxyDetail）用于查询通道详情。
+        """本介面（DescribeProxyDetail）用于查詢通道詳情。
 
         :param request: Request instance for DescribeProxyDetail.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyDetailRequest`
@@ -1288,7 +1288,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeProxyGroupDetails(self, request):
-        """本接口（DescribeProxyGroupDetails）用于查询通道组详情。
+        """本介面（DescribeProxyGroupDetails）用于查詢通道組詳情。
 
         :param request: Request instance for DescribeProxyGroupDetails.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyGroupDetailsRequest`
@@ -1316,7 +1316,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeProxyGroupList(self, request):
-        """本接口（DescribeProxyGroupList）用于拉取通道组列表及各通道组基本信息。
+        """本介面（DescribeProxyGroupList）用于拉取通道組清單及各通道組基本訊息。
 
         :param request: Request instance for DescribeProxyGroupList.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyGroupListRequest`
@@ -1344,7 +1344,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeProxyGroupStatistics(self, request):
-        """该接口用于查询监听器统计数据，包括出入带宽，出入包量，并发数据。支持300, 3600和86400的细粒度，取值为细粒度范围内最大值。
+        """該介面用于查詢監聽器統計數據，包括出入頻寬，出入包量，并發數據。支援300, 3600和86400的細粒度，取值爲細粒度範圍内最大值。
 
         :param request: Request instance for DescribeProxyGroupStatistics.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyGroupStatisticsRequest`
@@ -1372,7 +1372,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeProxyStatistics(self, request):
-        """该接口用于查询监听器统计数据，包括出入带宽，出入包量，并发，丢包和时延数据。支持300, 3600和86400的细粒度，取值为细粒度范围内最大值。
+        """該介面用于查詢監聽器統計數據，包括出入頻寬，出入包量，并發，丢包和延遲數據。支援300, 3600和86400的細粒度，取值爲細粒度範圍内最大值。
 
         :param request: Request instance for DescribeProxyStatistics.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyStatisticsRequest`
@@ -1400,7 +1400,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeRealServerStatistics(self, request):
-        """该接口（DescribeRealServerStatistics）用于查询源站健康检查结果的统计数据。源站状态展示位为1：正常或者0：异常。查询的源站需要在监听器或者规则上进行了绑定，查询时需指定绑定的监听器或者规则ID。该接口支持最近1，3，6，12，24小时内1分钟细粒度的源站状态统计数据展示。
+        """該介面（DescribeRealServerStatistics）用于查詢源站健康檢查結果的統計數據。源站狀态展示位爲1：正常或者0：異常。查詢的源站需要在監聽器或者規則上進行了綁定，查詢時需指定綁定的監聽器或者規則ID。該介面支援最近1，3，6，12，24小時内1分鍾細粒度的源站狀态統計數據展示。
 
         :param request: Request instance for DescribeRealServerStatistics.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeRealServerStatisticsRequest`
@@ -1428,7 +1428,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeRealServers(self, request):
-        """本接口（DescribeRealServers）用于查询源站信息，可以根据项目名查询所有的源站信息，此外支持指定IP机或者域名的源站模糊查询。
+        """本介面（DescribeRealServers）用于查詢源站訊息，可以根據項目名查詢所有的源站訊息，此外支援指定IP機或者域名的源站模糊查詢。
 
         :param request: Request instance for DescribeRealServers.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeRealServersRequest`
@@ -1456,7 +1456,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeRealServersStatus(self, request):
-        """本接口（DescribeRealServersStatus）用于查询源站是否已被规则或者监听器绑定
+        """本介面（DescribeRealServersStatus）用于查詢源站是否已被規則或者監聽器綁定
 
         :param request: Request instance for DescribeRealServersStatus.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeRealServersStatusRequest`
@@ -1484,7 +1484,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeRegionAndPrice(self, request):
-        """该接口（DescribeRegionAndPrice）用于获取源站区域和带宽梯度价格
+        """該介面（DescribeRegionAndPrice）用于獲取源站區域和頻寬梯度價格
 
         :param request: Request instance for DescribeRegionAndPrice.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeRegionAndPriceRequest`
@@ -1512,7 +1512,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeResourcesByTag(self, request):
-        """本接口（DescribeResourcesByTag）用于根据标签来查询对应的资源信息，包括通道，通道组和源站。
+        """本介面（DescribeResourcesByTag）用于根據标簽來查詢對應的資源訊息，包括通道，通道組和源站。
 
         :param request: Request instance for DescribeResourcesByTag.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeResourcesByTagRequest`
@@ -1540,7 +1540,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeRuleRealServers(self, request):
-        """本接口（DescribeRuleRealServers）用于查询转发规则相关的源站信息， 包括该规则可绑定的源站信息和已绑定的源站信息。
+        """本介面（DescribeRuleRealServers）用于查詢轉發規則相關的源站訊息， 包括該規則可綁定的源站訊息和已綁定的源站訊息。
 
         :param request: Request instance for DescribeRuleRealServers.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeRuleRealServersRequest`
@@ -1568,7 +1568,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeRules(self, request):
-        """本接口（DescribeRules）用于查询监听器下的所有规则信息，包括规则域名，路径以及该规则下所绑定的源站列表。当通道版本为3.0时，该接口会返回该域名对应的高级认证配置信息。
+        """本介面（DescribeRules）用于查詢監聽器下的所有規則訊息，包括規則域名，路徑以及該規則下所綁定的源站清單。當通道版本爲3.0時，該介面會返回該域名對應的高級認證配置訊息。
 
         :param request: Request instance for DescribeRules.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeRulesRequest`
@@ -1596,7 +1596,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeRulesByRuleIds(self, request):
-        """本接口（DescribeRulesByRuleIds）用于根据规则ID拉取规则信息列表。支持一个或者多个规则信息的拉取。一次最多支持10个规则信息的拉取。
+        """本介面（DescribeRulesByRuleIds）用于根據規則ID拉取規則訊息清單。支援一個或者多個規則訊息的拉取。一次最多支援10個規則訊息的拉取。
 
         :param request: Request instance for DescribeRulesByRuleIds.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeRulesByRuleIdsRequest`
@@ -1624,7 +1624,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeSecurityPolicyDetail(self, request):
-        """获取安全策略详情
+        """獲取安全策略詳情
 
         :param request: Request instance for DescribeSecurityPolicyDetail.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeSecurityPolicyDetailRequest`
@@ -1652,7 +1652,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeSecurityRules(self, request):
-        """本接口（DescribeSecurityRules）用于根据安全规则ID查询安全规则详情列表。支持一个或多个安全规则的查询。一次最多支持20个安全规则的查询。
+        """本介面（DescribeSecurityRules）用于根據安全規則ID查詢安全規則詳情清單。支援一個或多個安全規則的查詢。一次最多支援20個安全規則的查詢。
 
         :param request: Request instance for DescribeSecurityRules.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeSecurityRulesRequest`
@@ -1680,7 +1680,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeTCPListeners(self, request):
-        """该接口（DescribeTCPListeners）用于查询单通道或者通道组下的TCP监听器信息。
+        """該介面（DescribeTCPListeners）用于查詢單通道或者通道組下的TCP監聽器訊息。
 
         :param request: Request instance for DescribeTCPListeners.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeTCPListenersRequest`
@@ -1708,7 +1708,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeUDPListeners(self, request):
-        """该接口（DescribeUDPListeners）用于查询单通道或者通道组下的UDP监听器信息
+        """該介面（DescribeUDPListeners）用于查詢單通道或者通道組下的UDP監聽器訊息
 
         :param request: Request instance for DescribeUDPListeners.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeUDPListenersRequest`
@@ -1736,7 +1736,7 @@ class GaapClient(AbstractClient):
 
 
     def DestroyProxies(self, request):
-        """本接口（DestroyProxies）用于销毁。通道销毁后，不再产生任何费用。
+        """本介面（DestroyProxies）用于銷毀。通道銷毀後，不再産生任何費用。
 
         :param request: Request instance for DestroyProxies.
         :type request: :class:`tencentcloud.gaap.v20180529.models.DestroyProxiesRequest`
@@ -1764,7 +1764,7 @@ class GaapClient(AbstractClient):
 
 
     def InquiryPriceCreateProxy(self, request):
-        """本接口（InquiryPriceCreateProxy）用于创建加速通道询价。
+        """本介面（InquiryPriceCreateProxy）用于創建加速通道詢價。
 
         :param request: Request instance for InquiryPriceCreateProxy.
         :type request: :class:`tencentcloud.gaap.v20180529.models.InquiryPriceCreateProxyRequest`
@@ -1792,7 +1792,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyCertificate(self, request):
-        """本接口（ModifyCertificate）用于修改监听器下的域名对应的证书。该接口仅适用于version3.0的通道。
+        """本介面（ModifyCertificate）用于修改監聽器下的域名對應的證書。該介面僅适用于version3.0的通道。
 
         :param request: Request instance for ModifyCertificate.
         :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyCertificateRequest`
@@ -1820,7 +1820,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyCertificateAttributes(self, request):
-        """本接口（ModifyCertificateAttributes）用于修改证书，包括证明名字以及证书内容。
+        """本介面（ModifyCertificateAttributes）用于修改證書，包括證明名字以及證書内容。
 
         :param request: Request instance for ModifyCertificateAttributes.
         :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyCertificateAttributesRequest`
@@ -1848,7 +1848,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyDomain(self, request):
-        """本接口（ModifyDomain）用于监听器下的域名。当通道版本为3.0时，支持对该域名所对应的证书修改。
+        """本介面（ModifyDomain）用于監聽器下的域名。當通道版本爲3.0時，支援對該域名所對應的證書修改。
 
         :param request: Request instance for ModifyDomain.
         :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyDomainRequest`
@@ -1876,7 +1876,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyGroupDomainConfig(self, request):
-        """本接口（ModifyGroupDomainConfig）用于配置通道组就近接入域名。
+        """本介面（ModifyGroupDomainConfig）用于配置通道組就近接入域名。
 
         :param request: Request instance for ModifyGroupDomainConfig.
         :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyGroupDomainConfigRequest`
@@ -1904,8 +1904,8 @@ class GaapClient(AbstractClient):
 
 
     def ModifyHTTPListenerAttribute(self, request):
-        """该接口（ModifyHTTPListenerAttribute）用于修改通道的HTTP监听器配置信息，目前仅支持修改监听器的名称。
-        注意：通道组通道暂时不支持HTTP/HTTPS监听器。
+        """該介面（ModifyHTTPListenerAttribute）用于修改通道的HTTP監聽器配置訊息，目前僅支援修改監聽器的名稱。
+        注意：通道組通道暫時不支援HTTP/HTTPS監聽器。
 
         :param request: Request instance for ModifyHTTPListenerAttribute.
         :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyHTTPListenerAttributeRequest`
@@ -1933,7 +1933,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyHTTPSListenerAttribute(self, request):
-        """该接口（ModifyHTTPSListenerAttribute）用于修改HTTPS监听器配置，当前不支持通道组和v1版本通道。
+        """該介面（ModifyHTTPSListenerAttribute）用于修改HTTPS監聽器配置，當前不支援通道組和v1版本通道。
 
         :param request: Request instance for ModifyHTTPSListenerAttribute.
         :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyHTTPSListenerAttributeRequest`
@@ -1961,7 +1961,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyProxiesAttribute(self, request):
-        """本接口（ModifyProxiesAttribute）用于修改实例的属性（目前只支持修改通道的名称）。
+        """本介面（ModifyProxiesAttribute）用于修改實例的屬性（目前只支援修改通道的名稱）。
 
         :param request: Request instance for ModifyProxiesAttribute.
         :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyProxiesAttributeRequest`
@@ -1989,7 +1989,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyProxiesProject(self, request):
-        """本接口（ModifyProxiesProject）用于修改通道所属项目。
+        """本介面（ModifyProxiesProject）用于修改通道所屬項目。
 
         :param request: Request instance for ModifyProxiesProject.
         :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyProxiesProjectRequest`
@@ -2017,7 +2017,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyProxyConfiguration(self, request):
-        """本接口（ModifyProxyConfiguration）用于修改通道的配置。根据当前业务的容量需求，扩容或缩容相关通道的配置。仅支持Scalarable为1的通道,Scalarable可通过接口DescribeProxies获取。
+        """本介面（ModifyProxyConfiguration）用于修改通道的配置。根據當前業務的容量需求，擴容或縮容相關通道的配置。僅支援Scalarable爲1的通道,Scalarable可通過介面DescribeProxies獲取。
 
         :param request: Request instance for ModifyProxyConfiguration.
         :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyProxyConfigurationRequest`
@@ -2045,7 +2045,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyProxyGroupAttribute(self, request):
-        """本接口（ModifyProxyGroupAttribute）用于修改通道组属性，目前仅支持修改通道组名称。
+        """本介面（ModifyProxyGroupAttribute）用于修改通道組屬性，目前僅支援修改通道組名稱。
 
         :param request: Request instance for ModifyProxyGroupAttribute.
         :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyProxyGroupAttributeRequest`
@@ -2073,7 +2073,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyRealServerName(self, request):
-        """本接口（ModifyRealServerName）用于修改源站的名称
+        """本介面（ModifyRealServerName）用于修改源站的名稱
 
         :param request: Request instance for ModifyRealServerName.
         :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyRealServerNameRequest`
@@ -2101,7 +2101,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyRuleAttribute(self, request):
-        """本接口（ModifyRuleAttribute）用于修改转发规则的信息，包括健康检查的配置以及转发策略。
+        """本介面（ModifyRuleAttribute）用于修改轉發規則的訊息，包括健康檢查的配置以及轉發策略。
 
         :param request: Request instance for ModifyRuleAttribute.
         :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyRuleAttributeRequest`
@@ -2129,7 +2129,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifySecurityRule(self, request):
-        """修改安全策略规则名
+        """修改安全策略規則名
 
         :param request: Request instance for ModifySecurityRule.
         :type request: :class:`tencentcloud.gaap.v20180529.models.ModifySecurityRuleRequest`
@@ -2157,7 +2157,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyTCPListenerAttribute(self, request):
-        """本接口（ModifyTCPListenerAttribute）用于修改通道实例下TCP监听器配置，包括健康检查的配置，调度策略。
+        """本介面（ModifyTCPListenerAttribute）用于修改通道實例下TCP監聽器配置，包括健康檢查的配置，調度策略。
 
         :param request: Request instance for ModifyTCPListenerAttribute.
         :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyTCPListenerAttributeRequest`
@@ -2185,7 +2185,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyUDPListenerAttribute(self, request):
-        """本接口（ModifyUDPListenerAttribute）用于修改通道实例下UDP监听器配置，包括监听器名称和调度策略的修改。
+        """本介面（ModifyUDPListenerAttribute）用于修改通道實例下UDP監聽器配置，包括監聽器名稱和調度策略的修改。
 
         :param request: Request instance for ModifyUDPListenerAttribute.
         :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyUDPListenerAttributeRequest`
@@ -2213,7 +2213,7 @@ class GaapClient(AbstractClient):
 
 
     def OpenProxies(self, request):
-        """该接口（OpenProxies）用于开启一条或者多条通道。
+        """該介面（OpenProxies）用于開啓一條或者多條通道。
 
         :param request: Request instance for OpenProxies.
         :type request: :class:`tencentcloud.gaap.v20180529.models.OpenProxiesRequest`
@@ -2241,7 +2241,7 @@ class GaapClient(AbstractClient):
 
 
     def OpenSecurityPolicy(self, request):
-        """开启安全策略
+        """開啓安全策略
 
         :param request: Request instance for OpenSecurityPolicy.
         :type request: :class:`tencentcloud.gaap.v20180529.models.OpenSecurityPolicyRequest`
@@ -2269,7 +2269,7 @@ class GaapClient(AbstractClient):
 
 
     def RemoveRealServers(self, request):
-        """删除已添加的源站(服务器)IP或域名
+        """删除已添加的源站(服務器)IP或域名
 
         :param request: Request instance for RemoveRealServers.
         :type request: :class:`tencentcloud.gaap.v20180529.models.RemoveRealServersRequest`
@@ -2297,7 +2297,7 @@ class GaapClient(AbstractClient):
 
 
     def SetAuthentication(self, request):
-        """本接口（SetAuthentication）用于通道的高级认证配置，包括认证方式选择，以及各种认证方式对应的证书选择。仅支持Version3.0的通道。
+        """本介面（SetAuthentication）用于通道的高級認證配置，包括認證方式選擇，以及各種認證方式對應的證書選擇。僅支援Version3.0的通道。
 
         :param request: Request instance for SetAuthentication.
         :type request: :class:`tencentcloud.gaap.v20180529.models.SetAuthenticationRequest`

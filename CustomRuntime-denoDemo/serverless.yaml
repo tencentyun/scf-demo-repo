@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: deno_demo
   src: ./
-  description: deno_demo function. Deno模板函数
+  description: deno_demo function. Deno範本函數
   handler: index.main_handler
   runtime: CustomRuntime
   namespace: default

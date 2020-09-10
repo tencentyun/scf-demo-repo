@@ -17,22 +17,22 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class DatabasesInfo(AbstractModel):
-    """数据库资源信息
+    """資料庫資源訊息
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 数据库唯一标识
+        :param InstanceId: 資料庫唯一标識
         :type InstanceId: str
-        :param Status: 状态。包含以下取值：
-<li>INITIALIZING：资源初始化中</li>
-<li>RUNNING：运行中，可正常使用的状态</li>
+        :param Status: 狀态。包含以下取值：
+<li>INITIALIZING：資源初始化中</li>
+<li>RUNNING：運作中，可正常使用的狀态</li>
 <li>UNUSABLE：禁用，不可用</li>
-<li>OVERDUE：资源过期</li>
+<li>OVERDUE：資源過期</li>
         :type Status: str
-        :param Region: 所属地域。
-当前支持ap-shanghai
+        :param Region: 所屬地域。
+當前支援ap-shanghai
         :type Region: str
         """
         self.InstanceId = None
@@ -47,15 +47,15 @@ class DatabasesInfo(AbstractModel):
 
 
 class DescribeDatabaseACLRequest(AbstractModel):
-    """DescribeDatabaseACL请求参数结构体
+    """DescribeDatabaseACL請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 环境ID
+        :param EnvId: 環境ID
         :type EnvId: str
-        :param CollectionName: 集合名称
+        :param CollectionName: 集合名稱
         :type CollectionName: str
         """
         self.EnvId = None
@@ -68,19 +68,19 @@ class DescribeDatabaseACLRequest(AbstractModel):
 
 
 class DescribeDatabaseACLResponse(AbstractModel):
-    """DescribeDatabaseACL返回参数结构体
+    """DescribeDatabaseACL返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AclTag: 权限标签。取值范围：
-<li> READONLY：所有用户可读，仅创建者和管理员可写</li>
-<li> PRIVATE：仅创建者及管理员可读写</li>
-<li> ADMINWRITE：所有用户可读，仅管理员可写</li>
-<li> ADMINONLY：仅管理员可读写</li>
+        :param AclTag: 權限标簽。取值範圍：
+<li> READONLY：所有用戶可讀，僅創建者和管理員可寫</li>
+<li> PRIVATE：僅創建者及管理員可讀寫</li>
+<li> ADMINWRITE：所有用戶可讀，僅管理員可寫</li>
+<li> ADMINONLY：僅管理員可讀寫</li>
         :type AclTag: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AclTag = None
@@ -93,13 +93,13 @@ class DescribeDatabaseACLResponse(AbstractModel):
 
 
 class DescribeEnvsRequest(AbstractModel):
-    """DescribeEnvs请求参数结构体
+    """DescribeEnvs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 环境ID，如果传了这个参数则只返回该环境的相关信息
+        :param EnvId: 環境ID，如果傳了這個參數則只返回該環境的相關訊息
         :type EnvId: str
         """
         self.EnvId = None
@@ -110,15 +110,15 @@ class DescribeEnvsRequest(AbstractModel):
 
 
 class DescribeEnvsResponse(AbstractModel):
-    """DescribeEnvs返回参数结构体
+    """DescribeEnvs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvList: 环境信息列表
+        :param EnvList: 環境訊息清單
         :type EnvList: list of EnvInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.EnvList = None
@@ -136,40 +136,40 @@ class DescribeEnvsResponse(AbstractModel):
 
 
 class EnvInfo(AbstractModel):
-    """环境信息
+    """環境訊息
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 账户下该环境唯一标识
+        :param EnvId: 帳戶下該環境唯一标識
         :type EnvId: str
-        :param Source: 环境来源。包含以下取值：
-<li>miniapp：微信小程序</li>
-<li>qcloud ：腾讯云</li>
+        :param Source: 環境來源。包含以下取值：
+<li>miniapp：微信小程式</li>
+<li>qcloud ：Top Cloud </li>
         :type Source: str
-        :param Alias: 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+        :param Alias: 環境别名，要以a-z開頭，不能包含 a-zA-z0-9- 以外的字元
         :type Alias: str
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param UpdateTime: 最后修改时间
+        :param UpdateTime: 最後修改時間
         :type UpdateTime: str
-        :param Status: 环境状态。包含以下取值：
+        :param Status: 環境狀态。包含以下取值：
 <li>NORMAL：正常可用</li>
-<li>HALTED：停服，用量超限或后台封禁</li>
-<li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
+<li>HALTED：停服，用量超限或後台封禁</li>
+<li>UNAVAILABLE：服務不可用，可能是尚未初始化或者初始化過程中</li>
         :type Status: str
-        :param Databases: 数据库列表
+        :param Databases: 資料庫清單
         :type Databases: list of DatabasesInfo
-        :param Storages: 存储列表
+        :param Storages: 儲存清單
         :type Storages: list of StorageInfo
-        :param Functions: 函数列表
+        :param Functions: 函數清單
         :type Functions: list of FunctionInfo
-        :param PackageId: tcb产品套餐ID，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PackageId: tcb産品套餐ID，參考DescribePackages介面的返回值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PackageId: str
-        :param PackageName: 套餐中文名称，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PackageName: 套餐中文名稱，參考DescribePackages介面的返回值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PackageName: str
         """
         self.EnvId = None
@@ -215,16 +215,16 @@ class EnvInfo(AbstractModel):
 
 
 class FunctionInfo(AbstractModel):
-    """函数的信息
+    """函數的訊息
 
     """
 
     def __init__(self):
         """
-        :param Namespace: 命名空间
+        :param Namespace: 命名空間
         :type Namespace: str
-        :param Region: 所属地域。
-当前支持ap-shanghai
+        :param Region: 所屬地域。
+當前支援ap-shanghai
         :type Region: str
         """
         self.Namespace = None
@@ -237,21 +237,21 @@ class FunctionInfo(AbstractModel):
 
 
 class ModifyDatabaseACLRequest(AbstractModel):
-    """ModifyDatabaseACL请求参数结构体
+    """ModifyDatabaseACL請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 环境ID
+        :param EnvId: 環境ID
         :type EnvId: str
-        :param CollectionName: 集合名称
+        :param CollectionName: 集合名稱
         :type CollectionName: str
-        :param AclTag: 权限标签。取值范围：
-<li> READONLY：所有用户可读，仅创建者和管理员可写</li>
-<li> PRIVATE：仅创建者及管理员可读写</li>
-<li> ADMINWRITE：所有用户可读，仅管理员可写</li>
-<li> ADMINONLY：仅管理员可读写</li>
+        :param AclTag: 權限标簽。取值範圍：
+<li> READONLY：所有用戶可讀，僅創建者和管理員可寫</li>
+<li> PRIVATE：僅創建者及管理員可讀寫</li>
+<li> ADMINWRITE：所有用戶可讀，僅管理員可寫</li>
+<li> ADMINONLY：僅管理員可讀寫</li>
         :type AclTag: str
         """
         self.EnvId = None
@@ -266,13 +266,13 @@ class ModifyDatabaseACLRequest(AbstractModel):
 
 
 class ModifyDatabaseACLResponse(AbstractModel):
-    """ModifyDatabaseACL返回参数结构体
+    """ModifyDatabaseACL返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -283,15 +283,15 @@ class ModifyDatabaseACLResponse(AbstractModel):
 
 
 class ModifyEnvRequest(AbstractModel):
-    """ModifyEnv请求参数结构体
+    """ModifyEnv請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnvId: 环境ID
+        :param EnvId: 環境ID
         :type EnvId: str
-        :param Alias: 环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+        :param Alias: 環境備注名，要以a-z開頭，不能包含 a-zA-z0-9- 以外的字元
         :type Alias: str
         """
         self.EnvId = None
@@ -304,13 +304,13 @@ class ModifyEnvRequest(AbstractModel):
 
 
 class ModifyEnvResponse(AbstractModel):
-    """ModifyEnv返回参数结构体
+    """ModifyEnv返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -321,20 +321,20 @@ class ModifyEnvResponse(AbstractModel):
 
 
 class StorageInfo(AbstractModel):
-    """StorageInfo 资源信息
+    """StorageInfo 資源訊息
 
     """
 
     def __init__(self):
         """
-        :param Region: 资源所属地域。
-当前支持ap-shanghai
+        :param Region: 資源所屬地域。
+當前支援ap-shanghai
         :type Region: str
-        :param Bucket: 桶名，存储资源的唯一标识
+        :param Bucket: 桶名，儲存資源的唯一标識
         :type Bucket: str
         :param CdnDomain: cdn 域名
         :type CdnDomain: str
-        :param AppId: 资源所属用户的腾讯云appId
+        :param AppId: 資源所屬用戶的Top Cloud appId
         :type AppId: str
         """
         self.Region = None

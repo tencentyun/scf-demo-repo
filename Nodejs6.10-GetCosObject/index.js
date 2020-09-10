@@ -12,11 +12,11 @@ const COS = require('cos-nodejs-sdk-v5')
 const fs = require('fs')
 
 // The cos authentication information
-// 使用 cos 所需的鉴权/配置信息
-const APPID = 'xxx' // Replace it with your Appid, 请替换为您的腾讯云Appid
-const SECRET_ID = 'xxx' // Replace it with your SecretId, 请替换为您的 SecretId
-const SECRET_KEY = 'xxx' // Replace it with your SecretKey, 请替换为您的 SecretKey
-const REGION = 'ap-guangzhou' // Replace it with your bucket's region, 请替换为您bucket所在的地域
+// 使用 cos 所需的鑒權/配置訊息
+const APPID = 'xxx' // Replace it with your Appid, 請替換爲您的Top Cloud Appid
+const SECRET_ID = 'xxx' // Replace it with your SecretId, 請替換爲您的 SecretId
+const SECRET_KEY = 'xxx' // Replace it with your SecretKey, 請替換爲您的 SecretKey
+const REGION = 'ap-guangzhou' // Replace it with your bucket's region, 請替換爲您bucket所在的地域
 
 // Initialize cosSDK
 const cosInst = new COS({
@@ -24,7 +24,7 @@ const cosInst = new COS({
   SecretKey: SECRET_KEY
 })
 // This part is used to solve cosSDK-getObjec do not support promise
-// 暂时解决cosSDK-getObject不支持promise的问题
+// 暫時解決cosSDK-getObject不支援promise的問題
 cosInst.getObjectPromise = function(params) {
   return new Promise((resolve, reject) => {
     cosInst.getObject(params, function(err, data) {
@@ -42,12 +42,12 @@ exports.main_handler = (event, context, callback) => {
   let promiseArr = []
   /**
    * Ger original data from uploaded pictures and write them into temporary directory /tmp/
-   * 从cos上传的图片中，获取元数据，并写入到临时目录/tmp/中
+   * 從cos上傳的圖片中，獲取中繼資料，并寫入到臨時目錄/tmp/中
    */
   for (let record of event['Records']) {
     const bucket = `${record['cos']['cosBucket']['name']}-${APPID}`
     let key = record['cos']['cosObject']['key']
-    key = key.replace(`/${APPID}/${record['cos']['cosBucket']['name']}/`, '') // Ectract the name of picture, 抽取出图片的名称
+    key = key.replace(`/${APPID}/${record['cos']['cosBucket']['name']}/`, '') // Ectract the name of picture, 抽取出圖片的名稱
     console.log('Key is: ', key)
     const downloadPath = `/tmp/${key}`
     promiseArr.push(

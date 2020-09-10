@@ -26,9 +26,9 @@ class HcmClient(AbstractClient):
 
 
     def Evaluation(self, request):
-        """速算题目批改接口，根据用户上传的图片或图片的URL识别图片中的数学算式，进而给出算式的正确性评估。
+        """速算題目批改介面，根據用戶上傳的圖片或圖片的URL識别圖片中的數學算式，進而給出算式的正确性評估。
 
-        :param request: 调用Evaluation所需参数的结构体。
+        :param request: 調用Evaluation所需參數的結構體。
         :type request: :class:`tencentcloud.hcm.v20181106.models.EvaluationRequest`
         :rtype: :class:`tencentcloud.hcm.v20181106.models.EvaluationResponse`
 

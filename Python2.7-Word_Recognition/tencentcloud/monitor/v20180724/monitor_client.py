@@ -26,9 +26,9 @@ class MonitorClient(AbstractClient):
 
 
     def DescribeBaseMetrics(self, request):
-        """获取基础指标详情
+        """獲取基礎指标詳情
 
-        :param request: 调用DescribeBaseMetrics所需参数的结构体。
+        :param request: 調用DescribeBaseMetrics所需參數的結構體。
         :type request: :class:`tencentcloud.monitor.v20180724.models.DescribeBaseMetricsRequest`
         :rtype: :class:`tencentcloud.monitor.v20180724.models.DescribeBaseMetricsResponse`
 
@@ -54,11 +54,11 @@ class MonitorClient(AbstractClient):
 
 
     def GetMonitorData(self, request):
-        """获取云产品的监控数据。传入产品的命名空间、对象维度描述和监控指标即可获得相应的监控数据。
-        接口调用频率限制为：20次/秒，1200次/分钟。
-        若您需要调用的指标、对象较多，可能存在因限频出现拉取失败的情况，建议尽量将请求按时间维度均摊。
+        """獲取雲産品的監控數據。傳入産品的命名空間、對象維度描述和監控指标即可獲得相應的監控數據。
+        介面調用頻率限制爲：20次/秒，1200次/分鍾。
+        若您需要調用的指标、對象較多，可能存在因限頻出現拉取失敗的情況，建議盡量将請求按時間維度均攤。
 
-        :param request: 调用GetMonitorData所需参数的结构体。
+        :param request: 調用GetMonitorData所需參數的結構體。
         :type request: :class:`tencentcloud.monitor.v20180724.models.GetMonitorDataRequest`
         :rtype: :class:`tencentcloud.monitor.v20180724.models.GetMonitorDataResponse`
 

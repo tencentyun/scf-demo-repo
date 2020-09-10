@@ -13,12 +13,12 @@ print('Loading function')
 
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 
-appid = '1256608914'  # Please replace with your APPID. 请替换为您的 APPID
-secret_id = u'**************'  # Please replace with your SecretId. 请替换为您的 SecretId
-secret_key = u'*************'  # Please replace with your SecretKey. 请替换为您的 SecretKey
-region = u'ap-shanghai'        # Please replace with the region where your function located. 请替换为您函数所在的地域
+appid = '1256608914'  # Please replace with your APPID. 請替換爲您的 APPID
+secret_id = u'**************'  # Please replace with your SecretId. 請替換爲您的 SecretId
+secret_key = u'*************'  # Please replace with your SecretKey. 請替換爲您的 SecretKey
+region = u'ap-shanghai'        # Please replace with the region where your function located. 請替換爲您函數所在的地域
 token = ''
-bucket_upload = 'test-ai-mason-1256608914' # Please replace with the bucket name which is used for storaging file. 请替换为您要用来存放文件的bucket名
+bucket_upload = 'test-ai-mason-1256608914' # Please replace with the bucket name which is used for storaging file. 請替換爲您要用來存放文件的bucket名
 
 config = CosConfig(Secret_id=secret_id, Secret_key=secret_key, Region=region, Token=token)
 client_cos = CosS3Client(config)

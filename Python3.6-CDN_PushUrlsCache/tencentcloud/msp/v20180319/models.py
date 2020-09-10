@@ -17,13 +17,13 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class DeregisterMigrationTaskRequest(AbstractModel):
-    """DeregisterMigrationTask请求参数结构体
+    """DeregisterMigrationTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: str
         """
         self.TaskId = None
@@ -34,13 +34,13 @@ class DeregisterMigrationTaskRequest(AbstractModel):
 
 
 class DeregisterMigrationTaskResponse(AbstractModel):
-    """DeregisterMigrationTask返回参数结构体
+    """DeregisterMigrationTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -51,13 +51,13 @@ class DeregisterMigrationTaskResponse(AbstractModel):
 
 
 class DescribeMigrationTaskRequest(AbstractModel):
-    """DescribeMigrationTask请求参数结构体
+    """DescribeMigrationTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务ID，例如msp-jitoh33n
+        :param TaskId: 任務ID，例如msp-jitoh33n
         :type TaskId: str
         """
         self.TaskId = None
@@ -68,15 +68,15 @@ class DescribeMigrationTaskRequest(AbstractModel):
 
 
 class DescribeMigrationTaskResponse(AbstractModel):
-    """DescribeMigrationTask返回参数结构体
+    """DescribeMigrationTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskStatus: 迁移详情列表
+        :param TaskStatus: 遷移詳情清單
         :type TaskStatus: list of TaskStatus
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskStatus = None
@@ -94,19 +94,19 @@ class DescribeMigrationTaskResponse(AbstractModel):
 
 
 class DstInfo(AbstractModel):
-    """迁移目的信息
+    """遷移目的訊息
 
     """
 
     def __init__(self):
         """
-        :param Region: 迁移目的地域
+        :param Region: 遷移目的地域
         :type Region: str
-        :param Ip: 迁移目的Ip
+        :param Ip: 遷移目的Ip
         :type Ip: str
-        :param Port: 迁移目的端口
+        :param Port: 遷移目的端口
         :type Port: str
-        :param InstanceId: 迁移目的实例Id
+        :param InstanceId: 遷移目的實例Id
         :type InstanceId: str
         """
         self.Region = None
@@ -123,15 +123,15 @@ class DstInfo(AbstractModel):
 
 
 class ListMigrationProjectRequest(AbstractModel):
-    """ListMigrationProject请求参数结构体
+    """ListMigrationProject請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 记录起始数，默认值为0
+        :param Offset: 記錄起始數，預設值爲0
         :type Offset: int
-        :param Limit: 返回条数，默认值为500
+        :param Limit: 返回條數，預設值爲500
         :type Limit: int
         """
         self.Offset = None
@@ -144,17 +144,17 @@ class ListMigrationProjectRequest(AbstractModel):
 
 
 class ListMigrationProjectResponse(AbstractModel):
-    """ListMigrationProject返回参数结构体
+    """ListMigrationProject返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Projects: 项目列表
+        :param Projects: 項目清單
         :type Projects: list of Project
-        :param TotalCount: 项目总数
+        :param TotalCount: 項目總數
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Projects = None
@@ -174,17 +174,17 @@ class ListMigrationProjectResponse(AbstractModel):
 
 
 class ListMigrationTaskRequest(AbstractModel):
-    """ListMigrationTask请求参数结构体
+    """ListMigrationTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 记录起始数，默认值为0
+        :param Offset: 記錄起始數，預設值爲0
         :type Offset: int
-        :param Limit: 记录条数，默认值为10
+        :param Limit: 記錄條數，預設值爲10
         :type Limit: int
-        :param ProjectId: 项目ID，默认值为空
+        :param ProjectId: 項目ID，預設值爲空
         :type ProjectId: int
         """
         self.Offset = None
@@ -199,17 +199,17 @@ class ListMigrationTaskRequest(AbstractModel):
 
 
 class ListMigrationTaskResponse(AbstractModel):
-    """ListMigrationTask返回参数结构体
+    """ListMigrationTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 记录总条数
+        :param TotalCount: 記錄總條數
         :type TotalCount: int
-        :param Tasks: 迁移任务列表
+        :param Tasks: 遷移任務清單
         :type Tasks: list of Task
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -229,15 +229,15 @@ class ListMigrationTaskResponse(AbstractModel):
 
 
 class ModifyMigrationTaskBelongToProjectRequest(AbstractModel):
-    """ModifyMigrationTaskBelongToProject请求参数结构体
+    """ModifyMigrationTaskBelongToProject請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务ID，例如msp-jitoh33n
+        :param TaskId: 任務ID，例如msp-jitoh33n
         :type TaskId: str
-        :param ProjectId: 项目ID，例如10005
+        :param ProjectId: 項目ID，例如10005
         :type ProjectId: int
         """
         self.TaskId = None
@@ -250,13 +250,13 @@ class ModifyMigrationTaskBelongToProjectRequest(AbstractModel):
 
 
 class ModifyMigrationTaskBelongToProjectResponse(AbstractModel):
-    """ModifyMigrationTaskBelongToProject返回参数结构体
+    """ModifyMigrationTaskBelongToProject返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -267,15 +267,15 @@ class ModifyMigrationTaskBelongToProjectResponse(AbstractModel):
 
 
 class ModifyMigrationTaskStatusRequest(AbstractModel):
-    """ModifyMigrationTaskStatus请求参数结构体
+    """ModifyMigrationTaskStatus請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Status: 任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
+        :param Status: 任務狀态，取值爲unstart，migrating，finish，fail之一，分别代表該遷移任務狀态爲遷移未開始，遷移中，遷移完成，遷移失敗
         :type Status: str
-        :param TaskId: 任务ID，例如msp-jitoh33n
+        :param TaskId: 任務ID，例如msp-jitoh33n
         :type TaskId: str
         """
         self.Status = None
@@ -288,13 +288,13 @@ class ModifyMigrationTaskStatusRequest(AbstractModel):
 
 
 class ModifyMigrationTaskStatusResponse(AbstractModel):
-    """ModifyMigrationTaskStatus返回参数结构体
+    """ModifyMigrationTaskStatus返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -305,15 +305,15 @@ class ModifyMigrationTaskStatusResponse(AbstractModel):
 
 
 class Project(AbstractModel):
-    """列表类型
+    """清單類型
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: int
-        :param ProjectName: 项目名称
+        :param ProjectName: 項目名稱
         :type ProjectName: str
         """
         self.ProjectId = None
@@ -326,35 +326,35 @@ class Project(AbstractModel):
 
 
 class RegisterMigrationTaskRequest(AbstractModel):
-    """RegisterMigrationTask请求参数结构体
+    """RegisterMigrationTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskType: 任务类型，取值database（数据库迁移）、file（文件迁移）、host（主机迁移）
+        :param TaskType: 任務類型，取值database（資料庫遷移）、file（文件遷移）、host（主機遷移）
         :type TaskType: str
-        :param TaskName: 任务名称
+        :param TaskName: 任務名稱
         :type TaskName: str
-        :param ServiceSupplier: 服务提供商名称
+        :param ServiceSupplier: 服務提供商名稱
         :type ServiceSupplier: str
-        :param SrcInfo: 迁移任务源信息
+        :param SrcInfo: 遷移任務源訊息
         :type SrcInfo: :class:`tencentcloud.msp.v20180319.models.SrcInfo`
-        :param DstInfo: 迁移任务目的信息
+        :param DstInfo: 遷移任務目的訊息
         :type DstInfo: :class:`tencentcloud.msp.v20180319.models.DstInfo`
-        :param CreateTime: 迁移任务创建时间
+        :param CreateTime: 遷移任務創建時間
         :type CreateTime: str
-        :param UpdateTime: 迁移任务更新时间
+        :param UpdateTime: 遷移任務更新時間
         :type UpdateTime: str
-        :param MigrateClass: 迁移类别，如数据库迁移中mysql:mysql代表从mysql迁移到mysql，文件迁移中oss:cos代表从阿里云oss迁移到腾讯云cos
+        :param MigrateClass: 遷移類别，如資料庫遷移中mysql:mysql代表從mysql遷移到mysql，文件遷移中oss:cos代表從阿裏雲oss遷移到Top Cloud cos
         :type MigrateClass: str
-        :param SrcAccessType: 源实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+        :param SrcAccessType: 源實例接入類型，資料庫遷移時填寫值爲：extranet(外網),cvm(cvm自建實例),dcg(專線接入的實例),vpncloud(雲vpn接入的實例),vpnselfbuild(自建vpn接入的實例)，cdb(雲上cdb實例)
         :type SrcAccessType: str
-        :param SrcDatabaseType: 源实例数据库类型，数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
+        :param SrcDatabaseType: 源實例資料庫類型，資料庫遷移時填寫，取值爲mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
         :type SrcDatabaseType: str
-        :param DstAccessType: 目标实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+        :param DstAccessType: 目标實例接入類型，資料庫遷移時填寫值爲：extranet(外網),cvm(cvm自建實例),dcg(專線接入的實例),vpncloud(雲vpn接入的實例),vpnselfbuild(自建vpn接入的實例)，cdb(雲上cdb實例)
         :type DstAccessType: str
-        :param DstDatabaseType: 目标实例数据库类型,数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
+        :param DstDatabaseType: 目标實例資料庫類型,資料庫遷移時填寫，取值爲mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
         :type DstDatabaseType: str
         """
         self.TaskType = None
@@ -391,15 +391,15 @@ class RegisterMigrationTaskRequest(AbstractModel):
 
 
 class RegisterMigrationTaskResponse(AbstractModel):
-    """RegisterMigrationTask返回参数结构体
+    """RegisterMigrationTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -412,19 +412,19 @@ class RegisterMigrationTaskResponse(AbstractModel):
 
 
 class SrcInfo(AbstractModel):
-    """迁移源信息
+    """遷移源訊息
 
     """
 
     def __init__(self):
         """
-        :param Region: 迁移源地域
+        :param Region: 遷移源地域
         :type Region: str
-        :param Ip: 迁移源Ip
+        :param Ip: 遷移源Ip
         :type Ip: str
-        :param Port: 迁移源端口
+        :param Port: 遷移源端口
         :type Port: str
-        :param InstanceId: 迁移源实例Id
+        :param InstanceId: 遷移源實例Id
         :type InstanceId: str
         """
         self.Region = None
@@ -441,31 +441,31 @@ class SrcInfo(AbstractModel):
 
 
 class Task(AbstractModel):
-    """迁移任务类别
+    """遷移任務類别
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务Id
+        :param TaskId: 任務Id
         :type TaskId: str
-        :param TaskName: 任务名称
+        :param TaskName: 任務名稱
         :type TaskName: str
-        :param MigrationType: 迁移类型
+        :param MigrationType: 遷移類型
         :type MigrationType: str
-        :param Status: 迁移状态
+        :param Status: 遷移狀态
         :type Status: str
-        :param ProjectId: 项目Id
+        :param ProjectId: 項目Id
         :type ProjectId: int
-        :param ProjectName: 项目名称
+        :param ProjectName: 項目名稱
         :type ProjectName: str
-        :param SrcInfo: 迁移源信息
+        :param SrcInfo: 遷移源訊息
         :type SrcInfo: :class:`tencentcloud.msp.v20180319.models.SrcInfo`
-        :param MigrationTimeLine: 迁移时间信息
+        :param MigrationTimeLine: 遷移時間訊息
         :type MigrationTimeLine: :class:`tencentcloud.msp.v20180319.models.TimeObj`
-        :param Updated: 状态更新时间
+        :param Updated: 狀态更新時間
         :type Updated: str
-        :param DstInfo: 迁移目的信息
+        :param DstInfo: 遷移目的訊息
         :type DstInfo: :class:`tencentcloud.msp.v20180319.models.DstInfo`
         """
         self.TaskId = None
@@ -500,17 +500,17 @@ class Task(AbstractModel):
 
 
 class TaskStatus(AbstractModel):
-    """迁移详情列表
+    """遷移詳情清單
 
     """
 
     def __init__(self):
         """
-        :param Status: 迁移状态
+        :param Status: 遷移狀态
         :type Status: str
-        :param Progress: 迁移进度
+        :param Progress: 遷移進度
         :type Progress: str
-        :param UpdateTime: 迁移日期
+        :param UpdateTime: 遷移日期
         :type UpdateTime: str
         """
         self.Status = None
@@ -525,15 +525,15 @@ class TaskStatus(AbstractModel):
 
 
 class TimeObj(AbstractModel):
-    """时间对象
+    """時間對象
 
     """
 
     def __init__(self):
         """
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param EndTime: 结束时间
+        :param EndTime: 結束時間
         :type EndTime: str
         """
         self.CreateTime = None

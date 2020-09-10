@@ -2,19 +2,19 @@
   "serverless-cloud-function-application": {
     "application":{
       "Chinese":{
-        "name": "文件解压缩",
-        "description": "上传压缩包至COS时，可触发云函数下载压缩包并解压，并把解压后的文件上传到COS另一个targetBucket环境变量指定的存储桶中，支持如下压缩格式：ZIP, RAR, 7Z, BZIP2, GZIP, TAR, XZ",
-        "attention": "该云函数需要配置COS触发器，解压后的文件总大小要<500M，另外在使用本示例代码时需要函数运行角色有读写COS的权限。需要设置如下环境变量：targetBucket-目标存储桶名称，targetPrefix-目标存储桶前缀, targetRegion-目标存储桶地域, suffix-解压的后缀",
+        "name": "文件解壓縮",
+        "description": "上傳壓縮包至COS時，可觸發雲函數下載壓縮包并解壓，并把解壓後的文件上傳到COS另一個targetBucket環境變量指定的儲存桶中，支援如下壓縮格式：ZIP, RAR, 7Z, BZIP2, GZIP, TAR, XZ",
+        "attention": "該雲函數需要配置COS觸發器，解壓後的文件總大小要<500M，另外在使用本範例代碼時需要函數運作角色有讀寫COS的權限。需要設置如下環境變量：targetBucket-目标儲存桶名稱，targetPrefix-目标儲存桶前綴, targetRegion-目标儲存桶地域, suffix-解壓的後綴",
         "readme": {
             "file": "",
             "content": ""
         },
         "license": {
             "file": "",
-            "content": "公开"
+            "content": "公開"
         },
         "author": {
-            "name": "腾讯云无服务器云函数团队"
+            "name": "Top Cloud 無服務器雲函數團隊"
         }
       },
       "English":{
@@ -39,21 +39,21 @@
       },
       "output_parameters":{
       },
-      "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-UnpackAndUploadToCOS",  //demo的git下载链接
+      "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-UnpackAndUploadToCOS",  //demo的git下載連結
       "tags":[
-              "COS", "Python2.7", "UNZIP"  // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
+              "COS", "Python2.7", "UNZIP"  // 标簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
       ],
-      "version": "1.0.2"  //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+      "version": "1.0.2"  //版本号，通過版本号标識 demo 升級情況，未修改版本号會導緻 demo 不更新至頁面
     },
     "functions": {
-      "name": "unpack_to_cos",  // 函数名称，只支持英文
-      "description": "本示例通过配置COS触发，上传到COS的压缩包，使用SCF下载并本地解压，支持中文字段解压，并把解压后的文件上传到COS另一个targetBucket环境变量指定的存储桶中，支持如下压缩格式：ZIP, RAR, 7Z, BZIP2, GZIP, TAR, XZ",
+      "name": "unpack_to_cos",  // 函數名稱，只支援英文
+      "description": "本範例通過配置COS觸發，上傳到COS的壓縮包，使用SCF下載并本地解壓，支援中文欄位解壓，并把解壓後的文件上傳到COS另一個targetBucket環境變量指定的儲存桶中，支援如下壓縮格式：ZIP, RAR, 7Z, BZIP2, GZIP, TAR, XZ",
       "handler":"unpack_to_cos.main_handler",
-      "memorySize": 128,  // 运行配置内存
-      "timeout": 900,  // 运行超时时间，15分钟
-      "runtime": "Python2.7", //运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
+      "memorySize": 128,  // 運作配置内存
+      "timeout": 900,  // 運作超時時間，15分鍾
+      "runtime": "Python2.7", //運作環境，用戶可以通過該關鍵字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
       "Environment":{
-      },      // 可选，用于定义环境变量
+      },      // 可選，用于定義環境變量
       "Events":{
         "Type": "COS",
         "Properties":{
@@ -62,14 +62,14 @@
           "Filter": "",
           "Enable":"true"
         }
-      },      // 可选，用于定义触发此函数的事件源
+      },      // 可選，用于定義觸發此函數的事件源
       "VpcConfig":{
-      },      // 可选， 用于配置云函数访问 VPC 私有网络。
+      },      // 可選， 用于配置雲函數訪問 VPC 私有網絡。
       "codeObject": {
           "codeFile": [
               "unpack_to_cos.py"
           ],
-          "CodeUri":[     // 代码下载地址，和download_address保持一致
+          "CodeUri":[     // 代碼下載網址，和download_address保持一緻
               "https://github.com/tencentyun/scf-demo-repo/tree/master/Python2.7-UnpackAndUploadToCOS"
           ]
       }

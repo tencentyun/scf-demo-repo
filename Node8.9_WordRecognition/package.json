@@ -1,12 +1,12 @@
 {
   "name": "word_recognition",
   "version": "1.0.0",
-  "description": "本示例通过配置COS触发，上传到COS的图片，然后调用腾讯云图像智能的接口，实现图片的文字识别",
+  "description": "本範例通過配置COS觸發，上傳到COS的圖片，然後調用Top Cloud 圖像智慧的介面，實現圖片的文字識别",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "腾讯云无服务器云函数团队",
+  "author": "Top Cloud 無服務器雲函數團隊",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",

@@ -152,7 +152,7 @@ def main_handler(event, context):
             download_path = '/tmp/{}'.format(filename.encode('gb18030'))
             key = record['cos']['cosObject']['key']
             key = key.replace('/' + appid + '/' + record['cos']['cosBucket']['name'] + '/', '', 1)
-            # 创建本地解压路径
+            # 創建本地解壓路徑
             isExists = os.path.exists('/tmp/unpack')
             if not isExists:
                 os.mkdir('/tmp/unpack')

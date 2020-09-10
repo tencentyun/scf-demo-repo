@@ -26,9 +26,9 @@ class MvjClient(AbstractClient):
 
 
     def MarketingValueJudgement(self, request):
-        """欢迎使用营销价值判断（Marketing Value Judgement，简称 MVJ）。
+        """歡迎使用營銷價值判斷（Marketing Value Judgement，簡稱 MVJ）。
 
-        营销价值判断（MVJ）是针对零售场景的风控服务，通过识别高价值顾客，以帮助零售商保障营销资金
+        營銷價值判斷（MVJ）是針對零售場景的風控服務，通過識别高價值顧客，以幫助零售商保障營銷資金
 
         :param request: Request instance for MarketingValueJudgement.
         :type request: :class:`tencentcloud.mvj.v20190926.models.MarketingValueJudgementRequest`

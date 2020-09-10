@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
-# Need to add the appropriate configuration in environment variables. 需要在环境变量中添加相应的配置
+# Need to add the appropriate configuration in environment variables. 需要在環境變量中添加相應的配置
 DB_HOST = os.getenv('dbhost') #'sh-cdb-irye027y.sql.tencentcdb.com'
 DB_PORT = os.getenv('dbport') #'63374'
 DB_USER = os.getenv('dbuser') #'root'
@@ -21,7 +21,7 @@ REGION = os.getenv('cosregion') #'ap-shanghai'
 BACKUP_BUCKET = os.getenv('cosbucket') #"dbbackup-1253970226"
 
 BACKUP_PATH = '/tmp' # can only fill in the / tmp directory, because the cloud function operating environment only has the / tmp directory for reading and writing.
-                     # 仅能填写 /tmp 目录，因为云函数运行环境仅有 /tmp 目录可读写。
+                     # 僅能填寫 /tmp 目錄，因爲雲函數運作環境僅有 /tmp 目錄可讀寫。
 
 def backup2cos(client,filepath, bucket, key):
     res_cos = client.put_object_from_local_file(
@@ -32,8 +32,8 @@ def backup2cos(client,filepath, bucket, key):
     return res_cos
   
 def main_handler(event, context):
-    secret_id = os.environ.get('TENCENTCLOUD_SECRETID')      # Using the secterId in environment variables. 使用环境变量中的 secretId
-    secret_key = os.environ.get('TENCENTCLOUD_SECRETKEY')    # Using the secretKey in environment variables. 使用环境变量中的 secretKey
+    secret_id = os.environ.get('TENCENTCLOUD_SECRETID')      # Using the secterId in environment variables. 使用環境變量中的 secretId
+    secret_key = os.environ.get('TENCENTCLOUD_SECRETKEY')    # Using the secretKey in environment variables. 使用環境變量中的 secretKey
     token = os.environ.get('TENCENTCLOUD_SESSIONTOKEN') 
     config = CosConfig(Region=REGION, SecretId=secret_id, SecretKey=secret_key, Token=token,)
     cos_client = CosS3Client(config)

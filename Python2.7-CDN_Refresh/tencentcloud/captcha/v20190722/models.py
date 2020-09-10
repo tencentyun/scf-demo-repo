@@ -17,19 +17,19 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CaptchaOperDataInterceptUnit(AbstractModel):
-    """DescribeCaptchaOperData方法 拦截情况type = 2 返回的数据结构
+    """DescribeCaptchaOperData方法 攔截情況type = 2 返回的數據結構
 
     """
 
     def __init__(self):
         """
-        :param DateKey: 时间
+        :param DateKey: 時間
         :type DateKey: str
-        :param AllStopCnt: 停止验证数量
+        :param AllStopCnt: 停止驗證數量
         :type AllStopCnt: float
-        :param PicStopCnt: 图片停止加载数量
+        :param PicStopCnt: 圖片停止加載數量
         :type PicStopCnt: float
-        :param StrategyStopCnt: 策略拦截数量
+        :param StrategyStopCnt: 策略攔截數量
         :type StrategyStopCnt: float
         """
         self.DateKey = None
@@ -46,17 +46,17 @@ class CaptchaOperDataInterceptUnit(AbstractModel):
 
 
 class CaptchaOperDataLoadTimeUnit(AbstractModel):
-    """操作数据查询方法DescribeCaptchaOperData 的返回结果，安全验证码加载耗时type = 1
+    """操作數據查詢方法DescribeCaptchaOperData 的返回結果，安全驗證碼加載耗時type = 1
 
     """
 
     def __init__(self):
         """
-        :param DateKey: 时间
+        :param DateKey: 時間
         :type DateKey: str
-        :param MarketLoadTime: Market加载时间
+        :param MarketLoadTime: Market加載時間
         :type MarketLoadTime: float
-        :param AppIdLoadTime: AppId加载时间
+        :param AppIdLoadTime: AppId加載時間
         :type AppIdLoadTime: float
         """
         self.DateKey = None
@@ -71,23 +71,23 @@ class CaptchaOperDataLoadTimeUnit(AbstractModel):
 
 
 class CaptchaOperDataRes(AbstractModel):
-    """DescribeCaptchaOperData 接口 返回数据类型集合
+    """DescribeCaptchaOperData 介面 返回數據類型集合
 
     """
 
     def __init__(self):
         """
-        :param OperDataLoadTimeUnitArray: 验证码加载耗时数据返回
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OperDataLoadTimeUnitArray: 驗證碼加載耗時數據返回
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OperDataLoadTimeUnitArray: list of CaptchaOperDataLoadTimeUnit
-        :param OperDataInterceptUnitArray: 验证码拦截情况数据返回
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OperDataInterceptUnitArray: 驗證碼攔截情況數據返回
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OperDataInterceptUnitArray: list of CaptchaOperDataInterceptUnit
-        :param OperDataTryTimesUnitArray: 验证码尝试次数数据返回
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OperDataTryTimesUnitArray: 驗證碼嘗試次數數據返回
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OperDataTryTimesUnitArray: list of CaptchaOperDataTryTimesUnit
-        :param OperDataTryTimesDistributeUnitArray: 验证码尝试次数分布数据返回
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OperDataTryTimesDistributeUnitArray: 驗證碼嘗試次數分布數據返回
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OperDataTryTimesDistributeUnitArray: list of CaptchaOperDataTryTimesDistributeUnit
         """
         self.OperDataLoadTimeUnitArray = None
@@ -124,15 +124,15 @@ class CaptchaOperDataRes(AbstractModel):
 
 
 class CaptchaOperDataTryTimesDistributeUnit(AbstractModel):
-    """DescribeCaptchaOperData方法 尝试次数分布 type = 4
+    """DescribeCaptchaOperData方法 嘗試次數分布 type = 4
 
     """
 
     def __init__(self):
         """
-        :param TryCount: 尝试次数
+        :param TryCount: 嘗試次數
         :type TryCount: int
-        :param UserCount: 用户请求数量
+        :param UserCount: 用戶請求數量
         :type UserCount: int
         """
         self.TryCount = None
@@ -145,17 +145,17 @@ class CaptchaOperDataTryTimesDistributeUnit(AbstractModel):
 
 
 class CaptchaOperDataTryTimesUnit(AbstractModel):
-    """DescribeCaptchaOperData操作数据查询尝试次数 type = 3
+    """DescribeCaptchaOperData操作數據查詢嘗試次數 type = 3
 
     """
 
     def __init__(self):
         """
-        :param DateKey: 时间
+        :param DateKey: 時間
         :type DateKey: str
-        :param CntPerPass: 平均尝试次数
+        :param CntPerPass: 平均嘗試次數
         :type CntPerPass: list of float
-        :param MarketCntPerPass: market平均尝试次数
+        :param MarketCntPerPass: market平均嘗試次數
         :type MarketCntPerPass: float
         """
         self.DateKey = None
@@ -170,15 +170,15 @@ class CaptchaOperDataTryTimesUnit(AbstractModel):
 
 
 class CaptchaQueryData(AbstractModel):
-    """该类型为DescribeCaptchaData 方法返回数据类型
+    """該類型爲DescribeCaptchaData 方法返回數據類型
 
     """
 
     def __init__(self):
         """
-        :param Cnt: 数量
+        :param Cnt: 數量
         :type Cnt: int
-        :param Date: 时间
+        :param Date: 時間
         :type Date: str
         """
         self.Cnt = None
@@ -191,17 +191,17 @@ class CaptchaQueryData(AbstractModel):
 
 
 class CaptchaUserAllAppId(AbstractModel):
-    """用户注册的APPID和应用名称对象
+    """用戶注冊的APPID和應用名稱對象
 
     """
 
     def __init__(self):
         """
-        :param CaptchaAppId: 验证码应用ID
+        :param CaptchaAppId: 驗證碼應用ID
         :type CaptchaAppId: int
-        :param AppName: 注册应用名称
+        :param AppName: 注冊應用名稱
         :type AppName: str
-        :param TcAppId: 腾讯云APPID
+        :param TcAppId: Top Cloud APPID
         :type TcAppId: int
         """
         self.CaptchaAppId = None
@@ -216,13 +216,13 @@ class CaptchaUserAllAppId(AbstractModel):
 
 
 class DescribeCaptchaAppIdInfoRequest(AbstractModel):
-    """DescribeCaptchaAppIdInfo请求参数结构体
+    """DescribeCaptchaAppIdInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CaptchaAppId: 验证码应用注册APPID
+        :param CaptchaAppId: 驗證碼應用注冊APPID
         :type CaptchaAppId: int
         """
         self.CaptchaAppId = None
@@ -233,32 +233,32 @@ class DescribeCaptchaAppIdInfoRequest(AbstractModel):
 
 
 class DescribeCaptchaAppIdInfoResponse(AbstractModel):
-    """DescribeCaptchaAppIdInfo返回参数结构体
+    """DescribeCaptchaAppIdInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SchemeColor: 界面风格
+        :param SchemeColor: 界面風格
         :type SchemeColor: str
-        :param Language: 语言
+        :param Language: 語言
         :type Language: int
-        :param SceneType: 场景
+        :param SceneType: 場景
         :type SceneType: int
-        :param EvilInterceptGrade: 防控风险等级
+        :param EvilInterceptGrade: 防控風險等級
         :type EvilInterceptGrade: int
-        :param SmartVerify: 智能验证
+        :param SmartVerify: 智慧驗證
         :type SmartVerify: int
-        :param SmartEngine: 智能引擎
+        :param SmartEngine: 智慧引擎
         :type SmartEngine: int
-        :param CapType: 验证码类型
+        :param CapType: 驗證碼類型
         :type CapType: int
-        :param AppName: 应用名称
+        :param AppName: 應用名稱
         :type AppName: str
         :param DomainLimit: 域名限制
         :type DomainLimit: str
-        :param MailAlarm: 邮件告警
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MailAlarm: 郵件告警
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MailAlarm: list of str
         :param TrafficThreshold: 流量控制
         :type TrafficThreshold: int
@@ -266,12 +266,12 @@ class DescribeCaptchaAppIdInfoResponse(AbstractModel):
         :type EncryptKey: str
         :param TopFullScreen: 是否全屏
         :type TopFullScreen: int
-        :param CaptchaCode: 成功返回0 其它失败
+        :param CaptchaCode: 成功返回0 其它失敗
         :type CaptchaCode: int
-        :param CaptchaMsg: 返回操作信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CaptchaMsg: 返回操作訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CaptchaMsg: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SchemeColor = None
@@ -312,19 +312,19 @@ class DescribeCaptchaAppIdInfoResponse(AbstractModel):
 
 
 class DescribeCaptchaDataRequest(AbstractModel):
-    """DescribeCaptchaData请求参数结构体
+    """DescribeCaptchaData請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CaptchaAppId: 验证码应用ID
+        :param CaptchaAppId: 驗證碼應用ID
         :type CaptchaAppId: int
-        :param Start: 查询开始时间
+        :param Start: 查詢開始時間
         :type Start: int
-        :param End: 查询结束时间
+        :param End: 查詢結束時間
         :type End: int
-        :param Type: 查询类型
+        :param Type: 查詢類型
         :type Type: int
         """
         self.CaptchaAppId = None
@@ -341,21 +341,21 @@ class DescribeCaptchaDataRequest(AbstractModel):
 
 
 class DescribeCaptchaDataResponse(AbstractModel):
-    """DescribeCaptchaData返回参数结构体
+    """DescribeCaptchaData返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CaptchaCode: 返回码 0 成功 其它失败
+        :param CaptchaCode: 返回碼 0 成功 其它失敗
         :type CaptchaCode: int
-        :param Data: 数据数组
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 數據數組
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: list of CaptchaQueryData
-        :param CaptchaMsg: 返回信息描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CaptchaMsg: 返回訊息描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CaptchaMsg: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CaptchaCode = None
@@ -377,17 +377,17 @@ class DescribeCaptchaDataResponse(AbstractModel):
 
 
 class DescribeCaptchaDataSumRequest(AbstractModel):
-    """DescribeCaptchaDataSum请求参数结构体
+    """DescribeCaptchaDataSum請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CaptchaAppId: 验证码应用ID
+        :param CaptchaAppId: 驗證碼應用ID
         :type CaptchaAppId: int
-        :param Start: 查询开始时间
+        :param Start: 查詢開始時間
         :type Start: int
-        :param End: 查询结束时间
+        :param End: 查詢結束時間
         :type End: int
         """
         self.CaptchaAppId = None
@@ -402,28 +402,28 @@ class DescribeCaptchaDataSumRequest(AbstractModel):
 
 
 class DescribeCaptchaDataSumResponse(AbstractModel):
-    """DescribeCaptchaDataSum返回参数结构体
+    """DescribeCaptchaDataSum返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GetSum: 请求总量
+        :param GetSum: 請求總量
         :type GetSum: int
-        :param VfySuccSum: 请求验证成功量
+        :param VfySuccSum: 請求驗證成功量
         :type VfySuccSum: int
-        :param VfySum: 请求验证量
+        :param VfySum: 請求驗證量
         :type VfySum: int
-        :param AttackSum: 拦截攻击量
+        :param AttackSum: 攔截攻擊量
         :type AttackSum: int
-        :param CaptchaMsg: 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CaptchaMsg: 返回訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CaptchaMsg: str
-        :param CaptchaCode: 成功返回0  其它失败
+        :param CaptchaCode: 成功返回0  其它失敗
         :type CaptchaCode: int
-        :param CheckTicketSum: 票据校验量
+        :param CheckTicketSum: 票據校驗量
         :type CheckTicketSum: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.GetSum = None
@@ -448,17 +448,17 @@ class DescribeCaptchaDataSumResponse(AbstractModel):
 
 
 class DescribeCaptchaOperDataRequest(AbstractModel):
-    """DescribeCaptchaOperData请求参数结构体
+    """DescribeCaptchaOperData請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CaptchaAppId: 验证码应用ID
+        :param CaptchaAppId: 驗證碼應用ID
         :type CaptchaAppId: int
-        :param Start: 查询开始时间
+        :param Start: 查詢開始時間
         :type Start: int
-        :param Type: 查询类型
+        :param Type: 查詢類型
         :type Type: int
         """
         self.CaptchaAppId = None
@@ -473,21 +473,21 @@ class DescribeCaptchaOperDataRequest(AbstractModel):
 
 
 class DescribeCaptchaOperDataResponse(AbstractModel):
-    """DescribeCaptchaOperData返回参数结构体
+    """DescribeCaptchaOperData返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CaptchaCode: 成功返回 0 其它失败
+        :param CaptchaCode: 成功返回 0 其它失敗
         :type CaptchaCode: int
-        :param CaptchaMsg: 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CaptchaMsg: 返回訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CaptchaMsg: str
-        :param Data: 用户操作数据
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 用戶操作數據
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: :class:`tencentcloud.captcha.v20190722.models.CaptchaOperDataRes`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CaptchaCode = None
@@ -506,33 +506,33 @@ class DescribeCaptchaOperDataResponse(AbstractModel):
 
 
 class DescribeCaptchaResultRequest(AbstractModel):
-    """DescribeCaptchaResult请求参数结构体
+    """DescribeCaptchaResult請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CaptchaType: 固定填值：9。可在控制台配置不同验证码类型。
+        :param CaptchaType: 固定填值：9。可在控制台配置不同驗證碼類型。
         :type CaptchaType: int
-        :param Ticket: 验证码返回给用户的票据
+        :param Ticket: 驗證碼返回給用戶的票據
         :type Ticket: str
-        :param UserIp: 用户操作来源的外网 IP
+        :param UserIp: 用戶操作來源的外網 IP
         :type UserIp: str
-        :param Randstr: 验证票据需要的随机字符串
+        :param Randstr: 驗證票據需要的随機字串
         :type Randstr: str
-        :param CaptchaAppId: 验证码应用ID
+        :param CaptchaAppId: 驗證碼應用ID
         :type CaptchaAppId: int
-        :param AppSecretKey: 用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方
+        :param AppSecretKey: 用于服務器端校驗驗證碼票據的驗證金鑰，請妥善保密，請勿洩露給第三方
         :type AppSecretKey: str
-        :param BusinessId: 业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
+        :param BusinessId: 業務 ID，網站或應用在多個業務中使用此服務，通過此 ID 區分統計數據
         :type BusinessId: int
-        :param SceneId: 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
+        :param SceneId: 場景 ID，網站或應用的業務下有多個場景使用此服務，通過此 ID 區分統計數據
         :type SceneId: int
-        :param MacAddress: mac 地址或设备唯一标识
+        :param MacAddress: mac 網址或設備唯一标識
         :type MacAddress: str
-        :param Imei: 手机设备号
+        :param Imei: 手機設備号
         :type Imei: str
-        :param NeedGetCaptchaTime: 是否返回前端获取验证码时间，取值1：需要返回
+        :param NeedGetCaptchaTime: 是否返回前端獲取驗證碼時間，取值1：需要返回
         :type NeedGetCaptchaTime: int
         """
         self.CaptchaType = None
@@ -563,45 +563,45 @@ class DescribeCaptchaResultRequest(AbstractModel):
 
 
 class DescribeCaptchaResultResponse(AbstractModel):
-    """DescribeCaptchaResult返回参数结构体
+    """DescribeCaptchaResult返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CaptchaCode: 1	OK	验证通过
-6	user code len error	验证码长度不匹配
-7	captcha no match	验证码答案不匹配/Randstr参数不匹配
-8	verify timeout	验证码签名超时
-9	Sequnce repeat	验证码签名重放
-10	Sequnce invalid	验证码签名序列
-11	Cookie invalid	验证码cooking信息不合法
-12	sig len error	签名长度错误
-13	verify ip no match	ip不匹配
-15	decrypt fail	验证码签名解密失败
-16	appid no match	验证码强校验appid错误
-17	cmd no much	验证码系统命令不匹配
-18	uin no match	号码不匹配
-19	seq redirect	重定向验证
-20	opt no vcode	操作使用pt免验证码校验错误
-21	diff	差别，验证错误
-22	captcha type not match	验证码类型与拉取时不一致
-23	verify type error	验证类型错误
-24	invalid pkg	非法请求包
-25	bad visitor	策略拦截
-26	system busy	系统内部错误
-100	param err	appsecretkey 参数校验错误
+        :param CaptchaCode: 1	OK	驗證通過
+6	user code len error	驗證碼長度不比對
+7	captcha no match	驗證碼答案不比對/Randstr參數不比對
+8	verify timeout	驗證碼簽名超時
+9	Sequnce repeat	驗證碼簽名重放
+10	Sequnce invalid	驗證碼簽名序列
+11	Cookie invalid	驗證碼cooking訊息不合法
+12	sig len error	簽名長度錯誤
+13	verify ip no match	ip不比對
+15	decrypt fail	驗證碼簽名解密失敗
+16	appid no match	驗證碼強校驗appid錯誤
+17	cmd no much	驗證碼系統命令不比對
+18	uin no match	号碼不比對
+19	seq redirect	重定向驗證
+20	opt no vcode	操作使用pt免驗證碼校驗錯誤
+21	diff	差别，驗證錯誤
+22	captcha type not match	驗證碼類型與拉取時不一緻
+23	verify type error	驗證類型錯誤
+24	invalid pkg	非法請求包
+25	bad visitor	策略攔截
+26	system busy	系統内部錯誤
+100	param err	appsecretkey 參數校驗錯誤
         :type CaptchaCode: int
-        :param CaptchaMsg: 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CaptchaMsg: 狀态描述及驗證錯誤訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CaptchaMsg: str
-        :param EvilLevel: [0,100]，恶意等级
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EvilLevel: [0,100]，惡意等級
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EvilLevel: int
-        :param GetCaptchaTime: 前端获取验证码时间，时间戳格式
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GetCaptchaTime: 前端獲取驗證碼時間，時間戳格式
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GetCaptchaTime: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CaptchaCode = None
@@ -620,27 +620,27 @@ class DescribeCaptchaResultResponse(AbstractModel):
 
 
 class DescribeCaptchaUserAllAppIdRequest(AbstractModel):
-    """DescribeCaptchaUserAllAppId请求参数结构体
+    """DescribeCaptchaUserAllAppId請求參數結構體
 
     """
 
 
 class DescribeCaptchaUserAllAppIdResponse(AbstractModel):
-    """DescribeCaptchaUserAllAppId返回参数结构体
+    """DescribeCaptchaUserAllAppId返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 用户注册的所有Appid和应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 用戶注冊的所有Appid和應用名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: list of CaptchaUserAllAppId
-        :param CaptchaCode: 成功返回 0  其它失败
+        :param CaptchaCode: 成功返回 0  其它失敗
         :type CaptchaCode: int
-        :param CaptchaMsg: 返回操作信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CaptchaMsg: 返回操作訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CaptchaMsg: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -662,33 +662,33 @@ class DescribeCaptchaUserAllAppIdResponse(AbstractModel):
 
 
 class UpdateCaptchaAppIdInfoRequest(AbstractModel):
-    """UpdateCaptchaAppIdInfo请求参数结构体
+    """UpdateCaptchaAppIdInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CaptchaAppId: 验证码应用ID
+        :param CaptchaAppId: 驗證碼應用ID
         :type CaptchaAppId: int
-        :param AppName: 应用名
+        :param AppName: 應用名
         :type AppName: str
         :param DomainLimit: 域名限制
         :type DomainLimit: str
-        :param SceneType: 场景类型
+        :param SceneType: 場景類型
         :type SceneType: int
-        :param CapType: 验证码类型
+        :param CapType: 驗證碼類型
         :type CapType: int
-        :param EvilInterceptGrade: 风险级别
+        :param EvilInterceptGrade: 風險級别
         :type EvilInterceptGrade: int
-        :param SmartVerify: 智能检测
+        :param SmartVerify: 智慧檢測
         :type SmartVerify: int
-        :param SmartEngine: 开启智能引擎
+        :param SmartEngine: 開啓智慧引擎
         :type SmartEngine: int
-        :param SchemeColor: web风格
+        :param SchemeColor: web風格
         :type SchemeColor: str
-        :param CaptchaLanguage: 语言
+        :param CaptchaLanguage: 語言
         :type CaptchaLanguage: int
-        :param MailAlarm: 告警邮箱
+        :param MailAlarm: 告警電子信箱
         :type MailAlarm: str
         :param TopFullScreen: 是否全屏
         :type TopFullScreen: int
@@ -727,18 +727,18 @@ class UpdateCaptchaAppIdInfoRequest(AbstractModel):
 
 
 class UpdateCaptchaAppIdInfoResponse(AbstractModel):
-    """UpdateCaptchaAppIdInfo返回参数结构体
+    """UpdateCaptchaAppIdInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CaptchaCode: 返回码 0 成功，其它失败
+        :param CaptchaCode: 返回碼 0 成功，其它失敗
         :type CaptchaCode: int
-        :param CaptchaMsg: 返回操作信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CaptchaMsg: 返回操作訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CaptchaMsg: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CaptchaCode = None

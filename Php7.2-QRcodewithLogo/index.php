@@ -1,45 +1,45 @@
 <?php
 // include php file
-// 对php文件的包含
+// 對php文件的包含
 include "phpqrcode.php";
 
 // main function, called by SCF
-// 主函数，调用的入口
+// 主函數，調用的入口
 function main_handler($event, $context) {
     // print parameters
-    // 进门打印传入参数是好习惯
+    // 進門列印傳入參數是好習慣
     echo 'event:'.json_encode($event, JSON_PRETTY_PRINT).'
 context:'.json_encode($context, JSON_PRETTY_PRINT);
 
-    // echo $event->{'headers'}->{'host'} ; // parameter is object. 传入的参数是object
+    // echo $event->{'headers'}->{'host'} ; // parameter is object. 傳入的參數是object
 
     // convert parameters to array
-    // 转换为数组
+    // 轉換爲數組
     $event = json_decode(json_encode($event), true);
     $context = json_decode(json_encode($context), true);
 
     // good choice to clean variables
-    // SCF中使用全局的变量前最好清空
+    // SCF中使用全局的變量前最好清空
     unset($_GET);
     unset($_POST);
 
     // get the path in url
-    // 取得链接中非域名部分的path值
+    // 取得連結中非域名部分的path值
     $function_name = $context['function_name'];
     $host_name = $event['headers']['host'];
     $serviceId = $event['requestContext']['serviceId'];
     if ( $serviceId === substr($host_name,0,strlen($serviceId)) ) {
         // using long url of API gateway
-        // 使用API网关长链接时
+        // 使用API閘道長連結時
         $path = substr($event['path'], strlen('/' . $function_name . '/')); 
     } else {
         // using custom domain
-        // 使用自定义域名时
+        // 使用自定義域名時
         $path = substr($event['path'], strlen($event['requestContext']['path']=='/'?'/':$event['requestContext']['path'].'/')); 
     }
 
     // get the queryString
-    // 取得链接后?queryString提交的值
+    // 取得連結後?queryString提交的值
     $_GET = $event['queryString'];
 
     // get the POST values
@@ -54,9 +54,9 @@ context:'.json_encode($context, JSON_PRETTY_PRINT);
     if ($value=='') $value = $path;
 
     if ($value != '') {
-        $logo = __DIR__ . '/logo.png'; // use resource in SCF. 对上传到SCF的资源的引用
+        $logo = __DIR__ . '/logo.png'; // use resource in SCF. 對上傳到SCF的資源的引用
         $remoteaddr=str_replace(":","_",$event['requestContext']['sourceIp']);
-        $base = "/tmp/".date("Ymd-His")."-".$remoteaddr."-base.png"; // use the /tmp folder. 对/tmp临时文件夹的使用
+        $base = "/tmp/".date("Ymd-His")."-".$remoteaddr."-base.png"; // use the /tmp folder. 對/tmp臨時文件夾的使用
         $QR = $base;
         $last = "/tmp/".date("Ymd-His")."-".$remoteaddr."-last.png";
 
@@ -82,7 +82,7 @@ context:'.json_encode($context, JSON_PRETTY_PRINT);
 
         if (isset($_GET['down'])||!($path=='/'||$path=='')) {
             // if '?down' or path not null, then return a file
-            // 如果指定了下载，或是用的path中的值，则直接输出文件
+            // 如果指定了下載，或是用的path中的值，則直接輸出文件
             $image_data = fread(fopen($last, 'r'), filesize($last));
             unlink($last);
             return [
@@ -96,7 +96,7 @@ context:'.json_encode($context, JSON_PRETTY_PRINT);
     }
 
     // start the web html
-    // 网页开始
+    // 網頁開始
     @ob_start();
 ?>
 <!DOCTYPE html>
@@ -125,14 +125,14 @@ context:'.json_encode($context, JSON_PRETTY_PRINT);
 </html>
 <?php
     // end the web html
-    // 网页结束
+    // 網頁結束
     $html=ob_get_clean();
 
     $value="";
     unlink($last);
 
     // return the web html
-    // 返回html网页
+    // 返回html網頁
     return [
         'isBase64Encoded' => false,
         'statusCode' => 200,

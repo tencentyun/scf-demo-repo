@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: shell_demo
   src: ./
-  description: shell_demo template function. Shell模板函数
+  description: shell_demo template function. Shell範本函數
   handler: index.main_handler
   runtime: CustomRuntime
   namespace: default

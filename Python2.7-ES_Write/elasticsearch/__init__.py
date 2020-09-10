@@ -22,4 +22,3 @@ from .serializer import JSONSerializer
 from .connection import Connection, RequestsHttpConnection, \
     Urllib3HttpConnection
 from .exceptions import *
-

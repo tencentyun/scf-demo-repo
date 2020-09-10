@@ -26,7 +26,7 @@ class IcClient(AbstractClient):
 
 
     def DescribeApp(self, request):
-        """根据应用id查询物联卡应用详情
+        """根據應用id查詢物聯卡應用詳情
 
         :param request: Request instance for DescribeApp.
         :type request: :class:`tencentcloud.ic.v20190307.models.DescribeAppRequest`
@@ -54,7 +54,7 @@ class IcClient(AbstractClient):
 
 
     def DescribeCard(self, request):
-        """查询卡片详细信息
+        """查詢卡片詳細訊息
 
         :param request: Request instance for DescribeCard.
         :type request: :class:`tencentcloud.ic.v20190307.models.DescribeCardRequest`
@@ -82,7 +82,7 @@ class IcClient(AbstractClient):
 
 
     def DescribeCards(self, request):
-        """查询卡片列表信息
+        """查詢卡片清單訊息
 
         :param request: Request instance for DescribeCards.
         :type request: :class:`tencentcloud.ic.v20190307.models.DescribeCardsRequest`
@@ -110,7 +110,7 @@ class IcClient(AbstractClient):
 
 
     def SendMultiSms(self, request):
-        """群发短信
+        """群發簡訊
 
         :param request: Request instance for SendMultiSms.
         :type request: :class:`tencentcloud.ic.v20190307.models.SendMultiSmsRequest`
@@ -138,7 +138,7 @@ class IcClient(AbstractClient):
 
 
     def SendSms(self, request):
-        """发送短信息接口
+        """發送短訊息介面
 
         :param request: Request instance for SendSms.
         :type request: :class:`tencentcloud.ic.v20190307.models.SendSmsRequest`

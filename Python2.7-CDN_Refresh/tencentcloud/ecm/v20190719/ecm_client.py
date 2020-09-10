@@ -26,7 +26,7 @@ class EcmClient(AbstractClient):
 
 
     def AllocateAddresses(self, request):
-        """申请一个或多个弹性公网IP（简称 EIP）
+        """申請一個或多個彈性公網IP（簡稱 EIP）
 
         :param request: Request instance for AllocateAddresses.
         :type request: :class:`tencentcloud.ecm.v20190719.models.AllocateAddressesRequest`
@@ -54,7 +54,7 @@ class EcmClient(AbstractClient):
 
 
     def AssignPrivateIpAddresses(self, request):
-        """弹性网卡申请内网 IP
+        """彈性網卡申請内網 IP
 
         :param request: Request instance for AssignPrivateIpAddresses.
         :type request: :class:`tencentcloud.ecm.v20190719.models.AssignPrivateIpAddressesRequest`
@@ -82,13 +82,13 @@ class EcmClient(AbstractClient):
 
 
     def AssociateAddress(self, request):
-        """将弹性公网IP（简称 EIP）绑定到实例或弹性网卡的指定内网 IP 上。
-        将 EIP 绑定到实例（CVM）上，其本质是将 EIP 绑定到实例上主网卡的主内网 IP 上。
-        将 EIP 绑定到主网卡的主内网IP上，绑定过程会把其上绑定的普通公网 IP 自动解绑并释放。
-        将 EIP 绑定到指定网卡的内网 IP上（非主网卡的主内网IP），则必须先解绑该 EIP，才能再绑定新的。
-        将 EIP 绑定到NAT网关，请使用接口EipBindNatGateway
-        EIP 如果欠费或被封堵，则不能被绑定。
-        只有状态为 UNBIND 的 EIP 才能够被绑定。
+        """将彈性公網IP（簡稱 EIP）綁定到實例或彈性網卡的指定内網 IP 上。
+        将 EIP 綁定到實例（CVM）上，其本質是将 EIP 綁定到實例上主網卡的主内網 IP 上。
+        将 EIP 綁定到主網卡的主内網IP上，綁定過程會把其上綁定的普通公網 IP 自動解綁并釋放。
+        将 EIP 綁定到指定網卡的内網 IP上（非主網卡的主内網IP），則必須先解綁該 EIP，才能再綁定新的。
+        将 EIP 綁定到NAT閘道，請使用介面EipBindNatGateway
+        EIP 如果欠費或被封堵，則不能被綁定。
+        只有狀态爲 UNBIND 的 EIP 才能夠被綁定。
 
         :param request: Request instance for AssociateAddress.
         :type request: :class:`tencentcloud.ecm.v20190719.models.AssociateAddressRequest`
@@ -116,7 +116,7 @@ class EcmClient(AbstractClient):
 
 
     def AttachNetworkInterface(self, request):
-        """弹性网卡绑定云主机
+        """彈性網卡綁定雲主機
 
         :param request: Request instance for AttachNetworkInterface.
         :type request: :class:`tencentcloud.ecm.v20190719.models.AttachNetworkInterfaceRequest`
@@ -144,7 +144,7 @@ class EcmClient(AbstractClient):
 
 
     def CreateModule(self, request):
-        """创建模块
+        """創模組化塊
 
         :param request: Request instance for CreateModule.
         :type request: :class:`tencentcloud.ecm.v20190719.models.CreateModuleRequest`
@@ -172,7 +172,7 @@ class EcmClient(AbstractClient):
 
 
     def CreateNetworkInterface(self, request):
-        """创建弹性网卡
+        """創建彈性網卡
 
         :param request: Request instance for CreateNetworkInterface.
         :type request: :class:`tencentcloud.ecm.v20190719.models.CreateNetworkInterfaceRequest`
@@ -200,7 +200,7 @@ class EcmClient(AbstractClient):
 
 
     def CreateSubnet(self, request):
-        """创建子网
+        """創建子網
 
         :param request: Request instance for CreateSubnet.
         :type request: :class:`tencentcloud.ecm.v20190719.models.CreateSubnetRequest`
@@ -228,7 +228,7 @@ class EcmClient(AbstractClient):
 
 
     def CreateVpc(self, request):
-        """创建私有网络
+        """創建私有網絡
 
         :param request: Request instance for CreateVpc.
         :type request: :class:`tencentcloud.ecm.v20190719.models.CreateVpcRequest`
@@ -256,7 +256,7 @@ class EcmClient(AbstractClient):
 
 
     def DeleteImage(self, request):
-        """删除镜像
+        """删除映像
 
         :param request: Request instance for DeleteImage.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DeleteImageRequest`
@@ -284,7 +284,7 @@ class EcmClient(AbstractClient):
 
 
     def DeleteModule(self, request):
-        """删除业务模块
+        """删除業務模組
 
         :param request: Request instance for DeleteModule.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DeleteModuleRequest`
@@ -312,7 +312,7 @@ class EcmClient(AbstractClient):
 
 
     def DeleteNetworkInterface(self, request):
-        """删除弹性网卡
+        """删除彈性網卡
 
         :param request: Request instance for DeleteNetworkInterface.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DeleteNetworkInterfaceRequest`
@@ -340,7 +340,7 @@ class EcmClient(AbstractClient):
 
 
     def DeleteSubnet(self, request):
-        """删除子网
+        """删除子網
 
         :param request: Request instance for DeleteSubnet.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DeleteSubnetRequest`
@@ -368,7 +368,7 @@ class EcmClient(AbstractClient):
 
 
     def DeleteVpc(self, request):
-        """删除私有网络
+        """删除私有網絡
 
         :param request: Request instance for DeleteVpc.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DeleteVpcRequest`
@@ -396,7 +396,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribeAddressQuota(self, request):
-        """查询您账户的弹性公网IP（简称 EIP）在当前地域的配额信息
+        """查詢您帳戶的彈性公網IP（簡稱 EIP）在當前地域的配額訊息
 
         :param request: Request instance for DescribeAddressQuota.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeAddressQuotaRequest`
@@ -424,7 +424,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribeAddresses(self, request):
-        """查询弹性公网IP列表
+        """查詢彈性公網IP清單
 
         :param request: Request instance for DescribeAddresses.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeAddressesRequest`
@@ -452,7 +452,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribeBaseOverview(self, request):
-        """获取概览页统计的基本数据
+        """獲取概覽頁統計的基本數據
 
         :param request: Request instance for DescribeBaseOverview.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeBaseOverviewRequest`
@@ -480,7 +480,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribeConfig(self, request):
-        """获取带宽硬盘等数据的限制
+        """獲取頻寬硬碟等數據的限制
 
         :param request: Request instance for DescribeConfig.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeConfigRequest`
@@ -508,7 +508,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribeImage(self, request):
-        """展示镜像列表
+        """展示映像清單
 
         :param request: Request instance for DescribeImage.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeImageRequest`
@@ -536,7 +536,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribeInstanceTypeConfig(self, request):
-        """获取机型配置列表
+        """獲取機型配置清單
 
         :param request: Request instance for DescribeInstanceTypeConfig.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeInstanceTypeConfigRequest`
@@ -564,7 +564,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribeInstances(self, request):
-        """获取实例的相关信息。
+        """獲取實例的相關訊息。
 
         :param request: Request instance for DescribeInstances.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeInstancesRequest`
@@ -592,7 +592,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribeInstancesDeniedActions(self, request):
-        """通过实例id获取当前禁止的操作
+        """通過實例id獲取當前禁止的操作
 
         :param request: Request instance for DescribeInstancesDeniedActions.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeInstancesDeniedActionsRequest`
@@ -620,7 +620,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribeModule(self, request):
-        """获取模块列表
+        """獲取模組清單
 
         :param request: Request instance for DescribeModule.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeModuleRequest`
@@ -648,7 +648,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribeModuleDetail(self, request):
-        """展示模块详细信息
+        """展示模組詳細訊息
 
         :param request: Request instance for DescribeModuleDetail.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeModuleDetailRequest`
@@ -676,7 +676,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribeNetworkInterfaces(self, request):
-        """查询弹性网卡列表
+        """查詢彈性網卡清單
 
         :param request: Request instance for DescribeNetworkInterfaces.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeNetworkInterfacesRequest`
@@ -704,7 +704,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribeNode(self, request):
-        """获取节点列表
+        """獲取節點清單
 
         :param request: Request instance for DescribeNode.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeNodeRequest`
@@ -732,7 +732,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribePeakBaseOverview(self, request):
-        """CPU 内存 硬盘等基础信息峰值数据
+        """CPU 内存 硬碟等基礎訊息峰值數據
 
         :param request: Request instance for DescribePeakBaseOverview.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribePeakBaseOverviewRequest`
@@ -760,7 +760,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribePeakNetworkOverview(self, request):
-        """获取网络峰值数据
+        """獲取網絡峰值數據
 
         :param request: Request instance for DescribePeakNetworkOverview.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribePeakNetworkOverviewRequest`
@@ -788,7 +788,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribeSubnets(self, request):
-        """查询子网列表
+        """查詢子網清單
 
         :param request: Request instance for DescribeSubnets.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeSubnetsRequest`
@@ -816,7 +816,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribeTaskResult(self, request):
-        """查询EIP异步任务执行结果
+        """查詢EIP異步任務執行結果
 
         :param request: Request instance for DescribeTaskResult.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeTaskResultRequest`
@@ -844,7 +844,7 @@ class EcmClient(AbstractClient):
 
 
     def DescribeVpcs(self, request):
-        """查询私有网络列表
+        """查詢私有網絡清單
 
         :param request: Request instance for DescribeVpcs.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeVpcsRequest`
@@ -872,7 +872,7 @@ class EcmClient(AbstractClient):
 
 
     def DetachNetworkInterface(self, request):
-        """弹性网卡解绑云主机
+        """彈性網卡解綁雲主機
 
         :param request: Request instance for DetachNetworkInterface.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DetachNetworkInterfaceRequest`
@@ -900,9 +900,9 @@ class EcmClient(AbstractClient):
 
 
     def DisassociateAddress(self, request):
-        """解绑弹性公网IP（简称 EIP）
-        只有状态为 BIND 和 BIND_ENI 的 EIP 才能进行解绑定操作。
-        EIP 如果被封堵，则不能进行解绑定操作。
+        """解綁彈性公網IP（簡稱 EIP）
+        只有狀态爲 BIND 和 BIND_ENI 的 EIP 才能進行解綁定操作。
+        EIP 如果被封堵，則不能進行解綁定操作。
 
         :param request: Request instance for DisassociateAddress.
         :type request: :class:`tencentcloud.ecm.v20190719.models.DisassociateAddressRequest`
@@ -930,7 +930,7 @@ class EcmClient(AbstractClient):
 
 
     def ImportImage(self, request):
-        """从CVM产品导入镜像到ECM
+        """從CVM産品導入映像到ECM
 
         :param request: Request instance for ImportImage.
         :type request: :class:`tencentcloud.ecm.v20190719.models.ImportImageRequest`
@@ -958,7 +958,7 @@ class EcmClient(AbstractClient):
 
 
     def MigrateNetworkInterface(self, request):
-        """弹性网卡迁移
+        """彈性網卡遷移
 
         :param request: Request instance for MigrateNetworkInterface.
         :type request: :class:`tencentcloud.ecm.v20190719.models.MigrateNetworkInterfaceRequest`
@@ -986,9 +986,9 @@ class EcmClient(AbstractClient):
 
 
     def MigratePrivateIpAddress(self, request):
-        """弹性网卡内网IP迁移。
-        该接口用于将一个内网IP从一个弹性网卡上迁移到另外一个弹性网卡，主IP地址不支持迁移。
-        迁移前后的弹性网卡必须在同一个子网内。
+        """彈性網卡内網IP遷移。
+        該介面用于将一個内網IP從一個彈性網卡上遷移到另外一個彈性網卡，主IP網址不支援遷移。
+        遷移前後的彈性網卡必須在同一個子網内。
 
         :param request: Request instance for MigratePrivateIpAddress.
         :type request: :class:`tencentcloud.ecm.v20190719.models.MigratePrivateIpAddressRequest`
@@ -1016,7 +1016,7 @@ class EcmClient(AbstractClient):
 
 
     def ModifyAddressAttribute(self, request):
-        """修改弹性公网IP属性
+        """修改彈性公網IP屬性
 
         :param request: Request instance for ModifyAddressAttribute.
         :type request: :class:`tencentcloud.ecm.v20190719.models.ModifyAddressAttributeRequest`
@@ -1044,7 +1044,7 @@ class EcmClient(AbstractClient):
 
 
     def ModifyAddressesBandwidth(self, request):
-        """调整弹性公网IP带宽
+        """調整彈性公網IP頻寬
 
         :param request: Request instance for ModifyAddressesBandwidth.
         :type request: :class:`tencentcloud.ecm.v20190719.models.ModifyAddressesBandwidthRequest`
@@ -1072,7 +1072,7 @@ class EcmClient(AbstractClient):
 
 
     def ModifyInstancesAttribute(self, request):
-        """修改实例的属性。
+        """修改實例的屬性。
 
         :param request: Request instance for ModifyInstancesAttribute.
         :type request: :class:`tencentcloud.ecm.v20190719.models.ModifyInstancesAttributeRequest`
@@ -1128,7 +1128,7 @@ class EcmClient(AbstractClient):
 
 
     def ModifyModuleName(self, request):
-        """修改模块名称
+        """修改模組名稱
 
         :param request: Request instance for ModifyModuleName.
         :type request: :class:`tencentcloud.ecm.v20190719.models.ModifyModuleNameRequest`
@@ -1156,7 +1156,7 @@ class EcmClient(AbstractClient):
 
 
     def ModifyModuleNetwork(self, request):
-        """修改模块默认带宽上限
+        """修改模組預設頻寬上限
 
         :param request: Request instance for ModifyModuleNetwork.
         :type request: :class:`tencentcloud.ecm.v20190719.models.ModifyModuleNetworkRequest`
@@ -1184,7 +1184,7 @@ class EcmClient(AbstractClient):
 
 
     def ModifySubnetAttribute(self, request):
-        """修改子网属性
+        """修改子網屬性
 
         :param request: Request instance for ModifySubnetAttribute.
         :type request: :class:`tencentcloud.ecm.v20190719.models.ModifySubnetAttributeRequest`
@@ -1212,7 +1212,7 @@ class EcmClient(AbstractClient):
 
 
     def ModifyVpcAttribute(self, request):
-        """修改私有网络（VPC）的相关属性
+        """修改私有網絡（VPC）的相關屬性
 
         :param request: Request instance for ModifyVpcAttribute.
         :type request: :class:`tencentcloud.ecm.v20190719.models.ModifyVpcAttributeRequest`
@@ -1240,7 +1240,7 @@ class EcmClient(AbstractClient):
 
 
     def RebootInstances(self, request):
-        """只有状态为RUNNING的实例才可以进行此操作；接口调用成功时，实例会进入REBOOTING状态；重启实例成功时，实例会进入RUNNING状态；支持强制重启，强制重启的效果等同于关闭物理计算机的电源开关再重新启动。强制重启可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常重启时使用。
+        """只有狀态爲RUNNING的實例才可以進行此操作；介面調用成功時，實例會進入REBOOTING狀态；重啓實例成功時，實例會進入RUNNING狀态；支援強制重啓，強制重啓的效果等同于關閉物理電腦的電源開關再重新啓動。強制重啓可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常重啓時使用。
 
         :param request: Request instance for RebootInstances.
         :type request: :class:`tencentcloud.ecm.v20190719.models.RebootInstancesRequest`
@@ -1268,9 +1268,9 @@ class EcmClient(AbstractClient):
 
 
     def ReleaseAddresses(self, request):
-        """释放一个或多个弹性公网IP（简称 EIP）。
-        该操作不可逆，释放后 EIP 关联的 IP 地址将不再属于您的名下。
-        只有状态为 UNBIND 的 EIP 才能进行释放操作。
+        """釋放一個或多個彈性公網IP（簡稱 EIP）。
+        該操作不可逆，釋放後 EIP 關聯的 IP 網址将不再屬于您的名下。
+        只有狀态爲 UNBIND 的 EIP 才能進行釋放操作。
 
         :param request: Request instance for ReleaseAddresses.
         :type request: :class:`tencentcloud.ecm.v20190719.models.ReleaseAddressesRequest`
@@ -1298,8 +1298,8 @@ class EcmClient(AbstractClient):
 
 
     def RemovePrivateIpAddresses(self, request):
-        """弹性网卡退还内网 IP。
-        退还弹性网卡上的辅助内网IP，接口自动解关联弹性公网 IP。不能退还弹性网卡的主内网IP。
+        """彈性網卡退還内網 IP。
+        退還彈性網卡上的輔助内網IP，介面自動解關聯彈性公網 IP。不能退還彈性網卡的主内網IP。
 
         :param request: Request instance for RemovePrivateIpAddresses.
         :type request: :class:`tencentcloud.ecm.v20190719.models.RemovePrivateIpAddressesRequest`
@@ -1327,7 +1327,7 @@ class EcmClient(AbstractClient):
 
 
     def ResetInstances(self, request):
-        """重装实例，若指定了ImageId参数，则使用指定的镜像重装；否则按照当前实例使用的镜像进行重装；若未指定密码，则密码通过站内信形式随后发送。
+        """重裝實例，若指定了ImageId參數，則使用指定的映像重裝；否則按照當前實例使用的映像進行重裝；若未指定密碼，則密碼通過站内信形式随後發送。
 
         :param request: Request instance for ResetInstances.
         :type request: :class:`tencentcloud.ecm.v20190719.models.ResetInstancesRequest`
@@ -1355,7 +1355,7 @@ class EcmClient(AbstractClient):
 
 
     def ResetInstancesMaxBandwidth(self, request):
-        """重置实例的最大带宽上限。
+        """重置實例的最大頻寬上限。
 
         :param request: Request instance for ResetInstancesMaxBandwidth.
         :type request: :class:`tencentcloud.ecm.v20190719.models.ResetInstancesMaxBandwidthRequest`
@@ -1383,7 +1383,7 @@ class EcmClient(AbstractClient):
 
 
     def ResetInstancesPassword(self, request):
-        """重置处于运行中状态的实例的密码，需要显式指定强制关机参数ForceStop。如果没有显式指定强制关机参数，则只有处于关机状态的实例才允许执行重置密码操作。
+        """重置處于運作中狀态的實例的密碼，需要顯式指定強制關機參數ForceStop。如果沒有顯式指定強制關機參數，則只有處于關機狀态的實例才允許執行重置密碼操作。
 
         :param request: Request instance for ResetInstancesPassword.
         :type request: :class:`tencentcloud.ecm.v20190719.models.ResetInstancesPasswordRequest`
@@ -1411,7 +1411,7 @@ class EcmClient(AbstractClient):
 
 
     def RunInstances(self, request):
-        """创建ECM实例
+        """創建ECM實例
 
         :param request: Request instance for RunInstances.
         :type request: :class:`tencentcloud.ecm.v20190719.models.RunInstancesRequest`
@@ -1439,7 +1439,7 @@ class EcmClient(AbstractClient):
 
 
     def StartInstances(self, request):
-        """只有状态为STOPPED的实例才可以进行此操作；接口调用成功时，实例会进入STARTING状态；启动实例成功时，实例会进入RUNNING状态。
+        """只有狀态爲STOPPED的實例才可以進行此操作；介面調用成功時，實例會進入STARTING狀态；啓動實例成功時，實例會進入RUNNING狀态。
 
         :param request: Request instance for StartInstances.
         :type request: :class:`tencentcloud.ecm.v20190719.models.StartInstancesRequest`
@@ -1467,9 +1467,9 @@ class EcmClient(AbstractClient):
 
 
     def StopInstances(self, request):
-        """只有处于"RUNNING"状态的实例才能够进行关机操作；
-        调用成功时，实例会进入STOPPING状态；关闭实例成功时，实例会进入STOPPED状态；
-        支持强制关闭，强制关机的效果等同于关闭物理计算机的电源开关，强制关机可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常关机时使用。
+        """只有處于"RUNNING"狀态的實例才能夠進行關機操作；
+        調用成功時，實例會進入STOPPING狀态；關閉實例成功時，實例會進入STOPPED狀态；
+        支援強制關閉，強制關機的效果等同于關閉物理電腦的電源開關，強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
 
         :param request: Request instance for StopInstances.
         :type request: :class:`tencentcloud.ecm.v20190719.models.StopInstancesRequest`
@@ -1497,7 +1497,7 @@ class EcmClient(AbstractClient):
 
 
     def TerminateInstances(self, request):
-        """销毁实例
+        """銷毀實例
 
         :param request: Request instance for TerminateInstances.
         :type request: :class:`tencentcloud.ecm.v20190719.models.TerminateInstancesRequest`

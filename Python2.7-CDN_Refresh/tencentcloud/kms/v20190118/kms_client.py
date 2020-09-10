@@ -26,7 +26,7 @@ class KmsClient(AbstractClient):
 
 
     def AsymmetricRsaDecrypt(self, request):
-        """使用指定的RSA非对称密钥的私钥进行数据解密，密文必须是使用对应公钥加密的。处于Enabled 状态的非对称密钥才能进行解密操作。
+        """使用指定的RSA非對稱金鑰的私鑰進行數據解密，密文必須是使用對應公鑰加密的。處于Enabled 狀态的非對稱金鑰才能進行解密操作。
 
         :param request: Request instance for AsymmetricRsaDecrypt.
         :type request: :class:`tencentcloud.kms.v20190118.models.AsymmetricRsaDecryptRequest`
@@ -54,7 +54,7 @@ class KmsClient(AbstractClient):
 
 
     def AsymmetricSm2Decrypt(self, request):
-        """使用指定的SM2非对称密钥的私钥进行数据解密，密文必须是使用对应公钥加密的。处于Enabled 状态的非对称密钥才能进行解密操作。传入的密文的长度不能超过256字节。
+        """使用指定的SM2非對稱金鑰的私鑰進行數據解密，密文必須是使用對應公鑰加密的。處于Enabled 狀态的非對稱金鑰才能進行解密操作。傳入的密文的長度不能超過256位元。
 
         :param request: Request instance for AsymmetricSm2Decrypt.
         :type request: :class:`tencentcloud.kms.v20190118.models.AsymmetricSm2DecryptRequest`
@@ -82,7 +82,7 @@ class KmsClient(AbstractClient):
 
 
     def CancelKeyDeletion(self, request):
-        """取消CMK的计划删除操作
+        """取消CMK的計劃删除操作
 
         :param request: Request instance for CancelKeyDeletion.
         :type request: :class:`tencentcloud.kms.v20190118.models.CancelKeyDeletionRequest`
@@ -110,7 +110,7 @@ class KmsClient(AbstractClient):
 
 
     def CreateKey(self, request):
-        """创建用户管理数据密钥的主密钥CMK（Custom Master Key）。
+        """創建用戶管理數據金鑰的主金鑰CMK（Custom Master Key）。
 
         :param request: Request instance for CreateKey.
         :type request: :class:`tencentcloud.kms.v20190118.models.CreateKeyRequest`
@@ -138,7 +138,7 @@ class KmsClient(AbstractClient):
 
 
     def CreateWhiteBoxKey(self, request):
-        """创建白盒密钥。 密钥个数的上限为 50。
+        """創建白盒金鑰。 金鑰個數的上限爲 50。
 
         :param request: Request instance for CreateWhiteBoxKey.
         :type request: :class:`tencentcloud.kms.v20190118.models.CreateWhiteBoxKeyRequest`
@@ -166,7 +166,7 @@ class KmsClient(AbstractClient):
 
 
     def Decrypt(self, request):
-        """本接口用于解密密文，得到明文数据。
+        """本介面用于解密密文，得到明文數據。
 
         :param request: Request instance for Decrypt.
         :type request: :class:`tencentcloud.kms.v20190118.models.DecryptRequest`
@@ -194,7 +194,7 @@ class KmsClient(AbstractClient):
 
 
     def DeleteImportedKeyMaterial(self, request):
-        """用于删除导入的密钥材料，仅对EXTERNAL类型的CMK有效，该接口将CMK设置为PendingImport 状态，并不会删除CMK，在重新进行密钥导入后可继续使用。彻底删除CMK请使用 ScheduleKeyDeletion 接口。
+        """用于删除導入的金鑰材料，僅對EXTERNAL類型的CMK有效，該介面将CMK設置爲PendingImport 狀态，并不會删除CMK，在重新進行金鑰導入後可繼續使用。徹底删除CMK請使用 ScheduleKeyDeletion 介面。
 
         :param request: Request instance for DeleteImportedKeyMaterial.
         :type request: :class:`tencentcloud.kms.v20190118.models.DeleteImportedKeyMaterialRequest`
@@ -222,7 +222,7 @@ class KmsClient(AbstractClient):
 
 
     def DeleteWhiteBoxKey(self, request):
-        """删除白盒密钥, 注意：必须先禁用后，才可以删除。
+        """删除白盒金鑰, 注意：必須先禁用後，才可以删除。
 
         :param request: Request instance for DeleteWhiteBoxKey.
         :type request: :class:`tencentcloud.kms.v20190118.models.DeleteWhiteBoxKeyRequest`
@@ -250,7 +250,7 @@ class KmsClient(AbstractClient):
 
 
     def DescribeKey(self, request):
-        """用于获取指定KeyId的主密钥属性详情信息。
+        """用于獲取指定KeyId的主金鑰屬性詳情訊息。
 
         :param request: Request instance for DescribeKey.
         :type request: :class:`tencentcloud.kms.v20190118.models.DescribeKeyRequest`
@@ -278,7 +278,7 @@ class KmsClient(AbstractClient):
 
 
     def DescribeKeys(self, request):
-        """该接口用于批量获取主密钥属性信息。
+        """該介面用于批次獲取主金鑰屬性訊息。
 
         :param request: Request instance for DescribeKeys.
         :type request: :class:`tencentcloud.kms.v20190118.models.DescribeKeysRequest`
@@ -306,7 +306,7 @@ class KmsClient(AbstractClient):
 
 
     def DescribeWhiteBoxDecryptKey(self, request):
-        """获取白盒解密密钥
+        """獲取白盒解密金鑰
 
         :param request: Request instance for DescribeWhiteBoxDecryptKey.
         :type request: :class:`tencentcloud.kms.v20190118.models.DescribeWhiteBoxDecryptKeyRequest`
@@ -334,7 +334,7 @@ class KmsClient(AbstractClient):
 
 
     def DescribeWhiteBoxKey(self, request):
-        """展示白盒密钥的信息
+        """展示白盒金鑰的訊息
 
         :param request: Request instance for DescribeWhiteBoxKey.
         :type request: :class:`tencentcloud.kms.v20190118.models.DescribeWhiteBoxKeyRequest`
@@ -362,7 +362,7 @@ class KmsClient(AbstractClient):
 
 
     def DescribeWhiteBoxKeyDetails(self, request):
-        """获取白盒密钥列表
+        """獲取白盒金鑰清單
 
         :param request: Request instance for DescribeWhiteBoxKeyDetails.
         :type request: :class:`tencentcloud.kms.v20190118.models.DescribeWhiteBoxKeyDetailsRequest`
@@ -390,7 +390,7 @@ class KmsClient(AbstractClient):
 
 
     def DescribeWhiteBoxServiceStatus(self, request):
-        """获取白盒密钥服务状态
+        """獲取白盒金鑰服務狀态
 
         :param request: Request instance for DescribeWhiteBoxServiceStatus.
         :type request: :class:`tencentcloud.kms.v20190118.models.DescribeWhiteBoxServiceStatusRequest`
@@ -418,7 +418,7 @@ class KmsClient(AbstractClient):
 
 
     def DisableKey(self, request):
-        """本接口用于禁用一个主密钥，处于禁用状态的Key无法用于加密、解密操作。
+        """本介面用于禁用一個主金鑰，處于禁用狀态的Key無法用于加密、解密操作。
 
         :param request: Request instance for DisableKey.
         :type request: :class:`tencentcloud.kms.v20190118.models.DisableKeyRequest`
@@ -446,7 +446,7 @@ class KmsClient(AbstractClient):
 
 
     def DisableKeyRotation(self, request):
-        """对指定的CMK禁止密钥轮换功能。
+        """對指定的CMK禁止金鑰輪換功能。
 
         :param request: Request instance for DisableKeyRotation.
         :type request: :class:`tencentcloud.kms.v20190118.models.DisableKeyRotationRequest`
@@ -474,7 +474,7 @@ class KmsClient(AbstractClient):
 
 
     def DisableKeys(self, request):
-        """该接口用于批量禁止CMK的使用。
+        """該介面用于批次禁止CMK的使用。
 
         :param request: Request instance for DisableKeys.
         :type request: :class:`tencentcloud.kms.v20190118.models.DisableKeysRequest`
@@ -502,7 +502,7 @@ class KmsClient(AbstractClient):
 
 
     def DisableWhiteBoxKey(self, request):
-        """禁用白盒密钥
+        """禁用白盒金鑰
 
         :param request: Request instance for DisableWhiteBoxKey.
         :type request: :class:`tencentcloud.kms.v20190118.models.DisableWhiteBoxKeyRequest`
@@ -530,7 +530,7 @@ class KmsClient(AbstractClient):
 
 
     def DisableWhiteBoxKeys(self, request):
-        """批量禁用白盒密钥
+        """批次禁用白盒金鑰
 
         :param request: Request instance for DisableWhiteBoxKeys.
         :type request: :class:`tencentcloud.kms.v20190118.models.DisableWhiteBoxKeysRequest`
@@ -558,7 +558,7 @@ class KmsClient(AbstractClient):
 
 
     def EnableKey(self, request):
-        """用于启用一个指定的CMK。
+        """用于啓用一個指定的CMK。
 
         :param request: Request instance for EnableKey.
         :type request: :class:`tencentcloud.kms.v20190118.models.EnableKeyRequest`
@@ -586,7 +586,7 @@ class KmsClient(AbstractClient):
 
 
     def EnableKeyRotation(self, request):
-        """对指定的CMK开启密钥轮换功能。
+        """對指定的CMK開啓金鑰輪換功能。
 
         :param request: Request instance for EnableKeyRotation.
         :type request: :class:`tencentcloud.kms.v20190118.models.EnableKeyRotationRequest`
@@ -614,7 +614,7 @@ class KmsClient(AbstractClient):
 
 
     def EnableKeys(self, request):
-        """该接口用于批量启用CMK。
+        """該介面用于批次啓用CMK。
 
         :param request: Request instance for EnableKeys.
         :type request: :class:`tencentcloud.kms.v20190118.models.EnableKeysRequest`
@@ -642,7 +642,7 @@ class KmsClient(AbstractClient):
 
 
     def EnableWhiteBoxKey(self, request):
-        """启用白盒密钥
+        """啓用白盒金鑰
 
         :param request: Request instance for EnableWhiteBoxKey.
         :type request: :class:`tencentcloud.kms.v20190118.models.EnableWhiteBoxKeyRequest`
@@ -670,7 +670,7 @@ class KmsClient(AbstractClient):
 
 
     def EnableWhiteBoxKeys(self, request):
-        """批量启用白盒密钥
+        """批次啓用白盒金鑰
 
         :param request: Request instance for EnableWhiteBoxKeys.
         :type request: :class:`tencentcloud.kms.v20190118.models.EnableWhiteBoxKeysRequest`
@@ -698,7 +698,7 @@ class KmsClient(AbstractClient):
 
 
     def Encrypt(self, request):
-        """本接口用于加密最多为4KB任意数据，可用于加密数据库密码，RSA Key，或其它较小的敏感信息。对于应用的数据加密，使用GenerateDataKey生成的DataKey进行本地数据的加解密操作
+        """本介面用于加密最多爲4KB任意數據，可用于加密資料庫密碼，RSA Key，或其它較小的敏感訊息。對于應用的數據加密，使用GenerateDataKey生成的DataKey進行本地數據的加解密操作
 
         :param request: Request instance for Encrypt.
         :type request: :class:`tencentcloud.kms.v20190118.models.EncryptRequest`
@@ -726,7 +726,7 @@ class KmsClient(AbstractClient):
 
 
     def EncryptByWhiteBox(self, request):
-        """使用白盒密钥进行加密
+        """使用白盒金鑰進行加密
 
         :param request: Request instance for EncryptByWhiteBox.
         :type request: :class:`tencentcloud.kms.v20190118.models.EncryptByWhiteBoxRequest`
@@ -754,7 +754,7 @@ class KmsClient(AbstractClient):
 
 
     def GenerateDataKey(self, request):
-        """本接口生成一个数据密钥，您可以用这个密钥进行本地数据的加密。
+        """本介面生成一個數據金鑰，您可以用這個金鑰進行本地數據的加密。
 
         :param request: Request instance for GenerateDataKey.
         :type request: :class:`tencentcloud.kms.v20190118.models.GenerateDataKeyRequest`
@@ -782,7 +782,7 @@ class KmsClient(AbstractClient):
 
 
     def GenerateRandom(self, request):
-        """随机数生成接口。
+        """随機數生成介面。
 
         :param request: Request instance for GenerateRandom.
         :type request: :class:`tencentcloud.kms.v20190118.models.GenerateRandomRequest`
@@ -810,7 +810,7 @@ class KmsClient(AbstractClient):
 
 
     def GetKeyRotationStatus(self, request):
-        """查询指定的CMK是否开启了密钥轮换功能。
+        """查詢指定的CMK是否開啓了金鑰輪換功能。
 
         :param request: Request instance for GetKeyRotationStatus.
         :type request: :class:`tencentcloud.kms.v20190118.models.GetKeyRotationStatusRequest`
@@ -838,7 +838,7 @@ class KmsClient(AbstractClient):
 
 
     def GetParametersForImport(self, request):
-        """获取导入主密钥（CMK）材料的参数，返回的Token作为执行ImportKeyMaterial的参数之一，返回的PublicKey用于对自主导入密钥材料进行加密。返回的Token和PublicKey 24小时后失效，失效后如需重新导入，需要再次调用该接口获取新的Token和PublicKey。
+        """獲取導入主金鑰（CMK）材料的參數，返回的Token作爲執行ImportKeyMaterial的參數之一，返回的PublicKey用于對自主導入金鑰材料進行加密。返回的Token和PublicKey 24小時後失效，失效後如需重新導入，需要再次調用該介面獲取新的Token和PublicKey。
 
         :param request: Request instance for GetParametersForImport.
         :type request: :class:`tencentcloud.kms.v20190118.models.GetParametersForImportRequest`
@@ -866,7 +866,7 @@ class KmsClient(AbstractClient):
 
 
     def GetPublicKey(self, request):
-        """该接口用户获取 KeyUsage为ASYMMETRIC_DECRYPT_RSA_2048 和 ASYMMETRIC_DECRYPT_SM2 的非对称密钥的公钥信息，使用该公钥用户可在本地进行数据加密，使用该公钥加密的数据只能通过KMS使用对应的私钥进行解密。只有处于Enabled状态的非对称密钥才可能获取公钥。
+        """該介面用戶獲取 KeyUsage爲ASYMMETRIC_DECRYPT_RSA_2048 和 ASYMMETRIC_DECRYPT_SM2 的非對稱金鑰的公鑰訊息，使用該公鑰用戶可在本地進行數據加密，使用該公鑰加密的數據只能通過KMS使用對應的私鑰進行解密。只有處于Enabled狀态的非對稱金鑰才可能獲取公鑰。
 
         :param request: Request instance for GetPublicKey.
         :type request: :class:`tencentcloud.kms.v20190118.models.GetPublicKeyRequest`
@@ -894,7 +894,7 @@ class KmsClient(AbstractClient):
 
 
     def GetServiceStatus(self, request):
-        """用于查询该用户是否已开通KMS服务
+        """用于查詢該用戶是否已開通KMS服務
 
         :param request: Request instance for GetServiceStatus.
         :type request: :class:`tencentcloud.kms.v20190118.models.GetServiceStatusRequest`
@@ -922,8 +922,8 @@ class KmsClient(AbstractClient):
 
 
     def ImportKeyMaterial(self, request):
-        """用于导入密钥材料。只有类型为EXTERNAL 的CMK 才可以导入，导入的密钥材料使用 GetParametersForImport 获取的密钥进行加密。可以为指定的 CMK 重新导入密钥材料，并重新指定过期时间，但必须导入相同的密钥材料。CMK 密钥材料导入后不可以更换密钥材料。导入的密钥材料过期或者被删除后，指定的CMK将无法使用，需要再次导入相同的密钥材料才能正常使用。CMK是独立的，同样的密钥材料可导入不同的 CMK 中，但使用其中一个 CMK 加密的数据无法使用另一个 CMK解密。
-        只有Enabled 和 PendingImport状态的CMK可以导入密钥材料。
+        """用于導入金鑰材料。只有類型爲EXTERNAL 的CMK 才可以導入，導入的金鑰材料使用 GetParametersForImport 獲取的金鑰進行加密。可以爲指定的 CMK 重新導入金鑰材料，并重新指定過期時間，但必須導入相同的金鑰材料。CMK 金鑰材料導入後不可以更換金鑰材料。導入的金鑰材料過期或者被删除後，指定的CMK将無法使用，需要再次導入相同的金鑰材料才能正常使用。CMK是獨立的，同樣的金鑰材料可導入不同的 CMK 中，但使用其中一個 CMK 加密的數據無法使用另一個 CMK解密。
+        只有Enabled 和 PendingImport狀态的CMK可以導入金鑰材料。
 
         :param request: Request instance for ImportKeyMaterial.
         :type request: :class:`tencentcloud.kms.v20190118.models.ImportKeyMaterialRequest`
@@ -951,7 +951,7 @@ class KmsClient(AbstractClient):
 
 
     def ListAlgorithms(self, request):
-        """列出当前Region支持的加密方式
+        """列出當前Region支援的加密方式
 
         :param request: Request instance for ListAlgorithms.
         :type request: :class:`tencentcloud.kms.v20190118.models.ListAlgorithmsRequest`
@@ -979,7 +979,7 @@ class KmsClient(AbstractClient):
 
 
     def ListKeyDetail(self, request):
-        """根据指定Offset和Limit获取主密钥列表详情。
+        """根據指定Offset和Limit獲取主金鑰清單詳情。
 
         :param request: Request instance for ListKeyDetail.
         :type request: :class:`tencentcloud.kms.v20190118.models.ListKeyDetailRequest`
@@ -1007,7 +1007,7 @@ class KmsClient(AbstractClient):
 
 
     def ListKeys(self, request):
-        """列出账号下面状态为Enabled， Disabled 和 PendingImport 的CMK KeyId 列表
+        """列出賬号下面狀态爲Enabled， Disabled 和 PendingImport 的CMK KeyId 清單
 
         :param request: Request instance for ListKeys.
         :type request: :class:`tencentcloud.kms.v20190118.models.ListKeysRequest`
@@ -1035,7 +1035,7 @@ class KmsClient(AbstractClient):
 
 
     def ReEncrypt(self, request):
-        """使用指定CMK对密文重新加密。
+        """使用指定CMK對密文重新加密。
 
         :param request: Request instance for ReEncrypt.
         :type request: :class:`tencentcloud.kms.v20190118.models.ReEncryptRequest`
@@ -1063,7 +1063,7 @@ class KmsClient(AbstractClient):
 
 
     def ScheduleKeyDeletion(self, request):
-        """CMK计划删除接口，用于指定CMK删除的时间，可选时间区间为[7,30]天
+        """CMK計劃删除介面，用于指定CMK删除的時間，可選時間區間爲[7,30]天
 
         :param request: Request instance for ScheduleKeyDeletion.
         :type request: :class:`tencentcloud.kms.v20190118.models.ScheduleKeyDeletionRequest`
@@ -1091,7 +1091,7 @@ class KmsClient(AbstractClient):
 
 
     def UpdateAlias(self, request):
-        """用于修改CMK的别名。对于处于PendingDelete状态的CMK禁止修改。
+        """用于修改CMK的别名。對于處于PendingDelete狀态的CMK禁止修改。
 
         :param request: Request instance for UpdateAlias.
         :type request: :class:`tencentcloud.kms.v20190118.models.UpdateAliasRequest`
@@ -1119,7 +1119,7 @@ class KmsClient(AbstractClient):
 
 
     def UpdateKeyDescription(self, request):
-        """该接口用于对指定的cmk修改描述信息。对于处于PendingDelete状态的CMK禁止修改。
+        """該介面用于對指定的cmk修改描述訊息。對于處于PendingDelete狀态的CMK禁止修改。
 
         :param request: Request instance for UpdateKeyDescription.
         :type request: :class:`tencentcloud.kms.v20190118.models.UpdateKeyDescriptionRequest`

@@ -17,29 +17,29 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CreateGameServerSessionRequest(AbstractModel):
-    """CreateGameServerSession请求参数结构体
+    """CreateGameServerSession請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MaximumPlayerSessionCount: 最大玩家数量
+        :param MaximumPlayerSessionCount: 最大玩家數量
         :type MaximumPlayerSessionCount: int
         :param AliasId: 别名ID
         :type AliasId: str
-        :param CreatorId: 创建者ID
+        :param CreatorId: 創建者ID
         :type CreatorId: str
-        :param FleetId: 舰队ID
+        :param FleetId: 艦隊ID
         :type FleetId: str
-        :param GameProperties: 游戏属性
+        :param GameProperties: 遊戲屬性
         :type GameProperties: list of GameProperty
-        :param GameServerSessionData: 游戏服务器会话属性详情
+        :param GameServerSessionData: 遊戲服務器會話屬性詳情
         :type GameServerSessionData: str
-        :param GameServerSessionId: 游戏服务器会话自定义ID
+        :param GameServerSessionId: 遊戲服務器會話自定義ID
         :type GameServerSessionId: str
         :param IdempotencyToken: 幂等token
         :type IdempotencyToken: str
-        :param Name: 游戏服务器会话名称
+        :param Name: 遊戲服務器會話名稱
         :type Name: str
         """
         self.MaximumPlayerSessionCount = None
@@ -71,16 +71,16 @@ class CreateGameServerSessionRequest(AbstractModel):
 
 
 class CreateGameServerSessionResponse(AbstractModel):
-    """CreateGameServerSession返回参数结构体
+    """CreateGameServerSession返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GameServerSession: 游戏服务器会话
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GameServerSession: 遊戲服務器會話
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GameServerSession: :class:`tencentcloud.gse.v20191112.models.GameServerSession`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.GameServerSession = None
@@ -95,15 +95,15 @@ class CreateGameServerSessionResponse(AbstractModel):
 
 
 class Credentials(AbstractModel):
-    """访问实例所需要的凭据
+    """訪問實例所需要的憑據
 
     """
 
     def __init__(self):
         """
-        :param Secret: ssh私钥
+        :param Secret: ssh私鑰
         :type Secret: str
-        :param UserName: 用户名
+        :param UserName: 用戶名
         :type UserName: str
         """
         self.Secret = None
@@ -116,7 +116,7 @@ class Credentials(AbstractModel):
 
 
 class DescribeGameServerSessionDetailsRequest(AbstractModel):
-    """DescribeGameServerSessionDetails请求参数结构体
+    """DescribeGameServerSessionDetails請求參數結構體
 
     """
 
@@ -124,15 +124,15 @@ class DescribeGameServerSessionDetailsRequest(AbstractModel):
         """
         :param AliasId: 别名ID
         :type AliasId: str
-        :param FleetId: 舰队ID
+        :param FleetId: 艦隊ID
         :type FleetId: str
-        :param GameServerSessionId: 游戏服务器会话ID
+        :param GameServerSessionId: 遊戲服務器會話ID
         :type GameServerSessionId: str
-        :param Limit: 单次查询记录数上限
+        :param Limit: 單次查詢記錄數上限
         :type Limit: int
-        :param NextToken: 页偏移，用于查询下一页
+        :param NextToken: 頁偏移，用于查詢下一頁
         :type NextToken: str
-        :param StatusFilter: 游戏服务器会话状态(ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR)
+        :param StatusFilter: 遊戲服務器會話狀态(ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR)
         :type StatusFilter: str
         """
         self.AliasId = None
@@ -153,19 +153,19 @@ class DescribeGameServerSessionDetailsRequest(AbstractModel):
 
 
 class DescribeGameServerSessionDetailsResponse(AbstractModel):
-    """DescribeGameServerSessionDetails返回参数结构体
+    """DescribeGameServerSessionDetails返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GameServerSessionDetails: 游戏服务器会话详情列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GameServerSessionDetails: 遊戲服務器會話詳情清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GameServerSessionDetails: list of GameServerSessionDetail
-        :param NextToken: 页偏移，用于查询下一页
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NextToken: 頁偏移，用于查詢下一頁
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NextToken: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.GameServerSessionDetails = None
@@ -185,13 +185,13 @@ class DescribeGameServerSessionDetailsResponse(AbstractModel):
 
 
 class DescribeGameServerSessionPlacementRequest(AbstractModel):
-    """DescribeGameServerSessionPlacement请求参数结构体
+    """DescribeGameServerSessionPlacement請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PlacementId: 游戏服务器会话放置的唯一标识符
+        :param PlacementId: 遊戲服務器會話放置的唯一标識符
         :type PlacementId: str
         """
         self.PlacementId = None
@@ -202,15 +202,15 @@ class DescribeGameServerSessionPlacementRequest(AbstractModel):
 
 
 class DescribeGameServerSessionPlacementResponse(AbstractModel):
-    """DescribeGameServerSessionPlacement返回参数结构体
+    """DescribeGameServerSessionPlacement返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GameServerSessionPlacement: 游戏服务器会话放置
+        :param GameServerSessionPlacement: 遊戲服務器會話放置
         :type GameServerSessionPlacement: :class:`tencentcloud.gse.v20191112.models.GameServerSessionPlacement`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.GameServerSessionPlacement = None
@@ -225,7 +225,7 @@ class DescribeGameServerSessionPlacementResponse(AbstractModel):
 
 
 class DescribeGameServerSessionsRequest(AbstractModel):
-    """DescribeGameServerSessions请求参数结构体
+    """DescribeGameServerSessions請求參數結構體
 
     """
 
@@ -233,15 +233,15 @@ class DescribeGameServerSessionsRequest(AbstractModel):
         """
         :param AliasId: 别名ID
         :type AliasId: str
-        :param FleetId: 舰队ID
+        :param FleetId: 艦隊ID
         :type FleetId: str
-        :param GameServerSessionId: 游戏服务器会话ID
+        :param GameServerSessionId: 遊戲服務器會話ID
         :type GameServerSessionId: str
-        :param Limit: 单次查询记录数上限
+        :param Limit: 單次查詢記錄數上限
         :type Limit: int
-        :param NextToken: 页偏移，用于查询下一页
+        :param NextToken: 頁偏移，用于查詢下一頁
         :type NextToken: str
-        :param StatusFilter: 游戏服务器会话状态
+        :param StatusFilter: 遊戲服務器會話狀态
         :type StatusFilter: str
         """
         self.AliasId = None
@@ -262,19 +262,19 @@ class DescribeGameServerSessionsRequest(AbstractModel):
 
 
 class DescribeGameServerSessionsResponse(AbstractModel):
-    """DescribeGameServerSessions返回参数结构体
+    """DescribeGameServerSessions返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GameServerSessions: 游戏服务器会话列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GameServerSessions: 遊戲服務器會話清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GameServerSessions: list of GameServerSession
-        :param NextToken: 页便宜，用于查询下一页
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NextToken: 頁便宜，用于查詢下一頁
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NextToken: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.GameServerSessions = None
@@ -294,19 +294,19 @@ class DescribeGameServerSessionsResponse(AbstractModel):
 
 
 class DescribeInstancesRequest(AbstractModel):
-    """DescribeInstances请求参数结构体
+    """DescribeInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FleetId: 服务部署ID
+        :param FleetId: 服務佈署ID
         :type FleetId: str
-        :param InstanceId: 实例ID
+        :param InstanceId: 實例ID
         :type InstanceId: str
-        :param Offset: 结果返回最大数量
+        :param Offset: 結果返回最大數量
         :type Offset: int
-        :param Limit: 返回结果偏移
+        :param Limit: 返回結果偏移
         :type Limit: int
         """
         self.FleetId = None
@@ -323,19 +323,19 @@ class DescribeInstancesRequest(AbstractModel):
 
 
 class DescribeInstancesResponse(AbstractModel):
-    """DescribeInstances返回参数结构体
+    """DescribeInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Instances: 实例信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Instances: 實例訊息清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Instances: list of Instance
-        :param TotalCount: 结果返回最大数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 結果返回最大數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Instances = None
@@ -355,23 +355,23 @@ class DescribeInstancesResponse(AbstractModel):
 
 
 class DescribePlayerSessionsRequest(AbstractModel):
-    """DescribePlayerSessions请求参数结构体
+    """DescribePlayerSessions請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GameServerSessionId: 游戏服务器会话ID
+        :param GameServerSessionId: 遊戲服務器會話ID
         :type GameServerSessionId: str
-        :param Limit: 单次查询记录数上限
+        :param Limit: 單次查詢記錄數上限
         :type Limit: int
-        :param NextToken: 页偏移，用于查询下一页
+        :param NextToken: 頁偏移，用于查詢下一頁
         :type NextToken: str
         :param PlayerId: 玩家ID
         :type PlayerId: str
-        :param PlayerSessionId: 玩家会话ID
+        :param PlayerSessionId: 玩家會話ID
         :type PlayerSessionId: str
-        :param PlayerSessionStatusFilter: 玩家会话状态（RESERVED,ACTIVE,COMPLETED,TIMEDOUT）
+        :param PlayerSessionStatusFilter: 玩家會話狀态（RESERVED,ACTIVE,COMPLETED,TIMEDOUT）
         :type PlayerSessionStatusFilter: str
         """
         self.GameServerSessionId = None
@@ -392,19 +392,19 @@ class DescribePlayerSessionsRequest(AbstractModel):
 
 
 class DescribePlayerSessionsResponse(AbstractModel):
-    """DescribePlayerSessions返回参数结构体
+    """DescribePlayerSessions返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PlayerSessions: 玩家会话列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PlayerSessions: 玩家會話清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PlayerSessions: list of PlayerSession
-        :param NextToken: 页偏移
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NextToken: 頁偏移
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NextToken: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PlayerSessions = None
@@ -424,15 +424,15 @@ class DescribePlayerSessionsResponse(AbstractModel):
 
 
 class DesiredPlayerSession(AbstractModel):
-    """玩家游戏会话信息
+    """玩家遊戲會話訊息
 
     """
 
     def __init__(self):
         """
-        :param PlayerId: 与玩家会话关联的唯一玩家标识
+        :param PlayerId: 與玩家會話關聯的唯一玩家标識
         :type PlayerId: str
-        :param PlayerData: 开发人员定义的玩家数据
+        :param PlayerData: 開發人員定義的玩家數據
         :type PlayerData: str
         """
         self.PlayerId = None
@@ -445,15 +445,15 @@ class DesiredPlayerSession(AbstractModel):
 
 
 class GameProperty(AbstractModel):
-    """游戏属性详情
+    """遊戲屬性詳情
 
     """
 
     def __init__(self):
         """
-        :param Key: 属性名称
+        :param Key: 屬性名稱
         :type Key: str
-        :param Value: 属性值
+        :param Value: 屬性值
         :type Value: str
         """
         self.Key = None
@@ -466,69 +466,69 @@ class GameProperty(AbstractModel):
 
 
 class GameServerSession(AbstractModel):
-    """游戏会话详情
+    """遊戲會話詳情
 
     """
 
     def __init__(self):
         """
-        :param CreationTime: 游戏服务器会话创建时间
+        :param CreationTime: 遊戲服務器會話創建時間
         :type CreationTime: str
-        :param CreatorId: 创建者ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreatorId: 創建者ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreatorId: str
-        :param CurrentPlayerSessionCount: 当前玩家数量
+        :param CurrentPlayerSessionCount: 當前玩家數量
         :type CurrentPlayerSessionCount: int
-        :param DnsName: CVM的DNS标识符
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DnsName: CVM的DNS标識符
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DnsName: str
-        :param FleetId: 舰队ID
+        :param FleetId: 艦隊ID
         :type FleetId: str
-        :param GameProperties: 游戏属性
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GameProperties: 遊戲屬性
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GameProperties: list of GameProperty
-        :param GameServerSessionData: 游戏服务器会话属性详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GameServerSessionData: 遊戲服務器會話屬性詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GameServerSessionData: str
-        :param GameServerSessionId: 游戏服务器会话ID
+        :param GameServerSessionId: 遊戲服務器會話ID
         :type GameServerSessionId: str
-        :param IpAddress: CVM IP地址
+        :param IpAddress: CVM IP網址
         :type IpAddress: str
-        :param MatchmakerData: 对战进程详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MatchmakerData: 對戰程序詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MatchmakerData: str
-        :param MaximumPlayerSessionCount: 最大玩家数量
+        :param MaximumPlayerSessionCount: 最大玩家數量
         :type MaximumPlayerSessionCount: int
-        :param Name: 游戏服务器会话名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Name: 遊戲服務器會話名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Name: str
-        :param PlayerSessionCreationPolicy: 玩家会话创建策略
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PlayerSessionCreationPolicy: 玩家會話創建策略
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PlayerSessionCreationPolicy: str
         :param Port: 端口号
         :type Port: int
-        :param Status: 游戏服务器会话状态
+        :param Status: 遊戲服務器會話狀态
         :type Status: str
-        :param StatusReason: 游戏服务器会话状态附加信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StatusReason: 遊戲服務器會話狀态附加訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StatusReason: str
-        :param TerminationTime: 终止的时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TerminationTime: 終止的時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TerminationTime: str
-        :param InstanceType: 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceType: 實例類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceType: str
-        :param CurrentCustomCount: 当前自定义数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CurrentCustomCount: 當前自定義數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CurrentCustomCount: int
-        :param MaxCustomCount: 最大自定义数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MaxCustomCount: 最大自定義數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxCustomCount: int
-        :param Weight: 权重
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Weight: 權重
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Weight: int
-        :param AvailabilityStatus: 会话可用性状态，是否被屏蔽
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AvailabilityStatus: 會話可用性狀态，是否被屏蔽
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AvailabilityStatus: str
         """
         self.CreationTime = None
@@ -586,16 +586,16 @@ class GameServerSession(AbstractModel):
 
 
 class GameServerSessionDetail(AbstractModel):
-    """游戏服务器会话详情（GameServerSessionDetail）
+    """遊戲服務器會話詳情（GameServerSessionDetail）
 
     """
 
     def __init__(self):
         """
-        :param GameServerSession: 游戏服务器会话
+        :param GameServerSession: 遊戲服務器會話
         :type GameServerSession: :class:`tencentcloud.gse.v20191112.models.GameServerSession`
-        :param ProtectionPolicy: 保护策略，可选（NoProtection,FullProtection）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProtectionPolicy: 保護策略，可選（NoProtection,FullProtection）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProtectionPolicy: str
         """
         self.GameServerSession = None
@@ -610,7 +610,7 @@ class GameServerSessionDetail(AbstractModel):
 
 
 class GameServerSessionPlacement(AbstractModel):
-    """游戏会话部署对象
+    """遊戲會話佈署對象
 
     """
 
@@ -618,49 +618,49 @@ class GameServerSessionPlacement(AbstractModel):
         """
         :param PlacementId: 部署Id
         :type PlacementId: str
-        :param GameServerSessionQueueName: 服务部署组名称
+        :param GameServerSessionQueueName: 服務佈署組名稱
         :type GameServerSessionQueueName: str
-        :param PlayerLatencies: 玩家延迟
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PlayerLatencies: 玩家延遲
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PlayerLatencies: list of PlayerLatency
-        :param Status: 服务部署状态
+        :param Status: 服務佈署狀态
         :type Status: str
-        :param DnsName: 分配给正在运行游戏会话的实例的DNS标识符
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DnsName: 分配給正在運作遊戲會話的實例的DNS标識符
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DnsName: str
-        :param GameServerSessionId: 游戏会话Id
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GameServerSessionId: 遊戲會話Id
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GameServerSessionId: str
-        :param GameServerSessionName: 游戏会话名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GameServerSessionName: 遊戲會話名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GameServerSessionName: str
-        :param GameServerSessionRegion: 服务部署区域
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GameServerSessionRegion: 服務佈署區域
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GameServerSessionRegion: str
-        :param GameProperties: 游戏属性
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GameProperties: 遊戲屬性
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GameProperties: list of GameProperty
-        :param MaximumPlayerSessionCount: 最大玩家数量
+        :param MaximumPlayerSessionCount: 最大玩家數量
         :type MaximumPlayerSessionCount: int
-        :param GameServerSessionData: 游戏会话数据
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GameServerSessionData: 遊戲會話數據
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GameServerSessionData: str
-        :param IpAddress: 运行游戏会话的实例的IP地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IpAddress: 運作遊戲會話的實例的IP網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IpAddress: str
-        :param Port: 运行游戏会话的实例的端口号
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Port: 運作遊戲會話的實例的端口号
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Port: int
-        :param MatchmakerData: 游戏匹配数据
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MatchmakerData: 遊戲比對數據
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MatchmakerData: str
-        :param PlacedPlayerSessions: 部署的玩家游戏数据
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PlacedPlayerSessions: 佈署的玩家遊戲數據
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PlacedPlayerSessions: list of PlacedPlayerSession
-        :param StartTime: 开始时间
+        :param StartTime: 開始時間
         :type StartTime: str
-        :param EndTime: 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EndTime: 結束時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EndTime: str
         """
         self.PlacementId = None
@@ -718,13 +718,13 @@ class GameServerSessionPlacement(AbstractModel):
 
 
 class GetGameServerSessionLogUrlRequest(AbstractModel):
-    """GetGameServerSessionLogUrl请求参数结构体
+    """GetGameServerSessionLogUrl請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GameServerSessionId: 游戏服务器会话ID
+        :param GameServerSessionId: 遊戲服務器會話ID
         :type GameServerSessionId: str
         """
         self.GameServerSessionId = None
@@ -735,16 +735,16 @@ class GetGameServerSessionLogUrlRequest(AbstractModel):
 
 
 class GetGameServerSessionLogUrlResponse(AbstractModel):
-    """GetGameServerSessionLogUrl返回参数结构体
+    """GetGameServerSessionLogUrl返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PreSignedUrl: 日志下载URL
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PreSignedUrl: 日志下載URL
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PreSignedUrl: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PreSignedUrl = None
@@ -757,15 +757,15 @@ class GetGameServerSessionLogUrlResponse(AbstractModel):
 
 
 class GetInstanceAccessRequest(AbstractModel):
-    """GetInstanceAccess请求参数结构体
+    """GetInstanceAccess請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FleetId: 服务部署Id
+        :param FleetId: 服務佈署Id
         :type FleetId: str
-        :param InstanceId: 实例Id
+        :param InstanceId: 實例Id
         :type InstanceId: str
         """
         self.FleetId = None
@@ -778,15 +778,15 @@ class GetInstanceAccessRequest(AbstractModel):
 
 
 class GetInstanceAccessResponse(AbstractModel):
-    """GetInstanceAccess返回参数结构体
+    """GetInstanceAccess返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceAccess: 实例登录所需要的凭据
+        :param InstanceAccess: 實例登入所需要的憑據
         :type InstanceAccess: :class:`tencentcloud.gse.v20191112.models.InstanceAccess`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceAccess = None
@@ -801,35 +801,35 @@ class GetInstanceAccessResponse(AbstractModel):
 
 
 class Instance(AbstractModel):
-    """实例信息
+    """實例訊息
 
     """
 
     def __init__(self):
         """
-        :param FleetId: 服务部署ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FleetId: 服務佈署ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FleetId: str
-        :param InstanceId: 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceId: 實例ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceId: str
-        :param IpAddress: IP地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IpAddress: IP網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IpAddress: str
         :param DnsName: dns
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DnsName: str
-        :param OperatingSystem: 操作系统
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OperatingSystem: 作業系統
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OperatingSystem: str
-        :param Status: 状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Status: 狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: str
-        :param Type: 类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Type: 類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Type: str
-        :param CreateTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
         """
         self.FleetId = None
@@ -854,21 +854,21 @@ class Instance(AbstractModel):
 
 
 class InstanceAccess(AbstractModel):
-    """实例访问凭证信息
+    """實例訪問憑證訊息
 
     """
 
     def __init__(self):
         """
-        :param Credentials: 访问实例所需要的凭据
+        :param Credentials: 訪問實例所需要的憑據
         :type Credentials: :class:`tencentcloud.gse.v20191112.models.Credentials`
-        :param FleetId: 服务部署Id
+        :param FleetId: 服務佈署Id
         :type FleetId: str
-        :param InstanceId: 实例ID
+        :param InstanceId: 實例ID
         :type InstanceId: str
-        :param IpAddress: 实例公网IP
+        :param IpAddress: 實例公網IP
         :type IpAddress: str
-        :param OperatingSystem: 操作系统
+        :param OperatingSystem: 作業系統
         :type OperatingSystem: str
         """
         self.Credentials = None
@@ -889,17 +889,17 @@ class InstanceAccess(AbstractModel):
 
 
 class JoinGameServerSessionRequest(AbstractModel):
-    """JoinGameServerSession请求参数结构体
+    """JoinGameServerSession請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GameServerSessionId: 游戏服务器会话ID
+        :param GameServerSessionId: 遊戲服務器會話ID
         :type GameServerSessionId: str
         :param PlayerId: 玩家ID
         :type PlayerId: str
-        :param PlayerData: 玩家自定义信息
+        :param PlayerData: 玩家自定義訊息
         :type PlayerData: str
         """
         self.GameServerSessionId = None
@@ -914,16 +914,16 @@ class JoinGameServerSessionRequest(AbstractModel):
 
 
 class JoinGameServerSessionResponse(AbstractModel):
-    """JoinGameServerSession返回参数结构体
+    """JoinGameServerSession返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PlayerSession: 玩家会话
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PlayerSession: 玩家會話
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PlayerSession: :class:`tencentcloud.gse.v20191112.models.PlayerSession`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PlayerSession = None
@@ -938,7 +938,7 @@ class JoinGameServerSessionResponse(AbstractModel):
 
 
 class PlacedPlayerSession(AbstractModel):
-    """部署的玩家游戏会话
+    """佈署的玩家遊戲會話
 
     """
 
@@ -946,7 +946,7 @@ class PlacedPlayerSession(AbstractModel):
         """
         :param PlayerId: 玩家Id
         :type PlayerId: str
-        :param PlayerSessionId: 玩家会话Id
+        :param PlayerSessionId: 玩家會話Id
         :type PlayerSessionId: str
         """
         self.PlayerId = None
@@ -959,19 +959,19 @@ class PlacedPlayerSession(AbstractModel):
 
 
 class PlayerLatency(AbstractModel):
-    """玩家延迟信息
+    """玩家延遲訊息
 
     """
 
     def __init__(self):
         """
         :param PlayerId: 玩家Id
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PlayerId: str
-        :param RegionIdentifier: 延迟对应的区域名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RegionIdentifier: 延遲對應的區域名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RegionIdentifier: str
-        :param LatencyInMilliseconds: 毫秒级延迟
+        :param LatencyInMilliseconds: 毫秒級延遲
         :type LatencyInMilliseconds: int
         """
         self.PlayerId = None
@@ -986,37 +986,37 @@ class PlayerLatency(AbstractModel):
 
 
 class PlayerSession(AbstractModel):
-    """玩家会话详情
+    """玩家會話詳情
 
     """
 
     def __init__(self):
         """
-        :param CreationTime: 玩家会话创建时间
+        :param CreationTime: 玩家會話創建時間
         :type CreationTime: str
-        :param DnsName: 游戏服务器会话运行的DNS标识
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DnsName: 遊戲服務器會話運作的DNS标識
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DnsName: str
-        :param FleetId: 舰队ID
+        :param FleetId: 艦隊ID
         :type FleetId: str
-        :param GameServerSessionId: 游戏服务器会话ID
+        :param GameServerSessionId: 遊戲服務器會話ID
         :type GameServerSessionId: str
-        :param IpAddress: 游戏服务器会话运行的CVM地址
+        :param IpAddress: 遊戲服務器會話運作的CVM網址
         :type IpAddress: str
-        :param PlayerData: 玩家相关信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PlayerData: 玩家相關訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PlayerData: str
         :param PlayerId: 玩家ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PlayerId: str
-        :param PlayerSessionId: 玩家会话ID
+        :param PlayerSessionId: 玩家會話ID
         :type PlayerSessionId: str
         :param Port: 端口号
         :type Port: int
-        :param Status: 玩家会话的状态
+        :param Status: 玩家會話的狀态
         :type Status: str
-        :param TerminationTime: 玩家会话终止时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TerminationTime: 玩家會話終止時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TerminationTime: str
         """
         self.CreationTime = None
@@ -1047,7 +1047,7 @@ class PlayerSession(AbstractModel):
 
 
 class SearchGameServerSessionsRequest(AbstractModel):
-    """SearchGameServerSessions请求参数结构体
+    """SearchGameServerSessions請求參數結構體
 
     """
 
@@ -1055,31 +1055,31 @@ class SearchGameServerSessionsRequest(AbstractModel):
         """
         :param AliasId: 别名ID
         :type AliasId: str
-        :param FleetId: 舰队ID
+        :param FleetId: 艦隊ID
         :type FleetId: str
-        :param Limit: 单次查询记录数上限
+        :param Limit: 單次查詢記錄數上限
         :type Limit: int
-        :param NextToken: 页偏移，用于查询下一页
+        :param NextToken: 頁偏移，用于查詢下一頁
         :type NextToken: str
-        :param FilterExpression: 搜索条件表达式，支持如下变量
-gameServerSessionName 游戏会话名称 String
-gameServerSessionId 游戏会话ID String
-maximumSessions 最大的玩家会话数 Number
-creationTimeMillis 创建时间，单位：毫秒 Number
-playerSessionCount 当前玩家会话数 Number
-hasAvailablePlayerSessions 是否有可用玩家数 String 取值true或false
-gameServerSessionProperties 游戏会话属性 String
+        :param FilterExpression: 搜索條件表達式，支援如下變量
+gameServerSessionName 遊戲會話名稱 String
+gameServerSessionId 遊戲會話ID String
+maximumSessions 最大的玩家會話數 Number
+creationTimeMillis 創建時間，單位：毫秒 Number
+playerSessionCount 當前玩家會話數 Number
+hasAvailablePlayerSessions 是否有可用玩家數 String 取值true或false
+gameServerSessionProperties 遊戲會話屬性 String
 
-表达式String类型 等于=，不等于<>判断
-表示Number类型支持 =,<>,>,>=,<,<=
+表達式String類型 等于=，不等于<>判斷
+表示Number類型支援 =,<>,>,>=,<,<=
         :type FilterExpression: str
-        :param SortExpression: 排序条件关键字
-支持排序字段
-gameServerSessionName 游戏会话名称 String
-gameServerSessionId 游戏会话ID String
-maximumSessions 最大的玩家会话数 Number
-creationTimeMillis 创建时间，单位：毫秒 Number
-playerSessionCount 当前玩家会话数 Number
+        :param SortExpression: 排序條件關鍵字
+支援排序欄位
+gameServerSessionName 遊戲會話名稱 String
+gameServerSessionId 遊戲會話ID String
+maximumSessions 最大的玩家會話數 Number
+creationTimeMillis 創建時間，單位：毫秒 Number
+playerSessionCount 當前玩家會話數 Number
         :type SortExpression: str
         """
         self.AliasId = None
@@ -1100,19 +1100,19 @@ playerSessionCount 当前玩家会话数 Number
 
 
 class SearchGameServerSessionsResponse(AbstractModel):
-    """SearchGameServerSessions返回参数结构体
+    """SearchGameServerSessions返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GameServerSessions: 游戏服务器会话列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GameServerSessions: 遊戲服務器會話清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GameServerSessions: list of GameServerSession
-        :param NextToken: 页偏移，用于查询下一页
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NextToken: 頁偏移，用于查詢下一頁
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NextToken: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.GameServerSessions = None
@@ -1132,27 +1132,27 @@ class SearchGameServerSessionsResponse(AbstractModel):
 
 
 class StartGameServerSessionPlacementRequest(AbstractModel):
-    """StartGameServerSessionPlacement请求参数结构体
+    """StartGameServerSessionPlacement請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PlacementId: 开始部署游戏服务器会话的唯一标识符
+        :param PlacementId: 開始佈署遊戲服務器會話的唯一标識符
         :type PlacementId: str
-        :param GameServerSessionQueueName: 游戏服务器会话队列名称
+        :param GameServerSessionQueueName: 遊戲服務器會話隊列名稱
         :type GameServerSessionQueueName: str
-        :param MaximumPlayerSessionCount: 游戏服务器允许同时连接到游戏会话的最大玩家数量
+        :param MaximumPlayerSessionCount: 遊戲服務器允許同時連接到遊戲會話的最大玩家數量
         :type MaximumPlayerSessionCount: int
-        :param DesiredPlayerSessions: 玩家游戏会话信息
+        :param DesiredPlayerSessions: 玩家遊戲會話訊息
         :type DesiredPlayerSessions: list of DesiredPlayerSession
-        :param GameProperties: 玩家游戏会话属性
+        :param GameProperties: 玩家遊戲會話屬性
         :type GameProperties: list of GameProperty
-        :param GameServerSessionData: 游戏服务器会话数据
+        :param GameServerSessionData: 遊戲服務器會話數據
         :type GameServerSessionData: str
-        :param GameServerSessionName: 游戏服务器会话名称
+        :param GameServerSessionName: 遊戲服務器會話名稱
         :type GameServerSessionName: str
-        :param PlayerLatencies: 玩家延迟
+        :param PlayerLatencies: 玩家延遲
         :type PlayerLatencies: list of PlayerLatency
         """
         self.PlacementId = None
@@ -1192,15 +1192,15 @@ class StartGameServerSessionPlacementRequest(AbstractModel):
 
 
 class StartGameServerSessionPlacementResponse(AbstractModel):
-    """StartGameServerSessionPlacement返回参数结构体
+    """StartGameServerSessionPlacement返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GameServerSessionPlacement: 游戏服务器会话放置
+        :param GameServerSessionPlacement: 遊戲服務器會話放置
         :type GameServerSessionPlacement: :class:`tencentcloud.gse.v20191112.models.GameServerSessionPlacement`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.GameServerSessionPlacement = None
@@ -1215,13 +1215,13 @@ class StartGameServerSessionPlacementResponse(AbstractModel):
 
 
 class StopGameServerSessionPlacementRequest(AbstractModel):
-    """StopGameServerSessionPlacement请求参数结构体
+    """StopGameServerSessionPlacement請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PlacementId: 游戏服务器会话放置的唯一标识符
+        :param PlacementId: 遊戲服務器會話放置的唯一标識符
         :type PlacementId: str
         """
         self.PlacementId = None
@@ -1232,15 +1232,15 @@ class StopGameServerSessionPlacementRequest(AbstractModel):
 
 
 class StopGameServerSessionPlacementResponse(AbstractModel):
-    """StopGameServerSessionPlacement返回参数结构体
+    """StopGameServerSessionPlacement返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GameServerSessionPlacement: 游戏服务器会话放置
+        :param GameServerSessionPlacement: 遊戲服務器會話放置
         :type GameServerSessionPlacement: :class:`tencentcloud.gse.v20191112.models.GameServerSessionPlacement`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.GameServerSessionPlacement = None
@@ -1255,21 +1255,21 @@ class StopGameServerSessionPlacementResponse(AbstractModel):
 
 
 class UpdateGameServerSessionRequest(AbstractModel):
-    """UpdateGameServerSession请求参数结构体
+    """UpdateGameServerSession請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GameServerSessionId: 游戏服务器会话ID
+        :param GameServerSessionId: 遊戲服務器會話ID
         :type GameServerSessionId: str
-        :param MaximumPlayerSessionCount: 最大玩家数量
+        :param MaximumPlayerSessionCount: 最大玩家數量
         :type MaximumPlayerSessionCount: int
-        :param Name: 游戏服务器会话名称
+        :param Name: 遊戲服務器會話名稱
         :type Name: str
-        :param PlayerSessionCreationPolicy: 玩家会话创建策略（ACCEPT_ALL,DENY_ALL）
+        :param PlayerSessionCreationPolicy: 玩家會話創建策略（ACCEPT_ALL,DENY_ALL）
         :type PlayerSessionCreationPolicy: str
-        :param ProtectionPolicy: 保护策略(NoProtection,TimeLimitProtection,FullProtection)
+        :param ProtectionPolicy: 保護策略(NoProtection,TimeLimitProtection,FullProtection)
         :type ProtectionPolicy: str
         """
         self.GameServerSessionId = None
@@ -1288,15 +1288,15 @@ class UpdateGameServerSessionRequest(AbstractModel):
 
 
 class UpdateGameServerSessionResponse(AbstractModel):
-    """UpdateGameServerSession返回参数结构体
+    """UpdateGameServerSession返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GameServerSession: 更新后的游戏会话
+        :param GameServerSession: 更新後的遊戲會話
         :type GameServerSession: :class:`tencentcloud.gse.v20191112.models.GameServerSession`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.GameServerSession = None

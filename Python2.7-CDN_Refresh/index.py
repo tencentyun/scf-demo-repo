@@ -16,14 +16,14 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
-url_cdn = os.getenv('url_cdn') # 请替换为您要加速的bucket域名，具体的文件路径在main函数里拼装
-region = os.getenv('region')  # 请替换为您bucket 所在的地域
+url_cdn = os.getenv('url_cdn') # 請替換爲您要加速的bucket域名，具體的文件路徑在main函數裏拼裝
+region = os.getenv('region')  # 請替換爲您bucket 所在的地域
 
 def main_handler(event, context):
     logger.info("start main handler")
     if "Records" not in event.keys():
         return {"code": 410, "errorMsg": "event is not come from cos"}
-    # 使用临时秘钥操作CDN接口
+    # 使用臨時秘鑰操作CDN介面
     secret_id = os.environ.get('TENCENTCLOUD_SECRETID')      
     secret_key = os.environ.get('TENCENTCLOUD_SECRETKEY')    
     token = os.environ.get('TENCENTCLOUD_SESSIONTOKEN')
@@ -38,7 +38,7 @@ def main_handler(event, context):
             logger.info ("No need to refresh")
             return "No need to refresh"
 
-        #拼装待刷新的url地址
+        #拼裝待重新整理的url網址
         rel_url = url_cdn + '/' + key
         logger.info("rel_url is " + rel_url)
 
@@ -54,12 +54,11 @@ def main_handler(event, context):
         params = '{"Urls":["%s"]}'%rel_url
         req.from_json_string(params)
 
-        # resp = client.PushUrlsCache(req) #预热
-        resp = client.PurgeUrlsCache(req) #刷新
+        # resp = client.PushUrlsCache(req) #預熱
+        resp = client.PurgeUrlsCache(req) #重新整理
         logger.info(resp.to_json_string()) 
         return "PurgeUrlsCache success"
 
     except TencentCloudSDKException as err: 
         logger.error(err)
         return "refresh fail"
-

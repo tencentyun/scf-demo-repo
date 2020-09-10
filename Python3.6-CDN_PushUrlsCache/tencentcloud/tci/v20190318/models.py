@@ -17,29 +17,29 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AIAssistantRequest(AbstractModel):
-    """AIAssistant请求参数结构体
+    """AIAssistant請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileContent: 输入分析对象内容，输入数据格式参考FileType参数释义
+        :param FileContent: 輸入分析對象内容，輸入數據格式參考FileType參數釋義
         :type FileContent: str
-        :param FileType: 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，audio_url: 音频文件，picture：图片二进制数据的BASE64编码
+        :param FileType: 輸入分析對象類型，picture_url:圖片網址，vod_url:視訊網址，live_url：直播網址，audio_url: 音訊文件，picture：圖片二進制數據的BASE64編碼
         :type FileType: str
-        :param Lang: 音频源的语言，默认0为英文，1为中文
+        :param Lang: 音訊源的語言，預設0爲英文，1爲中文
         :type Lang: int
-        :param LibrarySet: 查询人员库列表
+        :param LibrarySet: 查詢人員庫清單
         :type LibrarySet: list of str
-        :param MaxVideoDuration: 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+        :param MaxVideoDuration: 視訊評估時間，單位秒，點播場景預設值爲2小時（無法探測長度時）或完整視訊，直播場景預設值爲10分鍾或直播提前結束
         :type MaxVideoDuration: int
-        :param Template: 标准化模板选择：0：AI助教基础版本，1：AI评教基础版本，2：AI评教标准版本。AI 助教基础版本功能包括：人脸检索、人脸检测、人脸表情识别、学生动作选项，音频信息分析，微笑识别。AI 评教基础版本功能包括：人脸检索、人脸检测、人脸表情识别、音频信息分析。AI 评教标准版功能包括人脸检索、人脸检测、人脸表情识别、手势识别、音频信息分析、音频关键词分析、视频精彩集锦分析。
+        :param Template: 标準化範本選擇：0：AI助教基礎版本，1：AI評教基礎版本，2：AI評教标準版本。AI 助教基礎版本功能包括：人臉檢索、人臉檢測、人臉表情識别、學生動作選項，音訊訊息分析，微笑識别。AI 評教基礎版本功能包括：人臉檢索、人臉檢測、人臉表情識别、音訊訊息分析。AI 評教标準版功能包括人臉檢索、人臉檢測、人臉表情識别、手勢識别、音訊訊息分析、音訊關鍵詞分析、視訊精彩集錦分析。
         :type Template: int
-        :param VocabLibNameList: 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
+        :param VocabLibNameList: 識别詞庫名清單，評估過程使用這些詞匯庫中的詞匯進行詞匯使用行爲分析
         :type VocabLibNameList: list of str
-        :param VoiceEncodeType: 语音编码类型 1:pcm
+        :param VoiceEncodeType: 語音編碼類型 1:pcm
         :type VoiceEncodeType: int
-        :param VoiceFileType: 语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
+        :param VoiceFileType: 語音文件類型 1:raw, 2:wav, 3:mp3，10:視訊（三種音訊格式目前僅支援16k采樣率16bit）
         :type VoiceFileType: int
         """
         self.FileContent = None
@@ -66,17 +66,17 @@ class AIAssistantRequest(AbstractModel):
 
 
 class AIAssistantResponse(AbstractModel):
-    """AIAssistant返回参数结构体
+    """AIAssistant返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageResults: 图像任务直接返回结果
+        :param ImageResults: 圖像任務直接返回結果
         :type ImageResults: list of ImageTaskResult
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ImageResults = None
@@ -96,13 +96,13 @@ class AIAssistantResponse(AbstractModel):
 
 
 class ASRStat(AbstractModel):
-    """当前音频的统计结果
+    """當前音訊的統計結果
 
     """
 
     def __init__(self):
         """
-        :param AvgSpeed: 当前音频的平均语速
+        :param AvgSpeed: 當前音訊的平均語速
         :type AvgSpeed: float
         :param AvgVolume: Vad的平均音量
         :type AvgVolume: float
@@ -110,15 +110,15 @@ class ASRStat(AbstractModel):
         :type MaxVolume: float
         :param MinVolume: Vad的最小音量
         :type MinVolume: float
-        :param MuteDuration: 当前音频的非发音时长
+        :param MuteDuration: 當前音訊的非發音時長
         :type MuteDuration: int
-        :param SoundDuration: 当前音频的发音时长
+        :param SoundDuration: 當前音訊的發音時長
         :type SoundDuration: int
-        :param TotalDuration: 当前音频的总时长
+        :param TotalDuration: 當前音訊的總時長
         :type TotalDuration: int
-        :param VadNum: 当前音频的句子总数
+        :param VadNum: 當前音訊的句子總數
         :type VadNum: int
-        :param WordNum: 当前音频的单词总数
+        :param WordNum: 當前音訊的單詞總數
         :type WordNum: int
         """
         self.AvgSpeed = None
@@ -145,15 +145,15 @@ class ASRStat(AbstractModel):
 
 
 class AbsenceInfo(AbstractModel):
-    """缺勤人员信息
+    """缺勤人員訊息
 
     """
 
     def __init__(self):
         """
-        :param LibraryIds: 识别到的人员所在的库id
+        :param LibraryIds: 識别到的人員所在的庫id
         :type LibraryIds: str
-        :param PersonId: 识别到的人员id
+        :param PersonId: 識别到的人員id
         :type PersonId: str
         """
         self.LibraryIds = None
@@ -166,15 +166,15 @@ class AbsenceInfo(AbstractModel):
 
 
 class ActionCountStatistic(AbstractModel):
-    """数量统计结果
+    """數量統計結果
 
     """
 
     def __init__(self):
         """
-        :param Count: 数量
+        :param Count: 數量
         :type Count: int
-        :param Name: 名称
+        :param Name: 名稱
         :type Name: str
         """
         self.Count = None
@@ -187,13 +187,13 @@ class ActionCountStatistic(AbstractModel):
 
 
 class ActionDurationRatioStatistic(AbstractModel):
-    """时长占比统计结果
+    """時長占比統計結果
 
     """
 
     def __init__(self):
         """
-        :param Name: 名称
+        :param Name: 名稱
         :type Name: str
         :param Ratio: 比例
         :type Ratio: float
@@ -208,15 +208,15 @@ class ActionDurationRatioStatistic(AbstractModel):
 
 
 class ActionDurationStatistic(AbstractModel):
-    """时长统计结果
+    """時長統計結果
 
     """
 
     def __init__(self):
         """
-        :param Duration: 时长
+        :param Duration: 時長
         :type Duration: int
-        :param Name: 名称
+        :param Name: 名稱
         :type Name: str
         """
         self.Duration = None
@@ -229,27 +229,27 @@ class ActionDurationStatistic(AbstractModel):
 
 
 class ActionInfo(AbstractModel):
-    """大教室场景肢体动作识别信息
+    """大教室場景肢體動作識别訊息
 
     """
 
     def __init__(self):
         """
-        :param BodyPosture: 躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
+        :param BodyPosture: 軀體動作識别結果，包含坐着（sit）、站立（stand）和趴睡（sleep）
         :type BodyPosture: :class:`tencentcloud.tci.v20190318.models.ActionType`
-        :param Handup: 举手识别结果，包含举手（hand）和未检测到举手（nothand）
+        :param Handup: 舉手識别結果，包含舉手（hand）和未檢測到舉手（nothand）
         :type Handup: :class:`tencentcloud.tci.v20190318.models.ActionType`
-        :param LookHead: 是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead）
+        :param LookHead: 是否低頭識别結果，包含擡頭（lookingahead）和未檢測到擡頭（notlookingahead）
         :type LookHead: :class:`tencentcloud.tci.v20190318.models.ActionType`
-        :param Writing: 是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead）
+        :param Writing: 是否寫字識别結果，包含寫字（write）和未檢測到寫字（notlookingahead）
         :type Writing: :class:`tencentcloud.tci.v20190318.models.ActionType`
-        :param Height: 动作图像高度
+        :param Height: 動作圖像高度
         :type Height: int
-        :param Left: 动作出现图像的左侧起始坐标位置
+        :param Left: 動作出現圖像的左側起始坐标位置
         :type Left: int
-        :param Top: 动作出现图像的上侧起始侧坐标位置
+        :param Top: 動作出現圖像的上側起始側坐标位置
         :type Top: int
-        :param Width: 动作图像宽度
+        :param Width: 動作圖像寬度
         :type Width: int
         """
         self.BodyPosture = None
@@ -282,17 +282,17 @@ class ActionInfo(AbstractModel):
 
 
 class ActionStatistic(AbstractModel):
-    """统计结果
+    """統計結果
 
     """
 
     def __init__(self):
         """
-        :param ActionCount: 数量统计
+        :param ActionCount: 數量統計
         :type ActionCount: list of ActionCountStatistic
-        :param ActionDuration: 时长统计
+        :param ActionDuration: 時長統計
         :type ActionDuration: list of ActionDurationStatistic
-        :param ActionDurationRatio: 时长比例统计
+        :param ActionDurationRatio: 時長比例統計
         :type ActionDurationRatio: list of ActionDurationRatioStatistic
         """
         self.ActionCount = None
@@ -322,7 +322,7 @@ class ActionStatistic(AbstractModel):
 
 
 class ActionType(AbstractModel):
-    """动作行为子类型
+    """動作行爲子類型
 
     """
 
@@ -330,7 +330,7 @@ class ActionType(AbstractModel):
         """
         :param Confidence: 置信度
         :type Confidence: float
-        :param Type: 动作类别
+        :param Type: 動作類别
         :type Type: str
         """
         self.Confidence = None
@@ -343,17 +343,17 @@ class ActionType(AbstractModel):
 
 
 class AllMuteSlice(AbstractModel):
-    """如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
+    """如果請求中開啓了靜音檢測開關，則會返回所有的靜音片段（靜音時長超過阈值的片段）。
 
     """
 
     def __init__(self):
         """
-        :param MuteSlice: 所有静音片段。
+        :param MuteSlice: 所有靜音片段。
         :type MuteSlice: list of MuteSlice
-        :param MuteRatio: 静音时长占比。
+        :param MuteRatio: 靜音時長占比。
         :type MuteRatio: float
-        :param TotalMuteDuration: 静音总时长。
+        :param TotalMuteDuration: 靜音總時長。
         :type TotalMuteDuration: int
         """
         self.MuteSlice = None
@@ -373,15 +373,15 @@ class AllMuteSlice(AbstractModel):
 
 
 class AttendanceInfo(AbstractModel):
-    """识别到的人员信息
+    """識别到的人員訊息
 
     """
 
     def __init__(self):
         """
-        :param Face: 识别到的人员信息
+        :param Face: 識别到的人員訊息
         :type Face: :class:`tencentcloud.tci.v20190318.models.FrameInfo`
-        :param PersonId: 识别到的人员id
+        :param PersonId: 識别到的人員id
         :type PersonId: str
         """
         self.Face = None
@@ -396,7 +396,7 @@ class AttendanceInfo(AbstractModel):
 
 
 class BodyMovementResult(AbstractModel):
-    """老师肢体动作识别结果
+    """老師肢體動作識别結果
 
     """
 
@@ -404,19 +404,19 @@ class BodyMovementResult(AbstractModel):
         """
         :param Confidence: 置信度
         :type Confidence: float
-        :param Height: 识别结果高度
+        :param Height: 識别結果高度
         :type Height: int
-        :param Left: 识别结果左坐标
+        :param Left: 識别結果左坐标
         :type Left: int
-        :param Movements: 老师动作识别结果，包含
-1、teach_on_positive_attitude 正面讲解
+        :param Movements: 老師動作識别結果，包含
+1、teach_on_positive_attitude 正面講解
 2、point_to_the_blackboard 指黑板
-3、writing_blackboard 写板书
+3、writing_blackboard 寫板書
 4、other 其他
         :type Movements: str
-        :param Top: 识别结果顶坐标
+        :param Top: 識别結果頂坐标
         :type Top: int
-        :param Width: 识别结果宽度
+        :param Width: 識别結果寬度
         :type Width: int
         """
         self.Confidence = None
@@ -437,13 +437,13 @@ class BodyMovementResult(AbstractModel):
 
 
 class CancelTaskRequest(AbstractModel):
-    """CancelTask请求参数结构体
+    """CancelTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 待取消任务标志符。
+        :param JobId: 待取消任務标志符。
         :type JobId: int
         """
         self.JobId = None
@@ -454,15 +454,15 @@ class CancelTaskRequest(AbstractModel):
 
 
 class CancelTaskResponse(AbstractModel):
-    """CancelTask返回参数结构体
+    """CancelTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 取消任务标志符。
+        :param JobId: 取消任務标志符。
         :type JobId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.JobId = None
@@ -475,15 +475,15 @@ class CancelTaskResponse(AbstractModel):
 
 
 class CheckFacePhotoRequest(AbstractModel):
-    """CheckFacePhoto请求参数结构体
+    """CheckFacePhoto請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileContent: 输入分析对象内容
+        :param FileContent: 輸入分析對象内容
         :type FileContent: str
-        :param FileType: 输入分析对象类型，picture_url:图片地址
+        :param FileType: 輸入分析對象類型，picture_url:圖片網址
         :type FileType: str
         """
         self.FileContent = None
@@ -496,15 +496,15 @@ class CheckFacePhotoRequest(AbstractModel):
 
 
 class CheckFacePhotoResponse(AbstractModel):
-    """CheckFacePhoto返回参数结构体
+    """CheckFacePhoto返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CheckResult: 人脸检查结果，0：通过检查，1：图片模糊
+        :param CheckResult: 人臉檢查結果，0：通過檢查，1：圖片模糊
         :type CheckResult: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CheckResult = None
@@ -517,19 +517,19 @@ class CheckFacePhotoResponse(AbstractModel):
 
 
 class CreateFaceRequest(AbstractModel):
-    """CreateFace请求参数结构体
+    """CreateFace請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 人员唯一标识符
+        :param PersonId: 人員唯一标識符
         :type PersonId: str
-        :param Images: 图片数据 base64 字符串，与 Urls 参数选择一个输入
+        :param Images: 圖片數據 base64 字串，與 Urls 參數選擇一個輸入
         :type Images: list of str
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
-        :param Urls: 图片下载地址，与 Images 参数选择一个输入
+        :param Urls: 圖片下載網址，與 Images 參數選擇一個輸入
         :type Urls: list of str
         """
         self.PersonId = None
@@ -546,15 +546,15 @@ class CreateFaceRequest(AbstractModel):
 
 
 class CreateFaceResponse(AbstractModel):
-    """CreateFace返回参数结构体
+    """CreateFace返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FaceInfoSet: 人脸操作结果信息
+        :param FaceInfoSet: 人臉操作結果訊息
         :type FaceInfoSet: list of FaceInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FaceInfoSet = None
@@ -572,15 +572,15 @@ class CreateFaceResponse(AbstractModel):
 
 
 class CreateLibraryRequest(AbstractModel):
-    """CreateLibrary请求参数结构体
+    """CreateLibrary請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LibraryName: 人员库名称
+        :param LibraryName: 人員庫名稱
         :type LibraryName: str
-        :param LibraryId: 人员库唯一标志符，为空则系统自动生成。
+        :param LibraryId: 人員庫唯一标志符，爲空則系統自動生成。
         :type LibraryId: str
         """
         self.LibraryName = None
@@ -593,17 +593,17 @@ class CreateLibraryRequest(AbstractModel):
 
 
 class CreateLibraryResponse(AbstractModel):
-    """CreateLibrary返回参数结构体
+    """CreateLibrary返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
-        :param LibraryName: 人员库名称
+        :param LibraryName: 人員庫名稱
         :type LibraryName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.LibraryId = None
@@ -618,31 +618,31 @@ class CreateLibraryResponse(AbstractModel):
 
 
 class CreatePersonRequest(AbstractModel):
-    """CreatePerson请求参数结构体
+    """CreatePerson請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
-        :param PersonName: 人员名称
+        :param PersonName: 人員名稱
         :type PersonName: str
-        :param Images: 图片数据 base64 字符串，与 Urls 参数选择一个输入
+        :param Images: 圖片數據 base64 字串，與 Urls 參數選擇一個輸入
         :type Images: list of str
-        :param JobNumber: 人员工作号码
+        :param JobNumber: 人員工作号碼
         :type JobNumber: str
-        :param Mail: 人员邮箱
+        :param Mail: 人員電子信箱
         :type Mail: str
-        :param Male: 人员性别，0：未知 1：男性，2：女性
+        :param Male: 人員性别，0：未知 1：男性，2：女性
         :type Male: int
-        :param PersonId: 自定义人员 ID，注意不能使用 tci_person_ 前缀
+        :param PersonId: 自定義人員 ID，注意不能使用 tci_person_ 前綴
         :type PersonId: str
-        :param PhoneNumber: 人员电话号码
+        :param PhoneNumber: 人員電話号碼
         :type PhoneNumber: str
-        :param StudentNumber: 人员学生号码
+        :param StudentNumber: 人員學生号碼
         :type StudentNumber: str
-        :param Urls: 图片下载地址，与 Images 参数选择一个输入
+        :param Urls: 圖片下載網址，與 Images 參數選擇一個輸入
         :type Urls: list of str
         """
         self.LibraryId = None
@@ -671,21 +671,21 @@ class CreatePersonRequest(AbstractModel):
 
 
 class CreatePersonResponse(AbstractModel):
-    """CreatePerson返回参数结构体
+    """CreatePerson返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FaceInfoSet: 人脸操作结果信息
+        :param FaceInfoSet: 人臉操作結果訊息
         :type FaceInfoSet: list of FaceInfo
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
-        :param PersonId: 人员唯一标识符
+        :param PersonId: 人員唯一标識符
         :type PersonId: str
-        :param PersonName: 人员名称
+        :param PersonName: 人員名稱
         :type PersonName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FaceInfoSet = None
@@ -709,13 +709,13 @@ class CreatePersonResponse(AbstractModel):
 
 
 class CreateVocabLibRequest(AbstractModel):
-    """CreateVocabLib请求参数结构体
+    """CreateVocabLib請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabLibName: 词汇库名称
+        :param VocabLibName: 詞匯庫名稱
         :type VocabLibName: str
         """
         self.VocabLibName = None
@@ -726,13 +726,13 @@ class CreateVocabLibRequest(AbstractModel):
 
 
 class CreateVocabLibResponse(AbstractModel):
-    """CreateVocabLib返回参数结构体
+    """CreateVocabLib返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -743,15 +743,15 @@ class CreateVocabLibResponse(AbstractModel):
 
 
 class CreateVocabRequest(AbstractModel):
-    """CreateVocab请求参数结构体
+    """CreateVocab請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabLibName: 要添加词汇的词汇库名
+        :param VocabLibName: 要添加詞匯的詞匯庫名
         :type VocabLibName: str
-        :param VocabList: 要添加的词汇列表
+        :param VocabList: 要添加的詞匯清單
         :type VocabList: list of str
         """
         self.VocabLibName = None
@@ -764,13 +764,13 @@ class CreateVocabRequest(AbstractModel):
 
 
 class CreateVocabResponse(AbstractModel):
-    """CreateVocab返回参数结构体
+    """CreateVocab返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -781,17 +781,17 @@ class CreateVocabResponse(AbstractModel):
 
 
 class DeleteFaceRequest(AbstractModel):
-    """DeleteFace请求参数结构体
+    """DeleteFace請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FaceIdSet: 人脸标识符数组
+        :param FaceIdSet: 人臉标識符數組
         :type FaceIdSet: list of str
-        :param PersonId: 人员唯一标识符
+        :param PersonId: 人員唯一标識符
         :type PersonId: str
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
         """
         self.FaceIdSet = None
@@ -806,15 +806,15 @@ class DeleteFaceRequest(AbstractModel):
 
 
 class DeleteFaceResponse(AbstractModel):
-    """DeleteFace返回参数结构体
+    """DeleteFace返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FaceInfoSet: 人脸操作结果
+        :param FaceInfoSet: 人臉操作結果
         :type FaceInfoSet: list of FaceInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FaceInfoSet = None
@@ -832,13 +832,13 @@ class DeleteFaceResponse(AbstractModel):
 
 
 class DeleteLibraryRequest(AbstractModel):
-    """DeleteLibrary请求参数结构体
+    """DeleteLibrary請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
         """
         self.LibraryId = None
@@ -849,17 +849,17 @@ class DeleteLibraryRequest(AbstractModel):
 
 
 class DeleteLibraryResponse(AbstractModel):
-    """DeleteLibrary返回参数结构体
+    """DeleteLibrary返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
-        :param LibraryName: 人员库名称
+        :param LibraryName: 人員庫名稱
         :type LibraryName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.LibraryId = None
@@ -874,15 +874,15 @@ class DeleteLibraryResponse(AbstractModel):
 
 
 class DeletePersonRequest(AbstractModel):
-    """DeletePerson请求参数结构体
+    """DeletePerson請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
-        :param PersonId: 人员唯一标识符
+        :param PersonId: 人員唯一标識符
         :type PersonId: str
         """
         self.LibraryId = None
@@ -895,21 +895,21 @@ class DeletePersonRequest(AbstractModel):
 
 
 class DeletePersonResponse(AbstractModel):
-    """DeletePerson返回参数结构体
+    """DeletePerson返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FaceInfoSet: 人脸信息
+        :param FaceInfoSet: 人臉訊息
         :type FaceInfoSet: list of FaceInfo
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
-        :param PersonId: 人员唯一标识符
+        :param PersonId: 人員唯一标識符
         :type PersonId: str
-        :param PersonName: 人员名称
+        :param PersonName: 人員名稱
         :type PersonName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FaceInfoSet = None
@@ -933,13 +933,13 @@ class DeletePersonResponse(AbstractModel):
 
 
 class DeleteVocabLibRequest(AbstractModel):
-    """DeleteVocabLib请求参数结构体
+    """DeleteVocabLib請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabLibName: 词汇库名称
+        :param VocabLibName: 詞匯庫名稱
         :type VocabLibName: str
         """
         self.VocabLibName = None
@@ -950,13 +950,13 @@ class DeleteVocabLibRequest(AbstractModel):
 
 
 class DeleteVocabLibResponse(AbstractModel):
-    """DeleteVocabLib返回参数结构体
+    """DeleteVocabLib返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -967,15 +967,15 @@ class DeleteVocabLibResponse(AbstractModel):
 
 
 class DeleteVocabRequest(AbstractModel):
-    """DeleteVocab请求参数结构体
+    """DeleteVocab請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabLibName: 要删除词汇的词汇库名
+        :param VocabLibName: 要删除詞匯的詞匯庫名
         :type VocabLibName: str
-        :param VocabList: 要删除的词汇列表
+        :param VocabList: 要删除的詞匯清單
         :type VocabList: list of str
         """
         self.VocabLibName = None
@@ -988,13 +988,13 @@ class DeleteVocabRequest(AbstractModel):
 
 
 class DeleteVocabResponse(AbstractModel):
-    """DeleteVocab返回参数结构体
+    """DeleteVocab返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1005,15 +1005,15 @@ class DeleteVocabResponse(AbstractModel):
 
 
 class DescribeAITaskResultRequest(AbstractModel):
-    """DescribeAITaskResult请求参数结构体
+    """DescribeAITaskResult請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务唯一标识符。在URL方式时提交请求后会返回一个任务标识符，后续查询该url的结果时使用这个标识符进行查询。
+        :param TaskId: 任務唯一标識符。在URL方式時提交請求後會返回一個任務标識符，後續查詢該url的結果時使用這個标識符進行查詢。
         :type TaskId: int
-        :param Limit: 限制数目
+        :param Limit: 限制數目
         :type Limit: int
         :param Offset: 偏移量
         :type Offset: int
@@ -1030,23 +1030,23 @@ class DescribeAITaskResultRequest(AbstractModel):
 
 
 class DescribeAITaskResultResponse(AbstractModel):
-    """DescribeAITaskResult返回参数结构体
+    """DescribeAITaskResult返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AudioResult: 音频分析结果
+        :param AudioResult: 音訊分析結果
         :type AudioResult: :class:`tencentcloud.tci.v20190318.models.StandardAudioResult`
-        :param ImageResult: 图像分析结果
+        :param ImageResult: 圖像分析結果
         :type ImageResult: :class:`tencentcloud.tci.v20190318.models.StandardImageResult`
-        :param VideoResult: 视频分析结果
+        :param VideoResult: 視訊分析結果
         :type VideoResult: :class:`tencentcloud.tci.v20190318.models.StandardVideoResult`
-        :param Status: 任务状态
+        :param Status: 任務狀态
         :type Status: str
-        :param TaskId: 任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
+        :param TaskId: 任務唯一id。在URL方式時提交請求後會返回一個jobid，後續查詢該url的結果時使用這個jobid進行查詢。
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AudioResult = None
@@ -1073,13 +1073,13 @@ class DescribeAITaskResultResponse(AbstractModel):
 
 
 class DescribeAttendanceResultRequest(AbstractModel):
-    """DescribeAttendanceResult请求参数结构体
+    """DescribeAttendanceResult請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 任务唯一标识符
+        :param JobId: 任務唯一标識符
         :type JobId: int
         """
         self.JobId = None
@@ -1090,23 +1090,23 @@ class DescribeAttendanceResultRequest(AbstractModel):
 
 
 class DescribeAttendanceResultResponse(AbstractModel):
-    """DescribeAttendanceResult返回参数结构体
+    """DescribeAttendanceResult返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AbsenceSetInLibs: 缺失人员的ID列表(只针对请求中的libids字段)
+        :param AbsenceSetInLibs: 缺失人員的ID清單(只針對請求中的libids欄位)
         :type AbsenceSetInLibs: list of AbsenceInfo
-        :param AttendanceSet: 确定出勤人员列表
+        :param AttendanceSet: 确定出勤人員清單
         :type AttendanceSet: list of AttendanceInfo
-        :param SuspectedSet: 疑似出勤人员列表
+        :param SuspectedSet: 疑似出勤人員清單
         :type SuspectedSet: list of SuspectedInfo
-        :param AbsenceSet: 缺失人员的ID列表(只针对请求中的personids字段)
+        :param AbsenceSet: 缺失人員的ID清單(只針對請求中的personids欄位)
         :type AbsenceSet: list of str
-        :param Progress: 请求处理进度
+        :param Progress: 請求處理進度
         :type Progress: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AbsenceSetInLibs = None
@@ -1142,15 +1142,15 @@ class DescribeAttendanceResultResponse(AbstractModel):
 
 
 class DescribeAudioTaskRequest(AbstractModel):
-    """DescribeAudioTask请求参数结构体
+    """DescribeAudioTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
+        :param JobId: 音訊任務唯一id。在URL方式時提交請求後會返回一個jobid，後續查詢該url的結果時使用這個jobid進行查詢。
         :type JobId: int
-        :param Limit: 限制数目
+        :param Limit: 限制數目
         :type Limit: int
         :param Offset: 偏移量
         :type Offset: int
@@ -1167,31 +1167,31 @@ class DescribeAudioTaskRequest(AbstractModel):
 
 
 class DescribeAudioTaskResponse(AbstractModel):
-    """DescribeAudioTask返回参数结构体
+    """DescribeAudioTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AllMuteSlice: 如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
+        :param AllMuteSlice: 如果請求中開啓了靜音檢測開關，則會返回所有的靜音片段（靜音時長超過阈值的片段）。
         :type AllMuteSlice: :class:`tencentcloud.tci.v20190318.models.AllMuteSlice`
-        :param AsrStat: 返回的当前音频的统计信息。当进度为100时返回。
+        :param AsrStat: 返回的當前音訊的統計訊息。當進度爲100時返回。
         :type AsrStat: :class:`tencentcloud.tci.v20190318.models.ASRStat`
-        :param Texts: 返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
+        :param Texts: 返回當前音訊流的詳細訊息，如果是流模式，返回的是對應流的詳細訊息，如果是 URL模式，返回的是查詢的那一段seq對應的音訊的詳細訊息。
         :type Texts: list of WholeTextItem
-        :param VocabAnalysisDetailInfo: 返回词汇库中的单词出现的详细时间信息。
+        :param VocabAnalysisDetailInfo: 返回詞匯庫中的單詞出現的詳細時間訊息。
         :type VocabAnalysisDetailInfo: list of VocabDetailInfomation
-        :param VocabAnalysisStatInfo: 返回词汇库中的单词出现的次数信息。
+        :param VocabAnalysisStatInfo: 返回詞匯庫中的單詞出現的次數訊息。
         :type VocabAnalysisStatInfo: list of VocabStatInfomation
-        :param AllTexts: 返回音频全部文本。
+        :param AllTexts: 返回音訊全部文本。
         :type AllTexts: str
-        :param JobId: 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
+        :param JobId: 音訊任務唯一id。在URL方式時提交請求後會返回一個jobid，後續查詢該url的結果時使用這個jobid進行查詢。
         :type JobId: int
-        :param Progress: 返回的当前处理进度。
+        :param Progress: 返回的當前處理進度。
         :type Progress: float
-        :param TotalCount: 结果总数
+        :param TotalCount: 結果總數
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AllMuteSlice = None
@@ -1239,17 +1239,17 @@ class DescribeAudioTaskResponse(AbstractModel):
 
 
 class DescribeConversationTaskRequest(AbstractModel):
-    """DescribeConversationTask请求参数结构体
+    """DescribeConversationTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
+        :param JobId: 音訊任務唯一id。在URL方式時提交請求後會返回一個jobid，後續查詢該url的結果時使用這個jobid進行查詢。
         :type JobId: int
-        :param Identity: 要查询明细的流的身份，1 老师 2 学生
+        :param Identity: 要查詢明細的流的身份，1 老師 2 學生
         :type Identity: int
-        :param Limit: 限制数目
+        :param Limit: 限制數目
         :type Limit: int
         :param Offset: 偏移量
         :type Offset: int
@@ -1268,29 +1268,29 @@ class DescribeConversationTaskRequest(AbstractModel):
 
 
 class DescribeConversationTaskResponse(AbstractModel):
-    """DescribeConversationTask返回参数结构体
+    """DescribeConversationTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AsrStat: 返回的当前音频的统计信息。当进度为100时返回。
+        :param AsrStat: 返回的當前音訊的統計訊息。當進度爲100時返回。
         :type AsrStat: :class:`tencentcloud.tci.v20190318.models.ASRStat`
-        :param Texts: 返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
+        :param Texts: 返回當前音訊流的詳細訊息，如果是流模式，返回的是對應流的詳細訊息，如果是 URL模式，返回的是查詢的那一段seq對應的音訊的詳細訊息。
         :type Texts: list of WholeTextItem
-        :param VocabAnalysisDetailInfo: 返回词汇库中的单词出现的详细时间信息。
+        :param VocabAnalysisDetailInfo: 返回詞匯庫中的單詞出現的詳細時間訊息。
         :type VocabAnalysisDetailInfo: list of VocabDetailInfomation
-        :param VocabAnalysisStatInfo: 返回词汇库中的单词出现的次数信息。
+        :param VocabAnalysisStatInfo: 返回詞匯庫中的單詞出現的次數訊息。
         :type VocabAnalysisStatInfo: list of VocabStatInfomation
-        :param AllTexts: 整个音频流的全部文本
+        :param AllTexts: 整個音訊流的全部文本
         :type AllTexts: str
-        :param JobId: 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
+        :param JobId: 音訊任務唯一id。在URL方式時提交請求後會返回一個jobid，後續查詢該url的結果時使用這個jobid進行查詢。
         :type JobId: int
-        :param Progress: 返回的当前处理进度。
+        :param Progress: 返回的當前處理進度。
         :type Progress: float
-        :param TotalCount: 结果总数
+        :param TotalCount: 結果總數
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AsrStat = None
@@ -1334,13 +1334,13 @@ class DescribeConversationTaskResponse(AbstractModel):
 
 
 class DescribeHighlightResultRequest(AbstractModel):
-    """DescribeHighlightResult请求参数结构体
+    """DescribeHighlightResult請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 精彩集锦任务唯一id。在URL方式时提交请求后会返回一个JobId，后续查询该url的结果时使用这个JobId进行查询。
+        :param JobId: 精彩集錦任務唯一id。在URL方式時提交請求後會返回一個JobId，後續查詢該url的結果時使用這個JobId進行查詢。
         :type JobId: int
         """
         self.JobId = None
@@ -1351,19 +1351,19 @@ class DescribeHighlightResultRequest(AbstractModel):
 
 
 class DescribeHighlightResultResponse(AbstractModel):
-    """DescribeHighlightResult返回参数结构体
+    """DescribeHighlightResult返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param HighlightsInfo: 精彩集锦详细信息。
+        :param HighlightsInfo: 精彩集錦詳細訊息。
         :type HighlightsInfo: list of HighlightsInfomation
-        :param JobId: 精彩集锦任务唯一id。在URL方式时提交请求后会返回一个JobId，后续查询该url的结果时使用这个JobId进行查询。
+        :param JobId: 精彩集錦任務唯一id。在URL方式時提交請求後會返回一個JobId，後續查詢該url的結果時使用這個JobId進行查詢。
         :type JobId: int
-        :param Progress: 任务的进度百分比，100表示任务已完成。
+        :param Progress: 任務的進度百分比，100表示任務已完成。
         :type Progress: float
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.HighlightsInfo = None
@@ -1385,15 +1385,15 @@ class DescribeHighlightResultResponse(AbstractModel):
 
 
 class DescribeImageTaskRequest(AbstractModel):
-    """DescribeImageTask请求参数结构体
+    """DescribeImageTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 任务标识符
+        :param JobId: 任務标識符
         :type JobId: int
-        :param Limit: 限制数目
+        :param Limit: 限制數目
         :type Limit: int
         :param Offset: 偏移量
         :type Offset: int
@@ -1410,21 +1410,21 @@ class DescribeImageTaskRequest(AbstractModel):
 
 
 class DescribeImageTaskResponse(AbstractModel):
-    """DescribeImageTask返回参数结构体
+    """DescribeImageTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResultSet: 任务处理结果
+        :param ResultSet: 任務處理結果
         :type ResultSet: list of ImageTaskResult
-        :param JobId: 任务唯一标识
+        :param JobId: 任務唯一标識
         :type JobId: int
-        :param Progress: 任务执行进度
+        :param Progress: 任務執行進度
         :type Progress: int
-        :param TotalCount: 任务结果数目
+        :param TotalCount: 任務結果數目
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResultSet = None
@@ -1448,13 +1448,13 @@ class DescribeImageTaskResponse(AbstractModel):
 
 
 class DescribeImageTaskStatisticRequest(AbstractModel):
-    """DescribeImageTaskStatistic请求参数结构体
+    """DescribeImageTaskStatistic請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 图像任务标识符
+        :param JobId: 圖像任務标識符
         :type JobId: int
         """
         self.JobId = None
@@ -1465,17 +1465,17 @@ class DescribeImageTaskStatisticRequest(AbstractModel):
 
 
 class DescribeImageTaskStatisticResponse(AbstractModel):
-    """DescribeImageTaskStatistic返回参数结构体
+    """DescribeImageTaskStatistic返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Statistic: 任务统计信息
+        :param Statistic: 任務統計訊息
         :type Statistic: :class:`tencentcloud.tci.v20190318.models.ImageTaskStatistic`
-        :param JobId: 图像任务唯一标识符
+        :param JobId: 圖像任務唯一标識符
         :type JobId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Statistic = None
@@ -1492,23 +1492,23 @@ class DescribeImageTaskStatisticResponse(AbstractModel):
 
 
 class DescribeLibrariesRequest(AbstractModel):
-    """DescribeLibraries请求参数结构体
+    """DescribeLibraries請求參數結構體
 
     """
 
 
 class DescribeLibrariesResponse(AbstractModel):
-    """DescribeLibraries返回参数结构体
+    """DescribeLibraries返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LibrarySet: 人员库列表
+        :param LibrarySet: 人員庫清單
         :type LibrarySet: list of Library
-        :param TotalCount: 人员库总数量
+        :param TotalCount: 人員庫總數量
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.LibrarySet = None
@@ -1528,15 +1528,15 @@ class DescribeLibrariesResponse(AbstractModel):
 
 
 class DescribePersonRequest(AbstractModel):
-    """DescribePerson请求参数结构体
+    """DescribePerson請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
-        :param PersonId: 人员唯一标识符
+        :param PersonId: 人員唯一标識符
         :type PersonId: str
         """
         self.LibraryId = None
@@ -1549,35 +1549,35 @@ class DescribePersonRequest(AbstractModel):
 
 
 class DescribePersonResponse(AbstractModel):
-    """DescribePerson返回参数结构体
+    """DescribePerson返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FaceSet: 人员人脸列表
+        :param FaceSet: 人員人臉清單
         :type FaceSet: list of Face
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param JobNumber: 工作号码
+        :param JobNumber: 工作号碼
         :type JobNumber: str
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
-        :param Mail: 邮箱
+        :param Mail: 電子信箱
         :type Mail: str
         :param Male: 性别
         :type Male: int
-        :param PersonId: 人员唯一标识符
+        :param PersonId: 人員唯一标識符
         :type PersonId: str
-        :param PersonName: 人员名称
+        :param PersonName: 人員名稱
         :type PersonName: str
-        :param PhoneNumber: 电话号码
+        :param PhoneNumber: 電話号碼
         :type PhoneNumber: str
-        :param StudentNumber: 学生号码
+        :param StudentNumber: 學生号碼
         :type StudentNumber: str
-        :param UpdateTime: 修改时间
+        :param UpdateTime: 修改時間
         :type UpdateTime: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FaceSet = None
@@ -1615,15 +1615,15 @@ class DescribePersonResponse(AbstractModel):
 
 
 class DescribePersonsRequest(AbstractModel):
-    """DescribePersons请求参数结构体
+    """DescribePersons請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
-        :param Limit: 限制数目
+        :param Limit: 限制數目
         :type Limit: int
         :param Offset: 偏移量
         :type Offset: int
@@ -1640,17 +1640,17 @@ class DescribePersonsRequest(AbstractModel):
 
 
 class DescribePersonsResponse(AbstractModel):
-    """DescribePersons返回参数结构体
+    """DescribePersons返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonSet: 人员列表
+        :param PersonSet: 人員清單
         :type PersonSet: list of Person
-        :param TotalCount: 人员总数
+        :param TotalCount: 人員總數
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PersonSet = None
@@ -1670,21 +1670,21 @@ class DescribePersonsResponse(AbstractModel):
 
 
 class DescribeVocabLibRequest(AbstractModel):
-    """DescribeVocabLib请求参数结构体
+    """DescribeVocabLib請求參數結構體
 
     """
 
 
 class DescribeVocabLibResponse(AbstractModel):
-    """DescribeVocabLib返回参数结构体
+    """DescribeVocabLib返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabLibNameSet: 返回该appid下的所有词汇库名
+        :param VocabLibNameSet: 返回該appid下的所有詞匯庫名
         :type VocabLibNameSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.VocabLibNameSet = None
@@ -1697,13 +1697,13 @@ class DescribeVocabLibResponse(AbstractModel):
 
 
 class DescribeVocabRequest(AbstractModel):
-    """DescribeVocab请求参数结构体
+    """DescribeVocab請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabLibName: 要查询词汇的词汇库名
+        :param VocabLibName: 要查詢詞匯的詞匯庫名
         :type VocabLibName: str
         """
         self.VocabLibName = None
@@ -1714,15 +1714,15 @@ class DescribeVocabRequest(AbstractModel):
 
 
 class DescribeVocabResponse(AbstractModel):
-    """DescribeVocab返回参数结构体
+    """DescribeVocab返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabNameSet: 词汇列表
+        :param VocabNameSet: 詞匯清單
         :type VocabNameSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.VocabNameSet = None
@@ -1735,15 +1735,15 @@ class DescribeVocabResponse(AbstractModel):
 
 
 class DetailInfo(AbstractModel):
-    """单词出现的那个句子的起始时间和结束时间信息
+    """單詞出現的那個句子的起始時間和結束時間訊息
 
     """
 
     def __init__(self):
         """
-        :param Value: 单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
+        :param Value: 單詞出現在該音訊中的那個句子的時間戳，出現了幾次， 就返回對應次數的起始和結束時間戳
         :type Value: list of WordTimePair
-        :param Keyword: 词汇库中的单词
+        :param Keyword: 詞匯庫中的單詞
         :type Keyword: str
         """
         self.Value = None
@@ -1761,13 +1761,13 @@ class DetailInfo(AbstractModel):
 
 
 class DoubleVideoFunction(AbstractModel):
-    """双路混流视频集锦开关项
+    """雙路混流視訊集錦開關項
 
     """
 
     def __init__(self):
         """
-        :param EnableCoverPictures: 片头片尾增加图片开关
+        :param EnableCoverPictures: 片頭片尾增加圖片開關
         :type EnableCoverPictures: bool
         """
         self.EnableCoverPictures = None
@@ -1778,19 +1778,19 @@ class DoubleVideoFunction(AbstractModel):
 
 
 class ExpressRatioStatistic(AbstractModel):
-    """表情比例统计
+    """表情比例統計
 
     """
 
     def __init__(self):
         """
-        :param Count: 出现次数
+        :param Count: 出現次數
         :type Count: int
         :param Express: 表情
         :type Express: str
-        :param Ratio: 该表情时长占所有表情时长的比例
+        :param Ratio: 該表情時長占所有表情時長的比例
         :type Ratio: float
-        :param RatioUseDuration: 该表情时长占视频总时长的比例
+        :param RatioUseDuration: 該表情時長占視訊總時長的比例
         :type RatioUseDuration: float
         """
         self.Count = None
@@ -1807,17 +1807,17 @@ class ExpressRatioStatistic(AbstractModel):
 
 
 class Face(AbstractModel):
-    """人脸描述
+    """人臉描述
 
     """
 
     def __init__(self):
         """
-        :param FaceId: 人脸唯一标识符
+        :param FaceId: 人臉唯一标識符
         :type FaceId: str
-        :param FaceUrl: 人脸图片 URL
+        :param FaceUrl: 人臉圖片 URL
         :type FaceUrl: str
-        :param PersonId: 人员唯一标识符
+        :param PersonId: 人員唯一标識符
         :type PersonId: str
         """
         self.FaceId = None
@@ -1838,7 +1838,7 @@ class FaceAttrResult(AbstractModel):
 
     def __init__(self):
         """
-        :param Age: 年龄
+        :param Age: 年齡
         :type Age: int
         :param Sex: 性别
         :type Sex: str
@@ -1853,27 +1853,27 @@ class FaceAttrResult(AbstractModel):
 
 
 class FaceDetectStatistic(AbstractModel):
-    """人脸监测统计信息
+    """人臉監測統計訊息
 
     """
 
     def __init__(self):
         """
-        :param FaceSizeRatio: 人脸大小占画面平均占比
+        :param FaceSizeRatio: 人臉大小占畫面平均占比
         :type FaceSizeRatio: float
-        :param FrontalFaceCount: 检测到正脸次数
+        :param FrontalFaceCount: 檢測到正臉次數
         :type FrontalFaceCount: int
-        :param FrontalFaceRatio: 正脸时长占比
+        :param FrontalFaceRatio: 正臉時長占比
         :type FrontalFaceRatio: float
-        :param FrontalFaceRealRatio: 正脸时长在总出现时常占比
+        :param FrontalFaceRealRatio: 正臉時長在總出現時常占比
         :type FrontalFaceRealRatio: float
-        :param PersonId: 人员唯一标识符
+        :param PersonId: 人員唯一标識符
         :type PersonId: str
-        :param SideFaceCount: 检测到侧脸次数
+        :param SideFaceCount: 檢測到側臉次數
         :type SideFaceCount: int
-        :param SideFaceRatio: 侧脸时长占比
+        :param SideFaceRatio: 側臉時長占比
         :type SideFaceRatio: float
-        :param SideFaceRealRatio: 侧脸时长在总出现时常占比
+        :param SideFaceRealRatio: 側臉時長在總出現時常占比
         :type SideFaceRealRatio: float
         """
         self.FaceSizeRatio = None
@@ -1898,15 +1898,15 @@ class FaceDetectStatistic(AbstractModel):
 
 
 class FaceExpressStatistic(AbstractModel):
-    """人脸表情统计结果
+    """人臉表情統計結果
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 人员唯一标识符
+        :param PersonId: 人員唯一标識符
         :type PersonId: str
-        :param ExpressRatio: 表情统计结果
+        :param ExpressRatio: 表情統計結果
         :type ExpressRatio: list of ExpressRatioStatistic
         """
         self.PersonId = None
@@ -1932,7 +1932,7 @@ class FaceExpressionResult(AbstractModel):
         """
         :param Confidence: 表情置信度
         :type Confidence: float
-        :param Expression: 表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视"
+        :param Expression: 表情識别結果，包括"neutral":中性,"happiness":開心，"angry":"生氣"，"disgust":厭惡，"fear":"恐懼"，"sadness":"悲傷"，"surprise":"驚訝"，"contempt":"蔑視"
         :type Expression: str
         """
         self.Confidence = None
@@ -1951,11 +1951,11 @@ class FaceIdentifyResult(AbstractModel):
 
     def __init__(self):
         """
-        :param FaceId: 人脸标识符
+        :param FaceId: 人臉标識符
         :type FaceId: str
-        :param LibraryId: 人员库标识符
+        :param LibraryId: 人員庫标識符
         :type LibraryId: str
-        :param PersonId: 人员标识符
+        :param PersonId: 人員标識符
         :type PersonId: str
         :param Similarity: 相似度
         :type Similarity: float
@@ -1974,21 +1974,21 @@ class FaceIdentifyResult(AbstractModel):
 
 
 class FaceIdentifyStatistic(AbstractModel):
-    """人员检索统计结果
+    """人員檢索統計結果
 
     """
 
     def __init__(self):
         """
-        :param Duration: 持续时间
+        :param Duration: 持續時間
         :type Duration: int
-        :param EndTs: 结束时间
+        :param EndTs: 結束時間
         :type EndTs: int
-        :param PersonId: 人员唯一标识符
+        :param PersonId: 人員唯一标識符
         :type PersonId: str
         :param Similarity: 相似度
         :type Similarity: float
-        :param StartTs: 开始时间
+        :param StartTs: 開始時間
         :type StartTs: int
         """
         self.Duration = None
@@ -2007,21 +2007,21 @@ class FaceIdentifyStatistic(AbstractModel):
 
 
 class FaceInfo(AbstractModel):
-    """人脸操作信息
+    """人臉操作訊息
 
     """
 
     def __init__(self):
         """
-        :param ErrorCode: 人脸操作错误码
+        :param ErrorCode: 人臉操作錯誤碼
         :type ErrorCode: str
-        :param ErrorMsg: 人脸操作结果信息
+        :param ErrorMsg: 人臉操作結果訊息
         :type ErrorMsg: str
-        :param FaceId: 人脸唯一标识符
+        :param FaceId: 人臉唯一标識符
         :type FaceId: str
-        :param FaceUrl: 人脸保存地址
+        :param FaceUrl: 人臉保存網址
         :type FaceUrl: str
-        :param PersonId: 人员唯一标识
+        :param PersonId: 人員唯一标識
         :type PersonId: str
         """
         self.ErrorCode = None
@@ -2046,19 +2046,19 @@ class FaceInfoResult(AbstractModel):
 
     def __init__(self):
         """
-        :param FaceRatio: 人脸尺寸的占比
+        :param FaceRatio: 人臉尺寸的占比
         :type FaceRatio: float
-        :param FrameHeight: 帧高度
+        :param FrameHeight: 幀高度
         :type FrameHeight: int
-        :param FrameWidth: 帧宽度
+        :param FrameWidth: 幀寬度
         :type FrameWidth: int
-        :param Height: 人脸高度
+        :param Height: 人臉高度
         :type Height: int
-        :param Left: 人脸左坐标
+        :param Left: 人臉左坐标
         :type Left: int
-        :param Top: 人脸顶坐标
+        :param Top: 人臉頂坐标
         :type Top: int
-        :param Width: 人脸宽度
+        :param Width: 人臉寬度
         :type Width: int
         """
         self.FaceRatio = None
@@ -2087,13 +2087,13 @@ class FacePoseResult(AbstractModel):
 
     def __init__(self):
         """
-        :param Direction: 正脸或侧脸的消息
+        :param Direction: 正臉或側臉的訊息
         :type Direction: str
-        :param Pitch: 围绕Z轴旋转角度，俯仰角
+        :param Pitch: 圍繞Z軸旋轉角度，俯仰角
         :type Pitch: float
-        :param Roll: 围绕X轴旋转角度，翻滚角
+        :param Roll: 圍繞X軸旋轉角度，翻滾角
         :type Roll: float
-        :param Yaw: 围绕Y轴旋转角度，偏航角
+        :param Yaw: 圍繞Y軸旋轉角度，偏航角
         :type Yaw: float
         """
         self.Direction = None
@@ -2110,7 +2110,7 @@ class FacePoseResult(AbstractModel):
 
 
 class FrameInfo(AbstractModel):
-    """人员信息
+    """人員訊息
 
     """
 
@@ -2118,9 +2118,9 @@ class FrameInfo(AbstractModel):
         """
         :param Similarity: 相似度
         :type Similarity: float
-        :param SnapshotUrl: 截图的存储地址
+        :param SnapshotUrl: 截圖的儲存網址
         :type SnapshotUrl: str
-        :param Ts: 相对于视频起始时间的时间戳，单位秒
+        :param Ts: 相對于視訊起始時間的時間戳，單位秒
         :type Ts: int
         """
         self.Similarity = None
@@ -2135,21 +2135,21 @@ class FrameInfo(AbstractModel):
 
 
 class Function(AbstractModel):
-    """功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+    """功能開關清單，表示是否需要打開相應的功能，返回相應的訊息
 
     """
 
     def __init__(self):
         """
-        :param EnableAllText: 输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
+        :param EnableAllText: 輸出全部文本标識，當該值設置爲true時，會輸出當前音訊的全部文本
         :type EnableAllText: bool
-        :param EnableKeyword: 输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。
+        :param EnableKeyword: 輸出關鍵詞訊息标識，當該值設置爲true時，會輸出當前音訊的關鍵詞訊息。
         :type EnableKeyword: bool
-        :param EnableMuteDetect: 静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。
+        :param EnableMuteDetect: 靜音檢測标識，當設置爲 true 時，需要設置靜音時間阈值欄位mute_threshold，統計結果中會返回靜音片段。
         :type EnableMuteDetect: bool
-        :param EnableVadInfo: 输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat）
+        :param EnableVadInfo: 輸出音訊統計訊息标識，當設置爲 true 時，任務查詢結果會輸出音訊的統計訊息（AsrStat）
         :type EnableVadInfo: bool
-        :param EnableVolume: 输出音频音量信息标识，当设置为 true 时，会输出当前音频音量信息。
+        :param EnableVolume: 輸出音訊音量訊息标識，當設置爲 true 時，會輸出當前音訊音量訊息。
         :type EnableVolume: bool
         """
         self.EnableAllText = None
@@ -2174,17 +2174,17 @@ class GestureResult(AbstractModel):
 
     def __init__(self):
         """
-        :param Class: 识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
+        :param Class: 識别結果，包含"USPEAK":聽你說，"LISTEN":聽我說，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
         :type Class: str
         :param Confidence: 置信度
         :type Confidence: float
-        :param Height: 识别结果高度
+        :param Height: 識别結果高度
         :type Height: int
-        :param Left: 识别结果左坐标
+        :param Left: 識别結果左坐标
         :type Left: int
-        :param Top: 识别结果顶坐标
+        :param Top: 識别結果頂坐标
         :type Top: int
-        :param Width: 识别结果宽度
+        :param Width: 識别結果寬度
         :type Width: int
         """
         self.Class = None
@@ -2205,21 +2205,21 @@ class GestureResult(AbstractModel):
 
 
 class HLFunction(AbstractModel):
-    """检索配置开关项
+    """檢索配置開關項
 
     """
 
     def __init__(self):
         """
-        :param EnableFaceDetect: 是否开启人脸检测
+        :param EnableFaceDetect: 是否開啓人臉檢測
         :type EnableFaceDetect: bool
-        :param EnableFaceExpression: 是否开启表情识别
+        :param EnableFaceExpression: 是否開啓表情識别
         :type EnableFaceExpression: bool
-        :param EnableFaceIdent: 是否开启人脸检索
+        :param EnableFaceIdent: 是否開啓人臉檢索
         :type EnableFaceIdent: bool
-        :param EnableKeywordWonderfulTime: 是否开启视频集锦-老师关键字识别
+        :param EnableKeywordWonderfulTime: 是否開啓視訊集錦-老師關鍵字識别
         :type EnableKeywordWonderfulTime: bool
-        :param EnableSmileWonderfulTime: 是否开启视频集锦-微笑识别
+        :param EnableSmileWonderfulTime: 是否開啓視訊集錦-微笑識别
         :type EnableSmileWonderfulTime: bool
         """
         self.EnableFaceDetect = None
@@ -2244,17 +2244,17 @@ class HandTrackingResult(AbstractModel):
 
     def __init__(self):
         """
-        :param Class: 识别结果
+        :param Class: 識别結果
         :type Class: str
         :param Confidence: 置信度
         :type Confidence: float
-        :param Height: 识别结果高度
+        :param Height: 識别結果高度
         :type Height: int
-        :param Left: 识别结果左坐标
+        :param Left: 識别結果左坐标
         :type Left: int
-        :param Top: 识别结果顶坐标
+        :param Top: 識别結果頂坐标
         :type Top: int
-        :param Width: 识别结果宽度
+        :param Width: 識别結果寬度
         :type Width: int
         """
         self.Class = None
@@ -2275,19 +2275,19 @@ class HandTrackingResult(AbstractModel):
 
 
 class HighlightsInfomation(AbstractModel):
-    """精彩集锦信息
+    """精彩集錦訊息
 
     """
 
     def __init__(self):
         """
-        :param Concentration: 专注的起始与终止时间信息。
+        :param Concentration: 專注的起始與終止時間訊息。
         :type Concentration: list of TimeType
-        :param Smile: 微笑的起始与终止时间信息。
+        :param Smile: 微笑的起始與終止時間訊息。
         :type Smile: list of TimeType
-        :param HighlightsUrl: 高光集锦视频地址，保存剪辑好的视频地址。
+        :param HighlightsUrl: 高光集錦視訊網址，保存剪輯好的視訊網址。
         :type HighlightsUrl: str
-        :param PersonId: 片段中识别出来的人脸ID。
+        :param PersonId: 片段中識别出來的人臉ID。
         :type PersonId: str
         """
         self.Concentration = None
@@ -2314,31 +2314,31 @@ class HighlightsInfomation(AbstractModel):
 
 
 class ImageTaskFunction(AbstractModel):
-    """图像任务控制选项
+    """圖像任務控制選項
 
     """
 
     def __init__(self):
         """
-        :param EnableActionClass: 大教室场景学生肢体动作识别选项
+        :param EnableActionClass: 大教室場景學生肢體動作識别選項
         :type EnableActionClass: bool
-        :param EnableFaceDetect: 人脸检测选项（默认为true，目前不可编辑）
+        :param EnableFaceDetect: 人臉檢測選項（預設爲true，目前不可編輯）
         :type EnableFaceDetect: bool
-        :param EnableFaceExpression: 人脸表情识别选项
+        :param EnableFaceExpression: 人臉表情識别選項
         :type EnableFaceExpression: bool
-        :param EnableFaceIdentify: 人脸检索选项（默认为true，目前不可编辑）
+        :param EnableFaceIdentify: 人臉檢索選項（預設爲true，目前不可編輯）
         :type EnableFaceIdentify: bool
-        :param EnableGesture: 手势选项
+        :param EnableGesture: 手勢選項
         :type EnableGesture: bool
-        :param EnableHandTracking: 优图手势选项（该功能尚未支持）
+        :param EnableHandTracking: 優圖手勢選項（該功能尚未支援）
         :type EnableHandTracking: bool
-        :param EnableLightJudge: 光照选项
+        :param EnableLightJudge: 光照選項
         :type EnableLightJudge: bool
-        :param EnableStudentBodyMovements: 小班课场景学生肢体动作识别选项
+        :param EnableStudentBodyMovements: 小班課場景學生肢體動作識别選項
         :type EnableStudentBodyMovements: bool
-        :param EnableTeacherBodyMovements: 教师动作选项（该功能尚未支持）
+        :param EnableTeacherBodyMovements: 教師動作選項（該功能尚未支援）
         :type EnableTeacherBodyMovements: bool
-        :param EnableTeacherOutScreen: 判断老师是否在屏幕中（该功能尚未支持）
+        :param EnableTeacherOutScreen: 判斷老師是否在螢幕中（該功能尚未支援）
         :type EnableTeacherOutScreen: bool
         """
         self.EnableActionClass = None
@@ -2367,37 +2367,37 @@ class ImageTaskFunction(AbstractModel):
 
 
 class ImageTaskResult(AbstractModel):
-    """图像任务结果
+    """圖像任務結果
 
     """
 
     def __init__(self):
         """
-        :param ActionInfo: 大教室场景学生肢体动作识别信息
+        :param ActionInfo: 大教室場景學生肢體動作識别訊息
         :type ActionInfo: :class:`tencentcloud.tci.v20190318.models.ActionInfo`
-        :param FaceAttr: 属性识别结果
+        :param FaceAttr: 屬性識别結果
         :type FaceAttr: :class:`tencentcloud.tci.v20190318.models.FaceAttrResult`
-        :param FaceExpression: 表情识别结果
+        :param FaceExpression: 表情識别結果
         :type FaceExpression: :class:`tencentcloud.tci.v20190318.models.FaceExpressionResult`
-        :param FaceIdentify: 人脸检索结果
+        :param FaceIdentify: 人臉檢索結果
         :type FaceIdentify: :class:`tencentcloud.tci.v20190318.models.FaceIdentifyResult`
-        :param FaceInfo: 人脸检测结果
+        :param FaceInfo: 人臉檢測結果
         :type FaceInfo: :class:`tencentcloud.tci.v20190318.models.FaceInfoResult`
-        :param FacePose: 姿势识别结果
+        :param FacePose: 姿勢識别結果
         :type FacePose: :class:`tencentcloud.tci.v20190318.models.FacePoseResult`
-        :param Gesture: 动作分类结果
+        :param Gesture: 動作分類結果
         :type Gesture: :class:`tencentcloud.tci.v20190318.models.GestureResult`
-        :param HandTracking: 手势分类结果
+        :param HandTracking: 手勢分類結果
         :type HandTracking: :class:`tencentcloud.tci.v20190318.models.HandTrackingResult`
-        :param Light: 光照识别结果
+        :param Light: 光照識别結果
         :type Light: :class:`tencentcloud.tci.v20190318.models.LightResult`
-        :param StudentBodyMovement: 学生肢体动作识别结果
+        :param StudentBodyMovement: 學生肢體動作識别結果
         :type StudentBodyMovement: :class:`tencentcloud.tci.v20190318.models.StudentBodyMovementResult`
-        :param TeacherBodyMovement: 老师肢体动作识别结果
+        :param TeacherBodyMovement: 老師肢體動作識别結果
         :type TeacherBodyMovement: :class:`tencentcloud.tci.v20190318.models.BodyMovementResult`
-        :param TeacherOutScreen: 教师是否在屏幕内判断结果
+        :param TeacherOutScreen: 教師是否在螢幕内判斷結果
         :type TeacherOutScreen: :class:`tencentcloud.tci.v20190318.models.TeacherOutScreenResult`
-        :param TimeInfo: 时间统计结果
+        :param TimeInfo: 時間統計結果
         :type TimeInfo: :class:`tencentcloud.tci.v20190318.models.TimeInfoResult`
         """
         self.ActionInfo = None
@@ -2458,27 +2458,27 @@ class ImageTaskResult(AbstractModel):
 
 
 class ImageTaskStatistic(AbstractModel):
-    """图像任务统计结果
+    """圖像任務統計結果
 
     """
 
     def __init__(self):
         """
-        :param FaceDetect: 人员检测统计信息
+        :param FaceDetect: 人員檢測統計訊息
         :type FaceDetect: list of FaceDetectStatistic
-        :param FaceExpression: 人脸表情统计信息
+        :param FaceExpression: 人臉表情統計訊息
         :type FaceExpression: list of FaceExpressStatistic
-        :param FaceIdentify: 人脸检索统计信息
+        :param FaceIdentify: 人臉檢索統計訊息
         :type FaceIdentify: list of FaceIdentifyStatistic
-        :param Gesture: 姿势识别统计信息
+        :param Gesture: 姿勢識别統計訊息
         :type Gesture: :class:`tencentcloud.tci.v20190318.models.ActionStatistic`
-        :param Handtracking: 手势识别统计信息
+        :param Handtracking: 手勢識别統計訊息
         :type Handtracking: :class:`tencentcloud.tci.v20190318.models.ActionStatistic`
-        :param Light: 光照统计信息
+        :param Light: 光照統計訊息
         :type Light: :class:`tencentcloud.tci.v20190318.models.LightStatistic`
-        :param StudentMovement: 学生动作统计信息
+        :param StudentMovement: 學生動作統計訊息
         :type StudentMovement: :class:`tencentcloud.tci.v20190318.models.ActionStatistic`
-        :param TeacherMovement: 教师动作统计信息
+        :param TeacherMovement: 教師動作統計訊息
         :type TeacherMovement: :class:`tencentcloud.tci.v20190318.models.ActionStatistic`
         """
         self.FaceDetect = None
@@ -2528,21 +2528,21 @@ class ImageTaskStatistic(AbstractModel):
 
 
 class Library(AbstractModel):
-    """人员库描述
+    """人員庫描述
 
     """
 
     def __init__(self):
         """
-        :param CreateTime: 人员库创建时间
+        :param CreateTime: 人員庫創建時間
         :type CreateTime: str
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
-        :param LibraryName: 人员库名称
+        :param LibraryName: 人員庫名稱
         :type LibraryName: str
-        :param PersonCount: 人员库人员数量
+        :param PersonCount: 人員庫人員數量
         :type PersonCount: int
-        :param UpdateTime: 人员库修改时间
+        :param UpdateTime: 人員庫修改時間
         :type UpdateTime: str
         """
         self.CreateTime = None
@@ -2561,15 +2561,15 @@ class Library(AbstractModel):
 
 
 class LightDistributionStatistic(AbstractModel):
-    """光照强度统计结果
+    """光照強度統計結果
 
     """
 
     def __init__(self):
         """
-        :param Time: 时间点
+        :param Time: 時間點
         :type Time: int
-        :param Value: 光线值
+        :param Value: 光線值
         :type Value: int
         """
         self.Time = None
@@ -2582,13 +2582,13 @@ class LightDistributionStatistic(AbstractModel):
 
 
 class LightLevelRatioStatistic(AbstractModel):
-    """光照强度比例统计结果
+    """光照強度比例統計結果
 
     """
 
     def __init__(self):
         """
-        :param Level: 名称
+        :param Level: 名稱
         :type Level: str
         :param Ratio: 比例
         :type Ratio: float
@@ -2609,7 +2609,7 @@ class LightResult(AbstractModel):
 
     def __init__(self):
         """
-        :param LightLevel: 光照程度，参考提交任务时的LightStandard指定的Name参数
+        :param LightLevel: 光照程度，參考提交任務時的LightStandard指定的Name參數
         :type LightLevel: str
         :param LightValue: 光照亮度
         :type LightValue: float
@@ -2624,20 +2624,20 @@ class LightResult(AbstractModel):
 
 
 class LightStandard(AbstractModel):
-    """光照标准，结构的相关示例为：
+    """光照标準，結構的相關範例爲：
     {
         "Name":"dark"，
         "Range":[0,30]
     }
-    当光照的区间落入在0到30的范围时，就会命中dark的光照标准
+    當光照的區間落入在0到30的範圍時，就會命中dark的光照标準
 
     """
 
     def __init__(self):
         """
-        :param Name: 光照名称
+        :param Name: 光照名稱
         :type Name: str
-        :param Range: 范围
+        :param Range: 範圍
         :type Range: list of float
         """
         self.Name = None
@@ -2650,15 +2650,15 @@ class LightStandard(AbstractModel):
 
 
 class LightStatistic(AbstractModel):
-    """光照统计结果
+    """光照統計結果
 
     """
 
     def __init__(self):
         """
-        :param LightDistribution: 各个时间点的光线值
+        :param LightDistribution: 各個時間點的光線值
         :type LightDistribution: list of LightDistributionStatistic
-        :param LightLevelRatio: 光照程度比例统计结果
+        :param LightLevelRatio: 光照程度比例統計結果
         :type LightLevelRatio: list of LightLevelRatioStatistic
         """
         self.LightDistribution = None
@@ -2681,15 +2681,15 @@ class LightStatistic(AbstractModel):
 
 
 class ModifyLibraryRequest(AbstractModel):
-    """ModifyLibrary请求参数结构体
+    """ModifyLibrary請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
-        :param LibraryName: 人员库名称
+        :param LibraryName: 人員庫名稱
         :type LibraryName: str
         """
         self.LibraryId = None
@@ -2702,17 +2702,17 @@ class ModifyLibraryRequest(AbstractModel):
 
 
 class ModifyLibraryResponse(AbstractModel):
-    """ModifyLibrary返回参数结构体
+    """ModifyLibrary返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
-        :param LibraryName: 人员库名称
+        :param LibraryName: 人員庫名稱
         :type LibraryName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.LibraryId = None
@@ -2727,27 +2727,27 @@ class ModifyLibraryResponse(AbstractModel):
 
 
 class ModifyPersonRequest(AbstractModel):
-    """ModifyPerson请求参数结构体
+    """ModifyPerson請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
-        :param PersonId: 人员唯一标识符
+        :param PersonId: 人員唯一标識符
         :type PersonId: str
-        :param JobNumber: 人员工作号码
+        :param JobNumber: 人員工作号碼
         :type JobNumber: str
-        :param Mail: 人员邮箱
+        :param Mail: 人員電子信箱
         :type Mail: str
-        :param Male: 人员性别
+        :param Male: 人員性别
         :type Male: int
-        :param PersonName: 人员名称
+        :param PersonName: 人員名稱
         :type PersonName: str
-        :param PhoneNumber: 人员电话号码
+        :param PhoneNumber: 人員電話号碼
         :type PhoneNumber: str
-        :param StudentNumber: 人员学生号码
+        :param StudentNumber: 人員學生号碼
         :type StudentNumber: str
         """
         self.LibraryId = None
@@ -2772,21 +2772,21 @@ class ModifyPersonRequest(AbstractModel):
 
 
 class ModifyPersonResponse(AbstractModel):
-    """ModifyPerson返回参数结构体
+    """ModifyPerson返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FaceInfoSet: 人脸信息
+        :param FaceInfoSet: 人臉訊息
         :type FaceInfoSet: list of FaceInfo
-        :param LibraryId: 人员所属人员库标识符
+        :param LibraryId: 人員所屬人員庫标識符
         :type LibraryId: str
-        :param PersonId: 人员唯一标识符
+        :param PersonId: 人員唯一标識符
         :type PersonId: str
-        :param PersonName: 人员名称
+        :param PersonName: 人員名稱
         :type PersonName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FaceInfoSet = None
@@ -2810,15 +2810,15 @@ class ModifyPersonResponse(AbstractModel):
 
 
 class MuteSlice(AbstractModel):
-    """所有静音片段。
+    """所有靜音片段。
 
     """
 
     def __init__(self):
         """
-        :param MuteBtm: 起始时间。
+        :param MuteBtm: 起始時間。
         :type MuteBtm: int
-        :param MuteEtm: 终止时间。
+        :param MuteEtm: 終止時間。
         :type MuteEtm: int
         """
         self.MuteBtm = None
@@ -2831,31 +2831,31 @@ class MuteSlice(AbstractModel):
 
 
 class Person(AbstractModel):
-    """人员描述
+    """人員描述
 
     """
 
     def __init__(self):
         """
-        :param LibraryId: 人员库唯一标识符
+        :param LibraryId: 人員庫唯一标識符
         :type LibraryId: str
-        :param PersonId: 人员唯一标识符
+        :param PersonId: 人員唯一标識符
         :type PersonId: str
-        :param PersonName: 人员名称
+        :param PersonName: 人員名稱
         :type PersonName: str
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param JobNumber: 工作号码
+        :param JobNumber: 工作号碼
         :type JobNumber: str
-        :param Mail: 邮箱
+        :param Mail: 電子信箱
         :type Mail: str
         :param Male: 性别
         :type Male: int
-        :param PhoneNumber: 电话号码
+        :param PhoneNumber: 電話号碼
         :type PhoneNumber: str
-        :param StudentNumber: 学生号码
+        :param StudentNumber: 學生号碼
         :type StudentNumber: str
-        :param UpdateTime: 修改时间
+        :param UpdateTime: 修改時間
         :type UpdateTime: str
         """
         self.LibraryId = None
@@ -2884,17 +2884,17 @@ class Person(AbstractModel):
 
 
 class PersonInfo(AbstractModel):
-    """人员信息
+    """人員訊息
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 需要匹配的人员的ID列表。
+        :param PersonId: 需要比對的人員的ID清單。
         :type PersonId: str
-        :param CoverBeginUrl: 视频集锦开始封面照片。
+        :param CoverBeginUrl: 視訊集錦開始封面照片。
         :type CoverBeginUrl: str
-        :param CoverEndUrl: 视频集锦结束封面照片。
+        :param CoverEndUrl: 視訊集錦結束封面照片。
         :type CoverEndUrl: str
         """
         self.PersonId = None
@@ -2909,25 +2909,25 @@ class PersonInfo(AbstractModel):
 
 
 class StandardAudioResult(AbstractModel):
-    """标准化接口图像分析结果
+    """标準化介面圖像分析結果
 
     """
 
     def __init__(self):
         """
-        :param AsrStat: 返回的当前音频的统计信息。当进度为100时返回。
+        :param AsrStat: 返回的當前音訊的統計訊息。當進度爲100時返回。
         :type AsrStat: :class:`tencentcloud.tci.v20190318.models.ASRStat`
-        :param Texts: 返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
+        :param Texts: 返回當前音訊流的詳細訊息，如果是流模式，返回的是對應流的詳細訊息，如果是 URL模式，返回的是查詢的那一段seq對應的音訊的詳細訊息。
         :type Texts: list of WholeTextItem
-        :param VocabAnalysisDetailInfo: 返回词汇库中的单词出现的详细时间信息。
+        :param VocabAnalysisDetailInfo: 返回詞匯庫中的單詞出現的詳細時間訊息。
         :type VocabAnalysisDetailInfo: list of VocabDetailInfomation
-        :param VocabAnalysisStatInfo: 返回词汇库中的单词出现的次数信息。
+        :param VocabAnalysisStatInfo: 返回詞匯庫中的單詞出現的次數訊息。
         :type VocabAnalysisStatInfo: list of VocabStatInfomation
-        :param Message: 状态描述
+        :param Message: 狀态描述
         :type Message: str
-        :param Status: 任务状态
+        :param Status: 任務狀态
         :type Status: str
-        :param TotalCount: 结果数量
+        :param TotalCount: 結果數量
         :type TotalCount: int
         """
         self.AsrStat = None
@@ -2967,21 +2967,21 @@ class StandardAudioResult(AbstractModel):
 
 
 class StandardImageResult(AbstractModel):
-    """标准化接口图像分析结果
+    """标準化介面圖像分析結果
 
     """
 
     def __init__(self):
         """
-        :param ResultSet: 详细结果
+        :param ResultSet: 詳細結果
         :type ResultSet: list of ImageTaskResult
-        :param Statistic: 分析完成后的统计结果
+        :param Statistic: 分析完成後的統計結果
         :type Statistic: :class:`tencentcloud.tci.v20190318.models.ImageTaskStatistic`
-        :param Message: 状态描述
+        :param Message: 狀态描述
         :type Message: str
-        :param Status: 任务状态
+        :param Status: 任務狀态
         :type Status: str
-        :param TotalCount: 结果总数
+        :param TotalCount: 結果總數
         :type TotalCount: int
         """
         self.ResultSet = None
@@ -3007,17 +3007,17 @@ class StandardImageResult(AbstractModel):
 
 
 class StandardVideoResult(AbstractModel):
-    """标准化接口图像分析结果
+    """标準化介面圖像分析結果
 
     """
 
     def __init__(self):
         """
-        :param HighlightsInfo: 分析完成后的统计结果
+        :param HighlightsInfo: 分析完成後的統計結果
         :type HighlightsInfo: list of HighlightsInfomation
-        :param Message: 状态描述
+        :param Message: 狀态描述
         :type Message: str
-        :param Status: 任务状态
+        :param Status: 任務狀态
         :type Status: str
         """
         self.HighlightsInfo = None
@@ -3037,15 +3037,15 @@ class StandardVideoResult(AbstractModel):
 
 
 class StatInfo(AbstractModel):
-    """单词出现的次数信息
+    """單詞出現的次數訊息
 
     """
 
     def __init__(self):
         """
-        :param Keyword: 词汇库中的单词
+        :param Keyword: 詞匯庫中的單詞
         :type Keyword: str
-        :param Value: 单词出现在该音频中总次数
+        :param Value: 單詞出現在該音訊中總次數
         :type Value: int
         """
         self.Keyword = None
@@ -3058,31 +3058,31 @@ class StatInfo(AbstractModel):
 
 
 class StudentBodyMovementResult(AbstractModel):
-    """学生肢体动作结果
+    """學生肢體動作結果
 
     """
 
     def __init__(self):
         """
-        :param Confidence: 置信度（已废弃）
+        :param Confidence: 置信度（已廢棄）
         :type Confidence: float
-        :param HandupConfidence: 举手识别结果置信度
+        :param HandupConfidence: 舉手識别結果置信度
         :type HandupConfidence: float
-        :param HandupStatus: 举手识别结果，包含举手（handup）和未举手（nothandup）
+        :param HandupStatus: 舉手識别結果，包含舉手（handup）和未舉手（nothandup）
         :type HandupStatus: str
-        :param Height: 识别结果高度
+        :param Height: 識别結果高度
         :type Height: int
-        :param Left: 识别结果左坐标
+        :param Left: 識别結果左坐标
         :type Left: int
-        :param Movements: 动作识别结果（已废弃）
+        :param Movements: 動作識别結果（已廢棄）
         :type Movements: str
-        :param StandConfidence: 站立识别结果置信度
+        :param StandConfidence: 站立識别結果置信度
         :type StandConfidence: float
-        :param StandStatus: 站立识别结果，包含站立（stand）和坐着（sit）
+        :param StandStatus: 站立識别結果，包含站立（stand）和坐着（sit）
         :type StandStatus: str
-        :param Top: 识别结果顶坐标
+        :param Top: 識别結果頂坐标
         :type Top: int
-        :param Width: 识别结果宽度
+        :param Width: 識别結果寬度
         :type Width: int
         """
         self.Confidence = None
@@ -3111,27 +3111,27 @@ class StudentBodyMovementResult(AbstractModel):
 
 
 class SubmitAudioTaskRequest(AbstractModel):
-    """SubmitAudioTask请求参数结构体
+    """SubmitAudioTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Lang: 音频源的语言，默认0为英文，1为中文
+        :param Lang: 音訊源的語言，預設0爲英文，1爲中文
         :type Lang: int
-        :param Url: 音频URL。客户请求为URL方式时必须带此字段指名音频的url。
+        :param Url: 音訊URL。客戶請求爲URL方式時必須帶此欄位指名音訊的url。
         :type Url: str
-        :param VoiceEncodeType: 语音编码类型 1:pcm
+        :param VoiceEncodeType: 語音編碼類型 1:pcm
         :type VoiceEncodeType: int
-        :param VoiceFileType: 语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
+        :param VoiceFileType: 語音文件類型 1:raw, 2:wav, 3:mp3，10:視訊（三種音訊格式目前僅支援16k采樣率16bit）
         :type VoiceFileType: int
-        :param Functions: 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+        :param Functions: 功能開關清單，表示是否需要打開相應的功能，返回相應的訊息
         :type Functions: :class:`tencentcloud.tci.v20190318.models.Function`
-        :param FileType: 视频文件类型，默认点播，直播填 live_url
+        :param FileType: 視訊文件類型，預設點播，直播填 live_url
         :type FileType: str
-        :param MuteThreshold: 静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
+        :param MuteThreshold: 靜音阈值設置，如果靜音檢測開關開啓，則靜音時間超過這個阈值認爲是靜音片段，在結果中會返回, 沒給的話預設值爲3s
         :type MuteThreshold: int
-        :param VocabLibNameList: 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
+        :param VocabLibNameList: 識别詞庫名清單，評估過程使用這些詞匯庫中的詞匯進行詞匯使用行爲分析
         :type VocabLibNameList: list of str
         """
         self.Lang = None
@@ -3158,15 +3158,15 @@ class SubmitAudioTaskRequest(AbstractModel):
 
 
 class SubmitAudioTaskResponse(AbstractModel):
-    """SubmitAudioTask返回参数结构体
+    """SubmitAudioTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 	查询结果时指名的jobid。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
+        :param JobId: 	查詢結果時指名的jobid。在URL方式時提交請求後會返回一個jobid，後續查詢該url的結果時使用這個jobid進行查詢。
         :type JobId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.JobId = None
@@ -3179,31 +3179,31 @@ class SubmitAudioTaskResponse(AbstractModel):
 
 
 class SubmitCheckAttendanceTaskPlusRequest(AbstractModel):
-    """SubmitCheckAttendanceTaskPlus请求参数结构体
+    """SubmitCheckAttendanceTaskPlus請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileContent: 输入数据
+        :param FileContent: 輸入數據
         :type FileContent: list of str
-        :param FileType: 视频流类型，vod_url表示点播URL，live_url表示直播URL，默认vod_url
+        :param FileType: 視訊流類型，vod_url表示點播URL，live_url表示直播URL，預設vod_url
         :type FileType: str
-        :param LibraryIds: 人员库 ID列表
+        :param LibraryIds: 人員庫 ID清單
         :type LibraryIds: list of str
-        :param AttendanceThreshold: 确定出勤阈值；默认为0.92
+        :param AttendanceThreshold: 确定出勤阈值；預設爲0.92
         :type AttendanceThreshold: float
-        :param EnableStranger: 是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
+        :param EnableStranger: 是否開啓陌生人模式，陌生人模式是指在任務中發現的非注冊人臉庫中的人臉也返回相關統計訊息，預設不開啓
         :type EnableStranger: bool
-        :param EndTime: 考勤结束时间（到视频的第几秒结束考勤），单位秒；默认为900 
-对于直播场景，使用绝对时间戳，单位秒，默认当前时间往后12小时
+        :param EndTime: 考勤結束時間（到視訊的第幾秒結束考勤），單位秒；預設爲900 
+對于直播場景，使用絕對時間戳，單位秒，預設當前時間往後12小時
         :type EndTime: int
-        :param NoticeUrl: 通知回调地址，要求方法为post，application/json格式
+        :param NoticeUrl: 通知回調網址，要求方法爲post，application/json格式
         :type NoticeUrl: str
-        :param StartTime: 考勤开始时间（从视频的第几秒开始考勤），单位秒；默认为0 
-对于直播场景，使用绝对时间戳，单位秒，默认当前时间
+        :param StartTime: 考勤開始時間（從視訊的第幾秒開始考勤），單位秒；預設爲0 
+對于直播場景，使用絕對時間戳，單位秒，預設當前時間
         :type StartTime: int
-        :param Threshold: 识别阈值；默认为0.8
+        :param Threshold: 識别阈值；預設爲0.8
         :type Threshold: float
         """
         self.FileContent = None
@@ -3230,17 +3230,17 @@ class SubmitCheckAttendanceTaskPlusRequest(AbstractModel):
 
 
 class SubmitCheckAttendanceTaskPlusResponse(AbstractModel):
-    """SubmitCheckAttendanceTaskPlus返回参数结构体
+    """SubmitCheckAttendanceTaskPlus返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 任务标识符
+        :param JobId: 任務标識符
         :type JobId: int
-        :param NotRegisteredSet: 没有注册的人的ID列表
+        :param NotRegisteredSet: 沒有注冊的人的ID清單
         :type NotRegisteredSet: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.JobId = None
@@ -3255,31 +3255,31 @@ class SubmitCheckAttendanceTaskPlusResponse(AbstractModel):
 
 
 class SubmitCheckAttendanceTaskRequest(AbstractModel):
-    """SubmitCheckAttendanceTask请求参数结构体
+    """SubmitCheckAttendanceTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileContent: 输入数据
+        :param FileContent: 輸入數據
         :type FileContent: str
-        :param FileType: 视频流类型，vod_url表示点播URL，live_url表示直播URL，默认vod_url
+        :param FileType: 視訊流類型，vod_url表示點播URL，live_url表示直播URL，預設vod_url
         :type FileType: str
-        :param LibraryIds: 人员库 ID列表
+        :param LibraryIds: 人員庫 ID清單
         :type LibraryIds: list of str
-        :param AttendanceThreshold: 确定出勤阈值；默认为0.92
+        :param AttendanceThreshold: 确定出勤阈值；預設爲0.92
         :type AttendanceThreshold: float
-        :param EnableStranger: 是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
+        :param EnableStranger: 是否開啓陌生人模式，陌生人模式是指在任務中發現的非注冊人臉庫中的人臉也返回相關統計訊息，預設不開啓
         :type EnableStranger: bool
-        :param EndTime: 考勤结束时间（到视频的第几秒结束考勤），单位秒；默认为900 
-对于直播场景，使用绝对时间戳，单位秒，默认当前时间往后12小时
+        :param EndTime: 考勤結束時間（到視訊的第幾秒結束考勤），單位秒；預設爲900 
+對于直播場景，使用絕對時間戳，單位秒，預設當前時間往後12小時
         :type EndTime: int
-        :param NoticeUrl: 通知回调地址，要求方法为post，application/json格式
+        :param NoticeUrl: 通知回調網址，要求方法爲post，application/json格式
         :type NoticeUrl: str
-        :param StartTime: 考勤开始时间（从视频的第几秒开始考勤），单位秒；默认为0 
-对于直播场景，使用绝对时间戳，单位秒，默认当前时间
+        :param StartTime: 考勤開始時間（從視訊的第幾秒開始考勤），單位秒；預設爲0 
+對于直播場景，使用絕對時間戳，單位秒，預設當前時間
         :type StartTime: int
-        :param Threshold: 识别阈值；默认为0.8
+        :param Threshold: 識别阈值；預設爲0.8
         :type Threshold: float
         """
         self.FileContent = None
@@ -3306,17 +3306,17 @@ class SubmitCheckAttendanceTaskRequest(AbstractModel):
 
 
 class SubmitCheckAttendanceTaskResponse(AbstractModel):
-    """SubmitCheckAttendanceTask返回参数结构体
+    """SubmitCheckAttendanceTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 任务标识符
+        :param JobId: 任務标識符
         :type JobId: int
-        :param NotRegisteredSet: 没有注册的人的ID列表
+        :param NotRegisteredSet: 沒有注冊的人的ID清單
         :type NotRegisteredSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.JobId = None
@@ -3331,25 +3331,25 @@ class SubmitCheckAttendanceTaskResponse(AbstractModel):
 
 
 class SubmitConversationTaskRequest(AbstractModel):
-    """SubmitConversationTask请求参数结构体
+    """SubmitConversationTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Lang: 音频源的语言，默认0为英文，1为中文
+        :param Lang: 音訊源的語言，預設0爲英文，1爲中文
         :type Lang: int
-        :param StudentUrl: 学生音频流
+        :param StudentUrl: 學生音訊流
         :type StudentUrl: str
-        :param TeacherUrl: 教师音频流
+        :param TeacherUrl: 教師音訊流
         :type TeacherUrl: str
-        :param VoiceEncodeType: 语音编码类型 1:pcm
+        :param VoiceEncodeType: 語音編碼類型 1:pcm
         :type VoiceEncodeType: int
-        :param VoiceFileType: 语音文件类型 1:raw, 2:wav, 3:mp3（三种格式目前仅支持16k采样率16bit）
+        :param VoiceFileType: 語音文件類型 1:raw, 2:wav, 3:mp3（三種格式目前僅支援16k采樣率16bit）
         :type VoiceFileType: int
-        :param Functions: 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+        :param Functions: 功能開關清單，表示是否需要打開相應的功能，返回相應的訊息
         :type Functions: :class:`tencentcloud.tci.v20190318.models.Function`
-        :param VocabLibNameList: 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
+        :param VocabLibNameList: 識别詞庫名清單，評估過程使用這些詞匯庫中的詞匯進行詞匯使用行爲分析
         :type VocabLibNameList: list of str
         """
         self.Lang = None
@@ -3374,15 +3374,15 @@ class SubmitConversationTaskRequest(AbstractModel):
 
 
 class SubmitConversationTaskResponse(AbstractModel):
-    """SubmitConversationTask返回参数结构体
+    """SubmitConversationTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 	查询结果时指名的jobid。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
+        :param JobId: 	查詢結果時指名的jobid。在URL方式時提交請求後會返回一個jobid，後續查詢該url的結果時使用這個jobid進行查詢。
         :type JobId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.JobId = None
@@ -3395,27 +3395,27 @@ class SubmitConversationTaskResponse(AbstractModel):
 
 
 class SubmitDoubleVideoHighlightsRequest(AbstractModel):
-    """SubmitDoubleVideoHighlights请求参数结构体
+    """SubmitDoubleVideoHighlights請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileContent: 学生视频url
+        :param FileContent: 學生視訊url
         :type FileContent: str
-        :param LibIds: 需要检索的人脸合集库，不在库中的人脸将不参与精彩集锦；目前仅支持输入一个人脸库。
+        :param LibIds: 需要檢索的人臉合集庫，不在庫中的人臉将不參與精彩集錦；目前僅支援輸入一個人臉庫。
         :type LibIds: list of str
-        :param Functions: 详细功能开关配置项
+        :param Functions: 詳細功能開關配置項
         :type Functions: :class:`tencentcloud.tci.v20190318.models.DoubleVideoFunction`
-        :param PersonInfoList: 需要匹配的人员信息列表。
+        :param PersonInfoList: 需要比對的人員訊息清單。
         :type PersonInfoList: list of PersonInfo
-        :param FrameInterval: 视频处理的抽帧间隔，单位毫秒。建议留空。
+        :param FrameInterval: 視訊處理的抽幀間隔，單位毫秒。建議留空。
         :type FrameInterval: int
-        :param PersonIds: 旧版本需要匹配的人员信息列表。
+        :param PersonIds: 舊版本需要比對的人員訊息清單。
         :type PersonIds: list of str
-        :param SimThreshold: 人脸检索的相似度阈值，默认值0.89。建议留空。
+        :param SimThreshold: 人臉檢索的相似度阈值，預設值0.89。建議留空。
         :type SimThreshold: float
-        :param TeacherFileContent: 老师视频url
+        :param TeacherFileContent: 老師視訊url
         :type TeacherFileContent: str
         """
         self.FileContent = None
@@ -3447,17 +3447,17 @@ class SubmitDoubleVideoHighlightsRequest(AbstractModel):
 
 
 class SubmitDoubleVideoHighlightsResponse(AbstractModel):
-    """SubmitDoubleVideoHighlights返回参数结构体
+    """SubmitDoubleVideoHighlights返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 视频拆条任务ID，用来唯一标识视频拆条任务。
+        :param JobId: 視訊拆條任務ID，用來唯一标識視訊拆條任務。
         :type JobId: int
-        :param NotRegistered: 未注册的人员ID列表。若出现此项，代表评估出现了问题，输入的PersonId中有不在库中的人员ID。
+        :param NotRegistered: 未注冊的人員ID清單。若出現此項，代表評估出現了問題，輸入的PersonId中有不在庫中的人員ID。
         :type NotRegistered: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.JobId = None
@@ -3472,27 +3472,27 @@ class SubmitDoubleVideoHighlightsResponse(AbstractModel):
 
 
 class SubmitFullBodyClassTaskRequest(AbstractModel):
-    """SubmitFullBodyClassTask请求参数结构体
+    """SubmitFullBodyClassTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileContent: 输入分析对象内容，输入数据格式参考FileType参数释义
+        :param FileContent: 輸入分析對象内容，輸入數據格式參考FileType參數釋義
         :type FileContent: str
-        :param FileType: 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture: 图片二进制数据的BASE64编码
+        :param FileType: 輸入分析對象類型，picture_url:圖片網址，vod_url:視訊網址，live_url：直播網址，picture: 圖片二進制數據的BASE64編碼
         :type FileType: str
-        :param Lang: 音频源的语言，默认0为英文，1为中文
+        :param Lang: 音訊源的語言，預設0爲英文，1爲中文
         :type Lang: int
-        :param LibrarySet: 查询人员库列表，可填写老师的注册照所在人员库
+        :param LibrarySet: 查詢人員庫清單，可填寫老師的注冊照所在人員庫
         :type LibrarySet: list of str
-        :param MaxVideoDuration: 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+        :param MaxVideoDuration: 視訊評估時間，單位秒，點播場景預設值爲2小時（無法探測長度時）或完整視訊，直播場景預設值爲10分鍾或直播提前結束
         :type MaxVideoDuration: int
-        :param VocabLibNameList: 识别词库名列表，这些词汇库用来维护关键词，评估老师授课过程中，对这些关键词的使用情况
+        :param VocabLibNameList: 識别詞庫名清單，這些詞匯庫用來維護關鍵詞，評估老師授課過程中，對這些關鍵詞的使用情況
         :type VocabLibNameList: list of str
-        :param VoiceEncodeType: 语音编码类型 1:pcm，当FileType为vod_url或live_url时为必填
+        :param VoiceEncodeType: 語音編碼類型 1:pcm，當FileType爲vod_url或live_url時爲必填
         :type VoiceEncodeType: int
-        :param VoiceFileType: 语音文件类型 10:视频（三种音频格式目前仅支持16k采样率16bit），当FileType为vod_url或live_url时为必填
+        :param VoiceFileType: 語音文件類型 10:視訊（三種音訊格式目前僅支援16k采樣率16bit），當FileType爲vod_url或live_url時爲必填
         :type VoiceFileType: int
         """
         self.FileContent = None
@@ -3517,17 +3517,17 @@ class SubmitFullBodyClassTaskRequest(AbstractModel):
 
 
 class SubmitFullBodyClassTaskResponse(AbstractModel):
-    """SubmitFullBodyClassTask返回参数结构体
+    """SubmitFullBodyClassTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageResults: 图像任务直接返回结果，包括： FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、 TeacherBodyMovement、TimeInfo
+        :param ImageResults: 圖像任務直接返回結果，包括： FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、 TeacherBodyMovement、TimeInfo
         :type ImageResults: list of ImageTaskResult
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ImageResults = None
@@ -3547,29 +3547,29 @@ class SubmitFullBodyClassTaskResponse(AbstractModel):
 
 
 class SubmitHighlightsRequest(AbstractModel):
-    """SubmitHighlights请求参数结构体
+    """SubmitHighlights請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Functions: 表情配置开关项。
+        :param Functions: 表情配置開關項。
         :type Functions: :class:`tencentcloud.tci.v20190318.models.HLFunction`
-        :param FileContent: 视频url。
+        :param FileContent: 視訊url。
         :type FileContent: str
-        :param FileType: 视频类型及来源，目前只支持点播类型："vod_url"。
+        :param FileType: 視訊類型及來源，目前只支援點播類型："vod_url"。
         :type FileType: str
-        :param LibIds: 需要检索的人脸合集库，不在库中的人脸将不参与精彩集锦。
+        :param LibIds: 需要檢索的人臉合集庫，不在庫中的人臉将不參與精彩集錦。
         :type LibIds: list of str
-        :param FrameInterval: 视频处理的抽帧间隔，单位毫秒。建议留空。
+        :param FrameInterval: 視訊處理的抽幀間隔，單位毫秒。建議留空。
         :type FrameInterval: int
-        :param KeywordsLanguage: 关键词语言类型，0为英文，1为中文。
+        :param KeywordsLanguage: 關鍵詞語言類型，0爲英文，1爲中文。
         :type KeywordsLanguage: int
-        :param KeywordsStrings: 关键词数组，当且仅当Funtions中的EnableKeywordWonderfulTime为true时有意义，匹配相应的关键字。
+        :param KeywordsStrings: 關鍵詞數組，當且僅當Funtions中的EnableKeywordWonderfulTime爲true時有意義，比對相應的關鍵字。
         :type KeywordsStrings: list of str
-        :param MaxVideoDuration: 处理视频的总时长，单位毫秒。该值为0或未设置时，默认值两小时生效；当该值大于视频实际时长时，视频实际时长生效；当该值小于视频实际时长时，该值生效；当获取视频实际时长失败时，若该值设置则生效，否则默认值生效。建议留空。
+        :param MaxVideoDuration: 處理視訊的總時長，單位毫秒。該值爲0或未設置時，預設值兩小時生效；當該值大于視訊實際時長時，視訊實際時長生效；當該值小於視訊實際時長時，該值生效；當獲取視訊實際時長失敗時，若該值設置則生效，否則預設值生效。建議留空。
         :type MaxVideoDuration: int
-        :param SimThreshold: 人脸检索的相似度阈值，默认值0.89。建议留空。
+        :param SimThreshold: 人臉檢索的相似度阈值，預設值0.89。建議留空。
         :type SimThreshold: float
         """
         self.Functions = None
@@ -3598,15 +3598,15 @@ class SubmitHighlightsRequest(AbstractModel):
 
 
 class SubmitHighlightsResponse(AbstractModel):
-    """SubmitHighlights返回参数结构体
+    """SubmitHighlights返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 视频拆条任务ID，用来唯一标识视频拆条任务。
+        :param JobId: 視訊拆條任務ID，用來唯一标識視訊拆條任務。
         :type JobId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.JobId = None
@@ -3619,27 +3619,27 @@ class SubmitHighlightsResponse(AbstractModel):
 
 
 class SubmitImageTaskPlusRequest(AbstractModel):
-    """SubmitImageTaskPlus请求参数结构体
+    """SubmitImageTaskPlus請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileContent: 输入分析对象内容，输入数据格式参考FileType参数释义
+        :param FileContent: 輸入分析對象内容，輸入數據格式參考FileType參數釋義
         :type FileContent: list of str
-        :param FileType: 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
+        :param FileType: 輸入分析對象類型，picture：二進制圖片的 base64 編碼字串，picture_url:圖片網址，vod_url：視訊網址，live_url：直播網址
         :type FileType: str
-        :param Functions: 任务控制选项
+        :param Functions: 任務控制選項
         :type Functions: :class:`tencentcloud.tci.v20190318.models.ImageTaskFunction`
-        :param LightStandardSet: 光照标准列表
+        :param LightStandardSet: 光照标準清單
         :type LightStandardSet: list of LightStandard
-        :param FrameInterval: 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
+        :param FrameInterval: 抽幀的時間間隔，單位毫秒，預設值1000，保留欄位，當前不支援填寫。
         :type FrameInterval: int
-        :param LibrarySet: 查询人员库列表
+        :param LibrarySet: 查詢人員庫清單
         :type LibrarySet: list of str
-        :param MaxVideoDuration: 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+        :param MaxVideoDuration: 視訊評估時間，單位秒，點播場景預設值爲2小時（無法探測長度時）或完整視訊，直播場景預設值爲10分鍾或直播提前結束
         :type MaxVideoDuration: int
-        :param SimThreshold: 人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
+        :param SimThreshold: 人臉識别中的相似度阈值，預設值爲0.89，保留欄位，當前不支援填寫。
         :type SimThreshold: float
         """
         self.FileContent = None
@@ -3671,21 +3671,21 @@ class SubmitImageTaskPlusRequest(AbstractModel):
 
 
 class SubmitImageTaskPlusResponse(AbstractModel):
-    """SubmitImageTaskPlus返回参数结构体
+    """SubmitImageTaskPlus返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResultSet: 识别结果
+        :param ResultSet: 識别結果
         :type ResultSet: list of ImageTaskResult
-        :param JobId: 任务标识符
+        :param JobId: 任務标識符
         :type JobId: int
-        :param Progress: 任务进度
+        :param Progress: 任務進度
         :type Progress: int
-        :param TotalCount: 结果总数目
+        :param TotalCount: 結果總數目
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResultSet = None
@@ -3709,29 +3709,29 @@ class SubmitImageTaskPlusResponse(AbstractModel):
 
 
 class SubmitImageTaskRequest(AbstractModel):
-    """SubmitImageTask请求参数结构体
+    """SubmitImageTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileContent: 输入分析对象内容，输入数据格式参考FileType参数释义
+        :param FileContent: 輸入分析對象内容，輸入數據格式參考FileType參數釋義
         :type FileContent: str
-        :param FileType: 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
+        :param FileType: 輸入分析對象類型，picture：二進制圖片的 base64 編碼字串，picture_url:圖片網址，vod_url：視訊網址，live_url：直播網址
         :type FileType: str
-        :param Functions: 任务控制选项
+        :param Functions: 任務控制選項
         :type Functions: :class:`tencentcloud.tci.v20190318.models.ImageTaskFunction`
-        :param LightStandardSet: 光照标准列表
+        :param LightStandardSet: 光照标準清單
         :type LightStandardSet: list of LightStandard
-        :param EventsCallBack: 结果更新回调地址。
+        :param EventsCallBack: 結果更新回調網址。
         :type EventsCallBack: str
-        :param FrameInterval: 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
+        :param FrameInterval: 抽幀的時間間隔，單位毫秒，預設值1000，保留欄位，當前不支援填寫。
         :type FrameInterval: int
-        :param LibrarySet: 查询人员库列表
+        :param LibrarySet: 查詢人員庫清單
         :type LibrarySet: list of str
-        :param MaxVideoDuration: 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+        :param MaxVideoDuration: 視訊評估時間，單位秒，點播場景預設值爲2小時（無法探測長度時）或完整視訊，直播場景預設值爲10分鍾或直播提前結束
         :type MaxVideoDuration: int
-        :param SimThreshold: 人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
+        :param SimThreshold: 人臉識别中的相似度阈值，預設值爲0.89，保留欄位，當前不支援填寫。
         :type SimThreshold: float
         """
         self.FileContent = None
@@ -3765,21 +3765,21 @@ class SubmitImageTaskRequest(AbstractModel):
 
 
 class SubmitImageTaskResponse(AbstractModel):
-    """SubmitImageTask返回参数结构体
+    """SubmitImageTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResultSet: 识别结果
+        :param ResultSet: 識别結果
         :type ResultSet: list of ImageTaskResult
-        :param JobId: 任务标识符
+        :param JobId: 任務标識符
         :type JobId: int
-        :param Progress: 任务进度
+        :param Progress: 任務進度
         :type Progress: int
-        :param TotalCount: 结果总数目
+        :param TotalCount: 結果總數目
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResultSet = None
@@ -3803,27 +3803,27 @@ class SubmitImageTaskResponse(AbstractModel):
 
 
 class SubmitOneByOneClassTaskRequest(AbstractModel):
-    """SubmitOneByOneClassTask请求参数结构体
+    """SubmitOneByOneClassTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileContent: 输入分析对象内容，输入数据格式参考FileType参数释义
+        :param FileContent: 輸入分析對象内容，輸入數據格式參考FileType參數釋義
         :type FileContent: str
-        :param FileType: 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture: 图片二进制数据的BASE64编码
+        :param FileType: 輸入分析對象類型，picture_url:圖片網址，vod_url:視訊網址，live_url：直播網址，picture: 圖片二進制數據的BASE64編碼
         :type FileType: str
-        :param Lang: 音频源的语言，默认0为英文，1为中文 
+        :param Lang: 音訊源的語言，預設0爲英文，1爲中文 
         :type Lang: int
-        :param LibrarySet: 查询人员库列表，可填写学生的注册照所在人员库
+        :param LibrarySet: 查詢人員庫清單，可填寫學生的注冊照所在人員庫
         :type LibrarySet: list of str
-        :param MaxVideoDuration: 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+        :param MaxVideoDuration: 視訊評估時間，單位秒，點播場景預設值爲2小時（無法探測長度時）或完整視訊，直播場景預設值爲10分鍾或直播提前結束
         :type MaxVideoDuration: int
-        :param VocabLibNameList: 识别词库名列表，这些词汇库用来维护关键词，评估学生对这些关键词的使用情况
+        :param VocabLibNameList: 識别詞庫名清單，這些詞匯庫用來維護關鍵詞，評估學生對這些關鍵詞的使用情況
         :type VocabLibNameList: list of str
-        :param VoiceEncodeType: 语音编码类型 1:pcm，当FileType为vod_url或live_url时为必填
+        :param VoiceEncodeType: 語音編碼類型 1:pcm，當FileType爲vod_url或live_url時爲必填
         :type VoiceEncodeType: int
-        :param VoiceFileType: 语音文件类型10:视频（三种音频格式目前仅支持16k采样率16bit），当FileType为vod_url或live_url时为必填
+        :param VoiceFileType: 語音文件類型10:視訊（三種音訊格式目前僅支援16k采樣率16bit），當FileType爲vod_url或live_url時爲必填
         :type VoiceFileType: int
         """
         self.FileContent = None
@@ -3848,17 +3848,17 @@ class SubmitOneByOneClassTaskRequest(AbstractModel):
 
 
 class SubmitOneByOneClassTaskResponse(AbstractModel):
-    """SubmitOneByOneClassTask返回参数结构体
+    """SubmitOneByOneClassTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageResults: 图像任务直接返回结果，包括：FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、TimeInfo
+        :param ImageResults: 圖像任務直接返回結果，包括：FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、TimeInfo
         :type ImageResults: list of ImageTaskResult
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ImageResults = None
@@ -3878,19 +3878,19 @@ class SubmitOneByOneClassTaskResponse(AbstractModel):
 
 
 class SubmitOpenClassTaskRequest(AbstractModel):
-    """SubmitOpenClassTask请求参数结构体
+    """SubmitOpenClassTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileContent: 输入分析对象内容，输入数据格式参考FileType参数释义
+        :param FileContent: 輸入分析對象内容，輸入數據格式參考FileType參數釋義
         :type FileContent: str
-        :param FileType: 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,picture: 图片二进制数据的BASE64编码
+        :param FileType: 輸入分析對象類型，picture_url:圖片網址，vod_url:視訊網址，live_url：直播網址,picture: 圖片二進制數據的BASE64編碼
         :type FileType: str
-        :param LibrarySet: 查询人员库列表，可填写学生们的注册照所在人员库
+        :param LibrarySet: 查詢人員庫清單，可填寫學生們的注冊照所在人員庫
         :type LibrarySet: list of str
-        :param MaxVideoDuration: 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+        :param MaxVideoDuration: 視訊評估時間，單位秒，點播場景預設值爲2小時（無法探測長度時）或完整視訊，直播場景預設值爲10分鍾或直播提前結束
         :type MaxVideoDuration: int
         """
         self.FileContent = None
@@ -3907,17 +3907,17 @@ class SubmitOpenClassTaskRequest(AbstractModel):
 
 
 class SubmitOpenClassTaskResponse(AbstractModel):
-    """SubmitOpenClassTask返回参数结构体
+    """SubmitOpenClassTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageResults: 图像任务直接返回结果，包括：FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、 StudentBodyMovement、TimeInfo
+        :param ImageResults: 圖像任務直接返回結果，包括：FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、 StudentBodyMovement、TimeInfo
         :type ImageResults: list of ImageTaskResult
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ImageResults = None
@@ -3937,27 +3937,27 @@ class SubmitOpenClassTaskResponse(AbstractModel):
 
 
 class SubmitPartialBodyClassTaskRequest(AbstractModel):
-    """SubmitPartialBodyClassTask请求参数结构体
+    """SubmitPartialBodyClassTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileContent: 输入分析对象内容，输入数据格式参考FileType参数释义
+        :param FileContent: 輸入分析對象内容，輸入數據格式參考FileType參數釋義
         :type FileContent: str
-        :param FileType: 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture: 图片二进制数据的BASE64编码
+        :param FileType: 輸入分析對象類型，picture_url:圖片網址，vod_url:視訊網址，live_url：直播網址，picture: 圖片二進制數據的BASE64編碼
         :type FileType: str
-        :param Lang: 音频源的语言，默认0为英文，1为中文
+        :param Lang: 音訊源的語言，預設0爲英文，1爲中文
         :type Lang: int
-        :param LibrarySet: 查询人员库列表，可填写老师的注册照所在人员库
+        :param LibrarySet: 查詢人員庫清單，可填寫老師的注冊照所在人員庫
         :type LibrarySet: list of str
-        :param MaxVideoDuration: 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+        :param MaxVideoDuration: 視訊評估時間，單位秒，點播場景預設值爲2小時（無法探測長度時）或完整視訊，直播場景預設值爲10分鍾或直播提前結束
         :type MaxVideoDuration: int
-        :param VocabLibNameList: 识别词库名列表，这些词汇库用来维护关键词，评估老师授课过程中，对这些关键词的使用情况
+        :param VocabLibNameList: 識别詞庫名清單，這些詞匯庫用來維護關鍵詞，評估老師授課過程中，對這些關鍵詞的使用情況
         :type VocabLibNameList: list of str
-        :param VoiceEncodeType: 语音编码类型 1:pcm，当FileType为vod_url或live_url时为必填
+        :param VoiceEncodeType: 語音編碼類型 1:pcm，當FileType爲vod_url或live_url時爲必填
         :type VoiceEncodeType: int
-        :param VoiceFileType: 语音文件类型 10:视频（三种音频格式目前仅支持16k采样率16bit），当FileType为vod_url或live_url时为必填
+        :param VoiceFileType: 語音文件類型 10:視訊（三種音訊格式目前僅支援16k采樣率16bit），當FileType爲vod_url或live_url時爲必填
         :type VoiceFileType: int
         """
         self.FileContent = None
@@ -3982,17 +3982,17 @@ class SubmitPartialBodyClassTaskRequest(AbstractModel):
 
 
 class SubmitPartialBodyClassTaskResponse(AbstractModel):
-    """SubmitPartialBodyClassTask返回参数结构体
+    """SubmitPartialBodyClassTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageResults: 图像任务直接返回结果，包括： FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、 Gesture 、 Light、 TimeInfo
+        :param ImageResults: 圖像任務直接返回結果，包括： FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、 Gesture 、 Light、 TimeInfo
         :type ImageResults: list of ImageTaskResult
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ImageResults = None
@@ -4012,19 +4012,19 @@ class SubmitPartialBodyClassTaskResponse(AbstractModel):
 
 
 class SubmitTraditionalClassTaskRequest(AbstractModel):
-    """SubmitTraditionalClassTask请求参数结构体
+    """SubmitTraditionalClassTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileContent: 输入分析对象内容，输入数据格式参考FileType参数释义
+        :param FileContent: 輸入分析對象内容，輸入數據格式參考FileType參數釋義
         :type FileContent: str
-        :param FileType: 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture：图片二进制数据的BASE64编码
+        :param FileType: 輸入分析對象類型，picture_url:圖片網址，vod_url:視訊網址，live_url：直播網址，picture：圖片二進制數據的BASE64編碼
         :type FileType: str
-        :param LibrarySet: 查询人员库列表，可填写学生们的注册照所在人员库
+        :param LibrarySet: 查詢人員庫清單，可填寫學生們的注冊照所在人員庫
         :type LibrarySet: list of str
-        :param MaxVideoDuration: 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+        :param MaxVideoDuration: 視訊評估時間，單位秒，點播場景預設值爲2小時（無法探測長度時）或完整視訊，直播場景預設值爲10分鍾或直播提前結束
         :type MaxVideoDuration: int
         """
         self.FileContent = None
@@ -4041,17 +4041,17 @@ class SubmitTraditionalClassTaskRequest(AbstractModel):
 
 
 class SubmitTraditionalClassTaskResponse(AbstractModel):
-    """SubmitTraditionalClassTask返回参数结构体
+    """SubmitTraditionalClassTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageResults: 图像任务直接返回结果，包括： ActionInfo、FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、 TimeInfo
+        :param ImageResults: 圖像任務直接返回結果，包括： ActionInfo、FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、 TimeInfo
         :type ImageResults: list of ImageTaskResult
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ImageResults = None
@@ -4071,15 +4071,15 @@ class SubmitTraditionalClassTaskResponse(AbstractModel):
 
 
 class SuspectedInfo(AbstractModel):
-    """疑似出席人员
+    """疑似出席人員
 
     """
 
     def __init__(self):
         """
-        :param FaceSet: TopN匹配信息列表
+        :param FaceSet: TopN比對訊息清單
         :type FaceSet: list of FrameInfo
-        :param PersonId: 识别到的人员id
+        :param PersonId: 識别到的人員id
         :type PersonId: str
         """
         self.FaceSet = None
@@ -4097,22 +4097,22 @@ class SuspectedInfo(AbstractModel):
 
 
 class TeacherOutScreenResult(AbstractModel):
-    """教师是否在屏幕内判断结果
+    """教師是否在螢幕内判斷結果
 
     """
 
     def __init__(self):
         """
-        :param Class: 动作识别结果，InScreen：在屏幕内
-OutScreen：不在屏幕内
+        :param Class: 動作識别結果，InScreen：在螢幕内
+OutScreen：不在螢幕内
         :type Class: str
-        :param Height: 识别结果高度
+        :param Height: 識别結果高度
         :type Height: int
-        :param Left: 识别结果左坐标
+        :param Left: 識别結果左坐标
         :type Left: int
-        :param Top: 识别结果顶坐标
+        :param Top: 識别結果頂坐标
         :type Top: int
-        :param Width: 识别结果宽度
+        :param Width: 識别結果寬度
         :type Width: int
         """
         self.Class = None
@@ -4131,25 +4131,25 @@ OutScreen：不在屏幕内
 
 
 class TextItem(AbstractModel):
-    """当前句子的信息
+    """當前句子的訊息
 
     """
 
     def __init__(self):
         """
-        :param Words: 当前句子包含的所有单词信息
+        :param Words: 當前句子包含的所有單詞訊息
         :type Words: list of Word
-        :param Confidence: 当前句子的置信度
+        :param Confidence: 當前句子的置信度
         :type Confidence: float
-        :param Mbtm: 当前句子语音的起始时间点，单位为ms
+        :param Mbtm: 當前句子語音的起始時間點，單位爲ms
         :type Mbtm: int
-        :param Metm: 当前句子语音的终止时间点，单位为ms
+        :param Metm: 當前句子語音的終止時間點，單位爲ms
         :type Metm: int
-        :param Tag: 保留参数，暂无意义
+        :param Tag: 保留參數，暫無意義
         :type Tag: int
-        :param Text: 当前句子
+        :param Text: 當前句子
         :type Text: str
-        :param TextSize: 当前句子的字节数
+        :param TextSize: 當前句子的位元數
         :type TextSize: int
         """
         self.Words = None
@@ -4183,11 +4183,11 @@ class TimeInfoResult(AbstractModel):
 
     def __init__(self):
         """
-        :param Duration: 持续时间，单位毫秒
+        :param Duration: 持續時間，單位毫秒
         :type Duration: int
-        :param EndTs: 结束时间戳，单位毫秒
+        :param EndTs: 結束時間戳，單位毫秒
         :type EndTs: int
-        :param StartTs: 开始时间戳，单位毫秒
+        :param StartTs: 開始時間戳，單位毫秒
         :type StartTs: int
         """
         self.Duration = None
@@ -4202,15 +4202,15 @@ class TimeInfoResult(AbstractModel):
 
 
 class TimeType(AbstractModel):
-    """起止时间
+    """起止時間
 
     """
 
     def __init__(self):
         """
-        :param EndTime: 结束时间戳
+        :param EndTime: 結束時間戳
         :type EndTime: int
-        :param StartTime: 起始时间戳
+        :param StartTime: 起始時間戳
         :type StartTime: int
         """
         self.EndTime = None
@@ -4223,31 +4223,31 @@ class TimeType(AbstractModel):
 
 
 class TransmitAudioStreamRequest(AbstractModel):
-    """TransmitAudioStream请求参数结构体
+    """TransmitAudioStream請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Functions: 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+        :param Functions: 功能開關清單，表示是否需要打開相應的功能，返回相應的訊息
         :type Functions: :class:`tencentcloud.tci.v20190318.models.Function`
-        :param SeqId: 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义。
+        :param SeqId: 流式數據包的序号，從1開始，當IsEnd欄位爲1後後續序号無意義。
         :type SeqId: int
-        :param SessionId: 语音段唯一标识，一个完整语音一个SessionId。
+        :param SessionId: 語音段唯一标識，一個完整語音一個SessionId。
         :type SessionId: str
-        :param UserVoiceData: 当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
+        :param UserVoiceData: 當前數據包數據, 流式模式下數據包大小可以按需設置，在網絡良好的情況下，建議設置爲0.5k，且必須保證分片幀完整（16bit的數據必須保證音訊長度爲偶數），編碼格式要求爲BASE64。
         :type UserVoiceData: str
-        :param VoiceEncodeType: 语音编码类型 1:pcm。
+        :param VoiceEncodeType: 語音編碼類型 1:pcm。
         :type VoiceEncodeType: int
-        :param VoiceFileType: 语音文件类型 	1: raw, 2: wav, 3: mp3 (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
+        :param VoiceFileType: 語音文件類型 	1: raw, 2: wav, 3: mp3 (語言文件格式目前僅支援 16k 采樣率 16bit 編碼單聲道，如有不一緻可能導緻評估不準确或失敗)。
         :type VoiceFileType: int
-        :param IsEnd: 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
+        :param IsEnd: 是否傳輸完畢标志，若爲0表示未完畢，若爲1則傳輸完畢開始評估，非流式模式下無意義。
         :type IsEnd: int
-        :param Lang: 音频源的语言，默认0为英文，1为中文
+        :param Lang: 音訊源的語言，預設0爲英文，1爲中文
         :type Lang: int
-        :param StorageMode: 是否临时保存 音频链接
+        :param StorageMode: 是否臨時保存 音訊連結
         :type StorageMode: int
-        :param VocabLibNameList: 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
+        :param VocabLibNameList: 識别詞庫名清單，評估過程使用這些詞匯庫中的詞匯進行詞匯使用行爲分析
         :type VocabLibNameList: list of str
         """
         self.Functions = None
@@ -4278,25 +4278,25 @@ class TransmitAudioStreamRequest(AbstractModel):
 
 
 class TransmitAudioStreamResponse(AbstractModel):
-    """TransmitAudioStream返回参数结构体
+    """TransmitAudioStream返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AsrStat: 返回的当前音频的统计信息。当进度为100时返回。
+        :param AsrStat: 返回的當前音訊的統計訊息。當進度爲100時返回。
         :type AsrStat: :class:`tencentcloud.tci.v20190318.models.ASRStat`
-        :param Texts: 返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
+        :param Texts: 返回當前音訊流的詳細訊息，如果是流模式，返回的是對應流的詳細訊息，如果是 URL模式，返回的是查詢的那一段seq對應的音訊的詳細訊息。
         :type Texts: list of WholeTextItem
-        :param VocabAnalysisDetailInfo: 返回词汇库中的单词出现的详细时间信息。
+        :param VocabAnalysisDetailInfo: 返回詞匯庫中的單詞出現的詳細時間訊息。
         :type VocabAnalysisDetailInfo: list of VocabDetailInfomation
-        :param VocabAnalysisStatInfo: 返回词汇库中的单词出现的次数信息。
+        :param VocabAnalysisStatInfo: 返回詞匯庫中的單詞出現的次數訊息。
         :type VocabAnalysisStatInfo: list of VocabStatInfomation
-        :param AllTexts: 音频全部文本。
+        :param AllTexts: 音訊全部文本。
         :type AllTexts: str
-        :param AudioUrl: 临时保存的音频链接
+        :param AudioUrl: 臨時保存的音訊連結
         :type AudioUrl: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AsrStat = None
@@ -4336,15 +4336,15 @@ class TransmitAudioStreamResponse(AbstractModel):
 
 
 class VocabDetailInfomation(AbstractModel):
-    """词汇库中的单词出现在音频中的那个句子的起始时间和结束时间信息
+    """詞匯庫中的單詞出現在音訊中的那個句子的起始時間和結束時間訊息
 
     """
 
     def __init__(self):
         """
-        :param VocabDetailInfo: 词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
+        :param VocabDetailInfo: 詞匯庫中的單詞出現在該音訊中的那個句子的時間戳，出現了幾次，就返回對應次數的起始和結束時間戳
         :type VocabDetailInfo: list of DetailInfo
-        :param VocabLibName: 词汇库名
+        :param VocabLibName: 詞匯庫名
         :type VocabLibName: str
         """
         self.VocabDetailInfo = None
@@ -4362,15 +4362,15 @@ class VocabDetailInfomation(AbstractModel):
 
 
 class VocabStatInfomation(AbstractModel):
-    """词汇库中的单词出现在音频中的总次数信息
+    """詞匯庫中的單詞出現在音訊中的總次數訊息
 
     """
 
     def __init__(self):
         """
-        :param VocabDetailInfo: 单词出现在该音频中总次数
+        :param VocabDetailInfo: 單詞出現在該音訊中總次數
         :type VocabDetailInfo: list of StatInfo
-        :param VocabLibName: 词汇库名称
+        :param VocabLibName: 詞匯庫名稱
         :type VocabLibName: str
         """
         self.VocabDetailInfo = None
@@ -4388,13 +4388,13 @@ class VocabStatInfomation(AbstractModel):
 
 
 class WholeTextItem(AbstractModel):
-    """含有语速的句子信息
+    """含有語速的句子訊息
 
     """
 
     def __init__(self):
         """
-        :param TextItem: 当前句子的信息
+        :param TextItem: 當前句子的訊息
         :type TextItem: :class:`tencentcloud.tci.v20190318.models.TextItem`
         :param AvgVolume: Vad的平均音量
         :type AvgVolume: float
@@ -4402,7 +4402,7 @@ class WholeTextItem(AbstractModel):
         :type MaxVolume: float
         :param MinVolume: Vad的最小音量
         :type MinVolume: float
-        :param Speed: 当前句子的语速
+        :param Speed: 當前句子的語速
         :type Speed: float
         """
         self.TextItem = None
@@ -4423,21 +4423,21 @@ class WholeTextItem(AbstractModel):
 
 
 class Word(AbstractModel):
-    """当前句子包含的所有单词信息
+    """當前句子包含的所有單詞訊息
 
     """
 
     def __init__(self):
         """
-        :param Confidence: 当前词的置信度
+        :param Confidence: 當前詞的置信度
         :type Confidence: float
-        :param Mbtm: 当前单词语音的起始时间点，单位为ms
+        :param Mbtm: 當前單詞語音的起始時間點，單位爲ms
         :type Mbtm: int
-        :param Metm: 当前单词语音的终止时间点，单位为ms
+        :param Metm: 當前單詞語音的終止時間點，單位爲ms
         :type Metm: int
-        :param Text: 当前词
+        :param Text: 當前詞
         :type Text: str
-        :param Wsize: 当前词的字节数
+        :param Wsize: 當前詞的位元數
         :type Wsize: int
         """
         self.Confidence = None
@@ -4456,15 +4456,15 @@ class Word(AbstractModel):
 
 
 class WordTimePair(AbstractModel):
-    """单词出现的那个句子的起始时间和结束时间信息
+    """單詞出現的那個句子的起始時間和結束時間訊息
 
     """
 
     def __init__(self):
         """
-        :param Mbtm: 单词出现的那个句子的起始时间
+        :param Mbtm: 單詞出現的那個句子的起始時間
         :type Mbtm: int
-        :param Metm: 	单词出现的那个句子的结束时间
+        :param Metm: 	單詞出現的那個句子的結束時間
         :type Metm: int
         """
         self.Mbtm = None

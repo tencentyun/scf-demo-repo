@@ -26,9 +26,9 @@ class TbmClient(AbstractClient):
 
 
     def DescribeBrandCommentCount(self, request):
-        """通过分析用户在评价品牌时用词的正负面情绪评分，返回品牌好评与差评评价条数，按天输出结果。
+        """通過分析用戶在評價品牌時用詞的正負面情緒評分，返回品牌好評與差評評價條數，按天輸出結果。
 
-        :param request: 调用DescribeBrandCommentCount所需参数的结构体。
+        :param request: 調用DescribeBrandCommentCount所需參數的結構體。
         :type request: :class:`tencentcloud.tbm.v20180129.models.DescribeBrandCommentCountRequest`
         :rtype: :class:`tencentcloud.tbm.v20180129.models.DescribeBrandCommentCountResponse`
 
@@ -54,9 +54,9 @@ class TbmClient(AbstractClient):
 
 
     def DescribeBrandExposure(self, request):
-        """监测品牌关键词命中文章标题或全文的文章篇数，按天输出数据。
+        """監測品牌關鍵詞命中文章标題或全文的文章篇數，按天輸出數據。
 
-        :param request: 调用DescribeBrandExposure所需参数的结构体。
+        :param request: 調用DescribeBrandExposure所需參數的結構體。
         :type request: :class:`tencentcloud.tbm.v20180129.models.DescribeBrandExposureRequest`
         :rtype: :class:`tencentcloud.tbm.v20180129.models.DescribeBrandExposureResponse`
 
@@ -82,9 +82,9 @@ class TbmClient(AbstractClient):
 
 
     def DescribeBrandMediaReport(self, request):
-        """监测品牌关键词出现在媒体网站（新闻媒体、网络门户、政府网站、微信公众号、天天快报等）发布资讯标题和正文中的报道数。按天输出结果。
+        """監測品牌關鍵詞出現在媒體網站（新聞媒體、網絡門戶、政府網站、微信公衆号、天天快報等）發布資訊标題和正文中的報道數。按天輸出結果。
 
-        :param request: 调用DescribeBrandMediaReport所需参数的结构体。
+        :param request: 調用DescribeBrandMediaReport所需參數的結構體。
         :type request: :class:`tencentcloud.tbm.v20180129.models.DescribeBrandMediaReportRequest`
         :rtype: :class:`tencentcloud.tbm.v20180129.models.DescribeBrandMediaReportResponse`
 
@@ -110,9 +110,9 @@ class TbmClient(AbstractClient):
 
 
     def DescribeBrandNegComments(self, request):
-        """通过分析用户在评价品牌时用词的正负面情绪评分，返回品牌热门差评观点列表。
+        """通過分析用戶在評價品牌時用詞的正負面情緒評分，返回品牌熱門差評觀點清單。
 
-        :param request: 调用DescribeBrandNegComments所需参数的结构体。
+        :param request: 調用DescribeBrandNegComments所需參數的結構體。
         :type request: :class:`tencentcloud.tbm.v20180129.models.DescribeBrandNegCommentsRequest`
         :rtype: :class:`tencentcloud.tbm.v20180129.models.DescribeBrandNegCommentsResponse`
 
@@ -138,9 +138,9 @@ class TbmClient(AbstractClient):
 
 
     def DescribeBrandPosComments(self, request):
-        """通过分析用户在评价品牌时用词的正负面情绪评分，返回品牌热门好评观点列表。
+        """通過分析用戶在評價品牌時用詞的正負面情緒評分，返回品牌熱門好評觀點清單。
 
-        :param request: 调用DescribeBrandPosComments所需参数的结构体。
+        :param request: 調用DescribeBrandPosComments所需參數的結構體。
         :type request: :class:`tencentcloud.tbm.v20180129.models.DescribeBrandPosCommentsRequest`
         :rtype: :class:`tencentcloud.tbm.v20180129.models.DescribeBrandPosCommentsResponse`
 
@@ -166,9 +166,9 @@ class TbmClient(AbstractClient):
 
 
     def DescribeBrandSocialOpinion(self, request):
-        """检测品牌关键词出现在微博、QQ兴趣部落、论坛、博客等个人公开贡献资讯中的内容，每天聚合近30天热度最高的观点列表。
+        """檢測品牌關鍵詞出現在微博、QQ興趣部落、論壇、博客等個人公開貢獻資訊中的内容，每天聚合近30天熱度最高的觀點清單。
 
-        :param request: 调用DescribeBrandSocialOpinion所需参数的结构体。
+        :param request: 調用DescribeBrandSocialOpinion所需參數的結構體。
         :type request: :class:`tencentcloud.tbm.v20180129.models.DescribeBrandSocialOpinionRequest`
         :rtype: :class:`tencentcloud.tbm.v20180129.models.DescribeBrandSocialOpinionResponse`
 
@@ -194,9 +194,9 @@ class TbmClient(AbstractClient):
 
 
     def DescribeBrandSocialReport(self, request):
-        """监测品牌关键词出现在微博、QQ兴趣部落、论坛、博客等个人公开贡献资讯中的条数。按天输出数据结果。
+        """監測品牌關鍵詞出現在微博、QQ興趣部落、論壇、博客等個人公開貢獻資訊中的條數。按天輸出數據結果。
 
-        :param request: 调用DescribeBrandSocialReport所需参数的结构体。
+        :param request: 調用DescribeBrandSocialReport所需參數的結構體。
         :type request: :class:`tencentcloud.tbm.v20180129.models.DescribeBrandSocialReportRequest`
         :rtype: :class:`tencentcloud.tbm.v20180129.models.DescribeBrandSocialReportResponse`
 
@@ -222,9 +222,9 @@ class TbmClient(AbstractClient):
 
 
     def DescribeIndustryNews(self, request):
-        """根据客户定制的行业关键词，监测关键词出现在媒体网站（新闻媒体、网络门户、政府网站、微信公众号、天天快报等）发布资讯标题和正文中的报道数，以及文章列表、来源渠道、作者、发布时间等。
+        """根據客戶定制的行業關鍵詞，監測關鍵詞出現在媒體網站（新聞媒體、網絡門戶、政府網站、微信公衆号、天天快報等）發布資訊标題和正文中的報道數，以及文章清單、來源管道、作者、發布時間等。
 
-        :param request: 调用DescribeIndustryNews所需参数的结构体。
+        :param request: 調用DescribeIndustryNews所需參數的結構體。
         :type request: :class:`tencentcloud.tbm.v20180129.models.DescribeIndustryNewsRequest`
         :rtype: :class:`tencentcloud.tbm.v20180129.models.DescribeIndustryNewsResponse`
 
@@ -250,9 +250,9 @@ class TbmClient(AbstractClient):
 
 
     def DescribeUserPortrait(self, request):
-        """通过分析洞察参与过品牌媒体互动的用户，比如公开发表品牌的新闻评论、在公开社交渠道发表过对品牌的评价观点等用户，返回用户的画像属性分布，例如性别、年龄、地域、喜爱的明星、喜爱的影视。
+        """通過分析洞察參與過品牌媒體互動的用戶，比如公開發表品牌的新聞評論、在公開社交管道發表過對品牌的評價觀點等用戶，返回用戶的畫像屬性分布，例如性别、年齡、地域、喜愛的明星、喜愛的影視。
 
-        :param request: 调用DescribeUserPortrait所需参数的结构体。
+        :param request: 調用DescribeUserPortrait所需參數的結構體。
         :type request: :class:`tencentcloud.tbm.v20180129.models.DescribeUserPortraitRequest`
         :rtype: :class:`tencentcloud.tbm.v20180129.models.DescribeUserPortraitResponse`
 

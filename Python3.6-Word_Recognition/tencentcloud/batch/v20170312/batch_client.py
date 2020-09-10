@@ -26,9 +26,9 @@ class BatchClient(AbstractClient):
 
 
     def CreateComputeEnv(self, request):
-        """用于创建计算环境
+        """用于創建計算環境
 
-        :param request: 调用CreateComputeEnv所需参数的结构体。
+        :param request: 調用CreateComputeEnv所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.CreateComputeEnvRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.CreateComputeEnvResponse`
 
@@ -54,9 +54,9 @@ class BatchClient(AbstractClient):
 
 
     def CreateTaskTemplate(self, request):
-        """用于创建任务模板
+        """用于創建任務範本
 
-        :param request: 调用CreateTaskTemplate所需参数的结构体。
+        :param request: 調用CreateTaskTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.CreateTaskTemplateRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.CreateTaskTemplateResponse`
 
@@ -82,9 +82,9 @@ class BatchClient(AbstractClient):
 
 
     def DeleteComputeEnv(self, request):
-        """用于删除计算环境
+        """用于删除計算環境
 
-        :param request: 调用DeleteComputeEnv所需参数的结构体。
+        :param request: 調用DeleteComputeEnv所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DeleteComputeEnvRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DeleteComputeEnvResponse`
 
@@ -110,11 +110,11 @@ class BatchClient(AbstractClient):
 
 
     def DeleteJob(self, request):
-        """用于删除作业记录。
-        删除作业的效果相当于删除作业相关的所有信息。删除成功后，作业相关的所有信息都无法查询。
-        待删除的作业必须处于完结状态，且其内部包含的所有任务实例也必须处于完结状态，否则会禁止操作。完结状态，是指处于 SUCCEED 或 FAILED 状态。
+        """用于删除作業記錄。
+        删除作業的效果相當于删除作業相關的所有訊息。删除成功後，作業相關的所有訊息都無法查詢。
+        待删除的作業必須處于完結狀态，且其内部包含的所有任務實例也必須處于完結狀态，否則會禁止操作。完結狀态，是指處于 SUCCEED 或 FAILED 狀态。
 
-        :param request: 调用DeleteJob所需参数的结构体。
+        :param request: 調用DeleteJob所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DeleteJobRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DeleteJobResponse`
 
@@ -140,9 +140,9 @@ class BatchClient(AbstractClient):
 
 
     def DeleteTaskTemplates(self, request):
-        """用于删除任务模板信息
+        """用于删除任務範本訊息
 
-        :param request: 调用DeleteTaskTemplates所需参数的结构体。
+        :param request: 調用DeleteTaskTemplates所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DeleteTaskTemplatesRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DeleteTaskTemplatesResponse`
 
@@ -168,9 +168,9 @@ class BatchClient(AbstractClient):
 
 
     def DescribeAvailableCvmInstanceTypes(self, request):
-        """查看可用的CVM机型配置信息
+        """檢視可用的CVM機型配置訊息
 
-        :param request: 调用DescribeAvailableCvmInstanceTypes所需参数的结构体。
+        :param request: 調用DescribeAvailableCvmInstanceTypes所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DescribeAvailableCvmInstanceTypesRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeAvailableCvmInstanceTypesResponse`
 
@@ -196,9 +196,9 @@ class BatchClient(AbstractClient):
 
 
     def DescribeComputeEnv(self, request):
-        """用于查询计算环境的详细信息
+        """用于查詢計算環境的詳細訊息
 
-        :param request: 调用DescribeComputeEnv所需参数的结构体。
+        :param request: 調用DescribeComputeEnv所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvResponse`
 
@@ -224,9 +224,9 @@ class BatchClient(AbstractClient):
 
 
     def DescribeComputeEnvActivities(self, request):
-        """用于查询计算环境的活动信息
+        """用于查詢計算環境的活動訊息
 
-        :param request: 调用DescribeComputeEnvActivities所需参数的结构体。
+        :param request: 調用DescribeComputeEnvActivities所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvActivitiesRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvActivitiesResponse`
 
@@ -252,9 +252,9 @@ class BatchClient(AbstractClient):
 
 
     def DescribeComputeEnvCreateInfo(self, request):
-        """查看计算环境的创建信息。
+        """檢視計算環境的創建訊息。
 
-        :param request: 调用DescribeComputeEnvCreateInfo所需参数的结构体。
+        :param request: 調用DescribeComputeEnvCreateInfo所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvCreateInfoRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvCreateInfoResponse`
 
@@ -280,9 +280,9 @@ class BatchClient(AbstractClient):
 
 
     def DescribeComputeEnvCreateInfos(self, request):
-        """用于查看计算环境创建信息列表，包括名称、描述、类型、环境参数、通知及期望节点数等。
+        """用于檢視計算環境創建訊息清單，包括名稱、描述、類型、環境參數、通知及期望節點數等。
 
-        :param request: 调用DescribeComputeEnvCreateInfos所需参数的结构体。
+        :param request: 調用DescribeComputeEnvCreateInfos所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvCreateInfosRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvCreateInfosResponse`
 
@@ -308,9 +308,9 @@ class BatchClient(AbstractClient):
 
 
     def DescribeComputeEnvs(self, request):
-        """用于查看计算环境列表
+        """用于檢視計算環境清單
 
-        :param request: 调用DescribeComputeEnvs所需参数的结构体。
+        :param request: 調用DescribeComputeEnvs所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvsRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvsResponse`
 
@@ -336,9 +336,9 @@ class BatchClient(AbstractClient):
 
 
     def DescribeCvmZoneInstanceConfigInfos(self, request):
-        """获取批量计算可用区机型配置信息
+        """獲取批次計算可用區機型配置訊息
 
-        :param request: 调用DescribeCvmZoneInstanceConfigInfos所需参数的结构体。
+        :param request: 調用DescribeCvmZoneInstanceConfigInfos所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DescribeCvmZoneInstanceConfigInfosRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeCvmZoneInstanceConfigInfosResponse`
 
@@ -364,9 +364,9 @@ class BatchClient(AbstractClient):
 
 
     def DescribeInstanceCategories(self, request):
-        """目前对CVM现有实例族划分为四类，每一类包含若干实例族。该接口用于查询实例分类信息。
+        """目前對CVM現有實例族劃分爲四類，每一類包含若幹實例族。該介面用于查詢實例分類訊息。
 
-        :param request: 调用DescribeInstanceCategories所需参数的结构体。
+        :param request: 調用DescribeInstanceCategories所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DescribeInstanceCategoriesRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeInstanceCategoriesResponse`
 
@@ -392,9 +392,9 @@ class BatchClient(AbstractClient):
 
 
     def DescribeJob(self, request):
-        """用于查看一个作业的详细信息，包括内部任务（Task）和依赖（Dependence）信息。
+        """用于檢視一個作業的詳細訊息，包括内部任務（Task）和依賴（Dependence）訊息。
 
-        :param request: 调用DescribeJob所需参数的结构体。
+        :param request: 調用DescribeJob所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DescribeJobRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeJobResponse`
 
@@ -420,9 +420,9 @@ class BatchClient(AbstractClient):
 
 
     def DescribeJobSubmitInfo(self, request):
-        """用于查询指定作业的提交信息，其返回内容包括 JobId 和 SubmitJob 接口中作为输入参数的作业提交信息
+        """用于查詢指定作業的提交訊息，其返回内容包括 JobId 和 SubmitJob 介面中作爲輸入參數的作業提交訊息
 
-        :param request: 调用DescribeJobSubmitInfo所需参数的结构体。
+        :param request: 調用DescribeJobSubmitInfo所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DescribeJobSubmitInfoRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeJobSubmitInfoResponse`
 
@@ -448,9 +448,9 @@ class BatchClient(AbstractClient):
 
 
     def DescribeJobs(self, request):
-        """用于查询若干个作业的概览信息
+        """用于查詢若幹個作業的概覽訊息
 
-        :param request: 调用DescribeJobs所需参数的结构体。
+        :param request: 調用DescribeJobs所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DescribeJobsRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeJobsResponse`
 
@@ -476,9 +476,9 @@ class BatchClient(AbstractClient):
 
 
     def DescribeTask(self, request):
-        """用于查询指定任务的详细信息，包括任务内部的任务实例信息。
+        """用于查詢指定任務的詳細訊息，包括任務内部的任務實例訊息。
 
-        :param request: 调用DescribeTask所需参数的结构体。
+        :param request: 調用DescribeTask所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DescribeTaskRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeTaskResponse`
 
@@ -504,9 +504,9 @@ class BatchClient(AbstractClient):
 
 
     def DescribeTaskLogs(self, request):
-        """用于获取任务多个实例标准输出和标准错误日志。
+        """用于獲取任務多個實例标準輸出和标準錯誤日志。
 
-        :param request: 调用DescribeTaskLogs所需参数的结构体。
+        :param request: 調用DescribeTaskLogs所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DescribeTaskLogsRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeTaskLogsResponse`
 
@@ -532,9 +532,9 @@ class BatchClient(AbstractClient):
 
 
     def DescribeTaskTemplates(self, request):
-        """用于查询任务模板信息
+        """用于查詢任務範本訊息
 
-        :param request: 调用DescribeTaskTemplates所需参数的结构体。
+        :param request: 調用DescribeTaskTemplates所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.DescribeTaskTemplatesRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeTaskTemplatesResponse`
 
@@ -560,9 +560,9 @@ class BatchClient(AbstractClient):
 
 
     def ModifyComputeEnv(self, request):
-        """用于修改计算环境属性
+        """用于修改計算環境屬性
 
-        :param request: 调用ModifyComputeEnv所需参数的结构体。
+        :param request: 調用ModifyComputeEnv所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.ModifyComputeEnvRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.ModifyComputeEnvResponse`
 
@@ -588,9 +588,9 @@ class BatchClient(AbstractClient):
 
 
     def ModifyTaskTemplate(self, request):
-        """用于修改任务模板
+        """用于修改任務範本
 
-        :param request: 调用ModifyTaskTemplate所需参数的结构体。
+        :param request: 調用ModifyTaskTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.ModifyTaskTemplateRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.ModifyTaskTemplateResponse`
 
@@ -616,10 +616,10 @@ class BatchClient(AbstractClient):
 
 
     def RetryJobs(self, request):
-        """用于重试作业中失败的任务实例。
-        当且仅当作业处于“FAILED”状态，支持重试操作。重试操作成功后，作业会按照“DAG”中指定的任务依赖关系，依次重试各个任务中失败的任务实例。任务实例的历史信息将被重置，如同首次运行一样，参与后续的调度和执行。
+        """用于重試作業中失敗的任務實例。
+        當且僅當作業處于“FAILED”狀态，支援重試操作。重試操作成功後，作業會按照“DAG”中指定的任務依賴關系，依次重試各個任務中失敗的任務實例。任務實例的曆史訊息将被重置，如同首次運作一樣，參與後續的調度和執行。
 
-        :param request: 调用RetryJobs所需参数的结构体。
+        :param request: 調用RetryJobs所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.RetryJobsRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.RetryJobsResponse`
 
@@ -645,9 +645,9 @@ class BatchClient(AbstractClient):
 
 
     def SubmitJob(self, request):
-        """用于提交一个作业
+        """用于提交一個作業
 
-        :param request: 调用SubmitJob所需参数的结构体。
+        :param request: 調用SubmitJob所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.SubmitJobRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.SubmitJobResponse`
 
@@ -673,10 +673,10 @@ class BatchClient(AbstractClient):
 
 
     def TerminateComputeNode(self, request):
-        """用于销毁计算节点。
-        对于状态为CREATED、CREATION_FAILED、RUNNING和ABNORMAL的节点，允许销毁处理。
+        """用于銷毀計算節點。
+        對于狀态爲CREATED、CREATION_FAILED、RUNNING和ABNORMAL的節點，允許銷毀處理。
 
-        :param request: 调用TerminateComputeNode所需参数的结构体。
+        :param request: 調用TerminateComputeNode所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.TerminateComputeNodeRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.TerminateComputeNodeResponse`
 
@@ -702,9 +702,9 @@ class BatchClient(AbstractClient):
 
 
     def TerminateComputeNodes(self, request):
-        """用于批量销毁计算节点，不允许重复销毁同一个节点。
+        """用于批次銷毀計算節點，不允許重複銷毀同一個節點。
 
-        :param request: 调用TerminateComputeNodes所需参数的结构体。
+        :param request: 調用TerminateComputeNodes所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.TerminateComputeNodesRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.TerminateComputeNodesResponse`
 
@@ -730,11 +730,11 @@ class BatchClient(AbstractClient):
 
 
     def TerminateJob(self, request):
-        """用于终止作业。
-        当作业处于“SUBMITTED”状态时，禁止终止操作；当作业处于“SUCCEED”状态时，终止操作不会生效。
-        终止作业是一个异步过程。整个终止过程的耗时和任务总数成正比。终止的效果相当于所含的所有任务实例进行TerminateTaskInstance操作。具体效果和用法可参考TerminateTaskInstance。
+        """用于終止作業。
+        當作業處于“SUBMITTED”狀态時，禁止終止操作；當作業處于“SUCCEED”狀态時，終止操作不會生效。
+        終止作業是一個異步過程。整個終止過程的耗時和任務總數成正比。終止的效果相當于所含的所有任務實例進行TerminateTaskInstance操作。具體效果和用法可參考TerminateTaskInstance。
 
-        :param request: 调用TerminateJob所需参数的结构体。
+        :param request: 調用TerminateJob所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.TerminateJobRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.TerminateJobResponse`
 
@@ -760,13 +760,13 @@ class BatchClient(AbstractClient):
 
 
     def TerminateTaskInstance(self, request):
-        """用于终止任务实例。
-        对于状态已经为“SUCCEED”和“FAILED”的任务实例，不做处理。
-        对于状态为“SUBMITTED”、“PENDING”、“RUNNABLE”的任务实例，状态将置为“FAILED”状态。
-        对于状态为“STARTING”、“RUNNING”、“FAILED_INTERRUPTED”的任务实例，分区两种情况：如果未显示指定计算环境，会先销毁CVM服务器，然后将状态置为“FAILED”，具有一定耗时；如果指定了计算环境EnvId，任务实例状态置为“FAILED”，并重启执行该任务的CVM服务器，具有一定的耗时。
-        对于状态为“FAILED_INTERRUPTED”的任务实例，终止操作实际成功之后，相关资源和配额才会释放。
+        """用于終止任務實例。
+        對于狀态已經爲“SUCCEED”和“FAILED”的任務實例，不做處理。
+        對于狀态爲“SUBMITTED”、“PENDING”、“RUNNABLE”的任務實例，狀态将置爲“FAILED”狀态。
+        對于狀态爲“STARTING”、“RUNNING”、“FAILED_INTERRUPTED”的任務實例，分區兩種情況：如果未顯示指定計算環境，會先銷毀CVM服務器，然後将狀态置爲“FAILED”，具有一定耗時；如果指定了計算環境EnvId，任務實例狀态置爲“FAILED”，并重啓執行該任務的CVM服務器，具有一定的耗時。
+        對于狀态爲“FAILED_INTERRUPTED”的任務實例，終止操作實際成功之後，相關資源和配額才會釋放。
 
-        :param request: 调用TerminateTaskInstance所需参数的结构体。
+        :param request: 調用TerminateTaskInstance所需參數的結構體。
         :type request: :class:`tencentcloud.batch.v20170312.models.TerminateTaskInstanceRequest`
         :rtype: :class:`tencentcloud.batch.v20170312.models.TerminateTaskInstanceResponse`
 

@@ -26,9 +26,9 @@ class MsClient(AbstractClient):
 
 
     def CreateBindInstance(self, request):
-        """将应用和资源进行绑定
+        """将應用和資源進行綁定
 
-        :param request: 调用CreateBindInstance所需参数的结构体。
+        :param request: 調用CreateBindInstance所需參數的結構體。
         :type request: :class:`tencentcloud.ms.v20180408.models.CreateBindInstanceRequest`
         :rtype: :class:`tencentcloud.ms.v20180408.models.CreateBindInstanceResponse`
 
@@ -54,9 +54,9 @@ class MsClient(AbstractClient):
 
 
     def CreateCosSecKeyInstance(self, request):
-        """获取云COS文件存储临时密钥，密钥仅限于临时上传文件，有访问限制和时效性。
+        """獲取雲COS文件儲存臨時金鑰，金鑰僅限于臨時上傳文件，有訪問限制和時效性。
 
-        :param request: 调用CreateCosSecKeyInstance所需参数的结构体。
+        :param request: 調用CreateCosSecKeyInstance所需參數的結構體。
         :type request: :class:`tencentcloud.ms.v20180408.models.CreateCosSecKeyInstanceRequest`
         :rtype: :class:`tencentcloud.ms.v20180408.models.CreateCosSecKeyInstanceResponse`
 
@@ -82,9 +82,9 @@ class MsClient(AbstractClient):
 
 
     def CreateResourceInstances(self, request):
-        """用户可以使用该接口自建资源，只支持白名单用户
+        """用戶可以使用該介面自建資源，只支援白名單用戶
 
-        :param request: 调用CreateResourceInstances所需参数的结构体。
+        :param request: 調用CreateResourceInstances所需參數的結構體。
         :type request: :class:`tencentcloud.ms.v20180408.models.CreateResourceInstancesRequest`
         :rtype: :class:`tencentcloud.ms.v20180408.models.CreateResourceInstancesResponse`
 
@@ -110,9 +110,9 @@ class MsClient(AbstractClient):
 
 
     def CreateScanInstances(self, request):
-        """用户通过该接口批量提交应用进行应用扫描，扫描后需通过DescribeScanResults接口查询扫描结果
+        """用戶通過該介面批次提交應用進行應用掃描，掃描後需通過DescribeScanResults介面查詢掃描結果
 
-        :param request: 调用CreateScanInstances所需参数的结构体。
+        :param request: 調用CreateScanInstances所需參數的結構體。
         :type request: :class:`tencentcloud.ms.v20180408.models.CreateScanInstancesRequest`
         :rtype: :class:`tencentcloud.ms.v20180408.models.CreateScanInstancesResponse`
 
@@ -138,9 +138,9 @@ class MsClient(AbstractClient):
 
 
     def CreateShieldInstance(self, request):
-        """用户通过该接口提交应用进行应用加固，加固后需通过DescribeShieldResult接口查询加固结果
+        """用戶通過該介面提交應用進行應用加固，加固後需通過DescribeShieldResult介面查詢加固結果
 
-        :param request: 调用CreateShieldInstance所需参数的结构体。
+        :param request: 調用CreateShieldInstance所需參數的結構體。
         :type request: :class:`tencentcloud.ms.v20180408.models.CreateShieldInstanceRequest`
         :rtype: :class:`tencentcloud.ms.v20180408.models.CreateShieldInstanceResponse`
 
@@ -166,9 +166,9 @@ class MsClient(AbstractClient):
 
 
     def CreateShieldPlanInstance(self, request):
-        """对资源进行策略新增
+        """對資源進行策略新增
 
-        :param request: 调用CreateShieldPlanInstance所需参数的结构体。
+        :param request: 調用CreateShieldPlanInstance所需參數的結構體。
         :type request: :class:`tencentcloud.ms.v20180408.models.CreateShieldPlanInstanceRequest`
         :rtype: :class:`tencentcloud.ms.v20180408.models.CreateShieldPlanInstanceResponse`
 
@@ -194,9 +194,9 @@ class MsClient(AbstractClient):
 
 
     def DeleteScanInstances(self, request):
-        """删除一个或者多个app扫描信息
+        """删除一個或者多個app掃描訊息
 
-        :param request: 调用DeleteScanInstances所需参数的结构体。
+        :param request: 調用DeleteScanInstances所需參數的結構體。
         :type request: :class:`tencentcloud.ms.v20180408.models.DeleteScanInstancesRequest`
         :rtype: :class:`tencentcloud.ms.v20180408.models.DeleteScanInstancesResponse`
 
@@ -222,9 +222,9 @@ class MsClient(AbstractClient):
 
 
     def DeleteShieldInstances(self, request):
-        """删除一个或者多个app加固信息
+        """删除一個或者多個app加固訊息
 
-        :param request: 调用DeleteShieldInstances所需参数的结构体。
+        :param request: 調用DeleteShieldInstances所需參數的結構體。
         :type request: :class:`tencentcloud.ms.v20180408.models.DeleteShieldInstancesRequest`
         :rtype: :class:`tencentcloud.ms.v20180408.models.DeleteShieldInstancesResponse`
 
@@ -250,9 +250,9 @@ class MsClient(AbstractClient):
 
 
     def DescribeResourceInstances(self, request):
-        """获取某个用户的所有资源信息
+        """獲取某個用戶的所有資源訊息
 
-        :param request: 调用DescribeResourceInstances所需参数的结构体。
+        :param request: 調用DescribeResourceInstances所需參數的結構體。
         :type request: :class:`tencentcloud.ms.v20180408.models.DescribeResourceInstancesRequest`
         :rtype: :class:`tencentcloud.ms.v20180408.models.DescribeResourceInstancesResponse`
 
@@ -278,10 +278,10 @@ class MsClient(AbstractClient):
 
 
     def DescribeScanInstances(self, request):
-        """本接口用于查看app列表。
-        可以通过指定任务唯一标识ItemId来查询指定app的详细信息，或通过设定过滤器来查询满足过滤条件的app的详细信息。 指定偏移(Offset)和限制(Limit)来选择结果中的一部分，默认返回满足条件的前20个app信息。
+        """本介面用于檢視app清單。
+        可以通過指定任務唯一标識ItemId來查詢指定app的詳細訊息，或通過設定過濾器來查詢滿足過濾條件的app的詳細訊息。 指定偏移(Offset)和限制(Limit)來選擇結果中的一部分，預設返回滿足條件的前20個app訊息。
 
-        :param request: 调用DescribeScanInstances所需参数的结构体。
+        :param request: 調用DescribeScanInstances所需參數的結構體。
         :type request: :class:`tencentcloud.ms.v20180408.models.DescribeScanInstancesRequest`
         :rtype: :class:`tencentcloud.ms.v20180408.models.DescribeScanInstancesResponse`
 
@@ -307,9 +307,9 @@ class MsClient(AbstractClient):
 
 
     def DescribeScanResults(self, request):
-        """用户通过CreateScanInstances接口提交应用进行风险批量扫描后，用此接口批量获取风险详细信息,包含漏洞信息，广告信息，插件信息和病毒信息
+        """用戶通過CreateScanInstances介面提交應用進行風險批次掃描後，用此介面批次獲取風險詳細訊息,包含漏洞訊息，廣告訊息，插件訊息和病毒訊息
 
-        :param request: 调用DescribeScanResults所需参数的结构体。
+        :param request: 調用DescribeScanResults所需參數的結構體。
         :type request: :class:`tencentcloud.ms.v20180408.models.DescribeScanResultsRequest`
         :rtype: :class:`tencentcloud.ms.v20180408.models.DescribeScanResultsResponse`
 
@@ -335,10 +335,10 @@ class MsClient(AbstractClient):
 
 
     def DescribeShieldInstances(self, request):
-        """本接口用于查看app列表。
-        可以通过指定任务唯一标识ItemId来查询指定app的详细信息，或通过设定过滤器来查询满足过滤条件的app的详细信息。 指定偏移(Offset)和限制(Limit)来选择结果中的一部分，默认返回满足条件的前20个app信息。
+        """本介面用于檢視app清單。
+        可以通過指定任務唯一标識ItemId來查詢指定app的詳細訊息，或通過設定過濾器來查詢滿足過濾條件的app的詳細訊息。 指定偏移(Offset)和限制(Limit)來選擇結果中的一部分，預設返回滿足條件的前20個app訊息。
 
-        :param request: 调用DescribeShieldInstances所需参数的结构体。
+        :param request: 調用DescribeShieldInstances所需參數的結構體。
         :type request: :class:`tencentcloud.ms.v20180408.models.DescribeShieldInstancesRequest`
         :rtype: :class:`tencentcloud.ms.v20180408.models.DescribeShieldInstancesResponse`
 
@@ -364,9 +364,9 @@ class MsClient(AbstractClient):
 
 
     def DescribeShieldPlanInstance(self, request):
-        """查询加固策略
+        """查詢加固策略
 
-        :param request: 调用DescribeShieldPlanInstance所需参数的结构体。
+        :param request: 調用DescribeShieldPlanInstance所需參數的結構體。
         :type request: :class:`tencentcloud.ms.v20180408.models.DescribeShieldPlanInstanceRequest`
         :rtype: :class:`tencentcloud.ms.v20180408.models.DescribeShieldPlanInstanceResponse`
 
@@ -392,9 +392,9 @@ class MsClient(AbstractClient):
 
 
     def DescribeShieldResult(self, request):
-        """通过唯一标识获取加固的结果
+        """通過唯一标識獲取加固的結果
 
-        :param request: 调用DescribeShieldResult所需参数的结构体。
+        :param request: 調用DescribeShieldResult所需參數的結構體。
         :type request: :class:`tencentcloud.ms.v20180408.models.DescribeShieldResultRequest`
         :rtype: :class:`tencentcloud.ms.v20180408.models.DescribeShieldResultResponse`
 
@@ -420,9 +420,9 @@ class MsClient(AbstractClient):
 
 
     def DescribeUserBaseInfoInstance(self, request):
-        """获取用户基础信息
+        """獲取用戶基礎訊息
 
-        :param request: 调用DescribeUserBaseInfoInstance所需参数的结构体。
+        :param request: 調用DescribeUserBaseInfoInstance所需參數的結構體。
         :type request: :class:`tencentcloud.ms.v20180408.models.DescribeUserBaseInfoInstanceRequest`
         :rtype: :class:`tencentcloud.ms.v20180408.models.DescribeUserBaseInfoInstanceResponse`
 

@@ -17,13 +17,13 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class BindEipAclsRequest(AbstractModel):
-    """BindEipAcls请求参数结构体
+    """BindEipAcls請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EipIdAclIdList: 待关联的 EIP 与 ACL关系列表
+        :param EipIdAclIdList: 待關聯的 EIP 與 ACL關系清單
         :type EipIdAclIdList: list of EipAclMap
         """
         self.EipIdAclIdList = None
@@ -39,13 +39,13 @@ class BindEipAclsRequest(AbstractModel):
 
 
 class BindEipAclsResponse(AbstractModel):
-    """BindEipAcls返回参数结构体
+    """BindEipAcls返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -56,15 +56,15 @@ class BindEipAclsResponse(AbstractModel):
 
 
 class BindHostedRequest(AbstractModel):
-    """BindHosted请求参数结构体
+    """BindHosted請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EipId: Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
+        :param EipId: Eip實例ID，可通過DescribeBmEip 介面返回欄位中的 eipId獲取。Eip和EipId參數必須要填寫一個。
         :type EipId: str
-        :param InstanceId: 托管机器实例ID
+        :param InstanceId: 托管機器實例ID
         :type InstanceId: str
         """
         self.EipId = None
@@ -77,15 +77,15 @@ class BindHostedRequest(AbstractModel):
 
 
 class BindHostedResponse(AbstractModel):
-    """BindHosted返回参数结构体
+    """BindHosted返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 异步任务ID，可以通过EipBmQueryTask查询任务状态
+        :param TaskId: 異步任務ID，可以通過EipBmQueryTask查詢任務狀态
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -98,15 +98,15 @@ class BindHostedResponse(AbstractModel):
 
 
 class BindRsRequest(AbstractModel):
-    """BindRs请求参数结构体
+    """BindRs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EipId: Eip实例ID
+        :param EipId: Eip實例ID
         :type EipId: str
-        :param InstanceId: 物理服务器实例ID
+        :param InstanceId: 物理服務器實例ID
         :type InstanceId: str
         """
         self.EipId = None
@@ -119,15 +119,15 @@ class BindRsRequest(AbstractModel):
 
 
 class BindRsResponse(AbstractModel):
-    """BindRs返回参数结构体
+    """BindRs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 绑定黑石物理机异步任务ID，可以通过DescribeEipTask查询任务状态
+        :param TaskId: 綁定黑石物理機異步任務ID，可以通過DescribeEipTask查詢任務狀态
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -140,17 +140,17 @@ class BindRsResponse(AbstractModel):
 
 
 class BindVpcIpRequest(AbstractModel):
-    """BindVpcIp请求参数结构体
+    """BindVpcIp請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EipId: Eip实例ID
+        :param EipId: Eip實例ID
         :type EipId: str
-        :param VpcId: EIP归属VpcId，例如vpc-k7j1t2x1
+        :param VpcId: EIP歸屬VpcId，例如vpc-k7j1t2x1
         :type VpcId: str
-        :param VpcIp: 绑定的VPC内IP地址
+        :param VpcIp: 綁定的VPC内IP網址
         :type VpcIp: str
         """
         self.EipId = None
@@ -165,15 +165,15 @@ class BindVpcIpRequest(AbstractModel):
 
 
 class BindVpcIpResponse(AbstractModel):
-    """BindVpcIp返回参数结构体
+    """BindVpcIp返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: EIP绑定VPC网络IP异步任务ID，可以通过查询EIP任务状态查询任务状态
+        :param TaskId: EIP綁定VPC網絡IP異步任務ID，可以通過查詢EIP任務狀态查詢任務狀态
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -186,15 +186,15 @@ class BindVpcIpResponse(AbstractModel):
 
 
 class CreateEipAclRequest(AbstractModel):
-    """CreateEipAcl请求参数结构体
+    """CreateEipAcl請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AclName: ACL 名称
+        :param AclName: ACL 名稱
         :type AclName: str
-        :param Status: ACL 状态 0：无状态，1：有状态
+        :param Status: ACL 狀态 0：無狀态，1：有狀态
         :type Status: int
         """
         self.AclName = None
@@ -207,21 +207,21 @@ class CreateEipAclRequest(AbstractModel):
 
 
 class CreateEipAclResponse(AbstractModel):
-    """CreateEipAcl返回参数结构体
+    """CreateEipAcl返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AclId: ACL 实例 ID
+        :param AclId: ACL 實例 ID
         :type AclId: str
-        :param Status: ACL 实例状态
+        :param Status: ACL 實例狀态
         :type Status: int
-        :param AclName: ACL 实例名称
+        :param AclName: ACL 實例名稱
         :type AclName: str
-        :param CreatedAt: ACL 实例创建时间
+        :param CreatedAt: ACL 實例創建時間
         :type CreatedAt: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AclId = None
@@ -240,25 +240,25 @@ class CreateEipAclResponse(AbstractModel):
 
 
 class CreateEipRequest(AbstractModel):
-    """CreateEip请求参数结构体
+    """CreateEip請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GoodsNum: 申请数量，默认为1, 最大 20
+        :param GoodsNum: 申請數量，預設爲1, 最大 20
         :type GoodsNum: int
-        :param PayMode: EIP计费方式，flow-流量计费；bandwidth-带宽计费
+        :param PayMode: EIP計費方式，flow-流量計費；bandwidth-頻寬計費
         :type PayMode: str
-        :param Bandwidth: 带宽设定值（只在带宽计费时生效）
+        :param Bandwidth: 頻寬設定值（只在頻寬計費時生效）
         :type Bandwidth: int
-        :param SetType: EIP模式，目前支持tunnel和fullnat
+        :param SetType: EIP模式，目前支援tunnel和fullnat
         :type SetType: str
-        :param Exclusive: 是否使用独占集群，0：不使用，1：使用。默认为0
+        :param Exclusive: 是否使用獨占集群，0：不使用，1：使用。預設爲0
         :type Exclusive: int
-        :param VpcId: EIP归属私有网络ID，例如vpc-k7j1t2x1
+        :param VpcId: EIP歸屬私有網絡ID，例如vpc-k7j1t2x1
         :type VpcId: str
-        :param IpList: 指定申请的IP列表
+        :param IpList: 指定申請的IP清單
         :type IpList: list of str
         """
         self.GoodsNum = None
@@ -281,17 +281,17 @@ class CreateEipRequest(AbstractModel):
 
 
 class CreateEipResponse(AbstractModel):
-    """CreateEip返回参数结构体
+    """CreateEip返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EipIds: EIP列表
+        :param EipIds: EIP清單
         :type EipIds: list of str
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.EipIds = None
@@ -306,13 +306,13 @@ class CreateEipResponse(AbstractModel):
 
 
 class DeleteEipAclRequest(AbstractModel):
-    """DeleteEipAcl请求参数结构体
+    """DeleteEipAcl請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AclId: 待删除的 ACL 实例 ID
+        :param AclId: 待删除的 ACL 實例 ID
         :type AclId: str
         """
         self.AclId = None
@@ -323,13 +323,13 @@ class DeleteEipAclRequest(AbstractModel):
 
 
 class DeleteEipAclResponse(AbstractModel):
-    """DeleteEipAcl返回参数结构体
+    """DeleteEipAcl返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -340,13 +340,13 @@ class DeleteEipAclResponse(AbstractModel):
 
 
 class DeleteEipRequest(AbstractModel):
-    """DeleteEip请求参数结构体
+    """DeleteEip請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EipIds: Eip实例ID列表
+        :param EipIds: Eip實例ID清單
         :type EipIds: list of str
         """
         self.EipIds = None
@@ -357,15 +357,15 @@ class DeleteEipRequest(AbstractModel):
 
 
 class DeleteEipResponse(AbstractModel):
-    """DeleteEip返回参数结构体
+    """DeleteEip返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务Id
+        :param TaskId: 任務Id
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -378,19 +378,19 @@ class DeleteEipResponse(AbstractModel):
 
 
 class DescribeEipAclsRequest(AbstractModel):
-    """DescribeEipAcls请求参数结构体
+    """DescribeEipAcls請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AclName: ACL 名称，支持模糊查找
+        :param AclName: ACL 名稱，支援模糊查找
         :type AclName: str
-        :param AclIds: ACL 实例 ID 列表，数组下标从 0 开始
+        :param AclIds: ACL 實例 ID 清單，數組下标從 0 開始
         :type AclIds: list of str
-        :param Offset: 分页参数。偏移量，默认为 0
+        :param Offset: 分頁參數。偏移量，預設爲 0
         :type Offset: int
-        :param Limit: 分页参数。每一页的 EIPACL 列表数目
+        :param Limit: 分頁參數。每一頁的 EIPACL 清單數目
         :type Limit: int
         """
         self.AclName = None
@@ -407,17 +407,17 @@ class DescribeEipAclsRequest(AbstractModel):
 
 
 class DescribeEipAclsResponse(AbstractModel):
-    """DescribeEipAcls返回参数结构体
+    """DescribeEipAcls返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 返回 EIPACL 列表总数
+        :param TotalCount: 返回 EIPACL 清單總數
         :type TotalCount: int
-        :param EipAclList: EIPACL列表
+        :param EipAclList: EIPACL清單
         :type EipAclList: list of EipAcl
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -437,29 +437,29 @@ class DescribeEipAclsResponse(AbstractModel):
 
 
 class DescribeEipQuotaRequest(AbstractModel):
-    """DescribeEipQuota请求参数结构体
+    """DescribeEipQuota請求參數結構體
 
     """
 
 
 class DescribeEipQuotaResponse(AbstractModel):
-    """DescribeEipQuota返回参数结构体
+    """DescribeEipQuota返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EipNumQuota: 能拥有的EIP个数的总配额，默认是100个
+        :param EipNumQuota: 能擁有的EIP個數的總配額，預設是100個
         :type EipNumQuota: int
-        :param CurrentEipNum: 当前已使用的EIP个数，包括创建中、绑定中、已绑定、解绑中、未绑定几种状态的EIP个数总和
+        :param CurrentEipNum: 當前已使用的EIP個數，包括創建中、綁定中、已綁定、解綁中、未綁定幾種狀态的EIP個數總和
         :type CurrentEipNum: int
-        :param DailyApplyCount: 当天申请EIP次数
+        :param DailyApplyCount: 當天申請EIP次數
         :type DailyApplyCount: int
-        :param DailyApplyQuota: 每日申请EIP的次数限制
+        :param DailyApplyQuota: 每日申請EIP的次數限制
         :type DailyApplyQuota: int
         :param BatchApplyMax: BatchApplyMax
         :type BatchApplyMax: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.EipNumQuota = None
@@ -480,13 +480,13 @@ class DescribeEipQuotaResponse(AbstractModel):
 
 
 class DescribeEipTaskRequest(AbstractModel):
-    """DescribeEipTask请求参数结构体
+    """DescribeEipTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: EIP查询任务ID
+        :param TaskId: EIP查詢任務ID
         :type TaskId: int
         """
         self.TaskId = None
@@ -497,15 +497,15 @@ class DescribeEipTaskRequest(AbstractModel):
 
 
 class DescribeEipTaskResponse(AbstractModel):
-    """DescribeEipTask返回参数结构体
+    """DescribeEipTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Status: 当前任务状态码：0-成功，1-失败，2-进行中
+        :param Status: 當前任務狀态碼：0-成功，1-失敗，2-進行中
         :type Status: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Status = None
@@ -518,41 +518,41 @@ class DescribeEipTaskResponse(AbstractModel):
 
 
 class DescribeEipsRequest(AbstractModel):
-    """DescribeEips请求参数结构体
+    """DescribeEips請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EipIds: EIP实例ID列表
+        :param EipIds: EIP實例ID清單
         :type EipIds: list of str
-        :param Eips: EIP IP 列表
+        :param Eips: EIP IP 清單
         :type Eips: list of str
-        :param InstanceIds: 主机实例ID 列表
+        :param InstanceIds: 主機實例ID 清單
         :type InstanceIds: list of str
-        :param SearchKey: EIP名称,模糊匹配
+        :param SearchKey: EIP名稱,模糊比對
         :type SearchKey: str
-        :param Status: 状态列表, 默认所有
+        :param Status: 狀态清單, 預設所有
         :type Status: list of int
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回EIP数量，默认 20, 最大值 100
+        :param Limit: 返回EIP數量，預設 20, 最大值 100
         :type Limit: int
-        :param OrderField: 排序字段，支持： EipId,Eip,Status, InstanceId,CreatedAt
+        :param OrderField: 排序欄位，支援： EipId,Eip,Status, InstanceId,CreatedAt
         :type OrderField: str
-        :param Order: 排序方式 0:递增 1:递减(默认)
+        :param Order: 排序方式 0:遞增 1:遞減(預設)
         :type Order: int
-        :param PayMode: 计费模式,流量：flow，带宽：bandwidth
+        :param PayMode: 計費模式,流量：flow，頻寬：bandwidth
         :type PayMode: str
-        :param VpcId: EIP归属VpcId，例如vpc-k7j1t2x1
+        :param VpcId: EIP歸屬VpcId，例如vpc-k7j1t2x1
         :type VpcId: str
-        :param BindTypes: 绑定类型，-1：未绑定，0：物理机，1：nat网关，2：虚拟IP, 3:托管机器
+        :param BindTypes: 綁定類型，-1：未綁定，0：物理機，1：nat閘道，2：虛拟IP, 3:托管機器
         :type BindTypes: list of int
-        :param ExclusiveTag: 独占标志，0：共享，1：独占
+        :param ExclusiveTag: 獨占标志，0：共享，1：獨占
         :type ExclusiveTag: int
-        :param AclId: EIP ACL实例ID
+        :param AclId: EIP ACL實例ID
         :type AclId: int
-        :param BindAcl: 搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定
+        :param BindAcl: 搜索條件，是否綁定了EIP ACL， 0：未綁定，1：綁定
         :type BindAcl: int
         """
         self.EipIds = None
@@ -591,15 +591,15 @@ class DescribeEipsRequest(AbstractModel):
 
 
 class DescribeEipsResponse(AbstractModel):
-    """DescribeEips返回参数结构体
+    """DescribeEips返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EipSet: 返回EIP信息数组
+        :param EipSet: 返回EIP訊息數組
         :type EipSet: list of EipInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.EipSet = None
@@ -617,25 +617,25 @@ class DescribeEipsResponse(AbstractModel):
 
 
 class EipAcl(AbstractModel):
-    """EipAcl信息
+    """EipAcl訊息
 
     """
 
     def __init__(self):
         """
-        :param AclId: ACL 实例 ID。
+        :param AclId: ACL 實例 ID。
         :type AclId: str
-        :param AclName: ACL 实例名称
+        :param AclName: ACL 實例名稱
         :type AclName: str
-        :param Status: ACL 状态。0：无状态，1：有状态
+        :param Status: ACL 狀态。0：無狀态，1：有狀态
         :type Status: str
-        :param CreatedAt: EIPACL 创建时间
+        :param CreatedAt: EIPACL 創建時間
         :type CreatedAt: str
-        :param EipNum: EIPACL 已关联的 eip 数目
+        :param EipNum: EIPACL 已關聯的 eip 數目
         :type EipNum: int
-        :param OutRules: 出站规则
+        :param OutRules: 出站規則
         :type OutRules: list of EipAclRule
-        :param InRules: 入站规则
+        :param InRules: 入站規則
         :type InRules: list of EipAclRule
         """
         self.AclId = None
@@ -668,15 +668,15 @@ class EipAcl(AbstractModel):
 
 
 class EipAclMap(AbstractModel):
-    """eipid与aclid关联关系
+    """eipid與aclid關聯關系
 
     """
 
     def __init__(self):
         """
-        :param EipId: EIP 实例 ID
+        :param EipId: EIP 實例 ID
         :type EipId: str
-        :param AclId: ACL 实例 ID
+        :param AclId: ACL 實例 ID
         :type AclId: str
         """
         self.EipId = None
@@ -689,7 +689,7 @@ class EipAclMap(AbstractModel):
 
 
 class EipAclRule(AbstractModel):
-    """eipacl规则
+    """eipacl規則
 
     """
 
@@ -699,11 +699,11 @@ class EipAclRule(AbstractModel):
         :type Ip: str
         :param Port: 目标端口
         :type Port: str
-        :param Protocol: 协议(TCP/UDP/ICMP/ANY)
+        :param Protocol: 協議(TCP/UDP/ICMP/ANY)
         :type Protocol: str
         :param Action: 策略（accept/drop）
         :type Action: str
-        :param Description: 备注
+        :param Description: 備注
         :type Description: str
         """
         self.Ip = None
@@ -722,67 +722,67 @@ class EipAclRule(AbstractModel):
 
 
 class EipInfo(AbstractModel):
-    """Eip信息
+    """Eip訊息
 
     """
 
     def __init__(self):
         """
-        :param EipId: EIP实例ID
+        :param EipId: EIP實例ID
         :type EipId: str
-        :param EipName: EIP名称
+        :param EipName: EIP名稱
         :type EipName: str
-        :param Eip: EIP地址
+        :param Eip: EIP網址
         :type Eip: str
-        :param IspId: 运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：香港
+        :param IspId: 運營商ID 0：電信； 1：聯通； 2：移動； 3：教育網； 4：盈科； 5：BGP； 6：香港
         :type IspId: int
-        :param Status: 状态 0：创建中； 1：绑定中； 2：已绑定； 3：解绑中； 4：未绑定； 6：下线中； 9：创建失败
+        :param Status: 狀态 0：創建中； 1：綁定中； 2：已綁定； 3：解綁中； 4：未綁定； 6：下線中； 9：創建失敗
         :type Status: int
-        :param Arrears: 是否欠费隔离 1： 欠费隔离； 0： 正常。处在欠费隔离情况下的EIP不能进行任何管理操作。
+        :param Arrears: 是否欠費隔離 1： 欠費隔離； 0： 正常。處在欠費隔離情況下的EIP不能進行任何管理操作。
         :type Arrears: int
-        :param InstanceId: EIP所绑定的服务器实例ID，未绑定则为空
+        :param InstanceId: EIP所綁定的服務器實例ID，未綁定則爲空
         :type InstanceId: str
-        :param InstanceAlias: 服务器别名
+        :param InstanceAlias: 服務器别名
         :type InstanceAlias: str
-        :param FreeAt: EIP解绑时间
+        :param FreeAt: EIP解綁時間
         :type FreeAt: str
-        :param CreatedAt: EIP创建时间
+        :param CreatedAt: EIP創建時間
         :type CreatedAt: str
-        :param UpdatedAt: EIP更新时间
+        :param UpdatedAt: EIP更新時間
         :type UpdatedAt: str
-        :param FreeSecond: EIP未绑定服务器时长（单位：秒）
+        :param FreeSecond: EIP未綁定服務器時長（單位：秒）
         :type FreeSecond: int
-        :param Type: EIP所绑定的资源类型，-1：未绑定资源；0：黑石物理机，字段对应unInstanceId；1：Nat网关，字段对应natUid；2：云服务器字段对应vpcIp; 3: 托管机器，字段对应HInstanceId, HInstanceAlias
+        :param Type: EIP所綁定的資源類型，-1：未綁定資源；0：黑石物理機，欄位對應unInstanceId；1：Nat閘道，欄位對應natUid；2：雲伺服器欄位對應vpcIp; 3: 托管機器，欄位對應HInstanceId, HInstanceAlias
         :type Type: int
-        :param PayMode: EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
+        :param PayMode: EIP計費模式，"flow"：流量計費； "bandwidth"：頻寬計費
         :type PayMode: str
-        :param Bandwidth: EIP带宽计费模式下的带宽上限（单位：MB）
+        :param Bandwidth: EIP頻寬計費模式下的頻寬上限（單位：MB）
         :type Bandwidth: int
-        :param LatestPayMode: 最近一次操作变更的EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
+        :param LatestPayMode: 最近一次操作變更的EIP計費模式，"flow"：流量計費； "bandwidth"：頻寬計費
         :type LatestPayMode: str
-        :param LatestBandwidth: 最近一次操作变更的EIP计费模式对应的带宽上限值，仅在带宽计费模式下有效（单位：MB）
+        :param LatestBandwidth: 最近一次操作變更的EIP計費模式對應的頻寬上限值，僅在頻寬計費模式下有效（單位：MB）
         :type LatestBandwidth: int
-        :param VpcName: 私有网络名称
+        :param VpcName: 私有網絡名稱
         :type VpcName: str
-        :param NatId: EIP所绑定的NAT网关的数字ID，形如：1001,，未绑定则为空
+        :param NatId: EIP所綁定的NAT閘道的數字ID，形如：1001,，未綁定則爲空
         :type NatId: int
-        :param NatUid: EIP所绑定的NAT网关实例ID，形如："nat-n47xxxxx"，未绑定则为空
+        :param NatUid: EIP所綁定的NAT閘道實例ID，形如："nat-n47xxxxx"，未綁定則爲空
         :type NatUid: str
-        :param VpcIp: EIP所绑定的云服务器IP(托管或者云服务器的IP），形如："10.1.1.3"。 注意：IP资源需要通过bmvpc模块注册或者申请后才可以绑定eip，接口使用申请子网IP和注册子网IP：,未绑定则为空
+        :param VpcIp: EIP所綁定的雲伺服器IP(托管或者雲伺服器的IP），形如："10.1.1.3"。 注意：IP資源需要通過bmvpc模組注冊或者申請後才可以綁定eip，介面使用申請子網IP和注冊子網IP：,未綁定則爲空
         :type VpcIp: str
-        :param VpcId: 私有网络实例ID
+        :param VpcId: 私有網絡實例ID
         :type VpcId: str
-        :param Exclusive: 是否为独占类型EIP
+        :param Exclusive: 是否爲獨占類型EIP
         :type Exclusive: int
-        :param VpcCidr: 私有网络的cidr
+        :param VpcCidr: 私有網絡的cidr
         :type VpcCidr: str
-        :param AclId: EIP ACL实例ID
+        :param AclId: EIP ACL實例ID
         :type AclId: str
-        :param AclName: EIP ACL名称
+        :param AclName: EIP ACL名稱
         :type AclName: str
-        :param HInstanceId: 托管机器实例ID
+        :param HInstanceId: 托管機器實例ID
         :type HInstanceId: str
-        :param HInstanceAlias: 托管机器别名
+        :param HInstanceAlias: 托管機器别名
         :type HInstanceAlias: str
         """
         self.EipId = None
@@ -847,21 +847,21 @@ class EipInfo(AbstractModel):
 
 
 class ModifyEipAclRequest(AbstractModel):
-    """ModifyEipAcl请求参数结构体
+    """ModifyEipAcl請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AclId: ACL 实例 ID
+        :param AclId: ACL 實例 ID
         :type AclId: str
-        :param AclName: ACL 名称
+        :param AclName: ACL 名稱
         :type AclName: str
-        :param Status: ACL 状态。0：无状态 1：有状态
+        :param Status: ACL 狀态。0：無狀态 1：有狀态
         :type Status: int
-        :param Type: 规则类型（in/out）。in：入站规则 out：出站规则
+        :param Type: 規則類型（in/out）。in：入站規則 out：出站規則
         :type Type: str
-        :param Rules: ACL规则列表
+        :param Rules: ACL規則清單
         :type Rules: list of EipAclRule
         """
         self.AclId = None
@@ -885,13 +885,13 @@ class ModifyEipAclRequest(AbstractModel):
 
 
 class ModifyEipAclResponse(AbstractModel):
-    """ModifyEipAcl返回参数结构体
+    """ModifyEipAcl返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -902,17 +902,17 @@ class ModifyEipAclResponse(AbstractModel):
 
 
 class ModifyEipChargeRequest(AbstractModel):
-    """ModifyEipCharge请求参数结构体
+    """ModifyEipCharge請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PayMode: EIP计费方式，flow-流量计费；bandwidth-带宽计费
+        :param PayMode: EIP計費方式，flow-流量計費；bandwidth-頻寬計費
         :type PayMode: str
-        :param EipIds: Eip实例ID列表
+        :param EipIds: Eip實例ID清單
         :type EipIds: list of str
-        :param Bandwidth: 带宽设定值（只在带宽计费时生效）
+        :param Bandwidth: 頻寬設定值（只在頻寬計費時生效）
         :type Bandwidth: int
         """
         self.PayMode = None
@@ -927,15 +927,15 @@ class ModifyEipChargeRequest(AbstractModel):
 
 
 class ModifyEipChargeResponse(AbstractModel):
-    """ModifyEipCharge返回参数结构体
+    """ModifyEipCharge返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 修改计费模式的异步任务ID，可以通过查询EIP任务状态查询任务状态
+        :param TaskId: 修改計費模式的異步任務ID，可以通過查詢EIP任務狀态查詢任務狀态
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -948,15 +948,15 @@ class ModifyEipChargeResponse(AbstractModel):
 
 
 class ModifyEipNameRequest(AbstractModel):
-    """ModifyEipName请求参数结构体
+    """ModifyEipName請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EipId: Eip实例ID，可通过/v2/DescribeEip 接口返回字段中的 eipId获取
+        :param EipId: Eip實例ID，可通過/v2/DescribeEip 介面返回欄位中的 eipId獲取
         :type EipId: str
-        :param EipName: EIP 实例别名
+        :param EipName: EIP 實例别名
         :type EipName: str
         """
         self.EipId = None
@@ -969,13 +969,13 @@ class ModifyEipNameRequest(AbstractModel):
 
 
 class ModifyEipNameResponse(AbstractModel):
-    """ModifyEipName返回参数结构体
+    """ModifyEipName返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -986,13 +986,13 @@ class ModifyEipNameResponse(AbstractModel):
 
 
 class UnbindEipAclsRequest(AbstractModel):
-    """UnbindEipAcls请求参数结构体
+    """UnbindEipAcls請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EipIdAclIdList: 待解关联的 EIP 与 ACL列表
+        :param EipIdAclIdList: 待解關聯的 EIP 與 ACL清單
         :type EipIdAclIdList: list of EipAclMap
         """
         self.EipIdAclIdList = None
@@ -1008,13 +1008,13 @@ class UnbindEipAclsRequest(AbstractModel):
 
 
 class UnbindEipAclsResponse(AbstractModel):
-    """UnbindEipAcls返回参数结构体
+    """UnbindEipAcls返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1025,17 +1025,17 @@ class UnbindEipAclsResponse(AbstractModel):
 
 
 class UnbindHostedRequest(AbstractModel):
-    """UnbindHosted请求参数结构体
+    """UnbindHosted請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 托管机器实例ID
+        :param InstanceId: 托管機器實例ID
         :type InstanceId: str
-        :param EipId: Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
+        :param EipId: Eip實例ID，可通過DescribeBmEip 介面返回欄位中的 eipId獲取。Eip和EipId參數必須要填寫一個。
         :type EipId: str
-        :param Eip: 弹性IP。Eip和EipId参数必须要填写一个。
+        :param Eip: 彈性IP。Eip和EipId參數必須要填寫一個。
         :type Eip: str
         """
         self.InstanceId = None
@@ -1050,15 +1050,15 @@ class UnbindHostedRequest(AbstractModel):
 
 
 class UnbindHostedResponse(AbstractModel):
-    """UnbindHosted返回参数结构体
+    """UnbindHosted返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 异步任务ID，可以通过EipBmQueryTask查询任务状态
+        :param TaskId: 異步任務ID，可以通過EipBmQueryTask查詢任務狀态
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -1071,15 +1071,15 @@ class UnbindHostedResponse(AbstractModel):
 
 
 class UnbindRsRequest(AbstractModel):
-    """UnbindRs请求参数结构体
+    """UnbindRs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EipId: Eip实例ID
+        :param EipId: Eip實例ID
         :type EipId: str
-        :param InstanceId: 物理服务器实例ID
+        :param InstanceId: 物理服務器實例ID
         :type InstanceId: str
         """
         self.EipId = None
@@ -1092,15 +1092,15 @@ class UnbindRsRequest(AbstractModel):
 
 
 class UnbindRsResponse(AbstractModel):
-    """UnbindRs返回参数结构体
+    """UnbindRs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 解绑操作的异步任务ID，可以通过查询EIP任务状态查询任务状态
+        :param TaskId: 解綁操作的異步任務ID，可以通過查詢EIP任務狀态查詢任務狀态
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -1113,17 +1113,17 @@ class UnbindRsResponse(AbstractModel):
 
 
 class UnbindVpcIpRequest(AbstractModel):
-    """UnbindVpcIp请求参数结构体
+    """UnbindVpcIp請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EipId: Eip实例ID
+        :param EipId: Eip實例ID
         :type EipId: str
-        :param VpcId: EIP归属VpcId，例如vpc-k7j1t2x1
+        :param VpcId: EIP歸屬VpcId，例如vpc-k7j1t2x1
         :type VpcId: str
-        :param VpcIp: 绑定的VPC内IP地址
+        :param VpcIp: 綁定的VPC内IP網址
         :type VpcIp: str
         """
         self.EipId = None
@@ -1138,15 +1138,15 @@ class UnbindVpcIpRequest(AbstractModel):
 
 
 class UnbindVpcIpResponse(AbstractModel):
-    """UnbindVpcIp返回参数结构体
+    """UnbindVpcIp返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 绑定黑石物理机异步任务ID，可以通过查询EIP任务状态查询任务状态
+        :param TaskId: 綁定黑石物理機異步任務ID，可以通過查詢EIP任務狀态查詢任務狀态
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None

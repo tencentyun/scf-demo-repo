@@ -26,7 +26,7 @@ class TrtcClient(AbstractClient):
 
 
     def DescribeCallDetail(self, request):
-        """查询指定时间内的用户列表及用户通话质量数据。
+        """查詢指定時間内的用戶清單及用戶通話質量數據。
 
         :param request: Request instance for DescribeCallDetail.
         :type request: :class:`tencentcloud.trtc.v20190722.models.DescribeCallDetailRequest`
@@ -54,7 +54,7 @@ class TrtcClient(AbstractClient):
 
 
     def DescribeRealtimeNetwork(self, request):
-        """查询sdkappid维度下实时网络状态，包括上行丢包与下行丢包。可查询24小时内数据，查询起止时间不超过1个小时。
+        """查詢sdkappid維度下實時網絡狀态，包括上行丢包與下行丢包。可查詢24小時内數據，查詢起止時間不超過1個小時。
 
         :param request: Request instance for DescribeRealtimeNetwork.
         :type request: :class:`tencentcloud.trtc.v20190722.models.DescribeRealtimeNetworkRequest`
@@ -82,7 +82,7 @@ class TrtcClient(AbstractClient):
 
 
     def DescribeRealtimeQuality(self, request):
-        """查询sdkappid维度下实时质量数据，包括：进房成功率，首帧秒开率，音频卡顿率，视频卡顿率。可查询24小时内数据，查询起止时间不超过1个小时。
+        """查詢sdkappid維度下實時質量數據，包括：進房成功率，首幀秒開率，音訊卡頓率，視訊卡頓率。可查詢24小時内數據，查詢起止時間不超過1個小時。
 
         :param request: Request instance for DescribeRealtimeQuality.
         :type request: :class:`tencentcloud.trtc.v20190722.models.DescribeRealtimeQualityRequest`
@@ -110,7 +110,7 @@ class TrtcClient(AbstractClient):
 
 
     def DescribeRealtimeScale(self, request):
-        """查询sdkappid维度下实时规模，可查询24小时内数据，查询起止时间不超过1个小时。
+        """查詢sdkappid維度下實時規模，可查詢24小時内數據，查詢起止時間不超過1個小時。
 
         :param request: Request instance for DescribeRealtimeScale.
         :type request: :class:`tencentcloud.trtc.v20190722.models.DescribeRealtimeScaleRequest`
@@ -138,7 +138,7 @@ class TrtcClient(AbstractClient):
 
 
     def DescribeRoomInformation(self, request):
-        """查询sdkappid下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询最近5天的数据。
+        """查詢sdkappid下的房間清單。預設返回10條通話，一次最多返回100條通話。可查詢最近5天的數據。
 
         :param request: Request instance for DescribeRoomInformation.
         :type request: :class:`tencentcloud.trtc.v20190722.models.DescribeRoomInformationRequest`
@@ -166,7 +166,7 @@ class TrtcClient(AbstractClient):
 
 
     def DismissRoom(self, request):
-        """接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+        """介面說明：把房間所有用戶從房間移出，解散房間。支援所有平台，Android、iOS、Windows 和 macOS 需升級到 TRTC SDK 6.6及以上版本。
 
         :param request: Request instance for DismissRoom.
         :type request: :class:`tencentcloud.trtc.v20190722.models.DismissRoomRequest`
@@ -194,7 +194,7 @@ class TrtcClient(AbstractClient):
 
 
     def RemoveUser(self, request):
-        """接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+        """介面說明：将用戶從房間移出，适用于主播/房主/管理員踢人等場景。支援所有平台，Android、iOS、Windows 和 macOS 需升級到 TRTC SDK 6.6及以上版本。
 
         :param request: Request instance for RemoveUser.
         :type request: :class:`tencentcloud.trtc.v20190722.models.RemoveUserRequest`

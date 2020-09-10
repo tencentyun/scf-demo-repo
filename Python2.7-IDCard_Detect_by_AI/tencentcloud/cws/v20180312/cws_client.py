@@ -26,9 +26,9 @@ class CwsClient(AbstractClient):
 
 
     def CreateMonitors(self, request):
-        """本接口（CreateMonitors）用于新增一个或多个站点的监测任务。
+        """本介面（CreateMonitors）用于新增一個或多個站點的監測任務。
 
-        :param request: 调用CreateMonitors所需参数的结构体。
+        :param request: 調用CreateMonitors所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.CreateMonitorsRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.CreateMonitorsResponse`
 
@@ -54,9 +54,9 @@ class CwsClient(AbstractClient):
 
 
     def CreateSites(self, request):
-        """本接口（CreateSites）用于新增一个或多个站点。
+        """本介面（CreateSites）用于新增一個或多個站點。
 
-        :param request: 调用CreateSites所需参数的结构体。
+        :param request: 調用CreateSites所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.CreateSitesRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.CreateSitesResponse`
 
@@ -82,9 +82,9 @@ class CwsClient(AbstractClient):
 
 
     def CreateSitesScans(self, request):
-        """本接口（CreateSitesScans）用于新增一个或多个站点的单次扫描任务。
+        """本介面（CreateSitesScans）用于新增一個或多個站點的單次掃描任務。
 
-        :param request: 调用CreateSitesScans所需参数的结构体。
+        :param request: 調用CreateSitesScans所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.CreateSitesScansRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.CreateSitesScansResponse`
 
@@ -110,9 +110,9 @@ class CwsClient(AbstractClient):
 
 
     def CreateVulsMisinformation(self, request):
-        """本接口（CreateVulsMisinformation）用于新增一个或多个漏洞误报信息。
+        """本介面（CreateVulsMisinformation）用于新增一個或多個漏洞誤報訊息。
 
-        :param request: 调用CreateVulsMisinformation所需参数的结构体。
+        :param request: 調用CreateVulsMisinformation所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.CreateVulsMisinformationRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.CreateVulsMisinformationResponse`
 
@@ -138,9 +138,9 @@ class CwsClient(AbstractClient):
 
 
     def CreateVulsReport(self, request):
-        """本接口 (CreateVulsReport) 用于生成漏洞报告并返回下载链接。
+        """本介面 (CreateVulsReport) 用于生成漏洞報告并返回下載連結。
 
-        :param request: 调用CreateVulsReport所需参数的结构体。
+        :param request: 調用CreateVulsReport所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.CreateVulsReportRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.CreateVulsReportResponse`
 
@@ -166,9 +166,9 @@ class CwsClient(AbstractClient):
 
 
     def DeleteMonitors(self, request):
-        """本接口 (DeleteMonitors) 用于删除监控任务。
+        """本介面 (DeleteMonitors) 用于删除監控任務。
 
-        :param request: 调用DeleteMonitors所需参数的结构体。
+        :param request: 調用DeleteMonitors所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.DeleteMonitorsRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.DeleteMonitorsResponse`
 
@@ -194,9 +194,9 @@ class CwsClient(AbstractClient):
 
 
     def DeleteSites(self, request):
-        """本接口 (DeleteSites) 用于删除站点。
+        """本介面 (DeleteSites) 用于删除站點。
 
-        :param request: 调用DeleteSites所需参数的结构体。
+        :param request: 調用DeleteSites所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.DeleteSitesRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.DeleteSitesResponse`
 
@@ -222,9 +222,9 @@ class CwsClient(AbstractClient):
 
 
     def DescribeConfig(self, request):
-        """本接口 (DescribeConfig) 用于查询用户配置的详细信息。
+        """本介面 (DescribeConfig) 用于查詢用戶配置的詳細訊息。
 
-        :param request: 调用DescribeConfig所需参数的结构体。
+        :param request: 調用DescribeConfig所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.DescribeConfigRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.DescribeConfigResponse`
 
@@ -250,9 +250,9 @@ class CwsClient(AbstractClient):
 
 
     def DescribeMonitors(self, request):
-        """本接口 (DescribeMonitors) 用于查询一个或多个监控任务的详细信息。
+        """本介面 (DescribeMonitors) 用于查詢一個或多個監控任務的詳細訊息。
 
-        :param request: 调用DescribeMonitors所需参数的结构体。
+        :param request: 調用DescribeMonitors所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.DescribeMonitorsRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.DescribeMonitorsResponse`
 
@@ -278,9 +278,9 @@ class CwsClient(AbstractClient):
 
 
     def DescribeSiteQuota(self, request):
-        """本接口 (DescribeSiteQuota) 用于查询用户购买的扫描次数总数和已使用数。
+        """本介面 (DescribeSiteQuota) 用于查詢用戶購買的掃描次數總數和已使用數。
 
-        :param request: 调用DescribeSiteQuota所需参数的结构体。
+        :param request: 調用DescribeSiteQuota所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.DescribeSiteQuotaRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.DescribeSiteQuotaResponse`
 
@@ -306,9 +306,9 @@ class CwsClient(AbstractClient):
 
 
     def DescribeSites(self, request):
-        """本接口 (DescribeSites) 用于查询一个或多个站点的详细信息。
+        """本介面 (DescribeSites) 用于查詢一個或多個站點的詳細訊息。
 
-        :param request: 调用DescribeSites所需参数的结构体。
+        :param request: 調用DescribeSites所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.DescribeSitesRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.DescribeSitesResponse`
 
@@ -334,9 +334,9 @@ class CwsClient(AbstractClient):
 
 
     def DescribeSitesVerification(self, request):
-        """本接口 (DescribeSitesVerification) 用于查询一个或多个待验证站点的验证信息。
+        """本介面 (DescribeSitesVerification) 用于查詢一個或多個待驗證站點的驗證訊息。
 
-        :param request: 调用DescribeSitesVerification所需参数的结构体。
+        :param request: 調用DescribeSitesVerification所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.DescribeSitesVerificationRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.DescribeSitesVerificationResponse`
 
@@ -362,9 +362,9 @@ class CwsClient(AbstractClient):
 
 
     def DescribeVuls(self, request):
-        """本接口 (DescribeVuls) 用于查询一个或多个漏洞的详细信息。
+        """本介面 (DescribeVuls) 用于查詢一個或多個漏洞的詳細訊息。
 
-        :param request: 调用DescribeVuls所需参数的结构体。
+        :param request: 調用DescribeVuls所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.DescribeVulsRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.DescribeVulsResponse`
 
@@ -390,9 +390,9 @@ class CwsClient(AbstractClient):
 
 
     def DescribeVulsNumber(self, request):
-        """本接口 (DescribeVulsNumber) 用于查询用户网站的漏洞总计数量。
+        """本介面 (DescribeVulsNumber) 用于查詢用戶網站的漏洞總計數量。
 
-        :param request: 调用DescribeVulsNumber所需参数的结构体。
+        :param request: 調用DescribeVulsNumber所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.DescribeVulsNumberRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.DescribeVulsNumberResponse`
 
@@ -418,9 +418,9 @@ class CwsClient(AbstractClient):
 
 
     def DescribeVulsNumberTimeline(self, request):
-        """本接口 (DescribeVulsNumberTimeline) 用于查询漏洞数随时间变化统计信息。
+        """本介面 (DescribeVulsNumberTimeline) 用于查詢漏洞數随時間變化統計訊息。
 
-        :param request: 调用DescribeVulsNumberTimeline所需参数的结构体。
+        :param request: 調用DescribeVulsNumberTimeline所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.DescribeVulsNumberTimelineRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.DescribeVulsNumberTimelineResponse`
 
@@ -446,9 +446,9 @@ class CwsClient(AbstractClient):
 
 
     def ModifyConfigAttribute(self, request):
-        """本接口 (ModifyConfigAttribute) 用于修改用户配置的属性。
+        """本介面 (ModifyConfigAttribute) 用于修改用戶配置的屬性。
 
-        :param request: 调用ModifyConfigAttribute所需参数的结构体。
+        :param request: 調用ModifyConfigAttribute所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.ModifyConfigAttributeRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.ModifyConfigAttributeResponse`
 
@@ -474,9 +474,9 @@ class CwsClient(AbstractClient):
 
 
     def ModifyMonitorAttribute(self, request):
-        """本接口 (ModifyMonitorAttribute) 用于修改监测任务的属性。
+        """本介面 (ModifyMonitorAttribute) 用于修改監測任務的屬性。
 
-        :param request: 调用ModifyMonitorAttribute所需参数的结构体。
+        :param request: 調用ModifyMonitorAttribute所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.ModifyMonitorAttributeRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.ModifyMonitorAttributeResponse`
 
@@ -502,9 +502,9 @@ class CwsClient(AbstractClient):
 
 
     def ModifySiteAttribute(self, request):
-        """本接口 (ModifySiteAttribute) 用于修改站点的属性。
+        """本介面 (ModifySiteAttribute) 用于修改站點的屬性。
 
-        :param request: 调用ModifySiteAttribute所需参数的结构体。
+        :param request: 調用ModifySiteAttribute所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.ModifySiteAttributeRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.ModifySiteAttributeResponse`
 
@@ -530,9 +530,9 @@ class CwsClient(AbstractClient):
 
 
     def VerifySites(self, request):
-        """本接口 (VerifySites) 用于验证一个或多个待验证站点。
+        """本介面 (VerifySites) 用于驗證一個或多個待驗證站點。
 
-        :param request: 调用VerifySites所需参数的结构体。
+        :param request: 調用VerifySites所需參數的結構體。
         :type request: :class:`tencentcloud.cws.v20180312.models.VerifySitesRequest`
         :rtype: :class:`tencentcloud.cws.v20180312.models.VerifySitesResponse`
 

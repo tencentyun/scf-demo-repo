@@ -17,33 +17,33 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CdsAuditInstance(AbstractModel):
-    """数据安全产品实例信息
+    """數據安全産品實例訊息
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 实例ID
+        :param InstanceId: 實例ID
         :type InstanceId: str
-        :param AppId: 用户AppId
+        :param AppId: 用戶AppId
         :type AppId: str
-        :param Uin: 用户Uin
+        :param Uin: 用戶Uin
         :type Uin: str
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: int
-        :param RenewFlag: 续费标识
+        :param RenewFlag: 續約标識
         :type RenewFlag: int
-        :param Region: 所属地域
+        :param Region: 所屬地域
         :type Region: str
-        :param PayMode: 付费模式（数据安全审计只支持预付费：1）
+        :param PayMode: 付費模式（數據安全審計只支援預付費：1）
         :type PayMode: int
-        :param Status: 实例状态： 0，未生效；1：正常运行； 2：被隔离； 3，已过期
+        :param Status: 實例狀态： 0，未生效；1：正常運作； 2：被隔離； 3，已過期
         :type Status: int
-        :param IsolatedTimestamp: 实例被隔离时间，格式：yyyy-mm-dd HH:ii:ss
+        :param IsolatedTimestamp: 實例被隔離時間，格式：yyyy-mm-dd HH:ii:ss
         :type IsolatedTimestamp: str
-        :param CreateTime: 实例创建时间，格式： yyyy-mm-dd HH:ii:ss
+        :param CreateTime: 實例創建時間，格式： yyyy-mm-dd HH:ii:ss
         :type CreateTime: str
-        :param ExpireTime: 实例过期时间，格式：yyyy-mm-dd HH:ii:ss
+        :param ExpireTime: 實例過期時間，格式：yyyy-mm-dd HH:ii:ss
         :type ExpireTime: str
         """
         self.InstanceId = None
@@ -74,25 +74,25 @@ class CdsAuditInstance(AbstractModel):
 
 
 class DbauditTypesInfo(AbstractModel):
-    """数据安全审计产品规格信息
+    """數據安全審計産品規格訊息
 
     """
 
     def __init__(self):
         """
-        :param InstanceVersionName: 规格描述
+        :param InstanceVersionName: 規格描述
         :type InstanceVersionName: str
-        :param InstanceVersionKey: 规格名称
+        :param InstanceVersionKey: 規格名稱
         :type InstanceVersionKey: str
         :param Qps: 最大吞吐量
         :type Qps: int
-        :param MaxInstances: 最大实例数
+        :param MaxInstances: 最大實例數
         :type MaxInstances: int
-        :param InsertSpeed: 入库速率（每小时）
+        :param InsertSpeed: 入庫速率（每小時）
         :type InsertSpeed: int
-        :param OnlineStorageCapacity: 最大在线存储量，单位：条
+        :param OnlineStorageCapacity: 最大在線儲存量，單位：條
         :type OnlineStorageCapacity: int
-        :param ArchivingStorageCapacity: 最大归档存储量，单位：条
+        :param ArchivingStorageCapacity: 最大歸檔儲存量，單位：條
         :type ArchivingStorageCapacity: int
         """
         self.InstanceVersionName = None
@@ -115,21 +115,21 @@ class DbauditTypesInfo(AbstractModel):
 
 
 class DescribeDbauditInstanceTypeRequest(AbstractModel):
-    """DescribeDbauditInstanceType请求参数结构体
+    """DescribeDbauditInstanceType請求參數結構體
 
     """
 
 
 class DescribeDbauditInstanceTypeResponse(AbstractModel):
-    """DescribeDbauditInstanceType返回参数结构体
+    """DescribeDbauditInstanceType返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DbauditTypesSet: 数据安全审计产品规格信息列表
+        :param DbauditTypesSet: 數據安全審計産品規格訊息清單
         :type DbauditTypesSet: list of DbauditTypesInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DbauditTypesSet = None
@@ -147,17 +147,17 @@ class DescribeDbauditInstanceTypeResponse(AbstractModel):
 
 
 class DescribeDbauditInstancesRequest(AbstractModel):
-    """DescribeDbauditInstances请求参数结构体
+    """DescribeDbauditInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SearchRegion: 查询条件地域
+        :param SearchRegion: 查詢條件地域
         :type SearchRegion: str
-        :param Limit: 限制数目，默认10， 最大50
+        :param Limit: 限制數目，預設10， 最大50
         :type Limit: int
-        :param Offset: 偏移量，默认1
+        :param Offset: 偏移量，預設1
         :type Offset: int
         """
         self.SearchRegion = None
@@ -172,17 +172,17 @@ class DescribeDbauditInstancesRequest(AbstractModel):
 
 
 class DescribeDbauditInstancesResponse(AbstractModel):
-    """DescribeDbauditInstances返回参数结构体
+    """DescribeDbauditInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 总实例数
+        :param TotalCount: 總實例數
         :type TotalCount: int
-        :param CdsAuditInstanceSet: 数据安全审计实例信息列表
+        :param CdsAuditInstanceSet: 數據安全審計實例訊息清單
         :type CdsAuditInstanceSet: list of CdsAuditInstance
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -202,21 +202,21 @@ class DescribeDbauditInstancesResponse(AbstractModel):
 
 
 class DescribeDbauditUsedRegionsRequest(AbstractModel):
-    """DescribeDbauditUsedRegions请求参数结构体
+    """DescribeDbauditUsedRegions請求參數結構體
 
     """
 
 
 class DescribeDbauditUsedRegionsResponse(AbstractModel):
-    """DescribeDbauditUsedRegions返回参数结构体
+    """DescribeDbauditUsedRegions返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RegionSet: 可售卖地域信息列表
+        :param RegionSet: 可售賣地域訊息清單
         :type RegionSet: list of RegionInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RegionSet = None
@@ -234,21 +234,21 @@ class DescribeDbauditUsedRegionsResponse(AbstractModel):
 
 
 class InquiryPriceDbauditInstanceRequest(AbstractModel):
-    """InquiryPriceDbauditInstance请求参数结构体
+    """InquiryPriceDbauditInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceVersion: 实例规格，取值范围： cdsaudit，cdsaudit_adv， cdsaudit_ent 分别为合规版，高级版，企业版
+        :param InstanceVersion: 實例規格，取值範圍： cdsaudit，cdsaudit_adv， cdsaudit_ent 分别爲合規版，高級版，企業版
         :type InstanceVersion: str
-        :param InquiryType: 询价类型： renew，续费；newbuy，新购
+        :param InquiryType: 詢價類型： renew，續約；newbuy，新購
         :type InquiryType: str
-        :param TimeSpan: 购买实例的时长。取值范围：1（y/m），2（y/m）,，3（y/m），4（m）， 5（m），6（m）， 7（m），8（m），9（m）， 10（m）
+        :param TimeSpan: 購買實例的時長。取值範圍：1（y/m），2（y/m）,，3（y/m），4（m）， 5（m），6（m）， 7（m），8（m），9（m）， 10（m）
         :type TimeSpan: int
-        :param TimeUnit: 购买时长单位，y：年；m：月
+        :param TimeUnit: 購買時長單位，y：年；m：月
         :type TimeUnit: str
-        :param ServiceRegion: 实例所在地域
+        :param ServiceRegion: 實例所在地域
         :type ServiceRegion: str
         """
         self.InstanceVersion = None
@@ -267,17 +267,17 @@ class InquiryPriceDbauditInstanceRequest(AbstractModel):
 
 
 class InquiryPriceDbauditInstanceResponse(AbstractModel):
-    """InquiryPriceDbauditInstance返回参数结构体
+    """InquiryPriceDbauditInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalPrice: 总价，单位：元
+        :param TotalPrice: 總價，單位：元
         :type TotalPrice: float
-        :param RealTotalCost: 真实价钱，预支费用的折扣价，单位：元
+        :param RealTotalCost: 真實價錢，預支費用的折扣價，單位：元
         :type RealTotalCost: float
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalPrice = None
@@ -292,15 +292,15 @@ class InquiryPriceDbauditInstanceResponse(AbstractModel):
 
 
 class ModifyDbauditInstancesRenewFlagRequest(AbstractModel):
-    """ModifyDbauditInstancesRenewFlag请求参数结构体
+    """ModifyDbauditInstancesRenewFlag請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 实例ID
+        :param InstanceId: 實例ID
         :type InstanceId: str
-        :param AutoRenewFlag: 0，表示默认状态(用户未设置，即初始状态)；1，表示自动续费；2，表示明确不自动续费
+        :param AutoRenewFlag: 0，表示預設狀态(用戶未設置，即初始狀态)；1，表示自動續約；2，表示明确不自動續約
         :type AutoRenewFlag: int
         """
         self.InstanceId = None
@@ -313,13 +313,13 @@ class ModifyDbauditInstancesRenewFlagRequest(AbstractModel):
 
 
 class ModifyDbauditInstancesRenewFlagResponse(AbstractModel):
-    """ModifyDbauditInstancesRenewFlag返回参数结构体
+    """ModifyDbauditInstancesRenewFlag返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -330,7 +330,7 @@ class ModifyDbauditInstancesRenewFlagResponse(AbstractModel):
 
 
 class RegionInfo(AbstractModel):
-    """数盾地域信息
+    """數盾地域訊息
 
     """
 
@@ -338,11 +338,11 @@ class RegionInfo(AbstractModel):
         """
         :param RegionId: 地域ID
         :type RegionId: int
-        :param Region: 地域名称
+        :param Region: 地域名稱
         :type Region: str
         :param RegionName: 地域描述
         :type RegionName: str
-        :param RegionState: 地域可用状态
+        :param RegionState: 地域可用狀态
         :type RegionState: int
         """
         self.RegionId = None

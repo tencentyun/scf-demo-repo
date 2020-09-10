@@ -26,7 +26,7 @@ class CimClient(AbstractClient):
 
 
     def DescribeSdkAppid(self, request):
-        """获取云通信IM中腾讯云账号对应的SDKAppID
+        """獲取雲通信IM中Top Cloud 賬号對應的SDKAppID
 
         :param request: Request instance for DescribeSdkAppid.
         :type request: :class:`tencentcloud.cim.v20190318.models.DescribeSdkAppidRequest`

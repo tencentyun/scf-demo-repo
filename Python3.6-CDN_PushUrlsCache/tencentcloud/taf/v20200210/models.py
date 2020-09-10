@@ -17,13 +17,13 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class DetectAccountActivityRequest(AbstractModel):
-    """DetectAccountActivity请求参数结构体
+    """DetectAccountActivity請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BusinessSecurityData: 业务入参
+        :param BusinessSecurityData: 業務入參
         :type BusinessSecurityData: :class:`tencentcloud.taf.v20200210.models.InputDetectAccountActivity`
         """
         self.BusinessSecurityData = None
@@ -36,15 +36,15 @@ class DetectAccountActivityRequest(AbstractModel):
 
 
 class DetectAccountActivityResponse(AbstractModel):
-    """DetectAccountActivity返回参数结构体
+    """DetectAccountActivity返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 回包数据
+        :param Data: 回包數據
         :type Data: :class:`tencentcloud.taf.v20200210.models.OutputDetectAccountActivity`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -59,13 +59,13 @@ class DetectAccountActivityResponse(AbstractModel):
 
 
 class DetectFraudKOLRequest(AbstractModel):
-    """DetectFraudKOL请求参数结构体
+    """DetectFraudKOL請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BspData: 业务数据
+        :param BspData: 業務數據
         :type BspData: :class:`tencentcloud.taf.v20200210.models.InputKolBspData`
         """
         self.BspData = None
@@ -78,16 +78,16 @@ class DetectFraudKOLRequest(AbstractModel):
 
 
 class DetectFraudKOLResponse(AbstractModel):
-    """DetectFraudKOL返回参数结构体
+    """DetectFraudKOL返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 回包数据
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 回包數據
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: :class:`tencentcloud.taf.v20200210.models.OutputKolData`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -102,13 +102,13 @@ class DetectFraudKOLResponse(AbstractModel):
 
 
 class EnhanceTaDegreeRequest(AbstractModel):
-    """EnhanceTaDegree请求参数结构体
+    """EnhanceTaDegree請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BspData: 业务数据
+        :param BspData: 業務數據
         :type BspData: :class:`tencentcloud.taf.v20200210.models.InputTaBspData`
         """
         self.BspData = None
@@ -121,16 +121,16 @@ class EnhanceTaDegreeRequest(AbstractModel):
 
 
 class EnhanceTaDegreeResponse(AbstractModel):
-    """EnhanceTaDegree返回参数结构体
+    """EnhanceTaDegree返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 回包数据
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 回包數據
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: :class:`tencentcloud.taf.v20200210.models.OutputTaData`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -145,43 +145,43 @@ class EnhanceTaDegreeResponse(AbstractModel):
 
 
 class InputDetectAccountActivity(AbstractModel):
-    """业务入参
+    """業務入參
 
     """
 
     def __init__(self):
         """
-        :param Uid: 用户ID值，如微信/QQ openid，或 手机号等（如15912345687）
+        :param Uid: 用戶ID值，如微信/QQ openid，或 手機号等（如15912345687）
         :type Uid: str
-        :param AccountType: 用户账号类型 
-1：QQ开放帐号 
-2：微信开放账号 
-4：手机号 （暂仅支持国内手机号）
-10004： 手机号MD5
+        :param AccountType: 用戶賬号類型 
+1：QQ開放帳号 
+2：微信開放賬号 
+4：手機号 （暫僅支援國内手機号）
+10004： 手機号MD5
         :type AccountType: int
-        :param UserIp: 用户真实外网IP
+        :param UserIp: 用戶真實外網IP
         :type UserIp: str
-        :param PostTime: 用户操作时间戳，单位秒（格林威治时间精确到秒，如1501590972）
+        :param PostTime: 用戶操作時間戳，單位秒（格林威治時間精确到秒，如1501590972）
         :type PostTime: int
-        :param AppIdU: accountType是QQ或微信开放账号时，该参数必填，表示QQ或微信分配给网站或应用的appId，用来唯一标识网站或应用
+        :param AppIdU: accountType是QQ或微信開放賬号時，該參數必填，表示QQ或微信分配給網站或應用的appId，用來唯一标識網站或應用
         :type AppIdU: str
-        :param NickName: 昵称，UTF-8 编码
+        :param NickName: 昵稱，UTF-8 編碼
         :type NickName: str
-        :param PhoneNumber: 手机号。若 accountType 选4（手机号）、或10004（手机号 MD5），则无需重复填写。否则填入对应的手机号（如15912345687）
+        :param PhoneNumber: 手機号。若 accountType 選4（手機号）、或10004（手機号 MD5），則無需重複填寫。否則填入對應的手機号（如15912345687）
         :type PhoneNumber: str
-        :param EmailAddress: 用户邮箱地址（非系统自动生成）
+        :param EmailAddress: 用戶電子信箱網址（非系統自動生成）
         :type EmailAddress: str
-        :param CookieHash: 用户 HTTP 请求中的 cookie 进行2次 hash 的值，只要保证相同 cookie 的 hash 值一致即可
+        :param CookieHash: 用戶 HTTP 請求中的 cookie 進行2次 hash 的值，只要保證相同 cookie 的 hash 值一緻即可
         :type CookieHash: float
-        :param UserAgent: 用户HTTP请求的 userAgent
+        :param UserAgent: 用戶HTTP請求的 userAgent
         :type UserAgent: str
-        :param XForwardedFor: 用户HTTP请求中的 x_forward_for
+        :param XForwardedFor: 用戶HTTP請求中的 x_forward_for
         :type XForwardedFor: str
-        :param MacAddress: Mac地址或设备唯一标识
+        :param MacAddress: Mac網址或設備唯一标識
         :type MacAddress: str
-        :param VendorId: 手机制造商ID，如果手机注册，请带上此信息
+        :param VendorId: 手機制造商ID，如果手機注冊，請帶上此訊息
         :type VendorId: str
-        :param Imei: 手机设备号
+        :param Imei: 手機設備号
         :type Imei: str
         """
         self.Uid = None
@@ -246,15 +246,15 @@ class InputKolDataList(AbstractModel):
 
     def __init__(self):
         """
-        :param Type: 账号类型[1：微信；2：qq；3：微博]
+        :param Type: 賬号類型[1：微信；2：qq；3：微博]
         :type Type: int
-        :param Id: KOL账号ID[比如微信公众号ID]
+        :param Id: KOL賬号ID[比如微信公衆号ID]
         :type Id: str
-        :param Name: KOL名称
+        :param Name: KOL名稱
         :type Name: str
-        :param Phone: 手机号
+        :param Phone: 手機号
         :type Phone: str
-        :param AgentInfo: 代理商名称
+        :param AgentInfo: 代理商名稱
         :type AgentInfo: str
         """
         self.Type = None
@@ -273,79 +273,79 @@ class InputKolDataList(AbstractModel):
 
 
 class InputRecognizeTargetAudience(AbstractModel):
-    """流量反欺诈-验准入参
+    """流量反欺詐-驗準入參
 
     """
 
     def __init__(self):
         """
-        :param Uid: 设备ID，AccountType指定的类型
+        :param Uid: 設備ID，AccountType指定的類型
         :type Uid: str
-        :param AccountType: 设备号类型，1.imei 2.imeiMd5（小写后转MD5转小写）3.idfa， 4.idfaMd5（大写后转MD5转小写），5.手机号,256.其它
+        :param AccountType: 設備号類型，1.imei 2.imeiMd5（小寫後轉MD5轉小寫）3.idfa， 4.idfaMd5（大寫後轉MD5轉小寫），5.手機号,256.其它
         :type AccountType: int
-        :param ModelIdList: 模型ID列表
+        :param ModelIdList: 模型ID清單
         :type ModelIdList: list of int
-        :param Ip: 用户IP
+        :param Ip: 用戶IP
         :type Ip: str
-        :param Os: 操作系统类型(unknown，android，ios，windows)
+        :param Os: 作業系統類型(unknown，android，ios，windows)
         :type Os: str
-        :param Osv: 操作系统版本
+        :param Osv: 作業系統版本
         :type Osv: str
-        :param Lat: 纬度
+        :param Lat: 緯度
         :type Lat: str
-        :param Lon: 经度
+        :param Lon: 經度
         :type Lon: str
-        :param DeviceModel: 设备型号(MI 6)
+        :param DeviceModel: 設備型号(MI 6)
         :type DeviceModel: str
-        :param BidFloor: 竞价底价
+        :param BidFloor: 競價底價
         :type BidFloor: int
-        :param Age: 年龄
+        :param Age: 年齡
         :type Age: int
         :param Gender: 性别(1.MALE 2.FEMALE)
         :type Gender: int
-        :param Location: 用户地址
+        :param Location: 用戶網址
         :type Location: str
         :param DeliveryMode: 投放模式（0=PDB，1=PD，2=RTB，10=其他）
         :type DeliveryMode: int
-        :param AdvertisingType: 广告位类型<br />（0=前贴片，1=开屏广告，2=网页头部广告、3=网页中部广告、4=网页底部广告、5=悬浮广告、10=其它）
+        :param AdvertisingType: 廣告位類型<br />（0=前貼片，1=開屏廣告，2=網頁頭部廣告、3=網頁中部廣告、4=網頁底部廣告、5=懸浮廣告、10=其它）
         :type AdvertisingType: int
-        :param Mac: mac地址，建议提供
+        :param Mac: mac網址，建議提供
         :type Mac: str
-        :param Phone: 电话号码
+        :param Phone: 電話号碼
         :type Phone: str
-        :param Ua: 浏览器类型
+        :param Ua: 浏覽器類型
         :type Ua: str
-        :param App: 客户端应用
+        :param App: 用戶端應用
         :type App: str
-        :param Package: 应用包名
+        :param Package: 應用包名
         :type Package: str
-        :param Maker: 设备制造商
+        :param Maker: 設備制造商
         :type Maker: str
-        :param DeviceType: 设备类型（PHONE,TABLET）
+        :param DeviceType: 設備類型（PHONE,TABLET）
         :type DeviceType: str
-        :param AccessMode: 入网方式(wifi,4g,3g,2g)
+        :param AccessMode: 入網方式(wifi,4g,3g,2g)
         :type AccessMode: str
-        :param Sp: 运营商(1.移动 2.联通 3.电信等)
+        :param Sp: 運營商(1.移動 2.聯通 3.電信等)
         :type Sp: int
-        :param DeviceW: 设备屏幕分辨率宽度像素数
+        :param DeviceW: 設備螢幕分辨率寬度像素數
         :type DeviceW: int
-        :param DeviceH: 设备屏幕分辨率高度像素数
+        :param DeviceH: 設備螢幕分辨率高度像素數
         :type DeviceH: int
-        :param FullScreen: 是否全屏插广告(0-否，1-是)
+        :param FullScreen: 是否全屏插廣告(0-否，1-是)
         :type FullScreen: int
-        :param ImpBannerW: 广告位宽度
+        :param ImpBannerW: 廣告位寬度
         :type ImpBannerW: int
-        :param ImpBannerH: 广告位高度
+        :param ImpBannerH: 廣告位高度
         :type ImpBannerH: int
-        :param Url: 网址
+        :param Url: 網址
         :type Url: str
-        :param Context: 上下文信息
+        :param Context: 上下文訊息
         :type Context: str
-        :param Channel: 渠道
+        :param Channel: 管道
         :type Channel: str
-        :param ReqId: 请求ID
+        :param ReqId: 請求ID
         :type ReqId: str
-        :param ReqMd5: 请求ID的md5值
+        :param ReqMd5: 請求ID的md5值
         :type ReqMd5: str
         :param AdType: ad_type
         :type AdType: int
@@ -353,7 +353,7 @@ class InputRecognizeTargetAudience(AbstractModel):
         :type AppName: str
         :param AppVer: appVer
         :type AppVer: str
-        :param ReqType: 竞价模式1：rtb 2:pd
+        :param ReqType: 競價模式1：rtb 2:pd
         :type ReqType: int
         """
         self.Uid = None
@@ -438,15 +438,15 @@ class InputRecognizeTargetAudience(AbstractModel):
 
 
 class InputSendTrafficSecuritySmsMsg(AbstractModel):
-    """业务入参
+    """業務入參
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 投放任务ID
+        :param TaskId: 投放任務ID
         :type TaskId: str
-        :param Mobiles: 手机号码列表（号码量<=200）
+        :param Mobiles: 手機号碼清單（号碼量<=200）
         :type Mobiles: list of str
         """
         self.TaskId = None
@@ -459,61 +459,61 @@ class InputSendTrafficSecuritySmsMsg(AbstractModel):
 
 
 class InputTaBspData(AbstractModel):
-    """流量反欺诈-虚假TA识别
+    """流量反欺詐-虛假TA識别
 
     """
 
     def __init__(self):
         """
-        :param Seq: 请求序列号
+        :param Seq: 請求序列号
         :type Seq: int
-        :param OsType: 操作系统类型[0：未知；1：android；2：ios；3：windows]
+        :param OsType: 作業系統類型[0：未知；1：android；2：ios；3：windows]
         :type OsType: str
-        :param AgeFloor: 年龄下限
+        :param AgeFloor: 年齡下限
         :type AgeFloor: int
-        :param AgeCeil: 年龄上限
+        :param AgeCeil: 年齡上限
         :type AgeCeil: int
         :param Gender: 性别[1：男；2：女]
         :type Gender: int
-        :param UserTime: 用户操作时间
+        :param UserTime: 用戶操作時間
         :type UserTime: int
-        :param Imei: Imei [在(Imei|ImeiMd5|Idfa|IdfaMd5)里面4选1]
+        :param Imei: Imei [在(Imei|ImeiMd5|Idfa|IdfaMd5)裏面4選1]
         :type Imei: str
-        :param ImeiMd5: Imei小写后加密Md5 [在(Imei|ImeiMd5|Idfa|IdfaMd5)里面4选1]
+        :param ImeiMd5: Imei小寫後加密Md5 [在(Imei|ImeiMd5|Idfa|IdfaMd5)裏面4選1]
         :type ImeiMd5: str
-        :param Idfa: Idfa [在(Imei|ImeiMd5|Idfa|IdfaMd5)里面4选1]
+        :param Idfa: Idfa [在(Imei|ImeiMd5|Idfa|IdfaMd5)裏面4選1]
         :type Idfa: str
-        :param IdfaMd5: Idfa大写后加密Md5 [在(Imei|ImeiMd5|Idfa|IdfaMd5)里面4选1]
+        :param IdfaMd5: Idfa大寫後加密Md5 [在(Imei|ImeiMd5|Idfa|IdfaMd5)裏面4選1]
         :type IdfaMd5: str
-        :param UserIp: 用户IP
+        :param UserIp: 用戶IP
         :type UserIp: str
-        :param Mac: MAC地址[建议提供]
+        :param Mac: MAC網址[建議提供]
         :type Mac: str
-        :param PhoneNum: 手机号码[中国大陆]
+        :param PhoneNum: 手機号碼[中國大陸]
         :type PhoneNum: str
-        :param UserAgent: 浏览器
+        :param UserAgent: 浏覽器
         :type UserAgent: str
-        :param App: APP名称
+        :param App: APP名稱
         :type App: str
-        :param Package: 应用安装包名称
+        :param Package: 應用安裝包名稱
         :type Package: str
-        :param DeviceMaker: 设备制造商
+        :param DeviceMaker: 設備制造商
         :type DeviceMaker: str
-        :param DeviceModule: 设备型号
+        :param DeviceModule: 設備型号
         :type DeviceModule: str
-        :param AccessMode: 入网方式[1：WIFI；2：4G；3：3G；4：2G；5：其它]
+        :param AccessMode: 入網方式[1：WIFI；2：4G；3：3G；4：2G；5：其它]
         :type AccessMode: str
-        :param Sp: 运营商[1：移动；2：联通；3：电信；4：其它]
+        :param Sp: 運營商[1：移動；2：聯通；3：電信；4：其它]
         :type Sp: str
-        :param Url: 网址
+        :param Url: 網址
         :type Url: str
-        :param Location: 用户地址
+        :param Location: 用戶網址
         :type Location: str
-        :param Latitude: 纬度
+        :param Latitude: 緯度
         :type Latitude: str
         :param Longitude: 精度
         :type Longitude: str
-        :param Context: 辅助区分信息
+        :param Context: 輔助區分訊息
         :type Context: str
         """
         self.Seq = None
@@ -572,20 +572,20 @@ class InputTaBspData(AbstractModel):
 
 
 class OutputDetectAccountActivity(AbstractModel):
-    """业务出参
+    """業務出參
 
     """
 
     def __init__(self):
         """
-        :param Code: 返回码（0，成功，其他失败）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Code: 返回碼（0，成功，其他失敗）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Code: int
-        :param Message: 返回码对应的信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Message: 返回碼對應的訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Message: str
-        :param Value: 返回活跃度信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Value: 返回活躍度訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Value: :class:`tencentcloud.taf.v20200210.models.OutputDetectAccountActivityValue`
         """
         self.Code = None
@@ -602,33 +602,33 @@ class OutputDetectAccountActivity(AbstractModel):
 
 
 class OutputDetectAccountActivityValue(AbstractModel):
-    """业务出参
+    """業務出參
 
     """
 
     def __init__(self):
         """
-        :param Uid: 用户 ID accountType 不同对应不同的用户 ID。如是 QQ 或微信用户则填入对应的 openId
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Uid: 用戶 ID accountType 不同對應不同的用戶 ID。如是 QQ 或微信用戶則填入對應的 openId
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Uid: str
-        :param PostTime: 操作时间戳，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PostTime: 操作時間戳，單位：秒
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PostTime: int
-        :param UserIp: 用户操作的真实外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UserIp: 用戶操作的真實外網 IP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UserIp: str
-        :param Level: 0：表示不活跃
-1 - 4：活跃等级由低到高
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Level: 0：表示不活躍
+1 - 4：活躍等級由低到高
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Level: int
-        :param Type: 账号标签：
-3，无效账号，送检账号参数无法成功解析，请检查微信openid是否有误 ，QQopenid是否与appidU对应，手机号是否有误。
-4，黑名单，该账号在业务侧有过拉黑记录
-5，白名单，该账号在业务侧有过加白名单记录
+        :param Type: 賬号标簽：
+3，無效賬号，送檢賬号參數無法成功解析，請檢查微信openid是否有誤 ，QQopenid是否與appidU對應，手機号是否有誤。
+4，黑名單，該賬号在業務側有過拉黑記錄
+5，白名單，該賬号在業務側有過加白名單記錄
 
-环境标签：
-205，非公网有效ip，传进来的IP地址为内网ip地址或者ip保留地址；
-注意：此字段可能返回 null，表示取不到有效值。
+環境标簽：
+205，非公網有效ip，傳進來的IP網址爲内網ip網址或者ip保留網址；
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Type: list of int
         """
         self.Uid = None
@@ -653,14 +653,14 @@ class OutputKolData(AbstractModel):
 
     def __init__(self):
         """
-        :param Code: 错误码[0:成功；非0：失败的错误码]
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Code: 錯誤碼[0:成功；非0：失敗的錯誤碼]
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Code: int
-        :param Message: 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Message: 錯誤訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Message: str
-        :param Value: 业务返回数据
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Value: 業務返回數據
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Value: list of OutputKolValue
         """
         self.Code = None
@@ -686,17 +686,17 @@ class OutputKolValue(AbstractModel):
 
     def __init__(self):
         """
-        :param Id: KOL账号ID[比如微信公众号ID]
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Id: KOL賬号ID[比如微信公衆号ID]
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Id: str
         :param IsCheck: 是否查得[0：未查得；1：查得]
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsCheck: int
         :param FraudPScore: 作弊的可能性[0～100]
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FraudPScore: int
-        :param EvilPScore: 作弊的严重性[0～100]
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EvilPScore: 作弊的嚴重性[0～100]
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EvilPScore: int
         """
         self.Id = None
@@ -713,19 +713,19 @@ class OutputKolValue(AbstractModel):
 
 
 class OutputRecognizeTargetAudience(AbstractModel):
-    """流量反欺诈-验准返回值
+    """流量反欺詐-驗準返回值
 
     """
 
     def __init__(self):
         """
-        :param Code: 返回码（0，成功，其他失败）
+        :param Code: 返回碼（0，成功，其他失敗）
         :type Code: int
-        :param Message: 返回码对应的信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Message: 返回碼對應的訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Message: str
-        :param Value: 返回模型结果
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Value: 返回模型結果
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Value: list of OutputRecognizeTargetAudienceValue
         """
         self.Code = None
@@ -745,20 +745,20 @@ class OutputRecognizeTargetAudience(AbstractModel):
 
 
 class OutputRecognizeTargetAudienceValue(AbstractModel):
-    """流量反欺诈-验准返回的查询分值
+    """流量反欺詐-驗準返回的查詢分值
 
     """
 
     def __init__(self):
         """
         :param ModelId: 模型ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ModelId: int
-        :param IsFound: 是否正常返回结果
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsFound: 是否正常返回結果
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsFound: int
         :param Score: 返回分值
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Score: float
         """
         self.ModelId = None
@@ -773,19 +773,19 @@ class OutputRecognizeTargetAudienceValue(AbstractModel):
 
 
 class OutputSendTrafficSecuritySmsMsg(AbstractModel):
-    """返回结果
+    """返回結果
 
     """
 
     def __init__(self):
         """
-        :param Code: 返回码（0：接口调用成功 非0：接口调用失败）
+        :param Code: 返回碼（0：介面調用成功 非0：介面調用失敗）
         :type Code: int
-        :param Message: 返回码对应的信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Message: 返回碼對應的訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Message: str
-        :param Value: 发送失败的号码列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Value: 發送失敗的号碼清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Value: list of str
         """
         self.Code = None
@@ -800,19 +800,19 @@ class OutputSendTrafficSecuritySmsMsg(AbstractModel):
 
 
 class OutputTaData(AbstractModel):
-    """流量反欺诈-虚假TA识别
+    """流量反欺詐-虛假TA識别
 
     """
 
     def __init__(self):
         """
-        :param Code: 错误码[0:成功；非0：失败的错误码]
+        :param Code: 錯誤碼[0:成功；非0：失敗的錯誤碼]
         :type Code: int
-        :param Message: 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Message: 錯誤訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Message: str
-        :param Value: 结果数据
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Value: 結果數據
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Value: :class:`tencentcloud.taf.v20200210.models.OutputTaValue`
         """
         self.Code = None
@@ -829,17 +829,17 @@ class OutputTaData(AbstractModel):
 
 
 class OutputTaValue(AbstractModel):
-    """流量反欺诈-虚假TA识别
+    """流量反欺詐-虛假TA識别
 
     """
 
     def __init__(self):
         """
         :param IsCheck: 是否查得[0：未查得；1：查得]
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsCheck: int
         :param IsMatch: 是否符合[0：不符合；1：符合]
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsMatch: int
         """
         self.IsCheck = None
@@ -852,13 +852,13 @@ class OutputTaValue(AbstractModel):
 
 
 class RecognizeCustomizedAudienceRequest(AbstractModel):
-    """RecognizeCustomizedAudience请求参数结构体
+    """RecognizeCustomizedAudience請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BspData: 业务入参
+        :param BspData: 業務入參
         :type BspData: :class:`tencentcloud.taf.v20200210.models.InputRecognizeTargetAudience`
         """
         self.BspData = None
@@ -871,16 +871,16 @@ class RecognizeCustomizedAudienceRequest(AbstractModel):
 
 
 class RecognizeCustomizedAudienceResponse(AbstractModel):
-    """RecognizeCustomizedAudience返回参数结构体
+    """RecognizeCustomizedAudience返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 业务出参
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 業務出參
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: :class:`tencentcloud.taf.v20200210.models.OutputRecognizeTargetAudience`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -895,13 +895,13 @@ class RecognizeCustomizedAudienceResponse(AbstractModel):
 
 
 class RecognizePreciseTargetAudienceRequest(AbstractModel):
-    """RecognizePreciseTargetAudience请求参数结构体
+    """RecognizePreciseTargetAudience請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BspData: 业务数据
+        :param BspData: 業務數據
         :type BspData: :class:`tencentcloud.taf.v20200210.models.InputRecognizeTargetAudience`
         """
         self.BspData = None
@@ -914,16 +914,16 @@ class RecognizePreciseTargetAudienceRequest(AbstractModel):
 
 
 class RecognizePreciseTargetAudienceResponse(AbstractModel):
-    """RecognizePreciseTargetAudience返回参数结构体
+    """RecognizePreciseTargetAudience返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 回包数据
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 回包數據
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: :class:`tencentcloud.taf.v20200210.models.OutputRecognizeTargetAudience`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -938,13 +938,13 @@ class RecognizePreciseTargetAudienceResponse(AbstractModel):
 
 
 class RecognizeTargetAudienceRequest(AbstractModel):
-    """RecognizeTargetAudience请求参数结构体
+    """RecognizeTargetAudience請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BspData: 业务数据
+        :param BspData: 業務數據
         :type BspData: :class:`tencentcloud.taf.v20200210.models.InputRecognizeTargetAudience`
         """
         self.BspData = None
@@ -957,16 +957,16 @@ class RecognizeTargetAudienceRequest(AbstractModel):
 
 
 class RecognizeTargetAudienceResponse(AbstractModel):
-    """RecognizeTargetAudience返回参数结构体
+    """RecognizeTargetAudience返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 回包数据
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 回包數據
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: :class:`tencentcloud.taf.v20200210.models.OutputRecognizeTargetAudience`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -981,13 +981,13 @@ class RecognizeTargetAudienceResponse(AbstractModel):
 
 
 class SendTrafficSecuritySmsMessageRequest(AbstractModel):
-    """SendTrafficSecuritySmsMessage请求参数结构体
+    """SendTrafficSecuritySmsMessage請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BspData: 业务入参
+        :param BspData: 業務入參
         :type BspData: :class:`tencentcloud.taf.v20200210.models.InputSendTrafficSecuritySmsMsg`
         """
         self.BspData = None
@@ -1000,16 +1000,16 @@ class SendTrafficSecuritySmsMessageRequest(AbstractModel):
 
 
 class SendTrafficSecuritySmsMessageResponse(AbstractModel):
-    """SendTrafficSecuritySmsMessage返回参数结构体
+    """SendTrafficSecuritySmsMessage返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 返回結果
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: :class:`tencentcloud.taf.v20200210.models.OutputSendTrafficSecuritySmsMsg`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None

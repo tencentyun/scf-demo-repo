@@ -17,43 +17,43 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AgentAuditedClient(AbstractModel):
-    """已审核代客信息
+    """已審核代客訊息
 
     """
 
     def __init__(self):
         """
-        :param Uin: 代理商账号ID
+        :param Uin: 代理商賬号ID
         :type Uin: str
-        :param ClientUin: 代客账号ID
+        :param ClientUin: 代客賬号ID
         :type ClientUin: str
-        :param AgentTime: 代客审核通过时间戳
+        :param AgentTime: 代客審核通過時間戳
         :type AgentTime: str
-        :param ClientFlag: 代客类型，可能值为a/b/c
+        :param ClientFlag: 代客類型，可能值爲a/b/c
         :type ClientFlag: str
-        :param ClientRemark: 代客备注
+        :param ClientRemark: 代客備注
         :type ClientRemark: str
-        :param ClientName: 代客名称（首选实名认证名称）
+        :param ClientName: 代客名稱（首選實名認證名稱）
         :type ClientName: str
-        :param AuthType: 认证类型, 0：个人，1：企业；其他：未认证
+        :param AuthType: 認證類型, 0：個人，1：企業；其他：未認證
         :type AuthType: str
         :param AppId: 代客APPID
         :type AppId: str
-        :param LastMonthAmt: 上月消费金额
+        :param LastMonthAmt: 上月消費金額
         :type LastMonthAmt: int
-        :param ThisMonthAmt: 本月消费金额
+        :param ThisMonthAmt: 本月消費金額
         :type ThisMonthAmt: int
-        :param HasOverdueBill: 是否欠费,0：不欠费；1：欠费
+        :param HasOverdueBill: 是否欠費,0：不欠費；1：欠費
         :type HasOverdueBill: int
-        :param ClientType: 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+        :param ClientType: 客戶類型：可以爲new(新拓)/assign(指定)/old(存量)/空
         :type ClientType: str
-        :param ProjectType: 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+        :param ProjectType: 項目類型：可以爲self(自拓項目)/platform(合作項目)/repeat(複算項目  )/空
         :type ProjectType: str
-        :param SalesUin: 业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SalesUin: 業務員ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SalesUin: str
-        :param SalesName: 业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SalesName: 業務員姓名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SalesName: str
         """
         self.Uin = None
@@ -92,37 +92,37 @@ class AgentAuditedClient(AbstractModel):
 
 
 class AgentBillElem(AbstractModel):
-    """业务信息定义
+    """業務訊息定義
 
     """
 
     def __init__(self):
         """
-        :param Uin: 代理商账号ID
+        :param Uin: 代理商賬号ID
         :type Uin: str
-        :param OrderId: 订单号，仅对预付费账单有意义
+        :param OrderId: 訂單号，僅對預付費帳單有意義
         :type OrderId: str
-        :param ClientUin: 代客账号ID
+        :param ClientUin: 代客賬号ID
         :type ClientUin: str
-        :param ClientRemark: 代客备注名称
+        :param ClientRemark: 代客備注名稱
         :type ClientRemark: str
-        :param PayTime: 支付时间
+        :param PayTime: 支付時間
         :type PayTime: str
-        :param GoodsType: 云产品名称
+        :param GoodsType: 雲産品名稱
         :type GoodsType: str
-        :param PayMode: 预付费/后付费
+        :param PayMode: 預付費/後付費
         :type PayMode: str
         :param SettleMonth: 支付月份
         :type SettleMonth: str
-        :param Amt: 支付金额，单位分
+        :param Amt: 支付金額，單位分
         :type Amt: int
         :param PayerMode: agentpay：代付；selfpay：自付
         :type PayerMode: str
-        :param ClientType: 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClientType: 客戶類型：可以爲new(新拓)/assign(指定)/old(存量)/空
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClientType: str
-        :param ProjectType: 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProjectType: 項目類型：可以爲self(自拓項目)/platform(合作項目)/repeat(複算項目  )/空
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProjectType: str
         """
         self.Uin = None
@@ -155,27 +155,27 @@ class AgentBillElem(AbstractModel):
 
 
 class AgentClientElem(AbstractModel):
-    """描述待审核代客信息
+    """描述待審核代客訊息
 
     """
 
     def __init__(self):
         """
-        :param Uin: 代理商账号ID
+        :param Uin: 代理商賬号ID
         :type Uin: str
-        :param ClientUin: 代客账号ID
+        :param ClientUin: 代客賬号ID
         :type ClientUin: str
-        :param ApplyTime: 代客申请时间戳
+        :param ApplyTime: 代客申請時間戳
         :type ApplyTime: int
-        :param ClientFlag: 代客类型，可能值为a/b/c
+        :param ClientFlag: 代客類型，可能值爲a/b/c
         :type ClientFlag: str
-        :param Mail: 代客邮箱，打码显示
+        :param Mail: 代客電子信箱，打碼顯示
         :type Mail: str
-        :param Phone: 代客手机，打码显示
+        :param Phone: 代客手機，打碼顯示
         :type Phone: str
-        :param HasOverdueBill: 0表示不欠费，1表示欠费
+        :param HasOverdueBill: 0表示不欠費，1表示欠費
         :type HasOverdueBill: int
-        :param Status: 1:待代理商审核;2:待腾讯云审核
+        :param Status: 1:待代理商審核;2:待Top Cloud 審核
         :type Status: int
         """
         self.Uin = None
@@ -200,76 +200,76 @@ class AgentClientElem(AbstractModel):
 
 
 class AgentDealElem(AbstractModel):
-    """描述代理商代付的订单信息
+    """描述代理商代付的訂單訊息
 
     """
 
     def __init__(self):
         """
-        :param DealId: 订单自增 ID
+        :param DealId: 訂單自增 ID
         :type DealId: str
-        :param DealName: 订单号
+        :param DealName: 訂單号
         :type DealName: str
-        :param GoodsCategoryId: 商品类型 ID
+        :param GoodsCategoryId: 商品類型 ID
         :type GoodsCategoryId: str
-        :param OwnerUin: 订单所有者
+        :param OwnerUin: 訂單所有者
         :type OwnerUin: str
-        :param AppId: 订单所有者对应 appId
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AppId: 訂單所有者對應 appId
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AppId: str
-        :param GoodsNum: 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GoodsNum: 商品數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GoodsNum: str
-        :param GoodsPrice: 价格详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GoodsPrice: 價格詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GoodsPrice: :class:`tencentcloud.partners.v20180321.models.DealGoodsPriceElem`
-        :param Creater: 下单人
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Creater: 下單人
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Creater: str
-        :param CreatTime: 下单时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreatTime: 下單時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreatTime: str
-        :param PayEndTime: 支付结束时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PayEndTime: 支付結束時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PayEndTime: str
-        :param BillId: 扣费流水号
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BillId: 扣費流水号
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BillId: str
         :param Payer: 支付人
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Payer: str
-        :param DealStatus: 订单状态，中文描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DealStatus: 訂單狀态，中文描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DealStatus: str
-        :param Status: 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Status: 訂單的狀态(1：未支付;2：已支付;3：發貨中;4：已發貨;5：發貨失敗;6：已退款;7：已關單;8：訂單過期;9：訂單已失效;10：産品已失效;11：代付拒絕;12：支付中)
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: str
-        :param GoodsName: 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GoodsName: 産品名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GoodsName: str
-        :param ClientRemark: 客户备注
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClientRemark: 客戶備注
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClientRemark: str
-        :param ActionType: 订单操作类型，purchase（新购），renew（续费），modify（配置变更）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ActionType: 訂單操作類型，purchase（新購），renew（續約），modify（配置變更）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ActionType: str
-        :param VoucherDecline: 代金券抵扣金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VoucherDecline: 代金券抵扣金額，單位分
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VoucherDecline: str
-        :param BigDealId: 大订单号
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BigDealId: 大訂單号
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BigDealId: str
-        :param ClientType: 客户类型（new：新拓；old：存量；assign：指派）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClientType: 客戶類型（new：新拓；old：存量；assign：指派）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClientType: str
-        :param ProjectType: 项目类型（self：自拓；repeat：直销；platform：官网合作）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProjectType: 項目類型（self：自拓；repeat：直銷；platform：官網合作）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProjectType: str
-        :param SalesUin: 业务员账号ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SalesUin: 業務員賬号ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SalesUin: str
         :param PayerMode: 支付方式，0：自付；1：代付
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PayerMode: str
         """
         self.DealId = None
@@ -326,17 +326,17 @@ class AgentDealElem(AbstractModel):
 
 
 class AgentPayDealsRequest(AbstractModel):
-    """AgentPayDeals请求参数结构体
+    """AgentPayDeals請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param OwnerUin: 订单所有者uin
+        :param OwnerUin: 訂單所有者uin
         :type OwnerUin: str
         :param AgentPay: 代付标志，1：代付；0：自付
         :type AgentPay: int
-        :param DealNames: 订单号数组
+        :param DealNames: 訂單号數組
         :type DealNames: list of str
         """
         self.OwnerUin = None
@@ -351,13 +351,13 @@ class AgentPayDealsRequest(AbstractModel):
 
 
 class AgentPayDealsResponse(AbstractModel):
-    """AgentPayDeals返回参数结构体
+    """AgentPayDeals返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -368,19 +368,19 @@ class AgentPayDealsResponse(AbstractModel):
 
 
 class AgentSalesmanElem(AbstractModel):
-    """代理商业务员信息
+    """代理商業務員訊息
 
     """
 
     def __init__(self):
         """
-        :param Uin: 代理商账号ID
+        :param Uin: 代理商賬号ID
         :type Uin: str
-        :param SalesUin: 业务员ID
+        :param SalesUin: 業務員ID
         :type SalesUin: str
-        :param SalesName: 业务员姓名
+        :param SalesName: 業務員姓名
         :type SalesName: str
-        :param CreateTime: 业务员创建时间
+        :param CreateTime: 業務員創建時間
         :type CreateTime: str
         """
         self.Uin = None
@@ -397,15 +397,15 @@ class AgentSalesmanElem(AbstractModel):
 
 
 class AgentTransferMoneyRequest(AbstractModel):
-    """AgentTransferMoney请求参数结构体
+    """AgentTransferMoney請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClientUin: 客户账号ID
+        :param ClientUin: 客戶賬号ID
         :type ClientUin: str
-        :param Amount: 转账金额，单位分
+        :param Amount: 轉賬金額，單位分
         :type Amount: int
         """
         self.ClientUin = None
@@ -418,13 +418,13 @@ class AgentTransferMoneyRequest(AbstractModel):
 
 
 class AgentTransferMoneyResponse(AbstractModel):
-    """AgentTransferMoney返回参数结构体
+    """AgentTransferMoney返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -435,17 +435,17 @@ class AgentTransferMoneyResponse(AbstractModel):
 
 
 class AuditApplyClientRequest(AbstractModel):
-    """AuditApplyClient请求参数结构体
+    """AuditApplyClient請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClientUin: 待审核客户账号ID
+        :param ClientUin: 待審核客戶賬号ID
         :type ClientUin: str
-        :param AuditResult: 审核结果，可能的取值：accept/reject
+        :param AuditResult: 審核結果，可能的取值：accept/reject
         :type AuditResult: str
-        :param Note: 申请理由，B类客户审核通过时必须填写申请理由
+        :param Note: 申請理由，B類客戶審核通過時必須填寫申請理由
         :type Note: str
         """
         self.ClientUin = None
@@ -460,21 +460,21 @@ class AuditApplyClientRequest(AbstractModel):
 
 
 class AuditApplyClientResponse(AbstractModel):
-    """AuditApplyClient返回参数结构体
+    """AuditApplyClient返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Uin: 代理商账号ID
+        :param Uin: 代理商賬号ID
         :type Uin: str
-        :param ClientUin: 客户账号ID
+        :param ClientUin: 客戶賬号ID
         :type ClientUin: str
-        :param AuditResult: 审核结果，包括accept/reject/qcloudaudit（腾讯云审核）
+        :param AuditResult: 審核結果，包括accept/reject/qcloudaudit（Top Cloud 審核）
         :type AuditResult: str
-        :param AgentTime: 关联时间对应的时间戳
+        :param AgentTime: 關聯時間對應的時間戳
         :type AgentTime: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Uin = None
@@ -493,13 +493,13 @@ class AuditApplyClientResponse(AbstractModel):
 
 
 class DealGoodsPriceElem(AbstractModel):
-    """订单价格详情
+    """訂單價格詳情
 
     """
 
     def __init__(self):
         """
-        :param RealTotalCost: 实付金额
+        :param RealTotalCost: 實付金額
         :type RealTotalCost: int
         """
         self.RealTotalCost = None
@@ -510,37 +510,37 @@ class DealGoodsPriceElem(AbstractModel):
 
 
 class DescribeAgentAuditedClientsRequest(AbstractModel):
-    """DescribeAgentAuditedClients请求参数结构体
+    """DescribeAgentAuditedClients請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClientUin: 客户账号ID
+        :param ClientUin: 客戶賬号ID
         :type ClientUin: str
-        :param ClientName: 客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
+        :param ClientName: 客戶名稱。由于涉及隐私，名稱打碼顯示，故名稱僅支援打碼後的模糊搜索
         :type ClientName: str
-        :param ClientFlag: 客户类型，a/b，类型定义参考代理商相关政策文档
+        :param ClientFlag: 客戶類型，a/b，類型定義參考代理商相關政策文件
         :type ClientFlag: str
-        :param OrderDirection: ASC/DESC， 不区分大小写，按审核通过时间排序
+        :param OrderDirection: ASC/DESC， 不區分大小寫，按審核通過時間排序
         :type OrderDirection: str
-        :param ClientUins: 客户账号ID列表
+        :param ClientUins: 客戶賬号ID清單
         :type ClientUins: list of str
-        :param HasOverdueBill: 是否欠费。0：不欠费；1：欠费
+        :param HasOverdueBill: 是否欠費。0：不欠費；1：欠費
         :type HasOverdueBill: int
-        :param ClientRemark: 客户备注
+        :param ClientRemark: 客戶備注
         :type ClientRemark: str
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 限制数目
+        :param Limit: 限制數目
         :type Limit: int
-        :param ClientType: 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+        :param ClientType: 客戶類型：可以爲new(新拓)/assign(指定)/old(存量)/空
         :type ClientType: str
-        :param ProjectType: 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+        :param ProjectType: 項目類型：可以爲self(自拓項目)/platform(合作項目)/repeat(複算項目  )/空
         :type ProjectType: str
-        :param SalesUin: 业务员ID
+        :param SalesUin: 業務員ID
         :type SalesUin: str
-        :param SalesName: 业务员姓名（模糊查询）
+        :param SalesName: 業務員姓名（模糊查詢）
         :type SalesName: str
         """
         self.ClientUin = None
@@ -575,17 +575,17 @@ class DescribeAgentAuditedClientsRequest(AbstractModel):
 
 
 class DescribeAgentAuditedClientsResponse(AbstractModel):
-    """DescribeAgentAuditedClients返回参数结构体
+    """DescribeAgentAuditedClients返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AgentClientSet: 已审核代客列表
+        :param AgentClientSet: 已審核代客清單
         :type AgentClientSet: list of AgentAuditedClient
-        :param TotalCount: 符合条件的代客总数
+        :param TotalCount: 符合條件的代客總數
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AgentClientSet = None
@@ -605,7 +605,7 @@ class DescribeAgentAuditedClientsResponse(AbstractModel):
 
 
 class DescribeAgentBillsRequest(AbstractModel):
-    """DescribeAgentBills请求参数结构体
+    """DescribeAgentBills請求參數結構體
 
     """
 
@@ -613,17 +613,17 @@ class DescribeAgentBillsRequest(AbstractModel):
         """
         :param SettleMonth: 支付月份，如2018-02
         :type SettleMonth: str
-        :param ClientUin: 客户账号ID
+        :param ClientUin: 客戶賬号ID
         :type ClientUin: str
         :param PayMode: 支付方式，prepay/postpay
         :type PayMode: str
-        :param OrderId: 预付费订单号
+        :param OrderId: 預付費訂單号
         :type OrderId: str
-        :param ClientRemark: 客户备注名称
+        :param ClientRemark: 客戶備注名稱
         :type ClientRemark: str
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 限制数目
+        :param Limit: 限制數目
         :type Limit: int
         """
         self.SettleMonth = None
@@ -646,17 +646,17 @@ class DescribeAgentBillsRequest(AbstractModel):
 
 
 class DescribeAgentBillsResponse(AbstractModel):
-    """DescribeAgentBills返回参数结构体
+    """DescribeAgentBills返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 符合查询条件列表总数量
+        :param TotalCount: 符合查詢條件清單總數量
         :type TotalCount: int
-        :param AgentBillSet: 业务明细列表
+        :param AgentBillSet: 業務明細清單
         :type AgentBillSet: list of AgentBillElem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -676,23 +676,23 @@ class DescribeAgentBillsResponse(AbstractModel):
 
 
 class DescribeAgentClientsRequest(AbstractModel):
-    """DescribeAgentClients请求参数结构体
+    """DescribeAgentClients請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClientUin: 客户账号ID
+        :param ClientUin: 客戶賬号ID
         :type ClientUin: str
-        :param ClientName: 客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
+        :param ClientName: 客戶名稱。由于涉及隐私，名稱打碼顯示，故名稱僅支援打碼後的模糊搜索
         :type ClientName: str
-        :param ClientFlag: 客户类型，a/b，类型定义参考代理商相关政策文档
+        :param ClientFlag: 客戶類型，a/b，類型定義參考代理商相關政策文件
         :type ClientFlag: str
-        :param OrderDirection: ASC/DESC， 不区分大小写，按申请时间排序
+        :param OrderDirection: ASC/DESC， 不區分大小寫，按申請時間排序
         :type OrderDirection: str
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 限制数目
+        :param Limit: 限制數目
         :type Limit: int
         """
         self.ClientUin = None
@@ -713,17 +713,17 @@ class DescribeAgentClientsRequest(AbstractModel):
 
 
 class DescribeAgentClientsResponse(AbstractModel):
-    """DescribeAgentClients返回参数结构体
+    """DescribeAgentClients返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AgentClientSet: 待审核代客列表
+        :param AgentClientSet: 待審核代客清單
         :type AgentClientSet: list of AgentClientElem
-        :param TotalCount: 符合条件的代客总数
+        :param TotalCount: 符合條件的代客總數
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AgentClientSet = None
@@ -743,7 +743,7 @@ class DescribeAgentClientsResponse(AbstractModel):
 
 
 class DescribeAgentDealsCacheRequest(AbstractModel):
-    """DescribeAgentDealsCache请求参数结构体
+    """DescribeAgentDealsCache請求參數結構體
 
     """
 
@@ -751,19 +751,19 @@ class DescribeAgentDealsCacheRequest(AbstractModel):
         """
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 限制数目
+        :param Limit: 限制數目
         :type Limit: int
-        :param CreatTimeRangeStart: 下单时间范围起始点
+        :param CreatTimeRangeStart: 下單時間範圍起始點
         :type CreatTimeRangeStart: str
-        :param CreatTimeRangeEnd: 下单时间范围终止点
+        :param CreatTimeRangeEnd: 下單時間範圍終止點
         :type CreatTimeRangeEnd: str
-        :param Order: 0:下单时间降序；其他：下单时间升序
+        :param Order: 0:下單時間降序；其他：下單時間升序
         :type Order: int
-        :param Status: 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
+        :param Status: 訂單的狀态(1：未支付;2：已支付;3：發貨中;4：已發貨;5：發貨失敗;6：已退款;7：已關單;8：訂單過期;9：訂單已失效;10：産品已失效;11：代付拒絕;12：支付中)
         :type Status: int
-        :param OwnerUins: 下单人账号ID列表
+        :param OwnerUins: 下單人賬号ID清單
         :type OwnerUins: list of str
-        :param DealNames: 订单号列表
+        :param DealNames: 訂單号清單
         :type DealNames: list of str
         :param PayerMode: 支付方式，0：自付；1：代付
         :type PayerMode: int
@@ -792,17 +792,17 @@ class DescribeAgentDealsCacheRequest(AbstractModel):
 
 
 class DescribeAgentDealsCacheResponse(AbstractModel):
-    """DescribeAgentDealsCache返回参数结构体
+    """DescribeAgentDealsCache返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AgentDealSet: 订单数组
+        :param AgentDealSet: 訂單數組
         :type AgentDealSet: list of AgentDealElem
-        :param TotalCount: 符合条件的订单总数量
+        :param TotalCount: 符合條件的訂單總數量
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AgentDealSet = None
@@ -822,7 +822,7 @@ class DescribeAgentDealsCacheResponse(AbstractModel):
 
 
 class DescribeAgentPayDealsRequest(AbstractModel):
-    """DescribeAgentPayDeals请求参数结构体
+    """DescribeAgentPayDeals請求參數結構體
 
     """
 
@@ -830,19 +830,19 @@ class DescribeAgentPayDealsRequest(AbstractModel):
         """
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 限制数目
+        :param Limit: 限制數目
         :type Limit: int
-        :param CreatTimeRangeStart: 下单时间范围起始点
+        :param CreatTimeRangeStart: 下單時間範圍起始點
         :type CreatTimeRangeStart: str
-        :param CreatTimeRangeEnd: 下单时间范围终止点
+        :param CreatTimeRangeEnd: 下單時間範圍終止點
         :type CreatTimeRangeEnd: str
-        :param Order: 0:下单时间降序；其他：下单时间升序
+        :param Order: 0:下單時間降序；其他：下單時間升序
         :type Order: int
-        :param Status: 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
+        :param Status: 訂單的狀态(1：未支付;2：已支付;3：發貨中;4：已發貨;5：發貨失敗;6：已退款;7：已關單;8：訂單過期;9：訂單已失效;10：産品已失效;11：代付拒絕;12：支付中)
         :type Status: int
-        :param OwnerUins: 下单人账号ID列表
+        :param OwnerUins: 下單人賬号ID清單
         :type OwnerUins: list of str
-        :param DealNames: 订单号列表
+        :param DealNames: 訂單号清單
         :type DealNames: list of str
         """
         self.Offset = None
@@ -867,17 +867,17 @@ class DescribeAgentPayDealsRequest(AbstractModel):
 
 
 class DescribeAgentPayDealsResponse(AbstractModel):
-    """DescribeAgentPayDeals返回参数结构体
+    """DescribeAgentPayDeals返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AgentPayDealSet: 订单数组
+        :param AgentPayDealSet: 訂單數組
         :type AgentPayDealSet: list of AgentDealElem
-        :param TotalCount: 符合条件的订单总数量
+        :param TotalCount: 符合條件的訂單總數量
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AgentPayDealSet = None
@@ -897,13 +897,13 @@ class DescribeAgentPayDealsResponse(AbstractModel):
 
 
 class DescribeClientBalanceRequest(AbstractModel):
-    """DescribeClientBalance请求参数结构体
+    """DescribeClientBalance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClientUin: 客户(代客)账号ID
+        :param ClientUin: 客戶(代客)賬号ID
         :type ClientUin: str
         """
         self.ClientUin = None
@@ -914,15 +914,15 @@ class DescribeClientBalanceRequest(AbstractModel):
 
 
 class DescribeClientBalanceResponse(AbstractModel):
-    """DescribeClientBalance返回参数结构体
+    """DescribeClientBalance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Balance: 账户余额，单位分
+        :param Balance: 帳戶餘額，單位分
         :type Balance: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Balance = None
@@ -935,17 +935,17 @@ class DescribeClientBalanceResponse(AbstractModel):
 
 
 class DescribeRebateInfosRequest(AbstractModel):
-    """DescribeRebateInfos请求参数结构体
+    """DescribeRebateInfos請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RebateMonth: 返佣月份，如2018-02
+        :param RebateMonth: 返傭月份，如2018-02
         :type RebateMonth: str
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 限制数目
+        :param Limit: 限制數目
         :type Limit: int
         """
         self.RebateMonth = None
@@ -960,17 +960,17 @@ class DescribeRebateInfosRequest(AbstractModel):
 
 
 class DescribeRebateInfosResponse(AbstractModel):
-    """DescribeRebateInfos返回参数结构体
+    """DescribeRebateInfos返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RebateInfoSet: 返佣信息列表
+        :param RebateInfoSet: 返傭訊息清單
         :type RebateInfoSet: list of RebateInfoElem
-        :param TotalCount: 符合查询条件返佣信息数目
+        :param TotalCount: 符合查詢條件返傭訊息數目
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RebateInfoSet = None
@@ -990,7 +990,7 @@ class DescribeRebateInfosResponse(AbstractModel):
 
 
 class DescribeSalesmansRequest(AbstractModel):
-    """DescribeSalesmans请求参数结构体
+    """DescribeSalesmans請求參數結構體
 
     """
 
@@ -998,13 +998,13 @@ class DescribeSalesmansRequest(AbstractModel):
         """
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 限制数目
+        :param Limit: 限制數目
         :type Limit: int
-        :param SalesName: 业务员姓名(模糊查询)
+        :param SalesName: 業務員姓名(模糊查詢)
         :type SalesName: str
-        :param SalesUin: 业务员ID
+        :param SalesUin: 業務員ID
         :type SalesUin: str
-        :param OrderDirection: ASC/DESC， 不区分大小写，按创建通过时间排序
+        :param OrderDirection: ASC/DESC， 不區分大小寫，按創建通過時間排序
         :type OrderDirection: str
         """
         self.Offset = None
@@ -1023,17 +1023,17 @@ class DescribeSalesmansRequest(AbstractModel):
 
 
 class DescribeSalesmansResponse(AbstractModel):
-    """DescribeSalesmans返回参数结构体
+    """DescribeSalesmans返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AgentSalesmanSet: 业务员列表
+        :param AgentSalesmanSet: 業務員清單
         :type AgentSalesmanSet: list of AgentSalesmanElem
-        :param TotalCount: 符合条件的代客总数
+        :param TotalCount: 符合條件的代客總數
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AgentSalesmanSet = None
@@ -1053,15 +1053,15 @@ class DescribeSalesmansResponse(AbstractModel):
 
 
 class ModifyClientRemarkRequest(AbstractModel):
-    """ModifyClientRemark请求参数结构体
+    """ModifyClientRemark請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClientRemark: 客户备注名称
+        :param ClientRemark: 客戶備注名稱
         :type ClientRemark: str
-        :param ClientUin: 客户账号ID
+        :param ClientUin: 客戶賬号ID
         :type ClientUin: str
         """
         self.ClientRemark = None
@@ -1074,13 +1074,13 @@ class ModifyClientRemarkRequest(AbstractModel):
 
 
 class ModifyClientRemarkResponse(AbstractModel):
-    """ModifyClientRemark返回参数结构体
+    """ModifyClientRemark返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1091,23 +1091,23 @@ class ModifyClientRemarkResponse(AbstractModel):
 
 
 class RebateInfoElem(AbstractModel):
-    """返佣信息定义
+    """返傭訊息定義
 
     """
 
     def __init__(self):
         """
-        :param Uin: 代理商账号ID
+        :param Uin: 代理商賬号ID
         :type Uin: str
-        :param RebateMonth: 返佣月份，如2018-02
+        :param RebateMonth: 返傭月份，如2018-02
         :type RebateMonth: str
-        :param Amt: 返佣金额，单位分
+        :param Amt: 返傭金額，單位分
         :type Amt: int
-        :param MonthSales: 月度业绩，单位分
+        :param MonthSales: 月業績，單位分
         :type MonthSales: int
-        :param QuarterSales: 季度业绩，单位分
+        :param QuarterSales: 季度業績，單位分
         :type QuarterSales: int
-        :param ExceptionFlag: NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
+        :param ExceptionFlag: NORMAL(正常)/HAS_OVERDUE_BILL(欠費)/NO_CONTRACT(缺合同)
         :type ExceptionFlag: str
         """
         self.Uin = None

@@ -26,10 +26,10 @@ class EccClient(AbstractClient):
 
 
     def ECC(self, request):
-        """接口请求域名： ecc.tencentcloudapi.com
-        纯文本英语作文批改
+        """介面請求域名： ecc.tencentcloudapi.com
+        純文本英語作文批改
 
-        :param request: 调用ECC所需参数的结构体。
+        :param request: 調用ECC所需參數的結構體。
         :type request: :class:`tencentcloud.ecc.v20181213.models.ECCRequest`
         :rtype: :class:`tencentcloud.ecc.v20181213.models.ECCResponse`
 
@@ -56,9 +56,9 @@ class EccClient(AbstractClient):
 
     def EHOCR(self, request):
         """https://ecc.tencentcloudapi.com/?Action=EHOCR
-        作文识别
+        作文識别
 
-        :param request: 调用EHOCR所需参数的结构体。
+        :param request: 調用EHOCR所需參數的結構體。
         :type request: :class:`tencentcloud.ecc.v20181213.models.EHOCRRequest`
         :rtype: :class:`tencentcloud.ecc.v20181213.models.EHOCRResponse`
 

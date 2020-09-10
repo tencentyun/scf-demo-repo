@@ -8,8 +8,8 @@ import logging
 import sys
 import os
 
-region = u'ap-beijing'         # Modify the area according to the actual situation.  根据实际情况，修改地域
-middle_stage_bucket = 'middlestagebucket' # Modify the bucket name according to the actual situation. 根据实际情况，修改bucket名
+region = u'ap-beijing'         # Modify the area according to the actual situation.  根據實際情況，修改地域
+middle_stage_bucket = 'middlestagebucket' # Modify the bucket name according to the actual situation. 根據實際情況，修改bucket名
 
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
@@ -32,8 +32,8 @@ def main_handler(event, context):
     if "Records" not in event.keys():
         return {"errorMsg": "event is not come from cos"}
 
-    secret_id = os.environ.get('TENCENTCLOUD_SECRETID')      # Using the secterId in environment variables. 使用环境变量中的 secretId
-    secret_key = os.environ.get('TENCENTCLOUD_SECRETKEY')    # Using the secretKey in environment variables. 使用环境变量中的 secretKey
+    secret_id = os.environ.get('TENCENTCLOUD_SECRETID')      # Using the secterId in environment variables. 使用環境變量中的 secretId
+    secret_key = os.environ.get('TENCENTCLOUD_SECRETKEY')    # Using the secretKey in environment variables. 使用環境變量中的 secretKey
     token = os.environ.get('TENCENTCLOUD_SESSIONTOKEN') 
     config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, Token=token,)
     cos_client = CosS3Client(config)

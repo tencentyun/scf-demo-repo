@@ -17,35 +17,35 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class InitOralProcessRequest(AbstractModel):
-    """InitOralProcess请求参数结构体
+    """InitOralProcess請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SessionId: 语音段唯一标识，一段语音一个SessionId
+        :param SessionId: 語音段唯一标識，一段語音一個SessionId
         :type SessionId: str
-        :param RefText: 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
+        :param RefText: 被評估語音對應的文本，句子模式下不超過個 20 單詞或者中文文字，段落模式不超過 120 單詞或者中文文字，中文評估使用 utf-8 編碼，自由說模式該值傳空。如需要在單詞模式和句子模式下使用自定義音素，可以通過設置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
         :type RefText: str
-        :param WorkMode: 语音输入模式，0：流式分片，1：非流式一次性评估
+        :param WorkMode: 語音輸入模式，0：流式分片，1：非流式一次性評估
         :type WorkMode: int
-        :param EvalMode: 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
+        :param EvalMode: 評估模式，0：詞模式（中文評測模式下爲文字模式），1：句子模式，2：段落模式，3：自由說模式，當爲詞模式評估時，能夠提供每個音節的評估訊息，當爲句子模式時，能夠提供完整度和流利度訊息。
         :type EvalMode: int
-        :param ScoreCoeff: 评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段
+        :param ScoreCoeff: 評價苛刻指數，取值爲[1.0 - 4.0]範圍内的浮點數，用于平滑不同年齡段的分數，1.0爲小年齡段，4.0爲最高年齡段
         :type ScoreCoeff: float
-        :param SoeAppId: 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
+        :param SoeAppId: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【應用管理】下新建。
         :type SoeAppId: str
-        :param IsLongLifeSession: 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
+        :param IsLongLifeSession: 長效session标識，當該參數爲1時，session的持續時間爲300s，但會一定程度上影響第一個數據包的返回速度，且TransmitOralProcess必須同時爲1才可生效。
         :type IsLongLifeSession: int
-        :param StorageMode: 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段。
+        :param StorageMode: 音訊儲存模式，0：不儲存，1：儲存到公共物件儲存，輸出結果爲該會話最後一個分片TransmitOralProcess 返回結果 AudioUrl 欄位。
         :type StorageMode: int
-        :param SentenceInfoEnabled: 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
+        :param SentenceInfoEnabled: 輸出斷句中間結果标識，0：不輸出，1：輸出，通過設置該參數，可以在評估過程中的分片傳輸請求中，返回已經評估斷句的中間結果，中間結果可用于用戶端 UI 更新，輸出結果爲TransmitOralProcess請求返回結果 SentenceInfoSet 欄位。
         :type SentenceInfoEnabled: int
-        :param ServerType: 评估语言，0：英文，1：中文。
+        :param ServerType: 評估語言，0：英文，1：中文。
         :type ServerType: int
-        :param IsAsync: 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
+        :param IsAsync: 異步模式标識，0：同步模式，1：異步模式，可選值參考[服務模式](https://cloud.tencent.com/document/product/884/33697)。
         :type IsAsync: int
-        :param TextMode: 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。
+        :param TextMode: 輸入文本模式，0: 普通文本，1：[音素結構](https://cloud.tencent.com/document/product/884/33698)文本。
         :type TextMode: int
         """
         self.SessionId = None
@@ -78,15 +78,15 @@ class InitOralProcessRequest(AbstractModel):
 
 
 class InitOralProcessResponse(AbstractModel):
-    """InitOralProcess返回参数结构体
+    """InitOralProcess返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SessionId: 语音段唯一标识，一个完整语音一个SessionId
+        :param SessionId: 語音段唯一标識，一個完整語音一個SessionId
         :type SessionId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SessionId = None
@@ -99,23 +99,23 @@ class InitOralProcessResponse(AbstractModel):
 
 
 class PhoneInfo(AbstractModel):
-    """单音节评价结果
+    """單音節評價結果
 
     """
 
     def __init__(self):
         """
-        :param MemBeginTime: 当前音节语音起始时间点，单位为ms
+        :param MemBeginTime: 當前音節語音起始時間點，單位爲ms
         :type MemBeginTime: int
-        :param MemEndTime: 当前音节语音终止时间点，单位为ms
+        :param MemEndTime: 當前音節語音終止時間點，單位爲ms
         :type MemEndTime: int
-        :param PronAccuracy: 音节发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
+        :param PronAccuracy: 音節發音準确度，取值範圍[-1, 100]，當取-1時指完全不比對
         :type PronAccuracy: float
-        :param DetectedStress: 当前音节是否检测为重音
+        :param DetectedStress: 當前音節是否檢測爲重音
         :type DetectedStress: bool
-        :param Phone: 当前音节
+        :param Phone: 當前音節
         :type Phone: str
-        :param Stress: 当前音节是否应为重音
+        :param Stress: 當前音節是否應爲重音
         :type Stress: bool
         """
         self.MemBeginTime = None
@@ -136,23 +136,23 @@ class PhoneInfo(AbstractModel):
 
 
 class SentenceInfo(AbstractModel):
-    """语音过程中断句的中间结果
+    """語音過程中斷句的中間結果
 
     """
 
     def __init__(self):
         """
-        :param SentenceId: 句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
+        :param SentenceId: 句子序号，在段落、自由說模式下有效，表示斷句序号，最後的綜合結果的爲-1.
         :type SentenceId: int
-        :param Words: 详细发音评估结果
+        :param Words: 詳細發音評估結果
         :type Words: list of WordRsp
-        :param PronAccuracy: 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。
+        :param PronAccuracy: 發音精準度，取值範圍[-1, 100]，當取-1時指完全不比對，當爲句子模式時，是所有已識别單詞準确度的加權平均值，在reftext中但未識别出來的詞不計入分數中。
         :type PronAccuracy: float
-        :param PronFluency: 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+        :param PronFluency: 發音流利度，取值範圍[0, 1]，當爲詞模式時，取值無意義；當爲流式模式且請求中IsEnd未置1時，取值無意義
         :type PronFluency: float
-        :param PronCompletion: 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+        :param PronCompletion: 發音完整度，取值範圍[0, 1]，當爲詞模式時，取值無意義；當爲流式模式且請求中IsEnd未置1時，取值無意義
         :type PronCompletion: float
-        :param SuggestedScore: 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
+        :param SuggestedScore: 建議評分，取值範圍[0,100]，評分方式爲建議評分 = 準确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若評分策略不符合請參考Words數組中的詳細分數自定義評分邏輯。
         :type SuggestedScore: float
         """
         self.SentenceId = None
@@ -178,29 +178,29 @@ class SentenceInfo(AbstractModel):
 
 
 class TransmitOralProcessRequest(AbstractModel):
-    """TransmitOralProcess请求参数结构体
+    """TransmitOralProcess請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SeqId: 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
+        :param SeqId: 流式數據包的序号，從1開始，當IsEnd欄位爲1後後續序号無意義，當IsLongLifeSession不爲1且爲非流式模式時無意義。
         :type SeqId: int
-        :param IsEnd: 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
+        :param IsEnd: 是否傳輸完畢标志，若爲0表示未完畢，若爲1則傳輸完畢開始評估，非流式模式下無意義。
         :type IsEnd: int
-        :param VoiceFileType: 语音文件类型 	1:raw, 2:wav, 3:mp3(三种格式目前仅支持16k采样率16bit编码单声道，如有不一致可能导致评估不准确或失败)。
+        :param VoiceFileType: 語音文件類型 	1:raw, 2:wav, 3:mp3(三種格式目前僅支援16k采樣率16bit編碼單聲道，如有不一緻可能導緻評估不準确或失敗)。
         :type VoiceFileType: int
-        :param VoiceEncodeType: 语音编码类型	1:pcm。
+        :param VoiceEncodeType: 語音編碼類型	1:pcm。
         :type VoiceEncodeType: int
-        :param UserVoiceData: 当前数据包数据, 流式模式下数据包大小可以按需设置，在网络稳定时，分片大小建议设置0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
+        :param UserVoiceData: 當前數據包數據, 流式模式下數據包大小可以按需設置，在網絡穩定時，分片大小建議設置0.5k，且必須保證分片幀完整（16bit的數據必須保證音訊長度爲偶數），編碼格式要求爲BASE64。
         :type UserVoiceData: str
-        :param SessionId: 语音段唯一标识，一个完整语音一个SessionId。
+        :param SessionId: 語音段唯一标識，一個完整語音一個SessionId。
         :type SessionId: str
-        :param SoeAppId: 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
+        :param SoeAppId: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【應用管理】下新建。
         :type SoeAppId: str
-        :param IsLongLifeSession: 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
+        :param IsLongLifeSession: 長效session标識，當該參數爲1時，session的持續時間爲300s，但會一定程度上影響第一個數據包的返回速度。當InitOralProcess介面調用時此項爲1時，此項必填1才可生效。
         :type IsLongLifeSession: int
-        :param IsQuery: 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 的评估结果。
+        :param IsQuery: 查詢标識，當該參數爲1時，該請求爲查詢請求，請求返回該 Session 的評估結果。
         :type IsQuery: int
         """
         self.SeqId = None
@@ -227,31 +227,31 @@ class TransmitOralProcessRequest(AbstractModel):
 
 
 class TransmitOralProcessResponse(AbstractModel):
-    """TransmitOralProcess返回参数结构体
+    """TransmitOralProcess返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PronAccuracy: 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。当为流式模式且请求中IsEnd未置1时，取值无意义。
+        :param PronAccuracy: 發音精準度，取值範圍[-1, 100]，當取-1時指完全不比對，當爲句子模式時，是所有已識别單詞準确度的加權平均值，在reftext中但未識别出來的詞不計入分數中。當爲流式模式且請求中IsEnd未置1時，取值無意義。
         :type PronAccuracy: float
-        :param PronFluency: 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+        :param PronFluency: 發音流利度，取值範圍[0, 1]，當爲詞模式時，取值無意義；當爲流式模式且請求中IsEnd未置1時，取值無意義
         :type PronFluency: float
-        :param PronCompletion: 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+        :param PronCompletion: 發音完整度，取值範圍[0, 1]，當爲詞模式時，取值無意義；當爲流式模式且請求中IsEnd未置1時，取值無意義
         :type PronCompletion: float
-        :param Words: 详细发音评估结果
+        :param Words: 詳細發音評估結果
         :type Words: list of WordRsp
-        :param SessionId: 语音段唯一标识，一段语音一个SessionId
+        :param SessionId: 語音段唯一标識，一段語音一個SessionId
         :type SessionId: str
-        :param AudioUrl: 保存语音音频文件下载地址
+        :param AudioUrl: 保存語音音訊文件下載網址
         :type AudioUrl: str
-        :param SentenceInfoSet: 断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
+        :param SentenceInfoSet: 斷句中間結果，中間結果是局部最優而非全局最優的結果，所以中間結果有可能和最終整體結果對應部分不一緻；中間結果的輸出便于用戶端UI更新；待用戶發音完全結束後，系統會給出一個綜合所有句子的整體結果。
         :type SentenceInfoSet: list of SentenceInfo
-        :param Status: 评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
+        :param Status: 評估 session 狀态，“Evaluating"：評估中、"Failed"：評估失敗、"Finished"：評估完成
         :type Status: str
-        :param SuggestedScore: 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）× 完整度（PronCompletionfloat）×（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
+        :param SuggestedScore: 建議評分，取值範圍[0,100]，評分方式爲建議評分 = 準确度（PronAccuracyfloat）× 完整度（PronCompletionfloat）×（2 - 完整度（PronCompletionfloat）），如若評分策略不符合請參考Words數組中的詳細分數自定義評分邏輯。
         :type SuggestedScore: float
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PronAccuracy = None
@@ -290,45 +290,45 @@ class TransmitOralProcessResponse(AbstractModel):
 
 
 class TransmitOralProcessWithInitRequest(AbstractModel):
-    """TransmitOralProcessWithInit请求参数结构体
+    """TransmitOralProcessWithInit請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SeqId: 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
+        :param SeqId: 流式數據包的序号，從1開始，當IsEnd欄位爲1後後續序号無意義，當IsLongLifeSession不爲1且爲非流式模式時無意義。
         :type SeqId: int
-        :param IsEnd: 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
+        :param IsEnd: 是否傳輸完畢标志，若爲0表示未完畢，若爲1則傳輸完畢開始評估，非流式模式下無意義。
         :type IsEnd: int
-        :param VoiceFileType: 语音文件类型 	1:raw, 2:wav, 3:mp3(三种格式目前仅支持16k采样率16bit编码单声道，如有不一致可能导致评估不准确或失败)。
+        :param VoiceFileType: 語音文件類型 	1:raw, 2:wav, 3:mp3(三種格式目前僅支援16k采樣率16bit編碼單聲道，如有不一緻可能導緻評估不準确或失敗)。
         :type VoiceFileType: int
-        :param VoiceEncodeType: 语音编码类型	1:pcm。
+        :param VoiceEncodeType: 語音編碼類型	1:pcm。
         :type VoiceEncodeType: int
-        :param UserVoiceData: 当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
+        :param UserVoiceData: 當前數據包數據, 流式模式下數據包大小可以按需設置，在網絡良好的情況下，建議設置爲0.5k，且必須保證分片幀完整（16bit的數據必須保證音訊長度爲偶數），編碼格式要求爲BASE64。
         :type UserVoiceData: str
-        :param SessionId: 语音段唯一标识，一个完整语音一个SessionId。
+        :param SessionId: 語音段唯一标識，一個完整語音一個SessionId。
         :type SessionId: str
-        :param RefText: 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
+        :param RefText: 被評估語音對應的文本，句子模式下不超過個 20 單詞或者中文文字，段落模式不超過 120 單詞或者中文文字，中文評估使用 utf-8 編碼，自由說模式該值無效。如需要在單詞模式和句子模式下使用自定義音素，可以通過設置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
         :type RefText: str
-        :param WorkMode: 语音输入模式，0：流式分片，1：非流式一次性评估
+        :param WorkMode: 語音輸入模式，0：流式分片，1：非流式一次性評估
         :type WorkMode: int
-        :param EvalMode: 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
+        :param EvalMode: 評估模式，0：詞模式（中文評測模式下爲文字模式），1：句子模式，2：段落模式，3：自由說模式，當爲詞模式評估時，能夠提供每個音節的評估訊息，當爲句子模式時，能夠提供完整度和流利度訊息。
         :type EvalMode: int
-        :param ScoreCoeff: 评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段
+        :param ScoreCoeff: 評價苛刻指數，取值爲[1.0 - 4.0]範圍内的浮點數，用于平滑不同年齡段的分數，1.0爲小年齡段，4.0爲最高年齡段
         :type ScoreCoeff: float
-        :param SoeAppId: 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
+        :param SoeAppId: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【應用管理】下新建。
         :type SoeAppId: str
-        :param StorageMode: 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段。
+        :param StorageMode: 音訊儲存模式，0：不儲存，1：儲存到公共物件儲存，輸出結果爲該會話最後一個分片TransmitOralProcess 返回結果 AudioUrl 欄位。
         :type StorageMode: int
-        :param SentenceInfoEnabled: 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
+        :param SentenceInfoEnabled: 輸出斷句中間結果标識，0：不輸出，1：輸出，通過設置該參數，可以在評估過程中的分片傳輸請求中，返回已經評估斷句的中間結果，中間結果可用于用戶端 UI 更新，輸出結果爲TransmitOralProcess請求返回結果 SentenceInfoSet 欄位。
         :type SentenceInfoEnabled: int
-        :param ServerType: 评估语言，0：英文，1：中文。
+        :param ServerType: 評估語言，0：英文，1：中文。
         :type ServerType: int
-        :param IsAsync: 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
+        :param IsAsync: 異步模式标識，0：同步模式，1：異步模式，可選值參考[服務模式](https://cloud.tencent.com/document/product/884/33697)。
         :type IsAsync: int
-        :param IsQuery: 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 评估结果。
+        :param IsQuery: 查詢标識，當該參數爲1時，該請求爲查詢請求，請求返回該 Session 評估結果。
         :type IsQuery: int
-        :param TextMode: 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。
+        :param TextMode: 輸入文本模式，0: 普通文本，1：[音素結構](https://cloud.tencent.com/document/product/884/33698)文本。
         :type TextMode: int
         """
         self.SeqId = None
@@ -371,31 +371,31 @@ class TransmitOralProcessWithInitRequest(AbstractModel):
 
 
 class TransmitOralProcessWithInitResponse(AbstractModel):
-    """TransmitOralProcessWithInit返回参数结构体
+    """TransmitOralProcessWithInit返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PronAccuracy: 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。当为流式模式且请求中IsEnd未置1时，取值无意义。
+        :param PronAccuracy: 發音精準度，取值範圍[-1, 100]，當取-1時指完全不比對，當爲句子模式時，是所有已識别單詞準确度的加權平均值，在reftext中但未識别出來的詞不計入分數中。當爲流式模式且請求中IsEnd未置1時，取值無意義。
         :type PronAccuracy: float
-        :param PronFluency: 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+        :param PronFluency: 發音流利度，取值範圍[0, 1]，當爲詞模式時，取值無意義；當爲流式模式且請求中IsEnd未置1時，取值無意義
         :type PronFluency: float
-        :param PronCompletion: 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+        :param PronCompletion: 發音完整度，取值範圍[0, 1]，當爲詞模式時，取值無意義；當爲流式模式且請求中IsEnd未置1時，取值無意義
         :type PronCompletion: float
-        :param Words: 详细发音评估结果
+        :param Words: 詳細發音評估結果
         :type Words: list of WordRsp
-        :param SessionId: 语音段唯一标识，一段语音一个SessionId
+        :param SessionId: 語音段唯一标識，一段語音一個SessionId
         :type SessionId: str
-        :param AudioUrl: 保存语音音频文件下载地址
+        :param AudioUrl: 保存語音音訊文件下載網址
         :type AudioUrl: str
-        :param SentenceInfoSet: 断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
+        :param SentenceInfoSet: 斷句中間結果，中間結果是局部最優而非全局最優的結果，所以中間結果有可能和最終整體結果對應部分不一緻；中間結果的輸出便于用戶端UI更新；待用戶發音完全結束後，系統會給出一個綜合所有句子的整體結果。
         :type SentenceInfoSet: list of SentenceInfo
-        :param Status: 评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
+        :param Status: 評估 session 狀态，“Evaluating"：評估中、"Failed"：評估失敗、"Finished"：評估完成
         :type Status: str
-        :param SuggestedScore: 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）× 完整度（PronCompletionfloat）×（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
+        :param SuggestedScore: 建議評分，取值範圍[0,100]，評分方式爲建議評分 = 準确度（PronAccuracyfloat）× 完整度（PronCompletionfloat）×（2 - 完整度（PronCompletionfloat）），如若評分策略不符合請參考Words數組中的詳細分數自定義評分邏輯。
         :type SuggestedScore: float
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PronAccuracy = None
@@ -434,25 +434,25 @@ class TransmitOralProcessWithInitResponse(AbstractModel):
 
 
 class WordRsp(AbstractModel):
-    """单词评分细则
+    """單詞評分細則
 
     """
 
     def __init__(self):
         """
-        :param MemBeginTime: 当前单词语音起始时间点，单位为ms
+        :param MemBeginTime: 當前單詞語音起始時間點，單位爲ms
         :type MemBeginTime: int
-        :param MemEndTime: 当前单词语音终止时间点，单位为ms
+        :param MemEndTime: 當前單詞語音終止時間點，單位爲ms
         :type MemEndTime: int
-        :param PronAccuracy: 单词发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
+        :param PronAccuracy: 單詞發音準确度，取值範圍[-1, 100]，當取-1時指完全不比對
         :type PronAccuracy: float
-        :param PronFluency: 单词发音流利度，取值范围[0, 1]
+        :param PronFluency: 單詞發音流利度，取值範圍[0, 1]
         :type PronFluency: float
-        :param Word: 当前词
+        :param Word: 當前詞
         :type Word: str
-        :param MatchTag: 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
+        :param MatchTag: 當前詞與輸入語句的比對情況，0：比對單詞、1：新增單詞、2：缺少單詞、3：錯讀的詞、4：未錄入單詞。
         :type MatchTag: int
-        :param PhoneInfos: 音节评估详情
+        :param PhoneInfos: 音節評估詳情
         :type PhoneInfos: list of PhoneInfo
         """
         self.MemBeginTime = None

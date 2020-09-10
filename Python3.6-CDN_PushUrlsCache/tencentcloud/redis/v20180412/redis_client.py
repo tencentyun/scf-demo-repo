@@ -26,7 +26,7 @@ class RedisClient(AbstractClient):
 
 
     def AssociateSecurityGroups(self, request):
-        """本接口 (AssociateSecurityGroups) 用于绑定安全组到指定实例。
+        """本介面 (AssociateSecurityGroups) 用于綁定安全組到指定實例。
 
         :param request: Request instance for AssociateSecurityGroups.
         :type request: :class:`tencentcloud.redis.v20180412.models.AssociateSecurityGroupsRequest`
@@ -54,7 +54,7 @@ class RedisClient(AbstractClient):
 
 
     def CleanUpInstance(self, request):
-        """回收站实例立即下线
+        """資源回收筒實例立即下線
 
         :param request: Request instance for CleanUpInstance.
         :type request: :class:`tencentcloud.redis.v20180412.models.CleanUpInstanceRequest`
@@ -82,7 +82,7 @@ class RedisClient(AbstractClient):
 
 
     def ClearInstance(self, request):
-        """清空Redis实例的实例数据。
+        """清空Redis實例的實例數據。
 
         :param request: Request instance for ClearInstance.
         :type request: :class:`tencentcloud.redis.v20180412.models.ClearInstanceRequest`
@@ -110,7 +110,7 @@ class RedisClient(AbstractClient):
 
 
     def CreateInstanceAccount(self, request):
-        """创建实例子账号
+        """創建實例子賬号
 
         :param request: Request instance for CreateInstanceAccount.
         :type request: :class:`tencentcloud.redis.v20180412.models.CreateInstanceAccountRequest`
@@ -138,7 +138,7 @@ class RedisClient(AbstractClient):
 
 
     def CreateInstances(self, request):
-        """创建redis实例
+        """創建redis實例
 
         :param request: Request instance for CreateInstances.
         :type request: :class:`tencentcloud.redis.v20180412.models.CreateInstancesRequest`
@@ -166,7 +166,7 @@ class RedisClient(AbstractClient):
 
 
     def DeleteInstanceAccount(self, request):
-        """删除实例子账号
+        """删除實例子賬号
 
         :param request: Request instance for DeleteInstanceAccount.
         :type request: :class:`tencentcloud.redis.v20180412.models.DeleteInstanceAccountRequest`
@@ -194,7 +194,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeAutoBackupConfig(self, request):
-        """获取备份配置
+        """獲取備份配置
 
         :param request: Request instance for DescribeAutoBackupConfig.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeAutoBackupConfigRequest`
@@ -222,7 +222,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeBackupUrl(self, request):
-        """查询备份Rdb下载地址(接口灰度中，需要加白名单使用)
+        """查詢備份Rdb下載網址(介面灰度中，需要加白名單使用)
 
         :param request: Request instance for DescribeBackupUrl.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeBackupUrlRequest`
@@ -250,7 +250,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeDBSecurityGroups(self, request):
-        """本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
+        """本介面(DescribeDBSecurityGroups)用于查詢實例的安全組詳情。
 
         :param request: Request instance for DescribeDBSecurityGroups.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeDBSecurityGroupsRequest`
@@ -278,7 +278,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceAccount(self, request):
-        """查看实例子账号信息
+        """檢視實例子賬号訊息
 
         :param request: Request instance for DescribeInstanceAccount.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceAccountRequest`
@@ -306,7 +306,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceBackups(self, request):
-        """查询 CRS 实例备份列表
+        """查詢 CRS 實例備份清單
 
         :param request: Request instance for DescribeInstanceBackups.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceBackupsRequest`
@@ -334,7 +334,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceDTSInfo(self, request):
-        """查询实例DTS信息
+        """查詢實例DTS訊息
 
         :param request: Request instance for DescribeInstanceDTSInfo.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceDTSInfoRequest`
@@ -362,7 +362,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceDealDetail(self, request):
-        """查询订单信息
+        """查詢訂單訊息
 
         :param request: Request instance for DescribeInstanceDealDetail.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceDealDetailRequest`
@@ -390,7 +390,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceMonitorBigKey(self, request):
-        """查询实例大Key
+        """查詢實例大Key
 
         :param request: Request instance for DescribeInstanceMonitorBigKey.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceMonitorBigKeyRequest`
@@ -418,7 +418,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceMonitorBigKeySizeDist(self, request):
-        """查询实例大Key大小分布
+        """查詢實例大Key大小分布
 
         :param request: Request instance for DescribeInstanceMonitorBigKeySizeDist.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceMonitorBigKeySizeDistRequest`
@@ -446,7 +446,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceMonitorBigKeyTypeDist(self, request):
-        """查询实例大Key类型分布
+        """查詢實例大Key類型分布
 
         :param request: Request instance for DescribeInstanceMonitorBigKeyTypeDist.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceMonitorBigKeyTypeDistRequest`
@@ -474,7 +474,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceMonitorHotKey(self, request):
-        """查询实例热Key
+        """查詢實例熱Key
 
         :param request: Request instance for DescribeInstanceMonitorHotKey.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceMonitorHotKeyRequest`
@@ -502,7 +502,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceMonitorSIP(self, request):
-        """查询实例访问来源信息
+        """查詢實例訪問來源訊息
 
         :param request: Request instance for DescribeInstanceMonitorSIP.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceMonitorSIPRequest`
@@ -530,7 +530,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceMonitorTookDist(self, request):
-        """查询实例访问的耗时分布
+        """查詢實例訪問的耗時分布
 
         :param request: Request instance for DescribeInstanceMonitorTookDist.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceMonitorTookDistRequest`
@@ -558,7 +558,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceMonitorTopNCmd(self, request):
-        """查询实例访问命令
+        """查詢實例訪問命令
 
         :param request: Request instance for DescribeInstanceMonitorTopNCmd.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceMonitorTopNCmdRequest`
@@ -586,7 +586,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceMonitorTopNCmdTook(self, request):
-        """查询实例CPU耗时
+        """查詢實例CPU耗時
 
         :param request: Request instance for DescribeInstanceMonitorTopNCmdTook.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceMonitorTopNCmdTookRequest`
@@ -614,7 +614,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceParamRecords(self, request):
-        """查询参数修改历史列表
+        """查詢參數修改曆史清單
 
         :param request: Request instance for DescribeInstanceParamRecords.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceParamRecordsRequest`
@@ -642,7 +642,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceParams(self, request):
-        """查询实例参数列表
+        """查詢實例參數清單
 
         :param request: Request instance for DescribeInstanceParams.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceParamsRequest`
@@ -670,7 +670,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceSecurityGroup(self, request):
-        """查询实例安全组信息
+        """查詢實例安全組訊息
 
         :param request: Request instance for DescribeInstanceSecurityGroup.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceSecurityGroupRequest`
@@ -698,7 +698,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceShards(self, request):
-        """获取集群版实例分片信息
+        """獲取集群版實例分片訊息
 
         :param request: Request instance for DescribeInstanceShards.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceShardsRequest`
@@ -726,7 +726,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstances(self, request):
-        """查询Redis实例列表
+        """查詢Redis實例清單
 
         :param request: Request instance for DescribeInstances.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstancesRequest`
@@ -754,7 +754,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeProductInfo(self, request):
-        """本接口查询指定可用区和实例类型下 Redis 的售卖规格， 如果用户不在购买白名单中，将不能查询该可用区或该类型的售卖规格详情。申请购买某地域白名单可以提交工单
+        """本介面查詢指定可用區和實例類型下 Redis 的售賣規格， 如果用戶不在購買白名單中，将不能查詢該可用區或該類型的售賣規格詳情。申請購買某地域白名單可以提交工單
 
         :param request: Request instance for DescribeProductInfo.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeProductInfoRequest`
@@ -782,7 +782,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeProjectSecurityGroup(self, request):
-        """查询项目安全组信息
+        """查詢項目安全組訊息
 
         :param request: Request instance for DescribeProjectSecurityGroup.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeProjectSecurityGroupRequest`
@@ -810,7 +810,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeProjectSecurityGroups(self, request):
-        """本接口(DescribeProjectSecurityGroups)用于查询项目的安全组详情。
+        """本介面(DescribeProjectSecurityGroups)用于查詢項目的安全組詳情。
 
         :param request: Request instance for DescribeProjectSecurityGroups.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeProjectSecurityGroupsRequest`
@@ -838,7 +838,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeSlowLog(self, request):
-        """查询实例慢查询记录
+        """查詢實例慢查詢記錄
 
         :param request: Request instance for DescribeSlowLog.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeSlowLogRequest`
@@ -866,7 +866,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeTaskInfo(self, request):
-        """用于查询任务结果
+        """用于查詢任務結果
 
         :param request: Request instance for DescribeTaskInfo.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeTaskInfoRequest`
@@ -894,7 +894,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeTaskList(self, request):
-        """查询任务列表信息
+        """查詢任務清單訊息
 
         :param request: Request instance for DescribeTaskList.
         :type request: :class:`tencentcloud.redis.v20180412.models.DescribeTaskListRequest`
@@ -922,7 +922,7 @@ class RedisClient(AbstractClient):
 
 
     def DestroyPostpaidInstance(self, request):
-        """按量计费实例销毁
+        """按量計費實例銷毀
 
         :param request: Request instance for DestroyPostpaidInstance.
         :type request: :class:`tencentcloud.redis.v20180412.models.DestroyPostpaidInstanceRequest`
@@ -950,7 +950,7 @@ class RedisClient(AbstractClient):
 
 
     def DestroyPrepaidInstance(self, request):
-        """包年包月实例退还
+        """包年包月實例退還
 
         :param request: Request instance for DestroyPrepaidInstance.
         :type request: :class:`tencentcloud.redis.v20180412.models.DestroyPrepaidInstanceRequest`
@@ -978,7 +978,7 @@ class RedisClient(AbstractClient):
 
 
     def DisableReplicaReadonly(self, request):
-        """禁用读写分离
+        """禁用讀寫分離
 
         :param request: Request instance for DisableReplicaReadonly.
         :type request: :class:`tencentcloud.redis.v20180412.models.DisableReplicaReadonlyRequest`
@@ -1006,7 +1006,7 @@ class RedisClient(AbstractClient):
 
 
     def DisassociateSecurityGroups(self, request):
-        """本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
+        """本介面(DisassociateSecurityGroups)用于安全組批次解綁實例。
 
         :param request: Request instance for DisassociateSecurityGroups.
         :type request: :class:`tencentcloud.redis.v20180412.models.DisassociateSecurityGroupsRequest`
@@ -1034,7 +1034,7 @@ class RedisClient(AbstractClient):
 
 
     def EnableReplicaReadonly(self, request):
-        """启用读写分离
+        """啓用讀寫分離
 
         :param request: Request instance for EnableReplicaReadonly.
         :type request: :class:`tencentcloud.redis.v20180412.models.EnableReplicaReadonlyRequest`
@@ -1062,7 +1062,7 @@ class RedisClient(AbstractClient):
 
 
     def InquiryPriceCreateInstance(self, request):
-        """查询新购实例价格
+        """查詢新購實例價格
 
         :param request: Request instance for InquiryPriceCreateInstance.
         :type request: :class:`tencentcloud.redis.v20180412.models.InquiryPriceCreateInstanceRequest`
@@ -1090,7 +1090,7 @@ class RedisClient(AbstractClient):
 
 
     def InquiryPriceRenewInstance(self, request):
-        """查询实例续费价格（包年包月）
+        """查詢實例續約價格（包年包月）
 
         :param request: Request instance for InquiryPriceRenewInstance.
         :type request: :class:`tencentcloud.redis.v20180412.models.InquiryPriceRenewInstanceRequest`
@@ -1118,7 +1118,7 @@ class RedisClient(AbstractClient):
 
 
     def InquiryPriceUpgradeInstance(self, request):
-        """查询实例扩容价格
+        """查詢實例擴容價格
 
         :param request: Request instance for InquiryPriceUpgradeInstance.
         :type request: :class:`tencentcloud.redis.v20180412.models.InquiryPriceUpgradeInstanceRequest`
@@ -1146,7 +1146,7 @@ class RedisClient(AbstractClient):
 
 
     def ManualBackupInstance(self, request):
-        """手动备份Redis实例
+        """手動備份Redis實例
 
         :param request: Request instance for ManualBackupInstance.
         :type request: :class:`tencentcloud.redis.v20180412.models.ManualBackupInstanceRequest`
@@ -1174,7 +1174,7 @@ class RedisClient(AbstractClient):
 
 
     def ModfiyInstancePassword(self, request):
-        """修改redis密码
+        """修改redis密碼
 
         :param request: Request instance for ModfiyInstancePassword.
         :type request: :class:`tencentcloud.redis.v20180412.models.ModfiyInstancePasswordRequest`
@@ -1202,7 +1202,7 @@ class RedisClient(AbstractClient):
 
 
     def ModifyAutoBackupConfig(self, request):
-        """设置自动备份时间
+        """設置自動備份時間
 
         :param request: Request instance for ModifyAutoBackupConfig.
         :type request: :class:`tencentcloud.redis.v20180412.models.ModifyAutoBackupConfigRequest`
@@ -1230,7 +1230,7 @@ class RedisClient(AbstractClient):
 
 
     def ModifyDBInstanceSecurityGroups(self, request):
-        """本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组
+        """本介面(ModifyDBInstanceSecurityGroups)用于修改實例綁定的安全組
 
         :param request: Request instance for ModifyDBInstanceSecurityGroups.
         :type request: :class:`tencentcloud.redis.v20180412.models.ModifyDBInstanceSecurityGroupsRequest`
@@ -1258,7 +1258,7 @@ class RedisClient(AbstractClient):
 
 
     def ModifyInstance(self, request):
-        """修改实例相关信息
+        """修改實例相關訊息
 
         :param request: Request instance for ModifyInstance.
         :type request: :class:`tencentcloud.redis.v20180412.models.ModifyInstanceRequest`
@@ -1286,7 +1286,7 @@ class RedisClient(AbstractClient):
 
 
     def ModifyInstanceAccount(self, request):
-        """修改实例子账号
+        """修改實例子賬号
 
         :param request: Request instance for ModifyInstanceAccount.
         :type request: :class:`tencentcloud.redis.v20180412.models.ModifyInstanceAccountRequest`
@@ -1314,7 +1314,7 @@ class RedisClient(AbstractClient):
 
 
     def ModifyInstanceParams(self, request):
-        """修改实例参数
+        """修改實例參數
 
         :param request: Request instance for ModifyInstanceParams.
         :type request: :class:`tencentcloud.redis.v20180412.models.ModifyInstanceParamsRequest`
@@ -1342,7 +1342,7 @@ class RedisClient(AbstractClient):
 
 
     def ModifyNetworkConfig(self, request):
-        """修改实例网络配置
+        """修改實例網絡配置
 
         :param request: Request instance for ModifyNetworkConfig.
         :type request: :class:`tencentcloud.redis.v20180412.models.ModifyNetworkConfigRequest`
@@ -1370,7 +1370,7 @@ class RedisClient(AbstractClient):
 
 
     def RenewInstance(self, request):
-        """续费实例
+        """續約實例
 
         :param request: Request instance for RenewInstance.
         :type request: :class:`tencentcloud.redis.v20180412.models.RenewInstanceRequest`
@@ -1398,7 +1398,7 @@ class RedisClient(AbstractClient):
 
 
     def ResetPassword(self, request):
-        """重置密码
+        """重置密碼
 
         :param request: Request instance for ResetPassword.
         :type request: :class:`tencentcloud.redis.v20180412.models.ResetPasswordRequest`
@@ -1426,7 +1426,7 @@ class RedisClient(AbstractClient):
 
 
     def RestoreInstance(self, request):
-        """恢复 CRS 实例
+        """恢複 CRS 實例
 
         :param request: Request instance for RestoreInstance.
         :type request: :class:`tencentcloud.redis.v20180412.models.RestoreInstanceRequest`
@@ -1454,7 +1454,7 @@ class RedisClient(AbstractClient):
 
 
     def StartupInstance(self, request):
-        """实例解隔离
+        """實例解隔離
 
         :param request: Request instance for StartupInstance.
         :type request: :class:`tencentcloud.redis.v20180412.models.StartupInstanceRequest`
@@ -1482,7 +1482,7 @@ class RedisClient(AbstractClient):
 
 
     def SwitchInstanceVip(self, request):
-        """在通过DTS支持跨可用区灾备的场景中，通过该接口交换实例VIP完成实例灾备切换。交换VIP后目标实例可写，源和目标实例VIP互换，同时源与目标实例间DTS同步任务断开
+        """在通過DTS支援跨可用區災備的場景中，通過該介面交換實例VIP完成實例災備切換。交換VIP後目标實例可寫，源和目标實例VIP互換，同時源與目标實例間DTS同步任務斷開
 
         :param request: Request instance for SwitchInstanceVip.
         :type request: :class:`tencentcloud.redis.v20180412.models.SwitchInstanceVipRequest`
@@ -1510,7 +1510,7 @@ class RedisClient(AbstractClient):
 
 
     def UpgradeInstance(self, request):
-        """升级实例
+        """升級實例
 
         :param request: Request instance for UpgradeInstance.
         :type request: :class:`tencentcloud.redis.v20180412.models.UpgradeInstanceRequest`

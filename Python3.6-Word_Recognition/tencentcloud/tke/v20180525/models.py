@@ -17,7 +17,7 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AddExistedInstancesRequest(AbstractModel):
-    """AddExistedInstances请求参数结构体
+    """AddExistedInstances請求參數結構體
 
     """
 
@@ -25,15 +25,15 @@ class AddExistedInstancesRequest(AbstractModel):
         """
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param InstanceIds: 实例列表
+        :param InstanceIds: 實例清單
         :type InstanceIds: list of str
-        :param InstanceAdvancedSettings: 实例额外需要设置参数信息
+        :param InstanceAdvancedSettings: 實例額外需要設置參數訊息
         :type InstanceAdvancedSettings: :class:`tencentcloud.tke.v20180525.models.InstanceAdvancedSettings`
-        :param EnhancedService: 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
+        :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
         :type EnhancedService: :class:`tencentcloud.tke.v20180525.models.EnhancedService`
-        :param LoginSettings: 节点登录信息（目前仅支持使用Password或者单个KeyIds）
+        :param LoginSettings: 節點登入訊息（目前僅支援使用Password或者單個KeyIds）
         :type LoginSettings: :class:`tencentcloud.tke.v20180525.models.LoginSettings`
-        :param SecurityGroupIds: 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+        :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 DescribeSecurityGroups 的返回值中的sgId欄位來獲取。若不指定該參數，則綁定預設安全組。（目前僅支援設置單個sgId）
         :type SecurityGroupIds: list of str
         """
         self.ClusterId = None
@@ -60,13 +60,13 @@ class AddExistedInstancesRequest(AbstractModel):
 
 
 class AddExistedInstancesResponse(AbstractModel):
-    """AddExistedInstances返回参数结构体
+    """AddExistedInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -77,7 +77,7 @@ class AddExistedInstancesResponse(AbstractModel):
 
 
 class Cluster(AbstractModel):
-    """集群信息结构体
+    """集群訊息結構體
 
     """
 
@@ -85,21 +85,21 @@ class Cluster(AbstractModel):
         """
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param ClusterName: 集群名称
+        :param ClusterName: 集群名稱
         :type ClusterName: str
         :param ClusterDescription: 集群描述
         :type ClusterDescription: str
-        :param ClusterVersion: 集群版本（默认值为1.10.5）
+        :param ClusterVersion: 集群版本（預設值爲1.10.5）
         :type ClusterVersion: str
-        :param ClusterOs: 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
+        :param ClusterOs: 集群系統。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，預設取值爲ubuntu16.04.1 LTSx86_64
         :type ClusterOs: str
-        :param ClusterType: 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
+        :param ClusterType: 集群類型，托管集群：MANAGED_CLUSTER，獨立集群：INDEPENDENT_CLUSTER。
         :type ClusterType: str
-        :param ClusterNetworkSettings: 集群网络相关参数
+        :param ClusterNetworkSettings: 集群網絡相關參數
         :type ClusterNetworkSettings: :class:`tencentcloud.tke.v20180525.models.ClusterNetworkSettings`
-        :param ClusterNodeNum: 集群当前node数量
+        :param ClusterNodeNum: 集群當前node數量
         :type ClusterNodeNum: int
-        :param ProjectId: 集群所属的项目ID
+        :param ProjectId: 集群所屬的項目ID
         :type ProjectId: int
         """
         self.ClusterId = None
@@ -128,15 +128,15 @@ class Cluster(AbstractModel):
 
 
 class ClusterAdvancedSettings(AbstractModel):
-    """集群高级配置
+    """集群高級配置
 
     """
 
     def __init__(self):
         """
-        :param IPVS: 是否启用IPVS
+        :param IPVS: 是否啓用IPVS
         :type IPVS: bool
-        :param AsEnabled: 是否启用集群节点扩缩容
+        :param AsEnabled: 是否啓用集群節點擴縮容
         :type AsEnabled: bool
         """
         self.IPVS = None
@@ -149,23 +149,23 @@ class ClusterAdvancedSettings(AbstractModel):
 
 
 class ClusterBasicSettings(AbstractModel):
-    """描述集群的基本配置信息
+    """描述集群的基本配置訊息
 
     """
 
     def __init__(self):
         """
-        :param ClusterOs: 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
+        :param ClusterOs: 集群系統。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，預設取值爲ubuntu16.04.1 LTSx86_64
         :type ClusterOs: str
-        :param ClusterVersion: 集群版本,默认值为1.10.5
+        :param ClusterVersion: 集群版本,預設值爲1.10.5
         :type ClusterVersion: str
-        :param ClusterName: 集群名称
+        :param ClusterName: 集群名稱
         :type ClusterName: str
         :param ClusterDescription: 集群描述
         :type ClusterDescription: str
-        :param VpcId: 私有网络ID，形如vpc-xxx。创建托管空集群时必传。
+        :param VpcId: 私有網絡ID，形如vpc-xxx。創建托管空集群時必傳。
         :type VpcId: str
-        :param ProjectId: 集群内新增资源所属项目ID。
+        :param ProjectId: 集群内新增資源所屬項目ID。
         :type ProjectId: int
         """
         self.ClusterOs = None
@@ -186,19 +186,19 @@ class ClusterBasicSettings(AbstractModel):
 
 
 class ClusterCIDRSettings(AbstractModel):
-    """集群容器网络相关参数
+    """集群容器網絡相關參數
 
     """
 
     def __init__(self):
         """
-        :param ClusterCIDR: 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+        :param ClusterCIDR: 用于分配集群容器和服務 IP 的 CIDR，不得與 VPC CIDR 沖突，也不得與同 VPC 内其他集群 CIDR 沖突
         :type ClusterCIDR: str
-        :param IgnoreClusterCIDRConflict: 是否忽略 ClusterCIDR 冲突错误, 默认不忽略
+        :param IgnoreClusterCIDRConflict: 是否忽略 ClusterCIDR 沖突錯誤, 預設不忽略
         :type IgnoreClusterCIDRConflict: bool
-        :param MaxNodePodNum: 集群中每个Node上最大的Pod数量
+        :param MaxNodePodNum: 集群中每個Node上最大的Pod數量
         :type MaxNodePodNum: int
-        :param MaxClusterServiceNum: 集群最大的service数量
+        :param MaxClusterServiceNum: 集群最大的service數量
         :type MaxClusterServiceNum: int
         """
         self.ClusterCIDR = None
@@ -215,23 +215,23 @@ class ClusterCIDRSettings(AbstractModel):
 
 
 class ClusterNetworkSettings(AbstractModel):
-    """集群网络相关的参数
+    """集群網絡相關的參數
 
     """
 
     def __init__(self):
         """
-        :param ClusterCIDR: 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+        :param ClusterCIDR: 用于分配集群容器和服務 IP 的 CIDR，不得與 VPC CIDR 沖突，也不得與同 VPC 内其他集群 CIDR 沖突
         :type ClusterCIDR: str
-        :param IgnoreClusterCIDRConflict: 是否忽略 ClusterCIDR 冲突错误, 默认不忽略
+        :param IgnoreClusterCIDRConflict: 是否忽略 ClusterCIDR 沖突錯誤, 預設不忽略
         :type IgnoreClusterCIDRConflict: bool
-        :param MaxNodePodNum: 集群中每个Node上最大的Pod数量(默认为256)
+        :param MaxNodePodNum: 集群中每個Node上最大的Pod數量(預設爲256)
         :type MaxNodePodNum: int
-        :param MaxClusterServiceNum: 集群最大的service数量(默认为256)
+        :param MaxClusterServiceNum: 集群最大的service數量(預設爲256)
         :type MaxClusterServiceNum: int
-        :param Ipvs: 是否启用IPVS(默认不开启)
+        :param Ipvs: 是否啓用IPVS(預設不開啓)
         :type Ipvs: bool
-        :param VpcId: 集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
+        :param VpcId: 集群的VPCID（如果創建空集群，爲必傳值，否則自動設置爲和集群的節點保持一緻）
         :type VpcId: str
         """
         self.ClusterCIDR = None
@@ -252,25 +252,25 @@ class ClusterNetworkSettings(AbstractModel):
 
 
 class CreateClusterRequest(AbstractModel):
-    """CreateCluster请求参数结构体
+    """CreateCluster請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterCIDRSettings: 集群容器网络配置信息
+        :param ClusterCIDRSettings: 集群容器網絡配置訊息
         :type ClusterCIDRSettings: :class:`tencentcloud.tke.v20180525.models.ClusterCIDRSettings`
-        :param ClusterType: 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
+        :param ClusterType: 集群類型，托管集群：MANAGED_CLUSTER，獨立集群：INDEPENDENT_CLUSTER。
         :type ClusterType: str
-        :param RunInstancesForNode: CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
+        :param RunInstancesForNode: CVM創建透傳參數，json化字串格式，詳見[CVM創建實例](https://cloud.tencent.com/document/product/213/15730)介面。
         :type RunInstancesForNode: list of RunInstancesForNode
-        :param ClusterBasicSettings: 集群的基本配置信息
+        :param ClusterBasicSettings: 集群的基本配置訊息
         :type ClusterBasicSettings: :class:`tencentcloud.tke.v20180525.models.ClusterBasicSettings`
-        :param ClusterAdvancedSettings: 集群高级配置信息
+        :param ClusterAdvancedSettings: 集群高級配置訊息
         :type ClusterAdvancedSettings: :class:`tencentcloud.tke.v20180525.models.ClusterAdvancedSettings`
-        :param InstanceAdvancedSettings: 节点高级配置信息
+        :param InstanceAdvancedSettings: 節點高級配置訊息
         :type InstanceAdvancedSettings: :class:`tencentcloud.tke.v20180525.models.InstanceAdvancedSettings`
-        :param ExistedInstancesForNode: 已存在实例的配置信息
+        :param ExistedInstancesForNode: 已存在實例的配置訊息
         :type ExistedInstancesForNode: list of ExistedInstancesForNode
         """
         self.ClusterCIDRSettings = None
@@ -311,7 +311,7 @@ class CreateClusterRequest(AbstractModel):
 
 
 class CreateClusterResponse(AbstractModel):
-    """CreateCluster返回参数结构体
+    """CreateCluster返回參數結構體
 
     """
 
@@ -319,7 +319,7 @@ class CreateClusterResponse(AbstractModel):
         """
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ClusterId = None
@@ -332,7 +332,7 @@ class CreateClusterResponse(AbstractModel):
 
 
 class DeleteClusterInstancesRequest(AbstractModel):
-    """DeleteClusterInstances请求参数结构体
+    """DeleteClusterInstances請求參數結構體
 
     """
 
@@ -340,9 +340,9 @@ class DeleteClusterInstancesRequest(AbstractModel):
         """
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param InstanceIds: 主机InstanceId列表
+        :param InstanceIds: 主機InstanceId清單
         :type InstanceIds: list of str
-        :param InstanceDeleteMode: 集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
+        :param InstanceDeleteMode: 集群實例删除時的策略：terminate（銷毀實例，僅支援按量計費雲主機實例） retain （僅移除，保留實例）
         :type InstanceDeleteMode: str
         """
         self.ClusterId = None
@@ -357,13 +357,13 @@ class DeleteClusterInstancesRequest(AbstractModel):
 
 
 class DeleteClusterInstancesResponse(AbstractModel):
-    """DeleteClusterInstances返回参数结构体
+    """DeleteClusterInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -374,7 +374,7 @@ class DeleteClusterInstancesResponse(AbstractModel):
 
 
 class DescribeClusterInstancesRequest(AbstractModel):
-    """DescribeClusterInstances请求参数结构体
+    """DescribeClusterInstances請求參數結構體
 
     """
 
@@ -382,11 +382,11 @@ class DescribeClusterInstancesRequest(AbstractModel):
         """
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param Offset: 偏移量,默认0
+        :param Offset: 偏移量,預設0
         :type Offset: int
-        :param Limit: 最大输出条数，默认20
+        :param Limit: 最大輸出條數，預設20
         :type Limit: int
-        :param InstanceIds: 需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
+        :param InstanceIds: 需要獲取的節點實例Id清單(預設爲空，表示拉取集群下所有節點實例)
         :type InstanceIds: list of str
         """
         self.ClusterId = None
@@ -403,17 +403,17 @@ class DescribeClusterInstancesRequest(AbstractModel):
 
 
 class DescribeClusterInstancesResponse(AbstractModel):
-    """DescribeClusterInstances返回参数结构体
+    """DescribeClusterInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 集群中实例总数
+        :param TotalCount: 集群中實例總數
         :type TotalCount: int
-        :param InstanceSet: 集群中实例列表
+        :param InstanceSet: 集群中實例清單
         :type InstanceSet: list of Instance
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -433,20 +433,20 @@ class DescribeClusterInstancesResponse(AbstractModel):
 
 
 class DescribeClustersRequest(AbstractModel):
-    """DescribeClusters请求参数结构体
+    """DescribeClusters請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterIds: 集群ID列表(为空时，
-表示获取账号下所有集群)
+        :param ClusterIds: 集群ID清單(爲空時，
+表示獲取賬号下所有集群)
         :type ClusterIds: list of str
-        :param Offset: 偏移量,默认0
+        :param Offset: 偏移量,預設0
         :type Offset: int
-        :param Limit: 最大输出条数，默认20
+        :param Limit: 最大輸出條數，預設20
         :type Limit: int
-        :param Filters: 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+        :param Filters: 過濾條件,當前只支援按照單個條件ClusterName進行過濾
         :type Filters: list of Filter
         """
         self.ClusterIds = None
@@ -468,17 +468,17 @@ class DescribeClustersRequest(AbstractModel):
 
 
 class DescribeClustersResponse(AbstractModel):
-    """DescribeClusters返回参数结构体
+    """DescribeClusters返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 集群总个数
+        :param TotalCount: 集群總個數
         :type TotalCount: int
-        :param Clusters: 集群信息列表
+        :param Clusters: 集群訊息清單
         :type Clusters: list of Cluster
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -498,15 +498,15 @@ class DescribeClustersResponse(AbstractModel):
 
 
 class EnhancedService(AbstractModel):
-    """描述了实例的增强服务启用情况与其设置，如云安全，云监控等实例 Agent
+    """描述了實例的增強服務啓用情況與其設置，如雲安全，雲監控等實例 Agent
 
     """
 
     def __init__(self):
         """
-        :param SecurityService: 开启云安全服务。若不指定该参数，则默认开启云安全服务。
+        :param SecurityService: 開啓雲安全服務。若不指定該參數，則預設開啓雲安全服務。
         :type SecurityService: :class:`tencentcloud.tke.v20180525.models.RunSecurityServiceEnabled`
-        :param MonitorService: 开启云监控服务。若不指定该参数，则默认开启云监控服务。
+        :param MonitorService: 開啓雲監控服務。若不指定該參數，則預設開啓雲監控服務。
         :type MonitorService: :class:`tencentcloud.tke.v20180525.models.RunMonitorServiceEnabled`
         """
         self.SecurityService = None
@@ -523,15 +523,15 @@ class EnhancedService(AbstractModel):
 
 
 class ExistedInstancesForNode(AbstractModel):
-    """不同角色的已存在节点配置参数
+    """不同角色的已存在節點配置參數
 
     """
 
     def __init__(self):
         """
-        :param NodeRole: 节点角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在创建 INDEPENDENT_CLUSTER 独立集群时需要指定。
+        :param NodeRole: 節點角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在創建 INDEPENDENT_CLUSTER 獨立集群時需要指定。
         :type NodeRole: str
-        :param ExistedInstancesPara: 已存在实例的重装参数
+        :param ExistedInstancesPara: 已存在實例的重裝參數
         :type ExistedInstancesPara: :class:`tencentcloud.tke.v20180525.models.ExistedInstancesPara`
         """
         self.NodeRole = None
@@ -546,7 +546,7 @@ class ExistedInstancesForNode(AbstractModel):
 
 
 class ExistedInstancesPara(AbstractModel):
-    """已存在实例的重装参数
+    """已存在實例的重裝參數
 
     """
 
@@ -554,13 +554,13 @@ class ExistedInstancesPara(AbstractModel):
         """
         :param InstanceIds: 集群ID
         :type InstanceIds: list of str
-        :param InstanceAdvancedSettings: 实例额外需要设置参数信息
+        :param InstanceAdvancedSettings: 實例額外需要設置參數訊息
         :type InstanceAdvancedSettings: :class:`tencentcloud.tke.v20180525.models.InstanceAdvancedSettings`
-        :param EnhancedService: 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
+        :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
         :type EnhancedService: :class:`tencentcloud.tke.v20180525.models.EnhancedService`
-        :param LoginSettings: 节点登录信息（目前仅支持使用Password或者单个KeyIds）
+        :param LoginSettings: 節點登入訊息（目前僅支援使用Password或者單個KeyIds）
         :type LoginSettings: :class:`tencentcloud.tke.v20180525.models.LoginSettings`
-        :param SecurityGroupIds: 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+        :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 DescribeSecurityGroups 的返回值中的sgId欄位來獲取。若不指定該參數，則綁定預設安全組。（目前僅支援設置單個sgId）
         :type SecurityGroupIds: list of str
         """
         self.InstanceIds = None
@@ -585,15 +585,15 @@ class ExistedInstancesPara(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """过滤器
+    """過濾器
 
     """
 
     def __init__(self):
         """
-        :param Name: 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+        :param Name: 屬性名稱, 若存在多個Filter時，Filter間的關系爲邏輯與（AND）關系。
         :type Name: str
-        :param Values: 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+        :param Values: 屬性值, 若同一個Filter存在多個Values，同一Filter下Values間的關系爲邏輯或（OR）關系。
         :type Values: list of str
         """
         self.Name = None
@@ -606,21 +606,21 @@ class Filter(AbstractModel):
 
 
 class Instance(AbstractModel):
-    """集群的实例信息
+    """集群的實例訊息
 
     """
 
     def __init__(self):
         """
-        :param InstanceAdvanceSettings: 实例的附加信息
+        :param InstanceAdvanceSettings: 實例的附加訊息
         :type InstanceAdvanceSettings: :class:`tencentcloud.tke.v20180525.models.InstanceAdvancedSettings`
-        :param InstanceId: 实例ID
+        :param InstanceId: 實例ID
         :type InstanceId: str
-        :param InstanceRole: 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER
+        :param InstanceRole: 節點角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 預設爲WORKER
         :type InstanceRole: str
-        :param FailedReason: 实例异常(或者处于初始化中)的原因
+        :param FailedReason: 實例異常(或者處于初始化中)的原因
         :type FailedReason: str
-        :param InstanceState: 实例的状态（running 运行中，initializing 初始化中，failed 异常）
+        :param InstanceState: 實例的狀态（running 運作中，initializing 初始化中，failed 異常）
         :type InstanceState: str
         """
         self.InstanceAdvanceSettings = None
@@ -641,19 +641,19 @@ class Instance(AbstractModel):
 
 
 class InstanceAdvancedSettings(AbstractModel):
-    """描述了k8s集群相关配置与信息。
+    """描述了k8s集群相關配置與訊息。
 
     """
 
     def __init__(self):
         """
-        :param MountTarget: 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
+        :param MountTarget: 數據盤掛載點, 預設不掛載數據盤. 已格式化的 ext3，ext4，xfs 文件系統的數據盤将直接掛載，其他文件系統或未格式化的數據盤将自動格式化爲ext4 并掛載，請注意備份數據! 無數據盤或有多塊數據盤的雲主機此設置不生效。
         :type MountTarget: str
-        :param DockerGraphPath: dockerd --graph 指定值, 默认为 /var/lib/docker
+        :param DockerGraphPath: dockerd --graph 指定值, 預設爲 /var/lib/docker
         :type DockerGraphPath: str
-        :param UserScript: base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+        :param UserScript: base64 編碼的用戶腳本, 此腳本會在 k8s 元件運作後執行, 需要用戶保證腳本的可重入及重試邏輯, 腳本及其生成的日志文件可在節點的 /data/ccs_userscript/ 路徑檢視, 如果要求節點需要在進行初始化完成後才可加入調度, 可配合 unschedulable 參數使用, 在 userScript 最後初始化完成後, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使節點加入調度
         :type UserScript: str
-        :param Unschedulable: 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+        :param Unschedulable: 設置加入的節點是否參與調度，預設值爲0，表示參與調度；非0表示不參與調度, 待節點初始化完成之後, 可執行kubectl uncordon nodename使node加入調度.
         :type Unschedulable: int
         """
         self.MountTarget = None
@@ -670,20 +670,20 @@ class InstanceAdvancedSettings(AbstractModel):
 
 
 class LoginSettings(AbstractModel):
-    """描述了实例登录相关配置与信息。
+    """描述了實例登入相關配置與訊息。
 
     """
 
     def __init__(self):
         """
-        :param Password: 实例登录密码。不同操作系统类型密码复杂度限制不一样，具体如下：<br><li>Linux实例密码必须8到16位，至少包括两项[a-z，A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? / ]中的特殊符号。<br><li>Windows实例密码必须12到16位，至少包括三项[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = { } [ ] : ; ' , . ? /]中的特殊符号。<br><br>若不指定该参数，则由系统随机生成密码，并通过站内信方式通知到用户。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>Linux實例密碼必須8到16位，至少包括兩項[a-z，A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? / ]中的特殊符号。<br><li>Windows實例密碼必須12到16位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = { } [ ] : ; ' , . ? /]中的特殊符号。<br><br>若不指定該參數，則由系統随機生成密碼，并通過站内信方式通知到用戶。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Password: str
-        :param KeyIds: 密钥ID列表。关联密钥后，就可以通过对应的私钥来访问实例；KeyId可通过接口DescribeKeyPairs获取，密钥与密码不能同时指定，同时Windows操作系统不支持指定密钥。当前仅支持购买的时候指定一个密钥。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param KeyIds: 金鑰ID清單。關聯金鑰後，就可以通過對應的私鑰來訪問實例；KeyId可通過介面DescribeKeyPairs獲取，金鑰與密碼不能同時指定，同時Windows作業系統不支援指定金鑰。當前僅支援購買的時候指定一個金鑰。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type KeyIds: list of str
-        :param KeepImageLogin: 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：<br><li>TRUE：表示保持镜像的登录设置<br><li>FALSE：表示不保持镜像的登录设置<br><br>默认取值：FALSE。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param KeepImageLogin: 保持映像的原始設置。該參數與Password或KeyIds.N不能同時指定。只有使用自定義映像、共享映像或外部導入映像創建實例時才能指定該參數爲TRUE。取值範圍：<br><li>TRUE：表示保持映像的登入設置<br><li>FALSE：表示不保持映像的登入設置<br><br>預設取值：FALSE。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type KeepImageLogin: str
         """
         self.Password = None
@@ -698,15 +698,15 @@ class LoginSettings(AbstractModel):
 
 
 class RunInstancesForNode(AbstractModel):
-    """不同角色的节点配置参数
+    """不同角色的節點配置參數
 
     """
 
     def __init__(self):
         """
-        :param NodeRole: 节点角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在创建 INDEPENDENT_CLUSTER 独立集群时需要指定。
+        :param NodeRole: 節點角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在創建 INDEPENDENT_CLUSTER 獨立集群時需要指定。
         :type NodeRole: str
-        :param RunInstancesPara: CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口，传入公共参数外的其他参数即可，其中ImageId会替换为TKE集群OS对应的镜像。
+        :param RunInstancesPara: CVM創建透傳參數，json化字串格式，詳見[CVM創建實例](https://cloud.tencent.com/document/product/213/15730)介面，傳入公共參數外的其他參數即可，其中ImageId會替換爲TKE集群OS對應的映像。
         :type RunInstancesPara: list of str
         """
         self.NodeRole = None
@@ -719,13 +719,13 @@ class RunInstancesForNode(AbstractModel):
 
 
 class RunMonitorServiceEnabled(AbstractModel):
-    """描述了 “云监控” 服务相关的信息
+    """描述了 “雲監控” 服務相關的訊息
 
     """
 
     def __init__(self):
         """
-        :param Enabled: 是否开启[云监控](/document/product/248)服务。取值范围：<br><li>TRUE：表示开启云监控服务<br><li>FALSE：表示不开启云监控服务<br><br>默认取值：TRUE。
+        :param Enabled: 是否開啓[雲監控](/document/product/248)服務。取值範圍：<br><li>TRUE：表示開啓雲監控服務<br><li>FALSE：表示不開啓雲監控服務<br><br>預設取值：TRUE。
         :type Enabled: bool
         """
         self.Enabled = None
@@ -736,13 +736,13 @@ class RunMonitorServiceEnabled(AbstractModel):
 
 
 class RunSecurityServiceEnabled(AbstractModel):
-    """描述了 “云安全” 服务相关的信息
+    """描述了 “雲安全” 服務相關的訊息
 
     """
 
     def __init__(self):
         """
-        :param Enabled: 是否开启[云安全](/document/product/296)服务。取值范围：<br><li>TRUE：表示开启云安全服务<br><li>FALSE：表示不开启云安全服务<br><br>默认取值：TRUE。
+        :param Enabled: 是否開啓[雲安全](/document/product/296)服務。取值範圍：<br><li>TRUE：表示開啓雲安全服務<br><li>FALSE：表示不開啓雲安全服務<br><br>預設取值：TRUE。
         :type Enabled: bool
         """
         self.Enabled = None

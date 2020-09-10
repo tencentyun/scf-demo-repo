@@ -24,7 +24,7 @@ def main_handler(event, context):
     
     logger.info("source_bucket is " + source_bucket)
     logger.info("target_bucket is " + target_bucket)
-    #使用临时秘钥
+    #使用臨時秘鑰
     secret_id = os.environ.get('TENCENTCLOUD_SECRETID')      
     secret_key = os.environ.get('TENCENTCLOUD_SECRETKEY')    
     token = os.environ.get('TENCENTCLOUD_SESSIONTOKEN')   

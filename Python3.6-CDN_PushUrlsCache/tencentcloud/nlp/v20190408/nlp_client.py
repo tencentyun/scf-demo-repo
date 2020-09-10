@@ -26,7 +26,7 @@ class NlpClient(AbstractClient):
 
 
     def AutoSummarization(self, request):
-        """利用人工智能算法，自动抽取文本中的关键信息并生成指定长度的文本摘要。可用于新闻标题生成、科技文献摘要生成和商品评论摘要等。
+        """利用人工智慧算法，自動抽取文本中的關鍵訊息并生成指定長度的文本摘要。可用于新聞标題生成、科技文獻摘要生成和商品評論摘要等。
 
         :param request: Request instance for AutoSummarization.
         :type request: :class:`tencentcloud.nlp.v20190408.models.AutoSummarizationRequest`
@@ -54,7 +54,7 @@ class NlpClient(AbstractClient):
 
 
     def ChatBot(self, request):
-        """闲聊服务基于腾讯领先的NLP引擎能力、数据运算能力和千亿级互联网语料数据的支持，同时集成了广泛的知识问答能力，可实现上百种自定义属性配置，以及儿童语言风格及说话方式，从而让聊天变得更睿智、简单和有趣。
+        """閑聊服務基于騰訊領先的NLP引擎能力、數據運算能力和千億級網際網路語料數據的支援，同時內建了廣泛的知識問答能力，可實現上百種自定義屬性配置，以及兒童語言風格及說話方式，從而讓聊天變得更睿智、簡單和有趣。
 
 
         :param request: Request instance for ChatBot.
@@ -83,7 +83,7 @@ class NlpClient(AbstractClient):
 
 
     def DependencyParsing(self, request):
-        """句法依存分析接口能够分析出句子中词与词之间的相互依存关系，并揭示其句法结构，包括主谓关系、动宾关系、核心关系等等，可用于提取句子主干、提取句子核心词等，在机器翻译、自动问答、知识抽取等领域都有很好的应用。
+        """句法依存分析介面能夠分析出句子中詞與詞之間的相互依存關系，并揭示其句法結構，包括主謂關系、動賓關系、核心關系等等，可用于提取句子主幹、提取句子核心詞等，在機器翻譯、自動問答、知識抽取等領域都有很好的應用。
 
         :param request: Request instance for DependencyParsing.
         :type request: :class:`tencentcloud.nlp.v20190408.models.DependencyParsingRequest`
@@ -111,7 +111,7 @@ class NlpClient(AbstractClient):
 
 
     def DescribeEntity(self, request):
-        """输入实体名称，返回实体相关的信息如实体别名、实体英文名、实体详细信息、相关实体等。
+        """輸入實體名稱，返回實體相關的訊息如實體别名、實體英文名、實體詳細訊息、相關實體等。
 
         :param request: Request instance for DescribeEntity.
         :type request: :class:`tencentcloud.nlp.v20190408.models.DescribeEntityRequest`
@@ -139,7 +139,7 @@ class NlpClient(AbstractClient):
 
 
     def DescribeRelation(self, request):
-        """输入两个实体，返回两个实体间的关系，例如马化腾与腾讯公司不仅是相关实体，二者还存在隶属关系（马化腾属于腾讯公司）。
+        """輸入兩個實體，返回兩個實體間的關系，例如馬化騰與騰訊公司不僅是相關實體，二者還存在隸屬關系（馬化騰屬于騰訊公司）。
 
         :param request: Request instance for DescribeRelation.
         :type request: :class:`tencentcloud.nlp.v20190408.models.DescribeRelationRequest`
@@ -167,7 +167,7 @@ class NlpClient(AbstractClient):
 
 
     def DescribeTriple(self, request):
-        """三元组查询，主要分为两类，SP查询和PO查询。SP查询表示已知主语和谓语查询宾语，PO查询表示已知宾语和谓语查询主语。每一个SP或PO查询都是一个可独立执行的查询，TQL支持SP查询的嵌套查询，即主语可以是一个嵌套的子查询。其他复杂的三元组查询方法，请参考官网API文档示例。
+        """三元組查詢，主要分爲兩類，SP查詢和PO查詢。SP查詢表示已知主語和謂語查詢賓語，PO查詢表示已知賓語和謂語查詢主語。每一個SP或PO查詢都是一個可獨立執行的查詢，TQL支援SP查詢的嵌套查詢，即主語可以是一個嵌套的子查詢。其他複雜的三元組查詢方法，請參考官網API文件範例。
 
         :param request: Request instance for DescribeTriple.
         :type request: :class:`tencentcloud.nlp.v20190408.models.DescribeTripleRequest`
@@ -195,7 +195,7 @@ class NlpClient(AbstractClient):
 
 
     def KeywordsExtraction(self, request):
-        """基于关键词提取平台，通过对文本内容进行深度分析，提取出文本内容中的关键信息，为用户实现诸如新闻内容关键词自动提取、评论关键词提取等提供基础服务。
+        """基于關鍵詞提取平台，通過對文本内容進行深度分析，提取出文本内容中的關鍵訊息，爲用戶實現諸如新聞内容關鍵詞自動提取、評論關鍵詞提取等提供基礎服務。
 
         :param request: Request instance for KeywordsExtraction.
         :type request: :class:`tencentcloud.nlp.v20190408.models.KeywordsExtractionRequest`
@@ -223,15 +223,15 @@ class NlpClient(AbstractClient):
 
 
     def LexicalAnalysis(self, request):
-        """词法分析接口提供以下三个功能：
+        """詞法分析介面提供以下三個功能：
 
-        1、智能分词：将连续的自然语言文本，切分成具有语义合理性和完整性的词汇序列；
+        1、智慧分詞：将連續的自然語言文本，切分成具有語義合理性和完整性的詞匯序列；
 
-        2、词性标注：为每一个词附上对应的词性，例如名词、代词、形容词、动词等；
+        2、詞性标注：爲每一個詞附上對應的詞性，例如名詞、代詞、形容詞、動詞等；
 
-        3、命名实体识别：快速识别文本中的实体，例如人名、地名、机构名等。
+        3、命名實體識别：快速識别文本中的實體，例如人名、地名、機構名等。
 
-        所有的功能均基于千亿级大规模互联网语料进行持续迭代更新，以保证效果不断提升，用户无需担心新词发现、歧义消除、调用性能等问题。目前词法分析已经在泛互联网、金融、政务等不同垂直领域提供业务支持，并取得良好的效果。
+        所有的功能均基于千億級大規模網際網路語料進行持續叠代更新，以保證效果不斷提升，用戶無需擔心新詞發現、歧義消除、調用效能等問題。目前詞法分析已經在泛網際網路、金融、政務等不同垂直領域提供業務支援，并取得良好的效果。
 
         :param request: Request instance for LexicalAnalysis.
         :type request: :class:`tencentcloud.nlp.v20190408.models.LexicalAnalysisRequest`
@@ -259,9 +259,9 @@ class NlpClient(AbstractClient):
 
 
     def SentenceEmbedding(self, request):
-        """句向量接口能够将输入的句子映射成一个固定维度的向量，用来表示这个句子的语义特征，可用于文本聚类、文本相似度、文本分类等任务，能够显著提高它们的效果。
+        """句向量介面能夠将輸入的句子映射成一個固定維度的向量，用來表示這個句子的語義特征，可用于文本聚類、文本相似度、文本分類等任務，能夠顯著提高它們的效果。
 
-        该句向量服务由腾讯知文自然语言处理团队联合腾讯AI Lab共同打造，基于千亿级大规模互联网语料并采用AI Lab自研的DSG算法训练而成，在腾讯内部诸多业务的NLP任务上实测效果显著。
+        該句向量服務由騰訊知文自然語言處理團隊聯合騰訊AI Lab共同打造，基于千億級大規模網際網路語料并采用AI Lab自研的DSG算法訓練而成，在騰訊内部諸多業務的NLP任務上實測效果顯著。
 
         :param request: Request instance for SentenceEmbedding.
         :type request: :class:`tencentcloud.nlp.v20190408.models.SentenceEmbeddingRequest`
@@ -289,9 +289,9 @@ class NlpClient(AbstractClient):
 
 
     def SentenceSimilarity(self, request):
-        """文本相似度接口能够基于深度学习技术来计算两个输入文本的相似度，相似度数值越大的两个文本在语义上越相似。目前仅支持短文本的相似度计算，长文本的相似度计算也即将推出。
+        """文本相似度介面能夠基于深度學習技術來計算兩個輸入文本的相似度，相似度數值越大的兩個文本在語義上越相似。目前僅支援短文本的相似度計算，長文本的相似度計算也即将推出。
 
-        鉴于文本相似度是一个应用非常广泛的功能，腾讯知文自然语言处理团队在深度神经网络模型的基础上，专门针对文本相似任务进行了优化，并持续迭代更新。基于文本相似度，可以轻松实现诸如文本去重、相似推荐等功能。
+        鑒于文本相似度是一個應用非常廣泛的功能，騰訊知文自然語言處理團隊在深度神經網絡模型的基礎上，專門針對文本相似任務進行了優化，并持續叠代更新。基于文本相似度，可以輕松實現諸如文本去重、相似推薦等功能。
 
         :param request: Request instance for SentenceSimilarity.
         :type request: :class:`tencentcloud.nlp.v20190408.models.SentenceSimilarityRequest`
@@ -319,9 +319,9 @@ class NlpClient(AbstractClient):
 
 
     def SentimentAnalysis(self, request):
-        """情感分析接口能够对带有情感色彩的主观性文本进行分析、处理、归纳和推理，识别出用户的情感倾向，是积极还是消极，并且提供各自概率。
+        """情感分析介面能夠對帶有情感色彩的主觀性文本進行分析、處理、歸納和推理，識别出用戶的情感傾向，是積極還是消極，并且提供各自概率。
 
-        该功能基于基于千亿级大规模互联网语料和LSTM、BERT等深度神经网络模型进行训练，并持续迭代更新，以保证效果不断提升。
+        該功能基于基于千億級大規模網際網路語料和LSTM、BERT等深度神經網絡模型進行訓練，并持續叠代更新，以保證效果不斷提升。
 
         :param request: Request instance for SentimentAnalysis.
         :type request: :class:`tencentcloud.nlp.v20190408.models.SentimentAnalysisRequest`
@@ -349,7 +349,7 @@ class NlpClient(AbstractClient):
 
 
     def SimilarWords(self, request):
-        """相似词接口能够基于同义词库及词向量技术，检索出与输入词语在语义上最相似的若干个词语，可广泛用于检索系统、问答系统、文档归档等场景。
+        """相似詞介面能夠基于同義詞庫及詞向量技術，檢索出與輸入詞語在語義上最相似的若幹個詞語，可廣泛用于檢索系統、問答系統、文件歸檔等場景。
 
         :param request: Request instance for SimilarWords.
         :type request: :class:`tencentcloud.nlp.v20190408.models.SimilarWordsRequest`
@@ -377,17 +377,17 @@ class NlpClient(AbstractClient):
 
 
     def TextClassification(self, request):
-        """文本分类接口能够对用户输入的文本进行自动分类，将其映射到具体的类目上，用户只需要提供待分类的文本，而无需关注具体实现。
+        """文本分類介面能夠對用戶輸入的文本進行自動分類，将其映射到具體的類目上，用戶只需要提供待分類的文本，而無需關注具體實現。
 
-        该功能基于基于千亿级大规模互联网语料和LSTM、BERT等深度神经网络模型进行训练，并持续迭代更新，以保证效果不断提升。
+        該功能基于基于千億級大規模網際網路語料和LSTM、BERT等深度神經網絡模型進行訓練，并持續叠代更新，以保證效果不斷提升。
 
         目前已提供：
 
-        - 通用领域分类体系，包括15个分类类目，分别是汽车、科技、健康、体育、旅行、教育、职业、文化、军事、房产、娱乐、女性、奥运、财经以及其他，适用于通用的场景。
+        - 通用領域分類體系，包括15個分類類目，分别是汽車、科技、健康、體育、旅行、教育、職業、文化、軍事、房産、娛樂、女性、奧運、财經以及其他，适用于通用的場景。
 
-        - 新闻领域分类体系，包括37个一级分类类目，285个二级分类（详细请见 [类目体系映射表](https://cloud.tencent.com/document/product/271/36459)），已应用于腾讯新闻的文章分类。
+        - 新聞領域分類體系，包括37個一級分類類目，285個二級分類（詳細請見 [類目體系映射表](https://cloud.tencent.com/document/product/271/36459)），已應用于騰訊新聞的文章分類。
 
-        更多垂直领域的分类体系即将推出，敬请期待。
+        更多垂直領域的分類體系即将推出，敬請期待。
 
         :param request: Request instance for TextClassification.
         :type request: :class:`tencentcloud.nlp.v20190408.models.TextClassificationRequest`
@@ -415,9 +415,9 @@ class NlpClient(AbstractClient):
 
 
     def TextCorrection(self, request):
-        """提供对中文文本的自动纠错功能，能够识别输入文本中的错误片段，定位错误并给出正确的文本结果；支持长度不超过2000字的长文本纠错。
+        """提供對中文文本的自動糾錯功能，能夠識别輸入文本中的錯誤片段，定位錯誤并給出正确的文本結果；支援長度不超過2000字的長文本糾錯。
 
-        此功能是基于千亿级大规模互联网语料和LSTM、BERT等深度神经网络模型进行训练，并持续迭代更新，以保证效果不断提升，是搜索引擎、语音识别、内容审核等功能更好运行的基础之一。
+        此功能是基于千億級大規模網際網路語料和LSTM、BERT等深度神經網絡模型進行訓練，并持續叠代更新，以保證效果不斷提升，是搜索引擎、語音識别、内容審核等功能更好運作的基礎之一。
 
         :param request: Request instance for TextCorrection.
         :type request: :class:`tencentcloud.nlp.v20190408.models.TextCorrectionRequest`
@@ -445,11 +445,11 @@ class NlpClient(AbstractClient):
 
 
     def WordEmbedding(self, request):
-        """词向量接口能够将输入的词语映射成一个固定维度的词向量，用来表示这个词语的语义特征。词向量是很多自然语言处理技术的基础，能够显著提高它们的效果。
+        """詞向量介面能夠将輸入的詞語映射成一個固定維度的詞向量，用來表示這個詞語的語義特征。詞向量是很多自然語言處理技術的基礎，能夠顯著提高它們的效果。
 
-        该词向量服务由腾讯知文自然语言处理团队联合腾讯AI Lab共同打造。使用的词向量基于千亿级大规模互联网语料并采用AI Lab自研的DSG算法训练而成，开源的词向量包含800多万中文词汇，在覆盖率、新鲜度及准确性等三方面性能突出。
+        該詞向量服務由騰訊知文自然語言處理團隊聯合騰訊AI Lab共同打造。使用的詞向量基于千億級大規模網際網路語料并采用AI Lab自研的DSG算法訓練而成，開源的詞向量包含800多萬中文詞匯，在函蓋率、新鮮度及準确性等三方面效能突出。
 
-        腾讯AI Lab词向量相关资料：
+        騰訊AI Lab詞向量相關資料：
 
         https://ai.tencent.com/ailab/zh/news/detial?id=22
 
@@ -481,7 +481,7 @@ class NlpClient(AbstractClient):
 
 
     def WordSimilarity(self, request):
-        """词相似度接口能够基于词向量技术来计算两个输入词语的余弦相似度，相似度数值越大的两个词语在语义上越相似。
+        """詞相似度介面能夠基于詞向量技術來計算兩個輸入詞語的餘弦相似度，相似度數值越大的兩個詞語在語義上越相似。
 
         :param request: Request instance for WordSimilarity.
         :type request: :class:`tencentcloud.nlp.v20190408.models.WordSimilarityRequest`

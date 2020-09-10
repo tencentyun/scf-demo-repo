@@ -26,7 +26,7 @@ class CpdpClient(AbstractClient):
 
 
     def ApplyApplicationMaterial(self, request):
-        """跨境-提交申报材料
+        """跨境-提交申報材料
 
         :param request: Request instance for ApplyApplicationMaterial.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.ApplyApplicationMaterialRequest`
@@ -54,7 +54,7 @@ class CpdpClient(AbstractClient):
 
 
     def ApplyOutwardOrder(self, request):
-        """跨境-汇出指令申请
+        """跨境-匯出指令申請
 
         :param request: Request instance for ApplyOutwardOrder.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.ApplyOutwardOrderRequest`
@@ -82,7 +82,7 @@ class CpdpClient(AbstractClient):
 
 
     def ApplyPayerInfo(self, request):
-        """跨境-付款人申请
+        """跨境-付款人申請
 
         :param request: Request instance for ApplyPayerInfo.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.ApplyPayerInfoRequest`
@@ -110,7 +110,7 @@ class CpdpClient(AbstractClient):
 
 
     def ApplyReWithdrawal(self, request):
-        """正常结算提现失败情况下，发起重新提现的请求接口
+        """正常結算提現失敗情況下，發起重新提現的請求介面
 
         :param request: Request instance for ApplyReWithdrawal.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.ApplyReWithdrawalRequest`
@@ -138,7 +138,7 @@ class CpdpClient(AbstractClient):
 
 
     def ApplyTrade(self, request):
-        """跨境-提交贸易材料
+        """跨境-提交貿易材料
 
         :param request: Request instance for ApplyTrade.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.ApplyTradeRequest`
@@ -166,7 +166,7 @@ class CpdpClient(AbstractClient):
 
 
     def ApplyWithdrawal(self, request):
-        """商户提现
+        """商戶提現
 
         :param request: Request instance for ApplyWithdrawal.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.ApplyWithdrawalRequest`
@@ -194,7 +194,7 @@ class CpdpClient(AbstractClient):
 
 
     def BindAcct(self, request):
-        """商户绑定提现银行卡，每个商户只能绑定一张提现银行卡
+        """商戶綁定提現銀行卡，每個商戶只能綁定一張提現銀行卡
 
         :param request: Request instance for BindAcct.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.BindAcctRequest`
@@ -222,7 +222,7 @@ class CpdpClient(AbstractClient):
 
 
     def BindRelateAccReUnionPay(self, request):
-        """会员绑定提现账户-回填银联鉴权短信码。用于会员填写动态验证码后，发往银行进行验证，验证成功则完成绑定。
+        """會員綁定提現帳戶-回填銀聯鑒權簡訊碼。用于會員填寫動态驗證碼後，發往銀行進行驗證，驗證成功則完成綁定。
 
         :param request: Request instance for BindRelateAccReUnionPay.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.BindRelateAccReUnionPayRequest`
@@ -250,10 +250,10 @@ class CpdpClient(AbstractClient):
 
 
     def BindRelateAcctSmallAmount(self, request):
-        """会员绑定提现账户-小额鉴权。会员申请绑定提现账户，绑定后从会员子账户中提现到绑定账户。
-        转账鉴权有两种形式：往账鉴权和来账鉴权。
-        往账鉴权：该接口发起成功后，银行会向提现账户转入小于等于0.5元的随机金额，并短信通知客户查看，客户查看后，需将收到的金额大小，在电商平台页面上回填，并通知银行。银行验证通过后，完成提现账户绑定。
-        来账鉴权：该接口发起成功后，银行以短信通知客户查看，客户查看后，需通过待绑定的账户往市场的监管账户转入短信上指定的金额。银行检索到该笔指定金额的来账是源自待绑定账户，则绑定成功。平安银行的账户，即BankType送1时，大小额行号和超级网银号都不用送。
+        """會員綁定提現帳戶-小額鑒權。會員申請綁定提現帳戶，綁定後從會員子帳戶中提現到綁定帳戶。
+        轉賬鑒權有兩種形式：往賬鑒權和來賬鑒權。
+        往賬鑒權：該介面發起成功後，銀行會向提現帳戶轉入小於等于0.5元的随機金額，并簡訊通知客戶檢視，客戶檢視後，需将收到的金額大小，在電商平台頁面上回填，并通知銀行。銀行驗證通過後，完成提現帳戶綁定。
+        來賬鑒權：該介面發起成功後，銀行以簡訊通知客戶檢視，客戶檢視後，需通過待綁定的帳戶往市場的監管帳戶轉入簡訊上指定的金額。銀行檢索到該筆指定金額的來賬是源自待綁定帳戶，則綁定成功。平安銀行的帳戶，即BankType送1時，大小額行号和超級網銀号都不用送。
 
         :param request: Request instance for BindRelateAcctSmallAmount.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.BindRelateAcctSmallAmountRequest`
@@ -281,11 +281,11 @@ class CpdpClient(AbstractClient):
 
 
     def BindRelateAcctUnionPay(self, request):
-        """会员绑定提现账户-银联鉴权。用于会员申请绑定提现账户，申请后银行前往银联验证卡信息：姓名、证件、卡号、银行预留手机是否相符，相符则发送给会员手机动态验证码并返回成功，不相符则返回失败。
-        平台接收到银行返回成功后，进入输入动态验证码的页面，有效期120秒，若120秒未输入，客户可点击重新发送动态验证码，这个步骤重新调用该接口即可。
-        平安银行的账户，大小额行号和超级网银号都不用送。
-        超级网银号：单笔转账金额不超过5万，不限制笔数，只用选XX银行，不用具体到支行，可实时知道对方是否收款成功。
-        大小额联行号：单笔转账可超过5万，需具体到支行，不能实时知道对方是否收款成功。金额超过5万的，在工作日的8点30-17点间才会成功。
+        """會員綁定提現帳戶-銀聯鑒權。用于會員申請綁定提現帳戶，申請後銀行前往銀聯驗證卡訊息：姓名、證件、卡号、銀行預留手機是否相符，相符則發送給會員手機動态驗證碼并返回成功，不相符則返回失敗。
+        平台接收到銀行返回成功後，進入輸入動态驗證碼的頁面，有效期120秒，若120秒未輸入，客戶可點擊重新發送動态驗證碼，這個步驟重新調用該介面即可。
+        平安銀行的帳戶，大小額行号和超級網銀号都不用送。
+        超級網銀号：單筆轉賬金額不超過5萬，不限制筆數，只用選XX銀行，不用具體到支行，可實時知道對方是否收款成功。
+        大小額聯行号：單筆轉賬可超過5萬，需具體到支行，不能實時知道對方是否收款成功。金額超過5萬的，在工作日的8點30-17點間才會成功。
 
         :param request: Request instance for BindRelateAcctUnionPay.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.BindRelateAcctUnionPayRequest`
@@ -313,7 +313,7 @@ class CpdpClient(AbstractClient):
 
 
     def CheckAcct(self, request):
-        """商户绑定提现银行卡的验证接口
+        """商戶綁定提現銀行卡的驗證介面
 
         :param request: Request instance for CheckAcct.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.CheckAcctRequest`
@@ -341,7 +341,7 @@ class CpdpClient(AbstractClient):
 
 
     def CheckAmount(self, request):
-        """验证鉴权金额。此接口可受理BindRelateAcctSmallAmount接口发起的转账金额（往账鉴权方式）的验证处理。若所回填的验证金额验证通过，则会绑定原申请中的银行账户作为提现账户。通过此接口也可以查得BindRelateAcctSmallAmount接口发起的来账鉴权方式的申请的当前状态。
+        """驗證鑒權金額。此介面可受理BindRelateAcctSmallAmount介面發起的轉賬金額（往賬鑒權方式）的驗證處理。若所回填的驗證金額驗證通過，則會綁定原申請中的銀行帳戶作爲提現帳戶。通過此介面也可以查得BindRelateAcctSmallAmount介面發起的來賬鑒權方式的申請的當前狀态。
 
         :param request: Request instance for CheckAmount.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.CheckAmountRequest`
@@ -369,7 +369,7 @@ class CpdpClient(AbstractClient):
 
 
     def CloseOrder(self, request):
-        """通过此接口关闭此前已创建的订单，关闭后，用户将无法继续付款。仅能关闭创建后未支付的订单
+        """通過此介面關閉此前已創建的訂單，關閉後，用戶将無法繼續付款。僅能關閉創建後未支付的訂單
 
         :param request: Request instance for CloseOrder.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.CloseOrderRequest`
@@ -397,7 +397,7 @@ class CpdpClient(AbstractClient):
 
 
     def CreateAcct(self, request):
-        """子商户入驻聚鑫平台
+        """子商戶入駐聚鑫平台
 
         :param request: Request instance for CreateAcct.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.CreateAcctRequest`
@@ -425,8 +425,8 @@ class CpdpClient(AbstractClient):
 
 
     def CreateCustAcctId(self, request):
-        """会员子账户开立。会员在银行注册，并开立会员子账户，交易网会员代码即会员在平台端系统的会员编号。
-        平台需保存银行返回的子账户账号，后续交易接口都会用到。会员属性字段为预留扩展字段，当前必须送默认值。
+        """會員子帳戶開立。會員在銀行注冊，并開立會員子帳戶，交易網會員代碼即會員在平台端系統的會員編号。
+        平台需保存銀行返回的子帳戶賬号，後續交易介面都會用到。會員屬性欄位爲預留擴展欄位，當前必須送預設值。
 
         :param request: Request instance for CreateCustAcctId.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.CreateCustAcctIdRequest`
@@ -454,7 +454,7 @@ class CpdpClient(AbstractClient):
 
 
     def CreateInvoice(self, request):
-        """智慧零售-发票开具
+        """智慧零售-發票開具
 
         :param request: Request instance for CreateInvoice.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.CreateInvoiceRequest`
@@ -482,7 +482,7 @@ class CpdpClient(AbstractClient):
 
 
     def CreateMerchant(self, request):
-        """智慧零售-商户注册
+        """智慧零售-商戶注冊
 
         :param request: Request instance for CreateMerchant.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.CreateMerchantRequest`
@@ -510,7 +510,7 @@ class CpdpClient(AbstractClient):
 
 
     def CreateRedInvoice(self, request):
-        """智慧零售-发票红冲
+        """智慧零售-發票紅沖
 
         :param request: Request instance for CreateRedInvoice.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.CreateRedInvoiceRequest`
@@ -538,7 +538,7 @@ class CpdpClient(AbstractClient):
 
 
     def DownloadBill(self, request):
-        """账单下载接口，根据本接口返回的URL地址，在D+1日下载对账单。注意，本接口返回的URL地址有时效，请尽快下载。URL超时时效后，请重新调用本接口再次获取。
+        """帳單下載介面，根據本介面返回的URL網址，在D+1日下載對帳單。注意，本介面返回的URL網址有時效，請盡快下載。URL超時時效後，請重新調用本介面再次獲取。
 
         :param request: Request instance for DownloadBill.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.DownloadBillRequest`
@@ -566,7 +566,7 @@ class CpdpClient(AbstractClient):
 
 
     def ModifyMntMbrBindRelateAcctBankCode(self, request):
-        """维护会员绑定提现账户联行号。此接口可以支持市场修改会员的提现账户的开户行信息，具体包括开户行行名、开户行的银行联行号（大小额联行号）和超级网银行号。
+        """維護會員綁定提現帳戶聯行号。此介面可以支援市場修改會員的提現帳戶的開戶行訊息，具體包括開戶行行名、開戶行的銀行聯行号（大小額聯行号）和超級網銀行号。
 
         :param request: Request instance for ModifyMntMbrBindRelateAcctBankCode.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.ModifyMntMbrBindRelateAcctBankCodeRequest`
@@ -594,7 +594,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryAcctBinding(self, request):
-        """聚鑫-查询子账户绑定银行卡
+        """聚鑫-查詢子帳戶綁定銀行卡
 
         :param request: Request instance for QueryAcctBinding.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryAcctBindingRequest`
@@ -622,7 +622,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryAcctInfo(self, request):
-        """聚鑫-开户信息查询
+        """聚鑫-開戶訊息查詢
 
         :param request: Request instance for QueryAcctInfo.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryAcctInfoRequest`
@@ -650,7 +650,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryAcctInfoList(self, request):
-        """聚鑫-开户信息列表查询, 查询某一段时间的开户信息
+        """聚鑫-開戶訊息清單查詢, 查詢某一段時間的開戶訊息
 
         :param request: Request instance for QueryAcctInfoList.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryAcctInfoListRequest`
@@ -678,7 +678,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryApplicationMaterial(self, request):
-        """跨境-成功申报材料查询
+        """跨境-成功申報材料查詢
 
         :param request: Request instance for QueryApplicationMaterial.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryApplicationMaterialRequest`
@@ -706,7 +706,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryBalance(self, request):
-        """子商户余额查询
+        """子商戶餘額查詢
 
         :param request: Request instance for QueryBalance.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryBalanceRequest`
@@ -734,7 +734,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryBankClear(self, request):
-        """查询银行在途清算结果。查询时间段内交易网的在途清算结果。
+        """查詢銀行在途清算結果。查詢時間段内交易網的在途清算結果。
 
         :param request: Request instance for QueryBankClear.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryBankClearRequest`
@@ -762,7 +762,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryBankTransactionDetails(self, request):
-        """查询银行时间段内交易明细。查询时间段的会员成功交易。
+        """查詢銀行時間段内交易明細。查詢時間段的會員成功交易。
 
         :param request: Request instance for QueryBankTransactionDetails.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryBankTransactionDetailsRequest`
@@ -790,7 +790,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryBankWithdrawCashDetails(self, request):
-        """查询银行时间段内清分提现明细。查询银行时间段内清分提现明细接口：若为“见证+收单退款”“见证+收单充值”记录时备注Note为“见证+收单充值,订单号”“见证+收单退款,订单号”，此接口可以查到T0/T1的充值明细和退款记录。查询标志：充值记录仍用3清分选项查询，退款记录同提现用2选项查询。
+        """查詢銀行時間段内清分提現明細。查詢銀行時間段内清分提現明細介面：若爲“見證+收單退款”“見證+收單儲值”記錄時備注Note爲“見證+收單儲值,訂單号”“見證+收單退款,訂單号”，此介面可以查到T0/T1的儲值明細和退款記錄。查詢标志：儲值記錄仍用3清分選項查詢，退款記錄同提現用2選項查詢。
 
         :param request: Request instance for QueryBankWithdrawCashDetails.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryBankWithdrawCashDetailsRequest`
@@ -818,7 +818,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryCommonTransferRecharge(self, request):
-        """查询普通转账充值明细。接口用于查询会员主动转账进资金汇总账户的明细情况。若会员使用绑定账号转入，则直接入账到会员子账户。若未使用绑定账号转入，则系统无法自动清分到对应子账户，则转入挂账子账户由平台自行清分。若是 “见证+收单充值”T0充值记录时备注Note为“见证+收单充值,订单号” 此接口可以查到T0到账的“见证+收单充值”充值记录。
+        """查詢普通轉賬儲值明細。介面用于查詢會員主動轉賬進資金匯總帳戶的明細情況。若會員使用綁定賬号轉入，則直接入賬到會員子帳戶。若未使用綁定賬号轉入，則系統無法自動清分到對應子帳戶，則轉入挂賬子帳戶由平台自行清分。若是 “見證+收單儲值”T0儲值記錄時備注Note爲“見證+收單儲值,訂單号” 此介面可以查到T0到賬的“見證+收單儲值”儲值記錄。
 
         :param request: Request instance for QueryCommonTransferRecharge.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryCommonTransferRechargeRequest`
@@ -846,7 +846,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryCustAcctIdBalance(self, request):
-        """查询银行子账户余额。查询会员子账户以及平台的功能子账户的余额。
+        """查詢銀行子帳戶餘額。查詢會員子帳戶以及平台的功能子帳戶的餘額。
 
         :param request: Request instance for QueryCustAcctIdBalance.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryCustAcctIdBalanceRequest`
@@ -874,7 +874,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryExchangeRate(self, request):
-        """跨境-查询汇率
+        """跨境-查詢匯率
 
         :param request: Request instance for QueryExchangeRate.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryExchangeRateRequest`
@@ -902,7 +902,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryInvoice(self, request):
-        """智慧零售-发票查询
+        """智慧零售-發票查詢
 
         :param request: Request instance for QueryInvoice.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryInvoiceRequest`
@@ -930,8 +930,8 @@ class CpdpClient(AbstractClient):
 
 
     def QueryMemberBind(self, request):
-        """会员绑定信息查询。查询标志为“单个会员”的情况下，返回该会员的有效的绑定账户信息。
-        查询标志为“全部会员”的情况下，返回市场下的全部的有效的绑定账户信息。查询标志为“单个会员的证件信息”的情况下，返回市场下的指定的会员的留存在电商见证宝系统的证件信息。
+        """會員綁定訊息查詢。查詢标志爲“單個會員”的情況下，返回該會員的有效的綁定帳戶訊息。
+        查詢标志爲“全部會員”的情況下，返回市場下的全部的有效的綁定帳戶訊息。查詢标志爲“單個會員的證件訊息”的情況下，返回市場下的指定的會員的留存在電商見證寶系統的證件訊息。
 
         :param request: Request instance for QueryMemberBind.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryMemberBindRequest`
@@ -959,7 +959,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryMemberTransaction(self, request):
-        """会员间交易-不验证。此接口可以实现会员间的余额的交易，实现资金在会员之间流动。
+        """會員間交易-不驗證。此介面可以實現會員間的餘額的交易，實現資金在會員之間流動。
 
         :param request: Request instance for QueryMemberTransaction.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryMemberTransactionRequest`
@@ -987,7 +987,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryMerchantBalance(self, request):
-        """跨境-对接方账户余额查询
+        """跨境-對接方帳戶餘額查詢
 
         :param request: Request instance for QueryMerchantBalance.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryMerchantBalanceRequest`
@@ -1015,7 +1015,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryOrder(self, request):
-        """根据订单号，或者用户Id，查询支付订单状态
+        """根據訂單号，或者用戶Id，查詢支付訂單狀态
 
         :param request: Request instance for QueryOrder.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryOrderRequest`
@@ -1043,7 +1043,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryOutwardOrder(self, request):
-        """跨境-查询汇出结果
+        """跨境-查詢匯出結果
 
         :param request: Request instance for QueryOutwardOrder.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryOutwardOrderRequest`
@@ -1071,7 +1071,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryPayerInfo(self, request):
-        """跨境-付款人查询
+        """跨境-付款人查詢
 
         :param request: Request instance for QueryPayerInfo.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryPayerInfoRequest`
@@ -1099,7 +1099,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryReconciliationDocument(self, request):
-        """查询对账文件信息。平台调用该接口获取需下载对账文件的文件名称以及密钥。 平台获取到信息后， 可以再调用OPENAPI的文件下载功能。
+        """查詢對賬文件訊息。平台調用該介面獲取需下載對賬文件的文件名稱以及金鑰。 平台獲取到訊息後， 可以再調用OPENAPI的文件下載功能。
 
         :param request: Request instance for QueryReconciliationDocument.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryReconciliationDocumentRequest`
@@ -1127,7 +1127,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryRefund(self, request):
-        """提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时，用微信零钱支付的退款约20分钟内到账，银行卡支付的退款约3个工作日后到账。
+        """提交退款申請後，通過調用該介面查詢退款狀态。退款可能有一定延時，用微信零錢支付的退款約20分鍾内到賬，銀行卡支付的退款約3個工作日後到賬。
 
         :param request: Request instance for QueryRefund.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryRefundRequest`
@@ -1155,7 +1155,7 @@ class CpdpClient(AbstractClient):
 
 
     def QuerySingleTransactionStatus(self, request):
-        """查询银行单笔交易状态。查询单笔交易的状态。
+        """查詢銀行單筆交易狀态。查詢單筆交易的狀态。
 
         :param request: Request instance for QuerySingleTransactionStatus.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QuerySingleTransactionStatusRequest`
@@ -1183,7 +1183,7 @@ class CpdpClient(AbstractClient):
 
 
     def QuerySmallAmountTransfer(self, request):
-        """查询小额鉴权转账结果。查询小额往账鉴权的转账状态。
+        """查詢小額鑒權轉賬結果。查詢小額往賬鑒權的轉賬狀态。
 
         :param request: Request instance for QuerySmallAmountTransfer.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QuerySmallAmountTransferRequest`
@@ -1211,7 +1211,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryTrade(self, request):
-        """跨境-贸易材料明细查询
+        """跨境-貿易材料明細查詢
 
         :param request: Request instance for QueryTrade.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryTradeRequest`
@@ -1239,7 +1239,7 @@ class CpdpClient(AbstractClient):
 
 
     def RechargeMemberThirdPay(self, request):
-        """见证宝-会员在途充值(经第三方支付渠道)
+        """見證寶-會員在途儲值(經第三方支付管道)
 
         :param request: Request instance for RechargeMemberThirdPay.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.RechargeMemberThirdPayRequest`
@@ -1267,7 +1267,7 @@ class CpdpClient(AbstractClient):
 
 
     def Refund(self, request):
-        """如交易订单需退款，可以通过本接口将支付款全部或部分退还给付款方，聚鑫将在收到退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。最长支持1年的订单退款。在订单包含多个子订单的情况下，如果使用本接口传入OutTradeNo或TransactionId退款，则只支持全单退款；如果需要部分退款，请通过传入子订单的方式来指定部分金额退款。
+        """如交易訂單需退款，可以通過本介面将支付款全部或部分退還給付款方，聚鑫将在收到退款請求并且驗證成功之後，按照退款規則将支付款按原路退回到支付帳号。最長支援1年的訂單退款。在訂單包含多個子訂單的情況下，如果使用本介面傳入OutTradeNo或TransactionId退款，則只支援全單退款；如果需要部分退款，請通過傳入子訂單的方式來指定部分金額退款。
 
         :param request: Request instance for Refund.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.RefundRequest`
@@ -1295,7 +1295,7 @@ class CpdpClient(AbstractClient):
 
 
     def RegisterBillSupportWithdraw(self, request):
-        """登记挂账(支持撤销)。此接口可实现把不明来账或自有资金等已登记在挂账子账户下的资金调整到普通会员子账户。即通过申请调用此接口，将会减少挂账子账户的资金，调增指定的普通会员子账户的可提现余额及可用余额。此接口不支持把挂账子账户资金清分到功能子账户。
+        """登記挂賬(支援撤銷)。此介面可實現把不明來賬或自有資金等已登記在挂賬子帳戶下的資金調整到普通會員子帳戶。即通過申請調用此介面，将會減少挂賬子帳戶的資金，調增指定的普通會員子帳戶的可提現餘額及可用餘額。此介面不支援把挂賬子帳戶資金清分到功能子帳戶。
 
         :param request: Request instance for RegisterBillSupportWithdraw.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.RegisterBillSupportWithdrawRequest`
@@ -1323,7 +1323,7 @@ class CpdpClient(AbstractClient):
 
 
     def RevRegisterBillSupportWithdraw(self, request):
-        """登记挂账撤销。此接口可以实现把RegisterBillSupportWithdraw接口完成的登记挂账进行撤销，即调减普通会员子账户的可提现和可用余额，调增挂账子账户的可用余额。
+        """登記挂賬撤銷。此介面可以實現把RegisterBillSupportWithdraw介面完成的登記挂賬進行撤銷，即調減普通會員子帳戶的可提現和可用餘額，調增挂賬子帳戶的可用餘額。
 
         :param request: Request instance for RevRegisterBillSupportWithdraw.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.RevRegisterBillSupportWithdrawRequest`
@@ -1351,7 +1351,7 @@ class CpdpClient(AbstractClient):
 
 
     def RevResigterBillSupportWithdraw(self, request):
-        """登记挂账撤销。此接口可以实现把RegisterBillSupportWithdraw接口完成的登记挂账进行撤销，即调减普通会员子账户的可提现和可用余额，调增挂账子账户的可用余额。
+        """登記挂賬撤銷。此介面可以實現把RegisterBillSupportWithdraw介面完成的登記挂賬進行撤銷，即調減普通會員子帳戶的可提現和可用餘額，調增挂賬子帳戶的可用餘額。
 
         :param request: Request instance for RevResigterBillSupportWithdraw.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.RevResigterBillSupportWithdrawRequest`
@@ -1379,7 +1379,7 @@ class CpdpClient(AbstractClient):
 
 
     def ReviseMbrProperty(self, request):
-        """修改会员属性-普通商户子账户。修改会员的会员属性。
+        """修改會員屬性-普通商戶子帳戶。修改會員的會員屬性。
 
         :param request: Request instance for ReviseMbrProperty.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.ReviseMbrPropertyRequest`
@@ -1407,7 +1407,7 @@ class CpdpClient(AbstractClient):
 
 
     def RevokeMemberRechargeThirdPay(self, request):
-        """撤销会员在途充值(经第三方支付渠道)
+        """撤銷會員在途儲值(經第三方支付管道)
 
         :param request: Request instance for RevokeMemberRechargeThirdPay.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.RevokeMemberRechargeThirdPayRequest`
@@ -1435,7 +1435,7 @@ class CpdpClient(AbstractClient):
 
 
     def UnBindAcct(self, request):
-        """商户解除绑定的提现银行卡
+        """商戶解除綁定的提現銀行卡
 
         :param request: Request instance for UnBindAcct.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.UnBindAcctRequest`
@@ -1463,7 +1463,7 @@ class CpdpClient(AbstractClient):
 
 
     def UnbindRelateAcct(self, request):
-        """会员解绑提现账户。此接口可以支持会员解除名下的绑定账户关系。
+        """會員解綁提現帳戶。此介面可以支援會員解除名下的綁定帳戶關系。
 
         :param request: Request instance for UnbindRelateAcct.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.UnbindRelateAcctRequest`
@@ -1491,7 +1491,7 @@ class CpdpClient(AbstractClient):
 
 
     def UnifiedOrder(self, request):
-        """应用需要先调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
+        """應用需要先調用本介面生成支付訂單号，并将應答的PayInfo透傳給聚鑫SDK，拉起用戶端（包括微信公衆号/微信小程式/用戶端App）支付。
 
         :param request: Request instance for UnifiedOrder.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.UnifiedOrderRequest`
@@ -1519,7 +1519,7 @@ class CpdpClient(AbstractClient):
 
 
     def WithdrawCashMembership(self, request):
-        """会员提现-不验证。此接口受理会员发起的提现申请。会员子账户的可提现余额、可用余额会减少，市场的资金汇总账户(监管账户)会减少相应的发生金额，提现到会员申请的收款账户。
+        """會員提現-不驗證。此介面受理會員發起的提現申請。會員子帳戶的可提現餘額、可用餘額會減少，市場的資金匯總帳戶(監管帳戶)會減少相應的發生金額，提現到會員申請的收款帳戶。
 
         :param request: Request instance for WithdrawCashMembership.
         :type request: :class:`tencentcloud.cpdp.v20190820.models.WithdrawCashMembershipRequest`

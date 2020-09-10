@@ -11,14 +11,14 @@ $cosClient = new Qcloud\Cos\Client(array(
     ),
 ));
 
-// 若初始化 Client 时未填写 appId，则 bucket 的命名规则为{name}-{appid} ，此处填写的存储桶名称必须为此格式
+// 若初始化 Client 時未填寫 appId，則 bucket 的命名規則爲{name}-{appid} ，此處填寫的儲存桶名稱必須爲此格式
 $bucket = 'lewzyLU02-1252448703';
 $key = 'a.txt';
 $local_path = "E:/a.txt";
 
-# 上传文件
-## putObject(上传接口，最大支持上传5G文件)
-### 上传内存中的字符串
+# 上傳文件
+## putObject(上傳介面，最大支援上傳5G文件)
+### 上傳内存中的字串
 try {
     $result = $cosClient->putObject(array(
         'Bucket' => $bucket,
@@ -30,7 +30,7 @@ try {
     print_r($e);
 }
 
-### 上传文件流
+### 上傳文件流
 try {
     $result = $cosClient->putObject(array(
         'Bucket' => $bucket,
@@ -42,7 +42,7 @@ try {
     print_r($e);
 }
 
-### 设置header和meta
+### 設置header和meta
 try {
     $result = $cosClient->putObject(array(
         'Bucket' => $bucket,
@@ -69,8 +69,8 @@ try {
     print_r($e);
 }
 
-## Upload(高级上传接口，默认使用分块上传最大支持50T)
-### 上传内存中的字符串
+## Upload(高級上傳介面，預設使用分塊上傳最大支援50T)
+### 上傳内存中的字串
 try {
     $result = $cosClient->Upload(
         $bucket = $bucket,
@@ -82,7 +82,7 @@ try {
     print_r($e);
 }
 
-### 上传文件流
+### 上傳文件流
 try {
     $result = $cosClient->Upload(
         $bucket = $bucket,
@@ -94,7 +94,7 @@ try {
     print_r($e);
 }
 
-### 设置header和meta
+### 設置header和meta
 try {
     $result = $cosClient->upload(
         $bucket = $bucket,
@@ -123,11 +123,11 @@ try {
     print_r($e);
 }
 
-## 预签名上传createPresignedUrl
-## 获取带有签名的url
-### 简单上传预签名
+## 預簽名上傳createPresignedUrl
+## 獲取帶有簽名的url
+### 簡單上傳預簽名
 try {
-    #此处可以替换为其他上传接口
+    #此處可以替換爲其他上傳介面
     $command = $cosClient->getCommand('putObject', array(
         'Bucket' => $bucket,
         'Key' => $key,
@@ -139,9 +139,9 @@ try {
     print_r($e);
 }
 
-### 分块上传预签名
+### 分塊上傳預簽名
 try {
-    #此处可以替换为其他上传接口
+    #此處可以替換爲其他上傳介面
     $command = $cosClient->getCommand('uploadPart', array(
         'Bucket' => $bucket,
         'Key' => $key,
@@ -155,9 +155,9 @@ try {
     print_r($e);
 }
 
-# 下载文件
-## getObject(下载文件)
-### 下载到内存
+# 下載文件
+## getObject(下載文件)
+### 下載到内存
 try {
     $result = $cosClient->getObject(array(
         'Bucket' => $bucket,
@@ -168,7 +168,7 @@ try {
     print_r($e);
 }
 
-### 下载到本地
+### 下載到本地
 try {
     $result = $cosClient->getObject(array(
         'Bucket' => $bucket,
@@ -179,9 +179,9 @@ try {
     print_r($e);
 }
 
-### 指定下载范围
+### 指定下載範圍
 /*
- * Range 字段格式为 'bytes=a-b'
+ * Range 欄位格式爲 'bytes=a-b'
  */
 try {
     $result = $cosClient->getObject(array(
@@ -194,7 +194,7 @@ try {
     print_r($e);
 }
 
-### 设置返回header
+### 設置返回header
 try {
     $result = $cosClient->getObject(array(
         'Bucket' => $bucket,
@@ -211,7 +211,7 @@ try {
     print_r($e);
 }
 
-## getObjectUrl(获取文件UrL)
+## getObjectUrl(獲取文件UrL)
 try {
     $signedUrl = $cosClient->getObjectUrl($bucket, $key, '+10 minutes');
     echo $signedUrl;
@@ -232,7 +232,7 @@ try {
     print_r($e);
 }
 
-# 删除多个object
+# 删除多個object
 ## deleteObjects
 try {
     $result = $cosClient->deleteObjects(array(
@@ -250,10 +250,10 @@ try {
     print_r($e);
 }
 
-# 获取object信息
+# 獲取object訊息
 ## headObject
 /*
- * 可代替isObjectExist接口，查询object是否存在
+ * 可代替isObjectExist介面，查詢object是否存在
  */
 try {
     $result = $cosClient->headObject(array(
@@ -267,7 +267,7 @@ try {
     print_r($e);
 }
 
-# 获取bucket列表
+# 獲取bucket清單
 ## listBuckets
 try {
     $result = $cosClient->listBuckets();
@@ -276,7 +276,7 @@ try {
     print_r($e);
 }
 
-# 创建bucket
+# 創建bucket
 ## createBucket
 try {
     $result = $cosClient->createBucket(array('Bucket' => $bucket));
@@ -296,10 +296,10 @@ try {
     print_r($e);
 }
 
-# 获取bucket信息
+# 獲取bucket訊息
 ## headBucket
 /*
- * 可代替isBucketExist接口，查询bucket是否存在
+ * 可代替isBucketExist介面，查詢bucket是否存在
  */
 try {
     $result = $cosClient->headBucket(array(
@@ -314,7 +314,7 @@ try {
 ## listObjects
 ### 列出所有object
 /*
- * 该接口一次最多列出1000个，需要列出所有请参考其他服务中的清空并删除bucket接口
+ * 該介面一次最多列出1000個，需要列出所有請參考其他服務中的清空并删除bucket介面
  */
 try {
     $result = $cosClient->listObjects(array(
@@ -327,7 +327,7 @@ try {
     print_r($e);
 }
 
-### 列出带有前缀的object
+### 列出帶有前綴的object
 try {
     $result = $cosClient->listObjects(array(
         'Bucket' => $bucket,
@@ -340,7 +340,7 @@ try {
     print_r($e);
 }
 
-# 获取bucket地域
+# 獲取bucket地域
 ## getBucketLocation
 try {
     $result = $cosClient->getBucketLocation(array(
@@ -350,8 +350,8 @@ try {
     print_r($e);
 };
 
-# 多版本相关
-## putBucketVersioning(开启关闭某个bucket的多版本)
+# 多版本相關
+## putBucketVersioning(開啓關閉某個bucket的多版本)
 try {
     $result = $cosClient->putBucketVersioning(array(
         'Bucket' => $bucket,
@@ -364,7 +364,7 @@ try {
 
 ## ListObjectVersions(列出多版本object)
 /*
- * 同名文件会出现多个版本
+ * 同名文件會出現多個版本
  */
 try {
     $result = $cosClient->ListObjectVersions(array(
@@ -376,7 +376,7 @@ try {
     print_r($e);
 }
 
-## getBucketVersioning(获取某个bucket多版本属性)
+## getBucketVersioning(獲取某個bucket多版本屬性)
 try {
     $result = $cosClient->getBucketVersioning(
         array('Bucket' => $bucket));
@@ -385,8 +385,8 @@ try {
     print_r($e);
 }
 
-# ACL相关
-## putBucketACL(设置bucketACL)
+# ACL相關
+## putBucketACL(設置bucketACL)
 try {
     $result = $cosClient->PutBucketAcl(array(
         'Bucket' => $bucket,
@@ -410,7 +410,7 @@ try {
     print_r($e);
 }
 
-## getBucketACL(获取bucketACL)
+## getBucketACL(獲取bucketACL)
 try {
     $result = $cosClient->GetBucketAcl(array(
         'Bucket' => $bucket));
@@ -419,7 +419,7 @@ try {
     print_r($e);
 }
 
-## putObjectACL(设置objectACL)
+## putObjectACL(設置objectACL)
 try {
     $result = $cosClient->putObjectACL(array(
         'Bucket' => $bucket,
@@ -444,7 +444,7 @@ try {
     print_r($e);
 }
 
-## getObjectACL(获取objectACL)
+## getObjectACL(獲取objectACL)
 try {
     $result = $cosClient->GetObjectAcl(array(
         'Bucket' => $bucket,
@@ -454,8 +454,8 @@ try {
     print_r($e);
 }
 
-# 生命周期相关
-## putBucketLifecycle(设置bucket生命周期)
+# 生命週期相關
+## putBucketLifecycle(設置bucket生命週期)
 try {
     $result = $cosClient->putBucketLifecycle(array(
         'Bucket' => $bucket,
@@ -481,7 +481,7 @@ try {
     print_r($e);
 }
 
-## getBucketLifecycle(获取bucket生命周期)
+## getBucketLifecycle(獲取bucket生命週期)
 try {
     $result = $cosClient->getBucketLifecycle(array(
         'Bucket' => $bucket,
@@ -501,8 +501,8 @@ try {
     print_r($e);
 }
 
-# 跨域相关
-## putBucketCors(设置bucket跨域)
+# 跨域相關
+## putBucketCors(設置bucket跨域)
 try {
     $result = $cosClient->putBucketCors(array(
         'Bucket' => $bucket,
@@ -520,7 +520,7 @@ try {
     print_r($e);
 }
 
-## getBucketCors(获取bucket跨域信息)
+## getBucketCors(獲取bucket跨域訊息)
 try {
     $result = $cosClient->getBucketCors(array());
     print_r($result);
@@ -539,10 +539,10 @@ try {
     print_r($e);
 }
 
-# 复制
-## copyobject(简单复制)
+# 複制
+## copyobject(簡單複制)
 /*
- * 将{bucket},{region},{cos_path},{versionId}替换成复制源的真实信息
+ * 将{bucket},{region},{cos_path},{versionId}替換成複制源的真實訊息
  */
 try {
     $result = $cosClient->copyObject(array(
@@ -555,9 +555,9 @@ try {
     print_r($e);
 }
 
-## Copy(分块并发复制)
+## Copy(分塊并發複制)
 /*
- * 将{bucket},{region},{cos_path},{versionId}替换成复制源的真实信息
+ * 将{bucket},{region},{cos_path},{versionId}替換成複制源的真實訊息
  */
 try {
     $result = $cosClient->Copy(
@@ -571,7 +571,7 @@ try {
     print_r($e);
 }
 
-# 恢复归档文件
+# 恢複歸檔文件
 ## restoreObject
 try {
     $result = $cosClient->restoreObject(array(
@@ -587,7 +587,7 @@ try {
     print_r($e);
 }
 
-# 其他服务
+# 其他服務
 ## 列出某bucket下所有的object
 try {
     $prefix = '';
@@ -601,7 +601,7 @@ try {
         foreach ($result['Contents'] as $rt) {
             print_r($rt['Key'] . " ");
             /*
-             * 使用下面的代码可以删除全部object
+             * 使用下面的代碼可以删除全部object
              */
             // try {
             //     $result = $cosClient->deleteobjects(array(
@@ -621,9 +621,9 @@ try {
     print_r($e);
 }
 
-## 删除所有因上传失败而产生的分块
+## 删除所有因上傳失敗而産生的分塊
 /*
- * 可以清理掉因分块上传失败
+ * 可以清理掉因分塊上傳失敗
  */
 try {
     while (true) {
@@ -650,10 +650,10 @@ try {
     print_r($e);
 }
 
-## 分块上传断点重传
+## 分塊上傳斷點重傳
 /*
- * 仅适用于分块上传失败的情况
- * 需要填写上传失败的uploadId
+ * 僅适用于分塊上傳失敗的情況
+ * 需要填寫上傳失敗的uploadId
  */
 try {
     $result = $cosClient->resumeUpload(
@@ -667,7 +667,7 @@ try {
     print_r($e);
 }
 
-## 删除某些前缀的空bucket
+## 删除某些前綴的空bucket
 function startsWith($haystack, $needle)
 {
     $length = strlen($needle);

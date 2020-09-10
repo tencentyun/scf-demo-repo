@@ -17,7 +17,7 @@ import sys
 import base64
 
 print('Loading function')
-region = u'ap-beijing'         # Modify the area according to the actual situation. 根据实际情况，修改地域
+region = u'ap-beijing'         # Modify the area according to the actual situation. 根據實際情況，修改地域
 
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
@@ -101,7 +101,7 @@ def main_handler(event, context):
             "出生：": res_ai["Birth"],
             "住址：": res_ai["Address"],
             "民族：": res_ai["Nation"],
-            "公民身份证号：": res_ai['IdNum']
+            "公民身份證号：": res_ai['IdNum']
         }
         print (json.dumps(res_print).decode('unicode-escape'))
     else:
@@ -110,7 +110,7 @@ def main_handler(event, context):
         if res_ai != -1 :
             res_print = {
                 "有效期限：": res_ai["ValidDate"],
-                "签发机关：": res_ai["Authority"]
+                "簽發機關：": res_ai["Authority"]
             }
             print (json.dumps(res_print).decode('unicode-escape'))
         else:

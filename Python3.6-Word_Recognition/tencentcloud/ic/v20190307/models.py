@@ -17,28 +17,28 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AppInfo(AbstractModel):
-    """物联网卡应用信息详情
+    """物聯網卡應用訊息詳情
 
     """
 
     def __init__(self):
         """
-        :param Sdkappid: 应用id
+        :param Sdkappid: 應用id
         :type Sdkappid: str
-        :param Appkey: 应用key
+        :param Appkey: 應用key
         :type Appkey: str
-        :param CloudAppid: 用户appid
+        :param CloudAppid: 用戶appid
         :type CloudAppid: str
-        :param Name: 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Name: 應用名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Name: str
-        :param Description: 应用描述
+        :param Description: 應用描述
         :type Description: str
-        :param CreatedTime: 创建时间
+        :param CreatedTime: 創建時間
         :type CreatedTime: str
-        :param BizType: 应用类型
+        :param BizType: 應用類型
         :type BizType: int
-        :param Uin: 用户Uin
+        :param Uin: 用戶Uin
         :type Uin: str
         """
         self.Sdkappid = None
@@ -63,7 +63,7 @@ class AppInfo(AbstractModel):
 
 
 class CardInfo(AbstractModel):
-    """卡片详细信息
+    """卡片詳細訊息
 
     """
 
@@ -71,72 +71,72 @@ class CardInfo(AbstractModel):
         """
         :param Iccid: 卡片id
         :type Iccid: str
-        :param Msisdn: 卡电话号码
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Msisdn: 卡電話号碼
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Msisdn: str
         :param Imsi: 卡imsi
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Imsi: str
         :param Imei: 卡imei
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Imei: str
-        :param Sdkappid: 应用id
+        :param Sdkappid: 應用id
         :type Sdkappid: str
-        :param Teleoperator: 运营商编号
+        :param Teleoperator: 運營商編号
         :type Teleoperator: int
-        :param CardStatus: 卡片状态 1:未激活 2：激活 3：停卡 5：销卡
+        :param CardStatus: 卡片狀态 1:未啟動 2：啟動 3：停卡 5：銷卡
         :type CardStatus: int
-        :param NetworkStatus: 网络状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NetworkStatus: 網絡狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NetworkStatus: int
-        :param ActivitedTime: 激活时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ActivitedTime: 啟動時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ActivitedTime: str
-        :param Type: 资费类型，1 单卡，2 流量池
+        :param Type: 資費類型，1 單卡，2 流量池
         :type Type: int
-        :param ProductId: 套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProductId: 套餐類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProductId: str
         :param PoolId: 流量池id
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PoolId: str
         :param DataUsedInPeriod: 周期套餐流量使用
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DataUsedInPeriod: float
-        :param DataTotalInPeriod: 周期套餐总量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DataTotalInPeriod: 週期套餐總量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DataTotalInPeriod: float
-        :param ProductExpiredTime: 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProductExpiredTime: 過期時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProductExpiredTime: str
-        :param Description: 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Description: 描述訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Description: str
-        :param CreatedTime: 创建时间
+        :param CreatedTime: 創建時間
         :type CreatedTime: str
-        :param ModifiedTime: 修改时间
+        :param ModifiedTime: 修改時間
         :type ModifiedTime: str
         :param PreorderCnt: 套餐周期
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PreorderCnt: int
-        :param IsActivated: 激活被回调标志
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsActivated: 啟動被回調标志
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsActivated: int
-        :param OrderId: 订单id
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OrderId: 訂單id
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OrderId: str
-        :param AutoRenew: 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AutoRenew: 是否自動續約
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AutoRenew: int
-        :param Remark: 备注
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Remark: 備注
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Remark: str
-        :param AllowArrears: 0 不需要开通达量不停卡 1 需要开通达量不停卡
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AllowArrears: 0 不需要開通達量不停卡 1 需要開通達量不停卡
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AllowArrears: int
-        :param NeedSms: 是否开通短信0:未开短信 1:开通短信
+        :param NeedSms: 是否開通簡訊0:未開簡訊 1:開通簡訊
         :type NeedSms: int
-        :param Provider: 服务
+        :param Provider: 服務
         :type Provider: int
         """
         self.Iccid = None
@@ -197,16 +197,16 @@ class CardInfo(AbstractModel):
 
 
 class CardList(AbstractModel):
-    """卡片列表数据
+    """卡片清單數據
 
     """
 
     def __init__(self):
         """
-        :param Total: 卡片总数
+        :param Total: 卡片總數
         :type Total: str
-        :param List: 卡片列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param List: 卡片清單訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type List: list of CardInfo
         """
         self.Total = None
@@ -224,13 +224,13 @@ class CardList(AbstractModel):
 
 
 class DescribeAppRequest(AbstractModel):
-    """DescribeApp请求参数结构体
+    """DescribeApp請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Sdkappid: 物联卡应用ID
+        :param Sdkappid: 物聯卡應用ID
         :type Sdkappid: int
         """
         self.Sdkappid = None
@@ -241,16 +241,16 @@ class DescribeAppRequest(AbstractModel):
 
 
 class DescribeAppResponse(AbstractModel):
-    """DescribeApp返回参数结构体
+    """DescribeApp返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 应用信息详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 應用訊息詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: :class:`tencentcloud.ic.v20190307.models.AppInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -265,13 +265,13 @@ class DescribeAppResponse(AbstractModel):
 
 
 class DescribeCardRequest(AbstractModel):
-    """DescribeCard请求参数结构体
+    """DescribeCard請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Sdkappid: 应用id
+        :param Sdkappid: 應用id
         :type Sdkappid: int
         :param Iccid: 卡片id
         :type Iccid: str
@@ -286,16 +286,16 @@ class DescribeCardRequest(AbstractModel):
 
 
 class DescribeCardResponse(AbstractModel):
-    """DescribeCard返回参数结构体
+    """DescribeCard返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 卡片详细信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 卡片詳細訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: :class:`tencentcloud.ic.v20190307.models.CardInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -310,17 +310,17 @@ class DescribeCardResponse(AbstractModel):
 
 
 class DescribeCardsRequest(AbstractModel):
-    """DescribeCards请求参数结构体
+    """DescribeCards請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Sdkappid: 应用id
+        :param Sdkappid: 應用id
         :type Sdkappid: str
         :param Offset: 偏移值
         :type Offset: int
-        :param Limit: 列表限制
+        :param Limit: 清單限制
         :type Limit: int
         """
         self.Sdkappid = None
@@ -335,15 +335,15 @@ class DescribeCardsRequest(AbstractModel):
 
 
 class DescribeCardsResponse(AbstractModel):
-    """DescribeCards返回参数结构体
+    """DescribeCards返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 卡片列表信息
+        :param Data: 卡片清單訊息
         :type Data: :class:`tencentcloud.ic.v20190307.models.CardList`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -358,17 +358,17 @@ class DescribeCardsResponse(AbstractModel):
 
 
 class SendMultiSmsRequest(AbstractModel):
-    """SendMultiSms请求参数结构体
+    """SendMultiSms請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Sdkappid: 应用id
+        :param Sdkappid: 應用id
         :type Sdkappid: str
-        :param Iccids: 卡片列表
+        :param Iccids: 卡片清單
         :type Iccids: list of str
-        :param Content: 短信内容
+        :param Content: 簡訊内容
         :type Content: str
         """
         self.Sdkappid = None
@@ -383,15 +383,15 @@ class SendMultiSmsRequest(AbstractModel):
 
 
 class SendMultiSmsResponse(AbstractModel):
-    """SendMultiSms返回参数结构体
+    """SendMultiSms返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 短信流水数组
+        :param Data: 簡訊流水數組
         :type Data: list of SmsRet
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -409,17 +409,17 @@ class SendMultiSmsResponse(AbstractModel):
 
 
 class SendSmsRequest(AbstractModel):
-    """SendSms请求参数结构体
+    """SendSms請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Sdkappid: 应用id
+        :param Sdkappid: 應用id
         :type Sdkappid: int
         :param Iccid: 卡片id
         :type Iccid: str
-        :param Content: 短信内容
+        :param Content: 簡訊内容
         :type Content: str
         """
         self.Sdkappid = None
@@ -434,15 +434,15 @@ class SendSmsRequest(AbstractModel):
 
 
 class SendSmsResponse(AbstractModel):
-    """SendSms返回参数结构体
+    """SendSms返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 短信流水信息
+        :param Data: 簡訊流水訊息
         :type Data: :class:`tencentcloud.ic.v20190307.models.SmsSid`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -457,15 +457,15 @@ class SendSmsResponse(AbstractModel):
 
 
 class SmsRet(AbstractModel):
-    """短信流水信息
+    """簡訊流水訊息
 
     """
 
     def __init__(self):
         """
-        :param Code: 该iccid请求状态
+        :param Code: 該iccid請求狀态
         :type Code: str
-        :param Msg: 短信发送返回信息
+        :param Msg: 簡訊發送返回訊息
         :type Msg: str
         :param Iccid: 卡片id
         :type Iccid: str
@@ -486,16 +486,16 @@ class SmsRet(AbstractModel):
 
 
 class SmsSid(AbstractModel):
-    """短信流水信息
+    """簡訊流水訊息
 
     """
 
     def __init__(self):
         """
         :param Iccid: 卡片id
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Iccid: str
-        :param Sid: 信息流水id
+        :param Sid: 訊息流水id
         :type Sid: str
         """
         self.Iccid = None

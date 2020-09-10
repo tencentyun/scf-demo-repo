@@ -26,7 +26,7 @@ class LpClient(AbstractClient):
 
 
     def QueryLoginProtection(self, request):
-        """登录保护服务（LoginProtection，LP）针对网站和 APP 的用户登录场景，实时检测是否存在盗号、撞库等恶意登录行为，帮助开发者发现异常登录，降低恶意用户登录给业务带来的风险。
+        """登入保護服務（LoginProtection，LP）針對網站和 APP 的用戶登入場景，實時檢測是否存在盜号、撞庫等惡意登入行爲，幫助開發者發現異常登入，降低惡意用戶登入給業務帶來的風險。
 
         :param request: Request instance for QueryLoginProtection.
         :type request: :class:`tencentcloud.lp.v20200224.models.QueryLoginProtectionRequest`

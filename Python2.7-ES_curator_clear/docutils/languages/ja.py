@@ -26,7 +26,7 @@ labels = {
       'status': u'ステータス',
       'date': u'日付',
       'copyright': u'著作権',
-      'dedication': u'献辞',
+      'dedication': u'獻辭',
       'abstract': u'概要',
       'attention': u'注目!',
       'caution': u'注意!',
@@ -52,7 +52,7 @@ bibliographic_fields = {
       u'ステータス': 'status',
       u'日付': 'date',
       u'著作権': 'copyright',
-      u'献辞': 'dedication',
+      u'獻辭': 'dedication',
       u'概要': 'abstract'}
 """Japanese (lowcased) to canonical name mapping for bibliographic fields."""
 

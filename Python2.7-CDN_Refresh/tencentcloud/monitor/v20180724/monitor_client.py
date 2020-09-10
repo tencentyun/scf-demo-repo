@@ -26,7 +26,7 @@ class MonitorClient(AbstractClient):
 
 
     def BindingPolicyObject(self, request):
-        """将告警策略绑定到特定对象
+        """将告警策略綁定到特定對象
 
         :param request: Request instance for BindingPolicyObject.
         :type request: :class:`tencentcloud.monitor.v20180724.models.BindingPolicyObjectRequest`
@@ -54,7 +54,7 @@ class MonitorClient(AbstractClient):
 
 
     def CreatePolicyGroup(self, request):
-        """增加策略组
+        """增加策略組
 
         :param request: Request instance for CreatePolicyGroup.
         :type request: :class:`tencentcloud.monitor.v20180724.models.CreatePolicyGroupRequest`
@@ -82,7 +82,7 @@ class MonitorClient(AbstractClient):
 
 
     def DeletePolicyGroup(self, request):
-        """删除告警策略组
+        """删除告警策略組
 
         :param request: Request instance for DeletePolicyGroup.
         :type request: :class:`tencentcloud.monitor.v20180724.models.DeletePolicyGroupRequest`
@@ -110,7 +110,7 @@ class MonitorClient(AbstractClient):
 
 
     def DescribeAccidentEventList(self, request):
-        """获取平台事件列表
+        """獲取平台事件清單
 
         :param request: Request instance for DescribeAccidentEventList.
         :type request: :class:`tencentcloud.monitor.v20180724.models.DescribeAccidentEventListRequest`
@@ -138,7 +138,7 @@ class MonitorClient(AbstractClient):
 
 
     def DescribeBaseMetrics(self, request):
-        """获取基础指标详情
+        """獲取基礎指标詳情
 
         :param request: Request instance for DescribeBaseMetrics.
         :type request: :class:`tencentcloud.monitor.v20180724.models.DescribeBaseMetricsRequest`
@@ -166,7 +166,7 @@ class MonitorClient(AbstractClient):
 
 
     def DescribeBasicAlarmList(self, request):
-        """获取基础告警列表
+        """獲取基礎告警清單
 
         :param request: Request instance for DescribeBasicAlarmList.
         :type request: :class:`tencentcloud.monitor.v20180724.models.DescribeBasicAlarmListRequest`
@@ -194,7 +194,7 @@ class MonitorClient(AbstractClient):
 
 
     def DescribeBindingPolicyObjectList(self, request):
-        """获取已绑定对象列表
+        """獲取已綁定對象清單
 
         :param request: Request instance for DescribeBindingPolicyObjectList.
         :type request: :class:`tencentcloud.monitor.v20180724.models.DescribeBindingPolicyObjectListRequest`
@@ -222,7 +222,7 @@ class MonitorClient(AbstractClient):
 
 
     def DescribePolicyConditionList(self, request):
-        """获取基础告警策略条件
+        """獲取基礎告警策略條件
 
         :param request: Request instance for DescribePolicyConditionList.
         :type request: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyConditionListRequest`
@@ -250,7 +250,7 @@ class MonitorClient(AbstractClient):
 
 
     def DescribePolicyGroupInfo(self, request):
-        """获取基础策略组详情
+        """獲取基礎策略組詳情
 
         :param request: Request instance for DescribePolicyGroupInfo.
         :type request: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyGroupInfoRequest`
@@ -278,7 +278,7 @@ class MonitorClient(AbstractClient):
 
 
     def DescribePolicyGroupList(self, request):
-        """获取基础策略告警组列表
+        """獲取基礎策略告警組清單
 
         :param request: Request instance for DescribePolicyGroupList.
         :type request: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyGroupListRequest`
@@ -306,7 +306,7 @@ class MonitorClient(AbstractClient):
 
 
     def DescribeProductEventList(self, request):
-        """分页获取产品事件的列表
+        """分頁獲取産品事件的清單
 
         :param request: Request instance for DescribeProductEventList.
         :type request: :class:`tencentcloud.monitor.v20180724.models.DescribeProductEventListRequest`
@@ -334,9 +334,9 @@ class MonitorClient(AbstractClient):
 
 
     def GetMonitorData(self, request):
-        """获取云产品的监控数据。传入产品的命名空间、对象维度描述和监控指标即可获得相应的监控数据。
-        接口调用频率限制为：20次/秒，1200次/分钟。
-        若您需要调用的指标、对象较多，可能存在因限频出现拉取失败的情况，建议尽量将请求按时间维度均摊。
+        """獲取雲産品的監控數據。傳入産品的命名空間、對象維度描述和監控指标即可獲得相應的監控數據。
+        介面調用頻率限制爲：20次/秒，1200次/分鍾。
+        若您需要調用的指标、對象較多，可能存在因限頻出現拉取失敗的情況，建議盡量将請求按時間維度均攤。
 
         :param request: Request instance for GetMonitorData.
         :type request: :class:`tencentcloud.monitor.v20180724.models.GetMonitorDataRequest`
@@ -392,13 +392,13 @@ class MonitorClient(AbstractClient):
 
 
     def PutMonitorData(self, request):
-        """默认接口请求频率限制：50次/秒。
-        默认单租户指标上限：100个。
-        单次上报最多 30 个指标/值对，请求返回错误时，请求中所有的指标/值均不会被保存。
+        """預設介面請求頻率限制：50次/秒。
+        預設單租戶指标上限：100個。
+        單次上報最多 30 個指标/值對，請求返回錯誤時，請求中所有的指标/值均不會被保存。
 
-        上报的时间戳为期望保存的时间戳，建议构造整数分钟时刻的时间戳。
-        时间戳时间范围必须为当前时间到 300 秒前之间。
-        同一 IP 指标对的数据需按分钟先后顺序上报。
+        上報的時間戳爲期望保存的時間戳，建議構造整數分鍾時刻的時間戳。
+        時間戳時間範圍必須爲當前時間到 300 秒前之間。
+        同一 IP 指标對的數據需按分鍾先後順序上報。
 
         :param request: Request instance for PutMonitorData.
         :type request: :class:`tencentcloud.monitor.v20180724.models.PutMonitorDataRequest`
@@ -426,7 +426,7 @@ class MonitorClient(AbstractClient):
 
 
     def SendCustomAlarmMsg(self, request):
-        """发送自定义消息告警
+        """發送自定義訊息告警
 
         :param request: Request instance for SendCustomAlarmMsg.
         :type request: :class:`tencentcloud.monitor.v20180724.models.SendCustomAlarmMsgRequest`
@@ -454,7 +454,7 @@ class MonitorClient(AbstractClient):
 
 
     def UnBindingAllPolicyObject(self, request):
-        """删除全部的关联对象
+        """删除全部的關聯對象
 
         :param request: Request instance for UnBindingAllPolicyObject.
         :type request: :class:`tencentcloud.monitor.v20180724.models.UnBindingAllPolicyObjectRequest`
@@ -482,7 +482,7 @@ class MonitorClient(AbstractClient):
 
 
     def UnBindingPolicyObject(self, request):
-        """删除策略的关联对象
+        """删除策略的關聯對象
 
         :param request: Request instance for UnBindingPolicyObject.
         :type request: :class:`tencentcloud.monitor.v20180724.models.UnBindingPolicyObjectRequest`

@@ -7,7 +7,7 @@ inputs:
   name: unpack_to_cos
   src: ./
   description: >-
-    上传压缩包至COS时，可触发云函数下载压缩包并解压，然后将解压缩后的文件上传至另一个 COS 存储桶
+    上傳壓縮包至COS時，可觸發雲函數下載壓縮包并解壓，然後将解壓縮後的文件上傳至另一個 COS 儲存桶
   handler: index.main_handler
   runtime: Nodejs12.16
   namespace: default
@@ -15,7 +15,7 @@ inputs:
   memorySize: 128
   timeout: 900
   events:
-     - cos: # cos触发器
+     - cos: # cos觸發器
         name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
         parameters:
           bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com

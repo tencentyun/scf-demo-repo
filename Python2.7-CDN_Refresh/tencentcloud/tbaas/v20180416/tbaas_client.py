@@ -26,7 +26,7 @@ class TbaasClient(AbstractClient):
 
 
     def ApplyUserCert(self, request):
-        """申请用户证书
+        """申請用戶證書
 
         :param request: Request instance for ApplyUserCert.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.ApplyUserCertRequest`
@@ -54,7 +54,7 @@ class TbaasClient(AbstractClient):
 
 
     def BlockByNumberHandler(self, request):
-        """Bcos根据块高查询区块信息
+        """Bcos根據塊高查詢區塊訊息
 
         :param request: Request instance for BlockByNumberHandler.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.BlockByNumberHandlerRequest`
@@ -82,7 +82,7 @@ class TbaasClient(AbstractClient):
 
 
     def DeployDynamicContractHandler(self, request):
-        """动态部署合约
+        """動态佈署合約
 
         :param request: Request instance for DeployDynamicContractHandler.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.DeployDynamicContractHandlerRequest`
@@ -110,7 +110,7 @@ class TbaasClient(AbstractClient):
 
 
     def DownloadUserCert(self, request):
-        """下载用户证书
+        """下載用戶證書
 
         :param request: Request instance for DownloadUserCert.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.DownloadUserCertRequest`
@@ -138,7 +138,7 @@ class TbaasClient(AbstractClient):
 
 
     def GetBlockList(self, request):
-        """查看当前网络下的所有区块列表，分页展示
+        """檢視當前網絡下的所有區塊清單，分頁展示
 
         :param request: Request instance for GetBlockList.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.GetBlockListRequest`
@@ -166,7 +166,7 @@ class TbaasClient(AbstractClient):
 
 
     def GetBlockListHandler(self, request):
-        """Bcos分页查询当前群组下的区块列表
+        """Bcos分頁查詢當前群組下的區塊清單
 
         :param request: Request instance for GetBlockListHandler.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.GetBlockListHandlerRequest`
@@ -194,7 +194,7 @@ class TbaasClient(AbstractClient):
 
 
     def GetBlockTransactionListForUser(self, request):
-        """获取区块内的交易列表
+        """獲取區塊内的交易清單
 
         :param request: Request instance for GetBlockTransactionListForUser.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.GetBlockTransactionListForUserRequest`
@@ -222,7 +222,7 @@ class TbaasClient(AbstractClient):
 
 
     def GetClusterSummary(self, request):
-        """获取区块链网络概要
+        """獲取區塊鏈網絡概要
 
         :param request: Request instance for GetClusterSummary.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.GetClusterSummaryRequest`
@@ -250,7 +250,7 @@ class TbaasClient(AbstractClient):
 
 
     def GetInvokeTx(self, request):
-        """Invoke异步调用结果查询
+        """Invoke異步調用結果查詢
 
         :param request: Request instance for GetInvokeTx.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.GetInvokeTxRequest`
@@ -278,7 +278,7 @@ class TbaasClient(AbstractClient):
 
 
     def GetLatesdTransactionList(self, request):
-        """获取最新交易列表
+        """獲取最新交易清單
 
         :param request: Request instance for GetLatesdTransactionList.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.GetLatesdTransactionListRequest`
@@ -306,7 +306,7 @@ class TbaasClient(AbstractClient):
 
 
     def GetTransByHashHandler(self, request):
-        """Bcos根据交易哈希查看交易详细信息
+        """Bcos根據交易哈希檢視交易詳細訊息
 
         :param request: Request instance for GetTransByHashHandler.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.GetTransByHashHandlerRequest`
@@ -334,7 +334,7 @@ class TbaasClient(AbstractClient):
 
 
     def GetTransListHandler(self, request):
-        """Bcos分页查询当前群组的交易信息列表
+        """Bcos分頁查詢當前群組的交易訊息清單
 
         :param request: Request instance for GetTransListHandler.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.GetTransListHandlerRequest`
@@ -362,7 +362,7 @@ class TbaasClient(AbstractClient):
 
 
     def GetTransactionDetailForUser(self, request):
-        """获取交易详情
+        """獲取交易詳情
 
         :param request: Request instance for GetTransactionDetailForUser.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.GetTransactionDetailForUserRequest`
@@ -418,7 +418,7 @@ class TbaasClient(AbstractClient):
 
 
     def Query(self, request):
-        """查询交易
+        """查詢交易
 
         :param request: Request instance for Query.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.QueryRequest`
@@ -446,7 +446,7 @@ class TbaasClient(AbstractClient):
 
 
     def SendTransactionHandler(self, request):
-        """Bcos发送交易
+        """Bcos發送交易
 
         :param request: Request instance for SendTransactionHandler.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.SendTransactionHandlerRequest`
@@ -474,7 +474,7 @@ class TbaasClient(AbstractClient):
 
 
     def SrvInvoke(self, request):
-        """trustsql服务统一接口
+        """trustsql服務統一介面
 
         :param request: Request instance for SrvInvoke.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.SrvInvokeRequest`
@@ -502,7 +502,7 @@ class TbaasClient(AbstractClient):
 
 
     def TransByDynamicContractHandler(self, request):
-        """根据动态部署的合约发送交易
+        """根據動态佈署的合約發送交易
 
         :param request: Request instance for TransByDynamicContractHandler.
         :type request: :class:`tencentcloud.tbaas.v20180416.models.TransByDynamicContractHandlerRequest`

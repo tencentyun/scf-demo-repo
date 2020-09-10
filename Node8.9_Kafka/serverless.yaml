@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: ckafka
   src: ./
-  description: 本示例通过kafka node客户端，给kafka发消息
+  description: 本範例通過kafka node用戶端，給kafka發訊息
   handler: index.main_handler
   runtime: Nodejs8.9
   namespace: default

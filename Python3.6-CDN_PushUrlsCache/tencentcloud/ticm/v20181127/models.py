@@ -17,15 +17,15 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class Candidate(AbstractModel):
-    """识别出人脸对应的候选人。
+    """識别出人臉對應的候選人。
 
     """
 
     def __init__(self):
         """
-        :param Name: 识别出人脸对应的候选人数组。当前返回相似度最高的候选人。
+        :param Name: 識别出人臉對應的候選人數組。當前返回相似度最高的候選人。
         :type Name: str
-        :param Confidence: 相似度，0-100之间。
+        :param Confidence: 相似度，0-100之間。
         :type Confidence: int
         """
         self.Name = None
@@ -38,13 +38,13 @@ class Candidate(AbstractModel):
 
 
 class DescribeVideoTaskRequest(AbstractModel):
-    """DescribeVideoTask请求参数结构体
+    """DescribeVideoTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VodTaskId: 需要查询的视频审核的任务ID
+        :param VodTaskId: 需要查詢的視訊審核的任務ID
         :type VodTaskId: str
         """
         self.VodTaskId = None
@@ -55,38 +55,38 @@ class DescribeVideoTaskRequest(AbstractModel):
 
 
 class DescribeVideoTaskResponse(AbstractModel):
-    """DescribeVideoTask返回参数结构体
+    """DescribeVideoTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Status: 任务状态，取值：
+        :param Status: 任務狀态，取值：
 WAITING：等待中；
-PROCESSING：处理中；
+PROCESSING：處理中；
 FINISH：已完成。
         :type Status: str
-        :param BeginProcessTime: 任务开始执行的时间，采用 ISO 日期格式。
+        :param BeginProcessTime: 任務開始執行的時間，采用 ISO 日期格式。
         :type BeginProcessTime: str
-        :param FinishTime: 任务执行完毕的时间，采用 ISO 日期格式。
+        :param FinishTime: 任務執行完畢的時間，采用 ISO 日期格式。
         :type FinishTime: str
-        :param PornResult: 视频内容审核智能画面鉴黄任务的查询结果。
+        :param PornResult: 視訊内容審核智慧畫面鑒黃任務的查詢結果。
         :type PornResult: :class:`tencentcloud.ticm.v20181127.models.VodPornReviewResult`
-        :param TerrorismResult: 视频内容审核智能画面鉴恐任务的查询结果。
+        :param TerrorismResult: 視訊内容審核智慧畫面鑒恐任務的查詢結果。
         :type TerrorismResult: :class:`tencentcloud.ticm.v20181127.models.VodTerrorismReviewResult`
-        :param PoliticalResult: 视频内容审核智能画面鉴政任务的查询结果。
+        :param PoliticalResult: 視訊内容審核智慧畫面鑒政任務的查詢結果。
         :type PoliticalResult: :class:`tencentcloud.ticm.v20181127.models.VodPoliticalReviewResult`
-        :param PoliticalOcrResult: 视频内容审核 Ocr 文字鉴政任务的查询结果。
+        :param PoliticalOcrResult: 視訊内容審核 Ocr 文字鑒政任務的查詢結果。
         :type PoliticalOcrResult: :class:`tencentcloud.ticm.v20181127.models.VodPoliticalOcrReviewResult`
-        :param PornAsrResult: 视频内容审核 Asr 文字鉴黄任务的查询结果。
+        :param PornAsrResult: 視訊内容審核 Asr 文字鑒黃任務的查詢結果。
         :type PornAsrResult: :class:`tencentcloud.ticm.v20181127.models.VodPornAsrReviewResult`
-        :param PoliticalAsrResult: 视频内容审核 Asr 文字鉴政任务的查询结果。
+        :param PoliticalAsrResult: 視訊内容審核 Asr 文字鑒政任務的查詢結果。
         :type PoliticalAsrResult: :class:`tencentcloud.ticm.v20181127.models.VodPoliticalAsrReviewResult`
-        :param PornOcrResult: 视频内容审核 Ocr 文字鉴黄任务的查询结果。
+        :param PornOcrResult: 視訊内容審核 Ocr 文字鑒黃任務的查詢結果。
         :type PornOcrResult: :class:`tencentcloud.ticm.v20181127.models.VodPornOcrResult`
-        :param MetaData: 原始视频的元信息。
+        :param MetaData: 原始視訊的元訊息。
         :type MetaData: :class:`tencentcloud.ticm.v20181127.models.VodMetaData`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Status = None
@@ -135,25 +135,25 @@ FINISH：已完成。
 
 
 class DisgustResult(AbstractModel):
-    """恶心识别结果。
+    """惡心識别結果。
 
     """
 
     def __init__(self):
         """
-        :param Code: 该识别场景的错误码：
+        :param Code: 該識别場景的錯誤碼：
 0表示成功，
--1表示系统错误，
--2表示引擎错误。
+-1表示系統錯誤，
+-2表示引擎錯誤。
         :type Code: int
-        :param Msg: 错误码描述信息。
+        :param Msg: 錯誤碼描述訊息。
         :type Msg: str
-        :param Suggestion: 识别场景的审核结论：
+        :param Suggestion: 識别場景的審核結論：
 PASS：正常
 REVIEW：疑似
-BLOCK：违规
+BLOCK：違規
         :type Suggestion: str
-        :param Confidence: 图像恶心的分数，0-100之间，分数越高恶心几率越大。
+        :param Confidence: 圖像惡心的分數，0-100之間，分數越高惡心幾率越大。
         :type Confidence: int
         """
         self.Code = None
@@ -170,19 +170,19 @@ BLOCK：违规
 
 
 class FaceRect(AbstractModel):
-    """识别出的人脸在图片中的位置。
+    """識别出的人臉在圖片中的位置。
 
     """
 
     def __init__(self):
         """
-        :param X: 人脸区域左上角横坐标。
+        :param X: 人臉區域左上角橫坐标。
         :type X: int
-        :param Y: 人脸区域左上角纵坐标。
+        :param Y: 人臉區域左上角縱坐标。
         :type Y: int
-        :param Width: 人脸区域宽度。
+        :param Width: 人臉區域寬度。
         :type Width: int
-        :param Height: 人脸区域高度。
+        :param Height: 人臉區域高度。
         :type Height: int
         """
         self.X = None
@@ -199,15 +199,15 @@ class FaceRect(AbstractModel):
 
 
 class FaceResult(AbstractModel):
-    """人脸识别结果。
+    """人臉識别結果。
 
     """
 
     def __init__(self):
         """
-        :param FaceRect: 检测出的人脸框位置。
+        :param FaceRect: 檢測出的人臉框位置。
         :type FaceRect: :class:`tencentcloud.ticm.v20181127.models.FaceRect`
-        :param Candidates: 候选人列表。当前返回相似度最高的候选人。
+        :param Candidates: 候選人清單。當前返回相似度最高的候選人。
         :type Candidates: list of Candidate
         """
         self.FaceRect = None
@@ -227,32 +227,32 @@ class FaceResult(AbstractModel):
 
 
 class ImageModerationRequest(AbstractModel):
-    """ImageModeration请求参数结构体
+    """ImageModeration請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Scenes: 本次调用支持的识别场景，可选值如下：
-1. PORN，即色情识别
-2. TERRORISM，即暴恐识别
-3. POLITICS，即政治敏感识别
+        :param Scenes: 本次調用支援的識别場景，可選值如下：
+1. PORN，即色情識别
+2. TERRORISM，即暴恐識别
+3. POLITICS，即政治敏感識别
 
-支持多场景（Scenes）一起检测。例如，使用 Scenes=["PORN", "TERRORISM"]，即对一张图片同时进行色情识别和暴恐识别。
+支援多場景（Scenes）一起檢測。例如，使用 Scenes=["PORN", "TERRORISM"]，即對一張圖片同時進行色情識别和暴恐識别。
         :type Scenes: list of str
-        :param ImageUrl: 图片URL地址。 
-图片限制： 
- • 图片格式：PNG、JPG、JPEG。 
- • 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
- • 图片像素：大于50*50像素，否则影响识别效果； 
- • 长宽比：长边：短边<5； 
-接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
+        :param ImageUrl: 圖片URL網址。 
+圖片限制： 
+ • 圖片格式：PNG、JPG、JPEG。 
+ • 圖片大小：所下載圖片經Base64編碼後不超過4M。圖片下載時間不超過3秒。 
+ • 圖片像素：大于50*50像素，否則影響識别效果； 
+ • 長寬比：長邊：短邊<5； 
+介面響應時間會受到圖片下載時間的影響，建議使用更可靠的儲存服務，推薦将圖片儲存在Top Cloud COS。
         :type ImageUrl: str
-        :param Config: 预留字段，后期用于展示更多识别信息。
+        :param Config: 預留欄位，後期用于展示更多識别訊息。
         :type Config: str
-        :param Extra: 透传字段，透传简单信息。
+        :param Extra: 透傳欄位，透傳簡單訊息。
         :type Extra: str
-        :param ImageBase64: 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+        :param ImageBase64: 圖片經過base64編碼的内容。最大不超過4M。與ImageUrl同時存在時優先使用ImageUrl欄位。
         :type ImageBase64: str
         """
         self.Scenes = None
@@ -271,32 +271,32 @@ class ImageModerationRequest(AbstractModel):
 
 
 class ImageModerationResponse(AbstractModel):
-    """ImageModeration返回参数结构体
+    """ImageModeration返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Suggestion: 识别场景的审核结论：
+        :param Suggestion: 識别場景的審核結論：
 PASS：正常
 REVIEW：疑似
-BLOCK：违规
+BLOCK：違規
         :type Suggestion: str
-        :param PornResult: 色情识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PornResult: 色情識别結果。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PornResult: :class:`tencentcloud.ticm.v20181127.models.PornResult`
-        :param TerrorismResult: 暴恐识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TerrorismResult: 暴恐識别結果。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TerrorismResult: :class:`tencentcloud.ticm.v20181127.models.TerrorismResult`
-        :param PoliticsResult: 政治敏感识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PoliticsResult: 政治敏感識别結果。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PoliticsResult: :class:`tencentcloud.ticm.v20181127.models.PoliticsResult`
-        :param Extra: 透传字段，透传简单信息。
+        :param Extra: 透傳欄位，透傳簡單訊息。
         :type Extra: str
-        :param DisgustResult: 恶心内容识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DisgustResult: 惡心内容識别結果。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DisgustResult: :class:`tencentcloud.ticm.v20181127.models.DisgustResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Suggestion = None
@@ -327,41 +327,41 @@ BLOCK：违规
 
 
 class PoliticsResult(AbstractModel):
-    """政治敏感识别结果。
+    """政治敏感識别結果。
 
     """
 
     def __init__(self):
         """
-        :param Code: 该识别场景的错误码：
+        :param Code: 該識别場景的錯誤碼：
 0表示成功，
--1表示系统错误，
--2表示引擎错误，
--1400表示图片解码失败，
--1401表示图片不符合规范。
+-1表示系統錯誤，
+-2表示引擎錯誤，
+-1400表示圖片解碼失敗，
+-1401表示圖片不符合規範。
         :type Code: int
-        :param Msg: 错误码描述信息。
+        :param Msg: 錯誤碼描述訊息。
         :type Msg: str
-        :param Suggestion: 识别场景的审核结论：
+        :param Suggestion: 識别場景的審核結論：
 PASS：正常
 REVIEW：疑似
-BLOCK：违规
+BLOCK：違規
         :type Suggestion: str
-        :param Confidence: 图像涉政的分数，0-100之间，分数越高涉政几率越大。
-Type为DNA时：
-0到75，Suggestion建议为PASS
-75到90，Suggestion建议为REVIEW
-90到100，Suggestion建议为BLOCK
-Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+        :param Confidence: 圖像涉政的分數，0-100之間，分數越高涉政幾率越大。
+Type爲DNA時：
+0到75，Suggestion建議爲PASS
+75到90，Suggestion建議爲REVIEW
+90到100，Suggestion建議爲BLOCK
+Type爲FACE時：
+0到55，Suggestion建議爲PASS
+55到60，Suggestion建議爲REVIEW
+60到100，Suggestion建議爲BLOCK
         :type Confidence: int
-        :param FaceResults: Type取值为‘FACE’时，人脸识别的结果列表。基于图片中实际检测到的人脸数，返回数组最大值不超过5个。
+        :param FaceResults: Type取值爲‘FACE’時，人臉識别的結果清單。基于圖片中實際檢測到的人臉數，返回數組最大值不超過5個。
         :type FaceResults: list of FaceResult
-        :param Type: 取值'DNA' 或‘FACE’。DNA表示结论和置信度来自图像指纹，FACE表示结论和置信度来自人脸识别。
+        :param Type: 取值'DNA' 或‘FACE’。DNA表示結論和置信度來自圖像指紋，FACE表示結論和置信度來自人臉識别。
         :type Type: str
-        :param AdvancedInfo: 鉴政识别返回的详细标签后期开放。
+        :param AdvancedInfo: 鑒政識别返回的詳細标簽後期開放。
         :type AdvancedInfo: str
         """
         self.Code = None
@@ -389,30 +389,30 @@ Type为FACE时：
 
 
 class PornResult(AbstractModel):
-    """色情识别结果。
+    """色情識别結果。
 
     """
 
     def __init__(self):
         """
-        :param Code: 该识别场景的错误码：
+        :param Code: 該識别場景的錯誤碼：
 0表示成功，
--1表示系统错误，
--2表示引擎错误，
--1400表示图片解码失败。
+-1表示系統錯誤，
+-2表示引擎錯誤，
+-1400表示圖片解碼失敗。
         :type Code: int
-        :param Msg: 错误码描述信息。
+        :param Msg: 錯誤碼描述訊息。
         :type Msg: str
-        :param Suggestion: 识别场景的审核结论：
+        :param Suggestion: 識别場景的審核結論：
 PASS：正常
 REVIEW：疑似
-BLOCK：违规
+BLOCK：違規
         :type Suggestion: str
-        :param Confidence: 算法对于Suggestion的置信度，0-100之间，值越高，表示对于Suggestion越确定。
+        :param Confidence: 算法對于Suggestion的置信度，0-100之間，值越高，表示對于Suggestion越确定。
         :type Confidence: int
-        :param AdvancedInfo: 预留字段，后期用于展示更多识别信息。
+        :param AdvancedInfo: 預留欄位，後期用于展示更多識别訊息。
         :type AdvancedInfo: str
-        :param Type: 取值'LABEL‘，LABEL表示结论和置信度来自标签分类。
+        :param Type: 取值'LABEL‘，LABEL表示結論和置信度來自标簽分類。
         :type Type: str
         """
         self.Code = None
@@ -433,40 +433,40 @@ BLOCK：违规
 
 
 class TerrorismResult(AbstractModel):
-    """暴恐识别结果。
+    """暴恐識别結果。
 
     """
 
     def __init__(self):
         """
-        :param Code: 该识别场景的错误码：
+        :param Code: 該識别場景的錯誤碼：
 0表示成功，
--1表示系统错误，
--2表示引擎错误，
--1400表示图片解码失败。
+-1表示系統錯誤，
+-2表示引擎錯誤，
+-1400表示圖片解碼失敗。
         :type Code: int
-        :param Msg: 错误码描述信息。
+        :param Msg: 錯誤碼描述訊息。
         :type Msg: str
-        :param Suggestion: 识别场景的审核结论：
+        :param Suggestion: 識别場景的審核結論：
 PASS：正常
 REVIEW：疑似
-BLOCK：违规
+BLOCK：違規
         :type Suggestion: str
-        :param Confidence: 图像涉恐的分数，0-100之间，分数越高涉恐几率越大。
-Type为LABEL时：
-0到86，Suggestion建议为PASS
-86到91，Suggestion建议为REVIEW
-91到100，Suggestion建议为BLOCK
-Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+        :param Confidence: 圖像涉恐的分數，0-100之間，分數越高涉恐幾率越大。
+Type爲LABEL時：
+0到86，Suggestion建議爲PASS
+86到91，Suggestion建議爲REVIEW
+91到100，Suggestion建議爲BLOCK
+Type爲FACE時：
+0到55，Suggestion建議爲PASS
+55到60，Suggestion建議爲REVIEW
+60到100，Suggestion建議爲BLOCK
         :type Confidence: int
-        :param FaceResults: Type取值为‘FACE’时，人脸识别的结果列表。基于图片中实际检测到的人脸数，返回数组最大值不超过5个。
+        :param FaceResults: Type取值爲‘FACE’時，人臉識别的結果清單。基于圖片中實際檢測到的人臉數，返回數組最大值不超過5個。
         :type FaceResults: list of FaceResult
-        :param AdvancedInfo: 暴恐识别返回的详细标签后期开放。
+        :param AdvancedInfo: 暴恐識别返回的詳細标簽後期開放。
         :type AdvancedInfo: str
-        :param Type: 取值'LABEL' 或‘FACE’，LABEL表示结论和置信度来自标签分类，FACE表示结论和置信度来自人脸识别。
+        :param Type: 取值'LABEL' 或‘FACE’，LABEL表示結論和置信度來自标簽分類，FACE表示結論和置信度來自人臉識别。
         :type Type: str
         """
         self.Code = None
@@ -494,19 +494,19 @@ Type为FACE时：
 
 
 class VideoModerationRequest(AbstractModel):
-    """VideoModeration请求参数结构体
+    """VideoModeration請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VideoUrl: 需要审核的视频的URL地址
+        :param VideoUrl: 需要審核的視訊的URL網址
         :type VideoUrl: str
-        :param DeveloperId: 开发者标识
+        :param DeveloperId: 開發者标識
         :type DeveloperId: str
-        :param CBUrl: 审核完成后回调地址
+        :param CBUrl: 審核完成後回調網址
         :type CBUrl: str
-        :param Extra: 透传字段，透传简单信息。
+        :param Extra: 透傳欄位，透傳簡單訊息。
         :type Extra: str
         """
         self.VideoUrl = None
@@ -523,15 +523,15 @@ class VideoModerationRequest(AbstractModel):
 
 
 class VideoModerationResponse(AbstractModel):
-    """VideoModeration返回参数结构体
+    """VideoModeration返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VodTaskId: 视频审核任务ID
+        :param VodTaskId: 視訊審核任務ID
         :type VodTaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.VodTaskId = None
@@ -544,30 +544,30 @@ class VideoModerationResponse(AbstractModel):
 
 
 class VodAsrTextSegmentItem(AbstractModel):
-    """内容审核 Asr 文字审核嫌疑片段
+    """内容審核 Asr 文字審核嫌疑片段
 
     """
 
     def __init__(self):
         """
-        :param StartTimeOffset: 嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StartTimeOffset: 嫌疑片段起始的偏移時間，單位：秒。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StartTimeOffset: float
-        :param EndTimeOffset: 嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EndTimeOffset: 嫌疑片段結束的偏移時間，單位：秒。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EndTimeOffset: float
         :param Confidence: 嫌疑片段置信度。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Confidence: float
-        :param Suggestion: 嫌疑片段审核结果建议，取值范围：
+        :param Suggestion: 嫌疑片段審核結果建議，取值範圍：
 pass。
 review。
 block。
 
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Suggestion: str
-        :param KeywordSet: 嫌疑关键词列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param KeywordSet: 嫌疑關鍵詞清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type KeywordSet: list of str
         """
         self.StartTimeOffset = None
@@ -586,20 +586,20 @@ block。
 
 
 class VodAudioStreamItem(AbstractModel):
-    """文件音频流信息
+    """文件音訊流訊息
 
     """
 
     def __init__(self):
         """
-        :param Bitrate: 音频流的码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Bitrate: 音訊流的碼率，單位：bps。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Bitrate: int
-        :param SamplingRate: 音频流的采样率，单位：hz。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SamplingRate: 音訊流的采樣率，單位：hz。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SamplingRate: int
-        :param Codec: 音频流的编码格式，例如 aac。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Codec: 音訊流的編碼格式，例如 aac。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Codec: str
         """
         self.Bitrate = None
@@ -614,44 +614,44 @@ class VodAudioStreamItem(AbstractModel):
 
 
 class VodMetaData(AbstractModel):
-    """媒体文件元信息。
+    """媒體文件元訊息。
 
     """
 
     def __init__(self):
         """
-        :param Size: 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Size: 上傳的媒體文件大小（視訊爲 HLS 時，大小是 m3u8 和 ts 文件大小的總和），單位：位元。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Size: int
-        :param Container: 容器类型，例如 m4a，mp4 等。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Container: 容器類型，例如 m4a，mp4 等。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Container: str
-        :param Bitrate: 视频流码率平均值与音频流码率平均值之和，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Bitrate: 視訊流碼率平均值與音訊流碼率平均值之和，單位：bps。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Bitrate: int
-        :param Height: 视频流高度的最大值，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Height: 視訊流高度的最大值，單位：px。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Height: int
-        :param Width: 视频流宽度的最大值，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Width: 視訊流寬度的最大值，單位：px。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Width: int
-        :param Duration: 视频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Duration: 視訊時長，單位：秒。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Duration: float
-        :param Rotate: 视频拍摄时的选择角度，单位：度。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Rotate: 視訊拍攝時的選擇角度，單位：度。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Rotate: int
-        :param VideoStreamSet: 视频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VideoStreamSet: 視訊流訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VideoStreamSet: list of VodVideoStreamItem
-        :param AudioStreamSet: 音频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AudioStreamSet: 音訊流訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AudioStreamSet: list of VodAudioStreamItem
-        :param VideoDuration: 视频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VideoDuration: 視訊時長，單位：秒。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VideoDuration: float
-        :param AudioDuration: 音频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AudioDuration: 音訊時長，單位：秒。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AudioDuration: float
         """
         self.Size = None
@@ -692,33 +692,33 @@ class VodMetaData(AbstractModel):
 
 
 class VodOcrTextSegmentItem(AbstractModel):
-    """内容审核 Ocr 文字审核嫌疑片段
+    """内容審核 Ocr 文字審核嫌疑片段
 
     """
 
     def __init__(self):
         """
-        :param StartTimeOffset: 嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StartTimeOffset: 嫌疑片段起始的偏移時間，單位：秒。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StartTimeOffset: float
-        :param EndTimeOffset: 嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EndTimeOffset: 嫌疑片段結束的偏移時間，單位：秒。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EndTimeOffset: float
         :param Confidence: 嫌疑片段置信度。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Confidence: float
-        :param Suggestion: 嫌疑片段审核结果建议，取值范围：
+        :param Suggestion: 嫌疑片段審核結果建議，取值範圍：
 pass。
 review。
 block。
 
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Suggestion: str
-        :param KeywordSet: 嫌疑关键词列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param KeywordSet: 嫌疑關鍵詞清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type KeywordSet: list of str
-        :param AreaCoordSet: 嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AreaCoordSet: 嫌疑文字出現的區域坐标 (像素級)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AreaCoordSet: list of int
         """
         self.StartTimeOffset = None
@@ -739,37 +739,37 @@ block。
 
 
 class VodPoliticalAsrReviewResult(AbstractModel):
-    """内容审核 Asr 文字鉴政、敏感任务结果类型
+    """内容審核 Asr 文字鑒政、敏感任務結果類型
 
     """
 
     def __init__(self):
         """
-        :param Status: 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+        :param Status: 任務狀态，有 PROCESSING，SUCCESS 和 FAIL 三種。
         :type Status: str
-        :param Code: 错误码，0：成功，其他值：失败。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Code: 錯誤碼，0：成功，其他值：失敗。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Code: int
-        :param Msg: 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Msg: 錯誤訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Msg: str
-        :param Confidence: 嫌疑片段审核结果建议，取值范围：
+        :param Confidence: 嫌疑片段審核結果建議，取值範圍：
 pass。
 review。
 block。
 
-Asr 文字涉政、敏感评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
+Asr 文字涉政、敏感評分，分值爲0到100。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Confidence: float
-        :param Suggestion: Asr 文字涉政、敏感结果建议，取值范围：
+        :param Suggestion: Asr 文字涉政、敏感結果建議，取值範圍：
 pass。
 review。
 block。
 
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Suggestion: str
-        :param SegmentSet: Asr 文字有涉政、敏感嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SegmentSet: Asr 文字有涉政、敏感嫌疑的視訊片段清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SegmentSet: list of VodAsrTextSegmentItem
         """
         self.Status = None
@@ -795,29 +795,29 @@ block。
 
 
 class VodPoliticalOcrReviewResult(AbstractModel):
-    """内容审核 Ocr 文字鉴政、敏感任务结果类型
+    """内容審核 Ocr 文字鑒政、敏感任務結果類型
 
     """
 
     def __init__(self):
         """
-        :param Status: 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+        :param Status: 任務狀态，有 PROCESSING，SUCCESS 和 FAIL 三種。
         :type Status: str
-        :param Code: 错误码，0：成功，其他值：失败。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Code: 錯誤碼，0：成功，其他值：失敗。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Code: int
-        :param Msg: 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Msg: 錯誤訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Msg: str
-        :param Confidence: Ocr 文字涉政、敏感评分，分值为0到100。
+        :param Confidence: Ocr 文字涉政、敏感評分，分值爲0到100。
         :type Confidence: float
-        :param Suggestion: Ocr 文字涉政、敏感结果建议，取值范围：
+        :param Suggestion: Ocr 文字涉政、敏感結果建議，取值範圍：
 pass。
 review。
 block。
         :type Suggestion: str
-        :param SegmentSet: Ocr 文字有涉政、敏感嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SegmentSet: Ocr 文字有涉政、敏感嫌疑的視訊片段清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SegmentSet: list of VodOcrTextSegmentItem
         """
         self.Status = None
@@ -843,38 +843,38 @@ block。
 
 
 class VodPoliticalReviewResult(AbstractModel):
-    """涉政信息
+    """涉政訊息
 
     """
 
     def __init__(self):
         """
-        :param Status: 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+        :param Status: 任務狀态，有 PROCESSING，SUCCESS 和 FAIL 三種。
         :type Status: str
-        :param Code: 错误码，0：成功，其他值：失败。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Code: 錯誤碼，0：成功，其他值：失敗。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Code: int
-        :param Msg: 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Msg: 錯誤訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Msg: str
-        :param Confidence: 视频涉政评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Confidence: 視訊涉政評分，分值爲0到100。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Confidence: float
-        :param Suggestion: 涉政结果建议，取值范围：
+        :param Suggestion: 涉政結果建議，取值範圍：
 pass。
 review。
 block。
 
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Suggestion: str
-        :param Label: 视频鉴政结果标签，取值范围：
+        :param Label: 視訊鑒政結果标簽，取值範圍：
 politician：政治人物。
-violation_photo：违规图标。
+violation_photo：違規圖标。
 
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Label: str
-        :param SegmentSet: 有涉政嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SegmentSet: 有涉政嫌疑的視訊片段清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SegmentSet: list of VodPoliticalReviewSegmentItem
         """
         self.Status = None
@@ -902,43 +902,43 @@ violation_photo：违规图标。
 
 
 class VodPoliticalReviewSegmentItem(AbstractModel):
-    """内容审核鉴政任务结果类型
+    """内容審核鑒政任務結果類型
 
     """
 
     def __init__(self):
         """
-        :param StartTimeOffset: 嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StartTimeOffset: 嫌疑片段起始的偏移時間，單位：秒。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StartTimeOffset: float
-        :param EndTimeOffset: 嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EndTimeOffset: 嫌疑片段結束的偏移時間，單位：秒。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EndTimeOffset: float
-        :param Confidence: 嫌疑片段涉政分数。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Confidence: 嫌疑片段涉政分數。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Confidence: float
-        :param Suggestion: 嫌疑片段鉴政结果建议，取值范围：
+        :param Suggestion: 嫌疑片段鑒政結果建議，取值範圍：
 pass。
 review。
 block。
 
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Suggestion: str
-        :param Name: 涉政人物、违规图标名字。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Name: 涉政人物、違規圖标名字。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Name: str
-        :param Label: 嫌疑片段鉴政结果标签。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Label: 嫌疑片段鑒政結果标簽。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Label: str
-        :param Url: 嫌疑图片 URL （图片不会永久存储，到达
-PicUrlExpireTime 时间点后图片将被删除）。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Url: 嫌疑圖片 URL （圖片不會永久儲存，到達
+PicUrlExpireTime 時間點後圖片将被删除）。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Url: str
-        :param PicUrlExpireTimeStamp: 嫌疑图片 URL 失效时间，使用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PicUrlExpireTimeStamp: 嫌疑圖片 URL 失效時間，使用 ISO 日期格式。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PicUrlExpireTimeStamp: int
-        :param AreaCoordSet: 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AreaCoordSet: 涉政人物、違規圖标出現的區域坐标 (像素級)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AreaCoordSet: list of int
         """
         self.StartTimeOffset = None
@@ -965,32 +965,32 @@ PicUrlExpireTime 时间点后图片将被删除）。
 
 
 class VodPornAsrReviewResult(AbstractModel):
-    """Asr 文字涉黄信息
+    """Asr 文字涉黃訊息
 
     """
 
     def __init__(self):
         """
-        :param Status: 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+        :param Status: 任務狀态，有 PROCESSING，SUCCESS 和 FAIL 三種。
         :type Status: str
-        :param Code: 错误码，0：成功，其他值：失败。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Code: 錯誤碼，0：成功，其他值：失敗。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Code: int
-        :param Msg: 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Msg: 錯誤訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Msg: str
-        :param Confidence: Asr 文字涉黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Confidence: Asr 文字涉黃評分，分值爲0到100。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Confidence: float
-        :param Suggestion: Asr 文字涉黄结果建议，取值范围：
+        :param Suggestion: Asr 文字涉黃結果建議，取值範圍：
 pass。
 review。
 block。
 
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Suggestion: str
-        :param SegmentSet: Asr 文字有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SegmentSet: Asr 文字有涉黃嫌疑的視訊片段清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SegmentSet: list of VodAsrTextSegmentItem
         """
         self.Status = None
@@ -1016,32 +1016,32 @@ block。
 
 
 class VodPornOcrResult(AbstractModel):
-    """内容审核 Ocr 文字鉴黄任务结果类型
+    """内容審核 Ocr 文字鑒黃任務結果類型
 
     """
 
     def __init__(self):
         """
-        :param Status: 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+        :param Status: 任務狀态，有 PROCESSING，SUCCESS 和 FAIL 三種。
         :type Status: str
-        :param Code: 错误码，0：成功，其他值：失败。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Code: 錯誤碼，0：成功，其他值：失敗。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Code: int
-        :param Msg: 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Msg: 錯誤訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Msg: str
-        :param Confidence: Ocr 文字涉黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Confidence: Ocr 文字涉黃評分，分值爲0到100。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Confidence: float
-        :param Suggestion: Ocr 文字涉黄结果建议，取值范围：
+        :param Suggestion: Ocr 文字涉黃結果建議，取值範圍：
 pass。
 review。
 block。
 
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Suggestion: str
-        :param SegmentSet: Ocr 文字有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SegmentSet: Ocr 文字有涉黃嫌疑的視訊片段清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SegmentSet: list of VodOcrTextSegmentItem
         """
         self.Status = None
@@ -1067,40 +1067,40 @@ block。
 
 
 class VodPornReviewResult(AbstractModel):
-    """内容审核鉴黄任务结果类型
+    """内容審核鑒黃任務結果類型
 
     """
 
     def __init__(self):
         """
-        :param Status: 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+        :param Status: 任務狀态，有 PROCESSING，SUCCESS 和 FAIL 三種。
         :type Status: str
-        :param Code: 错误码，0：成功，其他值：失败。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Code: 錯誤碼，0：成功，其他值：失敗。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Code: int
-        :param Msg: 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Msg: 錯誤訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Msg: str
-        :param Confidence: 视频鉴黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Confidence: 視訊鑒黃評分，分值爲0到100。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Confidence: float
-        :param Suggestion: 鉴黄结果建议，取值范围：
+        :param Suggestion: 鑒黃結果建議，取值範圍：
 pass。
 review。
 block。
 
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Suggestion: str
-        :param Label: 视频鉴黄结果标签，取值范围：
+        :param Label: 視訊鑒黃結果标簽，取值範圍：
 porn：色情。
 sexy：性感。
 vulgar：低俗。
-intimacy：亲密行为。
+intimacy：親密行爲。
 
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Label: str
-        :param SegmentSet: 有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SegmentSet: 有涉黃嫌疑的視訊片段清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SegmentSet: list of VodPornReviewSegmentItem
         """
         self.Status = None
@@ -1128,37 +1128,37 @@ intimacy：亲密行为。
 
 
 class VodPornReviewSegmentItem(AbstractModel):
-    """内容审核涉黄/暴恐嫌疑片段
+    """内容審核涉黃/暴恐嫌疑片段
 
     """
 
     def __init__(self):
         """
-        :param StartTimeOffset: 嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StartTimeOffset: 嫌疑片段起始的偏移時間，單位：秒。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StartTimeOffset: float
-        :param EndTimeOffset: 嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EndTimeOffset: 嫌疑片段結束的偏移時間，單位：秒。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EndTimeOffset: float
-        :param Confidence: 嫌疑片段涉黄分数。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Confidence: 嫌疑片段涉黃分數。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Confidence: float
-        :param Label: 嫌疑片段鉴黄结果标签。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Label: 嫌疑片段鑒黃結果标簽。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Label: str
-        :param Suggestion: 嫌疑片段鉴黄结果建议，取值范围：
+        :param Suggestion: 嫌疑片段鑒黃結果建議，取值範圍：
 pass。
 review。
 block。
 
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Suggestion: str
-        :param Url: 嫌疑图片 URL （图片不会永久存储，到达
-PicUrlExpireTime 时间点后图片将被删除）。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Url: 嫌疑圖片 URL （圖片不會永久儲存，到達
+PicUrlExpireTime 時間點後圖片将被删除）。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Url: str
-        :param PicUrlExpireTimeStamp: 嫌疑图片 URL 失效时间，使用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PicUrlExpireTimeStamp: 嫌疑圖片 URL 失效時間，使用 ISO 日期格式。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PicUrlExpireTimeStamp: int
         """
         self.StartTimeOffset = None
@@ -1181,44 +1181,44 @@ PicUrlExpireTime 时间点后图片将被删除）。
 
 
 class VodTerrorismReviewResult(AbstractModel):
-    """暴恐信息
+    """暴恐訊息
 
     """
 
     def __init__(self):
         """
-        :param Confidence: 视频暴恐评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Confidence: 視訊暴恐評分，分值爲0到100。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Confidence: float
-        :param Suggestion: 暴恐结果建议，取值范围：
+        :param Suggestion: 暴恐結果建議，取值範圍：
 pass。
 review。
 block。
 
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Suggestion: str
-        :param Label: 视频暴恐结果标签，取值范围：
-guns：武器枪支。
+        :param Label: 視訊暴恐結果标簽，取值範圍：
+guns：武器槍支。
 crowd：人群聚集。
-police：警察部队。
-bloody：血腥画面。
-banners：暴恐旗帜。
-militant：武装分子。
-explosion：爆炸火灾。
+police：警察部隊。
+bloody：血腥畫面。
+banners：暴恐旗幟。
+militant：武裝分子。
+explosion：爆炸火災。
 terrorists：暴恐人物。
 
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Label: str
-        :param Status: 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+        :param Status: 任務狀态，有 PROCESSING，SUCCESS 和 FAIL 三種。
         :type Status: str
-        :param Code: 错误码，0：成功，其他值：失败。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Code: 錯誤碼，0：成功，其他值：失敗。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Code: int
-        :param Msg: 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Msg: 錯誤訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Msg: str
-        :param SegmentSet: 有暴恐嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SegmentSet: 有暴恐嫌疑的視訊片段清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SegmentSet: list of VodPornReviewSegmentItem
         """
         self.Confidence = None
@@ -1246,26 +1246,26 @@ terrorists：暴恐人物。
 
 
 class VodVideoStreamItem(AbstractModel):
-    """文件视频流信息
+    """文件視訊流訊息
 
     """
 
     def __init__(self):
         """
-        :param Bitrate: 视频流的码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Bitrate: 視訊流的碼率，單位：bps。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Bitrate: int
-        :param Height: 视频流的高度，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Height: 視訊流的高度，單位：px。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Height: int
-        :param Width: 视频流的宽度，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Width: 視訊流的寬度，單位：px。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Width: int
-        :param Codec: 视频流的编码格式，例如 h264。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Codec: 視訊流的編碼格式，例如 h264。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Codec: str
-        :param Fps: 帧率，单位：hz。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Fps: 幀率，單位：hz。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Fps: int
         """
         self.Bitrate = None

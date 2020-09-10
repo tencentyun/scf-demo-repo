@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: Video_Transcode
   src: ./
-  description: 本示例通过配置COS触发器，当你在通过上传视频文件到cos时，通过云点播提供的接口，进行视频转码，并写入目标bucket中
+  description: 本範例通過配置COS觸發器，當你在通過上傳視訊文件到cos時，通過雲點播提供的介面，進行視訊轉碼，并寫入目标bucket中
   handler: index.main_handler
   runtime: Nodejs8.9
   namespace: default
@@ -14,7 +14,7 @@ inputs:
   memorySize: 128
   timeout: 3
   events:
-     - cos: # cos触发器
+     - cos: # cos觸發器
         name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
         parameters:
           bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com

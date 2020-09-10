@@ -26,9 +26,9 @@ class CisClient(AbstractClient):
 
 
     def CreateContainerInstance(self, request):
-        """此接口（CreateContainerInstance）用于创建容器实例
+        """此介面（CreateContainerInstance）用于創建容器實例
 
-        :param request: 调用CreateContainerInstance所需参数的结构体。
+        :param request: 調用CreateContainerInstance所需參數的結構體。
         :type request: :class:`tencentcloud.cis.v20180408.models.CreateContainerInstanceRequest`
         :rtype: :class:`tencentcloud.cis.v20180408.models.CreateContainerInstanceResponse`
 
@@ -54,9 +54,9 @@ class CisClient(AbstractClient):
 
 
     def DeleteContainerInstance(self, request):
-        """此接口（DeleteContainerInstance）用于删除容器实例
+        """此介面（DeleteContainerInstance）用于删除容器實例
 
-        :param request: 调用DeleteContainerInstance所需参数的结构体。
+        :param request: 調用DeleteContainerInstance所需參數的結構體。
         :type request: :class:`tencentcloud.cis.v20180408.models.DeleteContainerInstanceRequest`
         :rtype: :class:`tencentcloud.cis.v20180408.models.DeleteContainerInstanceResponse`
 
@@ -82,9 +82,9 @@ class CisClient(AbstractClient):
 
 
     def DescribeContainerInstance(self, request):
-        """此接口（DescribeContainerInstance）用于获取容器实例详情
+        """此介面（DescribeContainerInstance）用于獲取容器實例詳情
 
-        :param request: 调用DescribeContainerInstance所需参数的结构体。
+        :param request: 調用DescribeContainerInstance所需參數的結構體。
         :type request: :class:`tencentcloud.cis.v20180408.models.DescribeContainerInstanceRequest`
         :rtype: :class:`tencentcloud.cis.v20180408.models.DescribeContainerInstanceResponse`
 
@@ -110,9 +110,9 @@ class CisClient(AbstractClient):
 
 
     def DescribeContainerInstanceEvents(self, request):
-        """此接口（DescribeContainerInstanceEvents）用于查询容器实例事件列表
+        """此介面（DescribeContainerInstanceEvents）用于查詢容器實例事件清單
 
-        :param request: 调用DescribeContainerInstanceEvents所需参数的结构体。
+        :param request: 調用DescribeContainerInstanceEvents所需參數的結構體。
         :type request: :class:`tencentcloud.cis.v20180408.models.DescribeContainerInstanceEventsRequest`
         :rtype: :class:`tencentcloud.cis.v20180408.models.DescribeContainerInstanceEventsResponse`
 
@@ -138,9 +138,9 @@ class CisClient(AbstractClient):
 
 
     def DescribeContainerInstances(self, request):
-        """此接口（DescribeContainerInstances）查询容器实例列表
+        """此介面（DescribeContainerInstances）查詢容器實例清單
 
-        :param request: 调用DescribeContainerInstances所需参数的结构体。
+        :param request: 調用DescribeContainerInstances所需參數的結構體。
         :type request: :class:`tencentcloud.cis.v20180408.models.DescribeContainerInstancesRequest`
         :rtype: :class:`tencentcloud.cis.v20180408.models.DescribeContainerInstancesResponse`
 
@@ -166,9 +166,9 @@ class CisClient(AbstractClient):
 
 
     def DescribeContainerLog(self, request):
-        """此接口（DescribeContainerLog）用于获取容器日志信息
+        """此介面（DescribeContainerLog）用于獲取容器日志訊息
 
-        :param request: 调用DescribeContainerLog所需参数的结构体。
+        :param request: 調用DescribeContainerLog所需參數的結構體。
         :type request: :class:`tencentcloud.cis.v20180408.models.DescribeContainerLogRequest`
         :rtype: :class:`tencentcloud.cis.v20180408.models.DescribeContainerLogResponse`
 
@@ -194,9 +194,9 @@ class CisClient(AbstractClient):
 
 
     def InquiryPriceCreateCis(self, request):
-        """此接口（InquiryPriceCreateCis）用于查询容器实例价格
+        """此介面（InquiryPriceCreateCis）用于查詢容器實例價格
 
-        :param request: 调用InquiryPriceCreateCis所需参数的结构体。
+        :param request: 調用InquiryPriceCreateCis所需參數的結構體。
         :type request: :class:`tencentcloud.cis.v20180408.models.InquiryPriceCreateCisRequest`
         :rtype: :class:`tencentcloud.cis.v20180408.models.InquiryPriceCreateCisResponse`
 

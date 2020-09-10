@@ -26,15 +26,15 @@ class ScfClient(AbstractClient):
 
 
     def CopyFunction(self, request):
-        """复制一个函数，可以选择将复制出的新函数放置在同一个namespace或另一个namespace。
-        注：本接口**不会**复制函数的以下对象或属性：
-        1. 函数的触发器
+        """複制一個函數，可以選擇将複制出的新函數放置在同一個namespace或另一個namespace。
+        注：本介面**不會**複制函數的以下對象或屬性：
+        1. 函數的觸發器
         2. 除了$LATEST以外的其它版本
-        3. 函数配置的日志投递到的CLS目标
+        3. 函數配置的日志投遞到的CLS目标
 
-        如有需要，您可以在复制后手动修改新函数。
+        如有需要，您可以在複制後手動修改新函數。
 
-        :param request: 调用CopyFunction所需参数的结构体。
+        :param request: 調用CopyFunction所需參數的結構體。
         :type request: :class:`tencentcloud.scf.v20180416.models.CopyFunctionRequest`
         :rtype: :class:`tencentcloud.scf.v20180416.models.CopyFunctionResponse`
 
@@ -60,9 +60,9 @@ class ScfClient(AbstractClient):
 
 
     def CreateFunction(self, request):
-        """该接口根据传入参数创建新的函数。
+        """該介面根據傳入參數創建新的函數。
 
-        :param request: 调用CreateFunction所需参数的结构体。
+        :param request: 調用CreateFunction所需參數的結構體。
         :type request: :class:`tencentcloud.scf.v20180416.models.CreateFunctionRequest`
         :rtype: :class:`tencentcloud.scf.v20180416.models.CreateFunctionResponse`
 
@@ -88,9 +88,9 @@ class ScfClient(AbstractClient):
 
 
     def CreateTrigger(self, request):
-        """该接口根据参数输入设置新的触发方式。
+        """該介面根據參數輸入設置新的觸發方式。
 
-        :param request: 调用CreateTrigger所需参数的结构体。
+        :param request: 調用CreateTrigger所需參數的結構體。
         :type request: :class:`tencentcloud.scf.v20180416.models.CreateTriggerRequest`
         :rtype: :class:`tencentcloud.scf.v20180416.models.CreateTriggerResponse`
 
@@ -116,9 +116,9 @@ class ScfClient(AbstractClient):
 
 
     def DeleteFunction(self, request):
-        """该接口根据传入参数删除函数。
+        """該介面根據傳入參數删除函數。
 
-        :param request: 调用DeleteFunction所需参数的结构体。
+        :param request: 調用DeleteFunction所需參數的結構體。
         :type request: :class:`tencentcloud.scf.v20180416.models.DeleteFunctionRequest`
         :rtype: :class:`tencentcloud.scf.v20180416.models.DeleteFunctionResponse`
 
@@ -144,9 +144,9 @@ class ScfClient(AbstractClient):
 
 
     def DeleteTrigger(self, request):
-        """该接口根据参数传入删除已有的触发方式。
+        """該介面根據參數傳入删除已有的觸發方式。
 
-        :param request: 调用DeleteTrigger所需参数的结构体。
+        :param request: 調用DeleteTrigger所需參數的結構體。
         :type request: :class:`tencentcloud.scf.v20180416.models.DeleteTriggerRequest`
         :rtype: :class:`tencentcloud.scf.v20180416.models.DeleteTriggerResponse`
 
@@ -172,9 +172,9 @@ class ScfClient(AbstractClient):
 
 
     def GetFunction(self, request):
-        """该接口获取某个函数的详细信息，包括名称、代码、处理方法、关联触发器和超时时间等字段。
+        """該介面獲取某個函數的詳細訊息，包括名稱、代碼、處理方法、關聯觸發器和超時時間等欄位。
 
-        :param request: 调用GetFunction所需参数的结构体。
+        :param request: 調用GetFunction所需參數的結構體。
         :type request: :class:`tencentcloud.scf.v20180416.models.GetFunctionRequest`
         :rtype: :class:`tencentcloud.scf.v20180416.models.GetFunctionResponse`
 
@@ -200,9 +200,9 @@ class ScfClient(AbstractClient):
 
 
     def GetFunctionLogs(self, request):
-        """该接口根据指定的日志查询条件返回函数运行日志。
+        """該介面根據指定的日志查詢條件返回函數運作日志。
 
-        :param request: 调用GetFunctionLogs所需参数的结构体。
+        :param request: 調用GetFunctionLogs所需參數的結構體。
         :type request: :class:`tencentcloud.scf.v20180416.models.GetFunctionLogsRequest`
         :rtype: :class:`tencentcloud.scf.v20180416.models.GetFunctionLogsResponse`
 
@@ -228,9 +228,9 @@ class ScfClient(AbstractClient):
 
 
     def Invoke(self, request):
-        """该接口用于运行函数。
+        """該介面用于運作函數。
 
-        :param request: 调用Invoke所需参数的结构体。
+        :param request: 調用Invoke所需參數的結構體。
         :type request: :class:`tencentcloud.scf.v20180416.models.InvokeRequest`
         :rtype: :class:`tencentcloud.scf.v20180416.models.InvokeResponse`
 
@@ -256,9 +256,9 @@ class ScfClient(AbstractClient):
 
 
     def ListFunctions(self, request):
-        """该接口根据传入的查询参数返回相关函数信息。
+        """該介面根據傳入的查詢參數返回相關函數訊息。
 
-        :param request: 调用ListFunctions所需参数的结构体。
+        :param request: 調用ListFunctions所需參數的結構體。
         :type request: :class:`tencentcloud.scf.v20180416.models.ListFunctionsRequest`
         :rtype: :class:`tencentcloud.scf.v20180416.models.ListFunctionsResponse`
 
@@ -284,9 +284,9 @@ class ScfClient(AbstractClient):
 
 
     def UpdateFunctionCode(self, request):
-        """该接口根据传入参数更新函数代码。
+        """該介面根據傳入參數更新函數代碼。
 
-        :param request: 调用UpdateFunctionCode所需参数的结构体。
+        :param request: 調用UpdateFunctionCode所需參數的結構體。
         :type request: :class:`tencentcloud.scf.v20180416.models.UpdateFunctionCodeRequest`
         :rtype: :class:`tencentcloud.scf.v20180416.models.UpdateFunctionCodeResponse`
 
@@ -312,9 +312,9 @@ class ScfClient(AbstractClient):
 
 
     def UpdateFunctionConfiguration(self, request):
-        """该接口根据传入参数更新函数配置。
+        """該介面根據傳入參數更新函數配置。
 
-        :param request: 调用UpdateFunctionConfiguration所需参数的结构体。
+        :param request: 調用UpdateFunctionConfiguration所需參數的結構體。
         :type request: :class:`tencentcloud.scf.v20180416.models.UpdateFunctionConfigurationRequest`
         :rtype: :class:`tencentcloud.scf.v20180416.models.UpdateFunctionConfigurationResponse`
 

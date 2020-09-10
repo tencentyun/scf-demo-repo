@@ -17,16 +17,16 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AgeInfo(AbstractModel):
-    """人脸变年龄信息
+    """人臉變年齡訊息
 
     """
 
     def __init__(self):
         """
-        :param Age: 当前只支持设置为10且不可调整（后续放开后再知会）。
+        :param Age: 當前只支援設置爲10且不可調整（後續放開後再知會）。
         :type Age: int
-        :param FaceRect: 人脸框位置。若不输入则选择 Image 或 Url 中面积最大的人脸。  
-您可以通过 [人脸检测与分析](https://cloud.tencent.com/document/api/867/32800)  接口获取人脸框位置信息。
+        :param FaceRect: 人臉框位置。若不輸入則選擇 Image 或 Url 中面積最大的人臉。  
+您可以通過 [人臉檢測與分析](https://cloud.tencent.com/document/api/867/32800)  介面獲取人臉框位置訊息。
         :type FaceRect: :class:`tencentcloud.ft.v20200304.models.FaceRect`
         """
         self.Age = None
@@ -41,23 +41,23 @@ class AgeInfo(AbstractModel):
 
 
 class ChangeAgePicRequest(AbstractModel):
-    """ChangeAgePic请求参数结构体
+    """ChangeAgePic請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AgeInfos: 人脸变老变年轻信息。 
-您可以输入最多3个 AgeInfo 来实现给一张图中的最多3张人脸变老变年轻。
+        :param AgeInfos: 人臉變老變年輕訊息。 
+您可以輸入最多3個 AgeInfo 來實現給一張圖中的最多3張人臉變老變年輕。
         :type AgeInfos: list of AgeInfo
-        :param Image: 图片 base64 数据，base64 编码后大小不可超过5M。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Image: 圖片 base64 數據，base64 編碼後大小不可超過5M。 
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
-        :param Url: 图片的 Url ，对应图片 base64 编码后大小不可超过5M。 
-图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片存储于腾讯云的 Url 可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Url: 圖片的 Url ，對應圖片 base64 編碼後大小不可超過5M。 
+圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
+圖片儲存于Top Cloud 的 Url 可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+非Top Cloud 儲存的Url速度和穩定性可能受一定影響。 
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
         """
         self.AgeInfos = None
@@ -77,15 +77,15 @@ class ChangeAgePicRequest(AbstractModel):
 
 
 class ChangeAgePicResponse(AbstractModel):
-    """ChangeAgePic返回参数结构体
+    """ChangeAgePic返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResultImage: base64编码图片
+        :param ResultImage: base64編碼圖片
         :type ResultImage: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResultImage = None
@@ -98,19 +98,19 @@ class ChangeAgePicResponse(AbstractModel):
 
 
 class FaceRect(AbstractModel):
-    """人脸框位置
+    """人臉框位置
 
     """
 
     def __init__(self):
         """
-        :param X: 人脸框左上角横坐标。
+        :param X: 人臉框左上角橫坐标。
         :type X: int
-        :param Y: 人脸框左上角纵坐标。
+        :param Y: 人臉框左上角縱坐标。
         :type Y: int
-        :param Width: 人脸框宽度。
+        :param Width: 人臉框寬度。
         :type Width: int
-        :param Height: 人脸框高度。
+        :param Height: 人臉框高度。
         :type Height: int
         """
         self.X = None
@@ -127,16 +127,16 @@ class FaceRect(AbstractModel):
 
 
 class GenderInfo(AbstractModel):
-    """人脸转换性别信息
+    """人臉轉換性别訊息
 
     """
 
     def __init__(self):
         """
-        :param Gender: 选择转换方向，0：男变女，1：女变男。
+        :param Gender: 選擇轉換方向，0：男變女，1：女變男。
         :type Gender: int
-        :param FaceRect: 人脸框位置。若不输入则选择 Image 或 Url 中面积最大的人脸。  
-您可以通过 [人脸检测与分析](https://cloud.tencent.com/document/api/867/32800)  接口获取人脸框位置信息。
+        :param FaceRect: 人臉框位置。若不輸入則選擇 Image 或 Url 中面積最大的人臉。  
+您可以通過 [人臉檢測與分析](https://cloud.tencent.com/document/api/867/32800)  介面獲取人臉框位置訊息。
         :type FaceRect: :class:`tencentcloud.ft.v20200304.models.FaceRect`
         """
         self.Gender = None
@@ -151,23 +151,23 @@ class GenderInfo(AbstractModel):
 
 
 class SwapGenderPicRequest(AbstractModel):
-    """SwapGenderPic请求参数结构体
+    """SwapGenderPic請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GenderInfos: 人脸转化性别信息。 
-您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸转换性别。
+        :param GenderInfos: 人臉轉化性别訊息。 
+您可以輸入最多3個 GenderInfo 來實現給一張圖中的最多3張人臉轉換性别。
         :type GenderInfos: list of GenderInfo
-        :param Image: 图片 base64 数据，base64 编码后大小不可超过5M。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Image: 圖片 base64 數據，base64 編碼後大小不可超過5M。 
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
-        :param Url: 图片的 Url ，对应图片 base64 编码后大小不可超过5M。 
-图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片存储于腾讯云的 Url 可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Url: 圖片的 Url ，對應圖片 base64 編碼後大小不可超過5M。 
+圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
+圖片儲存于Top Cloud 的 Url 可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+非Top Cloud 儲存的Url速度和穩定性可能受一定影響。 
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
         """
         self.GenderInfos = None
@@ -187,15 +187,15 @@ class SwapGenderPicRequest(AbstractModel):
 
 
 class SwapGenderPicResponse(AbstractModel):
-    """SwapGenderPic返回参数结构体
+    """SwapGenderPic返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResultImage: 结果图片Base64信息。
+        :param ResultImage: 結果圖片Base64訊息。
         :type ResultImage: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResultImage = None

@@ -26,7 +26,7 @@ class DtsClient(AbstractClient):
 
 
     def ActivateSubscribe(self, request):
-        """本接口用于配置数据订阅，只有在未配置状态的订阅实例才能调用此接口。
+        """本介面用于配置數據訂閱，只有在未配置狀态的訂閱實例才能調用此介面。
 
         :param request: Request instance for ActivateSubscribe.
         :type request: :class:`tencentcloud.dts.v20180330.models.ActivateSubscribeRequest`
@@ -54,9 +54,9 @@ class DtsClient(AbstractClient):
 
 
     def CompleteMigrateJob(self, request):
-        """本接口（CompleteMigrateJob）用于完成数据迁移任务。
-        选择采用增量迁移方式的任务, 需要在迁移进度进入准备完成阶段后, 调用本接口, 停止迁移增量数据。
-        通过DescribeMigrateJobs接口查询到任务的状态为准备完成（status=8）时，此时可以调用本接口完成迁移任务。
+        """本介面（CompleteMigrateJob）用于完成數據遷移任務。
+        選擇采用增量遷移方式的任務, 需要在遷移進度進入準備完成階段後, 調用本介面, 停止遷移增量數據。
+        通過DescribeMigrateJobs介面查詢到任務的狀态爲準備完成（status=8）時，此時可以調用本介面完成遷移任務。
 
         :param request: Request instance for CompleteMigrateJob.
         :type request: :class:`tencentcloud.dts.v20180330.models.CompleteMigrateJobRequest`
@@ -84,9 +84,9 @@ class DtsClient(AbstractClient):
 
 
     def CreateMigrateCheckJob(self, request):
-        """创建校验迁移任务
-        在开始迁移前, 必须调用本接口创建校验, 且校验成功后才能开始迁移. 校验的结果可以通过DescribeMigrateCheckJob查看.
-        校验成功后,迁移任务若有修改, 则必须重新创建校验并通过后, 才能开始迁移.
+        """創建校驗遷移任務
+        在開始遷移前, 必須調用本介面創建校驗, 且校驗成功後才能開始遷移. 校驗的結果可以通過DescribeMigrateCheckJob檢視.
+        校驗成功後,遷移任務若有修改, 則必須重新創建校驗并通過後, 才能開始遷移.
 
         :param request: Request instance for CreateMigrateCheckJob.
         :type request: :class:`tencentcloud.dts.v20180330.models.CreateMigrateCheckJobRequest`
@@ -114,9 +114,9 @@ class DtsClient(AbstractClient):
 
 
     def CreateMigrateJob(self, request):
-        """本接口（CreateMigrateJob）用于创建数据迁移任务。
+        """本介面（CreateMigrateJob）用于創建數據遷移任務。
 
-        如果是金融区链路, 请使用域名: dts.ap-shenzhen-fsi.tencentcloudapi.com
+        如果是金融區鏈路, 請使用域名: dts.ap-shenzhen-fsi.tencentcloudapi.com
 
         :param request: Request instance for CreateMigrateJob.
         :type request: :class:`tencentcloud.dts.v20180330.models.CreateMigrateJobRequest`
@@ -144,7 +144,7 @@ class DtsClient(AbstractClient):
 
 
     def CreateSubscribe(self, request):
-        """本接口(CreateSubscribe)用于创建一个数据订阅实例。
+        """本介面(CreateSubscribe)用于創建一個數據訂閱實例。
 
         :param request: Request instance for CreateSubscribe.
         :type request: :class:`tencentcloud.dts.v20180330.models.CreateSubscribeRequest`
@@ -172,8 +172,8 @@ class DtsClient(AbstractClient):
 
 
     def CreateSyncCheckJob(self, request):
-        """在调用 StartSyncJob 接口启动灾备同步前, 必须调用本接口创建校验, 且校验成功后才能开始同步数据. 校验的结果可以通过 DescribeSyncCheckJob 查看.
-        校验成功后才能启动同步.
+        """在調用 StartSyncJob 介面啓動災備同步前, 必須調用本介面創建校驗, 且校驗成功後才能開始同步數據. 校驗的結果可以通過 DescribeSyncCheckJob 檢視.
+        校驗成功後才能啓動同步.
 
         :param request: Request instance for CreateSyncCheckJob.
         :type request: :class:`tencentcloud.dts.v20180330.models.CreateSyncCheckJobRequest`
@@ -201,8 +201,8 @@ class DtsClient(AbstractClient):
 
 
     def CreateSyncJob(self, request):
-        """本接口(CreateSyncJob)用于创建灾备同步任务。
-        创建同步任务后，可以通过 CreateSyncCheckJob 接口发起校验任务。校验成功后才可以通过 StartSyncJob 接口启动同步任务。
+        """本介面(CreateSyncJob)用于創建災備同步任務。
+        創建同步任務後，可以通過 CreateSyncCheckJob 介面發起校驗任務。校驗成功後才可以通過 StartSyncJob 介面啓動同步任務。
 
         :param request: Request instance for CreateSyncJob.
         :type request: :class:`tencentcloud.dts.v20180330.models.CreateSyncJobRequest`
@@ -230,7 +230,7 @@ class DtsClient(AbstractClient):
 
 
     def DeleteMigrateJob(self, request):
-        """本接口（DeleteMigrationJob）用于删除数据迁移任务。当通过DescribeMigrateJobs接口查询到任务的状态为：检验中（status=3）、运行中（status=7）、准备完成（status=8）、撤销中（status=11）或者完成中（status=12）时，不允许删除任务。
+        """本介面（DeleteMigrationJob）用于删除數據遷移任務。當通過DescribeMigrateJobs介面查詢到任務的狀态爲：檢驗中（status=3）、運作中（status=7）、準備完成（status=8）、撤銷中（status=11）或者完成中（status=12）時，不允許删除任務。
 
         :param request: Request instance for DeleteMigrateJob.
         :type request: :class:`tencentcloud.dts.v20180330.models.DeleteMigrateJobRequest`
@@ -258,7 +258,7 @@ class DtsClient(AbstractClient):
 
 
     def DeleteSyncJob(self, request):
-        """删除灾备同步任务 （运行中的同步任务不能删除）。
+        """删除災備同步任務 （運作中的同步任務不能删除）。
 
         :param request: Request instance for DeleteSyncJob.
         :type request: :class:`tencentcloud.dts.v20180330.models.DeleteSyncJobRequest`
@@ -286,7 +286,7 @@ class DtsClient(AbstractClient):
 
 
     def DescribeAsyncRequestInfo(self, request):
-        """本接口（DescribeAsyncRequestInfo）用于查询任务执行结果
+        """本介面（DescribeAsyncRequestInfo）用于查詢任務執行結果
 
         :param request: Request instance for DescribeAsyncRequestInfo.
         :type request: :class:`tencentcloud.dts.v20180330.models.DescribeAsyncRequestInfoRequest`
@@ -314,9 +314,9 @@ class DtsClient(AbstractClient):
 
 
     def DescribeMigrateCheckJob(self, request):
-        """本接口用于创建校验后,获取校验的结果. 能查询到当前校验的状态和进度.
-        若通过校验, 则可调用'StartMigrateJob' 开始迁移.
-        若未通过校验, 则能查询到校验失败的原因. 请按照报错, 通过'ModifyMigrateJob'修改迁移配置或是调整源/目标实例的相关参数.
+        """本介面用于創建校驗後,獲取校驗的結果. 能查詢到當前校驗的狀态和進度.
+        若通過校驗, 則可調用'StartMigrateJob' 開始遷移.
+        若未通過校驗, 則能查詢到校驗失敗的原因. 請按照報錯, 通過'ModifyMigrateJob'修改遷移配置或是調整源/目标實例的相關參數.
 
         :param request: Request instance for DescribeMigrateCheckJob.
         :type request: :class:`tencentcloud.dts.v20180330.models.DescribeMigrateCheckJobRequest`
@@ -344,8 +344,8 @@ class DtsClient(AbstractClient):
 
 
     def DescribeMigrateJobs(self, request):
-        """查询数据迁移任务.
-        如果是金融区链路, 请使用域名: https://dts.ap-shenzhen-fsi.tencentcloudapi.com
+        """查詢數據遷移任務.
+        如果是金融區鏈路, 請使用域名: https://dts.ap-shenzhen-fsi.tencentcloudapi.com
 
         :param request: Request instance for DescribeMigrateJobs.
         :type request: :class:`tencentcloud.dts.v20180330.models.DescribeMigrateJobsRequest`
@@ -373,7 +373,7 @@ class DtsClient(AbstractClient):
 
 
     def DescribeRegionConf(self, request):
-        """本接口（DescribeRegionConf）用于查询可售卖订阅实例的地域
+        """本介面（DescribeRegionConf）用于查詢可售賣訂閱實例的地域
 
         :param request: Request instance for DescribeRegionConf.
         :type request: :class:`tencentcloud.dts.v20180330.models.DescribeRegionConfRequest`
@@ -401,7 +401,7 @@ class DtsClient(AbstractClient):
 
 
     def DescribeSubscribeConf(self, request):
-        """本接口（DescribeSubscribeConf）用于查询订阅实例配置
+        """本介面（DescribeSubscribeConf）用于查詢訂閱實例配置
 
         :param request: Request instance for DescribeSubscribeConf.
         :type request: :class:`tencentcloud.dts.v20180330.models.DescribeSubscribeConfRequest`
@@ -429,7 +429,7 @@ class DtsClient(AbstractClient):
 
 
     def DescribeSubscribes(self, request):
-        """本接口(DescribeSubscribes)获取数据订阅实例信息列表，默认分页，每次返回20条
+        """本介面(DescribeSubscribes)獲取數據訂閱實例訊息清單，預設分頁，每次返回20條
 
         :param request: Request instance for DescribeSubscribes.
         :type request: :class:`tencentcloud.dts.v20180330.models.DescribeSubscribesRequest`
@@ -457,12 +457,12 @@ class DtsClient(AbstractClient):
 
 
     def DescribeSyncCheckJob(self, request):
-        """本接口用于在通过 CreateSyncCheckJob 接口创建灾备同步校验任务后，获取校验的结果。能查询到当前校验的状态和进度。
-        若通过校验, 则可调用 StartSyncJob 启动同步任务。
-        若未通过校验, 则会返回校验失败的原因。 可通过 ModifySyncJob 修改配置，然后再次发起校验。
-        校验任务需要大概约30秒，当返回的 Status 不为 finished 时表示尚未校验完成，需要轮询该接口。
-        如果 Status=finished 且 CheckFlag=1 时表示校验成功。
-        如果 Status=finished 且 CheckFlag !=1 时表示校验失败。
+        """本介面用于在通過 CreateSyncCheckJob 介面創建災備同步校驗任務後，獲取校驗的結果。能查詢到當前校驗的狀态和進度。
+        若通過校驗, 則可調用 StartSyncJob 啓動同步任務。
+        若未通過校驗, 則會返回校驗失敗的原因。 可通過 ModifySyncJob 修改配置，然後再次發起校驗。
+        校驗任務需要大概約30秒，當返回的 Status 不爲 finished 時表示尚未校驗完成，需要輪詢該介面。
+        如果 Status=finished 且 CheckFlag=1 時表示校驗成功。
+        如果 Status=finished 且 CheckFlag !=1 時表示校驗失敗。
 
         :param request: Request instance for DescribeSyncCheckJob.
         :type request: :class:`tencentcloud.dts.v20180330.models.DescribeSyncCheckJobRequest`
@@ -490,7 +490,7 @@ class DtsClient(AbstractClient):
 
 
     def DescribeSyncJobs(self, request):
-        """查询在迁移平台发起的灾备同步任务
+        """查詢在遷移平台發起的災備同步任務
 
         :param request: Request instance for DescribeSyncJobs.
         :type request: :class:`tencentcloud.dts.v20180330.models.DescribeSyncJobsRequest`
@@ -518,7 +518,7 @@ class DtsClient(AbstractClient):
 
 
     def IsolateSubscribe(self, request):
-        """本接口（IsolateSubscribe）用于隔离小时计费的订阅实例。调用后，订阅实例将不能使用，同时停止计费。
+        """本介面（IsolateSubscribe）用于隔離小時計費的訂閱實例。調用後，訂閱實例将不能使用，同時停止計費。
 
         :param request: Request instance for IsolateSubscribe.
         :type request: :class:`tencentcloud.dts.v20180330.models.IsolateSubscribeRequest`
@@ -546,10 +546,10 @@ class DtsClient(AbstractClient):
 
 
     def ModifyMigrateJob(self, request):
-        """本接口（ModifyMigrateJob）用于修改数据迁移任务。
-        当迁移任务处于下述状态时，允许调用本接口修改迁移任务：迁移创建中（status=1）、 校验成功(status=4)、校验失败(status=5)、迁移失败(status=10)。但源实例、目标实例类型和目标实例地域不允许修改。
+        """本介面（ModifyMigrateJob）用于修改數據遷移任務。
+        當遷移任務處于下述狀态時，允許調用本介面修改遷移任務：遷移創建中（status=1）、 校驗成功(status=4)、校驗失敗(status=5)、遷移失敗(status=10)。但源實例、目标實例類型和目标實例地域不允許修改。
 
-        如果是金融区链路, 请使用域名: dts.ap-shenzhen-fsi.tencentcloudapi.com
+        如果是金融區鏈路, 請使用域名: dts.ap-shenzhen-fsi.tencentcloudapi.com
 
         :param request: Request instance for ModifyMigrateJob.
         :type request: :class:`tencentcloud.dts.v20180330.models.ModifyMigrateJobRequest`
@@ -577,7 +577,7 @@ class DtsClient(AbstractClient):
 
 
     def ModifySubscribeConsumeTime(self, request):
-        """本接口(ModifySubscribeConsumeTime)用于修改数据订阅通道的消费时间点
+        """本介面(ModifySubscribeConsumeTime)用于修改數據訂閱通道的消費時間點
 
         :param request: Request instance for ModifySubscribeConsumeTime.
         :type request: :class:`tencentcloud.dts.v20180330.models.ModifySubscribeConsumeTimeRequest`
@@ -605,7 +605,7 @@ class DtsClient(AbstractClient):
 
 
     def ModifySubscribeName(self, request):
-        """本接口(ModifySubscribeName)用于修改数据订阅实例的名称
+        """本介面(ModifySubscribeName)用于修改數據訂閱實例的名稱
 
         :param request: Request instance for ModifySubscribeName.
         :type request: :class:`tencentcloud.dts.v20180330.models.ModifySubscribeNameRequest`
@@ -633,7 +633,7 @@ class DtsClient(AbstractClient):
 
 
     def ModifySubscribeObjects(self, request):
-        """本接口(ModifySubscribeObjects)用于修改数据订阅通道的订阅规则
+        """本介面(ModifySubscribeObjects)用于修改數據訂閱通道的訂閱規則
 
         :param request: Request instance for ModifySubscribeObjects.
         :type request: :class:`tencentcloud.dts.v20180330.models.ModifySubscribeObjectsRequest`
@@ -661,7 +661,7 @@ class DtsClient(AbstractClient):
 
 
     def ModifySubscribeVipVport(self, request):
-        """本接口(ModifySubscribeVipVport)用于修改数据订阅实例的IP和端口号
+        """本介面(ModifySubscribeVipVport)用于修改數據訂閱實例的IP和端口号
 
         :param request: Request instance for ModifySubscribeVipVport.
         :type request: :class:`tencentcloud.dts.v20180330.models.ModifySubscribeVipVportRequest`
@@ -689,9 +689,9 @@ class DtsClient(AbstractClient):
 
 
     def ModifySyncJob(self, request):
-        """修改灾备同步任务.
-        当同步任务处于下述状态时, 允许调用本接口: 同步任务创建中, 创建完成, 校验成功, 校验失败.
-        源实例和目标实例信息不允许修改，可以修改任务名、需要同步的库表。
+        """修改災備同步任務.
+        當同步任務處于下述狀态時, 允許調用本介面: 同步任務創建中, 創建完成, 校驗成功, 校驗失敗.
+        源實例和目标實例訊息不允許修改，可以修改任務名、需要同步的庫表。
 
         :param request: Request instance for ModifySyncJob.
         :type request: :class:`tencentcloud.dts.v20180330.models.ModifySyncJobRequest`
@@ -719,7 +719,7 @@ class DtsClient(AbstractClient):
 
 
     def OfflineIsolatedSubscribe(self, request):
-        """本接口（OfflineIsolatedSubscribe）用于下线已隔离的数据订阅实例
+        """本介面（OfflineIsolatedSubscribe）用于下線已隔離的數據訂閱實例
 
         :param request: Request instance for OfflineIsolatedSubscribe.
         :type request: :class:`tencentcloud.dts.v20180330.models.OfflineIsolatedSubscribeRequest`
@@ -747,7 +747,7 @@ class DtsClient(AbstractClient):
 
 
     def ResetSubscribe(self, request):
-        """本接口(ResetSubscribe)用于重置数据订阅实例，已经激活的数据订阅实例，重置后可以使用ActivateSubscribe接口绑定其他的数据库实例
+        """本介面(ResetSubscribe)用于重置數據訂閱實例，已經啟動的數據訂閱實例，重置後可以使用ActivateSubscribe介面綁定其他的資料庫實例
 
         :param request: Request instance for ResetSubscribe.
         :type request: :class:`tencentcloud.dts.v20180330.models.ResetSubscribeRequest`
@@ -775,8 +775,8 @@ class DtsClient(AbstractClient):
 
 
     def StartMigrateJob(self, request):
-        """本接口（StartMigrationJob）用于启动迁移任务。非定时迁移任务会在调用后立即开始迁移，定时任务则会开始倒计时。
-        调用此接口前，请务必先使用CreateMigrateCheckJob校验数据迁移任务，并通过DescribeMigrateJobs接口查询到任务状态为校验通过（status=4）时，才能启动数据迁移任务。
+        """本介面（StartMigrationJob）用于啓動遷移任務。非定時遷移任務會在調用後立即開始遷移，定時任務則會開始倒計時。
+        調用此介面前，請務必先使用CreateMigrateCheckJob校驗數據遷移任務，并通過DescribeMigrateJobs介面查詢到任務狀态爲校驗通過（status=4）時，才能啓動數據遷移任務。
 
         :param request: Request instance for StartMigrateJob.
         :type request: :class:`tencentcloud.dts.v20180330.models.StartMigrateJobRequest`
@@ -804,7 +804,7 @@ class DtsClient(AbstractClient):
 
 
     def StartSyncJob(self, request):
-        """创建的灾备同步任务在通过 CreateSyncCheckJob 和 DescribeSyncCheckJob 确定校验成功后，可以调用该接口启动同步
+        """創建的災備同步任務在通過 CreateSyncCheckJob 和 DescribeSyncCheckJob 确定校驗成功後，可以調用該介面啓動同步
 
         :param request: Request instance for StartSyncJob.
         :type request: :class:`tencentcloud.dts.v20180330.models.StartSyncJobRequest`
@@ -832,8 +832,8 @@ class DtsClient(AbstractClient):
 
 
     def StopMigrateJob(self, request):
-        """本接口（StopMigrateJob）用于撤销数据迁移任务。
-        在迁移过程中允许调用该接口撤销迁移, 撤销迁移的任务会失败。通过DescribeMigrateJobs接口查询到任务状态为运行中（status=7）或准备完成（status=8）时，才能撤销数据迁移任务。
+        """本介面（StopMigrateJob）用于撤銷數據遷移任務。
+        在遷移過程中允許調用該介面撤銷遷移, 撤銷遷移的任務會失敗。通過DescribeMigrateJobs介面查詢到任務狀态爲運作中（status=7）或準備完成（status=8）時，才能撤銷數據遷移任務。
 
         :param request: Request instance for StopMigrateJob.
         :type request: :class:`tencentcloud.dts.v20180330.models.StopMigrateJobRequest`
@@ -861,7 +861,7 @@ class DtsClient(AbstractClient):
 
 
     def SwitchDrToMaster(self, request):
-        """将灾备升级为主实例，停止从原来所属主实例的同步，断开主备关系。
+        """将災備升級爲主實例，停止從原來所屬主實例的同步，斷開主備關系。
 
         :param request: Request instance for SwitchDrToMaster.
         :type request: :class:`tencentcloud.dts.v20180330.models.SwitchDrToMasterRequest`

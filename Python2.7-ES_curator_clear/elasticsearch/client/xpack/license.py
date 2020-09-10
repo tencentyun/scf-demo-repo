@@ -34,4 +34,3 @@ class LicenseClient(NamespacedClient):
         """
         return self.transport.perform_request('PUT', '/_xpack/license',
             params=params, body=body)
-

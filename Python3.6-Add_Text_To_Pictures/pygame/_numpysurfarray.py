@@ -353,4 +353,3 @@ def map_array(surface, array):
     target = numpy_empty(shape[:-1], numpy.int32)
     pix_map_array(target, array, surface)
     return target
-

@@ -501,4 +501,3 @@ class MlClient(NamespacedClient):
         return self.transport.perform_request('DELETE', _make_path('_xpack',
             'ml', 'anomaly_detectors', job_id, 'model_snapshots', snapshot_id),
             params=params)
-

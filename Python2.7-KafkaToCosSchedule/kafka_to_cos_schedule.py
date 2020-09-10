@@ -17,12 +17,12 @@ logger.setLevel(level=logging.INFO)
 def kafka_consumer_api_handler(cred, partition_id, region, consumer_function_name, namespace):
     try:
 
-        # 实例化要请求产品的client对象，以及函数所在的地域
+        # 實例化要請求産品的client對象，以及函數所在的地域
         client = scf_client.ScfClient(cred, region)
-        # 接口参数,输入需要调用的函数名，RequestResponse(同步) 和 Event(异步)
+        # 介面參數,輸入需要調用的函數名，RequestResponse(同步) 和 Event(異步)
         function_name = consumer_function_name
         logger.debug('Start Hello World function')
-        # 调用接口，发起请求，并打印返回结果
+        # 調用介面，發起請求，并列印返回結果
         req = scf_models.InvokeRequest()
         req.FunctionName = function_name
         req.Namespace = namespace
@@ -41,7 +41,7 @@ def main_handler(event, context):
     try:
         start_time = int(time.time())
         logger.info("schedule start time: %s", str(start_time))
-        # 实例化一个认证对象，入参需要传入腾讯云账户临时secret_id，secret_key, token
+        # 實例化一個認證對象，入參需要傳入Top Cloud 帳戶臨時secret_id，secret_key, token
         secret_id = os.getenv("TENCENTCLOUD_SECRETID")
         secret_key = os.getenv("TENCENTCLOUD_SECRETKEY")
         token = os.getenv("TENCENTCLOUD_SESSIONTOKEN")
@@ -52,18 +52,18 @@ def main_handler(event, context):
         namespace = context["namespace"]
         cred = credential.Credential(secret_id, secret_key, token)
 
-        # 实例化要请求kafka的client对象
+        # 實例化要請求kafka的client對象
         client = ckafka_client.CkafkaClient(cred, region)
 
-        # 实例化一个请求对象
+        # 實例化一個請求對象
         req = ckafka_models.DescribeTopicAttributesRequest()
         req.InstanceId = instance_id
         req.TopicName = topic_name
 
-        # 通过client对象调用想要访问的接口，需要传入请求对象
+        # 通過client對象調用想要訪問的介面，需要傳入請求對象
         resp = client.DescribeTopicAttributes(req)
 
-        # 输出json格式的字符串回包
+        # 輸出json格式的字串回包
         logger.debug("get topic attributes: %s", resp.to_json_string())
         ret_value = json.loads(s=resp.to_json_string())
 

@@ -59,4 +59,3 @@ if __name__== '__main__':
         print ("Usage: play_file <file_pattern>")
     else:
         main(sys.argv[1])
-

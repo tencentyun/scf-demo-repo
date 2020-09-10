@@ -145,4 +145,3 @@ class WatcherClient(NamespacedClient):
         """
         return self.transport.perform_request('POST',
             '/_xpack/watcher/_restart', params=params)
-

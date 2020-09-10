@@ -26,9 +26,9 @@ class OcrClient(AbstractClient):
 
 
     def ArithmeticOCR(self, request):
-        """本接口支持作业算式题目的自动识别，目前覆盖 K12 学力范围内的 14 种题型，包括加减乘除四则运算、分数四则运算、竖式四则运算、脱式计算等。
+        """本介面支援作業算式題目的自動識别，目前函蓋 K12 學力範圍内的 14 種題型，包括加減乘除四則運算、分數四則運算、豎式四則運算、脫式計算等。
 
-        :param request: 调用ArithmeticOCR所需参数的结构体。
+        :param request: 調用ArithmeticOCR所需參數的結構體。
         :type request: :class:`tencentcloud.ocr.v20181119.models.ArithmeticOCRRequest`
         :rtype: :class:`tencentcloud.ocr.v20181119.models.ArithmeticOCRResponse`
 
@@ -54,9 +54,9 @@ class OcrClient(AbstractClient):
 
 
     def EnglishOCR(self, request):
-        """本接口支持图像英文文字的检测和识别，返回文字框位置与文字内容。支持多场景、任意版面下的英文、字母、数字和常见字符的识别，同时覆盖英文印刷体和英文手写体识别。
+        """本介面支援圖像英文文字的檢測和識别，返回文字框位置與文字内容。支援多場景、任意版面下的英文、字母、數字和常見字元的識别，同時函蓋英文印刷體和英文手寫體識别。
 
-        :param request: 调用EnglishOCR所需参数的结构体。
+        :param request: 調用EnglishOCR所需參數的結構體。
         :type request: :class:`tencentcloud.ocr.v20181119.models.EnglishOCRRequest`
         :rtype: :class:`tencentcloud.ocr.v20181119.models.EnglishOCRResponse`
 
@@ -82,9 +82,9 @@ class OcrClient(AbstractClient):
 
 
     def GeneralAccurateOCR(self, request):
-        """本接口支持图像整体文字的检测和识别，返回文字框位置与文字内容。相比通用印刷体识别接口，准确率和召回率更高。
+        """本介面支援圖像整體文字的檢測和識别，返回文字框位置與文字内容。相比通用印刷體識别介面，準确率和召回率更高。
 
-        :param request: 调用GeneralAccurateOCR所需参数的结构体。
+        :param request: 調用GeneralAccurateOCR所需參數的結構體。
         :type request: :class:`tencentcloud.ocr.v20181119.models.GeneralAccurateOCRRequest`
         :rtype: :class:`tencentcloud.ocr.v20181119.models.GeneralAccurateOCRResponse`
 
@@ -110,9 +110,9 @@ class OcrClient(AbstractClient):
 
 
     def GeneralBasicOCR(self, request):
-        """本接口支持多场景、任意版面下整图文字的识别，包括中英文、字母、数字和日文、韩文的识别。应用场景包括：印刷文档识别、网络图片识别、广告图文字识别、街景店招识别、菜单识别、视频标题识别、头像文字识别等。
+        """本介面支援多場景、任意版面下整圖文字的識别，包括中英文、字母、數字和日文、韓文的識别。應用場景包括：印刷文件識别、網絡圖片識别、廣告圖文字識别、街景店招識别、清單識别、視訊标題識别、頭像文字識别等。
 
-        :param request: 调用GeneralBasicOCR所需参数的结构体。
+        :param request: 調用GeneralBasicOCR所需參數的結構體。
         :type request: :class:`tencentcloud.ocr.v20181119.models.GeneralBasicOCRRequest`
         :rtype: :class:`tencentcloud.ocr.v20181119.models.GeneralBasicOCRResponse`
 
@@ -138,9 +138,9 @@ class OcrClient(AbstractClient):
 
 
     def GeneralFastOCR(self, request):
-        """本接口支持图片中整体文字的检测和识别，返回文字框位置与文字内容。相比通用印刷体识别接口，识别速度更快、支持的 QPS 更高。
+        """本介面支援圖片中整體文字的檢測和識别，返回文字框位置與文字内容。相比通用印刷體識别介面，識别速度更快、支援的 QPS 更高。
 
-        :param request: 调用GeneralFastOCR所需参数的结构体。
+        :param request: 調用GeneralFastOCR所需參數的結構體。
         :type request: :class:`tencentcloud.ocr.v20181119.models.GeneralFastOCRRequest`
         :rtype: :class:`tencentcloud.ocr.v20181119.models.GeneralFastOCRResponse`
 
@@ -166,9 +166,9 @@ class OcrClient(AbstractClient):
 
 
     def IDCardOCR(self, request):
-        """本接口支持二代身份证正反面所有字段的识别，包括姓名、性别、民族、出生日期、住址、公民身份证号、签发机关、有效期限；具备身份证照片、人像照片的裁剪功能和翻拍件、复印件的识别告警功能。
+        """本介面支援二代身份證正反面所有欄位的識别，包括姓名、性别、民族、出生日期、住址、公民身份證号、簽發機關、有效期限；具備身份證照片、人像照片的裁剪功能和翻拍件、影印件的識别告警功能。
 
-        :param request: 调用IDCardOCR所需参数的结构体。
+        :param request: 調用IDCardOCR所需參數的結構體。
         :type request: :class:`tencentcloud.ocr.v20181119.models.IDCardOCRRequest`
         :rtype: :class:`tencentcloud.ocr.v20181119.models.IDCardOCRResponse`
 
@@ -194,9 +194,9 @@ class OcrClient(AbstractClient):
 
 
     def TableOCR(self, request):
-        """本接口支持图片内表格文档的检测和识别，返回每个单元格的文字内容，支持将识别结果保存为 Excel 格式。
+        """本介面支援圖片内表格文件的檢測和識别，返回每個單元格的文字内容，支援将識别結果保存爲 Excel 格式。
 
-        :param request: 调用TableOCR所需参数的结构体。
+        :param request: 調用TableOCR所需參數的結構體。
         :type request: :class:`tencentcloud.ocr.v20181119.models.TableOCRRequest`
         :rtype: :class:`tencentcloud.ocr.v20181119.models.TableOCRResponse`
 
@@ -222,9 +222,9 @@ class OcrClient(AbstractClient):
 
 
     def VinOCR(self, request):
-        """本接口支持图片内车辆识别代号（VIN）的检测和识别。
+        """本介面支援圖片内車輛識别代号（VIN）的檢測和識别。
 
-        :param request: 调用VinOCR所需参数的结构体。
+        :param request: 調用VinOCR所需參數的結構體。
         :type request: :class:`tencentcloud.ocr.v20181119.models.VinOCRRequest`
         :rtype: :class:`tencentcloud.ocr.v20181119.models.VinOCRResponse`
 
@@ -250,9 +250,9 @@ class OcrClient(AbstractClient):
 
 
     def WaybillOCR(self, request):
-        """本接口支持市面上主流版式电子运单的识别，包括收件人和寄件人的姓名、电话、地址以及运单号等字段。
+        """本介面支援市面上主流版式電子運單的識别，包括收件人和寄件人的姓名、電話、網址以及運單号等欄位。
 
-        :param request: 调用WaybillOCR所需参数的结构体。
+        :param request: 調用WaybillOCR所需參數的結構體。
         :type request: :class:`tencentcloud.ocr.v20181119.models.WaybillOCRRequest`
         :rtype: :class:`tencentcloud.ocr.v20181119.models.WaybillOCRResponse`
 

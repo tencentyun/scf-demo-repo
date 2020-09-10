@@ -2,19 +2,19 @@
   "serverless-cloud-function-application": {
     "application": {
       "Chinese": {
-        "name": "zip格式文件解压",
-        "description": "本示例通过从源bucket下载zip格式文件，解压之后，上传到另一个bucket",
-        "attention": "请前往 COS 控制台进行配置，参考文档：https://cloud.tencent.com/document/product/436/42893",
+        "name": "zip格式文件解壓",
+        "description": "本範例通過從源bucket下載zip格式文件，解壓之後，上傳到另一個bucket",
+        "attention": "請前往 COS 控制台進行配置，參考文件：https://cloud.tencent.com/document/product/436/42893",
         "readme": {
           "file": "",
           "content": ""
         },
         "license": {
           "file": "",
-          "content": "公开"
+          "content": "公開"
         },
         "author": {
-          "name": "腾讯云无服务器云函数团队"
+          "name": "Top Cloud 無服務器雲函數團隊"
         }
       },
       "English": {

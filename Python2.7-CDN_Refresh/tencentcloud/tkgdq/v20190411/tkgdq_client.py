@@ -26,7 +26,7 @@ class TkgdqClient(AbstractClient):
 
 
     def DescribeEntity(self, request):
-        """输入实体名称，返回实体相关的信息如实体别名、实体英文名、实体详细信息、相关实体等
+        """輸入實體名稱，返回實體相關的訊息如實體别名、實體英文名、實體詳細訊息、相關實體等
 
         :param request: Request instance for DescribeEntity.
         :type request: :class:`tencentcloud.tkgdq.v20190411.models.DescribeEntityRequest`
@@ -54,7 +54,7 @@ class TkgdqClient(AbstractClient):
 
 
     def DescribeRelation(self, request):
-        """输入两个实体，返回两个实体间的关系，例如马化腾与腾讯公司不仅是相关实体，二者还存在隶属关系（马化腾属于腾讯公司）。
+        """輸入兩個實體，返回兩個實體間的關系，例如馬化騰與騰訊公司不僅是相關實體，二者還存在隸屬關系（馬化騰屬于騰訊公司）。
 
         :param request: Request instance for DescribeRelation.
         :type request: :class:`tencentcloud.tkgdq.v20190411.models.DescribeRelationRequest`
@@ -82,7 +82,7 @@ class TkgdqClient(AbstractClient):
 
 
     def DescribeTriple(self, request):
-        """三元组查询，主要分为两类，SP查询和PO查询。SP查询表示已知主语和谓语查询宾语，PO查询表示已知宾语和谓语查询主语。每一个SP或PO查询都是一个可独立执行的查询，TQL支持SP查询的嵌套查询，即主语可以是一个嵌套的子查询。其他复杂的三元组查询方法，请参考官网API文档示例。
+        """三元組查詢，主要分爲兩類，SP查詢和PO查詢。SP查詢表示已知主語和謂語查詢賓語，PO查詢表示已知賓語和謂語查詢主語。每一個SP或PO查詢都是一個可獨立執行的查詢，TQL支援SP查詢的嵌套查詢，即主語可以是一個嵌套的子查詢。其他複雜的三元組查詢方法，請參考官網API文件範例。
 
         :param request: Request instance for DescribeTriple.
         :type request: :class:`tencentcloud.tkgdq.v20190411.models.DescribeTripleRequest`

@@ -9,12 +9,12 @@ from kafka_consumer import KafkaConsumer
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
-## 各种系统常量，以下常量均可通过同名环境变量进行覆盖
-MAX_CONSUME_COUNT = 50000  #每次消费的最大条数，注意该参数并非越大越好
-MSG_SEPARATOR = ',' #kafka中消息的分隔符
-CONSUMER_TIMEOUT_MS = 3000 #读取kafka的超时时间，单位毫秒
-DB_PORT = 5436 #CDW的端口，默认应该是5436
-OFFSET_TYPE = 'latest' #  消费kafka数据的位移，[latest,earliest]
+## 各種系統常數，以下常數均可通過同名環境變量進行函蓋
+MAX_CONSUME_COUNT = 50000  #每次消費的最大條數，注意該參數并非越大越好
+MSG_SEPARATOR = ',' #kafka中訊息的分隔符
+CONSUMER_TIMEOUT_MS = 3000 #讀取kafka的超時時間，單位毫秒
+DB_PORT = 5436 #CDW的端口，預設應該是5436
+OFFSET_TYPE = 'latest' #  消費kafka數據的位移，[latest,earliest]
 
 def init_kafka_consumer(group_id, partition_id):
     kafka_address = os.getenv("KAFKA_ADDRESS")
@@ -64,7 +64,7 @@ def check_param():
     return True
 
 def main_handler(event, context):
-    # 检查必要的环境变量是否设置
+    # 檢查必要的環境變量是否設置
     ret = check_param()
     if ret == False:
         return "done"
@@ -73,21 +73,21 @@ def main_handler(event, context):
     kafka_consumer = init_kafka_consumer(context["function_name"], event["partition_id"])
     cdw_client = init_cdw_client()
 
-    # 消费kafka数据
+    # 消費kafka數據
     max_consume_count = os.getenv("MAX_CONSUME_COUNT", MAX_CONSUME_COUNT)
     kafka_consumer.consume(int(max_consume_count))
     if kafka_consumer.msg_consumed_count <= 0:
         logger.info("skip copy cause no msg consumed")
         return "done"
 
-    # 将数据copy到cdw中
+    # 将數據copy到cdw中
     schema = os.getenv("DB_SCHEMA")
     table = os.getenv("DB_TABLE")
         
     msg_separator = os.getenv("MSG_SEPARATOR", MSG_SEPARATOR)
     ret = cdw_client.copy_from(kafka_consumer.sio, schema+"."+table, msg_separator)
     if ret:
-        # copy是一个事务，要么全部成功，要么全部失败，copy成功之后再提交kafka，避免漏数据
+        # copy是一個事務，要麽全部成功，要麽全部失敗，copy成功之後再提交kafka，避免漏數據
         kafka_consumer.commit()
 
     return "done"

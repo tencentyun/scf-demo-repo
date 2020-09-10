@@ -17,13 +17,13 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CompleteMigrateJobRequest(AbstractModel):
-    """CompleteMigrateJob请求参数结构体
+    """CompleteMigrateJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 数据迁移任务ID
+        :param JobId: 數據遷移任務ID
         :type JobId: str
         """
         self.JobId = None
@@ -34,13 +34,13 @@ class CompleteMigrateJobRequest(AbstractModel):
 
 
 class CompleteMigrateJobResponse(AbstractModel):
-    """CompleteMigrateJob返回参数结构体
+    """CompleteMigrateJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -51,17 +51,17 @@ class CompleteMigrateJobResponse(AbstractModel):
 
 
 class ConsistencyParams(AbstractModel):
-    """抽样检验时的抽样参数
+    """抽樣檢驗時的抽樣參數
 
     """
 
     def __init__(self):
         """
-        :param SelectRowsPerTable: 1-100的整数值，select(*)对比时每张表的抽样行数比例
+        :param SelectRowsPerTable: 1-100的整數值，select(*)對比時每張表的抽樣行數比例
         :type SelectRowsPerTable: int
-        :param TablesSelectAll: 1-100的整数值，select(*)对比的表的比例
+        :param TablesSelectAll: 1-100的整數值，select(*)對比的表的比例
         :type TablesSelectAll: int
-        :param TablesSelectCount: 1-100的整数值，select count(*)对比的表的比例
+        :param TablesSelectCount: 1-100的整數值，select count(*)對比的表的比例
         :type TablesSelectCount: int
         """
         self.SelectRowsPerTable = None
@@ -76,13 +76,13 @@ class ConsistencyParams(AbstractModel):
 
 
 class CreateMigrateCheckJobRequest(AbstractModel):
-    """CreateMigrateCheckJob请求参数结构体
+    """CreateMigrateCheckJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 数据迁移任务ID
+        :param JobId: 數據遷移任務ID
         :type JobId: str
         """
         self.JobId = None
@@ -93,13 +93,13 @@ class CreateMigrateCheckJobRequest(AbstractModel):
 
 
 class CreateMigrateCheckJobResponse(AbstractModel):
-    """CreateMigrateCheckJob返回参数结构体
+    """CreateMigrateCheckJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -110,32 +110,32 @@ class CreateMigrateCheckJobResponse(AbstractModel):
 
 
 class CreateMigrateJobRequest(AbstractModel):
-    """CreateMigrateJob请求参数结构体
+    """CreateMigrateJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobName: 数据迁移任务名称
+        :param JobName: 數據遷移任務名稱
         :type JobName: str
-        :param MigrateOption: 迁移任务配置选项
+        :param MigrateOption: 遷移任務配置選項
         :type MigrateOption: :class:`tencentcloud.dts.v20180330.models.MigrateOption`
-        :param SrcDatabaseType: 源实例数据库类型:mysql,redis,mongodb
+        :param SrcDatabaseType: 源實例資料庫類型:mysql,redis,mongodb
         :type SrcDatabaseType: str
-        :param SrcAccessType: 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+        :param SrcAccessType: 源實例接入類型，值包括：extranet(外網),cvm(cvm自建實例),dcg(專線接入的實例),vpncloud(雲vpn接入的實例),vpnselfbuild(自建vpn接入的實例)，cdb(雲上cdb實例)
         :type SrcAccessType: str
-        :param SrcInfo: 源实例信息，具体内容跟迁移任务类型相关
+        :param SrcInfo: 源實例訊息，具體内容跟遷移任務類型相關
         :type SrcInfo: :class:`tencentcloud.dts.v20180330.models.SrcInfo`
-        :param DstDatabaseType: 目标实例数据库类型,mysql,redis,mongodb
+        :param DstDatabaseType: 目标實例資料庫類型,mysql,redis,mongodb
         :type DstDatabaseType: str
-        :param DstAccessType: 目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
+        :param DstAccessType: 目标實例接入類型，值包括：extranet(外網),cvm(cvm自建實例),dcg(專線接入的實例),vpncloud(雲vpn接入的實例),vpnselfbuild(自建vpn接入的實例)，cdb(雲上cdb實例). 目前只支援cdb.
         :type DstAccessType: str
-        :param DstInfo: 目标实例信息
+        :param DstInfo: 目标實例訊息
         :type DstInfo: :class:`tencentcloud.dts.v20180330.models.DstInfo`
-        :param DatabaseInfo: 需要迁移的源数据库表信息，用json格式的字符串描述。
-对于database-table两级结构的数据库：
+        :param DatabaseInfo: 需要遷移的源資料庫表訊息，用json格式的字串描述。
+對于database-table兩級結構的資料庫：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
-对于database-schema-table三级结构：
+對于database-schema-table三級結構：
 [{Database:db1,Schema:s1
 Table:[table1,table2]},{Database:db1,Schema:s2
 Table:[table1,table2]},{Database:db2,Schema:s1
@@ -173,15 +173,15 @@ Schema:s1}]
 
 
 class CreateMigrateJobResponse(AbstractModel):
-    """CreateMigrateJob返回参数结构体
+    """CreateMigrateJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 数据迁移任务ID
+        :param JobId: 數據遷移任務ID
         :type JobId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.JobId = None
@@ -194,13 +194,13 @@ class CreateMigrateJobResponse(AbstractModel):
 
 
 class CreateSyncCheckJobRequest(AbstractModel):
-    """CreateSyncCheckJob请求参数结构体
+    """CreateSyncCheckJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 灾备同步任务ID
+        :param JobId: 災備同步任務ID
         :type JobId: str
         """
         self.JobId = None
@@ -211,13 +211,13 @@ class CreateSyncCheckJobRequest(AbstractModel):
 
 
 class CreateSyncCheckJobResponse(AbstractModel):
-    """CreateSyncCheckJob返回参数结构体
+    """CreateSyncCheckJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -228,30 +228,30 @@ class CreateSyncCheckJobResponse(AbstractModel):
 
 
 class CreateSyncJobRequest(AbstractModel):
-    """CreateSyncJob请求参数结构体
+    """CreateSyncJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobName: 灾备同步任务名
+        :param JobName: 災備同步任務名
         :type JobName: str
-        :param SyncOption: 灾备同步任务配置选项
+        :param SyncOption: 災備同步任務配置選項
         :type SyncOption: :class:`tencentcloud.dts.v20180330.models.SyncOption`
-        :param SrcDatabaseType: 源实例数据库类型，目前仅包括：mysql
+        :param SrcDatabaseType: 源實例資料庫類型，目前僅包括：mysql
         :type SrcDatabaseType: str
-        :param SrcAccessType: 源实例接入类型，目前仅包括：cdb(云上cdb实例)
+        :param SrcAccessType: 源實例接入類型，目前僅包括：cdb(雲上cdb實例)
         :type SrcAccessType: str
-        :param SrcInfo: 源实例信息
+        :param SrcInfo: 源實例訊息
         :type SrcInfo: :class:`tencentcloud.dts.v20180330.models.SyncInstanceInfo`
-        :param DstDatabaseType: 目标实例数据库类型，目前仅包括：mysql
+        :param DstDatabaseType: 目标實例資料庫類型，目前僅包括：mysql
         :type DstDatabaseType: str
-        :param DstAccessType: 目标实例接入类型，目前仅包括：cdb(云上cdb实例)
+        :param DstAccessType: 目标實例接入類型，目前僅包括：cdb(雲上cdb實例)
         :type DstAccessType: str
-        :param DstInfo: 目标实例信息
+        :param DstInfo: 目标實例訊息
         :type DstInfo: :class:`tencentcloud.dts.v20180330.models.SyncInstanceInfo`
-        :param DatabaseInfo: 需要同步的源数据库表信息，用json格式的字符串描述。
-对于database-table两级结构的数据库：
+        :param DatabaseInfo: 需要同步的源資料庫表訊息，用json格式的字串描述。
+對于database-table兩級結構的資料庫：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
         :type DatabaseInfo: str
         """
@@ -285,15 +285,15 @@ class CreateSyncJobRequest(AbstractModel):
 
 
 class CreateSyncJobResponse(AbstractModel):
-    """CreateSyncJob返回参数结构体
+    """CreateSyncJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 灾备同步任务ID
+        :param JobId: 災備同步任務ID
         :type JobId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.JobId = None
@@ -306,13 +306,13 @@ class CreateSyncJobResponse(AbstractModel):
 
 
 class DeleteMigrateJobRequest(AbstractModel):
-    """DeleteMigrateJob请求参数结构体
+    """DeleteMigrateJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 数据迁移任务ID
+        :param JobId: 數據遷移任務ID
         :type JobId: str
         """
         self.JobId = None
@@ -323,13 +323,13 @@ class DeleteMigrateJobRequest(AbstractModel):
 
 
 class DeleteMigrateJobResponse(AbstractModel):
-    """DeleteMigrateJob返回参数结构体
+    """DeleteMigrateJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -340,13 +340,13 @@ class DeleteMigrateJobResponse(AbstractModel):
 
 
 class DeleteSyncJobRequest(AbstractModel):
-    """DeleteSyncJob请求参数结构体
+    """DeleteSyncJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 待删除的灾备同步任务ID
+        :param JobId: 待删除的災備同步任務ID
         :type JobId: str
         """
         self.JobId = None
@@ -357,13 +357,13 @@ class DeleteSyncJobRequest(AbstractModel):
 
 
 class DeleteSyncJobResponse(AbstractModel):
-    """DeleteSyncJob返回参数结构体
+    """DeleteSyncJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -374,13 +374,13 @@ class DeleteSyncJobResponse(AbstractModel):
 
 
 class DescribeMigrateCheckJobRequest(AbstractModel):
-    """DescribeMigrateCheckJob请求参数结构体
+    """DescribeMigrateCheckJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 数据迁移任务ID
+        :param JobId: 數據遷移任務ID
         :type JobId: str
         """
         self.JobId = None
@@ -391,23 +391,23 @@ class DescribeMigrateCheckJobRequest(AbstractModel):
 
 
 class DescribeMigrateCheckJobResponse(AbstractModel):
-    """DescribeMigrateCheckJob返回参数结构体
+    """DescribeMigrateCheckJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Status: 校验任务状态：unavailable(当前不可用), starting(开始中)，running(校验中)，finished(校验完成)
+        :param Status: 校驗任務狀态：unavailable(當前不可用), starting(開始中)，running(校驗中)，finished(校驗完成)
         :type Status: str
-        :param ErrorCode: 任务的错误码
+        :param ErrorCode: 任務的錯誤碼
         :type ErrorCode: int
-        :param ErrorMessage: 任务的错误信息
+        :param ErrorMessage: 任務的錯誤訊息
         :type ErrorMessage: str
-        :param Progress: Check任务总进度,如："30"表示30%
+        :param Progress: Check任務總進度,如："30"表示30%
         :type Progress: str
-        :param CheckFlag: 校验是否通过,0-未通过，1-校验通过, 3-未校验
+        :param CheckFlag: 校驗是否通過,0-未通過，1-校驗通過, 3-未校驗
         :type CheckFlag: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Status = None
@@ -428,23 +428,23 @@ class DescribeMigrateCheckJobResponse(AbstractModel):
 
 
 class DescribeMigrateJobsRequest(AbstractModel):
-    """DescribeMigrateJobs请求参数结构体
+    """DescribeMigrateJobs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 数据迁移任务ID
+        :param JobId: 數據遷移任務ID
         :type JobId: str
-        :param JobName: 数据迁移任务名称
+        :param JobName: 數據遷移任務名稱
         :type JobName: str
-        :param Order: 排序字段，可以取值为JobId、Status、JobName、MigrateType、RunMode、CreateTime
+        :param Order: 排序欄位，可以取值爲JobId、Status、JobName、MigrateType、RunMode、CreateTime
         :type Order: str
-        :param OrderSeq: 排序方式，升序为ASC，降序为DESC
+        :param OrderSeq: 排序方式，升序爲ASC，降序爲DESC
         :type OrderSeq: str
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回实例数量，默认20，有效区间[1,100]
+        :param Limit: 返回實例數量，預設20，有效區間[1,100]
         :type Limit: int
         """
         self.JobId = None
@@ -465,17 +465,17 @@ class DescribeMigrateJobsRequest(AbstractModel):
 
 
 class DescribeMigrateJobsResponse(AbstractModel):
-    """DescribeMigrateJobs返回参数结构体
+    """DescribeMigrateJobs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 任务数目
+        :param TotalCount: 任務數目
         :type TotalCount: int
-        :param JobList: 任务详情数组
+        :param JobList: 任務詳情數組
         :type JobList: list of MigrateJobInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -495,13 +495,13 @@ class DescribeMigrateJobsResponse(AbstractModel):
 
 
 class DescribeSyncCheckJobRequest(AbstractModel):
-    """DescribeSyncCheckJob请求参数结构体
+    """DescribeSyncCheckJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 要查询的灾备同步任务ID
+        :param JobId: 要查詢的災備同步任務ID
         :type JobId: str
         """
         self.JobId = None
@@ -512,23 +512,23 @@ class DescribeSyncCheckJobRequest(AbstractModel):
 
 
 class DescribeSyncCheckJobResponse(AbstractModel):
-    """DescribeSyncCheckJob返回参数结构体
+    """DescribeSyncCheckJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Status: 任务校验状态： starting(开始中)，running(校验中)，finished(校验完成)
+        :param Status: 任務校驗狀态： starting(開始中)，running(校驗中)，finished(校驗完成)
         :type Status: str
-        :param ErrorCode: 任务校验结果代码
+        :param ErrorCode: 任務校驗結果代碼
         :type ErrorCode: int
-        :param ErrorMessage: 提示信息
+        :param ErrorMessage: 提示訊息
         :type ErrorMessage: str
-        :param StepInfo: 任务执行步骤描述
+        :param StepInfo: 任務執行步驟描述
         :type StepInfo: list of SyncCheckStepInfo
-        :param CheckFlag: 校验标志：0（尚未校验成功） ， 1（校验成功）
+        :param CheckFlag: 校驗标志：0（尚未校驗成功） ， 1（校驗成功）
         :type CheckFlag: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Status = None
@@ -554,23 +554,23 @@ class DescribeSyncCheckJobResponse(AbstractModel):
 
 
 class DescribeSyncJobsRequest(AbstractModel):
-    """DescribeSyncJobs请求参数结构体
+    """DescribeSyncJobs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 灾备同步任务ID
+        :param JobId: 災備同步任務ID
         :type JobId: str
-        :param JobName: 灾备同步任务名
+        :param JobName: 災備同步任務名
         :type JobName: str
-        :param Order: 排序字段，可以取值为JobId、Status、JobName、CreateTime
+        :param Order: 排序欄位，可以取值爲JobId、Status、JobName、CreateTime
         :type Order: str
-        :param OrderSeq: 排序方式，升序为ASC，降序为DESC
+        :param OrderSeq: 排序方式，升序爲ASC，降序爲DESC
         :type OrderSeq: str
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回实例数量，默认20，有效区间[1,100]
+        :param Limit: 返回實例數量，預設20，有效區間[1,100]
         :type Limit: int
         """
         self.JobId = None
@@ -591,17 +591,17 @@ class DescribeSyncJobsRequest(AbstractModel):
 
 
 class DescribeSyncJobsResponse(AbstractModel):
-    """DescribeSyncJobs返回参数结构体
+    """DescribeSyncJobs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 任务数目
+        :param TotalCount: 任務數目
         :type TotalCount: int
-        :param JobList: 任务详情数组
+        :param JobList: 任務詳情數組
         :type JobList: list of SyncJobInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -621,21 +621,21 @@ class DescribeSyncJobsResponse(AbstractModel):
 
 
 class DstInfo(AbstractModel):
-    """目的实例信息，具体内容跟迁移任务类型相关
+    """目的實例訊息，具體内容跟遷移任務類型相關
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 目标实例Id
+        :param InstanceId: 目标實例Id
         :type InstanceId: str
-        :param Ip: 目标实例vip
+        :param Ip: 目标實例vip
         :type Ip: str
-        :param Port: 目标实例vport
+        :param Port: 目标實例vport
         :type Port: int
-        :param Region: 目标实例Id
+        :param Region: 目标實例Id
         :type Region: str
-        :param ReadOnly: 只读开关
+        :param ReadOnly: 只讀開關
         :type ReadOnly: int
         """
         self.InstanceId = None
@@ -654,25 +654,25 @@ class DstInfo(AbstractModel):
 
 
 class MigrateDetailInfo(AbstractModel):
-    """描述详细迁移过程
+    """描述詳細遷移過程
 
     """
 
     def __init__(self):
         """
-        :param StepAll: 总步骤数
+        :param StepAll: 總步驟數
         :type StepAll: int
-        :param StepNow: 当前步骤
+        :param StepNow: 當前步驟
         :type StepNow: int
-        :param Progress: 总进度,如：
+        :param Progress: 總進度,如：
         :type Progress: str
-        :param CurrentStepProgress: 当前步骤进度,如:
+        :param CurrentStepProgress: 當前步驟進度,如:
         :type CurrentStepProgress: str
-        :param MasterSlaveDistance: 主从差距，MB
+        :param MasterSlaveDistance: 主從差距，MB
         :type MasterSlaveDistance: int
-        :param SecondsBehindMaster: 主从差距，秒
+        :param SecondsBehindMaster: 主從差距，秒
         :type SecondsBehindMaster: int
-        :param StepInfo: 步骤信息
+        :param StepInfo: 步驟訊息
         :type StepInfo: list of MigrateStepDetailInfo
         """
         self.StepAll = None
@@ -700,41 +700,41 @@ class MigrateDetailInfo(AbstractModel):
 
 
 class MigrateJobInfo(AbstractModel):
-    """迁移任务详情
+    """遷移任務詳情
 
     """
 
     def __init__(self):
         """
-        :param JobId: 数据迁移任务ID
+        :param JobId: 數據遷移任務ID
         :type JobId: str
-        :param JobName: 数据迁移任务名称
+        :param JobName: 數據遷移任務名稱
         :type JobName: str
-        :param MigrateOption: 迁移任务配置选项
+        :param MigrateOption: 遷移任務配置選項
         :type MigrateOption: :class:`tencentcloud.dts.v20180330.models.MigrateOption`
-        :param SrcDatabaseType: 源实例数据库类型:mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+        :param SrcDatabaseType: 源實例資料庫類型:mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
         :type SrcDatabaseType: str
-        :param SrcAccessType: 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+        :param SrcAccessType: 源實例接入類型，值包括：extranet(外網),cvm(cvm自建實例),dcg(專線接入的實例),vpncloud(雲vpn接入的實例),vpnselfbuild(自建vpn接入的實例)，cdb(雲上cdb實例)
         :type SrcAccessType: str
-        :param SrcInfo: 源实例信息，具体内容跟迁移任务类型相关
+        :param SrcInfo: 源實例訊息，具體内容跟遷移任務類型相關
         :type SrcInfo: :class:`tencentcloud.dts.v20180330.models.SrcInfo`
-        :param DstDatabaseType: 目标实例数据库类型,mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+        :param DstDatabaseType: 目标實例資料庫類型,mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
         :type DstDatabaseType: str
-        :param DstAccessType: 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+        :param DstAccessType: 源實例接入類型，值包括：extranet(外網),cvm(cvm自建實例),dcg(專線接入的實例),vpncloud(雲vpn接入的實例),vpnselfbuild(自建vpn接入的實例)，cdb(雲上cdb實例)
         :type DstAccessType: str
-        :param DstInfo: 目的实例信息
+        :param DstInfo: 目的實例訊息
         :type DstInfo: :class:`tencentcloud.dts.v20180330.models.DstInfo`
-        :param DatabaseInfo: 需要迁移的源数据库表信息，如果需要迁移的是整个实例，该字段为[]
+        :param DatabaseInfo: 需要遷移的源資料庫表訊息，如果需要遷移的是整個實例，該欄位爲[]
         :type DatabaseInfo: str
-        :param CreateTime: 任务创建(提交)时间
+        :param CreateTime: 任務創建(提交)時間
         :type CreateTime: str
-        :param StartTime: 任务开始执行时间
+        :param StartTime: 任務開始執行時間
         :type StartTime: str
-        :param EndTime: 任务执行结束时间
+        :param EndTime: 任務執行結束時間
         :type EndTime: str
-        :param Status: 任务状态,取值为：1-创建中(Creating),2-创建完成(Created),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,6-准备运行(ReadyRun),7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-中止中（Stoping）,12-完成中（Completing）
+        :param Status: 任務狀态,取值爲：1-創建中(Creating),2-創建完成(Created),3-校驗中(Checking)4-校驗通過(CheckPass),5-校驗不通過（CheckNotPass）,6-準備運作(ReadyRun),7-任務運作(Running),8-準備完成（ReadyComplete）,9-任務成功（Success）,10-任務失敗（Failed）,11-中止中（Stoping）,12-完成中（Completing）
         :type Status: int
-        :param Detail: 任务详情
+        :param Detail: 任務詳情
         :type Detail: :class:`tencentcloud.dts.v20180330.models.MigrateDetailInfo`
         """
         self.JobId = None
@@ -781,41 +781,41 @@ class MigrateJobInfo(AbstractModel):
 
 
 class MigrateOption(AbstractModel):
-    """迁移任务配置选项
+    """遷移任務配置選項
 
     """
 
     def __init__(self):
         """
-        :param RunMode: 任务运行模式，值包括：1-立即执行，2-定时执行
+        :param RunMode: 任務運作模式，值包括：1-立即執行，2-定時執行
         :type RunMode: int
-        :param ExpectTime: 期望执行时间，当runMode=2时，该字段必填，时间格式：yyyy-mm-dd hh:mm:ss
+        :param ExpectTime: 期望執行時間，當runMode=2時，該欄位必填，時間格式：yyyy-mm-dd hh:mm:ss
         :type ExpectTime: str
-        :param MigrateType: 数据迁移类型，值包括：1-结构迁移,2-全量迁移,3-全量+增量迁移
+        :param MigrateType: 數據遷移類型，值包括：1-結構遷移,2-全量遷移,3-全量+增量遷移
         :type MigrateType: int
-        :param MigrateObject: 迁移对象，1-整个实例，2-指定库表
+        :param MigrateObject: 遷移對象，1-整個實例，2-指定庫表
         :type MigrateObject: int
-        :param ConsistencyType: 数据对比类型，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
+        :param ConsistencyType: 數據對比類型，1-未配置,2-全量檢測,3-抽樣檢測, 4-僅校驗不一緻表,5-不檢測
         :type ConsistencyType: int
-        :param IsOverrideRoot: 是否用源库Root账户覆盖目标库，值包括：0-不覆盖，1-覆盖，选择库表或者结构迁移时应该为0
+        :param IsOverrideRoot: 是否用源庫Root帳戶函蓋目标庫，值包括：0-不函蓋，1-函蓋，選擇庫表或者結構遷移時應該爲0
         :type IsOverrideRoot: int
-        :param ExternParams: 不同数据库用到的额外参数.以JSON格式描述. 
-Redis可定义如下的参数: 
+        :param ExternParams: 不同資料庫用到的額外參數.以JSON格式描述. 
+Redis可定義如下的參數: 
 { 
-	"ClientOutputBufferHardLimit":512, 	从机缓冲区的硬性容量限制(MB) 
-	"ClientOutputBufferSoftLimit":512, 	从机缓冲区的软性容量限制(MB) 
-	"ClientOutputBufferPersistTime":60, 从机缓冲区的软性限制持续时间(秒) 
-	"ReplBacklogSize":512, 	环形缓冲区容量限制(MB) 
-	"ReplTimeout":120，		复制超时时间(秒) 
+	"ClientOutputBufferHardLimit":512, 	從機緩沖區的硬性容量限制(MB) 
+	"ClientOutputBufferSoftLimit":512, 	從機緩沖區的軟性容量限制(MB) 
+	"ClientOutputBufferPersistTime":60, 從機緩沖區的軟性限制持續時間(秒) 
+	"ReplBacklogSize":512, 	環形緩沖區容量限制(MB) 
+	"ReplTimeout":120，		複制超時時間(秒) 
 }
-MongoDB可定义如下的参数: 
+MongoDB可定義如下的參數: 
 {
 	'SrcAuthDatabase':'admin', 
 	'SrcAuthFlag': "1", 
 	'SrcAuthMechanism':"SCRAM-SHA-1"
 }
         :type ExternParams: str
-        :param ConsistencyParams: 抽样检验时的抽样参数
+        :param ConsistencyParams: 抽樣檢驗時的抽樣參數
         :type ConsistencyParams: :class:`tencentcloud.dts.v20180330.models.ConsistencyParams`
         """
         self.RunMode = None
@@ -842,19 +842,19 @@ MongoDB可定义如下的参数:
 
 
 class MigrateStepDetailInfo(AbstractModel):
-    """迁移中的步骤信息
+    """遷移中的步驟訊息
 
     """
 
     def __init__(self):
         """
-        :param StepNo: 步骤序列
+        :param StepNo: 步驟序列
         :type StepNo: int
-        :param StepName: 步骤展现名称
+        :param StepName: 步驟展現名稱
         :type StepName: str
-        :param StepId: 步骤英文标识
+        :param StepId: 步驟英文标識
         :type StepId: str
-        :param Status: 步骤状态:0-默认值,1-成功,2-失败,3-执行中,4-未执行
+        :param Status: 步驟狀态:0-預設值,1-成功,2-失敗,3-執行中,4-未執行
         :type Status: int
         """
         self.StepNo = None
@@ -871,34 +871,34 @@ class MigrateStepDetailInfo(AbstractModel):
 
 
 class ModifyMigrateJobRequest(AbstractModel):
-    """ModifyMigrateJob请求参数结构体
+    """ModifyMigrateJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 待修改的数据迁移任务ID
+        :param JobId: 待修改的數據遷移任務ID
         :type JobId: str
-        :param JobName: 数据迁移任务名称
+        :param JobName: 數據遷移任務名稱
         :type JobName: str
-        :param MigrateOption: 迁移任务配置选项
+        :param MigrateOption: 遷移任務配置選項
         :type MigrateOption: :class:`tencentcloud.dts.v20180330.models.MigrateOption`
-        :param SrcAccessType: 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+        :param SrcAccessType: 源實例接入類型，值包括：extranet(外網),cvm(cvm自建實例),dcg(專線接入的實例),vpncloud(雲vpn接入的實例),vpnselfbuild(自建vpn接入的實例)，cdb(雲上cdb實例)
         :type SrcAccessType: str
-        :param SrcInfo: 源实例信息，具体内容跟迁移任务类型相关
+        :param SrcInfo: 源實例訊息，具體内容跟遷移任務類型相關
         :type SrcInfo: :class:`tencentcloud.dts.v20180330.models.SrcInfo`
-        :param DstAccessType: 目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
+        :param DstAccessType: 目标實例接入類型，值包括：extranet(外網),cvm(cvm自建實例),dcg(專線接入的實例),vpncloud(雲vpn接入的實例),vpnselfbuild(自建vpn接入的實例)，cdb(雲上cdb實例). 目前只支援cdb.
         :type DstAccessType: str
-        :param DstInfo: 目标实例信息, 其中目标实例地域不允许修改.
+        :param DstInfo: 目标實例訊息, 其中目标實例地域不允許修改.
         :type DstInfo: :class:`tencentcloud.dts.v20180330.models.DstInfo`
-        :param DatabaseInfo: 当选择'指定库表'迁移的时候, 需要设置待迁移的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
+        :param DatabaseInfo: 當選擇'指定庫表'遷移的時候, 需要設置待遷移的源資料庫表訊息,用符合json數組格式的字串描述, 如下所例。
 
-对于database-table两级结构的数据库：
+對于database-table兩級結構的資料庫：
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
-对于database-schema-table三级结构：
+對于database-schema-table三級結構：
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
 
-如果是'整个实例'的迁移模式,不需设置该字段
+如果是'整個實例'的遷移模式,不需設置該欄位
         :type DatabaseInfo: str
         """
         self.JobId = None
@@ -929,13 +929,13 @@ class ModifyMigrateJobRequest(AbstractModel):
 
 
 class ModifyMigrateJobResponse(AbstractModel):
-    """ModifyMigrateJob返回参数结构体
+    """ModifyMigrateJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -946,20 +946,20 @@ class ModifyMigrateJobResponse(AbstractModel):
 
 
 class ModifySyncJobRequest(AbstractModel):
-    """ModifySyncJob请求参数结构体
+    """ModifySyncJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 待修改的灾备同步任务ID
+        :param JobId: 待修改的災備同步任務ID
         :type JobId: str
-        :param JobName: 灾备同步任务名称
+        :param JobName: 災備同步任務名稱
         :type JobName: str
-        :param SyncOption: 灾备同步任务配置选项
+        :param SyncOption: 災備同步任務配置選項
         :type SyncOption: :class:`tencentcloud.dts.v20180330.models.SyncOption`
-        :param DatabaseInfo: 当选择'指定库表'灾备同步的时候, 需要设置待同步的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
-对于database-table两级结构的数据库：
+        :param DatabaseInfo: 當選擇'指定庫表'災備同步的時候, 需要設置待同步的源資料庫表訊息,用符合json數組格式的字串描述, 如下所例。
+對于database-table兩級結構的資料庫：
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
         :type DatabaseInfo: str
         """
@@ -979,13 +979,13 @@ class ModifySyncJobRequest(AbstractModel):
 
 
 class ModifySyncJobResponse(AbstractModel):
-    """ModifySyncJob返回参数结构体
+    """ModifySyncJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -996,39 +996,39 @@ class ModifySyncJobResponse(AbstractModel):
 
 
 class SrcInfo(AbstractModel):
-    """源实例信息
+    """源實例訊息
 
     """
 
     def __init__(self):
         """
-        :param AccessKey: 阿里云AccessKey
+        :param AccessKey: 阿裏雲AccessKey
         :type AccessKey: str
-        :param Ip: 实例的IP地址
+        :param Ip: 實例的IP網址
         :type Ip: str
-        :param Port: 实例的端口
+        :param Port: 實例的端口
         :type Port: int
-        :param User: 实例的用户名
+        :param User: 實例的用戶名
         :type User: str
-        :param Password: 实例的密码
+        :param Password: 實例的密碼
         :type Password: str
-        :param RdsInstanceId: 阿里云rds实例id
+        :param RdsInstanceId: 阿裏雲rds實例id
         :type RdsInstanceId: str
-        :param CvmInstanceId: CVM实例短ID，格式如：ins-olgl89y8，与云主机控制台页面显示的实例ID相同，如果是CVM自建实例或者通过自建VPN接入的公网实例，需要传递此字段
+        :param CvmInstanceId: CVM實例短ID，格式如：ins-olgl89y8，與雲主機控制台頁面顯示的實例ID相同，如果是CVM自建實例或者通過自建VPN接入的公網實例，需要傳遞此欄位
         :type CvmInstanceId: str
-        :param UniqDcgId: 专线网关ID
+        :param UniqDcgId: 專線閘道ID
         :type UniqDcgId: str
-        :param VpcId: 私有网络ID，和原来的数字vpcId对应，需要调vpc的接口去转换
+        :param VpcId: 私有網絡ID，和原來的數字vpcId對應，需要調vpc的介面去轉換
         :type VpcId: str
-        :param SubnetId: 私有网络下的子网ID, 和原来的数字子网ID对应，需要调用vpc的接口去转换
+        :param SubnetId: 私有網絡下的子網ID, 和原來的數字子網ID對應，需要調用vpc的介面去轉換
         :type SubnetId: str
-        :param UniqVpnGwId: 系统分配的VPN网关ID
+        :param UniqVpnGwId: 系統分配的VPN閘道ID
         :type UniqVpnGwId: str
-        :param InstanceId: 实例短Id
+        :param InstanceId: 實例短Id
         :type InstanceId: str
         :param Region: 地域英文名，如：ap-guangzhou
         :type Region: str
-        :param Supplier: 服务提供商，如:aliyun,others
+        :param Supplier: 服務提供商，如:aliyun,others
         :type Supplier: str
         """
         self.AccessKey = None
@@ -1065,13 +1065,13 @@ class SrcInfo(AbstractModel):
 
 
 class StartMigrateJobRequest(AbstractModel):
-    """StartMigrateJob请求参数结构体
+    """StartMigrateJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 数据迁移任务ID
+        :param JobId: 數據遷移任務ID
         :type JobId: str
         """
         self.JobId = None
@@ -1082,13 +1082,13 @@ class StartMigrateJobRequest(AbstractModel):
 
 
 class StartMigrateJobResponse(AbstractModel):
-    """StartMigrateJob返回参数结构体
+    """StartMigrateJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1099,13 +1099,13 @@ class StartMigrateJobResponse(AbstractModel):
 
 
 class StartSyncJobRequest(AbstractModel):
-    """StartSyncJob请求参数结构体
+    """StartSyncJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 灾备同步任务ID
+        :param JobId: 災備同步任務ID
         :type JobId: str
         """
         self.JobId = None
@@ -1116,13 +1116,13 @@ class StartSyncJobRequest(AbstractModel):
 
 
 class StartSyncJobResponse(AbstractModel):
-    """StartSyncJob返回参数结构体
+    """StartSyncJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1133,13 +1133,13 @@ class StartSyncJobResponse(AbstractModel):
 
 
 class StopMigrateJobRequest(AbstractModel):
-    """StopMigrateJob请求参数结构体
+    """StopMigrateJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 数据迁移任务ID
+        :param JobId: 數據遷移任務ID
         :type JobId: str
         """
         self.JobId = None
@@ -1150,13 +1150,13 @@ class StopMigrateJobRequest(AbstractModel):
 
 
 class StopMigrateJobResponse(AbstractModel):
-    """StopMigrateJob返回参数结构体
+    """StopMigrateJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1167,15 +1167,15 @@ class StopMigrateJobResponse(AbstractModel):
 
 
 class SwitchDrToMasterRequest(AbstractModel):
-    """SwitchDrToMaster请求参数结构体
+    """SwitchDrToMaster請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DstInfo: 灾备实例的信息
+        :param DstInfo: 災備實例的訊息
         :type DstInfo: :class:`tencentcloud.dts.v20180330.models.SyncInstanceInfo`
-        :param DatabaseType: 数据库的类型  （如 mysql）
+        :param DatabaseType: 資料庫的類型  （如 mysql）
         :type DatabaseType: str
         """
         self.DstInfo = None
@@ -1190,15 +1190,15 @@ class SwitchDrToMasterRequest(AbstractModel):
 
 
 class SwitchDrToMasterResponse(AbstractModel):
-    """SwitchDrToMaster返回参数结构体
+    """SwitchDrToMaster返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AsyncRequestId: 后台异步任务请求id
+        :param AsyncRequestId: 後台異步任務請求id
         :type AsyncRequestId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AsyncRequestId = None
@@ -1211,19 +1211,19 @@ class SwitchDrToMasterResponse(AbstractModel):
 
 
 class SyncCheckStepInfo(AbstractModel):
-    """灾备任务校验步骤
+    """災備任務校驗步驟
 
     """
 
     def __init__(self):
         """
-        :param StepNo: 步骤序列
+        :param StepNo: 步驟序列
         :type StepNo: int
-        :param StepName: 步骤展现名称
+        :param StepName: 步驟展現名稱
         :type StepName: str
-        :param StepCode: 步骤执行结果代码
+        :param StepCode: 步驟執行結果代碼
         :type StepCode: int
-        :param StepMessage: 步骤执行结果提示
+        :param StepMessage: 步驟執行結果提示
         :type StepMessage: str
         """
         self.StepNo = None
@@ -1240,25 +1240,25 @@ class SyncCheckStepInfo(AbstractModel):
 
 
 class SyncDetailInfo(AbstractModel):
-    """描述详细同步任务过程
+    """描述詳細同步任務過程
 
     """
 
     def __init__(self):
         """
-        :param StepAll: 总步骤数
+        :param StepAll: 總步驟數
         :type StepAll: int
-        :param StepNow: 当前步骤
+        :param StepNow: 當前步驟
         :type StepNow: int
-        :param Progress: 总进度
+        :param Progress: 總進度
         :type Progress: str
-        :param CurrentStepProgress: 当前步骤进度
+        :param CurrentStepProgress: 當前步驟進度
         :type CurrentStepProgress: str
-        :param MasterSlaveDistance: 主从差距，MB
+        :param MasterSlaveDistance: 主從差距，MB
         :type MasterSlaveDistance: int
-        :param SecondsBehindMaster: 主从差距，秒
+        :param SecondsBehindMaster: 主從差距，秒
         :type SecondsBehindMaster: int
-        :param StepInfo: 步骤信息
+        :param StepInfo: 步驟訊息
         :type StepInfo: list of SyncStepDetailInfo
         """
         self.StepAll = None
@@ -1286,7 +1286,7 @@ class SyncDetailInfo(AbstractModel):
 
 
 class SyncInstanceInfo(AbstractModel):
-    """灾备同步的实例信息，记录主实例或灾备实例的信息
+    """災備同步的實例訊息，記錄主實例或災備實例的訊息
 
     """
 
@@ -1294,7 +1294,7 @@ class SyncInstanceInfo(AbstractModel):
         """
         :param Region: 地域英文名，如：ap-guangzhou
         :type Region: str
-        :param InstanceId: 实例短Id
+        :param InstanceId: 實例短Id
         :type InstanceId: str
         """
         self.Region = None
@@ -1307,41 +1307,41 @@ class SyncInstanceInfo(AbstractModel):
 
 
 class SyncJobInfo(AbstractModel):
-    """灾备同步任务信息
+    """災備同步任務訊息
 
     """
 
     def __init__(self):
         """
-        :param JobId: 灾备任务id
+        :param JobId: 災備任務id
         :type JobId: str
-        :param JobName: 灾备任务名
+        :param JobName: 災備任務名
         :type JobName: str
-        :param SyncOption: 任务同步
+        :param SyncOption: 任務同步
         :type SyncOption: :class:`tencentcloud.dts.v20180330.models.SyncOption`
-        :param SrcAccessType: 源接入类型
+        :param SrcAccessType: 源接入類型
         :type SrcAccessType: str
-        :param SrcDatabaseType: 源数据类型
+        :param SrcDatabaseType: 源數據類型
         :type SrcDatabaseType: str
-        :param SrcInfo: 源实例信息
+        :param SrcInfo: 源實例訊息
         :type SrcInfo: :class:`tencentcloud.dts.v20180330.models.SyncInstanceInfo`
-        :param DstAccessType: 灾备接入类型
+        :param DstAccessType: 災備接入類型
         :type DstAccessType: str
-        :param DstDatabaseType: 灾备数据类型
+        :param DstDatabaseType: 災備數據類型
         :type DstDatabaseType: str
-        :param DstInfo: 灾备实例信息
+        :param DstInfo: 災備實例訊息
         :type DstInfo: :class:`tencentcloud.dts.v20180330.models.SyncInstanceInfo`
-        :param Detail: 任务信息
+        :param Detail: 任務訊息
         :type Detail: :class:`tencentcloud.dts.v20180330.models.SyncDetailInfo`
-        :param Status: 任务状态
+        :param Status: 任務狀态
         :type Status: int
-        :param DatabaseInfo: 迁移库表
+        :param DatabaseInfo: 遷移庫表
         :type DatabaseInfo: str
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param StartTime: 开始时间
+        :param StartTime: 開始時間
         :type StartTime: str
-        :param EndTime: 结束时间
+        :param EndTime: 結束時間
         :type EndTime: str
         """
         self.JobId = None
@@ -1388,19 +1388,19 @@ class SyncJobInfo(AbstractModel):
 
 
 class SyncOption(AbstractModel):
-    """灾备同步任务配置选项
+    """災備同步任務配置選項
 
     """
 
     def __init__(self):
         """
-        :param SyncObject: 同步对象，1-整个实例，2-指定库表
+        :param SyncObject: 同步對象，1-整個實例，2-指定庫表
         :type SyncObject: int
-        :param RunMode: 同步开始设置，1-立即开始
+        :param RunMode: 同步開始設置，1-立即開始
         :type RunMode: int
         :param SyncType: 同步模式， 3-全量且增量同步
         :type SyncType: int
-        :param ConsistencyType: 数据一致性检测， 1-无需配置
+        :param ConsistencyType: 數據一緻性檢測， 1-無需配置
         :type ConsistencyType: int
         """
         self.SyncObject = None
@@ -1417,19 +1417,19 @@ class SyncOption(AbstractModel):
 
 
 class SyncStepDetailInfo(AbstractModel):
-    """同步任务进度
+    """同步任務進度
 
     """
 
     def __init__(self):
         """
-        :param StepNo: 步骤编号
+        :param StepNo: 步驟編号
         :type StepNo: int
-        :param StepName: 步骤名
+        :param StepName: 步驟名
         :type StepName: str
         :param CanStop: 能否中止
         :type CanStop: int
-        :param StepId: 步骤号
+        :param StepId: 步驟号
         :type StepId: int
         """
         self.StepNo = None

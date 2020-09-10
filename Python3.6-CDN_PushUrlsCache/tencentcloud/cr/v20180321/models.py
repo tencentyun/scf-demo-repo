@@ -17,19 +17,19 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class ApplyBlackListRequest(AbstractModel):
-    """ApplyBlackList请求参数结构体
+    """ApplyBlackList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，本接口取值：account
+        :param Module: 模組名，本介面取值：account
         :type Module: str
-        :param Operation: 操作名，本接口取值：ApplyBlackList
+        :param Operation: 操作名，本介面取值：ApplyBlackList
         :type Operation: str
-        :param BlackList: 黑名单列表
+        :param BlackList: 黑名單清單
         :type BlackList: list of SingleBlackApply
-        :param InstId: 实例ID，不传默认为系统分配的初始实例
+        :param InstId: 實例ID，不傳預設爲系統分配的初始實例
         :type InstId: str
         """
         self.Module = None
@@ -51,13 +51,13 @@ class ApplyBlackListRequest(AbstractModel):
 
 
 class ApplyBlackListResponse(AbstractModel):
-    """ApplyBlackList返回参数结构体
+    """ApplyBlackList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -68,25 +68,25 @@ class ApplyBlackListResponse(AbstractModel):
 
 
 class ApplyCreditAuditRequest(AbstractModel):
-    """ApplyCreditAudit请求参数结构体
+    """ApplyCreditAudit請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，本接口取值：Credit
+        :param Module: 模組名，本介面取值：Credit
         :type Module: str
-        :param Operation: 操作名，本接口取值：Apply
+        :param Operation: 操作名，本介面取值：Apply
         :type Operation: str
-        :param InstId: 实例ID
+        :param InstId: 實例ID
         :type InstId: str
-        :param ProductId: 产品ID，形如P******。
+        :param ProductId: 産品ID，形如P******。
         :type ProductId: str
-        :param CaseId: 信审任务ID，同一天内，同一InstId下，同一CaseId只能调用一次。
+        :param CaseId: 信審任務ID，同一天内，同一InstId下，同一CaseId只能調用一次。
         :type CaseId: str
-        :param CallbackUrl: 回调地址
+        :param CallbackUrl: 回調網址
         :type CallbackUrl: str
-        :param Data: JSON格式的业务字段。
+        :param Data: JSON格式的業務欄位。
         :type Data: str
         """
         self.Module = None
@@ -109,15 +109,15 @@ class ApplyCreditAuditRequest(AbstractModel):
 
 
 class ApplyCreditAuditResponse(AbstractModel):
-    """ApplyCreditAudit返回参数结构体
+    """ApplyCreditAudit返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestDate: 请求日期
+        :param RequestDate: 請求日期
         :type RequestDate: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestDate = None
@@ -130,23 +130,23 @@ class ApplyCreditAuditResponse(AbstractModel):
 
 
 class DescribeCreditResultRequest(AbstractModel):
-    """DescribeCreditResult请求参数结构体
+    """DescribeCreditResult請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，本接口取值：Credit
+        :param Module: 模組名，本介面取值：Credit
         :type Module: str
-        :param Operation: 操作名，本接口取值：Get
+        :param Operation: 操作名，本介面取值：Get
         :type Operation: str
-        :param InstId: 实例ID
+        :param InstId: 實例ID
         :type InstId: str
-        :param ProductId: 产品ID，形如P******。
+        :param ProductId: 産品ID，形如P******。
         :type ProductId: str
-        :param CaseId: 信审任务ID
+        :param CaseId: 信審任務ID
         :type CaseId: str
-        :param RequestDate: 请求日期，格式为YYYY-MM-DD
+        :param RequestDate: 請求日期，格式爲YYYY-MM-DD
         :type RequestDate: str
         """
         self.Module = None
@@ -167,28 +167,28 @@ class DescribeCreditResultRequest(AbstractModel):
 
 
 class DescribeCreditResultResponse(AbstractModel):
-    """DescribeCreditResult返回参数结构体
+    """DescribeCreditResult返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResultCode: <p>呼叫结果，取值范围：</p><ul style="margin-bottom:0px;"><li>NON：接通</li><li>DBU：号码忙</li><li>DRF：不在服务区</li><li>ANA：欠费未接听</li><li>REJ：拒接</li><li>SHU：关机</li><li>NAN：空号</li><li>HAL：停机</li><li>DAD：未接听</li><li>EXE：其他异常</li></ul>
+        :param ResultCode: <p>呼叫結果，取值範圍：</p><ul style="margin-bottom:0px;"><li>NON：接通</li><li>DBU：号碼忙</li><li>DRF：不在服務區</li><li>ANA：欠費未接聽</li><li>REJ：拒接</li><li>SHU：關機</li><li>NAN：空号</li><li>HAL：停機</li><li>DAD：未接聽</li><li>EXE：其他異常</li></ul>
         :type ResultCode: str
-        :param ClientCode: 客户标识代码，多个标识码以英文逗号分隔，ResultCode为NON时才有。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClientCode: 客戶标識代碼，多個标識碼以英文逗号分隔，ResultCode爲NON時才有。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClientCode: str
-        :param RingStartTime: 开始振铃时间，ResultCode为NON或DAD时才有此字段。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RingStartTime: 開始振鈴時間，ResultCode爲NON或DAD時才有此欄位。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RingStartTime: str
-        :param RingDuration: 振铃时长
+        :param RingDuration: 振鈴時長
         :type RingDuration: int
-        :param AnswerDuration: 接通时长
+        :param AnswerDuration: 接通時長
         :type AnswerDuration: int
-        :param ContextValue: JSON格式的扩展信息字段，ResultCode为NON时才有。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ContextValue: JSON格式的擴展訊息欄位，ResultCode爲NON時才有。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ContextValue: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResultCode = None
@@ -211,31 +211,31 @@ class DescribeCreditResultResponse(AbstractModel):
 
 
 class DescribeRecordsRequest(AbstractModel):
-    """DescribeRecords请求参数结构体
+    """DescribeRecords請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，本接口取值：Record
+        :param Module: 模組名，本介面取值：Record
         :type Module: str
-        :param Operation: 操作名，本接口取值：List
+        :param Operation: 操作名，本介面取值：List
         :type Operation: str
-        :param ProductId: 产品ID
+        :param ProductId: 産品ID
         :type ProductId: str
-        :param AccountNum: 案件编号
+        :param AccountNum: 案件編号
         :type AccountNum: str
-        :param CalledPhone: 被叫号码
+        :param CalledPhone: 被叫号碼
         :type CalledPhone: str
-        :param StartBizDate: 查询起始日期，格式为YYYY-MM-DD
+        :param StartBizDate: 查詢起始日期，格式爲YYYY-MM-DD
         :type StartBizDate: str
-        :param EndBizDate: 查询结束日期，格式为YYYY-MM-DD
+        :param EndBizDate: 查詢結束日期，格式爲YYYY-MM-DD
         :type EndBizDate: str
-        :param Offset: 分页参数，索引，默认为0
+        :param Offset: 分頁參數，索引，預設爲0
         :type Offset: str
-        :param Limit: 分页参数，页长，默认为20
+        :param Limit: 分頁參數，頁長，預設爲20
         :type Limit: str
-        :param InstId: 实例ID，不传默认为系统分配的初始实例
+        :param InstId: 實例ID，不傳預設爲系統分配的初始實例
         :type InstId: str
         """
         self.Module = None
@@ -264,18 +264,18 @@ class DescribeRecordsRequest(AbstractModel):
 
 
 class DescribeRecordsResponse(AbstractModel):
-    """DescribeRecords返回参数结构体
+    """DescribeRecords返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RecordList: 录音列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RecordList: 錄音清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RecordList: list of SingleRecord
-        :param TotalCount: 录音总量。
+        :param TotalCount: 錄音總量。
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RecordList = None
@@ -295,19 +295,19 @@ class DescribeRecordsResponse(AbstractModel):
 
 
 class DescribeTaskStatusRequest(AbstractModel):
-    """DescribeTaskStatus请求参数结构体
+    """DescribeTaskStatus請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，本接口取值：Task
+        :param Module: 模組名，本介面取值：Task
         :type Module: str
-        :param Operation: 操作名，本接口取值：DescribeTaskStatus
+        :param Operation: 操作名，本介面取值：DescribeTaskStatus
         :type Operation: str
-        :param TaskId: 任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123
+        :param TaskId: 任務ID，"上傳文件"介面返回的DataResId，形如abc-xyz123
         :type TaskId: str
-        :param InstId: 实例ID，不传默认为系统分配的初始实例。
+        :param InstId: 實例ID，不傳預設爲系統分配的初始實例。
         :type InstId: str
         """
         self.Module = None
@@ -324,20 +324,20 @@ class DescribeTaskStatusRequest(AbstractModel):
 
 
 class DescribeTaskStatusResponse(AbstractModel):
-    """DescribeTaskStatus返回参数结构体
+    """DescribeTaskStatus返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskResult: <p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
+        :param TaskResult: <p>任務結果：</p><ul style="margin-bottom:0px;"><li>處理中："Uploading Data."</li><li>上傳成功："File Uploading Task Success."</li><li>上傳失敗：具體失敗原因</li></ul>
         :type TaskResult: str
-        :param TaskType: <p>任务类型：</p><ul style="margin-bottom:0px;"><li>到期/逾期提醒数据上传：002</li><li>到期/逾期提醒停拨数据上传：003</li><li>回访数据上传：004</li><li>回访停拨数据上传：005</li></ul>
+        :param TaskType: <p>任務類型：</p><ul style="margin-bottom:0px;"><li>到期/逾期提醒數據上傳：002</li><li>到期/逾期提醒停撥數據上傳：003</li><li>回訪數據上傳：004</li><li>回訪停撥數據上傳：005</li></ul>
         :type TaskType: str
-        :param TaskFileUrl: 过滤文件下载链接，有过滤数据时才存在。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TaskFileUrl: 過濾文件下載連結，有過濾數據時才存在。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskFileUrl: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskResult = None
@@ -354,19 +354,19 @@ class DescribeTaskStatusResponse(AbstractModel):
 
 
 class DownloadDialogueTextRequest(AbstractModel):
-    """DownloadDialogueText请求参数结构体
+    """DownloadDialogueText請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，本接口取值：Report
+        :param Module: 模組名，本介面取值：Report
         :type Module: str
-        :param Operation: 操作名，本接口取值：DownloadTextReport
+        :param Operation: 操作名，本介面取值：DownloadTextReport
         :type Operation: str
-        :param ReportDate: 报告日期，格式为YYYY-MM-DD
+        :param ReportDate: 報告日期，格式爲YYYY-MM-DD
         :type ReportDate: str
-        :param InstId: 实例ID
+        :param InstId: 實例ID
         :type InstId: str
         """
         self.Module = None
@@ -383,15 +383,15 @@ class DownloadDialogueTextRequest(AbstractModel):
 
 
 class DownloadDialogueTextResponse(AbstractModel):
-    """DownloadDialogueText返回参数结构体
+    """DownloadDialogueText返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TextReportUrl: 对话文本下载地址
+        :param TextReportUrl: 對話文本下載網址
         :type TextReportUrl: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TextReportUrl = None
@@ -404,19 +404,19 @@ class DownloadDialogueTextResponse(AbstractModel):
 
 
 class DownloadRecordListRequest(AbstractModel):
-    """DownloadRecordList请求参数结构体
+    """DownloadRecordList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，本接口取值：Record
+        :param Module: 模組名，本介面取值：Record
         :type Module: str
-        :param Operation: 操作名，本接口取值：DownloadList
+        :param Operation: 操作名，本介面取值：DownloadList
         :type Operation: str
-        :param BizDate: 录音日期，格式为YYYY-MM-DD
+        :param BizDate: 錄音日期，格式爲YYYY-MM-DD
         :type BizDate: str
-        :param InstId: 实例ID
+        :param InstId: 實例ID
         :type InstId: str
         """
         self.Module = None
@@ -433,15 +433,15 @@ class DownloadRecordListRequest(AbstractModel):
 
 
 class DownloadRecordListResponse(AbstractModel):
-    """DownloadRecordList返回参数结构体
+    """DownloadRecordList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RecordListUrl: 录音列表下载地址
+        :param RecordListUrl: 錄音清單下載網址
         :type RecordListUrl: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RecordListUrl = None
@@ -454,19 +454,19 @@ class DownloadRecordListResponse(AbstractModel):
 
 
 class DownloadReportRequest(AbstractModel):
-    """DownloadReport请求参数结构体
+    """DownloadReport請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，本接口取值：Report
+        :param Module: 模組名，本介面取值：Report
         :type Module: str
-        :param Operation: 操作名，本接口取值：DownloadReport
+        :param Operation: 操作名，本介面取值：DownloadReport
         :type Operation: str
-        :param ReportDate: 报告日期，格式为YYYY-MM-DD
+        :param ReportDate: 報告日期，格式爲YYYY-MM-DD
         :type ReportDate: str
-        :param InstId: 实例ID，不传默认为系统分配的初始实例。
+        :param InstId: 實例ID，不傳預設爲系統分配的初始實例。
         :type InstId: str
         """
         self.Module = None
@@ -483,31 +483,31 @@ class DownloadReportRequest(AbstractModel):
 
 
 class DownloadReportResponse(AbstractModel):
-    """DownloadReport返回参数结构体
+    """DownloadReport返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DailyReportUrl: 到期/逾期提醒日报下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DailyReportUrl: 到期/逾期提醒日報下載網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DailyReportUrl: str
-        :param ResultReportUrl: 到期/逾期提醒结果下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResultReportUrl: 到期/逾期提醒結果下載網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResultReportUrl: str
-        :param DetailReportUrl: 到期/逾期提醒明细下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DetailReportUrl: 到期/逾期提醒明細下載網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DetailReportUrl: str
-        :param CallbackDailyReportUrl: 回访日报下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CallbackDailyReportUrl: 回訪日報下載網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CallbackDailyReportUrl: str
-        :param CallbackResultReportUrl: 回访结果下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CallbackResultReportUrl: 回訪結果下載網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CallbackResultReportUrl: str
-        :param CallbackDetailReportUrl: 回访明细下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CallbackDetailReportUrl: 回訪明細下載網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CallbackDetailReportUrl: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DailyReportUrl = None
@@ -530,23 +530,23 @@ class DownloadReportResponse(AbstractModel):
 
 
 class QueryInstantDataRequest(AbstractModel):
-    """QueryInstantData请求参数结构体
+    """QueryInstantData請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，本接口取值：Data
+        :param Module: 模組名，本介面取值：Data
         :type Module: str
-        :param Operation: 操作名，本接口取值：Query
+        :param Operation: 操作名，本介面取值：Query
         :type Operation: str
-        :param ProductId: 产品ID
+        :param ProductId: 産品ID
         :type ProductId: str
-        :param InstanceId: 实例ID，不传默认为系统分配的初始实例
+        :param InstanceId: 實例ID，不傳預設爲系統分配的初始實例
         :type InstanceId: str
-        :param QueryModel: 查询类型：callRecord 通话记录
+        :param QueryModel: 查詢類型：callRecord 通話記錄
         :type QueryModel: str
-        :param Data: 查询参数
+        :param Data: 查詢參數
         :type Data: str
         """
         self.Module = None
@@ -567,19 +567,19 @@ class QueryInstantDataRequest(AbstractModel):
 
 
 class QueryInstantDataResponse(AbstractModel):
-    """QueryInstantData返回参数结构体
+    """QueryInstantData返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 总数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 總數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
         :param Data: 返回内容
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -594,21 +594,21 @@ class QueryInstantDataResponse(AbstractModel):
 
 
 class SingleBlackApply(AbstractModel):
-    """黑名单申请信息
+    """黑名單申請訊息
 
     """
 
     def __init__(self):
         """
-        :param BlackType: 黑名单类型，01代表手机号码。
+        :param BlackType: 黑名單類型，01代表手機号碼。
         :type BlackType: str
-        :param OperationType: 操作类型，A为新增，D为删除。
+        :param OperationType: 操作類型，A爲新增，D爲删除。
         :type OperationType: str
-        :param BlackValue: 黑名单值，BlackType为01时，填写11位手机号码。
+        :param BlackValue: 黑名單值，BlackType爲01時，填寫11位手機号碼。
         :type BlackValue: str
-        :param BlackDescription: 备注。
+        :param BlackDescription: 備注。
         :type BlackDescription: str
-        :param BlackValidDate: 黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
+        :param BlackValidDate: 黑名單生效截止日期，格式爲YYYY-MM-DD，不填預設爲永久。
         :type BlackValidDate: str
         """
         self.BlackType = None
@@ -627,29 +627,29 @@ class SingleBlackApply(AbstractModel):
 
 
 class SingleRecord(AbstractModel):
-    """录音信息
+    """錄音訊息
 
     """
 
     def __init__(self):
         """
-        :param AccountNum: 案件编号。
+        :param AccountNum: 案件編号。
         :type AccountNum: str
         :param BizDate: 外呼日期。
         :type BizDate: str
-        :param CallStartTime: 开始呼叫时间。
+        :param CallStartTime: 開始呼叫時間。
         :type CallStartTime: str
-        :param CallerPhone: 主叫号码。
+        :param CallerPhone: 主叫号碼。
         :type CallerPhone: str
-        :param Direction: 呼叫方向，O为呼出，I为呼入。
+        :param Direction: 呼叫方向，O爲呼出，I爲呼入。
         :type Direction: str
-        :param Duration: 通话时长。
+        :param Duration: 通話時長。
         :type Duration: int
-        :param ProductId: 产品ID。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProductId: 産品ID。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProductId: str
-        :param RecordCosUrl: 录音下载链接。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RecordCosUrl: 錄音下載連結。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RecordCosUrl: str
         """
         self.AccountNum = None
@@ -674,25 +674,25 @@ class SingleRecord(AbstractModel):
 
 
 class UploadDataFileRequest(AbstractModel):
-    """UploadDataFile请求参数结构体
+    """UploadDataFile請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，本接口取值：Data
+        :param Module: 模組名，本介面取值：Data
         :type Module: str
-        :param Operation: 操作名，本接口取值：Upload
+        :param Operation: 操作名，本介面取值：Upload
         :type Operation: str
         :param FileName: 文件名
         :type FileName: str
-        :param UploadModel: <p>上传类型，不填默认到期/逾期提醒文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：到期/逾期提醒文件</li><li>repay：到期/逾期提醒停拨文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li><li>blacklist：黑名单文件</li></ul>
+        :param UploadModel: <p>上傳類型，不填預設到期/逾期提醒文件，取值範圍：</p><ul style="margin-bottom:0px;"><li>data：到期/逾期提醒文件</li><li>repay：到期/逾期提醒停撥文件</li><li>callback：回訪文件</li><li>callstop：回訪停撥文件</li><li>blacklist：黑名單文件</li></ul>
         :type UploadModel: str
-        :param File: 文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
+        :param File: 文件，文件與文件網址上傳只可選用一種，必須使用multipart/form-data協議來上傳二進制流文件，建議使用xlsx格式，大小不超過5MB。
         :type File: binary
-        :param FileUrl: 文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
+        :param FileUrl: 文件上傳網址，文件與文件網址上傳只可選用一種，大小不超過50MB。
         :type FileUrl: str
-        :param InstId: 实例ID，不传默认为系统分配的初始实例。
+        :param InstId: 實例ID，不傳預設爲系統分配的初始實例。
         :type InstId: str
         """
         self.Module = None
@@ -715,15 +715,15 @@ class UploadDataFileRequest(AbstractModel):
 
 
 class UploadDataFileResponse(AbstractModel):
-    """UploadDataFile返回参数结构体
+    """UploadDataFile返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DataResId: 数据ID
+        :param DataResId: 數據ID
         :type DataResId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DataResId = None
@@ -736,21 +736,21 @@ class UploadDataFileResponse(AbstractModel):
 
 
 class UploadDataJsonRequest(AbstractModel):
-    """UploadDataJson请求参数结构体
+    """UploadDataJson請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，本接口取值：Data
+        :param Module: 模組名，本介面取值：Data
         :type Module: str
-        :param Operation: 操作名，本接口取值：UploadJson
+        :param Operation: 操作名，本介面取值：UploadJson
         :type Operation: str
-        :param Data: 报文信息
+        :param Data: 報文訊息
         :type Data: str
-        :param UploadModel: <p>上传类型，不填默认到期/逾期提醒数据，取值范围：</p><ul style="margin-bottom:0px;"><li>data：到期/逾期提醒数据</li><li>repay：到期/逾期提醒停拨数据</li></ul>
+        :param UploadModel: <p>上傳類型，不填預設到期/逾期提醒數據，取值範圍：</p><ul style="margin-bottom:0px;"><li>data：到期/逾期提醒數據</li><li>repay：到期/逾期提醒停撥數據</li></ul>
         :type UploadModel: str
-        :param InstanceId: 实例ID，不传默认为系统分配的初始实例。
+        :param InstanceId: 實例ID，不傳預設爲系統分配的初始實例。
         :type InstanceId: str
         """
         self.Module = None
@@ -769,16 +769,16 @@ class UploadDataJsonRequest(AbstractModel):
 
 
 class UploadDataJsonResponse(AbstractModel):
-    """UploadDataJson返回参数结构体
+    """UploadDataJson返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 响应报文信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 響應報文訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -791,17 +791,17 @@ class UploadDataJsonResponse(AbstractModel):
 
 
 class UploadFileRequest(AbstractModel):
-    """UploadFile请求参数结构体
+    """UploadFile請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名
+        :param Module: 模組名
         :type Module: str
         :param Operation: 操作名
         :type Operation: str
-        :param FileUrl: 文件上传地址，要求地址协议为HTTPS，且URL端口必须为443
+        :param FileUrl: 文件上傳網址，要求網址協議爲HTTPS，且URL端口必須爲443
         :type FileUrl: str
         :param FileName: 文件名
         :type FileName: str
@@ -824,15 +824,15 @@ class UploadFileRequest(AbstractModel):
 
 
 class UploadFileResponse(AbstractModel):
-    """UploadFile返回参数结构体
+    """UploadFile返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None

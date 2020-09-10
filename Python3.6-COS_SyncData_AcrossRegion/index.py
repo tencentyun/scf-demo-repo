@@ -42,7 +42,7 @@ def main_handler(event, context):
     if "Records" not in event.keys():
         return {"errorMsg": "event is not come from cos"}
 
-    #初始化COS及获取COS文件信息
+    #初始化COS及獲取COS文件訊息
     appid = event['Records'][0]['cos']['cosBucket']['appid']
     bucket = event['Records'][0]['cos']['cosBucket']['name'] + '-' + str(appid)
     key = event['Records'][0]['cos']['cosObject']['key']
@@ -57,12 +57,12 @@ def main_handler(event, context):
     logger.info("download_path is " + download_path)
     logger.info("Get from [%s] to download file [%s]" % (bucket, key))
 
-    #使用临时秘钥
+    #使用臨時秘鑰
     secret_id = os.environ.get('TENCENTCLOUD_SECRETID')      
     secret_key = os.environ.get('TENCENTCLOUD_SECRETKEY')    
     token = os.environ.get('TENCENTCLOUD_SESSIONTOKEN')   
 
-    # 从COS下载需要同步的文件
+    # 從COS下載需要同步的文件
     cos_client_source = cosClient = CosS3Client(CosConfig(Region=source_region, SecretId=secret_id, SecretKey=secret_key,Token=token))   
     try:
         response = cos_client_source.get_object(Bucket=bucket, Key=key, )
@@ -77,7 +77,7 @@ def main_handler(event, context):
         return ("Download file [%s] from [%s] fail" % (key,bucket))
 
 
-    # 同步文件到异地COS bucket
+    # 同步文件到異地COS bucket
     logger.info("Start to upload file to target_bucket") 
     cos_client_target = cosClient = CosS3Client(CosConfig(Region=target_region, SecretId=secret_id, SecretKey=secret_key,Token=token))
     try:

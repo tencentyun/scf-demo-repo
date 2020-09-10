@@ -74,4 +74,3 @@ class Deserializer(object):
                 raise SerializationError('Unknown mimetype, unable to deserialize: %s' % mimetype)
 
         return deserializer.loads(s)
-

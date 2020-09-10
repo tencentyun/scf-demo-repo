@@ -17,15 +17,15 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class Candidate(AbstractModel):
-    """识别出人脸对应的候选人。
+    """識别出人臉對應的候選人。
 
     """
 
     def __init__(self):
         """
-        :param Name: 识别出人脸对应的候选人数组。当前返回相似度最高的候选人。
+        :param Name: 識别出人臉對應的候選人數組。當前返回相似度最高的候選人。
         :type Name: str
-        :param Confidence: 相似度，0-100之间。
+        :param Confidence: 相似度，0-100之間。
         :type Confidence: int
         """
         self.Name = None
@@ -38,25 +38,25 @@ class Candidate(AbstractModel):
 
 
 class DisgustResult(AbstractModel):
-    """恶心识别结果。
+    """惡心識别結果。
 
     """
 
     def __init__(self):
         """
-        :param Code: 该识别场景的错误码：
+        :param Code: 該識别場景的錯誤碼：
 0表示成功，
--1表示系统错误，
--2表示引擎错误。
+-1表示系統錯誤，
+-2表示引擎錯誤。
         :type Code: int
-        :param Msg: 错误码描述信息。
+        :param Msg: 錯誤碼描述訊息。
         :type Msg: str
-        :param Suggestion: 识别场景的审核结论：
+        :param Suggestion: 識别場景的審核結論：
 PASS：正常
 REVIEW：疑似
-BLOCK：违规
+BLOCK：違規
         :type Suggestion: str
-        :param Confidence: 图像恶心的分数，0-100之间，分数越高恶心几率越大。
+        :param Confidence: 圖像惡心的分數，0-100之間，分數越高惡心幾率越大。
         :type Confidence: int
         """
         self.Code = None
@@ -73,19 +73,19 @@ BLOCK：违规
 
 
 class FaceRect(AbstractModel):
-    """识别出的人脸在图片中的位置。
+    """識别出的人臉在圖片中的位置。
 
     """
 
     def __init__(self):
         """
-        :param X: 人脸区域左上角横坐标。
+        :param X: 人臉區域左上角橫坐标。
         :type X: int
-        :param Y: 人脸区域左上角纵坐标。
+        :param Y: 人臉區域左上角縱坐标。
         :type Y: int
-        :param Width: 人脸区域宽度。
+        :param Width: 人臉區域寬度。
         :type Width: int
-        :param Height: 人脸区域高度。
+        :param Height: 人臉區域高度。
         :type Height: int
         """
         self.X = None
@@ -102,15 +102,15 @@ class FaceRect(AbstractModel):
 
 
 class FaceResult(AbstractModel):
-    """人脸识别结果。
+    """人臉識别結果。
 
     """
 
     def __init__(self):
         """
-        :param FaceRect: 检测出的人脸框位置。
+        :param FaceRect: 檢測出的人臉框位置。
         :type FaceRect: :class:`tencentcloud.ticm.v20181127.models.FaceRect`
-        :param Candidates: 候选人列表。当前返回相似度最高的候选人。
+        :param Candidates: 候選人清單。當前返回相似度最高的候選人。
         :type Candidates: list of Candidate
         """
         self.FaceRect = None
@@ -130,32 +130,32 @@ class FaceResult(AbstractModel):
 
 
 class ImageModerationRequest(AbstractModel):
-    """ImageModeration请求参数结构体
+    """ImageModeration請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Scenes: 本次调用支持的识别场景，可选值如下：
-1. PORN，即色情识别
-2. TERRORISM，即暴恐识别
-3. POLITICS，即政治敏感识别
+        :param Scenes: 本次調用支援的識别場景，可選值如下：
+1. PORN，即色情識别
+2. TERRORISM，即暴恐識别
+3. POLITICS，即政治敏感識别
 
-支持多场景（Scenes）一起检测。例如，使用 Scenes=["PORN", "TERRORISM"]，即对一张图片同时进行色情识别和暴恐识别。
+支援多場景（Scenes）一起檢測。例如，使用 Scenes=["PORN", "TERRORISM"]，即對一張圖片同時進行色情識别和暴恐識别。
         :type Scenes: list of str
-        :param ImageUrl: 图片URL地址。 
-图片限制： 
- • 图片格式：PNG、JPG、JPEG。 
- • 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
- • 图片像素：大于50*50像素，否则影响识别效果； 
- • 长宽比：长边：短边<5； 
-接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
+        :param ImageUrl: 圖片URL網址。 
+圖片限制： 
+ • 圖片格式：PNG、JPG、JPEG。 
+ • 圖片大小：所下載圖片經Base64編碼後不超過4M。圖片下載時間不超過3秒。 
+ • 圖片像素：大于50*50像素，否則影響識别效果； 
+ • 長寬比：長邊：短邊<5； 
+介面響應時間會受到圖片下載時間的影響，建議使用更可靠的儲存服務，推薦将圖片儲存在Top Cloud COS。
         :type ImageUrl: str
-        :param Config: 预留字段，后期用于展示更多识别信息。
+        :param Config: 預留欄位，後期用于展示更多識别訊息。
         :type Config: str
-        :param Extra: 透传字段，透传简单信息。
+        :param Extra: 透傳欄位，透傳簡單訊息。
         :type Extra: str
-        :param ImageBase64: 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+        :param ImageBase64: 圖片經過base64編碼的内容。最大不超過4M。與ImageUrl同時存在時優先使用ImageUrl欄位。
         :type ImageBase64: str
         """
         self.Scenes = None
@@ -174,32 +174,32 @@ class ImageModerationRequest(AbstractModel):
 
 
 class ImageModerationResponse(AbstractModel):
-    """ImageModeration返回参数结构体
+    """ImageModeration返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Suggestion: 识别场景的审核结论：
+        :param Suggestion: 識别場景的審核結論：
 PASS：正常
 REVIEW：疑似
-BLOCK：违规
+BLOCK：違規
         :type Suggestion: str
-        :param PornResult: 色情识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PornResult: 色情識别結果。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PornResult: :class:`tencentcloud.ticm.v20181127.models.PornResult`
-        :param TerrorismResult: 暴恐识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TerrorismResult: 暴恐識别結果。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TerrorismResult: :class:`tencentcloud.ticm.v20181127.models.TerrorismResult`
-        :param PoliticsResult: 政治敏感识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PoliticsResult: 政治敏感識别結果。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PoliticsResult: :class:`tencentcloud.ticm.v20181127.models.PoliticsResult`
-        :param Extra: 透传字段，透传简单信息。
+        :param Extra: 透傳欄位，透傳簡單訊息。
         :type Extra: str
-        :param DisgustResult: 恶心内容识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DisgustResult: 惡心内容識别結果。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DisgustResult: :class:`tencentcloud.ticm.v20181127.models.DisgustResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Suggestion = None
@@ -230,41 +230,41 @@ BLOCK：违规
 
 
 class PoliticsResult(AbstractModel):
-    """政治敏感识别结果。
+    """政治敏感識别結果。
 
     """
 
     def __init__(self):
         """
-        :param Code: 该识别场景的错误码：
+        :param Code: 該識别場景的錯誤碼：
 0表示成功，
--1表示系统错误，
--2表示引擎错误，
--1400表示图片解码失败，
--1401表示图片不符合规范。
+-1表示系統錯誤，
+-2表示引擎錯誤，
+-1400表示圖片解碼失敗，
+-1401表示圖片不符合規範。
         :type Code: int
-        :param Msg: 错误码描述信息。
+        :param Msg: 錯誤碼描述訊息。
         :type Msg: str
-        :param Suggestion: 识别场景的审核结论：
+        :param Suggestion: 識别場景的審核結論：
 PASS：正常
 REVIEW：疑似
-BLOCK：违规
+BLOCK：違規
         :type Suggestion: str
-        :param Confidence: 图像涉政的分数，0-100之间，分数越高涉政几率越大。
-Type为DNA时：
-0到75，Suggestion建议为PASS
-75到90，Suggestion建议为REVIEW
-90到100，Suggestion建议为BLOCK
-Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+        :param Confidence: 圖像涉政的分數，0-100之間，分數越高涉政幾率越大。
+Type爲DNA時：
+0到75，Suggestion建議爲PASS
+75到90，Suggestion建議爲REVIEW
+90到100，Suggestion建議爲BLOCK
+Type爲FACE時：
+0到55，Suggestion建議爲PASS
+55到60，Suggestion建議爲REVIEW
+60到100，Suggestion建議爲BLOCK
         :type Confidence: int
-        :param FaceResults: Type取值为‘FACE’时，人脸识别的结果列表。基于图片中实际检测到的人脸数，返回数组最大值不超过5个。
+        :param FaceResults: Type取值爲‘FACE’時，人臉識别的結果清單。基于圖片中實際檢測到的人臉數，返回數組最大值不超過5個。
         :type FaceResults: list of FaceResult
-        :param Type: 取值'DNA' 或‘FACE’。DNA表示结论和置信度来自图像指纹，FACE表示结论和置信度来自人脸识别。
+        :param Type: 取值'DNA' 或‘FACE’。DNA表示結論和置信度來自圖像指紋，FACE表示結論和置信度來自人臉識别。
         :type Type: str
-        :param AdvancedInfo: 鉴政识别返回的详细标签后期开放。
+        :param AdvancedInfo: 鑒政識别返回的詳細标簽後期開放。
         :type AdvancedInfo: str
         """
         self.Code = None
@@ -292,30 +292,30 @@ Type为FACE时：
 
 
 class PornResult(AbstractModel):
-    """色情识别结果。
+    """色情識别結果。
 
     """
 
     def __init__(self):
         """
-        :param Code: 该识别场景的错误码：
+        :param Code: 該識别場景的錯誤碼：
 0表示成功，
--1表示系统错误，
--2表示引擎错误，
--1400表示图片解码失败。
+-1表示系統錯誤，
+-2表示引擎錯誤，
+-1400表示圖片解碼失敗。
         :type Code: int
-        :param Msg: 错误码描述信息。
+        :param Msg: 錯誤碼描述訊息。
         :type Msg: str
-        :param Suggestion: 识别场景的审核结论：
+        :param Suggestion: 識别場景的審核結論：
 PASS：正常
 REVIEW：疑似
-BLOCK：违规
+BLOCK：違規
         :type Suggestion: str
-        :param Confidence: 算法对于Suggestion的置信度，0-100之间，值越高，表示对于Suggestion越确定。
+        :param Confidence: 算法對于Suggestion的置信度，0-100之間，值越高，表示對于Suggestion越确定。
         :type Confidence: int
-        :param AdvancedInfo: 预留字段，后期用于展示更多识别信息。
+        :param AdvancedInfo: 預留欄位，後期用于展示更多識别訊息。
         :type AdvancedInfo: str
-        :param Type: 取值'LABEL‘，LABEL表示结论和置信度来自标签分类。
+        :param Type: 取值'LABEL‘，LABEL表示結論和置信度來自标簽分類。
         :type Type: str
         """
         self.Code = None
@@ -336,40 +336,40 @@ BLOCK：违规
 
 
 class TerrorismResult(AbstractModel):
-    """暴恐识别结果。
+    """暴恐識别結果。
 
     """
 
     def __init__(self):
         """
-        :param Code: 该识别场景的错误码：
+        :param Code: 該識别場景的錯誤碼：
 0表示成功，
--1表示系统错误，
--2表示引擎错误，
--1400表示图片解码失败。
+-1表示系統錯誤，
+-2表示引擎錯誤，
+-1400表示圖片解碼失敗。
         :type Code: int
-        :param Msg: 错误码描述信息。
+        :param Msg: 錯誤碼描述訊息。
         :type Msg: str
-        :param Suggestion: 识别场景的审核结论：
+        :param Suggestion: 識别場景的審核結論：
 PASS：正常
 REVIEW：疑似
-BLOCK：违规
+BLOCK：違規
         :type Suggestion: str
-        :param Confidence: 图像涉恐的分数，0-100之间，分数越高涉恐几率越大。
-Type为LABEL时：
-0到86，Suggestion建议为PASS
-86到91，Suggestion建议为REVIEW
-91到100，Suggestion建议为BLOCK
-Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+        :param Confidence: 圖像涉恐的分數，0-100之間，分數越高涉恐幾率越大。
+Type爲LABEL時：
+0到86，Suggestion建議爲PASS
+86到91，Suggestion建議爲REVIEW
+91到100，Suggestion建議爲BLOCK
+Type爲FACE時：
+0到55，Suggestion建議爲PASS
+55到60，Suggestion建議爲REVIEW
+60到100，Suggestion建議爲BLOCK
         :type Confidence: int
-        :param FaceResults: Type取值为‘FACE’时，人脸识别的结果列表。基于图片中实际检测到的人脸数，返回数组最大值不超过5个。
+        :param FaceResults: Type取值爲‘FACE’時，人臉識别的結果清單。基于圖片中實際檢測到的人臉數，返回數組最大值不超過5個。
         :type FaceResults: list of FaceResult
-        :param AdvancedInfo: 暴恐识别返回的详细标签后期开放。
+        :param AdvancedInfo: 暴恐識别返回的詳細标簽後期開放。
         :type AdvancedInfo: str
-        :param Type: 取值'LABEL' 或‘FACE’，LABEL表示结论和置信度来自标签分类，FACE表示结论和置信度来自人脸识别。
+        :param Type: 取值'LABEL' 或‘FACE’，LABEL表示結論和置信度來自标簽分類，FACE表示結論和置信度來自人臉識别。
         :type Type: str
         """
         self.Code = None

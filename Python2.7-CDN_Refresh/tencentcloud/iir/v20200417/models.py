@@ -17,19 +17,19 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class Location(AbstractModel):
-    """检测到的主体在图片中的矩形框位置（四个顶点坐标）
+    """檢測到的主體在圖片中的矩形框位置（四個頂點坐标）
 
     """
 
     def __init__(self):
         """
-        :param XMin: 位置矩形框的左上角横坐标
+        :param XMin: 位置矩形框的左上角橫坐标
         :type XMin: int
-        :param YMin: 位置矩形框的左上角纵坐标
+        :param YMin: 位置矩形框的左上角縱坐标
         :type YMin: int
-        :param XMax: 位置矩形框的右下角横坐标
+        :param XMax: 位置矩形框的右下角橫坐标
         :type XMax: int
-        :param YMax: 位置矩形框的右下角纵坐标
+        :param YMax: 位置矩形框的右下角縱坐标
         :type YMax: int
         """
         self.XMin = None
@@ -46,32 +46,32 @@ class Location(AbstractModel):
 
 
 class ProductInfo(AbstractModel):
-    """图像识别出的商品的详细信息。
-    当图像中检测到多个物品时，会对显著性最高的物品进行识别。
+    """圖像識别出的商品的詳細訊息。
+    當圖像中檢測到多個物品時，會對顯著性最高的物品進行識别。
 
     """
 
     def __init__(self):
         """
-        :param FindSKU: 1表示找到同款商品，以下字段为同款商品信息； 
-0表示未找到同款商品， 具体商品信息为空（参考价格、名称、品牌等），仅提供商品类目。  
-是否找到同款的判断依据为Score分值，分值越大则同款的可能性越大。
+        :param FindSKU: 1表示找到同款商品，以下欄位爲同款商品訊息； 
+0表示未找到同款商品， 具體商品訊息爲空（參考價格、名稱、品牌等），僅提供商品類目。  
+是否找到同款的判斷依據爲Score分值，分值越大則同款的可能性越大。
         :type FindSKU: int
-        :param Location: 本商品在图片中的坐标，表示为矩形框的四个顶点坐标。
+        :param Location: 本商品在圖片中的坐标，表示爲矩形框的四個頂點坐标。
         :type Location: :class:`tencentcloud.iir.v20200417.models.Location`
-        :param Name: 商品名称
+        :param Name: 商品名稱
         :type Name: str
         :param Brand: 商品品牌
         :type Brand: str
-        :param Price: 参考价格，综合多个信息源，仅供参考。
+        :param Price: 參考價格，綜合多個訊息源，僅供參考。
         :type Price: str
-        :param ProductCategory: 识别结果的商品类目。 
-包含：鞋、图书音像、箱包、美妆个护、服饰、家电数码、玩具乐器、食品饮料、珠宝、家居家装、药品、酒水、绿植园艺、其他商品、非商品等。 
-当类别为“非商品”时，除Location、Score和本字段之外的商品信息为空。
+        :param ProductCategory: 識别結果的商品類目。 
+包含：鞋、圖書音像、箱包、美妝個護、服飾、家電數碼、玩具樂器、食品飲料、珠寶、家居家裝、藥品、酒水、綠植園藝、其他商品、非商品等。 
+當類别爲“非商品”時，除Location、Score和本欄位之外的商品訊息爲空。
         :type ProductCategory: str
-        :param Score: 输入图片中的主体物品和输出结果的相似度。分值越大，输出结果与输入图片是同款的可能性越高。
+        :param Score: 輸入圖片中的主體物品和輸出結果的相似度。分值越大，輸出結果與輸入圖片是同款的可能性越高。
         :type Score: float
-        :param Image: 搜索到的商品配图URL
+        :param Image: 搜索到的商品配圖URL
         :type Image: str
         """
         self.FindSKU = None
@@ -98,18 +98,18 @@ class ProductInfo(AbstractModel):
 
 
 class RecognizeProductRequest(AbstractModel):
-    """RecognizeProduct请求参数结构体
+    """RecognizeProduct請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageUrl: 图片限制：内测版仅支持jpg、jpeg，图片大小不超过1M，分辨率在25万到100万之间。 
-建议先对图片进行压缩，以便提升处理速度。
+        :param ImageUrl: 圖片限制：内測版僅支援jpg、jpeg，圖片大小不超過1M，分辨率在25萬到100萬之間。 
+建議先對圖片進行壓縮，以便提升處理速度。
         :type ImageUrl: str
-        :param ImageBase64: 图片经过base64编码的内容。最大不超过1M，分辨率在25万到100万之间。 
-与ImageUrl同时存在时优先使用ImageUrl字段。
-**注意：图片需要base64编码，并且要去掉编码头部。**
+        :param ImageBase64: 圖片經過base64編碼的内容。最大不超過1M，分辨率在25萬到100萬之間。 
+與ImageUrl同時存在時優先使用ImageUrl欄位。
+**注意：圖片需要base64編碼，并且要去掉編碼頭部。**
         :type ImageBase64: str
         """
         self.ImageUrl = None
@@ -122,20 +122,20 @@ class RecognizeProductRequest(AbstractModel):
 
 
 class RecognizeProductResponse(AbstractModel):
-    """RecognizeProduct返回参数结构体
+    """RecognizeProduct返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RegionDetected: 检测到的图片中的商品位置和品类预测。 
-当图片中存在多个商品时，输出多组坐标，按照__显著性__排序（综合考虑面积、是否在中心、检测算法置信度）。 
-最多可以输出__3组__检测结果。
+        :param RegionDetected: 檢測到的圖片中的商品位置和品類預測。 
+當圖片中存在多個商品時，輸出多組坐标，按照__顯著性__排序（綜合考慮面積、是否在中心、檢測算法置信度）。 
+最多可以輸出__3組__檢測結果。
         :type RegionDetected: list of RegionDetected
-        :param ProductInfo: 图像识别出的商品的详细信息。 
-当图像中检测到多个物品时，会对显著性最高的进行识别。
+        :param ProductInfo: 圖像識别出的商品的詳細訊息。 
+當圖像中檢測到多個物品時，會對顯著性最高的進行識别。
         :type ProductInfo: :class:`tencentcloud.iir.v20200417.models.ProductInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RegionDetected = None
@@ -157,20 +157,20 @@ class RecognizeProductResponse(AbstractModel):
 
 
 class RegionDetected(AbstractModel):
-    """检测到的图片中的商品位置和品类预测。
-    当图片中存在多个商品时，输出多组坐标，按照__显著性__排序（综合考虑面积、是否在中心、检测算法置信度）。
-    最多可以输出__3组__检测结果。
+    """檢測到的圖片中的商品位置和品類預測。
+    當圖片中存在多個商品時，輸出多組坐标，按照__顯著性__排序（綜合考慮面積、是否在中心、檢測算法置信度）。
+    最多可以輸出__3組__檢測結果。
 
     """
 
     def __init__(self):
         """
-        :param Category: 商品的品类预测结果。 
-包含：鞋、图书音像、箱包、美妆个护、服饰、家电数码、玩具乐器、食品饮料、珠宝、家居家装、药品、酒水、绿植园艺、其他商品、非商品等。
+        :param Category: 商品的品類預測結果。 
+包含：鞋、圖書音像、箱包、美妝個護、服飾、家電數碼、玩具樂器、食品飲料、珠寶、家居家裝、藥品、酒水、綠植園藝、其他商品、非商品等。
         :type Category: str
-        :param CategoryScore: 商品品类预测的置信度
+        :param CategoryScore: 商品品類預測的置信度
         :type CategoryScore: float
-        :param Location: 检测到的主体在图片中的坐标，表示为矩形框的四个顶点坐标
+        :param Location: 檢測到的主體在圖片中的坐标，表示爲矩形框的四個頂點坐标
         :type Location: :class:`tencentcloud.iir.v20200417.models.Location`
         """
         self.Category = None

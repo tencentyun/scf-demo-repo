@@ -7,7 +7,7 @@ inputs:
   name: unpack_to_cos
   src: ./
   description: >-
-    本示例通过配置COS触发，上传到COS的压缩包，使用SCF下载并本地解压，支持中文字段解压，并把解压后的文件上传到COS另一个targetBucket环境变量指定的存储桶中，支持如下压缩格式：ZIP,
+    本範例通過配置COS觸發，上傳到COS的壓縮包，使用SCF下載并本地解壓，支援中文欄位解壓，并把解壓後的文件上傳到COS另一個targetBucket環境變量指定的儲存桶中，支援如下壓縮格式：ZIP,
     RAR, 7Z, BZIP2, GZIP, TAR, XZ
   handler: unpack_to_cos.main_handler
   runtime: Python3.6
@@ -16,7 +16,7 @@ inputs:
   memorySize: 128
   timeout: 900
   events:
-     - cos: # cos触发器
+     - cos: # cos觸發器
         name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
         parameters:
           bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com

@@ -17,22 +17,22 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AppStatisticsItem(AbstractModel):
-    """应用用量统计数据
+    """應用用量統計數據
 
     """
 
     def __init__(self):
         """
-        :param RealtimeSpeechStatisticsItem: 实时语音统计数据
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RealtimeSpeechStatisticsItem: 實時語音統計數據
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RealtimeSpeechStatisticsItem: :class:`tencentcloud.gme.v20180711.models.RealTimeSpeechStatisticsItem`
-        :param VoiceMessageStatisticsItem: 语音消息统计数据
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VoiceMessageStatisticsItem: 語音訊息統計數據
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VoiceMessageStatisticsItem: :class:`tencentcloud.gme.v20180711.models.VoiceMessageStatisticsItem`
-        :param VoiceFilterStatisticsItem: 语音过滤统计数据
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VoiceFilterStatisticsItem: 語音過濾統計數據
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VoiceFilterStatisticsItem: :class:`tencentcloud.gme.v20180711.models.VoiceFilterStatisticsItem`
-        :param Date: 统计时间
+        :param Date: 統計時間
         :type Date: str
         """
         self.RealtimeSpeechStatisticsItem = None
@@ -55,27 +55,27 @@ class AppStatisticsItem(AbstractModel):
 
 
 class CreateAppRequest(AbstractModel):
-    """CreateApp请求参数结构体
+    """CreateApp請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AppName: 应用名称
+        :param AppName: 應用名稱
         :type AppName: str
-        :param ProjectId: 腾讯云项目ID，默认为0，表示默认项目
+        :param ProjectId: Top Cloud 項目ID，預設爲0，表示預設項目
         :type ProjectId: int
-        :param EngineList: 需要支持的引擎列表，默认全选。
+        :param EngineList: 需要支援的引擎清單，預設全選。
         :type EngineList: list of str
-        :param RegionList: 服务区域列表，默认全选。
+        :param RegionList: 服務區域清單，預設全選。
         :type RegionList: list of str
-        :param RealtimeSpeechConf: 实时语音服务配置数据
+        :param RealtimeSpeechConf: 實時語音服務配置數據
         :type RealtimeSpeechConf: :class:`tencentcloud.gme.v20180711.models.RealtimeSpeechConf`
-        :param VoiceMessageConf: 语音消息及转文本服务配置数据
+        :param VoiceMessageConf: 語音訊息及轉文本服務配置數據
         :type VoiceMessageConf: :class:`tencentcloud.gme.v20180711.models.VoiceMessageConf`
-        :param VoiceFilterConf: 语音分析服务配置数据
+        :param VoiceFilterConf: 語音分析服務配置數據
         :type VoiceFilterConf: :class:`tencentcloud.gme.v20180711.models.VoiceFilterConf`
-        :param Tags: 需要添加的标签列表
+        :param Tags: 需要添加的标簽清單
         :type Tags: list of Tag
         """
         self.AppName = None
@@ -111,27 +111,27 @@ class CreateAppRequest(AbstractModel):
 
 
 class CreateAppResponse(AbstractModel):
-    """CreateApp的输出参数
+    """CreateApp的輸出參數
 
     """
 
     def __init__(self):
         """
-        :param BizId: 应用ID，由后台自动生成。
+        :param BizId: 應用ID，由後台自動生成。
         :type BizId: int
-        :param AppName: 应用名称，透传输入参数的AppName
+        :param AppName: 應用名稱，透傳輸入參數的AppName
         :type AppName: str
-        :param ProjectId: 项目ID，透传输入的ProjectId
+        :param ProjectId: 項目ID，透傳輸入的ProjectId
         :type ProjectId: int
-        :param SecretKey: 应用密钥，GME SDK初始化时使用
+        :param SecretKey: 應用金鑰，GME SDK初始化時使用
         :type SecretKey: str
-        :param CreateTime: 服务创建时间戳
+        :param CreateTime: 服務創建時間戳
         :type CreateTime: int
-        :param RealtimeSpeechConf: 实时语音服务配置数据
+        :param RealtimeSpeechConf: 實時語音服務配置數據
         :type RealtimeSpeechConf: :class:`tencentcloud.gme.v20180711.models.RealtimeSpeechConf`
-        :param VoiceMessageConf: 语音消息及转文本服务配置数据
+        :param VoiceMessageConf: 語音訊息及轉文本服務配置數據
         :type VoiceMessageConf: :class:`tencentcloud.gme.v20180711.models.VoiceMessageConf`
-        :param VoiceFilterConf: 语音分析服务配置数据
+        :param VoiceFilterConf: 語音分析服務配置數據
         :type VoiceFilterConf: :class:`tencentcloud.gme.v20180711.models.VoiceFilterConf`
         """
         self.BizId = None
@@ -162,19 +162,19 @@ class CreateAppResponse(AbstractModel):
 
 
 class DescribeAppStatisticsRequest(AbstractModel):
-    """DescribeAppStatistics请求参数结构体
+    """DescribeAppStatistics請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BizId: GME应用ID
+        :param BizId: GME應用ID
         :type BizId: int
-        :param StartDate: 数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
+        :param StartDate: 數據開始時間，東八區時間，格式: 年-月-日，如: 2018-07-13
         :type StartDate: str
-        :param EndDate: 数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
+        :param EndDate: 數據結束時間，東八區時間，格式: 年-月-日，如: 2018-07-13
         :type EndDate: str
-        :param Services: 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter
+        :param Services: 要查詢的服務清單，取值：RealTimeSpeech/VoiceMessage/VoiceFilter
         :type Services: list of str
         """
         self.BizId = None
@@ -191,13 +191,13 @@ class DescribeAppStatisticsRequest(AbstractModel):
 
 
 class DescribeAppStatisticsResponse(AbstractModel):
-    """获取应用用量统计数据输出参数
+    """獲取應用用量統計數據輸出參數
 
     """
 
     def __init__(self):
         """
-        :param AppStatistics: 应用用量统计数据
+        :param AppStatistics: 應用用量統計數據
         :type AppStatistics: list of AppStatisticsItem
         """
         self.AppStatistics = None
@@ -213,21 +213,21 @@ class DescribeAppStatisticsResponse(AbstractModel):
 
 
 class DescribeFilterResultListRequest(AbstractModel):
-    """DescribeFilterResultList请求参数结构体
+    """DescribeFilterResultList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BizId: 应用ID
+        :param BizId: 應用ID
         :type BizId: int
-        :param StartDate: 开始时间，格式为 年-月-日，如: 2018-07-11
+        :param StartDate: 開始時間，格式爲 年-月-日，如: 2018-07-11
         :type StartDate: str
-        :param EndDate: 结束时间，格式为 年-月-日，如: 2018-07-11
+        :param EndDate: 結束時間，格式爲 年-月-日，如: 2018-07-11
         :type EndDate: str
-        :param Offset: 偏移量，默认值为0。
+        :param Offset: 偏移量，預設值爲0。
         :type Offset: int
-        :param Limit: 返回数量，默认值为10，最大值为100。
+        :param Limit: 返回數量，預設值爲10，最大值爲100。
         :type Limit: int
         """
         self.BizId = None
@@ -246,19 +246,19 @@ class DescribeFilterResultListRequest(AbstractModel):
 
 
 class DescribeFilterResultListResponse(AbstractModel):
-    """DescribeFilterResultList返回参数结构体
+    """DescribeFilterResultList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 过滤结果总数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 過濾結果總數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param Data: 当前分页过滤结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 當前分頁過濾結果清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: list of VoiceFilterInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -278,13 +278,13 @@ class DescribeFilterResultListResponse(AbstractModel):
 
 
 class DescribeFilterResultRequest(AbstractModel):
-    """DescribeFilterResult请求参数结构体
+    """DescribeFilterResult請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BizId: 应用ID
+        :param BizId: 應用ID
         :type BizId: int
         :param FileId: 文件ID
         :type FileId: str
@@ -299,16 +299,16 @@ class DescribeFilterResultRequest(AbstractModel):
 
 
 class DescribeFilterResultResponse(AbstractModel):
-    """DescribeFilterResult返回参数结构体
+    """DescribeFilterResult返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 过滤结果
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 過濾結果
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: :class:`tencentcloud.gme.v20180711.models.VoiceFilterInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -323,40 +323,40 @@ class DescribeFilterResultResponse(AbstractModel):
 
 
 class DescribeScanResult(AbstractModel):
-    """语音检测结果返回
+    """語音檢測結果返回
 
     """
 
     def __init__(self):
         """
-        :param Code: 业务返回码
+        :param Code: 業務返回碼
         :type Code: int
-        :param DataId: 数据唯一 ID
+        :param DataId: 數據唯一 ID
         :type DataId: str
-        :param ScanFinishTime: 检测完成的时间戳
+        :param ScanFinishTime: 檢測完成的時間戳
         :type ScanFinishTime: int
-        :param HitFlag: 是否违规
+        :param HitFlag: 是否違規
         :type HitFlag: bool
-        :param Live: 是否为流
+        :param Live: 是否爲流
         :type Live: bool
-        :param Msg: 业务返回描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Msg: 業務返回描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Msg: str
-        :param ScanPiece: 检测结果，Code 为 0 时返回
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ScanPiece: 檢測結果，Code 爲 0 時返回
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ScanPiece: list of ScanPiece
-        :param ScanStartTime: 提交检测的时间戳
+        :param ScanStartTime: 提交檢測的時間戳
         :type ScanStartTime: int
-        :param Scenes: 语音检测场景，对应请求时的 Scene
+        :param Scenes: 語音檢測場景，對應請求時的 Scene
         :type Scenes: list of str
-        :param TaskId: 语音检测任务 ID，由后台分配
+        :param TaskId: 語音檢測任務 ID，由後台分配
         :type TaskId: str
-        :param Url: 文件或接流地址
+        :param Url: 文件或接流網址
         :type Url: str
-        :param Status: 检测任务执行结果状态，分别为：
-<li>Start: 任务开始</li>
-<li>Success: 成功结束</li>
-<li>Error: 异常</li>
+        :param Status: 檢測任務執行結果狀态，分别爲：
+<li>Start: 任務開始</li>
+<li>Success: 成功結束</li>
+<li>Error: 異常</li>
         :type Status: str
         """
         self.Code = None
@@ -394,17 +394,17 @@ class DescribeScanResult(AbstractModel):
 
 
 class DescribeScanResultListRequest(AbstractModel):
-    """DescribeScanResultList请求参数结构体
+    """DescribeScanResultList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BizId: 应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+        :param BizId: 應用 ID，登入[控制台](https://console.cloud.tencent.com/gamegme)創建應用得到的AppID
         :type BizId: int
-        :param TaskIdList: 查询的任务 ID 列表，任务 ID 列表最多支持 100 个。
+        :param TaskIdList: 查詢的任務 ID 清單，任務 ID 清單最多支援 100 個。
         :type TaskIdList: list of str
-        :param Limit: 任务返回结果数量，默认10，上限500。大文件任务忽略此参数，返回全量结果
+        :param Limit: 任務返回結果數量，預設10，上限500。大文件任務忽略此參數，返回全量結果
         :type Limit: int
         """
         self.BizId = None
@@ -419,16 +419,16 @@ class DescribeScanResultListRequest(AbstractModel):
 
 
 class DescribeScanResultListResponse(AbstractModel):
-    """DescribeScanResultList返回参数结构体
+    """DescribeScanResultList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 要查询的语音检测任务的结果
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 要查詢的語音檢測任務的結果
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: list of DescribeScanResult
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -446,15 +446,15 @@ class DescribeScanResultListResponse(AbstractModel):
 
 
 class ModifyAppStatusRequest(AbstractModel):
-    """ModifyAppStatus请求参数结构体
+    """ModifyAppStatus請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BizId: 应用ID，创建应用后由后台生成并返回。
+        :param BizId: 應用ID，創建應用後由後台生成并返回。
         :type BizId: int
-        :param Status: 应用状态，取值：open/close
+        :param Status: 應用狀态，取值：open/close
         :type Status: str
         """
         self.BizId = None
@@ -467,15 +467,15 @@ class ModifyAppStatusRequest(AbstractModel):
 
 
 class ModifyAppStatusResponse(AbstractModel):
-    """ModifyAppStatus接口输出参数
+    """ModifyAppStatus介面輸出參數
 
     """
 
     def __init__(self):
         """
-        :param BizId: GME应用ID
+        :param BizId: GME應用ID
         :type BizId: int
-        :param Status: 应用状态，取值：open/close
+        :param Status: 應用狀态，取值：open/close
         :type Status: str
         """
         self.BizId = None
@@ -488,23 +488,23 @@ class ModifyAppStatusResponse(AbstractModel):
 
 
 class RealTimeSpeechStatisticsItem(AbstractModel):
-    """实时语音用量统计数据
+    """實時語音用量統計數據
 
     """
 
     def __init__(self):
         """
-        :param MainLandDau: 大陆地区DAU
+        :param MainLandDau: 大陸地區DAU
         :type MainLandDau: int
-        :param MainLandPcu: 大陆地区PCU
+        :param MainLandPcu: 大陸地區PCU
         :type MainLandPcu: int
-        :param MainLandDuration: 大陆地区总使用时长，单位为min
+        :param MainLandDuration: 大陸地區總使用時長，單位爲min
         :type MainLandDuration: int
-        :param OverseaDau: 海外地区DAU
+        :param OverseaDau: 海外地區DAU
         :type OverseaDau: int
-        :param OverseaPcu: 海外地区PCU
+        :param OverseaPcu: 海外地區PCU
         :type OverseaPcu: int
-        :param OverseaDuration: 海外地区总使用时长，单位为min
+        :param OverseaDuration: 海外地區總使用時長，單位爲min
         :type OverseaDuration: int
         """
         self.MainLandDau = None
@@ -525,15 +525,15 @@ class RealTimeSpeechStatisticsItem(AbstractModel):
 
 
 class RealtimeSpeechConf(AbstractModel):
-    """实时语音配置数据
+    """實時語音配置數據
 
     """
 
     def __init__(self):
         """
-        :param Status: 实时语音服务开关，取值：open/close
+        :param Status: 實時語音服務開關，取值：open/close
         :type Status: str
-        :param Quality: 实时语音音质类型，取值：high-高音质，ordinary-普通音质。默认高音质。普通音质仅白名单开放，如需要普通音质，请联系腾讯云商务。
+        :param Quality: 實時語音音質類型，取值：high-高音質，ordinary-普通音質。預設高音質。普通音質僅白名單開放，如需要普通音質，請聯系Top Cloud 商務。
         :type Quality: str
         """
         self.Status = None
@@ -546,21 +546,21 @@ class RealtimeSpeechConf(AbstractModel):
 
 
 class ScanDetail(AbstractModel):
-    """语音检测详情
+    """語音檢測詳情
 
     """
 
     def __init__(self):
         """
-        :param Label: 违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
+        :param Label: 違規場景，參照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定義
         :type Label: str
-        :param Rate: 该场景下概率[0.00,100.00],分值越大违规概率越高
+        :param Rate: 該場景下概率[0.00,100.00],分值越大違規概率越高
         :type Rate: str
-        :param KeyWord: 违规关键字
+        :param KeyWord: 違規關鍵字
         :type KeyWord: str
-        :param StartTime: 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒
+        :param StartTime: 關鍵字在音訊的開始時間，從0開始的偏移量，單位爲毫秒
         :type StartTime: int
-        :param EndTime: 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
+        :param EndTime: 關鍵字在音訊的結束時間，從0開始的偏移量,，單位爲毫秒
         :type EndTime: int
         """
         self.Label = None
@@ -579,39 +579,39 @@ class ScanDetail(AbstractModel):
 
 
 class ScanPiece(AbstractModel):
-    """语音检测结果，Code 为 0 时返回
+    """語音檢測結果，Code 爲 0 時返回
 
     """
 
     def __init__(self):
         """
-        :param DumpUrl: 流检测时返回，音频转存地址，保留30min
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DumpUrl: 流檢測時返回，音訊轉存網址，保留30min
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DumpUrl: str
-        :param HitFlag: 是否违规
+        :param HitFlag: 是否違規
         :type HitFlag: bool
-        :param MainType: 违规主要类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MainType: 違規主要類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MainType: str
-        :param ScanDetail: 语音检测详情
+        :param ScanDetail: 語音檢測詳情
         :type ScanDetail: list of ScanDetail
-        :param RoomId: gme实时语音房间ID，透传任务传入时的RoomId
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RoomId: gme實時語音房間ID，透傳任務傳入時的RoomId
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RoomId: str
-        :param OpenId: gme实时语音用户ID，透传任务传入时的OpenId
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OpenId: gme實時語音用戶ID，透傳任務傳入時的OpenId
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OpenId: str
-        :param Info: 备注
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Info: 備注
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Info: str
-        :param Offset: 流检测时分片在流中的偏移时间，单位毫秒
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Offset: 流檢測時分片在流中的偏移時間，單位毫秒
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Offset: int
-        :param Duration: 流检测时分片时长
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Duration: 流檢測時分片時長
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Duration: int
-        :param PieceStartTime: 分片开始检测时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PieceStartTime: 分片開始檢測時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PieceStartTime: int
         """
         self.DumpUrl = None
@@ -645,23 +645,23 @@ class ScanPiece(AbstractModel):
 
 
 class ScanVoiceRequest(AbstractModel):
-    """ScanVoice请求参数结构体
+    """ScanVoice請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BizId: 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+        :param BizId: 應用ID，登入[控制台 - 服務管理](https://console.cloud.tencent.com/gamegme)創建應用得到的AppID
         :type BizId: int
-        :param Scenes: 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
+        :param Scenes: 語音檢測場景，參數值目前要求爲 default。 預留場景設置： 謾罵、色情、涉政、廣告、暴恐、違禁等場景，<a href="#Label_Value">具體取值見上述 Label 說明。</a>
         :type Scenes: list of str
-        :param Live: 是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。
+        :param Live: 是否爲直播流。值爲 false 時表示普通語音文件檢測；爲 true 時表示語音流檢測。
         :type Live: bool
-        :param Tasks: 语音检测任务列表，列表最多支持100个检测任务。结构体中包含：
-<li>DataId：数据的唯一ID</li>
-<li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
+        :param Tasks: 語音檢測任務清單，清單最多支援100個檢測任務。結構體中包含：
+<li>DataId：數據的唯一ID</li>
+<li>Url：數據文件的url，爲 urlencode 編碼，流式則爲拉流網址</li>
         :type Tasks: list of Task
-        :param Callback: 异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
+        :param Callback: 異步檢測結果回調網址，具體見上述<a href="#Callback_Declare">回調相關說明</a>。（說明：該欄位爲空時，必須通過介面(查詢語音檢測結果)獲取檢測結果）。
         :type Callback: str
         """
         self.BizId = None
@@ -685,16 +685,16 @@ class ScanVoiceRequest(AbstractModel):
 
 
 class ScanVoiceResponse(AbstractModel):
-    """ScanVoice返回参数结构体
+    """ScanVoice返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li>
-<li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
+        :param Data: 語音檢測返回。Data 欄位是 JSON 數組，每一個元素包含：<li>DataId： 請求中對應的 DataId。</li>
+<li>TaskID ：該檢測任務的 ID，用于輪詢語音檢測結果。</li>
         :type Data: list of ScanVoiceResult
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -712,15 +712,15 @@ class ScanVoiceResponse(AbstractModel):
 
 
 class ScanVoiceResult(AbstractModel):
-    """语音检测返回结果
+    """語音檢測返回結果
 
     """
 
     def __init__(self):
         """
-        :param DataId: 数据ID
+        :param DataId: 數據ID
         :type DataId: str
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: str
         """
         self.DataId = None
@@ -733,17 +733,17 @@ class ScanVoiceResult(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """标签列表
+    """标簽清單
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标签键
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagKey: 标簽鍵
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagKey: str
-        :param TagValue: 标签值
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagValue: 标簽值
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagValue: str
         """
         self.TagKey = None
@@ -756,19 +756,19 @@ class Tag(AbstractModel):
 
 
 class Task(AbstractModel):
-    """语音检测任务列表
+    """語音檢測任務清單
 
     """
 
     def __init__(self):
         """
-        :param DataId: 数据的唯一ID
+        :param DataId: 數據的唯一ID
         :type DataId: str
-        :param Url: 数据文件的url，为 urlencode 编码，流式则为拉流地址
+        :param Url: 數據文件的url，爲 urlencode 編碼，流式則爲拉流網址
         :type Url: str
-        :param RoomId: gme实时语音房间ID，通过gme实时语音进行语音分析时输入
+        :param RoomId: gme實時語音房間ID，通過gme實時語音進行語音分析時輸入
         :type RoomId: str
-        :param OpenId: gme实时语音用户ID，通过gme实时语音进行语音分析时输入
+        :param OpenId: gme實時語音用戶ID，通過gme實時語音進行語音分析時輸入
         :type OpenId: str
         """
         self.DataId = None
@@ -785,17 +785,17 @@ class Task(AbstractModel):
 
 
 class VoiceFilter(AbstractModel):
-    """过滤结果
+    """過濾結果
 
     """
 
     def __init__(self):
         """
-        :param Type: 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Type: 過濾類型，1：政治，2：色情，3：涉毒，4：謾罵
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Type: int
-        :param Word: 过滤命中关键词
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Word: 過濾命中關鍵詞
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Word: str
         """
         self.Type = None
@@ -808,13 +808,13 @@ class VoiceFilter(AbstractModel):
 
 
 class VoiceFilterConf(AbstractModel):
-    """语音过滤服务配置数据
+    """語音過濾服務配置數據
 
     """
 
     def __init__(self):
         """
-        :param Status: 语音过滤服务开关，取值：open/close
+        :param Status: 語音過濾服務開關，取值：open/close
         :type Status: str
         """
         self.Status = None
@@ -825,29 +825,29 @@ class VoiceFilterConf(AbstractModel):
 
 
 class VoiceFilterInfo(AbstractModel):
-    """语音文件过滤详情
+    """語音文件過濾詳情
 
     """
 
     def __init__(self):
         """
-        :param BizId: 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BizId: 應用ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BizId: int
         :param FileId: 文件ID，表示文件唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FileId: str
         :param FileName: 文件名
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FileName: str
-        :param OpenId: 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OpenId: 用戶ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OpenId: str
-        :param Timestamp: 数据创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Timestamp: 數據創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Timestamp: str
-        :param Data: 过滤结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 過濾結果清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: list of VoiceFilter
         """
         self.BizId = None
@@ -873,23 +873,23 @@ class VoiceFilterInfo(AbstractModel):
 
 
 class VoiceFilterRequest(AbstractModel):
-    """VoiceFilter请求参数结构体
+    """VoiceFilter請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BizId: 应用ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+        :param BizId: 應用ID，登入[控制台](https://console.cloud.tencent.com/gamegme)創建應用得到的AppID
         :type BizId: int
         :param FileId: 文件ID，表示文件唯一ID
         :type FileId: str
         :param FileName: 文件名
         :type FileName: str
-        :param FileUrl: 文件url，urlencode编码，FileUrl和FileContent二选一
+        :param FileUrl: 文件url，urlencode編碼，FileUrl和FileContent二選一
         :type FileUrl: str
-        :param FileContent: 文件内容，base64编码，FileUrl和FileContent二选一
+        :param FileContent: 文件内容，base64編碼，FileUrl和FileContent二選一
         :type FileContent: str
-        :param OpenId: 用户ID
+        :param OpenId: 用戶ID
         :type OpenId: str
         """
         self.BizId = None
@@ -910,13 +910,13 @@ class VoiceFilterRequest(AbstractModel):
 
 
 class VoiceFilterResponse(AbstractModel):
-    """VoiceFilter返回参数结构体
+    """VoiceFilter返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -927,13 +927,13 @@ class VoiceFilterResponse(AbstractModel):
 
 
 class VoiceFilterStatisticsItem(AbstractModel):
-    """语音过滤用量统计数据
+    """語音過濾用量統計數據
 
     """
 
     def __init__(self):
         """
-        :param Duration: 语音过滤总时长
+        :param Duration: 語音過濾總時長
         :type Duration: int
         """
         self.Duration = None
@@ -944,15 +944,15 @@ class VoiceFilterStatisticsItem(AbstractModel):
 
 
 class VoiceMessageConf(AbstractModel):
-    """离线语音服务配置数据
+    """離線語音服務配置數據
 
     """
 
     def __init__(self):
         """
-        :param Status: 离线语音服务开关，取值：open/close
+        :param Status: 離線語音服務開關，取值：open/close
         :type Status: str
-        :param Language: 离线语音支持语种，取值： all-全部，cnen-中英文。默认为中英文
+        :param Language: 離線語音支援語種，取值： all-全部，cnen-中英文。預設爲中英文
         :type Language: str
         """
         self.Status = None
@@ -965,13 +965,13 @@ class VoiceMessageConf(AbstractModel):
 
 
 class VoiceMessageStatisticsItem(AbstractModel):
-    """语音消息用量统计信息
+    """語音訊息用量統計訊息
 
     """
 
     def __init__(self):
         """
-        :param Dau: 离线语音DAU
+        :param Dau: 離線語音DAU
         :type Dau: int
         """
         self.Dau = None

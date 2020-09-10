@@ -26,7 +26,7 @@ class PostgresClient(AbstractClient):
 
 
     def CloseDBExtranetAccess(self, request):
-        """本接口（CloseDBExtranetAccess）用于关闭实例外网链接。
+        """本介面（CloseDBExtranetAccess）用于關閉實例外網連結。
 
         :param request: Request instance for CloseDBExtranetAccess.
         :type request: :class:`tencentcloud.postgres.v20170312.models.CloseDBExtranetAccessRequest`
@@ -54,7 +54,7 @@ class PostgresClient(AbstractClient):
 
 
     def CloseServerlessDBExtranetAccess(self, request):
-        """关闭serverlessDB实例外网
+        """關閉serverlessDB實例外網
 
         :param request: Request instance for CloseServerlessDBExtranetAccess.
         :type request: :class:`tencentcloud.postgres.v20170312.models.CloseServerlessDBExtranetAccessRequest`
@@ -82,7 +82,7 @@ class PostgresClient(AbstractClient):
 
 
     def CreateDBInstances(self, request):
-        """本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例。
+        """本介面 (CreateDBInstances) 用于創建一個或者多個PostgreSQL實例。
 
         :param request: Request instance for CreateDBInstances.
         :type request: :class:`tencentcloud.postgres.v20170312.models.CreateDBInstancesRequest`
@@ -110,7 +110,7 @@ class PostgresClient(AbstractClient):
 
 
     def CreateServerlessDBInstance(self, request):
-        """本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
+        """本介面 (CreateServerlessDBInstance) 用于創建一個ServerlessDB實例，創建成功返回實例ID。
 
         :param request: Request instance for CreateServerlessDBInstance.
         :type request: :class:`tencentcloud.postgres.v20170312.models.CreateServerlessDBInstanceRequest`
@@ -138,7 +138,7 @@ class PostgresClient(AbstractClient):
 
 
     def DeleteServerlessDBInstance(self, request):
-        """本接口 (DeleteServerlessDBInstance) 用于删除一个ServerlessDB实例。
+        """本介面 (DeleteServerlessDBInstance) 用于删除一個ServerlessDB實例。
 
         :param request: Request instance for DeleteServerlessDBInstance.
         :type request: :class:`tencentcloud.postgres.v20170312.models.DeleteServerlessDBInstanceRequest`
@@ -166,7 +166,7 @@ class PostgresClient(AbstractClient):
 
 
     def DescribeAccounts(self, request):
-        """本接口（DescribeAccounts）用于获取实例用户列表。
+        """本介面（DescribeAccounts）用于獲取實例用戶清單。
 
         :param request: Request instance for DescribeAccounts.
         :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeAccountsRequest`
@@ -194,7 +194,7 @@ class PostgresClient(AbstractClient):
 
 
     def DescribeDBBackups(self, request):
-        """本接口（DescribeDBBackups）用于查询实例备份列表。
+        """本介面（DescribeDBBackups）用于查詢實例備份清單。
 
         :param request: Request instance for DescribeDBBackups.
         :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeDBBackupsRequest`
@@ -222,7 +222,7 @@ class PostgresClient(AbstractClient):
 
 
     def DescribeDBErrlogs(self, request):
-        """本接口（DescribeDBErrlogs）用于获取错误日志。
+        """本介面（DescribeDBErrlogs）用于獲取錯誤日志。
 
         :param request: Request instance for DescribeDBErrlogs.
         :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeDBErrlogsRequest`
@@ -250,7 +250,7 @@ class PostgresClient(AbstractClient):
 
 
     def DescribeDBInstanceAttribute(self, request):
-        """本接口 (DescribeDBInstanceAttribute) 用于查询某个实例的详情信息。
+        """本介面 (DescribeDBInstanceAttribute) 用于查詢某個實例的詳情訊息。
 
         :param request: Request instance for DescribeDBInstanceAttribute.
         :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeDBInstanceAttributeRequest`
@@ -278,7 +278,7 @@ class PostgresClient(AbstractClient):
 
 
     def DescribeDBInstances(self, request):
-        """本接口 (DescribeDBInstances) 用于查询一个或多个实例的详细信息。
+        """本介面 (DescribeDBInstances) 用于查詢一個或多個實例的詳細訊息。
 
         :param request: Request instance for DescribeDBInstances.
         :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeDBInstancesRequest`
@@ -306,7 +306,7 @@ class PostgresClient(AbstractClient):
 
 
     def DescribeDBSlowlogs(self, request):
-        """本接口（DescribeDBSlowlogs）用于获取慢查询日志。
+        """本介面（DescribeDBSlowlogs）用于獲取慢查詢日志。
 
         :param request: Request instance for DescribeDBSlowlogs.
         :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeDBSlowlogsRequest`
@@ -334,7 +334,7 @@ class PostgresClient(AbstractClient):
 
 
     def DescribeDBXlogs(self, request):
-        """本接口（DescribeDBXlogs）用于获取实例Xlog列表。
+        """本介面（DescribeDBXlogs）用于獲取實例Xlog清單。
 
         :param request: Request instance for DescribeDBXlogs.
         :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeDBXlogsRequest`
@@ -362,7 +362,7 @@ class PostgresClient(AbstractClient):
 
 
     def DescribeDatabases(self, request):
-        """接口（DescribeDatabases）用来拉取数据库列表
+        """介面（DescribeDatabases）用來拉取資料庫清單
 
         :param request: Request instance for DescribeDatabases.
         :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeDatabasesRequest`
@@ -390,7 +390,7 @@ class PostgresClient(AbstractClient):
 
 
     def DescribeOrders(self, request):
-        """本接口（DescribeOrders）用于获取订单信息。
+        """本介面（DescribeOrders）用于獲取訂單訊息。
 
         :param request: Request instance for DescribeOrders.
         :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeOrdersRequest`
@@ -418,7 +418,7 @@ class PostgresClient(AbstractClient):
 
 
     def DescribeProductConfig(self, request):
-        """本接口 (DescribeProductConfig) 用于查询售卖规格配置。
+        """本介面 (DescribeProductConfig) 用于查詢售賣規格配置。
 
         :param request: Request instance for DescribeProductConfig.
         :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeProductConfigRequest`
@@ -446,7 +446,7 @@ class PostgresClient(AbstractClient):
 
 
     def DescribeRegions(self, request):
-        """本接口 (DescribeRegions) 用于查询售卖地域信息。
+        """本介面 (DescribeRegions) 用于查詢售賣地域訊息。
 
         :param request: Request instance for DescribeRegions.
         :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeRegionsRequest`
@@ -474,7 +474,7 @@ class PostgresClient(AbstractClient):
 
 
     def DescribeServerlessDBInstances(self, request):
-        """用于查询一个或多个serverlessDB实例的详细信息
+        """用于查詢一個或多個serverlessDB實例的詳細訊息
 
         :param request: Request instance for DescribeServerlessDBInstances.
         :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeServerlessDBInstancesRequest`
@@ -502,7 +502,7 @@ class PostgresClient(AbstractClient):
 
 
     def DescribeZones(self, request):
-        """本接口 (DescribeZones) 用于查询支持的可用区信息。
+        """本介面 (DescribeZones) 用于查詢支援的可用區訊息。
 
         :param request: Request instance for DescribeZones.
         :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeZonesRequest`
@@ -530,7 +530,7 @@ class PostgresClient(AbstractClient):
 
 
     def DestroyDBInstance(self, request):
-        """本接口 (DestroyDBInstance) 用于销毁指定DBInstanceId对应的实例。
+        """本介面 (DestroyDBInstance) 用于銷毀指定DBInstanceId對應的實例。
 
         :param request: Request instance for DestroyDBInstance.
         :type request: :class:`tencentcloud.postgres.v20170312.models.DestroyDBInstanceRequest`
@@ -558,7 +558,7 @@ class PostgresClient(AbstractClient):
 
 
     def InitDBInstances(self, request):
-        """本接口 (InitDBInstances) 用于初始化云数据库PostgreSQL实例。
+        """本介面 (InitDBInstances) 用于初始化雲資料庫PostgreSQL實例。
 
         :param request: Request instance for InitDBInstances.
         :type request: :class:`tencentcloud.postgres.v20170312.models.InitDBInstancesRequest`
@@ -586,7 +586,7 @@ class PostgresClient(AbstractClient):
 
 
     def InquiryPriceCreateDBInstances(self, request):
-        """本接口 (InquiryPriceCreateDBInstances) 用于查询购买一个或多个实例的价格信息。
+        """本介面 (InquiryPriceCreateDBInstances) 用于查詢購買一個或多個實例的價格訊息。
 
         :param request: Request instance for InquiryPriceCreateDBInstances.
         :type request: :class:`tencentcloud.postgres.v20170312.models.InquiryPriceCreateDBInstancesRequest`
@@ -614,7 +614,7 @@ class PostgresClient(AbstractClient):
 
 
     def InquiryPriceRenewDBInstance(self, request):
-        """本接口（InquiryPriceRenewDBInstance）用于查询续费实例的价格。
+        """本介面（InquiryPriceRenewDBInstance）用于查詢續約實例的價格。
 
         :param request: Request instance for InquiryPriceRenewDBInstance.
         :type request: :class:`tencentcloud.postgres.v20170312.models.InquiryPriceRenewDBInstanceRequest`
@@ -642,7 +642,7 @@ class PostgresClient(AbstractClient):
 
 
     def InquiryPriceUpgradeDBInstance(self, request):
-        """本接口（InquiryPriceUpgradeDBInstance）用于查询升级实例的价格。
+        """本介面（InquiryPriceUpgradeDBInstance）用于查詢升級實例的價格。
 
         :param request: Request instance for InquiryPriceUpgradeDBInstance.
         :type request: :class:`tencentcloud.postgres.v20170312.models.InquiryPriceUpgradeDBInstanceRequest`
@@ -670,7 +670,7 @@ class PostgresClient(AbstractClient):
 
 
     def ModifyAccountRemark(self, request):
-        """本接口（ModifyAccountRemark）用于修改帐号备注。
+        """本介面（ModifyAccountRemark）用于修改帳号備注。
 
         :param request: Request instance for ModifyAccountRemark.
         :type request: :class:`tencentcloud.postgres.v20170312.models.ModifyAccountRemarkRequest`
@@ -698,7 +698,7 @@ class PostgresClient(AbstractClient):
 
 
     def ModifyDBInstanceName(self, request):
-        """本接口（ModifyDBInstanceName）用于修改postgresql实例名字。
+        """本介面（ModifyDBInstanceName）用于修改postgresql實例名字。
 
         :param request: Request instance for ModifyDBInstanceName.
         :type request: :class:`tencentcloud.postgres.v20170312.models.ModifyDBInstanceNameRequest`
@@ -726,7 +726,7 @@ class PostgresClient(AbstractClient):
 
 
     def ModifyDBInstancesProject(self, request):
-        """本接口（ModifyDBInstancesProject）用于将实例转至其他项目。
+        """本介面（ModifyDBInstancesProject）用于将實例轉至其他項目。
 
         :param request: Request instance for ModifyDBInstancesProject.
         :type request: :class:`tencentcloud.postgres.v20170312.models.ModifyDBInstancesProjectRequest`
@@ -754,7 +754,7 @@ class PostgresClient(AbstractClient):
 
 
     def OpenDBExtranetAccess(self, request):
-        """本接口（OpenDBExtranetAccess）用于开通外网。
+        """本介面（OpenDBExtranetAccess）用于開通外網。
 
         :param request: Request instance for OpenDBExtranetAccess.
         :type request: :class:`tencentcloud.postgres.v20170312.models.OpenDBExtranetAccessRequest`
@@ -782,7 +782,7 @@ class PostgresClient(AbstractClient):
 
 
     def OpenServerlessDBExtranetAccess(self, request):
-        """开通serverlessDB实例外网
+        """開通serverlessDB實例外網
 
         :param request: Request instance for OpenServerlessDBExtranetAccess.
         :type request: :class:`tencentcloud.postgres.v20170312.models.OpenServerlessDBExtranetAccessRequest`
@@ -810,7 +810,7 @@ class PostgresClient(AbstractClient):
 
 
     def RenewInstance(self, request):
-        """本接口（RenewInstance）用于续费实例。
+        """本介面（RenewInstance）用于續約實例。
 
         :param request: Request instance for RenewInstance.
         :type request: :class:`tencentcloud.postgres.v20170312.models.RenewInstanceRequest`
@@ -838,7 +838,7 @@ class PostgresClient(AbstractClient):
 
 
     def ResetAccountPassword(self, request):
-        """本接口（ResetAccountPassword）用于重置实例的账户密码。
+        """本介面（ResetAccountPassword）用于重置實例的帳戶密碼。
 
         :param request: Request instance for ResetAccountPassword.
         :type request: :class:`tencentcloud.postgres.v20170312.models.ResetAccountPasswordRequest`
@@ -866,7 +866,7 @@ class PostgresClient(AbstractClient):
 
 
     def RestartDBInstance(self, request):
-        """本接口（RestartDBInstance）用于重启实例。
+        """本介面（RestartDBInstance）用于重啓實例。
 
         :param request: Request instance for RestartDBInstance.
         :type request: :class:`tencentcloud.postgres.v20170312.models.RestartDBInstanceRequest`
@@ -894,7 +894,7 @@ class PostgresClient(AbstractClient):
 
 
     def SetAutoRenewFlag(self, request):
-        """本接口（SetAutoRenewFlag）用于设置自动续费。
+        """本介面（SetAutoRenewFlag）用于設置自動續約。
 
         :param request: Request instance for SetAutoRenewFlag.
         :type request: :class:`tencentcloud.postgres.v20170312.models.SetAutoRenewFlagRequest`
@@ -922,7 +922,7 @@ class PostgresClient(AbstractClient):
 
 
     def UpgradeDBInstance(self, request):
-        """本接口（UpgradeDBInstance）用于升级实例。
+        """本介面（UpgradeDBInstance）用于升級實例。
 
         :param request: Request instance for UpgradeDBInstance.
         :type request: :class:`tencentcloud.postgres.v20170312.models.UpgradeDBInstanceRequest`

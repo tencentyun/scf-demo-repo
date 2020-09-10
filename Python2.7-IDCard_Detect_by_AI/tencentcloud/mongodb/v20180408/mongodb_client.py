@@ -26,9 +26,9 @@ class MongodbClient(AbstractClient):
 
 
     def CreateDBInstance(self, request):
-        """本接口(CreateDBInstance)用于创建包年包月的MongoDB云数据库实例。
+        """本介面(CreateDBInstance)用于創建包年包月的MongoDB雲資料庫實例。
 
-        :param request: 调用CreateDBInstance所需参数的结构体。
+        :param request: 調用CreateDBInstance所需參數的結構體。
         :type request: :class:`tencentcloud.mongodb.v20180408.models.CreateDBInstanceRequest`
         :rtype: :class:`tencentcloud.mongodb.v20180408.models.CreateDBInstanceResponse`
 
@@ -54,9 +54,9 @@ class MongodbClient(AbstractClient):
 
 
     def CreateDBInstanceHour(self, request):
-        """本接口(CreateDBInstanceHour)用于创建按量计费的MongoDB云数据库实例（包括主实例、灾备实例和只读实例），可通过传入实例规格、实例类型、MongoDB版本、购买时长和数量等信息创建云数据库实例。
+        """本介面(CreateDBInstanceHour)用于創建按量計費的MongoDB雲資料庫實例（包括主實例、災備實例和只讀實例），可通過傳入實例規格、實例類型、MongoDB版本、購買時長和數量等訊息創建雲資料庫實例。
 
-        :param request: 调用CreateDBInstanceHour所需参数的结构体。
+        :param request: 調用CreateDBInstanceHour所需參數的結構體。
         :type request: :class:`tencentcloud.mongodb.v20180408.models.CreateDBInstanceHourRequest`
         :rtype: :class:`tencentcloud.mongodb.v20180408.models.CreateDBInstanceHourResponse`
 
@@ -82,9 +82,9 @@ class MongodbClient(AbstractClient):
 
 
     def TerminateDBInstance(self, request):
-        """本接口(TerminateDBInstance)用于销毁按量计费的MongoDB云数据库实例
+        """本介面(TerminateDBInstance)用于銷毀按量計費的MongoDB雲資料庫實例
 
-        :param request: 调用TerminateDBInstance所需参数的结构体。
+        :param request: 調用TerminateDBInstance所需參數的結構體。
         :type request: :class:`tencentcloud.mongodb.v20180408.models.TerminateDBInstanceRequest`
         :rtype: :class:`tencentcloud.mongodb.v20180408.models.TerminateDBInstanceResponse`
 
@@ -110,9 +110,9 @@ class MongodbClient(AbstractClient):
 
 
     def UpgradeDBInstance(self, request):
-        """本接口(UpgradeDBInstance)用于升级包年包月的MongoDB云数据库实例，可以扩容内存、存储以及Oplog
+        """本介面(UpgradeDBInstance)用于升級包年包月的MongoDB雲資料庫實例，可以擴容内存、儲存以及Oplog
 
-        :param request: 调用UpgradeDBInstance所需参数的结构体。
+        :param request: 調用UpgradeDBInstance所需參數的結構體。
         :type request: :class:`tencentcloud.mongodb.v20180408.models.UpgradeDBInstanceRequest`
         :rtype: :class:`tencentcloud.mongodb.v20180408.models.UpgradeDBInstanceResponse`
 
@@ -138,9 +138,9 @@ class MongodbClient(AbstractClient):
 
 
     def UpgradeDBInstanceHour(self, request):
-        """本接口(UpgradeDBInstanceHour)用于升级按量计费的MongoDB云数据库实例，可以扩容内存、存储以及oplog
+        """本介面(UpgradeDBInstanceHour)用于升級按量計費的MongoDB雲資料庫實例，可以擴容内存、儲存以及oplog
 
-        :param request: 调用UpgradeDBInstanceHour所需参数的结构体。
+        :param request: 調用UpgradeDBInstanceHour所需參數的結構體。
         :type request: :class:`tencentcloud.mongodb.v20180408.models.UpgradeDBInstanceHourRequest`
         :rtype: :class:`tencentcloud.mongodb.v20180408.models.UpgradeDBInstanceHourResponse`
 

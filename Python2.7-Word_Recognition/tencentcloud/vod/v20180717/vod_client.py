@@ -26,10 +26,10 @@ class VodClient(AbstractClient):
 
 
     def ApplyUpload(self, request):
-        """* 该接口用于申请媒体文件（和封面文件）的上传，获取文件上传到腾讯云点播的元信息（包括上传路径、上传签名等），用于后续上传接口。
-        * 上传流程请参考[服务端上传综述](https://cloud.tencent.com/document/product/266/9759)。
+        """* 該介面用于申請媒體文件（和封面文件）的上傳，獲取文件上傳到Top Cloud 點播的元訊息（包括上傳路徑、上傳簽名等），用于後續上傳介面。
+        * 上傳流程請參考[服務端上傳綜述](https://cloud.tencent.com/document/product/266/9759)。
 
-        :param request: 调用ApplyUpload所需参数的结构体。
+        :param request: 調用ApplyUpload所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.ApplyUploadRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.ApplyUploadResponse`
 
@@ -55,9 +55,9 @@ class VodClient(AbstractClient):
 
 
     def CommitUpload(self, request):
-        """该接口用于确认媒体文件（和封面文件）上传到腾讯云点播的结果，并存储媒体信息，返回文件的播放地址和文件 ID。
+        """該介面用于确認媒體文件（和封面文件）上傳到Top Cloud 點播的結果，并儲存媒體訊息，返回文件的播放網址和文件 ID。
 
-        :param request: 调用CommitUpload所需参数的结构体。
+        :param request: 調用CommitUpload所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.CommitUploadRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.CommitUploadResponse`
 
@@ -83,11 +83,11 @@ class VodClient(AbstractClient):
 
 
     def ConfirmEvents(self, request):
-        """* 开发者调用拉取事件通知，获取到事件后，必须调用该接口来确认消息已经收到；
-        * 开发者获取到事件句柄后，等待确认的有效时间为 30 秒，超出 30 秒会报参数错误（4000）；
-        * 更多参考[服务端事件通知](https://cloud.tencent.com/document/product/266/7829)。
+        """* 開發者調用拉取事件通知，獲取到事件後，必須調用該介面來确認訊息已經收到；
+        * 開發者獲取到事件句柄後，等待确認的有效時間爲 30 秒，超出 30 秒會報參數錯誤（4000）；
+        * 更多參考[服務端事件通知](https://cloud.tencent.com/document/product/266/7829)。
 
-        :param request: 调用ConfirmEvents所需参数的结构体。
+        :param request: 調用ConfirmEvents所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.ConfirmEventsRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.ConfirmEventsResponse`
 
@@ -113,9 +113,9 @@ class VodClient(AbstractClient):
 
 
     def CreateAIAnalysisTemplate(self, request):
-        """创建用户自定义视频内容分析模板，数量上限：50。
+        """創建用戶自定義視訊内容分析範本，數量上限：50。
 
-        :param request: 调用CreateAIAnalysisTemplate所需参数的结构体。
+        :param request: 調用CreateAIAnalysisTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.CreateAIAnalysisTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.CreateAIAnalysisTemplateResponse`
 
@@ -141,9 +141,9 @@ class VodClient(AbstractClient):
 
 
     def CreateAIRecognitionTemplate(self, request):
-        """创建用户自定义视频内容识别模板，数量上限：50。
+        """創建用戶自定義視訊内容識别範本，數量上限：50。
 
-        :param request: 调用CreateAIRecognitionTemplate所需参数的结构体。
+        :param request: 調用CreateAIRecognitionTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.CreateAIRecognitionTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.CreateAIRecognitionTemplateResponse`
 
@@ -169,12 +169,12 @@ class VodClient(AbstractClient):
 
 
     def CreateClass(self, request):
-        """* 用于对媒体进行分类管理；
-        * 该接口不影响既有媒体的分类，如需修改媒体分类，请调用[修改媒体文件属性](/document/product/266/31762)接口。
-        * 分类层次不可超过 4 层。
-        * 每个分类的子类数量不可超过 500 个。
+        """* 用于對媒體進行分類管理；
+        * 該介面不影響既有媒體的分類，如需修改媒體分類，請調用[修改媒體文件屬性](/document/product/266/31762)介面。
+        * 分類層次不可超過 4 層。
+        * 每個分類的子類數量不可超過 500 個。
 
-        :param request: 调用CreateClass所需参数的结构体。
+        :param request: 調用CreateClass所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.CreateClassRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.CreateClassResponse`
 
@@ -200,9 +200,9 @@ class VodClient(AbstractClient):
 
 
     def CreateContentReviewTemplate(self, request):
-        """创建用户自定义视频内容审核模板，数量上限：50。
+        """創建用戶自定義視訊内容審核範本，數量上限：50。
 
-        :param request: 调用CreateContentReviewTemplate所需参数的结构体。
+        :param request: 調用CreateContentReviewTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.CreateContentReviewTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.CreateContentReviewTemplateResponse`
 
@@ -228,9 +228,9 @@ class VodClient(AbstractClient):
 
 
     def CreatePersonSample(self, request):
-        """该接口用于创建人物样本，用于通过人脸识别等技术，进行内容识别、内容审核等视频处理。
+        """該介面用于創建人物樣本，用于通過人臉識别等技術，進行内容識别、内容審核等視訊處理。
 
-        :param request: 调用CreatePersonSample所需参数的结构体。
+        :param request: 調用CreatePersonSample所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.CreatePersonSampleRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.CreatePersonSampleResponse`
 
@@ -256,9 +256,9 @@ class VodClient(AbstractClient):
 
 
     def CreateProcedureTemplate(self, request):
-        """创建用户自定义的任务流模板，模板上限：50。
+        """創建用戶自定義的任務流範本，範本上限：50。
 
-        :param request: 调用CreateProcedureTemplate所需参数的结构体。
+        :param request: 調用CreateProcedureTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.CreateProcedureTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.CreateProcedureTemplateResponse`
 
@@ -284,9 +284,9 @@ class VodClient(AbstractClient):
 
 
     def CreateTranscodeTemplate(self, request):
-        """创建用户自定义转码模板，数量上限：1000。
+        """創建用戶自定義轉碼範本，數量上限：1000。
 
-        :param request: 调用CreateTranscodeTemplate所需参数的结构体。
+        :param request: 調用CreateTranscodeTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.CreateTranscodeTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.CreateTranscodeTemplateResponse`
 
@@ -312,9 +312,9 @@ class VodClient(AbstractClient):
 
 
     def CreateWatermarkTemplate(self, request):
-        """创建用户自定义水印模板，数量上限：1000。
+        """創建用戶自定義浮水印範本，數量上限：1000。
 
-        :param request: 调用CreateWatermarkTemplate所需参数的结构体。
+        :param request: 調用CreateWatermarkTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.CreateWatermarkTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.CreateWatermarkTemplateResponse`
 
@@ -340,9 +340,9 @@ class VodClient(AbstractClient):
 
 
     def CreateWordSamples(self, request):
-        """该接口用于批量创建关键词样本，样本用于通过OCR、ASR技术，进行内容审核、内容识别等视频处理。
+        """該介面用于批次創建關鍵詞樣本，樣本用于通過OCR、ASR技術，進行内容審核、内容識别等視訊處理。
 
-        :param request: 调用CreateWordSamples所需参数的结构体。
+        :param request: 調用CreateWordSamples所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.CreateWordSamplesRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.CreateWordSamplesResponse`
 
@@ -368,11 +368,11 @@ class VodClient(AbstractClient):
 
 
     def DeleteAIAnalysisTemplate(self, request):
-        """删除用户自定义视频内容分析模板。
+        """删除用戶自定義視訊内容分析範本。
 
-        注意：模板 ID 为 10000 以下的为系统预置模板，不允许删除。
+        注意：範本 ID 爲 10000 以下的爲系統預置範本，不允許删除。
 
-        :param request: 调用DeleteAIAnalysisTemplate所需参数的结构体。
+        :param request: 調用DeleteAIAnalysisTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DeleteAIAnalysisTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteAIAnalysisTemplateResponse`
 
@@ -398,9 +398,9 @@ class VodClient(AbstractClient):
 
 
     def DeleteAIRecognitionTemplate(self, request):
-        """删除用户自定义视频内容识别模板。
+        """删除用戶自定義視訊内容識别範本。
 
-        :param request: 调用DeleteAIRecognitionTemplate所需参数的结构体。
+        :param request: 調用DeleteAIRecognitionTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DeleteAIRecognitionTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteAIRecognitionTemplateResponse`
 
@@ -426,10 +426,10 @@ class VodClient(AbstractClient):
 
 
     def DeleteClass(self, request):
-        """* 仅当待删分类无子分类且无媒体关联情况下，可删除分类；
-        * 否则，请先执行[删除媒体](/document/product/266/31764)及子分类，再删除该分类；
+        """* 僅當待删分類無子分類且無媒體關聯情況下，可删除分類；
+        * 否則，請先執行[删除媒體](/document/product/266/31764)及子分類，再删除該分類；
 
-        :param request: 调用DeleteClass所需参数的结构体。
+        :param request: 調用DeleteClass所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DeleteClassRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteClassResponse`
 
@@ -455,9 +455,9 @@ class VodClient(AbstractClient):
 
 
     def DeleteContentReviewTemplate(self, request):
-        """删除用户自定义视频内容审核模板。
+        """删除用戶自定義視訊内容審核範本。
 
-        :param request: 调用DeleteContentReviewTemplate所需参数的结构体。
+        :param request: 調用DeleteContentReviewTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DeleteContentReviewTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteContentReviewTemplateResponse`
 
@@ -483,10 +483,10 @@ class VodClient(AbstractClient):
 
 
     def DeleteMedia(self, request):
-        """* 删除媒体及其对应的视频处理文件（如转码视频、雪碧图、截图、微信发布视频等）；
-        * 可单独删除指定 ID 的视频文件下的转码，或者微信发布文件；
+        """* 删除媒體及其對應的視訊處理文件（如轉碼視訊、雪碧圖、截圖、微信發布視訊等）；
+        * 可單獨删除指定 ID 的視訊文件下的轉碼，或者微信發布文件；
 
-        :param request: 调用DeleteMedia所需参数的结构体。
+        :param request: 調用DeleteMedia所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DeleteMediaRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteMediaResponse`
 
@@ -512,9 +512,9 @@ class VodClient(AbstractClient):
 
 
     def DeletePersonSample(self, request):
-        """该接口用于根据人物 ID，删除人物样本。
+        """該介面用于根據人物 ID，删除人物樣本。
 
-        :param request: 调用DeletePersonSample所需参数的结构体。
+        :param request: 調用DeletePersonSample所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DeletePersonSampleRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DeletePersonSampleResponse`
 
@@ -540,9 +540,9 @@ class VodClient(AbstractClient):
 
 
     def DeleteProcedureTemplate(self, request):
-        """删除指定名字的任务流模板
+        """删除指定名字的任務流範本
 
-        :param request: 调用DeleteProcedureTemplate所需参数的结构体。
+        :param request: 調用DeleteProcedureTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DeleteProcedureTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteProcedureTemplateResponse`
 
@@ -568,9 +568,9 @@ class VodClient(AbstractClient):
 
 
     def DeleteTranscodeTemplate(self, request):
-        """删除用户自定义转码模板。
+        """删除用戶自定義轉碼範本。
 
-        :param request: 调用DeleteTranscodeTemplate所需参数的结构体。
+        :param request: 調用DeleteTranscodeTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DeleteTranscodeTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteTranscodeTemplateResponse`
 
@@ -596,9 +596,9 @@ class VodClient(AbstractClient):
 
 
     def DeleteWatermarkTemplate(self, request):
-        """删除用户自定义水印模板。
+        """删除用戶自定義浮水印範本。
 
-        :param request: 调用DeleteWatermarkTemplate所需参数的结构体。
+        :param request: 調用DeleteWatermarkTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DeleteWatermarkTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteWatermarkTemplateResponse`
 
@@ -624,9 +624,9 @@ class VodClient(AbstractClient):
 
 
     def DeleteWordSamples(self, request):
-        """该接口用于批量删除关键词样本。
+        """該介面用于批次删除關鍵詞樣本。
 
-        :param request: 调用DeleteWordSamples所需参数的结构体。
+        :param request: 調用DeleteWordSamples所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DeleteWordSamplesRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteWordSamplesResponse`
 
@@ -652,9 +652,9 @@ class VodClient(AbstractClient):
 
 
     def DescribeAIAnalysisTemplates(self, request):
-        """根据视频内容分析模板唯一标识，获取视频内容分析模板详情列表。返回结果包含符合条件的所有用户自定义视频内容分析模板及[系统预置视频内容分析模板]
+        """根據視訊内容分析範本唯一标識，獲取視訊内容分析範本詳情清單。返回結果包含符合條件的所有用戶自定義視訊内容分析範本及[系統預置視訊内容分析範本]
 
-        :param request: 调用DescribeAIAnalysisTemplates所需参数的结构体。
+        :param request: 調用DescribeAIAnalysisTemplates所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DescribeAIAnalysisTemplatesRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeAIAnalysisTemplatesResponse`
 
@@ -680,9 +680,9 @@ class VodClient(AbstractClient):
 
 
     def DescribeAIRecognitionTemplates(self, request):
-        """根据视频内容识别模板唯一标识，获取视频内容识别模板详情列表。返回结果包含符合条件的所有用户自定义视频内容识别模板及[系统预置视频内容识别模板]
+        """根據視訊内容識别範本唯一标識，獲取視訊内容識别範本詳情清單。返回結果包含符合條件的所有用戶自定義視訊内容識别範本及[系統預置視訊内容識别範本]
 
-        :param request: 调用DescribeAIRecognitionTemplates所需参数的结构体。
+        :param request: 調用DescribeAIRecognitionTemplates所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DescribeAIRecognitionTemplatesRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeAIRecognitionTemplatesResponse`
 
@@ -708,9 +708,9 @@ class VodClient(AbstractClient):
 
 
     def DescribeAllClass(self, request):
-        """* 获得用户的所有分类信息。
+        """* 獲得用戶的所有分類訊息。
 
-        :param request: 调用DescribeAllClass所需参数的结构体。
+        :param request: 調用DescribeAllClass所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DescribeAllClassRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeAllClassResponse`
 
@@ -736,9 +736,9 @@ class VodClient(AbstractClient):
 
 
     def DescribeContentReviewTemplates(self, request):
-        """根据视频内容审核模板唯一标识，获取视频内容审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容审核模板]。
+        """根據視訊内容審核範本唯一标識，獲取視訊内容審核範本詳情清單。返回結果包含符合條件的所有用戶自定義範本及[系統預置内容審核範本]。
 
-        :param request: 调用DescribeContentReviewTemplates所需参数的结构体。
+        :param request: 調用DescribeContentReviewTemplates所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DescribeContentReviewTemplatesRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeContentReviewTemplatesResponse`
 
@@ -764,19 +764,19 @@ class VodClient(AbstractClient):
 
 
     def DescribeMediaInfos(self, request):
-        """1. 该接口可以获取多个视频的多种信息，包括：
-            1. 基础信息（basicInfo）：包括视频名称、大小、时长、封面图片等。
-            2. 元信息（metaData）：包括视频流信息、音频流信息等。
-            3. 转码结果信息（transcodeInfo）：包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
-            4. 转动图结果信息（animatedGraphicsInfo）：对视频转动图（如 gif）后，动图相关信息。
-            5. 采样截图信息（sampleSnapshotInfo）：对视频采样截图后，相关截图信息。
-            6. 雪碧图信息（imageSpriteInfo）：对视频截取雪碧图之后，雪碧图的相关信息。
-            7. 指定时间点截图信息（snapshotByTimeOffsetInfo）：对视频依照指定时间点截图后，各个截图的信息。
-            8. 视频打点信息（keyFrameDescInfo）：对视频设置的各个打点信息。
-            9. 转自适应码流信息（adaptiveDynamicStreamingInfo）：包括规格、加密类型、打包格式等相关信息。
-        2. 可以指定回包只返回部分信息。
+        """1. 該介面可以獲取多個視訊的多種訊息，包括：
+            1. 基礎訊息（basicInfo）：包括視訊名稱、大小、時長、封面圖片等。
+            2. 元訊息（metaData）：包括視訊流訊息、音訊流訊息等。
+            3. 轉碼結果訊息（transcodeInfo）：包括該視訊轉碼生成的各種碼率的視訊的網址、規格、碼率、分辨率等。
+            4. 轉動圖結果訊息（animatedGraphicsInfo）：對視訊轉動圖（如 gif）後，動圖相關訊息。
+            5. 采樣截圖訊息（sampleSnapshotInfo）：對視訊采樣截圖後，相關截圖訊息。
+            6. 雪碧圖訊息（imageSpriteInfo）：對視訊截取雪碧圖之後，雪碧圖的相關訊息。
+            7. 指定時間點截圖訊息（snapshotByTimeOffsetInfo）：對視訊依照指定時間點截圖後，各個截圖的訊息。
+            8. 視訊打點訊息（keyFrameDescInfo）：對視訊設置的各個打點訊息。
+            9. 轉自适應碼流訊息（adaptiveDynamicStreamingInfo）：包括規格、加密類型、打包格式等相關訊息。
+        2. 可以指定回包只返回部分訊息。
 
-        :param request: 调用DescribeMediaInfos所需参数的结构体。
+        :param request: 調用DescribeMediaInfos所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DescribeMediaInfosRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeMediaInfosResponse`
 
@@ -802,9 +802,9 @@ class VodClient(AbstractClient):
 
 
     def DescribePersonSamples(self, request):
-        """该接口用于查询人物样本信息，支持根据人物 ID、名称、标签，分页查询。
+        """該介面用于查詢人物樣本訊息，支援根據人物 ID、名稱、标簽，分頁查詢。
 
-        :param request: 调用DescribePersonSamples所需参数的结构体。
+        :param request: 調用DescribePersonSamples所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DescribePersonSamplesRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DescribePersonSamplesResponse`
 
@@ -830,9 +830,9 @@ class VodClient(AbstractClient):
 
 
     def DescribeProcedureTemplates(self, request):
-        """根据任务流模板名字，获取任务流模板详情列表。
+        """根據任務流範本名字，獲取任務流範本詳情清單。
 
-        :param request: 调用DescribeProcedureTemplates所需参数的结构体。
+        :param request: 調用DescribeProcedureTemplates所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DescribeProcedureTemplatesRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeProcedureTemplatesResponse`
 
@@ -858,9 +858,9 @@ class VodClient(AbstractClient):
 
 
     def DescribeTaskDetail(self, request):
-        """通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询3天之内提交的任务）。
+        """通過任務 ID 查詢任務的執行狀态和結果的詳細訊息（最多可以查詢3天之内提交的任務）。
 
-        :param request: 调用DescribeTaskDetail所需参数的结构体。
+        :param request: 調用DescribeTaskDetail所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DescribeTaskDetailRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeTaskDetailResponse`
 
@@ -886,11 +886,11 @@ class VodClient(AbstractClient):
 
 
     def DescribeTasks(self, request):
-        """* 该接口用于查询任务列表；
-        * 当列表数据比较多时，单次接口调用无法拉取整个列表，可通过 ScrollToken 参数，分批拉取；
-        * 只能查询到最近三天（72 小时）内的任务。
+        """* 該介面用于查詢任務清單；
+        * 當清單數據比較多時，單次介面調用無法拉取整個清單，可通過 ScrollToken 參數，分批拉取；
+        * 只能查詢到最近三天（72 小時）内的任務。
 
-        :param request: 调用DescribeTasks所需参数的结构体。
+        :param request: 調用DescribeTasks所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DescribeTasksRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeTasksResponse`
 
@@ -916,9 +916,9 @@ class VodClient(AbstractClient):
 
 
     def DescribeTranscodeTemplates(self, request):
-        """根据转码模板唯一标识，获取转码模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置转码模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+        """根據轉碼範本唯一标識，獲取轉碼範本詳情清單。返回結果包含符合條件的所有用戶自定義範本及[系統預置轉碼範本](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
 
-        :param request: 调用DescribeTranscodeTemplates所需参数的结构体。
+        :param request: 調用DescribeTranscodeTemplates所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DescribeTranscodeTemplatesRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeTranscodeTemplatesResponse`
 
@@ -944,9 +944,9 @@ class VodClient(AbstractClient):
 
 
     def DescribeWatermarkTemplates(self, request):
-        """查询用户自定义水印模板，支持根据条件，分页查询。
+        """查詢用戶自定義浮水印範本，支援根據條件，分頁查詢。
 
-        :param request: 调用DescribeWatermarkTemplates所需参数的结构体。
+        :param request: 調用DescribeWatermarkTemplates所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DescribeWatermarkTemplatesRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeWatermarkTemplatesResponse`
 
@@ -972,9 +972,9 @@ class VodClient(AbstractClient):
 
 
     def DescribeWordSamples(self, request):
-        """该接口用于根据应用场景、关键词、标签，分页查询关键词样本信息。
+        """該介面用于根據應用場景、關鍵詞、标簽，分頁查詢關鍵詞樣本訊息。
 
-        :param request: 调用DescribeWordSamples所需参数的结构体。
+        :param request: 調用DescribeWordSamples所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.DescribeWordSamplesRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeWordSamplesResponse`
 
@@ -1000,19 +1000,19 @@ class VodClient(AbstractClient):
 
 
     def EditMedia(self, request):
-        """对视频进行编辑（剪辑、拼接等），生成一个新的点播视频。编辑的功能包括：
+        """對視訊進行編輯（剪輯、拼接等），生成一個新的點播視訊。編輯的功能包括：
 
-        1. 对点播中的一个文件进行剪辑，生成一个新的视频；
-        2. 对点播中的多个文件进行拼接，生成一个新的视频；
-        3. 对点播中的多个文件进行剪辑，然后再拼接，生成一个新的视频；
-        4. 对点播中的一个流，直接生成一个新的视频；
-        5. 对点播中的一个流进行剪辑，生成一个新的视频；
-        6. 对点播中的多个流进行拼接，生成一个新的视频；
-        7. 对点播中的多个流进行剪辑，然后拼接，生成一个新的视频。
+        1. 對點播中的一個文件進行剪輯，生成一個新的視訊；
+        2. 對點播中的多個文件進行拼接，生成一個新的視訊；
+        3. 對點播中的多個文件進行剪輯，然後再拼接，生成一個新的視訊；
+        4. 對點播中的一個流，直接生成一個新的視訊；
+        5. 對點播中的一個流進行剪輯，生成一個新的視訊；
+        6. 對點播中的多個流進行拼接，生成一個新的視訊；
+        7. 對點播中的多個流進行剪輯，然後拼接，生成一個新的視訊。
 
-        对于生成的新视频，还可以指定生成后的视频是否要执行任务流。
+        對于生成的新視訊，還可以指定生成後的視訊是否要執行任務流。
 
-        :param request: 调用EditMedia所需参数的结构体。
+        :param request: 調用EditMedia所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.EditMediaRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.EditMediaResponse`
 
@@ -1038,32 +1038,32 @@ class VodClient(AbstractClient):
 
 
     def LiveRealTimeClip(self, request):
-        """直播即时剪辑，是指在直播过程中（即直播尚未结束时），客户可以在过往直播内容中选择一段，实时生成一个新的视频（HLS 格式），开发者可以将其立即分享出去，或者长久保存起来。
+        """直播即時剪輯，是指在直播過程中（即直播尚未結束時），客戶可以在過往直播内容中選擇一段，實時生成一個新的視訊（HLS 格式），開發者可以将其立即分享出去，或者長久保存起來。
 
-        腾讯云点播支持两种即时剪辑模式：
-        - 剪辑固化：将剪辑出来的视频保存成独立的视频，拥有独立 FileId；适用于将精彩片段**长久保存**的场景；
-        - 剪辑不固化：剪辑得到的视频附属于直播录制文件，没有独立 FileId；适用于将精彩片段**临时分享**的场景。
+        Top Cloud 點播支援兩種即時剪輯模式：
+        - 剪輯固化：将剪輯出來的視訊保存成獨立的視訊，擁有獨立 FileId；适用于将精彩片段**長久保存**的場景；
+        - 剪輯不固化：剪輯得到的視訊附屬于直播錄制文件，沒有獨立 FileId；适用于将精彩片段**臨時分享**的場景。
 
         注意：
-        - 使用直播即时剪辑功能的前提是：目标直播流开启了[时移回看](https://cloud.tencent.com/document/product/267/32742)功能。
-        - 直播即时剪辑是基于直播录制生成的 m3u8 文件进行的，故而其最小剪辑精度为一个 ts 切片，无法实现秒级或者更为精确的剪辑精度。
+        - 使用直播即時剪輯功能的前提是：目标直播流開啓了[時移回看](https://cloud.tencent.com/document/product/267/32742)功能。
+        - 直播即時剪輯是基于直播錄制生成的 m3u8 文件進行的，故而其最小剪輯精度爲一個 ts 切片，無法實現秒級或者更爲精确的剪輯精度。
 
 
-        ### 剪辑固化
-        所谓剪辑固化，是指将剪辑出来的视频是保存成一个独立的视频（拥有独立的 FileId）。其生命周期不受原始直播录制视频影响（即使原始录制视频被删除，剪辑结果也不会受到任何影响）；也可以对其进行转码、微信发布等二次处理。
+        ### 剪輯固化
+        所謂剪輯固化，是指将剪輯出來的視訊是保存成一個獨立的視訊（擁有獨立的 FileId）。其生命週期不受原始直播錄制視訊影響（即使原始錄制視訊被删除，剪輯結果也不會受到任何影響）；也可以對其進行轉碼、微信發布等二次處理。
 
-        举例如下：一场完整的足球比赛，直播录制出来的原始视频可能长达 2 个小时，客户出于节省成本的目的可以对这个视频存储 2 个月，但对于直播即时剪辑的「精彩时刻」视频却可以指定存储更长时间，同时可以单独对「精彩时刻」视频进行转码、微信发布等额外的点播操作，这时候可以选择直播即时剪辑并且固化的方案。
+        舉例如下：一場完整的足球比賽，直播錄制出來的原始視訊可能長達 2 個小時，客戶出于節省成本的目的可以對這個視訊儲存 2 個月，但對于直播即時剪輯的「精彩時刻」視訊卻可以指定儲存更長時間，同時可以單獨對「精彩時刻」視訊進行轉碼、微信發布等額外的點播操作，這時候可以選擇直播即時剪輯并且固化的方案。
 
-        剪辑固化的优势在于其生命周期与原始录制视频相互独立，可以独立管理、长久保存。
+        剪輯固化的優勢在于其生命週期與原始錄制視訊相互獨立，可以獨立管理、長久保存。
 
-        ### 剪辑不固化
-        所谓剪辑不固化，是指剪辑所得到的结果（m3u8 文件）与直播录制视频共享相同的 ts 分片，新生成的视频不是一个独立完整的视频（没有独立 FileId，只有播放 URL），其有效期与直播录制的完整视频有效期是一致的。一旦直播录制出来的视频被删除，也会导致该片段无法播放。
+        ### 剪輯不固化
+        所謂剪輯不固化，是指剪輯所得到的結果（m3u8 文件）與直播錄制視訊共享相同的 ts 分片，新生成的視訊不是一個獨立完整的視訊（沒有獨立 FileId，只有播放 URL），其有效期與直播錄制的完整視訊有效期是一緻的。一旦直播錄制出來的視訊被删除，也會導緻該片段無法播放。
 
-        剪辑不固化，由于其剪辑结果不是一个独立的视频，因而也不会纳入点播媒资视频管理（比如控制台的视频总数不会统计这一片段）中，也无法单独针对这个片段做转码、微信发布等任何视频处理操作。
+        剪輯不固化，由于其剪輯結果不是一個獨立的視訊，因而也不會納入點播媒資視訊管理（比如控制台的視訊總數不會統計這一片段）中，也無法單獨針對這個片段做轉碼、微信發布等任何視訊處理操作。
 
-        剪辑不固化的优势在于其剪辑操作十分“轻量化”，不会产生额外的存储开销。但其不足之处在于生命周期与原始录制视频相同，且无法进一步进行转码等视频处理。
+        剪輯不固化的優勢在于其剪輯操作十分“輕量化”，不會産生額外的儲存開銷。但其不足之處在于生命週期與原始錄制視訊相同，且無法進一步進行轉碼等視訊處理。
 
-        :param request: 调用LiveRealTimeClip所需参数的结构体。
+        :param request: 調用LiveRealTimeClip所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.LiveRealTimeClipRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.LiveRealTimeClipResponse`
 
@@ -1089,11 +1089,11 @@ class VodClient(AbstractClient):
 
 
     def ModifyAIAnalysisTemplate(self, request):
-        """修改用户自定义视频内容分析模板。
+        """修改用戶自定義視訊内容分析範本。
 
-        注意：模板 ID 10000 以下的为系统预置模板，不允许修改。
+        注意：範本 ID 10000 以下的爲系統預置範本，不允許修改。
 
-        :param request: 调用ModifyAIAnalysisTemplate所需参数的结构体。
+        :param request: 調用ModifyAIAnalysisTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.ModifyAIAnalysisTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyAIAnalysisTemplateResponse`
 
@@ -1119,9 +1119,9 @@ class VodClient(AbstractClient):
 
 
     def ModifyAIRecognitionTemplate(self, request):
-        """修改用户自定义视频内容识别模板。
+        """修改用戶自定義視訊内容識别範本。
 
-        :param request: 调用ModifyAIRecognitionTemplate所需参数的结构体。
+        :param request: 調用ModifyAIRecognitionTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.ModifyAIRecognitionTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyAIRecognitionTemplateResponse`
 
@@ -1147,9 +1147,9 @@ class VodClient(AbstractClient):
 
 
     def ModifyClass(self, request):
-        """修改媒体分类属性。
+        """修改媒體分類屬性。
 
-        :param request: 调用ModifyClass所需参数的结构体。
+        :param request: 調用ModifyClass所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.ModifyClassRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyClassResponse`
 
@@ -1175,9 +1175,9 @@ class VodClient(AbstractClient):
 
 
     def ModifyContentReviewTemplate(self, request):
-        """修改用户自定义视频内容审核模板。
+        """修改用戶自定義視訊内容審核範本。
 
-        :param request: 调用ModifyContentReviewTemplate所需参数的结构体。
+        :param request: 調用ModifyContentReviewTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.ModifyContentReviewTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyContentReviewTemplateResponse`
 
@@ -1203,9 +1203,9 @@ class VodClient(AbstractClient):
 
 
     def ModifyMediaInfo(self, request):
-        """修改媒体文件的属性，包括分类、名称、描述、标签、过期时间、打点信息、视频封面等。
+        """修改媒體文件的屬性，包括分類、名稱、描述、标簽、過期時間、打點訊息、視訊封面等。
 
-        :param request: 调用ModifyMediaInfo所需参数的结构体。
+        :param request: 調用ModifyMediaInfo所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.ModifyMediaInfoRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyMediaInfoResponse`
 
@@ -1231,9 +1231,9 @@ class VodClient(AbstractClient):
 
 
     def ModifyPersonSample(self, request):
-        """该接口用于根据人物 ID，修改人物样本信息，包括名称、描述的修改，以及人脸、标签的添加、删除、重置操作。人脸删除操作需保证至少剩余 1 张图片，否则，请使用重置操作。
+        """該介面用于根據人物 ID，修改人物樣本訊息，包括名稱、描述的修改，以及人臉、标簽的添加、删除、重置操作。人臉删除操作需保證至少剩餘 1 張圖片，否則，請使用重置操作。
 
-        :param request: 调用ModifyPersonSample所需参数的结构体。
+        :param request: 調用ModifyPersonSample所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.ModifyPersonSampleRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyPersonSampleResponse`
 
@@ -1259,9 +1259,9 @@ class VodClient(AbstractClient):
 
 
     def ModifyTranscodeTemplate(self, request):
-        """修改用户自定义转码模板信息。
+        """修改用戶自定義轉碼範本訊息。
 
-        :param request: 调用ModifyTranscodeTemplate所需参数的结构体。
+        :param request: 調用ModifyTranscodeTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.ModifyTranscodeTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyTranscodeTemplateResponse`
 
@@ -1287,9 +1287,9 @@ class VodClient(AbstractClient):
 
 
     def ModifyWatermarkTemplate(self, request):
-        """修改用户自定义水印模板，水印类型不允许修改。
+        """修改用戶自定義浮水印範本，水印類型不允許修改。
 
-        :param request: 调用ModifyWatermarkTemplate所需参数的结构体。
+        :param request: 調用ModifyWatermarkTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.ModifyWatermarkTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyWatermarkTemplateResponse`
 
@@ -1315,9 +1315,9 @@ class VodClient(AbstractClient):
 
 
     def ModifyWordSample(self, request):
-        """该接口用于修改关键词的应用场景、标签，关键词本身不可修改，如需修改，可删除重建。
+        """該介面用于修改關鍵詞的應用場景、标簽，關鍵詞本身不可修改，如需修改，可删除重建。
 
-        :param request: 调用ModifyWordSample所需参数的结构体。
+        :param request: 調用ModifyWordSample所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.ModifyWordSampleRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyWordSampleResponse`
 
@@ -1343,19 +1343,19 @@ class VodClient(AbstractClient):
 
 
     def ProcessMedia(self, request):
-        """对点播中的音视频媒体发起处理任务，功能包括：
-        1. 视频转码（带水印）；
-        2. 视频转动图；
-        3. 对视频按指定时间点截图；
-        4. 对视频采样截图；
-        5. 对视频截图雪碧图；
-        6. 对视频截取一张图做封面；
-        7. 对视频转自适应码流（并加密）；
-        8. 智能内容审核（鉴黄、鉴恐、鉴政）；
-        9. 智能内容分析（标签、分类、封面、按帧标签）；
-        10. 智能内容识别（视频片头片尾、人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
+        """對點播中的影音媒體發起處理任務，功能包括：
+        1. 視訊轉碼（帶浮水印）；
+        2. 視訊轉動圖；
+        3. 對視訊按指定時間點截圖；
+        4. 對視訊采樣截圖；
+        5. 對視訊截圖雪碧圖；
+        6. 對視訊截取一張圖做封面；
+        7. 對視訊轉自适應碼流（并加密）；
+        8. 智慧内容審核（鑒黃、鑒恐、鑒政）；
+        9. 智慧内容分析（标簽、分類、封面、按幀标簽）；
+        10. 智慧内容識别（視訊片頭片尾、人臉、文本全文、文本關鍵詞、語音全文、語音關鍵詞、物體）。
 
-        :param request: 调用ProcessMedia所需参数的结构体。
+        :param request: 調用ProcessMedia所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.ProcessMediaRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.ProcessMediaResponse`
 
@@ -1381,12 +1381,12 @@ class VodClient(AbstractClient):
 
 
     def ProcessMediaByProcedure(self, request):
-        """使用任务流模板，对点播中的视频发起处理任务。
-        有两种方式创建任务流模板：
-        1. 在控制台上创建和修改任务流模板；
-        2. 通过任务流模板接口创建任务流模板。
+        """使用任務流範本，對點播中的視訊發起處理任務。
+        有兩種方式創建任務流範本：
+        1. 在控制台上創建和修改任務流範本；
+        2. 通過任務流範本介面創建任務流範本。
 
-        :param request: 调用ProcessMediaByProcedure所需参数的结构体。
+        :param request: 調用ProcessMediaByProcedure所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.ProcessMediaByProcedureRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.ProcessMediaByProcedureResponse`
 
@@ -1412,13 +1412,13 @@ class VodClient(AbstractClient):
 
 
     def ProcessMediaByUrl(self, request):
-        """对来源为 URL 的音视频媒体发起处理任务，功能包括：
+        """對來源爲 URL 的影音媒體發起處理任務，功能包括：
 
-        1. 智能内容审核（鉴黄、鉴恐、鉴政）；
-        2. 智能内容分析（标签、分类、封面、按帧标签）；
-        3. 智能内容识别（视频片头片尾、人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
+        1. 智慧内容審核（鑒黃、鑒恐、鑒政）；
+        2. 智慧内容分析（标簽、分類、封面、按幀标簽）；
+        3. 智慧内容識别（視訊片頭片尾、人臉、文本全文、文本關鍵詞、語音全文、語音關鍵詞、物體）。
 
-        :param request: 调用ProcessMediaByUrl所需参数的结构体。
+        :param request: 調用ProcessMediaByUrl所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.ProcessMediaByUrlRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.ProcessMediaByUrlResponse`
 
@@ -1444,12 +1444,12 @@ class VodClient(AbstractClient):
 
 
     def PullEvents(self, request):
-        """* 该接口用于从点播服务端获取事件通知，详见[服务端事件通知](https://cloud.tencent.com/document/product/266/7829)；
-        * 接口为长轮询模式，即：如果服务端存在未消费事件，则立即返回给请求方；如果服务端没有未消费事件，则后台会将请求挂起，直到有新的事件产生为止；
-        * 请求最多挂起 5 秒，建议请求方将超时时间设置为 10 秒；
-        * 若该接口有事件返回，调用方必须再调用[确认事件通知](https://cloud.tencent.com/document/product/266/33434)接口，确认事件通知已经处理，否则该事件通知后续会再次被拉取到。
+        """* 該介面用于從點播服務端獲取事件通知，詳見[服務端事件通知](https://cloud.tencent.com/document/product/266/7829)；
+        * 介面爲長輪詢模式，即：如果服務端存在未消費事件，則立即返回給請求方；如果服務端沒有未消費事件，則後台會将請求挂起，直到有新的事件産生爲止；
+        * 請求最多挂起 5 秒，建議請求方将超時時間設置爲 10 秒；
+        * 若該介面有事件返回，調用方必須再調用[确認事件通知](https://cloud.tencent.com/document/product/266/33434)介面，确認事件通知已經處理，否則該事件通知後續會再次被拉取到。
 
-        :param request: 调用PullEvents所需参数的结构体。
+        :param request: 調用PullEvents所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.PullEventsRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.PullEventsResponse`
 
@@ -1475,9 +1475,9 @@ class VodClient(AbstractClient):
 
 
     def ResetProcedureTemplate(self, request):
-        """重新设置已存在的任务流模板的任务内容
+        """重新設置已存在的任務流範本的任務内容
 
-        :param request: 调用ResetProcedureTemplate所需参数的结构体。
+        :param request: 調用ResetProcedureTemplate所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.ResetProcedureTemplateRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.ResetProcedureTemplateResponse`
 
@@ -1503,22 +1503,22 @@ class VodClient(AbstractClient):
 
 
     def SearchMedia(self, request):
-        """搜索媒体信息，支持各种条件筛选，以及对返回结果进行排序、过滤等功能，具体包括：
-        - 根据媒体文件名或描述信息进行文本模糊搜索。
-        - 根据媒体分类、标签进行检索。
-            - 指定分类集合 ClassIds（见输入参数），返回满足集合中任意分类的媒体。例如：假设媒体分类有电影、电视剧、综艺，其中电影又有子分类历史片、动作片、言情片。如果 ClassIds 指定了电影、电视剧，那么电影和电视剧下的所有子分类
-            都会返回；而如果 ClassIds 指定的是历史片、动作片，那么只有这 2 个子分类下的媒体才会返回。
-            - 指定标签集合 Tags（见输入参数），返回满足集合中任意标签的媒体。例如：假设媒体标签有二次元、宫斗、鬼畜，如果 Tags 指定了二次元、鬼畜 2 个标签，那么只要符合这 2 个标签中任意一个的媒体都会被检索出来。
-        - 允许指定筛选某一来源 Source（见输入参数）的媒体。
-        - 允许根据直播推流码、Vid（见输入参数）筛选直播录制的媒体。
-        - 允许根据媒体的创建范围筛选媒体。
-        - 允许对上述条件进行任意组合，检索同时满足以上条件的媒体。例如可以筛选从 2018 年 12 月 1 日到 2018 年 12 月 8 日创建的电影、电视剧分类下带有宫斗、鬼畜标签的媒体。
-        - 允许对结果进行排序，允许通过 Offset 和 Limit 实现只返回部分结果。
+        """搜索媒體訊息，支援各種條件篩選，以及對返回結果進行排序、過濾等功能，具體包括：
+        - 根據媒體文件名或描述訊息進行文本模糊搜索。
+        - 根據媒體分類、标簽進行檢索。
+            - 指定分類集合 ClassIds（見輸入參數），返回滿足集合中任意分類的媒體。例如：假設媒體分類有電影、電視劇、綜藝，其中電影又有子分類曆史片、動作片、言情片。如果 ClassIds 指定了電影、電視劇，那麽電影和電視劇下的所有子分類
+            都會返回；而如果 ClassIds 指定的是曆史片、動作片，那麽只有這 2 個子分類下的媒體才會返回。
+            - 指定标簽集合 Tags（見輸入參數），返回滿足集合中任意标簽的媒體。例如：假設媒體标簽有二次元、宮鬥、鬼畜，如果 Tags 指定了二次元、鬼畜 2 個标簽，那麽只要符合這 2 個标簽中任意一個的媒體都會被檢索出來。
+        - 允許指定篩選某一來源 Source（見輸入參數）的媒體。
+        - 允許根據直播推流碼、Vid（見輸入參數）篩選直播錄制的媒體。
+        - 允許根據媒體的創建範圍篩選媒體。
+        - 允許對上述條件進行任意組合，檢索同時滿足以上條件的媒體。例如可以篩選從 2018 年 12 月 1 日到 2018 年 12 月 8 日創建的電影、電視劇分類下帶有宮鬥、鬼畜标簽的媒體。
+        - 允許對結果進行排序，允許通過 Offset 和 Limit 實現只返回部分結果。
 
-        接口搜索限制：
-        - 搜索结果超过 5000条，不再支持分页查询超过 5000 部分的数据。
+        介面搜索限制：
+        - 搜索結果超過 5000條，不再支援分頁查詢超過 5000 部分的數據。
 
-        :param request: 调用SearchMedia所需参数的结构体。
+        :param request: 調用SearchMedia所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.SearchMediaRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.SearchMediaResponse`
 
@@ -1544,11 +1544,11 @@ class VodClient(AbstractClient):
 
 
     def SimpleHlsClip(self, request):
-        """对 HLS 视频进行按时间段裁剪。
+        """對 HLS 視訊進行按時間段裁剪。
 
-        注意：裁剪出来的视频与原始视频共用 ts，仅生成新的 m3u8。原始视频删除后，该裁剪视频也会被删除。
+        注意：裁剪出來的視訊與原始視訊共用 ts，僅生成新的 m3u8。原始視訊删除後，該裁剪視訊也會被删除。
 
-        :param request: 调用SimpleHlsClip所需参数的结构体。
+        :param request: 調用SimpleHlsClip所需參數的結構體。
         :type request: :class:`tencentcloud.vod.v20180717.models.SimpleHlsClipRequest`
         :rtype: :class:`tencentcloud.vod.v20180717.models.SimpleHlsClipResponse`
 

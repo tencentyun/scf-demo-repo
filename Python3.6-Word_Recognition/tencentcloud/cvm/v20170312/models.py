@@ -17,17 +17,17 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class ActionTimer(AbstractModel):
-    """定时任务
+    """定時任務
 
     """
 
     def __init__(self):
         """
-        :param Externals: 扩展数据
+        :param Externals: 擴展數據
         :type Externals: :class:`tencentcloud.cvm.v20170312.models.Externals`
-        :param TimerAction: 定时器名称，目前仅支持销毁一个值：TerminateInstances。
+        :param TimerAction: 定時器名稱，目前僅支援銷毀一個值：TerminateInstances。
         :type TimerAction: str
-        :param ActionTime: 执行时间，格式形如：2018-5-29 11:26:40,执行时间必须大于当前时间5分钟。
+        :param ActionTime: 執行時間，格式形如：2018-5-29 11:26:40,執行時間必須大于當前時間5分鍾。
         :type ActionTime: str
         """
         self.Externals = None
@@ -44,25 +44,25 @@ class ActionTimer(AbstractModel):
 
 
 class AllocateHostsRequest(AbstractModel):
-    """AllocateHosts请求参数结构体
+    """AllocateHosts請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Placement: 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+        :param Placement: 實例所在的位置。通過該參數可以指定實例所屬可用區，所屬項目等屬性。
         :type Placement: :class:`tencentcloud.cvm.v20170312.models.Placement`
-        :param ClientToken: 用于保证请求幂等性的字符串。
+        :param ClientToken: 用于保證請求幂等性的字串。
         :type ClientToken: str
-        :param HostChargePrepaid: 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+        :param HostChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的購買時長、是否設置自動續約等屬性。若指定實例的付費模式爲預付費則該參數必傳。
         :type HostChargePrepaid: :class:`tencentcloud.cvm.v20170312.models.ChargePrepaid`
-        :param HostChargeType: 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
+        :param HostChargeType: 實例計費類型。目前僅支援：PREPAID（預付費，即包年包月模式）。
         :type HostChargeType: str
-        :param HostType: CDH实例机型，默认为：'HS1'。
+        :param HostType: CDH實例機型，預設爲：'HS1'。
         :type HostType: str
-        :param HostCount: 购买CDH实例数量。
+        :param HostCount: 購買CDH實例數量。
         :type HostCount: int
-        :param TagSpecification: 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
+        :param TagSpecification: 标簽描述清單。通過指定該參數可以同時綁定标簽到相應的資源實例。
         :type TagSpecification: list of TagSpecification
         """
         self.Placement = None
@@ -94,15 +94,15 @@ class AllocateHostsRequest(AbstractModel):
 
 
 class AllocateHostsResponse(AbstractModel):
-    """AllocateHosts返回参数结构体
+    """AllocateHosts返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param HostIdSet: 新创建云子机的实例id列表。
+        :param HostIdSet: 新創建雲子機的實例id清單。
         :type HostIdSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.HostIdSet = None
@@ -115,17 +115,17 @@ class AllocateHostsResponse(AbstractModel):
 
 
 class AssociateInstancesKeyPairsRequest(AbstractModel):
-    """AssociateInstancesKeyPairs请求参数结构体
+    """AssociateInstancesKeyPairs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID，每次请求批量实例的上限为100。<br>可以通过以下方式获取可用的实例ID：<br><li>通过登录[控制台](https://console.cloud.tencent.com/cvm/index)查询实例ID。<br><li>通过调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的`InstanceId`获取实例ID。
+        :param InstanceIds: 一個或多個待操作的實例ID，每次請求批次實例的上限爲100。<br>可以通過以下方式獲取可用的實例ID：<br><li>通過登入[控制台](https://console.cloud.tencent.com/cvm/index)查詢實例ID。<br><li>通過調用介面 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回訊息中的`InstanceId`獲取實例ID。
         :type InstanceIds: list of str
-        :param KeyIds: 一个或多个待操作的密钥对ID，每次请求批量密钥对的上限为100。密钥对ID形如：`skey-3glfot13`。<br>可以通过以下方式获取可用的密钥ID：<br><li>通过登录[控制台](https://console.cloud.tencent.com/cvm/sshkey)查询密钥ID。<br><li>通过调用接口 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699) ，取返回信息中的`KeyId`获取密钥对ID。
+        :param KeyIds: 一個或多個待操作的金鑰對ID，每次請求批次金鑰對的上限爲100。金鑰對ID形如：`skey-3glfot13`。<br>可以通過以下方式獲取可用的金鑰ID：<br><li>通過登入[控制台](https://console.cloud.tencent.com/cvm/sshkey)查詢金鑰ID。<br><li>通過調用介面 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699) ，取返回訊息中的`KeyId`獲取金鑰對ID。
         :type KeyIds: list of str
-        :param ForceStop: 是否对运行中的实例选择强制关机。建议对运行中的实例先手动关机，然后再绑定密钥。取值范围：<br><li>TRUE：表示在正常关机失败后进行强制关机。<br><li>FALSE：表示在正常关机失败后不进行强制关机。<br>默认取值：FALSE。
+        :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再綁定金鑰。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機。<br><li>FALSE：表示在正常關機失敗後不進行強制關機。<br>預設取值：FALSE。
         :type ForceStop: bool
         """
         self.InstanceIds = None
@@ -140,13 +140,13 @@ class AssociateInstancesKeyPairsRequest(AbstractModel):
 
 
 class AssociateInstancesKeyPairsResponse(AbstractModel):
-    """AssociateInstancesKeyPairs返回参数结构体
+    """AssociateInstancesKeyPairs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -157,15 +157,15 @@ class AssociateInstancesKeyPairsResponse(AbstractModel):
 
 
 class AssociateSecurityGroupsRequest(AbstractModel):
-    """AssociateSecurityGroups请求参数结构体
+    """AssociateSecurityGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecurityGroupIds: 要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。
+        :param SecurityGroupIds: 要綁定的`安全組ID`，類似sg-efil73jd，只支援綁定單個安全組。
         :type SecurityGroupIds: list of str
-        :param InstanceIds: 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
+        :param InstanceIds: 被綁定的`實例ID`，類似ins-lesecurk，支援指定多個實例。
         :type InstanceIds: list of str
         """
         self.SecurityGroupIds = None
@@ -178,13 +178,13 @@ class AssociateSecurityGroupsRequest(AbstractModel):
 
 
 class AssociateSecurityGroupsResponse(AbstractModel):
-    """AssociateSecurityGroups返回参数结构体
+    """AssociateSecurityGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -195,15 +195,15 @@ class AssociateSecurityGroupsResponse(AbstractModel):
 
 
 class ChargePrepaid(AbstractModel):
-    """描述预付费模式，即包年包月相关参数。包括购买时长和自动续费逻辑等。
+    """描述預付費模式，即包年包月相關參數。包括購買時長和自動續約邏輯等。
 
     """
 
     def __init__(self):
         """
-        :param Period: 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
+        :param Period: 購買實例的時長，單位：月。取值範圍：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
         :type Period: int
-        :param RenewFlag: 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费<br><br>默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+        :param RenewFlag: 自動續約标識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>預設取值：NOTIFY_AND_AUTO_RENEW。若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
         :type RenewFlag: str
         """
         self.Period = None
@@ -216,17 +216,17 @@ class ChargePrepaid(AbstractModel):
 
 
 class CreateDisasterRecoverGroupRequest(AbstractModel):
-    """CreateDisasterRecoverGroup请求参数结构体
+    """CreateDisasterRecoverGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Name: 分散置放群组名称，长度1-60个字符，支持中、英文。
+        :param Name: 分散置放群組名稱，長度1-60個字元，支援中、英文。
         :type Name: str
-        :param Type: 分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
+        :param Type: 分散置放群組類型，取值範圍：<br><li>HOST：物理機<br><li>SW：交換機<br><li>RACK：機架
         :type Type: str
-        :param ClientToken: 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。
+        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。<br>更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
         """
         self.Name = None
@@ -241,25 +241,25 @@ class CreateDisasterRecoverGroupRequest(AbstractModel):
 
 
 class CreateDisasterRecoverGroupResponse(AbstractModel):
-    """CreateDisasterRecoverGroup返回参数结构体
+    """CreateDisasterRecoverGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DisasterRecoverGroupId: 分散置放群组ID列表。
+        :param DisasterRecoverGroupId: 分散置放群組ID清單。
         :type DisasterRecoverGroupId: str
-        :param Type: 分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
+        :param Type: 分散置放群組類型，取值範圍：<br><li>HOST：物理機<br><li>SW：交換機<br><li>RACK：機架
         :type Type: str
-        :param Name: 分散置放群组名称，长度1-60个字符，支持中、英文。
+        :param Name: 分散置放群組名稱，長度1-60個字元，支援中、英文。
         :type Name: str
-        :param CvmQuotaTotal: 置放群组内可容纳的云主机数量。
+        :param CvmQuotaTotal: 置放群組内可容納的雲主機數量。
         :type CvmQuotaTotal: int
-        :param CurrentNum: 置放群组内已有的云主机数量。
+        :param CurrentNum: 置放群組内已有的雲主機數量。
         :type CurrentNum: int
-        :param CreateTime: 置放群组创建时间。
+        :param CreateTime: 置放群組創建時間。
         :type CreateTime: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DisasterRecoverGroupId = None
@@ -282,29 +282,29 @@ class CreateDisasterRecoverGroupResponse(AbstractModel):
 
 
 class CreateImageRequest(AbstractModel):
-    """CreateImage请求参数结构体
+    """CreateImage請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageName: 镜像名称
+        :param ImageName: 映像名稱
         :type ImageName: str
-        :param InstanceId: 需要制作镜像的实例ID
+        :param InstanceId: 需要制作映像的實例ID
         :type InstanceId: str
-        :param ImageDescription: 镜像描述
+        :param ImageDescription: 映像描述
         :type ImageDescription: str
-        :param ForcePoweroff: 软关机失败时是否执行强制关机以制作镜像
+        :param ForcePoweroff: 軟關機失敗時是否執行強制關機以制作映像
         :type ForcePoweroff: str
-        :param Sysprep: 创建Windows镜像时是否启用Sysprep
+        :param Sysprep: 創建Windows映像時是否啓用Sysprep
         :type Sysprep: str
-        :param Reboot: 实例处于运行中时，是否允许关机执行制作镜像任务。
+        :param Reboot: 實例處于運作中時，是否允許關機執行制作映像任務。
         :type Reboot: str
-        :param DataDiskIds: 实例需要制作镜像的数据盘Id
+        :param DataDiskIds: 實例需要制作映像的數據盤Id
         :type DataDiskIds: list of str
-        :param SnapshotIds: 需要制作镜像的快照Id,必须包含一个系统盘快照
+        :param SnapshotIds: 需要制作映像的快照Id,必須包含一個系統盤快照
         :type SnapshotIds: list of str
-        :param DryRun: 检测请求的合法性，但不会对操作的资源产生任何影响
+        :param DryRun: 檢測請求的合法性，但不會對操作的資源産生任何影響
         :type DryRun: bool
         """
         self.ImageName = None
@@ -331,13 +331,13 @@ class CreateImageRequest(AbstractModel):
 
 
 class CreateImageResponse(AbstractModel):
-    """CreateImage返回参数结构体
+    """CreateImage返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -348,18 +348,18 @@ class CreateImageResponse(AbstractModel):
 
 
 class CreateKeyPairRequest(AbstractModel):
-    """CreateKeyPair请求参数结构体
+    """CreateKeyPair請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param KeyName: 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
+        :param KeyName: 金鑰對名稱，可由數字，字母和下劃線組成，長度不超過25個字元。
         :type KeyName: str
-        :param ProjectId: 密钥对创建后所属的项目ID。
-可以通过以下方式获取项目ID：
-<li>通过项目列表查询项目ID。
-<li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。
+        :param ProjectId: 金鑰對創建後所屬的項目ID。
+可以通過以下方式獲取項目ID：
+<li>通過項目清單查詢項目ID。
+<li>通過調用介面DescribeProject，取返回訊息中的`projectId `獲取項目ID。
         :type ProjectId: int
         """
         self.KeyName = None
@@ -372,15 +372,15 @@ class CreateKeyPairRequest(AbstractModel):
 
 
 class CreateKeyPairResponse(AbstractModel):
-    """CreateKeyPair返回参数结构体
+    """CreateKeyPair返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param KeyPair: 密钥对信息。
+        :param KeyPair: 金鑰對訊息。
         :type KeyPair: :class:`tencentcloud.cvm.v20170312.models.KeyPair`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.KeyPair = None
@@ -395,27 +395,27 @@ class CreateKeyPairResponse(AbstractModel):
 
 
 class DataDisk(AbstractModel):
-    """描述了数据盘的信息
+    """描述了數據盤的訊息
 
     """
 
     def __init__(self):
         """
-        :param DiskSize: 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+        :param DiskSize: 數據盤大小，單位：GB。最小調整步長爲10G，不同數據盤類型取值範圍不同，具體限制詳見：[CVM實例配置](/document/product/213/2177)。預設值爲0，表示不購買數據盤。更多限制詳見産品文件。
         :type DiskSize: int
-        :param DiskType: 数据盘类型。数据盘类型限制详见[CVM实例配置](/document/product/213/2177)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><br>默认取值：LOCAL_BASIC。<br><br>该参数对`ResizeInstanceDisk`接口无效。
+        :param DiskType: 數據盤類型。數據盤類型限制詳見[CVM實例配置](/document/product/213/2177)。取值範圍：<br><li>LOCAL_BASIC：本地硬碟<br><li>LOCAL_SSD：本地SSD硬碟<br><li>CLOUD_BASIC：普通雲硬碟<br><li>CLOUD_PREMIUM：高效能雲硬碟<br><li>CLOUD_SSD：SSD雲硬碟<br><br>預設取值：LOCAL_BASIC。<br><br>該參數對`ResizeInstanceDisk`介面無效。
         :type DiskType: str
-        :param DiskId: 数据盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。
+        :param DiskId: 數據盤ID。LOCAL_BASIC 和 LOCAL_SSD 類型沒有ID。暫時不支援該參數。
         :type DiskId: str
-        :param DeleteWithInstance: 数据盘是否随子机销毁。取值范围：
-<li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘
-<li>FALSE：子机销毁时，保留数据盘<br>
-默认取值：TRUE<br>
-该参数目前仅用于 `RunInstances` 接口。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DeleteWithInstance: 數據盤是否随子機銷毀。取值範圍：
+<li>TRUE：子機銷毀時，銷毀數據盤，只支援按小時後付費雲盤
+<li>FALSE：子機銷毀時，保留數據盤<br>
+預設取值：TRUE<br>
+該參數目前僅用于 `RunInstances` 介面。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeleteWithInstance: bool
-        :param SnapshotId: 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SnapshotId: 數據盤快照ID。選擇的數據盤快照大小需小於數據盤大小。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SnapshotId: str
         """
         self.DiskSize = None
@@ -434,13 +434,13 @@ class DataDisk(AbstractModel):
 
 
 class DeleteDisasterRecoverGroupsRequest(AbstractModel):
-    """DeleteDisasterRecoverGroups请求参数结构体
+    """DeleteDisasterRecoverGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DisasterRecoverGroupIds: 分散置放群组ID列表，可通过[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
+        :param DisasterRecoverGroupIds: 分散置放群組ID清單，可通過[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)介面獲取。
         :type DisasterRecoverGroupIds: list of str
         """
         self.DisasterRecoverGroupIds = None
@@ -451,13 +451,13 @@ class DeleteDisasterRecoverGroupsRequest(AbstractModel):
 
 
 class DeleteDisasterRecoverGroupsResponse(AbstractModel):
-    """DeleteDisasterRecoverGroups返回参数结构体
+    """DeleteDisasterRecoverGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -468,13 +468,13 @@ class DeleteDisasterRecoverGroupsResponse(AbstractModel):
 
 
 class DeleteImagesRequest(AbstractModel):
-    """DeleteImages请求参数结构体
+    """DeleteImages請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageIds: 准备删除的镜像Id列表
+        :param ImageIds: 準備删除的映像Id清單
         :type ImageIds: list of str
         """
         self.ImageIds = None
@@ -485,13 +485,13 @@ class DeleteImagesRequest(AbstractModel):
 
 
 class DeleteImagesResponse(AbstractModel):
-    """DeleteImages返回参数结构体
+    """DeleteImages返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -502,13 +502,13 @@ class DeleteImagesResponse(AbstractModel):
 
 
 class DeleteKeyPairsRequest(AbstractModel):
-    """DeleteKeyPairs请求参数结构体
+    """DeleteKeyPairs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param KeyIds: 一个或多个待操作的密钥对ID。每次请求批量密钥对的上限为100。<br>可以通过以下方式获取可用的密钥ID：<br><li>通过登录[控制台](https://console.cloud.tencent.com/cvm/sshkey)查询密钥ID。<br><li>通过调用接口 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699) ，取返回信息中的 `KeyId` 获取密钥对ID。
+        :param KeyIds: 一個或多個待操作的金鑰對ID。每次請求批次金鑰對的上限爲100。<br>可以通過以下方式獲取可用的金鑰ID：<br><li>通過登入[控制台](https://console.cloud.tencent.com/cvm/sshkey)查詢金鑰ID。<br><li>通過調用介面 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699) ，取返回訊息中的 `KeyId` 獲取金鑰對ID。
         :type KeyIds: list of str
         """
         self.KeyIds = None
@@ -519,13 +519,13 @@ class DeleteKeyPairsRequest(AbstractModel):
 
 
 class DeleteKeyPairsResponse(AbstractModel):
-    """DeleteKeyPairs返回参数结构体
+    """DeleteKeyPairs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -536,29 +536,29 @@ class DeleteKeyPairsResponse(AbstractModel):
 
 
 class DescribeDisasterRecoverGroupQuotaRequest(AbstractModel):
-    """DescribeDisasterRecoverGroupQuota请求参数结构体
+    """DescribeDisasterRecoverGroupQuota請求參數結構體
 
     """
 
 
 class DescribeDisasterRecoverGroupQuotaResponse(AbstractModel):
-    """DescribeDisasterRecoverGroupQuota返回参数结构体
+    """DescribeDisasterRecoverGroupQuota返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupQuota: 可创建置放群组数量的上限。
+        :param GroupQuota: 可創建置放群組數量的上限。
         :type GroupQuota: int
-        :param CurrentNum: 当前用户已经创建的置放群组数量。
+        :param CurrentNum: 當前用戶已經創建的置放群組數量。
         :type CurrentNum: int
-        :param CvmInHostGroupQuota: 物理机类型容灾组内实例的配额数。
+        :param CvmInHostGroupQuota: 物理機類型容災組内實例的配額數。
         :type CvmInHostGroupQuota: int
-        :param CvmInSwGroupQuota: 交换机类型容灾组内实例的配额数。
+        :param CvmInSwGroupQuota: 交換機類型容災組内實例的配額數。
         :type CvmInSwGroupQuota: int
-        :param CvmInRackGroupQuota: 机架类型容灾组内实例的配额数。
+        :param CvmInRackGroupQuota: 機架類型容災組内實例的配額數。
         :type CvmInRackGroupQuota: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.GroupQuota = None
@@ -579,19 +579,19 @@ class DescribeDisasterRecoverGroupQuotaResponse(AbstractModel):
 
 
 class DescribeDisasterRecoverGroupsRequest(AbstractModel):
-    """DescribeDisasterRecoverGroups请求参数结构体
+    """DescribeDisasterRecoverGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DisasterRecoverGroupIds: 分散置放群组ID列表。
+        :param DisasterRecoverGroupIds: 分散置放群組ID清單。
         :type DisasterRecoverGroupIds: list of str
-        :param Name: 分散置放群组名称，支持模糊匹配。
+        :param Name: 分散置放群組名稱，支援模糊比對。
         :type Name: str
-        :param Offset: 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.DisasterRecoverGroupIds = None
@@ -608,17 +608,17 @@ class DescribeDisasterRecoverGroupsRequest(AbstractModel):
 
 
 class DescribeDisasterRecoverGroupsResponse(AbstractModel):
-    """DescribeDisasterRecoverGroups返回参数结构体
+    """DescribeDisasterRecoverGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DisasterRecoverGroupSet: 分散置放群组信息列表。
+        :param DisasterRecoverGroupSet: 分散置放群組訊息清單。
         :type DisasterRecoverGroupSet: list of DisasterRecoverGroup
-        :param TotalCount: 用户置放群组总量。
+        :param TotalCount: 用戶置放群組總量。
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DisasterRecoverGroupSet = None
@@ -638,22 +638,22 @@ class DescribeDisasterRecoverGroupsResponse(AbstractModel):
 
 
 class DescribeHostsRequest(AbstractModel):
-    """DescribeHosts请求参数结构体
+    """DescribeHosts請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 过滤条件。
-<li> zone - String - 是否必填：否 - （过滤条件）按照可用区过滤。</li>
-<li> project-id - Integer - 是否必填：否 - （过滤条件）按照项目ID过滤。可通过调用 DescribeProject 查询已创建的项目列表或登录控制台进行查看；也可以调用 AddProject 创建新的项目。</li>
-<li> host-id - String - 是否必填：否 - （过滤条件）按照CDH ID过滤。CDH ID形如：host-11112222。</li>
-<li> host-name - String - 是否必填：否 - （过滤条件）按照CDH实例名称过滤。</li>
-<li> host-state - String - 是否必填：否 - （过滤条件）按照CDH实例状态进行过滤。（PENDING：创建中|LAUNCH_FAILURE：创建失败|RUNNING：运行中|EXPIRED：已过期）</li>
+        :param Filters: 過濾條件。
+<li> zone - String - 是否必填：否 - （過濾條件）按照可用區過濾。</li>
+<li> project-id - Integer - 是否必填：否 - （過濾條件）按照項目ID過濾。可通過調用 DescribeProject 查詢已創建的項目清單或登入控制台進行檢視；也可以調用 AddProject 創建新的項目。</li>
+<li> host-id - String - 是否必填：否 - （過濾條件）按照CDH ID過濾。CDH ID形如：host-11112222。</li>
+<li> host-name - String - 是否必填：否 - （過濾條件）按照CDH實例名稱過濾。</li>
+<li> host-state - String - 是否必填：否 - （過濾條件）按照CDH實例狀态進行過濾。（PENDING：創建中|LAUNCH_FAILURE：創建失敗|RUNNING：運作中|EXPIRED：已過期）</li>
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0。
+        :param Offset: 偏移量，預設爲0。
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为100。
+        :param Limit: 返回數量，預設爲20，最大值爲100。
         :type Limit: int
         """
         self.Filters = None
@@ -673,17 +673,17 @@ class DescribeHostsRequest(AbstractModel):
 
 
 class DescribeHostsResponse(AbstractModel):
-    """DescribeHosts返回参数结构体
+    """DescribeHosts返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 符合查询条件的cdh实例总数
+        :param TotalCount: 符合查詢條件的cdh實例總數
         :type TotalCount: int
-        :param HostSet: cdh实例详细信息列表
+        :param HostSet: cdh實例詳細訊息清單
         :type HostSet: list of HostItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -703,21 +703,21 @@ class DescribeHostsResponse(AbstractModel):
 
 
 class DescribeImageQuotaRequest(AbstractModel):
-    """DescribeImageQuota请求参数结构体
+    """DescribeImageQuota請求參數結構體
 
     """
 
 
 class DescribeImageQuotaResponse(AbstractModel):
-    """DescribeImageQuota返回参数结构体
+    """DescribeImageQuota返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageNumQuota: 账户的镜像配额
+        :param ImageNumQuota: 帳戶的映像配額
         :type ImageNumQuota: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ImageNumQuota = None
@@ -730,13 +730,13 @@ class DescribeImageQuotaResponse(AbstractModel):
 
 
 class DescribeImageSharePermissionRequest(AbstractModel):
-    """DescribeImageSharePermission请求参数结构体
+    """DescribeImageSharePermission請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageId: 需要共享的镜像Id
+        :param ImageId: 需要共享的映像Id
         :type ImageId: str
         """
         self.ImageId = None
@@ -747,15 +747,15 @@ class DescribeImageSharePermissionRequest(AbstractModel):
 
 
 class DescribeImageSharePermissionResponse(AbstractModel):
-    """DescribeImageSharePermission返回参数结构体
+    """DescribeImageSharePermission返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SharePermissionSet: 镜像共享信息
+        :param SharePermissionSet: 映像共享訊息
         :type SharePermissionSet: list of SharePermission
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SharePermissionSet = None
@@ -773,24 +773,24 @@ class DescribeImageSharePermissionResponse(AbstractModel):
 
 
 class DescribeImagesRequest(AbstractModel):
-    """DescribeImages请求参数结构体
+    """DescribeImages請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageIds: 镜像ID列表 。镜像ID如：`img-gvbnzy6f`。array型参数的格式可以参考[API简介](https://cloud.tencent.com/document/api/213/15688)。镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。
+        :param ImageIds: 映像ID清單 。映像ID如：`img-gvbnzy6f`。array型參數的格式可以參考[API簡介](https://cloud.tencent.com/document/api/213/15688)。映像ID可以通過如下方式獲取：<br><li>通過[DescribeImages](https://cloud.tencent.com/document/api/213/15715)介面返回的`ImageId`獲取。<br><li>通過[映像控制台](https://console.cloud.tencent.com/cvm/image)獲取。
         :type ImageIds: list of str
-        :param Filters: 过滤条件，每次请求的`Filters`的上限为0，`Filters.Values`的上限为5。参数不可以同时指定`ImageIds`和`Filters`。详细的过滤条件如下：
-<li> image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤</li>
-<li> image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：详见[镜像类型](https://cloud.tencent.com/document/product/213/9452#image_type)。</li>
-<li> image-state - String - 是否必填： 否 - （过滤条件）按照镜像状态进行过滤。取值范围：详见[镜像状态](https://cloud.tencent.com/document/product/213/9452#image_state)。</li>
+        :param Filters: 過濾條件，每次請求的`Filters`的上限爲0，`Filters.Values`的上限爲5。參數不可以同時指定`ImageIds`和`Filters`。詳細的過濾條件如下：
+<li> image-id - String - 是否必填： 否 - （過濾條件）按照映像ID進行過濾</li>
+<li> image-type - String - 是否必填： 否 - （過濾條件）按照映像類型進行過濾。取值範圍：詳見[映像類型](https://cloud.tencent.com/document/product/213/9452#image_type)。</li>
+<li> image-state - String - 是否必填： 否 - （過濾條件）按照映像狀态進行過濾。取值範圍：詳見[映像狀态](https://cloud.tencent.com/document/product/213/9452#image_state)。</li>
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0。关于Offset详见[API简介](/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)。
+        :param Offset: 偏移量，預設爲0。關于Offset詳見[API簡介](/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)。
         :type Offset: int
-        :param Limit: 数量限制，默认为20，最大值为100。关于Limit详见[API简介](/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)。
+        :param Limit: 數量限制，預設爲20，最大值爲100。關于Limit詳見[API簡介](/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)。
         :type Limit: int
-        :param InstanceType: 实例类型，如 `S1.SMALL1`
+        :param InstanceType: 實例類型，如 `S1.SMALL1`
         :type InstanceType: str
         """
         self.ImageIds = None
@@ -814,17 +814,17 @@ class DescribeImagesRequest(AbstractModel):
 
 
 class DescribeImagesResponse(AbstractModel):
-    """DescribeImages返回参数结构体
+    """DescribeImages返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageSet: 一个关于镜像详细信息的结构体，主要包括镜像的主要状态与属性。
+        :param ImageSet: 一個關于映像詳細訊息的結構體，主要包括映像的主要狀态與屬性。
         :type ImageSet: list of Image
-        :param TotalCount: 符合要求的镜像数量。
+        :param TotalCount: 符合要求的映像數量。
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ImageSet = None
@@ -844,23 +844,23 @@ class DescribeImagesResponse(AbstractModel):
 
 
 class DescribeImportImageOsRequest(AbstractModel):
-    """DescribeImportImageOs请求参数结构体
+    """DescribeImportImageOs請求參數結構體
 
     """
 
 
 class DescribeImportImageOsResponse(AbstractModel):
-    """DescribeImportImageOs返回参数结构体
+    """DescribeImportImageOs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImportImageOsListSupported: 支持的导入镜像的操作系统类型。
+        :param ImportImageOsListSupported: 支援的導入映像的作業系統類型。
         :type ImportImageOsListSupported: :class:`tencentcloud.cvm.v20170312.models.ImageOsList`
-        :param ImportImageOsVersionSet: 支持的导入镜像的操作系统版本。
+        :param ImportImageOsVersionSet: 支援的導入映像的作業系統版本。
         :type ImportImageOsVersionSet: list of OsVersion
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ImportImageOsListSupported = None
@@ -882,21 +882,21 @@ class DescribeImportImageOsResponse(AbstractModel):
 
 
 class DescribeInstanceFamilyConfigsRequest(AbstractModel):
-    """DescribeInstanceFamilyConfigs请求参数结构体
+    """DescribeInstanceFamilyConfigs請求參數結構體
 
     """
 
 
 class DescribeInstanceFamilyConfigsResponse(AbstractModel):
-    """DescribeInstanceFamilyConfigs返回参数结构体
+    """DescribeInstanceFamilyConfigs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceFamilyConfigSet: 实例机型组配置的列表信息
+        :param InstanceFamilyConfigSet: 實例機型組配置的清單訊息
         :type InstanceFamilyConfigSet: list of InstanceFamilyConfig
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceFamilyConfigSet = None
@@ -914,13 +914,13 @@ class DescribeInstanceFamilyConfigsResponse(AbstractModel):
 
 
 class DescribeInstanceInternetBandwidthConfigsRequest(AbstractModel):
-    """DescribeInstanceInternetBandwidthConfigs请求参数结构体
+    """DescribeInstanceInternetBandwidthConfigs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。
+        :param InstanceId: 待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -931,15 +931,15 @@ class DescribeInstanceInternetBandwidthConfigsRequest(AbstractModel):
 
 
 class DescribeInstanceInternetBandwidthConfigsResponse(AbstractModel):
-    """DescribeInstanceInternetBandwidthConfigs返回参数结构体
+    """DescribeInstanceInternetBandwidthConfigs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InternetBandwidthConfigSet: 带宽配置信息列表。
+        :param InternetBandwidthConfigSet: 頻寬配置訊息清單。
         :type InternetBandwidthConfigSet: list of InternetBandwidthConfig
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InternetBandwidthConfigSet = None
@@ -957,16 +957,16 @@ class DescribeInstanceInternetBandwidthConfigsResponse(AbstractModel):
 
 
 class DescribeInstanceTypeConfigsRequest(AbstractModel):
-    """DescribeInstanceTypeConfigs请求参数结构体
+    """DescribeInstanceTypeConfigs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 过滤条件。
-<li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](https://cloud.tencent.com/document/api/213/9452#zone)过滤。</li>
-<li> instance-family - String - 是否必填：否 -（过滤条件）按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
-每次请求的`Filters`的上限为10，`Filter.Values`的上限为1。
+        :param Filters: 過濾條件。
+<li> zone - String - 是否必填：否 -（過濾條件）按照[可用區](https://cloud.tencent.com/document/api/213/9452#zone)過濾。</li>
+<li> instance-family - String - 是否必填：否 -（過濾條件）按照實例機型系列過濾。實例機型系列形如：S1、I1、M1等。</li>
+每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲1。
         :type Filters: list of Filter
         """
         self.Filters = None
@@ -982,15 +982,15 @@ class DescribeInstanceTypeConfigsRequest(AbstractModel):
 
 
 class DescribeInstanceTypeConfigsResponse(AbstractModel):
-    """DescribeInstanceTypeConfigs返回参数结构体
+    """DescribeInstanceTypeConfigs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceTypeConfigSet: 实例机型配置列表。
+        :param InstanceTypeConfigSet: 實例機型配置清單。
         :type InstanceTypeConfigSet: list of InstanceTypeConfig
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceTypeConfigSet = None
@@ -1008,13 +1008,13 @@ class DescribeInstanceTypeConfigsResponse(AbstractModel):
 
 
 class DescribeInstanceVncUrlRequest(AbstractModel):
-    """DescribeInstanceVncUrl请求参数结构体
+    """DescribeInstanceVncUrl請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 一个操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。
+        :param InstanceId: 一個操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`獲取。
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -1025,15 +1025,15 @@ class DescribeInstanceVncUrlRequest(AbstractModel):
 
 
 class DescribeInstanceVncUrlResponse(AbstractModel):
-    """DescribeInstanceVncUrl返回参数结构体
+    """DescribeInstanceVncUrl返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceVncUrl: 实例的管理终端地址。
+        :param InstanceVncUrl: 實例的管理終端網址。
         :type InstanceVncUrl: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceVncUrl = None
@@ -1046,16 +1046,16 @@ class DescribeInstanceVncUrlResponse(AbstractModel):
 
 
 class DescribeInstancesOperationLimitRequest(AbstractModel):
-    """DescribeInstancesOperationLimit请求参数结构体
+    """DescribeInstancesOperationLimit請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 按照一个或者多个实例ID查询，可通过[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)API返回值中的InstanceId获取。实例ID形如：ins-xxxxxxxx。（此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的id.N一节）。每次请求的实例的上限为100。
+        :param InstanceIds: 按照一個或者多個實例ID查詢，可通過[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)API返回值中的InstanceId獲取。實例ID形如：ins-xxxxxxxx。（此參數的具體格式可參考API[簡介](https://cloud.tencent.com/document/api/213/15688)的id.N一節）。每次請求的實例的上限爲100。
         :type InstanceIds: list of str
-        :param Operation: 实例操作。
-<li> INSTANCE_DEGRADE：实例降配操作</li>
+        :param Operation: 實例操作。
+<li> INSTANCE_DEGRADE：實例降配操作</li>
         :type Operation: str
         """
         self.InstanceIds = None
@@ -1068,15 +1068,15 @@ class DescribeInstancesOperationLimitRequest(AbstractModel):
 
 
 class DescribeInstancesOperationLimitResponse(AbstractModel):
-    """DescribeInstancesOperationLimit返回参数结构体
+    """DescribeInstancesOperationLimit返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceOperationLimitSet: 该参数表示调整配置操作（降配）限制次数查询。
+        :param InstanceOperationLimitSet: 該參數表示調整配置操作（降配）限制次數查詢。
         :type InstanceOperationLimitSet: list of OperationCountLimit
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceOperationLimitSet = None
@@ -1094,34 +1094,34 @@ class DescribeInstancesOperationLimitResponse(AbstractModel):
 
 
 class DescribeInstancesRequest(AbstractModel):
-    """DescribeInstances请求参数结构体
+    """DescribeInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 按照一个或者多个实例ID查询。实例ID形如：`ins-xxxxxxxx`。（此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的`id.N`一节）。每次请求的实例的上限为100。参数不支持同时指定`InstanceIds`和`Filters`。
+        :param InstanceIds: 按照一個或者多個實例ID查詢。實例ID形如：`ins-xxxxxxxx`。（此參數的具體格式可參考API[簡介](https://cloud.tencent.com/document/api/213/15688)的`id.N`一節）。每次請求的實例的上限爲100。參數不支援同時指定`InstanceIds`和`Filters`。
         :type InstanceIds: list of str
-        :param Filters: 过滤条件。
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
-<li> project-id - Integer - 是否必填：否 -（过滤条件）按照项目ID过滤。可通过调用[DescribeProject](https://cloud.tencent.com/document/api/378/4400)查询已创建的项目列表或登录[控制台](https://console.cloud.tencent.com/cvm/index)进行查看；也可以调用[AddProject](https://cloud.tencent.com/document/api/378/4398)创建新的项目。</li>
-<li> host-id - String - 是否必填：否 - （过滤条件）按照[CDH](https://cloud.tencent.com/document/product/416) ID过滤。[CDH](https://cloud.tencent.com/document/product/416) ID形如：host-xxxxxxxx。</li>
-<li> vpc-id - String - 是否必填：否 - （过滤条件）按照VPC ID进行过滤。VPC ID形如：vpc-xxxxxxxx。</li>
-<li> subnet-id - String - 是否必填：否 - （过滤条件）按照子网ID进行过滤。子网ID形如：subnet-xxxxxxxx。</li>
-<li> instance-id - String - 是否必填：否 - （过滤条件）按照实例ID过滤。实例ID形如：ins-xxxxxxxx。</li>
-<li> security-group-id - String - 是否必填：否 - （过滤条件）按照安全组ID过滤，安全组ID形如: sg-8jlk3f3r。</li>
-<li> instance-name - String - 是否必填：否 - （过滤条件）按照实例名称过滤。</li>
-<li> instance-charge-type - String - 是否必填：否 -（过滤条件）按照实例计费模式过滤。 (PREPAID：表示预付费，即包年包月 | POSTPAID_BY_HOUR：表示后付费，即按量计费 | CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付费，即只对[CDH](https://cloud.tencent.com/document/product/416)计费，不对[CDH](https://cloud.tencent.com/document/product/416)上的实例计费。 )  </li>
-<li> private-ip-address - String - 是否必填：否 - （过滤条件）按照实例主网卡的内网IP过滤。</li>
-<li> public-ip-address - String - 是否必填：否 - （过滤条件）按照实例主网卡的公网IP过滤，包含实例创建时自动分配的IP和实例创建后手动绑定的弹性IP。</li>
-<li> tag-key - String - 是否必填：否 - （过滤条件）按照标签键进行过滤。</li>
-<li> tag-value - String - 是否必填：否 - （过滤条件）按照标签值进行过滤。</li>
-<li> tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
-每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`InstanceIds`和`Filters`。
+        :param Filters: 過濾條件。
+<li> zone - String - 是否必填：否 -（過濾條件）按照可用區過濾。</li>
+<li> project-id - Integer - 是否必填：否 -（過濾條件）按照項目ID過濾。可通過調用[DescribeProject](https://cloud.tencent.com/document/api/378/4400)查詢已創建的項目清單或登入[控制台](https://console.cloud.tencent.com/cvm/index)進行檢視；也可以調用[AddProject](https://cloud.tencent.com/document/api/378/4398)創建新的項目。</li>
+<li> host-id - String - 是否必填：否 - （過濾條件）按照[CDH](https://cloud.tencent.com/document/product/416) ID過濾。[CDH](https://cloud.tencent.com/document/product/416) ID形如：host-xxxxxxxx。</li>
+<li> vpc-id - String - 是否必填：否 - （過濾條件）按照VPC ID進行過濾。VPC ID形如：vpc-xxxxxxxx。</li>
+<li> subnet-id - String - 是否必填：否 - （過濾條件）按照子網ID進行過濾。子網ID形如：subnet-xxxxxxxx。</li>
+<li> instance-id - String - 是否必填：否 - （過濾條件）按照實例ID過濾。實例ID形如：ins-xxxxxxxx。</li>
+<li> security-group-id - String - 是否必填：否 - （過濾條件）按照安全組ID過濾，安全組ID形如: sg-8jlk3f3r。</li>
+<li> instance-name - String - 是否必填：否 - （過濾條件）按照實例名稱過濾。</li>
+<li> instance-charge-type - String - 是否必填：否 -（過濾條件）按照實例計費模式過濾。 (PREPAID：表示預付費，即包年包月 | POSTPAID_BY_HOUR：表示後付費，即按量計費 | CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付費，即只對[CDH](https://cloud.tencent.com/document/product/416)計費，不對[CDH](https://cloud.tencent.com/document/product/416)上的實例計費。 )  </li>
+<li> private-ip-address - String - 是否必填：否 - （過濾條件）按照實例主網卡的内網IP過濾。</li>
+<li> public-ip-address - String - 是否必填：否 - （過濾條件）按照實例主網卡的公網IP過濾，包含實例創建時自動分配的IP和實例創建後手動綁定的彈性IP。</li>
+<li> tag-key - String - 是否必填：否 - （過濾條件）按照标簽鍵進行過濾。</li>
+<li> tag-value - String - 是否必填：否 - （過濾條件）按照标簽值進行過濾。</li>
+<li> tag:tag-key - String - 是否必填：否 - （過濾條件）按照标簽鍵值對進行過濾。 tag-key使用具體的标簽鍵進行替換。使用請參考範例2。</li>
+每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`InstanceIds`和`Filters`。
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.InstanceIds = None
@@ -1143,17 +1143,17 @@ class DescribeInstancesRequest(AbstractModel):
 
 
 class DescribeInstancesResponse(AbstractModel):
-    """DescribeInstances返回参数结构体
+    """DescribeInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 符合条件的实例数量。
+        :param TotalCount: 符合條件的實例數量。
         :type TotalCount: int
-        :param InstanceSet: 实例详细信息列表。
+        :param InstanceSet: 實例詳細訊息清單。
         :type InstanceSet: list of Instance
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1173,17 +1173,17 @@ class DescribeInstancesResponse(AbstractModel):
 
 
 class DescribeInstancesStatusRequest(AbstractModel):
-    """DescribeInstancesStatus请求参数结构体
+    """DescribeInstancesStatus請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 按照一个或者多个实例ID查询。实例ID形如：`ins-11112222`。此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的`id.N`一节）。每次请求的实例的上限为100。
+        :param InstanceIds: 按照一個或者多個實例ID查詢。實例ID形如：`ins-11112222`。此參數的具體格式可參考API[簡介](https://cloud.tencent.com/document/api/213/15688)的`id.N`一節）。每次請求的實例的上限爲100。
         :type InstanceIds: list of str
-        :param Offset: 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.InstanceIds = None
@@ -1198,17 +1198,17 @@ class DescribeInstancesStatusRequest(AbstractModel):
 
 
 class DescribeInstancesStatusResponse(AbstractModel):
-    """DescribeInstancesStatus返回参数结构体
+    """DescribeInstancesStatus返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 符合条件的实例状态数量。
+        :param TotalCount: 符合條件的實例狀态數量。
         :type TotalCount: int
-        :param InstanceStatusSet: [实例状态](https://cloud.tencent.com/document/api/213/15738) 列表。
+        :param InstanceStatusSet: [實例狀态](https://cloud.tencent.com/document/api/213/15738) 清單。
         :type InstanceStatusSet: list of InstanceStatus
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1228,21 +1228,21 @@ class DescribeInstancesStatusResponse(AbstractModel):
 
 
 class DescribeInternetChargeTypeConfigsRequest(AbstractModel):
-    """DescribeInternetChargeTypeConfigs请求参数结构体
+    """DescribeInternetChargeTypeConfigs請求參數結構體
 
     """
 
 
 class DescribeInternetChargeTypeConfigsResponse(AbstractModel):
-    """DescribeInternetChargeTypeConfigs返回参数结构体
+    """DescribeInternetChargeTypeConfigs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InternetChargeTypeConfigSet: 网络计费类型配置。
+        :param InternetChargeTypeConfigSet: 網絡計費類型配置。
         :type InternetChargeTypeConfigSet: list of InternetChargeTypeConfig
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InternetChargeTypeConfigSet = None
@@ -1260,21 +1260,21 @@ class DescribeInternetChargeTypeConfigsResponse(AbstractModel):
 
 
 class DescribeKeyPairsRequest(AbstractModel):
-    """DescribeKeyPairs请求参数结构体
+    """DescribeKeyPairs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param KeyIds: 密钥对ID，密钥对ID形如：`skey-11112222`（此接口支持同时传入多个ID进行过滤。此参数的具体格式可参考 API [简介](https://cloud.tencent.com/document/api/213/15688)的 `id.N` 一节）。参数不支持同时指定 `KeyIds` 和 `Filters`。密钥对ID可以通过登录[控制台](https://console.cloud.tencent.com/cvm/index)查询。
+        :param KeyIds: 金鑰對ID，金鑰對ID形如：`skey-11112222`（此介面支援同時傳入多個ID進行過濾。此參數的具體格式可參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)的 `id.N` 一節）。參數不支援同時指定 `KeyIds` 和 `Filters`。金鑰對ID可以通過登入[控制台](https://console.cloud.tencent.com/cvm/index)查詢。
         :type KeyIds: list of str
-        :param Filters: 过滤条件。
-<li> project-id - Integer - 是否必填：否 -（过滤条件）按照项目ID过滤。可以通过[项目列表](https://console.cloud.tencent.com/project)查询项目ID，或者调用接口 [DescribeProject](https://cloud.tencent.com/document/api/378/4400)，取返回信息中的projectId获取项目ID。</li>
-<li> key-name - String - 是否必填：否 -（过滤条件）按照密钥对名称过滤。</li>参数不支持同时指定 `KeyIds` 和 `Filters`。
+        :param Filters: 過濾條件。
+<li> project-id - Integer - 是否必填：否 -（過濾條件）按照項目ID過濾。可以通過[項目清單](https://console.cloud.tencent.com/project)查詢項目ID，或者調用介面 [DescribeProject](https://cloud.tencent.com/document/api/378/4400)，取返回訊息中的projectId獲取項目ID。</li>
+<li> key-name - String - 是否必填：否 -（過濾條件）按照金鑰對名稱過濾。</li>參數不支援同時指定 `KeyIds` 和 `Filters`。
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0。关于 `Offset` 的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。返回数量，默认为20，最大值为100。关于 `Limit` 的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+        :param Offset: 偏移量，預設爲0。關于 `Offset` 的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。返回數量，預設爲20，最大值爲100。關于 `Limit` 的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为100。关于 `Limit` 的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于 `Limit` 的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.KeyIds = None
@@ -1296,17 +1296,17 @@ class DescribeKeyPairsRequest(AbstractModel):
 
 
 class DescribeKeyPairsResponse(AbstractModel):
-    """DescribeKeyPairs返回参数结构体
+    """DescribeKeyPairs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 符合条件的密钥对数量。
+        :param TotalCount: 符合條件的金鑰對數量。
         :type TotalCount: int
-        :param KeyPairSet: 密钥对详细信息列表。
+        :param KeyPairSet: 金鑰對詳細訊息清單。
         :type KeyPairSet: list of KeyPair
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1326,23 +1326,23 @@ class DescribeKeyPairsResponse(AbstractModel):
 
 
 class DescribeRegionsRequest(AbstractModel):
-    """DescribeRegions请求参数结构体
+    """DescribeRegions請求參數結構體
 
     """
 
 
 class DescribeRegionsResponse(AbstractModel):
-    """DescribeRegions返回参数结构体
+    """DescribeRegions返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 地域数量
+        :param TotalCount: 地域數量
         :type TotalCount: int
-        :param RegionSet: 地域列表信息
+        :param RegionSet: 地域清單訊息
         :type RegionSet: list of RegionInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1362,21 +1362,21 @@ class DescribeRegionsResponse(AbstractModel):
 
 
 class DescribeZoneInstanceConfigInfosRequest(AbstractModel):
-    """DescribeZoneInstanceConfigInfos请求参数结构体
+    """DescribeZoneInstanceConfigInfos請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 过滤条件。
+        :param Filters: 過濾條件。
 
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> zone - String - 是否必填：否 -（過濾條件）按照可用區過濾。</li>
 
-<li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
+<li> instance-family String - 是否必填：否 -（過濾條件）按照機型系列過濾。按照實例機型系列過濾。實例機型系列形如：S1、I1、M1等。</li>
 
-<li> instance-type - String - 是否必填：否 - （过滤条件）按照机型过滤。按照实例机型过滤。不同实例机型指定了不同的资源规格，具体取值可通过调用接口 DescribeInstanceTypeConfigs 来获得最新的规格表或参见实例类型描述。若不指定该参数，则默认机型为S1.SMALL1。</li>
+<li> instance-type - String - 是否必填：否 - （過濾條件）按照機型過濾。按照實例機型過濾。不同實例機型指定了不同的資源規格，具體取值可通過調用介面 DescribeInstanceTypeConfigs 來獲得最新的規格表或參見實例類型描述。若不指定該參數，則預設機型爲S1.SMALL1。</li>
 
-<li> instance-charge-type - String - 是否必填：否 -（过滤条件）按照实例计费模式过滤。 (PREPAID：表示预付费，即包年包月 | POSTPAID_BY_HOUR：表示后付费，即按量计费 | CDHPAID：表示CDH付费，即只对CDH计费，不对CDH上的实例计费。 )  </li>
+<li> instance-charge-type - String - 是否必填：否 -（過濾條件）按照實例計費模式過濾。 (PREPAID：表示預付費，即包年包月 | POSTPAID_BY_HOUR：表示後付費，即按量計費 | CDHPAID：表示CDH付費，即只對CDH計費，不對CDH上的實例計費。 )  </li>
         :type Filters: list of Filter
         """
         self.Filters = None
@@ -1392,15 +1392,15 @@ class DescribeZoneInstanceConfigInfosRequest(AbstractModel):
 
 
 class DescribeZoneInstanceConfigInfosResponse(AbstractModel):
-    """DescribeZoneInstanceConfigInfos返回参数结构体
+    """DescribeZoneInstanceConfigInfos返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceTypeQuotaSet: 可用区机型配置列表。
+        :param InstanceTypeQuotaSet: 可用區機型配置清單。
         :type InstanceTypeQuotaSet: list of InstanceTypeQuotaItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceTypeQuotaSet = None
@@ -1418,23 +1418,23 @@ class DescribeZoneInstanceConfigInfosResponse(AbstractModel):
 
 
 class DescribeZonesRequest(AbstractModel):
-    """DescribeZones请求参数结构体
+    """DescribeZones請求參數結構體
 
     """
 
 
 class DescribeZonesResponse(AbstractModel):
-    """DescribeZones返回参数结构体
+    """DescribeZones返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 可用区数量。
+        :param TotalCount: 可用區數量。
         :type TotalCount: int
-        :param ZoneSet: 可用区列表信息。
+        :param ZoneSet: 可用區清單訊息。
         :type ZoneSet: list of ZoneInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1454,17 +1454,17 @@ class DescribeZonesResponse(AbstractModel):
 
 
 class DisassociateInstancesKeyPairsRequest(AbstractModel):
-    """DisassociateInstancesKeyPairs请求参数结构体
+    """DisassociateInstancesKeyPairs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID，每次请求批量实例的上限为100。<br><br>可以通过以下方式获取可用的实例ID：<br><li>通过登录[控制台](https://console.cloud.tencent.com/cvm/index)查询实例ID。<br><li>通过调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。
+        :param InstanceIds: 一個或多個待操作的實例ID，每次請求批次實例的上限爲100。<br><br>可以通過以下方式獲取可用的實例ID：<br><li>通過登入[控制台](https://console.cloud.tencent.com/cvm/index)查詢實例ID。<br><li>通過調用介面 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回訊息中的 `InstanceId` 獲取實例ID。
         :type InstanceIds: list of str
-        :param KeyIds: 密钥对ID列表，每次请求批量密钥对的上限为100。密钥对ID形如：`skey-11112222`。<br><br>可以通过以下方式获取可用的密钥ID：<br><li>通过登录[控制台](https://console.cloud.tencent.com/cvm/sshkey)查询密钥ID。<br><li>通过调用接口 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699) ，取返回信息中的 `KeyId` 获取密钥对ID。
+        :param KeyIds: 金鑰對ID清單，每次請求批次金鑰對的上限爲100。金鑰對ID形如：`skey-11112222`。<br><br>可以通過以下方式獲取可用的金鑰ID：<br><li>通過登入[控制台](https://console.cloud.tencent.com/cvm/sshkey)查詢金鑰ID。<br><li>通過調用介面 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699) ，取返回訊息中的 `KeyId` 獲取金鑰對ID。
         :type KeyIds: list of str
-        :param ForceStop: 是否对运行中的实例选择强制关机。建议对运行中的实例先手动关机，然后再解绑密钥。取值范围：<br><li>TRUE：表示在正常关机失败后进行强制关机。<br><li>FALSE：表示在正常关机失败后不进行强制关机。<br><br>默认取值：FALSE。
+        :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再解綁金鑰。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機。<br><li>FALSE：表示在正常關機失敗後不進行強制關機。<br><br>預設取值：FALSE。
         :type ForceStop: bool
         """
         self.InstanceIds = None
@@ -1479,13 +1479,13 @@ class DisassociateInstancesKeyPairsRequest(AbstractModel):
 
 
 class DisassociateInstancesKeyPairsResponse(AbstractModel):
-    """DisassociateInstancesKeyPairs返回参数结构体
+    """DisassociateInstancesKeyPairs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1496,15 +1496,15 @@ class DisassociateInstancesKeyPairsResponse(AbstractModel):
 
 
 class DisassociateSecurityGroupsRequest(AbstractModel):
-    """DisassociateSecurityGroups请求参数结构体
+    """DisassociateSecurityGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecurityGroupIds: 要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
+        :param SecurityGroupIds: 要解綁的`安全組ID`，類似sg-efil73jd，只支援解綁單個安全組。
         :type SecurityGroupIds: list of str
-        :param InstanceIds: 被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
+        :param InstanceIds: 被解綁的`實例ID`，類似ins-lesecurk，支援指定多個實例 。
         :type InstanceIds: list of str
         """
         self.SecurityGroupIds = None
@@ -1517,13 +1517,13 @@ class DisassociateSecurityGroupsRequest(AbstractModel):
 
 
 class DisassociateSecurityGroupsResponse(AbstractModel):
-    """DisassociateSecurityGroups返回参数结构体
+    """DisassociateSecurityGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1534,27 +1534,27 @@ class DisassociateSecurityGroupsResponse(AbstractModel):
 
 
 class DisasterRecoverGroup(AbstractModel):
-    """容灾组信息
+    """容災組訊息
 
     """
 
     def __init__(self):
         """
-        :param DisasterRecoverGroupId: 分散置放群组id。
+        :param DisasterRecoverGroupId: 分散置放群組id。
         :type DisasterRecoverGroupId: str
-        :param Name: 分散置放群组名称，长度1-60个字符。
+        :param Name: 分散置放群組名稱，長度1-60個字元。
         :type Name: str
-        :param Type: 分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
+        :param Type: 分散置放群組類型，取值範圍：<br><li>HOST：物理機<br><li>SW：交換機<br><li>RACK：機架
         :type Type: str
-        :param CvmQuotaTotal: 分散置放群组内最大容纳云主机数量。
+        :param CvmQuotaTotal: 分散置放群組内最大容納雲主機數量。
         :type CvmQuotaTotal: int
-        :param CurrentNum: 分散置放群组内云主机当前数量。
+        :param CurrentNum: 分散置放群組内雲主機當前數量。
         :type CurrentNum: int
-        :param InstanceIds: 分散置放群组内，云主机id列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceIds: 分散置放群組内，雲主機id清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceIds: list of str
-        :param CreateTime: 分散置放群组创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 分散置放群組創建時間。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
         """
         self.DisasterRecoverGroupId = None
@@ -1577,15 +1577,15 @@ class DisasterRecoverGroup(AbstractModel):
 
 
 class EnhancedService(AbstractModel):
-    """描述了实例的增强服务启用情况与其设置，如云安全，云监控等实例 Agent
+    """描述了實例的增強服務啓用情況與其設置，如雲安全，雲監控等實例 Agent
 
     """
 
     def __init__(self):
         """
-        :param SecurityService: 开启云安全服务。若不指定该参数，则默认开启云安全服务。
+        :param SecurityService: 開啓雲安全服務。若不指定該參數，則預設開啓雲安全服務。
         :type SecurityService: :class:`tencentcloud.cvm.v20170312.models.RunSecurityServiceEnabled`
-        :param MonitorService: 开启云监控服务。若不指定该参数，则默认开启云监控服务。
+        :param MonitorService: 開啓雲監控服務。若不指定該參數，則預設開啓雲監控服務。
         :type MonitorService: :class:`tencentcloud.cvm.v20170312.models.RunMonitorServiceEnabled`
         """
         self.SecurityService = None
@@ -1602,20 +1602,20 @@ class EnhancedService(AbstractModel):
 
 
 class Externals(AbstractModel):
-    """扩展数据
+    """擴展數據
 
     """
 
     def __init__(self):
         """
-        :param ReleaseAddress: 释放地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ReleaseAddress: 釋放網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ReleaseAddress: bool
-        :param UnsupportNetworks: 不支持的网络类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UnsupportNetworks: 不支援的網絡類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UnsupportNetworks: list of str
-        :param StorageBlockAttr: HDD本地存储属性
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StorageBlockAttr: HDD本地儲存屬性
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StorageBlockAttr: :class:`tencentcloud.cvm.v20170312.models.StorageBlock`
         """
         self.ReleaseAddress = None
@@ -1632,11 +1632,11 @@ class Externals(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """>描述键值对过滤器，用于条件过滤查询。例如过滤ID、名称、状态等
-    > * 若存在多个`Filter`时，`Filter`间的关系为逻辑与（`AND`）关系。
-    > * 若同一个`Filter`存在多个`Values`，同一`Filter`下`Values`间的关系为逻辑或（`OR`）关系。
+    """>描述鍵值對過濾器，用于條件過濾查詢。例如過濾ID、名稱、狀态等
+    > * 若存在多個`Filter`時，`Filter`間的關系爲邏輯與（`AND`）關系。
+    > * 若同一個`Filter`存在多個`Values`，同一`Filter`下`Values`間的關系爲邏輯或（`OR`）關系。
     >
-    > 以[DescribeInstances](https://cloud.tencent.com/document/api/213/15728)接口的`Filter`为例。若我们需要查询可用区（`zone`）为广州一区 ***并且*** 实例计费模式（`instance-charge-type`）为包年包月 ***或者*** 按量计费的实例时，可如下实现：
+    > 以[DescribeInstances](https://cloud.tencent.com/document/api/213/15728)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲廣州一區 ***并且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
     ```
     Filters.0.Name=zone
     &Filters.0.Values.0=ap-guangzhou-1
@@ -1649,9 +1649,9 @@ class Filter(AbstractModel):
 
     def __init__(self):
         """
-        :param Name: 需要过滤的字段。
+        :param Name: 需要過濾的欄位。
         :type Name: str
-        :param Values: 字段的过滤值。
+        :param Values: 欄位的過濾值。
         :type Values: list of str
         """
         self.Name = None
@@ -1664,38 +1664,38 @@ class Filter(AbstractModel):
 
 
 class HostItem(AbstractModel):
-    """cdh实例详细信息
+    """cdh實例詳細訊息
 
     """
 
     def __init__(self):
         """
-        :param Placement: cdh实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+        :param Placement: cdh實例所在的位置。通過該參數可以指定實例所屬可用區，所屬項目等屬性。
         :type Placement: :class:`tencentcloud.cvm.v20170312.models.Placement`
-        :param HostId: cdh实例id
+        :param HostId: cdh實例id
         :type HostId: str
-        :param HostType: cdh实例类型
+        :param HostType: cdh實例類型
         :type HostType: str
-        :param HostName: cdh实例名称
+        :param HostName: cdh實例名稱
         :type HostName: str
-        :param HostChargeType: cdh实例付费模式
+        :param HostChargeType: cdh實例付費模式
         :type HostChargeType: str
-        :param RenewFlag: cdh实例自动续费标记
+        :param RenewFlag: cdh實例自動續約标記
         :type RenewFlag: str
-        :param CreatedTime: cdh实例创建时间
+        :param CreatedTime: cdh實例創建時間
         :type CreatedTime: str
-        :param ExpiredTime: cdh实例过期时间
+        :param ExpiredTime: cdh實例過期時間
         :type ExpiredTime: str
-        :param InstanceIds: cdh实例上已创建云子机的实例id列表
+        :param InstanceIds: cdh實例上已創建雲子機的實例id清單
         :type InstanceIds: list of str
-        :param HostState: cdh实例状态
+        :param HostState: cdh實例狀态
         :type HostState: str
-        :param HostIp: cdh实例ip
+        :param HostIp: cdh實例ip
         :type HostIp: str
-        :param HostResource: cdh实例资源信息
+        :param HostResource: cdh實例資源訊息
         :type HostResource: :class:`tencentcloud.cvm.v20170312.models.HostResource`
-        :param CageId: 专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CageId: 專用宿主機所屬的圍籠ID。該欄位僅對金融專區圍籠内的專用宿主機有效。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CageId: str
         """
         self.Placement = None
@@ -1734,23 +1734,23 @@ class HostItem(AbstractModel):
 
 
 class HostResource(AbstractModel):
-    """cdh实例的资源信息
+    """cdh實例的資源訊息
 
     """
 
     def __init__(self):
         """
-        :param CpuTotal: cdh实例总cpu核数
+        :param CpuTotal: cdh實例總cpu核數
         :type CpuTotal: int
-        :param CpuAvailable: cdh实例可用cpu核数
+        :param CpuAvailable: cdh實例可用cpu核數
         :type CpuAvailable: int
-        :param MemTotal: cdh实例总内存大小（单位为:GiB）
+        :param MemTotal: cdh實例總内存大小（單位爲:GiB）
         :type MemTotal: float
-        :param MemAvailable: cdh实例可用内存大小（单位为:GiB）
+        :param MemAvailable: cdh實例可用内存大小（單位爲:GiB）
         :type MemAvailable: float
-        :param DiskTotal: cdh实例总磁盘大小（单位为:GiB）
+        :param DiskTotal: cdh實例總磁盤大小（單位爲:GiB）
         :type DiskTotal: int
-        :param DiskAvailable: cdh实例可用磁盘大小（单位为:GiB）
+        :param DiskAvailable: cdh實例可用磁盤大小（單位爲:GiB）
         :type DiskAvailable: int
         """
         self.CpuTotal = None
@@ -1771,44 +1771,44 @@ class HostResource(AbstractModel):
 
 
 class Image(AbstractModel):
-    """一个关于镜像详细信息的结构体，主要包括镜像的主要状态与属性。
+    """一個關于映像詳細訊息的結構體，主要包括映像的主要狀态與屬性。
 
     """
 
     def __init__(self):
         """
-        :param ImageId: 镜像ID
+        :param ImageId: 映像ID
         :type ImageId: str
-        :param OsName: 镜像操作系统
+        :param OsName: 映像作業系統
         :type OsName: str
-        :param ImageType: 镜像类型
+        :param ImageType: 映像類型
         :type ImageType: str
-        :param CreatedTime: 镜像创建时间
+        :param CreatedTime: 映像創建時間
         :type CreatedTime: str
-        :param ImageName: 镜像名称
+        :param ImageName: 映像名稱
         :type ImageName: str
-        :param ImageDescription: 镜像描述
+        :param ImageDescription: 映像描述
         :type ImageDescription: str
-        :param ImageSize: 镜像大小
+        :param ImageSize: 映像大小
         :type ImageSize: int
-        :param Architecture: 镜像架构
+        :param Architecture: 映像架構
         :type Architecture: str
-        :param ImageState: 镜像状态
+        :param ImageState: 映像狀态
         :type ImageState: str
-        :param Platform: 镜像来源平台
+        :param Platform: 映像來源平台
         :type Platform: str
-        :param ImageCreator: 镜像创建者
+        :param ImageCreator: 映像創建者
         :type ImageCreator: str
-        :param ImageSource: 镜像来源
+        :param ImageSource: 映像來源
         :type ImageSource: str
         :param SyncPercent: 同步百分比
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SyncPercent: int
-        :param IsSupportCloudinit: 镜像是否支持cloud-init
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsSupportCloudinit: 映像是否支援cloud-init
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsSupportCloudinit: bool
-        :param SnapshotSet: 镜像关联的快照信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SnapshotSet: 映像關聯的快照訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SnapshotSet: list of Snapshot
         """
         self.ImageId = None
@@ -1852,17 +1852,17 @@ class Image(AbstractModel):
 
 
 class ImageOsList(AbstractModel):
-    """支持的操作系统类型，根据windows和linux分类。
+    """支援的作業系統類型，根據windows和linux分類。
 
     """
 
     def __init__(self):
         """
-        :param Windows: 支持的windows操作系统。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Windows: 支援的windows作業系統。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Windows: list of str
-        :param Linux: 支持的linux操作系统
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Linux: 支援的linux作業系統
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Linux: list of str
         """
         self.Windows = None
@@ -1875,27 +1875,27 @@ class ImageOsList(AbstractModel):
 
 
 class ImportImageRequest(AbstractModel):
-    """ImportImage请求参数结构体
+    """ImportImage請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Architecture: 导入镜像的操作系统架构，`x86_64` 或 `i386`
+        :param Architecture: 導入映像的作業系統架構，`x86_64` 或 `i386`
         :type Architecture: str
-        :param OsType: 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
+        :param OsType: 導入映像的作業系統類型，通過`DescribeImportImageOs`獲取
         :type OsType: str
-        :param OsVersion: 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
+        :param OsVersion: 導入映像的作業系統版本，通過`DescribeImportImageOs`獲取
         :type OsVersion: str
-        :param ImageUrl: 导入镜像存放的cos地址
+        :param ImageUrl: 導入映像存放的cos網址
         :type ImageUrl: str
-        :param ImageName: 镜像名称
+        :param ImageName: 映像名稱
         :type ImageName: str
-        :param ImageDescription: 镜像描述
+        :param ImageDescription: 映像描述
         :type ImageDescription: str
-        :param DryRun: 只检查参数，不执行任务
+        :param DryRun: 只檢查參數，不執行任務
         :type DryRun: bool
-        :param Force: 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+        :param Force: 是否強制導入，參考[強制導入映像](https://cloud.tencent.com/document/product/213/12849)
         :type Force: bool
         """
         self.Architecture = None
@@ -1920,13 +1920,13 @@ class ImportImageRequest(AbstractModel):
 
 
 class ImportImageResponse(AbstractModel):
-    """ImportImage返回参数结构体
+    """ImportImage返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1937,19 +1937,19 @@ class ImportImageResponse(AbstractModel):
 
 
 class ImportKeyPairRequest(AbstractModel):
-    """ImportKeyPair请求参数结构体
+    """ImportKeyPair請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param KeyName: 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
+        :param KeyName: 金鑰對名稱，可由數字，字母和下劃線組成，長度不超過25個字元。
         :type KeyName: str
-        :param ProjectId: 密钥对创建后所属的[项目](/document/product/378/10863)ID。<br><br>可以通过以下方式获取项目ID：<br><li>通过[项目列表](https://console.cloud.tencent.com/project)查询项目ID。<br><li>通过调用接口 [DescribeProject](https://cloud.tencent.com/document/api/378/4400)，取返回信息中的 `projectId ` 获取项目ID。
+        :param ProjectId: 金鑰對創建後所屬的[項目](/document/product/378/10863)ID。<br><br>可以通過以下方式獲取項目ID：<br><li>通過[項目清單](https://console.cloud.tencent.com/project)查詢項目ID。<br><li>通過調用介面 [DescribeProject](https://cloud.tencent.com/document/api/378/4400)，取返回訊息中的 `projectId ` 獲取項目ID。
 
-如果是默认项目，直接填0就可以。
+如果是預設項目，直接填0就可以。
         :type ProjectId: int
-        :param PublicKey: 密钥对的公钥内容，`OpenSSH RSA` 格式。
+        :param PublicKey: 金鑰對的公鑰内容，`OpenSSH RSA` 格式。
         :type PublicKey: str
         """
         self.KeyName = None
@@ -1964,15 +1964,15 @@ class ImportKeyPairRequest(AbstractModel):
 
 
 class ImportKeyPairResponse(AbstractModel):
-    """ImportKeyPair返回参数结构体
+    """ImportKeyPair返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param KeyId: 密钥对ID。
+        :param KeyId: 金鑰對ID。
         :type KeyId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.KeyId = None
@@ -1985,17 +1985,17 @@ class ImportKeyPairResponse(AbstractModel):
 
 
 class InquiryPriceModifyInstancesChargeTypeRequest(AbstractModel):
-    """InquiryPriceModifyInstancesChargeType请求参数结构体
+    """InquiryPriceModifyInstancesChargeType請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
-        :param InstanceChargeType: 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月。
+        :param InstanceChargeType: 實例[計費類型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：預付費，即包年包月。
         :type InstanceChargeType: str
-        :param InstanceChargePrepaid: 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的续费时长、是否设置自动续费等属性。
+        :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的續約時長、是否設置自動續約等屬性。
         :type InstanceChargePrepaid: :class:`tencentcloud.cvm.v20170312.models.InstanceChargePrepaid`
         """
         self.InstanceIds = None
@@ -2012,15 +2012,15 @@ class InquiryPriceModifyInstancesChargeTypeRequest(AbstractModel):
 
 
 class InquiryPriceModifyInstancesChargeTypeResponse(AbstractModel):
-    """InquiryPriceModifyInstancesChargeType返回参数结构体
+    """InquiryPriceModifyInstancesChargeType返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Price: 该参数表示对应配置实例转换计费模式的价格。
+        :param Price: 該參數表示對應配置實例轉換計費模式的價格。
         :type Price: :class:`tencentcloud.cvm.v20170312.models.Price`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Price = None
@@ -2035,19 +2035,19 @@ class InquiryPriceModifyInstancesChargeTypeResponse(AbstractModel):
 
 
 class InquiryPriceRenewInstancesRequest(AbstractModel):
-    """InquiryPriceRenewInstances请求参数结构体
+    """InquiryPriceRenewInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
-        :param InstanceChargePrepaid: 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的续费时长、是否设置自动续费等属性。
+        :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的續約時長、是否設置自動續約等屬性。
         :type InstanceChargePrepaid: :class:`tencentcloud.cvm.v20170312.models.InstanceChargePrepaid`
-        :param DryRun: 试运行。
+        :param DryRun: 試運作。
         :type DryRun: bool
-        :param RenewPortableDataDisk: 是否续费弹性数据盘。取值范围：<br><li>TRUE：表示续费包年包月实例同时续费其挂载的弹性数据盘<br><li>FALSE：表示续费包年包月实例同时不再续费其挂载的弹性数据盘<br><br>默认取值：TRUE。
+        :param RenewPortableDataDisk: 是否續約彈性數據盤。取值範圍：<br><li>TRUE：表示續約包年包月實例同時續約其掛載的彈性數據盤<br><li>FALSE：表示續約包年包月實例同時不再續約其掛載的彈性數據盤<br><br>預設取值：TRUE。
         :type RenewPortableDataDisk: bool
         """
         self.InstanceIds = None
@@ -2066,15 +2066,15 @@ class InquiryPriceRenewInstancesRequest(AbstractModel):
 
 
 class InquiryPriceRenewInstancesResponse(AbstractModel):
-    """InquiryPriceRenewInstances返回参数结构体
+    """InquiryPriceRenewInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Price: 该参数表示对应配置实例的价格。
+        :param Price: 該參數表示對應配置實例的價格。
         :type Price: :class:`tencentcloud.cvm.v20170312.models.Price`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Price = None
@@ -2089,21 +2089,21 @@ class InquiryPriceRenewInstancesResponse(AbstractModel):
 
 
 class InquiryPriceResetInstanceRequest(AbstractModel):
-    """InquiryPriceResetInstance请求参数结构体
+    """InquiryPriceResetInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。
+        :param InstanceId: 實例ID。可通過 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`獲取。
         :type InstanceId: str
-        :param ImageId: 指定有效的[镜像](/document/product/213/4940)ID，格式形如`img-xxx`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
+        :param ImageId: 指定有效的[映像](/document/product/213/4940)ID，格式形如`img-xxx`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.tencent.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回訊息中的`ImageId`欄位。</li>
         :type ImageId: str
-        :param SystemDisk: 实例系统盘配置信息。系统盘为云盘的实例可以通过该参数指定重装后的系统盘大小来实现对系统盘的扩容操作，若不指定则默认系统盘大小保持不变。系统盘大小只支持扩容不支持缩容；重装只支持修改系统盘的大小，不能修改系统盘的类型。
+        :param SystemDisk: 實例系統盤配置訊息。系統盤爲雲盤的實例可以通過該參數指定重裝後的系統盤大小來實現對系統盤的擴容操作，若不指定則預設系統盤大小保持不變。系統盤大小只支援擴容不支援縮容；重裝只支援修改系統盤的大小，不能修改系統盤的類型。
         :type SystemDisk: :class:`tencentcloud.cvm.v20170312.models.SystemDisk`
-        :param LoginSettings: 实例登录设置。通过该参数可以设置实例的登录方式密码、密钥或保持镜像的原始登录设置。默认情况下会随机生成密码，并以站内信方式知会到用户。
+        :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，并以站内信方式知會到用戶。
         :type LoginSettings: :class:`tencentcloud.cvm.v20170312.models.LoginSettings`
-        :param EnhancedService: 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
+        :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
         :type EnhancedService: :class:`tencentcloud.cvm.v20170312.models.EnhancedService`
         """
         self.InstanceId = None
@@ -2128,15 +2128,15 @@ class InquiryPriceResetInstanceRequest(AbstractModel):
 
 
 class InquiryPriceResetInstanceResponse(AbstractModel):
-    """InquiryPriceResetInstance返回参数结构体
+    """InquiryPriceResetInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Price: 该参数表示重装成对应配置实例的价格。
+        :param Price: 該參數表示重裝成對應配置實例的價格。
         :type Price: :class:`tencentcloud.cvm.v20170312.models.Price`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Price = None
@@ -2151,19 +2151,19 @@ class InquiryPriceResetInstanceResponse(AbstractModel):
 
 
 class InquiryPriceResetInstancesInternetMaxBandwidthRequest(AbstractModel):
-    """InquiryPriceResetInstancesInternetMaxBandwidth请求参数结构体
+    """InquiryPriceResetInstancesInternetMaxBandwidth請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。当调整 `BANDWIDTH_PREPAID` 和 `BANDWIDTH_POSTPAID_BY_HOUR` 计费方式的带宽时，只支持一个实例。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。當調整 `BANDWIDTH_PREPAID` 和 `BANDWIDTH_POSTPAID_BY_HOUR` 計費方式的頻寬時，只支援一個實例。
         :type InstanceIds: list of str
-        :param InternetAccessible: 公网出带宽配置。不同机型带宽上限范围不一致，具体限制详见带宽限制对账表。暂时只支持`InternetMaxBandwidthOut`参数。
+        :param InternetAccessible: 公網出頻寬配置。不同機型頻寬上限範圍不一緻，具體限制詳見頻寬限制對賬表。暫時只支援`InternetMaxBandwidthOut`參數。
         :type InternetAccessible: :class:`tencentcloud.cvm.v20170312.models.InternetAccessible`
-        :param StartTime: 带宽生效的起始时间。格式：`YYYY-MM-DD`，例如：`2016-10-30`。起始时间不能早于当前时间。如果起始时间是今天则新设置的带宽立即生效。该参数只对包年包月带宽有效，其他模式带宽不支持该参数，否则接口会以相应错误码返回。
+        :param StartTime: 頻寬生效的起始時間。格式：`YYYY-MM-DD`，例如：`2016-10-30`。起始時間不能早于當前時間。如果起始時間是今天則新設置的頻寬立即生效。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
         :type StartTime: str
-        :param EndTime: 带宽生效的终止时间。格式：`YYYY-MM-DD`，例如：`2016-10-30`。新设置的带宽的有效期包含终止时间此日期。终止时间不能晚于包年包月实例的到期时间。实例的到期时间可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`ExpiredTime`获取。该参数只对包年包月带宽有效，其他模式带宽不支持该参数，否则接口会以相应错误码返回。
+        :param EndTime: 頻寬生效的終止時間。格式：`YYYY-MM-DD`，例如：`2016-10-30`。新設置的頻寬的有效期包含終止時間此日期。終止時間不能晚于包年包月實例的到期時間。實例的到期時間可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`ExpiredTime`獲取。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
         :type EndTime: str
         """
         self.InstanceIds = None
@@ -2182,15 +2182,15 @@ class InquiryPriceResetInstancesInternetMaxBandwidthRequest(AbstractModel):
 
 
 class InquiryPriceResetInstancesInternetMaxBandwidthResponse(AbstractModel):
-    """InquiryPriceResetInstancesInternetMaxBandwidth返回参数结构体
+    """InquiryPriceResetInstancesInternetMaxBandwidth返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Price: 该参数表示带宽调整为对应大小之后的价格。
+        :param Price: 該參數表示頻寬調整爲對應大小之後的價格。
         :type Price: :class:`tencentcloud.cvm.v20170312.models.Price`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Price = None
@@ -2205,15 +2205,15 @@ class InquiryPriceResetInstancesInternetMaxBandwidthResponse(AbstractModel):
 
 
 class InquiryPriceResetInstancesTypeRequest(AbstractModel):
-    """InquiryPriceResetInstancesType请求参数结构体
+    """InquiryPriceResetInstancesType請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为1。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲1。
         :type InstanceIds: list of str
-        :param InstanceType: 实例机型。不同实例机型指定了不同的资源规格，具体取值可参见附表实例资源规格对照表，也可以调用查询实例资源规格列表接口获得最新的规格表。
+        :param InstanceType: 實例機型。不同實例機型指定了不同的資源規格，具體取值可參見附表實例資源規格對照表，也可以調用查詢實例資源規格清單介面獲得最新的規格表。
         :type InstanceType: str
         """
         self.InstanceIds = None
@@ -2226,15 +2226,15 @@ class InquiryPriceResetInstancesTypeRequest(AbstractModel):
 
 
 class InquiryPriceResetInstancesTypeResponse(AbstractModel):
-    """InquiryPriceResetInstancesType返回参数结构体
+    """InquiryPriceResetInstancesType返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Price: 该参数表示调整成对应机型实例的价格。
+        :param Price: 該參數表示調整成對應機型實例的價格。
         :type Price: :class:`tencentcloud.cvm.v20170312.models.Price`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Price = None
@@ -2249,17 +2249,17 @@ class InquiryPriceResetInstancesTypeResponse(AbstractModel):
 
 
 class InquiryPriceResizeInstanceDisksRequest(AbstractModel):
-    """InquiryPriceResizeInstanceDisks请求参数结构体
+    """InquiryPriceResizeInstanceDisks請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。
+        :param InstanceId: 待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。
         :type InstanceId: str
-        :param DataDisks: 待扩容的数据盘配置信息。只支持扩容非弹性数据盘（[`DescribeDisks`](https://cloud.tencent.com/document/api/362/16315)接口返回值中的`Portable`为`false`表示非弹性），且[数据盘类型](/document/api/213/9452#block_device)为：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。数据盘容量单位：GB。最小扩容步长：10G。关于数据盘类型的选择请参考硬盘产品简介。可选数据盘类型受到实例类型`InstanceType`限制。另外允许扩容的最大容量也因数据盘类型的不同而有所差异。
+        :param DataDisks: 待擴容的數據盤配置訊息。只支援擴容非彈性數據盤（[`DescribeDisks`](https://cloud.tencent.com/document/api/362/16315)介面返回值中的`Portable`爲`false`表示非彈性），且[數據盤類型](/document/api/213/9452#block_device)爲：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。數據盤容量單位：GB。最小擴容步長：10G。關于數據盤類型的選擇請參考硬碟産品簡介。可選數據盤類型受到實例類型`InstanceType`限制。另外允許擴容的最大容量也因數據盤類型的不同而有所差異。
         :type DataDisks: list of DataDisk
-        :param ForceStop: 是否对运行中的实例选择强制关机。建议对运行中的实例先手动关机，然后再重置用户密码。取值范围：<br><li>TRUE：表示在正常关机失败后进行强制关机<br><li>FALSE：表示在正常关机失败后不进行强制关机<br><br>默认取值：FALSE。<br><br>强制关机的效果等同于关闭物理计算机的电源开关。强制关机可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常关机时使用。
+        :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再重置用戶密碼。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機<br><li>FALSE：表示在正常關機失敗後不進行強制關機<br><br>預設取值：FALSE。<br><br>強制關機的效果等同于關閉物理電腦的電源開關。強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
         :type ForceStop: bool
         """
         self.InstanceId = None
@@ -2279,15 +2279,15 @@ class InquiryPriceResizeInstanceDisksRequest(AbstractModel):
 
 
 class InquiryPriceResizeInstanceDisksResponse(AbstractModel):
-    """InquiryPriceResizeInstanceDisks返回参数结构体
+    """InquiryPriceResizeInstanceDisks返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Price: 该参数表示磁盘扩容成对应配置的价格。
+        :param Price: 該參數表示磁盤擴容成對應配置的價格。
         :type Price: :class:`tencentcloud.cvm.v20170312.models.Price`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Price = None
@@ -2302,47 +2302,47 @@ class InquiryPriceResizeInstanceDisksResponse(AbstractModel):
 
 
 class InquiryPriceRunInstancesRequest(AbstractModel):
-    """InquiryPriceRunInstances请求参数结构体
+    """InquiryPriceRunInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Placement: 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+        :param Placement: 實例所在的位置。通過該參數可以指定實例所屬可用區，所屬項目等屬性。
         :type Placement: :class:`tencentcloud.cvm.v20170312.models.Placement`
-        :param ImageId: 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
+        :param ImageId: 指定有效的[映像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.tencent.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回訊息中的`ImageId`欄位。</li>
         :type ImageId: str
-        :param InstanceChargeType: 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br>默认值：POSTPAID_BY_HOUR。
+        :param InstanceChargeType: 實例[計費類型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：預付費，即包年包月<br><li>POSTPAID_BY_HOUR：按小時後付費<br>預設值：POSTPAID_BY_HOUR。
         :type InstanceChargeType: str
-        :param InstanceChargePrepaid: 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+        :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的購買時長、是否設置自動續約等屬性。若指定實例的付費模式爲預付費則該參數必傳。
         :type InstanceChargePrepaid: :class:`tencentcloud.cvm.v20170312.models.InstanceChargePrepaid`
-        :param InstanceType: 实例机型。不同实例机型指定了不同的资源规格，具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)描述。若不指定该参数，则默认机型为S1.SMALL1。
+        :param InstanceType: 實例機型。不同實例機型指定了不同的資源規格，具體取值可通過調用介面[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)來獲得最新的規格表或參見[CVM實例配置](https://cloud.tencent.com/document/product/213/2177)描述。若不指定該參數，則預設機型爲S1.SMALL1。
         :type InstanceType: str
-        :param SystemDisk: 实例系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。
+        :param SystemDisk: 實例系統盤配置訊息。若不指定該參數，則按照系統預設值進行分配。
         :type SystemDisk: :class:`tencentcloud.cvm.v20170312.models.SystemDisk`
-        :param DataDisks: 实例数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定11块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含10块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
+        :param DataDisks: 實例數據盤配置訊息。若不指定該參數，則預設不購買數據盤。支援購買的時候指定11塊數據盤，其中最多包含1塊LOCAL_BASIC數據盤或者LOCAL_SSD數據盤，最多包含10塊CLOUD_BASIC數據盤、CLOUD_PREMIUM數據盤或者CLOUD_SSD數據盤。
         :type DataDisks: list of DataDisk
-        :param VirtualPrivateCloud: 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。若不指定该参数，则默认使用基础网络。若在此参数中指定了私有网络ip，那么InstanceCount参数只能为1。
+        :param VirtualPrivateCloud: 私有網絡相關訊息配置。通過該參數可以指定私有網絡的ID，子網ID等訊息。若不指定該參數，則預設使用基礎網絡。若在此參數中指定了私有網絡ip，那麽InstanceCount參數只能爲1。
         :type VirtualPrivateCloud: :class:`tencentcloud.cvm.v20170312.models.VirtualPrivateCloud`
-        :param InternetAccessible: 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
+        :param InternetAccessible: 公網頻寬相關訊息設置。若不指定該參數，則預設公網頻寬爲0Mbps。
         :type InternetAccessible: :class:`tencentcloud.cvm.v20170312.models.InternetAccessible`
-        :param InstanceCount: 购买实例数量。取值范围：[1，100]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量，具体配额相关限制详见[CVM实例购买限制](https://cloud.tencent.com/document/product/213/2664)。
+        :param InstanceCount: 購買實例數量。取值範圍：[1，100]。預設取值：1。指定購買實例的數量不能超過用戶所能購買的剩餘配額數量，具體配額相關限制詳見[CVM實例購買限制](https://cloud.tencent.com/document/product/213/2664)。
         :type InstanceCount: int
-        :param InstanceName: 实例显示名称。<br><li>不指定实例显示名称则默认显示‘未命名’。</li><li>购买多台实例，如果指定模式串`{R:x}`，表示生成数字`[x, x+n-1]`，其中`n`表示购买实例的数量，例如`server_{R:3}`，购买1台时，实例显示名称为`server_3`；购买2台时，实例显示名称分别为`server_3`，`server_4`。支持指定多个模式串`{R:x}`。</li><li>购买多台实例，如果不指定模式串，则在实例显示名称添加后缀`1、2...n`，其中`n`表示购买实例的数量，例如`server_`，购买2台时，实例显示名称分别为`server_1`，`server_2`。
+        :param InstanceName: 實例顯示名稱。<br><li>不指定實例顯示名稱則預設顯示‘未命名’。</li><li>購買多台實例，如果指定模式串`{R:x}`，表示生成數字`[x, x+n-1]`，其中`n`表示購買實例的數量，例如`server_{R:3}`，購買1台時，實例顯示名稱爲`server_3`；購買2台時，實例顯示名稱分别爲`server_3`，`server_4`。支援指定多個模式串`{R:x}`。</li><li>購買多台實例，如果不指定模式串，則在實例顯示名稱添加後綴`1、2...n`，其中`n`表示購買實例的數量，例如`server_`，購買2台時，實例顯示名稱分别爲`server_1`，`server_2`。
         :type InstanceName: str
-        :param LoginSettings: 实例登录设置。通过该参数可以设置实例的登录方式密码、密钥或保持镜像的原始登录设置。默认情况下会随机生成密码，并以站内信方式知会到用户。
+        :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，并以站内信方式知會到用戶。
         :type LoginSettings: :class:`tencentcloud.cvm.v20170312.models.LoginSettings`
-        :param SecurityGroupIds: 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则默认不绑定安全组。
+        :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId欄位來獲取。若不指定該參數，則預設不綁定安全組。
         :type SecurityGroupIds: list of str
-        :param EnhancedService: 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
+        :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
         :type EnhancedService: :class:`tencentcloud.cvm.v20170312.models.EnhancedService`
-        :param ClientToken: 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。
+        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。<br>更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
-        :param HostName: 云服务器的主机名。<br><li>点号（.）和短横线（-）不能作为 HostName 的首尾字符，不能连续使用。<br><li>Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写）、数字和短横线（-）组成，不支持点号（.），不能全是数字。<br><li>其他类型（Linux 等）实例：字符长度为[2, 30]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。
+        :param HostName: 雲伺服器的主機名。<br><li>點号（.）和短橫線（-）不能作爲 HostName 的首尾字元，不能連續使用。<br><li>Windows 實例：名字元長度爲[2, 15]，允許字母（不限制大小寫）、數字和短橫線（-）組成，不支援點号（.），不能全是數字。<br><li>其他類型（Linux 等）實例：字元長度爲[2, 30]，允許支援多個點号，點之間爲一段，每段允許字母（不限制大小寫）、數字和短橫線（-）組成。
         :type HostName: str
-        :param TagSpecification: 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云主机实例。
+        :param TagSpecification: 标簽描述清單。通過指定該參數可以同時綁定标簽到相應的資源實例，當前僅支援綁定标簽到雲主機實例。
         :type TagSpecification: list of TagSpecification
-        :param InstanceMarketOptions: 实例的市场相关选项，如竞价实例相关参数
+        :param InstanceMarketOptions: 實例的市場相關選項，如競價實例相關參數
         :type InstanceMarketOptions: :class:`tencentcloud.cvm.v20170312.models.InstanceMarketOptionsRequest`
         """
         self.Placement = None
@@ -2413,15 +2413,15 @@ class InquiryPriceRunInstancesRequest(AbstractModel):
 
 
 class InquiryPriceRunInstancesResponse(AbstractModel):
-    """InquiryPriceRunInstances返回参数结构体
+    """InquiryPriceRunInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Price: 该参数表示对应配置实例的价格。
+        :param Price: 該參數表示對應配置實例的價格。
         :type Price: :class:`tencentcloud.cvm.v20170312.models.Price`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Price = None
@@ -2436,61 +2436,61 @@ class InquiryPriceRunInstancesResponse(AbstractModel):
 
 
 class Instance(AbstractModel):
-    """描述实例的信息
+    """描述實例的訊息
 
     """
 
     def __init__(self):
         """
-        :param Placement: 实例所在的位置。
+        :param Placement: 實例所在的位置。
         :type Placement: :class:`tencentcloud.cvm.v20170312.models.Placement`
-        :param InstanceId: 实例`ID`。
+        :param InstanceId: 實例`ID`。
         :type InstanceId: str
-        :param InstanceType: 实例机型。
+        :param InstanceType: 實例機型。
         :type InstanceType: str
-        :param CPU: 实例的CPU核数，单位：核。
+        :param CPU: 實例的CPU核數，單位：核。
         :type CPU: int
-        :param Memory: 实例内存容量，单位：`GB`。
+        :param Memory: 實例内存容量，單位：`GB`。
         :type Memory: int
-        :param RestrictState: 实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例<br><li>EXPIRED：表示过期的实例<br><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
+        :param RestrictState: 實例業務狀态。取值範圍：<br><li>NORMAL：表示正常狀态的實例<br><li>EXPIRED：表示過期的實例<br><li>PROTECTIVELY_ISOLATED：表示被安全隔離的實例。
         :type RestrictState: str
-        :param InstanceName: 实例名称。
+        :param InstanceName: 實例名稱。
         :type InstanceName: str
-        :param InstanceChargeType: 实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`CDH`付费，即只对`CDH`计费，不对`CDH`上的实例计费。
+        :param InstanceChargeType: 實例計費模式。取值範圍：<br><li>`PREPAID`：表示預付費，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示後付費，即按量計費<br><li>`CDHPAID`：`CDH`付費，即只對`CDH`計費，不對`CDH`上的實例計費。
         :type InstanceChargeType: str
-        :param SystemDisk: 实例系统盘信息。
+        :param SystemDisk: 實例系統盤訊息。
         :type SystemDisk: :class:`tencentcloud.cvm.v20170312.models.SystemDisk`
-        :param DataDisks: 实例数据盘信息。只包含随实例购买的数据盘。
+        :param DataDisks: 實例數據盤訊息。只包含随實例購買的數據盤。
         :type DataDisks: list of DataDisk
-        :param PrivateIpAddresses: 实例主网卡的内网`IP`列表。
+        :param PrivateIpAddresses: 實例主網卡的内網`IP`清單。
         :type PrivateIpAddresses: list of str
-        :param PublicIpAddresses: 实例主网卡的公网`IP`列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PublicIpAddresses: 實例主網卡的公網`IP`清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PublicIpAddresses: list of str
-        :param InternetAccessible: 实例带宽信息。
+        :param InternetAccessible: 實例頻寬訊息。
         :type InternetAccessible: :class:`tencentcloud.cvm.v20170312.models.InternetAccessible`
-        :param VirtualPrivateCloud: 实例所属虚拟私有网络信息。
+        :param VirtualPrivateCloud: 實例所屬虛拟私有網絡訊息。
         :type VirtualPrivateCloud: :class:`tencentcloud.cvm.v20170312.models.VirtualPrivateCloud`
-        :param ImageId: 生产实例所使用的镜像`ID`。
+        :param ImageId: 生産實例所使用的映像`ID`。
         :type ImageId: str
-        :param RenewFlag: 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
+        :param RenewFlag: 自動續約标識。取值範圍：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将過期，但不自動續約<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将過期，而且自動續約<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将過期，也不自動續約。
         :type RenewFlag: str
-        :param CreatedTime: 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+        :param CreatedTime: 創建時間。按照`ISO8601`标準表示，并且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
         :type CreatedTime: str
-        :param ExpiredTime: 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+        :param ExpiredTime: 到期時間。按照`ISO8601`标準表示，并且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
         :type ExpiredTime: str
-        :param OsName: 操作系统名称。
+        :param OsName: 作業系統名稱。
         :type OsName: str
-        :param SecurityGroupIds: 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+        :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId欄位來獲取。
         :type SecurityGroupIds: list of str
-        :param LoginSettings: 实例登录设置。目前只返回实例所关联的密钥。
+        :param LoginSettings: 實例登入設置。目前只返回實例所關聯的金鑰。
         :type LoginSettings: :class:`tencentcloud.cvm.v20170312.models.LoginSettings`
-        :param InstanceState: 实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
+        :param InstanceState: 實例狀态。取值範圍：<br><li>PENDING：表示創建中<br></li><li>LAUNCH_FAILED：表示創建失敗<br></li><li>RUNNING：表示運作中<br></li><li>STOPPED：表示關機<br></li><li>STARTING：表示開機中<br></li><li>STOPPING：表示關機中<br></li><li>REBOOTING：表示重啓中<br></li><li>SHUTDOWN：表示停止待銷毀<br></li><li>TERMINATING：表示銷毀中。<br></li>
         :type InstanceState: str
-        :param Tags: 实例关联的标签列表。
+        :param Tags: 實例關聯的标簽清單。
         :type Tags: list of Tag
-        :param StopChargingMode: 实例的关机计费模式。
-取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
+        :param StopChargingMode: 實例的關機計費模式。
+取值範圍：<br><li>KEEP_CHARGING：關機繼續收費<br><li>STOP_CHARGING：關機停止收費<li>NOT_APPLICABLE：實例處于非關機狀态或者不适用關機停止計費的條件<br>
         :type StopChargingMode: str
         """
         self.Placement = None
@@ -2567,15 +2567,15 @@ class Instance(AbstractModel):
 
 
 class InstanceChargePrepaid(AbstractModel):
-    """描述了实例的计费模式
+    """描述了實例的計費模式
 
     """
 
     def __init__(self):
         """
-        :param Period: 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
+        :param Period: 購買實例的時長，單位：月。取值範圍：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
         :type Period: int
-        :param RenewFlag: 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费<br><br>默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+        :param RenewFlag: 自動續約标識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>預設取值：NOTIFY_AND_MANUAL_RENEW。若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
         :type RenewFlag: str
         """
         self.Period = None
@@ -2588,16 +2588,16 @@ class InstanceChargePrepaid(AbstractModel):
 
 
 class InstanceFamilyConfig(AbstractModel):
-    """描述实例的机型族配置信息
-    形如：{'InstanceFamilyName': '标准型S1', 'InstanceFamily': 'S1'}、{'InstanceFamilyName': '网络优化型N1', 'InstanceFamily': 'N1'}、{'InstanceFamilyName': '高IO型I1', 'InstanceFamily': 'I1'}等。
+    """描述實例的機型族配置訊息
+    形如：{'InstanceFamilyName': '标準型S1', 'InstanceFamily': 'S1'}、{'InstanceFamilyName': '網絡優化型N1', 'InstanceFamily': 'N1'}、{'InstanceFamilyName': '高IO型I1', 'InstanceFamily': 'I1'}等。
 
     """
 
     def __init__(self):
         """
-        :param InstanceFamilyName: 机型族名称的中文全称。
+        :param InstanceFamilyName: 機型族名稱的中文全稱。
         :type InstanceFamilyName: str
-        :param InstanceFamily: 机型族名称的英文简称。
+        :param InstanceFamily: 機型族名稱的英文簡稱。
         :type InstanceFamily: str
         """
         self.InstanceFamilyName = None
@@ -2610,15 +2610,15 @@ class InstanceFamilyConfig(AbstractModel):
 
 
 class InstanceMarketOptionsRequest(AbstractModel):
-    """竞价请求相关选项
+    """競價請求相關選項
 
     """
 
     def __init__(self):
         """
-        :param SpotOptions: 竞价相关选项
+        :param SpotOptions: 競價相關選項
         :type SpotOptions: :class:`tencentcloud.cvm.v20170312.models.SpotMarketOptions`
-        :param MarketType: 市场选项类型，当前只支持取值：spot
+        :param MarketType: 市場選項類型，當前只支援取值：spot
         :type MarketType: str
         """
         self.SpotOptions = None
@@ -2633,15 +2633,15 @@ class InstanceMarketOptionsRequest(AbstractModel):
 
 
 class InstanceStatus(AbstractModel):
-    """描述实例的状态。状态类型详见[实例状态表](/document/api/213/9452#INSTANCE_STATE)
+    """描述實例的狀态。狀态類型詳見[實例狀态表](/document/api/213/9452#INSTANCE_STATE)
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 实例`ID`。
+        :param InstanceId: 實例`ID`。
         :type InstanceId: str
-        :param InstanceState: [实例状态](/document/api/213/9452#INSTANCE_STATE)。
+        :param InstanceState: [實例狀态](/document/api/213/9452#INSTANCE_STATE)。
         :type InstanceState: str
         """
         self.InstanceId = None
@@ -2654,23 +2654,23 @@ class InstanceStatus(AbstractModel):
 
 
 class InstanceTypeConfig(AbstractModel):
-    """描述实例机型配置信息
+    """描述實例機型配置訊息
 
     """
 
     def __init__(self):
         """
-        :param Zone: 可用区。
+        :param Zone: 可用區。
         :type Zone: str
-        :param InstanceType: 实例机型。
+        :param InstanceType: 實例機型。
         :type InstanceType: str
-        :param InstanceFamily: 实例机型系列。
+        :param InstanceFamily: 實例機型系列。
         :type InstanceFamily: str
-        :param GPU: GPU核数，单位：核。
+        :param GPU: GPU核數，單位：核。
         :type GPU: int
-        :param CPU: CPU核数，单位：核。
+        :param CPU: CPU核數，單位：核。
         :type CPU: int
-        :param Memory: 内存容量，单位：`GB`。
+        :param Memory: 内存容量，單位：`GB`。
         :type Memory: int
         """
         self.Zone = None
@@ -2691,36 +2691,36 @@ class InstanceTypeConfig(AbstractModel):
 
 
 class InstanceTypeQuotaItem(AbstractModel):
-    """描述实例机型配额信息。
+    """描述實例機型配額訊息。
 
     """
 
     def __init__(self):
         """
-        :param Zone: 可用区。
+        :param Zone: 可用區。
         :type Zone: str
-        :param InstanceType: 实例机型。
+        :param InstanceType: 實例機型。
         :type InstanceType: str
-        :param InstanceChargeType: 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付费，即只对CDH计费，不对CDH上的实例计费。
+        :param InstanceChargeType: 實例計費模式。取值範圍： <br><li>PREPAID：表示預付費，即包年包月<br><li>POSTPAID_BY_HOUR：表示後付費，即按量計費<br><li>CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付費，即只對CDH計費，不對CDH上的實例計費。
         :type InstanceChargeType: str
-        :param NetworkCard: 网卡类型，例如：25代表25G网卡
+        :param NetworkCard: 網卡類型，例如：25代表25G網卡
         :type NetworkCard: int
-        :param Externals: 扩展属性。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Externals: 擴展屬性。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Externals: :class:`tencentcloud.cvm.v20170312.models.Externals`
-        :param Cpu: 实例的CPU核数，单位：核。
+        :param Cpu: 實例的CPU核數，單位：核。
         :type Cpu: int
-        :param Memory: 实例内存容量，单位：`GB`。
+        :param Memory: 實例内存容量，單位：`GB`。
         :type Memory: int
-        :param InstanceFamily: 实例机型系列。
+        :param InstanceFamily: 實例機型系列。
         :type InstanceFamily: str
-        :param TypeName: 机型名称。
+        :param TypeName: 機型名稱。
         :type TypeName: str
-        :param LocalDiskTypeList: 本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
+        :param LocalDiskTypeList: 本地磁盤規格清單。當該參數返回爲空值時，表示當前情況下無法創建本地盤。
         :type LocalDiskTypeList: list of LocalDiskType
-        :param Status: 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
+        :param Status: 實例是否售賣。取值範圍： <br><li>SELL：表示實例可購買<br><li>SOLD_OUT：表示實例已售罄。
         :type Status: str
-        :param Price: 实例的售卖价格。
+        :param Price: 實例的售賣價格。
         :type Price: :class:`tencentcloud.cvm.v20170312.models.ItemPrice`
         """
         self.Zone = None
@@ -2762,19 +2762,19 @@ class InstanceTypeQuotaItem(AbstractModel):
 
 
 class InternetAccessible(AbstractModel):
-    """描述了实例的公网可访问性，声明了实例的公网使用计费模式，最大带宽等
+    """描述了實例的公網可訪問性，聲明了實例的公網使用計費模式，最大頻寬等
 
     """
 
     def __init__(self):
         """
-        :param InternetChargeType: 网络计费类型。取值范围：<br><li>BANDWIDTH_PREPAID：预付费按带宽结算<br><li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费<br><li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费<br><li>BANDWIDTH_PACKAGE：带宽包用户<br>默认取值：非带宽包用户默认与子机付费类型保持一致。
+        :param InternetChargeType: 網絡計費類型。取值範圍：<br><li>BANDWIDTH_PREPAID：預付費按頻寬結算<br><li>TRAFFIC_POSTPAID_BY_HOUR：流量按小時後付費<br><li>BANDWIDTH_POSTPAID_BY_HOUR：頻寬按小時後付費<br><li>BANDWIDTH_PACKAGE：頻寬包用戶<br>預設取值：非頻寬包用戶預設與子機付費類型保持一緻。
         :type InternetChargeType: str
-        :param InternetMaxBandwidthOut: 公网出带宽上限，单位：Mbps。默认值：0Mbps。不同机型带宽上限范围不一致，具体限制详见[购买网络带宽](/document/product/213/509)。
+        :param InternetMaxBandwidthOut: 公網出頻寬上限，單位：Mbps。預設值：0Mbps。不同機型頻寬上限範圍不一緻，具體限制詳見[購買網絡頻寬](/document/product/213/509)。
         :type InternetMaxBandwidthOut: int
-        :param PublicIpAssigned: 是否分配公网IP。取值范围：<br><li>TRUE：表示分配公网IP<br><li>FALSE：表示不分配公网IP<br><br>当公网带宽大于0Mbps时，可自由选择开通与否，默认开通公网IP；当公网带宽为0，则不允许分配公网IP。
+        :param PublicIpAssigned: 是否分配公網IP。取值範圍：<br><li>TRUE：表示分配公網IP<br><li>FALSE：表示不分配公網IP<br><br>當公網頻寬大于0Mbps時，可自由選擇開通與否，預設開通公網IP；當公網頻寬爲0，則不允許分配公網IP。
         :type PublicIpAssigned: bool
-        :param BandwidthPackageId: 带宽包ID。可通过[`DescribeBandwidthPackages`](https://cloud.tencent.com/document/api/215/19209)接口返回值中的`BandwidthPackageId`获取。
+        :param BandwidthPackageId: 頻寬包ID。可通過[`DescribeBandwidthPackages`](https://cloud.tencent.com/document/api/215/19209)介面返回值中的`BandwidthPackageId`獲取。
         :type BandwidthPackageId: str
         """
         self.InternetChargeType = None
@@ -2791,17 +2791,17 @@ class InternetAccessible(AbstractModel):
 
 
 class InternetBandwidthConfig(AbstractModel):
-    """描述了按带宽计费的相关信息
+    """描述了按頻寬計費的相關訊息
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 开始时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+        :param StartTime: 開始時間。按照`ISO8601`标準表示，并且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
         :type StartTime: str
-        :param EndTime: 结束时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+        :param EndTime: 結束時間。按照`ISO8601`标準表示，并且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
         :type EndTime: str
-        :param InternetAccessible: 实例带宽信息。
+        :param InternetAccessible: 實例頻寬訊息。
         :type InternetAccessible: :class:`tencentcloud.cvm.v20170312.models.InternetAccessible`
         """
         self.StartTime = None
@@ -2818,15 +2818,15 @@ class InternetBandwidthConfig(AbstractModel):
 
 
 class InternetChargeTypeConfig(AbstractModel):
-    """描述了网络计费
+    """描述了網絡計費
 
     """
 
     def __init__(self):
         """
-        :param InternetChargeType: 网络计费模式。
+        :param InternetChargeType: 網絡計費模式。
         :type InternetChargeType: str
-        :param Description: 网络计费模式描述信息。
+        :param Description: 網絡計費模式描述訊息。
         :type Description: str
         """
         self.InternetChargeType = None
@@ -2839,23 +2839,23 @@ class InternetChargeTypeConfig(AbstractModel):
 
 
 class ItemPrice(AbstractModel):
-    """描述了单项的价格信息
+    """描述了單項的價格訊息
 
     """
 
     def __init__(self):
         """
-        :param UnitPrice: 后续单价，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UnitPrice: 後續單價，單位：元。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UnitPrice: float
-        :param ChargeUnit: 后续计价单元，可取值范围： <br><li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）：<br><li>GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ChargeUnit: 後續計價單元，可取值範圍： <br><li>HOUR：表示計價單元是按每小時來計算。當前涉及該計價單元的場景有：實例按小時後付費（POSTPAID_BY_HOUR）、頻寬按小時後付費（BANDWIDTH_POSTPAID_BY_HOUR）：<br><li>GB：表示計價單元是按每GB來計算。當前涉及該計價單元的場景有：流量按小時後付費（TRAFFIC_POSTPAID_BY_HOUR）。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ChargeUnit: str
-        :param OriginalPrice: 预支费用的原价，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OriginalPrice: 預支費用的原價，單位：元。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OriginalPrice: float
-        :param DiscountPrice: 预支费用的折扣价，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DiscountPrice: 預支費用的折扣價，單位：元。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DiscountPrice: float
         """
         self.UnitPrice = None
@@ -2872,27 +2872,27 @@ class ItemPrice(AbstractModel):
 
 
 class KeyPair(AbstractModel):
-    """描述密钥对信息
+    """描述金鑰對訊息
 
     """
 
     def __init__(self):
         """
-        :param KeyId: 密钥对的`ID`，是密钥对的唯一标识。
+        :param KeyId: 金鑰對的`ID`，是金鑰對的唯一标識。
         :type KeyId: str
-        :param KeyName: 密钥对名称。
+        :param KeyName: 金鑰對名稱。
         :type KeyName: str
-        :param ProjectId: 密钥对所属的项目`ID`。
+        :param ProjectId: 金鑰對所屬的項目`ID`。
         :type ProjectId: int
-        :param Description: 密钥对描述信息。
+        :param Description: 金鑰對描述訊息。
         :type Description: str
-        :param PublicKey: 密钥对的纯文本公钥。
+        :param PublicKey: 金鑰對的純文本公鑰。
         :type PublicKey: str
-        :param PrivateKey: 密钥对的纯文本私钥。腾讯云不会保管私钥，请用户自行妥善保存。
+        :param PrivateKey: 金鑰對的純文本私鑰。Top Cloud 不會保管私鑰，請用戶自行妥善保存。
         :type PrivateKey: str
-        :param AssociatedInstanceIds: 密钥关联的实例`ID`列表。
+        :param AssociatedInstanceIds: 金鑰關聯的實例`ID`清單。
         :type AssociatedInstanceIds: list of str
-        :param CreatedTime: 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+        :param CreatedTime: 創建時間。按照`ISO8601`标準表示，并且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
         :type CreatedTime: str
         """
         self.KeyId = None
@@ -2917,19 +2917,19 @@ class KeyPair(AbstractModel):
 
 
 class LocalDiskType(AbstractModel):
-    """本地磁盘规格
+    """本地磁盤規格
 
     """
 
     def __init__(self):
         """
-        :param Type: 本地磁盘类型。
+        :param Type: 本地磁盤類型。
         :type Type: str
-        :param PartitionType: 本地磁盘属性。
+        :param PartitionType: 本地磁盤屬性。
         :type PartitionType: str
-        :param MinSize: 本地磁盘最小值。
+        :param MinSize: 本地磁盤最小值。
         :type MinSize: int
-        :param MaxSize: 本地磁盘最大值。
+        :param MaxSize: 本地磁盤最大值。
         :type MaxSize: int
         """
         self.Type = None
@@ -2946,20 +2946,20 @@ class LocalDiskType(AbstractModel):
 
 
 class LoginSettings(AbstractModel):
-    """描述了实例登录相关配置与信息。
+    """描述了實例登入相關配置與訊息。
 
     """
 
     def __init__(self):
         """
-        :param Password: 实例登录密码。不同操作系统类型密码复杂度限制不一样，具体如下：<br><li>Linux实例密码必须8到16位，至少包括两项[a-z，A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? / ]中的特殊符号。<br><li>Windows实例密码必须12到16位，至少包括三项[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = { } [ ] : ; ' , . ? /]中的特殊符号。<br><br>若不指定该参数，则由系统随机生成密码，并通过站内信方式通知到用户。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>Linux實例密碼必須8到16位，至少包括兩項[a-z，A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? / ]中的特殊符号。<br><li>Windows實例密碼必須12到16位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = { } [ ] : ; ' , . ? /]中的特殊符号。<br><br>若不指定該參數，則由系統随機生成密碼，并通過站内信方式通知到用戶。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Password: str
-        :param KeyIds: 密钥ID列表。关联密钥后，就可以通过对应的私钥来访问实例；KeyId可通过接口DescribeKeyPairs获取，密钥与密码不能同时指定，同时Windows操作系统不支持指定密钥。当前仅支持购买的时候指定一个密钥。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param KeyIds: 金鑰ID清單。關聯金鑰後，就可以通過對應的私鑰來訪問實例；KeyId可通過介面DescribeKeyPairs獲取，金鑰與密碼不能同時指定，同時Windows作業系統不支援指定金鑰。當前僅支援購買的時候指定一個金鑰。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type KeyIds: list of str
-        :param KeepImageLogin: 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：<br><li>TRUE：表示保持镜像的登录设置<br><li>FALSE：表示不保持镜像的登录设置<br><br>默认取值：FALSE。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param KeepImageLogin: 保持映像的原始設置。該參數與Password或KeyIds.N不能同時指定。只有使用自定義映像、共享映像或外部導入映像創建實例時才能指定該參數爲TRUE。取值範圍：<br><li>TRUE：表示保持映像的登入設置<br><li>FALSE：表示不保持映像的登入設置<br><br>預設取值：FALSE。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type KeepImageLogin: str
         """
         self.Password = None
@@ -2974,15 +2974,15 @@ class LoginSettings(AbstractModel):
 
 
 class ModifyDisasterRecoverGroupAttributeRequest(AbstractModel):
-    """ModifyDisasterRecoverGroupAttribute请求参数结构体
+    """ModifyDisasterRecoverGroupAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DisasterRecoverGroupId: 分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
+        :param DisasterRecoverGroupId: 分散置放群組ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)介面獲取。
         :type DisasterRecoverGroupId: str
-        :param Name: 分散置放群组名称，长度1-60个字符，支持中、英文。
+        :param Name: 分散置放群組名稱，長度1-60個字元，支援中、英文。
         :type Name: str
         """
         self.DisasterRecoverGroupId = None
@@ -2995,13 +2995,13 @@ class ModifyDisasterRecoverGroupAttributeRequest(AbstractModel):
 
 
 class ModifyDisasterRecoverGroupAttributeResponse(AbstractModel):
-    """ModifyDisasterRecoverGroupAttribute返回参数结构体
+    """ModifyDisasterRecoverGroupAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3012,17 +3012,17 @@ class ModifyDisasterRecoverGroupAttributeResponse(AbstractModel):
 
 
 class ModifyHostsAttributeRequest(AbstractModel):
-    """ModifyHostsAttribute请求参数结构体
+    """ModifyHostsAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param HostIds: 一个或多个待操作的CDH实例ID。
+        :param HostIds: 一個或多個待操作的CDH實例ID。
         :type HostIds: list of str
-        :param HostName: CDH实例显示名称。可任意命名，但不得超过60个字符。
+        :param HostName: CDH實例顯示名稱。可任意命名，但不得超過60個字元。
         :type HostName: str
-        :param RenewFlag: 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费<br><br>若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+        :param RenewFlag: 自動續約标識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
         :type RenewFlag: str
         """
         self.HostIds = None
@@ -3037,13 +3037,13 @@ class ModifyHostsAttributeRequest(AbstractModel):
 
 
 class ModifyHostsAttributeResponse(AbstractModel):
-    """ModifyHostsAttribute返回参数结构体
+    """ModifyHostsAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3054,17 +3054,17 @@ class ModifyHostsAttributeResponse(AbstractModel):
 
 
 class ModifyImageAttributeRequest(AbstractModel):
-    """ModifyImageAttribute请求参数结构体
+    """ModifyImageAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageId: 镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。
+        :param ImageId: 映像ID，形如`img-gvbnzy6f`。映像ID可以通過如下方式獲取：<br><li>通過[DescribeImages](https://cloud.tencent.com/document/api/213/15715)介面返回的`ImageId`獲取。<br><li>通過[映像控制台](https://console.cloud.tencent.com/cvm/image)獲取。
         :type ImageId: str
-        :param ImageName: 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过20个字符。<br> <li> 镜像名称不能与已有镜像重复。
+        :param ImageName: 設置新的映像名稱；必須滿足下列限制：<br> <li> 不得超過20個字元。<br> <li> 映像名稱不能與已有映像重複。
         :type ImageName: str
-        :param ImageDescription: 设置新的镜像描述；必须满足下列限制：<br> <li> 不得超过60个字符。
+        :param ImageDescription: 設置新的映像描述；必須滿足下列限制：<br> <li> 不得超過60個字元。
         :type ImageDescription: str
         """
         self.ImageId = None
@@ -3079,13 +3079,13 @@ class ModifyImageAttributeRequest(AbstractModel):
 
 
 class ModifyImageAttributeResponse(AbstractModel):
-    """ModifyImageAttribute返回参数结构体
+    """ModifyImageAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3096,15 +3096,15 @@ class ModifyImageAttributeResponse(AbstractModel):
 
 
 class ModifyImageSharePermissionRequest(AbstractModel):
-    """ModifyImageSharePermission请求参数结构体
+    """ModifyImageSharePermission請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageId: 镜像ID，形如`img-gvbnzy6f`。镜像Id可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。 <br>镜像ID必须指定为状态为`NORMAL`的镜像。镜像状态请参考[镜像数据表](/document/api/213/9452#image_state)。
+        :param ImageId: 映像ID，形如`img-gvbnzy6f`。映像Id可以通過如下方式獲取：<br><li>通過[DescribeImages](https://cloud.tencent.com/document/api/213/15715)介面返回的`ImageId`獲取。<br><li>通過[映像控制台](https://console.cloud.tencent.com/cvm/image)獲取。 <br>映像ID必須指定爲狀态爲`NORMAL`的映像。映像狀态請參考[映像數據表](/document/api/213/9452#image_state)。
         :type ImageId: str
-        :param AccountIds: 接收分享镜像的账号Id列表，array型参数的格式可以参考[API简介](/document/api/213/568)。帐号ID不同于QQ号，查询用户帐号ID请查看[帐号信息](https://console.cloud.tencent.com/developer)中的帐号ID栏。
+        :param AccountIds: 接收分享映像的賬号Id清單，array型參數的格式可以參考[API簡介](/document/api/213/568)。帳号ID不同于QQ号，查詢用戶帳号ID請檢視[帳号訊息](https://console.cloud.tencent.com/developer)中的帳号ID欄。
         :type AccountIds: list of str
         :param Permission: 操作，包括 `SHARE`，`CANCEL`。其中`SHARE`代表分享操作，`CANCEL`代表取消分享操作。
         :type Permission: str
@@ -3121,13 +3121,13 @@ class ModifyImageSharePermissionRequest(AbstractModel):
 
 
 class ModifyImageSharePermissionResponse(AbstractModel):
-    """ModifyImageSharePermission返回参数结构体
+    """ModifyImageSharePermission返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3138,17 +3138,17 @@ class ModifyImageSharePermissionResponse(AbstractModel):
 
 
 class ModifyInstancesAttributeRequest(AbstractModel):
-    """ModifyInstancesAttribute请求参数结构体
+    """ModifyInstancesAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`獲取。每次請求允許操作的實例數量上限是100。
         :type InstanceIds: list of str
-        :param InstanceName: 实例名称。可任意命名，但不得超过60个字符。
+        :param InstanceName: 實例名稱。可任意命名，但不得超過60個字元。
         :type InstanceName: str
-        :param SecurityGroups: 指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
+        :param SecurityGroups: 指定實例的安全組Id清單，子機将重新關聯指定清單的安全組，原本關聯的安全組會被解綁。
         :type SecurityGroups: list of str
         """
         self.InstanceIds = None
@@ -3163,13 +3163,13 @@ class ModifyInstancesAttributeRequest(AbstractModel):
 
 
 class ModifyInstancesAttributeResponse(AbstractModel):
-    """ModifyInstancesAttribute返回参数结构体
+    """ModifyInstancesAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3180,17 +3180,17 @@ class ModifyInstancesAttributeResponse(AbstractModel):
 
 
 class ModifyInstancesChargeTypeRequest(AbstractModel):
-    """ModifyInstancesChargeType请求参数结构体
+    """ModifyInstancesChargeType請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
-        :param InstanceChargeType: 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月。
+        :param InstanceChargeType: 實例[計費類型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：預付費，即包年包月。
         :type InstanceChargeType: str
-        :param InstanceChargePrepaid: 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+        :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的購買時長、是否設置自動續約等屬性。若指定實例的付費模式爲預付費則該參數必傳。
         :type InstanceChargePrepaid: :class:`tencentcloud.cvm.v20170312.models.InstanceChargePrepaid`
         """
         self.InstanceIds = None
@@ -3207,13 +3207,13 @@ class ModifyInstancesChargeTypeRequest(AbstractModel):
 
 
 class ModifyInstancesChargeTypeResponse(AbstractModel):
-    """ModifyInstancesChargeType返回参数结构体
+    """ModifyInstancesChargeType返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3224,15 +3224,15 @@ class ModifyInstancesChargeTypeResponse(AbstractModel):
 
 
 class ModifyInstancesProjectRequest(AbstractModel):
-    """ModifyInstancesProject请求参数结构体
+    """ModifyInstancesProject請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`獲取。每次請求允許操作的實例數量上限是100。
         :type InstanceIds: list of str
-        :param ProjectId: 项目ID。项目可以使用[AddProject](https://cloud.tencent.com/doc/api/403/4398)接口创建。后续使用[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)接口查询实例时，项目ID可用于过滤结果。
+        :param ProjectId: 項目ID。項目可以使用[AddProject](https://cloud.tencent.com/doc/api/403/4398)介面創建。後續使用[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)介面查詢實例時，項目ID可用于過濾結果。
         :type ProjectId: int
         """
         self.InstanceIds = None
@@ -3245,13 +3245,13 @@ class ModifyInstancesProjectRequest(AbstractModel):
 
 
 class ModifyInstancesProjectResponse(AbstractModel):
-    """ModifyInstancesProject返回参数结构体
+    """ModifyInstancesProject返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3262,15 +3262,15 @@ class ModifyInstancesProjectResponse(AbstractModel):
 
 
 class ModifyInstancesRenewFlagRequest(AbstractModel):
-    """ModifyInstancesRenewFlag请求参数结构体
+    """ModifyInstancesRenewFlag請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`獲取。每次請求允許操作的實例數量上限是100。
         :type InstanceIds: list of str
-        :param RenewFlag: 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费<br><br>若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+        :param RenewFlag: 自動續約标識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
         :type RenewFlag: str
         """
         self.InstanceIds = None
@@ -3283,13 +3283,13 @@ class ModifyInstancesRenewFlagRequest(AbstractModel):
 
 
 class ModifyInstancesRenewFlagResponse(AbstractModel):
-    """ModifyInstancesRenewFlag返回参数结构体
+    """ModifyInstancesRenewFlag返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3300,19 +3300,19 @@ class ModifyInstancesRenewFlagResponse(AbstractModel):
 
 
 class ModifyInstancesVpcAttributeRequest(AbstractModel):
-    """ModifyInstancesVpcAttribute请求参数结构体
+    """ModifyInstancesVpcAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 待操作的实例ID数组。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。
+        :param InstanceIds: 待操作的實例ID數組。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。
         :type InstanceIds: list of str
-        :param VirtualPrivateCloud: 私有网络相关信息配置。通过该参数指定私有网络的ID，子网ID，私有网络ip等信息。当指定私有网络ID和子网ID（子网必须在实例所在的可用区）与指定实例所在私有网络不一致时，会将实例迁移至指定的私有网络的子网下。可通过`PrivateIpAddresses`指定私有网络子网IP，若需指定则所有已指定的实例均需要指定子网IP，此时`InstanceIds`与`PrivateIpAddresses`一一对应。不指定`PrivateIpAddresses`时随机分配私有网络子网IP。
+        :param VirtualPrivateCloud: 私有網絡相關訊息配置。通過該參數指定私有網絡的ID，子網ID，私有網絡ip等訊息。當指定私有網絡ID和子網ID（子網必須在實例所在的可用區）與指定實例所在私有網絡不一緻時，會将實例遷移至指定的私有網絡的子網下。可通過`PrivateIpAddresses`指定私有網絡子網IP，若需指定則所有已指定的實例均需要指定子網IP，此時`InstanceIds`與`PrivateIpAddresses`一一對應。不指定`PrivateIpAddresses`時随機分配私有網絡子網IP。
         :type VirtualPrivateCloud: :class:`tencentcloud.cvm.v20170312.models.VirtualPrivateCloud`
-        :param ForceStop: 是否对运行中的实例选择强制关机。默认为TRUE。
+        :param ForceStop: 是否對運作中的實例選擇強制關機。預設爲TRUE。
         :type ForceStop: bool
-        :param ReserveHostName: 是否保留主机名。默认为FALSE。
+        :param ReserveHostName: 是否保留主機名。預設爲FALSE。
         :type ReserveHostName: bool
         """
         self.InstanceIds = None
@@ -3331,13 +3331,13 @@ class ModifyInstancesVpcAttributeRequest(AbstractModel):
 
 
 class ModifyInstancesVpcAttributeResponse(AbstractModel):
-    """ModifyInstancesVpcAttribute返回参数结构体
+    """ModifyInstancesVpcAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3348,17 +3348,17 @@ class ModifyInstancesVpcAttributeResponse(AbstractModel):
 
 
 class ModifyKeyPairAttributeRequest(AbstractModel):
-    """ModifyKeyPairAttribute请求参数结构体
+    """ModifyKeyPairAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param KeyId: 密钥对ID，密钥对ID形如：`skey-xxxxxxxx`。<br><br>可以通过以下方式获取可用的密钥 ID：<br><li>通过登录[控制台](https://console.cloud.tencent.com/cvm/sshkey)查询密钥 ID。<br><li>通过调用接口 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/9403) ，取返回信息中的 `KeyId` 获取密钥对 ID。
+        :param KeyId: 金鑰對ID，金鑰對ID形如：`skey-xxxxxxxx`。<br><br>可以通過以下方式獲取可用的金鑰 ID：<br><li>通過登入[控制台](https://console.cloud.tencent.com/cvm/sshkey)查詢金鑰 ID。<br><li>通過調用介面 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/9403) ，取返回訊息中的 `KeyId` 獲取金鑰對 ID。
         :type KeyId: str
-        :param KeyName: 修改后的密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
+        :param KeyName: 修改後的金鑰對名稱，可由數字，字母和下劃線組成，長度不超過25個字元。
         :type KeyName: str
-        :param Description: 修改后的密钥对描述信息。可任意命名，但不得超过60个字符。
+        :param Description: 修改後的金鑰對描述訊息。可任意命名，但不得超過60個字元。
         :type Description: str
         """
         self.KeyId = None
@@ -3373,13 +3373,13 @@ class ModifyKeyPairAttributeRequest(AbstractModel):
 
 
 class ModifyKeyPairAttributeResponse(AbstractModel):
-    """ModifyKeyPairAttribute返回参数结构体
+    """ModifyKeyPairAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3390,19 +3390,19 @@ class ModifyKeyPairAttributeResponse(AbstractModel):
 
 
 class OperationCountLimit(AbstractModel):
-    """描述了单台实例操作次数限制
+    """描述了單台實例操作次數限制
 
     """
 
     def __init__(self):
         """
-        :param Operation: 实例操作。
+        :param Operation: 實例操作。
         :type Operation: str
-        :param InstanceId: 实例ID。
+        :param InstanceId: 實例ID。
         :type InstanceId: str
-        :param CurrentCount: 当前已使用次数，如果返回值为-1表示该操作无次数限制。
+        :param CurrentCount: 當前已使用次數，如果返回值爲-1表示該操作無次數限制。
         :type CurrentCount: int
-        :param LimitCount: 操作次数最高额度，如果返回值为-1表示该操作无次数限制，如果返回值为0表示不支持调整配置。
+        :param LimitCount: 操作次數最高額度，如果返回值爲-1表示該操作無次數限制，如果返回值爲0表示不支援調整配置。
         :type LimitCount: int
         """
         self.Operation = None
@@ -3419,17 +3419,17 @@ class OperationCountLimit(AbstractModel):
 
 
 class OsVersion(AbstractModel):
-    """操作系统支持的类型。
+    """作業系統支援的類型。
 
     """
 
     def __init__(self):
         """
-        :param OsName: 操作系统类型
+        :param OsName: 作業系統類型
         :type OsName: str
-        :param OsVersions: 支持的操作系统版本
+        :param OsVersions: 支援的作業系統版本
         :type OsVersions: list of str
-        :param Architecture: 支持的操作系统架构
+        :param Architecture: 支援的作業系統架構
         :type Architecture: list of str
         """
         self.OsName = None
@@ -3444,17 +3444,17 @@ class OsVersion(AbstractModel):
 
 
 class Placement(AbstractModel):
-    """描述了实例的抽象位置，包括其所在的可用区，所属的项目，宿主机等（仅CDH产品可用）
+    """描述了實例的抽象位置，包括其所在的可用區，所屬的項目，宿主機等（僅CDH産品可用）
 
     """
 
     def __init__(self):
         """
-        :param Zone: 实例所属的[可用区](/document/product/213/9452#zone)ID。该参数也可以通过调用  [DescribeZones](/document/api/213/9455) 的返回值中的Zone字段来获取。
+        :param Zone: 實例所屬的[可用區](/document/product/213/9452#zone)ID。該參數也可以通過調用  [DescribeZones](/document/api/213/9455) 的返回值中的Zone欄位來獲取。
         :type Zone: str
-        :param ProjectId: 实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。
+        :param ProjectId: 實例所屬項目ID。該參數可以通過調用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 欄位來獲取。不填爲預設項目。
         :type ProjectId: int
-        :param HostIds: 实例所属的专用宿主机ID列表。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。
+        :param HostIds: 實例所屬的專用宿主機ID清單。如果您有購買專用宿主機并且指定了該參數，則您購買的實例就會随機的佈署在這些專用宿主機上。
         :type HostIds: list of str
         """
         self.Zone = None
@@ -3469,15 +3469,15 @@ class Placement(AbstractModel):
 
 
 class Price(AbstractModel):
-    """价格
+    """價格
 
     """
 
     def __init__(self):
         """
-        :param InstancePrice: 描述了实例价格。
+        :param InstancePrice: 描述了實例價格。
         :type InstancePrice: :class:`tencentcloud.cvm.v20170312.models.ItemPrice`
-        :param BandwidthPrice: 描述了网络价格。
+        :param BandwidthPrice: 描述了網絡價格。
         :type BandwidthPrice: :class:`tencentcloud.cvm.v20170312.models.ItemPrice`
         """
         self.InstancePrice = None
@@ -3494,15 +3494,15 @@ class Price(AbstractModel):
 
 
 class RebootInstancesRequest(AbstractModel):
-    """RebootInstances请求参数结构体
+    """RebootInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
-        :param ForceReboot: 是否在正常重启失败后选择强制重启实例。取值范围：<br><li>TRUE：表示在正常重启失败后进行强制重启<br><li>FALSE：表示在正常重启失败后不进行强制重启<br><br>默认取值：FALSE。
+        :param ForceReboot: 是否在正常重啓失敗後選擇強制重啓實例。取值範圍：<br><li>TRUE：表示在正常重啓失敗後進行強制重啓<br><li>FALSE：表示在正常重啓失敗後不進行強制重啓<br><br>預設取值：FALSE。
         :type ForceReboot: bool
         """
         self.InstanceIds = None
@@ -3515,13 +3515,13 @@ class RebootInstancesRequest(AbstractModel):
 
 
 class RebootInstancesResponse(AbstractModel):
-    """RebootInstances返回参数结构体
+    """RebootInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3532,17 +3532,17 @@ class RebootInstancesResponse(AbstractModel):
 
 
 class RegionInfo(AbstractModel):
-    """地域信息
+    """地域訊息
 
     """
 
     def __init__(self):
         """
-        :param Region: 地域名称，例如，ap-guangzhou
+        :param Region: 地域名稱，例如，ap-guangzhou
         :type Region: str
-        :param RegionName: 地域描述，例如，华南地区(广州)
+        :param RegionName: 地域描述，例如，華南地區(廣州)
         :type RegionName: str
-        :param RegionState: 地域是否可用状态
+        :param RegionState: 地域是否可用狀态
         :type RegionState: str
         """
         self.Region = None
@@ -3557,15 +3557,15 @@ class RegionInfo(AbstractModel):
 
 
 class RenewHostsRequest(AbstractModel):
-    """RenewHosts请求参数结构体
+    """RenewHosts請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param HostIds: 一个或多个待操作的CDH实例ID。
+        :param HostIds: 一個或多個待操作的CDH實例ID。
         :type HostIds: list of str
-        :param HostChargePrepaid: 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+        :param HostChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的購買時長、是否設置自動續約等屬性。若指定實例的付費模式爲預付費則該參數必傳。
         :type HostChargePrepaid: :class:`tencentcloud.cvm.v20170312.models.ChargePrepaid`
         """
         self.HostIds = None
@@ -3580,13 +3580,13 @@ class RenewHostsRequest(AbstractModel):
 
 
 class RenewHostsResponse(AbstractModel):
-    """RenewHosts返回参数结构体
+    """RenewHosts返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3597,17 +3597,17 @@ class RenewHostsResponse(AbstractModel):
 
 
 class RenewInstancesRequest(AbstractModel):
-    """RenewInstances请求参数结构体
+    """RenewInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
-        :param InstanceChargePrepaid: 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的续费时长、是否设置自动续费等属性。包年包月实例该参数为必传参数。
+        :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的續約時長、是否設置自動續約等屬性。包年包月實例該參數爲必傳參數。
         :type InstanceChargePrepaid: :class:`tencentcloud.cvm.v20170312.models.InstanceChargePrepaid`
-        :param RenewPortableDataDisk: 是否续费弹性数据盘。取值范围：<br><li>TRUE：表示续费包年包月实例同时续费其挂载的弹性数据盘<br><li>FALSE：表示续费包年包月实例同时不再续费其挂载的弹性数据盘<br><br>默认取值：TRUE。
+        :param RenewPortableDataDisk: 是否續約彈性數據盤。取值範圍：<br><li>TRUE：表示續約包年包月實例同時續約其掛載的彈性數據盤<br><li>FALSE：表示續約包年包月實例同時不再續約其掛載的彈性數據盤<br><br>預設取值：TRUE。
         :type RenewPortableDataDisk: bool
         """
         self.InstanceIds = None
@@ -3624,13 +3624,13 @@ class RenewInstancesRequest(AbstractModel):
 
 
 class RenewInstancesResponse(AbstractModel):
-    """RenewInstances返回参数结构体
+    """RenewInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3641,24 +3641,24 @@ class RenewInstancesResponse(AbstractModel):
 
 
 class ResetInstanceRequest(AbstractModel):
-    """ResetInstance请求参数结构体
+    """ResetInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`获取。
+        :param InstanceId: 實例ID。可通過 [DescribeInstances](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`獲取。
         :type InstanceId: str
-        :param ImageId: 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/9418) ，取返回信息中的`ImageId`字段。</li>
-<br>默认取值：默认使用当前镜像。
+        :param ImageId: 指定有效的[映像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.tencent.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.tencent.com/document/api/213/9418) ，取返回訊息中的`ImageId`欄位。</li>
+<br>預設取值：預設使用當前映像。
         :type ImageId: str
-        :param SystemDisk: 实例系统盘配置信息。系统盘为云盘的实例可以通过该参数指定重装后的系统盘大小来实现对系统盘的扩容操作，若不指定则默认系统盘大小保持不变。系统盘大小只支持扩容不支持缩容；重装只支持修改系统盘的大小，不能修改系统盘的类型。
+        :param SystemDisk: 實例系統盤配置訊息。系統盤爲雲盤的實例可以通過該參數指定重裝後的系統盤大小來實現對系統盤的擴容操作，若不指定則預設系統盤大小保持不變。系統盤大小只支援擴容不支援縮容；重裝只支援修改系統盤的大小，不能修改系統盤的類型。
         :type SystemDisk: :class:`tencentcloud.cvm.v20170312.models.SystemDisk`
-        :param LoginSettings: 实例登录设置。通过该参数可以设置实例的登录方式密码、密钥或保持镜像的原始登录设置。默认情况下会随机生成密码，并以站内信方式知会到用户。
+        :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，并以站内信方式知會到用戶。
         :type LoginSettings: :class:`tencentcloud.cvm.v20170312.models.LoginSettings`
-        :param EnhancedService: 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
+        :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
         :type EnhancedService: :class:`tencentcloud.cvm.v20170312.models.EnhancedService`
-        :param HostName: 重装系统时，可以指定修改实例的HostName。
+        :param HostName: 重灌系統時，可以指定修改實例的HostName。
         :type HostName: str
         """
         self.InstanceId = None
@@ -3685,13 +3685,13 @@ class ResetInstanceRequest(AbstractModel):
 
 
 class ResetInstanceResponse(AbstractModel):
-    """ResetInstance返回参数结构体
+    """ResetInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3702,19 +3702,19 @@ class ResetInstanceResponse(AbstractModel):
 
 
 class ResetInstancesInternetMaxBandwidthRequest(AbstractModel):
-    """ResetInstancesInternetMaxBandwidth请求参数结构体
+    """ResetInstancesInternetMaxBandwidth請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)接口返回值中的 `InstanceId` 获取。 每次请求批量实例的上限为100。当调整 `BANDWIDTH_PREPAID` 和 `BANDWIDTH_POSTPAID_BY_HOUR` 计费方式的带宽时，只支持一个实例。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)介面返回值中的 `InstanceId` 獲取。 每次請求批次實例的上限爲100。當調整 `BANDWIDTH_PREPAID` 和 `BANDWIDTH_POSTPAID_BY_HOUR` 計費方式的頻寬時，只支援一個實例。
         :type InstanceIds: list of str
-        :param InternetAccessible: 公网出带宽配置。不同机型带宽上限范围不一致，具体限制详见带宽限制对账表。暂时只支持 `InternetMaxBandwidthOut` 参数。
+        :param InternetAccessible: 公網出頻寬配置。不同機型頻寬上限範圍不一緻，具體限制詳見頻寬限制對賬表。暫時只支援 `InternetMaxBandwidthOut` 參數。
         :type InternetAccessible: :class:`tencentcloud.cvm.v20170312.models.InternetAccessible`
-        :param StartTime: 带宽生效的起始时间。格式：`YYYY-MM-DD`，例如：`2016-10-30`。起始时间不能早于当前时间。如果起始时间是今天则新设置的带宽立即生效。该参数只对包年包月带宽有效，其他模式带宽不支持该参数，否则接口会以相应错误码返回。
+        :param StartTime: 頻寬生效的起始時間。格式：`YYYY-MM-DD`，例如：`2016-10-30`。起始時間不能早于當前時間。如果起始時間是今天則新設置的頻寬立即生效。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
         :type StartTime: str
-        :param EndTime: 带宽生效的终止时间。格式： `YYYY-MM-DD` ，例如：`2016-10-30` 。新设置的带宽的有效期包含终止时间此日期。终止时间不能晚于包年包月实例的到期时间。实例的到期时间可通过 [`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)接口返回值中的`ExpiredTime`获取。该参数只对包年包月带宽有效，其他模式带宽不支持该参数，否则接口会以相应错误码返回。
+        :param EndTime: 頻寬生效的終止時間。格式： `YYYY-MM-DD` ，例如：`2016-10-30` 。新設置的頻寬的有效期包含終止時間此日期。終止時間不能晚于包年包月實例的到期時間。實例的到期時間可通過 [`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)介面返回值中的`ExpiredTime`獲取。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
         :type EndTime: str
         """
         self.InstanceIds = None
@@ -3733,13 +3733,13 @@ class ResetInstancesInternetMaxBandwidthRequest(AbstractModel):
 
 
 class ResetInstancesInternetMaxBandwidthResponse(AbstractModel):
-    """ResetInstancesInternetMaxBandwidth返回参数结构体
+    """ResetInstancesInternetMaxBandwidth返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3750,19 +3750,19 @@ class ResetInstancesInternetMaxBandwidthResponse(AbstractModel):
 
 
 class ResetInstancesPasswordRequest(AbstractModel):
-    """ResetInstancesPassword请求参数结构体
+    """ResetInstancesPassword請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`獲取。每次請求允許操作的實例數量上限是100。
         :type InstanceIds: list of str
-        :param Password: 实例登录密码。不同操作系统类型密码复杂度限制不一样，具体如下：<br><li>`Linux`实例密码必须8到16位，至少包括两项`[a-z，A-Z]、[0-9]`和`[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]`中的符号。密码不允许以`/`符号开头。<br><li>`Windows`实例密码必须12到16位，至少包括三项`[a-z]，[A-Z]，[0-9]`和`[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]`中的符号。密码不允许以`/`符号开头。<br><li>如果实例即包含`Linux`实例又包含`Windows`实例，则密码复杂度限制按照`Windows`实例的限制。
+        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>`Linux`實例密碼必須8到16位，至少包括兩項`[a-z，A-Z]、[0-9]`和`[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]`中的符号。密碼不允許以`/`符号開頭。<br><li>`Windows`實例密碼必須12到16位，至少包括三項`[a-z]，[A-Z]，[0-9]`和`[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]`中的符号。密碼不允許以`/`符号開頭。<br><li>如果實例即包含`Linux`實例又包含`Windows`實例，則密碼複雜度限制按照`Windows`實例的限制。
         :type Password: str
-        :param UserName: 待重置密码的实例操作系统用户名。不得超过64个字符。
+        :param UserName: 待重置密碼的實例作業系統用戶名。不得超過64個字元。
         :type UserName: str
-        :param ForceStop: 是否对运行中的实例选择强制关机。建议对运行中的实例先手动关机，然后再重置用户密码。取值范围：<br><li>TRUE：表示在正常关机失败后进行强制关机<br><li>FALSE：表示在正常关机失败后不进行强制关机<br><br>默认取值：FALSE。<br><br>强制关机的效果等同于关闭物理计算机的电源开关。强制关机可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常关机时使用。
+        :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再重置用戶密碼。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機<br><li>FALSE：表示在正常關機失敗後不進行強制關機<br><br>預設取值：FALSE。<br><br>強制關機的效果等同于關閉物理電腦的電源開關。強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
         :type ForceStop: bool
         """
         self.InstanceIds = None
@@ -3779,13 +3779,13 @@ class ResetInstancesPasswordRequest(AbstractModel):
 
 
 class ResetInstancesPasswordResponse(AbstractModel):
-    """ResetInstancesPassword返回参数结构体
+    """ResetInstancesPassword返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3796,17 +3796,17 @@ class ResetInstancesPasswordResponse(AbstractModel):
 
 
 class ResetInstancesTypeRequest(AbstractModel):
-    """ResetInstancesType请求参数结构体
+    """ResetInstancesType請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为1。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲1。
         :type InstanceIds: list of str
-        :param InstanceType: 实例机型。不同实例机型指定了不同的资源规格，具体取值可通过调用接口[`DescribeInstanceTypeConfigs`](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例类型](https://cloud.tencent.com/document/product/213/11518)描述。
+        :param InstanceType: 實例機型。不同實例機型指定了不同的資源規格，具體取值可通過調用介面[`DescribeInstanceTypeConfigs`](https://cloud.tencent.com/document/api/213/15749)來獲得最新的規格表或參見[實例類型](https://cloud.tencent.com/document/product/213/11518)描述。
         :type InstanceType: str
-        :param ForceStop: 是否对运行中的实例选择强制关机。建议对运行中的实例先手动关机，然后再重置用户密码。取值范围：<br><li>TRUE：表示在正常关机失败后进行强制关机<br><li>FALSE：表示在正常关机失败后不进行强制关机<br><br>默认取值：FALSE。<br><br>强制关机的效果等同于关闭物理计算机的电源开关。强制关机可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常关机时使用。
+        :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再重置用戶密碼。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機<br><li>FALSE：表示在正常關機失敗後不進行強制關機<br><br>預設取值：FALSE。<br><br>強制關機的效果等同于關閉物理電腦的電源開關。強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
         :type ForceStop: bool
         """
         self.InstanceIds = None
@@ -3821,13 +3821,13 @@ class ResetInstancesTypeRequest(AbstractModel):
 
 
 class ResetInstancesTypeResponse(AbstractModel):
-    """ResetInstancesType返回参数结构体
+    """ResetInstancesType返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3838,17 +3838,17 @@ class ResetInstancesTypeResponse(AbstractModel):
 
 
 class ResizeInstanceDisksRequest(AbstractModel):
-    """ResizeInstanceDisks请求参数结构体
+    """ResizeInstanceDisks請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。
+        :param InstanceId: 待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。
         :type InstanceId: str
-        :param DataDisks: 待扩容的数据盘配置信息。只支持扩容非弹性数据盘（[`DescribeDisks`](https://cloud.tencent.com/document/api/362/16315)接口返回值中的`Portable`为`false`表示非弹性），且[数据盘类型](/document/api/213/9452#block_device)为：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。数据盘容量单位：GB。最小扩容步长：10G。关于数据盘类型的选择请参考硬盘产品简介。可选数据盘类型受到实例类型`InstanceType`限制。另外允许扩容的最大容量也因数据盘类型的不同而有所差异。
+        :param DataDisks: 待擴容的數據盤配置訊息。只支援擴容非彈性數據盤（[`DescribeDisks`](https://cloud.tencent.com/document/api/362/16315)介面返回值中的`Portable`爲`false`表示非彈性），且[數據盤類型](/document/api/213/9452#block_device)爲：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。數據盤容量單位：GB。最小擴容步長：10G。關于數據盤類型的選擇請參考硬碟産品簡介。可選數據盤類型受到實例類型`InstanceType`限制。另外允許擴容的最大容量也因數據盤類型的不同而有所差異。
         :type DataDisks: list of DataDisk
-        :param ForceStop: 是否对运行中的实例选择强制关机。建议对运行中的实例先手动关机，然后再重置用户密码。取值范围：<br><li>TRUE：表示在正常关机失败后进行强制关机<br><li>FALSE：表示在正常关机失败后不进行强制关机<br><br>默认取值：FALSE。<br><br>强制关机的效果等同于关闭物理计算机的电源开关。强制关机可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常关机时使用。
+        :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再重置用戶密碼。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機<br><li>FALSE：表示在正常關機失敗後不進行強制關機<br><br>預設取值：FALSE。<br><br>強制關機的效果等同于關閉物理電腦的電源開關。強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
         :type ForceStop: bool
         """
         self.InstanceId = None
@@ -3868,13 +3868,13 @@ class ResizeInstanceDisksRequest(AbstractModel):
 
 
 class ResizeInstanceDisksResponse(AbstractModel):
-    """ResizeInstanceDisks返回参数结构体
+    """ResizeInstanceDisks返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3885,54 +3885,54 @@ class ResizeInstanceDisksResponse(AbstractModel):
 
 
 class RunInstancesRequest(AbstractModel):
-    """RunInstances请求参数结构体
+    """RunInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Placement: 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。
+        :param Placement: 實例所在的位置。通過該參數可以指定實例所屬可用區，所屬項目，所屬宿主機（在專用宿主機上創建子機時指定）等屬性。
         :type Placement: :class:`tencentcloud.cvm.v20170312.models.Placement`
-        :param ImageId: 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
+        :param ImageId: 指定有效的[映像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.tencent.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回訊息中的`ImageId`欄位。</li>
         :type ImageId: str
-        :param InstanceChargeType: 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
+        :param InstanceChargeType: 實例[計費類型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：預付費，即包年包月<br><li>POSTPAID_BY_HOUR：按小時後付費<br><li>CDHPAID：獨享子機（基于專用宿主機創建，宿主機部分的資源不收費）<br><li>SPOTPAID：競價付費<br>預設值：POSTPAID_BY_HOUR。
         :type InstanceChargeType: str
-        :param InstanceChargePrepaid: 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+        :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的購買時長、是否設置自動續約等屬性。若指定實例的付費模式爲預付費則該參數必傳。
         :type InstanceChargePrepaid: :class:`tencentcloud.cvm.v20170312.models.InstanceChargePrepaid`
-        :param InstanceType: 实例机型。不同实例机型指定了不同的资源规格。
-<br><li>对于付费模式为PREPAID或POSTPAID\_BY\_HOUR的实例创建，具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例类型](https://cloud.tencent.com/document/product/213/11518)描述。若不指定该参数，则默认机型为S1.SMALL1。<br><li>对于付费模式为CDHPAID的实例创建，该参数以"CDH_"为前缀，根据cpu和内存配置生成，具体形式为：CDH_XCXG，例如对于创建cpu为1核，内存为1G大小的专用宿主机的实例，该参数应该为CDH_1C1G。
+        :param InstanceType: 實例機型。不同實例機型指定了不同的資源規格。
+<br><li>對于付費模式爲PREPAID或POSTPAID\_BY\_HOUR的實例創建，具體取值可通過調用介面[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)來獲得最新的規格表或參見[實例類型](https://cloud.tencent.com/document/product/213/11518)描述。若不指定該參數，則預設機型爲S1.SMALL1。<br><li>對于付費模式爲CDHPAID的實例創建，該參數以"CDH_"爲前綴，根據cpu和内存配置生成，具體形式爲：CDH_XCXG，例如對于創建cpu爲1核，内存爲1G大小的專用宿主機的實例，該參數應該爲CDH_1C1G。
         :type InstanceType: str
-        :param SystemDisk: 实例系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。
+        :param SystemDisk: 實例系統盤配置訊息。若不指定該參數，則按照系統預設值進行分配。
         :type SystemDisk: :class:`tencentcloud.cvm.v20170312.models.SystemDisk`
-        :param DataDisks: 实例数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定11块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含10块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
+        :param DataDisks: 實例數據盤配置訊息。若不指定該參數，則預設不購買數據盤。支援購買的時候指定11塊數據盤，其中最多包含1塊LOCAL_BASIC數據盤或者LOCAL_SSD數據盤，最多包含10塊CLOUD_BASIC數據盤、CLOUD_PREMIUM數據盤或者CLOUD_SSD數據盤。
         :type DataDisks: list of DataDisk
-        :param VirtualPrivateCloud: 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。若不指定该参数，则默认使用基础网络。若在此参数中指定了私有网络ip，表示每个实例的主网卡ip，而且InstanceCount参数必须与私有网络ip的个数一致。
+        :param VirtualPrivateCloud: 私有網絡相關訊息配置。通過該參數可以指定私有網絡的ID，子網ID等訊息。若不指定該參數，則預設使用基礎網絡。若在此參數中指定了私有網絡ip，表示每個實例的主網卡ip，而且InstanceCount參數必須與私有網絡ip的個數一緻。
         :type VirtualPrivateCloud: :class:`tencentcloud.cvm.v20170312.models.VirtualPrivateCloud`
-        :param InternetAccessible: 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
+        :param InternetAccessible: 公網頻寬相關訊息設置。若不指定該參數，則預設公網頻寬爲0Mbps。
         :type InternetAccessible: :class:`tencentcloud.cvm.v20170312.models.InternetAccessible`
-        :param InstanceCount: 购买实例数量。包年包月实例取值范围：[1，300]，按量计费实例取值范围：[1，100]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量，具体配额相关限制详见[CVM实例购买限制](https://cloud.tencent.com/document/product/213/2664)。
+        :param InstanceCount: 購買實例數量。包年包月實例取值範圍：[1，300]，按量計費實例取值範圍：[1，100]。預設取值：1。指定購買實例的數量不能超過用戶所能購買的剩餘配額數量，具體配額相關限制詳見[CVM實例購買限制](https://cloud.tencent.com/document/product/213/2664)。
         :type InstanceCount: int
-        :param InstanceName: 实例显示名称。<br><li>不指定实例显示名称则默认显示‘未命名’。</li><li>购买多台实例，如果指定模式串`{R:x}`，表示生成数字`[x, x+n-1]`，其中`n`表示购买实例的数量，例如`server_{R:3}`，购买1台时，实例显示名称为`server_3`；购买2台时，实例显示名称分别为`server_3`，`server_4`。支持指定多个模式串`{R:x}`。</li><li>购买多台实例，如果不指定模式串，则在实例显示名称添加后缀`1、2...n`，其中`n`表示购买实例的数量，例如`server_`，购买2台时，实例显示名称分别为`server_1`，`server_2`。
+        :param InstanceName: 實例顯示名稱。<br><li>不指定實例顯示名稱則預設顯示‘未命名’。</li><li>購買多台實例，如果指定模式串`{R:x}`，表示生成數字`[x, x+n-1]`，其中`n`表示購買實例的數量，例如`server_{R:3}`，購買1台時，實例顯示名稱爲`server_3`；購買2台時，實例顯示名稱分别爲`server_3`，`server_4`。支援指定多個模式串`{R:x}`。</li><li>購買多台實例，如果不指定模式串，則在實例顯示名稱添加後綴`1、2...n`，其中`n`表示購買實例的數量，例如`server_`，購買2台時，實例顯示名稱分别爲`server_1`，`server_2`。
         :type InstanceName: str
-        :param LoginSettings: 实例登录设置。通过该参数可以设置实例的登录方式密码、密钥或保持镜像的原始登录设置。默认情况下会随机生成密码，并以站内信方式知会到用户。
+        :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，并以站内信方式知會到用戶。
         :type LoginSettings: :class:`tencentcloud.cvm.v20170312.models.LoginSettings`
-        :param SecurityGroupIds: 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+        :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId欄位來獲取。若不指定該參數，則綁定預設安全組。
         :type SecurityGroupIds: list of str
-        :param EnhancedService: 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
+        :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
         :type EnhancedService: :class:`tencentcloud.cvm.v20170312.models.EnhancedService`
-        :param ClientToken: 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。
+        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。<br>更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
-        :param HostName: 云服务器的主机名。<br><li>点号（.）和短横线（-）不能作为 HostName 的首尾字符，不能连续使用。<br><li>Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写）、数字和短横线（-）组成，不支持点号（.），不能全是数字。<br><li>其他类型（Linux 等）实例：字符长度为[2, 60]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。
+        :param HostName: 雲伺服器的主機名。<br><li>點号（.）和短橫線（-）不能作爲 HostName 的首尾字元，不能連續使用。<br><li>Windows 實例：名字元長度爲[2, 15]，允許字母（不限制大小寫）、數字和短橫線（-）組成，不支援點号（.），不能全是數字。<br><li>其他類型（Linux 等）實例：字元長度爲[2, 60]，允許支援多個點号，點之間爲一段，每段允許字母（不限制大小寫）、數字和短橫線（-）組成。
         :type HostName: str
-        :param ActionTimer: 定时任务。通过该参数可以为实例指定定时任务，目前仅支持定时销毁。
+        :param ActionTimer: 定時任務。通過該參數可以爲實例指定定時任務，目前僅支援定時銷毀。
         :type ActionTimer: :class:`tencentcloud.cvm.v20170312.models.ActionTimer`
-        :param DisasterRecoverGroupIds: 置放群组id，仅支持指定一个。
+        :param DisasterRecoverGroupIds: 置放群組id，僅支援指定一個。
         :type DisasterRecoverGroupIds: list of str
-        :param TagSpecification: 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云主机实例。
+        :param TagSpecification: 标簽描述清單。通過指定該參數可以同時綁定标簽到相應的資源實例，當前僅支援綁定标簽到雲主機實例。
         :type TagSpecification: list of TagSpecification
-        :param InstanceMarketOptions: 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+        :param InstanceMarketOptions: 實例的市場相關選項，如競價實例相關參數，若指定實例的付費模式爲競價付費則該參數必傳。
         :type InstanceMarketOptions: :class:`tencentcloud.cvm.v20170312.models.InstanceMarketOptionsRequest`
-        :param UserData: 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+        :param UserData: 提供給實例使用的用戶數據，需要以 base64 方式編碼，支援的最大數據大小爲 16KB。關于獲取此參數的詳細介紹，請參閱[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)啓動時運作命令。
         :type UserData: str
         """
         self.Placement = None
@@ -4011,15 +4011,15 @@ class RunInstancesRequest(AbstractModel):
 
 
 class RunInstancesResponse(AbstractModel):
-    """RunInstances返回参数结构体
+    """RunInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIdSet: 当通过本接口来创建实例时会返回该参数，表示一个或多个实例`ID`。返回实例`ID`列表并不代表实例创建成功，可根据 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口查询返回的InstancesSet中对应实例的`ID`的状态来判断创建是否完成；如果实例状态由“准备中”变为“正在运行”，则为创建成功。
+        :param InstanceIdSet: 當通過本介面來創建實例時會返回該參數，表示一個或多個實例`ID`。返回實例`ID`清單并不代表實例創建成功，可根據 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 介面查詢返回的InstancesSet中對應實例的`ID`的狀态來判斷創建是否完成；如果實例狀态由“準備中”變爲“正在運作”，則爲創建成功。
         :type InstanceIdSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceIdSet = None
@@ -4032,13 +4032,13 @@ class RunInstancesResponse(AbstractModel):
 
 
 class RunMonitorServiceEnabled(AbstractModel):
-    """描述了 “云监控” 服务相关的信息
+    """描述了 “雲監控” 服務相關的訊息
 
     """
 
     def __init__(self):
         """
-        :param Enabled: 是否开启[云监控](/document/product/248)服务。取值范围：<br><li>TRUE：表示开启云监控服务<br><li>FALSE：表示不开启云监控服务<br><br>默认取值：TRUE。
+        :param Enabled: 是否開啓[雲監控](/document/product/248)服務。取值範圍：<br><li>TRUE：表示開啓雲監控服務<br><li>FALSE：表示不開啓雲監控服務<br><br>預設取值：TRUE。
         :type Enabled: bool
         """
         self.Enabled = None
@@ -4049,13 +4049,13 @@ class RunMonitorServiceEnabled(AbstractModel):
 
 
 class RunSecurityServiceEnabled(AbstractModel):
-    """描述了 “云安全” 服务相关的信息
+    """描述了 “雲安全” 服務相關的訊息
 
     """
 
     def __init__(self):
         """
-        :param Enabled: 是否开启[云安全](/document/product/296)服务。取值范围：<br><li>TRUE：表示开启云安全服务<br><li>FALSE：表示不开启云安全服务<br><br>默认取值：TRUE。
+        :param Enabled: 是否開啓[雲安全](/document/product/296)服務。取值範圍：<br><li>TRUE：表示開啓雲安全服務<br><li>FALSE：表示不開啓雲安全服務<br><br>預設取值：TRUE。
         :type Enabled: bool
         """
         self.Enabled = None
@@ -4066,15 +4066,15 @@ class RunSecurityServiceEnabled(AbstractModel):
 
 
 class SharePermission(AbstractModel):
-    """镜像分享信息结构
+    """映像分享訊息結構
 
     """
 
     def __init__(self):
         """
-        :param CreatedTime: 镜像分享时间
+        :param CreatedTime: 映像分享時間
         :type CreatedTime: str
-        :param AccountId: 镜像分享的账户ID
+        :param AccountId: 映像分享的帳戶ID
         :type AccountId: str
         """
         self.CreatedTime = None
@@ -4087,7 +4087,7 @@ class SharePermission(AbstractModel):
 
 
 class Snapshot(AbstractModel):
-    """描述镜像关联的快照信息
+    """描述映像關聯的快照訊息
 
     """
 
@@ -4095,11 +4095,11 @@ class Snapshot(AbstractModel):
         """
         :param SnapshotId: 快照Id。
         :type SnapshotId: str
-        :param DiskUsage: 创建此快照的云硬盘类型。取值范围：
-SYSTEM_DISK：系统盘
-DATA_DISK：数据盘。
+        :param DiskUsage: 創建此快照的雲硬碟類型。取值範圍：
+SYSTEM_DISK：系統盤
+DATA_DISK：數據盤。
         :type DiskUsage: str
-        :param DiskSize: 创建此快照的云硬盘大小，单位GB。
+        :param DiskSize: 創建此快照的雲硬碟大小，單位GB。
         :type DiskSize: int
         """
         self.SnapshotId = None
@@ -4114,15 +4114,15 @@ DATA_DISK：数据盘。
 
 
 class SpotMarketOptions(AbstractModel):
-    """竞价相关选项
+    """競價相關選項
 
     """
 
     def __init__(self):
         """
-        :param MaxPrice: 竞价出价
+        :param MaxPrice: 競價出價
         :type MaxPrice: str
-        :param SpotInstanceType: 竞价请求类型，当前仅支持类型：one-time
+        :param SpotInstanceType: 競價請求類型，當前僅支援類型：one-time
         :type SpotInstanceType: str
         """
         self.MaxPrice = None
@@ -4135,13 +4135,13 @@ class SpotMarketOptions(AbstractModel):
 
 
 class StartInstancesRequest(AbstractModel):
-    """StartInstances请求参数结构体
+    """StartInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
         """
         self.InstanceIds = None
@@ -4152,13 +4152,13 @@ class StartInstancesRequest(AbstractModel):
 
 
 class StartInstancesResponse(AbstractModel):
-    """StartInstances返回参数结构体
+    """StartInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4169,21 +4169,21 @@ class StartInstancesResponse(AbstractModel):
 
 
 class StopInstancesRequest(AbstractModel):
-    """StopInstances请求参数结构体
+    """StopInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
-        :param ForceStop: 是否在正常关闭失败后选择强制关闭实例。取值范围：<br><li>TRUE：表示在正常关闭失败后进行强制关闭<br><li>FALSE：表示在正常关闭失败后不进行强制关闭<br><br>默认取值：FALSE。
+        :param ForceStop: 是否在正常關閉失敗後選擇強制關閉實例。取值範圍：<br><li>TRUE：表示在正常關閉失敗後進行強制關閉<br><li>FALSE：表示在正常關閉失敗後不進行強制關閉<br><br>預設取值：FALSE。
         :type ForceStop: bool
-        :param StopType: 实例的关闭模式。取值范围：<br><li>SOFT_FIRST：表示在正常关闭失败后进行强制关闭<br><li>HARD：直接强制关闭<br><li>SOFT：仅软关机<br>默认取值：SOFT。
+        :param StopType: 實例的關閉模式。取值範圍：<br><li>SOFT_FIRST：表示在正常關閉失敗後進行強制關閉<br><li>HARD：直接強制關閉<br><li>SOFT：僅軟關機<br>預設取值：SOFT。
         :type StopType: str
-        :param StoppedMode: 按量计费实例关机收费模式。
-取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<br>默认取值：KEEP_CHARGING。
-该参数只针对部分按量计费云硬盘实例生效，详情参考[按量计费实例关机不收费说明](https://cloud.tencent.com/document/product/213/19918)
+        :param StoppedMode: 按量計費實例關機收費模式。
+取值範圍：<br><li>KEEP_CHARGING：關機繼續收費<br><li>STOP_CHARGING：關機停止收費<br>預設取值：KEEP_CHARGING。
+該參數只針對部分按量計費雲硬碟實例生效，詳情參考[按量計費實例關機不收費說明](https://cloud.tencent.com/document/product/213/19918)
         :type StoppedMode: str
         """
         self.InstanceIds = None
@@ -4200,13 +4200,13 @@ class StopInstancesRequest(AbstractModel):
 
 
 class StopInstancesResponse(AbstractModel):
-    """StopInstances返回参数结构体
+    """StopInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4217,20 +4217,20 @@ class StopInstancesResponse(AbstractModel):
 
 
 class StorageBlock(AbstractModel):
-    """HDD的本地存储信息
+    """HDD的本地儲存訊息
 
     """
 
     def __init__(self):
         """
-        :param Type: HDD本地存储类型，值为：LOCAL_PRO.
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Type: HDD本地儲存類型，值爲：LOCAL_PRO.
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Type: str
-        :param MinSize: HDD本地存储的最小容量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MinSize: HDD本地儲存的最小容量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MinSize: int
-        :param MaxSize: HDD本地存储的最大容量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MaxSize: HDD本地儲存的最大容量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxSize: int
         """
         self.Type = None
@@ -4245,15 +4245,15 @@ class StorageBlock(AbstractModel):
 
 
 class SyncImagesRequest(AbstractModel):
-    """SyncImages请求参数结构体
+    """SyncImages請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageIds: 镜像ID列表 ，镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。<br>镜像ID必须满足限制：<br><li>镜像ID对应的镜像状态必须为`NORMAL`。<br><li>镜像大小小于50GB。<br>镜像状态请参考[镜像数据表](/document/api/213/9452#image_state)。
+        :param ImageIds: 映像ID清單 ，映像ID可以通過如下方式獲取：<br><li>通過[DescribeImages](https://cloud.tencent.com/document/api/213/15715)介面返回的`ImageId`獲取。<br><li>通過[映像控制台](https://console.cloud.tencent.com/cvm/image)獲取。<br>映像ID必須滿足限制：<br><li>映像ID對應的映像狀态必須爲`NORMAL`。<br><li>映像大小小於50GB。<br>映像狀态請參考[映像數據表](/document/api/213/9452#image_state)。
         :type ImageIds: list of str
-        :param DestinationRegions: 目的同步地域列表；必须满足限制：<br><li>不能为源地域，<br><li>必须是一个合法的Region。<br><li>暂不支持部分地域同步。<br>具体地域参数请参考[Region](https://cloud.tencent.com/document/product/213/6091)。
+        :param DestinationRegions: 目的同步地域清單；必須滿足限制：<br><li>不能爲源地域，<br><li>必須是一個合法的Region。<br><li>暫不支援部分地域同步。<br>具體地域參數請參考[Region](https://cloud.tencent.com/document/product/213/6091)。
         :type DestinationRegions: list of str
         """
         self.ImageIds = None
@@ -4266,13 +4266,13 @@ class SyncImagesRequest(AbstractModel):
 
 
 class SyncImagesResponse(AbstractModel):
-    """SyncImages返回参数结构体
+    """SyncImages返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4283,17 +4283,17 @@ class SyncImagesResponse(AbstractModel):
 
 
 class SystemDisk(AbstractModel):
-    """描述了操作系统所在块设备即系统盘的信息
+    """描述了作業系統所在塊設備即系統盤的訊息
 
     """
 
     def __init__(self):
         """
-        :param DiskType: 系统盘类型。系统盘类型限制详见[CVM实例配置](/document/product/213/2177)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><br>默认取值：CLOUD_BASIC。
+        :param DiskType: 系統盤類型。系統盤類型限制詳見[CVM實例配置](/document/product/213/2177)。取值範圍：<br><li>LOCAL_BASIC：本地硬碟<br><li>LOCAL_SSD：本地SSD硬碟<br><li>CLOUD_BASIC：普通雲硬碟<br><li>CLOUD_SSD：SSD雲硬碟<br><li>CLOUD_PREMIUM：高效能雲硬碟<br><br>預設取值：CLOUD_BASIC。
         :type DiskType: str
-        :param DiskId: 系统盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。
+        :param DiskId: 系統盤ID。LOCAL_BASIC 和 LOCAL_SSD 類型沒有ID。暫時不支援該參數。
         :type DiskId: str
-        :param DiskSize: 系统盘大小，单位：GB。默认值为 50
+        :param DiskSize: 系統盤大小，單位：GB。預設值爲 50
         :type DiskSize: int
         """
         self.DiskType = None
@@ -4308,15 +4308,15 @@ class SystemDisk(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """标签键值对
+    """标簽鍵值對
 
     """
 
     def __init__(self):
         """
-        :param Key: 标签键
+        :param Key: 标簽鍵
         :type Key: str
-        :param Value: 标签值
+        :param Value: 标簽值
         :type Value: str
         """
         self.Key = None
@@ -4329,15 +4329,15 @@ class Tag(AbstractModel):
 
 
 class TagSpecification(AbstractModel):
-    """创建资源实例时同时绑定的标签对说明
+    """創建資源實例時同時綁定的标簽對說明
 
     """
 
     def __init__(self):
         """
-        :param ResourceType: 标签绑定的资源类型，当前支持类型："instance"和"host"
+        :param ResourceType: 标簽綁定的資源類型，當前支援類型："instance"和"host"
         :type ResourceType: str
-        :param Tags: 标签对列表
+        :param Tags: 标簽對清單
         :type Tags: list of Tag
         """
         self.ResourceType = None
@@ -4355,13 +4355,13 @@ class TagSpecification(AbstractModel):
 
 
 class TerminateInstancesRequest(AbstractModel):
-    """TerminateInstances请求参数结构体
+    """TerminateInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
         """
         self.InstanceIds = None
@@ -4372,13 +4372,13 @@ class TerminateInstancesRequest(AbstractModel):
 
 
 class TerminateInstancesResponse(AbstractModel):
-    """TerminateInstances返回参数结构体
+    """TerminateInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4389,19 +4389,19 @@ class TerminateInstancesResponse(AbstractModel):
 
 
 class VirtualPrivateCloud(AbstractModel):
-    """描述了VPC相关信息，包括子网，IP信息等
+    """描述了VPC相關訊息，包括子網，IP訊息等
 
     """
 
     def __init__(self):
         """
-        :param VpcId: 私有网络ID，形如`vpc-xxx`。有效的VpcId可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc?rid=1)查询；也可以调用接口 [DescribeVpcEx](/document/api/215/1372) ，从接口返回中的`unVpcId`字段获取。若在创建子机时VpcId与SubnetId同时传入`DEFAULT`，则强制使用默认vpc网络。
+        :param VpcId: 私有網絡ID，形如`vpc-xxx`。有效的VpcId可通過登入[控制台](https://console.cloud.tencent.com/vpc/vpc?rid=1)查詢；也可以調用介面 [DescribeVpcEx](/document/api/215/1372) ，從介面返回中的`unVpcId`欄位獲取。若在創建子機時VpcId與SubnetId同時傳入`DEFAULT`，則強制使用預設vpc網絡。
         :type VpcId: str
-        :param SubnetId: 私有网络子网ID，形如`subnet-xxx`。有效的私有网络子网ID可通过登录[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口  [DescribeSubnets](/document/api/215/15784) ，从接口返回中的`unSubnetId`字段获取。若在创建子机时SubnetId与VpcId同时传入`DEFAULT`，则强制使用默认vpc网络。
+        :param SubnetId: 私有網絡子網ID，形如`subnet-xxx`。有效的私有網絡子網ID可通過登入[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查詢；也可以調用介面  [DescribeSubnets](/document/api/215/15784) ，從介面返回中的`unSubnetId`欄位獲取。若在創建子機時SubnetId與VpcId同時傳入`DEFAULT`，則強制使用預設vpc網絡。
         :type SubnetId: str
-        :param AsVpcGateway: 是否用作公网网关。公网网关只有在实例拥有公网IP以及处于私有网络下时才能正常使用。取值范围：<br><li>TRUE：表示用作公网网关<br><li>FALSE：表示不用作公网网关<br><br>默认取值：FALSE。
+        :param AsVpcGateway: 是否用作公網閘道。公網閘道只有在實例擁有公網IP以及處于私有網絡下時才能正常使用。取值範圍：<br><li>TRUE：表示用作公網閘道<br><li>FALSE：表示不用作公網閘道<br><br>預設取值：FALSE。
         :type AsVpcGateway: bool
-        :param PrivateIpAddresses: 私有网络子网 IP 数组，在创建实例、修改实例vpc属性操作中可使用此参数。当前仅批量创建多台实例时支持传入相同子网的多个 IP。
+        :param PrivateIpAddresses: 私有網絡子網 IP 數組，在創建實例、修改實例vpc屬性操作中可使用此參數。當前僅批次創建多台實例時支援傳入相同子網的多個 IP。
         :type PrivateIpAddresses: list of str
         """
         self.VpcId = None
@@ -4418,19 +4418,19 @@ class VirtualPrivateCloud(AbstractModel):
 
 
 class ZoneInfo(AbstractModel):
-    """可用区信息
+    """可用區訊息
 
     """
 
     def __init__(self):
         """
-        :param Zone: 可用区名称，例如，ap-guangzhou-3
+        :param Zone: 可用區名稱，例如，ap-guangzhou-3
         :type Zone: str
-        :param ZoneName: 可用区描述，例如，广州三区
+        :param ZoneName: 可用區描述，例如，廣州三區
         :type ZoneName: str
-        :param ZoneId: 可用区ID
+        :param ZoneId: 可用區ID
         :type ZoneId: str
-        :param ZoneState: 可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
+        :param ZoneState: 可用區狀态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
         :type ZoneState: str
         """
         self.Zone = None

@@ -17,25 +17,25 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class EvaluationRequest(AbstractModel):
-    """Evaluation请求参数结构体
+    """Evaluation請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SessionId: 图片唯一标识，一张图片一个SessionId；
+        :param SessionId: 圖片唯一标識，一張圖片一個SessionId；
         :type SessionId: str
-        :param Image: 图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
+        :param Image: 圖片數據，需要使用base64對圖片的二進制數據進行編碼，與url參數二者填一即可；
         :type Image: str
-        :param HcmAppid: 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+        :param HcmAppid: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【應用管理】下新建。
         :type HcmAppid: str
-        :param Url: 图片url，与Image参数二者填一即可；
+        :param Url: 圖片url，與Image參數二者填一即可；
         :type Url: str
-        :param SupportHorizontalImage: 横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
+        :param SupportHorizontalImage: 橫屏拍攝開關，若開啓則支援傳輸橫屏拍攝的圖片；
         :type SupportHorizontalImage: bool
-        :param RejectNonArithmeticImage: 拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
+        :param RejectNonArithmeticImage: 拒絕非速算圖（如風景圖、人物圖）開關，若開啓，則遇到非速算圖會快速返回拒絕的結果，但極端情況下可能會影響評估結果（比如算式截圖貼到風景畫裏可能被判爲非速算圖直接返回了）。
         :type RejectNonArithmeticImage: bool
-        :param IsAsync: 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+        :param IsAsync: 異步模式标識，0：同步模式，1：異步模式。預設爲同步模式
         :type IsAsync: int
         """
         self.SessionId = None
@@ -58,20 +58,20 @@ class EvaluationRequest(AbstractModel):
 
 
 class EvaluationResponse(AbstractModel):
-    """Evaluation返回参数结构体
+    """Evaluation返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SessionId: 图片唯一标识，一张图片一个SessionId；
+        :param SessionId: 圖片唯一标識，一張圖片一個SessionId；
         :type SessionId: str
-        :param Items: 识别出的算式信息；
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Items: 識别出的算式訊息；
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Items: list of Item
-        :param TaskId: 任务 id，用于查询接口
+        :param TaskId: 任務 id，用于查詢介面
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SessionId = None
@@ -93,22 +93,22 @@ class EvaluationResponse(AbstractModel):
 
 
 class Item(AbstractModel):
-    """识别出的算术式信息及评估结果
+    """識别出的算術式訊息及評估結果
 
     """
 
     def __init__(self):
         """
-        :param Item: 识别的算式是否正确
+        :param Item: 識别的算式是否正确
         :type Item: str
-        :param ItemString: 识别的算式
+        :param ItemString: 識别的算式
         :type ItemString: str
-        :param ItemCoord: 识别的算式在图片上的位置信息
+        :param ItemCoord: 識别的算式在圖片上的位置訊息
         :type ItemCoord: :class:`tencentcloud.hcm.v20181106.models.ItemCoord`
-        :param Answer: 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
+        :param Answer: 推薦的答案，暫不支援多個關系運算符、無關系運算符、單位換算錯題的推薦答案返回。
         :type Answer: str
-        :param ExpressionType: 算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ExpressionType: 算式題型編号，如加減乘除四則題型，具體題型及編号如下：1 加減乘除四則 2 加減乘除已知結果求運算因子3 判斷大小 4 約等于估算 5 帶餘數除法 6 分數四則運算 7 單位換算 8 豎式加減法 9 豎式乘除法 10 脫式計算 11 解方程
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ExpressionType: str
         """
         self.Item = None
@@ -129,7 +129,7 @@ class Item(AbstractModel):
 
 
 class ItemCoord(AbstractModel):
-    """目标算式在图片上的坐标信息
+    """目标算式在圖片上的坐标訊息
 
     """
 
@@ -137,11 +137,11 @@ class ItemCoord(AbstractModel):
         """
         :param Height: 算式高度
         :type Height: int
-        :param Width: 算式宽度
+        :param Width: 算式寬度
         :type Width: int
-        :param X: 算式图的左上角横坐标
+        :param X: 算式圖的左上角橫坐标
         :type X: int
-        :param Y: 算式图的左上角纵坐标
+        :param Y: 算式圖的左上角縱坐标
         :type Y: int
         """
         self.Height = None

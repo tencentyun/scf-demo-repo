@@ -287,4 +287,3 @@ def get_arraytypes ():
     DEPRECATED - only numpy arrays are now supported.
     """
     return ("numpy",)
-

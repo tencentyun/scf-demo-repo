@@ -6,18 +6,17 @@ stage: dev
 inputs:
   name: dial_url_by_timer
   src: ./
-  description: 本示例主要演示定时拨测 URL 列表中的地址，当拨测失败时，通过邮件发送告警
+  description: 本範例主要演示定時撥測 URL 清單中的網址，當撥測失敗時，通過郵件發送告警
   handler: index.main_handler
   runtime: Nodejs6.10
   namespace: default
   region: ap-guangzhou
   memorySize: 128
   timeout: 3
-  events: # 触发器
-    - timer: # 定时触发器
+  events: # 觸發器
+    - timer: # 定時觸發器
         name: timer
         parameters:
-          cronExpression: '0 */5 * * * * *' # 每5分钟触发一次
+          cronExpression: '0 */5 * * * * *' # 每5分鍾觸發一次
           enable: true
-          argument: argument # 额外的参数
-
+          argument: argument # 額外的參數

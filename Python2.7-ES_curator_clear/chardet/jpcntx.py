@@ -230,4 +230,3 @@ class EUCJPContextAnalysis(JapaneseContextAnalysis):
 
         return -1, char_len
 
-

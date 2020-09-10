@@ -26,9 +26,9 @@ class TicmClient(AbstractClient):
 
 
     def ImageModeration(self, request):
-        """本接口提供多种维度的图像审核能力，支持色情和性感内容识别，政治人物和涉政敏感场景识别，以及暴恐人物、场景、旗帜标识等违禁内容的识别。
+        """本介面提供多種維度的圖像審核能力，支援色情和性感内容識别，政治人物和涉政敏感場景識别，以及暴恐人物、場景、旗幟标識等違禁内容的識别。
 
-        :param request: 调用ImageModeration所需参数的结构体。
+        :param request: 調用ImageModeration所需參數的結構體。
         :type request: :class:`tencentcloud.ticm.v20181127.models.ImageModerationRequest`
         :rtype: :class:`tencentcloud.ticm.v20181127.models.ImageModerationResponse`
 

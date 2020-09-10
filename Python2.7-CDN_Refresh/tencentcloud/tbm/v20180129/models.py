@@ -17,13 +17,13 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AgePortrait(AbstractModel):
-    """用户年龄画像
+    """用戶年齡畫像
 
     """
 
     def __init__(self):
         """
-        :param AgeRange: 年龄区间
+        :param AgeRange: 年齡區間
         :type AgeRange: str
         :param Percent: 百分比
         :type Percent: float
@@ -38,13 +38,13 @@ class AgePortrait(AbstractModel):
 
 
 class AgePortraitInfo(AbstractModel):
-    """用户年龄画像元素数组
+    """用戶年齡畫像元素數組
 
     """
 
     def __init__(self):
         """
-        :param PortraitSet: 用户年龄画像数组
+        :param PortraitSet: 用戶年齡畫像數組
         :type PortraitSet: list of AgePortrait
         """
         self.PortraitSet = None
@@ -60,25 +60,25 @@ class AgePortraitInfo(AbstractModel):
 
 
 class BrandReportArticle(AbstractModel):
-    """文章信息
+    """文章訊息
 
     """
 
     def __init__(self):
         """
-        :param Title: 文章标题
+        :param Title: 文章标題
         :type Title: str
-        :param Url: 文章url地址
+        :param Url: 文章url網址
         :type Url: str
-        :param FromSite: 文章来源
+        :param FromSite: 文章來源
         :type FromSite: str
-        :param PubTime: 文章发表日期
+        :param PubTime: 文章發表日期
         :type PubTime: str
-        :param Flag: 文章标识
+        :param Flag: 文章标識
         :type Flag: int
-        :param Hot: 文章热度值
+        :param Hot: 文章熱度值
         :type Hot: int
-        :param Level: 文章来源等级
+        :param Level: 文章來源等級
         :type Level: int
         :param Abstract: 文章摘要
         :type Abstract: str
@@ -109,17 +109,17 @@ class BrandReportArticle(AbstractModel):
 
 
 class Comment(AbstractModel):
-    """用户好评差评个数信息
+    """用戶好評差評個數訊息
 
     """
 
     def __init__(self):
         """
-        :param Date: 评论的日期
+        :param Date: 評論的日期
         :type Date: str
-        :param NegCommentCount: 差评的个数
+        :param NegCommentCount: 差評的個數
         :type NegCommentCount: int
-        :param PosCommentCount: 好评的个数
+        :param PosCommentCount: 好評的個數
         :type PosCommentCount: int
         """
         self.Date = None
@@ -134,15 +134,15 @@ class Comment(AbstractModel):
 
 
 class CommentInfo(AbstractModel):
-    """用户评论内容类型
+    """用戶評論内容類型
 
     """
 
     def __init__(self):
         """
-        :param Comment: 用户评论内容
+        :param Comment: 用戶評論内容
         :type Comment: str
-        :param Date: 评论的时间
+        :param Date: 評論的時間
         :type Date: str
         """
         self.Comment = None
@@ -155,15 +155,15 @@ class CommentInfo(AbstractModel):
 
 
 class DateCount(AbstractModel):
-    """按日期的统计数据
+    """按日期的統計數據
 
     """
 
     def __init__(self):
         """
-        :param Date: 统计日期
+        :param Date: 統計日期
         :type Date: str
-        :param Count: 统计值
+        :param Count: 統計值
         :type Count: int
         """
         self.Date = None
@@ -176,7 +176,7 @@ class DateCount(AbstractModel):
 
 
 class DescribeBrandCommentCountRequest(AbstractModel):
-    """DescribeBrandCommentCount请求参数结构体
+    """DescribeBrandCommentCount請求參數結構體
 
     """
 
@@ -184,9 +184,9 @@ class DescribeBrandCommentCountRequest(AbstractModel):
         """
         :param BrandId: 品牌ID
         :type BrandId: str
-        :param StartDate: 查询开始日期
+        :param StartDate: 查詢開始日期
         :type StartDate: str
-        :param EndDate: 查询结束日期
+        :param EndDate: 查詢結束日期
         :type EndDate: str
         """
         self.BrandId = None
@@ -201,15 +201,15 @@ class DescribeBrandCommentCountRequest(AbstractModel):
 
 
 class DescribeBrandCommentCountResponse(AbstractModel):
-    """DescribeBrandCommentCount返回参数结构体
+    """DescribeBrandCommentCount返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CommentSet: 按天统计好评/差评数
+        :param CommentSet: 按天統計好評/差評數
         :type CommentSet: list of Comment
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CommentSet = None
@@ -227,7 +227,7 @@ class DescribeBrandCommentCountResponse(AbstractModel):
 
 
 class DescribeBrandExposureRequest(AbstractModel):
-    """DescribeBrandExposure请求参数结构体
+    """DescribeBrandExposure請求參數結構體
 
     """
 
@@ -235,9 +235,9 @@ class DescribeBrandExposureRequest(AbstractModel):
         """
         :param BrandId: 品牌ID
         :type BrandId: str
-        :param StartDate: 查询开始时间
+        :param StartDate: 查詢開始時間
         :type StartDate: str
-        :param EndDate: 查询结束时间
+        :param EndDate: 查詢結束時間
         :type EndDate: str
         """
         self.BrandId = None
@@ -252,17 +252,17 @@ class DescribeBrandExposureRequest(AbstractModel):
 
 
 class DescribeBrandExposureResponse(AbstractModel):
-    """DescribeBrandExposure返回参数结构体
+    """DescribeBrandExposure返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 累计曝光量
+        :param TotalCount: 累計曝光量
         :type TotalCount: int
-        :param DateCountSet: 按天计算的统计数据
+        :param DateCountSet: 按天計算的統計數據
         :type DateCountSet: list of DateCount
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -282,7 +282,7 @@ class DescribeBrandExposureResponse(AbstractModel):
 
 
 class DescribeBrandMediaReportRequest(AbstractModel):
-    """DescribeBrandMediaReport请求参数结构体
+    """DescribeBrandMediaReport請求參數結構體
 
     """
 
@@ -290,9 +290,9 @@ class DescribeBrandMediaReportRequest(AbstractModel):
         """
         :param BrandId: 品牌ID
         :type BrandId: str
-        :param StartDate: 查询开始时间
+        :param StartDate: 查詢開始時間
         :type StartDate: str
-        :param EndDate: 查询结束时间
+        :param EndDate: 查詢結束時間
         :type EndDate: str
         """
         self.BrandId = None
@@ -307,17 +307,17 @@ class DescribeBrandMediaReportRequest(AbstractModel):
 
 
 class DescribeBrandMediaReportResponse(AbstractModel):
-    """DescribeBrandMediaReport返回参数结构体
+    """DescribeBrandMediaReport返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 查询范围内文章总数
+        :param TotalCount: 查詢範圍内文章總數
         :type TotalCount: int
-        :param DateCountSet: 按天计算的每天文章数
+        :param DateCountSet: 按天計算的每天文章數
         :type DateCountSet: list of DateCount
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -337,7 +337,7 @@ class DescribeBrandMediaReportResponse(AbstractModel):
 
 
 class DescribeBrandNegCommentsRequest(AbstractModel):
-    """DescribeBrandNegComments请求参数结构体
+    """DescribeBrandNegComments請求參數結構體
 
     """
 
@@ -345,13 +345,13 @@ class DescribeBrandNegCommentsRequest(AbstractModel):
         """
         :param BrandId: 品牌ID
         :type BrandId: str
-        :param StartDate: 查询开始时间
+        :param StartDate: 查詢開始時間
         :type StartDate: str
-        :param EndDate: 查询结束时间
+        :param EndDate: 查詢結束時間
         :type EndDate: str
-        :param Limit: 查询条数上限，默认20
+        :param Limit: 查詢條數上限，預設20
         :type Limit: int
-        :param Offset: 查询偏移，默认从0开始
+        :param Offset: 查詢偏移，預設從0開始
         :type Offset: int
         """
         self.BrandId = None
@@ -370,17 +370,17 @@ class DescribeBrandNegCommentsRequest(AbstractModel):
 
 
 class DescribeBrandNegCommentsResponse(AbstractModel):
-    """DescribeBrandNegComments返回参数结构体
+    """DescribeBrandNegComments返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BrandCommentSet: 评论列表
+        :param BrandCommentSet: 評論清單
         :type BrandCommentSet: list of CommentInfo
-        :param TotalComments: 总的差评个数
+        :param TotalComments: 總的差評個數
         :type TotalComments: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.BrandCommentSet = None
@@ -400,7 +400,7 @@ class DescribeBrandNegCommentsResponse(AbstractModel):
 
 
 class DescribeBrandPosCommentsRequest(AbstractModel):
-    """DescribeBrandPosComments请求参数结构体
+    """DescribeBrandPosComments請求參數結構體
 
     """
 
@@ -408,13 +408,13 @@ class DescribeBrandPosCommentsRequest(AbstractModel):
         """
         :param BrandId: 品牌ID
         :type BrandId: str
-        :param StartDate: 查询开始时间
+        :param StartDate: 查詢開始時間
         :type StartDate: str
-        :param EndDate: 查询结束时间
+        :param EndDate: 查詢結束時間
         :type EndDate: str
-        :param Limit: 查询条数上限，默认20
+        :param Limit: 查詢條數上限，預設20
         :type Limit: int
-        :param Offset: 查询偏移，从0开始
+        :param Offset: 查詢偏移，從0開始
         :type Offset: int
         """
         self.BrandId = None
@@ -433,17 +433,17 @@ class DescribeBrandPosCommentsRequest(AbstractModel):
 
 
 class DescribeBrandPosCommentsResponse(AbstractModel):
-    """DescribeBrandPosComments返回参数结构体
+    """DescribeBrandPosComments返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BrandCommentSet: 评论列表
+        :param BrandCommentSet: 評論清單
         :type BrandCommentSet: list of CommentInfo
-        :param TotalComments: 总的好评个数
+        :param TotalComments: 總的好評個數
         :type TotalComments: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.BrandCommentSet = None
@@ -463,7 +463,7 @@ class DescribeBrandPosCommentsResponse(AbstractModel):
 
 
 class DescribeBrandSocialOpinionRequest(AbstractModel):
-    """DescribeBrandSocialOpinion请求参数结构体
+    """DescribeBrandSocialOpinion請求參數結構體
 
     """
 
@@ -471,15 +471,15 @@ class DescribeBrandSocialOpinionRequest(AbstractModel):
         """
         :param BrandId: 品牌ID
         :type BrandId: str
-        :param StartDate: 检索开始时间
+        :param StartDate: 檢索開始時間
         :type StartDate: str
-        :param EndDate: 检索结束时间
+        :param EndDate: 檢索結束時間
         :type EndDate: str
-        :param Offset: 查询偏移，默认从0开始
+        :param Offset: 查詢偏移，預設從0開始
         :type Offset: int
-        :param Limit: 查询条数上限，默认20
+        :param Limit: 查詢條數上限，預設20
         :type Limit: int
-        :param ShowList: 列表显示标记，若为true，则返回文章列表详情
+        :param ShowList: 清單顯示标記，若爲true，則返回文章清單詳情
         :type ShowList: bool
         """
         self.BrandId = None
@@ -500,21 +500,21 @@ class DescribeBrandSocialOpinionRequest(AbstractModel):
 
 
 class DescribeBrandSocialOpinionResponse(AbstractModel):
-    """DescribeBrandSocialOpinion返回参数结构体
+    """DescribeBrandSocialOpinion返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ArticleCount: 文章总数
+        :param ArticleCount: 文章總數
         :type ArticleCount: int
-        :param FromCount: 来源统计总数
+        :param FromCount: 來源統計總數
         :type FromCount: int
-        :param AdverseCount: 疑似负面报道总数
+        :param AdverseCount: 疑似負面報道總數
         :type AdverseCount: int
-        :param ArticleSet: 文章列表详情
+        :param ArticleSet: 文章清單詳情
         :type ArticleSet: list of BrandReportArticle
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ArticleCount = None
@@ -538,7 +538,7 @@ class DescribeBrandSocialOpinionResponse(AbstractModel):
 
 
 class DescribeBrandSocialReportRequest(AbstractModel):
-    """DescribeBrandSocialReport请求参数结构体
+    """DescribeBrandSocialReport請求參數結構體
 
     """
 
@@ -546,9 +546,9 @@ class DescribeBrandSocialReportRequest(AbstractModel):
         """
         :param BrandId: 品牌ID
         :type BrandId: str
-        :param StartDate: 查询开始时间
+        :param StartDate: 查詢開始時間
         :type StartDate: str
-        :param EndDate: 查询结束时间
+        :param EndDate: 查詢結束時間
         :type EndDate: str
         """
         self.BrandId = None
@@ -563,17 +563,17 @@ class DescribeBrandSocialReportRequest(AbstractModel):
 
 
 class DescribeBrandSocialReportResponse(AbstractModel):
-    """DescribeBrandSocialReport返回参数结构体
+    """DescribeBrandSocialReport返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 累计统计数据
+        :param TotalCount: 累計統計數據
         :type TotalCount: int
-        :param DateCountSet: 按天计算的统计数据
+        :param DateCountSet: 按天計算的統計數據
         :type DateCountSet: list of DateCount
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -593,23 +593,23 @@ class DescribeBrandSocialReportResponse(AbstractModel):
 
 
 class DescribeIndustryNewsRequest(AbstractModel):
-    """DescribeIndustryNews请求参数结构体
+    """DescribeIndustryNews請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param IndustryId: 行业ID
+        :param IndustryId: 行業ID
         :type IndustryId: str
-        :param StartDate: 查询开始时间
+        :param StartDate: 查詢開始時間
         :type StartDate: str
-        :param EndDate: 查询结束时间
+        :param EndDate: 查詢結束時間
         :type EndDate: str
-        :param ShowList: 是否显示列表，若为 true，则返回文章列表
+        :param ShowList: 是否顯示清單，若爲 true，則返回文章清單
         :type ShowList: bool
-        :param Offset: 查询偏移，默认从0开始
+        :param Offset: 查詢偏移，預設從0開始
         :type Offset: int
-        :param Limit: 查询条数上限，默认20
+        :param Limit: 查詢條數上限，預設20
         :type Limit: int
         """
         self.IndustryId = None
@@ -630,23 +630,23 @@ class DescribeIndustryNewsRequest(AbstractModel):
 
 
 class DescribeIndustryNewsResponse(AbstractModel):
-    """DescribeIndustryNews返回参数结构体
+    """DescribeIndustryNews返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NewsCount: 总计文章数量
+        :param NewsCount: 總計文章數量
         :type NewsCount: int
-        :param FromCount: 总计来源数量
+        :param FromCount: 總計來源數量
         :type FromCount: int
-        :param AdverseCount: 总计疑似负面数量
+        :param AdverseCount: 總計疑似負面數量
         :type AdverseCount: int
-        :param NewsSet: 文章列表
+        :param NewsSet: 文章清單
         :type NewsSet: list of IndustryNews
-        :param DateCountSet: 按天统计的数量列表
+        :param DateCountSet: 按天統計的數量清單
         :type DateCountSet: list of DateCount
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.NewsCount = None
@@ -677,7 +677,7 @@ class DescribeIndustryNewsResponse(AbstractModel):
 
 
 class DescribeUserPortraitRequest(AbstractModel):
-    """DescribeUserPortrait请求参数结构体
+    """DescribeUserPortrait請求參數結構體
 
     """
 
@@ -694,23 +694,23 @@ class DescribeUserPortraitRequest(AbstractModel):
 
 
 class DescribeUserPortraitResponse(AbstractModel):
-    """DescribeUserPortrait返回参数结构体
+    """DescribeUserPortrait返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Age: 年龄画像
+        :param Age: 年齡畫像
         :type Age: :class:`tencentcloud.tbm.v20180129.models.AgePortraitInfo`
-        :param Gender: 性别画像
+        :param Gender: 性别畫像
         :type Gender: :class:`tencentcloud.tbm.v20180129.models.GenderPortraitInfo`
-        :param Province: 省份画像
+        :param Province: 省份畫像
         :type Province: :class:`tencentcloud.tbm.v20180129.models.ProvincePortraitInfo`
-        :param Movie: 电影喜好画像
+        :param Movie: 電影喜好畫像
         :type Movie: :class:`tencentcloud.tbm.v20180129.models.MoviePortraitInfo`
-        :param Star: 明星喜好画像
+        :param Star: 明星喜好畫像
         :type Star: :class:`tencentcloud.tbm.v20180129.models.StarPortraitInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Age = None
@@ -741,7 +741,7 @@ class DescribeUserPortraitResponse(AbstractModel):
 
 
 class GenderPortrait(AbstractModel):
-    """性别画像元素
+    """性别畫像元素
 
     """
 
@@ -762,13 +762,13 @@ class GenderPortrait(AbstractModel):
 
 
 class GenderPortraitInfo(AbstractModel):
-    """用户性别画像元素数组
+    """用戶性别畫像元素數組
 
     """
 
     def __init__(self):
         """
-        :param PortraitSet: 用户性别画像数组
+        :param PortraitSet: 用戶性别畫像數組
         :type PortraitSet: list of GenderPortrait
         """
         self.PortraitSet = None
@@ -784,29 +784,29 @@ class GenderPortraitInfo(AbstractModel):
 
 
 class IndustryNews(AbstractModel):
-    """行业报道新闻
+    """行業報道新聞
 
     """
 
     def __init__(self):
         """
-        :param IndustryId: 行业报道ID
+        :param IndustryId: 行業報道ID
         :type IndustryId: str
-        :param PubTime: 报道发表时间
+        :param PubTime: 報道發表時間
         :type PubTime: str
-        :param FromSite: 报道来源
+        :param FromSite: 報道來源
         :type FromSite: str
-        :param Title: 报道标题
+        :param Title: 報道标題
         :type Title: str
-        :param Url: 报道来源url
+        :param Url: 報道來源url
         :type Url: str
-        :param Level: 报道来源等级
+        :param Level: 報道來源等級
         :type Level: int
-        :param Hot: 热度值
+        :param Hot: 熱度值
         :type Hot: int
-        :param Flag: 报道标识
+        :param Flag: 報道标識
         :type Flag: int
-        :param Abstract: 报道摘要
+        :param Abstract: 報道摘要
         :type Abstract: str
         """
         self.IndustryId = None
@@ -833,13 +833,13 @@ class IndustryNews(AbstractModel):
 
 
 class MoviePortrait(AbstractModel):
-    """电影喜好画像元素
+    """電影喜好畫像元素
 
     """
 
     def __init__(self):
         """
-        :param Name: 电影名称
+        :param Name: 電影名稱
         :type Name: str
         :param Percent: 百分比
         :type Percent: float
@@ -854,13 +854,13 @@ class MoviePortrait(AbstractModel):
 
 
 class MoviePortraitInfo(AbstractModel):
-    """用户喜好电影画像元素数组
+    """用戶喜好電影畫像元素數組
 
     """
 
     def __init__(self):
         """
-        :param PortraitSet: 用户喜好电影画像数组
+        :param PortraitSet: 用戶喜好電影畫像數組
         :type PortraitSet: list of MoviePortrait
         """
         self.PortraitSet = None
@@ -876,13 +876,13 @@ class MoviePortraitInfo(AbstractModel):
 
 
 class ProvincePortrait(AbstractModel):
-    """省份画像元素
+    """省份畫像元素
 
     """
 
     def __init__(self):
         """
-        :param Province: 省份名称
+        :param Province: 省份名稱
         :type Province: str
         :param Percent: 百分比
         :type Percent: float
@@ -897,13 +897,13 @@ class ProvincePortrait(AbstractModel):
 
 
 class ProvincePortraitInfo(AbstractModel):
-    """用户省份画像元素数组
+    """用戶省份畫像元素數組
 
     """
 
     def __init__(self):
         """
-        :param PortraitSet: 用户省份画像数组
+        :param PortraitSet: 用戶省份畫像數組
         :type PortraitSet: list of ProvincePortrait
         """
         self.PortraitSet = None
@@ -919,13 +919,13 @@ class ProvincePortraitInfo(AbstractModel):
 
 
 class StarPortrait(AbstractModel):
-    """明星喜好画像元素
+    """明星喜好畫像元素
 
     """
 
     def __init__(self):
         """
-        :param Name: 喜欢的明星名字
+        :param Name: 喜歡的明星名字
         :type Name: str
         :param Percent: 百分比
         :type Percent: float
@@ -940,13 +940,13 @@ class StarPortrait(AbstractModel):
 
 
 class StarPortraitInfo(AbstractModel):
-    """用户喜好的明星画像元素数组
+    """用戶喜好的明星畫像元素數組
 
     """
 
     def __init__(self):
         """
-        :param PortraitSet: 用户喜好的明星画像数组
+        :param PortraitSet: 用戶喜好的明星畫像數組
         :type PortraitSet: list of StarPortrait
         """
         self.PortraitSet = None

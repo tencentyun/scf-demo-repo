@@ -28,4 +28,3 @@ def _get_ciphers_from_sockets(brokers):
         if ciph is not None:
             ciphers.add(ciph[0])
     return ','.join(ciphers)
-

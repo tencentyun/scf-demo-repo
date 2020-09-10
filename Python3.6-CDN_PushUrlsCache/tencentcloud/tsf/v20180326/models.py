@@ -17,7 +17,7 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AddClusterInstancesRequest(AbstractModel):
-    """AddClusterInstances请求参数结构体
+    """AddClusterInstances請求參數結構體
 
     """
 
@@ -25,19 +25,19 @@ class AddClusterInstancesRequest(AbstractModel):
         """
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param InstanceIdList: 云主机ID列表
+        :param InstanceIdList: 雲主機ID清單
         :type InstanceIdList: list of str
-        :param OsName: 操作系统名称
+        :param OsName: 作業系統名稱
         :type OsName: str
-        :param ImageId: 操作系统镜像ID
+        :param ImageId: 作業系統映像ID
         :type ImageId: str
-        :param Password: 重装系统密码设置
+        :param Password: 重灌系統密碼設置
         :type Password: str
-        :param KeyId: 重装系统，关联密钥设置
+        :param KeyId: 重灌系統，關聯金鑰設置
         :type KeyId: str
-        :param SgId: 安全组设置
+        :param SgId: 安全組設置
         :type SgId: str
-        :param InstanceImportMode: 云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
+        :param InstanceImportMode: 雲主機導入方式，虛拟機集群必填，容器集群不填寫此欄位，R：重裝TSF系統映像，M：手動安裝agent
         :type InstanceImportMode: str
         """
         self.ClusterId = None
@@ -62,16 +62,16 @@ class AddClusterInstancesRequest(AbstractModel):
 
 
 class AddClusterInstancesResponse(AbstractModel):
-    """AddClusterInstances返回参数结构体
+    """AddClusterInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 添加云主机的返回列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 添加雲主機的返回清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.AddInstanceResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -86,20 +86,20 @@ class AddClusterInstancesResponse(AbstractModel):
 
 
 class AddInstanceResult(AbstractModel):
-    """添加实例到集群的结果
+    """添加實例到集群的結果
 
     """
 
     def __init__(self):
         """
-        :param FailedInstanceIds: 添加集群失败的节点列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FailedInstanceIds: 添加集群失敗的節點清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FailedInstanceIds: list of str
-        :param SuccInstanceIds: 添加集群成功的节点列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SuccInstanceIds: 添加集群成功的節點清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SuccInstanceIds: list of str
-        :param TimeoutInstanceIds: 添加集群超时的节点列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TimeoutInstanceIds: 添加集群超時的節點清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TimeoutInstanceIds: list of str
         """
         self.FailedInstanceIds = None
@@ -114,7 +114,7 @@ class AddInstanceResult(AbstractModel):
 
 
 class AddInstancesRequest(AbstractModel):
-    """AddInstances请求参数结构体
+    """AddInstances請求參數結構體
 
     """
 
@@ -122,19 +122,19 @@ class AddInstancesRequest(AbstractModel):
         """
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param InstanceIdList: 云主机ID列表
+        :param InstanceIdList: 雲主機ID清單
         :type InstanceIdList: list of str
-        :param OsName: 操作系统名称
+        :param OsName: 作業系統名稱
         :type OsName: str
-        :param ImageId: 操作系统镜像ID
+        :param ImageId: 作業系統映像ID
         :type ImageId: str
-        :param Password: 重装系统密码设置
+        :param Password: 重灌系統密碼設置
         :type Password: str
-        :param KeyId: 重装系统，关联密钥设置
+        :param KeyId: 重灌系統，關聯金鑰設置
         :type KeyId: str
-        :param SgId: 安全组设置
+        :param SgId: 安全組設置
         :type SgId: str
-        :param InstanceImportMode: 云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
+        :param InstanceImportMode: 雲主機導入方式，虛拟機集群必填，容器集群不填寫此欄位，R：重裝TSF系統映像，M：手動安裝agent
         :type InstanceImportMode: str
         """
         self.ClusterId = None
@@ -159,16 +159,16 @@ class AddInstancesRequest(AbstractModel):
 
 
 class AddInstancesResponse(AbstractModel):
-    """AddInstances返回参数结构体
+    """AddInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 添加云主机是否成功
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 添加雲主機是否成功
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -181,20 +181,20 @@ class AddInstancesResponse(AbstractModel):
 
 
 class ApplicationAttribute(AbstractModel):
-    """应用列表其它字段
+    """應用清單其它欄位
 
     """
 
     def __init__(self):
         """
-        :param InstanceCount: 总实例个数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceCount: 總實例個數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceCount: int
-        :param RunInstanceCount: 运行实例个数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RunInstanceCount: 運作實例個數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RunInstanceCount: int
-        :param GroupCount: 应用下部署组个数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupCount: 應用下佈署組個數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupCount: int
         """
         self.InstanceCount = None
@@ -209,44 +209,44 @@ class ApplicationAttribute(AbstractModel):
 
 
 class ApplicationForPage(AbstractModel):
-    """分页的应用描述信息字段
+    """分頁的應用描述訊息欄位
 
     """
 
     def __init__(self):
         """
-        :param ApplicationId: 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationId: 應用ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationId: str
-        :param ApplicationName: 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationName: 應用名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationName: str
-        :param ApplicationDesc: 应用描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationDesc: 應用描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationDesc: str
-        :param ApplicationType: 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationType: 應用類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationType: str
-        :param MicroserviceType: 微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MicroserviceType: 微服務類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MicroserviceType: str
-        :param ProgLang: 编程语言
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProgLang: 程式設計語言
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProgLang: str
-        :param CreateTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
-        :param UpdateTime: 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdateTime: 更新時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdateTime: str
-        :param ApplicationResourceType: 应用资源类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationResourceType: 應用資源類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationResourceType: str
-        :param ApplicationRuntimeType: 应用runtime类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationRuntimeType: 應用runtime類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationRuntimeType: str
         :param ApigatewayServiceId: Apigateway的serviceId
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApigatewayServiceId: str
         """
         self.ApplicationId = None
@@ -284,85 +284,85 @@ class Cluster(AbstractModel):
     def __init__(self):
         """
         :param ClusterId: 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterId: str
-        :param ClusterName: 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterName: 集群名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterName: str
         :param ClusterDesc: 集群描述
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterDesc: str
-        :param ClusterType: 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterType: 集群類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterType: str
-        :param VpcId: 集群所属私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VpcId: 集群所屬私有網絡ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcId: str
-        :param ClusterStatus: 集群状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterStatus: 集群狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterStatus: str
         :param ClusterCIDR: 集群CIDR
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterCIDR: str
-        :param ClusterTotalCpu: 集群总CPU，单位: 核
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterTotalCpu: 集群總CPU，單位: 核
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterTotalCpu: float
-        :param ClusterTotalMem: 集群总内存，单位: G
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterTotalMem: 集群總内存，單位: G
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterTotalMem: float
-        :param ClusterUsedCpu: 集群已使用CPU，单位: 核
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterUsedCpu: 集群已使用CPU，單位: 核
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterUsedCpu: float
-        :param ClusterUsedMem: 集群已使用内存，单位: G
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterUsedMem: 集群已使用内存，單位: G
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterUsedMem: float
-        :param InstanceCount: 集群机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceCount: 集群機器實例數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceCount: int
-        :param RunInstanceCount: 集群可用的机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RunInstanceCount: 集群可用的機器實例數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RunInstanceCount: int
-        :param NormalInstanceCount: 集群正常状态的机器实例数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NormalInstanceCount: 集群正常狀态的機器實例數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NormalInstanceCount: int
-        :param DeleteFlag: 删除标记：true：可以删除；false：不可删除
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DeleteFlag: 删除标記：true：可以删除；false：不可删除
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeleteFlag: bool
-        :param CreateTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
-        :param UpdateTime: 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdateTime: 更新時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdateTime: str
-        :param TsfRegionId: 集群所属TSF地域ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TsfRegionId: 集群所屬TSF地域ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TsfRegionId: str
-        :param TsfRegionName: 集群所属TSF地域名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TsfRegionName: 集群所屬TSF地域名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TsfRegionName: str
-        :param TsfZoneId: 集群所属TSF可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TsfZoneId: 集群所屬TSF可用區ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TsfZoneId: str
-        :param TsfZoneName: 集群所属TSF可用区名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TsfZoneName: 集群所屬TSF可用區名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TsfZoneName: str
         :param DeleteFlagReason: 集群不可删除的原因
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeleteFlagReason: str
-        :param ClusterLimitCpu: 集群最大CPU限制，单位：核
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterLimitCpu: 集群最大CPU限制，單位：核
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterLimitCpu: float
-        :param ClusterLimitMem: 集群最大内存限制，单位：G
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterLimitMem: 集群最大内存限制，單位：G
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterLimitMem: float
-        :param RunServiceInstanceCount: 集群可用的服务实例数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RunServiceInstanceCount: 集群可用的服務實例數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RunServiceInstanceCount: int
-        :param SubnetId: 集群所属子网ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubnetId: 集群所屬子網ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetId: str
-        :param OperationInfo: 返回给前端的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OperationInfo: 返回給前端的控制訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OperationInfo: :class:`tencentcloud.tsf.v20180326.models.OperationInfo`
         """
         self.ClusterId = None
@@ -427,47 +427,47 @@ class Cluster(AbstractModel):
 
 
 class Config(AbstractModel):
-    """配置项
+    """配置項
 
     """
 
     def __init__(self):
         """
-        :param ConfigId: 配置项ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConfigId: 配置項ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigId: str
-        :param ConfigName: 配置项名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConfigName: 配置項名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigName: str
-        :param ConfigVersion: 配置项版本
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConfigVersion: 配置項版本
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigVersion: str
-        :param ConfigVersionDesc: 配置项版本描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConfigVersionDesc: 配置項版本描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigVersionDesc: str
-        :param ConfigValue: 配置项值
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConfigValue: 配置項值
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigValue: str
-        :param ConfigType: 配置项类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConfigType: 配置項類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigType: str
-        :param CreationTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreationTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreationTime: str
-        :param ApplicationId: 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationId: 應用ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationId: str
-        :param ApplicationName: 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationName: 應用名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationName: str
-        :param DeleteFlag: 删除标识，true：可以删除；false：不可删除
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DeleteFlag: 删除标識，true：可以删除；false：不可删除
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeleteFlag: bool
-        :param LastUpdateTime: 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LastUpdateTime: 最後更新時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LastUpdateTime: str
-        :param ConfigVersionCount: 配置项版本数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConfigVersionCount: 配置項版本數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigVersionCount: int
         """
         self.ConfigId = None
@@ -500,47 +500,47 @@ class Config(AbstractModel):
 
 
 class ConfigRelease(AbstractModel):
-    """配置项发布信息
+    """配置項發布訊息
 
     """
 
     def __init__(self):
         """
-        :param ConfigReleaseId: 配置项发布ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConfigReleaseId: 配置項發布ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigReleaseId: str
-        :param ConfigId: 配置项ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConfigId: 配置項ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigId: str
-        :param ConfigName: 配置项名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConfigName: 配置項名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigName: str
-        :param ConfigVersion: 配置项版本
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConfigVersion: 配置項版本
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigVersion: str
-        :param ReleaseTime: 发布时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ReleaseTime: 發布時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ReleaseTime: str
-        :param GroupId: 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupId: 佈署組ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupId: str
-        :param GroupName: 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupName: 佈署組名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupName: str
-        :param NamespaceId: 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceId: 命名空間ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceId: str
-        :param NamespaceName: 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceName: 命名空間名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceName: str
         :param ClusterId: 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterId: str
-        :param ClusterName: 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterName: 集群名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterName: str
-        :param ReleaseDesc: 发布描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ReleaseDesc: 發布描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ReleaseDesc: str
         """
         self.ConfigReleaseId = None
@@ -573,62 +573,62 @@ class ConfigRelease(AbstractModel):
 
 
 class ConfigReleaseLog(AbstractModel):
-    """配置项发布日志
+    """配置項發布日志
 
     """
 
     def __init__(self):
         """
-        :param ConfigReleaseLogId: 配置项发布日志ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConfigReleaseLogId: 配置項發布日志ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigReleaseLogId: str
-        :param ConfigId: 配置项ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConfigId: 配置項ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigId: str
-        :param ConfigName: 配置项名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConfigName: 配置項名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigName: str
-        :param ConfigVersion: 配置项版本
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConfigVersion: 配置項版本
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigVersion: str
-        :param GroupId: 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupId: 佈署組ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupId: str
-        :param GroupName: 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupName: 佈署組名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupName: str
-        :param NamespaceId: 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceId: 命名空間ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceId: str
-        :param NamespaceName: 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceName: 命名空間名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceName: str
         :param ClusterId: 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterId: str
-        :param ClusterName: 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterName: 集群名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterName: str
-        :param ReleaseTime: 发布时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ReleaseTime: 發布時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ReleaseTime: str
-        :param ReleaseDesc: 发布描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ReleaseDesc: 發布描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ReleaseDesc: str
-        :param ReleaseStatus: 发布状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ReleaseStatus: 發布狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ReleaseStatus: str
-        :param LastConfigId: 上次发布的配置项ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LastConfigId: 上次發布的配置項ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LastConfigId: str
-        :param LastConfigName: 上次发布的配置项名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LastConfigName: 上次發布的配置項名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LastConfigName: str
-        :param LastConfigVersion: 上次发布的配置项版本
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LastConfigVersion: 上次發布的配置項版本
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LastConfigVersion: str
-        :param RollbackFlag: 回滚标识
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RollbackFlag: 回滾标識
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RollbackFlag: bool
         """
         self.ConfigReleaseLogId = None
@@ -671,53 +671,53 @@ class ConfigReleaseLog(AbstractModel):
 
 
 class ContainGroup(AbstractModel):
-    """部署组列表（应用下钻界面的）
+    """佈署組清單（應用下鑽界面的）
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupId: 佈署組ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupId: str
-        :param GroupName: 分组名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupName: 分組名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupName: str
-        :param CreateTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
-        :param Server: 镜像server
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Server: 映像server
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Server: str
-        :param RepoName: 镜像名，如/tsf/nginx
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RepoName: 映像名，如/tsf/nginx
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RepoName: str
-        :param TagName: 镜像版本名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagName: 映像版本名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagName: str
         :param ClusterId: 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterId: str
-        :param ClusterName: 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterName: 集群名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterName: str
-        :param NamespaceId: 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceId: 命名空間ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceId: str
-        :param NamespaceName: 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceName: 命名空間名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceName: str
-        :param CpuRequest: 初始分配的 CPU 核数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CpuRequest: 初始分配的 CPU 核數，對應 K8S request
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CpuRequest: str
-        :param CpuLimit: 最大分配的 CPU 核数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CpuLimit: 最大分配的 CPU 核數，對應 K8S limit
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CpuLimit: str
-        :param MemRequest: 初始分配的内存 MiB 数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MemRequest: 初始分配的内存 MiB 數，對應 K8S request
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MemRequest: str
-        :param MemLimit: 最大分配的内存 MiB 数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MemLimit: 最大分配的内存 MiB 數，對應 K8S limit
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MemLimit: str
         """
         self.GroupId = None
@@ -754,16 +754,16 @@ class ContainGroup(AbstractModel):
 
 
 class ContainGroupResult(AbstractModel):
-    """部署组列表（应用下钻）
+    """佈署組清單（應用下鑽）
 
     """
 
     def __init__(self):
         """
-        :param Content: 部署组列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Content: 佈署組清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Content: list of ContainGroup
-        :param TotalCount: 总记录数
+        :param TotalCount: 總記錄數
         :type TotalCount: int
         """
         self.Content = None
@@ -781,113 +781,113 @@ class ContainGroupResult(AbstractModel):
 
 
 class ContainerGroupDetail(AbstractModel):
-    """容器部署组详情
+    """容器佈署組詳情
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupId: 佈署組ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupId: str
-        :param GroupName: 分组名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupName: 分組名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupName: str
-        :param InstanceNum: 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceNum: 實例總數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceNum: int
-        :param CurrentNum: 已启动实例总数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CurrentNum: 已啓動實例總數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CurrentNum: int
-        :param CreateTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
-        :param Server: 镜像server
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Server: 映像server
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Server: str
-        :param Reponame: 镜像名，如/tsf/nginx
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Reponame: 映像名，如/tsf/nginx
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Reponame: str
-        :param TagName: 镜像版本名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagName: 映像版本名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagName: str
         :param ClusterId: 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterId: str
-        :param ClusterName: 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterName: 集群名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterName: str
-        :param NamespaceId: 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceId: 命名空間ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceId: str
-        :param NamespaceName: 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceName: 命名空間名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceName: str
-        :param ApplicationId: 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationId: 應用ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationId: str
-        :param LbIp: 负载均衡ip
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LbIp: 負載均衡ip
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LbIp: str
-        :param ApplicationType: 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationType: 應用類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationType: str
         :param ClusterIp: Service ip
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterIp: str
-        :param NodePort: NodePort端口，只有公网和NodePort访问方式才有值
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NodePort: NodePort端口，只有公網和NodePort訪問方式才有值
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NodePort: int
-        :param CpuLimit: 最大分配的 CPU 核数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CpuLimit: 最大分配的 CPU 核數，對應 K8S limit
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CpuLimit: str
-        :param MemLimit: 最大分配的内存 MiB 数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MemLimit: 最大分配的内存 MiB 數，對應 K8S limit
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MemLimit: str
-        :param AccessType: 0:公网 1:集群内访问 2：NodePort
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AccessType: 0:公網 1:集群内訪問 2：NodePort
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AccessType: int
-        :param UpdateType: 更新方式：0:快速更新 1:滚动更新
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdateType: 更新方式：0:快速更新 1:滾動更新
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdateType: int
-        :param UpdateIvl: 更新间隔,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdateIvl: 更新間隔,單位秒
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdateIvl: int
-        :param ProtocolPorts: 端口数组对象
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProtocolPorts: 端口數組對象
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProtocolPorts: list of ProtocolPort
-        :param Envs: 环境变量数组对象
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Envs: 環境變量數組對象
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Envs: list of Env
-        :param ApplicationName: 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationName: 應用名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationName: str
-        :param Message: pod错误信息描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Message: pod錯誤訊息描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Message: str
-        :param Status: 部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Status: 佈署組狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: str
-        :param MicroserviceType: 服务类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MicroserviceType: 服務類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MicroserviceType: str
-        :param CpuRequest: 初始分配的 CPU 核数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CpuRequest: 初始分配的 CPU 核數，對應 K8S request
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CpuRequest: str
-        :param MemRequest: 初始分配的内存 MiB 数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MemRequest: 初始分配的内存 MiB 數，對應 K8S request
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MemRequest: str
-        :param SubnetId: 子网id
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubnetId: 子網id
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetId: str
-        :param GroupResourceType: 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupResourceType: 佈署組資源類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupResourceType: str
-        :param InstanceCount: 部署组实例个数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceCount: 佈署組實例個數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceCount: int
-        :param UpdatedTime: 部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdatedTime: 佈署組更新時間戳
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdatedTime: int
         """
         self.GroupId = None
@@ -974,29 +974,29 @@ class ContainerGroupDetail(AbstractModel):
 
 
 class CosCredentials(AbstractModel):
-    """cos临时帐号信息
+    """cos臨時帳号訊息
 
     """
 
     def __init__(self):
         """
-        :param SessionToken: 会话Token
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SessionToken: 會話Token
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SessionToken: str
-        :param TmpAppId: 临时应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TmpAppId: 臨時應用ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TmpAppId: str
-        :param TmpSecretId: 临时调用者身份ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TmpSecretId: 臨時調用者身份ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TmpSecretId: str
-        :param TmpSecretKey: 临时密钥
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TmpSecretKey: 臨時金鑰
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TmpSecretKey: str
-        :param ExpiredTime: 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ExpiredTime: 過期時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ExpiredTime: int
         :param Domain: 所在域
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Domain: str
         """
         self.SessionToken = None
@@ -1017,23 +1017,23 @@ class CosCredentials(AbstractModel):
 
 
 class CosDownloadInfo(AbstractModel):
-    """Cos下载所需信息
+    """Cos下載所需訊息
 
     """
 
     def __init__(self):
         """
-        :param Bucket: 桶名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Bucket: 桶名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Bucket: str
         :param Region: 地域
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Region: str
-        :param Path: 路径
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Path: 路徑
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Path: str
-        :param Credentials: 鉴权信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Credentials: 鑒權訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Credentials: :class:`tencentcloud.tsf.v20180326.models.CosCredentials`
         """
         self.Bucket = None
@@ -1052,25 +1052,25 @@ class CosDownloadInfo(AbstractModel):
 
 
 class CosUploadInfo(AbstractModel):
-    """cos上传所需信息
+    """cos上傳所需訊息
 
     """
 
     def __init__(self):
         """
-        :param PkgId: 程序包ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PkgId: 程式包ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PkgId: str
         :param Bucket: 桶
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Bucket: str
         :param Region: 目标地域
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Region: str
-        :param Path: 存储路径
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Path: 儲存路徑
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Path: str
-        :param Credentials: 鉴权信息
+        :param Credentials: 鑒權訊息
         :type Credentials: :class:`tencentcloud.tsf.v20180326.models.CosCredentials`
         """
         self.PkgId = None
@@ -1091,25 +1091,25 @@ class CosUploadInfo(AbstractModel):
 
 
 class CreateApplicationRequest(AbstractModel):
-    """CreateApplication请求参数结构体
+    """CreateApplication請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ApplicationName: 应用名称
+        :param ApplicationName: 應用名稱
         :type ApplicationName: str
-        :param ApplicationType: 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
+        :param ApplicationType: 應用類型，V：虛拟機應用；C：容器應用；S：serverless應用
         :type ApplicationType: str
-        :param MicroserviceType: 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
+        :param MicroserviceType: 應用微服務類型，M：service mesh應用；N：普通應用；G：閘道應用
         :type MicroserviceType: str
-        :param ApplicationDesc: 应用描述
+        :param ApplicationDesc: 應用描述
         :type ApplicationDesc: str
-        :param ApplicationLogConfig: 应用日志配置项，废弃参数
+        :param ApplicationLogConfig: 應用日志配置項，廢棄參數
         :type ApplicationLogConfig: str
-        :param ApplicationResourceType: 应用资源类型，废弃参数
+        :param ApplicationResourceType: 應用資源類型，廢棄參數
         :type ApplicationResourceType: str
-        :param ApplicationRuntimeType: 应用runtime类型
+        :param ApplicationRuntimeType: 應用runtime類型
         :type ApplicationRuntimeType: str
         """
         self.ApplicationName = None
@@ -1132,16 +1132,16 @@ class CreateApplicationRequest(AbstractModel):
 
 
 class CreateApplicationResponse(AbstractModel):
-    """CreateApplication返回参数结构体
+    """CreateApplication返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 應用ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1154,27 +1154,27 @@ class CreateApplicationResponse(AbstractModel):
 
 
 class CreateClusterRequest(AbstractModel):
-    """CreateCluster请求参数结构体
+    """CreateCluster請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterName: 集群名称
+        :param ClusterName: 集群名稱
         :type ClusterName: str
-        :param ClusterType: 集群类型
+        :param ClusterType: 集群類型
         :type ClusterType: str
-        :param VpcId: 私有网络ID
+        :param VpcId: 私有網絡ID
         :type VpcId: str
-        :param ClusterCIDR: 分配给集群容器和服务IP的CIDR
+        :param ClusterCIDR: 分配給集群容器和服務IP的CIDR
         :type ClusterCIDR: str
-        :param ClusterDesc: 集群备注
+        :param ClusterDesc: 集群備注
         :type ClusterDesc: str
-        :param TsfRegionId: 集群所属TSF地域
+        :param TsfRegionId: 集群所屬TSF地域
         :type TsfRegionId: str
-        :param TsfZoneId: 集群所属TSF可用区
+        :param TsfZoneId: 集群所屬TSF可用區
         :type TsfZoneId: str
-        :param SubnetId: 私有网络子网ID
+        :param SubnetId: 私有網絡子網ID
         :type SubnetId: str
         """
         self.ClusterName = None
@@ -1199,7 +1199,7 @@ class CreateClusterRequest(AbstractModel):
 
 
 class CreateClusterResponse(AbstractModel):
-    """CreateCluster返回参数结构体
+    """CreateCluster返回參數結構體
 
     """
 
@@ -1207,7 +1207,7 @@ class CreateClusterResponse(AbstractModel):
         """
         :param Result: 集群ID
         :type Result: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1220,25 +1220,25 @@ class CreateClusterResponse(AbstractModel):
 
 
 class CreateConfigRequest(AbstractModel):
-    """CreateConfig请求参数结构体
+    """CreateConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ConfigName: 配置项名称
+        :param ConfigName: 配置項名稱
         :type ConfigName: str
-        :param ConfigVersion: 配置项版本
+        :param ConfigVersion: 配置項版本
         :type ConfigVersion: str
-        :param ConfigValue: 配置项值
+        :param ConfigValue: 配置項值
         :type ConfigValue: str
-        :param ApplicationId: 应用ID
+        :param ApplicationId: 應用ID
         :type ApplicationId: str
-        :param ConfigVersionDesc: 配置项版本描述
+        :param ConfigVersionDesc: 配置項版本描述
         :type ConfigVersionDesc: str
-        :param ConfigType: 配置项值类型
+        :param ConfigType: 配置項值類型
         :type ConfigType: str
-        :param EncodeWithBase64: Base64编码的配置项
+        :param EncodeWithBase64: Base64編碼的配置項
         :type EncodeWithBase64: bool
         """
         self.ConfigName = None
@@ -1261,16 +1261,16 @@ class CreateConfigRequest(AbstractModel):
 
 
 class CreateConfigResponse(AbstractModel):
-    """CreateConfig返回参数结构体
+    """CreateConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: true：创建成功；false：创建失败
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: true：創建成功；false：創建失敗
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1283,59 +1283,59 @@ class CreateConfigResponse(AbstractModel):
 
 
 class CreateContainGroupRequest(AbstractModel):
-    """CreateContainGroup请求参数结构体
+    """CreateContainGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ApplicationId: 分组所属应用ID
+        :param ApplicationId: 分組所屬應用ID
         :type ApplicationId: str
-        :param NamespaceId: 分组所属命名空间ID
+        :param NamespaceId: 分組所屬命名空間ID
         :type NamespaceId: str
-        :param GroupName: 分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
+        :param GroupName: 分組名稱欄位，長度1~60，字母或下劃線開頭，可包含字母數字下劃線
         :type GroupName: str
-        :param InstanceNum: 实例数量
+        :param InstanceNum: 實例數量
         :type InstanceNum: int
-        :param AccessType: 0:公网 1:集群内访问 2：NodePort
+        :param AccessType: 0:公網 1:集群内訪問 2：NodePort
         :type AccessType: int
-        :param ProtocolPorts: 数组对象，见下方定义
+        :param ProtocolPorts: 數組對象，見下方定義
         :type ProtocolPorts: list of ProtocolPort
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param CpuLimit: 最大分配 CPU 核数，对应 K8S limit
+        :param CpuLimit: 最大分配 CPU 核數，對應 K8S limit
         :type CpuLimit: str
-        :param MemLimit: 最大分配内存 MiB 数，对应 K8S limit
+        :param MemLimit: 最大分配内存 MiB 數，對應 K8S limit
         :type MemLimit: str
-        :param GroupComment: 分组备注字段，长度应不大于200字符
+        :param GroupComment: 分組備注欄位，長度應不大于200字元
         :type GroupComment: str
-        :param UpdateType: 更新方式：0:快速更新 1:滚动更新
+        :param UpdateType: 更新方式：0:快速更新 1:滾動更新
         :type UpdateType: int
-        :param UpdateIvl: 滚动更新必填，更新间隔
+        :param UpdateIvl: 滾動更新必填，更新間隔
         :type UpdateIvl: int
-        :param CpuRequest: 初始分配的 CPU 核数，对应 K8S request
+        :param CpuRequest: 初始分配的 CPU 核數，對應 K8S request
         :type CpuRequest: str
-        :param MemRequest: 初始分配的内存 MiB 数，对应 K8S request
+        :param MemRequest: 初始分配的内存 MiB 數，對應 K8S request
         :type MemRequest: str
-        :param GroupResourceType: 部署组资源类型
+        :param GroupResourceType: 佈署組資源類型
         :type GroupResourceType: str
-        :param SubnetId: 子网ID
+        :param SubnetId: 子網ID
         :type SubnetId: str
-        :param AgentCpuRequest: agent 容器分配的 CPU 核数，对应 K8S 的 request
+        :param AgentCpuRequest: agent 容器分配的 CPU 核數，對應 K8S 的 request
         :type AgentCpuRequest: str
-        :param AgentCpuLimit: agent 容器最大的 CPU 核数，对应 K8S 的 limit
+        :param AgentCpuLimit: agent 容器最大的 CPU 核數，對應 K8S 的 limit
         :type AgentCpuLimit: str
-        :param AgentMemRequest: agent 容器分配的内存 MiB 数，对应 K8S 的 request
+        :param AgentMemRequest: agent 容器分配的内存 MiB 數，對應 K8S 的 request
         :type AgentMemRequest: str
-        :param AgentMemLimit: agent 容器最大的内存 MiB 数，对应 K8S 的 limit
+        :param AgentMemLimit: agent 容器最大的内存 MiB 數，對應 K8S 的 limit
         :type AgentMemLimit: str
-        :param IstioCpuRequest: istioproxy 容器分配的 CPU 核数，对应 K8S 的 request
+        :param IstioCpuRequest: istioproxy 容器分配的 CPU 核數，對應 K8S 的 request
         :type IstioCpuRequest: str
-        :param IstioCpuLimit: istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit
+        :param IstioCpuLimit: istioproxy 容器最大的 CPU 核數，對應 K8S 的 limit
         :type IstioCpuLimit: str
-        :param IstioMemRequest: istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
+        :param IstioMemRequest: istioproxy 容器分配的内存 MiB 數，對應 K8S 的 request
         :type IstioMemRequest: str
-        :param IstioMemLimit: istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
+        :param IstioMemLimit: istioproxy 容器最大的内存 MiB 數，對應 K8S 的 limit
         :type IstioMemLimit: str
         """
         self.ApplicationId = None
@@ -1397,15 +1397,15 @@ class CreateContainGroupRequest(AbstractModel):
 
 
 class CreateContainGroupResponse(AbstractModel):
-    """CreateContainGroup返回参数结构体
+    """CreateContainGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 返回创建成功的部署组ID，返回null表示失败
+        :param Result: 返回創建成功的佈署組ID，返回null表示失敗
         :type Result: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1418,23 +1418,23 @@ class CreateContainGroupResponse(AbstractModel):
 
 
 class CreateGroupRequest(AbstractModel):
-    """CreateGroup请求参数结构体
+    """CreateGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ApplicationId: 部署组所属的应用ID
+        :param ApplicationId: 佈署組所屬的應用ID
         :type ApplicationId: str
-        :param NamespaceId: 部署组所属命名空间ID
+        :param NamespaceId: 佈署組所屬命名空間ID
         :type NamespaceId: str
-        :param GroupName: 部署组名称
+        :param GroupName: 佈署組名稱
         :type GroupName: str
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param GroupDesc: 部署组描述
+        :param GroupDesc: 佈署組描述
         :type GroupDesc: str
-        :param GroupResourceType: 部署组资源类型
+        :param GroupResourceType: 佈署組資源類型
         :type GroupResourceType: str
         """
         self.ApplicationId = None
@@ -1455,16 +1455,16 @@ class CreateGroupRequest(AbstractModel):
 
 
 class CreateGroupResponse(AbstractModel):
-    """CreateGroup返回参数结构体
+    """CreateGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: groupId， null表示创建失败
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: groupId， null表示創建失敗
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1477,17 +1477,17 @@ class CreateGroupResponse(AbstractModel):
 
 
 class CreateMicroserviceRequest(AbstractModel):
-    """CreateMicroservice请求参数结构体
+    """CreateMicroservice請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NamespaceId: 命名空间ID
+        :param NamespaceId: 命名空間ID
         :type NamespaceId: str
-        :param MicroserviceName: 微服务名称
+        :param MicroserviceName: 微服務名稱
         :type MicroserviceName: str
-        :param MicroserviceDesc: 微服务描述信息
+        :param MicroserviceDesc: 微服務描述訊息
         :type MicroserviceDesc: str
         """
         self.NamespaceId = None
@@ -1502,17 +1502,17 @@ class CreateMicroserviceRequest(AbstractModel):
 
 
 class CreateMicroserviceResponse(AbstractModel):
-    """CreateMicroservice返回参数结构体
+    """CreateMicroservice返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 新增微服务是否成功。
+        :param Result: 新增微服務是否成功。
 true：操作成功。
-false：操作失败。
+false：操作失敗。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1525,23 +1525,23 @@ false：操作失败。
 
 
 class CreateNamespaceRequest(AbstractModel):
-    """CreateNamespace请求参数结构体
+    """CreateNamespace請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NamespaceName: 命名空间名称
+        :param NamespaceName: 命名空間名稱
         :type NamespaceName: str
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param NamespaceDesc: 命名空间描述
+        :param NamespaceDesc: 命名空間描述
         :type NamespaceDesc: str
-        :param NamespaceResourceType: 命名空间资源类型(默认值为DEF)
+        :param NamespaceResourceType: 命名空間資源類型(預設值爲DEF)
         :type NamespaceResourceType: str
-        :param NamespaceType: 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
+        :param NamespaceType: 是否是全局命名空間(預設是DEF，表示普通命名空間；GLOBAL表示全局命名空間)
         :type NamespaceType: str
-        :param NamespaceId: 命名空间ID
+        :param NamespaceId: 命名空間ID
         :type NamespaceId: str
         """
         self.NamespaceName = None
@@ -1562,16 +1562,16 @@ class CreateNamespaceRequest(AbstractModel):
 
 
 class CreateNamespaceResponse(AbstractModel):
-    """CreateNamespace返回参数结构体
+    """CreateNamespace返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 成功时为命名空间ID，失败为null
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 成功時爲命名空間ID，失敗爲null
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1584,23 +1584,23 @@ class CreateNamespaceResponse(AbstractModel):
 
 
 class CreatePublicConfigRequest(AbstractModel):
-    """CreatePublicConfig请求参数结构体
+    """CreatePublicConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ConfigName: 配置项名称
+        :param ConfigName: 配置項名稱
         :type ConfigName: str
-        :param ConfigVersion: 配置项版本
+        :param ConfigVersion: 配置項版本
         :type ConfigVersion: str
-        :param ConfigValue: 配置项值，总是接收yaml格式的内容
+        :param ConfigValue: 配置項值，總是接收yaml格式的内容
         :type ConfigValue: str
-        :param ConfigVersionDesc: 配置项版本描述
+        :param ConfigVersionDesc: 配置項版本描述
         :type ConfigVersionDesc: str
-        :param ConfigType: 配置项类型
+        :param ConfigType: 配置項類型
         :type ConfigType: str
-        :param EncodeWithBase64: Base64编码的配置项
+        :param EncodeWithBase64: Base64編碼的配置項
         :type EncodeWithBase64: bool
         """
         self.ConfigName = None
@@ -1621,16 +1621,16 @@ class CreatePublicConfigRequest(AbstractModel):
 
 
 class CreatePublicConfigResponse(AbstractModel):
-    """CreatePublicConfig返回参数结构体
+    """CreatePublicConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: true：创建成功；false：创建失败
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: true：創建成功；false：創建失敗
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1643,19 +1643,19 @@ class CreatePublicConfigResponse(AbstractModel):
 
 
 class CreateServerlessGroupRequest(AbstractModel):
-    """CreateServerlessGroup请求参数结构体
+    """CreateServerlessGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ApplicationId: 分组所属应用ID
+        :param ApplicationId: 分組所屬應用ID
         :type ApplicationId: str
-        :param GroupName: 分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
+        :param GroupName: 分組名稱欄位，長度1~60，字母或下劃線開頭，可包含字母數字下劃線
         :type GroupName: str
-        :param NamespaceId: 分组所属名字空间ID
+        :param NamespaceId: 分組所屬名字空間ID
         :type NamespaceId: str
-        :param ClusterId: 分组所属集群ID
+        :param ClusterId: 分組所屬集群ID
         :type ClusterId: str
         """
         self.ApplicationId = None
@@ -1672,16 +1672,16 @@ class CreateServerlessGroupRequest(AbstractModel):
 
 
 class CreateServerlessGroupResponse(AbstractModel):
-    """CreateServerlessGroup返回参数结构体
+    """CreateServerlessGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 创建成功的部署组ID，返回null表示失败
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 創建成功的佈署組ID，返回null表示失敗
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1694,13 +1694,13 @@ class CreateServerlessGroupResponse(AbstractModel):
 
 
 class DeleteApplicationRequest(AbstractModel):
-    """DeleteApplication请求参数结构体
+    """DeleteApplication請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ApplicationId: 应用ID
+        :param ApplicationId: 應用ID
         :type ApplicationId: str
         """
         self.ApplicationId = None
@@ -1711,18 +1711,18 @@ class DeleteApplicationRequest(AbstractModel):
 
 
 class DeleteApplicationResponse(AbstractModel):
-    """DeleteApplication返回参数结构体
+    """DeleteApplication返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 删除应用操作是否成功。
+        :param Result: 删除應用操作是否成功。
 true：操作成功。
-false：操作失败。
-注意：此字段可能返回 null，表示取不到有效值。
+false：操作失敗。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1735,13 +1735,13 @@ false：操作失败。
 
 
 class DeleteConfigRequest(AbstractModel):
-    """DeleteConfig请求参数结构体
+    """DeleteConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ConfigId: 配置项ID
+        :param ConfigId: 配置項ID
         :type ConfigId: str
         """
         self.ConfigId = None
@@ -1752,15 +1752,15 @@ class DeleteConfigRequest(AbstractModel):
 
 
 class DeleteConfigResponse(AbstractModel):
-    """DeleteConfig返回参数结构体
+    """DeleteConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: true：删除成功；false：删除失败
+        :param Result: true：删除成功；false：删除失敗
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1773,13 +1773,13 @@ class DeleteConfigResponse(AbstractModel):
 
 
 class DeleteContainerGroupRequest(AbstractModel):
-    """DeleteContainerGroup请求参数结构体
+    """DeleteContainerGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID，分组唯一标识
+        :param GroupId: 佈署組ID，分組唯一标識
         :type GroupId: str
         """
         self.GroupId = None
@@ -1790,7 +1790,7 @@ class DeleteContainerGroupRequest(AbstractModel):
 
 
 class DeleteContainerGroupResponse(AbstractModel):
-    """DeleteContainerGroup返回参数结构体
+    """DeleteContainerGroup返回參數結構體
 
     """
 
@@ -1798,9 +1798,9 @@ class DeleteContainerGroupResponse(AbstractModel):
         """
         :param Result: 删除操作是否成功：
 true：成功
-false：失败
+false：失敗
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1813,13 +1813,13 @@ false：失败
 
 
 class DeleteGroupRequest(AbstractModel):
-    """DeleteGroup请求参数结构体
+    """DeleteGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
+        :param GroupId: 佈署組ID
         :type GroupId: str
         """
         self.GroupId = None
@@ -1830,18 +1830,18 @@ class DeleteGroupRequest(AbstractModel):
 
 
 class DeleteGroupResponse(AbstractModel):
-    """DeleteGroup返回参数结构体
+    """DeleteGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 删除部署组操作是否成功。
+        :param Result: 删除佈署組操作是否成功。
 true：操作成功。
-false：操作失败。
-注意：此字段可能返回 null，表示取不到有效值。
+false：操作失敗。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1854,13 +1854,13 @@ false：操作失败。
 
 
 class DeleteImageTag(AbstractModel):
-    """需要删除的镜像版本
+    """需要删除的映像版本
 
     """
 
     def __init__(self):
         """
-        :param RepoName: 仓库名，如/tsf/nginx
+        :param RepoName: 倉庫名，如/tsf/nginx
         :type RepoName: str
         :param TagName: 版本号:如V1
         :type TagName: str
@@ -1875,13 +1875,13 @@ class DeleteImageTag(AbstractModel):
 
 
 class DeleteImageTagsRequest(AbstractModel):
-    """DeleteImageTags请求参数结构体
+    """DeleteImageTags請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageTags: 镜像版本数组
+        :param ImageTags: 映像版本數組
         :type ImageTags: list of DeleteImageTag
         """
         self.ImageTags = None
@@ -1897,17 +1897,17 @@ class DeleteImageTagsRequest(AbstractModel):
 
 
 class DeleteImageTagsResponse(AbstractModel):
-    """DeleteImageTags返回参数结构体
+    """DeleteImageTags返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 批量删除操作是否成功。
+        :param Result: 批次删除操作是否成功。
 true：成功。
-false：失败。
+false：失敗。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1920,13 +1920,13 @@ false：失败。
 
 
 class DeleteMicroserviceRequest(AbstractModel):
-    """DeleteMicroservice请求参数结构体
+    """DeleteMicroservice請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MicroserviceId: 微服务ID
+        :param MicroserviceId: 微服務ID
         :type MicroserviceId: str
         """
         self.MicroserviceId = None
@@ -1937,17 +1937,17 @@ class DeleteMicroserviceRequest(AbstractModel):
 
 
 class DeleteMicroserviceResponse(AbstractModel):
-    """DeleteMicroservice返回参数结构体
+    """DeleteMicroservice返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 删除微服务是否成功。
+        :param Result: 删除微服務是否成功。
 true：操作成功。
-false：操作失败。
+false：操作失敗。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -1960,13 +1960,13 @@ false：操作失败。
 
 
 class DeleteNamespaceRequest(AbstractModel):
-    """DeleteNamespace请求参数结构体
+    """DeleteNamespace請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NamespaceId: 命名空间ID
+        :param NamespaceId: 命名空間ID
         :type NamespaceId: str
         :param ClusterId: 集群ID
         :type ClusterId: str
@@ -1981,17 +1981,17 @@ class DeleteNamespaceRequest(AbstractModel):
 
 
 class DeleteNamespaceResponse(AbstractModel):
-    """DeleteNamespace返回参数结构体
+    """DeleteNamespace返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 删除命名空间是否成功。
+        :param Result: 删除命名空間是否成功。
 true：删除成功。
-false：删除失败。
+false：删除失敗。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2004,15 +2004,15 @@ false：删除失败。
 
 
 class DeletePkgsRequest(AbstractModel):
-    """DeletePkgs请求参数结构体
+    """DeletePkgs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ApplicationId: 应用ID
+        :param ApplicationId: 應用ID
         :type ApplicationId: str
-        :param PkgIds: 需要删除的程序包ID列表
+        :param PkgIds: 需要删除的程式包ID清單
         :type PkgIds: list of str
         """
         self.ApplicationId = None
@@ -2025,13 +2025,13 @@ class DeletePkgsRequest(AbstractModel):
 
 
 class DeletePkgsResponse(AbstractModel):
-    """DeletePkgs返回参数结构体
+    """DeletePkgs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2042,13 +2042,13 @@ class DeletePkgsResponse(AbstractModel):
 
 
 class DeletePublicConfigRequest(AbstractModel):
-    """DeletePublicConfig请求参数结构体
+    """DeletePublicConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ConfigId: 配置项ID
+        :param ConfigId: 配置項ID
         :type ConfigId: str
         """
         self.ConfigId = None
@@ -2059,16 +2059,16 @@ class DeletePublicConfigRequest(AbstractModel):
 
 
 class DeletePublicConfigResponse(AbstractModel):
-    """DeletePublicConfig返回参数结构体
+    """DeletePublicConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: true：删除成功；false：删除失败
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: true：删除成功；false：删除失敗
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2081,13 +2081,13 @@ class DeletePublicConfigResponse(AbstractModel):
 
 
 class DeleteServerlessGroupRequest(AbstractModel):
-    """DeleteServerlessGroup请求参数结构体
+    """DeleteServerlessGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: groupId，分组唯一标识
+        :param GroupId: groupId，分組唯一标識
         :type GroupId: str
         """
         self.GroupId = None
@@ -2098,15 +2098,15 @@ class DeleteServerlessGroupRequest(AbstractModel):
 
 
 class DeleteServerlessGroupResponse(AbstractModel):
-    """DeleteServerlessGroup返回参数结构体
+    """DeleteServerlessGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 结果true：成功；false：失败。
+        :param Result: 結果true：成功；false：失敗。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2119,55 +2119,55 @@ class DeleteServerlessGroupResponse(AbstractModel):
 
 
 class DeployContainerGroupRequest(AbstractModel):
-    """DeployContainerGroup请求参数结构体
+    """DeployContainerGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID，分组唯一标识
+        :param GroupId: 佈署組ID，分組唯一标識
         :type GroupId: str
-        :param Server: 镜像server
+        :param Server: 映像server
         :type Server: str
-        :param TagName: 镜像版本名称,如v1
+        :param TagName: 映像版本名稱,如v1
         :type TagName: str
-        :param InstanceNum: 实例数量
+        :param InstanceNum: 實例數量
         :type InstanceNum: int
-        :param Reponame: 旧版镜像名，如/tsf/nginx
+        :param Reponame: 舊版映像名，如/tsf/nginx
         :type Reponame: str
-        :param CpuLimit: 业务容器最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+        :param CpuLimit: 業務容器最大的 CPU 核數，對應 K8S 的 limit；不填時預設爲 request 的 2 倍
         :type CpuLimit: str
-        :param MemLimit: 业务容器最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+        :param MemLimit: 業務容器最大的内存 MiB 數，對應 K8S 的 limit；不填時預設爲 request 的 2 倍
         :type MemLimit: str
-        :param JvmOpts: jvm参数
+        :param JvmOpts: jvm參數
         :type JvmOpts: str
-        :param CpuRequest: 业务容器分配的 CPU 核数，对应 K8S 的 request
+        :param CpuRequest: 業務容器分配的 CPU 核數，對應 K8S 的 request
         :type CpuRequest: str
-        :param MemRequest: 业务容器分配的内存 MiB 数，对应 K8S 的 request
+        :param MemRequest: 業務容器分配的内存 MiB 數，對應 K8S 的 request
         :type MemRequest: str
-        :param DoNotStart: 是否不立即启动
+        :param DoNotStart: 是否不立即啓動
         :type DoNotStart: bool
-        :param RepoName: （优先使用）新版镜像名，如/tsf/nginx
+        :param RepoName: （優先使用）新版映像名，如/tsf/nginx
         :type RepoName: str
-        :param UpdateType: 更新方式：0:快速更新 1:滚动更新
+        :param UpdateType: 更新方式：0:快速更新 1:滾動更新
         :type UpdateType: int
-        :param UpdateIvl: 滚动更新必填，更新间隔
+        :param UpdateIvl: 滾動更新必填，更新間隔
         :type UpdateIvl: int
-        :param AgentCpuRequest: agent 容器分配的 CPU 核数，对应 K8S 的 request
+        :param AgentCpuRequest: agent 容器分配的 CPU 核數，對應 K8S 的 request
         :type AgentCpuRequest: str
-        :param AgentCpuLimit: agent 容器最大的 CPU 核数，对应 K8S 的 limit
+        :param AgentCpuLimit: agent 容器最大的 CPU 核數，對應 K8S 的 limit
         :type AgentCpuLimit: str
-        :param AgentMemRequest: agent 容器分配的内存 MiB 数，对应 K8S 的 request
+        :param AgentMemRequest: agent 容器分配的内存 MiB 數，對應 K8S 的 request
         :type AgentMemRequest: str
-        :param AgentMemLimit: agent 容器最大的内存 MiB 数，对应 K8S 的 limit
+        :param AgentMemLimit: agent 容器最大的内存 MiB 數，對應 K8S 的 limit
         :type AgentMemLimit: str
-        :param IstioCpuRequest: istioproxy 容器分配的 CPU 核数，对应 K8S 的 request
+        :param IstioCpuRequest: istioproxy 容器分配的 CPU 核數，對應 K8S 的 request
         :type IstioCpuRequest: str
-        :param IstioCpuLimit: istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit
+        :param IstioCpuLimit: istioproxy 容器最大的 CPU 核數，對應 K8S 的 limit
         :type IstioCpuLimit: str
-        :param IstioMemRequest: istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
+        :param IstioMemRequest: istioproxy 容器分配的内存 MiB 數，對應 K8S 的 request
         :type IstioMemRequest: str
-        :param IstioMemLimit: istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
+        :param IstioMemLimit: istioproxy 容器最大的内存 MiB 數，對應 K8S 的 limit
         :type IstioMemLimit: str
         """
         self.GroupId = None
@@ -2220,17 +2220,17 @@ class DeployContainerGroupRequest(AbstractModel):
 
 
 class DeployContainerGroupResponse(AbstractModel):
-    """DeployContainerGroup返回参数结构体
+    """DeployContainerGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 部署容器应用是否成功。
+        :param Result: 佈署容器應用是否成功。
 true：成功。
-false：失败。
+false：失敗。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2243,17 +2243,17 @@ false：失败。
 
 
 class DeployGroupRequest(AbstractModel):
-    """DeployGroup请求参数结构体
+    """DeployGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
+        :param GroupId: 佈署組ID
         :type GroupId: str
-        :param PkgId: 程序包ID
+        :param PkgId: 程式包ID
         :type PkgId: str
-        :param StartupParameters: 部署组启动参数
+        :param StartupParameters: 佈署組啓動參數
         :type StartupParameters: str
         """
         self.GroupId = None
@@ -2268,16 +2268,16 @@ class DeployGroupRequest(AbstractModel):
 
 
 class DeployGroupResponse(AbstractModel):
-    """DeployGroup返回参数结构体
+    """DeployGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 任務ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TaskId`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2292,21 +2292,21 @@ class DeployGroupResponse(AbstractModel):
 
 
 class DeployServerlessGroupRequest(AbstractModel):
-    """DeployServerlessGroup请求参数结构体
+    """DeployServerlessGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
+        :param GroupId: 佈署組ID
         :type GroupId: str
-        :param PkgId: 程序包ID
+        :param PkgId: 程式包ID
         :type PkgId: str
-        :param Memory: 所需实例内存大小，取值为 1Gi 2Gi 4Gi 8Gi 16Gi，缺省为 1Gi，不传表示维持原态
+        :param Memory: 所需實例内存大小，取值爲 1Gi 2Gi 4Gi 8Gi 16Gi，缺省爲 1Gi，不傳表示維持原态
         :type Memory: str
-        :param InstanceRequest: 要求最小实例数，取值范围 [1, 4]，缺省为 1，不传表示维持原态
+        :param InstanceRequest: 要求最小實例數，取值範圍 [1, 4]，缺省爲 1，不傳表示維持原态
         :type InstanceRequest: int
-        :param StartupParameters: 部署组启动参数，不传表示维持原态
+        :param StartupParameters: 佈署組啓動參數，不傳表示維持原态
         :type StartupParameters: str
         """
         self.GroupId = None
@@ -2325,15 +2325,15 @@ class DeployServerlessGroupRequest(AbstractModel):
 
 
 class DeployServerlessGroupResponse(AbstractModel):
-    """DeployServerlessGroup返回参数结构体
+    """DeployServerlessGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 结果true：成功；false：失败；
+        :param Result: 結果true：成功；false：失敗；
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2346,13 +2346,13 @@ class DeployServerlessGroupResponse(AbstractModel):
 
 
 class DescribeApplicationAttributeRequest(AbstractModel):
-    """DescribeApplicationAttribute请求参数结构体
+    """DescribeApplicationAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ApplicationId: 应用ID
+        :param ApplicationId: 應用ID
         :type ApplicationId: str
         """
         self.ApplicationId = None
@@ -2363,15 +2363,15 @@ class DescribeApplicationAttributeRequest(AbstractModel):
 
 
 class DescribeApplicationAttributeResponse(AbstractModel):
-    """DescribeApplicationAttribute返回参数结构体
+    """DescribeApplicationAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 应用列表其它字段返回参数
+        :param Result: 應用清單其它欄位返回參數
         :type Result: :class:`tencentcloud.tsf.v20180326.models.ApplicationAttribute`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2386,13 +2386,13 @@ class DescribeApplicationAttributeResponse(AbstractModel):
 
 
 class DescribeApplicationRequest(AbstractModel):
-    """DescribeApplication请求参数结构体
+    """DescribeApplication請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ApplicationId: 应用ID
+        :param ApplicationId: 應用ID
         :type ApplicationId: str
         """
         self.ApplicationId = None
@@ -2403,16 +2403,16 @@ class DescribeApplicationRequest(AbstractModel):
 
 
 class DescribeApplicationResponse(AbstractModel):
-    """DescribeApplication返回参数结构体
+    """DescribeApplication返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 应用信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 應用訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.ApplicationForPage`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2427,27 +2427,27 @@ class DescribeApplicationResponse(AbstractModel):
 
 
 class DescribeApplicationsRequest(AbstractModel):
-    """DescribeApplications请求参数结构体
+    """DescribeApplications請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SearchWord: 搜索字段
+        :param SearchWord: 搜索欄位
         :type SearchWord: str
-        :param OrderBy: 排序字段
+        :param OrderBy: 排序欄位
         :type OrderBy: str
-        :param OrderType: 排序类型
+        :param OrderType: 排序類型
         :type OrderType: int
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 分页个数
+        :param Limit: 分頁個數
         :type Limit: int
-        :param ApplicationType: 应用类型
+        :param ApplicationType: 應用類型
         :type ApplicationType: str
-        :param MicroserviceType: 应用的微服务类型
+        :param MicroserviceType: 應用的微服務類型
         :type MicroserviceType: str
-        :param ApplicationResourceTypeList: 应用资源类型数组
+        :param ApplicationResourceTypeList: 應用資源類型數組
         :type ApplicationResourceTypeList: list of str
         """
         self.SearchWord = None
@@ -2472,16 +2472,16 @@ class DescribeApplicationsRequest(AbstractModel):
 
 
 class DescribeApplicationsResponse(AbstractModel):
-    """DescribeApplications返回参数结构体
+    """DescribeApplications返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 应用分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 應用分頁清單訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageApplication`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2496,7 +2496,7 @@ class DescribeApplicationsResponse(AbstractModel):
 
 
 class DescribeClusterInstancesRequest(AbstractModel):
-    """DescribeClusterInstances请求参数结构体
+    """DescribeClusterInstances請求參數結構體
 
     """
 
@@ -2504,15 +2504,15 @@ class DescribeClusterInstancesRequest(AbstractModel):
         """
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param SearchWord: 搜索字段
+        :param SearchWord: 搜索欄位
         :type SearchWord: str
-        :param OrderBy: 排序字段
+        :param OrderBy: 排序欄位
         :type OrderBy: str
-        :param OrderType: 排序类型
+        :param OrderType: 排序類型
         :type OrderType: int
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 分页个数
+        :param Limit: 分頁個數
         :type Limit: int
         """
         self.ClusterId = None
@@ -2533,16 +2533,16 @@ class DescribeClusterInstancesRequest(AbstractModel):
 
 
 class DescribeClusterInstancesResponse(AbstractModel):
-    """DescribeClusterInstances返回参数结构体
+    """DescribeClusterInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 集群机器实例分页信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 集群機器實例分頁訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageInstance`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2557,23 +2557,23 @@ class DescribeClusterInstancesResponse(AbstractModel):
 
 
 class DescribeConfigReleaseLogsRequest(AbstractModel):
-    """DescribeConfigReleaseLogs请求参数结构体
+    """DescribeConfigReleaseLogs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID，不传入时查询全量
+        :param GroupId: 佈署組ID，不傳入時查詢全量
         :type GroupId: str
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 每页条数，默认为20
+        :param Limit: 每頁條數，預設爲20
         :type Limit: int
-        :param NamespaceId: 命名空间ID，不传入时查询全量
+        :param NamespaceId: 命名空間ID，不傳入時查詢全量
         :type NamespaceId: str
-        :param ClusterId: 集群ID，不传入时查询全量
+        :param ClusterId: 集群ID，不傳入時查詢全量
         :type ClusterId: str
-        :param ApplicationId: 应用ID，不传入时查询全量
+        :param ApplicationId: 應用ID，不傳入時查詢全量
         :type ApplicationId: str
         """
         self.GroupId = None
@@ -2594,16 +2594,16 @@ class DescribeConfigReleaseLogsRequest(AbstractModel):
 
 
 class DescribeConfigReleaseLogsResponse(AbstractModel):
-    """DescribeConfigReleaseLogs返回参数结构体
+    """DescribeConfigReleaseLogs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 分页的配置项发布历史列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 分頁的配置項發布曆史清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageConfigReleaseLog`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2618,27 +2618,27 @@ class DescribeConfigReleaseLogsResponse(AbstractModel):
 
 
 class DescribeConfigReleasesRequest(AbstractModel):
-    """DescribeConfigReleases请求参数结构体
+    """DescribeConfigReleases請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ConfigName: 配置项名称，不传入时查询全量
+        :param ConfigName: 配置項名稱，不傳入時查詢全量
         :type ConfigName: str
-        :param GroupId: 部署组ID，不传入时查询全量
+        :param GroupId: 佈署組ID，不傳入時查詢全量
         :type GroupId: str
-        :param NamespaceId: 命名空间ID，不传入时查询全量
+        :param NamespaceId: 命名空間ID，不傳入時查詢全量
         :type NamespaceId: str
-        :param ClusterId: 集群ID，不传入时查询全量
+        :param ClusterId: 集群ID，不傳入時查詢全量
         :type ClusterId: str
-        :param Limit: 每页条数
+        :param Limit: 每頁條數
         :type Limit: int
         :param Offset: 偏移量
         :type Offset: int
-        :param ConfigId: 配置ID，不传入时查询全量
+        :param ConfigId: 配置ID，不傳入時查詢全量
         :type ConfigId: str
-        :param ApplicationId: 应用ID，不传入时查询全量
+        :param ApplicationId: 應用ID，不傳入時查詢全量
         :type ApplicationId: str
         """
         self.ConfigName = None
@@ -2663,16 +2663,16 @@ class DescribeConfigReleasesRequest(AbstractModel):
 
 
 class DescribeConfigReleasesResponse(AbstractModel):
-    """DescribeConfigReleases返回参数结构体
+    """DescribeConfigReleases返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 分页的配置发布信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 分頁的配置發布訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageConfigRelease`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2687,13 +2687,13 @@ class DescribeConfigReleasesResponse(AbstractModel):
 
 
 class DescribeConfigRequest(AbstractModel):
-    """DescribeConfig请求参数结构体
+    """DescribeConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ConfigId: 配置项ID
+        :param ConfigId: 配置項ID
         :type ConfigId: str
         """
         self.ConfigId = None
@@ -2704,16 +2704,16 @@ class DescribeConfigRequest(AbstractModel):
 
 
 class DescribeConfigResponse(AbstractModel):
-    """DescribeConfig返回参数结构体
+    """DescribeConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 配置项
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 配置項
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.Config`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2728,19 +2728,19 @@ class DescribeConfigResponse(AbstractModel):
 
 
 class DescribeConfigSummaryRequest(AbstractModel):
-    """DescribeConfigSummary请求参数结构体
+    """DescribeConfigSummary請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ApplicationId: 应用ID，不传入时查询全量
+        :param ApplicationId: 應用ID，不傳入時查詢全量
         :type ApplicationId: str
-        :param SearchWord: 查询关键字，模糊查询：应用名称，配置项名称，不传入时查询全量
+        :param SearchWord: 查詢關鍵字，模糊查詢：應用名稱，配置項名稱，不傳入時查詢全量
         :type SearchWord: str
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 每页条数，默认为20
+        :param Limit: 每頁條數，預設爲20
         :type Limit: int
         """
         self.ApplicationId = None
@@ -2757,15 +2757,15 @@ class DescribeConfigSummaryRequest(AbstractModel):
 
 
 class DescribeConfigSummaryResponse(AbstractModel):
-    """DescribeConfigSummary返回参数结构体
+    """DescribeConfigSummary返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 配置项分页对象
+        :param Result: 配置項分頁對象
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageConfig`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2780,25 +2780,25 @@ class DescribeConfigSummaryResponse(AbstractModel):
 
 
 class DescribeConfigsRequest(AbstractModel):
-    """DescribeConfigs请求参数结构体
+    """DescribeConfigs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ApplicationId: 应用ID，不传入时查询全量
+        :param ApplicationId: 應用ID，不傳入時查詢全量
         :type ApplicationId: str
-        :param ConfigId: 配置项ID，不传入时查询全量，高优先级
+        :param ConfigId: 配置項ID，不傳入時查詢全量，高優先級
         :type ConfigId: str
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 每页条数
+        :param Limit: 每頁條數
         :type Limit: int
-        :param ConfigIdList: 配置项ID列表，不传入时查询全量，低优先级
+        :param ConfigIdList: 配置項ID清單，不傳入時查詢全量，低優先級
         :type ConfigIdList: list of str
-        :param ConfigName: 配置项名称，精确查询，不传入时查询全量
+        :param ConfigName: 配置項名稱，精确查詢，不傳入時查詢全量
         :type ConfigName: str
-        :param ConfigVersion: 配置项版本，精确查询，不传入时查询全量
+        :param ConfigVersion: 配置項版本，精确查詢，不傳入時查詢全量
         :type ConfigVersion: str
         """
         self.ApplicationId = None
@@ -2821,16 +2821,16 @@ class DescribeConfigsRequest(AbstractModel):
 
 
 class DescribeConfigsResponse(AbstractModel):
-    """DescribeConfigs返回参数结构体
+    """DescribeConfigs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 分页后的配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 分頁後的配置項清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageConfig`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2845,13 +2845,13 @@ class DescribeConfigsResponse(AbstractModel):
 
 
 class DescribeContainerGroupDetailRequest(AbstractModel):
-    """DescribeContainerGroupDetail请求参数结构体
+    """DescribeContainerGroupDetail請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 分组ID
+        :param GroupId: 分組ID
         :type GroupId: str
         """
         self.GroupId = None
@@ -2862,15 +2862,15 @@ class DescribeContainerGroupDetailRequest(AbstractModel):
 
 
 class DescribeContainerGroupDetailResponse(AbstractModel):
-    """DescribeContainerGroupDetail返回参数结构体
+    """DescribeContainerGroupDetail返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 容器部署组详情
+        :param Result: 容器佈署組詳情
         :type Result: :class:`tencentcloud.tsf.v20180326.models.ContainerGroupDetail`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2885,27 +2885,27 @@ class DescribeContainerGroupDetailResponse(AbstractModel):
 
 
 class DescribeContainerGroupsRequest(AbstractModel):
-    """DescribeContainerGroups请求参数结构体
+    """DescribeContainerGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SearchWord: 搜索字段，模糊搜索groupName字段
+        :param SearchWord: 搜索欄位，模糊搜索groupName欄位
         :type SearchWord: str
-        :param ApplicationId: 分组所属应用ID
+        :param ApplicationId: 分組所屬應用ID
         :type ApplicationId: str
-        :param OrderBy: 排序字段，默认为 createTime字段，支持id， name， createTime
+        :param OrderBy: 排序欄位，預設爲 createTime欄位，支援id， name， createTime
         :type OrderBy: str
-        :param OrderType: 排序方式，默认为1：倒序排序，0：正序，1：倒序
+        :param OrderType: 排序方式，預設爲1：倒序排序，0：正序，1：倒序
         :type OrderType: int
-        :param Offset: 偏移量，取值从0开始
+        :param Offset: 偏移量，取值從0開始
         :type Offset: int
-        :param Limit: 分页个数，默认为20， 取值应为1~50
+        :param Limit: 分頁個數，預設爲20， 取值應爲1~50
         :type Limit: int
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param NamespaceId: 命名空间 ID
+        :param NamespaceId: 命名空間 ID
         :type NamespaceId: str
         """
         self.SearchWord = None
@@ -2930,15 +2930,15 @@ class DescribeContainerGroupsRequest(AbstractModel):
 
 
 class DescribeContainerGroupsResponse(AbstractModel):
-    """DescribeContainerGroups返回参数结构体
+    """DescribeContainerGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 查询的权限数据对象
+        :param Result: 查詢的權限數據對象
         :type Result: :class:`tencentcloud.tsf.v20180326.models.ContainGroupResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2953,15 +2953,15 @@ class DescribeContainerGroupsResponse(AbstractModel):
 
 
 class DescribeDownloadInfoRequest(AbstractModel):
-    """DescribeDownloadInfo请求参数结构体
+    """DescribeDownloadInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ApplicationId: 应用ID
+        :param ApplicationId: 應用ID
         :type ApplicationId: str
-        :param PkgId: 程序包ID
+        :param PkgId: 程式包ID
         :type PkgId: str
         """
         self.ApplicationId = None
@@ -2974,15 +2974,15 @@ class DescribeDownloadInfoRequest(AbstractModel):
 
 
 class DescribeDownloadInfoResponse(AbstractModel):
-    """DescribeDownloadInfo返回参数结构体
+    """DescribeDownloadInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: COS鉴权信息
+        :param Result: COS鑒權訊息
         :type Result: :class:`tencentcloud.tsf.v20180326.models.CosDownloadInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -2997,23 +2997,23 @@ class DescribeDownloadInfoResponse(AbstractModel):
 
 
 class DescribeGroupInstancesRequest(AbstractModel):
-    """DescribeGroupInstances请求参数结构体
+    """DescribeGroupInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
+        :param GroupId: 佈署組ID
         :type GroupId: str
-        :param SearchWord: 搜索字段
+        :param SearchWord: 搜索欄位
         :type SearchWord: str
-        :param OrderBy: 排序字段
+        :param OrderBy: 排序欄位
         :type OrderBy: str
-        :param OrderType: 排序类型
+        :param OrderType: 排序類型
         :type OrderType: int
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 分页个数
+        :param Limit: 分頁個數
         :type Limit: int
         """
         self.GroupId = None
@@ -3034,16 +3034,16 @@ class DescribeGroupInstancesRequest(AbstractModel):
 
 
 class DescribeGroupInstancesResponse(AbstractModel):
-    """DescribeGroupInstances返回参数结构体
+    """DescribeGroupInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 部署组机器信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 佈署組機器訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageInstance`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3058,13 +3058,13 @@ class DescribeGroupInstancesResponse(AbstractModel):
 
 
 class DescribeGroupRequest(AbstractModel):
-    """DescribeGroup请求参数结构体
+    """DescribeGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
+        :param GroupId: 佈署組ID
         :type GroupId: str
         """
         self.GroupId = None
@@ -3075,16 +3075,16 @@ class DescribeGroupRequest(AbstractModel):
 
 
 class DescribeGroupResponse(AbstractModel):
-    """DescribeGroup返回参数结构体
+    """DescribeGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 虚拟机部署组详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 虛拟機佈署組詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.VmGroup`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3099,29 +3099,29 @@ class DescribeGroupResponse(AbstractModel):
 
 
 class DescribeGroupsRequest(AbstractModel):
-    """DescribeGroups请求参数结构体
+    """DescribeGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SearchWord: 搜索字段
+        :param SearchWord: 搜索欄位
         :type SearchWord: str
-        :param ApplicationId: 应用ID
+        :param ApplicationId: 應用ID
         :type ApplicationId: str
-        :param OrderBy: 排序字段
+        :param OrderBy: 排序欄位
         :type OrderBy: str
         :param OrderType: 排序方式
         :type OrderType: int
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 分页个数
+        :param Limit: 分頁個數
         :type Limit: int
-        :param NamespaceId: 命名空间ID
+        :param NamespaceId: 命名空間ID
         :type NamespaceId: str
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param GroupResourceTypeList: 部署组资源类型列表
+        :param GroupResourceTypeList: 佈署組資源類型清單
         :type GroupResourceTypeList: list of str
         """
         self.SearchWord = None
@@ -3148,16 +3148,16 @@ class DescribeGroupsRequest(AbstractModel):
 
 
 class DescribeGroupsResponse(AbstractModel):
-    """DescribeGroups返回参数结构体
+    """DescribeGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 虚拟机部署组分页信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 虛拟機佈署組分頁訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageVmGroup`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3172,19 +3172,19 @@ class DescribeGroupsResponse(AbstractModel):
 
 
 class DescribeImageTagsRequest(AbstractModel):
-    """DescribeImageTags请求参数结构体
+    """DescribeImageTags請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ApplicationId: 应用Id
+        :param ApplicationId: 應用Id
         :type ApplicationId: str
-        :param Offset: 偏移量，取值从0开始
+        :param Offset: 偏移量，取值從0開始
         :type Offset: int
-        :param Limit: 分页个数，默认为20， 取值应为1~100
+        :param Limit: 分頁個數，預設爲20， 取值應爲1~100
         :type Limit: int
-        :param QueryImageIdFlag: 不填和0:查询 1:不查询
+        :param QueryImageIdFlag: 不填和0:查詢 1:不查詢
         :type QueryImageIdFlag: int
         :param SearchWord: 可用于搜索的 tag 名字
         :type SearchWord: str
@@ -3205,15 +3205,15 @@ class DescribeImageTagsRequest(AbstractModel):
 
 
 class DescribeImageTagsResponse(AbstractModel):
-    """DescribeImageTags返回参数结构体
+    """DescribeImageTags返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 查询的权限数据对象
+        :param Result: 查詢的權限數據對象
         :type Result: :class:`tencentcloud.tsf.v20180326.models.ImageTagsResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3228,17 +3228,17 @@ class DescribeImageTagsResponse(AbstractModel):
 
 
 class DescribeMicroserviceRequest(AbstractModel):
-    """DescribeMicroservice请求参数结构体
+    """DescribeMicroservice請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MicroserviceId: 微服务ID
+        :param MicroserviceId: 微服務ID
         :type MicroserviceId: str
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 分页个数
+        :param Limit: 分頁個數
         :type Limit: int
         """
         self.MicroserviceId = None
@@ -3253,16 +3253,16 @@ class DescribeMicroserviceRequest(AbstractModel):
 
 
 class DescribeMicroserviceResponse(AbstractModel):
-    """DescribeMicroservice返回参数结构体
+    """DescribeMicroservice返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 微服务详情实例列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 微服務詳情實例清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageMsInstance`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3277,23 +3277,23 @@ class DescribeMicroserviceResponse(AbstractModel):
 
 
 class DescribeMicroservicesRequest(AbstractModel):
-    """DescribeMicroservices请求参数结构体
+    """DescribeMicroservices請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NamespaceId: 命名空间ID
+        :param NamespaceId: 命名空間ID
         :type NamespaceId: str
-        :param SearchWord: 搜索字段
+        :param SearchWord: 搜索欄位
         :type SearchWord: str
-        :param OrderBy: 排序字段
+        :param OrderBy: 排序欄位
         :type OrderBy: str
-        :param OrderType: 排序类型
+        :param OrderType: 排序類型
         :type OrderType: int
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 分页个数
+        :param Limit: 分頁個數
         :type Limit: int
         """
         self.NamespaceId = None
@@ -3314,16 +3314,16 @@ class DescribeMicroservicesRequest(AbstractModel):
 
 
 class DescribeMicroservicesResponse(AbstractModel):
-    """DescribeMicroservices返回参数结构体
+    """DescribeMicroservices返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 微服务分页列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 微服務分頁清單訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageMicroservice`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3338,23 +3338,23 @@ class DescribeMicroservicesResponse(AbstractModel):
 
 
 class DescribePkgsRequest(AbstractModel):
-    """DescribePkgs请求参数结构体
+    """DescribePkgs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ApplicationId: 应用ID（只传入应用ID，返回该应用下所有软件包信息）
+        :param ApplicationId: 應用ID（只傳入應用ID，返回該應用下所有軟體包訊息）
         :type ApplicationId: str
-        :param SearchWord: 查询关键字（支持根据包ID，包名，包版本号搜索）
+        :param SearchWord: 查詢關鍵字（支援根據包ID，包名，包版本号搜索）
         :type SearchWord: str
-        :param OrderBy: 排序关键字（默认为"UploadTime"：上传时间）
+        :param OrderBy: 排序關鍵字（預設爲"UploadTime"：上傳時間）
         :type OrderBy: str
-        :param OrderType: 升序：0/降序：1（默认降序）
+        :param OrderType: 升序：0/降序：1（預設降序）
         :type OrderType: int
-        :param Offset: 查询起始偏移
+        :param Offset: 查詢起始偏移
         :type Offset: int
-        :param Limit: 返回数量限制
+        :param Limit: 返回數量限制
         :type Limit: int
         """
         self.ApplicationId = None
@@ -3375,15 +3375,15 @@ class DescribePkgsRequest(AbstractModel):
 
 
 class DescribePkgsResponse(AbstractModel):
-    """DescribePkgs返回参数结构体
+    """DescribePkgs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 符合查询程序包信息列表
+        :param Result: 符合查詢程式包訊息清單
         :type Result: :class:`tencentcloud.tsf.v20180326.models.PkgList`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3398,17 +3398,17 @@ class DescribePkgsResponse(AbstractModel):
 
 
 class DescribePodInstancesRequest(AbstractModel):
-    """DescribePodInstances请求参数结构体
+    """DescribePodInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 实例所属groupId
+        :param GroupId: 實例所屬groupId
         :type GroupId: str
-        :param Offset: 偏移量，取值从0开始
+        :param Offset: 偏移量，取值從0開始
         :type Offset: int
-        :param Limit: 分页个数，默认为20， 取值应为1~50
+        :param Limit: 分頁個數，預設爲20， 取值應爲1~50
         :type Limit: int
         """
         self.GroupId = None
@@ -3423,15 +3423,15 @@ class DescribePodInstancesRequest(AbstractModel):
 
 
 class DescribePodInstancesResponse(AbstractModel):
-    """DescribePodInstances返回参数结构体
+    """DescribePodInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 查询的权限数据对象
+        :param Result: 查詢的權限數據對象
         :type Result: :class:`tencentcloud.tsf.v20180326.models.GroupPodResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3446,17 +3446,17 @@ class DescribePodInstancesResponse(AbstractModel):
 
 
 class DescribePublicConfigReleaseLogsRequest(AbstractModel):
-    """DescribePublicConfigReleaseLogs请求参数结构体
+    """DescribePublicConfigReleaseLogs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NamespaceId: 命名空间ID，不传入时查询全量
+        :param NamespaceId: 命名空間ID，不傳入時查詢全量
         :type NamespaceId: str
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 每页条数，默认为20
+        :param Limit: 每頁條數，預設爲20
         :type Limit: int
         """
         self.NamespaceId = None
@@ -3471,16 +3471,16 @@ class DescribePublicConfigReleaseLogsRequest(AbstractModel):
 
 
 class DescribePublicConfigReleaseLogsResponse(AbstractModel):
-    """DescribePublicConfigReleaseLogs返回参数结构体
+    """DescribePublicConfigReleaseLogs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 分页后的公共配置项发布历史列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 分頁後的公共配置項發布曆史清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageConfigReleaseLog`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3495,21 +3495,21 @@ class DescribePublicConfigReleaseLogsResponse(AbstractModel):
 
 
 class DescribePublicConfigReleasesRequest(AbstractModel):
-    """DescribePublicConfigReleases请求参数结构体
+    """DescribePublicConfigReleases請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ConfigName: 配置项名称，不传入时查询全量
+        :param ConfigName: 配置項名稱，不傳入時查詢全量
         :type ConfigName: str
-        :param NamespaceId: 命名空间ID，不传入时查询全量
+        :param NamespaceId: 命名空間ID，不傳入時查詢全量
         :type NamespaceId: str
-        :param Limit: 每页条数
+        :param Limit: 每頁條數
         :type Limit: int
         :param Offset: 偏移量
         :type Offset: int
-        :param ConfigId: 配置项ID，不传入时查询全量
+        :param ConfigId: 配置項ID，不傳入時查詢全量
         :type ConfigId: str
         """
         self.ConfigName = None
@@ -3528,16 +3528,16 @@ class DescribePublicConfigReleasesRequest(AbstractModel):
 
 
 class DescribePublicConfigReleasesResponse(AbstractModel):
-    """DescribePublicConfigReleases返回参数结构体
+    """DescribePublicConfigReleases返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 公共配置发布信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 公共配置發布訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageConfigRelease`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3552,13 +3552,13 @@ class DescribePublicConfigReleasesResponse(AbstractModel):
 
 
 class DescribePublicConfigRequest(AbstractModel):
-    """DescribePublicConfig请求参数结构体
+    """DescribePublicConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ConfigId: 需要查询的配置项ID
+        :param ConfigId: 需要查詢的配置項ID
         :type ConfigId: str
         """
         self.ConfigId = None
@@ -3569,16 +3569,16 @@ class DescribePublicConfigRequest(AbstractModel):
 
 
 class DescribePublicConfigResponse(AbstractModel):
-    """DescribePublicConfig返回参数结构体
+    """DescribePublicConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
         :param Result: 全局配置
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.Config`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3593,17 +3593,17 @@ class DescribePublicConfigResponse(AbstractModel):
 
 
 class DescribePublicConfigSummaryRequest(AbstractModel):
-    """DescribePublicConfigSummary请求参数结构体
+    """DescribePublicConfigSummary請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SearchWord: 查询关键字，模糊查询：配置项名称，不传入时查询全量
+        :param SearchWord: 查詢關鍵字，模糊查詢：配置項名稱，不傳入時查詢全量
         :type SearchWord: str
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 每页条数，默认为20
+        :param Limit: 每頁條數，預設爲20
         :type Limit: int
         """
         self.SearchWord = None
@@ -3618,16 +3618,16 @@ class DescribePublicConfigSummaryRequest(AbstractModel):
 
 
 class DescribePublicConfigSummaryResponse(AbstractModel):
-    """DescribePublicConfigSummary返回参数结构体
+    """DescribePublicConfigSummary返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 分页的全局配置统计信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 分頁的全局配置統計訊息清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageConfig`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3642,23 +3642,23 @@ class DescribePublicConfigSummaryResponse(AbstractModel):
 
 
 class DescribePublicConfigsRequest(AbstractModel):
-    """DescribePublicConfigs请求参数结构体
+    """DescribePublicConfigs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ConfigId: 配置项ID，不传入时查询全量，高优先级
+        :param ConfigId: 配置項ID，不傳入時查詢全量，高優先級
         :type ConfigId: str
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 每页条数，默认为20
+        :param Limit: 每頁條數，預設爲20
         :type Limit: int
-        :param ConfigIdList: 配置项ID列表，不传入时查询全量，低优先级
+        :param ConfigIdList: 配置項ID清單，不傳入時查詢全量，低優先級
         :type ConfigIdList: list of str
-        :param ConfigName: 配置项名称，精确查询，不传入时查询全量
+        :param ConfigName: 配置項名稱，精确查詢，不傳入時查詢全量
         :type ConfigName: str
-        :param ConfigVersion: 配置项版本，精确查询，不传入时查询全量
+        :param ConfigVersion: 配置項版本，精确查詢，不傳入時查詢全量
         :type ConfigVersion: str
         """
         self.ConfigId = None
@@ -3679,16 +3679,16 @@ class DescribePublicConfigsRequest(AbstractModel):
 
 
 class DescribePublicConfigsResponse(AbstractModel):
-    """DescribePublicConfigs返回参数结构体
+    """DescribePublicConfigs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 分页后的全局配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 分頁後的全局配置項清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageConfig`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3703,13 +3703,13 @@ class DescribePublicConfigsResponse(AbstractModel):
 
 
 class DescribeReleasedConfigRequest(AbstractModel):
-    """DescribeReleasedConfig请求参数结构体
+    """DescribeReleasedConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
+        :param GroupId: 佈署組ID
         :type GroupId: str
         """
         self.GroupId = None
@@ -3720,16 +3720,16 @@ class DescribeReleasedConfigRequest(AbstractModel):
 
 
 class DescribeReleasedConfigResponse(AbstractModel):
-    """DescribeReleasedConfig返回参数结构体
+    """DescribeReleasedConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 已发布的配置内容
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 已發布的配置内容
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3742,13 +3742,13 @@ class DescribeReleasedConfigResponse(AbstractModel):
 
 
 class DescribeServerlessGroupRequest(AbstractModel):
-    """DescribeServerlessGroup请求参数结构体
+    """DescribeServerlessGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
+        :param GroupId: 佈署組ID
         :type GroupId: str
         """
         self.GroupId = None
@@ -3759,16 +3759,16 @@ class DescribeServerlessGroupRequest(AbstractModel):
 
 
 class DescribeServerlessGroupResponse(AbstractModel):
-    """DescribeServerlessGroup返回参数结构体
+    """DescribeServerlessGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 结果
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 結果
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.ServerlessGroup`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3783,27 +3783,27 @@ class DescribeServerlessGroupResponse(AbstractModel):
 
 
 class DescribeServerlessGroupsRequest(AbstractModel):
-    """DescribeServerlessGroups请求参数结构体
+    """DescribeServerlessGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SearchWord: 搜索字段，模糊搜索groupName字段
+        :param SearchWord: 搜索欄位，模糊搜索groupName欄位
         :type SearchWord: str
-        :param ApplicationId: 分组所属应用ID
+        :param ApplicationId: 分組所屬應用ID
         :type ApplicationId: str
-        :param OrderBy: 排序字段，默认为 createTime字段，支持id， name， createTime
+        :param OrderBy: 排序欄位，預設爲 createTime欄位，支援id， name， createTime
         :type OrderBy: str
-        :param OrderType: 排序方式，默认为1：倒序排序，0：正序，1：倒序
+        :param OrderType: 排序方式，預設爲1：倒序排序，0：正序，1：倒序
         :type OrderType: str
-        :param Offset: 偏移量，取值从0开始
+        :param Offset: 偏移量，取值從0開始
         :type Offset: int
-        :param Limit: 分页个数，默认为20， 取值应为1~50
+        :param Limit: 分頁個數，預設爲20， 取值應爲1~50
         :type Limit: int
-        :param NamespaceId: 分组所属名字空间ID
+        :param NamespaceId: 分組所屬名字空間ID
         :type NamespaceId: str
-        :param ClusterId: 分组所属集群ID
+        :param ClusterId: 分組所屬集群ID
         :type ClusterId: str
         """
         self.SearchWord = None
@@ -3828,16 +3828,16 @@ class DescribeServerlessGroupsRequest(AbstractModel):
 
 
 class DescribeServerlessGroupsResponse(AbstractModel):
-    """DescribeServerlessGroups返回参数结构体
+    """DescribeServerlessGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 数据列表对象
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 數據清單對象
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.ServerlessGroupPage`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3852,25 +3852,25 @@ class DescribeServerlessGroupsResponse(AbstractModel):
 
 
 class DescribeSimpleApplicationsRequest(AbstractModel):
-    """DescribeSimpleApplications请求参数结构体
+    """DescribeSimpleApplications請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ApplicationIdList: 应用ID列表
+        :param ApplicationIdList: 應用ID清單
         :type ApplicationIdList: list of str
-        :param ApplicationType: 应用类型
+        :param ApplicationType: 應用類型
         :type ApplicationType: str
-        :param Limit: 每页条数
+        :param Limit: 每頁條數
         :type Limit: int
         :param Offset: 起始偏移量
         :type Offset: int
-        :param MicroserviceType: 微服务类型
+        :param MicroserviceType: 微服務類型
         :type MicroserviceType: str
-        :param ApplicationResourceTypeList: 资源类型数组
+        :param ApplicationResourceTypeList: 資源類型數組
         :type ApplicationResourceTypeList: list of str
-        :param SearchWord: 通过id和name进行关键词过滤
+        :param SearchWord: 通過id和name進行關鍵詞過濾
         :type SearchWord: str
         """
         self.ApplicationIdList = None
@@ -3893,16 +3893,16 @@ class DescribeSimpleApplicationsRequest(AbstractModel):
 
 
 class DescribeSimpleApplicationsResponse(AbstractModel):
-    """DescribeSimpleApplications返回参数结构体
+    """DescribeSimpleApplications返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 简单应用分页对象
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 簡單應用分頁對象
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageSimpleApplication`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3917,21 +3917,21 @@ class DescribeSimpleApplicationsResponse(AbstractModel):
 
 
 class DescribeSimpleClustersRequest(AbstractModel):
-    """DescribeSimpleClusters请求参数结构体
+    """DescribeSimpleClusters請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClusterIdList: 需要查询的集群ID列表，不填或不传入时查询所有内容
+        :param ClusterIdList: 需要查詢的集群ID清單，不填或不傳入時查詢所有内容
         :type ClusterIdList: list of str
-        :param ClusterType: 需要查询的集群类型，不填或不传入时查询所有内容
+        :param ClusterType: 需要查詢的集群類型，不填或不傳入時查詢所有内容
         :type ClusterType: str
-        :param Offset: 查询偏移量，默认为0
+        :param Offset: 查詢偏移量，預設爲0
         :type Offset: int
-        :param Limit: 分页个数，默认为20， 取值应为1~50
+        :param Limit: 分頁個數，預設爲20， 取值應爲1~50
         :type Limit: int
-        :param SearchWord: 对id和name进行关键词过滤
+        :param SearchWord: 對id和name進行關鍵詞過濾
         :type SearchWord: str
         """
         self.ClusterIdList = None
@@ -3950,16 +3950,16 @@ class DescribeSimpleClustersRequest(AbstractModel):
 
 
 class DescribeSimpleClustersResponse(AbstractModel):
-    """DescribeSimpleClusters返回参数结构体
+    """DescribeSimpleClusters返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: TSF集群分页对象
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: TSF集群分頁對象
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageCluster`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -3974,29 +3974,29 @@ class DescribeSimpleClustersResponse(AbstractModel):
 
 
 class DescribeSimpleGroupsRequest(AbstractModel):
-    """DescribeSimpleGroups请求参数结构体
+    """DescribeSimpleGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupIdList: 部署组ID列表，不填写时查询全量
+        :param GroupIdList: 佈署組ID清單，不填寫時查詢全量
         :type GroupIdList: list of str
-        :param ApplicationId: 应用ID，不填写时查询全量
+        :param ApplicationId: 應用ID，不填寫時查詢全量
         :type ApplicationId: str
-        :param ClusterId: 集群ID，不填写时查询全量
+        :param ClusterId: 集群ID，不填寫時查詢全量
         :type ClusterId: str
-        :param NamespaceId: 命名空间ID，不填写时查询全量
+        :param NamespaceId: 命名空間ID，不填寫時查詢全量
         :type NamespaceId: str
-        :param Limit: 每页条数
+        :param Limit: 每頁條數
         :type Limit: int
         :param Offset: 起始偏移量
         :type Offset: int
-        :param GroupId: 部署组ID，不填写时查询全量
+        :param GroupId: 佈署組ID，不填寫時查詢全量
         :type GroupId: str
-        :param SearchWord: 模糊查询，部署组名称，不填写时查询全量
+        :param SearchWord: 模糊查詢，佈署組名稱，不填寫時查詢全量
         :type SearchWord: str
-        :param AppMicroServiceType: 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
+        :param AppMicroServiceType: 佈署組類型，精确過濾欄位，M：service mesh, P：原生應用， M：閘道應用
         :type AppMicroServiceType: str
         """
         self.GroupIdList = None
@@ -4023,16 +4023,16 @@ class DescribeSimpleGroupsRequest(AbstractModel):
 
 
 class DescribeSimpleGroupsResponse(AbstractModel):
-    """DescribeSimpleGroups返回参数结构体
+    """DescribeSimpleGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 简单部署组列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 簡單佈署組清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageSimpleGroup`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -4047,31 +4047,31 @@ class DescribeSimpleGroupsResponse(AbstractModel):
 
 
 class DescribeSimpleNamespacesRequest(AbstractModel):
-    """DescribeSimpleNamespaces请求参数结构体
+    """DescribeSimpleNamespaces請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NamespaceIdList: 命名空间ID列表，不传入时查询全量
+        :param NamespaceIdList: 命名空間ID清單，不傳入時查詢全量
         :type NamespaceIdList: list of str
-        :param ClusterId: 集群ID，不传入时查询全量
+        :param ClusterId: 集群ID，不傳入時查詢全量
         :type ClusterId: str
-        :param Limit: 每页条数
+        :param Limit: 每頁條數
         :type Limit: int
         :param Offset: 起始偏移量
         :type Offset: int
-        :param NamespaceId: 命名空间ID，不传入时查询全量
+        :param NamespaceId: 命名空間ID，不傳入時查詢全量
         :type NamespaceId: str
-        :param NamespaceResourceTypeList: 查询资源类型列表
+        :param NamespaceResourceTypeList: 查詢資源類型清單
         :type NamespaceResourceTypeList: list of str
-        :param SearchWord: 通过id和name进行过滤
+        :param SearchWord: 通過id和name進行過濾
         :type SearchWord: str
-        :param NamespaceTypeList: 查询的命名空间类型列表
+        :param NamespaceTypeList: 查詢的命名空間類型清單
         :type NamespaceTypeList: list of str
-        :param NamespaceName: 通过命名空间名精确过滤
+        :param NamespaceName: 通過命名空間名精确過濾
         :type NamespaceName: str
-        :param IsDefault: 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
+        :param IsDefault: 通過是否是預設命名空間過濾，不傳表示拉取全部命名空間。0：預設，命名空間。1：非預設命名空間
         :type IsDefault: str
         """
         self.NamespaceIdList = None
@@ -4100,16 +4100,16 @@ class DescribeSimpleNamespacesRequest(AbstractModel):
 
 
 class DescribeSimpleNamespacesResponse(AbstractModel):
-    """DescribeSimpleNamespaces返回参数结构体
+    """DescribeSimpleNamespaces返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 命名空间分页列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 命名空間分頁清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageNamespace`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -4124,21 +4124,21 @@ class DescribeSimpleNamespacesResponse(AbstractModel):
 
 
 class DescribeUploadInfoRequest(AbstractModel):
-    """DescribeUploadInfo请求参数结构体
+    """DescribeUploadInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ApplicationId: 应用ID
+        :param ApplicationId: 應用ID
         :type ApplicationId: str
-        :param PkgName: 程序包名
+        :param PkgName: 程式包名
         :type PkgName: str
-        :param PkgVersion: 程序包版本
+        :param PkgVersion: 程式包版本
         :type PkgVersion: str
-        :param PkgType: 程序包类型
+        :param PkgType: 程式包類型
         :type PkgType: str
-        :param PkgDesc: 程序包介绍
+        :param PkgDesc: 程式包介紹
         :type PkgDesc: str
         """
         self.ApplicationId = None
@@ -4157,15 +4157,15 @@ class DescribeUploadInfoRequest(AbstractModel):
 
 
 class DescribeUploadInfoResponse(AbstractModel):
-    """DescribeUploadInfo返回参数结构体
+    """DescribeUploadInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: COS上传信息
+        :param Result: COS上傳訊息
         :type Result: :class:`tencentcloud.tsf.v20180326.models.CosUploadInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -4180,15 +4180,15 @@ class DescribeUploadInfoResponse(AbstractModel):
 
 
 class Env(AbstractModel):
-    """环境变量
+    """環境變量
 
     """
 
     def __init__(self):
         """
-        :param Name: 环境变量名称
+        :param Name: 環境變量名稱
         :type Name: str
-        :param Value: 服务端口
+        :param Value: 服務端口
         :type Value: str
         """
         self.Name = None
@@ -4201,15 +4201,15 @@ class Env(AbstractModel):
 
 
 class ExpandGroupRequest(AbstractModel):
-    """ExpandGroup请求参数结构体
+    """ExpandGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
+        :param GroupId: 佈署組ID
         :type GroupId: str
-        :param InstanceIdList: 扩容的机器实例ID列表
+        :param InstanceIdList: 擴容的機器實例ID清單
         :type InstanceIdList: list of str
         """
         self.GroupId = None
@@ -4222,16 +4222,16 @@ class ExpandGroupRequest(AbstractModel):
 
 
 class ExpandGroupResponse(AbstractModel):
-    """ExpandGroup返回参数结构体
+    """ExpandGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 任務ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TaskId`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -4246,50 +4246,50 @@ class ExpandGroupResponse(AbstractModel):
 
 
 class GroupPod(AbstractModel):
-    """部署组实例列表
+    """佈署組實例清單
 
     """
 
     def __init__(self):
         """
-        :param PodName: 实例名称(对应到kubernetes的pod名称)
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PodName: 實例名稱(對應到kubernetes的pod名稱)
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PodName: str
-        :param PodId: 实例ID(对应到kubernetes的pod id)
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PodId: 實例ID(對應到kubernetes的pod id)
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PodId: str
-        :param Status: 实例状态，请参考后面的实例以及容器的状态定义
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Status: 實例狀态，請參考後面的實例以及容器的狀态定義
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: str
-        :param Reason: 实例处于当前状态的原因，例如容器下载镜像失败
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Reason: 實例處于當前狀态的原因，例如容器下載映像失敗
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Reason: str
-        :param NodeIp: 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NodeIp: 主機IP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NodeIp: str
-        :param Ip: 实例IP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Ip: 實例IP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Ip: str
-        :param RestartCount: 实例中容器的重启次数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RestartCount: 實例中容器的重啓次數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RestartCount: int
-        :param ReadyCount: 实例中已就绪容器的个数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ReadyCount: 實例中已就緒容器的個數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ReadyCount: int
-        :param Runtime: 运行时长
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Runtime: 運作時長
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Runtime: str
-        :param CreatedAt: 实例启动时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreatedAt: 實例啓動時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreatedAt: str
-        :param ServiceInstanceStatus: 服务实例状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ServiceInstanceStatus: 服務實例狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ServiceInstanceStatus: str
-        :param InstanceAvailableStatus: 机器实例可使用状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceAvailableStatus: 機器實例可使用狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceAvailableStatus: str
-        :param InstanceStatus: 机器实例状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceStatus: 機器實例狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceStatus: str
         """
         self.PodName = None
@@ -4324,17 +4324,17 @@ class GroupPod(AbstractModel):
 
 
 class GroupPodResult(AbstractModel):
-    """部署组实例列表
+    """佈署組實例清單
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 总记录数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 總記錄數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param Content: 列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Content: 清單訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Content: list of GroupPod
         """
         self.TotalCount = None
@@ -4352,38 +4352,38 @@ class GroupPodResult(AbstractModel):
 
 
 class ImageTag(AbstractModel):
-    """列表信息
+    """清單訊息
 
     """
 
     def __init__(self):
         """
-        :param RepoName: 仓库名
+        :param RepoName: 倉庫名
         :type RepoName: str
-        :param TagName: 版本名称
+        :param TagName: 版本名稱
         :type TagName: str
         :param TagId: 版本ID
         :type TagId: str
-        :param ImageId: 镜像ID
+        :param ImageId: 映像ID
         :type ImageId: str
         :param Size: 大小
         :type Size: str
-        :param CreationTime: 创建时间
+        :param CreationTime: 創建時間
         :type CreationTime: str
-        :param UpdateTime: 更新时间
+        :param UpdateTime: 更新時間
         :type UpdateTime: str
-        :param Author: 镜像制作者
+        :param Author: 映像制作者
         :type Author: str
-        :param Architecture: CPU架构
+        :param Architecture: CPU架構
         :type Architecture: str
-        :param DockerVersion: Docker客户端版本
+        :param DockerVersion: Docker用戶端版本
         :type DockerVersion: str
-        :param Os: 操作系统
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Os: 作業系統
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Os: str
-        :param PushTime: push时间
+        :param PushTime: push時間
         :type PushTime: str
-        :param SizeByte: 单位为字节
+        :param SizeByte: 單位爲位元
         :type SizeByte: int
         """
         self.RepoName = None
@@ -4418,19 +4418,19 @@ class ImageTag(AbstractModel):
 
 
 class ImageTagsResult(AbstractModel):
-    """镜像版本列表
+    """映像版本清單
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 总记录数
+        :param TotalCount: 總記錄數
         :type TotalCount: int
-        :param RepoName: 仓库名,含命名空间,如tsf/ngin
+        :param RepoName: 倉庫名,含命名空間,如tsf/ngin
         :type RepoName: str
-        :param Server: 镜像服务器地址
+        :param Server: 映像服務器網址
         :type Server: str
-        :param Content: 列表信息
+        :param Content: 清單訊息
         :type Content: list of ImageTag
         """
         self.TotalCount = None
@@ -4452,119 +4452,119 @@ class ImageTagsResult(AbstractModel):
 
 
 class Instance(AbstractModel):
-    """机器实例
+    """機器實例
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 机器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceId: 機器實例ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceId: str
-        :param InstanceName: 机器名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceName: 機器名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceName: str
-        :param LanIp: 机器内网地址IP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LanIp: 機器内網網址IP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LanIp: str
-        :param WanIp: 机器外网地址IP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param WanIp: 機器外網網址IP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type WanIp: str
-        :param InstanceDesc: 机器描述信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceDesc: 機器描述訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceDesc: str
         :param ClusterId: 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterId: str
-        :param ClusterName: 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterName: 集群名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterName: str
-        :param InstanceStatus: VM的状态 虚机：虚机的状态 容器：Pod所在虚机的状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceStatus: VM的狀态 虛機：虛機的狀态 容器：Pod所在虛機的狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceStatus: str
-        :param InstanceAvailableStatus: VM的可使用状态 虚机：虚机是否能够作为资源使用 容器：虚机是否能够作为资源部署POD
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceAvailableStatus: VM的可使用狀态 虛機：虛機是否能夠作爲資源使用 容器：虛機是否能夠作爲資源佈署POD
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceAvailableStatus: str
-        :param ServiceInstanceStatus: 服务下的服务实例的状态 虚机：应用是否可用 + Agent状态 容器：Pod状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ServiceInstanceStatus: 服務下的服務實例的狀态 虛機：應用是否可用 + Agent狀态 容器：Pod狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ServiceInstanceStatus: str
-        :param CountInTsf: 标识此instance是否已添加在tsf中
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CountInTsf: 标識此instance是否已添加在tsf中
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CountInTsf: int
-        :param GroupId: 机器所属部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupId: 機器所屬佈署組ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupId: str
-        :param ApplicationId: 机器所属应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationId: 機器所屬應用ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationId: str
-        :param ApplicationName: 机器所属应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationName: 機器所屬應用名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationName: str
-        :param InstanceCreatedTime: 机器实例在CVM的创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceCreatedTime: 機器實例在CVM的創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceCreatedTime: str
-        :param InstanceExpiredTime: 机器实例在CVM的过期时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceExpiredTime: 機器實例在CVM的過期時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceExpiredTime: str
-        :param InstanceChargeType: 机器实例在CVM的计费模式
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceChargeType: 機器實例在CVM的計費模式
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceChargeType: str
-        :param InstanceTotalCpu: 机器实例总CPU信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceTotalCpu: 機器實例總CPU訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceTotalCpu: float
-        :param InstanceTotalMem: 机器实例总内存信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceTotalMem: 機器實例總内存訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceTotalMem: float
-        :param InstanceUsedCpu: 机器实例使用的CPU信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceUsedCpu: 機器實例使用的CPU訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceUsedCpu: float
-        :param InstanceUsedMem: 机器实例使用的内存信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceUsedMem: 機器實例使用的内存訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceUsedMem: float
-        :param InstanceLimitCpu: 机器实例Limit CPU信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceLimitCpu: 機器實例Limit CPU訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceLimitCpu: float
-        :param InstanceLimitMem: 机器实例Limit 内存信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceLimitMem: 機器實例Limit 内存訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceLimitMem: float
         :param InstancePkgVersion: 包版本
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstancePkgVersion: str
-        :param ClusterType: 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterType: 集群類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterType: str
-        :param RestrictState: 机器实例业务状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RestrictState: 機器實例業務狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RestrictState: str
-        :param UpdateTime: 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdateTime: 更新時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdateTime: str
-        :param OperationState: 实例执行状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OperationState: 實例執行狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OperationState: int
         :param NamespaceId: NamespaceId
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceId: str
         :param InstanceZoneId: InstanceZoneId
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceZoneId: str
         :param InstanceImportMode: InstanceImportMode
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceImportMode: str
         :param ApplicationType: ApplicationType
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationType: str
         :param ApplicationResourceType: ApplicationResourceType
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationResourceType: str
         :param ServiceSidecarStatus: ServiceSidecarStatus
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ServiceSidecarStatus: str
         :param GroupName: GroupName
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupName: str
         :param NamespaceName: NamespaceName
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceName: str
         """
         self.InstanceId = None
@@ -4645,32 +4645,32 @@ class Instance(AbstractModel):
 
 
 class Microservice(AbstractModel):
-    """微服务
+    """微服務
 
     """
 
     def __init__(self):
         """
-        :param MicroserviceId: 微服务ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MicroserviceId: 微服務ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MicroserviceId: str
-        :param MicroserviceName: 微服务名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MicroserviceName: 微服務名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MicroserviceName: str
-        :param MicroserviceDesc: 微服务描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MicroserviceDesc: 微服務描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MicroserviceDesc: str
-        :param CreateTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: int
-        :param UpdateTime: 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdateTime: 更新時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdateTime: int
-        :param NamespaceId: 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceId: 命名空間ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceId: str
-        :param RunInstanceCount: 微服务的运行实例数目
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RunInstanceCount: 微服務的運作實例數目
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RunInstanceCount: int
         """
         self.MicroserviceId = None
@@ -4693,21 +4693,21 @@ class Microservice(AbstractModel):
 
 
 class ModifyContainerGroupRequest(AbstractModel):
-    """ModifyContainerGroup请求参数结构体
+    """ModifyContainerGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
+        :param GroupId: 佈署組ID
         :type GroupId: str
-        :param AccessType: 0:公网 1:集群内访问 2：NodePort
+        :param AccessType: 0:公網 1:集群内訪問 2：NodePort
         :type AccessType: int
-        :param ProtocolPorts: ProtocolPorts数组
+        :param ProtocolPorts: ProtocolPorts數組
         :type ProtocolPorts: list of ProtocolPort
-        :param UpdateType: 更新方式：0:快速更新 1:滚动更新
+        :param UpdateType: 更新方式：0:快速更新 1:滾動更新
         :type UpdateType: int
-        :param UpdateIvl: 更新间隔,单位秒
+        :param UpdateIvl: 更新間隔,單位秒
         :type UpdateIvl: int
         """
         self.GroupId = None
@@ -4731,18 +4731,18 @@ class ModifyContainerGroupRequest(AbstractModel):
 
 
 class ModifyContainerGroupResponse(AbstractModel):
-    """ModifyContainerGroup返回参数结构体
+    """ModifyContainerGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 更新部署组是否成功。
+        :param Result: 更新佈署組是否成功。
 true：成功。
-false：失败。
-注意：此字段可能返回 null，表示取不到有效值。
+false：失敗。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -4755,15 +4755,15 @@ false：失败。
 
 
 class ModifyContainerReplicasRequest(AbstractModel):
-    """ModifyContainerReplicas请求参数结构体
+    """ModifyContainerReplicas請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID，部署组唯一标识
+        :param GroupId: 佈署組ID，佈署組唯一标識
         :type GroupId: str
-        :param InstanceNum: 实例数量
+        :param InstanceNum: 實例數量
         :type InstanceNum: int
         """
         self.GroupId = None
@@ -4776,15 +4776,15 @@ class ModifyContainerReplicasRequest(AbstractModel):
 
 
 class ModifyContainerReplicasResponse(AbstractModel):
-    """ModifyContainerReplicas返回参数结构体
+    """ModifyContainerReplicas返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 结果true：成功；false：失败；
+        :param Result: 結果true：成功；false：失敗；
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -4797,15 +4797,15 @@ class ModifyContainerReplicasResponse(AbstractModel):
 
 
 class ModifyMicroserviceRequest(AbstractModel):
-    """ModifyMicroservice请求参数结构体
+    """ModifyMicroservice請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MicroserviceId: 微服务 ID
+        :param MicroserviceId: 微服務 ID
         :type MicroserviceId: str
-        :param MicroserviceDesc: 微服务备注信息
+        :param MicroserviceDesc: 微服務備注訊息
         :type MicroserviceDesc: str
         """
         self.MicroserviceId = None
@@ -4818,17 +4818,17 @@ class ModifyMicroserviceRequest(AbstractModel):
 
 
 class ModifyMicroserviceResponse(AbstractModel):
-    """ModifyMicroservice返回参数结构体
+    """ModifyMicroservice返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 修改微服务详情是否成功。
+        :param Result: 修改微服務詳情是否成功。
 true：操作成功。
-false：操作失败。
+false：操作失敗。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -4841,21 +4841,21 @@ false：操作失败。
 
 
 class ModifyUploadInfoRequest(AbstractModel):
-    """ModifyUploadInfo请求参数结构体
+    """ModifyUploadInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ApplicationId: 应用ID
+        :param ApplicationId: 應用ID
         :type ApplicationId: str
-        :param PkgId: 调用DescribeUploadInfo接口时返回的软件包ID
+        :param PkgId: 調用DescribeUploadInfo介面時返回的軟體包ID
         :type PkgId: str
-        :param Result: COS返回上传结果（默认为0：成功，其他值表示失败）
+        :param Result: COS返回上傳結果（預設爲0：成功，其他值表示失敗）
         :type Result: int
-        :param Md5: 程序包MD5
+        :param Md5: 程式包MD5
         :type Md5: str
-        :param Size: 程序包大小（单位字节）
+        :param Size: 程式包大小（單位位元）
         :type Size: int
         """
         self.ApplicationId = None
@@ -4874,13 +4874,13 @@ class ModifyUploadInfoRequest(AbstractModel):
 
 
 class ModifyUploadInfoResponse(AbstractModel):
-    """ModifyUploadInfo返回参数结构体
+    """ModifyUploadInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4891,71 +4891,71 @@ class ModifyUploadInfoResponse(AbstractModel):
 
 
 class MsInstance(AbstractModel):
-    """微服务实例信息
+    """微服務實例訊息
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 机器实例ID信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceId: 機器實例ID訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceId: str
-        :param InstanceName: 机器实例名称信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceName: 機器實例名稱訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceName: str
-        :param Port: 服务运行的端口号
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Port: 服務運作的端口号
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Port: str
-        :param LanIp: 机器实例内网IP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LanIp: 機器實例内網IP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LanIp: str
-        :param WanIp: 机器实例外网IP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param WanIp: 機器實例外網IP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type WanIp: str
-        :param InstanceAvailableStatus: 机器可用状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceAvailableStatus: 機器可用狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceAvailableStatus: str
-        :param ServiceInstanceStatus: 服务运行状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ServiceInstanceStatus: 服務運作狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ServiceInstanceStatus: str
-        :param ApplicationId: 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationId: 應用ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationId: str
-        :param ApplicationName: 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationName: 應用名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationName: str
         :param ClusterId: 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterId: str
-        :param ClusterName: 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterName: 集群名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterName: str
-        :param NamespaceId: 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceId: 命名空間ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceId: str
-        :param NamespaceName: 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceName: 命名空間名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceName: str
-        :param GroupId: 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupId: 佈署組ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupId: str
-        :param GroupName: 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupName: 佈署組名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupName: str
-        :param InstanceStatus: 机器TSF可用状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceStatus: 機器TSF可用狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceStatus: str
-        :param HealthCheckUrl: 健康检查URL
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HealthCheckUrl: 健康檢查URL
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HealthCheckUrl: str
-        :param ClusterType: 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterType: 集群類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterType: str
-        :param ApplicationPackageVersion: 应用程序包版本
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationPackageVersion: 應用程式包版本
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationPackageVersion: str
-        :param ApplicationType: 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationType: 應用類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationType: str
         """
         self.InstanceId = None
@@ -5004,50 +5004,50 @@ class MsInstance(AbstractModel):
 
 
 class Namespace(AbstractModel):
-    """命名空间
+    """命名空間
 
     """
 
     def __init__(self):
         """
-        :param NamespaceId: 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceId: 命名空間ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceId: str
-        :param NamespaceCode: 命名空间编码
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceCode: 命名空間編碼
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceCode: str
-        :param NamespaceName: 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceName: 命名空間名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceName: str
-        :param NamespaceDesc: 命名空间描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceDesc: 命名空間描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceDesc: str
-        :param IsDefault: 默认命名空间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsDefault: 預設命名空間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsDefault: str
-        :param NamespaceStatus: 命名空间状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceStatus: 命名空間狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceStatus: str
-        :param DeleteFlag: 删除标识
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DeleteFlag: 删除标識
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeleteFlag: bool
-        :param CreateTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
-        :param UpdateTime: 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdateTime: 更新時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdateTime: str
-        :param ClusterList: 集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterList: 集群數組，僅攜帶集群ID，集群名稱，集群類型等基礎訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterList: list of Cluster
         :param ClusterId: 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterId: str
-        :param NamespaceResourceType: 集群资源类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceResourceType: 集群資源類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceResourceType: str
-        :param NamespaceType: 命名空间类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceType: 命名空間類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceType: str
         """
         self.NamespaceId = None
@@ -5087,20 +5087,20 @@ class Namespace(AbstractModel):
 
 
 class OperationInfo(AbstractModel):
-    """提供给前端，控制按钮是否显示
+    """提供給前端，控制按鈕是否顯示
 
     """
 
     def __init__(self):
         """
-        :param Init: 初始化按钮的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Init: 初始化按鈕的控制訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Init: :class:`tencentcloud.tsf.v20180326.models.OperationInfoDetail`
-        :param AddInstance: 添加实例按钮的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AddInstance: 添加實例按鈕的控制訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AddInstance: :class:`tencentcloud.tsf.v20180326.models.OperationInfoDetail`
-        :param Destroy: 销毁机器的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Destroy: 銷毀機器的控制訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Destroy: :class:`tencentcloud.tsf.v20180326.models.OperationInfoDetail`
         """
         self.Init = None
@@ -5121,20 +5121,20 @@ class OperationInfo(AbstractModel):
 
 
 class OperationInfoDetail(AbstractModel):
-    """提供给前端控制按钮显示逻辑的字段
+    """提供給前端控制按鈕顯示邏輯的欄位
 
     """
 
     def __init__(self):
         """
-        :param DisabledReason: 不显示的原因
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DisabledReason: 不顯示的原因
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DisabledReason: str
-        :param Enabled: 该按钮是否可点击
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Enabled: 該按鈕是否可點擊
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Enabled: bool
-        :param Supported: 是否显示该按钮
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Supported: 是否顯示該按鈕
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Supported: bool
         """
         self.DisabledReason = None
@@ -5149,35 +5149,35 @@ class OperationInfoDetail(AbstractModel):
 
 
 class PkgInfo(AbstractModel):
-    """包信息
+    """包訊息
 
     """
 
     def __init__(self):
         """
-        :param PkgId: 程序包ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PkgId: 程式包ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PkgId: str
-        :param PkgName: 程序包名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PkgName: 程式包名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PkgName: str
-        :param PkgType: 程序包类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PkgType: 程式包類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PkgType: str
-        :param PkgVersion: 程序包版本
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PkgVersion: 程式包版本
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PkgVersion: str
-        :param PkgDesc: 程序包描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PkgDesc: 程式包描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PkgDesc: str
-        :param UploadTime: 上传时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UploadTime: 上傳時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UploadTime: str
-        :param Md5: 程序包MD5
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Md5: 程式包MD5
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Md5: str
-        :param PkgPubStatus: 程序包状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PkgPubStatus: 程式包狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PkgPubStatus: int
         """
         self.PkgId = None
@@ -5202,16 +5202,16 @@ class PkgInfo(AbstractModel):
 
 
 class PkgList(AbstractModel):
-    """包列表
+    """包清單
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 程序包总量
+        :param TotalCount: 程式包總量
         :type TotalCount: int
-        :param Content: 程序包信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Content: 程式包訊息清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Content: list of PkgInfo
         """
         self.TotalCount = None
@@ -5229,7 +5229,7 @@ class PkgList(AbstractModel):
 
 
 class ProtocolPort(AbstractModel):
-    """端口对象
+    """端口對象
 
     """
 
@@ -5237,12 +5237,12 @@ class ProtocolPort(AbstractModel):
         """
         :param Protocol: TCP UDP
         :type Protocol: str
-        :param Port: 服务端口
+        :param Port: 服務端口
         :type Port: int
         :param TargetPort: 容器端口
         :type TargetPort: int
-        :param NodePort: 主机端口
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NodePort: 主機端口
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NodePort: int
         """
         self.Protocol = None
@@ -5259,7 +5259,7 @@ class ProtocolPort(AbstractModel):
 
 
 class ReleaseConfigRequest(AbstractModel):
-    """ReleaseConfig请求参数结构体
+    """ReleaseConfig請求參數結構體
 
     """
 
@@ -5267,9 +5267,9 @@ class ReleaseConfigRequest(AbstractModel):
         """
         :param ConfigId: 配置ID
         :type ConfigId: str
-        :param GroupId: 部署组ID
+        :param GroupId: 佈署組ID
         :type GroupId: str
-        :param ReleaseDesc: 发布描述
+        :param ReleaseDesc: 發布描述
         :type ReleaseDesc: str
         """
         self.ConfigId = None
@@ -5284,15 +5284,15 @@ class ReleaseConfigRequest(AbstractModel):
 
 
 class ReleaseConfigResponse(AbstractModel):
-    """ReleaseConfig返回参数结构体
+    """ReleaseConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: true：发布成功；false：发布失败
+        :param Result: true：發布成功；false：發布失敗
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -5305,7 +5305,7 @@ class ReleaseConfigResponse(AbstractModel):
 
 
 class ReleasePublicConfigRequest(AbstractModel):
-    """ReleasePublicConfig请求参数结构体
+    """ReleasePublicConfig請求參數結構體
 
     """
 
@@ -5313,9 +5313,9 @@ class ReleasePublicConfigRequest(AbstractModel):
         """
         :param ConfigId: 配置ID
         :type ConfigId: str
-        :param NamespaceId: 命名空间ID
+        :param NamespaceId: 命名空間ID
         :type NamespaceId: str
-        :param ReleaseDesc: 发布描述
+        :param ReleaseDesc: 發布描述
         :type ReleaseDesc: str
         """
         self.ConfigId = None
@@ -5330,16 +5330,16 @@ class ReleasePublicConfigRequest(AbstractModel):
 
 
 class ReleasePublicConfigResponse(AbstractModel):
-    """ReleasePublicConfig返回参数结构体
+    """ReleasePublicConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: true：发布成功；false：发布失败
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: true：發布成功；false：發布失敗
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -5352,7 +5352,7 @@ class ReleasePublicConfigResponse(AbstractModel):
 
 
 class RemoveInstancesRequest(AbstractModel):
-    """RemoveInstances请求参数结构体
+    """RemoveInstances請求參數結構體
 
     """
 
@@ -5360,7 +5360,7 @@ class RemoveInstancesRequest(AbstractModel):
         """
         :param ClusterId: 集群 ID
         :type ClusterId: str
-        :param InstanceIdList: 云主机 ID 列表
+        :param InstanceIdList: 雲主機 ID 清單
         :type InstanceIdList: list of str
         """
         self.ClusterId = None
@@ -5373,16 +5373,16 @@ class RemoveInstancesRequest(AbstractModel):
 
 
 class RemoveInstancesResponse(AbstractModel):
-    """RemoveInstances返回参数结构体
+    """RemoveInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 集群移除机器是否成功
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 集群移除機器是否成功
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -5395,13 +5395,13 @@ class RemoveInstancesResponse(AbstractModel):
 
 
 class RevocationConfigRequest(AbstractModel):
-    """RevocationConfig请求参数结构体
+    """RevocationConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ConfigReleaseId: 配置项发布ID
+        :param ConfigReleaseId: 配置項發布ID
         :type ConfigReleaseId: str
         """
         self.ConfigReleaseId = None
@@ -5412,15 +5412,15 @@ class RevocationConfigRequest(AbstractModel):
 
 
 class RevocationConfigResponse(AbstractModel):
-    """RevocationConfig返回参数结构体
+    """RevocationConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: true：回滚成功；false：回滚失败
+        :param Result: true：回滾成功；false：回滾失敗
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -5433,13 +5433,13 @@ class RevocationConfigResponse(AbstractModel):
 
 
 class RevocationPublicConfigRequest(AbstractModel):
-    """RevocationPublicConfig请求参数结构体
+    """RevocationPublicConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ConfigReleaseId: 配置项发布ID
+        :param ConfigReleaseId: 配置項發布ID
         :type ConfigReleaseId: str
         """
         self.ConfigReleaseId = None
@@ -5450,16 +5450,16 @@ class RevocationPublicConfigRequest(AbstractModel):
 
 
 class RevocationPublicConfigResponse(AbstractModel):
-    """RevocationPublicConfig返回参数结构体
+    """RevocationPublicConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: true：撤销成功；false：撤销失败
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: true：撤銷成功；false：撤銷失敗
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -5472,15 +5472,15 @@ class RevocationPublicConfigResponse(AbstractModel):
 
 
 class RollbackConfigRequest(AbstractModel):
-    """RollbackConfig请求参数结构体
+    """RollbackConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ConfigReleaseLogId: 配置项发布历史ID
+        :param ConfigReleaseLogId: 配置項發布曆史ID
         :type ConfigReleaseLogId: str
-        :param ReleaseDesc: 回滚描述
+        :param ReleaseDesc: 回滾描述
         :type ReleaseDesc: str
         """
         self.ConfigReleaseLogId = None
@@ -5493,15 +5493,15 @@ class RollbackConfigRequest(AbstractModel):
 
 
 class RollbackConfigResponse(AbstractModel):
-    """RollbackConfig返回参数结构体
+    """RollbackConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: true：回滚成功；false：回滚失败
+        :param Result: true：回滾成功；false：回滾失敗
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -5514,68 +5514,68 @@ class RollbackConfigResponse(AbstractModel):
 
 
 class ServerlessGroup(AbstractModel):
-    """Serverless部署组信息
+    """Serverless佈署組訊息
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupId: 佈署組ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupId: str
-        :param GroupName: 分组名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupName: 分組名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupName: str
-        :param CreateTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
-        :param Status: 服务状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Status: 服務狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: str
-        :param PkgId: 程序包ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PkgId: 程式包ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PkgId: str
-        :param PkgName: 程序包名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PkgName: 程式包名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PkgName: str
         :param ClusterId: 集群id
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterId: str
-        :param ClusterName: 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterName: 集群名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterName: str
-        :param NamespaceId: 命名空间id
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceId: 命名空間id
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceId: str
-        :param NamespaceName: 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceName: 命名空間名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceName: str
         :param VpcId: vpc ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcId: str
-        :param SubnetId: vpc 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubnetId: vpc 子網ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetId: str
-        :param PkgVersion: 程序包版本
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PkgVersion: 程式包版本
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PkgVersion: str
-        :param Memory: 所需实例内存大小
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Memory: 所需實例内存大小
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Memory: str
-        :param InstanceRequest: 要求最小实例数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceRequest: 要求最小實例數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceRequest: int
-        :param StartupParameters: 部署组启动参数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StartupParameters: 佈署組啓動參數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StartupParameters: str
-        :param ApplicationId: 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationId: 應用ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationId: str
-        :param InstanceCount: 部署组实例数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceCount: 佈署組實例數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceCount: int
-        :param ApplicationName: 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationName: 應用名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationName: list of str
         """
         self.GroupId = None
@@ -5622,17 +5622,17 @@ class ServerlessGroup(AbstractModel):
 
 
 class ServerlessGroupPage(AbstractModel):
-    """ServerlessGroup 翻页对象
+    """ServerlessGroup 翻頁對象
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 总记录数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 總記錄數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param Content: 列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Content: 清單訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Content: list of ServerlessGroup
         """
         self.TotalCount = None
@@ -5650,13 +5650,13 @@ class ServerlessGroupPage(AbstractModel):
 
 
 class ShrinkGroupRequest(AbstractModel):
-    """ShrinkGroup请求参数结构体
+    """ShrinkGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
+        :param GroupId: 佈署組ID
         :type GroupId: str
         """
         self.GroupId = None
@@ -5667,16 +5667,16 @@ class ShrinkGroupRequest(AbstractModel):
 
 
 class ShrinkGroupResponse(AbstractModel):
-    """ShrinkGroup返回参数结构体
+    """ShrinkGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 任務ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TaskId`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -5691,15 +5691,15 @@ class ShrinkGroupResponse(AbstractModel):
 
 
 class ShrinkInstancesRequest(AbstractModel):
-    """ShrinkInstances请求参数结构体
+    """ShrinkInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
+        :param GroupId: 佈署組ID
         :type GroupId: str
-        :param InstanceIdList: 下线机器实例ID列表
+        :param InstanceIdList: 下線機器實例ID清單
         :type InstanceIdList: list of str
         """
         self.GroupId = None
@@ -5712,15 +5712,15 @@ class ShrinkInstancesRequest(AbstractModel):
 
 
 class ShrinkInstancesResponse(AbstractModel):
-    """ShrinkInstances返回参数结构体
+    """ShrinkInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 任务ID
+        :param Result: 任務ID
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TaskId`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -5735,44 +5735,44 @@ class ShrinkInstancesResponse(AbstractModel):
 
 
 class SimpleApplication(AbstractModel):
-    """简单应用
+    """簡單應用
 
     """
 
     def __init__(self):
         """
-        :param ApplicationId: 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationId: 應用ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationId: str
-        :param ApplicationName: 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationName: 應用名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationName: str
-        :param ApplicationType: 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationType: 應用類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationType: str
-        :param MicroserviceType: 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MicroserviceType: 應用微服務類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MicroserviceType: str
         :param ApplicationDesc: ApplicationDesc
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationDesc: str
         :param ProgLang: ProgLang
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProgLang: str
         :param ApplicationResourceType: ApplicationResourceType
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationResourceType: str
         :param CreateTime: CreateTime
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
         :param UpdateTime: UpdateTime
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdateTime: str
         :param ApigatewayServiceId: ApigatewayServiceId
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApigatewayServiceId: str
         :param ApplicationRuntimeType: ApplicationRuntimeType
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationRuntimeType: str
         """
         self.ApplicationId = None
@@ -5803,50 +5803,50 @@ class SimpleApplication(AbstractModel):
 
 
 class SimpleGroup(AbstractModel):
-    """部署组
+    """佈署組
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupId: 佈署組ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupId: str
-        :param GroupName: 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupName: 佈署組名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupName: str
-        :param ApplicationId: 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationId: 應用ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationId: str
-        :param ApplicationName: 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationName: 應用名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationName: str
-        :param ApplicationType: 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationType: 應用類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationType: str
         :param ClusterId: 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterId: str
-        :param ClusterName: 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterName: 集群名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterName: str
-        :param ClusterType: 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterType: 集群類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterType: str
-        :param NamespaceId: 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceId: 命名空間ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceId: str
-        :param NamespaceName: 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceName: 命名空間名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceName: str
-        :param StartupParameters: 启动参数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StartupParameters: 啓動參數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StartupParameters: str
-        :param GroupResourceType: 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupResourceType: 佈署組資源類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupResourceType: str
-        :param AppMicroServiceType: 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AppMicroServiceType: 應用微服務類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AppMicroServiceType: str
         """
         self.GroupId = None
@@ -5881,13 +5881,13 @@ class SimpleGroup(AbstractModel):
 
 
 class StartContainerGroupRequest(AbstractModel):
-    """StartContainerGroup请求参数结构体
+    """StartContainerGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
+        :param GroupId: 佈署組ID
         :type GroupId: str
         """
         self.GroupId = None
@@ -5898,17 +5898,17 @@ class StartContainerGroupRequest(AbstractModel):
 
 
 class StartContainerGroupResponse(AbstractModel):
-    """StartContainerGroup返回参数结构体
+    """StartContainerGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 启动操作是否成功。
-true：启动成功
-false：启动失败
+        :param Result: 啓動操作是否成功。
+true：啓動成功
+false：啓動失敗
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -5921,13 +5921,13 @@ false：启动失败
 
 
 class StartGroupRequest(AbstractModel):
-    """StartGroup请求参数结构体
+    """StartGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
+        :param GroupId: 佈署組ID
         :type GroupId: str
         """
         self.GroupId = None
@@ -5938,16 +5938,16 @@ class StartGroupRequest(AbstractModel):
 
 
 class StartGroupResponse(AbstractModel):
-    """StartGroup返回参数结构体
+    """StartGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 任務ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TaskId`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -5962,13 +5962,13 @@ class StartGroupResponse(AbstractModel):
 
 
 class StopContainerGroupRequest(AbstractModel):
-    """StopContainerGroup请求参数结构体
+    """StopContainerGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
+        :param GroupId: 佈署組ID
         :type GroupId: str
         """
         self.GroupId = None
@@ -5979,7 +5979,7 @@ class StopContainerGroupRequest(AbstractModel):
 
 
 class StopContainerGroupResponse(AbstractModel):
-    """StopContainerGroup返回参数结构体
+    """StopContainerGroup返回參數結構體
 
     """
 
@@ -5987,9 +5987,9 @@ class StopContainerGroupResponse(AbstractModel):
         """
         :param Result: 停止操作是否成功。
 true：停止成功
-flase：停止失败
+flase：停止失敗
         :type Result: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -6002,13 +6002,13 @@ flase：停止失败
 
 
 class StopGroupRequest(AbstractModel):
-    """StopGroup请求参数结构体
+    """StopGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
+        :param GroupId: 佈署組ID
         :type GroupId: str
         """
         self.GroupId = None
@@ -6019,16 +6019,16 @@ class StopGroupRequest(AbstractModel):
 
 
 class StopGroupResponse(AbstractModel):
-    """StopGroup返回参数结构体
+    """StopGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 任務ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: :class:`tencentcloud.tsf.v20180326.models.TaskId`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -6043,14 +6043,14 @@ class StopGroupResponse(AbstractModel):
 
 
 class TaskId(AbstractModel):
-    """任务id
+    """任務id
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TaskId: 任務ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskId: str
         """
         self.TaskId = None
@@ -6061,17 +6061,17 @@ class TaskId(AbstractModel):
 
 
 class TsfPageApplication(AbstractModel):
-    """应用分页信息
+    """應用分頁訊息
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 应用总数目
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 應用總數目
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param Content: 应用信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Content: 應用訊息清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Content: list of ApplicationForPage
         """
         self.TotalCount = None
@@ -6089,17 +6089,17 @@ class TsfPageApplication(AbstractModel):
 
 
 class TsfPageCluster(AbstractModel):
-    """Tsf分页集群对象
+    """Tsf分頁集群對象
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 总条数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 總條數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param Content: 集群列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Content: 集群清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Content: list of Cluster
         """
         self.TotalCount = None
@@ -6125,7 +6125,7 @@ class TsfPageConfig(AbstractModel):
         """
         :param TotalCount: TsfPageConfig
         :type TotalCount: int
-        :param Content: 配置项列表
+        :param Content: 配置項清單
         :type Content: list of Config
         """
         self.TotalCount = None
@@ -6143,17 +6143,17 @@ class TsfPageConfig(AbstractModel):
 
 
 class TsfPageConfigRelease(AbstractModel):
-    """TSF配置项发布信息分页对象
+    """TSF配置項發布訊息分頁對象
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 总条数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 總條數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param Content: 配置项发布信息数组
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Content: 配置項發布訊息數組
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Content: list of ConfigRelease
         """
         self.TotalCount = None
@@ -6171,17 +6171,17 @@ class TsfPageConfigRelease(AbstractModel):
 
 
 class TsfPageConfigReleaseLog(AbstractModel):
-    """TSF配置项发布日志分页对象
+    """TSF配置項發布日志分頁對象
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 总条数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 總條數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param Content: 配置项发布日志数组
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Content: 配置項發布日志數組
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Content: list of ConfigReleaseLog
         """
         self.TotalCount = None
@@ -6199,17 +6199,17 @@ class TsfPageConfigReleaseLog(AbstractModel):
 
 
 class TsfPageInstance(AbstractModel):
-    """TSF机器实例分页对象
+    """TSF機器實例分頁對象
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 机器实例总数目
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 機器實例總數目
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param Content: 机器实例列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Content: 機器實例清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Content: list of Instance
         """
         self.TotalCount = None
@@ -6227,17 +6227,17 @@ class TsfPageInstance(AbstractModel):
 
 
 class TsfPageMicroservice(AbstractModel):
-    """微服务列表信息
+    """微服務清單訊息
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 微服务总数目
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 微服務總數目
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param Content: 微服务列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Content: 微服務清單訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Content: list of Microservice
         """
         self.TotalCount = None
@@ -6255,17 +6255,17 @@ class TsfPageMicroservice(AbstractModel):
 
 
 class TsfPageMsInstance(AbstractModel):
-    """微服务实例的分页内容
+    """微服務實例的分頁内容
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 微服务实例总数目
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 微服務實例總數目
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param Content: 微服务实例列表内容
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Content: 微服務實例清單内容
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Content: list of MsInstance
         """
         self.TotalCount = None
@@ -6283,17 +6283,17 @@ class TsfPageMsInstance(AbstractModel):
 
 
 class TsfPageNamespace(AbstractModel):
-    """Tsf命名空间分页对象
+    """Tsf命名空間分頁對象
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 命名空间总条数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 命名空間總條數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param Content: 命名空间列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Content: 命名空間清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Content: list of Namespace
         """
         self.TotalCount = None
@@ -6311,17 +6311,17 @@ class TsfPageNamespace(AbstractModel):
 
 
 class TsfPageSimpleApplication(AbstractModel):
-    """TSF分页简单应用对象
+    """TSF分頁簡單應用對象
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 总条数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 總條數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param Content: 简单应用列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Content: 簡單應用清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Content: list of SimpleApplication
         """
         self.TotalCount = None
@@ -6339,17 +6339,17 @@ class TsfPageSimpleApplication(AbstractModel):
 
 
 class TsfPageSimpleGroup(AbstractModel):
-    """TSF简单部署组分页列表
+    """TSF簡單佈署組分頁清單
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 总条数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 總條數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param Content: 简单部署组列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Content: 簡單佈署組清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Content: list of SimpleGroup
         """
         self.TotalCount = None
@@ -6367,17 +6367,17 @@ class TsfPageSimpleGroup(AbstractModel):
 
 
 class TsfPageVmGroup(AbstractModel):
-    """列表中部署组分页信息
+    """清單中佈署組分頁訊息
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 虚拟机部署组总数目
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 虛拟機佈署組總數目
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param Content: 虚拟机部署组列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Content: 虛拟機佈署組清單訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Content: list of VmGroupSimple
         """
         self.TotalCount = None
@@ -6395,80 +6395,80 @@ class TsfPageVmGroup(AbstractModel):
 
 
 class VmGroup(AbstractModel):
-    """虚拟机部署组信息
+    """虛拟機佈署組訊息
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupId: 佈署組ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupId: str
-        :param GroupName: 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupName: 佈署組名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupName: str
-        :param GroupStatus: 部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupStatus: 佈署組狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupStatus: str
-        :param PackageId: 程序包ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PackageId: 程式包ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PackageId: str
-        :param PackageName: 程序包名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PackageName: 程式包名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PackageName: str
-        :param PackageVersion: 程序包版本号
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PackageVersion: 程式包版本号
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PackageVersion: str
         :param ClusterId: 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterId: str
-        :param ClusterName: 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterName: 集群名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterName: str
-        :param NamespaceId: 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceId: 命名空間ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceId: str
-        :param NamespaceName: 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceName: 命名空間名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceName: str
-        :param ApplicationId: 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationId: 應用ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationId: str
-        :param ApplicationName: 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationName: 應用名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationName: str
-        :param InstanceCount: 部署组机器数目
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceCount: 佈署組機器數目
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceCount: int
-        :param RunInstanceCount: 部署组运行中机器数目
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RunInstanceCount: 佈署組運作中機器數目
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RunInstanceCount: int
-        :param StartupParameters: 部署组启动参数信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StartupParameters: 佈署組啓動參數訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StartupParameters: str
-        :param CreateTime: 部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 佈署組創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
-        :param UpdateTime: 部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdateTime: 佈署組更新時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdateTime: str
-        :param OffInstanceCount: 部署组停止机器数目
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OffInstanceCount: 佈署組停止機器數目
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OffInstanceCount: int
-        :param GroupDesc: 部署组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupDesc: 佈署組描述訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupDesc: str
-        :param MicroserviceType: 微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MicroserviceType: 微服務類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MicroserviceType: str
-        :param ApplicationType: 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationType: 應用類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationType: str
-        :param GroupResourceType: 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupResourceType: 佈署組資源類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupResourceType: str
-        :param UpdatedTime: 部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdatedTime: 佈署組更新時間戳
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdatedTime: int
         """
         self.GroupId = None
@@ -6523,59 +6523,59 @@ class VmGroup(AbstractModel):
 
 
 class VmGroupSimple(AbstractModel):
-    """虚拟机部署组列表简要字段
+    """虛拟機佈署組清單簡要欄位
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupId: 佈署組ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupId: str
-        :param GroupName: 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupName: 佈署組名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupName: str
-        :param ApplicationType: 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationType: 應用類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationType: str
-        :param GroupDesc: 部署组描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupDesc: 佈署組描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupDesc: str
-        :param UpdateTime: 部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdateTime: 佈署組更新時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdateTime: str
         :param ClusterId: 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterId: str
-        :param StartupParameters: 部署组启动参数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StartupParameters: 佈署組啓動參數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StartupParameters: str
-        :param NamespaceId: 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceId: 命名空間ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceId: str
-        :param CreateTime: 部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 佈署組創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
-        :param ClusterName: 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterName: 集群名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterName: str
-        :param ApplicationId: 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationId: 應用ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationId: str
-        :param ApplicationName: 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ApplicationName: 應用名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationName: str
-        :param NamespaceName: 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NamespaceName: 命名空間名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceName: str
-        :param MicroserviceType: 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MicroserviceType: 應用微服務類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MicroserviceType: str
-        :param GroupResourceType: 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupResourceType: 佈署組資源類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupResourceType: str
-        :param UpdatedTime: 部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdatedTime: 佈署組更新時間戳
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdatedTime: int
         """
         self.GroupId = None

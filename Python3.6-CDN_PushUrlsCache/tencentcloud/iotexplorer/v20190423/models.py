@@ -17,19 +17,19 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CallDeviceActionAsyncRequest(AbstractModel):
-    """CallDeviceActionAsync请求参数结构体
+    """CallDeviceActionAsync請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品Id
+        :param ProductId: 産品Id
         :type ProductId: str
-        :param DeviceName: 设备名称
+        :param DeviceName: 設備名稱
         :type DeviceName: str
-        :param ActionId: 动作Id
+        :param ActionId: 動作Id
         :type ActionId: str
-        :param InputParams: 输入参数
+        :param InputParams: 輸入參數
         :type InputParams: str
         """
         self.ProductId = None
@@ -46,17 +46,17 @@ class CallDeviceActionAsyncRequest(AbstractModel):
 
 
 class CallDeviceActionAsyncResponse(AbstractModel):
-    """CallDeviceActionAsync返回参数结构体
+    """CallDeviceActionAsync返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClientToken: 调用Id
+        :param ClientToken: 調用Id
         :type ClientToken: str
-        :param Status: 异步调用状态
+        :param Status: 異步調用狀态
         :type Status: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ClientToken = None
@@ -71,19 +71,19 @@ class CallDeviceActionAsyncResponse(AbstractModel):
 
 
 class CallDeviceActionSyncRequest(AbstractModel):
-    """CallDeviceActionSync请求参数结构体
+    """CallDeviceActionSync請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品Id
+        :param ProductId: 産品Id
         :type ProductId: str
-        :param DeviceName: 设备名称
+        :param DeviceName: 設備名稱
         :type DeviceName: str
-        :param ActionId: 动作Id
+        :param ActionId: 動作Id
         :type ActionId: str
-        :param InputParams: 输入参数
+        :param InputParams: 輸入參數
         :type InputParams: str
         """
         self.ProductId = None
@@ -100,20 +100,20 @@ class CallDeviceActionSyncRequest(AbstractModel):
 
 
 class CallDeviceActionSyncResponse(AbstractModel):
-    """CallDeviceActionSync返回参数结构体
+    """CallDeviceActionSync返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClientToken: 调用Id
+        :param ClientToken: 調用Id
         :type ClientToken: str
-        :param OutputParams: 输出参数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OutputParams: 輸出參數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OutputParams: str
-        :param Status: 返回状态
+        :param Status: 返回狀态
         :type Status: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ClientToken = None
@@ -130,23 +130,23 @@ class CallDeviceActionSyncResponse(AbstractModel):
 
 
 class ControlDeviceDataRequest(AbstractModel):
-    """ControlDeviceData请求参数结构体
+    """ControlDeviceData請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品ID
+        :param ProductId: 産品ID
         :type ProductId: str
-        :param DeviceName: 设备名称
+        :param DeviceName: 設備名稱
         :type DeviceName: str
-        :param Data: 属性数据, JSON格式字符串, 注意字段需要在物模型属性里定义
+        :param Data: 屬性數據, JSON格式字串, 注意欄位需要在物模型屬性裏定義
         :type Data: str
-        :param Method: 请求类型 , 不填该参数或者 desired 表示下发属性给设备,  reported 表示模拟设备上报属性
+        :param Method: 請求類型 , 不填該參數或者 desired 表示下發屬性給設備,  reported 表示模拟設備上報屬性
         :type Method: str
-        :param DeviceId: 设备ID，该字段有值将代替 ProductId/DeviceName , 通常情况不需要填写
+        :param DeviceId: 設備ID，該欄位有值将代替 ProductId/DeviceName , 通常情況不需要填寫
         :type DeviceId: str
-        :param DataTimestamp: 上报数据UNIX时间戳(毫秒), 仅对Method:reported有效
+        :param DataTimestamp: 上報數據UNIX時間戳(毫秒), 僅對Method:reported有效
         :type DataTimestamp: int
         """
         self.ProductId = None
@@ -167,19 +167,19 @@ class ControlDeviceDataRequest(AbstractModel):
 
 
 class ControlDeviceDataResponse(AbstractModel):
-    """ControlDeviceData返回参数结构体
+    """ControlDeviceData返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 返回信息
+        :param Data: 返回訊息
         :type Data: str
-        :param Result: JSON字符串， 返回下发控制的结果信息, 
-Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: JSON字串， 返回下發控制的結果訊息, 
+Sent = 1 表示設備已經在線并且訂閱了控制下發的mqtt topic
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -194,25 +194,25 @@ Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
 
 
 class CreateDeviceRequest(AbstractModel):
-    """CreateDevice请求参数结构体
+    """CreateDevice請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品ID。
+        :param ProductId: 産品ID。
         :type ProductId: str
-        :param DeviceName: 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
+        :param DeviceName: 設備名稱。命名規則：[a-zA-Z0-9:_-]{1,48}。
         :type DeviceName: str
-        :param DevAddr: LoRaWAN 设备地址
+        :param DevAddr: LoRaWAN 設備網址
         :type DevAddr: str
-        :param AppKey: LoRaWAN 应用密钥
+        :param AppKey: LoRaWAN 應用金鑰
         :type AppKey: str
-        :param DevEUI: LoRaWAN 设备唯一标识
+        :param DevEUI: LoRaWAN 設備唯一标識
         :type DevEUI: str
-        :param AppSKey: LoRaWAN 应用会话密钥
+        :param AppSKey: LoRaWAN 應用會話金鑰
         :type AppSKey: str
-        :param NwkSKey: LoRaWAN 网络会话密钥
+        :param NwkSKey: LoRaWAN 網絡會話金鑰
         :type NwkSKey: str
         """
         self.ProductId = None
@@ -235,15 +235,15 @@ class CreateDeviceRequest(AbstractModel):
 
 
 class CreateDeviceResponse(AbstractModel):
-    """CreateDevice返回参数结构体
+    """CreateDevice返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 设备参数描述。
+        :param Data: 設備參數描述。
         :type Data: :class:`tencentcloud.iotexplorer.v20190423.models.DeviceData`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -258,15 +258,15 @@ class CreateDeviceResponse(AbstractModel):
 
 
 class CreateProjectRequest(AbstractModel):
-    """CreateProject请求参数结构体
+    """CreateProject請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectName: 项目名称
+        :param ProjectName: 項目名稱
         :type ProjectName: str
-        :param ProjectDesc: 项目描述
+        :param ProjectDesc: 項目描述
         :type ProjectDesc: str
         """
         self.ProjectName = None
@@ -279,15 +279,15 @@ class CreateProjectRequest(AbstractModel):
 
 
 class CreateProjectResponse(AbstractModel):
-    """CreateProject返回参数结构体
+    """CreateProject返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Project: 返回信息
+        :param Project: 返回訊息
         :type Project: :class:`tencentcloud.iotexplorer.v20190423.models.ProjectEntry`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Project = None
@@ -302,27 +302,27 @@ class CreateProjectResponse(AbstractModel):
 
 
 class CreateStudioProductRequest(AbstractModel):
-    """CreateStudioProduct请求参数结构体
+    """CreateStudioProduct請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductName: 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
+        :param ProductName: 産品名稱，名稱不能和已經存在的産品名稱重複。命名規則：[a-zA-Z0-9:_-]{1,32}
         :type ProductName: str
-        :param CategoryId: 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
+        :param CategoryId: 産品分組範本ID , ( 自定義範本填寫1 , 控制台調用會使用預置的其他ID)
         :type CategoryId: int
-        :param ProductType: 产品类型 填写 ( 0 普通产品 )
+        :param ProductType: 産品類型 填寫 ( 0 普通産品 )
         :type ProductType: int
-        :param EncryptionType: 加密类型 加密类型，1表示证书认证，2表示签名认证。
+        :param EncryptionType: 加密類型 加密類型，1表示證書認證，2表示簽名認證。
         :type EncryptionType: str
-        :param NetType: 连接类型 可以填写 wifi cellular else
+        :param NetType: 連接類型 可以填寫 wifi cellular else
         :type NetType: str
-        :param DataProtocol: 数据协议 (1 使用物模型 2 为自定义)
+        :param DataProtocol: 數據協議 (1 使用物模型 2 爲自定義)
         :type DataProtocol: int
-        :param ProductDesc: 产品描述
+        :param ProductDesc: 産品描述
         :type ProductDesc: str
-        :param ProjectId: 产品的项目ID
+        :param ProjectId: 産品的項目ID
         :type ProjectId: str
         """
         self.ProductName = None
@@ -347,15 +347,15 @@ class CreateStudioProductRequest(AbstractModel):
 
 
 class CreateStudioProductResponse(AbstractModel):
-    """CreateStudioProduct返回参数结构体
+    """CreateStudioProduct返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Product: 产品描述
+        :param Product: 産品描述
         :type Product: :class:`tencentcloud.iotexplorer.v20190423.models.ProductEntry`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Product = None
@@ -370,15 +370,15 @@ class CreateStudioProductResponse(AbstractModel):
 
 
 class DeleteDeviceRequest(AbstractModel):
-    """DeleteDevice请求参数结构体
+    """DeleteDevice請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品ID。
+        :param ProductId: 産品ID。
         :type ProductId: str
-        :param DeviceName: 设备名称。
+        :param DeviceName: 設備名稱。
         :type DeviceName: str
         """
         self.ProductId = None
@@ -391,13 +391,13 @@ class DeleteDeviceRequest(AbstractModel):
 
 
 class DeleteDeviceResponse(AbstractModel):
-    """DeleteDevice返回参数结构体
+    """DeleteDevice返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -408,13 +408,13 @@ class DeleteDeviceResponse(AbstractModel):
 
 
 class DeleteProjectRequest(AbstractModel):
-    """DeleteProject请求参数结构体
+    """DeleteProject請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: str
         """
         self.ProjectId = None
@@ -425,13 +425,13 @@ class DeleteProjectRequest(AbstractModel):
 
 
 class DeleteProjectResponse(AbstractModel):
-    """DeleteProject返回参数结构体
+    """DeleteProject返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -442,13 +442,13 @@ class DeleteProjectResponse(AbstractModel):
 
 
 class DeleteStudioProductRequest(AbstractModel):
-    """DeleteStudioProduct请求参数结构体
+    """DeleteStudioProduct請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品ID
+        :param ProductId: 産品ID
         :type ProductId: str
         """
         self.ProductId = None
@@ -459,13 +459,13 @@ class DeleteStudioProductRequest(AbstractModel):
 
 
 class DeleteStudioProductResponse(AbstractModel):
-    """DeleteStudioProduct返回参数结构体
+    """DeleteStudioProduct返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -476,25 +476,25 @@ class DeleteStudioProductResponse(AbstractModel):
 
 
 class DescribeDeviceDataHistoryRequest(AbstractModel):
-    """DescribeDeviceDataHistory请求参数结构体
+    """DescribeDeviceDataHistory請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MinTime: 区间开始时间（Unix 时间戳，毫秒级）
+        :param MinTime: 區間開始時間（Unix 時間戳，毫秒級）
         :type MinTime: int
-        :param MaxTime: 区间结束时间（Unix 时间戳，毫秒级）
+        :param MaxTime: 區間結束時間（Unix 時間戳，毫秒級）
         :type MaxTime: int
-        :param ProductId: 产品ID
+        :param ProductId: 産品ID
         :type ProductId: str
-        :param DeviceName: 设备名称
+        :param DeviceName: 設備名稱
         :type DeviceName: str
-        :param FieldName: 属性字段名称，对应数据模板中功能属性的标识符
+        :param FieldName: 屬性欄位名稱，對應數據範本中功能屬性的标識符
         :type FieldName: str
-        :param Limit: 返回条数
+        :param Limit: 返回條數
         :type Limit: int
-        :param Context: 检索上下文
+        :param Context: 檢索上下文
         :type Context: str
         """
         self.MinTime = None
@@ -517,25 +517,25 @@ class DescribeDeviceDataHistoryRequest(AbstractModel):
 
 
 class DescribeDeviceDataHistoryResponse(AbstractModel):
-    """DescribeDeviceDataHistory返回参数结构体
+    """DescribeDeviceDataHistory返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FieldName: 属性字段名称，对应数据模板中功能属性的标识符
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FieldName: 屬性欄位名稱，對應數據範本中功能屬性的标識符
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FieldName: str
-        :param Listover: 数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Listover: 數據是否已全部返回，true 表示數據全部返回，false 表示還有數據待返回，可将 Context 作爲入參，繼續查詢返回結果。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Listover: bool
-        :param Context: 检索上下文，当 ListOver 为false时，可以用此上下文，继续读取后续数据
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Context: 檢索上下文，當 ListOver 爲false時，可以用此上下文，繼續讀取後續數據
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Context: str
-        :param Results: 历史数据结果数组，返回对应时间点及取值。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Results: 曆史數據結果數組，返回對應時間點及取值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Results: list of DeviceDataHistoryItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FieldName = None
@@ -559,17 +559,17 @@ class DescribeDeviceDataHistoryResponse(AbstractModel):
 
 
 class DescribeDeviceDataRequest(AbstractModel):
-    """DescribeDeviceData请求参数结构体
+    """DescribeDeviceData請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品ID
+        :param ProductId: 産品ID
         :type ProductId: str
-        :param DeviceName: 设备名称
+        :param DeviceName: 設備名稱
         :type DeviceName: str
-        :param DeviceId: 设备ID，该字段有值将代替 ProductId/DeviceName
+        :param DeviceId: 設備ID，該欄位有值将代替 ProductId/DeviceName
         :type DeviceId: str
         """
         self.ProductId = None
@@ -584,15 +584,15 @@ class DescribeDeviceDataRequest(AbstractModel):
 
 
 class DescribeDeviceDataResponse(AbstractModel):
-    """DescribeDeviceData返回参数结构体
+    """DescribeDeviceData返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 设备数据
+        :param Data: 設備數據
         :type Data: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -605,17 +605,17 @@ class DescribeDeviceDataResponse(AbstractModel):
 
 
 class DescribeDeviceRequest(AbstractModel):
-    """DescribeDevice请求参数结构体
+    """DescribeDevice請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品ID
+        :param ProductId: 産品ID
         :type ProductId: str
-        :param DeviceName: 设备名
+        :param DeviceName: 設備名
         :type DeviceName: str
-        :param DeviceId: 设备ID，该字段有值将代替 ProductId/DeviceName
+        :param DeviceId: 設備ID，該欄位有值将代替 ProductId/DeviceName
         :type DeviceId: str
         """
         self.ProductId = None
@@ -630,15 +630,15 @@ class DescribeDeviceRequest(AbstractModel):
 
 
 class DescribeDeviceResponse(AbstractModel):
-    """DescribeDevice返回参数结构体
+    """DescribeDevice返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Device: 设备信息
+        :param Device: 設備訊息
         :type Device: :class:`tencentcloud.iotexplorer.v20190423.models.DeviceInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Device = None
@@ -653,13 +653,13 @@ class DescribeDeviceResponse(AbstractModel):
 
 
 class DescribeModelDefinitionRequest(AbstractModel):
-    """DescribeModelDefinition请求参数结构体
+    """DescribeModelDefinition請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品ID
+        :param ProductId: 産品ID
         :type ProductId: str
         """
         self.ProductId = None
@@ -670,15 +670,15 @@ class DescribeModelDefinitionRequest(AbstractModel):
 
 
 class DescribeModelDefinitionResponse(AbstractModel):
-    """DescribeModelDefinition返回参数结构体
+    """DescribeModelDefinition返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Model: 产品数据模板
+        :param Model: 産品數據範本
         :type Model: :class:`tencentcloud.iotexplorer.v20190423.models.ProductModelDefinition`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Model = None
@@ -693,13 +693,13 @@ class DescribeModelDefinitionResponse(AbstractModel):
 
 
 class DescribeProjectRequest(AbstractModel):
-    """DescribeProject请求参数结构体
+    """DescribeProject請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: str
         """
         self.ProjectId = None
@@ -710,15 +710,15 @@ class DescribeProjectRequest(AbstractModel):
 
 
 class DescribeProjectResponse(AbstractModel):
-    """DescribeProject返回参数结构体
+    """DescribeProject返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Project: 返回信息
+        :param Project: 返回訊息
         :type Project: :class:`tencentcloud.iotexplorer.v20190423.models.ProjectEntryEx`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Project = None
@@ -733,13 +733,13 @@ class DescribeProjectResponse(AbstractModel):
 
 
 class DescribeStudioProductRequest(AbstractModel):
-    """DescribeStudioProduct请求参数结构体
+    """DescribeStudioProduct請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品ID
+        :param ProductId: 産品ID
         :type ProductId: str
         """
         self.ProductId = None
@@ -750,15 +750,15 @@ class DescribeStudioProductRequest(AbstractModel):
 
 
 class DescribeStudioProductResponse(AbstractModel):
-    """DescribeStudioProduct返回参数结构体
+    """DescribeStudioProduct返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Product: 产品详情
+        :param Product: 産品詳情
         :type Product: :class:`tencentcloud.iotexplorer.v20190423.models.ProductEntry`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Product = None
@@ -779,17 +779,17 @@ class DeviceData(AbstractModel):
 
     def __init__(self):
         """
-        :param DeviceCert: 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DeviceCert: 設備證書，用于 TLS 建立連結時校驗用戶端身份。采用非對稱加密時返回該參數。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeviceCert: str
-        :param DeviceName: 设备名称。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DeviceName: 設備名稱。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeviceName: str
-        :param DevicePrivateKey: 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DevicePrivateKey: 設備私鑰，用于 TLS 建立連結時校驗用戶端身份，Top Cloud 後台不保存，請妥善保管。采用非對稱加密時返回該參數。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DevicePrivateKey: str
-        :param DevicePsk: 对称加密密钥，base64编码。采用对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DevicePsk: 對稱加密金鑰，base64編碼。采用對稱加密時返回該參數。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DevicePsk: str
         """
         self.DeviceCert = None
@@ -806,15 +806,15 @@ class DeviceData(AbstractModel):
 
 
 class DeviceDataHistoryItem(AbstractModel):
-    """设备历史数据结构
+    """設備曆史數據結構
 
     """
 
     def __init__(self):
         """
-        :param Time: 时间点，毫秒时间戳
+        :param Time: 時間點，毫秒時間戳
         :type Time: str
-        :param Value: 字段取值
+        :param Value: 欄位取值
         :type Value: str
         """
         self.Time = None
@@ -827,51 +827,51 @@ class DeviceDataHistoryItem(AbstractModel):
 
 
 class DeviceInfo(AbstractModel):
-    """设备详细信息
+    """設備詳細訊息
 
     """
 
     def __init__(self):
         """
-        :param DeviceName: 设备名
+        :param DeviceName: 設備名
         :type DeviceName: str
-        :param Status: 0: 离线, 1: 在线, 2: 获取失败, 3 未激活
+        :param Status: 0: 離線, 1: 在線, 2: 獲取失敗, 3 未啟動
         :type Status: int
-        :param DevicePsk: 设备密钥，密钥加密的设备返回
+        :param DevicePsk: 設備金鑰，金鑰加密的設備返回
         :type DevicePsk: str
-        :param FirstOnlineTime: 首次上线时间
-注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FirstOnlineTime: 首次上線時間
+注意：此欄位可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FirstOnlineTime: int
-        :param LoginTime: 最后一次上线时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LoginTime: 最後一次上線時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LoginTime: int
-        :param CreateTime: 设备创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 設備創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: int
-        :param Version: 设备固件版本
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Version: 設備固件版本
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Version: str
-        :param DeviceCert: 设备证书
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DeviceCert: 設備證書
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeviceCert: str
-        :param LogLevel: 日志级别
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LogLevel: 日志級别
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LogLevel: int
-        :param DevAddr: LoRaWAN 设备地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DevAddr: LoRaWAN 設備網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DevAddr: str
-        :param AppKey: LoRaWAN 应用密钥
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AppKey: LoRaWAN 應用金鑰
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AppKey: str
-        :param DevEUI: LoRaWAN 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DevEUI: LoRaWAN 設備唯一标識
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DevEUI: str
-        :param AppSKey: LoRaWAN 应用会话密钥
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AppSKey: LoRaWAN 應用會話金鑰
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AppSKey: str
-        :param NwkSKey: LoRaWAN 网络会话密钥
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NwkSKey: LoRaWAN 網絡會話金鑰
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NwkSKey: str
         """
         self.DeviceName = None
@@ -908,29 +908,29 @@ class DeviceInfo(AbstractModel):
 
 
 class EventHistoryItem(AbstractModel):
-    """设备事件的搜索结果项
+    """設備事件的搜索結果項
 
     """
 
     def __init__(self):
         """
-        :param TimeStamp: 事件的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TimeStamp: 事件的時間戳
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TimeStamp: int
-        :param ProductId: 事件的产品ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProductId: 事件的産品ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProductId: str
-        :param DeviceName: 事件的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DeviceName: 事件的設備名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeviceName: str
-        :param EventId: 事件的标识符ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EventId: 事件的标識符ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EventId: str
-        :param Type: 事件的类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Type: 事件的類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Type: str
-        :param Data: 事件的数据
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 事件的數據
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: str
         """
         self.TimeStamp = None
@@ -951,17 +951,17 @@ class EventHistoryItem(AbstractModel):
 
 
 class GetDeviceListRequest(AbstractModel):
-    """GetDeviceList请求参数结构体
+    """GetDeviceList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 需要查看设备列表的产品 ID
+        :param ProductId: 需要檢視設備清單的産品 ID
         :type ProductId: str
-        :param Offset: 分页偏移
+        :param Offset: 分頁偏移
         :type Offset: int
-        :param Limit: 分页的大小，数值范围 10-100
+        :param Limit: 分頁的大小，數值範圍 10-100
         :type Limit: int
         """
         self.ProductId = None
@@ -976,19 +976,19 @@ class GetDeviceListRequest(AbstractModel):
 
 
 class GetDeviceListResponse(AbstractModel):
-    """GetDeviceList返回参数结构体
+    """GetDeviceList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Devices: 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Devices: 返回的設備清單, 注意清單設備的 DevicePsk 爲空, 要獲取設備的 DevicePsk 請使用 DescribeDevice
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Devices: list of DeviceInfo
-        :param Total: 产品下的设备总数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Total: 産品下的設備總數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Total: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Devices = None
@@ -1008,7 +1008,7 @@ class GetDeviceListResponse(AbstractModel):
 
 
 class GetProjectListRequest(AbstractModel):
-    """GetProjectList请求参数结构体
+    """GetProjectList請求參數結構體
 
     """
 
@@ -1016,7 +1016,7 @@ class GetProjectListRequest(AbstractModel):
         """
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 个数限制
+        :param Limit: 個數限制
         :type Limit: int
         """
         self.Offset = None
@@ -1029,19 +1029,19 @@ class GetProjectListRequest(AbstractModel):
 
 
 class GetProjectListResponse(AbstractModel):
-    """GetProjectList返回参数结构体
+    """GetProjectList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Projects: 项目列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Projects: 項目清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Projects: list of ProjectEntryEx
-        :param Total: 列表项个数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Total: 清單項個數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Total: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Projects = None
@@ -1061,15 +1061,15 @@ class GetProjectListResponse(AbstractModel):
 
 
 class GetStudioProductListRequest(AbstractModel):
-    """GetStudioProductList请求参数结构体
+    """GetStudioProductList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: str
-        :param DevStatus: 产品DevStatus
+        :param DevStatus: 産品DevStatus
         :type DevStatus: str
         :param Offset: Offset
         :type Offset: int
@@ -1090,17 +1090,17 @@ class GetStudioProductListRequest(AbstractModel):
 
 
 class GetStudioProductListResponse(AbstractModel):
-    """GetStudioProductList返回参数结构体
+    """GetStudioProductList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Products: 产品列表
+        :param Products: 産品清單
         :type Products: list of ProductEntry
-        :param Total: 产品数量
+        :param Total: 産品數量
         :type Total: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Products = None
@@ -1120,25 +1120,25 @@ class GetStudioProductListResponse(AbstractModel):
 
 
 class ListEventHistoryRequest(AbstractModel):
-    """ListEventHistory请求参数结构体
+    """ListEventHistory請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品ID
+        :param ProductId: 産品ID
         :type ProductId: str
-        :param DeviceName: 设备名称
+        :param DeviceName: 設備名稱
         :type DeviceName: str
-        :param Type: 搜索的事件类型：alert 表示告警，fault 表示故障，info 表示信息，为空则表示查询上述所有类型事件
+        :param Type: 搜索的事件類型：alert 表示告警，fault 表示故障，info 表示訊息，爲空則表示查詢上述所有類型事件
         :type Type: str
-        :param StartTime: 起始时间（Unix 时间戳，秒级）, 为0 表示 当前时间 - 24h
+        :param StartTime: 起始時間（Unix 時間戳，秒級）, 爲0 表示 當前時間 - 24h
         :type StartTime: int
-        :param EndTime: 结束时间（Unix 时间戳，秒级）, 为0 表示当前时间
+        :param EndTime: 結束時間（Unix 時間戳，秒級）, 爲0 表示當前時間
         :type EndTime: int
-        :param Context: 搜索上下文, 用作查询游标
+        :param Context: 搜索上下文, 用作查詢遊标
         :type Context: str
-        :param Size: 单次获取的历史数据项目的最大数量
+        :param Size: 單次獲取的曆史數據項目的最大數量
         :type Size: int
         """
         self.ProductId = None
@@ -1161,25 +1161,25 @@ class ListEventHistoryRequest(AbstractModel):
 
 
 class ListEventHistoryResponse(AbstractModel):
-    """ListEventHistory返回参数结构体
+    """ListEventHistory返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Context: 搜索上下文, 用作查询游标
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Context: 搜索上下文, 用作查詢遊标
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Context: str
-        :param Total: 搜索结果数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Total: 搜索結果數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Total: int
-        :param Listover: 搜索结果是否已经结束
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Listover: 搜索結果是否已經結束
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Listover: bool
-        :param EventHistory: 搜集结果集
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EventHistory: 搜集結果集
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EventHistory: list of EventHistoryItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Context = None
@@ -1203,15 +1203,15 @@ class ListEventHistoryResponse(AbstractModel):
 
 
 class ModifyModelDefinitionRequest(AbstractModel):
-    """ModifyModelDefinition请求参数结构体
+    """ModifyModelDefinition請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品ID
+        :param ProductId: 産品ID
         :type ProductId: str
-        :param ModelSchema: 数据模板定义
+        :param ModelSchema: 數據範本定義
         :type ModelSchema: str
         """
         self.ProductId = None
@@ -1224,13 +1224,13 @@ class ModifyModelDefinitionRequest(AbstractModel):
 
 
 class ModifyModelDefinitionResponse(AbstractModel):
-    """ModifyModelDefinition返回参数结构体
+    """ModifyModelDefinition返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1241,17 +1241,17 @@ class ModifyModelDefinitionResponse(AbstractModel):
 
 
 class ModifyProjectRequest(AbstractModel):
-    """ModifyProject请求参数结构体
+    """ModifyProject請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: str
-        :param ProjectName: 项目名称
+        :param ProjectName: 項目名稱
         :type ProjectName: str
-        :param ProjectDesc: 项目描述
+        :param ProjectDesc: 項目描述
         :type ProjectDesc: str
         """
         self.ProjectId = None
@@ -1266,15 +1266,15 @@ class ModifyProjectRequest(AbstractModel):
 
 
 class ModifyProjectResponse(AbstractModel):
-    """ModifyProject返回参数结构体
+    """ModifyProject返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Project: 项目详情
+        :param Project: 項目詳情
         :type Project: :class:`tencentcloud.iotexplorer.v20190423.models.ProjectEntry`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Project = None
@@ -1289,21 +1289,21 @@ class ModifyProjectResponse(AbstractModel):
 
 
 class ModifyStudioProductRequest(AbstractModel):
-    """ModifyStudioProduct请求参数结构体
+    """ModifyStudioProduct請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品ID
+        :param ProductId: 産品ID
         :type ProductId: str
-        :param ProductName: 产品名称
+        :param ProductName: 産品名稱
         :type ProductName: str
-        :param ProductDesc: 产品描述
+        :param ProductDesc: 産品描述
         :type ProductDesc: str
         :param ModuleId: 模型ID
         :type ModuleId: int
-        :param EnableProductScript: 是否打开二进制转Json功能, 取值为字符串 true/false
+        :param EnableProductScript: 是否打開二進制轉Json功能, 取值爲字串 true/false
         :type EnableProductScript: str
         """
         self.ProductId = None
@@ -1322,15 +1322,15 @@ class ModifyStudioProductRequest(AbstractModel):
 
 
 class ModifyStudioProductResponse(AbstractModel):
-    """ModifyStudioProduct返回参数结构体
+    """ModifyStudioProduct返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Product: 产品描述
+        :param Product: 産品描述
         :type Product: :class:`tencentcloud.iotexplorer.v20190423.models.ProductEntry`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Product = None
@@ -1345,42 +1345,42 @@ class ModifyStudioProductResponse(AbstractModel):
 
 
 class ProductEntry(AbstractModel):
-    """产品详情
+    """産品詳情
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品ID
+        :param ProductId: 産品ID
         :type ProductId: str
-        :param ProductName: 产品名称
+        :param ProductName: 産品名稱
         :type ProductName: str
-        :param CategoryId: 产品分组模板ID
+        :param CategoryId: 産品分組範本ID
         :type CategoryId: int
-        :param EncryptionType: 加密类型
+        :param EncryptionType: 加密類型
         :type EncryptionType: str
-        :param NetType: 连接类型
+        :param NetType: 連接類型
         :type NetType: str
-        :param DataProtocol: 数据协议
+        :param DataProtocol: 數據協議
         :type DataProtocol: int
-        :param ProductDesc: 产品描述
+        :param ProductDesc: 産品描述
         :type ProductDesc: str
-        :param DevStatus: 状态
+        :param DevStatus: 狀态
         :type DevStatus: str
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: int
-        :param UpdateTime: 更新时间
+        :param UpdateTime: 更新時間
         :type UpdateTime: int
-        :param Region: 区域
+        :param Region: 區域
         :type Region: str
-        :param ProductType: 产品类型
+        :param ProductType: 産品類型
         :type ProductType: int
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: str
-        :param ModuleId: 产品ModuleId
+        :param ModuleId: 産品ModuleId
         :type ModuleId: int
-        :param EnableProductScript: 是否使用脚本进行二进制转json功能 可以取值 true / false
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EnableProductScript: 是否使用腳本進行二進制轉json功能 可以取值 true / false
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EnableProductScript: str
         """
         self.ProductId = None
@@ -1419,22 +1419,22 @@ class ProductEntry(AbstractModel):
 
 
 class ProductModelDefinition(AbstractModel):
-    """产品模型定义
+    """産品模型定義
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品ID
+        :param ProductId: 産品ID
         :type ProductId: str
-        :param ModelDefine: 模型定义
+        :param ModelDefine: 模型定義
         :type ModelDefine: str
-        :param UpdateTime: 更新时间，秒级时间戳
+        :param UpdateTime: 更新時間，秒級時間戳
         :type UpdateTime: int
-        :param CreateTime: 创建时间，秒级时间戳
+        :param CreateTime: 創建時間，秒級時間戳
         :type CreateTime: int
-        :param CategoryModel: 产品所属分类的模型快照（产品创建时刻的）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CategoryModel: 産品所屬分類的模型快照（産品創建時刻的）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CategoryModel: str
         """
         self.ProductId = None
@@ -1453,21 +1453,21 @@ class ProductModelDefinition(AbstractModel):
 
 
 class ProjectEntry(AbstractModel):
-    """项目详情
+    """項目詳情
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: str
-        :param ProjectName: 项目名称
+        :param ProjectName: 項目名稱
         :type ProjectName: str
-        :param ProjectDesc: 项目描述
+        :param ProjectDesc: 項目描述
         :type ProjectDesc: str
-        :param CreateTime: 创建时间，unix时间戳
+        :param CreateTime: 創建時間，unix時間戳
         :type CreateTime: int
-        :param UpdateTime: 更新时间，unix时间戳
+        :param UpdateTime: 更新時間，unix時間戳
         :type UpdateTime: int
         """
         self.ProjectId = None
@@ -1486,27 +1486,27 @@ class ProjectEntry(AbstractModel):
 
 
 class ProjectEntryEx(AbstractModel):
-    """项目详情
+    """項目詳情
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: str
-        :param ProjectName: 项目名称
+        :param ProjectName: 項目名稱
         :type ProjectName: str
-        :param ProjectDesc: 项目描述
+        :param ProjectDesc: 項目描述
         :type ProjectDesc: str
-        :param CreateTime: 项目创建时间，unix时间戳
+        :param CreateTime: 項目創建時間，unix時間戳
         :type CreateTime: int
-        :param UpdateTime: 项目更新时间，unix时间戳
+        :param UpdateTime: 項目更新時間，unix時間戳
         :type UpdateTime: int
-        :param ProductCount: 产品数量
+        :param ProductCount: 産品數量
         :type ProductCount: int
-        :param NativeAppCount: NativeApp数量
+        :param NativeAppCount: NativeApp數量
         :type NativeAppCount: int
-        :param WebAppCount: WebApp数量
+        :param WebAppCount: WebApp數量
         :type WebAppCount: int
         """
         self.ProjectId = None
@@ -1531,15 +1531,15 @@ class ProjectEntryEx(AbstractModel):
 
 
 class ReleaseStudioProductRequest(AbstractModel):
-    """ReleaseStudioProduct请求参数结构体
+    """ReleaseStudioProduct請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品ID
+        :param ProductId: 産品ID
         :type ProductId: str
-        :param DevStatus: 产品DevStatus
+        :param DevStatus: 産品DevStatus
         :type DevStatus: str
         """
         self.ProductId = None
@@ -1552,13 +1552,13 @@ class ReleaseStudioProductRequest(AbstractModel):
 
 
 class ReleaseStudioProductResponse(AbstractModel):
-    """ReleaseStudioProduct返回参数结构体
+    """ReleaseStudioProduct返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1569,21 +1569,21 @@ class ReleaseStudioProductResponse(AbstractModel):
 
 
 class SearchStudioProductRequest(AbstractModel):
-    """SearchStudioProduct请求参数结构体
+    """SearchStudioProduct請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: str
-        :param ProductName: 产品名称
+        :param ProductName: 産品名稱
         :type ProductName: str
-        :param Limit: 列表Limit
+        :param Limit: 清單Limit
         :type Limit: int
-        :param Offset: 列表Offset
+        :param Offset: 清單Offset
         :type Offset: int
-        :param DevStatus: 产品Status
+        :param DevStatus: 産品Status
         :type DevStatus: str
         """
         self.ProjectId = None
@@ -1602,17 +1602,17 @@ class SearchStudioProductRequest(AbstractModel):
 
 
 class SearchStudioProductResponse(AbstractModel):
-    """SearchStudioProduct返回参数结构体
+    """SearchStudioProduct返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Products: 产品列表
+        :param Products: 産品清單
         :type Products: list of ProductEntry
-        :param Total: 产品数量
+        :param Total: 産品數量
         :type Total: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Products = None

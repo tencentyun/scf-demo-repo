@@ -26,7 +26,7 @@ class TcbClient(AbstractClient):
 
 
     def CheckTcbService(self, request):
-        """检查是否开通Tcb服务
+        """檢查是否開通Tcb服務
 
         :param request: Request instance for CheckTcbService.
         :type request: :class:`tencentcloud.tcb.v20180608.models.CheckTcbServiceRequest`
@@ -54,7 +54,7 @@ class TcbClient(AbstractClient):
 
 
     def CommonServiceAPI(self, request):
-        """TCB云API统一入口
+        """TCB雲API統一入口
 
         :param request: Request instance for CommonServiceAPI.
         :type request: :class:`tencentcloud.tcb.v20180608.models.CommonServiceAPIRequest`
@@ -110,7 +110,7 @@ class TcbClient(AbstractClient):
 
 
     def CreateHostingDomain(self, request):
-        """创建托管域名
+        """創建托管域名
 
         :param request: Request instance for CreateHostingDomain.
         :type request: :class:`tencentcloud.tcb.v20180608.models.CreateHostingDomainRequest`
@@ -138,7 +138,7 @@ class TcbClient(AbstractClient):
 
 
     def CreateStaticStore(self, request):
-        """创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
+        """創建靜态托管資源，包括COS和CDN，異步任務創建，檢視創建結果需要根據DescribeStaticStore介面來檢視
 
         :param request: Request instance for CreateStaticStore.
         :type request: :class:`tencentcloud.tcb.v20180608.models.CreateStaticStoreRequest`
@@ -166,7 +166,7 @@ class TcbClient(AbstractClient):
 
 
     def DeleteEndUser(self, request):
-        """删除终端用户
+        """删除終端用戶
 
         :param request: Request instance for DeleteEndUser.
         :type request: :class:`tencentcloud.tcb.v20180608.models.DeleteEndUserRequest`
@@ -194,7 +194,7 @@ class TcbClient(AbstractClient):
 
 
     def DescribeAuthDomains(self, request):
-        """获取安全域名列表
+        """獲取安全域名清單
 
         :param request: Request instance for DescribeAuthDomains.
         :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeAuthDomainsRequest`
@@ -222,7 +222,7 @@ class TcbClient(AbstractClient):
 
 
     def DescribeDatabaseACL(self, request):
-        """获取数据库权限
+        """獲取資料庫權限
 
         :param request: Request instance for DescribeDatabaseACL.
         :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeDatabaseACLRequest`
@@ -250,7 +250,7 @@ class TcbClient(AbstractClient):
 
 
     def DescribeEndUsers(self, request):
-        """获取终端用户列表
+        """獲取終端用戶清單
 
         :param request: Request instance for DescribeEndUsers.
         :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeEndUsersRequest`
@@ -278,7 +278,7 @@ class TcbClient(AbstractClient):
 
 
     def DescribeEnvFreeQuota(self, request):
-        """查询后付费免费配额信息
+        """查詢後付費免費配額訊息
 
         :param request: Request instance for DescribeEnvFreeQuota.
         :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeEnvFreeQuotaRequest`
@@ -306,7 +306,7 @@ class TcbClient(AbstractClient):
 
 
     def DescribeEnvLimit(self, request):
-        """查询环境个数上限
+        """查詢環境個數上限
 
         :param request: Request instance for DescribeEnvLimit.
         :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeEnvLimitRequest`
@@ -334,7 +334,7 @@ class TcbClient(AbstractClient):
 
 
     def DescribeEnvs(self, request):
-        """获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
+        """獲取環境清單，含環境下的各個資源訊息。尤其是各資源的唯一标識，是請求各資源的關鍵參數
 
         :param request: Request instance for DescribeEnvs.
         :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeEnvsRequest`
@@ -362,7 +362,7 @@ class TcbClient(AbstractClient):
 
 
     def DescribeQuotaData(self, request):
-        """查询指定指标的配额使用量
+        """查詢指定指标的配額使用量
 
         :param request: Request instance for DescribeQuotaData.
         :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeQuotaDataRequest`
@@ -390,7 +390,7 @@ class TcbClient(AbstractClient):
 
 
     def DestroyEnv(self, request):
-        """销毁环境
+        """銷毀環境
 
         :param request: Request instance for DestroyEnv.
         :type request: :class:`tencentcloud.tcb.v20180608.models.DestroyEnvRequest`
@@ -418,7 +418,7 @@ class TcbClient(AbstractClient):
 
 
     def DestroyStaticStore(self, request):
-        """销毁静态托管资源，该接口创建异步销毁任务，资源最终状态可从DestroyStaticStore接口查看
+        """銷毀靜态托管資源，該介面創建異步銷毀任務，資源最終狀态可從DestroyStaticStore介面檢視
 
         :param request: Request instance for DestroyStaticStore.
         :type request: :class:`tencentcloud.tcb.v20180608.models.DestroyStaticStoreRequest`
@@ -446,7 +446,7 @@ class TcbClient(AbstractClient):
 
 
     def ModifyDatabaseACL(self, request):
-        """修改数据库权限
+        """修改資料庫權限
 
         :param request: Request instance for ModifyDatabaseACL.
         :type request: :class:`tencentcloud.tcb.v20180608.models.ModifyDatabaseACLRequest`
@@ -474,7 +474,7 @@ class TcbClient(AbstractClient):
 
 
     def ModifyEnv(self, request):
-        """更新环境信息
+        """更新環境訊息
 
         :param request: Request instance for ModifyEnv.
         :type request: :class:`tencentcloud.tcb.v20180608.models.ModifyEnvRequest`
@@ -502,7 +502,7 @@ class TcbClient(AbstractClient):
 
 
     def ReinstateEnv(self, request):
-        """针对已隔离的免费环境，可以通过本接口将其恢复访问。
+        """針對已隔離的免費環境，可以通過本介面将其恢複訪問。
 
         :param request: Request instance for ReinstateEnv.
         :type request: :class:`tencentcloud.tcb.v20180608.models.ReinstateEnvRequest`

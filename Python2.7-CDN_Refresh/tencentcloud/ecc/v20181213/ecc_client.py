@@ -27,7 +27,7 @@ class EccClient(AbstractClient):
 
     def CorrectMultiImage(self, request):
         """https://ecc.tencentcloudapi.com/?Action=CorrectMultiImage
-        多图像识别批改接口
+        多圖像識别批改介面
 
         :param request: Request instance for CorrectMultiImage.
         :type request: :class:`tencentcloud.ecc.v20181213.models.CorrectMultiImageRequest`
@@ -55,7 +55,7 @@ class EccClient(AbstractClient):
 
 
     def DescribeTask(self, request):
-        """异步任务结果查询接口
+        """異步任務結果查詢介面
 
         :param request: Request instance for DescribeTask.
         :type request: :class:`tencentcloud.ecc.v20181213.models.DescribeTaskRequest`
@@ -83,8 +83,8 @@ class EccClient(AbstractClient):
 
 
     def ECC(self, request):
-        """接口请求域名： ecc.tencentcloudapi.com
-        纯文本英语作文批改
+        """介面請求域名： ecc.tencentcloudapi.com
+        純文本英語作文批改
 
         :param request: Request instance for ECC.
         :type request: :class:`tencentcloud.ecc.v20181213.models.ECCRequest`
@@ -113,7 +113,7 @@ class EccClient(AbstractClient):
 
     def EHOCR(self, request):
         """https://ecc.tencentcloudapi.com/?Action=EHOCR
-        图像识别批改接口
+        圖像識别批改介面
 
         :param request: Request instance for EHOCR.
         :type request: :class:`tencentcloud.ecc.v20181213.models.EHOCRRequest`

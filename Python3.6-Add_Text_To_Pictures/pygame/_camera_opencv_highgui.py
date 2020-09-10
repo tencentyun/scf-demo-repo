@@ -95,4 +95,3 @@ if __name__ == "__main__":
     pygame.camera.list_cameras = list_cameras
     pygame.examples.camera.main()
 
-

@@ -10,7 +10,7 @@ const elasticsearch = require('elasticsearch');
 const dayjs = require('dayjs')
 
 /**
- * 日志清洗逻辑，可自行修改
+ * 日志清洗邏輯，可自行修改
  * @param {*} record 
  */
 function dealLog(record) {
@@ -28,7 +28,7 @@ function dealLog(record) {
 }
 
 /**
- * 生成投递到es的数据
+ * 生成投遞到es的數據
  * @param {*} records 
  */
 async function genData(records, esIndex) {
@@ -84,7 +84,7 @@ async function genData(records, esIndex) {
 
 exports.main_handler = async (event, context) => {
   try {
-    /** 必填环境变量  */
+    /** 必填環境變量  */
     const esServer = process.env.ES_Address
     const esUsr = process.env.ES_User
     const esPw = process.env.ES_Password 

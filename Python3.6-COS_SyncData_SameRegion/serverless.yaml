@@ -9,26 +9,25 @@ inputs:
   src: 
     src: ./src
   runtime: Python3.6
-  region: ap-beijing  #需要替换的字段
+  region: ap-beijing  #需要替換的欄位
   handler: index.main_handler
   memorySize: 128
   timeout: 10
-  role: SCF_QcsRole  #需要确认是否有授权cos的copy接口操作权限
+  role: SCF_QcsRole  #需要确認是否有授權cos的copy介面操作權限
   environment:
-    variables:  #环境变量
-      target_bucket: #'function-scf-1256608914'  #需要替换的字段 
-      source_bucket: #'ffmpeg-1256608914'  #需要替换的字段
-      region: #ap-beijing  #需要替换的字段
+    variables:  #環境變量
+      target_bucket: #'function-scf-1256608914'  #需要替換的欄位 
+      source_bucket: #'ffmpeg-1256608914'  #需要替換的欄位
+      region: #ap-beijing  #需要替換的欄位
       
   events:
-    #cos触发器配置
+    #cos觸發器配置
     - cos:
-        name: ffmpeg-1256608914.cos.ap-beijing.myqcloud.com   #需要替换的字段
+        name: ffmpeg-1256608914.cos.ap-beijing.myqcloud.com   #需要替換的欄位
         parameters:
-          bucket: ffmpeg-1256608914.cos.ap-beijing.myqcloud.com   #需要替换的字段
+          bucket: ffmpeg-1256608914.cos.ap-beijing.myqcloud.com   #需要替換的欄位
           filter:
-            prefix: copy/   #需要替换的字段，可选，配置前缀过滤
+            prefix: copy/   #需要替換的欄位，可選，配置前綴過濾
           events: cos:ObjectCreated:*  
           enable: true
-
 

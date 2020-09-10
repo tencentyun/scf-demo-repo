@@ -26,7 +26,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def ClearTables(self, request):
-        """根据给定的表信息，清除表数据。
+        """根據給定的表訊息，清除表數據。
 
         :param request: Request instance for ClearTables.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.ClearTablesRequest`
@@ -54,7 +54,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def CompareIdlFiles(self, request):
-        """选中目标表格，上传并校验改表文件，返回是否允许修改表格结构的结果。
+        """選中目标表格，上傳并校驗改表文件，返回是否允許修改表格結構的結果。
 
         :param request: Request instance for CompareIdlFiles.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.CompareIdlFilesRequest`
@@ -82,7 +82,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def CreateBackup(self, request):
-        """用户创建备份任务
+        """用戶創建備份任務
 
         :param request: Request instance for CreateBackup.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.CreateBackupRequest`
@@ -110,7 +110,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def CreateCluster(self, request):
-        """本接口用于创建TcaplusDB集群
+        """本介面用于創建TcaplusDB集群
 
         :param request: Request instance for CreateCluster.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.CreateClusterRequest`
@@ -138,7 +138,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def CreateTableGroup(self, request):
-        """在TcaplusDB集群下创建表格组
+        """在TcaplusDB集群下創建表格組
 
         :param request: Request instance for CreateTableGroup.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.CreateTableGroupRequest`
@@ -166,7 +166,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def CreateTables(self, request):
-        """根据选择的IDL文件列表，批量创建表格
+        """根據選擇的IDL文件清單，批次創建表格
 
         :param request: Request instance for CreateTables.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.CreateTablesRequest`
@@ -194,7 +194,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def DeleteCluster(self, request):
-        """删除TcaplusDB集群，必须在集群所属所有资源（包括表格组，表）都已经释放的情况下才会成功。
+        """删除TcaplusDB集群，必須在集群所屬所有資源（包括表格組，表）都已經釋放的情況下才會成功。
 
         :param request: Request instance for DeleteCluster.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DeleteClusterRequest`
@@ -222,7 +222,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def DeleteIdlFiles(self, request):
-        """指定集群ID和待删除IDL文件的信息，删除目标文件，如果文件正在被表关联则删除失败。
+        """指定集群ID和待删除IDL文件的訊息，删除目标文件，如果文件正在被表關聯則删除失敗。
 
         :param request: Request instance for DeleteIdlFiles.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DeleteIdlFilesRequest`
@@ -250,7 +250,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def DeleteTableGroup(self, request):
-        """删除表格组
+        """删除表格組
 
         :param request: Request instance for DeleteTableGroup.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DeleteTableGroupRequest`
@@ -278,7 +278,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def DeleteTables(self, request):
-        """删除指定的表,第一次调用此接口代表将表移动至回收站，再次调用代表将此表格从回收站中彻底删除。
+        """删除指定的表,第一次調用此介面代表将表移動至資源回收筒，再次調用代表将此表格從資源回收筒中徹底删除。
 
         :param request: Request instance for DeleteTables.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DeleteTablesRequest`
@@ -306,7 +306,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def DescribeClusters(self, request):
-        """查询TcaplusDB集群列表，包含集群详细信息。
+        """查詢TcaplusDB集群清單，包含集群詳細訊息。
 
         :param request: Request instance for DescribeClusters.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeClustersRequest`
@@ -334,7 +334,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def DescribeIdlFileInfos(self, request):
-        """查询表描述文件详情
+        """查詢表描述文件詳情
 
         :param request: Request instance for DescribeIdlFileInfos.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeIdlFileInfosRequest`
@@ -362,7 +362,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def DescribeRegions(self, request):
-        """查询TcaplusDB服务支持的地域列表
+        """查詢TcaplusDB服務支援的地域清單
 
         :param request: Request instance for DescribeRegions.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeRegionsRequest`
@@ -390,7 +390,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def DescribeTableGroups(self, request):
-        """查询表格组列表
+        """查詢表格組清單
 
         :param request: Request instance for DescribeTableGroups.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeTableGroupsRequest`
@@ -418,7 +418,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def DescribeTables(self, request):
-        """查询表详情
+        """查詢表詳情
 
         :param request: Request instance for DescribeTables.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeTablesRequest`
@@ -446,7 +446,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def DescribeTablesInRecycle(self, request):
-        """查询回收站中的表详情
+        """查詢資源回收筒中的表詳情
 
         :param request: Request instance for DescribeTablesInRecycle.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeTablesInRecycleRequest`
@@ -474,7 +474,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def DescribeTasks(self, request):
-        """查询任务列表
+        """查詢任務清單
 
         :param request: Request instance for DescribeTasks.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeTasksRequest`
@@ -502,7 +502,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def DescribeUinInWhitelist(self, request):
-        """查询本用户是否在白名单中，控制是否能创建TDR类型的APP或表
+        """查詢本用戶是否在白名單中，控制是否能創建TDR類型的APP或表
 
         :param request: Request instance for DescribeUinInWhitelist.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeUinInWhitelistRequest`
@@ -530,7 +530,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def ModifyClusterName(self, request):
-        """修改指定的集群名称
+        """修改指定的集群名稱
 
         :param request: Request instance for ModifyClusterName.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyClusterNameRequest`
@@ -558,7 +558,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def ModifyClusterPassword(self, request):
-        """修改指定集群的密码，后台将在旧密码失效之前同时支持TcaplusDB SDK使用旧密码和新密码访问数据库。在旧密码失效之前不能提交新的密码修改请求，在旧密码失效之后不能提交修改旧密码过期时间的请求。
+        """修改指定集群的密碼，後台将在舊密碼失效之前同時支援TcaplusDB SDK使用舊密碼和新密碼訪問資料庫。在舊密碼失效之前不能提交新的密碼修改請求，在舊密碼失效之後不能提交修改舊密碼過期時間的請求。
 
         :param request: Request instance for ModifyClusterPassword.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyClusterPasswordRequest`
@@ -586,7 +586,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def ModifyTableGroupName(self, request):
-        """修改TcaplusDB表格组名称
+        """修改TcaplusDB表格組名稱
 
         :param request: Request instance for ModifyTableGroupName.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyTableGroupNameRequest`
@@ -614,7 +614,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def ModifyTableMemos(self, request):
-        """修改表备注信息
+        """修改表備注訊息
 
         :param request: Request instance for ModifyTableMemos.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyTableMemosRequest`
@@ -642,7 +642,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def ModifyTableQuotas(self, request):
-        """表格扩缩容
+        """表格擴縮容
 
         :param request: Request instance for ModifyTableQuotas.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyTableQuotasRequest`
@@ -670,7 +670,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def ModifyTables(self, request):
-        """根据用户选定的表定义IDL文件，批量修改指定的表
+        """根據用戶選定的表定義IDL文件，批次修改指定的表
 
         :param request: Request instance for ModifyTables.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyTablesRequest`
@@ -698,7 +698,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def RecoverRecycleTables(self, request):
-        """恢复回收站中，用户自行删除的表。对欠费待释放的表无效。
+        """恢複資源回收筒中，用戶自行删除的表。對欠費待釋放的表無效。
 
         :param request: Request instance for RecoverRecycleTables.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.RecoverRecycleTablesRequest`
@@ -726,7 +726,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def RollbackTables(self, request):
-        """表格数据回档
+        """表格數據回檔
 
         :param request: Request instance for RollbackTables.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.RollbackTablesRequest`
@@ -754,7 +754,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def VerifyIdlFiles(self, request):
-        """上传并校验创建表格文件，返回校验合法的表格定义
+        """上傳并校驗創建表格文件，返回校驗合法的表格定義
 
         :param request: Request instance for VerifyIdlFiles.
         :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.VerifyIdlFilesRequest`

@@ -17,13 +17,13 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class DescribeHSMBySubnetIdRequest(AbstractModel):
-    """DescribeHSMBySubnetId请求参数结构体
+    """DescribeHSMBySubnetId請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SubnetId: Subnet标识符
+        :param SubnetId: Subnet标識符
         :type SubnetId: str
         """
         self.SubnetId = None
@@ -34,17 +34,17 @@ class DescribeHSMBySubnetIdRequest(AbstractModel):
 
 
 class DescribeHSMBySubnetIdResponse(AbstractModel):
-    """DescribeHSMBySubnetId返回参数结构体
+    """DescribeHSMBySubnetId返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: HSM数量
+        :param TotalCount: HSM數量
         :type TotalCount: int
-        :param SubnetId: 作为查询条件的SubnetId
+        :param SubnetId: 作爲查詢條件的SubnetId
         :type SubnetId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -59,13 +59,13 @@ class DescribeHSMBySubnetIdResponse(AbstractModel):
 
 
 class DescribeHSMByVpcIdRequest(AbstractModel):
-    """DescribeHSMByVpcId请求参数结构体
+    """DescribeHSMByVpcId請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VpcId: VPC标识符
+        :param VpcId: VPC标識符
         :type VpcId: str
         """
         self.VpcId = None
@@ -76,17 +76,17 @@ class DescribeHSMByVpcIdRequest(AbstractModel):
 
 
 class DescribeHSMByVpcIdResponse(AbstractModel):
-    """DescribeHSMByVpcId返回参数结构体
+    """DescribeHSMByVpcId返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: HSM数量
+        :param TotalCount: HSM數量
         :type TotalCount: int
-        :param VpcId: 作为查询条件的VpcId
+        :param VpcId: 作爲查詢條件的VpcId
         :type VpcId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -101,19 +101,19 @@ class DescribeHSMByVpcIdResponse(AbstractModel):
 
 
 class DescribeSubnetRequest(AbstractModel):
-    """DescribeSubnet请求参数结构体
+    """DescribeSubnet請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Limit: 返回数量。
+        :param Limit: 返回數量。
         :type Limit: int
         :param Offset: 偏移量。
         :type Offset: int
-        :param VpcId: 查询指定VpcId下的子网信息。
+        :param VpcId: 查詢指定VpcId下的子網訊息。
         :type VpcId: str
-        :param SearchWord: 查找关键字
+        :param SearchWord: 查找關鍵字
         :type SearchWord: str
         """
         self.Limit = None
@@ -130,18 +130,18 @@ class DescribeSubnetRequest(AbstractModel):
 
 
 class DescribeSubnetResponse(AbstractModel):
-    """DescribeSubnet返回参数结构体
+    """DescribeSubnet返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 返回的子网数量。
+        :param TotalCount: 返回的子網數量。
         :type TotalCount: int
-        :param SubnetList: 返回的子网实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubnetList: 返回的子網實例清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetList: list of Subnet
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -161,17 +161,17 @@ class DescribeSubnetResponse(AbstractModel):
 
 
 class DescribeUsgRequest(AbstractModel):
-    """DescribeUsg请求参数结构体
+    """DescribeUsg請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 偏移量，当Offset和Limit均为0时将一次性返回用户所有的安全组列表。
+        :param Offset: 偏移量，當Offset和Limit均爲0時将一次性返回用戶所有的安全組清單。
         :type Offset: int
-        :param Limit: 返回量，当Offset和Limit均为0时将一次性返回用户所有的安全组列表。
+        :param Limit: 返回量，當Offset和Limit均爲0時将一次性返回用戶所有的安全組清單。
         :type Limit: int
-        :param SearchWord: 搜索关键字
+        :param SearchWord: 搜索關鍵字
         :type SearchWord: str
         """
         self.Offset = None
@@ -186,18 +186,18 @@ class DescribeUsgRequest(AbstractModel):
 
 
 class DescribeUsgResponse(AbstractModel):
-    """DescribeUsg返回参数结构体
+    """DescribeUsg返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SgList: 用户的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SgList: 用戶的安全組清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SgList: list of SgUnit
-        :param TotalCount: 返回的安全组数量
+        :param TotalCount: 返回的安全組數量
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SgList = None
@@ -217,13 +217,13 @@ class DescribeUsgResponse(AbstractModel):
 
 
 class DescribeUsgRuleRequest(AbstractModel):
-    """DescribeUsgRule请求参数结构体
+    """DescribeUsgRule請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SgIds: 根据安全组Id获取安全组详情
+        :param SgIds: 根據安全組Id獲取安全組詳情
         :type SgIds: list of str
         """
         self.SgIds = None
@@ -234,19 +234,19 @@ class DescribeUsgRuleRequest(AbstractModel):
 
 
 class DescribeUsgRuleResponse(AbstractModel):
-    """DescribeUsgRule返回参数结构体
+    """DescribeUsgRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SgRules: 安全组详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SgRules: 安全組詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SgRules: list of UsgRuleDetail
-        :param TotalCount: 安全组详情数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 安全組詳情數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SgRules = None
@@ -266,7 +266,7 @@ class DescribeUsgRuleResponse(AbstractModel):
 
 
 class DescribeVpcRequest(AbstractModel):
-    """DescribeVpc请求参数结构体
+    """DescribeVpc請求參數結構體
 
     """
 
@@ -274,9 +274,9 @@ class DescribeVpcRequest(AbstractModel):
         """
         :param Offset: 返回偏移量。
         :type Offset: int
-        :param Limit: 返回数量。
+        :param Limit: 返回數量。
         :type Limit: int
-        :param SearchWord: 搜索关键字
+        :param SearchWord: 搜索關鍵字
         :type SearchWord: str
         """
         self.Offset = None
@@ -291,18 +291,18 @@ class DescribeVpcRequest(AbstractModel):
 
 
 class DescribeVpcResponse(AbstractModel):
-    """DescribeVpc返回参数结构体
+    """DescribeVpc返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 可查询到的所有Vpc实例总数。
+        :param TotalCount: 可查詢到的所有Vpc實例總數。
         :type TotalCount: int
-        :param VpcList: Vpc对象列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VpcList: Vpc對象清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcList: list of Vpc
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -322,13 +322,13 @@ class DescribeVpcResponse(AbstractModel):
 
 
 class DescribeVsmAttributesRequest(AbstractModel):
-    """DescribeVsmAttributes请求参数结构体
+    """DescribeVsmAttributes請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResourceId: 资源Id
+        :param ResourceId: 資源Id
         :type ResourceId: str
         """
         self.ResourceId = None
@@ -339,62 +339,62 @@ class DescribeVsmAttributesRequest(AbstractModel):
 
 
 class DescribeVsmAttributesResponse(AbstractModel):
-    """DescribeVsmAttributes返回参数结构体
+    """DescribeVsmAttributes返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResourceId: 资源Id
+        :param ResourceId: 資源Id
         :type ResourceId: str
-        :param ResourceName: 资源名称
+        :param ResourceName: 資源名稱
         :type ResourceName: str
-        :param Status: 资源状态
+        :param Status: 資源狀态
         :type Status: int
-        :param Vip: 资源IP
+        :param Vip: 資源IP
         :type Vip: str
-        :param VpcId: 资源所属Vpc
+        :param VpcId: 資源所屬Vpc
         :type VpcId: str
-        :param SubnetId: 资源所属子网
+        :param SubnetId: 資源所屬子網
         :type SubnetId: str
-        :param Model: 资源所属HSM的规格
+        :param Model: 資源所屬HSM的規格
         :type Model: str
-        :param VsmType: 资源类型
+        :param VsmType: 資源類型
         :type VsmType: int
         :param RegionId: 地域Id
         :type RegionId: int
-        :param ZoneId: 区域Id
+        :param ZoneId: 區域Id
         :type ZoneId: int
-        :param ExpireTime: 过期时间
+        :param ExpireTime: 過期時間
         :type ExpireTime: int
-        :param SgList: 安全组详情信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SgList: 安全組詳情訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SgList: list of UsgRuleDetail
-        :param SubnetName: 子网名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubnetName: 子網名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetName: str
         :param RegionName: 地域名
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RegionName: str
-        :param ZoneName: 区域名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ZoneName: 區域名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ZoneName: str
-        :param Expired: 实例是否已经过期
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Expired: 實例是否已經過期
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Expired: bool
-        :param RemainSeconds: 为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RemainSeconds: 爲正數表示實例距離過期時間剩餘秒數，爲負數表示實例已經過期多少秒
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RemainSeconds: int
-        :param VpcName: 私有虚拟网络名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VpcName: 私有虛拟網絡名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcName: str
         :param VpcCidrBlock: VPC的IPv4 CIDR
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcCidrBlock: str
-        :param SubnetCidrBlock: 子网的CIDR
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubnetCidrBlock: 子網的CIDR
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetCidrBlock: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResourceId = None
@@ -450,7 +450,7 @@ class DescribeVsmAttributesResponse(AbstractModel):
 
 
 class DescribeVsmsRequest(AbstractModel):
-    """DescribeVsms请求参数结构体
+    """DescribeVsms請求參數結構體
 
     """
 
@@ -458,9 +458,9 @@ class DescribeVsmsRequest(AbstractModel):
         """
         :param Offset: 偏移
         :type Offset: int
-        :param Limit: 最大数量
+        :param Limit: 最大數量
         :type Limit: int
-        :param SearchWord: 查询关键字
+        :param SearchWord: 查詢關鍵字
         :type SearchWord: str
         """
         self.Offset = None
@@ -475,18 +475,18 @@ class DescribeVsmsRequest(AbstractModel):
 
 
 class DescribeVsmsResponse(AbstractModel):
-    """DescribeVsms返回参数结构体
+    """DescribeVsms返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 获取实例的总个数
+        :param TotalCount: 獲取實例的總個數
         :type TotalCount: int
-        :param VsmList: 资源信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VsmList: 資源訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VsmList: list of ResourceInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -506,23 +506,23 @@ class DescribeVsmsResponse(AbstractModel):
 
 
 class InquiryPriceBuyVsmRequest(AbstractModel):
-    """InquiryPriceBuyVsm请求参数结构体
+    """InquiryPriceBuyVsm請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GoodsNum: 需购买实例的数量
+        :param GoodsNum: 需購買實例的數量
         :type GoodsNum: int
-        :param PayMode: 付费模式：0表示按需计费/后付费，1表示预付费
+        :param PayMode: 付費模式：0表示按需計費/後付費，1表示預付費
         :type PayMode: int
-        :param TimeSpan: 商品的时间大小
+        :param TimeSpan: 商品的時間大小
         :type TimeSpan: str
-        :param TimeUnit: 商品的时间单位
+        :param TimeUnit: 商品的時間單位
         :type TimeUnit: str
-        :param Currency: 货币类型，默认为CNY
+        :param Currency: 貨币類型，預設爲CNY
         :type Currency: str
-        :param Type: 默认为CREATE，可选RENEW
+        :param Type: 預設爲CREATE，可選RENEW
         :type Type: str
         """
         self.GoodsNum = None
@@ -543,28 +543,28 @@ class InquiryPriceBuyVsmRequest(AbstractModel):
 
 
 class InquiryPriceBuyVsmResponse(AbstractModel):
-    """InquiryPriceBuyVsm返回参数结构体
+    """InquiryPriceBuyVsm返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCost: 总金额
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCost: 總金額
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCost: float
-        :param GoodsNum: 购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GoodsNum: 購買的實例數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GoodsNum: int
-        :param TimeSpan: 商品的时间大小
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TimeSpan: 商品的時間大小
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TimeSpan: str
-        :param TimeUnit: 商品的时间单位
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TimeUnit: 商品的時間單位
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TimeUnit: str
-        :param OriginalCost: 原始总金额
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OriginalCost: 原始總金額
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OriginalCost: float
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCost = None
@@ -585,26 +585,26 @@ class InquiryPriceBuyVsmResponse(AbstractModel):
 
 
 class ModifyVsmAttributesRequest(AbstractModel):
-    """ModifyVsmAttributes请求参数结构体
+    """ModifyVsmAttributes請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResourceId: 资源Id
+        :param ResourceId: 資源Id
         :type ResourceId: str
-        :param Type: UpdateResourceName-修改资源名称,
-UpdateSgIds-修改安全组名称,
-UpdateNetWork-修改网络,
-Default-默认不修改
+        :param Type: UpdateResourceName-修改資源名稱,
+UpdateSgIds-修改安全組名稱,
+UpdateNetWork-修改網絡,
+Default-預設不修改
         :type Type: list of str
-        :param ResourceName: 资源名称
+        :param ResourceName: 資源名稱
         :type ResourceName: str
-        :param SgIds: 安全组Id
+        :param SgIds: 安全組Id
         :type SgIds: list of str
         :param VpcId: VpcId
         :type VpcId: str
-        :param SubnetId: 子网Id
+        :param SubnetId: 子網Id
         :type SubnetId: str
         """
         self.ResourceId = None
@@ -625,13 +625,13 @@ Default-默认不修改
 
 
 class ModifyVsmAttributesResponse(AbstractModel):
-    """ModifyVsmAttributes返回参数结构体
+    """ModifyVsmAttributes返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -642,65 +642,65 @@ class ModifyVsmAttributesResponse(AbstractModel):
 
 
 class ResourceInfo(AbstractModel):
-    """资源信息
+    """資源訊息
 
     """
 
     def __init__(self):
         """
-        :param ResourceId: 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResourceId: 資源Id
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResourceId: str
-        :param ResourceName: 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResourceName: 資源名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResourceName: str
-        :param Status: 资源状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Status: 資源狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: int
-        :param Vip: 资源IP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Vip: 資源IP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Vip: str
-        :param VpcId: 资源所属Vpc
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VpcId: 資源所屬Vpc
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcId: str
-        :param SubnetId: 资源所属子网
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubnetId: 資源所屬子網
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetId: str
-        :param Model: 资源所属HSM规格
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Model: 資源所屬HSM規格
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Model: str
-        :param VsmType: 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VsmType: 資源類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VsmType: int
         :param RegionId: 地域Id
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RegionId: int
-        :param ZoneId: 区域Id
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ZoneId: 區域Id
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ZoneId: int
-        :param ExpireTime: 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ExpireTime: 過期時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ExpireTime: int
         :param RegionName: 地域名
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RegionName: str
-        :param ZoneName: 区域名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ZoneName: 區域名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ZoneName: str
-        :param SgList: 实例的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SgList: 實例的安全組清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SgList: list of SgUnit
-        :param SubnetName: 子网名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubnetName: 子網名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetName: str
-        :param Expired: 当前实例是否已经过期
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Expired: 當前實例是否已經過期
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Expired: bool
-        :param RemainSeconds: 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RemainSeconds: 爲正數表示實例距離過期時間還剩餘多少秒，爲負數表示已經過期多少秒
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RemainSeconds: int
-        :param VpcName: Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VpcName: Vpc名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcName: str
         """
         self.ResourceId = None
@@ -750,23 +750,23 @@ class ResourceInfo(AbstractModel):
 
 
 class SgUnit(AbstractModel):
-    """安全组基础信息
+    """安全組基礎訊息
 
     """
 
     def __init__(self):
         """
-        :param SgId: 安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SgId: 安全組Id
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SgId: str
-        :param SgName: 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SgName: 安全組名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SgName: str
-        :param SgRemark: 备注
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SgRemark: 備注
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SgRemark: str
-        :param CreateTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
         """
         self.SgId = None
@@ -783,38 +783,38 @@ class SgUnit(AbstractModel):
 
 
 class Subnet(AbstractModel):
-    """Subnet对象
+    """Subnet對象
 
     """
 
     def __init__(self):
         """
-        :param VpcId: VPC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VpcId: VPC實例ID。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcId: str
-        :param SubnetId: 子网实例ID，例如：subnet-bthucmmy。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubnetId: 子網實例ID，例如：subnet-bthucmmy。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetId: str
-        :param SubnetName: 子网名称。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubnetName: 子網名稱。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetName: str
-        :param CidrBlock: 子网的 IPv4 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CidrBlock: 子網的 IPv4 CIDR。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CidrBlock: str
-        :param CreatedTime: 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreatedTime: 創建時間。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreatedTime: str
-        :param AvailableIpAddressCount: 可用IP数。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AvailableIpAddressCount: 可用IP數。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AvailableIpAddressCount: int
-        :param Ipv6CidrBlock: 子网的 IPv6 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Ipv6CidrBlock: 子網的 IPv6 CIDR。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Ipv6CidrBlock: str
-        :param TotalIpAddressCount: 总IP数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalIpAddressCount: 總IP數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalIpAddressCount: int
-        :param IsDefault: 是否为默认Subnet
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsDefault: 是否爲預設Subnet
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsDefault: bool
         """
         self.VpcId = None
@@ -841,35 +841,35 @@ class Subnet(AbstractModel):
 
 
 class UsgPolicy(AbstractModel):
-    """安全组策略
+    """安全組策略
 
     """
 
     def __init__(self):
         """
-        :param Ip: cidr格式地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Ip: cidr格式網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Ip: str
-        :param Id: 安全组id代表的地址集合
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Id: 安全組id代表的網址集合
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Id: str
-        :param AddressModule: 地址组id代表的地址集合
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AddressModule: 網址組id代表的網址集合
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AddressModule: str
-        :param Proto: 协议
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Proto: 協議
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Proto: str
         :param Port: 端口
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Port: str
-        :param ServiceModule: 服务组id代表的协议和端口集合
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ServiceModule: 服務組id代表的協議和端口集合
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ServiceModule: str
-        :param Desc: 备注
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Desc: 備注
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Desc: str
-        :param Action: 匹配后行为:ACCEPT/DROP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Action: 比對後行爲:ACCEPT/DROP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Action: str
         """
         self.Ip = None
@@ -894,32 +894,32 @@ class UsgPolicy(AbstractModel):
 
 
 class UsgRuleDetail(AbstractModel):
-    """安全组规则详情
+    """安全組規則詳情
 
     """
 
     def __init__(self):
         """
-        :param InBound: 入站规则
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InBound: 入站規則
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InBound: list of UsgPolicy
-        :param OutBound: 出站规则
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OutBound: 出站規則
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OutBound: list of UsgPolicy
-        :param SgId: 安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SgId: 安全組Id
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SgId: str
-        :param SgName: 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SgName: 安全組名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SgName: str
-        :param SgRemark: 备注
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SgRemark: 備注
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SgRemark: str
-        :param CreateTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
         :param Version: 版本
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Version: int
         """
         self.InBound = None
@@ -952,23 +952,23 @@ class UsgRuleDetail(AbstractModel):
 
 
 class Vpc(AbstractModel):
-    """VPC对象
+    """VPC對象
 
     """
 
     def __init__(self):
         """
-        :param VpcName: Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VpcName: Vpc名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcName: str
         :param VpcId: VpcId
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcId: str
-        :param CreatedTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreatedTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreatedTime: str
-        :param IsDefault: 是否为默认VPC
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsDefault: 是否爲預設VPC
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsDefault: bool
         """
         self.VpcName = None

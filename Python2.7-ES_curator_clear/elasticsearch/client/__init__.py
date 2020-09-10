@@ -1386,4 +1386,3 @@ class Elasticsearch(object):
         """
         return self.transport.perform_request('GET', _make_path(index,
             '_field_caps'), params=params, body=body)
-

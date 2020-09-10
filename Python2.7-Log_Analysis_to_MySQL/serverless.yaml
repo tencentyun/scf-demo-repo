@@ -8,7 +8,7 @@ inputs:
   src: ./
   description: >-
     This demo shows downloading log files from COS, using cloud function
-    analysis and writing to MySql. 本示例展示了从COS下载日志文件，使用云函数分析后写入MySql
+    analysis and writing to MySql. 本範例展示了從COS下載日志文件，使用雲函數分析後寫入MySql
   handler: log_analysis.main_handler
   runtime: Python2.7
   namespace: default
@@ -16,7 +16,7 @@ inputs:
   memorySize: 128
   timeout: 10
   events:
-     - cos: # cos触发器
+     - cos: # cos觸發器
         name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
         parameters:
           bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com

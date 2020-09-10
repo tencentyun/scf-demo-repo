@@ -17,17 +17,17 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AddResourceTagRequest(AbstractModel):
-    """AddResourceTag请求参数结构体
+    """AddResourceTag請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标签键
+        :param TagKey: 标簽鍵
         :type TagKey: str
-        :param TagValue: 标签值
+        :param TagValue: 标簽值
         :type TagValue: str
-        :param Resource: 资源六段式描述
+        :param Resource: 資源六段式描述
         :type Resource: str
         """
         self.TagKey = None
@@ -42,13 +42,13 @@ class AddResourceTagRequest(AbstractModel):
 
 
 class AddResourceTagResponse(AbstractModel):
-    """AddResourceTag返回参数结构体
+    """AddResourceTag返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -59,15 +59,15 @@ class AddResourceTagResponse(AbstractModel):
 
 
 class CreateTagRequest(AbstractModel):
-    """CreateTag请求参数结构体
+    """CreateTag請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标签键
+        :param TagKey: 标簽鍵
         :type TagKey: str
-        :param TagValue: 标签值
+        :param TagValue: 标簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -80,13 +80,13 @@ class CreateTagRequest(AbstractModel):
 
 
 class CreateTagResponse(AbstractModel):
-    """CreateTag返回参数结构体
+    """CreateTag返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -97,15 +97,15 @@ class CreateTagResponse(AbstractModel):
 
 
 class DeleteResourceTagRequest(AbstractModel):
-    """DeleteResourceTag请求参数结构体
+    """DeleteResourceTag請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标签键
+        :param TagKey: 标簽鍵
         :type TagKey: str
-        :param Resource: 资源六段式描述
+        :param Resource: 資源六段式描述
         :type Resource: str
         """
         self.TagKey = None
@@ -118,13 +118,13 @@ class DeleteResourceTagRequest(AbstractModel):
 
 
 class DeleteResourceTagResponse(AbstractModel):
-    """DeleteResourceTag返回参数结构体
+    """DeleteResourceTag返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -135,15 +135,15 @@ class DeleteResourceTagResponse(AbstractModel):
 
 
 class DeleteTagRequest(AbstractModel):
-    """DeleteTag请求参数结构体
+    """DeleteTag請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 需要删除的标签键
+        :param TagKey: 需要删除的标簽鍵
         :type TagKey: str
-        :param TagValue: 需要删除的标签值
+        :param TagValue: 需要删除的标簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -156,13 +156,13 @@ class DeleteTagRequest(AbstractModel):
 
 
 class DeleteTagResponse(AbstractModel):
-    """DeleteTag返回参数结构体
+    """DeleteTag返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -173,23 +173,23 @@ class DeleteTagResponse(AbstractModel):
 
 
 class DescribeResourceTagsByResourceIdsRequest(AbstractModel):
-    """DescribeResourceTagsByResourceIds请求参数结构体
+    """DescribeResourceTagsByResourceIds請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ServiceType: 业务类型
+        :param ServiceType: 業務類型
         :type ServiceType: str
-        :param ResourcePrefix: 资源前缀
+        :param ResourcePrefix: 資源前綴
         :type ResourcePrefix: str
-        :param ResourceIds: 资源唯一标记
+        :param ResourceIds: 資源唯一标記
         :type ResourceIds: list of str
-        :param ResourceRegion: 资源所在地域
+        :param ResourceRegion: 資源所在地域
         :type ResourceRegion: str
-        :param Offset: 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+        :param Offset: 數據偏移量，預設爲 0, 必須爲Limit參數的整數倍
         :type Offset: int
-        :param Limit: 每页大小，默认为 15
+        :param Limit: 每頁大小，預設爲 15
         :type Limit: int
         """
         self.ServiceType = None
@@ -210,21 +210,21 @@ class DescribeResourceTagsByResourceIdsRequest(AbstractModel):
 
 
 class DescribeResourceTagsByResourceIdsResponse(AbstractModel):
-    """DescribeResourceTagsByResourceIds返回参数结构体
+    """DescribeResourceTagsByResourceIds返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 结果总数
+        :param TotalCount: 結果總數
         :type TotalCount: int
-        :param Offset: 数据位移偏量
+        :param Offset: 數據位移偏量
         :type Offset: int
-        :param Limit: 每页大小
+        :param Limit: 每頁大小
         :type Limit: int
-        :param Tags: 标签列表
+        :param Tags: 标簽清單
         :type Tags: list of TagResource
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -248,25 +248,25 @@ class DescribeResourceTagsByResourceIdsResponse(AbstractModel):
 
 
 class DescribeResourceTagsByTagKeysRequest(AbstractModel):
-    """DescribeResourceTagsByTagKeys请求参数结构体
+    """DescribeResourceTagsByTagKeys請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ServiceType: 业务类型
+        :param ServiceType: 業務類型
         :type ServiceType: str
-        :param ResourcePrefix: 资源前缀
+        :param ResourcePrefix: 資源前綴
         :type ResourcePrefix: str
-        :param ResourceRegion: 资源地域
+        :param ResourceRegion: 資源地域
         :type ResourceRegion: str
-        :param ResourceIds: 资源唯一标识
+        :param ResourceIds: 資源唯一标識
         :type ResourceIds: list of str
-        :param TagKeys: 资源标签键
+        :param TagKeys: 資源标簽鍵
         :type TagKeys: list of str
-        :param Limit: 每页大小，默认为 400
+        :param Limit: 每頁大小，預設爲 400
         :type Limit: int
-        :param Offset: 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+        :param Offset: 數據偏移量，預設爲 0, 必須爲Limit參數的整數倍
         :type Offset: int
         """
         self.ServiceType = None
@@ -289,21 +289,21 @@ class DescribeResourceTagsByTagKeysRequest(AbstractModel):
 
 
 class DescribeResourceTagsByTagKeysResponse(AbstractModel):
-    """DescribeResourceTagsByTagKeys返回参数结构体
+    """DescribeResourceTagsByTagKeys返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 结果总数
+        :param TotalCount: 結果總數
         :type TotalCount: int
-        :param Offset: 数据位移偏量
+        :param Offset: 數據位移偏量
         :type Offset: int
-        :param Limit: 每页大小
+        :param Limit: 每頁大小
         :type Limit: int
-        :param Rows: 资源标签
+        :param Rows: 資源标簽
         :type Rows: list of ResourceIdTag
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -327,27 +327,27 @@ class DescribeResourceTagsByTagKeysResponse(AbstractModel):
 
 
 class DescribeResourceTagsRequest(AbstractModel):
-    """DescribeResourceTags请求参数结构体
+    """DescribeResourceTags請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CreateUin: 创建者uin
+        :param CreateUin: 創建者uin
         :type CreateUin: int
-        :param ResourceRegion: 资源所在地域
+        :param ResourceRegion: 資源所在地域
         :type ResourceRegion: str
-        :param ServiceType: 业务类型
+        :param ServiceType: 業務類型
         :type ServiceType: str
-        :param ResourcePrefix: 资源前缀
+        :param ResourcePrefix: 資源前綴
         :type ResourcePrefix: str
-        :param ResourceId: 资源唯一标识
+        :param ResourceId: 資源唯一标識
         :type ResourceId: str
-        :param Offset: 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+        :param Offset: 數據偏移量，預設爲 0, 必須爲Limit參數的整數倍
         :type Offset: int
-        :param Limit: 每页大小，默认为 15
+        :param Limit: 每頁大小，預設爲 15
         :type Limit: int
-        :param CosResourceId: 是否是Cos的资源id
+        :param CosResourceId: 是否是Cos的資源id
         :type CosResourceId: int
         """
         self.CreateUin = None
@@ -372,22 +372,22 @@ class DescribeResourceTagsRequest(AbstractModel):
 
 
 class DescribeResourceTagsResponse(AbstractModel):
-    """DescribeResourceTags返回参数结构体
+    """DescribeResourceTags返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 结果总数
+        :param TotalCount: 結果總數
         :type TotalCount: int
-        :param Offset: 数据位移偏量
+        :param Offset: 數據位移偏量
         :type Offset: int
-        :param Limit: 每页大小
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Limit: 每頁大小
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Limit: int
-        :param Rows: 资源标签
+        :param Rows: 資源标簽
         :type Rows: list of TagResource
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -411,27 +411,27 @@ class DescribeResourceTagsResponse(AbstractModel):
 
 
 class DescribeResourcesByTagsRequest(AbstractModel):
-    """DescribeResourcesByTags请求参数结构体
+    """DescribeResourcesByTags請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TagFilters: 标签过滤数组
+        :param TagFilters: 标簽過濾數組
         :type TagFilters: list of TagFilter
-        :param CreateUin: 创建标签者uin
+        :param CreateUin: 創建标簽者uin
         :type CreateUin: int
-        :param Offset: 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+        :param Offset: 數據偏移量，預設爲 0, 必須爲Limit參數的整數倍
         :type Offset: int
-        :param Limit: 每页大小，默认为 15
+        :param Limit: 每頁大小，預設爲 15
         :type Limit: int
-        :param ResourcePrefix: 资源前缀
+        :param ResourcePrefix: 資源前綴
         :type ResourcePrefix: str
-        :param ResourceId: 资源唯一标记
+        :param ResourceId: 資源唯一标記
         :type ResourceId: str
-        :param ResourceRegion: 资源所在地域
+        :param ResourceRegion: 資源所在地域
         :type ResourceRegion: str
-        :param ServiceType: 业务类型
+        :param ServiceType: 業務類型
         :type ServiceType: str
         """
         self.TagFilters = None
@@ -461,22 +461,22 @@ class DescribeResourcesByTagsRequest(AbstractModel):
 
 
 class DescribeResourcesByTagsResponse(AbstractModel):
-    """DescribeResourcesByTags返回参数结构体
+    """DescribeResourcesByTags返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 结果总数
+        :param TotalCount: 結果總數
         :type TotalCount: int
-        :param Offset: 数据位移偏量
+        :param Offset: 數據位移偏量
         :type Offset: int
-        :param Limit: 每页大小
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Limit: 每頁大小
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Limit: int
-        :param Rows: 资源标签
+        :param Rows: 資源标簽
         :type Rows: list of ResourceTag
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -500,19 +500,19 @@ class DescribeResourcesByTagsResponse(AbstractModel):
 
 
 class DescribeTagKeysRequest(AbstractModel):
-    """DescribeTagKeys请求参数结构体
+    """DescribeTagKeys請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CreateUin: 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+        :param CreateUin: 創建者用戶 Uin，不傳或爲空只将 Uin 作爲條件查詢
         :type CreateUin: int
-        :param Offset: 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+        :param Offset: 數據偏移量，預設爲 0, 必須爲Limit參數的整數倍
         :type Offset: int
-        :param Limit: 每页大小，默认为 15
+        :param Limit: 每頁大小，預設爲 15
         :type Limit: int
-        :param ShowProject: 是否展现项目
+        :param ShowProject: 是否展現項目
         :type ShowProject: int
         """
         self.CreateUin = None
@@ -529,21 +529,21 @@ class DescribeTagKeysRequest(AbstractModel):
 
 
 class DescribeTagKeysResponse(AbstractModel):
-    """DescribeTagKeys返回参数结构体
+    """DescribeTagKeys返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 结果总数
+        :param TotalCount: 結果總數
         :type TotalCount: int
-        :param Offset: 数据位移偏量
+        :param Offset: 數據位移偏量
         :type Offset: int
-        :param Limit: 每页大小
+        :param Limit: 每頁大小
         :type Limit: int
-        :param Tags: 标签列表
+        :param Tags: 标簽清單
         :type Tags: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -562,19 +562,19 @@ class DescribeTagKeysResponse(AbstractModel):
 
 
 class DescribeTagValuesRequest(AbstractModel):
-    """DescribeTagValues请求参数结构体
+    """DescribeTagValues請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TagKeys: 标签键列表
+        :param TagKeys: 标簽鍵清單
         :type TagKeys: list of str
-        :param CreateUin: 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+        :param CreateUin: 創建者用戶 Uin，不傳或爲空只将 Uin 作爲條件查詢
         :type CreateUin: int
-        :param Offset: 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+        :param Offset: 數據偏移量，預設爲 0, 必須爲Limit參數的整數倍
         :type Offset: int
-        :param Limit: 每页大小，默认为 15
+        :param Limit: 每頁大小，預設爲 15
         :type Limit: int
         """
         self.TagKeys = None
@@ -591,21 +591,21 @@ class DescribeTagValuesRequest(AbstractModel):
 
 
 class DescribeTagValuesResponse(AbstractModel):
-    """DescribeTagValues返回参数结构体
+    """DescribeTagValues返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 结果总数
+        :param TotalCount: 結果總數
         :type TotalCount: int
-        :param Offset: 数据位移偏量
+        :param Offset: 數據位移偏量
         :type Offset: int
-        :param Limit: 每页大小
+        :param Limit: 每頁大小
         :type Limit: int
-        :param Tags: 标签列表
+        :param Tags: 标簽清單
         :type Tags: list of Tag
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -629,25 +629,25 @@ class DescribeTagValuesResponse(AbstractModel):
 
 
 class DescribeTagsRequest(AbstractModel):
-    """DescribeTags请求参数结构体
+    """DescribeTags請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
+        :param TagKey: 标簽鍵,與标簽值同時存在或同時不存在，不存在時表示查詢該用戶所有标簽
         :type TagKey: str
-        :param TagValue: 标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
+        :param TagValue: 标簽值,與标簽鍵同時存在或同時不存在，不存在時表示查詢該用戶所有标簽
         :type TagValue: str
-        :param Offset: 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+        :param Offset: 數據偏移量，預設爲 0, 必須爲Limit參數的整數倍
         :type Offset: int
-        :param Limit: 每页大小，默认为 15
+        :param Limit: 每頁大小，預設爲 15
         :type Limit: int
-        :param CreateUin: 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+        :param CreateUin: 創建者用戶 Uin，不傳或爲空只将 Uin 作爲條件查詢
         :type CreateUin: int
-        :param TagKeys: 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只会本值
+        :param TagKeys: 标簽鍵數組,與标簽值同時存在或同時不存在，不存在時表示查詢該用戶所有标簽,當與TagKey同時傳遞時只會本值
         :type TagKeys: list of str
-        :param ShowProject: 是否展现项目标签
+        :param ShowProject: 是否展現項目标簽
         :type ShowProject: int
         """
         self.TagKey = None
@@ -670,21 +670,21 @@ class DescribeTagsRequest(AbstractModel):
 
 
 class DescribeTagsResponse(AbstractModel):
-    """DescribeTags返回参数结构体
+    """DescribeTags返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 结果总数
+        :param TotalCount: 結果總數
         :type TotalCount: int
-        :param Offset: 数据位移偏量
+        :param Offset: 數據位移偏量
         :type Offset: int
-        :param Limit: 每页大小
+        :param Limit: 每頁大小
         :type Limit: int
-        :param Tags: 标签列表
+        :param Tags: 标簽清單
         :type Tags: list of TagWithDelete
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -708,17 +708,17 @@ class DescribeTagsResponse(AbstractModel):
 
 
 class ModifyResourceTagsRequest(AbstractModel):
-    """ModifyResourceTags请求参数结构体
+    """ModifyResourceTags請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Resource: 资源的六段式描述
+        :param Resource: 資源的六段式描述
         :type Resource: str
-        :param ReplaceTags: 需要增加或修改的标签集合。如果Resource描述的资源未关联输入的标签键，则增加关联；若已关联，则将该资源关联的键对应的标签值修改为输入值。本接口中ReplaceTags和DeleteTags二者必须存在其一，且二者不能包含相同的标签键
+        :param ReplaceTags: 需要增加或修改的标簽集合。如果Resource描述的資源未關聯輸入的标簽鍵，則增加關聯；若已關聯，則将該資源關聯的鍵對應的标簽值修改爲輸入值。本介面中ReplaceTags和DeleteTags二者必須存在其一，且二者不能包含相同的标簽鍵
         :type ReplaceTags: list of Tag
-        :param DeleteTags: 需要解关联的标签集合。本接口中ReplaceTags和DeleteTags二者必须存在其一，且二者不能包含相同的标签键
+        :param DeleteTags: 需要解關聯的标簽集合。本介面中ReplaceTags和DeleteTags二者必須存在其一，且二者不能包含相同的标簽鍵
         :type DeleteTags: list of TagKeyObject
         """
         self.Resource = None
@@ -743,13 +743,13 @@ class ModifyResourceTagsRequest(AbstractModel):
 
 
 class ModifyResourceTagsResponse(AbstractModel):
-    """ModifyResourceTags返回参数结构体
+    """ModifyResourceTags返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -760,17 +760,17 @@ class ModifyResourceTagsResponse(AbstractModel):
 
 
 class ResourceIdTag(AbstractModel):
-    """资源标签键值
+    """資源标簽鍵值
 
     """
 
     def __init__(self):
         """
-        :param ResourceId: 资源唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResourceId: 資源唯一标識
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResourceId: str
-        :param TagKeyValues: 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagKeyValues: 标簽鍵值對
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagKeyValues: list of Tag
         """
         self.ResourceId = None
@@ -788,26 +788,26 @@ class ResourceIdTag(AbstractModel):
 
 
 class ResourceTag(AbstractModel):
-    """资源标签
+    """資源标簽
 
     """
 
     def __init__(self):
         """
-        :param ResourceRegion: 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResourceRegion: 資源所在地域
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResourceRegion: str
-        :param ServiceType: 业务类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ServiceType: 業務類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ServiceType: str
-        :param ResourcePrefix: 资源前缀
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResourcePrefix: 資源前綴
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResourcePrefix: str
-        :param ResourceId: 资源唯一标记
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResourceId: 資源唯一标記
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResourceId: str
-        :param Tags: 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Tags: 資源标簽
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of Tag
         """
         self.ResourceRegion = None
@@ -831,15 +831,15 @@ class ResourceTag(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """表示一个标签键值对
+    """表示一個标簽鍵值對
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标签键
+        :param TagKey: 标簽鍵
         :type TagKey: str
-        :param TagValue: 标签值
+        :param TagValue: 标簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -852,15 +852,15 @@ class Tag(AbstractModel):
 
 
 class TagFilter(AbstractModel):
-    """tag过滤数组多个是与的关系
+    """tag過濾數組多個是與的關系
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标签键
+        :param TagKey: 标簽鍵
         :type TagKey: str
-        :param TagValue: 标签值数组 多个值的话是或的关系
+        :param TagValue: 标簽值數組 多個值的話是或的關系
         :type TagValue: list of str
         """
         self.TagKey = None
@@ -873,13 +873,13 @@ class TagFilter(AbstractModel):
 
 
 class TagKeyObject(AbstractModel):
-    """标签键对象
+    """标簽鍵對象
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标签键
+        :param TagKey: 标簽鍵
         :type TagKey: str
         """
         self.TagKey = None
@@ -890,24 +890,24 @@ class TagKeyObject(AbstractModel):
 
 
 class TagResource(AbstractModel):
-    """标签键值对以及资源ID
+    """标簽鍵值對以及資源ID
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标签键
+        :param TagKey: 标簽鍵
         :type TagKey: str
-        :param TagValue: 标签值
+        :param TagValue: 标簽值
         :type TagValue: str
-        :param ResourceId: 资源ID
+        :param ResourceId: 資源ID
         :type ResourceId: str
-        :param TagKeyMd5: 标签键MD5值
+        :param TagKeyMd5: 标簽鍵MD5值
         :type TagKeyMd5: str
-        :param TagValueMd5: 标签值MD5值
+        :param TagValueMd5: 标簽值MD5值
         :type TagValueMd5: str
-        :param ServiceType: 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ServiceType: 資源類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ServiceType: str
         """
         self.TagKey = None
@@ -928,15 +928,15 @@ class TagResource(AbstractModel):
 
 
 class TagWithDelete(AbstractModel):
-    """表示一个标签键值对以及是否允许删除
+    """表示一個标簽鍵值對以及是否允許删除
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标签键
+        :param TagKey: 标簽鍵
         :type TagKey: str
-        :param TagValue: 标签值
+        :param TagValue: 标簽值
         :type TagValue: str
         :param CanDelete: 是否可以删除
         :type CanDelete: int
@@ -953,17 +953,17 @@ class TagWithDelete(AbstractModel):
 
 
 class UpdateResourceTagValueRequest(AbstractModel):
-    """UpdateResourceTagValue请求参数结构体
+    """UpdateResourceTagValue請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 资源关联的标签键
+        :param TagKey: 資源關聯的标簽鍵
         :type TagKey: str
-        :param TagValue: 修改后的标签值
+        :param TagValue: 修改後的标簽值
         :type TagValue: str
-        :param Resource: 资源的六段式描述
+        :param Resource: 資源的六段式描述
         :type Resource: str
         """
         self.TagKey = None
@@ -978,13 +978,13 @@ class UpdateResourceTagValueRequest(AbstractModel):
 
 
 class UpdateResourceTagValueResponse(AbstractModel):
-    """UpdateResourceTagValue返回参数结构体
+    """UpdateResourceTagValue返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None

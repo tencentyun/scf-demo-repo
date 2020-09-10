@@ -26,7 +26,7 @@ class CrClient(AbstractClient):
 
 
     def ApplyBlackList(self, request):
-        """提交黑名单后，黑名单中有效期内的号码将停止拨打，适用于到期/逾期提醒、回访场景。
+        """提交黑名單後，黑名單中有效期内的号碼将停止撥打，适用于到期/逾期提醒、回訪場景。
 
         :param request: Request instance for ApplyBlackList.
         :type request: :class:`tencentcloud.cr.v20180321.models.ApplyBlackListRequest`
@@ -54,7 +54,7 @@ class CrClient(AbstractClient):
 
 
     def ApplyCreditAudit(self, request):
-        """提交信审外呼申请，返回当次请求日期。
+        """提交信審外呼申請，返回當次請求日期。
 
         :param request: Request instance for ApplyCreditAudit.
         :type request: :class:`tencentcloud.cr.v20180321.models.ApplyCreditAuditRequest`
@@ -82,7 +82,7 @@ class CrClient(AbstractClient):
 
 
     def DescribeCreditResult(self, request):
-        """根据信审任务ID和请求日期，获取相关信审结果。
+        """根據信審任務ID和請求日期，獲取相關信審結果。
 
         :param request: Request instance for DescribeCreditResult.
         :type request: :class:`tencentcloud.cr.v20180321.models.DescribeCreditResultRequest`
@@ -110,7 +110,7 @@ class CrClient(AbstractClient):
 
 
     def DescribeRecords(self, request):
-        """用于获取指定案件的录音地址，次日早上8:00后可查询前日录音。
+        """用于獲取指定案件的錄音網址，次日早上8:00後可查詢前日錄音。
 
         :param request: Request instance for DescribeRecords.
         :type request: :class:`tencentcloud.cr.v20180321.models.DescribeRecordsRequest`
@@ -138,7 +138,7 @@ class CrClient(AbstractClient):
 
 
     def DescribeTaskStatus(self, request):
-        """根据上传文件接口的输出参数DataResId，获取相关上传结果。
+        """根據上傳文件介面的輸出參數DataResId，獲取相關上傳結果。
 
         :param request: Request instance for DescribeTaskStatus.
         :type request: :class:`tencentcloud.cr.v20180321.models.DescribeTaskStatusRequest`
@@ -166,7 +166,7 @@ class CrClient(AbstractClient):
 
 
     def DownloadDialogueText(self, request):
-        """用于获取指定案件的对话文本内容，次日早上8:00后可查询前日对话文本内容。
+        """用于獲取指定案件的對話文本内容，次日早上8:00後可查詢前日對話文本内容。
 
         :param request: Request instance for DownloadDialogueText.
         :type request: :class:`tencentcloud.cr.v20180321.models.DownloadDialogueTextRequest`
@@ -194,8 +194,8 @@ class CrClient(AbstractClient):
 
 
     def DownloadRecordList(self, request):
-        """<p>用于获取录音下载链接清单，次日早上8:00后可查询前日录音清单。</p>
-        <p>注意：录音清单中的录音下载链接仅次日20:00之前有效，请及时下载。</p>
+        """<p>用于獲取錄音下載連結清單，次日早上8:00後可查詢前日錄音清單。</p>
+        <p>注意：錄音清單中的錄音下載連結僅次日20:00之前有效，請及時下載。</p>
 
         :param request: Request instance for DownloadRecordList.
         :type request: :class:`tencentcloud.cr.v20180321.models.DownloadRecordListRequest`
@@ -223,7 +223,7 @@ class CrClient(AbstractClient):
 
 
     def DownloadReport(self, request):
-        """用于下载结果报表。当日23:00后，可获取当日到期/逾期提醒结果，次日00:30后，可获取昨日回访结果。
+        """用于下載結果報表。當日23:00後，可獲取當日到期/逾期提醒結果，次日00:30後，可獲取昨日回訪結果。
 
         :param request: Request instance for DownloadReport.
         :type request: :class:`tencentcloud.cr.v20180321.models.DownloadReportRequest`
@@ -251,7 +251,7 @@ class CrClient(AbstractClient):
 
 
     def QueryInstantData(self, request):
-        """实时数据查询
+        """實時數據查詢
 
         :param request: Request instance for QueryInstantData.
         :type request: :class:`tencentcloud.cr.v20180321.models.QueryInstantDataRequest`
@@ -279,7 +279,7 @@ class CrClient(AbstractClient):
 
 
     def UploadDataFile(self, request):
-        """上传文件，接口返回数据任务ID，支持xlsx、xls、csv、zip格式。
+        """上傳文件，介面返回數據任務ID，支援xlsx、xls、csv、zip格式。
 
         :param request: Request instance for UploadDataFile.
         :type request: :class:`tencentcloud.cr.v20180321.models.UploadDataFileRequest`
@@ -308,7 +308,7 @@ class CrClient(AbstractClient):
 
 
     def UploadDataJson(self, request):
-        """上传Json格式数据，接口返回数据任务ID
+        """上傳Json格式數據，介面返回數據任務ID
 
         :param request: Request instance for UploadDataJson.
         :type request: :class:`tencentcloud.cr.v20180321.models.UploadDataJsonRequest`
@@ -336,7 +336,7 @@ class CrClient(AbstractClient):
 
 
     def UploadFile(self, request):
-        """客户通过调用该接口上传需催收文档，格式需为excel格式。接口返回任务ID。
+        """客戶通過調用該介面上傳需催收文件，格式需爲excel格式。介面返回任務ID。
 
         :param request: Request instance for UploadFile.
         :type request: :class:`tencentcloud.cr.v20180321.models.UploadFileRequest`

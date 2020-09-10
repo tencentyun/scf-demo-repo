@@ -5,7 +5,7 @@ Resources:
       Type: TencentCloud::Serverless::Function
       Properties:
         CodeUri: ./
-        Description: 本示例通过从源bucket下载zip格式文件，解压之后，上传到另一个bucket
+        Description: 本範例通過從源bucket下載zip格式文件，解壓之後，上傳到另一個bucket
         Environment:
           Variables:
         Handler: index.main_handler

@@ -27,4 +27,3 @@ from pygame.constants import *
 from pygame.rect import Rect
 import pygame.color as color
 Color = color.Color
-

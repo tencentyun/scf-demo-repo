@@ -3,13 +3,13 @@ from datetime import datetime
 from elasticsearch import Elasticsearch
 import curator
 
-esServer = "10.16.16.137:9200"  # 修改为 es server 地址+端口
-esPrefix = "cron-"              # 查找的 index 索引前缀
-esCuratorTimeStr = "%Y%m%d%H"   # 索引中的时间格式
-esCuratorTimeUnit = "hours"     # 过滤清理的时间单位,days,months
-esCuratorTimeCount = 8          # 时间间隔
+esServer = "10.16.16.137:9200"  # 修改爲 es server 網址+端口
+esPrefix = "cron-"              # 查找的 index 索引前綴
+esCuratorTimeStr = "%Y%m%d%H"   # 索引中的時間格式
+esCuratorTimeUnit = "hours"     # 過濾清理的時間單位,days,months
+esCuratorTimeCount = 8          # 時間間隔
 
-# 如上示例可以清理 索引格式类似为 index-2018101113 ，当前时间的8个小时前的索引
+# 如上範例可以清理 索引格式類似爲 index-2018101113 ，當前時間的8個小時前的索引
 
 ESServer = Elasticsearch(esServer)
 
@@ -28,4 +28,3 @@ def clean_index():
 
 def main_handler(event,context):
     clean_index()
-

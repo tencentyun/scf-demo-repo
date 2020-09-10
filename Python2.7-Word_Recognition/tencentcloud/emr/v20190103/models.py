@@ -17,13 +17,13 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class COSSettings(AbstractModel):
-    """COS 相关配置
+    """COS 相關配置
 
     """
 
     def __init__(self):
         """
-        :param LogOnCosPath: 日志存储在COS上的路径
+        :param LogOnCosPath: 日志儲存在COS上的路徑
         :type LogOnCosPath: str
         :param CosSecretId: COS SecretId
         :type CosSecretId: str
@@ -42,17 +42,17 @@ class COSSettings(AbstractModel):
 
 
 class ClusterInfoResult(AbstractModel):
-    """查询结果
+    """查詢結果
 
     """
 
     def __init__(self):
         """
-        :param TotalCnt: 数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCnt: 數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCnt: int
-        :param ClusterList: 集群信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterList: 集群訊息清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterList: list of ClusterInstanceInfo
         """
         self.TotalCnt = None
@@ -70,7 +70,7 @@ class ClusterInfoResult(AbstractModel):
 
 
 class ClusterInstanceInfo(AbstractModel):
-    """实例信息
+    """實例訊息
 
     """
 
@@ -78,30 +78,30 @@ class ClusterInstanceInfo(AbstractModel):
         """
         :param ClusterId: clusterId
         :type ClusterId: str
-        :param StatusDesc: 状态描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StatusDesc: 狀态描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StatusDesc: str
         :param ClusterName: 集群名字
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterName: str
         :param ZoneId: 集群地域
         :type ZoneId: int
-        :param AppId: 用户APPID
+        :param AppId: 用戶APPID
         :type AppId: int
-        :param Addtime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Addtime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Addtime: str
-        :param Runtime: 运行时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Runtime: 運作時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Runtime: str
         :param Config: 集群配置
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Config: :class:`tencentcloud.emr.v20190103.models.EMRProductConfigSettings`
         :param MasterIp: 集群IP
         :type MasterIp: str
         :param EmrVersion: 集群版本
         :type EmrVersion: str
-        :param ChargeType: 集群计费类型
+        :param ChargeType: 集群計費類型
         :type ChargeType: int
         """
         self.ClusterId = None
@@ -134,45 +134,45 @@ class ClusterInstanceInfo(AbstractModel):
 
 
 class CreateInstanceRequest(AbstractModel):
-    """CreateInstance请求参数结构体
+    """CreateInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProductId: 产品ID
+        :param ProductId: 産品ID
         :type ProductId: int
-        :param VPCSettings: VPC设置参数
+        :param VPCSettings: VPC設置參數
         :type VPCSettings: :class:`tencentcloud.emr.v20190103.models.VPCSettings`
-        :param Software: 软件列表
+        :param Software: 軟體清單
         :type Software: list of str
-        :param ResourceSpec: 资源描述
+        :param ResourceSpec: 資源描述
         :type ResourceSpec: :class:`tencentcloud.emr.v20190103.models.ResourceSpec`
-        :param SupportHA: 支持HA
+        :param SupportHA: 支援HA
         :type SupportHA: int
-        :param InstanceName: 实例名称
+        :param InstanceName: 實例名稱
         :type InstanceName: str
-        :param PayMode: 计费类型
+        :param PayMode: 計費類型
         :type PayMode: int
-        :param Placement: 集群位置信息
+        :param Placement: 集群位置訊息
         :type Placement: :class:`tencentcloud.emr.v20190103.models.Placement`
-        :param TimeSpan: 时间长度
+        :param TimeSpan: 時間長度
         :type TimeSpan: int
-        :param TimeUnit: 时间单位
+        :param TimeUnit: 時間單位
         :type TimeUnit: str
-        :param LoginSettings: 登录配置
+        :param LoginSettings: 登入配置
         :type LoginSettings: :class:`tencentcloud.emr.v20190103.models.LoginSettings`
-        :param ClientToken: 客户端Token
+        :param ClientToken: 用戶端Token
         :type ClientToken: str
-        :param COSSettings: COS设置参数
+        :param COSSettings: COS設置參數
         :type COSSettings: :class:`tencentcloud.emr.v20190103.models.COSSettings`
-        :param SgId: 安全组ID
+        :param SgId: 安全組ID
         :type SgId: str
-        :param PreExecutedFileSettings: 预执行脚本设置
+        :param PreExecutedFileSettings: 預執行腳本設置
         :type PreExecutedFileSettings: :class:`tencentcloud.emr.v20190103.models.PreExecuteFileSettings`
-        :param AutoRenew: 自动续费
+        :param AutoRenew: 自動續約
         :type AutoRenew: int
-        :param NeedMasterWan: 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+        :param NeedMasterWan: 是否需要外網Ip。支援填NEED_MASTER_WAN，不支援使用NOT_NEED_MASTER_WAN，預設使用NEED_MASTER_WAN
         :type NeedMasterWan: str
         """
         self.ProductId = None
@@ -227,15 +227,15 @@ class CreateInstanceRequest(AbstractModel):
 
 
 class CreateInstanceResponse(AbstractModel):
-    """CreateInstance返回参数结构体
+    """CreateInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 创建实例结果信息
+        :param Result: 創建實例結果訊息
         :type Result: :class:`tencentcloud.emr.v20190103.models.CreateInstanceResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -250,17 +250,17 @@ class CreateInstanceResponse(AbstractModel):
 
 
 class CreateInstanceResult(AbstractModel):
-    """创建接口返回值
+    """創建介面返回值
 
     """
 
     def __init__(self):
         """
-        :param ClientToken: 客户端TOKEN
+        :param ClientToken: 用戶端TOKEN
         :type ClientToken: str
-        :param InstanceName: 集群名称
+        :param InstanceName: 集群名稱
         :type InstanceName: str
-        :param DealNames: 订单列表
+        :param DealNames: 訂單清單
         :type DealNames: list of str
         """
         self.ClientToken = None
@@ -275,17 +275,17 @@ class CreateInstanceResult(AbstractModel):
 
 
 class DescribeInstancesRequest(AbstractModel):
-    """DescribeInstances请求参数结构体
+    """DescribeInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 查询列表,  如果不填写，返回该AppId下所有实例列表
+        :param InstanceIds: 查詢清單,  如果不填寫，返回該AppId下所有實例清單
         :type InstanceIds: list of str
-        :param Offset: 查询偏移量，默认0
+        :param Offset: 查詢偏移量，預設0
         :type Offset: int
-        :param Limit: 查询结果限制，默认值10
+        :param Limit: 查詢結果限制，預設值10
         :type Limit: int
         """
         self.InstanceIds = None
@@ -300,15 +300,15 @@ class DescribeInstancesRequest(AbstractModel):
 
 
 class DescribeInstancesResponse(AbstractModel):
-    """DescribeInstances返回参数结构体
+    """DescribeInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 实例数量
+        :param Result: 實例數量
         :type Result: :class:`tencentcloud.emr.v20190103.models.ClusterInfoResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -323,44 +323,44 @@ class DescribeInstancesResponse(AbstractModel):
 
 
 class EMRProductConfigSettings(AbstractModel):
-    """集群的config信息
+    """集群的config訊息
 
     """
 
     def __init__(self):
         """
-        :param SoftInfo: 集群软件信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SoftInfo: 集群軟體訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SoftInfo: list of str
-        :param MasterNodeSize: master节点数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MasterNodeSize: master節點數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MasterNodeSize: int
-        :param CoreNodeSize: core节点数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CoreNodeSize: core節點數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CoreNodeSize: int
-        :param TaskNodeSize: task节点数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TaskNodeSize: task節點數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskNodeSize: int
-        :param ComNodeSize: common节点数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ComNodeSize: common節點數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ComNodeSize: int
-        :param MasterResourceSpec: master规格
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MasterResourceSpec: master規格
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MasterResourceSpec: :class:`tencentcloud.emr.v20190103.models.NodeSpec`
-        :param CoreResourceSpec: core规格
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CoreResourceSpec: core規格
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CoreResourceSpec: :class:`tencentcloud.emr.v20190103.models.NodeSpec`
-        :param TaskResourceSpec: task规格
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TaskResourceSpec: task規格
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskResourceSpec: :class:`tencentcloud.emr.v20190103.models.NodeSpec`
-        :param CommonResourceSpec: common规格
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CommonResourceSpec: common規格
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CommonResourceSpec: :class:`tencentcloud.emr.v20190103.models.NodeSpec`
         :param Oncos: 是否使用COS
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Oncos: bool
         :param COSSettings: COS配置
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type COSSettings: :class:`tencentcloud.emr.v20190103.models.COSSettings`
         """
         self.SoftInfo = None
@@ -401,29 +401,29 @@ class EMRProductConfigSettings(AbstractModel):
 
 
 class InquiryPriceCreateInstanceRequest(AbstractModel):
-    """InquiryPriceCreateInstance请求参数结构体
+    """InquiryPriceCreateInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TimeUnit: 时间单位
+        :param TimeUnit: 時間單位
         :type TimeUnit: str
-        :param TimeSpan: 时间长度
+        :param TimeSpan: 時間長度
         :type TimeSpan: int
-        :param ResourceSpec: 询价资源描述
+        :param ResourceSpec: 詢價資源描述
         :type ResourceSpec: :class:`tencentcloud.emr.v20190103.models.ResourceSpec`
-        :param Currency: 货币种类
+        :param Currency: 貨币種類
         :type Currency: str
-        :param PayMode: 计费类型
+        :param PayMode: 計費類型
         :type PayMode: int
-        :param SupportHA: 是否支持HA， 1 支持，0 不支持
+        :param SupportHA: 是否支援HA， 1 支援，0 不支援
         :type SupportHA: int
-        :param Software: 软件列表
+        :param Software: 軟體清單
         :type Software: list of str
-        :param Placement: 位置信息
+        :param Placement: 位置訊息
         :type Placement: :class:`tencentcloud.emr.v20190103.models.Placement`
-        :param VPCSettings: VPC信息
+        :param VPCSettings: VPC訊息
         :type VPCSettings: :class:`tencentcloud.emr.v20190103.models.VPCSettings`
         """
         self.TimeUnit = None
@@ -456,15 +456,15 @@ class InquiryPriceCreateInstanceRequest(AbstractModel):
 
 
 class InquiryPriceCreateInstanceResponse(AbstractModel):
-    """InquiryPriceCreateInstance返回参数结构体
+    """InquiryPriceCreateInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 询价结果
+        :param Result: 詢價結果
         :type Result: :class:`tencentcloud.emr.v20190103.models.InquiryPriceResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -479,19 +479,19 @@ class InquiryPriceCreateInstanceResponse(AbstractModel):
 
 
 class InquiryPriceResult(AbstractModel):
-    """用于询价输出
+    """用于詢價輸出
 
     """
 
     def __init__(self):
         """
-        :param OriginalCost: 原始价格
+        :param OriginalCost: 原始價格
         :type OriginalCost: float
-        :param DiscountCost: 折扣后价格
+        :param DiscountCost: 折扣後價格
         :type DiscountCost: float
-        :param TimeUnit: 时间单位
+        :param TimeUnit: 時間單位
         :type TimeUnit: str
-        :param TimeSpan: 时间长度
+        :param TimeSpan: 時間長度
         :type TimeSpan: int
         """
         self.OriginalCost = None
@@ -508,27 +508,27 @@ class InquiryPriceResult(AbstractModel):
 
 
 class InquiryPriceScaleOutInstanceRequest(AbstractModel):
-    """InquiryPriceScaleOutInstance请求参数结构体
+    """InquiryPriceScaleOutInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TimeUnit: 时间单位。s:按量用例单位。m:包年包月用例单位
+        :param TimeUnit: 時間單位。s:按量用例單位。m:包年包月用例單位
         :type TimeUnit: str
-        :param TimeSpan: 时间长度。按量用例长度为3600。
+        :param TimeSpan: 時間長度。按量用例長度爲3600。
         :type TimeSpan: int
         :param ZoneId: Zone ID
         :type ZoneId: int
-        :param PayMode: 计费类型
+        :param PayMode: 計費類型
         :type PayMode: int
-        :param InstanceId: 实例ID
+        :param InstanceId: 實例ID
         :type InstanceId: str
-        :param CoreCount: 扩容Core节点个数
+        :param CoreCount: 擴容Core節點個數
         :type CoreCount: int
-        :param TaskCount: 扩容Task节点个数
+        :param TaskCount: 擴容Task節點個數
         :type TaskCount: int
-        :param Currency: 货币种类
+        :param Currency: 貨币種類
         :type Currency: str
         """
         self.TimeUnit = None
@@ -553,15 +553,15 @@ class InquiryPriceScaleOutInstanceRequest(AbstractModel):
 
 
 class InquiryPriceScaleOutInstanceResponse(AbstractModel):
-    """InquiryPriceScaleOutInstance返回参数结构体
+    """InquiryPriceScaleOutInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 扩容价格
+        :param Result: 擴容價格
         :type Result: :class:`tencentcloud.emr.v20190103.models.InquiryPriceResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -576,7 +576,7 @@ class InquiryPriceScaleOutInstanceResponse(AbstractModel):
 
 
 class LoginSettings(AbstractModel):
-    """登录设置
+    """登入設置
 
     """
 
@@ -597,15 +597,15 @@ class LoginSettings(AbstractModel):
 
 
 class MultiDisk(AbstractModel):
-    """多云盘参数
+    """多雲盤參數
 
     """
 
     def __init__(self):
         """
-        :param DiskType: 云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
+        :param DiskType: 雲盤類型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一種
         :type DiskType: str
-        :param Volume: 云盘大小
+        :param Volume: 雲盤大小
         :type Volume: int
         """
         self.DiskType = None
@@ -618,38 +618,38 @@ class MultiDisk(AbstractModel):
 
 
 class NodeSpec(AbstractModel):
-    """节点描述
+    """節點描述
 
     """
 
     def __init__(self):
         """
-        :param Memory: 内存容量,单位为M
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Memory: 内存容量,單位爲M
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Memory: int
-        :param CPUCores: CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CPUCores: CPU核數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CPUCores: int
-        :param Volume: 数据盘容量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Volume: 數據盤容量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Volume: int
-        :param DiskType: 磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DiskType: 磁盤類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DiskType: str
-        :param Spec: 节点规格描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Spec: 節點規格描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Spec: str
-        :param RootDiskVolume: 系统盘容量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RootDiskVolume: 系統盤容量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RootDiskVolume: int
-        :param StorageType: 存储类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StorageType: 儲存類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StorageType: int
-        :param SpecName: 规格名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SpecName: 規格名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SpecName: str
-        :param MultiDisks: 多云盘参数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MultiDisks: 多雲盤參數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MultiDisks: list of MultiDisk
         """
         self.Memory = None
@@ -681,15 +681,15 @@ class NodeSpec(AbstractModel):
 
 
 class Placement(AbstractModel):
-    """描述集实例位置信息
+    """描述集實例位置訊息
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 实例所属项目ID。该参数可以通过调用 DescribeProject 的返回值中的 projectId 字段来获取。不填为默认项目。
+        :param ProjectId: 實例所屬項目ID。該參數可以通過調用 DescribeProject 的返回值中的 projectId 欄位來獲取。不填爲預設項目。
         :type ProjectId: int
-        :param Zone: 实例所属的可用区ID。该参数也可以通过调用 DescribeZones 的返回值中的Zone字段来获取。
+        :param Zone: 實例所屬的可用區ID。該參數也可以通過調用 DescribeZones 的返回值中的Zone欄位來獲取。
         :type Zone: str
         """
         self.ProjectId = None
@@ -702,21 +702,21 @@ class Placement(AbstractModel):
 
 
 class PreExecuteFileSettings(AbstractModel):
-    """预执行脚本配置
+    """預執行腳本配置
 
     """
 
     def __init__(self):
         """
-        :param Path: 脚本在COS上路径
+        :param Path: 腳本在COS上路徑
         :type Path: str
-        :param Args: 执行脚本参数
+        :param Args: 執行腳本參數
         :type Args: list of str
-        :param Bucket: COS的Bucket名称
+        :param Bucket: COS的Bucket名稱
         :type Bucket: str
-        :param Region: COS的Region名称
+        :param Region: COS的Region名稱
         :type Region: str
-        :param Domain: COS的Domain数据
+        :param Domain: COS的Domain數據
         :type Domain: str
         """
         self.Path = None
@@ -735,27 +735,27 @@ class PreExecuteFileSettings(AbstractModel):
 
 
 class ResourceSpec(AbstractModel):
-    """资源描述
+    """資源描述
 
     """
 
     def __init__(self):
         """
-        :param CommonCount: Common节点数量
+        :param CommonCount: Common節點數量
         :type CommonCount: int
-        :param MasterResourceSpec: 描述Master节点资源
+        :param MasterResourceSpec: 描述Master節點資源
         :type MasterResourceSpec: :class:`tencentcloud.emr.v20190103.models.NodeSpec`
-        :param CoreResourceSpec: 描述Core节点资源
+        :param CoreResourceSpec: 描述Core節點資源
         :type CoreResourceSpec: :class:`tencentcloud.emr.v20190103.models.NodeSpec`
-        :param TaskResourceSpec: 描述Task节点资源
+        :param TaskResourceSpec: 描述Task節點資源
         :type TaskResourceSpec: :class:`tencentcloud.emr.v20190103.models.NodeSpec`
-        :param MasterCount: Master节点数量
+        :param MasterCount: Master節點數量
         :type MasterCount: int
-        :param CoreCount: Core节点数量
+        :param CoreCount: Core節點數量
         :type CoreCount: int
-        :param TaskCount: Task节点数量
+        :param TaskCount: Task節點數量
         :type TaskCount: int
-        :param CommonResourceSpec: 描述Common节点资源
+        :param CommonResourceSpec: 描述Common節點資源
         :type CommonResourceSpec: :class:`tencentcloud.emr.v20190103.models.NodeSpec`
         """
         self.CommonCount = None
@@ -788,7 +788,7 @@ class ResourceSpec(AbstractModel):
 
 
 class ScaleOutInstanceRequest(AbstractModel):
-    """ScaleOutInstance请求参数结构体
+    """ScaleOutInstance請求參數結構體
 
     """
 
@@ -796,19 +796,19 @@ class ScaleOutInstanceRequest(AbstractModel):
         """
         :param ClientToken: Token
         :type ClientToken: str
-        :param TimeUnit: 时间单位
+        :param TimeUnit: 時間單位
         :type TimeUnit: str
-        :param TimeSpan: 时间长度
+        :param TimeSpan: 時間長度
         :type TimeSpan: int
-        :param InstanceId: 扩容实例ID
+        :param InstanceId: 擴容實例ID
         :type InstanceId: str
-        :param PayMode: 付费类型
+        :param PayMode: 付費類型
         :type PayMode: int
-        :param PreExecutedFileSettings: 预执行脚本设置
+        :param PreExecutedFileSettings: 預執行腳本設置
         :type PreExecutedFileSettings: :class:`tencentcloud.emr.v20190103.models.PreExecuteFileSettings`
-        :param TaskCount: 扩容Task节点数量
+        :param TaskCount: 擴容Task節點數量
         :type TaskCount: int
-        :param CoreCount: 扩容Core节点数量
+        :param CoreCount: 擴容Core節點數量
         :type CoreCount: int
         """
         self.ClientToken = None
@@ -835,15 +835,15 @@ class ScaleOutInstanceRequest(AbstractModel):
 
 
 class ScaleOutInstanceResponse(AbstractModel):
-    """ScaleOutInstance返回参数结构体
+    """ScaleOutInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 扩容结果
+        :param Result: 擴容結果
         :type Result: :class:`tencentcloud.emr.v20190103.models.ScaleOutInstanceResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -858,17 +858,17 @@ class ScaleOutInstanceResponse(AbstractModel):
 
 
 class ScaleOutInstanceResult(AbstractModel):
-    """扩容实例结果描述
+    """擴容實例結果描述
 
     """
 
     def __init__(self):
         """
-        :param ClientToken: 客户端调用时传入的TOKEN
+        :param ClientToken: 用戶端調用時傳入的TOKEN
         :type ClientToken: str
-        :param InstanceId: 扩容实例ID
+        :param InstanceId: 擴容實例ID
         :type InstanceId: str
-        :param DealNames: 订单名称
+        :param DealNames: 訂單名稱
         :type DealNames: list of str
         """
         self.ClientToken = None
@@ -883,13 +883,13 @@ class ScaleOutInstanceResult(AbstractModel):
 
 
 class TerminateInstanceRequest(AbstractModel):
-    """TerminateInstance请求参数结构体
+    """TerminateInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 被销毁的实例ID
+        :param InstanceId: 被銷毀的實例ID
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -900,15 +900,15 @@ class TerminateInstanceRequest(AbstractModel):
 
 
 class TerminateInstanceResponse(AbstractModel):
-    """TerminateInstance返回参数结构体
+    """TerminateInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 退单描述
+        :param Result: 退單描述
         :type Result: :class:`tencentcloud.emr.v20190103.models.TerminateResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -923,15 +923,15 @@ class TerminateInstanceResponse(AbstractModel):
 
 
 class TerminateResult(AbstractModel):
-    """退单请求描述描述
+    """退單請求描述描述
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 退单集群ID
+        :param InstanceId: 退單集群ID
         :type InstanceId: str
-        :param ResourceIds: 资源资源ID
+        :param ResourceIds: 資源資源ID
         :type ResourceIds: list of str
         """
         self.InstanceId = None
@@ -944,15 +944,15 @@ class TerminateResult(AbstractModel):
 
 
 class TerminateTasksRequest(AbstractModel):
-    """TerminateTasks请求参数结构体
+    """TerminateTasks請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 销毁节点所属实例ID
+        :param InstanceId: 銷毀節點所屬實例ID
         :type InstanceId: str
-        :param ResourceIds: 销毁节点ID
+        :param ResourceIds: 銷毀節點ID
         :type ResourceIds: list of str
         """
         self.InstanceId = None
@@ -965,15 +965,15 @@ class TerminateTasksRequest(AbstractModel):
 
 
 class TerminateTasksResponse(AbstractModel):
-    """TerminateTasks返回参数结构体
+    """TerminateTasks返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 退单结果
+        :param Result: 退單結果
         :type Result: :class:`tencentcloud.emr.v20190103.models.TerminateResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -988,7 +988,7 @@ class TerminateTasksResponse(AbstractModel):
 
 
 class VPCSettings(AbstractModel):
-    """VPC 参数
+    """VPC 參數
 
     """
 

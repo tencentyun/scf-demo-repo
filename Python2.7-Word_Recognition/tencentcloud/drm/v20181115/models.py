@@ -17,22 +17,22 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CreateLicenseRequest(AbstractModel):
-    """CreateLicense请求参数结构体
+    """CreateLicense請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DrmType: DRM方案类型，接口取值：WIDEVINE，FAIRPLAY。
+        :param DrmType: DRM方案類型，介面取值：WIDEVINE，FAIRPLAY。
         :type DrmType: str
-        :param LicenseRequest: Base64编码的终端设备License Request数据。
+        :param LicenseRequest: Base64編碼的終端設備License Request數據。
         :type LicenseRequest: str
-        :param ContentType: 内容类型，接口取值：VodVideo,LiveVideo。
+        :param ContentType: 内容類型，介面取值：VodVideo,LiveVideo。
         :type ContentType: str
-        :param Tracks: 授权播放的Track列表。
-该值为空时，默认授权所有track播放。
+        :param Tracks: 授權播放的Track清單。
+該值爲空時，預設授權所有track播放。
         :type Tracks: list of str
-        :param PlaybackPolicy: 播放策略参数。
+        :param PlaybackPolicy: 播放策略參數。
         :type PlaybackPolicy: :class:`tencentcloud.drm.v20181115.models.PlaybackPolicy`
         """
         self.DrmType = None
@@ -53,17 +53,17 @@ class CreateLicenseRequest(AbstractModel):
 
 
 class CreateLicenseResponse(AbstractModel):
-    """CreateLicense返回参数结构体
+    """CreateLicense返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param License: Base64 编码的许可证二进制数据。
+        :param License: Base64 編碼的許可證二進制數據。
         :type License: str
         :param ContentId: 加密内容的内容ID
         :type ContentId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.License = None
@@ -78,23 +78,23 @@ class CreateLicenseResponse(AbstractModel):
 
 
 class DescribeKeysRequest(AbstractModel):
-    """DescribeKeys请求参数结构体
+    """DescribeKeys請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DrmType: 使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
+        :param DrmType: 使用的DRM方案類型，介面取值WIDEVINE、FAIRPLAY、NORMALAES。
         :type DrmType: str
-        :param Tracks: 加密的track列表，接口取值VIDEO、AUDIO。
+        :param Tracks: 加密的track清單，介面取值VIDEO、AUDIO。
         :type Tracks: list of str
-        :param ContentType: 内容类型。接口取值VodVideo,LiveVideo
+        :param ContentType: 内容類型。介面取值VodVideo,LiveVideo
         :type ContentType: str
-        :param RsaPublicKey: Base64编码的Rsa公钥，用来加密出参中的SessionKey。
-如果该参数为空，则出参中SessionKey为明文。
+        :param RsaPublicKey: Base64編碼的Rsa公鑰，用來加密出參中的SessionKey。
+如果該參數爲空，則出參中SessionKey爲明文。
         :type RsaPublicKey: str
-        :param ContentId: 一个加密内容的唯一标识。
-如果该参数为空，则后台自动生成
+        :param ContentId: 一個加密内容的唯一标識。
+如果該參數爲空，則後台自動生成
         :type ContentId: str
         """
         self.DrmType = None
@@ -113,24 +113,24 @@ class DescribeKeysRequest(AbstractModel):
 
 
 class DescribeKeysResponse(AbstractModel):
-    """DescribeKeys返回参数结构体
+    """DescribeKeys返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Keys: 加密密钥列表
+        :param Keys: 加密金鑰清單
         :type Keys: list of Key
-        :param SessionKey: 用来加密密钥。
-如果入参中带有RsaPublicKey，则SessionKey为使用Rsa公钥加密后的二进制数据，Base64编码字符串。
-如果入参中没有RsaPublicKey，则SessionKey为原始数据的字符串形式。
+        :param SessionKey: 用來加密金鑰。
+如果入參中帶有RsaPublicKey，則SessionKey爲使用Rsa公鑰加密後的二進制數據，Base64編碼字串。
+如果入參中沒有RsaPublicKey，則SessionKey爲原始數據的字串形式。
         :type SessionKey: str
         :param ContentId: 内容ID
         :type ContentId: str
-        :param Pssh: Widevine方案的Pssh数据，Base64编码。
-Fairplay方案无该值。
+        :param Pssh: Widevine方案的Pssh數據，Base64編碼。
+Fairplay方案無該值。
         :type Pssh: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Keys = None
@@ -154,17 +154,17 @@ Fairplay方案无该值。
 
 
 class DrmOutputObject(AbstractModel):
-    """DRM加密后的输出对象
+    """DRM加密後的輸出對象
 
     """
 
     def __init__(self):
         """
-        :param BucketName: 输出的桶名称。
+        :param BucketName: 輸出的桶名稱。
         :type BucketName: str
-        :param ObjectName: 输出的对象名称。
+        :param ObjectName: 輸出的對象名稱。
         :type ObjectName: str
-        :param Para: 输出对象参数。
+        :param Para: 輸出對象參數。
         :type Para: :class:`tencentcloud.drm.v20181115.models.DrmOutputPara`
         """
         self.BucketName = None
@@ -181,15 +181,15 @@ class DrmOutputObject(AbstractModel):
 
 
 class DrmOutputPara(AbstractModel):
-    """Drm加密对象输出参数
+    """Drm加密對象輸出參數
 
     """
 
     def __init__(self):
         """
-        :param Type: 内容类型。例:video，audio，mpd，m3u8
+        :param Type: 内容類型。例:video，audio，mpd，m3u8
         :type Type: str
-        :param Language: 语言,例: en, zh-cn
+        :param Language: 語言,例: en, zh-cn
         :type Language: str
         """
         self.Type = None
@@ -202,15 +202,15 @@ class DrmOutputPara(AbstractModel):
 
 
 class DrmSourceObject(AbstractModel):
-    """用于DRM加密的源对象
+    """用于DRM加密的源對象
 
     """
 
     def __init__(self):
         """
-        :param BucketName: 输入的桶名称。
+        :param BucketName: 輸入的桶名稱。
         :type BucketName: str
-        :param ObjectName: 输入对象名称。
+        :param ObjectName: 輸入對象名稱。
         :type ObjectName: str
         """
         self.BucketName = None
@@ -223,19 +223,19 @@ class DrmSourceObject(AbstractModel):
 
 
 class Key(AbstractModel):
-    """DRM加密密钥
+    """DRM加密金鑰
 
     """
 
     def __init__(self):
         """
-        :param Track: 加密track类型。
+        :param Track: 加密track類型。
         :type Track: str
-        :param KeyId: 密钥ID。
+        :param KeyId: 金鑰ID。
         :type KeyId: str
-        :param Key: 原始Key使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
+        :param Key: 原始Key使用AES-128 ECB模式和SessionKey加密的後的二進制數據，Base64編碼的字串。
         :type Key: str
-        :param Iv: 原始IV使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
+        :param Iv: 原始IV使用AES-128 ECB模式和SessionKey加密的後的二進制數據，Base64編碼的字串。
         :type Iv: str
         """
         self.Track = None
@@ -252,15 +252,15 @@ class Key(AbstractModel):
 
 
 class PlaybackPolicy(AbstractModel):
-    """播放控制参数
+    """播放控制參數
 
     """
 
     def __init__(self):
         """
-        :param LicenseDurationSeconds: 播放许可证的有效期
+        :param LicenseDurationSeconds: 播放許可證的有效期
         :type LicenseDurationSeconds: int
-        :param PlaybackDurationSeconds: 开始播放后，允许最长播放时间
+        :param PlaybackDurationSeconds: 開始播放後，允許最長播放時間
         :type PlaybackDurationSeconds: int
         """
         self.LicenseDurationSeconds = None
@@ -273,7 +273,7 @@ class PlaybackPolicy(AbstractModel):
 
 
 class StartEncryptionRequest(AbstractModel):
-    """StartEncryption请求参数结构体
+    """StartEncryption請求參數結構體
 
     """
 
@@ -281,15 +281,15 @@ class StartEncryptionRequest(AbstractModel):
         """
         :param CosEndPoint: cos的end point。
         :type CosEndPoint: str
-        :param CosSecretId: cos api密钥id。
+        :param CosSecretId: cos api金鑰id。
         :type CosSecretId: str
-        :param CosSecretKey: cos api密钥。
+        :param CosSecretKey: cos api金鑰。
         :type CosSecretKey: str
-        :param DrmType: 使用的DRM方案类型，接口取值WIDEVINE,FAIRPLAY
+        :param DrmType: 使用的DRM方案類型，介面取值WIDEVINE,FAIRPLAY
         :type DrmType: str
-        :param SourceObject: 存储在COS上的原始内容信息
+        :param SourceObject: 儲存在COS上的原始内容訊息
         :type SourceObject: :class:`tencentcloud.drm.v20181115.models.DrmSourceObject`
-        :param OutputObjects: 加密后的内容存储到COS的对象
+        :param OutputObjects: 加密後的内容儲存到COS的對象
         :type OutputObjects: list of DrmOutputObject
         """
         self.CosEndPoint = None
@@ -317,13 +317,13 @@ class StartEncryptionRequest(AbstractModel):
 
 
 class StartEncryptionResponse(AbstractModel):
-    """StartEncryption返回参数结构体
+    """StartEncryption返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None

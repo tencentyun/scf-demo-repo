@@ -26,7 +26,7 @@ class EcdnClient(AbstractClient):
 
 
     def AddEcdnDomain(self, request):
-        """本接口（AddEcdnDomain）用于创建加速域名。
+        """本介面（AddEcdnDomain）用于創建加速域名。
 
         :param request: Request instance for AddEcdnDomain.
         :type request: :class:`tencentcloud.ecdn.v20191012.models.AddEcdnDomainRequest`
@@ -54,7 +54,7 @@ class EcdnClient(AbstractClient):
 
 
     def DeleteEcdnDomain(self, request):
-        """本接口（DeleteEcdnDomain）用于删除指定加速域名。待删除域名必须处于已停用状态。
+        """本介面（DeleteEcdnDomain）用于删除指定加速域名。待删除域名必須處于已停用狀态。
 
         :param request: Request instance for DeleteEcdnDomain.
         :type request: :class:`tencentcloud.ecdn.v20191012.models.DeleteEcdnDomainRequest`
@@ -82,7 +82,7 @@ class EcdnClient(AbstractClient):
 
 
     def DescribeDomains(self, request):
-        """本接口（DescribeDomains）用于查询CDN域名基本信息，包括项目id，状态，业务类型，创建时间，更新时间等。
+        """本介面（DescribeDomains）用于查詢CDN域名基本訊息，包括項目id，狀态，業務類型，創建時間，更新時間等。
 
         :param request: Request instance for DescribeDomains.
         :type request: :class:`tencentcloud.ecdn.v20191012.models.DescribeDomainsRequest`
@@ -110,7 +110,7 @@ class EcdnClient(AbstractClient):
 
 
     def DescribeDomainsConfig(self, request):
-        """本接口（DescribeDomainsConfig）用于查询CDN加速域名详细配置信息。
+        """本介面（DescribeDomainsConfig）用于查詢CDN加速域名詳細配置訊息。
 
         :param request: Request instance for DescribeDomainsConfig.
         :type request: :class:`tencentcloud.ecdn.v20191012.models.DescribeDomainsConfigRequest`
@@ -138,7 +138,7 @@ class EcdnClient(AbstractClient):
 
 
     def DescribeEcdnDomainLogs(self, request):
-        """本接口（DescribeEcdnDomainLogs）用于查询域名的访问日志下载地址。
+        """本介面（DescribeEcdnDomainLogs）用于查詢域名的訪問日志下載網址。
 
         :param request: Request instance for DescribeEcdnDomainLogs.
         :type request: :class:`tencentcloud.ecdn.v20191012.models.DescribeEcdnDomainLogsRequest`
@@ -166,7 +166,7 @@ class EcdnClient(AbstractClient):
 
 
     def DescribeEcdnDomainStatistics(self, request):
-        """本接口（DescribeEcdnDomainStatistics）用于查询指定时间段内的域名访问统计指标
+        """本介面（DescribeEcdnDomainStatistics）用于查詢指定時間段内的域名訪問統計指标
 
         :param request: Request instance for DescribeEcdnDomainStatistics.
         :type request: :class:`tencentcloud.ecdn.v20191012.models.DescribeEcdnDomainStatisticsRequest`
@@ -194,16 +194,16 @@ class EcdnClient(AbstractClient):
 
 
     def DescribeEcdnStatistics(self, request):
-        """DescribeEcdnStatistics用于查询 ECDN 实时访问监控数据，支持以下指标查询：
+        """DescribeEcdnStatistics用于查詢 ECDN 實時訪問監控數據，支援以下指标查詢：
 
-        + 流量（单位为 byte）
-        + 带宽（单位为 bps）
-        + 请求数（单位为 次）
-        + 响应时间（单位为ms）
-        + 状态码 2xx 汇总及各 2 开头状态码明细（单位为 个）
-        + 状态码 3xx 汇总及各 3 开头状态码明细（单位为 个）
-        + 状态码 4xx 汇总及各 4 开头状态码明细（单位为 个）
-        + 状态码 5xx 汇总及各 5 开头状态码明细（单位为 个）
+        + 流量（單位爲 byte）
+        + 頻寬（單位爲 bps）
+        + 請求數（單位爲 次）
+        + 響應時間（單位爲ms）
+        + 狀态碼 2xx 匯總及各 2 開頭狀态碼明細（單位爲 個）
+        + 狀态碼 3xx 匯總及各 3 開頭狀态碼明細（單位爲 個）
+        + 狀态碼 4xx 匯總及各 4 開頭狀态碼明細（單位爲 個）
+        + 狀态碼 5xx 匯總及各 5 開頭狀态碼明細（單位爲 個）
 
         :param request: Request instance for DescribeEcdnStatistics.
         :type request: :class:`tencentcloud.ecdn.v20191012.models.DescribeEcdnStatisticsRequest`
@@ -231,7 +231,7 @@ class EcdnClient(AbstractClient):
 
 
     def DescribePurgeQuota(self, request):
-        """查询刷新接口的用量配额。
+        """查詢重新整理介面的用量配額。
 
         :param request: Request instance for DescribePurgeQuota.
         :type request: :class:`tencentcloud.ecdn.v20191012.models.DescribePurgeQuotaRequest`
@@ -259,7 +259,7 @@ class EcdnClient(AbstractClient):
 
 
     def DescribePurgeTasks(self, request):
-        """DescribePurgeTasks 用于查询刷新任务提交历史记录及执行进度。
+        """DescribePurgeTasks 用于查詢重新整理任務提交曆史記錄及執行進度。
 
         :param request: Request instance for DescribePurgeTasks.
         :type request: :class:`tencentcloud.ecdn.v20191012.models.DescribePurgeTasksRequest`
@@ -287,7 +287,7 @@ class EcdnClient(AbstractClient):
 
 
     def PurgePathCache(self, request):
-        """PurgeUrlsCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
+        """PurgeUrlsCache 用于批次重新整理目錄快取，一次提交将返回一個重新整理任務id。
 
         :param request: Request instance for PurgePathCache.
         :type request: :class:`tencentcloud.ecdn.v20191012.models.PurgePathCacheRequest`
@@ -315,7 +315,7 @@ class EcdnClient(AbstractClient):
 
 
     def PurgeUrlsCache(self, request):
-        """PurgeUrlsCache 用于批量刷新Url，一次提交将返回一个刷新任务id。
+        """PurgeUrlsCache 用于批次重新整理Url，一次提交将返回一個重新整理任務id。
 
         :param request: Request instance for PurgeUrlsCache.
         :type request: :class:`tencentcloud.ecdn.v20191012.models.PurgeUrlsCacheRequest`
@@ -343,7 +343,7 @@ class EcdnClient(AbstractClient):
 
 
     def StartEcdnDomain(self, request):
-        """本接口（StartEcdnDomain）用于启用加速域名，待启用域名必须处于已下线状态。
+        """本介面（StartEcdnDomain）用于啓用加速域名，待啓用域名必須處于已下線狀态。
 
         :param request: Request instance for StartEcdnDomain.
         :type request: :class:`tencentcloud.ecdn.v20191012.models.StartEcdnDomainRequest`
@@ -371,7 +371,7 @@ class EcdnClient(AbstractClient):
 
 
     def StopEcdnDomain(self, request):
-        """本接口（StopCdnDomain）用于停止加速域名，待停用加速域名必须处于已上线或部署中状态。
+        """本介面（StopCdnDomain）用于停止加速域名，待停用加速域名必須處于已上線或佈署中狀态。
 
         :param request: Request instance for StopEcdnDomain.
         :type request: :class:`tencentcloud.ecdn.v20191012.models.StopEcdnDomainRequest`
@@ -399,8 +399,8 @@ class EcdnClient(AbstractClient):
 
 
     def UpdateDomainConfig(self, request):
-        """本接口（UpdateDomainConfig）用于更新ECDN加速域名配置信息。
-        注意：如果需要更新复杂类型的配置项，必须传递整个对象的所有属性，未传递的属性将使用默认值。建议通过查询接口获取配置属性后，直接修改后传递给本接口。Https配置由于证书的特殊性，更新时不用传递证书和密钥字段。
+        """本介面（UpdateDomainConfig）用于更新ECDN加速域名配置訊息。
+        注意：如果需要更新複雜類型的配置項，必須傳遞整個對象的所有屬性，未傳遞的屬性将使用預設值。建議通過查詢介面獲取配置屬性後，直接修改後傳遞給本介面。Https配置由于證書的特殊性，更新時不用傳遞證書和金鑰欄位。
 
         :param request: Request instance for UpdateDomainConfig.
         :type request: :class:`tencentcloud.ecdn.v20191012.models.UpdateDomainConfigRequest`

@@ -184,4 +184,3 @@ def SysFont(name, size, bold=0, italic=0, constructor=None):
     return _SysFont(name, size, bold, italic, constructor)
 
 del _Font, get_default_resolution, encode_file_path, as_unicode, as_bytes
-

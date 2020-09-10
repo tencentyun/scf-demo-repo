@@ -17,24 +17,24 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AddDelayLiveStreamRequest(AbstractModel):
-    """AddDelayLiveStream请求参数结构体
+    """AddDelayLiveStream請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AppName: 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
+        :param AppName: 推流路徑，與推流和播放網址中的 AppName 保持一緻，預設爲 live。
         :type AppName: str
         :param DomainName: 推流域名。
         :type DomainName: str
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param DelayTime: 延播时间，单位：秒，上限：600秒。
+        :param DelayTime: 延播時間，單位：秒，上限：600秒。
         :type DelayTime: int
-        :param ExpireTime: 延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
+        :param ExpireTime: 延播設置的過期時間。UTC 格式，例如：2018-11-29T19:00:00Z。
 注意：
-1. 默认7天后过期，且最长支持7天内生效。
-2. 北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+1. 預設7天後過期，且最長支援7天内生效。
+2. 北京時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。
         :type ExpireTime: str
         """
         self.AppName = None
@@ -53,13 +53,13 @@ class AddDelayLiveStreamRequest(AbstractModel):
 
 
 class AddDelayLiveStreamResponse(AbstractModel):
-    """AddDelayLiveStream返回参数结构体
+    """AddDelayLiveStream返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -70,33 +70,33 @@ class AddDelayLiveStreamResponse(AbstractModel):
 
 
 class AddLiveDomainRequest(AbstractModel):
-    """AddLiveDomain请求参数结构体
+    """AddLiveDomain請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DomainName: 域名名称。
+        :param DomainName: 域名名稱。
         :type DomainName: str
-        :param DomainType: 域名类型，
+        :param DomainType: 域名類型，
 0：推流域名，
 1：播放域名。
         :type DomainType: int
-        :param PlayType: 拉流域名类型：
-1：国内，
+        :param PlayType: 拉流域名類型：
+1：國内，
 2：全球，
 3：境外。
-默认值：1。
+預設值：1。
         :type PlayType: int
         :param IsDelayLive: 是否是慢直播：
 0： 普通直播，
 1 ：慢直播 。
-默认值： 0。
+預設值： 0。
         :type IsDelayLive: int
-        :param IsMiniProgramLive: 是否是小程序直播：
-0： 标准直播，
-1 ：小程序直播 。
-默认值： 0。
+        :param IsMiniProgramLive: 是否是小程式直播：
+0： 标準直播，
+1 ：小程式直播 。
+預設值： 0。
         :type IsMiniProgramLive: int
         """
         self.DomainName = None
@@ -115,13 +115,13 @@ class AddLiveDomainRequest(AbstractModel):
 
 
 class AddLiveDomainResponse(AbstractModel):
-    """AddLiveDomain返回参数结构体
+    """AddLiveDomain返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -132,23 +132,23 @@ class AddLiveDomainResponse(AbstractModel):
 
 
 class AddLiveWatermarkRequest(AbstractModel):
-    """AddLiveWatermark请求参数结构体
+    """AddLiveWatermark請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PictureUrl: 水印图片 URL。
+        :param PictureUrl: 浮水印圖片 URL。
         :type PictureUrl: str
-        :param WatermarkName: 水印名称。
+        :param WatermarkName: 浮水印名稱。
         :type WatermarkName: str
-        :param XPosition: 显示位置，X轴偏移，默认 0。
+        :param XPosition: 顯示位置，X軸偏移，預設 0。
         :type XPosition: int
-        :param YPosition: 显示位置，Y轴偏移，默认 0。
+        :param YPosition: 顯示位置，Y軸偏移，預設 0。
         :type YPosition: int
-        :param Width: 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
+        :param Width: 浮水印寬度，占直播原始畫面寬度百分比，建議高寬只設置一項，另外一項會自适應縮放，避免變形。預設原始寬度。
         :type Width: int
-        :param Height: 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
+        :param Height: 浮水印高度，占直播原始畫面寬度百分比，建議高寬只設置一項，另外一項會自适應縮放，避免變形。預設原始高度。
         :type Height: int
         """
         self.PictureUrl = None
@@ -169,15 +169,15 @@ class AddLiveWatermarkRequest(AbstractModel):
 
 
 class AddLiveWatermarkResponse(AbstractModel):
-    """AddLiveWatermark返回参数结构体
+    """AddLiveWatermark返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param WatermarkId: 水印ID。
+        :param WatermarkId: 浮水印ID。
         :type WatermarkId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.WatermarkId = None
@@ -190,19 +190,19 @@ class AddLiveWatermarkResponse(AbstractModel):
 
 
 class BillDataInfo(AbstractModel):
-    """带宽和流量信息。
+    """頻寬和流量訊息。
 
     """
 
     def __init__(self):
         """
-        :param Time: 时间点，格式: yyyy-mm-dd HH:MM:SS。
+        :param Time: 時間點，格式: yyyy-mm-dd HH:MM:SS。
         :type Time: str
-        :param Bandwidth: 带宽，单位是 Mbps。
+        :param Bandwidth: 頻寬，單位是 Mbps。
         :type Bandwidth: float
-        :param Flux: 流量，单位是 MB。
+        :param Flux: 流量，單位是 MB。
         :type Flux: float
-        :param PeakTime: 峰值时间点，格式: yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
+        :param PeakTime: 峰值時間點，格式: yyyy-mm-dd HH:MM:SS，原始數據爲5分鍾粒度，如果查詢小時和天粒度數據，則返回對應粒度内的頻寬峰值時間點。
         :type PeakTime: str
         """
         self.Time = None
@@ -219,17 +219,17 @@ class BillDataInfo(AbstractModel):
 
 
 class BindLiveDomainCertRequest(AbstractModel):
-    """BindLiveDomainCert请求参数结构体
+    """BindLiveDomainCert請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertId: 证书Id。使用添加证书接口获取证书Id。
+        :param CertId: 證書Id。使用添加證書介面獲驗證書Id。
         :type CertId: int
         :param DomainName: 播放域名。
         :type DomainName: str
-        :param Status: 状态，0： 关闭  1：打开。
+        :param Status: 狀态，0： 關閉  1：打開。
         :type Status: int
         """
         self.CertId = None
@@ -244,13 +244,13 @@ class BindLiveDomainCertRequest(AbstractModel):
 
 
 class BindLiveDomainCertResponse(AbstractModel):
-    """BindLiveDomainCert返回参数结构体
+    """BindLiveDomainCert返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -261,21 +261,21 @@ class BindLiveDomainCertResponse(AbstractModel):
 
 
 class CallBackRuleInfo(AbstractModel):
-    """规则信息
+    """規則訊息
 
     """
 
     def __init__(self):
         """
-        :param CreateTime: 规则创建时间。
+        :param CreateTime: 規則創建時間。
         :type CreateTime: str
-        :param UpdateTime: 规则更新时间。
+        :param UpdateTime: 規則更新時間。
         :type UpdateTime: str
-        :param TemplateId: 模板 ID。
+        :param TemplateId: 範本 ID。
         :type TemplateId: int
         :param DomainName: 推流域名。
         :type DomainName: str
-        :param AppName: 推流路径。
+        :param AppName: 推流路徑。
         :type AppName: str
         """
         self.CreateTime = None
@@ -294,31 +294,31 @@ class CallBackRuleInfo(AbstractModel):
 
 
 class CallBackTemplateInfo(AbstractModel):
-    """回调模板信息。
+    """回調範本訊息。
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板 ID。
+        :param TemplateId: 範本 ID。
         :type TemplateId: int
-        :param TemplateName: 模板名称。
+        :param TemplateName: 範本名稱。
         :type TemplateName: str
-        :param Description: 描述信息。
+        :param Description: 描述訊息。
         :type Description: str
-        :param StreamBeginNotifyUrl: 开播回调 URL。
+        :param StreamBeginNotifyUrl: 開播回調 URL。
         :type StreamBeginNotifyUrl: str
-        :param StreamEndNotifyUrl: 断流回调 URL。
+        :param StreamEndNotifyUrl: 斷流回調 URL。
         :type StreamEndNotifyUrl: str
-        :param StreamMixNotifyUrl: 混流回调 URL。
+        :param StreamMixNotifyUrl: 混流回調 URL。
         :type StreamMixNotifyUrl: str
-        :param RecordNotifyUrl: 录制回调 URL。
+        :param RecordNotifyUrl: 錄制回調 URL。
         :type RecordNotifyUrl: str
-        :param SnapshotNotifyUrl: 截图回调 URL。
+        :param SnapshotNotifyUrl: 截圖回調 URL。
         :type SnapshotNotifyUrl: str
-        :param PornCensorshipNotifyUrl: 鉴黄回调 URL。
+        :param PornCensorshipNotifyUrl: 鑒黃回調 URL。
         :type PornCensorshipNotifyUrl: str
-        :param CallbackKey: 回调的鉴权 key。
+        :param CallbackKey: 回調的鑒權 key。
         :type CallbackKey: str
         """
         self.TemplateId = None
@@ -347,13 +347,13 @@ class CallBackTemplateInfo(AbstractModel):
 
 
 class CancelCommonMixStreamRequest(AbstractModel):
-    """CancelCommonMixStream请求参数结构体
+    """CancelCommonMixStream請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MixStreamSessionId: 混流会话（申请混流开始到取消混流结束）标识 ID。
+        :param MixStreamSessionId: 混流會話（申請混流開始到取消混流結束）标識 ID。
         :type MixStreamSessionId: str
         """
         self.MixStreamSessionId = None
@@ -364,13 +364,13 @@ class CancelCommonMixStreamRequest(AbstractModel):
 
 
 class CancelCommonMixStreamResponse(AbstractModel):
-    """CancelCommonMixStream返回参数结构体
+    """CancelCommonMixStream返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -381,21 +381,21 @@ class CancelCommonMixStreamResponse(AbstractModel):
 
 
 class CdnPlayStatData(AbstractModel):
-    """下行播放统计指标
+    """下行播放統計指标
 
     """
 
     def __init__(self):
         """
-        :param Time: 时间点，格式: yyyy-mm-dd HH:MM:SS。
+        :param Time: 時間點，格式: yyyy-mm-dd HH:MM:SS。
         :type Time: str
-        :param Bandwidth: 带宽，单位: Mbps。
+        :param Bandwidth: 頻寬，單位: Mbps。
         :type Bandwidth: float
-        :param Flux: 流量，单位: MB。
+        :param Flux: 流量，單位: MB。
         :type Flux: float
-        :param Request: 新增请求数。
+        :param Request: 新增請求數。
         :type Request: int
-        :param Online: 并发连接数。
+        :param Online: 并發連接數。
         :type Online: int
         """
         self.Time = None
@@ -414,29 +414,29 @@ class CdnPlayStatData(AbstractModel):
 
 
 class CertInfo(AbstractModel):
-    """证书信息。
+    """證書訊息。
 
     """
 
     def __init__(self):
         """
-        :param CertId: 证书 ID。
+        :param CertId: 證書 ID。
         :type CertId: int
-        :param CertName: 证书名称。
+        :param CertName: 證書名稱。
         :type CertName: str
-        :param Description: 描述信息。
+        :param Description: 描述訊息。
         :type Description: str
-        :param CreateTime: 创建时间，UTC 格式。
+        :param CreateTime: 創建時間，UTC 格式。
         :type CreateTime: str
-        :param HttpsCrt: 证书内容。
+        :param HttpsCrt: 證書内容。
         :type HttpsCrt: str
-        :param CertType: 证书类型:
-0：腾讯云托管证书。
-1：用户添加证书。
+        :param CertType: 證書類型:
+0：Top Cloud 托管證書。
+1：用戶添加證書。
         :type CertType: int
-        :param CertExpireTime: 证书过期时间，UTC 格式。
+        :param CertExpireTime: 證書過期時間，UTC 格式。
         :type CertExpireTime: str
-        :param DomainList: 使用此证书的域名列表。
+        :param DomainList: 使用此證書的域名清單。
         :type DomainList: list of str
         """
         self.CertId = None
@@ -461,23 +461,23 @@ class CertInfo(AbstractModel):
 
 
 class ClientIpPlaySumInfo(AbstractModel):
-    """客户端ip播放汇总信息。
+    """用戶端ip播放匯總訊息。
 
     """
 
     def __init__(self):
         """
-        :param ClientIp: 客户端 IP，点分型。
+        :param ClientIp: 用戶端 IP，點分型。
         :type ClientIp: str
-        :param Province: 客户端所在省份。
+        :param Province: 用戶端所在省份。
         :type Province: str
-        :param TotalFlux: 总流量。
+        :param TotalFlux: 總流量。
         :type TotalFlux: float
-        :param TotalRequest: 总请求数。
+        :param TotalRequest: 總請求數。
         :type TotalRequest: int
-        :param TotalFailedRequest: 总失败请求数。
+        :param TotalFailedRequest: 總失敗請求數。
         :type TotalFailedRequest: int
-        :param CountryArea: 客户端所在国家。
+        :param CountryArea: 用戶端所在國家。
         :type CountryArea: str
         """
         self.ClientIp = None
@@ -498,14 +498,14 @@ class ClientIpPlaySumInfo(AbstractModel):
 
 
 class CommonMixControlParams(AbstractModel):
-    """通用混流控制参数
+    """通用混流控制參數
 
     """
 
     def __init__(self):
         """
-        :param UseMixCropCenter: 取值范围[0,1]。
-填1时，当参数中图层分辨率参数与视频实际分辨率不一致时，自动从视频中按图层设置的分辨率比例进行裁剪。
+        :param UseMixCropCenter: 取值範圍[0,1]。
+填1時，當參數中圖層分辨率參數與視訊實際分辨率不一緻時，自動從視訊中按圖層設置的分辨率比例進行裁剪。
         :type UseMixCropCenter: int
         """
         self.UseMixCropCenter = None
@@ -516,19 +516,19 @@ class CommonMixControlParams(AbstractModel):
 
 
 class CommonMixCropParams(AbstractModel):
-    """通用混流输入裁剪参数。
+    """通用混流輸入裁剪參數。
 
     """
 
     def __init__(self):
         """
-        :param CropWidth: 裁剪的宽度。取值范围[0，3000]。
+        :param CropWidth: 裁剪的寬度。取值範圍[0，3000]。
         :type CropWidth: float
-        :param CropHeight: 裁剪的高度。取值范围[0，3000]。
+        :param CropHeight: 裁剪的高度。取值範圍[0，3000]。
         :type CropHeight: float
-        :param CropStartLocationX: 裁剪的起始X坐标。取值范围[0，3000]。
+        :param CropStartLocationX: 裁剪的起始X坐标。取值範圍[0，3000]。
         :type CropStartLocationX: float
-        :param CropStartLocationY: 裁剪的起始Y坐标。取值范围[0，3000]。
+        :param CropStartLocationY: 裁剪的起始Y坐标。取值範圍[0，3000]。
         :type CropStartLocationY: float
         """
         self.CropWidth = None
@@ -545,17 +545,17 @@ class CommonMixCropParams(AbstractModel):
 
 
 class CommonMixInputParam(AbstractModel):
-    """通用混流输入参数。
+    """通用混流輸入參數。
 
     """
 
     def __init__(self):
         """
-        :param InputStreamName: 输入流名称。80字节以内，仅含字母、数字以及下划线的字符串。
+        :param InputStreamName: 輸入流名稱。80位元以内，僅含字母、數字以及下劃線的字串。
         :type InputStreamName: str
-        :param LayoutParams: 输入流布局参数。
+        :param LayoutParams: 輸入流布局參數。
         :type LayoutParams: :class:`tencentcloud.live.v20180801.models.CommonMixLayoutParams`
-        :param CropParams: 输入流裁剪参数。
+        :param CropParams: 輸入流裁剪參數。
         :type CropParams: :class:`tencentcloud.live.v20180801.models.CommonMixCropParams`
         """
         self.InputStreamName = None
@@ -574,61 +574,61 @@ class CommonMixInputParam(AbstractModel):
 
 
 class CommonMixLayoutParams(AbstractModel):
-    """通用混流布局参数。
+    """通用混流布局參數。
 
     """
 
     def __init__(self):
         """
-        :param ImageLayer: 输入图层。取值范围[1，16]。
-1)背景流（即大主播画面或画布）的 image_layer 填1。
-2)纯音频混流，该参数也需填。
+        :param ImageLayer: 輸入圖層。取值範圍[1，16]。
+1)背景流（即大主播畫面或畫布）的 image_layer 填1。
+2)純音訊混流，該參數也需填。
         :type ImageLayer: int
-        :param InputType: 输入类型。取值范围[0，5]。
-不填默认为0。
-0表示输入流为音视频。
-2表示输入流为图片。
-3表示输入流为画布。 
-4表示输入流为音频。
-5表示输入流为纯视频。
+        :param InputType: 輸入類型。取值範圍[0，5]。
+不填預設爲0。
+0表示輸入流爲影音。
+2表示輸入流爲圖片。
+3表示輸入流爲畫布。 
+4表示輸入流爲音訊。
+5表示輸入流爲純視訊。
         :type InputType: int
-        :param ImageWidth: 输入画面在输出时的宽度。取值范围：
+        :param ImageWidth: 輸入畫面在輸出時的寬度。取值範圍：
 像素：[0，3000]
 百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
+不填預設爲輸入流的寬度。
+使用百分比時，期望輸出爲（百分比 * 背景寬）。
         :type ImageWidth: float
-        :param ImageHeight: 输入画面在输出时的高度。取值范围：
+        :param ImageHeight: 輸入畫面在輸出時的高度。取值範圍：
 像素：[0，3000]
 百分比：[0.01，0.99]
-不填默认为输入流的高度。
-使用百分比时，期望输出为（百分比 * 背景高）。
+不填預設爲輸入流的高度。
+使用百分比時，期望輸出爲（百分比 * 背景高）。
         :type ImageHeight: float
-        :param LocationX: 输入在输出画面的X偏移。取值范围：
+        :param LocationX: 輸入在輸出畫面的X偏移。取值範圍：
 像素：[0，3000]
 百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的横向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）。
+不填預設爲0。
+相對于大主播背景畫面左上角的橫向偏移。 
+使用百分比時，期望輸出爲（百分比 * 背景寬）。
         :type LocationX: float
-        :param LocationY: 输入在输出画面的Y偏移。取值范围：
+        :param LocationY: 輸入在輸出畫面的Y偏移。取值範圍：
 像素：[0，3000]
 百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的纵向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）
+不填預設爲0。
+相對于大主播背景畫面左上角的縱向偏移。 
+使用百分比時，期望輸出爲（百分比 * 背景寬）
         :type LocationY: float
-        :param Color: 当InputType为3(画布)时，该值表示画布的颜色。
-常用的颜色有：
-红色：0xcc0033。
-黄色：0xcc9900。
-绿色：0xcccc33。
-蓝色：0x99CCFF。
+        :param Color: 當InputType爲3(畫布)時，該值表示畫布的顔色。
+常用的顔色有：
+紅色：0xcc0033。
+黃色：0xcc9900。
+綠色：0xcccc33。
+藍色：0x99CCFF。
 黑色：0x000000。
 白色：0xFFFFFF。
 灰色：0x999999。
         :type Color: str
-        :param WatermarkId: 当InputType为2(图片)时，该值是水印ID。
+        :param WatermarkId: 當InputType爲2(圖片)時，該值是浮水印ID。
         :type WatermarkId: int
         """
         self.ImageLayer = None
@@ -653,39 +653,39 @@ class CommonMixLayoutParams(AbstractModel):
 
 
 class CommonMixOutputParams(AbstractModel):
-    """通用混流输出参数。
+    """通用混流輸出參數。
 
     """
 
     def __init__(self):
         """
-        :param OutputStreamName: 输出流名称。
+        :param OutputStreamName: 輸出流名稱。
         :type OutputStreamName: str
-        :param OutputStreamType: 输出流类型，取值范围[0,1]。
-不填默认为0。
-当输出流为输入流 list 中的一条时，填写0。
-当期望生成的混流结果成为一条新流时，该值填为1。
-该值为1时，output_stream_id 不能出现在 input_stram_list 中，且直播后台中，不能存在相同 ID 的流。
+        :param OutputStreamType: 輸出流類型，取值範圍[0,1]。
+不填預設爲0。
+當輸出流爲輸入流 list 中的一條時，填寫0。
+當期望生成的混流結果成爲一條新流時，該值填爲1。
+該值爲1時，output_stream_id 不能出現在 input_stram_list 中，且直播後台中，不能存在相同 ID 的流。
         :type OutputStreamType: int
-        :param OutputStreamBitRate: 输出流比特率。取值范围[1，50000]。
-不填的情况下，系统会自动判断。
+        :param OutputStreamBitRate: 輸出流比特率。取值範圍[1，50000]。
+不填的情況下，系統會自動判斷。
         :type OutputStreamBitRate: int
-        :param OutputStreamGop: 输出流GOP大小。取值范围[1,10]。
-不填的情况下，系统会自动判断。
+        :param OutputStreamGop: 輸出流GOP大小。取值範圍[1,10]。
+不填的情況下，系統會自動判斷。
         :type OutputStreamGop: int
-        :param OutputStreamFrameRate: 输出流帧率大小。取值范围[1,60]。
-不填的情况下，系统会自动判断。
+        :param OutputStreamFrameRate: 輸出流幀率大小。取值範圍[1,60]。
+不填的情況下，系統會自動判斷。
         :type OutputStreamFrameRate: int
-        :param OutputAudioBitRate: 输出流音频比特率。取值范围[1,500]
-不填的情况下，系统会自动判断。
+        :param OutputAudioBitRate: 輸出流音訊比特率。取值範圍[1,500]
+不填的情況下，系統會自動判斷。
         :type OutputAudioBitRate: int
-        :param OutputAudioSampleRate: 输出流音频采样率。取值范围[96000, 88200, 64000, 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000]。
-不填的情况下，系统会自动判断。
+        :param OutputAudioSampleRate: 輸出流音訊采樣率。取值範圍[96000, 88200, 64000, 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000]。
+不填的情況下，系統會自動判斷。
         :type OutputAudioSampleRate: int
-        :param OutputAudioChannels: 输出流音频声道数。取值范围[1,2]。
-不填的情况下，系统会自动判断。
+        :param OutputAudioChannels: 輸出流音訊聲道數。取值範圍[1,2]。
+不填的情況下，系統會自動判斷。
         :type OutputAudioChannels: int
-        :param MixSei: 输出流中的sei信息。如果无特殊需要，不填。
+        :param MixSei: 輸出流中的sei訊息。如果無特殊需要，不填。
         :type MixSei: str
         """
         self.OutputStreamName = None
@@ -712,15 +712,15 @@ class CommonMixOutputParams(AbstractModel):
 
 
 class ConcurrentRecordStreamNum(AbstractModel):
-    """并发录制路数
+    """并發錄制路數
 
     """
 
     def __init__(self):
         """
-        :param Time: 时间点。
+        :param Time: 時間點。
         :type Time: str
-        :param Num: 路数。
+        :param Num: 路數。
         :type Num: int
         """
         self.Time = None
@@ -733,27 +733,27 @@ class ConcurrentRecordStreamNum(AbstractModel):
 
 
 class CreateCommonMixStreamRequest(AbstractModel):
-    """CreateCommonMixStream请求参数结构体
+    """CreateCommonMixStream請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MixStreamSessionId: 混流会话（申请混流开始到取消混流结束）标识 ID。
+        :param MixStreamSessionId: 混流會話（申請混流開始到取消混流結束）标識 ID。
         :type MixStreamSessionId: str
-        :param InputStreamList: 混流输入流列表。
+        :param InputStreamList: 混流輸入流清單。
         :type InputStreamList: list of CommonMixInputParam
-        :param OutputParams: 混流输出流参数。
+        :param OutputParams: 混流輸出流參數。
         :type OutputParams: :class:`tencentcloud.live.v20180801.models.CommonMixOutputParams`
-        :param MixStreamTemplateId: 输入模板 ID，若设置该参数，将按默认模板布局输出，无需填入自定义位置参数。
-不填默认为0。
-两输入源支持10，20，30，40，50。
-三输入源支持310，390，391。
-四输入源支持410。
-五输入源支持510，590。
-六输入源支持610。
+        :param MixStreamTemplateId: 輸入範本 ID，若設置該參數，将按預設範本布局輸出，無需填入自定義位置參數。
+不填預設爲0。
+兩輸入源支援10，20，30，40，50。
+三輸入源支援310，390，391。
+四輸入源支援410。
+五輸入源支援510，590。
+六輸入源支援610。
         :type MixStreamTemplateId: int
-        :param ControlParams: 混流的特殊控制参数。如无特殊需求，无需填写。
+        :param ControlParams: 混流的特殊控制參數。如無特殊需求，無需填寫。
         :type ControlParams: :class:`tencentcloud.live.v20180801.models.CommonMixControlParams`
         """
         self.MixStreamSessionId = None
@@ -781,13 +781,13 @@ class CreateCommonMixStreamRequest(AbstractModel):
 
 
 class CreateCommonMixStreamResponse(AbstractModel):
-    """CreateCommonMixStream返回参数结构体
+    """CreateCommonMixStream返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -798,7 +798,7 @@ class CreateCommonMixStreamResponse(AbstractModel):
 
 
 class CreateLiveCallbackRuleRequest(AbstractModel):
-    """CreateLiveCallbackRule请求参数结构体
+    """CreateLiveCallbackRule請求參數結構體
 
     """
 
@@ -806,9 +806,9 @@ class CreateLiveCallbackRuleRequest(AbstractModel):
         """
         :param DomainName: 推流域名。
         :type DomainName: str
-        :param AppName: 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+        :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻，預設爲live。
         :type AppName: str
-        :param TemplateId: 模板ID。
+        :param TemplateId: 範本ID。
         :type TemplateId: int
         """
         self.DomainName = None
@@ -823,13 +823,13 @@ class CreateLiveCallbackRuleRequest(AbstractModel):
 
 
 class CreateLiveCallbackRuleResponse(AbstractModel):
-    """CreateLiveCallbackRule返回参数结构体
+    """CreateLiveCallbackRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -840,37 +840,37 @@ class CreateLiveCallbackRuleResponse(AbstractModel):
 
 
 class CreateLiveCallbackTemplateRequest(AbstractModel):
-    """CreateLiveCallbackTemplate请求参数结构体
+    """CreateLiveCallbackTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateName: 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
+        :param TemplateName: 範本名稱。
+長度上限：255位元。
+僅支援中文、英文、數字、_、-。
         :type TemplateName: str
-        :param Description: 描述信息。
-长度上限：1024字节。
-仅支持中文、英文、数字、_、-。
+        :param Description: 描述訊息。
+長度上限：1024位元。
+僅支援中文、英文、數字、_、-。
         :type Description: str
-        :param StreamBeginNotifyUrl: 开播回调 URL，
-相关协议文档：[事件消息通知](/document/product/267/32744)。
+        :param StreamBeginNotifyUrl: 開播回調 URL，
+相關協議文件：[事件訊息通知](/document/product/267/32744)。
         :type StreamBeginNotifyUrl: str
-        :param StreamEndNotifyUrl: 断流回调 URL，
-相关协议文档：[事件消息通知](/document/product/267/32744)。
+        :param StreamEndNotifyUrl: 斷流回調 URL，
+相關協議文件：[事件訊息通知](/document/product/267/32744)。
         :type StreamEndNotifyUrl: str
-        :param RecordNotifyUrl: 录制回调 URL，
-相关协议文档：[事件消息通知](/document/product/267/32744)。
+        :param RecordNotifyUrl: 錄制回調 URL，
+相關協議文件：[事件訊息通知](/document/product/267/32744)。
         :type RecordNotifyUrl: str
-        :param SnapshotNotifyUrl: 截图回调 URL，
-相关协议文档：[事件消息通知](/document/product/267/32744)。
+        :param SnapshotNotifyUrl: 截圖回調 URL，
+相關協議文件：[事件訊息通知](/document/product/267/32744)。
         :type SnapshotNotifyUrl: str
-        :param PornCensorshipNotifyUrl: 鉴黄回调 URL，
-相关协议文档：[事件消息通知](/document/product/267/32741)。
+        :param PornCensorshipNotifyUrl: 鑒黃回調 URL，
+相關協議文件：[事件訊息通知](/document/product/267/32741)。
         :type PornCensorshipNotifyUrl: str
-        :param CallbackKey: 回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
-[事件消息通知](/document/product/267/32744)。
+        :param CallbackKey: 回調 Key，回調 URL 公用，回調簽名詳見事件訊息通知文件。
+[事件訊息通知](/document/product/267/32744)。
         :type CallbackKey: str
         """
         self.TemplateName = None
@@ -895,15 +895,15 @@ class CreateLiveCallbackTemplateRequest(AbstractModel):
 
 
 class CreateLiveCallbackTemplateResponse(AbstractModel):
-    """CreateLiveCallbackTemplate返回参数结构体
+    """CreateLiveCallbackTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板ID。
+        :param TemplateId: 範本ID。
         :type TemplateId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TemplateId = None
@@ -916,25 +916,25 @@ class CreateLiveCallbackTemplateResponse(AbstractModel):
 
 
 class CreateLiveCertRequest(AbstractModel):
-    """CreateLiveCert请求参数结构体
+    """CreateLiveCert請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertType: 证书类型。0-用户添加证书；1-腾讯云托管证书。
-注意：当证书类型为0时，HttpsCrt和HttpsKey必选；
-当证书类型为1时，优先使用CloudCertId对应证书，若CloudCertId为空则使用HttpsCrt和HttpsKey。
+        :param CertType: 證書類型。0-用戶添加證書；1-Top Cloud 托管證書。
+注意：當證書類型爲0時，HttpsCrt和HttpsKey必選；
+當證書類型爲1時，優先使用CloudCertId對應證書，若CloudCertId爲空則使用HttpsCrt和HttpsKey。
         :type CertType: int
-        :param CertName: 证书名称。
+        :param CertName: 證書名稱。
         :type CertName: str
-        :param HttpsCrt: 证书内容，即公钥。
+        :param HttpsCrt: 證書内容，即公鑰。
         :type HttpsCrt: str
-        :param HttpsKey: 私钥。
+        :param HttpsKey: 私鑰。
         :type HttpsKey: str
         :param Description: 描述。
         :type Description: str
-        :param CloudCertId: 腾讯云证书托管ID。
+        :param CloudCertId: Top Cloud 證書托管ID。
         :type CloudCertId: str
         """
         self.CertType = None
@@ -955,15 +955,15 @@ class CreateLiveCertRequest(AbstractModel):
 
 
 class CreateLiveCertResponse(AbstractModel):
-    """CreateLiveCert返回参数结构体
+    """CreateLiveCert返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertId: 证书ID
+        :param CertId: 證書ID
         :type CertId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CertId = None
@@ -976,48 +976,48 @@ class CreateLiveCertResponse(AbstractModel):
 
 
 class CreateLiveRecordRequest(AbstractModel):
-    """CreateLiveRecord请求参数结构体
+    """CreateLiveRecord請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param AppName: 推流路径，与推流和播放地址中的 AppName保持一致，默认为 live。
+        :param AppName: 推流路徑，與推流和播放網址中的 AppName保持一緻，預設爲 live。
         :type AppName: str
-        :param DomainName: 推流域名。多域名推流必须设置。
+        :param DomainName: 推流域名。多域名推流必須設置。
         :type DomainName: str
-        :param StartTime: 录制开始时间。中国标准时间，需要 URLEncode(rfc3986)。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
-定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。
+        :param StartTime: 錄制開始時間。中國标準時間，需要 URLEncode(rfc3986)。如 2017-01-01 10:10:01，編碼爲：2017-01-01+10%3a10%3a01。
+定時錄制模式，必須設置該欄位；實時視訊錄制模式，忽略該欄位。
         :type StartTime: str
-        :param EndTime: 录制结束时间。中国标准时间，需要 URLEncode(rfc3986)。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
-定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。
+        :param EndTime: 錄制結束時間。中國标準時間，需要 URLEncode(rfc3986)。如 2017-01-01 10:30:01，編碼爲：2017-01-01+10%3a30%3a01。
+定時錄制模式，必須設置該欄位；實時錄制模式，爲可選欄位。如果通過Highlight參數，設置錄制爲實時視訊錄制模式，其設置的結束時間不應超過當前時間+30分鍾，如果設置的結束時間超過當前時間+30分鍾或者小於當前時間或者不設置該參數，則實際結束時間爲當前時間+30分鍾。
         :type EndTime: str
-        :param RecordType: 录制类型。
-“video” : 音视频录制【默认】。
-“audio” : 纯音频录制。
-在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
+        :param RecordType: 錄制類型。
+“video” : 影音錄制【預設】。
+“audio” : 純音訊錄制。
+在定時錄制模式或實時視訊錄制模式下，該參數均有效，不區分大小寫。
         :type RecordType: str
-        :param FileFormat: 录制文件格式。其值为：
-“flv”【默认】,“hls”,”mp4”,“aac”,”mp3”。
-在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
+        :param FileFormat: 錄制文件格式。其值爲：
+“flv”【預設】,“hls”,”mp4”,“aac”,”mp3”。
+在定時錄制模式或實時視訊錄制模式下，該參數均有效，不區分大小寫。
         :type FileFormat: str
-        :param Highlight: 开启实时视频录制模式标志。
-0：不开启实时视频录制模式，即定时录制模式【默认】。见[示例一](#.E7.A4.BA.E4.BE.8B1-.E5.88.9B.E5.BB.BA.E5.AE.9A.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
-1：开启实时视频录制模式。见[示例二](#.E7.A4.BA.E4.BE.8B2-.E5.88.9B.E5.BB.BA.E5.AE.9E.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
+        :param Highlight: 開啓實時視訊錄制模式标志。
+0：不開啓實時視訊錄制模式，即定時錄制模式【預設】。見[範例一](#.E7.A4.BA.E4.BE.8B1-.E5.88.9B.E5.BB.BA.E5.AE.9A.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
+1：開啓實時視訊錄制模式。見[範例二](#.E7.A4.BA.E4.BE.8B2-.E5.88.9B.E5.BB.BA.E5.AE.9E.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
         :type Highlight: int
-        :param MixStream: 开启 A+B=C混流C流录制标志。
-0：不开启 A+B=C混流C流录制【默认】。
-1：开启 A+B=C混流C流录制。
-在定时录制模式或实时视频录制模式下，该参数均有效。
+        :param MixStream: 開啓 A+B=C混流C流錄制标志。
+0：不開啓 A+B=C混流C流錄制【預設】。
+1：開啓 A+B=C混流C流錄制。
+在定時錄制模式或實時視訊錄制模式下，該參數均有效。
         :type MixStream: int
-        :param StreamParam: 录制流参数。当前支持以下参数：
-record_interval - 录制分片时长，单位 秒，1800 - 7200。
-storage_time - 录制文件存储时长，单位 秒。
+        :param StreamParam: 錄制流參數。當前支援以下參數：
+record_interval - 錄制分片時長，單位 秒，1800 - 7200。
+storage_time - 錄制文件儲存時長，單位 秒。
 eg. record_interval=3600&storage_time=2592000。
-注：参数需要url encode。
-在定时录制模式或实时视频录制模式下，该参数均有效。
+注：參數需要url encode。
+在定時錄制模式或實時視訊錄制模式下，該參數均有效。
         :type StreamParam: str
         """
         self.StreamName = None
@@ -1046,15 +1046,15 @@ eg. record_interval=3600&storage_time=2592000。
 
 
 class CreateLiveRecordResponse(AbstractModel):
-    """CreateLiveRecord返回参数结构体
+    """CreateLiveRecord返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务 ID，全局唯一标识录制任务。
+        :param TaskId: 任務 ID，全局唯一标識錄制任務。
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -1067,7 +1067,7 @@ class CreateLiveRecordResponse(AbstractModel):
 
 
 class CreateLiveRecordRuleRequest(AbstractModel):
-    """CreateLiveRecordRule请求参数结构体
+    """CreateLiveRecordRule請求參數結構體
 
     """
 
@@ -1075,12 +1075,12 @@ class CreateLiveRecordRuleRequest(AbstractModel):
         """
         :param DomainName: 推流域名。
         :type DomainName: str
-        :param TemplateId: 模板 ID。
+        :param TemplateId: 範本 ID。
         :type TemplateId: int
-        :param AppName: 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+        :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻，預設爲 live。
         :type AppName: str
-        :param StreamName: 流名称。
-注：如果本参数设置为非空字符串，规则将只对此推流起作用。
+        :param StreamName: 流名稱。
+注：如果本參數設置爲非空字串，規則将只對此推流起作用。
         :type StreamName: str
         """
         self.DomainName = None
@@ -1097,13 +1097,13 @@ class CreateLiveRecordRuleRequest(AbstractModel):
 
 
 class CreateLiveRecordRuleResponse(AbstractModel):
-    """CreateLiveRecordRule返回参数结构体
+    """CreateLiveRecordRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1114,31 +1114,31 @@ class CreateLiveRecordRuleResponse(AbstractModel):
 
 
 class CreateLiveRecordTemplateRequest(AbstractModel):
-    """CreateLiveRecordTemplate请求参数结构体
+    """CreateLiveRecordTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateName: 模板名。仅支持中文、英文、数字、_、-。
+        :param TemplateName: 範本名。僅支援中文、英文、數字、_、-。
         :type TemplateName: str
-        :param Description: 描述信息。
+        :param Description: 描述訊息。
         :type Description: str
-        :param FlvParam: Flv录制参数，开启Flv录制时设置。
+        :param FlvParam: Flv錄制參數，開啓Flv錄制時設置。
         :type FlvParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
-        :param HlsParam: Hls录制参数，开启hls录制时设置。
+        :param HlsParam: Hls錄制參數，開啓hls錄制時設置。
         :type HlsParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
-        :param Mp4Param: Mp4录制参数，开启Mp4录制时设置。
+        :param Mp4Param: Mp4錄制參數，開啓Mp4錄制時設置。
         :type Mp4Param: :class:`tencentcloud.live.v20180801.models.RecordParam`
-        :param AacParam: Aac录制参数，开启Aac录制时设置。
+        :param AacParam: Aac錄制參數，開啓Aac錄制時設置。
         :type AacParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
-        :param IsDelayLive: 直播类型，默认 0。
+        :param IsDelayLive: 直播類型，預設 0。
 0：普通直播，
 1：慢直播。
         :type IsDelayLive: int
-        :param HlsSpecialParam: HLS专属录制参数。
+        :param HlsSpecialParam: HLS專屬錄制參數。
         :type HlsSpecialParam: :class:`tencentcloud.live.v20180801.models.HlsSpecialParam`
-        :param Mp3Param: Mp3录制参数，开启Mp3录制时设置。
+        :param Mp3Param: Mp3錄制參數，開啓Mp3錄制時設置。
         :type Mp3Param: :class:`tencentcloud.live.v20180801.models.RecordParam`
         """
         self.TemplateName = None
@@ -1177,15 +1177,15 @@ class CreateLiveRecordTemplateRequest(AbstractModel):
 
 
 class CreateLiveRecordTemplateResponse(AbstractModel):
-    """CreateLiveRecordTemplate返回参数结构体
+    """CreateLiveRecordTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板Id。
+        :param TemplateId: 範本Id。
         :type TemplateId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TemplateId = None
@@ -1198,7 +1198,7 @@ class CreateLiveRecordTemplateResponse(AbstractModel):
 
 
 class CreateLiveSnapshotRuleRequest(AbstractModel):
-    """CreateLiveSnapshotRule请求参数结构体
+    """CreateLiveSnapshotRule請求參數結構體
 
     """
 
@@ -1206,12 +1206,12 @@ class CreateLiveSnapshotRuleRequest(AbstractModel):
         """
         :param DomainName: 推流域名。
         :type DomainName: str
-        :param TemplateId: 模板 ID。
+        :param TemplateId: 範本 ID。
         :type TemplateId: int
-        :param AppName: 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
+        :param AppName: 推流路徑，與推流和播放網址中的 AppName 保持一緻，預設爲 live。
         :type AppName: str
-        :param StreamName: 流名称。
-注：如果本参数设置为非空字符串，规则将只对此推流起作用。
+        :param StreamName: 流名稱。
+注：如果本參數設置爲非空字串，規則将只對此推流起作用。
         :type StreamName: str
         """
         self.DomainName = None
@@ -1228,13 +1228,13 @@ class CreateLiveSnapshotRuleRequest(AbstractModel):
 
 
 class CreateLiveSnapshotRuleResponse(AbstractModel):
-    """CreateLiveSnapshotRule返回参数结构体
+    """CreateLiveSnapshotRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1245,38 +1245,38 @@ class CreateLiveSnapshotRuleResponse(AbstractModel):
 
 
 class CreateLiveSnapshotTemplateRequest(AbstractModel):
-    """CreateLiveSnapshotTemplate请求参数结构体
+    """CreateLiveSnapshotTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateName: 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
+        :param TemplateName: 範本名稱。
+長度上限：255位元。
+僅支援中文、英文、數字、_、-。
         :type TemplateName: str
-        :param CosAppId: Cos 应用 ID。
+        :param CosAppId: Cos 應用 ID。
         :type CosAppId: int
-        :param CosBucket: Cos Bucket名称。
+        :param CosBucket: Cos Bucket名稱。
         :type CosBucket: str
-        :param CosRegion: Cos地区。
+        :param CosRegion: Cos地區。
         :type CosRegion: str
-        :param Description: 描述信息。
-长度上限：1024字节。
-仅支持中文、英文、数字、_、-。
+        :param Description: 描述訊息。
+長度上限：1024位元。
+僅支援中文、英文、數字、_、-。
         :type Description: str
-        :param SnapshotInterval: 截图间隔，单位s，默认10s。
-范围： 5s ~ 600s。
+        :param SnapshotInterval: 截圖間隔，單位s，預設10s。
+範圍： 5s ~ 600s。
         :type SnapshotInterval: int
-        :param Width: 截图宽度。默认：0（原始宽）。
+        :param Width: 截圖寬度。預設：0（原始寬）。
         :type Width: int
-        :param Height: 截图高度。默认：0（原始高）。
+        :param Height: 截圖高度。預設：0（原始高）。
         :type Height: int
-        :param PornFlag: 是否开启鉴黄，0：不开启，1：开启。默认：0。
+        :param PornFlag: 是否開啓鑒黃，0：不開啓，1：開啓。預設：0。
         :type PornFlag: int
-        :param CosPrefix: Cos Bucket文件夹前缀。
+        :param CosPrefix: Cos Bucket文件夾前綴。
         :type CosPrefix: str
-        :param CosFileName: Cos 文件名称。
+        :param CosFileName: Cos 文件名稱。
         :type CosFileName: str
         """
         self.TemplateName = None
@@ -1307,15 +1307,15 @@ class CreateLiveSnapshotTemplateRequest(AbstractModel):
 
 
 class CreateLiveSnapshotTemplateResponse(AbstractModel):
-    """CreateLiveSnapshotTemplate返回参数结构体
+    """CreateLiveSnapshotTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板Id。
+        :param TemplateId: 範本Id。
         :type TemplateId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TemplateId = None
@@ -1328,7 +1328,7 @@ class CreateLiveSnapshotTemplateResponse(AbstractModel):
 
 
 class CreateLiveTranscodeRuleRequest(AbstractModel):
-    """CreateLiveTranscodeRule请求参数结构体
+    """CreateLiveTranscodeRule請求參數結構體
 
     """
 
@@ -1336,11 +1336,11 @@ class CreateLiveTranscodeRuleRequest(AbstractModel):
         """
         :param DomainName: 播放域名。
         :type DomainName: str
-        :param AppName: 推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填空。
+        :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻。如果只綁定域名，則此處填空。
         :type AppName: str
-        :param StreamName: 流名称。如果只绑定域名或路径，则此处填空。
+        :param StreamName: 流名稱。如果只綁定域名或路徑，則此處填空。
         :type StreamName: str
-        :param TemplateId: 指定已有的模板Id。
+        :param TemplateId: 指定已有的範本Id。
         :type TemplateId: int
         """
         self.DomainName = None
@@ -1357,13 +1357,13 @@ class CreateLiveTranscodeRuleRequest(AbstractModel):
 
 
 class CreateLiveTranscodeRuleResponse(AbstractModel):
-    """CreateLiveTranscodeRule返回参数结构体
+    """CreateLiveTranscodeRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1374,52 +1374,52 @@ class CreateLiveTranscodeRuleResponse(AbstractModel):
 
 
 class CreateLiveTranscodeTemplateRequest(AbstractModel):
-    """CreateLiveTranscodeTemplate请求参数结构体
+    """CreateLiveTranscodeTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateName: 模板名称，例：900 900p 仅支持字母和数字的组合。
+        :param TemplateName: 範本名稱，例：900 900p 僅支援字母和數字的組合。
         :type TemplateName: str
-        :param VideoBitrate: 视频码率。范围：100-8000。
-注意：码率必须是100的倍数。
+        :param VideoBitrate: 視訊碼率。範圍：100-8000。
+注意：碼率必須是100的倍數。
         :type VideoBitrate: int
-        :param Vcodec: 视频编码：h264/h265，默认h264。
+        :param Vcodec: 視訊編碼：h264/h265，預設h264。
         :type Vcodec: str
-        :param Acodec: 音频编码：aac，默认原始音频格式。
-注意：当前该参数未生效，待后续支持！
+        :param Acodec: 音訊編碼：aac，預設原始音訊格式。
+注意：當前該參數未生效，待後續支援！
         :type Acodec: str
-        :param AudioBitrate: 音频码率：默认0。0-500。
+        :param AudioBitrate: 音訊碼率：預設0。0-500。
         :type AudioBitrate: int
-        :param Description: 模板描述。
+        :param Description: 範本描述。
         :type Description: str
-        :param Width: 宽，默认0。
+        :param Width: 寬，預設0。
         :type Width: int
-        :param NeedVideo: 是否保留视频，0：否，1：是。默认1。
+        :param NeedVideo: 是否保留視訊，0：否，1：是。預設1。
         :type NeedVideo: int
-        :param NeedAudio: 是否保留音频，0：否，1：是。默认1。
+        :param NeedAudio: 是否保留音訊，0：否，1：是。預設1。
         :type NeedAudio: int
-        :param Height: 高，默认0。
+        :param Height: 高，預設0。
         :type Height: int
-        :param Fps: 帧率，默认0。
+        :param Fps: 幀率，預設0。
         :type Fps: int
-        :param Gop: 关键帧间隔，单位：秒。默认原始的间隔
+        :param Gop: 關鍵幀間隔，單位：秒。預設原始的間隔
         :type Gop: int
-        :param Rotate: 是否旋转，0：否，1：是。默认0。
+        :param Rotate: 是否旋轉，0：否，1：是。預設0。
         :type Rotate: int
-        :param Profile: 编码质量：
-baseline/main/high。默认baseline
+        :param Profile: 編碼質量：
+baseline/main/high。預設baseline
         :type Profile: str
-        :param BitrateToOrig: 是否不超过原始码率，0：否，1：是。默认0。
+        :param BitrateToOrig: 是否不超過原始碼率，0：否，1：是。預設0。
         :type BitrateToOrig: int
-        :param HeightToOrig: 是否不超过原始高，0：否，1：是。默认0。
+        :param HeightToOrig: 是否不超過原始高，0：否，1：是。預設0。
         :type HeightToOrig: int
-        :param FpsToOrig: 是否不超过原始帧率，0：否，1：是。默认0。
+        :param FpsToOrig: 是否不超過原始幀率，0：否，1：是。預設0。
         :type FpsToOrig: int
-        :param AiTransCode: 是否是极速高清模板，0：否，1：是。默认0。
+        :param AiTransCode: 是否是極速高清範本，0：否，1：是。預設0。
         :type AiTransCode: int
-        :param AdaptBitratePercent: 极速高清相比VideoBitrate少多少码率，0.1到0.5
+        :param AdaptBitratePercent: 極速高清相比VideoBitrate少多少碼率，0.1到0.5
         :type AdaptBitratePercent: float
         """
         self.TemplateName = None
@@ -1466,15 +1466,15 @@ baseline/main/high。默认baseline
 
 
 class CreateLiveTranscodeTemplateResponse(AbstractModel):
-    """CreateLiveTranscodeTemplate返回参数结构体
+    """CreateLiveTranscodeTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板Id。
+        :param TemplateId: 範本Id。
         :type TemplateId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TemplateId = None
@@ -1487,7 +1487,7 @@ class CreateLiveTranscodeTemplateResponse(AbstractModel):
 
 
 class CreateLiveWatermarkRuleRequest(AbstractModel):
-    """CreateLiveWatermarkRule请求参数结构体
+    """CreateLiveWatermarkRule請求參數結構體
 
     """
 
@@ -1495,11 +1495,11 @@ class CreateLiveWatermarkRuleRequest(AbstractModel):
         """
         :param DomainName: 推流域名。
         :type DomainName: str
-        :param AppName: 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+        :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻，預設爲live。
         :type AppName: str
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param TemplateId: 水印Id，即调用[AddLiveWatermark](/document/product/267/30154)接口返回的WatermarkId。
+        :param TemplateId: 浮水印Id，即調用[AddLiveWatermark](/document/product/267/30154)介面返回的WatermarkId。
         :type TemplateId: int
         """
         self.DomainName = None
@@ -1516,13 +1516,13 @@ class CreateLiveWatermarkRuleRequest(AbstractModel):
 
 
 class CreateLiveWatermarkRuleResponse(AbstractModel):
-    """CreateLiveWatermarkRule返回参数结构体
+    """CreateLiveWatermarkRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1533,46 +1533,46 @@ class CreateLiveWatermarkRuleResponse(AbstractModel):
 
 
 class CreatePullStreamConfigRequest(AbstractModel):
-    """CreatePullStreamConfig请求参数结构体
+    """CreatePullStreamConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FromUrl: 源 Url ，用于拉流的地址。目前可支持直播流及点播文件。
+        :param FromUrl: 源 Url ，用于拉流的網址。目前可支援直播流及點播文件。
 注意：
-1. 多个点播url之间使用空格拼接。
-2. 目前上限支持10个url。
-3. 支持拉流文件格式：flv，rtmp，hls，mp4。
+1. 多個點播url之間使用空格拼接。
+2. 目前上限支援10個url。
+3. 支援拉流文件格式：flv，rtmp，hls，mp4。
         :type FromUrl: str
-        :param ToUrl: 目的 Url ，用于推流的地址，目前限制该目标地址为腾讯域名。
-仅支持：rtmp 协议。
+        :param ToUrl: 目的 Url ，用于推流的網址，目前限制該目标網址爲騰訊域名。
+僅支援：rtmp 協議。
         :type ToUrl: str
-        :param AreaId: 选择完成转拉推的服务所在区域:
+        :param AreaId: 選擇完成轉拉推的服務所在區域:
 1-深圳，
 2-上海，
 3-天津，
-4-中国香港。
+4-中國香港。
         :type AreaId: int
-        :param IspId: 选择完成转拉推服务使用的运营商网络：
-1-电信，
-2-移动，
-3-联通，
+        :param IspId: 選擇完成轉拉推服務使用的運營商網絡：
+1-電信，
+2-移動，
+3-聯通，
 4-其他。
-注：AreaId 为4的时候，IspId 只能为其他。
+注：AreaId 爲4的時候，IspId 只能爲其他。
         :type IspId: int
-        :param StartTime: 开始时间。
-使用 UTC 格式时间，
+        :param StartTime: 開始時間。
+使用 UTC 格式時間，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。
         :type StartTime: str
-        :param EndTime: 结束时间，注意：
-1. 结束时间必须大于开始时间；
-2. 结束时间和开始时间必须大于当前时间；
-3. 结束时间 和 开始时间 间隔必须小于七天。
-使用 UTC 格式时间，
+        :param EndTime: 結束時間，注意：
+1. 結束時間必須大于開始時間；
+2. 結束時間和開始時間必須大于當前時間；
+3. 結束時間 和 開始時間 間隔必須小於七天。
+使用 UTC 格式時間，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。
         :type EndTime: str
         """
         self.FromUrl = None
@@ -1593,15 +1593,15 @@ class CreatePullStreamConfigRequest(AbstractModel):
 
 
 class CreatePullStreamConfigResponse(AbstractModel):
-    """CreatePullStreamConfig返回参数结构体
+    """CreatePullStreamConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ConfigId: 配置成功后的 ID。
+        :param ConfigId: 配置成功後的 ID。
         :type ConfigId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ConfigId = None
@@ -1614,21 +1614,21 @@ class CreatePullStreamConfigResponse(AbstractModel):
 
 
 class DayStreamPlayInfo(AbstractModel):
-    """流播放信息
+    """流播放訊息
 
     """
 
     def __init__(self):
         """
-        :param Time: 数据时间点，格式：yyyy-mm-dd HH:MM:SS。
+        :param Time: 數據時間點，格式：yyyy-mm-dd HH:MM:SS。
         :type Time: str
-        :param Bandwidth: 带宽（单位Mbps）。
+        :param Bandwidth: 頻寬（單位Mbps）。
         :type Bandwidth: float
-        :param Flux: 流量 （单位MB）。
+        :param Flux: 流量 （單位MB）。
         :type Flux: float
-        :param Request: 请求数。
+        :param Request: 請求數。
         :type Request: int
-        :param Online: 在线人数。
+        :param Online: 在線人數。
         :type Online: int
         """
         self.Time = None
@@ -1647,7 +1647,7 @@ class DayStreamPlayInfo(AbstractModel):
 
 
 class DelayInfo(AbstractModel):
-    """延播信息。
+    """延播訊息。
 
     """
 
@@ -1655,23 +1655,23 @@ class DelayInfo(AbstractModel):
         """
         :param DomainName: 推流域名。
         :type DomainName: str
-        :param AppName: 推流路径，与推流和播放地址中的 
- AppName 保持一致，默认为 live。
+        :param AppName: 推流路徑，與推流和播放網址中的 
+ AppName 保持一緻，預設爲 live。
         :type AppName: str
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param DelayInterval: 延播时间，单位：秒。
+        :param DelayInterval: 延播時間，單位：秒。
         :type DelayInterval: int
-        :param CreateTime: 创建时间，UTC 时间。
-注意：UTC时间和北京时间相差8小时。
-例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
+        :param CreateTime: 創建時間，UTC 時間。
+注意：UTC時間和北京時間相差8小時。
+例如：2019-06-18T12:00:00Z（爲北京時間 2019 年 6 月 18 日 20 點 0 分 0 秒）。
         :type CreateTime: str
-        :param ExpireTime: 过期时间，UTC 时间。
-注意：UTC时间和北京时间相差8小时。
-例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
+        :param ExpireTime: 過期時間，UTC 時間。
+注意：UTC時間和北京時間相差8小時。
+例如：2019-06-18T12:00:00Z（爲北京時間 2019 年 6 月 18 日 20 點 0 分 0 秒）。
         :type ExpireTime: str
-        :param Status: 当前状态:
--1：已过期。
+        :param Status: 當前狀态:
+-1：已過期。
 1： 生效中。
         :type Status: int
         """
@@ -1695,7 +1695,7 @@ class DelayInfo(AbstractModel):
 
 
 class DeleteLiveCallbackRuleRequest(AbstractModel):
-    """DeleteLiveCallbackRule请求参数结构体
+    """DeleteLiveCallbackRule請求參數結構體
 
     """
 
@@ -1703,7 +1703,7 @@ class DeleteLiveCallbackRuleRequest(AbstractModel):
         """
         :param DomainName: 推流域名。
         :type DomainName: str
-        :param AppName: 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
+        :param AppName: 推流路徑，與推流和播放網址中的 AppName 保持一緻，預設爲 live。
         :type AppName: str
         """
         self.DomainName = None
@@ -1716,13 +1716,13 @@ class DeleteLiveCallbackRuleRequest(AbstractModel):
 
 
 class DeleteLiveCallbackRuleResponse(AbstractModel):
-    """DeleteLiveCallbackRule返回参数结构体
+    """DeleteLiveCallbackRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1733,15 +1733,15 @@ class DeleteLiveCallbackRuleResponse(AbstractModel):
 
 
 class DeleteLiveCallbackTemplateRequest(AbstractModel):
-    """DeleteLiveCallbackTemplate请求参数结构体
+    """DeleteLiveCallbackTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板 ID。
-1. 在创建回调模板接口 [CreateLiveCallbackTemplate](/document/product/267/32637) 调用的返回值中获取模板 ID。
-2. 可以从接口 [DescribeLiveCallbackTemplates](/document/product/267/32632) 查询已经创建的过的模板列表。
+        :param TemplateId: 範本 ID。
+1. 在創建回調範本介面 [CreateLiveCallbackTemplate](/document/product/267/32637) 調用的返回值中獲取範本 ID。
+2. 可以從介面 [DescribeLiveCallbackTemplates](/document/product/267/32632) 查詢已經創建的過的範本清單。
         :type TemplateId: int
         """
         self.TemplateId = None
@@ -1752,13 +1752,13 @@ class DeleteLiveCallbackTemplateRequest(AbstractModel):
 
 
 class DeleteLiveCallbackTemplateResponse(AbstractModel):
-    """DeleteLiveCallbackTemplate返回参数结构体
+    """DeleteLiveCallbackTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1769,13 +1769,13 @@ class DeleteLiveCallbackTemplateResponse(AbstractModel):
 
 
 class DeleteLiveCertRequest(AbstractModel):
-    """DeleteLiveCert请求参数结构体
+    """DeleteLiveCert請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertId: 证书Id。
+        :param CertId: 證書Id。
         :type CertId: int
         """
         self.CertId = None
@@ -1786,13 +1786,13 @@ class DeleteLiveCertRequest(AbstractModel):
 
 
 class DeleteLiveCertResponse(AbstractModel):
-    """DeleteLiveCert返回参数结构体
+    """DeleteLiveCert返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1803,7 +1803,7 @@ class DeleteLiveCertResponse(AbstractModel):
 
 
 class DeleteLiveDomainRequest(AbstractModel):
-    """DeleteLiveDomain请求参数结构体
+    """DeleteLiveDomain請求參數結構體
 
     """
 
@@ -1811,7 +1811,7 @@ class DeleteLiveDomainRequest(AbstractModel):
         """
         :param DomainName: 要删除的域名
         :type DomainName: str
-        :param DomainType: 类型。0-推流，1-播放
+        :param DomainType: 類型。0-推流，1-播放
         :type DomainType: int
         """
         self.DomainName = None
@@ -1824,13 +1824,13 @@ class DeleteLiveDomainRequest(AbstractModel):
 
 
 class DeleteLiveDomainResponse(AbstractModel):
-    """DeleteLiveDomain返回参数结构体
+    """DeleteLiveDomain返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1841,16 +1841,16 @@ class DeleteLiveDomainResponse(AbstractModel):
 
 
 class DeleteLiveRecordRequest(AbstractModel):
-    """DeleteLiveRecord请求参数结构体
+    """DeleteLiveRecord請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param TaskId: 任务ID，全局唯一标识录制任务。
-从接口 [CreateLiveRecord](/document/product/267/30148) 的返回值中获取TaskId。
+        :param TaskId: 任務ID，全局唯一标識錄制任務。
+從介面 [CreateLiveRecord](/document/product/267/30148) 的返回值中獲取TaskId。
         :type TaskId: int
         """
         self.StreamName = None
@@ -1863,13 +1863,13 @@ class DeleteLiveRecordRequest(AbstractModel):
 
 
 class DeleteLiveRecordResponse(AbstractModel):
-    """DeleteLiveRecord返回参数结构体
+    """DeleteLiveRecord返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1880,20 +1880,20 @@ class DeleteLiveRecordResponse(AbstractModel):
 
 
 class DeleteLiveRecordRuleRequest(AbstractModel):
-    """DeleteLiveRecordRule请求参数结构体
+    """DeleteLiveRecordRule請求參數結構體
 
     """
 
     def __init__(self):
         """
         :param DomainName: 推流域名。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
+域名+AppName+StreamName唯一标識單個轉碼規則，如需删除需要強比對，例如AppName爲空也需要傳空字串進行強比對。
         :type DomainName: str
-        :param AppName: 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
+        :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻，預設爲 live。
+域名+AppName+StreamName唯一标識單個轉碼規則，如需删除需要強比對，例如AppName爲空也需要傳空字串進行強比對。
         :type AppName: str
-        :param StreamName: 流名称。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
+        :param StreamName: 流名稱。
+域名+AppName+StreamName唯一标識單個轉碼規則，如需删除需要強比對，例如AppName爲空也需要傳空字串進行強比對。
         :type StreamName: str
         """
         self.DomainName = None
@@ -1908,13 +1908,13 @@ class DeleteLiveRecordRuleRequest(AbstractModel):
 
 
 class DeleteLiveRecordRuleResponse(AbstractModel):
-    """DeleteLiveRecordRule返回参数结构体
+    """DeleteLiveRecordRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1925,13 +1925,13 @@ class DeleteLiveRecordRuleResponse(AbstractModel):
 
 
 class DeleteLiveRecordTemplateRequest(AbstractModel):
-    """DeleteLiveRecordTemplate请求参数结构体
+    """DeleteLiveRecordTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板 ID。
+        :param TemplateId: 範本 ID。
         :type TemplateId: int
         """
         self.TemplateId = None
@@ -1942,13 +1942,13 @@ class DeleteLiveRecordTemplateRequest(AbstractModel):
 
 
 class DeleteLiveRecordTemplateResponse(AbstractModel):
-    """DeleteLiveRecordTemplate返回参数结构体
+    """DeleteLiveRecordTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1959,7 +1959,7 @@ class DeleteLiveRecordTemplateResponse(AbstractModel):
 
 
 class DeleteLiveSnapshotRuleRequest(AbstractModel):
-    """DeleteLiveSnapshotRule请求参数结构体
+    """DeleteLiveSnapshotRule請求參數結構體
 
     """
 
@@ -1967,9 +1967,9 @@ class DeleteLiveSnapshotRuleRequest(AbstractModel):
         """
         :param DomainName: 推流域名。
         :type DomainName: str
-        :param AppName: 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
+        :param AppName: 推流路徑，與推流和播放網址中的 AppName 保持一緻，預設爲 live。
         :type AppName: str
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
         """
         self.DomainName = None
@@ -1984,13 +1984,13 @@ class DeleteLiveSnapshotRuleRequest(AbstractModel):
 
 
 class DeleteLiveSnapshotRuleResponse(AbstractModel):
-    """DeleteLiveSnapshotRule返回参数结构体
+    """DeleteLiveSnapshotRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2001,15 +2001,15 @@ class DeleteLiveSnapshotRuleResponse(AbstractModel):
 
 
 class DeleteLiveSnapshotTemplateRequest(AbstractModel):
-    """DeleteLiveSnapshotTemplate请求参数结构体
+    """DeleteLiveSnapshotTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板 ID。
-1. 在创建截图模板接口 [CreateLiveSnapshotTemplate](/document/product/267/32624) 调用的返回值中获取。
-2. 可以从接口 [DescribeLiveSnapshotTemplates](/document/product/267/32619) 中查询已创建的截图模板列表。
+        :param TemplateId: 範本 ID。
+1. 在創建截圖範本介面 [CreateLiveSnapshotTemplate](/document/product/267/32624) 調用的返回值中獲取。
+2. 可以從介面 [DescribeLiveSnapshotTemplates](/document/product/267/32619) 中查詢已創建的截圖範本清單。
         :type TemplateId: int
         """
         self.TemplateId = None
@@ -2020,13 +2020,13 @@ class DeleteLiveSnapshotTemplateRequest(AbstractModel):
 
 
 class DeleteLiveSnapshotTemplateResponse(AbstractModel):
-    """DeleteLiveSnapshotTemplate返回参数结构体
+    """DeleteLiveSnapshotTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2037,7 +2037,7 @@ class DeleteLiveSnapshotTemplateResponse(AbstractModel):
 
 
 class DeleteLiveTranscodeRuleRequest(AbstractModel):
-    """DeleteLiveTranscodeRule请求参数结构体
+    """DeleteLiveTranscodeRule請求參數結構體
 
     """
 
@@ -2045,11 +2045,11 @@ class DeleteLiveTranscodeRuleRequest(AbstractModel):
         """
         :param DomainName: 播放域名。
         :type DomainName: str
-        :param AppName: 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+        :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻，預設爲 live。
         :type AppName: str
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param TemplateId: 模板ID。
+        :param TemplateId: 範本ID。
         :type TemplateId: int
         """
         self.DomainName = None
@@ -2066,13 +2066,13 @@ class DeleteLiveTranscodeRuleRequest(AbstractModel):
 
 
 class DeleteLiveTranscodeRuleResponse(AbstractModel):
-    """DeleteLiveTranscodeRule返回参数结构体
+    """DeleteLiveTranscodeRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2083,15 +2083,15 @@ class DeleteLiveTranscodeRuleResponse(AbstractModel):
 
 
 class DeleteLiveTranscodeTemplateRequest(AbstractModel):
-    """DeleteLiveTranscodeTemplate请求参数结构体
+    """DeleteLiveTranscodeTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板 ID。
-1. 在创建转码模板接口 [CreateLiveTranscodeTemplate](/document/product/267/32646) 调用的返回值中获取模板 ID。
-2. 可以从接口 [DescribeLiveTranscodeTemplates](/document/product/267/32641) 查询已经创建的过的模板列表。
+        :param TemplateId: 範本 ID。
+1. 在創建轉碼範本介面 [CreateLiveTranscodeTemplate](/document/product/267/32646) 調用的返回值中獲取範本 ID。
+2. 可以從介面 [DescribeLiveTranscodeTemplates](/document/product/267/32641) 查詢已經創建的過的範本清單。
         :type TemplateId: int
         """
         self.TemplateId = None
@@ -2102,13 +2102,13 @@ class DeleteLiveTranscodeTemplateRequest(AbstractModel):
 
 
 class DeleteLiveTranscodeTemplateResponse(AbstractModel):
-    """DeleteLiveTranscodeTemplate返回参数结构体
+    """DeleteLiveTranscodeTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2119,14 +2119,14 @@ class DeleteLiveTranscodeTemplateResponse(AbstractModel):
 
 
 class DeleteLiveWatermarkRequest(AbstractModel):
-    """DeleteLiveWatermark请求参数结构体
+    """DeleteLiveWatermark請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param WatermarkId: 水印 ID。
-在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
+        :param WatermarkId: 浮水印 ID。
+在添加浮水印介面 [AddLiveWatermark](/document/product/267/30154) 調用返回值中獲取水印 ID。
         :type WatermarkId: int
         """
         self.WatermarkId = None
@@ -2137,13 +2137,13 @@ class DeleteLiveWatermarkRequest(AbstractModel):
 
 
 class DeleteLiveWatermarkResponse(AbstractModel):
-    """DeleteLiveWatermark返回参数结构体
+    """DeleteLiveWatermark返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2154,7 +2154,7 @@ class DeleteLiveWatermarkResponse(AbstractModel):
 
 
 class DeleteLiveWatermarkRuleRequest(AbstractModel):
-    """DeleteLiveWatermarkRule请求参数结构体
+    """DeleteLiveWatermarkRule請求參數結構體
 
     """
 
@@ -2162,9 +2162,9 @@ class DeleteLiveWatermarkRuleRequest(AbstractModel):
         """
         :param DomainName: 推流域名。
         :type DomainName: str
-        :param AppName: 推流路径。与推流和播放地址中的 AppName 保持一致，默认为live。
+        :param AppName: 推流路徑。與推流和播放網址中的 AppName 保持一緻，預設爲live。
         :type AppName: str
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
         """
         self.DomainName = None
@@ -2179,13 +2179,13 @@ class DeleteLiveWatermarkRuleRequest(AbstractModel):
 
 
 class DeleteLiveWatermarkRuleResponse(AbstractModel):
-    """DeleteLiveWatermarkRule返回参数结构体
+    """DeleteLiveWatermarkRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2196,15 +2196,15 @@ class DeleteLiveWatermarkRuleResponse(AbstractModel):
 
 
 class DeletePullStreamConfigRequest(AbstractModel):
-    """DeletePullStreamConfig请求参数结构体
+    """DeletePullStreamConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
         :param ConfigId: 配置 ID。
-1. 在添加拉流配置接口 [CreatePullStreamConfig](/document/api/267/30159) 调用返回值中获取配置 ID。
-2. 可以从接口 [DescribePullStreamConfigs](/document/api/267/30158) 中查询已创建过的拉流配置列表。
+1. 在添加拉流配置介面 [CreatePullStreamConfig](/document/api/267/30159) 調用返回值中獲取配置 ID。
+2. 可以從介面 [DescribePullStreamConfigs](/document/api/267/30158) 中查詢已創建過的拉流配置清單。
         :type ConfigId: str
         """
         self.ConfigId = None
@@ -2215,13 +2215,13 @@ class DeletePullStreamConfigRequest(AbstractModel):
 
 
 class DeletePullStreamConfigResponse(AbstractModel):
-    """DeletePullStreamConfig返回参数结构体
+    """DeletePullStreamConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2232,13 +2232,13 @@ class DeletePullStreamConfigResponse(AbstractModel):
 
 
 class DescribeAllStreamPlayInfoListRequest(AbstractModel):
-    """DescribeAllStreamPlayInfoList请求参数结构体
+    """DescribeAllStreamPlayInfoList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param QueryTime: 查询时间点，精确到分钟粒度，支持最近1个月的数据查询，数据延迟为5分钟左右，如果要查询实时的数据，建议传递5分钟前的时间点，格式为yyyy-mm-dd HH:MM:SS。
+        :param QueryTime: 查詢時間點，精确到分鍾粒度，支援最近1個月的數據查詢，數據延遲爲5分鍾左右，如果要查詢實時的數據，建議傳遞5分鍾前的時間點，格式爲yyyy-mm-dd HH:MM:SS。
         :type QueryTime: str
         """
         self.QueryTime = None
@@ -2249,17 +2249,17 @@ class DescribeAllStreamPlayInfoListRequest(AbstractModel):
 
 
 class DescribeAllStreamPlayInfoListResponse(AbstractModel):
-    """DescribeAllStreamPlayInfoList返回参数结构体
+    """DescribeAllStreamPlayInfoList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param QueryTime: 查询时间点，回传的输入参数中的查询时间。
+        :param QueryTime: 查詢時間點，回傳的輸入參數中的查詢時間。
         :type QueryTime: str
-        :param DataInfoList: 数据信息列表。
+        :param DataInfoList: 數據訊息清單。
         :type DataInfoList: list of MonitorStreamPlayInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.QueryTime = None
@@ -2279,31 +2279,31 @@ class DescribeAllStreamPlayInfoListResponse(AbstractModel):
 
 
 class DescribeBillBandwidthAndFluxListRequest(AbstractModel):
-    """DescribeBillBandwidthAndFluxList请求参数结构体
+    """DescribeBillBandwidthAndFluxList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+        :param StartTime: 起始時間點，格式爲yyyy-mm-dd HH:MM:SS。
         :type StartTime: str
-        :param EndTime: 结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
+        :param EndTime: 結束時間點，格式爲yyyy-mm-dd HH:MM:SS，起始和結束時間跨度不支援超過31天。
         :type EndTime: str
-        :param PlayDomains: 直播播放域名，若不填，表示总体数据。
+        :param PlayDomains: 直播播放域名，若不填，表示總體數據。
         :type PlayDomains: list of str
-        :param MainlandOrOversea: 可选值：
-Mainland：查询国内数据，
-Oversea：则查询国外数据，
-默认：查询国内+国外的数据。
-注：LEB（快直播）只支持国内+国外数据查询。
+        :param MainlandOrOversea: 可選值：
+Mainland：查詢國内數據，
+Oversea：則查詢國外數據，
+預設：查詢國内+國外的數據。
+注：LEB（快直播）只支援國内+國外數據查詢。
         :type MainlandOrOversea: str
-        :param Granularity: 数据粒度，支持如下粒度：
-5：5分钟粒度，（跨度不支持超过1天），
-60：1小时粒度（跨度不支持超过一个月），
-1440：天粒度（跨度不支持超过一个月）。
-默认值：5。
+        :param Granularity: 數據粒度，支援如下粒度：
+5：5分鍾粒度，（跨度不支援超過1天），
+60：1小時粒度（跨度不支援超過一個月），
+1440：天粒度（跨度不支援超過一個月）。
+預設值：5。
         :type Granularity: int
-        :param ServiceName: 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
+        :param ServiceName: 服務名稱，可選值包括LVB(标準直播)，LEB(快直播)，預設值是LVB。
         :type ServiceName: str
         """
         self.StartTime = None
@@ -2324,25 +2324,25 @@ Oversea：则查询国外数据，
 
 
 class DescribeBillBandwidthAndFluxListResponse(AbstractModel):
-    """DescribeBillBandwidthAndFluxList返回参数结构体
+    """DescribeBillBandwidthAndFluxList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PeakBandwidthTime: 峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
+        :param PeakBandwidthTime: 峰值頻寬所在時間點，格式爲yyyy-mm-dd HH:MM:SS。
         :type PeakBandwidthTime: str
-        :param PeakBandwidth: 峰值带宽，单位是Mbps。
+        :param PeakBandwidth: 峰值頻寬，單位是Mbps。
         :type PeakBandwidth: float
-        :param P95PeakBandwidthTime: 95峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
+        :param P95PeakBandwidthTime: 95峰值頻寬所在時間點，格式爲yyyy-mm-dd HH:MM:SS。
         :type P95PeakBandwidthTime: str
-        :param P95PeakBandwidth: 95峰值带宽，单位是Mbps。
+        :param P95PeakBandwidth: 95峰值頻寬，單位是Mbps。
         :type P95PeakBandwidth: float
-        :param SumFlux: 总流量，单位是MB。
+        :param SumFlux: 總流量，單位是MB。
         :type SumFlux: float
-        :param DataInfoList: 明细数据信息。
+        :param DataInfoList: 明細數據訊息。
         :type DataInfoList: list of BillDataInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PeakBandwidthTime = None
@@ -2370,24 +2370,24 @@ class DescribeBillBandwidthAndFluxListResponse(AbstractModel):
 
 
 class DescribeConcurrentRecordStreamNumRequest(AbstractModel):
-    """DescribeConcurrentRecordStreamNum请求参数结构体
+    """DescribeConcurrentRecordStreamNum請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LiveType: 直播类型，SlowLive：慢直播。
+        :param LiveType: 直播類型，SlowLive：慢直播。
 NormalLive：普通直播。
         :type LiveType: str
-        :param StartTime: 起始时间，格式：yyyy-mm-dd HH:MM:SS。
-可以查询最近180天的数据。
+        :param StartTime: 起始時間，格式：yyyy-mm-dd HH:MM:SS。
+可以查詢最近180天的數據。
         :type StartTime: str
-        :param EndTime: 结束时间，格式：yyyy-mm-dd HH:MM:SS。
-时间跨度最大支持31天。
+        :param EndTime: 結束時間，格式：yyyy-mm-dd HH:MM:SS。
+時間跨度最大支援31天。
         :type EndTime: str
-        :param MainlandOrOversea: 如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
+        :param MainlandOrOversea: 如果爲空，查詢所有地區數據；如果爲“Mainland”，查詢國内數據；如果爲“Oversea”，則查詢國外數據。
         :type MainlandOrOversea: str
-        :param PushDomains: 推流域名列表，不填表示总体数据。
+        :param PushDomains: 推流域名清單，不填表示總體數據。
         :type PushDomains: list of str
         """
         self.LiveType = None
@@ -2406,15 +2406,15 @@ NormalLive：普通直播。
 
 
 class DescribeConcurrentRecordStreamNumResponse(AbstractModel):
-    """DescribeConcurrentRecordStreamNum返回参数结构体
+    """DescribeConcurrentRecordStreamNum返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DataInfoList: 统计信息列表。
+        :param DataInfoList: 統計訊息清單。
         :type DataInfoList: list of ConcurrentRecordStreamNum
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DataInfoList = None
@@ -2432,24 +2432,24 @@ class DescribeConcurrentRecordStreamNumResponse(AbstractModel):
 
 
 class DescribeGroupProIspPlayInfoListRequest(AbstractModel):
-    """DescribeGroupProIspPlayInfoList请求参数结构体
+    """DescribeGroupProIspPlayInfoList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+        :param StartTime: 起始時間點，格式爲yyyy-mm-dd HH:MM:SS。
         :type StartTime: str
-        :param EndTime: 结束时间点，格式为yyyy-mm-dd HH:MM:SS
-时间跨度在（0,3小时]，支持最近1个月数据查询。
+        :param EndTime: 結束時間點，格式爲yyyy-mm-dd HH:MM:SS
+時間跨度在（0,3小時]，支援最近1個月數據查詢。
         :type EndTime: str
-        :param PlayDomains: 播放域名，默认为不填，表示求总体数据。
+        :param PlayDomains: 播放域名，預設爲不填，表示求總體數據。
         :type PlayDomains: list of str
-        :param ProvinceNames: 省份列表，默认不填，则返回各省份的数据。
+        :param ProvinceNames: 省份清單，預設不填，則返回各省份的數據。
         :type ProvinceNames: list of str
-        :param IspNames: 运营商列表，默认不填，则返回整个运营商的数据。
+        :param IspNames: 運營商清單，預設不填，則返回整個運營商的數據。
         :type IspNames: list of str
-        :param MainlandOrOversea: 国内还是国外，如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
+        :param MainlandOrOversea: 國内還是國外，如果爲空，查詢所有地區數據；如果爲“Mainland”，查詢國内數據；如果爲“Oversea”，則查詢國外數據。
         :type MainlandOrOversea: str
         """
         self.StartTime = None
@@ -2470,15 +2470,15 @@ class DescribeGroupProIspPlayInfoListRequest(AbstractModel):
 
 
 class DescribeGroupProIspPlayInfoListResponse(AbstractModel):
-    """DescribeGroupProIspPlayInfoList返回参数结构体
+    """DescribeGroupProIspPlayInfoList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DataInfoList: 数据内容。
+        :param DataInfoList: 數據内容。
         :type DataInfoList: list of GroupProIspDataInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DataInfoList = None
@@ -2496,21 +2496,21 @@ class DescribeGroupProIspPlayInfoListResponse(AbstractModel):
 
 
 class DescribeHttpStatusInfoListRequest(AbstractModel):
-    """DescribeHttpStatusInfoList请求参数结构体
+    """DescribeHttpStatusInfoList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 起始时间，北京时间，
+        :param StartTime: 起始時間，北京時間，
 格式：yyyy-mm-dd HH:MM:SS。
-StartTime不能为3个月前。
+StartTime不能爲3個月前。
         :type StartTime: str
-        :param EndTime: 结束时间，北京时间，
+        :param EndTime: 結束時間，北京時間，
 格式：yyyy-mm-dd HH:MM:SS。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：EndTime 和 StartTime 只支援最近1天的數據查詢。
         :type EndTime: str
-        :param PlayDomains: 播放域名列表。
+        :param PlayDomains: 播放域名清單。
         :type PlayDomains: list of str
         """
         self.StartTime = None
@@ -2525,15 +2525,15 @@ StartTime不能为3个月前。
 
 
 class DescribeHttpStatusInfoListResponse(AbstractModel):
-    """DescribeHttpStatusInfoList返回参数结构体
+    """DescribeHttpStatusInfoList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DataInfoList: 播放状态码列表。
+        :param DataInfoList: 播放狀态碼清單。
         :type DataInfoList: list of HttpStatusData
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DataInfoList = None
@@ -2551,21 +2551,21 @@ class DescribeHttpStatusInfoListResponse(AbstractModel):
 
 
 class DescribeLiveCallbackRulesRequest(AbstractModel):
-    """DescribeLiveCallbackRules请求参数结构体
+    """DescribeLiveCallbackRules請求參數結構體
 
     """
 
 
 class DescribeLiveCallbackRulesResponse(AbstractModel):
-    """DescribeLiveCallbackRules返回参数结构体
+    """DescribeLiveCallbackRules返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Rules: 规则信息列表。
+        :param Rules: 規則訊息清單。
         :type Rules: list of CallBackRuleInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Rules = None
@@ -2583,15 +2583,15 @@ class DescribeLiveCallbackRulesResponse(AbstractModel):
 
 
 class DescribeLiveCallbackTemplateRequest(AbstractModel):
-    """DescribeLiveCallbackTemplate请求参数结构体
+    """DescribeLiveCallbackTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板 ID。
-1. 在创建回调模板接口 [CreateLiveCallbackTemplate](/document/product/267/32637) 调用的返回值中获取模板 ID。
-2. 可以从接口 [DescribeLiveCallbackTemplates](/document/product/267/32632) 查询已经创建的过的模板列表。
+        :param TemplateId: 範本 ID。
+1. 在創建回調範本介面 [CreateLiveCallbackTemplate](/document/product/267/32637) 調用的返回值中獲取範本 ID。
+2. 可以從介面 [DescribeLiveCallbackTemplates](/document/product/267/32632) 查詢已經創建的過的範本清單。
         :type TemplateId: int
         """
         self.TemplateId = None
@@ -2602,15 +2602,15 @@ class DescribeLiveCallbackTemplateRequest(AbstractModel):
 
 
 class DescribeLiveCallbackTemplateResponse(AbstractModel):
-    """DescribeLiveCallbackTemplate返回参数结构体
+    """DescribeLiveCallbackTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Template: 回调模板信息。
+        :param Template: 回調範本訊息。
         :type Template: :class:`tencentcloud.live.v20180801.models.CallBackTemplateInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Template = None
@@ -2625,21 +2625,21 @@ class DescribeLiveCallbackTemplateResponse(AbstractModel):
 
 
 class DescribeLiveCallbackTemplatesRequest(AbstractModel):
-    """DescribeLiveCallbackTemplates请求参数结构体
+    """DescribeLiveCallbackTemplates請求參數結構體
 
     """
 
 
 class DescribeLiveCallbackTemplatesResponse(AbstractModel):
-    """DescribeLiveCallbackTemplates返回参数结构体
+    """DescribeLiveCallbackTemplates返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Templates: 模板信息列表。
+        :param Templates: 範本訊息清單。
         :type Templates: list of CallBackTemplateInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Templates = None
@@ -2657,13 +2657,13 @@ class DescribeLiveCallbackTemplatesResponse(AbstractModel):
 
 
 class DescribeLiveCertRequest(AbstractModel):
-    """DescribeLiveCert请求参数结构体
+    """DescribeLiveCert請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertId: 证书Id。
+        :param CertId: 證書Id。
         :type CertId: int
         """
         self.CertId = None
@@ -2674,15 +2674,15 @@ class DescribeLiveCertRequest(AbstractModel):
 
 
 class DescribeLiveCertResponse(AbstractModel):
-    """DescribeLiveCert返回参数结构体
+    """DescribeLiveCert返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertInfo: 证书信息。
+        :param CertInfo: 證書訊息。
         :type CertInfo: :class:`tencentcloud.live.v20180801.models.CertInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CertInfo = None
@@ -2697,21 +2697,21 @@ class DescribeLiveCertResponse(AbstractModel):
 
 
 class DescribeLiveCertsRequest(AbstractModel):
-    """DescribeLiveCerts请求参数结构体
+    """DescribeLiveCerts請求參數結構體
 
     """
 
 
 class DescribeLiveCertsResponse(AbstractModel):
-    """DescribeLiveCerts返回参数结构体
+    """DescribeLiveCerts返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertInfoSet: 证书信息列表。
+        :param CertInfoSet: 證書訊息清單。
         :type CertInfoSet: list of CertInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CertInfoSet = None
@@ -2729,21 +2729,21 @@ class DescribeLiveCertsResponse(AbstractModel):
 
 
 class DescribeLiveDelayInfoListRequest(AbstractModel):
-    """DescribeLiveDelayInfoList请求参数结构体
+    """DescribeLiveDelayInfoList請求參數結構體
 
     """
 
 
 class DescribeLiveDelayInfoListResponse(AbstractModel):
-    """DescribeLiveDelayInfoList返回参数结构体
+    """DescribeLiveDelayInfoList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DelayInfoList: 延播信息列表。
+        :param DelayInfoList: 延播訊息清單。
         :type DelayInfoList: list of DelayInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DelayInfoList = None
@@ -2761,7 +2761,7 @@ class DescribeLiveDelayInfoListResponse(AbstractModel):
 
 
 class DescribeLiveDomainCertRequest(AbstractModel):
-    """DescribeLiveDomainCert请求参数结构体
+    """DescribeLiveDomainCert請求參數結構體
 
     """
 
@@ -2778,15 +2778,15 @@ class DescribeLiveDomainCertRequest(AbstractModel):
 
 
 class DescribeLiveDomainCertResponse(AbstractModel):
-    """DescribeLiveDomainCert返回参数结构体
+    """DescribeLiveDomainCert返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DomainCertInfo: 证书信息。
+        :param DomainCertInfo: 證書訊息。
         :type DomainCertInfo: :class:`tencentcloud.live.v20180801.models.DomainCertInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DomainCertInfo = None
@@ -2801,13 +2801,13 @@ class DescribeLiveDomainCertResponse(AbstractModel):
 
 
 class DescribeLiveDomainPlayInfoListRequest(AbstractModel):
-    """DescribeLiveDomainPlayInfoList请求参数结构体
+    """DescribeLiveDomainPlayInfoList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PlayDomains: 播放域名列表。
+        :param PlayDomains: 播放域名清單。
         :type PlayDomains: list of str
         """
         self.PlayDomains = None
@@ -2818,25 +2818,25 @@ class DescribeLiveDomainPlayInfoListRequest(AbstractModel):
 
 
 class DescribeLiveDomainPlayInfoListResponse(AbstractModel):
-    """DescribeLiveDomainPlayInfoList返回参数结构体
+    """DescribeLiveDomainPlayInfoList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Time: 数据时间，格式为yyyy-mm-dd HH:MM:SS。
+        :param Time: 數據時間，格式爲yyyy-mm-dd HH:MM:SS。
         :type Time: str
-        :param TotalBandwidth: 实时总带宽。
+        :param TotalBandwidth: 實時總頻寬。
         :type TotalBandwidth: float
-        :param TotalFlux: 实时总流量。
+        :param TotalFlux: 實時總流量。
         :type TotalFlux: float
-        :param TotalRequest: 总请求数。
+        :param TotalRequest: 總請求數。
         :type TotalRequest: int
-        :param TotalOnline: 实时总连接数。
+        :param TotalOnline: 實時總連接數。
         :type TotalOnline: int
-        :param DomainInfoList: 分域名的数据情况。
+        :param DomainInfoList: 分域名的數據情況。
         :type DomainInfoList: list of DomainInfoList
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Time = None
@@ -2864,7 +2864,7 @@ class DescribeLiveDomainPlayInfoListResponse(AbstractModel):
 
 
 class DescribeLiveDomainRequest(AbstractModel):
-    """DescribeLiveDomain请求参数结构体
+    """DescribeLiveDomain請求參數結構體
 
     """
 
@@ -2881,15 +2881,15 @@ class DescribeLiveDomainRequest(AbstractModel):
 
 
 class DescribeLiveDomainResponse(AbstractModel):
-    """DescribeLiveDomain返回参数结构体
+    """DescribeLiveDomain返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DomainInfo: 域名信息。
+        :param DomainInfo: 域名訊息。
         :type DomainInfo: :class:`tencentcloud.live.v20180801.models.DomainInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DomainInfo = None
@@ -2904,23 +2904,23 @@ class DescribeLiveDomainResponse(AbstractModel):
 
 
 class DescribeLiveDomainsRequest(AbstractModel):
-    """DescribeLiveDomains请求参数结构体
+    """DescribeLiveDomains請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DomainStatus: 域名状态过滤。0-停用，1-启用。
+        :param DomainStatus: 域名狀态過濾。0-停用，1-啓用。
         :type DomainStatus: int
-        :param DomainType: 域名类型过滤。0-推流，1-播放。
+        :param DomainType: 域名類型過濾。0-推流，1-播放。
         :type DomainType: int
-        :param PageSize: 分页大小，范围：10~100。默认10。
+        :param PageSize: 分頁大小，範圍：10~100。預設10。
         :type PageSize: int
-        :param PageNum: 取第几页，范围：1~100000。默认1。
+        :param PageNum: 取第幾頁，範圍：1~100000。預設1。
         :type PageNum: int
-        :param IsDelayLive: 0 普通直播 1慢直播 默认0。
+        :param IsDelayLive: 0 普通直播 1慢直播 預設0。
         :type IsDelayLive: int
-        :param DomainPrefix: 域名前缀。
+        :param DomainPrefix: 域名前綴。
         :type DomainPrefix: str
         """
         self.DomainStatus = None
@@ -2941,17 +2941,17 @@ class DescribeLiveDomainsRequest(AbstractModel):
 
 
 class DescribeLiveDomainsResponse(AbstractModel):
-    """DescribeLiveDomains返回参数结构体
+    """DescribeLiveDomains返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AllCount: 总记录数。
+        :param AllCount: 總記錄數。
         :type AllCount: int
-        :param DomainList: 域名详细信息列表。
+        :param DomainList: 域名詳細訊息清單。
         :type DomainList: list of DomainInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AllCount = None
@@ -2971,17 +2971,17 @@ class DescribeLiveDomainsResponse(AbstractModel):
 
 
 class DescribeLiveForbidStreamListRequest(AbstractModel):
-    """DescribeLiveForbidStreamList请求参数结构体
+    """DescribeLiveForbidStreamList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PageNum: 取得第几页，默认1。
+        :param PageNum: 取得第幾頁，預設1。
         :type PageNum: int
-        :param PageSize: 每页大小，最大100。 
-取值：1~100之前的任意整数。
-默认值：10。
+        :param PageSize: 每頁大小，最大100。 
+取值：1~100之前的任意整數。
+預設值：10。
         :type PageSize: int
         """
         self.PageNum = None
@@ -2994,23 +2994,23 @@ class DescribeLiveForbidStreamListRequest(AbstractModel):
 
 
 class DescribeLiveForbidStreamListResponse(AbstractModel):
-    """DescribeLiveForbidStreamList返回参数结构体
+    """DescribeLiveForbidStreamList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalNum: 符合条件的总个数。
+        :param TotalNum: 符合條件的總個數。
         :type TotalNum: int
-        :param TotalPage: 总页数。
+        :param TotalPage: 總頁數。
         :type TotalPage: int
-        :param PageNum: 分页的页码。
+        :param PageNum: 分頁的頁碼。
         :type PageNum: int
-        :param PageSize: 每页显示的条数。
+        :param PageSize: 每頁顯示的條數。
         :type PageSize: int
-        :param ForbidStreamList: 禁推流列表。
+        :param ForbidStreamList: 禁推流清單。
         :type ForbidStreamList: list of ForbidStreamInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalNum = None
@@ -3036,15 +3036,15 @@ class DescribeLiveForbidStreamListResponse(AbstractModel):
 
 
 class DescribeLivePackageInfoRequest(AbstractModel):
-    """DescribeLivePackageInfo请求参数结构体
+    """DescribeLivePackageInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PackageType: 包类型，可选值：
+        :param PackageType: 包類型，可選值：
 0：流量包；
-1：转码包。
+1：轉碼包。
         :type PackageType: int
         """
         self.PackageType = None
@@ -3055,16 +3055,16 @@ class DescribeLivePackageInfoRequest(AbstractModel):
 
 
 class DescribeLivePackageInfoResponse(AbstractModel):
-    """DescribeLivePackageInfo返回参数结构体
+    """DescribeLivePackageInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LivePackageInfoList: 套餐包信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LivePackageInfoList: 套餐包訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LivePackageInfoList: list of LivePackageInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.LivePackageInfoList = None
@@ -3082,7 +3082,7 @@ class DescribeLivePackageInfoResponse(AbstractModel):
 
 
 class DescribeLivePlayAuthKeyRequest(AbstractModel):
-    """DescribeLivePlayAuthKey请求参数结构体
+    """DescribeLivePlayAuthKey請求參數結構體
 
     """
 
@@ -3099,15 +3099,15 @@ class DescribeLivePlayAuthKeyRequest(AbstractModel):
 
 
 class DescribeLivePlayAuthKeyResponse(AbstractModel):
-    """DescribeLivePlayAuthKey返回参数结构体
+    """DescribeLivePlayAuthKey返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PlayAuthKeyInfo: 播放鉴权key信息。
+        :param PlayAuthKeyInfo: 播放鑒權key訊息。
         :type PlayAuthKeyInfo: :class:`tencentcloud.live.v20180801.models.PlayAuthKeyInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PlayAuthKeyInfo = None
@@ -3122,7 +3122,7 @@ class DescribeLivePlayAuthKeyResponse(AbstractModel):
 
 
 class DescribeLivePushAuthKeyRequest(AbstractModel):
-    """DescribeLivePushAuthKey请求参数结构体
+    """DescribeLivePushAuthKey請求參數結構體
 
     """
 
@@ -3139,15 +3139,15 @@ class DescribeLivePushAuthKeyRequest(AbstractModel):
 
 
 class DescribeLivePushAuthKeyResponse(AbstractModel):
-    """DescribeLivePushAuthKey返回参数结构体
+    """DescribeLivePushAuthKey返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PushAuthKeyInfo: 推流鉴权key信息。
+        :param PushAuthKeyInfo: 推流鑒權key訊息。
         :type PushAuthKeyInfo: :class:`tencentcloud.live.v20180801.models.PushAuthKeyInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PushAuthKeyInfo = None
@@ -3162,21 +3162,21 @@ class DescribeLivePushAuthKeyResponse(AbstractModel):
 
 
 class DescribeLiveRecordRulesRequest(AbstractModel):
-    """DescribeLiveRecordRules请求参数结构体
+    """DescribeLiveRecordRules請求參數結構體
 
     """
 
 
 class DescribeLiveRecordRulesResponse(AbstractModel):
-    """DescribeLiveRecordRules返回参数结构体
+    """DescribeLiveRecordRules返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Rules: 规则列表。
+        :param Rules: 規則清單。
         :type Rules: list of RuleInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Rules = None
@@ -3194,13 +3194,13 @@ class DescribeLiveRecordRulesResponse(AbstractModel):
 
 
 class DescribeLiveRecordTemplateRequest(AbstractModel):
-    """DescribeLiveRecordTemplate请求参数结构体
+    """DescribeLiveRecordTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板 ID。
+        :param TemplateId: 範本 ID。
         :type TemplateId: int
         """
         self.TemplateId = None
@@ -3211,15 +3211,15 @@ class DescribeLiveRecordTemplateRequest(AbstractModel):
 
 
 class DescribeLiveRecordTemplateResponse(AbstractModel):
-    """DescribeLiveRecordTemplate返回参数结构体
+    """DescribeLiveRecordTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Template: 录制模板信息。
+        :param Template: 錄制範本訊息。
         :type Template: :class:`tencentcloud.live.v20180801.models.RecordTemplateInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Template = None
@@ -3234,14 +3234,14 @@ class DescribeLiveRecordTemplateResponse(AbstractModel):
 
 
 class DescribeLiveRecordTemplatesRequest(AbstractModel):
-    """DescribeLiveRecordTemplates请求参数结构体
+    """DescribeLiveRecordTemplates請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param IsDelayLive: 是否属于慢直播模板，默认：0。
-0： 标准直播。
+        :param IsDelayLive: 是否屬于慢直播範本，預設：0。
+0： 标準直播。
 1：慢直播。
         :type IsDelayLive: int
         """
@@ -3253,15 +3253,15 @@ class DescribeLiveRecordTemplatesRequest(AbstractModel):
 
 
 class DescribeLiveRecordTemplatesResponse(AbstractModel):
-    """DescribeLiveRecordTemplates返回参数结构体
+    """DescribeLiveRecordTemplates返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Templates: 录制模板信息列表。
+        :param Templates: 錄制範本訊息清單。
         :type Templates: list of RecordTemplateInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Templates = None
@@ -3279,21 +3279,21 @@ class DescribeLiveRecordTemplatesResponse(AbstractModel):
 
 
 class DescribeLiveSnapshotRulesRequest(AbstractModel):
-    """DescribeLiveSnapshotRules请求参数结构体
+    """DescribeLiveSnapshotRules請求參數結構體
 
     """
 
 
 class DescribeLiveSnapshotRulesResponse(AbstractModel):
-    """DescribeLiveSnapshotRules返回参数结构体
+    """DescribeLiveSnapshotRules返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Rules: 规则列表。
+        :param Rules: 規則清單。
         :type Rules: list of RuleInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Rules = None
@@ -3311,14 +3311,14 @@ class DescribeLiveSnapshotRulesResponse(AbstractModel):
 
 
 class DescribeLiveSnapshotTemplateRequest(AbstractModel):
-    """DescribeLiveSnapshotTemplate请求参数结构体
+    """DescribeLiveSnapshotTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板 ID。
-调用 [CreateLiveSnapshotTemplate](/document/product/267/32624) 时返回的模板 ID。
+        :param TemplateId: 範本 ID。
+調用 [CreateLiveSnapshotTemplate](/document/product/267/32624) 時返回的範本 ID。
         :type TemplateId: int
         """
         self.TemplateId = None
@@ -3329,15 +3329,15 @@ class DescribeLiveSnapshotTemplateRequest(AbstractModel):
 
 
 class DescribeLiveSnapshotTemplateResponse(AbstractModel):
-    """DescribeLiveSnapshotTemplate返回参数结构体
+    """DescribeLiveSnapshotTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Template: 截图模板信息。
+        :param Template: 截圖範本訊息。
         :type Template: :class:`tencentcloud.live.v20180801.models.SnapshotTemplateInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Template = None
@@ -3352,21 +3352,21 @@ class DescribeLiveSnapshotTemplateResponse(AbstractModel):
 
 
 class DescribeLiveSnapshotTemplatesRequest(AbstractModel):
-    """DescribeLiveSnapshotTemplates请求参数结构体
+    """DescribeLiveSnapshotTemplates請求參數結構體
 
     """
 
 
 class DescribeLiveSnapshotTemplatesResponse(AbstractModel):
-    """DescribeLiveSnapshotTemplates返回参数结构体
+    """DescribeLiveSnapshotTemplates返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Templates: 截图模板列表。
+        :param Templates: 截圖範本清單。
         :type Templates: list of SnapshotTemplateInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Templates = None
@@ -3384,47 +3384,47 @@ class DescribeLiveSnapshotTemplatesResponse(AbstractModel):
 
 
 class DescribeLiveStreamEventListRequest(AbstractModel):
-    """DescribeLiveStreamEventList请求参数结构体
+    """DescribeLiveStreamEventList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 起始时间。 
+        :param StartTime: 起始時間。 
 UTC 格式，例如：2018-12-29T19:00:00Z。
-支持查询60天内的历史记录。
+支援查詢60天内的曆史記錄。
         :type StartTime: str
-        :param EndTime: 结束时间。
+        :param EndTime: 結束時間。
 UTC 格式，例如：2018-12-29T20:00:00Z。
-不超过当前时间，且和起始时间相差不得超过30天。
+不超過當前時間，且和起始時間相差不得超過30天。
         :type EndTime: str
-        :param AppName: 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+        :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻，預設爲 live。
         :type AppName: str
         :param DomainName: 推流域名。
         :type DomainName: str
-        :param StreamName: 流名称，不支持通配符（*）查询，默认模糊匹配。
-可使用IsStrict字段改为精确查询。
+        :param StreamName: 流名稱，不支援通配符（*）查詢，預設模糊比對。
+可使用IsStrict欄位改爲精确查詢。
         :type StreamName: str
-        :param PageNum: 取得第几页。
-默认值：1。
-注： 目前只支持10000条内的查询。
+        :param PageNum: 取得第幾頁。
+預設值：1。
+注： 目前只支援10000條内的查詢。
         :type PageNum: int
-        :param PageSize: 分页大小。
+        :param PageSize: 分頁大小。
 最大值：100。
-取值范围：1~100 之前的任意整数。
-默认值：10。
-注： 目前只支持10000条内的查询。
+取值範圍：1~100 之前的任意整數。
+預設值：10。
+注： 目前只支援10000條内的查詢。
         :type PageSize: int
-        :param IsFilter: 是否过滤，默认不过滤。
-0：不进行任何过滤。
-1：过滤掉开播失败的，只返回开播成功的。
+        :param IsFilter: 是否過濾，預設不過濾。
+0：不進行任何過濾。
+1：過濾掉開播失敗的，只返回開播成功的。
         :type IsFilter: int
-        :param IsStrict: 是否精确查询，默认模糊匹配。
-0：模糊匹配。
-1：精确查询。
-注：使用StreamName时该参数生效。
+        :param IsStrict: 是否精确查詢，預設模糊比對。
+0：模糊比對。
+1：精确查詢。
+注：使用StreamName時該參數生效。
         :type IsStrict: int
-        :param IsAsc: 是否按结束时间正序显示，默认逆序。
+        :param IsAsc: 是否按結束時間正序顯示，預設逆序。
 0：逆序。
 1：正序。
         :type IsAsc: int
@@ -3455,23 +3455,23 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
 
 
 class DescribeLiveStreamEventListResponse(AbstractModel):
-    """DescribeLiveStreamEventList返回参数结构体
+    """DescribeLiveStreamEventList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EventList: 推断流事件列表。
+        :param EventList: 推斷流事件清單。
         :type EventList: list of StreamEventInfo
-        :param PageNum: 分页的页码。
+        :param PageNum: 分頁的頁碼。
         :type PageNum: int
-        :param PageSize: 每页大小。
+        :param PageSize: 每頁大小。
         :type PageSize: int
-        :param TotalNum: 符合条件的总个数。
+        :param TotalNum: 符合條件的總個數。
         :type TotalNum: int
-        :param TotalPage: 总页数。
+        :param TotalPage: 總頁數。
         :type TotalPage: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.EventList = None
@@ -3497,23 +3497,23 @@ class DescribeLiveStreamEventListResponse(AbstractModel):
 
 
 class DescribeLiveStreamOnlineListRequest(AbstractModel):
-    """DescribeLiveStreamOnlineList请求参数结构体
+    """DescribeLiveStreamOnlineList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DomainName: 推流域名。多域名用户需要填写 DomainName。
+        :param DomainName: 推流域名。多域名用戶需要填寫 DomainName。
         :type DomainName: str
-        :param AppName: 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。多路径用户需要填写 AppName。
+        :param AppName: 推流路徑，與推流和播放網址中的 AppName 保持一緻，預設爲 live。多路徑用戶需要填寫 AppName。
         :type AppName: str
-        :param PageNum: 取得第几页，默认1。
+        :param PageNum: 取得第幾頁，預設1。
         :type PageNum: int
-        :param PageSize: 每页大小，最大100。 
-取值：10~100之间的任意整数。
-默认值：10。
+        :param PageSize: 每頁大小，最大100。 
+取值：10~100之間的任意整數。
+預設值：10。
         :type PageSize: int
-        :param StreamName: 流名称，用于精确查询。
+        :param StreamName: 流名稱，用于精确查詢。
         :type StreamName: str
         """
         self.DomainName = None
@@ -3532,23 +3532,23 @@ class DescribeLiveStreamOnlineListRequest(AbstractModel):
 
 
 class DescribeLiveStreamOnlineListResponse(AbstractModel):
-    """DescribeLiveStreamOnlineList返回参数结构体
+    """DescribeLiveStreamOnlineList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalNum: 符合条件的总个数。
+        :param TotalNum: 符合條件的總個數。
         :type TotalNum: int
-        :param TotalPage: 总页数。
+        :param TotalPage: 總頁數。
         :type TotalPage: int
-        :param PageNum: 分页的页码。
+        :param PageNum: 分頁的頁碼。
         :type PageNum: int
-        :param PageSize: 每页显示的条数。
+        :param PageSize: 每頁顯示的條數。
         :type PageSize: int
-        :param OnlineInfo: 正在推送流的信息列表。
+        :param OnlineInfo: 正在推送流的訊息清單。
         :type OnlineInfo: list of StreamOnlineInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalNum = None
@@ -3574,7 +3574,7 @@ class DescribeLiveStreamOnlineListResponse(AbstractModel):
 
 
 class DescribeLiveStreamPublishedListRequest(AbstractModel):
-    """DescribeLiveStreamPublishedList请求参数结构体
+    """DescribeLiveStreamPublishedList請求參數結構體
 
     """
 
@@ -3582,26 +3582,26 @@ class DescribeLiveStreamPublishedListRequest(AbstractModel):
         """
         :param DomainName: 您的推流域名。
         :type DomainName: str
-        :param EndTime: 结束时间。
+        :param EndTime: 結束時間。
 UTC 格式，例如：2016-06-30T19:00:00Z。
-不超过当前时间。
-注意：EndTime和StartTime相差不可超过30天。
+不超過當前時間。
+注意：EndTime和StartTime相差不可超過30天。
         :type EndTime: str
-        :param StartTime: 起始时间。 
+        :param StartTime: 起始時間。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
-最长支持查询60天内数据。
+最長支援查詢60天内數據。
         :type StartTime: str
-        :param AppName: 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。不支持模糊匹配。
+        :param AppName: 推流路徑，與推流和播放網址中的 AppName 保持一緻，預設爲 live。不支援模糊比對。
         :type AppName: str
-        :param PageNum: 取得第几页。
-默认值：1。
+        :param PageNum: 取得第幾頁。
+預設值：1。
         :type PageNum: int
-        :param PageSize: 分页大小。
+        :param PageSize: 分頁大小。
 最大值：100。
-取值范围：1~100 之前的任意整数。
-默认值：10。
+取值範圍：1~100 之前的任意整數。
+預設值：10。
         :type PageSize: int
-        :param StreamName: 流名称，支持模糊匹配。
+        :param StreamName: 流名稱，支援模糊比對。
         :type StreamName: str
         """
         self.DomainName = None
@@ -3624,23 +3624,23 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 
 
 class DescribeLiveStreamPublishedListResponse(AbstractModel):
-    """DescribeLiveStreamPublishedList返回参数结构体
+    """DescribeLiveStreamPublishedList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PublishInfo: 推流记录信息。
+        :param PublishInfo: 推流記錄訊息。
         :type PublishInfo: list of StreamName
-        :param PageNum: 分页的页码。
+        :param PageNum: 分頁的頁碼。
         :type PageNum: int
-        :param PageSize: 每页大小
+        :param PageSize: 每頁大小
         :type PageSize: int
-        :param TotalNum: 符合条件的总个数。
+        :param TotalNum: 符合條件的總個數。
         :type TotalNum: int
-        :param TotalPage: 总页数。
+        :param TotalPage: 總頁數。
         :type TotalPage: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PublishInfo = None
@@ -3666,7 +3666,7 @@ class DescribeLiveStreamPublishedListResponse(AbstractModel):
 
 
 class DescribeLiveStreamPushInfoListRequest(AbstractModel):
-    """DescribeLiveStreamPushInfoList请求参数结构体
+    """DescribeLiveStreamPushInfoList請求參數結構體
 
     """
 
@@ -3674,15 +3674,15 @@ class DescribeLiveStreamPushInfoListRequest(AbstractModel):
         """
         :param PushDomain: 推流域名。
         :type PushDomain: str
-        :param AppName: 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+        :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻，預設爲live。
         :type AppName: str
-        :param PageNum: 页数，
-范围[1,10000]，
-默认值：1。
+        :param PageNum: 頁數，
+範圍[1,10000]，
+預設值：1。
         :type PageNum: int
-        :param PageSize: 每页个数，
-范围：[1,1000]，
-默认值： 200。
+        :param PageSize: 每頁個數，
+範圍：[1,1000]，
+預設值： 200。
         :type PageSize: int
         """
         self.PushDomain = None
@@ -3699,23 +3699,23 @@ class DescribeLiveStreamPushInfoListRequest(AbstractModel):
 
 
 class DescribeLiveStreamPushInfoListResponse(AbstractModel):
-    """DescribeLiveStreamPushInfoList返回参数结构体
+    """DescribeLiveStreamPushInfoList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DataInfoList: 直播流的统计信息列表。
+        :param DataInfoList: 直播流的統計訊息清單。
         :type DataInfoList: list of PushDataInfo
-        :param TotalNum: 所有在线流的总数量。
+        :param TotalNum: 所有在線流的總數量。
         :type TotalNum: int
-        :param TotalPage: 总页数。
+        :param TotalPage: 總頁數。
         :type TotalPage: int
-        :param PageNum: 当前数据所在页码。
+        :param PageNum: 當前數據所在頁碼。
         :type PageNum: int
-        :param PageSize: 每页的在线流的个数。
+        :param PageSize: 每頁的在線流的個數。
         :type PageSize: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DataInfoList = None
@@ -3741,17 +3741,17 @@ class DescribeLiveStreamPushInfoListResponse(AbstractModel):
 
 
 class DescribeLiveStreamStateRequest(AbstractModel):
-    """DescribeLiveStreamState请求参数结构体
+    """DescribeLiveStreamState請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AppName: 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+        :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻，預設爲 live。
         :type AppName: str
         :param DomainName: 您的推流域名。
         :type DomainName: str
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
         """
         self.AppName = None
@@ -3766,18 +3766,18 @@ class DescribeLiveStreamStateRequest(AbstractModel):
 
 
 class DescribeLiveStreamStateResponse(AbstractModel):
-    """DescribeLiveStreamState返回参数结构体
+    """DescribeLiveStreamState返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StreamState: 流状态，
-active：活跃，
-inactive：非活跃，
+        :param StreamState: 流狀态，
+active：活躍，
+inactive：非活躍，
 forbid：禁播。
         :type StreamState: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.StreamState = None
@@ -3790,7 +3790,7 @@ forbid：禁播。
 
 
 class DescribeLiveTranscodeDetailInfoRequest(AbstractModel):
-    """DescribeLiveTranscodeDetailInfo请求参数结构体
+    """DescribeLiveTranscodeDetailInfo請求參數結構體
 
     """
 
@@ -3798,25 +3798,25 @@ class DescribeLiveTranscodeDetailInfoRequest(AbstractModel):
         """
         :param PushDomain: 推流域名。
         :type PushDomain: str
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param DayTime: 查询时间，北京时间，
+        :param DayTime: 查詢時間，北京時間，
 格式：yyyymmdd。
-注意：支持查询近1个月内某天的详细数据。
+注意：支援查詢近1個月内某天的詳細數據。
         :type DayTime: str
-        :param PageNum: 页数，默认1，
-不超过100页。
+        :param PageNum: 頁數，預設1，
+不超過100頁。
         :type PageNum: int
-        :param PageSize: 每页个数，默认20，
-范围：[10,1000]。
+        :param PageSize: 每頁個數，預設20，
+範圍：[10,1000]。
         :type PageSize: int
-        :param StartDayTime: 起始天时间，北京时间，
+        :param StartDayTime: 起始天時間，北京時間，
 格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据。
+注意：支援查詢近1個月内的詳細數據。
         :type StartDayTime: str
-        :param EndDayTime: 结束天时间，北京时间，
+        :param EndDayTime: 結束天時間，北京時間，
 格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+注意：支援查詢近1個月内的詳細數據，注意DayTime 與（StartDayTime，EndDayTime）必須要傳一個，如果都傳，會以DayTime爲準 。
         :type EndDayTime: str
         """
         self.PushDomain = None
@@ -3839,23 +3839,23 @@ class DescribeLiveTranscodeDetailInfoRequest(AbstractModel):
 
 
 class DescribeLiveTranscodeDetailInfoResponse(AbstractModel):
-    """DescribeLiveTranscodeDetailInfo返回参数结构体
+    """DescribeLiveTranscodeDetailInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DataInfoList: 统计数据列表。
+        :param DataInfoList: 統計數據清單。
         :type DataInfoList: list of TranscodeDetailInfo
-        :param PageNum: 页码。
+        :param PageNum: 頁碼。
         :type PageNum: int
-        :param PageSize: 每页个数。
+        :param PageSize: 每頁個數。
         :type PageSize: int
-        :param TotalNum: 总个数。
+        :param TotalNum: 總個數。
         :type TotalNum: int
-        :param TotalPage: 总页数。
+        :param TotalPage: 總頁數。
         :type TotalPage: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DataInfoList = None
@@ -3881,21 +3881,21 @@ class DescribeLiveTranscodeDetailInfoResponse(AbstractModel):
 
 
 class DescribeLiveTranscodeRulesRequest(AbstractModel):
-    """DescribeLiveTranscodeRules请求参数结构体
+    """DescribeLiveTranscodeRules請求參數結構體
 
     """
 
 
 class DescribeLiveTranscodeRulesResponse(AbstractModel):
-    """DescribeLiveTranscodeRules返回参数结构体
+    """DescribeLiveTranscodeRules返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Rules: 转码规则列表。
+        :param Rules: 轉碼規則清單。
         :type Rules: list of RuleInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Rules = None
@@ -3913,14 +3913,14 @@ class DescribeLiveTranscodeRulesResponse(AbstractModel):
 
 
 class DescribeLiveTranscodeTemplateRequest(AbstractModel):
-    """DescribeLiveTranscodeTemplate请求参数结构体
+    """DescribeLiveTranscodeTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板 ID。
-注意：在创建转码模板接口 [CreateLiveTranscodeTemplate](/document/product/267/32646) 调用的返回值中获取模板 ID。
+        :param TemplateId: 範本 ID。
+注意：在創建轉碼範本介面 [CreateLiveTranscodeTemplate](/document/product/267/32646) 調用的返回值中獲取範本 ID。
         :type TemplateId: int
         """
         self.TemplateId = None
@@ -3931,15 +3931,15 @@ class DescribeLiveTranscodeTemplateRequest(AbstractModel):
 
 
 class DescribeLiveTranscodeTemplateResponse(AbstractModel):
-    """DescribeLiveTranscodeTemplate返回参数结构体
+    """DescribeLiveTranscodeTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Template: 模板信息。
+        :param Template: 範本訊息。
         :type Template: :class:`tencentcloud.live.v20180801.models.TemplateInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Template = None
@@ -3954,21 +3954,21 @@ class DescribeLiveTranscodeTemplateResponse(AbstractModel):
 
 
 class DescribeLiveTranscodeTemplatesRequest(AbstractModel):
-    """DescribeLiveTranscodeTemplates请求参数结构体
+    """DescribeLiveTranscodeTemplates請求參數結構體
 
     """
 
 
 class DescribeLiveTranscodeTemplatesResponse(AbstractModel):
-    """DescribeLiveTranscodeTemplates返回参数结构体
+    """DescribeLiveTranscodeTemplates返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Templates: 转码模板列表。
+        :param Templates: 轉碼範本清單。
         :type Templates: list of TemplateInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Templates = None
@@ -3986,13 +3986,13 @@ class DescribeLiveTranscodeTemplatesResponse(AbstractModel):
 
 
 class DescribeLiveWatermarkRequest(AbstractModel):
-    """DescribeLiveWatermark请求参数结构体
+    """DescribeLiveWatermark請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param WatermarkId: 水印 ID。
+        :param WatermarkId: 浮水印 ID。
         :type WatermarkId: int
         """
         self.WatermarkId = None
@@ -4003,15 +4003,15 @@ class DescribeLiveWatermarkRequest(AbstractModel):
 
 
 class DescribeLiveWatermarkResponse(AbstractModel):
-    """DescribeLiveWatermark返回参数结构体
+    """DescribeLiveWatermark返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Watermark: 水印信息。
+        :param Watermark: 浮水印訊息。
         :type Watermark: :class:`tencentcloud.live.v20180801.models.WatermarkInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Watermark = None
@@ -4026,21 +4026,21 @@ class DescribeLiveWatermarkResponse(AbstractModel):
 
 
 class DescribeLiveWatermarkRulesRequest(AbstractModel):
-    """DescribeLiveWatermarkRules请求参数结构体
+    """DescribeLiveWatermarkRules請求參數結構體
 
     """
 
 
 class DescribeLiveWatermarkRulesResponse(AbstractModel):
-    """DescribeLiveWatermarkRules返回参数结构体
+    """DescribeLiveWatermarkRules返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Rules: 水印规则列表。
+        :param Rules: 浮水印規則清單。
         :type Rules: list of RuleInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Rules = None
@@ -4058,23 +4058,23 @@ class DescribeLiveWatermarkRulesResponse(AbstractModel):
 
 
 class DescribeLiveWatermarksRequest(AbstractModel):
-    """DescribeLiveWatermarks请求参数结构体
+    """DescribeLiveWatermarks請求參數結構體
 
     """
 
 
 class DescribeLiveWatermarksResponse(AbstractModel):
-    """DescribeLiveWatermarks返回参数结构体
+    """DescribeLiveWatermarks返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalNum: 水印总个数。
+        :param TotalNum: 浮水印總個數。
         :type TotalNum: int
-        :param WatermarkList: 水印信息列表。
+        :param WatermarkList: 浮水印訊息清單。
         :type WatermarkList: list of WatermarkInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalNum = None
@@ -4094,20 +4094,20 @@ class DescribeLiveWatermarksResponse(AbstractModel):
 
 
 class DescribeLogDownloadListRequest(AbstractModel):
-    """DescribeLogDownloadList请求参数结构体
+    """DescribeLogDownloadList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 开始时间，北京时间。
+        :param StartTime: 開始時間，北京時間。
 格式：yyyy-mm-dd HH:MM:SS。
         :type StartTime: str
-        :param EndTime: 结束时间，北京时间。
+        :param EndTime: 結束時間，北京時間。
 格式：yyyy-mm-dd HH:MM:SS。
-注意：结束时间 - 开始时间 <=7天。
+注意：結束時間 - 開始時間 <=7天。
         :type EndTime: str
-        :param PlayDomains: 域名列表。
+        :param PlayDomains: 域名清單。
         :type PlayDomains: list of str
         """
         self.StartTime = None
@@ -4122,17 +4122,17 @@ class DescribeLogDownloadListRequest(AbstractModel):
 
 
 class DescribeLogDownloadListResponse(AbstractModel):
-    """DescribeLogDownloadList返回参数结构体
+    """DescribeLogDownloadList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LogInfoList: 日志信息列表。
+        :param LogInfoList: 日志訊息清單。
         :type LogInfoList: list of LogInfo
-        :param TotalNum: 总条数。
+        :param TotalNum: 總條數。
         :type TotalNum: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.LogInfoList = None
@@ -4152,27 +4152,27 @@ class DescribeLogDownloadListResponse(AbstractModel):
 
 
 class DescribePlayErrorCodeDetailInfoListRequest(AbstractModel):
-    """DescribePlayErrorCodeDetailInfoList请求参数结构体
+    """DescribePlayErrorCodeDetailInfoList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 起始时间，北京时间，
+        :param StartTime: 起始時間，北京時間，
 格式：yyyy-mm-dd HH:MM:SS。
         :type StartTime: str
-        :param EndTime: 结束时间，北京时间，
+        :param EndTime: 結束時間，北京時間，
 格式：yyyy-mm-dd HH:MM:SS。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：EndTime 和 StartTime 只支援最近1天的數據查詢。
         :type EndTime: str
-        :param Granularity: 查询粒度：
-1-1分钟粒度。
+        :param Granularity: 查詢粒度：
+1-1分鍾粒度。
         :type Granularity: int
-        :param StatType: 是，可选值包括”4xx”,”5xx”，支持”4xx,5xx”等这种混合模式。
+        :param StatType: 是，可選值包括”4xx”,”5xx”，支援”4xx,5xx”等這種混合模式。
         :type StatType: str
-        :param PlayDomains: 播放域名列表。
+        :param PlayDomains: 播放域名清單。
         :type PlayDomains: list of str
-        :param MainlandOrOversea: 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+        :param MainlandOrOversea: 地域，可選值：Mainland，Oversea，China，Foreign，Global（預設值）；如果爲空，查詢總的數據；如果爲“Mainland”，查詢中國大陸的數據；如果爲“Oversea”，則查詢中國大陸以外的數據；如果爲China，查詢中國的數據（包括港澳台）；如果爲Foreign，查詢國外的數據（不包括港澳台）。
         :type MainlandOrOversea: str
         """
         self.StartTime = None
@@ -4193,17 +4193,17 @@ class DescribePlayErrorCodeDetailInfoListRequest(AbstractModel):
 
 
 class DescribePlayErrorCodeDetailInfoListResponse(AbstractModel):
-    """DescribePlayErrorCodeDetailInfoList返回参数结构体
+    """DescribePlayErrorCodeDetailInfoList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param HttpCodeList: 统计信息列表。
+        :param HttpCodeList: 統計訊息清單。
         :type HttpCodeList: list of HttpCodeInfo
-        :param StatType: 统计类型。
+        :param StatType: 統計類型。
         :type StatType: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.HttpCodeList = None
@@ -4223,30 +4223,30 @@ class DescribePlayErrorCodeDetailInfoListResponse(AbstractModel):
 
 
 class DescribePlayErrorCodeSumInfoListRequest(AbstractModel):
-    """DescribePlayErrorCodeSumInfoList请求参数结构体
+    """DescribePlayErrorCodeSumInfoList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 起始时间点，北京时间。
+        :param StartTime: 起始時間點，北京時間。
 格式：yyyy-mm-dd HH:MM:SS。
         :type StartTime: str
-        :param EndTime: 结束时间点，北京时间。
+        :param EndTime: 結束時間點，北京時間。
 格式：yyyy-mm-dd HH:MM:SS。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：EndTime 和 StartTime 只支援最近1天的數據查詢。
         :type EndTime: str
-        :param PlayDomains: 播放域名列表，不填表示总体数据。
+        :param PlayDomains: 播放域名清單，不填表示總體數據。
         :type PlayDomains: list of str
-        :param PageNum: 页数，范围[1,1000]，默认值是1。
+        :param PageNum: 頁數，範圍[1,1000]，預設值是1。
         :type PageNum: int
-        :param PageSize: 每页个数，范围：[1,1000]，默认值是20。
+        :param PageSize: 每頁個數，範圍：[1,1000]，預設值是20。
         :type PageSize: int
-        :param MainlandOrOversea: 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+        :param MainlandOrOversea: 地域，可選值：Mainland，Oversea，China，Foreign，Global（預設值）；如果爲空，查詢總的數據；如果爲“Mainland”，查詢中國大陸的數據；如果爲“Oversea”，則查詢中國大陸以外的數據；如果爲China，查詢中國的數據（包括港澳台）；如果爲Foreign，查詢國外的數據（不包括港澳台）。
         :type MainlandOrOversea: str
-        :param GroupType: 分组参数，可选值：CountryProIsp（默认值），Country（国家），默认是按照国家+省份+运营商来进行分组；目前国外的省份和运营商暂时无法识别。
+        :param GroupType: 分組參數，可選值：CountryProIsp（預設值），Country（國家），預設是按照國家+省份+運營商來進行分組；目前國外的省份和運營商暫時無法識别。
         :type GroupType: str
-        :param OutLanguage: 输出字段使用的语言，可选值：Chinese（默认值），English，目前国家，省份和运营商支持多语言。
+        :param OutLanguage: 輸出欄位使用的語言，可選值：Chinese（預設值），English，目前國家，省份和運營商支援多語言。
         :type OutLanguage: str
         """
         self.StartTime = None
@@ -4271,35 +4271,35 @@ class DescribePlayErrorCodeSumInfoListRequest(AbstractModel):
 
 
 class DescribePlayErrorCodeSumInfoListResponse(AbstractModel):
-    """DescribePlayErrorCodeSumInfoList返回参数结构体
+    """DescribePlayErrorCodeSumInfoList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProIspInfoList: 分省份分运营商错误码为4或5开头的状态码数据信息。
+        :param ProIspInfoList: 分省份分運營商錯誤碼爲4或5開頭的狀态碼數據訊息。
         :type ProIspInfoList: list of ProIspPlayCodeDataInfo
-        :param TotalCodeAll: 所有状态码的加和的次数。
+        :param TotalCodeAll: 所有狀态碼的加和的次數。
         :type TotalCodeAll: int
-        :param TotalCode4xx: 状态码为4开头的总次数。
+        :param TotalCode4xx: 狀态碼爲4開頭的總次數。
         :type TotalCode4xx: int
-        :param TotalCode5xx: 状态码为5开头的总次数。
+        :param TotalCode5xx: 狀态碼爲5開頭的總次數。
         :type TotalCode5xx: int
-        :param TotalCodeList: 各状态码的总次数。
+        :param TotalCodeList: 各狀态碼的總次數。
         :type TotalCodeList: list of PlayCodeTotalInfo
-        :param PageNum: 页号。
+        :param PageNum: 頁号。
         :type PageNum: int
-        :param PageSize: 每页大小。
+        :param PageSize: 每頁大小。
         :type PageSize: int
-        :param TotalPage: 总页数。
+        :param TotalPage: 總頁數。
         :type TotalPage: int
-        :param TotalNum: 总记录数。
+        :param TotalNum: 總記錄數。
         :type TotalNum: int
-        :param TotalCode2xx: 状态码为2开头的总次数。
+        :param TotalCode2xx: 狀态碼爲2開頭的總次數。
         :type TotalCode2xx: int
-        :param TotalCode3xx: 状态码为3开头的总次数。
+        :param TotalCode3xx: 狀态碼爲3開頭的總次數。
         :type TotalCode3xx: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ProIspInfoList = None
@@ -4342,30 +4342,30 @@ class DescribePlayErrorCodeSumInfoListResponse(AbstractModel):
 
 
 class DescribeProIspPlaySumInfoListRequest(AbstractModel):
-    """DescribeProIspPlaySumInfoList请求参数结构体
+    """DescribeProIspPlaySumInfoList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 起始时间，北京时间，
+        :param StartTime: 起始時間，北京時間，
 格式：yyyy-mm-dd HH:MM:SS。
         :type StartTime: str
-        :param EndTime: 结束时间，北京时间，
+        :param EndTime: 結束時間，北京時間，
 格式：yyyy-mm-dd HH:MM:SS。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：EndTime 和 StartTime 只支援最近1天的數據查詢。
         :type EndTime: str
-        :param StatType: 统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
+        :param StatType: 統計的類型，可選值：”Province”，”Isp”，“CountryOrArea”。
         :type StatType: str
-        :param PlayDomains: 不填则为总体数据。
+        :param PlayDomains: 不填則爲總體數據。
         :type PlayDomains: list of str
-        :param PageNum: 页号，范围是[1,1000]，默认值是1。
+        :param PageNum: 頁号，範圍是[1,1000]，預設值是1。
         :type PageNum: int
-        :param PageSize: 每页个数，范围是[1,1000]，默认值是20。
+        :param PageSize: 每頁個數，範圍是[1,1000]，預設值是20。
         :type PageSize: int
-        :param MainlandOrOversea: 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+        :param MainlandOrOversea: 地域，可選值：Mainland，Oversea，China，Foreign，Global（預設值）；如果爲空，查詢總的數據；如果爲“Mainland”，查詢中國大陸的數據；如果爲“Oversea”，則查詢中國大陸以外的數據；如果爲China，查詢中國的數據（包括港澳台）；如果爲Foreign，查詢國外的數據（不包括港澳台）。
         :type MainlandOrOversea: str
-        :param OutLanguage: 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
+        :param OutLanguage: 輸出欄位使用的語言，可選值：Chinese（預設值），English；目前國家，省份和運營商支援多語言。
         :type OutLanguage: str
         """
         self.StartTime = None
@@ -4390,31 +4390,31 @@ class DescribeProIspPlaySumInfoListRequest(AbstractModel):
 
 
 class DescribeProIspPlaySumInfoListResponse(AbstractModel):
-    """DescribeProIspPlaySumInfoList返回参数结构体
+    """DescribeProIspPlaySumInfoList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalFlux: 总流量。
+        :param TotalFlux: 總流量。
         :type TotalFlux: float
-        :param TotalRequest: 总请求数。
+        :param TotalRequest: 總請求數。
         :type TotalRequest: int
-        :param StatType: 统计的类型。
+        :param StatType: 統計的類型。
         :type StatType: str
-        :param PageSize: 每页的记录数。
+        :param PageSize: 每頁的記錄數。
         :type PageSize: int
-        :param PageNum: 页号。
+        :param PageNum: 頁号。
         :type PageNum: int
-        :param TotalNum: 总记录数。
+        :param TotalNum: 總記錄數。
         :type TotalNum: int
-        :param TotalPage: 总页数。
+        :param TotalPage: 總頁數。
         :type TotalPage: int
-        :param DataInfoList: 省份，运营商，国家或地区汇总数据列表。
+        :param DataInfoList: 省份，運營商，國家或地區匯總數據清單。
         :type DataInfoList: list of ProIspPlaySumInfo
-        :param AvgFluxPerSecond: 平均带宽。
+        :param AvgFluxPerSecond: 平均頻寬。
         :type AvgFluxPerSecond: float
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalFlux = None
@@ -4448,36 +4448,36 @@ class DescribeProIspPlaySumInfoListResponse(AbstractModel):
 
 
 class DescribeProvinceIspPlayInfoListRequest(AbstractModel):
-    """DescribeProvinceIspPlayInfoList请求参数结构体
+    """DescribeProvinceIspPlayInfoList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 起始时间点，当前使用北京时间，
+        :param StartTime: 起始時間點，當前使用北京時間，
 例：2019-02-21 10:00:00。
         :type StartTime: str
-        :param EndTime: 结束时间点，当前使用北京时间，
+        :param EndTime: 結束時間點，當前使用北京時間，
 例：2019-02-21 12:00:00。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：EndTime 和 StartTime 只支援最近1天的數據查詢。
         :type EndTime: str
-        :param Granularity: 支持如下粒度：
-1：1分钟粒度（跨度不支持超过1天）
+        :param Granularity: 支援如下粒度：
+1：1分鍾粒度（跨度不支援超過1天）
         :type Granularity: int
-        :param StatType: 统计指标类型：
-“Bandwidth”：带宽
+        :param StatType: 統計指标類型：
+“Bandwidth”：頻寬
 “FluxPerSecond”：平均流量
 “Flux”：流量
-“Request”：请求数
-“Online”：并发连接数
+“Request”：請求數
+“Online”：并發連接數
         :type StatType: str
-        :param PlayDomains: 播放域名列表。
+        :param PlayDomains: 播放域名清單。
         :type PlayDomains: list of str
-        :param ProvinceNames: 要查询的省份（地区）英文名称列表，如 Beijing。
+        :param ProvinceNames: 要查詢的省份（地區）英文名稱清單，如 Beijing。
         :type ProvinceNames: list of str
-        :param IspNames: 要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据。
+        :param IspNames: 要查詢的運營商英文名稱清單，如 China Mobile ，如果爲空，查詢所有運營商的數據。
         :type IspNames: list of str
-        :param MainlandOrOversea: 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+        :param MainlandOrOversea: 地域，可選值：Mainland，Oversea，China，Foreign，Global（預設值）；如果爲空，查詢總的數據；如果爲“Mainland”，查詢中國大陸的數據；如果爲“Oversea”，則查詢中國大陸以外的數據；如果爲China，查詢中國的數據（包括港澳台）；如果爲Foreign，查詢國外的數據（不包括港澳台）。
         :type MainlandOrOversea: str
         """
         self.StartTime = None
@@ -4502,17 +4502,17 @@ class DescribeProvinceIspPlayInfoListRequest(AbstractModel):
 
 
 class DescribeProvinceIspPlayInfoListResponse(AbstractModel):
-    """DescribeProvinceIspPlayInfoList返回参数结构体
+    """DescribeProvinceIspPlayInfoList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DataInfoList: 播放信息列表。
+        :param DataInfoList: 播放訊息清單。
         :type DataInfoList: list of PlayStatInfo
-        :param StatType: 统计的类型，和输入参数保持一致。
+        :param StatType: 統計的類型，和輸入參數保持一緻。
         :type StatType: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DataInfoList = None
@@ -4532,7 +4532,7 @@ class DescribeProvinceIspPlayInfoListResponse(AbstractModel):
 
 
 class DescribePullStreamConfigsRequest(AbstractModel):
-    """DescribePullStreamConfigs请求参数结构体
+    """DescribePullStreamConfigs請求參數結構體
 
     """
 
@@ -4549,7 +4549,7 @@ class DescribePullStreamConfigsRequest(AbstractModel):
 
 
 class DescribePullStreamConfigsResponse(AbstractModel):
-    """DescribePullStreamConfigs返回参数结构体
+    """DescribePullStreamConfigs返回參數結構體
 
     """
 
@@ -4557,7 +4557,7 @@ class DescribePullStreamConfigsResponse(AbstractModel):
         """
         :param PullStreamConfigs: 拉流配置。
         :type PullStreamConfigs: list of PullStreamConfig
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PullStreamConfigs = None
@@ -4575,21 +4575,21 @@ class DescribePullStreamConfigsResponse(AbstractModel):
 
 
 class DescribeScreenShotSheetNumListRequest(AbstractModel):
-    """DescribeScreenShotSheetNumList请求参数结构体
+    """DescribeScreenShotSheetNumList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: utc起始时间，格式为yyyy-mm-ddTHH:MM:SSZ
+        :param StartTime: utc起始時間，格式爲yyyy-mm-ddTHH:MM:SSZ
         :type StartTime: str
-        :param EndTime: utc结束时间，格式为yyyy-mm-ddTHH:MM:SSZ，支持查询最近1年数据。
+        :param EndTime: utc結束時間，格式爲yyyy-mm-ddTHH:MM:SSZ，支援查詢最近1年數據。
         :type EndTime: str
-        :param Zone: 地域信息，可选值包括Mainland，Oversea，前者是查询中国大陆范围内的数据，后者是除中国大陆范围之外的数据，若不传该参数，则查询所有地区的数据。
+        :param Zone: 地域訊息，可選值包括Mainland，Oversea，前者是查詢中國大陸範圍内的數據，後者是除中國大陸範圍之外的數據，若不傳該參數，則查詢所有地區的數據。
         :type Zone: str
-        :param PushDomains: 推流域名（支持查询2019年11 月1日之后的域名维度数据）。
+        :param PushDomains: 推流域名（支援查詢2019年11 月1日之後的域名維度數據）。
         :type PushDomains: list of str
-        :param Granularity: 数据维度，数据延迟1个半小时，可选值包括：1、Minute（5分钟粒度，最大支持查询时间范围是31天），2、Day（天粒度，默认值，最大支持查询时间范围是186天当天）。
+        :param Granularity: 數據維度，數據延遲1個半小時，可選值包括：1、Minute（5分鍾粒度，最大支援查詢時間範圍是31天），2、Day（天粒度，預設值，最大支援查詢時間範圍是186天當天）。
         :type Granularity: str
         """
         self.StartTime = None
@@ -4608,15 +4608,15 @@ class DescribeScreenShotSheetNumListRequest(AbstractModel):
 
 
 class DescribeScreenShotSheetNumListResponse(AbstractModel):
-    """DescribeScreenShotSheetNumList返回参数结构体
+    """DescribeScreenShotSheetNumList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DataInfoList: 数据信息列表。
+        :param DataInfoList: 數據訊息清單。
         :type DataInfoList: list of TimeValue
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DataInfoList = None
@@ -4634,20 +4634,20 @@ class DescribeScreenShotSheetNumListResponse(AbstractModel):
 
 
 class DescribeStreamDayPlayInfoListRequest(AbstractModel):
-    """DescribeStreamDayPlayInfoList请求参数结构体
+    """DescribeStreamDayPlayInfoList請求參數結構體
 
     """
 
     def __init__(self):
         """
         :param DayTime: 日期，格式：YYYY-mm-dd。
-第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。
+第二天淩晨3點出昨天的數據，建議在這個時間點之後查詢最新數據。
         :type DayTime: str
         :param PlayDomain: 播放域名。
         :type PlayDomain: str
-        :param PageNum: 页号，范围[1,1000]，默认值是1。
+        :param PageNum: 頁号，範圍[1,1000]，預設值是1。
         :type PageNum: int
-        :param PageSize: 每页个数，范围[100,1000]，默认值是1000。
+        :param PageSize: 每頁個數，範圍[100,1000]，預設值是1000。
         :type PageSize: int
         """
         self.DayTime = None
@@ -4664,23 +4664,23 @@ class DescribeStreamDayPlayInfoListRequest(AbstractModel):
 
 
 class DescribeStreamDayPlayInfoListResponse(AbstractModel):
-    """DescribeStreamDayPlayInfoList返回参数结构体
+    """DescribeStreamDayPlayInfoList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DataInfoList: 播放数据信息列表。
+        :param DataInfoList: 播放數據訊息清單。
         :type DataInfoList: list of PlayDataInfoByStream
-        :param TotalNum: 总数量。
+        :param TotalNum: 總數量。
         :type TotalNum: int
-        :param TotalPage: 总页数。
+        :param TotalPage: 總頁數。
         :type TotalPage: int
-        :param PageNum: 当前数据所处页码。
+        :param PageNum: 當前數據所處頁碼。
         :type PageNum: int
-        :param PageSize: 每页个数。
+        :param PageSize: 每頁個數。
         :type PageSize: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DataInfoList = None
@@ -4706,27 +4706,27 @@ class DescribeStreamDayPlayInfoListResponse(AbstractModel):
 
 
 class DescribeStreamPlayInfoListRequest(AbstractModel):
-    """DescribeStreamPlayInfoList请求参数结构体
+    """DescribeStreamPlayInfoList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
-当前时间 和 开始时间 间隔不超过30天。
+        :param StartTime: 開始時間，北京時間，格式爲yyyy-mm-dd HH:MM:SS，
+當前時間 和 開始時間 間隔不超過30天。
         :type StartTime: str
-        :param EndTime: 结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
-结束时间 和 开始时间  必须在同一天内。
+        :param EndTime: 結束時間，北京時間，格式爲yyyy-mm-dd HH:MM:SS，
+結束時間 和 開始時間  必須在同一天内。
         :type EndTime: str
         :param PlayDomain: 播放域名，
-若不填，则为查询所有播放域名的在线流数据。
+若不填，則爲查詢所有播放域名的在線流數據。
         :type PlayDomain: str
-        :param StreamName: 流名称，精确匹配。
-若不填，则为查询总体播放数据。
+        :param StreamName: 流名稱，精确比對。
+若不填，則爲查詢總體播放數據。
         :type StreamName: str
-        :param AppName: 推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
-若不填，则为查询总体播放数据。
-注意：按AppName查询，需要联系客服同学提单支持。
+        :param AppName: 推流路徑，與播放網址中的AppName保持一緻，會精确比對，在同時傳遞了StreamName時生效。
+若不填，則爲查詢總體播放數據。
+注意：按AppName查詢，需要聯系客服同學提單支援。
         :type AppName: str
         """
         self.StartTime = None
@@ -4745,15 +4745,15 @@ class DescribeStreamPlayInfoListRequest(AbstractModel):
 
 
 class DescribeStreamPlayInfoListResponse(AbstractModel):
-    """DescribeStreamPlayInfoList返回参数结构体
+    """DescribeStreamPlayInfoList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DataInfoList: 统计信息列表。
+        :param DataInfoList: 統計訊息清單。
         :type DataInfoList: list of DayStreamPlayInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DataInfoList = None
@@ -4771,21 +4771,21 @@ class DescribeStreamPlayInfoListResponse(AbstractModel):
 
 
 class DescribeStreamPushInfoListRequest(AbstractModel):
-    """DescribeStreamPushInfoList请求参数结构体
+    """DescribeStreamPushInfoList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param StartTime: 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+        :param StartTime: 起始時間點，格式爲yyyy-mm-dd HH:MM:SS。
         :type StartTime: str
-        :param EndTime: 结束时间点，格式为yyyy-mm-dd HH:MM:SS，最大时间跨度支持6小时，支持最近6天数据查询。
+        :param EndTime: 結束時間點，格式爲yyyy-mm-dd HH:MM:SS，最大時間跨度支援6小時，支援最近6天數據查詢。
         :type EndTime: str
         :param PushDomain: 推流域名。
         :type PushDomain: str
-        :param AppName: 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+        :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻，預設爲 live。
         :type AppName: str
         """
         self.StreamName = None
@@ -4804,15 +4804,15 @@ class DescribeStreamPushInfoListRequest(AbstractModel):
 
 
 class DescribeStreamPushInfoListResponse(AbstractModel):
-    """DescribeStreamPushInfoList返回参数结构体
+    """DescribeStreamPushInfoList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DataInfoList: 返回的数据列表。
+        :param DataInfoList: 返回的數據清單。
         :type DataInfoList: list of PushQualityData
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DataInfoList = None
@@ -4830,28 +4830,28 @@ class DescribeStreamPushInfoListResponse(AbstractModel):
 
 
 class DescribeTopClientIpSumInfoListRequest(AbstractModel):
-    """DescribeTopClientIpSumInfoList请求参数结构体
+    """DescribeTopClientIpSumInfoList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+        :param StartTime: 起始時間點，格式爲yyyy-mm-dd HH:MM:SS。
         :type StartTime: str
-        :param EndTime: 结束时间点，格式为yyyy-mm-dd HH:MM:SS
-时间跨度在[0,4小时]，支持最近1天数据查询。
+        :param EndTime: 結束時間點，格式爲yyyy-mm-dd HH:MM:SS
+時間跨度在[0,4小時]，支援最近1天數據查詢。
         :type EndTime: str
-        :param PlayDomains: 播放域名，默认为不填，表示求总体数据。
+        :param PlayDomains: 播放域名，預設爲不填，表示求總體數據。
         :type PlayDomains: list of str
-        :param PageNum: 页号，范围是[1,1000]，默认值是1。
+        :param PageNum: 頁号，範圍是[1,1000]，預設值是1。
         :type PageNum: int
-        :param PageSize: 每页个数，范围是[1,1000]，默认值是20。
+        :param PageSize: 每頁個數，範圍是[1,1000]，預設值是20。
         :type PageSize: int
-        :param OrderParam: 排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。
+        :param OrderParam: 排序指标，可選值包括TotalRequest（預設值），FailedRequest,TotalFlux。
         :type OrderParam: str
-        :param MainlandOrOversea: 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+        :param MainlandOrOversea: 地域，可選值：Mainland，Oversea，China，Foreign，Global（預設值）；如果爲空，查詢總的數據；如果爲“Mainland”，查詢中國大陸的數據；如果爲“Oversea”，則查詢中國大陸以外的數據；如果爲China，查詢中國的數據（包括港澳台）；如果爲Foreign，查詢國外的數據（不包括港澳台）。
         :type MainlandOrOversea: str
-        :param OutLanguage: 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
+        :param OutLanguage: 輸出欄位使用的語言，可選值：Chinese（預設值），English；目前國家，省份和運營商支援多語言。
         :type OutLanguage: str
         """
         self.StartTime = None
@@ -4876,25 +4876,25 @@ class DescribeTopClientIpSumInfoListRequest(AbstractModel):
 
 
 class DescribeTopClientIpSumInfoListResponse(AbstractModel):
-    """DescribeTopClientIpSumInfoList返回参数结构体
+    """DescribeTopClientIpSumInfoList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PageNum: 页号，范围是[1,1000]，默认值是1。
+        :param PageNum: 頁号，範圍是[1,1000]，預設值是1。
         :type PageNum: int
-        :param PageSize: 每页个数，范围是[1,1000]，默认值是20。
+        :param PageSize: 每頁個數，範圍是[1,1000]，預設值是20。
         :type PageSize: int
-        :param OrderParam: 排序指标，可选值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
+        :param OrderParam: 排序指标，可選值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
         :type OrderParam: str
-        :param TotalNum: 记录总数。
+        :param TotalNum: 記錄總數。
         :type TotalNum: int
-        :param TotalPage: 记录总页数。
+        :param TotalPage: 記錄總頁數。
         :type TotalPage: int
-        :param DataInfoList: 数据内容。
+        :param DataInfoList: 數據内容。
         :type DataInfoList: list of ClientIpPlaySumInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PageNum = None
@@ -4922,29 +4922,29 @@ class DescribeTopClientIpSumInfoListResponse(AbstractModel):
 
 
 class DescribeVisitTopSumInfoListRequest(AbstractModel):
-    """DescribeVisitTopSumInfoList请求参数结构体
+    """DescribeVisitTopSumInfoList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+        :param StartTime: 起始時間點，格式爲yyyy-mm-dd HH:MM:SS。
         :type StartTime: str
-        :param EndTime: 结束时间点，格式为yyyy-mm-dd HH:MM:SS
-时间跨度在(0,4小时]，支持最近1天数据查询。
+        :param EndTime: 結束時間點，格式爲yyyy-mm-dd HH:MM:SS
+時間跨度在(0,4小時]，支援最近1天數據查詢。
         :type EndTime: str
-        :param TopIndex: 峰值指标，可选值包括”Domain”，”StreamId”。
+        :param TopIndex: 峰值指标，可選值包括”Domain”，”StreamId”。
         :type TopIndex: str
-        :param PlayDomains: 播放域名，默认为不填，表示求总体数据。
+        :param PlayDomains: 播放域名，預設爲不填，表示求總體數據。
         :type PlayDomains: list of str
-        :param PageNum: 页号，
-范围是[1,1000]，
-默认值是1。
+        :param PageNum: 頁号，
+範圍是[1,1000]，
+預設值是1。
         :type PageNum: int
-        :param PageSize: 每页个数，范围是[1,1000]，
-默认值是20。
+        :param PageSize: 每頁個數，範圍是[1,1000]，
+預設值是20。
         :type PageSize: int
-        :param OrderParam: 排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
+        :param OrderParam: 排序指标，可選值包括” AvgFluxPerSecond”，”TotalRequest”（預設）,“TotalFlux”。
         :type OrderParam: str
         """
         self.StartTime = None
@@ -4967,30 +4967,30 @@ class DescribeVisitTopSumInfoListRequest(AbstractModel):
 
 
 class DescribeVisitTopSumInfoListResponse(AbstractModel):
-    """DescribeVisitTopSumInfoList返回参数结构体
+    """DescribeVisitTopSumInfoList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PageNum: 页号，
-范围是[1,1000]，
-默认值是1。
+        :param PageNum: 頁号，
+範圍是[1,1000]，
+預設值是1。
         :type PageNum: int
-        :param PageSize: 每页个数，范围是[1,1000]，
-默认值是20。
+        :param PageSize: 每頁個數，範圍是[1,1000]，
+預設值是20。
         :type PageSize: int
-        :param TopIndex: 峰值指标，可选值包括”Domain”，”StreamId”。
+        :param TopIndex: 峰值指标，可選值包括”Domain”，”StreamId”。
         :type TopIndex: str
-        :param OrderParam: 排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
+        :param OrderParam: 排序指标，可選值包括” AvgFluxPerSecond”，”TotalRequest”（預設）,“TotalFlux”。
         :type OrderParam: str
-        :param TotalNum: 记录总数。
+        :param TotalNum: 記錄總數。
         :type TotalNum: int
-        :param TotalPage: 记录总页数。
+        :param TotalPage: 記錄總頁數。
         :type TotalPage: int
-        :param DataInfoList: 数据内容。
+        :param DataInfoList: 數據内容。
         :type DataInfoList: list of PlaySumStatInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PageNum = None
@@ -5020,31 +5020,31 @@ class DescribeVisitTopSumInfoListResponse(AbstractModel):
 
 
 class DomainCertInfo(AbstractModel):
-    """域名证书信息
+    """域名證書訊息
 
     """
 
     def __init__(self):
         """
-        :param CertId: 证书Id。
+        :param CertId: 證書Id。
         :type CertId: int
-        :param CertName: 证书名称。
+        :param CertName: 證書名稱。
         :type CertName: str
-        :param Description: 描述信息。
+        :param Description: 描述訊息。
         :type Description: str
-        :param CreateTime: 创建时间，UTC格式。
+        :param CreateTime: 創建時間，UTC格式。
         :type CreateTime: str
-        :param HttpsCrt: 证书内容。
+        :param HttpsCrt: 證書内容。
         :type HttpsCrt: str
-        :param CertType: 证书类型。
-0：用户添加证书，
-1：腾讯云托管证书。
+        :param CertType: 證書類型。
+0：用戶添加證書，
+1：Top Cloud 托管證書。
         :type CertType: int
-        :param CertExpireTime: 证书过期时间，UTC格式。
+        :param CertExpireTime: 證書過期時間，UTC格式。
         :type CertExpireTime: str
-        :param DomainName: 使用此证书的域名名称。
+        :param DomainName: 使用此證書的域名名稱。
         :type DomainName: str
-        :param Status: 证书状态
+        :param Status: 證書狀态
         :type Status: int
         """
         self.CertId = None
@@ -5071,23 +5071,23 @@ class DomainCertInfo(AbstractModel):
 
 
 class DomainDetailInfo(AbstractModel):
-    """每个域名的统计信息。
+    """每個域名的統計訊息。
 
     """
 
     def __init__(self):
         """
-        :param MainlandOrOversea: 国内还是国外:
-Mainland: 表示国内数据。
-Oversea: 表示国外数据。
+        :param MainlandOrOversea: 國内還是國外:
+Mainland: 表示國内數據。
+Oversea: 表示國外數據。
         :type MainlandOrOversea: str
-        :param Bandwidth: 带宽，单位: Mbps。
+        :param Bandwidth: 頻寬，單位: Mbps。
         :type Bandwidth: float
-        :param Flux: 流量，单位: MB。
+        :param Flux: 流量，單位: MB。
         :type Flux: float
-        :param Online: 人数。
+        :param Online: 人數。
         :type Online: int
-        :param Request: 请求数。
+        :param Request: 請求數。
         :type Request: int
         """
         self.MainlandOrOversea = None
@@ -5106,7 +5106,7 @@ Oversea: 表示国外数据。
 
 
 class DomainInfo(AbstractModel):
-    """直播域名信息
+    """直播域名訊息
 
     """
 
@@ -5114,24 +5114,24 @@ class DomainInfo(AbstractModel):
         """
         :param Name: 直播域名。
         :type Name: str
-        :param Type: 域名类型:
+        :param Type: 域名類型:
 0: 推流。
 1: 播放。
         :type Type: int
-        :param Status: 域名状态:
+        :param Status: 域名狀态:
 0: 停用。
-1: 启用。
+1: 啓用。
         :type Status: int
-        :param CreateTime: 添加时间。
+        :param CreateTime: 添加時間。
         :type CreateTime: str
-        :param BCName: 是否有 CName 到固定规则域名:
+        :param BCName: 是否有 CName 到固定規則域名:
 0: 否。
 1: 是。
         :type BCName: int
-        :param TargetDomain: cname 对应的域名。
+        :param TargetDomain: cname 對應的域名。
         :type TargetDomain: str
-        :param PlayType: 播放区域，只在 Type=1 时该参数有意义。
-1: 国内。
+        :param PlayType: 播放區域，只在 Type=1 時該參數有意義。
+1: 國内。
 2: 全球。
 3: 海外。
         :type PlayType: int
@@ -5139,15 +5139,15 @@ class DomainInfo(AbstractModel):
 0: 普通直播。
 1: 慢直播。
         :type IsDelayLive: int
-        :param CurrentCName: 当前客户使用的 cname 信息。
+        :param CurrentCName: 當前客戶使用的 cname 訊息。
         :type CurrentCName: str
-        :param RentTag: 失效参数，可忽略。
+        :param RentTag: 失效參數，可忽略。
         :type RentTag: int
-        :param RentExpireTime: 失效参数，可忽略。
+        :param RentExpireTime: 失效參數，可忽略。
         :type RentExpireTime: str
-        :param IsMiniProgramLive: 0: 标准直播。
-1: 小程序直播。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsMiniProgramLive: 0: 标準直播。
+1: 小程式直播。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsMiniProgramLive: int
         """
         self.Name = None
@@ -5180,7 +5180,7 @@ class DomainInfo(AbstractModel):
 
 
 class DomainInfoList(AbstractModel):
-    """多个域名信息列表
+    """多個域名訊息清單
 
     """
 
@@ -5188,7 +5188,7 @@ class DomainInfoList(AbstractModel):
         """
         :param Domain: 域名。
         :type Domain: str
-        :param DetailInfoList: 明细信息。
+        :param DetailInfoList: 明細訊息。
         :type DetailInfoList: list of DomainDetailInfo
         """
         self.Domain = None
@@ -5206,17 +5206,17 @@ class DomainInfoList(AbstractModel):
 
 
 class DropLiveStreamRequest(AbstractModel):
-    """DropLiveStream请求参数结构体
+    """DropLiveStream請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
         :param DomainName: 您的加速域名。
         :type DomainName: str
-        :param AppName: 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+        :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻，預設爲 live。
         :type AppName: str
         """
         self.StreamName = None
@@ -5231,13 +5231,13 @@ class DropLiveStreamRequest(AbstractModel):
 
 
 class DropLiveStreamResponse(AbstractModel):
-    """DropLiveStream返回参数结构体
+    """DropLiveStream返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -5248,13 +5248,13 @@ class DropLiveStreamResponse(AbstractModel):
 
 
 class EnableLiveDomainRequest(AbstractModel):
-    """EnableLiveDomain请求参数结构体
+    """EnableLiveDomain請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DomainName: 待启用的直播域名。
+        :param DomainName: 待啓用的直播域名。
         :type DomainName: str
         """
         self.DomainName = None
@@ -5265,13 +5265,13 @@ class EnableLiveDomainRequest(AbstractModel):
 
 
 class EnableLiveDomainResponse(AbstractModel):
-    """EnableLiveDomain返回参数结构体
+    """EnableLiveDomain返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -5282,7 +5282,7 @@ class EnableLiveDomainResponse(AbstractModel):
 
 
 class ForbidLiveDomainRequest(AbstractModel):
-    """ForbidLiveDomain请求参数结构体
+    """ForbidLiveDomain請求參數結構體
 
     """
 
@@ -5299,13 +5299,13 @@ class ForbidLiveDomainRequest(AbstractModel):
 
 
 class ForbidLiveDomainResponse(AbstractModel):
-    """ForbidLiveDomain返回参数结构体
+    """ForbidLiveDomain返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -5316,26 +5316,26 @@ class ForbidLiveDomainResponse(AbstractModel):
 
 
 class ForbidLiveStreamRequest(AbstractModel):
-    """ForbidLiveStream请求参数结构体
+    """ForbidLiveStream請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AppName: 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+        :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻，預設爲 live。
         :type AppName: str
         :param DomainName: 您的推流域名。
         :type DomainName: str
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param ResumeTime: 恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
+        :param ResumeTime: 恢複流的時間。UTC 格式，例如：2018-11-29T19:00:00Z。
 注意：
-1. 默认禁播7天，且最长支持禁播90天。
-2. 北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+1. 預設禁播7天，且最長支援禁播90天。
+2. 北京時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。
         :type ResumeTime: str
         :param Reason: 禁推原因。
-注明：请务必填写禁推原因，防止误操作。
-长度限制：2048字节。
+注明：請務必填寫禁推原因，防止誤操作。
+長度限制：2048位元。
         :type Reason: str
         """
         self.AppName = None
@@ -5354,13 +5354,13 @@ class ForbidLiveStreamRequest(AbstractModel):
 
 
 class ForbidLiveStreamResponse(AbstractModel):
-    """ForbidLiveStream返回参数结构体
+    """ForbidLiveStream返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -5371,17 +5371,17 @@ class ForbidLiveStreamResponse(AbstractModel):
 
 
 class ForbidStreamInfo(AbstractModel):
-    """禁推流列表
+    """禁推流清單
 
     """
 
     def __init__(self):
         """
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param CreateTime: 创建时间。
+        :param CreateTime: 創建時間。
         :type CreateTime: str
-        :param ExpireTime: 禁推过期时间。
+        :param ExpireTime: 禁推過期時間。
         :type ExpireTime: str
         """
         self.StreamName = None
@@ -5396,7 +5396,7 @@ class ForbidStreamInfo(AbstractModel):
 
 
 class GroupProIspDataInfo(AbstractModel):
-    """某省份某运营商在某段时间内的带宽，流量，请求数和并发数
+    """某省份某運營商在某段時間内的頻寬，流量，請求數和并發數
 
     """
 
@@ -5404,9 +5404,9 @@ class GroupProIspDataInfo(AbstractModel):
         """
         :param ProvinceName: 省份。
         :type ProvinceName: str
-        :param IspName: 运营商。
+        :param IspName: 運營商。
         :type IspName: str
-        :param DetailInfoList: 分钟维度的明细数据。
+        :param DetailInfoList: 分鍾維度的明細數據。
         :type DetailInfoList: list of CdnPlayStatData
         """
         self.ProvinceName = None
@@ -5426,13 +5426,13 @@ class GroupProIspDataInfo(AbstractModel):
 
 
 class HlsSpecialParam(AbstractModel):
-    """HLS专属录制参数
+    """HLS專屬錄制參數
 
     """
 
     def __init__(self):
         """
-        :param FlowContinueDuration: HLS续流超时时间。
+        :param FlowContinueDuration: HLS續流超時時間。
         :type FlowContinueDuration: int
         """
         self.FlowContinueDuration = None
@@ -5443,16 +5443,16 @@ class HlsSpecialParam(AbstractModel):
 
 
 class HttpCodeInfo(AbstractModel):
-    """HTTP返回码和统计数据
+    """HTTP返回碼和統計數據
 
     """
 
     def __init__(self):
         """
-        :param HttpCode: HTTP协议返回码。
+        :param HttpCode: HTTP協議返回碼。
 例："2xx", "3xx", "4xx", "5xx"。
         :type HttpCode: str
-        :param ValueList: 统计信息，对于无数据的时间点，会补0。
+        :param ValueList: 統計訊息，對于無數據的時間點，會補0。
         :type ValueList: list of HttpCodeValue
         """
         self.HttpCode = None
@@ -5470,15 +5470,15 @@ class HttpCodeInfo(AbstractModel):
 
 
 class HttpCodeValue(AbstractModel):
-    """HTTP返回码数据信息
+    """HTTP返回碼數據訊息
 
     """
 
     def __init__(self):
         """
-        :param Time: 时间，格式：yyyy-mm-dd HH:MM:SS。
+        :param Time: 時間，格式：yyyy-mm-dd HH:MM:SS。
         :type Time: str
-        :param Numbers: 次数。
+        :param Numbers: 次數。
         :type Numbers: int
         :param Percentage: 占比。
         :type Percentage: float
@@ -5495,16 +5495,16 @@ class HttpCodeValue(AbstractModel):
 
 
 class HttpStatusData(AbstractModel):
-    """播放错误码信息
+    """播放錯誤碼訊息
 
     """
 
     def __init__(self):
         """
-        :param Time: 数据时间点，
+        :param Time: 數據時間點，
 格式：yyyy-mm-dd HH:MM:SS。
         :type Time: str
-        :param HttpStatusInfoList: 播放状态码详细信息。
+        :param HttpStatusInfoList: 播放狀态碼詳細訊息。
         :type HttpStatusInfoList: list of HttpStatusInfo
         """
         self.Time = None
@@ -5522,15 +5522,15 @@ class HttpStatusData(AbstractModel):
 
 
 class HttpStatusInfo(AbstractModel):
-    """播放错误码信息
+    """播放錯誤碼訊息
 
     """
 
     def __init__(self):
         """
-        :param HttpStatus: 播放HTTP状态码。
+        :param HttpStatus: 播放HTTP狀态碼。
         :type HttpStatus: str
-        :param Num: 个数。
+        :param Num: 個數。
         :type Num: int
         """
         self.HttpStatus = None
@@ -5543,7 +5543,7 @@ class HttpStatusInfo(AbstractModel):
 
 
 class LivePackageInfo(AbstractModel):
-    """直播包信息。
+    """直播包訊息。
 
     """
 
@@ -5551,31 +5551,31 @@ class LivePackageInfo(AbstractModel):
         """
         :param Id: 包 ID。
         :type Id: str
-        :param Total: 总量。
-注意：当为流量包时单位为字节。
-当为转码包时单位为分钟。
+        :param Total: 總量。
+注意：當爲流量包時單位爲位元。
+當爲轉碼包時單位爲分鍾。
         :type Total: int
         :param Used: 使用量。
-注意：当为流量包时单位为字节。
-当为转码包时单位为分钟。
+注意：當爲流量包時單位爲位元。
+當爲轉碼包時單位爲分鍾。
         :type Used: int
-        :param Left: 剩余量。
-注意：当为流量包时单位为字节。
-当为转码包时单位为分钟。
+        :param Left: 剩餘量。
+注意：當爲流量包時單位爲位元。
+當爲轉碼包時單位爲分鍾。
         :type Left: int
-        :param BuyTime: 购买时间。
+        :param BuyTime: 購買時間。
         :type BuyTime: str
-        :param ExpireTime: 过期时间。
+        :param ExpireTime: 過期時間。
         :type ExpireTime: str
-        :param Type: 包类型，可选值:
+        :param Type: 包類型，可選值:
 0: 流量包。
-1: 普通转码包。
-2: 极速高清包。
+1: 普通轉碼包。
+2: 極速高清包。
         :type Type: int
-        :param Status: 包状态，可选值:
+        :param Status: 包狀态，可選值:
 0: 未使用。
 1: 使用中。
-2: 已过期。
+2: 已過期。
         :type Status: int
         """
         self.Id = None
@@ -5600,17 +5600,17 @@ class LivePackageInfo(AbstractModel):
 
 
 class LogInfo(AbstractModel):
-    """日志url信息。
+    """日志url訊息。
 
     """
 
     def __init__(self):
         """
-        :param LogName: 日志名称。
+        :param LogName: 日志名稱。
         :type LogName: str
         :param LogUrl: 日志 URL。
         :type LogUrl: str
-        :param LogTime: 日志生成时间。
+        :param LogTime: 日志生成時間。
         :type LogTime: str
         :param FileSize: 文件大小。
         :type FileSize: int
@@ -5629,30 +5629,30 @@ class LogInfo(AbstractModel):
 
 
 class ModifyLiveCallbackTemplateRequest(AbstractModel):
-    """ModifyLiveCallbackTemplate请求参数结构体
+    """ModifyLiveCallbackTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板 ID。
+        :param TemplateId: 範本 ID。
         :type TemplateId: int
-        :param TemplateName: 模板名称。
+        :param TemplateName: 範本名稱。
         :type TemplateName: str
-        :param Description: 描述信息。
+        :param Description: 描述訊息。
         :type Description: str
-        :param StreamBeginNotifyUrl: 开播回调 URL。
+        :param StreamBeginNotifyUrl: 開播回調 URL。
         :type StreamBeginNotifyUrl: str
-        :param StreamEndNotifyUrl: 断流回调 URL。
+        :param StreamEndNotifyUrl: 斷流回調 URL。
         :type StreamEndNotifyUrl: str
-        :param RecordNotifyUrl: 录制回调 URL。
+        :param RecordNotifyUrl: 錄制回調 URL。
         :type RecordNotifyUrl: str
-        :param SnapshotNotifyUrl: 截图回调 URL。
+        :param SnapshotNotifyUrl: 截圖回調 URL。
         :type SnapshotNotifyUrl: str
-        :param PornCensorshipNotifyUrl: 鉴黄回调 URL。
+        :param PornCensorshipNotifyUrl: 鑒黃回調 URL。
         :type PornCensorshipNotifyUrl: str
-        :param CallbackKey: 回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
-[事件消息通知](/document/product/267/32744)。
+        :param CallbackKey: 回調 Key，回調 URL 公用，回調簽名詳見事件訊息通知文件。
+[事件訊息通知](/document/product/267/32744)。
         :type CallbackKey: str
         """
         self.TemplateId = None
@@ -5679,13 +5679,13 @@ class ModifyLiveCallbackTemplateRequest(AbstractModel):
 
 
 class ModifyLiveCallbackTemplateResponse(AbstractModel):
-    """ModifyLiveCallbackTemplate返回参数结构体
+    """ModifyLiveCallbackTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -5696,23 +5696,23 @@ class ModifyLiveCallbackTemplateResponse(AbstractModel):
 
 
 class ModifyLiveCertRequest(AbstractModel):
-    """ModifyLiveCert请求参数结构体
+    """ModifyLiveCert請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertId: 证书Id。
+        :param CertId: 證書Id。
         :type CertId: str
-        :param CertType: 证书类型。0-用户添加证书；1-腾讯云托管证书。
+        :param CertType: 證書類型。0-用戶添加證書；1-Top Cloud 托管證書。
         :type CertType: int
-        :param CertName: 证书名称。
+        :param CertName: 證書名稱。
         :type CertName: str
-        :param HttpsCrt: 证书内容，即公钥。
+        :param HttpsCrt: 證書内容，即公鑰。
         :type HttpsCrt: str
-        :param HttpsKey: 私钥。
+        :param HttpsKey: 私鑰。
         :type HttpsKey: str
-        :param Description: 描述信息。
+        :param Description: 描述訊息。
         :type Description: str
         """
         self.CertId = None
@@ -5733,13 +5733,13 @@ class ModifyLiveCertRequest(AbstractModel):
 
 
 class ModifyLiveCertResponse(AbstractModel):
-    """ModifyLiveCert返回参数结构体
+    """ModifyLiveCert返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -5750,7 +5750,7 @@ class ModifyLiveCertResponse(AbstractModel):
 
 
 class ModifyLiveDomainCertRequest(AbstractModel):
-    """ModifyLiveDomainCert请求参数结构体
+    """ModifyLiveDomainCert請求參數結構體
 
     """
 
@@ -5758,9 +5758,9 @@ class ModifyLiveDomainCertRequest(AbstractModel):
         """
         :param DomainName: 播放域名。
         :type DomainName: str
-        :param CertId: 证书Id。
+        :param CertId: 證書Id。
         :type CertId: int
-        :param Status: 状态，0：关闭  1：打开。
+        :param Status: 狀态，0：關閉  1：打開。
         :type Status: int
         """
         self.DomainName = None
@@ -5775,13 +5775,13 @@ class ModifyLiveDomainCertRequest(AbstractModel):
 
 
 class ModifyLiveDomainCertResponse(AbstractModel):
-    """ModifyLiveDomainCert返回参数结构体
+    """ModifyLiveDomainCert返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -5792,7 +5792,7 @@ class ModifyLiveDomainCertResponse(AbstractModel):
 
 
 class ModifyLivePlayAuthKeyRequest(AbstractModel):
-    """ModifyLivePlayAuthKey请求参数结构体
+    """ModifyLivePlayAuthKey請求參數結構體
 
     """
 
@@ -5800,13 +5800,13 @@ class ModifyLivePlayAuthKeyRequest(AbstractModel):
         """
         :param DomainName: 域名。
         :type DomainName: str
-        :param Enable: 是否启用，0：关闭，1：启用。
+        :param Enable: 是否啓用，0：關閉，1：啓用。
         :type Enable: int
-        :param AuthKey: 鉴权key。
+        :param AuthKey: 鑒權key。
         :type AuthKey: str
-        :param AuthDelta: 有效时间，单位：秒。
+        :param AuthDelta: 有效時間，單位：秒。
         :type AuthDelta: int
-        :param AuthBackKey: 鉴权backkey。
+        :param AuthBackKey: 鑒權backkey。
         :type AuthBackKey: str
         """
         self.DomainName = None
@@ -5825,13 +5825,13 @@ class ModifyLivePlayAuthKeyRequest(AbstractModel):
 
 
 class ModifyLivePlayAuthKeyResponse(AbstractModel):
-    """ModifyLivePlayAuthKey返回参数结构体
+    """ModifyLivePlayAuthKey返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -5842,7 +5842,7 @@ class ModifyLivePlayAuthKeyResponse(AbstractModel):
 
 
 class ModifyLivePlayDomainRequest(AbstractModel):
-    """ModifyLivePlayDomain请求参数结构体
+    """ModifyLivePlayDomain請求參數結構體
 
     """
 
@@ -5850,7 +5850,7 @@ class ModifyLivePlayDomainRequest(AbstractModel):
         """
         :param DomainName: 播放域名。
         :type DomainName: str
-        :param PlayType: 拉流域名类型。1-国内；2-全球；3-境外
+        :param PlayType: 拉流域名類型。1-國内；2-全球；3-境外
         :type PlayType: int
         """
         self.DomainName = None
@@ -5863,13 +5863,13 @@ class ModifyLivePlayDomainRequest(AbstractModel):
 
 
 class ModifyLivePlayDomainResponse(AbstractModel):
-    """ModifyLivePlayDomain返回参数结构体
+    """ModifyLivePlayDomain返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -5880,7 +5880,7 @@ class ModifyLivePlayDomainResponse(AbstractModel):
 
 
 class ModifyLivePushAuthKeyRequest(AbstractModel):
-    """ModifyLivePushAuthKey请求参数结构体
+    """ModifyLivePushAuthKey請求參數結構體
 
     """
 
@@ -5888,13 +5888,13 @@ class ModifyLivePushAuthKeyRequest(AbstractModel):
         """
         :param DomainName: 推流域名。
         :type DomainName: str
-        :param Enable: 是否启用，0：关闭，1：启用。
+        :param Enable: 是否啓用，0：關閉，1：啓用。
         :type Enable: int
-        :param MasterAuthKey: 主鉴权key。
+        :param MasterAuthKey: 主鑒權key。
         :type MasterAuthKey: str
-        :param BackupAuthKey: 备鉴权key。
+        :param BackupAuthKey: 備鑒權key。
         :type BackupAuthKey: str
-        :param AuthDelta: 有效时间，单位：秒。
+        :param AuthDelta: 有效時間，單位：秒。
         :type AuthDelta: int
         """
         self.DomainName = None
@@ -5913,13 +5913,13 @@ class ModifyLivePushAuthKeyRequest(AbstractModel):
 
 
 class ModifyLivePushAuthKeyResponse(AbstractModel):
-    """ModifyLivePushAuthKey返回参数结构体
+    """ModifyLivePushAuthKey返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -5930,29 +5930,29 @@ class ModifyLivePushAuthKeyResponse(AbstractModel):
 
 
 class ModifyLiveRecordTemplateRequest(AbstractModel):
-    """ModifyLiveRecordTemplate请求参数结构体
+    """ModifyLiveRecordTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板 ID。
+        :param TemplateId: 範本 ID。
         :type TemplateId: int
-        :param TemplateName: 模板名称。
+        :param TemplateName: 範本名稱。
         :type TemplateName: str
-        :param Description: 描述信息。
+        :param Description: 描述訊息。
         :type Description: str
-        :param FlvParam: FLV 录制参数，开启 FLV 录制时设置。
+        :param FlvParam: FLV 錄制參數，開啓 FLV 錄制時設置。
         :type FlvParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
-        :param HlsParam: HLS 录制参数，开启 HLS 录制时设置。
+        :param HlsParam: HLS 錄制參數，開啓 HLS 錄制時設置。
         :type HlsParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
-        :param Mp4Param: MP4 录制参数，开启 MP4 录制时设置。
+        :param Mp4Param: MP4 錄制參數，開啓 MP4 錄制時設置。
         :type Mp4Param: :class:`tencentcloud.live.v20180801.models.RecordParam`
-        :param AacParam: AAC 录制参数，开启 AAC 录制时设置。
+        :param AacParam: AAC 錄制參數，開啓 AAC 錄制時設置。
         :type AacParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
-        :param HlsSpecialParam: HLS 录制定制参数。
+        :param HlsSpecialParam: HLS 錄制定制參數。
         :type HlsSpecialParam: :class:`tencentcloud.live.v20180801.models.HlsSpecialParam`
-        :param Mp3Param: MP3 录制参数，开启 MP3 录制时设置。
+        :param Mp3Param: MP3 錄制參數，開啓 MP3 錄制時設置。
         :type Mp3Param: :class:`tencentcloud.live.v20180801.models.RecordParam`
         """
         self.TemplateId = None
@@ -5991,13 +5991,13 @@ class ModifyLiveRecordTemplateRequest(AbstractModel):
 
 
 class ModifyLiveRecordTemplateResponse(AbstractModel):
-    """ModifyLiveRecordTemplate返回参数结构体
+    """ModifyLiveRecordTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -6008,40 +6008,40 @@ class ModifyLiveRecordTemplateResponse(AbstractModel):
 
 
 class ModifyLiveSnapshotTemplateRequest(AbstractModel):
-    """ModifyLiveSnapshotTemplate请求参数结构体
+    """ModifyLiveSnapshotTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板 ID。
+        :param TemplateId: 範本 ID。
         :type TemplateId: int
-        :param TemplateName: 模板名称。
-长度上限：255字节。
+        :param TemplateName: 範本名稱。
+長度上限：255位元。
         :type TemplateName: str
-        :param Description: 描述信息。
-长度上限：1024字节。
+        :param Description: 描述訊息。
+長度上限：1024位元。
         :type Description: str
-        :param SnapshotInterval: 截图间隔，单位s，默认10s。
-范围： 5s ~ 600s。
+        :param SnapshotInterval: 截圖間隔，單位s，預設10s。
+範圍： 5s ~ 600s。
         :type SnapshotInterval: int
-        :param Width: 截图宽度。默认：0（原始宽）。
+        :param Width: 截圖寬度。預設：0（原始寬）。
         :type Width: int
-        :param Height: 截图高度。默认：0（原始高）。
+        :param Height: 截圖高度。預設：0（原始高）。
         :type Height: int
-        :param PornFlag: 是否开启鉴黄，默认 0 。
-0：不开启。
-1：开启。
+        :param PornFlag: 是否開啓鑒黃，預設 0 。
+0：不開啓。
+1：開啓。
         :type PornFlag: int
-        :param CosAppId: Cos 应用 ID。
+        :param CosAppId: Cos 應用 ID。
         :type CosAppId: int
-        :param CosBucket: Cos Bucket名称。
+        :param CosBucket: Cos Bucket名稱。
         :type CosBucket: str
         :param CosRegion: Cos 地域。
         :type CosRegion: str
-        :param CosPrefix: Cos Bucket文件夹前缀。
+        :param CosPrefix: Cos Bucket文件夾前綴。
         :type CosPrefix: str
-        :param CosFileName: Cos 文件名称。
+        :param CosFileName: Cos 文件名稱。
         :type CosFileName: str
         """
         self.TemplateId = None
@@ -6074,13 +6074,13 @@ class ModifyLiveSnapshotTemplateRequest(AbstractModel):
 
 
 class ModifyLiveSnapshotTemplateResponse(AbstractModel):
-    """ModifyLiveSnapshotTemplate返回参数结构体
+    """ModifyLiveSnapshotTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -6091,53 +6091,53 @@ class ModifyLiveSnapshotTemplateResponse(AbstractModel):
 
 
 class ModifyLiveTranscodeTemplateRequest(AbstractModel):
-    """ModifyLiveTranscodeTemplate请求参数结构体
+    """ModifyLiveTranscodeTemplate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板 Id。
+        :param TemplateId: 範本 Id。
         :type TemplateId: int
-        :param Vcodec: 视频编码：
+        :param Vcodec: 視訊編碼：
 h264/h265。
         :type Vcodec: str
-        :param Acodec: 音频编码：
+        :param Acodec: 音訊編碼：
 aac/mp3。
         :type Acodec: str
-        :param AudioBitrate: 音频码率，默认0。
-范围：0-500。
+        :param AudioBitrate: 音訊碼率，預設0。
+範圍：0-500。
         :type AudioBitrate: int
-        :param Description: 模板描述。
+        :param Description: 範本描述。
         :type Description: str
-        :param VideoBitrate: 视频码率。范围：100kbps - 8000kbps。
-注意：码率必须是100的倍数。
+        :param VideoBitrate: 視訊碼率。範圍：100kbps - 8000kbps。
+注意：碼率必須是100的倍數。
         :type VideoBitrate: int
-        :param Width: 宽。0-3000。
+        :param Width: 寬。0-3000。
         :type Width: int
-        :param NeedVideo: 是否保留视频，0：否，1：是。默认1。
+        :param NeedVideo: 是否保留視訊，0：否，1：是。預設1。
         :type NeedVideo: int
-        :param NeedAudio: 是否保留音频，0：否，1：是。默认1。
+        :param NeedAudio: 是否保留音訊，0：否，1：是。預設1。
         :type NeedAudio: int
         :param Height: 高。0-3000。
         :type Height: int
-        :param Fps: 帧率。0-200。
+        :param Fps: 幀率。0-200。
         :type Fps: int
-        :param Gop: 关键帧间隔，单位：秒。0-50。
+        :param Gop: 關鍵幀間隔，單位：秒。0-50。
         :type Gop: int
-        :param Rotate: 旋转角度。
+        :param Rotate: 旋轉角度。
 0 90 180 270。
         :type Rotate: int
-        :param Profile: 编码质量：
+        :param Profile: 編碼質量：
 baseline/main/high。
         :type Profile: str
-        :param BitrateToOrig: 是否不超过原始码率。0：否，1：是。默认0。
+        :param BitrateToOrig: 是否不超過原始碼率。0：否，1：是。預設0。
         :type BitrateToOrig: int
-        :param HeightToOrig: 是否不超过原始高。0：否，1：是。默认0。
+        :param HeightToOrig: 是否不超過原始高。0：否，1：是。預設0。
         :type HeightToOrig: int
-        :param FpsToOrig: 是否不超过原始帧率。0：否，1：是。默认0。
+        :param FpsToOrig: 是否不超過原始幀率。0：否，1：是。預設0。
         :type FpsToOrig: int
-        :param AdaptBitratePercent: 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
+        :param AdaptBitratePercent: 極速高清相比 VideoBitrate 少多少碼率，0.1到0.5。
         :type AdaptBitratePercent: float
         """
         self.TemplateId = None
@@ -6182,13 +6182,13 @@ baseline/main/high。
 
 
 class ModifyLiveTranscodeTemplateResponse(AbstractModel):
-    """ModifyLiveTranscodeTemplate返回参数结构体
+    """ModifyLiveTranscodeTemplate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -6199,7 +6199,7 @@ class ModifyLiveTranscodeTemplateResponse(AbstractModel):
 
 
 class ModifyPullStreamConfigRequest(AbstractModel):
-    """ModifyPullStreamConfig请求参数结构体
+    """ModifyPullStreamConfig請求參數結構體
 
     """
 
@@ -6211,28 +6211,28 @@ class ModifyPullStreamConfigRequest(AbstractModel):
         :type FromUrl: str
         :param ToUrl: 目的Url。
         :type ToUrl: str
-        :param AreaId: 区域id：
+        :param AreaId: 區域id：
 1-深圳，
 2-上海，
 3-天津，
-4-中国香港。
-如有改动，需同时传入IspId。
+4-中國香港。
+如有改動，需同時傳入IspId。
         :type AreaId: int
-        :param IspId: 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
+        :param IspId: 運營商id,1-電信,2-移動,3-聯通,4-其他,AreaId爲4的時候,IspId只能爲其他。如有改動，需同時傳入AreaId。
         :type IspId: int
-        :param StartTime: 开始时间。
-使用UTC格式时间，
+        :param StartTime: 開始時間。
+使用UTC格式時間，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。
         :type StartTime: str
-        :param EndTime: 结束时间，注意：
-1. 结束时间必须大于开始时间；
-2. 结束时间和开始时间必须大于当前时间；
-3. 结束时间 和 开始时间 间隔必须小于七天。
+        :param EndTime: 結束時間，注意：
+1. 結束時間必須大于開始時間；
+2. 結束時間和開始時間必須大于當前時間；
+3. 結束時間 和 開始時間 間隔必須小於七天。
 
-使用UTC格式时间，
+使用UTC格式時間，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。
         :type EndTime: str
         """
         self.ConfigId = None
@@ -6255,13 +6255,13 @@ class ModifyPullStreamConfigRequest(AbstractModel):
 
 
 class ModifyPullStreamConfigResponse(AbstractModel):
-    """ModifyPullStreamConfig返回参数结构体
+    """ModifyPullStreamConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -6272,15 +6272,15 @@ class ModifyPullStreamConfigResponse(AbstractModel):
 
 
 class ModifyPullStreamStatusRequest(AbstractModel):
-    """ModifyPullStreamStatus请求参数结构体
+    """ModifyPullStreamStatus請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ConfigIds: 配置 ID 列表。
+        :param ConfigIds: 配置 ID 清單。
         :type ConfigIds: list of str
-        :param Status: 目标状态。0无效，2正在运行，4暂停。
+        :param Status: 目标狀态。0無效，2正在運作，4暫停。
         :type Status: str
         """
         self.ConfigIds = None
@@ -6293,13 +6293,13 @@ class ModifyPullStreamStatusRequest(AbstractModel):
 
 
 class ModifyPullStreamStatusResponse(AbstractModel):
-    """ModifyPullStreamStatus返回参数结构体
+    """ModifyPullStreamStatus返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -6310,7 +6310,7 @@ class ModifyPullStreamStatusResponse(AbstractModel):
 
 
 class MonitorStreamPlayInfo(AbstractModel):
-    """监控播放数据
+    """監控播放數據
 
     """
 
@@ -6320,15 +6320,15 @@ class MonitorStreamPlayInfo(AbstractModel):
         :type PlayDomain: str
         :param StreamName: 流id。
         :type StreamName: str
-        :param Rate: 播放码率，0表示原始码率。
+        :param Rate: 播放碼率，0表示原始碼率。
         :type Rate: int
-        :param Protocol: 播放协议，可选值包括 Unknown，Flv，Hls，Rtmp，Huyap2p。
+        :param Protocol: 播放協議，可選值包括 Unknown，Flv，Hls，Rtmp，Huyap2p。
         :type Protocol: str
-        :param Bandwidth: 带宽，单位是Mbps。
+        :param Bandwidth: 頻寬，單位是Mbps。
         :type Bandwidth: float
-        :param Online: 在线人数，1分钟采样一个点，统计采样点的tcp链接数目。
+        :param Online: 在線人數，1分鍾采樣一個點，統計采樣點的tcp連結數目。
         :type Online: int
-        :param Request: 请求数。
+        :param Request: 請求數。
         :type Request: int
         """
         self.PlayDomain = None
@@ -6351,7 +6351,7 @@ class MonitorStreamPlayInfo(AbstractModel):
 
 
 class PlayAuthKeyInfo(AbstractModel):
-    """播放鉴权key信息。
+    """播放鑒權key訊息。
 
     """
 
@@ -6359,15 +6359,15 @@ class PlayAuthKeyInfo(AbstractModel):
         """
         :param DomainName: 域名。
         :type DomainName: str
-        :param Enable: 是否启用:
-0: 关闭。
-1: 启用。
+        :param Enable: 是否啓用:
+0: 關閉。
+1: 啓用。
         :type Enable: int
-        :param AuthKey: 鉴权 Key。
+        :param AuthKey: 鑒權 Key。
         :type AuthKey: str
-        :param AuthDelta: 有效时间，单位：秒。
+        :param AuthDelta: 有效時間，單位：秒。
         :type AuthDelta: int
-        :param AuthBackKey: 鉴权 BackKey。
+        :param AuthBackKey: 鑒權 BackKey。
         :type AuthBackKey: str
         """
         self.DomainName = None
@@ -6386,16 +6386,16 @@ class PlayAuthKeyInfo(AbstractModel):
 
 
 class PlayCodeTotalInfo(AbstractModel):
-    """各状态码的总次数，支持大多数的 HTTP 协议返回码。
+    """各狀态碼的總次數，支援大多數的 HTTP 協議返回碼。
 
     """
 
     def __init__(self):
         """
-        :param Code: HTTP code，可选值包括:
+        :param Code: HTTP code，可選值包括:
 400，403，404，500，502，503，504。
         :type Code: str
-        :param Num: 总次数。
+        :param Num: 總次數。
         :type Num: int
         """
         self.Code = None
@@ -6408,15 +6408,15 @@ class PlayCodeTotalInfo(AbstractModel):
 
 
 class PlayDataInfoByStream(AbstractModel):
-    """流维度的播放信息。
+    """流維度的播放訊息。
 
     """
 
     def __init__(self):
         """
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param TotalFlux: 总流量，单位: MB。
+        :param TotalFlux: 總流量，單位: MB。
         :type TotalFlux: float
         """
         self.StreamName = None
@@ -6429,16 +6429,16 @@ class PlayDataInfoByStream(AbstractModel):
 
 
 class PlayStatInfo(AbstractModel):
-    """按省份运营商查询的播放信息。
+    """按省份運營商查詢的播放訊息。
 
     """
 
     def __init__(self):
         """
-        :param Time: 数据时间点。
+        :param Time: 數據時間點。
         :type Time: str
-        :param Value: 带宽/流量/请求数/并发连接数/下载速度的值，若没数据返回时该值为0。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Value: 頻寬/流量/請求數/并發連接數/下載速度的值，若沒數據返回時該值爲0。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Value: float
         """
         self.Time = None
@@ -6451,7 +6451,7 @@ class PlayStatInfo(AbstractModel):
 
 
 class PlaySumStatInfo(AbstractModel):
-    """播放汇总统计信息。
+    """播放匯總統計訊息。
 
     """
 
@@ -6459,13 +6459,13 @@ class PlaySumStatInfo(AbstractModel):
         """
         :param Name: 域名或流 ID。
         :type Name: str
-        :param AvgFluxPerSecond: 平均下载速度，
-单位: MB/s。
-计算公式: 每分钟的下载速度求平均值。
+        :param AvgFluxPerSecond: 平均下載速度，
+單位: MB/s。
+計算公式: 每分鍾的下載速度求平均值。
         :type AvgFluxPerSecond: float
-        :param TotalFlux: 总流量，单位: MB。
+        :param TotalFlux: 總流量，單位: MB。
         :type TotalFlux: float
-        :param TotalRequest: 总请求数。
+        :param TotalRequest: 總請求數。
         :type TotalRequest: int
         """
         self.Name = None
@@ -6482,25 +6482,25 @@ class PlaySumStatInfo(AbstractModel):
 
 
 class ProIspPlayCodeDataInfo(AbstractModel):
-    """播放错误码信息
+    """播放錯誤碼訊息
 
     """
 
     def __init__(self):
         """
-        :param CountryAreaName: 国家或地区。
+        :param CountryAreaName: 國家或地區。
         :type CountryAreaName: str
         :param ProvinceName: 省份。
         :type ProvinceName: str
-        :param IspName: 运营商。
+        :param IspName: 運營商。
         :type IspName: str
-        :param Code2xx: 错误码为2开头的次数。
+        :param Code2xx: 錯誤碼爲2開頭的次數。
         :type Code2xx: int
-        :param Code3xx: 错误码为3开头的次数。
+        :param Code3xx: 錯誤碼爲3開頭的次數。
         :type Code3xx: int
-        :param Code4xx: 错误码为4开头的次数。
+        :param Code4xx: 錯誤碼爲4開頭的次數。
         :type Code4xx: int
-        :param Code5xx: 错误码为5开头的次数。
+        :param Code5xx: 錯誤碼爲5開頭的次數。
         :type Code5xx: int
         """
         self.CountryAreaName = None
@@ -6523,19 +6523,19 @@ class ProIspPlayCodeDataInfo(AbstractModel):
 
 
 class ProIspPlaySumInfo(AbstractModel):
-    """获取省份/运营商的播放信息。
+    """獲取省份/運營商的播放訊息。
 
     """
 
     def __init__(self):
         """
-        :param Name: 省份/运营商/国家或地区。
+        :param Name: 省份/運營商/國家或地區。
         :type Name: str
-        :param TotalFlux: 总流量，单位: MB。
+        :param TotalFlux: 總流量，單位: MB。
         :type TotalFlux: float
-        :param TotalRequest: 总请求数。
+        :param TotalRequest: 總請求數。
         :type TotalRequest: int
-        :param AvgFluxPerSecond: 平均下载流量，单位: MB/s。
+        :param AvgFluxPerSecond: 平均下載流量，單位: MB/s。
         :type AvgFluxPerSecond: float
         """
         self.Name = None
@@ -6552,13 +6552,13 @@ class ProIspPlaySumInfo(AbstractModel):
 
 
 class PublishTime(AbstractModel):
-    """推流时间。
+    """推流時間。
 
     """
 
     def __init__(self):
         """
-        :param PublishTime: 推流时间。
+        :param PublishTime: 推流時間。
 UTC 格式，例如：2018-06-29T19:00:00Z。
         :type PublishTime: str
         """
@@ -6582,25 +6582,25 @@ class PullStreamConfig(AbstractModel):
         :type FromUrl: str
         :param ToUrl: 目的 URL。
         :type ToUrl: str
-        :param AreaName: 区域名。
+        :param AreaName: 區域名。
         :type AreaName: str
-        :param IspName: 运营商名。
+        :param IspName: 運營商名。
         :type IspName: str
-        :param StartTime: 开始时间。
-UTC格式时间，例如: 2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param StartTime: 開始時間。
+UTC格式時間，例如: 2019-01-08T10:00:00Z。
+注意：北京時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。
         :type StartTime: str
-        :param EndTime: 结束时间。
+        :param EndTime: 結束時間。
 
-UTC格式时间，例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+UTC格式時間，例如：2019-01-08T10:00:00Z。
+注意：北京時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。
         :type EndTime: str
-        :param Status: 状态:
-0: 无效。
-1: 初始状态。
-2: 正在运行。
-3: 拉起失败。
-4: 暂停。
+        :param Status: 狀态:
+0: 無效。
+1: 初始狀态。
+2: 正在運作。
+3: 拉起失敗。
+4: 暫停。
         :type Status: str
         """
         self.ConfigId = None
@@ -6625,7 +6625,7 @@ UTC格式时间，例如：2019-01-08T10:00:00Z。
 
 
 class PushAuthKeyInfo(AbstractModel):
-    """推流鉴权key信息。
+    """推流鑒權key訊息。
 
     """
 
@@ -6633,13 +6633,13 @@ class PushAuthKeyInfo(AbstractModel):
         """
         :param DomainName: 域名。
         :type DomainName: str
-        :param Enable: 是否启用，0：关闭，1：启用。
+        :param Enable: 是否啓用，0：關閉，1：啓用。
         :type Enable: int
-        :param MasterAuthKey: 主鉴权 Key。
+        :param MasterAuthKey: 主鑒權 Key。
         :type MasterAuthKey: str
-        :param BackupAuthKey: 备鉴权 Key。
+        :param BackupAuthKey: 備鑒權 Key。
         :type BackupAuthKey: str
-        :param AuthDelta: 有效时间，单位：秒。
+        :param AuthDelta: 有效時間，單位：秒。
         :type AuthDelta: int
         """
         self.DomainName = None
@@ -6658,47 +6658,47 @@ class PushAuthKeyInfo(AbstractModel):
 
 
 class PushDataInfo(AbstractModel):
-    """推流数据信息
+    """推流數據訊息
 
     """
 
     def __init__(self):
         """
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param AppName: 推流路径。
+        :param AppName: 推流路徑。
         :type AppName: str
-        :param ClientIp: 推流客户端 IP。
+        :param ClientIp: 推流用戶端 IP。
         :type ClientIp: str
-        :param ServerIp: 接流服务器 IP。
+        :param ServerIp: 接流服務器 IP。
         :type ServerIp: str
-        :param VideoFps: 推流视频帧率，单位: Hz。
+        :param VideoFps: 推流視訊幀率，單位: Hz。
         :type VideoFps: int
-        :param VideoSpeed: 推流视频码率，单位: bps。
+        :param VideoSpeed: 推流視訊碼率，單位: bps。
         :type VideoSpeed: int
-        :param AudioFps: 推流音频帧率，单位: Hz。
+        :param AudioFps: 推流音訊幀率，單位: Hz。
         :type AudioFps: int
-        :param AudioSpeed: 推流音频码率，单位: bps。
+        :param AudioSpeed: 推流音訊碼率，單位: bps。
         :type AudioSpeed: int
         :param PushDomain: 推流域名。
         :type PushDomain: str
-        :param BeginPushTime: 推流开始时间。
+        :param BeginPushTime: 推流開始時間。
         :type BeginPushTime: str
-        :param Acodec: 音频编码格式，
+        :param Acodec: 音訊編碼格式，
 例："AAC"。
         :type Acodec: str
-        :param Vcodec: 视频编码格式，
+        :param Vcodec: 視訊編碼格式，
 例："H264"。
         :type Vcodec: str
         :param Resolution: 分辨率。
         :type Resolution: str
-        :param AsampleRate: 采样率。
+        :param AsampleRate: 采樣率。
         :type AsampleRate: int
-        :param MetaAudioSpeed: metadata 中的音频码率，单位: Kbps。
+        :param MetaAudioSpeed: metadata 中的音訊碼率，單位: Kbps。
         :type MetaAudioSpeed: int
-        :param MetaVideoSpeed: metadata 中的视频码率，单位: Kbps。
+        :param MetaVideoSpeed: metadata 中的視訊碼率，單位: Kbps。
         :type MetaVideoSpeed: int
-        :param MetaFps: metadata 中的帧率。
+        :param MetaFps: metadata 中的幀率。
         :type MetaFps: int
         """
         self.StreamName = None
@@ -6741,49 +6741,49 @@ class PushDataInfo(AbstractModel):
 
 
 class PushQualityData(AbstractModel):
-    """某条流的推流质量详情数据。
+    """某條流的推流質量詳情數據。
 
     """
 
     def __init__(self):
         """
-        :param Time: 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+        :param Time: 數據時間，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒級。
         :type Time: str
         :param PushDomain: 推流域名。
         :type PushDomain: str
-        :param AppName: 推流路径。
+        :param AppName: 推流路徑。
         :type AppName: str
-        :param ClientIp: 推流客户端 IP。
+        :param ClientIp: 推流用戶端 IP。
         :type ClientIp: str
-        :param BeginPushTime: 开始推流时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+        :param BeginPushTime: 開始推流時間，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒級。
         :type BeginPushTime: str
-        :param Resolution: 分辨率信息。
+        :param Resolution: 分辨率訊息。
         :type Resolution: str
-        :param VCodec: 视频编码格式。
+        :param VCodec: 視訊編碼格式。
         :type VCodec: str
-        :param ACodec: 音频编码格式。
+        :param ACodec: 音訊編碼格式。
         :type ACodec: str
-        :param Sequence: 推流序列号，用来唯一的标志一次推流。
+        :param Sequence: 推流序列号，用來唯一的标志一次推流。
         :type Sequence: str
-        :param VideoFps: 视频帧率。
+        :param VideoFps: 視訊幀率。
         :type VideoFps: int
-        :param VideoRate: 视频码率，单位: bps。
+        :param VideoRate: 視訊碼率，單位: bps。
         :type VideoRate: int
-        :param AudioFps: 音频帧率。
+        :param AudioFps: 音訊幀率。
         :type AudioFps: int
-        :param AudioRate: 音频码率，单位: bps。
+        :param AudioRate: 音訊碼率，單位: bps。
         :type AudioRate: int
-        :param LocalTs: 本地流逝时间，单位: ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
+        :param LocalTs: 本地流逝時間，單位: ms，影音流逝時間與本地流逝時間的差距越大表示推流質量越差，上行卡頓越嚴重。
         :type LocalTs: int
-        :param VideoTs: 视频流逝时间，单位: ms。
+        :param VideoTs: 視訊流逝時間，單位: ms。
         :type VideoTs: int
-        :param AudioTs: 音频流逝时间，单位: ms。
+        :param AudioTs: 音訊流逝時間，單位: ms。
         :type AudioTs: int
-        :param MetaVideoRate: metadata 中的视频码率，单位: kbps。
+        :param MetaVideoRate: metadata 中的視訊碼率，單位: kbps。
         :type MetaVideoRate: int
-        :param MetaAudioRate: metadata 中的音频码率，单位: kbps。
+        :param MetaAudioRate: metadata 中的音訊碼率，單位: kbps。
         :type MetaAudioRate: int
-        :param MateFps: metadata 中的帧率。
+        :param MateFps: metadata 中的幀率。
         :type MateFps: int
         """
         self.Time = None
@@ -6830,24 +6830,24 @@ class PushQualityData(AbstractModel):
 
 
 class RecordParam(AbstractModel):
-    """录制模板参数。
+    """錄制範本參數。
 
     """
 
     def __init__(self):
         """
-        :param RecordInterval: 录制间隔。
-单位秒，默认：1800。
-取值范围：300-7200。
-此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
+        :param RecordInterval: 錄制間隔。
+單位秒，預設：1800。
+取值範圍：300-7200。
+此參數對 HLS 無效，當錄制 HLS 時從推流到斷流生成一個文件。
         :type RecordInterval: int
-        :param StorageTime: 录制存储时长。
-单位秒，取值范围： 0 - 93312000。
-0：表示永久存储。
+        :param StorageTime: 錄制儲存時長。
+單位秒，取值範圍： 0 - 93312000。
+0：表示永久儲存。
         :type StorageTime: int
-        :param Enable: 是否开启当前格式录制，默认值为0，0：否， 1：是。
+        :param Enable: 是否開啓當前格式錄制，預設值爲0，0：否， 1：是。
         :type Enable: int
-        :param VodSubAppId: 点播子应用 ID。
+        :param VodSubAppId: 點播子應用 ID。
         :type VodSubAppId: int
         """
         self.RecordInterval = None
@@ -6864,32 +6864,32 @@ class RecordParam(AbstractModel):
 
 
 class RecordTemplateInfo(AbstractModel):
-    """录制模板信息
+    """錄制範本訊息
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板 ID。
+        :param TemplateId: 範本 ID。
         :type TemplateId: int
-        :param TemplateName: 模板名称。
+        :param TemplateName: 範本名稱。
         :type TemplateName: str
-        :param Description: 描述信息。
+        :param Description: 描述訊息。
         :type Description: str
-        :param FlvParam: FLV 录制参数。
+        :param FlvParam: FLV 錄制參數。
         :type FlvParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
-        :param HlsParam: HLS 录制参数。
+        :param HlsParam: HLS 錄制參數。
         :type HlsParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
-        :param Mp4Param: MP4 录制参数。
+        :param Mp4Param: MP4 錄制參數。
         :type Mp4Param: :class:`tencentcloud.live.v20180801.models.RecordParam`
-        :param AacParam: AAC 录制参数。
+        :param AacParam: AAC 錄制參數。
         :type AacParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
         :param IsDelayLive: 0：普通直播，
 1：慢直播。
         :type IsDelayLive: int
-        :param HlsSpecialParam: HLS 录制定制参数
+        :param HlsSpecialParam: HLS 錄制定制參數
         :type HlsSpecialParam: :class:`tencentcloud.live.v20180801.models.HlsSpecialParam`
-        :param Mp3Param: MP3 录制参数。
+        :param Mp3Param: MP3 錄制參數。
         :type Mp3Param: :class:`tencentcloud.live.v20180801.models.RecordParam`
         """
         self.TemplateId = None
@@ -6930,17 +6930,17 @@ class RecordTemplateInfo(AbstractModel):
 
 
 class ResumeDelayLiveStreamRequest(AbstractModel):
-    """ResumeDelayLiveStream请求参数结构体
+    """ResumeDelayLiveStream請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AppName: 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+        :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻，預設爲live。
         :type AppName: str
         :param DomainName: 推流域名。
         :type DomainName: str
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
         """
         self.AppName = None
@@ -6955,13 +6955,13 @@ class ResumeDelayLiveStreamRequest(AbstractModel):
 
 
 class ResumeDelayLiveStreamResponse(AbstractModel):
-    """ResumeDelayLiveStream返回参数结构体
+    """ResumeDelayLiveStream返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -6972,17 +6972,17 @@ class ResumeDelayLiveStreamResponse(AbstractModel):
 
 
 class ResumeLiveStreamRequest(AbstractModel):
-    """ResumeLiveStream请求参数结构体
+    """ResumeLiveStream請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AppName: 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+        :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻，預設爲 live。
         :type AppName: str
         :param DomainName: 您的推流域名。
         :type DomainName: str
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
         """
         self.AppName = None
@@ -6997,13 +6997,13 @@ class ResumeLiveStreamRequest(AbstractModel):
 
 
 class ResumeLiveStreamResponse(AbstractModel):
-    """ResumeLiveStream返回参数结构体
+    """ResumeLiveStream返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -7014,23 +7014,23 @@ class ResumeLiveStreamResponse(AbstractModel):
 
 
 class RuleInfo(AbstractModel):
-    """规则信息。
+    """規則訊息。
 
     """
 
     def __init__(self):
         """
-        :param CreateTime: 规则创建时间。
+        :param CreateTime: 規則創建時間。
         :type CreateTime: str
-        :param UpdateTime: 规则更新时间。
+        :param UpdateTime: 規則更新時間。
         :type UpdateTime: str
-        :param TemplateId: 模板 ID。
+        :param TemplateId: 範本 ID。
         :type TemplateId: int
         :param DomainName: 推流域名。
         :type DomainName: str
-        :param AppName: 推流路径。
+        :param AppName: 推流路徑。
         :type AppName: str
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
         """
         self.CreateTime = None
@@ -7051,39 +7051,39 @@ class RuleInfo(AbstractModel):
 
 
 class SnapshotTemplateInfo(AbstractModel):
-    """截图模板信息。
+    """截圖範本訊息。
 
     """
 
     def __init__(self):
         """
-        :param TemplateId: 模板 ID。
+        :param TemplateId: 範本 ID。
         :type TemplateId: int
-        :param TemplateName: 模板名称。
+        :param TemplateName: 範本名稱。
         :type TemplateName: str
-        :param SnapshotInterval: 截图时间间隔，5-300秒。
+        :param SnapshotInterval: 截圖時間間隔，5-300秒。
         :type SnapshotInterval: int
-        :param Width: 截图宽度，范围：0-3000。 
-0：原始宽度并适配原始比例。
+        :param Width: 截圖寬度，範圍：0-3000。 
+0：原始寬度并适配原始比例。
         :type Width: int
-        :param Height: 截图高度，范围：0-2000。
+        :param Height: 截圖高度，範圍：0-2000。
 0：原始高度并适配原始比例。
         :type Height: int
-        :param PornFlag: 是否开启鉴黄，0：不开启，1：开启。
+        :param PornFlag: 是否開啓鑒黃，0：不開啓，1：開啓。
         :type PornFlag: int
-        :param CosAppId: Cos 应用 ID。
+        :param CosAppId: Cos 應用 ID。
         :type CosAppId: int
-        :param CosBucket: Cos Bucket名称。
+        :param CosBucket: Cos Bucket名稱。
         :type CosBucket: str
         :param CosRegion: Cos 地域。
         :type CosRegion: str
-        :param Description: 模板描述。
+        :param Description: 範本描述。
         :type Description: str
-        :param CosPrefix: Cos Bucket文件夹前缀。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CosPrefix: Cos Bucket文件夾前綴。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CosPrefix: str
-        :param CosFileName: Cos 文件名称。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CosFileName: Cos 文件名稱。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CosFileName: str
         """
         self.TemplateId = None
@@ -7116,15 +7116,15 @@ class SnapshotTemplateInfo(AbstractModel):
 
 
 class StopLiveRecordRequest(AbstractModel):
-    """StopLiveRecord请求参数结构体
+    """StopLiveRecord請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param TaskId: 任务ID，全局唯一标识录制任务。
+        :param TaskId: 任務ID，全局唯一标識錄制任務。
         :type TaskId: int
         """
         self.StreamName = None
@@ -7137,13 +7137,13 @@ class StopLiveRecordRequest(AbstractModel):
 
 
 class StopLiveRecordResponse(AbstractModel):
-    """StopLiveRecord返回参数结构体
+    """StopLiveRecord返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -7154,27 +7154,27 @@ class StopLiveRecordResponse(AbstractModel):
 
 
 class StreamEventInfo(AbstractModel):
-    """推断流事件信息。
+    """推斷流事件訊息。
 
     """
 
     def __init__(self):
         """
-        :param AppName: 应用名称。
+        :param AppName: 應用名稱。
         :type AppName: str
         :param DomainName: 推流域名。
         :type DomainName: str
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param StreamStartTime: 推流开始时间。
-UTC 格式时间，例如：2019-01-07T12:00:00Z。
+        :param StreamStartTime: 推流開始時間。
+UTC 格式時間，例如：2019-01-07T12:00:00Z。
         :type StreamStartTime: str
-        :param StreamEndTime: 推流结束时间。
-UTC 格式时间，例如：2019-01-07T15:00:00Z。
+        :param StreamEndTime: 推流結束時間。
+UTC 格式時間，例如：2019-01-07T15:00:00Z。
         :type StreamEndTime: str
         :param StopReason: 停止原因。
         :type StopReason: str
-        :param Duration: 推流持续时长，单位：秒。
+        :param Duration: 推流持續時長，單位：秒。
         :type Duration: int
         :param ClientIp: 主播 IP。
         :type ClientIp: str
@@ -7205,27 +7205,27 @@ UTC 格式时间，例如：2019-01-07T15:00:00Z。
 
 
 class StreamName(AbstractModel):
-    """流名称列表。
+    """流名稱清單。
 
     """
 
     def __init__(self):
         """
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param AppName: 应用名称。
+        :param AppName: 應用名稱。
         :type AppName: str
         :param DomainName: 推流域名。
         :type DomainName: str
-        :param StreamStartTime: 推流开始时间。
-UTC格式时间，例如：2019-01-07T12:00:00Z。
+        :param StreamStartTime: 推流開始時間。
+UTC格式時間，例如：2019-01-07T12:00:00Z。
         :type StreamStartTime: str
-        :param StreamEndTime: 推流结束时间。
-UTC格式时间，例如：2019-01-07T15:00:00Z。
+        :param StreamEndTime: 推流結束時間。
+UTC格式時間，例如：2019-01-07T15:00:00Z。
         :type StreamEndTime: str
         :param StopReason: 停止原因。
         :type StopReason: str
-        :param Duration: 推流持续时长，单位：秒。
+        :param Duration: 推流持續時長，單位：秒。
         :type Duration: int
         :param ClientIp: 主播 IP。
         :type ClientIp: str
@@ -7256,17 +7256,17 @@ UTC格式时间，例如：2019-01-07T15:00:00Z。
 
 
 class StreamOnlineInfo(AbstractModel):
-    """查询当前正在推流的信息
+    """查詢當前正在推流的訊息
 
     """
 
     def __init__(self):
         """
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param PublishTimeList: 推流时间列表
+        :param PublishTimeList: 推流時間清單
         :type PublishTimeList: list of PublishTime
-        :param AppName: 应用名称。
+        :param AppName: 應用名稱。
         :type AppName: str
         :param DomainName: 推流域名。
         :type DomainName: str
@@ -7290,53 +7290,53 @@ class StreamOnlineInfo(AbstractModel):
 
 
 class TemplateInfo(AbstractModel):
-    """转码模板信息。
+    """轉碼範本訊息。
 
     """
 
     def __init__(self):
         """
-        :param Vcodec: 视频编码：
+        :param Vcodec: 視訊編碼：
 h264/h265。
         :type Vcodec: str
-        :param VideoBitrate: 视频码率，取值范围：100kbps - 8000kbps。
+        :param VideoBitrate: 視訊碼率，取值範圍：100kbps - 8000kbps。
         :type VideoBitrate: int
-        :param Acodec: 音频编码，可选 aac 或 mp3。
+        :param Acodec: 音訊編碼，可選 aac 或 mp3。
         :type Acodec: str
-        :param AudioBitrate: 音频码率。取值范围：0kbps - 500kbps。
+        :param AudioBitrate: 音訊碼率。取值範圍：0kbps - 500kbps。
         :type AudioBitrate: int
-        :param Width: 宽，取值范围：0-3000。
+        :param Width: 寬，取值範圍：0-3000。
         :type Width: int
-        :param Height: 高，取值范围：0-3000。
+        :param Height: 高，取值範圍：0-3000。
         :type Height: int
-        :param Fps: 帧率。取值范围：0fps - 200fps。
+        :param Fps: 幀率。取值範圍：0fps - 200fps。
         :type Fps: int
-        :param Gop: 关键帧间隔，取值范围：1秒 - 50秒。
+        :param Gop: 關鍵幀間隔，取值範圍：1秒 - 50秒。
         :type Gop: int
-        :param Rotate: 旋转角度。可选择：0 90 180 270。
+        :param Rotate: 旋轉角度。可選擇：0 90 180 270。
         :type Rotate: int
-        :param Profile: 编码质量，可选择：
+        :param Profile: 編碼質量，可選擇：
 baseline，main，high。
         :type Profile: str
-        :param BitrateToOrig: 是否不超过原始码率。0：否，1：是。
+        :param BitrateToOrig: 是否不超過原始碼率。0：否，1：是。
         :type BitrateToOrig: int
-        :param HeightToOrig: 是否不超过原始高度。0：否，1：是。
+        :param HeightToOrig: 是否不超過原始高度。0：否，1：是。
         :type HeightToOrig: int
-        :param FpsToOrig: 是否不超过原始帧率。0：否，1：是。
+        :param FpsToOrig: 是否不超過原始幀率。0：否，1：是。
         :type FpsToOrig: int
-        :param NeedVideo: 是否保留视频。0：否，1：是。
+        :param NeedVideo: 是否保留視訊。0：否，1：是。
         :type NeedVideo: int
-        :param NeedAudio: 是否保留音频。0：否，1：是。
+        :param NeedAudio: 是否保留音訊。0：否，1：是。
         :type NeedAudio: int
-        :param TemplateId: 模板 ID。
+        :param TemplateId: 範本 ID。
         :type TemplateId: int
-        :param TemplateName: 模板名称。
+        :param TemplateName: 範本名稱。
         :type TemplateName: str
-        :param Description: 模板描述。
+        :param Description: 範本描述。
         :type Description: str
-        :param AiTransCode: 是否是极速高清模板，0：否，1：是。默认0。
+        :param AiTransCode: 是否是極速高清範本，0：否，1：是。預設0。
         :type AiTransCode: int
-        :param AdaptBitratePercent: 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
+        :param AdaptBitratePercent: 極速高清相比 VideoBitrate 少多少碼率，0.1到0.5。
         :type AdaptBitratePercent: float
         """
         self.Vcodec = None
@@ -7385,15 +7385,15 @@ baseline，main，high。
 
 
 class TimeValue(AbstractModel):
-    """某个时间点的指标的数值是多少。
+    """某個時間點的指标的數值是多少。
 
     """
 
     def __init__(self):
         """
-        :param Time: UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。
+        :param Time: UTC 時間，時間格式：yyyy-mm-ddTHH:MM:SSZ。
         :type Time: str
-        :param Num: 数值。
+        :param Num: 數值。
         :type Num: int
         """
         self.Time = None
@@ -7406,31 +7406,31 @@ class TimeValue(AbstractModel):
 
 
 class TranscodeDetailInfo(AbstractModel):
-    """转码详细信息。
+    """轉碼詳細訊息。
 
     """
 
     def __init__(self):
         """
-        :param StreamName: 流名称。
+        :param StreamName: 流名稱。
         :type StreamName: str
-        :param StartTime: 开始时间（北京时间），格式：yyyy-mm-dd HH:MM。
+        :param StartTime: 開始時間（北京時間），格式：yyyy-mm-dd HH:MM。
         :type StartTime: str
-        :param EndTime: 结束时间（北京时间），格式：yyyy-mm-dd HH:MM。
+        :param EndTime: 結束時間（北京時間），格式：yyyy-mm-dd HH:MM。
         :type EndTime: str
-        :param Duration: 转码时长，单位：分钟。
-注意：因推流过程中可能有中断重推情况，此处时长为真实转码时长累加值，并非结束时间和开始时间的间隔。
+        :param Duration: 轉碼時長，單位：分鍾。
+注意：因推流過程中可能有中斷重推情況，此處時長爲真實轉碼時長累加值，并非結束時間和開始時間的間隔。
         :type Duration: int
-        :param ModuleCodec: 编码方式，带模块，
-示例：
-liveprocessor_H264：直播转码-H264，
-liveprocessor_H265： 直播转码-H265，
-topspeed_H264：极速高清-H264，
-topspeed_H265：极速高清-H265。
+        :param ModuleCodec: 編碼方式，帶模組，
+範例：
+liveprocessor_H264：直播轉碼-H264，
+liveprocessor_H265： 直播轉碼-H265，
+topspeed_H264：極速高清-H264，
+topspeed_H265：極速高清-H265。
         :type ModuleCodec: str
-        :param Bitrate: 码率。
+        :param Bitrate: 碼率。
         :type Bitrate: int
-        :param Type: 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
+        :param Type: 類型，包含：轉碼（Transcode），混流（MixStream），浮水印（WaterMark）。
         :type Type: str
         :param PushDomain: 推流域名。
         :type PushDomain: str
@@ -7461,7 +7461,7 @@ topspeed_H265：极速高清-H265。
 
 
 class UnBindLiveDomainCertRequest(AbstractModel):
-    """UnBindLiveDomainCert请求参数结构体
+    """UnBindLiveDomainCert請求參數結構體
 
     """
 
@@ -7478,13 +7478,13 @@ class UnBindLiveDomainCertRequest(AbstractModel):
 
 
 class UnBindLiveDomainCertResponse(AbstractModel):
-    """UnBindLiveDomainCert返回参数结构体
+    """UnBindLiveDomainCert返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -7495,26 +7495,26 @@ class UnBindLiveDomainCertResponse(AbstractModel):
 
 
 class UpdateLiveWatermarkRequest(AbstractModel):
-    """UpdateLiveWatermark请求参数结构体
+    """UpdateLiveWatermark請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param WatermarkId: 水印 ID。
-在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
+        :param WatermarkId: 浮水印 ID。
+在添加浮水印介面 [AddLiveWatermark](/document/product/267/30154) 調用返回值中獲取水印 ID。
         :type WatermarkId: int
-        :param PictureUrl: 水印图片 URL。
+        :param PictureUrl: 浮水印圖片 URL。
         :type PictureUrl: str
-        :param XPosition: 显示位置，X轴偏移，默认 0。
+        :param XPosition: 顯示位置，X軸偏移，預設 0。
         :type XPosition: int
-        :param YPosition: 显示位置，Y轴偏移，默认 0。
+        :param YPosition: 顯示位置，Y軸偏移，預設 0。
         :type YPosition: int
-        :param WatermarkName: 水印名称。
+        :param WatermarkName: 浮水印名稱。
         :type WatermarkName: str
-        :param Width: 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
+        :param Width: 浮水印寬度，占直播原始畫面寬度百分比，建議高寬只設置一項，另外一項會自适應縮放，避免變形。預設原始寬度。
         :type Width: int
-        :param Height: 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
+        :param Height: 浮水印高度，占直播原始畫面寬度百分比，建議高寬只設置一項，另外一項會自适應縮放，避免變形。預設原始高度。
         :type Height: int
         """
         self.WatermarkId = None
@@ -7537,13 +7537,13 @@ class UpdateLiveWatermarkRequest(AbstractModel):
 
 
 class UpdateLiveWatermarkResponse(AbstractModel):
-    """UpdateLiveWatermark返回参数结构体
+    """UpdateLiveWatermark返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -7554,29 +7554,29 @@ class UpdateLiveWatermarkResponse(AbstractModel):
 
 
 class WatermarkInfo(AbstractModel):
-    """水印信息。
+    """浮水印訊息。
 
     """
 
     def __init__(self):
         """
-        :param WatermarkId: 水印 ID。
+        :param WatermarkId: 浮水印 ID。
         :type WatermarkId: int
-        :param PictureUrl: 水印图片 URL。
+        :param PictureUrl: 浮水印圖片 URL。
         :type PictureUrl: str
-        :param XPosition: 显示位置，X 轴偏移。
+        :param XPosition: 顯示位置，X 軸偏移。
         :type XPosition: int
-        :param YPosition: 显示位置，Y 轴偏移。
+        :param YPosition: 顯示位置，Y 軸偏移。
         :type YPosition: int
-        :param WatermarkName: 水印名称。
+        :param WatermarkName: 浮水印名稱。
         :type WatermarkName: str
-        :param Status: 当前状态。0：未使用，1:使用中。
+        :param Status: 當前狀态。0：未使用，1:使用中。
         :type Status: int
-        :param CreateTime: 添加时间。
+        :param CreateTime: 添加時間。
         :type CreateTime: str
-        :param Width: 水印宽。
+        :param Width: 浮水印寬。
         :type Width: int
-        :param Height: 水印高。
+        :param Height: 浮水印高。
         :type Height: int
         """
         self.WatermarkId = None

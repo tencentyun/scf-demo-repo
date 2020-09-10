@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: mysql_backup_to_cos
   src: ./
-  description: MySQL data backup to COS. MySQL数据备份到COS
+  description: MySQL data backup to COS. MySQL數據備份到COS
   handler: mysql_backup_to_cos.main_handler
   runtime: Python2.7
   namespace: default

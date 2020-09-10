@@ -26,9 +26,9 @@ class PartnersClient(AbstractClient):
 
 
     def AgentPayDeals(self, request):
-        """代理商支付订单接口，支持自付/代付
+        """代理商支付訂單介面，支援自付/代付
 
-        :param request: 调用AgentPayDeals所需参数的结构体。
+        :param request: 調用AgentPayDeals所需參數的結構體。
         :type request: :class:`tencentcloud.partners.v20180321.models.AgentPayDealsRequest`
         :rtype: :class:`tencentcloud.partners.v20180321.models.AgentPayDealsResponse`
 
@@ -54,9 +54,9 @@ class PartnersClient(AbstractClient):
 
 
     def AgentTransferMoney(self, request):
-        """为合作伙伴提供转账给客户能力。仅支持合作伙伴为自己名下客户转账。
+        """爲合作夥伴提供轉賬給客戶能力。僅支援合作夥伴爲自己名下客戶轉賬。
 
-        :param request: 调用AgentTransferMoney所需参数的结构体。
+        :param request: 調用AgentTransferMoney所需參數的結構體。
         :type request: :class:`tencentcloud.partners.v20180321.models.AgentTransferMoneyRequest`
         :rtype: :class:`tencentcloud.partners.v20180321.models.AgentTransferMoneyResponse`
 
@@ -82,9 +82,9 @@ class PartnersClient(AbstractClient):
 
 
     def AuditApplyClient(self, request):
-        """代理商可以审核其名下申请中代客
+        """代理商可以審核其名下申請中代客
 
-        :param request: 调用AuditApplyClient所需参数的结构体。
+        :param request: 調用AuditApplyClient所需參數的結構體。
         :type request: :class:`tencentcloud.partners.v20180321.models.AuditApplyClientRequest`
         :rtype: :class:`tencentcloud.partners.v20180321.models.AuditApplyClientResponse`
 
@@ -110,9 +110,9 @@ class PartnersClient(AbstractClient):
 
 
     def DescribeAgentAuditedClients(self, request):
-        """查询已审核客户列表
+        """查詢已審核客戶清單
 
-        :param request: 调用DescribeAgentAuditedClients所需参数的结构体。
+        :param request: 調用DescribeAgentAuditedClients所需參數的結構體。
         :type request: :class:`tencentcloud.partners.v20180321.models.DescribeAgentAuditedClientsRequest`
         :rtype: :class:`tencentcloud.partners.v20180321.models.DescribeAgentAuditedClientsResponse`
 
@@ -138,9 +138,9 @@ class PartnersClient(AbstractClient):
 
 
     def DescribeAgentBills(self, request):
-        """代理商可查询自己及名下代客所有业务明细
+        """代理商可查詢自己及名下代客所有業務明細
 
-        :param request: 调用DescribeAgentBills所需参数的结构体。
+        :param request: 調用DescribeAgentBills所需參數的結構體。
         :type request: :class:`tencentcloud.partners.v20180321.models.DescribeAgentBillsRequest`
         :rtype: :class:`tencentcloud.partners.v20180321.models.DescribeAgentBillsResponse`
 
@@ -166,9 +166,9 @@ class PartnersClient(AbstractClient):
 
 
     def DescribeAgentClients(self, request):
-        """代理商可查询自己名下待审核客户列表
+        """代理商可查詢自己名下待審核客戶清單
 
-        :param request: 调用DescribeAgentClients所需参数的结构体。
+        :param request: 調用DescribeAgentClients所需參數的結構體。
         :type request: :class:`tencentcloud.partners.v20180321.models.DescribeAgentClientsRequest`
         :rtype: :class:`tencentcloud.partners.v20180321.models.DescribeAgentClientsResponse`
 
@@ -194,9 +194,9 @@ class PartnersClient(AbstractClient):
 
 
     def DescribeAgentDealsCache(self, request):
-        """供超大型代理商（代客数量>=3000 ）拉取缓存的全量客户订单。
+        """供超大型代理商（代客數量>=3000 ）拉取快取的全量客戶訂單。
 
-        :param request: 调用DescribeAgentDealsCache所需参数的结构体。
+        :param request: 調用DescribeAgentDealsCache所需參數的結構體。
         :type request: :class:`tencentcloud.partners.v20180321.models.DescribeAgentDealsCacheRequest`
         :rtype: :class:`tencentcloud.partners.v20180321.models.DescribeAgentDealsCacheResponse`
 
@@ -222,9 +222,9 @@ class PartnersClient(AbstractClient):
 
 
     def DescribeAgentPayDeals(self, request):
-        """可以查询代理商代付的所有订单
+        """可以查詢代理商代付的所有訂單
 
-        :param request: 调用DescribeAgentPayDeals所需参数的结构体。
+        :param request: 調用DescribeAgentPayDeals所需參數的結構體。
         :type request: :class:`tencentcloud.partners.v20180321.models.DescribeAgentPayDealsRequest`
         :rtype: :class:`tencentcloud.partners.v20180321.models.DescribeAgentPayDealsResponse`
 
@@ -250,9 +250,9 @@ class PartnersClient(AbstractClient):
 
 
     def DescribeClientBalance(self, request):
-        """为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
+        """爲合作夥伴提供查詢客戶餘額能力。調用者必須是合作夥伴，只能查詢自己名下客戶餘額
 
-        :param request: 调用DescribeClientBalance所需参数的结构体。
+        :param request: 調用DescribeClientBalance所需參數的結構體。
         :type request: :class:`tencentcloud.partners.v20180321.models.DescribeClientBalanceRequest`
         :rtype: :class:`tencentcloud.partners.v20180321.models.DescribeClientBalanceResponse`
 
@@ -278,9 +278,9 @@ class PartnersClient(AbstractClient):
 
 
     def DescribeRebateInfos(self, request):
-        """代理商可查询自己名下全部返佣信息
+        """代理商可查詢自己名下全部返傭訊息
 
-        :param request: 调用DescribeRebateInfos所需参数的结构体。
+        :param request: 調用DescribeRebateInfos所需參數的結構體。
         :type request: :class:`tencentcloud.partners.v20180321.models.DescribeRebateInfosRequest`
         :rtype: :class:`tencentcloud.partners.v20180321.models.DescribeRebateInfosResponse`
 
@@ -306,9 +306,9 @@ class PartnersClient(AbstractClient):
 
 
     def DescribeSalesmans(self, request):
-        """代理商查询名下业务员列表信息
+        """代理商查詢名下業務員清單訊息
 
-        :param request: 调用DescribeSalesmans所需参数的结构体。
+        :param request: 調用DescribeSalesmans所需參數的結構體。
         :type request: :class:`tencentcloud.partners.v20180321.models.DescribeSalesmansRequest`
         :rtype: :class:`tencentcloud.partners.v20180321.models.DescribeSalesmansResponse`
 
@@ -334,9 +334,9 @@ class PartnersClient(AbstractClient):
 
 
     def ModifyClientRemark(self, request):
-        """代理商可以对名下客户添加备注、修改备注
+        """代理商可以對名下客戶添加備注、修改備注
 
-        :param request: 调用ModifyClientRemark所需参数的结构体。
+        :param request: 調用ModifyClientRemark所需參數的結構體。
         :type request: :class:`tencentcloud.partners.v20180321.models.ModifyClientRemarkRequest`
         :rtype: :class:`tencentcloud.partners.v20180321.models.ModifyClientRemarkResponse`
 

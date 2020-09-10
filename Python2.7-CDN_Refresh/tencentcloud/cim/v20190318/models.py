@@ -17,21 +17,21 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class DescribeSdkAppidRequest(AbstractModel):
-    """DescribeSdkAppid请求参数结构体
+    """DescribeSdkAppid請求參數結構體
 
     """
 
 
 class DescribeSdkAppidResponse(AbstractModel):
-    """DescribeSdkAppid返回参数结构体
+    """DescribeSdkAppid返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SdkAppids: 表示 appid 对应的 SdkAppid 的数据
+        :param SdkAppids: 表示 appid 對應的 SdkAppid 的數據
         :type SdkAppids: list of int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SdkAppids = None

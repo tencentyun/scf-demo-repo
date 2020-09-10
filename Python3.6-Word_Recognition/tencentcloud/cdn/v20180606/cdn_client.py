@@ -26,18 +26,18 @@ class CdnClient(AbstractClient):
 
 
     def DescribeCdnData(self, request):
-        """DescribeCdnData 用于查询 CDN 实时访问监控数据，支持以下指标查询：
+        """DescribeCdnData 用于查詢 CDN 實時訪問監控數據，支援以下指标查詢：
 
-        + 流量（单位为 byte）
-        + 带宽（单位为 bps）
-        + 请求数（单位为 次）
-        + 流量命中率（单位为 %，小数点后保留两位）
-        + 状态码 2xx 汇总及各 2 开头状态码明细（单位为 个）
-        + 状态码 3xx 汇总及各 3 开头状态码明细（单位为 个）
-        + 状态码 4xx 汇总及各 4 开头状态码明细（单位为 个）
-        + 状态码 5xx 汇总及各 5 开头状态码明细（单位为 个）
+        + 流量（單位爲 byte）
+        + 頻寬（單位爲 bps）
+        + 請求數（單位爲 次）
+        + 流量命中率（單位爲 %，小數點後保留兩位）
+        + 狀态碼 2xx 匯總及各 2 開頭狀态碼明細（單位爲 個）
+        + 狀态碼 3xx 匯總及各 3 開頭狀态碼明細（單位爲 個）
+        + 狀态碼 4xx 匯總及各 4 開頭狀态碼明細（單位爲 個）
+        + 狀态碼 5xx 匯總及各 5 開頭狀态碼明細（單位爲 個）
 
-        :param request: 调用DescribeCdnData所需参数的结构体。
+        :param request: 調用DescribeCdnData所需參數的結構體。
         :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeCdnDataRequest`
         :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeCdnDataResponse`
 
@@ -63,12 +63,12 @@ class CdnClient(AbstractClient):
 
 
     def DescribeIpVisit(self, request):
-        """DescribeIpVisit 用于查询 5 分钟活跃用户数，及日活跃用户数明细
+        """DescribeIpVisit 用于查詢 5 分鍾活躍用戶數，及日活躍用戶數明細
 
-        + 5 分钟活跃用户数：根据日志中客户端 IP，5 分钟粒度去重统计
-        + 日活跃用户数：根据日志中客户端 IP，按天粒度去重统计
+        + 5 分鍾活躍用戶數：根據日志中用戶端 IP，5 分鍾粒度去重統計
+        + 日活躍用戶數：根據日志中用戶端 IP，按天粒度去重統計
 
-        :param request: 调用DescribeIpVisit所需参数的结构体。
+        :param request: 調用DescribeIpVisit所需參數的結構體。
         :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeIpVisitRequest`
         :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeIpVisitResponse`
 
@@ -94,9 +94,9 @@ class CdnClient(AbstractClient):
 
 
     def DescribeMapInfo(self, request):
-        """DescribeMapInfo 用于查询省份对应的 ID，运营商对应的 ID 信息。
+        """DescribeMapInfo 用于查詢省份對應的 ID，運營商對應的 ID 訊息。
 
-        :param request: 调用DescribeMapInfo所需参数的结构体。
+        :param request: 調用DescribeMapInfo所需參數的結構體。
         :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeMapInfoRequest`
         :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeMapInfoResponse`
 
@@ -122,19 +122,19 @@ class CdnClient(AbstractClient):
 
 
     def DescribeOriginData(self, request):
-        """DescribeOriginData 用于查询 CDN 实时回源监控数据，支持以下指标查询：
+        """DescribeOriginData 用于查詢 CDN 實時回源監控數據，支援以下指标查詢：
 
-        + 回源流量（单位为 byte）
-        + 回源带宽（单位为 bps）
-        + 回源请求数（单位为 次）
-        + 回源失败请求数（单位为 次）
-        + 回源失败率（单位为 %，小数点后保留两位）
-        + 回源状态码 2xx 汇总及各 2 开头回源状态码明细（单位为 个）
-        + 回源状态码 3xx 汇总及各 3 开头回源状态码明细（单位为 个）
-        + 回源状态码 4xx 汇总及各 4 开头回源状态码明细（单位为 个）
-        + 回源状态码 5xx 汇总及各 5 开头回源状态码明细（单位为 个）
+        + 回源流量（單位爲 byte）
+        + 回源頻寬（單位爲 bps）
+        + 回源請求數（單位爲 次）
+        + 回源失敗請求數（單位爲 次）
+        + 回源失敗率（單位爲 %，小數點後保留兩位）
+        + 回源狀态碼 2xx 匯總及各 2 開頭回源狀态碼明細（單位爲 個）
+        + 回源狀态碼 3xx 匯總及各 3 開頭回源狀态碼明細（單位爲 個）
+        + 回源狀态碼 4xx 匯總及各 4 開頭回源狀态碼明細（單位爲 個）
+        + 回源狀态碼 5xx 匯總及各 5 開頭回源狀态碼明細（單位爲 個）
 
-        :param request: 调用DescribeOriginData所需参数的结构体。
+        :param request: 調用DescribeOriginData所需參數的結構體。
         :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeOriginDataRequest`
         :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeOriginDataResponse`
 
@@ -160,9 +160,9 @@ class CdnClient(AbstractClient):
 
 
     def DescribePayType(self, request):
-        """DescribePayType 用于查询用户的计费类型，计费周期等信息。
+        """DescribePayType 用于查詢用戶的計費類型，計費週期等訊息。
 
-        :param request: 调用DescribePayType所需参数的结构体。
+        :param request: 調用DescribePayType所需參數的結構體。
         :type request: :class:`tencentcloud.cdn.v20180606.models.DescribePayTypeRequest`
         :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribePayTypeResponse`
 
@@ -188,9 +188,9 @@ class CdnClient(AbstractClient):
 
 
     def DisableCaches(self, request):
-        """DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，全网访问会直接返回 403。（接口尚在内测中，暂未全量开放使用）
+        """DisableCaches 用于禁用 CDN 上指定 URL 的訪問，禁用完成後，全網訪問會直接返回 403。（介面尚在内測中，暫未全量開放使用）
 
-        :param request: 调用DisableCaches所需参数的结构体。
+        :param request: 調用DisableCaches所需參數的結構體。
         :type request: :class:`tencentcloud.cdn.v20180606.models.DisableCachesRequest`
         :rtype: :class:`tencentcloud.cdn.v20180606.models.DisableCachesResponse`
 
@@ -216,9 +216,9 @@ class CdnClient(AbstractClient):
 
 
     def EnableCaches(self, request):
-        """EnableCaches 用于解禁手工封禁的 URL，解禁成功后，全网生效时间约 5~10 分钟。（接口尚在内测中，暂未全量开放使用）
+        """EnableCaches 用于解禁手工封禁的 URL，解禁成功後，全網生效時間約 5~10 分鍾。（介面尚在内測中，暫未全量開放使用）
 
-        :param request: 调用EnableCaches所需参数的结构体。
+        :param request: 調用EnableCaches所需參數的結構體。
         :type request: :class:`tencentcloud.cdn.v20180606.models.EnableCachesRequest`
         :rtype: :class:`tencentcloud.cdn.v20180606.models.EnableCachesResponse`
 
@@ -244,9 +244,9 @@ class CdnClient(AbstractClient):
 
 
     def GetDisableRecords(self, request):
-        """GetDisableRecords 用户查询资源禁用历史，及 URL 当前状态。（接口尚在内测中，暂未全量开放使用）
+        """GetDisableRecords 用戶查詢資源禁用曆史，及 URL 當前狀态。（介面尚在内測中，暫未全量開放使用）
 
-        :param request: 调用GetDisableRecords所需参数的结构体。
+        :param request: 調用GetDisableRecords所需參數的結構體。
         :type request: :class:`tencentcloud.cdn.v20180606.models.GetDisableRecordsRequest`
         :rtype: :class:`tencentcloud.cdn.v20180606.models.GetDisableRecordsResponse`
 
@@ -272,15 +272,15 @@ class CdnClient(AbstractClient):
 
 
     def ListTopData(self, request):
-        """ListTopData 通过入参 Metric 和 Filter 组合不同，可以查询以下排序数据：
+        """ListTopData 通過入參 Metric 和 Filter 組合不同，可以查詢以下排序數據：
 
-        + 依据总流量、总请求数对访问 URL 排序，从大至小返回 TOP 1000 URL
-        + 依据总流量、总请求数对客户端省份排序，从大至小返回省份列表
-        + 依据总流量、总请求数对客户端运营商排序，从大至小返回运营商列表
-        + 依据总流量、峰值带宽、总请求数、平均命中率、2XX/3XX/4XX/5XX 状态码对域名排序，从大至小返回域名列表
-        + 依据总回源流量、回源峰值带宽、总回源请求数、平均回源失败率、2XX/3XX/4XX/5XX 回源状态码对域名排序，从大至小返回域名列表
+        + 依據總流量、總請求數對訪問 URL 排序，從大至小返回 TOP 1000 URL
+        + 依據總流量、總請求數對用戶端省份排序，從大至小返回省份清單
+        + 依據總流量、總請求數對用戶端運營商排序，從大至小返回運營商清單
+        + 依據總流量、峰值頻寬、總請求數、平均命中率、2XX/3XX/4XX/5XX 狀态碼對域名排序，從大至小返回域名清單
+        + 依據總回源流量、回源峰值頻寬、總回源請求數、平均回源失敗率、2XX/3XX/4XX/5XX 回源狀态碼對域名排序，從大至小返回域名清單
 
-        :param request: 调用ListTopData所需参数的结构体。
+        :param request: 調用ListTopData所需參數的結構體。
         :type request: :class:`tencentcloud.cdn.v20180606.models.ListTopDataRequest`
         :rtype: :class:`tencentcloud.cdn.v20180606.models.ListTopDataResponse`
 

@@ -26,7 +26,7 @@ class TciClient(AbstractClient):
 
 
     def AIAssistant(self, request):
-        """提供 AI 助教基础版本功能接口
+        """提供 AI 助教基礎版本功能介面
 
         :param request: Request instance for AIAssistant.
         :type request: :class:`tencentcloud.tci.v20190318.models.AIAssistantRequest`
@@ -54,7 +54,7 @@ class TciClient(AbstractClient):
 
 
     def CancelTask(self, request):
-        """用于取消已经提交的任务，目前只支持图像任务。
+        """用于取消已經提交的任務，目前只支援圖像任務。
 
         :param request: Request instance for CancelTask.
         :type request: :class:`tencentcloud.tci.v20190318.models.CancelTaskRequest`
@@ -82,7 +82,7 @@ class TciClient(AbstractClient):
 
 
     def CheckFacePhoto(self, request):
-        """检查人脸图片是否合法
+        """檢查人臉圖片是否合法
 
         :param request: Request instance for CheckFacePhoto.
         :type request: :class:`tencentcloud.tci.v20190318.models.CheckFacePhotoRequest`
@@ -110,7 +110,7 @@ class TciClient(AbstractClient):
 
 
     def CreateFace(self, request):
-        """创建人脸
+        """創建人臉
 
         :param request: Request instance for CreateFace.
         :type request: :class:`tencentcloud.tci.v20190318.models.CreateFaceRequest`
@@ -138,7 +138,7 @@ class TciClient(AbstractClient):
 
 
     def CreateLibrary(self, request):
-        """创建人员库
+        """創建人員庫
 
         :param request: Request instance for CreateLibrary.
         :type request: :class:`tencentcloud.tci.v20190318.models.CreateLibraryRequest`
@@ -166,7 +166,7 @@ class TciClient(AbstractClient):
 
 
     def CreatePerson(self, request):
-        """创建人员
+        """創建人員
 
         :param request: Request instance for CreatePerson.
         :type request: :class:`tencentcloud.tci.v20190318.models.CreatePersonRequest`
@@ -194,7 +194,7 @@ class TciClient(AbstractClient):
 
 
     def CreateVocab(self, request):
-        """创建词汇
+        """創建詞匯
 
         :param request: Request instance for CreateVocab.
         :type request: :class:`tencentcloud.tci.v20190318.models.CreateVocabRequest`
@@ -222,7 +222,7 @@ class TciClient(AbstractClient):
 
 
     def CreateVocabLib(self, request):
-        """建立词汇库
+        """建立詞匯庫
 
         :param request: Request instance for CreateVocabLib.
         :type request: :class:`tencentcloud.tci.v20190318.models.CreateVocabLibRequest`
@@ -250,7 +250,7 @@ class TciClient(AbstractClient):
 
 
     def DeleteFace(self, request):
-        """删除人脸
+        """删除人臉
 
         :param request: Request instance for DeleteFace.
         :type request: :class:`tencentcloud.tci.v20190318.models.DeleteFaceRequest`
@@ -278,7 +278,7 @@ class TciClient(AbstractClient):
 
 
     def DeleteLibrary(self, request):
-        """删除人员库
+        """删除人員庫
 
         :param request: Request instance for DeleteLibrary.
         :type request: :class:`tencentcloud.tci.v20190318.models.DeleteLibraryRequest`
@@ -306,7 +306,7 @@ class TciClient(AbstractClient):
 
 
     def DeletePerson(self, request):
-        """删除人员
+        """删除人員
 
         :param request: Request instance for DeletePerson.
         :type request: :class:`tencentcloud.tci.v20190318.models.DeletePersonRequest`
@@ -334,7 +334,7 @@ class TciClient(AbstractClient):
 
 
     def DeleteVocab(self, request):
-        """删除词汇
+        """删除詞匯
 
         :param request: Request instance for DeleteVocab.
         :type request: :class:`tencentcloud.tci.v20190318.models.DeleteVocabRequest`
@@ -362,7 +362,7 @@ class TciClient(AbstractClient):
 
 
     def DeleteVocabLib(self, request):
-        """删除词汇库
+        """删除詞匯庫
 
         :param request: Request instance for DeleteVocabLib.
         :type request: :class:`tencentcloud.tci.v20190318.models.DeleteVocabLibRequest`
@@ -390,7 +390,7 @@ class TciClient(AbstractClient):
 
 
     def DescribeAITaskResult(self, request):
-        """获取标准化接口任务结果
+        """獲取标準化介面任務結果
 
         :param request: Request instance for DescribeAITaskResult.
         :type request: :class:`tencentcloud.tci.v20190318.models.DescribeAITaskResultRequest`
@@ -418,7 +418,7 @@ class TciClient(AbstractClient):
 
 
     def DescribeAttendanceResult(self, request):
-        """人脸考勤查询结果
+        """人臉考勤查詢結果
 
         :param request: Request instance for DescribeAttendanceResult.
         :type request: :class:`tencentcloud.tci.v20190318.models.DescribeAttendanceResultRequest`
@@ -446,7 +446,7 @@ class TciClient(AbstractClient):
 
 
     def DescribeAudioTask(self, request):
-        """音频评估任务信息查询接口，异步查询客户提交的请求的结果。
+        """音訊評估任務訊息查詢介面，異步查詢客戶提交的請求的結果。
 
         :param request: Request instance for DescribeAudioTask.
         :type request: :class:`tencentcloud.tci.v20190318.models.DescribeAudioTaskRequest`
@@ -474,7 +474,7 @@ class TciClient(AbstractClient):
 
 
     def DescribeConversationTask(self, request):
-        """音频对话任务评估任务信息查询接口，异步查询客户提交的请求的结果。
+        """音訊對話任務評估任務訊息查詢介面，異步查詢客戶提交的請求的結果。
 
         :param request: Request instance for DescribeConversationTask.
         :type request: :class:`tencentcloud.tci.v20190318.models.DescribeConversationTaskRequest`
@@ -502,7 +502,7 @@ class TciClient(AbstractClient):
 
 
     def DescribeHighlightResult(self, request):
-        """视频精彩集锦结果查询接口，异步查询客户提交的请求的结果。
+        """視訊精彩集錦結果查詢介面，異步查詢客戶提交的請求的結果。
 
         :param request: Request instance for DescribeHighlightResult.
         :type request: :class:`tencentcloud.tci.v20190318.models.DescribeHighlightResultRequest`
@@ -530,7 +530,7 @@ class TciClient(AbstractClient):
 
 
     def DescribeImageTask(self, request):
-        """拉取任务详情
+        """拉取任務詳情
 
         :param request: Request instance for DescribeImageTask.
         :type request: :class:`tencentcloud.tci.v20190318.models.DescribeImageTaskRequest`
@@ -558,7 +558,7 @@ class TciClient(AbstractClient):
 
 
     def DescribeImageTaskStatistic(self, request):
-        """获取图像任务统计信息
+        """獲取圖像任務統計訊息
 
         :param request: Request instance for DescribeImageTaskStatistic.
         :type request: :class:`tencentcloud.tci.v20190318.models.DescribeImageTaskStatisticRequest`
@@ -586,7 +586,7 @@ class TciClient(AbstractClient):
 
 
     def DescribeLibraries(self, request):
-        """获取人员库列表
+        """獲取人員庫清單
 
         :param request: Request instance for DescribeLibraries.
         :type request: :class:`tencentcloud.tci.v20190318.models.DescribeLibrariesRequest`
@@ -614,7 +614,7 @@ class TciClient(AbstractClient):
 
 
     def DescribePerson(self, request):
-        """获取人员详情
+        """獲取人員詳情
 
         :param request: Request instance for DescribePerson.
         :type request: :class:`tencentcloud.tci.v20190318.models.DescribePersonRequest`
@@ -642,7 +642,7 @@ class TciClient(AbstractClient):
 
 
     def DescribePersons(self, request):
-        """拉取人员列表
+        """拉取人員清單
 
         :param request: Request instance for DescribePersons.
         :type request: :class:`tencentcloud.tci.v20190318.models.DescribePersonsRequest`
@@ -670,7 +670,7 @@ class TciClient(AbstractClient):
 
 
     def DescribeVocab(self, request):
-        """查询词汇
+        """查詢詞匯
 
         :param request: Request instance for DescribeVocab.
         :type request: :class:`tencentcloud.tci.v20190318.models.DescribeVocabRequest`
@@ -698,7 +698,7 @@ class TciClient(AbstractClient):
 
 
     def DescribeVocabLib(self, request):
-        """查询词汇库
+        """查詢詞匯庫
 
         :param request: Request instance for DescribeVocabLib.
         :type request: :class:`tencentcloud.tci.v20190318.models.DescribeVocabLibRequest`
@@ -726,7 +726,7 @@ class TciClient(AbstractClient):
 
 
     def ModifyLibrary(self, request):
-        """修改人员库信息
+        """修改人員庫訊息
 
         :param request: Request instance for ModifyLibrary.
         :type request: :class:`tencentcloud.tci.v20190318.models.ModifyLibraryRequest`
@@ -754,7 +754,7 @@ class TciClient(AbstractClient):
 
 
     def ModifyPerson(self, request):
-        """修改人员信息
+        """修改人員訊息
 
         :param request: Request instance for ModifyPerson.
         :type request: :class:`tencentcloud.tci.v20190318.models.ModifyPersonRequest`
@@ -782,7 +782,7 @@ class TciClient(AbstractClient):
 
 
     def SubmitAudioTask(self, request):
-        """音频任务提交接口
+        """音訊任務提交介面
 
         :param request: Request instance for SubmitAudioTask.
         :type request: :class:`tencentcloud.tci.v20190318.models.SubmitAudioTaskRequest`
@@ -810,20 +810,20 @@ class TciClient(AbstractClient):
 
 
     def SubmitCheckAttendanceTask(self, request):
-        """提交人员考勤任务，支持包括点播和直播资源；支持通过DescribeAttendanceResult查询结果，也支持通过NoticeUrl设置考勤回调结果，回调结果结构如下：
-        ##### 回调事件结构
-         | 参数名称 | 类型 | 描述 |
+        """提交人員考勤任務，支援包括點播和直播資源；支援通過DescribeAttendanceResult查詢結果，也支援通過NoticeUrl設置考勤回調結果，回調結果結構如下：
+        ##### 回調事件結構
+         | 參數名稱 | 類型 | 描述 |
          | ----  | ---  | ------  |
-         | jobid | Integer | 任务ID |
-         | person_info | array of PersonInfo | 识别到的人员列表 |
-        #####子结构PersonInfo
-         | 参数名称 | 类型 | 描述 |
+         | jobid | Integer | 任務ID |
+         | person_info | array of PersonInfo | 識别到的人員清單 |
+        #####子結構PersonInfo
+         | 參數名稱 | 類型 | 描述 |
          | ----  | ---  | ------  |
-         | traceid | String | 可用于区分同一路视频流下的不同陌生人 |
-         | personid | String | 识别到的人员ID，如果是陌生人则返回空串 |
-         | libid | String | 识别到的人员所在的库ID，如果是陌生人则返回空串 |
-         | timestamp | uint64 | 识别到人脸的绝对时间戳，单位ms |
-         | image_url | string | 识别到人脸的事件抓图的下载地址，不长期保存，需要请及时下载 |
+         | traceid | String | 可用于區分同一路視訊流下的不同陌生人 |
+         | personid | String | 識别到的人員ID，如果是陌生人則返回空串 |
+         | libid | String | 識别到的人員所在的庫ID，如果是陌生人則返回空串 |
+         | timestamp | uint64 | 識别到人臉的絕對時間戳，單位ms |
+         | image_url | string | 識别到人臉的事件抓圖的下載網址，不長期保存，需要請及時下載 |
 
         :param request: Request instance for SubmitCheckAttendanceTask.
         :type request: :class:`tencentcloud.tci.v20190318.models.SubmitCheckAttendanceTaskRequest`
@@ -851,7 +851,7 @@ class TciClient(AbstractClient):
 
 
     def SubmitCheckAttendanceTaskPlus(self, request):
-        """支持多路视频流，提交高级人员考勤任务
+        """支援多路視訊流，提交高級人員考勤任務
 
         :param request: Request instance for SubmitCheckAttendanceTaskPlus.
         :type request: :class:`tencentcloud.tci.v20190318.models.SubmitCheckAttendanceTaskPlusRequest`
@@ -879,7 +879,7 @@ class TciClient(AbstractClient):
 
 
     def SubmitConversationTask(self, request):
-        """对话任务分析接口
+        """對話任務分析介面
 
         :param request: Request instance for SubmitConversationTask.
         :type request: :class:`tencentcloud.tci.v20190318.models.SubmitConversationTaskRequest`
@@ -907,8 +907,8 @@ class TciClient(AbstractClient):
 
 
     def SubmitDoubleVideoHighlights(self, request):
-        """发起双路视频生成精彩集锦接口。该接口可以通过客户传入的学生音视频及老师视频两路Url，自动生成一堂课程的精彩集锦。需要通过DescribeHighlightResult
-        接口获取生成结果。
+        """發起雙路視訊生成精彩集錦介面。該介面可以通過客戶傳入的學生影音及老師視訊兩路Url，自動生成一堂課程的精彩集錦。需要通過DescribeHighlightResult
+        介面獲取生成結果。
 
         :param request: Request instance for SubmitDoubleVideoHighlights.
         :type request: :class:`tencentcloud.tci.v20190318.models.SubmitDoubleVideoHighlightsRequest`
@@ -936,13 +936,13 @@ class TciClient(AbstractClient):
 
 
     def SubmitFullBodyClassTask(self, request):
-        """**传统课堂授课任务**：在此场景中，老师为站立授课，有白板或投影供老师展示课程内容，摄像头可以拍摄到老师的半身或者全身。拍摄视频为一路全局画面，且背景不动，要求画面稳定清晰。通过此接口可分析老师授课的行为及语音，以支持AI评教。
+        """**傳統課堂授課任務**：在此場景中，老師爲站立授課，有白板或投影供老師展示課程内容，攝像頭可以拍攝到老師的半身或者全身。拍攝視訊爲一路全局畫面，且背景不動，要求畫面穩定清晰。通過此介面可分析老師授課的行爲及語音，以支援AI評教。
 
-        **提供的功能接口有：**老师人脸识别、老师表情识别、老师肢体动作识别、语音识别。  可分析的指标维度包括：身份识别、正脸、侧脸、人脸坐标、人脸尺寸、高兴、中性、高兴、中性、惊讶、厌恶、恐惧、愤怒、蔑视、悲伤、正面讲解、写板书、指黑板、语音转文字、发音时长、非发音时长、音量、语速、指定关键词的使用等
+        **提供的功能介面有：**老師人臉識别、老師表情識别、老師肢體動作識别、語音識别。  可分析的指标維度包括：身份識别、正臉、側臉、人臉坐标、人臉尺寸、高興、中性、高興、中性、驚訝、厭惡、恐懼、憤怒、蔑視、悲傷、正面講解、寫板書、指黑板、語音轉文字、發音時長、非發音時長、音量、語速、指定關鍵詞的使用等
 
-        **对场景的要求为：**真实场景老师1人出现在画面中，全局画面且背景不动；人脸上下角度在20度以内，左右角度在15度以内，歪头角度在15度以内；光照均匀，无遮挡，人脸清晰可见；像素最好在 100X100 像素以上，但是图像整体质量不能超过1080p。
+        **對場景的要求爲：**真實場景老師1人出現在畫面中，全局畫面且背景不動；人臉上下角度在20度以内，左右角度在15度以内，歪頭角度在15度以内；光照均勻，無遮擋，人臉清晰可見；像素最好在 100X100 像素以上，但是圖像整體質量不能超過1080p。
 
-        **结果查询方式：**图像任务直接返回结果，点播及直播任务通过DescribeAITaskResult查询结果。
+        **結果查詢方式：**圖像任務直接返回結果，點播及直播任務通過DescribeAITaskResult查詢結果。
 
         :param request: Request instance for SubmitFullBodyClassTask.
         :type request: :class:`tencentcloud.tci.v20190318.models.SubmitFullBodyClassTaskRequest`
@@ -970,7 +970,7 @@ class TciClient(AbstractClient):
 
 
     def SubmitHighlights(self, request):
-        """发起视频生成精彩集锦接口。该接口可以通过客户传入的课程音频数据及相关策略（如微笑抽取，专注抽取等），自动生成一堂课程的精彩集锦。需要通过QueryHighlightResult接口获取生成结果。
+        """發起視訊生成精彩集錦介面。該介面可以通過客戶傳入的課程音訊數據及相關策略（如微笑抽取，專注抽取等），自動生成一堂課程的精彩集錦。需要通過QueryHighlightResult介面獲取生成結果。
 
         :param request: Request instance for SubmitHighlights.
         :type request: :class:`tencentcloud.tci.v20190318.models.SubmitHighlightsRequest`
@@ -998,7 +998,7 @@ class TciClient(AbstractClient):
 
 
     def SubmitImageTask(self, request):
-        """提交图像分析任务
+        """提交圖像分析任務
 
         :param request: Request instance for SubmitImageTask.
         :type request: :class:`tencentcloud.tci.v20190318.models.SubmitImageTaskRequest`
@@ -1026,7 +1026,7 @@ class TciClient(AbstractClient):
 
 
     def SubmitImageTaskPlus(self, request):
-        """高级图像分析任务，开放了图像任务里的所有开关，可以根据场景深度定制图像分析任务。支持的图像类别有，图片链接、图片二进制数据、点播链接和直播链接。
+        """高級圖像分析任務，開放了圖像任務裏的所有開關，可以根據場景深度定制圖像分析任務。支援的圖像類别有，圖片連結、圖片二進制數據、點播連結和直播連結。
 
         :param request: Request instance for SubmitImageTaskPlus.
         :type request: :class:`tencentcloud.tci.v20190318.models.SubmitImageTaskPlusRequest`
@@ -1054,14 +1054,14 @@ class TciClient(AbstractClient):
 
 
     def SubmitOneByOneClassTask(self, request):
-        """**提交在线1对1课堂任务**
-        对于在线1对1课堂，老师通过视频向学生授课，并且学生人数为1人。通过上传学生端的图像信息，可以获取学生的听课情况分析。 具体指一路全局画面且背景不动，有1位学生的头像或上半身的画面，要求画面稳定清晰。
+        """**提交在線1對1課堂任務**
+        對于在線1對1課堂，老師通過視訊向學生授課，并且學生人數爲1人。通過上傳學生端的圖像訊息，可以獲取學生的聽課情況分析。 具體指一路全局畫面且背景不動，有1位學生的頭像或上半身的畫面，要求畫面穩定清晰。
 
-        **提供的功能接口有：**学生人脸识别、学生表情识别、语音识别。可分析的指标维度包括：学生身份识别、正脸、侧脸、抬头、低头、人脸坐标、人脸尺寸、高兴、中性、高兴、中性、惊讶、厌恶、恐惧、愤怒、蔑视、悲伤、语音转文字、发音时长、非发音时长、音量、语速等。
+        **提供的功能介面有：**學生人臉識别、學生表情識别、語音識别。可分析的指标維度包括：學生身份識别、正臉、側臉、擡頭、低頭、人臉坐标、人臉尺寸、高興、中性、高興、中性、驚訝、厭惡、恐懼、憤怒、蔑視、悲傷、語音轉文字、發音時長、非發音時長、音量、語速等。
 
-        **对场景的要求为：**真实常规1v1授课场景，学生2人以下，全局画面且背景不动；人脸上下角度在20度以内，左右角度在15度以内，歪头角度在15度以内；光照均匀，无遮挡，人脸清晰可见；像素最好在 100X100 像素以上，但是图像整体质量不能超过1080p。
+        **對場景的要求爲：**真實常規1v1授課場景，學生2人以下，全局畫面且背景不動；人臉上下角度在20度以内，左右角度在15度以内，歪頭角度在15度以内；光照均勻，無遮擋，人臉清晰可見；像素最好在 100X100 像素以上，但是圖像整體質量不能超過1080p。
 
-        **结果查询方式：**图像任务直接返回结果，点播及直播任务通过DescribeAITaskResult查询结果。
+        **結果查詢方式：**圖像任務直接返回結果，點播及直播任務通過DescribeAITaskResult查詢結果。
 
         :param request: Request instance for SubmitOneByOneClassTask.
         :type request: :class:`tencentcloud.tci.v20190318.models.SubmitOneByOneClassTaskRequest`
@@ -1089,14 +1089,14 @@ class TciClient(AbstractClient):
 
 
     def SubmitOpenClassTask(self, request):
-        """**提交线下小班（无课桌）课任务**
-        线下小班课是指有学生无课桌的课堂，满座15人以下，全局画面且背景不动，能清晰看到。
+        """**提交線下小班（無課桌）課任務**
+        線下小班課是指有學生無課桌的課堂，滿座15人以下，全局畫面且背景不動，能清晰看到。
 
-        **提供的功能接口有：**学生人脸识别、学生表情识别、学生肢体动作识别。  可分析的指标维度包括：身份识别、正脸、侧脸、抬头、低头、高兴、中性、高兴、中性、惊讶、厌恶、恐惧、愤怒、蔑视、悲伤、站立、举手、坐着等。
+        **提供的功能介面有：**學生人臉識别、學生表情識别、學生肢體動作識别。  可分析的指标維度包括：身份識别、正臉、側臉、擡頭、低頭、高興、中性、高興、中性、驚訝、厭惡、恐懼、憤怒、蔑視、悲傷、站立、舉手、坐着等。
 
-        **对场景的要求为：**真实常规教室，满座15人以下，全局画面且背景不动；人脸上下角度在20度以内，左右角度在15度以内，歪头角度在15度以内；光照均匀，无遮挡，人脸清晰可见；像素最好在 100X100 像素以上但是图像整体质量不能超过1080p。
+        **對場景的要求爲：**真實常規教室，滿座15人以下，全局畫面且背景不動；人臉上下角度在20度以内，左右角度在15度以内，歪頭角度在15度以内；光照均勻，無遮擋，人臉清晰可見；像素最好在 100X100 像素以上但是圖像整體質量不能超過1080p。
 
-        **结果查询方式：**图像任务直接返回结果，点播及直播任务通过DescribeAITaskResult查询结果。
+        **結果查詢方式：**圖像任務直接返回結果，點播及直播任務通過DescribeAITaskResult查詢結果。
 
         :param request: Request instance for SubmitOpenClassTask.
         :type request: :class:`tencentcloud.tci.v20190318.models.SubmitOpenClassTaskRequest`
@@ -1124,13 +1124,13 @@ class TciClient(AbstractClient):
 
 
     def SubmitPartialBodyClassTask(self, request):
-        """**在线小班课任务**：此场景是在线授课场景，老师一般为坐着授课，摄像头可以拍摄到老师的头部及上半身。拍摄视频为一路全局画面，且背景不动，要求画面稳定清晰。通过此接口可分析老师授课的行为及语音，以支持AI评教。
+        """**在線小班課任務**：此場景是在線授課場景，老師一般爲坐着授課，攝像頭可以拍攝到老師的頭部及上半身。拍攝視訊爲一路全局畫面，且背景不動，要求畫面穩定清晰。通過此介面可分析老師授課的行爲及語音，以支援AI評教。
 
-        **提供的功能接口有：**老师人脸识别、老师表情识别、老师手势识别、光线识别、语音识别。 可分析的指标维度包括：身份识别、正脸、侧脸、人脸坐标、人脸尺寸、高兴、中性、高兴、中性、惊讶、厌恶、恐惧、愤怒、蔑视、悲伤、点赞手势、听你说手势、听我说手势、拿教具行为、语音转文字、发音时长、非发音时长、音量、语速、指定关键词的使用等
+        **提供的功能介面有：**老師人臉識别、老師表情識别、老師手勢識别、光線識别、語音識别。 可分析的指标維度包括：身份識别、正臉、側臉、人臉坐标、人臉尺寸、高興、中性、高興、中性、驚訝、厭惡、恐懼、憤怒、蔑視、悲傷、點贊手勢、聽你說手勢、聽我說手勢、拿教具行爲、語音轉文字、發音時長、非發音時長、音量、語速、指定關鍵詞的使用等
 
-        **对场景的要求为：**在线常规授课场景，全局画面且背景不动；人脸上下角度在20度以内，左右角度在15度以内，歪头角度在15度以内；光照均匀，无遮挡，人脸清晰可见；像素最好在 100X100 像素以上，但是图像整体质量不能超过1080p。
+        **對場景的要求爲：**在線常規授課場景，全局畫面且背景不動；人臉上下角度在20度以内，左右角度在15度以内，歪頭角度在15度以内；光照均勻，無遮擋，人臉清晰可見；像素最好在 100X100 像素以上，但是圖像整體質量不能超過1080p。
 
-        **结果查询方式：**图像任务直接返回结果，点播及直播任务通过DescribeAITaskResult查询结果。
+        **結果查詢方式：**圖像任務直接返回結果，點播及直播任務通過DescribeAITaskResult查詢結果。
 
         :param request: Request instance for SubmitPartialBodyClassTask.
         :type request: :class:`tencentcloud.tci.v20190318.models.SubmitPartialBodyClassTaskRequest`
@@ -1158,14 +1158,14 @@ class TciClient(AbstractClient):
 
 
     def SubmitTraditionalClassTask(self, request):
-        """**提交线下传统面授大班课（含课桌）任务。**
-        传统教室课堂是指有学生课堂有课桌的课堂，满座20-50人，全局画面且背景不动。
+        """**提交線下傳統面授大班課（含課桌）任務。**
+        傳統教室課堂是指有學生課堂有課桌的課堂，滿座20-50人，全局畫面且背景不動。
 
-        **提供的功能接口有：**学生人脸识别、学生表情识别、学生肢体动作识别。可分析的指标维度包括：学生身份识别、正脸、侧脸、抬头、低头、高兴、中性、高兴、中性、惊讶、厌恶、恐惧、愤怒、蔑视、悲伤、举手、站立、坐着、趴桌子、玩手机等
+        **提供的功能介面有：**學生人臉識别、學生表情識别、學生肢體動作識别。可分析的指标維度包括：學生身份識别、正臉、側臉、擡頭、低頭、高興、中性、高興、中性、驚訝、厭惡、恐懼、憤怒、蔑視、悲傷、舉手、站立、坐着、趴桌子、玩手機等
 
-        **对场景的要求为：**传统的学生上课教室，满座20-50人，全局画面且背景不动；人脸上下角度在20度以内，左右角度在15度以内，歪头角度在15度以内；光照均匀，无遮挡，人脸清晰可见；像素最好在 100X100 像素以上，但是图像整体质量不能超过1080p。
+        **對場景的要求爲：**傳統的學生上課教室，滿座20-50人，全局畫面且背景不動；人臉上下角度在20度以内，左右角度在15度以内，歪頭角度在15度以内；光照均勻，無遮擋，人臉清晰可見；像素最好在 100X100 像素以上，但是圖像整體質量不能超過1080p。
 
-        **结果查询方式：**图像任务直接返回结果，点播及直播任务通过DescribeAITaskResult查询结果。
+        **結果查詢方式：**圖像任務直接返回結果，點播及直播任務通過DescribeAITaskResult查詢結果。
 
 
         :param request: Request instance for SubmitTraditionalClassTask.
@@ -1194,7 +1194,7 @@ class TciClient(AbstractClient):
 
 
     def TransmitAudioStream(self, request):
-        """分析音频信息
+        """分析音訊訊息
 
         :param request: Request instance for TransmitAudioStream.
         :type request: :class:`tencentcloud.tci.v20190318.models.TransmitAudioStreamRequest`

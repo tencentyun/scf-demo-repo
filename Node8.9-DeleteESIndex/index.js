@@ -4,7 +4,7 @@ Node8.9-DeleteESIndex
 Reference: https://cloud.tencent.com/document/product/583/32553
 ***************************************************/
 
-// The host's address of es, es集群的主机地址
+// The host's address of es, es集群的主機網址
 // const Host = "10.0.1.148";
 // const Port = "80";
 
@@ -16,15 +16,15 @@ const client = new elasticsearch.Client({
   requestTimeout: 300000
 });
 
-const esPrefix = "cron-"; // The prefix of the index, 查找的 index 索引前缀
-const esCuratorTimeStr = "%Y%m%d%H"; // The time format, 索引中的时间格式
-const esCuratorTimeUnit = "hour"; // The filtering time unit, 过滤清理的时间单位
-const esCuratorTimeCount = 8; // The time interval, 时间间隔
+const esPrefix = "cron-"; // The prefix of the index, 查找的 index 索引前綴
+const esCuratorTimeStr = "%Y%m%d%H"; // The time format, 索引中的時間格式
+const esCuratorTimeUnit = "hour"; // The filtering time unit, 過濾清理的時間單位
+const esCuratorTimeCount = 8; // The time interval, 時間間隔
 
 exports.main_handler = async (event, context, callback) => {
   // Deleting index, 索引删除
   try {
-    // Get all the index, 获取所有的index
+    // Get all the index, 獲取所有的index
     let result = await new Promise((res, rej) => {
       client.cat.indices(
         {

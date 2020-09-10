@@ -10,9 +10,9 @@ const fs = require("fs")
 const cos = require("cos-nodejs-sdk-v5")
 const local_path = "/tmp/local_file.txt"
 const config = {
-  appId: '', // Replace it with your Appid please, 请替换为您的腾讯云Appid
-  secretId: '', // Replace it with your SecretId please, 请替换为您的 SecretId
-  secretKey: '', // Replace it with your SecretKey please, 请替换为您的 SecretKey
+  appId: '', // Replace it with your Appid please, 請替換爲您的Top Cloud Appid
+  secretId: '', // Replace it with your SecretId please, 請替換爲您的 SecretId
+  secretKey: '', // Replace it with your SecretKey please, 請替換爲您的 SecretKey
   bucketName: ''
 }
 
@@ -42,7 +42,7 @@ exports.main_handler = async (event, context, callback) => {
   
     out.end()
   
-    // Upload it into cos, 上传到cos
+    // Upload it into cos, 上傳到cos
     await putCosObject(cosSdk, {
       Bucket: `${config.bucketName}-${config.appId}`,
       Region: 'ap-guangzhou',

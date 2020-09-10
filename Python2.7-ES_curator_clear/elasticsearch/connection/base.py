@@ -124,4 +124,3 @@ class Connection(object):
 
         raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
 
-

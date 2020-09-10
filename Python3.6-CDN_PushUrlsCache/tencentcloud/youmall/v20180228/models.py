@@ -17,23 +17,23 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class ArrivedMallInfo(AbstractModel):
-    """客户到场信息
+    """客戶到場訊息
 
     """
 
     def __init__(self):
         """
-        :param ArrivedTime: 到场时间
+        :param ArrivedTime: 到場時間
         :type ArrivedTime: str
-        :param LeaveTime: 出场时间
+        :param LeaveTime: 出場時間
         :type LeaveTime: str
-        :param StaySecond: 停留时间，秒
+        :param StaySecond: 停留時間，秒
         :type StaySecond: int
-        :param InCapPic: 到场抓拍图片
+        :param InCapPic: 到場抓拍圖片
         :type InCapPic: str
-        :param OutCapPic: 出场抓拍图片
+        :param OutCapPic: 出場抓拍圖片
         :type OutCapPic: str
-        :param TraceId: 轨迹编码
+        :param TraceId: 軌迹編碼
         :type TraceId: str
         """
         self.ArrivedTime = None
@@ -54,23 +54,23 @@ class ArrivedMallInfo(AbstractModel):
 
 
 class CameraPersonInfo(AbstractModel):
-    """摄像头抓图人物属性
+    """攝像頭抓圖人物屬性
 
     """
 
     def __init__(self):
         """
-        :param TempId: 临时id，还未生成face id时返回
+        :param TempId: 臨時id，還未生成face id時返回
         :type TempId: str
-        :param FaceId: 人脸face id
+        :param FaceId: 人臉face id
         :type FaceId: int
-        :param IdType: 确定当次返回的哪个id有效，1-FaceId，2-TempId
+        :param IdType: 确定當次返回的哪個id有效，1-FaceId，2-TempId
         :type IdType: int
-        :param FacePic: 当次抓拍到的人脸图片base编码
+        :param FacePic: 當次抓拍到的人臉圖片base編碼
         :type FacePic: str
-        :param Time: 当次抓拍时间戳
+        :param Time: 當次抓拍時間戳
         :type Time: int
-        :param PersonInfo: 当前的person基本信息，图片以FacePic为准，结构体内未填
+        :param PersonInfo: 當前的person基本訊息，圖片以FacePic爲準，結構體内未填
         :type PersonInfo: :class:`tencentcloud.youmall.v20180228.models.PersonInfo`
         """
         self.TempId = None
@@ -93,21 +93,21 @@ class CameraPersonInfo(AbstractModel):
 
 
 class CreateAccountRequest(AbstractModel):
-    """CreateAccount请求参数结构体
+    """CreateAccount請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param Name: 账号名；需要是手机号
+        :param Name: 賬号名；需要是手機号
         :type Name: str
-        :param Password: 密码；需要是(`~!@#$%^&*()_+=-）中的至少两种且八位以上
+        :param Password: 密碼；需要是(`~!@#$%^&*()_+=-）中的至少兩種且八位以上
         :type Password: str
-        :param ShopCode: 客户门店编码
+        :param ShopCode: 客戶門店編碼
         :type ShopCode: str
-        :param Remark: 备注说明; 30个字符以内
+        :param Remark: 備注說明; 30個字元以内
         :type Remark: str
         """
         self.CompanyId = None
@@ -126,13 +126,13 @@ class CreateAccountRequest(AbstractModel):
 
 
 class CreateAccountResponse(AbstractModel):
-    """CreateAccount返回参数结构体
+    """CreateAccount返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -143,23 +143,23 @@ class CreateAccountResponse(AbstractModel):
 
 
 class CreateFacePictureRequest(AbstractModel):
-    """CreateFacePicture请求参数结构体
+    """CreateFacePicture請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param PersonType: 人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
+        :param PersonType: 人物類型（0表示普通顧客，1 白名單，2 表示黑名單，101表示集團白名單，102表示集團黑名單）
         :type PersonType: int
-        :param Picture: 图片BASE编码
+        :param Picture: 圖片BASE編碼
         :type Picture: str
-        :param PictureName: 图片名称
+        :param PictureName: 圖片名稱
         :type PictureName: str
-        :param ShopId: 店铺ID，如果不填表示操作集团身份库
+        :param ShopId: 店鋪ID，如果不填表示操作集團身份庫
         :type ShopId: int
-        :param IsForceUpload: 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
+        :param IsForceUpload: 是否強制更新：爲ture時會爲用戶創建一個新的指定PersonType的身份;目前這個參數已廢棄，可不傳
         :type IsForceUpload: bool
         """
         self.CompanyId = None
@@ -180,7 +180,7 @@ class CreateFacePictureRequest(AbstractModel):
 
 
 class CreateFacePictureResponse(AbstractModel):
-    """CreateFacePicture返回参数结构体
+    """CreateFacePicture返回參數結構體
 
     """
 
@@ -188,11 +188,11 @@ class CreateFacePictureResponse(AbstractModel):
         """
         :param PersonId: 人物ID
         :type PersonId: int
-        :param Status: 0.正常建档 1.重复身份 2.未检测到人脸 3.检测到多个人脸 4.人脸大小过小 5.人脸质量不达标 6.其他错误
+        :param Status: 0.正常建檔 1.重複身份 2.未檢測到人臉 3.檢測到多個人臉 4.人臉大小過小 5.人臉質量不達标 6.其他錯誤
         :type Status: int
-        :param PictureUrl: 图片url
+        :param PictureUrl: 圖片url
         :type PictureUrl: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PersonId = None
@@ -209,15 +209,15 @@ class CreateFacePictureResponse(AbstractModel):
 
 
 class DailyTracePoint(AbstractModel):
-    """客户天轨迹
+    """客戶天軌迹
 
     """
 
     def __init__(self):
         """
-        :param TraceDate: 轨迹日期
+        :param TraceDate: 軌迹日期
         :type TraceDate: str
-        :param TracePointSet: 轨迹点序列
+        :param TracePointSet: 軌迹點序列
         :type TracePointSet: list of PersonTracePoint
         """
         self.TraceDate = None
@@ -235,7 +235,7 @@ class DailyTracePoint(AbstractModel):
 
 
 class DeletePersonFeatureRequest(AbstractModel):
-    """DeletePersonFeature请求参数结构体
+    """DeletePersonFeature請求參數結構體
 
     """
 
@@ -243,9 +243,9 @@ class DeletePersonFeatureRequest(AbstractModel):
         """
         :param CompanyId: 公司ID
         :type CompanyId: str
-        :param ShopId: 门店ID
+        :param ShopId: 門店ID
         :type ShopId: int
-        :param PersonId: 顾客ID
+        :param PersonId: 顧客ID
         :type PersonId: int
         """
         self.CompanyId = None
@@ -260,13 +260,13 @@ class DeletePersonFeatureRequest(AbstractModel):
 
 
 class DeletePersonFeatureResponse(AbstractModel):
-    """DeletePersonFeature返回参数结构体
+    """DeletePersonFeature返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -277,27 +277,27 @@ class DeletePersonFeatureResponse(AbstractModel):
 
 
 class DescribeCameraPersonRequest(AbstractModel):
-    """DescribeCameraPerson请求参数结构体
+    """DescribeCameraPerson請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+        :param CompanyId: 優mall集團id，通過"指定身份标識獲取客戶門店清單"介面獲取
         :type CompanyId: str
-        :param ShopId: 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
+        :param ShopId: 優mall店鋪id，通過"指定身份标識獲取客戶門店清單"介面獲取
         :type ShopId: int
-        :param CameraId: 摄像头id
+        :param CameraId: 攝像頭id
         :type CameraId: int
-        :param StartTime: 拉取开始时间戳，单位秒
+        :param StartTime: 拉取開始時間戳，單位秒
         :type StartTime: int
-        :param EndTime: 拉取结束时间戳，单位秒，不超过StartTime+10秒，超过默认为StartTime+10
+        :param EndTime: 拉取結束時間戳，單位秒，不超過StartTime+10秒，超過預設爲StartTime+10
         :type EndTime: int
-        :param PosId: pos机id
+        :param PosId: pos機id
         :type PosId: str
-        :param Num: 拉取图片数，默认为1，最大为3
+        :param Num: 拉取圖片數，預設爲1，最大爲3
         :type Num: int
-        :param IsNeedPic: 是否需要base64的图片，0-不需要，1-需要，默认0
+        :param IsNeedPic: 是否需要base64的圖片，0-不需要，1-需要，預設0
         :type IsNeedPic: int
         """
         self.CompanyId = None
@@ -322,23 +322,23 @@ class DescribeCameraPersonRequest(AbstractModel):
 
 
 class DescribeCameraPersonResponse(AbstractModel):
-    """DescribeCameraPerson返回参数结构体
+    """DescribeCameraPerson返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团id
+        :param CompanyId: 集團id
         :type CompanyId: str
-        :param ShopId: 店铺id
+        :param ShopId: 店鋪id
         :type ShopId: int
-        :param CameraId: 摄像机id
+        :param CameraId: 攝像機id
         :type CameraId: int
-        :param PosId: pos机id
+        :param PosId: pos機id
         :type PosId: str
-        :param Infos: 抓取的顾客信息
+        :param Infos: 抓取的顧客訊息
         :type Infos: list of CameraPersonInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CompanyId = None
@@ -364,19 +364,19 @@ class DescribeCameraPersonResponse(AbstractModel):
 
 
 class DescribeClusterPersonArrivedMallRequest(AbstractModel):
-    """DescribeClusterPersonArrivedMall请求参数结构体
+    """DescribeClusterPersonArrivedMall請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MallId: 卖场编码
+        :param MallId: 賣場編碼
         :type MallId: str
-        :param PersonId: 客户编码
+        :param PersonId: 客戶編碼
         :type PersonId: str
-        :param StartTime: 查询开始时间
+        :param StartTime: 查詢開始時間
         :type StartTime: str
-        :param EndTime: 查询结束时间
+        :param EndTime: 查詢結束時間
         :type EndTime: str
         """
         self.MallId = None
@@ -393,21 +393,21 @@ class DescribeClusterPersonArrivedMallRequest(AbstractModel):
 
 
 class DescribeClusterPersonArrivedMallResponse(AbstractModel):
-    """DescribeClusterPersonArrivedMall返回参数结构体
+    """DescribeClusterPersonArrivedMall返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MallId: 卖场系统编码
+        :param MallId: 賣場系統編碼
         :type MallId: str
-        :param MallCode: 卖场客户编码
+        :param MallCode: 賣場客戶編碼
         :type MallCode: str
-        :param PersonId: 客户编码
+        :param PersonId: 客戶編碼
         :type PersonId: str
-        :param ArrivedMallSet: 到场信息
+        :param ArrivedMallSet: 到場訊息
         :type ArrivedMallSet: list of ArrivedMallInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.MallId = None
@@ -431,19 +431,19 @@ class DescribeClusterPersonArrivedMallResponse(AbstractModel):
 
 
 class DescribeClusterPersonTraceRequest(AbstractModel):
-    """DescribeClusterPersonTrace请求参数结构体
+    """DescribeClusterPersonTrace請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MallId: 卖场编码
+        :param MallId: 賣場編碼
         :type MallId: str
-        :param PersonId: 客户编码
+        :param PersonId: 客戶編碼
         :type PersonId: str
-        :param StartTime: 查询开始时间
+        :param StartTime: 查詢開始時間
         :type StartTime: str
-        :param EndTime: 查询结束时间
+        :param EndTime: 查詢結束時間
         :type EndTime: str
         """
         self.MallId = None
@@ -460,21 +460,21 @@ class DescribeClusterPersonTraceRequest(AbstractModel):
 
 
 class DescribeClusterPersonTraceResponse(AbstractModel):
-    """DescribeClusterPersonTrace返回参数结构体
+    """DescribeClusterPersonTrace返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MallId: 卖场系统编码
+        :param MallId: 賣場系統編碼
         :type MallId: str
-        :param MallCode: 卖场用户编码
+        :param MallCode: 賣場用戶編碼
         :type MallCode: str
-        :param PersonId: 客户编码
+        :param PersonId: 客戶編碼
         :type PersonId: str
-        :param TracePointSet: 轨迹序列
+        :param TracePointSet: 軌迹序列
         :type TracePointSet: list of DailyTracePoint
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.MallId = None
@@ -498,23 +498,23 @@ class DescribeClusterPersonTraceResponse(AbstractModel):
 
 
 class DescribeFaceIdByTempIdRequest(AbstractModel):
-    """DescribeFaceIdByTempId请求参数结构体
+    """DescribeFaceIdByTempId請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+        :param CompanyId: 優mall集團id，通過"指定身份标識獲取客戶門店清單"介面獲取
         :type CompanyId: str
-        :param ShopId: 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
+        :param ShopId: 優mall店鋪id，通過"指定身份标識獲取客戶門店清單"介面獲取
         :type ShopId: int
-        :param TempId: 临时id
+        :param TempId: 臨時id
         :type TempId: str
-        :param CameraId: 摄像头id
+        :param CameraId: 攝像頭id
         :type CameraId: int
-        :param PosId: pos机id
+        :param PosId: pos機id
         :type PosId: str
-        :param PictureExpires: 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+        :param PictureExpires: 圖片url過期時間：在當前時間+PictureExpires秒後，圖片url無法繼續正常訪問；單位s；預設值1*24*60*60（1天）
         :type PictureExpires: int
         """
         self.CompanyId = None
@@ -535,27 +535,27 @@ class DescribeFaceIdByTempIdRequest(AbstractModel):
 
 
 class DescribeFaceIdByTempIdResponse(AbstractModel):
-    """DescribeFaceIdByTempId返回参数结构体
+    """DescribeFaceIdByTempId返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团id
+        :param CompanyId: 集團id
         :type CompanyId: str
-        :param ShopId: 店铺id
+        :param ShopId: 店鋪id
         :type ShopId: int
-        :param CameraId: 摄像机id
+        :param CameraId: 攝像機id
         :type CameraId: int
-        :param PosId: pos机id
+        :param PosId: pos機id
         :type PosId: str
-        :param TempId: 请求的临时id
+        :param TempId: 請求的臨時id
         :type TempId: str
-        :param FaceId: 临时id对应的face id
+        :param FaceId: 臨時id對應的face id
         :type FaceId: int
-        :param PersonInfo: 顾客属性信息
+        :param PersonInfo: 顧客屬性訊息
         :type PersonInfo: :class:`tencentcloud.youmall.v20180228.models.PersonInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CompanyId = None
@@ -582,25 +582,25 @@ class DescribeFaceIdByTempIdResponse(AbstractModel):
 
 
 class DescribeHistoryNetworkInfoRequest(AbstractModel):
-    """DescribeHistoryNetworkInfo请求参数结构体
+    """DescribeHistoryNetworkInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Time: 请求时间戳
+        :param Time: 請求時間戳
         :type Time: int
-        :param CompanyId: 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+        :param CompanyId: 優mall集團id，通過"指定身份标識獲取客戶門店清單"介面獲取
         :type CompanyId: str
-        :param ShopId: 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
+        :param ShopId: 優mall店鋪id，通過"指定身份标識獲取客戶門店清單"介面獲取，爲0則拉取集團全部店鋪當前
         :type ShopId: int
-        :param StartDay: 拉取开始日期，格式：2018-09-05
+        :param StartDay: 拉取開始日期，格式：2018-09-05
         :type StartDay: str
-        :param EndDay: 拉取结束日期，格式L:2018-09-05，超过StartDay 90天，按StartDay+90天算
+        :param EndDay: 拉取結束日期，格式L:2018-09-05，超過StartDay 90天，按StartDay+90天算
         :type EndDay: str
-        :param Limit: 拉取条数，默认10
+        :param Limit: 拉取條數，預設10
         :type Limit: int
-        :param Offset: 拉取偏移，返回offset之后的数据
+        :param Offset: 拉取偏移，返回offset之後的數據
         :type Offset: int
         """
         self.Time = None
@@ -623,15 +623,15 @@ class DescribeHistoryNetworkInfoRequest(AbstractModel):
 
 
 class DescribeHistoryNetworkInfoResponse(AbstractModel):
-    """DescribeHistoryNetworkInfo返回参数结构体
+    """DescribeHistoryNetworkInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceSet: 网络状态数据
+        :param InstanceSet: 網絡狀态數據
         :type InstanceSet: :class:`tencentcloud.youmall.v20180228.models.NetworkHistoryInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceSet = None
@@ -646,17 +646,17 @@ class DescribeHistoryNetworkInfoResponse(AbstractModel):
 
 
 class DescribeNetworkInfoRequest(AbstractModel):
-    """DescribeNetworkInfo请求参数结构体
+    """DescribeNetworkInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Time: 请求时间戳
+        :param Time: 請求時間戳
         :type Time: int
-        :param CompanyId: 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+        :param CompanyId: 優mall集團id，通過"指定身份标識獲取客戶門店清單"介面獲取
         :type CompanyId: str
-        :param ShopId: 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，不填则拉取集团全部店铺当前
+        :param ShopId: 優mall店鋪id，通過"指定身份标識獲取客戶門店清單"介面獲取，不填則拉取集團全部店鋪當前
         :type ShopId: int
         """
         self.Time = None
@@ -671,15 +671,15 @@ class DescribeNetworkInfoRequest(AbstractModel):
 
 
 class DescribeNetworkInfoResponse(AbstractModel):
-    """DescribeNetworkInfo返回参数结构体
+    """DescribeNetworkInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceSet: 网络状态详情
+        :param InstanceSet: 網絡狀态詳情
         :type InstanceSet: :class:`tencentcloud.youmall.v20180228.models.NetworkLastInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceSet = None
@@ -694,19 +694,19 @@ class DescribeNetworkInfoResponse(AbstractModel):
 
 
 class DescribePersonArrivedMallRequest(AbstractModel):
-    """DescribePersonArrivedMall请求参数结构体
+    """DescribePersonArrivedMall請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MallId: 卖场编码
+        :param MallId: 賣場編碼
         :type MallId: str
-        :param PersonId: 客户编码
+        :param PersonId: 客戶編碼
         :type PersonId: str
-        :param StartTime: 查询开始时间
+        :param StartTime: 查詢開始時間
         :type StartTime: str
-        :param EndTime: 查询结束时间
+        :param EndTime: 查詢結束時間
         :type EndTime: str
         """
         self.MallId = None
@@ -723,21 +723,21 @@ class DescribePersonArrivedMallRequest(AbstractModel):
 
 
 class DescribePersonArrivedMallResponse(AbstractModel):
-    """DescribePersonArrivedMall返回参数结构体
+    """DescribePersonArrivedMall返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MallId: 卖场系统编码
+        :param MallId: 賣場系統編碼
         :type MallId: str
-        :param MallCode: 卖场用户编码
+        :param MallCode: 賣場用戶編碼
         :type MallCode: str
-        :param PersonId: 客户编码
+        :param PersonId: 客戶編碼
         :type PersonId: str
-        :param ArrivedMallSet: 到场轨迹
+        :param ArrivedMallSet: 到場軌迹
         :type ArrivedMallSet: list of ArrivedMallInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.MallId = None
@@ -761,17 +761,17 @@ class DescribePersonArrivedMallResponse(AbstractModel):
 
 
 class DescribePersonInfoByFacePictureRequest(AbstractModel):
-    """DescribePersonInfoByFacePicture请求参数结构体
+    """DescribePersonInfoByFacePicture請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+        :param CompanyId: 優mall集團id，通過"指定身份标識獲取客戶門店清單"介面獲取
         :type CompanyId: str
-        :param ShopId: 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
+        :param ShopId: 優mall店鋪id，通過"指定身份标識獲取客戶門店清單"介面獲取
         :type ShopId: int
-        :param Picture: 人脸图片BASE编码
+        :param Picture: 人臉圖片BASE編碼
         :type Picture: str
         """
         self.CompanyId = None
@@ -786,27 +786,27 @@ class DescribePersonInfoByFacePictureRequest(AbstractModel):
 
 
 class DescribePersonInfoByFacePictureResponse(AbstractModel):
-    """DescribePersonInfoByFacePicture返回参数结构体
+    """DescribePersonInfoByFacePicture返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团id
+        :param CompanyId: 集團id
         :type CompanyId: str
-        :param ShopId: 店铺id
+        :param ShopId: 店鋪id
         :type ShopId: int
-        :param PersonId: 顾客face id
+        :param PersonId: 顧客face id
         :type PersonId: int
-        :param PictureUrl: 顾客底图url
+        :param PictureUrl: 顧客底圖url
         :type PictureUrl: str
-        :param PersonType: 顾客类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
+        :param PersonType: 顧客類型（0表示普通顧客，1 白名單，2 表示黑名單，101表示集團白名單，102表示集團黑名單）
         :type PersonType: int
-        :param FirstVisitTime: 顾客首次进店时间
+        :param FirstVisitTime: 顧客首次進店時間
         :type FirstVisitTime: str
-        :param VisitTimes: 顾客历史到访次数
+        :param VisitTimes: 顧客曆史到訪次數
         :type VisitTimes: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CompanyId = None
@@ -831,7 +831,7 @@ class DescribePersonInfoByFacePictureResponse(AbstractModel):
 
 
 class DescribePersonInfoRequest(AbstractModel):
-    """DescribePersonInfo请求参数结构体
+    """DescribePersonInfo請求參數結構體
 
     """
 
@@ -839,17 +839,17 @@ class DescribePersonInfoRequest(AbstractModel):
         """
         :param CompanyId: 公司ID
         :type CompanyId: str
-        :param ShopId: 门店ID
+        :param ShopId: 門店ID
         :type ShopId: int
-        :param StartPersonId: 起始ID，第一次拉取时StartPersonId传0，后续送入的值为上一页最后一条数据项的PersonId
+        :param StartPersonId: 起始ID，第一次拉取時StartPersonId傳0，後續送入的值爲上一頁最後一條數據項的PersonId
         :type StartPersonId: int
-        :param Offset: 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
+        :param Offset: 偏移量：分頁控制參數，第一頁傳0，第n頁Offset=(n-1)*Limit
         :type Offset: int
-        :param Limit: Limit:每页的数据项，最大100，超过100会被强制指定为100
+        :param Limit: Limit:每頁的數據項，最大100，超過100會被強制指定爲100
         :type Limit: int
-        :param PictureExpires: 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+        :param PictureExpires: 圖片url過期時間：在當前時間+PictureExpires秒後，圖片url無法繼續正常訪問；單位s；預設值1*24*60*60（1天）
         :type PictureExpires: int
-        :param PersonType: 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
+        :param PersonType: 身份類型(0表示普通顧客，1 白名單，2 表示黑名單）
         :type PersonType: int
         """
         self.CompanyId = None
@@ -872,7 +872,7 @@ class DescribePersonInfoRequest(AbstractModel):
 
 
 class DescribePersonInfoResponse(AbstractModel):
-    """DescribePersonInfo返回参数结构体
+    """DescribePersonInfo返回參數結構體
 
     """
 
@@ -880,13 +880,13 @@ class DescribePersonInfoResponse(AbstractModel):
         """
         :param CompanyId: 公司ID
         :type CompanyId: str
-        :param ShopId: 门店ID
+        :param ShopId: 門店ID
         :type ShopId: int
-        :param TotalCount: 总数
+        :param TotalCount: 總數
         :type TotalCount: int
-        :param PersonInfoSet: 用户信息
+        :param PersonInfoSet: 用戶訊息
         :type PersonInfoSet: list of PersonInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CompanyId = None
@@ -910,17 +910,17 @@ class DescribePersonInfoResponse(AbstractModel):
 
 
 class DescribePersonRequest(AbstractModel):
-    """DescribePerson请求参数结构体
+    """DescribePerson請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MallId: 卖场编码
+        :param MallId: 賣場編碼
         :type MallId: str
-        :param Offset: 查询偏移
+        :param Offset: 查詢偏移
         :type Offset: int
-        :param Limit: 查询数量，默认20，最大查询数量100
+        :param Limit: 查詢數量，預設20，最大查詢數量100
         :type Limit: int
         """
         self.MallId = None
@@ -935,17 +935,17 @@ class DescribePersonRequest(AbstractModel):
 
 
 class DescribePersonResponse(AbstractModel):
-    """DescribePerson返回参数结构体
+    """DescribePerson返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 总计客户数量
+        :param TotalCount: 總計客戶數量
         :type TotalCount: int
-        :param PersonSet: 客户信息
+        :param PersonSet: 客戶訊息
         :type PersonSet: list of PersonProfile
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -965,17 +965,17 @@ class DescribePersonResponse(AbstractModel):
 
 
 class DescribePersonTraceDetailRequest(AbstractModel):
-    """DescribePersonTraceDetail请求参数结构体
+    """DescribePersonTraceDetail請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MallId: 卖场编码
+        :param MallId: 賣場編碼
         :type MallId: str
-        :param PersonId: 客户编码
+        :param PersonId: 客戶編碼
         :type PersonId: str
-        :param TraceId: 轨迹编码
+        :param TraceId: 軌迹編碼
         :type TraceId: str
         """
         self.MallId = None
@@ -990,21 +990,21 @@ class DescribePersonTraceDetailRequest(AbstractModel):
 
 
 class DescribePersonTraceDetailResponse(AbstractModel):
-    """DescribePersonTraceDetail返回参数结构体
+    """DescribePersonTraceDetail返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MallId: 卖场编码
+        :param MallId: 賣場編碼
         :type MallId: str
-        :param PersonId: 客户编码
+        :param PersonId: 客戶編碼
         :type PersonId: str
-        :param TraceId: 轨迹编码
+        :param TraceId: 軌迹編碼
         :type TraceId: str
-        :param CoordinateSet: 轨迹点坐标序列
+        :param CoordinateSet: 軌迹點坐标序列
         :type CoordinateSet: list of PersonCoordinate
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.MallId = None
@@ -1028,19 +1028,19 @@ class DescribePersonTraceDetailResponse(AbstractModel):
 
 
 class DescribePersonTraceRequest(AbstractModel):
-    """DescribePersonTrace请求参数结构体
+    """DescribePersonTrace請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MallId: 卖场编码
+        :param MallId: 賣場編碼
         :type MallId: str
-        :param PersonId: 客户编码
+        :param PersonId: 客戶編碼
         :type PersonId: str
-        :param StartTime: 查询开始时间
+        :param StartTime: 查詢開始時間
         :type StartTime: str
-        :param EndTime: 查询结束时间
+        :param EndTime: 查詢結束時間
         :type EndTime: str
         """
         self.MallId = None
@@ -1057,21 +1057,21 @@ class DescribePersonTraceRequest(AbstractModel):
 
 
 class DescribePersonTraceResponse(AbstractModel):
-    """DescribePersonTrace返回参数结构体
+    """DescribePersonTrace返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MallId: 卖场系统编码
+        :param MallId: 賣場系統編碼
         :type MallId: str
-        :param MallCode: 卖场用户编码
+        :param MallCode: 賣場用戶編碼
         :type MallCode: str
-        :param PersonId: 客户编码
+        :param PersonId: 客戶編碼
         :type PersonId: str
-        :param TraceRouteSet: 轨迹列表
+        :param TraceRouteSet: 軌迹清單
         :type TraceRouteSet: list of PersonTraceRoute
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.MallId = None
@@ -1095,7 +1095,7 @@ class DescribePersonTraceResponse(AbstractModel):
 
 
 class DescribePersonVisitInfoRequest(AbstractModel):
-    """DescribePersonVisitInfo请求参数结构体
+    """DescribePersonVisitInfo請求參數結構體
 
     """
 
@@ -1103,21 +1103,21 @@ class DescribePersonVisitInfoRequest(AbstractModel):
         """
         :param CompanyId: 公司ID
         :type CompanyId: str
-        :param ShopId: 门店ID
+        :param ShopId: 門店ID
         :type ShopId: int
-        :param Offset: 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
+        :param Offset: 偏移量：分頁控制參數，第一頁傳0，第n頁Offset=(n-1)*Limit
         :type Offset: int
-        :param Limit: Limit:每页的数据项，最大100，超过100会被强制指定为100
+        :param Limit: Limit:每頁的數據項，最大100，超過100會被強制指定爲100
         :type Limit: int
-        :param StartDate: 开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime
+        :param StartDate: 開始日期，格式yyyy-MM-dd，已廢棄，請使用StartDateTime
         :type StartDate: str
-        :param EndDate: 结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime
+        :param EndDate: 結束日期，格式yyyy-MM-dd，已廢棄，請使用EndDateTime
         :type EndDate: str
-        :param PictureExpires: 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+        :param PictureExpires: 圖片url過期時間：在當前時間+PictureExpires秒後，圖片url無法繼續正常訪問；單位s；預設值1*24*60*60（1天）
         :type PictureExpires: int
-        :param StartDateTime: 开始时间，格式yyyy-MM-dd HH:mm:ss
+        :param StartDateTime: 開始時間，格式yyyy-MM-dd HH:mm:ss
         :type StartDateTime: str
-        :param EndDateTime: 结束时间，格式yyyy-MM-dd HH:mm:ss
+        :param EndDateTime: 結束時間，格式yyyy-MM-dd HH:mm:ss
         :type EndDateTime: str
         """
         self.CompanyId = None
@@ -1144,7 +1144,7 @@ class DescribePersonVisitInfoRequest(AbstractModel):
 
 
 class DescribePersonVisitInfoResponse(AbstractModel):
-    """DescribePersonVisitInfo返回参数结构体
+    """DescribePersonVisitInfo返回參數結構體
 
     """
 
@@ -1152,13 +1152,13 @@ class DescribePersonVisitInfoResponse(AbstractModel):
         """
         :param CompanyId: 公司ID
         :type CompanyId: str
-        :param ShopId: 门店ID
+        :param ShopId: 門店ID
         :type ShopId: int
-        :param TotalCount: 总数
+        :param TotalCount: 總數
         :type TotalCount: int
-        :param PersonVisitInfoSet: 用户到访明细
+        :param PersonVisitInfoSet: 用戶到訪明細
         :type PersonVisitInfoSet: list of PersonVisitInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CompanyId = None
@@ -1182,7 +1182,7 @@ class DescribePersonVisitInfoResponse(AbstractModel):
 
 
 class DescribeShopHourTrafficInfoRequest(AbstractModel):
-    """DescribeShopHourTrafficInfo请求参数结构体
+    """DescribeShopHourTrafficInfo請求參數結構體
 
     """
 
@@ -1190,15 +1190,15 @@ class DescribeShopHourTrafficInfoRequest(AbstractModel):
         """
         :param CompanyId: 公司ID
         :type CompanyId: str
-        :param ShopId: 门店ID
+        :param ShopId: 門店ID
         :type ShopId: int
-        :param StartDate: 开始日期，格式：yyyy-MM-dd
+        :param StartDate: 開始日期，格式：yyyy-MM-dd
         :type StartDate: str
-        :param EndDate: 结束日期，格式：yyyy-MM-dd
+        :param EndDate: 結束日期，格式：yyyy-MM-dd
         :type EndDate: str
-        :param Offset: 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
+        :param Offset: 偏移量：分頁控制參數，第一頁傳0，第n頁Offset=(n-1)*Limit
         :type Offset: int
-        :param Limit: Limit:每页的数据项，最大100，超过100会被强制指定为100
+        :param Limit: Limit:每頁的數據項，最大100，超過100會被強制指定爲100
         :type Limit: int
         """
         self.CompanyId = None
@@ -1219,7 +1219,7 @@ class DescribeShopHourTrafficInfoRequest(AbstractModel):
 
 
 class DescribeShopHourTrafficInfoResponse(AbstractModel):
-    """DescribeShopHourTrafficInfo返回参数结构体
+    """DescribeShopHourTrafficInfo返回參數結構體
 
     """
 
@@ -1227,13 +1227,13 @@ class DescribeShopHourTrafficInfoResponse(AbstractModel):
         """
         :param CompanyId: 公司ID
         :type CompanyId: str
-        :param ShopId: 门店ID
+        :param ShopId: 門店ID
         :type ShopId: int
-        :param TotalCount: 查询结果总数
+        :param TotalCount: 查詢結果總數
         :type TotalCount: int
-        :param ShopHourTrafficInfoSet: 分时客流信息
+        :param ShopHourTrafficInfoSet: 分時客流訊息
         :type ShopHourTrafficInfoSet: list of ShopHourTrafficInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CompanyId = None
@@ -1257,15 +1257,15 @@ class DescribeShopHourTrafficInfoResponse(AbstractModel):
 
 
 class DescribeShopInfoRequest(AbstractModel):
-    """DescribeShopInfo请求参数结构体
+    """DescribeShopInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
+        :param Offset: 偏移量：分頁控制參數，第一頁傳0，第n頁Offset=(n-1)*Limit
         :type Offset: int
-        :param Limit: Limit:每页的数据项，最大100，超过100会被强制指定为100
+        :param Limit: Limit:每頁的數據項，最大100，超過100會被強制指定爲100
         :type Limit: int
         """
         self.Offset = None
@@ -1278,17 +1278,17 @@ class DescribeShopInfoRequest(AbstractModel):
 
 
 class DescribeShopInfoResponse(AbstractModel):
-    """DescribeShopInfo返回参数结构体
+    """DescribeShopInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 门店总数
+        :param TotalCount: 門店總數
         :type TotalCount: int
-        :param ShopInfoSet: 门店列表信息
+        :param ShopInfoSet: 門店清單訊息
         :type ShopInfoSet: list of ShopInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1308,7 +1308,7 @@ class DescribeShopInfoResponse(AbstractModel):
 
 
 class DescribeShopTrafficInfoRequest(AbstractModel):
-    """DescribeShopTrafficInfo请求参数结构体
+    """DescribeShopTrafficInfo請求參數結構體
 
     """
 
@@ -1316,15 +1316,15 @@ class DescribeShopTrafficInfoRequest(AbstractModel):
         """
         :param CompanyId: 公司ID
         :type CompanyId: str
-        :param ShopId: 门店ID
+        :param ShopId: 門店ID
         :type ShopId: int
-        :param StartDate: 开始日期，格式yyyy-MM-dd
+        :param StartDate: 開始日期，格式yyyy-MM-dd
         :type StartDate: str
-        :param EndDate: 介绍日期，格式yyyy-MM-dd
+        :param EndDate: 介紹日期，格式yyyy-MM-dd
         :type EndDate: str
-        :param Offset: 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
+        :param Offset: 偏移量：分頁控制參數，第一頁傳0，第n頁Offset=(n-1)*Limit
         :type Offset: int
-        :param Limit: Limit:每页的数据项，最大100，超过100会被强制指定为100
+        :param Limit: Limit:每頁的數據項，最大100，超過100會被強制指定爲100
         :type Limit: int
         """
         self.CompanyId = None
@@ -1345,7 +1345,7 @@ class DescribeShopTrafficInfoRequest(AbstractModel):
 
 
 class DescribeShopTrafficInfoResponse(AbstractModel):
-    """DescribeShopTrafficInfo返回参数结构体
+    """DescribeShopTrafficInfo返回參數結構體
 
     """
 
@@ -1353,13 +1353,13 @@ class DescribeShopTrafficInfoResponse(AbstractModel):
         """
         :param CompanyId: 公司ID
         :type CompanyId: str
-        :param ShopId: 门店ID
+        :param ShopId: 門店ID
         :type ShopId: int
-        :param TotalCount: 查询结果总数
+        :param TotalCount: 查詢結果總數
         :type TotalCount: int
-        :param ShopDayTrafficInfoSet: 客流信息列表
+        :param ShopDayTrafficInfoSet: 客流訊息清單
         :type ShopDayTrafficInfoSet: list of ShopDayTrafficInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CompanyId = None
@@ -1383,23 +1383,23 @@ class DescribeShopTrafficInfoResponse(AbstractModel):
 
 
 class DescribeTrajectoryDataRequest(AbstractModel):
-    """DescribeTrajectoryData请求参数结构体
+    """DescribeTrajectoryData請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param ShopId: 店铺ID
+        :param ShopId: 店鋪ID
         :type ShopId: int
-        :param StartDate: 开始日期，格式yyyy-MM-dd
+        :param StartDate: 開始日期，格式yyyy-MM-dd
         :type StartDate: str
-        :param EndDate: 结束日期，格式yyyy-MM-dd
+        :param EndDate: 結束日期，格式yyyy-MM-dd
         :type EndDate: str
-        :param Limit: 限制返回数据的最大条数，最大 400（负数代为 400）
+        :param Limit: 限制返回數據的最大條數，最大 400（負數代爲 400）
         :type Limit: int
-        :param Gender: 顾客性别顾虑，0是男，1是女，其它代表不分性别
+        :param Gender: 顧客性别顧慮，0是男，1是女，其它代表不分性别
         :type Gender: int
         """
         self.CompanyId = None
@@ -1420,27 +1420,27 @@ class DescribeTrajectoryDataRequest(AbstractModel):
 
 
 class DescribeTrajectoryDataResponse(AbstractModel):
-    """DescribeTrajectoryData返回参数结构体
+    """DescribeTrajectoryData返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param ShopId: 店铺ID
+        :param ShopId: 店鋪ID
         :type ShopId: int
-        :param TotalPerson: 总人数
+        :param TotalPerson: 總人數
         :type TotalPerson: int
-        :param TotalTrajectory: 总动迹数目
+        :param TotalTrajectory: 總動迹數目
         :type TotalTrajectory: int
-        :param Person: 返回动迹中的总人数
+        :param Person: 返回動迹中的總人數
         :type Person: int
-        :param Trajectory: 返回动迹的数目
+        :param Trajectory: 返回動迹的數目
         :type Trajectory: int
-        :param Data: 返回动迹的具体信息
+        :param Data: 返回動迹的具體訊息
         :type Data: list of TrajectorySunData
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CompanyId = None
@@ -1470,21 +1470,21 @@ class DescribeTrajectoryDataResponse(AbstractModel):
 
 
 class DescribeZoneFlowAgeInfoByZoneIdRequest(AbstractModel):
-    """DescribeZoneFlowAgeInfoByZoneId请求参数结构体
+    """DescribeZoneFlowAgeInfoByZoneId請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param ShopId: 店铺ID
+        :param ShopId: 店鋪ID
         :type ShopId: int
-        :param ZoneId: 区域ID
+        :param ZoneId: 區域ID
         :type ZoneId: int
-        :param StartDate: 开始日期，格式yyyy-MM-dd
+        :param StartDate: 開始日期，格式yyyy-MM-dd
         :type StartDate: str
-        :param EndDate: 结束日期，格式yyyy-MM-dd
+        :param EndDate: 結束日期，格式yyyy-MM-dd
         :type EndDate: str
         """
         self.CompanyId = None
@@ -1503,23 +1503,23 @@ class DescribeZoneFlowAgeInfoByZoneIdRequest(AbstractModel):
 
 
 class DescribeZoneFlowAgeInfoByZoneIdResponse(AbstractModel):
-    """DescribeZoneFlowAgeInfoByZoneId返回参数结构体
+    """DescribeZoneFlowAgeInfoByZoneId返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param ShopId: 店铺ID
+        :param ShopId: 店鋪ID
         :type ShopId: int
-        :param ZoneId: 区域ID
+        :param ZoneId: 區域ID
         :type ZoneId: int
-        :param ZoneName: 区域名称
+        :param ZoneName: 區域名稱
         :type ZoneName: str
-        :param Data: 当前年龄段占比
+        :param Data: 當前年齡段占比
         :type Data: list of float
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CompanyId = None
@@ -1540,19 +1540,19 @@ class DescribeZoneFlowAgeInfoByZoneIdResponse(AbstractModel):
 
 
 class DescribeZoneFlowAndStayTimeRequest(AbstractModel):
-    """DescribeZoneFlowAndStayTime请求参数结构体
+    """DescribeZoneFlowAndStayTime請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param ShopId: 店铺ID
+        :param ShopId: 店鋪ID
         :type ShopId: int
-        :param StartDate: 开始日期，格式yyyy-MM-dd
+        :param StartDate: 開始日期，格式yyyy-MM-dd
         :type StartDate: str
-        :param EndDate: 结束日期，格式yyyy-MM-dd
+        :param EndDate: 結束日期，格式yyyy-MM-dd
         :type EndDate: str
         """
         self.CompanyId = None
@@ -1569,19 +1569,19 @@ class DescribeZoneFlowAndStayTimeRequest(AbstractModel):
 
 
 class DescribeZoneFlowAndStayTimeResponse(AbstractModel):
-    """DescribeZoneFlowAndStayTime返回参数结构体
+    """DescribeZoneFlowAndStayTime返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团id
+        :param CompanyId: 集團id
         :type CompanyId: str
-        :param ShopId: 店铺id
+        :param ShopId: 店鋪id
         :type ShopId: int
-        :param Data: 各区域人流数目和停留时长
+        :param Data: 各區域人流數目和停留時長
         :type Data: list of ZoneFlowAndAvrStayTime
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CompanyId = None
@@ -1603,21 +1603,21 @@ class DescribeZoneFlowAndStayTimeResponse(AbstractModel):
 
 
 class DescribeZoneFlowDailyByZoneIdRequest(AbstractModel):
-    """DescribeZoneFlowDailyByZoneId请求参数结构体
+    """DescribeZoneFlowDailyByZoneId請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param ShopId: 店铺ID
+        :param ShopId: 店鋪ID
         :type ShopId: int
-        :param ZoneId: 区域ID
+        :param ZoneId: 區域ID
         :type ZoneId: int
-        :param StartDate: 开始日期，格式yyyy-MM-dd
+        :param StartDate: 開始日期，格式yyyy-MM-dd
         :type StartDate: str
-        :param EndDate: 结束日期，格式yyyy-MM-dd
+        :param EndDate: 結束日期，格式yyyy-MM-dd
         :type EndDate: str
         """
         self.CompanyId = None
@@ -1636,23 +1636,23 @@ class DescribeZoneFlowDailyByZoneIdRequest(AbstractModel):
 
 
 class DescribeZoneFlowDailyByZoneIdResponse(AbstractModel):
-    """DescribeZoneFlowDailyByZoneId返回参数结构体
+    """DescribeZoneFlowDailyByZoneId返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团id
+        :param CompanyId: 集團id
         :type CompanyId: str
-        :param ShopId: 店铺id
+        :param ShopId: 店鋪id
         :type ShopId: int
-        :param ZoneId: 区域ID
+        :param ZoneId: 區域ID
         :type ZoneId: int
-        :param ZoneName: 区域名称
+        :param ZoneName: 區域名稱
         :type ZoneName: str
         :param Data: 每日人流量
         :type Data: list of ZoneDayFlow
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CompanyId = None
@@ -1678,21 +1678,21 @@ class DescribeZoneFlowDailyByZoneIdResponse(AbstractModel):
 
 
 class DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest(AbstractModel):
-    """DescribeZoneFlowGenderAvrStayTimeByZoneId请求参数结构体
+    """DescribeZoneFlowGenderAvrStayTimeByZoneId請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param ShopId: 店铺ID
+        :param ShopId: 店鋪ID
         :type ShopId: int
-        :param ZoneId: 区域ID
+        :param ZoneId: 區域ID
         :type ZoneId: int
-        :param StartDate: 开始日期，格式yyyy-MM-dd
+        :param StartDate: 開始日期，格式yyyy-MM-dd
         :type StartDate: str
-        :param EndDate: 结束日期，格式yyyy-MM-dd
+        :param EndDate: 結束日期，格式yyyy-MM-dd
         :type EndDate: str
         """
         self.CompanyId = None
@@ -1711,23 +1711,23 @@ class DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest(AbstractModel):
 
 
 class DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse(AbstractModel):
-    """DescribeZoneFlowGenderAvrStayTimeByZoneId返回参数结构体
+    """DescribeZoneFlowGenderAvrStayTimeByZoneId返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param ShopId: 店铺ID
+        :param ShopId: 店鋪ID
         :type ShopId: int
-        :param ZoneId: 区域ID
+        :param ZoneId: 區域ID
         :type ZoneId: int
-        :param ZoneName: 区域名称
+        :param ZoneName: 區域名稱
         :type ZoneName: str
-        :param Data: 不同年龄段男女停留时间（返回格式为数组，从第 1 个到最后一个数据，年龄段分别为 0-17，18 - 23,  24 - 30, 31 - 40, 41 - 50, 51 - 60, 61 - 100）
+        :param Data: 不同年齡段男女停留時間（返回格式爲數組，從第 1 個到最後一個數據，年齡段分别爲 0-17，18 - 23,  24 - 30, 31 - 40, 41 - 50, 51 - 60, 61 - 100）
         :type Data: list of ZoneAgeGroupAvrStayTime
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CompanyId = None
@@ -1753,21 +1753,21 @@ class DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse(AbstractModel):
 
 
 class DescribeZoneFlowGenderInfoByZoneIdRequest(AbstractModel):
-    """DescribeZoneFlowGenderInfoByZoneId请求参数结构体
+    """DescribeZoneFlowGenderInfoByZoneId請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param ShopId: 店铺ID
+        :param ShopId: 店鋪ID
         :type ShopId: int
-        :param ZoneId: 区域ID
+        :param ZoneId: 區域ID
         :type ZoneId: int
-        :param StartDate: 开始日期，格式yyyy-MM-dd
+        :param StartDate: 開始日期，格式yyyy-MM-dd
         :type StartDate: str
-        :param EndDate: 结束日期，格式yyyy-MM-dd
+        :param EndDate: 結束日期，格式yyyy-MM-dd
         :type EndDate: str
         """
         self.CompanyId = None
@@ -1786,25 +1786,25 @@ class DescribeZoneFlowGenderInfoByZoneIdRequest(AbstractModel):
 
 
 class DescribeZoneFlowGenderInfoByZoneIdResponse(AbstractModel):
-    """DescribeZoneFlowGenderInfoByZoneId返回参数结构体
+    """DescribeZoneFlowGenderInfoByZoneId返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param ShopId: 店铺ID
+        :param ShopId: 店鋪ID
         :type ShopId: int
-        :param ZoneId: 区域ID
+        :param ZoneId: 區域ID
         :type ZoneId: int
-        :param ZoneName: 区域名称
+        :param ZoneName: 區域名稱
         :type ZoneName: str
         :param MalePercent: 男性占比
         :type MalePercent: float
         :param FemalePercent: 女性占比
         :type FemalePercent: float
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CompanyId = None
@@ -1827,21 +1827,21 @@ class DescribeZoneFlowGenderInfoByZoneIdResponse(AbstractModel):
 
 
 class DescribeZoneFlowHourlyByZoneIdRequest(AbstractModel):
-    """DescribeZoneFlowHourlyByZoneId请求参数结构体
+    """DescribeZoneFlowHourlyByZoneId請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param ShopId: 店铺ID
+        :param ShopId: 店鋪ID
         :type ShopId: int
-        :param ZoneId: 区域ID
+        :param ZoneId: 區域ID
         :type ZoneId: int
-        :param StartDate: 开始日期，格式yyyy-MM-dd
+        :param StartDate: 開始日期，格式yyyy-MM-dd
         :type StartDate: str
-        :param EndDate: 结束日期，格式yyyy-MM-dd
+        :param EndDate: 結束日期，格式yyyy-MM-dd
         :type EndDate: str
         """
         self.CompanyId = None
@@ -1860,23 +1860,23 @@ class DescribeZoneFlowHourlyByZoneIdRequest(AbstractModel):
 
 
 class DescribeZoneFlowHourlyByZoneIdResponse(AbstractModel):
-    """DescribeZoneFlowHourlyByZoneId返回参数结构体
+    """DescribeZoneFlowHourlyByZoneId返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param ShopId: 店铺ID
+        :param ShopId: 店鋪ID
         :type ShopId: int
-        :param ZoneId: 区域ID
+        :param ZoneId: 區域ID
         :type ZoneId: int
-        :param ZoneName: 区域名称
+        :param ZoneName: 區域名稱
         :type ZoneName: str
-        :param Data: 各个分时人流量
+        :param Data: 各個分時人流量
         :type Data: list of ZoneHourFlow
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CompanyId = None
@@ -1902,7 +1902,7 @@ class DescribeZoneFlowHourlyByZoneIdResponse(AbstractModel):
 
 
 class DescribeZoneTrafficInfoRequest(AbstractModel):
-    """DescribeZoneTrafficInfo请求参数结构体
+    """DescribeZoneTrafficInfo請求參數結構體
 
     """
 
@@ -1910,15 +1910,15 @@ class DescribeZoneTrafficInfoRequest(AbstractModel):
         """
         :param CompanyId: 公司ID
         :type CompanyId: str
-        :param ShopId: 店铺ID
+        :param ShopId: 店鋪ID
         :type ShopId: int
-        :param StartDate: 开始日期，格式yyyy-MM-dd
+        :param StartDate: 開始日期，格式yyyy-MM-dd
         :type StartDate: str
-        :param EndDate: 结束日期，格式yyyy-MM-dd
+        :param EndDate: 結束日期，格式yyyy-MM-dd
         :type EndDate: str
-        :param Offset: 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
+        :param Offset: 偏移量：分頁控制參數，第一頁傳0，第n頁Offset=(n-1)*Limit
         :type Offset: int
-        :param Limit: Limit:每页的数据项，最大100，超过100会被强制指定为100
+        :param Limit: Limit:每頁的數據項，最大100，超過100會被強制指定爲100
         :type Limit: int
         """
         self.CompanyId = None
@@ -1939,7 +1939,7 @@ class DescribeZoneTrafficInfoRequest(AbstractModel):
 
 
 class DescribeZoneTrafficInfoResponse(AbstractModel):
-    """DescribeZoneTrafficInfo返回参数结构体
+    """DescribeZoneTrafficInfo返回參數結構體
 
     """
 
@@ -1947,13 +1947,13 @@ class DescribeZoneTrafficInfoResponse(AbstractModel):
         """
         :param CompanyId: 公司ID
         :type CompanyId: str
-        :param ShopId: 门店ID
+        :param ShopId: 門店ID
         :type ShopId: int
-        :param TotalCount: 查询结果总数
+        :param TotalCount: 查詢結果總數
         :type TotalCount: int
-        :param ZoneTrafficInfoSet: 区域客流信息列表
+        :param ZoneTrafficInfoSet: 區域客流訊息清單
         :type ZoneTrafficInfoSet: list of ZoneTrafficInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CompanyId = None
@@ -1977,7 +1977,7 @@ class DescribeZoneTrafficInfoResponse(AbstractModel):
 
 
 class GenderAgeTrafficDetail(AbstractModel):
-    """性别年龄分组下的客流信息
+    """性别年齡分組下的客流訊息
 
     """
 
@@ -1985,7 +1985,7 @@ class GenderAgeTrafficDetail(AbstractModel):
         """
         :param Gender: 性别: 0男1女
         :type Gender: int
-        :param AgeGap: 年龄区间，枚举值：0-17、18-23、24-30、31-40、41-50、51-60、>60
+        :param AgeGap: 年齡區間，列舉值：0-17、18-23、24-30、31-40、41-50、51-60、>60
         :type AgeGap: str
         :param TrafficCount: 客流量
         :type TrafficCount: int
@@ -2002,15 +2002,15 @@ class GenderAgeTrafficDetail(AbstractModel):
 
 
 class HourTrafficInfoDetail(AbstractModel):
-    """分时客流量详细信息
+    """分時客流量詳細訊息
 
     """
 
     def __init__(self):
         """
-        :param Hour: 小时 取值为：0，1，2，3，4，5，6，7，8，9，10，11，12，13，14，15，16，17，18，19，20，21，22，23
+        :param Hour: 小時 取值爲：0，1，2，3，4，5，6，7，8，9，10，11，12，13，14，15，16，17，18，19，20，21，22，23
         :type Hour: int
-        :param HourTrafficTotalCount: 分时客流量
+        :param HourTrafficTotalCount: 分時客流量
         :type HourTrafficTotalCount: int
         """
         self.Hour = None
@@ -2023,23 +2023,23 @@ class HourTrafficInfoDetail(AbstractModel):
 
 
 class ModifyPersonFeatureInfoRequest(AbstractModel):
-    """ModifyPersonFeatureInfo请求参数结构体
+    """ModifyPersonFeatureInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param PersonId: 需要修改的顾客id
+        :param PersonId: 需要修改的顧客id
         :type PersonId: int
-        :param Picture: 图片BASE编码
+        :param Picture: 圖片BASE編碼
         :type Picture: str
-        :param PictureName: 图片名称（尽量不要重复）
+        :param PictureName: 圖片名稱（盡量不要重複）
         :type PictureName: str
-        :param PersonType: 人物类型，仅能操作黑白名单顾客（1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
+        :param PersonType: 人物類型，僅能操作黑白名單顧客（1 白名單，2 表示黑名單，101表示集團白名單，102表示集團黑名單）
         :type PersonType: int
-        :param ShopId: 店铺ID，如果不填表示操作集团身份库
+        :param ShopId: 店鋪ID，如果不填表示操作集團身份庫
         :type ShopId: int
         """
         self.CompanyId = None
@@ -2060,25 +2060,25 @@ class ModifyPersonFeatureInfoRequest(AbstractModel):
 
 
 class ModifyPersonFeatureInfoResponse(AbstractModel):
-    """ModifyPersonFeatureInfo返回参数结构体
+    """ModifyPersonFeatureInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param ShopId: 店铺ID，如果不填表示操作集团身份库
+        :param ShopId: 店鋪ID，如果不填表示操作集團身份庫
         :type ShopId: int
-        :param PersonId: 请求的顾客id
+        :param PersonId: 請求的顧客id
         :type PersonId: int
-        :param PersonIdBind: 图片实际绑定person_id，可能与请求的person_id不同，以此id为准
+        :param PersonIdBind: 圖片實際綁定person_id，可能與請求的person_id不同，以此id爲準
         :type PersonIdBind: int
-        :param PersonType: 请求的顾客类型
+        :param PersonType: 請求的顧客類型
         :type PersonType: int
-        :param SimilarPersonIds: 与请求的person_id类型相同、与请求图片特征相似的一个或多个person_id，需要额外确认这些id是否是同一个人
+        :param SimilarPersonIds: 與請求的person_id類型相同、與請求圖片特征相似的一個或多個person_id，需要額外确認這些id是否是同一個人
         :type SimilarPersonIds: list of int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CompanyId = None
@@ -2101,17 +2101,17 @@ class ModifyPersonFeatureInfoResponse(AbstractModel):
 
 
 class ModifyPersonTagInfoRequest(AbstractModel):
-    """ModifyPersonTagInfo请求参数结构体
+    """ModifyPersonTagInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+        :param CompanyId: 優mall集團id，通過"指定身份标識獲取客戶門店清單"介面獲取
         :type CompanyId: str
-        :param ShopId: 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
+        :param ShopId: 優mall店鋪id，通過"指定身份标識獲取客戶門店清單"介面獲取，爲0則拉取集團全部店鋪當前
         :type ShopId: int
-        :param Tags: 需要设置的顾客信息，批量设置最大为10个
+        :param Tags: 需要設置的顧客訊息，批次設置最大爲10個
         :type Tags: list of PersonTagInfo
         """
         self.CompanyId = None
@@ -2131,13 +2131,13 @@ class ModifyPersonTagInfoRequest(AbstractModel):
 
 
 class ModifyPersonTagInfoResponse(AbstractModel):
-    """ModifyPersonTagInfo返回参数结构体
+    """ModifyPersonTagInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2148,24 +2148,24 @@ class ModifyPersonTagInfoResponse(AbstractModel):
 
 
 class ModifyPersonTypeRequest(AbstractModel):
-    """ModifyPersonType请求参数结构体
+    """ModifyPersonType請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团ID
+        :param CompanyId: 集團ID
         :type CompanyId: str
-        :param ShopId: 门店ID
+        :param ShopId: 門店ID
         :type ShopId: int
-        :param PersonId: 顾客ID
+        :param PersonId: 顧客ID
         :type PersonId: int
-        :param PersonType: 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
+        :param PersonType: 身份類型(0表示普通顧客，1 白名單，2 表示黑名單）
         :type PersonType: int
-        :param PersonSubType: 身份子类型:
-PersonType=0时(普通顾客)，0普通顾客
-PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册会员，5VIP用户
-PersonType=2时(黑名单)，0普通黑名单，1小偷)
+        :param PersonSubType: 身份子類型:
+PersonType=0時(普通顧客)，0普通顧客
+PersonType=1時(白名單)，0店員，1商場人員，2其他類型人員，3區域經理，4注冊會員，5VIP用戶
+PersonType=2時(黑名單)，0普通黑名單，1小偷)
         :type PersonSubType: int
         """
         self.CompanyId = None
@@ -2184,13 +2184,13 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
 
 
 class ModifyPersonTypeResponse(AbstractModel):
-    """ModifyPersonType返回参数结构体
+    """ModifyPersonType返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2201,39 +2201,39 @@ class ModifyPersonTypeResponse(AbstractModel):
 
 
 class NetworkAndShopInfo(AbstractModel):
-    """网络状态
+    """網絡狀态
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团id
+        :param CompanyId: 集團id
         :type CompanyId: str
-        :param ShopId: 店铺id
+        :param ShopId: 店鋪id
         :type ShopId: int
-        :param Province: 店铺省份
+        :param Province: 店鋪省份
         :type Province: str
-        :param City: 店铺城市
+        :param City: 店鋪城市
         :type City: str
-        :param ShopName: 店铺名
+        :param ShopName: 店鋪名
         :type ShopName: str
-        :param Upload: 上传带宽，单位Mb/s，-1：未知
+        :param Upload: 上傳頻寬，單位Mb/s，-1：未知
         :type Upload: float
-        :param Download: 下载带宽，单位Mb/s，-1：未知
+        :param Download: 下載頻寬，單位Mb/s，-1：未知
         :type Download: float
-        :param MinRtt: 最小延迟，单位ms，-1：未知
+        :param MinRtt: 最小延遲，單位ms，-1：未知
         :type MinRtt: float
-        :param AvgRtt: 平均延迟，单位ms，-1：未知
+        :param AvgRtt: 平均延遲，單位ms，-1：未知
         :type AvgRtt: float
-        :param MaxRtt: 最大延迟，单位ms，-1：未知
+        :param MaxRtt: 最大延遲，單位ms，-1：未知
         :type MaxRtt: float
-        :param MdevRtt: 平均偏差延迟，单位ms，-1：未知
+        :param MdevRtt: 平均偏差延遲，單位ms，-1：未知
         :type MdevRtt: float
         :param Loss: 丢包率百分比，-1：未知
         :type Loss: float
-        :param UpdateTime: 更新时间戳
+        :param UpdateTime: 更新時間戳
         :type UpdateTime: int
-        :param Mac: 上报网络状态设备
+        :param Mac: 上報網絡狀态設備
         :type Mac: str
         """
         self.CompanyId = None
@@ -2270,25 +2270,25 @@ class NetworkAndShopInfo(AbstractModel):
 
 
 class NetworkHistoryInfo(AbstractModel):
-    """查询网络状态历史数据输出
+    """查詢網絡狀态曆史數據輸出
 
     """
 
     def __init__(self):
         """
-        :param Count: 总数
+        :param Count: 總數
         :type Count: int
-        :param CompanyId: 集团id
+        :param CompanyId: 集團id
         :type CompanyId: str
-        :param ShopId: 店铺id
+        :param ShopId: 店鋪id
         :type ShopId: int
-        :param Province: 店铺省份
+        :param Province: 店鋪省份
         :type Province: str
-        :param City: 店铺城市
+        :param City: 店鋪城市
         :type City: str
-        :param ShopName: 店铺名称
+        :param ShopName: 店鋪名稱
         :type ShopName: str
-        :param Infos: 网络信息
+        :param Infos: 網絡訊息
         :type Infos: list of NetworkInfo
         """
         self.Count = None
@@ -2316,29 +2316,29 @@ class NetworkHistoryInfo(AbstractModel):
 
 
 class NetworkInfo(AbstractModel):
-    """没有店铺信息的网络状态
+    """沒有店鋪訊息的網絡狀态
 
     """
 
     def __init__(self):
         """
-        :param Upload: 上传带宽，单位Mb/s，-1：未知
+        :param Upload: 上傳頻寬，單位Mb/s，-1：未知
         :type Upload: float
-        :param Download: 下载带宽，单位Mb/s，-1：未知
+        :param Download: 下載頻寬，單位Mb/s，-1：未知
         :type Download: float
-        :param MinRtt: 最小延迟，单位ms，-1：未知
+        :param MinRtt: 最小延遲，單位ms，-1：未知
         :type MinRtt: float
-        :param AvgRtt: 平均延迟，单位ms，-1：未知
+        :param AvgRtt: 平均延遲，單位ms，-1：未知
         :type AvgRtt: float
-        :param MaxRtt: 最大延迟，单位ms，-1：未知
+        :param MaxRtt: 最大延遲，單位ms，-1：未知
         :type MaxRtt: float
-        :param MdevRtt: 平均偏差延迟，单位ms，-1：未知
+        :param MdevRtt: 平均偏差延遲，單位ms，-1：未知
         :type MdevRtt: float
         :param Loss: 丢包率百分比，-1：未知
         :type Loss: float
-        :param UpdateTime: 更新时间戳
+        :param UpdateTime: 更新時間戳
         :type UpdateTime: int
-        :param Mac: 上报网络状态设备
+        :param Mac: 上報網絡狀态設備
         :type Mac: str
         """
         self.Upload = None
@@ -2365,15 +2365,15 @@ class NetworkInfo(AbstractModel):
 
 
 class NetworkLastInfo(AbstractModel):
-    """获取当前门店最新网络状态数据返回结构
+    """獲取當前門店最新網絡狀态數據返回結構
 
     """
 
     def __init__(self):
         """
-        :param Count: 总数
+        :param Count: 總數
         :type Count: int
-        :param Infos: 网络状态
+        :param Infos: 網絡狀态
         :type Infos: list of NetworkAndShopInfo
         """
         self.Count = None
@@ -2391,25 +2391,25 @@ class NetworkLastInfo(AbstractModel):
 
 
 class PersonCoordinate(AbstractModel):
-    """轨迹点坐标
+    """軌迹點坐标
 
     """
 
     def __init__(self):
         """
-        :param CADX: CAD图X坐标
+        :param CADX: CAD圖X坐标
         :type CADX: float
-        :param CADY: CAD图Y坐标
+        :param CADY: CAD圖Y坐标
         :type CADY: float
-        :param CapTime: 抓拍时间点
+        :param CapTime: 抓拍時間點
         :type CapTime: str
-        :param CapPic: 抓拍图片
+        :param CapPic: 抓拍圖片
         :type CapPic: str
-        :param MallAreaType: 卖场区域类型
+        :param MallAreaType: 賣場區域類型
         :type MallAreaType: int
-        :param PosId: 坐标编号
+        :param PosId: 坐标編号
         :type PosId: int
-        :param ShopId: 门店编号
+        :param ShopId: 門店編号
         :type ShopId: int
         :param Event: 事件
         :type Event: str
@@ -2436,32 +2436,32 @@ class PersonCoordinate(AbstractModel):
 
 
 class PersonInfo(AbstractModel):
-    """用户信息
+    """用戶訊息
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 用户ID
+        :param PersonId: 用戶ID
         :type PersonId: int
-        :param PersonPicture: 人脸图片Base64内容，已弃用，返回默认空值
+        :param PersonPicture: 人臉圖片Base64内容，已棄用，返回預設空值
         :type PersonPicture: str
         :param Gender: 性别：0男1女
         :type Gender: int
-        :param Age: 年龄
+        :param Age: 年齡
         :type Age: int
-        :param PersonType: 身份类型（0表示普通顾客，1 白名单，2 表示黑名单）
+        :param PersonType: 身份類型（0表示普通顧客，1 白名單，2 表示黑名單）
         :type PersonType: int
-        :param PersonPictureUrl: 人脸图片Url，在有效期内可以访问下载
+        :param PersonPictureUrl: 人臉圖片Url，在有效期内可以訪問下載
         :type PersonPictureUrl: str
-        :param PersonSubType: 身份子类型:
-PersonType=0时(普通顾客)，0普通顾客
-PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
-PersonType=2时(黑名单)，0普通黑名单，1小偷)
+        :param PersonSubType: 身份子類型:
+PersonType=0時(普通顧客)，0普通顧客
+PersonType=1時(白名單)，0店員，1商場人員，2其他類型人員，3區域經理，4注冊用戶，5VIP用戶
+PersonType=2時(黑名單)，0普通黑名單，1小偷)
         :type PersonSubType: int
-        :param VisitTimes: 到访次数，-1表示未知
+        :param VisitTimes: 到訪次數，-1表示未知
         :type VisitTimes: int
-        :param VisitDays: 到访天数，-1表示未知
+        :param VisitDays: 到訪天數，-1表示未知
         :type VisitDays: int
         """
         self.PersonId = None
@@ -2488,23 +2488,23 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
 
 
 class PersonProfile(AbstractModel):
-    """来访客人基本资料
+    """來訪客人基本資料
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 客人编码
+        :param PersonId: 客人編碼
         :type PersonId: str
         :param Gender: 性别
         :type Gender: int
-        :param Age: 年龄
+        :param Age: 年齡
         :type Age: int
-        :param FirstArrivedTime: 首次到场时间
+        :param FirstArrivedTime: 首次到場時間
         :type FirstArrivedTime: str
-        :param ArrivedCount: 来访次数
+        :param ArrivedCount: 來訪次數
         :type ArrivedCount: int
-        :param PicUrl: 客户图片
+        :param PicUrl: 客戶圖片
         :type PicUrl: str
         :param Similarity: 置信度
         :type Similarity: float
@@ -2529,17 +2529,17 @@ class PersonProfile(AbstractModel):
 
 
 class PersonTagInfo(AbstractModel):
-    """修改顾客属性参数
+    """修改顧客屬性參數
 
     """
 
     def __init__(self):
         """
-        :param OldType: 顾客原类型
+        :param OldType: 顧客原類型
         :type OldType: int
-        :param NewType: 顾客新类型
+        :param NewType: 顧客新類型
         :type NewType: int
-        :param PersonId: 顾客face id
+        :param PersonId: 顧客face id
         :type PersonId: int
         """
         self.OldType = None
@@ -2554,27 +2554,27 @@ class PersonTagInfo(AbstractModel):
 
 
 class PersonTracePoint(AbstractModel):
-    """客户轨迹点
+    """客戶軌迹點
 
     """
 
     def __init__(self):
         """
-        :param MallAreaId: 卖场区域编码
+        :param MallAreaId: 賣場區域編碼
         :type MallAreaId: int
-        :param ShopId: 门店编码
+        :param ShopId: 門店編碼
         :type ShopId: int
-        :param MallAreaType: 卖场区域类型
+        :param MallAreaType: 賣場區域類型
         :type MallAreaType: int
-        :param TraceEventType: 轨迹事件
+        :param TraceEventType: 軌迹事件
         :type TraceEventType: int
-        :param TraceEventTime: 轨迹事件发生时间点
+        :param TraceEventTime: 軌迹事件發生時間點
         :type TraceEventTime: str
-        :param CapPic: 抓拍图片
+        :param CapPic: 抓拍圖片
         :type CapPic: str
-        :param ShoppingBagType: 购物袋类型
+        :param ShoppingBagType: 購物袋類型
         :type ShoppingBagType: int
-        :param ShoppingBagCount: 购物袋数量
+        :param ShoppingBagCount: 購物袋數量
         :type ShoppingBagCount: int
         """
         self.MallAreaId = None
@@ -2599,15 +2599,15 @@ class PersonTracePoint(AbstractModel):
 
 
 class PersonTraceRoute(AbstractModel):
-    """客户轨迹序列
+    """客戶軌迹序列
 
     """
 
     def __init__(self):
         """
-        :param TraceId: 轨迹编码
+        :param TraceId: 軌迹編碼
         :type TraceId: str
-        :param TracePointSet: 轨迹点序列
+        :param TracePointSet: 軌迹點序列
         :type TracePointSet: list of PersonTracePoint
         """
         self.TraceId = None
@@ -2625,29 +2625,29 @@ class PersonTraceRoute(AbstractModel):
 
 
 class PersonVisitInfo(AbstractModel):
-    """用户到访明细
+    """用戶到訪明細
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 用户ID
+        :param PersonId: 用戶ID
         :type PersonId: int
-        :param VisitId: 用户到访ID
+        :param VisitId: 用戶到訪ID
         :type VisitId: int
-        :param InTime: 到访时间：Unix时间戳
+        :param InTime: 到訪時間：Unix時間戳
         :type InTime: int
-        :param CapturedPicture: 抓拍到的头像Base64内容，已弃用，返回默认空值
+        :param CapturedPicture: 抓拍到的頭像Base64内容，已棄用，返回預設空值
         :type CapturedPicture: str
-        :param MaskType: 口罩类型：0不戴口罩，1戴口罩
+        :param MaskType: 口罩類型：0不戴口罩，1戴口罩
         :type MaskType: int
-        :param GlassType: 眼镜类型：0不戴眼镜，1普通眼镜 , 2墨镜
+        :param GlassType: 眼鏡類型：0不戴眼鏡，1普通眼鏡 , 2墨鏡
         :type GlassType: int
-        :param HairType: 发型：0 短发,  1长发
+        :param HairType: 發型：0 短發,  1長發
         :type HairType: int
-        :param CapturedPictureUrl: 抓拍到的头像Url，在有效期内可以访问下载
+        :param CapturedPictureUrl: 抓拍到的頭像Url，在有效期内可以訪問下載
         :type CapturedPictureUrl: str
-        :param SceneInfo: 抓拍头像的场景图信息
+        :param SceneInfo: 抓拍頭像的場景圖訊息
         :type SceneInfo: :class:`tencentcloud.youmall.v20180228.models.SceneInfo`
         """
         self.PersonId = None
@@ -2676,19 +2676,19 @@ class PersonVisitInfo(AbstractModel):
 
 
 class RegisterCallbackRequest(AbstractModel):
-    """RegisterCallback请求参数结构体
+    """RegisterCallback請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CompanyId: 集团id，通过"指定身份标识获取客户门店列表"接口获取
+        :param CompanyId: 集團id，通過"指定身份标識獲取客戶門店清單"介面獲取
         :type CompanyId: str
-        :param BackUrl: 通知回调地址，完整url，示例（http://youmall.tencentcloudapi.com/）
+        :param BackUrl: 通知回調網址，完整url，範例（http://youmall.tencentcloudapi.com/）
         :type BackUrl: str
-        :param Time: 请求时间戳
+        :param Time: 請求時間戳
         :type Time: int
-        :param NeedFacePic: 是否需要顾客图片，1-需要图片，其它-不需要图片
+        :param NeedFacePic: 是否需要顧客圖片，1-需要圖片，其它-不需要圖片
         :type NeedFacePic: int
         """
         self.CompanyId = None
@@ -2705,13 +2705,13 @@ class RegisterCallbackRequest(AbstractModel):
 
 
 class RegisterCallbackResponse(AbstractModel):
-    """RegisterCallback返回参数结构体
+    """RegisterCallback返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2722,21 +2722,21 @@ class RegisterCallbackResponse(AbstractModel):
 
 
 class SceneInfo(AbstractModel):
-    """场景图信息
+    """場景圖訊息
 
     """
 
     def __init__(self):
         """
-        :param ScenePictureURL: 场景图
+        :param ScenePictureURL: 場景圖
         :type ScenePictureURL: str
-        :param HeadX: 抓拍头像左上角X坐标在场景图中的像素点位置
+        :param HeadX: 抓拍頭像左上角X坐标在場景圖中的像素點位置
         :type HeadX: int
-        :param HeadY: 抓拍头像左上角Y坐标在场景图中的像素点位置
+        :param HeadY: 抓拍頭像左上角Y坐标在場景圖中的像素點位置
         :type HeadY: int
-        :param HeadWidth: 抓拍头像在场景图中占有的像素宽度
+        :param HeadWidth: 抓拍頭像在場景圖中占有的像素寬度
         :type HeadWidth: int
-        :param HeadHeight: 抓拍头像在场景图中占有的像素高度
+        :param HeadHeight: 抓拍頭像在場景圖中占有的像素高度
         :type HeadHeight: int
         """
         self.ScenePictureURL = None
@@ -2755,7 +2755,7 @@ class SceneInfo(AbstractModel):
 
 
 class ShopDayTrafficInfo(AbstractModel):
-    """门店客流量列表信息
+    """門店客流量清單訊息
 
     """
 
@@ -2765,7 +2765,7 @@ class ShopDayTrafficInfo(AbstractModel):
         :type Date: str
         :param DayTrafficTotalCount: 客流量
         :type DayTrafficTotalCount: int
-        :param GenderAgeTrafficDetailSet: 性别年龄分组下的客流信息
+        :param GenderAgeTrafficDetailSet: 性别年齡分組下的客流訊息
         :type GenderAgeTrafficDetailSet: list of GenderAgeTrafficDetail
         """
         self.Date = None
@@ -2785,7 +2785,7 @@ class ShopDayTrafficInfo(AbstractModel):
 
 
 class ShopHourTrafficInfo(AbstractModel):
-    """分时客流量信息
+    """分時客流量訊息
 
     """
 
@@ -2793,7 +2793,7 @@ class ShopHourTrafficInfo(AbstractModel):
         """
         :param Date: 日期，格式yyyy-MM-dd
         :type Date: str
-        :param HourTrafficInfoDetailSet: 分时客流详细信息
+        :param HourTrafficInfoDetailSet: 分時客流詳細訊息
         :type HourTrafficInfoDetailSet: list of HourTrafficInfoDetail
         """
         self.Date = None
@@ -2811,7 +2811,7 @@ class ShopHourTrafficInfo(AbstractModel):
 
 
 class ShopInfo(AbstractModel):
-    """客户所属的门店信息
+    """客戶所屬的門店訊息
 
     """
 
@@ -2819,17 +2819,17 @@ class ShopInfo(AbstractModel):
         """
         :param CompanyId: 公司ID
         :type CompanyId: str
-        :param ShopId: 门店ID
+        :param ShopId: 門店ID
         :type ShopId: int
-        :param ShopName: 门店名称
+        :param ShopName: 門店名稱
         :type ShopName: str
-        :param ShopCode: 客户门店编码
+        :param ShopCode: 客戶門店編碼
         :type ShopCode: str
         :param Province: 省
         :type Province: str
         :param City: 市
         :type City: str
-        :param CompanyName: 公司名称
+        :param CompanyName: 公司名稱
         :type CompanyName: str
         """
         self.CompanyId = None
@@ -2852,17 +2852,17 @@ class ShopInfo(AbstractModel):
 
 
 class TrajectorySunData(AbstractModel):
-    """轨迹动线信息子结构
+    """軌迹動線訊息子結構
 
     """
 
     def __init__(self):
         """
-        :param Zones: 区域动线，形如 x-x-x-x-x，其中 x 为区域 ID
+        :param Zones: 區域動線，形如 x-x-x-x-x，其中 x 爲區域 ID
         :type Zones: str
-        :param Count: 该动线出现次数
+        :param Count: 該動線出現次數
         :type Count: int
-        :param AvgStayTime: 该动线平均停留时间（秒）
+        :param AvgStayTime: 該動線平均停留時間（秒）
         :type AvgStayTime: int
         """
         self.Zones = None
@@ -2877,15 +2877,15 @@ class TrajectorySunData(AbstractModel):
 
 
 class ZoneAgeGroupAvrStayTime(AbstractModel):
-    """区域性别平均停留时间子结构
+    """區域性别平均停留時間子結構
 
     """
 
     def __init__(self):
         """
-        :param MaleAvrStayTime: 男性平均停留时间
+        :param MaleAvrStayTime: 男性平均停留時間
         :type MaleAvrStayTime: float
-        :param FemaleAvrStayTime: 女性平均停留时间
+        :param FemaleAvrStayTime: 女性平均停留時間
         :type FemaleAvrStayTime: float
         """
         self.MaleAvrStayTime = None
@@ -2898,7 +2898,7 @@ class ZoneAgeGroupAvrStayTime(AbstractModel):
 
 
 class ZoneDayFlow(AbstractModel):
-    """每日客流统计子结构
+    """每日客流統計子結構
 
     """
 
@@ -2919,19 +2919,19 @@ class ZoneDayFlow(AbstractModel):
 
 
 class ZoneFlowAndAvrStayTime(AbstractModel):
-    """客流停留统计子结构
+    """客流停留統計子結構
 
     """
 
     def __init__(self):
         """
-        :param ZoneId: 区域id
+        :param ZoneId: 區域id
         :type ZoneId: int
-        :param ZoneName: 区域名称
+        :param ZoneName: 區域名稱
         :type ZoneName: str
         :param FlowCount: 人流量
         :type FlowCount: int
-        :param AvrStayTime: 平均停留时长
+        :param AvrStayTime: 平均停留時長
         :type AvrStayTime: int
         """
         self.ZoneId = None
@@ -2948,13 +2948,13 @@ class ZoneFlowAndAvrStayTime(AbstractModel):
 
 
 class ZoneHourFlow(AbstractModel):
-    """客流统计分时数据子结构
+    """客流統計分時數據子結構
 
     """
 
     def __init__(self):
         """
-        :param Hour: 分时 0~23
+        :param Hour: 分時 0~23
         :type Hour: int
         :param FlowCount: 客流量
         :type FlowCount: int
@@ -2969,7 +2969,7 @@ class ZoneHourFlow(AbstractModel):
 
 
 class ZoneTrafficInfo(AbstractModel):
-    """门店区域客流信息
+    """門店區域客流訊息
 
     """
 
@@ -2977,7 +2977,7 @@ class ZoneTrafficInfo(AbstractModel):
         """
         :param Date: 日期
         :type Date: str
-        :param ZoneTrafficInfoDetailSet: 门店区域客流详细信息
+        :param ZoneTrafficInfoDetailSet: 門店區域客流詳細訊息
         :type ZoneTrafficInfoDetailSet: list of ZoneTrafficInfoDetail
         """
         self.Date = None
@@ -2995,19 +2995,19 @@ class ZoneTrafficInfo(AbstractModel):
 
 
 class ZoneTrafficInfoDetail(AbstractModel):
-    """门店区域客流详细信息
+    """門店區域客流詳細訊息
 
     """
 
     def __init__(self):
         """
-        :param ZoneId: 区域ID
+        :param ZoneId: 區域ID
         :type ZoneId: int
-        :param ZoneName: 区域名称
+        :param ZoneName: 區域名稱
         :type ZoneName: str
         :param TrafficTotalCount: 客流量
         :type TrafficTotalCount: int
-        :param AvgStayTime: 平均停留时间
+        :param AvgStayTime: 平均停留時間
         :type AvgStayTime: int
         """
         self.ZoneId = None

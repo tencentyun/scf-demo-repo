@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: Get_COS_Object
   src: ./
-  description: 本示例配置了 COS 触发器，当有文件上传到对应的 COS bucket时，会触发云函数执行，并把文件下载到本地临时目录，用做后续处理
+  description: 本範例配置了 COS 觸發器，當有文件上傳到對應的 COS bucket時，會觸發雲函數執行，并把文件下載到本地臨時目錄，用做後續處理
   handler: index.main_handler
   runtime: Nodejs6.10
   namespace: default
@@ -14,7 +14,7 @@ inputs:
   memorySize: 128
   timeout: 5
   events:
-     - cos: # cos触发器
+     - cos: # cos觸發器
         name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
         parameters:
           bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com

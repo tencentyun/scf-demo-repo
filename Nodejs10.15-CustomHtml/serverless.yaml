@@ -8,7 +8,7 @@ inputs:
   src: ./
   description: >-
     This demo is mainly to show how to return custom html in serverless.
-    本示例主要演示如何配置 API 网关触发器返回自定义的html页面
+    本範例主要演示如何配置 API 閘道觸發器返回自定義的html頁面
   handler: index.main_handler
   runtime: Nodejs10.15
   namespace: default
@@ -16,7 +16,7 @@ inputs:
   memorySize: 128
   timeout: 3
   events:
-     - apigw: # api网关触发器
+     - apigw: # api閘道觸發器
         name: serverless
         serviceId: # input API gateway serviceId
         parameters:

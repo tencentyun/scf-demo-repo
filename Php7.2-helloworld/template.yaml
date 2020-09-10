@@ -4,7 +4,7 @@ Resources:
     helloworld:
       Type: TencentCloud::Serverless::Function
       Properties:
-        Description: helloworld 空白模板函数
+        Description: helloworld 空白範本函數
         MemorySize: 128
         Handler: index.main_handler
         Timeout: 3

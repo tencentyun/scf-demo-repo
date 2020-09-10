@@ -31,4 +31,3 @@ class HttpProfile(object):
         self.reqMethod = "POST" if reqMethod is None else reqMethod
         self.protocol = protocol
         self.keepAlive = keepAlive
-

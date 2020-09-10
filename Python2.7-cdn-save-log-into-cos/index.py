@@ -30,7 +30,7 @@ class Job:
 
 
     def cos_exists(self):
-        '''Check if the file already exists 检查文件是否已存在'''
+        '''Check if the file already exists 檢查文件是否已存在'''
         try:
             rsp = self.cos_client.head_object(
                 Bucket=self.cos_bucket,
@@ -46,7 +46,7 @@ class Job:
                 raise e
 
     def download_url_into_cos(self):
-        '''Uploading files and downloading them to COS by streaming fragment upload 采用流式分片上传的方式，下载文件并存入COS'''
+        '''Uploading files and downloading them to COS by streaming fragment upload 采用流式分片上傳的方式，下載文件并存入COS'''
         response = requests.get(self.url, stream=True)
 
         # start
@@ -83,8 +83,8 @@ class Job:
         '''
         Role: Storing the CDN log to COS.
         Obtaining the download link of the log on the CDN to check whether the log exists in the COS; if not, upload it to COS.
-        作用：将CDN的日志存储到COS上
-        获取CDN上日志的下载链接，检测COS是否已存在该日志；若无，则上传到COS
+        作用：将CDN的日志儲存到COS上
+        獲取CDN上日志的下載連結，檢測COS是否已存在該日志；若無，則上傳到COS
         '''
         logging.info("Process URL: %s" % self.url)
         status = "skip"

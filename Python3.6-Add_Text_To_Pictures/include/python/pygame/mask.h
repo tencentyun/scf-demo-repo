@@ -22,4 +22,3 @@ typedef struct {
 
 static void* PyMASK_C_API[PYGAMEAPI_MASK_NUMSLOTS] = {NULL};
 #endif /* #ifndef PYGAMEAPI_MASK_INTERNAL */
-

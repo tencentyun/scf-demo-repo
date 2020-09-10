@@ -26,9 +26,9 @@ class AfcClient(AbstractClient):
 
 
     def QueryAntiFraudVip(self, request):
-        """天御反欺诈服务，主要应用于银行、证券、保险、P2P等金融行业客户，通过腾讯的大数据风控能力，
-        可以准确识别恶意用户信息，解决客户在支付、活动、理财，风控等业务环节遇到的欺诈威胁，降低企业
-        的损失。
+        """天禦反欺詐服務，主要應用于銀行、證券、保險、P2P等金融行業客戶，通過騰訊的大數據風控能力，
+        可以準确識别惡意用戶訊息，解決客戶在支付、活動、理财，風控等業務環節遇到的欺詐威脅，降低企業
+        的損失。
 
         :param request: Request instance for QueryAntiFraudVip.
         :type request: :class:`tencentcloud.afc.v20200226.models.QueryAntiFraudVipRequest`

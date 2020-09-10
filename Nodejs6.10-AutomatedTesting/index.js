@@ -2,7 +2,7 @@
 Nodejs8.9-AutomatedTesting
 TIPS:
 1. There is no CMQ SDK for node
-   CMQ暂时没有node版本的SDK
+   CMQ暫時沒有node版本的SDK
 
 Reference: 
 1. https://cloud.tencent.com/document/product/583/19504 - Function test（python）
@@ -13,28 +13,28 @@ const Capi = require('qcloudapi-sdk')
 const request = require('request')
 
 // The cmq authentication information
-// 使用 cmq 所需的鉴权/配置信息
-const SECRET_ID = 'xxx' // Replace it with your SecretId , 请替换为您的 SecretId
-const SECRET_KEY = 'xxx' // Replace it with your SecretKey, 请替换为您的 SecretKey
-const CMQ_TOPIC_NAME = 'CMQ_TOPIC_NAME' // Replace it with your Topic name, 请替换为您的 Topic 名称
-const CMQ_REGION = 'gz' // The region of your cmq topic, cmq主题所在地域
+// 使用 cmq 所需的鑒權/配置訊息
+const SECRET_ID = 'xxx' // Replace it with your SecretId , 請替換爲您的 SecretId
+const SECRET_KEY = 'xxx' // Replace it with your SecretKey, 請替換爲您的 SecretKey
+const CMQ_TOPIC_NAME = 'CMQ_TOPIC_NAME' // Replace it with your Topic name, 請替換爲您的 Topic 名稱
+const CMQ_REGION = 'gz' // The region of your cmq topic, cmq主題所在地域
 
 // While fails, the email notify list
-// 拨测失败后，告警邮件需要通知的邮箱列表
+// 撥測失敗後，告警郵件需要通知的電子信箱清單
 const EMAIL_NOTIFY_LIST = ['******@qq.com', '******@qq.com']
 
 // While fails, the email sending the error message, please replace it with your own email address
-// 拨测失败后，发出告警邮件的邮箱，请根据您自身设置的邮箱地址进行修改
+// 撥測失敗後，發出告警郵件的電子信箱，請根據您自身設置的電子信箱網址進行修改
 const FROM_ADDR = '******@qq.com'
 
 // The test url list
-// 拨测网址列表
+// 撥測網址清單
 const TEST_URL_LIST = ['http://wrong.tencent.com', 'http://www.qq.com']
 
 /**Simple CMQ-SDK */
 function CMQRequestHelper(SecretId, SecretKey) {
   // Generate the CMQ api
-  // CMQ云api构建
+  // CMQ雲api構建
   this.requestHelper = new Capi({
     SecretId,
     SecretKey,

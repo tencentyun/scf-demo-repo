@@ -17,13 +17,13 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AuthTestTidRequest(AbstractModel):
-    """AuthTestTid请求参数结构体
+    """AuthTestTid請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 设备端SDK填入测试TID参数后生成的加密数据串
+        :param Data: 設備端SDK填入測試TID參數後生成的加密數據串
         :type Data: str
         """
         self.Data = None
@@ -34,15 +34,15 @@ class AuthTestTidRequest(AbstractModel):
 
 
 class AuthTestTidResponse(AbstractModel):
-    """AuthTestTid返回参数结构体
+    """AuthTestTid返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Pass: 认证结果
+        :param Pass: 認證結果
         :type Pass: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Pass = None
@@ -55,15 +55,15 @@ class AuthTestTidResponse(AbstractModel):
 
 
 class BurnTidNotifyRequest(AbstractModel):
-    """BurnTidNotify请求参数结构体
+    """BurnTidNotify請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param OrderId: 订单编号
+        :param OrderId: 訂單編号
         :type OrderId: str
-        :param Tid: TID编号
+        :param Tid: TID編号
         :type Tid: str
         """
         self.OrderId = None
@@ -76,15 +76,15 @@ class BurnTidNotifyRequest(AbstractModel):
 
 
 class BurnTidNotifyResponse(AbstractModel):
-    """BurnTidNotify返回参数结构体
+    """BurnTidNotify返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Tid: 接收回执成功的TID
+        :param Tid: 接收回執成功的TID
         :type Tid: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Tid = None
@@ -97,15 +97,15 @@ class BurnTidNotifyResponse(AbstractModel):
 
 
 class DeliverTidNotifyRequest(AbstractModel):
-    """DeliverTidNotify请求参数结构体
+    """DeliverTidNotify請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param OrderId: 订单编号
+        :param OrderId: 訂單編号
         :type OrderId: str
-        :param Tid: TID编号
+        :param Tid: TID編号
         :type Tid: str
         """
         self.OrderId = None
@@ -118,19 +118,19 @@ class DeliverTidNotifyRequest(AbstractModel):
 
 
 class DeliverTidNotifyResponse(AbstractModel):
-    """DeliverTidNotify返回参数结构体
+    """DeliverTidNotify返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RemaindCount: 剩余空发数量
+        :param RemaindCount: 剩餘空發數量
         :type RemaindCount: int
-        :param Tid: 已回执的TID编码
+        :param Tid: 已回執的TID編碼
         :type Tid: str
-        :param ProductKey: 产品公钥
+        :param ProductKey: 産品公鑰
         :type ProductKey: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RemaindCount = None
@@ -147,15 +147,15 @@ class DeliverTidNotifyResponse(AbstractModel):
 
 
 class DeliverTidsRequest(AbstractModel):
-    """DeliverTids请求参数结构体
+    """DeliverTids請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param OrderId: 订单ID
+        :param OrderId: 訂單ID
         :type OrderId: str
-        :param Quantity: 数量，1~100
+        :param Quantity: 數量，1~100
         :type Quantity: int
         """
         self.OrderId = None
@@ -168,18 +168,18 @@ class DeliverTidsRequest(AbstractModel):
 
 
 class DeliverTidsResponse(AbstractModel):
-    """DeliverTids返回参数结构体
+    """DeliverTids返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TidSet: 空发的TID信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TidSet: 空發的TID訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TidSet: list of TidKeysInfo
-        :param ProductKey: 产品公钥
+        :param ProductKey: 産品公鑰
         :type ProductKey: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TidSet = None
@@ -199,13 +199,13 @@ class DeliverTidsResponse(AbstractModel):
 
 
 class DescribeAvailableLibCountRequest(AbstractModel):
-    """DescribeAvailableLibCount请求参数结构体
+    """DescribeAvailableLibCount請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param OrderId: 订单编号
+        :param OrderId: 訂單編号
         :type OrderId: str
         """
         self.OrderId = None
@@ -216,15 +216,15 @@ class DescribeAvailableLibCountRequest(AbstractModel):
 
 
 class DescribeAvailableLibCountResponse(AbstractModel):
-    """DescribeAvailableLibCount返回参数结构体
+    """DescribeAvailableLibCount返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Quantity: 可空发的白盒密钥数量
+        :param Quantity: 可空發的白盒金鑰數量
         :type Quantity: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Quantity = None
@@ -237,25 +237,25 @@ class DescribeAvailableLibCountResponse(AbstractModel):
 
 
 class DescribePermissionRequest(AbstractModel):
-    """DescribePermission请求参数结构体
+    """DescribePermission請求參數結構體
 
     """
 
 
 class DescribePermissionResponse(AbstractModel):
-    """DescribePermission返回参数结构体
+    """DescribePermission返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EnterpriseUser: 企业用户
+        :param EnterpriseUser: 企業用戶
         :type EnterpriseUser: bool
-        :param DownloadPermission: 下载控制台权限
+        :param DownloadPermission: 下載控制台權限
         :type DownloadPermission: str
-        :param UsePermission: 使用控制台权限
+        :param UsePermission: 使用控制台權限
         :type UsePermission: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.EnterpriseUser = None
@@ -272,15 +272,15 @@ class DescribePermissionResponse(AbstractModel):
 
 
 class DownloadTidsRequest(AbstractModel):
-    """DownloadTids请求参数结构体
+    """DownloadTids請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param OrderId: 订单编号
+        :param OrderId: 訂單編号
         :type OrderId: str
-        :param Quantity: 下载数量：1~10
+        :param Quantity: 下載數量：1~10
         :type Quantity: int
         """
         self.OrderId = None
@@ -293,16 +293,16 @@ class DownloadTidsRequest(AbstractModel):
 
 
 class DownloadTidsResponse(AbstractModel):
-    """DownloadTids返回参数结构体
+    """DownloadTids返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TidSet: 下载的TID信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TidSet: 下載的TID訊息清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TidSet: list of TidKeysInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TidSet = None
@@ -320,23 +320,23 @@ class DownloadTidsResponse(AbstractModel):
 
 
 class TidKeysInfo(AbstractModel):
-    """系统生成的TID和密钥信息
+    """系統生成的TID和金鑰訊息
 
     """
 
     def __init__(self):
         """
-        :param Tid: TID号码
+        :param Tid: TID号碼
         :type Tid: str
-        :param PublicKey: 公钥
+        :param PublicKey: 公鑰
         :type PublicKey: str
-        :param PrivateKey: 私钥
+        :param PrivateKey: 私鑰
         :type PrivateKey: str
-        :param Psk: 共享密钥
+        :param Psk: 共享金鑰
         :type Psk: str
-        :param DownloadUrl: 软加固白盒密钥下载地址
+        :param DownloadUrl: 軟加固白盒金鑰下載網址
         :type DownloadUrl: str
-        :param DeviceCode: 软加固设备标识码
+        :param DeviceCode: 軟加固設備标識碼
         :type DeviceCode: str
         """
         self.Tid = None
@@ -357,15 +357,15 @@ class TidKeysInfo(AbstractModel):
 
 
 class UploadDeviceUniqueCodeRequest(AbstractModel):
-    """UploadDeviceUniqueCode请求参数结构体
+    """UploadDeviceUniqueCode請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CodeSet: 硬件唯一标识码
+        :param CodeSet: 硬體唯一标識碼
         :type CodeSet: list of str
-        :param OrderId: 硬件标识码绑定的申请编号
+        :param OrderId: 硬體标識碼綁定的申請編号
         :type OrderId: str
         """
         self.CodeSet = None
@@ -378,23 +378,23 @@ class UploadDeviceUniqueCodeRequest(AbstractModel):
 
 
 class UploadDeviceUniqueCodeResponse(AbstractModel):
-    """UploadDeviceUniqueCode返回参数结构体
+    """UploadDeviceUniqueCode返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Count: 本次已上传数量
+        :param Count: 本次已上傳數量
         :type Count: int
-        :param ExistedCodeSet: 重复的硬件唯一标识码
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ExistedCodeSet: 重複的硬體唯一标識碼
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ExistedCodeSet: list of str
-        :param LeftQuantity: 剩余可上传数量
+        :param LeftQuantity: 剩餘可上傳數量
         :type LeftQuantity: int
-        :param IllegalCodeSet: 错误的硬件唯一标识码
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IllegalCodeSet: 錯誤的硬體唯一标識碼
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IllegalCodeSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Count = None
@@ -413,13 +413,13 @@ class UploadDeviceUniqueCodeResponse(AbstractModel):
 
 
 class VerifyChipBurnInfoRequest(AbstractModel):
-    """VerifyChipBurnInfo请求参数结构体
+    """VerifyChipBurnInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 验证数据
+        :param Data: 驗證數據
         :type Data: str
         """
         self.Data = None
@@ -430,19 +430,19 @@ class VerifyChipBurnInfoRequest(AbstractModel):
 
 
 class VerifyChipBurnInfoResponse(AbstractModel):
-    """VerifyChipBurnInfo返回参数结构体
+    """VerifyChipBurnInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Pass: 验证结果
+        :param Pass: 驗證結果
         :type Pass: bool
-        :param VerifiedTimes: 已验证次数
+        :param VerifiedTimes: 已驗證次數
         :type VerifiedTimes: int
-        :param LeftTimes: 剩余验证次数
+        :param LeftTimes: 剩餘驗證次數
         :type LeftTimes: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Pass = None

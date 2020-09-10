@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: rust_demo
   src: ./
-  description: rust_demo function. Rust模板函数
+  description: rust_demo function. Rust範本函數
   handler: index.main_handler
   runtime: CustomRuntime
   namespace: default

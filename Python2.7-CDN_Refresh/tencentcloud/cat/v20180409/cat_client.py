@@ -26,7 +26,7 @@ class CatClient(AbstractClient):
 
 
     def BindAlarmPolicy(self, request):
-        """绑定拨测任务和告警策略组
+        """綁定撥測任務和告警策略組
 
         :param request: Request instance for BindAlarmPolicy.
         :type request: :class:`tencentcloud.cat.v20180409.models.BindAlarmPolicyRequest`
@@ -54,7 +54,7 @@ class CatClient(AbstractClient):
 
 
     def CreateAgentGroup(self, request):
-        """添加拨测分组
+        """添加撥測分組
 
         :param request: Request instance for CreateAgentGroup.
         :type request: :class:`tencentcloud.cat.v20180409.models.CreateAgentGroupRequest`
@@ -82,7 +82,7 @@ class CatClient(AbstractClient):
 
 
     def CreateTaskEx(self, request):
-        """创建拨测任务(扩展)
+        """創建撥測任務(擴展)
 
         :param request: Request instance for CreateTaskEx.
         :type request: :class:`tencentcloud.cat.v20180409.models.CreateTaskExRequest`
@@ -110,7 +110,7 @@ class CatClient(AbstractClient):
 
 
     def DeleteAgentGroup(self, request):
-        """删除拨测分组
+        """删除撥測分組
 
         :param request: Request instance for DeleteAgentGroup.
         :type request: :class:`tencentcloud.cat.v20180409.models.DeleteAgentGroupRequest`
@@ -138,7 +138,7 @@ class CatClient(AbstractClient):
 
 
     def DeleteTasks(self, request):
-        """删除多个拨测任务
+        """删除多個撥測任務
 
         :param request: Request instance for DeleteTasks.
         :type request: :class:`tencentcloud.cat.v20180409.models.DeleteTasksRequest`
@@ -166,7 +166,7 @@ class CatClient(AbstractClient):
 
 
     def DescribeAgentGroups(self, request):
-        """查询拨测分组列表
+        """查詢撥測分組清單
 
         :param request: Request instance for DescribeAgentGroups.
         :type request: :class:`tencentcloud.cat.v20180409.models.DescribeAgentGroupsRequest`
@@ -194,7 +194,7 @@ class CatClient(AbstractClient):
 
 
     def DescribeAgents(self, request):
-        """查询本用户可选的拨测点列表
+        """查詢本用戶可選的撥測點清單
 
         :param request: Request instance for DescribeAgents.
         :type request: :class:`tencentcloud.cat.v20180409.models.DescribeAgentsRequest`
@@ -222,7 +222,7 @@ class CatClient(AbstractClient):
 
 
     def DescribeAlarmTopic(self, request):
-        """查询用户的告警主题列表
+        """查詢用戶的告警主題清單
 
         :param request: Request instance for DescribeAlarmTopic.
         :type request: :class:`tencentcloud.cat.v20180409.models.DescribeAlarmTopicRequest`
@@ -250,7 +250,7 @@ class CatClient(AbstractClient):
 
 
     def DescribeAlarms(self, request):
-        """查询拨测告警列表
+        """查詢撥測告警清單
 
         :param request: Request instance for DescribeAlarms.
         :type request: :class:`tencentcloud.cat.v20180409.models.DescribeAlarmsRequest`
@@ -278,7 +278,7 @@ class CatClient(AbstractClient):
 
 
     def DescribeAlarmsByTask(self, request):
-        """按任务查询拨测告警列表
+        """按任務查詢撥測告警清單
 
         :param request: Request instance for DescribeAlarmsByTask.
         :type request: :class:`tencentcloud.cat.v20180409.models.DescribeAlarmsByTaskRequest`
@@ -306,7 +306,7 @@ class CatClient(AbstractClient):
 
 
     def DescribeCatLogs(self, request):
-        """查询拨测流水
+        """查詢撥測流水
 
         :param request: Request instance for DescribeCatLogs.
         :type request: :class:`tencentcloud.cat.v20180409.models.DescribeCatLogsRequest`
@@ -334,7 +334,7 @@ class CatClient(AbstractClient):
 
 
     def DescribeTaskDetail(self, request):
-        """查询拨测任务信息
+        """查詢撥測任務訊息
 
         :param request: Request instance for DescribeTaskDetail.
         :type request: :class:`tencentcloud.cat.v20180409.models.DescribeTaskDetailRequest`
@@ -362,7 +362,7 @@ class CatClient(AbstractClient):
 
 
     def DescribeTasksByType(self, request):
-        """按类型查询拨测任务列表
+        """按類型查詢撥測任務清單
 
         :param request: Request instance for DescribeTasksByType.
         :type request: :class:`tencentcloud.cat.v20180409.models.DescribeTasksByTypeRequest`
@@ -390,7 +390,7 @@ class CatClient(AbstractClient):
 
 
     def DescribeUserLimit(self, request):
-        """获取用户可用资源限制
+        """獲取用戶可用資源限制
 
         :param request: Request instance for DescribeUserLimit.
         :type request: :class:`tencentcloud.cat.v20180409.models.DescribeUserLimitRequest`
@@ -418,7 +418,7 @@ class CatClient(AbstractClient):
 
 
     def GetAvailRatioHistory(self, request):
-        """获取指定时刻的可用率地图信息
+        """獲取指定時刻的可用率地圖訊息
 
         :param request: Request instance for GetAvailRatioHistory.
         :type request: :class:`tencentcloud.cat.v20180409.models.GetAvailRatioHistoryRequest`
@@ -446,7 +446,7 @@ class CatClient(AbstractClient):
 
 
     def GetDailyAvailRatio(self, request):
-        """获取一天的整体可用率信息
+        """獲取一天的整體可用率訊息
 
         :param request: Request instance for GetDailyAvailRatio.
         :type request: :class:`tencentcloud.cat.v20180409.models.GetDailyAvailRatioRequest`
@@ -474,7 +474,7 @@ class CatClient(AbstractClient):
 
 
     def GetRealAvailRatio(self, request):
-        """获取实时可用率信息
+        """獲取實時可用率訊息
 
         :param request: Request instance for GetRealAvailRatio.
         :type request: :class:`tencentcloud.cat.v20180409.models.GetRealAvailRatioRequest`
@@ -502,7 +502,7 @@ class CatClient(AbstractClient):
 
 
     def GetRespTimeTrendEx(self, request):
-        """查询拨测任务的走势数据
+        """查詢撥測任務的走勢數據
 
         :param request: Request instance for GetRespTimeTrendEx.
         :type request: :class:`tencentcloud.cat.v20180409.models.GetRespTimeTrendExRequest`
@@ -530,7 +530,7 @@ class CatClient(AbstractClient):
 
 
     def GetResultSummary(self, request):
-        """获取任务列表的实时数据
+        """獲取任務清單的實時數據
 
         :param request: Request instance for GetResultSummary.
         :type request: :class:`tencentcloud.cat.v20180409.models.GetResultSummaryRequest`
@@ -558,7 +558,7 @@ class CatClient(AbstractClient):
 
 
     def GetReturnCodeHistory(self, request):
-        """查询拨测任务的历史返回码信息
+        """查詢撥測任務的曆史返回碼訊息
 
         :param request: Request instance for GetReturnCodeHistory.
         :type request: :class:`tencentcloud.cat.v20180409.models.GetReturnCodeHistoryRequest`
@@ -586,7 +586,7 @@ class CatClient(AbstractClient):
 
 
     def GetReturnCodeInfo(self, request):
-        """查询拨测任务的返回码统计信息
+        """查詢撥測任務的返回碼統計訊息
 
         :param request: Request instance for GetReturnCodeInfo.
         :type request: :class:`tencentcloud.cat.v20180409.models.GetReturnCodeInfoRequest`
@@ -614,7 +614,7 @@ class CatClient(AbstractClient):
 
 
     def GetTaskTotalNumber(self, request):
-        """获取AppId下的拨测任务总数
+        """獲取AppId下的撥測任務總數
 
         :param request: Request instance for GetTaskTotalNumber.
         :type request: :class:`tencentcloud.cat.v20180409.models.GetTaskTotalNumberRequest`
@@ -642,7 +642,7 @@ class CatClient(AbstractClient):
 
 
     def ModifyAgentGroup(self, request):
-        """修改拨测分组
+        """修改撥測分組
 
         :param request: Request instance for ModifyAgentGroup.
         :type request: :class:`tencentcloud.cat.v20180409.models.ModifyAgentGroupRequest`
@@ -670,7 +670,7 @@ class CatClient(AbstractClient):
 
 
     def ModifyTaskEx(self, request):
-        """修改拨测任务(扩展)
+        """修改撥測任務(擴展)
 
         :param request: Request instance for ModifyTaskEx.
         :type request: :class:`tencentcloud.cat.v20180409.models.ModifyTaskExRequest`
@@ -698,7 +698,7 @@ class CatClient(AbstractClient):
 
 
     def PauseTask(self, request):
-        """暂停拨测任务
+        """暫停撥測任務
 
         :param request: Request instance for PauseTask.
         :type request: :class:`tencentcloud.cat.v20180409.models.PauseTaskRequest`
@@ -726,7 +726,7 @@ class CatClient(AbstractClient):
 
 
     def RunTask(self, request):
-        """运行拨测任务
+        """運作撥測任務
 
         :param request: Request instance for RunTask.
         :type request: :class:`tencentcloud.cat.v20180409.models.RunTaskRequest`
@@ -754,7 +754,7 @@ class CatClient(AbstractClient):
 
 
     def VerifyResult(self, request):
-        """验证拨测任务，结果验证查询（验证成功的，才建议创建拨测任务）
+        """驗證撥測任務，結果驗證查詢（驗證成功的，才建議創建撥測任務）
 
         :param request: Request instance for VerifyResult.
         :type request: :class:`tencentcloud.cat.v20180409.models.VerifyResultRequest`

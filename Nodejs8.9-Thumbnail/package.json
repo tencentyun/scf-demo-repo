@@ -1,15 +1,15 @@
 {
   "name": "imagecompress",
   "version": "1.0.0",
-  "description": "图片压缩",
+  "description": "圖片壓縮",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "cos触发器",
-    "图片压缩",
-    "优图"
+    "cos觸發器",
+    "圖片壓縮",
+    "優圖"
   ],
   "author": "louiswu",
   "license": "ISC",

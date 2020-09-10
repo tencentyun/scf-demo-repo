@@ -12,12 +12,12 @@ from pykafka.client import KafkaClient
 from pykafka.common import OffsetType
 from kafka import KafkaConsumer,TopicPartition
 
-to_cos_bytes_up_limit = 1024 * 1024 * 500  # 每次最大投递cos包大小 500M
-to_cos_bytes_down_limit = 1  # 每次最小投递cos包大小 1B
-partition_max_timeout_ms_up_limit = 15 * 60 * 1000  # 最大timeout时间
-partition_max_timeout_ms_down_limit = 5 * 60 * 1000  # 最小timeout时间
-max_to_cos_time_s = 5  # 最小timeout时间
-consumer_timeout_ms = 3000  # 默认partition多久时间没消息就退出
+to_cos_bytes_up_limit = 1024 * 1024 * 500  # 每次最大投遞cos包大小 500M
+to_cos_bytes_down_limit = 1  # 每次最小投遞cos包大小 1B
+partition_max_timeout_ms_up_limit = 15 * 60 * 1000  # 最大timeout時間
+partition_max_timeout_ms_down_limit = 5 * 60 * 1000  # 最小timeout時間
+max_to_cos_time_s = 5  # 最小timeout時間
+consumer_timeout_ms = 3000  # 預設partition多久時間沒訊息就登出
 
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
@@ -25,7 +25,7 @@ logger.setLevel(level=logging.INFO)
 
 class KafkaToCos(object):
     '''
-    消费kafka 投递cos
+    消費kafka 投遞cos
     '''
 
     def __init__(self, kafka_instance_id, topic_name, topic_id, kafka_address, bucket_address,
@@ -44,10 +44,10 @@ class KafkaToCos(object):
         self.consumer_timeout_ms = consumer_timeout_ms
         self.group_id = group_id
         self.offset_type = offset_type
-        config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, Token=token)  # 获取配置对象
+        config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, Token=token)  # 獲取配置對象
         self.client = CosS3Client(config)
 
-    # Generating file name. 生成写入文件名
+    # Generating file name. 生成寫入文件名
     def object_key_generate(self):
         logger.info("start to generate key name")
         today = str(datetime.date.today())
@@ -56,7 +56,7 @@ class KafkaToCos(object):
         object_key = '{}/{}'.format(dir_name, file_name)
         return object_key
 
-    # Check if the file already exists. 检查文件是否已存在
+    # Check if the file already exists. 檢查文件是否已存在
     def check_cos_file(self, key):
         try:
             resp = self.client.head_object(
@@ -86,7 +86,7 @@ class KafkaToCos(object):
             logger.error("delete files and folders error: %s", err)
             pass
 
-    # Uploading file to COS. 上传文件到COS
+    # Uploading file to COS. 上傳文件到COS
     def upload_local_file(self, local_path):
         start_time = int(time.time())
         logger.info("Start to upload time: %s", str(start_time))
@@ -95,14 +95,14 @@ class KafkaToCos(object):
         if os.path.getsize(local_path) <= 0:
             logger.info("local file is empty")
             return True
-        # 判断文件名是否存在
+        # 判斷文件名是否存在
         if os.path.isfile(local_path):
             logger.info("local_filename is [%s]" % local_path)
             key = self.object_key_generate()
             while self.check_cos_file(key) is True:
                 key = self.object_key_generate()
             logger.debug("cos_object_name is: [%s]", key)
-            # 简单上传,STANDARD_IA：低频存储
+            # 簡單上傳,STANDARD_IA：低頻儲存
             response = self.client.put_object_from_local_file(Bucket=self.bucket_address, LocalFilePath=local_path,
                                                               Key=key, StorageClass="STANDARD_IA")
             logger.debug("upload result is [%s]" % response)
@@ -112,7 +112,7 @@ class KafkaToCos(object):
             logger.error("Upload fail")
             return False
 
-    # check params. 检查参数是否正确
+    # check params. 檢查參數是否正确
     def param_check(self):
         try:
             if self.kafka_instance_id is None:
@@ -134,19 +134,19 @@ class KafkaToCos(object):
             if self.offset_type is None:
                 self.offset_type = "earliest"
 
-            # 验证consumer_timeout_ms 取值
+            # 驗證consumer_timeout_ms 取值
             self.consumer_timeout_ms = int(self.consumer_timeout_ms)
             if self.consumer_timeout_ms <= 0:
                 self.consumer_timeout_ms = consumer_timeout_ms
 
-            # 验证partition_max_to_cos_bytes 取值
+            # 驗證partition_max_to_cos_bytes 取值
             self.partition_max_to_cos_bytes = int(self.partition_max_to_cos_bytes)
             if self.partition_max_to_cos_bytes > to_cos_bytes_up_limit:
                 self.partition_max_to_cos_bytes = to_cos_bytes_up_limit
             if self.partition_max_to_cos_bytes <= 0:
                 self.partition_max_to_cos_bytes = to_cos_bytes_down_limit
 
-            # 验证partition_max_timeout_ms 取值
+            # 驗證partition_max_timeout_ms 取值
             self.partition_max_timeout_ms = int(self.partition_max_timeout_ms)
             if self.partition_max_timeout_ms > partition_max_timeout_ms_up_limit:
                 self.partition_max_timeout_ms = partition_max_timeout_ms_up_limit
@@ -158,7 +158,7 @@ class KafkaToCos(object):
             return str(err)
 
     def calculation_max_to_cos_time(self):
-        # 根据函数每次toCos的包大小（50M, 100M，150M，，500M）以及 toCos的带宽推算出对应toCos的最大预留时间
+        # 根據函數每次toCos的包大小（50M, 100M，150M，，500M）以及 toCos的頻寬推算出對應toCos的最大預留時間
         if self.partition_max_to_cos_bytes > 50 * 1024 * 1024:
             return max_to_cos_time_s + (self.partition_max_to_cos_bytes / (50 * 1024 * 1024))
         else:
@@ -185,7 +185,7 @@ class KafkaToCos(object):
         elif self.offset_type.lower() == 'latest':
             start_offset = OffsetType.LATEST
         else:
-            # 引用kafka库，解决pykafka fetch_offset_limits函数不能正确根据timestamp返回offset的问题
+            # 引用kafka庫，解決pykafka fetch_offset_limits函數不能正确根據timestamp返回offset的問題
             start_offset = OffsetType.LATEST
             consumer = KafkaConsumer(self.topic_name, group_id=self.group_id, bootstrap_servers=[self.kafka_address])
             tp = TopicPartition(self.topic_name, self.partition_id)
@@ -262,7 +262,7 @@ def main_handler(event, context):
     partition_max_timeout_ms = context["time_limit_in_ms"]
     partition_id = event["partition_id"]
 
-    # 下面这些都需要环境变量形式传入
+    # 下面這些都需要環境變量形式傳入
     region = os.getenv("region")
     topic_name = os.getenv("topic_name")
     topic_id = os.getenv("topic_id")

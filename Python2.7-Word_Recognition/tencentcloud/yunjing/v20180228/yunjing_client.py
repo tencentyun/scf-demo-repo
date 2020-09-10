@@ -26,9 +26,9 @@ class YunjingClient(AbstractClient):
 
 
     def CloseProVersion(self, request):
-        """本接口 (CloseProVersion) 用于关闭专业版。
+        """本介面 (CloseProVersion) 用于關閉專業版。
 
-        :param request: 调用CloseProVersion所需参数的结构体。
+        :param request: 調用CloseProVersion所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.CloseProVersionRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.CloseProVersionResponse`
 
@@ -54,9 +54,9 @@ class YunjingClient(AbstractClient):
 
 
     def CreateProcessTask(self, request):
-        """本接口 (CreateProcessTask) 用于创建实时拉取进程任务。
+        """本介面 (CreateProcessTask) 用于創建實時拉取程序任務。
 
-        :param request: 调用CreateProcessTask所需参数的结构体。
+        :param request: 調用CreateProcessTask所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.CreateProcessTaskRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.CreateProcessTaskResponse`
 
@@ -82,9 +82,9 @@ class YunjingClient(AbstractClient):
 
 
     def CreateUsualLoginPlaces(self, request):
-        """此接口（CreateUsualLoginPlaces）用于添加常用登录地。
+        """此介面（CreateUsualLoginPlaces）用于添加常用登入地。
 
-        :param request: 调用CreateUsualLoginPlaces所需参数的结构体。
+        :param request: 調用CreateUsualLoginPlaces所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.CreateUsualLoginPlacesRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.CreateUsualLoginPlacesResponse`
 
@@ -110,9 +110,9 @@ class YunjingClient(AbstractClient):
 
 
     def DeleteBruteAttacks(self, request):
-        """本接口 (DeleteBruteAttacks) 用于删除暴力破解记录。
+        """本介面 (DeleteBruteAttacks) 用于删除暴力破解記錄。
 
-        :param request: 调用DeleteBruteAttacks所需参数的结构体。
+        :param request: 調用DeleteBruteAttacks所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DeleteBruteAttacksRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DeleteBruteAttacksResponse`
 
@@ -138,9 +138,9 @@ class YunjingClient(AbstractClient):
 
 
     def DeleteMachine(self, request):
-        """本接口（DeleteMachine）用于卸载云镜客户端。
+        """本介面（DeleteMachine）用于卸載雲鏡用戶端。
 
-        :param request: 调用DeleteMachine所需参数的结构体。
+        :param request: 調用DeleteMachine所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DeleteMachineRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DeleteMachineResponse`
 
@@ -166,9 +166,9 @@ class YunjingClient(AbstractClient):
 
 
     def DeleteMaliciousRequests(self, request):
-        """本接口 (DeleteMaliciousRequests) 用于删除恶意请求记录。
+        """本介面 (DeleteMaliciousRequests) 用于删除惡意請求記錄。
 
-        :param request: 调用DeleteMaliciousRequests所需参数的结构体。
+        :param request: 調用DeleteMaliciousRequests所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DeleteMaliciousRequestsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DeleteMaliciousRequestsResponse`
 
@@ -194,9 +194,9 @@ class YunjingClient(AbstractClient):
 
 
     def DeleteMalwares(self, request):
-        """本接口 (DeleteMalwares) 用于删除木马记录。
+        """本介面 (DeleteMalwares) 用于删除木馬記錄。
 
-        :param request: 调用DeleteMalwares所需参数的结构体。
+        :param request: 調用DeleteMalwares所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DeleteMalwaresRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DeleteMalwaresResponse`
 
@@ -222,9 +222,9 @@ class YunjingClient(AbstractClient):
 
 
     def DeleteNonlocalLoginPlaces(self, request):
-        """本接口 (DeleteNonlocalLoginPlaces) 用于删除异地登录记录。
+        """本介面 (DeleteNonlocalLoginPlaces) 用于删除異地登入記錄。
 
-        :param request: 调用DeleteNonlocalLoginPlaces所需参数的结构体。
+        :param request: 調用DeleteNonlocalLoginPlaces所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DeleteNonlocalLoginPlacesRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DeleteNonlocalLoginPlacesResponse`
 
@@ -250,9 +250,9 @@ class YunjingClient(AbstractClient):
 
 
     def DeleteUsualLoginPlaces(self, request):
-        """本接口（DeleteUsualLoginPlaces）用于删除常用登录地。
+        """本介面（DeleteUsualLoginPlaces）用于删除常用登入地。
 
-        :param request: 调用DeleteUsualLoginPlaces所需参数的结构体。
+        :param request: 調用DeleteUsualLoginPlaces所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DeleteUsualLoginPlacesRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DeleteUsualLoginPlacesResponse`
 
@@ -278,9 +278,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeAccountStatistics(self, request):
-        """本接口 (DescribeAccountStatistics) 用于获取帐号统计列表数据。
+        """本介面 (DescribeAccountStatistics) 用于獲取帳号統計清單數據。
 
-        :param request: 调用DescribeAccountStatistics所需参数的结构体。
+        :param request: 調用DescribeAccountStatistics所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeAccountStatisticsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeAccountStatisticsResponse`
 
@@ -306,9 +306,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeAccounts(self, request):
-        """本接口 (DescribeAccounts) 用于获取帐号列表数据。
+        """本介面 (DescribeAccounts) 用于獲取帳号清單數據。
 
-        :param request: 调用DescribeAccounts所需参数的结构体。
+        :param request: 調用DescribeAccounts所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeAccountsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeAccountsResponse`
 
@@ -334,9 +334,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeAgentVuls(self, request):
-        """本接口 (DescribeAgentVuls) 用于获取主机的漏洞列表。
+        """本介面 (DescribeAgentVuls) 用于獲取主機的漏洞清單。
 
-        :param request: 调用DescribeAgentVuls所需参数的结构体。
+        :param request: 調用DescribeAgentVuls所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeAgentVulsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeAgentVulsResponse`
 
@@ -362,9 +362,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeAlarmAttribute(self, request):
-        """本接口 (DescribeAlarmAttribute) 用于获取告警设置。
+        """本介面 (DescribeAlarmAttribute) 用于獲取告警設置。
 
-        :param request: 调用DescribeAlarmAttribute所需参数的结构体。
+        :param request: 調用DescribeAlarmAttribute所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeAlarmAttributeRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeAlarmAttributeResponse`
 
@@ -390,9 +390,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeBruteAttacks(self, request):
-        """本接口{DescribeBruteAttacks}用于获取暴力破解事件列表。
+        """本介面{DescribeBruteAttacks}用于獲取暴力破解事件清單。
 
-        :param request: 调用DescribeBruteAttacks所需参数的结构体。
+        :param request: 調用DescribeBruteAttacks所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeBruteAttacksRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeBruteAttacksResponse`
 
@@ -418,9 +418,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeComponentInfo(self, request):
-        """本接口 (DescribeComponentInfo) 用于获取组件信息数据。
+        """本介面 (DescribeComponentInfo) 用于獲取元件訊息數據。
 
-        :param request: 调用DescribeComponentInfo所需参数的结构体。
+        :param request: 調用DescribeComponentInfo所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeComponentInfoRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeComponentInfoResponse`
 
@@ -446,9 +446,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeComponentStatistics(self, request):
-        """本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
+        """本介面 (DescribeComponentStatistics) 用于獲取元件統計清單數據。
 
-        :param request: 调用DescribeComponentStatistics所需参数的结构体。
+        :param request: 調用DescribeComponentStatistics所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeComponentStatisticsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeComponentStatisticsResponse`
 
@@ -474,9 +474,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeComponents(self, request):
-        """本接口 (DescribeComponents) 用于获取组件列表数据。
+        """本介面 (DescribeComponents) 用于獲取元件清單數據。
 
-        :param request: 调用DescribeComponents所需参数的结构体。
+        :param request: 調用DescribeComponents所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeComponentsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeComponentsResponse`
 
@@ -502,9 +502,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeHistoryAccounts(self, request):
-        """本接口 (DescribeHistoryAccounts) 用于获取帐号变更历史列表数据。
+        """本介面 (DescribeHistoryAccounts) 用于獲取帳号變更曆史清單數據。
 
-        :param request: 调用DescribeHistoryAccounts所需参数的结构体。
+        :param request: 調用DescribeHistoryAccounts所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeHistoryAccountsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeHistoryAccountsResponse`
 
@@ -530,9 +530,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeImpactedHosts(self, request):
-        """本接口 (DescribeImpactedHosts) 用于获取漏洞受影响机器列表。
+        """本介面 (DescribeImpactedHosts) 用于獲取漏洞受影響機器清單。
 
-        :param request: 调用DescribeImpactedHosts所需参数的结构体。
+        :param request: 調用DescribeImpactedHosts所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeImpactedHostsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeImpactedHostsResponse`
 
@@ -558,9 +558,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeMachineInfo(self, request):
-        """本接口（DescribeMachineInfo）用于获取机器详细信息。
+        """本介面（DescribeMachineInfo）用于獲取機器詳細訊息。
 
-        :param request: 调用DescribeMachineInfo所需参数的结构体。
+        :param request: 調用DescribeMachineInfo所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeMachineInfoRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeMachineInfoResponse`
 
@@ -586,9 +586,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeMachines(self, request):
-        """本接口 (DescribeMachines) 用于获取区域主机列表。
+        """本介面 (DescribeMachines) 用于獲取區域主機清單。
 
-        :param request: 调用DescribeMachines所需参数的结构体。
+        :param request: 調用DescribeMachines所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeMachinesRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeMachinesResponse`
 
@@ -614,9 +614,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeMaliciousRequests(self, request):
-        """本接口 (DescribeMaliciousRequests) 用于获取恶意请求数据。
+        """本介面 (DescribeMaliciousRequests) 用于獲取惡意請求數據。
 
-        :param request: 调用DescribeMaliciousRequests所需参数的结构体。
+        :param request: 調用DescribeMaliciousRequests所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeMaliciousRequestsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeMaliciousRequestsResponse`
 
@@ -642,9 +642,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeMalwares(self, request):
-        """本接口（DescribeMalwares）用于获取木马事件列表。
+        """本介面（DescribeMalwares）用于獲取木馬事件清單。
 
-        :param request: 调用DescribeMalwares所需参数的结构体。
+        :param request: 調用DescribeMalwares所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeMalwaresRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeMalwaresResponse`
 
@@ -670,9 +670,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeNonlocalLoginPlaces(self, request):
-        """本接口(DescribeNonlocalLoginPlaces)用于获取异地登录事件。
+        """本介面(DescribeNonlocalLoginPlaces)用于獲取異地登入事件。
 
-        :param request: 调用DescribeNonlocalLoginPlaces所需参数的结构体。
+        :param request: 調用DescribeNonlocalLoginPlaces所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeNonlocalLoginPlacesRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeNonlocalLoginPlacesResponse`
 
@@ -698,9 +698,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeOpenPortStatistics(self, request):
-        """本接口 (DescribeOpenPortStatistics) 用于获取端口统计列表。
+        """本介面 (DescribeOpenPortStatistics) 用于獲取端口統計清單。
 
-        :param request: 调用DescribeOpenPortStatistics所需参数的结构体。
+        :param request: 調用DescribeOpenPortStatistics所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeOpenPortStatisticsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeOpenPortStatisticsResponse`
 
@@ -726,9 +726,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeOpenPorts(self, request):
-        """本接口 (DescribeOpenPorts) 用于获取端口列表数据。
+        """本介面 (DescribeOpenPorts) 用于獲取端口清單數據。
 
-        :param request: 调用DescribeOpenPorts所需参数的结构体。
+        :param request: 調用DescribeOpenPorts所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeOpenPortsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeOpenPortsResponse`
 
@@ -754,9 +754,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeOverviewStatistics(self, request):
-        """本接口用于（DescribeOverviewStatistics）获取概览统计数据。
+        """本介面用于（DescribeOverviewStatistics）獲取概覽統計數據。
 
-        :param request: 调用DescribeOverviewStatistics所需参数的结构体。
+        :param request: 調用DescribeOverviewStatistics所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeOverviewStatisticsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeOverviewStatisticsResponse`
 
@@ -782,9 +782,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeProVersionInfo(self, request):
-        """本接口 (DescribeProVersionInfo) 用于获取专业版信息。
+        """本介面 (DescribeProVersionInfo) 用于獲取專業版訊息。
 
-        :param request: 调用DescribeProVersionInfo所需参数的结构体。
+        :param request: 調用DescribeProVersionInfo所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeProVersionInfoRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeProVersionInfoResponse`
 
@@ -810,9 +810,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeProcessStatistics(self, request):
-        """本接口 (DescribeProcessStatistics) 用于获取进程统计列表数据。
+        """本介面 (DescribeProcessStatistics) 用于獲取程序統計清單數據。
 
-        :param request: 调用DescribeProcessStatistics所需参数的结构体。
+        :param request: 調用DescribeProcessStatistics所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeProcessStatisticsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeProcessStatisticsResponse`
 
@@ -838,9 +838,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeProcessTaskStatus(self, request):
-        """本接口 (DescribeProcessTaskStatus) 用于获取实时拉取进程任务状态。
+        """本介面 (DescribeProcessTaskStatus) 用于獲取實時拉取程序任務狀态。
 
-        :param request: 调用DescribeProcessTaskStatus所需参数的结构体。
+        :param request: 調用DescribeProcessTaskStatus所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeProcessTaskStatusRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeProcessTaskStatusResponse`
 
@@ -866,9 +866,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeProcesses(self, request):
-        """本接口 (DescribeProcesses) 用于获取进程列表数据。
+        """本介面 (DescribeProcesses) 用于獲取程序清單數據。
 
-        :param request: 调用DescribeProcesses所需参数的结构体。
+        :param request: 調用DescribeProcesses所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeProcessesRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeProcessesResponse`
 
@@ -894,9 +894,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeSecurityDynamics(self, request):
-        """本接口 (DescribeSecurityDynamics) 用于获取安全事件消息数据。
+        """本介面 (DescribeSecurityDynamics) 用于獲取安全事件訊息數據。
 
-        :param request: 调用DescribeSecurityDynamics所需参数的结构体。
+        :param request: 調用DescribeSecurityDynamics所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeSecurityDynamicsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeSecurityDynamicsResponse`
 
@@ -922,9 +922,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeSecurityTrends(self, request):
-        """本接口 (DescribeSecurityTrends) 用于获取安全事件统计数据。
+        """本介面 (DescribeSecurityTrends) 用于獲取安全事件統計數據。
 
-        :param request: 调用DescribeSecurityTrends所需参数的结构体。
+        :param request: 調用DescribeSecurityTrends所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeSecurityTrendsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeSecurityTrendsResponse`
 
@@ -950,9 +950,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeUsualLoginPlaces(self, request):
-        """此接口（DescribeUsualLoginPlaces）用于查询常用登录地。
+        """此介面（DescribeUsualLoginPlaces）用于查詢常用登入地。
 
-        :param request: 调用DescribeUsualLoginPlaces所需参数的结构体。
+        :param request: 調用DescribeUsualLoginPlaces所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeUsualLoginPlacesRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeUsualLoginPlacesResponse`
 
@@ -978,9 +978,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeVulInfo(self, request):
-        """本接口 (DescribeVulInfo) 用于获取漏洞详情。
+        """本介面 (DescribeVulInfo) 用于獲取漏洞詳情。
 
-        :param request: 调用DescribeVulInfo所需参数的结构体。
+        :param request: 調用DescribeVulInfo所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeVulInfoRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeVulInfoResponse`
 
@@ -1006,9 +1006,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeVulScanResult(self, request):
-        """本接口 (DescribeVulScanResult) 用于获取漏洞检测结果。
+        """本介面 (DescribeVulScanResult) 用于獲取漏洞檢測結果。
 
-        :param request: 调用DescribeVulScanResult所需参数的结构体。
+        :param request: 調用DescribeVulScanResult所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeVulScanResultRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeVulScanResultResponse`
 
@@ -1034,9 +1034,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeVuls(self, request):
-        """本接口 (DescribeVuls) 用于获取漏洞列表数据。
+        """本介面 (DescribeVuls) 用于獲取漏洞清單數據。
 
-        :param request: 调用DescribeVuls所需参数的结构体。
+        :param request: 調用DescribeVuls所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeVulsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeVulsResponse`
 
@@ -1062,9 +1062,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeWeeklyReportBruteAttacks(self, request):
-        """本接口 (DescribeWeeklyReportBruteAttacks) 用于获取专业周报密码破解数据。
+        """本介面 (DescribeWeeklyReportBruteAttacks) 用于獲取專業周報密碼破解數據。
 
-        :param request: 调用DescribeWeeklyReportBruteAttacks所需参数的结构体。
+        :param request: 調用DescribeWeeklyReportBruteAttacks所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeWeeklyReportBruteAttacksRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeWeeklyReportBruteAttacksResponse`
 
@@ -1090,9 +1090,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeWeeklyReportInfo(self, request):
-        """本接口 (DescribeWeeklyReportInfo) 用于获取专业周报详情数据。
+        """本介面 (DescribeWeeklyReportInfo) 用于獲取專業周報詳情數據。
 
-        :param request: 调用DescribeWeeklyReportInfo所需参数的结构体。
+        :param request: 調用DescribeWeeklyReportInfo所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeWeeklyReportInfoRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeWeeklyReportInfoResponse`
 
@@ -1118,9 +1118,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeWeeklyReportMalwares(self, request):
-        """本接口 (DescribeWeeklyReportMalwares) 用于获取专业周报木马数据。
+        """本介面 (DescribeWeeklyReportMalwares) 用于獲取專業周報木馬數據。
 
-        :param request: 调用DescribeWeeklyReportMalwares所需参数的结构体。
+        :param request: 調用DescribeWeeklyReportMalwares所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeWeeklyReportMalwaresRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeWeeklyReportMalwaresResponse`
 
@@ -1146,9 +1146,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeWeeklyReportNonlocalLoginPlaces(self, request):
-        """本接口 (DescribeWeeklyReportNonlocalLoginPlaces) 用于获取专业周报异地登录数据。
+        """本介面 (DescribeWeeklyReportNonlocalLoginPlaces) 用于獲取專業周報異地登入數據。
 
-        :param request: 调用DescribeWeeklyReportNonlocalLoginPlaces所需参数的结构体。
+        :param request: 調用DescribeWeeklyReportNonlocalLoginPlaces所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeWeeklyReportNonlocalLoginPlacesRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeWeeklyReportNonlocalLoginPlacesResponse`
 
@@ -1174,9 +1174,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeWeeklyReportVuls(self, request):
-        """本接口 (DescribeWeeklyReportVuls) 用于专业版周报漏洞数据。
+        """本介面 (DescribeWeeklyReportVuls) 用于專業版周報漏洞數據。
 
-        :param request: 调用DescribeWeeklyReportVuls所需参数的结构体。
+        :param request: 調用DescribeWeeklyReportVuls所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeWeeklyReportVulsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeWeeklyReportVulsResponse`
 
@@ -1202,9 +1202,9 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeWeeklyReports(self, request):
-        """本接口 (DescribeWeeklyReports) 用于获取周报列表数据。
+        """本介面 (DescribeWeeklyReports) 用于獲取周報清單數據。
 
-        :param request: 调用DescribeWeeklyReports所需参数的结构体。
+        :param request: 調用DescribeWeeklyReports所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.DescribeWeeklyReportsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.DescribeWeeklyReportsResponse`
 
@@ -1230,9 +1230,9 @@ class YunjingClient(AbstractClient):
 
 
     def ExportMaliciousRequests(self, request):
-        """本接口 (ExportMaliciousRequests) 用于导出下载恶意请求文件。
+        """本介面 (ExportMaliciousRequests) 用于導出下載惡意請求文件。
 
-        :param request: 调用ExportMaliciousRequests所需参数的结构体。
+        :param request: 調用ExportMaliciousRequests所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.ExportMaliciousRequestsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.ExportMaliciousRequestsResponse`
 
@@ -1258,9 +1258,9 @@ class YunjingClient(AbstractClient):
 
 
     def IgnoreImpactedHosts(self, request):
-        """本接口 (IngoreImpactedHosts) 用于忽略漏洞。
+        """本介面 (IngoreImpactedHosts) 用于忽略漏洞。
 
-        :param request: 调用IgnoreImpactedHosts所需参数的结构体。
+        :param request: 調用IgnoreImpactedHosts所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.IgnoreImpactedHostsRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.IgnoreImpactedHostsResponse`
 
@@ -1286,9 +1286,9 @@ class YunjingClient(AbstractClient):
 
 
     def InquiryPriceOpenProVersionPrepaid(self, request):
-        """本接口 (InquiryPriceOpenProVersionPrepaid) 用于开通专业版询价(预付费)。
+        """本介面 (InquiryPriceOpenProVersionPrepaid) 用于開通專業版詢價(預付費)。
 
-        :param request: 调用InquiryPriceOpenProVersionPrepaid所需参数的结构体。
+        :param request: 調用InquiryPriceOpenProVersionPrepaid所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.InquiryPriceOpenProVersionPrepaidRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.InquiryPriceOpenProVersionPrepaidResponse`
 
@@ -1314,9 +1314,9 @@ class YunjingClient(AbstractClient):
 
 
     def MisAlarmNonlocalLoginPlaces(self, request):
-        """本接口{MisAlarmNonlocalLoginPlaces}将设置当前地点为常用登录地。
+        """本介面{MisAlarmNonlocalLoginPlaces}将設置當前地點爲常用登入地。
 
-        :param request: 调用MisAlarmNonlocalLoginPlaces所需参数的结构体。
+        :param request: 調用MisAlarmNonlocalLoginPlaces所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.MisAlarmNonlocalLoginPlacesRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.MisAlarmNonlocalLoginPlacesResponse`
 
@@ -1342,9 +1342,9 @@ class YunjingClient(AbstractClient):
 
 
     def ModifyAlarmAttribute(self, request):
-        """本接口（ModifyAlarmAttribute）用于修改告警设置。
+        """本介面（ModifyAlarmAttribute）用于修改告警設置。
 
-        :param request: 调用ModifyAlarmAttribute所需参数的结构体。
+        :param request: 調用ModifyAlarmAttribute所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.ModifyAlarmAttributeRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.ModifyAlarmAttributeResponse`
 
@@ -1370,9 +1370,9 @@ class YunjingClient(AbstractClient):
 
 
     def ModifyAutoOpenProVersionConfig(self, request):
-        """本接口 (ModifyAutoOpenProVersionConfig) 用于设置新增主机自动开通专业版配置。
+        """本介面 (ModifyAutoOpenProVersionConfig) 用于設置新增主機自動開通專業版配置。
 
-        :param request: 调用ModifyAutoOpenProVersionConfig所需参数的结构体。
+        :param request: 調用ModifyAutoOpenProVersionConfig所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.ModifyAutoOpenProVersionConfigRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.ModifyAutoOpenProVersionConfigResponse`
 
@@ -1398,9 +1398,9 @@ class YunjingClient(AbstractClient):
 
 
     def ModifyProVersionRenewFlag(self, request):
-        """本接口 (ModifyProVersionRenewFlag) 用于修改专业版包年包月续费标识。
+        """本介面 (ModifyProVersionRenewFlag) 用于修改專業版包年包月續約标識。
 
-        :param request: 调用ModifyProVersionRenewFlag所需参数的结构体。
+        :param request: 調用ModifyProVersionRenewFlag所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.ModifyProVersionRenewFlagRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.ModifyProVersionRenewFlagResponse`
 
@@ -1426,9 +1426,9 @@ class YunjingClient(AbstractClient):
 
 
     def OpenProVersionPrepaid(self, request):
-        """本接口 (OpenProVersionPrepaid) 用于开通专业版(包年包月)。
+        """本介面 (OpenProVersionPrepaid) 用于開通專業版(包年包月)。
 
-        :param request: 调用OpenProVersionPrepaid所需参数的结构体。
+        :param request: 調用OpenProVersionPrepaid所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.OpenProVersionPrepaidRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.OpenProVersionPrepaidResponse`
 
@@ -1454,9 +1454,9 @@ class YunjingClient(AbstractClient):
 
 
     def RecoverMalwares(self, request):
-        """本接口（RecoverMalwares）用于批量恢复已经被隔离的木马文件。
+        """本介面（RecoverMalwares）用于批次恢複已經被隔離的木馬文件。
 
-        :param request: 调用RecoverMalwares所需参数的结构体。
+        :param request: 調用RecoverMalwares所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.RecoverMalwaresRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.RecoverMalwaresResponse`
 
@@ -1482,9 +1482,9 @@ class YunjingClient(AbstractClient):
 
 
     def RenewProVersion(self, request):
-        """本接口 (RenewProVersion) 用于续费专业版(包年包月)。
+        """本介面 (RenewProVersion) 用于續約專業版(包年包月)。
 
-        :param request: 调用RenewProVersion所需参数的结构体。
+        :param request: 調用RenewProVersion所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.RenewProVersionRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.RenewProVersionResponse`
 
@@ -1510,9 +1510,9 @@ class YunjingClient(AbstractClient):
 
 
     def RescanImpactedHost(self, request):
-        """本接口 (RescanImpactedHosts) 用于漏洞重新检测。
+        """本介面 (RescanImpactedHosts) 用于漏洞重新檢測。
 
-        :param request: 调用RescanImpactedHost所需参数的结构体。
+        :param request: 調用RescanImpactedHost所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.RescanImpactedHostRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.RescanImpactedHostResponse`
 
@@ -1538,9 +1538,9 @@ class YunjingClient(AbstractClient):
 
 
     def SeparateMalwares(self, request):
-        """本接口（SeparateMalwares）用于隔离木马。
+        """本介面（SeparateMalwares）用于隔離木馬。
 
-        :param request: 调用SeparateMalwares所需参数的结构体。
+        :param request: 調用SeparateMalwares所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.SeparateMalwaresRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.SeparateMalwaresResponse`
 
@@ -1566,9 +1566,9 @@ class YunjingClient(AbstractClient):
 
 
     def TrustMaliciousRequest(self, request):
-        """本接口 (TrustMaliciousRequest) 用于恶意请求添加信任。
+        """本介面 (TrustMaliciousRequest) 用于惡意請求添加信任。
 
-        :param request: 调用TrustMaliciousRequest所需参数的结构体。
+        :param request: 調用TrustMaliciousRequest所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.TrustMaliciousRequestRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.TrustMaliciousRequestResponse`
 
@@ -1594,9 +1594,9 @@ class YunjingClient(AbstractClient):
 
 
     def TrustMalwares(self, request):
-        """本接口(TrustMalwares)将被识别木马文件设为信任。
+        """本介面(TrustMalwares)将被識别木馬文件設爲信任。
 
-        :param request: 调用TrustMalwares所需参数的结构体。
+        :param request: 調用TrustMalwares所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.TrustMalwaresRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.TrustMalwaresResponse`
 
@@ -1622,9 +1622,9 @@ class YunjingClient(AbstractClient):
 
 
     def UntrustMaliciousRequest(self, request):
-        """本接口 (UntrustMaliciousRequest) 用于取消信任恶意请求。
+        """本介面 (UntrustMaliciousRequest) 用于取消信任惡意請求。
 
-        :param request: 调用UntrustMaliciousRequest所需参数的结构体。
+        :param request: 調用UntrustMaliciousRequest所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.UntrustMaliciousRequestRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.UntrustMaliciousRequestResponse`
 
@@ -1650,9 +1650,9 @@ class YunjingClient(AbstractClient):
 
 
     def UntrustMalwares(self, request):
-        """本接口（UntrustMalwares）用于取消信任木马文件。
+        """本介面（UntrustMalwares）用于取消信任木馬文件。
 
-        :param request: 调用UntrustMalwares所需参数的结构体。
+        :param request: 調用UntrustMalwares所需參數的結構體。
         :type request: :class:`tencentcloud.yunjing.v20180228.models.UntrustMalwaresRequest`
         :rtype: :class:`tencentcloud.yunjing.v20180228.models.UntrustMalwaresResponse`
 

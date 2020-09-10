@@ -17,15 +17,15 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CosBackup(AbstractModel):
-    """ES cos自动备份信息
+    """ES cos自動備份訊息
 
     """
 
     def __init__(self):
         """
-        :param IsAutoBackup: 是否开启cos自动备份
+        :param IsAutoBackup: 是否開啓cos自動備份
         :type IsAutoBackup: bool
-        :param BackupTime: 自动备份执行时间（精确到小时）, e.g. "22:00"
+        :param BackupTime: 自動備份執行時間（精确到小時）, e.g. "22:00"
         :type BackupTime: str
         """
         self.IsAutoBackup = None
@@ -38,59 +38,59 @@ class CosBackup(AbstractModel):
 
 
 class CreateInstanceRequest(AbstractModel):
-    """CreateInstance请求参数结构体
+    """CreateInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Zone: 可用区
+        :param Zone: 可用區
         :type Zone: str
-        :param NodeNum: 节点数量（2-50个）
+        :param NodeNum: 節點數量（2-50個）
         :type NodeNum: int
-        :param EsVersion: 实例版本（支持"5.6.4"、"6.4.3"）
+        :param EsVersion: 實例版本（支援"5.6.4"、"6.4.3"）
         :type EsVersion: str
-        :param NodeType: 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        :param NodeType: 節點規格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
         :type NodeType: str
-        :param DiskSize: 节点磁盘容量（单位GB）
+        :param DiskSize: 節點磁盤容量（單位GB）
         :type DiskSize: int
-        :param VpcId: 私有网络ID
+        :param VpcId: 私有網絡ID
         :type VpcId: str
-        :param SubnetId: 子网ID
+        :param SubnetId: 子網ID
         :type SubnetId: str
-        :param Password: 访问密码（密码需8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
+        :param Password: 訪問密碼（密碼需8到16位，至少包括兩項（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
         :type Password: str
-        :param InstanceName: 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
+        :param InstanceName: 實例名稱（1-50 個英文、漢字、數字、連接線-或下劃線_）
         :type InstanceName: str
-        :param ChargeType: 计费类型<li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li>默认值POSTPAID_BY_HOUR
+        :param ChargeType: 計費類型<li>PREPAID：預付費，即包年包月</li><li>POSTPAID_BY_HOUR：按小時後付費</li>預設值POSTPAID_BY_HOUR
         :type ChargeType: str
-        :param ChargePeriod: 包年包月购买时长（单位由参数TimeUint决定）
+        :param ChargePeriod: 包年包月購買時長（單位由參數TimeUint決定）
         :type ChargePeriod: int
-        :param RenewFlag: 自动续费标识<li>RENEW_FLAG_AUTO：自动续费</li><li>RENEW_FLAG_MANUAL：不自动续费，用户手动续费</li>ChargeType为PREPAID时需要设置，如不传递该参数，普通用于默认不自动续费，SVIP用户自动续费
+        :param RenewFlag: 自動續約标識<li>RENEW_FLAG_AUTO：自動續約</li><li>RENEW_FLAG_MANUAL：不自動續約，用戶手動續約</li>ChargeType爲PREPAID時需要設置，如不傳遞該參數，普通用于預設不自動續約，SVIP用戶自動續約
         :type RenewFlag: str
-        :param DiskType: 节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
+        :param DiskType: 節點磁盤類型<li>CLOUD_SSD：SSD雲硬碟</li><li>CLOUD_PREMIUM：高硬能雲硬碟</li>預設值CLOUD_SSD
         :type DiskType: str
-        :param TimeUnit: 计费时长单位（ChargeType为PREPAID时需要设置，默认值为“m”，表示月，当前只支持“m”）
+        :param TimeUnit: 計費時長單位（ChargeType爲PREPAID時需要設置，預設值爲“m”，表示月，當前只支援“m”）
         :type TimeUnit: str
-        :param AutoVoucher: 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
+        :param AutoVoucher: 是否自動使用代金券<li>0：不自動使用</li><li>1：自動使用</li>預設值0
         :type AutoVoucher: int
-        :param VoucherIds: 代金券ID列表（目前仅支持指定一张代金券）
+        :param VoucherIds: 代金券ID清單（目前僅支援指定一張代金券）
         :type VoucherIds: list of str
-        :param EnableDedicatedMaster: 是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false
+        :param EnableDedicatedMaster: 是否創建專用主節點<li>true：開啓專用主節點</li><li>false：不開啓專用主節點</li>預設值false
         :type EnableDedicatedMaster: bool
-        :param MasterNodeNum: 专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）
+        :param MasterNodeNum: 專用主節點個數（只支援3個和5個，EnableDedicatedMaster爲true時該值必傳）
         :type MasterNodeNum: int
-        :param MasterNodeType: 专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        :param MasterNodeType: 專用主節點類型（EnableDedicatedMaster爲true時必傳）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
         :type MasterNodeType: str
-        :param MasterNodeDiskSize: 专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
+        :param MasterNodeDiskSize: 專用主節點磁盤大小（單位GB，非必傳，若傳遞則必須爲50，暫不支援自定義）
         :type MasterNodeDiskSize: int
-        :param ClusterNameInConf: 集群配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
+        :param ClusterNameInConf: 集群配置文件中的ClusterName（系統預設配置爲實例ID，暫不支援自定義）
         :type ClusterNameInConf: str
-        :param DeployMode: 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署</li>默认为0
+        :param DeployMode: 集群佈署方式<li>0：單可用區佈署</li><li>1：多可用區佈署</li>預設爲0
         :type DeployMode: int
-        :param MultiZoneInfo: 多可用区部署时可用区的详细信息(DeployMode为1时必传)
+        :param MultiZoneInfo: 多可用區佈署時可用區的詳細訊息(DeployMode爲1時必傳)
         :type MultiZoneInfo: list of MultiZoneInfo
-        :param LicenseType: License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+        :param LicenseType: License類型<li>oss：開源版</li><li>basic：基礎版</li><li>platinum：白金版</li>預設值platinum
         :type LicenseType: str
         """
         self.Zone = None
@@ -152,15 +152,15 @@ class CreateInstanceRequest(AbstractModel):
 
 
 class CreateInstanceResponse(AbstractModel):
-    """CreateInstance返回参数结构体
+    """CreateInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 实例ID
+        :param InstanceId: 實例ID
         :type InstanceId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceId = None
@@ -173,13 +173,13 @@ class CreateInstanceResponse(AbstractModel):
 
 
 class DeleteInstanceRequest(AbstractModel):
-    """DeleteInstance请求参数结构体
+    """DeleteInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 实例ID
+        :param InstanceId: 實例ID
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -190,13 +190,13 @@ class DeleteInstanceRequest(AbstractModel):
 
 
 class DeleteInstanceResponse(AbstractModel):
-    """DeleteInstance返回参数结构体
+    """DeleteInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -207,31 +207,31 @@ class DeleteInstanceResponse(AbstractModel):
 
 
 class DescribeInstanceLogsRequest(AbstractModel):
-    """DescribeInstanceLogs请求参数结构体
+    """DescribeInstanceLogs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 集群实例ID
+        :param InstanceId: 集群實例ID
         :type InstanceId: str
-        :param LogType: 日志类型，默认值为1
+        :param LogType: 日志類型，預設值爲1
 <li>1, 主日志</li>
 <li>2, 搜索慢日志</li>
 <li>3, 索引慢日志</li>
 <li>4, GC日志</li>
         :type LogType: int
-        :param SearchKey: 搜索词，支持LUCENE语法，如 level:WARN、ip:1.1.1.1、message:test-index等
+        :param SearchKey: 搜索詞，支援LUCENE語法，如 level:WARN、ip:1.1.1.1、message:test-index等
         :type SearchKey: str
-        :param StartTime: 日志开始时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
+        :param StartTime: 日志開始時間，格式爲YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
         :type StartTime: str
-        :param EndTime: 日志结束时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
+        :param EndTime: 日志結束時間，格式爲YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
         :type EndTime: str
-        :param Offset: 分页起始值, 默认值为0
+        :param Offset: 分頁起始值, 預設值爲0
         :type Offset: int
-        :param Limit: 分页大小，默认值为100，最大值100
+        :param Limit: 分頁大小，預設值爲100，最大值100
         :type Limit: int
-        :param OrderByType: 时间排序方式，默认值为0
+        :param OrderByType: 時間排序方式，預設值爲0
 <li>0, 降序</li>
 <li>1, 升序</li>
         :type OrderByType: int
@@ -258,17 +258,17 @@ class DescribeInstanceLogsRequest(AbstractModel):
 
 
 class DescribeInstanceLogsResponse(AbstractModel):
-    """DescribeInstanceLogs返回参数结构体
+    """DescribeInstanceLogs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 返回的日志条数
+        :param TotalCount: 返回的日志條數
         :type TotalCount: int
-        :param InstanceLogList: 日志详细信息列表
+        :param InstanceLogList: 日志詳細訊息清單
         :type InstanceLogList: list of InstanceLog
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -288,21 +288,21 @@ class DescribeInstanceLogsResponse(AbstractModel):
 
 
 class DescribeInstanceOperationsRequest(AbstractModel):
-    """DescribeInstanceOperations请求参数结构体
+    """DescribeInstanceOperations請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 集群实例ID
+        :param InstanceId: 集群實例ID
         :type InstanceId: str
-        :param StartTime: 起始时间, e.g. "2019-03-07 16:30:39"
+        :param StartTime: 起始時間, e.g. "2019-03-07 16:30:39"
         :type StartTime: str
-        :param EndTime: 结束时间, e.g. "2019-03-30 20:18:03"
+        :param EndTime: 結束時間, e.g. "2019-03-30 20:18:03"
         :type EndTime: str
-        :param Offset: 分页起始值
+        :param Offset: 分頁起始值
         :type Offset: int
-        :param Limit: 分页大小
+        :param Limit: 分頁大小
         :type Limit: int
         """
         self.InstanceId = None
@@ -321,17 +321,17 @@ class DescribeInstanceOperationsRequest(AbstractModel):
 
 
 class DescribeInstanceOperationsResponse(AbstractModel):
-    """DescribeInstanceOperations返回参数结构体
+    """DescribeInstanceOperations返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 操作记录总数
+        :param TotalCount: 操作記錄總數
         :type TotalCount: int
-        :param Operations: 操作记录
+        :param Operations: 操作記錄
         :type Operations: list of Operation
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -351,25 +351,25 @@ class DescribeInstanceOperationsResponse(AbstractModel):
 
 
 class DescribeInstancesRequest(AbstractModel):
-    """DescribeInstances请求参数结构体
+    """DescribeInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Zone: 集群实例所属可用区，不传则默认所有可用区
+        :param Zone: 集群實例所屬可用區，不傳則預設所有可用區
         :type Zone: str
-        :param InstanceIds: 集群实例ID列表
+        :param InstanceIds: 集群實例ID清單
         :type InstanceIds: list of str
-        :param InstanceNames: 集群实例名称列表
+        :param InstanceNames: 集群實例名稱清單
         :type InstanceNames: list of str
-        :param Offset: 分页起始值, 默认值0
+        :param Offset: 分頁起始值, 預設值0
         :type Offset: int
-        :param Limit: 分页大小，默认值20
+        :param Limit: 分頁大小，預設值20
         :type Limit: int
-        :param OrderByKey: 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
+        :param OrderByKey: 排序欄位<li>1：實例ID</li><li>2：實例名稱</li><li>3：可用區</li><li>4：創建時間</li>若orderKey未傳遞則按創建時間降序排序
         :type OrderByKey: int
-        :param OrderByType: 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
+        :param OrderByType: 排序方式<li>0：升序</li><li>1：降序</li>若傳遞了orderByKey未傳遞orderByType, 則預設升序
         :type OrderByType: int
         """
         self.Zone = None
@@ -392,17 +392,17 @@ class DescribeInstancesRequest(AbstractModel):
 
 
 class DescribeInstancesResponse(AbstractModel):
-    """DescribeInstances返回参数结构体
+    """DescribeInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 返回的实例个数
+        :param TotalCount: 返回的實例個數
         :type TotalCount: int
-        :param InstanceList: 实例详细信息列表
+        :param InstanceList: 實例詳細訊息清單
         :type InstanceList: list of InstanceInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -422,17 +422,17 @@ class DescribeInstancesResponse(AbstractModel):
 
 
 class DictInfo(AbstractModel):
-    """ik插件词典新
+    """ik插件詞典新
 
     """
 
     def __init__(self):
         """
-        :param Key: 词典键值
+        :param Key: 詞典鍵值
         :type Key: str
-        :param Name: 词典名称
+        :param Name: 詞典名稱
         :type Name: str
-        :param Size: 词典大小，单位B
+        :param Size: 詞典大小，單位B
         :type Size: int
         """
         self.Key = None
@@ -447,15 +447,15 @@ class DictInfo(AbstractModel):
 
 
 class EsAcl(AbstractModel):
-    """ES集群配置项
+    """ES集群配置項
 
     """
 
     def __init__(self):
         """
-        :param BlackIpList: kibana访问黑名单
+        :param BlackIpList: kibana訪問黑名單
         :type BlackIpList: list of str
-        :param WhiteIpList: kibana访问白名单
+        :param WhiteIpList: kibana訪問白名單
         :type WhiteIpList: list of str
         """
         self.BlackIpList = None
@@ -468,15 +468,15 @@ class EsAcl(AbstractModel):
 
 
 class EsDictionaryInfo(AbstractModel):
-    """ES IK词库信息
+    """ES IK詞庫訊息
 
     """
 
     def __init__(self):
         """
-        :param MainDict: 启用词词典列表
+        :param MainDict: 啓用詞詞典清單
         :type MainDict: list of DictInfo
-        :param Stopwords: 停用词词典列表
+        :param Stopwords: 停用詞詞典清單
         :type Stopwords: list of DictInfo
         """
         self.MainDict = None
@@ -499,47 +499,47 @@ class EsDictionaryInfo(AbstractModel):
 
 
 class InstanceInfo(AbstractModel):
-    """实例详细信息
+    """實例詳細訊息
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 实例ID
+        :param InstanceId: 實例ID
         :type InstanceId: str
-        :param InstanceName: 实例名称
+        :param InstanceName: 實例名稱
         :type InstanceName: str
         :param Region: 地域
         :type Region: str
-        :param Zone: 可用区
+        :param Zone: 可用區
         :type Zone: str
-        :param AppId: 用户ID
+        :param AppId: 用戶ID
         :type AppId: int
-        :param Uin: 用户UIN
+        :param Uin: 用戶UIN
         :type Uin: str
-        :param VpcUid: 实例所属VPC的UID
+        :param VpcUid: 實例所屬VPC的UID
         :type VpcUid: str
-        :param SubnetUid: 实例所属子网的UID
+        :param SubnetUid: 實例所屬子網的UID
         :type SubnetUid: str
-        :param Status: 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
+        :param Status: 實例狀态，0:處理中,1:正常,-1停止,-2:銷毀中,-3:已銷毀
         :type Status: int
-        :param ChargeType: 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+        :param ChargeType: 實例計費模式。取值範圍：  PREPAID：表示預付費，即包年包月  POSTPAID_BY_HOUR：表示後付費，即按量計費  CDHPAID：CDH付費，即只對CDH計費，不對CDH上的實例計費。
         :type ChargeType: str
-        :param ChargePeriod: 包年包月购买时长,单位:月
+        :param ChargePeriod: 包年包月購買時長,單位:月
         :type ChargePeriod: int
-        :param RenewFlag: 自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+        :param RenewFlag: 自動續約标識。取值範圍：  NOTIFY_AND_AUTO_RENEW：通知過期且自動續約  NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約  預設取值：NOTIFY_AND_AUTO_RENEW。若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
         :type RenewFlag: str
-        :param NodeType: 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        :param NodeType: 節點規格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
         :type NodeType: str
-        :param NodeNum: 节点个数
+        :param NodeNum: 節點個數
         :type NodeNum: int
-        :param CpuNum: 节点CPU核数
+        :param CpuNum: 節點CPU核數
         :type CpuNum: int
-        :param MemSize: 节点内存大小，单位GB
+        :param MemSize: 節點内存大小，單位GB
         :type MemSize: int
-        :param DiskType: 节点磁盘类型
+        :param DiskType: 節點磁盤類型
         :type DiskType: str
-        :param DiskSize: 节点磁盘大小，单位GB
+        :param DiskSize: 節點磁盤大小，單位GB
         :type DiskSize: int
         :param EsDomain: ES域名
         :type EsDomain: str
@@ -547,33 +547,33 @@ class InstanceInfo(AbstractModel):
         :type EsVip: str
         :param EsPort: ES端口
         :type EsPort: int
-        :param KibanaUrl: Kibana访问url
+        :param KibanaUrl: Kibana訪問url
         :type KibanaUrl: str
         :param EsVersion: ES版本号
         :type EsVersion: str
-        :param EsConfig: ES配置项
+        :param EsConfig: ES配置項
         :type EsConfig: str
-        :param EsAcl: ES访问控制配置
+        :param EsAcl: ES訪問控制配置
         :type EsAcl: :class:`tencentcloud.es.v20180416.models.EsAcl`
-        :param CreateTime: 实例创建时间
+        :param CreateTime: 實例創建時間
         :type CreateTime: str
-        :param UpdateTime: 实例最后修改操作时间
+        :param UpdateTime: 實例最後修改操作時間
         :type UpdateTime: str
-        :param Deadline: 实例到期时间
+        :param Deadline: 實例到期時間
         :type Deadline: str
-        :param InstanceType: 实例类型（实例类型标识，当前只有1,2两种）
+        :param InstanceType: 實例類型（實例類型标識，當前只有1,2兩種）
         :type InstanceType: int
-        :param IkConfig: Ik分词器配置
+        :param IkConfig: Ik分詞器配置
         :type IkConfig: :class:`tencentcloud.es.v20180416.models.EsDictionaryInfo`
-        :param MasterNodeInfo: 专用主节点配置
+        :param MasterNodeInfo: 專用主節點配置
         :type MasterNodeInfo: :class:`tencentcloud.es.v20180416.models.MasterNodeInfo`
-        :param CosBackup: cos自动备份配置
+        :param CosBackup: cos自動備份配置
         :type CosBackup: :class:`tencentcloud.es.v20180416.models.CosBackup`
-        :param AllowCosBackup: 是否允许cos自动备份
+        :param AllowCosBackup: 是否允許cos自動備份
         :type AllowCosBackup: bool
-        :param TagList: 实例拥有的标签列表
+        :param TagList: 實例擁有的标簽清單
         :type TagList: list of TagInfo
-        :param LicenseType: License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+        :param LicenseType: License類型<li>oss：開源版</li><li>basic：基礎版</li><li>platinum：白金版</li>預設值platinum
         :type LicenseType: str
         """
         self.InstanceId = None
@@ -665,17 +665,17 @@ class InstanceInfo(AbstractModel):
 
 
 class InstanceLog(AbstractModel):
-    """ES集群日志详细信息
+    """ES集群日志詳細訊息
 
     """
 
     def __init__(self):
         """
-        :param Time: 日志时间
+        :param Time: 日志時間
         :type Time: str
-        :param Level: 日志级别
+        :param Level: 日志級别
         :type Level: str
-        :param Ip: 集群节点ip
+        :param Ip: 集群節點ip
         :type Ip: str
         :param Message: 日志内容
         :type Message: str
@@ -694,13 +694,13 @@ class InstanceLog(AbstractModel):
 
 
 class KeyValue(AbstractModel):
-    """OperationDetail使用此结构的数组描述新旧配置
+    """OperationDetail使用此結構的數組描述新舊配置
 
     """
 
     def __init__(self):
         """
-        :param Key: 键
+        :param Key: 鍵
         :type Key: str
         :param Value: 值
         :type Value: str
@@ -715,25 +715,25 @@ class KeyValue(AbstractModel):
 
 
 class MasterNodeInfo(AbstractModel):
-    """实例专用主节点相关信息
+    """實例專用主節點相關訊息
 
     """
 
     def __init__(self):
         """
-        :param EnableDedicatedMaster: 是否启用了专用主节点
+        :param EnableDedicatedMaster: 是否啓用了專用主節點
         :type EnableDedicatedMaster: bool
-        :param MasterNodeType: 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        :param MasterNodeType: 專用主節點規格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
         :type MasterNodeType: str
-        :param MasterNodeNum: 专用主节点个数
+        :param MasterNodeNum: 專用主節點個數
         :type MasterNodeNum: int
-        :param MasterNodeCpuNum: 专用主节点CPU核数
+        :param MasterNodeCpuNum: 專用主節點CPU核數
         :type MasterNodeCpuNum: int
-        :param MasterNodeMemSize: 专用主节点内存大小，单位GB
+        :param MasterNodeMemSize: 專用主節點内存大小，單位GB
         :type MasterNodeMemSize: int
-        :param MasterNodeDiskSize: 专用主节点磁盘大小，单位GB
+        :param MasterNodeDiskSize: 專用主節點磁盤大小，單位GB
         :type MasterNodeDiskSize: int
-        :param MasterNodeDiskType: 专用主节点磁盘类型
+        :param MasterNodeDiskType: 專用主節點磁盤類型
         :type MasterNodeDiskType: str
         """
         self.EnableDedicatedMaster = None
@@ -756,15 +756,15 @@ class MasterNodeInfo(AbstractModel):
 
 
 class MultiZoneInfo(AbstractModel):
-    """多可用区部署时可用区的详细信息
+    """多可用區佈署時可用區的詳細訊息
 
     """
 
     def __init__(self):
         """
-        :param Zone: 可用区
+        :param Zone: 可用區
         :type Zone: str
-        :param SubnetId: 子网ID
+        :param SubnetId: 子網ID
         :type SubnetId: str
         """
         self.Zone = None
@@ -777,7 +777,7 @@ class MultiZoneInfo(AbstractModel):
 
 
 class Operation(AbstractModel):
-    """ES集群操作详细信息
+    """ES集群操作詳細訊息
 
     """
 
@@ -785,17 +785,17 @@ class Operation(AbstractModel):
         """
         :param Id: 操作唯一id
         :type Id: int
-        :param StartTime: 操作开始时间
+        :param StartTime: 操作開始時間
         :type StartTime: str
-        :param Type: 操作类型
+        :param Type: 操作類型
         :type Type: str
-        :param Detail: 操作详情
+        :param Detail: 操作詳情
         :type Detail: :class:`tencentcloud.es.v20180416.models.OperationDetail`
-        :param Result: 操作结果
+        :param Result: 操作結果
         :type Result: str
-        :param Tasks: 流程任务信息
+        :param Tasks: 流程任務訊息
         :type Tasks: list of TaskDetail
-        :param Progress: 操作进度
+        :param Progress: 操作進度
         :type Progress: float
         """
         self.Id = None
@@ -825,15 +825,15 @@ class Operation(AbstractModel):
 
 
 class OperationDetail(AbstractModel):
-    """操作详情
+    """操作詳情
 
     """
 
     def __init__(self):
         """
-        :param OldInfo: 实例原始配置信息
+        :param OldInfo: 實例原始配置訊息
         :type OldInfo: list of KeyValue
-        :param NewInfo: 实例更新后配置信息
+        :param NewInfo: 實例更新後配置訊息
         :type NewInfo: list of KeyValue
         """
         self.OldInfo = None
@@ -856,15 +856,15 @@ class OperationDetail(AbstractModel):
 
 
 class RestartInstanceRequest(AbstractModel):
-    """RestartInstance请求参数结构体
+    """RestartInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 实例ID
+        :param InstanceId: 實例ID
         :type InstanceId: str
-        :param ForceRestart: 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
+        :param ForceRestart: 是否強制重啓<li>true：強制重啓</li><li>false：不強制重啓</li>預設false
         :type ForceRestart: bool
         """
         self.InstanceId = None
@@ -877,13 +877,13 @@ class RestartInstanceRequest(AbstractModel):
 
 
 class RestartInstanceResponse(AbstractModel):
-    """RestartInstance返回参数结构体
+    """RestartInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -894,17 +894,17 @@ class RestartInstanceResponse(AbstractModel):
 
 
 class SubTaskDetail(AbstractModel):
-    """实例操作记录流程任务中的子任务信息（如升级检查任务中的各个检查项）
+    """實例操作記錄流程任務中的子任務訊息（如升級檢查任務中的各個檢查項）
 
     """
 
     def __init__(self):
         """
-        :param Name: 子任务名
+        :param Name: 子任務名
         :type Name: str
-        :param Result: 子任务结果
+        :param Result: 子任務結果
         :type Result: bool
-        :param ErrMsg: 子任务错误信息
+        :param ErrMsg: 子任務錯誤訊息
         :type ErrMsg: str
         """
         self.Name = None
@@ -919,15 +919,15 @@ class SubTaskDetail(AbstractModel):
 
 
 class TagInfo(AbstractModel):
-    """实例标签信息
+    """實例标簽訊息
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标签键
+        :param TagKey: 标簽鍵
         :type TagKey: str
-        :param TagValue: 标签值
+        :param TagValue: 标簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -940,19 +940,19 @@ class TagInfo(AbstractModel):
 
 
 class TaskDetail(AbstractModel):
-    """实例操作记录中的流程任务信息
+    """實例操作記錄中的流程任務訊息
 
     """
 
     def __init__(self):
         """
-        :param Name: 任务名
+        :param Name: 任務名
         :type Name: str
-        :param Progress: 任务进度
+        :param Progress: 任務進度
         :type Progress: float
-        :param FinishTime: 任务完成时间
+        :param FinishTime: 任務完成時間
         :type FinishTime: str
-        :param SubTasks: 子任务
+        :param SubTasks: 子任務
         :type SubTasks: list of SubTaskDetail
         """
         self.Name = None
@@ -974,37 +974,37 @@ class TaskDetail(AbstractModel):
 
 
 class UpdateInstanceRequest(AbstractModel):
-    """UpdateInstance请求参数结构体
+    """UpdateInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 实例ID
+        :param InstanceId: 實例ID
         :type InstanceId: str
-        :param InstanceName: 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
+        :param InstanceName: 實例名稱（1-50 個英文、漢字、數字、連接線-或下劃線_）
         :type InstanceName: str
-        :param NodeNum: 节点个数（2-50个）
+        :param NodeNum: 節點個數（2-50個）
         :type NodeNum: int
-        :param EsConfig: 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+        :param EsConfig: 配置項（JSON格式字串）。當前僅支援以下配置項：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
         :type EsConfig: str
-        :param Password: 默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
+        :param Password: 預設用戶elastic的密碼（8到16位，至少包括兩項（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
         :type Password: str
-        :param EsAcl: 访问控制列表
+        :param EsAcl: 訪問控制清單
         :type EsAcl: :class:`tencentcloud.es.v20180416.models.EsAcl`
-        :param DiskSize: 磁盘大小（单位GB）
+        :param DiskSize: 磁盤大小（單位GB）
         :type DiskSize: int
-        :param NodeType: 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        :param NodeType: 節點規格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
         :type NodeType: str
-        :param MasterNodeNum: 专用主节点个数（只支持3个或5个）
+        :param MasterNodeNum: 專用主節點個數（只支援3個或5個）
         :type MasterNodeNum: int
-        :param MasterNodeType: 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        :param MasterNodeType: 專用主節點規格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
         :type MasterNodeType: str
-        :param MasterNodeDiskSize: 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
+        :param MasterNodeDiskSize: 專用主節點磁盤大小（單位GB系統預設配置爲50GB,暫不支援自定義）
         :type MasterNodeDiskSize: int
-        :param ForceRestart: 更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
+        :param ForceRestart: 更新配置時是否強制重啓<li>true強制重啓</li><li>false不強制重啓</li>當前僅更新EsConfig時需要設置，預設值爲false
         :type ForceRestart: bool
-        :param CosBackup: COS自动备份信息
+        :param CosBackup: COS自動備份訊息
         :type CosBackup: :class:`tencentcloud.es.v20180416.models.CosBackup`
         """
         self.InstanceId = None
@@ -1043,13 +1043,13 @@ class UpdateInstanceRequest(AbstractModel):
 
 
 class UpdateInstanceResponse(AbstractModel):
-    """UpdateInstance返回参数结构体
+    """UpdateInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None

@@ -9,18 +9,18 @@ inputs:
   src: 
     src: ./
   runtime: Python3.6
-  region: ap-shanghai #需要替换的字段
+  region: ap-shanghai #需要替換的欄位
   handler: index.main_handler
   memorySize: 512
   timeout: 60
-  role: SCF_QcsRole   #需要授权：cos bucket文件读写，cdn预热/刷新权限
+  role: SCF_QcsRole   #需要授權：cos bucket文件讀寫，cdn預熱/重新整理權限
   environment:
     variables:
-      region: #ap-shanghai  #需要替换的字段
-      target_bucket: #serverless-demo-1256608914  #需要替换的字段
-      target_path: #/invitation  #需要替换的字段
+      region: #ap-shanghai  #需要替換的欄位
+      target_bucket: #serverless-demo-1256608914  #需要替換的欄位
+      target_path: #/invitation  #需要替換的欄位
   events:
-    # apigw触发器，post http源文件地址
+    # apigw觸發器，post http源文件網址
     - apigw:
         name: serverless_days_workshop_Add_Text_To_Pictures
         parameters:
@@ -35,5 +35,4 @@ inputs:
               method: ANY
               enableCORS: TRUE
               serviceTimeout: 60
-
 

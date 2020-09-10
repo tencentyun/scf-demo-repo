@@ -17,26 +17,26 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AddFairPlayPemRequest(AbstractModel):
-    """AddFairPlayPem请求参数结构体
+    """AddFairPlayPem請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Pem: 加密后的fairplay方案申请时使用的私钥。
-请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对私钥文件中的字段进行加密，并对加密结果进行base64编码。
+        :param Pem: 加密後的fairplay方案申請時使用的私鑰。
+請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對私鑰文件中的欄位進行加密，并對加密結果進行base64編碼。
         :type Pem: str
-        :param Ask: 加密后的fairplay方案申请返回的ask数据。
-请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对Ask字符串进行加密，并对加密结果进行base64编码。
+        :param Ask: 加密後的fairplay方案申請返回的ask數據。
+請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對Ask字串進行加密，并對加密結果進行base64編碼。
         :type Ask: str
-        :param PemDecryptKey: 私钥的解密密钥。
-openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的密钥。
-请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对解密密钥进行加密，并对加密结果进行base64编码。
+        :param PemDecryptKey: 私鑰的解密金鑰。
+openssl在生成rsa時，可能會需要設置加密金鑰，請記住設置的金鑰。
+請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對解密金鑰進行加密，并對加密結果進行base64編碼。
         :type PemDecryptKey: str
-        :param BailorId: 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
+        :param BailorId: 委托者Id,适用于托管自身證書的客戶。普通客戶無需填該欄位。
         :type BailorId: int
-        :param Priority: 私钥的优先级，优先级数值越高，优先级越高。
-该值可以不传，后台将自动分配一个优先级。
+        :param Priority: 私鑰的優先級，優先級數值越高，優先級越高。
+該值可以不傳，後台将自動分配一個優先級。
         :type Priority: int
         """
         self.Pem = None
@@ -55,19 +55,19 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
 
 
 class AddFairPlayPemResponse(AbstractModel):
-    """AddFairPlayPem返回参数结构体
+    """AddFairPlayPem返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FairPlayPemId: 设置私钥后，后台返回的pem id，用来唯一标识一个私钥。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FairPlayPemId: 設置私鑰後，後台返回的pem id，用來唯一标識一個私鑰。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FairPlayPemId: int
-        :param Priority: 私钥的优先级，优先级数值越高，优先级越高。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Priority: 私鑰的優先級，優先級數值越高，優先級越高。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Priority: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FairPlayPemId = None
@@ -82,19 +82,19 @@ class AddFairPlayPemResponse(AbstractModel):
 
 
 class CreateEncryptKeysRequest(AbstractModel):
-    """CreateEncryptKeys请求参数结构体
+    """CreateEncryptKeys請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DrmType: 使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
+        :param DrmType: 使用的DRM方案類型，介面取值WIDEVINE、FAIRPLAY、NORMALAES。
         :type DrmType: str
-        :param Keys: 设置的加密密钥列表。
+        :param Keys: 設置的加密金鑰清單。
         :type Keys: list of KeyParam
-        :param ContentId: 一个加密内容的唯一标识。
+        :param ContentId: 一個加密内容的唯一标識。
         :type ContentId: str
-        :param ContentType: 内容类型。接口取值VodVideo,LiveVideo。
+        :param ContentType: 内容類型。介面取值VodVideo,LiveVideo。
         :type ContentType: str
         """
         self.DrmType = None
@@ -116,13 +116,13 @@ class CreateEncryptKeysRequest(AbstractModel):
 
 
 class CreateEncryptKeysResponse(AbstractModel):
-    """CreateEncryptKeys返回参数结构体
+    """CreateEncryptKeys返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -133,22 +133,22 @@ class CreateEncryptKeysResponse(AbstractModel):
 
 
 class CreateLicenseRequest(AbstractModel):
-    """CreateLicense请求参数结构体
+    """CreateLicense請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DrmType: DRM方案类型，接口取值：WIDEVINE，FAIRPLAY。
+        :param DrmType: DRM方案類型，介面取值：WIDEVINE，FAIRPLAY。
         :type DrmType: str
-        :param LicenseRequest: Base64编码的终端设备License Request数据。
+        :param LicenseRequest: Base64編碼的終端設備License Request數據。
         :type LicenseRequest: str
-        :param ContentType: 内容类型，接口取值：VodVideo,LiveVideo。
+        :param ContentType: 内容類型，介面取值：VodVideo,LiveVideo。
         :type ContentType: str
-        :param Tracks: 授权播放的Track列表。
-该值为空时，默认授权所有track播放。
+        :param Tracks: 授權播放的Track清單。
+該值爲空時，預設授權所有track播放。
         :type Tracks: list of str
-        :param PlaybackPolicy: 播放策略参数。
+        :param PlaybackPolicy: 播放策略參數。
         :type PlaybackPolicy: :class:`tencentcloud.drm.v20181115.models.PlaybackPolicy`
         """
         self.DrmType = None
@@ -169,17 +169,17 @@ class CreateLicenseRequest(AbstractModel):
 
 
 class CreateLicenseResponse(AbstractModel):
-    """CreateLicense返回参数结构体
+    """CreateLicense返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param License: Base64 编码的许可证二进制数据。
+        :param License: Base64 編碼的許可證二進制數據。
         :type License: str
         :param ContentId: 加密内容的内容ID
         :type ContentId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.License = None
@@ -194,16 +194,16 @@ class CreateLicenseResponse(AbstractModel):
 
 
 class DeleteFairPlayPemRequest(AbstractModel):
-    """DeleteFairPlayPem请求参数结构体
+    """DeleteFairPlayPem請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BailorId: 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
+        :param BailorId: 委托者Id,适用于托管自身證書的客戶。普通客戶無需填該欄位。
         :type BailorId: int
         :param FairPlayPemId: 要删除的pem id。
-当未传入该值时，将删除所有的私钥。
+當未傳入該值時，将删除所有的私鑰。
         :type FairPlayPemId: int
         """
         self.BailorId = None
@@ -216,13 +216,13 @@ class DeleteFairPlayPemRequest(AbstractModel):
 
 
 class DeleteFairPlayPemResponse(AbstractModel):
-    """DeleteFairPlayPem返回参数结构体
+    """DeleteFairPlayPem返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -233,20 +233,20 @@ class DeleteFairPlayPemResponse(AbstractModel):
 
 
 class DescribeAllKeysRequest(AbstractModel):
-    """DescribeAllKeys请求参数结构体
+    """DescribeAllKeys請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DrmType: 使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
+        :param DrmType: 使用的DRM方案類型，介面取值WIDEVINE、FAIRPLAY、NORMALAES。
         :type DrmType: str
-        :param RsaPublicKey: Base64编码的Rsa公钥，用来加密出参中的SessionKey。
-如果该参数为空，则出参中SessionKey为明文。
+        :param RsaPublicKey: Base64編碼的Rsa公鑰，用來加密出參中的SessionKey。
+如果該參數爲空，則出參中SessionKey爲明文。
         :type RsaPublicKey: str
-        :param ContentId: 一个加密内容的唯一标识。
+        :param ContentId: 一個加密内容的唯一标識。
         :type ContentId: str
-        :param ContentType: 内容类型。接口取值VodVideo,LiveVideo。
+        :param ContentType: 内容類型。介面取值VodVideo,LiveVideo。
         :type ContentType: str
         """
         self.DrmType = None
@@ -263,24 +263,24 @@ class DescribeAllKeysRequest(AbstractModel):
 
 
 class DescribeAllKeysResponse(AbstractModel):
-    """DescribeAllKeys返回参数结构体
+    """DescribeAllKeys返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Keys: 加密密钥列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Keys: 加密金鑰清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Keys: list of Key
-        :param SessionKey: 用来加密密钥。
-如果入参中带有RsaPublicKey，则SessionKey为使用Rsa公钥加密后的二进制数据，Base64编码字符串。
-如果入参中没有RsaPublicKey，则SessionKey为原始数据的字符串形式。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SessionKey: 用來加密金鑰。
+如果入參中帶有RsaPublicKey，則SessionKey爲使用Rsa公鑰加密後的二進制數據，Base64編碼字串。
+如果入參中沒有RsaPublicKey，則SessionKey爲原始數據的字串形式。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SessionKey: str
         :param ContentId: 内容ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ContentId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Keys = None
@@ -302,16 +302,16 @@ class DescribeAllKeysResponse(AbstractModel):
 
 
 class DescribeFairPlayPemRequest(AbstractModel):
-    """DescribeFairPlayPem请求参数结构体
+    """DescribeFairPlayPem請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BailorId: 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
+        :param BailorId: 委托者Id,适用于托管自身證書的客戶。普通客戶無需填該欄位。
         :type BailorId: int
-        :param FairPlayPemId: 需要查询的pem id。
-当该值未填入时，将返回所有的私钥信息。
+        :param FairPlayPemId: 需要查詢的pem id。
+當該值未填入時，将返回所有的私鑰訊息。
         :type FairPlayPemId: int
         """
         self.BailorId = None
@@ -324,16 +324,16 @@ class DescribeFairPlayPemRequest(AbstractModel):
 
 
 class DescribeFairPlayPemResponse(AbstractModel):
-    """DescribeFairPlayPem返回参数结构体
+    """DescribeFairPlayPem返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FairPlayPems: 该账户下，所有设置的FairPlay私钥摘要信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FairPlayPems: 該帳戶下，所有設置的FairPlay私鑰摘要訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FairPlayPems: list of FairPlayPemDigestInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FairPlayPems = None
@@ -351,23 +351,23 @@ class DescribeFairPlayPemResponse(AbstractModel):
 
 
 class DescribeKeysRequest(AbstractModel):
-    """DescribeKeys请求参数结构体
+    """DescribeKeys請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DrmType: 使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
+        :param DrmType: 使用的DRM方案類型，介面取值WIDEVINE、FAIRPLAY、NORMALAES。
         :type DrmType: str
-        :param Tracks: 加密的track列表，接口取值VIDEO、AUDIO。
+        :param Tracks: 加密的track清單，介面取值VIDEO、AUDIO。
         :type Tracks: list of str
-        :param ContentType: 内容类型。接口取值VodVideo,LiveVideo
+        :param ContentType: 内容類型。介面取值VodVideo,LiveVideo
         :type ContentType: str
-        :param RsaPublicKey: Base64编码的Rsa公钥，用来加密出参中的SessionKey。
-如果该参数为空，则出参中SessionKey为明文。
+        :param RsaPublicKey: Base64編碼的Rsa公鑰，用來加密出參中的SessionKey。
+如果該參數爲空，則出參中SessionKey爲明文。
         :type RsaPublicKey: str
-        :param ContentId: 一个加密内容的唯一标识。
-如果该参数为空，则后台自动生成
+        :param ContentId: 一個加密内容的唯一标識。
+如果該參數爲空，則後台自動生成
         :type ContentId: str
         """
         self.DrmType = None
@@ -386,24 +386,24 @@ class DescribeKeysRequest(AbstractModel):
 
 
 class DescribeKeysResponse(AbstractModel):
-    """DescribeKeys返回参数结构体
+    """DescribeKeys返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Keys: 加密密钥列表
+        :param Keys: 加密金鑰清單
         :type Keys: list of Key
-        :param SessionKey: 用来加密密钥。
-如果入参中带有RsaPublicKey，则SessionKey为使用Rsa公钥加密后的二进制数据，Base64编码字符串。
-如果入参中没有RsaPublicKey，则SessionKey为原始数据的字符串形式。
+        :param SessionKey: 用來加密金鑰。
+如果入參中帶有RsaPublicKey，則SessionKey爲使用Rsa公鑰加密後的二進制數據，Base64編碼字串。
+如果入參中沒有RsaPublicKey，則SessionKey爲原始數據的字串形式。
         :type SessionKey: str
         :param ContentId: 内容ID
         :type ContentId: str
-        :param Pssh: Widevine方案的Pssh数据，Base64编码。
-Fairplay方案无该值。
+        :param Pssh: Widevine方案的Pssh數據，Base64編碼。
+Fairplay方案無該值。
         :type Pssh: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Keys = None
@@ -427,17 +427,17 @@ Fairplay方案无该值。
 
 
 class DrmOutputObject(AbstractModel):
-    """DRM加密后的输出对象
+    """DRM加密後的輸出對象
 
     """
 
     def __init__(self):
         """
-        :param BucketName: 输出的桶名称。
+        :param BucketName: 輸出的桶名稱。
         :type BucketName: str
-        :param ObjectName: 输出的对象名称。
+        :param ObjectName: 輸出的對象名稱。
         :type ObjectName: str
-        :param Para: 输出对象参数。
+        :param Para: 輸出對象參數。
         :type Para: :class:`tencentcloud.drm.v20181115.models.DrmOutputPara`
         """
         self.BucketName = None
@@ -454,15 +454,15 @@ class DrmOutputObject(AbstractModel):
 
 
 class DrmOutputPara(AbstractModel):
-    """Drm加密对象输出参数
+    """Drm加密對象輸出參數
 
     """
 
     def __init__(self):
         """
-        :param Type: 内容类型。例:video，audio，mpd，m3u8
+        :param Type: 内容類型。例:video，audio，mpd，m3u8
         :type Type: str
-        :param Language: 语言,例: en, zh-cn
+        :param Language: 語言,例: en, zh-cn
         :type Language: str
         """
         self.Type = None
@@ -475,15 +475,15 @@ class DrmOutputPara(AbstractModel):
 
 
 class DrmSourceObject(AbstractModel):
-    """用于DRM加密的源对象
+    """用于DRM加密的源對象
 
     """
 
     def __init__(self):
         """
-        :param BucketName: 输入的桶名称。
+        :param BucketName: 輸入的桶名稱。
         :type BucketName: str
-        :param ObjectName: 输入对象名称。
+        :param ObjectName: 輸入對象名稱。
         :type ObjectName: str
         """
         self.BucketName = None
@@ -496,26 +496,26 @@ class DrmSourceObject(AbstractModel):
 
 
 class FairPlayPemDigestInfo(AbstractModel):
-    """FairPlay 私钥摘要信息。
+    """FairPlay 私鑰摘要訊息。
 
     """
 
     def __init__(self):
         """
-        :param FairPlayPemId: fairplay 私钥pem id。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FairPlayPemId: fairplay 私鑰pem id。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FairPlayPemId: int
-        :param Priority: 私钥的优先级。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Priority: 私鑰的優先級。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Priority: int
-        :param Md5Pem: 私钥的md5 信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Md5Pem: 私鑰的md5 訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Md5Pem: str
-        :param Md5Ask: ASK的md5信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Md5Ask: ASK的md5訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Md5Ask: str
-        :param Md5PemDecryptKey: 私钥解密密钥的md5值。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Md5PemDecryptKey: 私鑰解密金鑰的md5值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Md5PemDecryptKey: str
         """
         self.FairPlayPemId = None
@@ -534,22 +534,22 @@ class FairPlayPemDigestInfo(AbstractModel):
 
 
 class Key(AbstractModel):
-    """DRM加密密钥
+    """DRM加密金鑰
 
     """
 
     def __init__(self):
         """
-        :param Track: 加密track类型。Widevine支持SD、HD、UHD1、UHD2、AUDIO。Fairplay只支持HD。
+        :param Track: 加密track類型。Widevine支援SD、HD、UHD1、UHD2、AUDIO。Fairplay只支援HD。
         :type Track: str
-        :param KeyId: 密钥ID。
+        :param KeyId: 金鑰ID。
         :type KeyId: str
-        :param Key: 原始Key使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
+        :param Key: 原始Key使用AES-128 ECB模式和SessionKey加密的後的二進制數據，Base64編碼的字串。
         :type Key: str
-        :param Iv: 原始IV使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
+        :param Iv: 原始IV使用AES-128 ECB模式和SessionKey加密的後的二進制數據，Base64編碼的字串。
         :type Iv: str
-        :param InsertTimestamp: 该key生成时的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InsertTimestamp: 該key生成時的時間戳
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InsertTimestamp: int
         """
         self.Track = None
@@ -568,20 +568,20 @@ class Key(AbstractModel):
 
 
 class KeyParam(AbstractModel):
-    """设置加密密钥所需的参数
+    """設置加密金鑰所需的參數
 
     """
 
     def __init__(self):
         """
-        :param Track: 加密track类型。取值范围：
+        :param Track: 加密track類型。取值範圍：
 SD、HD、UHD1、UHD2、AUDIO
         :type Track: str
-        :param Key: 请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对解密密钥进行加密，并对加密结果进行base64编码。
+        :param Key: 請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對解密金鑰進行加密，并對加密結果進行base64編碼。
         :type Key: str
-        :param KeyId: 密钥ID。
+        :param KeyId: 金鑰ID。
         :type KeyId: str
-        :param Iv: 请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对解密密钥进行加密，并对加密结果进行base64编码。
+        :param Iv: 請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對解密金鑰進行加密，并對加密結果進行base64編碼。
         :type Iv: str
         """
         self.Track = None
@@ -598,28 +598,28 @@ SD、HD、UHD1、UHD2、AUDIO
 
 
 class ModifyFairPlayPemRequest(AbstractModel):
-    """ModifyFairPlayPem请求参数结构体
+    """ModifyFairPlayPem請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Pem: 加密后的fairplay方案申请时使用的私钥。
-请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对私钥文件中的字段进行加密，并对加密结果进行base64编码。
+        :param Pem: 加密後的fairplay方案申請時使用的私鑰。
+請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對私鑰文件中的欄位進行加密，并對加密結果進行base64編碼。
         :type Pem: str
-        :param Ask: 加密后的fairplay方案申请返回的ask数据。
-请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对Ask字符串进行加密，并对加密结果进行base64编码。
+        :param Ask: 加密後的fairplay方案申請返回的ask數據。
+請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對Ask字串進行加密，并對加密結果進行base64編碼。
         :type Ask: str
-        :param FairPlayPemId: 要修改的私钥id
+        :param FairPlayPemId: 要修改的私鑰id
         :type FairPlayPemId: int
-        :param PemDecryptKey: 私钥的解密密钥。
-openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的密钥。
-请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对解密密钥进行加密，并对加密结果进行base64编码。
+        :param PemDecryptKey: 私鑰的解密金鑰。
+openssl在生成rsa時，可能會需要設置加密金鑰，請記住設置的金鑰。
+請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對解密金鑰進行加密，并對加密結果進行base64編碼。
         :type PemDecryptKey: str
-        :param BailorId: 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
+        :param BailorId: 委托者Id,适用于托管自身證書的客戶。普通客戶無需填該欄位。
         :type BailorId: int
-        :param Priority: 私钥的优先级，优先级数值越高，优先级越高。
-该值可以不传，后台将自动分配一个优先级。
+        :param Priority: 私鑰的優先級，優先級數值越高，優先級越高。
+該值可以不傳，後台将自動分配一個優先級。
         :type Priority: int
         """
         self.Pem = None
@@ -640,19 +640,19 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
 
 
 class ModifyFairPlayPemResponse(AbstractModel):
-    """ModifyFairPlayPem返回参数结构体
+    """ModifyFairPlayPem返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FairPlayPemId: 设置私钥后，后台返回的pem id，用来唯一标识一个私钥。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FairPlayPemId: 設置私鑰後，後台返回的pem id，用來唯一标識一個私鑰。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FairPlayPemId: int
-        :param Priority: 私钥的优先级，优先级数值越高，优先级越高。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Priority: 私鑰的優先級，優先級數值越高，優先級越高。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Priority: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FairPlayPemId = None
@@ -667,15 +667,15 @@ class ModifyFairPlayPemResponse(AbstractModel):
 
 
 class PlaybackPolicy(AbstractModel):
-    """播放控制参数
+    """播放控制參數
 
     """
 
     def __init__(self):
         """
-        :param LicenseDurationSeconds: 播放许可证的有效期
+        :param LicenseDurationSeconds: 播放許可證的有效期
         :type LicenseDurationSeconds: int
-        :param PlaybackDurationSeconds: 开始播放后，允许最长播放时间
+        :param PlaybackDurationSeconds: 開始播放後，允許最長播放時間
         :type PlaybackDurationSeconds: int
         """
         self.LicenseDurationSeconds = None
@@ -688,7 +688,7 @@ class PlaybackPolicy(AbstractModel):
 
 
 class StartEncryptionRequest(AbstractModel):
-    """StartEncryption请求参数结构体
+    """StartEncryption請求參數結構體
 
     """
 
@@ -696,15 +696,15 @@ class StartEncryptionRequest(AbstractModel):
         """
         :param CosEndPoint: cos的end point。
         :type CosEndPoint: str
-        :param CosSecretId: cos api密钥id。
+        :param CosSecretId: cos api金鑰id。
         :type CosSecretId: str
-        :param CosSecretKey: cos api密钥。
+        :param CosSecretKey: cos api金鑰。
         :type CosSecretKey: str
-        :param DrmType: 使用的DRM方案类型，接口取值WIDEVINE,FAIRPLAY
+        :param DrmType: 使用的DRM方案類型，介面取值WIDEVINE,FAIRPLAY
         :type DrmType: str
-        :param SourceObject: 存储在COS上的原始内容信息
+        :param SourceObject: 儲存在COS上的原始内容訊息
         :type SourceObject: :class:`tencentcloud.drm.v20181115.models.DrmSourceObject`
-        :param OutputObjects: 加密后的内容存储到COS的对象
+        :param OutputObjects: 加密後的内容儲存到COS的對象
         :type OutputObjects: list of DrmOutputObject
         """
         self.CosEndPoint = None
@@ -732,13 +732,13 @@ class StartEncryptionRequest(AbstractModel):
 
 
 class StartEncryptionResponse(AbstractModel):
-    """StartEncryption返回参数结构体
+    """StartEncryption返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None

@@ -110,7 +110,7 @@ class TafClient(AbstractClient):
 
 
     def RecognizeCustomizedAudience(self, request):
-        """流量反欺诈-流量验准定制版
+        """流量反欺詐-流量驗準定制版
 
         :param request: Request instance for RecognizeCustomizedAudience.
         :type request: :class:`tencentcloud.taf.v20200210.models.RecognizeCustomizedAudienceRequest`
@@ -166,7 +166,7 @@ class TafClient(AbstractClient):
 
 
     def RecognizeTargetAudience(self, request):
-        """流量反欺诈-流量验准
+        """流量反欺詐-流量驗準
 
         :param request: Request instance for RecognizeTargetAudience.
         :type request: :class:`tencentcloud.taf.v20200210.models.RecognizeTargetAudienceRequest`

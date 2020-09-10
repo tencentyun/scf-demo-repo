@@ -17,23 +17,23 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AgentGroup(AbstractModel):
-    """拨测分组
+    """撥測分組
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 拨测分组ID
+        :param GroupId: 撥測分組ID
         :type GroupId: int
-        :param GroupName: 拨测分组名称
+        :param GroupName: 撥測分組名稱
         :type GroupName: str
-        :param IsDefault: 是否默认拨测分组。1表示是，0表示否
+        :param IsDefault: 是否預設撥測分組。1表示是，0表示否
         :type IsDefault: int
-        :param TaskNum: 使用本拨测分组的任务数
+        :param TaskNum: 使用本撥測分組的任務數
         :type TaskNum: int
-        :param GroupDetail: 拨测结点列表
+        :param GroupDetail: 撥測結點清單
         :type GroupDetail: list of CatAgent
-        :param MaxGroupNum: 最大拨测分组数
+        :param MaxGroupNum: 最大撥測分組數
         :type MaxGroupNum: int
         """
         self.GroupId = None
@@ -59,29 +59,29 @@ class AgentGroup(AbstractModel):
 
 
 class AlarmInfo(AbstractModel):
-    """拨测告警信息
+    """撥測告警訊息
 
     """
 
     def __init__(self):
         """
-        :param ObjName: 告警对象的名称
+        :param ObjName: 告警對象的名稱
         :type ObjName: str
-        :param FirstOccurTime: 告警发生的时间
+        :param FirstOccurTime: 告警發生的時間
         :type FirstOccurTime: str
-        :param LastOccurTime: 告警结束的时间
+        :param LastOccurTime: 告警結束的時間
         :type LastOccurTime: str
-        :param Status: 告警状态。1 表示已恢复，0 表示未恢复，2表示数据不足
+        :param Status: 告警狀态。1 表示已恢複，0 表示未恢複，2表示數據不足
         :type Status: int
         :param Content: 告警的内容
         :type Content: str
-        :param TaskId: 拨测任务ID
+        :param TaskId: 撥測任務ID
         :type TaskId: int
-        :param MetricName: 特征项名字
+        :param MetricName: 特征項名字
         :type MetricName: str
-        :param MetricValue: 特征项数值
+        :param MetricValue: 特征項數值
         :type MetricValue: str
-        :param ObjId: 告警对象的ID
+        :param ObjId: 告警對象的ID
         :type ObjId: str
         """
         self.ObjName = None
@@ -108,15 +108,15 @@ class AlarmInfo(AbstractModel):
 
 
 class AlarmTopic(AbstractModel):
-    """告警主题
+    """告警主題
 
     """
 
     def __init__(self):
         """
-        :param TopicId: 主题的ID
+        :param TopicId: 主題的ID
         :type TopicId: str
-        :param TopicName: 主题的名称
+        :param TopicName: 主題的名稱
         :type TopicName: str
         """
         self.TopicId = None
@@ -129,19 +129,19 @@ class AlarmTopic(AbstractModel):
 
 
 class BindAlarmPolicyRequest(AbstractModel):
-    """BindAlarmPolicy请求参数结构体
+    """BindAlarmPolicy請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 拨测任务Id
+        :param TaskId: 撥測任務Id
         :type TaskId: int
-        :param PolicyGroupId: 告警策略组Id
+        :param PolicyGroupId: 告警策略組Id
         :type PolicyGroupId: int
-        :param IfBind: 是否绑定操作。非0 为绑定， 0 为 解绑。缺省表示 绑定。
+        :param IfBind: 是否綁定操作。非0 爲綁定， 0 爲 解綁。缺省表示 綁定。
         :type IfBind: int
-        :param TopicId: 告警主题Id
+        :param TopicId: 告警主題Id
         :type TopicId: str
         """
         self.TaskId = None
@@ -158,13 +158,13 @@ class BindAlarmPolicyRequest(AbstractModel):
 
 
 class BindAlarmPolicyResponse(AbstractModel):
-    """BindAlarmPolicy返回参数结构体
+    """BindAlarmPolicy返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -175,21 +175,21 @@ class BindAlarmPolicyResponse(AbstractModel):
 
 
 class CatAgent(AbstractModel):
-    """拨测Agent 所在省份、运营商
+    """撥測Agent 所在省份、運營商
 
     """
 
     def __init__(self):
         """
-        :param Province: 拨测结点所在的省份（拼音缩写）
+        :param Province: 撥測結點所在的省份（拼音縮寫）
         :type Province: str
-        :param Isp: 拨测结点所在的运营商（英文缩写）
+        :param Isp: 撥測結點所在的運營商（英文縮寫）
         :type Isp: str
-        :param ProvinceName: 拨测结点所在的省份（中文名称）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProvinceName: 撥測結點所在的省份（中文名稱）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProvinceName: str
-        :param IspName: 拨测结点所在的运营商（中文名称）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IspName: 撥測結點所在的運營商（中文名稱）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IspName: str
         """
         self.Province = None
@@ -206,55 +206,55 @@ class CatAgent(AbstractModel):
 
 
 class CatLog(AbstractModel):
-    """拨测记录
+    """撥測記錄
 
     """
 
     def __init__(self):
         """
-        :param Time: 拨测时间点
+        :param Time: 撥測時間點
         :type Time: str
-        :param CatTypeName: 拨测类型
+        :param CatTypeName: 撥測類型
         :type CatTypeName: str
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: int
-        :param City: 拨测点所在城市
+        :param City: 撥測點所在城市
         :type City: str
-        :param Isp: 拨测点所在运营商
+        :param Isp: 撥測點所在運營商
         :type Isp: str
-        :param ServerIp: 被拨测Server的IP
+        :param ServerIp: 被撥測Server的IP
         :type ServerIp: str
-        :param DomainName: 被拨测Server的域名
+        :param DomainName: 被撥測Server的域名
         :type DomainName: str
-        :param TotalTime: 执行耗时，单位毫秒
+        :param TotalTime: 執行耗時，單位毫秒
         :type TotalTime: int
-        :param ResultType: 成功失败(1 失败，0 成功）
+        :param ResultType: 成功失敗(1 失敗，0 成功）
         :type ResultType: int
-        :param ResultCode: 失败错误码
+        :param ResultCode: 失敗錯誤碼
         :type ResultCode: int
-        :param ReqPkgSize: 请求包大小
+        :param ReqPkgSize: 請求包大小
         :type ReqPkgSize: int
-        :param RspPkgSize: 回应包大小
+        :param RspPkgSize: 回應包大小
         :type RspPkgSize: int
-        :param ReqMsg: 拨测请求
+        :param ReqMsg: 撥測請求
         :type ReqMsg: str
-        :param RespMsg: 拨测回应
+        :param RespMsg: 撥測回應
         :type RespMsg: str
-        :param ClientIp: 客户端IP
+        :param ClientIp: 用戶端IP
         :type ClientIp: str
-        :param CityName: 拨测点所在城市名称
+        :param CityName: 撥測點所在城市名稱
         :type CityName: str
-        :param IspName: 拨测点所在运营商名称
+        :param IspName: 撥測點所在運營商名稱
         :type IspName: str
-        :param ParseTime: 解析耗时，单位毫秒
+        :param ParseTime: 解析耗時，單位毫秒
         :type ParseTime: int
-        :param ConnectTime: 连接耗时，单位毫秒
+        :param ConnectTime: 連接耗時，單位毫秒
         :type ConnectTime: int
-        :param SendTime: 数据发送耗时，单位毫秒
+        :param SendTime: 數據發送耗時，單位毫秒
         :type SendTime: int
-        :param WaitTime: 等待耗时，单位毫秒
+        :param WaitTime: 等待耗時，單位毫秒
         :type WaitTime: int
-        :param ReceiveTime: 接收耗时，单位毫秒
+        :param ReceiveTime: 接收耗時，單位毫秒
         :type ReceiveTime: int
         """
         self.Time = None
@@ -307,27 +307,27 @@ class CatLog(AbstractModel):
 
 
 class CatReturnDetail(AbstractModel):
-    """拨测失败详情
+    """撥測失敗詳情
 
     """
 
     def __init__(self):
         """
-        :param IspName: 运营商名称
+        :param IspName: 運營商名稱
         :type IspName: str
         :param Province: 省份全拼
         :type Province: str
-        :param ProvinceName: 省份中文名称
+        :param ProvinceName: 省份中文名稱
         :type ProvinceName: str
-        :param MapKey: Map键值
+        :param MapKey: Map鍵值
         :type MapKey: str
-        :param ServerIp: 拨测目标的IP
+        :param ServerIp: 撥測目标的IP
         :type ServerIp: str
-        :param ResultCount: 拨测失败个数
+        :param ResultCount: 撥測失敗個數
         :type ResultCount: int
-        :param ResultCode: 拨测失败返回码
+        :param ResultCode: 撥測失敗返回碼
         :type ResultCode: int
-        :param ErrorReason: 拨测失败原因描述
+        :param ErrorReason: 撥測失敗原因描述
         :type ErrorReason: str
         """
         self.IspName = None
@@ -352,17 +352,17 @@ class CatReturnDetail(AbstractModel):
 
 
 class CatReturnSummary(AbstractModel):
-    """拨测失败返回情况汇总
+    """撥測失敗返回情況匯總
 
     """
 
     def __init__(self):
         """
-        :param ResultCount: 拨测失败个数
+        :param ResultCount: 撥測失敗個數
         :type ResultCount: int
-        :param ResultCode: 拨测失败返回码
+        :param ResultCode: 撥測失敗返回碼
         :type ResultCode: int
-        :param ErrorReason: 拨测失败原因描述
+        :param ErrorReason: 撥測失敗原因描述
         :type ErrorReason: str
         """
         self.ResultCount = None
@@ -377,77 +377,77 @@ class CatReturnSummary(AbstractModel):
 
 
 class CatTaskDetail(AbstractModel):
-    """任务信息和告警策略组
+    """任務訊息和告警策略組
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: int
-        :param TaskName: 任务名称
+        :param TaskName: 任務名稱
         :type TaskName: str
-        :param Period: 任务周期，单位为分钟。目前支持1，5，15，30几种取值
+        :param Period: 任務週期，單位爲分鍾。目前支援1，5，15，30幾種取值
         :type Period: int
-        :param CatTypeName: 拨测类型。http, https, ping, tcp 之一
+        :param CatTypeName: 撥測類型。http, https, ping, tcp 之一
         :type CatTypeName: str
-        :param CgiUrl: 拨测任务的URL
+        :param CgiUrl: 撥測任務的URL
         :type CgiUrl: str
-        :param AgentGroupId: 拨测分组ID
+        :param AgentGroupId: 撥測分組ID
         :type AgentGroupId: int
-        :param PolicyGroupId: 告警策略组ID
+        :param PolicyGroupId: 告警策略組ID
         :type PolicyGroupId: int
-        :param Status: 任务状态。1表示暂停，2表示运行中，0为初始态
+        :param Status: 任務狀态。1表示暫停，2表示運作中，0爲初始态
         :type Status: int
-        :param AddTime: 任务创建时间
+        :param AddTime: 任務創建時間
         :type AddTime: str
-        :param Type: 任务类型。0 站点监控，2 可用性监控
+        :param Type: 任務類型。0 站點監控，2 可用性監控
         :type Type: int
-        :param TopicId: 绑定的统一告警主题ID
+        :param TopicId: 綁定的統一告警主題ID
         :type TopicId: str
-        :param AlarmStatus: 告警状态。0 未启用，1, 启用
+        :param AlarmStatus: 告警狀态。0 未啓用，1, 啓用
         :type AlarmStatus: int
         :param Host: 指定的域名
         :type Host: str
-        :param Port: 拨测目标的端口号
+        :param Port: 撥測目标的端口号
         :type Port: int
-        :param CheckStr: 要在结果中进行匹配的字符串
+        :param CheckStr: 要在結果中進行比對的字串
         :type CheckStr: str
-        :param CheckType: 1 表示通过检查结果是否包含CheckStr 进行校验
+        :param CheckType: 1 表示通過檢查結果是否包含CheckStr 進行校驗
         :type CheckType: int
-        :param UserAgent: 用户Agent信息
+        :param UserAgent: 用戶Agent訊息
         :type UserAgent: str
-        :param Cookie: 设置的Cookie信息
+        :param Cookie: 設置的Cookie訊息
         :type Cookie: str
-        :param PostData: POST 请求数据。空字符串表示非POST请求
+        :param PostData: POST 請求數據。空字串表示非POST請求
         :type PostData: str
-        :param SslVer: SSL协议版本
+        :param SslVer: SSL協議版本
         :type SslVer: str
-        :param IsHeader: 是否为Header请求。非0 Header 请求
+        :param IsHeader: 是否爲Header請求。非0 Header 請求
         :type IsHeader: int
-        :param DnsSvr: 目的DNS服务器
+        :param DnsSvr: 目的DNS服務器
         :type DnsSvr: str
-        :param DnsCheckIp: 需要检验是否在DNS IP列表的IP
+        :param DnsCheckIp: 需要檢驗是否在DNS IP清單的IP
         :type DnsCheckIp: str
-        :param DnsQueryType: DNS查询类型
+        :param DnsQueryType: DNS查詢類型
         :type DnsQueryType: str
-        :param UserName: 登录服务器的账号
+        :param UserName: 登入服務器的賬号
         :type UserName: str
-        :param PassWord: 登录服务器的密码
+        :param PassWord: 登入服務器的密碼
         :type PassWord: str
-        :param UseSecConn: 是否使用安全链接SSL， 0 不使用，1 使用
+        :param UseSecConn: 是否使用安全連結SSL， 0 不使用，1 使用
         :type UseSecConn: int
-        :param NeedAuth: FTP登录验证方式  0 不验证  1 匿名登录  2 需要身份验证
+        :param NeedAuth: FTP登入驗證方式  0 不驗證  1 匿名登入  2 需要身份驗證
         :type NeedAuth: int
-        :param ReqDataType: 请求数据类型。0 表示请求为字符串类型。1表示为二进制类型
+        :param ReqDataType: 請求數據類型。0 表示請求爲字串類型。1表示爲二進制類型
         :type ReqDataType: int
-        :param ReqData: 发起TCP, UDP请求的协议请求数据
+        :param ReqData: 發起TCP, UDP請求的協議請求數據
         :type ReqData: str
-        :param RespDataType: 响应数据类型。0 表示响应为字符串类型。1表示为二进制类型
+        :param RespDataType: 響應數據類型。0 表示響應爲字串類型。1表示爲二進制類型
         :type RespDataType: int
-        :param RespData: 预期的UDP请求的回应数据
+        :param RespData: 預期的UDP請求的回應數據
         :type RespData: str
-        :param RedirectFollowNum: 跟随跳转次数
+        :param RedirectFollowNum: 跟随跳轉次數
         :type RedirectFollowNum: int
         """
         self.TaskId = None
@@ -522,17 +522,17 @@ class CatTaskDetail(AbstractModel):
 
 
 class CreateAgentGroupRequest(AbstractModel):
-    """CreateAgentGroup请求参数结构体
+    """CreateAgentGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupName: 拨测分组名称，不超过32个字符
+        :param GroupName: 撥測分組名稱，不超過32個字元
         :type GroupName: str
-        :param IsDefault: 是否为默认分组，取值可为 0 或 1。取 1 时表示设置为默认分组
+        :param IsDefault: 是否爲預設分組，取值可爲 0 或 1。取 1 時表示設置爲預設分組
         :type IsDefault: int
-        :param Agents: Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgents 的返回结果。
+        :param Agents: Province, Isp 需要成對地進行選擇。參數對的取值範圍。參見：DescribeAgents 的返回結果。
         :type Agents: list of CatAgent
         """
         self.GroupName = None
@@ -552,15 +552,15 @@ class CreateAgentGroupRequest(AbstractModel):
 
 
 class CreateAgentGroupResponse(AbstractModel):
-    """CreateAgentGroup返回参数结构体
+    """CreateAgentGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 拨测分组Id
+        :param GroupId: 撥測分組Id
         :type GroupId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.GroupId = None
@@ -573,7 +573,7 @@ class CreateAgentGroupResponse(AbstractModel):
 
 
 class CreateTaskExRequest(AbstractModel):
-    """CreateTaskEx请求参数结构体
+    """CreateTaskEx請求參數結構體
 
     """
 
@@ -581,61 +581,61 @@ class CreateTaskExRequest(AbstractModel):
         """
         :param CatTypeName: http, https, ping, tcp, ftp, smtp, udp, dns 之一
         :type CatTypeName: str
-        :param Url: 拨测的URL， 例如：www.qq.com (URL域名解析需要能解析出具体的IP)
+        :param Url: 撥測的URL， 例如：www.qq.com (URL域名解析需要能解析出具體的IP)
         :type Url: str
-        :param Period: 拨测周期。取值可为1,5,15,30之一, 单位：分钟。精度不能低于用户等级规定的最小精度
+        :param Period: 撥測週期。取值可爲1,5,15,30之一, 單位：分鍾。精度不能低于用戶等級規定的最小精度
         :type Period: int
-        :param TaskName: 拨测任务名称不能超过32个字符。同一个用户创建的任务名不可重复
+        :param TaskName: 撥測任務名稱不能超過32個字元。同一個用戶創建的任務名不可重複
         :type TaskName: str
-        :param AgentGroupId: 拨测分组ID，体现本拨测任务要采用哪些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
+        :param AgentGroupId: 撥測分組ID，體現本撥測任務要采用哪些運營商作爲撥測源。一般可直接填寫本用戶的預設撥測分組。參見：DescribeAgentGroups 介面，本參數使用返回結果裏的GroupId的值。注意： Type爲0時，AgentGroupId爲必填
         :type AgentGroupId: int
         :param Host: 指定域名(如需要)
         :type Host: str
-        :param IsHeader: 是否为Header请求（非0 发起Header 请求。为0，且PostData 非空，发起POST请求。为0，PostData 为空，发起GET请求）
+        :param IsHeader: 是否爲Header請求（非0 發起Header 請求。爲0，且PostData 非空，發起POST請求。爲0，PostData 爲空，發起GET請求）
         :type IsHeader: int
-        :param SslVer: URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+        :param SslVer: URL中含有"https"時有用。缺省爲SSLv23。需要爲 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
         :type SslVer: str
-        :param PostData: POST请求数据。空字符串表示非POST请求
+        :param PostData: POST請求數據。空字串表示非POST請求
         :type PostData: str
-        :param UserAgent: 用户Agent信息
+        :param UserAgent: 用戶Agent訊息
         :type UserAgent: str
-        :param CheckStr: 要在结果中进行匹配的字符串
+        :param CheckStr: 要在結果中進行比對的字串
         :type CheckStr: str
-        :param CheckType: 1 表示通过检查结果是否包含CheckStr 进行校验
+        :param CheckType: 1 表示通過檢查結果是否包含CheckStr 進行校驗
         :type CheckType: int
-        :param Cookie: 需要设置的Cookie信息
+        :param Cookie: 需要設置的Cookie訊息
         :type Cookie: str
-        :param TaskId: 任务ID，用于验证且修改任务时传入原任务ID
+        :param TaskId: 任務ID，用于驗證且修改任務時傳入原任務ID
         :type TaskId: int
-        :param UserName: 登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测
+        :param UserName: 登入服務器的賬号。如果爲空字串，表示不用校驗用戶密碼。只做簡單連接服務器的撥測
         :type UserName: str
-        :param PassWord: 登录服务器的密码
+        :param PassWord: 登入服務器的密碼
         :type PassWord: str
-        :param ReqDataType: 缺省为0。0 表示请求为字符串类型。1表示为二进制类型
+        :param ReqDataType: 缺省爲0。0 表示請求爲字串類型。1表示爲二進制類型
         :type ReqDataType: int
-        :param ReqData: 发起TCP, UDP请求的协议请求数据
+        :param ReqData: 發起TCP, UDP請求的協議請求數據
         :type ReqData: str
-        :param RespDataType: 缺省为0。0 表示响应为字符串类型。1表示为二进制类型
+        :param RespDataType: 缺省爲0。0 表示響應爲字串類型。1表示爲二進制類型
         :type RespDataType: int
-        :param RespData: 预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
+        :param RespData: 預期的UDP請求的回應數據。字串型，只需要返回的結果裏包含本字串算校驗通過。二進制型，則需要嚴格等于才算通過
         :type RespData: str
-        :param DnsSvr: 目的DNS服务器  可以为空字符串
+        :param DnsSvr: 目的DNS服務器  可以爲空字串
         :type DnsSvr: str
-        :param DnsCheckIp: 需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验
+        :param DnsCheckIp: 需要檢驗是否在DNS IP清單的IP。可以爲空字串，表示不校驗
         :type DnsCheckIp: str
-        :param DnsQueryType: 需要为下列值之一。缺省为A。A, MX, NS, CNAME, TXT, ANY
+        :param DnsQueryType: 需要爲下列值之一。缺省爲A。A, MX, NS, CNAME, TXT, ANY
         :type DnsQueryType: str
-        :param UseSecConn: 是否使用安全链接SSL， 0 不使用，1 使用
+        :param UseSecConn: 是否使用安全連結SSL， 0 不使用，1 使用
         :type UseSecConn: int
-        :param NeedAuth: FTP登录验证方式， 0 不验证 ， 1 匿名登录， 2 需要身份验证
+        :param NeedAuth: FTP登入驗證方式， 0 不驗證 ， 1 匿名登入， 2 需要身份驗證
         :type NeedAuth: int
-        :param Port: 拨测目标的端口号
+        :param Port: 撥測目标的端口号
         :type Port: int
-        :param Type: Type=0 默认 （站点监控）Type=2 可用率监控
+        :param Type: Type=0 預設 （站點監控）Type=2 可用率監控
         :type Type: int
-        :param IsVerify: IsVerify=0 非验证任务 IsVerify=1 验证任务，不传则默认为0
+        :param IsVerify: IsVerify=0 非驗證任務 IsVerify=1 驗證任務，不傳則預設爲0
         :type IsVerify: int
-        :param RedirectFollowNum: 跟随跳转次数，取值范围0-5，不传则表示不跟随
+        :param RedirectFollowNum: 跟随跳轉次數，取值範圍0-5，不傳則表示不跟随
         :type RedirectFollowNum: int
         """
         self.CatTypeName = None
@@ -702,17 +702,17 @@ class CreateTaskExRequest(AbstractModel):
 
 
 class CreateTaskExResponse(AbstractModel):
-    """CreateTaskEx返回参数结构体
+    """CreateTaskEx返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResultId: 拨测结果查询ID。接下来可以使用查询拨测是否能够成功，验证能否通过。
+        :param ResultId: 撥測結果查詢ID。接下來可以使用查詢撥測是否能夠成功，驗證能否通過。
         :type ResultId: int
-        :param TaskId: 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
+        :param TaskId: 撥測任務ID。驗證通過後，創建任務時使用，傳遞給CreateTask 介面。
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResultId = None
@@ -727,15 +727,15 @@ class CreateTaskExResponse(AbstractModel):
 
 
 class DataPoint(AbstractModel):
-    """时延等数据，数据点
+    """延遲等數據，數據點
 
     """
 
     def __init__(self):
         """
-        :param LogTime: 数据点的时间
+        :param LogTime: 數據點的時間
         :type LogTime: str
-        :param MetricValue: 数据值
+        :param MetricValue: 數據值
         :type MetricValue: float
         """
         self.LogTime = None
@@ -748,15 +748,15 @@ class DataPoint(AbstractModel):
 
 
 class DataPointMetric(AbstractModel):
-    """包含MetricName的DataPoint数据
+    """包含MetricName的DataPoint數據
 
     """
 
     def __init__(self):
         """
-        :param MetricName: 数据项
+        :param MetricName: 數據項
         :type MetricName: str
-        :param Points: 数据点的时间和值
+        :param Points: 數據點的時間和值
         :type Points: list of DataPoint
         """
         self.MetricName = None
@@ -774,13 +774,13 @@ class DataPointMetric(AbstractModel):
 
 
 class DeleteAgentGroupRequest(AbstractModel):
-    """DeleteAgentGroup请求参数结构体
+    """DeleteAgentGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 拨测分组id
+        :param GroupId: 撥測分組id
         :type GroupId: int
         """
         self.GroupId = None
@@ -791,13 +791,13 @@ class DeleteAgentGroupRequest(AbstractModel):
 
 
 class DeleteAgentGroupResponse(AbstractModel):
-    """DeleteAgentGroup返回参数结构体
+    """DeleteAgentGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -808,13 +808,13 @@ class DeleteAgentGroupResponse(AbstractModel):
 
 
 class DeleteTasksRequest(AbstractModel):
-    """DeleteTasks请求参数结构体
+    """DeleteTasks請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskIds: 拨测任务id
+        :param TaskIds: 撥測任務id
         :type TaskIds: list of int non-negative
         """
         self.TaskIds = None
@@ -825,13 +825,13 @@ class DeleteTasksRequest(AbstractModel):
 
 
 class DeleteTasksResponse(AbstractModel):
-    """DeleteTasks返回参数结构体
+    """DeleteTasks返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -842,23 +842,23 @@ class DeleteTasksResponse(AbstractModel):
 
 
 class DescribeAgentGroupsRequest(AbstractModel):
-    """DescribeAgentGroups请求参数结构体
+    """DescribeAgentGroups請求參數結構體
 
     """
 
 
 class DescribeAgentGroupsResponse(AbstractModel):
-    """DescribeAgentGroups返回参数结构体
+    """DescribeAgentGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SysDefaultGroup: 用户所属的系统默认拨测分组
+        :param SysDefaultGroup: 用戶所屬的系統預設撥測分組
         :type SysDefaultGroup: :class:`tencentcloud.cat.v20180409.models.AgentGroup`
-        :param CustomGroups: 用户创建的拨测分组列表
+        :param CustomGroups: 用戶創建的撥測分組清單
         :type CustomGroups: list of AgentGroup
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SysDefaultGroup = None
@@ -880,21 +880,21 @@ class DescribeAgentGroupsResponse(AbstractModel):
 
 
 class DescribeAgentsRequest(AbstractModel):
-    """DescribeAgents请求参数结构体
+    """DescribeAgents請求參數結構體
 
     """
 
 
 class DescribeAgentsResponse(AbstractModel):
-    """DescribeAgents返回参数结构体
+    """DescribeAgents返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Agents: 本用户可选的拨测点列表
+        :param Agents: 本用戶可選的撥測點清單
         :type Agents: list of CatAgent
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Agents = None
@@ -912,13 +912,13 @@ class DescribeAgentsResponse(AbstractModel):
 
 
 class DescribeAlarmTopicRequest(AbstractModel):
-    """DescribeAlarmTopic请求参数结构体
+    """DescribeAlarmTopic請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NeedAdd: 如果不存在拨测相关的主题，是否自动创建一个。取值可为0, 1，默认为0
+        :param NeedAdd: 如果不存在撥測相關的主題，是否自動創建一個。取值可爲0, 1，預設爲0
         :type NeedAdd: int
         """
         self.NeedAdd = None
@@ -929,17 +929,17 @@ class DescribeAlarmTopicRequest(AbstractModel):
 
 
 class DescribeAlarmTopicResponse(AbstractModel):
-    """DescribeAlarmTopic返回参数结构体
+    """DescribeAlarmTopic返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 主题个数
+        :param TotalCount: 主題個數
         :type TotalCount: int
-        :param Topics: 主题列表
+        :param Topics: 主題清單
         :type Topics: list of AlarmTopic
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -959,29 +959,29 @@ class DescribeAlarmTopicResponse(AbstractModel):
 
 
 class DescribeAlarmsByTaskRequest(AbstractModel):
-    """DescribeAlarmsByTask请求参数结构体
+    """DescribeAlarmsByTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 拨测任务Id
+        :param TaskId: 撥測任務Id
         :type TaskId: int
-        :param Offset: 从第Offset 条开始查询。缺省值为0
+        :param Offset: 從第Offset 條開始查詢。缺省值爲0
         :type Offset: int
-        :param Limit: 本批次查询Limit 条记录。缺省值为20
+        :param Limit: 本批次查詢Limit 條記錄。缺省值爲20
         :type Limit: int
-        :param Status: 0 全部, 1 已恢复, 2 未恢复  默认为0。其他值，视为0 查全部状态
+        :param Status: 0 全部, 1 已恢複, 2 未恢複  預設爲0。其他值，視爲0 查全部狀态
         :type Status: int
-        :param BeginTime: 格式如：2017-05-09 00:00:00  缺省为7天前0点
+        :param BeginTime: 格式如：2017-05-09 00:00:00  缺省爲7天前0點
         :type BeginTime: str
-        :param EndTime: 格式如：2017-05-10 00:00:00  缺省为明天0点
+        :param EndTime: 格式如：2017-05-10 00:00:00  缺省爲明天0點
         :type EndTime: str
-        :param SortBy: 排序字段，可为Time, ObjName, Duration, Status, Content 之一。缺省为Time
+        :param SortBy: 排序欄位，可爲Time, ObjName, Duration, Status, Content 之一。缺省爲Time
         :type SortBy: str
-        :param SortType: 升序或降序。可为Desc, Asc之一。缺省为Desc
+        :param SortType: 升序或降序。可爲Desc, Asc之一。缺省爲Desc
         :type SortType: str
-        :param ObjName: 告警对象的名称
+        :param ObjName: 告警對象的名稱
         :type ObjName: str
         """
         self.TaskId = None
@@ -1008,19 +1008,19 @@ class DescribeAlarmsByTaskRequest(AbstractModel):
 
 
 class DescribeAlarmsByTaskResponse(AbstractModel):
-    """DescribeAlarmsByTask返回参数结构体
+    """DescribeAlarmsByTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AlarmInfos: 告警信息列表
+        :param AlarmInfos: 告警訊息清單
         :type AlarmInfos: list of AlarmInfo
         :param FaultRatio: 故障率
         :type FaultRatio: float
-        :param FaultTimeSpec: 故障总时长
+        :param FaultTimeSpec: 故障總時長
         :type FaultTimeSpec: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AlarmInfos = None
@@ -1042,27 +1042,27 @@ class DescribeAlarmsByTaskResponse(AbstractModel):
 
 
 class DescribeAlarmsRequest(AbstractModel):
-    """DescribeAlarms请求参数结构体
+    """DescribeAlarms請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 从第Offset 条开始查询。缺省值为0
+        :param Offset: 從第Offset 條開始查詢。缺省值爲0
         :type Offset: int
-        :param Limit: 本批次查询Limit 条记录。缺省值为20
+        :param Limit: 本批次查詢Limit 條記錄。缺省值爲20
         :type Limit: int
-        :param Status: 0 全部, 1 已恢复, 2 未恢复  默认为0。其他值，视为0 查全部状态。
+        :param Status: 0 全部, 1 已恢複, 2 未恢複  預設爲0。其他值，視爲0 查全部狀态。
         :type Status: int
-        :param BeginTime: 格式如：2017-05-09 00:00:00  缺省为7天前0点
+        :param BeginTime: 格式如：2017-05-09 00:00:00  缺省爲7天前0點
         :type BeginTime: str
-        :param EndTime: 格式如：2017-05-10 00:00:00  缺省为明天0点
+        :param EndTime: 格式如：2017-05-10 00:00:00  缺省爲明天0點
         :type EndTime: str
-        :param ObjName: 告警任务名
+        :param ObjName: 告警任務名
         :type ObjName: str
-        :param SortBy: 排序字段，可为Time, ObjName, Duration, Status, Content 之一。缺省为Time。
+        :param SortBy: 排序欄位，可爲Time, ObjName, Duration, Status, Content 之一。缺省爲Time。
         :type SortBy: str
-        :param SortType: 升序或降序。可为Desc, Asc之一。缺省为Desc。
+        :param SortType: 升序或降序。可爲Desc, Asc之一。缺省爲Desc。
         :type SortType: str
         """
         self.Offset = None
@@ -1087,17 +1087,17 @@ class DescribeAlarmsRequest(AbstractModel):
 
 
 class DescribeAlarmsResponse(AbstractModel):
-    """DescribeAlarms返回参数结构体
+    """DescribeAlarms返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 告警总条数
+        :param TotalCount: 告警總條數
         :type TotalCount: int
-        :param AlarmInfos: 本批告警信息列表
+        :param AlarmInfos: 本批告警訊息清單
         :type AlarmInfos: list of AlarmInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1117,23 +1117,23 @@ class DescribeAlarmsResponse(AbstractModel):
 
 
 class DescribeCatLogsRequest(AbstractModel):
-    """DescribeCatLogs请求参数结构体
+    """DescribeCatLogs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 拨测任务Id
+        :param TaskId: 撥測任務Id
         :type TaskId: int
-        :param Offset: 从第Offset 条开始查询。缺省值为0
+        :param Offset: 從第Offset 條開始查詢。缺省值爲0
         :type Offset: int
-        :param Limit: 本批次查询Limit 条记录。缺省值为20
+        :param Limit: 本批次查詢Limit 條記錄。缺省值爲20
         :type Limit: int
-        :param BeginTime: 格式如：2017-05-09 00:00:00  缺省为当天0点，最多拉取1天的数据
+        :param BeginTime: 格式如：2017-05-09 00:00:00  缺省爲當天0點，最多拉取1天的數據
         :type BeginTime: str
-        :param EndTime: 格式如：2017-05-10 00:00:00  缺省为当前时间
+        :param EndTime: 格式如：2017-05-10 00:00:00  缺省爲當前時間
         :type EndTime: str
-        :param SortType: 按时间升序或降序。默认降序。可选值： Desc, Asc
+        :param SortType: 按時間升序或降序。預設降序。可選值： Desc, Asc
         :type SortType: str
         """
         self.TaskId = None
@@ -1154,17 +1154,17 @@ class DescribeCatLogsRequest(AbstractModel):
 
 
 class DescribeCatLogsResponse(AbstractModel):
-    """DescribeCatLogs返回参数结构体
+    """DescribeCatLogs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 符合条件的总记录数
+        :param TotalCount: 符合條件的總記錄數
         :type TotalCount: int
-        :param CatLogs: 拨测记录列表
+        :param CatLogs: 撥測記錄清單
         :type CatLogs: list of CatLog
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1184,13 +1184,13 @@ class DescribeCatLogsResponse(AbstractModel):
 
 
 class DescribeTaskDetailRequest(AbstractModel):
-    """DescribeTaskDetail请求参数结构体
+    """DescribeTaskDetail請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskIds: 拨测任务id 数组
+        :param TaskIds: 撥測任務id 數組
         :type TaskIds: list of int non-negative
         """
         self.TaskIds = None
@@ -1201,15 +1201,15 @@ class DescribeTaskDetailRequest(AbstractModel):
 
 
 class DescribeTaskDetailResponse(AbstractModel):
-    """DescribeTaskDetail返回参数结构体
+    """DescribeTaskDetail返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Tasks: 拨测任务列表
+        :param Tasks: 撥測任務清單
         :type Tasks: list of CatTaskDetail
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Tasks = None
@@ -1227,17 +1227,17 @@ class DescribeTaskDetailResponse(AbstractModel):
 
 
 class DescribeTasksByTypeRequest(AbstractModel):
-    """DescribeTasksByType请求参数结构体
+    """DescribeTasksByType請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 从第Offset 条开始查询。缺省值为0
+        :param Offset: 從第Offset 條開始查詢。缺省值爲0
         :type Offset: int
-        :param Limit: 本批次查询Limit 条记录。缺省值为20
+        :param Limit: 本批次查詢Limit 條記錄。缺省值爲20
         :type Limit: int
-        :param Type: 拨测任务类型。0 站点监控，2 可用性监控。缺省值为2
+        :param Type: 撥測任務類型。0 站點監控，2 可用性監控。缺省值爲2
         :type Type: int
         """
         self.Offset = None
@@ -1252,17 +1252,17 @@ class DescribeTasksByTypeRequest(AbstractModel):
 
 
 class DescribeTasksByTypeResponse(AbstractModel):
-    """DescribeTasksByType返回参数结构体
+    """DescribeTasksByType返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 符合条件的总任务数
+        :param TotalCount: 符合條件的總任務數
         :type TotalCount: int
-        :param Tasks: 任务列表
+        :param Tasks: 任務清單
         :type Tasks: list of TaskAlarm
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1282,27 +1282,27 @@ class DescribeTasksByTypeResponse(AbstractModel):
 
 
 class DescribeUserLimitRequest(AbstractModel):
-    """DescribeUserLimit请求参数结构体
+    """DescribeUserLimit請求參數結構體
 
     """
 
 
 class DescribeUserLimitResponse(AbstractModel):
-    """DescribeUserLimit返回参数结构体
+    """DescribeUserLimit返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MaxTaskNum: 用户可建立的最大任务数
+        :param MaxTaskNum: 用戶可建立的最大任務數
         :type MaxTaskNum: int
-        :param MaxAgentNum: 用户可用的最大拨测结点数
+        :param MaxAgentNum: 用戶可用的最大撥測結點數
         :type MaxAgentNum: int
-        :param MaxGroupNum: 用户可建立的最大拨测分组数
+        :param MaxGroupNum: 用戶可建立的最大撥測分組數
         :type MaxGroupNum: int
-        :param MinPeriod: 用户可用的最小拨测间隔
+        :param MinPeriod: 用戶可用的最小撥測間隔
         :type MinPeriod: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.MaxTaskNum = None
@@ -1321,15 +1321,15 @@ class DescribeUserLimitResponse(AbstractModel):
 
 
 class DimensionsDetail(AbstractModel):
-    """拨测点维度信息
+    """撥測點維度訊息
 
     """
 
     def __init__(self):
         """
-        :param Isp: 运营商列表
+        :param Isp: 運營商清單
         :type Isp: list of str
-        :param Province: 省份列表
+        :param Province: 省份清單
         :type Province: list of str
         """
         self.Isp = None
@@ -1342,15 +1342,15 @@ class DimensionsDetail(AbstractModel):
 
 
 class GetAvailRatioHistoryRequest(AbstractModel):
-    """GetAvailRatioHistory请求参数结构体
+    """GetAvailRatioHistory請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 拨测任务Id
+        :param TaskId: 撥測任務Id
         :type TaskId: int
-        :param TimeStamp: 具体时间点
+        :param TimeStamp: 具體時間點
         :type TimeStamp: str
         """
         self.TaskId = None
@@ -1363,37 +1363,37 @@ class GetAvailRatioHistoryRequest(AbstractModel):
 
 
 class GetAvailRatioHistoryResponse(AbstractModel):
-    """GetAvailRatioHistory返回参数结构体
+    """GetAvailRatioHistory返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AvgAvailRatio: 整体平均可用率
+        :param AvgAvailRatio: 整體平均可用率
         :type AvgAvailRatio: float
         :param LowestAvailRatio: 各省份最低可用率
         :type LowestAvailRatio: float
         :param LowestProvince: 可用率最低的省份
         :type LowestProvince: str
-        :param LowestIsp: 可用率最低的运营商
+        :param LowestIsp: 可用率最低的運營商
         :type LowestIsp: str
-        :param ProvinceData: 分省份的可用率数据
+        :param ProvinceData: 分省份的可用率數據
         :type ProvinceData: list of ProvinceDetail
-        :param AvgTime: 国内平均耗时，单位毫秒
+        :param AvgTime: 國内平均耗時，單位毫秒
         :type AvgTime: float
-        :param AvgAvailRatio2: 国外平均可用率
+        :param AvgAvailRatio2: 國外平均可用率
         :type AvgAvailRatio2: float
-        :param AvgTime2: 国外平均耗时，单位毫秒
+        :param AvgTime2: 國外平均耗時，單位毫秒
         :type AvgTime2: float
-        :param LowestAvailRatio2: 国外最低可用率
+        :param LowestAvailRatio2: 國外最低可用率
         :type LowestAvailRatio2: float
-        :param LowestProvince2: 国外可用率最低的区域
+        :param LowestProvince2: 國外可用率最低的區域
         :type LowestProvince2: str
-        :param LowestIsp2: 国外可用率最低的运营商
+        :param LowestIsp2: 國外可用率最低的運營商
         :type LowestIsp2: str
-        :param ProvinceData2: 国外分区域的可用率数据
+        :param ProvinceData2: 國外分區域的可用率數據
         :type ProvinceData2: list of ProvinceDetail
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AvgAvailRatio = None
@@ -1438,13 +1438,13 @@ class GetAvailRatioHistoryResponse(AbstractModel):
 
 
 class GetDailyAvailRatioRequest(AbstractModel):
-    """GetDailyAvailRatio请求参数结构体
+    """GetDailyAvailRatio請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 拨测任务Id
+        :param TaskId: 撥測任務Id
         :type TaskId: int
         """
         self.TaskId = None
@@ -1455,33 +1455,33 @@ class GetDailyAvailRatioRequest(AbstractModel):
 
 
 class GetDailyAvailRatioResponse(AbstractModel):
-    """GetDailyAvailRatio返回参数结构体
+    """GetDailyAvailRatio返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AvgAvailRatio: 整体平均可用率
+        :param AvgAvailRatio: 整體平均可用率
         :type AvgAvailRatio: float
         :param LowestAvailRatio: 各省份最低可用率
         :type LowestAvailRatio: float
         :param LowestProvince: 可用率最低的省份
         :type LowestProvince: str
-        :param ProvinceData: 分省份的可用率数据
+        :param ProvinceData: 分省份的可用率數據
         :type ProvinceData: list of ProvinceDetail
-        :param AvgTime: 国内平均耗时，单位毫秒
+        :param AvgTime: 國内平均耗時，單位毫秒
         :type AvgTime: float
-        :param AvgAvailRatio2: 国外平均可用率
+        :param AvgAvailRatio2: 國外平均可用率
         :type AvgAvailRatio2: float
-        :param AvgTime2: 国外平均耗时，单位毫秒
+        :param AvgTime2: 國外平均耗時，單位毫秒
         :type AvgTime2: float
-        :param LowestAvailRatio2: 国外最低可用率
+        :param LowestAvailRatio2: 國外最低可用率
         :type LowestAvailRatio2: float
-        :param LowestProvince2: 国外可用率最低的区域
+        :param LowestProvince2: 國外可用率最低的區域
         :type LowestProvince2: str
-        :param ProvinceData2: 国外分区域的可用率数据
+        :param ProvinceData2: 國外分區域的可用率數據
         :type ProvinceData2: list of ProvinceDetail
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AvgAvailRatio = None
@@ -1522,13 +1522,13 @@ class GetDailyAvailRatioResponse(AbstractModel):
 
 
 class GetRealAvailRatioRequest(AbstractModel):
-    """GetRealAvailRatio请求参数结构体
+    """GetRealAvailRatio請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 拨测任务Id
+        :param TaskId: 撥測任務Id
         :type TaskId: int
         """
         self.TaskId = None
@@ -1539,37 +1539,37 @@ class GetRealAvailRatioRequest(AbstractModel):
 
 
 class GetRealAvailRatioResponse(AbstractModel):
-    """GetRealAvailRatio返回参数结构体
+    """GetRealAvailRatio返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AvgAvailRatio: 国内平均可用率
+        :param AvgAvailRatio: 國内平均可用率
         :type AvgAvailRatio: float
         :param LowestAvailRatio: 各省份最低可用率
         :type LowestAvailRatio: float
         :param LowestProvince: 可用率最低的省份
         :type LowestProvince: str
-        :param LowestIsp: 可用率最低的运营商
+        :param LowestIsp: 可用率最低的運營商
         :type LowestIsp: str
-        :param ProvinceData: 分省份的可用率数据
+        :param ProvinceData: 分省份的可用率數據
         :type ProvinceData: list of ProvinceDetail
-        :param AvgTime: 国内平均耗时，单位毫秒
+        :param AvgTime: 國内平均耗時，單位毫秒
         :type AvgTime: float
-        :param AvgAvailRatio2: 国外平均可用率
+        :param AvgAvailRatio2: 國外平均可用率
         :type AvgAvailRatio2: float
-        :param AvgTime2: 国外平均耗时，单位毫秒
+        :param AvgTime2: 國外平均耗時，單位毫秒
         :type AvgTime2: float
-        :param LowestAvailRatio2: 国外最低可用率
+        :param LowestAvailRatio2: 國外最低可用率
         :type LowestAvailRatio2: float
-        :param LowestProvince2: 国外可用率最低的区域
+        :param LowestProvince2: 國外可用率最低的區域
         :type LowestProvince2: str
-        :param LowestIsp2: 国外可用率最低的运营商
+        :param LowestIsp2: 國外可用率最低的運營商
         :type LowestIsp2: str
-        :param ProvinceData2: 国外分区域的可用率数据
+        :param ProvinceData2: 國外分區域的可用率數據
         :type ProvinceData2: list of ProvinceDetail
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AvgAvailRatio = None
@@ -1614,21 +1614,21 @@ class GetRealAvailRatioResponse(AbstractModel):
 
 
 class GetRespTimeTrendExRequest(AbstractModel):
-    """GetRespTimeTrendEx请求参数结构体
+    """GetRespTimeTrendEx請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 验证成功的拨测任务id
+        :param TaskId: 驗證成功的撥測任務id
         :type TaskId: int
-        :param Date: 统计数据的发生日期。格式如：2017-05-09
+        :param Date: 統計數據的發生日期。格式如：2017-05-09
         :type Date: str
-        :param Period: 数据的采集周期，单位分钟。取值可为 1, 5, 15, 30
+        :param Period: 數據的采集週期，單位分鍾。取值可爲 1, 5, 15, 30
         :type Period: int
-        :param Dimensions: 可为 Isp, Province
+        :param Dimensions: 可爲 Isp, Province
         :type Dimensions: :class:`tencentcloud.cat.v20180409.models.DimensionsDetail`
-        :param MetricName: 可为  totalTime, parseTime, connectTime, sendTime, waitTime, receiveTime, availRatio。缺省值为 totalTime
+        :param MetricName: 可爲  totalTime, parseTime, connectTime, sendTime, waitTime, receiveTime, availRatio。缺省值爲 totalTime
         :type MetricName: str
         """
         self.TaskId = None
@@ -1649,15 +1649,15 @@ class GetRespTimeTrendExRequest(AbstractModel):
 
 
 class GetRespTimeTrendExResponse(AbstractModel):
-    """GetRespTimeTrendEx返回参数结构体
+    """GetRespTimeTrendEx返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DataPoints: 数据点集合，时延等走势数据
+        :param DataPoints: 數據點集合，延遲等走勢數據
         :type DataPoints: list of DataPointMetric
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DataPoints = None
@@ -1675,13 +1675,13 @@ class GetRespTimeTrendExResponse(AbstractModel):
 
 
 class GetResultSummaryRequest(AbstractModel):
-    """GetResultSummary请求参数结构体
+    """GetResultSummary請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskIds: 任务Id列表
+        :param TaskIds: 任務Id清單
         :type TaskIds: list of int non-negative
         """
         self.TaskIds = None
@@ -1692,17 +1692,17 @@ class GetResultSummaryRequest(AbstractModel):
 
 
 class GetResultSummaryResponse(AbstractModel):
-    """GetResultSummary返回参数结构体
+    """GetResultSummary返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RealData: 实时统计数据
+        :param RealData: 實時統計數據
         :type RealData: list of ResultSummary
-        :param DayData: 按天的统计数据
+        :param DayData: 按天的統計數據
         :type DayData: list of ResultSummary
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RealData = None
@@ -1727,19 +1727,19 @@ class GetResultSummaryResponse(AbstractModel):
 
 
 class GetReturnCodeHistoryRequest(AbstractModel):
-    """GetReturnCodeHistory请求参数结构体
+    """GetReturnCodeHistory請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 正整数。验证成功的拨测任务id
+        :param TaskId: 正整數。驗證成功的撥測任務id
         :type TaskId: int
-        :param BeginTime: 开始时间点。格式如：2017-05-09 10:20:00。注意，BeginTime 和 EndTime 需要在同一天
+        :param BeginTime: 開始時間點。格式如：2017-05-09 10:20:00。注意，BeginTime 和 EndTime 需要在同一天
         :type BeginTime: str
-        :param EndTime: 结束时间点。格式如：2017-05-09 10:25:00。注意，BeginTime 和 EndTime 需要在同一天
+        :param EndTime: 結束時間點。格式如：2017-05-09 10:25:00。注意，BeginTime 和 EndTime 需要在同一天
         :type EndTime: str
-        :param Province: 省份名称的全拼
+        :param Province: 省份名稱的全拼
         :type Province: str
         """
         self.TaskId = None
@@ -1756,21 +1756,21 @@ class GetReturnCodeHistoryRequest(AbstractModel):
 
 
 class GetReturnCodeHistoryResponse(AbstractModel):
-    """GetReturnCodeHistory返回参数结构体
+    """GetReturnCodeHistory返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Details: 拨测失败详情列表
+        :param Details: 撥測失敗詳情清單
         :type Details: list of CatReturnDetail
-        :param Summary: 拨测失败汇总列表
+        :param Summary: 撥測失敗匯總清單
         :type Summary: list of CatReturnSummary
-        :param BeginTime: 开始时间
+        :param BeginTime: 開始時間
         :type BeginTime: str
-        :param EndTime: 截至时间
+        :param EndTime: 截至時間
         :type EndTime: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Details = None
@@ -1799,19 +1799,19 @@ class GetReturnCodeHistoryResponse(AbstractModel):
 
 
 class GetReturnCodeInfoRequest(AbstractModel):
-    """GetReturnCodeInfo请求参数结构体
+    """GetReturnCodeInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 正整数。验证成功的拨测任务id
+        :param TaskId: 正整數。驗證成功的撥測任務id
         :type TaskId: int
-        :param BeginTime: 开始时间点。格式如：2017-05-09 10:20:00，最多拉群两天的数据
+        :param BeginTime: 開始時間點。格式如：2017-05-09 10:20:00，最多拉群兩天的數據
         :type BeginTime: str
-        :param EndTime: 结束时间点。格式如：2017-05-09 10:25:00，最多拉群两天的数据
+        :param EndTime: 結束時間點。格式如：2017-05-09 10:25:00，最多拉群兩天的數據
         :type EndTime: str
-        :param Province: 省份名称的全拼
+        :param Province: 省份名稱的全拼
         :type Province: str
         """
         self.TaskId = None
@@ -1828,21 +1828,21 @@ class GetReturnCodeInfoRequest(AbstractModel):
 
 
 class GetReturnCodeInfoResponse(AbstractModel):
-    """GetReturnCodeInfo返回参数结构体
+    """GetReturnCodeInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Details: 拨测失败详情列表
+        :param Details: 撥測失敗詳情清單
         :type Details: list of CatReturnDetail
-        :param Summary: 拨测失败汇总列表
+        :param Summary: 撥測失敗匯總清單
         :type Summary: list of CatReturnSummary
-        :param BeginTime: 开始时间
+        :param BeginTime: 開始時間
         :type BeginTime: str
-        :param EndTime: 截至时间
+        :param EndTime: 截至時間
         :type EndTime: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Details = None
@@ -1871,21 +1871,21 @@ class GetReturnCodeInfoResponse(AbstractModel):
 
 
 class GetTaskTotalNumberRequest(AbstractModel):
-    """GetTaskTotalNumber请求参数结构体
+    """GetTaskTotalNumber請求參數結構體
 
     """
 
 
 class GetTaskTotalNumberResponse(AbstractModel):
-    """GetTaskTotalNumber返回参数结构体
+    """GetTaskTotalNumber返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 拨测任务总数
+        :param TotalCount: 撥測任務總數
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1898,18 +1898,18 @@ class GetTaskTotalNumberResponse(AbstractModel):
 
 
 class IspDetail(AbstractModel):
-    """运营商可用率
+    """運營商可用率
 
     """
 
     def __init__(self):
         """
-        :param IspName: 运营商名称
+        :param IspName: 運營商名稱
         :type IspName: str
         :param AvailRatio: 可用率
         :type AvailRatio: float
-        :param AvgTime: 平均耗时
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AvgTime: 平均耗時
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AvgTime: float
         """
         self.IspName = None
@@ -1924,19 +1924,19 @@ class IspDetail(AbstractModel):
 
 
 class ModifyAgentGroupRequest(AbstractModel):
-    """ModifyAgentGroup请求参数结构体
+    """ModifyAgentGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 拨测分组ID
+        :param GroupId: 撥測分組ID
         :type GroupId: int
-        :param GroupName: 拨测分组名称
+        :param GroupName: 撥測分組名稱
         :type GroupName: str
-        :param IsDefault: 是否为默认分组。取值可为0，1。取 1 时表示设置为默认分组
+        :param IsDefault: 是否爲預設分組。取值可爲0，1。取 1 時表示設置爲預設分組
         :type IsDefault: int
-        :param Agents: Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgents 的返回结果。
+        :param Agents: Province, Isp 需要成對地進行選擇。參數對的取值範圍。參見：DescribeAgents 的返回結果。
         :type Agents: list of CatAgent
         """
         self.GroupId = None
@@ -1958,13 +1958,13 @@ class ModifyAgentGroupRequest(AbstractModel):
 
 
 class ModifyAgentGroupResponse(AbstractModel):
-    """ModifyAgentGroup返回参数结构体
+    """ModifyAgentGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1975,7 +1975,7 @@ class ModifyAgentGroupResponse(AbstractModel):
 
 
 class ModifyTaskExRequest(AbstractModel):
-    """ModifyTaskEx请求参数结构体
+    """ModifyTaskEx請求參數結構體
 
     """
 
@@ -1983,59 +1983,59 @@ class ModifyTaskExRequest(AbstractModel):
         """
         :param CatTypeName: http, https, ping, tcp, ftp, smtp, udp, dns 之一
         :type CatTypeName: str
-        :param Url: 拨测的URL，例如：www.qq.com (URL域名解析需要能解析出具体的IP)
+        :param Url: 撥測的URL，例如：www.qq.com (URL域名解析需要能解析出具體的IP)
         :type Url: str
-        :param Period: 拨测周期。取值可为1,5,15,30之一, 单位：分钟。精度不能低于用户等级规定的最小精度
+        :param Period: 撥測週期。取值可爲1,5,15,30之一, 單位：分鍾。精度不能低于用戶等級規定的最小精度
         :type Period: int
-        :param TaskName: 拨测任务名称不能超过32个字符。同一个用户创建的任务名不可重复
+        :param TaskName: 撥測任務名稱不能超過32個字元。同一個用戶創建的任務名不可重複
         :type TaskName: str
-        :param TaskId: 验证成功的拨测任务ID
+        :param TaskId: 驗證成功的撥測任務ID
         :type TaskId: int
-        :param AgentGroupId: 拨测分组ID，体现本拨测任务要采用哪些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的GroupId的值。注意，Type为0时，AgentGroupId为必填
+        :param AgentGroupId: 撥測分組ID，體現本撥測任務要采用哪些運營商作爲撥測源。一般可直接填寫本用戶的預設撥測分組。參見：DescribeAgentGroupList 介面，本參數使用返回結果裏的GroupId的值。注意，Type爲0時，AgentGroupId爲必填
         :type AgentGroupId: int
         :param Host: 指定域名(如需要)
         :type Host: str
-        :param Port: 拨测目标的端口号
+        :param Port: 撥測目标的端口号
         :type Port: int
-        :param IsHeader: 是否为Header请求（非0 发起Header 请求。为0，且PostData非空，发起POST请求。为0，PostData为空，发起GET请求）
+        :param IsHeader: 是否爲Header請求（非0 發起Header 請求。爲0，且PostData非空，發起POST請求。爲0，PostData爲空，發起GET請求）
         :type IsHeader: int
-        :param SslVer: URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+        :param SslVer: URL中含有"https"時有用。缺省爲SSLv23。需要爲 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
         :type SslVer: str
-        :param PostData: POST 请求数据，空字符串表示非POST请求
+        :param PostData: POST 請求數據，空字串表示非POST請求
         :type PostData: str
-        :param UserAgent: 用户Agent信息
+        :param UserAgent: 用戶Agent訊息
         :type UserAgent: str
-        :param CheckStr: 要在结果中进行匹配的字符串
+        :param CheckStr: 要在結果中進行比對的字串
         :type CheckStr: str
-        :param CheckType: 1 表示通过检查结果是否包含CheckStr 进行校验
+        :param CheckType: 1 表示通過檢查結果是否包含CheckStr 進行校驗
         :type CheckType: int
-        :param Cookie: 需要设置的Cookie信息
+        :param Cookie: 需要設置的Cookie訊息
         :type Cookie: str
-        :param UserName: 登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测
+        :param UserName: 登入服務器的賬号。如果爲空字串，表示不用校驗用戶密碼。只做簡單連接服務器的撥測
         :type UserName: str
-        :param PassWord: 登录服务器的密码
+        :param PassWord: 登入服務器的密碼
         :type PassWord: str
-        :param ReqDataType: 缺省为0，0 表示请求为字符串类型, 1表示为二进制类型
+        :param ReqDataType: 缺省爲0，0 表示請求爲字串類型, 1表示爲二進制類型
         :type ReqDataType: int
-        :param ReqData: 发起TCP, UDP请求的协议请求数据
+        :param ReqData: 發起TCP, UDP請求的協議請求數據
         :type ReqData: str
-        :param RespDataType: 缺省为0。0 表示请求为字符串类型。1表示为二进制类型
+        :param RespDataType: 缺省爲0。0 表示請求爲字串類型。1表示爲二進制類型
         :type RespDataType: str
-        :param RespData: 预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
+        :param RespData: 預期的UDP請求的回應數據。字串型，只需要返回的結果裏包含本字串算校驗通過。二進制型，則需要嚴格等于才算通過
         :type RespData: str
-        :param DnsSvr: 目的DNS服务器，可以为空字符串
+        :param DnsSvr: 目的DNS服務器，可以爲空字串
         :type DnsSvr: str
-        :param DnsCheckIp: 需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验
+        :param DnsCheckIp: 需要檢驗是否在DNS IP清單的IP。可以爲空字串，表示不校驗
         :type DnsCheckIp: str
-        :param DnsQueryType: 需要为下列值之一。缺省为A。A, MX, NS, CNAME, TXT, ANY
+        :param DnsQueryType: 需要爲下列值之一。缺省爲A。A, MX, NS, CNAME, TXT, ANY
         :type DnsQueryType: str
-        :param UseSecConn: 是否使用安全链接SSL， 0 不使用，1 使用
+        :param UseSecConn: 是否使用安全連結SSL， 0 不使用，1 使用
         :type UseSecConn: int
-        :param NeedAuth: FTP登录验证方式，  0 不验证  1 匿名登录  2 需要身份验证
+        :param NeedAuth: FTP登入驗證方式，  0 不驗證  1 匿名登入  2 需要身份驗證
         :type NeedAuth: int
-        :param Type: Type=0 默认 （站点监控） Type=2 可用率监控
+        :param Type: Type=0 預設 （站點監控） Type=2 可用率監控
         :type Type: int
-        :param RedirectFollowNum: 跟随跳转次数，取值范围0-5，不传则表示不跟随
+        :param RedirectFollowNum: 跟随跳轉次數，取值範圍0-5，不傳則表示不跟随
         :type RedirectFollowNum: int
         """
         self.CatTypeName = None
@@ -2100,15 +2100,15 @@ class ModifyTaskExRequest(AbstractModel):
 
 
 class ModifyTaskExResponse(AbstractModel):
-    """ModifyTaskEx返回参数结构体
+    """ModifyTaskEx返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
+        :param TaskId: 撥測任務ID。驗證通過後，創建任務時使用，傳遞給CreateTask 介面。
         :type TaskId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -2121,13 +2121,13 @@ class ModifyTaskExResponse(AbstractModel):
 
 
 class PauseTaskRequest(AbstractModel):
-    """PauseTask请求参数结构体
+    """PauseTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 拨测任务id
+        :param TaskId: 撥測任務id
         :type TaskId: int
         """
         self.TaskId = None
@@ -2138,13 +2138,13 @@ class PauseTaskRequest(AbstractModel):
 
 
 class PauseTaskResponse(AbstractModel):
-    """PauseTask返回参数结构体
+    """PauseTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2163,15 +2163,15 @@ class ProvinceDetail(AbstractModel):
         """
         :param AvgAvailRatio: 可用率
         :type AvgAvailRatio: float
-        :param ProvinceName: 省份名称
+        :param ProvinceName: 省份名稱
         :type ProvinceName: str
-        :param Mapkey: 省份英文名称
+        :param Mapkey: 省份英文名稱
         :type Mapkey: str
-        :param TimeStamp: 统计时间点
+        :param TimeStamp: 統計時間點
         :type TimeStamp: str
-        :param IspDetail: 分运营商可用率
+        :param IspDetail: 分運營商可用率
         :type IspDetail: list of IspDetail
-        :param AvgTime: 平均耗时，单位毫秒
+        :param AvgTime: 平均耗時，單位毫秒
         :type AvgTime: float
         :param Province: 省份
         :type Province: str
@@ -2201,19 +2201,19 @@ class ProvinceDetail(AbstractModel):
 
 
 class ResultSummary(AbstractModel):
-    """实时统计数据
+    """實時統計數據
 
     """
 
     def __init__(self):
         """
-        :param LogTime: 统计时间
+        :param LogTime: 統計時間
         :type LogTime: str
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: int
-        :param AvailRatio: 实时可用率
+        :param AvailRatio: 實時可用率
         :type AvailRatio: float
-        :param ReponseTime: 实时响应时间
+        :param ReponseTime: 實時響應時間
         :type ReponseTime: float
         """
         self.LogTime = None
@@ -2230,13 +2230,13 @@ class ResultSummary(AbstractModel):
 
 
 class RunTaskRequest(AbstractModel):
-    """RunTask请求参数结构体
+    """RunTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务Id
+        :param TaskId: 任務Id
         :type TaskId: int
         """
         self.TaskId = None
@@ -2247,13 +2247,13 @@ class RunTaskRequest(AbstractModel):
 
 
 class RunTaskResponse(AbstractModel):
-    """RunTask返回参数结构体
+    """RunTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2264,31 +2264,31 @@ class RunTaskResponse(AbstractModel):
 
 
 class TaskAlarm(AbstractModel):
-    """可用性监控任务状态及告警信息
+    """可用性監控任務狀态及告警訊息
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务ID
+        :param TaskId: 任務ID
         :type TaskId: int
-        :param TaskName: 任务名称
+        :param TaskName: 任務名稱
         :type TaskName: str
-        :param Period: 任务周期，单位为分钟。目前支持1，5，15，30几种取值
+        :param Period: 任務週期，單位爲分鍾。目前支援1，5，15，30幾種取值
         :type Period: int
-        :param CatTypeName: 拨测类型。http, https, ping, tcp, udp, smtp, pop3, dns 之一
+        :param CatTypeName: 撥測類型。http, https, ping, tcp, udp, smtp, pop3, dns 之一
         :type CatTypeName: str
-        :param Status: 任务状态。1表示暂停，2表示运行中，0为初始态
+        :param Status: 任務狀态。1表示暫停，2表示運作中，0爲初始态
         :type Status: int
-        :param CgiUrl: 拨测任务的URL
+        :param CgiUrl: 撥測任務的URL
         :type CgiUrl: str
-        :param AddTime: 任务创建时间
+        :param AddTime: 任務創建時間
         :type AddTime: str
-        :param AlarmStatus: 告警状态。1 故障，0 正常
+        :param AlarmStatus: 告警狀态。1 故障，0 正常
         :type AlarmStatus: int
-        :param StatusInfo: 告警状态描述，统计信息
+        :param StatusInfo: 告警狀态描述，統計訊息
         :type StatusInfo: str
-        :param UpdateTime: 任务更新时间
+        :param UpdateTime: 任務更新時間
         :type UpdateTime: str
         """
         self.TaskId = None
@@ -2317,13 +2317,13 @@ class TaskAlarm(AbstractModel):
 
 
 class VerifyResultRequest(AbstractModel):
-    """VerifyResult请求参数结构体
+    """VerifyResult請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResultId: 要查询的拨测任务的结果id
+        :param ResultId: 要查詢的撥測任務的結果id
         :type ResultId: int
         """
         self.ResultId = None
@@ -2334,17 +2334,17 @@ class VerifyResultRequest(AbstractModel):
 
 
 class VerifyResultResponse(AbstractModel):
-    """VerifyResult返回参数结构体
+    """VerifyResult返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ErrorReason: 错误的原因
+        :param ErrorReason: 錯誤的原因
         :type ErrorReason: str
-        :param ResultCode: 错误号
+        :param ResultCode: 錯誤号
         :type ResultCode: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ErrorReason = None

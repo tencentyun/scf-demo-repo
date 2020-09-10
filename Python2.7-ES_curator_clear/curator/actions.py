@@ -2168,4 +2168,3 @@ class Shrink(object):
             # Just in case it fails after attempting to meet this condition
             self._unblock_writes(idx)
             utils.report_failure(e)
-

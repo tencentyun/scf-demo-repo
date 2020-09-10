@@ -8,4 +8,3 @@ class RemoteClient(NamespacedClient):
         """
         return self.transport.perform_request('GET', '/_remote/info',
             params=params)
-

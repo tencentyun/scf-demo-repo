@@ -14,10 +14,10 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
-# The reverse push link for API gateway. API网关的反向推送链接
+# The reverse push link for API gateway. API閘道的反向推送連結
 sendbackHost = "*******"
 # MySql database account information, you need to create a database and form in advance, the new two columns in the form: `ConnectionID`, `Date` 
-# MySql数据库账号信息,需要提前创建好数据库和表单,表单中新建2列：`ConnectionID`, `Date`
+# MySql資料庫賬号訊息,需要提前創建好資料庫和表單,表單中新建2列：`ConnectionID`, `Date`
 Host = '******'
 User = '****'
 Password = '****'
@@ -25,7 +25,7 @@ Port = 63054
 DB = u'SCF_Demo'
 Table = u'ConnectionID_List'
 
-# Changing the time zone to Beijing. 更改时区为北京时区
+# Changing the time zone to Beijing. 更改時區爲北京時區
 tz = pytz.timezone('Asia/Shanghai')
 
 def Get_ConnectionID_List():
@@ -41,7 +41,7 @@ def Get_ConnectionID_List():
         with connection.cursor() as cursor:
             sql = "use %s" % DB
             cursor.execute(sql)
-            # Getting the current number of IDs. 获取当前已有的ID数
+            # Getting the current number of IDs. 獲取當前已有的ID數
             sql = "select count(*) from %s" % Table
             cursor.execute(sql)
             result_count = cursor.fetchall()
@@ -80,7 +80,7 @@ def main_handler(event, context):
     # for k in event['websocket'].keys():
     #     print(k+":"+event['websocket'][k])
 
-    # Sending message to client. 发送消息给客户端
+    # Sending message to client. 發送訊息給用戶端
     connectionID_List=[]
     print("Start DB Request{%s}" % datetime.datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S    "))
     connectionID_List = Get_ConnectionID_List()

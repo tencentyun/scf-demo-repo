@@ -26,8 +26,8 @@ class DrmClient(AbstractClient):
 
 
     def AddFairPlayPem(self, request):
-        """本接口用来设置fairplay方案所需的私钥、私钥密钥、ask等信息。
-        如需使用fairplay方案，请务必先设置私钥。
+        """本介面用來設置fairplay方案所需的私鑰、私鑰金鑰、ask等訊息。
+        如需使用fairplay方案，請務必先設置私鑰。
 
         :param request: Request instance for AddFairPlayPem.
         :type request: :class:`tencentcloud.drm.v20181115.models.AddFairPlayPemRequest`
@@ -55,7 +55,7 @@ class DrmClient(AbstractClient):
 
 
     def CreateEncryptKeys(self, request):
-        """该接口用来设置加密的密钥。注意，同一个content id，只能设置一次！
+        """該介面用來設置加密的金鑰。注意，同一個content id，只能設置一次！
 
         :param request: Request instance for CreateEncryptKeys.
         :type request: :class:`tencentcloud.drm.v20181115.models.CreateEncryptKeysRequest`
@@ -83,8 +83,8 @@ class DrmClient(AbstractClient):
 
 
     def CreateLicense(self, request):
-        """本接口用来生成DRM方案对应的播放许可证，开发者需提供DRM方案类型、内容类型参数，后台将生成许可证后返回许可证数据
-        开发者需要转发终端设备发出的许可证请求信息。
+        """本介面用來生成DRM方案對應的播放許可證，開發者需提供DRM方案類型、内容類型參數，後台将生成許可證後返回許可證數據
+        開發者需要轉發終端設備發出的許可證請求訊息。
 
         :param request: Request instance for CreateLicense.
         :type request: :class:`tencentcloud.drm.v20181115.models.CreateLicenseRequest`
@@ -112,9 +112,9 @@ class DrmClient(AbstractClient):
 
 
     def DeleteFairPlayPem(self, request):
-        """本接口用来删除fairplay方案的私钥、ask等信息
-        注：高风险操作，删除后，您将无法使用腾讯云DRM提供的fairplay服务。
-        由于缓存，删除操作需要约半小时生效
+        """本介面用來删除fairplay方案的私鑰、ask等訊息
+        注：高風險操作，删除後，您将無法使用Top Cloud DRM提供的fairplay服務。
+        由于快取，删除操作需要約半小時生效
 
         :param request: Request instance for DeleteFairPlayPem.
         :type request: :class:`tencentcloud.drm.v20181115.models.DeleteFairPlayPemRequest`
@@ -142,7 +142,7 @@ class DrmClient(AbstractClient):
 
 
     def DescribeAllKeys(self, request):
-        """本接口用来查询指定DRM类型、ContentType的所有加密密钥
+        """本介面用來查詢指定DRM類型、ContentType的所有加密金鑰
 
         :param request: Request instance for DescribeAllKeys.
         :type request: :class:`tencentcloud.drm.v20181115.models.DescribeAllKeysRequest`
@@ -170,7 +170,7 @@ class DrmClient(AbstractClient):
 
 
     def DescribeFairPlayPem(self, request):
-        """该接口用来查询设置的FairPlay私钥校验信息。可用该接口校验设置的私钥与本身的私钥是否一致。
+        """該介面用來查詢設置的FairPlay私鑰校驗訊息。可用該介面校驗設置的私鑰與本身的私鑰是否一緻。
 
         :param request: Request instance for DescribeFairPlayPem.
         :type request: :class:`tencentcloud.drm.v20181115.models.DescribeFairPlayPemRequest`
@@ -198,8 +198,8 @@ class DrmClient(AbstractClient):
 
 
     def DescribeKeys(self, request):
-        """开发者需要指定使用的DRM类型、和需要加密的Track类型，后台返回加密使用的密钥
-        如果加密使用的ContentID没有关联的密钥信息，后台会自动生成新的密钥返回
+        """開發者需要指定使用的DRM類型、和需要加密的Track類型，後台返回加密使用的金鑰
+        如果加密使用的ContentID沒有關聯的金鑰訊息，後台會自動生成新的金鑰返回
 
         :param request: Request instance for DescribeKeys.
         :type request: :class:`tencentcloud.drm.v20181115.models.DescribeKeysRequest`
@@ -227,8 +227,8 @@ class DrmClient(AbstractClient):
 
 
     def ModifyFairPlayPem(self, request):
-        """本接口用来设置fairplay方案所需的私钥、私钥密钥、ask等信息。
-        如需使用fairplay方案，请务必先设置私钥。
+        """本介面用來設置fairplay方案所需的私鑰、私鑰金鑰、ask等訊息。
+        如需使用fairplay方案，請務必先設置私鑰。
 
         :param request: Request instance for ModifyFairPlayPem.
         :type request: :class:`tencentcloud.drm.v20181115.models.ModifyFairPlayPemRequest`
@@ -256,7 +256,7 @@ class DrmClient(AbstractClient):
 
 
     def StartEncryption(self, request):
-        """开发者调用该接口，启动一次内容文件的DRM加密工作流
+        """開發者調用該介面，啓動一次内容文件的DRM加密工作流
 
         :param request: Request instance for StartEncryption.
         :type request: :class:`tencentcloud.drm.v20181115.models.StartEncryptionRequest`

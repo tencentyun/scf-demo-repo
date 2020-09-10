@@ -26,7 +26,7 @@ class DomainClient(AbstractClient):
 
 
     def CheckDomain(self, request):
-        """检查域名是否可以注册
+        """檢查域名是否可以注冊
 
         :param request: Request instance for CheckDomain.
         :type request: :class:`tencentcloud.domain.v20180808.models.CheckDomainRequest`
@@ -54,7 +54,7 @@ class DomainClient(AbstractClient):
 
 
     def DescribeDomainPriceList(self, request):
-        """按照域名后缀获取对应的价格列表
+        """按照域名後綴獲取對應的價格清單
 
         :param request: Request instance for DescribeDomainPriceList.
         :type request: :class:`tencentcloud.domain.v20180808.models.DescribeDomainPriceListRequest`

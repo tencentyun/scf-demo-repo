@@ -17,39 +17,39 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CreateSessionRequest(AbstractModel):
-    """CreateSession请求参数结构体
+    """CreateSession請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ClientSession: 客户端session信息，从JSSDK请求中获得
+        :param ClientSession: 用戶端session訊息，從JSSDK請求中獲得
         :type ClientSession: str
-        :param UserId: 游戏用户ID
+        :param UserId: 遊戲用戶ID
         :type UserId: str
-        :param GameId: 游戏ID
+        :param GameId: 遊戲ID
         :type GameId: str
-        :param GameRegion: 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
+        :param GameRegion: 遊戲區域，ap-guangzhou、ap-shanghai、ap-beijing等
         :type GameRegion: str
-        :param GameParas: 游戏参数
+        :param GameParas: 遊戲參數
         :type GameParas: str
-        :param Resolution: 分辨率,，可设置为1080p或720p
+        :param Resolution: 分辨率,，可設置爲1080p或720p
         :type Resolution: str
-        :param ImageUrl: 背景图url，格式为png或jpeg，宽高1920*1080
+        :param ImageUrl: 背景圖url，格式爲png或jpeg，寬高1920*1080
         :type ImageUrl: str
-        :param SetNo: 资源池编号，1表示正式，2表示测试
+        :param SetNo: 資源池編号，1表示正式，2表示測試
         :type SetNo: int
-        :param Bitrate: 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
+        :param Bitrate: 單位Mbps，固定碼率，後端不動态調整(MaxBitrate和MinBitrate将無效)
         :type Bitrate: int
-        :param MaxBitrate: 单位Mbps，动态调整最大码率
+        :param MaxBitrate: 單位Mbps，動态調整最大碼率
         :type MaxBitrate: int
-        :param MinBitrate: 单位Mbps，动态调整最小码率
+        :param MinBitrate: 單位Mbps，動态調整最小碼率
         :type MinBitrate: int
-        :param Fps: 帧率，可设置为30、45或60
+        :param Fps: 幀率，可設置爲30、45或60
         :type Fps: int
-        :param UserIp: 游戏用户IP，用于就近调度，例如125.127.178.228
+        :param UserIp: 遊戲用戶IP，用于就近調度，例如125.127.178.228
         :type UserIp: str
-        :param Optimization: 优化项，便于客户灰度开启新的优化项，默认为0
+        :param Optimization: 優化項，便于客戶灰度開啓新的優化項，預設爲0
         :type Optimization: int
         """
         self.ClientSession = None
@@ -86,15 +86,15 @@ class CreateSessionRequest(AbstractModel):
 
 
 class CreateSessionResponse(AbstractModel):
-    """CreateSession返回参数结构体
+    """CreateSession返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ServerSession: 服务端session信息，返回给JSSDK
+        :param ServerSession: 服務端session訊息，返回給JSSDK
         :type ServerSession: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ServerSession = None
@@ -107,23 +107,23 @@ class CreateSessionResponse(AbstractModel):
 
 
 class DescribeWorkersInfoRequest(AbstractModel):
-    """DescribeWorkersInfo请求参数结构体
+    """DescribeWorkersInfo請求參數結構體
 
     """
 
 
 class DescribeWorkersInfoResponse(AbstractModel):
-    """DescribeWorkersInfo返回参数结构体
+    """DescribeWorkersInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param WorkerNum: 机器数量
+        :param WorkerNum: 機器數量
         :type WorkerNum: int
-        :param WorkerDetail: 机器详细信息
+        :param WorkerDetail: 機器詳細訊息
         :type WorkerDetail: list of WorkerDetail
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.WorkerNum = None
@@ -143,13 +143,13 @@ class DescribeWorkersInfoResponse(AbstractModel):
 
 
 class DescribeWorkersRequest(AbstractModel):
-    """DescribeWorkers请求参数结构体
+    """DescribeWorkers請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SetNo: 资源池编号，1表示正式，2表示测试
+        :param SetNo: 資源池編号，1表示正式，2表示測試
         :type SetNo: int
         """
         self.SetNo = None
@@ -160,19 +160,19 @@ class DescribeWorkersRequest(AbstractModel):
 
 
 class DescribeWorkersResponse(AbstractModel):
-    """DescribeWorkers返回参数结构体
+    """DescribeWorkers返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Idle: 空闲机器总数量
+        :param Idle: 空閑機器總數量
         :type Idle: int
-        :param RegionNum: 区域个数
+        :param RegionNum: 區域個數
         :type RegionNum: int
-        :param RegionDetail: 各个区域的机器情况
+        :param RegionDetail: 各個區域的機器情況
         :type RegionDetail: list of WorkerRegionInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Idle = None
@@ -194,19 +194,19 @@ class DescribeWorkersResponse(AbstractModel):
 
 
 class EnterQueueRequest(AbstractModel):
-    """EnterQueue请求参数结构体
+    """EnterQueue請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param First: true：第一次请求排队 false：已在排队中，查询当前排名
+        :param First: true：第一次請求排隊 false：已在排隊中，查詢當前排名
         :type First: bool
-        :param GameId: 游戏ID
+        :param GameId: 遊戲ID
         :type GameId: str
-        :param UserId: 用户ID
+        :param UserId: 用戶ID
         :type UserId: str
-        :param SetNumber: 资源池编号
+        :param SetNumber: 資源池編号
         :type SetNumber: int
         """
         self.First = None
@@ -223,7 +223,7 @@ class EnterQueueRequest(AbstractModel):
 
 
 class EnterQueueResponse(AbstractModel):
-    """EnterQueue返回参数结构体
+    """EnterQueue返回參數結構體
 
     """
 
@@ -231,9 +231,9 @@ class EnterQueueResponse(AbstractModel):
         """
         :param Rank: 排名
         :type Rank: int
-        :param LockSuccess: 机器锁定成功
+        :param LockSuccess: 機器鎖定成功
         :type LockSuccess: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Rank = None
@@ -248,15 +248,15 @@ class EnterQueueResponse(AbstractModel):
 
 
 class ModifyWorkersRequest(AbstractModel):
-    """ModifyWorkers请求参数结构体
+    """ModifyWorkers請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 批量机器ID，最多不超过100个
+        :param InstanceIds: 批次機器ID，最多不超過100個
         :type InstanceIds: list of str
-        :param SetNo: 资源池编号，修改有效范围为[1,100]，在idle状态下才能修改成功
+        :param SetNo: 資源池編号，修改有效範圍爲[1,100]，在idle狀态下才能修改成功
         :type SetNo: int
         """
         self.InstanceIds = None
@@ -269,13 +269,13 @@ class ModifyWorkersRequest(AbstractModel):
 
 
 class ModifyWorkersResponse(AbstractModel):
-    """ModifyWorkers返回参数结构体
+    """ModifyWorkers返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -286,15 +286,15 @@ class ModifyWorkersResponse(AbstractModel):
 
 
 class QuitQueueRequest(AbstractModel):
-    """QuitQueue请求参数结构体
+    """QuitQueue請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param UserId: 用户ID
+        :param UserId: 用戶ID
         :type UserId: str
-        :param SetNumber: 资源池编号
+        :param SetNumber: 資源池編号
         :type SetNumber: int
         """
         self.UserId = None
@@ -307,13 +307,13 @@ class QuitQueueRequest(AbstractModel):
 
 
 class QuitQueueResponse(AbstractModel):
-    """QuitQueue返回参数结构体
+    """QuitQueue返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -324,13 +324,13 @@ class QuitQueueResponse(AbstractModel):
 
 
 class StopGameRequest(AbstractModel):
-    """StopGame请求参数结构体
+    """StopGame請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param UserId: 游戏用户ID
+        :param UserId: 遊戲用戶ID
         :type UserId: str
         """
         self.UserId = None
@@ -341,13 +341,13 @@ class StopGameRequest(AbstractModel):
 
 
 class StopGameResponse(AbstractModel):
-    """StopGame返回参数结构体
+    """StopGame返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -358,21 +358,21 @@ class StopGameResponse(AbstractModel):
 
 
 class TrylockWorkerRequest(AbstractModel):
-    """TrylockWorker请求参数结构体
+    """TrylockWorker請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param UserId: 游戏用户ID
+        :param UserId: 遊戲用戶ID
         :type UserId: str
-        :param GameId: 游戏ID
+        :param GameId: 遊戲ID
         :type GameId: str
-        :param GameRegion: 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
+        :param GameRegion: 遊戲區域，ap-guangzhou、ap-shanghai、ap-beijing等
         :type GameRegion: str
-        :param SetNo: 资源池编号，1表示共用，2表示测试
+        :param SetNo: 資源池編号，1表示共用，2表示測試
         :type SetNo: int
-        :param UserIp: 游戏用户IP，用于就近调度，例如125.127.178.228
+        :param UserIp: 遊戲用戶IP，用于就近調度，例如125.127.178.228
         :type UserIp: str
         """
         self.UserId = None
@@ -391,13 +391,13 @@ class TrylockWorkerRequest(AbstractModel):
 
 
 class TrylockWorkerResponse(AbstractModel):
-    """TrylockWorker返回参数结构体
+    """TrylockWorker返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -408,41 +408,41 @@ class TrylockWorkerResponse(AbstractModel):
 
 
 class WorkerDetail(AbstractModel):
-    """机器详细信息
+    """機器詳細訊息
 
     """
 
     def __init__(self):
         """
-        :param AppId: 客户appid
+        :param AppId: 客戶appid
         :type AppId: int
-        :param SetNo: 资源池编号
+        :param SetNo: 資源池編号
         :type SetNo: int
-        :param Region: 机器所属区域
+        :param Region: 機器所屬區域
         :type Region: str
-        :param InstanceId: 机器ID
+        :param InstanceId: 機器ID
         :type InstanceId: str
-        :param InstanceType: 机器类型：
+        :param InstanceType: 機器類型：
 LARGE-大型
 MEDIUM-中型
 SMALL-小型
         :type InstanceType: str
-        :param Ip: 机器IP
+        :param Ip: 機器IP
         :type Ip: str
-        :param ServiceState: 服务状态：
-IDLE-空闲
-LOCK-锁定
-ESTABLISHED-游戏中
-RECONNECT-等待重连
-RECOVERY-清理恢复
+        :param ServiceState: 服務狀态：
+IDLE-空閑
+LOCK-鎖定
+ESTABLISHED-遊戲中
+RECONNECT-等待重連
+RECOVERY-清理恢複
 FORBID-禁用
 UNAVAILABLE-不可用
         :type ServiceState: str
-        :param UserId: 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UserId: 用戶ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UserId: str
-        :param GameId: 游戏ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GameId: 遊戲ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GameId: str
         """
         self.AppId = None
@@ -469,15 +469,15 @@ UNAVAILABLE-不可用
 
 
 class WorkerRegionInfo(AbstractModel):
-    """worker的区域信息
+    """worker的區域訊息
 
     """
 
     def __init__(self):
         """
-        :param Region: 区域
+        :param Region: 區域
         :type Region: str
-        :param Idle: 该区域空闲机器数量
+        :param Idle: 該區域空閑機器數量
         :type Idle: int
         """
         self.Region = None

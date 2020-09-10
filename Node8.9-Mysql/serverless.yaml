@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: Operate_Mysql
   src: ./
-  description: 本示例通过mysql Node客户端，操作云Mysql
+  description: 本範例通過mysql Node用戶端，操作雲Mysql
   handler: index.main_handler
   runtime: Nodejs8.9
   namespace: default

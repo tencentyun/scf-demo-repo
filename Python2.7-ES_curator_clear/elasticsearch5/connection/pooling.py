@@ -30,4 +30,3 @@ class PoolingConnection(Connection):
         Explicitly close connection
         """
         pass
-

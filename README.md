@@ -1,57 +1,57 @@
 # scf-demo-repo
 
-SCF 云函数 Demo 代码库
+SCF 雲函數 Demo 代碼庫
 
-# Demo说明
+# Demo說明
 
-## 文件组织结构
+## 文件組織結構
 
 golang
 
 ```
-|-- Go1-helloworld     文件夹名称，也作为demo名称，最好和serverless-cloud-function-application::application::name一致。
-|   |-- config.json    配置文件可以为config.json或者config.yaml 必选
-|   |-- main           对应的入口文件 必选
-|   |-- readme.md      readme 非必选
-|   `-- license.txt    license文件 非必选
+|-- Go1-helloworld     文件夾名稱，也作爲demo名稱，最好和serverless-cloud-function-application::application::name一緻。
+|   |-- config.json    配置文件可以爲config.json或者config.yaml 必選
+|   |-- main           對應的入口文件 必選
+|   |-- readme.md      readme 非必選
+|   `-- license.txt    license文件 非必選
 ```
 
 python
 
 
 ```
-|-- apigw-py2          文件夹名称，也作为demo名称，最好和serverless-cloud-function-application::application::name一致。
-|   |-- config.json    配置文件可以为config.json或者config.yaml 必选
-|   |-- index.py       对应的入口文件 必选
-|   |-- readme.md      readme 非必选
-|   `-- license.txt    license文件 非必选
+|-- apigw-py2          文件夾名稱，也作爲demo名稱，最好和serverless-cloud-function-application::application::name一緻。
+|   |-- config.json    配置文件可以爲config.json或者config.yaml 必選
+|   |-- index.py       對應的入口文件 必選
+|   |-- readme.md      readme 非必選
+|   `-- license.txt    license文件 非必選
 ```
 
 
-注：对于java语言来说入口文件是jar包，对于golang语言来说入口文件必须是可执行文件。
+注：對于java語言來說入口文件是jar包，對于golang語言來說入口文件必須是可執行文件。
 
-## 配置文件说明
+## 配置文件說明
 
 ```sh
 {
     "serverless-cloud-function-application": {
         "application": {
-            "Chinese"{  # "Chinese"对应中文版本
-        "name": "API网关触发器基础应用",
-    # 应用名称,Chinese对应中文，如果是java demo的话，必须和jar文件的名称一致，其他语言不做限制。前台需要展示，请认真填写，名称要具有一定的意义，不支持中文，名称里统一剥离掉runtime
-        "description": "此示例使用 API 网关作为触发器，实现 http 接口，并返回 html 格式页面。",
-    # 应用描述，主要是介绍该应用的用途、用法、涉及到的关键技术等，用户可以通过该关键字搜索。前台需要展示，请认真填写，支持中文。
-        "attention": "该云函数使用了API网关触发器，并使用了集成响应功能，返回值需要构造为Json格式" ,   #demo使用的注意事项，在模板详情里展示
-        "readme": {  # readme 说明，非必选，file 或 content 二选一即可
+            "Chinese"{  # "Chinese"對應中文版本
+        "name": "API閘道觸發器基礎應用",
+    # 應用名稱,Chinese對應中文，如果是java demo的話，必須和jar文件的名稱一緻，其他語言不做限制。前台需要展示，請認真填寫，名稱要具有一定的意義，不支援中文，名稱裏統一剝離掉runtime
+        "description": "此範例使用 API 閘道作爲觸發器，實現 http 介面，并返回 html 格式頁面。",
+    # 應用描述，主要是介紹該應用的用途、用法、涉及到的關鍵技術等，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，支援中文。
+        "attention": "該雲函數使用了API閘道觸發器，并使用了內建響應功能，返回值需要構造爲Json格式" ,   #demo使用的注意事項，在範本詳情裏展示
+        "readme": {  # readme 說明，非必選，file 或 content 二選一即可
             "file": "readme.md",  # readme文件内容
-            "content": "此示例使用 API 网关作为触发器，实现 http 接口"  # readme内容
+            "content": "此範例使用 API 閘道作爲觸發器，實現 http 介面"  # readme内容
         },
-        "license": {  # license 说明，非必选，file 或 content 二选一即可
+        "license": {  # license 說明，非必選，file 或 content 二選一即可
             "file": "license.txt",  # license文件内容
-            "content": "公开"  # license内容
+            "content": "公開"  # license内容
         },
         "author": {
-            "name": "腾讯云无服务器云函数团队"  # 作者
+            "name": "Top Cloud 無服務器雲函數團隊"  # 作者
         },
     },
     "English"{   # "English" is for English version
@@ -82,32 +82,32 @@ python
             "body": "<html><body><h1>Heading</h1><p>Paragraph.</p></body></html>"
         }
     },
-    "download_address":"demo的git下载链接",  #demo的git下载链接
+    "download_address":"demo的git下載連結",  #demo的git下載連結
     "tags":[
-            "apigw", "Python2.7", "api"  # 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
+            "apigw", "Python2.7", "api"  # 标簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
     ],
-    "version": "1.0.1",  # 版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
+    "version": "1.0.1",  # 版本号，通過版本号标識 demo 升級情況，未修改版本号會導緻 demo 不更新至頁面
 },
 "functions": {
-    "name": "test-function",  # 函数名称，只支持英文
-    "description": "此示例使用 API 网关作为触发器，实现 http 接口，并返回 html 格式页面。" # 和"application"保持一致，可为英文或中文，前台不展示
+    "name": "test-function",  # 函數名稱，只支援英文
+    "description": "此範例使用 API 閘道作爲觸發器，實現 http 介面，并返回 html 格式頁面。" # 和"application"保持一緻，可爲英文或中文，前台不展示
     "handler":"index.main_hanlder",
-# 函数入口 不支持中文，如果是一段式的话，必须和对应的二进制文件名称一致，第一段不能使用readme、license、config；如果二段式的，第一段必须是对应的入口文件名，第一段不能使用readme、license、config；三段式的话，必须是对应的handler
-    "memorySize": 128,  # 运行配置内存
-    "timeout": 3,  # 运行超时时间
-    "runtime": "Python2.7",# 运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"] 前台需要展示，请认真填写
+# 函數入口 不支援中文，如果是一段式的話，必須和對應的二進制文件名稱一緻，第一段不能使用readme、license、config；如果二段式的，第一段必須是對應的入口文件名，第一段不能使用readme、license、config；三段式的話，必須是對應的handler
+    "memorySize": 128,  # 運作配置内存
+    "timeout": 3,  # 運作超時時間
+    "runtime": "Python2.7",# 運作環境，用戶可以通過該關鍵字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"] 前台需要展示，請認真填寫
     "Environment":{
-            "DB_NAME": "mydb" # 可选，函数环境变量
+            "DB_NAME": "mydb" # 可選，函數環境變量
     },
     "Events":{
-    },      # 可选，用于定义触发此函数的事件源
+    },      # 可選，用于定義觸發此函數的事件源
     "VpcConfig":{
-    },     # 可选， 用于配置云函数访问 VPC 私有网络。
+    },     # 可選， 用于配置雲函數訪問 VPC 私有網絡。
     "codeObject": {
-        "codeFile": [  # 代码文件
+        "codeFile": [  # 代碼文件
             "index.py"
         ]
-        "CodeUri":[     # 代码下载地址，和download_address保持一致
+        "CodeUri":[     # 代碼下載網址，和download_address保持一緻
             ""
         ]
     }
@@ -116,19 +116,19 @@ python
 }
 ```
 
-函数入口 handler 写法：
-* 一段式：golang，预制内容："main"
-* 二段式：python，nodejs，PHP，预制内容："index.main_handler"
-* 三段式：java，预制内容："example.Hello::mainHandler"
+函數入口 handler 寫法：
+* 一段式：golang，預制内容："main"
+* 二段式：python，nodejs，PHP，預制内容："index.main_handler"
+* 三段式：java，預制内容："example.Hello::mainHandler"
 
-# Demo 开发注意事项
+# Demo 開發注意事項
 
-1. 需要注意代码提交时不要带有 SecretID，SecretKey 等信息。
-2. 关键信息可修改为通过环境变量读取，并定义好所需配置的环境变量。
-3. Demo 描述尽量使用中文，简洁扼要的描述 Demo 的实现功能，可适用的场景，使用的方式。
-4. 每个Demo的英文名称必填且唯一,不同开发语言可以一样。
+1. 需要注意代碼提交時不要帶有 SecretID，SecretKey 等訊息。
+2. 關鍵訊息可修改爲通過環境變量讀取，并定義好所需配置的環境變量。
+3. Demo 描述盡量使用中文，簡潔扼要的描述 Demo 的實現功能，可适用的場景，使用的方式。
+4. 每個Demo的英文名稱必填且唯一,不同開發語言可以一樣。
 
 
-## 上传到Demo库
+## 上傳到Demo庫
 
-请参照：https://blog.csdn.net/qq_33429968/article/details/62219783
+請參照：https://blog.csdn.net/qq_33429968/article/details/62219783

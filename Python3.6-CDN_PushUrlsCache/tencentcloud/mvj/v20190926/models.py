@@ -17,23 +17,23 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class Data(AbstractModel):
-    """返回结构
+    """返回結構
 
     """
 
     def __init__(self):
         """
-        :param PostTime: 操作时间戳，单位秒
+        :param PostTime: 操作時間戳，單位秒
         :type PostTime: int
-        :param Uid: 用户ID 
-accountType不同对应不同的用户ID。如果是QQ或微信用户则填入对应的openId
+        :param Uid: 用戶ID 
+accountType不同對應不同的用戶ID。如果是QQ或微信用戶則填入對應的openId
         :type Uid: str
-        :param UserIp: 操作来源的外网IP
+        :param UserIp: 操作來源的外網IP
         :type UserIp: str
-        :param ValueScore: 0~100：营销价值评分，分值越高，价值越大
-[0,50]低价值
-[50,70]价值一般
-[70,100]高价值
+        :param ValueScore: 0~100：營銷價值評分，分值越高，價值越大
+[0,50]低價值
+[50,70]價值一般
+[70,100]高價值
         :type ValueScore: int
         """
         self.PostTime = None
@@ -50,23 +50,23 @@ accountType不同对应不同的用户ID。如果是QQ或微信用户则填入�
 
 
 class MarketingValueJudgementRequest(AbstractModel):
-    """MarketingValueJudgement请求参数结构体
+    """MarketingValueJudgement請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccountType: 手机账号类型填写4
+        :param AccountType: 手機賬号類型填寫4
         :type AccountType: int
-        :param Uid: 填写手机号码，如15317537488
+        :param Uid: 填寫手機号碼，如15317537488
         :type Uid: str
-        :param UserIp: 用户请求时的客户端外网IP
+        :param UserIp: 用戶請求時的用戶端外網IP
         :type UserIp: str
-        :param PostTime: 用户操作时间戳，单位秒（格林威治时间精确到秒，如1501590972）
+        :param PostTime: 用戶操作時間戳，單位秒（格林威治時間精确到秒，如1501590972）
         :type PostTime: int
-        :param Imei: 用户设备号imei/idfa(建议填写)
+        :param Imei: 用戶設備号imei/idfa(建議填寫)
         :type Imei: str
-        :param Referer: 活动链接(建议填写)
+        :param Referer: 活動連結(建議填寫)
         :type Referer: str
         """
         self.AccountType = None
@@ -87,15 +87,15 @@ class MarketingValueJudgementRequest(AbstractModel):
 
 
 class MarketingValueJudgementResponse(AbstractModel):
-    """MarketingValueJudgement返回参数结构体
+    """MarketingValueJudgement返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 返回数据
+        :param Data: 返回數據
         :type Data: :class:`tencentcloud.mvj.v20190926.models.Data`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None

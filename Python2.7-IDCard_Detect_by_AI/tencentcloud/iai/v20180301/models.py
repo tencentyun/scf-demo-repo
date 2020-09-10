@@ -17,20 +17,20 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AnalyzeFaceRequest(AbstractModel):
-    """AnalyzeFace请求参数结构体
+    """AnalyzeFace請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Mode: 检测模式。0 为检测所有出现的人脸， 1 为检测面积最大的人脸。默认为 0。最多返回 10 张人脸的五官定位（人脸关键点）具体信息。
+        :param Mode: 檢測模式。0 爲檢測所有出現的人臉， 1 爲檢測面積最大的人臉。預設爲 0。最多返回 10 張人臉的五官定位（人臉關鍵點）具體訊息。
         :type Mode: int
-        :param Image: 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Image: 圖片 base64 數據。支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
-        :param Url: 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。  
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Url: 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。  
+圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
         """
         self.Mode = None
@@ -45,19 +45,19 @@ class AnalyzeFaceRequest(AbstractModel):
 
 
 class AnalyzeFaceResponse(AbstractModel):
-    """AnalyzeFace返回参数结构体
+    """AnalyzeFace返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageWidth: 请求的图片宽度。
+        :param ImageWidth: 請求的圖片寬度。
         :type ImageWidth: int
-        :param ImageHeight: 请求的图片高度。
+        :param ImageHeight: 請求的圖片高度。
         :type ImageHeight: int
-        :param FaceShapeSet: 五官定位（人脸关键点）具体信息。
+        :param FaceShapeSet: 五官定位（人臉關鍵點）具體訊息。
         :type FaceShapeSet: list of FaceShape
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ImageWidth = None
@@ -79,22 +79,22 @@ class AnalyzeFaceResponse(AbstractModel):
 
 
 class Candidate(AbstractModel):
-    """识别出的最相似候选人
+    """識别出的最相似候選人
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 人员ID
+        :param PersonId: 人員ID
         :type PersonId: str
-        :param FaceId: 人脸ID
+        :param FaceId: 人臉ID
         :type FaceId: str
-        :param Score: 候选者的匹配得分。 
-10万大小人脸库，若人脸均为类似抓拍照（人脸质量较差）， 
-误识率百分之一对应分数为70分，误识率千分之一对应分数为80分，误识率万分之一对应分数为90分； 
-若人脸均为类似自拍照（人脸质量较好）， 
-误识率百分之一对应分数为60分，误识率千分之一对应分数为70分，误识率万分之一对应分数为80分。 
-建议分数不要超过90分。您可以根据实际情况选择合适的分数。
+        :param Score: 候選者的比對得分。 
+10萬大小人臉庫，若人臉均爲類似抓拍照（人臉質量較差）， 
+誤識率百分之一對應分數爲70分，誤識率千分之一對應分數爲80分，誤識率萬分之一對應分數爲90分； 
+若人臉均爲類似自拍照（人臉質量較好）， 
+誤識率百分之一對應分數爲60分，誤識率千分之一對應分數爲70分，誤識率萬分之一對應分數爲80分。 
+建議分數不要超過90分。您可以根據實際情況選擇合适的分數。
         :type Score: float
         """
         self.PersonId = None
@@ -109,31 +109,31 @@ class Candidate(AbstractModel):
 
 
 class CompareFaceRequest(AbstractModel):
-    """CompareFace请求参数结构体
+    """CompareFace請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageA: A 图片 base64 数据。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param ImageA: A 圖片 base64 數據。
+若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type ImageA: str
-        :param ImageB: B 图片 base64 数据。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param ImageB: B 圖片 base64 數據。
+若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type ImageB: str
-        :param UrlA: A 图片的 Url 。A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param UrlA: A 圖片的 Url 。A 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
+圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
+若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type UrlA: str
-        :param UrlB: B 图片的 Url 。B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param UrlB: B 圖片的 Url 。B 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
+圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
+若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type UrlB: str
         """
         self.ImageA = None
@@ -150,18 +150,18 @@ class CompareFaceRequest(AbstractModel):
 
 
 class CompareFaceResponse(AbstractModel):
-    """CompareFace返回参数结构体
+    """CompareFace返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Score: 两张图片中人脸的相似度分数。 
-若需要验证两张图片中人脸是否为同一人，则误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。  
-一般超过80分则可认定为同一人。 
-若需要验证两张图片中的人脸是否为同一人，建议使用人脸验证接口。
+        :param Score: 兩張圖片中人臉的相似度分數。 
+若需要驗證兩張圖片中人臉是否爲同一人，則誤識率千分之一對應分數爲70分，誤識率萬分之一對應分數爲80分，誤識率十萬分之一對應分數爲90分。  
+一般超過80分則可認定爲同一人。 
+若需要驗證兩張圖片中的人臉是否爲同一人，建議使用人臉驗證介面。
         :type Score: float
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Score = None
@@ -174,15 +174,15 @@ class CompareFaceResponse(AbstractModel):
 
 
 class CopyPersonRequest(AbstractModel):
-    """CopyPerson请求参数结构体
+    """CopyPerson請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 人员ID
+        :param PersonId: 人員ID
         :type PersonId: str
-        :param GroupIds: 待加入的人员库列表
+        :param GroupIds: 待加入的人員庫清單
         :type GroupIds: list of str
         """
         self.PersonId = None
@@ -195,17 +195,17 @@ class CopyPersonRequest(AbstractModel):
 
 
 class CopyPersonResponse(AbstractModel):
-    """CopyPerson返回参数结构体
+    """CopyPerson返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SucGroupNum: 成功加入的人员库数量
+        :param SucGroupNum: 成功加入的人員庫數量
         :type SucGroupNum: int
-        :param SucGroupIds: 成功加入的人员库列表
+        :param SucGroupIds: 成功加入的人員庫清單
         :type SucGroupIds: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SucGroupNum = None
@@ -220,24 +220,24 @@ class CopyPersonResponse(AbstractModel):
 
 
 class CreateFaceRequest(AbstractModel):
-    """CreateFace请求参数结构体
+    """CreateFace請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 人员ID。
+        :param PersonId: 人員ID。
         :type PersonId: str
-        :param Images: 图片 base64 数据。人员人脸总数量不可超过5张。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Images: 圖片 base64 數據。人員人臉總數量不可超過5張。
+若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Images: list of str
-        :param Urls: 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-人员人脸总数量不可超过5张。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Urls: 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。
+圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+非Top Cloud 儲存的Url速度和穩定性可能受一定影響。 
+人員人臉總數量不可超過5張。
+若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Urls: list of str
         """
         self.PersonId = None
@@ -252,19 +252,19 @@ class CreateFaceRequest(AbstractModel):
 
 
 class CreateFaceResponse(AbstractModel):
-    """CreateFace返回参数结构体
+    """CreateFace返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SucFaceNum: 加入成功的人脸数量
+        :param SucFaceNum: 加入成功的人臉數量
         :type SucFaceNum: int
-        :param SucFaceIds: 加入成功的人脸ID列表
+        :param SucFaceIds: 加入成功的人臉ID清單
         :type SucFaceIds: list of str
-        :param RetCode: 每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败，其他非 0 值代表算法服务异常。
+        :param RetCode: 每張人臉圖片添加結果，-1101 代表未檢測到人臉，-1102 代表圖片解碼失敗，其他非 0 值代表算法服務異常。
         :type RetCode: list of int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SucFaceNum = None
@@ -281,25 +281,25 @@ class CreateFaceResponse(AbstractModel):
 
 
 class CreateGroupRequest(AbstractModel):
-    """CreateGroup请求参数结构体
+    """CreateGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupName: 人员库名称，[1,60]个字符，可修改，不可重复。
+        :param GroupName: 人員庫名稱，[1,60]個字元，可修改，不可重複。
         :type GroupName: str
-        :param GroupId: 人员库 ID，不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
+        :param GroupId: 人員庫 ID，不可修改，不可重複。支援英文、數字、-%@#&_，長度限制64B。
         :type GroupId: str
-        :param GroupExDescriptions: 人员库自定义描述字段，用于描述人员库中人员属性，该人员库下所有人员将拥有此描述字段。 
-最多可以创建5个。 
-每个自定义描述字段支持[1,30]个字符。 
-在同一人员库中自定义描述字段不可重复。 
-例： 设置某人员库“自定义描述字段”为["学号","工号","手机号"]， 
-则该人员库下所有人员将拥有名为“学号”、“工号”、“手机号”的描述字段， 
-可在对应人员描述字段中填写内容，登记该人员的学号、工号、手机号等信息。
+        :param GroupExDescriptions: 人員庫自定義描述欄位，用于描述人員庫中人員屬性，該人員庫下所有人員将擁有此描述欄位。 
+最多可以創建5個。 
+每個自定義描述欄位支援[1,30]個字元。 
+在同一人員庫中自定義描述欄位不可重複。 
+例： 設置某人員庫“自定義描述欄位”爲["學号","工号","手機号"]， 
+則該人員庫下所有人員将擁有名爲“學号”、“工号”、“手機号”的描述欄位， 
+可在對應人員描述欄位中填寫内容，登記該人員的學号、工号、手機号等訊息。
         :type GroupExDescriptions: list of str
-        :param Tag: 人员库信息备注，[0，40]个字符。
+        :param Tag: 人員庫訊息備注，[0，40]個字元。
         :type Tag: str
         """
         self.GroupName = None
@@ -316,13 +316,13 @@ class CreateGroupRequest(AbstractModel):
 
 
 class CreateGroupResponse(AbstractModel):
-    """CreateGroup返回参数结构体
+    """CreateGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -333,31 +333,31 @@ class CreateGroupResponse(AbstractModel):
 
 
 class CreatePersonRequest(AbstractModel):
-    """CreatePerson请求参数结构体
+    """CreatePerson請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 待加入的人员库ID。
+        :param GroupId: 待加入的人員庫ID。
         :type GroupId: str
-        :param PersonName: 人员名称。[1，60]个字符，可修改，可重复。
+        :param PersonName: 人員名稱。[1，60]個字元，可修改，可重複。
         :type PersonName: str
-        :param PersonId: 人员ID，单个腾讯云账号下不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
+        :param PersonId: 人員ID，單個Top Cloud 賬号下不可修改，不可重複。支援英文、數字、-%@#&_，長度限制64B。
         :type PersonId: str
-        :param Gender: 0代表未填写，1代表男性，2代表女性。
+        :param Gender: 0代表未填寫，1代表男性，2代表女性。
         :type Gender: int
-        :param PersonExDescriptionInfos: 人员描述字段内容，key-value。[0，60]个字符，可修改，可重复。
+        :param PersonExDescriptionInfos: 人員描述欄位内容，key-value。[0，60]個字元，可修改，可重複。
         :type PersonExDescriptionInfos: list of PersonExDescriptionInfo
-        :param Image: 图片 base64 数据。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Image: 圖片 base64 數據。
+若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
-        :param Url: 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Url: 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。
+圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
+若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
         """
         self.GroupId = None
@@ -385,15 +385,15 @@ class CreatePersonRequest(AbstractModel):
 
 
 class CreatePersonResponse(AbstractModel):
-    """CreatePerson返回参数结构体
+    """CreatePerson返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FaceId: 人脸图片唯一标识。
+        :param FaceId: 人臉圖片唯一标識。
         :type FaceId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FaceId = None
@@ -406,15 +406,15 @@ class CreatePersonResponse(AbstractModel):
 
 
 class DeleteFaceRequest(AbstractModel):
-    """DeleteFace请求参数结构体
+    """DeleteFace請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 人员ID
+        :param PersonId: 人員ID
         :type PersonId: str
-        :param FaceIds: 待删除的人脸ID列表
+        :param FaceIds: 待删除的人臉ID清單
         :type FaceIds: list of str
         """
         self.PersonId = None
@@ -427,17 +427,17 @@ class DeleteFaceRequest(AbstractModel):
 
 
 class DeleteFaceResponse(AbstractModel):
-    """DeleteFace返回参数结构体
+    """DeleteFace返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SucDeletedNum: 删除成功的人脸数量
+        :param SucDeletedNum: 删除成功的人臉數量
         :type SucDeletedNum: int
-        :param SucFaceIds: 删除成功的人脸ID列表
+        :param SucFaceIds: 删除成功的人臉ID清單
         :type SucFaceIds: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SucDeletedNum = None
@@ -452,13 +452,13 @@ class DeleteFaceResponse(AbstractModel):
 
 
 class DeleteGroupRequest(AbstractModel):
-    """DeleteGroup请求参数结构体
+    """DeleteGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 人员库ID。
+        :param GroupId: 人員庫ID。
         :type GroupId: str
         """
         self.GroupId = None
@@ -469,13 +469,13 @@ class DeleteGroupRequest(AbstractModel):
 
 
 class DeleteGroupResponse(AbstractModel):
-    """DeleteGroup返回参数结构体
+    """DeleteGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -486,15 +486,15 @@ class DeleteGroupResponse(AbstractModel):
 
 
 class DeletePersonFromGroupRequest(AbstractModel):
-    """DeletePersonFromGroup请求参数结构体
+    """DeletePersonFromGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 人员ID
+        :param PersonId: 人員ID
         :type PersonId: str
-        :param GroupId: 人员库ID
+        :param GroupId: 人員庫ID
         :type GroupId: str
         """
         self.PersonId = None
@@ -507,13 +507,13 @@ class DeletePersonFromGroupRequest(AbstractModel):
 
 
 class DeletePersonFromGroupResponse(AbstractModel):
-    """DeletePersonFromGroup返回参数结构体
+    """DeletePersonFromGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -524,13 +524,13 @@ class DeletePersonFromGroupResponse(AbstractModel):
 
 
 class DeletePersonRequest(AbstractModel):
-    """DeletePerson请求参数结构体
+    """DeletePerson請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 人员ID
+        :param PersonId: 人員ID
         :type PersonId: str
         """
         self.PersonId = None
@@ -541,13 +541,13 @@ class DeletePersonRequest(AbstractModel):
 
 
 class DeletePersonResponse(AbstractModel):
-    """DeletePerson返回参数结构体
+    """DeletePerson返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -558,33 +558,33 @@ class DeletePersonResponse(AbstractModel):
 
 
 class DetectFaceRequest(AbstractModel):
-    """DetectFace请求参数结构体
+    """DetectFace請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MaxFaceNum: 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为120。 
-此参数用于控制处理待检测图片中的人脸个数，值越小，处理速度越快。
+        :param MaxFaceNum: 最多處理的人臉數目。預設值爲1（僅檢測圖片中面積最大的那張人臉），最大值爲120。 
+此參數用于控制處理待檢測圖片中的人臉個數，值越小，處理速度越快。
         :type MaxFaceNum: int
-        :param MinFaceSize: 人脸长和宽的最小尺寸，单位为像素。默认为40。低于此尺寸的人脸不会被检测。
+        :param MinFaceSize: 人臉長和寬的最小尺寸，單位爲像素。預設爲40。低于此尺寸的人臉不會被檢測。
         :type MinFaceSize: int
-        :param Image: 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Image: 圖片 base64 數據。支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
-        :param Url: 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Url: 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
+圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
-        :param NeedFaceAttributes: 是否需要返回人脸属性信息（FaceAttributesInfo）。0 为不需要返回，1 为需要返回。默认为 0。 
-非 1 值均视为不需要返回，此时 FaceAttributesInfo 不具备参考意义。  
-最多返回面积最大的 5 张人脸属性信息，超过 5 张人脸（第 6 张及以后的人脸）的 FaceAttributesInfo 不具备参考意义。  
-提取人脸属性信息较为耗时，如不需要人脸属性信息，建议关闭此项功能，加快人脸检测速度。
+        :param NeedFaceAttributes: 是否需要返回人臉屬性訊息（FaceAttributesInfo）。0 爲不需要返回，1 爲需要返回。預設爲 0。 
+非 1 值均視爲不需要返回，此時 FaceAttributesInfo 不具備參考意義。  
+最多返回面積最大的 5 張人臉屬性訊息，超過 5 張人臉（第 6 張及以後的人臉）的 FaceAttributesInfo 不具備參考意義。  
+提取人臉屬性訊息較爲耗時，如不需要人臉屬性訊息，建議關閉此項功能，加快人臉檢測速度。
         :type NeedFaceAttributes: int
-        :param NeedQualityDetection: 是否开启质量检测。0 为关闭，1 为开启。默认为 0。 
-非 1 值均视为不进行质量检测。
-最多返回面积最大的 5 张人脸质量分信息，超过 5 张人脸（第 6 张及以后的人脸）的 FaceQualityInfo不具备参考意义。  
-建议：人脸入库操作建议开启此功能。
+        :param NeedQualityDetection: 是否開啓質量檢測。0 爲關閉，1 爲開啓。預設爲 0。 
+非 1 值均視爲不進行質量檢測。
+最多返回面積最大的 5 張人臉質量分訊息，超過 5 張人臉（第 6 張及以後的人臉）的 FaceQualityInfo不具備參考意義。  
+建議：人臉入庫操作建議開啓此功能。
         :type NeedQualityDetection: int
         """
         self.MaxFaceNum = None
@@ -605,19 +605,19 @@ class DetectFaceRequest(AbstractModel):
 
 
 class DetectFaceResponse(AbstractModel):
-    """DetectFace返回参数结构体
+    """DetectFace返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageWidth: 请求的图片宽度。
+        :param ImageWidth: 請求的圖片寬度。
         :type ImageWidth: int
-        :param ImageHeight: 请求的图片高度。
+        :param ImageHeight: 請求的圖片高度。
         :type ImageHeight: int
-        :param FaceInfos: 人脸信息列表。
+        :param FaceInfos: 人臉訊息清單。
         :type FaceInfos: list of FaceInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ImageWidth = None
@@ -639,20 +639,20 @@ class DetectFaceResponse(AbstractModel):
 
 
 class DetectLiveFaceRequest(AbstractModel):
-    """DetectLiveFace请求参数结构体
+    """DetectLiveFace請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Image: 图片 base64 数据（图片的宽高比请接近3:4，不符合宽高比的图片返回的分值不具备参考意义）。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Image: 圖片 base64 數據（圖片的寬高比請接近3:4，不符合寬高比的圖片返回的分值不具備參考意義）。
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
-        :param Url: 图片的 Url 。图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
-（图片的宽高比请接近 3:4，不符合宽高比的图片返回的分值不具备参考意义） 
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Url: 圖片的 Url 。圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
+（圖片的寬高比請接近 3:4，不符合寬高比的圖片返回的分值不具備參考意義） 
+圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
         """
         self.Image = None
@@ -665,15 +665,15 @@ class DetectLiveFaceRequest(AbstractModel):
 
 
 class DetectLiveFaceResponse(AbstractModel):
-    """DetectLiveFace返回参数结构体
+    """DetectLiveFace返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Score: 活体打分，取值范围 [0,100]，分数一般落于[80, 100]区间内，0分也为常见值。推荐相大于 87 时可判断为活体。可根据具体场景自行调整阈值。
+        :param Score: 活體打分，取值範圍 [0,100]，分數一般落于[80, 100]區間内，0分也爲常見值。推薦相大于 87 時可判斷爲活體。可根據具體場景自行調整阈值。
         :type Score: float
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Score = None
@@ -686,43 +686,43 @@ class DetectLiveFaceResponse(AbstractModel):
 
 
 class FaceAttributesInfo(AbstractModel):
-    """人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、
-    魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
+    """人臉屬性訊息，包含性别( gender )、年齡( age )、表情( expression )、
+    魅力( beauty )、眼鏡( glass )、口罩（mask）、頭發（hair）和姿态 (pitch，roll，yaw )。只有當 NeedFaceAttributes 設爲 1 時才返回有效訊息。
 
     """
 
     def __init__(self):
         """
-        :param Gender: 性别 [0(female，女性)~100(male，男性)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        :param Gender: 性别 [0(female，女性)~100(male，男性)]。 NeedFaceAttributes 不爲 1 或檢測超過 5 張人臉時，此參數仍返回，但不具備參考意義。
         :type Gender: int
-        :param Age: 年龄 [0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        :param Age: 年齡 [0~100]。NeedFaceAttributes 不爲1 或檢測超過 5 張人臉時，此參數仍返回，但不具備參考意義。
         :type Age: int
-        :param Expression: 微笑[0(normal，正常)~50(smile，微笑)~100(laugh，大笑)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        :param Expression: 微笑[0(normal，正常)~50(smile，微笑)~100(laugh，大笑)]。NeedFaceAttributes 不爲1 或檢測超過 5 張人臉時，此參數仍返回，但不具備參考意義。
         :type Expression: int
-        :param Glass: 是否有眼镜 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        :param Glass: 是否有眼鏡 [true,false]。NeedFaceAttributes 不爲1 或檢測超過 5 張人臉時，此參數仍返回，但不具備參考意義。
         :type Glass: bool
-        :param Pitch: 上下偏移[-30,30]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
-建议：人脸入库选择[-10,10]的图片。
+        :param Pitch: 上下偏移[-30,30]。NeedFaceAttributes 不爲1 或檢測超過 5 張人臉時，此參數仍返回，但不具備參考意義。 
+建議：人臉入庫選擇[-10,10]的圖片。
         :type Pitch: int
-        :param Yaw: 左右偏移[-30,30]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
-建议：人脸入库选择[-10,10]的图片。
+        :param Yaw: 左右偏移[-30,30]。 NeedFaceAttributes 不爲1 或檢測超過 5 張人臉時，此參數仍返回，但不具備參考意義。 
+建議：人臉入庫選擇[-10,10]的圖片。
         :type Yaw: int
-        :param Roll: 平面旋转[-180,180]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。  
-建议：人脸入库选择[-20,20]的图片。
+        :param Roll: 平面旋轉[-180,180]。 NeedFaceAttributes 不爲1 或檢測超過 5 張人臉時，此參數仍返回，但不具備參考意義。  
+建議：人臉入庫選擇[-20,20]的圖片。
         :type Roll: int
-        :param Beauty: 魅力[0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        :param Beauty: 魅力[0~100]。NeedFaceAttributes 不爲1 或檢測超過 5 張人臉時，此參數仍返回，但不具備參考意義。
         :type Beauty: int
-        :param Hat: 是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Hat: 是否有帽子 [true,false]。NeedFaceAttributes 不爲1 或檢測超過 5 張人臉時，此參數仍返回，但不具備參考意義。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Hat: bool
-        :param Mask: 是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Mask: 是否有口罩 [true,false]。NeedFaceAttributes 不爲1 或檢測超過 5 張人臉時，此參數仍返回，但不具備參考意義。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Mask: bool
-        :param Hair: 头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Hair: 頭發訊息，包含頭發長度（length）、有無劉海（bang）、頭發顔色（color）。NeedFaceAttributes 不爲1 或檢測超過 5 張人臉時，此參數仍返回，但不具備參考意義。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Hair: :class:`tencentcloud.iai.v20180301.models.FaceHairAttributesInfo`
-        :param EyeOpen: 双眼是否睁开 [true,false]。只要有超过一只眼睛闭眼，就返回false。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EyeOpen: 雙眼是否睜開 [true,false]。只要有超過一只眼睛閉眼，就返回false。 NeedFaceAttributes 不爲1 或檢測超過 5 張人臉時，此參數仍返回，但不具備參考意義。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EyeOpen: bool
         """
         self.Gender = None
@@ -757,20 +757,20 @@ class FaceAttributesInfo(AbstractModel):
 
 
 class FaceHairAttributesInfo(AbstractModel):
-    """人脸属性中的发型信息。
+    """人臉屬性中的發型訊息。
 
     """
 
     def __init__(self):
         """
-        :param Length: 0：光头，1：短发，2：中发，3：长发，4：绑发
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Length: 0：光頭，1：短發，2：中發，3：長發，4：綁發
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Length: int
-        :param Bang: 0：有刘海，1：无刘海
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Bang: 0：有劉海，1：無劉海
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Bang: int
         :param Color: 0：黑色，1：金色，2：棕色，3：灰白色
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Color: int
         """
         self.Length = None
@@ -785,29 +785,29 @@ class FaceHairAttributesInfo(AbstractModel):
 
 
 class FaceInfo(AbstractModel):
-    """人脸信息列表。
+    """人臉訊息清單。
 
     """
 
     def __init__(self):
         """
-        :param X: 人脸框左上角横坐标。
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+        :param X: 人臉框左上角橫坐标。
+人臉框包含人臉五官位置并在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐标負值。 
+若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐标取0。
         :type X: int
-        :param Y: 人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+        :param Y: 人臉框左上角縱坐标。 
+人臉框包含人臉五官位置并在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐标負值。 
+若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐标取0。
         :type Y: int
-        :param Width: 人脸框宽度。
+        :param Width: 人臉框寬度。
         :type Width: int
-        :param Height: 人脸框高度。
+        :param Height: 人臉框高度。
         :type Height: int
-        :param FaceAttributesInfo: 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
+        :param FaceAttributesInfo: 人臉屬性訊息，包含性别( gender )、年齡( age )、表情( expression )、 
+魅力( beauty )、眼鏡( glass )、口罩（mask）、頭發（hair）和姿态 (pitch，roll，yaw )。只有當 NeedFaceAttributes 設爲 1 時才返回有效訊息。
         :type FaceAttributesInfo: :class:`tencentcloud.iai.v20180301.models.FaceAttributesInfo`
-        :param FaceQualityInfo: 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FaceQualityInfo: 人臉質量訊息，包含質量分（score）、模糊分（sharpness）、光照分（brightness）、遮擋分（completeness）。只有當NeedFaceDetection設爲1時才返回有效訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FaceQualityInfo: :class:`tencentcloud.iai.v20180301.models.FaceQualityInfo`
         """
         self.X = None
@@ -832,35 +832,35 @@ class FaceInfo(AbstractModel):
 
 
 class FaceQualityCompleteness(AbstractModel):
-    """五官遮挡分，评价眉毛（Eyebrow）、眼睛（Eye）、鼻子（Nose）、脸颊（Cheek）、嘴巴（Mouth）、下巴（Chin）的被遮挡程度。
+    """五官遮擋分，評價眉毛（Eyebrow）、眼睛（Eye）、鼻子（Nose）、臉頰（Cheek）、嘴巴（Mouth）、下巴（Chin）的被遮擋程度。
 
     """
 
     def __init__(self):
         """
-        :param Eyebrow: 眉毛的遮挡分数[0,100]，分数越高遮挡越少。 
-参考范围：[0,80]表示发生遮挡。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Eyebrow: 眉毛的遮擋分數[0,100]，分數越高遮擋越少。 
+參考範圍：[0,80]表示發生遮擋。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Eyebrow: int
-        :param Eye: 眼睛的遮挡分数[0,100],分数越高遮挡越少。 
-参考范围：[0,80]表示发生遮挡。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Eye: 眼睛的遮擋分數[0,100],分數越高遮擋越少。 
+參考範圍：[0,80]表示發生遮擋。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Eye: int
-        :param Nose: 鼻子的遮挡分数[0,100],分数越高遮挡越少。 
-参考范围：[0,60]表示发生遮挡。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Nose: 鼻子的遮擋分數[0,100],分數越高遮擋越少。 
+參考範圍：[0,60]表示發生遮擋。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Nose: int
-        :param Cheek: 脸颊的遮挡分数[0,100],分数越高遮挡越少。 
-参考范围：[0,70]表示发生遮挡。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Cheek: 臉頰的遮擋分數[0,100],分數越高遮擋越少。 
+參考範圍：[0,70]表示發生遮擋。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Cheek: int
-        :param Mouth: 嘴巴的遮挡分数[0,100],分数越高遮挡越少。 
-参考范围：[0,50]表示发生遮挡。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Mouth: 嘴巴的遮擋分數[0,100],分數越高遮擋越少。 
+參考範圍：[0,50]表示發生遮擋。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Mouth: int
-        :param Chin: 下巴的遮挡分数[0,100],分数越高遮挡越少。 
-参考范围：[0,70]表示发生遮挡。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Chin: 下巴的遮擋分數[0,100],分數越高遮擋越少。 
+參考範圍：[0,70]表示發生遮擋。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Chin: int
         """
         self.Eyebrow = None
@@ -881,29 +881,29 @@ class FaceQualityCompleteness(AbstractModel):
 
 
 class FaceQualityInfo(AbstractModel):
-    """人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+    """人臉質量訊息，包含質量分（score）、模糊分（sharpness）、光照分（brightness）、遮擋分（completeness）。只有當NeedFaceDetection設爲1時才返回有效訊息。
 
     """
 
     def __init__(self):
         """
-        :param Score: 质量分: [0,100]，综合评价图像质量是否适合人脸识别，分数越高质量越好。 
-参考范围：[0,40]较差，[40,60] 一般，[60,80]较好，[80,100]很好。 
-建议：人脸入库选取70以上的图片。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Score: 質量分: [0,100]，綜合評價圖像質量是否适合人臉識别，分數越高質量越好。 
+參考範圍：[0,40]較差，[40,60] 一般，[60,80]較好，[80,100]很好。 
+建議：人臉入庫選取70以上的圖片。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Score: int
-        :param Sharpness: 清晰分：[0,100]，评价图片清晰程度，分数越高越清晰。 
-参考范围：[0,40]特别模糊，[40,60]模糊，[60,80]一般，[80,100]清晰。 
-建议：人脸入库选取80以上的图片。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Sharpness: 清晰分：[0,100]，評價圖片清晰程度，分數越高越清晰。 
+參考範圍：[0,40]特别模糊，[40,60]模糊，[60,80]一般，[80,100]清晰。 
+建議：人臉入庫選取80以上的圖片。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Sharpness: int
-        :param Brightness: 光照分：[0,100]，评价图片光照程度，分数越高越亮。 
-参考范围： [0,30]偏暗，[30,70]光照正常，[70,100]偏亮。 
-建议：人脸入库选取[30,70]的图片。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Brightness: 光照分：[0,100]，評價圖片光照程度，分數越高越亮。 
+參考範圍： [0,30]偏暗，[30,70]光照正常，[70,100]偏亮。 
+建議：人臉入庫選取[30,70]的圖片。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Brightness: int
-        :param Completeness: 五官遮挡分，评价眉毛（Eyebrow）、眼睛（Eye）、鼻子（Nose）、脸颊（Cheek）、嘴巴（Mouth）、下巴（Chin）的被遮挡程度。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Completeness: 五官遮擋分，評價眉毛（Eyebrow）、眼睛（Eye）、鼻子（Nose）、臉頰（Cheek）、嘴巴（Mouth）、下巴（Chin）的被遮擋程度。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Completeness: :class:`tencentcloud.iai.v20180301.models.FaceQualityCompleteness`
         """
         self.Score = None
@@ -922,23 +922,23 @@ class FaceQualityInfo(AbstractModel):
 
 
 class FaceRect(AbstractModel):
-    """检测出的人脸框的位置
+    """檢測出的人臉框的位置
 
     """
 
     def __init__(self):
         """
-        :param X: 人脸框左上角横坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+        :param X: 人臉框左上角橫坐标。 
+人臉框包含人臉五官位置并在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐标負值。 
+若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐标取0。
         :type X: int
-        :param Y: 人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+        :param Y: 人臉框左上角縱坐标。 
+人臉框包含人臉五官位置并在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐标負值。 
+若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐标取0。
         :type Y: int
-        :param Width: 人脸宽度
+        :param Width: 人臉寬度
         :type Width: int
-        :param Height: 人脸高度
+        :param Height: 人臉高度
         :type Height: int
         """
         self.X = None
@@ -955,29 +955,29 @@ class FaceRect(AbstractModel):
 
 
 class FaceShape(AbstractModel):
-    """五官定位（人脸关键点）具体信息。
+    """五官定位（人臉關鍵點）具體訊息。
 
     """
 
     def __init__(self):
         """
-        :param FaceProfile: 描述脸型轮廓的 21 点。
+        :param FaceProfile: 描述臉型輪廓的 21 點。
         :type FaceProfile: list of Point
-        :param LeftEye: 描述左侧眼睛轮廓的 8 点。
+        :param LeftEye: 描述左側眼睛輪廓的 8 點。
         :type LeftEye: list of Point
-        :param RightEye: 描述右侧眼睛轮廓的 8 点。
+        :param RightEye: 描述右側眼睛輪廓的 8 點。
         :type RightEye: list of Point
-        :param LeftEyeBrow: 描述左侧眉毛轮廓的 8 点。
+        :param LeftEyeBrow: 描述左側眉毛輪廓的 8 點。
         :type LeftEyeBrow: list of Point
-        :param RightEyeBrow: 描述右侧眉毛轮廓的 8 点。
+        :param RightEyeBrow: 描述右側眉毛輪廓的 8 點。
         :type RightEyeBrow: list of Point
-        :param Mouth: 描述嘴巴轮廓的 22 点。
+        :param Mouth: 描述嘴巴輪廓的 22 點。
         :type Mouth: list of Point
-        :param Nose: 描述鼻子轮廓的 13 点。
+        :param Nose: 描述鼻子輪廓的 13 點。
         :type Nose: list of Point
-        :param LeftPupil: 左瞳孔轮廓的 1 个点。
+        :param LeftPupil: 左瞳孔輪廓的 1 個點。
         :type LeftPupil: list of Point
-        :param RightPupil: 右瞳孔轮廓的 1 个点。
+        :param RightPupil: 右瞳孔輪廓的 1 個點。
         :type RightPupil: list of Point
         """
         self.FaceProfile = None
@@ -1049,15 +1049,15 @@ class FaceShape(AbstractModel):
 
 
 class GetGroupListRequest(AbstractModel):
-    """GetGroupList请求参数结构体
+    """GetGroupList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 起始序号，默认值为0
+        :param Offset: 起始序号，預設值爲0
         :type Offset: int
-        :param Limit: 返回数量，默认值为10，最大值为1000
+        :param Limit: 返回數量，預設值爲10，最大值爲1000
         :type Limit: int
         """
         self.Offset = None
@@ -1070,18 +1070,18 @@ class GetGroupListRequest(AbstractModel):
 
 
 class GetGroupListResponse(AbstractModel):
-    """GetGroupList返回参数结构体
+    """GetGroupList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupInfos: 返回的人员库信息
+        :param GroupInfos: 返回的人員庫訊息
         :type GroupInfos: list of GroupInfo
-        :param GroupNum: 人员库总数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupNum: 人員庫總數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupNum: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.GroupInfos = None
@@ -1101,13 +1101,13 @@ class GetGroupListResponse(AbstractModel):
 
 
 class GetPersonBaseInfoRequest(AbstractModel):
-    """GetPersonBaseInfo请求参数结构体
+    """GetPersonBaseInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 人员ID
+        :param PersonId: 人員ID
         :type PersonId: str
         """
         self.PersonId = None
@@ -1118,19 +1118,19 @@ class GetPersonBaseInfoRequest(AbstractModel):
 
 
 class GetPersonBaseInfoResponse(AbstractModel):
-    """GetPersonBaseInfo返回参数结构体
+    """GetPersonBaseInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonName: 人员名称
+        :param PersonName: 人員名稱
         :type PersonName: str
-        :param Gender: 人员性别
+        :param Gender: 人員性别
         :type Gender: int
-        :param FaceIds: 包含的人脸图片列表
+        :param FaceIds: 包含的人臉圖片清單
         :type FaceIds: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PersonName = None
@@ -1147,17 +1147,17 @@ class GetPersonBaseInfoResponse(AbstractModel):
 
 
 class GetPersonGroupInfoRequest(AbstractModel):
-    """GetPersonGroupInfo请求参数结构体
+    """GetPersonGroupInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 人员ID
+        :param PersonId: 人員ID
         :type PersonId: str
-        :param Offset: 起始序号，默认值为0
+        :param Offset: 起始序号，預設值爲0
         :type Offset: int
-        :param Limit: 返回数量，默认值为10，最大值为100
+        :param Limit: 返回數量，預設值爲10，最大值爲100
         :type Limit: int
         """
         self.PersonId = None
@@ -1172,18 +1172,18 @@ class GetPersonGroupInfoRequest(AbstractModel):
 
 
 class GetPersonGroupInfoResponse(AbstractModel):
-    """GetPersonGroupInfo返回参数结构体
+    """GetPersonGroupInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonGroupInfos: 包含此人员的人员库及描述字段内容列表
+        :param PersonGroupInfos: 包含此人員的人員庫及描述欄位内容清單
         :type PersonGroupInfos: list of PersonGroupInfo
-        :param GroupNum: 人员库总数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupNum: 人員庫總數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupNum: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PersonGroupInfos = None
@@ -1203,13 +1203,13 @@ class GetPersonGroupInfoResponse(AbstractModel):
 
 
 class GetPersonListNumRequest(AbstractModel):
-    """GetPersonListNum请求参数结构体
+    """GetPersonListNum請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 人员库ID
+        :param GroupId: 人員庫ID
         :type GroupId: str
         """
         self.GroupId = None
@@ -1220,17 +1220,17 @@ class GetPersonListNumRequest(AbstractModel):
 
 
 class GetPersonListNumResponse(AbstractModel):
-    """GetPersonListNum返回参数结构体
+    """GetPersonListNum返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonNum: 人员数量
+        :param PersonNum: 人員數量
         :type PersonNum: int
-        :param FaceNum: 人脸数量
+        :param FaceNum: 人臉數量
         :type FaceNum: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PersonNum = None
@@ -1245,17 +1245,17 @@ class GetPersonListNumResponse(AbstractModel):
 
 
 class GetPersonListRequest(AbstractModel):
-    """GetPersonList请求参数结构体
+    """GetPersonList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 人员库ID
+        :param GroupId: 人員庫ID
         :type GroupId: str
-        :param Offset: 起始序号，默认值为0
+        :param Offset: 起始序号，預設值爲0
         :type Offset: int
-        :param Limit: 返回数量，默认值为10，最大值为1000
+        :param Limit: 返回數量，預設值爲10，最大值爲1000
         :type Limit: int
         """
         self.GroupId = None
@@ -1270,21 +1270,21 @@ class GetPersonListRequest(AbstractModel):
 
 
 class GetPersonListResponse(AbstractModel):
-    """GetPersonList返回参数结构体
+    """GetPersonList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonInfos: 返回的人员信息
+        :param PersonInfos: 返回的人員訊息
         :type PersonInfos: list of PersonInfo
-        :param PersonNum: 该人员库的人员数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PersonNum: 該人員庫的人員數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PersonNum: int
-        :param FaceNum: 该人员库的人脸数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FaceNum: 該人員庫的人臉數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FaceNum: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PersonInfos = None
@@ -1306,15 +1306,15 @@ class GetPersonListResponse(AbstractModel):
 
 
 class GroupExDescriptionInfo(AbstractModel):
-    """需要修改的人员库自定义描述字段key-value
+    """需要修改的人員庫自定義描述欄位key-value
 
     """
 
     def __init__(self):
         """
-        :param GroupExDescriptionIndex: 人员库自定义描述字段Index，从0开始
+        :param GroupExDescriptionIndex: 人員庫自定義描述欄位Index，從0開始
         :type GroupExDescriptionIndex: int
-        :param GroupExDescription: 需要更新的人员库自定义描述字段内容
+        :param GroupExDescription: 需要更新的人員庫自定義描述欄位内容
         :type GroupExDescription: str
         """
         self.GroupExDescriptionIndex = None
@@ -1327,21 +1327,21 @@ class GroupExDescriptionInfo(AbstractModel):
 
 
 class GroupInfo(AbstractModel):
-    """返回的人员库信息
+    """返回的人員庫訊息
 
     """
 
     def __init__(self):
         """
-        :param GroupName: 人员库名称
+        :param GroupName: 人員庫名稱
         :type GroupName: str
-        :param GroupId: 人员库ID
+        :param GroupId: 人員庫ID
         :type GroupId: str
-        :param GroupExDescriptions: 人员库自定义描述字段
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupExDescriptions: 人員庫自定義描述欄位
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupExDescriptions: list of str
-        :param Tag: 人员库信息备注
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Tag: 人員庫訊息備注
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Tag: str
         """
         self.GroupName = None
@@ -1358,19 +1358,19 @@ class GroupInfo(AbstractModel):
 
 
 class ModifyGroupRequest(AbstractModel):
-    """ModifyGroup请求参数结构体
+    """ModifyGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 人员库ID
+        :param GroupId: 人員庫ID
         :type GroupId: str
-        :param GroupName: 人员库名称
+        :param GroupName: 人員庫名稱
         :type GroupName: str
-        :param GroupExDescriptionInfos: 需要修改的人员库自定义描述字段，key-value
+        :param GroupExDescriptionInfos: 需要修改的人員庫自定義描述欄位，key-value
         :type GroupExDescriptionInfos: list of GroupExDescriptionInfo
-        :param Tag: 人员库信息备注
+        :param Tag: 人員庫訊息備注
         :type Tag: str
         """
         self.GroupId = None
@@ -1392,13 +1392,13 @@ class ModifyGroupRequest(AbstractModel):
 
 
 class ModifyGroupResponse(AbstractModel):
-    """ModifyGroup返回参数结构体
+    """ModifyGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1409,17 +1409,17 @@ class ModifyGroupResponse(AbstractModel):
 
 
 class ModifyPersonBaseInfoRequest(AbstractModel):
-    """ModifyPersonBaseInfo请求参数结构体
+    """ModifyPersonBaseInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 人员ID
+        :param PersonId: 人員ID
         :type PersonId: str
-        :param PersonName: 需要修改的人员名称
+        :param PersonName: 需要修改的人員名稱
         :type PersonName: str
-        :param Gender: 需要修改的人员性别
+        :param Gender: 需要修改的人員性别
         :type Gender: int
         """
         self.PersonId = None
@@ -1434,13 +1434,13 @@ class ModifyPersonBaseInfoRequest(AbstractModel):
 
 
 class ModifyPersonBaseInfoResponse(AbstractModel):
-    """ModifyPersonBaseInfo返回参数结构体
+    """ModifyPersonBaseInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1451,17 +1451,17 @@ class ModifyPersonBaseInfoResponse(AbstractModel):
 
 
 class ModifyPersonGroupInfoRequest(AbstractModel):
-    """ModifyPersonGroupInfo请求参数结构体
+    """ModifyPersonGroupInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 人员库ID
+        :param GroupId: 人員庫ID
         :type GroupId: str
-        :param PersonId: 人员ID
+        :param PersonId: 人員ID
         :type PersonId: str
-        :param PersonExDescriptionInfos: 需要修改的人员描述字段内容，key-value
+        :param PersonExDescriptionInfos: 需要修改的人員描述欄位内容，key-value
         :type PersonExDescriptionInfos: list of PersonExDescriptionInfo
         """
         self.GroupId = None
@@ -1481,13 +1481,13 @@ class ModifyPersonGroupInfoRequest(AbstractModel):
 
 
 class ModifyPersonGroupInfoResponse(AbstractModel):
-    """ModifyPersonGroupInfo返回参数结构体
+    """ModifyPersonGroupInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1498,15 +1498,15 @@ class ModifyPersonGroupInfoResponse(AbstractModel):
 
 
 class PersonExDescriptionInfo(AbstractModel):
-    """需要修改的人员描述字段内容，key-value
+    """需要修改的人員描述欄位内容，key-value
 
     """
 
     def __init__(self):
         """
-        :param PersonExDescriptionIndex: 人员描述字段Index，从0开始
+        :param PersonExDescriptionIndex: 人員描述欄位Index，從0開始
         :type PersonExDescriptionIndex: int
-        :param PersonExDescription: 需要更新的人员描述字段内容
+        :param PersonExDescription: 需要更新的人員描述欄位内容
         :type PersonExDescription: str
         """
         self.PersonExDescriptionIndex = None
@@ -1519,15 +1519,15 @@ class PersonExDescriptionInfo(AbstractModel):
 
 
 class PersonGroupInfo(AbstractModel):
-    """包含此人员的人员库及描述字段内容列表
+    """包含此人員的人員庫及描述欄位内容清單
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 包含此人员的人员库ID
+        :param GroupId: 包含此人員的人員庫ID
         :type GroupId: str
-        :param PersonExDescriptions: 人员描述字段内容
+        :param PersonExDescriptions: 人員描述欄位内容
         :type PersonExDescriptions: list of str
         """
         self.GroupId = None
@@ -1540,21 +1540,21 @@ class PersonGroupInfo(AbstractModel):
 
 
 class PersonInfo(AbstractModel):
-    """返回的人员信息
+    """返回的人員訊息
 
     """
 
     def __init__(self):
         """
-        :param PersonName: 人员名称
+        :param PersonName: 人員名稱
         :type PersonName: str
-        :param PersonId: 人员Id
+        :param PersonId: 人員Id
         :type PersonId: str
-        :param Gender: 人员性别
+        :param Gender: 人員性别
         :type Gender: int
-        :param PersonExDescriptions: 人员描述字段内容
+        :param PersonExDescriptions: 人員描述欄位内容
         :type PersonExDescriptions: list of str
-        :param FaceIds: 包含的人脸照片列表
+        :param FaceIds: 包含的人臉照片清單
         :type FaceIds: list of str
         """
         self.PersonName = None
@@ -1594,15 +1594,15 @@ class Point(AbstractModel):
 
 
 class Result(AbstractModel):
-    """人脸的识别结果
+    """人臉的識别結果
 
     """
 
     def __init__(self):
         """
-        :param Candidates: 识别出的最相似候选人
+        :param Candidates: 識别出的最相似候選人
         :type Candidates: list of Candidate
-        :param FaceRect: 检测出的人脸框位置
+        :param FaceRect: 檢測出的人臉框位置
         :type FaceRect: :class:`tencentcloud.iai.v20180301.models.FaceRect`
         """
         self.Candidates = None
@@ -1622,29 +1622,29 @@ class Result(AbstractModel):
 
 
 class SearchFacesRequest(AbstractModel):
-    """SearchFaces请求参数结构体
+    """SearchFaces請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupIds: 希望搜索的人员库列表，上限100个。
+        :param GroupIds: 希望搜索的人員庫清單，上限100個。
         :type GroupIds: list of str
-        :param Image: 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Image: 圖片 base64 數據。支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
-        :param Url: 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Url: 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。
+圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
-        :param MaxFaceNum: 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
-MaxFaceNum用于，当待识别图片包含多张人脸时，要搜索的人脸数量。 
-当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索。
+        :param MaxFaceNum: 最多處理的人臉數目。預設值爲1（僅檢測圖片中面積最大的那張人臉），最大值爲10。 
+MaxFaceNum用于，當待識别圖片包含多張人臉時，要搜索的人臉數量。 
+當 MaxFaceNum 不爲1時，設MaxFaceNum=M，則實際上是 M:N 的人臉搜索。
         :type MaxFaceNum: int
-        :param MinFaceSize: 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
+        :param MinFaceSize: 人臉長和寬的最小尺寸，單位爲像素。預設爲80。低于40将影響搜索精度。建議設置爲80。
         :type MinFaceSize: int
-        :param MaxPersonNum: 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
-例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。
+        :param MaxPersonNum: 被檢測到的人臉，對應最多返回的最相似人員數目。預設值爲5，最大值爲10。  
+例，設MaxFaceNum爲3，MaxPersonNum爲5，則最多可能返回3*5=15個人員。
         :type MaxPersonNum: int
         """
         self.GroupIds = None
@@ -1665,17 +1665,17 @@ MaxFaceNum用于，当待识别图片包含多张人脸时，要搜索的人脸�
 
 
 class SearchFacesResponse(AbstractModel):
-    """SearchFaces返回参数结构体
+    """SearchFaces返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Results: 识别结果。
+        :param Results: 識别結果。
         :type Results: list of Result
-        :param FaceNum: 搜索的人员库中包含的人脸数。
+        :param FaceNum: 搜索的人員庫中包含的人臉數。
         :type FaceNum: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Results = None
@@ -1695,23 +1695,23 @@ class SearchFacesResponse(AbstractModel):
 
 
 class VerifyFaceRequest(AbstractModel):
-    """VerifyFace请求参数结构体
+    """VerifyFace請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
+        :param PersonId: 待驗證的人員ID。人員ID具體訊息請參考人員庫管理相關介面。
         :type PersonId: str
-        :param Image: 图片 base64 数据。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Image: 圖片 base64 數據。
+若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
-        :param Url: 图片的 Url 。 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Url: 圖片的 Url 。 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
+圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
+若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
         """
         self.PersonId = None
@@ -1726,17 +1726,17 @@ class VerifyFaceRequest(AbstractModel):
 
 
 class VerifyFaceResponse(AbstractModel):
-    """VerifyFace返回参数结构体
+    """VerifyFace返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Score: 给定的人脸图片与 PersonId 对应人脸的相似度。若 PersonId 下有多张人脸（Face），返回相似度最大的分数。
+        :param Score: 給定的人臉圖片與 PersonId 對應人臉的相似度。若 PersonId 下有多張人臉（Face），返回相似度最大的分數。
         :type Score: float
-        :param IsMatch: 是否为同一人的判断。
+        :param IsMatch: 是否爲同一人的判斷。
         :type IsMatch: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Score = None

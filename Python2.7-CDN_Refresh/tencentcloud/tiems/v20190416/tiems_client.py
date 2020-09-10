@@ -26,7 +26,7 @@ class TiemsClient(AbstractClient):
 
 
     def CreateJob(self, request):
-        """创建任务
+        """創建任務
 
         :param request: Request instance for CreateJob.
         :type request: :class:`tencentcloud.tiems.v20190416.models.CreateJobRequest`
@@ -54,7 +54,7 @@ class TiemsClient(AbstractClient):
 
 
     def CreateRsgAsGroup(self, request):
-        """创建资源组的伸缩组。当前一个资源组仅允许创建一个伸缩组。
+        """創建資源組的伸縮組。當前一個資源組僅允許創建一個伸縮組。
 
         :param request: Request instance for CreateRsgAsGroup.
         :type request: :class:`tencentcloud.tiems.v20190416.models.CreateRsgAsGroupRequest`
@@ -82,7 +82,7 @@ class TiemsClient(AbstractClient):
 
 
     def CreateRuntime(self, request):
-        """创建运行环境
+        """創建運作環境
 
         :param request: Request instance for CreateRuntime.
         :type request: :class:`tencentcloud.tiems.v20190416.models.CreateRuntimeRequest`
@@ -110,7 +110,7 @@ class TiemsClient(AbstractClient):
 
 
     def CreateService(self, request):
-        """创建服务
+        """創建服務
 
         :param request: Request instance for CreateService.
         :type request: :class:`tencentcloud.tiems.v20190416.models.CreateServiceRequest`
@@ -138,7 +138,7 @@ class TiemsClient(AbstractClient):
 
 
     def CreateServiceConfig(self, request):
-        """创建服务配置
+        """創建服務配置
 
         :param request: Request instance for CreateServiceConfig.
         :type request: :class:`tencentcloud.tiems.v20190416.models.CreateServiceConfigRequest`
@@ -166,7 +166,7 @@ class TiemsClient(AbstractClient):
 
 
     def DeleteInstance(self, request):
-        """删除资源组中的节点。目前仅支持删除已经到期的预付费节点，和按量付费节点。
+        """删除資源組中的節點。目前僅支援删除已經到期的預付費節點，和按量付費節點。
 
         :param request: Request instance for DeleteInstance.
         :type request: :class:`tencentcloud.tiems.v20190416.models.DeleteInstanceRequest`
@@ -194,7 +194,7 @@ class TiemsClient(AbstractClient):
 
 
     def DeleteJob(self, request):
-        """删除任务
+        """删除任務
 
         :param request: Request instance for DeleteJob.
         :type request: :class:`tencentcloud.tiems.v20190416.models.DeleteJobRequest`
@@ -222,7 +222,7 @@ class TiemsClient(AbstractClient):
 
 
     def DeleteResourceGroup(self, request):
-        """删除资源组
+        """删除資源組
 
         :param request: Request instance for DeleteResourceGroup.
         :type request: :class:`tencentcloud.tiems.v20190416.models.DeleteResourceGroupRequest`
@@ -250,7 +250,7 @@ class TiemsClient(AbstractClient):
 
 
     def DeleteRsgAsGroup(self, request):
-        """伸缩
+        """伸縮
 
         :param request: Request instance for DeleteRsgAsGroup.
         :type request: :class:`tencentcloud.tiems.v20190416.models.DeleteRsgAsGroupRequest`
@@ -278,7 +278,7 @@ class TiemsClient(AbstractClient):
 
 
     def DeleteRuntime(self, request):
-        """删除运行环境
+        """删除運作環境
 
         :param request: Request instance for DeleteRuntime.
         :type request: :class:`tencentcloud.tiems.v20190416.models.DeleteRuntimeRequest`
@@ -306,7 +306,7 @@ class TiemsClient(AbstractClient):
 
 
     def DeleteService(self, request):
-        """删除服务
+        """删除服務
 
         :param request: Request instance for DeleteService.
         :type request: :class:`tencentcloud.tiems.v20190416.models.DeleteServiceRequest`
@@ -334,7 +334,7 @@ class TiemsClient(AbstractClient):
 
 
     def DeleteServiceConfig(self, request):
-        """删除服务配置
+        """删除服務配置
 
         :param request: Request instance for DeleteServiceConfig.
         :type request: :class:`tencentcloud.tiems.v20190416.models.DeleteServiceConfigRequest`
@@ -362,7 +362,7 @@ class TiemsClient(AbstractClient):
 
 
     def DescribeInstances(self, request):
-        """获取节点列表
+        """獲取節點清單
 
         :param request: Request instance for DescribeInstances.
         :type request: :class:`tencentcloud.tiems.v20190416.models.DescribeInstancesRequest`
@@ -390,7 +390,7 @@ class TiemsClient(AbstractClient):
 
 
     def DescribeResourceGroups(self, request):
-        """获取资源组列表
+        """獲取資源組清單
 
         :param request: Request instance for DescribeResourceGroups.
         :type request: :class:`tencentcloud.tiems.v20190416.models.DescribeResourceGroupsRequest`
@@ -418,7 +418,7 @@ class TiemsClient(AbstractClient):
 
 
     def DescribeRsgAsGroupActivities(self, request):
-        """查询伸缩组活动
+        """查詢伸縮組活動
 
         :param request: Request instance for DescribeRsgAsGroupActivities.
         :type request: :class:`tencentcloud.tiems.v20190416.models.DescribeRsgAsGroupActivitiesRequest`
@@ -446,7 +446,7 @@ class TiemsClient(AbstractClient):
 
 
     def DescribeRsgAsGroups(self, request):
-        """查询资源组的伸缩组信息
+        """查詢資源組的伸縮組訊息
 
         :param request: Request instance for DescribeRsgAsGroups.
         :type request: :class:`tencentcloud.tiems.v20190416.models.DescribeRsgAsGroupsRequest`
@@ -474,7 +474,7 @@ class TiemsClient(AbstractClient):
 
 
     def DescribeRuntimes(self, request):
-        """描述服务运行环境
+        """描述服務運作環境
 
         :param request: Request instance for DescribeRuntimes.
         :type request: :class:`tencentcloud.tiems.v20190416.models.DescribeRuntimesRequest`
@@ -502,7 +502,7 @@ class TiemsClient(AbstractClient):
 
 
     def DescribeServiceConfigs(self, request):
-        """描述服务配置
+        """描述服務配置
 
         :param request: Request instance for DescribeServiceConfigs.
         :type request: :class:`tencentcloud.tiems.v20190416.models.DescribeServiceConfigsRequest`
@@ -530,7 +530,7 @@ class TiemsClient(AbstractClient):
 
 
     def DescribeServices(self, request):
-        """描述服务
+        """描述服務
 
         :param request: Request instance for DescribeServices.
         :type request: :class:`tencentcloud.tiems.v20190416.models.DescribeServicesRequest`
@@ -558,7 +558,7 @@ class TiemsClient(AbstractClient):
 
 
     def DisableRsgAsGroup(self, request):
-        """停用资源组的伸缩组
+        """停用資源組的伸縮組
 
         :param request: Request instance for DisableRsgAsGroup.
         :type request: :class:`tencentcloud.tiems.v20190416.models.DisableRsgAsGroupRequest`
@@ -586,7 +586,7 @@ class TiemsClient(AbstractClient):
 
 
     def EnableRsgAsGroup(self, request):
-        """启用资源组的伸缩组
+        """啓用資源組的伸縮組
 
         :param request: Request instance for EnableRsgAsGroup.
         :type request: :class:`tencentcloud.tiems.v20190416.models.EnableRsgAsGroupRequest`
@@ -614,7 +614,7 @@ class TiemsClient(AbstractClient):
 
 
     def ExposeService(self, request):
-        """暴露服务
+        """暴露服務
 
         :param request: Request instance for ExposeService.
         :type request: :class:`tencentcloud.tiems.v20190416.models.ExposeServiceRequest`
@@ -642,7 +642,7 @@ class TiemsClient(AbstractClient):
 
 
     def UpdateJob(self, request):
-        """更新任务
+        """更新任務
 
         :param request: Request instance for UpdateJob.
         :type request: :class:`tencentcloud.tiems.v20190416.models.UpdateJobRequest`
@@ -670,7 +670,7 @@ class TiemsClient(AbstractClient):
 
 
     def UpdateRsgAsGroup(self, request):
-        """更新资源组的伸缩组
+        """更新資源組的伸縮組
 
         :param request: Request instance for UpdateRsgAsGroup.
         :type request: :class:`tencentcloud.tiems.v20190416.models.UpdateRsgAsGroupRequest`
@@ -698,7 +698,7 @@ class TiemsClient(AbstractClient):
 
 
     def UpdateService(self, request):
-        """更新服务
+        """更新服務
 
         :param request: Request instance for UpdateService.
         :type request: :class:`tencentcloud.tiems.v20190416.models.UpdateServiceRequest`

@@ -26,17 +26,17 @@ class BriClient(AbstractClient):
 
 
     def DescribeBRI(self, request):
-        """输入业务名 (bri_num, bri_dev, bri_ip, bri_apk, bri_url 五种之一)  及其 相应字段, 获取业务风险分数和标签。
+        """輸入業務名 (bri_num, bri_dev, bri_ip, bri_apk, bri_url 五種之一)  及其 相應欄位, 獲取業務風險分數和标簽。
 
-        当业务名为bri_num时，必须填PhoneNumber字段.
+        當業務名爲bri_num時，必須填PhoneNumber欄位.
 
-        当业务名为bri_dev时, 必须填Imei字段.
+        當業務名爲bri_dev時, 必須填Imei欄位.
 
-        当业务名为bri_ip时，必须填IP字段.
+        當業務名爲bri_ip時，必須填IP欄位.
 
-        当业务名为bri_apk时，必须填 (PackageName,CertMd5,FileSize) 三个字段 或者 FileMd5一个字段.
+        當業務名爲bri_apk時，必須填 (PackageName,CertMd5,FileSize) 三個欄位 或者 FileMd5一個欄位.
 
-        当业务名为bri_url时，必须填Url字段.
+        當業務名爲bri_url時，必須填Url欄位.
 
         :param request: Request instance for DescribeBRI.
         :type request: :class:`tencentcloud.bri.v20190328.models.DescribeBRIRequest`

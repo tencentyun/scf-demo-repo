@@ -26,9 +26,9 @@ class EsClient(AbstractClient):
 
 
     def CreateInstance(self, request):
-        """创建指定规格的ES集群实例
+        """創建指定規格的ES集群實例
 
-        :param request: 调用CreateInstance所需参数的结构体。
+        :param request: 調用CreateInstance所需參數的結構體。
         :type request: :class:`tencentcloud.es.v20180416.models.CreateInstanceRequest`
         :rtype: :class:`tencentcloud.es.v20180416.models.CreateInstanceResponse`
 
@@ -54,9 +54,9 @@ class EsClient(AbstractClient):
 
 
     def DeleteInstance(self, request):
-        """销毁集群实例
+        """銷毀集群實例
 
-        :param request: 调用DeleteInstance所需参数的结构体。
+        :param request: 調用DeleteInstance所需參數的結構體。
         :type request: :class:`tencentcloud.es.v20180416.models.DeleteInstanceRequest`
         :rtype: :class:`tencentcloud.es.v20180416.models.DeleteInstanceResponse`
 
@@ -82,9 +82,9 @@ class EsClient(AbstractClient):
 
 
     def DescribeInstanceLogs(self, request):
-        """查询用户该地域下符合条件的ES集群的日志
+        """查詢用戶該地域下符合條件的ES集群的日志
 
-        :param request: 调用DescribeInstanceLogs所需参数的结构体。
+        :param request: 調用DescribeInstanceLogs所需參數的結構體。
         :type request: :class:`tencentcloud.es.v20180416.models.DescribeInstanceLogsRequest`
         :rtype: :class:`tencentcloud.es.v20180416.models.DescribeInstanceLogsResponse`
 
@@ -110,9 +110,9 @@ class EsClient(AbstractClient):
 
 
     def DescribeInstanceOperations(self, request):
-        """查询实例指定条件下的操作记录
+        """查詢實例指定條件下的操作記錄
 
-        :param request: 调用DescribeInstanceOperations所需参数的结构体。
+        :param request: 調用DescribeInstanceOperations所需參數的結構體。
         :type request: :class:`tencentcloud.es.v20180416.models.DescribeInstanceOperationsRequest`
         :rtype: :class:`tencentcloud.es.v20180416.models.DescribeInstanceOperationsResponse`
 
@@ -138,9 +138,9 @@ class EsClient(AbstractClient):
 
 
     def DescribeInstances(self, request):
-        """查询用户该地域下符合条件的所有实例
+        """查詢用戶該地域下符合條件的所有實例
 
-        :param request: 调用DescribeInstances所需参数的结构体。
+        :param request: 調用DescribeInstances所需參數的結構體。
         :type request: :class:`tencentcloud.es.v20180416.models.DescribeInstancesRequest`
         :rtype: :class:`tencentcloud.es.v20180416.models.DescribeInstancesResponse`
 
@@ -166,9 +166,9 @@ class EsClient(AbstractClient):
 
 
     def RestartInstance(self, request):
-        """重启ES集群实例(用于系统版本更新等操作)
+        """重啓ES集群實例(用于系統版本更新等操作)
 
-        :param request: 调用RestartInstance所需参数的结构体。
+        :param request: 調用RestartInstance所需參數的結構體。
         :type request: :class:`tencentcloud.es.v20180416.models.RestartInstanceRequest`
         :rtype: :class:`tencentcloud.es.v20180416.models.RestartInstanceResponse`
 
@@ -194,19 +194,19 @@ class EsClient(AbstractClient):
 
 
     def UpdateInstance(self, request):
-        """对集群进行扩缩容，修改实例名称，修改配置，重置密码， 添加Kibana黑白名单等操作。参数中InstanceId为必传参数，ForceRestart为选填参数，剩余参数传递组合及含义如下：
-        - InstanceName：修改实例名称(仅用于标识实例)
-        - NodeNum：集群数据节点横向扩缩容
-        - NodeType, DiskSize：集群数据节点纵向扩缩容
-        - MasterNodeNum: 集群专用主节点横向扩缩容
-        - MasterNodeType, MasterNodeDiskSize: 集群专用主节点纵向扩缩容
+        """對集群進行擴縮容，修改實例名稱，修改配置，重置密碼， 添加Kibana黑白名單等操作。參數中InstanceId爲必傳參數，ForceRestart爲選填參數，剩餘參數傳遞組合及含義如下：
+        - InstanceName：修改實例名稱(僅用于标識實例)
+        - NodeNum：集群數據節點橫向擴縮容
+        - NodeType, DiskSize：集群數據節點縱向擴縮容
+        - MasterNodeNum: 集群專用主節點橫向擴縮容
+        - MasterNodeType, MasterNodeDiskSize: 集群專用主節點縱向擴縮容
         - EsConfig：修改集群配置
-        - Password：修改默认用户elastic的密码
-        - EsAcl：修改访问控制列表
-        - CosBackUp: 设置集群COS自动备份信息
-        以上参数组合只能传递一种，多传或少传均会导致请求失败
+        - Password：修改預設用戶elastic的密碼
+        - EsAcl：修改訪問控制清單
+        - CosBackUp: 設置集群COS自動備份訊息
+        以上參數組合只能傳遞一種，多傳或少傳均會導緻請求失敗
 
-        :param request: 调用UpdateInstance所需参数的结构体。
+        :param request: 調用UpdateInstance所需參數的結構體。
         :type request: :class:`tencentcloud.es.v20180416.models.UpdateInstanceRequest`
         :rtype: :class:`tencentcloud.es.v20180416.models.UpdateInstanceResponse`
 

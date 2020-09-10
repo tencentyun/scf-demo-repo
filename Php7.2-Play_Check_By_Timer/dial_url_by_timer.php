@@ -6,14 +6,14 @@ require_once("PHPMailer/Exception.php");
 use PHPMailer\PHPMailer;
 
 # The user's mail information, here we use qq mail as an example
-# 发送邮件使用的邮箱相关信息，第三方 SMTP 服务,以QQ邮箱为例
+# 發送郵件使用的電子信箱相關訊息，第三方 SMTP 服務,以QQ電子信箱爲例
 const mail_host="smtp.qq.com";         #SMTPhost
 const mail_user="XXXXXXXXX@qq.com";    #user's name
 const mail_pass="****************";    #SMTP service password，if you use qq mail, please fill in the authentication code
 const mail_port=465;                   #SMTP port
 
 # The test url
-# 要拨测的URL地址
+# 要撥測的URL網址
 $test_url_list = array(
     "http://www.baidu.com",
     "http://www.qq.com",
@@ -22,7 +22,7 @@ $test_url_list = array(
 );
 
 # The email to receive notify
-# 接收报警的邮箱地址
+# 接收報警的電子信箱網址
 $email_notify_list = array(
     "XXXXXXXXX@qq.com"
 );
@@ -30,38 +30,38 @@ $email_notify_list = array(
 function sendEmail($to,$title,$content){
     $mail = new PHPMailer\PHPMailer();
     // we suggest you use smtp debug for debugging in development environment
-    //是否启用smtp的debug进行调试，开发环境建议开启，生产环境注释掉即可
+    //是否啓用smtp的debug進行調試，開發環境建議開啓，生産環境注釋掉即可
     $mail->SMTPDebug = 2;
     // Use smtp authentication to send email
-    // 使用smtp鉴权方式发送邮件
+    // 使用smtp鑒權方式發送郵件
     $mail->isSMTP();
     $mail->SMTPAuth=true;
     // email host
-    //邮箱服务器地址
+    //電子信箱服務器網址
     $mail->Host = mail_host;
     //Use ssl for log in authentication
-    //设置使用ssl加密方式登录鉴权
+    //設置使用ssl加密方式登入鑒權
     $mail->SMTPSecure = 'ssl';
     //Setting remote smtp host port for ssl connection
-    //设置ssl连接smtp服务器的远程服务器端口号
+    //設置ssl連接smtp服務器的遠端服務器端口号
     $mail->Port = mail_port;
     $mail->CharSet = 'UTF-8';
     $mail->Username =mail_user;
     //smtp password, if you use qq mail, fill in the generated authentication code
-    //smtp登录的密码，如果使用QQ邮箱，需使用生成的授权码
+    //smtp登入的密碼，如果使用QQ電子信箱，需使用生成的授權碼
     $mail->Password = mail_pass;
     //The sender's email address
-    //设置发件人邮箱地址
+    //設置發件人電子信箱網址
     $mail->From = mail_user;
     //Check whether the mail content is html format
-    //邮件正文是否为html编码
+    //郵件正文是否爲html編碼
     $mail->isHTML(true);
     $mail->addAddress($to,'receiver');
     //Email subject
-    //设置邮件的主题
+    //設置郵件的主題
     $mail->Subject = $title;
     //Add mail content
-    //添加邮件正文 上方将isHTML设置成了true，则可以是完整的html字符串
+    //添加郵件正文 上方将isHTML設置成了true，則可以是完整的html字串
     $mail->Body = $content;
     $status = $mail->send();
 
@@ -79,22 +79,22 @@ function test_url($test_url_list) {
     foreach ($test_url_list as $test_url) {
         print "Testing $test_url ";
         // Setting url
-        // 设置url路径
+        // 設置url路徑
         curl_setopt($curl, CURLOPT_URL, $test_url);
         // Return the curl_exec() message in file stream format
-        // 将 curl_exec()获取的信息以文件流的形式返回，而不是直接输出。
+        // 将 curl_exec()獲取的訊息以文件流的形式返回，而不是直接輸出。
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true) ;
         // Return thre data when start CURLOPT_RETURNTRANSFER
-        // 在启用 CURLOPT_RETURNTRANSFER 时候将获取数据返回
+        // 在啓用 CURLOPT_RETURNTRANSFER 時候将獲取數據返回
         curl_setopt($curl, CURLOPT_BINARYTRANSFER, true) ;
         // Set timeout
-        // 设置超时时间
+        // 設置超時時間
         curl_setopt ($curl, CURLOPT_CONNECTTIMEOUT, $timeout);
         // Retrive the head request information by CURLINFO_HEADER_OUT
-        // CURLINFO_HEADER_OUT选项可以拿到请求头信息
+        // CURLINFO_HEADER_OUT選項可以拿到請求頭訊息
         curl_setopt($curl, CURLINFO_HEADER_OUT, true);
         // Execution
-        // 执行
+        // 執行
         $data = curl_exec($curl);
         $info = curl_getinfo($curl);
         $status_code = $info['http_code'];

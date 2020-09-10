@@ -255,4 +255,3 @@ class SecurityClient(NamespacedClient):
                 raise ValueError("Empty value passed for a required argument.")
         return self.transport.perform_request('PUT', _make_path('_xpack',
             'security', 'role_mapping', name), params=params, body=body)
-

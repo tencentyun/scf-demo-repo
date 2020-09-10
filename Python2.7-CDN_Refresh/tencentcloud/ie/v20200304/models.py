@@ -17,13 +17,13 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CallbackInfo(AbstractModel):
-    """任务结果回调地址信息
+    """任務結果回調網址訊息
 
     """
 
     def __init__(self):
         """
-        :param Url: 回调URL。
+        :param Url: 回調URL。
         :type Url: str
         """
         self.Url = None
@@ -34,15 +34,15 @@ class CallbackInfo(AbstractModel):
 
 
 class ClassificationEditingInfo(AbstractModel):
-    """视频分类识别任务参数信息
+    """視訊分類識别任務參數訊息
 
     """
 
     def __init__(self):
         """
-        :param Switch: 是否开启视频分类识别。0为关闭，1为开启。其他非0非1值默认为0。
+        :param Switch: 是否開啓視訊分類識别。0爲關閉，1爲開啓。其他非0非1值預設爲0。
         :type Switch: int
-        :param CustomInfo: 额外定制化服务参数。参数为序列化的Json字符串，例如：{"k1":"v1"}。
+        :param CustomInfo: 額外定制化服務參數。參數爲序列化的Json字串，例如：{"k1":"v1"}。
         :type CustomInfo: str
         """
         self.Switch = None
@@ -55,22 +55,22 @@ class ClassificationEditingInfo(AbstractModel):
 
 
 class ClassificationTaskResult(AbstractModel):
-    """视频分类识别结果信息
+    """視訊分類識别結果訊息
 
     """
 
     def __init__(self):
         """
-        :param Status: 编辑任务状态。 
-1：执行中；2：成功；3：失败。
+        :param Status: 編輯任務狀态。 
+1：執行中；2：成功；3：失敗。
         :type Status: int
-        :param ErrCode: 编辑任务失败错误码。 
-0：成功；其他值：失败。
+        :param ErrCode: 編輯任務失敗錯誤碼。 
+0：成功；其他值：失敗。
         :type ErrCode: int
-        :param ErrMsg: 编辑任务失败错误描述。
+        :param ErrMsg: 編輯任務失敗錯誤描述。
         :type ErrMsg: str
-        :param ItemSet: 视频分类识别结果集。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ItemSet: 視訊分類識别結果集。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ItemSet: list of ClassificationTaskResultItem
         """
         self.Status = None
@@ -92,15 +92,15 @@ class ClassificationTaskResult(AbstractModel):
 
 
 class ClassificationTaskResultItem(AbstractModel):
-    """视频分类识别结果项
+    """視訊分類識别結果項
 
     """
 
     def __init__(self):
         """
-        :param Classification: 分类名称。
+        :param Classification: 分類名稱。
         :type Classification: str
-        :param Confidence: 置信度，取值范围是 0 到 100。
+        :param Confidence: 置信度，取值範圍是 0 到 100。
         :type Confidence: float
         """
         self.Classification = None
@@ -113,25 +113,25 @@ class ClassificationTaskResultItem(AbstractModel):
 
 
 class CosAuthMode(AbstractModel):
-    """任务视频cos授权信息
+    """任務視訊cos授權訊息
 
     """
 
     def __init__(self):
         """
-        :param Type: 授权类型，可选值： 
-0：bucket授权，需要将对应bucket授权给本服务帐号（3020447271），否则会读写cos失败； 
-1：key托管，把cos的账号id和key托管于本服务，本服务会提供一个托管id； 
-3：临时key授权。
-注意：目前智能编辑还不支持临时key授权。
+        :param Type: 授權類型，可選值： 
+0：bucket授權，需要将對應bucket授權給本服務帳号（3020447271），否則會讀寫cos失敗； 
+1：key托管，把cos的賬号id和key托管于本服務，本服務會提供一個托管id； 
+3：臨時key授權。
+注意：目前智慧編輯還不支援臨時key授權。
         :type Type: int
-        :param HostedId: cos账号托管id，Type等于1时必选。
+        :param HostedId: cos賬号托管id，Type等于1時必選。
         :type HostedId: str
-        :param SecretId: cos身份识别id，Type等于3时必选。
+        :param SecretId: cos身份識别id，Type等于3時必選。
         :type SecretId: str
-        :param SecretKey: cos身份秘钥，Type等于3时必选。
+        :param SecretKey: cos身份秘鑰，Type等于3時必選。
         :type SecretKey: str
-        :param Token: 临时授权 token，Type等于3时必选。
+        :param Token: 臨時授權 token，Type等于3時必選。
         :type Token: str
         """
         self.Type = None
@@ -150,21 +150,21 @@ class CosAuthMode(AbstractModel):
 
 
 class CosInfo(AbstractModel):
-    """任务视频cos信息
+    """任務視訊cos訊息
 
     """
 
     def __init__(self):
         """
-        :param Region: cos 区域值。例如：ap-beijing。
+        :param Region: cos 區域值。例如：ap-beijing。
         :type Region: str
-        :param Bucket: cos 存储桶，格式为BuketName-AppId。例如：test-123456。
+        :param Bucket: cos 儲存桶，格式爲BuketName-AppId。例如：test-123456。
         :type Bucket: str
-        :param Path: cos 路径。 
-对于写表示目录，例如：/test； 
-对于读表示文件路径，例如：/test/test.mp4。
+        :param Path: cos 路徑。 
+對于寫表示目錄，例如：/test； 
+對于讀表示文件路徑，例如：/test/test.mp4。
         :type Path: str
-        :param CosAuthMode: cos 授权信息，不填默认为公有权限。
+        :param CosAuthMode: cos 授權訊息，不填預設爲公有權限。
         :type CosAuthMode: :class:`tencentcloud.ie.v20200304.models.CosAuthMode`
         """
         self.Region = None
@@ -183,15 +183,15 @@ class CosInfo(AbstractModel):
 
 
 class CoverEditingInfo(AbstractModel):
-    """智能封面任务参数信息
+    """智慧封面任務參數訊息
 
     """
 
     def __init__(self):
         """
-        :param Switch: 是否开启智能封面。0为关闭，1为开启。其他非0非1值默认为0。
+        :param Switch: 是否開啓智慧封面。0爲關閉，1爲開啓。其他非0非1值預設爲0。
         :type Switch: int
-        :param CustomInfo: 额外定制化服务参数。参数为序列化的Json字符串，例如：{"k1":"v1"}。
+        :param CustomInfo: 額外定制化服務參數。參數爲序列化的Json字串，例如：{"k1":"v1"}。
         :type CustomInfo: str
         """
         self.Switch = None
@@ -204,22 +204,22 @@ class CoverEditingInfo(AbstractModel):
 
 
 class CoverTaskResult(AbstractModel):
-    """智能封面结果信息
+    """智慧封面結果訊息
 
     """
 
     def __init__(self):
         """
-        :param Status: 编辑任务状态。 
-1：执行中；2：成功；3：失败。
+        :param Status: 編輯任務狀态。 
+1：執行中；2：成功；3：失敗。
         :type Status: int
-        :param ErrCode: 编辑任务失败错误码。 
-0：成功；其他值：失败。
+        :param ErrCode: 編輯任務失敗錯誤碼。 
+0：成功；其他值：失敗。
         :type ErrCode: int
-        :param ErrMsg: 编辑任务失败错误描述。
+        :param ErrMsg: 編輯任務失敗錯誤描述。
         :type ErrMsg: str
-        :param ItemSet: 智能封面结果集。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ItemSet: 智慧封面結果集。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ItemSet: list of CoverTaskResultItem
         """
         self.Status = None
@@ -241,15 +241,15 @@ class CoverTaskResult(AbstractModel):
 
 
 class CoverTaskResultItem(AbstractModel):
-    """智能封面结果项
+    """智慧封面結果項
 
     """
 
     def __init__(self):
         """
-        :param CoverUrl: 智能封面地址。
+        :param CoverUrl: 智慧封面網址。
         :type CoverUrl: str
-        :param Confidence: 置信度，取值范围是 0 到 100。
+        :param Confidence: 置信度，取值範圍是 0 到 100。
         :type Confidence: float
         """
         self.CoverUrl = None
@@ -262,19 +262,19 @@ class CoverTaskResultItem(AbstractModel):
 
 
 class CreateEditingTaskRequest(AbstractModel):
-    """CreateEditingTask请求参数结构体
+    """CreateEditingTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EditingInfo: 智能编辑任务参数。
+        :param EditingInfo: 智慧編輯任務參數。
         :type EditingInfo: :class:`tencentcloud.ie.v20200304.models.EditingInfo`
-        :param DownInfo: 视频源信息。
+        :param DownInfo: 視訊源訊息。
         :type DownInfo: :class:`tencentcloud.ie.v20200304.models.DownInfo`
-        :param SaveInfo: 结果存储信息。对于包含智能拆条、智能集锦或者智能封面的任务必选。
+        :param SaveInfo: 結果儲存訊息。對于包含智慧拆條、智慧集錦或者智慧封面的任務必選。
         :type SaveInfo: :class:`tencentcloud.ie.v20200304.models.SaveInfo`
-        :param CallbackInfo: 任务结果回调地址信息。
+        :param CallbackInfo: 任務結果回調網址訊息。
         :type CallbackInfo: :class:`tencentcloud.ie.v20200304.models.CallbackInfo`
         """
         self.EditingInfo = None
@@ -299,15 +299,15 @@ class CreateEditingTaskRequest(AbstractModel):
 
 
 class CreateEditingTaskResponse(AbstractModel):
-    """CreateEditingTask返回参数结构体
+    """CreateEditingTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 编辑任务 ID，可以通过该 ID 查询任务状态。
+        :param TaskId: 編輯任務 ID，可以通過該 ID 查詢任務狀态。
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -320,13 +320,13 @@ class CreateEditingTaskResponse(AbstractModel):
 
 
 class DescribeEditingTaskResultRequest(AbstractModel):
-    """DescribeEditingTaskResult请求参数结构体
+    """DescribeEditingTaskResult請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 编辑任务 ID。
+        :param TaskId: 編輯任務 ID。
         :type TaskId: str
         """
         self.TaskId = None
@@ -337,15 +337,15 @@ class DescribeEditingTaskResultRequest(AbstractModel):
 
 
 class DescribeEditingTaskResultResponse(AbstractModel):
-    """DescribeEditingTaskResult返回参数结构体
+    """DescribeEditingTaskResult返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskResult: 编辑任务结果信息。
+        :param TaskResult: 編輯任務結果訊息。
         :type TaskResult: :class:`tencentcloud.ie.v20200304.models.EditingTaskResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskResult = None
@@ -360,19 +360,19 @@ class DescribeEditingTaskResultResponse(AbstractModel):
 
 
 class DownInfo(AbstractModel):
-    """视频源信息
+    """視訊源訊息
 
     """
 
     def __init__(self):
         """
-        :param Type: 下载类型，可选值： 
+        :param Type: 下載類型，可選值： 
 0：UrlInfo； 
 1：CosInfo。
         :type Type: int
-        :param UrlInfo: Url形式下载信息，当Type等于0时必选。
+        :param UrlInfo: Url形式下載訊息，當Type等于0時必選。
         :type UrlInfo: :class:`tencentcloud.ie.v20200304.models.UrlInfo`
-        :param CosInfo: Cos形式下载信息，当Type等于1时必选。
+        :param CosInfo: Cos形式下載訊息，當Type等于1時必選。
         :type CosInfo: :class:`tencentcloud.ie.v20200304.models.CosInfo`
         """
         self.Type = None
@@ -391,23 +391,23 @@ class DownInfo(AbstractModel):
 
 
 class EditingInfo(AbstractModel):
-    """智能编辑任务参数信息
+    """智慧編輯任務參數訊息
 
     """
 
     def __init__(self):
         """
-        :param TagEditingInfo: 视频标签识别任务参数，不填则不开启。
+        :param TagEditingInfo: 視訊标簽識别任務參數，不填則不開啓。
         :type TagEditingInfo: :class:`tencentcloud.ie.v20200304.models.TagEditingInfo`
-        :param ClassificationEditingInfo: 视频分类识别任务参数，不填则不开启。
+        :param ClassificationEditingInfo: 視訊分類識别任務參數，不填則不開啓。
         :type ClassificationEditingInfo: :class:`tencentcloud.ie.v20200304.models.ClassificationEditingInfo`
-        :param StripEditingInfo: 智能拆条任务参数，不填则不开启。
+        :param StripEditingInfo: 智慧拆條任務參數，不填則不開啓。
         :type StripEditingInfo: :class:`tencentcloud.ie.v20200304.models.StripEditingInfo`
-        :param HighlightsEditingInfo: 智能集锦任务参数，不填则不开启。
+        :param HighlightsEditingInfo: 智慧集錦任務參數，不填則不開啓。
         :type HighlightsEditingInfo: :class:`tencentcloud.ie.v20200304.models.HighlightsEditingInfo`
-        :param CoverEditingInfo: 智能封面任务参数，不填则不开启。
+        :param CoverEditingInfo: 智慧封面任務參數，不填則不開啓。
         :type CoverEditingInfo: :class:`tencentcloud.ie.v20200304.models.CoverEditingInfo`
-        :param OpeningEndingEditingInfo: 片头片尾识别任务参数，不填则不开启。
+        :param OpeningEndingEditingInfo: 片頭片尾識别任務參數，不填則不開啓。
         :type OpeningEndingEditingInfo: :class:`tencentcloud.ie.v20200304.models.OpeningEndingEditingInfo`
         """
         self.TagEditingInfo = None
@@ -440,34 +440,34 @@ class EditingInfo(AbstractModel):
 
 
 class EditingTaskResult(AbstractModel):
-    """智能识别任务结果信息
+    """智慧識别任務結果訊息
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 编辑任务 ID。
+        :param TaskId: 編輯任務 ID。
         :type TaskId: str
-        :param Status: 编辑任务状态。 
-1：执行中；2：已完成。
+        :param Status: 編輯任務狀态。 
+1：執行中；2：已完成。
         :type Status: int
-        :param TagTaskResult: 视频标签识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagTaskResult: 視訊标簽識别結果。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagTaskResult: :class:`tencentcloud.ie.v20200304.models.TagTaskResult`
-        :param ClassificationTaskResult: 视频分类识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClassificationTaskResult: 視訊分類識别結果。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClassificationTaskResult: :class:`tencentcloud.ie.v20200304.models.ClassificationTaskResult`
-        :param StripTaskResult: 智能拆条结果。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StripTaskResult: 智慧拆條結果。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StripTaskResult: :class:`tencentcloud.ie.v20200304.models.StripTaskResult`
-        :param HighlightsTaskResult: 智能集锦结果。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HighlightsTaskResult: 智慧集錦結果。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HighlightsTaskResult: :class:`tencentcloud.ie.v20200304.models.HighlightsTaskResult`
-        :param CoverTaskResult: 智能封面结果。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CoverTaskResult: 智慧封面結果。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CoverTaskResult: :class:`tencentcloud.ie.v20200304.models.CoverTaskResult`
-        :param OpeningEndingTaskResult: 片头片尾识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OpeningEndingTaskResult: 片頭片尾識别結果。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OpeningEndingTaskResult: :class:`tencentcloud.ie.v20200304.models.OpeningEndingTaskResult`
         """
         self.TaskId = None
@@ -504,15 +504,15 @@ class EditingTaskResult(AbstractModel):
 
 
 class HighlightsEditingInfo(AbstractModel):
-    """智能集锦任务参数信息
+    """智慧集錦任務參數訊息
 
     """
 
     def __init__(self):
         """
-        :param Switch: 是否开启智能集锦。0为关闭，1为开启。其他非0非1值默认为0。
+        :param Switch: 是否開啓智慧集錦。0爲關閉，1爲開啓。其他非0非1值預設爲0。
         :type Switch: int
-        :param CustomInfo: 额外定制化服务参数。参数为序列化的Json字符串，例如：{"k1":"v1"}。
+        :param CustomInfo: 額外定制化服務參數。參數爲序列化的Json字串，例如：{"k1":"v1"}。
         :type CustomInfo: str
         """
         self.Switch = None
@@ -525,22 +525,22 @@ class HighlightsEditingInfo(AbstractModel):
 
 
 class HighlightsTaskResult(AbstractModel):
-    """智能集锦结果信息
+    """智慧集錦結果訊息
 
     """
 
     def __init__(self):
         """
-        :param Status: 编辑任务状态。 
-1：执行中；2：成功；3：失败。
+        :param Status: 編輯任務狀态。 
+1：執行中；2：成功；3：失敗。
         :type Status: int
-        :param ErrCode: 编辑任务失败错误码。 
-0：成功；其他值：失败。
+        :param ErrCode: 編輯任務失敗錯誤碼。 
+0：成功；其他值：失敗。
         :type ErrCode: int
-        :param ErrMsg: 编辑任务失败错误描述。
+        :param ErrMsg: 編輯任務失敗錯誤描述。
         :type ErrMsg: str
-        :param ItemSet: 智能集锦结果集。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ItemSet: 智慧集錦結果集。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ItemSet: list of HighlightsTaskResultItem
         """
         self.Status = None
@@ -562,21 +562,21 @@ class HighlightsTaskResult(AbstractModel):
 
 
 class HighlightsTaskResultItem(AbstractModel):
-    """智能集锦结果项
+    """智慧集錦結果項
 
     """
 
     def __init__(self):
         """
-        :param HighlightUrl: 智能集锦地址。
+        :param HighlightUrl: 智慧集錦網址。
         :type HighlightUrl: str
-        :param CovImgUrl: 智能集锦封面地址。
+        :param CovImgUrl: 智慧集錦封面網址。
         :type CovImgUrl: str
-        :param Confidence: 置信度，取值范围是 0 到 100。
+        :param Confidence: 置信度，取值範圍是 0 到 100。
         :type Confidence: float
-        :param Duration: 智能集锦持续时间，单位：秒。
+        :param Duration: 智慧集錦持續時間，單位：秒。
         :type Duration: float
-        :param SegmentSet: 智能集锦子片段结果集，集锦片段由这些子片段拼接生成。
+        :param SegmentSet: 智慧集錦子片段結果集，集錦片段由這些子片段拼接生成。
         :type SegmentSet: list of HighlightsTaskResultItemSegment
         """
         self.HighlightUrl = None
@@ -600,17 +600,17 @@ class HighlightsTaskResultItem(AbstractModel):
 
 
 class HighlightsTaskResultItemSegment(AbstractModel):
-    """智能集锦结果片段
+    """智慧集錦結果片段
 
     """
 
     def __init__(self):
         """
-        :param Confidence: 置信度，取值范围是 0 到 100。
+        :param Confidence: 置信度，取值範圍是 0 到 100。
         :type Confidence: float
-        :param StartTimeOffset: 集锦片段起始的偏移时间，单位：秒。
+        :param StartTimeOffset: 集錦片段起始的偏移時間，單位：秒。
         :type StartTimeOffset: float
-        :param EndTimeOffset: 集锦片段终止的偏移时间，单位：秒。
+        :param EndTimeOffset: 集錦片段終止的偏移時間，單位：秒。
         :type EndTimeOffset: float
         """
         self.Confidence = None
@@ -625,15 +625,15 @@ class HighlightsTaskResultItemSegment(AbstractModel):
 
 
 class OpeningEndingEditingInfo(AbstractModel):
-    """片头片尾识别任务参数信息
+    """片頭片尾識别任務參數訊息
 
     """
 
     def __init__(self):
         """
-        :param Switch: 是否开启片头片尾识别。0为关闭，1为开启。其他非0非1值默认为0。
+        :param Switch: 是否開啓片頭片尾識别。0爲關閉，1爲開啓。其他非0非1值預設爲0。
         :type Switch: int
-        :param CustomInfo: 额外定制化服务参数。参数为序列化的Json字符串，例如：{"k1":"v1"}。
+        :param CustomInfo: 額外定制化服務參數。參數爲序列化的Json字串，例如：{"k1":"v1"}。
         :type CustomInfo: str
         """
         self.Switch = None
@@ -646,22 +646,22 @@ class OpeningEndingEditingInfo(AbstractModel):
 
 
 class OpeningEndingTaskResult(AbstractModel):
-    """片头片尾识别结果信息
+    """片頭片尾識别結果訊息
 
     """
 
     def __init__(self):
         """
-        :param Status: 编辑任务状态。 
-1：执行中；2：成功；3：失败。
+        :param Status: 編輯任務狀态。 
+1：執行中；2：成功；3：失敗。
         :type Status: int
-        :param ErrCode: 编辑任务失败错误码。 
-0：成功；其他值：失败。
+        :param ErrCode: 編輯任務失敗錯誤碼。 
+0：成功；其他值：失敗。
         :type ErrCode: int
-        :param ErrMsg: 编辑任务失败错误描述。
+        :param ErrMsg: 編輯任務失敗錯誤描述。
         :type ErrMsg: str
-        :param Item: 片头片尾识别结果项。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Item: 片頭片尾識别結果項。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Item: :class:`tencentcloud.ie.v20200304.models.OpeningEndingTaskResultItem`
         """
         self.Status = None
@@ -680,19 +680,19 @@ class OpeningEndingTaskResult(AbstractModel):
 
 
 class OpeningEndingTaskResultItem(AbstractModel):
-    """片头片尾识别结果项
+    """片頭片尾識别結果項
 
     """
 
     def __init__(self):
         """
-        :param OpeningTimeOffset: 视频片头的结束时间点，单位：秒。
+        :param OpeningTimeOffset: 視訊片頭的結束時間點，單位：秒。
         :type OpeningTimeOffset: float
-        :param OpeningConfidence: 片头识别置信度，取值范围是 0 到 100。
+        :param OpeningConfidence: 片頭識别置信度，取值範圍是 0 到 100。
         :type OpeningConfidence: float
-        :param EndingTimeOffset: 视频片尾的开始时间点，单位：秒。
+        :param EndingTimeOffset: 視訊片尾的開始時間點，單位：秒。
         :type EndingTimeOffset: float
-        :param EndingConfidence: 片尾识别置信度，取值范围是 0 到 100。
+        :param EndingConfidence: 片尾識别置信度，取值範圍是 0 到 100。
         :type EndingConfidence: float
         """
         self.OpeningTimeOffset = None
@@ -709,16 +709,16 @@ class OpeningEndingTaskResultItem(AbstractModel):
 
 
 class SaveInfo(AbstractModel):
-    """任务存储信息
+    """任務儲存訊息
 
     """
 
     def __init__(self):
         """
-        :param Type: 存储类型，可选值： 
+        :param Type: 儲存類型，可選值： 
 1：CosInfo。
         :type Type: int
-        :param CosInfo: Cos形式存储信息，当Type等于1时必选。
+        :param CosInfo: Cos形式儲存訊息，當Type等于1時必選。
         :type CosInfo: :class:`tencentcloud.ie.v20200304.models.CosInfo`
         """
         self.Type = None
@@ -733,15 +733,15 @@ class SaveInfo(AbstractModel):
 
 
 class StripEditingInfo(AbstractModel):
-    """智能拆条任务参数信息
+    """智慧拆條任務參數訊息
 
     """
 
     def __init__(self):
         """
-        :param Switch: 是否开启智能拆条。0为关闭，1为开启。其他非0非1值默认为0。
+        :param Switch: 是否開啓智慧拆條。0爲關閉，1爲開啓。其他非0非1值預設爲0。
         :type Switch: int
-        :param CustomInfo: 额外定制化服务参数。参数为序列化的Json字符串，例如：{"k1":"v1"}。
+        :param CustomInfo: 額外定制化服務參數。參數爲序列化的Json字串，例如：{"k1":"v1"}。
         :type CustomInfo: str
         """
         self.Switch = None
@@ -754,22 +754,22 @@ class StripEditingInfo(AbstractModel):
 
 
 class StripTaskResult(AbstractModel):
-    """智能拆条结果信息
+    """智慧拆條結果訊息
 
     """
 
     def __init__(self):
         """
-        :param Status: 编辑任务状态。 
-1：执行中；2：成功；3：失败。
+        :param Status: 編輯任務狀态。 
+1：執行中；2：成功；3：失敗。
         :type Status: int
-        :param ErrCode: 编辑任务失败错误码。 
-0：成功；其他值：失败。
+        :param ErrCode: 編輯任務失敗錯誤碼。 
+0：成功；其他值：失敗。
         :type ErrCode: int
-        :param ErrMsg: 编辑任务失败错误描述。
+        :param ErrMsg: 編輯任務失敗錯誤描述。
         :type ErrMsg: str
-        :param ItemSet: 智能拆条结果集。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ItemSet: 智慧拆條結果集。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ItemSet: list of StripTaskResultItem
         """
         self.Status = None
@@ -791,21 +791,21 @@ class StripTaskResult(AbstractModel):
 
 
 class StripTaskResultItem(AbstractModel):
-    """智能拆条结果项
+    """智慧拆條結果項
 
     """
 
     def __init__(self):
         """
-        :param SegmentUrl: 视频拆条片段地址。
+        :param SegmentUrl: 視訊拆條片段網址。
         :type SegmentUrl: str
-        :param CovImgUrl: 拆条封面图片地址。
+        :param CovImgUrl: 拆條封面圖片網址。
         :type CovImgUrl: str
-        :param Confidence: 置信度，取值范围是 0 到 100。
+        :param Confidence: 置信度，取值範圍是 0 到 100。
         :type Confidence: float
-        :param StartTimeOffset: 拆条片段起始的偏移时间，单位：秒。
+        :param StartTimeOffset: 拆條片段起始的偏移時間，單位：秒。
         :type StartTimeOffset: float
-        :param EndTimeOffset: 拆条片段终止的偏移时间，单位：秒。
+        :param EndTimeOffset: 拆條片段終止的偏移時間，單位：秒。
         :type EndTimeOffset: float
         """
         self.SegmentUrl = None
@@ -824,15 +824,15 @@ class StripTaskResultItem(AbstractModel):
 
 
 class TagEditingInfo(AbstractModel):
-    """视频标签识别任务参数信息
+    """視訊标簽識别任務參數訊息
 
     """
 
     def __init__(self):
         """
-        :param Switch: 是否开启视频标签识别。0为关闭，1为开启。其他非0非1值默认为0。
+        :param Switch: 是否開啓視訊标簽識别。0爲關閉，1爲開啓。其他非0非1值預設爲0。
         :type Switch: int
-        :param CustomInfo: 额外定制化服务参数。参数为序列化的Json字符串，例如：{"k1":"v1"}。
+        :param CustomInfo: 額外定制化服務參數。參數爲序列化的Json字串，例如：{"k1":"v1"}。
         :type CustomInfo: str
         """
         self.Switch = None
@@ -845,22 +845,22 @@ class TagEditingInfo(AbstractModel):
 
 
 class TagTaskResult(AbstractModel):
-    """视频标签识别结果信息
+    """視訊标簽識别結果訊息
 
     """
 
     def __init__(self):
         """
-        :param Status: 编辑任务状态。 
-1：执行中；2：成功；3：失败。
+        :param Status: 編輯任務狀态。 
+1：執行中；2：成功；3：失敗。
         :type Status: int
-        :param ErrCode: 编辑任务失败错误码。 
-0：成功；其他值：失败。
+        :param ErrCode: 編輯任務失敗錯誤碼。 
+0：成功；其他值：失敗。
         :type ErrCode: int
-        :param ErrMsg: 编辑任务失败错误描述。
+        :param ErrMsg: 編輯任務失敗錯誤描述。
         :type ErrMsg: str
-        :param ItemSet: 视频标签识别结果集。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ItemSet: 視訊标簽識别結果集。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ItemSet: list of TagTaskResultItem
         """
         self.Status = None
@@ -882,15 +882,15 @@ class TagTaskResult(AbstractModel):
 
 
 class TagTaskResultItem(AbstractModel):
-    """视频标签识别结果项
+    """視訊标簽識别結果項
 
     """
 
     def __init__(self):
         """
-        :param Tag: 标签名称。
+        :param Tag: 标簽名稱。
         :type Tag: str
-        :param Confidence: 置信度，取值范围是 0 到 100。
+        :param Confidence: 置信度，取值範圍是 0 到 100。
         :type Confidence: float
         """
         self.Tag = None
@@ -903,21 +903,21 @@ class TagTaskResultItem(AbstractModel):
 
 
 class UrlInfo(AbstractModel):
-    """任务视频Url形式下载信息。
+    """任務視訊Url形式下載訊息。
 
     """
 
     def __init__(self):
         """
-        :param Url: 视频 URL。音视频支持mp4、ts等格式；直播流支持flv、rtmp格式。
-注意：目前智能编辑还不支持直播流场景。
+        :param Url: 視訊 URL。影音支援mp4、ts等格式；直播流支援flv、rtmp格式。
+注意：目前智慧編輯還不支援直播流場景。
         :type Url: str
-        :param Format: 视频地址格式，可选值： 
-0：音视频 ;
+        :param Format: 視訊網址格式，可選值： 
+0：影音 ;
 1：直播流。 
-默认为0。其他非0非1值默认为0。
+預設爲0。其他非0非1值預設爲0。
         :type Format: int
-        :param Host: 指定请求资源时，HTTP头部host的值。
+        :param Host: 指定請求資源時，HTTP頭部host的值。
         :type Host: str
         """
         self.Url = None

@@ -13,4 +13,3 @@ inputs:
   region: ap-guangzhou
   memorySize: 128
   timeout: 60
-

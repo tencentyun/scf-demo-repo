@@ -26,7 +26,7 @@ class TagClient(AbstractClient):
 
 
     def AddResourceTag(self, request):
-        """本接口用于给标签关联资源
+        """本介面用于給标簽關聯資源
 
         :param request: Request instance for AddResourceTag.
         :type request: :class:`tencentcloud.tag.v20180813.models.AddResourceTagRequest`
@@ -54,7 +54,7 @@ class TagClient(AbstractClient):
 
 
     def CreateTag(self, request):
-        """本接口用于创建一对标签键和标签值
+        """本介面用于創建一對标簽鍵和标簽值
 
         :param request: Request instance for CreateTag.
         :type request: :class:`tencentcloud.tag.v20180813.models.CreateTagRequest`
@@ -82,7 +82,7 @@ class TagClient(AbstractClient):
 
 
     def DeleteResourceTag(self, request):
-        """本接口用于解除标签和资源的关联关系
+        """本介面用于解除标簽和資源的關聯關系
 
         :param request: Request instance for DeleteResourceTag.
         :type request: :class:`tencentcloud.tag.v20180813.models.DeleteResourceTagRequest`
@@ -110,7 +110,7 @@ class TagClient(AbstractClient):
 
 
     def DeleteTag(self, request):
-        """本接口用于删除一对标签键和标签值
+        """本介面用于删除一對标簽鍵和标簽值
 
         :param request: Request instance for DeleteTag.
         :type request: :class:`tencentcloud.tag.v20180813.models.DeleteTagRequest`
@@ -138,7 +138,7 @@ class TagClient(AbstractClient):
 
 
     def DescribeResourceTags(self, request):
-        """查询资源关联标签
+        """查詢資源關聯标簽
 
         :param request: Request instance for DescribeResourceTags.
         :type request: :class:`tencentcloud.tag.v20180813.models.DescribeResourceTagsRequest`
@@ -166,7 +166,7 @@ class TagClient(AbstractClient):
 
 
     def DescribeResourceTagsByResourceIds(self, request):
-        """用于查询已有资源标签键值对
+        """用于查詢已有資源标簽鍵值對
 
         :param request: Request instance for DescribeResourceTagsByResourceIds.
         :type request: :class:`tencentcloud.tag.v20180813.models.DescribeResourceTagsByResourceIdsRequest`
@@ -194,7 +194,7 @@ class TagClient(AbstractClient):
 
 
     def DescribeResourceTagsByTagKeys(self, request):
-        """根据标签键获取资源标签
+        """根據标簽鍵獲取資源标簽
 
         :param request: Request instance for DescribeResourceTagsByTagKeys.
         :type request: :class:`tencentcloud.tag.v20180813.models.DescribeResourceTagsByTagKeysRequest`
@@ -222,7 +222,7 @@ class TagClient(AbstractClient):
 
 
     def DescribeResourcesByTags(self, request):
-        """通过标签查询资源列表
+        """通過标簽查詢資源清單
 
         :param request: Request instance for DescribeResourcesByTags.
         :type request: :class:`tencentcloud.tag.v20180813.models.DescribeResourcesByTagsRequest`
@@ -250,7 +250,7 @@ class TagClient(AbstractClient):
 
 
     def DescribeTagKeys(self, request):
-        """用于查询已建立的标签列表中的标签键。
+        """用于查詢已建立的标簽清單中的标簽鍵。
 
         :param request: Request instance for DescribeTagKeys.
         :type request: :class:`tencentcloud.tag.v20180813.models.DescribeTagKeysRequest`
@@ -278,7 +278,7 @@ class TagClient(AbstractClient):
 
 
     def DescribeTagValues(self, request):
-        """用于查询已建立的标签列表中的标签值。
+        """用于查詢已建立的标簽清單中的标簽值。
 
         :param request: Request instance for DescribeTagValues.
         :type request: :class:`tencentcloud.tag.v20180813.models.DescribeTagValuesRequest`
@@ -306,7 +306,7 @@ class TagClient(AbstractClient):
 
 
     def DescribeTags(self, request):
-        """用于查询已建立的标签列表。
+        """用于查詢已建立的标簽清單。
 
         :param request: Request instance for DescribeTags.
         :type request: :class:`tencentcloud.tag.v20180813.models.DescribeTagsRequest`
@@ -334,7 +334,7 @@ class TagClient(AbstractClient):
 
 
     def ModifyResourceTags(self, request):
-        """本接口用于修改资源关联的所有标签
+        """本介面用于修改資源關聯的所有标簽
 
         :param request: Request instance for ModifyResourceTags.
         :type request: :class:`tencentcloud.tag.v20180813.models.ModifyResourceTagsRequest`
@@ -362,7 +362,7 @@ class TagClient(AbstractClient):
 
 
     def UpdateResourceTagValue(self, request):
-        """本接口用于修改资源已关联的标签值（标签键不变）
+        """本介面用于修改資源已關聯的标簽值（标簽鍵不變）
 
         :param request: Request instance for UpdateResourceTagValue.
         :type request: :class:`tencentcloud.tag.v20180813.models.UpdateResourceTagValueRequest`

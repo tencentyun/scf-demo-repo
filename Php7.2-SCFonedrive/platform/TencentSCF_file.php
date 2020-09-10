@@ -282,7 +282,7 @@ function ReorganizeDate($arr)
     foreach ($arr as $k1 => $v1) {
         $str .= '&' . $k1 . '=' . $v1;
     }
-    $str = substr($str, 1); // remove first '&'. 去掉第一个&
+    $str = substr($str, 1); // remove first '&'. 去掉第一個&
     return $str;
 }
 
@@ -338,7 +338,7 @@ function copyFolder($from, $to)
         if($filename != '.' && $filename != '..'){
             $fromfile = $from.'/'.$filename;
             $tofile = $to.'/'.$filename;
-            if(is_dir($fromfile)){// 如果读取的某个对象是文件夹，则递归
+            if(is_dir($fromfile)){// 如果讀取的某個對象是文件夾，則遞歸
                 copyFolder($fromfile, $tofile);
             }else{
                 copy($fromfile, $tofile);
@@ -351,7 +351,7 @@ function copyFolder($from, $to)
 
 function updateEnvironment($Envs, $function_name, $Region, $Namespace, $SecretId, $SecretKey)
 {
-    // 获取当前代码并解压
+    // 獲取當前代碼并解壓
     //$codeurl = json_decode(getfunctioncodeurl($function_name, $Region, $Namespace, $SecretId, $SecretKey), true)['Response']['Url'];
     //$codezip = '/tmp/oldcode.zip';
     $outPath = '/tmp/code/';
@@ -364,20 +364,20 @@ function updateEnvironment($Envs, $function_name, $Region, $Namespace, $SecretId
     $coderoot = __DIR__ . '/../';
     copyFolder($coderoot, $outPath);
     
-    // 将配置写入
+    // 将配置寫入
     $prestr = '<?php $configs = \'
 ';
     $aftstr = '
 \';';
     file_put_contents($outPath . 'config.php', $prestr . json_encode($Envs, JSON_PRETTY_PRINT) . $aftstr);
 
-    // 将目录中文件打包成zip
+    // 将目錄中文件打包成zip
     $source = '/tmp/code.zip';
     //$zip=new ZipArchive();
     $zip=new PharData($source);
     //if($zip->open($source, ZipArchive::CREATE)){
-        addFileToZip($zip, $outPath); //调用方法，对要打包的根目录进行操作，并将ZipArchive的对象传递给方法
-    //    $zip->close(); //关闭处理的zip文件
+        addFileToZip($zip, $outPath); //調用方法，對要打包的根目錄進行操作，并将ZipArchive的對象傳遞給方法
+    //    $zip->close(); //關閉處理的zip文件
     //}
 
     return updateProgram($function_name, $Region, $namespace, $SecretId, $SecretKey, $source);
@@ -562,14 +562,14 @@ function OnekeyUpate($auth = 'qkqpttgf', $project = 'OneManager-php', $branch = 
     $source = '/tmp/code.zip';
     $outPath = '/tmp/';
 
-    // 从github下载对应tar.gz，并解压
+    // 從github下載對應tar.gz，并解壓
     $url = 'https://github.com/' . $auth . '/' . $project . '/tarball/' . urlencode($branch) . '/';
     $tarfile = '/tmp/github.tar.gz';
     file_put_contents($tarfile, file_get_contents($url));
     $phar = new PharData($tarfile);
-    $html = $phar->extractTo($outPath, null, true);//路径 要解压的文件 是否覆盖
+    $html = $phar->extractTo($outPath, null, true);//路徑 要解壓的文件 是否函蓋
 
-    // 获取包中目录名
+    // 獲取包中目錄名
     $tmp = scandir('phar://'.$tarfile);
     $name = $auth.'-'.$project;
     foreach ($tmp as $f) {
@@ -581,12 +581,12 @@ function OnekeyUpate($auth = 'qkqpttgf', $project = 'OneManager-php', $branch = 
     // 放入配置文件
     file_put_contents($outPath . '/config.php', file_get_contents(__DIR__.'/../config.php'));
 
-    // 将目录中文件打包成zip
+    // 将目錄中文件打包成zip
     //$zip=new ZipArchive();
     $zip=new PharData($source);
     //if($zip->open($source, ZipArchive::CREATE)){
-        addFileToZip($zip, $outPath); //调用方法，对要打包的根目录进行操作，并将ZipArchive的对象传递给方法
-    //    $zip->close(); //关闭处理的zip文件
+        addFileToZip($zip, $outPath); //調用方法，對要打包的根目錄進行操作，并将ZipArchive的對象傳遞給方法
+    //    $zip->close(); //關閉處理的zip文件
     //}
 
     return updateProgram($_SERVER['function_name'], $_SERVER['Region'], $_SERVER['namespace'], getConfig('SecretId'), getConfig('SecretKey'), $source);
@@ -596,14 +596,14 @@ function addFileToZip($zip, $rootpath, $path = '')
 {
     if (substr($rootpath,-1)=='/') $rootpath = substr($rootpath, 0, -1);
     if (substr($path,0,1)=='/') $path = substr($path, 1);
-    $handler=opendir(path_format($rootpath.'/'.$path)); //打开当前文件夹由$path指定。
+    $handler=opendir(path_format($rootpath.'/'.$path)); //打開當前文件夾由$path指定。
     while($filename=readdir($handler)){
-        if($filename != "." && $filename != ".."){//文件夹文件名字为'.'和‘..’，不要对他们进行操作
+        if($filename != "." && $filename != ".."){//文件夾文件名字爲'.'和‘..’，不要對他們進行操作
             $nowname = path_format($rootpath.'/'.$path."/".$filename);
-            if(is_dir($nowname)){// 如果读取的某个对象是文件夹，则递归
+            if(is_dir($nowname)){// 如果讀取的某個對象是文件夾，則遞歸
                 $zip->addEmptyDir($path."/".$filename);
                 addFileToZip($zip, $rootpath, $path."/".$filename);
-            }else{ //将文件加入zip对象
+            }else{ //将文件加入zip對象
                 $newname = $path."/".$filename;
                 if (substr($newname,0,1)=='/') $newname = substr($newname, 1);
                 $zip->addFile($nowname, $newname);

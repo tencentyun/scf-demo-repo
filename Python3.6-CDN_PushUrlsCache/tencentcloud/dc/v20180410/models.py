@@ -17,13 +17,13 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AcceptDirectConnectTunnelRequest(AbstractModel):
-    """AcceptDirectConnectTunnel请求参数结构体
+    """AcceptDirectConnectTunnel請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DirectConnectTunnelId: 物理专线拥有者接受共享专用通道申请
+        :param DirectConnectTunnelId: 物理專線擁有者接受共享專用通道申請
         :type DirectConnectTunnelId: str
         """
         self.DirectConnectTunnelId = None
@@ -34,13 +34,13 @@ class AcceptDirectConnectTunnelRequest(AbstractModel):
 
 
 class AcceptDirectConnectTunnelResponse(AbstractModel):
-    """AcceptDirectConnectTunnel返回参数结构体
+    """AcceptDirectConnectTunnel返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -51,23 +51,23 @@ class AcceptDirectConnectTunnelResponse(AbstractModel):
 
 
 class AccessPoint(AbstractModel):
-    """接入点信息。
+    """接入點訊息。
 
     """
 
     def __init__(self):
         """
-        :param AccessPointName: 接入点的名称。
+        :param AccessPointName: 接入點的名稱。
         :type AccessPointName: str
-        :param AccessPointId: 接入点唯一ID。
+        :param AccessPointId: 接入點唯一ID。
         :type AccessPointId: str
-        :param State: 接入点的状态。可用，不可用。
+        :param State: 接入點的狀态。可用，不可用。
         :type State: str
-        :param Location: 接入点的位置。
+        :param Location: 接入點的位置。
         :type Location: str
-        :param LineOperator: 接入点支持的运营商列表。
+        :param LineOperator: 接入點支援的運營商清單。
         :type LineOperator: list of str
-        :param RegionId: 接入点管理的大区ID。
+        :param RegionId: 接入點管理的大區ID。
         :type RegionId: str
         """
         self.AccessPointName = None
@@ -88,15 +88,15 @@ class AccessPoint(AbstractModel):
 
 
 class BgpPeer(AbstractModel):
-    """bgp参数，包括Asn，AuthKey
+    """bgp參數，包括Asn，AuthKey
 
     """
 
     def __init__(self):
         """
-        :param Asn: 用户侧，BGP Asn
+        :param Asn: 用戶側，BGP Asn
         :type Asn: int
-        :param AuthKey: 用户侧BGP密钥
+        :param AuthKey: 用戶側BGP金鑰
         :type AuthKey: str
         """
         self.Asn = None
@@ -109,44 +109,44 @@ class BgpPeer(AbstractModel):
 
 
 class CreateDirectConnectRequest(AbstractModel):
-    """CreateDirectConnect请求参数结构体
+    """CreateDirectConnect請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DirectConnectName: 物理专线的名称。
+        :param DirectConnectName: 物理專線的名稱。
         :type DirectConnectName: str
-        :param AccessPointId: 物理专线所在的接入点。
-您可以通过调用 DescribeAccessPoints接口获取地域ID。所选择的接入点必须存在且处于可接入的状态。
+        :param AccessPointId: 物理專線所在的接入點。
+您可以通過調用 DescribeAccessPoints介面獲取地域ID。所選擇的接入點必須存在且處于可接入的狀态。
         :type AccessPointId: str
-        :param LineOperator: 提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。
+        :param LineOperator: 提供接入物理專線的運營商。ChinaTelecom：中國電信， ChinaMobile：中國移動，ChinaUnicom：中國聯通， In-houseWiring：樓内線，ChinaOther：中國其他， InternationalOperator：境外其他。
         :type LineOperator: str
-        :param Location: 本地数据中心的地理位置。
+        :param Location: 本地數據中心的地理位置。
         :type Location: str
-        :param PortType: 物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）。
+        :param PortType: 物理專線接入端口類型,取值：100Base-T：百兆電介面,1000Base-T（預設值）：千兆電介面,1000Base-LX：千兆單模光介面（10千米）,10GBase-T：萬兆電介面10GBase-LR：萬兆單模光介面（10千米），預設值，千兆單模光介面（10千米）。
         :type PortType: str
-        :param CircuitCode: 运营商或者服务商为物理专线提供的电路编码。
+        :param CircuitCode: 運營商或者服務商爲物理專線提供的電路編碼。
         :type CircuitCode: str
-        :param Bandwidth: 物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。
+        :param Bandwidth: 物理專線接入介面頻寬，單位爲Mbps，預設值爲1000，取值範圍爲 [2, 10240]。
         :type Bandwidth: int
-        :param RedundantDirectConnectId: 冗余物理专线的ID。
+        :param RedundantDirectConnectId: 備援物理專線的ID。
         :type RedundantDirectConnectId: str
-        :param Vlan: 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
+        :param Vlan: 物理專線調試VLAN。預設開啓VLAN，自動分配VLAN。
         :type Vlan: int
-        :param TencentAddress: 物理专线调试腾讯侧互联 IP。默认自动分配。
+        :param TencentAddress: 物理專線調試騰訊側互聯 IP。預設自動分配。
         :type TencentAddress: str
-        :param CustomerAddress: 物理专线调试用户侧互联 IP。默认自动分配。
+        :param CustomerAddress: 物理專線調試用戶側互聯 IP。預設自動分配。
         :type CustomerAddress: str
-        :param CustomerName: 物理专线申请者姓名。默认从账户体系获取。
+        :param CustomerName: 物理專線申請者姓名。預設從帳戶體系獲取。
         :type CustomerName: str
-        :param CustomerContactMail: 物理专线申请者联系邮箱。默认从账户体系获取。
+        :param CustomerContactMail: 物理專線申請者聯系電子信箱。預設從帳戶體系獲取。
         :type CustomerContactMail: str
-        :param CustomerContactNumber: 物理专线申请者联系号码。默认从账户体系获取。
+        :param CustomerContactNumber: 物理專線申請者聯系号碼。預設從帳戶體系獲取。
         :type CustomerContactNumber: str
-        :param FaultReportContactPerson: 报障联系人。
+        :param FaultReportContactPerson: 報障聯系人。
         :type FaultReportContactPerson: str
-        :param FaultReportContactNumber: 报障联系电话。
+        :param FaultReportContactNumber: 報障聯系電話。
         :type FaultReportContactNumber: str
         """
         self.DirectConnectName = None
@@ -187,15 +187,15 @@ class CreateDirectConnectRequest(AbstractModel):
 
 
 class CreateDirectConnectResponse(AbstractModel):
-    """CreateDirectConnect返回参数结构体
+    """CreateDirectConnect返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DirectConnectIdSet: 物理专线的ID。
+        :param DirectConnectIdSet: 物理專線的ID。
         :type DirectConnectIdSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DirectConnectIdSet = None
@@ -208,50 +208,50 @@ class CreateDirectConnectResponse(AbstractModel):
 
 
 class CreateDirectConnectTunnelRequest(AbstractModel):
-    """CreateDirectConnectTunnel请求参数结构体
+    """CreateDirectConnectTunnel請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DirectConnectId: 专线 ID，例如：dc-kd7d06of
+        :param DirectConnectId: 專線 ID，例如：dc-kd7d06of
         :type DirectConnectId: str
-        :param DirectConnectTunnelName: 专用通道名称
+        :param DirectConnectTunnelName: 專用通道名稱
         :type DirectConnectTunnelName: str
-        :param DirectConnectOwnerAccount: 物理专线 owner，缺省为当前客户（物理专线 owner）
-共享专线时这里需要填写共享专线的开发商账号 ID
+        :param DirectConnectOwnerAccount: 物理專線 owner，缺省爲當前客戶（物理專線 owner）
+共享專線時這裏需要填寫共享專線的開發商賬号 ID
         :type DirectConnectOwnerAccount: str
-        :param NetworkType: 网络类型，分别为VPC、BMVPC，CCN，默认是VPC
-VPC：私有网络
-BMVPC：黑石网络
-CCN：云联网
+        :param NetworkType: 網絡類型，分别爲VPC、BMVPC，CCN，預設是VPC
+VPC：私有網絡
+BMVPC：黑石網絡
+CCN：雲聯網
         :type NetworkType: str
-        :param NetworkRegion: 网络地域
+        :param NetworkRegion: 網絡地域
         :type NetworkRegion: str
-        :param VpcId: 私有网络统一 ID 或者黑石网络统一 ID
+        :param VpcId: 私有網絡統一 ID 或者黑石網絡統一 ID
         :type VpcId: str
-        :param DirectConnectGatewayId: 专线网关 ID，例如 dcg-d545ddf
+        :param DirectConnectGatewayId: 專線閘道 ID，例如 dcg-d545ddf
         :type DirectConnectGatewayId: str
-        :param Bandwidth: 专线带宽，单位：Mbps
-默认是物理专线带宽值
+        :param Bandwidth: 專線頻寬，單位：Mbps
+預設是物理專線頻寬值
         :type Bandwidth: int
         :param RouteType: BGP ：BGP路由
-STATIC：静态
-默认为 BGP 路由
+STATIC：靜态
+預設爲 BGP 路由
         :type RouteType: str
-        :param BgpPeer: BgpPeer，用户侧bgp信息，包括Asn和AuthKey
+        :param BgpPeer: BgpPeer，用戶側bgp訊息，包括Asn和AuthKey
         :type BgpPeer: :class:`tencentcloud.dc.v20180410.models.BgpPeer`
-        :param RouteFilterPrefixes: 静态路由，用户IDC的网段地址
+        :param RouteFilterPrefixes: 靜态路由，用戶IDC的網段網址
         :type RouteFilterPrefixes: list of RouteFilterPrefix
-        :param Vlan: vlan，范围：0 ~ 3000
-0：不开启子接口
-默认值是非0
+        :param Vlan: vlan，範圍：0 ~ 3000
+0：不開啓子介面
+預設值是非0
         :type Vlan: int
-        :param TencentAddress: TencentAddress，腾讯侧互联 IP
+        :param TencentAddress: TencentAddress，騰訊側互聯 IP
         :type TencentAddress: str
-        :param CustomerAddress: CustomerAddress，用户侧互联 IP
+        :param CustomerAddress: CustomerAddress，用戶側互聯 IP
         :type CustomerAddress: str
-        :param TencentBackupAddress: TencentBackupAddress，腾讯侧备用互联 IP
+        :param TencentBackupAddress: TencentBackupAddress，騰訊側備用互聯 IP
         :type TencentBackupAddress: str
         """
         self.DirectConnectId = None
@@ -297,15 +297,15 @@ STATIC：静态
 
 
 class CreateDirectConnectTunnelResponse(AbstractModel):
-    """CreateDirectConnectTunnel返回参数结构体
+    """CreateDirectConnectTunnel返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DirectConnectTunnelIdSet: 专用通道ID
+        :param DirectConnectTunnelIdSet: 專用通道ID
         :type DirectConnectTunnelIdSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DirectConnectTunnelIdSet = None
@@ -318,13 +318,13 @@ class CreateDirectConnectTunnelResponse(AbstractModel):
 
 
 class DeleteDirectConnectRequest(AbstractModel):
-    """DeleteDirectConnect请求参数结构体
+    """DeleteDirectConnect請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DirectConnectId: 物理专线的ID。
+        :param DirectConnectId: 物理專線的ID。
         :type DirectConnectId: str
         """
         self.DirectConnectId = None
@@ -335,13 +335,13 @@ class DeleteDirectConnectRequest(AbstractModel):
 
 
 class DeleteDirectConnectResponse(AbstractModel):
-    """DeleteDirectConnect返回参数结构体
+    """DeleteDirectConnect返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -352,13 +352,13 @@ class DeleteDirectConnectResponse(AbstractModel):
 
 
 class DeleteDirectConnectTunnelRequest(AbstractModel):
-    """DeleteDirectConnectTunnel请求参数结构体
+    """DeleteDirectConnectTunnel請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DirectConnectTunnelId: 专用通道ID
+        :param DirectConnectTunnelId: 專用通道ID
         :type DirectConnectTunnelId: str
         """
         self.DirectConnectTunnelId = None
@@ -369,13 +369,13 @@ class DeleteDirectConnectTunnelRequest(AbstractModel):
 
 
 class DeleteDirectConnectTunnelResponse(AbstractModel):
-    """DeleteDirectConnectTunnel返回参数结构体
+    """DeleteDirectConnectTunnel返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -386,19 +386,19 @@ class DeleteDirectConnectTunnelResponse(AbstractModel):
 
 
 class DescribeAccessPointsRequest(AbstractModel):
-    """DescribeAccessPoints请求参数结构体
+    """DescribeAccessPoints請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RegionId: 接入点所在的地域。使用DescribeRegions查询
+        :param RegionId: 接入點所在的地域。使用DescribeRegions查詢
 
-您可以通过调用 DescribeRegions接口获取地域ID。
+您可以通過調用 DescribeRegions介面獲取地域ID。
         :type RegionId: str
-        :param Offset: 偏移量，默认为0。
+        :param Offset: 偏移量，預設爲0。
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为100。
+        :param Limit: 返回數量，預設爲20，最大值爲100。
         :type Limit: int
         """
         self.RegionId = None
@@ -413,17 +413,17 @@ class DescribeAccessPointsRequest(AbstractModel):
 
 
 class DescribeAccessPointsResponse(AbstractModel):
-    """DescribeAccessPoints返回参数结构体
+    """DescribeAccessPoints返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccessPointSet: 接入点信息。
+        :param AccessPointSet: 接入點訊息。
         :type AccessPointSet: list of AccessPoint
-        :param TotalCount: 符合接入点数量。
+        :param TotalCount: 符合接入點數量。
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AccessPointSet = None
@@ -443,23 +443,23 @@ class DescribeAccessPointsResponse(AbstractModel):
 
 
 class DescribeDirectConnectTunnelsRequest(AbstractModel):
-    """DescribeDirectConnectTunnels请求参数结构体
+    """DescribeDirectConnectTunnels請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 过滤条件:
-参数不支持同时指定DirectConnectTunnelIds和Filters。
-<li> direct-connect-tunnel-name, 专用通道名称。</li>
-<li> direct-connect-tunnel-id, 专用通道实例ID，如dcx-abcdefgh。</li>
-<li>direct-connect-id, 物理专线实例ID，如，dc-abcdefgh。</li>
+        :param Filters: 過濾條件:
+參數不支援同時指定DirectConnectTunnelIds和Filters。
+<li> direct-connect-tunnel-name, 專用通道名稱。</li>
+<li> direct-connect-tunnel-id, 專用通道實例ID，如dcx-abcdefgh。</li>
+<li>direct-connect-id, 物理專線實例ID，如，dc-abcdefgh。</li>
         :type Filters: list of Filter
-        :param DirectConnectTunnelIds: 专用通道 ID数组
+        :param DirectConnectTunnelIds: 專用通道 ID數組
         :type DirectConnectTunnelIds: list of str
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为100
+        :param Limit: 返回數量，預設爲20，最大值爲100
         :type Limit: int
         """
         self.Filters = None
@@ -481,17 +481,17 @@ class DescribeDirectConnectTunnelsRequest(AbstractModel):
 
 
 class DescribeDirectConnectTunnelsResponse(AbstractModel):
-    """DescribeDirectConnectTunnels返回参数结构体
+    """DescribeDirectConnectTunnels返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DirectConnectTunnelSet: 专用通道列表
+        :param DirectConnectTunnelSet: 專用通道清單
         :type DirectConnectTunnelSet: list of DirectConnectTunnel
-        :param TotalCount: 符合专用通道数量。
+        :param TotalCount: 符合專用通道數量。
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DirectConnectTunnelSet = None
@@ -511,19 +511,19 @@ class DescribeDirectConnectTunnelsResponse(AbstractModel):
 
 
 class DescribeDirectConnectsRequest(AbstractModel):
-    """DescribeDirectConnects请求参数结构体
+    """DescribeDirectConnects請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 过滤条件:
+        :param Filters: 過濾條件:
         :type Filters: list of Filter
-        :param DirectConnectIds: 物理专线 ID数组
+        :param DirectConnectIds: 物理專線 ID數組
         :type DirectConnectIds: list of str
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为100
+        :param Limit: 返回數量，預設爲20，最大值爲100
         :type Limit: int
         """
         self.Filters = None
@@ -545,17 +545,17 @@ class DescribeDirectConnectsRequest(AbstractModel):
 
 
 class DescribeDirectConnectsResponse(AbstractModel):
-    """DescribeDirectConnects返回参数结构体
+    """DescribeDirectConnects返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DirectConnectSet: 物理专线列表。
+        :param DirectConnectSet: 物理專線清單。
         :type DirectConnectSet: list of DirectConnect
-        :param TotalCount: 符合物理专线列表数量。
+        :param TotalCount: 符合物理專線清單數量。
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DirectConnectSet = None
@@ -575,85 +575,85 @@ class DescribeDirectConnectsResponse(AbstractModel):
 
 
 class DirectConnect(AbstractModel):
-    """物理专线信息列表
+    """物理專線訊息清單
 
     """
 
     def __init__(self):
         """
-        :param DirectConnectId: 物理专线ID。
+        :param DirectConnectId: 物理專線ID。
         :type DirectConnectId: str
-        :param DirectConnectName: 物理专线的名称。
+        :param DirectConnectName: 物理專線的名稱。
         :type DirectConnectName: str
-        :param AccessPointId: 物理专线的接入点ID。
+        :param AccessPointId: 物理專線的接入點ID。
         :type AccessPointId: str
-        :param State: 物理专线的状态。
-申请中：PENDING 
-申请驳回：REJECTED   
+        :param State: 物理專線的狀态。
+申請中：PENDING 
+申請駁回：REJECTED   
 待付款：TOPAY 
 已付款：PAID 
-建设中：ALLOCATED   
-已开通：AVAILABLE  
+建設中：ALLOCATED   
+已開通：AVAILABLE  
 删除中 ：DELETING
 已删除：DELETED 。
         :type State: str
-        :param CreatedTime: 物理专线创建时间。
+        :param CreatedTime: 物理專線創建時間。
         :type CreatedTime: str
-        :param EnabledTime: 物理专线的开通时间。
+        :param EnabledTime: 物理專線的開通時間。
         :type EnabledTime: str
-        :param LineOperator: 提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。
+        :param LineOperator: 提供接入物理專線的運營商。ChinaTelecom：中國電信， ChinaMobile：中國移動，ChinaUnicom：中國聯通， In-houseWiring：樓内線，ChinaOther：中國其他， InternationalOperator：境外其他。
         :type LineOperator: str
-        :param Location: 本地数据中心的地理位置。
+        :param Location: 本地數據中心的地理位置。
         :type Location: str
-        :param Bandwidth: 物理专线接入接口带宽，单位为Mbps。
+        :param Bandwidth: 物理專線接入介面頻寬，單位爲Mbps。
         :type Bandwidth: int
-        :param PortType: 用户侧物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）
+        :param PortType: 用戶側物理專線接入端口類型,取值：100Base-T：百兆電介面,1000Base-T（預設值）：千兆電介面,1000Base-LX：千兆單模光介面（10千米）,10GBase-T：萬兆電介面10GBase-LR：萬兆單模光介面（10千米），預設值，千兆單模光介面（10千米）
         :type PortType: str
-        :param CircuitCode: 运营商或者服务商为物理专线提供的电路编码。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CircuitCode: 運營商或者服務商爲物理專線提供的電路編碼。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CircuitCode: str
-        :param RedundantDirectConnectId: 冗余物理专线的ID。
+        :param RedundantDirectConnectId: 備援物理專線的ID。
         :type RedundantDirectConnectId: str
-        :param Vlan: 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Vlan: 物理專線調試VLAN。預設開啓VLAN，自動分配VLAN。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Vlan: int
-        :param TencentAddress: 物理专线调试腾讯侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TencentAddress: 物理專線調試騰訊側互聯IP。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TencentAddress: str
-        :param CustomerAddress: 物理专线调试用户侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CustomerAddress: 物理專線調試用戶側互聯IP。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CustomerAddress: str
-        :param CustomerName: 物理专线申请者姓名。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CustomerName: 物理專線申請者姓名。預設從帳戶體系獲取。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CustomerName: str
-        :param CustomerContactMail: 物理专线申请者联系邮箱。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CustomerContactMail: 物理專線申請者聯系電子信箱。預設從帳戶體系獲取。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CustomerContactMail: str
-        :param CustomerContactNumber: 物理专线申请者联系号码。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CustomerContactNumber: 物理專線申請者聯系号碼。預設從帳戶體系獲取。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CustomerContactNumber: str
-        :param ExpiredTime: 物理专线的过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ExpiredTime: 物理專線的過期時間。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ExpiredTime: str
-        :param ChargeType: 物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ChargeType: 物理專線計費類型。 NON_RECURRING_CHARGE：一次性接入費用；PREPAID_BY_YEAR：按年預付費。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ChargeType: str
-        :param FaultReportContactPerson: 报障联系人。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FaultReportContactPerson: 報障聯系人。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FaultReportContactPerson: str
-        :param FaultReportContactNumber: 报障联系电话。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FaultReportContactNumber: 報障聯系電話。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FaultReportContactNumber: str
-        :param TagSet: 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagSet: 标簽鍵值對
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of Tag
-        :param AccessPointType: 物理专线的接入点类型。
+        :param AccessPointType: 物理專線的接入點類型。
         :type AccessPointType: str
         :param IdcCity: IDC所在城市
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IdcCity: str
-        :param ChargeState: 计费状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ChargeState: 計費狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ChargeState: str
         """
         self.DirectConnectId = None
@@ -719,86 +719,86 @@ class DirectConnect(AbstractModel):
 
 
 class DirectConnectTunnel(AbstractModel):
-    """专用通道信息列表
+    """專用通道訊息清單
 
     """
 
     def __init__(self):
         """
-        :param DirectConnectTunnelId: 专用通道ID
+        :param DirectConnectTunnelId: 專用通道ID
         :type DirectConnectTunnelId: str
-        :param DirectConnectId: 物理专线ID
+        :param DirectConnectId: 物理專線ID
         :type DirectConnectId: str
-        :param State: 专用通道状态
-AVAILABLE:就绪或者已连接
-PENDING:申请中
+        :param State: 專用通道狀态
+AVAILABLE:就緒或者已連接
+PENDING:申請中
 ALLOCATING:配置中
 ALLOCATED:配置完成
 ALTERING:修改中
 DELETING:删除中
 DELETED:删除完成
 COMFIRMING:待接受
-REJECTED:拒绝
+REJECTED:拒絕
         :type State: str
-        :param DirectConnectOwnerAccount: 物理专线的拥有者，开发商账号 ID
+        :param DirectConnectOwnerAccount: 物理專線的擁有者，開發商賬号 ID
         :type DirectConnectOwnerAccount: str
-        :param OwnerAccount: 专用通道的拥有者，开发商账号 ID
+        :param OwnerAccount: 專用通道的擁有者，開發商賬号 ID
         :type OwnerAccount: str
-        :param NetworkType: 网络类型，分别为VPC、BMVPC、CCN
- VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
+        :param NetworkType: 網絡類型，分别爲VPC、BMVPC、CCN
+ VPC：私有網絡 ，BMVPC：黑石網絡，CCN：雲聯網
         :type NetworkType: str
-        :param NetworkRegion: VPC地域对应的网络名，如ap-guangzhou
+        :param NetworkRegion: VPC地域對應的網絡名，如ap-guangzhou
         :type NetworkRegion: str
-        :param VpcId: 私有网络统一 ID 或者黑石网络统一 ID
+        :param VpcId: 私有網絡統一 ID 或者黑石網絡統一 ID
         :type VpcId: str
-        :param DirectConnectGatewayId: 专线网关 ID
+        :param DirectConnectGatewayId: 專線閘道 ID
         :type DirectConnectGatewayId: str
-        :param RouteType: BGP ：BGP路由 STATIC：静态 默认为 BGP 路由
+        :param RouteType: BGP ：BGP路由 STATIC：靜态 預設爲 BGP 路由
         :type RouteType: str
-        :param BgpPeer: 用户侧BGP，Asn，AuthKey
+        :param BgpPeer: 用戶側BGP，Asn，AuthKey
         :type BgpPeer: :class:`tencentcloud.dc.v20180410.models.BgpPeer`
-        :param RouteFilterPrefixes: 用户侧网段地址
+        :param RouteFilterPrefixes: 用戶側網段網址
         :type RouteFilterPrefixes: list of RouteFilterPrefix
-        :param Vlan: 专用通道的Vlan
+        :param Vlan: 專用通道的Vlan
         :type Vlan: int
-        :param TencentAddress: TencentAddress，腾讯侧互联 IP
+        :param TencentAddress: TencentAddress，騰訊側互聯 IP
         :type TencentAddress: str
-        :param CustomerAddress: CustomerAddress，用户侧互联 IP
+        :param CustomerAddress: CustomerAddress，用戶側互聯 IP
         :type CustomerAddress: str
-        :param DirectConnectTunnelName: 专用通道名称
+        :param DirectConnectTunnelName: 專用通道名稱
         :type DirectConnectTunnelName: str
-        :param CreatedTime: 专用通道创建时间
+        :param CreatedTime: 專用通道創建時間
         :type CreatedTime: str
-        :param Bandwidth: 专用通道带宽值
+        :param Bandwidth: 專用通道頻寬值
         :type Bandwidth: int
-        :param TagSet: 专用通道标签值
+        :param TagSet: 專用通道标簽值
         :type TagSet: list of Tag
-        :param NetDetectId: 关联的网络自定义探测ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NetDetectId: 關聯的網絡自定義探測ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NetDetectId: str
-        :param EnableBGPCommunity: BGP community开关
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EnableBGPCommunity: BGP community開關
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EnableBGPCommunity: bool
-        :param NatType: 是否为Nat通道
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NatType: 是否爲Nat通道
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NatType: int
-        :param VpcRegion: VPC地域简码，如gz、cd
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VpcRegion: VPC地域簡碼，如gz、cd
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcRegion: str
-        :param BfdEnable: 是否开启BFD
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BfdEnable: 是否開啓BFD
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BfdEnable: int
-        :param AccessPointType: 专用通道接入点类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AccessPointType: 專用通道接入點類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AccessPointType: str
-        :param DirectConnectGatewayName: 专线网关名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DirectConnectGatewayName: 專線閘道名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DirectConnectGatewayName: str
-        :param VpcName: VPC名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VpcName: VPC名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcName: str
-        :param TencentBackupAddress: TencentBackupAddress，腾讯侧备用互联 IP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TencentBackupAddress: TencentBackupAddress，騰訊側備用互聯 IP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TencentBackupAddress: str
         """
         self.DirectConnectTunnelId = None
@@ -875,15 +875,15 @@ REJECTED:拒绝
 
 
 class Filter(AbstractModel):
-    """用于条件过滤查询
+    """用于條件過濾查詢
 
     """
 
     def __init__(self):
         """
-        :param Name: 需要过滤的字段。
+        :param Name: 需要過濾的欄位。
         :type Name: str
-        :param Values: 字段的过滤值。
+        :param Values: 欄位的過濾值。
         :type Values: list of str
         """
         self.Name = None
@@ -896,33 +896,33 @@ class Filter(AbstractModel):
 
 
 class ModifyDirectConnectAttributeRequest(AbstractModel):
-    """ModifyDirectConnectAttribute请求参数结构体
+    """ModifyDirectConnectAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DirectConnectId: 物理专线的ID。
+        :param DirectConnectId: 物理專線的ID。
         :type DirectConnectId: str
-        :param DirectConnectName: 物理专线名称。
+        :param DirectConnectName: 物理專線名稱。
         :type DirectConnectName: str
-        :param CircuitCode: 运营商或者服务商为物理专线提供的电路编码。
+        :param CircuitCode: 運營商或者服務商爲物理專線提供的電路編碼。
         :type CircuitCode: str
-        :param Vlan: 物理专线调试VLAN。
+        :param Vlan: 物理專線調試VLAN。
         :type Vlan: int
-        :param TencentAddress: 物理专线调试腾讯侧互联 IP。
+        :param TencentAddress: 物理專線調試騰訊側互聯 IP。
         :type TencentAddress: str
-        :param CustomerAddress: 物理专线调试用户侧互联 IP。
+        :param CustomerAddress: 物理專線調試用戶側互聯 IP。
         :type CustomerAddress: str
-        :param CustomerName: 物理专线申请者姓名。默认从账户体系获取。
+        :param CustomerName: 物理專線申請者姓名。預設從帳戶體系獲取。
         :type CustomerName: str
-        :param CustomerContactMail: 物理专线申请者联系邮箱。默认从账户体系获取。
+        :param CustomerContactMail: 物理專線申請者聯系電子信箱。預設從帳戶體系獲取。
         :type CustomerContactMail: str
-        :param CustomerContactNumber: 物理专线申请者联系号码。默认从账户体系获取。
+        :param CustomerContactNumber: 物理專線申請者聯系号碼。預設從帳戶體系獲取。
         :type CustomerContactNumber: str
-        :param FaultReportContactPerson: 报障联系人。
+        :param FaultReportContactPerson: 報障聯系人。
         :type FaultReportContactPerson: str
-        :param FaultReportContactNumber: 报障联系电话。
+        :param FaultReportContactNumber: 報障聯系電話。
         :type FaultReportContactNumber: str
         """
         self.DirectConnectId = None
@@ -953,13 +953,13 @@ class ModifyDirectConnectAttributeRequest(AbstractModel):
 
 
 class ModifyDirectConnectAttributeResponse(AbstractModel):
-    """ModifyDirectConnectAttribute返回参数结构体
+    """ModifyDirectConnectAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -970,27 +970,27 @@ class ModifyDirectConnectAttributeResponse(AbstractModel):
 
 
 class ModifyDirectConnectTunnelAttributeRequest(AbstractModel):
-    """ModifyDirectConnectTunnelAttribute请求参数结构体
+    """ModifyDirectConnectTunnelAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DirectConnectTunnelId: 专用通道ID
+        :param DirectConnectTunnelId: 專用通道ID
         :type DirectConnectTunnelId: str
-        :param DirectConnectTunnelName: 专用通道名称
+        :param DirectConnectTunnelName: 專用通道名稱
         :type DirectConnectTunnelName: str
-        :param BgpPeer: 用户侧BGP，包括Asn，AuthKey
+        :param BgpPeer: 用戶側BGP，包括Asn，AuthKey
         :type BgpPeer: :class:`tencentcloud.dc.v20180410.models.BgpPeer`
-        :param RouteFilterPrefixes: 用户侧网段地址
+        :param RouteFilterPrefixes: 用戶側網段網址
         :type RouteFilterPrefixes: list of RouteFilterPrefix
-        :param TencentAddress: 腾讯侧互联IP
+        :param TencentAddress: 騰訊側互聯IP
         :type TencentAddress: str
-        :param CustomerAddress: 用户侧互联IP
+        :param CustomerAddress: 用戶側互聯IP
         :type CustomerAddress: str
-        :param Bandwidth: 专用通道带宽值，单位为M。
+        :param Bandwidth: 專用通道頻寬值，單位爲M。
         :type Bandwidth: int
-        :param TencentBackupAddress: 腾讯侧备用互联IP
+        :param TencentBackupAddress: 騰訊側備用互聯IP
         :type TencentBackupAddress: str
         """
         self.DirectConnectTunnelId = None
@@ -1022,13 +1022,13 @@ class ModifyDirectConnectTunnelAttributeRequest(AbstractModel):
 
 
 class ModifyDirectConnectTunnelAttributeResponse(AbstractModel):
-    """ModifyDirectConnectTunnelAttribute返回参数结构体
+    """ModifyDirectConnectTunnelAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1039,13 +1039,13 @@ class ModifyDirectConnectTunnelAttributeResponse(AbstractModel):
 
 
 class RejectDirectConnectTunnelRequest(AbstractModel):
-    """RejectDirectConnectTunnel请求参数结构体
+    """RejectDirectConnectTunnel請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DirectConnectTunnelId: 无
+        :param DirectConnectTunnelId: 無
         :type DirectConnectTunnelId: str
         """
         self.DirectConnectTunnelId = None
@@ -1056,13 +1056,13 @@ class RejectDirectConnectTunnelRequest(AbstractModel):
 
 
 class RejectDirectConnectTunnelResponse(AbstractModel):
-    """RejectDirectConnectTunnel返回参数结构体
+    """RejectDirectConnectTunnel返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1073,13 +1073,13 @@ class RejectDirectConnectTunnelResponse(AbstractModel):
 
 
 class RouteFilterPrefix(AbstractModel):
-    """用户侧网段地址
+    """用戶側網段網址
 
     """
 
     def __init__(self):
         """
-        :param Cidr: 用户侧网段地址
+        :param Cidr: 用戶側網段網址
         :type Cidr: str
         """
         self.Cidr = None
@@ -1090,17 +1090,17 @@ class RouteFilterPrefix(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """标签键值对
+    """标簽鍵值對
 
     """
 
     def __init__(self):
         """
-        :param Key: 标签键
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Key: 标簽鍵
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Key: str
-        :param Value: 标签值
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Value: 标簽值
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Value: str
         """
         self.Key = None

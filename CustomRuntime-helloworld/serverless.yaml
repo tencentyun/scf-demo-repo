@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: helloworld
   src: ./
-  description: helloworld blank template function. Helloworld空白模板函数
+  description: helloworld blank template function. Helloworld空白範本函數
   handler: index.main_handler
   runtime: CustomRuntime
   namespace: default

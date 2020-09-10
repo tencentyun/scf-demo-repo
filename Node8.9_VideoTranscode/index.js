@@ -22,7 +22,7 @@ let config = {
 
 const RetryNum = 3;
 
-//上传事件处理函数
+//上傳事件處理函數
 exports.main_handler = async (event, context, callback, cusConfig) => {
   try {
     console.log("COS event detected");
@@ -62,7 +62,7 @@ function transcodeCheck(config) {
   return true;
 }
 
-//视频转码
+//視訊轉碼
 async function transcode(record) {
   try {
     let items = [];
@@ -98,7 +98,7 @@ async function transcode(record) {
 }
 
 async function handleInputRecord(record) {
-  //只监控文件上传
+  //只監控文件上傳
   console.log("File detected");
   if (!isValid(record)) {
     return;
@@ -128,7 +128,7 @@ let videoExtends = new Set([
 ]);
 
 //Filtering files that aren't videos
-//过滤非视频文件
+//過濾非視訊文件
 function isValid(record) {
   let objectKey = new ObjectKey(record.cos.cosObject.key);
 
@@ -164,7 +164,7 @@ class ObjectKey {
 }
 
 //Transcodind request
-//请求视频转码
+//請求視訊轉碼
 function requestTranscode(queryUrl) {
   return new Promise(function (resolve, reject) {
     let proxy = "";
@@ -177,7 +177,7 @@ function requestTranscode(queryUrl) {
       response,
       body
     ) {
-      //记录日志
+      //記錄日志
       if (error) {
         reject(error);
         console.log("Requesting failed", error);

@@ -26,9 +26,9 @@ class CmsClient(AbstractClient):
 
 
     def CreateFileSample(self, request):
-        """本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
+        """本文件适用于圖片内容安全、視訊内容安全自定義識别庫的管理。
         <br>
-        通过该接口可以将图片新增到样本库。
+        通過該介面可以将圖片新增到樣本庫。
 
         :param request: Request instance for CreateFileSample.
         :type request: :class:`tencentcloud.cms.v20190321.models.CreateFileSampleRequest`
@@ -56,9 +56,9 @@ class CmsClient(AbstractClient):
 
 
     def CreateTextSample(self, request):
-        """本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
+        """本文件适用于文本内容安全、音訊内容安全自定義識别庫的管理。
         <br>
-        通过该接口可以将文本新增到样本库。
+        通過該介面可以将文本新增到樣本庫。
 
         :param request: Request instance for CreateTextSample.
         :type request: :class:`tencentcloud.cms.v20190321.models.CreateTextSampleRequest`
@@ -86,9 +86,9 @@ class CmsClient(AbstractClient):
 
 
     def DeleteFileSample(self, request):
-        """本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
+        """本文件适用于圖片内容安全、視訊内容安全自定義識别庫的管理。
         <br>
-        删除图片样本库，支持批量删除，一次提交不超过20个。
+        删除圖片樣本庫，支援批次删除，一次提交不超過20個。
 
         :param request: Request instance for DeleteFileSample.
         :type request: :class:`tencentcloud.cms.v20190321.models.DeleteFileSampleRequest`
@@ -116,9 +116,9 @@ class CmsClient(AbstractClient):
 
 
     def DeleteTextSample(self, request):
-        """本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
+        """本文件适用于文本内容安全、音訊内容安全自定義識别庫的管理。
         <br>
-        删除文本样本库，暂时只支持单个删除。
+        删除文本樣本庫，暫時只支援單個删除。
 
         :param request: Request instance for DeleteTextSample.
         :type request: :class:`tencentcloud.cms.v20190321.models.DeleteTextSampleRequest`
@@ -146,9 +146,9 @@ class CmsClient(AbstractClient):
 
 
     def DescribeFileSample(self, request):
-        """本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
+        """本文件适用于圖片内容安全、視訊内容安全自定義識别庫的管理。
         <br>
-        查询图片样本库，支持批量查询。
+        查詢圖片樣本庫，支援批次查詢。
 
         :param request: Request instance for DescribeFileSample.
         :type request: :class:`tencentcloud.cms.v20190321.models.DescribeFileSampleRequest`
@@ -176,9 +176,9 @@ class CmsClient(AbstractClient):
 
 
     def DescribeTextSample(self, request):
-        """本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
+        """本文件适用于文本内容安全、音訊内容安全自定義識别庫的管理。
         <br>
-        支持批量查询文本样本库。
+        支援批次查詢文本樣本庫。
 
         :param request: Request instance for DescribeTextSample.
         :type request: :class:`tencentcloud.cms.v20190321.models.DescribeTextSampleRequest`
@@ -206,7 +206,7 @@ class CmsClient(AbstractClient):
 
 
     def ImageModeration(self, request):
-        """图片内容检测服务（Image Moderation, IM）能自动扫描图片，识别涉黄、涉恐、涉政、涉毒等有害内容，同时支持用户配置图片黑名单，打击自定义的违规图片。
+        """圖片内容檢測服務（Image Moderation, IM）能自動掃描圖片，識别涉黃、涉恐、涉政、涉毒等有害内容，同時支援用戶配置圖片黑名單，打擊自定義的違規圖片。
 
         :param request: Request instance for ImageModeration.
         :type request: :class:`tencentcloud.cms.v20190321.models.ImageModerationRequest`
@@ -234,7 +234,7 @@ class CmsClient(AbstractClient):
 
 
     def TextModeration(self, request):
-        """文本内容检测（Text Moderation）服务使用了深度学习技术，识别涉黄、涉政、涉恐等有害内容，同时支持用户配置词库，打击自定义的违规文本。
+        """文本内容檢測（Text Moderation）服務使用了深度學習技術，識别涉黃、涉政、涉恐等有害内容，同時支援用戶配置詞庫，打擊自定義的違規文本。
 
         :param request: Request instance for TextModeration.
         :type request: :class:`tencentcloud.cms.v20190321.models.TextModerationRequest`

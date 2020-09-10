@@ -26,7 +26,7 @@ class TicmClient(AbstractClient):
 
 
     def DescribeVideoTask(self, request):
-        """提交完视频审核任务后，可以通过本接口来获取当前处理的进度和结果
+        """提交完視訊審核任務後，可以通過本介面來獲取當前處理的進度和結果
 
         :param request: Request instance for DescribeVideoTask.
         :type request: :class:`tencentcloud.ticm.v20181127.models.DescribeVideoTaskRequest`
@@ -54,7 +54,7 @@ class TicmClient(AbstractClient):
 
 
     def ImageModeration(self, request):
-        """本接口提供多种维度的图像审核能力，支持色情和性感内容识别，政治人物和涉政敏感场景识别，以及暴恐人物、场景、旗帜标识等违禁内容的识别。
+        """本介面提供多種維度的圖像審核能力，支援色情和性感内容識别，政治人物和涉政敏感場景識别，以及暴恐人物、場景、旗幟标識等違禁内容的識别。
 
         :param request: Request instance for ImageModeration.
         :type request: :class:`tencentcloud.ticm.v20181127.models.ImageModerationRequest`
@@ -82,7 +82,7 @@ class TicmClient(AbstractClient):
 
 
     def VideoModeration(self, request):
-        """本接口提供多种维度的视频审核能力，支持色情和性感内容识别，政治人物和涉政敏感场景识别，以及暴恐人物、场景、旗帜标识等违禁内容的识别。
+        """本介面提供多種維度的視訊審核能力，支援色情和性感内容識别，政治人物和涉政敏感場景識别，以及暴恐人物、場景、旗幟标識等違禁内容的識别。
 
         :param request: Request instance for VideoModeration.
         :type request: :class:`tencentcloud.ticm.v20181127.models.VideoModerationRequest`

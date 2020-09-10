@@ -26,9 +26,9 @@ class BizliveClient(AbstractClient):
 
 
     def DescribeStreamPlayInfoList(self, request):
-        """查询播放数据，支持按流名称查询详细播放数据，也可按播放域名查询详细总数据。
+        """查詢播放數據，支援按流名稱查詢詳細播放數據，也可按播放域名查詢詳細總數據。
 
-        :param request: 调用DescribeStreamPlayInfoList所需参数的结构体。
+        :param request: 調用DescribeStreamPlayInfoList所需參數的結構體。
         :type request: :class:`tencentcloud.bizlive.v20190313.models.DescribeStreamPlayInfoListRequest`
         :rtype: :class:`tencentcloud.bizlive.v20190313.models.DescribeStreamPlayInfoListResponse`
 
@@ -54,9 +54,9 @@ class BizliveClient(AbstractClient):
 
 
     def ForbidLiveStream(self, request):
-        """禁止某条流的推送，可以预设某个时刻将流恢复。
+        """禁止某條流的推送，可以預設某個時刻将流恢複。
 
-        :param request: 调用ForbidLiveStream所需参数的结构体。
+        :param request: 調用ForbidLiveStream所需參數的結構體。
         :type request: :class:`tencentcloud.bizlive.v20190313.models.ForbidLiveStreamRequest`
         :rtype: :class:`tencentcloud.bizlive.v20190313.models.ForbidLiveStreamResponse`
 
@@ -82,9 +82,9 @@ class BizliveClient(AbstractClient):
 
 
     def RegisterIM(self, request):
-        """注册聊天室
+        """注冊聊天室
 
-        :param request: 调用RegisterIM所需参数的结构体。
+        :param request: 調用RegisterIM所需參數的結構體。
         :type request: :class:`tencentcloud.bizlive.v20190313.models.RegisterIMRequest`
         :rtype: :class:`tencentcloud.bizlive.v20190313.models.RegisterIMResponse`
 

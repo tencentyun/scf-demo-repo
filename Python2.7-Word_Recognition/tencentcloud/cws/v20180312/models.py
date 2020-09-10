@@ -17,23 +17,23 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CreateMonitorsRequest(AbstractModel):
-    """CreateMonitors请求参数结构体
+    """CreateMonitors請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Urls: 站点的url列表
+        :param Urls: 站點的url清單
         :type Urls: list of str
-        :param Name: 任务名称
+        :param Name: 任務名稱
         :type Name: str
-        :param ScannerType: 扫描模式，normal-正常扫描；deep-深度扫描
+        :param ScannerType: 掃描模式，normal-正常掃描；deep-深度掃描
         :type ScannerType: str
-        :param Crontab: 扫描周期，单位小时，每X小时执行一次
+        :param Crontab: 掃描週期，單位小時，每X小時執行一次
         :type Crontab: int
-        :param RateLimit: 扫描速率限制，每秒发送X个HTTP请求
+        :param RateLimit: 掃描速率限制，每秒發送X個HTTP請求
         :type RateLimit: int
-        :param FirstScanStartTime: 首次扫描开始时间
+        :param FirstScanStartTime: 首次掃描開始時間
         :type FirstScanStartTime: str
         """
         self.Urls = None
@@ -54,13 +54,13 @@ class CreateMonitorsRequest(AbstractModel):
 
 
 class CreateMonitorsResponse(AbstractModel):
-    """CreateMonitors返回参数结构体
+    """CreateMonitors返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -71,15 +71,15 @@ class CreateMonitorsResponse(AbstractModel):
 
 
 class CreateSitesRequest(AbstractModel):
-    """CreateSites请求参数结构体
+    """CreateSites請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Urls: 站点的url列表
+        :param Urls: 站點的url清單
         :type Urls: list of str
-        :param UserAgent: 访问网站的客户端标识
+        :param UserAgent: 訪問網站的用戶端标識
         :type UserAgent: str
         """
         self.Urls = None
@@ -92,15 +92,15 @@ class CreateSitesRequest(AbstractModel):
 
 
 class CreateSitesResponse(AbstractModel):
-    """CreateSites返回参数结构体
+    """CreateSites返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Number: 新增站点数。
+        :param Number: 新增站點數。
         :type Number: int
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.Number = None
@@ -113,17 +113,17 @@ class CreateSitesResponse(AbstractModel):
 
 
 class CreateSitesScansRequest(AbstractModel):
-    """CreateSitesScans请求参数结构体
+    """CreateSitesScans請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SiteIds: 站点的ID列表
+        :param SiteIds: 站點的ID清單
         :type SiteIds: list of int non-negative
-        :param ScannerType: 扫描模式，normal-正常扫描；deep-深度扫描
+        :param ScannerType: 掃描模式，normal-正常掃描；deep-深度掃描
         :type ScannerType: str
-        :param RateLimit: 扫描速率限制，每秒发送X个HTTP请求
+        :param RateLimit: 掃描速率限制，每秒發送X個HTTP請求
         :type RateLimit: int
         """
         self.SiteIds = None
@@ -138,13 +138,13 @@ class CreateSitesScansRequest(AbstractModel):
 
 
 class CreateSitesScansResponse(AbstractModel):
-    """CreateSitesScans返回参数结构体
+    """CreateSitesScans返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -155,13 +155,13 @@ class CreateSitesScansResponse(AbstractModel):
 
 
 class CreateVulsMisinformationRequest(AbstractModel):
-    """CreateVulsMisinformation请求参数结构体
+    """CreateVulsMisinformation請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VulIds: 漏洞ID列表
+        :param VulIds: 漏洞ID清單
         :type VulIds: list of int non-negative
         """
         self.VulIds = None
@@ -172,13 +172,13 @@ class CreateVulsMisinformationRequest(AbstractModel):
 
 
 class CreateVulsMisinformationResponse(AbstractModel):
-    """CreateVulsMisinformation返回参数结构体
+    """CreateVulsMisinformation返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -189,15 +189,15 @@ class CreateVulsMisinformationResponse(AbstractModel):
 
 
 class CreateVulsReportRequest(AbstractModel):
-    """CreateVulsReport请求参数结构体
+    """CreateVulsReport請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SiteId: 站点ID
+        :param SiteId: 站點ID
         :type SiteId: int
-        :param MonitorId: 监控任务ID
+        :param MonitorId: 監控任務ID
         :type MonitorId: int
         """
         self.SiteId = None
@@ -210,15 +210,15 @@ class CreateVulsReportRequest(AbstractModel):
 
 
 class CreateVulsReportResponse(AbstractModel):
-    """CreateVulsReport返回参数结构体
+    """CreateVulsReport返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ReportFileUrl: 报告下载地址
+        :param ReportFileUrl: 報告下載網址
         :type ReportFileUrl: str
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.ReportFileUrl = None
@@ -231,13 +231,13 @@ class CreateVulsReportResponse(AbstractModel):
 
 
 class DeleteMonitorsRequest(AbstractModel):
-    """DeleteMonitors请求参数结构体
+    """DeleteMonitors請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MonitorIds: 监控任务ID列表
+        :param MonitorIds: 監控任務ID清單
         :type MonitorIds: list of int non-negative
         """
         self.MonitorIds = None
@@ -248,13 +248,13 @@ class DeleteMonitorsRequest(AbstractModel):
 
 
 class DeleteMonitorsResponse(AbstractModel):
-    """DeleteMonitors返回参数结构体
+    """DeleteMonitors返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -265,13 +265,13 @@ class DeleteMonitorsResponse(AbstractModel):
 
 
 class DeleteSitesRequest(AbstractModel):
-    """DeleteSites请求参数结构体
+    """DeleteSites請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SiteIds: 站点ID列表
+        :param SiteIds: 站點ID清單
         :type SiteIds: list of int non-negative
         """
         self.SiteIds = None
@@ -282,13 +282,13 @@ class DeleteSitesRequest(AbstractModel):
 
 
 class DeleteSitesResponse(AbstractModel):
-    """DeleteSites返回参数结构体
+    """DeleteSites返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -299,29 +299,29 @@ class DeleteSitesResponse(AbstractModel):
 
 
 class DescribeConfigRequest(AbstractModel):
-    """DescribeConfig请求参数结构体
+    """DescribeConfig請求參數結構體
 
     """
 
 
 class DescribeConfigResponse(AbstractModel):
-    """DescribeConfig返回参数结构体
+    """DescribeConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NoticeLevel: 漏洞告警通知等级，4位分别代表：高危、中危、低危、提示。
+        :param NoticeLevel: 漏洞告警通知等級，4位分别代表：高危、中危、低危、提示。
         :type NoticeLevel: str
         :param Id: 配置ID。
         :type Id: int
-        :param CreatedAt: 记录创建时间。
+        :param CreatedAt: 記錄創建時間。
         :type CreatedAt: str
-        :param UpdatedAt: 记录更新新建。
+        :param UpdatedAt: 記錄更新新建。
         :type UpdatedAt: str
-        :param Appid: 云用户appid。
+        :param Appid: 雲用戶appid。
         :type Appid: int
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.NoticeLevel = None
@@ -342,19 +342,19 @@ class DescribeConfigResponse(AbstractModel):
 
 
 class DescribeMonitorsRequest(AbstractModel):
-    """DescribeMonitors请求参数结构体
+    """DescribeMonitors請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MonitorIds: 监控任务ID列表
+        :param MonitorIds: 監控任務ID清單
         :type MonitorIds: list of int non-negative
-        :param Filters: 过滤条件
+        :param Filters: 過濾條件
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回数量，默认为10，最大值为100
+        :param Limit: 返回數量，預設爲10，最大值爲100
         :type Limit: int
         """
         self.MonitorIds = None
@@ -376,17 +376,17 @@ class DescribeMonitorsRequest(AbstractModel):
 
 
 class DescribeMonitorsResponse(AbstractModel):
-    """DescribeMonitors返回参数结构体
+    """DescribeMonitors返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Monitors: 监控任务列表。
+        :param Monitors: 監控任務清單。
         :type Monitors: list of MonitorsDetail
-        :param TotalCount: 监控任务数量。
+        :param TotalCount: 監控任務數量。
         :type TotalCount: int
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.Monitors = None
@@ -406,25 +406,25 @@ class DescribeMonitorsResponse(AbstractModel):
 
 
 class DescribeSiteQuotaRequest(AbstractModel):
-    """DescribeSiteQuota请求参数结构体
+    """DescribeSiteQuota請求參數結構體
 
     """
 
 
 class DescribeSiteQuotaResponse(AbstractModel):
-    """DescribeSiteQuota返回参数结构体
+    """DescribeSiteQuota返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Total: 已购买的扫描次数。
+        :param Total: 已購買的掃描次數。
         :type Total: int
-        :param Used: 已使用的扫描次数。
+        :param Used: 已使用的掃描次數。
         :type Used: int
-        :param Available: 剩余可用的扫描次数。
+        :param Available: 剩餘可用的掃描次數。
         :type Available: int
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.Total = None
@@ -441,19 +441,19 @@ class DescribeSiteQuotaResponse(AbstractModel):
 
 
 class DescribeSitesRequest(AbstractModel):
-    """DescribeSites请求参数结构体
+    """DescribeSites請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SiteIds: 站点ID列表
+        :param SiteIds: 站點ID清單
         :type SiteIds: list of int non-negative
-        :param Filters: 过滤条件
+        :param Filters: 過濾條件
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回数量，默认为10，最大值为100
+        :param Limit: 返回數量，預設爲10，最大值爲100
         :type Limit: int
         """
         self.SiteIds = None
@@ -475,17 +475,17 @@ class DescribeSitesRequest(AbstractModel):
 
 
 class DescribeSitesResponse(AbstractModel):
-    """DescribeSites返回参数结构体
+    """DescribeSites返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 站点数量。
+        :param TotalCount: 站點數量。
         :type TotalCount: int
-        :param Sites: 站点信息列表。
+        :param Sites: 站點訊息清單。
         :type Sites: list of Site
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -505,13 +505,13 @@ class DescribeSitesResponse(AbstractModel):
 
 
 class DescribeSitesVerificationRequest(AbstractModel):
-    """DescribeSitesVerification请求参数结构体
+    """DescribeSitesVerification請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Urls: 站点的url列表
+        :param Urls: 站點的url清單
         :type Urls: list of str
         """
         self.Urls = None
@@ -522,17 +522,17 @@ class DescribeSitesVerificationRequest(AbstractModel):
 
 
 class DescribeSitesVerificationResponse(AbstractModel):
-    """DescribeSitesVerification返回参数结构体
+    """DescribeSitesVerification返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 验证信息数量。
+        :param TotalCount: 驗證訊息數量。
         :type TotalCount: int
-        :param SitesVerification: 验证信息列表。
+        :param SitesVerification: 驗證訊息清單。
         :type SitesVerification: list of SitesVerification
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -552,37 +552,37 @@ class DescribeSitesVerificationResponse(AbstractModel):
 
 
 class DescribeVulsNumberRequest(AbstractModel):
-    """DescribeVulsNumber请求参数结构体
+    """DescribeVulsNumber請求參數結構體
 
     """
 
 
 class DescribeVulsNumberResponse(AbstractModel):
-    """DescribeVulsNumber返回参数结构体
+    """DescribeVulsNumber返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImpactSiteNumber: 受影响的网站总数。
+        :param ImpactSiteNumber: 受影響的網站總數。
         :type ImpactSiteNumber: int
-        :param SiteNumber: 已验证的网站总数。
+        :param SiteNumber: 已驗證的網站總數。
         :type SiteNumber: int
-        :param VulsHighNumber: 高风险漏洞总数。
+        :param VulsHighNumber: 高風險漏洞總數。
         :type VulsHighNumber: int
-        :param VulsMiddleNumber: 中风险漏洞总数。
+        :param VulsMiddleNumber: 中風險漏洞總數。
         :type VulsMiddleNumber: int
-        :param VulsLowNumber: 低高风险漏洞总数。
+        :param VulsLowNumber: 低高風險漏洞總數。
         :type VulsLowNumber: int
-        :param VulsNoticeNumber: 风险提示总数。
+        :param VulsNoticeNumber: 風險提示總數。
         :type VulsNoticeNumber: int
-        :param PageCount: 扫描页面总数。
+        :param PageCount: 掃描頁面總數。
         :type PageCount: int
-        :param Sites: 已验证的网站列表。
+        :param Sites: 已驗證的網站清單。
         :type Sites: list of MonitorMiniSite
-        :param ImpactSites: 受影响的网站列表。
+        :param ImpactSites: 受影響的網站清單。
         :type ImpactSites: list of MonitorMiniSite
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.ImpactSiteNumber = None
@@ -621,23 +621,23 @@ class DescribeVulsNumberResponse(AbstractModel):
 
 
 class DescribeVulsNumberTimelineRequest(AbstractModel):
-    """DescribeVulsNumberTimeline请求参数结构体
+    """DescribeVulsNumberTimeline請求參數結構體
 
     """
 
 
 class DescribeVulsNumberTimelineResponse(AbstractModel):
-    """DescribeVulsNumberTimeline返回参数结构体
+    """DescribeVulsNumberTimeline返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 统计数据记录数量。
+        :param TotalCount: 統計數據記錄數量。
         :type TotalCount: int
-        :param VulsTimeline: 用户漏洞数随时间变化统计数据。
+        :param VulsTimeline: 用戶漏洞數随時間變化統計數據。
         :type VulsTimeline: list of VulsTimeline
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -657,21 +657,21 @@ class DescribeVulsNumberTimelineResponse(AbstractModel):
 
 
 class DescribeVulsRequest(AbstractModel):
-    """DescribeVuls请求参数结构体
+    """DescribeVuls請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SiteId: 站点ID
+        :param SiteId: 站點ID
         :type SiteId: int
-        :param MonitorId: 监控任务ID
+        :param MonitorId: 監控任務ID
         :type MonitorId: int
-        :param Filters: 过滤条件
+        :param Filters: 過濾條件
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回数量，默认为10，最大值为100
+        :param Limit: 返回數量，預設爲10，最大值爲100
         :type Limit: int
         """
         self.SiteId = None
@@ -695,17 +695,17 @@ class DescribeVulsRequest(AbstractModel):
 
 
 class DescribeVulsResponse(AbstractModel):
-    """DescribeVuls返回参数结构体
+    """DescribeVuls返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 漏洞数量。
+        :param TotalCount: 漏洞數量。
         :type TotalCount: int
-        :param Vuls: 漏洞信息列表。
+        :param Vuls: 漏洞訊息清單。
         :type Vuls: list of Vul
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -725,18 +725,18 @@ class DescribeVulsResponse(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """描述键值对过滤器，用于条件过滤查询。例如过滤ID、名称、状态等
+    """描述鍵值對過濾器，用于條件過濾查詢。例如過濾ID、名稱、狀态等
 
-    若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
-    若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+    若存在多個Filter時，Filter間的關系爲邏輯與（AND）關系。
+    若同一個Filter存在多個Values，同一Filter下Values間的關系爲邏輯或（OR）關系。
 
     """
 
     def __init__(self):
         """
-        :param Name: 过滤键的名称。
+        :param Name: 過濾鍵的名稱。
         :type Name: str
-        :param Values: 一个或者多个过滤值。
+        :param Values: 一個或者多個過濾值。
         :type Values: list of str
         """
         self.Name = None
@@ -749,13 +749,13 @@ class Filter(AbstractModel):
 
 
 class ModifyConfigAttributeRequest(AbstractModel):
-    """ModifyConfigAttribute请求参数结构体
+    """ModifyConfigAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NoticeLevel: 漏洞告警通知等级，4位分别代表：高危、中危、低危、提示
+        :param NoticeLevel: 漏洞告警通知等級，4位分别代表：高危、中危、低危、提示
         :type NoticeLevel: str
         """
         self.NoticeLevel = None
@@ -766,13 +766,13 @@ class ModifyConfigAttributeRequest(AbstractModel):
 
 
 class ModifyConfigAttributeResponse(AbstractModel):
-    """ModifyConfigAttribute返回参数结构体
+    """ModifyConfigAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -783,27 +783,27 @@ class ModifyConfigAttributeResponse(AbstractModel):
 
 
 class ModifyMonitorAttributeRequest(AbstractModel):
-    """ModifyMonitorAttribute请求参数结构体
+    """ModifyMonitorAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MonitorId: 监测任务ID
+        :param MonitorId: 監測任務ID
         :type MonitorId: int
-        :param Urls: 站点的url列表
+        :param Urls: 站點的url清單
         :type Urls: list of str
-        :param Name: 任务名称
+        :param Name: 任務名稱
         :type Name: str
-        :param ScannerType: 扫描模式，normal-正常扫描；deep-深度扫描
+        :param ScannerType: 掃描模式，normal-正常掃描；deep-深度掃描
         :type ScannerType: str
-        :param Crontab: 扫描周期，单位小时，每X小时执行一次
+        :param Crontab: 掃描週期，單位小時，每X小時執行一次
         :type Crontab: int
-        :param RateLimit: 扫描速率限制，每秒发送X个HTTP请求
+        :param RateLimit: 掃描速率限制，每秒發送X個HTTP請求
         :type RateLimit: int
-        :param FirstScanStartTime: 首次扫描开始时间
+        :param FirstScanStartTime: 首次掃描開始時間
         :type FirstScanStartTime: str
-        :param MonitorStatus: 监测状态：1-监测中；2-暂停监测
+        :param MonitorStatus: 監測狀态：1-監測中；2-暫停監測
         :type MonitorStatus: int
         """
         self.MonitorId = None
@@ -828,13 +828,13 @@ class ModifyMonitorAttributeRequest(AbstractModel):
 
 
 class ModifyMonitorAttributeResponse(AbstractModel):
-    """ModifyMonitorAttribute返回参数结构体
+    """ModifyMonitorAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -845,25 +845,25 @@ class ModifyMonitorAttributeResponse(AbstractModel):
 
 
 class ModifySiteAttributeRequest(AbstractModel):
-    """ModifySiteAttribute请求参数结构体
+    """ModifySiteAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SiteId: 站点ID
+        :param SiteId: 站點ID
         :type SiteId: int
-        :param Name: 站点名称
+        :param Name: 站點名稱
         :type Name: str
-        :param NeedLogin: 网站是否需要登录扫描：0-未知；-1-不需要；1-需要
+        :param NeedLogin: 網站是否需要登入掃描：0-未知；-1-不需要；1-需要
         :type NeedLogin: int
-        :param LoginCookie: 登录后的cookie
+        :param LoginCookie: 登入後的cookie
         :type LoginCookie: str
-        :param LoginCheckUrl: 用于测试cookie是否有效的URL
+        :param LoginCheckUrl: 用于測試cookie是否有效的URL
         :type LoginCheckUrl: str
-        :param LoginCheckKw: 用于测试cookie是否有效的关键字
+        :param LoginCheckKw: 用于測試cookie是否有效的關鍵字
         :type LoginCheckKw: str
-        :param ScanDisallow: 禁止扫描器扫描的目录关键字
+        :param ScanDisallow: 禁止掃描器掃描的目錄關鍵字
         :type ScanDisallow: str
         """
         self.SiteId = None
@@ -886,13 +886,13 @@ class ModifySiteAttributeRequest(AbstractModel):
 
 
 class ModifySiteAttributeResponse(AbstractModel):
-    """ModifySiteAttribute返回参数结构体
+    """ModifySiteAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -903,35 +903,35 @@ class ModifySiteAttributeResponse(AbstractModel):
 
 
 class Monitor(AbstractModel):
-    """监控任务基础数据
+    """監控任務基礎數據
 
     """
 
     def __init__(self):
         """
-        :param Appid: 云用户appid。
+        :param Appid: 雲用戶appid。
         :type Appid: int
-        :param Id: 监控任务ID。
+        :param Id: 監控任務ID。
         :type Id: int
-        :param Name: 监控名称。
+        :param Name: 監控名稱。
         :type Name: str
-        :param MonitorStatus: 监测状态：1-监测中；2-暂停监测。
+        :param MonitorStatus: 監測狀态：1-監測中；2-暫停監測。
         :type MonitorStatus: int
-        :param ScannerType: 监测模式，normal-正常扫描；deep-深度扫描。
+        :param ScannerType: 監測模式，normal-正常掃描；deep-深度掃描。
         :type ScannerType: str
-        :param Crontab: 扫描周期，单位小时，每X小时执行一次。
+        :param Crontab: 掃描週期，單位小時，每X小時執行一次。
         :type Crontab: int
-        :param IncludedVulsTypes: 指定扫描类型，3位数每位依次表示：扫描Web漏洞、扫描系统漏洞、扫描系统端口。
+        :param IncludedVulsTypes: 指定掃描類型，3位數每位依次表示：掃描Web漏洞、掃描系統漏洞、掃描系統端口。
         :type IncludedVulsTypes: str
-        :param RateLimit: 速率限制，每秒发送X个HTTP请求。
+        :param RateLimit: 速率限制，每秒發送X個HTTP請求。
         :type RateLimit: int
-        :param FirstScanStartTime: 首次扫描开始时间。
+        :param FirstScanStartTime: 首次掃描開始時間。
         :type FirstScanStartTime: str
-        :param ScanStatus: 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
+        :param ScanStatus: 掃描狀态：0-待掃描（無任何掃描結果）；1-掃描中（正在進行掃描）；2-已掃描（有掃描結果且不正在掃描）；3-掃描完成待同步結果。
         :type ScanStatus: int
-        :param LastScanFinishTime: 上一次扫描完成时间。
+        :param LastScanFinishTime: 上一次掃描完成時間。
         :type LastScanFinishTime: str
-        :param CurrentScanStartTime: 当前扫描开始时间，如扫描完成则为上一次扫描的开始时间。
+        :param CurrentScanStartTime: 當前掃描開始時間，如掃描完成則爲上一次掃描的開始時間。
         :type CurrentScanStartTime: str
         :param CreatedAt: CreatedAt。
         :type CreatedAt: str
@@ -972,15 +972,15 @@ class Monitor(AbstractModel):
 
 
 class MonitorMiniSite(AbstractModel):
-    """监控任务中的站点信息。
+    """監控任務中的站點訊息。
 
     """
 
     def __init__(self):
         """
-        :param SiteId: 站点ID。
+        :param SiteId: 站點ID。
         :type SiteId: int
-        :param Url: 站点Url。
+        :param Url: 站點Url。
         :type Url: str
         """
         self.SiteId = None
@@ -993,33 +993,33 @@ class MonitorMiniSite(AbstractModel):
 
 
 class MonitorsDetail(AbstractModel):
-    """监控任务详细数据
+    """監控任務詳細數據
 
     """
 
     def __init__(self):
         """
-        :param Progress: 监控任务包含的站点列表的平均扫描进度。
+        :param Progress: 監控任務包含的站點清單的平均掃描進度。
         :type Progress: int
-        :param PageCount: 扫描页面总数。
+        :param PageCount: 掃描頁面總數。
         :type PageCount: int
-        :param Basic: 监控任务基础信息。
+        :param Basic: 監控任務基礎訊息。
         :type Basic: :class:`tencentcloud.cws.v20180312.models.Monitor`
-        :param Sites: 监控任务包含的站点列表。
+        :param Sites: 監控任務包含的站點清單。
         :type Sites: list of MonitorMiniSite
-        :param SiteNumber: 监控任务包含的站点列表数量。
+        :param SiteNumber: 監控任務包含的站點清單數量。
         :type SiteNumber: int
-        :param ImpactSites: 监控任务包含的受漏洞威胁的站点列表。
+        :param ImpactSites: 監控任務包含的受漏洞威脅的站點清單。
         :type ImpactSites: list of MonitorMiniSite
-        :param ImpactSiteNumber: 监控任务包含的受漏洞威胁的站点列表数量。
+        :param ImpactSiteNumber: 監控任務包含的受漏洞威脅的站點清單數量。
         :type ImpactSiteNumber: int
-        :param VulsHighNumber: 高风险漏洞数量。
+        :param VulsHighNumber: 高風險漏洞數量。
         :type VulsHighNumber: int
-        :param VulsMiddleNumber: 中风险漏洞数量。
+        :param VulsMiddleNumber: 中風險漏洞數量。
         :type VulsMiddleNumber: int
-        :param VulsLowNumber: 低风险漏洞数量。
+        :param VulsLowNumber: 低風險漏洞數量。
         :type VulsLowNumber: int
-        :param VulsNoticeNumber: 提示数量。
+        :param VulsNoticeNumber: 提示數量。
         :type VulsNoticeNumber: int
         """
         self.Progress = None
@@ -1062,75 +1062,75 @@ class MonitorsDetail(AbstractModel):
 
 
 class Site(AbstractModel):
-    """站点数据
+    """站點數據
 
     """
 
     def __init__(self):
         """
-        :param Progress: 扫描进度，百分比整数
+        :param Progress: 掃描進度，百分比整數
         :type Progress: int
-        :param Appid: 云用户appid。
+        :param Appid: 雲用戶appid。
         :type Appid: int
-        :param Uin: 云用户标识。
+        :param Uin: 雲用戶标識。
         :type Uin: str
-        :param NeedLogin: 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+        :param NeedLogin: 網站是否需要登入掃描：0-未知；-1-不需要；1-需要。
         :type NeedLogin: int
-        :param LoginCookie: 登录后的cookie。
+        :param LoginCookie: 登入後的cookie。
         :type LoginCookie: str
-        :param LoginCookieValid: 登录后的cookie是否有效：0-无效；1-有效。
+        :param LoginCookieValid: 登入後的cookie是否有效：0-無效；1-有效。
         :type LoginCookieValid: int
-        :param LoginCheckUrl: 用于测试cookie是否有效的URL。
+        :param LoginCheckUrl: 用于測試cookie是否有效的URL。
         :type LoginCheckUrl: str
-        :param LoginCheckKw: 用于测试cookie是否有效的关键字。
+        :param LoginCheckKw: 用于測試cookie是否有效的關鍵字。
         :type LoginCheckKw: str
-        :param ScanDisallow: 禁止扫描器扫描的目录关键字。
+        :param ScanDisallow: 禁止掃描器掃描的目錄關鍵字。
         :type ScanDisallow: str
-        :param UserAgent: 访问网站的客户端标识。
+        :param UserAgent: 訪問網站的用戶端标識。
         :type UserAgent: str
-        :param Id: 站点ID。
+        :param Id: 站點ID。
         :type Id: int
-        :param MonitorId: 监控任务ID，为0时表示未加入监控任务。
+        :param MonitorId: 監控任務ID，爲0時表示未加入監控任務。
         :type MonitorId: int
-        :param Url: 站点url。
+        :param Url: 站點url。
         :type Url: str
-        :param Name: 站点名称。
+        :param Name: 站點名稱。
         :type Name: str
-        :param VerifyStatus: 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
+        :param VerifyStatus: 驗證狀态：0-未驗證；1-已驗證；2-驗證失效，待重新驗證。
         :type VerifyStatus: int
-        :param MonitorStatus: 监测状态：0-未监测；1-监测中；2-暂停监测。
+        :param MonitorStatus: 監測狀态：0-未監測；1-監測中；2-暫停監測。
         :type MonitorStatus: int
-        :param ScanStatus: 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
+        :param ScanStatus: 掃描狀态：0-待掃描（無任何掃描結果）；1-掃描中（正在進行掃描）；2-已掃描（有掃描結果且不正在掃描）；3-掃描完成待同步結果。
         :type ScanStatus: int
-        :param LastScanTaskId: 最近一次的AIScanner的扫描任务id，注意取消的情况。
+        :param LastScanTaskId: 最近一次的AIScanner的掃描任務id，注意取消的情況。
         :type LastScanTaskId: int
-        :param LastScanStartTime: 最近一次扫描开始时间。
+        :param LastScanStartTime: 最近一次掃描開始時間。
         :type LastScanStartTime: str
-        :param LastScanFinishTime: 最近一次扫描完成时间。
+        :param LastScanFinishTime: 最近一次掃描完成時間。
         :type LastScanFinishTime: str
-        :param LastScanCancelTime: 最近一次取消时间，取消即使用上一次扫描结果。
+        :param LastScanCancelTime: 最近一次取消時間，取消即使用上一次掃描結果。
         :type LastScanCancelTime: str
-        :param LastScanPageCount: 最近一次扫描扫描的页面数。
+        :param LastScanPageCount: 最近一次掃描掃描的頁面數。
         :type LastScanPageCount: int
-        :param LastScanScannerType: normal-正常扫描；deep-深度扫描。
+        :param LastScanScannerType: normal-正常掃描；deep-深度掃描。
         :type LastScanScannerType: str
-        :param LastScanVulsHighNum: 最近一次扫描高风险漏洞数量。
+        :param LastScanVulsHighNum: 最近一次掃描高風險漏洞數量。
         :type LastScanVulsHighNum: int
-        :param LastScanVulsMiddleNum: 最近一次扫描中风险漏洞数量。
+        :param LastScanVulsMiddleNum: 最近一次掃描中風險漏洞數量。
         :type LastScanVulsMiddleNum: int
-        :param LastScanVulsLowNum: 最近一次扫描低风险漏洞数量。
+        :param LastScanVulsLowNum: 最近一次掃描低風險漏洞數量。
         :type LastScanVulsLowNum: int
-        :param LastScanVulsNoticeNum: 最近一次扫描提示信息数量。
+        :param LastScanVulsNoticeNum: 最近一次掃描提示訊息數量。
         :type LastScanVulsNoticeNum: int
-        :param CreatedAt: 记录添加时间。
+        :param CreatedAt: 記錄添加時間。
         :type CreatedAt: str
-        :param UpdatedAt: 记录最近修改时间。
+        :param UpdatedAt: 記錄最近修改時間。
         :type UpdatedAt: str
-        :param LastScanRateLimit: 速率限制，每秒发送X个HTTP请求。
+        :param LastScanRateLimit: 速率限制，每秒發送X個HTTP請求。
         :type LastScanRateLimit: int
-        :param LastScanVulsNum: 最近一次扫描漏洞总数量。
+        :param LastScanVulsNum: 最近一次掃描漏洞總數量。
         :type LastScanVulsNum: int
-        :param LastScanNoticeNum: 最近一次扫描提示总数量
+        :param LastScanNoticeNum: 最近一次掃描提示總數量
         :type LastScanNoticeNum: int
         """
         self.Progress = None
@@ -1203,7 +1203,7 @@ class Site(AbstractModel):
 
 
 class SitesVerification(AbstractModel):
-    """站点验证数据
+    """站點驗證數據
 
     """
 
@@ -1211,21 +1211,21 @@ class SitesVerification(AbstractModel):
         """
         :param Id: ID。
         :type Id: int
-        :param Appid: 云用户appid
+        :param Appid: 雲用戶appid
         :type Appid: int
-        :param VerifyUrl: 用于验证站点的url，即访问该url获取验证数据。
+        :param VerifyUrl: 用于驗證站點的url，即訪問該url獲取驗證數據。
         :type VerifyUrl: str
-        :param VerifyFileUrl: 获取验证验证文件的url。
+        :param VerifyFileUrl: 獲取驗證驗證文件的url。
         :type VerifyFileUrl: str
         :param Domain: 根域名。
         :type Domain: str
-        :param TxtName: txt解析域名验证的name。
+        :param TxtName: txt解析域名驗證的name。
         :type TxtName: str
-        :param TxtText: txt解析域名验证的text。
+        :param TxtText: txt解析域名驗證的text。
         :type TxtText: str
-        :param ValidTo: 验证有效期，在此之前有效。
+        :param ValidTo: 驗證有效期，在此之前有效。
         :type ValidTo: str
-        :param VerifyStatus: 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
+        :param VerifyStatus: 驗證狀态：0-未驗證；1-已驗證；2-驗證失效，待重新驗證。
         :type VerifyStatus: int
         :param CreatedAt: CreatedAt。
         :type CreatedAt: str
@@ -1260,13 +1260,13 @@ class SitesVerification(AbstractModel):
 
 
 class VerifySitesRequest(AbstractModel):
-    """VerifySites请求参数结构体
+    """VerifySites請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Urls: 站点的url列表
+        :param Urls: 站點的url清單
         :type Urls: list of str
         """
         self.Urls = None
@@ -1277,17 +1277,17 @@ class VerifySitesRequest(AbstractModel):
 
 
 class VerifySitesResponse(AbstractModel):
-    """VerifySites返回参数结构体
+    """VerifySites返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SuccessNumber: 验证成功的根域名数量。
+        :param SuccessNumber: 驗證成功的根域名數量。
         :type SuccessNumber: int
-        :param FailNumber: 验证失败的根域名数量。
+        :param FailNumber: 驗證失敗的根域名數量。
         :type FailNumber: int
-        :param RequestId: 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
         self.SuccessNumber = None
@@ -1302,43 +1302,43 @@ class VerifySitesResponse(AbstractModel):
 
 
 class Vul(AbstractModel):
-    """漏洞数据
+    """漏洞數據
 
     """
 
     def __init__(self):
         """
-        :param IsReported: 是否已经添加误报，0-否，1-是。
+        :param IsReported: 是否已經添加誤報，0-否，1-是。
         :type IsReported: int
-        :param Appid: 云用户appid。
+        :param Appid: 雲用戶appid。
         :type Appid: int
-        :param Uin: 云用户标识。
+        :param Uin: 雲用戶标識。
         :type Uin: str
         :param Id: 漏洞ID。
         :type Id: int
-        :param SiteId: 站点ID。
+        :param SiteId: 站點ID。
         :type SiteId: int
-        :param TaskId: 扫描引擎的扫描任务ID。
+        :param TaskId: 掃描引擎的掃描任務ID。
         :type TaskId: int
-        :param Level: 漏洞级别：high、middle、low、notice。
+        :param Level: 漏洞級别：high、middle、low、notice。
         :type Level: str
-        :param Name: 漏洞名称。
+        :param Name: 漏洞名稱。
         :type Name: str
-        :param Url: 出现漏洞的url。
+        :param Url: 出現漏洞的url。
         :type Url: str
-        :param Html: 网址/细节。
+        :param Html: 網址/細節。
         :type Html: str
-        :param Nickname: 漏洞类型。
+        :param Nickname: 漏洞類型。
         :type Nickname: str
-        :param Harm: 危害说明。
+        :param Harm: 危害說明。
         :type Harm: str
         :param Describe: 漏洞描述。
         :type Describe: str
-        :param Solution: 解决方案。
+        :param Solution: 解決方案。
         :type Solution: str
-        :param From: 漏洞参考。
+        :param From: 漏洞參考。
         :type From: str
-        :param Parameter: 漏洞通过该参数攻击。
+        :param Parameter: 漏洞通過該參數攻擊。
         :type Parameter: str
         :param CreatedAt: CreatedAt。
         :type CreatedAt: str
@@ -1387,7 +1387,7 @@ class Vul(AbstractModel):
 
 
 class VulsTimeline(AbstractModel):
-    """用户漏洞数随时间变化统计数据
+    """用戶漏洞數随時間變化統計數據
 
     """
 
@@ -1395,27 +1395,27 @@ class VulsTimeline(AbstractModel):
         """
         :param Id: ID。
         :type Id: int
-        :param Appid: 云用户appid。
+        :param Appid: 雲用戶appid。
         :type Appid: int
         :param Date: 日期。
         :type Date: str
-        :param PageCount: 扫描页面总数量。
+        :param PageCount: 掃描頁面總數量。
         :type PageCount: int
-        :param SiteNum: 已验证网站总数量。
+        :param SiteNum: 已驗證網站總數量。
         :type SiteNum: int
-        :param ImpactSiteNum: 受影响的网站总数量。
+        :param ImpactSiteNum: 受影響的網站總數量。
         :type ImpactSiteNum: int
-        :param VulsHighNum: 高危漏洞总数量。
+        :param VulsHighNum: 高危漏洞總數量。
         :type VulsHighNum: int
-        :param VulsMiddleNum: 中危漏洞总数量。
+        :param VulsMiddleNum: 中危漏洞總數量。
         :type VulsMiddleNum: int
-        :param VulsLowNum: 低危漏洞总数量。
+        :param VulsLowNum: 低危漏洞總數量。
         :type VulsLowNum: int
-        :param VulsNoticeNum: 风险提示总数量
+        :param VulsNoticeNum: 風險提示總數量
         :type VulsNoticeNum: int
-        :param CreatedAt: 记录添加时间。
+        :param CreatedAt: 記錄添加時間。
         :type CreatedAt: str
-        :param UpdatedAt: 记录最近修改时间。
+        :param UpdatedAt: 記錄最近修改時間。
         :type UpdatedAt: str
         """
         self.Id = None

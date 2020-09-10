@@ -5,7 +5,7 @@ Resources:
       Type: TencentCloud::Serverless::Function
       Properties:
         CodeUri: ./
-        Description: 本示例使用 COS 触发器，完成CDN缓存刷新动作
+        Description: 本範例使用 COS 觸發器，完成CDN快取重新整理動作
         Environment:
           Variables:
         Handler: index.main_handler

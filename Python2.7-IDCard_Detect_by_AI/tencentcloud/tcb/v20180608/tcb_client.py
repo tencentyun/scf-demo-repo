@@ -26,9 +26,9 @@ class TcbClient(AbstractClient):
 
 
     def DescribeDatabaseACL(self, request):
-        """获取数据库权限
+        """獲取資料庫權限
 
-        :param request: 调用DescribeDatabaseACL所需参数的结构体。
+        :param request: 調用DescribeDatabaseACL所需參數的結構體。
         :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeDatabaseACLRequest`
         :rtype: :class:`tencentcloud.tcb.v20180608.models.DescribeDatabaseACLResponse`
 
@@ -54,9 +54,9 @@ class TcbClient(AbstractClient):
 
 
     def DescribeEnvs(self, request):
-        """获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
+        """獲取環境清單，含環境下的各個資源訊息。尤其是各資源的唯一标識，是請求各資源的關鍵參數
 
-        :param request: 调用DescribeEnvs所需参数的结构体。
+        :param request: 調用DescribeEnvs所需參數的結構體。
         :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeEnvsRequest`
         :rtype: :class:`tencentcloud.tcb.v20180608.models.DescribeEnvsResponse`
 
@@ -82,9 +82,9 @@ class TcbClient(AbstractClient):
 
 
     def ModifyDatabaseACL(self, request):
-        """修改数据库权限
+        """修改資料庫權限
 
-        :param request: 调用ModifyDatabaseACL所需参数的结构体。
+        :param request: 調用ModifyDatabaseACL所需參數的結構體。
         :type request: :class:`tencentcloud.tcb.v20180608.models.ModifyDatabaseACLRequest`
         :rtype: :class:`tencentcloud.tcb.v20180608.models.ModifyDatabaseACLResponse`
 
@@ -110,9 +110,9 @@ class TcbClient(AbstractClient):
 
 
     def ModifyEnv(self, request):
-        """更新环境信息
+        """更新環境訊息
 
-        :param request: 调用ModifyEnv所需参数的结构体。
+        :param request: 調用ModifyEnv所需參數的結構體。
         :type request: :class:`tencentcloud.tcb.v20180608.models.ModifyEnvRequest`
         :rtype: :class:`tencentcloud.tcb.v20180608.models.ModifyEnvResponse`
 

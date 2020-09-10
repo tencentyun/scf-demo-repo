@@ -4,10 +4,10 @@ Node8.9-WebsocketTransport
 Reference: https://cloud.tencent.com/document/product/583/32553
 ***************************************************/
 
-// The url of API gateway's send back host, API网关的反向推送链接
+// The url of API gateway's send back host, API閘道的反向推送連結
 const sendbackHost = "**";
 // The information of MySql host, you need to build the database and forms in priority, there are 2 columns: `ConnectionID`, `Date`
-// MySql数据库账号信息,需要提前创建好数据库和表单,表单中新建2列：`ConnectionID`, `Date`
+// MySql資料庫賬号訊息,需要提前創建好資料庫和表單,表單中新建2列：`ConnectionID`, `Date`
 const Host = "**";
 const User = "**";
 const Password = "**";
@@ -62,8 +62,8 @@ async function send(connectionId, data) {
     const req = http.request(
       {
         method: "POST",
-        host: "**", // Secd back host, 反向推送地址host
-        path: "**", // Send back path, 反向推送地址路径
+        host: "**", // Secd back host, 反向推送網址host
+        path: "**", // Send back path, 反向推送網址路徑
         headers: {
           "Content-Type": "application/json",
           "Content-Length": Buffer.byteLength(postData)

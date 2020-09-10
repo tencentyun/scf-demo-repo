@@ -26,7 +26,7 @@ class SolarClient(AbstractClient):
 
 
     def CheckStaffChUser(self, request):
-        """员工渠道更改员工状态
+        """員工管道更改員工狀态
 
         :param request: Request instance for CheckStaffChUser.
         :type request: :class:`tencentcloud.solar.v20181011.models.CheckStaffChUserRequest`
@@ -54,7 +54,7 @@ class SolarClient(AbstractClient):
 
 
     def CopyActivityChannel(self, request):
-        """复制活动渠道的策略
+        """複制活動管道的策略
 
         :param request: Request instance for CopyActivityChannel.
         :type request: :class:`tencentcloud.solar.v20181011.models.CopyActivityChannelRequest`
@@ -82,7 +82,7 @@ class SolarClient(AbstractClient):
 
 
     def CreateProject(self, request):
-        """创建项目
+        """創建項目
 
         :param request: Request instance for CreateProject.
         :type request: :class:`tencentcloud.solar.v20181011.models.CreateProjectRequest`
@@ -110,7 +110,7 @@ class SolarClient(AbstractClient):
 
 
     def CreateSubProject(self, request):
-        """创建子项目
+        """創建子項目
 
         :param request: Request instance for CreateSubProject.
         :type request: :class:`tencentcloud.solar.v20181011.models.CreateSubProjectRequest`
@@ -138,7 +138,7 @@ class SolarClient(AbstractClient):
 
 
     def DeleteProject(self, request):
-        """删除项目
+        """删除項目
 
         :param request: Request instance for DeleteProject.
         :type request: :class:`tencentcloud.solar.v20181011.models.DeleteProjectRequest`
@@ -166,7 +166,7 @@ class SolarClient(AbstractClient):
 
 
     def DescribeCustomer(self, request):
-        """客户档案查询客户详情
+        """客戶檔案查詢客戶詳情
 
         :param request: Request instance for DescribeCustomer.
         :type request: :class:`tencentcloud.solar.v20181011.models.DescribeCustomerRequest`
@@ -194,7 +194,7 @@ class SolarClient(AbstractClient):
 
 
     def DescribeCustomers(self, request):
-        """查询客户档案列表
+        """查詢客戶檔案清單
 
         :param request: Request instance for DescribeCustomers.
         :type request: :class:`tencentcloud.solar.v20181011.models.DescribeCustomersRequest`
@@ -222,7 +222,7 @@ class SolarClient(AbstractClient):
 
 
     def DescribeProject(self, request):
-        """项目详情展示
+        """項目詳情展示
 
         :param request: Request instance for DescribeProject.
         :type request: :class:`tencentcloud.solar.v20181011.models.DescribeProjectRequest`
@@ -250,7 +250,7 @@ class SolarClient(AbstractClient):
 
 
     def DescribeProjectStock(self, request):
-        """项目库存详情
+        """項目庫存詳情
 
         :param request: Request instance for DescribeProjectStock.
         :type request: :class:`tencentcloud.solar.v20181011.models.DescribeProjectStockRequest`
@@ -278,7 +278,7 @@ class SolarClient(AbstractClient):
 
 
     def DescribeProjects(self, request):
-        """项目列表展示
+        """項目清單展示
 
         :param request: Request instance for DescribeProjects.
         :type request: :class:`tencentcloud.solar.v20181011.models.DescribeProjectsRequest`
@@ -306,7 +306,7 @@ class SolarClient(AbstractClient):
 
 
     def DescribeResourceTemplateHeaders(self, request):
-        """素材查询服务号模板的列表（样例）
+        """素材查詢服務号範本的清單（樣例）
 
         :param request: Request instance for DescribeResourceTemplateHeaders.
         :type request: :class:`tencentcloud.solar.v20181011.models.DescribeResourceTemplateHeadersRequest`
@@ -334,7 +334,7 @@ class SolarClient(AbstractClient):
 
 
     def DescribeSubProject(self, request):
-        """子项目详情
+        """子項目詳情
 
         :param request: Request instance for DescribeSubProject.
         :type request: :class:`tencentcloud.solar.v20181011.models.DescribeSubProjectRequest`
@@ -362,7 +362,7 @@ class SolarClient(AbstractClient):
 
 
     def ExpireFlow(self, request):
-        """把审批中的工单置为已失效
+        """把審批中的工單置爲已失效
 
         :param request: Request instance for ExpireFlow.
         :type request: :class:`tencentcloud.solar.v20181011.models.ExpireFlowRequest`
@@ -390,7 +390,7 @@ class SolarClient(AbstractClient):
 
 
     def ModifyProject(self, request):
-        """修改项目
+        """修改項目
 
         :param request: Request instance for ModifyProject.
         :type request: :class:`tencentcloud.solar.v20181011.models.ModifyProjectRequest`
@@ -418,7 +418,7 @@ class SolarClient(AbstractClient):
 
 
     def OffLineProject(self, request):
-        """下线项目
+        """下線項目
 
         :param request: Request instance for OffLineProject.
         :type request: :class:`tencentcloud.solar.v20181011.models.OffLineProjectRequest`
@@ -446,7 +446,7 @@ class SolarClient(AbstractClient):
 
 
     def ReplenishProjectStock(self, request):
-        """补充子项目库存
+        """補充子項目庫存
 
         :param request: Request instance for ReplenishProjectStock.
         :type request: :class:`tencentcloud.solar.v20181011.models.ReplenishProjectStockRequest`
@@ -474,7 +474,7 @@ class SolarClient(AbstractClient):
 
 
     def SendWxTouchTask(self, request):
-        """发送企业微信触达任务
+        """發送企業微信觸達任務
 
         :param request: Request instance for SendWxTouchTask.
         :type request: :class:`tencentcloud.solar.v20181011.models.SendWxTouchTaskRequest`

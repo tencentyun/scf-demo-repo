@@ -17,17 +17,17 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class BodyDetectResult(AbstractModel):
-    """图中检测出来的人体框。
+    """圖中檢測出來的人體框。
 
     """
 
     def __init__(self):
         """
-        :param Confidence: 检测出的人体置信度。 
-误识率百分之十对应的阈值是0.14；误识率百分之五对应的阈值是0.32；误识率百分之二对应的阈值是0.62；误识率百分之一对应的阈值是0.81。 
-通常情况建议使用阈值0.32，可适用大多数情况。
+        :param Confidence: 檢測出的人體置信度。 
+誤識率百分之十對應的阈值是0.14；誤識率百分之五對應的阈值是0.32；誤識率百分之二對應的阈值是0.62；誤識率百分之一對應的阈值是0.81。 
+通常情況建議使用阈值0.32，可适用大多數情況。
         :type Confidence: float
-        :param BodyRect: 图中检测出来的人体框
+        :param BodyRect: 圖中檢測出來的人體框
         :type BodyRect: :class:`tencentcloud.bda.v20200324.models.BodyRect`
         """
         self.Confidence = None
@@ -42,19 +42,19 @@ class BodyDetectResult(AbstractModel):
 
 
 class BodyRect(AbstractModel):
-    """人体框
+    """人體框
 
     """
 
     def __init__(self):
         """
-        :param X: 人体框左上角横坐标。
+        :param X: 人體框左上角橫坐标。
         :type X: int
-        :param Y: 人体框左上角纵坐标。
+        :param Y: 人體框左上角縱坐标。
         :type Y: int
-        :param Width: 人体宽度。
+        :param Width: 人體寬度。
         :type Width: int
-        :param Height: 人体高度。
+        :param Height: 人體高度。
         :type Height: int
         """
         self.X = None
@@ -71,22 +71,22 @@ class BodyRect(AbstractModel):
 
 
 class Candidate(AbstractModel):
-    """识别出的最相似候选人。
+    """識别出的最相似候選人。
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 人员ID。
+        :param PersonId: 人員ID。
         :type PersonId: str
-        :param TraceId: 人体轨迹ID。
+        :param TraceId: 人體軌迹ID。
         :type TraceId: str
-        :param Score: 候选者的匹配得分。 
-十万人体库下，误识率百分之五对应的分数为70分；误识率百分之二对应的分数为80分；误识率百分之一对应的分数为90分。
+        :param Score: 候選者的比對得分。 
+十萬人體庫下，誤識率百分之五對應的分數爲70分；誤識率百分之二對應的分數爲80分；誤識率百分之一對應的分數爲90分。
  
-二十万人体库下，误识率百分之五对应的分数为80分；误识率百分之二对应的分数为90分；误识率百分之一对应的分数为95分。
+二十萬人體庫下，誤識率百分之五對應的分數爲80分；誤識率百分之二對應的分數爲90分；誤識率百分之一對應的分數爲95分。
  
-通常情况建议使用分数80分（保召回）。若希望获得较高精度，建议使用分数90分（保准确）。
+通常情況建議使用分數80分（保召回）。若希望獲得較高精度，建議使用分數90分（保準确）。
         :type Score: float
         """
         self.PersonId = None
@@ -101,21 +101,21 @@ class Candidate(AbstractModel):
 
 
 class CreateGroupRequest(AbstractModel):
-    """CreateGroup请求参数结构体
+    """CreateGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupName: 人体库名称，[1,60]个字符，可修改，不可重复。
+        :param GroupName: 人體庫名稱，[1,60]個字元，可修改，不可重複。
         :type GroupName: str
-        :param GroupId: 人体库 ID，不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
+        :param GroupId: 人體庫 ID，不可修改，不可重複。支援英文、數字、-%@#&_，長度限制64B。
         :type GroupId: str
-        :param Tag: 人体库信息备注，[0，40]个字符。
+        :param Tag: 人體庫訊息備注，[0，40]個字元。
         :type Tag: str
-        :param BodyModelVersion: 人体识别所用的算法模型版本。 
-目前入参仅支持 “1.0”1个输入。 默认为"1.0"。  
-不同算法模型版本对应的人体识别算法不同，新版本的整体效果会优于旧版本，后续我们将推出更新版本。
+        :param BodyModelVersion: 人體識别所用的算法模型版本。 
+目前入參僅支援 “1.0”1個輸入。 預設爲"1.0"。  
+不同算法模型版本對應的人體識别算法不同，新版本的整體效果會優于舊版本，後續我們将推出更新版本。
         :type BodyModelVersion: str
         """
         self.GroupName = None
@@ -132,13 +132,13 @@ class CreateGroupRequest(AbstractModel):
 
 
 class CreateGroupResponse(AbstractModel):
-    """CreateGroup返回参数结构体
+    """CreateGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -149,20 +149,20 @@ class CreateGroupResponse(AbstractModel):
 
 
 class CreatePersonRequest(AbstractModel):
-    """CreatePerson请求参数结构体
+    """CreatePerson請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 待加入的人员库ID。
+        :param GroupId: 待加入的人員庫ID。
         :type GroupId: str
-        :param PersonName: 人员名称。[1，60]个字符，可修改，可重复。
+        :param PersonName: 人員名稱。[1，60]個字元，可修改，可重複。
         :type PersonName: str
-        :param PersonId: 人员ID，单个腾讯云账号下不可修改，不可重复。 
-支持英文、数字、-%@#&_，，长度限制64B。
+        :param PersonId: 人員ID，單個Top Cloud 賬号下不可修改，不可重複。 
+支援英文、數字、-%@#&_，，長度限制64B。
         :type PersonId: str
-        :param Trace: 人体轨迹信息。
+        :param Trace: 人體軌迹訊息。
         :type Trace: :class:`tencentcloud.bda.v20200324.models.Trace`
         """
         self.GroupId = None
@@ -181,25 +181,25 @@ class CreatePersonRequest(AbstractModel):
 
 
 class CreatePersonResponse(AbstractModel):
-    """CreatePerson返回参数结构体
+    """CreatePerson返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TraceId: 人员轨迹唯一标识。
+        :param TraceId: 人員軌迹唯一标識。
         :type TraceId: str
-        :param BodyModelVersion: 人体识别所用的算法模型版本。
+        :param BodyModelVersion: 人體識别所用的算法模型版本。
         :type BodyModelVersion: str
-        :param InputRetCode: 输入的人体轨迹图片中的合法性校验结果。
-只有为0时结果才有意义。
--1001: 输入图片不合法。-1002: 输入图片不能构成轨迹。
+        :param InputRetCode: 輸入的人體軌迹圖片中的合法性校驗結果。
+只有爲0時結果才有意義。
+-1001: 輸入圖片不合法。-1002: 輸入圖片不能構成軌迹。
         :type InputRetCode: int
-        :param InputRetCodeDetails: 输入的人体轨迹图片中的合法性校验结果详情。 
--1101:图片无效，-1102:url不合法。-1103:图片过大。-1104:图片下载失败。-1105:图片解码失败。-1109:图片分辨率过高。-2023:轨迹中有非同人图片。-2024: 轨迹提取失败。-2025: 人体检测失败。
-RetCode 的顺序和入参中Images 或 Urls 的顺序一致。
+        :param InputRetCodeDetails: 輸入的人體軌迹圖片中的合法性校驗結果詳情。 
+-1101:圖片無效，-1102:url不合法。-1103:圖片過大。-1104:圖片下載失敗。-1105:圖片解碼失敗。-1109:圖片分辨率過高。-2023:軌迹中有非同人圖片。-2024: 軌迹提取失敗。-2025: 人體檢測失敗。
+RetCode 的順序和入參中Images 或 Urls 的順序一緻。
         :type InputRetCodeDetails: list of int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TraceId = None
@@ -218,15 +218,15 @@ RetCode 的顺序和入参中Images 或 Urls 的顺序一致。
 
 
 class CreateTraceRequest(AbstractModel):
-    """CreateTrace请求参数结构体
+    """CreateTrace請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 人员ID。
+        :param PersonId: 人員ID。
         :type PersonId: str
-        :param Trace: 人体轨迹信息。
+        :param Trace: 人體軌迹訊息。
         :type Trace: :class:`tencentcloud.bda.v20200324.models.Trace`
         """
         self.PersonId = None
@@ -241,24 +241,24 @@ class CreateTraceRequest(AbstractModel):
 
 
 class CreateTraceResponse(AbstractModel):
-    """CreateTrace返回参数结构体
+    """CreateTrace返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TraceId: 人员轨迹唯一标识。
+        :param TraceId: 人員軌迹唯一标識。
         :type TraceId: str
-        :param BodyModelVersion: 人体识别所用的算法模型版本。
+        :param BodyModelVersion: 人體識别所用的算法模型版本。
         :type BodyModelVersion: str
-        :param InputRetCode: 输入的人体轨迹图片中的合法性校验结果。
-只有为0时结果才有意义。
--1001: 输入图片不合法。-1002: 输入图片不能构成轨迹。
+        :param InputRetCode: 輸入的人體軌迹圖片中的合法性校驗結果。
+只有爲0時結果才有意義。
+-1001: 輸入圖片不合法。-1002: 輸入圖片不能構成軌迹。
         :type InputRetCode: int
-        :param InputRetCodeDetails: 输入的人体轨迹图片中的合法性校验结果详情。 
--1101:图片无效，-1102:url不合法。-1103:图片过大。-1104:图片下载失败。-1105:图片解码失败。-1109:图片分辨率过高。-2023:轨迹中有非同人图片。-2024: 轨迹提取失败。-2025: 人体检测失败。
+        :param InputRetCodeDetails: 輸入的人體軌迹圖片中的合法性校驗結果詳情。 
+-1101:圖片無效，-1102:url不合法。-1103:圖片過大。-1104:圖片下載失敗。-1105:圖片解碼失敗。-1109:圖片分辨率過高。-2023:軌迹中有非同人圖片。-2024: 軌迹提取失敗。-2025: 人體檢測失敗。
         :type InputRetCodeDetails: list of int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TraceId = None
@@ -277,13 +277,13 @@ class CreateTraceResponse(AbstractModel):
 
 
 class DeleteGroupRequest(AbstractModel):
-    """DeleteGroup请求参数结构体
+    """DeleteGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 人体库ID。
+        :param GroupId: 人體庫ID。
         :type GroupId: str
         """
         self.GroupId = None
@@ -294,13 +294,13 @@ class DeleteGroupRequest(AbstractModel):
 
 
 class DeleteGroupResponse(AbstractModel):
-    """DeleteGroup返回参数结构体
+    """DeleteGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -311,13 +311,13 @@ class DeleteGroupResponse(AbstractModel):
 
 
 class DeletePersonRequest(AbstractModel):
-    """DeletePerson请求参数结构体
+    """DeletePerson請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 人员ID。
+        :param PersonId: 人員ID。
         :type PersonId: str
         """
         self.PersonId = None
@@ -328,13 +328,13 @@ class DeletePersonRequest(AbstractModel):
 
 
 class DeletePersonResponse(AbstractModel):
-    """DeletePerson返回参数结构体
+    """DeletePerson返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -345,26 +345,26 @@ class DeletePersonResponse(AbstractModel):
 
 
 class DetectBodyRequest(AbstractModel):
-    """DetectBody请求参数结构体
+    """DetectBody請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Image: 人体图片 Base64 数据。
-图片 base64 编码后大小不可超过5M。
-图片分辨率不得超过 2048*2048。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Image: 人體圖片 Base64 數據。
+圖片 base64 編碼後大小不可超過5M。
+圖片分辨率不得超過 2048*2048。
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
-        :param Url: 人体图片 Url 。
-Url、Image必须提供一个，如果都提供，只使用 Url。
-图片 base64 编码后大小不可超过5M。 
-图片分辨率不得超过 2048*2048。
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Url: 人體圖片 Url 。
+Url、Image必須提供一個，如果都提供，只使用 Url。
+圖片 base64 編碼後大小不可超過5M。 
+圖片分辨率不得超過 2048*2048。
+圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+非Top Cloud 儲存的Url速度和穩定性可能受一定影響。 
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
-        :param MaxBodyNum: 最多检测的人体数目，默认值为1（仅检测图片中面积最大的那个人体）； 最大值10 ，检测图片中面积最大的10个人体。
+        :param MaxBodyNum: 最多檢測的人體數目，預設值爲1（僅檢測圖片中面積最大的那個人體）； 最大值10 ，檢測圖片中面積最大的10個人體。
         :type MaxBodyNum: int
         """
         self.Image = None
@@ -379,17 +379,17 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
 
 class DetectBodyResponse(AbstractModel):
-    """DetectBody返回参数结构体
+    """DetectBody返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BodyDetectResults: 图中检测出来的人体框。
+        :param BodyDetectResults: 圖中檢測出來的人體框。
         :type BodyDetectResults: list of BodyDetectResult
-        :param BodyModelVersion: 人体识别所用的算法模型版本。
+        :param BodyModelVersion: 人體識别所用的算法模型版本。
         :type BodyModelVersion: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.BodyDetectResults = None
@@ -409,15 +409,15 @@ class DetectBodyResponse(AbstractModel):
 
 
 class GetGroupListRequest(AbstractModel):
-    """GetGroupList请求参数结构体
+    """GetGroupList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 起始序号，默认值为0。
+        :param Offset: 起始序号，預設值爲0。
         :type Offset: int
-        :param Limit: 返回数量，默认值为10，最大值为1000。
+        :param Limit: 返回數量，預設值爲10，最大值爲1000。
         :type Limit: int
         """
         self.Offset = None
@@ -430,17 +430,17 @@ class GetGroupListRequest(AbstractModel):
 
 
 class GetGroupListResponse(AbstractModel):
-    """GetGroupList返回参数结构体
+    """GetGroupList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupInfos: 返回的人体库信息。
+        :param GroupInfos: 返回的人體庫訊息。
         :type GroupInfos: list of GroupInfo
-        :param GroupNum: 人体库总数量。
+        :param GroupNum: 人體庫總數量。
         :type GroupNum: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.GroupInfos = None
@@ -460,17 +460,17 @@ class GetGroupListResponse(AbstractModel):
 
 
 class GetPersonListRequest(AbstractModel):
-    """GetPersonList请求参数结构体
+    """GetPersonList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 人体库ID。
+        :param GroupId: 人體庫ID。
         :type GroupId: str
-        :param Offset: 起始序号，默认值为0。
+        :param Offset: 起始序号，預設值爲0。
         :type Offset: int
-        :param Limit: 返回数量，默认值为10，最大值为1000。
+        :param Limit: 返回數量，預設值爲10，最大值爲1000。
         :type Limit: int
         """
         self.GroupId = None
@@ -485,19 +485,19 @@ class GetPersonListRequest(AbstractModel):
 
 
 class GetPersonListResponse(AbstractModel):
-    """GetPersonList返回参数结构体
+    """GetPersonList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonInfos: 返回的人员信息。
+        :param PersonInfos: 返回的人員訊息。
         :type PersonInfos: list of PersonInfo
-        :param PersonNum: 该人体库的人员数量。
+        :param PersonNum: 該人體庫的人員數量。
         :type PersonNum: int
-        :param BodyModelVersion: 人体识别所用的算法模型版本。
+        :param BodyModelVersion: 人體識别所用的算法模型版本。
         :type BodyModelVersion: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PersonInfos = None
@@ -519,22 +519,22 @@ class GetPersonListResponse(AbstractModel):
 
 
 class GroupInfo(AbstractModel):
-    """返回的人员库信息。
+    """返回的人員庫訊息。
 
     """
 
     def __init__(self):
         """
-        :param GroupName: 人体库名称。
+        :param GroupName: 人體庫名稱。
         :type GroupName: str
-        :param GroupId: 人体库ID。
+        :param GroupId: 人體庫ID。
         :type GroupId: str
-        :param Tag: 人体库信息备注。
+        :param Tag: 人體庫訊息備注。
         :type Tag: str
-        :param BodyModelVersion: 人体识别所用的算法模型版本。
+        :param BodyModelVersion: 人體識别所用的算法模型版本。
         :type BodyModelVersion: str
-        :param CreationTimestamp: Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。  
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 。
+        :param CreationTimestamp: Group的創建時間和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 紀元時間到Group創建時間的毫秒數。  
+Unix 紀元時間是 1970 年 1 月 1 日星期四，協調世界時 (UTC) 。
         :type CreationTimestamp: int
         """
         self.GroupName = None
@@ -553,17 +553,17 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 。
 
 
 class ModifyGroupRequest(AbstractModel):
-    """ModifyGroup请求参数结构体
+    """ModifyGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 人体库ID。
+        :param GroupId: 人體庫ID。
         :type GroupId: str
-        :param GroupName: 人体库名称。
+        :param GroupName: 人體庫名稱。
         :type GroupName: str
-        :param Tag: 人体库信息备注。
+        :param Tag: 人體庫訊息備注。
         :type Tag: str
         """
         self.GroupId = None
@@ -578,13 +578,13 @@ class ModifyGroupRequest(AbstractModel):
 
 
 class ModifyGroupResponse(AbstractModel):
-    """ModifyGroup返回参数结构体
+    """ModifyGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -595,15 +595,15 @@ class ModifyGroupResponse(AbstractModel):
 
 
 class ModifyPersonInfoRequest(AbstractModel):
-    """ModifyPersonInfo请求参数结构体
+    """ModifyPersonInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PersonId: 人员ID。
+        :param PersonId: 人員ID。
         :type PersonId: str
-        :param PersonName: 人员名称。
+        :param PersonName: 人員名稱。
         :type PersonName: str
         """
         self.PersonId = None
@@ -616,13 +616,13 @@ class ModifyPersonInfoRequest(AbstractModel):
 
 
 class ModifyPersonInfoResponse(AbstractModel):
-    """ModifyPersonInfo返回参数结构体
+    """ModifyPersonInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -633,17 +633,17 @@ class ModifyPersonInfoResponse(AbstractModel):
 
 
 class PersonInfo(AbstractModel):
-    """人员信息。
+    """人員訊息。
 
     """
 
     def __init__(self):
         """
-        :param PersonName: 人员名称。
+        :param PersonName: 人員名稱。
         :type PersonName: str
-        :param PersonId: 人员ID。
+        :param PersonId: 人員ID。
         :type PersonId: str
-        :param TraceInfos: 包含的人体轨迹图片信息列表。
+        :param TraceInfos: 包含的人體軌迹圖片訊息清單。
         :type TraceInfos: list of TraceInfo
         """
         self.PersonName = None
@@ -663,22 +663,22 @@ class PersonInfo(AbstractModel):
 
 
 class SearchTraceRequest(AbstractModel):
-    """SearchTrace请求参数结构体
+    """SearchTrace請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 希望搜索的人体库ID。
+        :param GroupId: 希望搜索的人體庫ID。
         :type GroupId: str
-        :param Trace: 人体轨迹信息。
+        :param Trace: 人體軌迹訊息。
         :type Trace: :class:`tencentcloud.bda.v20200324.models.Trace`
-        :param MaxPersonNum: 单张被识别的人体轨迹返回的最相似人员数量。
-默认值为5，最大值为100。
- 例，设MaxPersonNum为8，则返回Top8相似的人员信息。 值越大，需要处理的时间越长。建议不要超过10。
+        :param MaxPersonNum: 單張被識别的人體軌迹返回的最相似人員數量。
+預設值爲5，最大值爲100。
+ 例，設MaxPersonNum爲8，則返回Top8相似的人員訊息。 值越大，需要處理的時間越長。建議不要超過10。
         :type MaxPersonNum: int
-        :param TraceMatchThreshold: 出参Score中，只有超过TraceMatchThreshold值的结果才会返回。
-默认为0。范围[0, 100.0]。
+        :param TraceMatchThreshold: 出參Score中，只有超過TraceMatchThreshold值的結果才會返回。
+預設爲0。範圍[0, 100.0]。
         :type TraceMatchThreshold: float
         """
         self.GroupId = None
@@ -697,24 +697,24 @@ class SearchTraceRequest(AbstractModel):
 
 
 class SearchTraceResponse(AbstractModel):
-    """SearchTrace返回参数结构体
+    """SearchTrace返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Candidates: 识别出的最相似候选人。
+        :param Candidates: 識别出的最相似候選人。
         :type Candidates: list of Candidate
-        :param InputRetCode: 输入的人体轨迹图片中的合法性校验结果。
-只有为0时结果才有意义。
--1001: 输入图片不合法。-1002: 输入图片不能构成轨迹。
+        :param InputRetCode: 輸入的人體軌迹圖片中的合法性校驗結果。
+只有爲0時結果才有意義。
+-1001: 輸入圖片不合法。-1002: 輸入圖片不能構成軌迹。
         :type InputRetCode: int
-        :param InputRetCodeDetails: 输入的人体轨迹图片中的合法性校验结果详情。 
--1101:图片无效，-1102:url不合法。-1103:图片过大。-1104:图片下载失败。-1105:图片解码失败。-1109:图片分辨率过高。-2023:轨迹中有非同人图片。-2024: 轨迹提取失败。-2025: 人体检测失败。
+        :param InputRetCodeDetails: 輸入的人體軌迹圖片中的合法性校驗結果詳情。 
+-1101:圖片無效，-1102:url不合法。-1103:圖片過大。-1104:圖片下載失敗。-1105:圖片解碼失敗。-1109:圖片分辨率過高。-2023:軌迹中有非同人圖片。-2024: 軌迹提取失敗。-2025: 人體檢測失敗。
         :type InputRetCodeDetails: list of int
-        :param BodyModelVersion: 人体识别所用的算法模型版本。
+        :param BodyModelVersion: 人體識别所用的算法模型版本。
         :type BodyModelVersion: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Candidates = None
@@ -738,22 +738,22 @@ class SearchTraceResponse(AbstractModel):
 
 
 class SegmentPortraitPicRequest(AbstractModel):
-    """SegmentPortraitPic请求参数结构体
+    """SegmentPortraitPic請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Image: 图片 base64 数据，base64 编码后大小不可超过5M。
-图片分辨率须小于2000*2000。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Image: 圖片 base64 數據，base64 編碼後大小不可超過5M。
+圖片分辨率須小於2000*2000。 
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
-        :param Url: 图片的 Url 。
-Url、Image必须提供一个，如果都提供，只使用 Url。
-图片分辨率须小于2000*2000 ，图片 base64 编码后大小不可超过5M。 
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。  
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Url: 圖片的 Url 。
+Url、Image必須提供一個，如果都提供，只使用 Url。
+圖片分辨率須小於2000*2000 ，圖片 base64 編碼後大小不可超過5M。 
+圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。  
+非Top Cloud 儲存的Url速度和穩定性可能受一定影響。 
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
         """
         self.Image = None
@@ -766,17 +766,17 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
 
 class SegmentPortraitPicResponse(AbstractModel):
-    """SegmentPortraitPic返回参数结构体
+    """SegmentPortraitPic返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResultImage: 处理后的图片 base64 数据，透明背景图
+        :param ResultImage: 處理後的圖片 base64 數據，透明背景圖
         :type ResultImage: str
-        :param ResultMask: 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）
+        :param ResultMask: 一個通過 Base64 編碼的文件，解碼後文件由 Float 型浮點數組成。這些浮點數代表原圖從左上角開始的每一行的每一個像素點，每一個浮點數的值是原圖相應像素點位于人體輪廓内的置信度（0-1）轉化的灰度值（0-255）
         :type ResultMask: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResultImage = None
@@ -791,29 +791,29 @@ class SegmentPortraitPicResponse(AbstractModel):
 
 
 class Trace(AbstractModel):
-    """人体轨迹信息
+    """人體軌迹訊息
 
     """
 
     def __init__(self):
         """
-        :param Images: 人体轨迹图片 Base64 数组。 
-数组长度最小为1最大为5。 
-单个图片 base64 编码后大小不可超过2M。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Images: 人體軌迹圖片 Base64 數組。 
+數組長度最小爲1最大爲5。 
+單個圖片 base64 編碼後大小不可超過2M。 
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Images: list of str
-        :param Urls: 人体轨迹图片 Url 数组。 
-数组长度最小为1最大为5。 
-单个图片 base64 编码后大小不可超过2M。 
-Urls、Images必须提供一个，如果都提供，只使用 Urls。 
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        :param Urls: 人體軌迹圖片 Url 數組。 
+數組長度最小爲1最大爲5。 
+單個圖片 base64 編碼後大小不可超過2M。 
+Urls、Images必須提供一個，如果都提供，只使用 Urls。 
+圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+非Top Cloud 儲存的Url速度和穩定性可能受一定影響。 
+支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Urls: list of str
-        :param BodyRects: 若输入的Images 和 Urls 是已经裁剪后的人体小图，则可以忽略本参数。 
-若否，或图片中包含多个人体，则需要通过本参数来指定图片中的人体框。 
-顺序对应 Images 或 Urls 中的顺序。  
-当不输入本参数时，我们将认为输入图片已是经过裁剪后的人体小图，不会进行人体检测而直接进行特征提取处理。
+        :param BodyRects: 若輸入的Images 和 Urls 是已經裁剪後的人體小圖，則可以忽略本參數。 
+若否，或圖片中包含多個人體，則需要通過本參數來指定圖片中的人體框。 
+順序對應 Images 或 Urls 中的順序。  
+當不輸入本參數時，我們将認爲輸入圖片已是經過裁剪後的人體小圖，不會進行人體檢測而直接進行特征提取處理。
         :type BodyRects: list of BodyRect
         """
         self.Images = None
@@ -833,15 +833,15 @@ Urls、Images必须提供一个，如果都提供，只使用 Urls。
 
 
 class TraceInfo(AbstractModel):
-    """人体轨迹信息。
+    """人體軌迹訊息。
 
     """
 
     def __init__(self):
         """
-        :param TraceId: 人体轨迹ID。
+        :param TraceId: 人體軌迹ID。
         :type TraceId: str
-        :param BodyIds: 包含的人体轨迹图片Id列表。
+        :param BodyIds: 包含的人體軌迹圖片Id清單。
         :type BodyIds: list of str
         """
         self.TraceId = None

@@ -17,47 +17,47 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class PostAudioRequest(AbstractModel):
-    """PostAudio请求参数结构体
+    """PostAudio請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BotId: 机器人标识
+        :param BotId: 機器人标識
         :type BotId: str
-        :param EngineModelType: 语音识别引擎类型,{8k_0、16k_0、16k_en}
+        :param EngineModelType: 語音識别引擎類型,{8k_0、16k_0、16k_en}
         :type EngineModelType: str
-        :param AsrVoiceFormat: 输入音频文件编码格式。1：wav(pcm)；4：speex(sp)；6：silk
+        :param AsrVoiceFormat: 輸入音訊文件編碼格式。1：wav(pcm)；4：speex(sp)；6：silk
         :type AsrVoiceFormat: int
-        :param VoiceId: asr请求Id。长度为16位的字符串，同一句话VoiceId保持一致
+        :param VoiceId: asr請求Id。長度爲16位的字串，同一句話VoiceId保持一緻
         :type VoiceId: str
-        :param Seq: 语音分片序列号。同一句话必须从0开始，依次递增
+        :param Seq: 語音分片序列号。同一句話必須從0開始，依次遞增
         :type Seq: int
-        :param IsEnd: 是否为尾包。传递最后一个语音分片时为true，其他为false
+        :param IsEnd: 是否爲尾包。傳遞最後一個語音分片時爲true，其他爲false
         :type IsEnd: bool
-        :param WaveData: 待识别音频字节流
+        :param WaveData: 待識别音訊位元流
         :type WaveData: str
-        :param UserId: 子账户id，每个终端对应一个
+        :param UserId: 子帳戶id，每個終端對應一個
         :type UserId: str
-        :param BotVersion: 机器人版本号。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
+        :param BotVersion: 機器人版本号。BotVersion/BotEnv二選一：二者均填，僅BotVersion有效；二者均不填，預設BotEnv=dev
         :type BotVersion: str
-        :param ResultTextFormat: 识别返回文本编码格式	0：UTF-8（默认）；1：GB2312；2：GBK；3：BIG5
+        :param ResultTextFormat: 識别返回文本編碼格式	0：UTF-8（預設）；1：GB2312；2：GBK；3：BIG5
         :type ResultTextFormat: int
-        :param SessionAttributes: 透传字段，传递给后台
+        :param SessionAttributes: 透傳欄位，傳遞給後台
         :type SessionAttributes: str
-        :param NeedTts: 是否将机器人回答合成音频并返回url
+        :param NeedTts: 是否将機器人回答合成音訊并返回url
         :type NeedTts: bool
-        :param Volume: 音量大小，范围：[0，10]。默认值为0，代表正常音量
+        :param Volume: 音量大小，範圍：[0，10]。預設值爲0，代表正常音量
         :type Volume: int
-        :param Speed: 语速，范围：[-2，2]。0代表1.0倍
+        :param Speed: 語速，範圍：[-2，2]。0代表1.0倍
         :type Speed: int
-        :param VoiceType: 音色,{0：女声,1:男声}
+        :param VoiceType: 音色,{0：女聲,1:男聲}
         :type VoiceType: int
-        :param SampleRate: 返回音频的采样率{8k,16k}。默认16k
+        :param SampleRate: 返回音訊的采樣率{8k,16k}。預設16k
         :type SampleRate: str
-        :param BotEnv: 机器人环境{dev:测试;release:线上}。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
+        :param BotEnv: 機器人環境{dev:測試;release:線上}。BotVersion/BotEnv二選一：二者均填，僅BotVersion有效；二者均不填，預設BotEnv=dev
         :type BotEnv: str
-        :param TtsVoiceFormat: TTS合成音频格式，{0：wav}。该字段在当前版本仅支持取值为0。
+        :param TtsVoiceFormat: TTS合成音訊格式，{0：wav}。該欄位在當前版本僅支援取值爲0。
         :type TtsVoiceFormat: int
         """
         self.BotId = None
@@ -102,39 +102,39 @@ class PostAudioRequest(AbstractModel):
 
 
 class PostAudioResponse(AbstractModel):
-    """PostAudio返回参数结构体
+    """PostAudio返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DialogStatus: 当前会话状态。取值:"start"/"continue"/"complete"
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DialogStatus: 當前會話狀态。取值:"start"/"continue"/"complete"
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DialogStatus: str
-        :param BotName: 匹配到的机器人名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BotName: 比對到的機器人名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BotName: str
-        :param IntentName: 匹配到的意图名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IntentName: 比對到的意圖名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IntentName: str
-        :param ResponseText: 机器人应答文本
+        :param ResponseText: 機器人應答文本
         :type ResponseText: str
-        :param SlotInfoList: 语义解析的槽位结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SlotInfoList: 語義解析的槽位結果清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SlotInfoList: list of SlotInfo
-        :param SessionAttributes: 透传字段
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SessionAttributes: 透傳欄位
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SessionAttributes: str
-        :param Question: 用户说法。该说法是用户原生说法或ASR识别结果，未经过语义优化
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Question: 用戶說法。該說法是用戶原生說法或ASR識别結果，未經過語義優化
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Question: str
-        :param WaveUrl: tts合成pcm音频存储链接。仅当请求参数NeedTts=true时返回
-注意：此字段可能返回 null，表示取不到有效值。
+        :param WaveUrl: tts合成pcm音訊儲存連結。僅當請求參數NeedTts=true時返回
+注意：此欄位可能返回 null，表示取不到有效值。
         :type WaveUrl: str
-        :param WaveData: tts合成pcm音频
-注意：此字段可能返回 null，表示取不到有效值。
+        :param WaveData: tts合成pcm音訊
+注意：此欄位可能返回 null，表示取不到有效值。
         :type WaveData: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DialogStatus = None
@@ -168,35 +168,35 @@ class PostAudioResponse(AbstractModel):
 
 
 class PostTextRequest(AbstractModel):
-    """PostText请求参数结构体
+    """PostText請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BotId: 机器人标识
+        :param BotId: 機器人标識
         :type BotId: str
-        :param InputText: 请求的文本
+        :param InputText: 請求的文本
         :type InputText: str
-        :param UserId: 子账户id，每个终端对应一个
+        :param UserId: 子帳戶id，每個終端對應一個
         :type UserId: str
-        :param BotVersion: 机器人版本号。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
+        :param BotVersion: 機器人版本号。BotVersion/BotEnv二選一：二者均填，僅BotVersion有效；二者均不填，預設BotEnv=dev
         :type BotVersion: str
-        :param SessionAttributes: 透传字段，传递给后台
+        :param SessionAttributes: 透傳欄位，傳遞給後台
         :type SessionAttributes: str
-        :param NeedTts: 是否将机器人回答合成音频并返回url
+        :param NeedTts: 是否将機器人回答合成音訊并返回url
         :type NeedTts: bool
-        :param Volume: 音量大小，范围：[0，10]。默认值为0，代表正常音量
+        :param Volume: 音量大小，範圍：[0，10]。預設值爲0，代表正常音量
         :type Volume: int
-        :param Speed: 语速，范围：[-2，2]。0代表1.0倍
+        :param Speed: 語速，範圍：[-2，2]。0代表1.0倍
         :type Speed: int
-        :param VoiceType: 音色,{0：女声,1:男声}
+        :param VoiceType: 音色,{0：女聲,1:男聲}
         :type VoiceType: int
-        :param SampleRate: 返回音频的采样率{8k,16k}。默认16k
+        :param SampleRate: 返回音訊的采樣率{8k,16k}。預設16k
         :type SampleRate: str
-        :param BotEnv: 机器人环境{dev:测试;release:线上}。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
+        :param BotEnv: 機器人環境{dev:測試;release:線上}。BotVersion/BotEnv二選一：二者均填，僅BotVersion有效；二者均不填，預設BotEnv=dev
         :type BotEnv: str
-        :param TtsVoiceFormat: TTS合成音频格式，{0：wav}。该字段在当前版本仅支持取值为0。
+        :param TtsVoiceFormat: TTS合成音訊格式，{0：wav}。該欄位在當前版本僅支援取值爲0。
         :type TtsVoiceFormat: int
         """
         self.BotId = None
@@ -229,38 +229,38 @@ class PostTextRequest(AbstractModel):
 
 
 class PostTextResponse(AbstractModel):
-    """PostText返回参数结构体
+    """PostText返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DialogStatus: 当前会话状态。取值:"start"/"continue"/"complete"
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DialogStatus: 當前會話狀态。取值:"start"/"continue"/"complete"
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DialogStatus: str
-        :param BotName: 匹配到的机器人名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BotName: 比對到的機器人名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BotName: str
-        :param IntentName: 匹配到的意图名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IntentName: 比對到的意圖名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IntentName: str
-        :param ResponseText: 机器人回答
+        :param ResponseText: 機器人回答
         :type ResponseText: str
-        :param SlotInfoList: 语义解析的槽位结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SlotInfoList: 語義解析的槽位結果清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SlotInfoList: list of SlotInfo
-        :param SessionAttributes: 透传字段
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SessionAttributes: 透傳欄位
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SessionAttributes: str
-        :param Question: 用户说法。该说法是用户原生说法或ASR识别结果，未经过语义优化
+        :param Question: 用戶說法。該說法是用戶原生說法或ASR識别結果，未經過語義優化
         :type Question: str
-        :param WaveUrl: tts合成pcm音频存储链接。仅当请求参数NeedTts=true时返回
-注意：此字段可能返回 null，表示取不到有效值。
+        :param WaveUrl: tts合成pcm音訊儲存連結。僅當請求參數NeedTts=true時返回
+注意：此欄位可能返回 null，表示取不到有效值。
         :type WaveUrl: str
-        :param WaveData: tts合成的pcm音频。二进制数组经过base64编码(暂时不返回)
-注意：此字段可能返回 null，表示取不到有效值。
+        :param WaveData: tts合成的pcm音訊。二進制數組經過base64編碼(暫時不返回)
+注意：此欄位可能返回 null，表示取不到有效值。
         :type WaveData: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DialogStatus = None
@@ -294,19 +294,19 @@ class PostTextResponse(AbstractModel):
 
 
 class ResetRequest(AbstractModel):
-    """Reset请求参数结构体
+    """Reset請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BotId: 机器人标识
+        :param BotId: 機器人标識
         :type BotId: str
-        :param UserId: 子账户id，每个终端对应一个
+        :param UserId: 子帳戶id，每個終端對應一個
         :type UserId: str
-        :param BotVersion: 机器人版本号。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
+        :param BotVersion: 機器人版本号。BotVersion/BotEnv二選一：二者均填，僅BotVersion有效；二者均不填，預設BotEnv=dev
         :type BotVersion: str
-        :param BotEnv: 机器人环境{dev:测试;release:线上}。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
+        :param BotEnv: 機器人環境{dev:測試;release:線上}。BotVersion/BotEnv二選一：二者均填，僅BotVersion有效；二者均不填，預設BotEnv=dev
         :type BotEnv: str
         """
         self.BotId = None
@@ -323,39 +323,39 @@ class ResetRequest(AbstractModel):
 
 
 class ResetResponse(AbstractModel):
-    """Reset返回参数结构体
+    """Reset返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DialogStatus: 当前会话状态。取值:"start"/"continue"/"complete"
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DialogStatus: 當前會話狀态。取值:"start"/"continue"/"complete"
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DialogStatus: str
-        :param BotName: 匹配到的机器人名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BotName: 比對到的機器人名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BotName: str
-        :param IntentName: 匹配到的意图名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IntentName: 比對到的意圖名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IntentName: str
-        :param ResponseText: 机器人回答
+        :param ResponseText: 機器人回答
         :type ResponseText: str
-        :param SlotInfoList: 语义解析的槽位结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SlotInfoList: 語義解析的槽位結果清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SlotInfoList: list of SlotInfo
-        :param SessionAttributes: 透传字段
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SessionAttributes: 透傳欄位
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SessionAttributes: str
-        :param Question: 用户说法。该说法是用户原生说法或ASR识别结果，未经过语义优化
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Question: 用戶說法。該說法是用戶原生說法或ASR識别結果，未經過語義優化
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Question: str
-        :param WaveUrl: tts合成pcm音频存储链接。仅当请求参数NeedTts=true时返回
-注意：此字段可能返回 null，表示取不到有效值。
+        :param WaveUrl: tts合成pcm音訊儲存連結。僅當請求參數NeedTts=true時返回
+注意：此欄位可能返回 null，表示取不到有效值。
         :type WaveUrl: str
-        :param WaveData: tts合成的pcm音频。二进制数组经过base64编码(暂时不返回)
-注意：此字段可能返回 null，表示取不到有效值。
+        :param WaveData: tts合成的pcm音訊。二進制數組經過base64編碼(暫時不返回)
+注意：此欄位可能返回 null，表示取不到有效值。
         :type WaveData: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DialogStatus = None
@@ -389,17 +389,17 @@ class ResetResponse(AbstractModel):
 
 
 class SlotInfo(AbstractModel):
-    """槽位信息
+    """槽位訊息
 
     """
 
     def __init__(self):
         """
-        :param SlotName: 槽位名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SlotName: 槽位名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SlotName: str
         :param SlotValue: 槽位值
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SlotValue: str
         """
         self.SlotName = None

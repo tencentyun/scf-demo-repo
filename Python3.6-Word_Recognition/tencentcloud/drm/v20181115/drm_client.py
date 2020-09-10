@@ -26,10 +26,10 @@ class DrmClient(AbstractClient):
 
 
     def CreateLicense(self, request):
-        """本接口用来生成DRM方案对应的播放许可证，开发者需提供DRM方案类型、内容类型参数，后台将生成许可证后返回许可证数据
-        开发者需要转发终端设备发出的许可证请求信息。
+        """本介面用來生成DRM方案對應的播放許可證，開發者需提供DRM方案類型、内容類型參數，後台将生成許可證後返回許可證數據
+        開發者需要轉發終端設備發出的許可證請求訊息。
 
-        :param request: 调用CreateLicense所需参数的结构体。
+        :param request: 調用CreateLicense所需參數的結構體。
         :type request: :class:`tencentcloud.drm.v20181115.models.CreateLicenseRequest`
         :rtype: :class:`tencentcloud.drm.v20181115.models.CreateLicenseResponse`
 
@@ -55,10 +55,10 @@ class DrmClient(AbstractClient):
 
 
     def DescribeKeys(self, request):
-        """开发者需要指定使用的DRM类型、和需要加密的Track类型，后台返回加密使用的密钥
-        如果加密使用的ContentID没有关联的密钥信息，后台会自动生成新的密钥返回
+        """開發者需要指定使用的DRM類型、和需要加密的Track類型，後台返回加密使用的金鑰
+        如果加密使用的ContentID沒有關聯的金鑰訊息，後台會自動生成新的金鑰返回
 
-        :param request: 调用DescribeKeys所需参数的结构体。
+        :param request: 調用DescribeKeys所需參數的結構體。
         :type request: :class:`tencentcloud.drm.v20181115.models.DescribeKeysRequest`
         :rtype: :class:`tencentcloud.drm.v20181115.models.DescribeKeysResponse`
 
@@ -84,9 +84,9 @@ class DrmClient(AbstractClient):
 
 
     def StartEncryption(self, request):
-        """开发者调用该接口，启动一次内容文件的DRM加密工作流
+        """開發者調用該介面，啓動一次内容文件的DRM加密工作流
 
-        :param request: 调用StartEncryption所需参数的结构体。
+        :param request: 調用StartEncryption所需參數的結構體。
         :type request: :class:`tencentcloud.drm.v20181115.models.StartEncryptionRequest`
         :rtype: :class:`tencentcloud.drm.v20181115.models.StartEncryptionResponse`
 

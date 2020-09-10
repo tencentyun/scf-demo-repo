@@ -26,7 +26,7 @@ class RpClient(AbstractClient):
 
 
     def QueryRegisterProtection(self, request):
-        """注册保护服务（RegisterProtection，RP）针对网站、APP 的线上注册场景，遇到 “恶意注册” 、“小号注册” 、“注册器注册” 等恶意行为，提供基于天御 DNA 算法的恶意防护引擎，从账号、设备、行为三个维度有效识别 “恶意注册”，从“源头”上防范业务风险。
+        """注冊保護服務（RegisterProtection，RP）針對網站、APP 的線上注冊場景，遇到 “惡意注冊” 、“小号注冊” 、“注冊器注冊” 等惡意行爲，提供基于天禦 DNA 算法的惡意防護引擎，從賬号、設備、行爲三個維度有效識别 “惡意注冊”，從“源頭”上防範業務風險。
 
         :param request: Request instance for QueryRegisterProtection.
         :type request: :class:`tencentcloud.rp.v20200224.models.QueryRegisterProtectionRequest`

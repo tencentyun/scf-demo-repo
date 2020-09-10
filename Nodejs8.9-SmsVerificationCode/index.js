@@ -1,18 +1,18 @@
 
 /**************************************************
-* 功能：1.发送短信 2.登录（校验短信验证码）
-* 函数运行的前提条件： 
-1.创建模板函数后，请先添加函数运行角色，并给该角色关联短信QcloudSMSFullAccess权限。
-2.本服务用到redis存储验证码，请先申请redis资源，并将redis的host和密码设置成环境变量。
-3.去云短信控制台申请短信模板和签名
-* 详细请参考：https://github.com/tencentyun/scf-demo-repo/tree/master/Nodejs8.9-SmsVerificationCode
+* 功能：1.發送簡訊 2.登入（校驗簡訊驗證碼）
+* 函數運作的前提條件： 
+1.創模組化板函數後，請先添加函數運作角色，并給該角色關聯簡訊QcloudSMSFullAccess權限。
+2.本服務用到redis儲存驗證碼，請先申請redis資源，并将redis的host和密碼設置成環境變量。
+3.去雲簡訊控制台申請簡訊範本和簽名
+* 詳細請參考：https://github.com/tencentyun/scf-demo-repo/tree/master/Nodejs8.9-SmsVerificationCode
 ***************************************************/
 
 'use strict';
 const redis = require('ioredis');
 const tencentcloud = require('tencentcloud-sdk-nodejs');
 const queryParse = require('querystring')
-const expireTime = 5 * 60;//验证码有效期5分钟
+const expireTime = 5 * 60;//驗證碼有效期5分鍾
 
 exports.main_handler = async (event, context, callback) => {
   let queryString = event.queryString // get形式
@@ -23,14 +23,14 @@ exports.main_handler = async (event, context, callback) => {
   if(!queryString || !queryString.method || !queryString.phone) {
     return {
       codeStr: 'InValidParam',
-      msg: "缺少参数"
+      msg: "缺少參數"
     }
   }
   const redisStore = new redis({
-    port: 6369, // Redis instance port, redis实例端口
-    host: process.env.REDIS_HOST, // Redis instance host, redis实例host
+    port: 6369, // Redis instance port, redis實例端口
+    host: process.env.REDIS_HOST, // Redis instance host, redis實例host
     family: 4,
-    password: process.env.REDIS_PASSWORD, // Redis instance password, redis实例密码
+    password: process.env.REDIS_PASSWORD, // Redis instance password, redis實例密碼
     db: 0
   });
   if(queryString.method === "getSms") {
@@ -41,20 +41,20 @@ exports.main_handler = async (event, context, callback) => {
 }
 
 /*
-* 功能：登录，校验验证码
+* 功能：登入，校驗驗證碼
 */
 async function loginSms(queryString, redisStore) {
   if(!queryString.code) {
     return {
         codeStr: 'MissingCode',
-        errorMessage: "缺少验证码参数"
+        errorMessage: "缺少驗證碼參數"
     }
   }
   const redisResult = await redisPromise(redisStore, queryString)
-  if(!redisResult) {//没有找到记录
+  if(!redisResult) {//沒有找到記錄
     return {
       codeStr: 'CodeHasExpired',
-      msg: "验证码已过期"
+      msg: "驗證碼已過期"
     }
   }
   let result = JSON.parse(redisResult)
@@ -62,32 +62,32 @@ async function loginSms(queryString, redisStore) {
   if(!result || result.used || result.num >= 3) {
     return {
       codeStr: 'CodeHasValid',
-      msg: "验证码已失效"
+      msg: "驗證碼已失效"
     }
   }
   
-  if(result.code == queryString.code) { //验证码校验正确
-    updateRedis(redisStore, queryString.phone, result, true) //将验证码更新为已使用
-    // 验证码校验通过，执行登录逻辑
-    console.log('校验验证码成功')
+  if(result.code == queryString.code) { //驗證碼校驗正确
+    updateRedis(redisStore, queryString.phone, result, true) //将驗證碼更新爲已使用
+    // 驗證碼校驗通過，執行登入邏輯
+    console.log('校驗驗證碼成功')
     return {
       codeStr: 'Success',
-      msg: '校验验证码成功'
+      msg: '校驗驗證碼成功'
     }
-  } else { // 验证码校验失败
+  } else { // 驗證碼校驗失敗
     updateRedis(redisStore, queryString.phone, result, false)
     return {
       codeStr: 'CodeIsError',
-      msg: "请检查手机号和验证码是否正确"
+      msg: "請檢查手機号和驗證碼是否正确"
     }
   }
 }
-// 更新redis状态
+// 更新redis狀态
 function updateRedis(redisStore, phone, result, used) {
   const sessionCode = {
     code: result.code,
     sessionId: result.sessionId,
-    num: ++result.num, //验证次数，最多可验证3次
+    num: ++result.num, //驗證次數，最多可驗證3次
     used: used //true-已使用，false-未使用
   }
   redisStore.set('sms_' + phone, JSON.stringify(sessionCode));
@@ -98,13 +98,13 @@ function updateRedis(redisStore, phone, result, used) {
   }
 }
 /*
- * 功能：根据手机号获取短信验证码
+ * 功能：根據手機号獲取簡訊驗證碼
  */
 async function getSms(queryString, redisStore) {
-  const code = Math.random().toString().slice(-6);//生成6位数随机验证码
+  const code = Math.random().toString().slice(-6);//生成6位數随機驗證碼
   const sessionCode = {
       code: code,
-      num: 0, //验证次数，最多可验证3次
+      num: 0, //驗證次數，最多可驗證3次
       used: false //false-未使用，true-已使用
   }
   redisStore.set('sms_' + queryString.phone, JSON.stringify(sessionCode));
@@ -114,8 +114,8 @@ async function getSms(queryString, redisStore) {
   return queryResult
 }
 /*
- * 功能：通过sdk调用短信api发送短信
- * 参数 手机号、短信验证码
+ * 功能：通過sdk調用簡訊api發送簡訊
+ * 參數 手機号、簡訊驗證碼
  */
 async function sendSms(phone, code) {
   const SmsClient = tencentcloud.sms.v20190711.Client;
@@ -134,11 +134,11 @@ async function sendSms(phone, code) {
   let client = new SmsClient(cred, "ap-guangzhou", clientProfile);
 
   let req = {
-      PhoneNumberSet: ["+" + phone], //大陆手机号861856624****
-      TemplateID: process.env.SMS_TEMPLATE_ID, //腾讯云短信模板id
-      Sign: process.env.SMS_SIGN, //腾讯云短信签名
+      PhoneNumberSet: ["+" + phone], //大陸手機号861856624****
+      TemplateID: process.env.SMS_TEMPLATE_ID, //Top Cloud 簡訊範本id
+      Sign: process.env.SMS_SIGN, //Top Cloud 簡訊簽名
       TemplateParamSet: [code],
-      SmsSdkAppid: process.env.SMS_SDKAPPID //短信应用id
+      SmsSdkAppid: process.env.SMS_SDKAPPID //簡訊應用id
   }
   
   let queryResult = await smsPromise(client, req)

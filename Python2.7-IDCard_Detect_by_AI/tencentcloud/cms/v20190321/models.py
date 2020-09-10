@@ -17,19 +17,19 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AudioModerationRequest(AbstractModel):
-    """AudioModeration请求参数结构体
+    """AudioModeration請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CallbackUrl: 回调url
+        :param CallbackUrl: 回調url
         :type CallbackUrl: str
-        :param FileContent: 音频内容的base64
+        :param FileContent: 音訊内容的base64
         :type FileContent: str
-        :param FileMD5: 音频文件的MD5值
+        :param FileMD5: 音訊文件的MD5值
         :type FileMD5: str
-        :param FileUrl: 音频内容Url ，其中FileUrl和FileContent二选一
+        :param FileUrl: 音訊内容Url ，其中FileUrl和FileContent二選一
         :type FileUrl: str
         """
         self.CallbackUrl = None
@@ -46,18 +46,18 @@ class AudioModerationRequest(AbstractModel):
 
 
 class AudioModerationResponse(AbstractModel):
-    """AudioModeration返回参数结构体
+    """AudioModeration返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BusinessCode: 业务返回码 
-60001：成功请求回调任务
+        :param BusinessCode: 業務返回碼 
+60001：成功請求回調任務
         :type BusinessCode: int
-        :param Data: 识别返回结果
+        :param Data: 識别返回結果
         :type Data: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.BusinessCode = None
@@ -72,17 +72,17 @@ class AudioModerationResponse(AbstractModel):
 
 
 class DescribeModerationOverviewRequest(AbstractModel):
-    """DescribeModerationOverview请求参数结构体
+    """DescribeModerationOverview請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Date: 日期，如2019-01-01， 查询该日期的概览数据
+        :param Date: 日期，如2019-01-01， 查詢該日期的概覽數據
         :type Date: str
-        :param ServiceTypes: 服务类型数组，可以动态配置，Text:文本，Image:图片，Audio:音频，Video:视频, 使用"ALL"表示所有类型, 不区分大小写，如 ["Text", "Image"]查询文本和图片服务的数据，["all"]查询所有服务的数据。
+        :param ServiceTypes: 服務類型數組，可以動态配置，Text:文本，Image:圖片，Audio:音訊，Video:視訊, 使用"ALL"表示所有類型, 不區分大小寫，如 ["Text", "Image"]查詢文本和圖片服務的數據，["all"]查詢所有服務的數據。
         :type ServiceTypes: list of str
-        :param Channels: 渠道号数组，1:直播 2:点播 3:IM 4:GME，统计指定渠道组合的汇总数据，如[1,2]表示获取直播和点播两个渠道的汇总数据，不填[]为所有渠道汇总数据
+        :param Channels: 管道号數組，1:直播 2:點播 3:IM 4:GME，統計指定管道組合的匯總數據，如[1,2]表示獲取直播和點播兩個管道的匯總數據，不填[]爲所有管道匯總數據
         :type Channels: list of int non-negative
         """
         self.Date = None
@@ -97,15 +97,15 @@ class DescribeModerationOverviewRequest(AbstractModel):
 
 
 class DescribeModerationOverviewResponse(AbstractModel):
-    """DescribeModerationOverview返回参数结构体
+    """DescribeModerationOverview返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Results: 概览数据集合
+        :param Results: 概覽數據集合
         :type Results: list of OverviewRecord
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Results = None
@@ -123,32 +123,32 @@ class DescribeModerationOverviewResponse(AbstractModel):
 
 
 class ImageData(AbstractModel):
-    """图片识别结果详情
+    """圖片識别結果詳情
 
     """
 
     def __init__(self):
         """
-        :param EvilFlag: 是否恶意 0：正常 1：可疑
+        :param EvilFlag: 是否惡意 0：正常 1：可疑
         :type EvilFlag: int
-        :param EvilType: 恶意类型
+        :param EvilType: 惡意類型
 100：正常 
 20001：政治
 20002：色情 
-20006：涉毒违法
-20007：谩骂 
+20006：涉毒違法
+20007：謾罵 
 24001：暴恐
-21000：综合
+21000：綜合
         :type EvilType: int
-        :param IllegalDetect: 图片违法详情
+        :param IllegalDetect: 圖片違法詳情
         :type IllegalDetect: :class:`tencentcloud.cms.v20190321.models.ImageIllegalDetect`
-        :param PolityDetect: 图片涉政详情
+        :param PolityDetect: 圖片涉政詳情
         :type PolityDetect: :class:`tencentcloud.cms.v20190321.models.ImagePolityDetect`
-        :param PornDetect: 图片涉黄详情
+        :param PornDetect: 圖片涉黃詳情
         :type PornDetect: :class:`tencentcloud.cms.v20190321.models.ImagePornDetect`
-        :param Similar: 图片相似度详情
+        :param Similar: 圖片相似度詳情
         :type Similar: :class:`tencentcloud.cms.v20190321.models.Similar`
-        :param TerrorDetect: 图片暴恐详情
+        :param TerrorDetect: 圖片暴恐詳情
         :type TerrorDetect: :class:`tencentcloud.cms.v20190321.models.ImageTerrorDetect`
         """
         self.EvilFlag = None
@@ -181,28 +181,28 @@ class ImageData(AbstractModel):
 
 
 class ImageIllegalDetect(AbstractModel):
-    """图片违法详情
+    """圖片違法詳情
 
     """
 
     def __init__(self):
         """
-        :param EvilType: 恶意类型
+        :param EvilType: 惡意類型
 100：正常 
 20001：政治
 20002：色情 
-20006：涉毒违法
-20007：谩骂 
+20006：涉毒違法
+20007：謾罵 
 24001：暴恐
-21000：综合
+21000：綜合
         :type EvilType: int
-        :param HitFlag: 处置判定 0：正常 1：可疑
+        :param HitFlag: 處置判定 0：正常 1：可疑
         :type HitFlag: int
-        :param Keywords: 关键词明细
+        :param Keywords: 關鍵詞明細
         :type Keywords: list of str
-        :param Labels: 违法标签：返回违法特征中文描述，如赌桌，枪支
+        :param Labels: 違法标簽：返回違法特征中文描述，如賭桌，槍支
         :type Labels: list of str
-        :param Score: 违法分：分值范围 0-100，分数越高违法倾向越明显
+        :param Score: 違法分：分值範圍 0-100，分數越高違法傾向越明顯
         :type Score: int
         """
         self.EvilType = None
@@ -221,17 +221,17 @@ class ImageIllegalDetect(AbstractModel):
 
 
 class ImageModerationRequest(AbstractModel):
-    """ImageModeration请求参数结构体
+    """ImageModeration請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileContent: 文件内容 Base64,与FileUrl必须二填一
+        :param FileContent: 文件内容 Base64,與FileUrl必須二填一
         :type FileContent: str
         :param FileMD5: 文件MD5值
         :type FileMD5: str
-        :param FileUrl: 文件地址
+        :param FileUrl: 文件網址
         :type FileUrl: str
         """
         self.FileContent = None
@@ -246,17 +246,17 @@ class ImageModerationRequest(AbstractModel):
 
 
 class ImageModerationResponse(AbstractModel):
-    """ImageModeration返回参数结构体
+    """ImageModeration返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 识别结果
+        :param Data: 識别結果
         :type Data: :class:`tencentcloud.cms.v20190321.models.ImageData`
-        :param BusinessCode: 业务返回码
+        :param BusinessCode: 業務返回碼
         :type BusinessCode: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -273,28 +273,28 @@ class ImageModerationResponse(AbstractModel):
 
 
 class ImagePolityDetect(AbstractModel):
-    """图片涉政详情
+    """圖片涉政詳情
 
     """
 
     def __init__(self):
         """
-        :param EvilType: 恶意类型
+        :param EvilType: 惡意類型
 100：正常 
 20001：政治
 20002：色情 
-20006：涉毒违法
-20007：谩骂 
+20006：涉毒違法
+20007：謾罵 
 24001：暴恐
-21000：综合
+21000：綜合
         :type EvilType: int
-        :param HitFlag: 处置判定  0：正常 1：可疑
+        :param HitFlag: 處置判定  0：正常 1：可疑
         :type HitFlag: int
-        :param FaceNames: 命中的人脸名称
+        :param FaceNames: 命中的人臉名稱
         :type FaceNames: list of str
-        :param Keywords: 关键词明细
+        :param Keywords: 關鍵詞明細
         :type Keywords: list of str
-        :param Score: 政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
+        :param Score: 政治（人臉）分：分值範圍 0-100，分數越高可疑程度越高
         :type Score: int
         """
         self.EvilType = None
@@ -313,28 +313,28 @@ class ImagePolityDetect(AbstractModel):
 
 
 class ImagePornDetect(AbstractModel):
-    """图片涉黄详情
+    """圖片涉黃詳情
 
     """
 
     def __init__(self):
         """
-        :param EvilType: 恶意类型
+        :param EvilType: 惡意類型
 100：正常 
 20001：政治
 20002：色情 
-20006：涉毒违法
-20007：谩骂 
+20006：涉毒違法
+20007：謾罵 
 24001：暴恐
-21000：综合
+21000：綜合
         :type EvilType: int
-        :param HitFlag: 处置判定 0：正常 1：可疑
+        :param HitFlag: 處置判定 0：正常 1：可疑
         :type HitFlag: int
-        :param Keywords: 关键词明细
+        :param Keywords: 關鍵詞明細
         :type Keywords: list of str
-        :param Labels: 色情标签：色情特征中文描述
+        :param Labels: 色情标簽：色情特征中文描述
         :type Labels: list of str
-        :param Score: 色情分：分值范围 0-100，分数越高色情倾向越明显
+        :param Score: 色情分：分值範圍 0-100，分數越高色情傾向越明顯
         :type Score: int
         """
         self.EvilType = None
@@ -353,28 +353,28 @@ class ImagePornDetect(AbstractModel):
 
 
 class ImageTerrorDetect(AbstractModel):
-    """图片暴恐详情
+    """圖片暴恐詳情
 
     """
 
     def __init__(self):
         """
-        :param EvilType: 恶意类型
+        :param EvilType: 惡意類型
 100：正常 
 20001：政治
 20002：色情 
-20006：涉毒违法
-20007：谩骂 
+20006：涉毒違法
+20007：謾罵 
 24001：暴恐
-21000：综合
+21000：綜合
         :type EvilType: int
-        :param HitFlag: 处置判定 0：正常 1：可疑
+        :param HitFlag: 處置判定 0：正常 1：可疑
         :type HitFlag: int
-        :param Keywords: 关键词明细
+        :param Keywords: 關鍵詞明細
         :type Keywords: list of str
-        :param Labels: 暴恐标签：返回暴恐特征中文描述
+        :param Labels: 暴恐标簽：返回暴恐特征中文描述
         :type Labels: list of str
-        :param Score: 暴恐分：分值范围0--100，分数越高暴恐倾向越明显
+        :param Score: 暴恐分：分值範圍0--100，分數越高暴恐傾向越明顯
         :type Score: int
         """
         self.EvilType = None
@@ -393,19 +393,19 @@ class ImageTerrorDetect(AbstractModel):
 
 
 class OverviewRecord(AbstractModel):
-    """概览数据
+    """概覽數據
 
     """
 
     def __init__(self):
         """
-        :param EvilCount: 调用恶意量
+        :param EvilCount: 調用惡意量
         :type EvilCount: int
-        :param ServiceType: Text表示文本，Image表示图片，Audio表示音频，Video表示视频
+        :param ServiceType: Text表示文本，Image表示圖片，Audio表示音訊，Video表示視訊
         :type ServiceType: str
-        :param TotalCount: 调用总量
+        :param TotalCount: 調用總量
         :type TotalCount: int
-        :param Yoy: 恶意量同比增长率
+        :param Yoy: 惡意量同比增長率
         :type Yoy: str
         """
         self.EvilCount = None
@@ -422,24 +422,24 @@ class OverviewRecord(AbstractModel):
 
 
 class Similar(AbstractModel):
-    """相似度详情
+    """相似度詳情
 
     """
 
     def __init__(self):
         """
-        :param EvilType: 恶意类型
+        :param EvilType: 惡意類型
 100：正常 
 20001：政治
 20002：色情 
-20006：涉毒违法
-20007：谩骂 
+20006：涉毒違法
+20007：謾罵 
 24001：暴恐
-21000：综合
+21000：綜合
         :type EvilType: int
-        :param HitFlag: 处置判定 0：未匹配到 1：恶意 2：白样本
+        :param HitFlag: 處置判定 0：未比對到 1：惡意 2：白樣本
         :type HitFlag: int
-        :param SeedUrl: 返回的种子url
+        :param SeedUrl: 返回的種子url
         :type SeedUrl: str
         """
         self.EvilType = None
@@ -454,24 +454,24 @@ class Similar(AbstractModel):
 
 
 class TextData(AbstractModel):
-    """文本识别结果详情
+    """文本識别結果詳情
 
     """
 
     def __init__(self):
         """
-        :param EvilFlag: 是否恶意 0：正常 1：可疑
+        :param EvilFlag: 是否惡意 0：正常 1：可疑
         :type EvilFlag: int
-        :param EvilType: 恶意类型
+        :param EvilType: 惡意類型
 100：正常
 20001：政治
 20002：色情 
-20006：涉毒违法
-20007：谩骂 
+20006：涉毒違法
+20007：謾罵 
 24001：暴恐
-21000：综合
+21000：綜合
         :type EvilType: int
-        :param Keywords: 命中的关键词
+        :param Keywords: 命中的關鍵詞
         :type Keywords: list of str
         """
         self.EvilFlag = None
@@ -486,13 +486,13 @@ class TextData(AbstractModel):
 
 
 class TextModerationRequest(AbstractModel):
-    """TextModeration请求参数结构体
+    """TextModeration請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Content: 文本内容Base64编码
+        :param Content: 文本内容Base64編碼
         :type Content: str
         """
         self.Content = None
@@ -503,17 +503,17 @@ class TextModerationRequest(AbstractModel):
 
 
 class TextModerationResponse(AbstractModel):
-    """TextModeration返回参数结构体
+    """TextModeration返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 识别结果
+        :param Data: 識别結果
         :type Data: :class:`tencentcloud.cms.v20190321.models.TextData`
-        :param BusinessCode: 业务返回码
+        :param BusinessCode: 業務返回碼
         :type BusinessCode: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -530,19 +530,19 @@ class TextModerationResponse(AbstractModel):
 
 
 class VideoModerationRequest(AbstractModel):
-    """VideoModeration请求参数结构体
+    """VideoModeration請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CallbackUrl: 回调Url
+        :param CallbackUrl: 回調Url
         :type CallbackUrl: str
-        :param FileMD5: 视频文件MD5
+        :param FileMD5: 視訊文件MD5
         :type FileMD5: str
-        :param FileContent: 视频内容base64
+        :param FileContent: 視訊内容base64
         :type FileContent: str
-        :param FileUrl: 视频内容Url,其中FileUrl与FileContent二选一
+        :param FileUrl: 視訊内容Url,其中FileUrl與FileContent二選一
         :type FileUrl: str
         """
         self.CallbackUrl = None
@@ -559,18 +559,18 @@ class VideoModerationRequest(AbstractModel):
 
 
 class VideoModerationResponse(AbstractModel):
-    """VideoModeration返回参数结构体
+    """VideoModeration返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BusinessCode: 业务返回码
-60001：成功请求回调任务
+        :param BusinessCode: 業務返回碼
+60001：成功請求回調任務
         :type BusinessCode: int
-        :param Data: 识别返回结果
+        :param Data: 識别返回結果
         :type Data: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.BusinessCode = None

@@ -26,9 +26,9 @@ class FaceidClient(AbstractClient):
 
 
     def BankCardVerification(self, request):
-        """银行卡核验
+        """銀行卡核驗
 
-        :param request: 调用BankCardVerification所需参数的结构体。
+        :param request: 調用BankCardVerification所需參數的結構體。
         :type request: :class:`tencentcloud.faceid.v20180301.models.BankCardVerificationRequest`
         :rtype: :class:`tencentcloud.faceid.v20180301.models.BankCardVerificationResponse`
 
@@ -54,9 +54,9 @@ class FaceidClient(AbstractClient):
 
 
     def DetectAuth(self, request):
-        """每次开始核身前，需先调用本接口获取BizToken，用来串联核身流程，在核身完成后，用于获取验证结果信息。
+        """每次開始核身前，需先調用本介面獲取BizToken，用來串聯核身流程，在核身完成後，用于獲取驗證結果訊息。
 
-        :param request: 调用DetectAuth所需参数的结构体。
+        :param request: 調用DetectAuth所需參數的結構體。
         :type request: :class:`tencentcloud.faceid.v20180301.models.DetectAuthRequest`
         :rtype: :class:`tencentcloud.faceid.v20180301.models.DetectAuthResponse`
 
@@ -82,9 +82,9 @@ class FaceidClient(AbstractClient):
 
 
     def GetActionSequence(self, request):
-        """使用动作活体检测模式前，需调用本接口获取动作顺序。
+        """使用動作活體檢測模式前，需調用本介面獲取動作順序。
 
-        :param request: 调用GetActionSequence所需参数的结构体。
+        :param request: 調用GetActionSequence所需參數的結構體。
         :type request: :class:`tencentcloud.faceid.v20180301.models.GetActionSequenceRequest`
         :rtype: :class:`tencentcloud.faceid.v20180301.models.GetActionSequenceResponse`
 
@@ -110,9 +110,9 @@ class FaceidClient(AbstractClient):
 
 
     def GetDetectInfo(self, request):
-        """完成验证后，用BizToken调用本接口获取结果信息，BizToken生成后三天内（3\*24\*3,600秒）可多次拉取。
+        """完成驗證後，用BizToken調用本介面獲取結果訊息，BizToken生成後三天内（3\*24\*3,600秒）可多次拉取。
 
-        :param request: 调用GetDetectInfo所需参数的结构体。
+        :param request: 調用GetDetectInfo所需參數的結構體。
         :type request: :class:`tencentcloud.faceid.v20180301.models.GetDetectInfoRequest`
         :rtype: :class:`tencentcloud.faceid.v20180301.models.GetDetectInfoResponse`
 
@@ -138,9 +138,9 @@ class FaceidClient(AbstractClient):
 
 
     def GetLiveCode(self, request):
-        """使用数字活体检测模式前，需调用本接口获取数字验证码。
+        """使用數字活體檢測模式前，需調用本介面獲取數字驗證碼。
 
-        :param request: 调用GetLiveCode所需参数的结构体。
+        :param request: 調用GetLiveCode所需參數的結構體。
         :type request: :class:`tencentcloud.faceid.v20180301.models.GetLiveCodeRequest`
         :rtype: :class:`tencentcloud.faceid.v20180301.models.GetLiveCodeResponse`
 
@@ -166,9 +166,9 @@ class FaceidClient(AbstractClient):
 
 
     def IdCardVerification(self, request):
-        """传入姓名和身份证号，校验两者的真实性和一致性。
+        """傳入姓名和身份證号，校驗兩者的真實性和一緻性。
 
-        :param request: 调用IdCardVerification所需参数的结构体。
+        :param request: 調用IdCardVerification所需參數的結構體。
         :type request: :class:`tencentcloud.faceid.v20180301.models.IdCardVerificationRequest`
         :rtype: :class:`tencentcloud.faceid.v20180301.models.IdCardVerificationResponse`
 
@@ -194,9 +194,9 @@ class FaceidClient(AbstractClient):
 
 
     def ImageRecognition(self, request):
-        """传入照片和身份信息，判断该照片与公安权威库的证件照是否属于同一个人。
+        """傳入照片和身份訊息，判斷該照片與警察權威庫的證件照是否屬于同一個人。
 
-        :param request: 调用ImageRecognition所需参数的结构体。
+        :param request: 調用ImageRecognition所需參數的結構體。
         :type request: :class:`tencentcloud.faceid.v20180301.models.ImageRecognitionRequest`
         :rtype: :class:`tencentcloud.faceid.v20180301.models.ImageRecognitionResponse`
 
@@ -222,9 +222,9 @@ class FaceidClient(AbstractClient):
 
 
     def LivenessCompare(self, request):
-        """传入视频和照片，先判断视频中是否为真人，判断为真人后，再判断该视频中的人与上传照片是否属于同一个人。
+        """傳入視訊和照片，先判斷視訊中是否爲真人，判斷爲真人後，再判斷該視訊中的人與上傳照片是否屬于同一個人。
 
-        :param request: 调用LivenessCompare所需参数的结构体。
+        :param request: 調用LivenessCompare所需參數的結構體。
         :type request: :class:`tencentcloud.faceid.v20180301.models.LivenessCompareRequest`
         :rtype: :class:`tencentcloud.faceid.v20180301.models.LivenessCompareResponse`
 
@@ -250,9 +250,9 @@ class FaceidClient(AbstractClient):
 
 
     def LivenessRecognition(self, request):
-        """传入视频和身份信息，先判断视频中是否为真人，判断为真人后，再判断该视频中的人与公安权威库的证件照是否属于同一个人。
+        """傳入視訊和身份訊息，先判斷視訊中是否爲真人，判斷爲真人後，再判斷該視訊中的人與警察權威庫的證件照是否屬于同一個人。
 
-        :param request: 调用LivenessRecognition所需参数的结构体。
+        :param request: 調用LivenessRecognition所需參數的結構體。
         :type request: :class:`tencentcloud.faceid.v20180301.models.LivenessRecognitionRequest`
         :rtype: :class:`tencentcloud.faceid.v20180301.models.LivenessRecognitionResponse`
 

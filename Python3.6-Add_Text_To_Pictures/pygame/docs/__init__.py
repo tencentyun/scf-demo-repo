@@ -9,4 +9,3 @@ if __name__ == '__main__':
     main = os.path.join(pkg_dir, '__main__.py')
     exec(open(main).read())
 
-

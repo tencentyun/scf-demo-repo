@@ -26,9 +26,9 @@ class BmlbClient(AbstractClient):
 
 
     def BindL4Backends(self, request):
-        """绑定黑石服务器到四层监听器。服务器包括物理服务器、虚拟机以及半托管机器。
+        """綁定黑石服務器到四層監聽器。服務器包括物理服務器、虛拟機以及半托管機器。
 
-        :param request: 调用BindL4Backends所需参数的结构体。
+        :param request: 調用BindL4Backends所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.BindL4BackendsRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.BindL4BackendsResponse`
 
@@ -54,9 +54,9 @@ class BmlbClient(AbstractClient):
 
 
     def BindL7Backends(self, request):
-        """绑定黑石物理服务器或半托管服务器到七层转发路径。
+        """綁定黑石物理服務器或半托管服務器到七層轉發路徑。
 
-        :param request: 调用BindL7Backends所需参数的结构体。
+        :param request: 調用BindL7Backends所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.BindL7BackendsRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.BindL7BackendsResponse`
 
@@ -82,9 +82,9 @@ class BmlbClient(AbstractClient):
 
 
     def BindTrafficMirrorListeners(self, request):
-        """绑定黑石服务器七层监听器到流量镜像实例。
+        """綁定黑石服務器七層監聽器到流量映像實例。
 
-        :param request: 调用BindTrafficMirrorListeners所需参数的结构体。
+        :param request: 調用BindTrafficMirrorListeners所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.BindTrafficMirrorListenersRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.BindTrafficMirrorListenersResponse`
 
@@ -110,9 +110,9 @@ class BmlbClient(AbstractClient):
 
 
     def BindTrafficMirrorReceivers(self, request):
-        """绑定黑石物理服务器成为流量镜像接收机。
+        """綁定黑石物理服務器成爲流量映像接收機。
 
-        :param request: 调用BindTrafficMirrorReceivers所需参数的结构体。
+        :param request: 調用BindTrafficMirrorReceivers所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.BindTrafficMirrorReceiversRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.BindTrafficMirrorReceiversResponse`
 
@@ -138,9 +138,9 @@ class BmlbClient(AbstractClient):
 
 
     def CreateL4Listeners(self, request):
-        """创建黑石四层负载均衡监听器功能。黑石负载均衡四层监听器提供了转发用户请求的具体规则，包括端口、协议、会话保持、健康检查等参数。
+        """創建黑石四層負載均衡監聽器功能。黑石負載均衡四層監聽器提供了轉發用戶請求的具體規則，包括端口、協議、會話保持、健康檢查等參數。
 
-        :param request: 调用CreateL4Listeners所需参数的结构体。
+        :param request: 調用CreateL4Listeners所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.CreateL4ListenersRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.CreateL4ListenersResponse`
 
@@ -166,9 +166,9 @@ class BmlbClient(AbstractClient):
 
 
     def CreateL7Listeners(self, request):
-        """创建黑石负载均衡七层监听器功能。负载均衡七层监听器提供了转发用户请求的具体规则，包括端口、协议等参数。
+        """創建黑石負載均衡七層監聽器功能。負載均衡七層監聽器提供了轉發用戶請求的具體規則，包括端口、協議等參數。
 
-        :param request: 调用CreateL7Listeners所需参数的结构体。
+        :param request: 調用CreateL7Listeners所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.CreateL7ListenersRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.CreateL7ListenersResponse`
 
@@ -194,9 +194,9 @@ class BmlbClient(AbstractClient):
 
 
     def CreateL7Rules(self, request):
-        """创建黑石负载均衡七层转发规则。
+        """創建黑石負載均衡七層轉發規則。
 
-        :param request: 调用CreateL7Rules所需参数的结构体。
+        :param request: 調用CreateL7Rules所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.CreateL7RulesRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.CreateL7RulesResponse`
 
@@ -222,9 +222,9 @@ class BmlbClient(AbstractClient):
 
 
     def CreateLoadBalancers(self, request):
-        """用来创建黑石负载均衡。为了使用黑石负载均衡服务，您必须要创建一个或者多个负载均衡实例。通过成功调用该接口，会返回负载均衡实例的唯一ID。用户可以购买的黑石负载均衡实例类型分为：公网类型、内网类型。公网类型负载均衡对应一个BGP VIP，可用于快速访问公网负载均衡绑定的物理服务器；内网类型负载均衡对应一个腾讯云内部的VIP，不能通过Internet访问，可快速访问内网负载均衡绑定的物理服务器。
+        """用來創建黑石負載均衡。爲了使用黑石負載均衡服務，您必須要創建一個或者多個負載均衡實例。通過成功調用該介面，會返回負載均衡實例的唯一ID。用戶可以購買的黑石負載均衡實例類型分爲：公網類型、内網類型。公網類型負載均衡對應一個BGP VIP，可用于快速訪問公網負載均衡綁定的物理服務器；内網類型負載均衡對應一個Top Cloud 内部的VIP，不能通過Internet訪問，可快速訪問内網負載均衡綁定的物理服務器。
 
-        :param request: 调用CreateLoadBalancers所需参数的结构体。
+        :param request: 調用CreateLoadBalancers所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.CreateLoadBalancersRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.CreateLoadBalancersResponse`
 
@@ -250,9 +250,9 @@ class BmlbClient(AbstractClient):
 
 
     def CreateTrafficMirror(self, request):
-        """创建流量镜像实例。
+        """創建流量映像實例。
 
-        :param request: 调用CreateTrafficMirror所需参数的结构体。
+        :param request: 調用CreateTrafficMirror所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.CreateTrafficMirrorRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.CreateTrafficMirrorResponse`
 
@@ -278,9 +278,9 @@ class BmlbClient(AbstractClient):
 
 
     def DeleteL7Domains(self, request):
-        """删除黑石负载均衡七层转发域名。
+        """删除黑石負載均衡七層轉發域名。
 
-        :param request: 调用DeleteL7Domains所需参数的结构体。
+        :param request: 調用DeleteL7Domains所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DeleteL7DomainsRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DeleteL7DomainsResponse`
 
@@ -306,9 +306,9 @@ class BmlbClient(AbstractClient):
 
 
     def DeleteL7Rules(self, request):
-        """删除黑石负载均衡七层转发规则。
+        """删除黑石負載均衡七層轉發規則。
 
-        :param request: 调用DeleteL7Rules所需参数的结构体。
+        :param request: 調用DeleteL7Rules所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DeleteL7RulesRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DeleteL7RulesResponse`
 
@@ -334,9 +334,9 @@ class BmlbClient(AbstractClient):
 
 
     def DeleteListeners(self, request):
-        """删除黑石负载均衡监听器。
+        """删除黑石負載均衡監聽器。
 
-        :param request: 调用DeleteListeners所需参数的结构体。
+        :param request: 調用DeleteListeners所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DeleteListenersRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DeleteListenersResponse`
 
@@ -362,9 +362,9 @@ class BmlbClient(AbstractClient):
 
 
     def DeleteLoadBalancer(self, request):
-        """删除用户指定的黑石负载均衡实例。
+        """删除用戶指定的黑石負載均衡實例。
 
-        :param request: 调用DeleteLoadBalancer所需参数的结构体。
+        :param request: 調用DeleteLoadBalancer所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DeleteLoadBalancerRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DeleteLoadBalancerResponse`
 
@@ -390,9 +390,9 @@ class BmlbClient(AbstractClient):
 
 
     def DeleteTrafficMirror(self, request):
-        """删除已创建的黑石流量镜像实例，删除过程是异步执行的，因此需要使用查询任务接口获取删除的结果。
+        """删除已創建的黑石流量映像實例，删除過程是異步執行的，因此需要使用查詢任務介面獲取删除的結果。
 
-        :param request: 调用DeleteTrafficMirror所需参数的结构体。
+        :param request: 調用DeleteTrafficMirror所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DeleteTrafficMirrorRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DeleteTrafficMirrorResponse`
 
@@ -418,9 +418,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeCertDetail(self, request):
-        """获取黑石负载均衡证书详情。
+        """獲取黑石負載均衡證書詳情。
 
-        :param request: 调用DescribeCertDetail所需参数的结构体。
+        :param request: 調用DescribeCertDetail所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeCertDetailRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeCertDetailResponse`
 
@@ -446,9 +446,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeDevicesBindInfo(self, request):
-        """查询黑石物理机和虚机以及托管服务器绑定的黑石负载均衡详情。
+        """查詢黑石物理機和虛機以及托管服務器綁定的黑石負載均衡詳情。
 
-        :param request: 调用DescribeDevicesBindInfo所需参数的结构体。
+        :param request: 調用DescribeDevicesBindInfo所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeDevicesBindInfoRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeDevicesBindInfoResponse`
 
@@ -474,9 +474,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeL4Backends(self, request):
-        """获取黑石负载均衡四层监听器绑定的主机列表。
+        """獲取黑石負載均衡四層監聽器綁定的主機清單。
 
-        :param request: 调用DescribeL4Backends所需参数的结构体。
+        :param request: 調用DescribeL4Backends所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeL4BackendsRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeL4BackendsResponse`
 
@@ -502,9 +502,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeL4ListenerInfo(self, request):
-        """查找绑定了某主机或者指定监听器名称的黑石负载均衡四层监听器。
+        """查找綁定了某主機或者指定監聽器名稱的黑石負載均衡四層監聽器。
 
-        :param request: 调用DescribeL4ListenerInfo所需参数的结构体。
+        :param request: 調用DescribeL4ListenerInfo所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeL4ListenerInfoRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeL4ListenerInfoResponse`
 
@@ -530,9 +530,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeL4Listeners(self, request):
-        """获取黑石负载均衡四层监听器。
+        """獲取黑石負載均衡四層監聽器。
 
-        :param request: 调用DescribeL4Listeners所需参数的结构体。
+        :param request: 調用DescribeL4Listeners所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeL4ListenersRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeL4ListenersResponse`
 
@@ -558,9 +558,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeL7Backends(self, request):
-        """获取黑石负载均衡七层监听器绑定的主机列表
+        """獲取黑石負載均衡七層監聽器綁定的主機清單
 
-        :param request: 调用DescribeL7Backends所需参数的结构体。
+        :param request: 調用DescribeL7Backends所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7BackendsRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7BackendsResponse`
 
@@ -586,9 +586,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeL7ListenerInfo(self, request):
-        """查找绑定了某主机或者有某转发域名黑石负载均衡七层监听器。
+        """查找綁定了某主機或者有某轉發域名黑石負載均衡七層監聽器。
 
-        :param request: 调用DescribeL7ListenerInfo所需参数的结构体。
+        :param request: 調用DescribeL7ListenerInfo所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7ListenerInfoRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7ListenerInfoResponse`
 
@@ -614,9 +614,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeL7Listeners(self, request):
-        """获取黑石负载均衡七层监听器列表信息。
+        """獲取黑石負載均衡七層監聽器清單訊息。
 
-        :param request: 调用DescribeL7Listeners所需参数的结构体。
+        :param request: 調用DescribeL7Listeners所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7ListenersRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7ListenersResponse`
 
@@ -642,9 +642,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeL7ListenersEx(self, request):
-        """获取指定VPC下的7层监听器(支持模糊匹配)。
+        """獲取指定VPC下的7層監聽器(支援模糊比對)。
 
-        :param request: 调用DescribeL7ListenersEx所需参数的结构体。
+        :param request: 調用DescribeL7ListenersEx所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7ListenersExRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7ListenersExResponse`
 
@@ -670,9 +670,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeL7Rules(self, request):
-        """获取黑石负载均衡七层转发规则。
+        """獲取黑石負載均衡七層轉發規則。
 
-        :param request: 调用DescribeL7Rules所需参数的结构体。
+        :param request: 調用DescribeL7Rules所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7RulesRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7RulesResponse`
 
@@ -698,9 +698,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeLoadBalancerPortInfo(self, request):
-        """获取黑石负载均衡端口相关信息。
+        """獲取黑石負載均衡端口相關訊息。
 
-        :param request: 调用DescribeLoadBalancerPortInfo所需参数的结构体。
+        :param request: 調用DescribeLoadBalancerPortInfo所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeLoadBalancerPortInfoRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeLoadBalancerPortInfoResponse`
 
@@ -726,9 +726,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeLoadBalancerTaskResult(self, request):
-        """查询负载均衡实例异步任务的执行情况。
+        """查詢負載均衡實例異步任務的執行情況。
 
-        :param request: 调用DescribeLoadBalancerTaskResult所需参数的结构体。
+        :param request: 調用DescribeLoadBalancerTaskResult所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeLoadBalancerTaskResultRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeLoadBalancerTaskResultResponse`
 
@@ -754,9 +754,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeLoadBalancers(self, request):
-        """获取黑石负载均衡实例列表
+        """獲取黑石負載均衡實例清單
 
-        :param request: 调用DescribeLoadBalancers所需参数的结构体。
+        :param request: 調用DescribeLoadBalancers所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeLoadBalancersRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeLoadBalancersResponse`
 
@@ -782,9 +782,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeTrafficMirrorListeners(self, request):
-        """获取流量镜像的监听器列表信息。
+        """獲取流量映像的監聽器清單訊息。
 
-        :param request: 调用DescribeTrafficMirrorListeners所需参数的结构体。
+        :param request: 調用DescribeTrafficMirrorListeners所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeTrafficMirrorListenersRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeTrafficMirrorListenersResponse`
 
@@ -810,9 +810,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeTrafficMirrorReceiverHealthStatus(self, request):
-        """获取流量镜像接收机健康状态。
+        """獲取流量映像接收機健康狀态。
 
-        :param request: 调用DescribeTrafficMirrorReceiverHealthStatus所需参数的结构体。
+        :param request: 調用DescribeTrafficMirrorReceiverHealthStatus所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeTrafficMirrorReceiverHealthStatusRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeTrafficMirrorReceiverHealthStatusResponse`
 
@@ -838,9 +838,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeTrafficMirrorReceivers(self, request):
-        """获取指定流量镜像实例的接收机信息。
+        """獲取指定流量映像實例的接收機訊息。
 
-        :param request: 调用DescribeTrafficMirrorReceivers所需参数的结构体。
+        :param request: 調用DescribeTrafficMirrorReceivers所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeTrafficMirrorReceiversRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeTrafficMirrorReceiversResponse`
 
@@ -866,9 +866,9 @@ class BmlbClient(AbstractClient):
 
 
     def DescribeTrafficMirrors(self, request):
-        """获取流量镜像实例的列表信息。
+        """獲取流量映像實例的清單訊息。
 
-        :param request: 调用DescribeTrafficMirrors所需参数的结构体。
+        :param request: 調用DescribeTrafficMirrors所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeTrafficMirrorsRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeTrafficMirrorsResponse`
 
@@ -894,9 +894,9 @@ class BmlbClient(AbstractClient):
 
 
     def ModifyL4BackendPort(self, request):
-        """修改黑石负载均衡四层监听器后端实例端口。
+        """修改黑石負載均衡四層監聽器後端實例端口。
 
-        :param request: 调用ModifyL4BackendPort所需参数的结构体。
+        :param request: 調用ModifyL4BackendPort所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyL4BackendPortRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyL4BackendPortResponse`
 
@@ -922,9 +922,9 @@ class BmlbClient(AbstractClient):
 
 
     def ModifyL4BackendProbePort(self, request):
-        """修改黑石负载均衡四层监听器后端探测端口。
+        """修改黑石負載均衡四層監聽器後端探測端口。
 
-        :param request: 调用ModifyL4BackendProbePort所需参数的结构体。
+        :param request: 調用ModifyL4BackendProbePort所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyL4BackendProbePortRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyL4BackendProbePortResponse`
 
@@ -950,9 +950,9 @@ class BmlbClient(AbstractClient):
 
 
     def ModifyL4BackendWeight(self, request):
-        """修改黑石负载均衡四层监听器后端实例权重功能。
+        """修改黑石負載均衡四層監聽器後端實例權重功能。
 
-        :param request: 调用ModifyL4BackendWeight所需参数的结构体。
+        :param request: 調用ModifyL4BackendWeight所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyL4BackendWeightRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyL4BackendWeightResponse`
 
@@ -978,9 +978,9 @@ class BmlbClient(AbstractClient):
 
 
     def ModifyL4Listener(self, request):
-        """修改黑石负载均衡四层监听器。
+        """修改黑石負載均衡四層監聽器。
 
-        :param request: 调用ModifyL4Listener所需参数的结构体。
+        :param request: 調用ModifyL4Listener所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyL4ListenerRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyL4ListenerResponse`
 
@@ -1006,9 +1006,9 @@ class BmlbClient(AbstractClient):
 
 
     def ModifyL7BackendPort(self, request):
-        """修改黑石负载均衡七层转发路径后端实例端口。
+        """修改黑石負載均衡七層轉發路徑後端實例端口。
 
-        :param request: 调用ModifyL7BackendPort所需参数的结构体。
+        :param request: 調用ModifyL7BackendPort所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyL7BackendPortRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyL7BackendPortResponse`
 
@@ -1034,9 +1034,9 @@ class BmlbClient(AbstractClient):
 
 
     def ModifyL7BackendWeight(self, request):
-        """修改黑石负载均衡七层转发路径后端实例权重。
+        """修改黑石負載均衡七層轉發路徑後端實例權重。
 
-        :param request: 调用ModifyL7BackendWeight所需参数的结构体。
+        :param request: 調用ModifyL7BackendWeight所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyL7BackendWeightRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyL7BackendWeightResponse`
 
@@ -1062,9 +1062,9 @@ class BmlbClient(AbstractClient):
 
 
     def ModifyL7Listener(self, request):
-        """修改黑石负载均衡七层监听器。
+        """修改黑石負載均衡七層監聽器。
 
-        :param request: 调用ModifyL7Listener所需参数的结构体。
+        :param request: 調用ModifyL7Listener所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyL7ListenerRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyL7ListenerResponse`
 
@@ -1090,9 +1090,9 @@ class BmlbClient(AbstractClient):
 
 
     def ModifyL7Locations(self, request):
-        """修改黑石负载均衡七层转发路径。
+        """修改黑石負載均衡七層轉發路徑。
 
-        :param request: 调用ModifyL7Locations所需参数的结构体。
+        :param request: 調用ModifyL7Locations所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyL7LocationsRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyL7LocationsResponse`
 
@@ -1118,9 +1118,9 @@ class BmlbClient(AbstractClient):
 
 
     def ModifyLoadBalancer(self, request):
-        """根据输入参数来修改黑石负载均衡实例的基本配置信息。可能的信息包括负载均衡实例的名称，域名前缀。
+        """根據輸入參數來修改黑石負載均衡實例的基本配置訊息。可能的訊息包括負載均衡實例的名稱，域名前綴。
 
-        :param request: 调用ModifyLoadBalancer所需参数的结构体。
+        :param request: 調用ModifyLoadBalancer所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyLoadBalancerRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyLoadBalancerResponse`
 
@@ -1146,9 +1146,9 @@ class BmlbClient(AbstractClient):
 
 
     def ModifyLoadBalancerChargeMode(self, request):
-        """更改黑石负载均衡的计费方式
+        """更改黑石負載均衡的計費方式
 
-        :param request: 调用ModifyLoadBalancerChargeMode所需参数的结构体。
+        :param request: 調用ModifyLoadBalancerChargeMode所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyLoadBalancerChargeModeRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyLoadBalancerChargeModeResponse`
 
@@ -1174,9 +1174,9 @@ class BmlbClient(AbstractClient):
 
 
     def ReplaceCert(self, request):
-        """更新黑石负载均衡证书。
+        """更新黑石負載均衡證書。
 
-        :param request: 调用ReplaceCert所需参数的结构体。
+        :param request: 調用ReplaceCert所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.ReplaceCertRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.ReplaceCertResponse`
 
@@ -1202,9 +1202,9 @@ class BmlbClient(AbstractClient):
 
 
     def SetTrafficMirrorAlias(self, request):
-        """设置流量镜像的别名。
+        """設置流量映像的别名。
 
-        :param request: 调用SetTrafficMirrorAlias所需参数的结构体。
+        :param request: 調用SetTrafficMirrorAlias所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.SetTrafficMirrorAliasRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.SetTrafficMirrorAliasResponse`
 
@@ -1230,9 +1230,9 @@ class BmlbClient(AbstractClient):
 
 
     def SetTrafficMirrorHealthSwitch(self, request):
-        """设置流量镜像的健康检查参数。
+        """設置流量映像的健康檢查參數。
 
-        :param request: 调用SetTrafficMirrorHealthSwitch所需参数的结构体。
+        :param request: 調用SetTrafficMirrorHealthSwitch所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.SetTrafficMirrorHealthSwitchRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.SetTrafficMirrorHealthSwitchResponse`
 
@@ -1258,9 +1258,9 @@ class BmlbClient(AbstractClient):
 
 
     def UnbindL4Backends(self, request):
-        """解绑黑石负载均衡四层监听器物理服务器。
+        """解綁黑石負載均衡四層監聽器物理服務器。
 
-        :param request: 调用UnbindL4Backends所需参数的结构体。
+        :param request: 調用UnbindL4Backends所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.UnbindL4BackendsRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.UnbindL4BackendsResponse`
 
@@ -1286,9 +1286,9 @@ class BmlbClient(AbstractClient):
 
 
     def UnbindL7Backends(self, request):
-        """解绑黑石物理服务器或者托管服务器到七层转发路径功能。
+        """解綁黑石物理服務器或者托管服務器到七層轉發路徑功能。
 
-        :param request: 调用UnbindL7Backends所需参数的结构体。
+        :param request: 調用UnbindL7Backends所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.UnbindL7BackendsRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.UnbindL7BackendsResponse`
 
@@ -1314,9 +1314,9 @@ class BmlbClient(AbstractClient):
 
 
     def UnbindTrafficMirrorListeners(self, request):
-        """解绑流量镜像监听器。
+        """解綁流量映像監聽器。
 
-        :param request: 调用UnbindTrafficMirrorListeners所需参数的结构体。
+        :param request: 調用UnbindTrafficMirrorListeners所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.UnbindTrafficMirrorListenersRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.UnbindTrafficMirrorListenersResponse`
 
@@ -1342,9 +1342,9 @@ class BmlbClient(AbstractClient):
 
 
     def UnbindTrafficMirrorReceivers(self, request):
-        """从流量镜像实例上解绑流量镜像接收机。
+        """從流量映像實例上解綁流量映像接收機。
 
-        :param request: 调用UnbindTrafficMirrorReceivers所需参数的结构体。
+        :param request: 調用UnbindTrafficMirrorReceivers所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.UnbindTrafficMirrorReceiversRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.UnbindTrafficMirrorReceiversResponse`
 
@@ -1370,9 +1370,9 @@ class BmlbClient(AbstractClient):
 
 
     def UploadCert(self, request):
-        """创建黑石负载均衡证书。
+        """創建黑石負載均衡證書。
 
-        :param request: 调用UploadCert所需参数的结构体。
+        :param request: 調用UploadCert所需參數的結構體。
         :type request: :class:`tencentcloud.bmlb.v20180625.models.UploadCertRequest`
         :rtype: :class:`tencentcloud.bmlb.v20180625.models.UploadCertResponse`
 

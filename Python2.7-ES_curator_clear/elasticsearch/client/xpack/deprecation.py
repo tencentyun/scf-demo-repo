@@ -10,4 +10,3 @@ class DeprecationClient(NamespacedClient):
         """
         return self.transport.perform_request('GET', _make_path(index, '_xpack',
             'migration', 'deprecations'), params=params)
-

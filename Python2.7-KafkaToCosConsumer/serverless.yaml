@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: kafka_to_cos_consumer
   src: ./
-  description: CKAFKA data backup to COS. CKAFKA数据备份到COS
+  description: CKAFKA data backup to COS. CKAFKA數據備份到COS
   handler: kafka_to_cos_consumer.main_handler
   runtime: Python2.7
   namespace: default
@@ -14,7 +14,7 @@ inputs:
   memorySize: 128
   timeout: 300
   events:
-    - ckafka: # ckafka触发器
+    - ckafka: # ckafka觸發器
         name: # input Ckafka  trigger name
         parameters:
           name: # input Ckafka Instance id        

@@ -17,13 +17,13 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class DescribeEntityRequest(AbstractModel):
-    """DescribeEntity请求参数结构体
+    """DescribeEntity請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EntityName: 实体名称
+        :param EntityName: 實體名稱
         :type EntityName: str
         """
         self.EntityName = None
@@ -34,15 +34,15 @@ class DescribeEntityRequest(AbstractModel):
 
 
 class DescribeEntityResponse(AbstractModel):
-    """DescribeEntity返回参数结构体
+    """DescribeEntity返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Content: 返回查询实体相关信息
+        :param Content: 返回查詢實體相關訊息
         :type Content: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Content = None
@@ -55,15 +55,15 @@ class DescribeEntityResponse(AbstractModel):
 
 
 class DescribeRelationRequest(AbstractModel):
-    """DescribeRelation请求参数结构体
+    """DescribeRelation請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LeftEntityName: 输入第一个实体
+        :param LeftEntityName: 輸入第一個實體
         :type LeftEntityName: str
-        :param RightEntityName: 输入第二个实体
+        :param RightEntityName: 輸入第二個實體
         :type RightEntityName: str
         """
         self.LeftEntityName = None
@@ -76,15 +76,15 @@ class DescribeRelationRequest(AbstractModel):
 
 
 class DescribeRelationResponse(AbstractModel):
-    """DescribeRelation返回参数结构体
+    """DescribeRelation返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Content: 返回查询实体间的关系
+        :param Content: 返回查詢實體間的關系
         :type Content: list of EntityRelationContent
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Content = None
@@ -102,13 +102,13 @@ class DescribeRelationResponse(AbstractModel):
 
 
 class DescribeTripleRequest(AbstractModel):
-    """DescribeTriple请求参数结构体
+    """DescribeTriple請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TripleCondition: 三元组查询条件
+        :param TripleCondition: 三元組查詢條件
         :type TripleCondition: str
         """
         self.TripleCondition = None
@@ -119,15 +119,15 @@ class DescribeTripleRequest(AbstractModel):
 
 
 class DescribeTripleResponse(AbstractModel):
-    """DescribeTriple返回参数结构体
+    """DescribeTriple返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Content: 返回三元组信息
+        :param Content: 返回三元組訊息
         :type Content: list of TripleContent
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Content = None
@@ -145,17 +145,17 @@ class DescribeTripleResponse(AbstractModel):
 
 
 class EntityRelationContent(AbstractModel):
-    """返回的实体关系查询结果详细内容
+    """返回的實體關系查詢結果詳細内容
 
     """
 
     def __init__(self):
         """
-        :param Object: 实体关系查询返回关系的object
+        :param Object: 實體關系查詢返回關系的object
         :type Object: list of EntityRelationObject
-        :param Subject: 实体关系查询返回关系的subject
+        :param Subject: 實體關系查詢返回關系的subject
         :type Subject: list of EntityRelationSubject
-        :param Relation: 实体关系查询返回的关系名称
+        :param Relation: 實體關系查詢返回的關系名稱
         :type Relation: str
         """
         self.Object = None
@@ -180,17 +180,17 @@ class EntityRelationContent(AbstractModel):
 
 
 class EntityRelationObject(AbstractModel):
-    """实体关系查询返回的Object类型
+    """實體關系查詢返回的Object類型
 
     """
 
     def __init__(self):
         """
-        :param Id: object对应id
+        :param Id: object對應id
         :type Id: list of str
-        :param Name: object对应name
+        :param Name: object對應name
         :type Name: list of str
-        :param Popular: object对应popular值
+        :param Popular: object對應popular值
         :type Popular: list of int
         """
         self.Id = None
@@ -205,17 +205,17 @@ class EntityRelationObject(AbstractModel):
 
 
 class EntityRelationSubject(AbstractModel):
-    """实体关系查询返回Subject
+    """實體關系查詢返回Subject
 
     """
 
     def __init__(self):
         """
-        :param Id: Subject对应id
+        :param Id: Subject對應id
         :type Id: list of str
-        :param Name: Subject对应name
+        :param Name: Subject對應name
         :type Name: list of str
-        :param Popular: Subject对应popular
+        :param Popular: Subject對應popular
         :type Popular: list of int
         """
         self.Id = None
@@ -230,19 +230,19 @@ class EntityRelationSubject(AbstractModel):
 
 
 class TripleContent(AbstractModel):
-    """三元组查询返回的元记录
+    """三元組查詢返回的元記錄
 
     """
 
     def __init__(self):
         """
-        :param Id: 实体id
+        :param Id: 實體id
         :type Id: str
-        :param Name: 实体名称
+        :param Name: 實體名稱
         :type Name: str
-        :param Order: 实体order
+        :param Order: 實體order
         :type Order: int
-        :param Popular: 实体流行度
+        :param Popular: 實體流行度
         :type Popular: int
         """
         self.Id = None

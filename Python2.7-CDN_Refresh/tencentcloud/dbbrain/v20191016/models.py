@@ -17,15 +17,15 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class DescribeDBDiagEventRequest(AbstractModel):
-    """DescribeDBDiagEvent请求参数结构体
+    """DescribeDBDiagEvent請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 实例 ID 。
+        :param InstanceId: 實例 ID 。
         :type InstanceId: str
-        :param EventId: 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
+        :param EventId: 事件 ID 。通過“獲取實例診斷曆史DescribeDBDiagHistory”獲取。
         :type EventId: int
         """
         self.InstanceId = None
@@ -38,36 +38,36 @@ class DescribeDBDiagEventRequest(AbstractModel):
 
 
 class DescribeDBDiagEventResponse(AbstractModel):
-    """DescribeDBDiagEvent返回参数结构体
+    """DescribeDBDiagEvent返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DiagItem: 诊断项。
+        :param DiagItem: 診斷項。
         :type DiagItem: str
-        :param DiagType: 诊断类型。
+        :param DiagType: 診斷類型。
         :type DiagType: str
         :param EventId: 事件 ID 。
         :type EventId: int
-        :param Explanation: 事件详情。
+        :param Explanation: 事件詳情。
         :type Explanation: str
         :param Outline: 概要。
         :type Outline: str
-        :param Problem: 诊断出的问题。
+        :param Problem: 診斷出的問題。
         :type Problem: str
-        :param Severity: 严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。
+        :param Severity: 嚴重程度。嚴重程度分爲5級，按影響程度從高至低分别爲：1：緻命，2：嚴重，3：告警，4：提示，5：健康。
         :type Severity: int
-        :param StartTime: 开始时间
+        :param StartTime: 開始時間
         :type StartTime: str
-        :param Suggestions: 建议。
+        :param Suggestions: 建議。
         :type Suggestions: str
-        :param Metric: 保留字段。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Metric: 保留欄位。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Metric: str
-        :param EndTime: 结束时间。
+        :param EndTime: 結束時間。
         :type EndTime: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DiagItem = None
@@ -100,17 +100,17 @@ class DescribeDBDiagEventResponse(AbstractModel):
 
 
 class DescribeDBDiagHistoryRequest(AbstractModel):
-    """DescribeDBDiagHistory请求参数结构体
+    """DescribeDBDiagHistory請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 实例 ID 。
+        :param InstanceId: 實例 ID 。
         :type InstanceId: str
-        :param StartTime: 开始时间。如“2019-09-10 12:13:14”。
+        :param StartTime: 開始時間。如“2019-09-10 12:13:14”。
         :type StartTime: str
-        :param EndTime: 结束时间。如“2019-09-11 12:13:14”。
+        :param EndTime: 結束時間。如“2019-09-11 12:13:14”。
         :type EndTime: str
         """
         self.InstanceId = None
@@ -125,7 +125,7 @@ class DescribeDBDiagHistoryRequest(AbstractModel):
 
 
 class DescribeDBDiagHistoryResponse(AbstractModel):
-    """DescribeDBDiagHistory返回参数结构体
+    """DescribeDBDiagHistory返回參數結構體
 
     """
 
@@ -133,7 +133,7 @@ class DescribeDBDiagHistoryResponse(AbstractModel):
         """
         :param Events: 事件描述。
         :type Events: list of DiagHistoryEventItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Events = None
@@ -151,17 +151,17 @@ class DescribeDBDiagHistoryResponse(AbstractModel):
 
 
 class DescribeSlowLogTimeSeriesStatsRequest(AbstractModel):
-    """DescribeSlowLogTimeSeriesStats请求参数结构体
+    """DescribeSlowLogTimeSeriesStats請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 实例 ID 。
+        :param InstanceId: 實例 ID 。
         :type InstanceId: str
-        :param StartTime: 开始时间。
+        :param StartTime: 開始時間。
         :type StartTime: str
-        :param EndTime: 结束时间。
+        :param EndTime: 結束時間。
         :type EndTime: str
         """
         self.InstanceId = None
@@ -176,19 +176,19 @@ class DescribeSlowLogTimeSeriesStatsRequest(AbstractModel):
 
 
 class DescribeSlowLogTimeSeriesStatsResponse(AbstractModel):
-    """DescribeSlowLogTimeSeriesStats返回参数结构体
+    """DescribeSlowLogTimeSeriesStats返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Period: 柱间单位时间间隔，单位为秒。
+        :param Period: 柱間單位時間間隔，單位爲秒。
         :type Period: int
-        :param TimeSeries: 单位时间间隔内慢日志数量统计。
+        :param TimeSeries: 單位時間間隔内慢日志數量統計。
         :type TimeSeries: list of TimeSlice
-        :param SeriesData: 单位时间间隔内的实例 cpu 利用率监控数据。
+        :param SeriesData: 單位時間間隔内的實例 cpu 使用率監控數據。
         :type SeriesData: :class:`tencentcloud.dbbrain.v20191016.models.MonitorMetricSeriesData`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Period = None
@@ -212,25 +212,25 @@ class DescribeSlowLogTimeSeriesStatsResponse(AbstractModel):
 
 
 class DescribeSlowLogTopSqlsRequest(AbstractModel):
-    """DescribeSlowLogTopSqls请求参数结构体
+    """DescribeSlowLogTopSqls請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 实例 ID 。
+        :param InstanceId: 實例 ID 。
         :type InstanceId: str
-        :param StartTime: 开始时间。
+        :param StartTime: 開始時間。
         :type StartTime: str
-        :param EndTime: 截止时间。
+        :param EndTime: 截止時間。
         :type EndTime: str
-        :param SortBy: 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+        :param SortBy: 排序鍵，目前支援 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序鍵。
         :type SortBy: str
-        :param OrderBy: 排序方式，支持ASC（升序）以及DESC（降序）。
+        :param OrderBy: 排序方式，支援ASC（升序）以及DESC（降序）。
         :type OrderBy: str
-        :param Limit: 返回数量，默认为20，最大值为100。
+        :param Limit: 返回數量，預設爲20，最大值爲100。
         :type Limit: int
-        :param Offset: 偏移量，默认为0。
+        :param Offset: 偏移量，預設爲0。
         :type Offset: int
         """
         self.InstanceId = None
@@ -253,17 +253,17 @@ class DescribeSlowLogTopSqlsRequest(AbstractModel):
 
 
 class DescribeSlowLogTopSqlsResponse(AbstractModel):
-    """DescribeSlowLogTopSqls返回参数结构体
+    """DescribeSlowLogTopSqls返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 符合条件的记录总数。
+        :param TotalCount: 符合條件的記錄總數。
         :type TotalCount: int
-        :param Rows: 慢日志 top sql 列表
+        :param Rows: 慢日志 top sql 清單
         :type Rows: list of SlowLogTopSqlItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -283,34 +283,34 @@ class DescribeSlowLogTopSqlsResponse(AbstractModel):
 
 
 class DiagHistoryEventItem(AbstractModel):
-    """实例诊断历史事件
+    """實例診斷曆史事件
 
     """
 
     def __init__(self):
         """
-        :param DiagType: 诊断类型。
+        :param DiagType: 診斷類型。
         :type DiagType: str
-        :param EndTime: 结束时间。
+        :param EndTime: 結束時間。
         :type EndTime: str
-        :param StartTime: 开始时间。
+        :param StartTime: 開始時間。
         :type StartTime: str
         :param EventId: 事件 ID 。
         :type EventId: int
-        :param Severity: 严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。
+        :param Severity: 嚴重程度。嚴重程度分爲5級，按影響程度從高至低分别爲：1：緻命，2：嚴重，3：告警，4：提示，5：健康。
         :type Severity: int
         :param Outline: 概要。
         :type Outline: str
-        :param DiagItem: 诊断项。
+        :param DiagItem: 診斷項。
         :type DiagItem: str
-        :param InstanceId: 实例 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceId: 實例 ID 。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceId: str
-        :param Metric: 保留字段
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Metric: 保留欄位
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Metric: str
         :param Region: 地域
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Region: str
         """
         self.DiagType = None
@@ -339,18 +339,18 @@ class DiagHistoryEventItem(AbstractModel):
 
 
 class MonitorMetric(AbstractModel):
-    """监控数据
+    """監控數據
 
     """
 
     def __init__(self):
         """
-        :param Metric: 指标名称。
+        :param Metric: 指标名稱。
         :type Metric: str
-        :param Unit: 指标单位。
+        :param Unit: 指标單位。
         :type Unit: str
         :param Values: 指标值。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Values: list of int
         """
         self.Metric = None
@@ -365,15 +365,15 @@ class MonitorMetric(AbstractModel):
 
 
 class MonitorMetricSeriesData(AbstractModel):
-    """单位时间间隔内的监控指标数据
+    """單位時間間隔内的監控指标數據
 
     """
 
     def __init__(self):
         """
-        :param Series: 监控指标。
+        :param Series: 監控指标。
         :type Series: list of MonitorMetric
-        :param Timestamp: 监控指标对应的时间戳。
+        :param Timestamp: 監控指标對應的時間戳。
         :type Timestamp: list of int
         """
         self.Series = None
@@ -397,45 +397,45 @@ class SlowLogTopSqlItem(AbstractModel):
 
     def __init__(self):
         """
-        :param LockTime: sql总锁等待时间
+        :param LockTime: sql總鎖等待時間
         :type LockTime: float
-        :param LockTimeMax: 最大锁等待时间
+        :param LockTimeMax: 最大鎖等待時間
         :type LockTimeMax: float
-        :param LockTimeMin: 最小锁等待时间
+        :param LockTimeMin: 最小鎖等待時間
         :type LockTimeMin: float
-        :param RowsExamined: 总扫描行数
+        :param RowsExamined: 總掃描行數
         :type RowsExamined: int
-        :param RowsExaminedMax: 最大扫描行数
+        :param RowsExaminedMax: 最大掃描行數
         :type RowsExaminedMax: int
-        :param RowsExaminedMin: 最小扫描行数
+        :param RowsExaminedMin: 最小掃描行數
         :type RowsExaminedMin: int
-        :param QueryTime: 总耗时
+        :param QueryTime: 總耗時
         :type QueryTime: float
-        :param QueryTimeMax: 最大执行时间
+        :param QueryTimeMax: 最大執行時間
         :type QueryTimeMax: float
-        :param QueryTimeMin: 最小执行时间
+        :param QueryTimeMin: 最小執行時間
         :type QueryTimeMin: float
-        :param RowsSent: 总返回行数
+        :param RowsSent: 總返回行數
         :type RowsSent: int
-        :param RowsSentMax: 最大返回行数
+        :param RowsSentMax: 最大返回行數
         :type RowsSentMax: int
-        :param RowsSentMin: 最小返回行数
+        :param RowsSentMin: 最小返回行數
         :type RowsSentMin: int
-        :param ExecTimes: 执行次数
+        :param ExecTimes: 執行次數
         :type ExecTimes: int
-        :param SqlTemplate: sql模板
+        :param SqlTemplate: sql範本
         :type SqlTemplate: str
-        :param SqlText: 带参数SQL（随机）
+        :param SqlText: 帶參數SQL（随機）
         :type SqlText: str
         :param Schema: schema
         :type Schema: str
-        :param QueryTimeRatio: 总耗时占比
+        :param QueryTimeRatio: 總耗時占比
         :type QueryTimeRatio: float
-        :param LockTimeRatio: sql总锁等待时间占比
+        :param LockTimeRatio: sql總鎖等待時間占比
         :type LockTimeRatio: float
-        :param RowsExaminedRatio: 总扫描行数占比
+        :param RowsExaminedRatio: 總掃描行數占比
         :type RowsExaminedRatio: float
-        :param RowsSentRatio: 总返回行数占比
+        :param RowsSentRatio: 總返回行數占比
         :type RowsSentRatio: float
         """
         self.LockTime = None
@@ -484,15 +484,15 @@ class SlowLogTopSqlItem(AbstractModel):
 
 
 class TimeSlice(AbstractModel):
-    """单位时间间隔内的慢日志统计
+    """單位時間間隔内的慢日志統計
 
     """
 
     def __init__(self):
         """
-        :param Count: 总数
+        :param Count: 總數
         :type Count: int
-        :param Timestamp: 统计开始时间
+        :param Timestamp: 統計開始時間
         :type Timestamp: int
         """
         self.Count = None

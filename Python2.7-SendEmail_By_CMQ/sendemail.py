@@ -1,6 +1,6 @@
 # -*- coding: utf8 -*-
 # Message body structure in CMQ Topic:
-# CMQ Topic中的消息体结构：
+# CMQ Topic中的訊息體結構：
 # {
 # "fromAddr":"xxx@qq.com",
 # "toAddr":"xxx@qq.com",
@@ -12,15 +12,15 @@ import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
 
-# hird-party SMTP service taking QQ mailbox as an example. 第三方 SMTP 服务,以QQ邮箱为例
-mail_host="smtp.qq.com"          # SMTP server. SMTP服务器
-mail_user="xxxxxxxxx@qq.com"     # Username 用户名
-mail_pass="****************"     # SMTP service password. SMTP服务的口令
-mail_port=465                    # SMTP service port. SMTP服务端口
+# hird-party SMTP service taking QQ mailbox as an example. 第三方 SMTP 服務,以QQ電子信箱爲例
+mail_host="smtp.qq.com"          # SMTP server. SMTP服務器
+mail_user="xxxxxxxxx@qq.com"     # Username 用戶名
+mail_pass="****************"     # SMTP service password. SMTP服務的密碼
+mail_port=465                    # SMTP service port. SMTP服務端口
 
 def sendEmail(fromAddr,toAddr,subject,content):
     sender = fromAddr
-    receivers = [toAddr]  # Receiving emails, can be set as your QQ mailbox or other mailbox. 接收邮件，可设置为您的QQ邮箱或者其他邮箱
+    receivers = [toAddr]  # Receiving emails, can be set as your QQ mailbox or other mailbox. 接收郵件，可設置爲您的QQ電子信箱或者其他電子信箱
 
     message = MIMEText(content, 'plain', 'utf-8')
     message['From'] = Header(fromAddr, 'utf-8')

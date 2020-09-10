@@ -17,23 +17,23 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AdInfo(AbstractModel):
-    """广告信息
+    """廣告訊息
 
     """
 
     def __init__(self):
         """
-        :param Spots: 插播广告列表
+        :param Spots: 插播廣告清單
         :type Spots: list of PluginInfo
-        :param BoutiqueRecommands: 精品推荐广告列表
+        :param BoutiqueRecommands: 精品推薦廣告清單
         :type BoutiqueRecommands: list of PluginInfo
-        :param FloatWindowses: 悬浮窗广告列表
+        :param FloatWindowses: 懸浮窗廣告清單
         :type FloatWindowses: list of PluginInfo
-        :param Banners: banner广告列表
+        :param Banners: banner廣告清單
         :type Banners: list of PluginInfo
-        :param IntegralWalls: 积分墙广告列表
+        :param IntegralWalls: 積分牆廣告清單
         :type IntegralWalls: list of PluginInfo
-        :param NotifyBars: 通知栏广告列表
+        :param NotifyBars: 通知欄廣告清單
         :type NotifyBars: list of PluginInfo
         """
         self.Spots = None
@@ -84,13 +84,13 @@ class AdInfo(AbstractModel):
 
 
 class AppDetailInfo(AbstractModel):
-    """app的详细基础信息
+    """app的詳細基礎訊息
 
     """
 
     def __init__(self):
         """
-        :param AppName: app的名称
+        :param AppName: app的名稱
         :type AppName: str
         :param AppPkgName: app的包名
         :type AppPkgName: str
@@ -100,9 +100,9 @@ class AppDetailInfo(AbstractModel):
         :type AppSize: int
         :param AppMd5: app的md5
         :type AppMd5: str
-        :param AppIconUrl: app的图标url
+        :param AppIconUrl: app的圖标url
         :type AppIconUrl: str
-        :param FileName: app的文件名称
+        :param FileName: app的文件名稱
         :type FileName: str
         """
         self.AppName = None
@@ -125,27 +125,27 @@ class AppDetailInfo(AbstractModel):
 
 
 class AppInfo(AbstractModel):
-    """提交的app基本信息
+    """提交的app基本訊息
 
     """
 
     def __init__(self):
         """
-        :param AppUrl: app的url，必须保证不用权限校验就可以下载
+        :param AppUrl: app的url，必須保證不用權限校驗就可以下載
         :type AppUrl: str
-        :param AppMd5: app的md5，需要正确传递
+        :param AppMd5: app的md5，需要正确傳遞
         :type AppMd5: str
         :param AppSize: app的大小
         :type AppSize: int
-        :param FileName: app的文件名，指定后加固后的文件名是{FileName}_legu.apk
+        :param FileName: app的文件名，指定後加固後的文件名是{FileName}_legu.apk
         :type FileName: str
-        :param AppPkgName: app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
+        :param AppPkgName: app的包名，如果是專業版加固和企業版本加固，需要正确的傳遞此欄位
         :type AppPkgName: str
         :param AppVersion: app的版本号
         :type AppVersion: str
-        :param AppIconUrl: app的图标url
+        :param AppIconUrl: app的圖标url
         :type AppIconUrl: str
-        :param AppName: app的名称
+        :param AppName: app的名稱
         :type AppName: str
         """
         self.AppUrl = None
@@ -170,15 +170,15 @@ class AppInfo(AbstractModel):
 
 
 class AppScanSet(AbstractModel):
-    """扫描后app的信息，包含基本信息和扫描状态信息
+    """掃描後app的訊息，包含基本訊息和掃描狀态訊息
 
     """
 
     def __init__(self):
         """
-        :param ItemId: 任务唯一标识
+        :param ItemId: 任務唯一标識
         :type ItemId: str
-        :param AppName: app的名称
+        :param AppName: app的名稱
         :type AppName: str
         :param AppPkgName: app的包名
         :type AppPkgName: str
@@ -188,19 +188,19 @@ class AppScanSet(AbstractModel):
         :type AppMd5: str
         :param AppSize: app的大小
         :type AppSize: int
-        :param ScanCode: 扫描结果返回码
+        :param ScanCode: 掃描結果返回碼
         :type ScanCode: int
-        :param TaskStatus: 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+        :param TaskStatus: 任務狀态: 1-已完成,2-處理中,3-處理出錯,4-處理超時
         :type TaskStatus: int
-        :param TaskTime: 提交扫描时间
+        :param TaskTime: 提交掃描時間
         :type TaskTime: int
-        :param AppIconUrl: app的图标url
+        :param AppIconUrl: app的圖标url
         :type AppIconUrl: str
-        :param AppSid: 标识唯一该app，主要用于删除
+        :param AppSid: 标識唯一該app，主要用于删除
         :type AppSid: str
-        :param SafeType: 安全类型:1-安全软件，2-风险软件，3病毒软件
+        :param SafeType: 安全類型:1-安全軟體，2-風險軟體，3病毒軟體
         :type SafeType: int
-        :param VulCount: 漏洞个数
+        :param VulCount: 漏洞個數
         :type VulCount: int
         """
         self.ItemId = None
@@ -235,15 +235,15 @@ class AppScanSet(AbstractModel):
 
 
 class AppSetInfo(AbstractModel):
-    """加固后app的信息，包含基本信息和加固信息
+    """加固後app的訊息，包含基本訊息和加固訊息
 
     """
 
     def __init__(self):
         """
-        :param ItemId: 任务唯一标识
+        :param ItemId: 任務唯一标識
         :type ItemId: str
-        :param AppName: app的名称
+        :param AppName: app的名稱
         :type AppName: str
         :param AppPkgName: app的包名
         :type AppPkgName: str
@@ -253,23 +253,23 @@ class AppSetInfo(AbstractModel):
         :type AppMd5: str
         :param AppSize: app的大小
         :type AppSize: int
-        :param ServiceEdition: 加固服务版本
+        :param ServiceEdition: 加固服務版本
         :type ServiceEdition: str
-        :param ShieldCode: 加固结果返回码
+        :param ShieldCode: 加固結果返回碼
         :type ShieldCode: int
-        :param AppUrl: 加固后的APP下载地址
+        :param AppUrl: 加固後的APP下載網址
         :type AppUrl: str
-        :param TaskStatus: 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+        :param TaskStatus: 任務狀态: 1-已完成,2-處理中,3-處理出錯,4-處理超時
         :type TaskStatus: int
-        :param ClientIp: 请求的客户端ip
+        :param ClientIp: 請求的用戶端ip
         :type ClientIp: str
-        :param TaskTime: 提交加固时间
+        :param TaskTime: 提交加固時間
         :type TaskTime: int
-        :param AppIconUrl: app的图标url
+        :param AppIconUrl: app的圖标url
         :type AppIconUrl: str
-        :param ShieldMd5: 加固后app的md5
+        :param ShieldMd5: 加固後app的md5
         :type ShieldMd5: str
-        :param ShieldSize: 加固后app的大小
+        :param ShieldSize: 加固後app的大小
         :type ShieldSize: int
         """
         self.ItemId = None
@@ -308,7 +308,7 @@ class AppSetInfo(AbstractModel):
 
 
 class BindInfo(AbstractModel):
-    """用户绑定app的基本信息
+    """用戶綁定app的基本訊息
 
     """
 
@@ -316,7 +316,7 @@ class BindInfo(AbstractModel):
         """
         :param AppIconUrl: app的icon的url
         :type AppIconUrl: str
-        :param AppName: app的名称
+        :param AppName: app的名稱
         :type AppName: str
         :param AppPkgName: app的包名
         :type AppPkgName: str
@@ -333,17 +333,17 @@ class BindInfo(AbstractModel):
 
 
 class CreateBindInstanceRequest(AbstractModel):
-    """CreateBindInstance请求参数结构体
+    """CreateBindInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResourceId: 资源id，全局唯一
+        :param ResourceId: 資源id，全局唯一
         :type ResourceId: str
         :param AppIconUrl: app的icon的url
         :type AppIconUrl: str
-        :param AppName: app的名称
+        :param AppName: app的名稱
         :type AppName: str
         :param AppPkgName: app的包名
         :type AppPkgName: str
@@ -362,15 +362,15 @@ class CreateBindInstanceRequest(AbstractModel):
 
 
 class CreateBindInstanceResponse(AbstractModel):
-    """CreateBindInstance返回参数结构体
+    """CreateBindInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Progress: 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+        :param Progress: 任務狀态: 1-已完成,2-處理中,3-處理出錯,4-處理超時
         :type Progress: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Progress = None
@@ -383,15 +383,15 @@ class CreateBindInstanceResponse(AbstractModel):
 
 
 class CreateCosSecKeyInstanceRequest(AbstractModel):
-    """CreateCosSecKeyInstance请求参数结构体
+    """CreateCosSecKeyInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CosRegion: 地域信息，例如广州：ap-guangzhou，上海：ap-shanghai，默认为广州。
+        :param CosRegion: 地域訊息，例如廣州：ap-guangzhou，上海：ap-shanghai，預設爲廣州。
         :type CosRegion: str
-        :param Duration: 密钥有效时间，默认为1小时。
+        :param Duration: 金鑰有效時間，預設爲1小時。
         :type Duration: int
         """
         self.CosRegion = None
@@ -404,29 +404,29 @@ class CreateCosSecKeyInstanceRequest(AbstractModel):
 
 
 class CreateCosSecKeyInstanceResponse(AbstractModel):
-    """CreateCosSecKeyInstance返回参数结构体
+    """CreateCosSecKeyInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CosAppid: COS密钥对应的AppId
+        :param CosAppid: COS金鑰對應的AppId
         :type CosAppid: int
-        :param CosBucket: COS密钥对应的存储桶名
+        :param CosBucket: COS金鑰對應的儲存桶名
         :type CosBucket: str
-        :param CosRegion: 存储桶对应的地域
+        :param CosRegion: 儲存桶對應的地域
         :type CosRegion: str
-        :param ExpireTime: 密钥过期时间
+        :param ExpireTime: 金鑰過期時間
         :type ExpireTime: int
-        :param CosId: 密钥ID信息
+        :param CosId: 金鑰ID訊息
         :type CosId: str
-        :param CosKey: 密钥KEY信息
+        :param CosKey: 金鑰KEY訊息
         :type CosKey: str
-        :param CosTocken: 密钥TOCKEN信息
+        :param CosTocken: 金鑰TOCKEN訊息
         :type CosTocken: str
-        :param CosPrefix: 密钥可访问的文件前缀人。例如：CosPrefix=test/123/666，则该密钥只能操作test/123/666为前缀的文件，例如test/123/666/1.txt
+        :param CosPrefix: 金鑰可訪問的文件前綴人。例如：CosPrefix=test/123/666，則該金鑰只能操作test/123/666爲前綴的文件，例如test/123/666/1.txt
         :type CosPrefix: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CosAppid = None
@@ -453,19 +453,19 @@ class CreateCosSecKeyInstanceResponse(AbstractModel):
 
 
 class CreateResourceInstancesRequest(AbstractModel):
-    """CreateResourceInstances请求参数结构体
+    """CreateResourceInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Pid: 资源类型id。13624：加固专业版。
+        :param Pid: 資源類型id。13624：加固專業版。
         :type Pid: int
-        :param TimeUnit: 时间单位，取值为d，m，y，分别表示天，月，年。
+        :param TimeUnit: 時間單位，取值爲d，m，y，分别表示天，月，年。
         :type TimeUnit: str
-        :param TimeSpan: 时间数量。
+        :param TimeSpan: 時間數量。
         :type TimeSpan: int
-        :param ResourceNum: 资源数量。
+        :param ResourceNum: 資源數量。
         :type ResourceNum: int
         """
         self.Pid = None
@@ -482,15 +482,15 @@ class CreateResourceInstancesRequest(AbstractModel):
 
 
 class CreateResourceInstancesResponse(AbstractModel):
-    """CreateResourceInstances返回参数结构体
+    """CreateResourceInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResourceSet: 新创建的资源列表。
+        :param ResourceSet: 新創建的資源清單。
         :type ResourceSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResourceSet = None
@@ -503,15 +503,15 @@ class CreateResourceInstancesResponse(AbstractModel):
 
 
 class CreateScanInstancesRequest(AbstractModel):
-    """CreateScanInstances请求参数结构体
+    """CreateScanInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AppInfos: 待扫描的app信息列表，一次最多提交20个
+        :param AppInfos: 待掃描的app訊息清單，一次最多提交20個
         :type AppInfos: list of AppInfo
-        :param ScanInfo: 扫描信息
+        :param ScanInfo: 掃描訊息
         :type ScanInfo: :class:`tencentcloud.ms.v20180408.models.ScanInfo`
         """
         self.AppInfos = None
@@ -531,23 +531,23 @@ class CreateScanInstancesRequest(AbstractModel):
 
 
 class CreateScanInstancesResponse(AbstractModel):
-    """CreateScanInstances返回参数结构体
+    """CreateScanInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ItemId: 任务唯一标识
+        :param ItemId: 任務唯一标識
         :type ItemId: str
-        :param Progress: 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+        :param Progress: 任務狀态: 1-已完成,2-處理中,3-處理出錯,4-處理超時
         :type Progress: int
         :param AppMd5s: 提交成功的app的md5集合
         :type AppMd5s: list of str
-        :param LimitCount: 剩余可用次数
+        :param LimitCount: 剩餘可用次數
         :type LimitCount: int
-        :param LimitTime: 到期时间
+        :param LimitTime: 到期時間
         :type LimitTime: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ItemId = None
@@ -568,15 +568,15 @@ class CreateScanInstancesResponse(AbstractModel):
 
 
 class CreateShieldInstanceRequest(AbstractModel):
-    """CreateShieldInstance请求参数结构体
+    """CreateShieldInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AppInfo: 待加固的应用信息
+        :param AppInfo: 待加固的應用訊息
         :type AppInfo: :class:`tencentcloud.ms.v20180408.models.AppInfo`
-        :param ServiceInfo: 加固服务信息
+        :param ServiceInfo: 加固服務訊息
         :type ServiceInfo: :class:`tencentcloud.ms.v20180408.models.ServiceInfo`
         """
         self.AppInfo = None
@@ -593,17 +593,17 @@ class CreateShieldInstanceRequest(AbstractModel):
 
 
 class CreateShieldInstanceResponse(AbstractModel):
-    """CreateShieldInstance返回参数结构体
+    """CreateShieldInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Progress: 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+        :param Progress: 任務狀态: 1-已完成,2-處理中,3-處理出錯,4-處理超時
         :type Progress: int
-        :param ItemId: 任务唯一标识
+        :param ItemId: 任務唯一标識
         :type ItemId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Progress = None
@@ -618,17 +618,17 @@ class CreateShieldInstanceResponse(AbstractModel):
 
 
 class CreateShieldPlanInstanceRequest(AbstractModel):
-    """CreateShieldPlanInstance请求参数结构体
+    """CreateShieldPlanInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResourceId: 资源id
+        :param ResourceId: 資源id
         :type ResourceId: str
-        :param PlanName: 策略名称
+        :param PlanName: 策略名稱
         :type PlanName: str
-        :param PlanInfo: 策略具体信息
+        :param PlanInfo: 策略具體訊息
         :type PlanInfo: :class:`tencentcloud.ms.v20180408.models.PlanInfo`
         """
         self.ResourceId = None
@@ -645,7 +645,7 @@ class CreateShieldPlanInstanceRequest(AbstractModel):
 
 
 class CreateShieldPlanInstanceResponse(AbstractModel):
-    """CreateShieldPlanInstance返回参数结构体
+    """CreateShieldPlanInstance返回參數結構體
 
     """
 
@@ -653,9 +653,9 @@ class CreateShieldPlanInstanceResponse(AbstractModel):
         """
         :param PlanId: 策略id
         :type PlanId: int
-        :param Progress: 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+        :param Progress: 任務狀态: 1-已完成,2-處理中,3-處理出錯,4-處理超時
         :type Progress: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PlanId = None
@@ -670,13 +670,13 @@ class CreateShieldPlanInstanceResponse(AbstractModel):
 
 
 class DeleteScanInstancesRequest(AbstractModel):
-    """DeleteScanInstances请求参数结构体
+    """DeleteScanInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AppSids: 删除一个或多个扫描的app，最大支持20个
+        :param AppSids: 删除一個或多個掃描的app，最大支援20個
         :type AppSids: list of str
         """
         self.AppSids = None
@@ -687,15 +687,15 @@ class DeleteScanInstancesRequest(AbstractModel):
 
 
 class DeleteScanInstancesResponse(AbstractModel):
-    """DeleteScanInstances返回参数结构体
+    """DeleteScanInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Progress: 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+        :param Progress: 任務狀态: 1-已完成,2-處理中,3-處理出錯,4-處理超時
         :type Progress: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Progress = None
@@ -708,13 +708,13 @@ class DeleteScanInstancesResponse(AbstractModel):
 
 
 class DeleteShieldInstancesRequest(AbstractModel):
-    """DeleteShieldInstances请求参数结构体
+    """DeleteShieldInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ItemIds: 任务唯一标识ItemId的列表
+        :param ItemIds: 任務唯一标識ItemId的清單
         :type ItemIds: list of str
         """
         self.ItemIds = None
@@ -725,15 +725,15 @@ class DeleteShieldInstancesRequest(AbstractModel):
 
 
 class DeleteShieldInstancesResponse(AbstractModel):
-    """DeleteShieldInstances返回参数结构体
+    """DeleteShieldInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Progress: 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+        :param Progress: 任務狀态: 1-已完成,2-處理中,3-處理出錯,4-處理超時
         :type Progress: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Progress = None
@@ -746,23 +746,23 @@ class DeleteShieldInstancesResponse(AbstractModel):
 
 
 class DescribeResourceInstancesRequest(AbstractModel):
-    """DescribeResourceInstances请求参数结构体
+    """DescribeResourceInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Pids: 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
+        :param Pids: 資源類别id數組，13624：加固專業版，12750：企業版。空數組表示返回全部資源。
         :type Pids: list of int non-negative
-        :param Filters: 支持通过资源id，pid进行查询
+        :param Filters: 支援通過資源id，pid進行查詢
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 数量限制，默认为20，最大值为100。
+        :param Limit: 數量限制，預設爲20，最大值爲100。
         :type Limit: int
-        :param OrderField: 按某个字段排序，目前支持CreateTime、ExpireTime其中的一个排序。
+        :param OrderField: 按某個欄位排序，目前支援CreateTime、ExpireTime其中的一個排序。
         :type OrderField: str
-        :param OrderDirection: 升序（asc）还是降序（desc），默认：desc。
+        :param OrderDirection: 升序（asc）還是降序（desc），預設：desc。
         :type OrderDirection: str
         """
         self.Pids = None
@@ -788,17 +788,17 @@ class DescribeResourceInstancesRequest(AbstractModel):
 
 
 class DescribeResourceInstancesResponse(AbstractModel):
-    """DescribeResourceInstances返回参数结构体
+    """DescribeResourceInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 符合要求的资源数量
+        :param TotalCount: 符合要求的資源數量
         :type TotalCount: int
-        :param ResourceSet: 符合要求的资源数组
+        :param ResourceSet: 符合要求的資源數組
         :type ResourceSet: list of ResourceInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -818,23 +818,23 @@ class DescribeResourceInstancesResponse(AbstractModel):
 
 
 class DescribeScanInstancesRequest(AbstractModel):
-    """DescribeScanInstances请求参数结构体
+    """DescribeScanInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 支持通过app名称，app包名进行筛选
+        :param Filters: 支援通過app名稱，app包名進行篩選
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 数量限制，默认为20，最大值为100。
+        :param Limit: 數量限制，預設爲20，最大值爲100。
         :type Limit: int
-        :param ItemIds: 可以提供ItemId数组来查询一个或者多个结果。注意不可以同时指定ItemIds和Filters。
+        :param ItemIds: 可以提供ItemId數組來查詢一個或者多個結果。注意不可以同時指定ItemIds和Filters。
         :type ItemIds: list of str
-        :param OrderField: 按某个字段排序，目前仅支持TaskTime排序。
+        :param OrderField: 按某個欄位排序，目前僅支援TaskTime排序。
         :type OrderField: str
-        :param OrderDirection: 升序（asc）还是降序（desc），默认：desc。
+        :param OrderDirection: 升序（asc）還是降序（desc），預設：desc。
         :type OrderDirection: str
         """
         self.Filters = None
@@ -860,17 +860,17 @@ class DescribeScanInstancesRequest(AbstractModel):
 
 
 class DescribeScanInstancesResponse(AbstractModel):
-    """DescribeScanInstances返回参数结构体
+    """DescribeScanInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 符合要求的app数量
+        :param TotalCount: 符合要求的app數量
         :type TotalCount: int
-        :param ScanSet: 一个关于app详细信息的结构体，主要包括app的基本信息和扫描状态信息。
+        :param ScanSet: 一個關于app詳細訊息的結構體，主要包括app的基本訊息和掃描狀态訊息。
         :type ScanSet: list of AppScanSet
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -890,15 +890,15 @@ class DescribeScanInstancesResponse(AbstractModel):
 
 
 class DescribeScanResultsRequest(AbstractModel):
-    """DescribeScanResults请求参数结构体
+    """DescribeScanResults請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ItemId: 任务唯一标识
+        :param ItemId: 任務唯一标識
         :type ItemId: str
-        :param AppMd5s: 批量查询一个或者多个app的扫描结果，如果不传表示查询该任务下所提交的所有app
+        :param AppMd5s: 批次查詢一個或者多個app的掃描結果，如果不傳表示查詢該任務下所提交的所有app
         :type AppMd5s: list of str
         """
         self.ItemId = None
@@ -911,17 +911,17 @@ class DescribeScanResultsRequest(AbstractModel):
 
 
 class DescribeScanResultsResponse(AbstractModel):
-    """DescribeScanResults返回参数结构体
+    """DescribeScanResults返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ScanSet: 批量扫描的app结果集
+        :param ScanSet: 批次掃描的app結果集
         :type ScanSet: list of ScanSetInfo
-        :param TotalCount: 批量扫描结果的个数
+        :param TotalCount: 批次掃描結果的個數
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ScanSet = None
@@ -941,23 +941,23 @@ class DescribeScanResultsResponse(AbstractModel):
 
 
 class DescribeShieldInstancesRequest(AbstractModel):
-    """DescribeShieldInstances请求参数结构体
+    """DescribeShieldInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 支持通过app名称，app包名，加固的服务版本，提交的渠道进行筛选。
+        :param Filters: 支援通過app名稱，app包名，加固的服務版本，提交的管道進行篩選。
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0。
+        :param Offset: 偏移量，預設爲0。
         :type Offset: int
-        :param Limit: 数量限制，默认为20，最大值为100。
+        :param Limit: 數量限制，預設爲20，最大值爲100。
         :type Limit: int
-        :param ItemIds: 可以提供ItemId数组来查询一个或者多个结果。注意不可以同时指定ItemIds和Filters。
+        :param ItemIds: 可以提供ItemId數組來查詢一個或者多個結果。注意不可以同時指定ItemIds和Filters。
         :type ItemIds: list of str
-        :param OrderField: 按某个字段排序，目前仅支持TaskTime排序。
+        :param OrderField: 按某個欄位排序，目前僅支援TaskTime排序。
         :type OrderField: str
-        :param OrderDirection: 升序（asc）还是降序（desc），默认：desc。
+        :param OrderDirection: 升序（asc）還是降序（desc），預設：desc。
         :type OrderDirection: str
         """
         self.Filters = None
@@ -983,17 +983,17 @@ class DescribeShieldInstancesRequest(AbstractModel):
 
 
 class DescribeShieldInstancesResponse(AbstractModel):
-    """DescribeShieldInstances返回参数结构体
+    """DescribeShieldInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 符合要求的app数量
+        :param TotalCount: 符合要求的app數量
         :type TotalCount: int
-        :param AppSet: 一个关于app详细信息的结构体，主要包括app的基本信息和加固信息。
+        :param AppSet: 一個關于app詳細訊息的結構體，主要包括app的基本訊息和加固訊息。
         :type AppSet: list of AppSetInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1013,15 +1013,15 @@ class DescribeShieldInstancesResponse(AbstractModel):
 
 
 class DescribeShieldPlanInstanceRequest(AbstractModel):
-    """DescribeShieldPlanInstance请求参数结构体
+    """DescribeShieldPlanInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResourceId: 资源id
+        :param ResourceId: 資源id
         :type ResourceId: str
-        :param Pid: 服务类别id
+        :param Pid: 服務類别id
         :type Pid: int
         """
         self.ResourceId = None
@@ -1034,19 +1034,19 @@ class DescribeShieldPlanInstanceRequest(AbstractModel):
 
 
 class DescribeShieldPlanInstanceResponse(AbstractModel):
-    """DescribeShieldPlanInstance返回参数结构体
+    """DescribeShieldPlanInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BindInfo: 绑定资源信息
+        :param BindInfo: 綁定資源訊息
         :type BindInfo: :class:`tencentcloud.ms.v20180408.models.BindInfo`
-        :param ShieldPlanInfo: 加固策略信息
+        :param ShieldPlanInfo: 加固策略訊息
         :type ShieldPlanInfo: :class:`tencentcloud.ms.v20180408.models.ShieldPlanInfo`
-        :param ResourceServiceInfo: 加固资源信息
+        :param ResourceServiceInfo: 加固資源訊息
         :type ResourceServiceInfo: :class:`tencentcloud.ms.v20180408.models.ResourceServiceInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.BindInfo = None
@@ -1069,13 +1069,13 @@ class DescribeShieldPlanInstanceResponse(AbstractModel):
 
 
 class DescribeShieldResultRequest(AbstractModel):
-    """DescribeShieldResult请求参数结构体
+    """DescribeShieldResult請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ItemId: 任务唯一标识
+        :param ItemId: 任務唯一标識
         :type ItemId: str
         """
         self.ItemId = None
@@ -1086,23 +1086,23 @@ class DescribeShieldResultRequest(AbstractModel):
 
 
 class DescribeShieldResultResponse(AbstractModel):
-    """DescribeShieldResult返回参数结构体
+    """DescribeShieldResult返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskStatus: 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+        :param TaskStatus: 任務狀态: 1-已完成,2-處理中,3-處理出錯,4-處理超時
         :type TaskStatus: int
-        :param AppDetailInfo: app加固前的详细信息
+        :param AppDetailInfo: app加固前的詳細訊息
         :type AppDetailInfo: :class:`tencentcloud.ms.v20180408.models.AppDetailInfo`
-        :param ShieldInfo: app加固后的详细信息
+        :param ShieldInfo: app加固後的詳細訊息
         :type ShieldInfo: :class:`tencentcloud.ms.v20180408.models.ShieldInfo`
-        :param StatusDesc: 状态描述
+        :param StatusDesc: 狀态描述
         :type StatusDesc: str
-        :param StatusRef: 状态指引
+        :param StatusRef: 狀态指引
         :type StatusRef: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskStatus = None
@@ -1127,25 +1127,25 @@ class DescribeShieldResultResponse(AbstractModel):
 
 
 class DescribeUserBaseInfoInstanceRequest(AbstractModel):
-    """DescribeUserBaseInfoInstance请求参数结构体
+    """DescribeUserBaseInfoInstance請求參數結構體
 
     """
 
 
 class DescribeUserBaseInfoInstanceResponse(AbstractModel):
-    """DescribeUserBaseInfoInstance返回参数结构体
+    """DescribeUserBaseInfoInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param UserUin: 用户uin信息
+        :param UserUin: 用戶uin訊息
         :type UserUin: int
-        :param UserAppid: 用户APPID信息
+        :param UserAppid: 用戶APPID訊息
         :type UserAppid: int
-        :param TimeStamp: 系统时间戳
+        :param TimeStamp: 系統時間戳
         :type TimeStamp: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.UserUin = None
@@ -1162,15 +1162,15 @@ class DescribeUserBaseInfoInstanceResponse(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """筛选数据结构
+    """篩選數據結構
 
     """
 
     def __init__(self):
         """
-        :param Name: 需要过滤的字段
+        :param Name: 需要過濾的欄位
         :type Name: str
-        :param Value: 需要过滤字段的值
+        :param Value: 需要過濾欄位的值
         :type Value: str
         """
         self.Name = None
@@ -1183,19 +1183,19 @@ class Filter(AbstractModel):
 
 
 class PlanDetailInfo(AbstractModel):
-    """加固策略具体信息
+    """加固策略具體訊息
 
     """
 
     def __init__(self):
         """
-        :param IsDefault: 默认策略，1为默认，0为非默认
+        :param IsDefault: 預設策略，1爲預設，0爲非預設
         :type IsDefault: int
         :param PlanId: 策略id
         :type PlanId: int
-        :param PlanName: 策略名称
+        :param PlanName: 策略名稱
         :type PlanName: str
-        :param PlanInfo: 策略信息
+        :param PlanInfo: 策略訊息
         :type PlanInfo: :class:`tencentcloud.ms.v20180408.models.PlanInfo`
         """
         self.IsDefault = None
@@ -1214,43 +1214,43 @@ class PlanDetailInfo(AbstractModel):
 
 
 class PlanInfo(AbstractModel):
-    """加固策略信息
+    """加固策略訊息
 
     """
 
     def __init__(self):
         """
-        :param ApkSizeOpt: apk大小优化，0关闭，1开启
+        :param ApkSizeOpt: apk大小優化，0關閉，1開啓
         :type ApkSizeOpt: int
-        :param Dex: Dex加固，0关闭，1开启
+        :param Dex: Dex加固，0關閉，1開啓
         :type Dex: int
-        :param So: So加固，0关闭，1开启
+        :param So: So加固，0關閉，1開啓
         :type So: int
-        :param Bugly: 数据收集，0关闭，1开启
+        :param Bugly: 數據收集，0關閉，1開啓
         :type Bugly: int
-        :param AntiRepack: 防止重打包，0关闭，1开启
+        :param AntiRepack: 防止重打包，0關閉，1開啓
         :type AntiRepack: int
-        :param SeperateDex: Dex分离，0关闭，1开启
+        :param SeperateDex: Dex分離，0關閉，1開啓
         :type SeperateDex: int
-        :param Db: 内存保护，0关闭，1开启
+        :param Db: 内存保護，0關閉，1開啓
         :type Db: int
-        :param DexSig: Dex签名校验，0关闭，1开启
+        :param DexSig: Dex簽名校驗，0關閉，1開啓
         :type DexSig: int
-        :param SoInfo: So文件信息
+        :param SoInfo: So文件訊息
         :type SoInfo: :class:`tencentcloud.ms.v20180408.models.SoInfo`
-        :param AntiVMP: vmp，0关闭，1开启
+        :param AntiVMP: vmp，0關閉，1開啓
         :type AntiVMP: int
-        :param SoType: 保护so的强度，
+        :param SoType: 保護so的強度，
         :type SoType: list of str
-        :param AntiLogLeak: 防日志泄漏，0关闭，1开启
+        :param AntiLogLeak: 防日志洩漏，0關閉，1開啓
         :type AntiLogLeak: int
-        :param AntiQemuRoot: root检测，0关闭，1开启
+        :param AntiQemuRoot: root檢測，0關閉，1開啓
         :type AntiQemuRoot: int
-        :param AntiAssets: 资源防篡改，0关闭，1开启
+        :param AntiAssets: 資源防篡改，0關閉，1開啓
         :type AntiAssets: int
-        :param AntiScreenshot: 防止截屏，0关闭，1开启
+        :param AntiScreenshot: 防止截屏，0關閉，1開啓
         :type AntiScreenshot: int
-        :param AntiSSL: SSL证书防窃取，0关闭，1开启
+        :param AntiSSL: SSL證書防竊取，0關閉，1開啓
         :type AntiSSL: int
         """
         self.ApkSizeOpt = None
@@ -1293,15 +1293,15 @@ class PlanInfo(AbstractModel):
 
 
 class PluginInfo(AbstractModel):
-    """插件信息
+    """插件訊息
 
     """
 
     def __init__(self):
         """
-        :param PluginType: 插件类型，分别为 1-通知栏广告，2-积分墙广告，3-banner广告，4- 悬浮窗图标广告，5-精品推荐列表广告, 6-插播广告
+        :param PluginType: 插件類型，分别爲 1-通知欄廣告，2-積分牆廣告，3-banner廣告，4- 懸浮窗圖标廣告，5-精品推薦清單廣告, 6-插播廣告
         :type PluginType: int
-        :param PluginName: 插件名称
+        :param PluginName: 插件名稱
         :type PluginName: str
         :param PluginDesc: 插件描述
         :type PluginDesc: str
@@ -1318,25 +1318,25 @@ class PluginInfo(AbstractModel):
 
 
 class ResourceInfo(AbstractModel):
-    """拉取某个用户的所有资源信息
+    """拉取某個用戶的所有資源訊息
 
     """
 
     def __init__(self):
         """
-        :param ResourceId: 用户购买的资源id，全局唯一
+        :param ResourceId: 用戶購買的資源id，全局唯一
         :type ResourceId: str
-        :param Pid: 资源的pid，MTP加固-12767，应用加固-12750 MTP反作弊-12766 源代码混淆-12736
+        :param Pid: 資源的pid，MTP加固-12767，應用加固-12750 MTP反作弊-12766 原始碼混淆-12736
         :type Pid: int
-        :param CreateTime: 购买时间戳
+        :param CreateTime: 購買時間戳
         :type CreateTime: int
-        :param ExpireTime: 到期时间戳
+        :param ExpireTime: 到期時間戳
         :type ExpireTime: int
-        :param IsBind: 0-未绑定，1-已绑定
+        :param IsBind: 0-未綁定，1-已綁定
         :type IsBind: int
-        :param BindInfo: 用户绑定app的基本信息
+        :param BindInfo: 用戶綁定app的基本訊息
         :type BindInfo: :class:`tencentcloud.ms.v20180408.models.BindInfo`
-        :param ResourceName: 资源名称，如应用加固，漏洞扫描
+        :param ResourceName: 資源名稱，如應用加固，漏洞掃描
         :type ResourceName: str
         """
         self.ResourceId = None
@@ -1361,17 +1361,17 @@ class ResourceInfo(AbstractModel):
 
 
 class ResourceServiceInfo(AbstractModel):
-    """资源服务信息
+    """資源服務訊息
 
     """
 
     def __init__(self):
         """
-        :param CreateTime: 创建时间戳
+        :param CreateTime: 創建時間戳
         :type CreateTime: int
-        :param ExpireTime: 到期时间戳
+        :param ExpireTime: 到期時間戳
         :type ExpireTime: int
-        :param ResourceName: 资源名称，如应用加固，源码混淆
+        :param ResourceName: 資源名稱，如應用加固，源碼混淆
         :type ResourceName: str
         """
         self.CreateTime = None
@@ -1386,15 +1386,15 @@ class ResourceServiceInfo(AbstractModel):
 
 
 class ScanInfo(AbstractModel):
-    """需要扫描的应用的服务信息
+    """需要掃描的應用的服務訊息
 
     """
 
     def __init__(self):
         """
-        :param CallbackUrl: 任务处理完成后的反向通知回调地址,批量提交app每扫描完成一个会通知一次,通知为POST请求，post信息{ItemId:
+        :param CallbackUrl: 任務處理完成後的反向通知回調網址,批次提交app每掃描完成一個會通知一次,通知爲POST請求，post訊息{ItemId:
         :type CallbackUrl: str
-        :param ScanTypes: VULSCAN-漏洞扫描信息，VIRUSSCAN-返回病毒扫描信息， ADSCAN-广告扫描信息，PLUGINSCAN-插件扫描信息，可以自由组合
+        :param ScanTypes: VULSCAN-漏洞掃描訊息，VIRUSSCAN-返回病毒掃描訊息， ADSCAN-廣告掃描訊息，PLUGINSCAN-插件掃描訊息，可以自由組合
         :type ScanTypes: list of str
         """
         self.CallbackUrl = None
@@ -1407,29 +1407,29 @@ class ScanInfo(AbstractModel):
 
 
 class ScanSetInfo(AbstractModel):
-    """app扫描结果集
+    """app掃描結果集
 
     """
 
     def __init__(self):
         """
-        :param TaskStatus: 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+        :param TaskStatus: 任務狀态: 1-已完成,2-處理中,3-處理出錯,4-處理超時
         :type TaskStatus: int
-        :param AppDetailInfo: app信息
+        :param AppDetailInfo: app訊息
         :type AppDetailInfo: :class:`tencentcloud.ms.v20180408.models.AppDetailInfo`
-        :param VirusInfo: 病毒信息
+        :param VirusInfo: 病毒訊息
         :type VirusInfo: :class:`tencentcloud.ms.v20180408.models.VirusInfo`
-        :param VulInfo: 漏洞信息
+        :param VulInfo: 漏洞訊息
         :type VulInfo: :class:`tencentcloud.ms.v20180408.models.VulInfo`
-        :param AdInfo: 广告插件信息
+        :param AdInfo: 廣告插件訊息
         :type AdInfo: :class:`tencentcloud.ms.v20180408.models.AdInfo`
-        :param TaskTime: 提交扫描的时间
+        :param TaskTime: 提交掃描的時間
         :type TaskTime: int
-        :param StatusCode: 状态码，成功返回0，失败返回错误码
+        :param StatusCode: 狀态碼，成功返回0，失敗返回錯誤碼
         :type StatusCode: int
-        :param StatusDesc: 状态描述
+        :param StatusDesc: 狀态描述
         :type StatusDesc: str
-        :param StatusRef: 状态操作指引
+        :param StatusRef: 狀态操作指引
         :type StatusRef: str
         """
         self.TaskStatus = None
@@ -1464,19 +1464,19 @@ class ScanSetInfo(AbstractModel):
 
 
 class ServiceInfo(AbstractModel):
-    """提交app加固的服务信息
+    """提交app加固的服務訊息
 
     """
 
     def __init__(self):
         """
-        :param ServiceEdition: 服务版本，基础版basic，专业版professional，企业版enterprise。
+        :param ServiceEdition: 服務版本，基礎版basic，專業版professional，企業版enterprise。
         :type ServiceEdition: str
-        :param CallbackUrl: 任务处理完成后的反向通知回调地址，如果不需要通知请传递空字符串。通知为POST请求，post包体数据示例{"Response":{"ItemId":"4cdad8fb86f036b06bccb3f58971c306","ShieldCode":0,"ShieldMd5":"78701576793c4a5f04e1c9660de0aa0b","ShieldSize":11997354,"TaskStatus":1,"TaskTime":1539148141}}，调用方需要返回如下信息，{"Result":"ok","Reason":"xxxxx"}，如果Result字段值不等于ok会继续回调。
+        :param CallbackUrl: 任務處理完成後的反向通知回調網址，如果不需要通知請傳遞空字串。通知爲POST請求，post包體數據範例{"Response":{"ItemId":"4cdad8fb86f036b06bccb3f58971c306","ShieldCode":0,"ShieldMd5":"78701576793c4a5f04e1c9660de0aa0b","ShieldSize":11997354,"TaskStatus":1,"TaskTime":1539148141}}，調用方需要返回如下訊息，{"Result":"ok","Reason":"xxxxx"}，如果Result欄位值不等于ok會繼續回調。
         :type CallbackUrl: str
-        :param SubmitSource: 提交来源 YYB-应用宝 RDM-rdm MC-控制台 MAC_TOOL-mac工具 WIN_TOOL-window工具。
+        :param SubmitSource: 提交來源 YYB-應用寶 RDM-rdm MC-控制台 MAC_TOOL-mac工具 WIN_TOOL-window工具。
         :type SubmitSource: str
-        :param PlanId: 加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。
+        :param PlanId: 加固策略編号，如果不傳則使用系統預設加固策略。如果指定的plan不存在會返回錯誤。
         :type PlanId: int
         """
         self.ServiceEdition = None
@@ -1493,25 +1493,25 @@ class ServiceInfo(AbstractModel):
 
 
 class ShieldInfo(AbstractModel):
-    """加固后app的信息
+    """加固後app的訊息
 
     """
 
     def __init__(self):
         """
-        :param ShieldCode: 加固结果的返回码
+        :param ShieldCode: 加固結果的返回碼
         :type ShieldCode: int
-        :param ShieldSize: 加固后app的大小
+        :param ShieldSize: 加固後app的大小
         :type ShieldSize: int
-        :param ShieldMd5: 加固后app的md5
+        :param ShieldMd5: 加固後app的md5
         :type ShieldMd5: str
-        :param AppUrl: 加固后的APP下载地址，该地址有效期为20分钟，请及时下载
+        :param AppUrl: 加固後的APP下載網址，該網址有效期爲20分鍾，請及時下載
         :type AppUrl: str
-        :param TaskTime: 加固的提交时间
+        :param TaskTime: 加固的提交時間
         :type TaskTime: int
-        :param ItemId: 任务唯一标识
+        :param ItemId: 任務唯一标識
         :type ItemId: str
-        :param ServiceEdition: 加固版本，basic基础版，professional专业版，enterprise企业版
+        :param ServiceEdition: 加固版本，basic基礎版，professional專業版，enterprise企業版
         :type ServiceEdition: str
         """
         self.ShieldCode = None
@@ -1534,15 +1534,15 @@ class ShieldInfo(AbstractModel):
 
 
 class ShieldPlanInfo(AbstractModel):
-    """加固策略信息
+    """加固策略訊息
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 加固策略数量
+        :param TotalCount: 加固策略數量
         :type TotalCount: int
-        :param PlanSet: 加固策略具体信息数组
+        :param PlanSet: 加固策略具體訊息數組
         :type PlanSet: list of PlanDetailInfo
         """
         self.TotalCount = None
@@ -1560,13 +1560,13 @@ class ShieldPlanInfo(AbstractModel):
 
 
 class SoInfo(AbstractModel):
-    """so加固信息
+    """so加固訊息
 
     """
 
     def __init__(self):
         """
-        :param SoFileNames: so文件列表
+        :param SoFileNames: so文件清單
         :type SoFileNames: list of str
         """
         self.SoFileNames = None
@@ -1577,17 +1577,17 @@ class SoInfo(AbstractModel):
 
 
 class VirusInfo(AbstractModel):
-    """病毒信息
+    """病毒訊息
 
     """
 
     def __init__(self):
         """
-        :param SafeType: 软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件
+        :param SafeType: 軟體安全類型，分别爲0-未知、 1-安全軟體、2-風險軟體、3-病毒軟體
         :type SafeType: int
-        :param VirusName: 病毒名称， utf8编码，非病毒时值为空
+        :param VirusName: 病毒名稱， utf8編碼，非病毒時值爲空
         :type VirusName: str
-        :param VirusDesc: 病毒描述，utf8编码，非病毒时值为空
+        :param VirusDesc: 病毒描述，utf8編碼，非病毒時值爲空
         :type VirusDesc: str
         """
         self.SafeType = None
@@ -1602,15 +1602,15 @@ class VirusInfo(AbstractModel):
 
 
 class VulInfo(AbstractModel):
-    """漏洞信息
+    """漏洞訊息
 
     """
 
     def __init__(self):
         """
-        :param VulList: 漏洞列表
+        :param VulList: 漏洞清單
         :type VulList: list of VulList
-        :param VulFileScore: 漏洞文件评分
+        :param VulFileScore: 漏洞文件評分
         :type VulFileScore: int
         """
         self.VulList = None
@@ -1628,7 +1628,7 @@ class VulInfo(AbstractModel):
 
 
 class VulList(AbstractModel):
-    """漏洞信息
+    """漏洞訊息
 
     """
 
@@ -1636,19 +1636,19 @@ class VulList(AbstractModel):
         """
         :param VulId: 漏洞id
         :type VulId: str
-        :param VulName: 漏洞名称
+        :param VulName: 漏洞名稱
         :type VulName: str
-        :param VulCode: 漏洞代码
+        :param VulCode: 漏洞代碼
         :type VulCode: str
         :param VulDesc: 漏洞描述
         :type VulDesc: str
-        :param VulSolution: 漏洞解决方案
+        :param VulSolution: 漏洞解決方案
         :type VulSolution: str
-        :param VulSrcType: 漏洞来源类别，0默认自身，1第三方插件
+        :param VulSrcType: 漏洞來源類别，0預設自身，1第三方插件
         :type VulSrcType: int
         :param VulFilepath: 漏洞位置
         :type VulFilepath: str
-        :param RiskLevel: 风险级别：1 低风险 ；2中等风险；3 高风险
+        :param RiskLevel: 風險級别：1 低風險 ；2中等風險；3 高風險
         :type RiskLevel: int
         """
         self.VulId = None

@@ -17,19 +17,19 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AccessRegionDetial(AbstractModel):
-    """根据源站查询的可用加速区域信息及对应的可选带宽和并发量
+    """根據源站查詢的可用加速區域訊息及對應的可選頻寬和并發量
 
     """
 
     def __init__(self):
         """
-        :param RegionId: 区域ID
+        :param RegionId: 區域ID
         :type RegionId: str
-        :param RegionName: 区域的中文或英文名称
+        :param RegionName: 區域的中文或英文名稱
         :type RegionName: str
-        :param ConcurrentList: 可选的并发量取值数组
+        :param ConcurrentList: 可選的并發量取值數組
         :type ConcurrentList: list of int
-        :param BandwidthList: 可选的带宽取值数组
+        :param BandwidthList: 可選的頻寬取值數組
         :type BandwidthList: list of int
         """
         self.RegionId = None
@@ -54,7 +54,7 @@ class AccessRegionDomainConf(AbstractModel):
         """
         :param RegionId: 地域ID。
         :type RegionId: str
-        :param NationCountryInnerList: 就近接入区域国家内部编码，编码列表可通过DescribeCountryAreaMapping接口获取。
+        :param NationCountryInnerList: 就近接入區域國家内部編碼，編碼清單可通過DescribeCountryAreaMapping介面獲取。
         :type NationCountryInnerList: list of str
         """
         self.RegionId = None
@@ -67,19 +67,19 @@ class AccessRegionDomainConf(AbstractModel):
 
 
 class AddRealServersRequest(AbstractModel):
-    """AddRealServers请求参数结构体
+    """AddRealServers請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 源站对应的项目ID
+        :param ProjectId: 源站對應的項目ID
         :type ProjectId: int
-        :param RealServerIP: 源站对应的IP或域名
+        :param RealServerIP: 源站對應的IP或域名
         :type RealServerIP: list of str
-        :param RealServerName: 源站名称
+        :param RealServerName: 源站名稱
         :type RealServerName: str
-        :param TagSet: 标签列表
+        :param TagSet: 标簽清單
         :type TagSet: list of TagPair
         """
         self.ProjectId = None
@@ -101,15 +101,15 @@ class AddRealServersRequest(AbstractModel):
 
 
 class AddRealServersResponse(AbstractModel):
-    """AddRealServers返回参数结构体
+    """AddRealServers返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RealServerSet: 源站信息列表
+        :param RealServerSet: 源站訊息清單
         :type RealServerSet: list of NewRealServer
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RealServerSet = None
@@ -127,15 +127,15 @@ class AddRealServersResponse(AbstractModel):
 
 
 class BandwidthPriceGradient(AbstractModel):
-    """带宽梯度价格
+    """頻寬梯度價格
 
     """
 
     def __init__(self):
         """
-        :param BandwidthRange: 带宽范围。
+        :param BandwidthRange: 頻寬範圍。
         :type BandwidthRange: list of int
-        :param BandwidthUnitPrice: 在对应带宽范围内的单宽单价，单位：元/Mbps/天。
+        :param BandwidthUnitPrice: 在對應頻寬範圍内的單寬單價，單位：元/Mbps/天。
         :type BandwidthUnitPrice: float
         """
         self.BandwidthRange = None
@@ -148,15 +148,15 @@ class BandwidthPriceGradient(AbstractModel):
 
 
 class BindListenerRealServersRequest(AbstractModel):
-    """BindListenerRealServers请求参数结构体
+    """BindListenerRealServers請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
-        :param RealServerBindSet: 待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
+        :param RealServerBindSet: 待綁定源站清單。如果該監聽器的源站調度策略是加權輪詢，需要填寫源站權重 RealServerWeight, 不填或者其他調度類型預設源站權重爲1。
         :type RealServerBindSet: list of RealServerBindSetReq
         """
         self.ListenerId = None
@@ -174,13 +174,13 @@ class BindListenerRealServersRequest(AbstractModel):
 
 
 class BindListenerRealServersResponse(AbstractModel):
-    """BindListenerRealServers返回参数结构体
+    """BindListenerRealServers返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -191,7 +191,7 @@ class BindListenerRealServersResponse(AbstractModel):
 
 
 class BindRealServer(AbstractModel):
-    """已绑定的源站信息
+    """已綁定的源站訊息
 
     """
 
@@ -201,18 +201,18 @@ class BindRealServer(AbstractModel):
         :type RealServerId: str
         :param RealServerIP: 源站IP或者域名
         :type RealServerIP: str
-        :param RealServerWeight: 该源站所占权重
+        :param RealServerWeight: 該源站所占權重
         :type RealServerWeight: int
-        :param RealServerStatus: 源站健康检查状态，其中：
+        :param RealServerStatus: 源站健康檢查狀态，其中：
 0表示正常；
-1表示异常。
-未开启健康检查状态时，该状态始终为正常。
-注意：此字段可能返回 null，表示取不到有效值。
+1表示異常。
+未開啓健康檢查狀态時，該狀态始終爲正常。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RealServerStatus: int
         :param RealServerPort: 源站的端口号
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RealServerPort: int
-        :param DownIPList: 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
+        :param DownIPList: 當源站爲域名時，域名被解析成一個或者多個IP，該欄位表示其中異常的IP清單。狀态異常，但該欄位爲空時，表示域名解析異常。
         :type DownIPList: list of str
         """
         self.RealServerId = None
@@ -233,7 +233,7 @@ class BindRealServer(AbstractModel):
 
 
 class BindRealServerInfo(AbstractModel):
-    """添加源站的源站信息返回值
+    """添加源站的源站訊息返回值
 
     """
 
@@ -243,12 +243,12 @@ class BindRealServerInfo(AbstractModel):
         :type RealServerIP: str
         :param RealServerId: 源站ID
         :type RealServerId: str
-        :param RealServerName: 源站名称
+        :param RealServerName: 源站名稱
         :type RealServerName: str
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: int
-        :param TagSet: 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagSet: 标簽清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of TagPair
         """
         self.RealServerIP = None
@@ -272,18 +272,18 @@ class BindRealServerInfo(AbstractModel):
 
 
 class BindRuleRealServersRequest(AbstractModel):
-    """BindRuleRealServers请求参数结构体
+    """BindRuleRealServers請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RuleId: 转发规则ID
+        :param RuleId: 轉發規則ID
         :type RuleId: str
-        :param RealServerBindSet: 需要绑定的源站信息列表。
-如果已经存在绑定的源站，则会覆盖更新成这个源站列表。
-当不带该字段时，表示解绑该规则上的所有源站。
-如果该规则的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
+        :param RealServerBindSet: 需要綁定的源站訊息清單。
+如果已經存在綁定的源站，則會函蓋更新成這個源站清單。
+當不帶該欄位時，表示解綁該規則上的所有源站。
+如果該規則的源站調度策略是加權輪詢，需要填寫源站權重 RealServerWeight, 不填或者其他調度類型預設源站權重爲1。
         :type RealServerBindSet: list of RealServerBindSetReq
         """
         self.RuleId = None
@@ -301,13 +301,13 @@ class BindRuleRealServersRequest(AbstractModel):
 
 
 class BindRuleRealServersResponse(AbstractModel):
-    """BindRuleRealServers返回参数结构体
+    """BindRuleRealServers返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -318,34 +318,34 @@ class BindRuleRealServersResponse(AbstractModel):
 
 
 class Certificate(AbstractModel):
-    """服务器证书
+    """服務器證書
 
     """
 
     def __init__(self):
         """
-        :param CertificateId: 证书ID
+        :param CertificateId: 證書ID
         :type CertificateId: str
-        :param CertificateName: 证书名称（旧参数，请使用CertificateAlias）。
+        :param CertificateName: 證書名稱（舊參數，請使用CertificateAlias）。
         :type CertificateName: str
-        :param CertificateType: 证书类型。
+        :param CertificateType: 證書類型。
         :type CertificateType: int
-        :param CertificateAlias: 证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CertificateAlias: 證書名稱。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CertificateAlias: str
-        :param CreateTime: 证书创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
+        :param CreateTime: 證書創建時間，采用Unix時間戳的方式，表示從1970年1月1日（UTC/GMT的午夜）開始所經過的秒數。
         :type CreateTime: int
-        :param BeginTime: 证书生效起始时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BeginTime: 證書生效起始時間，采用Unix時間戳的方式，表示從1970年1月1日（UTC/GMT的午夜）開始所經過的秒數。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BeginTime: int
-        :param EndTime: 证书过期时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EndTime: 證書過期時間，采用Unix時間戳的方式，表示從1970年1月1日（UTC/GMT的午夜）開始所經過的秒數。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EndTime: int
-        :param IssuerCN: 证书签发者通用名称。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IssuerCN: 證書簽發者通用名稱。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IssuerCN: str
-        :param SubjectCN: 证书主题通用名称。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubjectCN: 證書主題通用名稱。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubjectCN: str
         """
         self.CertificateId = None
@@ -372,15 +372,15 @@ class Certificate(AbstractModel):
 
 
 class CertificateAliasInfo(AbstractModel):
-    """证书别名信息
+    """證書别名訊息
 
     """
 
     def __init__(self):
         """
-        :param CertificateId: 证书ID
+        :param CertificateId: 證書ID
         :type CertificateId: str
-        :param CertificateAlias: 证书别名
+        :param CertificateAlias: 證書别名
         :type CertificateAlias: str
         """
         self.CertificateId = None
@@ -393,38 +393,38 @@ class CertificateAliasInfo(AbstractModel):
 
 
 class CertificateDetail(AbstractModel):
-    """证书详情，包括证书ID， 证书名字，证书类型，证书内容以及密钥内容。
+    """證書詳情，包括證書ID， 證書名字，證書類型，證書内容以及金鑰内容。
 
     """
 
     def __init__(self):
         """
-        :param CertificateId: 证书ID。
+        :param CertificateId: 證書ID。
         :type CertificateId: str
-        :param CertificateType: 证书类型。
+        :param CertificateType: 證書類型。
         :type CertificateType: int
-        :param CertificateAlias: 证书名字。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CertificateAlias: 證書名字。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CertificateAlias: str
-        :param CertificateContent: 证书内容。
+        :param CertificateContent: 證書内容。
         :type CertificateContent: str
-        :param CertificateKey: 密钥内容。仅当证书类型为SSL证书时，返回该字段。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CertificateKey: 金鑰内容。僅當證書類型爲SSL證書時，返回該欄位。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CertificateKey: str
-        :param CreateTime: 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 創建時間，采用Unix時間戳的方式，表示從1970年1月1日（UTC/GMT的午夜）開始所經過的秒數。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: int
-        :param BeginTime: 证书生效起始时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BeginTime: 證書生效起始時間，采用Unix時間戳的方式，表示從1970年1月1日（UTC/GMT的午夜）開始所經過的秒數。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BeginTime: int
-        :param EndTime: 证书过期时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EndTime: 證書過期時間，采用Unix時間戳的方式，表示從1970年1月1日（UTC/GMT的午夜）開始所經過的秒數。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EndTime: int
-        :param IssuerCN: 证书签发者通用名称。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IssuerCN: 證書簽發者通用名稱。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IssuerCN: str
-        :param SubjectCN: 证书主题通用名称。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubjectCN: 證書主題通用名稱。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubjectCN: str
         """
         self.CertificateId = None
@@ -453,19 +453,19 @@ class CertificateDetail(AbstractModel):
 
 
 class CheckProxyCreateRequest(AbstractModel):
-    """CheckProxyCreate请求参数结构体
+    """CheckProxyCreate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccessRegion: 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
+        :param AccessRegion: 通道的接入(加速)區域。取值可通過介面DescribeAccessRegionsByDestRegion獲取到
         :type AccessRegion: str
-        :param RealServerRegion: 通道的源站区域。取值可通过接口DescribeDestRegions获取到
+        :param RealServerRegion: 通道的源站區域。取值可通過介面DescribeDestRegions獲取到
         :type RealServerRegion: str
-        :param Bandwidth: 通道带宽上限，单位：Mbps。
+        :param Bandwidth: 通道頻寬上限，單位：Mbps。
         :type Bandwidth: int
-        :param Concurrent: 通道并发量上限，表示同时在线的连接数，单位：万。
+        :param Concurrent: 通道并發量上限，表示同時在線的連接數，單位：萬。
         :type Concurrent: int
         """
         self.AccessRegion = None
@@ -482,15 +482,15 @@ class CheckProxyCreateRequest(AbstractModel):
 
 
 class CheckProxyCreateResponse(AbstractModel):
-    """CheckProxyCreate返回参数结构体
+    """CheckProxyCreate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CheckFlag: 查询能否创建给定配置的通道，1可以创建，0不可创建。
+        :param CheckFlag: 查詢能否創建給定配置的通道，1可以創建，0不可創建。
         :type CheckFlag: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CheckFlag = None
@@ -503,18 +503,18 @@ class CheckProxyCreateResponse(AbstractModel):
 
 
 class CloseProxiesRequest(AbstractModel):
-    """CloseProxies请求参数结构体
+    """CloseProxies請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: （旧参数，请切换到ProxyIds）通道的实例ID。
+        :param InstanceIds: （舊參數，請切換到ProxyIds）通道的實例ID。
         :type InstanceIds: list of str
-        :param ClientToken: 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
+        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
-        :param ProxyIds: （新参数）通道的实例ID。
+        :param ProxyIds: （新參數）通道的實例ID。
         :type ProxyIds: list of str
         """
         self.InstanceIds = None
@@ -529,17 +529,17 @@ class CloseProxiesRequest(AbstractModel):
 
 
 class CloseProxiesResponse(AbstractModel):
-    """CloseProxies返回参数结构体
+    """CloseProxies返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InvalidStatusInstanceSet: 非运行状态下的通道实例ID列表，不可开启。
+        :param InvalidStatusInstanceSet: 非運作狀态下的通道實例ID清單，不可開啓。
         :type InvalidStatusInstanceSet: list of str
-        :param OperationFailedInstanceSet: 开启操作失败的通道实例ID列表。
+        :param OperationFailedInstanceSet: 開啓操作失敗的通道實例ID清單。
         :type OperationFailedInstanceSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InvalidStatusInstanceSet = None
@@ -554,7 +554,7 @@ class CloseProxiesResponse(AbstractModel):
 
 
 class CloseSecurityPolicyRequest(AbstractModel):
-    """CloseSecurityPolicy请求参数结构体
+    """CloseSecurityPolicy請求參數結構體
 
     """
 
@@ -571,15 +571,15 @@ class CloseSecurityPolicyRequest(AbstractModel):
 
 
 class CloseSecurityPolicyResponse(AbstractModel):
-    """CloseSecurityPolicy返回参数结构体
+    """CloseSecurityPolicy返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 异步流程ID，可以通过DescribeAsyncTaskStatus 查询流程执行进展和状态
+        :param TaskId: 異步流程ID，可以通過DescribeAsyncTaskStatus 查詢流程執行進展和狀态
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -592,23 +592,23 @@ class CloseSecurityPolicyResponse(AbstractModel):
 
 
 class CountryAreaMap(AbstractModel):
-    """国家地区映射关系（名称和编码）
+    """國家地區映射關系（名稱和編碼）
 
     """
 
     def __init__(self):
         """
-        :param NationCountryName: 国家名称。
+        :param NationCountryName: 國家名稱。
         :type NationCountryName: str
-        :param NationCountryInnerCode: 国家编码。
+        :param NationCountryInnerCode: 國家編碼。
         :type NationCountryInnerCode: str
-        :param GeographicalZoneName: 地区名称。
+        :param GeographicalZoneName: 地區名稱。
         :type GeographicalZoneName: str
-        :param GeographicalZoneInnerCode: 地区编码。
+        :param GeographicalZoneInnerCode: 地區編碼。
         :type GeographicalZoneInnerCode: str
-        :param ContinentName: 大洲名称。
+        :param ContinentName: 大洲名稱。
         :type ContinentName: str
-        :param ContinentInnerCode: 大洲编码。
+        :param ContinentInnerCode: 大洲編碼。
         :type ContinentInnerCode: str
         """
         self.NationCountryName = None
@@ -629,26 +629,26 @@ class CountryAreaMap(AbstractModel):
 
 
 class CreateCertificateRequest(AbstractModel):
-    """CreateCertificate请求参数结构体
+    """CreateCertificate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertificateType: 证书类型。其中：
-0，表示基础认证配置；
-1，表示客户端CA证书；
-2，服务器SSL证书；
-3，表示源站CA证书；
-4，表示通道SSL证书。
+        :param CertificateType: 證書類型。其中：
+0，表示基礎認證配置；
+1，表示用戶端CA證書；
+2，服務器SSL證書；
+3，表示源站CA證書；
+4，表示通道SSL證書。
         :type CertificateType: int
-        :param CertificateContent: 证书内容。采用url编码。其中：
-当证书类型为基础认证配置时，该参数填写用户名/密码对。格式：“用户名：密码”，例如：root:FSGdT。其中密码使用htpasswd或者openssl，例如：openssl passwd -crypt 123456。
-当证书类型为CA/SSL证书时，该参数填写证书内容，格式为pem。
+        :param CertificateContent: 證書内容。采用url編碼。其中：
+當證書類型爲基礎認證配置時，該參數填寫用戶名/密碼對。格式：“用戶名：密碼”，例如：root:FSGdT。其中密碼使用htpasswd或者openssl，例如：openssl passwd -crypt 123456。
+當證書類型爲CA/SSL證書時，該參數填寫證書内容，格式爲pem。
         :type CertificateContent: str
-        :param CertificateAlias: 证书名称
+        :param CertificateAlias: 證書名稱
         :type CertificateAlias: str
-        :param CertificateKey: 密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
+        :param CertificateKey: 金鑰内容。采用url編碼。僅當證書類型爲SSL證書時，需要填寫該參數。格式爲pem。
         :type CertificateKey: str
         """
         self.CertificateType = None
@@ -665,15 +665,15 @@ class CreateCertificateRequest(AbstractModel):
 
 
 class CreateCertificateResponse(AbstractModel):
-    """CreateCertificate返回参数结构体
+    """CreateCertificate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertificateId: 证书ID
+        :param CertificateId: 證書ID
         :type CertificateId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CertificateId = None
@@ -686,25 +686,25 @@ class CreateCertificateResponse(AbstractModel):
 
 
 class CreateDomainErrorPageInfoRequest(AbstractModel):
-    """CreateDomainErrorPageInfo请求参数结构体
+    """CreateDomainErrorPageInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
         :param Domain: 域名
         :type Domain: str
-        :param ErrorNos: 原始错误码
+        :param ErrorNos: 原始錯誤碼
         :type ErrorNos: list of int
-        :param Body: 新的响应包体
+        :param Body: 新的響應包體
         :type Body: str
-        :param NewErrorNo: 新错误码
+        :param NewErrorNo: 新錯誤碼
         :type NewErrorNo: int
-        :param ClearHeaders: 需要删除的响应头
+        :param ClearHeaders: 需要删除的響應頭
         :type ClearHeaders: list of str
-        :param SetHeaders: 需要设置的响应头
+        :param SetHeaders: 需要設置的響應頭
         :type SetHeaders: list of HttpHeaderParam
         """
         self.ListenerId = None
@@ -732,15 +732,15 @@ class CreateDomainErrorPageInfoRequest(AbstractModel):
 
 
 class CreateDomainErrorPageInfoResponse(AbstractModel):
-    """CreateDomainErrorPageInfo返回参数结构体
+    """CreateDomainErrorPageInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ErrorPageId: 错误定制响应的配置ID
+        :param ErrorPageId: 錯誤定制響應的配置ID
         :type ErrorPageId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ErrorPageId = None
@@ -753,23 +753,23 @@ class CreateDomainErrorPageInfoResponse(AbstractModel):
 
 
 class CreateDomainRequest(AbstractModel):
-    """CreateDomain请求参数结构体
+    """CreateDomain請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID。
+        :param ListenerId: 監聽器ID。
         :type ListenerId: str
-        :param Domain: 需要创建的域名，一个监听器下最大支持100个域名。
+        :param Domain: 需要創建的域名，一個監聽器下最大支援100個域名。
         :type Domain: str
-        :param CertificateId: 服务器证书，用于客户端与GAAP的HTTPS的交互。
+        :param CertificateId: 服務器證書，用于用戶端與GAAP的HTTPS的交互。
         :type CertificateId: str
-        :param ClientCertificateId: 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
-仅当采用双向认证的方式时，需要设置该字段或PolyClientCertificateIds字段。
+        :param ClientCertificateId: 用戶端CA證書，用于用戶端與GAAP的HTTPS的交互。
+僅當采用雙向認證的方式時，需要設置該欄位或PolyClientCertificateIds欄位。
         :type ClientCertificateId: str
-        :param PolyClientCertificateIds: 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
-仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
+        :param PolyClientCertificateIds: 用戶端CA證書，用于用戶端與GAAP的HTTPS的交互。
+僅當采用雙向認證的方式時，需要設置該欄位或ClientCertificateId欄位。
         :type PolyClientCertificateIds: list of str
         """
         self.ListenerId = None
@@ -788,13 +788,13 @@ class CreateDomainRequest(AbstractModel):
 
 
 class CreateDomainResponse(AbstractModel):
-    """CreateDomain返回参数结构体
+    """CreateDomain返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -805,15 +805,15 @@ class CreateDomainResponse(AbstractModel):
 
 
 class CreateHTTPListenerRequest(AbstractModel):
-    """CreateHTTPListener请求参数结构体
+    """CreateHTTPListener請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerName: 监听器名称
+        :param ListenerName: 監聽器名稱
         :type ListenerName: str
-        :param Port: 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
+        :param Port: 監聽器端口，基于同種傳輸層協議（TCP 或 UDP）的監聽器，端口不可重複
         :type Port: int
         :param ProxyId: 通道ID
         :type ProxyId: str
@@ -830,15 +830,15 @@ class CreateHTTPListenerRequest(AbstractModel):
 
 
 class CreateHTTPListenerResponse(AbstractModel):
-    """CreateHTTPListener返回参数结构体
+    """CreateHTTPListener返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 创建的监听器ID
+        :param ListenerId: 創建的監聽器ID
         :type ListenerId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ListenerId = None
@@ -851,30 +851,30 @@ class CreateHTTPListenerResponse(AbstractModel):
 
 
 class CreateHTTPSListenerRequest(AbstractModel):
-    """CreateHTTPSListener请求参数结构体
+    """CreateHTTPSListener請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerName: 监听器名称
+        :param ListenerName: 監聽器名稱
         :type ListenerName: str
-        :param Port: 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
+        :param Port: 監聽器端口，基于同種傳輸層協議（TCP 或 UDP）的監聽器，端口不可重複
         :type Port: int
-        :param CertificateId: 服务器证书ID
+        :param CertificateId: 服務器證書ID
         :type CertificateId: str
-        :param ForwardProtocol: 加速通道转发到源站的协议类型：HTTP | HTTPS
+        :param ForwardProtocol: 加速通道轉發到源站的協議類型：HTTP | HTTPS
         :type ForwardProtocol: str
         :param ProxyId: 通道ID
         :type ProxyId: str
-        :param AuthType: 认证类型，其中：
-0，单向认证；
-1，双向认证。
-默认使用单向认证。
+        :param AuthType: 認證類型，其中：
+0，單向認證；
+1，雙向認證。
+預設使用單向認證。
         :type AuthType: int
-        :param ClientCertificateId: 客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
+        :param ClientCertificateId: 用戶端CA單證書ID，僅當雙向認證時設置該參數或PolyClientCertificateIds參數
         :type ClientCertificateId: str
-        :param PolyClientCertificateIds: 新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
+        :param PolyClientCertificateIds: 新的用戶端多CA證書ID，僅當雙向認證時設置該參數或設置ClientCertificateId參數
         :type PolyClientCertificateIds: list of str
         """
         self.ListenerName = None
@@ -899,15 +899,15 @@ class CreateHTTPSListenerRequest(AbstractModel):
 
 
 class CreateHTTPSListenerResponse(AbstractModel):
-    """CreateHTTPSListener返回参数结构体
+    """CreateHTTPSListener返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 创建的监听器ID
+        :param ListenerId: 創建的監聽器ID
         :type ListenerId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ListenerId = None
@@ -920,13 +920,13 @@ class CreateHTTPSListenerResponse(AbstractModel):
 
 
 class CreateProxyGroupDomainRequest(AbstractModel):
-    """CreateProxyGroupDomain请求参数结构体
+    """CreateProxyGroupDomain請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 需要开启域名的通道组ID。
+        :param GroupId: 需要開啓域名的通道組ID。
         :type GroupId: str
         """
         self.GroupId = None
@@ -937,15 +937,15 @@ class CreateProxyGroupDomainRequest(AbstractModel):
 
 
 class CreateProxyGroupDomainResponse(AbstractModel):
-    """CreateProxyGroupDomain返回参数结构体
+    """CreateProxyGroupDomain返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 通道组ID。
+        :param GroupId: 通道組ID。
         :type GroupId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.GroupId = None
@@ -958,19 +958,19 @@ class CreateProxyGroupDomainResponse(AbstractModel):
 
 
 class CreateProxyGroupRequest(AbstractModel):
-    """CreateProxyGroup请求参数结构体
+    """CreateProxyGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 通道组所属项目ID
+        :param ProjectId: 通道組所屬項目ID
         :type ProjectId: int
-        :param GroupName: 通道组别名
+        :param GroupName: 通道組别名
         :type GroupName: str
-        :param RealServerRegion: 源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
+        :param RealServerRegion: 源站地域，參考介面DescribeDestRegions 返回參數RegionDetail中的RegionId
         :type RealServerRegion: str
-        :param TagSet: 标签列表
+        :param TagSet: 标簽清單
         :type TagSet: list of TagPair
         """
         self.ProjectId = None
@@ -992,15 +992,15 @@ class CreateProxyGroupRequest(AbstractModel):
 
 
 class CreateProxyGroupResponse(AbstractModel):
-    """CreateProxyGroup返回参数结构体
+    """CreateProxyGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 通道组ID
+        :param GroupId: 通道組ID
         :type GroupId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.GroupId = None
@@ -1013,35 +1013,35 @@ class CreateProxyGroupResponse(AbstractModel):
 
 
 class CreateProxyRequest(AbstractModel):
-    """CreateProxy请求参数结构体
+    """CreateProxy請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 通道的项目ID。
+        :param ProjectId: 通道的項目ID。
         :type ProjectId: int
-        :param ProxyName: 通道名称。
+        :param ProxyName: 通道名稱。
         :type ProxyName: str
         :param AccessRegion: 接入地域。
         :type AccessRegion: str
-        :param Bandwidth: 通道带宽上限，单位：Mbps。
+        :param Bandwidth: 通道頻寬上限，單位：Mbps。
         :type Bandwidth: int
-        :param Concurrent: 通道并发量上限，表示同时在线的连接数，单位：万。
+        :param Concurrent: 通道并發量上限，表示同時在線的連接數，單位：萬。
         :type Concurrent: int
-        :param RealServerRegion: 源站地域。当GroupId存在时，源站地域为通道组的源站地域,此时可不填该字段。当GroupId不存在时，需要填写该字段
+        :param RealServerRegion: 源站地域。當GroupId存在時，源站地域爲通道組的源站地域,此時可不填該欄位。當GroupId不存在時，需要填寫該欄位
         :type RealServerRegion: str
-        :param ClientToken: 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
+        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
-        :param GroupId: 通道所在的通道组ID，当在通道组中创建通道时必带，否则忽略该字段。
+        :param GroupId: 通道所在的通道組ID，當在通道組中創建通道時必帶，否則忽略該欄位。
         :type GroupId: str
-        :param TagSet: 通道需要添加的标签列表。
+        :param TagSet: 通道需要添加的标簽清單。
         :type TagSet: list of TagPair
-        :param ClonedProxyId: 被复制的通道ID。只有处于运行中状态的通道可以被复制。
-当设置该参数时，表示复制该通道。
+        :param ClonedProxyId: 被複制的通道ID。只有處于運作中狀态的通道可以被複制。
+當設置該參數時，表示複制該通道。
         :type ClonedProxyId: str
-        :param BillingType: 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+        :param BillingType: 計費方式 (0:按頻寬計費，1:按流量計費 預設按頻寬計費）
         :type BillingType: int
         """
         self.ProjectId = None
@@ -1077,15 +1077,15 @@ class CreateProxyRequest(AbstractModel):
 
 
 class CreateProxyResponse(AbstractModel):
-    """CreateProxy返回参数结构体
+    """CreateProxy返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 通道的实例ID。
+        :param InstanceId: 通道的實例ID。
         :type InstanceId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceId = None
@@ -1098,30 +1098,30 @@ class CreateProxyResponse(AbstractModel):
 
 
 class CreateRuleRequest(AbstractModel):
-    """CreateRule请求参数结构体
+    """CreateRule請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 7层监听器ID
+        :param ListenerId: 7層監聽器ID
         :type ListenerId: str
-        :param Domain: 转发规则的域名
+        :param Domain: 轉發規則的域名
         :type Domain: str
-        :param Path: 转发规则的路径
+        :param Path: 轉發規則的路徑
         :type Path: str
-        :param RealServerType: 转发规则对应源站的类型，支持IP和DOMAIN类型。
+        :param RealServerType: 轉發規則對應源站的類型，支援IP和DOMAIN類型。
         :type RealServerType: str
-        :param Scheduler: 规则转发源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+        :param Scheduler: 規則轉發源站調度策略，支援輪詢（rr），加權輪詢（wrr），最小連接數（lc）。
         :type Scheduler: str
-        :param HealthCheck: 规则是否开启健康检查，1开启，0关闭。
+        :param HealthCheck: 規則是否開啓健康檢查，1開啓，0關閉。
         :type HealthCheck: int
-        :param CheckParams: 源站健康检查相关参数
+        :param CheckParams: 源站健康檢查相關參數
         :type CheckParams: :class:`tencentcloud.gaap.v20180529.models.RuleCheckParams`
-        :param ForwardProtocol: 加速通道转发到源站的协议类型：支持HTTP或HTTPS。
-不传递该字段时表示使用对应监听器的ForwardProtocol。
+        :param ForwardProtocol: 加速通道轉發到源站的協議類型：支援HTTP或HTTPS。
+不傳遞該欄位時表示使用對應監聽器的ForwardProtocol。
         :type ForwardProtocol: str
-        :param ForwardHost: 加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+        :param ForwardHost: 加速通道轉發到遠照的host，不設置該參數時，使用預設的host設置，即用戶端發起的http請求的host。
         :type ForwardHost: str
         """
         self.ListenerId = None
@@ -1150,15 +1150,15 @@ class CreateRuleRequest(AbstractModel):
 
 
 class CreateRuleResponse(AbstractModel):
-    """CreateRule返回参数结构体
+    """CreateRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RuleId: 创建转发规则成功返回规则ID
+        :param RuleId: 創建轉發規則成功返回規則ID
         :type RuleId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RuleId = None
@@ -1171,7 +1171,7 @@ class CreateRuleResponse(AbstractModel):
 
 
 class CreateSecurityPolicyRequest(AbstractModel):
-    """CreateSecurityPolicy请求参数结构体
+    """CreateSecurityPolicy請求參數結構體
 
     """
 
@@ -1179,7 +1179,7 @@ class CreateSecurityPolicyRequest(AbstractModel):
         """
         :param ProxyId: 加速通道ID
         :type ProxyId: str
-        :param DefaultAction: 默认策略：ACCEPT或DROP
+        :param DefaultAction: 預設策略：ACCEPT或DROP
         :type DefaultAction: str
         """
         self.ProxyId = None
@@ -1192,7 +1192,7 @@ class CreateSecurityPolicyRequest(AbstractModel):
 
 
 class CreateSecurityPolicyResponse(AbstractModel):
-    """CreateSecurityPolicy返回参数结构体
+    """CreateSecurityPolicy返回參數結構體
 
     """
 
@@ -1200,7 +1200,7 @@ class CreateSecurityPolicyResponse(AbstractModel):
         """
         :param PolicyId: 安全策略ID
         :type PolicyId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PolicyId = None
@@ -1213,7 +1213,7 @@ class CreateSecurityPolicyResponse(AbstractModel):
 
 
 class CreateSecurityRulesRequest(AbstractModel):
-    """CreateSecurityRules请求参数结构体
+    """CreateSecurityRules請求參數結構體
 
     """
 
@@ -1221,7 +1221,7 @@ class CreateSecurityRulesRequest(AbstractModel):
         """
         :param PolicyId: 安全策略ID
         :type PolicyId: str
-        :param RuleList: 访问规则列表
+        :param RuleList: 訪問規則清單
         :type RuleList: list of SecurityPolicyRuleIn
         """
         self.PolicyId = None
@@ -1239,15 +1239,15 @@ class CreateSecurityRulesRequest(AbstractModel):
 
 
 class CreateSecurityRulesResponse(AbstractModel):
-    """CreateSecurityRules返回参数结构体
+    """CreateSecurityRules返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RuleIdList: 规则ID列表
+        :param RuleIdList: 規則ID清單
         :type RuleIdList: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RuleIdList = None
@@ -1260,31 +1260,31 @@ class CreateSecurityRulesResponse(AbstractModel):
 
 
 class CreateTCPListenersRequest(AbstractModel):
-    """CreateTCPListeners请求参数结构体
+    """CreateTCPListeners請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerName: 监听器名称。
+        :param ListenerName: 監聽器名稱。
         :type ListenerName: str
-        :param Ports: 监听器端口列表。
+        :param Ports: 監聽器端口清單。
         :type Ports: list of int non-negative
-        :param Scheduler: 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+        :param Scheduler: 監聽器源站調度策略，支援輪詢（rr），加權輪詢（wrr），最小連接數（lc）。
         :type Scheduler: str
-        :param HealthCheck: 源站是否开启健康检查：1开启，0关闭，UDP监听器不支持健康检查
+        :param HealthCheck: 源站是否開啓健康檢查：1開啓，0關閉，UDP監聽器不支援健康檢查
         :type HealthCheck: int
-        :param RealServerType: 监听器对应源站类型，支持IP或者DOMAIN类型。DOMAIN源站类型不支持wrr的源站调度策略。
+        :param RealServerType: 監聽器對應源站類型，支援IP或者DOMAIN類型。DOMAIN源站類型不支援wrr的源站調度策略。
         :type RealServerType: str
-        :param ProxyId: 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+        :param ProxyId: 通道ID，ProxyId和GroupId必須設置一個，但不能同時設置。
         :type ProxyId: str
-        :param GroupId: 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+        :param GroupId: 通道組ID，ProxyId和GroupId必須設置一個，但不能同時設置。
         :type GroupId: str
-        :param DelayLoop: 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+        :param DelayLoop: 源站健康檢查時間間隔，單位：秒。時間間隔取值在[5，300]之間。
         :type DelayLoop: int
-        :param ConnectTimeout: 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+        :param ConnectTimeout: 源站健康檢查響應超時時間，單位：秒。超時時間取值在[2，60]之間。超時時間應小於健康檢查時間間隔DelayLoop。
         :type ConnectTimeout: int
-        :param RealServerPorts: 源站端口列表，该参数仅支持v1版本监听器和通道组监听器。
+        :param RealServerPorts: 源站端口清單，該參數僅支援v1版本監聽器和通道組監聽器。
         :type RealServerPorts: list of int non-negative
         """
         self.ListenerName = None
@@ -1313,15 +1313,15 @@ class CreateTCPListenersRequest(AbstractModel):
 
 
 class CreateTCPListenersResponse(AbstractModel):
-    """CreateTCPListeners返回参数结构体
+    """CreateTCPListeners返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerIds: 返回监听器ID
+        :param ListenerIds: 返回監聽器ID
         :type ListenerIds: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ListenerIds = None
@@ -1334,25 +1334,25 @@ class CreateTCPListenersResponse(AbstractModel):
 
 
 class CreateUDPListenersRequest(AbstractModel):
-    """CreateUDPListeners请求参数结构体
+    """CreateUDPListeners請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerName: 监听器名称
+        :param ListenerName: 監聽器名稱
         :type ListenerName: str
-        :param Ports: 监听器端口列表
+        :param Ports: 監聽器端口清單
         :type Ports: list of int non-negative
-        :param Scheduler: 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）
+        :param Scheduler: 監聽器源站調度策略，支援輪詢（rr），加權輪詢（wrr），最小連接數（lc）
         :type Scheduler: str
-        :param RealServerType: 监听器对应源站类型，支持IP或者DOMAIN类型
+        :param RealServerType: 監聽器對應源站類型，支援IP或者DOMAIN類型
         :type RealServerType: str
-        :param ProxyId: 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+        :param ProxyId: 通道ID，ProxyId和GroupId必須設置一個，但不能同時設置。
         :type ProxyId: str
-        :param GroupId: 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+        :param GroupId: 通道組ID，ProxyId和GroupId必須設置一個，但不能同時設置。
         :type GroupId: str
-        :param RealServerPorts: 源站端口列表，该参数仅支持v1版本监听器和通道组监听器
+        :param RealServerPorts: 源站端口清單，該參數僅支援v1版本監聽器和通道組監聽器
         :type RealServerPorts: list of int non-negative
         """
         self.ListenerName = None
@@ -1375,15 +1375,15 @@ class CreateUDPListenersRequest(AbstractModel):
 
 
 class CreateUDPListenersResponse(AbstractModel):
-    """CreateUDPListeners返回参数结构体
+    """CreateUDPListeners返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerIds: 返回监听器ID
+        :param ListenerIds: 返回監聽器ID
         :type ListenerIds: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ListenerIds = None
@@ -1396,13 +1396,13 @@ class CreateUDPListenersResponse(AbstractModel):
 
 
 class DeleteCertificateRequest(AbstractModel):
-    """DeleteCertificate请求参数结构体
+    """DeleteCertificate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertificateId: 需要删除的证书ID。
+        :param CertificateId: 需要删除的證書ID。
         :type CertificateId: str
         """
         self.CertificateId = None
@@ -1413,13 +1413,13 @@ class DeleteCertificateRequest(AbstractModel):
 
 
 class DeleteCertificateResponse(AbstractModel):
-    """DeleteCertificate返回参数结构体
+    """DeleteCertificate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1430,13 +1430,13 @@ class DeleteCertificateResponse(AbstractModel):
 
 
 class DeleteDomainErrorPageInfoRequest(AbstractModel):
-    """DeleteDomainErrorPageInfo请求参数结构体
+    """DeleteDomainErrorPageInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ErrorPageId: 定制错误响应页的唯一ID，请参考CreateDomainErrorPageInfo的响应
+        :param ErrorPageId: 定制錯誤響應頁的唯一ID，請參考CreateDomainErrorPageInfo的響應
         :type ErrorPageId: str
         """
         self.ErrorPageId = None
@@ -1447,13 +1447,13 @@ class DeleteDomainErrorPageInfoRequest(AbstractModel):
 
 
 class DeleteDomainErrorPageInfoResponse(AbstractModel):
-    """DeleteDomainErrorPageInfo返回参数结构体
+    """DeleteDomainErrorPageInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1464,18 +1464,18 @@ class DeleteDomainErrorPageInfoResponse(AbstractModel):
 
 
 class DeleteDomainRequest(AbstractModel):
-    """DeleteDomain请求参数结构体
+    """DeleteDomain請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
         :param Domain: 需要删除的域名
         :type Domain: str
-        :param Force: 是否强制删除已绑定源站的转发规则，0非强制，1强制。
-当采用非强制删除时，如果域名下已有规则绑定了源站，则无法删除。
+        :param Force: 是否強制删除已綁定源站的轉發規則，0非強制，1強制。
+當采用非強制删除時，如果域名下已有規則綁定了源站，則無法删除。
         :type Force: int
         """
         self.ListenerId = None
@@ -1490,13 +1490,13 @@ class DeleteDomainRequest(AbstractModel):
 
 
 class DeleteDomainResponse(AbstractModel):
-    """DeleteDomain返回参数结构体
+    """DeleteDomain返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1507,19 +1507,19 @@ class DeleteDomainResponse(AbstractModel):
 
 
 class DeleteListenersRequest(AbstractModel):
-    """DeleteListeners请求参数结构体
+    """DeleteListeners請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerIds: 待删除的监听器ID列表
+        :param ListenerIds: 待删除的監聽器ID清單
         :type ListenerIds: list of str
-        :param Force: 已绑定源站的监听器是否允许强制删除，1：允许， 0：不允许
+        :param Force: 已綁定源站的監聽器是否允許強制删除，1：允許， 0：不允許
         :type Force: int
-        :param GroupId: 通道组ID，该参数和GroupId必须设置一个，但不能同时设置。
+        :param GroupId: 通道組ID，該參數和GroupId必須設置一個，但不能同時設置。
         :type GroupId: str
-        :param ProxyId: 通道ID，该参数和GroupId必须设置一个，但不能同时设置。
+        :param ProxyId: 通道ID，該參數和GroupId必須設置一個，但不能同時設置。
         :type ProxyId: str
         """
         self.ListenerIds = None
@@ -1536,19 +1536,19 @@ class DeleteListenersRequest(AbstractModel):
 
 
 class DeleteListenersResponse(AbstractModel):
-    """DeleteListeners返回参数结构体
+    """DeleteListeners返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param OperationFailedListenerSet: 删除操作失败的监听器ID列表
+        :param OperationFailedListenerSet: 删除操作失敗的監聽器ID清單
         :type OperationFailedListenerSet: list of str
-        :param OperationSucceedListenerSet: 删除操作成功的监听器ID列表
+        :param OperationSucceedListenerSet: 删除操作成功的監聽器ID清單
         :type OperationSucceedListenerSet: list of str
-        :param InvalidStatusListenerSet: 无效的监听器ID列表，如：监听器不存在，监听器对应实例不匹配
+        :param InvalidStatusListenerSet: 無效的監聽器ID清單，如：監聽器不存在，監聽器對應實例不比對
         :type InvalidStatusListenerSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.OperationFailedListenerSet = None
@@ -1565,13 +1565,13 @@ class DeleteListenersResponse(AbstractModel):
 
 
 class DeleteProxyGroupRequest(AbstractModel):
-    """DeleteProxyGroup请求参数结构体
+    """DeleteProxyGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 需要删除的通道组ID。
+        :param GroupId: 需要删除的通道組ID。
         :type GroupId: str
         """
         self.GroupId = None
@@ -1582,13 +1582,13 @@ class DeleteProxyGroupRequest(AbstractModel):
 
 
 class DeleteProxyGroupResponse(AbstractModel):
-    """DeleteProxyGroup返回参数结构体
+    """DeleteProxyGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1599,17 +1599,17 @@ class DeleteProxyGroupResponse(AbstractModel):
 
 
 class DeleteRuleRequest(AbstractModel):
-    """DeleteRule请求参数结构体
+    """DeleteRule請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 7层监听器ID
+        :param ListenerId: 7層監聽器ID
         :type ListenerId: str
-        :param RuleId: 转发规则ID
+        :param RuleId: 轉發規則ID
         :type RuleId: str
-        :param Force: 是否可以强制删除已绑定源站的转发规则，0非强制，1强制
+        :param Force: 是否可以強制删除已綁定源站的轉發規則，0非強制，1強制
         :type Force: int
         """
         self.ListenerId = None
@@ -1624,13 +1624,13 @@ class DeleteRuleRequest(AbstractModel):
 
 
 class DeleteRuleResponse(AbstractModel):
-    """DeleteRule返回参数结构体
+    """DeleteRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1641,7 +1641,7 @@ class DeleteRuleResponse(AbstractModel):
 
 
 class DeleteSecurityPolicyRequest(AbstractModel):
-    """DeleteSecurityPolicy请求参数结构体
+    """DeleteSecurityPolicy請求參數結構體
 
     """
 
@@ -1658,13 +1658,13 @@ class DeleteSecurityPolicyRequest(AbstractModel):
 
 
 class DeleteSecurityPolicyResponse(AbstractModel):
-    """DeleteSecurityPolicy返回参数结构体
+    """DeleteSecurityPolicy返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1675,7 +1675,7 @@ class DeleteSecurityPolicyResponse(AbstractModel):
 
 
 class DeleteSecurityRulesRequest(AbstractModel):
-    """DeleteSecurityRules请求参数结构体
+    """DeleteSecurityRules請求參數結構體
 
     """
 
@@ -1683,7 +1683,7 @@ class DeleteSecurityRulesRequest(AbstractModel):
         """
         :param PolicyId: 安全策略ID
         :type PolicyId: str
-        :param RuleIdList: 访问规则ID列表
+        :param RuleIdList: 訪問規則ID清單
         :type RuleIdList: list of str
         """
         self.PolicyId = None
@@ -1696,13 +1696,13 @@ class DeleteSecurityRulesRequest(AbstractModel):
 
 
 class DeleteSecurityRulesResponse(AbstractModel):
-    """DeleteSecurityRules返回参数结构体
+    """DeleteSecurityRules返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1713,13 +1713,13 @@ class DeleteSecurityRulesResponse(AbstractModel):
 
 
 class DescribeAccessRegionsByDestRegionRequest(AbstractModel):
-    """DescribeAccessRegionsByDestRegion请求参数结构体
+    """DescribeAccessRegionsByDestRegion請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DestRegion: 源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
+        :param DestRegion: 源站區域：介面DescribeDestRegions返回DestRegionSet中的RegionId欄位值
         :type DestRegion: str
         """
         self.DestRegion = None
@@ -1730,17 +1730,17 @@ class DescribeAccessRegionsByDestRegionRequest(AbstractModel):
 
 
 class DescribeAccessRegionsByDestRegionResponse(AbstractModel):
-    """DescribeAccessRegionsByDestRegion返回参数结构体
+    """DescribeAccessRegionsByDestRegion返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 可用加速区域数量
+        :param TotalCount: 可用加速區域數量
         :type TotalCount: int
-        :param AccessRegionSet: 可用加速区域信息列表
+        :param AccessRegionSet: 可用加速區域訊息清單
         :type AccessRegionSet: list of AccessRegionDetial
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1760,23 +1760,23 @@ class DescribeAccessRegionsByDestRegionResponse(AbstractModel):
 
 
 class DescribeAccessRegionsRequest(AbstractModel):
-    """DescribeAccessRegions请求参数结构体
+    """DescribeAccessRegions請求參數結構體
 
     """
 
 
 class DescribeAccessRegionsResponse(AbstractModel):
-    """DescribeAccessRegions返回参数结构体
+    """DescribeAccessRegions返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 加速区域总数
+        :param TotalCount: 加速區域總數
         :type TotalCount: int
-        :param AccessRegionSet: 加速区域详情列表
+        :param AccessRegionSet: 加速區域詳情清單
         :type AccessRegionSet: list of RegionDetail
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1796,13 +1796,13 @@ class DescribeAccessRegionsResponse(AbstractModel):
 
 
 class DescribeCertificateDetailRequest(AbstractModel):
-    """DescribeCertificateDetail请求参数结构体
+    """DescribeCertificateDetail請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertificateId: 证书ID。
+        :param CertificateId: 證書ID。
         :type CertificateId: str
         """
         self.CertificateId = None
@@ -1813,15 +1813,15 @@ class DescribeCertificateDetailRequest(AbstractModel):
 
 
 class DescribeCertificateDetailResponse(AbstractModel):
-    """DescribeCertificateDetail返回参数结构体
+    """DescribeCertificateDetail返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertificateDetail: 证书详情。
+        :param CertificateDetail: 證書詳情。
         :type CertificateDetail: :class:`tencentcloud.gaap.v20180529.models.CertificateDetail`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CertificateDetail = None
@@ -1836,24 +1836,24 @@ class DescribeCertificateDetailResponse(AbstractModel):
 
 
 class DescribeCertificatesRequest(AbstractModel):
-    """DescribeCertificates请求参数结构体
+    """DescribeCertificates請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertificateType: 证书类型。其中：
-0，表示基础认证配置；
-1，表示客户端CA证书；
-2，表示服务器SSL证书；
-3，表示源站CA证书；
-4，表示通道SSL证书。
--1，所有类型。
-默认为-1。
+        :param CertificateType: 證書類型。其中：
+0，表示基礎認證配置；
+1，表示用戶端CA證書；
+2，表示服務器SSL證書；
+3，表示源站CA證書；
+4，表示通道SSL證書。
+-1，所有類型。
+預設爲-1。
         :type CertificateType: int
-        :param Offset: 偏移量，默认为0。
+        :param Offset: 偏移量，預設爲0。
         :type Offset: int
-        :param Limit: 限制数量，默认为20。
+        :param Limit: 限制數量，預設爲20。
         :type Limit: int
         """
         self.CertificateType = None
@@ -1868,17 +1868,17 @@ class DescribeCertificatesRequest(AbstractModel):
 
 
 class DescribeCertificatesResponse(AbstractModel):
-    """DescribeCertificates返回参数结构体
+    """DescribeCertificates返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertificateSet: 服务器证书列表，包括证书ID 和证书名称。
+        :param CertificateSet: 服務器證書清單，包括證書ID 和證書名稱。
         :type CertificateSet: list of Certificate
-        :param TotalCount: 满足查询条件的服务器证书总数量。
+        :param TotalCount: 滿足查詢條件的服務器證書總數量。
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CertificateSet = None
@@ -1898,21 +1898,21 @@ class DescribeCertificatesResponse(AbstractModel):
 
 
 class DescribeCountryAreaMappingRequest(AbstractModel):
-    """DescribeCountryAreaMapping请求参数结构体
+    """DescribeCountryAreaMapping請求參數結構體
 
     """
 
 
 class DescribeCountryAreaMappingResponse(AbstractModel):
-    """DescribeCountryAreaMapping返回参数结构体
+    """DescribeCountryAreaMapping返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CountryAreaMappingList: 国家地区编码映射表。
+        :param CountryAreaMappingList: 國家地區編碼映射表。
         :type CountryAreaMappingList: list of CountryAreaMap
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CountryAreaMappingList = None
@@ -1930,23 +1930,23 @@ class DescribeCountryAreaMappingResponse(AbstractModel):
 
 
 class DescribeDestRegionsRequest(AbstractModel):
-    """DescribeDestRegions请求参数结构体
+    """DescribeDestRegions請求參數結構體
 
     """
 
 
 class DescribeDestRegionsResponse(AbstractModel):
-    """DescribeDestRegions返回参数结构体
+    """DescribeDestRegions返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 源站区域总数
+        :param TotalCount: 源站區域總數
         :type TotalCount: int
-        :param DestRegionSet: 源站区域详情列表
+        :param DestRegionSet: 源站區域詳情清單
         :type DestRegionSet: list of RegionDetail
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1966,13 +1966,13 @@ class DescribeDestRegionsResponse(AbstractModel):
 
 
 class DescribeDomainErrorPageInfoByIdsRequest(AbstractModel):
-    """DescribeDomainErrorPageInfoByIds请求参数结构体
+    """DescribeDomainErrorPageInfoByIds請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ErrorPageIds: 定制错误ID列表,最多支持10个
+        :param ErrorPageIds: 定制錯誤ID清單,最多支援10個
         :type ErrorPageIds: list of str
         """
         self.ErrorPageIds = None
@@ -1983,16 +1983,16 @@ class DescribeDomainErrorPageInfoByIdsRequest(AbstractModel):
 
 
 class DescribeDomainErrorPageInfoByIdsResponse(AbstractModel):
-    """DescribeDomainErrorPageInfoByIds返回参数结构体
+    """DescribeDomainErrorPageInfoByIds返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ErrorPageSet: 定制错误响应配置集
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ErrorPageSet: 定制錯誤響應配置集
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ErrorPageSet: list of DomainErrorPageInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ErrorPageSet = None
@@ -2010,13 +2010,13 @@ class DescribeDomainErrorPageInfoByIdsResponse(AbstractModel):
 
 
 class DescribeDomainErrorPageInfoRequest(AbstractModel):
-    """DescribeDomainErrorPageInfo请求参数结构体
+    """DescribeDomainErrorPageInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
         :param Domain: 域名
         :type Domain: str
@@ -2031,16 +2031,16 @@ class DescribeDomainErrorPageInfoRequest(AbstractModel):
 
 
 class DescribeDomainErrorPageInfoResponse(AbstractModel):
-    """DescribeDomainErrorPageInfo返回参数结构体
+    """DescribeDomainErrorPageInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ErrorPageSet: 定制错误响应配置集
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ErrorPageSet: 定制錯誤響應配置集
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ErrorPageSet: list of DomainErrorPageInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ErrorPageSet = None
@@ -2058,13 +2058,13 @@ class DescribeDomainErrorPageInfoResponse(AbstractModel):
 
 
 class DescribeGroupAndStatisticsProxyRequest(AbstractModel):
-    """DescribeGroupAndStatisticsProxy请求参数结构体
+    """DescribeGroupAndStatisticsProxy請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: int
         """
         self.ProjectId = None
@@ -2075,17 +2075,17 @@ class DescribeGroupAndStatisticsProxyRequest(AbstractModel):
 
 
 class DescribeGroupAndStatisticsProxyResponse(AbstractModel):
-    """DescribeGroupAndStatisticsProxy返回参数结构体
+    """DescribeGroupAndStatisticsProxy返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupSet: 可以统计的通道组信息
+        :param GroupSet: 可以統計的通道組訊息
         :type GroupSet: list of GroupStatisticsInfo
-        :param TotalCount: 通道组数量
+        :param TotalCount: 通道組數量
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.GroupSet = None
@@ -2105,13 +2105,13 @@ class DescribeGroupAndStatisticsProxyResponse(AbstractModel):
 
 
 class DescribeGroupDomainConfigRequest(AbstractModel):
-    """DescribeGroupDomainConfig请求参数结构体
+    """DescribeGroupDomainConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 通道组ID。
+        :param GroupId: 通道組ID。
         :type GroupId: str
         """
         self.GroupId = None
@@ -2122,21 +2122,21 @@ class DescribeGroupDomainConfigRequest(AbstractModel):
 
 
 class DescribeGroupDomainConfigResponse(AbstractModel):
-    """DescribeGroupDomainConfig返回参数结构体
+    """DescribeGroupDomainConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccessRegionList: 域名解析就近接入配置列表。
+        :param AccessRegionList: 域名解析就近接入配置清單。
         :type AccessRegionList: list of DomainAccessRegionDict
-        :param DefaultDnsIp: 默认访问Ip。
+        :param DefaultDnsIp: 預設訪問Ip。
         :type DefaultDnsIp: str
-        :param GroupId: 通道组ID。
+        :param GroupId: 通道組ID。
         :type GroupId: str
-        :param AccessRegionCount: 接入地域的配置的总数。
+        :param AccessRegionCount: 接入地域的配置的總數。
         :type AccessRegionCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AccessRegionList = None
@@ -2160,7 +2160,7 @@ class DescribeGroupDomainConfigResponse(AbstractModel):
 
 
 class DescribeHTTPListenersRequest(AbstractModel):
-    """DescribeHTTPListeners请求参数结构体
+    """DescribeHTTPListeners請求參數結構體
 
     """
 
@@ -2168,17 +2168,17 @@ class DescribeHTTPListenersRequest(AbstractModel):
         """
         :param ProxyId: 通道ID
         :type ProxyId: str
-        :param ListenerId: 过滤条件，按照监听器ID进行精确查询
+        :param ListenerId: 過濾條件，按照監聽器ID進行精确查詢
         :type ListenerId: str
-        :param ListenerName: 过滤条件，按照监听器名称进行精确查询
+        :param ListenerName: 過濾條件，按照監聽器名稱進行精确查詢
         :type ListenerName: str
-        :param Port: 过滤条件，按照监听器端口进行精确查询
+        :param Port: 過濾條件，按照監聽器端口進行精确查詢
         :type Port: int
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 限制数量，默认为20个
+        :param Limit: 限制數量，預設爲20個
         :type Limit: int
-        :param SearchValue: 过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
+        :param SearchValue: 過濾條件，支援按照端口或監聽器名稱進行模糊查詢，該參數不能與ListenerName和Port同時使用
         :type SearchValue: str
         """
         self.ProxyId = None
@@ -2201,17 +2201,17 @@ class DescribeHTTPListenersRequest(AbstractModel):
 
 
 class DescribeHTTPListenersResponse(AbstractModel):
-    """DescribeHTTPListeners返回参数结构体
+    """DescribeHTTPListeners返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 监听器数量
+        :param TotalCount: 監聽器數量
         :type TotalCount: int
-        :param ListenerSet: HTTP监听器列表
+        :param ListenerSet: HTTP監聽器清單
         :type ListenerSet: list of HTTPListener
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -2231,25 +2231,25 @@ class DescribeHTTPListenersResponse(AbstractModel):
 
 
 class DescribeHTTPSListenersRequest(AbstractModel):
-    """DescribeHTTPSListeners请求参数结构体
+    """DescribeHTTPSListeners請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProxyId: 过滤条件，通道ID
+        :param ProxyId: 過濾條件，通道ID
         :type ProxyId: str
-        :param ListenerId: 过滤条件，根据监听器ID进行精确查询。
+        :param ListenerId: 過濾條件，根據監聽器ID進行精确查詢。
         :type ListenerId: str
-        :param ListenerName: 过滤条件，根据监听器名称进行精确查询。
+        :param ListenerName: 過濾條件，根據監聽器名稱進行精确查詢。
         :type ListenerName: str
-        :param Port: 过滤条件，根据监听器端口进行精确查询。
+        :param Port: 過濾條件，根據監聽器端口進行精确查詢。
         :type Port: int
-        :param Offset: 偏移量， 默认为0
+        :param Offset: 偏移量， 預設爲0
         :type Offset: int
-        :param Limit: 限制数量，默认为20
+        :param Limit: 限制數量，預設爲20
         :type Limit: int
-        :param SearchValue: 过滤条件，支持按照端口或监听器名称进行模糊查询
+        :param SearchValue: 過濾條件，支援按照端口或監聽器名稱進行模糊查詢
         :type SearchValue: str
         """
         self.ProxyId = None
@@ -2272,17 +2272,17 @@ class DescribeHTTPSListenersRequest(AbstractModel):
 
 
 class DescribeHTTPSListenersResponse(AbstractModel):
-    """DescribeHTTPSListeners返回参数结构体
+    """DescribeHTTPSListeners返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 监听器数量
+        :param TotalCount: 監聽器數量
         :type TotalCount: int
-        :param ListenerSet: HTTPS监听器列表
+        :param ListenerSet: HTTPS監聽器清單
         :type ListenerSet: list of HTTPSListener
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -2302,13 +2302,13 @@ class DescribeHTTPSListenersResponse(AbstractModel):
 
 
 class DescribeListenerRealServersRequest(AbstractModel):
-    """DescribeListenerRealServers请求参数结构体
+    """DescribeListenerRealServers請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
         """
         self.ListenerId = None
@@ -2319,21 +2319,21 @@ class DescribeListenerRealServersRequest(AbstractModel):
 
 
 class DescribeListenerRealServersResponse(AbstractModel):
-    """DescribeListenerRealServers返回参数结构体
+    """DescribeListenerRealServers返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 可绑定源站的个数
+        :param TotalCount: 可綁定源站的個數
         :type TotalCount: int
-        :param RealServerSet: 源站信息列表
+        :param RealServerSet: 源站訊息清單
         :type RealServerSet: list of RealServer
-        :param BindRealServerTotalCount: 已绑定源站的个数
+        :param BindRealServerTotalCount: 已綁定源站的個數
         :type BindRealServerTotalCount: int
-        :param BindRealServerSet: 已绑定源站信息列表
+        :param BindRealServerSet: 已綁定源站訊息清單
         :type BindRealServerSet: list of BindRealServer
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -2362,24 +2362,24 @@ class DescribeListenerRealServersResponse(AbstractModel):
 
 
 class DescribeListenerStatisticsRequest(AbstractModel):
-    """DescribeListenerStatistics请求参数结构体
+    """DescribeListenerStatistics請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
-        :param StartTime: 起始时间
+        :param StartTime: 起始時間
         :type StartTime: str
-        :param EndTime: 结束时间
+        :param EndTime: 結束時間
         :type EndTime: str
-        :param MetricNames: 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets。
+        :param MetricNames: 統計指标名稱清單，支援: 入頻寬:InBandwidth, 出頻寬:OutBandwidth, 并發:Concurrent, 入包量:InPackets, 出包量:OutPackets。
         :type MetricNames: list of str
-        :param Granularity: 监控粒度，目前支持300，3600，86400，单位：秒。
-查询时间范围不超过1天，支持最小粒度300秒；
-查询间范围不超过7天，支持最小粒度3600秒；
-查询间范围超过7天，支持最小粒度86400秒。
+        :param Granularity: 監控粒度，目前支援300，3600，86400，單位：秒。
+查詢時間範圍不超過1天，支援最小粒度300秒；
+查詢間範圍不超過7天，支援最小粒度3600秒；
+查詢間範圍超過7天，支援最小粒度86400秒。
         :type Granularity: int
         """
         self.ListenerId = None
@@ -2398,15 +2398,15 @@ class DescribeListenerStatisticsRequest(AbstractModel):
 
 
 class DescribeListenerStatisticsResponse(AbstractModel):
-    """DescribeListenerStatistics返回参数结构体
+    """DescribeListenerStatistics返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StatisticsData: 通道组统计数据
+        :param StatisticsData: 通道組統計數據
         :type StatisticsData: list of MetricStatisticsInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.StatisticsData = None
@@ -2424,33 +2424,33 @@ class DescribeListenerStatisticsResponse(AbstractModel):
 
 
 class DescribeProxiesRequest(AbstractModel):
-    """DescribeProxies请求参数结构体
+    """DescribeProxies請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: （旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
+        :param InstanceIds: （舊參數，請切換到ProxyIds）按照一個或者多個實例ID查詢。每次請求的實例的上限爲100。參數不支援同時指定InstanceIds和Filters。
         :type InstanceIds: list of str
-        :param Offset: 偏移量，默认为0。
+        :param Offset: 偏移量，預設爲0。
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为100。
+        :param Limit: 返回數量，預設爲20，最大值爲100。
         :type Limit: int
-        :param Filters: 过滤条件。   
-每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 
-ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。    
-AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。    
-RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
-GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。
+        :param Filters: 過濾條件。   
+每次請求的Filters的上限爲10，Filter.Values的上限爲5。參數不支援同時指定InstanceIds和Filters。 
+ProjectId - String - 是否必填：否 -（過濾條件）按照項目ID過濾。    
+AccessRegion - String - 是否必填：否 - （過濾條件）按照接入地域過濾。    
+RealServerRegion - String - 是否必填：否 - （過濾條件）按照源站地域過濾。
+GroupId - String - 是否必填：否 - （過濾條件）按照通道組ID過濾。
         :type Filters: list of Filter
-        :param ProxyIds: （新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
+        :param ProxyIds: （新參數，替代InstanceIds）按照一個或者多個實例ID查詢。每次請求的實例的上限爲100。參數不支援同時指定InstanceIds和Filters。
         :type ProxyIds: list of str
-        :param TagSet: 标签列表，当存在该字段时，拉取对应标签下的资源列表。
-最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，通道会被拉取出来。
+        :param TagSet: 标簽清單，當存在該欄位時，拉取對應标簽下的資源清單。
+最多支援5個标簽，當存在兩個或兩個以上的标簽時，滿足其中任意一個标簽時，通道會被拉取出來。
         :type TagSet: list of TagPair
-        :param Independent: 当该字段为1时，仅拉取非通道组的通道，
-当该字段为0时，仅拉取通道组的通道，
-不存在该字段时，拉取所有通道，包括独立通道和通道组通道。
+        :param Independent: 當該欄位爲1時，僅拉取非通道組的通道，
+當該欄位爲0時，僅拉取通道組的通道，
+不存在該欄位時，拉取所有通道，包括獨立通道和通道組通道。
         :type Independent: int
         """
         self.InstanceIds = None
@@ -2483,19 +2483,19 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
 
 
 class DescribeProxiesResponse(AbstractModel):
-    """DescribeProxies返回参数结构体
+    """DescribeProxies返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 通道个数。
+        :param TotalCount: 通道個數。
         :type TotalCount: int
-        :param InstanceSet: （旧参数，请切换到ProxySet）通道实例信息列表。
+        :param InstanceSet: （舊參數，請切換到ProxySet）通道實例訊息清單。
         :type InstanceSet: list of ProxyInfo
-        :param ProxySet: （新参数）通道实例信息列表。
+        :param ProxySet: （新參數）通道實例訊息清單。
         :type ProxySet: list of ProxyInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -2522,15 +2522,15 @@ class DescribeProxiesResponse(AbstractModel):
 
 
 class DescribeProxiesStatusRequest(AbstractModel):
-    """DescribeProxiesStatus请求参数结构体
+    """DescribeProxiesStatus請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: （旧参数，请切换到ProxyIds）通道ID列表。
+        :param InstanceIds: （舊參數，請切換到ProxyIds）通道ID清單。
         :type InstanceIds: list of str
-        :param ProxyIds: （新参数）通道ID列表。
+        :param ProxyIds: （新參數）通道ID清單。
         :type ProxyIds: list of str
         """
         self.InstanceIds = None
@@ -2543,15 +2543,15 @@ class DescribeProxiesStatusRequest(AbstractModel):
 
 
 class DescribeProxiesStatusResponse(AbstractModel):
-    """DescribeProxiesStatus返回参数结构体
+    """DescribeProxiesStatus返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceStatusSet: 通道状态列表。
+        :param InstanceStatusSet: 通道狀态清單。
         :type InstanceStatusSet: list of ProxyStatus
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceStatusSet = None
@@ -2569,13 +2569,13 @@ class DescribeProxiesStatusResponse(AbstractModel):
 
 
 class DescribeProxyAndStatisticsListenersRequest(AbstractModel):
-    """DescribeProxyAndStatisticsListeners请求参数结构体
+    """DescribeProxyAndStatisticsListeners請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: int
         """
         self.ProjectId = None
@@ -2586,17 +2586,17 @@ class DescribeProxyAndStatisticsListenersRequest(AbstractModel):
 
 
 class DescribeProxyAndStatisticsListenersResponse(AbstractModel):
-    """DescribeProxyAndStatisticsListeners返回参数结构体
+    """DescribeProxyAndStatisticsListeners返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProxySet: 可以统计的通道信息
+        :param ProxySet: 可以統計的通道訊息
         :type ProxySet: list of ProxySimpleInfo
-        :param TotalCount: 通道数量
+        :param TotalCount: 通道數量
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ProxySet = None
@@ -2616,13 +2616,13 @@ class DescribeProxyAndStatisticsListenersResponse(AbstractModel):
 
 
 class DescribeProxyDetailRequest(AbstractModel):
-    """DescribeProxyDetail请求参数结构体
+    """DescribeProxyDetail請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProxyId: 需查询的通道ID。
+        :param ProxyId: 需查詢的通道ID。
         :type ProxyId: str
         """
         self.ProxyId = None
@@ -2633,15 +2633,15 @@ class DescribeProxyDetailRequest(AbstractModel):
 
 
 class DescribeProxyDetailResponse(AbstractModel):
-    """DescribeProxyDetail返回参数结构体
+    """DescribeProxyDetail返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProxyDetail: 通道详情信息。
+        :param ProxyDetail: 通道詳情訊息。
         :type ProxyDetail: :class:`tencentcloud.gaap.v20180529.models.ProxyInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ProxyDetail = None
@@ -2656,13 +2656,13 @@ class DescribeProxyDetailResponse(AbstractModel):
 
 
 class DescribeProxyGroupDetailsRequest(AbstractModel):
-    """DescribeProxyGroupDetails请求参数结构体
+    """DescribeProxyGroupDetails請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 通道组ID。
+        :param GroupId: 通道組ID。
         :type GroupId: str
         """
         self.GroupId = None
@@ -2673,15 +2673,15 @@ class DescribeProxyGroupDetailsRequest(AbstractModel):
 
 
 class DescribeProxyGroupDetailsResponse(AbstractModel):
-    """DescribeProxyGroupDetails返回参数结构体
+    """DescribeProxyGroupDetails返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProxyGroupDetail: 通道组详细信息。
+        :param ProxyGroupDetail: 通道組詳細訊息。
         :type ProxyGroupDetail: :class:`tencentcloud.gaap.v20180529.models.ProxyGroupDetail`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ProxyGroupDetail = None
@@ -2696,27 +2696,27 @@ class DescribeProxyGroupDetailsResponse(AbstractModel):
 
 
 class DescribeProxyGroupListRequest(AbstractModel):
-    """DescribeProxyGroupList请求参数结构体
+    """DescribeProxyGroupList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 偏移量，默认值为0。
+        :param Offset: 偏移量，預設值爲0。
         :type Offset: int
-        :param Limit: 返回数量，默认值为20，最大值为100。
+        :param Limit: 返回數量，預設值爲20，最大值爲100。
         :type Limit: int
-        :param ProjectId: 项目ID。取值范围：
--1，该用户下所有项目
-0，默认项目
-其他值，指定的项目
+        :param ProjectId: 項目ID。取值範圍：
+-1，該用戶下所有項目
+0，預設項目
+其他值，指定的項目
         :type ProjectId: int
-        :param TagSet: 标签列表，当存在该字段时，拉取对应标签下的资源列表。
-最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。
+        :param TagSet: 标簽清單，當存在該欄位時，拉取對應标簽下的資源清單。
+最多支援5個标簽，當存在兩個或兩個以上的标簽時，滿足其中任意一個标簽時，該通道組會被拉取出來。
         :type TagSet: list of TagPair
-        :param Filters: 过滤条件。   
-每次请求的Filter.Values的上限为5。
-RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
+        :param Filters: 過濾條件。   
+每次請求的Filter.Values的上限爲5。
+RealServerRegion - String - 是否必填：否 -（過濾條件）按照源站地域過濾，可參考DescribeDestRegions介面返回結果中的RegionId。
         :type Filters: list of Filter
         """
         self.Offset = None
@@ -2745,18 +2745,18 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
 
 
 class DescribeProxyGroupListResponse(AbstractModel):
-    """DescribeProxyGroupList返回参数结构体
+    """DescribeProxyGroupList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 通道组总数。
+        :param TotalCount: 通道組總數。
         :type TotalCount: int
-        :param ProxyGroupList: 通道组列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProxyGroupList: 通道組清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProxyGroupList: list of ProxyGroupInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -2776,24 +2776,24 @@ class DescribeProxyGroupListResponse(AbstractModel):
 
 
 class DescribeProxyGroupStatisticsRequest(AbstractModel):
-    """DescribeProxyGroupStatistics请求参数结构体
+    """DescribeProxyGroupStatistics請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 通道组ID
+        :param GroupId: 通道組ID
         :type GroupId: str
-        :param StartTime: 起始时间
+        :param StartTime: 起始時間
         :type StartTime: str
-        :param EndTime: 结束时间
+        :param EndTime: 結束時間
         :type EndTime: str
-        :param MetricNames: 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets
+        :param MetricNames: 統計指标名稱清單，支援: 入頻寬:InBandwidth, 出頻寬:OutBandwidth, 并發:Concurrent, 入包量:InPackets, 出包量:OutPackets
         :type MetricNames: list of str
-        :param Granularity: 监控粒度，目前支持60，300，3600，86400，单位：秒。
-当时间范围不超过1天，支持最小粒度60秒；
-当时间范围不超过7天，支持最小粒度3600秒；
-当时间范围不超过30天，支持最小粒度86400秒。
+        :param Granularity: 監控粒度，目前支援60，300，3600，86400，單位：秒。
+當時間範圍不超過1天，支援最小粒度60秒；
+當時間範圍不超過7天，支援最小粒度3600秒；
+當時間範圍不超過30天，支援最小粒度86400秒。
         :type Granularity: int
         """
         self.GroupId = None
@@ -2812,15 +2812,15 @@ class DescribeProxyGroupStatisticsRequest(AbstractModel):
 
 
 class DescribeProxyGroupStatisticsResponse(AbstractModel):
-    """DescribeProxyGroupStatistics返回参数结构体
+    """DescribeProxyGroupStatistics返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StatisticsData: 通道组统计数据
+        :param StatisticsData: 通道組統計數據
         :type StatisticsData: list of MetricStatisticsInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.StatisticsData = None
@@ -2838,7 +2838,7 @@ class DescribeProxyGroupStatisticsResponse(AbstractModel):
 
 
 class DescribeProxyStatisticsRequest(AbstractModel):
-    """DescribeProxyStatistics请求参数结构体
+    """DescribeProxyStatistics請求參數結構體
 
     """
 
@@ -2846,16 +2846,16 @@ class DescribeProxyStatisticsRequest(AbstractModel):
         """
         :param ProxyId: 通道ID
         :type ProxyId: str
-        :param StartTime: 起始时间(2019-03-25 12:00:00)
+        :param StartTime: 起始時間(2019-03-25 12:00:00)
         :type StartTime: str
-        :param EndTime: 结束时间(2019-03-25 12:00:00)
+        :param EndTime: 結束時間(2019-03-25 12:00:00)
         :type EndTime: str
-        :param MetricNames: 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency
+        :param MetricNames: 統計指标名稱清單，支援: 入頻寬:InBandwidth, 出頻寬:OutBandwidth, 并發:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延遲:Latency
         :type MetricNames: list of str
-        :param Granularity: 监控粒度，目前支持60，300，3600，86400，单位：秒。
-当时间范围不超过3天，支持最小粒度60秒；
-当时间范围不超过7天，支持最小粒度300秒；
-当时间范围不超过30天，支持最小粒度3600秒。
+        :param Granularity: 監控粒度，目前支援60，300，3600，86400，單位：秒。
+當時間範圍不超過3天，支援最小粒度60秒；
+當時間範圍不超過7天，支援最小粒度300秒；
+當時間範圍不超過30天，支援最小粒度3600秒。
         :type Granularity: int
         """
         self.ProxyId = None
@@ -2874,15 +2874,15 @@ class DescribeProxyStatisticsRequest(AbstractModel):
 
 
 class DescribeProxyStatisticsResponse(AbstractModel):
-    """DescribeProxyStatistics返回参数结构体
+    """DescribeProxyStatistics返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StatisticsData: 通道统计数据
+        :param StatisticsData: 通道統計數據
         :type StatisticsData: list of MetricStatisticsInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.StatisticsData = None
@@ -2900,7 +2900,7 @@ class DescribeProxyStatisticsResponse(AbstractModel):
 
 
 class DescribeRealServerStatisticsRequest(AbstractModel):
-    """DescribeRealServerStatistics请求参数结构体
+    """DescribeRealServerStatistics請求參數結構體
 
     """
 
@@ -2908,11 +2908,11 @@ class DescribeRealServerStatisticsRequest(AbstractModel):
         """
         :param RealServerId: 源站ID
         :type RealServerId: str
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
-        :param WithinTime: 统计时长，单位：小时。仅支持最近1,3,6,12,24小时的统计查询
+        :param WithinTime: 統計時長，單位：小時。僅支援最近1,3,6,12,24小時的統計查詢
         :type WithinTime: int
-        :param RuleId: 规则ID
+        :param RuleId: 規則ID
         :type RuleId: str
         """
         self.RealServerId = None
@@ -2929,15 +2929,15 @@ class DescribeRealServerStatisticsRequest(AbstractModel):
 
 
 class DescribeRealServerStatisticsResponse(AbstractModel):
-    """DescribeRealServerStatistics返回参数结构体
+    """DescribeRealServerStatistics返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StatisticsData: 源站状态统计数据
+        :param StatisticsData: 源站狀态統計數據
         :type StatisticsData: list of StatisticsDataInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.StatisticsData = None
@@ -2955,24 +2955,24 @@ class DescribeRealServerStatisticsResponse(AbstractModel):
 
 
 class DescribeRealServersRequest(AbstractModel):
-    """DescribeRealServers请求参数结构体
+    """DescribeRealServers請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 查询源站的所属项目ID，-1表示所有项目
+        :param ProjectId: 查詢源站的所屬項目ID，-1表示所有項目
         :type ProjectId: int
-        :param SearchValue: 需要查询的源站IP或域名，支持模糊匹配
+        :param SearchValue: 需要查詢的源站IP或域名，支援模糊比對
         :type SearchValue: str
-        :param Offset: 偏移量，默认值是0
+        :param Offset: 偏移量，預設值是0
         :type Offset: int
-        :param Limit: 返回数量，默认为20个，最大值为50个
+        :param Limit: 返回數量，預設爲20個，最大值爲50個
         :type Limit: int
-        :param TagSet: 标签列表，当存在该字段时，拉取对应标签下的资源列表。
-最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，源站会被拉取出来。
+        :param TagSet: 标簽清單，當存在該欄位時，拉取對應标簽下的資源清單。
+最多支援5個标簽，當存在兩個或兩個以上的标簽時，滿足其中任意一個标簽時，源站會被拉取出來。
         :type TagSet: list of TagPair
-        :param Filters: 过滤条件。filter的name取值(RealServerName,RealServerIP)
+        :param Filters: 過濾條件。filter的name取值(RealServerName,RealServerIP)
         :type Filters: list of Filter
         """
         self.ProjectId = None
@@ -3003,17 +3003,17 @@ class DescribeRealServersRequest(AbstractModel):
 
 
 class DescribeRealServersResponse(AbstractModel):
-    """DescribeRealServers返回参数结构体
+    """DescribeRealServers返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RealServerSet: 源站信息列表
+        :param RealServerSet: 源站訊息清單
         :type RealServerSet: list of BindRealServerInfo
-        :param TotalCount: 查询得到的源站数量
+        :param TotalCount: 查詢得到的源站數量
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RealServerSet = None
@@ -3033,13 +3033,13 @@ class DescribeRealServersResponse(AbstractModel):
 
 
 class DescribeRealServersStatusRequest(AbstractModel):
-    """DescribeRealServersStatus请求参数结构体
+    """DescribeRealServersStatus請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RealServerIds: 源站ID列表
+        :param RealServerIds: 源站ID清單
         :type RealServerIds: list of str
         """
         self.RealServerIds = None
@@ -3050,17 +3050,17 @@ class DescribeRealServersStatusRequest(AbstractModel):
 
 
 class DescribeRealServersStatusResponse(AbstractModel):
-    """DescribeRealServersStatus返回参数结构体
+    """DescribeRealServersStatus返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 返回源站查询结果的个数
+        :param TotalCount: 返回源站查詢結果的個數
         :type TotalCount: int
-        :param RealServerStatusSet: 源站被绑定状态列表
+        :param RealServerStatusSet: 源站被綁定狀态清單
         :type RealServerStatusSet: list of RealServerStatus
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -3080,29 +3080,29 @@ class DescribeRealServersStatusResponse(AbstractModel):
 
 
 class DescribeRegionAndPriceRequest(AbstractModel):
-    """DescribeRegionAndPrice请求参数结构体
+    """DescribeRegionAndPrice請求參數結構體
 
     """
 
 
 class DescribeRegionAndPriceResponse(AbstractModel):
-    """DescribeRegionAndPrice返回参数结构体
+    """DescribeRegionAndPrice返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 源站区域总数
+        :param TotalCount: 源站區域總數
         :type TotalCount: int
-        :param DestRegionSet: 源站区域详情列表
+        :param DestRegionSet: 源站區域詳情清單
         :type DestRegionSet: list of RegionDetail
-        :param BandwidthUnitPrice: 通道带宽费用梯度价格
+        :param BandwidthUnitPrice: 通道頻寬費用梯度價格
         :type BandwidthUnitPrice: list of BandwidthPriceGradient
-        :param Currency: 带宽价格货币类型：
+        :param Currency: 頻寬價格貨币類型：
 CNY 人民币
 USD 美元
         :type Currency: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -3131,21 +3131,21 @@ USD 美元
 
 
 class DescribeResourcesByTagRequest(AbstractModel):
-    """DescribeResourcesByTag请求参数结构体
+    """DescribeResourcesByTag請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标签键。
+        :param TagKey: 标簽鍵。
         :type TagKey: str
-        :param TagValue: 标签值。
+        :param TagValue: 标簽值。
         :type TagValue: str
-        :param ResourceType: 资源类型，其中：
+        :param ResourceType: 資源類型，其中：
 Proxy表示通道；
-ProxyGroup表示通道组；
+ProxyGroup表示通道組；
 RealServer表示源站。
-不指定该字段则查询该标签下所有资源。
+不指定該欄位則查詢該标簽下所有資源。
         :type ResourceType: str
         """
         self.TagKey = None
@@ -3160,17 +3160,17 @@ RealServer表示源站。
 
 
 class DescribeResourcesByTagResponse(AbstractModel):
-    """DescribeResourcesByTag返回参数结构体
+    """DescribeResourcesByTag返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 资源总数
+        :param TotalCount: 資源總數
         :type TotalCount: int
-        :param ResourceSet: 标签对应的资源列表
+        :param ResourceSet: 标簽對應的資源清單
         :type ResourceSet: list of TagResourceInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -3190,13 +3190,13 @@ class DescribeResourcesByTagResponse(AbstractModel):
 
 
 class DescribeRuleRealServersRequest(AbstractModel):
-    """DescribeRuleRealServers请求参数结构体
+    """DescribeRuleRealServers請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RuleId: 转发规则ID
+        :param RuleId: 轉發規則ID
         :type RuleId: str
         """
         self.RuleId = None
@@ -3207,21 +3207,21 @@ class DescribeRuleRealServersRequest(AbstractModel):
 
 
 class DescribeRuleRealServersResponse(AbstractModel):
-    """DescribeRuleRealServers返回参数结构体
+    """DescribeRuleRealServers返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 可绑定的源站个数
+        :param TotalCount: 可綁定的源站個數
         :type TotalCount: int
-        :param RealServerSet: 可绑定的源站信息列表
+        :param RealServerSet: 可綁定的源站訊息清單
         :type RealServerSet: list of RealServer
-        :param BindRealServerTotalCount: 已绑定的源站个数
+        :param BindRealServerTotalCount: 已綁定的源站個數
         :type BindRealServerTotalCount: int
-        :param BindRealServerSet: 已绑定的源站信息列表
+        :param BindRealServerSet: 已綁定的源站訊息清單
         :type BindRealServerSet: list of BindRealServer
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -3250,13 +3250,13 @@ class DescribeRuleRealServersResponse(AbstractModel):
 
 
 class DescribeRulesByRuleIdsRequest(AbstractModel):
-    """DescribeRulesByRuleIds请求参数结构体
+    """DescribeRulesByRuleIds請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RuleIds: 规则ID列表。最多支持10个规则。
+        :param RuleIds: 規則ID清單。最多支援10個規則。
         :type RuleIds: list of str
         """
         self.RuleIds = None
@@ -3267,17 +3267,17 @@ class DescribeRulesByRuleIdsRequest(AbstractModel):
 
 
 class DescribeRulesByRuleIdsResponse(AbstractModel):
-    """DescribeRulesByRuleIds返回参数结构体
+    """DescribeRulesByRuleIds返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 返回的规则总个数。
+        :param TotalCount: 返回的規則總個數。
         :type TotalCount: int
-        :param RuleSet: 返回的规则列表。
+        :param RuleSet: 返回的規則清單。
         :type RuleSet: list of RuleInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -3297,13 +3297,13 @@ class DescribeRulesByRuleIdsResponse(AbstractModel):
 
 
 class DescribeRulesRequest(AbstractModel):
-    """DescribeRules请求参数结构体
+    """DescribeRules請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 7层监听器Id。
+        :param ListenerId: 7層監聽器Id。
         :type ListenerId: str
         """
         self.ListenerId = None
@@ -3314,17 +3314,17 @@ class DescribeRulesRequest(AbstractModel):
 
 
 class DescribeRulesResponse(AbstractModel):
-    """DescribeRules返回参数结构体
+    """DescribeRules返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DomainRuleSet: 按照域名分类的规则信息列表
+        :param DomainRuleSet: 按照域名分類的規則訊息清單
         :type DomainRuleSet: list of DomainRuleSet
-        :param TotalCount: 该监听器下的域名总数
+        :param TotalCount: 該監聽器下的域名總數
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DomainRuleSet = None
@@ -3344,7 +3344,7 @@ class DescribeRulesResponse(AbstractModel):
 
 
 class DescribeSecurityPolicyDetailRequest(AbstractModel):
-    """DescribeSecurityPolicyDetail请求参数结构体
+    """DescribeSecurityPolicyDetail請求參數結構體
 
     """
 
@@ -3361,7 +3361,7 @@ class DescribeSecurityPolicyDetailRequest(AbstractModel):
 
 
 class DescribeSecurityPolicyDetailResponse(AbstractModel):
-    """DescribeSecurityPolicyDetail返回参数结构体
+    """DescribeSecurityPolicyDetail返回參數結構體
 
     """
 
@@ -3369,19 +3369,19 @@ class DescribeSecurityPolicyDetailResponse(AbstractModel):
         """
         :param ProxyId: 通道ID
         :type ProxyId: str
-        :param Status: 安全策略状态：
-BOUND，已开启安全策略
-UNBIND，已关闭安全策略
-BINDING，安全策略开启中
-UNBINDING，安全策略关闭中。
+        :param Status: 安全策略狀态：
+BOUND，已開啓安全策略
+UNBIND，已關閉安全策略
+BINDING，安全策略開啓中
+UNBINDING，安全策略關閉中。
         :type Status: str
-        :param DefaultAction: 默认策略：ACCEPT或DROP。
+        :param DefaultAction: 預設策略：ACCEPT或DROP。
         :type DefaultAction: str
         :param PolicyId: 策略ID
         :type PolicyId: str
-        :param RuleList: 规则列表
+        :param RuleList: 規則清單
         :type RuleList: list of SecurityPolicyRuleOut
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ProxyId = None
@@ -3407,13 +3407,13 @@ UNBINDING，安全策略关闭中。
 
 
 class DescribeSecurityRulesRequest(AbstractModel):
-    """DescribeSecurityRules请求参数结构体
+    """DescribeSecurityRules請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecurityRuleIds: 安全规则ID列表。总数不能超过20个。
+        :param SecurityRuleIds: 安全規則ID清單。總數不能超過20個。
         :type SecurityRuleIds: list of str
         """
         self.SecurityRuleIds = None
@@ -3424,17 +3424,17 @@ class DescribeSecurityRulesRequest(AbstractModel):
 
 
 class DescribeSecurityRulesResponse(AbstractModel):
-    """DescribeSecurityRules返回参数结构体
+    """DescribeSecurityRules返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 返回的安全规则详情总数。
+        :param TotalCount: 返回的安全規則詳情總數。
         :type TotalCount: int
-        :param SecurityRuleSet: 返回的安全规则详情列表。
+        :param SecurityRuleSet: 返回的安全規則詳情清單。
         :type SecurityRuleSet: list of SecurityPolicyRuleOut
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -3454,29 +3454,29 @@ class DescribeSecurityRulesResponse(AbstractModel):
 
 
 class DescribeTCPListenersRequest(AbstractModel):
-    """DescribeTCPListeners请求参数结构体
+    """DescribeTCPListeners請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProxyId: 过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
+        :param ProxyId: 過濾條件，根據通道ID進行拉取，ProxyId/GroupId/ListenerId必須設置一個，但ProxyId和GroupId不能同時設置。
         :type ProxyId: str
-        :param ListenerId: 过滤条件，根据监听器ID精确查询。
-当设置了ProxyId时，会检查该监听器是否归属于该通道。
-当设置了GroupId时，会检查该监听器是否归属于该通道组。
+        :param ListenerId: 過濾條件，根據監聽器ID精确查詢。
+當設置了ProxyId時，會檢查該監聽器是否歸屬于該通道。
+當設置了GroupId時，會檢查該監聽器是否歸屬于該通道組。
         :type ListenerId: str
-        :param ListenerName: 过滤条件，根据监听器名称精确查询
+        :param ListenerName: 過濾條件，根據監聽器名稱精确查詢
         :type ListenerName: str
-        :param Port: 过滤条件，根据监听器端口精确查询
+        :param Port: 過濾條件，根據監聽器端口精确查詢
         :type Port: int
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 限制数量，默认为20
+        :param Limit: 限制數量，預設爲20
         :type Limit: int
-        :param GroupId: 过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
+        :param GroupId: 過濾條件，根據通道組ID進行拉取，ProxyId/GroupId/ListenerId必須設置一個，但ProxyId和GroupId不能同時設置。
         :type GroupId: str
-        :param SearchValue: 过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
+        :param SearchValue: 過濾條件，支援按照端口或監聽器名稱進行模糊查詢，該參數不能與ListenerName和Port同時使用
         :type SearchValue: str
         """
         self.ProxyId = None
@@ -3501,17 +3501,17 @@ class DescribeTCPListenersRequest(AbstractModel):
 
 
 class DescribeTCPListenersResponse(AbstractModel):
-    """DescribeTCPListeners返回参数结构体
+    """DescribeTCPListeners返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 满足条件的监听器总个数
+        :param TotalCount: 滿足條件的監聽器總個數
         :type TotalCount: int
-        :param ListenerSet: TCP监听器列表
+        :param ListenerSet: TCP監聽器清單
         :type ListenerSet: list of TCPListener
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -3531,29 +3531,29 @@ class DescribeTCPListenersResponse(AbstractModel):
 
 
 class DescribeUDPListenersRequest(AbstractModel):
-    """DescribeUDPListeners请求参数结构体
+    """DescribeUDPListeners請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProxyId: 过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
+        :param ProxyId: 過濾條件，根據通道ID進行拉取，ProxyId/GroupId/ListenerId必須設置一個，但ProxyId和GroupId不能同時設置。
         :type ProxyId: str
-        :param ListenerId: 过滤条件，根据监听器ID精确查询。
-当设置了ProxyId时，会检查该监听器是否归属于该通道。
-当设置了GroupId时，会检查该监听器是否归属于该通道组。
+        :param ListenerId: 過濾條件，根據監聽器ID精确查詢。
+當設置了ProxyId時，會檢查該監聽器是否歸屬于該通道。
+當設置了GroupId時，會檢查該監聽器是否歸屬于該通道組。
         :type ListenerId: str
-        :param ListenerName: 过滤条件，根据监听器名称精确查询
+        :param ListenerName: 過濾條件，根據監聽器名稱精确查詢
         :type ListenerName: str
-        :param Port: 过滤条件，根据监听器端口精确查询
+        :param Port: 過濾條件，根據監聽器端口精确查詢
         :type Port: int
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 限制数量，默认为20
+        :param Limit: 限制數量，預設爲20
         :type Limit: int
-        :param GroupId: 过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
+        :param GroupId: 過濾條件，根據通道組ID進行拉取，ProxyId/GroupId/ListenerId必須設置一個，但ProxyId和GroupId不能同時設置。
         :type GroupId: str
-        :param SearchValue: 过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
+        :param SearchValue: 過濾條件，支援按照端口或監聽器名稱進行模糊查詢，該參數不能與ListenerName和Port同時使用
         :type SearchValue: str
         """
         self.ProxyId = None
@@ -3578,17 +3578,17 @@ class DescribeUDPListenersRequest(AbstractModel):
 
 
 class DescribeUDPListenersResponse(AbstractModel):
-    """DescribeUDPListeners返回参数结构体
+    """DescribeUDPListeners返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 监听器个数
+        :param TotalCount: 監聽器個數
         :type TotalCount: int
-        :param ListenerSet: UDP监听器列表
+        :param ListenerSet: UDP監聽器清單
         :type ListenerSet: list of UDPListener
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -3608,23 +3608,23 @@ class DescribeUDPListenersResponse(AbstractModel):
 
 
 class DestroyProxiesRequest(AbstractModel):
-    """DestroyProxies请求参数结构体
+    """DestroyProxies請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Force: 强制删除标识。
-1，强制删除该通道列表，无论是否已经绑定了源站；
-0，如果已绑定了源站，则无法删除。
-删除多通道时，如果该标识为0，只有所有的通道都没有绑定源站，才允许删除。
+        :param Force: 強制删除标識。
+1，強制删除該通道清單，無論是否已經綁定了源站；
+0，如果已綁定了源站，則無法删除。
+删除多通道時，如果該标識爲0，只有所有的通道都沒有綁定源站，才允許删除。
         :type Force: int
-        :param InstanceIds: （旧参数，请切换到ProxyIds）通道实例ID列表。
+        :param InstanceIds: （舊參數，請切換到ProxyIds）通道實例ID清單。
         :type InstanceIds: list of str
-        :param ClientToken: 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
+        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
-        :param ProxyIds: （新参数）通道实例ID列表。
+        :param ProxyIds: （新參數）通道實例ID清單。
         :type ProxyIds: list of str
         """
         self.Force = None
@@ -3641,17 +3641,17 @@ class DestroyProxiesRequest(AbstractModel):
 
 
 class DestroyProxiesResponse(AbstractModel):
-    """DestroyProxies返回参数结构体
+    """DestroyProxies返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InvalidStatusInstanceSet: 处于不可销毁状态下的通道实例ID列表。
+        :param InvalidStatusInstanceSet: 處于不可銷毀狀态下的通道實例ID清單。
         :type InvalidStatusInstanceSet: list of str
-        :param OperationFailedInstanceSet: 销毁操作失败的通道实例ID列表。
+        :param OperationFailedInstanceSet: 銷毀操作失敗的通道實例ID清單。
         :type OperationFailedInstanceSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InvalidStatusInstanceSet = None
@@ -3666,23 +3666,23 @@ class DestroyProxiesResponse(AbstractModel):
 
 
 class DomainAccessRegionDict(AbstractModel):
-    """域名解析就近访问配置详情
+    """域名解析就近訪問配置詳情
 
     """
 
     def __init__(self):
         """
-        :param NationCountryInnerList: 就近接入区域
+        :param NationCountryInnerList: 就近接入區域
         :type NationCountryInnerList: list of NationCountryInnerInfo
-        :param ProxyList: 加速区域通道列表
+        :param ProxyList: 加速區域通道清單
         :type ProxyList: list of ProxyIdDict
-        :param RegionId: 加速区域ID
+        :param RegionId: 加速區域ID
         :type RegionId: str
-        :param GeographicalZoneInnerCode: 加速区域内部编码
+        :param GeographicalZoneInnerCode: 加速區域内部編碼
         :type GeographicalZoneInnerCode: str
-        :param ContinentInnerCode: 加速区域所属大洲内部编码
+        :param ContinentInnerCode: 加速區域所屬大洲内部編碼
         :type ContinentInnerCode: str
-        :param RegionName: 加速区域别名
+        :param RegionName: 加速區域别名
         :type RegionName: str
         """
         self.NationCountryInnerList = None
@@ -3713,34 +3713,34 @@ class DomainAccessRegionDict(AbstractModel):
 
 
 class DomainErrorPageInfo(AbstractModel):
-    """域名的定制错误响应配置
+    """域名的定制錯誤響應配置
 
     """
 
     def __init__(self):
         """
-        :param ErrorPageId: 错误定制响应的配置ID
+        :param ErrorPageId: 錯誤定制響應的配置ID
         :type ErrorPageId: str
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
         :param Domain: 域名
         :type Domain: str
-        :param ErrorNos: 原始错误码
+        :param ErrorNos: 原始錯誤碼
         :type ErrorNos: list of int
-        :param NewErrorNo: 新的错误码
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NewErrorNo: 新的錯誤碼
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NewErrorNo: int
-        :param ClearHeaders: 需要清理的响应头
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClearHeaders: 需要清理的響應頭
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClearHeaders: list of str
-        :param SetHeaders: 需要设置的响应头
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SetHeaders: 需要設置的響應頭
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SetHeaders: list of HttpHeaderParam
-        :param Body: 设置的响应体(不包括 HTTP头)
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Body: 設置的響應體(不包括 HTTP頭)
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Body: str
-        :param Status: 规则状态,0为成功
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Status: 規則狀态,0爲成功
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: int
         """
         self.ErrorPageId = None
@@ -3772,69 +3772,69 @@ class DomainErrorPageInfo(AbstractModel):
 
 
 class DomainRuleSet(AbstractModel):
-    """按照域名分类的7层监听器转发规则信息
+    """按照域名分類的7層監聽器轉發規則訊息
 
     """
 
     def __init__(self):
         """
-        :param Domain: 转发规则域名。
+        :param Domain: 轉發規則域名。
         :type Domain: str
-        :param RuleSet: 该域名对应的转发规则列表。
+        :param RuleSet: 該域名對應的轉發規則清單。
         :type RuleSet: list of RuleInfo
-        :param CertificateId: 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CertificateId: 該域名對應的服務器證書ID，值爲default時，表示使用預設證書（監聽器配置的證書）。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CertificateId: str
-        :param CertificateAlias: 该域名对应服务器证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CertificateAlias: 該域名對應服務器證書名稱。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CertificateAlias: str
-        :param ClientCertificateId: 该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClientCertificateId: 該域名對應的用戶端證書ID，值爲default時，表示使用預設證書（監聽器配置的證書）。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClientCertificateId: str
-        :param ClientCertificateAlias: 该域名对应客户端证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClientCertificateAlias: 該域名對應用戶端證書名稱。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClientCertificateAlias: str
-        :param BasicAuthConfId: 该域名对应基础认证配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BasicAuthConfId: 該域名對應基礎認證配置ID。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BasicAuthConfId: str
-        :param BasicAuth: 基础认证开关，其中：
-0，表示未开启；
-1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BasicAuth: 基礎認證開關，其中：
+0，表示未開啓；
+1，表示已開啓。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BasicAuth: int
-        :param BasicAuthConfAlias: 该域名对应基础认证配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BasicAuthConfAlias: 該域名對應基礎認證配置名稱。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BasicAuthConfAlias: str
-        :param RealServerCertificateId: 该域名对应源站认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RealServerCertificateId: 該域名對應源站認證證書ID。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RealServerCertificateId: str
-        :param RealServerAuth: 源站认证开关，其中：
-0，表示未开启；
-1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RealServerAuth: 源站認證開關，其中：
+0，表示未開啓；
+1，表示已開啓。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RealServerAuth: int
-        :param RealServerCertificateAlias: 该域名对应源站认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RealServerCertificateAlias: 該域名對應源站認證證書名稱。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RealServerCertificateAlias: str
-        :param GaapCertificateId: 该域名对应通道认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GaapCertificateId: 該域名對應通道認證證書ID。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GaapCertificateId: str
-        :param GaapAuth: 通道认证开关，其中：
-0，表示未开启；
-1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GaapAuth: 通道認證開關，其中：
+0，表示未開啓；
+1，表示已開啓。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GaapAuth: int
-        :param GaapCertificateAlias: 该域名对应通道认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GaapCertificateAlias: 該域名對應通道認證證書名稱。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GaapCertificateAlias: str
-        :param RealServerCertificateDomain: 源站认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RealServerCertificateDomain: 源站認證域名。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RealServerCertificateDomain: str
-        :param PolyClientCertificateAliasInfo: 多客户端证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PolyClientCertificateAliasInfo: 多用戶端證書時，返回多個證書的id和别名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PolyClientCertificateAliasInfo: list of CertificateAliasInfo
-        :param PolyRealServerCertificateAliasInfo: 多源站证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PolyRealServerCertificateAliasInfo: 多源站證書時，返回多個證書的id和别名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PolyRealServerCertificateAliasInfo: list of CertificateAliasInfo
         """
         self.Domain = None
@@ -3894,15 +3894,15 @@ class DomainRuleSet(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """过滤条件
+    """過濾條件
 
     """
 
     def __init__(self):
         """
-        :param Name: 过滤条件
+        :param Name: 過濾條件
         :type Name: str
-        :param Values: 过滤值
+        :param Values: 過濾值
         :type Values: list of str
         """
         self.Name = None
@@ -3915,17 +3915,17 @@ class Filter(AbstractModel):
 
 
 class GroupStatisticsInfo(AbstractModel):
-    """可以显示统计数据的通道组和对应通道信息
+    """可以顯示統計數據的通道組和對應通道訊息
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 通道组ID
+        :param GroupId: 通道組ID
         :type GroupId: str
-        :param GroupName: 通道组名称
+        :param GroupName: 通道組名稱
         :type GroupName: str
-        :param ProxySet: 通道组下通道列表
+        :param ProxySet: 通道組下通道清單
         :type ProxySet: list of ProxySimpleInfo
         """
         self.GroupId = None
@@ -3945,28 +3945,28 @@ class GroupStatisticsInfo(AbstractModel):
 
 
 class HTTPListener(AbstractModel):
-    """HTTP类型监听器信息
+    """HTTP類型監聽器訊息
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
-        :param ListenerName: 监听器名称
+        :param ListenerName: 監聽器名稱
         :type ListenerName: str
-        :param Port: 监听器端口
+        :param Port: 監聽器端口
         :type Port: int
-        :param CreateTime: 监听器创建时间，Unix时间戳
+        :param CreateTime: 監聽器創建時間，Unix時間戳
         :type CreateTime: int
-        :param Protocol: 监听器协议
+        :param Protocol: 監聽器協議
         :type Protocol: str
-        :param ListenerStatus: 监听器状态，其中：
-0表示运行中；
-1表示创建中；
-2表示销毁中；
-3表示源站调整中；
-4表示配置变更中。
+        :param ListenerStatus: 監聽器狀态，其中：
+0表示運作中；
+1表示創建中；
+2表示銷毀中；
+3表示源站調整中；
+4表示配置變更中。
         :type ListenerStatus: int
         """
         self.ListenerId = None
@@ -3987,49 +3987,49 @@ class HTTPListener(AbstractModel):
 
 
 class HTTPSListener(AbstractModel):
-    """HTTPS类型监听器信息
+    """HTTPS類型監聽器訊息
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
-        :param ListenerName: 监听器名称
+        :param ListenerName: 監聽器名稱
         :type ListenerName: str
-        :param Port: 监听器端口
+        :param Port: 監聽器端口
         :type Port: int
-        :param Protocol: 监听器协议， 值为：HTTP
+        :param Protocol: 監聽器協議， 值爲：HTTP
         :type Protocol: str
-        :param ListenerStatus: 监听器状态，其中：
-0表示运行中；
-1表示创建中；
-2表示销毁中；
-3表示源站调整中；
-4表示配置变更中。
+        :param ListenerStatus: 監聽器狀态，其中：
+0表示運作中；
+1表示創建中；
+2表示銷毀中；
+3表示源站調整中；
+4表示配置變更中。
         :type ListenerStatus: int
-        :param CertificateId: 监听器服务器SSL证书ID
+        :param CertificateId: 監聽器服務器SSL證書ID
         :type CertificateId: str
-        :param ForwardProtocol: 监听器后端转发源站协议
+        :param ForwardProtocol: 監聽器後端轉發源站協議
         :type ForwardProtocol: str
-        :param CreateTime: 监听器创建时间，Unix时间戳
+        :param CreateTime: 監聽器創建時間，Unix時間戳
         :type CreateTime: int
-        :param CertificateAlias: 服务器SSL证书的别名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CertificateAlias: 服務器SSL證書的别名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CertificateAlias: str
-        :param ClientCertificateId: 监听器客户端CA证书ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClientCertificateId: 監聽器用戶端CA證書ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClientCertificateId: str
-        :param AuthType: 监听器认证方式。其中，
-0，单向认证；
-1，双向认证。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AuthType: 監聽器認證方式。其中，
+0，單向認證；
+1，雙向認證。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AuthType: int
-        :param ClientCertificateAlias: 客户端CA证书别名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClientCertificateAlias: 用戶端CA證書别名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClientCertificateAlias: str
-        :param PolyClientCertificateAliasInfo: 多客户端CA证书别名信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PolyClientCertificateAliasInfo: 多用戶端CA證書别名訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PolyClientCertificateAliasInfo: list of CertificateAliasInfo
         """
         self.ListenerId = None
@@ -4069,15 +4069,15 @@ class HTTPSListener(AbstractModel):
 
 
 class HttpHeaderParam(AbstractModel):
-    """描述HTTP的包头参数
+    """描述HTTP的標頭參數
 
     """
 
     def __init__(self):
         """
-        :param HeaderName: HTTP头名
+        :param HeaderName: HTTP頭名
         :type HeaderName: str
-        :param HeaderValue: HTTP头值
+        :param HeaderValue: HTTP頭值
         :type HeaderValue: str
         """
         self.HeaderName = None
@@ -4090,25 +4090,25 @@ class HttpHeaderParam(AbstractModel):
 
 
 class InquiryPriceCreateProxyRequest(AbstractModel):
-    """InquiryPriceCreateProxy请求参数结构体
+    """InquiryPriceCreateProxy請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccessRegion: 加速区域名称。
+        :param AccessRegion: 加速區域名稱。
         :type AccessRegion: str
-        :param Bandwidth: 通道带宽上限，单位：Mbps。
+        :param Bandwidth: 通道頻寬上限，單位：Mbps。
         :type Bandwidth: int
-        :param DestRegion: （旧参数，请切换到RealServerRegion）源站区域名称。
+        :param DestRegion: （舊參數，請切換到RealServerRegion）源站區域名稱。
         :type DestRegion: str
-        :param Concurrency: （旧参数，请切换到Concurrent）通道并发量上限，表示同时在线的连接数，单位：万。
+        :param Concurrency: （舊參數，請切換到Concurrent）通道并發量上限，表示同時在線的連接數，單位：萬。
         :type Concurrency: int
-        :param RealServerRegion: （新参数）源站区域名称。
+        :param RealServerRegion: （新參數）源站區域名稱。
         :type RealServerRegion: str
-        :param Concurrent: （新参数）通道并发量上限，表示同时在线的连接数，单位：万。
+        :param Concurrent: （新參數）通道并發量上限，表示同時在線的連接數，單位：萬。
         :type Concurrent: int
-        :param BillingType: 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+        :param BillingType: 計費方式 (0:按頻寬計費，1:按流量計費 預設按頻寬計費）
         :type BillingType: int
         """
         self.AccessRegion = None
@@ -4131,28 +4131,28 @@ class InquiryPriceCreateProxyRequest(AbstractModel):
 
 
 class InquiryPriceCreateProxyResponse(AbstractModel):
-    """InquiryPriceCreateProxy返回参数结构体
+    """InquiryPriceCreateProxy返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProxyDailyPrice: 通道基础费用价格，单位：元/天。
+        :param ProxyDailyPrice: 通道基礎費用價格，單位：元/天。
         :type ProxyDailyPrice: float
-        :param BandwidthUnitPrice: 通道带宽费用梯度价格。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BandwidthUnitPrice: 通道頻寬費用梯度價格。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BandwidthUnitPrice: list of BandwidthPriceGradient
-        :param DiscountProxyDailyPrice: 通道基础费用折扣价格，单位：元/天。
+        :param DiscountProxyDailyPrice: 通道基礎費用折扣價格，單位：元/天。
         :type DiscountProxyDailyPrice: float
-        :param Currency: 价格使用的货币，支持人民币，美元等。
+        :param Currency: 價格使用的貨币，支援人民币，美元等。
         :type Currency: str
-        :param FlowUnitPrice: 通道的流量费用价格，单位: 元/GB
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FlowUnitPrice: 通道的流量費用價格，單位: 元/GB
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FlowUnitPrice: float
-        :param DiscountFlowUnitPrice: 通道的流量费用折扣价格，单位:元/GB
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DiscountFlowUnitPrice: 通道的流量費用折扣價格，單位:元/GB
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DiscountFlowUnitPrice: float
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ProxyDailyPrice = None
@@ -4180,19 +4180,19 @@ class InquiryPriceCreateProxyResponse(AbstractModel):
 
 
 class ListenerInfo(AbstractModel):
-    """内部接口使用，返回可以查询统计数据的监听器信息
+    """内部介面使用，返回可以查詢統計數據的監聽器訊息
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
-        :param ListenerName: 监听器名称
+        :param ListenerName: 監聽器名稱
         :type ListenerName: str
-        :param Port: 监听器监听端口
+        :param Port: 監聽器監聽端口
         :type Port: int
-        :param Protocol: 监听器协议类型
+        :param Protocol: 監聽器協議類型
         :type Protocol: str
         """
         self.ListenerId = None
@@ -4209,15 +4209,15 @@ class ListenerInfo(AbstractModel):
 
 
 class MetricStatisticsInfo(AbstractModel):
-    """单指标的统计数据
+    """單指标的統計數據
 
     """
 
     def __init__(self):
         """
-        :param MetricName: 指标名称
+        :param MetricName: 指标名稱
         :type MetricName: str
-        :param MetricData: 指标统计数据
+        :param MetricData: 指标統計數據
         :type MetricData: list of StatisticsDataInfo
         """
         self.MetricName = None
@@ -4235,15 +4235,15 @@ class MetricStatisticsInfo(AbstractModel):
 
 
 class ModifyCertificateAttributesRequest(AbstractModel):
-    """ModifyCertificateAttributes请求参数结构体
+    """ModifyCertificateAttributes請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertificateId: 证书ID。
+        :param CertificateId: 證書ID。
         :type CertificateId: str
-        :param CertificateAlias: 证书名字。长度不超过50个字符。
+        :param CertificateAlias: 證書名字。長度不超過50個字元。
         :type CertificateAlias: str
         """
         self.CertificateId = None
@@ -4256,13 +4256,13 @@ class ModifyCertificateAttributesRequest(AbstractModel):
 
 
 class ModifyCertificateAttributesResponse(AbstractModel):
-    """ModifyCertificateAttributes返回参数结构体
+    """ModifyCertificateAttributes返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4273,25 +4273,25 @@ class ModifyCertificateAttributesResponse(AbstractModel):
 
 
 class ModifyCertificateRequest(AbstractModel):
-    """ModifyCertificate请求参数结构体
+    """ModifyCertificate請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器实例ID
+        :param ListenerId: 監聽器實例ID
         :type ListenerId: str
-        :param Domain: 需要修改证书的域名
+        :param Domain: 需要修改證書的域名
         :type Domain: str
-        :param CertificateId: 新的服务器证书ID。其中：
-当CertificateId=default时，表示使用监听器的证书。
+        :param CertificateId: 新的服務器證書ID。其中：
+當CertificateId=default時，表示使用監聽器的證書。
         :type CertificateId: str
-        :param ClientCertificateId: 新的客户端证书ID。其中：
-当ClientCertificateId=default时，表示使用监听器的证书。
-仅当采用双向认证方式时，需要设置该参数或者PolyClientCertificateIds。
+        :param ClientCertificateId: 新的用戶端證書ID。其中：
+當ClientCertificateId=default時，表示使用監聽器的證書。
+僅當采用雙向認證方式時，需要設置該參數或者PolyClientCertificateIds。
         :type ClientCertificateId: str
-        :param PolyClientCertificateIds: 新的多客户端证书ID列表。其中：
-仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
+        :param PolyClientCertificateIds: 新的多用戶端證書ID清單。其中：
+僅當采用雙向認證方式時，需要設置該參數或ClientCertificateId參數。
         :type PolyClientCertificateIds: list of str
         """
         self.ListenerId = None
@@ -4310,13 +4310,13 @@ class ModifyCertificateRequest(AbstractModel):
 
 
 class ModifyCertificateResponse(AbstractModel):
-    """ModifyCertificate返回参数结构体
+    """ModifyCertificate返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4327,32 +4327,32 @@ class ModifyCertificateResponse(AbstractModel):
 
 
 class ModifyDomainRequest(AbstractModel):
-    """ModifyDomain请求参数结构体
+    """ModifyDomain請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 7层监听器ID
+        :param ListenerId: 7層監聽器ID
         :type ListenerId: str
-        :param OldDomain: 修改前的域名信息
+        :param OldDomain: 修改前的域名訊息
         :type OldDomain: str
-        :param NewDomain: 修改后的域名信息
+        :param NewDomain: 修改後的域名訊息
         :type NewDomain: str
-        :param CertificateId: 服务器SSL证书ID，仅适用于version3.0的通道。其中：
-不带该字段时，表示使用原证书；
-携带该字段时并且CertificateId=default，表示使用监听器证书；
-其他情况，使用该CertificateId指定的证书。
+        :param CertificateId: 服務器SSL證書ID，僅适用于version3.0的通道。其中：
+不帶該欄位時，表示使用原證書；
+攜帶該欄位時并且CertificateId=default，表示使用監聽器證書；
+其他情況，使用該CertificateId指定的證書。
         :type CertificateId: str
-        :param ClientCertificateId: 客户端CA证书ID，仅适用于version3.0的通道。其中：
-不带该字段和PolyClientCertificateIds时，表示使用原证书；
-携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
-其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+        :param ClientCertificateId: 用戶端CA證書ID，僅适用于version3.0的通道。其中：
+不帶該欄位和PolyClientCertificateIds時，表示使用原證書；
+攜帶該欄位時并且ClientCertificateId=default，表示使用監聽器證書；
+其他情況，使用該ClientCertificateId或PolyClientCertificateIds指定的證書。
         :type ClientCertificateId: str
-        :param PolyClientCertificateIds: 客户端CA证书ID，仅适用于version3.0的通道。其中：
-不带该字段和ClientCertificateId时，表示使用原证书；
-携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
-其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+        :param PolyClientCertificateIds: 用戶端CA證書ID，僅适用于version3.0的通道。其中：
+不帶該欄位和ClientCertificateId時，表示使用原證書；
+攜帶該欄位時并且ClientCertificateId=default，表示使用監聽器證書；
+其他情況，使用該ClientCertificateId或PolyClientCertificateIds指定的證書。
         :type PolyClientCertificateIds: list of str
         """
         self.ListenerId = None
@@ -4373,13 +4373,13 @@ class ModifyDomainRequest(AbstractModel):
 
 
 class ModifyDomainResponse(AbstractModel):
-    """ModifyDomain返回参数结构体
+    """ModifyDomain返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4390,17 +4390,17 @@ class ModifyDomainResponse(AbstractModel):
 
 
 class ModifyGroupDomainConfigRequest(AbstractModel):
-    """ModifyGroupDomainConfig请求参数结构体
+    """ModifyGroupDomainConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 通道组ID。
+        :param GroupId: 通道組ID。
         :type GroupId: str
-        :param DefaultDnsIp: 域名解析默认访问IP或域名。
+        :param DefaultDnsIp: 域名解析預設訪問IP或域名。
         :type DefaultDnsIp: str
-        :param AccessRegionList: 就近接入区域配置。
+        :param AccessRegionList: 就近接入區域配置。
         :type AccessRegionList: list of AccessRegionDomainConf
         """
         self.GroupId = None
@@ -4420,13 +4420,13 @@ class ModifyGroupDomainConfigRequest(AbstractModel):
 
 
 class ModifyGroupDomainConfigResponse(AbstractModel):
-    """ModifyGroupDomainConfig返回参数结构体
+    """ModifyGroupDomainConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4437,15 +4437,15 @@ class ModifyGroupDomainConfigResponse(AbstractModel):
 
 
 class ModifyHTTPListenerAttributeRequest(AbstractModel):
-    """ModifyHTTPListenerAttribute请求参数结构体
+    """ModifyHTTPListenerAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 需要修改的监听器ID
+        :param ListenerId: 需要修改的監聽器ID
         :type ListenerId: str
-        :param ListenerName: 新的监听器名称
+        :param ListenerName: 新的監聽器名稱
         :type ListenerName: str
         :param ProxyId: 通道ID
         :type ProxyId: str
@@ -4462,13 +4462,13 @@ class ModifyHTTPListenerAttributeRequest(AbstractModel):
 
 
 class ModifyHTTPListenerAttributeResponse(AbstractModel):
-    """ModifyHTTPListenerAttribute返回参数结构体
+    """ModifyHTTPListenerAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4479,25 +4479,25 @@ class ModifyHTTPListenerAttributeResponse(AbstractModel):
 
 
 class ModifyHTTPSListenerAttributeRequest(AbstractModel):
-    """ModifyHTTPSListenerAttribute请求参数结构体
+    """ModifyHTTPSListenerAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
-        :param ProxyId: 通道ID， 若为单通道监听器，此项必须填写
+        :param ProxyId: 通道ID， 若爲單通道監聽器，此項必須填寫
         :type ProxyId: str
-        :param ListenerName: 修改后的监听器名称
+        :param ListenerName: 修改後的監聽器名稱
         :type ListenerName: str
-        :param ForwardProtocol: 监听器后端转发与源站之间的协议类型
+        :param ForwardProtocol: 監聽器後端轉發與源站之間的協議類型
         :type ForwardProtocol: str
-        :param CertificateId: 修改后的监听器服务器证书ID
+        :param CertificateId: 修改後的監聽器服務器證書ID
         :type CertificateId: str
-        :param ClientCertificateId: 修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
+        :param ClientCertificateId: 修改後的監聽器用戶端證書ID，不支援多用戶端證書，多用戶端證書新采用PolyClientCertificateIds欄位
         :type ClientCertificateId: str
-        :param PolyClientCertificateIds: 新字段,修改后的监听器客户端证书ID
+        :param PolyClientCertificateIds: 新欄位,修改後的監聽器用戶端證書ID
         :type PolyClientCertificateIds: list of str
         """
         self.ListenerId = None
@@ -4520,13 +4520,13 @@ class ModifyHTTPSListenerAttributeRequest(AbstractModel):
 
 
 class ModifyHTTPSListenerAttributeResponse(AbstractModel):
-    """ModifyHTTPSListenerAttribute返回参数结构体
+    """ModifyHTTPSListenerAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4537,20 +4537,20 @@ class ModifyHTTPSListenerAttributeResponse(AbstractModel):
 
 
 class ModifyProxiesAttributeRequest(AbstractModel):
-    """ModifyProxiesAttribute请求参数结构体
+    """ModifyProxiesAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: （旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。
+        :param InstanceIds: （舊參數，請切換到ProxyIds）一個或多個待操作的通道ID。
         :type InstanceIds: list of str
-        :param ProxyName: 通道名称。可任意命名，但不得超过30个字符。
+        :param ProxyName: 通道名稱。可任意命名，但不得超過30個字元。
         :type ProxyName: str
-        :param ClientToken: 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
+        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
-        :param ProxyIds: （新参数）一个或多个待操作的通道ID。
+        :param ProxyIds: （新參數）一個或多個待操作的通道ID。
         :type ProxyIds: list of str
         """
         self.InstanceIds = None
@@ -4567,13 +4567,13 @@ class ModifyProxiesAttributeRequest(AbstractModel):
 
 
 class ModifyProxiesAttributeResponse(AbstractModel):
-    """ModifyProxiesAttribute返回参数结构体
+    """ModifyProxiesAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4584,20 +4584,20 @@ class ModifyProxiesAttributeResponse(AbstractModel):
 
 
 class ModifyProxiesProjectRequest(AbstractModel):
-    """ModifyProxiesProject请求参数结构体
+    """ModifyProxiesProject請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 需要修改到的项目ID。
+        :param ProjectId: 需要修改到的項目ID。
         :type ProjectId: int
-        :param InstanceIds: （旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。
+        :param InstanceIds: （舊參數，請切換到ProxyIds）一個或多個待操作的通道ID。
         :type InstanceIds: list of str
-        :param ClientToken: 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
+        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
-        :param ProxyIds: （新参数）一个或多个待操作的通道ID。
+        :param ProxyIds: （新參數）一個或多個待操作的通道ID。
         :type ProxyIds: list of str
         """
         self.ProjectId = None
@@ -4614,13 +4614,13 @@ class ModifyProxiesProjectRequest(AbstractModel):
 
 
 class ModifyProxiesProjectResponse(AbstractModel):
-    """ModifyProxiesProject返回参数结构体
+    """ModifyProxiesProject返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4631,26 +4631,26 @@ class ModifyProxiesProjectResponse(AbstractModel):
 
 
 class ModifyProxyConfigurationRequest(AbstractModel):
-    """ModifyProxyConfiguration请求参数结构体
+    """ModifyProxyConfiguration請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: （旧参数，请切换到ProxyId）通道的实例ID。
+        :param InstanceId: （舊參數，請切換到ProxyId）通道的實例ID。
         :type InstanceId: str
-        :param Bandwidth: 需要调整到的目标带宽，单位：Mbps。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
+        :param Bandwidth: 需要調整到的目标頻寬，單位：Mbps。
+Bandwidth與Concurrent必須至少設置一個。取值範圍根據DescribeAccessRegionsByDestRegion介面獲取得到
         :type Bandwidth: int
-        :param Concurrent: 需要调整到的目标并发值，单位：万。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
+        :param Concurrent: 需要調整到的目标并發值，單位：萬。
+Bandwidth與Concurrent必須至少設置一個。取值範圍根據DescribeAccessRegionsByDestRegion介面獲取得到
         :type Concurrent: int
-        :param ClientToken: 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
+        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
-        :param ProxyId: （新参数）通道的实例ID。
+        :param ProxyId: （新參數）通道的實例ID。
         :type ProxyId: str
-        :param BillingType: 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+        :param BillingType: 計費方式 (0:按頻寬計費，1:按流量計費 預設按頻寬計費）
         :type BillingType: int
         """
         self.InstanceId = None
@@ -4671,13 +4671,13 @@ Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAcces
 
 
 class ModifyProxyConfigurationResponse(AbstractModel):
-    """ModifyProxyConfiguration返回参数结构体
+    """ModifyProxyConfiguration返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4688,15 +4688,15 @@ class ModifyProxyConfigurationResponse(AbstractModel):
 
 
 class ModifyProxyGroupAttributeRequest(AbstractModel):
-    """ModifyProxyGroupAttribute请求参数结构体
+    """ModifyProxyGroupAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 需要修改的通道组ID。
+        :param GroupId: 需要修改的通道組ID。
         :type GroupId: str
-        :param GroupName: 修改后的通道组名称：不超过30个字符，超过部分会被截断。
+        :param GroupName: 修改後的通道組名稱：不超過30個字元，超過部分會被截斷。
         :type GroupName: str
         """
         self.GroupId = None
@@ -4709,13 +4709,13 @@ class ModifyProxyGroupAttributeRequest(AbstractModel):
 
 
 class ModifyProxyGroupAttributeResponse(AbstractModel):
-    """ModifyProxyGroupAttribute返回参数结构体
+    """ModifyProxyGroupAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4726,13 +4726,13 @@ class ModifyProxyGroupAttributeResponse(AbstractModel):
 
 
 class ModifyRealServerNameRequest(AbstractModel):
-    """ModifyRealServerName请求参数结构体
+    """ModifyRealServerName請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RealServerName: 源站名称
+        :param RealServerName: 源站名稱
         :type RealServerName: str
         :param RealServerId: 源站ID
         :type RealServerId: str
@@ -4747,13 +4747,13 @@ class ModifyRealServerNameRequest(AbstractModel):
 
 
 class ModifyRealServerNameResponse(AbstractModel):
-    """ModifyRealServerName返回参数结构体
+    """ModifyRealServerName返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4764,34 +4764,34 @@ class ModifyRealServerNameResponse(AbstractModel):
 
 
 class ModifyRuleAttributeRequest(AbstractModel):
-    """ModifyRuleAttribute请求参数结构体
+    """ModifyRuleAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
-        :param RuleId: 转发规则ID
+        :param RuleId: 轉發規則ID
         :type RuleId: str
-        :param Scheduler: 调度策略，其中：
-rr，轮询；
-wrr，加权轮询；
-lc，最小连接数。
+        :param Scheduler: 調度策略，其中：
+rr，輪詢；
+wrr，加權輪詢；
+lc，最小連接數。
         :type Scheduler: str
-        :param HealthCheck: 源站健康检查开关，其中：
-1，开启；
-0，关闭。
+        :param HealthCheck: 源站健康檢查開關，其中：
+1，開啓；
+0，關閉。
         :type HealthCheck: int
-        :param CheckParams: 健康检查配置参数
+        :param CheckParams: 健康檢查配置參數
         :type CheckParams: :class:`tencentcloud.gaap.v20180529.models.RuleCheckParams`
-        :param Path: 转发规则路径
+        :param Path: 轉發規則路徑
         :type Path: str
-        :param ForwardProtocol: 加速通道转发到源站的协议类型，支持：default, HTTP和HTTPS。
-当ForwardProtocol=default时，表示使用对应监听器的ForwardProtocol。
+        :param ForwardProtocol: 加速通道轉發到源站的協議類型，支援：default, HTTP和HTTPS。
+當ForwardProtocol=default時，表示使用對應監聽器的ForwardProtocol。
         :type ForwardProtocol: str
-        :param ForwardHost: 加速通道转发到源站的请求中携带的host。
-当ForwardHost=default时，使用规则的域名，其他情况为该字段所设置的值。
+        :param ForwardHost: 加速通道轉發到源站的請求中攜帶的host。
+當ForwardHost=default時，使用規則的域名，其他情況爲該欄位所設置的值。
         :type ForwardHost: str
         """
         self.ListenerId = None
@@ -4818,13 +4818,13 @@ lc，最小连接数。
 
 
 class ModifyRuleAttributeResponse(AbstractModel):
-    """ModifyRuleAttribute返回参数结构体
+    """ModifyRuleAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4835,15 +4835,15 @@ class ModifyRuleAttributeResponse(AbstractModel):
 
 
 class ModifySecurityRuleRequest(AbstractModel):
-    """ModifySecurityRule请求参数结构体
+    """ModifySecurityRule請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RuleId: 规则ID
+        :param RuleId: 規則ID
         :type RuleId: str
-        :param AliasName: 规则名：不得超过30个字符，超过部分会被截断。
+        :param AliasName: 規則名：不得超過30個字元，超過部分會被截斷。
         :type AliasName: str
         :param PolicyId: 安全策略ID
         :type PolicyId: str
@@ -4860,13 +4860,13 @@ class ModifySecurityRuleRequest(AbstractModel):
 
 
 class ModifySecurityRuleResponse(AbstractModel):
-    """ModifySecurityRule返回参数结构体
+    """ModifySecurityRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4877,27 +4877,27 @@ class ModifySecurityRuleResponse(AbstractModel):
 
 
 class ModifyTCPListenerAttributeRequest(AbstractModel):
-    """ModifyTCPListenerAttribute请求参数结构体
+    """ModifyTCPListenerAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
-        :param GroupId: 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+        :param GroupId: 通道組ID，ProxyId和GroupId必須設置一個，但不能同時設置。
         :type GroupId: str
-        :param ProxyId: 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+        :param ProxyId: 通道ID，ProxyId和GroupId必須設置一個，但不能同時設置。
         :type ProxyId: str
-        :param ListenerName: 监听器名称
+        :param ListenerName: 監聽器名稱
         :type ListenerName: str
-        :param Scheduler: 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+        :param Scheduler: 監聽器源站調度策略，支援輪詢（rr），加權輪詢（wrr），最小連接數（lc）。
         :type Scheduler: str
-        :param DelayLoop: 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+        :param DelayLoop: 源站健康檢查時間間隔，單位：秒。時間間隔取值在[5，300]之間。
         :type DelayLoop: int
-        :param ConnectTimeout: 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+        :param ConnectTimeout: 源站健康檢查響應超時時間，單位：秒。超時時間取值在[2，60]之間。超時時間應小於健康檢查時間間隔DelayLoop。
         :type ConnectTimeout: int
-        :param HealthCheck: 是否开启健康检查，1开启，0关闭。
+        :param HealthCheck: 是否開啓健康檢查，1開啓，0關閉。
         :type HealthCheck: int
         """
         self.ListenerId = None
@@ -4922,13 +4922,13 @@ class ModifyTCPListenerAttributeRequest(AbstractModel):
 
 
 class ModifyTCPListenerAttributeResponse(AbstractModel):
-    """ModifyTCPListenerAttribute返回参数结构体
+    """ModifyTCPListenerAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4939,21 +4939,21 @@ class ModifyTCPListenerAttributeResponse(AbstractModel):
 
 
 class ModifyUDPListenerAttributeRequest(AbstractModel):
-    """ModifyUDPListenerAttribute请求参数结构体
+    """ModifyUDPListenerAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
-        :param GroupId: 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+        :param GroupId: 通道組ID，ProxyId和GroupId必須設置一個，但不能同時設置。
         :type GroupId: str
-        :param ProxyId: 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+        :param ProxyId: 通道ID，ProxyId和GroupId必須設置一個，但不能同時設置。
         :type ProxyId: str
-        :param ListenerName: 监听器名称
+        :param ListenerName: 監聽器名稱
         :type ListenerName: str
-        :param Scheduler: 监听器源站调度策略
+        :param Scheduler: 監聽器源站調度策略
         :type Scheduler: str
         """
         self.ListenerId = None
@@ -4972,13 +4972,13 @@ class ModifyUDPListenerAttributeRequest(AbstractModel):
 
 
 class ModifyUDPListenerAttributeResponse(AbstractModel):
-    """ModifyUDPListenerAttribute返回参数结构体
+    """ModifyUDPListenerAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4989,15 +4989,15 @@ class ModifyUDPListenerAttributeResponse(AbstractModel):
 
 
 class NationCountryInnerInfo(AbstractModel):
-    """就近接入的国家地区详情
+    """就近接入的國家地區詳情
 
     """
 
     def __init__(self):
         """
-        :param NationCountryName: 国家名
+        :param NationCountryName: 國家名
         :type NationCountryName: str
-        :param NationCountryInnerCode: 国家内部编码
+        :param NationCountryInnerCode: 國家内部編碼
         :type NationCountryInnerCode: str
         """
         self.NationCountryName = None
@@ -5010,7 +5010,7 @@ class NationCountryInnerInfo(AbstractModel):
 
 
 class NewRealServer(AbstractModel):
-    """新添加源站信息
+    """新添加源站訊息
 
     """
 
@@ -5031,18 +5031,18 @@ class NewRealServer(AbstractModel):
 
 
 class OpenProxiesRequest(AbstractModel):
-    """OpenProxies请求参数结构体
+    """OpenProxies請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: （旧参数，请切换到ProxyIds）通道的实例ID列表。
+        :param InstanceIds: （舊參數，請切換到ProxyIds）通道的實例ID清單。
         :type InstanceIds: list of str
-        :param ClientToken: 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
+        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
-        :param ProxyIds: （新参数）通道的实例ID列表。
+        :param ProxyIds: （新參數）通道的實例ID清單。
         :type ProxyIds: list of str
         """
         self.InstanceIds = None
@@ -5057,17 +5057,17 @@ class OpenProxiesRequest(AbstractModel):
 
 
 class OpenProxiesResponse(AbstractModel):
-    """OpenProxies返回参数结构体
+    """OpenProxies返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InvalidStatusInstanceSet: 非关闭状态下的通道实例ID列表，不可开启。
+        :param InvalidStatusInstanceSet: 非關閉狀态下的通道實例ID清單，不可開啓。
         :type InvalidStatusInstanceSet: list of str
-        :param OperationFailedInstanceSet: 开启操作失败的通道实例ID列表。
+        :param OperationFailedInstanceSet: 開啓操作失敗的通道實例ID清單。
         :type OperationFailedInstanceSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InvalidStatusInstanceSet = None
@@ -5082,13 +5082,13 @@ class OpenProxiesResponse(AbstractModel):
 
 
 class OpenSecurityPolicyRequest(AbstractModel):
-    """OpenSecurityPolicy请求参数结构体
+    """OpenSecurityPolicy請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProxyId: 需开启安全策略的通道ID
+        :param ProxyId: 需開啓安全策略的通道ID
         :type ProxyId: str
         """
         self.ProxyId = None
@@ -5099,15 +5099,15 @@ class OpenSecurityPolicyRequest(AbstractModel):
 
 
 class OpenSecurityPolicyResponse(AbstractModel):
-    """OpenSecurityPolicy返回参数结构体
+    """OpenSecurityPolicy返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 异步流程ID，可以通过DescribeAsyncTaskStatus接口查询流程运行状态
+        :param TaskId: 異步流程ID，可以通過DescribeAsyncTaskStatus介面查詢流程運作狀态
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -5120,43 +5120,43 @@ class OpenSecurityPolicyResponse(AbstractModel):
 
 
 class ProxyGroupDetail(AbstractModel):
-    """通道组详情信息
+    """通道組詳情訊息
 
     """
 
     def __init__(self):
         """
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: int
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: int
-        :param ProxyNum: 通道组中通道数量
+        :param ProxyNum: 通道組中通道數量
         :type ProxyNum: int
-        :param Status: 通道组状态：
-0表示正常运行；
-1表示创建中；
-4表示销毁中；
-11表示迁移中；
+        :param Status: 通道組狀态：
+0表示正常運作；
+1表示創建中；
+4表示銷毀中；
+11表示遷移中；
         :type Status: int
-        :param OwnerUin: 归属Uin
+        :param OwnerUin: 歸屬Uin
         :type OwnerUin: str
-        :param CreateUin: 创建Uin
+        :param CreateUin: 創建Uin
         :type CreateUin: str
-        :param GroupName: 通道名称
+        :param GroupName: 通道名稱
         :type GroupName: str
-        :param DnsDefaultIp: 通道组域名解析默认IP
+        :param DnsDefaultIp: 通道組域名解析預設IP
         :type DnsDefaultIp: str
-        :param Domain: 通道组域名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Domain: 通道組域名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Domain: str
         :param RealServerRegionInfo: 目标地域
         :type RealServerRegionInfo: :class:`tencentcloud.gaap.v20180529.models.RegionDetail`
-        :param IsOldGroup: 是否老通道组，2018-08-03之前创建的通道组为老通道组
+        :param IsOldGroup: 是否老通道組，2018-08-03之前創建的通道組爲老通道組
         :type IsOldGroup: bool
-        :param GroupId: 通道组ID
+        :param GroupId: 通道組ID
         :type GroupId: str
-        :param TagSet: 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagSet: 标簽清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of TagPair
         """
         self.CreateTime = None
@@ -5198,32 +5198,32 @@ class ProxyGroupDetail(AbstractModel):
 
 
 class ProxyGroupInfo(AbstractModel):
-    """通道组详情列表
+    """通道組詳情清單
 
     """
 
     def __init__(self):
         """
-        :param GroupId: 通道组id
+        :param GroupId: 通道組id
         :type GroupId: str
-        :param Domain: 通道组域名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Domain: 通道組域名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Domain: str
-        :param GroupName: 通道组名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupName: 通道組名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupName: str
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: int
         :param RealServerRegionInfo: 目标地域
         :type RealServerRegionInfo: :class:`tencentcloud.gaap.v20180529.models.RegionDetail`
-        :param Status: 通道组状态。
+        :param Status: 通道組狀态。
 其中，
-0表示运行中；
-1表示创建中；
-4表示销毁中；
-11表示通道迁移中。
+0表示運作中；
+1表示創建中；
+4表示銷毀中；
+11表示通道遷移中。
         :type Status: str
-        :param TagSet: 标签列表。
+        :param TagSet: 标簽清單。
         :type TagSet: list of TagPair
         """
         self.GroupId = None
@@ -5270,41 +5270,41 @@ class ProxyIdDict(AbstractModel):
 
 
 class ProxyInfo(AbstractModel):
-    """通道信息
+    """通道訊息
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: （旧参数，请使用ProxyId）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceId: （舊參數，請使用ProxyId）通道實例ID。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceId: str
-        :param CreateTime: 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
+        :param CreateTime: 創建時間，采用Unix時間戳的方式，表示從1970年1月1日（UTC/GMT的午夜）開始所經過的秒數。
         :type CreateTime: int
-        :param ProjectId: 项目ID。
+        :param ProjectId: 項目ID。
         :type ProjectId: int
-        :param ProxyName: 通道名称。
+        :param ProxyName: 通道名稱。
         :type ProxyName: str
         :param AccessRegion: 接入地域。
         :type AccessRegion: str
         :param RealServerRegion: 源站地域。
         :type RealServerRegion: str
-        :param Bandwidth: 带宽，单位：Mbps。
+        :param Bandwidth: 頻寬，單位：Mbps。
         :type Bandwidth: int
-        :param Concurrent: 并发，单位：个/秒。
+        :param Concurrent: 并發，單位：個/秒。
         :type Concurrent: int
-        :param Status: 通道状态。其中：
-RUNNING表示运行中；
-CREATING表示创建中；
-DESTROYING表示销毁中；
-OPENING表示开启中；
-CLOSING表示关闭中；
-CLOSED表示已关闭；
-ADJUSTING表示配置变更中；
-ISOLATING表示隔离中；
-ISOLATED表示已隔离；
-CLONING表示复制中；
-UNKNOWN表示未知状态。
+        :param Status: 通道狀态。其中：
+RUNNING表示運作中；
+CREATING表示創建中；
+DESTROYING表示銷毀中；
+OPENING表示開啓中；
+CLOSING表示關閉中；
+CLOSED表示已關閉；
+ADJUSTING表示配置變更中；
+ISOLATING表示隔離中；
+ISOLATED表示已隔離；
+CLONING表示複制中；
+UNKNOWN表示未知狀态。
         :type Status: str
         :param Domain: 接入域名。
         :type Domain: str
@@ -5312,35 +5312,35 @@ UNKNOWN表示未知状态。
         :type IP: str
         :param Version: 通道版本号：1.0，2.0，3.0。
         :type Version: str
-        :param ProxyId: （新参数）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProxyId: （新參數）通道實例ID。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProxyId: str
-        :param Scalarable: 1，该通道可缩扩容；0，该通道无法缩扩容。
+        :param Scalarable: 1，該通道可縮擴容；0，該通道無法縮擴容。
         :type Scalarable: int
-        :param SupportProtocols: 支持的协议类型。
+        :param SupportProtocols: 支援的協議類型。
         :type SupportProtocols: list of str
-        :param GroupId: 通道组ID，当通道归属于某一通道组时，存在该字段。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupId: 通道組ID，當通道歸屬于某一通道組時，存在該欄位。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupId: str
-        :param PolicyId: 安全策略ID，当设置了安全策略时，存在该字段。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PolicyId: 安全策略ID，當設置了安全策略時，存在該欄位。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PolicyId: str
-        :param AccessRegionInfo: 接入地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AccessRegionInfo: 接入地域詳細訊息，包括地域ID和地域名。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AccessRegionInfo: :class:`tencentcloud.gaap.v20180529.models.RegionDetail`
-        :param RealServerRegionInfo: 源站地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RealServerRegionInfo: 源站地域詳細訊息，包括地域ID和地域名。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RealServerRegionInfo: :class:`tencentcloud.gaap.v20180529.models.RegionDetail`
-        :param ForwardIP: 通道转发IP
+        :param ForwardIP: 通道轉發IP
         :type ForwardIP: str
-        :param TagSet: 标签列表，不存在标签时，该字段为空列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagSet: 标簽清單，不存在标簽時，該欄位爲空清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of TagPair
-        :param SupportSecurity: 是否支持安全组配置
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SupportSecurity: 是否支援安全組配置
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SupportSecurity: int
-        :param BillingType: 计费类型:(0:按带宽计费  1:按流量计费）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BillingType: 計費類型:(0:按頻寬計費  1:按流量計費）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BillingType: int
         """
         self.InstanceId = None
@@ -5404,7 +5404,7 @@ UNKNOWN表示未知状态。
 
 
 class ProxySimpleInfo(AbstractModel):
-    """内部接口使用，返回可以查询统计数据的通道和对应的监听器信息
+    """内部介面使用，返回可以查詢統計數據的通道和對應的監聽器訊息
 
     """
 
@@ -5412,9 +5412,9 @@ class ProxySimpleInfo(AbstractModel):
         """
         :param ProxyId: 通道ID
         :type ProxyId: str
-        :param ProxyName: 通道名称
+        :param ProxyName: 通道名稱
         :type ProxyName: str
-        :param ListenerList: 监听器列表
+        :param ListenerList: 監聽器清單
         :type ListenerList: list of ListenerInfo
         """
         self.ProxyId = None
@@ -5434,26 +5434,26 @@ class ProxySimpleInfo(AbstractModel):
 
 
 class ProxyStatus(AbstractModel):
-    """通道状态信息
+    """通道狀态訊息
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 通道实例ID。
+        :param InstanceId: 通道實例ID。
         :type InstanceId: str
-        :param Status: 通道状态。
+        :param Status: 通道狀态。
 其中：
-RUNNING表示运行中；
-CREATING表示创建中；
-DESTROYING表示销毁中；
-OPENING表示开启中；
-CLOSING表示关闭中；
-CLOSED表示已关闭；
-ADJUSTING表示配置变更中；
-ISOLATING表示隔离中；
-ISOLATED表示已隔离；
-UNKNOWN表示未知状态。
+RUNNING表示運作中；
+CREATING表示創建中；
+DESTROYING表示銷毀中；
+OPENING表示開啓中；
+CLOSING表示關閉中；
+CLOSED表示已關閉；
+ADJUSTING表示配置變更中；
+ISOLATING表示隔離中；
+ISOLATED表示已隔離；
+UNKNOWN表示未知狀态。
         :type Status: str
         """
         self.InstanceId = None
@@ -5466,7 +5466,7 @@ UNKNOWN表示未知状态。
 
 
 class RealServer(AbstractModel):
-    """查询监听器或者规则相关的源站信息，不包括tag信息
+    """查詢監聽器或者規則相關的源站訊息，不包括tag訊息
 
     """
 
@@ -5476,9 +5476,9 @@ class RealServer(AbstractModel):
         :type RealServerIP: str
         :param RealServerId: 源站ID
         :type RealServerId: str
-        :param RealServerName: 源站名称
+        :param RealServerName: 源站名稱
         :type RealServerName: str
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: int
         """
         self.RealServerIP = None
@@ -5507,7 +5507,7 @@ class RealServerBindSetReq(AbstractModel):
         :type RealServerPort: int
         :param RealServerIP: 源站IP
         :type RealServerIP: str
-        :param RealServerWeight: 源站权重
+        :param RealServerWeight: 源站權重
         :type RealServerWeight: int
         """
         self.RealServerId = None
@@ -5524,7 +5524,7 @@ class RealServerBindSetReq(AbstractModel):
 
 
 class RealServerStatus(AbstractModel):
-    """源站绑定信息查询，BindStatus， 0: 未被绑定 1：被规则或者监听器绑定
+    """源站綁定訊息查詢，BindStatus， 0: 未被綁定 1：被規則或者監聽器綁定
 
     """
 
@@ -5532,9 +5532,9 @@ class RealServerStatus(AbstractModel):
         """
         :param RealServerId: 源站ID。
         :type RealServerId: str
-        :param BindStatus: 0表示未被绑定 1表示被规则或者监听器绑定。
+        :param BindStatus: 0表示未被綁定 1表示被規則或者監聽器綁定。
         :type BindStatus: int
-        :param ProxyId: 绑定此源站的通道ID，没有绑定时为空字符串。
+        :param ProxyId: 綁定此源站的通道ID，沒有綁定時爲空字串。
         :type ProxyId: str
         """
         self.RealServerId = None
@@ -5549,15 +5549,15 @@ class RealServerStatus(AbstractModel):
 
 
 class RegionDetail(AbstractModel):
-    """区域信息详情
+    """區域訊息詳情
 
     """
 
     def __init__(self):
         """
-        :param RegionId: 区域ID
+        :param RegionId: 區域ID
         :type RegionId: str
-        :param RegionName: 区域英文名或中文名
+        :param RegionName: 區域英文名或中文名
         :type RegionName: str
         """
         self.RegionId = None
@@ -5570,13 +5570,13 @@ class RegionDetail(AbstractModel):
 
 
 class RemoveRealServersRequest(AbstractModel):
-    """RemoveRealServers请求参数结构体
+    """RemoveRealServers請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RealServerIds: 源站Id列表
+        :param RealServerIds: 源站Id清單
         :type RealServerIds: list of str
         """
         self.RealServerIds = None
@@ -5587,13 +5587,13 @@ class RemoveRealServersRequest(AbstractModel):
 
 
 class RemoveRealServersResponse(AbstractModel):
-    """RemoveRealServers返回参数结构体
+    """RemoveRealServers返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -5604,24 +5604,24 @@ class RemoveRealServersResponse(AbstractModel):
 
 
 class RuleCheckParams(AbstractModel):
-    """7层监听器转发规则健康检查相关参数
+    """7層監聽器轉發規則健康檢查相關參數
 
     """
 
     def __init__(self):
         """
-        :param DelayLoop: 健康检查的时间间隔
+        :param DelayLoop: 健康檢查的時間間隔
         :type DelayLoop: int
-        :param ConnectTimeout: 健康检查的响应超时时间
+        :param ConnectTimeout: 健康檢查的響應超時時間
         :type ConnectTimeout: int
-        :param Path: 健康检查的检查路径
+        :param Path: 健康檢查的檢查路徑
         :type Path: str
-        :param Method: 健康检查的方法，GET/HEAD
+        :param Method: 健康檢查的方法，GET/HEAD
         :type Method: str
-        :param StatusCode: 确认源站正常的返回码，可选范围[100, 200, 300, 400, 500]
+        :param StatusCode: 确認源站正常的返回碼，可選範圍[100, 200, 300, 400, 500]
         :type StatusCode: list of int non-negative
-        :param Domain: 健康检查的检查域名。
-当调用ModifyRuleAttribute时，不支持修改该参数。
+        :param Domain: 健康檢查的檢查域名。
+當調用ModifyRuleAttribute時，不支援修改該參數。
         :type Domain: str
         """
         self.DelayLoop = None
@@ -5642,38 +5642,38 @@ class RuleCheckParams(AbstractModel):
 
 
 class RuleInfo(AbstractModel):
-    """7层监听器转发规则信息
+    """7層監聽器轉發規則訊息
 
     """
 
     def __init__(self):
         """
-        :param RuleId: 规则信息
+        :param RuleId: 規則訊息
         :type RuleId: str
-        :param ListenerId: 监听器信息
+        :param ListenerId: 監聽器訊息
         :type ListenerId: str
-        :param Domain: 规则域名
+        :param Domain: 規則域名
         :type Domain: str
-        :param Path: 规则路径
+        :param Path: 規則路徑
         :type Path: str
-        :param RealServerType: 源站类型
+        :param RealServerType: 源站類型
         :type RealServerType: str
-        :param Scheduler: 转发源站策略
+        :param Scheduler: 轉發源站策略
         :type Scheduler: str
-        :param HealthCheck: 是否开启健康检查标志，1表示开启，0表示关闭
+        :param HealthCheck: 是否開啓健康檢查标志，1表示開啓，0表示關閉
         :type HealthCheck: int
-        :param RuleStatus: 规则状态，0表示运行中，1表示创建中，2表示销毁中，3表示绑定解绑源站中，4表示配置更新中
+        :param RuleStatus: 規則狀态，0表示運作中，1表示創建中，2表示銷毀中，3表示綁定解綁源站中，4表示配置更新中
         :type RuleStatus: int
-        :param CheckParams: 健康检查相关参数
+        :param CheckParams: 健康檢查相關參數
         :type CheckParams: :class:`tencentcloud.gaap.v20180529.models.RuleCheckParams`
-        :param RealServerSet: 已绑定的源站相关信息
+        :param RealServerSet: 已綁定的源站相關訊息
         :type RealServerSet: list of BindRealServer
-        :param BindStatus: 源站的服务状态，0表示异常，1表示正常。
-未开启健康检查时，该状态始终未正常。
-只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
+        :param BindStatus: 源站的服務狀态，0表示異常，1表示正常。
+未開啓健康檢查時，該狀态始終未正常。
+只要有一個源站健康狀态爲異常時，該狀态爲異常，具體源站的狀态請檢視RealServerSet。
         :type BindStatus: int
-        :param ForwardHost: 通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ForwardHost: 通道轉發到源站的請求所攜帶的host，其中default表示直接轉發接收到的host。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ForwardHost: str
         """
         self.RuleId = None
@@ -5713,24 +5713,24 @@ class RuleInfo(AbstractModel):
 
 
 class SecurityPolicyRuleIn(AbstractModel):
-    """安全策略规则（入参）
+    """安全策略規則（入參）
 
     """
 
     def __init__(self):
         """
-        :param SourceCidr: 请求来源IP或IP段。
+        :param SourceCidr: 請求來源IP或IP段。
         :type SourceCidr: str
-        :param Action: 策略：允许（ACCEPT）或拒绝（DROP）
+        :param Action: 策略：允許（ACCEPT）或拒絕（DROP）
         :type Action: str
-        :param AliasName: 规则别名
+        :param AliasName: 規則别名
         :type AliasName: str
-        :param Protocol: 协议：TCP或UDP，ALL表示所有协议
+        :param Protocol: 協議：TCP或UDP，ALL表示所有協議
         :type Protocol: str
-        :param DestPortRange: 目标端口，填写格式举例：
-单个端口: 80
-多个端口: 80,443
-连续端口: 3306-20000
+        :param DestPortRange: 目标端口，填寫格式舉例：
+單個端口: 80
+多個端口: 80,443
+連續端口: 3306-20000
 所有端口: ALL
         :type DestPortRange: str
         """
@@ -5750,28 +5750,28 @@ class SecurityPolicyRuleIn(AbstractModel):
 
 
 class SecurityPolicyRuleOut(AbstractModel):
-    """安全策略规则（出参）
+    """安全策略規則（出參）
 
     """
 
     def __init__(self):
         """
-        :param Action: 策略：允许（ACCEPT）或拒绝（DROP）
+        :param Action: 策略：允許（ACCEPT）或拒絕（DROP）
         :type Action: str
-        :param SourceCidr: 请求来源Ip或Ip段
+        :param SourceCidr: 請求來源Ip或Ip段
         :type SourceCidr: str
-        :param AliasName: 规则别名
+        :param AliasName: 規則别名
         :type AliasName: str
-        :param DestPortRange: 目标端口范围
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DestPortRange: 目标端口範圍
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DestPortRange: str
-        :param RuleId: 规则ID
+        :param RuleId: 規則ID
         :type RuleId: str
-        :param Protocol: 要匹配的协议类型（TCP/UDP）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Protocol: 要比對的協議類型（TCP/UDP）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Protocol: str
         :param PolicyId: 安全策略ID
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PolicyId: str
         """
         self.Action = None
@@ -5794,40 +5794,40 @@ class SecurityPolicyRuleOut(AbstractModel):
 
 
 class SetAuthenticationRequest(AbstractModel):
-    """SetAuthentication请求参数结构体
+    """SetAuthentication請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID。
+        :param ListenerId: 監聽器ID。
         :type ListenerId: str
-        :param Domain: 需要进行高级配置的域名，该域名为监听器下的转发规则的域名。
+        :param Domain: 需要進行高級配置的域名，該域名爲監聽器下的轉發規則的域名。
         :type Domain: str
-        :param BasicAuth: 基础认证开关，其中：
-0，关闭基础认证；
-1，开启基础认证。
-默认为0。
+        :param BasicAuth: 基礎認證開關，其中：
+0，關閉基礎認證；
+1，開啓基礎認證。
+預設爲0。
         :type BasicAuth: int
-        :param GaapAuth: 通道认证开关，用于源站对Gaap的认证，其中：
-0，关闭通道认证；
-1，开启通道认证。
-默认为0。
+        :param GaapAuth: 通道認證開關，用于源站對Gaap的認證，其中：
+0，關閉通道認證；
+1，開啓通道認證。
+預設爲0。
         :type GaapAuth: int
-        :param RealServerAuth: 源站认证开关，用于Gaap对服务器的认证，其中：
-0，关闭源站认证；
-1，开启源站认证。
-默认为0。
+        :param RealServerAuth: 源站認證開關，用于Gaap對服務器的認證，其中：
+0，關閉源站認證；
+1，開啓源站認證。
+預設爲0。
         :type RealServerAuth: int
-        :param BasicAuthConfId: 基础认证配置ID，从证书管理页获取。
+        :param BasicAuthConfId: 基礎認證配置ID，從證書管理頁獲取。
         :type BasicAuthConfId: str
-        :param GaapCertificateId: 通道SSL证书ID，从证书管理页获取。
+        :param GaapCertificateId: 通道SSL證書ID，從證書管理頁獲取。
         :type GaapCertificateId: str
-        :param RealServerCertificateId: 源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
+        :param RealServerCertificateId: 源站CA證書ID，從證書管理頁獲取。源站認證時，填寫該參數或RealServerCertificateId參數
         :type RealServerCertificateId: str
-        :param RealServerCertificateDomain: 源站证书域名。
+        :param RealServerCertificateDomain: 源站證書域名。
         :type RealServerCertificateDomain: str
-        :param PolyRealServerCertificateIds: 多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
+        :param PolyRealServerCertificateIds: 多源站CA證書ID，從證書管理頁獲取。源站認證時，填寫該參數或RealServerCertificateId參數
         :type PolyRealServerCertificateIds: list of str
         """
         self.ListenerId = None
@@ -5856,13 +5856,13 @@ class SetAuthenticationRequest(AbstractModel):
 
 
 class SetAuthenticationResponse(AbstractModel):
-    """SetAuthentication返回参数结构体
+    """SetAuthentication返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -5873,16 +5873,16 @@ class SetAuthenticationResponse(AbstractModel):
 
 
 class StatisticsDataInfo(AbstractModel):
-    """统计数据信息
+    """統計數據訊息
 
     """
 
     def __init__(self):
         """
-        :param Time: 对应的时间点
+        :param Time: 對應的時間點
         :type Time: int
-        :param Data: 统计数据值
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 統計數據值
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: float
         """
         self.Time = None
@@ -5895,53 +5895,53 @@ class StatisticsDataInfo(AbstractModel):
 
 
 class TCPListener(AbstractModel):
-    """TCP类型监听器信息
+    """TCP類型監聽器訊息
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
-        :param ListenerName: 监听器名称
+        :param ListenerName: 監聽器名稱
         :type ListenerName: str
-        :param Port: 监听器端口
+        :param Port: 監聽器端口
         :type Port: int
-        :param RealServerPort: 监听器转发源站端口，仅对版本为1.0的通道有效
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RealServerPort: 監聽器轉發源站端口，僅對版本爲1.0的通道有效
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RealServerPort: int
-        :param RealServerType: 监听器绑定源站类型
+        :param RealServerType: 監聽器綁定源站類型
         :type RealServerType: str
-        :param Protocol: 监听器协议， TCP
+        :param Protocol: 監聽器協議， TCP
         :type Protocol: str
-        :param ListenerStatus: 监听器状态，其中：
-0表示运行中；
-1表示创建中；
-2表示销毁中；
-3表示源站调整中；
-4表示配置变更中。
+        :param ListenerStatus: 監聽器狀态，其中：
+0表示運作中；
+1表示創建中；
+2表示銷毀中；
+3表示源站調整中；
+4表示配置變更中。
         :type ListenerStatus: int
-        :param Scheduler: 监听器源站访问策略，其中：
-rr表示轮询；
-wrr表示加权轮询；
-lc表示最小连接数。
+        :param Scheduler: 監聽器源站訪問策略，其中：
+rr表示輪詢；
+wrr表示加權輪詢；
+lc表示最小連接數。
         :type Scheduler: str
-        :param ConnectTimeout: 源站健康检查响应超时时间，单位：秒
+        :param ConnectTimeout: 源站健康檢查響應超時時間，單位：秒
         :type ConnectTimeout: int
-        :param DelayLoop: 源站健康检查时间间隔，单位：秒
+        :param DelayLoop: 源站健康檢查時間間隔，單位：秒
         :type DelayLoop: int
-        :param HealthCheck: 监听器是否开启健康检查，其中：
-0表示关闭；
-1表示开启
+        :param HealthCheck: 監聽器是否開啓健康檢查，其中：
+0表示關閉；
+1表示開啓
         :type HealthCheck: int
-        :param BindStatus: 监听器绑定的源站状态， 其中：
-0表示异常；
+        :param BindStatus: 監聽器綁定的源站狀态， 其中：
+0表示異常；
 1表示正常。
         :type BindStatus: int
-        :param RealServerSet: 监听器绑定的源站信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RealServerSet: 監聽器綁定的源站訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RealServerSet: list of BindRealServer
-        :param CreateTime: 监听器创建时间，Unix时间戳
+        :param CreateTime: 監聽器創建時間，Unix時間戳
         :type CreateTime: int
         """
         self.ListenerId = None
@@ -5983,15 +5983,15 @@ lc表示最小连接数。
 
 
 class TagPair(AbstractModel):
-    """标签键值对
+    """标簽鍵值對
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标签键
+        :param TagKey: 标簽鍵
         :type TagKey: str
-        :param TagValue: 标签值
+        :param TagValue: 标簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -6004,18 +6004,18 @@ class TagPair(AbstractModel):
 
 
 class TagResourceInfo(AbstractModel):
-    """标签对应资源信息
+    """标簽對應資源訊息
 
     """
 
     def __init__(self):
         """
-        :param ResourceType: 资源类型，其中：
+        :param ResourceType: 資源類型，其中：
 Proxy表示通道，
-ProxyGroup表示通道组，
+ProxyGroup表示通道組，
 RealServer表示源站
         :type ResourceType: str
-        :param ResourceId: 资源ID
+        :param ResourceId: 資源ID
         :type ResourceId: str
         """
         self.ResourceType = None
@@ -6028,39 +6028,39 @@ RealServer表示源站
 
 
 class UDPListener(AbstractModel):
-    """UDP类型监听器信息
+    """UDP類型監聽器訊息
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
-        :param ListenerName: 监听器名称
+        :param ListenerName: 監聽器名稱
         :type ListenerName: str
-        :param Port: 监听器端口
+        :param Port: 監聽器端口
         :type Port: int
-        :param RealServerPort: 监听器转发源站端口，仅V1版本通道或通道组监听器有效
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RealServerPort: 監聽器轉發源站端口，僅V1版本通道或通道組監聽器有效
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RealServerPort: int
-        :param RealServerType: 监听器绑定源站类型
+        :param RealServerType: 監聽器綁定源站類型
         :type RealServerType: str
-        :param Protocol: 监听器协议， UDP
+        :param Protocol: 監聽器協議， UDP
         :type Protocol: str
-        :param ListenerStatus: 监听器状态，其中：
-0表示运行中；
-1表示创建中；
-2表示销毁中；
-3表示源站调整中；
-4表示配置变更中。
+        :param ListenerStatus: 監聽器狀态，其中：
+0表示運作中；
+1表示創建中；
+2表示銷毀中；
+3表示源站調整中；
+4表示配置變更中。
         :type ListenerStatus: int
-        :param Scheduler: 监听器源站访问策略
+        :param Scheduler: 監聽器源站訪問策略
         :type Scheduler: str
-        :param BindStatus: 监听器绑定源站状态， 0表示正常，1表示IP异常，2表示域名解析异常
+        :param BindStatus: 監聽器綁定源站狀态， 0表示正常，1表示IP異常，2表示域名解析異常
         :type BindStatus: int
-        :param RealServerSet: 监听器绑定的源站信息
+        :param RealServerSet: 監聽器綁定的源站訊息
         :type RealServerSet: list of BindRealServer
-        :param CreateTime: 监听器创建时间，Unix时间戳
+        :param CreateTime: 監聽器創建時間，Unix時間戳
         :type CreateTime: int
         """
         self.ListenerId = None

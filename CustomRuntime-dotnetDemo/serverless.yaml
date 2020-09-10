@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: dotnet_demo
   src: ./
-  description: dotnet demo function. Dotnet模版函数
+  description: dotnet demo function. Dotnet模版函數
   handler: index.main_handler
   runtime: CustomRuntime
   namespace: default

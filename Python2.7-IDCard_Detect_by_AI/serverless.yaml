@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: idcard_detection
   src: ./
-  description: idcard_detection. 本示例使用 COS 触发器，并调用AI接口实现身份证识别
+  description: idcard_detection. 本範例使用 COS 觸發器，并調用AI介面實現身份證識别
   handler: idcard_detection.main_handler
   runtime: Python2.7
   namespace: default
@@ -14,7 +14,7 @@ inputs:
   memorySize: 128
   timeout: 5
   events:
-     - cos: # cos触发器
+     - cos: # cos觸發器
         name: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com
         parameters:
           bucket: # input cosname.cos.region.myqcloud.com  //e.g. xxx.cos.ap-chengdu.myqcloud.com

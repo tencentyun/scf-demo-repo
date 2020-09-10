@@ -26,9 +26,9 @@ class KmsClient(AbstractClient):
 
 
     def CreateKey(self, request):
-        """创建用户管理数据密钥的主密钥CMK（Custom Master Key）。
+        """創建用戶管理數據金鑰的主金鑰CMK（Custom Master Key）。
 
-        :param request: 调用CreateKey所需参数的结构体。
+        :param request: 調用CreateKey所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.CreateKeyRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.CreateKeyResponse`
 
@@ -54,9 +54,9 @@ class KmsClient(AbstractClient):
 
 
     def Decrypt(self, request):
-        """本接口用于解密密文，得到明文数据。
+        """本介面用于解密密文，得到明文數據。
 
-        :param request: 调用Decrypt所需参数的结构体。
+        :param request: 調用Decrypt所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.DecryptRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.DecryptResponse`
 
@@ -82,9 +82,9 @@ class KmsClient(AbstractClient):
 
 
     def DescribeKey(self, request):
-        """用于获取指定KeyId的主密钥属性详情信息。
+        """用于獲取指定KeyId的主金鑰屬性詳情訊息。
 
-        :param request: 调用DescribeKey所需参数的结构体。
+        :param request: 調用DescribeKey所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.DescribeKeyRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.DescribeKeyResponse`
 
@@ -110,9 +110,9 @@ class KmsClient(AbstractClient):
 
 
     def DescribeKeys(self, request):
-        """该接口用于批量获取主密钥属性信息。
+        """該介面用于批次獲取主金鑰屬性訊息。
 
-        :param request: 调用DescribeKeys所需参数的结构体。
+        :param request: 調用DescribeKeys所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.DescribeKeysRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.DescribeKeysResponse`
 
@@ -138,9 +138,9 @@ class KmsClient(AbstractClient):
 
 
     def DisableKey(self, request):
-        """本接口用于禁用一个主密钥，处于禁用状态的Key无法用于加密、解密操作。
+        """本介面用于禁用一個主金鑰，處于禁用狀态的Key無法用于加密、解密操作。
 
-        :param request: 调用DisableKey所需参数的结构体。
+        :param request: 調用DisableKey所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.DisableKeyRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.DisableKeyResponse`
 
@@ -166,9 +166,9 @@ class KmsClient(AbstractClient):
 
 
     def DisableKeyRotation(self, request):
-        """对指定的CMK禁止密钥轮换功能。
+        """對指定的CMK禁止金鑰輪換功能。
 
-        :param request: 调用DisableKeyRotation所需参数的结构体。
+        :param request: 調用DisableKeyRotation所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.DisableKeyRotationRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.DisableKeyRotationResponse`
 
@@ -194,9 +194,9 @@ class KmsClient(AbstractClient):
 
 
     def DisableKeys(self, request):
-        """该接口用于批量禁止CMK的使用。
+        """該介面用于批次禁止CMK的使用。
 
-        :param request: 调用DisableKeys所需参数的结构体。
+        :param request: 調用DisableKeys所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.DisableKeysRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.DisableKeysResponse`
 
@@ -222,9 +222,9 @@ class KmsClient(AbstractClient):
 
 
     def EnableKey(self, request):
-        """用于启用一个指定的CMK。
+        """用于啓用一個指定的CMK。
 
-        :param request: 调用EnableKey所需参数的结构体。
+        :param request: 調用EnableKey所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.EnableKeyRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.EnableKeyResponse`
 
@@ -250,9 +250,9 @@ class KmsClient(AbstractClient):
 
 
     def EnableKeyRotation(self, request):
-        """对指定的CMK开启密钥轮换功能。
+        """對指定的CMK開啓金鑰輪換功能。
 
-        :param request: 调用EnableKeyRotation所需参数的结构体。
+        :param request: 調用EnableKeyRotation所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.EnableKeyRotationRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.EnableKeyRotationResponse`
 
@@ -278,9 +278,9 @@ class KmsClient(AbstractClient):
 
 
     def EnableKeys(self, request):
-        """该接口用于批量启用CMK。
+        """該介面用于批次啓用CMK。
 
-        :param request: 调用EnableKeys所需参数的结构体。
+        :param request: 調用EnableKeys所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.EnableKeysRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.EnableKeysResponse`
 
@@ -306,9 +306,9 @@ class KmsClient(AbstractClient):
 
 
     def Encrypt(self, request):
-        """本接口用于加密最多为4KB任意数据，可用于加密数据库密码，RSA Key，或其它较小的敏感信息。对于应用的数据加密，使用GenerateDataKey生成的DataKey进行本地数据的加解密操作
+        """本介面用于加密最多爲4KB任意數據，可用于加密資料庫密碼，RSA Key，或其它較小的敏感訊息。對于應用的數據加密，使用GenerateDataKey生成的DataKey進行本地數據的加解密操作
 
-        :param request: 调用Encrypt所需参数的结构体。
+        :param request: 調用Encrypt所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.EncryptRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.EncryptResponse`
 
@@ -334,9 +334,9 @@ class KmsClient(AbstractClient):
 
 
     def GenerateDataKey(self, request):
-        """本接口生成一个数据密钥，您可以用这个密钥进行本地数据的加密。
+        """本介面生成一個數據金鑰，您可以用這個金鑰進行本地數據的加密。
 
-        :param request: 调用GenerateDataKey所需参数的结构体。
+        :param request: 調用GenerateDataKey所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.GenerateDataKeyRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.GenerateDataKeyResponse`
 
@@ -362,9 +362,9 @@ class KmsClient(AbstractClient):
 
 
     def GetKeyRotationStatus(self, request):
-        """查询指定的CMK是否开启了密钥轮换功能。
+        """查詢指定的CMK是否開啓了金鑰輪換功能。
 
-        :param request: 调用GetKeyRotationStatus所需参数的结构体。
+        :param request: 調用GetKeyRotationStatus所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.GetKeyRotationStatusRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.GetKeyRotationStatusResponse`
 
@@ -390,9 +390,9 @@ class KmsClient(AbstractClient):
 
 
     def GetServiceStatus(self, request):
-        """用于查询该用户是否已开通KMS服务
+        """用于查詢該用戶是否已開通KMS服務
 
-        :param request: 调用GetServiceStatus所需参数的结构体。
+        :param request: 調用GetServiceStatus所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.GetServiceStatusRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.GetServiceStatusResponse`
 
@@ -418,9 +418,9 @@ class KmsClient(AbstractClient):
 
 
     def ListKeyDetail(self, request):
-        """根据指定Offset和Limit获取主密钥列表详情。
+        """根據指定Offset和Limit獲取主金鑰清單詳情。
 
-        :param request: 调用ListKeyDetail所需参数的结构体。
+        :param request: 調用ListKeyDetail所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.ListKeyDetailRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.ListKeyDetailResponse`
 
@@ -446,9 +446,9 @@ class KmsClient(AbstractClient):
 
 
     def ListKeys(self, request):
-        """列出账号下面的密钥列表（KeyId信息）。
+        """列出賬号下面的金鑰清單（KeyId訊息）。
 
-        :param request: 调用ListKeys所需参数的结构体。
+        :param request: 調用ListKeys所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.ListKeysRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.ListKeysResponse`
 
@@ -474,9 +474,9 @@ class KmsClient(AbstractClient):
 
 
     def ReEncrypt(self, request):
-        """使用指定CMK对密文重新加密。
+        """使用指定CMK對密文重新加密。
 
-        :param request: 调用ReEncrypt所需参数的结构体。
+        :param request: 調用ReEncrypt所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.ReEncryptRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.ReEncryptResponse`
 
@@ -504,7 +504,7 @@ class KmsClient(AbstractClient):
     def UpdateAlias(self, request):
         """用于修改CMK的别名。
 
-        :param request: 调用UpdateAlias所需参数的结构体。
+        :param request: 調用UpdateAlias所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.UpdateAliasRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.UpdateAliasResponse`
 
@@ -530,9 +530,9 @@ class KmsClient(AbstractClient):
 
 
     def UpdateKeyDescription(self, request):
-        """该接口用于对指定的cmk修改描述信息。
+        """該介面用于對指定的cmk修改描述訊息。
 
-        :param request: 调用UpdateKeyDescription所需参数的结构体。
+        :param request: 調用UpdateKeyDescription所需參數的結構體。
         :type request: :class:`tencentcloud.kms.v20190118.models.UpdateKeyDescriptionRequest`
         :rtype: :class:`tencentcloud.kms.v20190118.models.UpdateKeyDescriptionResponse`
 

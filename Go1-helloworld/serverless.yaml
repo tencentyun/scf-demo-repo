@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: helloworld
   src: ./
-  description: helloworld 空白模板函数
+  description: helloworld 空白範本函數
   handler: main
   runtime: Go1
   namespace: default

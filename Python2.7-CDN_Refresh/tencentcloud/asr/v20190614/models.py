@@ -17,20 +17,20 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CreateAsrVocabRequest(AbstractModel):
-    """CreateAsrVocab请求参数结构体
+    """CreateAsrVocab請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Name: 热词表名称，长度在1-255之间
+        :param Name: 熱詞表名稱，長度在1-255之間
         :type Name: str
-        :param Description: 热词表描述，长度在0-1000之间
+        :param Description: 熱詞表描述，長度在0-1000之間
         :type Description: str
-        :param WordWeights: 词权重数组，包含全部的热词和对应的权重。每个热词的长度不大于10，权重为[1,10]之间整数，数组长度不大于128
+        :param WordWeights: 詞權重數組，包含全部的熱詞和對應的權重。每個熱詞的長度不大于10，權重爲[1,10]之間整數，數組長度不大于128
         :type WordWeights: list of HotWord
-        :param WordWeightStr: 词权重文件（纯文本文件）的二进制base64编码，以行分隔，每行的格式为word|weight，即以英文符号|为分割，左边为词，右边为权重，如：你好|5。
-当用户传此参数（参数长度大于0），即以此参数解析词权重，WordWeights会被忽略
+        :param WordWeightStr: 詞權重文件（純文本文件）的二進制base64編碼，以行分隔，每行的格式爲word|weight，即以英文符号|爲分割，左邊爲詞，右邊爲權重，如：你好|5。
+當用戶傳此參數（參數長度大于0），即以此參數解析詞權重，WordWeights會被忽略
         :type WordWeightStr: str
         """
         self.Name = None
@@ -52,15 +52,15 @@ class CreateAsrVocabRequest(AbstractModel):
 
 
 class CreateAsrVocabResponse(AbstractModel):
-    """CreateAsrVocab返回参数结构体
+    """CreateAsrVocab返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabId: 词表ID，可用于获取词表信息
+        :param VocabId: 詞表ID，可用于獲取詞表訊息
         :type VocabId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.VocabId = None
@@ -73,39 +73,39 @@ class CreateAsrVocabResponse(AbstractModel):
 
 
 class CreateRecTaskRequest(AbstractModel):
-    """CreateRecTask请求参数结构体
+    """CreateRecTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param EngineModelType: 引擎模型类型。
-8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
-8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
-16k_zh：16k 中文普通话通用；
-16k_en：16k 英语；
-16k_ca：16k 粤语；
-16k_zh_video：16k 音视频领域模型。
+        :param EngineModelType: 引擎模型類型。
+8k_zh：電話 8k 中文普通話通用，可用于雙聲道音訊的識别；
+8k_zh_s：電話 8k 中文普通話話者分離，僅用于單聲道；
+16k_zh：16k 中文普通話通用；
+16k_en：16k 英語；
+16k_ca：16k 粵語；
+16k_zh_video：16k 影音領域模型。
         :type EngineModelType: str
-        :param ChannelNum: 语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
+        :param ChannelNum: 語音聲道數。1：單聲道；2：雙聲道（僅支援 8k_zh 引擎模型）。
         :type ChannelNum: int
-        :param ResTextFormat: 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
+        :param ResTextFormat: 識别結果返回形式。0： 識别結果文本(含分段時間戳)； 1：僅支援16k中文引擎，含識别結果詳情(詞時間戳清單，一般用于生成字幕場景)。
         :type ResTextFormat: int
-        :param SourceType: 语音数据来源。0：语音 URL；1：语音数据（post body）。
+        :param SourceType: 語音數據來源。0：語音 URL；1：語音數據（post body）。
         :type SourceType: int
-        :param CallbackUrl: 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
+        :param CallbackUrl: 回調 URL，用戶自行搭建的用于接收識别結果的服務器網址， 長度小於2048位元。如果用戶使用回調方式獲取識别結果，需提交該參數；如果用戶使用輪詢方式獲取識别結果，則無需提交該參數。
         :type CallbackUrl: str
-        :param Url: 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
+        :param Url: 語音的URL網址，需要公網可下載。長度小於2048位元，當 SourceType 值爲 0 時須填寫該欄位，爲 1 時不需要填寫。注意：請确保錄音文件時長在一個小時之内，否則可能識别失敗。請保證文件的下載速度，否則可能下載失敗。
         :type Url: str
-        :param Data: 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于5MB。
+        :param Data: 語音數據，當SourceType 值爲1時必須填寫，爲0可不寫。要base64編碼(采用python語言時注意讀取文件應該爲string而不是byte，以byte格式讀取後要decode()。編碼後的數據不可帶有回車換行符)。音訊數據要小於5MB。
         :type Data: str
-        :param DataLen: 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
+        :param DataLen: 數據長度，當 SourceType 值爲1時必須填寫，爲0可不寫（此數據長度爲數據未進行base64編碼時的數據長度）。
         :type DataLen: int
-        :param HotwordId: 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+        :param HotwordId: 熱詞id。用于調用對應的熱詞表，如果在調用語音識别服務時，不進行單獨的熱詞id設置，自動生效預設熱詞；如果進行了單獨的熱詞id設置，那麽将生效單獨設置的熱詞id。
         :type HotwordId: str
-        :param FilterDirty: 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
+        :param FilterDirty: 是否過濾髒詞（目前支援中文普通話引擎）。0：不過濾髒詞；1：過濾髒詞；2：将髒詞替換爲 * 。
         :type FilterDirty: int
-        :param FilterModal: 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
+        :param FilterModal: 是否過語氣詞（目前支援中文普通話引擎）。0：不過濾語氣詞；1：部分過濾；2：嚴格過濾 。
         :type FilterModal: int
         """
         self.EngineModelType = None
@@ -136,15 +136,15 @@ class CreateRecTaskRequest(AbstractModel):
 
 
 class CreateRecTaskResponse(AbstractModel):
-    """CreateRecTask返回参数结构体
+    """CreateRecTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 录音文件识别的请求返回结果，包含结果查询需要的TaskId
+        :param Data: 錄音文件識别的請求返回結果，包含結果查詢需要的TaskId
         :type Data: :class:`tencentcloud.asr.v20190614.models.Task`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -159,13 +159,13 @@ class CreateRecTaskResponse(AbstractModel):
 
 
 class DeleteAsrVocabRequest(AbstractModel):
-    """DeleteAsrVocab请求参数结构体
+    """DeleteAsrVocab請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabId: 热词表Id
+        :param VocabId: 熱詞表Id
         :type VocabId: str
         """
         self.VocabId = None
@@ -176,13 +176,13 @@ class DeleteAsrVocabRequest(AbstractModel):
 
 
 class DeleteAsrVocabResponse(AbstractModel):
-    """DeleteAsrVocab返回参数结构体
+    """DeleteAsrVocab返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -193,13 +193,13 @@ class DeleteAsrVocabResponse(AbstractModel):
 
 
 class DescribeTaskStatusRequest(AbstractModel):
-    """DescribeTaskStatus请求参数结构体
+    """DescribeTaskStatus請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
+        :param TaskId: 從CreateRecTask介面獲取的TaskId，用于獲取任務狀态與結果。
         :type TaskId: int
         """
         self.TaskId = None
@@ -210,15 +210,15 @@ class DescribeTaskStatusRequest(AbstractModel):
 
 
 class DescribeTaskStatusResponse(AbstractModel):
-    """DescribeTaskStatus返回参数结构体
+    """DescribeTaskStatus返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 录音文件识别的请求返回结果。
+        :param Data: 錄音文件識别的請求返回結果。
         :type Data: :class:`tencentcloud.asr.v20190614.models.TaskStatus`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -233,13 +233,13 @@ class DescribeTaskStatusResponse(AbstractModel):
 
 
 class DownloadAsrVocabRequest(AbstractModel):
-    """DownloadAsrVocab请求参数结构体
+    """DownloadAsrVocab請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabId: 词表ID。
+        :param VocabId: 詞表ID。
         :type VocabId: str
         """
         self.VocabId = None
@@ -250,17 +250,17 @@ class DownloadAsrVocabRequest(AbstractModel):
 
 
 class DownloadAsrVocabResponse(AbstractModel):
-    """DownloadAsrVocab返回参数结构体
+    """DownloadAsrVocab返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabId: 词表ID。
+        :param VocabId: 詞表ID。
         :type VocabId: str
-        :param WordWeightStr: 词表权重文件形式的base64值。
+        :param WordWeightStr: 詞表權重文件形式的base64值。
         :type WordWeightStr: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.VocabId = None
@@ -275,21 +275,21 @@ class DownloadAsrVocabResponse(AbstractModel):
 
 
 class GetAsrVocabListRequest(AbstractModel):
-    """GetAsrVocabList请求参数结构体
+    """GetAsrVocabList請求參數結構體
 
     """
 
 
 class GetAsrVocabListResponse(AbstractModel):
-    """GetAsrVocabList返回参数结构体
+    """GetAsrVocabList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabList: 热词表列表
+        :param VocabList: 熱詞表清單
         :type VocabList: list of Vocab
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.VocabList = None
@@ -307,13 +307,13 @@ class GetAsrVocabListResponse(AbstractModel):
 
 
 class GetAsrVocabRequest(AbstractModel):
-    """GetAsrVocab请求参数结构体
+    """GetAsrVocab請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabId: 热词表ID
+        :param VocabId: 熱詞表ID
         :type VocabId: str
         """
         self.VocabId = None
@@ -324,27 +324,27 @@ class GetAsrVocabRequest(AbstractModel):
 
 
 class GetAsrVocabResponse(AbstractModel):
-    """GetAsrVocab返回参数结构体
+    """GetAsrVocab返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Name: 热词表名称
+        :param Name: 熱詞表名稱
         :type Name: str
-        :param Description: 热词表描述
+        :param Description: 熱詞表描述
         :type Description: str
-        :param VocabId: 热词表ID
+        :param VocabId: 熱詞表ID
         :type VocabId: str
-        :param WordWeights: 词权重列表
+        :param WordWeights: 詞權重清單
         :type WordWeights: list of HotWord
-        :param CreateTime: 词表创建时间
+        :param CreateTime: 詞表創建時間
         :type CreateTime: str
-        :param UpdateTime: 词表更新时间
+        :param UpdateTime: 詞表更新時間
         :type UpdateTime: str
-        :param State: 热词表状态，1为默认状态即在识别时默认加载该热词表进行识别，0为初始状态
+        :param State: 熱詞表狀态，1爲預設狀态即在識别時預設加載該熱詞表進行識别，0爲初始狀态
         :type State: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Name = None
@@ -374,15 +374,15 @@ class GetAsrVocabResponse(AbstractModel):
 
 
 class HotWord(AbstractModel):
-    """热词的词和权重
+    """熱詞的詞和權重
 
     """
 
     def __init__(self):
         """
-        :param Word: 热词
+        :param Word: 熱詞
         :type Word: str
-        :param Weight: 权重
+        :param Weight: 權重
         :type Weight: int
         """
         self.Word = None
@@ -395,29 +395,29 @@ class HotWord(AbstractModel):
 
 
 class SentenceDetail(AbstractModel):
-    """单句的详细识别结果，包含单个词的时间偏移，一般用于生成字幕的场景。
+    """單句的詳細識别結果，包含單個詞的時間偏移，一般用于生成字幕的場景。
 
     """
 
     def __init__(self):
         """
-        :param FinalSentence: 单句最终识别结果
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FinalSentence: 單句最終識别結果
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FinalSentence: str
-        :param SliceSentence: 单句中间识别结果，使用空格拆分为多个词
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SliceSentence: 單句中間識别結果，使用空格拆分爲多個詞
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SliceSentence: str
-        :param StartMs: 单句开始时间（毫秒）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StartMs: 單句開始時間（毫秒）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StartMs: int
-        :param EndMs: 单句结束时间（毫秒）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EndMs: 單句結束時間（毫秒）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EndMs: int
-        :param WordsNum: 单句中词个数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param WordsNum: 單句中詞個數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type WordsNum: int
-        :param Words: 单句中词详情
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Words: 單句中詞詳情
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Words: list of SentenceWords
         """
         self.FinalSentence = None
@@ -443,41 +443,41 @@ class SentenceDetail(AbstractModel):
 
 
 class SentenceRecognitionRequest(AbstractModel):
-    """SentenceRecognition请求参数结构体
+    """SentenceRecognition請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
+        :param ProjectId: Top Cloud 項目 ID，可填 0，總長度不超過 1024 位元。
         :type ProjectId: int
-        :param SubServiceType: 子服务类型。2： 一句话识别。
+        :param SubServiceType: 子服務類型。2： 一句話識别。
         :type SubServiceType: int
-        :param EngSerViceType: 引擎模型类型。
-8k_zh：电话 8k 中文普通话通用；
-16k_zh：16k 中文普通话通用；
-16k_en：16k 英语；
-16k_ca：16k 粤语。
+        :param EngSerViceType: 引擎模型類型。
+8k_zh：電話 8k 中文普通話通用；
+16k_zh：16k 中文普通話通用；
+16k_en：16k 英語；
+16k_ca：16k 粵語。
         :type EngSerViceType: str
-        :param SourceType: 语音数据来源。0：语音 URL；1：语音数据（post body）。
+        :param SourceType: 語音數據來源。0：語音 URL；1：語音數據（post body）。
         :type SourceType: int
-        :param VoiceFormat: 识别音频的音频格式。mp3、wav。
+        :param VoiceFormat: 識别音訊的音訊格式。mp3、wav。
         :type VoiceFormat: str
-        :param UsrAudioKey: 用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
+        :param UsrAudioKey: 用戶端對此任務的唯一标識，用戶自助生成，用于用戶查找識别結果。
         :type UsrAudioKey: str
-        :param Url: 语音 URL，公网可下载。当 SourceType 值为 0（语音 URL上传） 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时间长度要小于60s。
+        :param Url: 語音 URL，公網可下載。當 SourceType 值爲 0（語音 URL上傳） 時須填寫該欄位，爲 1 時不填；URL 的長度大于 0，小於 2048，需進行urlencode編碼。音訊時間長度要小於60s。
         :type Url: str
-        :param Data: 语音数据，当SourceType 值为1（本地语音数据上传）时必须填写，当SourceType 值为0（语音 URL上传）可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于600KB。
+        :param Data: 語音數據，當SourceType 值爲1（本地語音數據上傳）時必須填寫，當SourceType 值爲0（語音 URL上傳）可不寫。要使用base64編碼(采用python語言時注意讀取文件應該爲string而不是byte，以byte格式讀取後要decode()。編碼後的數據不可帶有回車換行符)。音訊數據要小於600KB。
         :type Data: str
-        :param DataLen: 数据长度，单位为字节。当 SourceType 值为1（本地语音数据上传）时必须填写，当 SourceType 值为0（语音 URL上传）可不写（此数据长度为数据未进行base64编码时的数据长度）。
+        :param DataLen: 數據長度，單位爲位元。當 SourceType 值爲1（本地語音數據上傳）時必須填寫，當 SourceType 值爲0（語音 URL上傳）可不寫（此數據長度爲數據未進行base64編碼時的數據長度）。
         :type DataLen: int
-        :param HotwordId: 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+        :param HotwordId: 熱詞id。用于調用對應的熱詞表，如果在調用語音識别服務時，不進行單獨的熱詞id設置，自動生效預設熱詞；如果進行了單獨的熱詞id設置，那麽将生效單獨設置的熱詞id。
         :type HotwordId: str
-        :param FilterDirty: 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
+        :param FilterDirty: 是否過濾髒詞（目前支援中文普通話引擎）。0：不過濾髒詞；1：過濾髒詞；2：将髒詞替換爲 * 。
         :type FilterDirty: int
-        :param FilterModal: 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
+        :param FilterModal: 是否過語氣詞（目前支援中文普通話引擎）。0：不過濾語氣詞；1：部分過濾；2：嚴格過濾 。
         :type FilterModal: int
-        :param FilterPunc: 是否过滤句末的句号（目前支持中文普通话引擎）。0：不过滤句末的句号；1：过滤句末的句号。
+        :param FilterPunc: 是否過濾句末的句号（目前支援中文普通話引擎）。0：不過濾句末的句号；1：過濾句末的句号。
         :type FilterPunc: int
         """
         self.ProjectId = None
@@ -512,15 +512,15 @@ class SentenceRecognitionRequest(AbstractModel):
 
 
 class SentenceRecognitionResponse(AbstractModel):
-    """SentenceRecognition返回参数结构体
+    """SentenceRecognition返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 识别结果。
+        :param Result: 識别結果。
         :type Result: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -533,20 +533,20 @@ class SentenceRecognitionResponse(AbstractModel):
 
 
 class SentenceWords(AbstractModel):
-    """识别结果中词文本，以及对应时间偏移
+    """識别結果中詞文本，以及對應時間偏移
 
     """
 
     def __init__(self):
         """
-        :param Word: 词文本
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Word: 詞文本
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Word: str
-        :param OffsetStartMs: 在句子中的开始时间偏移量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OffsetStartMs: 在句子中的開始時間偏移量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OffsetStartMs: int
-        :param OffsetEndMs: 在句子中的结束时间偏移量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OffsetEndMs: 在句子中的結束時間偏移量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OffsetEndMs: int
         """
         self.Word = None
@@ -561,15 +561,15 @@ class SentenceWords(AbstractModel):
 
 
 class SetVocabStateRequest(AbstractModel):
-    """SetVocabState请求参数结构体
+    """SetVocabState請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabId: 热词表ID。
+        :param VocabId: 熱詞表ID。
         :type VocabId: str
-        :param State: 热词表状态，1：设为默认状态；0：设为非默认状态。
+        :param State: 熱詞表狀态，1：設爲預設狀态；0：設爲非預設狀态。
         :type State: int
         """
         self.VocabId = None
@@ -582,15 +582,15 @@ class SetVocabStateRequest(AbstractModel):
 
 
 class SetVocabStateResponse(AbstractModel):
-    """SetVocabState返回参数结构体
+    """SetVocabState返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabId: 热词表ID
+        :param VocabId: 熱詞表ID
         :type VocabId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.VocabId = None
@@ -603,13 +603,13 @@ class SetVocabStateResponse(AbstractModel):
 
 
 class Task(AbstractModel):
-    """录音文件识别请求的返回数据
+    """錄音文件識别請求的返回數據
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务ID，可通过此ID在轮询接口获取识别状态与结果
+        :param TaskId: 任務ID，可通過此ID在輪詢介面獲取識别狀态與結果
         :type TaskId: int
         """
         self.TaskId = None
@@ -620,24 +620,24 @@ class Task(AbstractModel):
 
 
 class TaskStatus(AbstractModel):
-    """获取录音识别结果结果的返回参数
+    """獲取錄音識别結果結果的返回參數
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务标识。
+        :param TaskId: 任務标識。
         :type TaskId: int
-        :param Status: 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
+        :param Status: 任務狀态碼，0：任務等待，1：任務執行中，2：任務成功，3：任務失敗。
         :type Status: int
-        :param StatusStr: 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
+        :param StatusStr: 任務狀态，waiting：任務等待，doing：任務執行中，success：任務成功，failed：任務失敗。
         :type StatusStr: str
-        :param Result: 识别结果。
+        :param Result: 識别結果。
         :type Result: str
-        :param ErrorMsg: 失败原因说明。
+        :param ErrorMsg: 失敗原因說明。
         :type ErrorMsg: str
-        :param ResultDetail: 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResultDetail: 識别結果詳情，包含每個句子中的詞時間偏移，一般用于生成字幕的場景。(錄音識别請求中ResTextFormat=1時該欄位不爲空)
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResultDetail: list of SentenceDetail
         """
         self.TaskId = None
@@ -663,22 +663,22 @@ class TaskStatus(AbstractModel):
 
 
 class UpdateAsrVocabRequest(AbstractModel):
-    """UpdateAsrVocab请求参数结构体
+    """UpdateAsrVocab請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabId: 热词表ID
+        :param VocabId: 熱詞表ID
         :type VocabId: str
-        :param Name: 热词表名称
+        :param Name: 熱詞表名稱
         :type Name: str
-        :param WordWeights: 词权重数组，包含全部的热词和对应的权重。每个热词的长度不大于10，权重为[1,10]之间整数，数组长度不大于128
+        :param WordWeights: 詞權重數組，包含全部的熱詞和對應的權重。每個熱詞的長度不大于10，權重爲[1,10]之間整數，數組長度不大于128
         :type WordWeights: list of HotWord
-        :param WordWeightStr: 词权重文件（纯文本文件）的二进制base64编码，以行分隔，每行的格式为word|weight，即以英文符号|为分割，左边为词，右边为权重，如：你好|5。
-当用户传此参数（参数长度大于0），即以此参数解析词权重，WordWeights会被忽略
+        :param WordWeightStr: 詞權重文件（純文本文件）的二進制base64編碼，以行分隔，每行的格式爲word|weight，即以英文符号|爲分割，左邊爲詞，右邊爲權重，如：你好|5。
+當用戶傳此參數（參數長度大于0），即以此參數解析詞權重，WordWeights會被忽略
         :type WordWeightStr: str
-        :param Description: 热词表描述
+        :param Description: 熱詞表描述
         :type Description: str
         """
         self.VocabId = None
@@ -702,15 +702,15 @@ class UpdateAsrVocabRequest(AbstractModel):
 
 
 class UpdateAsrVocabResponse(AbstractModel):
-    """UpdateAsrVocab返回参数结构体
+    """UpdateAsrVocab返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VocabId: 热词表ID
+        :param VocabId: 熱詞表ID
         :type VocabId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.VocabId = None
@@ -723,25 +723,25 @@ class UpdateAsrVocabResponse(AbstractModel):
 
 
 class Vocab(AbstractModel):
-    """词表内容
+    """詞表内容
 
     """
 
     def __init__(self):
         """
-        :param Name: 热词表名称
+        :param Name: 熱詞表名稱
         :type Name: str
-        :param Description: 热词表描述
+        :param Description: 熱詞表描述
         :type Description: str
-        :param VocabId: 热词表ID
+        :param VocabId: 熱詞表ID
         :type VocabId: str
-        :param WordWeights: 词权重列表
+        :param WordWeights: 詞權重清單
         :type WordWeights: list of HotWord
-        :param CreateTime: 词表创建时间
+        :param CreateTime: 詞表創建時間
         :type CreateTime: str
-        :param UpdateTime: 词表更新时间
+        :param UpdateTime: 詞表更新時間
         :type UpdateTime: str
-        :param State: 热词表状态，1为默认状态即在识别时默认加载该热词表进行识别，0为初始状态
+        :param State: 熱詞表狀态，1爲預設狀态即在識别時預設加載該熱詞表進行識别，0爲初始狀态
         :type State: int
         """
         self.Name = None

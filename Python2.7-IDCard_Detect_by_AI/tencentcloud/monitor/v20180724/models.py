@@ -17,17 +17,17 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class DataPoint(AbstractModel):
-    """监控数据点
+    """監控數據點
 
     """
 
     def __init__(self):
         """
-        :param Dimensions: 实例对象维度组合
+        :param Dimensions: 實例對象維度組合
         :type Dimensions: list of Dimension
-        :param Timestamps: 时间戳数组，表示那些时间点有数据，缺失的时间戳，没有数据点，可以理解为掉点了
+        :param Timestamps: 時間戳數組，表示那些時間點有數據，缺失的時間戳，沒有數據點，可以理解爲掉點了
         :type Timestamps: list of float
-        :param Values: 监控值数组，该数组和Timestamps一一对应
+        :param Values: 監控值數組，該數組和Timestamps一一對應
         :type Values: list of float
         """
         self.Dimensions = None
@@ -47,13 +47,13 @@ class DataPoint(AbstractModel):
 
 
 class DescribeBaseMetricsRequest(AbstractModel):
-    """DescribeBaseMetrics请求参数结构体
+    """DescribeBaseMetrics請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Namespace: 业务命名空间
+        :param Namespace: 業務命名空間
         :type Namespace: str
         :param MetricName: 指标名
         :type MetricName: str
@@ -68,15 +68,15 @@ class DescribeBaseMetricsRequest(AbstractModel):
 
 
 class DescribeBaseMetricsResponse(AbstractModel):
-    """DescribeBaseMetrics返回参数结构体
+    """DescribeBaseMetrics返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MetricSet: 查询得到的指标描述列表
+        :param MetricSet: 查詢得到的指标描述清單
         :type MetricSet: list of MetricSet
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.MetricSet = None
@@ -94,15 +94,15 @@ class DescribeBaseMetricsResponse(AbstractModel):
 
 
 class Dimension(AbstractModel):
-    """实例对象的维度组合
+    """實例對象的維度組合
 
     """
 
     def __init__(self):
         """
-        :param Name: 实例维度名称
+        :param Name: 實例維度名稱
         :type Name: str
-        :param Value: 实例维度值
+        :param Value: 實例維度值
         :type Value: str
         """
         self.Name = None
@@ -115,13 +115,13 @@ class Dimension(AbstractModel):
 
 
 class DimensionsDesc(AbstractModel):
-    """维度信息
+    """維度訊息
 
     """
 
     def __init__(self):
         """
-        :param Dimensions: 维度名数组
+        :param Dimensions: 維度名數組
         :type Dimensions: list of str
         """
         self.Dimensions = None
@@ -132,23 +132,23 @@ class DimensionsDesc(AbstractModel):
 
 
 class GetMonitorDataRequest(AbstractModel):
-    """GetMonitorData请求参数结构体
+    """GetMonitorData請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Namespace: 命名空间，每个云产品会有一个命名空间
+        :param Namespace: 命名空間，每個雲産品會有一個命名空間
         :type Namespace: str
-        :param MetricName: 指标名称，各个云产品的详细指标说明请参阅各个产品[监控接口](https://cloud.tencent.com/document/product/248/30384)文档
+        :param MetricName: 指标名稱，各個雲産品的詳細指标說明請參閱各個産品[監控介面](https://cloud.tencent.com/document/product/248/30384)文件
         :type MetricName: str
-        :param Instances: 实例对象的维度组合
+        :param Instances: 實例對象的維度組合
         :type Instances: list of Instance
-        :param Period: 监控统计周期。默认为取值为300，单位为s
+        :param Period: 監控統計週期。預設爲取值爲300，單位爲s
         :type Period: int
-        :param StartTime: 起始时间，如2018-09-22T19:51:23+08:00
+        :param StartTime: 起始時間，如2018-09-22T19:51:23+08:00
         :type StartTime: str
-        :param EndTime: 结束时间，默认为当前时间。 EndTime不能小于EtartTime
+        :param EndTime: 結束時間，預設爲當前時間。 EndTime不能小於EtartTime
         :type EndTime: str
         """
         self.Namespace = None
@@ -174,23 +174,23 @@ class GetMonitorDataRequest(AbstractModel):
 
 
 class GetMonitorDataResponse(AbstractModel):
-    """GetMonitorData返回参数结构体
+    """GetMonitorData返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Period: 统计周期
+        :param Period: 統計週期
         :type Period: int
         :param MetricName: 指标名
         :type MetricName: str
-        :param DataPoints: 数据点数组
+        :param DataPoints: 數據點數組
         :type DataPoints: list of DataPoint
-        :param StartTime: 开始时间
+        :param StartTime: 開始時間
         :type StartTime: str
-        :param EndTime: 结束时间
+        :param EndTime: 結束時間
         :type EndTime: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Period = None
@@ -216,13 +216,13 @@ class GetMonitorDataResponse(AbstractModel):
 
 
 class Instance(AbstractModel):
-    """实例维度组合数组
+    """實例維度組合數組
 
     """
 
     def __init__(self):
         """
-        :param Dimensions: 实例的维度组合
+        :param Dimensions: 實例的維度組合
         :type Dimensions: list of Dimension
         """
         self.Dimensions = None
@@ -238,15 +238,15 @@ class Instance(AbstractModel):
 
 
 class MetricObjectMeaning(AbstractModel):
-    """指标数据的解释
+    """指标數據的解釋
 
     """
 
     def __init__(self):
         """
-        :param En: 指标英文解释
+        :param En: 指标英文解釋
         :type En: str
-        :param Zh: 指标中文解释
+        :param Zh: 指标中文解釋
         :type Zh: str
         """
         self.En = None
@@ -259,27 +259,27 @@ class MetricObjectMeaning(AbstractModel):
 
 
 class MetricSet(AbstractModel):
-    """对业务指标的单位及支持统计周期的描述
+    """對業務指标的單位及支援統計週期的描述
 
     """
 
     def __init__(self):
         """
-        :param Namespace: 命名空间，每个云产品会有一个命名空间
+        :param Namespace: 命名空間，每個雲産品會有一個命名空間
         :type Namespace: str
-        :param MetricName: 指标名称
+        :param MetricName: 指标名稱
         :type MetricName: str
-        :param Unit: 指标使用的单位
+        :param Unit: 指标使用的單位
         :type Unit: str
-        :param UnitCname: 指标使用的单位
+        :param UnitCname: 指标使用的單位
         :type UnitCname: str
-        :param Period: 指标支持的统计周期，单位是秒，如60、300
+        :param Period: 指标支援的統計週期，單位是秒，如60、300
         :type Period: list of int
-        :param Periods: 统计周期内指标方式
+        :param Periods: 統計週期内指标方式
         :type Periods: list of PeriodsSt
-        :param Meaning: 统计指标含义解释
+        :param Meaning: 統計指标含義解釋
         :type Meaning: :class:`tencentcloud.monitor.v20180724.models.MetricObjectMeaning`
-        :param Dimensions: 维度描述信息
+        :param Dimensions: 維度描述訊息
         :type Dimensions: list of DimensionsDesc
         """
         self.Namespace = None
@@ -316,7 +316,7 @@ class MetricSet(AbstractModel):
 
 
 class PeriodsSt(AbstractModel):
-    """周期内的统计方式
+    """週期内的統計方式
 
     """
 
@@ -324,7 +324,7 @@ class PeriodsSt(AbstractModel):
         """
         :param Period: 周期
         :type Period: str
-        :param StatType: 统计方式
+        :param StatType: 統計方式
         :type StatType: list of str
         """
         self.Period = None

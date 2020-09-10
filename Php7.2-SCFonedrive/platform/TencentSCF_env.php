@@ -108,7 +108,7 @@ function setConfig($arr, $disktag = '')
         if ($disktag_s!='') $tmp['disktag'] = substr($disktag_s, 0, -1);
         else $tmp['disktag'] = '';
     }
-//    echo '正式设置：'.json_encode($tmp,JSON_PRETTY_PRINT).'
+//    echo '正式設置：'.json_encode($tmp,JSON_PRETTY_PRINT).'
 //';
     $response = updateEnvironment($tmp, $_SERVER['function_name'], $_SERVER['Region'], $_SERVER['namespace'], getConfig('SecretId'), getConfig('SecretKey'));
     WaitSCFStat();
@@ -272,7 +272,7 @@ function ReorganizeDate($arr)
     foreach ($arr as $k1 => $v1) {
         $str .= '&' . $k1 . '=' . $v1;
     }
-    $str = substr($str, 1); // remove first '&'. 去掉第一个&
+    $str = substr($str, 1); // remove first '&'. 去掉第一個&
     return $str;
 }
 

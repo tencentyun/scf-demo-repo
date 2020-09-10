@@ -17,21 +17,21 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class Block(AbstractModel):
-    """区块对象
+    """區塊對象
 
     """
 
     def __init__(self):
         """
-        :param BlockNum: 区块编号
+        :param BlockNum: 區塊編号
         :type BlockNum: int
-        :param DataHash: 区块Hash数值
+        :param DataHash: 區塊Hash數值
         :type DataHash: str
-        :param BlockId: 区块ID，与区块编号一直
+        :param BlockId: 區塊ID，與區塊編号一直
         :type BlockId: int
-        :param PreHash: 前一个区块Hash（未使用）,与区块Hash数值一直
+        :param PreHash: 前一個區塊Hash（未使用）,與區塊Hash數值一直
         :type PreHash: str
-        :param TxCount: 区块内的交易数量
+        :param TxCount: 區塊内的交易數量
         :type TxCount: int
         """
         self.BlockNum = None
@@ -50,29 +50,29 @@ class Block(AbstractModel):
 
 
 class GetBlockListRequest(AbstractModel):
-    """GetBlockList请求参数结构体
+    """GetBlockList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名称，固定字段：block
+        :param Module: 模組名稱，固定欄位：block
         :type Module: str
-        :param Operation: 操作名称，固定字段：block_list
+        :param Operation: 操作名稱，固定欄位：block_list
         :type Operation: str
-        :param ChannelId: 通道ID，固定字段：0
+        :param ChannelId: 通道ID，固定欄位：0
         :type ChannelId: int
-        :param GroupId: 组织ID，固定字段：0
+        :param GroupId: 組織ID，固定欄位：0
         :type GroupId: int
-        :param ChannelName: 需要查询的通道名称，可在通道详情或列表中获取
+        :param ChannelName: 需要查詢的通道名稱，可在通道詳情或清單中獲取
         :type ChannelName: str
-        :param GroupName: 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
+        :param GroupName: 調用介面的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
-        :param ClusterId: 区块链网络ID，可在区块链网络详情或列表中获取
+        :param ClusterId: 區塊鏈網絡ID，可在區塊鏈網絡詳情或清單中獲取
         :type ClusterId: str
-        :param Offset: 需要获取的起始交易偏移
+        :param Offset: 需要獲取的起始交易偏移
         :type Offset: int
-        :param Limit: 需要获取的交易数量
+        :param Limit: 需要獲取的交易數量
         :type Limit: int
         """
         self.Module = None
@@ -99,17 +99,17 @@ class GetBlockListRequest(AbstractModel):
 
 
 class GetBlockListResponse(AbstractModel):
-    """GetBlockList返回参数结构体
+    """GetBlockList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 区块数量
+        :param TotalCount: 區塊數量
         :type TotalCount: int
-        :param BlockList: 区块列表
+        :param BlockList: 區塊清單
         :type BlockList: list of Block
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -129,21 +129,21 @@ class GetBlockListResponse(AbstractModel):
 
 
 class GetClusterSummaryRequest(AbstractModel):
-    """GetClusterSummary请求参数结构体
+    """GetClusterSummary請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名称，固定字段：cluster_mng
+        :param Module: 模組名稱，固定欄位：cluster_mng
         :type Module: str
-        :param Operation: 操作名称，固定字段：cluster_summary
+        :param Operation: 操作名稱，固定欄位：cluster_summary
         :type Operation: str
-        :param ClusterId: 区块链网络ID，可在区块链网络详情或列表中获取
+        :param ClusterId: 區塊鏈網絡ID，可在區塊鏈網絡詳情或清單中獲取
         :type ClusterId: str
-        :param GroupId: 组织ID，固定字段：0
+        :param GroupId: 組織ID，固定欄位：0
         :type GroupId: int
-        :param GroupName: 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
+        :param GroupName: 調用介面的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
         """
         self.Module = None
@@ -162,53 +162,53 @@ class GetClusterSummaryRequest(AbstractModel):
 
 
 class GetClusterSummaryResponse(AbstractModel):
-    """GetClusterSummary返回参数结构体
+    """GetClusterSummary返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalChannelCount: 网络通道总数量
+        :param TotalChannelCount: 網絡通道總數量
         :type TotalChannelCount: int
-        :param MyChannelCount: 当前组织创建的通道数量
+        :param MyChannelCount: 當前組織創建的通道數量
         :type MyChannelCount: int
-        :param OtherChannelCount: 其组织创建的通道数量
+        :param OtherChannelCount: 其組織創建的通道數量
         :type OtherChannelCount: int
-        :param JoinChannelCount: 当前组织加入的通道数量
+        :param JoinChannelCount: 當前組織加入的通道數量
         :type JoinChannelCount: int
-        :param NoneChannelCount: 与当前组织无关的通道数量
+        :param NoneChannelCount: 與當前組織無關的通道數量
         :type NoneChannelCount: int
-        :param TotalPeerCount: 网络节点总数量
+        :param TotalPeerCount: 網絡節點總數量
         :type TotalPeerCount: int
-        :param MyPeerCount: 当前组织创建的节点数量
+        :param MyPeerCount: 當前組織創建的節點數量
         :type MyPeerCount: int
-        :param OtherPeerCount: 其他组织创建的节点数量
+        :param OtherPeerCount: 其他組織創建的節點數量
         :type OtherPeerCount: int
-        :param TotalGroupCount: 网络组织总数量
+        :param TotalGroupCount: 網絡組織總數量
         :type TotalGroupCount: int
-        :param MyGroupCount: 当前组织创建的组织数量
+        :param MyGroupCount: 當前組織創建的組織數量
         :type MyGroupCount: int
-        :param OtherGroupCount: 其他组织创建的组织数量
+        :param OtherGroupCount: 其他組織創建的組織數量
         :type OtherGroupCount: int
-        :param TotalChaincodeCount: 网络智能合约总数量
+        :param TotalChaincodeCount: 網絡智慧合約總數量
         :type TotalChaincodeCount: int
-        :param RecentChaincodeCount: 最近7天发起的智能合约数量
+        :param RecentChaincodeCount: 最近7天發起的智慧合約數量
         :type RecentChaincodeCount: int
-        :param MyChaincodeCount: 当前组织发起的智能合约数量
+        :param MyChaincodeCount: 當前組織發起的智慧合約數量
         :type MyChaincodeCount: int
-        :param OtherChaincodeCount: 其组织发起的智能合约数量
+        :param OtherChaincodeCount: 其組織發起的智慧合約數量
         :type OtherChaincodeCount: int
-        :param TotalCertCount: 当前组织的证书总数量
+        :param TotalCertCount: 當前組織的證書總數量
         :type TotalCertCount: int
-        :param TlsCertCount: 颁发给当前组织的证书数量
+        :param TlsCertCount: 頒發給當前組織的證書數量
         :type TlsCertCount: int
-        :param PeerCertCount: 网络背书节点证书数量
+        :param PeerCertCount: 網絡背書節點證書數量
         :type PeerCertCount: int
-        :param OrderCertCount: 网络排序节点证书数量
+        :param OrderCertCount: 網絡排序節點證書數量
         :type OrderCertCount: int
-        :param ClientCertCount: 当前组织业务证书数量
+        :param ClientCertCount: 當前組織業務證書數量
         :type ClientCertCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalChannelCount = None
@@ -259,27 +259,27 @@ class GetClusterSummaryResponse(AbstractModel):
 
 
 class GetInvokeTxRequest(AbstractModel):
-    """GetInvokeTx请求参数结构体
+    """GetInvokeTx請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：transaction
+        :param Module: 模組名，固定欄位：transaction
         :type Module: str
-        :param Operation: 操作名，固定字段：query_txid
+        :param Operation: 操作名，固定欄位：query_txid
         :type Operation: str
-        :param ClusterId: 区块链网络ID，可在区块链网络详情或列表中获取
+        :param ClusterId: 區塊鏈網絡ID，可在區塊鏈網絡詳情或清單中獲取
         :type ClusterId: str
-        :param ChannelName: 业务所属通道名称，可在通道详情或列表中获取
+        :param ChannelName: 業務所屬通道名稱，可在通道詳情或清單中獲取
         :type ChannelName: str
-        :param PeerName: 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+        :param PeerName: 執行該查詢交易的節點名稱，可以在通道詳情中獲取該通道上的節點名稱極其所屬組織名稱
         :type PeerName: str
-        :param PeerGroup: 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+        :param PeerGroup: 執行該查詢交易的節點所屬組織名稱，可以在通道詳情中獲取該通道上的節點名稱極其所屬組織名稱
         :type PeerGroup: str
         :param TxId: 交易ID
         :type TxId: str
-        :param GroupName: 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+        :param GroupName: 調用合約的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
         """
         self.Module = None
@@ -304,19 +304,19 @@ class GetInvokeTxRequest(AbstractModel):
 
 
 class GetInvokeTxResponse(AbstractModel):
-    """GetInvokeTx返回参数结构体
+    """GetInvokeTx返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TxValidationCode: 交易执行状态码
+        :param TxValidationCode: 交易執行狀态碼
         :type TxValidationCode: int
-        :param TxValidationMsg: 交易执行消息
+        :param TxValidationMsg: 交易執行訊息
         :type TxValidationMsg: str
-        :param BlockId: 交易所在区块ID
+        :param BlockId: 交易所在區塊ID
         :type BlockId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TxValidationCode = None
@@ -333,31 +333,31 @@ class GetInvokeTxResponse(AbstractModel):
 
 
 class GetLatesdTransactionListRequest(AbstractModel):
-    """GetLatesdTransactionList请求参数结构体
+    """GetLatesdTransactionList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名称，固定字段：transaction
+        :param Module: 模組名稱，固定欄位：transaction
         :type Module: str
-        :param Operation: 操作名称，固定字段：latest_transaction_list
+        :param Operation: 操作名稱，固定欄位：latest_transaction_list
         :type Operation: str
-        :param GroupId: 组织ID，固定字段：0
+        :param GroupId: 組織ID，固定欄位：0
         :type GroupId: int
-        :param ChannelId: 通道ID，固定字段：0
+        :param ChannelId: 通道ID，固定欄位：0
         :type ChannelId: int
-        :param LatestBlockNumber: 获取的最新交易的区块数量，取值范围1~5
+        :param LatestBlockNumber: 獲取的最新交易的區塊數量，取值範圍1~5
         :type LatestBlockNumber: int
-        :param GroupName: 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
+        :param GroupName: 調用介面的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
-        :param ChannelName: 需要查询的通道名称，可在通道详情或列表中获取
+        :param ChannelName: 需要查詢的通道名稱，可在通道詳情或清單中獲取
         :type ChannelName: str
-        :param ClusterId: 区块链网络ID，可在区块链网络详情或列表中获取
+        :param ClusterId: 區塊鏈網絡ID，可在區塊鏈網絡詳情或清單中獲取
         :type ClusterId: str
-        :param Offset: 需要获取的起始交易偏移
+        :param Offset: 需要獲取的起始交易偏移
         :type Offset: int
-        :param Limit: 需要获取的交易数量
+        :param Limit: 需要獲取的交易數量
         :type Limit: int
         """
         self.Module = None
@@ -386,17 +386,17 @@ class GetLatesdTransactionListRequest(AbstractModel):
 
 
 class GetLatesdTransactionListResponse(AbstractModel):
-    """GetLatesdTransactionList返回参数结构体
+    """GetLatesdTransactionList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 交易总数量
+        :param TotalCount: 交易總數量
         :type TotalCount: int
-        :param TransactionList: 交易列表
+        :param TransactionList: 交易清單
         :type TransactionList: list of TransactionItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -416,31 +416,31 @@ class GetLatesdTransactionListResponse(AbstractModel):
 
 
 class InvokeRequest(AbstractModel):
-    """Invoke请求参数结构体
+    """Invoke請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：transaction
+        :param Module: 模組名，固定欄位：transaction
         :type Module: str
-        :param Operation: 操作名，固定字段：invoke
+        :param Operation: 操作名，固定欄位：invoke
         :type Operation: str
-        :param ClusterId: 区块链网络ID，可在区块链网络详情或列表中获取
+        :param ClusterId: 區塊鏈網絡ID，可在區塊鏈網絡詳情或清單中獲取
         :type ClusterId: str
-        :param ChaincodeName: 业务所属智能合约名称，可在智能合约详情或列表中获取
+        :param ChaincodeName: 業務所屬智慧合約名稱，可在智慧合約詳情或清單中獲取
         :type ChaincodeName: str
-        :param ChannelName: 业务所属通道名称，可在通道详情或列表中获取
+        :param ChannelName: 業務所屬通道名稱，可在通道詳情或清單中獲取
         :type ChannelName: str
-        :param Peers: 对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
+        :param Peers: 對該筆交易進行背書的節點清單（包括節點名稱和節點所屬組織名稱，詳見數據結構一節），可以在通道詳情中獲取該通道上的節點名稱極其所屬組織名稱
         :type Peers: list of PeerSet
-        :param FuncName: 该笔交易需要调用的智能合约中的函数名称
+        :param FuncName: 該筆交易需要調用的智慧合約中的函數名稱
         :type FuncName: str
-        :param GroupName: 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+        :param GroupName: 調用合約的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
-        :param Args: 被调用的函数参数列表
+        :param Args: 被調用的函數參數清單
         :type Args: list of str
-        :param AsyncFlag: 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
+        :param AsyncFlag: 同步調用标識，可選參數，值爲0或者不傳表示使用同步方法調用，調用後會等待交易執行後再返回執行結果；值爲1時表示使用異步方式調用Invoke，執行後會立即返回交易對應的Txid，後續需要通過GetInvokeTx這個API查詢該交易的執行結果。（對于邏輯較爲簡單的交易，可以使用同步模式；對于邏輯較爲複雜的交易，建議使用異步模式，否則容易導緻API因等待時間過長，返回等待超時）
         :type AsyncFlag: int
         """
         self.Module = None
@@ -474,7 +474,7 @@ class InvokeRequest(AbstractModel):
 
 
 class InvokeResponse(AbstractModel):
-    """Invoke返回参数结构体
+    """Invoke返回參數結構體
 
     """
 
@@ -482,9 +482,9 @@ class InvokeResponse(AbstractModel):
         """
         :param Txid: 交易ID
         :type Txid: str
-        :param Events: 交易执行结果
+        :param Events: 交易執行結果
         :type Events: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Txid = None
@@ -505,9 +505,9 @@ class PeerSet(AbstractModel):
 
     def __init__(self):
         """
-        :param PeerName: 节点名称
+        :param PeerName: 節點名稱
         :type PeerName: str
-        :param OrgName: 组织名称
+        :param OrgName: 組織名稱
         :type OrgName: str
         """
         self.PeerName = None
@@ -520,29 +520,29 @@ class PeerSet(AbstractModel):
 
 
 class QueryRequest(AbstractModel):
-    """Query请求参数结构体
+    """Query請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：transaction
+        :param Module: 模組名，固定欄位：transaction
         :type Module: str
-        :param Operation: 操作名，固定字段：query
+        :param Operation: 操作名，固定欄位：query
         :type Operation: str
-        :param ClusterId: 区块链网络ID，可在区块链网络详情或列表中获取
+        :param ClusterId: 區塊鏈網絡ID，可在區塊鏈網絡詳情或清單中獲取
         :type ClusterId: str
-        :param ChaincodeName: 业务所属智能合约名称，可在智能合约详情或列表中获取
+        :param ChaincodeName: 業務所屬智慧合約名稱，可在智慧合約詳情或清單中獲取
         :type ChaincodeName: str
-        :param ChannelName: 业务所属通道名称，可在通道详情或列表中获取
+        :param ChannelName: 業務所屬通道名稱，可在通道詳情或清單中獲取
         :type ChannelName: str
-        :param Peers: 执行该查询交易的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
+        :param Peers: 執行該查詢交易的節點清單（包括節點名稱和節點所屬組織名稱，詳見數據結構一節），可以在通道詳情中獲取該通道上的節點名稱極其所屬組織名稱
         :type Peers: list of PeerSet
-        :param FuncName: 该笔交易查询需要调用的智能合约中的函数名称
+        :param FuncName: 該筆交易查詢需要調用的智慧合約中的函數名稱
         :type FuncName: str
-        :param GroupName: 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+        :param GroupName: 調用合約的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
-        :param Args: 被调用的函数参数列表
+        :param Args: 被調用的函數參數清單
         :type Args: list of str
         """
         self.Module = None
@@ -574,15 +574,15 @@ class QueryRequest(AbstractModel):
 
 
 class QueryResponse(AbstractModel):
-    """Query返回参数结构体
+    """Query返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 查询结果数据
+        :param Data: 查詢結果數據
         :type Data: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -595,7 +595,7 @@ class QueryResponse(AbstractModel):
 
 
 class TransactionItem(AbstractModel):
-    """交易列表项信息
+    """交易清單項訊息
 
     """
 
@@ -605,17 +605,17 @@ class TransactionItem(AbstractModel):
         :type TransactionId: str
         :param TransactionHash: 交易hash
         :type TransactionHash: str
-        :param CreateOrgName: 创建交易的组织名
+        :param CreateOrgName: 創建交易的組織名
         :type CreateOrgName: str
-        :param BlockId: 交易所在区块号
+        :param BlockId: 交易所在區塊号
         :type BlockId: int
-        :param TransactionType: 交易类型（普通交易和配置交易）
+        :param TransactionType: 交易類型（普通交易和配置交易）
         :type TransactionType: str
-        :param CreateTime: 交易创建时间
+        :param CreateTime: 交易創建時間
         :type CreateTime: str
-        :param BlockHeight: 交易所在区块高度
+        :param BlockHeight: 交易所在區塊高度
         :type BlockHeight: int
-        :param TransactionStatus: 交易状态
+        :param TransactionStatus: 交易狀态
         :type TransactionStatus: str
         """
         self.TransactionId = None

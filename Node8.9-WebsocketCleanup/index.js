@@ -4,10 +4,10 @@ Node8.9-WebsocketCleanup
 Reference: https://cloud.tencent.com/document/product/583/32553
 ***************************************************/
 
-// The url of API gateway's send back host, API网关的反向推送链接
+// The url of API gateway's send back host, API閘道的反向推送連結
 const sendbackHost = "*******";
 // The information of MySql host, you need to build the database and forms in priority, there are 2 columns: `ConnectionID`, `Date`
-// MySql数据库账号信息,需要提前创建好数据库和表单,表单中新建2列：`ConnectionID`, `Date`
+// MySql資料庫賬号訊息,需要提前創建好資料庫和表單,表單中新建2列：`ConnectionID`, `Date`
 const Host = "**";
 const User = "**";
 const Password = "**";
@@ -107,7 +107,7 @@ exports.main_handler = async (event, context, callback) => {
 
   await deleteConnectionId(connectionID);
 
-  // If breaking down the connection by client, 如果是主动断开连接
+  // If breaking down the connection by client, 如果是主動斷開連接
   // await close(connectionID)
 
   console.log("Finish DB Request", new dayjs().format("YYYY-MM-DD HH:mm:ss"));

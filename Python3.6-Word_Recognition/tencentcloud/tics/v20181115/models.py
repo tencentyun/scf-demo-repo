@@ -17,15 +17,15 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class DescribeDomainInfoRequest(AbstractModel):
-    """DescribeDomainInfo请求参数结构体
+    """DescribeDomainInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Key: 要查询的域名
+        :param Key: 要查詢的域名
         :type Key: str
-        :param Option: 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
+        :param Option: 附加欄位，是否返回上下文。當爲0時不返回上下文，當爲1時返回上下文。
         :type Option: int
         """
         self.Key = None
@@ -38,43 +38,43 @@ class DescribeDomainInfoRequest(AbstractModel):
 
 
 class DescribeDomainInfoResponse(AbstractModel):
-    """DescribeDomainInfo返回参数结构体
+    """DescribeDomainInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ReturnCode: 是否有数据，0代表有数据，1代表没有数据
+        :param ReturnCode: 是否有數據，0代表有數據，1代表沒有數據
         :type ReturnCode: int
-        :param Result: 判定结果，如：black、white、grey
+        :param Result: 判定結果，如：black、white、grey
         :type Result: str
         :param Confidence: 置信度，取值0-100
         :type Confidence: int
-        :param ThreatTypes: 威胁类型。
-botnet = 僵尸网络
-trojan = 木马
-ransomware = 勒索软件
-worm = 蠕虫
+        :param ThreatTypes: 威脅類型。
+botnet = 僵屍網絡
+trojan = 木馬
+ransomware = 勒索軟體
+worm = 蠕蟲
 dga = 域名生成算法
 c2 = c&c
-compromised = 失陷主机
-dynamicIP = 动态IP
+compromised = 失陷主機
+dynamicIP = 動态IP
 proxy = 代理
-idc = idc 机房
-whitelist = 白名单
-tor = 暗网
-miner = 挖矿
-maleware site = 恶意站点
-malware IP = 恶意IP
+idc = idc 機房
+whitelist = 白名單
+tor = 暗網
+miner = 挖礦
+maleware site = 惡意站點
+malware IP = 惡意IP
 等等
         :type ThreatTypes: list of str
-        :param Tags: 恶意标签，对应的团伙，家族等信息。
+        :param Tags: 惡意标簽，對應的團夥，家族等訊息。
         :type Tags: list of TagType
-        :param Intelligences: 对应的历史上的威胁情报事件
+        :param Intelligences: 對應的曆史上的威脅情報事件
         :type Intelligences: list of IntelligenceType
-        :param Context: 情报相关的上下文
+        :param Context: 情報相關的上下文
         :type Context: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ReturnCode = None
@@ -109,15 +109,15 @@ malware IP = 恶意IP
 
 
 class DescribeFileInfoRequest(AbstractModel):
-    """DescribeFileInfo请求参数结构体
+    """DescribeFileInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Key: 要查询文件的MD5
+        :param Key: 要查詢文件的MD5
         :type Key: str
-        :param Option: 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
+        :param Option: 附加欄位，是否返回上下文。當爲0時不返回上下文，當爲1時返回上下文。
         :type Option: int
         """
         self.Key = None
@@ -130,29 +130,29 @@ class DescribeFileInfoRequest(AbstractModel):
 
 
 class DescribeFileInfoResponse(AbstractModel):
-    """DescribeFileInfo返回参数结构体
+    """DescribeFileInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ReturnCode: 是否有数据，0代表有数据，1代表没有数据
+        :param ReturnCode: 是否有數據，0代表有數據，1代表沒有數據
         :type ReturnCode: int
-        :param Result: 判定结果，如：black、white、grey
+        :param Result: 判定結果，如：black、white、grey
         :type Result: str
         :param Confidence: 置信度，取值0-100
         :type Confidence: int
-        :param FileInfo: 文件类型，文件hash
+        :param FileInfo: 文件類型，文件hash
 （md5,sha1,sha256）,文件大小等等文件
-基础信息
+基礎訊息
         :type FileInfo: list of FileInfoType
-        :param Tags: 恶意标签，对应的团伙，家族等信息。
+        :param Tags: 惡意标簽，對應的團夥，家族等訊息。
         :type Tags: list of TagType
-        :param Intelligences: 对应的历史上的威胁情报事件
+        :param Intelligences: 對應的曆史上的威脅情報事件
         :type Intelligences: list of IntelligenceType
-        :param Context: 情报相关的上下文
+        :param Context: 情報相關的上下文
         :type Context: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ReturnCode = None
@@ -192,15 +192,15 @@ class DescribeFileInfoResponse(AbstractModel):
 
 
 class DescribeIpInfoRequest(AbstractModel):
-    """DescribeIpInfo请求参数结构体
+    """DescribeIpInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Key: 要查询的域名
+        :param Key: 要查詢的域名
         :type Key: str
-        :param Option: 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
+        :param Option: 附加欄位，是否返回上下文。當爲0時不返回上下文，當爲1時返回上下文。
         :type Option: int
         """
         self.Key = None
@@ -213,43 +213,43 @@ class DescribeIpInfoRequest(AbstractModel):
 
 
 class DescribeIpInfoResponse(AbstractModel):
-    """DescribeIpInfo返回参数结构体
+    """DescribeIpInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ReturnCode: 是否有数据，0代表有数据，1代表没有数据
+        :param ReturnCode: 是否有數據，0代表有數據，1代表沒有數據
         :type ReturnCode: int
-        :param Result: 判定结果，如：black、white、grey
+        :param Result: 判定結果，如：black、white、grey
         :type Result: str
         :param Confidence: 置信度，取值0-100
         :type Confidence: int
-        :param ThreatTypes: 威胁类型。
-botnet = 僵尸网络
-trojan = 木马
-ransomware = 勒索软件
-worm = 蠕虫
+        :param ThreatTypes: 威脅類型。
+botnet = 僵屍網絡
+trojan = 木馬
+ransomware = 勒索軟體
+worm = 蠕蟲
 dga = 域名生成算法
 c2 = c&c
-compromised = 失陷主机
-dynamicIP = 动态IP
+compromised = 失陷主機
+dynamicIP = 動态IP
 proxy = 代理
-idc = idc 机房
-whitelist = 白名单
-tor = 暗网
-miner = 挖矿
-maleware site = 恶意站点
-malware IP = 恶意IP
+idc = idc 機房
+whitelist = 白名單
+tor = 暗網
+miner = 挖礦
+maleware site = 惡意站點
+malware IP = 惡意IP
 等等
         :type ThreatTypes: list of str
-        :param Tags: 恶意标签，对应的团伙，家族等信息。
+        :param Tags: 惡意标簽，對應的團夥，家族等訊息。
         :type Tags: list of TagType
-        :param Intelligences: 对应的历史上的威胁情报事件
+        :param Intelligences: 對應的曆史上的威脅情報事件
         :type Intelligences: list of IntelligenceType
-        :param Context: 情报相关的上下文
+        :param Context: 情報相關的上下文
         :type Context: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ReturnCode = None
@@ -284,17 +284,17 @@ malware IP = 恶意IP
 
 
 class DescribeThreatInfoRequest(AbstractModel):
-    """DescribeThreatInfo请求参数结构体
+    """DescribeThreatInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Key: 查询对象，域名或IP
+        :param Key: 查詢對象，域名或IP
         :type Key: str
-        :param Type: 查询类型，当前取值为domain或ip
+        :param Type: 查詢類型，當前取值爲domain或ip
         :type Type: str
-        :param Option: 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
+        :param Option: 附加欄位，是否返回上下文。當爲0時不返回上下文，當爲1時返回上下文。
         :type Option: int
         """
         self.Key = None
@@ -309,49 +309,49 @@ class DescribeThreatInfoRequest(AbstractModel):
 
 
 class DescribeThreatInfoResponse(AbstractModel):
-    """DescribeThreatInfo返回参数结构体
+    """DescribeThreatInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ReturnCode: 是否有数据，0代表有数据，1代表没有数据
+        :param ReturnCode: 是否有數據，0代表有數據，1代表沒有數據
         :type ReturnCode: int
-        :param Result: 判定结果，如：black、white、grey
+        :param Result: 判定結果，如：black、white、grey
         :type Result: str
         :param Confidence: 置信度，取值0-100
         :type Confidence: int
-        :param ThreatTypes: 威胁类型。
-botnet = 僵尸网络
-trojan = 木马
-ransomware = 勒索软件
-worm = 蠕虫
+        :param ThreatTypes: 威脅類型。
+botnet = 僵屍網絡
+trojan = 木馬
+ransomware = 勒索軟體
+worm = 蠕蟲
 dga = 域名生成算法
 c2 = c&c
-compromised = 失陷主机
-dynamicIP = 动态IP
+compromised = 失陷主機
+dynamicIP = 動态IP
 proxy = 代理
-idc = idc 机房
-whitelist = 白名单
-tor = 暗网
-miner = 挖矿
-maleware site = 恶意站点
-malware IP = 恶意IP
+idc = idc 機房
+whitelist = 白名單
+tor = 暗網
+miner = 挖礦
+maleware site = 惡意站點
+malware IP = 惡意IP
 等等
         :type ThreatTypes: list of str
-        :param Tags: 恶意标签，对应的团伙，家族等信息。
+        :param Tags: 惡意标簽，對應的團夥，家族等訊息。
         :type Tags: list of str
-        :param Status: 当前状态
-active = 活跃
+        :param Status: 當前狀态
+active = 活躍
 sinkholed = sinkholed
-inactive = 不活跃
+inactive = 不活躍
 unknown = 未知
-expired = 过期
+expired = 過期
         :type Status: str
-        :param Context: 情报相关的上下文，参数option=1 的时候提供
-每个数据默认为3 条
+        :param Context: 情報相關的上下文，參數option=1 的時候提供
+每個數據預設爲3 條
         :type Context: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ReturnCode = None
@@ -376,25 +376,25 @@ expired = 过期
 
 
 class FileInfoType(AbstractModel):
-    """文件信息类型
+    """文件訊息類型
 
     """
 
     def __init__(self):
         """
-        :param DetectId: 判定渠道
+        :param DetectId: 判定管道
         :type DetectId: str
-        :param DetectPriority: 检测优先级
+        :param DetectPriority: 檢測優先級
         :type DetectPriority: str
-        :param EnginePriority: 引擎优先级
+        :param EnginePriority: 引擎優先級
         :type EnginePriority: str
-        :param FileExist: 样本是否存在
+        :param FileExist: 樣本是否存在
         :type FileExist: str
-        :param FileForceUpload: 文件上传
+        :param FileForceUpload: 文件上傳
         :type FileForceUpload: str
         :param FileSize: 文件大小
         :type FileSize: str
-        :param FileupTime: 文件上传时间
+        :param FileupTime: 文件上傳時間
         :type FileupTime: str
         :param FullVirusName: 病毒文件全名
         :type FullVirusName: str
@@ -402,21 +402,21 @@ class FileInfoType(AbstractModel):
         :type IdcPosition: str
         :param Md5Type: 文件md5值
         :type Md5Type: str
-        :param PeExist: PE结构是否存在
+        :param PeExist: PE結構是否存在
         :type PeExist: str
-        :param PeForceUpload: PE结构上传
+        :param PeForceUpload: PE結構上傳
         :type PeForceUpload: str
-        :param SafeLevel: 安全性等级
+        :param SafeLevel: 安全性等級
         :type SafeLevel: str
-        :param ScanModiTime: 扫描时间
+        :param ScanModiTime: 掃描時間
         :type ScanModiTime: str
-        :param SubdetectId: 子判定渠道
+        :param SubdetectId: 子判定管道
         :type SubdetectId: str
         :param UserDefName: 病毒名
         :type UserDefName: str
-        :param VirusType: 病毒类型
+        :param VirusType: 病毒類型
         :type VirusType: str
-        :param WhiteScore: 白名单分数
+        :param WhiteScore: 白名單分數
         :type WhiteScore: str
         """
         self.DetectId = None
@@ -467,11 +467,11 @@ class IntelligenceType(AbstractModel):
 
     def __init__(self):
         """
-        :param Source: 来源
+        :param Source: 來源
         :type Source: str
-        :param Stamp: 标记
+        :param Stamp: 标記
         :type Stamp: str
-        :param Time: 时间
+        :param Time: 時間
         :type Time: int
         """
         self.Source = None
@@ -486,15 +486,15 @@ class IntelligenceType(AbstractModel):
 
 
 class TagType(AbstractModel):
-    """标签及对应的解释
+    """标簽及對應的解釋
 
     """
 
     def __init__(self):
         """
-        :param Tag: 标签
+        :param Tag: 标簽
         :type Tag: str
-        :param Desc: 标签对应的中文解释
+        :param Desc: 标簽對應的中文解釋
         :type Desc: str
         """
         self.Tag = None

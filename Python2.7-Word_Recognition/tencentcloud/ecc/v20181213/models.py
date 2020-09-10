@@ -17,15 +17,15 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class Aspect(AbstractModel):
-    """作文批改每个维度名字与得分
+    """作文批改每個維度名字與得分
 
     """
 
     def __init__(self):
         """
-        :param Name: 项目 名字
+        :param Name: 項目 名字
         :type Name: str
-        :param Score: 该项得分
+        :param Score: 該項得分
         :type Score: float
         """
         self.Name = None
@@ -38,7 +38,7 @@ class Aspect(AbstractModel):
 
 
 class CompostionContext(AbstractModel):
-    """ocr返回的作文文本信息
+    """ocr返回的作文文本訊息
 
     """
 
@@ -55,19 +55,19 @@ class CompostionContext(AbstractModel):
 
 
 class CorrectData(AbstractModel):
-    """批改的结果
+    """批改的結果
 
     """
 
     def __init__(self):
         """
-        :param Score: 总得分
+        :param Score: 總得分
         :type Score: float
-        :param ScoreCat: 各项得分详情
+        :param ScoreCat: 各項得分詳情
         :type ScoreCat: :class:`tencentcloud.ecc.v20181213.models.ScoreCategory`
-        :param Comment: 综合评价
+        :param Comment: 綜合評價
         :type Comment: str
-        :param SentenceComments: 句子点评
+        :param SentenceComments: 句子點評
         :type SentenceComments: list of SentenceCom
         """
         self.Score = None
@@ -91,7 +91,7 @@ class CorrectData(AbstractModel):
 
 
 class ECCRequest(AbstractModel):
-    """ECC请求参数结构体
+    """ECC請求參數結構體
 
     """
 
@@ -99,15 +99,15 @@ class ECCRequest(AbstractModel):
         """
         :param Content: 作文文本，必填
         :type Content: str
-        :param Title: 作文题目，可选参数
+        :param Title: 作文題目，可選參數
         :type Title: str
-        :param Grade: 年级标准， 默认以cet4为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及cet4和cet6 分别表示 英语4级和6级。
+        :param Grade: 年級标準， 預設以cet4爲标準，取值與意義如下：elementary 小學，grade7 grade8 grade9分别對應初一，初二，初三。 grade10 grade11 grade12 分别對應高一，高二，高三，以及cet4和cet6 分别表示 英語4級和6級。
         :type Grade: str
-        :param Outline: 作文提纲，可选参数，作文的写作要求。
+        :param Outline: 作文提綱，可選參數，作文的寫作要求。
         :type Outline: str
-        :param ModelSubject: 范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
+        :param ModelSubject: 範文标題，可選參數，本介面可以依據提供的範文對作文進行評分。
         :type ModelSubject: str
-        :param ModelContent: 范文内容，可选参数，同上，范文的正文部分。
+        :param ModelContent: 範文内容，可選參數，同上，範文的正文部分。
         :type ModelContent: str
         """
         self.Content = None
@@ -128,15 +128,15 @@ class ECCRequest(AbstractModel):
 
 
 class ECCResponse(AbstractModel):
-    """ECC返回参数结构体
+    """ECC返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 整体的批改结果
+        :param Data: 整體的批改結果
         :type Data: :class:`tencentcloud.ecc.v20181213.models.CorrectData`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -151,15 +151,15 @@ class ECCResponse(AbstractModel):
 
 
 class EHOCRRequest(AbstractModel):
-    """EHOCR请求参数结构体
+    """EHOCR請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Image: 图片所在的url或base64编码后的图像数据，依据InputType而定
+        :param Image: 圖片所在的url或base64編碼後的圖像數據，依據InputType而定
         :type Image: str
-        :param InputType: 输出图片类型，0表示Image字段是图片所在的url，1表示Image字段是base64编码后的图像数据
+        :param InputType: 輸出圖片類型，0表示Image欄位是圖片所在的url，1表示Image欄位是base64編碼後的圖像數據
         :type InputType: int
         """
         self.Image = None
@@ -172,15 +172,15 @@ class EHOCRRequest(AbstractModel):
 
 
 class EHOCRResponse(AbstractModel):
-    """EHOCR返回参数结构体
+    """EHOCR返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 识别后的作文内容
+        :param Data: 識别後的作文内容
         :type Data: :class:`tencentcloud.ecc.v20181213.models.CompostionContext`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -195,17 +195,17 @@ class EHOCRResponse(AbstractModel):
 
 
 class ScoreCategory(AbstractModel):
-    """四个维度的得分
+    """四個維度的得分
 
     """
 
     def __init__(self):
         """
-        :param Words: 词汇项
+        :param Words: 詞匯項
         :type Words: :class:`tencentcloud.ecc.v20181213.models.Aspect`
-        :param Sentences: 句子项
+        :param Sentences: 句子項
         :type Sentences: :class:`tencentcloud.ecc.v20181213.models.Aspect`
-        :param Structure: 篇章结构
+        :param Structure: 篇章結構
         :type Structure: :class:`tencentcloud.ecc.v20181213.models.Aspect`
         :param Content: 内容
         :type Content: :class:`tencentcloud.ecc.v20181213.models.Aspect`
@@ -232,15 +232,15 @@ class ScoreCategory(AbstractModel):
 
 
 class SentenceCom(AbstractModel):
-    """句子点评
+    """句子點評
 
     """
 
     def __init__(self):
         """
-        :param Suggestions: 点评内容
+        :param Suggestions: 點評内容
         :type Suggestions: list of SentenceSuggest
-        :param Sentence: 点评的句子信息
+        :param Sentence: 點評的句子訊息
         :type Sentence: :class:`tencentcloud.ecc.v20181213.models.SentenceItem`
         """
         self.Suggestions = None
@@ -260,13 +260,13 @@ class SentenceCom(AbstractModel):
 
 
 class SentenceItem(AbstractModel):
-    """句子的相关信息
+    """句子的相關訊息
 
     """
 
     def __init__(self):
         """
-        :param Sentence: 英语句子
+        :param Sentence: 英語句子
         :type Sentence: str
         :param ParaID: 段落id
         :type ParaID: int
@@ -285,21 +285,21 @@ class SentenceItem(AbstractModel):
 
 
 class SentenceSuggest(AbstractModel):
-    """句子批阅建议
+    """句子批閱建議
 
     """
 
     def __init__(self):
         """
-        :param Type: 类型
+        :param Type: 類型
         :type Type: str
-        :param ErrorType: 错误类型
+        :param ErrorType: 錯誤類型
         :type ErrorType: str
-        :param Origin: 原始单词
+        :param Origin: 原始單詞
         :type Origin: str
-        :param Replace: 替换成 的单词
+        :param Replace: 替換成 的單詞
         :type Replace: str
-        :param Message: 提示信息
+        :param Message: 提示訊息
         :type Message: str
         """
         self.Type = None

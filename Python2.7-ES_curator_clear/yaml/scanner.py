@@ -1450,4 +1450,3 @@ class Scanner(object):
 #    psyco.bind(Scanner)
 #except ImportError:
 #    pass
-

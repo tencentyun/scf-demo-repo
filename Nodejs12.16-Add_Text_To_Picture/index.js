@@ -42,7 +42,7 @@ exports.main_handler = async (event, context) => {
       return formateResponse(420, 'Error: Name is too long!')
     }
 
-    const uploadPath = `/tmp/邀请函-${userName}-${new Date().valueOf()}-ServerlessDays.jpg`
+    const uploadPath = `/tmp/邀請函-${userName}-${new Date().valueOf()}-ServerlessDays.jpg`
 
     const textToSvg = TextToSVG.loadSync('./STXINWEI.TTF')
     const svg = textToSvg.getSVG(userName, {

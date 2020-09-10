@@ -26,9 +26,9 @@ class IcClient(AbstractClient):
 
 
     def DescribeApp(self, request):
-        """根据应用id查询物联卡应用详情
+        """根據應用id查詢物聯卡應用詳情
 
-        :param request: 调用DescribeApp所需参数的结构体。
+        :param request: 調用DescribeApp所需參數的結構體。
         :type request: :class:`tencentcloud.ic.v20190307.models.DescribeAppRequest`
         :rtype: :class:`tencentcloud.ic.v20190307.models.DescribeAppResponse`
 
@@ -54,9 +54,9 @@ class IcClient(AbstractClient):
 
 
     def DescribeCard(self, request):
-        """查询卡片详细信息
+        """查詢卡片詳細訊息
 
-        :param request: 调用DescribeCard所需参数的结构体。
+        :param request: 調用DescribeCard所需參數的結構體。
         :type request: :class:`tencentcloud.ic.v20190307.models.DescribeCardRequest`
         :rtype: :class:`tencentcloud.ic.v20190307.models.DescribeCardResponse`
 
@@ -82,9 +82,9 @@ class IcClient(AbstractClient):
 
 
     def DescribeCards(self, request):
-        """查询卡片列表信息
+        """查詢卡片清單訊息
 
-        :param request: 调用DescribeCards所需参数的结构体。
+        :param request: 調用DescribeCards所需參數的結構體。
         :type request: :class:`tencentcloud.ic.v20190307.models.DescribeCardsRequest`
         :rtype: :class:`tencentcloud.ic.v20190307.models.DescribeCardsResponse`
 
@@ -110,9 +110,9 @@ class IcClient(AbstractClient):
 
 
     def SendMultiSms(self, request):
-        """群发短信
+        """群發簡訊
 
-        :param request: 调用SendMultiSms所需参数的结构体。
+        :param request: 調用SendMultiSms所需參數的結構體。
         :type request: :class:`tencentcloud.ic.v20190307.models.SendMultiSmsRequest`
         :rtype: :class:`tencentcloud.ic.v20190307.models.SendMultiSmsResponse`
 
@@ -138,9 +138,9 @@ class IcClient(AbstractClient):
 
 
     def SendSms(self, request):
-        """发送短信息接口
+        """發送短訊息介面
 
-        :param request: 调用SendSms所需参数的结构体。
+        :param request: 調用SendSms所需參數的結構體。
         :type request: :class:`tencentcloud.ic.v20190307.models.SendSmsRequest`
         :rtype: :class:`tencentcloud.ic.v20190307.models.SendSmsResponse`
 

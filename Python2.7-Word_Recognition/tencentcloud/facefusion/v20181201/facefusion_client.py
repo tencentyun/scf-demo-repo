@@ -26,11 +26,11 @@ class FacefusionClient(AbstractClient):
 
 
     def FaceFusion(self, request):
-        """本接口用于人脸融合，用户上传人脸图片，获取与模板融合后的人脸图片。未发布的活动请求频率限制为1次/秒，已发布的活动请求频率限制50次/秒。如有需要提高活动的请求频率限制，请在控制台中申请。
+        """本介面用于人臉融合，用戶上傳人臉圖片，獲取與範本融合後的人臉圖片。未發布的活動請求頻率限制爲1次/秒，已發布的活動請求頻率限制50次/秒。如有需要提高活動的請求頻率限制，請在控制台中申請。
         >
-        - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        - 公共參數中的簽名方式必須指定爲V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
-        :param request: 调用FaceFusion所需参数的结构体。
+        :param request: 調用FaceFusion所需參數的結構體。
         :type request: :class:`tencentcloud.facefusion.v20181201.models.FaceFusionRequest`
         :rtype: :class:`tencentcloud.facefusion.v20181201.models.FaceFusionResponse`
 

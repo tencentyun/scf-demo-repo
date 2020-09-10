@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: API_GW_Basic_Demo
   src: ./
-  description: 本示例主要演示当配置 API 网关触发器的时候，怎样去构造返回的 json 数据结构
+  description: 本範例主要演示當配置 API 閘道觸發器的時候，怎樣去構造返回的 json 數據結構
   handler: index.main_handler
   runtime: Nodejs8.9
   namespace: default
@@ -14,7 +14,7 @@ inputs:
   memorySize: 128
   timeout: 3
   events:
-     - apigw: # api网关触发器
+     - apigw: # api閘道觸發器
         name: serverless
         serviceId: # input API gateway serviceId
         parameters:

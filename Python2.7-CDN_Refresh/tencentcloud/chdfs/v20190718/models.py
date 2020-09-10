@@ -17,19 +17,19 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AccessGroup(AbstractModel):
-    """权限组
+    """權限組
 
     """
 
     def __init__(self):
         """
-        :param AccessGroupId: 权限组ID
+        :param AccessGroupId: 權限組ID
         :type AccessGroupId: str
-        :param AccessGroupName: 权限组名称
+        :param AccessGroupName: 權限組名稱
         :type AccessGroupName: str
-        :param Description: 权限组描述
+        :param Description: 權限組描述
         :type Description: str
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
         """
         self.AccessGroupId = None
@@ -46,21 +46,21 @@ class AccessGroup(AbstractModel):
 
 
 class AccessRule(AbstractModel):
-    """权限规则
+    """權限規則
 
     """
 
     def __init__(self):
         """
-        :param AccessRuleId: 权限规则ID
+        :param AccessRuleId: 權限規則ID
         :type AccessRuleId: int
-        :param Address: 权限规则地址（网段或IP）
+        :param Address: 權限規則網址（網段或IP）
         :type Address: str
-        :param AccessMode: 权限规则访问模式（1：只读；2：读写）
+        :param AccessMode: 權限規則訪問模式（1：只讀；2：讀寫）
         :type AccessMode: int
-        :param Priority: 优先级（取值范围1~100，值越小优先级越高）
+        :param Priority: 優先級（取值範圍1~100，值越小優先級越高）
         :type Priority: int
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
         """
         self.AccessRuleId = None
@@ -79,15 +79,15 @@ class AccessRule(AbstractModel):
 
 
 class CreateAccessGroupRequest(AbstractModel):
-    """CreateAccessGroup请求参数结构体
+    """CreateAccessGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccessGroupName: 权限组名称
+        :param AccessGroupName: 權限組名稱
         :type AccessGroupName: str
-        :param Description: 权限组描述
+        :param Description: 權限組描述
         :type Description: str
         """
         self.AccessGroupName = None
@@ -100,15 +100,15 @@ class CreateAccessGroupRequest(AbstractModel):
 
 
 class CreateAccessGroupResponse(AbstractModel):
-    """CreateAccessGroup返回参数结构体
+    """CreateAccessGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccessGroup: 权限组
+        :param AccessGroup: 權限組
         :type AccessGroup: :class:`tencentcloud.chdfs.v20190718.models.AccessGroup`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AccessGroup = None
@@ -123,15 +123,15 @@ class CreateAccessGroupResponse(AbstractModel):
 
 
 class CreateAccessRulesRequest(AbstractModel):
-    """CreateAccessRules请求参数结构体
+    """CreateAccessRules請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccessRules: 多个权限规则，上限为10
+        :param AccessRules: 多個權限規則，上限爲10
         :type AccessRules: list of AccessRule
-        :param AccessGroupId: 权限组ID
+        :param AccessGroupId: 權限組ID
         :type AccessGroupId: str
         """
         self.AccessRules = None
@@ -149,13 +149,13 @@ class CreateAccessRulesRequest(AbstractModel):
 
 
 class CreateAccessRulesResponse(AbstractModel):
-    """CreateAccessRules返回参数结构体
+    """CreateAccessRules返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -166,17 +166,17 @@ class CreateAccessRulesResponse(AbstractModel):
 
 
 class CreateFileSystemRequest(AbstractModel):
-    """CreateFileSystem请求参数结构体
+    """CreateFileSystem請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileSystemName: 文件系统名称
+        :param FileSystemName: 文件系統名稱
         :type FileSystemName: str
-        :param CapacityQuota: 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+        :param CapacityQuota: 文件系統容量（byte），下限爲1M，上限爲1P，且必須是1M的整數倍
         :type CapacityQuota: int
-        :param Description: 文件系统描述
+        :param Description: 文件系統描述
         :type Description: str
         """
         self.FileSystemName = None
@@ -191,15 +191,15 @@ class CreateFileSystemRequest(AbstractModel):
 
 
 class CreateFileSystemResponse(AbstractModel):
-    """CreateFileSystem返回参数结构体
+    """CreateFileSystem返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileSystem: 文件系统
+        :param FileSystem: 文件系統
         :type FileSystem: :class:`tencentcloud.chdfs.v20190718.models.FileSystem`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FileSystem = None
@@ -214,23 +214,23 @@ class CreateFileSystemResponse(AbstractModel):
 
 
 class CreateMountPointRequest(AbstractModel):
-    """CreateMountPoint请求参数结构体
+    """CreateMountPoint請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MountPointName: 挂载点名称
+        :param MountPointName: 掛載點名稱
         :type MountPointName: str
-        :param FileSystemId: 文件系统ID
+        :param FileSystemId: 文件系統ID
         :type FileSystemId: str
-        :param AccessGroupId: 权限组ID
+        :param AccessGroupId: 權限組ID
         :type AccessGroupId: str
-        :param VpcId: VPC网络ID
+        :param VpcId: VPC網絡ID
         :type VpcId: str
-        :param MountPointStatus: 挂载点状态（1：打开；2：关闭）
+        :param MountPointStatus: 掛載點狀态（1：打開；2：關閉）
         :type MountPointStatus: int
-        :param VpcType: VPC网络类型（1：CVM；2：黑石1.0；3：黑石2.0）
+        :param VpcType: VPC網絡類型（1：CVM；2：黑石1.0；3：黑石2.0）
         :type VpcType: int
         """
         self.MountPointName = None
@@ -251,15 +251,15 @@ class CreateMountPointRequest(AbstractModel):
 
 
 class CreateMountPointResponse(AbstractModel):
-    """CreateMountPoint返回参数结构体
+    """CreateMountPoint返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MountPoint: 挂载点
+        :param MountPoint: 掛載點
         :type MountPoint: :class:`tencentcloud.chdfs.v20190718.models.MountPoint`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.MountPoint = None
@@ -274,13 +274,13 @@ class CreateMountPointResponse(AbstractModel):
 
 
 class DeleteAccessGroupRequest(AbstractModel):
-    """DeleteAccessGroup请求参数结构体
+    """DeleteAccessGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccessGroupId: 权限组ID
+        :param AccessGroupId: 權限組ID
         :type AccessGroupId: str
         """
         self.AccessGroupId = None
@@ -291,13 +291,13 @@ class DeleteAccessGroupRequest(AbstractModel):
 
 
 class DeleteAccessGroupResponse(AbstractModel):
-    """DeleteAccessGroup返回参数结构体
+    """DeleteAccessGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -308,13 +308,13 @@ class DeleteAccessGroupResponse(AbstractModel):
 
 
 class DeleteAccessRulesRequest(AbstractModel):
-    """DeleteAccessRules请求参数结构体
+    """DeleteAccessRules請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccessRuleIds: 多个权限规则ID，上限为10
+        :param AccessRuleIds: 多個權限規則ID，上限爲10
         :type AccessRuleIds: list of int non-negative
         """
         self.AccessRuleIds = None
@@ -325,13 +325,13 @@ class DeleteAccessRulesRequest(AbstractModel):
 
 
 class DeleteAccessRulesResponse(AbstractModel):
-    """DeleteAccessRules返回参数结构体
+    """DeleteAccessRules返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -342,13 +342,13 @@ class DeleteAccessRulesResponse(AbstractModel):
 
 
 class DeleteFileSystemRequest(AbstractModel):
-    """DeleteFileSystem请求参数结构体
+    """DeleteFileSystem請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileSystemId: 文件系统ID
+        :param FileSystemId: 文件系統ID
         :type FileSystemId: str
         """
         self.FileSystemId = None
@@ -359,13 +359,13 @@ class DeleteFileSystemRequest(AbstractModel):
 
 
 class DeleteFileSystemResponse(AbstractModel):
-    """DeleteFileSystem返回参数结构体
+    """DeleteFileSystem返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -376,13 +376,13 @@ class DeleteFileSystemResponse(AbstractModel):
 
 
 class DeleteMountPointRequest(AbstractModel):
-    """DeleteMountPoint请求参数结构体
+    """DeleteMountPoint請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MountPointId: 挂载点ID
+        :param MountPointId: 掛載點ID
         :type MountPointId: str
         """
         self.MountPointId = None
@@ -393,13 +393,13 @@ class DeleteMountPointRequest(AbstractModel):
 
 
 class DeleteMountPointResponse(AbstractModel):
-    """DeleteMountPoint返回参数结构体
+    """DeleteMountPoint返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -410,17 +410,17 @@ class DeleteMountPointResponse(AbstractModel):
 
 
 class DescribeAccessGroupsRequest(AbstractModel):
-    """DescribeAccessGroups请求参数结构体
+    """DescribeAccessGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 过滤条件，Name可选“AccessGroupId“和“AccessGroupName”，Values上限为10
+        :param Filters: 過濾條件，Name可選“AccessGroupId“和“AccessGroupName”，Values上限爲10
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回数量，默认为所有
+        :param Limit: 返回數量，預設爲所有
         :type Limit: int
         """
         self.Filters = None
@@ -440,15 +440,15 @@ class DescribeAccessGroupsRequest(AbstractModel):
 
 
 class DescribeAccessGroupsResponse(AbstractModel):
-    """DescribeAccessGroups返回参数结构体
+    """DescribeAccessGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccessGroups: 权限组列表
+        :param AccessGroups: 權限組清單
         :type AccessGroups: list of AccessGroup
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AccessGroups = None
@@ -466,17 +466,17 @@ class DescribeAccessGroupsResponse(AbstractModel):
 
 
 class DescribeAccessRulesRequest(AbstractModel):
-    """DescribeAccessRules请求参数结构体
+    """DescribeAccessRules請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccessGroupId: 权限组ID
+        :param AccessGroupId: 權限組ID
         :type AccessGroupId: str
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回数量，默认为所有
+        :param Limit: 返回數量，預設爲所有
         :type Limit: int
         """
         self.AccessGroupId = None
@@ -491,15 +491,15 @@ class DescribeAccessRulesRequest(AbstractModel):
 
 
 class DescribeAccessRulesResponse(AbstractModel):
-    """DescribeAccessRules返回参数结构体
+    """DescribeAccessRules返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccessRules: 权限规则列表
+        :param AccessRules: 權限規則清單
         :type AccessRules: list of AccessRule
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AccessRules = None
@@ -517,13 +517,13 @@ class DescribeAccessRulesResponse(AbstractModel):
 
 
 class DescribeFileSystemRequest(AbstractModel):
-    """DescribeFileSystem请求参数结构体
+    """DescribeFileSystem請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileSystemId: 文件系统ID
+        :param FileSystemId: 文件系統ID
         :type FileSystemId: str
         """
         self.FileSystemId = None
@@ -534,17 +534,17 @@ class DescribeFileSystemRequest(AbstractModel):
 
 
 class DescribeFileSystemResponse(AbstractModel):
-    """DescribeFileSystem返回参数结构体
+    """DescribeFileSystem返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileSystem: 文件系统
+        :param FileSystem: 文件系統
         :type FileSystem: :class:`tencentcloud.chdfs.v20190718.models.FileSystem`
-        :param FileSystemCapacityUsed: 文件系统已使用大小（byte）
+        :param FileSystemCapacityUsed: 文件系統已使用大小（byte）
         :type FileSystemCapacityUsed: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FileSystem = None
@@ -561,15 +561,15 @@ class DescribeFileSystemResponse(AbstractModel):
 
 
 class DescribeFileSystemsRequest(AbstractModel):
-    """DescribeFileSystems请求参数结构体
+    """DescribeFileSystems請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回数量，默认为所有
+        :param Limit: 返回數量，預設爲所有
         :type Limit: int
         """
         self.Offset = None
@@ -582,15 +582,15 @@ class DescribeFileSystemsRequest(AbstractModel):
 
 
 class DescribeFileSystemsResponse(AbstractModel):
-    """DescribeFileSystems返回参数结构体
+    """DescribeFileSystems返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileSystems: 文件系统列表
+        :param FileSystems: 文件系統清單
         :type FileSystems: list of FileSystem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FileSystems = None
@@ -608,13 +608,13 @@ class DescribeFileSystemsResponse(AbstractModel):
 
 
 class DescribeMountPointRequest(AbstractModel):
-    """DescribeMountPoint请求参数结构体
+    """DescribeMountPoint請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MountPointId: 挂载点ID
+        :param MountPointId: 掛載點ID
         :type MountPointId: str
         """
         self.MountPointId = None
@@ -625,15 +625,15 @@ class DescribeMountPointRequest(AbstractModel):
 
 
 class DescribeMountPointResponse(AbstractModel):
-    """DescribeMountPoint返回参数结构体
+    """DescribeMountPoint返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MountPoint: 挂载点
+        :param MountPoint: 掛載點
         :type MountPoint: :class:`tencentcloud.chdfs.v20190718.models.MountPoint`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.MountPoint = None
@@ -648,21 +648,21 @@ class DescribeMountPointResponse(AbstractModel):
 
 
 class DescribeMountPointsRequest(AbstractModel):
-    """DescribeMountPoints请求参数结构体
+    """DescribeMountPoints請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileSystemId: 文件系统ID
-注意：若根据AccessGroupId查看挂载点列表，则无需设置FileSystemId
+        :param FileSystemId: 文件系統ID
+注意：若根據AccessGroupId檢視掛載點清單，則無需設置FileSystemId
         :type FileSystemId: str
-        :param AccessGroupId: 权限组ID
-注意：若根据FileSystemId查看挂载点列表，则无需设置AccessGroupId
+        :param AccessGroupId: 權限組ID
+注意：若根據FileSystemId檢視掛載點清單，則無需設置AccessGroupId
         :type AccessGroupId: str
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回数量，默认为所有
+        :param Limit: 返回數量，預設爲所有
         :type Limit: int
         """
         self.FileSystemId = None
@@ -679,15 +679,15 @@ class DescribeMountPointsRequest(AbstractModel):
 
 
 class DescribeMountPointsResponse(AbstractModel):
-    """DescribeMountPoints返回参数结构体
+    """DescribeMountPoints返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MountPoints: 挂载点列表
+        :param MountPoints: 掛載點清單
         :type MountPoints: list of MountPoint
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.MountPoints = None
@@ -705,7 +705,7 @@ class DescribeMountPointsResponse(AbstractModel):
 
 
 class FileSystem(AbstractModel):
-    """文件系统
+    """文件系統
 
     """
 
@@ -713,21 +713,21 @@ class FileSystem(AbstractModel):
         """
         :param AppId: appid
         :type AppId: int
-        :param FileSystemName: 文件系统名称
+        :param FileSystemName: 文件系統名稱
         :type FileSystemName: str
-        :param Description: 文件系统描述
+        :param Description: 文件系統描述
         :type Description: str
         :param Region: 地域
         :type Region: str
-        :param FileSystemId: 文件系统ID
+        :param FileSystemId: 文件系統ID
         :type FileSystemId: str
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param BlockSize: 文件系统块大小（byte）
+        :param BlockSize: 文件系統塊大小（byte）
         :type BlockSize: int
-        :param CapacityQuota: 文件系统容量（byte）
+        :param CapacityQuota: 文件系統容量（byte）
         :type CapacityQuota: int
-        :param Status: 文件系统状态（1：创建中；2：创建成功；3：创建失败）
+        :param Status: 文件系統狀态（1：創建中；2：創建成功；3：創建失敗）
         :type Status: int
         """
         self.AppId = None
@@ -754,15 +754,15 @@ class FileSystem(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """过滤条件
+    """過濾條件
 
     """
 
     def __init__(self):
         """
-        :param Name: 过滤字段
+        :param Name: 過濾欄位
         :type Name: str
-        :param Values: 过滤值
+        :param Values: 過濾值
         :type Values: list of str
         """
         self.Name = None
@@ -775,17 +775,17 @@ class Filter(AbstractModel):
 
 
 class ModifyAccessGroupRequest(AbstractModel):
-    """ModifyAccessGroup请求参数结构体
+    """ModifyAccessGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccessGroupId: 权限组ID
+        :param AccessGroupId: 權限組ID
         :type AccessGroupId: str
-        :param AccessGroupName: 权限组名称
+        :param AccessGroupName: 權限組名稱
         :type AccessGroupName: str
-        :param Description: 权限组描述
+        :param Description: 權限組描述
         :type Description: str
         """
         self.AccessGroupId = None
@@ -800,13 +800,13 @@ class ModifyAccessGroupRequest(AbstractModel):
 
 
 class ModifyAccessGroupResponse(AbstractModel):
-    """ModifyAccessGroup返回参数结构体
+    """ModifyAccessGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -817,13 +817,13 @@ class ModifyAccessGroupResponse(AbstractModel):
 
 
 class ModifyAccessRulesRequest(AbstractModel):
-    """ModifyAccessRules请求参数结构体
+    """ModifyAccessRules請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AccessRules: 多个权限规则，上限为10
+        :param AccessRules: 多個權限規則，上限爲10
         :type AccessRules: list of AccessRule
         """
         self.AccessRules = None
@@ -839,13 +839,13 @@ class ModifyAccessRulesRequest(AbstractModel):
 
 
 class ModifyAccessRulesResponse(AbstractModel):
-    """ModifyAccessRules返回参数结构体
+    """ModifyAccessRules返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -856,20 +856,20 @@ class ModifyAccessRulesResponse(AbstractModel):
 
 
 class ModifyFileSystemRequest(AbstractModel):
-    """ModifyFileSystem请求参数结构体
+    """ModifyFileSystem請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FileSystemId: 文件系统ID
+        :param FileSystemId: 文件系統ID
         :type FileSystemId: str
-        :param FileSystemName: 文件系统名称
+        :param FileSystemName: 文件系統名稱
         :type FileSystemName: str
-        :param Description: 文件系统描述
+        :param Description: 文件系統描述
         :type Description: str
-        :param CapacityQuota: 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
-注意：修改的文件系统容量不能小于当前使用量
+        :param CapacityQuota: 文件系統容量（byte），下限爲1M，上限爲1P，且必須是1M的整數倍
+注意：修改的文件系統容量不能小於當前使用量
         :type CapacityQuota: int
         """
         self.FileSystemId = None
@@ -886,13 +886,13 @@ class ModifyFileSystemRequest(AbstractModel):
 
 
 class ModifyFileSystemResponse(AbstractModel):
-    """ModifyFileSystem返回参数结构体
+    """ModifyFileSystem返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -903,19 +903,19 @@ class ModifyFileSystemResponse(AbstractModel):
 
 
 class ModifyMountPointRequest(AbstractModel):
-    """ModifyMountPoint请求参数结构体
+    """ModifyMountPoint請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MountPointId: 挂载点ID
+        :param MountPointId: 掛載點ID
         :type MountPointId: str
-        :param MountPointName: 挂载点名称
+        :param MountPointName: 掛載點名稱
         :type MountPointName: str
-        :param MountPointStatus: 挂载点状态
+        :param MountPointStatus: 掛載點狀态
         :type MountPointStatus: int
-        :param AccessGroupId: 权限组ID
+        :param AccessGroupId: 權限組ID
         :type AccessGroupId: str
         """
         self.MountPointId = None
@@ -932,13 +932,13 @@ class ModifyMountPointRequest(AbstractModel):
 
 
 class ModifyMountPointResponse(AbstractModel):
-    """ModifyMountPoint返回参数结构体
+    """ModifyMountPoint返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -949,27 +949,27 @@ class ModifyMountPointResponse(AbstractModel):
 
 
 class MountPoint(AbstractModel):
-    """挂载点
+    """掛載點
 
     """
 
     def __init__(self):
         """
-        :param MountPointId: 挂载点ID
+        :param MountPointId: 掛載點ID
         :type MountPointId: str
-        :param MountPointName: 挂载点名称
+        :param MountPointName: 掛載點名稱
         :type MountPointName: str
-        :param FileSystemId: 文件系统ID
+        :param FileSystemId: 文件系統ID
         :type FileSystemId: str
-        :param AccessGroupId: 权限组ID
+        :param AccessGroupId: 權限組ID
         :type AccessGroupId: str
-        :param VpcId: VPC网络ID
+        :param VpcId: VPC網絡ID
         :type VpcId: str
-        :param Status: 挂载点状态（1：打开；2：关闭）
+        :param Status: 掛載點狀态（1：打開；2：關閉）
         :type Status: int
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param VpcType: VPC网络类型
+        :param VpcType: VPC網絡類型
         :type VpcType: int
         """
         self.MountPointId = None

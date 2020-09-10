@@ -976,7 +976,7 @@
                     } else {
                         StartStr='<!--constStr@LastUpload-->'+size_format(newstartsize)+ '<br><!--constStr@ThisTime--><!--constStr@UploadStartAt-->:' +StartTime.toLocaleString()+'<br>' ;
                     }
-                    var chunksize=5*1024*1024; // chunk size, max 60M. 每小块上传大小，最大60M，微软建议10M
+                    var chunksize=5*1024*1024; // chunk size, max 60M. 每小塊上傳大小，最大60M，微軟建議10M
                     if (totalsize>200*1024*1024) chunksize=10*1024*1024;
                     function readblob(start) {
                         var end=start+chunksize;
@@ -1005,7 +1005,7 @@
                             if (xhr.status<500) {
                             var response=JSON.parse(xhr.responseText);
                             if (response['size']>0) {
-                                // contain size, upload finish. 有size说明是最终返回，上传结束
+                                // contain size, upload finish. 有size說明是最終返回，上傳結束
                                 var xhr3 = new XMLHttpRequest();
                                 xhr3.open("GET", '?action=del_upload_cache&filelastModified='+file.lastModified+'&filesize='+file.size+'&filename='+filename);
                                 xhr3.setRequestHeader('x-requested-with','XMLHttpRequest');

@@ -26,9 +26,9 @@ class EmrClient(AbstractClient):
 
 
     def CreateInstance(self, request):
-        """创建EMR实例
+        """創建EMR實例
 
-        :param request: 调用CreateInstance所需参数的结构体。
+        :param request: 調用CreateInstance所需參數的結構體。
         :type request: :class:`tencentcloud.emr.v20190103.models.CreateInstanceRequest`
         :rtype: :class:`tencentcloud.emr.v20190103.models.CreateInstanceResponse`
 
@@ -54,9 +54,9 @@ class EmrClient(AbstractClient):
 
 
     def DescribeInstances(self, request):
-        """查询EMR实例
+        """查詢EMR實例
 
-        :param request: 调用DescribeInstances所需参数的结构体。
+        :param request: 調用DescribeInstances所需參數的結構體。
         :type request: :class:`tencentcloud.emr.v20190103.models.DescribeInstancesRequest`
         :rtype: :class:`tencentcloud.emr.v20190103.models.DescribeInstancesResponse`
 
@@ -82,9 +82,9 @@ class EmrClient(AbstractClient):
 
 
     def InquiryPriceCreateInstance(self, request):
-        """创建实例询价
+        """創建實例詢價
 
-        :param request: 调用InquiryPriceCreateInstance所需参数的结构体。
+        :param request: 調用InquiryPriceCreateInstance所需參數的結構體。
         :type request: :class:`tencentcloud.emr.v20190103.models.InquiryPriceCreateInstanceRequest`
         :rtype: :class:`tencentcloud.emr.v20190103.models.InquiryPriceCreateInstanceResponse`
 
@@ -110,9 +110,9 @@ class EmrClient(AbstractClient):
 
 
     def InquiryPriceScaleOutInstance(self, request):
-        """扩容询价. 当扩容时候，请通过该接口查询价格。
+        """擴容詢價. 當擴容時候，請通過該介面查詢價格。
 
-        :param request: 调用InquiryPriceScaleOutInstance所需参数的结构体。
+        :param request: 調用InquiryPriceScaleOutInstance所需參數的結構體。
         :type request: :class:`tencentcloud.emr.v20190103.models.InquiryPriceScaleOutInstanceRequest`
         :rtype: :class:`tencentcloud.emr.v20190103.models.InquiryPriceScaleOutInstanceResponse`
 
@@ -138,9 +138,9 @@ class EmrClient(AbstractClient):
 
 
     def ScaleOutInstance(self, request):
-        """实例扩容
+        """實例擴容
 
-        :param request: 调用ScaleOutInstance所需参数的结构体。
+        :param request: 調用ScaleOutInstance所需參數的結構體。
         :type request: :class:`tencentcloud.emr.v20190103.models.ScaleOutInstanceRequest`
         :rtype: :class:`tencentcloud.emr.v20190103.models.ScaleOutInstanceResponse`
 
@@ -166,9 +166,9 @@ class EmrClient(AbstractClient):
 
 
     def TerminateInstance(self, request):
-        """销毁EMR实例
+        """銷毀EMR實例
 
-        :param request: 调用TerminateInstance所需参数的结构体。
+        :param request: 調用TerminateInstance所需參數的結構體。
         :type request: :class:`tencentcloud.emr.v20190103.models.TerminateInstanceRequest`
         :rtype: :class:`tencentcloud.emr.v20190103.models.TerminateInstanceResponse`
 
@@ -194,9 +194,9 @@ class EmrClient(AbstractClient):
 
 
     def TerminateTasks(self, request):
-        """缩容Task节点
+        """縮容Task節點
 
-        :param request: 调用TerminateTasks所需参数的结构体。
+        :param request: 調用TerminateTasks所需參數的結構體。
         :type request: :class:`tencentcloud.emr.v20190103.models.TerminateTasksRequest`
         :rtype: :class:`tencentcloud.emr.v20190103.models.TerminateTasksResponse`
 

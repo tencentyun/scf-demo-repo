@@ -17,17 +17,17 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class Aspect(AbstractModel):
-    """作文批改每个维度名字与得分
+    """作文批改每個維度名字與得分
 
     """
 
     def __init__(self):
         """
-        :param Name: 维度名字
+        :param Name: 維度名字
         :type Name: str
-        :param Score: 维度得分
+        :param Score: 維度得分
         :type Score: float
-        :param Percentage: 维度分数占比
+        :param Percentage: 維度分數占比
         :type Percentage: float
         """
         self.Name = None
@@ -42,7 +42,7 @@ class Aspect(AbstractModel):
 
 
 class CompostionContext(AbstractModel):
-    """图像识别批改接口返回的作文文本信息或批改信息
+    """圖像識别批改介面返回的作文文本訊息或批改訊息
 
     """
 
@@ -50,14 +50,14 @@ class CompostionContext(AbstractModel):
         """
         :param Content: 作文内容
         :type Content: str
-        :param CorrectData: 批改结果
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CorrectData: 批改結果
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CorrectData: :class:`tencentcloud.ecc.v20181213.models.CorrectData`
-        :param TaskId: 任务 id，用于查询接口
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TaskId: 任務 id，用于查詢介面
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskId: str
-        :param SessionId: 图像识别唯一标识，一次识别一个 SessionId
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SessionId: 圖像識别唯一标識，一次識别一個 SessionId
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SessionId: str
         """
         self.Content = None
@@ -76,19 +76,19 @@ class CompostionContext(AbstractModel):
 
 
 class CorrectData(AbstractModel):
-    """批改的结果
+    """批改的結果
 
     """
 
     def __init__(self):
         """
-        :param Score: 总得分
+        :param Score: 總得分
         :type Score: float
-        :param ScoreCat: 各项得分详情
+        :param ScoreCat: 各項得分詳情
         :type ScoreCat: :class:`tencentcloud.ecc.v20181213.models.ScoreCategory`
-        :param Comment: 综合评价
+        :param Comment: 綜合評價
         :type Comment: str
-        :param SentenceComments: 句子点评
+        :param SentenceComments: 句子點評
         :type SentenceComments: list of SentenceCom
         """
         self.Score = None
@@ -112,33 +112,33 @@ class CorrectData(AbstractModel):
 
 
 class CorrectMultiImageRequest(AbstractModel):
-    """CorrectMultiImage请求参数结构体
+    """CorrectMultiImage請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Image: 图片的url链接或base64数据。每张图片数据作为数组的一个元素，数组个数与图片个数保持一致。存放类别依据InputType而定，url与base64编码不能混合使用。
+        :param Image: 圖片的url連結或base64數據。每張圖片數據作爲數組的一個元素，數組個數與圖片個數保持一緻。存放類别依據InputType而定，url與base64編碼不能混合使用。
         :type Image: list of str
-        :param InputType: 输出图片类型，0 表示 Image 字段是图片所在的 url，1 表示 Image 字段是 base64 编码后的图像数据。
+        :param InputType: 輸出圖片類型，0 表示 Image 欄位是圖片所在的 url，1 表示 Image 欄位是 base64 編碼後的圖像數據。
         :type InputType: int
-        :param EccAppid: 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数。
+        :param EccAppid: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數。
         :type EccAppid: str
-        :param SessionId: 图像识别唯一标识，一次识别一个 SessionId，使用识别功能时 SessionId 可用于使用文本批改接口，此时按图像批改价格收费；如使用文本批改接口时没有传入 SessionId，则需要收取文本批改的费用。
+        :param SessionId: 圖像識别唯一标識，一次識别一個 SessionId，使用識别功能時 SessionId 可用于使用文本批改介面，此時按圖像批改價格收費；如使用文本批改介面時沒有傳入 SessionId，則需要收取文本批改的費用。
         :type SessionId: str
-        :param ServerType: 服务类型，0：“多图像识别”，只返回识别结果；1：“多图像批改”，同时返回识别结果与批改结果。默认为 0。
+        :param ServerType: 服務類型，0：“多圖像識别”，只返回識别結果；1：“多圖像批改”，同時返回識别結果與批改結果。預設爲 0。
         :type ServerType: int
-        :param Title: 作文题目，可选参数
+        :param Title: 作文題目，可選參數
         :type Title: str
-        :param Grade: 年级标准， 默认以 cet4 为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及 cet4 和 cet6 分别表示 英语4级和6级。
+        :param Grade: 年級标準， 預設以 cet4 爲标準，取值與意義如下：elementary 小學，grade7 grade8 grade9分别對應初一，初二，初三。 grade10 grade11 grade12 分别對應高一，高二，高三，以及 cet4 和 cet6 分别表示 英語4級和6級。
         :type Grade: str
-        :param Requirement: 作文提纲，可选参数，作文的写作要求。
+        :param Requirement: 作文提綱，可選參數，作文的寫作要求。
         :type Requirement: str
-        :param ModelTitle: 范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
+        :param ModelTitle: 範文标題，可選參數，本介面可以依據提供的範文對作文進行評分。
         :type ModelTitle: str
-        :param ModelContent: 范文内容，可选参数，同上，范文的正文部分。
+        :param ModelContent: 範文内容，可選參數，同上，範文的正文部分。
         :type ModelContent: str
-        :param IsAsync: 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+        :param IsAsync: 異步模式标識，0：同步模式，1：異步模式。預設爲同步模式
         :type IsAsync: int
         """
         self.Image = None
@@ -169,15 +169,15 @@ class CorrectMultiImageRequest(AbstractModel):
 
 
 class CorrectMultiImageResponse(AbstractModel):
-    """CorrectMultiImage返回参数结构体
+    """CorrectMultiImage返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 接口返回数据
+        :param Data: 介面返回數據
         :type Data: :class:`tencentcloud.ecc.v20181213.models.CompostionContext`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -192,15 +192,15 @@ class CorrectMultiImageResponse(AbstractModel):
 
 
 class DescribeTaskRequest(AbstractModel):
-    """DescribeTask请求参数结构体
+    """DescribeTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 任务 ID
+        :param TaskId: 任務 ID
         :type TaskId: str
-        :param EccAppid: 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
+        :param EccAppid: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數（暫時無需傳入）。
         :type EccAppid: str
         """
         self.TaskId = None
@@ -213,21 +213,21 @@ class DescribeTaskRequest(AbstractModel):
 
 
 class DescribeTaskResponse(AbstractModel):
-    """DescribeTask返回参数结构体
+    """DescribeTask返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Content: 作文识别文本
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Content: 作文識别文本
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Content: str
-        :param CorrectData: 整体的批改结果
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CorrectData: 整體的批改結果
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CorrectData: :class:`tencentcloud.ecc.v20181213.models.CorrectData`
-        :param Status: 任务状态，“Progressing”: 处理中（此时无结果返回）、“Finished”: 处理完成
+        :param Status: 任務狀态，“Progressing”: 處理中（此時無結果返回）、“Finished”: 處理完成
         :type Status: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Content = None
@@ -246,7 +246,7 @@ class DescribeTaskResponse(AbstractModel):
 
 
 class ECCRequest(AbstractModel):
-    """ECC请求参数结构体
+    """ECC請求參數結構體
 
     """
 
@@ -254,21 +254,21 @@ class ECCRequest(AbstractModel):
         """
         :param Content: 作文文本，必填
         :type Content: str
-        :param Title: 作文题目，可选参数
+        :param Title: 作文題目，可選參數
         :type Title: str
-        :param Grade: 年级标准， 默认以cet4为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及cet4和cet6 分别表示 英语4级和6级。
+        :param Grade: 年級标準， 預設以cet4爲标準，取值與意義如下：elementary 小學，grade7 grade8 grade9分别對應初一，初二，初三。 grade10 grade11 grade12 分别對應高一，高二，高三，以及cet4和cet6 分别表示 英語4級和6級。
         :type Grade: str
-        :param Requirement: 作文提纲，可选参数，作文的写作要求。
+        :param Requirement: 作文提綱，可選參數，作文的寫作要求。
         :type Requirement: str
-        :param ModelTitle: 范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
+        :param ModelTitle: 範文标題，可選參數，本介面可以依據提供的範文對作文進行評分。
         :type ModelTitle: str
-        :param ModelContent: 范文内容，可选参数，同上，范文的正文部分。
+        :param ModelContent: 範文内容，可選參數，同上，範文的正文部分。
         :type ModelContent: str
-        :param EccAppid: 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
+        :param EccAppid: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數（暫時無需傳入）。
         :type EccAppid: str
-        :param IsAsync: 异步模式标识，0：同步模式，1：异步模式，默认为同步模式
+        :param IsAsync: 異步模式标識，0：同步模式，1：異步模式，預設爲同步模式
         :type IsAsync: int
-        :param SessionId: 图像识别唯一标识，一次识别一个 SessionId。当传入此前识别接口使用过的 SessionId，则本次批改按图像批改价格收费；如使用了识别接口且本次没有传入 SessionId，则需要加取文本批改的费用；如果直接使用文本批改接口，则只收取文本批改的费用
+        :param SessionId: 圖像識别唯一标識，一次識别一個 SessionId。當傳入此前識别介面使用過的 SessionId，則本次批改按圖像批改價格收費；如使用了識别介面且本次沒有傳入 SessionId，則需要加取文本批改的費用；如果直接使用文本批改介面，則只收取文本批改的費用
         :type SessionId: str
         """
         self.Content = None
@@ -295,19 +295,19 @@ class ECCRequest(AbstractModel):
 
 
 class ECCResponse(AbstractModel):
-    """ECC返回参数结构体
+    """ECC返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 整体的批改结果
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Data: 整體的批改結果
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: :class:`tencentcloud.ecc.v20181213.models.CorrectData`
-        :param TaskId: 任务 id，用于查询接口
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TaskId: 任務 id，用于查詢介面
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -324,33 +324,33 @@ class ECCResponse(AbstractModel):
 
 
 class EHOCRRequest(AbstractModel):
-    """EHOCR请求参数结构体
+    """EHOCR請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Image: 图片所在的url或base64编码后的图像数据，依据InputType而定
+        :param Image: 圖片所在的url或base64編碼後的圖像數據，依據InputType而定
         :type Image: str
-        :param InputType: 输出图片类型，0 表示 Image 字段是图片所在的 url，1 表示 Image 字段是 base64 编码后的图像数据
+        :param InputType: 輸出圖片類型，0 表示 Image 欄位是圖片所在的 url，1 表示 Image 欄位是 base64 編碼後的圖像數據
         :type InputType: int
-        :param EccAppid: 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
+        :param EccAppid: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數（暫時無需傳入）。
         :type EccAppid: str
-        :param SessionId: 图像识别唯一标识，一次识别一个 SessionId，使用识别功能时 SessionId 可用于使用文本批改接口，此时按图像批改价格收费；如使用文本批改接口时没有传入 SessionId，则需要收取文本批改的费用
+        :param SessionId: 圖像識别唯一标識，一次識别一個 SessionId，使用識别功能時 SessionId 可用于使用文本批改介面，此時按圖像批改價格收費；如使用文本批改介面時沒有傳入 SessionId，則需要收取文本批改的費用
         :type SessionId: str
-        :param ServerType: 服务类型，0：“图像识别”，只返回识别结果，1：“图像批改”，同时返回识别结果与批改结果。默认为 0
+        :param ServerType: 服務類型，0：“圖像識别”，只返回識别結果，1：“圖像批改”，同時返回識别結果與批改結果。預設爲 0
         :type ServerType: int
-        :param Title: 作文题目，可选参数
+        :param Title: 作文題目，可選參數
         :type Title: str
-        :param Grade: 年级标准， 默认以 cet4 为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及 cet4 和 cet6 分别表示 英语4级和6级。
+        :param Grade: 年級标準， 預設以 cet4 爲标準，取值與意義如下：elementary 小學，grade7 grade8 grade9分别對應初一，初二，初三。 grade10 grade11 grade12 分别對應高一，高二，高三，以及 cet4 和 cet6 分别表示 英語4級和6級。
         :type Grade: str
-        :param Requirement: 作文提纲，可选参数，作文的写作要求。
+        :param Requirement: 作文提綱，可選參數，作文的寫作要求。
         :type Requirement: str
-        :param ModelTitle: 范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
+        :param ModelTitle: 範文标題，可選參數，本介面可以依據提供的範文對作文進行評分。
         :type ModelTitle: str
-        :param ModelContent: 范文内容，可选参数，同上，范文的正文部分。
+        :param ModelContent: 範文内容，可選參數，同上，範文的正文部分。
         :type ModelContent: str
-        :param IsAsync: 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+        :param IsAsync: 異步模式标識，0：同步模式，1：異步模式。預設爲同步模式
         :type IsAsync: int
         """
         self.Image = None
@@ -381,15 +381,15 @@ class EHOCRRequest(AbstractModel):
 
 
 class EHOCRResponse(AbstractModel):
-    """EHOCR返回参数结构体
+    """EHOCR返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 接口返回数据
+        :param Data: 介面返回數據
         :type Data: :class:`tencentcloud.ecc.v20181213.models.CompostionContext`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -404,13 +404,13 @@ class EHOCRResponse(AbstractModel):
 
 
 class ErrorCoordinate(AbstractModel):
-    """维度单词坐标
+    """維度單詞坐标
 
     """
 
     def __init__(self):
         """
-        :param Coordinate: 维度单词坐标
+        :param Coordinate: 維度單詞坐标
         :type Coordinate: list of int
         """
         self.Coordinate = None
@@ -421,23 +421,23 @@ class ErrorCoordinate(AbstractModel):
 
 
 class ScoreCategory(AbstractModel):
-    """四个维度的得分
+    """四個維度的得分
 
     """
 
     def __init__(self):
         """
-        :param Words: 词汇维度
+        :param Words: 詞匯維度
         :type Words: :class:`tencentcloud.ecc.v20181213.models.Aspect`
-        :param Sentences: 句子维度
+        :param Sentences: 句子維度
         :type Sentences: :class:`tencentcloud.ecc.v20181213.models.Aspect`
-        :param Structure: 篇章结构维度
+        :param Structure: 篇章結構維度
         :type Structure: :class:`tencentcloud.ecc.v20181213.models.Aspect`
-        :param Content: 内容维度
+        :param Content: 内容維度
         :type Content: :class:`tencentcloud.ecc.v20181213.models.Aspect`
-        :param Score: 维度得分
+        :param Score: 維度得分
         :type Score: float
-        :param Percentage: 维度分数占比
+        :param Percentage: 維度分數占比
         :type Percentage: float
         """
         self.Words = None
@@ -466,15 +466,15 @@ class ScoreCategory(AbstractModel):
 
 
 class SentenceCom(AbstractModel):
-    """批改结果按句点评的详细信息
+    """批改結果按句點評的詳細訊息
 
     """
 
     def __init__(self):
         """
-        :param Suggestions: 句子错误纠正信息
+        :param Suggestions: 句子錯誤糾正訊息
         :type Suggestions: list of SentenceSuggest
-        :param Sentence: 句子信息
+        :param Sentence: 句子訊息
         :type Sentence: :class:`tencentcloud.ecc.v20181213.models.SentenceItem`
         """
         self.Suggestions = None
@@ -494,13 +494,13 @@ class SentenceCom(AbstractModel):
 
 
 class SentenceItem(AbstractModel):
-    """句子的相关信息
+    """句子的相關訊息
 
     """
 
     def __init__(self):
         """
-        :param Sentence: 英语句子
+        :param Sentence: 英語句子
         :type Sentence: str
         :param ParaID: 段落id
         :type ParaID: int
@@ -519,25 +519,25 @@ class SentenceItem(AbstractModel):
 
 
 class SentenceSuggest(AbstractModel):
-    """句子批阅建议
+    """句子批閱建議
 
     """
 
     def __init__(self):
         """
-        :param Type: 类型
+        :param Type: 類型
         :type Type: str
-        :param ErrorType: 错误类型
+        :param ErrorType: 錯誤類型
         :type ErrorType: str
-        :param Origin: 原始单词
+        :param Origin: 原始單詞
         :type Origin: str
-        :param Replace: 替换成 的单词
+        :param Replace: 替換成 的單詞
         :type Replace: str
-        :param Message: 提示信息
+        :param Message: 提示訊息
         :type Message: str
-        :param ErrorPosition: 维度单词位置，在句子的第几个到第几个单词之间
+        :param ErrorPosition: 維度單詞位置，在句子的第幾個到第幾個單詞之間
         :type ErrorPosition: list of int
-        :param ErrorCoordinates: 维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
+        :param ErrorCoordinates: 維度單詞坐标，錯誤單詞在圖片中的坐标，只有傳圖片時正常返回，傳文字時返回[ ]
         :type ErrorCoordinates: list of ErrorCoordinate
         """
         self.Type = None

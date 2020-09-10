@@ -4,7 +4,7 @@ function main_handler($event, $context) {
     print "start main handler\n";
     $content = "API GW Test Success";
 
-    //Generate return msg from API Gateway 构造API网关返回值
+    //Generate return msg from API Gateway 構造API閘道返回值
     $rep = array(
     "isBase64Encoded" => false,
     "statusCode"=> 200,

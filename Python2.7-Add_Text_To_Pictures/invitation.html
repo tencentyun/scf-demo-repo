@@ -18,29 +18,29 @@
     </div>
     <script type="text/javascript">
                 
-         // 绑定点击事件
+         // 綁定點擊事件
         document.querySelector('#btnAjax').onclick = function () {
-            // 更改后端服务地址
+            // 更改後端服務網址
             var url="https://service-1c2dsqdi-1255721742.gz.apigw.tencentcs.com/release/test-123456";
-             // 异步对象
+             // 異步對象
             var ajaxObj = new XMLHttpRequest();
-            // 设置属性
+            // 設置屬性
             ajaxObj.open("POST",url,"false");
-            // 如果想要使用post提交数据,必须添加此行
+            // 如果想要使用post提交數據,必須添加此行
             ajaxObj.setRequestHeader("Content-type", "application/x-www-form-urlencoded;charset=UTF-8","Origin");
-            // 将数据通过send方法传递
+            // 将數據通過send方法傳遞
             var value = document.getElementById("textId").value 
             console.log(value);
             ajaxObj.send(value);
-            // 发送并接受返回值
+            // 發送并接受返回值
             ajaxObj.onreadystatechange = function () {
-                // 这步为判断服务器是否正确响应
+                // 這步爲判斷服務器是否正确響應
                 if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
-                    console.log('数据返回成功');
+                    console.log('數據返回成功');
                     // alert(ajaxObj.responseText);
-                    // 修改页面的显示
+                    // 修改頁面的顯示
                     document.querySelector('h2').innerHTML = ajaxObj.responseText;
-                    // 图片展示
+                    // 圖片展示
                     var url_jpg = ajaxObj.responseText; 
                     xmlhttp = new XMLHttpRequest();
                     xmlhttp.open("GET",url_jpg,true);
@@ -67,15 +67,15 @@
     </script>    
 
     <hr>
-    <h2>云函数处理后返回：下载链接</h2>
+    <h2>雲函數處理後返回：下載連結</h2>
     <div id="showContainer" style="width:200px;">
-        <!-- <p class="loadingTips" style="display: none;">处理中...</p> -->
+        <!-- <p class="loadingTips" style="display: none;">處理中...</p> -->
     </div>
 
     <hr>
-    <h3>邀请函展示</h2>
+    <h3>邀請函展示</h2>
     <div id="showContainer" style="width:800px;">
-        <!-- <p class="loadingTips" style="display: none;">处理中...</p> -->
+        <!-- <p class="loadingTips" style="display: none;">處理中...</p> -->
     </div>
 </body>
 </html>

@@ -4,7 +4,7 @@ Resources:
     smsTest:
       Properties:
         CodeUri: .
-        Description: 提供发送短信，验证码登录服务
+        Description: 提供發送簡訊，驗證碼登入服務
         Environment:
           Variables: {}
         Events: {}

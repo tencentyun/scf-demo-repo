@@ -17,15 +17,15 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class DeleteCertRequest(AbstractModel):
-    """DeleteCert请求参数结构体
+    """DeleteCert請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Id: 证书 ID，即通过 GetList 拿到的证书列表的 ID 字段。
+        :param Id: 證書 ID，即通過 GetList 拿到的證書清單的 ID 欄位。
         :type Id: str
-        :param ModuleType: 模块名称，应填 ssl。
+        :param ModuleType: 模組名稱，應填 ssl。
         :type ModuleType: str
         """
         self.Id = None
@@ -38,13 +38,13 @@ class DeleteCertRequest(AbstractModel):
 
 
 class DeleteCertResponse(AbstractModel):
-    """DeleteCert返回参数结构体
+    """DeleteCert返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -55,27 +55,27 @@ class DeleteCertResponse(AbstractModel):
 
 
 class DescribeCertListRequest(AbstractModel):
-    """DescribeCertList请求参数结构体
+    """DescribeCertList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ModuleType: 模块名称，应填 ssl。
+        :param ModuleType: 模組名稱，應填 ssl。
         :type ModuleType: str
-        :param Offset: 页数，默认第一页。
+        :param Offset: 頁數，預設第一頁。
         :type Offset: int
-        :param Limit: 每页条数，默认每页20条。
+        :param Limit: 每頁條數，預設每頁20條。
         :type Limit: int
-        :param SearchKey: 搜索关键字。
+        :param SearchKey: 搜索關鍵字。
         :type SearchKey: str
-        :param CertType: 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）。
+        :param CertType: 證書類型（目前支援:CA=用戶端證書,SVR=服務器證書）。
         :type CertType: str
-        :param Id: 证书ID。
+        :param Id: 證書ID。
         :type Id: str
-        :param WithCert: 是否同时获取证书内容。
+        :param WithCert: 是否同時獲驗證書内容。
         :type WithCert: str
-        :param AltDomain: 如传，则只返回可以给该域名使用的证书。
+        :param AltDomain: 如傳，則只返回可以給該域名使用的證書。
         :type AltDomain: str
         """
         self.ModuleType = None
@@ -100,17 +100,17 @@ class DescribeCertListRequest(AbstractModel):
 
 
 class DescribeCertListResponse(AbstractModel):
-    """DescribeCertList返回参数结构体
+    """DescribeCertList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 总数量。
+        :param TotalCount: 總數量。
         :type TotalCount: int
-        :param CertificateSet: 列表。
+        :param CertificateSet: 清單。
         :type CertificateSet: list of SSLCertificate
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -130,89 +130,89 @@ class DescribeCertListResponse(AbstractModel):
 
 
 class SSLCertificate(AbstractModel):
-    """获取证书列表（SSLCertificate）返回参数键为 CertificateSet 的内容。
+    """獲驗證書清單（SSLCertificate）返回參數鍵爲 CertificateSet 的内容。
 
     """
 
     def __init__(self):
         """
-        :param OwnerUin: 所属账户
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OwnerUin: 所屬帳戶
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OwnerUin: str
-        :param ProjectId: 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProjectId: 項目ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProjectId: str
-        :param From: 证书来源：trustasia = 亚洲诚信， upload = 用户上传
-注意：此字段可能返回 null，表示取不到有效值。
+        :param From: 證書來源：trustasia = 亞洲誠信， upload = 用戶上傳
+注意：此欄位可能返回 null，表示取不到有效值。
         :type From: str
-        :param Type: 证书类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Type: 證書類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Type: str
-        :param CertType: 证书类型（目前支持：CA = 客户端证书，SVR = 服务器证书）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CertType: 證書類型（目前支援：CA = 用戶端證書，SVR = 服務器證書）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CertType: str
-        :param ProductZhName: 证书办法者名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProductZhName: 證書辦法者名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProductZhName: str
         :param Domain: 主域名
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Domain: str
         :param Alias: 别名
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Alias: str
-        :param Status: 状态值 0：审核中，1：已通过，2：审核失败，3：已过期，4：已添加云解析记录，5：OV/EV 证书，待提交资料，6：订单取消中，7：已取消，8：已提交资料， 待上传确认函
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Status: 狀态值 0：審核中，1：已通過，2：審核失敗，3：已過期，4：已添加雲解析記錄，5：OV/EV 證書，待提交資料，6：訂單取消中，7：已取消，8：已提交資料， 待上傳确認函
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: int
-        :param VulnerabilityStatus: 漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VulnerabilityStatus: 漏洞掃描狀态：INACTIVE = 未開啓，ACTIVE = 已開啓
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VulnerabilityStatus: str
-        :param StatusMsg: 状态信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StatusMsg: 狀态訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StatusMsg: str
-        :param VerifyType: 验证类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VerifyType: 驗證類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VerifyType: str
-        :param CertBeginTime: 证书生效时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CertBeginTime: 證書生效時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CertBeginTime: str
-        :param CertEndTime: 证书过期时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CertEndTime: 證書過期時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CertEndTime: str
-        :param ValidityPeriod: 证书过期时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ValidityPeriod: 證書過期時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ValidityPeriod: str
-        :param InsertTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InsertTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InsertTime: str
-        :param ProjectInfo: 项目信息，ProjectId：项目ID，OwnerUin：项目所属的 uin（默认项目为0），Name：项目名称，CreatorUin：创建项目的 uin，CreateTime：项目创建时间，Info：项目说明
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProjectInfo: 項目訊息，ProjectId：項目ID，OwnerUin：項目所屬的 uin（預設項目爲0），Name：項目名稱，CreatorUin：創建項目的 uin，CreateTime：項目創建時間，Info：項目說明
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProjectInfo: :class:`tencentcloud.wss.v20180426.models.SSLProjectInfo`
-        :param Id: 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Id: 證書ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Id: str
-        :param SubjectAltName: 证书包含的多个域名（包含主域名）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubjectAltName: 證書包含的多個域名（包含主域名）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubjectAltName: list of str
-        :param TypeName: 证书类型名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TypeName: 證書類型名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TypeName: str
-        :param StatusName: 状态名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StatusName: 狀态名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StatusName: str
-        :param IsVip: 是否为 VIP 客户
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsVip: 是否爲 VIP 客戶
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsVip: bool
-        :param IsDv: 是否我 DV 版证书
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsDv: 是否我 DV 版證書
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsDv: bool
-        :param IsWildcard: 是否为泛域名证书
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsWildcard: 是否爲泛域名證書
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsWildcard: bool
-        :param IsVulnerability: 是否启用了漏洞扫描功能
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsVulnerability: 是否啓用了漏洞掃描功能
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsVulnerability: bool
-        :param Cert: 证书
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Cert: 證書
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Cert: str
         """
         self.OwnerUin = None
@@ -275,29 +275,29 @@ class SSLCertificate(AbstractModel):
 
 
 class SSLProjectInfo(AbstractModel):
-    """获取证书列表接口（SSLProjectInfo）出参键为CertificateSet下的元素ProjectIno详情
+    """獲驗證書清單介面（SSLProjectInfo）出參鍵爲CertificateSet下的元素ProjectIno詳情
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ProjectId: 項目ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ProjectId: str
-        :param OwnerUin: 项目所属的 uin（默认项目为0）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OwnerUin: 項目所屬的 uin（預設項目爲0）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OwnerUin: int
-        :param Name: 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Name: 項目名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Name: str
-        :param CreatorUin: 创建项目的 uin
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreatorUin: 創建項目的 uin
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreatorUin: int
-        :param CreateTime: 项目创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 項目創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
-        :param Info: 项目说明
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Info: 項目說明
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Info: str
         """
         self.ProjectId = None
@@ -318,23 +318,23 @@ class SSLProjectInfo(AbstractModel):
 
 
 class UploadCertRequest(AbstractModel):
-    """UploadCert请求参数结构体
+    """UploadCert請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Cert: 证书内容。
+        :param Cert: 證書内容。
         :type Cert: str
-        :param CertType: 证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书）。
+        :param CertType: 證書類型（目前支援：CA 爲用戶端證書，SVR 爲服務器證書）。
         :type CertType: str
-        :param ProjectId: 项目ID，详见用户指南的 [项目与标签](https://cloud.tencent.com/document/product/598/32738)。
+        :param ProjectId: 項目ID，詳見用戶指南的 [項目與标簽](https://cloud.tencent.com/document/product/598/32738)。
         :type ProjectId: str
-        :param ModuleType: 模块名称，应填 ssl。
+        :param ModuleType: 模組名稱，應填 ssl。
         :type ModuleType: str
-        :param Key: 证书私钥，certType=SVR 时必填。
+        :param Key: 證書私鑰，certType=SVR 時必填。
         :type Key: str
-        :param Alias: 证书备注。
+        :param Alias: 證書備注。
         :type Alias: str
         """
         self.Cert = None
@@ -355,15 +355,15 @@ class UploadCertRequest(AbstractModel):
 
 
 class UploadCertResponse(AbstractModel):
-    """UploadCert返回参数结构体
+    """UploadCert返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Id: 证书ID。
+        :param Id: 證書ID。
         :type Id: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Id = None

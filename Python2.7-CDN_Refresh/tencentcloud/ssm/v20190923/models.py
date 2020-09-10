@@ -17,23 +17,23 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CreateSecretRequest(AbstractModel):
-    """CreateSecret请求参数结构体
+    """CreateSecret請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
+        :param SecretName: 憑據名稱，同一region内不可重複，最長128位元，使用字母、數字或者 - _ 的組合，第一個字元必須爲字母或者數字。
         :type SecretName: str
-        :param VersionId: 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。
+        :param VersionId: 憑據版本，查詢憑據訊息時需要根據SecretName 和 VersionId進行查詢，最長64 位元，使用字母、數字或者 - _ . 的組合并且以字母或數字開頭。
         :type VersionId: str
-        :param Description: 描述信息，用于详细描述用途等，最大支持2048字节。
+        :param Description: 描述訊息，用于詳細描述用途等，最大支援2048位元。
         :type Description: str
-        :param KmsKeyId: 指定对凭据进行加密的KMS CMK。如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。您也可以指定在同region 下自行创建的KMS CMK进行加密。
+        :param KmsKeyId: 指定對憑據進行加密的KMS CMK。如果爲空則表示使用Secrets Manager爲您預設創建的CMK進行加密。您也可以指定在同region 下自行創建的KMS CMK進行加密。
         :type KmsKeyId: str
-        :param SecretBinary: 二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持4096字节。
+        :param SecretBinary: 二進制憑據訊息base64編碼後的明文。SecretBinary 和 SecretString 必須且只能設置一個，最大支援4096位元。
         :type SecretBinary: str
-        :param SecretString: 文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，，最大支持4096字节。
+        :param SecretString: 文本類型憑據訊息明文（不需要進行base64編碼）。SecretBinary 和 SecretString 必須且只能設置一個，，最大支援4096位元。
         :type SecretString: str
         """
         self.SecretName = None
@@ -54,17 +54,17 @@ class CreateSecretRequest(AbstractModel):
 
 
 class CreateSecretResponse(AbstractModel):
-    """CreateSecret返回参数结构体
+    """CreateSecret返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 新创建的凭据名称。
+        :param SecretName: 新創建的憑據名稱。
         :type SecretName: str
-        :param VersionId: 新创建的凭据版本。
+        :param VersionId: 新創建的憑據版本。
         :type VersionId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SecretName = None
@@ -79,15 +79,15 @@ class CreateSecretResponse(AbstractModel):
 
 
 class DeleteSecretRequest(AbstractModel):
-    """DeleteSecret请求参数结构体
+    """DeleteSecret請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 指定需要删除的凭据名称。
+        :param SecretName: 指定需要删除的憑據名稱。
         :type SecretName: str
-        :param RecoveryWindowInDays: 指定计划删除日期，单位（天），0（默认）表示立即删除， 1-30 表示预留的天数，超出该日期之后彻底删除。
+        :param RecoveryWindowInDays: 指定計劃删除日期，單位（天），0（預設）表示立即删除， 1-30 表示預留的天數，超出該日期之後徹底删除。
         :type RecoveryWindowInDays: int
         """
         self.SecretName = None
@@ -100,17 +100,17 @@ class DeleteSecretRequest(AbstractModel):
 
 
 class DeleteSecretResponse(AbstractModel):
-    """DeleteSecret返回参数结构体
+    """DeleteSecret返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 指定删除的凭据名称。
+        :param SecretName: 指定删除的憑據名稱。
         :type SecretName: str
-        :param DeleteTime: 凭据删除的日期，unix时间戳。
+        :param DeleteTime: 憑據删除的日期，unix時間戳。
         :type DeleteTime: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SecretName = None
@@ -125,15 +125,15 @@ class DeleteSecretResponse(AbstractModel):
 
 
 class DeleteSecretVersionRequest(AbstractModel):
-    """DeleteSecretVersion请求参数结构体
+    """DeleteSecretVersion請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 指定凭据名称。
+        :param SecretName: 指定憑據名稱。
         :type SecretName: str
-        :param VersionId: 指定该名称下需要删除的凭据的版本号。
+        :param VersionId: 指定該名稱下需要删除的憑據的版本号。
         :type VersionId: str
         """
         self.SecretName = None
@@ -146,17 +146,17 @@ class DeleteSecretVersionRequest(AbstractModel):
 
 
 class DeleteSecretVersionResponse(AbstractModel):
-    """DeleteSecretVersion返回参数结构体
+    """DeleteSecretVersion返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 凭据名称。
+        :param SecretName: 憑據名稱。
         :type SecretName: str
-        :param VersionId: 凭据版本号。
+        :param VersionId: 憑據版本号。
         :type VersionId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SecretName = None
@@ -171,13 +171,13 @@ class DeleteSecretVersionResponse(AbstractModel):
 
 
 class DescribeSecretRequest(AbstractModel):
-    """DescribeSecret请求参数结构体
+    """DescribeSecret請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 指定需要获取凭据详细信息的凭据名称。
+        :param SecretName: 指定需要獲取憑據詳細訊息的憑據名稱。
         :type SecretName: str
         """
         self.SecretName = None
@@ -188,27 +188,27 @@ class DescribeSecretRequest(AbstractModel):
 
 
 class DescribeSecretResponse(AbstractModel):
-    """DescribeSecret返回参数结构体
+    """DescribeSecret返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 凭据名称。
+        :param SecretName: 憑據名稱。
         :type SecretName: str
-        :param Description: 凭据描述信息。
+        :param Description: 憑據描述訊息。
         :type Description: str
         :param KmsKeyId: 用于加密的KMS CMK ID。
         :type KmsKeyId: str
-        :param CreateUin: 创建者UIN。
+        :param CreateUin: 創建者UIN。
         :type CreateUin: int
-        :param Status: 凭据状态：Enabled、Disabled、PendingDelete
+        :param Status: 憑據狀态：Enabled、Disabled、PendingDelete
         :type Status: str
-        :param DeleteTime: 删除日期，uinx 时间戳，非计划删除状态的凭据为0。
+        :param DeleteTime: 删除日期，uinx 時間戳，非計劃删除狀态的憑據爲0。
         :type DeleteTime: int
-        :param CreateTime: 创建日期。
+        :param CreateTime: 創建日期。
         :type CreateTime: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SecretName = None
@@ -233,13 +233,13 @@ class DescribeSecretResponse(AbstractModel):
 
 
 class DisableSecretRequest(AbstractModel):
-    """DisableSecret请求参数结构体
+    """DisableSecret請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 指定停用的凭据名称。
+        :param SecretName: 指定停用的憑據名稱。
         :type SecretName: str
         """
         self.SecretName = None
@@ -250,15 +250,15 @@ class DisableSecretRequest(AbstractModel):
 
 
 class DisableSecretResponse(AbstractModel):
-    """DisableSecret返回参数结构体
+    """DisableSecret返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 停用的凭据名称。
+        :param SecretName: 停用的憑據名稱。
         :type SecretName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SecretName = None
@@ -271,13 +271,13 @@ class DisableSecretResponse(AbstractModel):
 
 
 class EnableSecretRequest(AbstractModel):
-    """EnableSecret请求参数结构体
+    """EnableSecret請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 指定启用凭据的名称。
+        :param SecretName: 指定啓用憑據的名稱。
         :type SecretName: str
         """
         self.SecretName = None
@@ -288,15 +288,15 @@ class EnableSecretRequest(AbstractModel):
 
 
 class EnableSecretResponse(AbstractModel):
-    """EnableSecret返回参数结构体
+    """EnableSecret返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 启用的凭据名称。
+        :param SecretName: 啓用的憑據名稱。
         :type SecretName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SecretName = None
@@ -309,21 +309,21 @@ class EnableSecretResponse(AbstractModel):
 
 
 class GetRegionsRequest(AbstractModel):
-    """GetRegions请求参数结构体
+    """GetRegions請求參數結構體
 
     """
 
 
 class GetRegionsResponse(AbstractModel):
-    """GetRegions返回参数结构体
+    """GetRegions返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Regions: region列表。
+        :param Regions: region清單。
         :type Regions: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Regions = None
@@ -336,15 +336,15 @@ class GetRegionsResponse(AbstractModel):
 
 
 class GetSecretValueRequest(AbstractModel):
-    """GetSecretValue请求参数结构体
+    """GetSecretValue請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 指定凭据的名称。
+        :param SecretName: 指定憑據的名稱。
         :type SecretName: str
-        :param VersionId: 指定对应凭据的版本号。
+        :param VersionId: 指定對應憑據的版本号。
         :type VersionId: str
         """
         self.SecretName = None
@@ -357,21 +357,21 @@ class GetSecretValueRequest(AbstractModel):
 
 
 class GetSecretValueResponse(AbstractModel):
-    """GetSecretValue返回参数结构体
+    """GetSecretValue返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 凭据的名称。
+        :param SecretName: 憑據的名稱。
         :type SecretName: str
-        :param VersionId: 该凭据对应的版本号。
+        :param VersionId: 該憑據對應的版本号。
         :type VersionId: str
-        :param SecretBinary: 在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。SecretBinary和SecretString只有一个不为空。
+        :param SecretBinary: 在創建憑據(CreateSecret)時，如果指定的是二進制數據，則該欄位爲返回結果，并且使用base64進行編碼，應用方需要進行base64解碼後獲取原始數據。SecretBinary和SecretString只有一個不爲空。
         :type SecretBinary: str
-        :param SecretString: 在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。SecretBinary和SecretString只有一个不为空。
+        :param SecretString: 在創建憑據(CreateSecret)時，如果指定的是普通文本數據，則該欄位爲返回結果。SecretBinary和SecretString只有一個不爲空。
         :type SecretString: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SecretName = None
@@ -390,23 +390,23 @@ class GetSecretValueResponse(AbstractModel):
 
 
 class GetServiceStatusRequest(AbstractModel):
-    """GetServiceStatus请求参数结构体
+    """GetServiceStatus請求參數結構體
 
     """
 
 
 class GetServiceStatusResponse(AbstractModel):
-    """GetServiceStatus返回参数结构体
+    """GetServiceStatus返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ServiceEnabled: true表示服务已开通，false 表示服务尚未开通。
+        :param ServiceEnabled: true表示服務已開通，false 表示服務尚未開通。
         :type ServiceEnabled: bool
-        :param InvalidType: 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。
+        :param InvalidType: 服務不可用類型： 0-未購買，1-正常， 2-欠費停服， 3-資源釋放。
         :type InvalidType: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ServiceEnabled = None
@@ -421,13 +421,13 @@ class GetServiceStatusResponse(AbstractModel):
 
 
 class ListSecretVersionIdsRequest(AbstractModel):
-    """ListSecretVersionIds请求参数结构体
+    """ListSecretVersionIds請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 凭据名称。
+        :param SecretName: 憑據名稱。
         :type SecretName: str
         """
         self.SecretName = None
@@ -438,18 +438,18 @@ class ListSecretVersionIdsRequest(AbstractModel):
 
 
 class ListSecretVersionIdsResponse(AbstractModel):
-    """ListSecretVersionIds返回参数结构体
+    """ListSecretVersionIds返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 凭据名称。
+        :param SecretName: 憑據名稱。
         :type SecretName: str
-        :param Versions: VersionId列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Versions: VersionId清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Versions: list of VersionInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SecretName = None
@@ -469,21 +469,21 @@ class ListSecretVersionIdsResponse(AbstractModel):
 
 
 class ListSecretsRequest(AbstractModel):
-    """ListSecrets请求参数结构体
+    """ListSecrets請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 查询列表的起始位置，以0开始，不设置默认为0。
+        :param Offset: 查詢清單的起始位置，以0開始，不設置預設爲0。
         :type Offset: int
-        :param Limit: 单次查询返回的最大数量，0或不设置则使用默认值 20。
+        :param Limit: 單次查詢返回的最大數量，0或不設置則使用預設值 20。
         :type Limit: int
-        :param OrderType: 根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。
+        :param OrderType: 根據創建時間的排序方式，0或者不設置則使用降序排序， 1 表示升序排序。
         :type OrderType: int
-        :param State: 根据凭据状态进行过滤，默认为0表示查询全部，1 表示查询Enabed 凭据列表，2表示查询Disabled 凭据列表， 3 表示查询PendingDelete 凭据列表。
+        :param State: 根據憑據狀态進行過濾，預設爲0表示查詢全部，1 表示查詢Enabed 憑據清單，2表示查詢Disabled 憑據清單， 3 表示查詢PendingDelete 憑據清單。
         :type State: int
-        :param SearchSecretName: 根据凭据名称进行过滤，为空表示不过滤。
+        :param SearchSecretName: 根據憑據名稱進行過濾，爲空表示不過濾。
         :type SearchSecretName: str
         """
         self.Offset = None
@@ -502,17 +502,17 @@ class ListSecretsRequest(AbstractModel):
 
 
 class ListSecretsResponse(AbstractModel):
-    """ListSecrets返回参数结构体
+    """ListSecrets返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 根据State和SearchSecretName 筛选的凭据总数。
+        :param TotalCount: 根據State和SearchSecretName 篩選的憑據總數。
         :type TotalCount: int
-        :param SecretMetadatas: 返回凭据信息列表。
+        :param SecretMetadatas: 返回憑據訊息清單。
         :type SecretMetadatas: list of SecretMetadata
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -532,19 +532,19 @@ class ListSecretsResponse(AbstractModel):
 
 
 class PutSecretValueRequest(AbstractModel):
-    """PutSecretValue请求参数结构体
+    """PutSecretValue請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 指定需要增加版本的凭据名称。
+        :param SecretName: 指定需要增加版本的憑據名稱。
         :type SecretName: str
-        :param VersionId: 指定新增加的版本号，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。
+        :param VersionId: 指定新增加的版本号，最長64 位元，使用字母、數字或者 - _ . 的組合并且以字母或數字開頭。
         :type VersionId: str
-        :param SecretBinary: 二进制凭据信息，使用base64编码。SecretBinary 和 SecretString 必须且只能设置一个。
+        :param SecretBinary: 二進制憑據訊息，使用base64編碼。SecretBinary 和 SecretString 必須且只能設置一個。
         :type SecretBinary: str
-        :param SecretString: 文本类型凭据信息明文（不需要进行base64编码），SecretBinary 和 SecretString 必须且只能设置一个。
+        :param SecretString: 文本類型憑據訊息明文（不需要進行base64編碼），SecretBinary 和 SecretString 必須且只能設置一個。
         :type SecretString: str
         """
         self.SecretName = None
@@ -561,17 +561,17 @@ class PutSecretValueRequest(AbstractModel):
 
 
 class PutSecretValueResponse(AbstractModel):
-    """PutSecretValue返回参数结构体
+    """PutSecretValue返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 凭据名称。
+        :param SecretName: 憑據名稱。
         :type SecretName: str
         :param VersionId: 新增加的版本号。
         :type VersionId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SecretName = None
@@ -586,13 +586,13 @@ class PutSecretValueResponse(AbstractModel):
 
 
 class RestoreSecretRequest(AbstractModel):
-    """RestoreSecret请求参数结构体
+    """RestoreSecret請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 指定需要恢复的凭据名称。
+        :param SecretName: 指定需要恢複的憑據名稱。
         :type SecretName: str
         """
         self.SecretName = None
@@ -603,15 +603,15 @@ class RestoreSecretRequest(AbstractModel):
 
 
 class RestoreSecretResponse(AbstractModel):
-    """RestoreSecret返回参数结构体
+    """RestoreSecret返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 凭据名称。
+        :param SecretName: 憑據名稱。
         :type SecretName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SecretName = None
@@ -624,27 +624,27 @@ class RestoreSecretResponse(AbstractModel):
 
 
 class SecretMetadata(AbstractModel):
-    """凭据的基础信息
+    """憑據的基礎訊息
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 凭据名称。
+        :param SecretName: 憑據名稱。
         :type SecretName: str
-        :param Description: 凭据的描述信息。
+        :param Description: 憑據的描述訊息。
         :type Description: str
-        :param KmsKeyId: 用于加密凭据的KMS KeyId。
+        :param KmsKeyId: 用于加密憑據的KMS KeyId。
         :type KmsKeyId: str
-        :param CreateUin: 创建者UIN。
+        :param CreateUin: 創建者UIN。
         :type CreateUin: int
-        :param Status: 凭据状态：Enabled、Disabled、PendingDelete
+        :param Status: 憑據狀态：Enabled、Disabled、PendingDelete
         :type Status: str
-        :param DeleteTime: 凭据删除日期，对于status为PendingDelete 的有效，unix时间戳。
+        :param DeleteTime: 憑據删除日期，對于status爲PendingDelete 的有效，unix時間戳。
         :type DeleteTime: int
-        :param CreateTime: 凭据创建时间，unix时间戳。
+        :param CreateTime: 憑據創建時間，unix時間戳。
         :type CreateTime: int
-        :param KmsKeyType: 用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥。
+        :param KmsKeyType: 用于加密憑據的KMS CMK類型，DEFAULT 表示SecretsManager 創建的預設金鑰， CUSTOMER 表示用戶指定的金鑰。
         :type KmsKeyType: str
         """
         self.SecretName = None
@@ -669,15 +669,15 @@ class SecretMetadata(AbstractModel):
 
 
 class UpdateDescriptionRequest(AbstractModel):
-    """UpdateDescription请求参数结构体
+    """UpdateDescription請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 指定需要更新描述信息的凭据名。
+        :param SecretName: 指定需要更新描述訊息的憑據名。
         :type SecretName: str
-        :param Description: 新的描述信息，最大长度2048个字节。
+        :param Description: 新的描述訊息，最大長度2048個位元。
         :type Description: str
         """
         self.SecretName = None
@@ -690,15 +690,15 @@ class UpdateDescriptionRequest(AbstractModel):
 
 
 class UpdateDescriptionResponse(AbstractModel):
-    """UpdateDescription返回参数结构体
+    """UpdateDescription返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 凭据名称。
+        :param SecretName: 憑據名稱。
         :type SecretName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SecretName = None
@@ -711,19 +711,19 @@ class UpdateDescriptionResponse(AbstractModel):
 
 
 class UpdateSecretRequest(AbstractModel):
-    """UpdateSecret请求参数结构体
+    """UpdateSecret請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 指定需要更新凭据内容的名称。
+        :param SecretName: 指定需要更新憑據内容的名稱。
         :type SecretName: str
-        :param VersionId: 指定需要更新凭据内容的版本号。
+        :param VersionId: 指定需要更新憑據内容的版本号。
         :type VersionId: str
-        :param SecretBinary: 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。SecretBinary 和 SecretString 只能一个不为空。
+        :param SecretBinary: 新的憑據内容爲二進制的場景使用該欄位，并使用base64進行編碼。SecretBinary 和 SecretString 只能一個不爲空。
         :type SecretBinary: str
-        :param SecretString: 新的凭据内容为文本的场景使用该字段，不需要base64编码。SecretBinary 和 SecretString 只能一个不为空。
+        :param SecretString: 新的憑據内容爲文本的場景使用該欄位，不需要base64編碼。SecretBinary 和 SecretString 只能一個不爲空。
         :type SecretString: str
         """
         self.SecretName = None
@@ -740,17 +740,17 @@ class UpdateSecretRequest(AbstractModel):
 
 
 class UpdateSecretResponse(AbstractModel):
-    """UpdateSecret返回参数结构体
+    """UpdateSecret返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecretName: 凭据名称。
+        :param SecretName: 憑據名稱。
         :type SecretName: str
-        :param VersionId: 凭据版本号。
+        :param VersionId: 憑據版本号。
         :type VersionId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SecretName = None
@@ -765,7 +765,7 @@ class UpdateSecretResponse(AbstractModel):
 
 
 class VersionInfo(AbstractModel):
-    """凭据版本号列表信息
+    """憑據版本号清單訊息
 
     """
 
@@ -773,7 +773,7 @@ class VersionInfo(AbstractModel):
         """
         :param VersionId: 版本号。
         :type VersionId: str
-        :param CreateTime: 创建时间，unix时间戳。
+        :param CreateTime: 創建時間，unix時間戳。
         :type CreateTime: int
         """
         self.VersionId = None

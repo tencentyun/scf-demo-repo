@@ -17,14 +17,14 @@ import logging
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
 
-#必填参数
+#必填參數
 ES_Address = os.getenv('ES_Address')
 ES_User = os.getenv('ES_User')
 ES_Password = os.getenv('ES_Password')
-ES_Index_KeyWord = os.getenv('ES_Index_KeyWord') #建立索引的前缀关键词，如填Log
-#可选配参数
-ES_Log_IgnoreWord = os.getenv('ES_Log_IgnoreWord')  #需要删除的关键词，缺省则全量写入，如填name,password
-ES_Index_TimeFormat = os.getenv('ES_Index_TimeFormat') #按照天或者小时设置Index，缺省则按照天建立索引，如填hour
+ES_Index_KeyWord = os.getenv('ES_Index_KeyWord') #建立索引的前綴關鍵詞，如填Log
+#可選配參數
+ES_Log_IgnoreWord = os.getenv('ES_Log_IgnoreWord')  #需要删除的關鍵詞，缺省則全量寫入，如填name,password
+ES_Index_TimeFormat = os.getenv('ES_Index_TimeFormat') #按照天或者小時設置Index，缺省則按照天建立索引，如填hour
 
 
 logger = logging.getLogger('elasticsearch')
@@ -37,7 +37,7 @@ if ES_Index_TimeFormat == "hour":
 else:
     ES_Index_TimeFormat = "%Y-%m-%d"
 
-#日志清洗逻辑，可自行修改
+#日志清洗邏輯，可自行修改
 def deallog(log):    
     if ES_Log_IgnoreWord != None:
         for key in ES_Log_IgnoreWord.split(","):
@@ -51,7 +51,7 @@ def gendata(records):
             log = record['Ckafka']['msgBody']
             while type(log) != dict:
                 log = json.loads(log)
-            #可针对Ckafka中的某些关键字段进行转义或者修改
+            #可針對Ckafka中的某些關鍵欄位進行轉義或者修改
             if "message" in log.keys() and type(log['message']) == str:
                 message = json.loads(log['message'])
                 log.pop("message", None)

@@ -17,13 +17,13 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CHPRequest(AbstractModel):
-    """终端骚扰保护请求内容
+    """終端騷擾保護請求内容
 
     """
 
     def __init__(self):
         """
-        :param PhoneNumber: 电话号码
+        :param PhoneNumber: 電話号碼
         :type PhoneNumber: str
         """
         self.PhoneNumber = None
@@ -34,23 +34,23 @@ class CHPRequest(AbstractModel):
 
 
 class CHPResponse(AbstractModel):
-    """终端骚扰保护
+    """終端騷擾保護
 
     """
 
     def __init__(self):
         """
-        :param TagType: 标记类型
- 0: 无标记
- 50:骚扰电话
- 51:房产中介
- 52:保险理财
- 53:广告推销
- 54:诈骗电话
- 55:快递电话
- 56:出租车专车
+        :param TagType: 标記類型
+ 0: 無标記
+ 50:騷擾電話
+ 51:房産中介
+ 52:保險理财
+ 53:廣告推銷
+ 54:詐騙電話
+ 55:快遞電話
+ 56:出租車專車
         :type TagType: int
-        :param TagCount: 标记次数
+        :param TagCount: 标記次數
         :type TagCount: int
         """
         self.TagType = None
@@ -63,15 +63,15 @@ class CHPResponse(AbstractModel):
 
 
 class CreateSmpnEpaRequest(AbstractModel):
-    """CreateSmpnEpa请求参数结构体
+    """CreateSmpnEpa請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestData: 企业号码认证请求内容
+        :param RequestData: 企業号碼認證請求内容
         :type RequestData: :class:`tencentcloud.smpn.v20190822.models.EPARequest`
-        :param ResourceId: 用于计费的资源ID
+        :param ResourceId: 用于計費的資源ID
         :type ResourceId: str
         """
         self.RequestData = None
@@ -86,15 +86,15 @@ class CreateSmpnEpaRequest(AbstractModel):
 
 
 class CreateSmpnEpaResponse(AbstractModel):
-    """CreateSmpnEpa返回参数结构体
+    """CreateSmpnEpa返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResponseData: 业号码认证回应内容
+        :param ResponseData: 業号碼認證回應内容
         :type ResponseData: :class:`tencentcloud.smpn.v20190822.models.EPAResponse`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResponseData = None
@@ -109,15 +109,15 @@ class CreateSmpnEpaResponse(AbstractModel):
 
 
 class DescribeSmpnChpRequest(AbstractModel):
-    """DescribeSmpnChp请求参数结构体
+    """DescribeSmpnChp請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResourceId: 客户用于计费的资源Id
+        :param ResourceId: 客戶用于計費的資源Id
         :type ResourceId: str
-        :param RequestData: 终端骚扰保护请求
+        :param RequestData: 終端騷擾保護請求
         :type RequestData: :class:`tencentcloud.smpn.v20190822.models.CHPRequest`
         """
         self.ResourceId = None
@@ -132,15 +132,15 @@ class DescribeSmpnChpRequest(AbstractModel):
 
 
 class DescribeSmpnChpResponse(AbstractModel):
-    """DescribeSmpnChp返回参数结构体
+    """DescribeSmpnChp返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResponseData: 终端骚扰保护回应
+        :param ResponseData: 終端騷擾保護回應
         :type ResponseData: :class:`tencentcloud.smpn.v20190822.models.CHPResponse`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResponseData = None
@@ -155,15 +155,15 @@ class DescribeSmpnChpResponse(AbstractModel):
 
 
 class DescribeSmpnFnrRequest(AbstractModel):
-    """DescribeSmpnFnr请求参数结构体
+    """DescribeSmpnFnr請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestData: 虚假号码识别请求内容
+        :param RequestData: 虛假号碼識别請求内容
         :type RequestData: :class:`tencentcloud.smpn.v20190822.models.FNRRequest`
-        :param ResourceId: 用于计费的资源ID
+        :param ResourceId: 用于計費的資源ID
         :type ResourceId: str
         """
         self.RequestData = None
@@ -178,15 +178,15 @@ class DescribeSmpnFnrRequest(AbstractModel):
 
 
 class DescribeSmpnFnrResponse(AbstractModel):
-    """DescribeSmpnFnr返回参数结构体
+    """DescribeSmpnFnr返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResponseData: 虚假号码识别回应内容
+        :param ResponseData: 虛假号碼識别回應内容
         :type ResponseData: :class:`tencentcloud.smpn.v20190822.models.FNRResponse`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResponseData = None
@@ -201,15 +201,15 @@ class DescribeSmpnFnrResponse(AbstractModel):
 
 
 class DescribeSmpnMhmRequest(AbstractModel):
-    """DescribeSmpnMhm请求参数结构体
+    """DescribeSmpnMhm請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestData: 号码营销监控请求内容
+        :param RequestData: 号碼營銷監控請求内容
         :type RequestData: :class:`tencentcloud.smpn.v20190822.models.MHMRequest`
-        :param ResourceId: 用于计费的资源ID
+        :param ResourceId: 用于計費的資源ID
         :type ResourceId: str
         """
         self.RequestData = None
@@ -224,15 +224,15 @@ class DescribeSmpnMhmRequest(AbstractModel):
 
 
 class DescribeSmpnMhmResponse(AbstractModel):
-    """DescribeSmpnMhm返回参数结构体
+    """DescribeSmpnMhm返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResponseData: 号码营销监控回应内容
+        :param ResponseData: 号碼營銷監控回應内容
         :type ResponseData: :class:`tencentcloud.smpn.v20190822.models.MHMResponse`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResponseData = None
@@ -247,15 +247,15 @@ class DescribeSmpnMhmResponse(AbstractModel):
 
 
 class DescribeSmpnMrlRequest(AbstractModel):
-    """DescribeSmpnMrl请求参数结构体
+    """DescribeSmpnMrl請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestData: 恶意标记等级请求内容
+        :param RequestData: 惡意标記等級請求内容
         :type RequestData: :class:`tencentcloud.smpn.v20190822.models.MRLRequest`
-        :param ResourceId: 用于计费的资源ID
+        :param ResourceId: 用于計費的資源ID
         :type ResourceId: str
         """
         self.RequestData = None
@@ -270,15 +270,15 @@ class DescribeSmpnMrlRequest(AbstractModel):
 
 
 class DescribeSmpnMrlResponse(AbstractModel):
-    """DescribeSmpnMrl返回参数结构体
+    """DescribeSmpnMrl返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResponseData: 恶意标记等级回应内容
+        :param ResponseData: 惡意标記等級回應内容
         :type ResponseData: :class:`tencentcloud.smpn.v20190822.models.MRLResponse`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ResponseData = None
@@ -293,15 +293,15 @@ class DescribeSmpnMrlResponse(AbstractModel):
 
 
 class EPARequest(AbstractModel):
-    """企业号码认证请求
+    """企業号碼認證請求
 
     """
 
     def __init__(self):
         """
-        :param PhoneNumber: 电话号码
+        :param PhoneNumber: 電話号碼
         :type PhoneNumber: str
-        :param Name: 黄页名称
+        :param Name: 黃頁名稱
         :type Name: str
         """
         self.PhoneNumber = None
@@ -314,13 +314,13 @@ class EPARequest(AbstractModel):
 
 
 class EPAResponse(AbstractModel):
-    """企业号码认证回应
+    """企業号碼認證回應
 
     """
 
     def __init__(self):
         """
-        :param RetCode: 0成功 其他失败
+        :param RetCode: 0成功 其他失敗
         :type RetCode: int
         """
         self.RetCode = None
@@ -331,13 +331,13 @@ class EPAResponse(AbstractModel):
 
 
 class FNRRequest(AbstractModel):
-    """虚假号码识别请求
+    """虛假号碼識别請求
 
     """
 
     def __init__(self):
         """
-        :param PhoneNumber: 电话号码
+        :param PhoneNumber: 電話号碼
         :type PhoneNumber: str
         """
         self.PhoneNumber = None
@@ -348,13 +348,13 @@ class FNRRequest(AbstractModel):
 
 
 class FNRResponse(AbstractModel):
-    """虚假号码识别回应
+    """虛假号碼識别回應
 
     """
 
     def __init__(self):
         """
-        :param Status: 虚假号码描述
+        :param Status: 虛假号碼描述
         :type Status: int
         """
         self.Status = None
@@ -365,13 +365,13 @@ class FNRResponse(AbstractModel):
 
 
 class MHMRequest(AbstractModel):
-    """号码营销监控请求
+    """号碼營銷監控請求
 
     """
 
     def __init__(self):
         """
-        :param PhoneNumber: 电话号码
+        :param PhoneNumber: 電話号碼
         :type PhoneNumber: str
         """
         self.PhoneNumber = None
@@ -382,23 +382,23 @@ class MHMRequest(AbstractModel):
 
 
 class MHMResponse(AbstractModel):
-    """号码营销监控回应
+    """号碼營銷監控回應
 
     """
 
     def __init__(self):
         """
-        :param TagType: 标记类型
- 0: 无标记
- 50:骚扰电话
- 51:房产中介
- 52:保险理财
- 53:广告推销
- 54:诈骗电话
- 55:快递电话
- 56:出租车专车
+        :param TagType: 标記類型
+ 0: 無标記
+ 50:騷擾電話
+ 51:房産中介
+ 52:保險理财
+ 53:廣告推銷
+ 54:詐騙電話
+ 55:快遞電話
+ 56:出租車專車
         :type TagType: int
-        :param TagCount: 标记次数
+        :param TagCount: 标記次數
         :type TagCount: int
         """
         self.TagType = None
@@ -411,13 +411,13 @@ class MHMResponse(AbstractModel):
 
 
 class MRLRequest(AbstractModel):
-    """号码恶意标记等级请求
+    """号碼惡意标記等級請求
 
     """
 
     def __init__(self):
         """
-        :param PhoneNumber: 电话号码
+        :param PhoneNumber: 電話号碼
         :type PhoneNumber: str
         """
         self.PhoneNumber = None
@@ -428,21 +428,21 @@ class MRLRequest(AbstractModel):
 
 
 class MRLResponse(AbstractModel):
-    """号码恶意标记等级
+    """号碼惡意标記等級
 
     """
 
     def __init__(self):
         """
-        :param DisturbLevel: 骚扰电话恶意标记等级
+        :param DisturbLevel: 騷擾電話惡意标記等級
         :type DisturbLevel: int
-        :param HouseAgentLevel: 房产中介恶意标记等级
+        :param HouseAgentLevel: 房産中介惡意标記等級
         :type HouseAgentLevel: int
-        :param InsuranceLevel: 保险理财恶意标记等级
+        :param InsuranceLevel: 保險理财惡意标記等級
         :type InsuranceLevel: int
-        :param SalesLevel: 广告推销恶意标记等级
+        :param SalesLevel: 廣告推銷惡意标記等級
         :type SalesLevel: int
-        :param CheatLevel: 诈骗电话恶意标记等级
+        :param CheatLevel: 詐騙電話惡意标記等級
         :type CheatLevel: int
         """
         self.DisturbLevel = None

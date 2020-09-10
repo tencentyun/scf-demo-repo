@@ -17,17 +17,17 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CacheOptResult(AbstractModel):
-    """违规资源封禁/解封返回类型
+    """違規資源封禁/解封返回類型
 
     """
 
     def __init__(self):
         """
-        :param SuccessUrls: 成功的url列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SuccessUrls: 成功的url清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SuccessUrls: list of str
-        :param FailUrls: 失败的url列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FailUrls: 失敗的url清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FailUrls: list of str
         """
         self.SuccessUrls = None
@@ -40,27 +40,27 @@ class CacheOptResult(AbstractModel):
 
 
 class CdnData(AbstractModel):
-    """访问明细数据类型
+    """訪問明細數據類型
 
     """
 
     def __init__(self):
         """
-        :param Metric: 查询指定的指标名称：
-flux：流量，单位为 byte
-bandwidth：带宽，单位为 bps
-request：请求数，单位为 次
-fluxHitRate：流量命中率，单位为 %
-statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 个
-2XX：返回 2XX 状态码汇总及各 2 开头状态码数据，单位为 个
-3XX：返回 3XX 状态码汇总及各 3 开头状态码数据，单位为 个
-4XX：返回 4XX 状态码汇总及各 4 开头状态码数据，单位为 个
-5XX：返回 5XX 状态码汇总及各 5 开头状态码数据，单位为 个
-或指定查询的某一具体状态码
+        :param Metric: 查詢指定的指标名稱：
+flux：流量，單位爲 byte
+bandwidth：頻寬，單位爲 bps
+request：請求數，單位爲 次
+fluxHitRate：流量命中率，單位爲 %
+statusCode：狀态碼，返回 2XX、3XX、4XX、5XX 匯總數據，單位爲 個
+2XX：返回 2XX 狀态碼匯總及各 2 開頭狀态碼數據，單位爲 個
+3XX：返回 3XX 狀态碼匯總及各 3 開頭狀态碼數據，單位爲 個
+4XX：返回 4XX 狀态碼匯總及各 4 開頭狀态碼數據，單位爲 個
+5XX：返回 5XX 狀态碼匯總及各 5 開頭狀态碼數據，單位爲 個
+或指定查詢的某一具體狀态碼
         :type Metric: str
-        :param DetailData: 明细数据组合
+        :param DetailData: 明細數據組合
         :type DetailData: list of TimestampData
-        :param SummarizedData: 汇总数据组合
+        :param SummarizedData: 匯總數據組合
         :type SummarizedData: :class:`tencentcloud.cdn.v20180606.models.SummarizedData`
         """
         self.Metric = None
@@ -82,64 +82,64 @@ statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 �
 
 
 class DescribeCdnDataRequest(AbstractModel):
-    """DescribeCdnData请求参数结构体
+    """DescribeCdnData請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
-根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:00 在按 1 小时的时间粒度查询时，返回的第一个数据对应时间点为 2018-09-04 10:00:00
-起始时间与结束时间间隔小于等于 90 天
+        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:00，返回結果大于等于指定時間
+根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:00 在按 1 小時的時間粒度查詢時，返回的第一個數據對應時間點爲 2018-09-04 10:00:00
+起始時間與結束時間間隔小於等于 90 天
         :type StartTime: str
-        :param EndTime: 查询结束时间，如：2018-09-04 10:40:00，返回结果小于等于指定时间
-根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:00 在按 1 小时的时间粒度查询时，返回的最后一个数据对应时间点为 2018-09-04 10:00:00
-起始时间与结束时间间隔小于等于 90 天
+        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:00，返回結果小於等于指定時間
+根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:00 在按 1 小時的時間粒度查詢時，返回的最後一個數據對應時間點爲 2018-09-04 10:00:00
+起始時間與結束時間間隔小於等于 90 天
         :type EndTime: str
-        :param Metric: 指定查询指标，支持的类型有：
-flux：流量，单位为 byte
-bandwidth：带宽，单位为 bps
-request：请求数，单位为 次
-fluxHitRate：流量命中率，单位为 %
-statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 个
-2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 个
-3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 个
-4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 个
-5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 个
-支持指定具体状态码查询，若未产生过，则返回为空
+        :param Metric: 指定查詢指标，支援的類型有：
+flux：流量，單位爲 byte
+bandwidth：頻寬，單位爲 bps
+request：請求數，單位爲 次
+fluxHitRate：流量命中率，單位爲 %
+statusCode：狀态碼，返回 2xx、3xx、4xx、5xx 匯總數據，單位爲 個
+2xx：返回 2xx 狀态碼匯總及各 2 開頭狀态碼數據，單位爲 個
+3xx：返回 3xx 狀态碼匯總及各 3 開頭狀态碼數據，單位爲 個
+4xx：返回 4xx 狀态碼匯總及各 4 開頭狀态碼數據，單位爲 個
+5xx：返回 5xx 狀态碼匯總及各 5 開頭狀态碼數據，單位爲 個
+支援指定具體狀态碼查詢，若未産生過，則返回爲空
         :type Metric: str
-        :param Domains: 指定查询域名列表
-最多可一次性查询 30 个加速域名明细
+        :param Domains: 指定查詢域名清單
+最多可一次性查詢 30 個加速域名明細
         :type Domains: list of str
-        :param Project: 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
-未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
+        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Project: int
-        :param Interval: 时间粒度，支持以下几种模式：
-min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据
-5min：5 分钟粒度，指定查询区间 31 天内（含 31 天），可返回 5 分钟粒度明细数据
-hour：1 小时粒度，指定查询区间 31 天内（含 31 天），可返回 1 小时粒度明细数据
-day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数据
+        :param Interval: 時間粒度，支援以下幾種模式：
+min：1 分鍾粒度，指定查詢區間 24 小時内（含 24 小時），可返回 1 分鍾粒度明細數據
+5min：5 分鍾粒度，指定查詢區間 31 天内（含 31 天），可返回 5 分鍾粒度明細數據
+hour：1 小時粒度，指定查詢區間 31 天内（含 31 天），可返回 1 小時粒度明細數據
+day：天粒度，指定查詢區間大于 31 天，可返回天粒度明細數據
         :type Interval: str
-        :param Detail: 多域名查询时，默认（false)返回多个域名的汇总数据
-可按需指定为 true，返回每一个 Domain 的明细数据（statusCode 指标暂不支持）
+        :param Detail: 多域名查詢時，預設（false)返回多個域名的匯總數據
+可按需指定爲 true，返回每一個 Domain 的明細數據（statusCode 指标暫不支援）
         :type Detail: bool
-        :param Isp: 指定运营商查询，不填充表示查询所有运营商
-运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
+        :param Isp: 指定運營商查詢，不填充表示查詢所有運營商
+運營商編碼可以檢視 [運營商編碼映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
         :type Isp: int
-        :param District: 指定省份查询，不填充表示查询所有省份
-省份编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+        :param District: 指定省份查詢，不填充表示查詢所有省份
+省份編碼可以檢視 [省份編碼映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
         :type District: int
-        :param Protocol: 指定协议查询，不填充表示查询所有协议
-all：所有协议
-http：指定查询 HTTP 对应指标
-https：指定查询 HTTPS 对应指标
+        :param Protocol: 指定協議查詢，不填充表示查詢所有協議
+all：所有協議
+http：指定查詢 HTTP 對應指标
+https：指定查詢 HTTPS 對應指标
         :type Protocol: str
-        :param DataSource: 指定数据源查询，白名单功能
+        :param DataSource: 指定數據源查詢，白名單功能
         :type DataSource: str
-        :param IpProtocol: 指定IP协议查询，不填充表示查询所有协议
-all：所有协议
-ipv4：指定查询 ipv4对应指标
-ipv6：指定查询 ipv6 对应指标
+        :param IpProtocol: 指定IP協議查詢，不填充表示查詢所有協議
+all：所有協議
+ipv4：指定查詢 ipv4對應指标
+ipv6：指定查詢 ipv6 對應指标
         :type IpProtocol: str
         """
         self.StartTime = None
@@ -172,21 +172,21 @@ ipv6：指定查询 ipv6 对应指标
 
 
 class DescribeCdnDataResponse(AbstractModel):
-    """DescribeCdnData返回参数结构体
+    """DescribeCdnData返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Interval: 返回数据的时间粒度，查询时指定：
-min：1 分钟粒度
-5min：5 分钟粒度
-hour：1 小时粒度
+        :param Interval: 返回數據的時間粒度，查詢時指定：
+min：1 分鍾粒度
+5min：5 分鍾粒度
+hour：1 小時粒度
 day：天粒度
         :type Interval: str
-        :param Data: 指定条件查询得到的数据明细
+        :param Data: 指定條件查詢得到的數據明細
         :type Data: list of ResourceData
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Interval = None
@@ -206,26 +206,26 @@ day：天粒度
 
 
 class DescribeIpVisitRequest(AbstractModel):
-    """DescribeIpVisit请求参数结构体
+    """DescribeIpVisit請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 查询起始时间，如：2018-09-04 10:40:10，返回结果大于等于指定时间
-根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:10 在按 5 分钟的时间粒度查询时，返回的第一个数据对应时间点为 2018-09-04 10:40:00
+        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:10，返回結果大于等于指定時間
+根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:10 在按 5 分鍾的時間粒度查詢時，返回的第一個數據對應時間點爲 2018-09-04 10:40:00
         :type StartTime: str
-        :param EndTime: 查询结束时间，如：2018-09-04 10:40:10，返回结果小于等于指定时间
-根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:10 在按 5 分钟的时间粒度查询时，返回的最后一个数据对应时间点为 2018-09-04 10:40:00
+        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:10，返回結果小於等于指定時間
+根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:10 在按 5 分鍾的時間粒度查詢時，返回的最後一個數據對應時間點爲 2018-09-04 10:40:00
         :type EndTime: str
-        :param Domains: 指定查询域名列表，最多可一次性查询 30 个加速域名明细
+        :param Domains: 指定查詢域名清單，最多可一次性查詢 30 個加速域名明細
         :type Domains: list of str
-        :param Project: 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
-未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
+        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Project: int
-        :param Interval: 时间粒度，支持以下几种模式：
-5min：5 分钟粒度，查询时间区间 24 小时内，默认返回 5 分钟粒度活跃用户数
-day：天粒度，查询时间区间大于 1 天时，默认返回天粒度活跃用户数
+        :param Interval: 時間粒度，支援以下幾種模式：
+5min：5 分鍾粒度，查詢時間區間 24 小時内，預設返回 5 分鍾粒度活躍用戶數
+day：天粒度，查詢時間區間大于 1 天時，預設返回天粒度活躍用戶數
         :type Interval: str
         """
         self.StartTime = None
@@ -244,17 +244,17 @@ day：天粒度，查询时间区间大于 1 天时，默认返回天粒度活�
 
 
 class DescribeIpVisitResponse(AbstractModel):
-    """DescribeIpVisit返回参数结构体
+    """DescribeIpVisit返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Interval: 数据统计的时间粒度，支持5min,  day，分别表示5分钟，1天的时间粒度。
+        :param Interval: 數據統計的時間粒度，支援5min,  day，分别表示5分鍾，1天的時間粒度。
         :type Interval: str
-        :param Data: 各个资源的回源数据详情。
+        :param Data: 各個資源的回源數據詳情。
         :type Data: list of ResourceData
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Interval = None
@@ -274,15 +274,15 @@ class DescribeIpVisitResponse(AbstractModel):
 
 
 class DescribeMapInfoRequest(AbstractModel):
-    """DescribeMapInfo请求参数结构体
+    """DescribeMapInfo請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Name: 映射查询类别：
-ips：运营商映射查询
-district：省份映射查询
+        :param Name: 映射查詢類别：
+ips：運營商映射查詢
+district：省份映射查詢
         :type Name: str
         """
         self.Name = None
@@ -293,15 +293,15 @@ district：省份映射查询
 
 
 class DescribeMapInfoResponse(AbstractModel):
-    """DescribeMapInfo返回参数结构体
+    """DescribeMapInfo返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param MapInfoList: 映射关系数组。
+        :param MapInfoList: 映射關系數組。
         :type MapInfoList: list of MapInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.MapInfoList = None
@@ -319,46 +319,46 @@ class DescribeMapInfoResponse(AbstractModel):
 
 
 class DescribeOriginDataRequest(AbstractModel):
-    """DescribeOriginData请求参数结构体
+    """DescribeOriginData請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
-根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:00 在按 1 小时的时间粒度查询时，返回的第一个数据对应时间点为 2018-09-04 10:00:00
-起始时间与结束时间间隔小于等于 90 天
+        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:00，返回結果大于等于指定時間
+根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:00 在按 1 小時的時間粒度查詢時，返回的第一個數據對應時間點爲 2018-09-04 10:00:00
+起始時間與結束時間間隔小於等于 90 天
         :type StartTime: str
-        :param EndTime: 查询结束时间，如：2018-09-04 10:40:00，返回结果小于等于指定时间
-根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:00 在按 1 小时的时间粒度查询时，返回的最后一个数据对应时间点为 2018-09-04 10:00:00
-起始时间与结束时间间隔小于等于 90 天
+        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:00，返回結果小於等于指定時間
+根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:00 在按 1 小時的時間粒度查詢時，返回的最後一個數據對應時間點爲 2018-09-04 10:00:00
+起始時間與結束時間間隔小於等于 90 天
         :type EndTime: str
-        :param Metric: 指定查询指标，支持的类型有：
-flux：回源流量，单位为 byte
-bandwidth：回源带宽，单位为 bps
-request：回源请求数，单位为 次
-failRequest：回源失败请求数，单位为 次
-failRate：回源失败率，单位为 %
-statusCode：回源状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 个
-2xx：返回 2xx 回源状态码汇总及各 2 开头回源状态码数据，单位为 个
-3xx：返回 3xx 回源状态码汇总及各 3 开头回源状态码数据，单位为 个
-4xx：返回 4xx 回源状态码汇总及各 4 开头回源状态码数据，单位为 个
-5xx：返回 5xx 回源状态码汇总及各 5 开头回源状态码数据，单位为 个
-支持指定具体状态码查询，若未产生过，则返回为空
+        :param Metric: 指定查詢指标，支援的類型有：
+flux：回源流量，單位爲 byte
+bandwidth：回源頻寬，單位爲 bps
+request：回源請求數，單位爲 次
+failRequest：回源失敗請求數，單位爲 次
+failRate：回源失敗率，單位爲 %
+statusCode：回源狀态碼，返回 2xx、3xx、4xx、5xx 匯總數據，單位爲 個
+2xx：返回 2xx 回源狀态碼匯總及各 2 開頭回源狀态碼數據，單位爲 個
+3xx：返回 3xx 回源狀态碼匯總及各 3 開頭回源狀态碼數據，單位爲 個
+4xx：返回 4xx 回源狀态碼匯總及各 4 開頭回源狀态碼數據，單位爲 個
+5xx：返回 5xx 回源狀态碼匯總及各 5 開頭回源狀态碼數據，單位爲 個
+支援指定具體狀态碼查詢，若未産生過，則返回爲空
         :type Metric: str
-        :param Domains: 指定查询域名列表，最多可一次性查询 30 个加速域名明细
+        :param Domains: 指定查詢域名清單，最多可一次性查詢 30 個加速域名明細
         :type Domains: list of str
-        :param Project: 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
-未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
+        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Project: int
-        :param Interval: 时间粒度，支持以下几种模式：
-min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据
-5min：5 分钟粒度，指定查询区间 31 天内（含 31 天），可返回 5 分钟粒度明细数据
-hour：1 小时粒度，指定查询区间 31 天内（含 31 天），可返回 1 小时粒度明细数据
-day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数据
+        :param Interval: 時間粒度，支援以下幾種模式：
+min：1 分鍾粒度，指定查詢區間 24 小時内（含 24 小時），可返回 1 分鍾粒度明細數據
+5min：5 分鍾粒度，指定查詢區間 31 天内（含 31 天），可返回 5 分鍾粒度明細數據
+hour：1 小時粒度，指定查詢區間 31 天内（含 31 天），可返回 1 小時粒度明細數據
+day：天粒度，指定查詢區間大于 31 天，可返回天粒度明細數據
         :type Interval: str
-        :param Detail: Domains 传入多个时，默认（false)返回多个域名的汇总数据
-可按需指定为 true，返回每一个 Domain 的明细数据（statusCode 指标暂不支持）
+        :param Detail: Domains 傳入多個時，預設（false)返回多個域名的匯總數據
+可按需指定爲 true，返回每一個 Domain 的明細數據（statusCode 指标暫不支援）
         :type Detail: bool
         """
         self.StartTime = None
@@ -381,17 +381,17 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
 
 
 class DescribeOriginDataResponse(AbstractModel):
-    """DescribeOriginData返回参数结构体
+    """DescribeOriginData返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Interval: 数据统计的时间粒度，支持min, 5min, hour, day，分别表示1分钟，5分钟，1小时和1天的时间粒度。
+        :param Interval: 數據統計的時間粒度，支援min, 5min, hour, day，分别表示1分鍾，5分鍾，1小時和1天的時間粒度。
         :type Interval: str
-        :param Data: 各个资源的回源数据详情。
+        :param Data: 各個資源的回源數據詳情。
         :type Data: list of ResourceOriginData
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Interval = None
@@ -411,34 +411,34 @@ class DescribeOriginDataResponse(AbstractModel):
 
 
 class DescribePayTypeRequest(AbstractModel):
-    """DescribePayType请求参数结构体
+    """DescribePayType請求參數結構體
 
     """
 
 
 class DescribePayTypeResponse(AbstractModel):
-    """DescribePayType返回参数结构体
+    """DescribePayType返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PayType: 计费类型：
-flux：流量计费
-bandwidth：带宽计费
+        :param PayType: 計費類型：
+flux：流量計費
+bandwidth：頻寬計費
         :type PayType: str
-        :param BillingCycle: 计费周期：
-day：日结计费
-month：月结计费
+        :param BillingCycle: 計費週期：
+day：日結計費
+month：月結計費
         :type BillingCycle: str
-        :param StatType: 计费方式：
-monthMax：日峰值月平均计费，月结模式
-day95：日 95 带宽计费，月结模式
-month95：月95带宽计费，月结模式
-sum：总流量计费，日结与月结均有流量计费模式
-max：峰值带宽计费，日结模式
+        :param StatType: 計費方式：
+monthMax：日峰值月平均計費，月結模式
+day95：日 95 頻寬計費，月結模式
+month95：月95頻寬計費，月結模式
+sum：總流量計費，日結與月結均有流量計費模式
+max：峰值頻寬計費，日結模式
         :type StatType: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PayType = None
@@ -455,14 +455,14 @@ max：峰值带宽计费，日结模式
 
 
 class DisableCachesRequest(AbstractModel):
-    """DisableCaches请求参数结构体
+    """DisableCaches請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Urls: 需要禁用的 URL 列表
-每次最多可提交 100 条，每日最多可提交 3000 条
+        :param Urls: 需要禁用的 URL 清單
+每次最多可提交 100 條，每日最多可提交 3000 條
         :type Urls: list of str
         """
         self.Urls = None
@@ -473,16 +473,16 @@ class DisableCachesRequest(AbstractModel):
 
 
 class DisableCachesResponse(AbstractModel):
-    """DisableCaches返回参数结构体
+    """DisableCaches返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CacheOptResult: 提交结果
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CacheOptResult: 提交結果
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CacheOptResult: :class:`tencentcloud.cdn.v20180606.models.CacheOptResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CacheOptResult = None
@@ -497,13 +497,13 @@ class DisableCachesResponse(AbstractModel):
 
 
 class EnableCachesRequest(AbstractModel):
-    """EnableCaches请求参数结构体
+    """EnableCaches請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Urls: 解封 URL 列表
+        :param Urls: 解封 URL 清單
         :type Urls: list of str
         """
         self.Urls = None
@@ -514,16 +514,16 @@ class EnableCachesRequest(AbstractModel):
 
 
 class EnableCachesResponse(AbstractModel):
-    """EnableCaches返回参数结构体
+    """EnableCaches返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CacheOptResult: 结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CacheOptResult: 結果清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CacheOptResult: :class:`tencentcloud.cdn.v20180606.models.CacheOptResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CacheOptResult = None
@@ -538,21 +538,21 @@ class EnableCachesResponse(AbstractModel):
 
 
 class GetDisableRecordsRequest(AbstractModel):
-    """GetDisableRecords请求参数结构体
+    """GetDisableRecords請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 开始时间
+        :param StartTime: 開始時間
         :type StartTime: str
-        :param EndTime: 结束时间
+        :param EndTime: 結束時間
         :type EndTime: str
-        :param Url: 指定 URL 查询
+        :param Url: 指定 URL 查詢
         :type Url: str
-        :param Status: URL 当前状态
-disable：当前仍为禁用状态，访问返回 403
-enable：当前为可用状态，已解禁，可正常访问
+        :param Status: URL 當前狀态
+disable：當前仍爲禁用狀态，訪問返回 403
+enable：當前爲可用狀态，已解禁，可正常訪問
         :type Status: str
         """
         self.StartTime = None
@@ -569,16 +569,16 @@ enable：当前为可用状态，已解禁，可正常访问
 
 
 class GetDisableRecordsResponse(AbstractModel):
-    """GetDisableRecords返回参数结构体
+    """GetDisableRecords返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param UrlRecordList: 封禁历史记录
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UrlRecordList: 封禁曆史記錄
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UrlRecordList: list of UrlRecord
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.UrlRecordList = None
@@ -596,49 +596,49 @@ class GetDisableRecordsResponse(AbstractModel):
 
 
 class ListTopDataRequest(AbstractModel):
-    """ListTopData请求参数结构体
+    """ListTopData請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 查询起始日期，如：2018-09-09 00:00:00
+        :param StartTime: 查詢起始日期，如：2018-09-09 00:00:00
         :type StartTime: str
-        :param EndTime: 查询结束日期，如：2018-09-10 00:00:00
+        :param EndTime: 查詢結束日期，如：2018-09-10 00:00:00
         :type EndTime: str
-        :param Metric: 排序对象，支持以下几种形式：
-Url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request（白名单功能）
-Path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request
-District：省份排序，支持的 Filter 为 flux、request
-Isp：运营商排序，支持的 Filter 为 flux、request
-Host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
-originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
+        :param Metric: 排序對象，支援以下幾種形式：
+Url：訪問 URL 排序，帶參數統計，支援的 Filter 爲 flux、request（白名單功能）
+Path：訪問 URL 排序，不帶參數統計，支援的 Filter 爲 flux、request
+District：省份排序，支援的 Filter 爲 flux、request
+Isp：運營商排序，支援的 Filter 爲 flux、request
+Host：域名訪問數據排序，支援的 Filter 爲：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具體狀态碼統計
+originHost：域名回源數據排序，支援的 Filter 爲 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具體回源狀态碼統計
         :type Metric: str
-        :param Filter: 排序使用的指标名称：
-flux：Metric 为 host 时指代访问流量，originHost 时指代回源流量
-bandwidth：Metric 为 host 时指代访问带宽，originHost 时指代回源带宽
-request：Metric 为 host 时指代访问请求数，originHost 时指代回源请求数
+        :param Filter: 排序使用的指标名稱：
+flux：Metric 爲 host 時指代訪問流量，originHost 時指代回源流量
+bandwidth：Metric 爲 host 時指代訪問頻寬，originHost 時指代回源頻寬
+request：Metric 爲 host 時指代訪問請求數，originHost 時指代回源請求數
 fluxHitRate：平均流量命中率
-2XX：访问 2XX 状态码
-3XX：访问 3XX 状态码
-4XX：访问 4XX 状态码
-5XX：访问 5XX 状态码
-origin_2XX：回源 2XX 状态码
-origin_3XX：回源 3XX 状态码
-origin_4XX：回源 4XX 状态码
-origin_5XX：回源 5XX 状态码
-statusCode：指定访问状态码统计，在 Code 参数中填充指定状态码
-OriginStatusCode：指定回源状态码统计，在 Code 参数中填充指定状态码
+2XX：訪問 2XX 狀态碼
+3XX：訪問 3XX 狀态碼
+4XX：訪問 4XX 狀态碼
+5XX：訪問 5XX 狀态碼
+origin_2XX：回源 2XX 狀态碼
+origin_3XX：回源 3XX 狀态碼
+origin_4XX：回源 4XX 狀态碼
+origin_5XX：回源 5XX 狀态碼
+statusCode：指定訪問狀态碼統計，在 Code 參數中填充指定狀态碼
+OriginStatusCode：指定回源狀态碼統計，在 Code 參數中填充指定狀态碼
         :type Filter: str
-        :param Domains: 指定查询域名列表，最多可一次性查询 30 个加速域名明细
+        :param Domains: 指定查詢域名清單，最多可一次性查詢 30 個加速域名明細
         :type Domains: list of str
-        :param Project: 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
-未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
+        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Project: int
-        :param Detail: 多域名查询时，默认（false)返回所有域名汇总排序结果
-Metric 为 Url、Path、District、Isp，Filter 为 flux、reqeust 时，可设置为 true，返回每一个 Domain 的排序数据
+        :param Detail: 多域名查詢時，預設（false)返回所有域名匯總排序結果
+Metric 爲 Url、Path、District、Isp，Filter 爲 flux、reqeust 時，可設置爲 true，返回每一個 Domain 的排序數據
         :type Detail: bool
-        :param Code: Filter 为 statusCode、OriginStatusCode 时，填充指定状态码查询排序结果
+        :param Code: Filter 爲 statusCode、OriginStatusCode 時，填充指定狀态碼查詢排序結果
         :type Code: str
         """
         self.StartTime = None
@@ -663,15 +663,15 @@ Metric 为 Url、Path、District、Isp，Filter 为 flux、reqeust 时，可设�
 
 
 class ListTopDataResponse(AbstractModel):
-    """ListTopData返回参数结构体
+    """ListTopData返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 各个资源的Top 访问数据详情。
+        :param Data: 各個資源的Top 訪問數據詳情。
         :type Data: list of TopData
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -689,15 +689,15 @@ class ListTopDataResponse(AbstractModel):
 
 
 class MapInfo(AbstractModel):
-    """名称与ID映射关系
+    """名稱與ID映射關系
 
     """
 
     def __init__(self):
         """
-        :param Id: 对象 Id
+        :param Id: 對象 Id
         :type Id: int
-        :param Name: 对象名称
+        :param Name: 對象名稱
         :type Name: str
         """
         self.Id = None
@@ -710,19 +710,19 @@ class MapInfo(AbstractModel):
 
 
 class ResourceData(AbstractModel):
-    """查询对象及其对应的访问明细数据
+    """查詢對象及其對應的訪問明細數據
 
     """
 
     def __init__(self):
         """
-        :param Resource: 资源名称，根据查询条件不同分为以下几类：
-具体域名：表示该域名明细数据
-multiDomains：表示多域名汇总明细数据
-项目 ID：指定项目查询时，显示为项目 ID
-all：账号维度明细数据
+        :param Resource: 資源名稱，根據查詢條件不同分爲以下幾類：
+具體域名：表示該域名明細數據
+multiDomains：表示多域名匯總明細數據
+項目 ID：指定項目查詢時，顯示爲項目 ID
+all：賬号維度明細數據
         :type Resource: str
-        :param CdnData: 资源对应的数据明细
+        :param CdnData: 資源對應的數據明細
         :type CdnData: list of CdnData
         """
         self.Resource = None
@@ -740,19 +740,19 @@ all：账号维度明细数据
 
 
 class ResourceOriginData(AbstractModel):
-    """查询对象及其对应的回源明细数据
+    """查詢對象及其對應的回源明細數據
 
     """
 
     def __init__(self):
         """
-        :param Resource: 资源名称，根据查询条件不同分为以下几类：
-具体域名：表示该域名明细数据
-multiDomains：表示多域名汇总明细数据
-项目 ID：指定项目查询时，显示为项目 ID
-all：账号维度明细数据
+        :param Resource: 資源名稱，根據查詢條件不同分爲以下幾類：
+具體域名：表示該域名明細數據
+multiDomains：表示多域名匯總明細數據
+項目 ID：指定項目查詢時，顯示爲項目 ID
+all：賬号維度明細數據
         :type Resource: str
-        :param OriginData: 回源数据详情
+        :param OriginData: 回源數據詳情
         :type OriginData: list of CdnData
         """
         self.Resource = None
@@ -770,18 +770,18 @@ all：账号维度明细数据
 
 
 class SummarizedData(AbstractModel):
-    """明细数据的汇总值，各指标根据其特性不同拥有不同汇总方式
+    """明細數據的匯總值，各指标根據其特性不同擁有不同匯總方式
 
     """
 
     def __init__(self):
         """
-        :param Name: 汇总方式，存在以下几种：
+        :param Name: 匯總方式，存在以下幾種：
 sum：累加求和
-max：最大值，带宽模式下，采用 5 分钟粒度汇总数据，计算峰值带宽
+max：最大值，頻寬模式下，采用 5 分鍾粒度匯總數據，計算峰值頻寬
 avg：平均值
         :type Name: str
-        :param Value: 汇总后的数据值
+        :param Value: 匯總後的數據值
         :type Value: float
         """
         self.Name = None
@@ -794,16 +794,16 @@ avg：平均值
 
 
 class TimestampData(AbstractModel):
-    """时间戳与其对应的数值
+    """時間戳與其對應的數值
 
     """
 
     def __init__(self):
         """
-        :param Time: 数据统计时间点，采用向前汇总模式
-以 5 分钟粒度为例，13:35:00 时间点代表的统计数据区间为 13:35:00 至 13:39:59
+        :param Time: 數據統計時間點，采用向前匯總模式
+以 5 分鍾粒度爲例，13:35:00 時間點代表的統計數據區間爲 13:35:00 至 13:39:59
         :type Time: str
-        :param Value: 数据值
+        :param Value: 數據值
         :type Value: float
         """
         self.Time = None
@@ -816,19 +816,19 @@ class TimestampData(AbstractModel):
 
 
 class TopData(AbstractModel):
-    """排序类型数据结构
+    """排序類型數據結構
 
     """
 
     def __init__(self):
         """
-        :param Resource: 资源名称，根据查询条件不同分为以下几类：
-具体域名：表示该域名明细数据
-multiDomains：表示多域名汇总明细数据
-项目 ID：指定项目查询时，显示为项目 ID
-all：账号维度明细数据
+        :param Resource: 資源名稱，根據查詢條件不同分爲以下幾類：
+具體域名：表示該域名明細數據
+multiDomains：表示多域名匯總明細數據
+項目 ID：指定項目查詢時，顯示爲項目 ID
+all：賬号維度明細數據
         :type Resource: str
-        :param DetailData: 排序结果详情
+        :param DetailData: 排序結果詳情
         :type DetailData: list of TopDetailData
         """
         self.Resource = None
@@ -846,15 +846,15 @@ all：账号维度明细数据
 
 
 class TopDetailData(AbstractModel):
-    """排序类型的数据结构
+    """排序類型的數據結構
 
     """
 
     def __init__(self):
         """
-        :param Name: 数据类型的名称
+        :param Name: 數據類型的名稱
         :type Name: str
-        :param Value: 数据值
+        :param Value: 數據值
         :type Value: float
         """
         self.Name = None
@@ -867,23 +867,23 @@ class TopDetailData(AbstractModel):
 
 
 class UrlRecord(AbstractModel):
-    """封禁url的详细信息
+    """封禁url的詳細訊息
 
     """
 
     def __init__(self):
         """
-        :param Status: 状态(disable表示封禁，enable表示解封)
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Status: 狀态(disable表示封禁，enable表示解封)
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: str
-        :param RealUrl: 对应的url
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RealUrl: 對應的url
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RealUrl: str
-        :param CreateTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
-        :param UpdateTime: 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UpdateTime: 更新時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UpdateTime: str
         """
         self.Status = None

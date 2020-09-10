@@ -26,7 +26,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeAccountBalance(self, request):
-        """获取云账户余额信息。
+        """獲取雲帳戶餘額訊息。
 
         :param request: Request instance for DescribeAccountBalance.
         :type request: :class:`tencentcloud.billing.v20180709.models.DescribeAccountBalanceRequest`
@@ -54,7 +54,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeBillDetail(self, request):
-        """查询账单明细数据
+        """查詢帳單明細數據
 
         :param request: Request instance for DescribeBillDetail.
         :type request: :class:`tencentcloud.billing.v20180709.models.DescribeBillDetailRequest`
@@ -82,7 +82,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeBillList(self, request):
-        """获取收支明细列表，支持翻页和参数过滤
+        """獲取收支明細清單，支援翻頁和參數過濾
 
         :param request: Request instance for DescribeBillList.
         :type request: :class:`tencentcloud.billing.v20180709.models.DescribeBillListRequest`
@@ -110,7 +110,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeBillResourceSummary(self, request):
-        """查询账单资源汇总数据
+        """查詢帳單資源匯總數據
 
         :param request: Request instance for DescribeBillResourceSummary.
         :type request: :class:`tencentcloud.billing.v20180709.models.DescribeBillResourceSummaryRequest`
@@ -138,7 +138,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeBillSummaryByPayMode(self, request):
-        """获取按付费模式汇总费用分布
+        """獲取按付費模式匯總費用分布
 
         :param request: Request instance for DescribeBillSummaryByPayMode.
         :type request: :class:`tencentcloud.billing.v20180709.models.DescribeBillSummaryByPayModeRequest`
@@ -166,7 +166,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeBillSummaryByProduct(self, request):
-        """获取产品汇总费用分布
+        """獲取産品匯總費用分布
 
         :param request: Request instance for DescribeBillSummaryByProduct.
         :type request: :class:`tencentcloud.billing.v20180709.models.DescribeBillSummaryByProductRequest`
@@ -194,7 +194,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeBillSummaryByProject(self, request):
-        """获取按项目汇总费用分布
+        """獲取按項目匯總費用分布
 
         :param request: Request instance for DescribeBillSummaryByProject.
         :type request: :class:`tencentcloud.billing.v20180709.models.DescribeBillSummaryByProjectRequest`
@@ -222,7 +222,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeBillSummaryByRegion(self, request):
-        """获取按地域汇总费用分布
+        """獲取按地域匯總費用分布
 
         :param request: Request instance for DescribeBillSummaryByRegion.
         :type request: :class:`tencentcloud.billing.v20180709.models.DescribeBillSummaryByRegionRequest`
@@ -250,7 +250,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeBillSummaryByTag(self, request):
-        """获取按标签汇总费用分布
+        """獲取按标簽匯總費用分布
 
         :param request: Request instance for DescribeBillSummaryByTag.
         :type request: :class:`tencentcloud.billing.v20180709.models.DescribeBillSummaryByTagRequest`
@@ -278,7 +278,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeCostDetail(self, request):
-        """查询消耗明细
+        """查詢消耗明細
 
         :param request: Request instance for DescribeCostDetail.
         :type request: :class:`tencentcloud.billing.v20180709.models.DescribeCostDetailRequest`
@@ -306,7 +306,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeCostSummaryByProduct(self, request):
-        """获取按产品汇总消耗详情
+        """獲取按産品匯總消耗詳情
 
         :param request: Request instance for DescribeCostSummaryByProduct.
         :type request: :class:`tencentcloud.billing.v20180709.models.DescribeCostSummaryByProductRequest`
@@ -334,7 +334,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeCostSummaryByProject(self, request):
-        """获取按项目汇总消耗详情
+        """獲取按項目匯總消耗詳情
 
         :param request: Request instance for DescribeCostSummaryByProject.
         :type request: :class:`tencentcloud.billing.v20180709.models.DescribeCostSummaryByProjectRequest`
@@ -362,7 +362,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeCostSummaryByRegion(self, request):
-        """获取按地域汇总消耗详情
+        """獲取按地域匯總消耗詳情
 
         :param request: Request instance for DescribeCostSummaryByRegion.
         :type request: :class:`tencentcloud.billing.v20180709.models.DescribeCostSummaryByRegionRequest`
@@ -390,7 +390,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeCostSummaryByResource(self, request):
-        """获取按资源汇总消耗详情
+        """獲取按資源匯總消耗詳情
 
         :param request: Request instance for DescribeCostSummaryByResource.
         :type request: :class:`tencentcloud.billing.v20180709.models.DescribeCostSummaryByResourceRequest`
@@ -418,7 +418,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeDealsByCond(self, request):
-        """查询订单
+        """查詢訂單
 
         :param request: Request instance for DescribeDealsByCond.
         :type request: :class:`tencentcloud.billing.v20180709.models.DescribeDealsByCondRequest`
@@ -446,7 +446,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeDosageDetailByDate(self, request):
-        """按日期获取产品用量明细
+        """按日期獲取産品用量明細
 
         :param request: Request instance for DescribeDosageDetailByDate.
         :type request: :class:`tencentcloud.billing.v20180709.models.DescribeDosageDetailByDateRequest`
@@ -474,7 +474,7 @@ class BillingClient(AbstractClient):
 
 
     def PayDeals(self, request):
-        """支付订单
+        """支付訂單
 
         :param request: Request instance for PayDeals.
         :type request: :class:`tencentcloud.billing.v20180709.models.PayDealsRequest`

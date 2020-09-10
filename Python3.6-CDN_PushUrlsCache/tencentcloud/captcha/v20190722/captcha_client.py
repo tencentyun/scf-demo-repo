@@ -26,7 +26,7 @@ class CaptchaClient(AbstractClient):
 
 
     def DescribeCaptchaAppIdInfo(self, request):
-        """查询安全验证码应用APPId信息
+        """查詢安全驗證碼應用APPId訊息
 
         :param request: Request instance for DescribeCaptchaAppIdInfo.
         :type request: :class:`tencentcloud.captcha.v20190722.models.DescribeCaptchaAppIdInfoRequest`
@@ -54,7 +54,7 @@ class CaptchaClient(AbstractClient):
 
 
     def DescribeCaptchaData(self, request):
-        """安全验证码分类查询数据接口，请求量type=0、验证量type=1、通过量type=2、拦截量type=3  分钟级查询
+        """安全驗證碼分類查詢數據介面，請求量type=0、驗證量type=1、通過量type=2、攔截量type=3  分鍾級查詢
 
         :param request: Request instance for DescribeCaptchaData.
         :type request: :class:`tencentcloud.captcha.v20190722.models.DescribeCaptchaDataRequest`
@@ -82,7 +82,7 @@ class CaptchaClient(AbstractClient):
 
 
     def DescribeCaptchaDataSum(self, request):
-        """安全验证码查询请求数据概况，例如：按照时间段查询数据  昨日请求量、昨日恶意比例、昨日验证量、昨日通过量、昨日恶意拦截量……
+        """安全驗證碼查詢請求數據概況，例如：按照時間段查詢數據  昨日請求量、昨日惡意比例、昨日驗證量、昨日通過量、昨日惡意攔截量……
 
         :param request: Request instance for DescribeCaptchaDataSum.
         :type request: :class:`tencentcloud.captcha.v20190722.models.DescribeCaptchaDataSumRequest`
@@ -110,7 +110,7 @@ class CaptchaClient(AbstractClient):
 
 
     def DescribeCaptchaOperData(self, request):
-        """安全验证码用户操作数据查询，验证码加载耗时type = 1 、拦截情况type = 2、 一周通过平均尝试次数 type = 3、尝试次数分布 type = 4
+        """安全驗證碼用戶操作數據查詢，驗證碼加載耗時type = 1 、攔截情況type = 2、 一周通過平均嘗試次數 type = 3、嘗試次數分布 type = 4
 
         :param request: Request instance for DescribeCaptchaOperData.
         :type request: :class:`tencentcloud.captcha.v20190722.models.DescribeCaptchaOperDataRequest`
@@ -138,7 +138,7 @@ class CaptchaClient(AbstractClient):
 
 
     def DescribeCaptchaResult(self, request):
-        """核查验证码票据结果
+        """核查驗證碼票據結果
 
         :param request: Request instance for DescribeCaptchaResult.
         :type request: :class:`tencentcloud.captcha.v20190722.models.DescribeCaptchaResultRequest`
@@ -166,7 +166,7 @@ class CaptchaClient(AbstractClient):
 
 
     def DescribeCaptchaUserAllAppId(self, request):
-        """安全验证码获取用户注册所有APPId和应用名称
+        """安全驗證碼獲取用戶注冊所有APPId和應用名稱
 
         :param request: Request instance for DescribeCaptchaUserAllAppId.
         :type request: :class:`tencentcloud.captcha.v20190722.models.DescribeCaptchaUserAllAppIdRequest`
@@ -194,7 +194,7 @@ class CaptchaClient(AbstractClient):
 
 
     def UpdateCaptchaAppIdInfo(self, request):
-        """更新验证码应用APPId信息
+        """更新驗證碼應用APPId訊息
 
         :param request: Request instance for UpdateCaptchaAppIdInfo.
         :type request: :class:`tencentcloud.captcha.v20190722.models.UpdateCaptchaAppIdInfoRequest`

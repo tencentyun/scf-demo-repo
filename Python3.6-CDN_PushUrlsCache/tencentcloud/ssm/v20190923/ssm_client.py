@@ -26,7 +26,7 @@ class SsmClient(AbstractClient):
 
 
     def CreateSecret(self, request):
-        """创建新的凭据信息，通过KMS进行加密保护。每个Region最多可创建存储1000个凭据信息。
+        """創建新的憑據訊息，通過KMS進行加密保護。每個Region最多可創建儲存1000個憑據訊息。
 
         :param request: Request instance for CreateSecret.
         :type request: :class:`tencentcloud.ssm.v20190923.models.CreateSecretRequest`
@@ -54,7 +54,7 @@ class SsmClient(AbstractClient):
 
 
     def DeleteSecret(self, request):
-        """删除指定的凭据信息，可以通过RecoveryWindowInDays参数设置立即删除或者计划删除。对于计划删除的凭据，在删除日期到达之前状态为 PendingDelete，并可以通过RestoreSecret 进行恢复，超出指定删除日期之后会被彻底删除。您必须先通过 DisableSecret 停用凭据后才可以进行（计划）删除操作。
+        """删除指定的憑據訊息，可以通過RecoveryWindowInDays參數設置立即删除或者計劃删除。對于計劃删除的憑據，在删除日期到達之前狀态爲 PendingDelete，并可以通過RestoreSecret 進行恢複，超出指定删除日期之後會被徹底删除。您必須先通過 DisableSecret 停用憑據後才可以進行（計劃）删除操作。
 
         :param request: Request instance for DeleteSecret.
         :type request: :class:`tencentcloud.ssm.v20190923.models.DeleteSecretRequest`
@@ -82,7 +82,7 @@ class SsmClient(AbstractClient):
 
 
     def DeleteSecretVersion(self, request):
-        """该接口用于直接删除指定凭据下的单个版本凭据，删除操作立即生效，对所有状态下的凭据版本都可以删除。
+        """該介面用于直接删除指定憑據下的單個版本憑據，删除操作立即生效，對所有狀态下的憑據版本都可以删除。
 
         :param request: Request instance for DeleteSecretVersion.
         :type request: :class:`tencentcloud.ssm.v20190923.models.DeleteSecretVersionRequest`
@@ -110,7 +110,7 @@ class SsmClient(AbstractClient):
 
 
     def DescribeSecret(self, request):
-        """获取凭据的详细属性信息。
+        """獲取憑據的詳細屬性訊息。
 
         :param request: Request instance for DescribeSecret.
         :type request: :class:`tencentcloud.ssm.v20190923.models.DescribeSecretRequest`
@@ -138,7 +138,7 @@ class SsmClient(AbstractClient):
 
 
     def DisableSecret(self, request):
-        """停用指定的凭据，停用后状态为 Disabled，无法通过接口获取该凭据的明文。
+        """停用指定的憑據，停用後狀态爲 Disabled，無法通過介面獲取該憑據的明文。
 
         :param request: Request instance for DisableSecret.
         :type request: :class:`tencentcloud.ssm.v20190923.models.DisableSecretRequest`
@@ -166,7 +166,7 @@ class SsmClient(AbstractClient):
 
 
     def EnableSecret(self, request):
-        """该接口用于开启凭据，状态为Enabled。可以通过 GetSecretValue 接口获取凭据明文。处于PendingDelete状态的凭据不能直接开启，需要通过RestoreSecret 恢复后再开启使用。
+        """該介面用于開啓憑據，狀态爲Enabled。可以通過 GetSecretValue 介面獲取憑據明文。處于PendingDelete狀态的憑據不能直接開啓，需要通過RestoreSecret 恢複後再開啓使用。
 
         :param request: Request instance for EnableSecret.
         :type request: :class:`tencentcloud.ssm.v20190923.models.EnableSecretRequest`
@@ -194,7 +194,7 @@ class SsmClient(AbstractClient):
 
 
     def GetRegions(self, request):
-        """获取控制台展示region列表
+        """獲取控制台展示region清單
 
         :param request: Request instance for GetRegions.
         :type request: :class:`tencentcloud.ssm.v20190923.models.GetRegionsRequest`
@@ -222,7 +222,7 @@ class SsmClient(AbstractClient):
 
 
     def GetSecretValue(self, request):
-        """获取指定凭据名称和版本的凭据明文信息，只能获取启用状态的凭据明文。
+        """獲取指定憑據名稱和版本的憑據明文訊息，只能獲取啓用狀态的憑據明文。
 
         :param request: Request instance for GetSecretValue.
         :type request: :class:`tencentcloud.ssm.v20190923.models.GetSecretValueRequest`
@@ -250,7 +250,7 @@ class SsmClient(AbstractClient):
 
 
     def GetServiceStatus(self, request):
-        """该接口用户获取用户SecretsManager服务开通状态。
+        """該介面用戶獲取用戶SecretsManager服務開通狀态。
 
         :param request: Request instance for GetServiceStatus.
         :type request: :class:`tencentcloud.ssm.v20190923.models.GetServiceStatusRequest`
@@ -278,7 +278,7 @@ class SsmClient(AbstractClient):
 
 
     def ListSecretVersionIds(self, request):
-        """该接口用于获取指定凭据下的版本列表信息
+        """該介面用于獲取指定憑據下的版本清單訊息
 
         :param request: Request instance for ListSecretVersionIds.
         :type request: :class:`tencentcloud.ssm.v20190923.models.ListSecretVersionIdsRequest`
@@ -306,7 +306,7 @@ class SsmClient(AbstractClient):
 
 
     def ListSecrets(self, request):
-        """该接口用于获取所有凭据的详细列表，可以指定过滤字段、排序方式等。
+        """該介面用于獲取所有憑據的詳細清單，可以指定過濾欄位、排序方式等。
 
         :param request: Request instance for ListSecrets.
         :type request: :class:`tencentcloud.ssm.v20190923.models.ListSecretsRequest`
@@ -334,7 +334,7 @@ class SsmClient(AbstractClient):
 
 
     def PutSecretValue(self, request):
-        """该接口在指定名称的凭据下增加新版本的凭据内容，一个凭据下最多可以支持10个版本。只能对处于Enabled 和 Disabled 状态的凭据添加新的版本。
+        """該介面在指定名稱的憑據下增加新版本的憑據内容，一個憑據下最多可以支援10個版本。只能對處于Enabled 和 Disabled 狀态的憑據添加新的版本。
 
         :param request: Request instance for PutSecretValue.
         :type request: :class:`tencentcloud.ssm.v20190923.models.PutSecretValueRequest`
@@ -362,7 +362,7 @@ class SsmClient(AbstractClient):
 
 
     def RestoreSecret(self, request):
-        """该接口用于恢复计划删除（PendingDelete状态）中的凭据，取消计划删除。取消计划删除的凭据将处于Disabled 状态，如需恢复使用，通过EnableSecret 接口开启凭据。
+        """該介面用于恢複計劃删除（PendingDelete狀态）中的憑據，取消計劃删除。取消計劃删除的憑據将處于Disabled 狀态，如需恢複使用，通過EnableSecret 介面開啓憑據。
 
         :param request: Request instance for RestoreSecret.
         :type request: :class:`tencentcloud.ssm.v20190923.models.RestoreSecretRequest`
@@ -390,7 +390,7 @@ class SsmClient(AbstractClient):
 
 
     def UpdateDescription(self, request):
-        """该接口用于修改指定凭据的描述信息，仅能修改Enabled 和 Disabled 状态的凭据。
+        """該介面用于修改指定憑據的描述訊息，僅能修改Enabled 和 Disabled 狀态的憑據。
 
         :param request: Request instance for UpdateDescription.
         :type request: :class:`tencentcloud.ssm.v20190923.models.UpdateDescriptionRequest`
@@ -418,7 +418,7 @@ class SsmClient(AbstractClient):
 
 
     def UpdateSecret(self, request):
-        """该接口用于更新指定凭据名称和版本号的内容，调用该接口会对新的凭据内容加密后覆盖旧的内容。仅允许更新Enabled 和 Disabled 状态的凭据。
+        """該介面用于更新指定憑據名稱和版本号的内容，調用該介面會對新的憑據内容加密後函蓋舊的内容。僅允許更新Enabled 和 Disabled 狀态的憑據。
 
         :param request: Request instance for UpdateSecret.
         :type request: :class:`tencentcloud.ssm.v20190923.models.UpdateSecretRequest`

@@ -17,43 +17,43 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class Address(AbstractModel):
-    """描述 EIP 信息
+    """描述 EIP 訊息
 
     """
 
     def __init__(self):
         """
-        :param AddressId: EIP的ID，是EIP的唯一标识。
+        :param AddressId: EIP的ID，是EIP的唯一标識。
         :type AddressId: str
-        :param AddressName: EIP名称。
+        :param AddressName: EIP名稱。
         :type AddressName: str
-        :param AddressStatus: EIP状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
+        :param AddressStatus: EIP狀态，包含'CREATING'(創建中),'BINDING'(綁定中),'BIND'(已綁定),'UNBINDING'(解綁中),'UNBIND'(已解綁),'OFFLINING'(釋放中),'BIND_ENI'(綁定懸空彈性網卡)
         :type AddressStatus: str
-        :param AddressIp: 外网IP地址
+        :param AddressIp: 外網IP網址
         :type AddressIp: str
-        :param InstanceId: 绑定的资源实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceId: 綁定的資源實例ID。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceId: str
-        :param CreatedTime: 创建时间。ISO 8601 格式：YYYY-MM-DDTHH:mm:ss.sssZ
+        :param CreatedTime: 創建時間。ISO 8601 格式：YYYY-MM-DDTHH:mm:ss.sssZ
         :type CreatedTime: str
-        :param NetworkInterfaceId: 绑定的弹性网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NetworkInterfaceId: 綁定的彈性網卡ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NetworkInterfaceId: str
-        :param PrivateAddressIp: 绑定的资源内网ip
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PrivateAddressIp: 綁定的資源内網ip
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PrivateAddressIp: str
-        :param IsArrears: 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
+        :param IsArrears: 資源隔離狀态。true表示eip處于隔離狀态，false表示資源處于未隔離狀态
         :type IsArrears: bool
-        :param IsBlocked: 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+        :param IsBlocked: 資源封堵狀态。true表示eip處于封堵狀态，false表示eip處于未封堵狀态
         :type IsBlocked: bool
-        :param IsEipDirectConnection: eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+        :param IsEipDirectConnection: eip是否支援直通模式。true表示eip支援直通模式，false表示資源不支援直通模式
         :type IsEipDirectConnection: bool
-        :param AddressType: eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+        :param AddressType: eip資源類型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示設備ip，“WanIP”表示普通公網ip，“EIP”表示彈性公網ip，“AnycastEip”表示加速EIP
         :type AddressType: str
-        :param CascadeRelease: eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+        :param CascadeRelease: eip是否在解綁後自動釋放。true表示eip将會在解綁後自動釋放，false表示eip在解綁後不會自動釋放
         :type CascadeRelease: bool
-        :param InternetServiceProvider: 运营商，CTCC电信，CUCC联通，CMCC移动
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InternetServiceProvider: 運營商，CTCC電信，CUCC聯通，CMCC移動
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InternetServiceProvider: str
         """
         self.AddressId = None
@@ -90,7 +90,7 @@ class Address(AbstractModel):
 
 
 class AllocateAddressesRequest(AbstractModel):
-    """AllocateAddresses请求参数结构体
+    """AllocateAddresses請求參數結構體
 
     """
 
@@ -98,15 +98,15 @@ class AllocateAddressesRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param AddressCount: EIP数量。默认值：1。
+        :param AddressCount: EIP數量。預設值：1。
         :type AddressCount: int
-        :param InternetServiceProvider: CMCC：中国移动
-CTCC：中国电信
-CUCC：中国联通
+        :param InternetServiceProvider: CMCC：中國移動
+CTCC：中國電信
+CUCC：中國聯通
         :type InternetServiceProvider: str
-        :param InternetMaxBandwidthOut: 1 Mbps 至 5000 Mbps，默认值：1 Mbps。
+        :param InternetMaxBandwidthOut: 1 Mbps 至 5000 Mbps，預設值：1 Mbps。
         :type InternetMaxBandwidthOut: int
-        :param Tags: 需要关联的标签列表。
+        :param Tags: 需要關聯的标簽清單。
         :type Tags: list of Tag
         """
         self.EcmRegion = None
@@ -130,18 +130,18 @@ CUCC：中国联通
 
 
 class AllocateAddressesResponse(AbstractModel):
-    """AllocateAddresses返回参数结构体
+    """AllocateAddresses返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AddressSet: 申请到的 EIP 的唯一 ID 列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AddressSet: 申請到的 EIP 的唯一 ID 清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AddressSet: list of str
-        :param TaskId: 异步任务TaskId。可以使用DescribeTaskResult接口查询任务状态。
+        :param TaskId: 異步任務TaskId。可以使用DescribeTaskResult介面查詢任務狀态。
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AddressSet = None
@@ -156,15 +156,15 @@ class AllocateAddressesResponse(AbstractModel):
 
 
 class Area(AbstractModel):
-    """区域信息
+    """區域訊息
 
     """
 
     def __init__(self):
         """
-        :param AreaId: 区域ID
+        :param AreaId: 區域ID
         :type AreaId: str
-        :param AreaName: 区域名称
+        :param AreaName: 區域名稱
         :type AreaName: str
         """
         self.AreaId = None
@@ -177,19 +177,19 @@ class Area(AbstractModel):
 
 
 class AssignPrivateIpAddressesRequest(AbstractModel):
-    """AssignPrivateIpAddresses请求参数结构体
+    """AssignPrivateIpAddresses請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NetworkInterfaceId: 弹性网卡实例ID，例如：eni-m6dyj72l。
+        :param NetworkInterfaceId: 彈性網卡實例ID，例如：eni-m6dyj72l。
         :type NetworkInterfaceId: str
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param PrivateIpAddresses: 指定的内网IP信息，单次最多指定10个。与SecondaryPrivateIpAddressCount至少提供一个。
+        :param PrivateIpAddresses: 指定的内網IP訊息，單次最多指定10個。與SecondaryPrivateIpAddressCount至少提供一個。
         :type PrivateIpAddresses: list of PrivateIpAddressSpecification
-        :param SecondaryPrivateIpAddressCount: 新申请的内网IP地址个数，与PrivateIpAddresses至少提供一个。内网IP地址个数总和不能超过配额数
+        :param SecondaryPrivateIpAddressCount: 新申請的内網IP網址個數，與PrivateIpAddresses至少提供一個。内網IP網址個數總和不能超過配額數
         :type SecondaryPrivateIpAddressCount: int
         """
         self.NetworkInterfaceId = None
@@ -211,16 +211,16 @@ class AssignPrivateIpAddressesRequest(AbstractModel):
 
 
 class AssignPrivateIpAddressesResponse(AbstractModel):
-    """AssignPrivateIpAddresses返回参数结构体
+    """AssignPrivateIpAddresses返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PrivateIpAddressSet: 内网IP详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PrivateIpAddressSet: 内網IP詳細訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PrivateIpAddressSet: list of PrivateIpAddressSpecification
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PrivateIpAddressSet = None
@@ -238,21 +238,21 @@ class AssignPrivateIpAddressesResponse(AbstractModel):
 
 
 class AssistantCidr(AbstractModel):
-    """VPC辅助CIDR信息。
+    """VPC輔助CIDR訊息。
 
     """
 
     def __init__(self):
         """
-        :param VpcId: VPC实例ID。形如：vpc-6v2ht8q5
+        :param VpcId: VPC實例ID。形如：vpc-6v2ht8q5
         :type VpcId: str
-        :param CidrBlock: 辅助CIDR。形如：172.16.0.0/16
+        :param CidrBlock: 輔助CIDR。形如：172.16.0.0/16
         :type CidrBlock: str
-        :param AssistantType: 辅助CIDR类型（0：普通辅助CIDR，1：容器辅助CIDR），默认都是0。
+        :param AssistantType: 輔助CIDR類型（0：普通輔助CIDR，1：容器輔助CIDR），預設都是0。
         :type AssistantType: int
-        :param SubnetSet: 辅助CIDR拆分的子网。
-注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubnetSet: 輔助CIDR拆分的子網。
+注意：此欄位可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetSet: list of Subnet
         """
         self.VpcId = None
@@ -274,7 +274,7 @@ class AssistantCidr(AbstractModel):
 
 
 class AssociateAddressRequest(AbstractModel):
-    """AssociateAddress请求参数结构体
+    """AssociateAddress請求參數結構體
 
     """
 
@@ -282,13 +282,13 @@ class AssociateAddressRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param AddressId: 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：eip-11112222。
+        :param AddressId: 标識 EIP 的唯一 ID。EIP 唯一 ID 形如：eip-11112222。
         :type AddressId: str
-        :param InstanceId: 要绑定的实例 ID。
+        :param InstanceId: 要綁定的實例 ID。
         :type InstanceId: str
-        :param NetworkInterfaceId: 要绑定的弹性网卡 ID。 弹性网卡 ID 形如：eni-11112222。NetworkInterfaceId 与 InstanceId 不可同时指定。弹性网卡 ID 可通过DescribeNetworkInterfaces接口返回值中的networkInterfaceId获取。
+        :param NetworkInterfaceId: 要綁定的彈性網卡 ID。 彈性網卡 ID 形如：eni-11112222。NetworkInterfaceId 與 InstanceId 不可同時指定。彈性網卡 ID 可通過DescribeNetworkInterfaces介面返回值中的networkInterfaceId獲取。
         :type NetworkInterfaceId: str
-        :param PrivateIpAddress: 要绑定的内网 IP。如果指定了 NetworkInterfaceId 则也必须指定 PrivateIpAddress ，表示将 EIP 绑定到指定弹性网卡的指定内网 IP 上。同时要确保指定的 PrivateIpAddress 是指定的 NetworkInterfaceId 上的一个内网 IP。指定弹性网卡的内网 IP 可通过DescribeNetworkInterfaces接口返回值中的privateIpAddress获取。
+        :param PrivateIpAddress: 要綁定的内網 IP。如果指定了 NetworkInterfaceId 則也必須指定 PrivateIpAddress ，表示将 EIP 綁定到指定彈性網卡的指定内網 IP 上。同時要确保指定的 PrivateIpAddress 是指定的 NetworkInterfaceId 上的一個内網 IP。指定彈性網卡的内網 IP 可通過DescribeNetworkInterfaces介面返回值中的privateIpAddress獲取。
         :type PrivateIpAddress: str
         """
         self.EcmRegion = None
@@ -307,15 +307,15 @@ class AssociateAddressRequest(AbstractModel):
 
 
 class AssociateAddressResponse(AbstractModel):
-    """AssociateAddress返回参数结构体
+    """AssociateAddress返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 异步任务TaskId。可以使用DescribeTaskResult接口查询任务状态。
+        :param TaskId: 異步任務TaskId。可以使用DescribeTaskResult介面查詢任務狀态。
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -328,15 +328,15 @@ class AssociateAddressResponse(AbstractModel):
 
 
 class AttachNetworkInterfaceRequest(AbstractModel):
-    """AttachNetworkInterface请求参数结构体
+    """AttachNetworkInterface請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NetworkInterfaceId: 弹性网卡实例ID，例如：eni-m6dyj72l。
+        :param NetworkInterfaceId: 彈性網卡實例ID，例如：eni-m6dyj72l。
         :type NetworkInterfaceId: str
-        :param InstanceId: 实例ID。形如：ein-r8hr2upy。
+        :param InstanceId: 實例ID。形如：ein-r8hr2upy。
         :type InstanceId: str
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
@@ -353,13 +353,13 @@ class AttachNetworkInterfaceRequest(AbstractModel):
 
 
 class AttachNetworkInterfaceResponse(AbstractModel):
-    """AttachNetworkInterface返回参数结构体
+    """AttachNetworkInterface返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -370,7 +370,7 @@ class AttachNetworkInterfaceResponse(AbstractModel):
 
 
 class City(AbstractModel):
-    """城市信息
+    """城市訊息
 
     """
 
@@ -378,7 +378,7 @@ class City(AbstractModel):
         """
         :param CityId: 城市ID
         :type CityId: str
-        :param CityName: 城市名称
+        :param CityName: 城市名稱
         :type CityName: str
         """
         self.CityId = None
@@ -391,15 +391,15 @@ class City(AbstractModel):
 
 
 class Country(AbstractModel):
-    """国家信息
+    """國家訊息
 
     """
 
     def __init__(self):
         """
-        :param CountryId: 国家ID
+        :param CountryId: 國家ID
         :type CountryId: str
-        :param CountryName: 国家名称
+        :param CountryName: 國家名稱
         :type CountryName: str
         """
         self.CountryId = None
@@ -412,23 +412,23 @@ class Country(AbstractModel):
 
 
 class CreateModuleRequest(AbstractModel):
-    """CreateModule请求参数结构体
+    """CreateModule請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ModuleName: 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。
+        :param ModuleName: 模組名稱，如視訊直播模組。限制：模組名稱不得以空格開頭，長度不得超過60個字元。
         :type ModuleName: str
-        :param DefaultBandWidth: 默认带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
+        :param DefaultBandWidth: 預設頻寬，單位：M。範圍不得超過頻寬上下限，詳看DescribeConfig。
         :type DefaultBandWidth: int
-        :param DefaultImageId: 默认镜像，如img-qsdf3ff2。
+        :param DefaultImageId: 預設映像，如img-qsdf3ff2。
         :type DefaultImageId: str
-        :param InstanceType: 机型ID。
+        :param InstanceType: 機型ID。
         :type InstanceType: str
-        :param DefaultSystemDiskSize: 默认系统盘大小，单位：G，默认大小为50G。范围不得超过系统盘上下限制，详看DescribeConfig。
+        :param DefaultSystemDiskSize: 預設系統盤大小，單位：G，預設大小爲50G。範圍不得超過系統盤上下限制，詳看DescribeConfig。
         :type DefaultSystemDiskSize: int
-        :param DefaultDataDiskSize: 默认数据盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
+        :param DefaultDataDiskSize: 預設數據盤大小，單位：G。範圍不得超過數據盤範圍大小，詳看DescribeConfig。
         :type DefaultDataDiskSize: int
         """
         self.ModuleName = None
@@ -449,15 +449,15 @@ class CreateModuleRequest(AbstractModel):
 
 
 class CreateModuleResponse(AbstractModel):
-    """CreateModule返回参数结构体
+    """CreateModule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ModuleId: 模块ID，创建模块成功后分配给该模块的ID。
+        :param ModuleId: 模組ID，創模組化塊成功後分配給該模組的ID。
         :type ModuleId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ModuleId = None
@@ -470,29 +470,29 @@ class CreateModuleResponse(AbstractModel):
 
 
 class CreateNetworkInterfaceRequest(AbstractModel):
-    """CreateNetworkInterface请求参数结构体
+    """CreateNetworkInterface請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VpcId: VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+        :param VpcId: VPC實例ID。可通過DescribeVpcs介面返回值中的VpcId獲取。
         :type VpcId: str
-        :param NetworkInterfaceName: 弹性网卡名称，最大长度不能超过60个字节。
+        :param NetworkInterfaceName: 彈性網卡名稱，最大長度不能超過60個位元。
         :type NetworkInterfaceName: str
-        :param SubnetId: 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
+        :param SubnetId: 彈性網卡所在的子網實例ID，例如：subnet-0ap8nwca。
         :type SubnetId: str
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param NetworkInterfaceDescription: 弹性网卡描述，可任意命名，但不得超过60个字符。
+        :param NetworkInterfaceDescription: 彈性網卡描述，可任意命名，但不得超過60個字元。
         :type NetworkInterfaceDescription: str
-        :param SecondaryPrivateIpAddressCount: 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+        :param SecondaryPrivateIpAddressCount: 新申請的内網IP網址個數，内網IP網址個數總和不能超過配數。
         :type SecondaryPrivateIpAddressCount: int
-        :param SecurityGroupIds: 指定绑定的安全组，例如：['sg-1dd51d']。
+        :param SecurityGroupIds: 指定綁定的安全組，例如：['sg-1dd51d']。
         :type SecurityGroupIds: list of str
-        :param PrivateIpAddresses: 指定的内网IP信息，单次最多指定10个。
+        :param PrivateIpAddresses: 指定的内網IP訊息，單次最多指定10個。
         :type PrivateIpAddresses: list of PrivateIpAddressSpecification
-        :param Tags: 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+        :param Tags: 指定綁定的标簽清單，例如：[{"Key": "city", "Value": "shanghai"}]
         :type Tags: list of Tag
         """
         self.VpcId = None
@@ -529,15 +529,15 @@ class CreateNetworkInterfaceRequest(AbstractModel):
 
 
 class CreateNetworkInterfaceResponse(AbstractModel):
-    """CreateNetworkInterface返回参数结构体
+    """CreateNetworkInterface返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NetworkInterface: 弹性网卡实例。
+        :param NetworkInterface: 彈性網卡實例。
         :type NetworkInterface: :class:`tencentcloud.ecm.v20190719.models.NetworkInterface`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.NetworkInterface = None
@@ -552,23 +552,23 @@ class CreateNetworkInterfaceResponse(AbstractModel):
 
 
 class CreateSubnetRequest(AbstractModel):
-    """CreateSubnet请求参数结构体
+    """CreateSubnet請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VpcId: 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+        :param VpcId: 待操作的VPC實例ID。可通過DescribeVpcs介面返回值中的VpcId獲取。
         :type VpcId: str
-        :param SubnetName: 子网名称，最大长度不能超过60个字节。
+        :param SubnetName: 子網名稱，最大長度不能超過60個位元。
         :type SubnetName: str
-        :param CidrBlock: 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。
+        :param CidrBlock: 子網網段，子網網段必須在VPC網段内，相同VPC内子網網段不能重疊。
         :type CidrBlock: str
-        :param Zone: 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
+        :param Zone: 子網所在的可用區ID，不同子網選擇不同可用區可以做跨可用區災備。
         :type Zone: str
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param Tags: 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+        :param Tags: 指定綁定的标簽清單，例如：[{"Key": "city", "Value": "shanghai"}]
         :type Tags: list of Tag
         """
         self.VpcId = None
@@ -594,15 +594,15 @@ class CreateSubnetRequest(AbstractModel):
 
 
 class CreateSubnetResponse(AbstractModel):
-    """CreateSubnet返回参数结构体
+    """CreateSubnet返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Subnet: 子网对象。
+        :param Subnet: 子網對象。
         :type Subnet: :class:`tencentcloud.ecm.v20190719.models.Subnet`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Subnet = None
@@ -617,25 +617,25 @@ class CreateSubnetResponse(AbstractModel):
 
 
 class CreateVpcRequest(AbstractModel):
-    """CreateVpc请求参数结构体
+    """CreateVpc請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VpcName: vpc名称，最大长度不能超过60个字节。
+        :param VpcName: vpc名稱，最大長度不能超過60個位元。
         :type VpcName: str
-        :param CidrBlock: vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+        :param CidrBlock: vpc的cidr，只能爲10.0.0.0/16，172.16.0.0/16，192.168.0.0/16這三個内網網段内。
         :type CidrBlock: str
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param EnableMulticast: 是否开启组播。true: 开启, false: 不开启。
+        :param EnableMulticast: 是否開啓組播。true: 開啓, false: 不開啓。
         :type EnableMulticast: str
-        :param DnsServers: DNS地址，最多支持4个
+        :param DnsServers: DNS網址，最多支援4個
         :type DnsServers: list of str
         :param DomainName: 域名
         :type DomainName: str
-        :param Tags: 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+        :param Tags: 指定綁定的标簽清單，例如：[{"Key": "city", "Value": "shanghai"}]
         :type Tags: list of Tag
         """
         self.VpcName = None
@@ -663,15 +663,15 @@ class CreateVpcRequest(AbstractModel):
 
 
 class CreateVpcResponse(AbstractModel):
-    """CreateVpc返回参数结构体
+    """CreateVpc返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Vpc: Vpc对象。
+        :param Vpc: Vpc對象。
         :type Vpc: :class:`tencentcloud.ecm.v20190719.models.VpcInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Vpc = None
@@ -686,13 +686,13 @@ class CreateVpcResponse(AbstractModel):
 
 
 class DeleteImageRequest(AbstractModel):
-    """DeleteImage请求参数结构体
+    """DeleteImage請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageIDSet: 镜像ID列表。
+        :param ImageIDSet: 映像ID清單。
         :type ImageIDSet: list of str
         """
         self.ImageIDSet = None
@@ -703,13 +703,13 @@ class DeleteImageRequest(AbstractModel):
 
 
 class DeleteImageResponse(AbstractModel):
-    """DeleteImage返回参数结构体
+    """DeleteImage返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -720,13 +720,13 @@ class DeleteImageResponse(AbstractModel):
 
 
 class DeleteModuleRequest(AbstractModel):
-    """DeleteModule请求参数结构体
+    """DeleteModule請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ModuleId: 模块ID。如：es-qn46snq8
+        :param ModuleId: 模組ID。如：es-qn46snq8
         :type ModuleId: str
         """
         self.ModuleId = None
@@ -737,13 +737,13 @@ class DeleteModuleRequest(AbstractModel):
 
 
 class DeleteModuleResponse(AbstractModel):
-    """DeleteModule返回参数结构体
+    """DeleteModule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -754,13 +754,13 @@ class DeleteModuleResponse(AbstractModel):
 
 
 class DeleteNetworkInterfaceRequest(AbstractModel):
-    """DeleteNetworkInterface请求参数结构体
+    """DeleteNetworkInterface請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NetworkInterfaceId: 弹性网卡实例ID，例如：eni-m6dyj72l。
+        :param NetworkInterfaceId: 彈性網卡實例ID，例如：eni-m6dyj72l。
         :type NetworkInterfaceId: str
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
@@ -775,13 +775,13 @@ class DeleteNetworkInterfaceRequest(AbstractModel):
 
 
 class DeleteNetworkInterfaceResponse(AbstractModel):
-    """DeleteNetworkInterface返回参数结构体
+    """DeleteNetworkInterface返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -792,13 +792,13 @@ class DeleteNetworkInterfaceResponse(AbstractModel):
 
 
 class DeleteSubnetRequest(AbstractModel):
-    """DeleteSubnet请求参数结构体
+    """DeleteSubnet請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SubnetId: 子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
+        :param SubnetId: 子網實例ID。可通過DescribeSubnets介面返回值中的SubnetId獲取。
         :type SubnetId: str
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
@@ -813,13 +813,13 @@ class DeleteSubnetRequest(AbstractModel):
 
 
 class DeleteSubnetResponse(AbstractModel):
-    """DeleteSubnet返回参数结构体
+    """DeleteSubnet返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -830,13 +830,13 @@ class DeleteSubnetResponse(AbstractModel):
 
 
 class DeleteVpcRequest(AbstractModel):
-    """DeleteVpc请求参数结构体
+    """DeleteVpc請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VpcId: VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+        :param VpcId: VPC實例ID。可通過DescribeVpcs介面返回值中的VpcId獲取。
         :type VpcId: str
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
@@ -851,13 +851,13 @@ class DeleteVpcRequest(AbstractModel):
 
 
 class DeleteVpcResponse(AbstractModel):
-    """DeleteVpc返回参数结构体
+    """DeleteVpc返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -868,7 +868,7 @@ class DeleteVpcResponse(AbstractModel):
 
 
 class DescribeAddressQuotaRequest(AbstractModel):
-    """DescribeAddressQuota请求参数结构体
+    """DescribeAddressQuota請求參數結構體
 
     """
 
@@ -885,15 +885,15 @@ class DescribeAddressQuotaRequest(AbstractModel):
 
 
 class DescribeAddressQuotaResponse(AbstractModel):
-    """DescribeAddressQuota返回参数结构体
+    """DescribeAddressQuota返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param QuotaSet: 账户 EIP 配额信息。
+        :param QuotaSet: 帳戶 EIP 配額訊息。
         :type QuotaSet: list of EipQuota
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.QuotaSet = None
@@ -911,7 +911,7 @@ class DescribeAddressQuotaResponse(AbstractModel):
 
 
 class DescribeAddressesRequest(AbstractModel):
-    """DescribeAddresses请求参数结构体
+    """DescribeAddresses請求參數結構體
 
     """
 
@@ -919,21 +919,21 @@ class DescribeAddressesRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param AddressIds: 标识 EIP 的唯一 ID 列表。EIP 唯一 ID 形如：eip-11112222。参数不支持同时指定AddressIds和Filters。
+        :param AddressIds: 标識 EIP 的唯一 ID 清單。EIP 唯一 ID 形如：eip-11112222。參數不支援同時指定AddressIds和Filters。
         :type AddressIds: list of str
-        :param Filters: 每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定AddressIds和Filters。详细的过滤条件如下：
-address-id - String - 是否必填：否 - （过滤条件）按照 EIP 的唯一 ID 过滤。EIP 唯一 ID 形如：eip-11112222。
-address-name - String - 是否必填：否 - （过滤条件）按照 EIP 名称过滤。不支持模糊过滤。
-address-ip - String - 是否必填：否 - （过滤条件）按照 EIP 的 IP 地址过滤。
-address-status - String - 是否必填：否 - （过滤条件）按照 EIP 的状态过滤。取值范围：详见EIP状态列表。
-instance-id - String - 是否必填：否 - （过滤条件）按照 EIP 绑定的实例 ID 过滤。实例 ID 形如：ins-11112222。
-private-ip-address - String - 是否必填：否 - （过滤条件）按照 EIP 绑定的内网 IP 过滤。
-network-interface-id - String - 是否必填：否 - （过滤条件）按照 EIP 绑定的弹性网卡 ID 过滤。弹性网卡 ID 形如：eni-11112222。
-is-arrears - String - 是否必填：否 - （过滤条件）按照 EIP 是否欠费进行过滤。（TRUE：EIP 处于欠费状态|FALSE：EIP 费用状态正常）
+        :param Filters: 每次請求的Filters的上限爲10，Filter.Values的上限爲5。參數不支援同時指定AddressIds和Filters。詳細的過濾條件如下：
+address-id - String - 是否必填：否 - （過濾條件）按照 EIP 的唯一 ID 過濾。EIP 唯一 ID 形如：eip-11112222。
+address-name - String - 是否必填：否 - （過濾條件）按照 EIP 名稱過濾。不支援模糊過濾。
+address-ip - String - 是否必填：否 - （過濾條件）按照 EIP 的 IP 網址過濾。
+address-status - String - 是否必填：否 - （過濾條件）按照 EIP 的狀态過濾。取值範圍：詳見EIP狀态清單。
+instance-id - String - 是否必填：否 - （過濾條件）按照 EIP 綁定的實例 ID 過濾。實例 ID 形如：ins-11112222。
+private-ip-address - String - 是否必填：否 - （過濾條件）按照 EIP 綁定的内網 IP 過濾。
+network-interface-id - String - 是否必填：否 - （過濾條件）按照 EIP 綁定的彈性網卡 ID 過濾。彈性網卡 ID 形如：eni-11112222。
+is-arrears - String - 是否必填：否 - （過濾條件）按照 EIP 是否欠費進行過濾。（TRUE：EIP 處于欠費狀态|FALSE：EIP 費用狀态正常）
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0。
+        :param Offset: 偏移量，預設爲0。
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为100。
+        :param Limit: 返回數量，預設爲20，最大值爲100。
         :type Limit: int
         """
         self.EcmRegion = None
@@ -957,17 +957,17 @@ is-arrears - String - 是否必填：否 - （过滤条件）按照 EIP 是否�
 
 
 class DescribeAddressesResponse(AbstractModel):
-    """DescribeAddresses返回参数结构体
+    """DescribeAddresses返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 符合条件的 EIP 数量。
+        :param TotalCount: 符合條件的 EIP 數量。
         :type TotalCount: int
-        :param AddressSet: EIP 详细信息列表。
+        :param AddressSet: EIP 詳細訊息清單。
         :type AddressSet: list of Address
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -987,41 +987,41 @@ class DescribeAddressesResponse(AbstractModel):
 
 
 class DescribeBaseOverviewRequest(AbstractModel):
-    """DescribeBaseOverview请求参数结构体
+    """DescribeBaseOverview請求參數結構體
 
     """
 
 
 class DescribeBaseOverviewResponse(AbstractModel):
-    """DescribeBaseOverview返回参数结构体
+    """DescribeBaseOverview返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ModuleNum: 模块数量，单位：个
+        :param ModuleNum: 模組數量，單位：個
         :type ModuleNum: int
-        :param NodeNum: 节点数量，单位：个
+        :param NodeNum: 節點數量，單位：個
         :type NodeNum: int
-        :param VcpuNum: cpu核数，单位：个
+        :param VcpuNum: cpu核數，單位：個
         :type VcpuNum: int
-        :param MemoryNum: 内存大小，单位：G
+        :param MemoryNum: 内存大小，單位：G
         :type MemoryNum: int
-        :param StorageNum: 硬盘大小，单位：G
+        :param StorageNum: 硬碟大小，單位：G
         :type StorageNum: int
-        :param NetworkNum: 昨日网络峰值,单位：M
+        :param NetworkNum: 昨日網絡峰值,單位：M
         :type NetworkNum: int
-        :param InstanceNum: 实例数量，单位：台
+        :param InstanceNum: 實例數量，單位：台
         :type InstanceNum: int
-        :param RunningNum: 运行中数量，单位：台
+        :param RunningNum: 運作中數量，單位：台
         :type RunningNum: int
-        :param IsolationNum: 安全隔离数量，单位：台
+        :param IsolationNum: 安全隔離數量，單位：台
         :type IsolationNum: int
-        :param ExpiredNum: 过期实例数量，单位：台
+        :param ExpiredNum: 過期實例數量，單位：台
         :type ExpiredNum: int
-        :param WillExpireNum: 即将过期实例数量，单位：台
+        :param WillExpireNum: 即将過期實例數量，單位：台
         :type WillExpireNum: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ModuleNum = None
@@ -1054,24 +1054,24 @@ class DescribeBaseOverviewResponse(AbstractModel):
 
 
 class DescribeConfigRequest(AbstractModel):
-    """DescribeConfig请求参数结构体
+    """DescribeConfig請求參數結構體
 
     """
 
 
 class DescribeConfigResponse(AbstractModel):
-    """DescribeConfig返回参数结构体
+    """DescribeConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NetworkStorageRange: 网络带宽硬盘大小的范围信息。
+        :param NetworkStorageRange: 網絡頻寬硬碟大小的範圍訊息。
         :type NetworkStorageRange: :class:`tencentcloud.ecm.v20190719.models.NetworkStorageRange`
-        :param ImageWhiteSet: 镜像操作系统白名单
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ImageWhiteSet: 映像作業系統白名單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ImageWhiteSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.NetworkStorageRange = None
@@ -1088,21 +1088,21 @@ class DescribeConfigResponse(AbstractModel):
 
 
 class DescribeImageRequest(AbstractModel):
-    """DescribeImage请求参数结构体
+    """DescribeImage請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 过滤条件，每次请求的Filters的上限为10，详细的过滤条件如下：
-image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤
-image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
-PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
-PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
+        :param Filters: 過濾條件，每次請求的Filters的上限爲10，詳細的過濾條件如下：
+image-id - String - 是否必填： 否 - （過濾條件）按照映像ID進行過濾
+image-type - String - 是否必填： 否 - （過濾條件）按照映像類型進行過濾。取值範圍：
+PRIVATE_IMAGE: 私有映像 (本帳戶創建的映像) 
+PUBLIC_IMAGE: 公共映像 (Top Cloud 官方映像)
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API 簡介中的相關小節。
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于Limit的更進一步介紹請參考 API 簡介中的相關小節。
         :type Limit: int
         """
         self.Filters = None
@@ -1122,19 +1122,19 @@ PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
 
 
 class DescribeImageResponse(AbstractModel):
-    """DescribeImage返回参数结构体
+    """DescribeImage返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 镜像总数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 映像總數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param ImageSet: 镜像数组
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ImageSet: 映像數組
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ImageSet: list of Image
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1154,24 +1154,24 @@ class DescribeImageResponse(AbstractModel):
 
 
 class DescribeInstanceTypeConfigRequest(AbstractModel):
-    """DescribeInstanceTypeConfig请求参数结构体
+    """DescribeInstanceTypeConfig請求參數結構體
 
     """
 
 
 class DescribeInstanceTypeConfigResponse(AbstractModel):
-    """DescribeInstanceTypeConfig返回参数结构体
+    """DescribeInstanceTypeConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 总数
+        :param TotalCount: 總數
         :type TotalCount: int
-        :param InstanceTypeConfigSet: 机型配置信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceTypeConfigSet: 機型配置訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceTypeConfigSet: list of InstanceTypeConfig
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1191,13 +1191,13 @@ class DescribeInstanceTypeConfigResponse(AbstractModel):
 
 
 class DescribeInstancesDeniedActionsRequest(AbstractModel):
-    """DescribeInstancesDeniedActions请求参数结构体
+    """DescribeInstancesDeniedActions請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIdSet: 无
+        :param InstanceIdSet: 無
         :type InstanceIdSet: list of str
         """
         self.InstanceIdSet = None
@@ -1208,15 +1208,15 @@ class DescribeInstancesDeniedActionsRequest(AbstractModel):
 
 
 class DescribeInstancesDeniedActionsResponse(AbstractModel):
-    """DescribeInstancesDeniedActions返回参数结构体
+    """DescribeInstancesDeniedActions返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceOperatorSet: 实例对应的禁止操作
+        :param InstanceOperatorSet: 實例對應的禁止操作
         :type InstanceOperatorSet: list of InstanceOperator
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceOperatorSet = None
@@ -1234,29 +1234,29 @@ class DescribeInstancesDeniedActionsResponse(AbstractModel):
 
 
 class DescribeInstancesRequest(AbstractModel):
-    """DescribeInstances请求参数结构体
+    """DescribeInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 过滤条件。
-zone      String      是否必填：否     （过滤条件）按照可用区中文名过滤,支持模糊匹配。
-module-id      String      是否必填：否     （过滤条件）按照模块ID过滤。
-instance-id      String      是否必填：否      （过滤条件）按照实例ID过滤。
-instance-name      String      是否必填：否      （过滤条件）按照实例名称过滤,支持模糊匹配。
-ip-address      String      是否必填：否      （过滤条件）按照实例的内网/公网IP过滤。
-instance-uuid   string 是否必填：否 （过滤条件）按照uuid过滤实例列表。
-instance-state  string  是否必填：否 （过滤条件）按照实例状态更新实例列表。
-internet-service-provider      String      是否必填：否      （过滤条件）按照实例公网IP所属的运营商进行过滤。
-tag-key      String      是否必填：否      （过滤条件）按照标签键进行过滤。
-tag:tag-key      String      是否必填：否      （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
-若不传Filters参数则表示查询所有相关的实例信息。
-单次请求的Filter.Values的上限为5。
+        :param Filters: 過濾條件。
+zone      String      是否必填：否     （過濾條件）按照可用區中文名過濾,支援模糊比對。
+module-id      String      是否必填：否     （過濾條件）按照模組ID過濾。
+instance-id      String      是否必填：否      （過濾條件）按照實例ID過濾。
+instance-name      String      是否必填：否      （過濾條件）按照實例名稱過濾,支援模糊比對。
+ip-address      String      是否必填：否      （過濾條件）按照實例的内網/公網IP過濾。
+instance-uuid   string 是否必填：否 （過濾條件）按照uuid過濾實例清單。
+instance-state  string  是否必填：否 （過濾條件）按照實例狀态更新實例清單。
+internet-service-provider      String      是否必填：否      （過濾條件）按照實例公網IP所屬的運營商進行過濾。
+tag-key      String      是否必填：否      （過濾條件）按照标簽鍵進行過濾。
+tag:tag-key      String      是否必填：否      （過濾條件）按照标簽鍵值對進行過濾。 tag-key使用具體的标簽鍵進行替換。
+若不傳Filters參數則表示查詢所有相關的實例訊息。
+單次請求的Filter.Values的上限爲5。
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0。
+        :param Offset: 偏移量，預設爲0。
         :type Offset: int
-        :param Limit: 返回数量，默认为20(如果查询结果数目大于等于20)，最大值为100。
+        :param Limit: 返回數量，預設爲20(如果查詢結果數目大于等于20)，最大值爲100。
         :type Limit: int
         """
         self.Filters = None
@@ -1276,18 +1276,18 @@ tag:tag-key      String      是否必填：否      （过滤条件）按照标
 
 
 class DescribeInstancesResponse(AbstractModel):
-    """DescribeInstances返回参数结构体
+    """DescribeInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 返回的实例相关信息列表的长度。
+        :param TotalCount: 返回的實例相關訊息清單的長度。
         :type TotalCount: int
-        :param InstanceSet: 返回的实例相关信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceSet: 返回的實例相關訊息清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceSet: list of Instance
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1307,13 +1307,13 @@ class DescribeInstancesResponse(AbstractModel):
 
 
 class DescribeModuleDetailRequest(AbstractModel):
-    """DescribeModuleDetail请求参数结构体
+    """DescribeModuleDetail請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ModuleId: 模块ID，如em-qn46snq8。
+        :param ModuleId: 模組ID，如em-qn46snq8。
         :type ModuleId: str
         """
         self.ModuleId = None
@@ -1324,19 +1324,19 @@ class DescribeModuleDetailRequest(AbstractModel):
 
 
 class DescribeModuleDetailResponse(AbstractModel):
-    """DescribeModuleDetail返回参数结构体
+    """DescribeModuleDetail返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块的详细信息，详细见数据结构中的ModuleInfo。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Module: 模組的詳細訊息，詳細見數據結構中的ModuleInfo。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Module: :class:`tencentcloud.ecm.v20190719.models.Module`
-        :param ModuleCounter: 模块的统计信息，详细见数据结构中的ModuleCounterInfo。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ModuleCounter: 模組的統計訊息，詳細見數據結構中的ModuleCounterInfo。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ModuleCounter: :class:`tencentcloud.ecm.v20190719.models.ModuleCounter`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Module = None
@@ -1355,20 +1355,20 @@ class DescribeModuleDetailResponse(AbstractModel):
 
 
 class DescribeModuleRequest(AbstractModel):
-    """DescribeModule请求参数结构体
+    """DescribeModule請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 过滤条件。
-module-name - string - 是否必填：否 - （过滤条件）按照模块名称过滤。
-module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤。
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+        :param Filters: 過濾條件。
+module-name - string - 是否必填：否 - （過濾條件）按照模組名稱過濾。
+module-id - string - 是否必填：否 - （過濾條件）按照模組ID過濾。
+每次請求的Filters的上限爲10，Filter.Values的上限爲5。
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API 簡介中的相關小節。
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于Limit的更進一步介紹請參考 API 簡介中的相關小節。
         :type Limit: int
         """
         self.Filters = None
@@ -1388,19 +1388,19 @@ module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤
 
 
 class DescribeModuleResponse(AbstractModel):
-    """DescribeModule返回参数结构体
+    """DescribeModule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 符合条件的模块数量。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 符合條件的模組數量。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param ModuleItemSet: 模块详情信息的列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ModuleItemSet: 模組詳情訊息的清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ModuleItemSet: list of ModuleItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1420,7 +1420,7 @@ class DescribeModuleResponse(AbstractModel):
 
 
 class DescribeNetworkInterfacesRequest(AbstractModel):
-    """DescribeNetworkInterfaces请求参数结构体
+    """DescribeNetworkInterfaces請求參數結構體
 
     """
 
@@ -1428,24 +1428,24 @@ class DescribeNetworkInterfacesRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param NetworkInterfaceIds: 弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。
+        :param NetworkInterfaceIds: 彈性網卡實例ID查詢。形如：eni-pxir56ns。每次請求的實例的上限爲100。參數不支援同時指定NetworkInterfaceIds和Filters。
         :type NetworkInterfaceIds: list of str
-        :param Filters: 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
-vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。
-network-interface-id - String - （过滤条件）弹性网卡实例ID，形如：eni-5k56k7k7。
-attachment.instance-id - String - （过滤条件）绑定的云服务器实例ID，形如：ins-3nqpdn3i。
-groups.security-group-id - String - （过滤条件）绑定的安全组实例ID，例如：sg-f9ekbxeq。
-network-interface-name - String - （过滤条件）网卡实例名称。
-network-interface-description - String - （过滤条件）网卡实例描述。
-address-ip - String - （过滤条件）内网IPv4地址。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。
-is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网卡进行过滤。值为true时，仅过滤主网卡；值为false时，仅过滤辅助网卡；次过滤参数为提供时，同时过滤主网卡和辅助网卡。
+        :param Filters: 過濾條件，參數不支援同時指定NetworkInterfaceIds和Filters。
+vpc-id - String - （過濾條件）VPC實例ID，形如：vpc-f49l6u0z。
+subnet-id - String - （過濾條件）所屬子網實例ID，形如：subnet-f49l6u0z。
+network-interface-id - String - （過濾條件）彈性網卡實例ID，形如：eni-5k56k7k7。
+attachment.instance-id - String - （過濾條件）綁定的雲伺服器實例ID，形如：ins-3nqpdn3i。
+groups.security-group-id - String - （過濾條件）綁定的安全組實例ID，例如：sg-f9ekbxeq。
+network-interface-name - String - （過濾條件）網卡實例名稱。
+network-interface-description - String - （過濾條件）網卡實例描述。
+address-ip - String - （過濾條件）内網IPv4網址。
+tag-key - String -是否必填：否- （過濾條件）按照标簽鍵進行過濾。使用請參考範例2
+tag:tag-key - String - 是否必填：否 - （過濾條件）按照标簽鍵值對進行過濾。 tag-key使用具體的标簽鍵進行替換。使用請參考範例3。
+is-primary - Boolean - 是否必填：否 - （過濾條件）按照是否主網卡進行過濾。值爲true時，僅過濾主網卡；值爲false時，僅過濾輔助網卡；次過濾參數爲提供時，同時過濾主網卡和輔助網卡。
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0。
+        :param Offset: 偏移量，預設爲0。
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为100。
+        :param Limit: 返回數量，預設爲20，最大值爲100。
         :type Limit: int
         """
         self.EcmRegion = None
@@ -1469,18 +1469,18 @@ is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网
 
 
 class DescribeNetworkInterfacesResponse(AbstractModel):
-    """DescribeNetworkInterfaces返回参数结构体
+    """DescribeNetworkInterfaces返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 符合条件的实例数量。
+        :param TotalCount: 符合條件的實例數量。
         :type TotalCount: int
-        :param NetworkInterfaceSet: 实例详细信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NetworkInterfaceSet: 實例詳細訊息清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NetworkInterfaceSet: list of NetworkInterface
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1500,24 +1500,24 @@ class DescribeNetworkInterfacesResponse(AbstractModel):
 
 
 class DescribeNodeRequest(AbstractModel):
-    """DescribeNode请求参数结构体
+    """DescribeNode請求參數結構體
 
     """
 
 
 class DescribeNodeResponse(AbstractModel):
-    """DescribeNode返回参数结构体
+    """DescribeNode返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NodeSet: 节点详细信息的列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NodeSet: 節點詳細訊息的清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NodeSet: list of Node
-        :param TotalCount: 所有的节点数量。
+        :param TotalCount: 所有的節點數量。
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.NodeSet = None
@@ -1537,15 +1537,15 @@ class DescribeNodeResponse(AbstractModel):
 
 
 class DescribePeakBaseOverviewRequest(AbstractModel):
-    """DescribePeakBaseOverview请求参数结构体
+    """DescribePeakBaseOverview請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期。
+        :param StartTime: 開始時間（xxxx-xx-xx）如2019-08-14，預設爲一周之前的日期。
         :type StartTime: str
-        :param EndTime: 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。
+        :param EndTime: 結束時間（xxxx-xx-xx）如2019-08-14，預設爲昨天。
         :type EndTime: str
         """
         self.StartTime = None
@@ -1558,16 +1558,16 @@ class DescribePeakBaseOverviewRequest(AbstractModel):
 
 
 class DescribePeakBaseOverviewResponse(AbstractModel):
-    """DescribePeakBaseOverview返回参数结构体
+    """DescribePeakBaseOverview返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PeakFamilyInfoSet: 基础峰值列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PeakFamilyInfoSet: 基礎峰值清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PeakFamilyInfoSet: list of PeakFamilyInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PeakFamilyInfoSet = None
@@ -1585,18 +1585,18 @@ class DescribePeakBaseOverviewResponse(AbstractModel):
 
 
 class DescribePeakNetworkOverviewRequest(AbstractModel):
-    """DescribePeakNetworkOverview请求参数结构体
+    """DescribePeakNetworkOverview請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param StartTime: 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期。
+        :param StartTime: 開始時間（xxxx-xx-xx）如2019-08-14，預設爲一周之前的日期。
         :type StartTime: str
-        :param EndTime: 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。
+        :param EndTime: 結束時間（xxxx-xx-xx）如2019-08-14，預設爲昨天。
         :type EndTime: str
-        :param Filters: 过滤条件。
-region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。
+        :param Filters: 過濾條件。
+region    String      是否必填：否     （過濾條件）按照region過濾,不支援模糊比對。
         :type Filters: list of Filter
         """
         self.StartTime = None
@@ -1616,16 +1616,16 @@ region    String      是否必填：否     （过滤条件）按照region过�
 
 
 class DescribePeakNetworkOverviewResponse(AbstractModel):
-    """DescribePeakNetworkOverview返回参数结构体
+    """DescribePeakNetworkOverview返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param PeakNetworkRegionSet: 网络峰值数组。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PeakNetworkRegionSet: 網絡峰值數組。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PeakNetworkRegionSet: list of PeakNetworkRegionInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.PeakNetworkRegionSet = None
@@ -1643,7 +1643,7 @@ class DescribePeakNetworkOverviewResponse(AbstractModel):
 
 
 class DescribeSubnetsRequest(AbstractModel):
-    """DescribeSubnets请求参数结构体
+    """DescribeSubnets請求參數結構體
 
     """
 
@@ -1651,22 +1651,22 @@ class DescribeSubnetsRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param SubnetIds: 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
+        :param SubnetIds: 子網實例ID查詢。形如：subnet-pxir56ns。每次請求的實例的上限爲100。參數不支援同時指定SubnetIds和Filters。
         :type SubnetIds: list of str
-        :param Filters: 过滤条件，参数不支持同时指定SubnetIds和Filters。
-subnet-id - String - （过滤条件）Subnet实例名称。
-vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。
-is-default - Boolean - （过滤条件）是否是默认子网。
-is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。
-subnet-name - String - （过滤条件）子网名称。
-zone - String - （过滤条件）可用区。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+        :param Filters: 過濾條件，參數不支援同時指定SubnetIds和Filters。
+subnet-id - String - （過濾條件）Subnet實例名稱。
+vpc-id - String - （過濾條件）VPC實例ID，形如：vpc-f49l6u0z。
+cidr-block - String - （過濾條件）子網網段，形如: 192.168.1.0 。
+is-default - Boolean - （過濾條件）是否是預設子網。
+is-remote-vpc-snat - Boolean - （過濾條件）是否爲VPC SNAT網址池子網。
+subnet-name - String - （過濾條件）子網名稱。
+zone - String - （過濾條件）可用區。
+tag-key - String -是否必填：否- （過濾條件）按照标簽鍵進行過濾。
+tag:tag-key - String - 是否必填：否 - （過濾條件）按照标簽鍵值對進行過濾。 tag-key使用具體的标簽鍵進行替換。使用請參考範例
         :type Filters: list of Filter
         :param Offset: 偏移量
         :type Offset: str
-        :param Limit: 返回数量
+        :param Limit: 返回數量
         :type Limit: str
         """
         self.EcmRegion = None
@@ -1690,18 +1690,18 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
 
 
 class DescribeSubnetsResponse(AbstractModel):
-    """DescribeSubnets返回参数结构体
+    """DescribeSubnets返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 符合条件的实例数量。
+        :param TotalCount: 符合條件的實例數量。
         :type TotalCount: int
-        :param SubnetSet: 子网对象。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubnetSet: 子網對象。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetSet: list of Subnet
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1721,7 +1721,7 @@ class DescribeSubnetsResponse(AbstractModel):
 
 
 class DescribeTaskResultRequest(AbstractModel):
-    """DescribeTaskResult请求参数结构体
+    """DescribeTaskResult請求參數結構體
 
     """
 
@@ -1729,7 +1729,7 @@ class DescribeTaskResultRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param TaskId: 异步任务ID。
+        :param TaskId: 異步任務ID。
         :type TaskId: str
         """
         self.EcmRegion = None
@@ -1742,17 +1742,17 @@ class DescribeTaskResultRequest(AbstractModel):
 
 
 class DescribeTaskResultResponse(AbstractModel):
-    """DescribeTaskResult返回参数结构体
+    """DescribeTaskResult返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 异步任务ID。
+        :param TaskId: 異步任務ID。
         :type TaskId: str
-        :param Result: 执行结果，包括"SUCCESS", "FAILED", "RUNNING"
+        :param Result: 執行結果，包括"SUCCESS", "FAILED", "RUNNING"
         :type Result: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -1767,25 +1767,25 @@ class DescribeTaskResultResponse(AbstractModel):
 
 
 class DescribeVpcsRequest(AbstractModel):
-    """DescribeVpcs请求参数结构体
+    """DescribeVpcs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VpcIds: VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+        :param VpcIds: VPC實例ID。形如：vpc-f49l6u0z。每次請求的實例的上限爲100。參數不支援同時指定VpcIds和Filters。
         :type VpcIds: list of str
-        :param Filters: 过滤条件，参数不支持同时指定VpcIds和Filters。
-vpc-name - String - （过滤条件）VPC实例名称。
-is-default - String - （过滤条件）是否默认VPC。
-vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）vpc的cidr。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+        :param Filters: 過濾條件，參數不支援同時指定VpcIds和Filters。
+vpc-name - String - （過濾條件）VPC實例名稱。
+is-default - String - （過濾條件）是否預設VPC。
+vpc-id - String - （過濾條件）VPC實例ID形如：vpc-f49l6u0z。
+cidr-block - String - （過濾條件）vpc的cidr。
+tag-key - String -是否必填：否- （過濾條件）按照标簽鍵進行過濾。
+tag:tag-key - String - 是否必填：否 - （過濾條件）按照标簽鍵值對進行過濾。 tag-key使用具體的标簽鍵進行替換。使用請參考範例
         :type Filters: list of Filter
         :param Offset: 偏移量
         :type Offset: int
-        :param Limit: 返回数量
+        :param Limit: 返回數量
         :type Limit: int
         :param EcmRegion: 地域
         :type EcmRegion: str
@@ -1811,18 +1811,18 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
 
 
 class DescribeVpcsResponse(AbstractModel):
-    """DescribeVpcs返回参数结构体
+    """DescribeVpcs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 符合条件的对象数。
+        :param TotalCount: 符合條件的對象數。
         :type TotalCount: int
-        :param VpcSet: 私有网络对象。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VpcSet: 私有網絡對象。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcSet: list of VpcInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1842,15 +1842,15 @@ class DescribeVpcsResponse(AbstractModel):
 
 
 class DetachNetworkInterfaceRequest(AbstractModel):
-    """DetachNetworkInterface请求参数结构体
+    """DetachNetworkInterface請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param NetworkInterfaceId: 弹性网卡实例ID，例如：eni-m6dyj72l。
+        :param NetworkInterfaceId: 彈性網卡實例ID，例如：eni-m6dyj72l。
         :type NetworkInterfaceId: str
-        :param InstanceId: 实例ID。形如：ein-hcs7jkg4
+        :param InstanceId: 實例ID。形如：ein-hcs7jkg4
         :type InstanceId: str
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
@@ -1867,13 +1867,13 @@ class DetachNetworkInterfaceRequest(AbstractModel):
 
 
 class DetachNetworkInterfaceResponse(AbstractModel):
-    """DetachNetworkInterface返回参数结构体
+    """DetachNetworkInterface返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1884,7 +1884,7 @@ class DetachNetworkInterfaceResponse(AbstractModel):
 
 
 class DisassociateAddressRequest(AbstractModel):
-    """DisassociateAddress请求参数结构体
+    """DisassociateAddress請求參數結構體
 
     """
 
@@ -1892,16 +1892,16 @@ class DisassociateAddressRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param AddressId: 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：eip-11112222。
+        :param AddressId: 标識 EIP 的唯一 ID。EIP 唯一 ID 形如：eip-11112222。
         :type AddressId: str
-        :param ReallocateNormalPublicIp: 表示解绑 EIP 之后是否分配普通公网 IP。取值范围：
-TRUE：表示解绑 EIP 之后分配普通公网 IP。
-FALSE：表示解绑 EIP 之后不分配普通公网 IP。
-默认取值：FALSE。
+        :param ReallocateNormalPublicIp: 表示解綁 EIP 之後是否分配普通公網 IP。取值範圍：
+TRUE：表示解綁 EIP 之後分配普通公網 IP。
+FALSE：表示解綁 EIP 之後不分配普通公網 IP。
+預設取值：FALSE。
 
-只有满足以下条件时才能指定该参数：
-只有在解绑主网卡的主内网 IP 上的 EIP 时才能指定该参数。
-解绑 EIP 后重新分配普通公网 IP 操作一个账号每天最多操作 10 次；详情可通过 DescribeAddressQuota 接口获取。
+只有滿足以下條件時才能指定該參數：
+只有在解綁主網卡的主内網 IP 上的 EIP 時才能指定該參數。
+解綁 EIP 後重新分配普通公網 IP 操作一個賬号每天最多操作 10 次；詳情可通過 DescribeAddressQuota 介面獲取。
         :type ReallocateNormalPublicIp: bool
         """
         self.EcmRegion = None
@@ -1916,15 +1916,15 @@ FALSE：表示解绑 EIP 之后不分配普通公网 IP。
 
 
 class DisassociateAddressResponse(AbstractModel):
-    """DisassociateAddress返回参数结构体
+    """DisassociateAddress返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 异步任务TaskId。可以使用DescribeTaskResult接口查询任务状态。
+        :param TaskId: 異步任務TaskId。可以使用DescribeTaskResult介面查詢任務狀态。
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -1937,17 +1937,17 @@ class DisassociateAddressResponse(AbstractModel):
 
 
 class DiskInfo(AbstractModel):
-    """磁盘信息
+    """磁盤訊息
 
     """
 
     def __init__(self):
         """
-        :param DiskType: 磁盘类型：LOCAL_BASIC
+        :param DiskType: 磁盤類型：LOCAL_BASIC
         :type DiskType: str
-        :param DiskId: 磁盘ID
+        :param DiskId: 磁盤ID
         :type DiskId: str
-        :param DiskSize: 磁盘大小（GB）
+        :param DiskSize: 磁盤大小（GB）
         :type DiskSize: int
         """
         self.DiskType = None
@@ -1962,20 +1962,20 @@ class DiskInfo(AbstractModel):
 
 
 class EipQuota(AbstractModel):
-    """描述EIP配额信息
+    """描述EIP配額訊息
 
     """
 
     def __init__(self):
         """
-        :param QuotaId: 配额名称，取值范围：
-TOTAL_EIP_QUOTA：用户当前地域下EIP的配额数；
-DAILY_EIP_APPLY：用户当前地域下今日申购次数；
-DAILY_PUBLIC_IP_ASSIGN：用户当前地域下，重新分配公网 IP次数。
+        :param QuotaId: 配額名稱，取值範圍：
+TOTAL_EIP_QUOTA：用戶當前地域下EIP的配額數；
+DAILY_EIP_APPLY：用戶當前地域下今日申購次數；
+DAILY_PUBLIC_IP_ASSIGN：用戶當前地域下，重新分配公網 IP次數。
         :type QuotaId: str
-        :param QuotaCurrent: 当前数量
+        :param QuotaCurrent: 當前數量
         :type QuotaCurrent: int
-        :param QuotaLimit: 配额数量
+        :param QuotaLimit: 配額數量
         :type QuotaLimit: int
         """
         self.QuotaId = None
@@ -1990,15 +1990,15 @@ DAILY_PUBLIC_IP_ASSIGN：用户当前地域下，重新分配公网 IP次数。
 
 
 class EnhancedService(AbstractModel):
-    """增强服务
+    """增強服務
 
     """
 
     def __init__(self):
         """
-        :param SecurityService: 是否开启云镜服务。
+        :param SecurityService: 是否開啓雲鏡服務。
         :type SecurityService: :class:`tencentcloud.ecm.v20190719.models.RunSecurityServiceEnabled`
-        :param MonitorService: 是否开启云监控服务。
+        :param MonitorService: 是否開啓雲監控服務。
         :type MonitorService: :class:`tencentcloud.ecm.v20190719.models.RunMonitorServiceEnabled`
         """
         self.SecurityService = None
@@ -2015,15 +2015,15 @@ class EnhancedService(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """过滤器Filter;由Name和ValueSet组成，是string的key和字符串数组的value
+    """過濾器Filter;由Name和ValueSet組成，是string的key和字串數組的value
 
     """
 
     def __init__(self):
         """
-        :param Name: 过滤字段名称
+        :param Name: 過濾欄位名稱
         :type Name: str
-        :param Values: 过滤字段内容数组
+        :param Values: 過濾欄位内容數組
         :type Values: list of str
         """
         self.Name = None
@@ -2036,15 +2036,15 @@ class Filter(AbstractModel):
 
 
 class ISP(AbstractModel):
-    """运营商信息
+    """運營商訊息
 
     """
 
     def __init__(self):
         """
-        :param ISPId: 运营商ID
+        :param ISPId: 運營商ID
         :type ISPId: str
-        :param ISPName: 运营商名称
+        :param ISPName: 運營商名稱
         :type ISPName: str
         """
         self.ISPId = None
@@ -2057,19 +2057,19 @@ class ISP(AbstractModel):
 
 
 class ISPCounter(AbstractModel):
-    """运行商统计信息
+    """運作商統計訊息
 
     """
 
     def __init__(self):
         """
-        :param ProviderName: 运营商名称
+        :param ProviderName: 運營商名稱
         :type ProviderName: str
-        :param ProviderNodeNum: 节点数量
+        :param ProviderNodeNum: 節點數量
         :type ProviderNodeNum: int
-        :param ProvederInstanceNum: 实例数量
+        :param ProvederInstanceNum: 實例數量
         :type ProvederInstanceNum: int
-        :param ZoneInstanceInfoSet: Zone实例信息结构体数组
+        :param ZoneInstanceInfoSet: Zone實例訊息結構體數組
         :type ZoneInstanceInfoSet: list of ZoneInstanceInfo
         """
         self.ProviderName = None
@@ -2091,39 +2091,39 @@ class ISPCounter(AbstractModel):
 
 
 class Image(AbstractModel):
-    """镜像信息
+    """映像訊息
 
     """
 
     def __init__(self):
         """
-        :param ImageId: 镜像ID
+        :param ImageId: 映像ID
         :type ImageId: str
-        :param ImageName: 镜像名称
+        :param ImageName: 映像名稱
         :type ImageName: str
-        :param ImageState: 镜像状态
+        :param ImageState: 映像狀态
         :type ImageState: str
-        :param ImageType: 镜像类型
+        :param ImageType: 映像類型
         :type ImageType: str
-        :param ImageOsName: 操作系统名称
+        :param ImageOsName: 作業系統名稱
         :type ImageOsName: str
-        :param ImageDescription: 镜像描述
+        :param ImageDescription: 映像描述
         :type ImageDescription: str
-        :param ImageCreateTime: 镜像导入时间
+        :param ImageCreateTime: 映像導入時間
         :type ImageCreateTime: str
-        :param Architecture: 操作系统位数
+        :param Architecture: 作業系統位數
         :type Architecture: str
-        :param OsType: 操作系统类型
+        :param OsType: 作業系統類型
         :type OsType: str
-        :param OsVersion: 操作系统版本
+        :param OsVersion: 作業系統版本
         :type OsVersion: str
-        :param Platform: 操作系统平台
+        :param Platform: 作業系統平台
         :type Platform: str
-        :param ImageOwner: 镜像所有者
+        :param ImageOwner: 映像所有者
         :type ImageOwner: int
-        :param ImageSize: 镜像大小。单位：GB
+        :param ImageSize: 映像大小。單位：GB
         :type ImageSize: int
-        :param SrcImage: 镜像来源信息
+        :param SrcImage: 映像來源訊息
         :type SrcImage: :class:`tencentcloud.ecm.v20190719.models.SrcImage`
         """
         self.ImageId = None
@@ -2162,15 +2162,15 @@ class Image(AbstractModel):
 
 
 class ImportImageRequest(AbstractModel):
-    """ImportImage请求参数结构体
+    """ImportImage請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ImageId: 镜像的Id。
+        :param ImageId: 映像的Id。
         :type ImageId: str
-        :param ImageDescription: 镜像的描述。
+        :param ImageDescription: 映像的描述。
         :type ImageDescription: str
         :param SourceRegion: 源地域
         :type SourceRegion: str
@@ -2187,13 +2187,13 @@ class ImportImageRequest(AbstractModel):
 
 
 class ImportImageResponse(AbstractModel):
-    """ImportImage返回参数结构体
+    """ImportImage返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2204,100 +2204,100 @@ class ImportImageResponse(AbstractModel):
 
 
 class Instance(AbstractModel):
-    """用于描述实例相关的信息。
+    """用于描述實例相關的訊息。
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 实例ID。
+        :param InstanceId: 實例ID。
         :type InstanceId: str
-        :param InstanceName: 实例名称，如ens-34241f3s。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceName: 實例名稱，如ens-34241f3s。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceName: str
-        :param InstanceState: 实例状态。取值范围：
-PENDING：表示创建中
-LAUNCH_FAILED：表示创建失败
-RUNNING：表示运行中
-STOPPED：表示关机
-STARTING：表示开机中
-STOPPING：表示关机中
-REBOOTING：表示重启中
-SHUTDOWN：表示停止待销毁
-TERMINATING：表示销毁中。
+        :param InstanceState: 實例狀态。取值範圍：
+PENDING：表示創建中
+LAUNCH_FAILED：表示創建失敗
+RUNNING：表示運作中
+STOPPED：表示關機
+STARTING：表示開機中
+STOPPING：表示關機中
+REBOOTING：表示重啓中
+SHUTDOWN：表示停止待銷毀
+TERMINATING：表示銷毀中。
         :type InstanceState: str
-        :param Image: 实例当前使用的镜像的信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Image: 實例當前使用的映像的訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Image: :class:`tencentcloud.ecm.v20190719.models.Image`
-        :param SimpleModule: 实例当前所属的模块简要信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SimpleModule: 實例當前所屬的模組簡要訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SimpleModule: :class:`tencentcloud.ecm.v20190719.models.SimpleModule`
-        :param Position: 实例所在的位置相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Position: 實例所在的位置相關訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Position: :class:`tencentcloud.ecm.v20190719.models.Position`
-        :param Internet: 实例的网络相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Internet: 實例的網絡相關訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Internet: :class:`tencentcloud.ecm.v20190719.models.Internet`
-        :param InstanceTypeConfig: 实例的配置相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceTypeConfig: 實例的配置相關訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceTypeConfig: :class:`tencentcloud.ecm.v20190719.models.InstanceTypeConfig`
-        :param CreateTime: 实例的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 實例的創建時間。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
-        :param TagSet: 实例的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagSet: 實例的标簽訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of Tag
-        :param LatestOperation: 实例最后一次操作。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LatestOperation: 實例最後一次操作。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LatestOperation: str
-        :param LatestOperationState: 实例最后一次操作结果。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LatestOperationState: 實例最後一次操作結果。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LatestOperationState: str
-        :param RestrictState: 实例业务状态。取值范围：
-NORMAL：表示正常状态的实例
-EXPIRED：表示过期的实例
-PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RestrictState: 實例業務狀态。取值範圍：
+NORMAL：表示正常狀态的實例
+EXPIRED：表示過期的實例
+PROTECTIVELY_ISOLATED：表示被安全隔離的實例。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RestrictState: str
-        :param SystemDiskSize: 系统盘大小，单位GB。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SystemDiskSize: 系統盤大小，單位GB。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SystemDiskSize: int
-        :param DataDiskSize: 数据盘大小，单位GB。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DataDiskSize: 數據盤大小，單位GB。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DataDiskSize: int
-        :param UUID: 实例UUID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UUID: 實例UUID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UUID: str
-        :param PayMode: 付费方式。
-    0为后付费。
-    1为预付费。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PayMode: 付費方式。
+    0爲後付費。
+    1爲預付費。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PayMode: int
-        :param ExpireTime: 过期时间。格式为yyyy-mm-dd HH:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ExpireTime: 過期時間。格式爲yyyy-mm-dd HH:mm:ss。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ExpireTime: str
-        :param IsolatedTime: 隔离时间。格式为yyyy-mm-dd HH:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsolatedTime: 隔離時間。格式爲yyyy-mm-dd HH:mm:ss。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsolatedTime: str
-        :param RenewFlag: 是否自动续费。
-      0为不自动续费。
-      1为自动续费。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RenewFlag: 是否自動續約。
+      0爲不自動續約。
+      1爲自動續約。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RenewFlag: int
-        :param ExpireState: 过期状态。
-    NORMAL 表示机器运行正常。
-    WILL_EXPIRE 表示即将过期。
-    EXPIRED 表示已过期。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ExpireState: 過期狀态。
+    NORMAL 表示機器運作正常。
+    WILL_EXPIRE 表示即将過期。
+    EXPIRED 表示已過期。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ExpireState: str
-        :param SystemDisk: 系统盘信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SystemDisk: 系統盤訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SystemDisk: :class:`tencentcloud.ecm.v20190719.models.DiskInfo`
-        :param DataDisks: 数据盘信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DataDisks: 數據盤訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DataDisks: list of DiskInfo
-        :param NewFlag: 新实例标志
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NewFlag: 新實例标志
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NewFlag: int
         """
         self.InstanceId = None
@@ -2376,15 +2376,15 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
 
 
 class InstanceFamilyConfig(AbstractModel):
-    """机型族配置
+    """機型族配置
 
     """
 
     def __init__(self):
         """
-        :param InstanceFamilyName: 机型名称
+        :param InstanceFamilyName: 機型名稱
         :type InstanceFamilyName: str
-        :param InstanceFamily: 机型ID
+        :param InstanceFamily: 機型ID
         :type InstanceFamily: str
         """
         self.InstanceFamilyName = None
@@ -2397,15 +2397,15 @@ class InstanceFamilyConfig(AbstractModel):
 
 
 class InstanceFamilyTypeConfig(AbstractModel):
-    """实例系列类型配置
+    """實例系列類型配置
 
     """
 
     def __init__(self):
         """
-        :param InstanceFamilyType: 实例机型系列类型Id
+        :param InstanceFamilyType: 實例機型系列類型Id
         :type InstanceFamilyType: str
-        :param InstanceFamilyTypeName: 实例机型系列类型名称
+        :param InstanceFamilyTypeName: 實例機型系列類型名稱
         :type InstanceFamilyTypeName: str
         """
         self.InstanceFamilyType = None
@@ -2418,16 +2418,16 @@ class InstanceFamilyTypeConfig(AbstractModel):
 
 
 class InstanceOperator(AbstractModel):
-    """实例可执行操作
+    """實例可執行操作
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 实例id
+        :param InstanceId: 實例id
         :type InstanceId: str
-        :param DeniedActions: 实例禁止的操作
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DeniedActions: 實例禁止的操作
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeniedActions: list of OperatorAction
         """
         self.InstanceId = None
@@ -2445,28 +2445,28 @@ class InstanceOperator(AbstractModel):
 
 
 class InstanceTypeConfig(AbstractModel):
-    """机型配置
+    """機型配置
 
     """
 
     def __init__(self):
         """
-        :param InstanceFamilyConfig: 机型族配置信息
+        :param InstanceFamilyConfig: 機型族配置訊息
         :type InstanceFamilyConfig: :class:`tencentcloud.ecm.v20190719.models.InstanceFamilyConfig`
-        :param InstanceType: 机型
+        :param InstanceType: 機型
         :type InstanceType: str
-        :param Vcpu: CPU核数
+        :param Vcpu: CPU核數
         :type Vcpu: int
         :param Memory: 内存大小
         :type Memory: int
-        :param Frequency: 主频
+        :param Frequency: 主頻
         :type Frequency: str
-        :param CpuModelName: 处理器型号
+        :param CpuModelName: 處理器型号
         :type CpuModelName: str
-        :param InstanceFamilyTypeConfig: 机型族类别配置信息
+        :param InstanceFamilyTypeConfig: 機型族類别配置訊息
         :type InstanceFamilyTypeConfig: :class:`tencentcloud.ecm.v20190719.models.InstanceFamilyTypeConfig`
-        :param ExtInfo: 机型额外信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ExtInfo: 機型額外訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ExtInfo: str
         """
         self.InstanceFamilyConfig = None
@@ -2495,17 +2495,17 @@ class InstanceTypeConfig(AbstractModel):
 
 
 class Internet(AbstractModel):
-    """实例的网络相关信息。
+    """實例的網絡相關訊息。
 
     """
 
     def __init__(self):
         """
-        :param PrivateIPAddressSet: 实例的内网相关信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PrivateIPAddressSet: 實例的内網相關訊息清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PrivateIPAddressSet: list of PrivateIPAddressInfo
-        :param PublicIPAddressSet: 实例的公网相关信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PublicIPAddressSet: 實例的公網相關訊息清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PublicIPAddressSet: list of PublicIPAddressInfo
         """
         self.PrivateIPAddressSet = None
@@ -2528,25 +2528,25 @@ class Internet(AbstractModel):
 
 
 class Ipv6Address(AbstractModel):
-    """IPv6地址信息。
+    """IPv6網址訊息。
 
     """
 
     def __init__(self):
         """
-        :param Address: IPv6地址，形如：3402:4e00:20:100:0:8cd9:2a67:71f3
+        :param Address: IPv6網址，形如：3402:4e00:20:100:0:8cd9:2a67:71f3
         :type Address: str
         :param Primary: 是否是主IP。
         :type Primary: bool
-        :param AddressId: EIP实例ID，形如：eip-hxlqja90。
+        :param AddressId: EIP實例ID，形如：eip-hxlqja90。
         :type AddressId: str
-        :param Description: 描述信息。
+        :param Description: 描述訊息。
         :type Description: str
-        :param IsWanIpBlocked: 公网IP是否被封堵。
+        :param IsWanIpBlocked: 公網IP是否被封堵。
         :type IsWanIpBlocked: bool
-        :param State: IPv6地址状态：
-PENDING：生产中
-MIGRATING：迁移中
+        :param State: IPv6網址狀态：
+PENDING：生産中
+MIGRATING：遷移中
 DELETING：删除中
 AVAILABLE：可用的
         :type State: str
@@ -2569,7 +2569,7 @@ AVAILABLE：可用的
 
 
 class MigrateNetworkInterfaceRequest(AbstractModel):
-    """MigrateNetworkInterface请求参数结构体
+    """MigrateNetworkInterface請求參數結構體
 
     """
 
@@ -2577,11 +2577,11 @@ class MigrateNetworkInterfaceRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param NetworkInterfaceId: 弹性网卡实例ID，例如：eni-m6dyj72l。
+        :param NetworkInterfaceId: 彈性網卡實例ID，例如：eni-m6dyj72l。
         :type NetworkInterfaceId: str
-        :param SourceInstanceId: 弹性网卡当前绑定的ECM实例ID。形如：ein-r8hr2upy。
+        :param SourceInstanceId: 彈性網卡當前綁定的ECM實例ID。形如：ein-r8hr2upy。
         :type SourceInstanceId: str
-        :param DestinationInstanceId: 待迁移的目的ECM实例ID。
+        :param DestinationInstanceId: 待遷移的目的ECM實例ID。
         :type DestinationInstanceId: str
         """
         self.EcmRegion = None
@@ -2598,13 +2598,13 @@ class MigrateNetworkInterfaceRequest(AbstractModel):
 
 
 class MigrateNetworkInterfaceResponse(AbstractModel):
-    """MigrateNetworkInterface返回参数结构体
+    """MigrateNetworkInterface返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2615,7 +2615,7 @@ class MigrateNetworkInterfaceResponse(AbstractModel):
 
 
 class MigratePrivateIpAddressRequest(AbstractModel):
-    """MigratePrivateIpAddress请求参数结构体
+    """MigratePrivateIpAddress請求參數結構體
 
     """
 
@@ -2623,11 +2623,11 @@ class MigratePrivateIpAddressRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param SourceNetworkInterfaceId: 当内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
+        :param SourceNetworkInterfaceId: 當内網IP綁定的彈性網卡實例ID，例如：eni-11112222。
         :type SourceNetworkInterfaceId: str
-        :param DestinationNetworkInterfaceId: 待迁移的目的弹性网卡实例ID。
+        :param DestinationNetworkInterfaceId: 待遷移的目的彈性網卡實例ID。
         :type DestinationNetworkInterfaceId: str
-        :param PrivateIpAddress: 迁移的内网IP地址，例如：10.0.0.6。
+        :param PrivateIpAddress: 遷移的内網IP網址，例如：10.0.0.6。
         :type PrivateIpAddress: str
         """
         self.EcmRegion = None
@@ -2644,13 +2644,13 @@ class MigratePrivateIpAddressRequest(AbstractModel):
 
 
 class MigratePrivateIpAddressResponse(AbstractModel):
-    """MigratePrivateIpAddress返回参数结构体
+    """MigratePrivateIpAddress返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2661,7 +2661,7 @@ class MigratePrivateIpAddressResponse(AbstractModel):
 
 
 class ModifyAddressAttributeRequest(AbstractModel):
-    """ModifyAddressAttribute请求参数结构体
+    """ModifyAddressAttribute請求參數結構體
 
     """
 
@@ -2669,11 +2669,11 @@ class ModifyAddressAttributeRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param AddressId: 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：eip-11112222。
+        :param AddressId: 标識 EIP 的唯一 ID。EIP 唯一 ID 形如：eip-11112222。
         :type AddressId: str
-        :param AddressName: 修改后的 EIP 名称。长度上限为20个字符。
+        :param AddressName: 修改後的 EIP 名稱。長度上限爲20個字元。
         :type AddressName: str
-        :param EipDirectConnection: 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
+        :param EipDirectConnection: 設定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意該參數僅對EIP直通功能可見的用戶可以設定。
         :type EipDirectConnection: str
         """
         self.EcmRegion = None
@@ -2690,13 +2690,13 @@ class ModifyAddressAttributeRequest(AbstractModel):
 
 
 class ModifyAddressAttributeResponse(AbstractModel):
-    """ModifyAddressAttribute返回参数结构体
+    """ModifyAddressAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2707,7 +2707,7 @@ class ModifyAddressAttributeResponse(AbstractModel):
 
 
 class ModifyAddressesBandwidthRequest(AbstractModel):
-    """ModifyAddressesBandwidth请求参数结构体
+    """ModifyAddressesBandwidth請求參數結構體
 
     """
 
@@ -2715,9 +2715,9 @@ class ModifyAddressesBandwidthRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param AddressIds: EIP唯一标识ID，形如'eip-xxxxxxx'
+        :param AddressIds: EIP唯一标識ID，形如'eip-xxxxxxx'
         :type AddressIds: list of str
-        :param InternetMaxBandwidthOut: 调整带宽目标值
+        :param InternetMaxBandwidthOut: 調整頻寬目标值
         :type InternetMaxBandwidthOut: int
         """
         self.EcmRegion = None
@@ -2732,15 +2732,15 @@ class ModifyAddressesBandwidthRequest(AbstractModel):
 
 
 class ModifyAddressesBandwidthResponse(AbstractModel):
-    """ModifyAddressesBandwidth返回参数结构体
+    """ModifyAddressesBandwidth返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 异步任务TaskId。
+        :param TaskId: 異步任務TaskId。
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -2753,15 +2753,15 @@ class ModifyAddressesBandwidthResponse(AbstractModel):
 
 
 class ModifyInstancesAttributeRequest(AbstractModel):
-    """ModifyInstancesAttribute请求参数结构体
+    """ModifyInstancesAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIdSet: 待修改的实例ID列表。在单次请求的过程中，请求实例数上限为100。
+        :param InstanceIdSet: 待修改的實例ID清單。在單次請求的過程中，請求實例數上限爲100。
         :type InstanceIdSet: list of str
-        :param InstanceName: 修改成功后显示的实例名称，不得超过60个字符，不传则名称显示为空。
+        :param InstanceName: 修改成功後顯示的實例名稱，不得超過60個字元，不傳則名稱顯示爲空。
         :type InstanceName: str
         """
         self.InstanceIdSet = None
@@ -2774,13 +2774,13 @@ class ModifyInstancesAttributeRequest(AbstractModel):
 
 
 class ModifyInstancesAttributeResponse(AbstractModel):
-    """ModifyInstancesAttribute返回参数结构体
+    """ModifyInstancesAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2791,15 +2791,15 @@ class ModifyInstancesAttributeResponse(AbstractModel):
 
 
 class ModifyModuleImageRequest(AbstractModel):
-    """ModifyModuleImage请求参数结构体
+    """ModifyModuleImage請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DefaultImageId: 默认镜像ID
+        :param DefaultImageId: 預設映像ID
         :type DefaultImageId: str
-        :param ModuleId: 模块ID
+        :param ModuleId: 模組ID
         :type ModuleId: str
         """
         self.DefaultImageId = None
@@ -2812,13 +2812,13 @@ class ModifyModuleImageRequest(AbstractModel):
 
 
 class ModifyModuleImageResponse(AbstractModel):
-    """ModifyModuleImage返回参数结构体
+    """ModifyModuleImage返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2829,15 +2829,15 @@ class ModifyModuleImageResponse(AbstractModel):
 
 
 class ModifyModuleNameRequest(AbstractModel):
-    """ModifyModuleName请求参数结构体
+    """ModifyModuleName請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ModuleId: 模块ID。
+        :param ModuleId: 模組ID。
         :type ModuleId: str
-        :param ModuleName: 模块名称。
+        :param ModuleName: 模組名稱。
         :type ModuleName: str
         """
         self.ModuleId = None
@@ -2850,13 +2850,13 @@ class ModifyModuleNameRequest(AbstractModel):
 
 
 class ModifyModuleNameResponse(AbstractModel):
-    """ModifyModuleName返回参数结构体
+    """ModifyModuleName返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2867,15 +2867,15 @@ class ModifyModuleNameResponse(AbstractModel):
 
 
 class ModifyModuleNetworkRequest(AbstractModel):
-    """ModifyModuleNetwork请求参数结构体
+    """ModifyModuleNetwork請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ModuleId: 模块Id
+        :param ModuleId: 模組Id
         :type ModuleId: str
-        :param DefaultBandwidth: 默认带宽上限
+        :param DefaultBandwidth: 預設頻寬上限
         :type DefaultBandwidth: int
         """
         self.ModuleId = None
@@ -2888,13 +2888,13 @@ class ModifyModuleNetworkRequest(AbstractModel):
 
 
 class ModifyModuleNetworkResponse(AbstractModel):
-    """ModifyModuleNetwork返回参数结构体
+    """ModifyModuleNetwork返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2905,19 +2905,19 @@ class ModifyModuleNetworkResponse(AbstractModel):
 
 
 class ModifySubnetAttributeRequest(AbstractModel):
-    """ModifySubnetAttribute请求参数结构体
+    """ModifySubnetAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SubnetId: 子网实例ID。形如：subnet-pxir56ns。
+        :param SubnetId: 子網實例ID。形如：subnet-pxir56ns。
         :type SubnetId: str
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param SubnetName: 子网名称，最大长度不能超过60个字节。
+        :param SubnetName: 子網名稱，最大長度不能超過60個位元。
         :type SubnetName: str
-        :param EnableBroadcast: 子网是否开启广播。
+        :param EnableBroadcast: 子網是否開啓廣播。
         :type EnableBroadcast: str
         """
         self.SubnetId = None
@@ -2934,13 +2934,13 @@ class ModifySubnetAttributeRequest(AbstractModel):
 
 
 class ModifySubnetAttributeResponse(AbstractModel):
-    """ModifySubnetAttribute返回参数结构体
+    """ModifySubnetAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2951,17 +2951,17 @@ class ModifySubnetAttributeResponse(AbstractModel):
 
 
 class ModifyVpcAttributeRequest(AbstractModel):
-    """ModifyVpcAttribute请求参数结构体
+    """ModifyVpcAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param VpcId: VPC实例ID。形如：vpc-f49l6u0z。
+        :param VpcId: VPC實例ID。形如：vpc-f49l6u0z。
         :type VpcId: str
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param VpcName: 私有网络名称，可任意命名，但不得超过60个字符。
+        :param VpcName: 私有網絡名稱，可任意命名，但不得超過60個字元。
         :type VpcName: str
         """
         self.VpcId = None
@@ -2976,13 +2976,13 @@ class ModifyVpcAttributeRequest(AbstractModel):
 
 
 class ModifyVpcAttributeResponse(AbstractModel):
-    """ModifyVpcAttribute返回参数结构体
+    """ModifyVpcAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2993,32 +2993,32 @@ class ModifyVpcAttributeResponse(AbstractModel):
 
 
 class Module(AbstractModel):
-    """模块信息
+    """模組訊息
 
     """
 
     def __init__(self):
         """
-        :param ModuleId: 模块Id
+        :param ModuleId: 模組Id
         :type ModuleId: str
-        :param ModuleName: 模块名称
+        :param ModuleName: 模組名稱
         :type ModuleName: str
-        :param ModuleState: 模块状态：
+        :param ModuleState: 模組狀态：
 NORMAL：正常
 DELETING：删除中 
-DELETEFAILED：删除失败
+DELETEFAILED：删除失敗
         :type ModuleState: str
-        :param DefaultSystemDiskSize: 默认系统盘大小
+        :param DefaultSystemDiskSize: 預設系統盤大小
         :type DefaultSystemDiskSize: int
-        :param DefaultDataDiskSize: 默认数据盘大小
+        :param DefaultDataDiskSize: 預設數據盤大小
         :type DefaultDataDiskSize: int
-        :param InstanceTypeConfig: 默认机型
+        :param InstanceTypeConfig: 預設機型
         :type InstanceTypeConfig: :class:`tencentcloud.ecm.v20190719.models.InstanceTypeConfig`
-        :param DefaultImage: 默认镜像
+        :param DefaultImage: 預設映像
         :type DefaultImage: :class:`tencentcloud.ecm.v20190719.models.Image`
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param DefaultBandwidth: 默认带宽
+        :param DefaultBandwidth: 預設頻寬
         :type DefaultBandwidth: int
         """
         self.ModuleId = None
@@ -3049,21 +3049,21 @@ DELETEFAILED：删除失败
 
 
 class ModuleCounter(AbstractModel):
-    """节点统计数据
+    """節點統計數據
 
     """
 
     def __init__(self):
         """
-        :param ISPCounterSet: 运营商统计信息列表
+        :param ISPCounterSet: 運營商統計訊息清單
         :type ISPCounterSet: list of ISPCounter
-        :param ProvinceNum: 省份数量
+        :param ProvinceNum: 省份數量
         :type ProvinceNum: int
-        :param CityNum: 城市数量
+        :param CityNum: 城市數量
         :type CityNum: int
-        :param NodeNum: 节点数量
+        :param NodeNum: 節點數量
         :type NodeNum: int
-        :param InstanceNum: 实例数量
+        :param InstanceNum: 實例數量
         :type InstanceNum: int
         """
         self.ISPCounterSet = None
@@ -3087,15 +3087,15 @@ class ModuleCounter(AbstractModel):
 
 
 class ModuleItem(AbstractModel):
-    """模块列表Item信息
+    """模組清單Item訊息
 
     """
 
     def __init__(self):
         """
-        :param NodeInstanceNum: 节点实例统计信息
+        :param NodeInstanceNum: 節點實例統計訊息
         :type NodeInstanceNum: :class:`tencentcloud.ecm.v20190719.models.NodeInstanceNum`
-        :param Module: 模块信息
+        :param Module: 模組訊息
         :type Module: :class:`tencentcloud.ecm.v20190719.models.Module`
         """
         self.NodeInstanceNum = None
@@ -3112,54 +3112,54 @@ class ModuleItem(AbstractModel):
 
 
 class NetworkInterface(AbstractModel):
-    """弹性网卡
+    """彈性網卡
 
     """
 
     def __init__(self):
         """
-        :param NetworkInterfaceId: 弹性网卡实例ID，例如：eni-f1xjkw1b。
+        :param NetworkInterfaceId: 彈性網卡實例ID，例如：eni-f1xjkw1b。
         :type NetworkInterfaceId: str
-        :param NetworkInterfaceName: 弹性网卡名称。
+        :param NetworkInterfaceName: 彈性網卡名稱。
         :type NetworkInterfaceName: str
-        :param NetworkInterfaceDescription: 弹性网卡描述。
+        :param NetworkInterfaceDescription: 彈性網卡描述。
         :type NetworkInterfaceDescription: str
-        :param SubnetId: 子网实例ID。
+        :param SubnetId: 子網實例ID。
         :type SubnetId: str
-        :param VpcId: VPC实例ID。
+        :param VpcId: VPC實例ID。
         :type VpcId: str
-        :param GroupSet: 绑定的安全组。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GroupSet: 綁定的安全組。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupSet: list of str
-        :param Primary: 是否是主网卡。
+        :param Primary: 是否是主網卡。
         :type Primary: bool
-        :param MacAddress: MAC地址。
+        :param MacAddress: MAC網址。
         :type MacAddress: str
-        :param State: 弹性网卡状态：
-PENDING：创建中
+        :param State: 彈性網卡狀态：
+PENDING：創建中
 AVAILABLE：可用的
-ATTACHING：绑定中
-DETACHING：解绑中
+ATTACHING：綁定中
+DETACHING：解綁中
 DELETING：删除中
         :type State: str
-        :param PrivateIpAddressSet: 内网IP信息。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PrivateIpAddressSet: 内網IP訊息。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PrivateIpAddressSet: list of PrivateIpAddressSpecification
-        :param Attachment: 绑定的云服务器对象。
-注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Attachment: 綁定的雲伺服器對象。
+注意：此欄位可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Attachment: :class:`tencentcloud.ecm.v20190719.models.NetworkInterfaceAttachment`
-        :param Zone: 可用区。
+        :param Zone: 可用區。
         :type Zone: str
-        :param CreatedTime: 创建时间。
+        :param CreatedTime: 創建時間。
         :type CreatedTime: str
-        :param Ipv6AddressSet: IPv6地址列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Ipv6AddressSet: IPv6網址清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Ipv6AddressSet: list of Ipv6Address
-        :param TagSet: 标签键值对。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagSet: 标簽鍵值對。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of Tag
-        :param EniType: 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+        :param EniType: 網卡類型。0 - 彈性網卡；1 - evm彈性網卡。
         :type EniType: int
         """
         self.NetworkInterfaceId = None
@@ -3217,19 +3217,19 @@ DELETING：删除中
 
 
 class NetworkInterfaceAttachment(AbstractModel):
-    """弹性网卡绑定关系
+    """彈性網卡綁定關系
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 云主机实例ID。
+        :param InstanceId: 雲主機實例ID。
         :type InstanceId: str
-        :param DeviceIndex: 网卡在云主机实例内的序号。
+        :param DeviceIndex: 網卡在雲主機實例内的序号。
         :type DeviceIndex: int
-        :param InstanceAccountId: 云主机所有者账户信息。
+        :param InstanceAccountId: 雲主機所有者帳戶訊息。
         :type InstanceAccountId: str
-        :param AttachTime: 绑定时间。
+        :param AttachTime: 綁定時間。
         :type AttachTime: str
         """
         self.InstanceId = None
@@ -3246,41 +3246,41 @@ class NetworkInterfaceAttachment(AbstractModel):
 
 
 class NetworkStorageRange(AbstractModel):
-    """网络硬盘上下限数据
+    """網絡硬碟上下限數據
 
     """
 
     def __init__(self):
         """
-        :param MaxBandwidth: 网络带宽上限
+        :param MaxBandwidth: 網絡頻寬上限
         :type MaxBandwidth: int
-        :param MaxSystemDiskSize: 数据盘上限
+        :param MaxSystemDiskSize: 數據盤上限
         :type MaxSystemDiskSize: int
-        :param MinBandwidth: 网络带宽下限
+        :param MinBandwidth: 網絡頻寬下限
         :type MinBandwidth: int
-        :param MinSystemDiskSize: 数据盘下限
+        :param MinSystemDiskSize: 數據盤下限
         :type MinSystemDiskSize: int
-        :param MaxDataDiskSize: 最大数据盘大小
+        :param MaxDataDiskSize: 最大數據盤大小
         :type MaxDataDiskSize: int
-        :param MinDataDiskSize: 最小数据盘大小
+        :param MinDataDiskSize: 最小數據盤大小
         :type MinDataDiskSize: int
-        :param SuggestBandwidth: 建议带宽
+        :param SuggestBandwidth: 建議頻寬
         :type SuggestBandwidth: int
-        :param SuggestDataDiskSize: 建议硬盘大小
+        :param SuggestDataDiskSize: 建議硬碟大小
         :type SuggestDataDiskSize: int
-        :param SuggestSystemDiskSize: 建议系统盘大小
+        :param SuggestSystemDiskSize: 建議系統盤大小
         :type SuggestSystemDiskSize: int
-        :param MaxVcpu: Cpu核数峰值
+        :param MaxVcpu: Cpu核數峰值
         :type MaxVcpu: int
         :param MinVcpu: Cpu核最小值
         :type MinVcpu: int
-        :param MaxVcpuPerReq: 单次请求最大cpu核数
+        :param MaxVcpuPerReq: 單次請求最大cpu核數
         :type MaxVcpuPerReq: int
-        :param PerBandwidth: 带宽步长
+        :param PerBandwidth: 頻寬步長
         :type PerBandwidth: int
-        :param PerDataDisk: 数据盘步长
+        :param PerDataDisk: 數據盤步長
         :type PerDataDisk: int
-        :param MaxModuleNum: 总模块数量
+        :param MaxModuleNum: 總模組數量
         :type MaxModuleNum: int
         """
         self.MaxBandwidth = None
@@ -3319,27 +3319,27 @@ class NetworkStorageRange(AbstractModel):
 
 
 class Node(AbstractModel):
-    """节点信息
+    """節點訊息
 
     """
 
     def __init__(self):
         """
-        :param ZoneInfo: zone信息
+        :param ZoneInfo: zone訊息
         :type ZoneInfo: :class:`tencentcloud.ecm.v20190719.models.ZoneInfo`
-        :param Country: 国家信息
+        :param Country: 國家訊息
         :type Country: :class:`tencentcloud.ecm.v20190719.models.Country`
-        :param Area: 区域信息
+        :param Area: 區域訊息
         :type Area: :class:`tencentcloud.ecm.v20190719.models.Area`
-        :param Province: 省份信息
+        :param Province: 省份訊息
         :type Province: :class:`tencentcloud.ecm.v20190719.models.Province`
-        :param City: 城市信息
+        :param City: 城市訊息
         :type City: :class:`tencentcloud.ecm.v20190719.models.City`
-        :param RegionInfo: Region信息
+        :param RegionInfo: Region訊息
         :type RegionInfo: :class:`tencentcloud.ecm.v20190719.models.RegionInfo`
-        :param ISPSet: 运营商列表
+        :param ISPSet: 運營商清單
         :type ISPSet: list of ISP
-        :param ISPNum: 运营商数量
+        :param ISPNum: 運營商數量
         :type ISPNum: int
         """
         self.ZoneInfo = None
@@ -3381,15 +3381,15 @@ class Node(AbstractModel):
 
 
 class NodeInstanceNum(AbstractModel):
-    """节点实例数量信息
+    """節點實例數量訊息
 
     """
 
     def __init__(self):
         """
-        :param NodeNum: 节点数量
+        :param NodeNum: 節點數量
         :type NodeNum: int
-        :param InstanceNum: 实例数量
+        :param InstanceNum: 實例數量
         :type InstanceNum: int
         """
         self.NodeNum = None
@@ -3408,13 +3408,13 @@ class OperatorAction(AbstractModel):
 
     def __init__(self):
         """
-        :param Action: 可执行操作
+        :param Action: 可執行操作
         :type Action: str
-        :param Code: 编码Code
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Code: 編碼Code
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Code: str
-        :param Message: 具体信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Message: 具體訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Message: str
         """
         self.Action = None
@@ -3429,7 +3429,7 @@ class OperatorAction(AbstractModel):
 
 
 class PeakBase(AbstractModel):
-    """峰值信息
+    """峰值訊息
 
     """
 
@@ -3439,9 +3439,9 @@ class PeakBase(AbstractModel):
         :type PeakCpuNum: int
         :param PeakMemoryNum: 内存峰值
         :type PeakMemoryNum: int
-        :param PeakStorageNum: 硬盘峰值
+        :param PeakStorageNum: 硬碟峰值
         :type PeakStorageNum: int
-        :param RecordTime: 记录时间
+        :param RecordTime: 記錄時間
         :type RecordTime: str
         """
         self.PeakCpuNum = None
@@ -3458,15 +3458,15 @@ class PeakBase(AbstractModel):
 
 
 class PeakFamilyInfo(AbstractModel):
-    """PeakFamilyInfo 按机型类别分类的cpu等数据的峰值信息
+    """PeakFamilyInfo 按機型類别分類的cpu等數據的峰值訊息
 
     """
 
     def __init__(self):
         """
-        :param InstanceFamily: 机型类别信息。
+        :param InstanceFamily: 機型類别訊息。
         :type InstanceFamily: :class:`tencentcloud.ecm.v20190719.models.InstanceFamilyTypeConfig`
-        :param PeakBaseSet: 基础数据峰值信息。
+        :param PeakBaseSet: 基礎數據峰值訊息。
         :type PeakBaseSet: list of PeakBase
         """
         self.InstanceFamily = None
@@ -3486,17 +3486,17 @@ class PeakFamilyInfo(AbstractModel):
 
 
 class PeakNetwork(AbstractModel):
-    """峰值网络数据
+    """峰值網絡數據
 
     """
 
     def __init__(self):
         """
-        :param RecordTime: 记录时间。
+        :param RecordTime: 記錄時間。
         :type RecordTime: str
-        :param PeakInNetwork: 入带宽数据。
+        :param PeakInNetwork: 入頻寬數據。
         :type PeakInNetwork: str
-        :param PeakOutNetwork: 出带宽数据。
+        :param PeakOutNetwork: 出頻寬數據。
         :type PeakOutNetwork: str
         """
         self.RecordTime = None
@@ -3511,16 +3511,16 @@ class PeakNetwork(AbstractModel):
 
 
 class PeakNetworkRegionInfo(AbstractModel):
-    """region维度的网络峰值信息
+    """region維度的網絡峰值訊息
 
     """
 
     def __init__(self):
         """
-        :param Region: region信息
+        :param Region: region訊息
         :type Region: str
-        :param PeakNetworkSet: 网络峰值集合
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PeakNetworkSet: 網絡峰值集合
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PeakNetworkSet: list of PeakNetwork
         """
         self.Region = None
@@ -3538,23 +3538,23 @@ class PeakNetworkRegionInfo(AbstractModel):
 
 
 class Position(AbstractModel):
-    """描述实例的位置相关信息。
+    """描述實例的位置相關訊息。
 
     """
 
     def __init__(self):
         """
-        :param ZoneInfo: 实例所在的Zone的信息。
+        :param ZoneInfo: 實例所在的Zone的訊息。
         :type ZoneInfo: :class:`tencentcloud.ecm.v20190719.models.ZoneInfo`
-        :param Country: 实例所在的国家的信息。
+        :param Country: 實例所在的國家的訊息。
         :type Country: :class:`tencentcloud.ecm.v20190719.models.Country`
-        :param Area: 实例所在的Area的信息。
+        :param Area: 實例所在的Area的訊息。
         :type Area: :class:`tencentcloud.ecm.v20190719.models.Area`
-        :param Province: 实例所在的省份的信息。
+        :param Province: 實例所在的省份的訊息。
         :type Province: :class:`tencentcloud.ecm.v20190719.models.Province`
-        :param City: 实例所在的城市的信息。
+        :param City: 實例所在的城市的訊息。
         :type City: :class:`tencentcloud.ecm.v20190719.models.City`
-        :param RegionInfo: 实例所在的Region的信息。
+        :param RegionInfo: 實例所在的Region的訊息。
         :type RegionInfo: :class:`tencentcloud.ecm.v20190719.models.RegionInfo`
         """
         self.ZoneInfo = None
@@ -3587,14 +3587,14 @@ class Position(AbstractModel):
 
 
 class PrivateIPAddressInfo(AbstractModel):
-    """实例的内网ip相关信息。
+    """實例的内網ip相關訊息。
 
     """
 
     def __init__(self):
         """
-        :param PrivateIPAddress: 实例的内网ip。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PrivateIPAddress: 實例的内網ip。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PrivateIPAddress: str
         """
         self.PrivateIPAddress = None
@@ -3605,29 +3605,29 @@ class PrivateIPAddressInfo(AbstractModel):
 
 
 class PrivateIpAddressSpecification(AbstractModel):
-    """内网IP信息
+    """内網IP訊息
 
     """
 
     def __init__(self):
         """
-        :param PrivateIpAddress: 内网IP地址。
+        :param PrivateIpAddress: 内網IP網址。
         :type PrivateIpAddress: str
         :param Primary: 是否是主IP。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Primary: bool
-        :param PublicIpAddress: 公网IP地址。
+        :param PublicIpAddress: 公網IP網址。
         :type PublicIpAddress: str
-        :param AddressId: EIP实例ID，例如：eip-11112222。
+        :param AddressId: EIP實例ID，例如：eip-11112222。
         :type AddressId: str
-        :param Description: 内网IP描述信息。
+        :param Description: 内網IP描述訊息。
         :type Description: str
-        :param IsWanIpBlocked: 公网IP是否被封堵。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsWanIpBlocked: 公網IP是否被封堵。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsWanIpBlocked: bool
-        :param State: IP状态：
-PENDING：生产中
-MIGRATING：迁移中
+        :param State: IP狀态：
+PENDING：生産中
+MIGRATING：遷移中
 DELETING：删除中
 AVAILABLE：可用的
         :type State: str
@@ -3652,7 +3652,7 @@ AVAILABLE：可用的
 
 
 class Province(AbstractModel):
-    """省份信息
+    """省份訊息
 
     """
 
@@ -3660,7 +3660,7 @@ class Province(AbstractModel):
         """
         :param ProvinceId: 省份Id
         :type ProvinceId: str
-        :param ProvinceName: 省份名称
+        :param ProvinceName: 省份名稱
         :type ProvinceName: str
         """
         self.ProvinceId = None
@@ -3673,19 +3673,19 @@ class Province(AbstractModel):
 
 
 class PublicIPAddressInfo(AbstractModel):
-    """实例的公网ip相关信息。
+    """實例的公網ip相關訊息。
 
     """
 
     def __init__(self):
         """
-        :param ChargeMode: 计费模式。
+        :param ChargeMode: 計費模式。
         :type ChargeMode: str
-        :param PublicIPAddress: 实例的公网ip。
+        :param PublicIPAddress: 實例的公網ip。
         :type PublicIPAddress: str
-        :param ISP: 实例的公网ip所属的运营商。
+        :param ISP: 實例的公網ip所屬的運營商。
         :type ISP: :class:`tencentcloud.ecm.v20190719.models.ISP`
-        :param MaxBandwidthOut: 实例的最大出带宽上限。
+        :param MaxBandwidthOut: 實例的最大出頻寬上限。
         :type MaxBandwidthOut: int
         """
         self.ChargeMode = None
@@ -3704,25 +3704,25 @@ class PublicIPAddressInfo(AbstractModel):
 
 
 class RebootInstancesRequest(AbstractModel):
-    """RebootInstances请求参数结构体
+    """RebootInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIdSet: 待重启的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。
+        :param InstanceIdSet: 待重啓的實例ID清單。在單次請求的過程中，單個region下的請求實例數上限爲100。
         :type InstanceIdSet: list of str
-        :param ForceReboot: 是否在正常重启失败后选择强制重启实例。取值范围：
-TRUE：表示在正常重启失败后进行强制重启；
-FALSE：表示在正常重启失败后不进行强制重启；
-默认取值：FALSE。
+        :param ForceReboot: 是否在正常重啓失敗後選擇強制重啓實例。取值範圍：
+TRUE：表示在正常重啓失敗後進行強制重啓；
+FALSE：表示在正常重啓失敗後不進行強制重啓；
+預設取值：FALSE。
         :type ForceReboot: bool
-        :param StopType: 关机类型。取值范围：
-SOFT：表示软关机
-HARD：表示硬关机
-SOFT_FIRST：表示优先软关机，失败再执行硬关机
+        :param StopType: 關機類型。取值範圍：
+SOFT：表示軟關機
+HARD：表示硬關機
+SOFT_FIRST：表示優先軟關機，失敗再執行硬關機
 
-默认取值：SOFT。
+預設取值：SOFT。
         :type StopType: str
         """
         self.InstanceIdSet = None
@@ -3737,13 +3737,13 @@ SOFT_FIRST：表示优先软关机，失败再执行硬关机
 
 
 class RebootInstancesResponse(AbstractModel):
-    """RebootInstances返回参数结构体
+    """RebootInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3762,7 +3762,7 @@ class RegionInfo(AbstractModel):
         """
         :param Region: Region
         :type Region: str
-        :param RegionName: Region名称
+        :param RegionName: Region名稱
         :type RegionName: str
         :param RegionId: RegionID
         :type RegionId: int
@@ -3779,7 +3779,7 @@ class RegionInfo(AbstractModel):
 
 
 class ReleaseAddressesRequest(AbstractModel):
-    """ReleaseAddresses请求参数结构体
+    """ReleaseAddresses請求參數結構體
 
     """
 
@@ -3787,7 +3787,7 @@ class ReleaseAddressesRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param AddressIds: 标识 EIP 的唯一 ID 列表。
+        :param AddressIds: 标識 EIP 的唯一 ID 清單。
         :type AddressIds: list of str
         """
         self.EcmRegion = None
@@ -3800,15 +3800,15 @@ class ReleaseAddressesRequest(AbstractModel):
 
 
 class ReleaseAddressesResponse(AbstractModel):
-    """ReleaseAddresses返回参数结构体
+    """ReleaseAddresses返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 异步任务TaskId。可以使用DescribeTaskResult接口查询任务状态。
+        :param TaskId: 異步任務TaskId。可以使用DescribeTaskResult介面查詢任務狀态。
         :type TaskId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TaskId = None
@@ -3821,7 +3821,7 @@ class ReleaseAddressesResponse(AbstractModel):
 
 
 class RemovePrivateIpAddressesRequest(AbstractModel):
-    """RemovePrivateIpAddresses请求参数结构体
+    """RemovePrivateIpAddresses請求參數結構體
 
     """
 
@@ -3829,9 +3829,9 @@ class RemovePrivateIpAddressesRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域。
         :type EcmRegion: str
-        :param NetworkInterfaceId: 弹性网卡实例ID，例如：eni-11112222。
+        :param NetworkInterfaceId: 彈性網卡實例ID，例如：eni-11112222。
         :type NetworkInterfaceId: str
-        :param PrivateIpAddresses: 指定的内网IP信息，单次最多指定10个。
+        :param PrivateIpAddresses: 指定的内網IP訊息，單次最多指定10個。
         :type PrivateIpAddresses: list of PrivateIpAddressSpecification
         """
         self.EcmRegion = None
@@ -3851,13 +3851,13 @@ class RemovePrivateIpAddressesRequest(AbstractModel):
 
 
 class RemovePrivateIpAddressesResponse(AbstractModel):
-    """RemovePrivateIpAddresses返回参数结构体
+    """RemovePrivateIpAddresses返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3868,15 +3868,15 @@ class RemovePrivateIpAddressesResponse(AbstractModel):
 
 
 class ResetInstancesMaxBandwidthRequest(AbstractModel):
-    """ResetInstancesMaxBandwidth请求参数结构体
+    """ResetInstancesMaxBandwidth請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIdSet: 待重置带宽上限的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。
+        :param InstanceIdSet: 待重置頻寬上限的實例ID清單。在單次請求的過程中，單個region下的請求實例數上限爲100。
         :type InstanceIdSet: list of str
-        :param MaxBandwidthOut: 修改后的最大带宽上限。
+        :param MaxBandwidthOut: 修改後的最大頻寬上限。
         :type MaxBandwidthOut: int
         """
         self.InstanceIdSet = None
@@ -3889,13 +3889,13 @@ class ResetInstancesMaxBandwidthRequest(AbstractModel):
 
 
 class ResetInstancesMaxBandwidthResponse(AbstractModel):
-    """ResetInstancesMaxBandwidth返回参数结构体
+    """ResetInstancesMaxBandwidth返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3906,21 +3906,21 @@ class ResetInstancesMaxBandwidthResponse(AbstractModel):
 
 
 class ResetInstancesPasswordRequest(AbstractModel):
-    """ResetInstancesPassword请求参数结构体
+    """ResetInstancesPassword請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIdSet: 待重置密码的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。
+        :param InstanceIdSet: 待重置密碼的實例ID清單。在單次請求的過程中，單個region下的請求實例數上限爲100。
         :type InstanceIdSet: list of str
-        :param Password: 新密码，Linux实例密码必须8到16位，至少包括两项[a-z，A-Z]、[0-9]和[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]中的符号。密码不允许以/符号开头。
-Windows实例密码必须12到16位，至少包括三项[a-z]，[A-Z]，[0-9]和[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]中的符号。密码不允许以/符号开头。
-如果实例即包含Linux实例又包含Windows实例，则密码复杂度限制按照Windows实例的限制。
+        :param Password: 新密碼，Linux實例密碼必須8到16位，至少包括兩項[a-z，A-Z]、[0-9]和[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]中的符号。密碼不允許以/符号開頭。
+Windows實例密碼必須12到16位，至少包括三項[a-z]，[A-Z]，[0-9]和[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]中的符号。密碼不允許以/符号開頭。
+如果實例即包含Linux實例又包含Windows實例，則密碼複雜度限制按照Windows實例的限制。
         :type Password: str
-        :param ForceStop: 是否强制关机，默认为false。
+        :param ForceStop: 是否強制關機，預設爲false。
         :type ForceStop: bool
-        :param UserName: 待重置密码的实例的用户名，不得超过64个字符。若未指定用户名，则对于Linux而言，默认重置root用户的密码，对于Windows而言，默认重置administrator的密码。
+        :param UserName: 待重置密碼的實例的用戶名，不得超過64個字元。若未指定用戶名，則對于Linux而言，預設重置root用戶的密碼，對于Windows而言，預設重置administrator的密碼。
         :type UserName: str
         """
         self.InstanceIdSet = None
@@ -3937,13 +3937,13 @@ Windows实例密码必须12到16位，至少包括三项[a-z]，[A-Z]，[0-9]和
 
 
 class ResetInstancesPasswordResponse(AbstractModel):
-    """ResetInstancesPassword返回参数结构体
+    """ResetInstancesPassword返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3954,19 +3954,19 @@ class ResetInstancesPasswordResponse(AbstractModel):
 
 
 class ResetInstancesRequest(AbstractModel):
-    """ResetInstances请求参数结构体
+    """ResetInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIdSet: 待重装的实例ID列表。
+        :param InstanceIdSet: 待重裝的實例ID清單。
         :type InstanceIdSet: list of str
-        :param ImageId: 重装使用的镜像ID，若未指定，则使用各个实例当前的镜像进行重装。
+        :param ImageId: 重裝使用的映像ID，若未指定，則使用各個實例當前的映像進行重裝。
         :type ImageId: str
-        :param Password: 密码设置，若未指定，则后续将以站内信的形式通知密码。
+        :param Password: 密碼設置，若未指定，則後續将以站内信的形式通知密碼。
         :type Password: str
-        :param EnhancedService: 是否开启云监控和云镜服务，未指定时默认开启。
+        :param EnhancedService: 是否開啓雲監控和雲鏡服務，未指定時預設開啓。
         :type EnhancedService: :class:`tencentcloud.ecm.v20190719.models.EnhancedService`
         """
         self.InstanceIdSet = None
@@ -3985,13 +3985,13 @@ class ResetInstancesRequest(AbstractModel):
 
 
 class ResetInstancesResponse(AbstractModel):
-    """ResetInstances返回参数结构体
+    """ResetInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4002,43 +4002,43 @@ class ResetInstancesResponse(AbstractModel):
 
 
 class RunInstancesRequest(AbstractModel):
-    """RunInstances请求参数结构体
+    """RunInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ZoneInstanceCountISPSet: 需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100
+        :param ZoneInstanceCountISPSet: 需要創建實例的可用區及創建數目及運營商的清單。在單次請求的過程中，單個region下的請求創建實例數上限爲100
         :type ZoneInstanceCountISPSet: list of ZoneInstanceCountISP
-        :param ModuleId: 模块ID
+        :param ModuleId: 模組ID
         :type ModuleId: str
-        :param Password: 实例登录密码。不同操作系统类型密码复杂度限制不一样，具体如下：
-Linux实例密码必须8到30位，至少包括两项[a-z]，[A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? / ]中的特殊符。Windows实例密码必须12到30位，至少包括三项[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? /]中的特殊符号。
+        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：
+Linux實例密碼必須8到30位，至少包括兩項[a-z]，[A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? / ]中的特殊符。Windows實例密碼必須12到30位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? /]中的特殊符号。
         :type Password: str
-        :param InternetMaxBandwidthOut: 公网出带宽上限，单位：Mbps
+        :param InternetMaxBandwidthOut: 公網出頻寬上限，單位：Mbps
         :type InternetMaxBandwidthOut: int
-        :param ImageId: 镜像ID，不传则使用模块下的默认值
+        :param ImageId: 映像ID，不傳則使用模組下的預設值
         :type ImageId: str
-        :param InstanceName: 实例显示名称。
-不指定实例显示名称则默认显示‘未命名’。
-购买多台实例，如果指定模式串{R:x}，表示生成数字[x, x+n-1]，其中n表示购买实例的数量，例如server\_{R:3}，购买1台时，实例显示名称为server\_3；购买2台时，实例显示名称分别为server\_3，server\_4。
-支持指定多个模式串{R:x}。
-购买多台实例，如果不指定模式串，则在实例显示名称添加后缀1、2...n，其中n表示购买实例的数量，例如server_，购买2台时，实例显示名称分别为server\_1，server\_2。
-如果购买的实例属于不同的地域或运营商，则上述规则在每个地域和运营商内独立计数。
-最多支持60个字符（包含模式串）。
+        :param InstanceName: 實例顯示名稱。
+不指定實例顯示名稱則預設顯示‘未命名’。
+購買多台實例，如果指定模式串{R:x}，表示生成數字[x, x+n-1]，其中n表示購買實例的數量，例如server\_{R:3}，購買1台時，實例顯示名稱爲server\_3；購買2台時，實例顯示名稱分别爲server\_3，server\_4。
+支援指定多個模式串{R:x}。
+購買多台實例，如果不指定模式串，則在實例顯示名稱添加後綴1、2...n，其中n表示購買實例的數量，例如server_，購買2台時，實例顯示名稱分别爲server\_1，server\_2。
+如果購買的實例屬于不同的地域或運營商，則上述規則在每個地域和運營商内獨立計數。
+最多支援60個字元（包含模式串）。
         :type InstanceName: str
-        :param HostName: 主机名称
-点号（.）和短横线（-）不能作为 HostName 的首尾字符，不能连续使用。
-Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写）、数字和短横线（-）组成，不支持点号（.），不能全是数字。
-其他类型（Linux 等）实例：字符长度为[2, 60]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。
+        :param HostName: 主機名稱
+點号（.）和短橫線（-）不能作爲 HostName 的首尾字元，不能連續使用。
+Windows 實例：名字元長度爲[2, 15]，允許字母（不限制大小寫）、數字和短橫線（-）組成，不支援點号（.），不能全是數字。
+其他類型（Linux 等）實例：字元長度爲[2, 60]，允許支援多個點号，點之間爲一段，每段允許字母（不限制大小寫）、數字和短橫線（-）組成。
         :type HostName: str
-        :param ClientToken: 用于保证请求幂等性的字符串。目前为保留参数，请勿使用。
+        :param ClientToken: 用于保證請求幂等性的字串。目前爲保留參數，請勿使用。
         :type ClientToken: str
-        :param EnhancedService: 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认公共镜像开启云监控、云安全服务
+        :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設公共映像開啓雲監控、雲安全服務
         :type EnhancedService: :class:`tencentcloud.ecm.v20190719.models.EnhancedService`
-        :param TagSpecification: 标签列表
+        :param TagSpecification: 标簽清單
         :type TagSpecification: list of TagSpecification
-        :param UserData: 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB
+        :param UserData: 提供給實例使用的用戶數據，需要以 base64 方式編碼，支援的最大數據大小爲 16KB
         :type UserData: str
         """
         self.ZoneInstanceCountISPSet = None
@@ -4081,16 +4081,16 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
 
 
 class RunInstancesResponse(AbstractModel):
-    """RunInstances返回参数结构体
+    """RunInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIdSet: 创建中的实例ID列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceIdSet: 創建中的實例ID清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceIdSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceIdSet = None
@@ -4103,13 +4103,13 @@ class RunInstancesResponse(AbstractModel):
 
 
 class RunMonitorServiceEnabled(AbstractModel):
-    """云监控服务
+    """雲監控服務
 
     """
 
     def __init__(self):
         """
-        :param Enabled: 是否开启。
+        :param Enabled: 是否開啓。
         :type Enabled: bool
         """
         self.Enabled = None
@@ -4120,15 +4120,15 @@ class RunMonitorServiceEnabled(AbstractModel):
 
 
 class RunSecurityServiceEnabled(AbstractModel):
-    """云镜服务；
+    """雲鏡服務；
 
     """
 
     def __init__(self):
         """
-        :param Enabled: 是否开启。
+        :param Enabled: 是否開啓。
         :type Enabled: bool
-        :param Version: 云镜版本：0 基础版，1 专业版。目前仅支持基础版
+        :param Version: 雲鏡版本：0 基礎版，1 專業版。目前僅支援基礎版
         :type Version: int
         """
         self.Enabled = None
@@ -4141,15 +4141,15 @@ class RunSecurityServiceEnabled(AbstractModel):
 
 
 class SimpleModule(AbstractModel):
-    """Module的简要信息
+    """Module的簡要訊息
 
     """
 
     def __init__(self):
         """
-        :param ModuleId: 模块ID
+        :param ModuleId: 模組ID
         :type ModuleId: str
-        :param ModuleName: 模块名称
+        :param ModuleName: 模組名稱
         :type ModuleName: str
         """
         self.ModuleId = None
@@ -4162,25 +4162,25 @@ class SimpleModule(AbstractModel):
 
 
 class SrcImage(AbstractModel):
-    """镜像来源信息
+    """映像來源訊息
 
     """
 
     def __init__(self):
         """
-        :param ImageId: 镜像id
+        :param ImageId: 映像id
         :type ImageId: str
-        :param ImageName: 镜像名称
+        :param ImageName: 映像名稱
         :type ImageName: str
-        :param ImageOsName: 系统名称
+        :param ImageOsName: 系統名稱
         :type ImageOsName: str
-        :param ImageDescription: 镜像描述
+        :param ImageDescription: 映像描述
         :type ImageDescription: str
-        :param Region: 区域
+        :param Region: 區域
         :type Region: str
-        :param RegionID: 区域ID
+        :param RegionID: 區域ID
         :type RegionID: int
-        :param RegionName: 区域名称
+        :param RegionName: 區域名稱
         :type RegionName: str
         """
         self.ImageId = None
@@ -4203,13 +4203,13 @@ class SrcImage(AbstractModel):
 
 
 class StartInstancesRequest(AbstractModel):
-    """StartInstances请求参数结构体
+    """StartInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIdSet: 待开启的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。
+        :param InstanceIdSet: 待開啓的實例ID清單。在單次請求的過程中，單個region下的請求實例數上限爲100。
         :type InstanceIdSet: list of str
         """
         self.InstanceIdSet = None
@@ -4220,13 +4220,13 @@ class StartInstancesRequest(AbstractModel):
 
 
 class StartInstancesResponse(AbstractModel):
-    """StartInstances返回参数结构体
+    """StartInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4237,21 +4237,21 @@ class StartInstancesResponse(AbstractModel):
 
 
 class StopInstancesRequest(AbstractModel):
-    """StopInstances请求参数结构体
+    """StopInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIdSet: 需要关机的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。
+        :param InstanceIdSet: 需要關機的實例ID清單。在單次請求的過程中，單個region下的請求實例數上限爲100。
         :type InstanceIdSet: list of str
-        :param ForceStop: 是否在正常关闭失败后选择强制关闭实例，默认为false，即否。
+        :param ForceStop: 是否在正常關閉失敗後選擇強制關閉實例，預設爲false，即否。
         :type ForceStop: bool
-        :param StopType: 实例的关闭模式。取值范围：
-SOFT_FIRST：表示在正常关闭失败后进行强制关闭;
-HARD：直接强制关闭;
-SOFT：仅软关机；
-默认为SOFT。
+        :param StopType: 實例的關閉模式。取值範圍：
+SOFT_FIRST：表示在正常關閉失敗後進行強制關閉;
+HARD：直接強制關閉;
+SOFT：僅軟關機；
+預設爲SOFT。
         :type StopType: str
         """
         self.InstanceIdSet = None
@@ -4266,13 +4266,13 @@ SOFT：仅软关机；
 
 
 class StopInstancesResponse(AbstractModel):
-    """StopInstances返回参数结构体
+    """StopInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4283,38 +4283,38 @@ class StopInstancesResponse(AbstractModel):
 
 
 class Subnet(AbstractModel):
-    """子网对象
+    """子網對象
 
     """
 
     def __init__(self):
         """
-        :param VpcId: VPC实例ID。
+        :param VpcId: VPC實例ID。
         :type VpcId: str
-        :param SubnetId: 子网实例ID，例如：subnet-bthucmmy。
+        :param SubnetId: 子網實例ID，例如：subnet-bthucmmy。
         :type SubnetId: str
-        :param SubnetName: 子网名称。
+        :param SubnetName: 子網名稱。
         :type SubnetName: str
-        :param CidrBlock: 子网的 IPv4 CIDR。
+        :param CidrBlock: 子網的 IPv4 CIDR。
         :type CidrBlock: str
-        :param IsDefault: 是否默认子网。
+        :param IsDefault: 是否預設子網。
         :type IsDefault: bool
-        :param EnableBroadcast: 是否开启广播。
+        :param EnableBroadcast: 是否開啓廣播。
         :type EnableBroadcast: bool
-        :param RouteTableId: 路由表实例ID，例如：rtb-l2h8d7c2。
+        :param RouteTableId: 路由表實例ID，例如：rtb-l2h8d7c2。
         :type RouteTableId: str
-        :param CreatedTime: 创建时间。
+        :param CreatedTime: 創建時間。
         :type CreatedTime: str
-        :param AvailableIpAddressCount: 可用IP数。
+        :param AvailableIpAddressCount: 可用IP數。
         :type AvailableIpAddressCount: int
-        :param Ipv6CidrBlock: 子网的 IPv6 CIDR。
+        :param Ipv6CidrBlock: 子網的 IPv6 CIDR。
         :type Ipv6CidrBlock: str
-        :param NetworkAclId: 关联ACLID
+        :param NetworkAclId: 關聯ACLID
         :type NetworkAclId: str
-        :param IsRemoteVpcSnat: 是否为 SNAT 地址池子网。
+        :param IsRemoteVpcSnat: 是否爲 SNAT 網址池子網。
         :type IsRemoteVpcSnat: bool
-        :param TagSet: 标签键值对。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagSet: 标簽鍵值對。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of Tag
         """
         self.VpcId = None
@@ -4354,17 +4354,17 @@ class Subnet(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """标签信息。
+    """标簽訊息。
 
     """
 
     def __init__(self):
         """
-        :param Key: 标签的键。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Key: 标簽的鍵。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Key: str
-        :param Value: 标签的值。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Value: 标簽的值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Value: str
         """
         self.Key = None
@@ -4383,9 +4383,9 @@ class TagSpecification(AbstractModel):
 
     def __init__(self):
         """
-        :param ResourceType: 资源类型，目前仅支持"instance"
+        :param ResourceType: 資源類型，目前僅支援"instance"
         :type ResourceType: str
-        :param Tags: 标签列表
+        :param Tags: 标簽清單
         :type Tags: list of Tag
         """
         self.ResourceType = None
@@ -4403,17 +4403,17 @@ class TagSpecification(AbstractModel):
 
 
 class TerminateInstancesRequest(AbstractModel):
-    """TerminateInstances请求参数结构体
+    """TerminateInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIdSet: 待销毁的实例ID列表。
+        :param InstanceIdSet: 待銷毀的實例ID清單。
         :type InstanceIdSet: list of str
-        :param TerminateDelay: 是否定时销毁，默认为否。
+        :param TerminateDelay: 是否定時銷毀，預設爲否。
         :type TerminateDelay: bool
-        :param TerminateTime: 定时销毁的时间，格式形如："2019-08-05 12:01:30"，若非定时销毁，则此参数被忽略。
+        :param TerminateTime: 定時銷毀的時間，格式形如："2019-08-05 12:01:30"，若非定時銷毀，則此參數被忽略。
         :type TerminateTime: str
         """
         self.InstanceIdSet = None
@@ -4428,13 +4428,13 @@ class TerminateInstancesRequest(AbstractModel):
 
 
 class TerminateInstancesResponse(AbstractModel):
-    """TerminateInstances返回参数结构体
+    """TerminateInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4445,41 +4445,41 @@ class TerminateInstancesResponse(AbstractModel):
 
 
 class VpcInfo(AbstractModel):
-    """私有网络(VPC)对象。
+    """私有網絡(VPC)對象。
 
     """
 
     def __init__(self):
         """
-        :param VpcName: VPC名称。
+        :param VpcName: VPC名稱。
         :type VpcName: str
-        :param VpcId: VPC实例ID，例如：vpc-azd4dt1c。
+        :param VpcId: VPC實例ID，例如：vpc-azd4dt1c。
         :type VpcId: str
         :param CidrBlock: VPC的IPv4 CIDR。
         :type CidrBlock: str
-        :param IsDefault: 是否默认VPC。
+        :param IsDefault: 是否預設VPC。
         :type IsDefault: bool
-        :param EnableMulticast: 是否开启组播。
+        :param EnableMulticast: 是否開啓組播。
         :type EnableMulticast: bool
-        :param CreatedTime: 创建时间。
+        :param CreatedTime: 創建時間。
         :type CreatedTime: str
-        :param DnsServerSet: DNS列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DnsServerSet: DNS清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DnsServerSet: list of str
-        :param DomainName: DHCP域名选项值。
+        :param DomainName: DHCP域名選項值。
         :type DomainName: str
-        :param DhcpOptionsId: DHCP选项集ID。
+        :param DhcpOptionsId: DHCP選項集ID。
         :type DhcpOptionsId: str
-        :param EnableDhcp: 是否开启DHCP。
+        :param EnableDhcp: 是否開啓DHCP。
         :type EnableDhcp: bool
         :param Ipv6CidrBlock: VPC的IPv6 CIDR。
         :type Ipv6CidrBlock: str
-        :param TagSet: 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagSet: 标簽鍵值對
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of Tag
-        :param AssistantCidrSet: 辅助CIDR
-注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AssistantCidrSet: 輔助CIDR
+注意：此欄位可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AssistantCidrSet: list of AssistantCidr
         """
         self.VpcName = None
@@ -4524,7 +4524,7 @@ class VpcInfo(AbstractModel):
 
 
 class ZoneInfo(AbstractModel):
-    """Zone信息
+    """Zone訊息
 
     """
 
@@ -4549,17 +4549,17 @@ class ZoneInfo(AbstractModel):
 
 
 class ZoneInstanceCountISP(AbstractModel):
-    """实例可用区及对应的实例创建数目及运营商的组合；
+    """實例可用區及對應的實例創建數目及運營商的組合；
 
     """
 
     def __init__(self):
         """
-        :param Zone: 创建实例的可用区。
+        :param Zone: 創建實例的可用區。
         :type Zone: str
-        :param InstanceCount: 在当前可用区欲创建的实例数目。
+        :param InstanceCount: 在當前可用區欲創建的實例數目。
         :type InstanceCount: int
-        :param ISP: 运营商。
+        :param ISP: 運營商。
         :type ISP: str
         """
         self.Zone = None
@@ -4574,15 +4574,15 @@ class ZoneInstanceCountISP(AbstractModel):
 
 
 class ZoneInstanceInfo(AbstractModel):
-    """Zone的实例信息
+    """Zone的實例訊息
 
     """
 
     def __init__(self):
         """
-        :param ZoneName: Zone名称
+        :param ZoneName: Zone名稱
         :type ZoneName: str
-        :param InstanceNum: 实例数量
+        :param InstanceNum: 實例數量
         :type InstanceNum: int
         """
         self.ZoneName = None

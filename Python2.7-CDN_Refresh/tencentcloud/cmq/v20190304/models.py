@@ -17,13 +17,13 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class ClearQueueRequest(AbstractModel):
-    """ClearQueue请求参数结构体
+    """ClearQueue請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param QueueName: 队列名字，在单个地域同一帐号下唯一。队列名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+        :param QueueName: 隊列名字，在單個地域同一帳号下唯一。隊列名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type QueueName: str
         """
         self.QueueName = None
@@ -34,13 +34,13 @@ class ClearQueueRequest(AbstractModel):
 
 
 class ClearQueueResponse(AbstractModel):
-    """ClearQueue返回参数结构体
+    """ClearQueue返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -51,15 +51,15 @@ class ClearQueueResponse(AbstractModel):
 
 
 class ClearSubscriptionFilterTagsRequest(AbstractModel):
-    """ClearSubscriptionFilterTags请求参数结构体
+    """ClearSubscriptionFilterTags請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TopicName: 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
+        :param TopicName: 主題名字，在單個地域同一帳号下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線（-）。
         :type TopicName: str
-        :param SubscriptionName: 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+        :param SubscriptionName: 訂閱名字，在單個地域同一帳号的同一主題下唯一。訂閱名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type SubscriptionName: str
         """
         self.TopicName = None
@@ -72,13 +72,13 @@ class ClearSubscriptionFilterTagsRequest(AbstractModel):
 
 
 class ClearSubscriptionFilterTagsResponse(AbstractModel):
-    """ClearSubscriptionFilterTags返回参数结构体
+    """ClearSubscriptionFilterTags返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -89,41 +89,41 @@ class ClearSubscriptionFilterTagsResponse(AbstractModel):
 
 
 class CreateQueueRequest(AbstractModel):
-    """CreateQueue请求参数结构体
+    """CreateQueue請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param QueueName: 队列名字，在单个地域同一帐号下唯一。队列名称是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+        :param QueueName: 隊列名字，在單個地域同一帳号下唯一。隊列名稱是一個不超過 64 個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type QueueName: str
-        :param MaxMsgHeapNum: 最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
+        :param MaxMsgHeapNum: 最大堆積訊息數。取值範圍在公測期間爲 1,000,000 - 10,000,000，正式上線後範圍可達到 1000,000-1000,000,000。預設取值在公測期間爲 10,000,000，正式上線後爲 100,000,000。
         :type MaxMsgHeapNum: int
-        :param PollingWaitSeconds: 消息接收长轮询等待时间。取值范围 0-30 秒，默认值 0。
+        :param PollingWaitSeconds: 訊息接收長輪詢等待時間。取值範圍 0-30 秒，預設值 0。
         :type PollingWaitSeconds: int
-        :param VisibilityTimeout: 消息可见性超时。取值范围 1-43200 秒（即12小时内），默认值 30。
+        :param VisibilityTimeout: 訊息可見性超時。取值範圍 1-43200 秒（即12小時内），預設值 30。
         :type VisibilityTimeout: int
-        :param MaxMsgSize: 消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
+        :param MaxMsgSize: 訊息最大長度。取值範圍 1024-65536 Byte（即1-64K），預設值 65536。
         :type MaxMsgSize: int
-        :param MsgRetentionSeconds: 消息保留周期。取值范围 60-1296000 秒（1min-15天），默认值 345600 (4 天)。
+        :param MsgRetentionSeconds: 訊息保留週期。取值範圍 60-1296000 秒（1min-15天），預設值 345600 (4 天)。
         :type MsgRetentionSeconds: int
-        :param RewindSeconds: 队列是否开启回溯消息能力，该参数取值范围0-msgRetentionSeconds,即最大的回溯时间为消息在队列中的保留周期，0表示不开启。
+        :param RewindSeconds: 隊列是否開啓回溯訊息能力，該參數取值範圍0-msgRetentionSeconds,即最大的回溯時間爲訊息在隊列中的保留週期，0表示不開啓。
         :type RewindSeconds: int
-        :param Transaction: 1 表示事务队列，0 表示普通队列
+        :param Transaction: 1 表示事務隊列，0 表示普通隊列
         :type Transaction: int
-        :param FirstQueryInterval: 第一次回查间隔
+        :param FirstQueryInterval: 第一次回查間隔
         :type FirstQueryInterval: int
-        :param MaxQueryCount: 最大回查次数
+        :param MaxQueryCount: 最大回查次數
         :type MaxQueryCount: int
-        :param DeadLetterQueueName: 死信队列名称
+        :param DeadLetterQueueName: 死信隊列名稱
         :type DeadLetterQueueName: str
-        :param Policy: 死信策略。0为消息被多次消费未删除，1为Time-To-Live过期
+        :param Policy: 死信策略。0爲訊息被多次消費未删除，1爲Time-To-Live過期
         :type Policy: int
-        :param MaxReceiveCount: 最大接收次数 1-1000
+        :param MaxReceiveCount: 最大接收次數 1-1000
         :type MaxReceiveCount: int
-        :param MaxTimeToLive: policy为1时必选。最大未消费过期时间。范围300-43200，单位秒，需要小于消息最大保留时间msgRetentionSeconds
+        :param MaxTimeToLive: policy爲1時必選。最大未消費過期時間。範圍300-43200，單位秒，需要小於訊息最大保留時間msgRetentionSeconds
         :type MaxTimeToLive: int
-        :param Trace: 是否开启消息轨迹追踪，当不设置字段时，默认为不开启，该字段为true表示开启，为false表示不开启
+        :param Trace: 是否開啓訊息軌迹追蹤，當不設置欄位時，預設爲不開啓，該欄位爲true表示開啓，爲false表示不開啓
         :type Trace: bool
         """
         self.QueueName = None
@@ -162,15 +162,15 @@ class CreateQueueRequest(AbstractModel):
 
 
 class CreateQueueResponse(AbstractModel):
-    """CreateQueue返回参数结构体
+    """CreateQueue返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param QueueId: 创建成功的queueId
+        :param QueueId: 創建成功的queueId
         :type QueueId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.QueueId = None
@@ -183,27 +183,27 @@ class CreateQueueResponse(AbstractModel):
 
 
 class CreateSubscribeRequest(AbstractModel):
-    """CreateSubscribe请求参数结构体
+    """CreateSubscribe請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TopicName: 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
+        :param TopicName: 主題名字，在單個地域同一帳号下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線（-）。
         :type TopicName: str
-        :param SubscriptionName: 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+        :param SubscriptionName: 訂閱名字，在單個地域同一帳号的同一主題下唯一。訂閱名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type SubscriptionName: str
-        :param Protocol: 订阅的协议，目前支持两种协议：http、queue。使用http协议，用户需自己搭建接受消息的web server。使用queue，消息会自动推送到CMQ queue，用户可以并发地拉取消息。
+        :param Protocol: 訂閱的協議，目前支援兩種協議：http、queue。使用http協議，用戶需自己搭建接受訊息的web server。使用queue，訊息會自動推送到CMQ queue，用戶可以并發地拉取訊息。
         :type Protocol: str
-        :param Endpoint: 接收通知的Endpoint，根据协议Protocol区分：对于http，Endpoint必须以“`http://`”开头，host可以是域名或IP；对于Queue，则填QueueName。 请注意，目前推送服务不能推送到私有网络中，因此Endpoint填写为私有网络域名或地址将接收不到推送的消息，目前支持推送到公网和基础网络。
+        :param Endpoint: 接收通知的Endpoint，根據協議Protocol區分：對于http，Endpoint必須以“`http://`”開頭，host可以是域名或IP；對于Queue，則填QueueName。 請注意，目前推送服務不能推送到私有網絡中，因此Endpoint填寫爲私有網絡域名或網址将接收不到推送的訊息，目前支援推送到公網和基礎網絡。
         :type Endpoint: str
-        :param NotifyStrategy: 向Endpoint推送消息出现错误时，CMQ推送服务器的重试策略。取值有：1）BACKOFF_RETRY，退避重试。每隔一定时间重试一次，重试够一定次数后，就把该消息丢弃，继续推送下一条消息；2）EXPONENTIAL_DECAY_RETRY，指数衰退重试。每次重试的间隔是指数递增的，例如开始1s，后面是2s，4s，8s...由于Topic消息的周期是一天，所以最多重试一天就把消息丢弃。默认值是EXPONENTIAL_DECAY_RETRY。
+        :param NotifyStrategy: 向Endpoint推送訊息出現錯誤時，CMQ推送服務器的重試策略。取值有：1）BACKOFF_RETRY，退避重試。每隔一定時間重試一次，重試夠一定次數後，就把該訊息丢棄，繼續推送下一條訊息；2）EXPONENTIAL_DECAY_RETRY，指數衰退重試。每次重試的間隔是指數遞增的，例如開始1s，後面是2s，4s，8s...由于Topic訊息的週期是一天，所以最多重試一天就把訊息丢棄。預設值是EXPONENTIAL_DECAY_RETRY。
         :type NotifyStrategy: str
-        :param FilterTag: 消息正文。消息标签（用于消息过滤)。标签数量不能超过5个，每个标签不超过16个字符。与(Batch)PublishMessage的MsgTag参数配合使用，规则：1）如果FilterTag没有设置，则无论MsgTag是否有设置，订阅接收所有发布到Topic的消息；2）如果FilterTag数组有值，则只有数组中至少有一个值在MsgTag数组中也存在时（即FilterTag和MsgTag有交集），订阅才接收该发布到Topic的消息；3）如果FilterTag数组有值，但MsgTag没设置，则不接收任何发布到Topic的消息，可以认为是2）的一种特例，此时FilterTag和MsgTag没有交集。规则整体的设计思想是以订阅者的意愿为主。
+        :param FilterTag: 訊息正文。訊息标簽（用于訊息過濾)。标簽數量不能超過5個，每個标簽不超過16個字元。與(Batch)PublishMessage的MsgTag參數配合使用，規則：1）如果FilterTag沒有設置，則無論MsgTag是否有設置，訂閱接收所有發布到Topic的訊息；2）如果FilterTag數組有值，則只有數組中至少有一個值在MsgTag數組中也存在時（即FilterTag和MsgTag有交集），訂閱才接收該發布到Topic的訊息；3）如果FilterTag數組有值，但MsgTag沒設置，則不接收任何發布到Topic的訊息，可以認爲是2）的一種特例，此時FilterTag和MsgTag沒有交集。規則整體的設計思想是以訂閱者的意願爲主。
         :type FilterTag: list of str
-        :param BindingKey: BindingKey数量不超过5个， 每个BindingKey长度不超过64字节，该字段表示订阅接收消息的过滤策略，每个BindingKey最多含有15个“.”， 即最多16个词组。
+        :param BindingKey: BindingKey數量不超過5個， 每個BindingKey長度不超過64位元，該欄位表示訂閱接收訊息的過濾策略，每個BindingKey最多含有15個“.”， 即最多16個詞組。
         :type BindingKey: list of str
-        :param NotifyContentFormat: 推送内容的格式。取值：1）JSON；2）SIMPLIFIED，即raw格式。如果Protocol是queue，则取值必须为SIMPLIFIED。如果Protocol是http，两个值均可以，默认值是JSON。
+        :param NotifyContentFormat: 推送内容的格式。取值：1）JSON；2）SIMPLIFIED，即raw格式。如果Protocol是queue，則取值必須爲SIMPLIFIED。如果Protocol是http，兩個值均可以，預設值是JSON。
         :type NotifyContentFormat: str
         """
         self.TopicName = None
@@ -228,7 +228,7 @@ class CreateSubscribeRequest(AbstractModel):
 
 
 class CreateSubscribeResponse(AbstractModel):
-    """CreateSubscribe返回参数结构体
+    """CreateSubscribe返回參數結構體
 
     """
 
@@ -236,7 +236,7 @@ class CreateSubscribeResponse(AbstractModel):
         """
         :param SubscriptionId: SubscriptionId
         :type SubscriptionId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.SubscriptionId = None
@@ -249,21 +249,21 @@ class CreateSubscribeResponse(AbstractModel):
 
 
 class CreateTopicRequest(AbstractModel):
-    """CreateTopic请求参数结构体
+    """CreateTopic請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TopicName: 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
+        :param TopicName: 主題名字，在單個地域同一帳号下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線（-）。
         :type TopicName: str
-        :param MaxMsgSize: 消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
+        :param MaxMsgSize: 訊息最大長度。取值範圍 1024-65536 Byte（即1-64K），預設值 65536。
         :type MaxMsgSize: int
-        :param FilterType: 用于指定主题的消息匹配策略。
+        :param FilterType: 用于指定主題的訊息比對策略。
         :type FilterType: int
-        :param MsgRetentionSeconds: 消息保存时间。取值范围60 - 86400 s（即1分钟 - 1天），默认值86400。
+        :param MsgRetentionSeconds: 訊息保存時間。取值範圍60 - 86400 s（即1分鍾 - 1天），預設值86400。
         :type MsgRetentionSeconds: int
-        :param Trace: 是否开启消息轨迹标识，true表示开启，false表示不开启，不填表示不开启。
+        :param Trace: 是否開啓訊息軌迹标識，true表示開啓，false表示不開啓，不填表示不開啓。
         :type Trace: bool
         """
         self.TopicName = None
@@ -282,7 +282,7 @@ class CreateTopicRequest(AbstractModel):
 
 
 class CreateTopicResponse(AbstractModel):
-    """CreateTopic返回参数结构体
+    """CreateTopic返回參數結構體
 
     """
 
@@ -290,7 +290,7 @@ class CreateTopicResponse(AbstractModel):
         """
         :param TopicId: TopicName
         :type TopicId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TopicId = None
@@ -310,19 +310,19 @@ class DeadLetterPolicy(AbstractModel):
     def __init__(self):
         """
         :param DeadLetterQueueName: DeadLetterQueueName
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeadLetterQueueName: str
         :param DeadLetterQueue: DeadLetterQueue
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeadLetterQueue: str
         :param Policy: Policy
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Policy: int
         :param MaxTimeToLive: MaxTimeToLive
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxTimeToLive: int
         :param MaxReceiveCount: MaxReceiveCount
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxReceiveCount: int
         """
         self.DeadLetterQueueName = None
@@ -348,10 +348,10 @@ class DeadLetterSource(AbstractModel):
     def __init__(self):
         """
         :param QueueId: QueueId
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type QueueId: str
         :param QueueName: QueueName
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type QueueName: str
         """
         self.QueueId = None
@@ -364,13 +364,13 @@ class DeadLetterSource(AbstractModel):
 
 
 class DeleteQueueRequest(AbstractModel):
-    """DeleteQueue请求参数结构体
+    """DeleteQueue請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param QueueName: 队列名字，在单个地域同一帐号下唯一。队列名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+        :param QueueName: 隊列名字，在單個地域同一帳号下唯一。隊列名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type QueueName: str
         """
         self.QueueName = None
@@ -381,13 +381,13 @@ class DeleteQueueRequest(AbstractModel):
 
 
 class DeleteQueueResponse(AbstractModel):
-    """DeleteQueue返回参数结构体
+    """DeleteQueue返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -398,15 +398,15 @@ class DeleteQueueResponse(AbstractModel):
 
 
 class DeleteSubscribeRequest(AbstractModel):
-    """DeleteSubscribe请求参数结构体
+    """DeleteSubscribe請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TopicName: 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+        :param TopicName: 主題名字，在單個地域同一帳号下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type TopicName: str
-        :param SubscriptionName: 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+        :param SubscriptionName: 訂閱名字，在單個地域同一帳号的同一主題下唯一。訂閱名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type SubscriptionName: str
         """
         self.TopicName = None
@@ -419,13 +419,13 @@ class DeleteSubscribeRequest(AbstractModel):
 
 
 class DeleteSubscribeResponse(AbstractModel):
-    """DeleteSubscribe返回参数结构体
+    """DeleteSubscribe返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -436,13 +436,13 @@ class DeleteSubscribeResponse(AbstractModel):
 
 
 class DeleteTopicRequest(AbstractModel):
-    """DeleteTopic请求参数结构体
+    """DeleteTopic請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TopicName: 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+        :param TopicName: 主題名字，在單個地域同一帳号下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type TopicName: str
         """
         self.TopicName = None
@@ -453,13 +453,13 @@ class DeleteTopicRequest(AbstractModel):
 
 
 class DeleteTopicResponse(AbstractModel):
-    """DeleteTopic返回参数结构体
+    """DeleteTopic返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -470,19 +470,19 @@ class DeleteTopicResponse(AbstractModel):
 
 
 class DescribeDeadLetterSourceQueuesRequest(AbstractModel):
-    """DescribeDeadLetterSourceQueues请求参数结构体
+    """DescribeDeadLetterSourceQueues請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DeadLetterQueueName: 死信队列名称
+        :param DeadLetterQueueName: 死信隊列名稱
         :type DeadLetterQueueName: str
-        :param Limit: 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
+        :param Limit: 分頁時本頁獲取主題清單的起始位置。如果填寫了該值，必須也要填寫 limit 。該值缺省時，後台取預設值 0。
         :type Limit: int
-        :param Offset: 分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
+        :param Offset: 分頁時本頁獲取主題的個數，如果不傳遞該參數，則該參數預設爲20，最大值爲50。
         :type Offset: int
-        :param Filters: 过滤死信队列源队列名称，目前仅支持SourceQueueName过滤
+        :param Filters: 過濾死信隊列源隊列名稱，目前僅支援SourceQueueName過濾
         :type Filters: list of Filter
         """
         self.DeadLetterQueueName = None
@@ -504,17 +504,17 @@ class DescribeDeadLetterSourceQueuesRequest(AbstractModel):
 
 
 class DescribeDeadLetterSourceQueuesResponse(AbstractModel):
-    """DescribeDeadLetterSourceQueues返回参数结构体
+    """DescribeDeadLetterSourceQueues返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 满足本次条件的队列个数
+        :param TotalCount: 滿足本次條件的隊列個數
         :type TotalCount: int
-        :param QueueSet: 死信队列源队列
+        :param QueueSet: 死信隊列源隊列
         :type QueueSet: list of DeadLetterSource
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -534,21 +534,21 @@ class DescribeDeadLetterSourceQueuesResponse(AbstractModel):
 
 
 class DescribeQueueDetailRequest(AbstractModel):
-    """DescribeQueueDetail请求参数结构体
+    """DescribeQueueDetail請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
+        :param Offset: 分頁時本頁獲取隊列清單的起始位置。如果填寫了該值，必須也要填寫 limit 。該值缺省時，後台取預設值 0
         :type Offset: int
-        :param Limit: 分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
+        :param Limit: 分頁時本頁獲取隊列的個數，如果不傳遞該參數，則該參數預設爲20，最大值爲50。
         :type Limit: int
-        :param Filters: 筛选参数，目前支持QueueName筛选，且仅支持一个关键字
+        :param Filters: 篩選參數，目前支援QueueName篩選，且僅支援一個關鍵字
         :type Filters: list of Filter
-        :param TagKey: 标签搜索
+        :param TagKey: 标簽搜索
         :type TagKey: str
-        :param QueueName: 精确匹配QueueName
+        :param QueueName: 精确比對QueueName
         :type QueueName: str
         """
         self.Offset = None
@@ -572,17 +572,17 @@ class DescribeQueueDetailRequest(AbstractModel):
 
 
 class DescribeQueueDetailResponse(AbstractModel):
-    """DescribeQueueDetail返回参数结构体
+    """DescribeQueueDetail返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: queue总数量
+        :param TotalCount: queue總數量
         :type TotalCount: int
-        :param QueueSet: queue列表
+        :param QueueSet: queue清單
         :type QueueSet: list of QueueSet
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -602,19 +602,19 @@ class DescribeQueueDetailResponse(AbstractModel):
 
 
 class DescribeSubscriptionDetailRequest(AbstractModel):
-    """DescribeSubscriptionDetail请求参数结构体
+    """DescribeSubscriptionDetail請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TopicName: 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
+        :param TopicName: 主題名字，在單個地域同一帳号下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線（-）。
         :type TopicName: str
-        :param Offset: 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
+        :param Offset: 分頁時本頁獲取主題清單的起始位置。如果填寫了該值，必須也要填寫 limit 。該值缺省時，後台取預設值 0
         :type Offset: int
-        :param Limit: 分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
+        :param Limit: 分頁時本頁獲取主題的個數，如果不傳遞該參數，則該參數預設爲20，最大值爲50。
         :type Limit: int
-        :param Filters: 筛选参数，目前只支持SubscriptionName，且仅支持一个关键字。
+        :param Filters: 篩選參數，目前只支援SubscriptionName，且僅支援一個關鍵字。
         :type Filters: list of Filter
         """
         self.TopicName = None
@@ -636,18 +636,18 @@ class DescribeSubscriptionDetailRequest(AbstractModel):
 
 
 class DescribeSubscriptionDetailResponse(AbstractModel):
-    """DescribeSubscriptionDetail返回参数结构体
+    """DescribeSubscriptionDetail返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 总数
+        :param TotalCount: 總數
         :type TotalCount: int
-        :param SubscriptionSet: Subscription属性集合
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubscriptionSet: Subscription屬性集合
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubscriptionSet: list of Subscription
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -667,21 +667,21 @@ class DescribeSubscriptionDetailResponse(AbstractModel):
 
 
 class DescribeTopicDetailRequest(AbstractModel):
-    """DescribeTopicDetail请求参数结构体
+    """DescribeTopicDetail請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Offset: 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
+        :param Offset: 分頁時本頁獲取隊列清單的起始位置。如果填寫了該值，必須也要填寫 limit 。該值缺省時，後台取預設值 0。
         :type Offset: int
-        :param Limit: 分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
+        :param Limit: 分頁時本頁獲取隊列的個數，如果不傳遞該參數，則該參數預設爲20，最大值爲50。
         :type Limit: int
-        :param Filters: 目前只支持过滤TopicName ， 且只能填一个过滤值
+        :param Filters: 目前只支援過濾TopicName ， 且只能填一個過濾值
         :type Filters: list of Filter
-        :param TagKey: 标签匹配
+        :param TagKey: 标簽比對
         :type TagKey: str
-        :param TopicName: 精确匹配TopicName
+        :param TopicName: 精确比對TopicName
         :type TopicName: str
         """
         self.Offset = None
@@ -705,7 +705,7 @@ class DescribeTopicDetailRequest(AbstractModel):
 
 
 class DescribeTopicDetailResponse(AbstractModel):
-    """DescribeTopicDetail返回参数结构体
+    """DescribeTopicDetail返回參數結構體
 
     """
 
@@ -715,7 +715,7 @@ class DescribeTopicDetailResponse(AbstractModel):
         :type TotalCount: int
         :param TopicSet: TopicSet
         :type TopicSet: list of TopicSet
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -735,15 +735,15 @@ class DescribeTopicDetailResponse(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """过滤参数
+    """過濾參數
 
     """
 
     def __init__(self):
         """
-        :param Name: 过滤参数的名字
+        :param Name: 過濾參數的名字
         :type Name: str
-        :param Values: 数值
+        :param Values: 數值
         :type Values: list of str
         """
         self.Name = None
@@ -756,39 +756,39 @@ class Filter(AbstractModel):
 
 
 class ModifyQueueAttributeRequest(AbstractModel):
-    """ModifyQueueAttribute请求参数结构体
+    """ModifyQueueAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param QueueName: 队列名字，在单个地域同一帐号下唯一。队列名称是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+        :param QueueName: 隊列名字，在單個地域同一帳号下唯一。隊列名稱是一個不超過 64 個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type QueueName: str
-        :param MaxMsgHeapNum: 最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
+        :param MaxMsgHeapNum: 最大堆積訊息數。取值範圍在公測期間爲 1,000,000 - 10,000,000，正式上線後範圍可達到 1000,000-1000,000,000。預設取值在公測期間爲 10,000,000，正式上線後爲 100,000,000。
         :type MaxMsgHeapNum: int
-        :param PollingWaitSeconds: 消息接收长轮询等待时间。取值范围 0-30 秒，默认值 0。
+        :param PollingWaitSeconds: 訊息接收長輪詢等待時間。取值範圍 0-30 秒，預設值 0。
         :type PollingWaitSeconds: int
-        :param VisibilityTimeout: 消息可见性超时。取值范围 1-43200 秒（即12小时内），默认值 30。
+        :param VisibilityTimeout: 訊息可見性超時。取值範圍 1-43200 秒（即12小時内），預設值 30。
         :type VisibilityTimeout: int
-        :param MaxMsgSize: 消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
+        :param MaxMsgSize: 訊息最大長度。取值範圍 1024-65536 Byte（即1-64K），預設值 65536。
         :type MaxMsgSize: int
-        :param MsgRetentionSeconds: 消息保留周期。取值范围 60-1296000 秒（1min-15天），默认值 345600 (4 天)。
+        :param MsgRetentionSeconds: 訊息保留週期。取值範圍 60-1296000 秒（1min-15天），預設值 345600 (4 天)。
         :type MsgRetentionSeconds: int
-        :param RewindSeconds: 消息最长回溯时间，取值范围0-msgRetentionSeconds，消息的最大回溯之间为消息在队列中的保存周期，0表示不开启消息回溯。
+        :param RewindSeconds: 訊息最長回溯時間，取值範圍0-msgRetentionSeconds，訊息的最大回溯之間爲訊息在隊列中的保存週期，0表示不開啓訊息回溯。
         :type RewindSeconds: int
-        :param FirstQueryInterval: 第一次查询时间
+        :param FirstQueryInterval: 第一次查詢時間
         :type FirstQueryInterval: int
-        :param MaxQueryCount: 最大查询次数
+        :param MaxQueryCount: 最大查詢次數
         :type MaxQueryCount: int
-        :param DeadLetterQueueName: 死信队列名称
+        :param DeadLetterQueueName: 死信隊列名稱
         :type DeadLetterQueueName: str
-        :param MaxTimeToLive: MaxTimeToLivepolicy为1时必选。最大未消费过期时间。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds
+        :param MaxTimeToLive: MaxTimeToLivepolicy爲1時必選。最大未消費過期時間。範圍300-43200，單位秒，需要小於訊息最大保留時間MsgRetentionSeconds
         :type MaxTimeToLive: int
-        :param MaxReceiveCount: 最大接收次数
+        :param MaxReceiveCount: 最大接收次數
         :type MaxReceiveCount: int
-        :param Policy: 死信队列策略
+        :param Policy: 死信隊列策略
         :type Policy: int
-        :param Trace: 是否开启消息轨迹标识，true表示开启，false表示不开启，不填表示不开启。
+        :param Trace: 是否開啓訊息軌迹标識，true表示開啓，false表示不開啓，不填表示不開啓。
         :type Trace: bool
         """
         self.QueueName = None
@@ -825,13 +825,13 @@ class ModifyQueueAttributeRequest(AbstractModel):
 
 
 class ModifyQueueAttributeResponse(AbstractModel):
-    """ModifyQueueAttribute返回参数结构体
+    """ModifyQueueAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -842,25 +842,25 @@ class ModifyQueueAttributeResponse(AbstractModel):
 
 
 class ModifySubscriptionAttributeRequest(AbstractModel):
-    """ModifySubscriptionAttribute请求参数结构体
+    """ModifySubscriptionAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TopicName: 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
+        :param TopicName: 主題名字，在單個地域同一帳号下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線（-）。
         :type TopicName: str
-        :param SubscriptionName: 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+        :param SubscriptionName: 訂閱名字，在單個地域同一帳号的同一主題下唯一。訂閱名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type SubscriptionName: str
-        :param NotifyStrategy: 向 Endpoint 推送消息出现错误时，CMQ 推送服务器的重试策略。取值如下：
-（1）BACKOFF_RETRY，退避重试。每隔一定时间重试一次，重试够一定次数后，就把该消息丢弃，继续推送下一条消息。
-（2）EXPONENTIAL_DECAY_RETRY，指数衰退重试。每次重试的间隔是指数递增的，例如开始1s，后面是2s，4s，8s···由于 Topic 消息的周期是一天，所以最多重试一天就把消息丢弃。默认值是 EXPONENTIAL_DECAY_RETRY。
+        :param NotifyStrategy: 向 Endpoint 推送訊息出現錯誤時，CMQ 推送服務器的重試策略。取值如下：
+（1）BACKOFF_RETRY，退避重試。每隔一定時間重試一次，重試夠一定次數後，就把該訊息丢棄，繼續推送下一條訊息。
+（2）EXPONENTIAL_DECAY_RETRY，指數衰退重試。每次重試的間隔是指數遞增的，例如開始1s，後面是2s，4s，8s···由于 Topic 訊息的週期是一天，所以最多重試一天就把訊息丢棄。預設值是 EXPONENTIAL_DECAY_RETRY。
         :type NotifyStrategy: str
-        :param NotifyContentFormat: 推送内容的格式。取值：（1）JSON；（2）SIMPLIFIED，即 raw 格式。如果 Protocol 是 queue，则取值必须为 SIMPLIFIED。如果 Protocol 是 HTTP，两个值均可以，默认值是 JSON。
+        :param NotifyContentFormat: 推送内容的格式。取值：（1）JSON；（2）SIMPLIFIED，即 raw 格式。如果 Protocol 是 queue，則取值必須爲 SIMPLIFIED。如果 Protocol 是 HTTP，兩個值均可以，預設值是 JSON。
         :type NotifyContentFormat: str
-        :param FilterTags: 消息正文。消息标签（用于消息过滤)。标签数量不能超过5个，每个标签不超过16个字符。与(Batch)PublishMessage的MsgTag参数配合使用，规则：1）如果FilterTag没有设置，则无论MsgTag是否有设置，订阅接收所有发布到Topic的消息；2）如果FilterTag数组有值，则只有数组中至少有一个值在MsgTag数组中也存在时（即FilterTag和MsgTag有交集），订阅才接收该发布到Topic的消息；3）如果FilterTag数组有值，但MsgTag没设置，则不接收任何发布到Topic的消息，可以认为是2）的一种特例，此时FilterTag和MsgTag没有交集。规则整体的设计思想是以订阅者的意愿为主。
+        :param FilterTags: 訊息正文。訊息标簽（用于訊息過濾)。标簽數量不能超過5個，每個标簽不超過16個字元。與(Batch)PublishMessage的MsgTag參數配合使用，規則：1）如果FilterTag沒有設置，則無論MsgTag是否有設置，訂閱接收所有發布到Topic的訊息；2）如果FilterTag數組有值，則只有數組中至少有一個值在MsgTag數組中也存在時（即FilterTag和MsgTag有交集），訂閱才接收該發布到Topic的訊息；3）如果FilterTag數組有值，但MsgTag沒設置，則不接收任何發布到Topic的訊息，可以認爲是2）的一種特例，此時FilterTag和MsgTag沒有交集。規則整體的設計思想是以訂閱者的意願爲主。
         :type FilterTags: list of str
-        :param BindingKey: BindingKey数量不超过5个， 每个BindingKey长度不超过64字节，该字段表示订阅接收消息的过滤策略，每个BindingKey最多含有15个“.”， 即最多16个词组。
+        :param BindingKey: BindingKey數量不超過5個， 每個BindingKey長度不超過64位元，該欄位表示訂閱接收訊息的過濾策略，每個BindingKey最多含有15個“.”， 即最多16個詞組。
         :type BindingKey: list of str
         """
         self.TopicName = None
@@ -881,13 +881,13 @@ class ModifySubscriptionAttributeRequest(AbstractModel):
 
 
 class ModifySubscriptionAttributeResponse(AbstractModel):
-    """ModifySubscriptionAttribute返回参数结构体
+    """ModifySubscriptionAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -898,19 +898,19 @@ class ModifySubscriptionAttributeResponse(AbstractModel):
 
 
 class ModifyTopicAttributeRequest(AbstractModel):
-    """ModifyTopicAttribute请求参数结构体
+    """ModifyTopicAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TopicName: 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+        :param TopicName: 主題名字，在單個地域同一帳号下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type TopicName: str
-        :param MaxMsgSize: 消息最大长度。取值范围1024 - 65536 Byte（即1 - 64K），默认值65536。
+        :param MaxMsgSize: 訊息最大長度。取值範圍1024 - 65536 Byte（即1 - 64K），預設值65536。
         :type MaxMsgSize: int
-        :param MsgRetentionSeconds: 消息保存时间。取值范围60 - 86400 s（即1分钟 - 1天），默认值86400。
+        :param MsgRetentionSeconds: 訊息保存時間。取值範圍60 - 86400 s（即1分鍾 - 1天），預設值86400。
         :type MsgRetentionSeconds: int
-        :param Trace: 是否开启消息轨迹标识，true表示开启，false表示不开启，不填表示不开启。
+        :param Trace: 是否開啓訊息軌迹标識，true表示開啓，false表示不開啓，不填表示不開啓。
         :type Trace: bool
         """
         self.TopicName = None
@@ -927,13 +927,13 @@ class ModifyTopicAttributeRequest(AbstractModel):
 
 
 class ModifyTopicAttributeResponse(AbstractModel):
-    """ModifyTopicAttribute返回参数结构体
+    """ModifyTopicAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -944,7 +944,7 @@ class ModifyTopicAttributeResponse(AbstractModel):
 
 
 class QueueSet(AbstractModel):
-    """批量queue属性信息
+    """批次queue屬性訊息
 
     """
 
@@ -955,73 +955,73 @@ class QueueSet(AbstractModel):
         :param QueueName: QueueName
         :type QueueName: str
         :param Qps: Qps
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Qps: int
         :param Bps: Bps
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Bps: int
         :param MaxDelaySeconds: MaxDelaySeconds
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxDelaySeconds: int
         :param MaxMsgHeapNum: MaxMsgHeapNum
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxMsgHeapNum: int
         :param PollingWaitSeconds: PollingWaitSeconds
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PollingWaitSeconds: int
         :param MsgRetentionSeconds: MsgRetentionSeconds
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MsgRetentionSeconds: int
         :param VisibilityTimeout: VisibilityTimeout
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VisibilityTimeout: int
         :param MaxMsgSize: MaxMsgSize
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxMsgSize: int
         :param RewindSeconds: RewindSeconds
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RewindSeconds: int
         :param CreateTime: CreateTime
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: int
         :param LastModifyTime: LastModifyTime
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LastModifyTime: int
         :param ActiveMsgNum: ActiveMsgNum
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ActiveMsgNum: int
         :param InactiveMsgNum: InactiveMsgNum
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InactiveMsgNum: int
         :param DelayMsgNum: DelayMsgNum
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DelayMsgNum: int
         :param RewindMsgNum: RewindMsgNum
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RewindMsgNum: int
         :param MinMsgTime: MinMsgTime
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MinMsgTime: int
         :param Transaction: Transaction
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Transaction: bool
         :param DeadLetterSource: DeadLetterSource
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeadLetterSource: list of DeadLetterSource
         :param DeadLetterPolicy: DeadLetterPolicy
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DeadLetterPolicy: :class:`tencentcloud.cmq.v20190304.models.DeadLetterPolicy`
         :param TransactionPolicy: TransactionPolicy
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TransactionPolicy: :class:`tencentcloud.cmq.v20190304.models.TransactionPolicy`
-        :param CreateUin: 创建者uin
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateUin: 創建者uin
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateUin: int
-        :param Tags: 标签
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Tags: 标簽
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of Tag
-        :param Trace: 消息轨迹表示，true表示开启，false表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Trace: 訊息軌迹表示，true表示開啓，false表示不開啓
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Trace: bool
         """
         self.QueueId = None
@@ -1094,15 +1094,15 @@ class QueueSet(AbstractModel):
 
 
 class RewindQueueRequest(AbstractModel):
-    """RewindQueue请求参数结构体
+    """RewindQueue請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param QueueName: 队列名字，在单个地域同一帐号下唯一。队列名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+        :param QueueName: 隊列名字，在單個地域同一帳号下唯一。隊列名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type QueueName: str
-        :param StartConsumeTime: 设定该时间，则（Batch）receiveMessage接口，会按照生产消息的先后顺序消费该时间戳以后的消息。
+        :param StartConsumeTime: 設定該時間，則（Batch）receiveMessage介面，會按照生産訊息的先後順序消費該時間戳以後的訊息。
         :type StartConsumeTime: int
         """
         self.QueueName = None
@@ -1115,13 +1115,13 @@ class RewindQueueRequest(AbstractModel):
 
 
 class RewindQueueResponse(AbstractModel):
-    """RewindQueue返回参数结构体
+    """RewindQueue返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1132,47 +1132,47 @@ class RewindQueueResponse(AbstractModel):
 
 
 class Subscription(AbstractModel):
-    """订阅返回参数
+    """訂閱返回參數
 
     """
 
     def __init__(self):
         """
         :param SubscriptionName: SubscriptionName
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubscriptionName: str
         :param SubscriptionId: SubscriptionId
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubscriptionId: str
         :param TopicOwner: TopicOwner
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TopicOwner: int
         :param MsgCount: MsgCount
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MsgCount: int
         :param LastModifyTime: LastModifyTime
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LastModifyTime: int
         :param CreateTime: CreateTime
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: int
         :param BindingKey: BindingKey
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BindingKey: list of str
         :param Endpoint: Endpoint
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Endpoint: str
         :param FilterTags: FilterTags
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FilterTags: list of str
         :param Protocol: Protocol
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Protocol: str
         :param NotifyStrategy: NotifyStrategy
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NotifyStrategy: str
         :param NotifyContentFormat: NotifyContentFormat
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NotifyContentFormat: str
         """
         self.SubscriptionName = None
@@ -1205,17 +1205,17 @@ class Subscription(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """标签
+    """标簽
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标签Key
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagKey: 标簽Key
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagKey: str
-        :param TagValue: 标签值
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TagValue: 标簽值
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TagValue: str
         """
         self.TagKey = None
@@ -1228,47 +1228,47 @@ class Tag(AbstractModel):
 
 
 class TopicSet(AbstractModel):
-    """topic返回信息展示字段
+    """topic返回訊息展示欄位
 
     """
 
     def __init__(self):
         """
         :param TopicId: TopicId
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TopicId: str
         :param TopicName: TopicName
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TopicName: str
         :param MsgRetentionSeconds: MsgRetentionSeconds
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MsgRetentionSeconds: int
         :param MaxMsgSize: MaxMsgSize
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxMsgSize: int
         :param Qps: Qps
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Qps: int
         :param FilterType: FilterType
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FilterType: int
         :param CreateTime: CreateTime
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: int
         :param LastModifyTime: LastModifyTime
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LastModifyTime: int
         :param MsgCount: MsgCount
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MsgCount: int
         :param CreateUin: CreateUin
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateUin: int
         :param Tags: Tags
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of Tag
-        :param Trace: 主题是否开启消息轨迹，true表示开启，false表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Trace: 主題是否開啓訊息軌迹，true表示開啓，false表示不開啓
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Trace: bool
         """
         self.TopicId = None
@@ -1313,10 +1313,10 @@ class TransactionPolicy(AbstractModel):
     def __init__(self):
         """
         :param FirstQueryInterval: FirstQueryInterval
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FirstQueryInterval: int
         :param MaxQueryCount: MaxQueryCount
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxQueryCount: int
         """
         self.FirstQueryInterval = None
@@ -1329,13 +1329,13 @@ class TransactionPolicy(AbstractModel):
 
 
 class UnbindDeadLetterRequest(AbstractModel):
-    """UnbindDeadLetter请求参数结构体
+    """UnbindDeadLetter請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param QueueName: 死信策略源队列名称，调用本接口会清空该队列的死信队列策略。
+        :param QueueName: 死信策略源隊列名稱，調用本介面會清空該隊列的死信隊列策略。
         :type QueueName: str
         """
         self.QueueName = None
@@ -1346,13 +1346,13 @@ class UnbindDeadLetterRequest(AbstractModel):
 
 
 class UnbindDeadLetterResponse(AbstractModel):
-    """UnbindDeadLetter返回参数结构体
+    """UnbindDeadLetter返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None

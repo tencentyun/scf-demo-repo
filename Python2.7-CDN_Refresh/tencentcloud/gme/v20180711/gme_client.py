@@ -26,7 +26,7 @@ class GmeClient(AbstractClient):
 
 
     def CreateApp(self, request):
-        """本接口(CreateApp)用于创建一个GME应用。
+        """本介面(CreateApp)用于創建一個GME應用。
 
         :param request: Request instance for CreateApp.
         :type request: :class:`tencentcloud.gme.v20180711.models.CreateAppRequest`
@@ -54,7 +54,7 @@ class GmeClient(AbstractClient):
 
 
     def DescribeAppStatistics(self, request):
-        """本接口(DescribeAppStatistics)用于获取某个GME应用的用量数据。包括实时语音，语音消息及转文本，语音分析等。最长查询周期为最近30天。
+        """本介面(DescribeAppStatistics)用于獲取某個GME應用的用量數據。包括實時語音，語音訊息及轉文本，語音分析等。最長查詢週期爲最近30天。
 
         :param request: Request instance for DescribeAppStatistics.
         :type request: :class:`tencentcloud.gme.v20180711.models.DescribeAppStatisticsRequest`
@@ -82,7 +82,7 @@ class GmeClient(AbstractClient):
 
 
     def DescribeFilterResult(self, request):
-        """根据应用ID和文件ID查询识别结果
+        """根據應用ID和文件ID查詢識别結果
 
         :param request: Request instance for DescribeFilterResult.
         :type request: :class:`tencentcloud.gme.v20180711.models.DescribeFilterResultRequest`
@@ -110,7 +110,7 @@ class GmeClient(AbstractClient):
 
 
     def DescribeFilterResultList(self, request):
-        """根据日期查询识别结果列表
+        """根據日期查詢識别結果清單
 
         :param request: Request instance for DescribeFilterResultList.
         :type request: :class:`tencentcloud.gme.v20180711.models.DescribeFilterResultListRequest`
@@ -138,8 +138,8 @@ class GmeClient(AbstractClient):
 
 
     def DescribeScanResultList(self, request):
-        """本接口(DescribeScanResultList)用于查询语音检测结果，查询任务列表最多支持100个。
-        <p style="color:red">如果在提交语音检测任务时未设置 Callback 字段，则需要通过本接口获取检测结果</p>
+        """本介面(DescribeScanResultList)用于查詢語音檢測結果，查詢任務清單最多支援100個。
+        <p style="color:red">如果在提交語音檢測任務時未設置 Callback 欄位，則需要通過本介面獲取檢測結果</p>
 
         :param request: Request instance for DescribeScanResultList.
         :type request: :class:`tencentcloud.gme.v20180711.models.DescribeScanResultListRequest`
@@ -167,7 +167,7 @@ class GmeClient(AbstractClient):
 
 
     def ModifyAppStatus(self, request):
-        """本接口(ModifyAppStatus)用于修改应用总开关状态。
+        """本介面(ModifyAppStatus)用于修改應用總開關狀态。
 
         :param request: Request instance for ModifyAppStatus.
         :type request: :class:`tencentcloud.gme.v20180711.models.ModifyAppStatusRequest`
@@ -195,67 +195,67 @@ class GmeClient(AbstractClient):
 
 
     def ScanVoice(self, request):
-        """本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。使用前请您登录[控制台 - 服务配置](https://console.cloud.tencent.com/gamegme/conf)开启语音分析服务。
+        """本介面(ScanVoice)用于提交語音檢測任務，檢測任務清單最多支援100個。使用前請您登入[控制台 - 服務配置](https://console.cloud.tencent.com/gamegme/conf)開啓語音分析服務。
         </br></br>
 
-        <h4><b>功能试用说明：</b></h4>
-        <li>打开前往<a href="https://console.cloud.tencent.com/gamegme/tryout">控制台 - 产品试用</a>免费试用语音分析服务。</li>
+        <h4><b>功能試用說明：</b></h4>
+        <li>打開前往<a href="https://console.cloud.tencent.com/gamegme/tryout">控制台 - 産品試用</a>免費試用語音分析服務。</li>
         </br>
 
-        <h4><b>接口功能说明：</b></h4>
-        <li>支持对语音流或语音文件进行检测，判断其中是否包含违规内容。</li>
-        <li>支持设置回调地址 Callback 获取检测结果，同时支持通过接口(查询语音检测结果)主动轮询获取检测结果。</li>
-        <li>支持场景输入，包括：谩骂、色情、涉政等场景</li>
-        <li>支持批量提交检测任务。检测任务列表最多支持100个。</li>
+        <h4><b>介面功能說明：</b></h4>
+        <li>支援對語音流或語音文件進行檢測，判斷其中是否包含違規内容。</li>
+        <li>支援設置回調網址 Callback 獲取檢測結果，同時支援通過介面(查詢語音檢測結果)主動輪詢獲取檢測結果。</li>
+        <li>支援場景輸入，包括：謾罵、色情、涉政等場景</li>
+        <li>支援批次提交檢測任務。檢測任務清單最多支援100個。</li>
         </br>
-        <h4><b>音频文件限制说明：</b></h4>
-        <li>音频文件大小限制：100 M</li>
-        <li>音频文件时长限制：30分钟</li>
-        <li>音频文件格式支持的类型：.wav、.m4a、.amr、.mp3、.aac、.wma、.ogg</li>
+        <h4><b>音訊文件限制說明：</b></h4>
+        <li>音訊文件大小限制：100 M</li>
+        <li>音訊文件時長限制：30分鍾</li>
+        <li>音訊文件格式支援的類型：.wav、.m4a、.amr、.mp3、.aac、.wma、.ogg</li>
         </br>
-        <h4><b>语音流限制说明：</b></h4>
-        <li>语音流格式支持的类型：.m3u8、.flv</li>
-        <li>语音流支持的传输协议：RTMP、HTTP、HTTPS</li>
-        <li>语音流时长限制：4小时</li>
-        <li>支持音视频流分离并对音频流进行分析</li>
+        <h4><b>語音流限制說明：</b></h4>
+        <li>語音流格式支援的類型：.m3u8、.flv</li>
+        <li>語音流支援的傳輸協議：RTMP、HTTP、HTTPS</li>
+        <li>語音流時長限制：4小時</li>
+        <li>支援影音流分離并對音訊流進行分析</li>
         </br>
-        <h4 id="Label_Value"><b>Scenes 与 Label 参数说明：</b></h4>
-        <p>提交语音检测任务时，需要指定 Scenes 场景参数，<font color="red">目前要求您设置 Scenes 参数值为：["default"]</font>；而在检测结果中，则包含请求时指定的场景，以及对应类型的检测结果。</p>
+        <h4 id="Label_Value"><b>Scenes 與 Label 參數說明：</b></h4>
+        <p>提交語音檢測任務時，需要指定 Scenes 場景參數，<font color="red">目前要求您設置 Scenes 參數值爲：["default"]</font>；而在檢測結果中，則包含請求時指定的場景，以及對應類型的檢測結果。</p>
         <table>
         <thread>
         <tr>
-        <th>场景</th>
+        <th>場景</th>
         <th>描述</th>
         <th>Label</th>
         </tr>
         </thread>
         <tbody>
         <tr>
-        <td>语音检测</td>
-        <td>语音检测的检测类型</td>
+        <td>語音檢測</td>
+        <td>語音檢測的檢測類型</td>
         <td>
         <p>normal:正常文本</p>
         <p>porn:色情</p>
         <p>politics:涉政</p>
-        <p>abuse:谩骂</p>
-        <p>ad :广告</p>
+        <p>abuse:謾罵</p>
+        <p>ad :廣告</p>
         <p>terrorism:暴恐</p>
-        <p>contraband :违禁</p>
-        <p>customized:自定义词库。目前白名单开放，如有需要请<a href="https://cloud.tencent.com/apply/p/8809fjcik56">联系我们</a>。</p>
+        <p>contraband :違禁</p>
+        <p>customized:自定義詞庫。目前白名單開放，如有需要請<a href="https://cloud.tencent.com/apply/p/8809fjcik56">聯系我們</a>。</p>
         </td>
         </tr>
         </tbody>
         </table>
         </br>
-        <h4 id="Callback_Declare"><b>回调相关说明：</b></h4>
-        <li>如果在请求参数中指定了回调地址参数 Callback，即一个 HTTP(S) 协议接口的 URL，则需要支持 POST 方法，传输数据编码采用 UTF-8。</li>
-        <li>在推送回调数据后，接收到的 HTTP 状态码为 200 时，表示推送成功。</li>
-        <li>HTTP 头参数说明：</li>
+        <h4 id="Callback_Declare"><b>回調相關說明：</b></h4>
+        <li>如果在請求參數中指定了回調網址參數 Callback，即一個 HTTP(S) 協議介面的 URL，則需要支援 POST 方法，傳輸數據編碼采用 UTF-8。</li>
+        <li>在推送回調數據後，接收到的 HTTP 狀态碼爲 200 時，表示推送成功。</li>
+        <li>HTTP 頭參數說明：</li>
         <table>
         <thread>
         <tr>
-        <th>名称</th>
-        <th>类型</th>
+        <th>名稱</th>
+        <th>類型</th>
         <th>是否必需</th>
         <th>描述</th>
         </tr>
@@ -265,20 +265,20 @@ class GmeClient(AbstractClient):
         <td>Signatue</td>
         <td>string</td>
         <td>是</td>
-        <td>签名，具体见<a href="#Callback_Signatue">签名生成说明</a></td>
+        <td>簽名，具體見<a href="#Callback_Signatue">簽名生成說明</a></td>
         </tr>
         </tbody>
         </table>
         <ul  id="Callback_Signatue">
-        	<li>签名生成说明：</li>
+        	<li>簽名生成說明：</li>
         	<ul>
-        		<li>使用 HMAC-SH1 算法, 最终结果做 BASE64 编码;</li>
-        		<li>签名原文串为 POST+body 的整个json内容(长度以 Content-Length 为准);</li>
-        		<li>签名key为应用的 SecretKey，可以通过控制台查看。</li>
+        		<li>使用 HMAC-SH1 算法, 最終結果做 BASE64 編碼;</li>
+        		<li>簽名原文串爲 POST+body 的整個json内容(長度以 Content-Length 爲準);</li>
+        		<li>簽名key爲應用的 SecretKey，可以通過控制台檢視。</li>
         	</ul>
         </ul>
 
-        <li>回调示例如下<font color="red">（详细字段说明见结构：
+        <li>回調範例如下<font color="red">（詳細欄位說明見結構：
         <a href="https://cloud.tencent.com/document/api/607/35375#DescribeScanResult" target="_blank">DescribeScanResult</a>）</font>：</li>
         <pre><code>{
         	"Code": 0,
@@ -359,9 +359,9 @@ class GmeClient(AbstractClient):
 
 
     def VoiceFilter(self, request):
-        """本接口用于识别涉黄、涉政等违规音频，成功会回调配置在应用的回调地址。回调示例如下：
+        """本介面用于識别涉黃、涉政等違規音訊，成功會回調配置在應用的回調網址。回調範例如下：
         {"BizId":0,"FileId":"test_file_id","FileName":"test_file_name","FileUrl":"test_file_url","OpenId":"test_open_id","TimeStamp":"0000-00-00 00:00:00","Data":[{"Type":1,"Word":"xx"}]}
-        Type表示过滤类型，1：政治，2：色情，3：谩骂
+        Type表示過濾類型，1：政治，2：色情，3：謾罵
 
         :param request: Request instance for VoiceFilter.
         :type request: :class:`tencentcloud.gme.v20180711.models.VoiceFilterRequest`

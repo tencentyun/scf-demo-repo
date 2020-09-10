@@ -26,7 +26,7 @@ class TavClient(AbstractClient):
 
 
     def GetLocalEngine(self, request):
-        """获取TAV本地引擎
+        """獲取TAV本地引擎
 
         :param request: Request instance for GetLocalEngine.
         :type request: :class:`tencentcloud.tav.v20190118.models.GetLocalEngineRequest`
@@ -54,7 +54,7 @@ class TavClient(AbstractClient):
 
 
     def GetScanResult(self, request):
-        """tav文件上传扫描结果查询
+        """tav文件上傳掃描結果查詢
 
         :param request: Request instance for GetScanResult.
         :type request: :class:`tencentcloud.tav.v20190118.models.GetScanResultRequest`
@@ -82,7 +82,7 @@ class TavClient(AbstractClient):
 
 
     def ScanFile(self, request):
-        """tav文件上传扫描
+        """tav文件上傳掃描
 
         :param request: Request instance for ScanFile.
         :type request: :class:`tencentcloud.tav.v20190118.models.ScanFileRequest`
@@ -110,7 +110,7 @@ class TavClient(AbstractClient):
 
 
     def ScanFileHash(self, request):
-        """通过文件哈希值获取文件黑白属性
+        """通過文件哈希值獲取文件黑白屬性
 
         :param request: Request instance for ScanFileHash.
         :type request: :class:`tencentcloud.tav.v20190118.models.ScanFileHashRequest`

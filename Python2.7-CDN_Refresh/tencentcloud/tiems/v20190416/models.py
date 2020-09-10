@@ -17,7 +17,7 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class Conditions(AbstractModel):
-    """状态
+    """狀态
 
     """
 
@@ -25,7 +25,7 @@ class Conditions(AbstractModel):
         """
         :param Reason: 原因
         :type Reason: str
-        :param Count: 具有相同原因的副本个数
+        :param Count: 具有相同原因的副本個數
         :type Count: int
         """
         self.Reason = None
@@ -48,18 +48,18 @@ class Config(AbstractModel):
         :type Id: str
         :param Name: 配置名
         :type Name: str
-        :param ModelUri: 模型地址
+        :param ModelUri: 模型網址
         :type ModelUri: str
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param Runtime: 运行环境
+        :param Runtime: 運作環境
         :type Runtime: str
         :param Version: 配置版本
         :type Version: str
-        :param UpdateTime: 更新时间
+        :param UpdateTime: 更新時間
         :type UpdateTime: str
         :param Description: 配置描述
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Description: str
         """
         self.Id = None
@@ -84,39 +84,39 @@ class Config(AbstractModel):
 
 
 class CreateJobRequest(AbstractModel):
-    """CreateJob请求参数结构体
+    """CreateJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Name: 任务名称
+        :param Name: 任務名稱
         :type Name: str
-        :param ResourceGroupId: 使用的资源组 Id，默认使用共享资源组
+        :param ResourceGroupId: 使用的資源組 Id，預設使用共享資源組
         :type ResourceGroupId: str
-        :param Cpu: 处理器配置, 单位为1/1000核；范围[100, 256000]
+        :param Cpu: 處理器配置, 單位爲1/1000核；範圍[100, 256000]
         :type Cpu: int
-        :param Memory: 内存配置, 单位为1M；范围[100, 256000]
+        :param Memory: 内存配置, 單位爲1M；範圍[100, 256000]
         :type Memory: int
-        :param Cluster: 运行集群
+        :param Cluster: 運作集群
         :type Cluster: str
-        :param PredictInput: 预测输入
+        :param PredictInput: 預測輸入
         :type PredictInput: :class:`tencentcloud.tiems.v20190416.models.PredictInput`
-        :param Description: 任务描述
+        :param Description: 任務描述
         :type Description: str
-        :param WorkerCount: 同时处理任务的 Worker 个数
+        :param WorkerCount: 同時處理任務的 Worker 個數
         :type WorkerCount: int
         :param ConfigId: 使用的配置 Id
         :type ConfigId: str
-        :param Gpu: GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
+        :param Gpu: GPU算力配置，單位爲1/1000 卡，範圍 [0, 256000]
         :type Gpu: int
-        :param GpuMemory: 显存配置, 单位为1M，范围 [0, 256000]
+        :param GpuMemory: 顯存配置, 單位爲1M，範圍 [0, 256000]
         :type GpuMemory: int
-        :param GpuType: GPU类型
+        :param GpuType: GPU類型
         :type GpuType: str
-        :param QuantizationInput: 量化输入
+        :param QuantizationInput: 量化輸入
         :type QuantizationInput: :class:`tencentcloud.tiems.v20190416.models.QuantizationInput`
-        :param LogTopicId: Cls日志主题ID
+        :param LogTopicId: Cls日志主題ID
         :type LogTopicId: str
         """
         self.Name = None
@@ -157,15 +157,15 @@ class CreateJobRequest(AbstractModel):
 
 
 class CreateJobResponse(AbstractModel):
-    """CreateJob返回参数结构体
+    """CreateJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Job: 任务
+        :param Job: 任務
         :type Job: :class:`tencentcloud.tiems.v20190416.models.Job`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Job = None
@@ -180,25 +180,25 @@ class CreateJobResponse(AbstractModel):
 
 
 class CreateRsgAsGroupRequest(AbstractModel):
-    """CreateRsgAsGroup请求参数结构体
+    """CreateRsgAsGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RsgId: 资源组 ID
+        :param RsgId: 資源組 ID
         :type RsgId: str
-        :param MaxSize: 伸缩组允许的最大节点数
+        :param MaxSize: 伸縮組允許的最大節點數
         :type MaxSize: int
-        :param MinSize: 伸缩组允许的最小节点数
+        :param MinSize: 伸縮組允許的最小節點數
         :type MinSize: int
-        :param InstanceType: 伸缩组的节点规格
+        :param InstanceType: 伸縮組的節點規格
         :type InstanceType: str
-        :param Cluster: 资源组所在的集群名
+        :param Cluster: 資源組所在的集群名
         :type Cluster: str
-        :param Name: 伸缩组名称
+        :param Name: 伸縮組名稱
         :type Name: str
-        :param DesiredSize: 伸缩组期望的节点数
+        :param DesiredSize: 伸縮組期望的節點數
         :type DesiredSize: int
         """
         self.RsgId = None
@@ -221,15 +221,15 @@ class CreateRsgAsGroupRequest(AbstractModel):
 
 
 class CreateRsgAsGroupResponse(AbstractModel):
-    """CreateRsgAsGroup返回参数结构体
+    """CreateRsgAsGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RsgAsGroup: 所创建的资源组的伸缩组
+        :param RsgAsGroup: 所創建的資源組的伸縮組
         :type RsgAsGroup: :class:`tencentcloud.tiems.v20190416.models.RsgAsGroup`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RsgAsGroup = None
@@ -244,21 +244,21 @@ class CreateRsgAsGroupResponse(AbstractModel):
 
 
 class CreateRuntimeRequest(AbstractModel):
-    """CreateRuntime请求参数结构体
+    """CreateRuntime請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Name: 全局唯一的运行环境名称
+        :param Name: 全局唯一的運作環境名稱
         :type Name: str
-        :param Image: 运行环境镜像地址
+        :param Image: 運作環境映像網址
         :type Image: str
-        :param Framework: 运行环境框架
+        :param Framework: 運作環境框架
         :type Framework: str
-        :param Description: 运行环境描述
+        :param Description: 運作環境描述
         :type Description: str
-        :param HealthCheckOn: 是否支持健康检查，默认为False
+        :param HealthCheckOn: 是否支援健康檢查，預設爲False
         :type HealthCheckOn: bool
         """
         self.Name = None
@@ -277,15 +277,15 @@ class CreateRuntimeRequest(AbstractModel):
 
 
 class CreateRuntimeResponse(AbstractModel):
-    """CreateRuntime返回参数结构体
+    """CreateRuntime返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Runtime: 运行环境
+        :param Runtime: 運作環境
         :type Runtime: :class:`tencentcloud.tiems.v20190416.models.Runtime`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Runtime = None
@@ -300,17 +300,17 @@ class CreateRuntimeResponse(AbstractModel):
 
 
 class CreateServiceConfigRequest(AbstractModel):
-    """CreateServiceConfig请求参数结构体
+    """CreateServiceConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Name: 配置名称
+        :param Name: 配置名稱
         :type Name: str
-        :param Runtime: 运行环境
+        :param Runtime: 運作環境
         :type Runtime: str
-        :param ModelUri: 模型地址，支持cos路径，格式为 cos://bucket名-appid.cos.region名.myqcloud.com/模型文件夹路径。为模型文件的上一层文件夹地址。
+        :param ModelUri: 模型網址，支援cos路徑，格式爲 cos://bucket名-appid.cos.region名.myqcloud.com/模型文件夾路徑。爲模型文件的上一層文件夾網址。
         :type ModelUri: str
         :param Description: 配置描述
         :type Description: str
@@ -329,15 +329,15 @@ class CreateServiceConfigRequest(AbstractModel):
 
 
 class CreateServiceConfigResponse(AbstractModel):
-    """CreateServiceConfig返回参数结构体
+    """CreateServiceConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ServiceConfig: 服务配置
+        :param ServiceConfig: 服務配置
         :type ServiceConfig: :class:`tencentcloud.tiems.v20190416.models.Config`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ServiceConfig = None
@@ -352,39 +352,39 @@ class CreateServiceConfigResponse(AbstractModel):
 
 
 class CreateServiceRequest(AbstractModel):
-    """CreateService请求参数结构体
+    """CreateService請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Scaler: 扩缩容配置
+        :param Scaler: 擴縮容配置
         :type Scaler: :class:`tencentcloud.tiems.v20190416.models.Scaler`
-        :param ServiceConfigId: 服务配置Id
+        :param ServiceConfigId: 服務配置Id
         :type ServiceConfigId: str
-        :param Name: 服务名称
+        :param Name: 服務名稱
         :type Name: str
-        :param ScaleMode: 扩缩容方式，支持AUTO, MANUAL，分别表示自动扩缩容和手动扩缩容
+        :param ScaleMode: 擴縮容方式，支援AUTO, MANUAL，分别表示自動擴縮容和手動擴縮容
         :type ScaleMode: str
-        :param ResourceGroupId: 部署要使用的资源组Id，默认为共享资源组
+        :param ResourceGroupId: 佈署要使用的資源組Id，預設爲共享資源組
         :type ResourceGroupId: str
-        :param Cpu: 处理器配置, 单位为1/1000核；范围[100, 256000]
+        :param Cpu: 處理器配置, 單位爲1/1000核；範圍[100, 256000]
         :type Cpu: int
-        :param Memory: 内存配置, 单位为1M；范围[100, 256000]
+        :param Memory: 内存配置, 單位爲1M；範圍[100, 256000]
         :type Memory: int
-        :param Cluster: 集群，不填则使用默认集群
+        :param Cluster: 集群，不填則使用預設集群
         :type Cluster: str
-        :param Authentication: 默认为空，表示不需要鉴权，TOKEN 表示选择 Token 鉴权方式
+        :param Authentication: 預設爲空，表示不需要鑒權，TOKEN 表示選擇 Token 鑒權方式
         :type Authentication: str
-        :param Gpu: GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
+        :param Gpu: GPU算力配置，單位爲1/1000 卡，範圍 [0, 256000]
         :type Gpu: int
-        :param GpuMemory: 显存配置, 单位为1M，范围 [0, 256000]
+        :param GpuMemory: 顯存配置, 單位爲1M，範圍 [0, 256000]
         :type GpuMemory: int
-        :param Description: 备注
+        :param Description: 備注
         :type Description: str
-        :param GpuType: GPU类型
+        :param GpuType: GPU類型
         :type GpuType: str
-        :param LogTopicId: Cls日志主题ID
+        :param LogTopicId: Cls日志主題ID
         :type LogTopicId: str
         """
         self.Scaler = None
@@ -423,15 +423,15 @@ class CreateServiceRequest(AbstractModel):
 
 
 class CreateServiceResponse(AbstractModel):
-    """CreateService返回参数结构体
+    """CreateService返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Service: 服务
+        :param Service: 服務
         :type Service: :class:`tencentcloud.tiems.v20190416.models.ModelService`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Service = None
@@ -446,13 +446,13 @@ class CreateServiceResponse(AbstractModel):
 
 
 class DeleteInstanceRequest(AbstractModel):
-    """DeleteInstance请求参数结构体
+    """DeleteInstance請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 要删除的节点 ID
+        :param InstanceId: 要删除的節點 ID
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -463,13 +463,13 @@ class DeleteInstanceRequest(AbstractModel):
 
 
 class DeleteInstanceResponse(AbstractModel):
-    """DeleteInstance返回参数结构体
+    """DeleteInstance返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -480,13 +480,13 @@ class DeleteInstanceResponse(AbstractModel):
 
 
 class DeleteJobRequest(AbstractModel):
-    """DeleteJob请求参数结构体
+    """DeleteJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 任务 Id
+        :param JobId: 任務 Id
         :type JobId: str
         """
         self.JobId = None
@@ -497,13 +497,13 @@ class DeleteJobRequest(AbstractModel):
 
 
 class DeleteJobResponse(AbstractModel):
-    """DeleteJob返回参数结构体
+    """DeleteJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -514,13 +514,13 @@ class DeleteJobResponse(AbstractModel):
 
 
 class DeleteResourceGroupRequest(AbstractModel):
-    """DeleteResourceGroup请求参数结构体
+    """DeleteResourceGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResourceGroupId: 要删除的资源组 ID
+        :param ResourceGroupId: 要删除的資源組 ID
         :type ResourceGroupId: str
         """
         self.ResourceGroupId = None
@@ -531,13 +531,13 @@ class DeleteResourceGroupRequest(AbstractModel):
 
 
 class DeleteResourceGroupResponse(AbstractModel):
-    """DeleteResourceGroup返回参数结构体
+    """DeleteResourceGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -548,13 +548,13 @@ class DeleteResourceGroupResponse(AbstractModel):
 
 
 class DeleteRsgAsGroupRequest(AbstractModel):
-    """DeleteRsgAsGroup请求参数结构体
+    """DeleteRsgAsGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Id: 伸缩组 ID
+        :param Id: 伸縮組 ID
         :type Id: str
         """
         self.Id = None
@@ -565,13 +565,13 @@ class DeleteRsgAsGroupRequest(AbstractModel):
 
 
 class DeleteRsgAsGroupResponse(AbstractModel):
-    """DeleteRsgAsGroup返回参数结构体
+    """DeleteRsgAsGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -582,7 +582,7 @@ class DeleteRsgAsGroupResponse(AbstractModel):
 
 
 class DeleteRuntimeRequest(AbstractModel):
-    """DeleteRuntime请求参数结构体
+    """DeleteRuntime請求參數結構體
 
     """
 
@@ -599,13 +599,13 @@ class DeleteRuntimeRequest(AbstractModel):
 
 
 class DeleteRuntimeResponse(AbstractModel):
-    """DeleteRuntime返回参数结构体
+    """DeleteRuntime返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -616,15 +616,15 @@ class DeleteRuntimeResponse(AbstractModel):
 
 
 class DeleteServiceConfigRequest(AbstractModel):
-    """DeleteServiceConfig请求参数结构体
+    """DeleteServiceConfig請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ServiceConfigId: 服务配置Id
+        :param ServiceConfigId: 服務配置Id
         :type ServiceConfigId: str
-        :param ServiceConfigName: 服务配置名称
+        :param ServiceConfigName: 服務配置名稱
         :type ServiceConfigName: str
         """
         self.ServiceConfigId = None
@@ -637,13 +637,13 @@ class DeleteServiceConfigRequest(AbstractModel):
 
 
 class DeleteServiceConfigResponse(AbstractModel):
-    """DeleteServiceConfig返回参数结构体
+    """DeleteServiceConfig返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -654,13 +654,13 @@ class DeleteServiceConfigResponse(AbstractModel):
 
 
 class DeleteServiceRequest(AbstractModel):
-    """DeleteService请求参数结构体
+    """DeleteService請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ServiceId: 服务Id
+        :param ServiceId: 服務Id
         :type ServiceId: str
         """
         self.ServiceId = None
@@ -671,13 +671,13 @@ class DeleteServiceRequest(AbstractModel):
 
 
 class DeleteServiceResponse(AbstractModel):
-    """DeleteService返回参数结构体
+    """DeleteService返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -688,23 +688,23 @@ class DeleteServiceResponse(AbstractModel):
 
 
 class DescribeInstancesRequest(AbstractModel):
-    """DescribeInstances请求参数结构体
+    """DescribeInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 筛选选项
+        :param Filters: 篩選選項
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为200
+        :param Limit: 返回數量，預設爲20，最大值爲200
         :type Limit: int
-        :param Order: 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
+        :param Order: 輸出清單的排列順序。取值範圍：ASC：升序排列 DESC：降序排列
         :type Order: str
-        :param OrderField: 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
+        :param OrderField: 排序的依據欄位， 取值範圍 "CREATE_TIME", "UPDATE_TIME", "NAME"
         :type OrderField: str
-        :param ResourceGroupId: 要查询的资源组 ID
+        :param ResourceGroupId: 要查詢的資源組 ID
         :type ResourceGroupId: str
         """
         self.Filters = None
@@ -730,17 +730,17 @@ class DescribeInstancesRequest(AbstractModel):
 
 
 class DescribeInstancesResponse(AbstractModel):
-    """DescribeInstances返回参数结构体
+    """DescribeInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 资源组下节点总数
+        :param TotalCount: 資源組下節點總數
         :type TotalCount: int
-        :param Instances: 资源组下节点列表
+        :param Instances: 資源組下節點清單
         :type Instances: list of Instance
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -760,21 +760,21 @@ class DescribeInstancesResponse(AbstractModel):
 
 
 class DescribeResourceGroupsRequest(AbstractModel):
-    """DescribeResourceGroups请求参数结构体
+    """DescribeResourceGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 筛选选项
+        :param Filters: 篩選選項
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为200
+        :param Limit: 返回數量，預設爲20，最大值爲200
         :type Limit: int
-        :param Order: 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
+        :param Order: 輸出清單的排列順序。取值範圍：ASC：升序排列 DESC：降序排列
         :type Order: str
-        :param OrderField: 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
+        :param OrderField: 排序的依據欄位， 取值範圍 "CREATE_TIME", "UPDATE_TIME", "NAME"
         :type OrderField: str
         """
         self.Filters = None
@@ -798,18 +798,18 @@ class DescribeResourceGroupsRequest(AbstractModel):
 
 
 class DescribeResourceGroupsResponse(AbstractModel):
-    """DescribeResourceGroups返回参数结构体
+    """DescribeResourceGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 资源组总数
+        :param TotalCount: 資源組總數
         :type TotalCount: int
-        :param ResourceGroups: 资源组列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResourceGroups: 資源組清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResourceGroups: list of ResourceGroup
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -829,27 +829,27 @@ class DescribeResourceGroupsResponse(AbstractModel):
 
 
 class DescribeRsgAsGroupActivitiesRequest(AbstractModel):
-    """DescribeRsgAsGroupActivities请求参数结构体
+    """DescribeRsgAsGroupActivities請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Id: 伸缩组 ID
+        :param Id: 伸縮組 ID
         :type Id: str
-        :param StartTime: 查询活动的开始时间
+        :param StartTime: 查詢活動的開始時間
         :type StartTime: str
-        :param EndTime: 查询互动的结束时间
+        :param EndTime: 查詢互動的結束時間
         :type EndTime: str
-        :param Filters: 筛选选项
+        :param Filters: 篩選選項
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为 0
+        :param Offset: 偏移量，預設爲 0
         :type Offset: int
-        :param Limit: 返回数量，默认为 20，最大值为 200
+        :param Limit: 返回數量，預設爲 20，最大值爲 200
         :type Limit: int
-        :param Order: 输出列表的排列顺序。取值范围："ASC", "DESC"
+        :param Order: 輸出清單的排列順序。取值範圍："ASC", "DESC"
         :type Order: str
-        :param OrderField: 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
+        :param OrderField: 排序的依據欄位， 取值範圍 "CREATE_TIME", "UPDATE_TIME", "NAME"
         :type OrderField: str
         """
         self.Id = None
@@ -879,18 +879,18 @@ class DescribeRsgAsGroupActivitiesRequest(AbstractModel):
 
 
 class DescribeRsgAsGroupActivitiesResponse(AbstractModel):
-    """DescribeRsgAsGroupActivities返回参数结构体
+    """DescribeRsgAsGroupActivities返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RsgAsGroupActivitySet: 伸缩组活动数组
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RsgAsGroupActivitySet: 伸縮組活動數組
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RsgAsGroupActivitySet: list of RsgAsGroupActivity
-        :param TotalCount: 所查询的伸缩组活动总数目
+        :param TotalCount: 所查詢的伸縮組活動總數目
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RsgAsGroupActivitySet = None
@@ -910,21 +910,21 @@ class DescribeRsgAsGroupActivitiesResponse(AbstractModel):
 
 
 class DescribeRsgAsGroupsRequest(AbstractModel):
-    """DescribeRsgAsGroups请求参数结构体
+    """DescribeRsgAsGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 筛选选项
+        :param Filters: 篩選選項
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为 0
+        :param Offset: 偏移量，預設爲 0
         :type Offset: int
-        :param Limit: 返回数量，默认为 20，最大值为 200
+        :param Limit: 返回數量，預設爲 20，最大值爲 200
         :type Limit: int
-        :param Order: 输出列表的排列顺序。取值范围："ASC", "DESC"
+        :param Order: 輸出清單的排列順序。取值範圍："ASC", "DESC"
         :type Order: str
-        :param OrderField: 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
+        :param OrderField: 排序的依據欄位， 取值範圍 "CREATE_TIME", "UPDATE_TIME", "NAME"
         :type OrderField: str
         """
         self.Filters = None
@@ -948,17 +948,17 @@ class DescribeRsgAsGroupsRequest(AbstractModel):
 
 
 class DescribeRsgAsGroupsResponse(AbstractModel):
-    """DescribeRsgAsGroups返回参数结构体
+    """DescribeRsgAsGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RsgAsGroupSet: 所查询的伸缩组数组
+        :param RsgAsGroupSet: 所查詢的伸縮組數組
         :type RsgAsGroupSet: list of RsgAsGroup
-        :param TotalCount: 伸缩组数组总数目
+        :param TotalCount: 伸縮組數組總數目
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RsgAsGroupSet = None
@@ -978,24 +978,24 @@ class DescribeRsgAsGroupsResponse(AbstractModel):
 
 
 class DescribeRuntimesRequest(AbstractModel):
-    """DescribeRuntimes请求参数结构体
+    """DescribeRuntimes請求參數結構體
 
     """
 
 
 class DescribeRuntimesResponse(AbstractModel):
-    """DescribeRuntimes返回参数结构体
+    """DescribeRuntimes返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Runtimes: TIEMS支持的运行环境列表
+        :param Runtimes: TIEMS支援的運作環境清單
         :type Runtimes: list of Runtime
-        :param UserAccess: 用户对runtime对权限
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UserAccess: 用戶對runtime對權限
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UserAccess: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Runtimes = None
@@ -1015,23 +1015,23 @@ class DescribeRuntimesResponse(AbstractModel):
 
 
 class DescribeServiceConfigsRequest(AbstractModel):
-    """DescribeServiceConfigs请求参数结构体
+    """DescribeServiceConfigs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 筛选选项，支持按照name等进行筛选
+        :param Filters: 篩選選項，支援按照name等進行篩選
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为1000
+        :param Limit: 返回數量，預設爲20，最大值爲1000
         :type Limit: int
-        :param Order: 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
+        :param Order: 輸出清單的排列順序。取值範圍：ASC：升序排列 DESC：降序排列
         :type Order: str
-        :param OrderField: 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
+        :param OrderField: 排序的依據欄位， 取值範圍 "CREATE_TIME", "UPDATE_TIME", "NAME"
         :type OrderField: str
-        :param PageByName: 是否按照配置名分页
+        :param PageByName: 是否按照配置名分頁
         :type PageByName: bool
         """
         self.Filters = None
@@ -1057,17 +1057,17 @@ class DescribeServiceConfigsRequest(AbstractModel):
 
 
 class DescribeServiceConfigsResponse(AbstractModel):
-    """DescribeServiceConfigs返回参数结构体
+    """DescribeServiceConfigs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ServiceConfigs: 服务配置
+        :param ServiceConfigs: 服務配置
         :type ServiceConfigs: list of Config
-        :param TotalCount: 服务配置总数
+        :param TotalCount: 服務配置總數
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ServiceConfigs = None
@@ -1087,21 +1087,21 @@ class DescribeServiceConfigsResponse(AbstractModel):
 
 
 class DescribeServicesRequest(AbstractModel):
-    """DescribeServices请求参数结构体
+    """DescribeServices請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 筛选选项，支持筛选的字段：id, region, zone, cluster, status, runtime, rsg_id
+        :param Filters: 篩選選項，支援篩選的欄位：id, region, zone, cluster, status, runtime, rsg_id
         :type Filters: list of Filter
-        :param Offset: 偏移量，默认为0
+        :param Offset: 偏移量，預設爲0
         :type Offset: int
-        :param Limit: 返回数量，默认为20，最大值为100
+        :param Limit: 返回數量，預設爲20，最大值爲100
         :type Limit: int
-        :param Order: 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
+        :param Order: 輸出清單的排列順序。取值範圍：ASC：升序排列 DESC：降序排列
         :type Order: str
-        :param OrderField: 排序的依据字段， 取值范围 "CREATE_TIME" "UPDATE_TIME"
+        :param OrderField: 排序的依據欄位， 取值範圍 "CREATE_TIME" "UPDATE_TIME"
         :type OrderField: str
         """
         self.Filters = None
@@ -1125,17 +1125,17 @@ class DescribeServicesRequest(AbstractModel):
 
 
 class DescribeServicesResponse(AbstractModel):
-    """DescribeServices返回参数结构体
+    """DescribeServices返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Services: 服务列表
+        :param Services: 服務清單
         :type Services: list of ModelService
-        :param TotalCount: 服务总数
+        :param TotalCount: 服務總數
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Services = None
@@ -1155,13 +1155,13 @@ class DescribeServicesResponse(AbstractModel):
 
 
 class DisableRsgAsGroupRequest(AbstractModel):
-    """DisableRsgAsGroup请求参数结构体
+    """DisableRsgAsGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Id: 伸缩组 ID
+        :param Id: 伸縮組 ID
         :type Id: str
         """
         self.Id = None
@@ -1172,13 +1172,13 @@ class DisableRsgAsGroupRequest(AbstractModel):
 
 
 class DisableRsgAsGroupResponse(AbstractModel):
-    """DisableRsgAsGroup返回参数结构体
+    """DisableRsgAsGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1189,13 +1189,13 @@ class DisableRsgAsGroupResponse(AbstractModel):
 
 
 class EnableRsgAsGroupRequest(AbstractModel):
-    """EnableRsgAsGroup请求参数结构体
+    """EnableRsgAsGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Id: 伸缩组 ID
+        :param Id: 伸縮組 ID
         :type Id: str
         """
         self.Id = None
@@ -1206,13 +1206,13 @@ class EnableRsgAsGroupRequest(AbstractModel):
 
 
 class EnableRsgAsGroupResponse(AbstractModel):
-    """EnableRsgAsGroup返回参数结构体
+    """EnableRsgAsGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1223,30 +1223,30 @@ class EnableRsgAsGroupResponse(AbstractModel):
 
 
 class ExposeInfo(AbstractModel):
-    """暴露信息
+    """暴露訊息
 
     """
 
     def __init__(self):
         """
-        :param ExposeType: 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
+        :param ExposeType: 暴露方式，支援 EXTERNAL（外網暴露），VPC （VPC内網打通）
         :type ExposeType: str
-        :param Ip: 暴露Ip。暴露方式为 EXTERNAL 为外网 Ip，暴露方式为 VPC 时为指定 Vpc 下的Vip
+        :param Ip: 暴露Ip。暴露方式爲 EXTERNAL 爲外網 Ip，暴露方式爲 VPC 時爲指定 Vpc 下的Vip
         :type Ip: str
-        :param VpcId: 暴露方式为 VPC 时，打通的私有网络Id
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VpcId: 暴露方式爲 VPC 時，打通的私有網絡Id
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcId: str
-        :param SubnetId: 暴露方式为 VPC 时，打通的子网Id
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubnetId: 暴露方式爲 VPC 時，打通的子網Id
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetId: str
-        :param GateWayServiceId: GATEWAY 服务id，ExposeType = GATEWAY 时返回
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GateWayServiceId: GATEWAY 服務id，ExposeType = GATEWAY 時返回
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GateWayServiceId: str
-        :param GateWayAPIId: GATEWAY api id，ExposeType = GATEWAY 时返回
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GateWayAPIId: GATEWAY api id，ExposeType = GATEWAY 時返回
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GateWayAPIId: str
-        :param GateWayDomain: GATEWAY domain，ExposeType = GATEWAY 时返回
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GateWayDomain: GATEWAY domain，ExposeType = GATEWAY 時返回
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GateWayDomain: str
         """
         self.ExposeType = None
@@ -1269,19 +1269,19 @@ class ExposeInfo(AbstractModel):
 
 
 class ExposeServiceRequest(AbstractModel):
-    """ExposeService请求参数结构体
+    """ExposeService請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ServiceId: 服务Id
+        :param ServiceId: 服務Id
         :type ServiceId: str
-        :param ExposeType: 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
+        :param ExposeType: 暴露方式，支援 EXTERNAL（外網暴露），VPC （VPC内網打通）
         :type ExposeType: str
-        :param VpcId: 暴露方式为 VPC 时，填写需要打通的私有网络Id
+        :param VpcId: 暴露方式爲 VPC 時，填寫需要打通的私有網絡Id
         :type VpcId: str
-        :param SubnetId: 暴露方式为 VPC 时，填写需要打通的子网Id
+        :param SubnetId: 暴露方式爲 VPC 時，填寫需要打通的子網Id
         :type SubnetId: str
         """
         self.ServiceId = None
@@ -1298,7 +1298,7 @@ class ExposeServiceRequest(AbstractModel):
 
 
 class ExposeServiceResponse(AbstractModel):
-    """ExposeService返回参数结构体
+    """ExposeService返回參數結構體
 
     """
 
@@ -1306,7 +1306,7 @@ class ExposeServiceResponse(AbstractModel):
         """
         :param Expose: 暴露方式
         :type Expose: :class:`tencentcloud.tiems.v20190416.models.ExposeInfo`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Expose = None
@@ -1321,13 +1321,13 @@ class ExposeServiceResponse(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """筛选项
+    """篩選項
 
     """
 
     def __init__(self):
         """
-        :param Name: 名称
+        :param Name: 名稱
         :type Name: str
         :param Values: 取值
         :type Values: list of str
@@ -1342,49 +1342,49 @@ class Filter(AbstractModel):
 
 
 class Instance(AbstractModel):
-    """节点
+    """節點
 
     """
 
     def __init__(self):
         """
-        :param Id: 节点 ID
+        :param Id: 節點 ID
         :type Id: str
-        :param Zone: 节点所在地区
+        :param Zone: 節點所在地區
         :type Zone: str
-        :param InstanceType: 节点类型
+        :param InstanceType: 節點類型
         :type InstanceType: str
-        :param InstanceChargeType: 节点充值类型
+        :param InstanceChargeType: 節點儲值類型
         :type InstanceChargeType: str
-        :param Cpu: Cpu 核数
+        :param Cpu: Cpu 核數
         :type Cpu: int
         :param Memory: 内存
         :type Memory: int
-        :param Gpu: Gpu 核数
+        :param Gpu: Gpu 核數
         :type Gpu: int
-        :param State: 节点状态
+        :param State: 節點狀态
         :type State: str
-        :param AbnormalReason: 节点故障信息
+        :param AbnormalReason: 節點故障訊息
         :type AbnormalReason: str
-        :param Created: 创建时间
+        :param Created: 創建時間
         :type Created: str
-        :param Updated: 更新时间
+        :param Updated: 更新時間
         :type Updated: str
-        :param DeadlineTime: 到期时间
+        :param DeadlineTime: 到期時間
         :type DeadlineTime: str
-        :param ResourceGroupId: 所属资源组 ID
+        :param ResourceGroupId: 所屬資源組 ID
         :type ResourceGroupId: str
-        :param RenewFlag: 自动续费标签
+        :param RenewFlag: 自動續約标簽
         :type RenewFlag: str
-        :param Region: 节点所在地域
+        :param Region: 節點所在地域
         :type Region: str
-        :param CpuRequested: 当前 Cpu 申请使用量
+        :param CpuRequested: 當前 Cpu 申請使用量
         :type CpuRequested: int
-        :param MemoryRequested: 当前 Memory 申请使用量
+        :param MemoryRequested: 當前 Memory 申請使用量
         :type MemoryRequested: int
-        :param GpuRequested: 当前 Gpu 申请使用量
+        :param GpuRequested: 當前 Gpu 申請使用量
         :type GpuRequested: int
-        :param RsgAsGroupId: 节点所在伸缩组 ID
+        :param RsgAsGroupId: 節點所在伸縮組 ID
         :type RsgAsGroupId: str
         """
         self.Id = None
@@ -1431,81 +1431,81 @@ class Instance(AbstractModel):
 
 
 class Job(AbstractModel):
-    """任务
+    """任務
 
     """
 
     def __init__(self):
         """
-        :param Id: 任务 Id
+        :param Id: 任務 Id
         :type Id: str
         :param Cluster: 集群名
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Cluster: str
         :param Region: Region 名
         :type Region: str
-        :param Name: 任务名称
+        :param Name: 任務名稱
         :type Name: str
-        :param Runtime: Worker 使用的运行环境
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Runtime: Worker 使用的運作環境
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Runtime: str
-        :param Description: 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Description: 任務描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Description: str
         :param ConfigId: 配置 Id
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigId: str
-        :param PredictInput: 预测输入
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PredictInput: 預測輸入
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PredictInput: :class:`tencentcloud.tiems.v20190416.models.PredictInput`
-        :param Status: 任务状态
+        :param Status: 任務狀态
         :type Status: :class:`tencentcloud.tiems.v20190416.models.JobStatus`
-        :param CreateTime: 任务创建时间
+        :param CreateTime: 任務創建時間
         :type CreateTime: str
-        :param StartTime: 任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StartTime: 任務開始時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StartTime: str
-        :param EndTime: 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EndTime: 任務結束時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EndTime: str
-        :param CancelTime: 任务取消时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CancelTime: 任務取消時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CancelTime: str
-        :param ResourceGroupId: 任务使用资源组 Id
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResourceGroupId: 任務使用資源組 Id
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResourceGroupId: str
-        :param Cpu: 处理器配置, 单位为1/1000核；范围[100, 256000]
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Cpu: 處理器配置, 單位爲1/1000核；範圍[100, 256000]
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Cpu: int
-        :param Memory: 内存配置, 单位为1M；范围[100, 256000]
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Memory: 内存配置, 單位爲1M；範圍[100, 256000]
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Memory: int
-        :param Gpu: GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Gpu: GPU算力配置，單位爲1/1000 卡，範圍 [0, 256000]
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Gpu: int
-        :param GpuMemory: 显存配置, 单位为1M，范围 [0, 256000]
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GpuMemory: 顯存配置, 單位爲1M，範圍 [0, 256000]
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GpuMemory: int
-        :param ResourceGroupName: 任务使用资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResourceGroupName: 任務使用資源組名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResourceGroupName: str
-        :param GpuType: GPU类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GpuType: GPU類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GpuType: str
         :param ConfigName: 配置名
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigName: str
         :param ConfigVersion: 配置版本
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigVersion: str
-        :param JobType: Job类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param JobType: Job類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type JobType: str
-        :param QuantizationInput: 量化输入
-注意：此字段可能返回 null，表示取不到有效值。
+        :param QuantizationInput: 量化輸入
+注意：此欄位可能返回 null，表示取不到有效值。
         :type QuantizationInput: :class:`tencentcloud.tiems.v20190416.models.QuantizationInput`
-        :param LogTopicId: Cls日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LogTopicId: Cls日志主題ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LogTopicId: str
         """
         self.Id = None
@@ -1570,28 +1570,28 @@ class Job(AbstractModel):
 
 
 class JobStatus(AbstractModel):
-    """任务状态
+    """任務狀态
 
     """
 
     def __init__(self):
         """
-        :param Status: 任务状态
+        :param Status: 任務狀态
         :type Status: str
-        :param Message: 错误时为错误描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Message: 錯誤時爲錯誤描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Message: str
-        :param DesiredWorkers: 预期Worker数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DesiredWorkers: 預期Worker數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DesiredWorkers: int
-        :param CurrentWorkers: 当前Worker数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CurrentWorkers: 當前Worker數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CurrentWorkers: int
         :param Replicas: 副本名
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Replicas: list of str
-        :param ReplicaInfos: 副本实例
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ReplicaInfos: 副本實例
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ReplicaInfos: list of ReplicaInfo
         """
         self.Status = None
@@ -1617,73 +1617,73 @@ class JobStatus(AbstractModel):
 
 
 class ModelService(AbstractModel):
-    """模型服务
+    """模型服務
 
     """
 
     def __init__(self):
         """
-        :param Id: 服务ID
+        :param Id: 服務ID
         :type Id: str
-        :param Cluster: 运行集群
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Cluster: 運作集群
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Cluster: str
-        :param Name: 服务名称
+        :param Name: 服務名稱
         :type Name: str
-        :param Runtime: 运行环境
+        :param Runtime: 運作環境
         :type Runtime: str
-        :param ModelUri: 模型地址
+        :param ModelUri: 模型網址
         :type ModelUri: str
-        :param Cpu: 处理器配置, 单位为1/1000核
+        :param Cpu: 處理器配置, 單位爲1/1000核
         :type Cpu: int
-        :param Memory: 内存配置, 单位为1M
+        :param Memory: 内存配置, 單位爲1M
         :type Memory: int
-        :param Gpu: GPU 配置, 单位为1/1000 卡
+        :param Gpu: GPU 配置, 單位爲1/1000 卡
         :type Gpu: int
-        :param GpuMemory: 显存配置, 单位为1M
+        :param GpuMemory: 顯存配置, 單位爲1M
         :type GpuMemory: int
-        :param CreateTime: 创建时间
+        :param CreateTime: 創建時間
         :type CreateTime: str
-        :param UpdateTime: 更新时间
+        :param UpdateTime: 更新時間
         :type UpdateTime: str
-        :param ScaleMode: 支持AUTO, MANUAL
+        :param ScaleMode: 支援AUTO, MANUAL
         :type ScaleMode: str
-        :param Scaler: 弹性伸缩配置
+        :param Scaler: 彈性伸縮配置
         :type Scaler: :class:`tencentcloud.tiems.v20190416.models.Scaler`
-        :param Status: 服务状态
+        :param Status: 服務狀态
         :type Status: :class:`tencentcloud.tiems.v20190416.models.ServiceStatus`
-        :param AccessToken: 访问密钥
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AccessToken: 訪問金鑰
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AccessToken: str
-        :param ConfigId: 服务配置Id
+        :param ConfigId: 服務配置Id
         :type ConfigId: str
-        :param ConfigName: 服务配置名
+        :param ConfigName: 服務配置名
         :type ConfigName: str
-        :param ServeSeconds: 服务运行时长
+        :param ServeSeconds: 服務運作時長
         :type ServeSeconds: int
         :param ConfigVersion: 配置版本
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigVersion: str
-        :param ResourceGroupId: 服务使用资源组 Id
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResourceGroupId: 服務使用資源組 Id
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResourceGroupId: str
         :param Exposes: 暴露方式
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Exposes: list of ExposeInfo
         :param Region: Region 名
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Region: str
-        :param ResourceGroupName: 服务使用资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResourceGroupName: 服務使用資源組名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResourceGroupName: str
-        :param Description: 备注
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Description: 備注
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Description: str
-        :param GpuType: GPU类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GpuType: GPU類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GpuType: str
-        :param LogTopicId: Cls日志主题Id
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LogTopicId: Cls日志主題Id
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LogTopicId: str
         """
         self.Id = None
@@ -1753,13 +1753,13 @@ class ModelService(AbstractModel):
 
 
 class Option(AbstractModel):
-    """配置项
+    """配置項
 
     """
 
     def __init__(self):
         """
-        :param Name: 名称
+        :param Name: 名稱
         :type Name: str
         :param Value: 取值
         :type Value: int
@@ -1774,24 +1774,24 @@ class Option(AbstractModel):
 
 
 class PredictInput(AbstractModel):
-    """预测输入
+    """預測輸入
 
     """
 
     def __init__(self):
         """
-        :param InputPath: 输入路径，支持 cos 格式路径文件夹或文件
+        :param InputPath: 輸入路徑，支援 cos 格式路徑文件夾或文件
         :type InputPath: str
-        :param OutputPath: 输出路径，支持 cos 格式路径
+        :param OutputPath: 輸出路徑，支援 cos 格式路徑
         :type OutputPath: str
-        :param InputDataFormat: 输入数据格式，目前支持：JSON
+        :param InputDataFormat: 輸入數據格式，目前支援：JSON
         :type InputDataFormat: str
-        :param OutputDataFormat: 输出数据格式，目前支持：JSON
+        :param OutputDataFormat: 輸出數據格式，目前支援：JSON
         :type OutputDataFormat: str
-        :param BatchSize: 预测批大小，默认为 64
+        :param BatchSize: 預測批大小，預設爲 64
         :type BatchSize: int
-        :param SignatureName: 模型签名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SignatureName: 模型簽名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SignatureName: str
         """
         self.InputPath = None
@@ -1812,21 +1812,21 @@ class PredictInput(AbstractModel):
 
 
 class QuantizationInput(AbstractModel):
-    """量化输入
+    """量化輸入
 
     """
 
     def __init__(self):
         """
-        :param InputPath: 量化输入路径
+        :param InputPath: 量化輸入路徑
         :type InputPath: str
-        :param OutputPath: 量化输出路径
+        :param OutputPath: 量化輸出路徑
         :type OutputPath: str
         :param BatchSize: 量化批大小
         :type BatchSize: int
-        :param Precision: 量化精度，支持：FP32，FP16，INT8
+        :param Precision: 量化精度，支援：FP32，FP16，INT8
         :type Precision: str
-        :param ConvertType: 转换类型
+        :param ConvertType: 轉換類型
         :type ConvertType: str
         """
         self.InputPath = None
@@ -1845,29 +1845,29 @@ class QuantizationInput(AbstractModel):
 
 
 class ReplicaInfo(AbstractModel):
-    """实例信息
+    """實例訊息
 
     """
 
     def __init__(self):
         """
-        :param Name: 实例名称
+        :param Name: 實例名稱
         :type Name: str
-        :param EniIp: 弹性网卡模式时，弹性网卡Ip
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EniIp: 彈性網卡模式時，彈性網卡Ip
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EniIp: str
-        :param Status: Normal: 正常运行中; Abnormal: 异常；Waiting：等待中
+        :param Status: Normal: 正常運作中; Abnormal: 異常；Waiting：等待中
         :type Status: str
-        :param Message: 当 status为 Abnormal 的时候，一些额外的信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Message: 當 status爲 Abnormal 的時候，一些額外的訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Message: str
-        :param StartTime: 启动时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StartTime: 啓動時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StartTime: str
-        :param CreateTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
-        :param Restarted: 重启次数
+        :param Restarted: 重啓次數
         :type Restarted: int
         """
         self.Name = None
@@ -1890,66 +1890,66 @@ class ReplicaInfo(AbstractModel):
 
 
 class ResourceGroup(AbstractModel):
-    """资源组
+    """資源組
 
     """
 
     def __init__(self):
         """
-        :param Id: 资源组 Id
+        :param Id: 資源組 Id
         :type Id: str
         :param Region: 地域
         :type Region: str
         :param Cluster: 集群
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Cluster: str
-        :param Name: 资源组名称
+        :param Name: 資源組名稱
         :type Name: str
-        :param Description: 资源组描述
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Description: 資源組描述
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Description: str
-        :param Created: 创建时间
+        :param Created: 創建時間
         :type Created: str
-        :param Updated: 更新时间
+        :param Updated: 更新時間
         :type Updated: str
-        :param InstanceCount: 资源组主机数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceCount: 資源組主機數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceCount: int
-        :param ServiceCount: 使用资源组的服务数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ServiceCount: 使用資源組的服務數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ServiceCount: int
-        :param JobCount: 使用资源组的任务数量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param JobCount: 使用資源組的任務數量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type JobCount: int
-        :param Public: 资源组是否为公共资源组
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Public: 資源組是否爲公共資源組
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Public: bool
-        :param InstanceType: 机器类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceType: 機器類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceType: str
-        :param Status: 资源组状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Status: 資源組狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: str
-        :param Gpu: 显卡总张数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Gpu: 顯示卡總張數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Gpu: int
-        :param Cpu: 处理器总核数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Cpu: 處理器總核數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Cpu: int
-        :param Memory: 内存总量，单位为G
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Memory: 内存總量，單位爲G
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Memory: int
-        :param Zone: 可用区
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Zone: 可用區
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Zone: str
-        :param GpuType: Gpu类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param GpuType: Gpu類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type GpuType: list of str
-        :param HasPrepaid: 该资源组下是否有预付费资源
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HasPrepaid: 該資源組下是否有預付費資源
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HasPrepaid: bool
-        :param PayMode: 资源组是否允许预付费或后付费模式
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PayMode: 資源組是否允許預付費或後付費模式
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PayMode: str
         """
         self.Id = None
@@ -1998,15 +1998,15 @@ class ResourceGroup(AbstractModel):
 
 
 class RsgAsActivityRelatedInstance(AbstractModel):
-    """伸缩组活动关联的节点
+    """伸縮組活動關聯的節點
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 节点 ID
+        :param InstanceId: 節點 ID
         :type InstanceId: str
-        :param InstanceStatus: 节点状态
+        :param InstanceStatus: 節點狀态
         :type InstanceStatus: str
         """
         self.InstanceId = None
@@ -2019,39 +2019,39 @@ class RsgAsActivityRelatedInstance(AbstractModel):
 
 
 class RsgAsGroup(AbstractModel):
-    """资源组的伸缩组
+    """資源組的伸縮組
 
     """
 
     def __init__(self):
         """
-        :param Id: 伸缩组 ID
+        :param Id: 伸縮組 ID
         :type Id: str
-        :param Region: 伸缩组所在地域
+        :param Region: 伸縮組所在地域
         :type Region: str
-        :param Zone: 伸缩组所在可用区
+        :param Zone: 伸縮組所在可用區
         :type Zone: str
-        :param Cluster: 伸缩组所在集群
+        :param Cluster: 伸縮組所在集群
         :type Cluster: str
-        :param RsgId: 伸缩组所在资源组 ID
+        :param RsgId: 伸縮組所在資源組 ID
         :type RsgId: str
-        :param Name: 伸缩组名称
+        :param Name: 伸縮組名稱
         :type Name: str
-        :param MaxSize: 伸缩组允许的最大节点个数
+        :param MaxSize: 伸縮組允許的最大節點個數
         :type MaxSize: int
-        :param MinSize: 伸缩组允许的最小节点个数
+        :param MinSize: 伸縮組允許的最小節點個數
         :type MinSize: int
-        :param CreateTime: 伸缩组创建时间
+        :param CreateTime: 伸縮組創建時間
         :type CreateTime: str
-        :param UpdateTime: 伸缩组更新时间
+        :param UpdateTime: 伸縮組更新時間
         :type UpdateTime: str
-        :param Status: 伸缩组状态
+        :param Status: 伸縮組狀态
         :type Status: str
-        :param InstanceType: 伸缩组节点类型
+        :param InstanceType: 伸縮組節點類型
         :type InstanceType: str
-        :param InstanceCount: 伸缩组内节点个数
+        :param InstanceCount: 伸縮組内節點個數
         :type InstanceCount: int
-        :param DesiredSize: 伸缩组起始节点数
+        :param DesiredSize: 伸縮組起始節點數
         :type DesiredSize: int
         """
         self.Id = None
@@ -2088,35 +2088,35 @@ class RsgAsGroup(AbstractModel):
 
 
 class RsgAsGroupActivity(AbstractModel):
-    """伸缩组活动信息
+    """伸縮組活動訊息
 
     """
 
     def __init__(self):
         """
-        :param Id: 伸缩组活动 ID
+        :param Id: 伸縮組活動 ID
         :type Id: str
-        :param RsgAsGroupId: 关联的伸缩组 ID
+        :param RsgAsGroupId: 關聯的伸縮組 ID
         :type RsgAsGroupId: str
-        :param ActivityType: 活动类型
+        :param ActivityType: 活動類型
         :type ActivityType: str
-        :param StatusCode: 状态的编码
+        :param StatusCode: 狀态的編碼
         :type StatusCode: str
-        :param StatusMessage: 状态的消息
+        :param StatusMessage: 狀态的訊息
         :type StatusMessage: str
-        :param Cause: 活动原因
+        :param Cause: 活動原因
         :type Cause: str
-        :param Description: 活动描述
+        :param Description: 活動描述
         :type Description: str
-        :param StartTime: 活动开始时间
+        :param StartTime: 活動開始時間
         :type StartTime: str
-        :param EndTime: 活动结束时间
+        :param EndTime: 活動結束時間
         :type EndTime: str
-        :param CreateTime: 活动创建时间
+        :param CreateTime: 活動創建時間
         :type CreateTime: str
-        :param RsgAsActivityRelatedInstance: 活动相关联的节点
+        :param RsgAsActivityRelatedInstance: 活動相關聯的節點
         :type RsgAsActivityRelatedInstance: list of RsgAsActivityRelatedInstance
-        :param StatusMessageSimplified: 简略的状态消息
+        :param StatusMessageSimplified: 簡略的狀态訊息
         :type StatusMessageSimplified: str
         """
         self.Id = None
@@ -2154,29 +2154,29 @@ class RsgAsGroupActivity(AbstractModel):
 
 
 class Runtime(AbstractModel):
-    """运行环境
+    """運作環境
 
     """
 
     def __init__(self):
         """
-        :param Name: 运行环境名称
+        :param Name: 運作環境名稱
         :type Name: str
-        :param Framework: 运行环境框架
+        :param Framework: 運作環境框架
         :type Framework: str
-        :param Description: 运行环境描述
+        :param Description: 運作環境描述
         :type Description: str
-        :param Public: 是否为公开运行环境
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Public: 是否爲公開運作環境
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Public: bool
-        :param HealthCheckOn: 是否打开健康检查
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HealthCheckOn: 是否打開健康檢查
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HealthCheckOn: bool
-        :param Image: 镜像地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Image: 映像網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Image: str
-        :param CreateTime: 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 創建時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
         """
         self.Name = None
@@ -2199,19 +2199,19 @@ class Runtime(AbstractModel):
 
 
 class Scaler(AbstractModel):
-    """扩缩容配置
+    """擴縮容配置
 
     """
 
     def __init__(self):
         """
-        :param MaxReplicas: 最大副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
+        :param MaxReplicas: 最大副本數，ScaleMode 爲 MANUAL 時辭會此值會被置爲 StartReplicas 取值
         :type MaxReplicas: int
-        :param MinReplicas: 最小副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
+        :param MinReplicas: 最小副本數，ScaleMode 爲 MANUAL 時辭會此值會被置爲 StartReplicas 取值
         :type MinReplicas: int
-        :param StartReplicas: 起始副本数
+        :param StartReplicas: 起始副本數
         :type StartReplicas: int
-        :param HpaMetrics: 扩缩容指标，选择自动扩缩容时至少需要选择一个指标，支持CPU-UTIL、MEMORY-UTIL
+        :param HpaMetrics: 擴縮容指标，選擇自動擴縮容時至少需要選擇一個指标，支援CPU-UTIL、MEMORY-UTIL
         :type HpaMetrics: list of Option
         """
         self.MaxReplicas = None
@@ -2233,29 +2233,29 @@ class Scaler(AbstractModel):
 
 
 class ServiceStatus(AbstractModel):
-    """服务状态
+    """服務狀态
 
     """
 
     def __init__(self):
         """
-        :param DesiredReplicas: 预期副本数
+        :param DesiredReplicas: 預期副本數
         :type DesiredReplicas: int
-        :param CurrentReplicas: 当前副本数
+        :param CurrentReplicas: 當前副本數
         :type CurrentReplicas: int
-        :param Status: Normal：正常运行中；Abnormal：服务异常，例如容器启动失败等；Waiting：服务等待中，例如容器下载镜像过程等；Stopped：已停止 Stopping 停止中；Resuming：重启中；Updating：服务更新中
+        :param Status: Normal：正常運作中；Abnormal：服務異常，例如容器啓動失敗等；Waiting：服務等待中，例如容器下載映像過程等；Stopped：已停止 Stopping 停止中；Resuming：重啓中；Updating：服務更新中
         :type Status: str
-        :param Conditions: 服务处于当前状态的原因集合
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Conditions: 服務處于當前狀态的原因集合
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Conditions: list of Conditions
-        :param Replicas: 副本名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Replicas: 副本名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Replicas: list of str
-        :param Message: 运行状态对额外信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Message: 運作狀态對額外訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Message: str
-        :param ReplicaInfos: 副本信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ReplicaInfos: 副本訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ReplicaInfos: list of ReplicaInfo
         """
         self.DesiredReplicas = None
@@ -2288,17 +2288,17 @@ class ServiceStatus(AbstractModel):
 
 
 class UpdateJobRequest(AbstractModel):
-    """UpdateJob请求参数结构体
+    """UpdateJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobId: 任务 Id
+        :param JobId: 任務 Id
         :type JobId: str
-        :param JobAction: 任务更新动作，支持：Cancel
+        :param JobAction: 任務更新動作，支援：Cancel
         :type JobAction: str
-        :param Description: 备注
+        :param Description: 備注
         :type Description: str
         """
         self.JobId = None
@@ -2313,16 +2313,16 @@ class UpdateJobRequest(AbstractModel):
 
 
 class UpdateJobResponse(AbstractModel):
-    """UpdateJob返回参数结构体
+    """UpdateJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Job: 任务
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Job: 任務
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Job: :class:`tencentcloud.tiems.v20190416.models.Job`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Job = None
@@ -2337,21 +2337,21 @@ class UpdateJobResponse(AbstractModel):
 
 
 class UpdateRsgAsGroupRequest(AbstractModel):
-    """UpdateRsgAsGroup请求参数结构体
+    """UpdateRsgAsGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Id: 伸缩组 ID
+        :param Id: 伸縮組 ID
         :type Id: str
-        :param Name: 重命名名称
+        :param Name: 重命名名稱
         :type Name: str
-        :param MaxSize: 伸缩组最大节点数
+        :param MaxSize: 伸縮組最大節點數
         :type MaxSize: int
-        :param MinSize: 伸缩组最小节点数
+        :param MinSize: 伸縮組最小節點數
         :type MinSize: int
-        :param DesiredSize: 伸缩组期望的节点数
+        :param DesiredSize: 伸縮組期望的節點數
         :type DesiredSize: int
         """
         self.Id = None
@@ -2370,15 +2370,15 @@ class UpdateRsgAsGroupRequest(AbstractModel):
 
 
 class UpdateRsgAsGroupResponse(AbstractModel):
-    """UpdateRsgAsGroup返回参数结构体
+    """UpdateRsgAsGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RsgAsGroup: 资源组的伸缩组
+        :param RsgAsGroup: 資源組的伸縮組
         :type RsgAsGroup: :class:`tencentcloud.tiems.v20190416.models.RsgAsGroup`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RsgAsGroup = None
@@ -2393,33 +2393,33 @@ class UpdateRsgAsGroupResponse(AbstractModel):
 
 
 class UpdateServiceRequest(AbstractModel):
-    """UpdateService请求参数结构体
+    """UpdateService請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ServiceId: 服务Id
+        :param ServiceId: 服務Id
         :type ServiceId: str
-        :param Scaler: 扩缩容配置
+        :param Scaler: 擴縮容配置
         :type Scaler: :class:`tencentcloud.tiems.v20190416.models.Scaler`
-        :param ServiceConfigId: 服务配置Id
+        :param ServiceConfigId: 服務配置Id
         :type ServiceConfigId: str
-        :param ScaleMode: 支持AUTO, MANUAL，分别表示自动扩缩容，手动扩缩容
+        :param ScaleMode: 支援AUTO, MANUAL，分别表示自動擴縮容，手動擴縮容
         :type ScaleMode: str
-        :param ServiceAction: 支持STOP(停止) RESUME(重启)
+        :param ServiceAction: 支援STOP(停止) RESUME(重啓)
         :type ServiceAction: str
-        :param Description: 备注
+        :param Description: 備注
         :type Description: str
-        :param GpuType: GPU卡类型
+        :param GpuType: GPU卡類型
         :type GpuType: str
-        :param Cpu: 处理器配置，单位为 1/1000 核
+        :param Cpu: 處理器配置，單位爲 1/1000 核
         :type Cpu: int
-        :param Memory: 内存配置，单位为1M
+        :param Memory: 内存配置，單位爲1M
         :type Memory: int
-        :param Gpu: 显卡配置，单位为 1/1000 卡
+        :param Gpu: 顯示卡配置，單位爲 1/1000 卡
         :type Gpu: int
-        :param LogTopicId: Cls日志主题ID
+        :param LogTopicId: Cls日志主題ID
         :type LogTopicId: str
         """
         self.ServiceId = None
@@ -2452,15 +2452,15 @@ class UpdateServiceRequest(AbstractModel):
 
 
 class UpdateServiceResponse(AbstractModel):
-    """UpdateService返回参数结构体
+    """UpdateService返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Service: 服务
+        :param Service: 服務
         :type Service: :class:`tencentcloud.tiems.v20190416.models.ModelService`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Service = None

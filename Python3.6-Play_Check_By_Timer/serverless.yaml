@@ -8,17 +8,17 @@ inputs:
   src: ./
   description: >-
     This demo will use timer trigger to check url list. If there are wrong
-    lists, it will send alarm by email. 本示例代码的功能是定时拨测 URL 列表中的地址，并通过邮件发送告警
+    lists, it will send alarm by email. 本範例代碼的功能是定時撥測 URL 清單中的網址，并通過郵件發送告警
   handler: Play_Check_By_Timer.main_handler
   runtime: Python3.6
   namespace: default
   region: ap-guangzhou
   memorySize: 128
   timeout: 10
-  events: # 触发器
-    - timer: # 定时触发器
+  events: # 觸發器
+    - timer: # 定時觸發器
         name: timer
         parameters:
-          cronExpression: '0 */5 * * * * *' # 每5分钟触发一次
+          cronExpression: '0 */5 * * * * *' # 每5分鍾觸發一次
           enable: true
-          argument: argument # 额外的参数
+          argument: argument # 額外的參數

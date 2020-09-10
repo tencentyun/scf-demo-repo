@@ -21,10 +21,10 @@ function wrapPromise(connection, sql) {
 exports.main_handler = async (event, context, callback) => {
   const mysql = require('mysql');
   const connection = mysql.createConnection({
-    host: 'xxxx', // The ip address of cloud database instance, 云数据库实例ip地址
-    user: 'xxx', // The name of cloud database, for example, root, 云数据库用户名，如root
-    password: 'xxx', // Password of cloud database, 云数据库密码
-    database: 'xxx' // Name of the cloud database, 数据库名称
+    host: 'xxxx', // The ip address of cloud database instance, 雲資料庫實例ip網址
+    user: 'xxx', // The name of cloud database, for example, root, 雲資料庫用戶名，如root
+    password: 'xxx', // Password of cloud database, 雲資料庫密碼
+    database: 'xxx' // Name of the cloud database, 資料庫名稱
   });
 
   connection.connect();
@@ -43,4 +43,3 @@ exports.main_handler = async (event, context, callback) => {
 
   return queryResult
 }
-

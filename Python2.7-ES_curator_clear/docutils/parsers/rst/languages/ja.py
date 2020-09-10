@@ -54,7 +54,7 @@ directives = {
     u'メタ': 'meta',
     #u'イメージマプ': 'imagemap',
     u'イメージ': 'image',
-    u'画像': 'image',
+    u'畫像': 'image',
     u'フィグア': 'figure',
     u'図版': 'figure',
     u'インクルード': 'include',
@@ -75,12 +75,12 @@ directives = {
     u'タイトル': 'title',
     u'題': 'title',                    # 題名　件名
     u'目次': 'contents',
-    u'節数': 'sectnum',
+    u'節數': 'sectnum',
     u'ヘッダ': 'header',
     u'フッタ': 'footer',
-    #u'脚注': 'footnotes',             # 脚註?
+    #u'腳注': 'footnotes',             # 腳註?
     #u'サイテーション': 'citations',　　　# 出典　引証　引用
-    u'ターゲットノート': 'target-notes', # 的注　的脚注
+    u'ターゲットノート': 'target-notes', # 的注　的腳注
     }
 """Japanese name to registered (in directives/__init__.py) directive name
 mapping."""
@@ -97,21 +97,21 @@ roles = {
     u'下': 'subscript',
     u'上付': 'superscript',
     u'上': 'superscript',
-    u'題参照': 'title-reference',
-    u'pep参照': 'pep-reference',
-    u'rfc参照': 'rfc-reference',
+    u'題參照': 'title-reference',
+    u'pep參照': 'pep-reference',
+    u'rfc參照': 'rfc-reference',
     u'強調': 'emphasis',
     u'強い': 'strong',
     u'リテラル': 'literal',
     u'整形済み': 'literal',
     u'math (translation required)': 'math',
-    u'名付参照': 'named-reference',
-    u'無名参照': 'anonymous-reference',
-    u'脚注参照': 'footnote-reference',
-    u'出典参照': 'citation-reference',
-    u'代入参照': 'substitution-reference',
+    u'名付參照': 'named-reference',
+    u'無名參照': 'anonymous-reference',
+    u'腳注參照': 'footnote-reference',
+    u'出典參照': 'citation-reference',
+    u'代入參照': 'substitution-reference',
     u'的': 'target',
-    u'uri参照': 'uri-reference',
+    u'uri參照': 'uri-reference',
     u'uri': 'uri-reference',
     u'url': 'uri-reference',
     u'生': 'raw',}

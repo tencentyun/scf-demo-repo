@@ -22,7 +22,7 @@ def main_handler(event,content):
         return {"errorCode":410,"errorMsg":"event is not come from api gateway"}
     if event["requestContext"]["path"] != "/article/{articleId}" and event["requestContext"]["path"] != "/article":
         return {"errorCode":411,"errorMsg":"request is not from setting api path"}
-    if event["requestContext"]["path"] == "/article" and event["requestContext"]["httpMethod"] == "GET": #获取文章列表
+    if event["requestContext"]["path"] == "/article" and event["requestContext"]["httpMethod"] == "GET": #獲取文章清單
         retList = []
         for article in testArticleInfo:
             retItem = {}
@@ -32,7 +32,7 @@ def main_handler(event,content):
             retItem["time"] = article["time"]
             retList.append(retItem)
         return retList
-    if event["requestContext"]["path"] == "/article/{articleId}" and event["requestContext"]["httpMethod"] == "GET": #获取文章内容
+    if event["requestContext"]["path"] == "/article/{articleId}" and event["requestContext"]["httpMethod"] == "GET": #獲取文章内容
         articleId = int(event["pathParameters"]["articleId"])
         for article in testArticleInfo:
             if article["id"] == articleId:

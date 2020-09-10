@@ -17,17 +17,17 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class ChatRequest(AbstractModel):
-    """Chat请求参数结构体
+    """Chat請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Text: 聊天输入文本
+        :param Text: 聊天輸入文本
         :type Text: str
-        :param ProjectId: 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
+        :param ProjectId: Top Cloud 項目 ID，可填 0，總長度不超過 1024 位元。
         :type ProjectId: int
-        :param User: json格式，比如 {"id":"test","gender":"male"}。记录当前与机器人交互的用户id，非必须但强烈建议传入，否则多轮聊天功能会受影响
+        :param User: json格式，比如 {"id":"test","gender":"male"}。記錄當前與機器人交互的用戶id，非必須但強烈建議傳入，否則多輪聊天功能會受影響
         :type User: str
         """
         self.Text = None
@@ -42,15 +42,15 @@ class ChatRequest(AbstractModel):
 
 
 class ChatResponse(AbstractModel):
-    """Chat返回参数结构体
+    """Chat返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Answer: 聊天输出文本
+        :param Answer: 聊天輸出文本
         :type Answer: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Answer = None
@@ -63,29 +63,29 @@ class ChatResponse(AbstractModel):
 
 
 class SentenceRecognitionRequest(AbstractModel):
-    """SentenceRecognition请求参数结构体
+    """SentenceRecognition請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
+        :param ProjectId: Top Cloud 項目 ID，可填 0，總長度不超過 1024 位元。
         :type ProjectId: int
-        :param SubServiceType: 子服务类型。2，一句话识别。
+        :param SubServiceType: 子服務類型。2，一句話識别。
         :type SubServiceType: int
-        :param EngSerViceType: 引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。只支持单声道音频识别。
+        :param EngSerViceType: 引擎類型。8k：電話 8k 通用模型；16k：16k 通用模型。只支援單聲道音訊識别。
         :type EngSerViceType: str
-        :param SourceType: 语音数据来源。0：语音 URL；1：语音数据（post body）。
+        :param SourceType: 語音數據來源。0：語音 URL；1：語音數據（post body）。
         :type SourceType: int
-        :param VoiceFormat: 识别音频的音频格式（支持mp3,wav）。
+        :param VoiceFormat: 識别音訊的音訊格式（支援mp3,wav）。
         :type VoiceFormat: str
-        :param UsrAudioKey: 用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
+        :param UsrAudioKey: 用戶端對此任務的唯一标識，用戶自助生成，用于用戶查找識别結果。
         :type UsrAudioKey: str
-        :param Url: 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时间长度要小于60s。
+        :param Url: 語音 URL，公網可下載。當 SourceType 值爲 0 時須填寫該欄位，爲 1 時不填；URL 的長度大于 0，小於 2048，需進行urlencode編碼。音訊時間長度要小於60s。
         :type Url: str
-        :param Data: 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于600kB。
+        :param Data: 語音數據，當SourceType 值爲1時必須填寫，爲0可不寫。要base64編碼(采用python語言時注意讀取文件應該爲string而不是byte，以byte格式讀取後要decode()。編碼後的數據不可帶有回車換行符)。音訊數據要小於600kB。
         :type Data: str
-        :param DataLen: 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
+        :param DataLen: 數據長度，當 SourceType 值爲1時必須填寫，爲0可不寫（此數據長度爲數據未進行base64編碼時的數據長度）。
         :type DataLen: int
         """
         self.ProjectId = None
@@ -112,15 +112,15 @@ class SentenceRecognitionRequest(AbstractModel):
 
 
 class SentenceRecognitionResponse(AbstractModel):
-    """SentenceRecognition返回参数结构体
+    """SentenceRecognition返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 识别结果。
+        :param Result: 識别結果。
         :type Result: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -133,35 +133,35 @@ class SentenceRecognitionResponse(AbstractModel):
 
 
 class SimultaneousInterpretingRequest(AbstractModel):
-    """SimultaneousInterpreting请求参数结构体
+    """SimultaneousInterpreting請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ProjectId: 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
+        :param ProjectId: Top Cloud 項目 ID，可填 0，總長度不超過 1024 位元。
         :type ProjectId: int
-        :param SubServiceType: 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。3：同传。
+        :param SubServiceType: 子服務類型。0：離線語音識别。1：實時流式識别，2，一句話識别。3：同傳。
         :type SubServiceType: int
-        :param RecEngineModelType: 识别引擎类型。8k_zh： 8k 中文会场模型；16k_zh：16k 中文会场模型，8k_en： 8k 英文会场模型；16k_en：16k 英文会场模型。当前仅支持16K。
+        :param RecEngineModelType: 識别引擎類型。8k_zh： 8k 中文會場模型；16k_zh：16k 中文會場模型，8k_en： 8k 英文會場模型；16k_en：16k 英文會場模型。當前僅支援16K。
         :type RecEngineModelType: str
-        :param Data: 语音数据，要base64编码。
+        :param Data: 語音數據，要base64編碼。
         :type Data: str
-        :param DataLen: 数据长度。
+        :param DataLen: 數據長度。
         :type DataLen: int
-        :param VoiceId: 声音id，标识一句话。
+        :param VoiceId: 聲音id，标識一句話。
         :type VoiceId: str
-        :param IsEnd: 是否是一句话的结束。
+        :param IsEnd: 是否是一句話的結束。
         :type IsEnd: int
-        :param VoiceFormat: 声音编码的格式1:pcm，4:speex，6:silk，默认为1。
+        :param VoiceFormat: 聲音編碼的格式1:pcm，4:speex，6:silk，預設爲1。
         :type VoiceFormat: int
-        :param OpenTranslate: 是否需要翻译结果，1表示需要翻译，0是不需要。
+        :param OpenTranslate: 是否需要翻譯結果，1表示需要翻譯，0是不需要。
         :type OpenTranslate: int
-        :param SourceLanguage: 如果需要翻译，表示源语言类型，可取值：zh，en。
+        :param SourceLanguage: 如果需要翻譯，表示源語言類型，可取值：zh，en。
         :type SourceLanguage: str
-        :param TargetLanguage: 如果需要翻译，表示目标语言类型，可取值：zh，en。
+        :param TargetLanguage: 如果需要翻譯，表示目标語言類型，可取值：zh，en。
         :type TargetLanguage: str
-        :param Seq: 表明当前语音分片的索引，从0开始
+        :param Seq: 表明當前語音分片的索引，從0開始
         :type Seq: int
         """
         self.ProjectId = None
@@ -194,17 +194,17 @@ class SimultaneousInterpretingRequest(AbstractModel):
 
 
 class SimultaneousInterpretingResponse(AbstractModel):
-    """SimultaneousInterpreting返回参数结构体
+    """SimultaneousInterpreting返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param AsrText: 语音识别的结果
+        :param AsrText: 語音識别的結果
         :type AsrText: str
-        :param NmtText: 机器翻译的结果
+        :param NmtText: 機器翻譯的結果
         :type NmtText: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.AsrText = None
@@ -219,33 +219,33 @@ class SimultaneousInterpretingResponse(AbstractModel):
 
 
 class TextToVoiceRequest(AbstractModel):
-    """TextToVoice请求参数结构体
+    """TextToVoice請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Text: 合成语音的源文本，按UTF-8编码统一计算。
-中文最大支持100个汉字（全角标点符号算一个汉字）；英文最大支持400个字母（半角标点符号算一个字母）。包含空格等字符时需要url encode再传输。
+        :param Text: 合成語音的源文本，按UTF-8編碼統一計算。
+中文最大支援100個漢字（全角标點符号算一個漢字）；英文最大支援400個字母（半角标點符号算一個字母）。包含空格等字元時需要url encode再傳輸。
         :type Text: str
-        :param SessionId: 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
+        :param SessionId: 一次請求對應一個SessionId，會原樣返回，建議傳入類似于uuid的字串防止重複。
         :type SessionId: str
-        :param ModelType: 模型类型，1-默认模型。
+        :param ModelType: 模型類型，1-預設模型。
         :type ModelType: int
-        :param Volume: 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
-输入除以上整数之外的其他参数不生效，按默认值处理。
+        :param Volume: 音量大小，範圍：[0，10]，分别對應11個等級的音量，預設爲0，代表正常音量。沒有靜音選項。
+輸入除以上整數之外的其他參數不生效，按預設值處理。
         :type Volume: float
-        :param Speed: 语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>输入除以上整数之外的其他参数不生效，按默认值处理。
+        :param Speed: 語速，範圍：[-2，2]，分别對應不同語速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（預設）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>輸入除以上整數之外的其他參數不生效，按預設值處理。
         :type Speed: float
-        :param ProjectId: 项目id，用户自定义，默认为0。
+        :param ProjectId: 項目id，用戶自定義，預設爲0。
         :type ProjectId: int
-        :param VoiceType: 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+        :param VoiceType: 音色<li>0-親和女聲(預設)</li><li>1-親和男聲</li><li>2-成熟男聲</li><li>3-活力男聲</li><li>4-溫暖女聲</li><li>5-情感女聲</li><li>6-情感男聲</li>
         :type VoiceType: int
-        :param PrimaryLanguage: 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
+        :param PrimaryLanguage: 主語言類型：<li>1-中文（預設）</li><li>2-英文</li>
         :type PrimaryLanguage: int
-        :param SampleRate: 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
+        :param SampleRate: 音訊采樣率：<li>16000：16k（預設）</li><li>8000：8k</li>
         :type SampleRate: int
-        :param Codec: 返回音频格式，可取值：wav（默认），mp3
+        :param Codec: 返回音訊格式，可取值：wav（預設），mp3
         :type Codec: str
         """
         self.Text = None
@@ -274,17 +274,17 @@ class TextToVoiceRequest(AbstractModel):
 
 
 class TextToVoiceResponse(AbstractModel):
-    """TextToVoice返回参数结构体
+    """TextToVoice返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Audio: base64编码的wav/mp3音频数据
+        :param Audio: base64編碼的wav/mp3音訊數據
         :type Audio: str
-        :param SessionId: 一次请求对应一个SessionId
+        :param SessionId: 一次請求對應一個SessionId
         :type SessionId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Audio = None

@@ -26,7 +26,7 @@ class TiwClient(AbstractClient):
 
 
     def CreateTranscode(self, request):
-        """创建一个文档转码任务
+        """創建一個文件轉碼任務
 
         :param request: Request instance for CreateTranscode.
         :type request: :class:`tencentcloud.tiw.v20190919.models.CreateTranscodeRequest`
@@ -54,7 +54,7 @@ class TiwClient(AbstractClient):
 
 
     def DescribeOnlineRecord(self, request):
-        """查询实时录制任务状态与结果
+        """查詢實時錄制任務狀态與結果
 
         :param request: Request instance for DescribeOnlineRecord.
         :type request: :class:`tencentcloud.tiw.v20190919.models.DescribeOnlineRecordRequest`
@@ -82,7 +82,7 @@ class TiwClient(AbstractClient):
 
 
     def DescribeOnlineRecordCallback(self, request):
-        """查询实时录制回调地址
+        """查詢實時錄制回調網址
 
         :param request: Request instance for DescribeOnlineRecordCallback.
         :type request: :class:`tencentcloud.tiw.v20190919.models.DescribeOnlineRecordCallbackRequest`
@@ -110,7 +110,7 @@ class TiwClient(AbstractClient):
 
 
     def DescribeTranscode(self, request):
-        """查询文档转码任务的执行进度与转码结果
+        """查詢文件轉碼任務的執行進度與轉碼結果
 
         :param request: Request instance for DescribeTranscode.
         :type request: :class:`tencentcloud.tiw.v20190919.models.DescribeTranscodeRequest`
@@ -138,7 +138,7 @@ class TiwClient(AbstractClient):
 
 
     def DescribeTranscodeCallback(self, request):
-        """查询文档转码回调地址
+        """查詢文件轉碼回調網址
 
         :param request: Request instance for DescribeTranscodeCallback.
         :type request: :class:`tencentcloud.tiw.v20190919.models.DescribeTranscodeCallbackRequest`
@@ -166,7 +166,7 @@ class TiwClient(AbstractClient):
 
 
     def PauseOnlineRecord(self, request):
-        """暂停实时录制
+        """暫停實時錄制
 
         :param request: Request instance for PauseOnlineRecord.
         :type request: :class:`tencentcloud.tiw.v20190919.models.PauseOnlineRecordRequest`
@@ -194,7 +194,7 @@ class TiwClient(AbstractClient):
 
 
     def ResumeOnlineRecord(self, request):
-        """恢复实时录制
+        """恢複實時錄制
 
         :param request: Request instance for ResumeOnlineRecord.
         :type request: :class:`tencentcloud.tiw.v20190919.models.ResumeOnlineRecordRequest`
@@ -222,7 +222,7 @@ class TiwClient(AbstractClient):
 
 
     def SetOnlineRecordCallback(self, request):
-        """设置实时录制回调地址
+        """設置實時錄制回調網址
 
         :param request: Request instance for SetOnlineRecordCallback.
         :type request: :class:`tencentcloud.tiw.v20190919.models.SetOnlineRecordCallbackRequest`
@@ -250,7 +250,7 @@ class TiwClient(AbstractClient):
 
 
     def SetTranscodeCallback(self, request):
-        """设置文档转码回调地址
+        """設置文件轉碼回調網址
 
         :param request: Request instance for SetTranscodeCallback.
         :type request: :class:`tencentcloud.tiw.v20190919.models.SetTranscodeCallbackRequest`
@@ -278,7 +278,7 @@ class TiwClient(AbstractClient):
 
 
     def StartOnlineRecord(self, request):
-        """发起一个实时录制任务
+        """發起一個實時錄制任務
 
         :param request: Request instance for StartOnlineRecord.
         :type request: :class:`tencentcloud.tiw.v20190919.models.StartOnlineRecordRequest`
@@ -306,7 +306,7 @@ class TiwClient(AbstractClient):
 
 
     def StopOnlineRecord(self, request):
-        """停止实时录制
+        """停止實時錄制
 
         :param request: Request instance for StopOnlineRecord.
         :type request: :class:`tencentcloud.tiw.v20190919.models.StopOnlineRecordRequest`

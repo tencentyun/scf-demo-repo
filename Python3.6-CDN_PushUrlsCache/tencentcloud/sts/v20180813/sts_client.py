@@ -26,7 +26,7 @@ class StsClient(AbstractClient):
 
 
     def AssumeRole(self, request):
-        """申请扮演角色
+        """申請扮演角色
 
         :param request: Request instance for AssumeRole.
         :type request: :class:`tencentcloud.sts.v20180813.models.AssumeRoleRequest`
@@ -54,7 +54,7 @@ class StsClient(AbstractClient):
 
 
     def AssumeRoleWithSAML(self, request):
-        """本接口（AssumeRoleWithSAML）用于根据 SAML 断言申请角色临时凭证。
+        """本介面（AssumeRoleWithSAML）用于根據 SAML 斷言申請角色臨時憑證。
 
         :param request: Request instance for AssumeRoleWithSAML.
         :type request: :class:`tencentcloud.sts.v20180813.models.AssumeRoleWithSAMLRequest`
@@ -82,7 +82,7 @@ class StsClient(AbstractClient):
 
 
     def GetFederationToken(self, request):
-        """获取联合身份临时访问凭证
+        """獲取聯合身份臨時訪問憑證
 
         :param request: Request instance for GetFederationToken.
         :type request: :class:`tencentcloud.sts.v20180813.models.GetFederationTokenRequest`
@@ -110,7 +110,7 @@ class StsClient(AbstractClient):
 
 
     def QueryApiKey(self, request):
-        """拉取API密钥列表
+        """拉取API金鑰清單
 
         :param request: Request instance for QueryApiKey.
         :type request: :class:`tencentcloud.sts.v20180813.models.QueryApiKeyRequest`

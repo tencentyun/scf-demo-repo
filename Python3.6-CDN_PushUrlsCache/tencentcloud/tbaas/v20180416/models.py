@@ -17,29 +17,29 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class ApplyUserCertRequest(AbstractModel):
-    """ApplyUserCert请求参数结构体
+    """ApplyUserCert請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：cert_mng
+        :param Module: 模組名，固定欄位：cert_mng
         :type Module: str
-        :param Operation: 操作名，固定字段：cert_apply_for_user
+        :param Operation: 操作名，固定欄位：cert_apply_for_user
         :type Operation: str
-        :param ClusterId: 区块链网络ID，可在区块链网络详情或列表中获取
+        :param ClusterId: 區塊鏈網絡ID，可在區塊鏈網絡詳情或清單中獲取
         :type ClusterId: str
-        :param GroupName: 申请证书的组织名称，可以在组织管理列表中获取当前组织的名称
+        :param GroupName: 申請證書的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
-        :param UserIdentity: 用户证书标识，用于标识用户证书，要求由纯小写字母组成，长度小于10
+        :param UserIdentity: 用戶證書标識，用于标識用戶證書，要求由純小寫字母組成，長度小於10
         :type UserIdentity: str
-        :param Applicant: 证书申请实体，使用腾讯云账号实名认证的名称
+        :param Applicant: 證書申請實體，使用Top Cloud 賬号實名認證的名稱
         :type Applicant: str
-        :param IdentityNum: 证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入“0”；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码
+        :param IdentityNum: 證件号碼。如果Top Cloud 賬号對應的實名認證類型爲企業認證，填入“0”；如果Top Cloud 賬号對應的實名認證類型爲個人認證，填入個人身份證号碼
         :type IdentityNum: str
-        :param CsrData: csr p10证书文件。需要用户根据文档生成证书的CSR文件
+        :param CsrData: csr p10證書文件。需要用戶根據文件生成證書的CSR文件
         :type CsrData: str
-        :param Notes: 证书备注信息
+        :param Notes: 證書備注訊息
         :type Notes: str
         """
         self.Module = None
@@ -66,17 +66,17 @@ class ApplyUserCertRequest(AbstractModel):
 
 
 class ApplyUserCertResponse(AbstractModel):
-    """ApplyUserCert返回参数结构体
+    """ApplyUserCert返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertId: 证书ID
+        :param CertId: 證書ID
         :type CertId: int
-        :param CertDn: 证书DN
+        :param CertDn: 證書DN
         :type CertDn: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CertId = None
@@ -91,27 +91,27 @@ class ApplyUserCertResponse(AbstractModel):
 
 
 class BcosBlockObj(AbstractModel):
-    """Bcos区块对象
+    """Bcos區塊對象
 
     """
 
     def __init__(self):
         """
-        :param BlockHash: 区块哈希
+        :param BlockHash: 區塊哈希
         :type BlockHash: str
-        :param BlockNumber: 区块高度
+        :param BlockNumber: 區塊高度
         :type BlockNumber: int
-        :param BlockTimestamp: 区块时间戳
+        :param BlockTimestamp: 區塊時間戳
         :type BlockTimestamp: str
-        :param Sealer: 打包节点ID
+        :param Sealer: 打包節點ID
         :type Sealer: str
-        :param SealerIndex: 打包节点索引
+        :param SealerIndex: 打包節點索引
         :type SealerIndex: int
-        :param CreateTime: 记录保存时间
+        :param CreateTime: 記錄保存時間
         :type CreateTime: str
-        :param TransCount: 交易数量
+        :param TransCount: 交易數量
         :type TransCount: int
-        :param ModifyTime: 记录修改时间
+        :param ModifyTime: 記錄修改時間
         :type ModifyTime: str
         """
         self.BlockHash = None
@@ -136,25 +136,25 @@ class BcosBlockObj(AbstractModel):
 
 
 class BcosTransInfo(AbstractModel):
-    """Bcos交易信息对象
+    """Bcos交易訊息對象
 
     """
 
     def __init__(self):
         """
-        :param BlockNumber: 所属区块高度
+        :param BlockNumber: 所屬區塊高度
         :type BlockNumber: int
-        :param BlockTimestamp: 区块时间戳
+        :param BlockTimestamp: 區塊時間戳
         :type BlockTimestamp: str
         :param TransHash: 交易哈希
         :type TransHash: str
-        :param TransFrom: 交易发起者
+        :param TransFrom: 交易發起者
         :type TransFrom: str
         :param TransTo: 交易接收者
         :type TransTo: str
-        :param CreateTime: 落库时间
+        :param CreateTime: 落庫時間
         :type CreateTime: str
-        :param ModifyTime: 修改时间
+        :param ModifyTime: 修改時間
         :type ModifyTime: str
         """
         self.BlockNumber = None
@@ -177,21 +177,21 @@ class BcosTransInfo(AbstractModel):
 
 
 class Block(AbstractModel):
-    """区块对象
+    """區塊對象
 
     """
 
     def __init__(self):
         """
-        :param BlockNum: 区块编号
+        :param BlockNum: 區塊編号
         :type BlockNum: int
-        :param DataHash: 区块Hash数值
+        :param DataHash: 區塊Hash數值
         :type DataHash: str
-        :param BlockId: 区块ID，与区块编号一致
+        :param BlockId: 區塊ID，與區塊編号一緻
         :type BlockId: int
-        :param PreHash: 前一个区块Hash（未使用）,与区块Hash数值一致
+        :param PreHash: 前一個區塊Hash（未使用）,與區塊Hash數值一緻
         :type PreHash: str
-        :param TxCount: 区块内的交易数量
+        :param TxCount: 區塊内的交易數量
         :type TxCount: int
         """
         self.BlockNum = None
@@ -210,19 +210,19 @@ class Block(AbstractModel):
 
 
 class BlockByNumberHandlerRequest(AbstractModel):
-    """BlockByNumberHandler请求参数结构体
+    """BlockByNumberHandler請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：block
+        :param Module: 模組名，固定欄位：block
         :type Module: str
-        :param Operation: 操作名，固定字段：block_by_number
+        :param Operation: 操作名，固定欄位：block_by_number
         :type Operation: str
-        :param GroupPk: 当前群组编号
+        :param GroupPk: 當前群組編号
         :type GroupPk: str
-        :param BlockNumber: 区块高度
+        :param BlockNumber: 區塊高度
         :type BlockNumber: int
         """
         self.Module = None
@@ -239,15 +239,15 @@ class BlockByNumberHandlerRequest(AbstractModel):
 
 
 class BlockByNumberHandlerResponse(AbstractModel):
-    """BlockByNumberHandler返回参数结构体
+    """BlockByNumberHandler返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BlockJson: 返回区块json字符串
+        :param BlockJson: 返回區塊json字串
         :type BlockJson: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.BlockJson = None
@@ -260,25 +260,25 @@ class BlockByNumberHandlerResponse(AbstractModel):
 
 
 class DeployDynamicContractHandlerRequest(AbstractModel):
-    """DeployDynamicContractHandler请求参数结构体
+    """DeployDynamicContractHandler請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：contract
+        :param Module: 模組名，固定欄位：contract
         :type Module: str
-        :param Operation: 操作名，固定字段：deploy_by_dynamic_contract
+        :param Operation: 操作名，固定欄位：deploy_by_dynamic_contract
         :type Operation: str
-        :param GroupPk: 群组编号
+        :param GroupPk: 群組編号
         :type GroupPk: str
-        :param ContractName: 合约名称
+        :param ContractName: 合約名稱
         :type ContractName: str
-        :param AbiInfo: 合约编译后的abi
+        :param AbiInfo: 合約編譯後的abi
         :type AbiInfo: str
-        :param ByteCodeBin: 合约编译后的binary
+        :param ByteCodeBin: 合約編譯後的binary
         :type ByteCodeBin: str
-        :param ConstructorParams: 构造函数入参
+        :param ConstructorParams: 構造函數入參
         :type ConstructorParams: list of str
         """
         self.Module = None
@@ -301,15 +301,15 @@ class DeployDynamicContractHandlerRequest(AbstractModel):
 
 
 class DeployDynamicContractHandlerResponse(AbstractModel):
-    """DeployDynamicContractHandler返回参数结构体
+    """DeployDynamicContractHandler返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ContractAddress: 部署成功返回的合约地址
+        :param ContractAddress: 佈署成功返回的合約網址
         :type ContractAddress: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ContractAddress = None
@@ -322,23 +322,23 @@ class DeployDynamicContractHandlerResponse(AbstractModel):
 
 
 class DownloadUserCertRequest(AbstractModel):
-    """DownloadUserCert请求参数结构体
+    """DownloadUserCert請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：cert_mng
+        :param Module: 模組名，固定欄位：cert_mng
         :type Module: str
-        :param Operation: 操作名，固定字段：cert_download_for_user
+        :param Operation: 操作名，固定欄位：cert_download_for_user
         :type Operation: str
-        :param CertId: 证书ID，可以在证书详情页面获取
+        :param CertId: 證書ID，可以在證書詳情頁面獲取
         :type CertId: int
-        :param CertDn: 证书DN，可以在证书详情页面获取
+        :param CertDn: 證書DN，可以在證書詳情頁面獲取
         :type CertDn: str
-        :param ClusterId: 区块链网络ID，可在区块链网络详情或列表中获取
+        :param ClusterId: 區塊鏈網絡ID，可在區塊鏈網絡詳情或清單中獲取
         :type ClusterId: str
-        :param GroupName: 下载证书的组织名称，可以在组织管理列表中获取当前组织的名称
+        :param GroupName: 下載證書的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
         """
         self.Module = None
@@ -359,17 +359,17 @@ class DownloadUserCertRequest(AbstractModel):
 
 
 class DownloadUserCertResponse(AbstractModel):
-    """DownloadUserCert返回参数结构体
+    """DownloadUserCert返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertName: 证书名称
+        :param CertName: 證書名稱
         :type CertName: str
-        :param CertCtx: 证书内容
+        :param CertCtx: 證書内容
         :type CertCtx: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CertName = None
@@ -384,15 +384,15 @@ class DownloadUserCertResponse(AbstractModel):
 
 
 class EndorserGroup(AbstractModel):
-    """背书组织及其节点列表
+    """背書組織及其節點清單
 
     """
 
     def __init__(self):
         """
-        :param EndorserGroupName: 背书组织名称
+        :param EndorserGroupName: 背書組織名稱
         :type EndorserGroupName: str
-        :param EndorserPeerList: 背书节点列表
+        :param EndorserPeerList: 背書節點清單
         :type EndorserPeerList: list of str
         """
         self.EndorserGroupName = None
@@ -405,23 +405,23 @@ class EndorserGroup(AbstractModel):
 
 
 class GetBlockListHandlerRequest(AbstractModel):
-    """GetBlockListHandler请求参数结构体
+    """GetBlockListHandler請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：block
+        :param Module: 模組名，固定欄位：block
         :type Module: str
-        :param Operation: 操作名，固定字段：get_block_list
+        :param Operation: 操作名，固定欄位：get_block_list
         :type Operation: str
-        :param Offset: 记录偏移数
+        :param Offset: 記錄偏移數
         :type Offset: int
-        :param Limit: 每页记录数
+        :param Limit: 每頁記錄數
         :type Limit: int
-        :param GroupPk: 当前群组编号
+        :param GroupPk: 當前群組編号
         :type GroupPk: str
-        :param BlockHash: 区块哈希
+        :param BlockHash: 區塊哈希
         :type BlockHash: str
         """
         self.Module = None
@@ -442,19 +442,19 @@ class GetBlockListHandlerRequest(AbstractModel):
 
 
 class GetBlockListHandlerResponse(AbstractModel):
-    """GetBlockListHandler返回参数结构体
+    """GetBlockListHandler返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 总记录数
+        :param TotalCount: 總記錄數
         :type TotalCount: int
-        :param GroupPk: 当前群组编号
+        :param GroupPk: 當前群組編号
         :type GroupPk: str
-        :param List: 返回数据列表
+        :param List: 返回數據清單
         :type List: list of BcosBlockObj
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -476,29 +476,29 @@ class GetBlockListHandlerResponse(AbstractModel):
 
 
 class GetBlockListRequest(AbstractModel):
-    """GetBlockList请求参数结构体
+    """GetBlockList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名称，固定字段：block
+        :param Module: 模組名稱，固定欄位：block
         :type Module: str
-        :param Operation: 操作名称，固定字段：block_list
+        :param Operation: 操作名稱，固定欄位：block_list
         :type Operation: str
-        :param ChannelId: 通道ID，固定字段：0
+        :param ChannelId: 通道ID，固定欄位：0
         :type ChannelId: int
-        :param GroupId: 组织ID，固定字段：0
+        :param GroupId: 組織ID，固定欄位：0
         :type GroupId: int
-        :param ChannelName: 需要查询的通道名称，可在通道详情或列表中获取
+        :param ChannelName: 需要查詢的通道名稱，可在通道詳情或清單中獲取
         :type ChannelName: str
-        :param GroupName: 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
+        :param GroupName: 調用介面的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
-        :param ClusterId: 区块链网络ID，可在区块链网络详情或列表中获取
+        :param ClusterId: 區塊鏈網絡ID，可在區塊鏈網絡詳情或清單中獲取
         :type ClusterId: str
-        :param Offset: 需要获取的起始交易偏移
+        :param Offset: 需要獲取的起始交易偏移
         :type Offset: int
-        :param Limit: 需要获取的交易数量
+        :param Limit: 需要獲取的交易數量
         :type Limit: int
         """
         self.Module = None
@@ -525,17 +525,17 @@ class GetBlockListRequest(AbstractModel):
 
 
 class GetBlockListResponse(AbstractModel):
-    """GetBlockList返回参数结构体
+    """GetBlockList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 区块数量
+        :param TotalCount: 區塊數量
         :type TotalCount: int
-        :param BlockList: 区块列表
+        :param BlockList: 區塊清單
         :type BlockList: list of Block
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -555,27 +555,27 @@ class GetBlockListResponse(AbstractModel):
 
 
 class GetBlockTransactionListForUserRequest(AbstractModel):
-    """GetBlockTransactionListForUser请求参数结构体
+    """GetBlockTransactionListForUser請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：transaction
+        :param Module: 模組名，固定欄位：transaction
         :type Module: str
-        :param Operation: 操作名，固定字段：block_transaction_list_for_user
+        :param Operation: 操作名，固定欄位：block_transaction_list_for_user
         :type Operation: str
-        :param ClusterId: 区块链网络ID，可在区块链网络详情或列表中获取
+        :param ClusterId: 區塊鏈網絡ID，可在區塊鏈網絡詳情或清單中獲取
         :type ClusterId: str
-        :param GroupName: 参与交易的组织名称，可以在组织管理列表中获取当前组织的名称
+        :param GroupName: 參與交易的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
-        :param ChannelName: 业务所属通道名称，可在通道详情或列表中获取
+        :param ChannelName: 業務所屬通道名稱，可在通道詳情或清單中獲取
         :type ChannelName: str
-        :param BlockId: 区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID
+        :param BlockId: 區塊ID，通過GetInvokeTx介面可以獲取交易所在的區塊ID
         :type BlockId: int
-        :param Offset: 查询的交易列表起始偏移地址
+        :param Offset: 查詢的交易清單起始偏移網址
         :type Offset: int
-        :param Limit: 查询的交易列表数量
+        :param Limit: 查詢的交易清單數量
         :type Limit: int
         """
         self.Module = None
@@ -600,17 +600,17 @@ class GetBlockTransactionListForUserRequest(AbstractModel):
 
 
 class GetBlockTransactionListForUserResponse(AbstractModel):
-    """GetBlockTransactionListForUser返回参数结构体
+    """GetBlockTransactionListForUser返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 交易总数量
+        :param TotalCount: 交易總數量
         :type TotalCount: int
-        :param TransactionList: 交易列表
+        :param TransactionList: 交易清單
         :type TransactionList: list of TransactionItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -630,21 +630,21 @@ class GetBlockTransactionListForUserResponse(AbstractModel):
 
 
 class GetClusterSummaryRequest(AbstractModel):
-    """GetClusterSummary请求参数结构体
+    """GetClusterSummary請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名称，固定字段：cluster_mng
+        :param Module: 模組名稱，固定欄位：cluster_mng
         :type Module: str
-        :param Operation: 操作名称，固定字段：cluster_summary
+        :param Operation: 操作名稱，固定欄位：cluster_summary
         :type Operation: str
-        :param ClusterId: 区块链网络ID，可在区块链网络详情或列表中获取
+        :param ClusterId: 區塊鏈網絡ID，可在區塊鏈網絡詳情或清單中獲取
         :type ClusterId: str
-        :param GroupId: 组织ID，固定字段：0
+        :param GroupId: 組織ID，固定欄位：0
         :type GroupId: int
-        :param GroupName: 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
+        :param GroupName: 調用介面的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
         """
         self.Module = None
@@ -663,43 +663,43 @@ class GetClusterSummaryRequest(AbstractModel):
 
 
 class GetClusterSummaryResponse(AbstractModel):
-    """GetClusterSummary返回参数结构体
+    """GetClusterSummary返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalChannelCount: 网络通道总数量
+        :param TotalChannelCount: 網絡通道總數量
         :type TotalChannelCount: int
-        :param MyChannelCount: 当前组织创建的通道数量
+        :param MyChannelCount: 當前組織創建的通道數量
         :type MyChannelCount: int
-        :param JoinChannelCount: 当前组织加入的通道数量
+        :param JoinChannelCount: 當前組織加入的通道數量
         :type JoinChannelCount: int
-        :param TotalPeerCount: 网络节点总数量
+        :param TotalPeerCount: 網絡節點總數量
         :type TotalPeerCount: int
-        :param MyPeerCount: 当前组织创建的节点数量
+        :param MyPeerCount: 當前組織創建的節點數量
         :type MyPeerCount: int
-        :param OrderCount: 其他组织创建的节点数量
+        :param OrderCount: 其他組織創建的節點數量
         :type OrderCount: int
-        :param TotalGroupCount: 网络组织总数量
+        :param TotalGroupCount: 網絡組織總數量
         :type TotalGroupCount: int
-        :param MyGroupCount: 当前组织创建的组织数量
+        :param MyGroupCount: 當前組織創建的組織數量
         :type MyGroupCount: int
-        :param TotalChaincodeCount: 网络智能合约总数量
+        :param TotalChaincodeCount: 網絡智慧合約總數量
         :type TotalChaincodeCount: int
-        :param RecentChaincodeCount: 最近7天发起的智能合约数量
+        :param RecentChaincodeCount: 最近7天發起的智慧合約數量
         :type RecentChaincodeCount: int
-        :param MyChaincodeCount: 当前组织发起的智能合约数量
+        :param MyChaincodeCount: 當前組織發起的智慧合約數量
         :type MyChaincodeCount: int
-        :param TotalCertCount: 当前组织的证书总数量
+        :param TotalCertCount: 當前組織的證書總數量
         :type TotalCertCount: int
-        :param TlsCertCount: 颁发给当前组织的证书数量
+        :param TlsCertCount: 頒發給當前組織的證書數量
         :type TlsCertCount: int
-        :param PeerCertCount: 网络背书节点证书数量
+        :param PeerCertCount: 網絡背書節點證書數量
         :type PeerCertCount: int
-        :param ClientCertCount: 当前组织业务证书数量
+        :param ClientCertCount: 當前組織業務證書數量
         :type ClientCertCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalChannelCount = None
@@ -740,27 +740,27 @@ class GetClusterSummaryResponse(AbstractModel):
 
 
 class GetInvokeTxRequest(AbstractModel):
-    """GetInvokeTx请求参数结构体
+    """GetInvokeTx請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：transaction
+        :param Module: 模組名，固定欄位：transaction
         :type Module: str
-        :param Operation: 操作名，固定字段：query_txid
+        :param Operation: 操作名，固定欄位：query_txid
         :type Operation: str
-        :param ClusterId: 区块链网络ID，可在区块链网络详情或列表中获取
+        :param ClusterId: 區塊鏈網絡ID，可在區塊鏈網絡詳情或清單中獲取
         :type ClusterId: str
-        :param ChannelName: 业务所属通道名称，可在通道详情或列表中获取
+        :param ChannelName: 業務所屬通道名稱，可在通道詳情或清單中獲取
         :type ChannelName: str
-        :param PeerName: 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+        :param PeerName: 執行該查詢交易的節點名稱，可以在通道詳情中獲取該通道上的節點名稱極其所屬組織名稱
         :type PeerName: str
-        :param PeerGroup: 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+        :param PeerGroup: 執行該查詢交易的節點所屬組織名稱，可以在通道詳情中獲取該通道上的節點名稱極其所屬組織名稱
         :type PeerGroup: str
         :param TxId: 交易ID
         :type TxId: str
-        :param GroupName: 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+        :param GroupName: 調用合約的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
         """
         self.Module = None
@@ -785,19 +785,19 @@ class GetInvokeTxRequest(AbstractModel):
 
 
 class GetInvokeTxResponse(AbstractModel):
-    """GetInvokeTx返回参数结构体
+    """GetInvokeTx返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TxValidationCode: 交易执行状态码
+        :param TxValidationCode: 交易執行狀态碼
         :type TxValidationCode: int
-        :param TxValidationMsg: 交易执行消息
+        :param TxValidationMsg: 交易執行訊息
         :type TxValidationMsg: str
-        :param BlockId: 交易所在区块ID
+        :param BlockId: 交易所在區塊ID
         :type BlockId: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TxValidationCode = None
@@ -814,31 +814,31 @@ class GetInvokeTxResponse(AbstractModel):
 
 
 class GetLatesdTransactionListRequest(AbstractModel):
-    """GetLatesdTransactionList请求参数结构体
+    """GetLatesdTransactionList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名称，固定字段：transaction
+        :param Module: 模組名稱，固定欄位：transaction
         :type Module: str
-        :param Operation: 操作名称，固定字段：latest_transaction_list
+        :param Operation: 操作名稱，固定欄位：latest_transaction_list
         :type Operation: str
-        :param GroupId: 组织ID，固定字段：0
+        :param GroupId: 組織ID，固定欄位：0
         :type GroupId: int
-        :param ChannelId: 通道ID，固定字段：0
+        :param ChannelId: 通道ID，固定欄位：0
         :type ChannelId: int
-        :param LatestBlockNumber: 获取的最新交易的区块数量，取值范围1~5
+        :param LatestBlockNumber: 獲取的最新交易的區塊數量，取值範圍1~5
         :type LatestBlockNumber: int
-        :param GroupName: 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
+        :param GroupName: 調用介面的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
-        :param ChannelName: 需要查询的通道名称，可在通道详情或列表中获取
+        :param ChannelName: 需要查詢的通道名稱，可在通道詳情或清單中獲取
         :type ChannelName: str
-        :param ClusterId: 区块链网络ID，可在区块链网络详情或列表中获取
+        :param ClusterId: 區塊鏈網絡ID，可在區塊鏈網絡詳情或清單中獲取
         :type ClusterId: str
-        :param Offset: 需要获取的起始交易偏移
+        :param Offset: 需要獲取的起始交易偏移
         :type Offset: int
-        :param Limit: 需要获取的交易数量
+        :param Limit: 需要獲取的交易數量
         :type Limit: int
         """
         self.Module = None
@@ -867,17 +867,17 @@ class GetLatesdTransactionListRequest(AbstractModel):
 
 
 class GetLatesdTransactionListResponse(AbstractModel):
-    """GetLatesdTransactionList返回参数结构体
+    """GetLatesdTransactionList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 交易总数量
+        :param TotalCount: 交易總數量
         :type TotalCount: int
-        :param TransactionList: 交易列表
+        :param TransactionList: 交易清單
         :type TransactionList: list of TransactionItem
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -897,17 +897,17 @@ class GetLatesdTransactionListResponse(AbstractModel):
 
 
 class GetTransByHashHandlerRequest(AbstractModel):
-    """GetTransByHashHandler请求参数结构体
+    """GetTransByHashHandler請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：transaction
+        :param Module: 模組名，固定欄位：transaction
         :type Module: str
-        :param Operation: 操作名，固定字段：get_trans_by_hash
+        :param Operation: 操作名，固定欄位：get_trans_by_hash
         :type Operation: str
-        :param GroupPk: 群组编号
+        :param GroupPk: 群組編号
         :type GroupPk: str
         :param TransHash: 交易哈希
         :type TransHash: str
@@ -926,15 +926,15 @@ class GetTransByHashHandlerRequest(AbstractModel):
 
 
 class GetTransByHashHandlerResponse(AbstractModel):
-    """GetTransByHashHandler返回参数结构体
+    """GetTransByHashHandler返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TransactionJson: 交易信息json字符串
+        :param TransactionJson: 交易訊息json字串
         :type TransactionJson: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TransactionJson = None
@@ -947,21 +947,21 @@ class GetTransByHashHandlerResponse(AbstractModel):
 
 
 class GetTransListHandlerRequest(AbstractModel):
-    """GetTransListHandler请求参数结构体
+    """GetTransListHandler請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：transaction
+        :param Module: 模組名，固定欄位：transaction
         :type Module: str
-        :param Operation: 操作名，固定字段：get_trans_list
+        :param Operation: 操作名，固定欄位：get_trans_list
         :type Operation: str
-        :param Offset: 记录偏移量
+        :param Offset: 記錄偏移量
         :type Offset: int
-        :param Limit: 每页记录数
+        :param Limit: 每頁記錄數
         :type Limit: int
-        :param GroupPk: 群组编号
+        :param GroupPk: 群組編号
         :type GroupPk: str
         :param TransHash: 交易哈希
         :type TransHash: str
@@ -984,19 +984,19 @@ class GetTransListHandlerRequest(AbstractModel):
 
 
 class GetTransListHandlerResponse(AbstractModel):
-    """GetTransListHandler返回参数结构体
+    """GetTransListHandler返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 总记录数
+        :param TotalCount: 總記錄數
         :type TotalCount: int
-        :param GroupPk: 当前群组编号
+        :param GroupPk: 當前群組編号
         :type GroupPk: str
-        :param List: 返回数据列表
+        :param List: 返回數據清單
         :type List: list of BcosTransInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -1018,25 +1018,25 @@ class GetTransListHandlerResponse(AbstractModel):
 
 
 class GetTransactionDetailForUserRequest(AbstractModel):
-    """GetTransactionDetailForUser请求参数结构体
+    """GetTransactionDetailForUser請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：transaction
+        :param Module: 模組名，固定欄位：transaction
         :type Module: str
-        :param Operation: 操作名，固定字段：transaction_detail_for_user
+        :param Operation: 操作名，固定欄位：transaction_detail_for_user
         :type Operation: str
-        :param ClusterId: 区块链网络ID，可在区块链网络详情或列表中获取
+        :param ClusterId: 區塊鏈網絡ID，可在區塊鏈網絡詳情或清單中獲取
         :type ClusterId: str
-        :param GroupName: 参与交易的组织名称，可以在组织管理列表中获取当前组织的名称
+        :param GroupName: 參與交易的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
-        :param ChannelName: 业务所属通道名称，可在通道详情或列表中获取
+        :param ChannelName: 業務所屬通道名稱，可在通道詳情或清單中獲取
         :type ChannelName: str
-        :param BlockId: 区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID
+        :param BlockId: 區塊ID，通過GetInvokeTx介面可以獲取交易所在的區塊ID
         :type BlockId: int
-        :param TransactionId: 交易ID，需要查询的详情的交易ID
+        :param TransactionId: 交易ID，需要查詢的詳情的交易ID
         :type TransactionId: str
         """
         self.Module = None
@@ -1059,7 +1059,7 @@ class GetTransactionDetailForUserRequest(AbstractModel):
 
 
 class GetTransactionDetailForUserResponse(AbstractModel):
-    """GetTransactionDetailForUser返回参数结构体
+    """GetTransactionDetailForUser返回參數結構體
 
     """
 
@@ -1069,29 +1069,29 @@ class GetTransactionDetailForUserResponse(AbstractModel):
         :type TransactionId: str
         :param TransactionHash: 交易hash
         :type TransactionHash: str
-        :param CreateOrgName: 创建交易的组织名
+        :param CreateOrgName: 創建交易的組織名
         :type CreateOrgName: str
-        :param TransactionType: 交易类型（普通交易和配置交易）
+        :param TransactionType: 交易類型（普通交易和配置交易）
         :type TransactionType: str
-        :param TransactionStatus: 交易状态
+        :param TransactionStatus: 交易狀态
         :type TransactionStatus: str
-        :param CreateTime: 交易创建时间
+        :param CreateTime: 交易創建時間
         :type CreateTime: str
-        :param TransactionData: 交易数据
+        :param TransactionData: 交易數據
         :type TransactionData: str
-        :param BlockId: 交易所在区块号
+        :param BlockId: 交易所在區塊号
         :type BlockId: int
-        :param BlockHash: 交易所在区块哈希
+        :param BlockHash: 交易所在區塊哈希
         :type BlockHash: str
-        :param BlockHeight: 交易所在区块高度
+        :param BlockHeight: 交易所在區塊高度
         :type BlockHeight: int
-        :param ChannelName: 通道名称
+        :param ChannelName: 通道名稱
         :type ChannelName: str
-        :param ContractName: 交易所在合约名称
+        :param ContractName: 交易所在合約名稱
         :type ContractName: str
-        :param EndorserOrgList: 背书组织列表
+        :param EndorserOrgList: 背書組織清單
         :type EndorserOrgList: list of EndorserGroup
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TransactionId = None
@@ -1133,31 +1133,31 @@ class GetTransactionDetailForUserResponse(AbstractModel):
 
 
 class InvokeRequest(AbstractModel):
-    """Invoke请求参数结构体
+    """Invoke請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：transaction
+        :param Module: 模組名，固定欄位：transaction
         :type Module: str
-        :param Operation: 操作名，固定字段：invoke
+        :param Operation: 操作名，固定欄位：invoke
         :type Operation: str
-        :param ClusterId: 区块链网络ID，可在区块链网络详情或列表中获取
+        :param ClusterId: 區塊鏈網絡ID，可在區塊鏈網絡詳情或清單中獲取
         :type ClusterId: str
-        :param ChaincodeName: 业务所属智能合约名称，可在智能合约详情或列表中获取
+        :param ChaincodeName: 業務所屬智慧合約名稱，可在智慧合約詳情或清單中獲取
         :type ChaincodeName: str
-        :param ChannelName: 业务所属通道名称，可在通道详情或列表中获取
+        :param ChannelName: 業務所屬通道名稱，可在通道詳情或清單中獲取
         :type ChannelName: str
-        :param Peers: 对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
+        :param Peers: 對該筆交易進行背書的節點清單（包括節點名稱和節點所屬組織名稱，詳見數據結構一節），可以在通道詳情中獲取該通道上的節點名稱極其所屬組織名稱
         :type Peers: list of PeerSet
-        :param FuncName: 该笔交易需要调用的智能合约中的函数名称
+        :param FuncName: 該筆交易需要調用的智慧合約中的函數名稱
         :type FuncName: str
-        :param GroupName: 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+        :param GroupName: 調用合約的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
-        :param Args: 被调用的函数参数列表
+        :param Args: 被調用的函數參數清單
         :type Args: list of str
-        :param AsyncFlag: 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
+        :param AsyncFlag: 同步調用标識，可選參數，值爲0或者不傳表示使用同步方法調用，調用後會等待交易執行後再返回執行結果；值爲1時表示使用異步方式調用Invoke，執行後會立即返回交易對應的Txid，後續需要通過GetInvokeTx這個API查詢該交易的執行結果。（對于邏輯較爲簡單的交易，可以使用同步模式；對于邏輯較爲複雜的交易，建議使用異步模式，否則容易導緻API因等待時間過長，返回等待超時）
         :type AsyncFlag: int
         """
         self.Module = None
@@ -1191,7 +1191,7 @@ class InvokeRequest(AbstractModel):
 
 
 class InvokeResponse(AbstractModel):
-    """Invoke返回参数结构体
+    """Invoke返回參數結構體
 
     """
 
@@ -1199,9 +1199,9 @@ class InvokeResponse(AbstractModel):
         """
         :param Txid: 交易ID
         :type Txid: str
-        :param Events: 交易执行结果
+        :param Events: 交易執行結果
         :type Events: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Txid = None
@@ -1222,9 +1222,9 @@ class PeerSet(AbstractModel):
 
     def __init__(self):
         """
-        :param PeerName: 节点名称
+        :param PeerName: 節點名稱
         :type PeerName: str
-        :param OrgName: 组织名称
+        :param OrgName: 組織名稱
         :type OrgName: str
         """
         self.PeerName = None
@@ -1237,29 +1237,29 @@ class PeerSet(AbstractModel):
 
 
 class QueryRequest(AbstractModel):
-    """Query请求参数结构体
+    """Query請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：transaction
+        :param Module: 模組名，固定欄位：transaction
         :type Module: str
-        :param Operation: 操作名，固定字段：query
+        :param Operation: 操作名，固定欄位：query
         :type Operation: str
-        :param ClusterId: 区块链网络ID，可在区块链网络详情或列表中获取
+        :param ClusterId: 區塊鏈網絡ID，可在區塊鏈網絡詳情或清單中獲取
         :type ClusterId: str
-        :param ChaincodeName: 业务所属智能合约名称，可在智能合约详情或列表中获取
+        :param ChaincodeName: 業務所屬智慧合約名稱，可在智慧合約詳情或清單中獲取
         :type ChaincodeName: str
-        :param ChannelName: 业务所属通道名称，可在通道详情或列表中获取
+        :param ChannelName: 業務所屬通道名稱，可在通道詳情或清單中獲取
         :type ChannelName: str
-        :param Peers: 执行该查询交易的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
+        :param Peers: 執行該查詢交易的節點清單（包括節點名稱和節點所屬組織名稱，詳見數據結構一節），可以在通道詳情中獲取該通道上的節點名稱極其所屬組織名稱
         :type Peers: list of PeerSet
-        :param FuncName: 该笔交易查询需要调用的智能合约中的函数名称
+        :param FuncName: 該筆交易查詢需要調用的智慧合約中的函數名稱
         :type FuncName: str
-        :param GroupName: 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+        :param GroupName: 調用合約的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
-        :param Args: 被调用的函数参数列表
+        :param Args: 被調用的函數參數清單
         :type Args: list of str
         """
         self.Module = None
@@ -1291,15 +1291,15 @@ class QueryRequest(AbstractModel):
 
 
 class QueryResponse(AbstractModel):
-    """Query返回参数结构体
+    """Query返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 查询结果数据
+        :param Data: 查詢結果數據
         :type Data: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -1312,23 +1312,23 @@ class QueryResponse(AbstractModel):
 
 
 class SendTransactionHandlerRequest(AbstractModel):
-    """SendTransactionHandler请求参数结构体
+    """SendTransactionHandler請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：transaction
+        :param Module: 模組名，固定欄位：transaction
         :type Module: str
-        :param Operation: 操作名，固定字段：send_transaction
+        :param Operation: 操作名，固定欄位：send_transaction
         :type Operation: str
-        :param GroupPk: 群组编号
+        :param GroupPk: 群組編号
         :type GroupPk: str
-        :param ContractId: 合约编号
+        :param ContractId: 合約編号
         :type ContractId: int
-        :param FuncName: 合约方法名
+        :param FuncName: 合約方法名
         :type FuncName: str
-        :param FuncParam: 合约方法入参
+        :param FuncParam: 合約方法入參
         :type FuncParam: list of str
         """
         self.Module = None
@@ -1349,15 +1349,15 @@ class SendTransactionHandlerRequest(AbstractModel):
 
 
 class SendTransactionHandlerResponse(AbstractModel):
-    """SendTransactionHandler返回参数结构体
+    """SendTransactionHandler返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TransactionRsp: 交易结果json字符串
+        :param TransactionRsp: 交易結果json字串
         :type TransactionRsp: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TransactionRsp = None
@@ -1370,17 +1370,17 @@ class SendTransactionHandlerResponse(AbstractModel):
 
 
 class SrvInvokeRequest(AbstractModel):
-    """SrvInvoke请求参数结构体
+    """SrvInvoke請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Service: 服务类型，iss或者dam
+        :param Service: 服務類型，iss或者dam
         :type Service: str
-        :param Method: 服务接口，要调用的方法函数名
+        :param Method: 服務介面，要調用的方法函數名
         :type Method: str
-        :param Param: 用户自定义json字符串
+        :param Param: 用戶自定義json字串
         :type Param: str
         """
         self.Service = None
@@ -1395,19 +1395,19 @@ class SrvInvokeRequest(AbstractModel):
 
 
 class SrvInvokeResponse(AbstractModel):
-    """SrvInvoke返回参数结构体
+    """SrvInvoke返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RetCode: 返回码
+        :param RetCode: 返回碼
         :type RetCode: int
-        :param RetMsg: 返回消息
+        :param RetMsg: 返回訊息
         :type RetMsg: str
-        :param Data: 返回数据
+        :param Data: 返回數據
         :type Data: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RetCode = None
@@ -1424,27 +1424,27 @@ class SrvInvokeResponse(AbstractModel):
 
 
 class TransByDynamicContractHandlerRequest(AbstractModel):
-    """TransByDynamicContractHandler请求参数结构体
+    """TransByDynamicContractHandler請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Module: 模块名，固定字段：transaction
+        :param Module: 模組名，固定欄位：transaction
         :type Module: str
-        :param Operation: 操作名，固定字段：trans_by_dynamic_contract
+        :param Operation: 操作名，固定欄位：trans_by_dynamic_contract
         :type Operation: str
-        :param GroupPk: 群组编号
+        :param GroupPk: 群組編号
         :type GroupPk: str
-        :param ContractAddress: 合约地址（合约部署成功，可得到合约地址）
+        :param ContractAddress: 合約網址（合約佈署成功，可得到合約網址）
         :type ContractAddress: str
-        :param ContractName: 合约名
+        :param ContractName: 合約名
         :type ContractName: str
-        :param AbiInfo: 合约编译后的abi
+        :param AbiInfo: 合約編譯後的abi
         :type AbiInfo: str
-        :param FuncName: 合约被调用方法名
+        :param FuncName: 合約被調用方法名
         :type FuncName: str
-        :param FuncParam: 合约被调用方法的入参
+        :param FuncParam: 合約被調用方法的入參
         :type FuncParam: list of str
         """
         self.Module = None
@@ -1469,15 +1469,15 @@ class TransByDynamicContractHandlerRequest(AbstractModel):
 
 
 class TransByDynamicContractHandlerResponse(AbstractModel):
-    """TransByDynamicContractHandler返回参数结构体
+    """TransByDynamicContractHandler返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TransactionRsp: 交易结果json字符串
+        :param TransactionRsp: 交易結果json字串
         :type TransactionRsp: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TransactionRsp = None
@@ -1490,7 +1490,7 @@ class TransByDynamicContractHandlerResponse(AbstractModel):
 
 
 class TransactionItem(AbstractModel):
-    """交易列表项信息
+    """交易清單項訊息
 
     """
 
@@ -1500,17 +1500,17 @@ class TransactionItem(AbstractModel):
         :type TransactionId: str
         :param TransactionHash: 交易hash
         :type TransactionHash: str
-        :param CreateOrgName: 创建交易的组织名
+        :param CreateOrgName: 創建交易的組織名
         :type CreateOrgName: str
-        :param BlockId: 交易所在区块号
+        :param BlockId: 交易所在區塊号
         :type BlockId: int
-        :param TransactionType: 交易类型（普通交易和配置交易）
+        :param TransactionType: 交易類型（普通交易和配置交易）
         :type TransactionType: str
-        :param CreateTime: 交易创建时间
+        :param CreateTime: 交易創建時間
         :type CreateTime: str
-        :param BlockHeight: 交易所在区块高度
+        :param BlockHeight: 交易所在區塊高度
         :type BlockHeight: int
-        :param TransactionStatus: 交易状态
+        :param TransactionStatus: 交易狀态
         :type TransactionStatus: str
         """
         self.TransactionId = None

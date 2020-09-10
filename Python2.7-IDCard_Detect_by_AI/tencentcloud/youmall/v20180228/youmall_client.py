@@ -26,9 +26,9 @@ class YoumallClient(AbstractClient):
 
 
     def CreateAccount(self, request):
-        """创建集团门店管理员账号
+        """創建集團門店管理員賬号
 
-        :param request: 调用CreateAccount所需参数的结构体。
+        :param request: 調用CreateAccount所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.CreateAccountRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.CreateAccountResponse`
 
@@ -54,9 +54,9 @@ class YoumallClient(AbstractClient):
 
 
     def CreateFacePicture(self, request):
-        """通过上传指定规格的人脸图片，创建黑名单用户或者白名单用户。
+        """通過上傳指定規格的人臉圖片，創建黑名單用戶或者白名單用戶。
 
-        :param request: 调用CreateFacePicture所需参数的结构体。
+        :param request: 調用CreateFacePicture所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.CreateFacePictureRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.CreateFacePictureResponse`
 
@@ -82,9 +82,9 @@ class YoumallClient(AbstractClient):
 
 
     def DeletePersonFeature(self, request):
-        """删除顾客特征，仅支持删除黑名单或者白名单用户特征。
+        """删除顧客特征，僅支援删除黑名單或者白名單用戶特征。
 
-        :param request: 调用DeletePersonFeature所需参数的结构体。
+        :param request: 調用DeletePersonFeature所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DeletePersonFeatureRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DeletePersonFeatureResponse`
 
@@ -110,9 +110,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeCameraPerson(self, request):
-        """通过指定设备ID和指定时段，获取该时段内中收银台摄像设备抓取到顾客头像及身份ID
+        """通過指定設備ID和指定時段，獲取該時段内中收銀台攝像設備抓取到顧客頭像及身份ID
 
-        :param request: 调用DescribeCameraPerson所需参数的结构体。
+        :param request: 調用DescribeCameraPerson所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeCameraPersonRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeCameraPersonResponse`
 
@@ -138,9 +138,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeClusterPersonArrivedMall(self, request):
-        """输出开始时间到结束时间段内的进出场数据。按天聚合的情况下，每天多次进出场算一次，以最初进场时间为进场时间，最后离场时间为离场时间。停留时间为多次进出场的停留时间之和。
+        """輸出開始時間到結束時間段内的進出場數據。按天聚合的情況下，每天多次進出場算一次，以最初進場時間爲進場時間，最後離場時間爲離場時間。停留時間爲多次進出場的停留時間之和。
 
-        :param request: 调用DescribeClusterPersonArrivedMall所需参数的结构体。
+        :param request: 調用DescribeClusterPersonArrivedMall所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeClusterPersonArrivedMallRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeClusterPersonArrivedMallResponse`
 
@@ -166,9 +166,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeClusterPersonTrace(self, request):
-        """输出开始时间到结束时间段内的进出场数据。按天聚合的情况下，每天多次进出场算一次，以最初进场时间为进场时间，最后离场时间为离场时间。
+        """輸出開始時間到結束時間段内的進出場數據。按天聚合的情況下，每天多次進出場算一次，以最初進場時間爲進場時間，最後離場時間爲離場時間。
 
-        :param request: 调用DescribeClusterPersonTrace所需参数的结构体。
+        :param request: 調用DescribeClusterPersonTrace所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeClusterPersonTraceRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeClusterPersonTraceResponse`
 
@@ -194,9 +194,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeFaceIdByTempId(self, request):
-        """通过DescribeCameraPerson接口上报的收银台身份ID查询顾客的FaceID。查询最佳时间为收银台上报的次日1点后。
+        """通過DescribeCameraPerson介面上報的收銀台身份ID查詢顧客的FaceID。查詢最佳時間爲收銀台上報的次日1點後。
 
-        :param request: 调用DescribeFaceIdByTempId所需参数的结构体。
+        :param request: 調用DescribeFaceIdByTempId所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeFaceIdByTempIdRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeFaceIdByTempIdResponse`
 
@@ -222,9 +222,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeHistoryNetworkInfo(self, request):
-        """返回当前门店历史网络状态数据
+        """返回當前門店曆史網絡狀态數據
 
-        :param request: 调用DescribeHistoryNetworkInfo所需参数的结构体。
+        :param request: 調用DescribeHistoryNetworkInfo所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeHistoryNetworkInfoRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeHistoryNetworkInfoResponse`
 
@@ -250,9 +250,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeNetworkInfo(self, request):
-        """返回当前门店最新网络状态数据
+        """返回當前門店最新網絡狀态數據
 
-        :param request: 调用DescribeNetworkInfo所需参数的结构体。
+        :param request: 調用DescribeNetworkInfo所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeNetworkInfoRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeNetworkInfoResponse`
 
@@ -278,9 +278,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribePerson(self, request):
-        """查询指定某一卖场的用户信息
+        """查詢指定某一賣場的用戶訊息
 
-        :param request: 调用DescribePerson所需参数的结构体。
+        :param request: 調用DescribePerson所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribePersonRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribePersonResponse`
 
@@ -306,10 +306,10 @@ class YoumallClient(AbstractClient):
 
 
     def DescribePersonArrivedMall(self, request):
-        """输出开始时间到结束时间段内的进出场数据。不做按天聚合的情况下，每次进出场，产生一条进出场数据。
+        """輸出開始時間到結束時間段内的進出場數據。不做按天聚合的情況下，每次進出場，産生一條進出場數據。
 
 
-        :param request: 调用DescribePersonArrivedMall所需参数的结构体。
+        :param request: 調用DescribePersonArrivedMall所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribePersonArrivedMallRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribePersonArrivedMallResponse`
 
@@ -335,9 +335,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribePersonInfo(self, request):
-        """指定门店获取所有顾客详情列表，包含客户ID、图片、年龄、性别
+        """指定門店獲取所有顧客詳情清單，包含客戶ID、圖片、年齡、性别
 
-        :param request: 调用DescribePersonInfo所需参数的结构体。
+        :param request: 調用DescribePersonInfo所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribePersonInfoRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribePersonInfoResponse`
 
@@ -363,9 +363,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribePersonInfoByFacePicture(self, request):
-        """通过上传人脸图片检索系统face id、顾客身份信息及底图
+        """通過上傳人臉圖片檢索系統face id、顧客身份訊息及底圖
 
-        :param request: 调用DescribePersonInfoByFacePicture所需参数的结构体。
+        :param request: 調用DescribePersonInfoByFacePicture所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribePersonInfoByFacePictureRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribePersonInfoByFacePictureResponse`
 
@@ -391,9 +391,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribePersonTrace(self, request):
-        """输出开始时间到结束时间段内的进出场数据。
+        """輸出開始時間到結束時間段内的進出場數據。
 
-        :param request: 调用DescribePersonTrace所需参数的结构体。
+        :param request: 調用DescribePersonTrace所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribePersonTraceRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribePersonTraceResponse`
 
@@ -419,9 +419,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribePersonTraceDetail(self, request):
-        """查询客户单次到场轨迹明细
+        """查詢客戶單次到場軌迹明細
 
-        :param request: 调用DescribePersonTraceDetail所需参数的结构体。
+        :param request: 調用DescribePersonTraceDetail所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribePersonTraceDetailRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribePersonTraceDetailResponse`
 
@@ -447,9 +447,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribePersonVisitInfo(self, request):
-        """获取门店指定时间范围内的所有用户到访信息记录，支持的时间范围：过去365天，含当天。
+        """獲取門店指定時間範圍内的所有用戶到訪訊息記錄，支援的時間範圍：過去365天，含當天。
 
-        :param request: 调用DescribePersonVisitInfo所需参数的结构体。
+        :param request: 調用DescribePersonVisitInfo所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribePersonVisitInfoRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribePersonVisitInfoResponse`
 
@@ -475,9 +475,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeShopHourTrafficInfo(self, request):
-        """按小时提供查询日期范围内门店的每天每小时累计客流人数数据，支持的时间范围：过去365天，含当天。
+        """按小時提供查詢日期範圍内門店的每天每小時累計客流人數數據，支援的時間範圍：過去365天，含當天。
 
-        :param request: 调用DescribeShopHourTrafficInfo所需参数的结构体。
+        :param request: 調用DescribeShopHourTrafficInfo所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeShopHourTrafficInfoRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeShopHourTrafficInfoResponse`
 
@@ -503,9 +503,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeShopInfo(self, request):
-        """根据客户身份标识获取客户下所有的门店信息列表
+        """根據客戶身份标識獲取客戶下所有的門店訊息清單
 
-        :param request: 调用DescribeShopInfo所需参数的结构体。
+        :param request: 調用DescribeShopInfo所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeShopInfoRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeShopInfoResponse`
 
@@ -531,9 +531,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeShopTrafficInfo(self, request):
-        """按天提供查询日期范围内门店的单日累计客流人数，支持的时间范围：过去365天，含当天。
+        """按天提供查詢日期範圍内門店的單日累計客流人數，支援的時間範圍：過去365天，含當天。
 
-        :param request: 调用DescribeShopTrafficInfo所需参数的结构体。
+        :param request: 調用DescribeShopTrafficInfo所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeShopTrafficInfoRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeShopTrafficInfoResponse`
 
@@ -559,9 +559,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeTrajectoryData(self, request):
-        """获取动线轨迹信息
+        """獲取動線軌迹訊息
 
-        :param request: 调用DescribeTrajectoryData所需参数的结构体。
+        :param request: 調用DescribeTrajectoryData所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeTrajectoryDataRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeTrajectoryDataResponse`
 
@@ -587,9 +587,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeZoneFlowAgeInfoByZoneId(self, request):
-        """获取指定区域人流各年龄占比
+        """獲取指定區域人流各年齡占比
 
-        :param request: 调用DescribeZoneFlowAgeInfoByZoneId所需参数的结构体。
+        :param request: 調用DescribeZoneFlowAgeInfoByZoneId所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeZoneFlowAgeInfoByZoneIdRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeZoneFlowAgeInfoByZoneIdResponse`
 
@@ -615,9 +615,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeZoneFlowAndStayTime(self, request):
-        """获取区域人流和停留时间
+        """獲取區域人流和停留時間
 
-        :param request: 调用DescribeZoneFlowAndStayTime所需参数的结构体。
+        :param request: 調用DescribeZoneFlowAndStayTime所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeZoneFlowAndStayTimeRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeZoneFlowAndStayTimeResponse`
 
@@ -643,9 +643,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeZoneFlowDailyByZoneId(self, request):
-        """获取指定区域每日客流量
+        """獲取指定區域每日客流量
 
-        :param request: 调用DescribeZoneFlowDailyByZoneId所需参数的结构体。
+        :param request: 調用DescribeZoneFlowDailyByZoneId所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeZoneFlowDailyByZoneIdRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeZoneFlowDailyByZoneIdResponse`
 
@@ -671,9 +671,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeZoneFlowGenderAvrStayTimeByZoneId(self, request):
-        """获取指定区域不同年龄段男女平均停留时间
+        """獲取指定區域不同年齡段男女平均停留時間
 
-        :param request: 调用DescribeZoneFlowGenderAvrStayTimeByZoneId所需参数的结构体。
+        :param request: 調用DescribeZoneFlowGenderAvrStayTimeByZoneId所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse`
 
@@ -699,9 +699,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeZoneFlowGenderInfoByZoneId(self, request):
-        """获取指定区域性别占比
+        """獲取指定區域性别占比
 
-        :param request: 调用DescribeZoneFlowGenderInfoByZoneId所需参数的结构体。
+        :param request: 調用DescribeZoneFlowGenderInfoByZoneId所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeZoneFlowGenderInfoByZoneIdRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeZoneFlowGenderInfoByZoneIdResponse`
 
@@ -727,9 +727,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeZoneFlowHourlyByZoneId(self, request):
-        """获取指定区域分时客流量
+        """獲取指定區域分時客流量
 
-        :param request: 调用DescribeZoneFlowHourlyByZoneId所需参数的结构体。
+        :param request: 調用DescribeZoneFlowHourlyByZoneId所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeZoneFlowHourlyByZoneIdRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeZoneFlowHourlyByZoneIdResponse`
 
@@ -755,9 +755,9 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeZoneTrafficInfo(self, request):
-        """按天提供查询日期范围内，客户指定门店下的所有区域（优Mall部署时已配置区域）的累计客流人次和平均停留时间。支持的时间范围：过去365天，含当天。
+        """按天提供查詢日期範圍内，客戶指定門店下的所有區域（優Mall佈署時已配置區域）的累計客流人次和平均停留時間。支援的時間範圍：過去365天，含當天。
 
-        :param request: 调用DescribeZoneTrafficInfo所需参数的结构体。
+        :param request: 調用DescribeZoneTrafficInfo所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.DescribeZoneTrafficInfoRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.DescribeZoneTrafficInfoResponse`
 
@@ -783,9 +783,9 @@ class YoumallClient(AbstractClient):
 
 
     def ModifyPersonFeatureInfo(self, request):
-        """支持修改黑白名单类型的顾客特征
+        """支援修改黑白名單類型的顧客特征
 
-        :param request: 调用ModifyPersonFeatureInfo所需参数的结构体。
+        :param request: 調用ModifyPersonFeatureInfo所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.ModifyPersonFeatureInfoRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.ModifyPersonFeatureInfoResponse`
 
@@ -811,9 +811,9 @@ class YoumallClient(AbstractClient):
 
 
     def ModifyPersonTagInfo(self, request):
-        """标记到店顾客的身份类型，例如黑名单、白名单等
+        """标記到店顧客的身份類型，例如黑名單、白名單等
 
-        :param request: 调用ModifyPersonTagInfo所需参数的结构体。
+        :param request: 調用ModifyPersonTagInfo所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.ModifyPersonTagInfoRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.ModifyPersonTagInfoResponse`
 
@@ -839,9 +839,9 @@ class YoumallClient(AbstractClient):
 
 
     def ModifyPersonType(self, request):
-        """修改顾客身份类型接口
+        """修改顧客身份類型介面
 
-        :param request: 调用ModifyPersonType所需参数的结构体。
+        :param request: 調用ModifyPersonType所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.ModifyPersonTypeRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.ModifyPersonTypeResponse`
 
@@ -867,9 +867,9 @@ class YoumallClient(AbstractClient):
 
 
     def RegisterCallback(self, request):
-        """调用本接口在优Mall中注册自己集团的到店通知回调接口地址，接口协议为HTTP或HTTPS。注册后，若集团有特殊身份（例如老客）到店通知，优Mall后台将主动将到店信息push给该接口
+        """調用本介面在優Mall中注冊自己集團的到店通知回調介面網址，介面協議爲HTTP或HTTPS。注冊後，若集團有特殊身份（例如老客）到店通知，優Mall後台将主動将到店訊息push給該介面
 
-        :param request: 调用RegisterCallback所需参数的结构体。
+        :param request: 調用RegisterCallback所需參數的結構體。
         :type request: :class:`tencentcloud.youmall.v20180228.models.RegisterCallbackRequest`
         :rtype: :class:`tencentcloud.youmall.v20180228.models.RegisterCallbackResponse`
 

@@ -26,7 +26,7 @@ class TioneClient(AbstractClient):
 
 
     def CreateCodeRepository(self, request):
-        """创建存储库
+        """創建儲存庫
 
         :param request: Request instance for CreateCodeRepository.
         :type request: :class:`tencentcloud.tione.v20191022.models.CreateCodeRepositoryRequest`
@@ -54,7 +54,7 @@ class TioneClient(AbstractClient):
 
 
     def CreateNotebookInstance(self, request):
-        """创建Notebook实例
+        """創建Notebook實例
 
         :param request: Request instance for CreateNotebookInstance.
         :type request: :class:`tencentcloud.tione.v20191022.models.CreateNotebookInstanceRequest`
@@ -82,7 +82,7 @@ class TioneClient(AbstractClient):
 
 
     def CreateNotebookLifecycleScript(self, request):
-        """创建Notebook生命周期脚本
+        """創建Notebook生命週期腳本
 
         :param request: Request instance for CreateNotebookLifecycleScript.
         :type request: :class:`tencentcloud.tione.v20191022.models.CreateNotebookLifecycleScriptRequest`
@@ -110,7 +110,7 @@ class TioneClient(AbstractClient):
 
 
     def CreatePresignedNotebookInstanceUrl(self, request):
-        """创建Notebook授权Url
+        """創建Notebook授權Url
 
         :param request: Request instance for CreatePresignedNotebookInstanceUrl.
         :type request: :class:`tencentcloud.tione.v20191022.models.CreatePresignedNotebookInstanceUrlRequest`
@@ -138,7 +138,7 @@ class TioneClient(AbstractClient):
 
 
     def CreateTrainingJob(self, request):
-        """创建训练任务
+        """創建訓練任務
 
         :param request: Request instance for CreateTrainingJob.
         :type request: :class:`tencentcloud.tione.v20191022.models.CreateTrainingJobRequest`
@@ -166,7 +166,7 @@ class TioneClient(AbstractClient):
 
 
     def DeleteCodeRepository(self, request):
-        """删除存储库
+        """删除儲存庫
 
         :param request: Request instance for DeleteCodeRepository.
         :type request: :class:`tencentcloud.tione.v20191022.models.DeleteCodeRepositoryRequest`
@@ -194,7 +194,7 @@ class TioneClient(AbstractClient):
 
 
     def DeleteNotebookInstance(self, request):
-        """删除notebook实例
+        """删除notebook實例
 
         :param request: Request instance for DeleteNotebookInstance.
         :type request: :class:`tencentcloud.tione.v20191022.models.DeleteNotebookInstanceRequest`
@@ -222,7 +222,7 @@ class TioneClient(AbstractClient):
 
 
     def DeleteNotebookLifecycleScript(self, request):
-        """删除Notebook生命周期脚本
+        """删除Notebook生命週期腳本
 
         :param request: Request instance for DeleteNotebookLifecycleScript.
         :type request: :class:`tencentcloud.tione.v20191022.models.DeleteNotebookLifecycleScriptRequest`
@@ -250,7 +250,7 @@ class TioneClient(AbstractClient):
 
 
     def DescribeCodeRepositories(self, request):
-        """查询存储库列表
+        """查詢儲存庫清單
 
         :param request: Request instance for DescribeCodeRepositories.
         :type request: :class:`tencentcloud.tione.v20191022.models.DescribeCodeRepositoriesRequest`
@@ -278,7 +278,7 @@ class TioneClient(AbstractClient):
 
 
     def DescribeCodeRepository(self, request):
-        """查询存储库详情
+        """查詢儲存庫詳情
 
         :param request: Request instance for DescribeCodeRepository.
         :type request: :class:`tencentcloud.tione.v20191022.models.DescribeCodeRepositoryRequest`
@@ -306,7 +306,7 @@ class TioneClient(AbstractClient):
 
 
     def DescribeNotebookInstance(self, request):
-        """查询Notebook实例详情
+        """查詢Notebook實例詳情
 
         :param request: Request instance for DescribeNotebookInstance.
         :type request: :class:`tencentcloud.tione.v20191022.models.DescribeNotebookInstanceRequest`
@@ -334,7 +334,7 @@ class TioneClient(AbstractClient):
 
 
     def DescribeNotebookInstances(self, request):
-        """查询Notebook实例列表
+        """查詢Notebook實例清單
 
         :param request: Request instance for DescribeNotebookInstances.
         :type request: :class:`tencentcloud.tione.v20191022.models.DescribeNotebookInstancesRequest`
@@ -362,7 +362,7 @@ class TioneClient(AbstractClient):
 
 
     def DescribeNotebookLifecycleScript(self, request):
-        """查看notebook生命周期脚本详情
+        """檢視notebook生命週期腳本詳情
 
         :param request: Request instance for DescribeNotebookLifecycleScript.
         :type request: :class:`tencentcloud.tione.v20191022.models.DescribeNotebookLifecycleScriptRequest`
@@ -390,7 +390,7 @@ class TioneClient(AbstractClient):
 
 
     def DescribeNotebookLifecycleScripts(self, request):
-        """查看notebook生命周期脚本列表
+        """檢視notebook生命週期腳本清單
 
         :param request: Request instance for DescribeNotebookLifecycleScripts.
         :type request: :class:`tencentcloud.tione.v20191022.models.DescribeNotebookLifecycleScriptsRequest`
@@ -418,7 +418,7 @@ class TioneClient(AbstractClient):
 
 
     def DescribeTrainingJob(self, request):
-        """查询训练任务
+        """查詢訓練任務
 
         :param request: Request instance for DescribeTrainingJob.
         :type request: :class:`tencentcloud.tione.v20191022.models.DescribeTrainingJobRequest`
@@ -446,7 +446,7 @@ class TioneClient(AbstractClient):
 
 
     def StartNotebookInstance(self, request):
-        """启动Notebook实例
+        """啓動Notebook實例
 
         :param request: Request instance for StartNotebookInstance.
         :type request: :class:`tencentcloud.tione.v20191022.models.StartNotebookInstanceRequest`
@@ -474,7 +474,7 @@ class TioneClient(AbstractClient):
 
 
     def StopNotebookInstance(self, request):
-        """停止Notebook实例
+        """停止Notebook實例
 
         :param request: Request instance for StopNotebookInstance.
         :type request: :class:`tencentcloud.tione.v20191022.models.StopNotebookInstanceRequest`
@@ -502,7 +502,7 @@ class TioneClient(AbstractClient):
 
 
     def StopTrainingJob(self, request):
-        """停止训练任务
+        """停止訓練任務
 
         :param request: Request instance for StopTrainingJob.
         :type request: :class:`tencentcloud.tione.v20191022.models.StopTrainingJobRequest`
@@ -530,7 +530,7 @@ class TioneClient(AbstractClient):
 
 
     def UpdateCodeRepository(self, request):
-        """更新存储库
+        """更新儲存庫
 
         :param request: Request instance for UpdateCodeRepository.
         :type request: :class:`tencentcloud.tione.v20191022.models.UpdateCodeRepositoryRequest`
@@ -558,7 +558,7 @@ class TioneClient(AbstractClient):
 
 
     def UpdateNotebookInstance(self, request):
-        """更新Notebook实例
+        """更新Notebook實例
 
         :param request: Request instance for UpdateNotebookInstance.
         :type request: :class:`tencentcloud.tione.v20191022.models.UpdateNotebookInstanceRequest`
@@ -586,7 +586,7 @@ class TioneClient(AbstractClient):
 
 
     def UpdateNotebookLifecycleScript(self, request):
-        """更新notebook生命周期脚本
+        """更新notebook生命週期腳本
 
         :param request: Request instance for UpdateNotebookLifecycleScript.
         :type request: :class:`tencentcloud.tione.v20191022.models.UpdateNotebookLifecycleScriptRequest`

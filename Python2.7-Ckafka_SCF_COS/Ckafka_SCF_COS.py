@@ -18,20 +18,20 @@ from qcloud_cos_v5 import CosServiceError
 from qcloud_cos_v5 import CosClientError
 
 # Setting user properties, including secret_id, secret_key, region, bucket
-# 设置用户属性, 包括secret_id, secret_key, region，bucket
-appid = '1251762227'  # Please replace with your APPID. 请替换为您的 APPID
-secret_id = u'*********'  # Please replace with your SecretId. 请替换为您的 SecretId
-secret_key = u'********'  # Please replace with your SecretKey. 请替换为您的 SecretKey
-region = 'ap-guangzhou'  # Please replace with your region. 替换为用户的region
-token = ''  # To use the temporary key, you need to pass in the Token. The default is empty. 使用临时秘钥需要传入Token，默认为空,可不填
-bucket_upload = "mason-ckafka-scf-cos-1251762227"  # Please replace with your COS bucket. 替换为需要写入的COS Bucket
+# 設置用戶屬性, 包括secret_id, secret_key, region，bucket
+appid = '1251762227'  # Please replace with your APPID. 請替換爲您的 APPID
+secret_id = u'*********'  # Please replace with your SecretId. 請替換爲您的 SecretId
+secret_key = u'********'  # Please replace with your SecretKey. 請替換爲您的 SecretKey
+region = 'ap-guangzhou'  # Please replace with your region. 替換爲用戶的region
+token = ''  # To use the temporary key, you need to pass in the Token. The default is empty. 使用臨時秘鑰需要傳入Token，預設爲空,可不填
+bucket_upload = "mason-ckafka-scf-cos-1251762227"  # Please replace with your COS bucket. 替換爲需要寫入的COS Bucket
 
-# Getting configuration object. 获取配置对象
+# Getting configuration object. 獲取配置對象
 config = CosConfig(Region=region, Secret_id=secret_id, Secret_key=secret_key, Token=token)
 client = CosS3Client(config)
 logger = logging.getLogger()
 
-# Generating file name. 生成写入文件名
+# Generating file name. 生成寫入文件名
 def object_key_generater():
     logger.info("start to generate key name")
     tz = pytz.timezone('Asia/Shanghai')
@@ -42,7 +42,7 @@ def object_key_generater():
     object_key = '{}/{}'.format( dir_name,file_name)
     return object_key
 
-# Check if the file already exists. 检查文件是否已存在
+# Check if the file already exists. 檢查文件是否已存在
 def check_cos_file(key):
     try:
         resp = client.head_object(
@@ -76,7 +76,7 @@ def delete_local_file(src):
         except:
             pass
 
-# Uploading file to COS. 上传文件到COS
+# Uploading file to COS. 上傳文件到COS
 def upload_loacal_file(loacalpath):
     logger.info("Start to upload")
     if os.path.isfile(loacalpath):

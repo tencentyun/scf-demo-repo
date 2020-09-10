@@ -26,7 +26,7 @@ class SqlserverClient(AbstractClient):
 
 
     def CreateAccount(self, request):
-        """本接口（CreateAccount）用于创建实例账号
+        """本介面（CreateAccount）用于創建實例賬号
 
         :param request: Request instance for CreateAccount.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.CreateAccountRequest`
@@ -54,7 +54,7 @@ class SqlserverClient(AbstractClient):
 
 
     def CreateBackup(self, request):
-        """本接口(CreateBackup)用于创建备份。
+        """本介面(CreateBackup)用于創建備份。
 
         :param request: Request instance for CreateBackup.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.CreateBackupRequest`
@@ -82,7 +82,7 @@ class SqlserverClient(AbstractClient):
 
 
     def CreateDB(self, request):
-        """本接口（CreateDB）用于创建数据库。
+        """本介面（CreateDB）用于創建資料庫。
 
         :param request: Request instance for CreateDB.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.CreateDBRequest`
@@ -110,7 +110,7 @@ class SqlserverClient(AbstractClient):
 
 
     def CreateDBInstances(self, request):
-        """本接口（CreateDBInstances）用于创建实例。
+        """本介面（CreateDBInstances）用于創建實例。
 
         :param request: Request instance for CreateDBInstances.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.CreateDBInstancesRequest`
@@ -138,7 +138,7 @@ class SqlserverClient(AbstractClient):
 
 
     def CreateMigration(self, request):
-        """本接口（CreateMigration）作用是创建一个迁移任务
+        """本介面（CreateMigration）作用是創建一個遷移任務
 
         :param request: Request instance for CreateMigration.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.CreateMigrationRequest`
@@ -166,7 +166,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DeleteAccount(self, request):
-        """本接口（DeleteAccount）用于删除实例账号。
+        """本介面（DeleteAccount）用于删除實例賬号。
 
         :param request: Request instance for DeleteAccount.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.DeleteAccountRequest`
@@ -194,7 +194,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DeleteDB(self, request):
-        """本接口(DeleteDB)用于删除数据库。
+        """本介面(DeleteDB)用于删除資料庫。
 
         :param request: Request instance for DeleteDB.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.DeleteDBRequest`
@@ -222,7 +222,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DeleteMigration(self, request):
-        """本接口（DeleteMigration）用于删除迁移任务
+        """本介面（DeleteMigration）用于删除遷移任務
 
         :param request: Request instance for DeleteMigration.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.DeleteMigrationRequest`
@@ -250,7 +250,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeAccounts(self, request):
-        """本接口（DescribeAccounts）用于拉取实例账户列表。
+        """本介面（DescribeAccounts）用于拉取實例帳戶清單。
 
         :param request: Request instance for DescribeAccounts.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeAccountsRequest`
@@ -278,7 +278,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeBackups(self, request):
-        """本接口(DescribeBackups)用于查询备份列表。
+        """本介面(DescribeBackups)用于查詢備份清單。
 
         :param request: Request instance for DescribeBackups.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeBackupsRequest`
@@ -306,7 +306,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeDBInstances(self, request):
-        """本接口(DescribeDBInstances)用于查询实例列表。
+        """本介面(DescribeDBInstances)用于查詢實例清單。
 
         :param request: Request instance for DescribeDBInstances.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeDBInstancesRequest`
@@ -334,7 +334,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeDBs(self, request):
-        """本接口（DescribeDBs）用于查询数据库列表。
+        """本介面（DescribeDBs）用于查詢資料庫清單。
 
         :param request: Request instance for DescribeDBs.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeDBsRequest`
@@ -362,7 +362,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeFlowStatus(self, request):
-        """本接口(DescribeFlowStatus)用于查询流程状态。
+        """本介面(DescribeFlowStatus)用于查詢流程狀态。
 
         :param request: Request instance for DescribeFlowStatus.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeFlowStatusRequest`
@@ -390,7 +390,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeMigrationDetail(self, request):
-        """本接口（DescribeMigrationDetail）用于查询迁移任务的详细情况
+        """本介面（DescribeMigrationDetail）用于查詢遷移任務的詳細情況
 
         :param request: Request instance for DescribeMigrationDetail.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeMigrationDetailRequest`
@@ -418,7 +418,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeMigrations(self, request):
-        """本接口（DescribeMigrations）根据输入的限定条件，查询符合条件的迁移任务列表
+        """本介面（DescribeMigrations）根據輸入的限定條件，查詢符合條件的遷移任務清單
 
         :param request: Request instance for DescribeMigrations.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeMigrationsRequest`
@@ -446,7 +446,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeOrders(self, request):
-        """本接口（DescribeOrders）用于查询订单信息
+        """本介面（DescribeOrders）用于查詢訂單訊息
 
         :param request: Request instance for DescribeOrders.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeOrdersRequest`
@@ -474,7 +474,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeProductConfig(self, request):
-        """本接口 (DescribeProductConfig) 用于查询售卖规格配置。
+        """本介面 (DescribeProductConfig) 用于查詢售賣規格配置。
 
         :param request: Request instance for DescribeProductConfig.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeProductConfigRequest`
@@ -502,7 +502,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeRegions(self, request):
-        """本接口 (DescribeRegions) 用于查询售卖地域信息。
+        """本介面 (DescribeRegions) 用于查詢售賣地域訊息。
 
         :param request: Request instance for DescribeRegions.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeRegionsRequest`
@@ -530,7 +530,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeRollbackTime(self, request):
-        """本接口（DescribeRollbackTime）用于查询实例可回档时间范围
+        """本介面（DescribeRollbackTime）用于查詢實例可回檔時間範圍
 
         :param request: Request instance for DescribeRollbackTime.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeRollbackTimeRequest`
@@ -558,7 +558,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeSlowlogs(self, request):
-        """本接口（DescribeSlowlogs）用于获取慢查询日志文件信息
+        """本介面（DescribeSlowlogs）用于獲取慢查詢日志文件訊息
 
         :param request: Request instance for DescribeSlowlogs.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeSlowlogsRequest`
@@ -586,7 +586,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeZones(self, request):
-        """本接口 (DescribeZones) 用于查询当前可售卖的可用区信息。
+        """本介面 (DescribeZones) 用于查詢當前可售賣的可用區訊息。
 
         :param request: Request instance for DescribeZones.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeZonesRequest`
@@ -614,7 +614,7 @@ class SqlserverClient(AbstractClient):
 
 
     def InquiryPriceCreateDBInstances(self, request):
-        """本接口（InquiryPriceCreateDBInstances）用于查询申请实例价格。
+        """本介面（InquiryPriceCreateDBInstances）用于查詢申請實例價格。
 
         :param request: Request instance for InquiryPriceCreateDBInstances.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.InquiryPriceCreateDBInstancesRequest`
@@ -642,7 +642,7 @@ class SqlserverClient(AbstractClient):
 
 
     def InquiryPriceRenewDBInstance(self, request):
-        """本接口（InquiryPriceRenewDBInstance）用于查询续费实例的价格。
+        """本介面（InquiryPriceRenewDBInstance）用于查詢續約實例的價格。
 
         :param request: Request instance for InquiryPriceRenewDBInstance.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.InquiryPriceRenewDBInstanceRequest`
@@ -670,7 +670,7 @@ class SqlserverClient(AbstractClient):
 
 
     def InquiryPriceUpgradeDBInstance(self, request):
-        """本接口（InquiryPriceUpgradeDBInstance）用于查询升级实例的价格。
+        """本介面（InquiryPriceUpgradeDBInstance）用于查詢升級實例的價格。
 
         :param request: Request instance for InquiryPriceUpgradeDBInstance.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.InquiryPriceUpgradeDBInstanceRequest`
@@ -698,7 +698,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ModifyAccountPrivilege(self, request):
-        """本接口（ModifyAccountPrivilege）用于修改实例账户权限。
+        """本介面（ModifyAccountPrivilege）用于修改實例帳戶權限。
 
         :param request: Request instance for ModifyAccountPrivilege.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.ModifyAccountPrivilegeRequest`
@@ -726,7 +726,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ModifyAccountRemark(self, request):
-        """本接口（ModifyAccountRemark）用于修改账户备注。
+        """本介面（ModifyAccountRemark）用于修改帳戶備注。
 
         :param request: Request instance for ModifyAccountRemark.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.ModifyAccountRemarkRequest`
@@ -754,7 +754,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ModifyDBInstanceName(self, request):
-        """本接口（ModifyDBInstanceName）用于修改实例名字。
+        """本介面（ModifyDBInstanceName）用于修改實例名字。
 
         :param request: Request instance for ModifyDBInstanceName.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.ModifyDBInstanceNameRequest`
@@ -782,7 +782,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ModifyDBInstanceProject(self, request):
-        """本接口（ModifyDBInstanceProject）用于修改数据库实例所属项目。
+        """本介面（ModifyDBInstanceProject）用于修改資料庫實例所屬項目。
 
         :param request: Request instance for ModifyDBInstanceProject.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.ModifyDBInstanceProjectRequest`
@@ -810,7 +810,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ModifyDBInstanceRenewFlag(self, request):
-        """本接口（ModifyDBInstanceRenewFlag）用于修改实例续费标记
+        """本介面（ModifyDBInstanceRenewFlag）用于修改實例續約标記
 
         :param request: Request instance for ModifyDBInstanceRenewFlag.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.ModifyDBInstanceRenewFlagRequest`
@@ -838,7 +838,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ModifyDBName(self, request):
-        """本接口（ModifyDBName）用于更新数据库名。
+        """本介面（ModifyDBName）用于更新資料庫名。
 
         :param request: Request instance for ModifyDBName.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.ModifyDBNameRequest`
@@ -866,7 +866,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ModifyDBRemark(self, request):
-        """本接口（ModifyDBRemark）用于修改数据库备注。
+        """本介面（ModifyDBRemark）用于修改資料庫備注。
 
         :param request: Request instance for ModifyDBRemark.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.ModifyDBRemarkRequest`
@@ -894,7 +894,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ModifyMigration(self, request):
-        """本接口（ModifyMigration）可以修改已有的迁移任务信息
+        """本介面（ModifyMigration）可以修改已有的遷移任務訊息
 
         :param request: Request instance for ModifyMigration.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.ModifyMigrationRequest`
@@ -922,7 +922,7 @@ class SqlserverClient(AbstractClient):
 
 
     def RenewDBInstance(self, request):
-        """本接口（RenewDBInstance）用于续费实例。
+        """本介面（RenewDBInstance）用于續約實例。
 
         :param request: Request instance for RenewDBInstance.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.RenewDBInstanceRequest`
@@ -950,7 +950,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ResetAccountPassword(self, request):
-        """本接口（ResetAccountPassword）用于重置实例的账户密码。
+        """本介面（ResetAccountPassword）用于重置實例的帳戶密碼。
 
         :param request: Request instance for ResetAccountPassword.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.ResetAccountPasswordRequest`
@@ -978,7 +978,7 @@ class SqlserverClient(AbstractClient):
 
 
     def RestartDBInstance(self, request):
-        """本接口（RestartDBInstance）用于重启数据库实例。
+        """本介面（RestartDBInstance）用于重啓資料庫實例。
 
         :param request: Request instance for RestartDBInstance.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.RestartDBInstanceRequest`
@@ -1006,7 +1006,7 @@ class SqlserverClient(AbstractClient):
 
 
     def RestoreInstance(self, request):
-        """本接口（RestoreInstance）用于根据备份文件恢复实例。
+        """本介面（RestoreInstance）用于根據備份文件恢複實例。
 
         :param request: Request instance for RestoreInstance.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.RestoreInstanceRequest`
@@ -1034,7 +1034,7 @@ class SqlserverClient(AbstractClient):
 
 
     def RollbackInstance(self, request):
-        """本接口（RollbackInstance）用于回档实例
+        """本介面（RollbackInstance）用于回檔實例
 
         :param request: Request instance for RollbackInstance.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.RollbackInstanceRequest`
@@ -1062,7 +1062,7 @@ class SqlserverClient(AbstractClient):
 
 
     def RunMigration(self, request):
-        """本接口（RunMigration）用于启动迁移任务，开始迁移
+        """本介面（RunMigration）用于啓動遷移任務，開始遷移
 
         :param request: Request instance for RunMigration.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.RunMigrationRequest`
@@ -1090,7 +1090,7 @@ class SqlserverClient(AbstractClient):
 
 
     def TerminateDBInstance(self, request):
-        """本接口(TerminateDBInstance)用于主动销毁按量计费实例。
+        """本介面(TerminateDBInstance)用于主動銷毀按量計費實例。
 
         :param request: Request instance for TerminateDBInstance.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.TerminateDBInstanceRequest`
@@ -1118,7 +1118,7 @@ class SqlserverClient(AbstractClient):
 
 
     def UpgradeDBInstance(self, request):
-        """本接口（UpgradeDBInstance）用于升级实例
+        """本介面（UpgradeDBInstance）用于升級實例
 
         :param request: Request instance for UpgradeDBInstance.
         :type request: :class:`tencentcloud.sqlserver.v20180328.models.UpgradeDBInstanceRequest`

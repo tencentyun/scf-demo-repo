@@ -17,15 +17,15 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class DescribeStatusRequest(AbstractModel):
-    """DescribeStatus请求参数结构体
+    """DescribeStatus請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Pk: 购买服务后获得的授权帐号，用于保证请求有效性
+        :param Pk: 購買服務後獲得的授權帳号，用于保證請求有效性
         :type Pk: str
-        :param Md5: 需要获取分析结果的样本md5
+        :param Md5: 需要獲取分析結果的樣本md5
         :type Md5: str
         """
         self.Pk = None
@@ -38,19 +38,19 @@ class DescribeStatusRequest(AbstractModel):
 
 
 class DescribeStatusResponse(AbstractModel):
-    """DescribeStatus返回参数结构体
+    """DescribeStatus返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Status: 接口调用状态，1表示成功，非1表示失败
+        :param Status: 介面調用狀态，1表示成功，非1表示失敗
         :type Status: int
-        :param Info: 成功时返回success，失败时返回具体的失败原因，如样本分析未完成
+        :param Info: 成功時返回success，失敗時返回具體的失敗原因，如樣本分析未完成
         :type Info: str
-        :param Data: 成功时返回样本日志下载地址，该地址10分钟内有效
+        :param Data: 成功時返回樣本日志下載網址，該網址10分鍾内有效
         :type Data: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Status = None
@@ -67,17 +67,17 @@ class DescribeStatusResponse(AbstractModel):
 
 
 class StartAnalyseRequest(AbstractModel):
-    """StartAnalyse请求参数结构体
+    """StartAnalyse請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Pk: 购买服务后获得的授权帐号，用于保证请求有效性
+        :param Pk: 購買服務後獲得的授權帳号，用于保證請求有效性
         :type Pk: str
-        :param Md5: 样本md5，用于对下载获得的样本完整性进行校验
+        :param Md5: 樣本md5，用于對下載獲得的樣本完整性進行校驗
         :type Md5: str
-        :param DlUrl: 待分析样本下载地址
+        :param DlUrl: 待分析樣本下載網址
         :type DlUrl: str
         """
         self.Pk = None
@@ -92,19 +92,19 @@ class StartAnalyseRequest(AbstractModel):
 
 
 class StartAnalyseResponse(AbstractModel):
-    """StartAnalyse返回参数结构体
+    """StartAnalyse返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Status: 接口调用状态，1表示成功，非1表示失败
+        :param Status: 介面調用狀态，1表示成功，非1表示失敗
         :type Status: int
-        :param Info: 成功时返回success，失败时返回具体的失败原因
+        :param Info: 成功時返回success，失敗時返回具體的失敗原因
         :type Info: str
-        :param Data: 保留字段
+        :param Data: 保留欄位
         :type Data: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Status = None

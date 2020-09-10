@@ -26,7 +26,7 @@ class EsClient(AbstractClient):
 
 
     def CreateInstance(self, request):
-        """创建指定规格的ES集群实例
+        """創建指定規格的ES集群實例
 
         :param request: Request instance for CreateInstance.
         :type request: :class:`tencentcloud.es.v20180416.models.CreateInstanceRequest`
@@ -54,7 +54,7 @@ class EsClient(AbstractClient):
 
 
     def DeleteInstance(self, request):
-        """销毁集群实例
+        """銷毀集群實例
 
         :param request: Request instance for DeleteInstance.
         :type request: :class:`tencentcloud.es.v20180416.models.DeleteInstanceRequest`
@@ -82,7 +82,7 @@ class EsClient(AbstractClient):
 
 
     def DescribeInstanceLogs(self, request):
-        """查询用户该地域下符合条件的ES集群的日志
+        """查詢用戶該地域下符合條件的ES集群的日志
 
         :param request: Request instance for DescribeInstanceLogs.
         :type request: :class:`tencentcloud.es.v20180416.models.DescribeInstanceLogsRequest`
@@ -110,7 +110,7 @@ class EsClient(AbstractClient):
 
 
     def DescribeInstanceOperations(self, request):
-        """查询实例指定条件下的操作记录
+        """查詢實例指定條件下的操作記錄
 
         :param request: Request instance for DescribeInstanceOperations.
         :type request: :class:`tencentcloud.es.v20180416.models.DescribeInstanceOperationsRequest`
@@ -138,7 +138,7 @@ class EsClient(AbstractClient):
 
 
     def DescribeInstances(self, request):
-        """查询用户该地域下符合条件的所有实例
+        """查詢用戶該地域下符合條件的所有實例
 
         :param request: Request instance for DescribeInstances.
         :type request: :class:`tencentcloud.es.v20180416.models.DescribeInstancesRequest`
@@ -166,7 +166,7 @@ class EsClient(AbstractClient):
 
 
     def RestartInstance(self, request):
-        """重启ES集群实例(用于系统版本更新等操作)
+        """重啓ES集群實例(用于系統版本更新等操作)
 
         :param request: Request instance for RestartInstance.
         :type request: :class:`tencentcloud.es.v20180416.models.RestartInstanceRequest`
@@ -194,14 +194,14 @@ class EsClient(AbstractClient):
 
 
     def UpdateInstance(self, request):
-        """对集群进行节点规格变更，修改实例名称，修改配置，重置密码， 添加Kibana黑白名单等操作。参数中InstanceId为必传参数，ForceRestart为选填参数，剩余参数传递组合及含义如下：
-        - InstanceName：修改实例名称(仅用于标识实例)
-        - NodeInfoList: 修改节点配置（节点横向扩缩容，纵向扩缩容，增加主节点，增加冷节点等）
+        """對集群進行節點規格變更，修改實例名稱，修改配置，重置密碼， 添加Kibana黑白名單等操作。參數中InstanceId爲必傳參數，ForceRestart爲選填參數，剩餘參數傳遞組合及含義如下：
+        - InstanceName：修改實例名稱(僅用于标識實例)
+        - NodeInfoList: 修改節點配置（節點橫向擴縮容，縱向擴縮容，增加主節點，增加冷節點等）
         - EsConfig：修改集群配置
-        - Password：修改默认用户elastic的密码
-        - EsAcl：修改访问控制列表
-        - CosBackUp: 设置集群COS自动备份信息
-        以上参数组合只能传递一种，多传或少传均会导致请求失败
+        - Password：修改預設用戶elastic的密碼
+        - EsAcl：修改訪問控制清單
+        - CosBackUp: 設置集群COS自動備份訊息
+        以上參數組合只能傳遞一種，多傳或少傳均會導緻請求失敗
 
         :param request: Request instance for UpdateInstance.
         :type request: :class:`tencentcloud.es.v20180416.models.UpdateInstanceRequest`
@@ -229,7 +229,7 @@ class EsClient(AbstractClient):
 
 
     def UpgradeInstance(self, request):
-        """升级ES集群版本
+        """升級ES集群版本
 
         :param request: Request instance for UpgradeInstance.
         :type request: :class:`tencentcloud.es.v20180416.models.UpgradeInstanceRequest`
@@ -257,7 +257,7 @@ class EsClient(AbstractClient):
 
 
     def UpgradeLicense(self, request):
-        """升级ES商业特性
+        """升級ES商業特性
 
         :param request: Request instance for UpgradeLicense.
         :type request: :class:`tencentcloud.es.v20180416.models.UpgradeLicenseRequest`

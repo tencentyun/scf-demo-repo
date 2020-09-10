@@ -26,13 +26,13 @@ class CbsClient(AbstractClient):
 
 
     def ApplySnapshot(self, request):
-        """本接口（ApplySnapshot）用于回滚快照到原云硬盘。
+        """本介面（ApplySnapshot）用于回滾快照到原雲硬碟。
 
-        * 仅支持回滚到原云硬盘上。对于数据盘快照，如果您需要复制快照数据到其它云硬盘上，请使用[CreateDisks](/document/product/362/16312)接口创建新的弹性云盘，将快照数据复制到新购云盘上。
-        * 用于回滚的快照必须处于NORMAL状态。快照状态可以通过[DescribeSnapshots](/document/product/362/15647)接口查询，见输出参数中SnapshotState字段解释。
-        * 如果是弹性云盘，则云盘必须处于未挂载状态，云硬盘挂载状态可以通过[DescribeDisks](/document/product/362/16315)接口查询，见Attached字段解释；如果是随实例一起购买的非弹性云盘，则实例必须处于关机状态，实例状态可以通过[DescribeInstancesStatus](/document/product/213/15738)接口查询。
+        * 僅支援回滾到原雲硬碟上。對于數據盤快照，如果您需要複制快照數據到其它雲硬碟上，請使用[CreateDisks](/document/product/362/16312)介面創建新的彈性雲盤，将快照數據複制到新購雲盤上。
+        * 用于回滾的快照必須處于NORMAL狀态。快照狀态可以通過[DescribeSnapshots](/document/product/362/15647)介面查詢，見輸出參數中SnapshotState欄位解釋。
+        * 如果是彈性雲盤，則雲盤必須處于未掛載狀态，雲硬碟掛載狀态可以通過[DescribeDisks](/document/product/362/16315)介面查詢，見Attached欄位解釋；如果是随實例一起購買的非彈性雲盤，則實例必須處于關機狀态，實例狀态可以通過[DescribeInstancesStatus](/document/product/213/15738)介面查詢。
 
-        :param request: 调用ApplySnapshot所需参数的结构体。
+        :param request: 調用ApplySnapshot所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.ApplySnapshotRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.ApplySnapshotResponse`
 
@@ -58,12 +58,12 @@ class CbsClient(AbstractClient):
 
 
     def AttachDisks(self, request):
-        """本接口（AttachDisks）用于挂载云硬盘。
+        """本介面（AttachDisks）用于掛載雲硬碟。
 
-        * 支持批量操作，将多块云盘挂载到同一云主机。如果多个云盘存在不允许挂载的云盘，则操作不执行，以返回特定的错误码返回。
-        * 本接口为异步接口，当挂载云盘的请求成功返回时，表示后台已发起挂载云盘的操作，可通过接口[DescribeDisks](/document/product/362/16315)来查询对应云盘的状态，如果云盘的状态由“ATTACHING”变为“ATTACHED”，则为挂载成功。
+        * 支援批次操作，将多塊雲盤掛載到同一雲主機。如果多個雲盤存在不允許掛載的雲盤，則操作不執行，以返回特定的錯誤碼返回。
+        * 本介面爲異步介面，當掛載雲盤的請求成功返回時，表示後台已發起掛載雲盤的操作，可通過介面[DescribeDisks](/document/product/362/16315)來查詢對應雲盤的狀态，如果雲盤的狀态由“ATTACHING”變爲“ATTACHED”，則爲掛載成功。
 
-        :param request: 调用AttachDisks所需参数的结构体。
+        :param request: 調用AttachDisks所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.AttachDisksRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.AttachDisksResponse`
 
@@ -89,12 +89,12 @@ class CbsClient(AbstractClient):
 
 
     def BindAutoSnapshotPolicy(self, request):
-        """本接口（BindAutoSnapshotPolicy）用于绑定云硬盘到指定的定期快照策略。
+        """本介面（BindAutoSnapshotPolicy）用于綁定雲硬碟到指定的定期快照策略。
 
-        * 每个地域下的定期快照策略配额限制请参考文档[定期快照](/document/product/362/8191)。
-        * 当已绑定定期快照策略的云硬盘处于未使用状态（即弹性云盘未挂载或非弹性云盘的主机处于关机状态）将不会创建定期快照。
+        * 每個地域下的定期快照策略配額限制請參考文件[定期快照](/document/product/362/8191)。
+        * 當已綁定定期快照策略的雲硬碟處于未使用狀态（即彈性雲盤未掛載或非彈性雲盤的主機處于關機狀态）将不會創建定期快照。
 
-        :param request: 调用BindAutoSnapshotPolicy所需参数的结构体。
+        :param request: 調用BindAutoSnapshotPolicy所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.BindAutoSnapshotPolicyRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.BindAutoSnapshotPolicyResponse`
 
@@ -120,12 +120,12 @@ class CbsClient(AbstractClient):
 
 
     def CreateAutoSnapshotPolicy(self, request):
-        """本接口（CreateAutoSnapshotPolicy）用于创建定期快照策略。
+        """本介面（CreateAutoSnapshotPolicy）用于創建定期快照策略。
 
-        * 每个地域可创建的定期快照策略数量限制请参考文档[定期快照](/document/product/362/8191)。
-        * 每个地域可创建的快照有数量和容量的限制，具体请见腾讯云控制台快照页面提示，如果快照超配额，定期快照创建会失败。
+        * 每個地域可創建的定期快照策略數量限制請參考文件[定期快照](/document/product/362/8191)。
+        * 每個地域可創建的快照有數量和容量的限制，具體請見Top Cloud 控制台快照頁面提示，如果快照超配額，定期快照創建會失敗。
 
-        :param request: 调用CreateAutoSnapshotPolicy所需参数的结构体。
+        :param request: 調用CreateAutoSnapshotPolicy所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.CreateAutoSnapshotPolicyRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.CreateAutoSnapshotPolicyResponse`
 
@@ -151,13 +151,13 @@ class CbsClient(AbstractClient):
 
 
     def CreateDisks(self, request):
-        """本接口（CreateDisks）用于创建云硬盘。
+        """本介面（CreateDisks）用于創建雲硬碟。
 
-        * 预付费云盘的购买会预先扣除本次云盘购买所需金额，在调用本接口前请确保账户余额充足。
-        * 本接口支持传入数据盘快照来创建云盘，实现将快照数据复制到新购云盘上。
-        * 本接口为异步接口，当创建请求下发成功后会返回一个新建的云盘ID列表，此时云盘的创建并未立即完成。可以通过调用[DescribeDisks](/document/product/362/16315)接口根据DiskId查询对应云盘，如果能查到云盘，且状态为'UNATTACHED'或'ATTACHED'，则表示创建成功。
+        * 預付費雲盤的購買會預先扣除本次雲盤購買所需金額，在調用本介面前請确保帳戶餘額充足。
+        * 本介面支援傳入數據盤快照來創建雲盤，實現将快照數據複制到新購雲盤上。
+        * 本介面爲異步介面，當創建請求下發成功後會返回一個新建的雲盤ID清單，此時雲盤的創建并未立即完成。可以通過調用[DescribeDisks](/document/product/362/16315)介面根據DiskId查詢對應雲盤，如果能查到雲盤，且狀态爲'UNATTACHED'或'ATTACHED'，則表示創建成功。
 
-        :param request: 调用CreateDisks所需参数的结构体。
+        :param request: 調用CreateDisks所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.CreateDisksRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.CreateDisksResponse`
 
@@ -183,12 +183,12 @@ class CbsClient(AbstractClient):
 
 
     def CreateSnapshot(self, request):
-        """本接口（CreateSnapshot）用于对指定云盘创建快照。
+        """本介面（CreateSnapshot）用于對指定雲盤創建快照。
 
-        * 只有具有快照能力的云硬盘才能创建快照。云硬盘是否具有快照能力可由[DescribeDisks](/document/product/362/16315)接口查询，见SnapshotAbility字段。
-        * 可创建快照数量限制见[产品使用限制](https://cloud.tencent.com/doc/product/362/5145)。
+        * 只有具有快照能力的雲硬碟才能創建快照。雲硬碟是否具有快照能力可由[DescribeDisks](/document/product/362/16315)介面查詢，見SnapshotAbility欄位。
+        * 可創建快照數量限制見[産品使用限制](https://cloud.tencent.com/doc/product/362/5145)。
 
-        :param request: 调用CreateSnapshot所需参数的结构体。
+        :param request: 調用CreateSnapshot所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.CreateSnapshotRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.CreateSnapshotResponse`
 
@@ -214,11 +214,11 @@ class CbsClient(AbstractClient):
 
 
     def DeleteAutoSnapshotPolicies(self, request):
-        """本接口（DeleteAutoSnapshotPolicies）用于删除定期快照策略。
+        """本介面（DeleteAutoSnapshotPolicies）用于删除定期快照策略。
 
-        *  支持批量操作。如果多个定期快照策略存在无法删除的，则操作不执行，以特定错误码返回。
+        *  支援批次操作。如果多個定期快照策略存在無法删除的，則操作不執行，以特定錯誤碼返回。
 
-        :param request: 调用DeleteAutoSnapshotPolicies所需参数的结构体。
+        :param request: 調用DeleteAutoSnapshotPolicies所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.DeleteAutoSnapshotPoliciesRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.DeleteAutoSnapshotPoliciesResponse`
 
@@ -244,12 +244,12 @@ class CbsClient(AbstractClient):
 
 
     def DeleteSnapshots(self, request):
-        """本接口（DeleteSnapshots）用于删除快照。
+        """本介面（DeleteSnapshots）用于删除快照。
 
-        * 快照必须处于NORMAL状态，快照状态可以通过[DescribeSnapshots](/document/product/362/15647)接口查询，见输出参数中SnapshotState字段解释。
-        * 支持批量操作。如果多个快照存在无法删除的快照，则操作不执行，以返回特定的错误码返回。
+        * 快照必須處于NORMAL狀态，快照狀态可以通過[DescribeSnapshots](/document/product/362/15647)介面查詢，見輸出參數中SnapshotState欄位解釋。
+        * 支援批次操作。如果多個快照存在無法删除的快照，則操作不執行，以返回特定的錯誤碼返回。
 
-        :param request: 调用DeleteSnapshots所需参数的结构体。
+        :param request: 調用DeleteSnapshots所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.DeleteSnapshotsRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.DeleteSnapshotsResponse`
 
@@ -275,12 +275,12 @@ class CbsClient(AbstractClient):
 
 
     def DescribeAutoSnapshotPolicies(self, request):
-        """本接口（DescribeAutoSnapshotPolicies）用于查询定期快照策略。
+        """本介面（DescribeAutoSnapshotPolicies）用于查詢定期快照策略。
 
-        * 可以根据定期快照策略ID、名称或者状态等信息来查询定期快照策略的详细信息，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
-        * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的定期快照策略表。
+        * 可以根據定期快照策略ID、名稱或者狀态等訊息來查詢定期快照策略的詳細訊息，不同條件之間爲與(AND)的關系，過濾訊息詳細請見過濾器`Filter`。
+        * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的定期快照策略表。
 
-        :param request: 调用DescribeAutoSnapshotPolicies所需参数的结构体。
+        :param request: 調用DescribeAutoSnapshotPolicies所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.DescribeAutoSnapshotPoliciesRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.DescribeAutoSnapshotPoliciesResponse`
 
@@ -306,9 +306,9 @@ class CbsClient(AbstractClient):
 
 
     def DescribeDiskAssociatedAutoSnapshotPolicy(self, request):
-        """本接口（DescribeDiskAssociatedAutoSnapshotPolicy）用于查询云盘绑定的定期快照策略。
+        """本介面（DescribeDiskAssociatedAutoSnapshotPolicy）用于查詢雲盤綁定的定期快照策略。
 
-        :param request: 调用DescribeDiskAssociatedAutoSnapshotPolicy所需参数的结构体。
+        :param request: 調用DescribeDiskAssociatedAutoSnapshotPolicy所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.DescribeDiskAssociatedAutoSnapshotPolicyRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.DescribeDiskAssociatedAutoSnapshotPolicyResponse`
 
@@ -334,9 +334,9 @@ class CbsClient(AbstractClient):
 
 
     def DescribeDiskConfigQuota(self, request):
-        """本接口（DescribeDiskConfigQuota）用于查询云硬盘配额。
+        """本介面（DescribeDiskConfigQuota）用于查詢雲硬碟配額。
 
-        :param request: 调用DescribeDiskConfigQuota所需参数的结构体。
+        :param request: 調用DescribeDiskConfigQuota所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.DescribeDiskConfigQuotaRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.DescribeDiskConfigQuotaResponse`
 
@@ -362,11 +362,11 @@ class CbsClient(AbstractClient):
 
 
     def DescribeDiskOperationLogs(self, request):
-        """本接口（DescribeDiskOperationLogs）用于查询云盘操作日志列表。
+        """本介面（DescribeDiskOperationLogs）用于查詢雲盤操作日志清單。
 
-        可根据云盘ID过滤。云盘ID形如：disk-a1kmcp13。
+        可根據雲盤ID過濾。雲盤ID形如：disk-a1kmcp13。
 
-        :param request: 调用DescribeDiskOperationLogs所需参数的结构体。
+        :param request: 調用DescribeDiskOperationLogs所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.DescribeDiskOperationLogsRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.DescribeDiskOperationLogsResponse`
 
@@ -392,12 +392,12 @@ class CbsClient(AbstractClient):
 
 
     def DescribeDisks(self, request):
-        """本接口（DescribeDisks）用于查询云硬盘列表。
+        """本介面（DescribeDisks）用于查詢雲硬碟清單。
 
-        * 可以根据云硬盘ID、云硬盘类型或者云硬盘状态等信息来查询云硬盘的详细信息，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
-        * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的云硬盘列表。
+        * 可以根據雲硬碟ID、雲硬碟類型或者雲硬碟狀态等訊息來查詢雲硬碟的詳細訊息，不同條件之間爲與(AND)的關系，過濾訊息詳細請見過濾器`Filter`。
+        * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的雲硬碟清單。
 
-        :param request: 调用DescribeDisks所需参数的结构体。
+        :param request: 調用DescribeDisks所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.DescribeDisksRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.DescribeDisksResponse`
 
@@ -423,11 +423,11 @@ class CbsClient(AbstractClient):
 
 
     def DescribeInstancesDiskNum(self, request):
-        """本接口（DescribeInstancesDiskNum）用于查询实例已挂载云硬盘数量。
+        """本介面（DescribeInstancesDiskNum）用于查詢實例已掛載雲硬碟數量。
 
-        * 支持批量操作，当传入多个云服务器实例ID，返回结果会分别列出每个云服务器挂载的云硬盘数量。
+        * 支援批次操作，當傳入多個雲伺服器實例ID，返回結果會分别列出每個雲伺服器掛載的雲硬碟數量。
 
-        :param request: 调用DescribeInstancesDiskNum所需参数的结构体。
+        :param request: 調用DescribeInstancesDiskNum所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.DescribeInstancesDiskNumRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.DescribeInstancesDiskNumResponse`
 
@@ -453,11 +453,11 @@ class CbsClient(AbstractClient):
 
 
     def DescribeSnapshotOperationLogs(self, request):
-        """本接口（DescribeSnapshotOperationLogs）用于查询快照操作日志列表。
+        """本介面（DescribeSnapshotOperationLogs）用于查詢快照操作日志清單。
 
-        可根据快照ID过滤。快照ID形如：snap-a1kmcp13。
+        可根據快照ID過濾。快照ID形如：snap-a1kmcp13。
 
-        :param request: 调用DescribeSnapshotOperationLogs所需参数的结构体。
+        :param request: 調用DescribeSnapshotOperationLogs所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.DescribeSnapshotOperationLogsRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.DescribeSnapshotOperationLogsResponse`
 
@@ -483,12 +483,12 @@ class CbsClient(AbstractClient):
 
 
     def DescribeSnapshots(self, request):
-        """本接口（DescribeSnapshots）用于查询快照的详细信息。
+        """本介面（DescribeSnapshots）用于查詢快照的詳細訊息。
 
-        * 根据快照ID、创建快照的云硬盘ID、创建快照的云硬盘类型等对结果进行过滤，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
-        *  如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的快照列表。
+        * 根據快照ID、創建快照的雲硬碟ID、創建快照的雲硬碟類型等對結果進行過濾，不同條件之間爲與(AND)的關系，過濾訊息詳細請見過濾器`Filter`。
+        *  如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的快照清單。
 
-        :param request: 调用DescribeSnapshots所需参数的结构体。
+        :param request: 調用DescribeSnapshots所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.DescribeSnapshotsRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.DescribeSnapshotsResponse`
 
@@ -514,12 +514,12 @@ class CbsClient(AbstractClient):
 
 
     def DetachDisks(self, request):
-        """本接口（DetachDisks）用于解挂云硬盘。
+        """本介面（DetachDisks）用于解挂雲硬碟。
 
-        * 支持批量操作，解挂挂载在同一主机上的多块云盘。如果多块云盘存在不允许解挂载的云盘，则操作不执行，以返回特定的错误码返回。
-        * 本接口为异步接口，当请求成功返回时，云盘并未立即从主机解挂载，可通过接口[DescribeDisks](/document/product/362/16315)来查询对应云盘的状态，如果云盘的状态由“ATTACHED”变为“UNATTACHED”，则为解挂载成功。
+        * 支援批次操作，解挂掛載在同一主機上的多塊雲盤。如果多塊雲盤存在不允許解掛載的雲盤，則操作不執行，以返回特定的錯誤碼返回。
+        * 本介面爲異步介面，當請求成功返回時，雲盤并未立即從主機解掛載，可通過介面[DescribeDisks](/document/product/362/16315)來查詢對應雲盤的狀态，如果雲盤的狀态由“ATTACHED”變爲“UNATTACHED”，則爲解掛載成功。
 
-        :param request: 调用DetachDisks所需参数的结构体。
+        :param request: 調用DetachDisks所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.DetachDisksRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.DetachDisksResponse`
 
@@ -545,11 +545,11 @@ class CbsClient(AbstractClient):
 
 
     def InquiryPriceCreateDisks(self, request):
-        """本接口（InquiryPriceCreateDisks）用于创建云硬盘询价。
+        """本介面（InquiryPriceCreateDisks）用于創建雲硬碟詢價。
 
-        * 支持查询创建多块云硬盘的价格，此时返回结果为总价格。
+        * 支援查詢創建多塊雲硬碟的價格，此時返回結果爲總價格。
 
-        :param request: 调用InquiryPriceCreateDisks所需参数的结构体。
+        :param request: 調用InquiryPriceCreateDisks所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.InquiryPriceCreateDisksRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.InquiryPriceCreateDisksResponse`
 
@@ -575,13 +575,13 @@ class CbsClient(AbstractClient):
 
 
     def InquiryPriceRenewDisks(self, request):
-        """本接口（InquiryPriceRenewDisks）用于续费云硬盘询价。
+        """本介面（InquiryPriceRenewDisks）用于續約雲硬碟詢價。
 
-        * 只支持查询预付费模式的弹性云盘续费价格。
-        * 支持与挂载实例一起续费的场景，需要在[DiskChargePrepaid](/document/product/362/15669#DiskChargePrepaid)参数中指定CurInstanceDeadline，此时会按对齐到实例续费后的到期时间来续费询价。
-        * 支持为多块云盘指定不同的续费时长，此时返回的价格为多块云盘续费的总价格。
+        * 只支援查詢預付費模式的彈性雲盤續約價格。
+        * 支援與掛載實例一起續約的場景，需要在[DiskChargePrepaid](/document/product/362/15669#DiskChargePrepaid)參數中指定CurInstanceDeadline，此時會按對齊到實例續約後的到期時間來續約詢價。
+        * 支援爲多塊雲盤指定不同的續約時長，此時返回的價格爲多塊雲盤續約的總價格。
 
-        :param request: 调用InquiryPriceRenewDisks所需参数的结构体。
+        :param request: 調用InquiryPriceRenewDisks所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.InquiryPriceRenewDisksRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.InquiryPriceRenewDisksResponse`
 
@@ -607,11 +607,11 @@ class CbsClient(AbstractClient):
 
 
     def InquiryPriceResizeDisk(self, request):
-        """本接口（InquiryPriceResizeDisk）用于扩容云硬盘询价。
+        """本介面（InquiryPriceResizeDisk）用于擴容雲硬碟詢價。
 
-        * 只支持预付费模式的云硬盘扩容询价。
+        * 只支援預付費模式的雲硬碟擴容詢價。
 
-        :param request: 调用InquiryPriceResizeDisk所需参数的结构体。
+        :param request: 調用InquiryPriceResizeDisk所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.InquiryPriceResizeDiskRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.InquiryPriceResizeDiskResponse`
 
@@ -637,11 +637,11 @@ class CbsClient(AbstractClient):
 
 
     def ModifyDiskAttributes(self, request):
-        """* 只支持修改弹性云盘的项目ID。随云主机创建的云硬盘项目ID与云主机联动。可以通过[DescribeDisks](/document/product/362/16315)接口查询，见输出参数中Portable字段解释。
-        * “云硬盘名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行云盘管理操作的依据。
-        * 支持批量操作，如果传入多个云盘ID，则所有云盘修改为同一属性。如果存在不允许操作的云盘，则操作不执行，以特定错误码返回。
+        """* 只支援修改彈性雲盤的項目ID。随雲主機創建的雲硬碟項目ID與雲主機聯動。可以通過[DescribeDisks](/document/product/362/16315)介面查詢，見輸出參數中Portable欄位解釋。
+        * “雲硬碟名稱”僅爲方便用戶自己管理之用，Top Cloud 并不以此名稱作爲提交工單或是進行雲盤管理操作的依據。
+        * 支援批次操作，如果傳入多個雲盤ID，則所有雲盤修改爲同一屬性。如果存在不允許操作的雲盤，則操作不執行，以特定錯誤碼返回。
 
-        :param request: 调用ModifyDiskAttributes所需参数的结构体。
+        :param request: 調用ModifyDiskAttributes所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.ModifyDiskAttributesRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.ModifyDiskAttributesResponse`
 
@@ -667,9 +667,9 @@ class CbsClient(AbstractClient):
 
 
     def ModifyDisksRenewFlag(self, request):
-        """本接口（ModifyDisksRenewFlag）用于修改云硬盘续费标识，支持批量修改。
+        """本介面（ModifyDisksRenewFlag）用于修改雲硬碟續約标識，支援批次修改。
 
-        :param request: 调用ModifyDisksRenewFlag所需参数的结构体。
+        :param request: 調用ModifyDisksRenewFlag所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.ModifyDisksRenewFlagRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.ModifyDisksRenewFlagResponse`
 
@@ -695,12 +695,12 @@ class CbsClient(AbstractClient):
 
 
     def ModifySnapshotAttribute(self, request):
-        """本接口（ModifySnapshotAttribute）用于修改指定快照的属性。
+        """本介面（ModifySnapshotAttribute）用于修改指定快照的屬性。
 
-        * 当前仅支持修改快照名称及将非永久快照修改为永久快照。
-        * “快照名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行快照管理操作的依据。
+        * 當前僅支援修改快照名稱及将非永久快照修改爲永久快照。
+        * “快照名稱”僅爲方便用戶自己管理之用，Top Cloud 并不以此名稱作爲提交工單或是進行快照管理操作的依據。
 
-        :param request: 调用ModifySnapshotAttribute所需参数的结构体。
+        :param request: 調用ModifySnapshotAttribute所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.ModifySnapshotAttributeRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.ModifySnapshotAttributeResponse`
 
@@ -726,12 +726,12 @@ class CbsClient(AbstractClient):
 
 
     def RenewDisk(self, request):
-        """本接口（RenewDisk）用于续费云硬盘。
+        """本介面（RenewDisk）用于續約雲硬碟。
 
-        * 只支持预付费的云硬盘。云硬盘类型可以通过[DescribeDisks](/document/product/362/16315)接口查询，见输出参数中DiskChargeType字段解释。
-        * 支持与挂载实例一起续费的场景，需要在[DiskChargePrepaid](/document/product/362/15669#DiskChargePrepaid)参数中指定CurInstanceDeadline，此时会按对齐到子机续费后的到期时间来续费。
+        * 只支援預付費的雲硬碟。雲硬碟類型可以通過[DescribeDisks](/document/product/362/16315)介面查詢，見輸出參數中DiskChargeType欄位解釋。
+        * 支援與掛載實例一起續約的場景，需要在[DiskChargePrepaid](/document/product/362/15669#DiskChargePrepaid)參數中指定CurInstanceDeadline，此時會按對齊到子機續約後的到期時間來續約。
 
-        :param request: 调用RenewDisk所需参数的结构体。
+        :param request: 調用RenewDisk所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.RenewDiskRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.RenewDiskResponse`
 
@@ -757,12 +757,12 @@ class CbsClient(AbstractClient):
 
 
     def ResizeDisk(self, request):
-        """本接口（ResizeDisk）用于扩容云硬盘。
+        """本介面（ResizeDisk）用于擴容雲硬碟。
 
-        * 只支持扩容弹性云盘。云硬盘类型可以通过[DescribeDisks](/document/product/362/16315)接口查询，见输出参数中Portable字段解释。随云主机创建的云硬盘需通过[ResizeInstanceDisks](/document/product/213/15731)接口扩容。
-        * 本接口为异步接口，接口成功返回时，云盘并未立即扩容到指定大小，可通过接口[DescribeDisks](/document/product/362/16315)来查询对应云盘的状态，如果云盘的状态为“EXPANDING”，表示正在扩容中，当状态变为“UNATTACHED”，表示扩容完成。
+        * 只支援擴容彈性雲盤。雲硬碟類型可以通過[DescribeDisks](/document/product/362/16315)介面查詢，見輸出參數中Portable欄位解釋。随雲主機創建的雲硬碟需通過[ResizeInstanceDisks](/document/product/213/15731)介面擴容。
+        * 本介面爲異步介面，介面成功返回時，雲盤并未立即擴容到指定大小，可通過介面[DescribeDisks](/document/product/362/16315)來查詢對應雲盤的狀态，如果雲盤的狀态爲“EXPANDING”，表示正在擴容中，當狀态變爲“UNATTACHED”，表示擴容完成。
 
-        :param request: 调用ResizeDisk所需参数的结构体。
+        :param request: 調用ResizeDisk所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.ResizeDiskRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.ResizeDiskResponse`
 
@@ -788,13 +788,13 @@ class CbsClient(AbstractClient):
 
 
     def TerminateDisks(self, request):
-        """本接口（TerminateDisks）用于退还云硬盘。
+        """本介面（TerminateDisks）用于退還雲硬碟。
 
-        * 不再使用的云盘，可通过本接口主动退还。
-        * 本接口支持退还预付费云盘和按小时后付费云盘。按小时后付费云盘可直接退还，预付费云盘需符合退还规则。
-        * 支持批量操作，每次请求批量云硬盘的上限为50。如果批量云盘存在不允许操作的，请求会以特定错误码返回。
+        * 不再使用的雲盤，可通過本介面主動退還。
+        * 本介面支援退還預付費雲盤和按小時後付費雲盤。按小時後付費雲盤可直接退還，預付費雲盤需符合退還規則。
+        * 支援批次操作，每次請求批次雲硬碟的上限爲50。如果批次雲盤存在不允許操作的，請求會以特定錯誤碼返回。
 
-        :param request: 调用TerminateDisks所需参数的结构体。
+        :param request: 調用TerminateDisks所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.TerminateDisksRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.TerminateDisksResponse`
 
@@ -820,12 +820,12 @@ class CbsClient(AbstractClient):
 
 
     def UnbindAutoSnapshotPolicy(self, request):
-        """本接口（UnbindAutoSnapshotPolicy）用于解除云硬盘绑定的定期快照策略。
+        """本介面（UnbindAutoSnapshotPolicy）用于解除雲硬碟綁定的定期快照策略。
 
-        * 支持批量操作，可一次解除多个云盘与同一定期快照策略的绑定。
-        * 如果传入的云盘未绑定到当前定期快照策略，接口将自动跳过，仅解绑与当前定期快照策略绑定的云盘。
+        * 支援批次操作，可一次解除多個雲盤與同一定期快照策略的綁定。
+        * 如果傳入的雲盤未綁定到當前定期快照策略，介面将自動跳過，僅解綁與當前定期快照策略綁定的雲盤。
 
-        :param request: 调用UnbindAutoSnapshotPolicy所需参数的结构体。
+        :param request: 調用UnbindAutoSnapshotPolicy所需參數的結構體。
         :type request: :class:`tencentcloud.cbs.v20170312.models.UnbindAutoSnapshotPolicyRequest`
         :rtype: :class:`tencentcloud.cbs.v20170312.models.UnbindAutoSnapshotPolicyResponse`
 

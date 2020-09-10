@@ -26,7 +26,7 @@ class BmvpcClient(AbstractClient):
 
 
     def AcceptVpcPeerConnection(self, request):
-        """接受黑石对等连接
+        """接受黑石對等連接
 
         :param request: Request instance for AcceptVpcPeerConnection.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.AcceptVpcPeerConnectionRequest`
@@ -54,7 +54,7 @@ class BmvpcClient(AbstractClient):
 
 
     def AsyncRegisterIps(self, request):
-        """批量注册虚拟IP，异步接口。通过接口来查询任务进度。每次请求最多注册256个IP
+        """批次注冊虛拟IP，異步介面。通過介面來查詢任務進度。每次請求最多注冊256個IP
 
         :param request: Request instance for AsyncRegisterIps.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.AsyncRegisterIpsRequest`
@@ -82,7 +82,7 @@ class BmvpcClient(AbstractClient):
 
 
     def BindEipsToNatGateway(self, request):
-        """NAT网关绑定EIP接口，可将EIP绑定到NAT网关，该EIP作为访问外网的源IP地址，将流量发送到Internet
+        """NAT閘道綁定EIP介面，可将EIP綁定到NAT閘道，該EIP作爲訪問外網的源IP網址，将流量發送到Internet
 
         :param request: Request instance for BindEipsToNatGateway.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.BindEipsToNatGatewayRequest`
@@ -110,7 +110,7 @@ class BmvpcClient(AbstractClient):
 
 
     def BindIpsToNatGateway(self, request):
-        """可用于将子网的部分IP绑定到NAT网关
+        """可用于将子網的部分IP綁定到NAT閘道
 
         :param request: Request instance for BindIpsToNatGateway.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.BindIpsToNatGatewayRequest`
@@ -138,7 +138,7 @@ class BmvpcClient(AbstractClient):
 
 
     def BindSubnetsToNatGateway(self, request):
-        """NAT网关绑定子网后，该子网内全部IP可出公网
+        """NAT閘道綁定子網後，該子網内全部IP可出公網
 
         :param request: Request instance for BindSubnetsToNatGateway.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.BindSubnetsToNatGatewayRequest`
@@ -166,7 +166,7 @@ class BmvpcClient(AbstractClient):
 
 
     def CreateCustomerGateway(self, request):
-        """本接口（CreateCustomerGateway）用于创建对端网关。
+        """本介面（CreateCustomerGateway）用于創建對端閘道。
 
         :param request: Request instance for CreateCustomerGateway.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateCustomerGatewayRequest`
@@ -194,7 +194,7 @@ class BmvpcClient(AbstractClient):
 
 
     def CreateDockerSubnetWithVlan(self, request):
-        """创建黑石Docker子网， 如果不指定VlanId，将会分配2000--2999范围的VlanId; 子网会关闭分布式网关
+        """創建黑石Docker子網， 如果不指定VlanId，将會分配2000--2999範圍的VlanId; 子網會關閉分布式閘道
 
         :param request: Request instance for CreateDockerSubnetWithVlan.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateDockerSubnetWithVlanRequest`
@@ -222,11 +222,11 @@ class BmvpcClient(AbstractClient):
 
 
     def CreateHostedInterface(self, request):
-        """本接口（CreateHostedInterface）用于黑石托管机器加入带VLANID不为5的子网。
+        """本介面（CreateHostedInterface）用于黑石托管機器加入帶VLANID不爲5的子網。
 
-        1) 不能加入vlanId 为5的子网，只能加入VLANID范围为2000-2999的子网。
-        2) 每台托管机器最多可以加入20个子网。
-        3) 每次调用最多能支持传入10台托管机器。
+        1) 不能加入vlanId 爲5的子網，只能加入VLANID範圍爲2000-2999的子網。
+        2) 每台托管機器最多可以加入20個子網。
+        3) 每次調用最多能支援傳入10台托管機器。
 
         :param request: Request instance for CreateHostedInterface.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateHostedInterfaceRequest`
@@ -254,7 +254,7 @@ class BmvpcClient(AbstractClient):
 
 
     def CreateInterfaces(self, request):
-        """物理机加入子网
+        """物理機加入子網
 
         :param request: Request instance for CreateInterfaces.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateInterfacesRequest`
@@ -282,7 +282,7 @@ class BmvpcClient(AbstractClient):
 
 
     def CreateNatGateway(self, request):
-        """创建NAT网关接口，可针对网段方式、子网全部IP、子网部分IP这三种方式创建NAT网关
+        """創建NAT閘道介面，可針對網段方式、子網全部IP、子網部分IP這三種方式創建NAT閘道
 
         :param request: Request instance for CreateNatGateway.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateNatGatewayRequest`
@@ -310,7 +310,7 @@ class BmvpcClient(AbstractClient):
 
 
     def CreateRoutePolicies(self, request):
-        """创建黑石路由表的路由规则
+        """創建黑石路由表的路由規則
 
         :param request: Request instance for CreateRoutePolicies.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateRoutePoliciesRequest`
@@ -338,8 +338,8 @@ class BmvpcClient(AbstractClient):
 
 
     def CreateSubnet(self, request):
-        """创建黑石私有网络的子网
-        访问管理: 用户可以对VpcId进行授权操作。例如设置资源为["qcs::bmvpc:::unVpc/vpc-xxxxx"]
+        """創建黑石私有網絡的子網
+        訪問管理: 用戶可以對VpcId進行授權操作。例如設置資源爲["qcs::bmvpc:::unVpc/vpc-xxxxx"]
 
         :param request: Request instance for CreateSubnet.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateSubnetRequest`
@@ -367,7 +367,7 @@ class BmvpcClient(AbstractClient):
 
 
     def CreateVirtualSubnetWithVlan(self, request):
-        """创建黑石虚拟子网， 虚拟子网用于在黑石上创建虚拟网络，与黑石子网要做好规划。虚拟子网会分配2000-2999的VlanId。
+        """創建黑石虛拟子網， 虛拟子網用于在黑石上創建虛拟網絡，與黑石子網要做好規劃。虛拟子網會分配2000-2999的VlanId。
 
         :param request: Request instance for CreateVirtualSubnetWithVlan.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateVirtualSubnetWithVlanRequest`
@@ -395,7 +395,7 @@ class BmvpcClient(AbstractClient):
 
 
     def CreateVpc(self, request):
-        """创建黑石私有网络
+        """創建黑石私有網絡
 
         :param request: Request instance for CreateVpc.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateVpcRequest`
@@ -423,7 +423,7 @@ class BmvpcClient(AbstractClient):
 
 
     def CreateVpcPeerConnection(self, request):
-        """创建对等连接
+        """創建對等連接
 
         :param request: Request instance for CreateVpcPeerConnection.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateVpcPeerConnectionRequest`
@@ -451,7 +451,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteCustomerGateway(self, request):
-        """本接口（DeleteCustomerGateway）用于删除对端网关。
+        """本介面（DeleteCustomerGateway）用于删除對端閘道。
 
         :param request: Request instance for DeleteCustomerGateway.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteCustomerGatewayRequest`
@@ -479,9 +479,9 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteHostedInterface(self, request):
-        """本接口用于托管机器从VLANID不为5的子网中移除。
-        1) 不能从vlanId 为5的子网中移除。
-        2) 每次调用最多能支持传入10台物理机。
+        """本介面用于托管機器從VLANID不爲5的子網中移除。
+        1) 不能從vlanId 爲5的子網中移除。
+        2) 每次調用最多能支援傳入10台物理機。
 
         :param request: Request instance for DeleteHostedInterface.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteHostedInterfaceRequest`
@@ -509,7 +509,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteHostedInterfaces(self, request):
-        """托管机器移除子网批量接口，传入一台托管机器和多个子网，批量移除这些子网。异步接口，接口返回TaskId。
+        """托管機器移除子網批次介面，傳入一台托管機器和多個子網，批次移除這些子網。異步介面，介面返回TaskId。
 
         :param request: Request instance for DeleteHostedInterfaces.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteHostedInterfacesRequest`
@@ -537,7 +537,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteInterfaces(self, request):
-        """物理机移除子网批量接口，传入一台物理机和多个子网，批量移除这些子网。异步接口，接口返回TaskId。
+        """物理機移除子網批次介面，傳入一台物理機和多個子網，批次移除這些子網。異步介面，介面返回TaskId。
 
         :param request: Request instance for DeleteInterfaces.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteInterfacesRequest`
@@ -565,7 +565,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteNatGateway(self, request):
-        """删除NAT网关
+        """删除NAT閘道
 
         :param request: Request instance for DeleteNatGateway.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteNatGatewayRequest`
@@ -593,7 +593,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteRoutePolicy(self, request):
-        """删除黑石路由表路由规则
+        """删除黑石路由表路由規則
 
         :param request: Request instance for DeleteRoutePolicy.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteRoutePolicyRequest`
@@ -621,8 +621,8 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteSubnet(self, request):
-        """本接口（DeleteSubnet）用于删除黑石私有网络子网。
-        删除子网前，请清理该子网下所有资源，包括物理机、负载均衡、黑石数据库、弹性IP、NAT网关等资源
+        """本介面（DeleteSubnet）用于删除黑石私有網絡子網。
+        删除子網前，請清理該子網下所有資源，包括物理機、負載均衡、黑石資料庫、彈性IP、NAT閘道等資源
 
         :param request: Request instance for DeleteSubnet.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteSubnetRequest`
@@ -650,7 +650,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteVirtualIp(self, request):
-        """退还虚拟IP。此接口只能退还虚拟IP，物理机IP不能退还。
+        """退還虛拟IP。此介面只能退還虛拟IP，物理機IP不能退還。
 
         :param request: Request instance for DeleteVirtualIp.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteVirtualIpRequest`
@@ -678,9 +678,9 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteVpc(self, request):
-        """本接口(DeleteVpc)用于删除黑石私有网络(VPC)。
+        """本介面(DeleteVpc)用于删除黑石私有網絡(VPC)。
 
-        删除私有网络前，请清理该私有网络下所有资源，包括子网、负载均衡、弹性 IP、对等连接、NAT 网关、专线通道、SSLVPN 等资源。
+        删除私有網絡前，請清理該私有網絡下所有資源，包括子網、負載均衡、彈性 IP、對等連接、NAT 閘道、專線通道、SSLVPN 等資源。
 
         :param request: Request instance for DeleteVpc.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteVpcRequest`
@@ -708,7 +708,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteVpcPeerConnection(self, request):
-        """删除黑石对等连接
+        """删除黑石對等連接
 
         :param request: Request instance for DeleteVpcPeerConnection.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteVpcPeerConnectionRequest`
@@ -736,7 +736,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteVpnConnection(self, request):
-        """本接口(DeleteVpnConnection)用于删除VPN通道。
+        """本介面(DeleteVpnConnection)用于删除VPN通道。
 
         :param request: Request instance for DeleteVpnConnection.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteVpnConnectionRequest`
@@ -764,7 +764,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteVpnGateway(self, request):
-        """本接口（DeleteVpnGateway）用于删除VPN网关。
+        """本介面（DeleteVpnGateway）用于删除VPN閘道。
 
         :param request: Request instance for DeleteVpnGateway.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteVpnGatewayRequest`
@@ -792,7 +792,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DeregisterIps(self, request):
-        """注销私有网络IP为空闲
+        """注銷私有網絡IP爲空閑
 
         :param request: Request instance for DeregisterIps.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeregisterIpsRequest`
@@ -820,7 +820,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeCustomerGateways(self, request):
-        """本接口（DescribeCustomerGateways）用于查询对端网关列表。
+        """本介面（DescribeCustomerGateways）用于查詢對端閘道清單。
 
         :param request: Request instance for DescribeCustomerGateways.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeCustomerGatewaysRequest`
@@ -848,7 +848,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeNatGateways(self, request):
-        """获取NAT网关信息，包括NAT网关 ID、网关名称、私有网络、网关并发连接上限、绑定EIP列表等
+        """獲取NAT閘道訊息，包括NAT閘道 ID、閘道名稱、私有網絡、閘道并發連接上限、綁定EIP清單等
 
         :param request: Request instance for DescribeNatGateways.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeNatGatewaysRequest`
@@ -876,7 +876,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeNatSubnets(self, request):
-        """可获取NAT网关绑定的子网信息
+        """可獲取NAT閘道綁定的子網訊息
 
         :param request: Request instance for DescribeNatSubnets.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeNatSubnetsRequest`
@@ -904,7 +904,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeRoutePolicies(self, request):
-        """本接口（DescribeRoutePolicies）用于查询路由表条目。
+        """本介面（DescribeRoutePolicies）用于查詢路由表條目。
 
         :param request: Request instance for DescribeRoutePolicies.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeRoutePoliciesRequest`
@@ -932,7 +932,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeRouteTables(self, request):
-        """本接口（DescribeRouteTables）用于查询路由表。
+        """本介面（DescribeRouteTables）用于查詢路由表。
 
         :param request: Request instance for DescribeRouteTables.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeRouteTablesRequest`
@@ -960,7 +960,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeSubnetAvailableIps(self, request):
-        """获取子网内可用IP列表
+        """獲取子網内可用IP清單
 
         :param request: Request instance for DescribeSubnetAvailableIps.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeSubnetAvailableIpsRequest`
@@ -988,7 +988,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeSubnetByDevice(self, request):
-        """物理机可以加入物理机子网，虚拟子网，DOCKER子网，通过此接口可以查询物理机加入的子网。
+        """物理機可以加入物理機子網，虛拟子網，DOCKER子網，通過此介面可以查詢物理機加入的子網。
 
         :param request: Request instance for DescribeSubnetByDevice.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeSubnetByDeviceRequest`
@@ -1016,7 +1016,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeSubnetByHostedDevice(self, request):
-        """托管可以加入物理机子网，虚拟子网，DOCKER子网，通过此接口可以查询托管加入的子网。
+        """托管可以加入物理機子網，虛拟子網，DOCKER子網，通過此介面可以查詢托管加入的子網。
 
         :param request: Request instance for DescribeSubnetByHostedDevice.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeSubnetByHostedDeviceRequest`
@@ -1044,7 +1044,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeSubnets(self, request):
-        """本接口（DescribeSubnets）用于查询黑石子网列表。
+        """本介面（DescribeSubnets）用于查詢黑石子網清單。
 
         :param request: Request instance for DescribeSubnets.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeSubnetsRequest`
@@ -1072,7 +1072,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeTaskStatus(self, request):
-        """根据任务ID，获取任务的执行状态
+        """根據任務ID，獲取任務的執行狀态
 
         :param request: Request instance for DescribeTaskStatus.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeTaskStatusRequest`
@@ -1100,7 +1100,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeVpcPeerConnections(self, request):
-        """获取对等连接列表
+        """獲取對等連接清單
 
         :param request: Request instance for DescribeVpcPeerConnections.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeVpcPeerConnectionsRequest`
@@ -1128,7 +1128,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeVpcQuota(self, request):
-        """本接口（DescribeVpcQuota）用于查询用户VPC相关配额限制。
+        """本介面（DescribeVpcQuota）用于查詢用戶VPC相關配額限制。
 
         :param request: Request instance for DescribeVpcQuota.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeVpcQuotaRequest`
@@ -1156,7 +1156,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeVpcResource(self, request):
-        """查询黑石私有网络关联资源
+        """查詢黑石私有網絡關聯資源
 
         :param request: Request instance for DescribeVpcResource.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeVpcResourceRequest`
@@ -1184,7 +1184,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeVpcView(self, request):
-        """本接口（DescribeVpcView）用于查询VPC网络拓扑视图。
+        """本介面（DescribeVpcView）用于查詢VPC網絡拓撲視圖。
 
         :param request: Request instance for DescribeVpcView.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeVpcViewRequest`
@@ -1212,8 +1212,8 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeVpcs(self, request):
-        """本接口（DescribeVpcs）用于查询私有网络列表。
-        本接口不传参数时，返回默认排序下的前20条VPC信息。
+        """本介面（DescribeVpcs）用于查詢私有網絡清單。
+        本介面不傳參數時，返回預設排序下的前20條VPC訊息。
 
         :param request: Request instance for DescribeVpcs.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeVpcsRequest`
@@ -1241,7 +1241,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeVpnConnections(self, request):
-        """本接口（DescribeVpnConnections）查询VPN通道列表。
+        """本介面（DescribeVpnConnections）查詢VPN通道清單。
 
         :param request: Request instance for DescribeVpnConnections.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeVpnConnectionsRequest`
@@ -1269,7 +1269,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeVpnGateways(self, request):
-        """本接口（DescribeVpnGateways）用于查询VPN网关列表。
+        """本介面（DescribeVpnGateways）用于查詢VPN閘道清單。
 
         :param request: Request instance for DescribeVpnGateways.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeVpnGatewaysRequest`
@@ -1297,7 +1297,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DownloadCustomerGatewayConfiguration(self, request):
-        """本接口(DownloadCustomerGatewayConfiguration)用于下载VPN通道配置。
+        """本介面(DownloadCustomerGatewayConfiguration)用于下載VPN通道配置。
 
         :param request: Request instance for DownloadCustomerGatewayConfiguration.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.DownloadCustomerGatewayConfigurationRequest`
@@ -1325,7 +1325,7 @@ class BmvpcClient(AbstractClient):
 
 
     def ModifyCustomerGatewayAttribute(self, request):
-        """本接口（ModifyCustomerGatewayAttribute）用于修改对端网关信息。
+        """本介面（ModifyCustomerGatewayAttribute）用于修改對端閘道訊息。
 
         :param request: Request instance for ModifyCustomerGatewayAttribute.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifyCustomerGatewayAttributeRequest`
@@ -1353,7 +1353,7 @@ class BmvpcClient(AbstractClient):
 
 
     def ModifyRoutePolicy(self, request):
-        """修改自定义路由
+        """修改自定義路由
 
         :param request: Request instance for ModifyRoutePolicy.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifyRoutePolicyRequest`
@@ -1409,7 +1409,7 @@ class BmvpcClient(AbstractClient):
 
 
     def ModifySubnetAttribute(self, request):
-        """修改子网属性
+        """修改子網屬性
 
         :param request: Request instance for ModifySubnetAttribute.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifySubnetAttributeRequest`
@@ -1437,7 +1437,7 @@ class BmvpcClient(AbstractClient):
 
 
     def ModifySubnetDHCPRelay(self, request):
-        """修改子网DHCP Relay属性
+        """修改子網DHCP Relay屬性
 
         :param request: Request instance for ModifySubnetDHCPRelay.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifySubnetDHCPRelayRequest`
@@ -1465,7 +1465,7 @@ class BmvpcClient(AbstractClient):
 
 
     def ModifyVpcAttribute(self, request):
-        """本接口（ModifyVpcAttribute）用于修改VPC的标识名称和控制VPC的监控起停。
+        """本介面（ModifyVpcAttribute）用于修改VPC的标識名稱和控制VPC的監控起停。
 
         :param request: Request instance for ModifyVpcAttribute.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifyVpcAttributeRequest`
@@ -1493,7 +1493,7 @@ class BmvpcClient(AbstractClient):
 
 
     def ModifyVpcPeerConnection(self, request):
-        """修改黑石对等连接
+        """修改黑石對等連接
 
         :param request: Request instance for ModifyVpcPeerConnection.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifyVpcPeerConnectionRequest`
@@ -1521,7 +1521,7 @@ class BmvpcClient(AbstractClient):
 
 
     def ModifyVpnConnectionAttribute(self, request):
-        """本接口（ModifyVpnConnectionAttribute）用于修改VPN通道。
+        """本介面（ModifyVpnConnectionAttribute）用于修改VPN通道。
 
         :param request: Request instance for ModifyVpnConnectionAttribute.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifyVpnConnectionAttributeRequest`
@@ -1549,7 +1549,7 @@ class BmvpcClient(AbstractClient):
 
 
     def ModifyVpnGatewayAttribute(self, request):
-        """本接口（ModifyVpnGatewayAttribute）用于修改VPN网关属性。
+        """本介面（ModifyVpnGatewayAttribute）用于修改VPN閘道屬性。
 
         :param request: Request instance for ModifyVpnGatewayAttribute.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifyVpnGatewayAttributeRequest`
@@ -1577,7 +1577,7 @@ class BmvpcClient(AbstractClient):
 
 
     def RejectVpcPeerConnection(self, request):
-        """拒绝黑石对等连接申请
+        """拒絕黑石對等連接申請
 
         :param request: Request instance for RejectVpcPeerConnection.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.RejectVpcPeerConnectionRequest`
@@ -1605,7 +1605,7 @@ class BmvpcClient(AbstractClient):
 
 
     def ResetVpnConnection(self, request):
-        """本接口(ResetVpnConnection)用于重置VPN通道。
+        """本介面(ResetVpnConnection)用于重置VPN通道。
 
         :param request: Request instance for ResetVpnConnection.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.ResetVpnConnectionRequest`
@@ -1633,7 +1633,7 @@ class BmvpcClient(AbstractClient):
 
 
     def UnbindEipsFromNatGateway(self, request):
-        """NAT网关解绑该EIP后，NAT网关将不会使用该EIP作为访问外网的源IP地址
+        """NAT閘道解綁該EIP後，NAT閘道将不會使用該EIP作爲訪問外網的源IP網址
 
         :param request: Request instance for UnbindEipsFromNatGateway.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.UnbindEipsFromNatGatewayRequest`
@@ -1661,7 +1661,7 @@ class BmvpcClient(AbstractClient):
 
 
     def UnbindIpsFromNatGateway(self, request):
-        """NAT网关解绑IP接口，可将子网的部分IP从NAT网关中解绑
+        """NAT閘道解綁IP介面，可将子網的部分IP從NAT閘道中解綁
 
         :param request: Request instance for UnbindIpsFromNatGateway.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.UnbindIpsFromNatGatewayRequest`
@@ -1689,7 +1689,7 @@ class BmvpcClient(AbstractClient):
 
 
     def UnbindSubnetsFromNatGateway(self, request):
-        """NAT网关解绑子网接口，可将子网解绑NAT网关
+        """NAT閘道解綁子網介面，可将子網解綁NAT閘道
 
         :param request: Request instance for UnbindSubnetsFromNatGateway.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.UnbindSubnetsFromNatGatewayRequest`
@@ -1717,7 +1717,7 @@ class BmvpcClient(AbstractClient):
 
 
     def UpgradeNatGateway(self, request):
-        """升级NAT网关接口，可NAT网关修改为小型NAT网关、中型NAT网关、以及大型NAT网关
+        """升級NAT閘道介面，可NAT閘道修改爲小型NAT閘道、中型NAT閘道、以及大型NAT閘道
 
         :param request: Request instance for UpgradeNatGateway.
         :type request: :class:`tencentcloud.bmvpc.v20180625.models.UpgradeNatGatewayRequest`

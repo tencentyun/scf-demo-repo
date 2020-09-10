@@ -26,7 +26,7 @@ class IottidClient(AbstractClient):
 
 
     def AuthTestTid(self, request):
-        """单向认证测试TID
+        """單向認證測試TID
 
         :param request: Request instance for AuthTestTid.
         :type request: :class:`tencentcloud.iottid.v20190411.models.AuthTestTidRequest`
@@ -54,7 +54,7 @@ class IottidClient(AbstractClient):
 
 
     def BurnTidNotify(self, request):
-        """安全芯片TID烧录回执
+        """安全晶片TID燒錄回執
 
         :param request: Request instance for BurnTidNotify.
         :type request: :class:`tencentcloud.iottid.v20190411.models.BurnTidNotifyRequest`
@@ -82,7 +82,7 @@ class IottidClient(AbstractClient):
 
 
     def DeliverTidNotify(self, request):
-        """安全芯片为载体的TID空发回执，绑定TID与订单号。
+        """安全晶片爲載體的TID空發回執，綁定TID與訂單号。
 
         :param request: Request instance for DeliverTidNotify.
         :type request: :class:`tencentcloud.iottid.v20190411.models.DeliverTidNotifyRequest`
@@ -110,7 +110,7 @@ class IottidClient(AbstractClient):
 
 
     def DeliverTids(self, request):
-        """设备服务商请求空发产品订单的TID信息
+        """設備服務商請求空發産品訂單的TID訊息
 
         :param request: Request instance for DeliverTids.
         :type request: :class:`tencentcloud.iottid.v20190411.models.DeliverTidsRequest`
@@ -138,7 +138,7 @@ class IottidClient(AbstractClient):
 
 
     def DescribeAvailableLibCount(self, request):
-        """查询指定订单的可空发的白盒密钥数量
+        """查詢指定訂單的可空發的白盒金鑰數量
 
         :param request: Request instance for DescribeAvailableLibCount.
         :type request: :class:`tencentcloud.iottid.v20190411.models.DescribeAvailableLibCountRequest`
@@ -166,7 +166,7 @@ class IottidClient(AbstractClient):
 
 
     def DescribePermission(self, request):
-        """查询企业用户TID平台控制台权限
+        """查詢企業用戶TID平台控制台權限
 
         :param request: Request instance for DescribePermission.
         :type request: :class:`tencentcloud.iottid.v20190411.models.DescribePermissionRequest`
@@ -194,7 +194,7 @@ class IottidClient(AbstractClient):
 
 
     def DownloadTids(self, request):
-        """下载芯片订单的TID
+        """下載晶片訂單的TID
 
         :param request: Request instance for DownloadTids.
         :type request: :class:`tencentcloud.iottid.v20190411.models.DownloadTidsRequest`
@@ -222,7 +222,7 @@ class IottidClient(AbstractClient):
 
 
     def UploadDeviceUniqueCode(self, request):
-        """上传硬件唯一标识码，是软加固设备身份参数。本接口如遇到错误数据，则所有当次上传数据失效。
+        """上傳硬體唯一标識碼，是軟加固設備身份參數。本介面如遇到錯誤數據，則所有當次上傳數據失效。
 
         :param request: Request instance for UploadDeviceUniqueCode.
         :type request: :class:`tencentcloud.iottid.v20190411.models.UploadDeviceUniqueCodeRequest`
@@ -250,7 +250,7 @@ class IottidClient(AbstractClient):
 
 
     def VerifyChipBurnInfo(self, request):
-        """下载控制台验证芯片烧录信息，保证TID与中心信息一致
+        """下載控制台驗證晶片燒錄訊息，保證TID與中心訊息一緻
 
         :param request: Request instance for VerifyChipBurnInfo.
         :type request: :class:`tencentcloud.iottid.v20190411.models.VerifyChipBurnInfoRequest`

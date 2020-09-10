@@ -17,19 +17,19 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class DataManipulationRequest(AbstractModel):
-    """DataManipulation请求参数结构体
+    """DataManipulation請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param OpType: 操作类型，add或del
+        :param OpType: 操作類型，add或del
         :type OpType: str
-        :param Encoding: 数据编码类型
+        :param Encoding: 數據編碼類型
         :type Encoding: str
-        :param Contents: 数据
+        :param Contents: 數據
         :type Contents: str
-        :param ResourceId: 应用Id
+        :param ResourceId: 應用Id
         :type ResourceId: int
         """
         self.OpType = None
@@ -46,15 +46,15 @@ class DataManipulationRequest(AbstractModel):
 
 
 class DataManipulationResponse(AbstractModel):
-    """DataManipulation返回参数结构体
+    """DataManipulation返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 数据操作结果
+        :param Data: 數據操作結果
         :type Data: :class:`tencentcloud.yunsou.v20191115.models.DataManipulationResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -69,23 +69,23 @@ class DataManipulationResponse(AbstractModel):
 
 
 class DataManipulationResult(AbstractModel):
-    """数据操作结果
+    """數據操作結果
 
     """
 
     def __init__(self):
         """
-        :param AppId: 应用ID
+        :param AppId: 應用ID
         :type AppId: int
         :param Seq: 序号
         :type Seq: int
-        :param TotalResult: 结果
+        :param TotalResult: 結果
         :type TotalResult: str
-        :param Result: 操作结果明细
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Result: 操作結果明細
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: list of DataManipulationResultItem
-        :param ErrorResult: 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ErrorResult: 異常訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ErrorResult: str
         """
         self.AppId = None
@@ -109,17 +109,17 @@ class DataManipulationResult(AbstractModel):
 
 
 class DataManipulationResultItem(AbstractModel):
-    """数据操作结果明细
+    """數據操作結果明細
 
     """
 
     def __init__(self):
         """
-        :param Result: 结果
+        :param Result: 結果
         :type Result: str
-        :param DocId: 文档ID
+        :param DocId: 文件ID
         :type DocId: str
-        :param Errno: 错误码
+        :param Errno: 錯誤碼
         :type Errno: int
         """
         self.Result = None
@@ -134,57 +134,57 @@ class DataManipulationResultItem(AbstractModel):
 
 
 class DataSearchRequest(AbstractModel):
-    """DataSearch请求参数结构体
+    """DataSearch請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ResourceId: 云搜的业务ID，用以表明当前数据请求的业务
+        :param ResourceId: 雲搜的業務ID，用以表明當前數據請求的業務
         :type ResourceId: int
-        :param SearchQuery: 检索串
+        :param SearchQuery: 檢索串
         :type SearchQuery: str
-        :param PageId: 当前页，从第0页开始计算
+        :param PageId: 當前頁，從第0頁開始計算
         :type PageId: int
-        :param NumPerPage: 每页结果数
+        :param NumPerPage: 每頁結果數
         :type NumPerPage: int
-        :param SearchId: 当前检索号，用于定位问题，建议指定并且全局唯一
+        :param SearchId: 當前檢索号，用于定位問題，建議指定并且全局唯一
         :type SearchId: str
-        :param QueryEncode: 请求编码，0表示utf8，1表示gbk，建议指定
+        :param QueryEncode: 請求編碼，0表示utf8，1表示gbk，建議指定
         :type QueryEncode: int
-        :param RankType: 排序类型
+        :param RankType: 排序類型
         :type RankType: int
-        :param NumFilter: 数值过滤，结果中按属性过滤
+        :param NumFilter: 數值過濾，結果中按屬性過濾
         :type NumFilter: str
-        :param ClFilter: 分类过滤，导航类检索请求
+        :param ClFilter: 分類過濾，導航類檢索請求
         :type ClFilter: str
-        :param Extra: 检索用户相关字段
+        :param Extra: 檢索用戶相關欄位
         :type Extra: str
-        :param SourceId: 检索来源
+        :param SourceId: 檢索來源
         :type SourceId: int
-        :param SecondSearch: 是否进行二次检索，0关闭，1打开
+        :param SecondSearch: 是否進行二次檢索，0關閉，1打開
         :type SecondSearch: int
-        :param MaxDocReturn: 指定返回最大篇数，无特殊原因不建议指定
+        :param MaxDocReturn: 指定返回最大篇數，無特殊原因不建議指定
         :type MaxDocReturn: int
-        :param IsSmartbox: 是否smartbox检索，0关闭，1打开
+        :param IsSmartbox: 是否smartbox檢索，0關閉，1打開
         :type IsSmartbox: int
-        :param EnableAbsHighlight: 是否打开高红标亮，0关闭，1打开
+        :param EnableAbsHighlight: 是否打開高紅标亮，0關閉，1打開
         :type EnableAbsHighlight: int
-        :param QcBid: 指定访问QC纠错业务ID
+        :param QcBid: 指定訪問QC糾錯業務ID
         :type QcBid: int
-        :param GroupBy: 按指定字段进行group by，只能对数值字段进行操作
+        :param GroupBy: 按指定欄位進行group by，只能對數值欄位進行操作
         :type GroupBy: str
-        :param Distinct: 按指定字段进行distinct，只能对数值字段进行操作
+        :param Distinct: 按指定欄位進行distinct，只能對數值欄位進行操作
         :type Distinct: str
-        :param L4RankExpression: 高级排序参数，具体参见高级排序说明
+        :param L4RankExpression: 高級排序參數，具體參見高級排序說明
         :type L4RankExpression: str
-        :param MatchValue: 高级排序参数，具体参见高级排序说明
+        :param MatchValue: 高級排序參數，具體參見高級排序說明
         :type MatchValue: str
-        :param Longitude: 经度信息
+        :param Longitude: 經度訊息
         :type Longitude: float
-        :param Latitude: 纬度信息
+        :param Latitude: 緯度訊息
         :type Latitude: float
-        :param MultiFilter: 分类过滤并集
+        :param MultiFilter: 分類過濾并集
         :type MultiFilter: list of str
         """
         self.ResourceId = None
@@ -239,15 +239,15 @@ class DataSearchRequest(AbstractModel):
 
 
 class DataSearchResponse(AbstractModel):
-    """DataSearch返回参数结构体
+    """DataSearch返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Data: 检索结果
+        :param Data: 檢索結果
         :type Data: :class:`tencentcloud.yunsou.v20191115.models.SearchResult`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Data = None
@@ -262,27 +262,27 @@ class DataSearchResponse(AbstractModel):
 
 
 class SearchResult(AbstractModel):
-    """搜索结果
+    """搜索結果
 
     """
 
     def __init__(self):
         """
-        :param CostTime: 检索耗时，单位ms
+        :param CostTime: 檢索耗時，單位ms
         :type CostTime: int
-        :param DisplayNum: 搜索最多可以展示的结果数，多页
+        :param DisplayNum: 搜索最多可以展示的結果數，多頁
         :type DisplayNum: int
-        :param Echo: 和检索请求中的echo相对应
+        :param Echo: 和檢索請求中的echo相對應
         :type Echo: str
-        :param EResultNum: 检索结果的估算篇数，由索引平台估算
+        :param EResultNum: 檢索結果的估算篇數，由索引平台估算
         :type EResultNum: int
-        :param ResultNum: 检索返回的当前页码结果数
+        :param ResultNum: 檢索返回的當前頁碼結果數
         :type ResultNum: int
-        :param ResultList: 检索结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ResultList: 檢索結果清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ResultList: list of SearchResultItem
-        :param SegList: 检索的分词结果，array类型，可包含多个
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SegList: 檢索的分詞結果，array類型，可包含多個
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SegList: list of SearchResultSeg
         """
         self.CostTime = None
@@ -315,21 +315,21 @@ class SearchResult(AbstractModel):
 
 
 class SearchResultItem(AbstractModel):
-    """搜索结果元素
+    """搜索結果元素
 
     """
 
     def __init__(self):
         """
-        :param DocAbs: 动态摘要信息
+        :param DocAbs: 動态摘要訊息
         :type DocAbs: str
-        :param DocId: 检索文档id
+        :param DocId: 檢索文件id
         :type DocId: str
-        :param DocMeta: 原始文档信息
+        :param DocMeta: 原始文件訊息
         :type DocMeta: str
-        :param L2Score: 精计算得分
+        :param L2Score: 精計算得分
         :type L2Score: float
-        :param SearchDebuginfo: 文档级回传信息
+        :param SearchDebuginfo: 文件級回傳訊息
         :type SearchDebuginfo: str
         """
         self.DocAbs = None
@@ -354,7 +354,7 @@ class SearchResultSeg(AbstractModel):
 
     def __init__(self):
         """
-        :param SegStr: 分词
+        :param SegStr: 分詞
         :type SegStr: str
         """
         self.SegStr = None

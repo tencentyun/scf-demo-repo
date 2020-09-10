@@ -26,7 +26,7 @@ class OcrClient(AbstractClient):
 
 
     def ArithmeticOCR(self, request):
-        """本接口支持作业算式题目的自动识别，目前覆盖 K12 学力范围内的 14 种题型，包括加减乘除四则运算、分数四则运算、竖式四则运算、脱式计算等。
+        """本介面支援作業算式題目的自動識别，目前函蓋 K12 學力範圍内的 14 種題型，包括加減乘除四則運算、分數四則運算、豎式四則運算、脫式計算等。
 
         :param request: Request instance for ArithmeticOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.ArithmeticOCRRequest`
@@ -54,7 +54,7 @@ class OcrClient(AbstractClient):
 
 
     def BankCardOCR(self, request):
-        """本接口支持对中国大陆主流银行卡的卡号、银行信息、有效期等关键字段的检测与识别。
+        """本介面支援對中國大陸主流銀行卡的卡号、銀行訊息、有效期等關鍵欄位的檢測與識别。
 
         :param request: Request instance for BankCardOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.BankCardOCRRequest`
@@ -82,7 +82,7 @@ class OcrClient(AbstractClient):
 
 
     def BizLicenseOCR(self, request):
-        """本接口支持快速精准识别营业执照上的字段，包括注册号、公司名称、经营场所、主体类型、法定代表人、注册资金、组成形式、成立日期、营业期限和经营范围等字段。
+        """本介面支援快速精準識别營業執照上的欄位，包括注冊号、公司名稱、經營場所、主體類型、法定代表人、注冊資金、組成形式、成立日期、營業期限和經營範圍等欄位。
 
         :param request: Request instance for BizLicenseOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.BizLicenseOCRRequest`
@@ -110,7 +110,7 @@ class OcrClient(AbstractClient):
 
 
     def BusInvoiceOCR(self, request):
-        """本接口支持识别公路汽车客票的发票代码、发票号码、日期、姓名、票价等字段。
+        """本介面支援識别公路汽車客票的發票代碼、發票号碼、日期、姓名、票價等欄位。
 
         :param request: Request instance for BusInvoiceOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.BusInvoiceOCRRequest`
@@ -138,7 +138,7 @@ class OcrClient(AbstractClient):
 
 
     def BusinessCardOCR(self, request):
-        """本接口支持名片各字段的自动定位与识别，包含姓名、电话、手机号、邮箱、公司、部门、职位、网址、地址、QQ、微信、MSN等。
+        """本介面支援名片各欄位的自動定位與識别，包含姓名、電話、手機号、電子信箱、公司、部門、職位、網址、網址、QQ、微信、MSN等。
 
         :param request: Request instance for BusinessCardOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.BusinessCardOCRRequest`
@@ -166,7 +166,7 @@ class OcrClient(AbstractClient):
 
 
     def CarInvoiceOCR(self, request):
-        """本接口支持机动车销售统一发票和二手车销售统一发票的识别，包括发票号码、发票代码、合计金额、合计税额等二十多个字段。
+        """本介面支援機動車銷售統一發票和二手車銷售統一發票的識别，包括發票号碼、發票代碼、合計金額、合計稅額等二十多個欄位。
 
         :param request: Request instance for CarInvoiceOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.CarInvoiceOCRRequest`
@@ -194,13 +194,13 @@ class OcrClient(AbstractClient):
 
 
     def DriverLicenseOCR(self, request):
-        """本接口支持驾驶证主页和副页所有字段的自动定位与识别，重点字段的识别准确度达到99%以上。
+        """本介面支援駕駛證首頁和副頁所有欄位的自動定位與識别，重點欄位的識别準确度達到99%以上。
 
-        驾驶证主页：包括证号、姓名、性别、国籍、住址、出生日期、初次领证日期、准驾车型、有效期限。
+        駕駛證首頁：包括證号、姓名、性别、國籍、住址、出生日期、初次領證日期、準駕車型、有效期限。
 
-        驾驶证副页：包括证号、姓名、档案编号、记录。
+        駕駛證副頁：包括證号、姓名、檔案編号、記錄。
 
-        另外，本接口还支持复印件、翻拍和PS告警功能。
+        另外，本介面還支援影印件、翻拍和PS告警功能。
 
         :param request: Request instance for DriverLicenseOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.DriverLicenseOCRRequest`
@@ -228,7 +228,7 @@ class OcrClient(AbstractClient):
 
 
     def DutyPaidProofOCR(self, request):
-        """本接口支持对完税证明的税号、纳税人识别号、纳税人名称、金额合计大写、金额合计小写、填发日期、税务机关、填票人等关键字段的识别。
+        """本介面支援對完稅證明的稅号、納稅人識别号、納稅人名稱、金額合計大寫、金額合計小寫、填發日期、稅務機關、填票人等關鍵欄位的識别。
 
         :param request: Request instance for DutyPaidProofOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.DutyPaidProofOCRRequest`
@@ -256,7 +256,7 @@ class OcrClient(AbstractClient):
 
 
     def EduPaperOCR(self, request):
-        """本接口支持数学试题内容的识别和结构化输出，包括通用文本解析和小学/初中/高中数学公式解析能力（包括91种题型，180种符号）。
+        """本介面支援數學試題内容的識别和結構化輸出，包括通用文本解析和小學/初中/高中數學公式解析能力（包括91種題型，180種符号）。
 
         :param request: Request instance for EduPaperOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.EduPaperOCRRequest`
@@ -284,7 +284,7 @@ class OcrClient(AbstractClient):
 
 
     def EnglishOCR(self, request):
-        """本接口支持图像英文文字的检测和识别，返回文字框位置与文字内容。支持多场景、任意版面下的英文、字母、数字和常见字符的识别，同时覆盖英文印刷体和英文手写体识别。
+        """本介面支援圖像英文文字的檢測和識别，返回文字框位置與文字内容。支援多場景、任意版面下的英文、字母、數字和常見字元的識别，同時函蓋英文印刷體和英文手寫體識别。
 
         :param request: Request instance for EnglishOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.EnglishOCRRequest`
@@ -312,7 +312,7 @@ class OcrClient(AbstractClient):
 
 
     def EnterpriseLicenseOCR(self, request):
-        """本接口支持智能化识别各类企业登记证书、许可证书、企业执照、三证合一类证书，结构化输出统一社会信用代码、公司名称、法定代表人、公司地址、注册资金、企业类型、经营范围等关键字段。
+        """本介面支援智慧化識别各類企業登記證書、許可證書、企業執照、三證合一類證書，結構化輸出統一社會信用代碼、公司名稱、法定代表人、公司網址、注冊資金、企業類型、經營範圍等關鍵欄位。
 
         :param request: Request instance for EnterpriseLicenseOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.EnterpriseLicenseOCRRequest`
@@ -340,7 +340,7 @@ class OcrClient(AbstractClient):
 
 
     def EstateCertOCR(self, request):
-        """本接口支持不动产权证关键字段的识别，包括使用期限、面积、用途、权利性质、权利类型、坐落、共有情况、权利人、权利其他状况等。
+        """本介面支援不動産權證關鍵欄位的識别，包括使用期限、面積、用途、權利性質、權利類型、坐落、共有情況、權利人、權利其他狀況等。
 
 
 
@@ -370,7 +370,7 @@ class OcrClient(AbstractClient):
 
 
     def FinanBillOCR(self, request):
-        """本接口支持常见银行票据的自动分类和识别。整单识别包括支票（含现金支票、普通支票、转账支票），承兑汇票（含银行承兑汇票、商业承兑汇票）以及进账单等，适用于中国人民银行印发的 2010 版银行票据凭证版式（银发[2010]299 号）。
+        """本介面支援常見銀行票據的自動分類和識别。整單識别包括支票（含現金支票、普通支票、轉賬支票），承兌匯票（含銀行承兌匯票、商業承兌匯票）以及進帳單等，适用于中國人民銀行印發的 2010 版銀行票據憑證版式（銀發[2010]299 号）。
 
         :param request: Request instance for FinanBillOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.FinanBillOCRRequest`
@@ -398,7 +398,7 @@ class OcrClient(AbstractClient):
 
 
     def FinanBillSliceOCR(self, request):
-        """本接口支持常见银行票据的自动分类和识别。切片识别包括金融行业常见票据的重要切片字段识别，包括金额、账号、日期、凭证号码等。（金融票据切片：金融票据中待识别字段及其周围局部区域的裁剪图像。）
+        """本介面支援常見銀行票據的自動分類和識别。切片識别包括金融行業常見票據的重要切片欄位識别，包括金額、賬号、日期、憑證号碼等。（金融票據切片：金融票據中待識别欄位及其周圍局部區域的裁剪圖像。）
 
         :param request: Request instance for FinanBillSliceOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.FinanBillSliceOCRRequest`
@@ -426,7 +426,7 @@ class OcrClient(AbstractClient):
 
 
     def FlightInvoiceOCR(self, request):
-        """本接口支持机票行程单关键字段的识别，包括姓名、身份证件号码、航班号、票价 、合计、电子客票号码、填开日期等。
+        """本介面支援機票行程單關鍵欄位的識别，包括姓名、身份證件号碼、航班号、票價 、合計、電子客票号碼、填開日期等。
 
         :param request: Request instance for FlightInvoiceOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.FlightInvoiceOCRRequest`
@@ -454,7 +454,7 @@ class OcrClient(AbstractClient):
 
 
     def FormulaOCR(self, request):
-        """本接口支持识别主流初高中数学符号和公式，返回公式的 Latex 格式文本。
+        """本介面支援識别主流初高中數學符号和公式，返回公式的 Latex 格式文本。
 
         :param request: Request instance for FormulaOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.FormulaOCRRequest`
@@ -482,7 +482,7 @@ class OcrClient(AbstractClient):
 
 
     def GeneralAccurateOCR(self, request):
-        """本接口支持图像整体文字的检测和识别，返回文字框位置与文字内容。相比通用印刷体识别接口，高精度版在英文、数字、小字、模糊字、倾斜文本行等困难场景下，准确率和召回率更高。
+        """本介面支援圖像整體文字的檢測和識别，返回文字框位置與文字内容。相比通用印刷體識别介面，高精度版在英文、數字、小字、模糊字、傾斜文本行等困難場景下，準确率和召回率更高。
 
         :param request: Request instance for GeneralAccurateOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.GeneralAccurateOCRRequest`
@@ -510,7 +510,7 @@ class OcrClient(AbstractClient):
 
 
     def GeneralBasicOCR(self, request):
-        """本接口支持多场景、任意版面下整图文字的识别。支持自动识别语言类型，同时支持自选语言种类（推荐），除中英文外，支持日语、韩语、西班牙语、法语、德语、葡萄牙语、越南语、马来语、俄语、意大利语、荷兰语、瑞典语、芬兰语、丹麦语、挪威语、匈牙利语、泰语等多种语言。应用场景包括：印刷文档识别、网络图片识别、广告图文字识别、街景店招识别、菜单识别、视频标题识别、头像文字识别等。
+        """本介面支援多場景、任意版面下整圖文字的識别。支援自動識别語言類型，同時支援自選語言種類（推薦），除中英文外，支援日語、韓語、西班牙語、法語、德語、葡萄牙語、越南語、馬來語、俄語、意大利語、荷蘭語、瑞典語、芬蘭語、丹麥語、挪威語、匈牙利語、泰語等多種語言。應用場景包括：印刷文件識别、網絡圖片識别、廣告圖文字識别、街景店招識别、清單識别、視訊标題識别、頭像文字識别等。
 
         :param request: Request instance for GeneralBasicOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.GeneralBasicOCRRequest`
@@ -538,7 +538,7 @@ class OcrClient(AbstractClient):
 
 
     def GeneralEfficientOCR(self, request):
-        """本接口支持多场景、任意版面下整图文字的识别。相较于“通用印刷体识别”接口，精简版接口在准召率有一定损失的情况下，耗时更短。适用于对接口耗时较为敏感的客户。
+        """本介面支援多場景、任意版面下整圖文字的識别。相較于“通用印刷體識别”介面，精簡版介面在準召率有一定損失的情況下，耗時更短。适用于對介面耗時較爲敏感的客戶。
 
         :param request: Request instance for GeneralEfficientOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.GeneralEfficientOCRRequest`
@@ -566,7 +566,7 @@ class OcrClient(AbstractClient):
 
 
     def GeneralFastOCR(self, request):
-        """本接口支持图片中整体文字的检测和识别，返回文字框位置与文字内容。相比通用印刷体识别接口，识别速度更快、支持的 QPS 更高。
+        """本介面支援圖片中整體文字的檢測和識别，返回文字框位置與文字内容。相比通用印刷體識别介面，識别速度更快、支援的 QPS 更高。
 
         :param request: Request instance for GeneralFastOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.GeneralFastOCRRequest`
@@ -594,7 +594,7 @@ class OcrClient(AbstractClient):
 
 
     def GeneralHandwritingOCR(self, request):
-        """本接口支持图片内手写体文字的检测和识别，针对手写字体无规则、字迹潦草、模糊等特点进行了识别能力的增强。
+        """本介面支援圖片内手寫體文字的檢測和識别，針對手寫字體無規則、字迹潦草、模糊等特點進行了識别能力的增強。
 
         :param request: Request instance for GeneralHandwritingOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.GeneralHandwritingOCRRequest`
@@ -622,7 +622,7 @@ class OcrClient(AbstractClient):
 
 
     def HmtResidentPermitOCR(self, request):
-        """港澳台居住证OCR支持港澳台居住证正反面全字段内容检测识别功能，包括姓名、性别、出生日期、地址、身份证ID、签发机关、有效期限、签发次数、通行证号码关键字段识别。可以应用于港澳台居住证信息有效性校验场景，例如银行开户、用户注册等场景。
+        """港澳台居住證OCR支援港澳台居住證正反面全欄位内容檢測識别功能，包括姓名、性别、出生日期、網址、身份證ID、簽發機關、有效期限、簽發次數、通行證号碼關鍵欄位識别。可以應用于港澳台居住證訊息有效性校驗場景，例如銀行開戶、用戶注冊等場景。
 
         :param request: Request instance for HmtResidentPermitOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.HmtResidentPermitOCRRequest`
@@ -650,49 +650,49 @@ class OcrClient(AbstractClient):
 
 
     def IDCardOCR(self, request):
-        """本接口支持中国大陆居民二代身份证正反面所有字段的识别，包括姓名、性别、民族、出生日期、住址、公民身份证号、签发机关、有效期限，识别准确度达到99%以上。
+        """本介面支援中國大陸居民二代身份證正反面所有欄位的識别，包括姓名、性别、民族、出生日期、住址、公民身份證号、簽發機關、有效期限，識别準确度達到99%以上。
 
-        另外，本接口还支持多种增值能力，满足不同场景的需求。如身份证照片、人像照片的裁剪功能，同时具备9种告警功能，如下表所示。
+        另外，本介面還支援多種增值能力，滿足不同場景的需求。如身份證照片、人像照片的裁剪功能，同時具備9種告警功能，如下表所示。
 
         <table style="width:650px">
               <thead>
                 <tr>
                <th width="150">增值能力</th>
-                  <th width="500">能力项</th>
+                  <th width="500">能力項</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td rowspan="2">裁剪功能</td>
-                  <td>身份证照片裁剪（去掉证件外多余的边缘、自动矫正拍摄角度）</td>
+                  <td>身份證照片裁剪（去掉證件外多餘的邊緣、自動矯正拍攝角度）</td>
                 </tr>
                 <tr>
-                  <td>人像照片裁剪（自动抠取身份证头像区域）</td>
+                  <td>人像照片裁剪（自動摳取身份證頭像區域）</td>
                 </tr>
                 <tr>
                   <td rowspan="9">告警功能</td>
-                  <td>身份证有效日期不合法告警</td>
+                  <td>身份證有效日期不合法告警</td>
                 </tr>
                 <tr>
-                  <td>身份证边框不完整告警</td>
+                  <td>身份證邊框不完整告警</td>
                 </tr>
                 <tr>
-                  <td>身份证复印件告警</td>
+                  <td>身份證影印件告警</td>
                 </tr>
                 <tr>
-                  <td>身份证翻拍告警</td>
+                  <td>身份證翻拍告警</td>
                 </tr>
                   <tr>
-                  <td>身份证框内遮挡告警</td>
+                  <td>身份證框内遮擋告警</td>
                 </tr>
                  <tr>
-                  <td>临时身份证告警</td>
+                  <td>臨時身份證告警</td>
                 </tr>
                   <tr>
-                  <td>身份证 PS 告警</td>
+                  <td>身份證 PS 告警</td>
                 </tr>
                   <tr>
-                  <td>图片模糊告警</td>
+                  <td>圖片模糊告警</td>
                 </tr>
               </tbody>
             </table>
@@ -723,7 +723,7 @@ class OcrClient(AbstractClient):
 
 
     def InstitutionOCR(self, request):
-        """本接口支持事业单位法人证书关键字段识别，包括注册号、有效期、住所、名称、法定代表人等。
+        """本介面支援事業單位法人證書關鍵欄位識别，包括注冊号、有效期、住所、名稱、法定代表人等。
 
         :param request: Request instance for InstitutionOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.InstitutionOCRRequest`
@@ -751,7 +751,7 @@ class OcrClient(AbstractClient):
 
 
     def InsuranceBillOCR(self, request):
-        """本接口支持病案首页、费用清单、结算单、医疗发票四种保险理赔单据的文本识别和结构化输出。
+        """本介面支援病案首頁、費用清單、結算單、醫療發票四種保險理賠單據的文本識别和結構化輸出。
 
         :param request: Request instance for InsuranceBillOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.InsuranceBillOCRRequest`
@@ -779,7 +779,7 @@ class OcrClient(AbstractClient):
 
 
     def InvoiceGeneralOCR(self, request):
-        """本接口支持对通用机打发票的发票代码、发票号码、日期、购买方识别号、销售方识别号、校验码、小写金额等关键字段的识别。
+        """本介面支援對通用機打發票的發票代碼、發票号碼、日期、購買方識别号、銷售方識别号、校驗碼、小寫金額等關鍵欄位的識别。
 
         :param request: Request instance for InvoiceGeneralOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.InvoiceGeneralOCRRequest`
@@ -807,7 +807,7 @@ class OcrClient(AbstractClient):
 
 
     def LicensePlateOCR(self, request):
-        """本接口支持对中国大陆机动车车牌的自动定位和识别，返回地域编号和车牌号信息。
+        """本介面支援對中國大陸機動車車牌的自動定位和識别，返回地域編号和車牌号訊息。
 
         :param request: Request instance for LicensePlateOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.LicensePlateOCRRequest`
@@ -835,8 +835,8 @@ class OcrClient(AbstractClient):
 
 
     def MLIDCardOCR(self, request):
-        """本接口支持马来西亚身份证识别，识别字段包括身份证号、姓名、性别、地址；具备身份证人像照片的裁剪功能和翻拍、复印件告警功能。
-        本接口暂未完全对外开放，如需咨询，请[联系商务](https://cloud.tencent.com/about/connect)
+        """本介面支援馬來西亞身份證識别，識别欄位包括身份證号、姓名、性别、網址；具備身份證人像照片的裁剪功能和翻拍、影印件告警功能。
+        本介面暫未完全對外開放，如需咨詢，請[聯系商務](https://cloud.tencent.com/about/connect)
 
         :param request: Request instance for MLIDCardOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.MLIDCardOCRRequest`
@@ -864,8 +864,8 @@ class OcrClient(AbstractClient):
 
 
     def MLIDPassportOCR(self, request):
-        """本接口支持中国港澳台地区以及其他国家、地区的护照。识别字段包括护照ID、姓名、出生日期、性别、有效期、发行国、国籍；具备护照人像照片的裁剪功能和翻拍、复印件告警功能。
-        本接口暂未完全对外开放，如需咨询，请[联系商务](https://cloud.tencent.com/about/connect)
+        """本介面支援中國港澳台地區以及其他國家、地區的護照。識别欄位包括護照ID、姓名、出生日期、性别、有效期、發行國、國籍；具備護照人像照片的裁剪功能和翻拍、影印件告警功能。
+        本介面暫未完全對外開放，如需咨詢，請[聯系商務](https://cloud.tencent.com/about/connect)
 
         :param request: Request instance for MLIDPassportOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.MLIDPassportOCRRequest`
@@ -893,7 +893,7 @@ class OcrClient(AbstractClient):
 
 
     def MainlandPermitOCR(self, request):
-        """智能识别并结构化港澳台居民来往内地通行证正面全部字段，包含中文姓名、英文姓名、性别、出生日期、签发机关、有效期限、证件号、签发地点、签发次数、证件类别。
+        """智慧識别并結構化港澳台居民來往内地通行證正面全部欄位，包含中文姓名、英文姓名、性别、出生日期、簽發機關、有效期限、證件号、簽發地點、簽發次數、證件類别。
 
         :param request: Request instance for MainlandPermitOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.MainlandPermitOCRRequest`
@@ -921,7 +921,7 @@ class OcrClient(AbstractClient):
 
 
     def MixedInvoiceDetect(self, request):
-        """本接口支持多张、多类型票据的混合检测和自动分类，返回对应票据类型。目前已支持增值税发票、增值税发票（卷票）、定额发票、通用机打发票、购车发票、火车票、出租车发票、机票行程单、汽车票、轮船票、过路过桥费发票、酒店账单、客运限额发票、购物小票、完税证明共15种票据。
+        """本介面支援多張、多類型票據的混合檢測和自動分類，返回對應票據類型。目前已支援增值稅發票、增值稅發票（卷票）、定額發票、通用機打發票、購車發票、火車票、出租車發票、機票行程單、汽車票、輪船票、過路過橋費發票、酒店帳單、客運限額發票、購物小票、完稅證明共15種票據。
 
         :param request: Request instance for MixedInvoiceDetect.
         :type request: :class:`tencentcloud.ocr.v20181119.models.MixedInvoiceDetectRequest`
@@ -949,7 +949,7 @@ class OcrClient(AbstractClient):
 
 
     def MixedInvoiceOCR(self, request):
-        """本接口支持多张、多类型票据的混合识别，系统自动实现分割、分类和识别，同时支持自选需要识别的票据类型。目前已支持增值税发票、增值税发票（卷票）、定额发票、通用机打发票、购车发票、火车票、出租车发票、机票行程单、汽车票、轮船票、过路过桥费发票共11种票据。
+        """本介面支援多張、多類型票據的混合識别，系統自動實現分割、分類和識别，同時支援自選需要識别的票據類型。目前已支援增值稅發票、增值稅發票（卷票）、定額發票、通用機打發票、購車發票、火車票、出租車發票、機票行程單、汽車票、輪船票、過路過橋費發票共11種票據。
 
         :param request: Request instance for MixedInvoiceOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.MixedInvoiceOCRRequest`
@@ -977,7 +977,7 @@ class OcrClient(AbstractClient):
 
 
     def OrgCodeCertOCR(self, request):
-        """本接口支持组织机构代码证关键字段的识别，包括代码、有效期、地址、机构名称等。
+        """本介面支援組織機構代碼證關鍵欄位的識别，包括代碼、有效期、網址、機構名稱等。
 
         :param request: Request instance for OrgCodeCertOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.OrgCodeCertOCRRequest`
@@ -1005,7 +1005,7 @@ class OcrClient(AbstractClient):
 
 
     def PassportOCR(self, request):
-        """本接口支持中国大陆地区护照个人资料页多个字段的检测与识别。已支持字段包括英文姓名、中文姓名、国家码、护照号、出生地、出生日期、国籍英文、性别英文、有效期、签发地点英文、签发日期、持证人签名、护照机读码（MRZ码）等。
+        """本介面支援中國大陸地區護照個人資料頁多個欄位的檢測與識别。已支援欄位包括英文姓名、中文姓名、國家碼、護照号、出生地、出生日期、國籍英文、性别英文、有效期、簽發地點英文、簽發日期、持證人簽名、護照機讀碼（MRZ碼）等。
 
         :param request: Request instance for PassportOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.PassportOCRRequest`
@@ -1033,7 +1033,7 @@ class OcrClient(AbstractClient):
 
 
     def PermitOCR(self, request):
-        """本接口支持对卡式港澳台通行证的识别，包括签发地点、签发机关、有效期限、性别、出生日期、英文姓名、姓名、证件号等字段。
+        """本介面支援對卡式港澳台通行證的識别，包括簽發地點、簽發機關、有效期限、性别、出生日期、英文姓名、姓名、證件号等欄位。
 
         :param request: Request instance for PermitOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.PermitOCRRequest`
@@ -1061,7 +1061,7 @@ class OcrClient(AbstractClient):
 
 
     def PropOwnerCertOCR(self, request):
-        """本接口支持房产证关键字段的识别，包括房地产权利人、共有情况、登记时间、规划用途、房屋性质、房屋坐落等。
+        """本介面支援房産證關鍵欄位的識别，包括房地産權利人、共有情況、登記時間、規劃用途、房屋性質、房屋坐落等。
 
         :param request: Request instance for PropOwnerCertOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.PropOwnerCertOCRRequest`
@@ -1089,8 +1089,8 @@ class OcrClient(AbstractClient):
 
 
     def QrcodeOCR(self, request):
-        """本接口支持条形码和二维码的识别（包括 DataMatrix 和 PDF417）。
-        本接口暂未完全对外开放，如需咨询，请[联系商务](https://cloud.tencent.com/about/connect)
+        """本介面支援條形碼和二維碼的識别（包括 DataMatrix 和 PDF417）。
+        本介面暫未完全對外開放，如需咨詢，請[聯系商務](https://cloud.tencent.com/about/connect)
 
         :param request: Request instance for QrcodeOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.QrcodeOCRRequest`
@@ -1118,7 +1118,7 @@ class OcrClient(AbstractClient):
 
 
     def QuotaInvoiceOCR(self, request):
-        """本接口支持定额发票的发票号码、发票代码、金额(大小写)、发票消费类型、地区及是否有公司印章等关键字段的识别。
+        """本介面支援定額發票的發票号碼、發票代碼、金額(大小寫)、發票消費類型、地區及是否有公司印章等關鍵欄位的識别。
 
         :param request: Request instance for QuotaInvoiceOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.QuotaInvoiceOCRRequest`
@@ -1146,7 +1146,7 @@ class OcrClient(AbstractClient):
 
 
     def ResidenceBookletOCR(self, request):
-        """本接口支持居民户口簿户主页及成员页关键字段的识别，包括姓名、户别、地址、籍贯、身份证号码等。
+        """本介面支援居民戶口簿戶首頁及成員頁關鍵欄位的識别，包括姓名、戶别、網址、籍貫、身份證号碼等。
 
         :param request: Request instance for ResidenceBookletOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.ResidenceBookletOCRRequest`
@@ -1174,7 +1174,7 @@ class OcrClient(AbstractClient):
 
 
     def ShipInvoiceOCR(self, request):
-        """本接口支持识别轮船票的发票代码、发票号码、日期、姓名、票价等字段。
+        """本介面支援識别輪船票的發票代碼、發票号碼、日期、姓名、票價等欄位。
 
         :param request: Request instance for ShipInvoiceOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.ShipInvoiceOCRRequest`
@@ -1202,7 +1202,7 @@ class OcrClient(AbstractClient):
 
 
     def TableOCR(self, request):
-        """本接口支持图片内表格文档的检测和识别，返回每个单元格的文字内容，支持将识别结果保存为 Excel 格式。
+        """本介面支援圖片内表格文件的檢測和識别，返回每個單元格的文字内容，支援将識别結果保存爲 Excel 格式。
 
         :param request: Request instance for TableOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.TableOCRRequest`
@@ -1230,7 +1230,7 @@ class OcrClient(AbstractClient):
 
 
     def TaxiInvoiceOCR(self, request):
-        """本接口支持出租车发票关键字段的识别，包括发票号码、发票代码、金额、日期、上下车时间、里程、车牌号、发票类型及所属地区等字段。
+        """本介面支援出租車發票關鍵欄位的識别，包括發票号碼、發票代碼、金額、日期、上下車時間、裏程、車牌号、發票類型及所屬地區等欄位。
 
         :param request: Request instance for TaxiInvoiceOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.TaxiInvoiceOCRRequest`
@@ -1258,7 +1258,7 @@ class OcrClient(AbstractClient):
 
 
     def TextDetect(self, request):
-        """本接口通过检测图片中的文字信息特征，快速判断图片中有无文字并返回判断结果，帮助用户过滤无文字的图片。
+        """本介面通過檢測圖片中的文字訊息特征，快速判斷圖片中有無文字并返回判斷結果，幫助用戶過濾無文字的圖片。
 
         :param request: Request instance for TextDetect.
         :type request: :class:`tencentcloud.ocr.v20181119.models.TextDetectRequest`
@@ -1286,7 +1286,7 @@ class OcrClient(AbstractClient):
 
 
     def TollInvoiceOCR(self, request):
-        """本接口支持对过路过桥费发票的发票代码、发票号码、日期、小写金额等关键字段的识别。
+        """本介面支援對過路過橋費發票的發票代碼、發票号碼、日期、小寫金額等關鍵欄位的識别。
 
         :param request: Request instance for TollInvoiceOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.TollInvoiceOCRRequest`
@@ -1314,7 +1314,7 @@ class OcrClient(AbstractClient):
 
 
     def TrainTicketOCR(self, request):
-        """本接口支持火车票全字段的识别，包括编号、票价、姓名、座位号、出发时间、出发站、到达站、车次、席别、发票类型及序列号等。
+        """本介面支援火車票全欄位的識别，包括編号、票價、姓名、座位号、出發時間、出發站、到達站、車次、席别、發票類型及序列号等。
 
         :param request: Request instance for TrainTicketOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.TrainTicketOCRRequest`
@@ -1342,7 +1342,7 @@ class OcrClient(AbstractClient):
 
 
     def VatInvoiceOCR(self, request):
-        """本接口支持增值税专用发票、增值税普通发票、增值税电子发票全字段的内容检测和识别，包括发票代码、发票号码、开票日期、合计金额、校验码、税率、合计税额、价税合计、购买方识别号、复核、销售方识别号、开票人、密码区1、密码区2、密码区3、密码区4、发票名称、购买方名称、销售方名称、服务名称、备注、规格型号、数量、单价、金额、税额、收款人等字段。
+        """本介面支援增值稅專用發票、增值稅普通發票、增值稅電子發票全欄位的内容檢測和識别，包括發票代碼、發票号碼、開票日期、合計金額、校驗碼、稅率、合計稅額、價稅合計、購買方識别号、複核、銷售方識别号、開票人、密碼區1、密碼區2、密碼區3、密碼區4、發票名稱、購買方名稱、銷售方名稱、服務名稱、備注、規格型号、數量、單價、金額、稅額、收款人等欄位。
 
         :param request: Request instance for VatInvoiceOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.VatInvoiceOCRRequest`
@@ -1370,7 +1370,7 @@ class OcrClient(AbstractClient):
 
 
     def VatRollInvoiceOCR(self, request):
-        """本接口支持对增值税发票（卷票）的发票代码、发票号码、日期、校验码、合计金额（小写）等关键字段的识别。
+        """本介面支援對增值稅發票（卷票）的發票代碼、發票号碼、日期、校驗碼、合計金額（小寫）等關鍵欄位的識别。
 
         :param request: Request instance for VatRollInvoiceOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.VatRollInvoiceOCRRequest`
@@ -1398,13 +1398,13 @@ class OcrClient(AbstractClient):
 
 
     def VehicleLicenseOCR(self, request):
-        """本接口支持行驶证主页和副页所有字段的自动定位与识别。
+        """本介面支援行駛證首頁和副頁所有欄位的自動定位與識别。
 
-        行驶证主页：车牌号码、车辆类型、所有人、住址、使用性质、品牌型号、识别代码、发动机号、注册日期、发证日期、发证单位。
+        行駛證首頁：車牌号碼、車輛類型、所有人、住址、使用性質、品牌型号、識别代碼、發動機号、注冊日期、發證日期、發證單位。
 
-        行驶证副页：号牌号码、档案编号、核定载人数、总质量、整备质量、核定载质量、外廓尺寸、准牵引总质量、备注、检验记录。
+        行駛證副頁：号牌号碼、檔案編号、核定載人數、總質量、整備質量、核定載質量、外廓尺寸、準牽引總質量、備注、檢驗記錄。
 
-        另外，本接口还支持复印件、翻拍和PS告警功能。
+        另外，本介面還支援影印件、翻拍和PS告警功能。
 
         :param request: Request instance for VehicleLicenseOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.VehicleLicenseOCRRequest`
@@ -1432,7 +1432,7 @@ class OcrClient(AbstractClient):
 
 
     def VehicleRegCertOCR(self, request):
-        """本接口支持国内机动车登记证书主要字段的结构化识别，包括机动车所有人、身份证明名称、号码、车辆型号、车辆识别代号、发动机号、制造厂名称等。
+        """本介面支援國内機動車登記證書主要欄位的結構化識别，包括機動車所有人、身份證明名稱、号碼、車輛型号、車輛識别代号、發動機号、制造廠名稱等。
 
         :param request: Request instance for VehicleRegCertOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.VehicleRegCertOCRRequest`
@@ -1460,7 +1460,7 @@ class OcrClient(AbstractClient):
 
 
     def VinOCR(self, request):
-        """本接口支持图片内车辆识别代号（VIN）的检测和识别。
+        """本介面支援圖片内車輛識别代号（VIN）的檢測和識别。
 
         :param request: Request instance for VinOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.VinOCRRequest`
@@ -1488,7 +1488,7 @@ class OcrClient(AbstractClient):
 
 
     def WaybillOCR(self, request):
-        """本接口支持市面上主流版式电子运单的识别，包括收件人和寄件人的姓名、电话、地址以及运单号等字段。
+        """本介面支援市面上主流版式電子運單的識别，包括收件人和寄件人的姓名、電話、網址以及運單号等欄位。
 
         :param request: Request instance for WaybillOCR.
         :type request: :class:`tencentcloud.ocr.v20181119.models.WaybillOCRRequest`

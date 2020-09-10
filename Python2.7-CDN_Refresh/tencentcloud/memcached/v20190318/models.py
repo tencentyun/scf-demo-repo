@@ -17,33 +17,33 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class DescribeInstancesRequest(AbstractModel):
-    """DescribeInstances请求参数结构体
+    """DescribeInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 实例ID组成的数组，数组下标从0开始
+        :param InstanceIds: 實例ID組成的數組，數組下标從0開始
         :type InstanceIds: list of str
-        :param InstanceNames: 实例名称组成的数组，数组下标从0开始
+        :param InstanceNames: 實例名稱組成的數組，數組下标從0開始
         :type InstanceNames: list of str
-        :param Limit: 实例列表的大小，参数默认值100
+        :param Limit: 實例清單的大小，參數預設值100
         :type Limit: int
-        :param Offset: 偏移量，取Limit整数倍
+        :param Offset: 偏移量，取Limit整數倍
         :type Offset: int
-        :param OrderBy: 枚举范围： AddTimeStamp, InstanceName, ProjectId
+        :param OrderBy: 列舉範圍： AddTimeStamp, InstanceName, ProjectId
         :type OrderBy: str
-        :param OrderType: 0倒序，1正序，默认倒序
+        :param OrderType: 0倒序，1正序，預設倒序
         :type OrderType: int
-        :param ProjectIds: 项目ID组成的数组，数组下标从0开始
+        :param ProjectIds: 項目ID組成的數組，數組下标從0開始
         :type ProjectIds: list of int
-        :param SearchKeys: 搜索关键词：支持实例ID、实例名称、完整IP
+        :param SearchKeys: 搜索關鍵詞：支援實例ID、實例名稱、完整IP
         :type SearchKeys: list of str
-        :param UniqSubnetIds: 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+        :param UniqSubnetIds: 子網ID數組，數組下标從0開始，如：subnet-fdj24n34j2
         :type UniqSubnetIds: list of str
-        :param UniqVpcIds: 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+        :param UniqVpcIds: 私有網絡ID數組，數組下标從0開始，如果不傳則預設選擇基礎網絡，如：vpc-sad23jfdfk
         :type UniqVpcIds: list of str
-        :param Vips: 实例服务IP组成的数组，数组下标从0开始
+        :param Vips: 實例服務IP組成的數組，數組下标從0開始
         :type Vips: list of str
         """
         self.InstanceIds = None
@@ -74,17 +74,17 @@ class DescribeInstancesRequest(AbstractModel):
 
 
 class DescribeInstancesResponse(AbstractModel):
-    """DescribeInstances返回参数结构体
+    """DescribeInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceList: 实例详细信息列表
+        :param InstanceList: 實例詳細訊息清單
         :type InstanceList: list of InstanceListInfo
-        :param TotalNum: 实例数量
+        :param TotalNum: 實例數量
         :type TotalNum: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.InstanceList = None
@@ -104,59 +104,59 @@ class DescribeInstancesResponse(AbstractModel):
 
 
 class InstanceListInfo(AbstractModel):
-    """实例详细信息列表
+    """實例詳細訊息清單
 
     """
 
     def __init__(self):
         """
-        :param Tags: 实例关联的标签信息
+        :param Tags: 實例關聯的标簽訊息
         :type Tags: list of TagInfo
-        :param AddTimeStamp: 实例创建时间
+        :param AddTimeStamp: 實例創建時間
         :type AddTimeStamp: str
-        :param AppId: 用户AppID
+        :param AppId: 用戶AppID
         :type AppId: int
-        :param AutoRenewFlag: 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
+        :param AutoRenewFlag: 實例是否設置自動續約标識，1：設置自動續約；0：未設置自動續約
         :type AutoRenewFlag: int
-        :param CmemId: 实例内置ID
+        :param CmemId: 實例内置ID
         :type CmemId: int
-        :param DeadlineTimeStamp: 实例截止时间
+        :param DeadlineTimeStamp: 實例截止時間
         :type DeadlineTimeStamp: str
-        :param Expire: 过期策略
+        :param Expire: 過期策略
         :type Expire: int
-        :param InstanceDesc: 实例描述信息
+        :param InstanceDesc: 實例描述訊息
         :type InstanceDesc: str
-        :param InstanceId: 实例ID
+        :param InstanceId: 實例ID
         :type InstanceId: str
-        :param InstanceName: 实例名称
+        :param InstanceName: 實例名稱
         :type InstanceName: str
-        :param IsolateTimeStamp: 实例隔离时间
+        :param IsolateTimeStamp: 實例隔離時間
         :type IsolateTimeStamp: str
-        :param ModTimeStamp: 实例修改时间
+        :param ModTimeStamp: 實例修改時間
         :type ModTimeStamp: str
-        :param PayMode: 计费模式：0-按量计费，1-包年包月
+        :param PayMode: 計費模式：0-按量計費，1-包年包月
         :type PayMode: int
-        :param ProjectId: 项目ID
+        :param ProjectId: 項目ID
         :type ProjectId: int
-        :param RegionId: 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+        :param RegionId: 地域id 1--廣州 4--上海 5-- 香港 6--多倫多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（矽谷）16--成都 17--德國 18--韓國 19--重慶 21--印度 22--美東（弗吉尼亞）23--泰國 24--俄羅斯 25--日本
         :type RegionId: int
-        :param SetId: 仓库ID
+        :param SetId: 倉庫ID
         :type SetId: int
-        :param Status: 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
+        :param Status: 實例當前狀态，0：待初始化；1：實例在流程中；2：實例運作中；-2：實例已隔離；-3：實例待删除
         :type Status: int
-        :param SubnetId: vpc网络下子网id 如：46315
+        :param SubnetId: vpc網絡下子網id 如：46315
         :type SubnetId: int
-        :param UniqSubnetId: vpc网络下子网id 如：subnet-fd3j6l35mm0
+        :param UniqSubnetId: vpc網絡下子網id 如：subnet-fd3j6l35mm0
         :type UniqSubnetId: str
-        :param UniqVpcId: vpc网络id 如：vpc-fk33jsf43kgv
+        :param UniqVpcId: vpc網絡id 如：vpc-fk33jsf43kgv
         :type UniqVpcId: str
-        :param Vip: 实例vip
+        :param Vip: 實例vip
         :type Vip: str
-        :param VpcId: vpc网络id 如：75101
+        :param VpcId: vpc網絡id 如：75101
         :type VpcId: int
-        :param Vport: 实例端口号
+        :param Vport: 實例端口号
         :type Vport: int
-        :param ZoneId: 区域ID
+        :param ZoneId: 區域ID
         :type ZoneId: int
         """
         self.Tags = None
@@ -218,15 +218,15 @@ class InstanceListInfo(AbstractModel):
 
 
 class TagInfo(AbstractModel):
-    """标签信息
+    """标簽訊息
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标签键
+        :param TagKey: 标簽鍵
         :type TagKey: str
-        :param TagValue: 标签值
+        :param TagValue: 标簽值
         :type TagValue: str
         """
         self.TagKey = None

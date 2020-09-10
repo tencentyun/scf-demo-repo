@@ -26,9 +26,9 @@ class MariadbClient(AbstractClient):
 
 
     def CloneAccount(self, request):
-        """本接口（CloneAccount）用于克隆实例账户。
+        """本介面（CloneAccount）用于複製實例帳戶。
 
-        :param request: 调用CloneAccount所需参数的结构体。
+        :param request: 調用CloneAccount所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.CloneAccountRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.CloneAccountResponse`
 
@@ -54,9 +54,9 @@ class MariadbClient(AbstractClient):
 
 
     def CloseDBExtranetAccess(self, request):
-        """本接口(CloseDBExtranetAccess)用于关闭云数据库实例的外网访问。关闭外网访问后，外网地址将不可访问，查询实例列表接口将不返回对应实例的外网域名和端口信息。
+        """本介面(CloseDBExtranetAccess)用于關閉雲資料庫實例的外網訪問。關閉外網訪問後，外網網址将不可訪問，查詢實例清單介面将不返回對應實例的外網域名和端口訊息。
 
-        :param request: 调用CloseDBExtranetAccess所需参数的结构体。
+        :param request: 調用CloseDBExtranetAccess所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.CloseDBExtranetAccessRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.CloseDBExtranetAccessResponse`
 
@@ -82,10 +82,10 @@ class MariadbClient(AbstractClient):
 
 
     def CopyAccountPrivileges(self, request):
-        """本接口（CopyAccountPrivileges）用于复制云数据库账号的权限。
-        注意：相同用户名，不同Host是不同的账号，Readonly属性相同的账号之间才能复制权限。
+        """本介面（CopyAccountPrivileges）用于複制雲資料庫賬号的權限。
+        注意：相同用戶名，不同Host是不同的賬号，Readonly屬性相同的賬号之間才能複制權限。
 
-        :param request: 调用CopyAccountPrivileges所需参数的结构体。
+        :param request: 調用CopyAccountPrivileges所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.CopyAccountPrivilegesRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.CopyAccountPrivilegesResponse`
 
@@ -111,9 +111,9 @@ class MariadbClient(AbstractClient):
 
 
     def CreateAccount(self, request):
-        """本接口（CreateAccount）用于创建云数据库账号。一个实例可以创建多个不同的账号，相同的用户名+不同的host是不同的账号。
+        """本介面（CreateAccount）用于創建雲資料庫賬号。一個實例可以創建多個不同的賬号，相同的用戶名+不同的host是不同的賬号。
 
-        :param request: 调用CreateAccount所需参数的结构体。
+        :param request: 調用CreateAccount所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.CreateAccountRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.CreateAccountResponse`
 
@@ -139,9 +139,9 @@ class MariadbClient(AbstractClient):
 
 
     def CreateDBInstance(self, request):
-        """本接口（CreateDBInstance）用于创建包年包月的云数据库实例，可通过传入实例规格、数据库版本号、购买时长和数量等信息创建云数据库实例。
+        """本介面（CreateDBInstance）用于創建包年包月的雲資料庫實例，可通過傳入實例規格、資料庫版本号、購買時長和數量等訊息創建雲資料庫實例。
 
-        :param request: 调用CreateDBInstance所需参数的结构体。
+        :param request: 調用CreateDBInstance所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.CreateDBInstanceRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.CreateDBInstanceResponse`
 
@@ -167,9 +167,9 @@ class MariadbClient(AbstractClient):
 
 
     def DeleteAccount(self, request):
-        """本接口（DeleteAccount）用于删除云数据库账号。用户名+host唯一确定一个账号。
+        """本介面（DeleteAccount）用于删除雲資料庫賬号。用戶名+host唯一确定一個賬号。
 
-        :param request: 调用DeleteAccount所需参数的结构体。
+        :param request: 調用DeleteAccount所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DeleteAccountRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DeleteAccountResponse`
 
@@ -195,10 +195,10 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeAccountPrivileges(self, request):
-        """本接口（DescribeAccountPrivileges）用于查询云数据库账号权限。
-        注意：注意：相同用户名，不同Host是不同的账号。
+        """本介面（DescribeAccountPrivileges）用于查詢雲資料庫賬号權限。
+        注意：注意：相同用戶名，不同Host是不同的賬号。
 
-        :param request: 调用DescribeAccountPrivileges所需参数的结构体。
+        :param request: 調用DescribeAccountPrivileges所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeAccountPrivilegesRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeAccountPrivilegesResponse`
 
@@ -224,9 +224,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeAccounts(self, request):
-        """本接口（DescribeAccounts）用于查询指定云数据库实例的账号列表。
+        """本介面（DescribeAccounts）用于查詢指定雲資料庫實例的賬号清單。
 
-        :param request: 调用DescribeAccounts所需参数的结构体。
+        :param request: 調用DescribeAccounts所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeAccountsRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeAccountsResponse`
 
@@ -252,9 +252,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeBackupTime(self, request):
-        """本接口（DescribeBackupTime）用于获取云数据库的备份时间。后台系统将根据此配置定期进行实例备份。
+        """本介面（DescribeBackupTime）用于獲取雲資料庫的備份時間。後台系統将根據此配置定期進行實例備份。
 
-        :param request: 调用DescribeBackupTime所需参数的结构体。
+        :param request: 調用DescribeBackupTime所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeBackupTimeRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeBackupTimeResponse`
 
@@ -280,9 +280,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBInstanceSpecs(self, request):
-        """本接口(DescribeDBInstanceSpecs)用于查询可创建的云数据库可售卖的规格配置。
+        """本介面(DescribeDBInstanceSpecs)用于查詢可創建的雲資料庫可售賣的規格配置。
 
-        :param request: 调用DescribeDBInstanceSpecs所需参数的结构体。
+        :param request: 調用DescribeDBInstanceSpecs所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBInstanceSpecsRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBInstanceSpecsResponse`
 
@@ -308,10 +308,10 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBInstances(self, request):
-        """本接口（DescribeDBInstances）用于查询云数据库实例列表，支持通过项目ID、实例ID、内网地址、实例名称等来筛选实例。
-        如果不指定任何筛选条件，则默认返回20条实例记录，单次请求最多支持返回100条实例记录。
+        """本介面（DescribeDBInstances）用于查詢雲資料庫實例清單，支援通過項目ID、實例ID、内網網址、實例名稱等來篩選實例。
+        如果不指定任何篩選條件，則預設返回20條實例記錄，單次請求最多支援返回100條實例記錄。
 
-        :param request: 调用DescribeDBInstances所需参数的结构体。
+        :param request: 調用DescribeDBInstances所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBInstancesRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBInstancesResponse`
 
@@ -337,9 +337,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBLogFiles(self, request):
-        """本接口(DescribeDBLogFiles)用于获取数据库的各种日志列表，包括冷备、binlog、errlog和slowlog。
+        """本介面(DescribeDBLogFiles)用于獲取資料庫的各種日志清單，包括冷備、binlog、errlog和slowlog。
 
-        :param request: 调用DescribeDBLogFiles所需参数的结构体。
+        :param request: 調用DescribeDBLogFiles所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBLogFilesRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBLogFilesResponse`
 
@@ -365,9 +365,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBParameters(self, request):
-        """本接口(DescribeDBParameters)用于获取数据库的当前参数设置。
+        """本介面(DescribeDBParameters)用于獲取資料庫的當前參數設置。
 
-        :param request: 调用DescribeDBParameters所需参数的结构体。
+        :param request: 調用DescribeDBParameters所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBParametersRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBParametersResponse`
 
@@ -393,9 +393,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBPerformance(self, request):
-        """本接口(DescribeDBPerformance)用于查看数据库实例当前性能数据。
+        """本介面(DescribeDBPerformance)用于檢視資料庫實例當前效能數據。
 
-        :param request: 调用DescribeDBPerformance所需参数的结构体。
+        :param request: 調用DescribeDBPerformance所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBPerformanceRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBPerformanceResponse`
 
@@ -421,9 +421,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBPerformanceDetails(self, request):
-        """本接口(DescribeDBPerformanceDetails)用于查看实例性能数据详情。
+        """本介面(DescribeDBPerformanceDetails)用于檢視實例效能數據詳情。
 
-        :param request: 调用DescribeDBPerformanceDetails所需参数的结构体。
+        :param request: 調用DescribeDBPerformanceDetails所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBPerformanceDetailsRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBPerformanceDetailsResponse`
 
@@ -449,9 +449,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBResourceUsage(self, request):
-        """本接口(DescribeDBResourceUsage)用于查看数据库实例资源的使用情况。
+        """本介面(DescribeDBResourceUsage)用于檢視資料庫實例資源的使用情況。
 
-        :param request: 调用DescribeDBResourceUsage所需参数的结构体。
+        :param request: 調用DescribeDBResourceUsage所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBResourceUsageRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBResourceUsageResponse`
 
@@ -477,9 +477,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBResourceUsageDetails(self, request):
-        """本接口(DescribeDBResourceUsageDetails)用于查看数据库实例当前性能数据。
+        """本介面(DescribeDBResourceUsageDetails)用于檢視資料庫實例當前效能數據。
 
-        :param request: 调用DescribeDBResourceUsageDetails所需参数的结构体。
+        :param request: 調用DescribeDBResourceUsageDetails所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBResourceUsageDetailsRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBResourceUsageDetailsResponse`
 
@@ -505,9 +505,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBSlowLogs(self, request):
-        """本接口(DescribeDBSlowLogs)用于查询慢查询日志列表。
+        """本介面(DescribeDBSlowLogs)用于查詢慢查詢日志清單。
 
-        :param request: 调用DescribeDBSlowLogs所需参数的结构体。
+        :param request: 調用DescribeDBSlowLogs所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBSlowLogsRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBSlowLogsResponse`
 
@@ -533,9 +533,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeFlow(self, request):
-        """本接口（DescribeFlow）用于查询流程状态。
+        """本介面（DescribeFlow）用于查詢流程狀态。
 
-        :param request: 调用DescribeFlow所需参数的结构体。
+        :param request: 調用DescribeFlow所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeFlowRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeFlowResponse`
 
@@ -561,9 +561,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeLogFileRetentionPeriod(self, request):
-        """本接口(DescribeLogFileRetentionPeriod)用于查看数据库备份日志的备份天数的设置情况。
+        """本介面(DescribeLogFileRetentionPeriod)用于檢視資料庫備份日志的備份天數的設置情況。
 
-        :param request: 调用DescribeLogFileRetentionPeriod所需参数的结构体。
+        :param request: 調用DescribeLogFileRetentionPeriod所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeLogFileRetentionPeriodRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeLogFileRetentionPeriodResponse`
 
@@ -589,9 +589,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeOrders(self, request):
-        """本接口（DescribeOrders）用于查询云数据库订单信息。传入订单Id来查询订单关联的云数据库实例，和对应的任务流程ID。
+        """本介面（DescribeOrders）用于查詢雲資料庫訂單訊息。傳入訂單Id來查詢訂單關聯的雲資料庫實例，和對應的任務流程ID。
 
-        :param request: 调用DescribeOrders所需参数的结构体。
+        :param request: 調用DescribeOrders所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeOrdersRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeOrdersResponse`
 
@@ -617,9 +617,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribePrice(self, request):
-        """本接口（DescribePrice）用于在购买实例前，查询实例的价格。
+        """本介面（DescribePrice）用于在購買實例前，查詢實例的價格。
 
-        :param request: 调用DescribePrice所需参数的结构体。
+        :param request: 調用DescribePrice所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribePriceRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribePriceResponse`
 
@@ -645,9 +645,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeRenewalPrice(self, request):
-        """本接口（DescribeRenewalPrice）用于在续费云数据库实例时，查询续费的价格。
+        """本介面（DescribeRenewalPrice）用于在續約雲資料庫實例時，查詢續約的價格。
 
-        :param request: 调用DescribeRenewalPrice所需参数的结构体。
+        :param request: 調用DescribeRenewalPrice所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeRenewalPriceRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeRenewalPriceResponse`
 
@@ -673,9 +673,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeSaleInfo(self, request):
-        """本接口(DescribeSaleInfo)用于查询云数据库可售卖的地域和可用区信息。
+        """本介面(DescribeSaleInfo)用于查詢雲資料庫可售賣的地域和可用區訊息。
 
-        :param request: 调用DescribeSaleInfo所需参数的结构体。
+        :param request: 調用DescribeSaleInfo所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeSaleInfoRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeSaleInfoResponse`
 
@@ -701,9 +701,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeSqlLogs(self, request):
-        """本接口（DescribeSqlLogs）用于获取实例SQL日志。
+        """本介面（DescribeSqlLogs）用于獲取實例SQL日志。
 
-        :param request: 调用DescribeSqlLogs所需参数的结构体。
+        :param request: 調用DescribeSqlLogs所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeSqlLogsRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeSqlLogsResponse`
 
@@ -729,9 +729,9 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeUpgradePrice(self, request):
-        """本接口（DescribeUpgradePrice）用于在扩容云数据库实例时，查询扩容的价格。
+        """本介面（DescribeUpgradePrice）用于在擴容雲資料庫實例時，查詢擴容的價格。
 
-        :param request: 调用DescribeUpgradePrice所需参数的结构体。
+        :param request: 調用DescribeUpgradePrice所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeUpgradePriceRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeUpgradePriceResponse`
 
@@ -757,10 +757,10 @@ class MariadbClient(AbstractClient):
 
 
     def GrantAccountPrivileges(self, request):
-        """本接口（GrantAccountPrivileges）用于给云数据库账号赋权。
-        注意：相同用户名，不同Host是不同的账号。
+        """本介面（GrantAccountPrivileges）用于給雲資料庫賬号賦權。
+        注意：相同用戶名，不同Host是不同的賬号。
 
-        :param request: 调用GrantAccountPrivileges所需参数的结构体。
+        :param request: 調用GrantAccountPrivileges所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.GrantAccountPrivilegesRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.GrantAccountPrivilegesResponse`
 
@@ -786,9 +786,9 @@ class MariadbClient(AbstractClient):
 
 
     def InitDBInstances(self, request):
-        """本接口(InitDBInstances)用于初始化云数据库实例，包括设置默认字符集、表名大小写敏感等。
+        """本介面(InitDBInstances)用于初始化雲資料庫實例，包括設置預設字元集、表名大小寫敏感等。
 
-        :param request: 调用InitDBInstances所需参数的结构体。
+        :param request: 調用InitDBInstances所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.InitDBInstancesRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.InitDBInstancesResponse`
 
@@ -814,10 +814,10 @@ class MariadbClient(AbstractClient):
 
 
     def ModifyAccountDescription(self, request):
-        """本接口（ModifyAccountDescription）用于修改云数据库账号备注。
-        注意：相同用户名，不同Host是不同的账号。
+        """本介面（ModifyAccountDescription）用于修改雲資料庫賬号備注。
+        注意：相同用戶名，不同Host是不同的賬号。
 
-        :param request: 调用ModifyAccountDescription所需参数的结构体。
+        :param request: 調用ModifyAccountDescription所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.ModifyAccountDescriptionRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.ModifyAccountDescriptionResponse`
 
@@ -843,9 +843,9 @@ class MariadbClient(AbstractClient):
 
 
     def ModifyBackupTime(self, request):
-        """本接口（ModifyBackupTime）用于设置云数据库实例的备份时间。后台系统将根据此配置定期进行实例备份。
+        """本介面（ModifyBackupTime）用于設置雲資料庫實例的備份時間。後台系統将根據此配置定期進行實例備份。
 
-        :param request: 调用ModifyBackupTime所需参数的结构体。
+        :param request: 調用ModifyBackupTime所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.ModifyBackupTimeRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.ModifyBackupTimeResponse`
 
@@ -871,9 +871,9 @@ class MariadbClient(AbstractClient):
 
 
     def ModifyDBInstanceName(self, request):
-        """本接口（ModifyDBInstanceName）用于修改云数据库实例的名称。
+        """本介面（ModifyDBInstanceName）用于修改雲資料庫實例的名稱。
 
-        :param request: 调用ModifyDBInstanceName所需参数的结构体。
+        :param request: 調用ModifyDBInstanceName所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.ModifyDBInstanceNameRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.ModifyDBInstanceNameResponse`
 
@@ -899,9 +899,9 @@ class MariadbClient(AbstractClient):
 
 
     def ModifyDBInstancesProject(self, request):
-        """本接口（ModifyDBInstancesProject）用于修改云数据库实例所属项目。
+        """本介面（ModifyDBInstancesProject）用于修改雲資料庫實例所屬項目。
 
-        :param request: 调用ModifyDBInstancesProject所需参数的结构体。
+        :param request: 調用ModifyDBInstancesProject所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.ModifyDBInstancesProjectRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.ModifyDBInstancesProjectResponse`
 
@@ -927,9 +927,9 @@ class MariadbClient(AbstractClient):
 
 
     def ModifyDBParameters(self, request):
-        """本接口(ModifyDBParameters)用于修改数据库参数。
+        """本介面(ModifyDBParameters)用于修改資料庫參數。
 
-        :param request: 调用ModifyDBParameters所需参数的结构体。
+        :param request: 調用ModifyDBParameters所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.ModifyDBParametersRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.ModifyDBParametersResponse`
 
@@ -955,9 +955,9 @@ class MariadbClient(AbstractClient):
 
 
     def ModifyLogFileRetentionPeriod(self, request):
-        """本接口(ModifyLogFileRetentionPeriod)用于修改数据库备份日志保存天数。
+        """本介面(ModifyLogFileRetentionPeriod)用于修改資料庫備份日志保存天數。
 
-        :param request: 调用ModifyLogFileRetentionPeriod所需参数的结构体。
+        :param request: 調用ModifyLogFileRetentionPeriod所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.ModifyLogFileRetentionPeriodRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.ModifyLogFileRetentionPeriodResponse`
 
@@ -983,9 +983,9 @@ class MariadbClient(AbstractClient):
 
 
     def OpenDBExtranetAccess(self, request):
-        """本接口（OpenDBExtranetAccess）用于开通云数据库实例的外网访问。开通外网访问后，您可通过外网域名和端口访问实例，可使用查询实例列表接口获取外网域名和端口信息。
+        """本介面（OpenDBExtranetAccess）用于開通雲資料庫實例的外網訪問。開通外網訪問後，您可通過外網域名和端口訪問實例，可使用查詢實例清單介面獲取外網域名和端口訊息。
 
-        :param request: 调用OpenDBExtranetAccess所需参数的结构体。
+        :param request: 調用OpenDBExtranetAccess所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.OpenDBExtranetAccessRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.OpenDBExtranetAccessResponse`
 
@@ -1011,9 +1011,9 @@ class MariadbClient(AbstractClient):
 
 
     def RenewDBInstance(self, request):
-        """本接口（RenewDBInstance）用于续费云数据库实例。
+        """本介面（RenewDBInstance）用于續約雲資料庫實例。
 
-        :param request: 调用RenewDBInstance所需参数的结构体。
+        :param request: 調用RenewDBInstance所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.RenewDBInstanceRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.RenewDBInstanceResponse`
 
@@ -1039,10 +1039,10 @@ class MariadbClient(AbstractClient):
 
 
     def ResetAccountPassword(self, request):
-        """本接口（ResetAccountPassword）用于重置云数据库账号的密码。
-        注意：相同用户名，不同Host是不同的账号。
+        """本介面（ResetAccountPassword）用于重置雲資料庫賬号的密碼。
+        注意：相同用戶名，不同Host是不同的賬号。
 
-        :param request: 调用ResetAccountPassword所需参数的结构体。
+        :param request: 調用ResetAccountPassword所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.ResetAccountPasswordRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.ResetAccountPasswordResponse`
 
@@ -1068,9 +1068,9 @@ class MariadbClient(AbstractClient):
 
 
     def UpgradeDBInstance(self, request):
-        """本接口(UpgradeDBInstance)用于扩容云数据库实例。本接口完成下单和支付两个动作，如果发生支付失败的错误，调用用户账户相关接口中的支付订单接口（PayDeals）重新支付即可。
+        """本介面(UpgradeDBInstance)用于擴容雲資料庫實例。本介面完成下單和支付兩個動作，如果發生支付失敗的錯誤，調用用戶帳戶相關介面中的支付訂單介面（PayDeals）重新支付即可。
 
-        :param request: 调用UpgradeDBInstance所需参数的结构体。
+        :param request: 調用UpgradeDBInstance所需參數的結構體。
         :type request: :class:`tencentcloud.mariadb.v20170312.models.UpgradeDBInstanceRequest`
         :rtype: :class:`tencentcloud.mariadb.v20170312.models.UpgradeDBInstanceResponse`
 

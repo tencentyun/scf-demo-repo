@@ -26,7 +26,7 @@ class IeClient(AbstractClient):
 
 
     def CreateEditingTask(self, request):
-        """创建智能编辑任务，可以同时选择视频标签识别、分类识别、智能拆条、智能集锦、智能封面和片头片尾识别中的一项或者多项能力。
+        """創建智慧編輯任務，可以同時選擇視訊标簽識别、分類識别、智慧拆條、智慧集錦、智慧封面和片頭片尾識别中的一項或者多項能力。
 
         :param request: Request instance for CreateEditingTask.
         :type request: :class:`tencentcloud.ie.v20200304.models.CreateEditingTaskRequest`
@@ -54,7 +54,7 @@ class IeClient(AbstractClient):
 
 
     def DescribeEditingTaskResult(self, request):
-        """获取智能编辑任务结果。
+        """獲取智慧編輯任務結果。
 
         :param request: Request instance for DescribeEditingTaskResult.
         :type request: :class:`tencentcloud.ie.v20200304.models.DescribeEditingTaskResultRequest`

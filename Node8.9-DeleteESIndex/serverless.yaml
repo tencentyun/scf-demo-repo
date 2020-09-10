@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: Delete_es_index
   src: ./
-  description: 本示例通过使用ElasticSearch库，删除ES索引
+  description: 本範例通過使用ElasticSearch庫，删除ES索引
   handler: index.main_handler
   runtime: Nodejs8.9
   namespace: default

@@ -4,9 +4,9 @@ Node8.9-WebsocketRegister
 Reference: https://cloud.tencent.com/document/product/583/32553
 ***************************************************/
 
-// The url of API gateway's send back host, API网关的反向推送链接
+// The url of API gateway's send back host, API閘道的反向推送連結
 // The information of MySql host, you need to build the database and forms in priority, there are 2 columns: `ConnectionID`, `Date`
-// MySql数据库账号信息,需要提前创建好数据库和表单,表单中新建2列：`ConnectionID`, `Date`
+// MySql資料庫賬号訊息,需要提前創建好資料庫和表單,表單中新建2列：`ConnectionID`, `Date`
 const Host = "**";
 const User = "**";
 const Password = "**";
@@ -40,7 +40,7 @@ async function record_connectionID(connectionID) {
     port: Port
   });
 
-  // Save the connection ID into datavase, 把 connection ID 存到数据库
+  // Save the connection ID into datavase, 把 connection ID 存到資料庫
   const now = new dayjs();
   const nowStr = now.format("YYYY-MM-DD HH:mm:ss");
 
@@ -70,7 +70,7 @@ exports.main_handler = async (event, context, callback) => {
     secConnectionID: connectionID
   };
 
-  // Recording the new connectionID into database, 在数据库中记录新的connectionID
+  // Recording the new connectionID into database, 在資料庫中記錄新的connectionID
   console.log("Start DB Request", new dayjs().format("YYYY-MM-DD HH:mm:ss"));
 
   await record_connectionID(connectionID);

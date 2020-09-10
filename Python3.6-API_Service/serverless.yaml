@@ -8,7 +8,7 @@ inputs:
   src: ./
   description: >-
     This demo uses API GW to provide API service. You can expand to do WEB API
-    based on this. 本示例演示基于API网关提供博客内的文章查询和文章内容，您可以扩展函数来实现 Web 后端服务
+    based on this. 本範例演示基于API閘道提供博客内的文章查詢和文章内容，您可以擴展函數來實現 Web 後端服務
   handler: api_service.main_handler
   runtime: Python3.6
   namespace: default
@@ -16,7 +16,7 @@ inputs:
   memorySize: 128
   timeout: 3
   events:
-     - apigw: # api网关触发器
+     - apigw: # api閘道觸發器
         name: serverless
         serviceId: # input API gateway serviceId
         parameters:
@@ -29,4 +29,3 @@ inputs:
               method: GET
               function:
                 isIntegratedResponse: TRUE
-

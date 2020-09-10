@@ -26,8 +26,8 @@ class TmtClient(AbstractClient):
 
 
     def ImageTranslate(self, request):
-        """提供中文到英文、英文到中文两种语言的图片翻译服务，可自动识别图片中的文本内容并翻译成目标语言，识别后的文本按行翻译，后续会提供可按段落翻译的版本。<br />
-        提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源 部分。
+        """提供中文到英文、英文到中文兩種語言的圖片翻譯服務，可自動識别圖片中的文本内容并翻譯成目标語言，識别後的文本按行翻譯，後續會提供可按段落翻譯的版本。<br />
+        提示：對于一般開發者，我們建議優先使用SDK接入簡化開發。SDK使用介紹請直接檢視 5. 開發者資源 部分。
 
         :param request: Request instance for ImageTranslate.
         :type request: :class:`tencentcloud.tmt.v20180321.models.ImageTranslateRequest`
@@ -55,8 +55,8 @@ class TmtClient(AbstractClient):
 
 
     def LanguageDetect(self, request):
-        """可自动识别文本内容的语言种类，轻量高效，无需额外实现判断方式，使面向客户的服务体验更佳。 <br />
-        提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源 部分。
+        """可自動識别文本内容的語言種類，輕量高效，無需額外實現判斷方式，使面向客戶的服務體驗更佳。 <br />
+        提示：對于一般開發者，我們建議優先使用SDK接入簡化開發。SDK使用介紹請直接檢視 5. 開發者資源 部分。
 
         :param request: Request instance for LanguageDetect.
         :type request: :class:`tencentcloud.tmt.v20180321.models.LanguageDetectRequest`
@@ -84,10 +84,10 @@ class TmtClient(AbstractClient):
 
 
     def SpeechTranslate(self, request):
-        """本接口提供上传音频，将音频进行语音识别并翻译成文本的服务，目前开放中英互译的语音翻译服务。
-        待识别和翻译的音频文件可以是 pcm、mp3和speex 格式，pcm采样率要求16kHz、位深16bit、单声道，音频内语音清晰。<br/>
-        如果采用流式传输的方式，要求每个分片时长200ms~500ms；如果采用非流式的传输方式，要求音频时长不超过8s。注意最后一个分片的IsEnd参数设置为1。<br />
-        提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源部分。
+        """本介面提供上傳音訊，将音訊進行語音識别并翻譯成文本的服務，目前開放中英互譯的語音翻譯服務。
+        待識别和翻譯的音訊文件可以是 pcm、mp3和speex 格式，pcm采樣率要求16kHz、位深16bit、單聲道，音訊内語音清晰。<br/>
+        如果采用流式傳輸的方式，要求每個分片時長200ms~500ms；如果采用非流式的傳輸方式，要求音訊時長不超過8s。注意最後一個分片的IsEnd參數設置爲1。<br />
+        提示：對于一般開發者，我們建議優先使用SDK接入簡化開發。SDK使用介紹請直接檢視 5. 開發者資源部分。
 
         :param request: Request instance for SpeechTranslate.
         :type request: :class:`tencentcloud.tmt.v20180321.models.SpeechTranslateRequest`
@@ -115,8 +115,8 @@ class TmtClient(AbstractClient):
 
 
     def TextTranslate(self, request):
-        """提供中文到英文、英文到中文的等多种语言的文本内容翻译服务， 经过大数据语料库、多种解码算法、翻译引擎深度优化，在新闻文章、生活口语等不同语言场景中都有深厚积累，翻译结果专业评价处于行业领先水平。<br />
-        提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源 部分。
+        """提供中文到英文、英文到中文的等多種語言的文本内容翻譯服務， 經過大數據語料庫、多種解碼算法、翻譯引擎深度優化，在新聞文章、生活口語等不同語言場景中都有深厚積累，翻譯結果專業評價處于行業領先水平。<br />
+        提示：對于一般開發者，我們建議優先使用SDK接入簡化開發。SDK使用介紹請直接檢視 5. 開發者資源 部分。
 
         :param request: Request instance for TextTranslate.
         :type request: :class:`tencentcloud.tmt.v20180321.models.TextTranslateRequest`
@@ -144,7 +144,7 @@ class TmtClient(AbstractClient):
 
 
     def TextTranslateBatch(self, request):
-        """文本翻译的批量接口
+        """文本翻譯的批次介面
 
         :param request: Request instance for TextTranslateBatch.
         :type request: :class:`tencentcloud.tmt.v20180321.models.TextTranslateBatchRequest`

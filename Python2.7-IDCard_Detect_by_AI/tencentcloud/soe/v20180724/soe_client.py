@@ -26,9 +26,9 @@ class SoeClient(AbstractClient):
 
 
     def InitOralProcess(self, request):
-        """初始化发音评估过程，每一轮评估前进行调用。语音输入模式分为流式模式和非流式模式，流式模式支持数据分片传输，可以加快评估响应速度。评估模式分为词模式和句子模式，词模式会标注每个音节的详细信息；句子模式会有完整度和流利度的评估。
+        """初始化發音評估過程，每一輪評估前進行調用。語音輸入模式分爲流式模式和非流式模式，流式模式支援數據分片傳輸，可以加快評估響應速度。評估模式分爲詞模式和句子模式，詞模式會标注每個音節的詳細訊息；句子模式會有完整度和流利度的評估。
 
-        :param request: 调用InitOralProcess所需参数的结构体。
+        :param request: 調用InitOralProcess所需參數的結構體。
         :type request: :class:`tencentcloud.soe.v20180724.models.InitOralProcessRequest`
         :rtype: :class:`tencentcloud.soe.v20180724.models.InitOralProcessResponse`
 
@@ -54,9 +54,9 @@ class SoeClient(AbstractClient):
 
 
     def TransmitOralProcess(self, request):
-        """传输音频数据，必须在完成发音评估初始化接口之后调用，且SessonId要与初始化接口保持一致。分片传输时，尽量保证SeqId顺序传输。音频源目前仅支持16k采样率16bit单声道编码方式，如有不一致可能导致评估不准确或失败。
+        """傳輸音訊數據，必須在完成發音評估初始化介面之後調用，且SessonId要與初始化介面保持一緻。分片傳輸時，盡量保證SeqId順序傳輸。音訊源目前僅支援16k采樣率16bit單聲道編碼方式，如有不一緻可能導緻評估不準确或失敗。
 
-        :param request: 调用TransmitOralProcess所需参数的结构体。
+        :param request: 調用TransmitOralProcess所需參數的結構體。
         :type request: :class:`tencentcloud.soe.v20180724.models.TransmitOralProcessRequest`
         :rtype: :class:`tencentcloud.soe.v20180724.models.TransmitOralProcessResponse`
 
@@ -82,9 +82,9 @@ class SoeClient(AbstractClient):
 
 
     def TransmitOralProcessWithInit(self, request):
-        """初始化并传输音频数据，分片传输时，尽量保证SeqId顺序传输。音频源目前仅支持16k采样率16bit单声道编码方式，如有不一致可能导致评估不准确或失败。
+        """初始化并傳輸音訊數據，分片傳輸時，盡量保證SeqId順序傳輸。音訊源目前僅支援16k采樣率16bit單聲道編碼方式，如有不一緻可能導緻評估不準确或失敗。
 
-        :param request: 调用TransmitOralProcessWithInit所需参数的结构体。
+        :param request: 調用TransmitOralProcessWithInit所需參數的結構體。
         :type request: :class:`tencentcloud.soe.v20180724.models.TransmitOralProcessWithInitRequest`
         :rtype: :class:`tencentcloud.soe.v20180724.models.TransmitOralProcessWithInitResponse`
 

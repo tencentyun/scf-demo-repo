@@ -17,39 +17,39 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class CreateJobRequest(AbstractModel):
-    """CreateJob请求参数结构体
+    """CreateJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Name: 任务名称
+        :param Name: 任務名稱
         :type Name: str
-        :param Cluster: 运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
+        :param Cluster: 運作任務的集群，詳見 [使用集群](https://cloud.tencent.com/document/product/851/17317)
         :type Cluster: str
-        :param RuntimeVersion: 运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320)
+        :param RuntimeVersion: 運作任務的環境，詳見 [運作環境](https://cloud.tencent.com/document/product/851/17320)
         :type RuntimeVersion: str
-        :param PackageDir: 挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持
+        :param PackageDir: 掛載的路徑，支援 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制環境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支援
         :type PackageDir: list of str
-        :param Command: 任务启动命令
+        :param Command: 任務啓動命令
         :type Command: list of str
-        :param Args: 任务启动参数
+        :param Args: 任務啓動參數
         :type Args: list of str
-        :param ScaleTier: 运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+        :param ScaleTier: 運作任務的配置訊息，詳見 [訓練規模](https://cloud.tencent.com/document/product/851/17319)
         :type ScaleTier: str
-        :param MasterType: Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+        :param MasterType: Master 機器類型，ScaleTier 取值爲 `CUSTOM` 時必填，詳見 [訓練規模](https://cloud.tencent.com/document/product/851/17319)
         :type MasterType: str
-        :param WorkerType: Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+        :param WorkerType: Worker 機器類型，ScaleTier 取值爲 `CUSTOM` 時必填，詳見 [訓練規模](https://cloud.tencent.com/document/product/851/17319)
         :type WorkerType: str
-        :param ParameterServerType: Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+        :param ParameterServerType: Parameter server 機器類型，ScaleTier 取值爲 `CUSTOM` 時必填,詳見 [訓練規模](https://cloud.tencent.com/document/product/851/17319)
         :type ParameterServerType: str
-        :param WorkerCount: Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+        :param WorkerCount: Worker 機器數量，ScaleTier 取值爲 `CUSTOM` 時必填,詳見 [訓練規模](https://cloud.tencent.com/document/product/851/17319)
         :type WorkerCount: int
-        :param ParameterServerCount: Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+        :param ParameterServerCount: Parameter server 機器數量，ScaleTier 取值爲 `CUSTOM` 時必填,詳見 [訓練規模](https://cloud.tencent.com/document/product/851/17319)
         :type ParameterServerCount: int
-        :param Debug: 启动 debug 模式，默认为 false
+        :param Debug: 啓動 debug 模式，預設爲 false
         :type Debug: bool
-        :param RuntimeConf: 运行任务的其他配置信息
+        :param RuntimeConf: 運作任務的其他配置訊息
         :type RuntimeConf: list of str
         """
         self.Name = None
@@ -86,15 +86,15 @@ class CreateJobRequest(AbstractModel):
 
 
 class CreateJobResponse(AbstractModel):
-    """CreateJob返回参数结构体
+    """CreateJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Job: 训练任务信息
+        :param Job: 訓練任務訊息
         :type Job: :class:`tencentcloud.tia.v20180226.models.Job`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Job = None
@@ -109,29 +109,29 @@ class CreateJobResponse(AbstractModel):
 
 
 class CreateModelRequest(AbstractModel):
-    """CreateModel请求参数结构体
+    """CreateModel請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Name: 模型名称
+        :param Name: 模型名稱
         :type Name: str
-        :param Model: 要部署的模型文件路径名
+        :param Model: 要佈署的模型文件路徑名
         :type Model: str
-        :param Description: 关于模型的描述
+        :param Description: 關于模型的描述
         :type Description: str
-        :param Cluster: 部署目标集群的名称，`集群模式` 必填
+        :param Cluster: 佈署目标集群的名稱，`集群模式` 必填
         :type Cluster: str
-        :param RuntimeVersion: 运行环境镜像的标签，详见 [Serving 环境](https://cloud.tencent.com/document/product/851/17320#serving-.E7.8E.AF.E5.A2.83)
+        :param RuntimeVersion: 運作環境映像的标簽，詳見 [Serving 環境](https://cloud.tencent.com/document/product/851/17320#serving-.E7.8E.AF.E5.A2.83)
         :type RuntimeVersion: str
-        :param Replicas: 要部署的模型副本数目，`集群模式` 选填
+        :param Replicas: 要佈署的模型副本數目，`集群模式` 選填
         :type Replicas: int
-        :param Expose: 暴露外网或内网，默认暴露外网，`集群模式` 选填
+        :param Expose: 暴露外網或内網，預設暴露外網，`集群模式` 選填
         :type Expose: str
-        :param ServType: 部署模式，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式` 下服务的运行规模，形如 `2U4G1P`，详见 [自定义的训练规模](https://cloud.tencent.com/document/product/851/17319#.E8.87.AA.E5.AE.9A.E4.B9.89.E7.9A.84.E8.AE.AD.E7.BB.83.E8.A7.84.E6.A8.A1)
+        :param ServType: 佈署模式，取值 `serverless` 即爲 `無服務器模式`，否則爲 `集群模式` 下服務的運作規模，形如 `2U4G1P`，詳見 [自定義的訓練規模](https://cloud.tencent.com/document/product/851/17319#.E8.87.AA.E5.AE.9A.E4.B9.89.E7.9A.84.E8.AE.AD.E7.BB.83.E8.A7.84.E6.A8.A1)
         :type ServType: str
-        :param RuntimeConf: `无服务器模式` 可选的其他配置信息，详见 [利用无服务器函数部署](https://cloud.tencent.com/document/product/851/17049#.E5.88.A9.E7.94.A8.E6.97.A0.E6.9C.8D.E5.8A.A1.E5.99.A8.E5.87.BD.E6.95.B0.E9.83.A8.E7.BD.B2)
+        :param RuntimeConf: `無服務器模式` 可選的其他配置訊息，詳見 [利用無服務器函數佈署](https://cloud.tencent.com/document/product/851/17049#.E5.88.A9.E7.94.A8.E6.97.A0.E6.9C.8D.E5.8A.A1.E5.99.A8.E5.87.BD.E6.95.B0.E9.83.A8.E7.BD.B2)
         :type RuntimeConf: list of str
         """
         self.Name = None
@@ -158,15 +158,15 @@ class CreateModelRequest(AbstractModel):
 
 
 class CreateModelResponse(AbstractModel):
-    """CreateModel返回参数结构体
+    """CreateModel返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Model: 模型的详细信息
+        :param Model: 模型的詳細訊息
         :type Model: :class:`tencentcloud.tia.v20180226.models.Model`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Model = None
@@ -181,15 +181,15 @@ class CreateModelResponse(AbstractModel):
 
 
 class DeleteJobRequest(AbstractModel):
-    """DeleteJob请求参数结构体
+    """DeleteJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Name: 任务名称
+        :param Name: 任務名稱
         :type Name: str
-        :param Cluster: 运行任务的集群
+        :param Cluster: 運作任務的集群
         :type Cluster: str
         """
         self.Name = None
@@ -202,13 +202,13 @@ class DeleteJobRequest(AbstractModel):
 
 
 class DeleteJobResponse(AbstractModel):
-    """DeleteJob返回参数结构体
+    """DeleteJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -219,17 +219,17 @@ class DeleteJobResponse(AbstractModel):
 
 
 class DeleteModelRequest(AbstractModel):
-    """DeleteModel请求参数结构体
+    """DeleteModel請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Name: 要删除的模型名称
+        :param Name: 要删除的模型名稱
         :type Name: str
-        :param Cluster: 要删除的模型所在的集群名称，`集群模式` 必填
+        :param Cluster: 要删除的模型所在的集群名稱，`集群模式` 必填
         :type Cluster: str
-        :param ServType: 模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
+        :param ServType: 模型類型，取值 `serverless` 即爲 `無服務器模式`，否則爲 `集群模式`
         :type ServType: str
         """
         self.Name = None
@@ -244,13 +244,13 @@ class DeleteModelRequest(AbstractModel):
 
 
 class DeleteModelResponse(AbstractModel):
-    """DeleteModel返回参数结构体
+    """DeleteModel返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -261,15 +261,15 @@ class DeleteModelResponse(AbstractModel):
 
 
 class DescribeJobRequest(AbstractModel):
-    """DescribeJob请求参数结构体
+    """DescribeJob請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Name: 任务名称
+        :param Name: 任務名稱
         :type Name: str
-        :param Cluster: 运行任务的集群
+        :param Cluster: 運作任務的集群
         :type Cluster: str
         """
         self.Name = None
@@ -282,15 +282,15 @@ class DescribeJobRequest(AbstractModel):
 
 
 class DescribeJobResponse(AbstractModel):
-    """DescribeJob返回参数结构体
+    """DescribeJob返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Job: 训练任务信息
+        :param Job: 訓練任務訊息
         :type Job: :class:`tencentcloud.tia.v20180226.models.Job`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Job = None
@@ -305,17 +305,17 @@ class DescribeJobResponse(AbstractModel):
 
 
 class DescribeModelRequest(AbstractModel):
-    """DescribeModel请求参数结构体
+    """DescribeModel請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Name: 模型名称
+        :param Name: 模型名稱
         :type Name: str
-        :param Cluster: 模型所在集群名称，`集群模式` 必填
+        :param Cluster: 模型所在集群名稱，`集群模式` 必填
         :type Cluster: str
-        :param ServType: 模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
+        :param ServType: 模型類型，取值 `serverless` 即爲 `無服務器模式`，否則爲 `集群模式`
         :type ServType: str
         """
         self.Name = None
@@ -330,15 +330,15 @@ class DescribeModelRequest(AbstractModel):
 
 
 class DescribeModelResponse(AbstractModel):
-    """DescribeModel返回参数结构体
+    """DescribeModel返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Model: 模型信息
+        :param Model: 模型訊息
         :type Model: :class:`tencentcloud.tia.v20180226.models.Model`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Model = None
@@ -353,17 +353,17 @@ class DescribeModelResponse(AbstractModel):
 
 
 class InstallAgentRequest(AbstractModel):
-    """InstallAgent请求参数结构体
+    """InstallAgent請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Cluster: 集群名称
+        :param Cluster: 集群名稱
         :type Cluster: str
-        :param TiaVersion: Agent版本, 用于私有集群的agent安装，默认为“private-training”
+        :param TiaVersion: Agent版本, 用于私有集群的agent安裝，預設爲“private-training”
         :type TiaVersion: str
-        :param Update: 是否允许更新Agent
+        :param Update: 是否允許更新Agent
         :type Update: bool
         """
         self.Cluster = None
@@ -378,15 +378,15 @@ class InstallAgentRequest(AbstractModel):
 
 
 class InstallAgentResponse(AbstractModel):
-    """InstallAgent返回参数结构体
+    """InstallAgent返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TiaVersion: Agent版本, 用于私有集群的agent安装
+        :param TiaVersion: Agent版本, 用于私有集群的agent安裝
         :type TiaVersion: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TiaVersion = None
@@ -399,57 +399,57 @@ class InstallAgentResponse(AbstractModel):
 
 
 class Job(AbstractModel):
-    """训练任务信息
+    """訓練任務訊息
 
     """
 
     def __init__(self):
         """
-        :param Name: 任务名称
+        :param Name: 任務名稱
         :type Name: str
-        :param CreateTime: 任务创建时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+        :param CreateTime: 任務創建時間，格式爲：2006-01-02 15:04:05.999999999 -0700 MST
         :type CreateTime: str
-        :param StartTime: 任务开始时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+        :param StartTime: 任務開始時間，格式爲：2006-01-02 15:04:05.999999999 -0700 MST
         :type StartTime: str
-        :param EndTime: 任务结束时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+        :param EndTime: 任務結束時間，格式爲：2006-01-02 15:04:05.999999999 -0700 MST
         :type EndTime: str
-        :param State: 任务状态，可能的状态为Created（已创建），Running（运行中），Succeeded（运行完成：成功），Failed（运行完成：失败）
+        :param State: 任務狀态，可能的狀态爲Created（已創建），Running（運作中），Succeeded（運作完成：成功），Failed（運作完成：失敗）
         :type State: str
-        :param Message: 任务状态信息
+        :param Message: 任務狀态訊息
         :type Message: str
-        :param ScaleTier: 运行任务的配置信息
+        :param ScaleTier: 運作任務的配置訊息
         :type ScaleTier: str
-        :param MasterType: （ScaleTier为Custom时）master机器类型
+        :param MasterType: （ScaleTier爲Custom時）master機器類型
         :type MasterType: str
-        :param WorkerType: （ScaleTier为Custom时）worker机器类型
+        :param WorkerType: （ScaleTier爲Custom時）worker機器類型
         :type WorkerType: str
-        :param ParameterServerType: （ScaleTier为Custom时）parameter server机器类型
+        :param ParameterServerType: （ScaleTier爲Custom時）parameter server機器類型
         :type ParameterServerType: str
-        :param WorkerCount: （ScaleTier为Custom时）worker机器数量
+        :param WorkerCount: （ScaleTier爲Custom時）worker機器數量
         :type WorkerCount: int
-        :param ParameterServerCount: （ScaleTier为Custom时）parameter server机器数量
+        :param ParameterServerCount: （ScaleTier爲Custom時）parameter server機器數量
         :type ParameterServerCount: int
-        :param PackageDir: 挂载的路径
+        :param PackageDir: 掛載的路徑
         :type PackageDir: list of str
-        :param Command: 任务启动命令
+        :param Command: 任務啓動命令
         :type Command: list of str
-        :param Args: 任务启动参数
+        :param Args: 任務啓動參數
         :type Args: list of str
-        :param Cluster: 运行任务的集群
+        :param Cluster: 運作任務的集群
         :type Cluster: str
-        :param RuntimeVersion: 运行任务的环境
+        :param RuntimeVersion: 運作任務的環境
         :type RuntimeVersion: str
-        :param DelTime: 任务删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+        :param DelTime: 任務删除時間，格式爲：2006-01-02 15:04:05.999999999 -0700 MST
         :type DelTime: str
-        :param AppId: 创建任务的AppId
+        :param AppId: 創建任務的AppId
         :type AppId: int
-        :param Uin: 创建任务的Uin
+        :param Uin: 創建任務的Uin
         :type Uin: str
-        :param Debug: 创建任务的Debug模式
+        :param Debug: 創建任務的Debug模式
         :type Debug: bool
-        :param RuntimeConf: Runtime的额外配置信息
+        :param RuntimeConf: Runtime的額外配置訊息
         :type RuntimeConf: list of str
-        :param Id: 任务Id
+        :param Id: 任務Id
         :type Id: str
         """
         self.Name = None
@@ -504,17 +504,17 @@ class Job(AbstractModel):
 
 
 class ListJobsRequest(AbstractModel):
-    """ListJobs请求参数结构体
+    """ListJobs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Cluster: 运行任务的集群
+        :param Cluster: 運作任務的集群
         :type Cluster: str
-        :param Limit: 分页参数，返回数量
+        :param Limit: 分頁參數，返回數量
         :type Limit: int
-        :param Offset: 分页参数，起始位置
+        :param Offset: 分頁參數，起始位置
         :type Offset: int
         """
         self.Cluster = None
@@ -529,15 +529,15 @@ class ListJobsRequest(AbstractModel):
 
 
 class ListJobsResponse(AbstractModel):
-    """ListJobs返回参数结构体
+    """ListJobs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Jobs: 训练任务列表
+        :param Jobs: 訓練任務清單
         :type Jobs: list of Job
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Jobs = None
@@ -555,7 +555,7 @@ class ListJobsResponse(AbstractModel):
 
 
 class ListModelsRequest(AbstractModel):
-    """ListModels请求参数结构体
+    """ListModels請求參數結構體
 
     """
 
@@ -563,11 +563,11 @@ class ListModelsRequest(AbstractModel):
         """
         :param Cluster: 部署模型的集群， `集群模式` 必填
         :type Cluster: str
-        :param Limit: 分页参数，返回数量上限
+        :param Limit: 分頁參數，返回數量上限
         :type Limit: int
-        :param Offset: 分页参数，分页起始位置
+        :param Offset: 分頁參數，分頁起始位置
         :type Offset: int
-        :param ServType: 部署类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`。
+        :param ServType: 佈署類型，取值 `serverless` 即爲 `無服務器模式`，否則爲 `集群模式`。
         :type ServType: str
         """
         self.Cluster = None
@@ -584,15 +584,15 @@ class ListModelsRequest(AbstractModel):
 
 
 class ListModelsResponse(AbstractModel):
-    """ListModels返回参数结构体
+    """ListModels返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Models: Model 数组，用以显示所有模型的信息
+        :param Models: Model 數組，用以顯示所有模型的訊息
         :type Models: list of Model
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Models = None
@@ -620,13 +620,13 @@ class Log(AbstractModel):
         :type ContainerName: str
         :param Log: 日志内容
         :type Log: str
-        :param Namespace: 空间名
+        :param Namespace: 空間名
         :type Namespace: str
         :param PodId: Pod Id
         :type PodId: str
         :param PodName: Pod名
         :type PodName: str
-        :param Time: 日志日期，格式为“2018-07-02T09:10:04.916553368Z”
+        :param Time: 日志日期，格式爲“2018-07-02T09:10:04.916553368Z”
         :type Time: str
         """
         self.ContainerName = None
@@ -647,7 +647,7 @@ class Log(AbstractModel):
 
 
 class Model(AbstractModel):
-    """用于描述模型的详细情况
+    """用于描述模型的詳細情況
             "Model": {
                 "Name": "test-model",
                 "Description": "test-model",
@@ -666,37 +666,37 @@ class Model(AbstractModel):
 
     def __init__(self):
         """
-        :param Name: 模型名称
+        :param Name: 模型名稱
         :type Name: str
         :param Description: 模型描述
         :type Description: str
-        :param Cluster: 集群名称
+        :param Cluster: 集群名稱
         :type Cluster: str
-        :param Model: 模型地址
+        :param Model: 模型網址
         :type Model: str
-        :param RuntimeVersion: 运行环境编号
+        :param RuntimeVersion: 運作環境編号
         :type RuntimeVersion: str
-        :param CreateTime: 模型创建时间
+        :param CreateTime: 模型創建時間
         :type CreateTime: str
-        :param State: 模型运行状态
+        :param State: 模型運作狀态
         :type State: str
-        :param ServingUrl: 提供服务的url
+        :param ServingUrl: 提供服務的url
         :type ServingUrl: str
-        :param Message: 相关消息
+        :param Message: 相關訊息
         :type Message: str
-        :param AppId: 编号
+        :param AppId: 編号
         :type AppId: int
-        :param ServType: 机型
+        :param ServType: 機型
         :type ServType: str
         :param Expose: 模型暴露方式
         :type Expose: str
-        :param Replicas: 部署副本数量
+        :param Replicas: 佈署副本數量
         :type Replicas: int
         :param Id: 模型Id
         :type Id: str
-        :param Uin: 创建任务的Uin
+        :param Uin: 創建任務的Uin
         :type Uin: str
-        :param DelTime: 模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+        :param DelTime: 模型删除時間，格式爲：2006-01-02 15:04:05.999999999 -0700 MST
         :type DelTime: str
         """
         self.Name = None
@@ -737,23 +737,23 @@ class Model(AbstractModel):
 
 
 class QueryLogsRequest(AbstractModel):
-    """QueryLogs请求参数结构体
+    """QueryLogs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JobName: 任务的名称
+        :param JobName: 任務的名稱
         :type JobName: str
-        :param Cluster: 任务所在集群的名称
+        :param Cluster: 任務所在集群的名稱
         :type Cluster: str
-        :param StartTime: 查询日志的开始时间，格式：2019-01-01 00:00:00
+        :param StartTime: 查詢日志的開始時間，格式：2019-01-01 00:00:00
         :type StartTime: str
-        :param EndTime: 查询日志的结束时间，格式：2019-01-01 00:00:00
+        :param EndTime: 查詢日志的結束時間，格式：2019-01-01 00:00:00
         :type EndTime: str
-        :param Limit: 单次要返回的日志条数上限
+        :param Limit: 單次要返回的日志條數上限
         :type Limit: int
-        :param Context: 加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
+        :param Context: 加載更多日志時使用，透傳上次返回的 Context 值，獲取後續的日志内容；使用 Context 翻頁最多能獲取 10000 條日志
         :type Context: str
         """
         self.JobName = None
@@ -774,19 +774,19 @@ class QueryLogsRequest(AbstractModel):
 
 
 class QueryLogsResponse(AbstractModel):
-    """QueryLogs返回参数结构体
+    """QueryLogs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Context: 日志查询上下文，用于加载更多日志
+        :param Context: 日志查詢上下文，用于加載更多日志
         :type Context: str
-        :param Logs: 日志内容列表
+        :param Logs: 日志内容清單
         :type Logs: list of Log
-        :param Listover: 是否已经返回所有符合条件的日志
+        :param Listover: 是否已經返回所有符合條件的日志
         :type Listover: bool
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Context = None

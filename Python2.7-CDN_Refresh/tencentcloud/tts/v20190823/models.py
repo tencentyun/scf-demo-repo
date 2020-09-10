@@ -17,33 +17,33 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class TextToVoiceRequest(AbstractModel):
-    """TextToVoice请求参数结构体
+    """TextToVoice請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Text: 合成语音的源文本，按UTF-8编码统一计算。
-中文最大支持110个汉字（全角标点符号算一个汉字）；英文最大支持350个字母（半角标点符号算一个字母）。
+        :param Text: 合成語音的源文本，按UTF-8編碼統一計算。
+中文最大支援110個漢字（全角标點符号算一個漢字）；英文最大支援350個字母（半角标點符号算一個字母）。
         :type Text: str
-        :param SessionId: 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
+        :param SessionId: 一次請求對應一個SessionId，會原樣返回，建議傳入類似于uuid的字串防止重複。
         :type SessionId: str
-        :param ModelType: 模型类型，1-默认模型。
+        :param ModelType: 模型類型，1-預設模型。
         :type ModelType: int
-        :param Volume: 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
-输入除以上整数之外的其他参数不生效，按默认值处理。
+        :param Volume: 音量大小，範圍：[0，10]，分别對應11個等級的音量，預設爲0，代表正常音量。沒有靜音選項。
+輸入除以上整數之外的其他參數不生效，按預設值處理。
         :type Volume: float
-        :param Speed: 语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更细化的语速，可以保留小数点后一位，例如0.5 1.1 1.8等。<br>
+        :param Speed: 語速，範圍：[-2，2]，分别對應不同語速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（預設）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更細化的語速，可以保留小數點後一位，例如0.5 1.1 1.8等。<br>
         :type Speed: float
-        :param ProjectId: 项目id，用户自定义，默认为0。
+        :param ProjectId: 項目id，用戶自定義，預設爲0。
         :type ProjectId: int
-        :param VoiceType: 音色<li>0-云小宁，亲和女声(默认)</li><li>1-云小奇，亲和男声</li><li>2-云小晚，成熟男声</li><li>4-云小叶，温暖女声</li><li>5-云小欣，情感女声</li><li>6-云小龙，情感男声</li><li>7-云小曼，客服女声（新）</li><li>1000-智侠，情感男声（新）</li><li>1001-智瑜，情感女声（新）</li><li>1002-智聆，通用女声（新）</li><li>1003-智美，客服女声（新）</li><li>1050-WeJack，英文男声（新）</li><li>1051-WeRose，英文女声（新）</li>
+        :param VoiceType: 音色<li>0-雲小甯，親和女聲(預設)</li><li>1-雲小奇，親和男聲</li><li>2-雲小晚，成熟男聲</li><li>4-雲小葉，溫暖女聲</li><li>5-雲小欣，情感女聲</li><li>6-雲小龍，情感男聲</li><li>7-雲小曼，客服女聲（新）</li><li>1000-智俠，情感男聲（新）</li><li>1001-智瑜，情感女聲（新）</li><li>1002-智聆，通用女聲（新）</li><li>1003-智美，客服女聲（新）</li><li>1050-WeJack，英文男聲（新）</li><li>1051-WeRose，英文女聲（新）</li>
         :type VoiceType: int
-        :param PrimaryLanguage: 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
+        :param PrimaryLanguage: 主語言類型：<li>1-中文（預設）</li><li>2-英文</li>
         :type PrimaryLanguage: int
-        :param SampleRate: 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
+        :param SampleRate: 音訊采樣率：<li>16000：16k（預設）</li><li>8000：8k</li>
         :type SampleRate: int
-        :param Codec: 返回音频格式，可取值：wav（默认），mp3
+        :param Codec: 返回音訊格式，可取值：wav（預設），mp3
         :type Codec: str
         """
         self.Text = None
@@ -72,17 +72,17 @@ class TextToVoiceRequest(AbstractModel):
 
 
 class TextToVoiceResponse(AbstractModel):
-    """TextToVoice返回参数结构体
+    """TextToVoice返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Audio: base64编码的wav/mp3音频数据
+        :param Audio: base64編碼的wav/mp3音訊數據
         :type Audio: str
-        :param SessionId: 一次请求对应一个SessionId
+        :param SessionId: 一次請求對應一個SessionId
         :type SessionId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Audio = None

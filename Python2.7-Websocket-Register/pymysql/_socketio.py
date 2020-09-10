@@ -131,4 +131,3 @@ class SocketIO(io.RawIOBase):
         io.RawIOBase.close(self)
         self._sock._decref_socketios()
         self._sock = None
-

@@ -17,13 +17,13 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class AssociateTargetGroupsRequest(AbstractModel):
-    """AssociateTargetGroups请求参数结构体
+    """AssociateTargetGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Associations: 绑定的关系数组
+        :param Associations: 綁定的關系數組
         :type Associations: list of TargetGroupAssociation
         """
         self.Associations = None
@@ -39,13 +39,13 @@ class AssociateTargetGroupsRequest(AbstractModel):
 
 
 class AssociateTargetGroupsResponse(AbstractModel):
-    """AssociateTargetGroups返回参数结构体
+    """AssociateTargetGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -56,32 +56,32 @@ class AssociateTargetGroupsResponse(AbstractModel):
 
 
 class AssociationItem(AbstractModel):
-    """目标组关联到的规则
+    """目标組關聯到的規則
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 关联到的负载均衡ID
+        :param LoadBalancerId: 關聯到的負載均衡ID
         :type LoadBalancerId: str
-        :param ListenerId: 关联到的监听器ID
+        :param ListenerId: 關聯到的監聽器ID
         :type ListenerId: str
-        :param LocationId: 关联到的转发规则ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LocationId: 關聯到的轉發規則ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LocationId: str
-        :param Protocol: 关联到的监听器协议类型，如HTTP,TCP,
+        :param Protocol: 關聯到的監聽器協議類型，如HTTP,TCP,
         :type Protocol: str
-        :param Port: 关联到的监听器端口
+        :param Port: 關聯到的監聽器端口
         :type Port: int
-        :param Domain: 关联到的转发规则域名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Domain: 關聯到的轉發規則域名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Domain: str
-        :param Url: 关联到的转发规则URL
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Url: 關聯到的轉發規則URL
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Url: str
-        :param LoadBalancerName: 负载均衡名称
+        :param LoadBalancerName: 負載均衡名稱
         :type LoadBalancerName: str
-        :param ListenerName: 监听器名称
+        :param ListenerName: 監聽器名稱
         :type ListenerName: str
         """
         self.LoadBalancerId = None
@@ -108,17 +108,17 @@ class AssociationItem(AbstractModel):
 
 
 class AutoRewriteRequest(AbstractModel):
-    """AutoRewrite请求参数结构体
+    """AutoRewrite請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例ID
+        :param LoadBalancerId: 負載均衡實例ID
         :type LoadBalancerId: str
-        :param ListenerId: HTTPS:443监听器的ID
+        :param ListenerId: HTTPS:443監聽器的ID
         :type ListenerId: str
-        :param Domains: HTTPS:443监听器下需要重定向的域名
+        :param Domains: HTTPS:443監聽器下需要重定向的域名
         :type Domains: list of str
         """
         self.LoadBalancerId = None
@@ -133,13 +133,13 @@ class AutoRewriteRequest(AbstractModel):
 
 
 class AutoRewriteResponse(AbstractModel):
-    """AutoRewrite返回参数结构体
+    """AutoRewrite返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -150,34 +150,34 @@ class AutoRewriteResponse(AbstractModel):
 
 
 class Backend(AbstractModel):
-    """监听器绑定的后端服务的详细信息
+    """監聽器綁定的後端服務的詳細訊息
 
     """
 
     def __init__(self):
         """
-        :param Type: 后端服务的类型，可取：CVM、ENI（即将支持）
+        :param Type: 後端服務的類型，可取：CVM、ENI（即将支援）
         :type Type: str
-        :param InstanceId: 后端服务的唯一 ID，如 ins-abcd1234
+        :param InstanceId: 後端服務的唯一 ID，如 ins-abcd1234
         :type InstanceId: str
-        :param Port: 后端服务的监听端口
+        :param Port: 後端服務的監聽端口
         :type Port: int
-        :param Weight: 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+        :param Weight: 後端服務的轉發權重，取值範圍：[0, 100]，預設爲 10。
         :type Weight: int
-        :param PublicIpAddresses: 后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PublicIpAddresses: 後端服務的外網 IP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PublicIpAddresses: list of str
-        :param PrivateIpAddresses: 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PrivateIpAddresses: 後端服務的内網 IP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PrivateIpAddresses: list of str
-        :param InstanceName: 后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceName: 後端服務的實例名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceName: str
-        :param RegisteredTime: 后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RegisteredTime: 後端服務被綁定的時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RegisteredTime: str
-        :param EniId: 弹性网卡唯一ID，如 eni-1234abcd
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EniId: 彈性網卡唯一ID，如 eni-1234abcd
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EniId: str
         """
         self.Type = None
@@ -204,15 +204,15 @@ class Backend(AbstractModel):
 
 
 class BasicTargetGroupInfo(AbstractModel):
-    """监听器或者转发规则绑定的目标组基本信息
+    """監聽器或者轉發規則綁定的目标組基本訊息
 
     """
 
     def __init__(self):
         """
-        :param TargetGroupId: 目标组ID
+        :param TargetGroupId: 目标組ID
         :type TargetGroupId: str
-        :param TargetGroupName: 目标组名称
+        :param TargetGroupName: 目标組名稱
         :type TargetGroupName: str
         """
         self.TargetGroupId = None
@@ -225,15 +225,15 @@ class BasicTargetGroupInfo(AbstractModel):
 
 
 class BatchDeregisterTargetsRequest(AbstractModel):
-    """BatchDeregisterTargets请求参数结构体
+    """BatchDeregisterTargets請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡ID
+        :param LoadBalancerId: 負載均衡ID
         :type LoadBalancerId: str
-        :param Targets: 解绑目标
+        :param Targets: 解綁目标
         :type Targets: list of BatchTarget
         """
         self.LoadBalancerId = None
@@ -251,15 +251,15 @@ class BatchDeregisterTargetsRequest(AbstractModel):
 
 
 class BatchDeregisterTargetsResponse(AbstractModel):
-    """BatchDeregisterTargets返回参数结构体
+    """BatchDeregisterTargets返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FailListenerIdSet: 解绑失败的监听器ID
+        :param FailListenerIdSet: 解綁失敗的監聽器ID
         :type FailListenerIdSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FailListenerIdSet = None
@@ -272,15 +272,15 @@ class BatchDeregisterTargetsResponse(AbstractModel):
 
 
 class BatchModifyTargetWeightRequest(AbstractModel):
-    """BatchModifyTargetWeight请求参数结构体
+    """BatchModifyTargetWeight請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param ModifyList: 要批量修改权重的列表
+        :param ModifyList: 要批次修改權重的清單
         :type ModifyList: list of RsWeightRule
         """
         self.LoadBalancerId = None
@@ -298,13 +298,13 @@ class BatchModifyTargetWeightRequest(AbstractModel):
 
 
 class BatchModifyTargetWeightResponse(AbstractModel):
-    """BatchModifyTargetWeight返回参数结构体
+    """BatchModifyTargetWeight返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -315,15 +315,15 @@ class BatchModifyTargetWeightResponse(AbstractModel):
 
 
 class BatchRegisterTargetsRequest(AbstractModel):
-    """BatchRegisterTargets请求参数结构体
+    """BatchRegisterTargets請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡ID
+        :param LoadBalancerId: 負載均衡ID
         :type LoadBalancerId: str
-        :param Targets: 绑定目标
+        :param Targets: 綁定目标
         :type Targets: list of BatchTarget
         """
         self.LoadBalancerId = None
@@ -341,16 +341,16 @@ class BatchRegisterTargetsRequest(AbstractModel):
 
 
 class BatchRegisterTargetsResponse(AbstractModel):
-    """BatchRegisterTargets返回参数结构体
+    """BatchRegisterTargets返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FailListenerIdSet: 绑定失败的监听器ID，如为空表示全部绑定成功。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param FailListenerIdSet: 綁定失敗的監聽器ID，如爲空表示全部綁定成功。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type FailListenerIdSet: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.FailListenerIdSet = None
@@ -363,23 +363,23 @@ class BatchRegisterTargetsResponse(AbstractModel):
 
 
 class BatchTarget(AbstractModel):
-    """批量绑定类型
+    """批次綁定類型
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
-        :param Port: 绑定端口
+        :param Port: 綁定端口
         :type Port: int
-        :param InstanceId: 子机ID
+        :param InstanceId: 子機ID
         :type InstanceId: str
-        :param EniIp: 弹性网卡ip
+        :param EniIp: 彈性網卡ip
         :type EniIp: str
-        :param Weight: 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+        :param Weight: 子機權重，範圍[0, 100]。綁定時如果不存在，則預設爲10。
         :type Weight: int
-        :param LocationId: 七层规则ID
+        :param LocationId: 七層規則ID
         :type LocationId: str
         """
         self.ListenerId = None
@@ -400,17 +400,17 @@ class BatchTarget(AbstractModel):
 
 
 class BlockedIP(AbstractModel):
-    """加入了12306黑名单的IP
+    """加入了12306黑名單的IP
 
     """
 
     def __init__(self):
         """
-        :param IP: 黑名单IP
+        :param IP: 黑名單IP
         :type IP: str
-        :param CreateTime: 加入黑名单的时间
+        :param CreateTime: 加入黑名單的時間
         :type CreateTime: str
-        :param ExpireTime: 过期时间
+        :param ExpireTime: 過期時間
         :type ExpireTime: str
         """
         self.IP = None
@@ -425,16 +425,16 @@ class BlockedIP(AbstractModel):
 
 
 class CertIdRelatedWithLoadBalancers(AbstractModel):
-    """证书ID，以及与该证书ID关联的负载均衡实例列表
+    """證書ID，以及與該證書ID關聯的負載均衡實例清單
 
     """
 
     def __init__(self):
         """
-        :param CertId: 证书ID
+        :param CertId: 證書ID
         :type CertId: str
-        :param LoadBalancers: 与证书关联的负载均衡实例列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LoadBalancers: 與證書關聯的負載均衡實例清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LoadBalancers: list of LoadBalancer
         """
         self.CertId = None
@@ -452,27 +452,27 @@ class CertIdRelatedWithLoadBalancers(AbstractModel):
 
 
 class CertificateInput(AbstractModel):
-    """证书信息
+    """證書訊息
 
     """
 
     def __init__(self):
         """
-        :param SSLMode: 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+        :param SSLMode: 認證類型，UNIDIRECTIONAL：單向認證，MUTUAL：雙向認證
         :type SSLMode: str
-        :param CertId: 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
+        :param CertId: 服務端證書的 ID，如果不填寫此項則必須上傳證書，包括 CertContent，CertKey，CertName。
         :type CertId: str
-        :param CertCaId: 客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
+        :param CertCaId: 用戶端證書的 ID，當監聽器采用雙向認證，即 SSLMode=MUTUAL 時，如果不填寫此項則必須上傳用戶端證書，包括 CertCaContent，CertCaName。
         :type CertCaId: str
-        :param CertName: 上传服务端证书的名称，如果没有 CertId，则此项必传。
+        :param CertName: 上傳服務端證書的名稱，如果沒有 CertId，則此項必傳。
         :type CertName: str
-        :param CertKey: 上传服务端证书的 key，如果没有 CertId，则此项必传。
+        :param CertKey: 上傳服務端證書的 key，如果沒有 CertId，則此項必傳。
         :type CertKey: str
-        :param CertContent: 上传服务端证书的内容，如果没有 CertId，则此项必传。
+        :param CertContent: 上傳服務端證書的内容，如果沒有 CertId，則此項必傳。
         :type CertContent: str
-        :param CertCaName: 上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+        :param CertCaName: 上傳用戶端 CA 證書的名稱，如果 SSLMode=mutual，如果沒有 CertCaId，則此項必傳。
         :type CertCaName: str
-        :param CertCaContent: 上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+        :param CertCaContent: 上傳用戶端證書的内容，如果 SSLMode=mutual，如果沒有 CertCaId，則此項必傳。
         :type CertCaContent: str
         """
         self.SSLMode = None
@@ -497,18 +497,18 @@ class CertificateInput(AbstractModel):
 
 
 class CertificateOutput(AbstractModel):
-    """证书相关信息
+    """證書相關訊息
 
     """
 
     def __init__(self):
         """
-        :param SSLMode: 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+        :param SSLMode: 認證類型，UNIDIRECTIONAL：單向認證，MUTUAL：雙向認證
         :type SSLMode: str
-        :param CertId: 服务端证书的 ID。
+        :param CertId: 服務端證書的 ID。
         :type CertId: str
-        :param CertCaId: 客户端证书的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CertCaId: 用戶端證書的 ID。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CertCaId: str
         """
         self.SSLMode = None
@@ -523,21 +523,21 @@ class CertificateOutput(AbstractModel):
 
 
 class ClassicalHealth(AbstractModel):
-    """传统型负载均衡后端服务的健康状态
+    """傳統型負載均衡後端服務的健康狀态
 
     """
 
     def __init__(self):
         """
-        :param IP: 后端服务的内网 IP
+        :param IP: 後端服務的内網 IP
         :type IP: str
-        :param Port: 后端服务的端口
+        :param Port: 後端服務的端口
         :type Port: int
-        :param ListenerPort: 负载均衡的监听端口
+        :param ListenerPort: 負載均衡的監聽端口
         :type ListenerPort: int
-        :param Protocol: 转发协议
+        :param Protocol: 轉發協議
         :type Protocol: str
-        :param HealthStatus: 健康检查结果，1 表示健康，0 表示不健康
+        :param HealthStatus: 健康檢查結果，1 表示健康，0 表示不健康
         :type HealthStatus: int
         """
         self.IP = None
@@ -556,47 +556,47 @@ class ClassicalHealth(AbstractModel):
 
 
 class ClassicalListener(AbstractModel):
-    """传统型负载均衡监听器信息
+    """傳統型負載均衡監聽器訊息
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 负载均衡监听器ID
+        :param ListenerId: 負載均衡監聽器ID
         :type ListenerId: str
-        :param ListenerPort: 负载均衡监听器端口
+        :param ListenerPort: 負載均衡監聽器端口
         :type ListenerPort: int
-        :param InstancePort: 监听器后端转发端口
+        :param InstancePort: 監聽器後端轉發端口
         :type InstancePort: int
-        :param ListenerName: 监听器名称
+        :param ListenerName: 監聽器名稱
         :type ListenerName: str
-        :param Protocol: 监听器协议类型
+        :param Protocol: 監聽器協議類型
         :type Protocol: str
-        :param SessionExpire: 会话保持时间
+        :param SessionExpire: 會話保持時間
         :type SessionExpire: int
-        :param HealthSwitch: 是否开启了健康检查：1（开启）、0（关闭）
+        :param HealthSwitch: 是否開啓了健康檢查：1（開啓）、0（關閉）
         :type HealthSwitch: int
-        :param TimeOut: 响应超时时间
+        :param TimeOut: 響應超時時間
         :type TimeOut: int
-        :param IntervalTime: 检查间隔
+        :param IntervalTime: 檢查間隔
         :type IntervalTime: int
         :param HealthNum: 健康阈值
         :type HealthNum: int
         :param UnhealthNum: 不健康阈值
         :type UnhealthNum: int
-        :param HttpHash: 传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+        :param HttpHash: 傳統型公網負載均衡的 HTTP、HTTPS 監聽器的請求均衡方法。wrr 表示按權重輪詢，ip_hash 表示根據訪問的源 IP 進行一緻性哈希方式來分發
         :type HttpHash: str
-        :param HttpCode: 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+        :param HttpCode: 傳統型公網負載均衡的 HTTP、HTTPS 監聽器的健康檢查返回碼。具體可參考創建監聽器中對該欄位的解釋
         :type HttpCode: int
-        :param HttpCheckPath: 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
+        :param HttpCheckPath: 傳統型公網負載均衡的 HTTP、HTTPS 監聽器的健康檢查路徑
         :type HttpCheckPath: str
-        :param SSLMode: 传统型公网负载均衡的 HTTPS 监听器的认证方式
+        :param SSLMode: 傳統型公網負載均衡的 HTTPS 監聽器的認證方式
         :type SSLMode: str
-        :param CertId: 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
+        :param CertId: 傳統型公網負載均衡的 HTTPS 監聽器的服務端證書 ID
         :type CertId: str
-        :param CertCaId: 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
+        :param CertCaId: 傳統型公網負載均衡的 HTTPS 監聽器的用戶端證書 ID
         :type CertCaId: str
-        :param Status: 监听器的状态，0 表示创建中，1 表示运行中
+        :param Status: 監聽器的狀态，0 表示創建中，1 表示運作中
         :type Status: int
         """
         self.ListenerId = None
@@ -641,16 +641,16 @@ class ClassicalListener(AbstractModel):
 
 
 class ClassicalLoadBalancerInfo(AbstractModel):
-    """负载均衡信息
+    """負載均衡訊息
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 后端实例ID
+        :param InstanceId: 後端實例ID
         :type InstanceId: str
-        :param LoadBalancerIds: 负载均衡实例ID列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LoadBalancerIds: 負載均衡實例ID清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LoadBalancerIds: list of str
         """
         self.InstanceId = None
@@ -663,30 +663,30 @@ class ClassicalLoadBalancerInfo(AbstractModel):
 
 
 class ClassicalTarget(AbstractModel):
-    """传统型负载均衡的后端服务相关信息
+    """傳統型負載均衡的後端服務相關訊息
 
     """
 
     def __init__(self):
         """
-        :param Type: 后端服务的类型，可取值：CVM、ENI（即将支持）
+        :param Type: 後端服務的類型，可取值：CVM、ENI（即将支援）
         :type Type: str
-        :param InstanceId: 后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+        :param InstanceId: 後端服務的唯一 ID，可通過 DescribeInstances 介面返回欄位中的 unInstanceId 欄位獲取
         :type InstanceId: str
-        :param Weight: 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+        :param Weight: 後端服務的轉發權重，取值範圍：[0, 100]，預設爲 10。
         :type Weight: int
-        :param PublicIpAddresses: 后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PublicIpAddresses: 後端服務的外網 IP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PublicIpAddresses: list of str
-        :param PrivateIpAddresses: 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PrivateIpAddresses: 後端服務的内網 IP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PrivateIpAddresses: list of str
-        :param InstanceName: 后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceName: 後端服務的實例名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceName: str
-        :param RunFlag: 后端服务的状态
-1：故障，2：运行中，3：创建中，4：已关机，5：已退还，6：退还中， 7：重启中，8：开机中，9：关机中，10：密码重置中，11：格式化中，12：镜像制作中，13：带宽设置中，14：重装系统中，19：升级中，21：热迁移中
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RunFlag: 後端服務的狀态
+1：故障，2：運作中，3：創建中，4：已關機，5：已退還，6：退還中， 7：重啓中，8：開機中，9：關機中，10：密碼重置中，11：格式化中，12：映像制作中，13：頻寬設置中，14：重灌系統中，19：升級中，21：熱遷移中
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RunFlag: int
         """
         self.Type = None
@@ -709,15 +709,15 @@ class ClassicalTarget(AbstractModel):
 
 
 class ClassicalTargetInfo(AbstractModel):
-    """传统型负载均衡的后端信息
+    """傳統型負載均衡的後端訊息
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 后端实例ID
+        :param InstanceId: 後端實例ID
         :type InstanceId: str
-        :param Weight: 权重，取值范围 [0, 100]
+        :param Weight: 權重，取值範圍 [0, 100]
         :type Weight: int
         """
         self.InstanceId = None
@@ -730,7 +730,7 @@ class ClassicalTargetInfo(AbstractModel):
 
 
 class ClusterItem(AbstractModel):
-    """独占集群信息
+    """獨占集群訊息
 
     """
 
@@ -738,11 +738,11 @@ class ClusterItem(AbstractModel):
         """
         :param ClusterId: 集群唯一ID
         :type ClusterId: str
-        :param ClusterName: 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ClusterName: 集群名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterName: str
-        :param Zone: 集群所在可用区，如ap-guangzhou-1
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Zone: 集群所在可用區，如ap-guangzhou-1
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Zone: str
         """
         self.ClusterId = None
@@ -757,30 +757,30 @@ class ClusterItem(AbstractModel):
 
 
 class CreateListenerRequest(AbstractModel):
-    """CreateListener请求参数结构体
+    """CreateListener請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param Ports: 要将监听器创建到哪些端口，每个端口对应一个新的监听器
+        :param Ports: 要将監聽器創建到哪些端口，每個端口對應一個新的監聽器
         :type Ports: list of int
-        :param Protocol: 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
+        :param Protocol: 監聽器協議： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内測中，如需使用請通過工單申請）
         :type Protocol: str
-        :param ListenerNames: 要创建的监听器名称列表，名称与Ports数组按序一一对应，如不需立即命名，则无需提供此参数
+        :param ListenerNames: 要創建的監聽器名稱清單，名稱與Ports數組按序一一對應，如不需立即命名，則無需提供此參數
         :type ListenerNames: list of str
-        :param HealthCheck: 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
+        :param HealthCheck: 健康檢查相關參數，此參數僅适用于TCP/UDP/TCP_SSL監聽器
         :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
-        :param Certificate: 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
+        :param Certificate: 證書相關訊息，此參數僅适用于TCP_SSL監聽器和未開啓SNI特性的HTTPS監聽器。
         :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateInput`
-        :param SessionExpireTime: 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
+        :param SessionExpireTime: 會話保持時間，單位：秒。可選值：30~3600，預設 0，表示不開啓。此參數僅适用于TCP/UDP監聽器。
         :type SessionExpireTime: int
-        :param Scheduler: 监听器转发的方式。可选值：WRR、LEAST_CONN
-分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL监听器。
+        :param Scheduler: 監聽器轉發的方式。可選值：WRR、LEAST_CONN
+分别表示按權重輪詢、最小連接數， 預設爲 WRR。此參數僅适用于TCP/UDP/TCP_SSL監聽器。
         :type Scheduler: str
-        :param SniSwitch: 是否开启SNI特性，此参数仅适用于HTTPS监听器。
+        :param SniSwitch: 是否開啓SNI特性，此參數僅适用于HTTPS監聽器。
         :type SniSwitch: int
         """
         self.LoadBalancerId = None
@@ -811,15 +811,15 @@ class CreateListenerRequest(AbstractModel):
 
 
 class CreateListenerResponse(AbstractModel):
-    """CreateListener返回参数结构体
+    """CreateListener返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ListenerIds: 创建的监听器的唯一标识数组
+        :param ListenerIds: 創建的監聽器的唯一标識數組
         :type ListenerIds: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ListenerIds = None
@@ -832,40 +832,40 @@ class CreateListenerResponse(AbstractModel):
 
 
 class CreateLoadBalancerRequest(AbstractModel):
-    """CreateLoadBalancer请求参数结构体
+    """CreateLoadBalancer請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerType: 负载均衡实例的网络类型：
-OPEN：公网属性， INTERNAL：内网属性。
+        :param LoadBalancerType: 負載均衡實例的網絡類型：
+OPEN：公網屬性， INTERNAL：内網屬性。
         :type LoadBalancerType: str
-        :param Forward: 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
+        :param Forward: 負載均衡實例的類型。1：通用的負載均衡實例，目前只支援傳入1
         :type Forward: int
-        :param LoadBalancerName: 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
-注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
+        :param LoadBalancerName: 負載均衡實例的名稱，只在創建一個實例的時候才會生效。規則：1-50 個英文、漢字、數字、連接線“-”或下劃線“_”。
+注意：如果名稱與系統中已有負載均衡實例的名稱相同，則系統将會自動生成此次創建的負載均衡實例的名稱。
         :type LoadBalancerName: str
-        :param VpcId: 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
+        :param VpcId: 負載均衡後端目标設備所屬的網絡 ID，如vpc-12345678，可以通過 DescribeVpcEx 介面獲取。 不傳此參數則預設爲基礎網絡（"0"）。
         :type VpcId: str
-        :param SubnetId: 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。
+        :param SubnetId: 在私有網絡内購買内網負載均衡實例的情況下，必須指定子網 ID，内網負載均衡實例的 VIP 将從這個子網中産生。
         :type SubnetId: str
-        :param ProjectId: 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
+        :param ProjectId: 負載均衡實例所屬的項目 ID，可以通過 DescribeProject 介面獲取。不傳此參數則視爲預設項目。
         :type ProjectId: int
-        :param AddressIPVersion: 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。
+        :param AddressIPVersion: 僅适用于公網負載均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，預設值 IPV4。
         :type AddressIPVersion: str
-        :param Number: 创建负载均衡的个数，默认值 1。
+        :param Number: 創建負載均衡的個數，預設值 1。
         :type Number: int
-        :param MasterZoneId: 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
-注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
+        :param MasterZoneId: 僅适用于公網負載均衡。設置跨可用區容災時的主可用區ID，例如 100001 或 ap-guangzhou-1
+注：主可用區是需要承載流量的可用區，備可用區預設不承載流量，主可用區不可用時才使用備可用區，平台将爲您自動選擇最佳備可用區。可通過 DescribeMasterZones 介面查詢一個地域的主可用區的清單。
         :type MasterZoneId: str
-        :param ZoneId: 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+        :param ZoneId: 僅适用于公網負載均衡。可用區ID，指定可用區以創建負載均衡實例。如：ap-guangzhou-1
         :type ZoneId: str
-        :param InternetAccessible: 仅适用于公网负载均衡。负载均衡的网络计费模式。
+        :param InternetAccessible: 僅适用于公網負載均衡。負載均衡的網絡計費模式。
         :type InternetAccessible: :class:`tencentcloud.clb.v20180317.models.InternetAccessible`
-        :param VipIsp: 仅适用于公网负载均衡。CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。
+        :param VipIsp: 僅适用于公網負載均衡。CMCC | CTCC | CUCC，分别對應 移動 | 電信 | 聯通，如果不指定本參數，則預設使用BGP。可通過 DescribeSingleIsp 介面查詢一個地域所支援的Isp。如果指定運營商，則網絡計費式只能使用按頻寬包計費(BANDWIDTH_PACKAGE)。
         :type VipIsp: str
-        :param Tags: 购买负载均衡同时，给负载均衡打上标签
+        :param Tags: 購買負載均衡同時，給負載均衡打上标簽
         :type Tags: list of TagInfo
         """
         self.LoadBalancerType = None
@@ -907,15 +907,15 @@ OPEN：公网属性， INTERNAL：内网属性。
 
 
 class CreateLoadBalancerResponse(AbstractModel):
-    """CreateLoadBalancer返回参数结构体
+    """CreateLoadBalancer返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerIds: 由负载均衡实例唯一 ID 组成的数组。
+        :param LoadBalancerIds: 由負載均衡實例唯一 ID 組成的數組。
         :type LoadBalancerIds: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.LoadBalancerIds = None
@@ -928,15 +928,15 @@ class CreateLoadBalancerResponse(AbstractModel):
 
 
 class CreateLoadBalancerSnatIpsRequest(AbstractModel):
-    """CreateLoadBalancerSnatIps请求参数结构体
+    """CreateLoadBalancerSnatIps請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡唯一性Id，如lb-12345678
+        :param LoadBalancerId: 負載均衡唯一性Id，如lb-12345678
         :type LoadBalancerId: str
-        :param SnatIps: 添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
+        :param SnatIps: 添加SnatIp訊息，可指定Ip申請，或者指定子網自動申請
         :type SnatIps: list of SnatIp
         """
         self.LoadBalancerId = None
@@ -954,13 +954,13 @@ class CreateLoadBalancerSnatIpsRequest(AbstractModel):
 
 
 class CreateLoadBalancerSnatIpsResponse(AbstractModel):
-    """CreateLoadBalancerSnatIps返回参数结构体
+    """CreateLoadBalancerSnatIps返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -971,17 +971,17 @@ class CreateLoadBalancerSnatIpsResponse(AbstractModel):
 
 
 class CreateRuleRequest(AbstractModel):
-    """CreateRule请求参数结构体
+    """CreateRule請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param ListenerId: 监听器 ID
+        :param ListenerId: 監聽器 ID
         :type ListenerId: str
-        :param Rules: 新建转发规则的信息
+        :param Rules: 新建轉發規則的訊息
         :type Rules: list of RuleInput
         """
         self.LoadBalancerId = None
@@ -1001,15 +1001,15 @@ class CreateRuleRequest(AbstractModel):
 
 
 class CreateRuleResponse(AbstractModel):
-    """CreateRule返回参数结构体
+    """CreateRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LocationIds: 创建的转发规则的唯一标识数组
+        :param LocationIds: 創建的轉發規則的唯一标識數組
         :type LocationIds: list of str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.LocationIds = None
@@ -1022,19 +1022,19 @@ class CreateRuleResponse(AbstractModel):
 
 
 class CreateTargetGroupRequest(AbstractModel):
-    """CreateTargetGroup请求参数结构体
+    """CreateTargetGroup請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TargetGroupName: 目标组名称，限定50个字符
+        :param TargetGroupName: 目标組名稱，限定50個字元
         :type TargetGroupName: str
-        :param VpcId: 目标组的vpcid属性，不填则使用默认vpc
+        :param VpcId: 目标組的vpcid屬性，不填則使用預設vpc
         :type VpcId: str
-        :param Port: 目标组的默认端口， 后续添加服务器时可使用该默认端口
+        :param Port: 目标組的預設端口， 後續添加服務器時可使用該預設端口
         :type Port: int
-        :param TargetGroupInstances: 目标组绑定的后端服务器
+        :param TargetGroupInstances: 目标組綁定的後端服務器
         :type TargetGroupInstances: list of TargetGroupInstance
         """
         self.TargetGroupName = None
@@ -1056,15 +1056,15 @@ class CreateTargetGroupRequest(AbstractModel):
 
 
 class CreateTargetGroupResponse(AbstractModel):
-    """CreateTargetGroup返回参数结构体
+    """CreateTargetGroup返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TargetGroupId: 创建目标组后生成的id
+        :param TargetGroupId: 創建目标組後生成的id
         :type TargetGroupId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TargetGroupId = None
@@ -1077,15 +1077,15 @@ class CreateTargetGroupResponse(AbstractModel):
 
 
 class DeleteListenerRequest(AbstractModel):
-    """DeleteListener请求参数结构体
+    """DeleteListener請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param ListenerId: 要删除的监听器 ID
+        :param ListenerId: 要删除的監聽器 ID
         :type ListenerId: str
         """
         self.LoadBalancerId = None
@@ -1098,13 +1098,13 @@ class DeleteListenerRequest(AbstractModel):
 
 
 class DeleteListenerResponse(AbstractModel):
-    """DeleteListener返回参数结构体
+    """DeleteListener返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1115,15 +1115,15 @@ class DeleteListenerResponse(AbstractModel):
 
 
 class DeleteLoadBalancerListenersRequest(AbstractModel):
-    """DeleteLoadBalancerListeners请求参数结构体
+    """DeleteLoadBalancerListeners請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param ListenerIds: 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器
+        :param ListenerIds: 指定删除的監聽器ID數組，若不填則删除負載均衡的所有監聽器
         :type ListenerIds: list of str
         """
         self.LoadBalancerId = None
@@ -1136,13 +1136,13 @@ class DeleteLoadBalancerListenersRequest(AbstractModel):
 
 
 class DeleteLoadBalancerListenersResponse(AbstractModel):
-    """DeleteLoadBalancerListeners返回参数结构体
+    """DeleteLoadBalancerListeners返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1153,13 +1153,13 @@ class DeleteLoadBalancerListenersResponse(AbstractModel):
 
 
 class DeleteLoadBalancerRequest(AbstractModel):
-    """DeleteLoadBalancer请求参数结构体
+    """DeleteLoadBalancer請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerIds: 要删除的负载均衡实例 ID数组，数组大小最大支持20
+        :param LoadBalancerIds: 要删除的負載均衡實例 ID數組，數組大小最大支援20
         :type LoadBalancerIds: list of str
         """
         self.LoadBalancerIds = None
@@ -1170,13 +1170,13 @@ class DeleteLoadBalancerRequest(AbstractModel):
 
 
 class DeleteLoadBalancerResponse(AbstractModel):
-    """DeleteLoadBalancer返回参数结构体
+    """DeleteLoadBalancer返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1187,15 +1187,15 @@ class DeleteLoadBalancerResponse(AbstractModel):
 
 
 class DeleteLoadBalancerSnatIpsRequest(AbstractModel):
-    """DeleteLoadBalancerSnatIps请求参数结构体
+    """DeleteLoadBalancerSnatIps請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡唯一Id，如lb-12345678
+        :param LoadBalancerId: 負載均衡唯一Id，如lb-12345678
         :type LoadBalancerId: str
-        :param Ips: 删除SnatIp地址数组
+        :param Ips: 删除SnatIp網址數組
         :type Ips: list of str
         """
         self.LoadBalancerId = None
@@ -1208,13 +1208,13 @@ class DeleteLoadBalancerSnatIpsRequest(AbstractModel):
 
 
 class DeleteLoadBalancerSnatIpsResponse(AbstractModel):
-    """DeleteLoadBalancerSnatIps返回参数结构体
+    """DeleteLoadBalancerSnatIps返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1225,19 +1225,19 @@ class DeleteLoadBalancerSnatIpsResponse(AbstractModel):
 
 
 class DeleteRewriteRequest(AbstractModel):
-    """DeleteRewrite请求参数结构体
+    """DeleteRewrite請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例ID
+        :param LoadBalancerId: 負載均衡實例ID
         :type LoadBalancerId: str
-        :param SourceListenerId: 源监听器ID
+        :param SourceListenerId: 源監聽器ID
         :type SourceListenerId: str
-        :param TargetListenerId: 目标监听器ID
+        :param TargetListenerId: 目标監聽器ID
         :type TargetListenerId: str
-        :param RewriteInfos: 转发规则之间的重定向关系
+        :param RewriteInfos: 轉發規則之間的重定向關系
         :type RewriteInfos: list of RewriteLocationMap
         """
         self.LoadBalancerId = None
@@ -1259,13 +1259,13 @@ class DeleteRewriteRequest(AbstractModel):
 
 
 class DeleteRewriteResponse(AbstractModel):
-    """DeleteRewrite返回参数结构体
+    """DeleteRewrite返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1276,21 +1276,21 @@ class DeleteRewriteResponse(AbstractModel):
 
 
 class DeleteRuleRequest(AbstractModel):
-    """DeleteRule请求参数结构体
+    """DeleteRule請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param ListenerId: 负载均衡监听器 ID
+        :param ListenerId: 負載均衡監聽器 ID
         :type ListenerId: str
-        :param LocationIds: 要删除的转发规则的ID组成的数组
+        :param LocationIds: 要删除的轉發規則的ID組成的數組
         :type LocationIds: list of str
-        :param Domain: 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
+        :param Domain: 要删除的轉發規則的域名，已提供LocationIds參數時本參數不生效
         :type Domain: str
-        :param Url: 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
+        :param Url: 要删除的轉發規則的轉發路徑，已提供LocationIds參數時本參數不生效
         :type Url: str
         """
         self.LoadBalancerId = None
@@ -1309,13 +1309,13 @@ class DeleteRuleRequest(AbstractModel):
 
 
 class DeleteRuleResponse(AbstractModel):
-    """DeleteRule返回参数结构体
+    """DeleteRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1326,13 +1326,13 @@ class DeleteRuleResponse(AbstractModel):
 
 
 class DeleteTargetGroupsRequest(AbstractModel):
-    """DeleteTargetGroups请求参数结构体
+    """DeleteTargetGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TargetGroupIds: 目标组的ID数组
+        :param TargetGroupIds: 目标組的ID數組
         :type TargetGroupIds: list of str
         """
         self.TargetGroupIds = None
@@ -1343,13 +1343,13 @@ class DeleteTargetGroupsRequest(AbstractModel):
 
 
 class DeleteTargetGroupsResponse(AbstractModel):
-    """DeleteTargetGroups返回参数结构体
+    """DeleteTargetGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1360,15 +1360,15 @@ class DeleteTargetGroupsResponse(AbstractModel):
 
 
 class DeregisterTargetGroupInstancesRequest(AbstractModel):
-    """DeregisterTargetGroupInstances请求参数结构体
+    """DeregisterTargetGroupInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TargetGroupId: 目标组ID
+        :param TargetGroupId: 目标組ID
         :type TargetGroupId: str
-        :param TargetGroupInstances: 待解绑的服务器信息
+        :param TargetGroupInstances: 待解綁的服務器訊息
         :type TargetGroupInstances: list of TargetGroupInstance
         """
         self.TargetGroupId = None
@@ -1386,13 +1386,13 @@ class DeregisterTargetGroupInstancesRequest(AbstractModel):
 
 
 class DeregisterTargetGroupInstancesResponse(AbstractModel):
-    """DeregisterTargetGroupInstances返回参数结构体
+    """DeregisterTargetGroupInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1403,15 +1403,15 @@ class DeregisterTargetGroupInstancesResponse(AbstractModel):
 
 
 class DeregisterTargetsFromClassicalLBRequest(AbstractModel):
-    """DeregisterTargetsFromClassicalLB请求参数结构体
+    """DeregisterTargetsFromClassicalLB請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param InstanceIds: 后端服务的实例ID列表
+        :param InstanceIds: 後端服務的實例ID清單
         :type InstanceIds: list of str
         """
         self.LoadBalancerId = None
@@ -1424,13 +1424,13 @@ class DeregisterTargetsFromClassicalLBRequest(AbstractModel):
 
 
 class DeregisterTargetsFromClassicalLBResponse(AbstractModel):
-    """DeregisterTargetsFromClassicalLB返回参数结构体
+    """DeregisterTargetsFromClassicalLB返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1441,23 +1441,23 @@ class DeregisterTargetsFromClassicalLBResponse(AbstractModel):
 
 
 class DeregisterTargetsRequest(AbstractModel):
-    """DeregisterTargets请求参数结构体
+    """DeregisterTargets請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID，格式如 lb-12345678
+        :param LoadBalancerId: 負載均衡實例 ID，格式如 lb-12345678
         :type LoadBalancerId: str
-        :param ListenerId: 监听器 ID，格式如 lbl-12345678
+        :param ListenerId: 監聽器 ID，格式如 lbl-12345678
         :type ListenerId: str
-        :param Targets: 要解绑的后端服务列表，数组长度最大支持20
+        :param Targets: 要解綁的後端服務清單，數組長度最大支援20
         :type Targets: list of Target
-        :param LocationId: 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
+        :param LocationId: 轉發規則的ID，格式如 loc-12345678，當從七層轉發規則解綁機器時，必須提供此參數或Domain+Url兩者之一
         :type LocationId: str
-        :param Domain: 目标规则的域名，提供LocationId参数时本参数不生效
+        :param Domain: 目标規則的域名，提供LocationId參數時本參數不生效
         :type Domain: str
-        :param Url: 目标规则的URL，提供LocationId参数时本参数不生效
+        :param Url: 目标規則的URL，提供LocationId參數時本參數不生效
         :type Url: str
         """
         self.LoadBalancerId = None
@@ -1483,13 +1483,13 @@ class DeregisterTargetsRequest(AbstractModel):
 
 
 class DeregisterTargetsResponse(AbstractModel):
-    """DeregisterTargets返回参数结构体
+    """DeregisterTargets返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1500,17 +1500,17 @@ class DeregisterTargetsResponse(AbstractModel):
 
 
 class DescribeBlockIPListRequest(AbstractModel):
-    """DescribeBlockIPList请求参数结构体
+    """DescribeBlockIPList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID。
+        :param LoadBalancerId: 負載均衡實例 ID。
         :type LoadBalancerId: str
-        :param Offset: 数据偏移量，默认为 0。
+        :param Offset: 數據偏移量，預設爲 0。
         :type Offset: int
-        :param Limit: 返回IP的最大个数，默认为 100000。
+        :param Limit: 返回IP的最大個數，預設爲 100000。
         :type Limit: int
         """
         self.LoadBalancerId = None
@@ -1525,19 +1525,19 @@ class DescribeBlockIPListRequest(AbstractModel):
 
 
 class DescribeBlockIPListResponse(AbstractModel):
-    """DescribeBlockIPList返回参数结构体
+    """DescribeBlockIPList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param BlockedIPCount: 返回的IP的数量
+        :param BlockedIPCount: 返回的IP的數量
         :type BlockedIPCount: int
-        :param ClientIPField: 获取用户真实IP的字段
+        :param ClientIPField: 獲取用戶真實IP的欄位
         :type ClientIPField: str
-        :param BlockedIPList: 加入了12360黑名单的IP列表
+        :param BlockedIPList: 加入了12360黑名單的IP清單
         :type BlockedIPList: list of BlockedIP
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.BlockedIPCount = None
@@ -1559,13 +1559,13 @@ class DescribeBlockIPListResponse(AbstractModel):
 
 
 class DescribeBlockIPTaskRequest(AbstractModel):
-    """DescribeBlockIPTask请求参数结构体
+    """DescribeBlockIPTask請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: ModifyBlockIPList 接口返回的异步任务的ID。
+        :param TaskId: ModifyBlockIPList 介面返回的異步任務的ID。
         :type TaskId: str
         """
         self.TaskId = None
@@ -1576,7 +1576,7 @@ class DescribeBlockIPTaskRequest(AbstractModel):
 
 
 class DescribeBlockIPTaskResponse(AbstractModel):
-    """DescribeBlockIPTask返回参数结构体
+    """DescribeBlockIPTask返回參數結構體
 
     """
 
@@ -1584,7 +1584,7 @@ class DescribeBlockIPTaskResponse(AbstractModel):
         """
         :param Status: 1 running，2 fail，6 succ
         :type Status: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Status = None
@@ -1597,13 +1597,13 @@ class DescribeBlockIPTaskResponse(AbstractModel):
 
 
 class DescribeClassicalLBByInstanceIdRequest(AbstractModel):
-    """DescribeClassicalLBByInstanceId请求参数结构体
+    """DescribeClassicalLBByInstanceId請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param InstanceIds: 后端实例ID列表
+        :param InstanceIds: 後端實例ID清單
         :type InstanceIds: list of str
         """
         self.InstanceIds = None
@@ -1614,15 +1614,15 @@ class DescribeClassicalLBByInstanceIdRequest(AbstractModel):
 
 
 class DescribeClassicalLBByInstanceIdResponse(AbstractModel):
-    """DescribeClassicalLBByInstanceId返回参数结构体
+    """DescribeClassicalLBByInstanceId返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerInfoList: 负载均衡相关信息列表
+        :param LoadBalancerInfoList: 負載均衡相關訊息清單
         :type LoadBalancerInfoList: list of ClassicalLoadBalancerInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.LoadBalancerInfoList = None
@@ -1640,15 +1640,15 @@ class DescribeClassicalLBByInstanceIdResponse(AbstractModel):
 
 
 class DescribeClassicalLBHealthStatusRequest(AbstractModel):
-    """DescribeClassicalLBHealthStatus请求参数结构体
+    """DescribeClassicalLBHealthStatus請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param ListenerId: 负载均衡监听器ID
+        :param ListenerId: 負載均衡監聽器ID
         :type ListenerId: str
         """
         self.LoadBalancerId = None
@@ -1661,16 +1661,16 @@ class DescribeClassicalLBHealthStatusRequest(AbstractModel):
 
 
 class DescribeClassicalLBHealthStatusResponse(AbstractModel):
-    """DescribeClassicalLBHealthStatus返回参数结构体
+    """DescribeClassicalLBHealthStatus返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param HealthList: 后端健康状态列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HealthList: 後端健康狀态清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HealthList: list of ClassicalHealth
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.HealthList = None
@@ -1688,21 +1688,21 @@ class DescribeClassicalLBHealthStatusResponse(AbstractModel):
 
 
 class DescribeClassicalLBListenersRequest(AbstractModel):
-    """DescribeClassicalLBListeners请求参数结构体
+    """DescribeClassicalLBListeners請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param ListenerIds: 负载均衡监听器ID列表
+        :param ListenerIds: 負載均衡監聽器ID清單
         :type ListenerIds: list of str
-        :param Protocol: 负载均衡监听的协议, 'TCP', 'UDP', 'HTTP', 'HTTPS'
+        :param Protocol: 負載均衡監聽的協議, 'TCP', 'UDP', 'HTTP', 'HTTPS'
         :type Protocol: str
-        :param ListenerPort: 负载均衡监听端口， 范围[1-65535]
+        :param ListenerPort: 負載均衡監聽端口， 範圍[1-65535]
         :type ListenerPort: int
-        :param Status: 监听器的状态，0 表示创建中，1 表示运行中
+        :param Status: 監聽器的狀态，0 表示創建中，1 表示運作中
         :type Status: int
         """
         self.LoadBalancerId = None
@@ -1721,16 +1721,16 @@ class DescribeClassicalLBListenersRequest(AbstractModel):
 
 
 class DescribeClassicalLBListenersResponse(AbstractModel):
-    """DescribeClassicalLBListeners返回参数结构体
+    """DescribeClassicalLBListeners返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Listeners: 监听器列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Listeners: 監聽器清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Listeners: list of ClassicalListener
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Listeners = None
@@ -1748,13 +1748,13 @@ class DescribeClassicalLBListenersResponse(AbstractModel):
 
 
 class DescribeClassicalLBTargetsRequest(AbstractModel):
-    """DescribeClassicalLBTargets请求参数结构体
+    """DescribeClassicalLBTargets請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
         """
         self.LoadBalancerId = None
@@ -1765,16 +1765,16 @@ class DescribeClassicalLBTargetsRequest(AbstractModel):
 
 
 class DescribeClassicalLBTargetsResponse(AbstractModel):
-    """DescribeClassicalLBTargets返回参数结构体
+    """DescribeClassicalLBTargets返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Targets: 后端服务列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Targets: 後端服務清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Targets: list of ClassicalTarget
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Targets = None
@@ -1792,19 +1792,19 @@ class DescribeClassicalLBTargetsResponse(AbstractModel):
 
 
 class DescribeListenersRequest(AbstractModel):
-    """DescribeListeners请求参数结构体
+    """DescribeListeners請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param ListenerIds: 要查询的负载均衡监听器 ID数组
+        :param ListenerIds: 要查詢的負載均衡監聽器 ID數組
         :type ListenerIds: list of str
-        :param Protocol: 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL
+        :param Protocol: 要查詢的監聽器協議類型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL
         :type Protocol: str
-        :param Port: 要查询的监听器的端口
+        :param Port: 要查詢的監聽器的端口
         :type Port: int
         """
         self.LoadBalancerId = None
@@ -1821,18 +1821,18 @@ class DescribeListenersRequest(AbstractModel):
 
 
 class DescribeListenersResponse(AbstractModel):
-    """DescribeListeners返回参数结构体
+    """DescribeListeners返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Listeners: 监听器列表
+        :param Listeners: 監聽器清單
         :type Listeners: list of Listener
-        :param TotalCount: 总的监听器个数
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TotalCount: 總的監聽器個數
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Listeners = None
@@ -1852,13 +1852,13 @@ class DescribeListenersResponse(AbstractModel):
 
 
 class DescribeLoadBalancerListByCertIdRequest(AbstractModel):
-    """DescribeLoadBalancerListByCertId请求参数结构体
+    """DescribeLoadBalancerListByCertId請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertIds: 服务端证书的ID，或客户端证书的ID
+        :param CertIds: 服務端證書的ID，或用戶端證書的ID
         :type CertIds: list of str
         """
         self.CertIds = None
@@ -1869,15 +1869,15 @@ class DescribeLoadBalancerListByCertIdRequest(AbstractModel):
 
 
 class DescribeLoadBalancerListByCertIdResponse(AbstractModel):
-    """DescribeLoadBalancerListByCertId返回参数结构体
+    """DescribeLoadBalancerListByCertId返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param CertSet: 证书ID，以及与该证书ID关联的负载均衡实例列表
+        :param CertSet: 證書ID，以及與該證書ID關聯的負載均衡實例清單
         :type CertSet: list of CertIdRelatedWithLoadBalancers
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.CertSet = None
@@ -1895,54 +1895,54 @@ class DescribeLoadBalancerListByCertIdResponse(AbstractModel):
 
 
 class DescribeLoadBalancersRequest(AbstractModel):
-    """DescribeLoadBalancers请求参数结构体
+    """DescribeLoadBalancers請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerIds: 负载均衡实例 ID。
+        :param LoadBalancerIds: 負載均衡實例 ID。
         :type LoadBalancerIds: list of str
-        :param LoadBalancerType: 负载均衡实例的网络类型：
-OPEN：公网属性， INTERNAL：内网属性。
+        :param LoadBalancerType: 負載均衡實例的網絡類型：
+OPEN：公網屬性， INTERNAL：内網屬性。
         :type LoadBalancerType: str
-        :param Forward: 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
+        :param Forward: 負載均衡實例的類型。1：通用的負載均衡實例，0：傳統型負載均衡實例。如果不傳此參數，則查詢所有類型的負載均衡實例。
         :type Forward: int
-        :param LoadBalancerName: 负载均衡实例的名称。
+        :param LoadBalancerName: 負載均衡實例的名稱。
         :type LoadBalancerName: str
-        :param Domain: 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
+        :param Domain: Top Cloud 爲負載均衡實例分配的域名，本參數僅對傳統型公網負載均衡才有意義。
         :type Domain: str
-        :param LoadBalancerVips: 负载均衡实例的 VIP 地址，支持多个。
+        :param LoadBalancerVips: 負載均衡實例的 VIP 網址，支援多個。
         :type LoadBalancerVips: list of str
-        :param BackendPublicIps: 负载均衡绑定的后端服务的外网 IP。
+        :param BackendPublicIps: 負載均衡綁定的後端服務的外網 IP。
         :type BackendPublicIps: list of str
-        :param BackendPrivateIps: 负载均衡绑定的后端服务的内网 IP。
+        :param BackendPrivateIps: 負載均衡綁定的後端服務的内網 IP。
         :type BackendPrivateIps: list of str
-        :param Offset: 数据偏移量，默认为 0。
+        :param Offset: 數據偏移量，預設爲 0。
         :type Offset: int
-        :param Limit: 返回负载均衡实例的数量，默认为20，最大值为100。
+        :param Limit: 返回負載均衡實例的數量，預設爲20，最大值爲100。
         :type Limit: int
-        :param OrderBy: 排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
+        :param OrderBy: 排序參數，支援以下欄位：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
         :type OrderBy: str
-        :param OrderType: 1：倒序，0：顺序，默认按照创建时间倒序。
+        :param OrderType: 1：倒序，0：順序，預設按照創建時間倒序。
         :type OrderType: int
-        :param SearchKey: 搜索字段，模糊匹配名称、域名、VIP。
+        :param SearchKey: 搜索欄位，模糊比對名稱、域名、VIP。
         :type SearchKey: str
-        :param ProjectId: 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
+        :param ProjectId: 負載均衡實例所屬的項目 ID，可以通過 DescribeProject 介面獲取。
         :type ProjectId: int
-        :param WithRs: 负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
+        :param WithRs: 負載均衡是否綁定後端服務，0：沒有綁定後端服務，1：綁定後端服務，-1：查詢全部。
         :type WithRs: int
-        :param VpcId: 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
-基础网络可传入'0'。
+        :param VpcId: 負載均衡實例所屬私有網絡唯一ID，如 vpc-bhqkbhdx，
+基礎網絡可傳入'0'。
         :type VpcId: str
-        :param SecurityGroup: 安全组ID，如 sg-m1cc9123
+        :param SecurityGroup: 安全組ID，如 sg-m1cc9123
         :type SecurityGroup: str
-        :param MasterZone: 主可用区ID，如 ："100001" （对应的是广州一区）
+        :param MasterZone: 主可用區ID，如 ："100001" （對應的是廣州一區）
         :type MasterZone: str
-        :param Filters: 每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。详细的过滤条件如下：
-<li> internet-charge-type - String - 是否必填：否 - （过滤条件）按照 CLB 的网络计费模式过滤，包括"BANDWIDTH_PREPAID","TRAFFIC_POSTPAID_BY_HOUR","BANDWIDTH_POSTPAID_BY_HOUR","BANDWIDTH_PACKAGE"。</li>
-<li> master-zone-id - String - 是否必填：否 - （过滤条件）按照 CLB 的主可用区ID过滤，如 ："100001" （对应的是广州一区）。</li>
-<li> tag-key - String - 是否必填：否 - （过滤条件）按照 CLB 标签的键过滤。</li>
+        :param Filters: 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲100。詳細的過濾條件如下：
+<li> internet-charge-type - String - 是否必填：否 - （過濾條件）按照 CLB 的網絡計費模式過濾，包括"BANDWIDTH_PREPAID","TRAFFIC_POSTPAID_BY_HOUR","BANDWIDTH_POSTPAID_BY_HOUR","BANDWIDTH_PACKAGE"。</li>
+<li> master-zone-id - String - 是否必填：否 - （過濾條件）按照 CLB 的主可用區ID過濾，如 ："100001" （對應的是廣州一區）。</li>
+<li> tag-key - String - 是否必填：否 - （過濾條件）按照 CLB 标簽的鍵過濾。</li>
         :type Filters: list of Filter
         """
         self.LoadBalancerIds = None
@@ -1994,17 +1994,17 @@ OPEN：公网属性， INTERNAL：内网属性。
 
 
 class DescribeLoadBalancersResponse(AbstractModel):
-    """DescribeLoadBalancers返回参数结构体
+    """DescribeLoadBalancers返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
+        :param TotalCount: 滿足過濾條件的負載均衡實例總數。此數值與入參中的Limit無關。
         :type TotalCount: int
-        :param LoadBalancerSet: 返回的负载均衡实例数组。
+        :param LoadBalancerSet: 返回的負載均衡實例數組。
         :type LoadBalancerSet: list of LoadBalancer
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -2024,17 +2024,17 @@ class DescribeLoadBalancersResponse(AbstractModel):
 
 
 class DescribeRewriteRequest(AbstractModel):
-    """DescribeRewrite请求参数结构体
+    """DescribeRewrite請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例ID
+        :param LoadBalancerId: 負載均衡實例ID
         :type LoadBalancerId: str
-        :param SourceListenerIds: 负载均衡监听器ID数组
+        :param SourceListenerIds: 負載均衡監聽器ID數組
         :type SourceListenerIds: list of str
-        :param SourceLocationIds: 负载均衡转发规则的ID数组
+        :param SourceLocationIds: 負載均衡轉發規則的ID數組
         :type SourceLocationIds: list of str
         """
         self.LoadBalancerId = None
@@ -2049,15 +2049,15 @@ class DescribeRewriteRequest(AbstractModel):
 
 
 class DescribeRewriteResponse(AbstractModel):
-    """DescribeRewrite返回参数结构体
+    """DescribeRewrite返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RewriteSet: 重定向转发规则构成的数组，若无重定向规则，则返回空数组
+        :param RewriteSet: 重定向轉發規則構成的數組，若無重定向規則，則返回空數組
         :type RewriteSet: list of RuleOutput
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RewriteSet = None
@@ -2075,17 +2075,17 @@ class DescribeRewriteResponse(AbstractModel):
 
 
 class DescribeTargetGroupInstancesRequest(AbstractModel):
-    """DescribeTargetGroupInstances请求参数结构体
+    """DescribeTargetGroupInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Filters: 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤
+        :param Filters: 過濾條件，當前僅支援TargetGroupId，BindIP，InstanceId過濾
         :type Filters: list of Filter
-        :param Limit: 显示数量限制，默认20
+        :param Limit: 顯示數量限制，預設20
         :type Limit: int
-        :param Offset: 显示的偏移量，默认为0
+        :param Offset: 顯示的偏移量，預設爲0
         :type Offset: int
         """
         self.Filters = None
@@ -2105,19 +2105,19 @@ class DescribeTargetGroupInstancesRequest(AbstractModel):
 
 
 class DescribeTargetGroupInstancesResponse(AbstractModel):
-    """DescribeTargetGroupInstances返回参数结构体
+    """DescribeTargetGroupInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 本次查询的结果数量
+        :param TotalCount: 本次查詢的結果數量
         :type TotalCount: int
-        :param TargetGroupInstanceSet: 绑定的服务器信息
+        :param TargetGroupInstanceSet: 綁定的服務器訊息
         :type TargetGroupInstanceSet: list of TargetGroupBackend
-        :param RealCount: 实际统计数量，不受Limit，Offset，CAM的影响
+        :param RealCount: 實際統計數量，不受Limit，Offset，CAM的影響
         :type RealCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -2139,19 +2139,19 @@ class DescribeTargetGroupInstancesResponse(AbstractModel):
 
 
 class DescribeTargetGroupListRequest(AbstractModel):
-    """DescribeTargetGroupList请求参数结构体
+    """DescribeTargetGroupList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TargetGroupIds: 目标组ID数组
+        :param TargetGroupIds: 目标組ID數組
         :type TargetGroupIds: list of str
-        :param Filters: 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID，
+        :param Filters: 過濾條件數組，支援TargetGroupVpcId和TargetGroupName。與TargetGroupIds互斥，優先使用目标組ID，
         :type Filters: list of Filter
-        :param Offset: 显示的偏移起始量
+        :param Offset: 顯示的偏移起始量
         :type Offset: int
-        :param Limit: 显示条数限制，默认为20
+        :param Limit: 顯示條數限制，預設爲20
         :type Limit: int
         """
         self.TargetGroupIds = None
@@ -2173,17 +2173,17 @@ class DescribeTargetGroupListRequest(AbstractModel):
 
 
 class DescribeTargetGroupListResponse(AbstractModel):
-    """DescribeTargetGroupList返回参数结构体
+    """DescribeTargetGroupList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 显示的结果数量
+        :param TotalCount: 顯示的結果數量
         :type TotalCount: int
-        :param TargetGroupSet: 显示的目标组信息集合
+        :param TargetGroupSet: 顯示的目标組訊息集合
         :type TargetGroupSet: list of TargetGroupInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -2203,19 +2203,19 @@ class DescribeTargetGroupListResponse(AbstractModel):
 
 
 class DescribeTargetGroupsRequest(AbstractModel):
-    """DescribeTargetGroups请求参数结构体
+    """DescribeTargetGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TargetGroupIds: 目标组ID，与Filters互斥
+        :param TargetGroupIds: 目标組ID，與Filters互斥
         :type TargetGroupIds: list of str
-        :param Limit: 显示条数限制，默认为20
+        :param Limit: 顯示條數限制，預設爲20
         :type Limit: int
-        :param Offset: 显示的偏移起始量
+        :param Offset: 顯示的偏移起始量
         :type Offset: int
-        :param Filters: 过滤条件数组，与TargetGroupIds互斥，支持TargetGroupVpcId和TargetGroupName
+        :param Filters: 過濾條件數組，與TargetGroupIds互斥，支援TargetGroupVpcId和TargetGroupName
         :type Filters: list of Filter
         """
         self.TargetGroupIds = None
@@ -2237,17 +2237,17 @@ class DescribeTargetGroupsRequest(AbstractModel):
 
 
 class DescribeTargetGroupsResponse(AbstractModel):
-    """DescribeTargetGroups返回参数结构体
+    """DescribeTargetGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 显示的结果数量
+        :param TotalCount: 顯示的結果數量
         :type TotalCount: int
-        :param TargetGroupSet: 显示的目标组信息集合
+        :param TargetGroupSet: 顯示的目标組訊息集合
         :type TargetGroupSet: list of TargetGroupInfo
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -2267,13 +2267,13 @@ class DescribeTargetGroupsResponse(AbstractModel):
 
 
 class DescribeTargetHealthRequest(AbstractModel):
-    """DescribeTargetHealth请求参数结构体
+    """DescribeTargetHealth請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerIds: 要查询的负载均衡实例 ID列表
+        :param LoadBalancerIds: 要查詢的負載均衡實例 ID清單
         :type LoadBalancerIds: list of str
         """
         self.LoadBalancerIds = None
@@ -2284,16 +2284,16 @@ class DescribeTargetHealthRequest(AbstractModel):
 
 
 class DescribeTargetHealthResponse(AbstractModel):
-    """DescribeTargetHealth返回参数结构体
+    """DescribeTargetHealth返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancers: 负载均衡实例列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LoadBalancers: 負載均衡實例清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LoadBalancers: list of LoadBalancerHealth
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.LoadBalancers = None
@@ -2311,19 +2311,19 @@ class DescribeTargetHealthResponse(AbstractModel):
 
 
 class DescribeTargetsRequest(AbstractModel):
-    """DescribeTargets请求参数结构体
+    """DescribeTargets請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param ListenerIds: 监听器 ID列表
+        :param ListenerIds: 監聽器 ID清單
         :type ListenerIds: list of str
-        :param Protocol: 监听器协议类型
+        :param Protocol: 監聽器協議類型
         :type Protocol: str
-        :param Port: 监听器端口
+        :param Port: 監聽器端口
         :type Port: int
         """
         self.LoadBalancerId = None
@@ -2340,16 +2340,16 @@ class DescribeTargetsRequest(AbstractModel):
 
 
 class DescribeTargetsResponse(AbstractModel):
-    """DescribeTargets返回参数结构体
+    """DescribeTargets返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Listeners: 监听器后端绑定的机器信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Listeners: 監聽器後端綁定的機器訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Listeners: list of ListenerBackend
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Listeners = None
@@ -2367,13 +2367,13 @@ class DescribeTargetsResponse(AbstractModel):
 
 
 class DescribeTaskStatusRequest(AbstractModel):
-    """DescribeTaskStatus请求参数结构体
+    """DescribeTaskStatus請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TaskId: 请求ID，即接口返回的 RequestId 参数
+        :param TaskId: 請求ID，即介面返回的 RequestId 參數
         :type TaskId: str
         """
         self.TaskId = None
@@ -2384,15 +2384,15 @@ class DescribeTaskStatusRequest(AbstractModel):
 
 
 class DescribeTaskStatusResponse(AbstractModel):
-    """DescribeTaskStatus返回参数结构体
+    """DescribeTaskStatus返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Status: 任务的当前状态。 0：成功，1：失败，2：进行中。
+        :param Status: 任務的當前狀态。 0：成功，1：失敗，2：進行中。
         :type Status: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Status = None
@@ -2405,13 +2405,13 @@ class DescribeTaskStatusResponse(AbstractModel):
 
 
 class DisassociateTargetGroupsRequest(AbstractModel):
-    """DisassociateTargetGroups请求参数结构体
+    """DisassociateTargetGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Associations: 待解绑的规则关系数组
+        :param Associations: 待解綁的規則關系數組
         :type Associations: list of TargetGroupAssociation
         """
         self.Associations = None
@@ -2427,13 +2427,13 @@ class DisassociateTargetGroupsRequest(AbstractModel):
 
 
 class DisassociateTargetGroupsResponse(AbstractModel):
-    """DisassociateTargetGroups返回参数结构体
+    """DisassociateTargetGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -2444,20 +2444,20 @@ class DisassociateTargetGroupsResponse(AbstractModel):
 
 
 class ExclusiveCluster(AbstractModel):
-    """独占集群
+    """獨占集群
 
     """
 
     def __init__(self):
         """
-        :param L4Clusters: 4层独占集群列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param L4Clusters: 4層獨占集群清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type L4Clusters: list of ClusterItem
-        :param L7Clusters: 7层独占集群列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param L7Clusters: 7層獨占集群清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type L7Clusters: list of ClusterItem
         :param ClassicalCluster: vpcgw集群
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ClassicalCluster: :class:`tencentcloud.clb.v20180317.models.ClusterItem`
         """
         self.L4Clusters = None
@@ -2484,17 +2484,17 @@ class ExclusiveCluster(AbstractModel):
 
 
 class ExtraInfo(AbstractModel):
-    """暂做保留，一般用户无需关注。
+    """暫做保留，一般用戶無需關注。
 
     """
 
     def __init__(self):
         """
-        :param ZhiTong: 是否开通VIP直通
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ZhiTong: 是否開通VIP直通
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ZhiTong: bool
-        :param TgwGroupName: TgwGroup名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TgwGroupName: TgwGroup名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TgwGroupName: str
         """
         self.ZhiTong = None
@@ -2507,15 +2507,15 @@ class ExtraInfo(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """过滤器条件
+    """過濾器條件
 
     """
 
     def __init__(self):
         """
-        :param Name: 过滤器的名称
+        :param Name: 過濾器的名稱
         :type Name: str
-        :param Values: 过滤器的值数组
+        :param Values: 過濾器的值數組
         :type Values: list of str
         """
         self.Name = None
@@ -2528,57 +2528,57 @@ class Filter(AbstractModel):
 
 
 class HealthCheck(AbstractModel):
-    """健康检查信息。
-    注意，自定义探测相关参数 目前只有少量区域灰度支持。
+    """健康檢查訊息。
+    注意，自定義探測相關參數 目前只有少量區域灰度支援。
 
     """
 
     def __init__(self):
         """
-        :param HealthSwitch: 是否开启健康检查：1（开启）、0（关闭）。
+        :param HealthSwitch: 是否開啓健康檢查：1（開啓）、0（關閉）。
         :type HealthSwitch: int
-        :param TimeOut: 健康检查的响应超时时间（仅适用于四层监听器），可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TimeOut: 健康檢查的響應超時時間（僅适用于四層監聽器），可選值：2~60，預設值：2，單位：秒。響應超時時間要小於檢查間隔時間。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TimeOut: int
-        :param IntervalTime: 健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IntervalTime: 健康檢查探測間隔時間，預設值：5，可選值：5~300，單位：秒。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IntervalTime: int
-        :param HealthNum: 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HealthNum: 健康阈值，預設值：3，表示當連續探測三次健康則表示該轉發正常，可選值：2~10，單位：次。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HealthNum: int
-        :param UnHealthNum: 不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发异常，可选值：2~10，单位：次。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param UnHealthNum: 不健康阈值，預設值：3，表示當連續探測三次不健康則表示該轉發異常，可選值：2~10，單位：次。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type UnHealthNum: int
-        :param HttpCode: 健康检查状态码（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。可选值：1~31，默认 31。
-1 表示探测后返回值 1xx 代表健康，2 表示返回 2xx 代表健康，4 表示返回 3xx 代表健康，8 表示返回 4xx 代表健康，16 表示返回 5xx 代表健康。若希望多种返回码都可代表健康，则将相应的值相加。注意：TCP监听器的HTTP健康检查方式，只支持指定一种健康检查状态码。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HttpCode: 健康檢查狀态碼（僅适用于HTTP/HTTPS轉發規則、TCP監聽器的HTTP健康檢查方式）。可選值：1~31，預設 31。
+1 表示探測後返回值 1xx 代表健康，2 表示返回 2xx 代表健康，4 表示返回 3xx 代表健康，8 表示返回 4xx 代表健康，16 表示返回 5xx 代表健康。若希望多種返回碼都可代表健康，則将相應的值相加。注意：TCP監聽器的HTTP健康檢查方式，只支援指定一種健康檢查狀态碼。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HttpCode: int
-        :param HttpCheckPath: 健康检查路径（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HttpCheckPath: 健康檢查路徑（僅适用于HTTP/HTTPS轉發規則、TCP監聽器的HTTP健康檢查方式）。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HttpCheckPath: str
-        :param HttpCheckDomain: 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HttpCheckDomain: 健康檢查域名（僅适用于HTTP/HTTPS轉發規則、TCP監聽器的HTTP健康檢查方式）。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HttpCheckDomain: str
-        :param HttpCheckMethod: 健康检查方法（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式），默认值：HEAD，可选值HEAD或GET。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HttpCheckMethod: 健康檢查方法（僅适用于HTTP/HTTPS轉發規則、TCP監聽器的HTTP健康檢查方式），預設值：HEAD，可選值HEAD或GET。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HttpCheckMethod: str
-        :param CheckPort: 自定义探测相关参数。健康检查端口，默认为后端服务的端口，除非您希望指定特定端口，否则建议留空。（仅适用于TCP/UDP监听器）。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CheckPort: 自定義探測相關參數。健康檢查端口，預設爲後端服務的端口，除非您希望指定特定端口，否則建議留空。（僅适用于TCP/UDP監聽器）。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CheckPort: int
-        :param ContextType: 自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查的输入格式，可取值：HEX或TEXT；取值为HEX时，SendContext和RecvContext的字符只能在0123456789ABCDEF中选取且长度必须是偶数位。（仅适用于TCP/UDP监听器）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ContextType: 自定義探測相關參數。健康檢查協議CheckType的值取CUSTOM時，必填此欄位，代表健康檢查的輸入格式，可取值：HEX或TEXT；取值爲HEX時，SendContext和RecvContext的字元只能在0123456789ABCDEF中選取且長度必須是偶數位。（僅适用于TCP/UDP監聽器）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ContextType: str
-        :param SendContext: 自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查发送的请求内容，只允许ASCII可见字符，最大长度限制500。（仅适用于TCP/UDP监听器）。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SendContext: 自定義探測相關參數。健康檢查協議CheckType的值取CUSTOM時，必填此欄位，代表健康檢查發送的請求内容，只允許ASCII可見字元，最大長度限制500。（僅适用于TCP/UDP監聽器）。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SendContext: str
-        :param RecvContext: 自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查返回的结果，只允许ASCII可见字符，最大长度限制500。（仅适用于TCP/UDP监听器）。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RecvContext: 自定義探測相關參數。健康檢查協議CheckType的值取CUSTOM時，必填此欄位，代表健康檢查返回的結果，只允許ASCII可見字元，最大長度限制500。（僅适用于TCP/UDP監聽器）。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RecvContext: str
-        :param CheckType: 自定义探测相关参数。健康检查使用的协议：TCP | HTTP | CUSTOM（仅适用于TCP/UDP监听器，其中UDP监听器只支持CUSTOM；如果使用自定义健康检查功能，则必传）。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CheckType: 自定義探測相關參數。健康檢查使用的協議：TCP | HTTP | CUSTOM（僅适用于TCP/UDP監聽器，其中UDP監聽器只支援CUSTOM；如果使用自定義健康檢查功能，則必傳）。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CheckType: str
-        :param HttpVersion: 自定义探测相关参数。健康检查协议CheckType的值取HTTP时，必传此字段，代表后端服务的HTTP版本：HTTP/1.0、HTTP/1.1；（仅适用于TCP监听器）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HttpVersion: 自定義探測相關參數。健康檢查協議CheckType的值取HTTP時，必傳此欄位，代表後端服務的HTTP版本：HTTP/1.0、HTTP/1.1；（僅适用于TCP監聽器）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HttpVersion: str
         """
         self.HealthSwitch = None
@@ -2617,21 +2617,21 @@ class HealthCheck(AbstractModel):
 
 
 class InternetAccessible(AbstractModel):
-    """网络计费模式，最大出带宽
+    """網絡計費模式，最大出頻寬
 
     """
 
     def __init__(self):
         """
-        :param InternetChargeType: TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
-BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支持此种计费模式）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InternetChargeType: TRAFFIC_POSTPAID_BY_HOUR 按流量按小時後計費 ; BANDWIDTH_POSTPAID_BY_HOUR 按頻寬按小時後計費;
+BANDWIDTH_PACKAGE 按頻寬包計費（當前，只有指定運營商時才支援此種計費模式）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InternetChargeType: str
-        :param InternetMaxBandwidthOut: 最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InternetMaxBandwidthOut: 最大出頻寬，單位Mbps，範圍支援0到2048，僅對公網屬性的LB生效，預設值 10
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InternetMaxBandwidthOut: int
-        :param BandwidthpkgSubType: 带宽包的类型，如SINGLEISP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BandwidthpkgSubType: 頻寬包的類型，如SINGLEISP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BandwidthpkgSubType: str
         """
         self.InternetChargeType = None
@@ -2646,17 +2646,17 @@ BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支�
 
 
 class LBChargePrepaid(AbstractModel):
-    """lb实例包年包月相关配置属性
+    """lb實例包年包月相關配置屬性
 
     """
 
     def __init__(self):
         """
-        :param RenewFlag: 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RenewFlag: 續約類型：AUTO_RENEW 自動續約，  MANUAL_RENEW 手動續約
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RenewFlag: str
-        :param Period: 购买时长，单位：月
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Period: 購買時長，單位：月
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Period: int
         """
         self.RenewFlag = None
@@ -2669,50 +2669,50 @@ class LBChargePrepaid(AbstractModel):
 
 
 class Listener(AbstractModel):
-    """监听器的信息
+    """監聽器的訊息
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 负载均衡监听器 ID
+        :param ListenerId: 負載均衡監聽器 ID
         :type ListenerId: str
-        :param Protocol: 监听器协议
+        :param Protocol: 監聽器協議
         :type Protocol: str
-        :param Port: 监听器端口
+        :param Port: 監聽器端口
         :type Port: int
-        :param Certificate: 监听器绑定的证书信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Certificate: 監聽器綁定的證書訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateOutput`
-        :param HealthCheck: 监听器的健康检查信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HealthCheck: 監聽器的健康檢查訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
-        :param Scheduler: 请求的调度方式
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Scheduler: 請求的調度方式
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Scheduler: str
-        :param SessionExpireTime: 会话保持时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SessionExpireTime: 會話保持時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SessionExpireTime: int
-        :param SniSwitch: 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SniSwitch: 是否開啓SNI特性（本參數僅對于HTTPS監聽器有意義）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SniSwitch: int
-        :param Rules: 监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Rules: 監聽器下的全部轉發規則（本參數僅對于HTTP/HTTPS監聽器有意義）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Rules: list of RuleOutput
-        :param ListenerName: 监听器的名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ListenerName: 監聽器的名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ListenerName: str
-        :param CreateTime: 监听器的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 監聽器的創建時間。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
-        :param EndPort: 端口段结束端口
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EndPort: 端口段結束端口
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EndPort: int
-        :param TargetType: 后端服务器类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TargetType: 後端服務器類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TargetType: str
-        :param TargetGroup: 绑定的目标组基本信息；当监听器绑定目标组时，会返回该字段
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TargetGroup: 綁定的目标組基本訊息；當監聽器綁定目标組時，會返回該欄位
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TargetGroup: :class:`tencentcloud.clb.v20180317.models.BasicTargetGroupInfo`
         """
         self.ListenerId = None
@@ -2760,26 +2760,26 @@ class Listener(AbstractModel):
 
 
 class ListenerBackend(AbstractModel):
-    """监听器上绑定的后端服务的信息
+    """監聽器上綁定的後端服務的訊息
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器 ID
+        :param ListenerId: 監聽器 ID
         :type ListenerId: str
-        :param Protocol: 监听器的协议
+        :param Protocol: 監聽器的協議
         :type Protocol: str
-        :param Port: 监听器的端口
+        :param Port: 監聽器的端口
         :type Port: int
-        :param Rules: 监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Rules: 監聽器下的規則訊息（僅适用于HTTP/HTTPS監聽器）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Rules: list of RuleTargets
-        :param Targets: 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Targets: 監聽器上綁定的後端服務清單（僅适用于TCP/UDP/TCP_SSL監聽器）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Targets: list of Backend
-        :param EndPort: 若支持端口段，则为端口段结束端口；若不支持端口段，则为0
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EndPort: 若支援端口段，則爲端口段結束端口；若不支援端口段，則爲0
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EndPort: int
         """
         self.ListenerId = None
@@ -2810,23 +2810,23 @@ class ListenerBackend(AbstractModel):
 
 
 class ListenerHealth(AbstractModel):
-    """监听器的健康检查信息
+    """監聽器的健康檢查訊息
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
-        :param ListenerName: 监听器名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ListenerName: 監聽器名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ListenerName: str
-        :param Protocol: 监听器的协议
+        :param Protocol: 監聽器的協議
         :type Protocol: str
-        :param Port: 监听器的端口
+        :param Port: 監聽器的端口
         :type Port: int
-        :param Rules: 监听器的转发规则列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Rules: 監聽器的轉發規則清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Rules: list of RuleHealth
         """
         self.ListenerId = None
@@ -2850,140 +2850,140 @@ class ListenerHealth(AbstractModel):
 
 
 class LoadBalancer(AbstractModel):
-    """负载均衡实例的信息
+    """負載均衡實例的訊息
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID。
+        :param LoadBalancerId: 負載均衡實例 ID。
         :type LoadBalancerId: str
-        :param LoadBalancerName: 负载均衡实例的名称。
+        :param LoadBalancerName: 負載均衡實例的名稱。
         :type LoadBalancerName: str
-        :param LoadBalancerType: 负载均衡实例的网络类型：
-OPEN：公网属性， INTERNAL：内网属性。
+        :param LoadBalancerType: 負載均衡實例的網絡類型：
+OPEN：公網屬性， INTERNAL：内網屬性。
         :type LoadBalancerType: str
-        :param Forward: 负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
+        :param Forward: 負載均衡類型标識，1：負載均衡，0：傳統型負載均衡。
         :type Forward: int
-        :param Domain: 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Domain: 負載均衡實例的域名，僅公網傳統型負載均衡實例才提供該欄位
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Domain: str
-        :param LoadBalancerVips: 负载均衡实例的 VIP 列表。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LoadBalancerVips: 負載均衡實例的 VIP 清單。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LoadBalancerVips: list of str
-        :param Status: 负载均衡实例的状态，包括
-0：创建中，1：正常运行。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Status: 負載均衡實例的狀态，包括
+0：創建中，1：正常運作。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: int
-        :param CreateTime: 负载均衡实例的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param CreateTime: 負載均衡實例的創建時間。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
-        :param StatusTime: 负载均衡实例的上次状态转换时间。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param StatusTime: 負載均衡實例的上次狀态轉換時間。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type StatusTime: str
-        :param ProjectId: 负载均衡实例所属的项目 ID， 0 表示默认项目。
+        :param ProjectId: 負載均衡實例所屬的項目 ID， 0 表示預設項目。
         :type ProjectId: int
-        :param VpcId: 私有网络的 ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VpcId: 私有網絡的 ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcId: str
-        :param OpenBgp: 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param OpenBgp: 高防 LB 的标識，1：高防負載均衡 0：非高防負載均衡。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type OpenBgp: int
-        :param Snat: 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Snat: 在 2016 年 12 月份之前的傳統型内網負載均衡都是開啓了 snat 的。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Snat: bool
-        :param Isolation: 0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Isolation: 0：表示未被隔離，1：表示被隔離。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Isolation: int
-        :param Log: 用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Log: 用戶開啓日志的訊息，日志只有公網屬性創建了 HTTP 、HTTPS 監聽器的負載均衡才會有日志。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Log: str
-        :param SubnetId: 负载均衡实例所在的子网（仅对内网VPC型LB有意义）
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SubnetId: 負載均衡實例所在的子網（僅對内網VPC型LB有意義）
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetId: str
-        :param Tags: 负载均衡实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Tags: 負載均衡實例的标簽訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of TagInfo
-        :param SecureGroups: 负载均衡实例的安全组
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SecureGroups: 負載均衡實例的安全組
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SecureGroups: list of str
-        :param TargetRegionInfo: 负载均衡实例绑定的后端设备的基本信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TargetRegionInfo: 負載均衡實例綁定的後端設備的基本訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TargetRegionInfo: :class:`tencentcloud.clb.v20180317.models.TargetRegionInfo`
-        :param AnycastZone: anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AnycastZone: anycast負載均衡的發布域，對于非anycast的負載均衡，此欄位返回爲空字串
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AnycastZone: str
         :param AddressIPVersion: IP版本，ipv4 | ipv6
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AddressIPVersion: str
-        :param NumericalVpcId: 数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NumericalVpcId: 數值形式的私有網絡 ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NumericalVpcId: int
-        :param VipIsp: 负载均衡IP地址所属的ISP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param VipIsp: 負載均衡IP網址所屬的ISP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type VipIsp: str
-        :param MasterZone: 主可用区
-注意：此字段可能返回 null，表示取不到有效值。
+        :param MasterZone: 主可用區
+注意：此欄位可能返回 null，表示取不到有效值。
         :type MasterZone: :class:`tencentcloud.clb.v20180317.models.ZoneInfo`
-        :param BackupZoneSet: 备可用区
-注意：此字段可能返回 null，表示取不到有效值。
+        :param BackupZoneSet: 備可用區
+注意：此欄位可能返回 null，表示取不到有效值。
         :type BackupZoneSet: list of ZoneInfo
-        :param IsolatedTime: 负载均衡实例被隔离的时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsolatedTime: 負載均衡實例被隔離的時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsolatedTime: str
-        :param ExpireTime: 负载均衡实例的过期时间，仅对预付费负载均衡生效
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ExpireTime: 負載均衡實例的過期時間，僅對預付費負載均衡生效
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ExpireTime: str
-        :param ChargeType: 负载均衡实例的计费类型
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ChargeType: 負載均衡實例的計費類型
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ChargeType: str
-        :param NetworkAttributes: 负载均衡实例的网络属性
-注意：此字段可能返回 null，表示取不到有效值。
+        :param NetworkAttributes: 負載均衡實例的網絡屬性
+注意：此欄位可能返回 null，表示取不到有效值。
         :type NetworkAttributes: :class:`tencentcloud.clb.v20180317.models.InternetAccessible`
-        :param PrepaidAttributes: 负载均衡实例的预付费相关属性
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PrepaidAttributes: 負載均衡實例的預付費相關屬性
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PrepaidAttributes: :class:`tencentcloud.clb.v20180317.models.LBChargePrepaid`
-        :param LogSetId: 负载均衡日志服务(CLS)的日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LogSetId: 負載均衡日志服務(CLS)的日志集ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LogSetId: str
-        :param LogTopicId: 负载均衡日志服务(CLS)的日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LogTopicId: 負載均衡日志服務(CLS)的日志主題ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LogTopicId: str
-        :param AddressIPv6: 负载均衡实例的IPv6地址
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AddressIPv6: 負載均衡實例的IPv6網址
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AddressIPv6: str
-        :param ExtraInfo: 暂做保留，一般用户无需关注。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ExtraInfo: 暫做保留，一般用戶無需關注。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ExtraInfo: :class:`tencentcloud.clb.v20180317.models.ExtraInfo`
-        :param IsDDos: 是否可绑定高防包
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsDDos: 是否可綁定高防包
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsDDos: bool
-        :param ConfigId: 负载均衡维度的个性化配置ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ConfigId: 負載均衡維度的個性化配置ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigId: str
-        :param LoadBalancerPassToTarget: 后端服务是否放通来自LB的流量
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LoadBalancerPassToTarget: 後端服務是否放通來自LB的流量
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LoadBalancerPassToTarget: bool
-        :param ExclusiveCluster: 内网独占集群
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ExclusiveCluster: 内網獨占集群
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ExclusiveCluster: :class:`tencentcloud.clb.v20180317.models.ExclusiveCluster`
-        :param IPv6Mode: IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IPv6Mode: IP網址版本爲ipv6時此欄位有意義， IPv6Nat64 | IPv6FullChain
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IPv6Mode: str
-        :param SnatPro: 是否开启SnatPro
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SnatPro: 是否開啓SnatPro
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SnatPro: bool
-        :param SnatIps: 开启SnatPro负载均衡后，SnatIp列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SnatIps: 開啓SnatPro負載均衡後，SnatIp清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SnatIps: list of SnatIp
-        :param SlaType: 性能保障规格
-注意：此字段可能返回 null，表示取不到有效值。
+        :param SlaType: 效能保障規格
+注意：此欄位可能返回 null，表示取不到有效值。
         :type SlaType: str
         :param IsBlock: vip是否被封堵
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsBlock: bool
-        :param IsBlockTime: 封堵或解封时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param IsBlockTime: 封堵或解封時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type IsBlockTime: str
         """
         self.LoadBalancerId = None
@@ -3107,19 +3107,19 @@ OPEN：公网属性， INTERNAL：内网属性。
 
 
 class LoadBalancerHealth(AbstractModel):
-    """负载均衡实例的健康检查状态
+    """負載均衡實例的健康檢查狀态
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例ID
+        :param LoadBalancerId: 負載均衡實例ID
         :type LoadBalancerId: str
-        :param LoadBalancerName: 负载均衡实例名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param LoadBalancerName: 負載均衡實例名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type LoadBalancerName: str
-        :param Listeners: 监听器列表
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Listeners: 監聽器清單
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Listeners: list of ListenerHealth
         """
         self.LoadBalancerId = None
@@ -3139,19 +3139,19 @@ class LoadBalancerHealth(AbstractModel):
 
 
 class ManualRewriteRequest(AbstractModel):
-    """ManualRewrite请求参数结构体
+    """ManualRewrite請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例ID
+        :param LoadBalancerId: 負載均衡實例ID
         :type LoadBalancerId: str
-        :param SourceListenerId: 源监听器ID
+        :param SourceListenerId: 源監聽器ID
         :type SourceListenerId: str
-        :param TargetListenerId: 目标监听器ID
+        :param TargetListenerId: 目标監聽器ID
         :type TargetListenerId: str
-        :param RewriteInfos: 转发规则之间的重定向关系
+        :param RewriteInfos: 轉發規則之間的重定向關系
         :type RewriteInfos: list of RewriteLocationMap
         """
         self.LoadBalancerId = None
@@ -3173,13 +3173,13 @@ class ManualRewriteRequest(AbstractModel):
 
 
 class ManualRewriteResponse(AbstractModel):
-    """ManualRewrite返回参数结构体
+    """ManualRewrite返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3190,29 +3190,29 @@ class ManualRewriteResponse(AbstractModel):
 
 
 class ModifyBlockIPListRequest(AbstractModel):
-    """ModifyBlockIPList请求参数结构体
+    """ModifyBlockIPList請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerIds: 负载均衡实例ID
+        :param LoadBalancerIds: 負載均衡實例ID
         :type LoadBalancerIds: list of str
-        :param Type: 操作类型，可取：
-<li> add_customized_field（首次设置header，开启黑名单功能）</li>
+        :param Type: 操作類型，可取：
+<li> add_customized_field（首次設置header，開啓黑名單功能）</li>
 <li> set_customized_field（修改header）</li>
 <li> del_customized_field（删除header）</li>
-<li> add_blocked（添加黑名单）</li>
-<li> del_blocked（删除黑名单）</li>
-<li> flush_blocked（清空黑名单）</li>
+<li> add_blocked（添加黑名單）</li>
+<li> del_blocked（删除黑名單）</li>
+<li> flush_blocked（清空黑名單）</li>
         :type Type: str
-        :param ClientIPField: 客户端真实IP存放的header字段名
+        :param ClientIPField: 用戶端真實IP存放的header欄位名
         :type ClientIPField: str
-        :param BlockIPList: 封禁IP列表，单次操作数组最大长度支持200000
+        :param BlockIPList: 封禁IP清單，單次操作數組最大長度支援200000
         :type BlockIPList: list of str
-        :param ExpireTime: 过期时间，单位秒，默认值3600
+        :param ExpireTime: 過期時間，單位秒，預設值3600
         :type ExpireTime: int
-        :param AddStrategy: 添加IP的策略，可取：fifo（如果黑名单容量已满，新加入黑名单的IP采用先进先出策略）
+        :param AddStrategy: 添加IP的策略，可取：fifo（如果黑名單容量已滿，新加入黑名單的IP采用先進先出策略）
         :type AddStrategy: str
         """
         self.LoadBalancerIds = None
@@ -3233,15 +3233,15 @@ class ModifyBlockIPListRequest(AbstractModel):
 
 
 class ModifyBlockIPListResponse(AbstractModel):
-    """ModifyBlockIPList返回参数结构体
+    """ModifyBlockIPList返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param JodId: 异步任务的ID
+        :param JodId: 異步任務的ID
         :type JodId: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.JodId = None
@@ -3254,25 +3254,25 @@ class ModifyBlockIPListResponse(AbstractModel):
 
 
 class ModifyDomainAttributesRequest(AbstractModel):
-    """ModifyDomainAttributes请求参数结构体
+    """ModifyDomainAttributes請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param ListenerId: 负载均衡监听器 ID
+        :param ListenerId: 負載均衡監聽器 ID
         :type ListenerId: str
-        :param Domain: 域名（必须是已经创建的转发规则下的域名）
+        :param Domain: 域名（必須是已經創建的轉發規則下的域名）
         :type Domain: str
         :param NewDomain: 要修改的新域名
         :type NewDomain: str
-        :param Certificate: 域名相关的证书信息，注意，仅对启用SNI的监听器适用。
+        :param Certificate: 域名相關的證書訊息，注意，僅對啓用SNI的監聽器适用。
         :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateInput`
-        :param Http2: 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+        :param Http2: 是否開啓Http2，注意，只有HTTPS域名才能開啓Http2。
         :type Http2: bool
-        :param DefaultServer: 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
+        :param DefaultServer: 是否設爲預設域名，注意，一個監聽器下只能設置一個預設域名。
         :type DefaultServer: bool
         """
         self.LoadBalancerId = None
@@ -3297,13 +3297,13 @@ class ModifyDomainAttributesRequest(AbstractModel):
 
 
 class ModifyDomainAttributesResponse(AbstractModel):
-    """ModifyDomainAttributes返回参数结构体
+    """ModifyDomainAttributes返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3314,19 +3314,19 @@ class ModifyDomainAttributesResponse(AbstractModel):
 
 
 class ModifyDomainRequest(AbstractModel):
-    """ModifyDomain请求参数结构体
+    """ModifyDomain請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param ListenerId: 负载均衡监听器 ID
+        :param ListenerId: 負載均衡監聽器 ID
         :type ListenerId: str
-        :param Domain: 监听器下的某个旧域名。
+        :param Domain: 監聽器下的某個舊域名。
         :type Domain: str
-        :param NewDomain: 新域名，	长度限制为：1-120。有三种使用格式：非正则表达式格式，通配符格式，正则表达式格式。非正则表达式格式只能使用字母、数字、‘-’、‘.’。通配符格式的使用 ‘*’ 只能在开头或者结尾。正则表达式以'~'开头。
+        :param NewDomain: 新域名，	長度限制爲：1-120。有三種使用格式：非正規表示式格式，通配符格式，正規表示式格式。非正規表示式格式只能使用字母、數字、‘-’、‘.’。通配符格式的使用 ‘*’ 只能在開頭或者結尾。正規表示式以'~'開頭。
         :type NewDomain: str
         """
         self.LoadBalancerId = None
@@ -3343,13 +3343,13 @@ class ModifyDomainRequest(AbstractModel):
 
 
 class ModifyDomainResponse(AbstractModel):
-    """ModifyDomain返回参数结构体
+    """ModifyDomain返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3360,28 +3360,28 @@ class ModifyDomainResponse(AbstractModel):
 
 
 class ModifyListenerRequest(AbstractModel):
-    """ModifyListener请求参数结构体
+    """ModifyListener請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param ListenerId: 负载均衡监听器 ID
+        :param ListenerId: 負載均衡監聽器 ID
         :type ListenerId: str
-        :param ListenerName: 新的监听器名称
+        :param ListenerName: 新的監聽器名稱
         :type ListenerName: str
-        :param SessionExpireTime: 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
+        :param SessionExpireTime: 會話保持時間，單位：秒。可選值：30~3600，預設 0，表示不開啓。此參數僅适用于TCP/UDP監聽器。
         :type SessionExpireTime: int
-        :param HealthCheck: 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
+        :param HealthCheck: 健康檢查相關參數，此參數僅适用于TCP/UDP/TCP_SSL監聽器
         :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
-        :param Certificate: 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
+        :param Certificate: 證書相關訊息，此參數僅适用于HTTPS/TCP_SSL監聽器
         :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateInput`
-        :param Scheduler: 监听器转发的方式。可选值：WRR、LEAST_CONN
-分别表示按权重轮询、最小连接数， 默认为 WRR。
+        :param Scheduler: 監聽器轉發的方式。可選值：WRR、LEAST_CONN
+分别表示按權重輪詢、最小連接數， 預設爲 WRR。
         :type Scheduler: str
-        :param SniSwitch: 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
+        :param SniSwitch: 是否開啓SNI特性，此參數僅适用于HTTPS監聽器。注意：未開啓SNI的監聽器可以開啓SNI；已開啓SNI的監聽器不能關閉SNI
         :type SniSwitch: int
         """
         self.LoadBalancerId = None
@@ -3410,13 +3410,13 @@ class ModifyListenerRequest(AbstractModel):
 
 
 class ModifyListenerResponse(AbstractModel):
-    """ModifyListener返回参数结构体
+    """ModifyListener返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3427,23 +3427,23 @@ class ModifyListenerResponse(AbstractModel):
 
 
 class ModifyLoadBalancerAttributesRequest(AbstractModel):
-    """ModifyLoadBalancerAttributes请求参数结构体
+    """ModifyLoadBalancerAttributes請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡的唯一ID
+        :param LoadBalancerId: 負載均衡的唯一ID
         :type LoadBalancerId: str
-        :param LoadBalancerName: 负载均衡实例名称
+        :param LoadBalancerName: 負載均衡實例名稱
         :type LoadBalancerName: str
-        :param TargetRegionInfo: 负载均衡绑定的后端服务的地域信息
+        :param TargetRegionInfo: 負載均衡綁定的後端服務的地域訊息
         :type TargetRegionInfo: :class:`tencentcloud.clb.v20180317.models.TargetRegionInfo`
-        :param InternetChargeInfo: 网络计费相关参数
+        :param InternetChargeInfo: 網絡計費相關參數
         :type InternetChargeInfo: :class:`tencentcloud.clb.v20180317.models.InternetAccessible`
-        :param LoadBalancerPassToTarget: Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+        :param LoadBalancerPassToTarget: Target是否放通來自CLB的流量。開啓放通（true）：只驗證CLB上的安全組；不開啓放通（false）：需同時驗證CLB和後端實例上的安全組。
         :type LoadBalancerPassToTarget: bool
-        :param SnatPro: 是否开启SnatPro
+        :param SnatPro: 是否開啓SnatPro
         :type SnatPro: bool
         """
         self.LoadBalancerId = None
@@ -3468,16 +3468,16 @@ class ModifyLoadBalancerAttributesRequest(AbstractModel):
 
 
 class ModifyLoadBalancerAttributesResponse(AbstractModel):
-    """ModifyLoadBalancerAttributes返回参数结构体
+    """ModifyLoadBalancerAttributes返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param DealName: 切换负载均衡计费方式时，可用此参数查询切换任务是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param DealName: 切換負載均衡計費方式時，可用此參數查詢切換任務是否成功。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type DealName: str
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.DealName = None
@@ -3490,32 +3490,32 @@ class ModifyLoadBalancerAttributesResponse(AbstractModel):
 
 
 class ModifyRuleRequest(AbstractModel):
-    """ModifyRule请求参数结构体
+    """ModifyRule請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param ListenerId: 负载均衡监听器 ID
+        :param ListenerId: 負載均衡監聽器 ID
         :type ListenerId: str
-        :param LocationId: 要修改的转发规则的 ID。
+        :param LocationId: 要修改的轉發規則的 ID。
         :type LocationId: str
-        :param Url: 转发规则的新的转发路径，如不需修改Url，则不需提供此参数
+        :param Url: 轉發規則的新的轉發路徑，如不需修改Url，則不需提供此參數
         :type Url: str
-        :param HealthCheck: 健康检查信息
+        :param HealthCheck: 健康檢查訊息
         :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
-        :param Scheduler: 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
-分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
+        :param Scheduler: 規則的請求轉發方式，可選值：WRR、LEAST_CONN、IP_HASH
+分别表示按權重輪詢、最小連接數、按IP哈希， 預設爲 WRR。
         :type Scheduler: str
-        :param SessionExpireTime: 会话保持时间
+        :param SessionExpireTime: 會話保持時間
         :type SessionExpireTime: int
-        :param ForwardType: 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC
+        :param ForwardType: 負載均衡實例與後端服務之間的轉發協議，預設HTTP，可取值：HTTP、HTTPS、TRPC
         :type ForwardType: str
-        :param TrpcCallee: TRPC被调服务器路由，ForwardType为TRPC时必填
+        :param TrpcCallee: TRPC被調服務器路由，ForwardType爲TRPC時必填
         :type TrpcCallee: str
-        :param TrpcFunc: TRPC调用服务接口，ForwardType为TRPC时必填
+        :param TrpcFunc: TRPC調用服務介面，ForwardType爲TRPC時必填
         :type TrpcFunc: str
         """
         self.LoadBalancerId = None
@@ -3546,13 +3546,13 @@ class ModifyRuleRequest(AbstractModel):
 
 
 class ModifyRuleResponse(AbstractModel):
-    """ModifyRule返回参数结构体
+    """ModifyRule返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3563,17 +3563,17 @@ class ModifyRuleResponse(AbstractModel):
 
 
 class ModifyTargetGroupAttributeRequest(AbstractModel):
-    """ModifyTargetGroupAttribute请求参数结构体
+    """ModifyTargetGroupAttribute請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TargetGroupId: 目标组的ID
+        :param TargetGroupId: 目标組的ID
         :type TargetGroupId: str
-        :param TargetGroupName: 目标组的新名称
+        :param TargetGroupName: 目标組的新名稱
         :type TargetGroupName: str
-        :param Port: 目标组的新默认端口
+        :param Port: 目标組的新預設端口
         :type Port: int
         """
         self.TargetGroupId = None
@@ -3588,13 +3588,13 @@ class ModifyTargetGroupAttributeRequest(AbstractModel):
 
 
 class ModifyTargetGroupAttributeResponse(AbstractModel):
-    """ModifyTargetGroupAttribute返回参数结构体
+    """ModifyTargetGroupAttribute返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3605,15 +3605,15 @@ class ModifyTargetGroupAttributeResponse(AbstractModel):
 
 
 class ModifyTargetGroupInstancesPortRequest(AbstractModel):
-    """ModifyTargetGroupInstancesPort请求参数结构体
+    """ModifyTargetGroupInstancesPort請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TargetGroupId: 目标组ID
+        :param TargetGroupId: 目标組ID
         :type TargetGroupId: str
-        :param TargetGroupInstances: 待修改端口的服务器数组
+        :param TargetGroupInstances: 待修改端口的服務器數組
         :type TargetGroupInstances: list of TargetGroupInstance
         """
         self.TargetGroupId = None
@@ -3631,13 +3631,13 @@ class ModifyTargetGroupInstancesPortRequest(AbstractModel):
 
 
 class ModifyTargetGroupInstancesPortResponse(AbstractModel):
-    """ModifyTargetGroupInstancesPort返回参数结构体
+    """ModifyTargetGroupInstancesPort返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3648,15 +3648,15 @@ class ModifyTargetGroupInstancesPortResponse(AbstractModel):
 
 
 class ModifyTargetGroupInstancesWeightRequest(AbstractModel):
-    """ModifyTargetGroupInstancesWeight请求参数结构体
+    """ModifyTargetGroupInstancesWeight請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TargetGroupId: 目标组ID
+        :param TargetGroupId: 目标組ID
         :type TargetGroupId: str
-        :param TargetGroupInstances: 待修改权重的服务器数组
+        :param TargetGroupInstances: 待修改權重的服務器數組
         :type TargetGroupInstances: list of TargetGroupInstance
         """
         self.TargetGroupId = None
@@ -3674,13 +3674,13 @@ class ModifyTargetGroupInstancesWeightRequest(AbstractModel):
 
 
 class ModifyTargetGroupInstancesWeightResponse(AbstractModel):
-    """ModifyTargetGroupInstancesWeight返回参数结构体
+    """ModifyTargetGroupInstancesWeight返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3691,25 +3691,25 @@ class ModifyTargetGroupInstancesWeightResponse(AbstractModel):
 
 
 class ModifyTargetPortRequest(AbstractModel):
-    """ModifyTargetPort请求参数结构体
+    """ModifyTargetPort請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param ListenerId: 负载均衡监听器 ID
+        :param ListenerId: 負載均衡監聽器 ID
         :type ListenerId: str
-        :param Targets: 要修改端口的后端服务列表
+        :param Targets: 要修改端口的後端服務清單
         :type Targets: list of Target
-        :param NewPort: 后端服务绑定到监听器或转发规则的新端口
+        :param NewPort: 後端服務綁定到監聽器或轉發規則的新端口
         :type NewPort: int
-        :param LocationId: 转发规则的ID，当后端服务绑定到七层转发规则时，必须提供此参数或Domain+Url两者之一
+        :param LocationId: 轉發規則的ID，當後端服務綁定到七層轉發規則時，必須提供此參數或Domain+Url兩者之一
         :type LocationId: str
-        :param Domain: 目标规则的域名，提供LocationId参数时本参数不生效
+        :param Domain: 目标規則的域名，提供LocationId參數時本參數不生效
         :type Domain: str
-        :param Url: 目标规则的URL，提供LocationId参数时本参数不生效
+        :param Url: 目标規則的URL，提供LocationId參數時本參數不生效
         :type Url: str
         """
         self.LoadBalancerId = None
@@ -3737,13 +3737,13 @@ class ModifyTargetPortRequest(AbstractModel):
 
 
 class ModifyTargetPortResponse(AbstractModel):
-    """ModifyTargetPort返回参数结构体
+    """ModifyTargetPort返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3754,25 +3754,25 @@ class ModifyTargetPortResponse(AbstractModel):
 
 
 class ModifyTargetWeightRequest(AbstractModel):
-    """ModifyTargetWeight请求参数结构体
+    """ModifyTargetWeight請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param ListenerId: 负载均衡监听器 ID
+        :param ListenerId: 負載均衡監聽器 ID
         :type ListenerId: str
-        :param LocationId: 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
+        :param LocationId: 轉發規則的ID，當綁定機器到七層轉發規則時，必須提供此參數或Domain+Url兩者之一
         :type LocationId: str
-        :param Domain: 目标规则的域名，提供LocationId参数时本参数不生效
+        :param Domain: 目标規則的域名，提供LocationId參數時本參數不生效
         :type Domain: str
-        :param Url: 目标规则的URL，提供LocationId参数时本参数不生效
+        :param Url: 目标規則的URL，提供LocationId參數時本參數不生效
         :type Url: str
-        :param Targets: 要修改权重的后端服务列表
+        :param Targets: 要修改權重的後端服務清單
         :type Targets: list of Target
-        :param Weight: 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+        :param Weight: 後端服務新的轉發權重，取值範圍：0~100，預設值10。如果設置了 Targets.Weight 參數，則此參數不生效。
         :type Weight: int
         """
         self.LoadBalancerId = None
@@ -3800,13 +3800,13 @@ class ModifyTargetWeightRequest(AbstractModel):
 
 
 class ModifyTargetWeightResponse(AbstractModel):
-    """ModifyTargetWeight返回参数结构体
+    """ModifyTargetWeight返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3817,15 +3817,15 @@ class ModifyTargetWeightResponse(AbstractModel):
 
 
 class RegisterTargetGroupInstancesRequest(AbstractModel):
-    """RegisterTargetGroupInstances请求参数结构体
+    """RegisterTargetGroupInstances請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TargetGroupId: 目标组ID
+        :param TargetGroupId: 目标組ID
         :type TargetGroupId: str
-        :param TargetGroupInstances: 服务器实例数组
+        :param TargetGroupInstances: 服務器實例數組
         :type TargetGroupInstances: list of TargetGroupInstance
         """
         self.TargetGroupId = None
@@ -3843,13 +3843,13 @@ class RegisterTargetGroupInstancesRequest(AbstractModel):
 
 
 class RegisterTargetGroupInstancesResponse(AbstractModel):
-    """RegisterTargetGroupInstances返回参数结构体
+    """RegisterTargetGroupInstances返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3860,23 +3860,23 @@ class RegisterTargetGroupInstancesResponse(AbstractModel):
 
 
 class RegisterTargetsRequest(AbstractModel):
-    """RegisterTargets请求参数结构体
+    """RegisterTargets請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param ListenerId: 负载均衡监听器 ID
+        :param ListenerId: 負載均衡監聽器 ID
         :type ListenerId: str
-        :param Targets: 待绑定的后端服务列表，数组长度最大支持20
+        :param Targets: 待綁定的後端服務清單，數組長度最大支援20
         :type Targets: list of Target
-        :param LocationId: 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一
+        :param LocationId: 轉發規則的ID，當綁定後端服務到七層轉發規則時，必須提供此參數或Domain+Url兩者之一
         :type LocationId: str
-        :param Domain: 目标转发规则的域名，提供LocationId参数时本参数不生效
+        :param Domain: 目标轉發規則的域名，提供LocationId參數時本參數不生效
         :type Domain: str
-        :param Url: 目标转发规则的URL，提供LocationId参数时本参数不生效
+        :param Url: 目标轉發規則的URL，提供LocationId參數時本參數不生效
         :type Url: str
         """
         self.LoadBalancerId = None
@@ -3902,13 +3902,13 @@ class RegisterTargetsRequest(AbstractModel):
 
 
 class RegisterTargetsResponse(AbstractModel):
-    """RegisterTargets返回参数结构体
+    """RegisterTargets返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3919,15 +3919,15 @@ class RegisterTargetsResponse(AbstractModel):
 
 
 class RegisterTargetsWithClassicalLBRequest(AbstractModel):
-    """RegisterTargetsWithClassicalLB请求参数结构体
+    """RegisterTargetsWithClassicalLB請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param Targets: 后端服务信息
+        :param Targets: 後端服務訊息
         :type Targets: list of ClassicalTargetInfo
         """
         self.LoadBalancerId = None
@@ -3945,13 +3945,13 @@ class RegisterTargetsWithClassicalLBRequest(AbstractModel):
 
 
 class RegisterTargetsWithClassicalLBResponse(AbstractModel):
-    """RegisterTargetsWithClassicalLB返回参数结构体
+    """RegisterTargetsWithClassicalLB返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -3962,15 +3962,15 @@ class RegisterTargetsWithClassicalLBResponse(AbstractModel):
 
 
 class ReplaceCertForLoadBalancersRequest(AbstractModel):
-    """ReplaceCertForLoadBalancers请求参数结构体
+    """ReplaceCertForLoadBalancers請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param OldCertificateId: 需要被替换的证书的ID，可以是服务端证书或客户端证书
+        :param OldCertificateId: 需要被替換的證書的ID，可以是服務端證書或用戶端證書
         :type OldCertificateId: str
-        :param Certificate: 新证书的内容等相关信息
+        :param Certificate: 新證書的内容等相關訊息
         :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateInput`
         """
         self.OldCertificateId = None
@@ -3985,13 +3985,13 @@ class ReplaceCertForLoadBalancersRequest(AbstractModel):
 
 
 class ReplaceCertForLoadBalancersResponse(AbstractModel):
-    """ReplaceCertForLoadBalancers返回参数结构体
+    """ReplaceCertForLoadBalancers返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4002,15 +4002,15 @@ class ReplaceCertForLoadBalancersResponse(AbstractModel):
 
 
 class RewriteLocationMap(AbstractModel):
-    """转发规则之间的重定向关系
+    """轉發規則之間的重定向關系
 
     """
 
     def __init__(self):
         """
-        :param SourceLocationId: 源转发规则ID
+        :param SourceLocationId: 源轉發規則ID
         :type SourceLocationId: str
-        :param TargetLocationId: 重定向至的目标转发规则ID
+        :param TargetLocationId: 重定向至的目标轉發規則ID
         :type TargetLocationId: str
         """
         self.SourceLocationId = None
@@ -4023,19 +4023,19 @@ class RewriteLocationMap(AbstractModel):
 
 
 class RewriteTarget(AbstractModel):
-    """重定向目标的信息
+    """重定向目标的訊息
 
     """
 
     def __init__(self):
         """
-        :param TargetListenerId: 重定向目标的监听器ID
-注意：此字段可能返回 null，表示无重定向。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TargetListenerId: 重定向目标的監聽器ID
+注意：此欄位可能返回 null，表示無重定向。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TargetListenerId: str
-        :param TargetLocationId: 重定向目标的转发规则ID
-注意：此字段可能返回 null，表示无重定向。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TargetLocationId: 重定向目标的轉發規則ID
+注意：此欄位可能返回 null，表示無重定向。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TargetLocationId: str
         """
         self.TargetListenerId = None
@@ -4048,23 +4048,23 @@ class RewriteTarget(AbstractModel):
 
 
 class RsWeightRule(AbstractModel):
-    """修改节点权重的数据类型
+    """修改節點權重的數據類型
 
     """
 
     def __init__(self):
         """
-        :param ListenerId: 负载均衡监听器 ID
+        :param ListenerId: 負載均衡監聽器 ID
         :type ListenerId: str
-        :param Targets: 要修改权重的后端机器列表
+        :param Targets: 要修改權重的後端機器清單
         :type Targets: list of Target
-        :param LocationId: 转发规则的ID，七层规则时需要此参数，4层规则不需要
+        :param LocationId: 轉發規則的ID，七層規則時需要此參數，4層規則不需要
         :type LocationId: str
-        :param Domain: 目标规则的域名，提供LocationId参数时本参数不生效
+        :param Domain: 目标規則的域名，提供LocationId參數時本參數不生效
         :type Domain: str
-        :param Url: 目标规则的URL，提供LocationId参数时本参数不生效
+        :param Url: 目标規則的URL，提供LocationId參數時本參數不生效
         :type Url: str
-        :param Weight: 后端服务新的转发权重，取值范围：0~100。
+        :param Weight: 後端服務新的轉發權重，取值範圍：0~100。
         :type Weight: int
         """
         self.ListenerId = None
@@ -4090,22 +4090,22 @@ class RsWeightRule(AbstractModel):
 
 
 class RuleHealth(AbstractModel):
-    """一条转发规则的健康检查状态
+    """一條轉發規則的健康檢查狀态
 
     """
 
     def __init__(self):
         """
-        :param LocationId: 转发规则ID
+        :param LocationId: 轉發規則ID
         :type LocationId: str
-        :param Domain: 转发规则的域名
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Domain: 轉發規則的域名
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Domain: str
-        :param Url: 转发规则的Url
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Url: 轉發規則的Url
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Url: str
-        :param Targets: 本规则上绑定的后端的健康检查状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Targets: 本規則上綁定的後端的健康檢查狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Targets: list of TargetHealth
         """
         self.LocationId = None
@@ -4127,38 +4127,38 @@ class RuleHealth(AbstractModel):
 
 
 class RuleInput(AbstractModel):
-    """HTTP/HTTPS转发规则（输入）
+    """HTTP/HTTPS轉發規則（輸入）
 
     """
 
     def __init__(self):
         """
-        :param Domain: 转发规则的域名。长度限制为：1~80。
+        :param Domain: 轉發規則的域名。長度限制爲：1~80。
         :type Domain: str
-        :param Url: 转发规则的路径。长度限制为：1~200。
+        :param Url: 轉發規則的路徑。長度限制爲：1~200。
         :type Url: str
-        :param SessionExpireTime: 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
+        :param SessionExpireTime: 會話保持時間。設置爲0表示關閉會話保持，開啓會話保持可取值30~3600，單位：秒。
         :type SessionExpireTime: int
-        :param HealthCheck: 健康检查信息
+        :param HealthCheck: 健康檢查訊息
         :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
-        :param Certificate: 证书信息
+        :param Certificate: 證書訊息
         :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateInput`
-        :param Scheduler: 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
-分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
+        :param Scheduler: 規則的請求轉發方式，可選值：WRR、LEAST_CONN、IP_HASH
+分别表示按權重輪詢、最小連接數、按IP哈希， 預設爲 WRR。
         :type Scheduler: str
-        :param ForwardType: 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC
+        :param ForwardType: 負載均衡與後端服務之間的轉發協議，目前支援 HTTP/HTTPS/TRPC
         :type ForwardType: str
-        :param DefaultServer: 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+        :param DefaultServer: 是否将該域名設爲預設域名，注意，一個監聽器下只能設置一個預設域名。
         :type DefaultServer: bool
-        :param Http2: 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+        :param Http2: 是否開啓Http2，注意，只有HTTPS域名才能開啓Http2。
         :type Http2: bool
-        :param TargetType: 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+        :param TargetType: 後端目标類型，NODE表示綁定普通節點，TARGETGROUP表示綁定目标組
         :type TargetType: str
-        :param TrpcCallee: TRPC被调服务器路由，ForwardType为TRPC时必填
+        :param TrpcCallee: TRPC被調服務器路由，ForwardType爲TRPC時必填
         :type TrpcCallee: str
-        :param TrpcFunc: TRPC调用服务接口，ForwardType为TRPC时必填
+        :param TrpcFunc: TRPC調用服務介面，ForwardType爲TRPC時必填
         :type TrpcFunc: str
-        :param Quic: 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
+        :param Quic: 是否開啓QUIC，注意，只有HTTPS域名才能開啓QUIC
         :type Quic: bool
         """
         self.Domain = None
@@ -4197,63 +4197,63 @@ class RuleInput(AbstractModel):
 
 
 class RuleOutput(AbstractModel):
-    """HTTP/HTTPS监听器的转发规则（输出）
+    """HTTP/HTTPS監聽器的轉發規則（輸出）
 
     """
 
     def __init__(self):
         """
-        :param LocationId: 转发规则的 ID
+        :param LocationId: 轉發規則的 ID
         :type LocationId: str
-        :param Domain: 转发规则的域名。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Domain: 轉發規則的域名。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Domain: str
-        :param Url: 转发规则的路径。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Url: 轉發規則的路徑。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Url: str
-        :param SessionExpireTime: 会话保持时间
+        :param SessionExpireTime: 會話保持時間
         :type SessionExpireTime: int
-        :param HealthCheck: 健康检查信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param HealthCheck: 健康檢查訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
-        :param Certificate: 证书信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Certificate: 證書訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateOutput`
-        :param Scheduler: 规则的请求转发方式
+        :param Scheduler: 規則的請求轉發方式
         :type Scheduler: str
-        :param ListenerId: 转发规则所属的监听器 ID
+        :param ListenerId: 轉發規則所屬的監聽器 ID
         :type ListenerId: str
-        :param RewriteTarget: 转发规则的重定向目标信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RewriteTarget: 轉發規則的重定向目标訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RewriteTarget: :class:`tencentcloud.clb.v20180317.models.RewriteTarget`
-        :param HttpGzip: 是否开启gzip
+        :param HttpGzip: 是否開啓gzip
         :type HttpGzip: bool
-        :param BeAutoCreated: 转发规则是否为自动创建
+        :param BeAutoCreated: 轉發規則是否爲自動創建
         :type BeAutoCreated: bool
-        :param DefaultServer: 是否作为默认域名
+        :param DefaultServer: 是否作爲預設域名
         :type DefaultServer: bool
-        :param Http2: 是否开启Http2
+        :param Http2: 是否開啓Http2
         :type Http2: bool
-        :param ForwardType: 负载均衡与后端服务之间的转发协议
+        :param ForwardType: 負載均衡與後端服務之間的轉發協議
         :type ForwardType: str
-        :param CreateTime: 转发规则的创建时间
+        :param CreateTime: 轉發規則的創建時間
         :type CreateTime: str
-        :param TargetType: 后端服务器类型
+        :param TargetType: 後端服務器類型
         :type TargetType: str
-        :param TargetGroup: 绑定的目标组基本信息；当规则绑定目标组时，会返回该字段
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TargetGroup: 綁定的目标組基本訊息；當規則綁定目标組時，會返回該欄位
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TargetGroup: :class:`tencentcloud.clb.v20180317.models.BasicTargetGroupInfo`
-        :param WafDomainId: WAF实例ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param WafDomainId: WAF實例ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type WafDomainId: str
-        :param TrpcCallee: TRPC被调服务器路由，ForwardType为TRPC时有效
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TrpcCallee: TRPC被調服務器路由，ForwardType爲TRPC時有效
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TrpcCallee: str
-        :param TrpcFunc: TRPC调用服务接口，ForwardType为TRPC时有效
-注意：此字段可能返回 null，表示取不到有效值。
+        :param TrpcFunc: TRPC調用服務介面，ForwardType爲TRPC時有效
+注意：此欄位可能返回 null，表示取不到有效值。
         :type TrpcFunc: str
-        :param QuicStatus: QUIC状态
-注意：此字段可能返回 null，表示取不到有效值。
+        :param QuicStatus: QUIC狀态
+注意：此欄位可能返回 null，表示取不到有效值。
         :type QuicStatus: str
         """
         self.LocationId = None
@@ -4312,20 +4312,20 @@ class RuleOutput(AbstractModel):
 
 
 class RuleTargets(AbstractModel):
-    """HTTP/HTTPS监听器下的转发规则绑定的后端服务信息
+    """HTTP/HTTPS監聽器下的轉發規則綁定的後端服務訊息
 
     """
 
     def __init__(self):
         """
-        :param LocationId: 转发规则的 ID
+        :param LocationId: 轉發規則的 ID
         :type LocationId: str
-        :param Domain: 转发规则的域名
+        :param Domain: 轉發規則的域名
         :type Domain: str
-        :param Url: 转发规则的路径。
+        :param Url: 轉發規則的路徑。
         :type Url: str
-        :param Targets: 后端服务的信息
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Targets: 後端服務的訊息
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Targets: list of Backend
         """
         self.LocationId = None
@@ -4347,17 +4347,17 @@ class RuleTargets(AbstractModel):
 
 
 class SetLoadBalancerClsLogRequest(AbstractModel):
-    """SetLoadBalancerClsLog请求参数结构体
+    """SetLoadBalancerClsLog請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param LogSetId: 日志服务(CLS)的日志集ID
+        :param LogSetId: 日志服務(CLS)的日志集ID
         :type LogSetId: str
-        :param LogTopicId: 日志服务(CLS)的日志主题ID
+        :param LogTopicId: 日志服務(CLS)的日志主題ID
         :type LogTopicId: str
         """
         self.LoadBalancerId = None
@@ -4372,13 +4372,13 @@ class SetLoadBalancerClsLogRequest(AbstractModel):
 
 
 class SetLoadBalancerClsLogResponse(AbstractModel):
-    """SetLoadBalancerClsLog返回参数结构体
+    """SetLoadBalancerClsLog返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4389,15 +4389,15 @@ class SetLoadBalancerClsLogResponse(AbstractModel):
 
 
 class SetLoadBalancerSecurityGroupsRequest(AbstractModel):
-    """SetLoadBalancerSecurityGroups请求参数结构体
+    """SetLoadBalancerSecurityGroups請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡实例 ID
+        :param LoadBalancerId: 負載均衡實例 ID
         :type LoadBalancerId: str
-        :param SecurityGroups: 安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数，或传入空数组。
+        :param SecurityGroups: 安全組ID構成的數組，一個負載均衡實例最多可綁定50個安全組，如果要解綁所有安全組，可不傳此參數，或傳入空數組。
         :type SecurityGroups: list of str
         """
         self.LoadBalancerId = None
@@ -4410,13 +4410,13 @@ class SetLoadBalancerSecurityGroupsRequest(AbstractModel):
 
 
 class SetLoadBalancerSecurityGroupsResponse(AbstractModel):
-    """SetLoadBalancerSecurityGroups返回参数结构体
+    """SetLoadBalancerSecurityGroups返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4427,18 +4427,18 @@ class SetLoadBalancerSecurityGroupsResponse(AbstractModel):
 
 
 class SetSecurityGroupForLoadbalancersRequest(AbstractModel):
-    """SetSecurityGroupForLoadbalancers请求参数结构体
+    """SetSecurityGroupForLoadbalancers請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param SecurityGroup: 安全组ID，如 sg-12345678
+        :param SecurityGroup: 安全組ID，如 sg-12345678
         :type SecurityGroup: str
-        :param OperationType: ADD 绑定安全组；
-DEL 解绑安全组
+        :param OperationType: ADD 綁定安全組；
+DEL 解綁安全組
         :type OperationType: str
-        :param LoadBalancerIds: 负载均衡实例ID数组
+        :param LoadBalancerIds: 負載均衡實例ID數組
         :type LoadBalancerIds: list of str
         """
         self.SecurityGroup = None
@@ -4453,13 +4453,13 @@ DEL 解绑安全组
 
 
 class SetSecurityGroupForLoadbalancersResponse(AbstractModel):
-    """SetSecurityGroupForLoadbalancers返回参数结构体
+    """SetSecurityGroupForLoadbalancers返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -4470,15 +4470,15 @@ class SetSecurityGroupForLoadbalancersResponse(AbstractModel):
 
 
 class SnatIp(AbstractModel):
-    """SnatIp的信息结构
+    """SnatIp的訊息結構
 
     """
 
     def __init__(self):
         """
-        :param SubnetId: 私有网络子网的唯一性id，如subnet-12345678
+        :param SubnetId: 私有網絡子網的唯一性id，如subnet-12345678
         :type SubnetId: str
-        :param Ip: IP地址，如192.168.0.1
+        :param Ip: IP網址，如192.168.0.1
         :type Ip: str
         """
         self.SubnetId = None
@@ -4491,15 +4491,15 @@ class SnatIp(AbstractModel):
 
 
 class TagInfo(AbstractModel):
-    """负载均衡的标签信息
+    """負載均衡的标簽訊息
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标签的键
+        :param TagKey: 标簽的鍵
         :type TagKey: str
-        :param TagValue: 标签的值
+        :param TagValue: 标簽的值
         :type TagValue: str
         """
         self.TagKey = None
@@ -4512,26 +4512,26 @@ class TagInfo(AbstractModel):
 
 
 class Target(AbstractModel):
-    """转发目标，即绑定在负载均衡上的后端服务
+    """轉發目标，即綁定在負載均衡上的後端服務
 
     """
 
     def __init__(self):
         """
-        :param Port: 后端服务的监听端口
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Port: 後端服務的監聽端口
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Port: int
-        :param Type: 后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）；作为入参时，目前本参数暂不生效。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Type: 後端服務的類型，可取：CVM（雲伺服器）、ENI（彈性網卡）；作爲入參時，目前本參數暫不生效。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Type: str
-        :param InstanceId: 绑定CVM时需要传入此参数，代表CVM的唯一 ID，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。
-注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceId: 綁定CVM時需要傳入此參數，代表CVM的唯一 ID，可通過 DescribeInstances 介面返回欄位中的 InstanceId 欄位獲取。
+注意：參數 InstanceId 和 EniIp 只能傳入一個且必須傳入一個。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceId: str
-        :param Weight: 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+        :param Weight: 後端服務的轉發權重，取值範圍：[0, 100]，預設爲 10。
         :type Weight: int
-        :param EniIp: 绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。注意：绑定弹性网卡需要先提交工单开白名单使用。
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EniIp: 綁定彈性網卡時需要傳入此參數，代表彈性網卡的IP，彈性網卡必須先綁定至CVM，然後才能綁定到負載均衡實例。注意：參數 InstanceId 和 EniIp 只能傳入一個且必須傳入一個。注意：綁定彈性網卡需要先提交工單開白名單使用。
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EniIp: str
         """
         self.Port = None
@@ -4550,19 +4550,19 @@ class Target(AbstractModel):
 
 
 class TargetGroupAssociation(AbstractModel):
-    """规则与目标组的关联关系
+    """規則與目标組的關聯關系
 
     """
 
     def __init__(self):
         """
-        :param LoadBalancerId: 负载均衡ID
+        :param LoadBalancerId: 負載均衡ID
         :type LoadBalancerId: str
-        :param ListenerId: 监听器ID
+        :param ListenerId: 監聽器ID
         :type ListenerId: str
-        :param TargetGroupId: 目标组ID
+        :param TargetGroupId: 目标組ID
         :type TargetGroupId: str
-        :param LocationId: 转发规则ID
+        :param LocationId: 轉發規則ID
         :type LocationId: str
         """
         self.LoadBalancerId = None
@@ -4579,36 +4579,36 @@ class TargetGroupAssociation(AbstractModel):
 
 
 class TargetGroupBackend(AbstractModel):
-    """目标组绑定的后端服务器
+    """目标組綁定的後端服務器
 
     """
 
     def __init__(self):
         """
-        :param TargetGroupId: 目标组ID
+        :param TargetGroupId: 目标組ID
         :type TargetGroupId: str
-        :param Type: 后端服务的类型，可取：CVM、ENI（即将支持）
+        :param Type: 後端服務的類型，可取：CVM、ENI（即将支援）
         :type Type: str
-        :param InstanceId: 后端服务的唯一 ID
+        :param InstanceId: 後端服務的唯一 ID
         :type InstanceId: str
-        :param Port: 后端服务的监听端口
+        :param Port: 後端服務的監聽端口
         :type Port: int
-        :param Weight: 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+        :param Weight: 後端服務的轉發權重，取值範圍：[0, 100]，預設爲 10。
         :type Weight: int
-        :param PublicIpAddresses: 后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PublicIpAddresses: 後端服務的外網 IP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PublicIpAddresses: list of str
-        :param PrivateIpAddresses: 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
+        :param PrivateIpAddresses: 後端服務的内網 IP
+注意：此欄位可能返回 null，表示取不到有效值。
         :type PrivateIpAddresses: list of str
-        :param InstanceName: 后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。
+        :param InstanceName: 後端服務的實例名稱
+注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceName: str
-        :param RegisteredTime: 后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。
+        :param RegisteredTime: 後端服務被綁定的時間
+注意：此欄位可能返回 null，表示取不到有效值。
         :type RegisteredTime: str
-        :param EniId: 弹性网卡唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
+        :param EniId: 彈性網卡唯一ID
+注意：此欄位可能返回 null，表示取不到有效值。
         :type EniId: str
         """
         self.TargetGroupId = None
@@ -4637,27 +4637,27 @@ class TargetGroupBackend(AbstractModel):
 
 
 class TargetGroupInfo(AbstractModel):
-    """目标组信息
+    """目标組訊息
 
     """
 
     def __init__(self):
         """
-        :param TargetGroupId: 目标组ID
+        :param TargetGroupId: 目标組ID
         :type TargetGroupId: str
-        :param VpcId: 目标组的vpcid
+        :param VpcId: 目标組的vpcid
         :type VpcId: str
-        :param TargetGroupName: 目标组的名字
+        :param TargetGroupName: 目标組的名字
         :type TargetGroupName: str
-        :param Port: 目标组的默认端口
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Port: 目标組的預設端口
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Port: int
-        :param CreatedTime: 目标组的创建时间
+        :param CreatedTime: 目标組的創建時間
         :type CreatedTime: str
-        :param UpdatedTime: 目标组的修改时间
+        :param UpdatedTime: 目标組的修改時間
         :type UpdatedTime: str
-        :param AssociatedRule: 关联到的规则数组
-注意：此字段可能返回 null，表示取不到有效值。
+        :param AssociatedRule: 關聯到的規則數組
+注意：此欄位可能返回 null，表示取不到有效值。
         :type AssociatedRule: list of AssociationItem
         """
         self.TargetGroupId = None
@@ -4685,19 +4685,19 @@ class TargetGroupInfo(AbstractModel):
 
 
 class TargetGroupInstance(AbstractModel):
-    """目标组实例
+    """目标組實例
 
     """
 
     def __init__(self):
         """
-        :param BindIP: 目标组实例的内网IP
+        :param BindIP: 目标組實例的内網IP
         :type BindIP: str
-        :param Port: 目标组实例的端口
+        :param Port: 目标組實例的端口
         :type Port: int
-        :param Weight: 目标组实例的权重
+        :param Weight: 目标組實例的權重
         :type Weight: int
-        :param NewPort: 目标组实例的新端口
+        :param NewPort: 目标組實例的新端口
         :type NewPort: int
         """
         self.BindIP = None
@@ -4714,21 +4714,21 @@ class TargetGroupInstance(AbstractModel):
 
 
 class TargetHealth(AbstractModel):
-    """描述一个Target的健康信息
+    """描述一個Target的健康訊息
 
     """
 
     def __init__(self):
         """
-        :param IP: Target的内网IP
+        :param IP: Target的内網IP
         :type IP: str
-        :param Port: Target绑定的端口
+        :param Port: Target綁定的端口
         :type Port: int
-        :param HealthStatus: 当前健康状态，true：健康，false：不健康（包括尚未开始探测、探测中、状态异常等几种状态）。只有处于健康状态（且权重大于0），负载均衡才会向其转发流量。
+        :param HealthStatus: 當前健康狀态，true：健康，false：不健康（包括尚未開始探測、探測中、狀态異常等幾種狀态）。只有處于健康狀态（且權重大于0），負載均衡才會向其轉發流量。
         :type HealthStatus: bool
-        :param TargetId: Target的实例ID，如 ins-12345678
+        :param TargetId: Target的實例ID，如 ins-12345678
         :type TargetId: str
-        :param HealthStatusDetial: 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+        :param HealthStatusDetial: 當前健康狀态的詳細訊息。如：Alive、Dead、Unknown。Alive狀态爲健康，Dead狀态爲異常，Unknown狀态包括尚未開始探測、探測中、狀态未知。
         :type HealthStatusDetial: str
         """
         self.IP = None
@@ -4747,15 +4747,15 @@ class TargetHealth(AbstractModel):
 
 
 class TargetRegionInfo(AbstractModel):
-    """负载均衡实例所绑定的后端服务的信息，包括所属地域、所属网络。
+    """負載均衡實例所綁定的後端服務的訊息，包括所屬地域、所屬網絡。
 
     """
 
     def __init__(self):
         """
-        :param Region: Target所属地域，如 ap-guangzhou
+        :param Region: Target所屬地域，如 ap-guangzhou
         :type Region: str
-        :param VpcId: Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
+        :param VpcId: Target所屬網絡，私有網絡格式如 vpc-abcd1234，如果是基礎網絡，則爲"0"
         :type VpcId: str
         """
         self.Region = None
@@ -4768,20 +4768,20 @@ class TargetRegionInfo(AbstractModel):
 
 
 class ZoneInfo(AbstractModel):
-    """可用区相关信息
+    """可用區相關訊息
 
     """
 
     def __init__(self):
         """
-        :param ZoneId: 可用区数值形式的唯一ID，如：100001
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ZoneId: 可用區數值形式的唯一ID，如：100001
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ZoneId: int
-        :param Zone: 可用区字符串形式的唯一ID，如：ap-guangzhou-1
-注意：此字段可能返回 null，表示取不到有效值。
+        :param Zone: 可用區字串形式的唯一ID，如：ap-guangzhou-1
+注意：此欄位可能返回 null，表示取不到有效值。
         :type Zone: str
-        :param ZoneName: 可用区名称，如：广州一区
-注意：此字段可能返回 null，表示取不到有效值。
+        :param ZoneName: 可用區名稱，如：廣州一區
+注意：此欄位可能返回 null，表示取不到有效值。
         :type ZoneName: str
         """
         self.ZoneId = None

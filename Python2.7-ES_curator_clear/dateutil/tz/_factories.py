@@ -46,4 +46,3 @@ class _TzStrFactory(_TzFactory):
             instance = cls.__instances.setdefault(key,
                 cls.instance(s, posix_offset))
         return instance
-

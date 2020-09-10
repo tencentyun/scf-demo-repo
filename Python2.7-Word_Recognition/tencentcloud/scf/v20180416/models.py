@@ -17,23 +17,23 @@ from tencentcloud.common.abstract_model import AbstractModel
 
 
 class Code(AbstractModel):
-    """函数代码
+    """函數代碼
 
     """
 
     def __init__(self):
         """
-        :param CosBucketName: 对象存储桶名称
+        :param CosBucketName: 物件儲存桶名稱
         :type CosBucketName: str
-        :param CosObjectName: 对象存储对象路径
+        :param CosObjectName: 物件儲存對象路徑
         :type CosObjectName: str
-        :param ZipFile: 包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
+        :param ZipFile: 包含函數代碼文件及其依賴項的 zip 格式文件，使用該介面時要求将 zip 文件的内容轉成 base64 編碼，最大支援20M
         :type ZipFile: str
-        :param CosBucketRegion: 对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
+        :param CosBucketRegion: 物件儲存的地域，地域爲北京時需要傳入ap-beijing,北京一區時需要傳遞ap-beijing-1，其他的地域不需要傳遞。
         :type CosBucketRegion: str
-        :param DemoId: 如果是通过Demo创建的话，需要传入DemoId
+        :param DemoId: 如果是通過Demo創建的話，需要傳入DemoId
         :type DemoId: str
-        :param TempCosObjectName: 如果是从TempCos创建的话，需要传入TempCosObjectName
+        :param TempCosObjectName: 如果是從TempCos創建的話，需要傳入TempCosObjectName
         :type TempCosObjectName: str
         """
         self.CosBucketName = None
@@ -54,23 +54,23 @@ class Code(AbstractModel):
 
 
 class CopyFunctionRequest(AbstractModel):
-    """CopyFunction请求参数结构体
+    """CopyFunction請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FunctionName: 函数名
+        :param FunctionName: 函數名
         :type FunctionName: str
-        :param NewFunctionName: 新函数的名称
+        :param NewFunctionName: 新函數的名稱
         :type NewFunctionName: str
-        :param Namespace: 命名空间，默认为default
+        :param Namespace: 命名空間，預設爲default
         :type Namespace: str
-        :param TargetNamespace: 将函数复制到的命名空间，默认为default
+        :param TargetNamespace: 将函數複制到的命名空間，預設爲default
         :type TargetNamespace: str
-        :param Description: 函数描述
+        :param Description: 函數描述
         :type Description: str
-        :param TargetRegion: 要将函数复制到的地域，不填则默认为当前地域
+        :param TargetRegion: 要将函數複制到的地域，不填則預設爲當前地域
         :type TargetRegion: str
         """
         self.FunctionName = None
@@ -91,13 +91,13 @@ class CopyFunctionRequest(AbstractModel):
 
 
 class CopyFunctionResponse(AbstractModel):
-    """CopyFunction返回参数结构体
+    """CopyFunction返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -108,33 +108,33 @@ class CopyFunctionResponse(AbstractModel):
 
 
 class CreateFunctionRequest(AbstractModel):
-    """CreateFunction请求参数结构体
+    """CreateFunction請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FunctionName: 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
+        :param FunctionName: 創建的函數名稱，函數名稱支援26個英文字母大小寫、數字、連接符和下劃線，第一個字元只能以字母開頭，最後一個字元不能爲連接符或者下劃線，名稱長度2-60
         :type FunctionName: str
-        :param Code: 函数的代码. 注意：不能同时指定Cos与ZipFile
+        :param Code: 函數的代碼. 注意：不能同時指定Cos與ZipFile
         :type Code: :class:`tencentcloud.scf.v20180416.models.Code`
-        :param Handler: 函数处理方法名称，名称格式支持 "文件名称.方法名称" 形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求是 2-60 个字符
+        :param Handler: 函數處理方法名稱，名稱格式支援 "文件名稱.方法名稱" 形式，文件名稱和函數名稱之間以"."隔開，文件名稱和函數名稱要求以字母開始和結尾，中間允許插入字母、數字、下劃線和連接符，文件名稱和函數名字的長度要求是 2-60 個字元
         :type Handler: str
-        :param Description: 函数描述,最大支持 1000 个英文字母、数字、空格、逗号、换行符和英文句号，支持中文
+        :param Description: 函數描述,最大支援 1000 個英文字母、數字、空格、逗号、換行符和英文句号，支援中文
         :type Description: str
-        :param MemorySize: 函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯
+        :param MemorySize: 函數運作時内存大小，預設爲 128M，可選範圍 128MB-1536MB，并且以 128MB 爲階梯
         :type MemorySize: int
-        :param Timeout: 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
+        :param Timeout: 函數最長執行時間，單位爲秒，可選值範圍 1-300 秒，預設爲 3 秒
         :type Timeout: int
-        :param Environment: 函数的环境变量
+        :param Environment: 函數的環境變量
         :type Environment: :class:`tencentcloud.scf.v20180416.models.Environment`
-        :param Runtime: 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
+        :param Runtime: 函數運作環境，目前僅支援 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，預設Python2.7
         :type Runtime: str
-        :param VpcConfig: 函数的私有网络配置
+        :param VpcConfig: 函數的私有網絡配置
         :type VpcConfig: :class:`tencentcloud.scf.v20180416.models.VpcConfig`
-        :param ClsLogsetId: 函数日志投递到的CLS LogsetID
+        :param ClsLogsetId: 函數日志投遞到的CLS LogsetID
         :type ClsLogsetId: str
-        :param ClsTopicId: 函数日志投递到的CLS TopicID
+        :param ClsTopicId: 函數日志投遞到的CLS TopicID
         :type ClsTopicId: str
         """
         self.FunctionName = None
@@ -171,13 +171,13 @@ class CreateFunctionRequest(AbstractModel):
 
 
 class CreateFunctionResponse(AbstractModel):
-    """CreateFunction返回参数结构体
+    """CreateFunction返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -188,23 +188,23 @@ class CreateFunctionResponse(AbstractModel):
 
 
 class CreateTriggerRequest(AbstractModel):
-    """CreateTrigger请求参数结构体
+    """CreateTrigger請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FunctionName: 新建触发器绑定的函数名称
+        :param FunctionName: 新建觸發器綁定的函數名稱
         :type FunctionName: str
-        :param TriggerName: 新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是其他触发器，见具体触发器绑定参数的说明
+        :param TriggerName: 新建觸發器名稱。如果是定時觸發器，名稱支援英文字母、數字、連接符和下劃線，最長100個字元；如果是其他觸發器，見具體觸發器綁定參數的說明
         :type TriggerName: str
-        :param Type: 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
+        :param Type: 觸發器類型，目前支援 cos 、cmq、 timer、 ckafka類型
         :type Type: str
-        :param TriggerDesc: 触发器对应的参数，如果是 timer 类型的触发器其内容是 Linux cron 表达式，如果是其他触发器，见具体触发器说明
+        :param TriggerDesc: 觸發器對應的參數，如果是 timer 類型的觸發器其内容是 Linux cron 表達式，如果是其他觸發器，見具體觸發器說明
         :type TriggerDesc: str
-        :param Qualifier: 函数的版本
+        :param Qualifier: 函數的版本
         :type Qualifier: str
-        :param Enable: 触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
+        :param Enable: 觸發器的初始是能狀态 OPEN表示開啓 CLOSE表示關閉
         :type Enable: str
         """
         self.FunctionName = None
@@ -225,15 +225,15 @@ class CreateTriggerRequest(AbstractModel):
 
 
 class CreateTriggerResponse(AbstractModel):
-    """CreateTrigger返回参数结构体
+    """CreateTrigger返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TriggerInfo: 触发器信息
+        :param TriggerInfo: 觸發器訊息
         :type TriggerInfo: :class:`tencentcloud.scf.v20180416.models.Trigger`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TriggerInfo = None
@@ -248,13 +248,13 @@ class CreateTriggerResponse(AbstractModel):
 
 
 class DeleteFunctionRequest(AbstractModel):
-    """DeleteFunction请求参数结构体
+    """DeleteFunction請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FunctionName: 要删除的函数名称
+        :param FunctionName: 要删除的函數名稱
         :type FunctionName: str
         """
         self.FunctionName = None
@@ -265,13 +265,13 @@ class DeleteFunctionRequest(AbstractModel):
 
 
 class DeleteFunctionResponse(AbstractModel):
-    """DeleteFunction返回参数结构体
+    """DeleteFunction返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -282,21 +282,21 @@ class DeleteFunctionResponse(AbstractModel):
 
 
 class DeleteTriggerRequest(AbstractModel):
-    """DeleteTrigger请求参数结构体
+    """DeleteTrigger請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FunctionName: 函数的名称
+        :param FunctionName: 函數的名稱
         :type FunctionName: str
-        :param TriggerName: 要删除的触发器名称
+        :param TriggerName: 要删除的觸發器名稱
         :type TriggerName: str
-        :param Type: 要删除的触发器类型，目前支持 cos 、cmq、 timer、ckafka 类型
+        :param Type: 要删除的觸發器類型，目前支援 cos 、cmq、 timer、ckafka 類型
         :type Type: str
-        :param TriggerDesc: 如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
+        :param TriggerDesc: 如果删除的觸發器類型爲 COS 觸發器，該欄位爲必填值，存放 JSON 格式的數據 {"event":"cos:ObjectCreated:*"}，數據内容和 SetTrigger 介面中該欄位的格式相同；如果删除的觸發器類型爲定時觸發器或 CMQ 觸發器，可以不指定該欄位
         :type TriggerDesc: str
-        :param Qualifier: 函数的版本信息
+        :param Qualifier: 函數的版本訊息
         :type Qualifier: str
         """
         self.FunctionName = None
@@ -315,13 +315,13 @@ class DeleteTriggerRequest(AbstractModel):
 
 
 class DeleteTriggerResponse(AbstractModel):
-    """DeleteTrigger返回参数结构体
+    """DeleteTrigger返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -332,13 +332,13 @@ class DeleteTriggerResponse(AbstractModel):
 
 
 class Environment(AbstractModel):
-    """函数的环境变量参数
+    """函數的環境變量參數
 
     """
 
     def __init__(self):
         """
-        :param Variables: 环境变量数组
+        :param Variables: 環境變量數組
         :type Variables: list of Variable
         """
         self.Variables = None
@@ -354,17 +354,17 @@ class Environment(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """描述键值对过滤器，用于条件过滤查询。例如过滤ID、名称、状态等
-    若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
-    若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+    """描述鍵值對過濾器，用于條件過濾查詢。例如過濾ID、名稱、狀态等
+    若存在多個Filter時，Filter間的關系爲邏輯與（AND）關系。
+    若同一個Filter存在多個Values，同一Filter下Values間的關系爲邏輯或（OR）關系。
 
     """
 
     def __init__(self):
         """
-        :param Name: 需要过滤的字段。
+        :param Name: 需要過濾的欄位。
         :type Name: str
-        :param Values: 字段的过滤值。
+        :param Values: 欄位的過濾值。
         :type Values: list of str
         """
         self.Name = None
@@ -377,31 +377,31 @@ class Filter(AbstractModel):
 
 
 class Function(AbstractModel):
-    """函数列表
+    """函數清單
 
     """
 
     def __init__(self):
         """
-        :param ModTime: 修改时间
+        :param ModTime: 修改時間
         :type ModTime: str
-        :param AddTime: 创建时间
+        :param AddTime: 創建時間
         :type AddTime: str
-        :param Runtime: 运行时
+        :param Runtime: 運作時
         :type Runtime: str
-        :param FunctionName: 函数名称
+        :param FunctionName: 函數名稱
         :type FunctionName: str
-        :param FunctionId: 函数ID
+        :param FunctionId: 函數ID
         :type FunctionId: str
-        :param Namespace: 命名空间
+        :param Namespace: 命名空間
         :type Namespace: str
-        :param Status: 函数状态
+        :param Status: 函數狀态
         :type Status: str
-        :param StatusDesc: 函数状态详情
+        :param StatusDesc: 函數狀态詳情
         :type StatusDesc: str
-        :param Description: 函数描述
+        :param Description: 函數描述
         :type Description: str
-        :param Tags: 函数标签
+        :param Tags: 函數标簽
         :type Tags: list of Tag
         """
         self.ModTime = None
@@ -435,31 +435,31 @@ class Function(AbstractModel):
 
 
 class FunctionLog(AbstractModel):
-    """日志信息
+    """日志訊息
 
     """
 
     def __init__(self):
         """
-        :param FunctionName: 函数的名称
+        :param FunctionName: 函數的名稱
         :type FunctionName: str
-        :param RetMsg: 函数执行完成后的返回值
+        :param RetMsg: 函數執行完成後的返回值
         :type RetMsg: str
-        :param RequestId: 执行该函数对应的requestId
+        :param RequestId: 執行該函數對應的requestId
         :type RequestId: str
-        :param StartTime: 函数开始执行时的时间点
+        :param StartTime: 函數開始執行時的時間點
         :type StartTime: str
-        :param RetCode: 函数执行结果，如果是 0 表示执行成功，其他值表示失败
+        :param RetCode: 函數執行結果，如果是 0 表示執行成功，其他值表示失敗
         :type RetCode: int
-        :param InvokeFinished: 函数调用是否结束，如果是 1 表示执行结束，其他值表示调用异常
+        :param InvokeFinished: 函數調用是否結束，如果是 1 表示執行結束，其他值表示調用異常
         :type InvokeFinished: int
-        :param Duration: 函数执行耗时，单位为 ms
+        :param Duration: 函數執行耗時，單位爲 ms
         :type Duration: float
-        :param BillDuration: 函数计费时间，根据 duration 向上取最近的 100ms，单位为ms
+        :param BillDuration: 函數計費時間，根據 duration 向上取最近的 100ms，單位爲ms
         :type BillDuration: int
-        :param MemUsage: 函数执行时消耗实际内存大小，单位为 Byte
+        :param MemUsage: 函數執行時消耗實際内存大小，單位爲 Byte
         :type MemUsage: int
-        :param Log: 函数执行过程中的日志输出
+        :param Log: 函數執行過程中的日志輸出
         :type Log: str
         """
         self.FunctionName = None
@@ -488,31 +488,31 @@ class FunctionLog(AbstractModel):
 
 
 class GetFunctionLogsRequest(AbstractModel):
-    """GetFunctionLogs请求参数结构体
+    """GetFunctionLogs請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FunctionName: 函数的名称
+        :param FunctionName: 函數的名稱
         :type FunctionName: str
-        :param Offset: 数据的偏移量，Offset+Limit不能大于10000
+        :param Offset: 數據的偏移量，Offset+Limit不能大于10000
         :type Offset: int
-        :param Limit: 返回数据的长度，Offset+Limit不能大于10000
+        :param Limit: 返回數據的長度，Offset+Limit不能大于10000
         :type Limit: int
-        :param Order: 以升序还是降序的方式对日志进行排序，可选值 desc和 asc
+        :param Order: 以升序還是降序的方式對日志進行排序，可選值 desc和 asc
         :type Order: str
-        :param OrderBy: 根据某个字段排序日志,支持以下字段：function_name, duration, mem_usage, start_time
+        :param OrderBy: 根據某個欄位排序日志,支援以下欄位：function_name, duration, mem_usage, start_time
         :type OrderBy: str
-        :param Filter: 日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
+        :param Filter: 日志過濾條件。可用來區分正确和錯誤日志，filter.retCode=not0 表示只返回錯誤日志，filter.retCode=is0 表示只返回正确日志，不傳，則返回所有日志
         :type Filter: :class:`tencentcloud.scf.v20180416.models.LogFilter`
-        :param Qualifier: 函数的版本
+        :param Qualifier: 函數的版本
         :type Qualifier: str
-        :param FunctionRequestId: 执行该函数对应的requestId
+        :param FunctionRequestId: 執行該函數對應的requestId
         :type FunctionRequestId: str
-        :param StartTime: 查询的具体日期，例如：2017-05-16 20:00:00，只能与endtime相差一天之内
+        :param StartTime: 查詢的具體日期，例如：2017-05-16 20:00:00，只能與endtime相差一天之内
         :type StartTime: str
-        :param EndTime: 查询的具体日期，例如：2017-05-16 20:59:59，只能与startTime相差一天之内
+        :param EndTime: 查詢的具體日期，例如：2017-05-16 20:59:59，只能與startTime相差一天之内
         :type EndTime: str
         """
         self.FunctionName = None
@@ -543,17 +543,17 @@ class GetFunctionLogsRequest(AbstractModel):
 
 
 class GetFunctionLogsResponse(AbstractModel):
-    """GetFunctionLogs返回参数结构体
+    """GetFunctionLogs返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param TotalCount: 函数日志的总数
+        :param TotalCount: 函數日志的總數
         :type TotalCount: int
-        :param Data: 函数日志信息
+        :param Data: 函數日志訊息
         :type Data: list of FunctionLog
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.TotalCount = None
@@ -573,17 +573,17 @@ class GetFunctionLogsResponse(AbstractModel):
 
 
 class GetFunctionRequest(AbstractModel):
-    """GetFunction请求参数结构体
+    """GetFunction請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FunctionName: 需要获取详情的函数名称
+        :param FunctionName: 需要獲取詳情的函數名稱
         :type FunctionName: str
-        :param Qualifier: 函数的版本号
+        :param Qualifier: 函數的版本号
         :type Qualifier: str
-        :param ShowCode: 是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
+        :param ShowCode: 是否顯示代碼, TRUE表示顯示代碼，FALSE表示不顯示代碼,大于1M的入口文件不會顯示
         :type ShowCode: str
         """
         self.FunctionName = None
@@ -598,65 +598,65 @@ class GetFunctionRequest(AbstractModel):
 
 
 class GetFunctionResponse(AbstractModel):
-    """GetFunction返回参数结构体
+    """GetFunction返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param ModTime: 函数的最后修改时间
+        :param ModTime: 函數的最後修改時間
         :type ModTime: str
-        :param CodeInfo: 函数的代码
+        :param CodeInfo: 函數的代碼
         :type CodeInfo: str
-        :param Description: 函数的描述信息
+        :param Description: 函數的描述訊息
         :type Description: str
-        :param Triggers: 函数的触发器列表
+        :param Triggers: 函數的觸發器清單
         :type Triggers: list of Trigger
-        :param Handler: 函数的入口
+        :param Handler: 函數的入口
         :type Handler: str
-        :param CodeSize: 函数代码大小
+        :param CodeSize: 函數代碼大小
         :type CodeSize: int
-        :param Timeout: 函数的超时时间
+        :param Timeout: 函數的超時時間
         :type Timeout: int
-        :param FunctionVersion: 函数的版本
+        :param FunctionVersion: 函數的版本
         :type FunctionVersion: str
-        :param MemorySize: 函数的最大可用内存
+        :param MemorySize: 函數的最大可用内存
         :type MemorySize: int
-        :param Runtime: 函数的运行环境
+        :param Runtime: 函數的運作環境
         :type Runtime: str
-        :param FunctionName: 函数的名称
+        :param FunctionName: 函數的名稱
         :type FunctionName: str
-        :param VpcConfig: 函数的私有网络
+        :param VpcConfig: 函數的私有網絡
         :type VpcConfig: :class:`tencentcloud.scf.v20180416.models.VpcConfig`
         :param UseGpu: 是否使用GPU
         :type UseGpu: str
-        :param Environment: 函数的环境变量
+        :param Environment: 函數的環境變量
         :type Environment: :class:`tencentcloud.scf.v20180416.models.Environment`
-        :param CodeResult: 代码是否正确
+        :param CodeResult: 代碼是否正确
         :type CodeResult: str
-        :param CodeError: 代码错误信息
+        :param CodeError: 代碼錯誤訊息
         :type CodeError: str
-        :param ErrNo: 代码错误码
+        :param ErrNo: 代碼錯誤碼
         :type ErrNo: int
-        :param Namespace: 函数的命名空间
+        :param Namespace: 函數的命名空間
         :type Namespace: str
-        :param Role: 函数绑定的角色
+        :param Role: 函數綁定的角色
         :type Role: str
-        :param InstallDependency: 是否自动安装依赖
+        :param InstallDependency: 是否自動安裝依賴
         :type InstallDependency: str
-        :param Status: 函数状态
+        :param Status: 函數狀态
         :type Status: str
-        :param StatusDesc: 状态描述
+        :param StatusDesc: 狀态描述
         :type StatusDesc: str
-        :param ClsLogsetId: 日志投递到的Cls日志集
+        :param ClsLogsetId: 日志投遞到的Cls日志集
         :type ClsLogsetId: str
-        :param ClsTopicId: 日志投递到的Cls Topic
+        :param ClsTopicId: 日志投遞到的Cls Topic
         :type ClsTopicId: str
-        :param FunctionId: 函数ID
+        :param FunctionId: 函數ID
         :type FunctionId: str
-        :param Tags: 函数的标签列表
+        :param Tags: 函數的标簽清單
         :type Tags: list of Tag
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.ModTime = None
@@ -733,23 +733,23 @@ class GetFunctionResponse(AbstractModel):
 
 
 class InvokeRequest(AbstractModel):
-    """Invoke请求参数结构体
+    """Invoke請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FunctionName: 函数名称
+        :param FunctionName: 函數名稱
         :type FunctionName: str
-        :param InvocationType: RequestResponse(同步) 和 Event(异步)，默认为同步
+        :param InvocationType: RequestResponse(同步) 和 Event(異步)，預設爲同步
         :type InvocationType: str
-        :param Qualifier: 触发函数的版本号
+        :param Qualifier: 觸發函數的版本号
         :type Qualifier: str
-        :param ClientContext: 运行函数时的参数，以json格式传入，最大支持的参数长度是 1M
+        :param ClientContext: 運作函數時的參數，以json格式傳入，最大支援的參數長度是 1M
         :type ClientContext: str
-        :param LogType: 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志
+        :param LogType: 同步調用時指定該欄位，返回值會包含4K的日志，可選值爲None和Tail，預設值爲None。當該值爲Tail時，返回參數中的logMsg欄位會包含對應的函數執行日志
         :type LogType: str
-        :param Namespace: 命名空间
+        :param Namespace: 命名空間
         :type Namespace: str
         """
         self.FunctionName = None
@@ -770,15 +770,15 @@ class InvokeRequest(AbstractModel):
 
 
 class InvokeResponse(AbstractModel):
-    """Invoke返回参数结构体
+    """Invoke返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Result: 函数执行结果
+        :param Result: 函數執行結果
         :type Result: :class:`tencentcloud.scf.v20180416.models.Result`
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Result = None
@@ -793,28 +793,28 @@ class InvokeResponse(AbstractModel):
 
 
 class ListFunctionsRequest(AbstractModel):
-    """ListFunctions请求参数结构体
+    """ListFunctions請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Order: 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
+        :param Order: 以升序還是降序的方式返回結果，可選值 ASC 和 DESC
         :type Order: str
-        :param Orderby: 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime, FunctionName
+        :param Orderby: 根據哪個欄位進行返回結果排序,支援以下欄位：AddTime, ModTime, FunctionName
         :type Orderby: str
-        :param Offset: 数据偏移量，默认值为 0
+        :param Offset: 數據偏移量，預設值爲 0
         :type Offset: int
-        :param Limit: 返回数据长度，默认值为 20
+        :param Limit: 返回數據長度，預設值爲 20
         :type Limit: int
-        :param SearchKey: 支持FunctionName模糊匹配
+        :param SearchKey: 支援FunctionName模糊比對
         :type SearchKey: str
-        :param Description: 函数描述，支持模糊搜索
+        :param Description: 函數描述，支援模糊搜索
         :type Description: str
-        :param Filters: 过滤条件。
-- tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+        :param Filters: 過濾條件。
+- tag:tag-key - String - 是否必填：否 - （過濾條件）按照标簽鍵值對進行過濾。 tag-key使用具體的标簽鍵進行替換。
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+每次請求的Filters的上限爲10，Filter.Values的上限爲5。
         :type Filters: list of Filter
         """
         self.Order = None
@@ -842,17 +842,17 @@ class ListFunctionsRequest(AbstractModel):
 
 
 class ListFunctionsResponse(AbstractModel):
-    """ListFunctions返回参数结构体
+    """ListFunctions返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Functions: 函数列表
+        :param Functions: 函數清單
         :type Functions: list of Function
-        :param TotalCount: 总数
+        :param TotalCount: 總數
         :type TotalCount: int
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.Functions = None
@@ -872,13 +872,13 @@ class ListFunctionsResponse(AbstractModel):
 
 
 class LogFilter(AbstractModel):
-    """日志过滤条件，用于区分正确与错误日志
+    """日志過濾條件，用于區分正确與錯誤日志
 
     """
 
     def __init__(self):
         """
-        :param RetCode: filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，无输入则返回所有日志。
+        :param RetCode: filter.RetCode=not0 表示只返回錯誤日志，filter.RetCode=is0 表示只返回正确日志，無輸入則返回所有日志。
         :type RetCode: str
         """
         self.RetCode = None
@@ -889,27 +889,27 @@ class LogFilter(AbstractModel):
 
 
 class Result(AbstractModel):
-    """运行函数的返回
+    """運作函數的返回
 
     """
 
     def __init__(self):
         """
-        :param Log: 表示执行过程中的日志输出，异步调用返回为空
+        :param Log: 表示執行過程中的日志輸出，異步調用返回爲空
         :type Log: str
-        :param RetMsg: 表示执行函数的返回，异步调用返回为空
+        :param RetMsg: 表示執行函數的返回，異步調用返回爲空
         :type RetMsg: str
-        :param ErrMsg: 表示执行函数的错误返回信息，异步调用返回为空
+        :param ErrMsg: 表示執行函數的錯誤返回訊息，異步調用返回爲空
         :type ErrMsg: str
-        :param MemUsage: 执行函数时的内存大小，单位为Byte，异步调用返回为空
+        :param MemUsage: 執行函數時的内存大小，單位爲Byte，異步調用返回爲空
         :type MemUsage: int
-        :param Duration: 表示执行函数的耗时，单位是毫秒，异步调用返回为空
+        :param Duration: 表示執行函數的耗時，單位是毫秒，異步調用返回爲空
         :type Duration: float
-        :param BillDuration: 表示函数的计费耗时，单位是毫秒，异步调用返回为空
+        :param BillDuration: 表示函數的計費耗時，單位是毫秒，異步調用返回爲空
         :type BillDuration: int
-        :param FunctionRequestId: 此次函数执行的Id
+        :param FunctionRequestId: 此次函數執行的Id
         :type FunctionRequestId: str
-        :param InvokeResult: 0为正确，异步调用返回为空
+        :param InvokeResult: 0爲正确，異步調用返回爲空
         :type InvokeResult: int
         """
         self.Log = None
@@ -934,15 +934,15 @@ class Result(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """函数标签
+    """函數标簽
 
     """
 
     def __init__(self):
         """
-        :param Key: 标签的key
+        :param Key: 标簽的key
         :type Key: str
-        :param Value: 标签的value
+        :param Value: 标簽的value
         :type Value: str
         """
         self.Key = None
@@ -955,25 +955,25 @@ class Tag(AbstractModel):
 
 
 class Trigger(AbstractModel):
-    """触发器类型
+    """觸發器類型
 
     """
 
     def __init__(self):
         """
-        :param ModTime: 触发器最后修改时间
+        :param ModTime: 觸發器最後修改時間
         :type ModTime: str
-        :param Type: 触发器类型
+        :param Type: 觸發器類型
         :type Type: str
-        :param TriggerDesc: 触发器详细配置
+        :param TriggerDesc: 觸發器詳細配置
         :type TriggerDesc: str
-        :param TriggerName: 触发器名称
+        :param TriggerName: 觸發器名稱
         :type TriggerName: str
-        :param AddTime: 触发器创建时间
+        :param AddTime: 觸發器創建時間
         :type AddTime: str
-        :param Enable: 使能开关
+        :param Enable: 使能開關
         :type Enable: int
-        :param CustomArgument: 客户自定义参数
+        :param CustomArgument: 客戶自定義參數
         :type CustomArgument: str
         """
         self.ModTime = None
@@ -996,23 +996,23 @@ class Trigger(AbstractModel):
 
 
 class UpdateFunctionCodeRequest(AbstractModel):
-    """UpdateFunctionCode请求参数结构体
+    """UpdateFunctionCode請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param Handler: 函数处理方法名称。名称格式支持“文件名称.函数名称”形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
+        :param Handler: 函數處理方法名稱。名稱格式支援“文件名稱.函數名稱”形式，文件名稱和函數名稱之間以"."隔開，文件名稱和函數名稱要求以字母開始和結尾，中間允許插入字母、數字、下劃線和連接符，文件名稱和函數名字的長度要求 2-60 個字元
         :type Handler: str
-        :param FunctionName: 要修改的函数名称
+        :param FunctionName: 要修改的函數名稱
         :type FunctionName: str
-        :param CosBucketName: 对象存储桶名称
+        :param CosBucketName: 物件儲存桶名稱
         :type CosBucketName: str
-        :param CosObjectName: 对象存储对象路径
+        :param CosObjectName: 物件儲存對象路徑
         :type CosObjectName: str
-        :param ZipFile: 包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
+        :param ZipFile: 包含函數代碼文件及其依賴項的 zip 格式文件，使用該介面時要求将 zip 文件的内容轉成 base64 編碼，最大支援20M
         :type ZipFile: str
-        :param CosBucketRegion: 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
+        :param CosBucketRegion: 物件儲存的地域，注：北京分爲ap-beijing和ap-beijing-1
         :type CosBucketRegion: str
         """
         self.Handler = None
@@ -1033,13 +1033,13 @@ class UpdateFunctionCodeRequest(AbstractModel):
 
 
 class UpdateFunctionCodeResponse(AbstractModel):
-    """UpdateFunctionCode返回参数结构体
+    """UpdateFunctionCode返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1050,25 +1050,25 @@ class UpdateFunctionCodeResponse(AbstractModel):
 
 
 class UpdateFunctionConfigurationRequest(AbstractModel):
-    """UpdateFunctionConfiguration请求参数结构体
+    """UpdateFunctionConfiguration請求參數結構體
 
     """
 
     def __init__(self):
         """
-        :param FunctionName: 要修改的函数名称
+        :param FunctionName: 要修改的函數名稱
         :type FunctionName: str
-        :param Description: 函数描述。最大支持 1000 个英文字母、数字、空格、逗号和英文句号，支持中文
+        :param Description: 函數描述。最大支援 1000 個英文字母、數字、空格、逗号和英文句号，支援中文
         :type Description: str
-        :param MemorySize: 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M
+        :param MemorySize: 函數運作時内存大小，預設爲 128 M，可選範 128 M-1536 M
         :type MemorySize: int
-        :param Timeout: 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
+        :param Timeout: 函數最長執行時間，單位爲秒，可選值範 1-300 秒，預設爲 3 秒
         :type Timeout: int
-        :param Runtime: 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
+        :param Runtime: 函數運作環境，目前僅支援 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
         :type Runtime: str
-        :param Environment: 函数的环境变量
+        :param Environment: 函數的環境變量
         :type Environment: :class:`tencentcloud.scf.v20180416.models.Environment`
-        :param VpcConfig: 函数的私有网络配置
+        :param VpcConfig: 函數的私有網絡配置
         :type VpcConfig: :class:`tencentcloud.scf.v20180416.models.VpcConfig`
         """
         self.FunctionName = None
@@ -1095,13 +1095,13 @@ class UpdateFunctionConfigurationRequest(AbstractModel):
 
 
 class UpdateFunctionConfigurationResponse(AbstractModel):
-    """UpdateFunctionConfiguration返回参数结构体
+    """UpdateFunctionConfiguration返回參數結構體
 
     """
 
     def __init__(self):
         """
-        :param RequestId: 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
         self.RequestId = None
@@ -1112,15 +1112,15 @@ class UpdateFunctionConfigurationResponse(AbstractModel):
 
 
 class Variable(AbstractModel):
-    """变量参数
+    """變量參數
 
     """
 
     def __init__(self):
         """
-        :param Key: 变量的名称
+        :param Key: 變量的名稱
         :type Key: str
-        :param Value: 变量的值
+        :param Value: 變量的值
         :type Value: str
         """
         self.Key = None
@@ -1133,15 +1133,15 @@ class Variable(AbstractModel):
 
 
 class VpcConfig(AbstractModel):
-    """私有网络参数配置
+    """私有網絡參數配置
 
     """
 
     def __init__(self):
         """
-        :param VpcId: 私有网络 的 id
+        :param VpcId: 私有網絡 的 id
         :type VpcId: str
-        :param SubnetId: 子网的 id
+        :param SubnetId: 子網的 id
         :type SubnetId: str
         """
         self.VpcId = None

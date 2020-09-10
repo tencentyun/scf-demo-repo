@@ -243,4 +243,3 @@ ISO2022KR_SM_MODEL = {'class_table': ISO2022KR_CLS,
                       'name': "ISO-2022-KR",
                       'language': 'Korean'}
 
-

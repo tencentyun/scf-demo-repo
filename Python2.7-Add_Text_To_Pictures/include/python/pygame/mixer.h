@@ -62,4 +62,3 @@ typedef struct {
 
 static void* pgMIXER_C_API[PYGAMEAPI_MIXER_NUMSLOTS] = {NULL};
 #endif
-

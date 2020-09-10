@@ -26,7 +26,7 @@ class TicsClient(AbstractClient):
 
 
     def DescribeDomainInfo(self, request):
-        """提供域名相关的基础信息以及与攻击事件（团伙、家族）、恶意文件等相关联信息。
+        """提供域名相關的基礎訊息以及與攻擊事件（團夥、家族）、惡意文件等相關聯訊息。
 
         :param request: Request instance for DescribeDomainInfo.
         :type request: :class:`tencentcloud.tics.v20181115.models.DescribeDomainInfoRequest`
@@ -54,7 +54,7 @@ class TicsClient(AbstractClient):
 
 
     def DescribeFileInfo(self, request):
-        """提供文件相关的基础信息以及与攻击事件（团伙、家族）、恶意文件等相关联信息。
+        """提供文件相關的基礎訊息以及與攻擊事件（團夥、家族）、惡意文件等相關聯訊息。
 
         :param request: Request instance for DescribeFileInfo.
         :type request: :class:`tencentcloud.tics.v20181115.models.DescribeFileInfoRequest`
@@ -82,7 +82,7 @@ class TicsClient(AbstractClient):
 
 
     def DescribeIpInfo(self, request):
-        """提供IP相关的基础信息以及与攻击事件（团伙、家族）、恶意文件等相关联信息。
+        """提供IP相關的基礎訊息以及與攻擊事件（團夥、家族）、惡意文件等相關聯訊息。
 
         :param request: Request instance for DescribeIpInfo.
         :type request: :class:`tencentcloud.tics.v20181115.models.DescribeIpInfoRequest`
@@ -110,7 +110,7 @@ class TicsClient(AbstractClient):
 
 
     def DescribeThreatInfo(self, request):
-        """提供IP和域名相关威胁情报信息查询，这些信息可以辅助检测失陷主机、帮助SIEM/SOC等系统做研判决策、帮助运营团队对设备报警的编排处理。
+        """提供IP和域名相關威脅情報訊息查詢，這些訊息可以輔助檢測失陷主機、幫助SIEM/SOC等系統做研判決策、幫助運營團隊對設備報警的編排處理。
 
         :param request: Request instance for DescribeThreatInfo.
         :type request: :class:`tencentcloud.tics.v20181115.models.DescribeThreatInfoRequest`

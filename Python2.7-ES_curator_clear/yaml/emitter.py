@@ -1137,4 +1137,3 @@ class Emitter(object):
                 spaces = (ch == u' ')
                 breaks = (ch in u'\n\x85\u2028\u2029')
             end += 1
-

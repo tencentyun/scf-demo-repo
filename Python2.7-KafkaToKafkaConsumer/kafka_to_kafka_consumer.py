@@ -12,7 +12,7 @@ logger.setLevel(logging.INFO)
  
 class KafkaToKafka(object):
     """
-    kafka 消息投递 kafka
+    kafka 訊息投遞 kafka
     """
 
     def __init__(self, host, **kwargs):
@@ -29,7 +29,7 @@ class KafkaToKafka(object):
 
     def send(self, topic, records):
         """
-        异步生产 kafka 消息
+        異步生産 kafka 訊息
         """
 
         global count
@@ -45,12 +45,12 @@ class KafkaToKafka(object):
         try:
             for record in records:
                 key = record["Ckafka"]["msgKey"]
-                # 当 key 为 "" 或者为 "None" 时，要传入key=None，这样python kafka库会随机选取一个partition写入消息
+                # 當 key 爲 "" 或者爲 "None" 時，要傳入key=None，這樣python kafka庫會随機選取一個partition寫入訊息
                 if key == "" or key == "None":
                     key = None
                 value = record["Ckafka"]["msgBody"]
 
-                # 也可以对消息进行处理后再转存
+                # 也可以對訊息進行處理後再轉存
                 #value = deal_message(record["Ckafka"]["msgBody"])
 
                 self.producer.send(topic, key = key, value = value).add_callback(on_send_success).add_errback(on_send_error)
@@ -66,7 +66,7 @@ class KafkaToKafka(object):
 
         return "{} messages delivered in {}s".format(count, e_time - s_time)
 
-# 这里可以对消息进行处理后返回
+# 這裏可以對訊息進行處理後返回
 def deal_message(message):
     return message
 
