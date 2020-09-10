@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.drm.v20181115 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.drm.v20181115 import models
 
 
 class DrmClient(AbstractClient):
     _apiVersion = '2018-11-15'
-    _endpoint = 'drm.tencentcloudapi.com'
+    _endpoint = 'drm.taifucloudcloudapi.com'
 
 
     def AddFairPlayPem(self, request):
@@ -30,8 +30,8 @@ class DrmClient(AbstractClient):
         如需使用fairplay方案，請務必先設置私鑰。
 
         :param request: Request instance for AddFairPlayPem.
-        :type request: :class:`tencentcloud.drm.v20181115.models.AddFairPlayPemRequest`
-        :rtype: :class:`tencentcloud.drm.v20181115.models.AddFairPlayPemResponse`
+        :type request: :class:`taifucloudcloud.drm.v20181115.models.AddFairPlayPemRequest`
+        :rtype: :class:`taifucloudcloud.drm.v20181115.models.AddFairPlayPemResponse`
 
         """
         try:
@@ -58,8 +58,8 @@ class DrmClient(AbstractClient):
         """該介面用來設置加密的金鑰。注意，同一個content id，只能設置一次！
 
         :param request: Request instance for CreateEncryptKeys.
-        :type request: :class:`tencentcloud.drm.v20181115.models.CreateEncryptKeysRequest`
-        :rtype: :class:`tencentcloud.drm.v20181115.models.CreateEncryptKeysResponse`
+        :type request: :class:`taifucloudcloud.drm.v20181115.models.CreateEncryptKeysRequest`
+        :rtype: :class:`taifucloudcloud.drm.v20181115.models.CreateEncryptKeysResponse`
 
         """
         try:
@@ -87,8 +87,8 @@ class DrmClient(AbstractClient):
         開發者需要轉發終端設備發出的許可證請求訊息。
 
         :param request: Request instance for CreateLicense.
-        :type request: :class:`tencentcloud.drm.v20181115.models.CreateLicenseRequest`
-        :rtype: :class:`tencentcloud.drm.v20181115.models.CreateLicenseResponse`
+        :type request: :class:`taifucloudcloud.drm.v20181115.models.CreateLicenseRequest`
+        :rtype: :class:`taifucloudcloud.drm.v20181115.models.CreateLicenseResponse`
 
         """
         try:
@@ -117,8 +117,8 @@ class DrmClient(AbstractClient):
         由于快取，删除操作需要約半小時生效
 
         :param request: Request instance for DeleteFairPlayPem.
-        :type request: :class:`tencentcloud.drm.v20181115.models.DeleteFairPlayPemRequest`
-        :rtype: :class:`tencentcloud.drm.v20181115.models.DeleteFairPlayPemResponse`
+        :type request: :class:`taifucloudcloud.drm.v20181115.models.DeleteFairPlayPemRequest`
+        :rtype: :class:`taifucloudcloud.drm.v20181115.models.DeleteFairPlayPemResponse`
 
         """
         try:
@@ -145,8 +145,8 @@ class DrmClient(AbstractClient):
         """本介面用來查詢指定DRM類型、ContentType的所有加密金鑰
 
         :param request: Request instance for DescribeAllKeys.
-        :type request: :class:`tencentcloud.drm.v20181115.models.DescribeAllKeysRequest`
-        :rtype: :class:`tencentcloud.drm.v20181115.models.DescribeAllKeysResponse`
+        :type request: :class:`taifucloudcloud.drm.v20181115.models.DescribeAllKeysRequest`
+        :rtype: :class:`taifucloudcloud.drm.v20181115.models.DescribeAllKeysResponse`
 
         """
         try:
@@ -173,8 +173,8 @@ class DrmClient(AbstractClient):
         """該介面用來查詢設置的FairPlay私鑰校驗訊息。可用該介面校驗設置的私鑰與本身的私鑰是否一緻。
 
         :param request: Request instance for DescribeFairPlayPem.
-        :type request: :class:`tencentcloud.drm.v20181115.models.DescribeFairPlayPemRequest`
-        :rtype: :class:`tencentcloud.drm.v20181115.models.DescribeFairPlayPemResponse`
+        :type request: :class:`taifucloudcloud.drm.v20181115.models.DescribeFairPlayPemRequest`
+        :rtype: :class:`taifucloudcloud.drm.v20181115.models.DescribeFairPlayPemResponse`
 
         """
         try:
@@ -202,8 +202,8 @@ class DrmClient(AbstractClient):
         如果加密使用的ContentID沒有關聯的金鑰訊息，後台會自動生成新的金鑰返回
 
         :param request: Request instance for DescribeKeys.
-        :type request: :class:`tencentcloud.drm.v20181115.models.DescribeKeysRequest`
-        :rtype: :class:`tencentcloud.drm.v20181115.models.DescribeKeysResponse`
+        :type request: :class:`taifucloudcloud.drm.v20181115.models.DescribeKeysRequest`
+        :rtype: :class:`taifucloudcloud.drm.v20181115.models.DescribeKeysResponse`
 
         """
         try:
@@ -231,8 +231,8 @@ class DrmClient(AbstractClient):
         如需使用fairplay方案，請務必先設置私鑰。
 
         :param request: Request instance for ModifyFairPlayPem.
-        :type request: :class:`tencentcloud.drm.v20181115.models.ModifyFairPlayPemRequest`
-        :rtype: :class:`tencentcloud.drm.v20181115.models.ModifyFairPlayPemResponse`
+        :type request: :class:`taifucloudcloud.drm.v20181115.models.ModifyFairPlayPemRequest`
+        :rtype: :class:`taifucloudcloud.drm.v20181115.models.ModifyFairPlayPemResponse`
 
         """
         try:
@@ -259,8 +259,8 @@ class DrmClient(AbstractClient):
         """開發者調用該介面，啓動一次内容文件的DRM加密工作流
 
         :param request: Request instance for StartEncryption.
-        :type request: :class:`tencentcloud.drm.v20181115.models.StartEncryptionRequest`
-        :rtype: :class:`tencentcloud.drm.v20181115.models.StartEncryptionResponse`
+        :type request: :class:`taifucloudcloud.drm.v20181115.models.StartEncryptionRequest`
+        :rtype: :class:`taifucloudcloud.drm.v20181115.models.StartEncryptionResponse`
 
         """
         try:

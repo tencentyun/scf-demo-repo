@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class ActivityInfo(AbstractModel):
@@ -273,7 +273,7 @@ class CustomerInfo(AbstractModel):
         :param Phone: 手機号
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Phone: str
-        :param Province: 最近記錄省份
+        :param Province: 最近記錄 
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Province: str
         :param RealName: 姓名
@@ -294,16 +294,16 @@ class CustomerInfo(AbstractModel):
         :param WeekRecommend: 7天推薦度
 注意：此欄位可能返回 null，表示取不到有效值。
         :type WeekRecommend: int
-        :param WxCity: 微信城市
+        :param WxCity:  城市
 注意：此欄位可能返回 null，表示取不到有效值。
         :type WxCity: str
-        :param WxCountry: 微信國家或地區
+        :param WxCountry:  國家或地區
 注意：此欄位可能返回 null，表示取不到有效值。
         :type WxCountry: str
-        :param WxNickname: 微信呢稱
+        :param WxNickname:  呢稱
 注意：此欄位可能返回 null，表示取不到有效值。
         :type WxNickname: str
-        :param WxProvince: 微信省份
+        :param WxProvince:   
 注意：此欄位可能返回 null，表示取不到有效值。
         :type WxProvince: str
         """
@@ -443,7 +443,7 @@ class DescribeCustomerResponse(AbstractModel):
         :param Model: 手機型号
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Model: str
-        :param OpenId: 微信openid
+        :param OpenId:  openid
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OpenId: str
         :param PayFeature: 消費特點
@@ -455,7 +455,7 @@ class DescribeCustomerResponse(AbstractModel):
         :param PhoneList: 手機号碼清單
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PhoneList: str
-        :param Province: 最近記錄省份
+        :param Province: 最近記錄 
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Province: str
         :param RealName: 姓名
@@ -476,7 +476,7 @@ class DescribeCustomerResponse(AbstractModel):
         :param SubWechats: 關注公衆号清單
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SubWechats: list of str
-        :param UnionId: 微信unionid
+        :param UnionId:  unionid
 注意：此欄位可能返回 null，表示取不到有效值。
         :type UnionId: str
         :param UpdateTime: 更新時間
@@ -494,7 +494,7 @@ class DescribeCustomerResponse(AbstractModel):
         :param WxNickname: 昵稱
 注意：此欄位可能返回 null，表示取不到有效值。
         :type WxNickname: str
-        :param WxProvince: 省份
+        :param WxProvince:  
 注意：此欄位可能返回 null，表示取不到有效值。
         :type WxProvince: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -584,7 +584,7 @@ class DescribeCustomersRequest(AbstractModel):
         :type RelChannelFlag: str
         :param NeedPhoneFlag: 必須存在手機 1是 0否
         :type NeedPhoneFlag: int
-        :param Province: 省份
+        :param Province:  
         :type Province: str
         :param City: 城市
         :type City: str
@@ -790,7 +790,7 @@ class DescribeProjectsRequest(AbstractModel):
         :param SearchWord: 過濾規則
         :type SearchWord: str
         :param Filters: 部門範圍過濾
-        :type Filters: :class:`tencentcloud.solar.v20181011.models.Filters`
+        :type Filters: :class:`taifucloudcloud.solar.v20181011.models.Filters`
         :param ProjectStatus: 項目狀态, 0:編輯中 1:運營中 2:已下線 3:已删除 4:審批中
         :type ProjectStatus: int
         """
@@ -848,7 +848,7 @@ class DescribeResourceTemplateHeadersRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param WxAppId: 微信公衆号appId
+        :param WxAppId:  公衆号appId
         :type WxAppId: str
         """
         self.WxAppId = None
@@ -915,10 +915,10 @@ class DescribeSubProjectResponse(AbstractModel):
         """
         :param ProductInfo: 作品訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ProductInfo: :class:`tencentcloud.solar.v20181011.models.ProductInfo`
+        :type ProductInfo: :class:`taifucloudcloud.solar.v20181011.models.ProductInfo`
         :param ActivityInfo: 活動訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ActivityInfo: :class:`tencentcloud.solar.v20181011.models.ActivityInfo`
+        :type ActivityInfo: :class:`taifucloudcloud.solar.v20181011.models.ActivityInfo`
         :param ShareTitle: 分享标題
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ShareTitle: str
@@ -1358,7 +1358,7 @@ class SendWxTouchTaskRequest(AbstractModel):
         :type SendDate: int
         :param TaskName: 任務名稱
         :type TaskName: str
-        :param WxTouchType: 微信觸達類型，text, news, smallapp, tmplmsg
+        :param WxTouchType:  觸達類型，text, news, smallapp, tmplmsg
         :type WxTouchType: str
         :param Title: 标題
         :type Title: str
@@ -1370,7 +1370,7 @@ class SendWxTouchTaskRequest(AbstractModel):
         :type SmallProgramId: str
         :param TemplateId: 範本訊息ID
         :type TemplateId: str
-        :param WxAppId: 微信公衆号appId
+        :param WxAppId:  公衆号appId
         :type WxAppId: str
         """
         self.GroupId = None

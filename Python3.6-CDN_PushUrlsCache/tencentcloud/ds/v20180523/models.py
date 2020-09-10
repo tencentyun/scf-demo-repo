@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CheckVcodeRequest(AbstractModel):
@@ -660,7 +660,7 @@ class SignContractByKeywordRequest(AbstractModel):
         :param AccountResId: 帳戶ID
         :type AccountResId: str
         :param SignKeyword: 簽署關鍵字，偏移坐标原點爲關鍵字中心
-        :type SignKeyword: :class:`tencentcloud.ds.v20180523.models.SignKeyword`
+        :type SignKeyword: :class:`taifucloudcloud.ds.v20180523.models.SignKeyword`
         :param AuthorizationTime: 授權時間（由平台自動填充）
         :type AuthorizationTime: str
         :param Position: 授權IP網址（由平台自動填充）

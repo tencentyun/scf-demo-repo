@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class BindingPolicyObjectDimension(AbstractModel):
@@ -410,7 +410,7 @@ class DescribeAccidentEventListRequest(AbstractModel):
         :type AccidentEvent: list of int
         :param AccidentStatus: 根據事件狀态過濾，0表示已恢複，1表示未恢複
         :type AccidentStatus: list of int
-        :param AccidentRegion: 根據事件地域過濾，gz表示廣州，sh表示上海等
+        :param AccidentRegion: 根據事件地域過濾，gz表示 ，sh表示 等
         :type AccidentRegion: list of str
         :param AffectResource: 根據影響資源過濾，比如ins-19a06bka
         :type AffectResource: str
@@ -483,9 +483,9 @@ class DescribeBaseMetricsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Namespace: 業務命名空間，各個雲産品的業務命名空間不同。如需獲取業務命名空間，請前往各産品監控介面文件，例如雲伺服器的命名空間，可參見 [雲伺服器監控介面](https://cloud.tencent.com/document/api/248/30385)
+        :param Namespace: 業務命名空間，各個雲産品的業務命名空間不同。如需獲取業務命名空間，請前往各産品監控介面文件，例如雲伺服器的命名空間，可參見 [雲伺服器監控介面](https://cloud.taifucloud.com/document/api/248/30385)
         :type Namespace: str
-        :param MetricName: 指标名，各個雲産品的指标名不同。如需獲取指标名，請前往各産品監控介面文件，例如雲伺服器的指标名，可參見 [雲伺服器監控介面](https://cloud.tencent.com/document/api/248/30385)
+        :param MetricName: 指标名，各個雲産品的指标名不同。如需獲取指标名，請前往各産品監控介面文件，例如雲伺服器的指标名，可參見 [雲伺服器監控介面](https://cloud.taifucloud.com/document/api/248/30385)
         :type MetricName: str
         """
         self.Namespace = None
@@ -897,7 +897,7 @@ class DescribeBindingPolicyObjectListResponse(AbstractModel):
         :type NoShieldedSum: int
         :param InstanceGroup: 綁定的實例分組訊息，沒有綁定實例分組則爲空
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type InstanceGroup: :class:`tencentcloud.monitor.v20180724.models.DescribeBindingPolicyObjectListInstanceGroup`
+        :type InstanceGroup: :class:`taifucloudcloud.monitor.v20180724.models.DescribeBindingPolicyObjectListInstanceGroup`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -990,22 +990,22 @@ class DescribePolicyConditionListConfigManual(AbstractModel):
         """
         :param CalcType: 檢測方式
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CalcType: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyConditionListConfigManualCalcType`
+        :type CalcType: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyConditionListConfigManualCalcType`
         :param CalcValue: 檢測阈值
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CalcValue: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyConditionListConfigManualCalcValue`
+        :type CalcValue: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyConditionListConfigManualCalcValue`
         :param ContinueTime: 持續時間
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ContinueTime: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyConditionListConfigManualContinueTime`
+        :type ContinueTime: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyConditionListConfigManualContinueTime`
         :param Period: 數據週期
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Period: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyConditionListConfigManualPeriod`
+        :type Period: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyConditionListConfigManualPeriod`
         :param PeriodNum: 持續週期個數
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PeriodNum: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyConditionListConfigManualPeriodNum`
+        :type PeriodNum: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyConditionListConfigManualPeriodNum`
         :param StatType: 聚合方式
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type StatType: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyConditionListConfigManualStatType`
+        :type StatType: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyConditionListConfigManualStatType`
         """
         self.CalcType = None
         self.CalcValue = None
@@ -1267,7 +1267,7 @@ class DescribePolicyConditionListMetric(AbstractModel):
         """
         :param ConfigManual: 指标配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ConfigManual: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyConditionListConfigManual`
+        :type ConfigManual: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyConditionListConfigManual`
         :param MetricId: 指标id
         :type MetricId: int
         :param MetricShowName: 指标名稱
@@ -1506,7 +1506,7 @@ class DescribePolicyGroupInfoReceiverInfo(AbstractModel):
         :type ReceiverGroupList: list of int
         :param ReceiverUserList: 告警接收人id清單
         :type ReceiverUserList: list of int
-        :param StartTime: 告警時間段開始時間。範圍[0,86400)，作爲unix時間戳轉成北京時間後去掉日期，例如7200表示"10:0:0"
+        :param StartTime: 告警時間段開始時間。範圍[0,86400)，作爲unix時間戳轉成 時間後去掉日期，例如7200表示"10:0:0"
         :type StartTime: int
         :param EndTime: 告警時間段結束時間。含義同StartTime
         :type EndTime: int
@@ -1625,10 +1625,10 @@ class DescribePolicyGroupInfoResponse(AbstractModel):
         :type ReceiverInfos: list of DescribePolicyGroupInfoReceiverInfo
         :param Callback: 用戶回調訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Callback: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyGroupInfoCallback`
+        :type Callback: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyGroupInfoCallback`
         :param ConditionsTemp: 範本策略組
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ConditionsTemp: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyGroupInfoConditionTpl`
+        :type ConditionsTemp: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyGroupInfoConditionTpl`
         :param CanSetDefault: 是否可以設置成預設策略
         :type CanSetDefault: bool
         :param IsUnionRule: 是否且規則
@@ -1743,10 +1743,10 @@ class DescribePolicyGroupListGroup(AbstractModel):
         :type ReceiverInfos: list of DescribePolicyGroupInfoReceiverInfo
         :param ConditionsTemp: 範本策略組
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ConditionsTemp: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyGroupInfoConditionTpl`
+        :type ConditionsTemp: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyGroupInfoConditionTpl`
         :param InstanceGroup: 策略組綁定的實例組訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type InstanceGroup: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyGroupListGroupInstanceGroup`
+        :type InstanceGroup: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyGroupListGroupInstanceGroup`
         :param IsUnionRule: 且或規則标識, 0表示或規則(任意一條規則滿足阈值條件就告警), 1表示且規則(所有規則都滿足阈值條件才告警)
 注意：此欄位可能返回 null，表示取不到有效值。
         :type IsUnionRule: int
@@ -2278,7 +2278,7 @@ class DescribeProductEventListResponse(AbstractModel):
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Events: list of DescribeProductEventListEvents
         :param OverView: 事件統計
-        :type OverView: :class:`tencentcloud.monitor.v20180724.models.DescribeProductEventListOverView`
+        :type OverView: :class:`taifucloudcloud.monitor.v20180724.models.DescribeProductEventListOverView`
         :param Total: 事件總數
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Total: int
@@ -2352,7 +2352,7 @@ class GetMonitorDataRequest(AbstractModel):
         """
         :param Namespace: 命名空間，每個雲産品會有一個命名空間
         :type Namespace: str
-        :param MetricName: 指标名稱，各個雲産品的詳細指标說明請參閱各個産品[監控介面](https://cloud.tencent.com/document/product/248/30384)文件
+        :param MetricName: 指标名稱，各個雲産品的詳細指标說明請參閱各個産品[監控介面](https://cloud.taifucloud.com/document/product/248/30384)文件
         :type MetricName: str
         :param Instances: 實例對象的維度組合
         :type Instances: list of Instance
@@ -2534,7 +2534,7 @@ class MetricSet(AbstractModel):
         :param Periods: 統計週期内指标方式
         :type Periods: list of PeriodsSt
         :param Meaning: 統計指标含義解釋
-        :type Meaning: :class:`tencentcloud.monitor.v20180724.models.MetricObjectMeaning`
+        :type Meaning: :class:`taifucloudcloud.monitor.v20180724.models.MetricObjectMeaning`
         :param Dimensions: 維度描述訊息
         :type Dimensions: list of DimensionsDesc
         """
@@ -2697,7 +2697,7 @@ class ReceiverInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 告警時間段開始時間。範圍[0,86400)，作爲unix時間戳轉成北京時間後去掉日期，例如7200表示"10:0:0"
+        :param StartTime: 告警時間段開始時間。範圍[0,86400)，作爲unix時間戳轉成 時間後去掉日期，例如7200表示"10:0:0"
         :type StartTime: int
         :param EndTime: 告警時間段結束時間。含義同StartTime
         :type EndTime: int

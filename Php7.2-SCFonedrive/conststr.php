@@ -396,8 +396,8 @@ $constStr = [
     ],
     'Move' => [
         'en-us' => 'Move',
-        'zh-cn' => '移動',
-        'ja' => '移動する',
+        'zh-cn' => ' ',
+        'ja' => ' する',
         'ko-kr' => '이동',
         'fa' => 'انتقال',
     ],
@@ -410,7 +410,7 @@ $constStr = [
     ],
     'CannotMove' => [
         'en-us' => 'Can not Move!',
-        'zh-cn' => '不能移動！',
+        'zh-cn' => '不能 ！',
         'ja' => '動かない！',
         'ko-kr' => '움직일 수 없어!',
         'fa' => 'نمی‌تواند منتقل شود!',
@@ -682,7 +682,7 @@ $constStr = [
     'DriveVerCN' => [
         'en-us' => 'Onedrive in China',
         'zh-cn' => '世紀互聯版',
-        'ja' => '中國のOnedrive',
+        'ja' => ' のOnedrive',
         'ko-kr' => '중국 Onedrive',
         'fa' => 'Onedrive در چین',
     ],

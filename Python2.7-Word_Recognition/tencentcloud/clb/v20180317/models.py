@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AutoRewriteRequest(AbstractModel):
@@ -444,9 +444,9 @@ class CreateListenerRequest(AbstractModel):
         :param ListenerNames: 要創建的監聽器名稱清單，名稱與Ports數組按序一一對應，如不需立即命名，則無需提供此參數
         :type ListenerNames: list of str
         :param HealthCheck: 健康檢查相關參數，此參數僅适用于TCP/UDP/TCP_SSL監聽器
-        :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
+        :type HealthCheck: :class:`taifucloudcloud.clb.v20180317.models.HealthCheck`
         :param Certificate: 證書相關訊息，此參數僅适用于HTTPS/TCP_SSL監聽器
-        :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateInput`
+        :type Certificate: :class:`taifucloudcloud.clb.v20180317.models.CertificateInput`
         :param SessionExpireTime: 會話保持時間，單位：秒。可選值：30~3600，預設 0，表示不開啓。此參數僅适用于TCP/UDP監聽器。
         :type SessionExpireTime: int
         :param Scheduler: 監聽器轉發的方式。可選值：WRR、LEAST_CONN
@@ -1504,10 +1504,10 @@ class Listener(AbstractModel):
         :type Port: int
         :param Certificate: 監聽器綁定的證書訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateOutput`
+        :type Certificate: :class:`taifucloudcloud.clb.v20180317.models.CertificateOutput`
         :param HealthCheck: 監聽器的健康檢查訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
+        :type HealthCheck: :class:`taifucloudcloud.clb.v20180317.models.HealthCheck`
         :param Scheduler: 請求的調度方式
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Scheduler: str
@@ -1703,7 +1703,7 @@ OPEN：公網屬性， INTERNAL：内網屬性。
         :type SecureGroups: list of str
         :param TargetRegionInfo: 負載均衡實例綁定的後端設備的基本訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TargetRegionInfo: :class:`tencentcloud.clb.v20180317.models.TargetRegionInfo`
+        :type TargetRegionInfo: :class:`taifucloudcloud.clb.v20180317.models.TargetRegionInfo`
         :param AnycastZone: anycast負載均衡的發布域，對于非anycast的負載均衡，此欄位返回爲空字串
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AnycastZone: str
@@ -1915,9 +1915,9 @@ class ModifyListenerRequest(AbstractModel):
         :param SessionExpireTime: 會話保持時間，單位：秒。可選值：30~3600，預設 0，表示不開啓。此參數僅适用于TCP/UDP監聽器。
         :type SessionExpireTime: int
         :param HealthCheck: 健康檢查相關參數，此參數僅适用于TCP/UDP/TCP_SSL監聽器
-        :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
+        :type HealthCheck: :class:`taifucloudcloud.clb.v20180317.models.HealthCheck`
         :param Certificate: 證書相關訊息，此參數僅适用于HTTPS/TCP_SSL監聽器
-        :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateInput`
+        :type Certificate: :class:`taifucloudcloud.clb.v20180317.models.CertificateInput`
         :param Scheduler: 監聽器轉發的方式。可選值：WRR、LEAST_CONN
 分别表示按權重輪詢、最小連接數， 預設爲 WRR。
         :type Scheduler: str
@@ -1974,7 +1974,7 @@ class ModifyLoadBalancerAttributesRequest(AbstractModel):
         :param LoadBalancerName: 負載均衡實例名稱
         :type LoadBalancerName: str
         :param TargetRegionInfo: 負載均衡綁定的後端服務的地域訊息
-        :type TargetRegionInfo: :class:`tencentcloud.clb.v20180317.models.TargetRegionInfo`
+        :type TargetRegionInfo: :class:`taifucloudcloud.clb.v20180317.models.TargetRegionInfo`
         """
         self.LoadBalancerId = None
         self.LoadBalancerName = None
@@ -2022,7 +2022,7 @@ class ModifyRuleRequest(AbstractModel):
         :param Url: 轉發規則的新的轉發路徑，如不需修改Url，則不需提供此參數
         :type Url: str
         :param HealthCheck: 健康檢查訊息
-        :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
+        :type HealthCheck: :class:`taifucloudcloud.clb.v20180317.models.HealthCheck`
         :param Scheduler: 規則的請求轉發方式
         :type Scheduler: str
         :param SessionExpireTime: 會話保持時間
@@ -2433,9 +2433,9 @@ class RuleInput(AbstractModel):
         :param SessionExpireTime: 會話保持時間
         :type SessionExpireTime: int
         :param HealthCheck: 健康檢查訊息
-        :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
+        :type HealthCheck: :class:`taifucloudcloud.clb.v20180317.models.HealthCheck`
         :param Certificate: 證書訊息
-        :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateInput`
+        :type Certificate: :class:`taifucloudcloud.clb.v20180317.models.CertificateInput`
         :param Scheduler: 規則的請求轉發方式
         :type Scheduler: str
         """
@@ -2479,17 +2479,17 @@ class RuleOutput(AbstractModel):
         :type SessionExpireTime: int
         :param HealthCheck: 健康檢查訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
+        :type HealthCheck: :class:`taifucloudcloud.clb.v20180317.models.HealthCheck`
         :param Certificate: 證書訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateOutput`
+        :type Certificate: :class:`taifucloudcloud.clb.v20180317.models.CertificateOutput`
         :param Scheduler: 規則的請求轉發方式
         :type Scheduler: str
         :param ListenerId: 轉發規則所屬的監聽器 ID
         :type ListenerId: str
         :param RewriteTarget: 轉發規則的重定向目标訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type RewriteTarget: :class:`tencentcloud.clb.v20180317.models.RewriteTarget`
+        :type RewriteTarget: :class:`taifucloudcloud.clb.v20180317.models.RewriteTarget`
         :param HttpGzip: 是否開啓gzip
         :type HttpGzip: bool
         :param BeAutoCreated: 轉發規則是否爲自動創建

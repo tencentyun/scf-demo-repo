@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.gaap.v20180529 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.gaap.v20180529 import models
 
 
 class GaapClient(AbstractClient):
     _apiVersion = '2018-05-29'
-    _endpoint = 'gaap.tencentcloudapi.com'
+    _endpoint = 'gaap.taifucloudcloudapi.com'
 
 
     def AddRealServers(self, request):
         """添加源站(服務器)訊息，支援IP或域名
 
         :param request: Request instance for AddRealServers.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.AddRealServersRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.AddRealServersResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.AddRealServersRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.AddRealServersResponse`
 
         """
         try:
@@ -58,8 +58,8 @@ class GaapClient(AbstractClient):
         注意：本介面會解綁之前綁定的源站，綁定本次調用所選擇的源站。例如：原來綁定的源站爲A，B，C，本次調用的選擇綁定的源站爲C，D，E，那麽調用後所綁定的源站爲C，D，E。
 
         :param request: Request instance for BindListenerRealServers.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.BindListenerRealServersRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.BindListenerRealServersResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.BindListenerRealServersRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.BindListenerRealServersResponse`
 
         """
         try:
@@ -86,8 +86,8 @@ class GaapClient(AbstractClient):
         """該介面用于7層監聽器的轉發規則綁定源站。注意：本介面會解綁之前綁定的源站，綁定本次調用所選擇的源站。
 
         :param request: Request instance for BindRuleRealServers.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.BindRuleRealServersRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.BindRuleRealServersResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.BindRuleRealServersRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.BindRuleRealServersResponse`
 
         """
         try:
@@ -114,8 +114,8 @@ class GaapClient(AbstractClient):
         """本介面(CheckProxyCreate)用于查詢能否創建指定配置的加速通道。
 
         :param request: Request instance for CheckProxyCreate.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.CheckProxyCreateRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.CheckProxyCreateResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.CheckProxyCreateRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.CheckProxyCreateResponse`
 
         """
         try:
@@ -142,8 +142,8 @@ class GaapClient(AbstractClient):
         """本介面（CloseProxies）用于關閉通道。通道關閉後，不再産生流量，但每天仍然收取通道基礎配置費用。
 
         :param request: Request instance for CloseProxies.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.CloseProxiesRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.CloseProxiesResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.CloseProxiesRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.CloseProxiesResponse`
 
         """
         try:
@@ -170,8 +170,8 @@ class GaapClient(AbstractClient):
         """關閉安全策略
 
         :param request: Request instance for CloseSecurityPolicy.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.CloseSecurityPolicyRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.CloseSecurityPolicyResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.CloseSecurityPolicyRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.CloseSecurityPolicyResponse`
 
         """
         try:
@@ -198,8 +198,8 @@ class GaapClient(AbstractClient):
         """本介面（CreateCertificate）用于創建Gaap相關證書和配置文件，包括基礎認證配置文件，用戶端CA證書，服務器SSL證書，Gaap SSL證書以及源站CA證書。
 
         :param request: Request instance for CreateCertificate.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.CreateCertificateRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.CreateCertificateResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateCertificateRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.CreateCertificateResponse`
 
         """
         try:
@@ -227,8 +227,8 @@ class GaapClient(AbstractClient):
         該介面僅支援version3.0的通道。
 
         :param request: Request instance for CreateDomain.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.CreateDomainRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.CreateDomainResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateDomainRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.CreateDomainResponse`
 
         """
         try:
@@ -255,8 +255,8 @@ class GaapClient(AbstractClient):
         """定制域名指定錯誤碼的錯誤響應
 
         :param request: Request instance for CreateDomainErrorPageInfo.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.CreateDomainErrorPageInfoRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.CreateDomainErrorPageInfoResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateDomainErrorPageInfoRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.CreateDomainErrorPageInfoResponse`
 
         """
         try:
@@ -283,8 +283,8 @@ class GaapClient(AbstractClient):
         """該介面（CreateHTTPListener）用于在通道實例下創建HTTP協議類型的監聽器。
 
         :param request: Request instance for CreateHTTPListener.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.CreateHTTPListenerRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.CreateHTTPListenerResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateHTTPListenerRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.CreateHTTPListenerResponse`
 
         """
         try:
@@ -311,8 +311,8 @@ class GaapClient(AbstractClient):
         """該介面（CreateHTTPSListener）用于在通道實例下創建HTTPS協議類型的監聽器。
 
         :param request: Request instance for CreateHTTPSListener.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.CreateHTTPSListenerRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.CreateHTTPSListenerResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateHTTPSListenerRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.CreateHTTPSListenerResponse`
 
         """
         try:
@@ -339,8 +339,8 @@ class GaapClient(AbstractClient):
         """本介面（CreateProxy）用于創建/複制一個指定配置的加速通道。當複制通道時，需要設置新通道的基本配置參數，并設置ClonedProxyId來指定被複制的通道。
 
         :param request: Request instance for CreateProxy.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.CreateProxyRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.CreateProxyResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateProxyRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.CreateProxyResponse`
 
         """
         try:
@@ -367,8 +367,8 @@ class GaapClient(AbstractClient):
         """本介面（CreateProxyGroup）用于創建通道組。
 
         :param request: Request instance for CreateProxyGroup.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.CreateProxyGroupRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.CreateProxyGroupResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateProxyGroupRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.CreateProxyGroupResponse`
 
         """
         try:
@@ -395,8 +395,8 @@ class GaapClient(AbstractClient):
         """本介面（CreateProxyGroupDomain）用于創建通道組域名，并開啓域名解析。
 
         :param request: Request instance for CreateProxyGroupDomain.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.CreateProxyGroupDomainRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.CreateProxyGroupDomainResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateProxyGroupDomainRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.CreateProxyGroupDomainResponse`
 
         """
         try:
@@ -423,8 +423,8 @@ class GaapClient(AbstractClient):
         """該介面（CreateRule）用于創建HTTP/HTTPS監聽器轉發規則。
 
         :param request: Request instance for CreateRule.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.CreateRuleRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.CreateRuleResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateRuleRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.CreateRuleResponse`
 
         """
         try:
@@ -451,8 +451,8 @@ class GaapClient(AbstractClient):
         """創建安全策略
 
         :param request: Request instance for CreateSecurityPolicy.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.CreateSecurityPolicyRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.CreateSecurityPolicyResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateSecurityPolicyRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.CreateSecurityPolicyResponse`
 
         """
         try:
@@ -479,8 +479,8 @@ class GaapClient(AbstractClient):
         """添加安全策略規則
 
         :param request: Request instance for CreateSecurityRules.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.CreateSecurityRulesRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.CreateSecurityRulesResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateSecurityRulesRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.CreateSecurityRulesResponse`
 
         """
         try:
@@ -507,8 +507,8 @@ class GaapClient(AbstractClient):
         """該介面（CreateTCPListeners）用于批次創建單通道或者通道組的TCP協議類型的監聽器。
 
         :param request: Request instance for CreateTCPListeners.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.CreateTCPListenersRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.CreateTCPListenersResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateTCPListenersRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.CreateTCPListenersResponse`
 
         """
         try:
@@ -535,8 +535,8 @@ class GaapClient(AbstractClient):
         """該介面（CreateUDPListeners）用于批次創建單通道或者通道組的UDP協議類型的監聽器。
 
         :param request: Request instance for CreateUDPListeners.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.CreateUDPListenersRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.CreateUDPListenersResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateUDPListenersRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.CreateUDPListenersResponse`
 
         """
         try:
@@ -563,8 +563,8 @@ class GaapClient(AbstractClient):
         """本介面（DeleteCertificate）用于删除證書。
 
         :param request: Request instance for DeleteCertificate.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DeleteCertificateRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DeleteCertificateResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DeleteCertificateRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DeleteCertificateResponse`
 
         """
         try:
@@ -591,8 +591,8 @@ class GaapClient(AbstractClient):
         """本介面（DeleteDomain）僅适用于7層監聽器，用于删除該監聽器下對應域名及域名下的所有規則，所有已綁定源站的規則将自動解綁。
 
         :param request: Request instance for DeleteDomain.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DeleteDomainRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DeleteDomainResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DeleteDomainRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DeleteDomainResponse`
 
         """
         try:
@@ -619,8 +619,8 @@ class GaapClient(AbstractClient):
         """删除域名的定制錯誤
 
         :param request: Request instance for DeleteDomainErrorPageInfo.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DeleteDomainErrorPageInfoRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DeleteDomainErrorPageInfoResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DeleteDomainErrorPageInfoRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DeleteDomainErrorPageInfoResponse`
 
         """
         try:
@@ -647,8 +647,8 @@ class GaapClient(AbstractClient):
         """該介面（DeleteListeners）用于批次删除通道或通道組的監聽器，包括4/7層監聽器。
 
         :param request: Request instance for DeleteListeners.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DeleteListenersRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DeleteListenersResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DeleteListenersRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DeleteListenersResponse`
 
         """
         try:
@@ -675,8 +675,8 @@ class GaapClient(AbstractClient):
         """本介面（DeleteProxyGroup）用于删除通道組。
 
         :param request: Request instance for DeleteProxyGroup.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DeleteProxyGroupRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DeleteProxyGroupResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DeleteProxyGroupRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DeleteProxyGroupResponse`
 
         """
         try:
@@ -703,8 +703,8 @@ class GaapClient(AbstractClient):
         """該介面（DeleteRule）用于删除HTTP/HTTPS監聽器的轉發規則。
 
         :param request: Request instance for DeleteRule.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DeleteRuleRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DeleteRuleResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DeleteRuleRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DeleteRuleResponse`
 
         """
         try:
@@ -731,8 +731,8 @@ class GaapClient(AbstractClient):
         """删除安全策略
 
         :param request: Request instance for DeleteSecurityPolicy.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DeleteSecurityPolicyRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DeleteSecurityPolicyResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DeleteSecurityPolicyRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DeleteSecurityPolicyResponse`
 
         """
         try:
@@ -759,8 +759,8 @@ class GaapClient(AbstractClient):
         """删除安全策略規則
 
         :param request: Request instance for DeleteSecurityRules.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DeleteSecurityRulesRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DeleteSecurityRulesResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DeleteSecurityRulesRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DeleteSecurityRulesResponse`
 
         """
         try:
@@ -787,8 +787,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeAccessRegions）用于查詢加速區域，即用戶端接入區域。
 
         :param request: Request instance for DescribeAccessRegions.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeAccessRegionsRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeAccessRegionsResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeAccessRegionsRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeAccessRegionsResponse`
 
         """
         try:
@@ -815,8 +815,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeAccessRegionsByDestRegion）根據源站區域查詢可用的加速區域清單
 
         :param request: Request instance for DescribeAccessRegionsByDestRegion.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeAccessRegionsByDestRegionRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeAccessRegionsByDestRegionResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeAccessRegionsByDestRegionRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeAccessRegionsByDestRegionResponse`
 
         """
         try:
@@ -843,8 +843,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeCertificateDetail）用于查詢證書詳情，包括證書ID，證書名字，證書類型，證書内容以及金鑰等訊息。
 
         :param request: Request instance for DescribeCertificateDetail.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeCertificateDetailRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeCertificateDetailResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeCertificateDetailRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeCertificateDetailResponse`
 
         """
         try:
@@ -871,8 +871,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeCertificates）用來查詢可以使用的證書清單。
 
         :param request: Request instance for DescribeCertificates.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeCertificatesRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeCertificatesResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeCertificatesRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeCertificatesResponse`
 
         """
         try:
@@ -899,8 +899,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeCountryAreaMapping）用于獲取國家地區編碼映射表。
 
         :param request: Request instance for DescribeCountryAreaMapping.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeCountryAreaMappingRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeCountryAreaMappingResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeCountryAreaMappingRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeCountryAreaMappingResponse`
 
         """
         try:
@@ -927,8 +927,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeDestRegions）用于查詢源站區域，即源站服務器所在區域。
 
         :param request: Request instance for DescribeDestRegions.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeDestRegionsRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeDestRegionsResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeDestRegionsRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeDestRegionsResponse`
 
         """
         try:
@@ -955,8 +955,8 @@ class GaapClient(AbstractClient):
         """查詢目前定制域名的錯誤響應
 
         :param request: Request instance for DescribeDomainErrorPageInfo.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeDomainErrorPageInfoRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeDomainErrorPageInfoResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeDomainErrorPageInfoRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeDomainErrorPageInfoResponse`
 
         """
         try:
@@ -983,8 +983,8 @@ class GaapClient(AbstractClient):
         """根據定制錯誤ID查詢錯誤響應
 
         :param request: Request instance for DescribeDomainErrorPageInfoByIds.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeDomainErrorPageInfoByIdsRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeDomainErrorPageInfoByIdsResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeDomainErrorPageInfoByIdsRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeDomainErrorPageInfoByIdsResponse`
 
         """
         try:
@@ -1011,8 +1011,8 @@ class GaapClient(AbstractClient):
         """該介面爲内部介面，用于查詢可以獲取統計數據的通道組和通道訊息
 
         :param request: Request instance for DescribeGroupAndStatisticsProxy.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeGroupAndStatisticsProxyRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeGroupAndStatisticsProxyResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeGroupAndStatisticsProxyRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeGroupAndStatisticsProxyResponse`
 
         """
         try:
@@ -1039,8 +1039,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeGroupDomainConfig）用于獲取通道組域名解析配置詳情。
 
         :param request: Request instance for DescribeGroupDomainConfig.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeGroupDomainConfigRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeGroupDomainConfigResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeGroupDomainConfigRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeGroupDomainConfigResponse`
 
         """
         try:
@@ -1067,8 +1067,8 @@ class GaapClient(AbstractClient):
         """該介面（DescribeHTTPListeners）用來查詢HTTP監聽器訊息。
 
         :param request: Request instance for DescribeHTTPListeners.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeHTTPListenersRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeHTTPListenersResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeHTTPListenersRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeHTTPListenersResponse`
 
         """
         try:
@@ -1095,8 +1095,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeHTTPSListeners）用來查詢HTTPS監聽器訊息。
 
         :param request: Request instance for DescribeHTTPSListeners.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeHTTPSListenersRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeHTTPSListenersResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeHTTPSListenersRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeHTTPSListenersResponse`
 
         """
         try:
@@ -1123,8 +1123,8 @@ class GaapClient(AbstractClient):
         """該介面（DescribeListenerRealServers）用于查詢TCP/UDP監聽器源站清單，包括該監聽器已經綁定的源站清單以及可以綁定的源站清單。
 
         :param request: Request instance for DescribeListenerRealServers.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeListenerRealServersRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeListenerRealServersResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeListenerRealServersRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeListenerRealServersResponse`
 
         """
         try:
@@ -1151,8 +1151,8 @@ class GaapClient(AbstractClient):
         """該介面用于查詢監聽器統計數據，包括出入頻寬，出入包量，并發數據。支援300秒, 3600秒和86400秒的細粒度，取值爲細粒度範圍内最大值。
 
         :param request: Request instance for DescribeListenerStatistics.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeListenerStatisticsRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeListenerStatisticsResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeListenerStatisticsRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeListenerStatisticsResponse`
 
         """
         try:
@@ -1179,8 +1179,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeProxies）用于查詢通道實例清單。
 
         :param request: Request instance for DescribeProxies.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeProxiesRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeProxiesResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxiesRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxiesResponse`
 
         """
         try:
@@ -1207,8 +1207,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeProxiesStatus）用于查詢通道狀态清單。
 
         :param request: Request instance for DescribeProxiesStatus.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeProxiesStatusRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeProxiesStatusResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxiesStatusRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxiesStatusResponse`
 
         """
         try:
@@ -1235,8 +1235,8 @@ class GaapClient(AbstractClient):
         """該介面爲内部介面，用于查詢可以獲取統計數據的通道和監聽器訊息
 
         :param request: Request instance for DescribeProxyAndStatisticsListeners.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyAndStatisticsListenersRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyAndStatisticsListenersResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyAndStatisticsListenersRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyAndStatisticsListenersResponse`
 
         """
         try:
@@ -1263,8 +1263,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeProxyDetail）用于查詢通道詳情。
 
         :param request: Request instance for DescribeProxyDetail.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyDetailRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyDetailResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyDetailRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyDetailResponse`
 
         """
         try:
@@ -1291,8 +1291,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeProxyGroupDetails）用于查詢通道組詳情。
 
         :param request: Request instance for DescribeProxyGroupDetails.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyGroupDetailsRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyGroupDetailsResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyGroupDetailsRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyGroupDetailsResponse`
 
         """
         try:
@@ -1319,8 +1319,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeProxyGroupList）用于拉取通道組清單及各通道組基本訊息。
 
         :param request: Request instance for DescribeProxyGroupList.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyGroupListRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyGroupListResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyGroupListRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyGroupListResponse`
 
         """
         try:
@@ -1347,8 +1347,8 @@ class GaapClient(AbstractClient):
         """該介面用于查詢監聽器統計數據，包括出入頻寬，出入包量，并發數據。支援300, 3600和86400的細粒度，取值爲細粒度範圍内最大值。
 
         :param request: Request instance for DescribeProxyGroupStatistics.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyGroupStatisticsRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyGroupStatisticsResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyGroupStatisticsRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyGroupStatisticsResponse`
 
         """
         try:
@@ -1375,8 +1375,8 @@ class GaapClient(AbstractClient):
         """該介面用于查詢監聽器統計數據，包括出入頻寬，出入包量，并發，丢包和延遲數據。支援300, 3600和86400的細粒度，取值爲細粒度範圍内最大值。
 
         :param request: Request instance for DescribeProxyStatistics.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyStatisticsRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeProxyStatisticsResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyStatisticsRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyStatisticsResponse`
 
         """
         try:
@@ -1403,8 +1403,8 @@ class GaapClient(AbstractClient):
         """該介面（DescribeRealServerStatistics）用于查詢源站健康檢查結果的統計數據。源站狀态展示位爲1：正常或者0：異常。查詢的源站需要在監聽器或者規則上進行了綁定，查詢時需指定綁定的監聽器或者規則ID。該介面支援最近1，3，6，12，24小時内1分鍾細粒度的源站狀态統計數據展示。
 
         :param request: Request instance for DescribeRealServerStatistics.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeRealServerStatisticsRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeRealServerStatisticsResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRealServerStatisticsRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRealServerStatisticsResponse`
 
         """
         try:
@@ -1431,8 +1431,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeRealServers）用于查詢源站訊息，可以根據項目名查詢所有的源站訊息，此外支援指定IP機或者域名的源站模糊查詢。
 
         :param request: Request instance for DescribeRealServers.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeRealServersRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeRealServersResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRealServersRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRealServersResponse`
 
         """
         try:
@@ -1459,8 +1459,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeRealServersStatus）用于查詢源站是否已被規則或者監聽器綁定
 
         :param request: Request instance for DescribeRealServersStatus.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeRealServersStatusRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeRealServersStatusResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRealServersStatusRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRealServersStatusResponse`
 
         """
         try:
@@ -1487,8 +1487,8 @@ class GaapClient(AbstractClient):
         """該介面（DescribeRegionAndPrice）用于獲取源站區域和頻寬梯度價格
 
         :param request: Request instance for DescribeRegionAndPrice.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeRegionAndPriceRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeRegionAndPriceResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRegionAndPriceRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRegionAndPriceResponse`
 
         """
         try:
@@ -1515,8 +1515,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeResourcesByTag）用于根據标簽來查詢對應的資源訊息，包括通道，通道組和源站。
 
         :param request: Request instance for DescribeResourcesByTag.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeResourcesByTagRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeResourcesByTagResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeResourcesByTagRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeResourcesByTagResponse`
 
         """
         try:
@@ -1543,8 +1543,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeRuleRealServers）用于查詢轉發規則相關的源站訊息， 包括該規則可綁定的源站訊息和已綁定的源站訊息。
 
         :param request: Request instance for DescribeRuleRealServers.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeRuleRealServersRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeRuleRealServersResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRuleRealServersRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRuleRealServersResponse`
 
         """
         try:
@@ -1571,8 +1571,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeRules）用于查詢監聽器下的所有規則訊息，包括規則域名，路徑以及該規則下所綁定的源站清單。當通道版本爲3.0時，該介面會返回該域名對應的高級認證配置訊息。
 
         :param request: Request instance for DescribeRules.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeRulesRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeRulesResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRulesRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRulesResponse`
 
         """
         try:
@@ -1599,8 +1599,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeRulesByRuleIds）用于根據規則ID拉取規則訊息清單。支援一個或者多個規則訊息的拉取。一次最多支援10個規則訊息的拉取。
 
         :param request: Request instance for DescribeRulesByRuleIds.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeRulesByRuleIdsRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeRulesByRuleIdsResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRulesByRuleIdsRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRulesByRuleIdsResponse`
 
         """
         try:
@@ -1627,8 +1627,8 @@ class GaapClient(AbstractClient):
         """獲取安全策略詳情
 
         :param request: Request instance for DescribeSecurityPolicyDetail.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeSecurityPolicyDetailRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeSecurityPolicyDetailResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeSecurityPolicyDetailRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeSecurityPolicyDetailResponse`
 
         """
         try:
@@ -1655,8 +1655,8 @@ class GaapClient(AbstractClient):
         """本介面（DescribeSecurityRules）用于根據安全規則ID查詢安全規則詳情清單。支援一個或多個安全規則的查詢。一次最多支援20個安全規則的查詢。
 
         :param request: Request instance for DescribeSecurityRules.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeSecurityRulesRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeSecurityRulesResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeSecurityRulesRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeSecurityRulesResponse`
 
         """
         try:
@@ -1683,8 +1683,8 @@ class GaapClient(AbstractClient):
         """該介面（DescribeTCPListeners）用于查詢單通道或者通道組下的TCP監聽器訊息。
 
         :param request: Request instance for DescribeTCPListeners.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeTCPListenersRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeTCPListenersResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeTCPListenersRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeTCPListenersResponse`
 
         """
         try:
@@ -1711,8 +1711,8 @@ class GaapClient(AbstractClient):
         """該介面（DescribeUDPListeners）用于查詢單通道或者通道組下的UDP監聽器訊息
 
         :param request: Request instance for DescribeUDPListeners.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DescribeUDPListenersRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DescribeUDPListenersResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeUDPListenersRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DescribeUDPListenersResponse`
 
         """
         try:
@@ -1739,8 +1739,8 @@ class GaapClient(AbstractClient):
         """本介面（DestroyProxies）用于銷毀。通道銷毀後，不再産生任何費用。
 
         :param request: Request instance for DestroyProxies.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.DestroyProxiesRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.DestroyProxiesResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.DestroyProxiesRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.DestroyProxiesResponse`
 
         """
         try:
@@ -1767,8 +1767,8 @@ class GaapClient(AbstractClient):
         """本介面（InquiryPriceCreateProxy）用于創建加速通道詢價。
 
         :param request: Request instance for InquiryPriceCreateProxy.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.InquiryPriceCreateProxyRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.InquiryPriceCreateProxyResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.InquiryPriceCreateProxyRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.InquiryPriceCreateProxyResponse`
 
         """
         try:
@@ -1795,8 +1795,8 @@ class GaapClient(AbstractClient):
         """本介面（ModifyCertificate）用于修改監聽器下的域名對應的證書。該介面僅适用于version3.0的通道。
 
         :param request: Request instance for ModifyCertificate.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyCertificateRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.ModifyCertificateResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyCertificateRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.ModifyCertificateResponse`
 
         """
         try:
@@ -1823,8 +1823,8 @@ class GaapClient(AbstractClient):
         """本介面（ModifyCertificateAttributes）用于修改證書，包括證明名字以及證書内容。
 
         :param request: Request instance for ModifyCertificateAttributes.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyCertificateAttributesRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.ModifyCertificateAttributesResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyCertificateAttributesRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.ModifyCertificateAttributesResponse`
 
         """
         try:
@@ -1851,8 +1851,8 @@ class GaapClient(AbstractClient):
         """本介面（ModifyDomain）用于監聽器下的域名。當通道版本爲3.0時，支援對該域名所對應的證書修改。
 
         :param request: Request instance for ModifyDomain.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyDomainRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.ModifyDomainResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyDomainRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.ModifyDomainResponse`
 
         """
         try:
@@ -1879,8 +1879,8 @@ class GaapClient(AbstractClient):
         """本介面（ModifyGroupDomainConfig）用于配置通道組就近接入域名。
 
         :param request: Request instance for ModifyGroupDomainConfig.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyGroupDomainConfigRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.ModifyGroupDomainConfigResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyGroupDomainConfigRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.ModifyGroupDomainConfigResponse`
 
         """
         try:
@@ -1908,8 +1908,8 @@ class GaapClient(AbstractClient):
         注意：通道組通道暫時不支援HTTP/HTTPS監聽器。
 
         :param request: Request instance for ModifyHTTPListenerAttribute.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyHTTPListenerAttributeRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.ModifyHTTPListenerAttributeResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyHTTPListenerAttributeRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.ModifyHTTPListenerAttributeResponse`
 
         """
         try:
@@ -1936,8 +1936,8 @@ class GaapClient(AbstractClient):
         """該介面（ModifyHTTPSListenerAttribute）用于修改HTTPS監聽器配置，當前不支援通道組和v1版本通道。
 
         :param request: Request instance for ModifyHTTPSListenerAttribute.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyHTTPSListenerAttributeRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.ModifyHTTPSListenerAttributeResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyHTTPSListenerAttributeRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.ModifyHTTPSListenerAttributeResponse`
 
         """
         try:
@@ -1964,8 +1964,8 @@ class GaapClient(AbstractClient):
         """本介面（ModifyProxiesAttribute）用于修改實例的屬性（目前只支援修改通道的名稱）。
 
         :param request: Request instance for ModifyProxiesAttribute.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyProxiesAttributeRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.ModifyProxiesAttributeResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyProxiesAttributeRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.ModifyProxiesAttributeResponse`
 
         """
         try:
@@ -1992,8 +1992,8 @@ class GaapClient(AbstractClient):
         """本介面（ModifyProxiesProject）用于修改通道所屬項目。
 
         :param request: Request instance for ModifyProxiesProject.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyProxiesProjectRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.ModifyProxiesProjectResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyProxiesProjectRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.ModifyProxiesProjectResponse`
 
         """
         try:
@@ -2020,8 +2020,8 @@ class GaapClient(AbstractClient):
         """本介面（ModifyProxyConfiguration）用于修改通道的配置。根據當前業務的容量需求，擴容或縮容相關通道的配置。僅支援Scalarable爲1的通道,Scalarable可通過介面DescribeProxies獲取。
 
         :param request: Request instance for ModifyProxyConfiguration.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyProxyConfigurationRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.ModifyProxyConfigurationResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyProxyConfigurationRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.ModifyProxyConfigurationResponse`
 
         """
         try:
@@ -2048,8 +2048,8 @@ class GaapClient(AbstractClient):
         """本介面（ModifyProxyGroupAttribute）用于修改通道組屬性，目前僅支援修改通道組名稱。
 
         :param request: Request instance for ModifyProxyGroupAttribute.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyProxyGroupAttributeRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.ModifyProxyGroupAttributeResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyProxyGroupAttributeRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.ModifyProxyGroupAttributeResponse`
 
         """
         try:
@@ -2076,8 +2076,8 @@ class GaapClient(AbstractClient):
         """本介面（ModifyRealServerName）用于修改源站的名稱
 
         :param request: Request instance for ModifyRealServerName.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyRealServerNameRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.ModifyRealServerNameResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyRealServerNameRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.ModifyRealServerNameResponse`
 
         """
         try:
@@ -2104,8 +2104,8 @@ class GaapClient(AbstractClient):
         """本介面（ModifyRuleAttribute）用于修改轉發規則的訊息，包括健康檢查的配置以及轉發策略。
 
         :param request: Request instance for ModifyRuleAttribute.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyRuleAttributeRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.ModifyRuleAttributeResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyRuleAttributeRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.ModifyRuleAttributeResponse`
 
         """
         try:
@@ -2132,8 +2132,8 @@ class GaapClient(AbstractClient):
         """修改安全策略規則名
 
         :param request: Request instance for ModifySecurityRule.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.ModifySecurityRuleRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.ModifySecurityRuleResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifySecurityRuleRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.ModifySecurityRuleResponse`
 
         """
         try:
@@ -2160,8 +2160,8 @@ class GaapClient(AbstractClient):
         """本介面（ModifyTCPListenerAttribute）用于修改通道實例下TCP監聽器配置，包括健康檢查的配置，調度策略。
 
         :param request: Request instance for ModifyTCPListenerAttribute.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyTCPListenerAttributeRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.ModifyTCPListenerAttributeResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyTCPListenerAttributeRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.ModifyTCPListenerAttributeResponse`
 
         """
         try:
@@ -2188,8 +2188,8 @@ class GaapClient(AbstractClient):
         """本介面（ModifyUDPListenerAttribute）用于修改通道實例下UDP監聽器配置，包括監聽器名稱和調度策略的修改。
 
         :param request: Request instance for ModifyUDPListenerAttribute.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.ModifyUDPListenerAttributeRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.ModifyUDPListenerAttributeResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyUDPListenerAttributeRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.ModifyUDPListenerAttributeResponse`
 
         """
         try:
@@ -2216,8 +2216,8 @@ class GaapClient(AbstractClient):
         """該介面（OpenProxies）用于開啓一條或者多條通道。
 
         :param request: Request instance for OpenProxies.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.OpenProxiesRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.OpenProxiesResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.OpenProxiesRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.OpenProxiesResponse`
 
         """
         try:
@@ -2244,8 +2244,8 @@ class GaapClient(AbstractClient):
         """開啓安全策略
 
         :param request: Request instance for OpenSecurityPolicy.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.OpenSecurityPolicyRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.OpenSecurityPolicyResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.OpenSecurityPolicyRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.OpenSecurityPolicyResponse`
 
         """
         try:
@@ -2272,8 +2272,8 @@ class GaapClient(AbstractClient):
         """删除已添加的源站(服務器)IP或域名
 
         :param request: Request instance for RemoveRealServers.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.RemoveRealServersRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.RemoveRealServersResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.RemoveRealServersRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.RemoveRealServersResponse`
 
         """
         try:
@@ -2300,8 +2300,8 @@ class GaapClient(AbstractClient):
         """本介面（SetAuthentication）用于通道的高級認證配置，包括認證方式選擇，以及各種認證方式對應的證書選擇。僅支援Version3.0的通道。
 
         :param request: Request instance for SetAuthentication.
-        :type request: :class:`tencentcloud.gaap.v20180529.models.SetAuthenticationRequest`
-        :rtype: :class:`tencentcloud.gaap.v20180529.models.SetAuthenticationResponse`
+        :type request: :class:`taifucloudcloud.gaap.v20180529.models.SetAuthenticationRequest`
+        :rtype: :class:`taifucloudcloud.gaap.v20180529.models.SetAuthenticationResponse`
 
         """
         try:

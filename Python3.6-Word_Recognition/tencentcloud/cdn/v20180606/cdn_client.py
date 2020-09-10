@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cdn.v20180606 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cdn.v20180606 import models
 
 
 class CdnClient(AbstractClient):
     _apiVersion = '2018-06-06'
-    _endpoint = 'cdn.tencentcloudapi.com'
+    _endpoint = 'cdn.taifucloudcloudapi.com'
 
 
     def DescribeCdnData(self, request):
@@ -38,8 +38,8 @@ class CdnClient(AbstractClient):
         + 狀态碼 5xx 匯總及各 5 開頭狀态碼明細（單位爲 個）
 
         :param request: 調用DescribeCdnData所需參數的結構體。
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeCdnDataRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeCdnDataResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeCdnDataRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeCdnDataResponse`
 
         """
         try:
@@ -69,8 +69,8 @@ class CdnClient(AbstractClient):
         + 日活躍用戶數：根據日志中用戶端 IP，按天粒度去重統計
 
         :param request: 調用DescribeIpVisit所需參數的結構體。
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeIpVisitRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeIpVisitResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeIpVisitRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeIpVisitResponse`
 
         """
         try:
@@ -94,11 +94,11 @@ class CdnClient(AbstractClient):
 
 
     def DescribeMapInfo(self, request):
-        """DescribeMapInfo 用于查詢省份對應的 ID，運營商對應的 ID 訊息。
+        """DescribeMapInfo 用于查詢 對應的 ID，運營商對應的 ID 訊息。
 
         :param request: 調用DescribeMapInfo所需參數的結構體。
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeMapInfoRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeMapInfoResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeMapInfoRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeMapInfoResponse`
 
         """
         try:
@@ -135,8 +135,8 @@ class CdnClient(AbstractClient):
         + 回源狀态碼 5xx 匯總及各 5 開頭回源狀态碼明細（單位爲 個）
 
         :param request: 調用DescribeOriginData所需參數的結構體。
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeOriginDataRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeOriginDataResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeOriginDataRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeOriginDataResponse`
 
         """
         try:
@@ -163,8 +163,8 @@ class CdnClient(AbstractClient):
         """DescribePayType 用于查詢用戶的計費類型，計費週期等訊息。
 
         :param request: 調用DescribePayType所需參數的結構體。
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribePayTypeRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribePayTypeResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribePayTypeRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribePayTypeResponse`
 
         """
         try:
@@ -191,8 +191,8 @@ class CdnClient(AbstractClient):
         """DisableCaches 用于禁用 CDN 上指定 URL 的訪問，禁用完成後，全網訪問會直接返回 403。（介面尚在内測中，暫未全量開放使用）
 
         :param request: 調用DisableCaches所需參數的結構體。
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DisableCachesRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DisableCachesResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DisableCachesRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DisableCachesResponse`
 
         """
         try:
@@ -219,8 +219,8 @@ class CdnClient(AbstractClient):
         """EnableCaches 用于解禁手工封禁的 URL，解禁成功後，全網生效時間約 5~10 分鍾。（介面尚在内測中，暫未全量開放使用）
 
         :param request: 調用EnableCaches所需參數的結構體。
-        :type request: :class:`tencentcloud.cdn.v20180606.models.EnableCachesRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.EnableCachesResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.EnableCachesRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.EnableCachesResponse`
 
         """
         try:
@@ -247,8 +247,8 @@ class CdnClient(AbstractClient):
         """GetDisableRecords 用戶查詢資源禁用曆史，及 URL 當前狀态。（介面尚在内測中，暫未全量開放使用）
 
         :param request: 調用GetDisableRecords所需參數的結構體。
-        :type request: :class:`tencentcloud.cdn.v20180606.models.GetDisableRecordsRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.GetDisableRecordsResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.GetDisableRecordsRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.GetDisableRecordsResponse`
 
         """
         try:
@@ -275,14 +275,14 @@ class CdnClient(AbstractClient):
         """ListTopData 通過入參 Metric 和 Filter 組合不同，可以查詢以下排序數據：
 
         + 依據總流量、總請求數對訪問 URL 排序，從大至小返回 TOP 1000 URL
-        + 依據總流量、總請求數對用戶端省份排序，從大至小返回省份清單
+        + 依據總流量、總請求數對用戶端 排序，從大至小返回 清單
         + 依據總流量、總請求數對用戶端運營商排序，從大至小返回運營商清單
         + 依據總流量、峰值頻寬、總請求數、平均命中率、2XX/3XX/4XX/5XX 狀态碼對域名排序，從大至小返回域名清單
         + 依據總回源流量、回源峰值頻寬、總回源請求數、平均回源失敗率、2XX/3XX/4XX/5XX 回源狀态碼對域名排序，從大至小返回域名清單
 
         :param request: 調用ListTopData所需參數的結構體。
-        :type request: :class:`tencentcloud.cdn.v20180606.models.ListTopDataRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.ListTopDataResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.ListTopDataRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.ListTopDataResponse`
 
         """
         try:

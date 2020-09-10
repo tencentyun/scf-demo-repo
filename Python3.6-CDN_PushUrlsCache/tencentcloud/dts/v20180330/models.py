@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class ActivateSubscribeRequest(AbstractModel):
@@ -30,7 +30,7 @@ class ActivateSubscribeRequest(AbstractModel):
         :param SubscribeObjectType: 數據訂閱類型0-全實例訂閱，1數據訂閱，2結構訂閱，3數據訂閱與結構訂閱
         :type SubscribeObjectType: int
         :param Objects: 訂閱對象
-        :type Objects: :class:`tencentcloud.dts.v20180330.models.SubscribeObject`
+        :type Objects: :class:`taifucloudcloud.dts.v20180330.models.SubscribeObject`
         :param UniqSubnetId: 數據訂閱服務所在子網。預設爲資料庫實例所在的子網内。
         :type UniqSubnetId: str
         :param Vport: 訂閱服務端口；預設爲7507
@@ -179,19 +179,19 @@ class CreateMigrateJobRequest(AbstractModel):
         :param JobName: 數據遷移任務名稱
         :type JobName: str
         :param MigrateOption: 遷移任務配置選項
-        :type MigrateOption: :class:`tencentcloud.dts.v20180330.models.MigrateOption`
+        :type MigrateOption: :class:`taifucloudcloud.dts.v20180330.models.MigrateOption`
         :param SrcDatabaseType: 源實例資料庫類型，目前支援：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域資料庫類型的具體支援情況，請參考控制台創建遷移頁面。
         :type SrcDatabaseType: str
         :param SrcAccessType: 源實例接入類型，值包括：extranet(外網),cvm(CVM自建實例),dcg(專線接入的實例),vpncloud(雲VPN接入的實例),cdb(Top Cloud 資料庫實例),ccn(雲聯網實例)
         :type SrcAccessType: str
         :param SrcInfo: 源實例訊息，具體内容跟遷移任務類型相關
-        :type SrcInfo: :class:`tencentcloud.dts.v20180330.models.SrcInfo`
+        :type SrcInfo: :class:`taifucloudcloud.dts.v20180330.models.SrcInfo`
         :param DstDatabaseType: 目标實例資料庫類型，目前支援：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域資料庫類型的具體支援情況，請參考控制台創建遷移頁面。
         :type DstDatabaseType: str
         :param DstAccessType: 目标實例接入類型，目前支援：cdb（Top Cloud 資料庫實例）
         :type DstAccessType: str
         :param DstInfo: 目标實例訊息
-        :type DstInfo: :class:`tencentcloud.dts.v20180330.models.DstInfo`
+        :type DstInfo: :class:`taifucloudcloud.dts.v20180330.models.DstInfo`
         :param DatabaseInfo: 需要遷移的源資料庫表訊息，用json格式的字串描述。當MigrateOption.MigrateObject配置爲2（指定庫表遷移）時必填。
 對于database-table兩級結構的資料庫：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
@@ -352,19 +352,19 @@ class CreateSyncJobRequest(AbstractModel):
         :param JobName: 災備同步任務名
         :type JobName: str
         :param SyncOption: 災備同步任務配置選項
-        :type SyncOption: :class:`tencentcloud.dts.v20180330.models.SyncOption`
+        :type SyncOption: :class:`taifucloudcloud.dts.v20180330.models.SyncOption`
         :param SrcDatabaseType: 源實例資料庫類型，目前僅包括：mysql
         :type SrcDatabaseType: str
         :param SrcAccessType: 源實例接入類型，目前僅包括：cdb(雲上cdb實例)
         :type SrcAccessType: str
         :param SrcInfo: 源實例訊息
-        :type SrcInfo: :class:`tencentcloud.dts.v20180330.models.SyncInstanceInfo`
+        :type SrcInfo: :class:`taifucloudcloud.dts.v20180330.models.SyncInstanceInfo`
         :param DstDatabaseType: 目标實例資料庫類型，目前僅包括：mysql
         :type DstDatabaseType: str
         :param DstAccessType: 目标實例接入類型，目前僅包括：cdb(雲上cdb實例)
         :type DstAccessType: str
         :param DstInfo: 目标實例訊息
-        :type DstInfo: :class:`tencentcloud.dts.v20180330.models.SyncInstanceInfo`
+        :type DstInfo: :class:`taifucloudcloud.dts.v20180330.models.SyncInstanceInfo`
         :param DatabaseInfo: 需要同步的源資料庫表訊息，用json格式的字串描述。
 對于database-table兩級結構的資料庫：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
@@ -1189,19 +1189,19 @@ class MigrateJobInfo(AbstractModel):
         :param JobName: 數據遷移任務名稱
         :type JobName: str
         :param MigrateOption: 遷移任務配置選項
-        :type MigrateOption: :class:`tencentcloud.dts.v20180330.models.MigrateOption`
+        :type MigrateOption: :class:`taifucloudcloud.dts.v20180330.models.MigrateOption`
         :param SrcDatabaseType: 源實例資料庫類型:mysql，redis，mongodb，postgresql，mariadb，percona
         :type SrcDatabaseType: str
         :param SrcAccessType: 源實例接入類型，值包括：extranet(外網),cvm(cvm自建實例),dcg(專線接入的實例),vpncloud(雲vpn接入的實例),cdb(Top Cloud 資料庫實例),ccn(雲聯網實例)
         :type SrcAccessType: str
         :param SrcInfo: 源實例訊息，具體内容跟遷移任務類型相關
-        :type SrcInfo: :class:`tencentcloud.dts.v20180330.models.SrcInfo`
+        :type SrcInfo: :class:`taifucloudcloud.dts.v20180330.models.SrcInfo`
         :param DstDatabaseType: 目标實例資料庫類型:mysql，redis，mongodb，postgresql，mariadb，percona
         :type DstDatabaseType: str
         :param DstAccessType: 目标實例接入類型，目前支援：cdb(Top Cloud 資料庫實例)
         :type DstAccessType: str
         :param DstInfo: 目标實例訊息
-        :type DstInfo: :class:`tencentcloud.dts.v20180330.models.DstInfo`
+        :type DstInfo: :class:`taifucloudcloud.dts.v20180330.models.DstInfo`
         :param DatabaseInfo: 需要遷移的源資料庫表訊息，如果需要遷移的是整個實例，該欄位爲[]
         :type DatabaseInfo: str
         :param CreateTime: 任務創建(提交)時間
@@ -1213,7 +1213,7 @@ class MigrateJobInfo(AbstractModel):
         :param Status: 任務狀态,取值爲：1-創建中(Creating),3-校驗中(Checking)4-校驗通過(CheckPass),5-校驗不通過（CheckNotPass）,7-任務運作(Running),8-準備完成（ReadyComplete）,9-任務成功（Success）,10-任務失敗（Failed）,11-撤銷中（Stopping）,12-完成中（Completing）
         :type Status: int
         :param Detail: 任務詳情
-        :type Detail: :class:`tencentcloud.dts.v20180330.models.MigrateDetailInfo`
+        :type Detail: :class:`taifucloudcloud.dts.v20180330.models.MigrateDetailInfo`
         :param ErrorInfo: 任務錯誤訊息提示，當任務發生錯誤時，不爲null或者空值
         :type ErrorInfo: list of ErrorInfo
         """
@@ -1304,7 +1304,7 @@ MongoDB可定義如下的參數:
 MySQL暫不支援額外參數設置。
         :type ExternParams: str
         :param ConsistencyParams: 僅用于“抽樣數據一緻性檢測”，ConsistencyType配置爲抽樣檢測時，必選
-        :type ConsistencyParams: :class:`tencentcloud.dts.v20180330.models.ConsistencyParams`
+        :type ConsistencyParams: :class:`taifucloudcloud.dts.v20180330.models.ConsistencyParams`
         """
         self.RunMode = None
         self.ExpectTime = None
@@ -1375,15 +1375,15 @@ class ModifyMigrateJobRequest(AbstractModel):
         :param JobName: 數據遷移任務名稱
         :type JobName: str
         :param MigrateOption: 遷移任務配置選項
-        :type MigrateOption: :class:`tencentcloud.dts.v20180330.models.MigrateOption`
+        :type MigrateOption: :class:`taifucloudcloud.dts.v20180330.models.MigrateOption`
         :param SrcAccessType: 源實例接入類型，值包括：extranet(外網),cvm(CVM自建實例),dcg(專線接入的實例),vpncloud(雲VPN接入的實例),cdb(雲上CDB實例)
         :type SrcAccessType: str
         :param SrcInfo: 源實例訊息，具體内容跟遷移任務類型相關
-        :type SrcInfo: :class:`tencentcloud.dts.v20180330.models.SrcInfo`
+        :type SrcInfo: :class:`taifucloudcloud.dts.v20180330.models.SrcInfo`
         :param DstAccessType: 目标實例接入類型，值包括：extranet(外網),cvm(CVM自建實例),dcg(專線接入的實例),vpncloud(雲VPN接入的實例)，cdb(雲上CDB實例). 目前只支援cdb.
         :type DstAccessType: str
         :param DstInfo: 目标實例訊息, 其中目标實例地域不允許修改.
-        :type DstInfo: :class:`tencentcloud.dts.v20180330.models.DstInfo`
+        :type DstInfo: :class:`taifucloudcloud.dts.v20180330.models.DstInfo`
         :param DatabaseInfo: 當選擇'指定庫表'遷移的時候, 需要設置待遷移的源資料庫表訊息,用符合json數組格式的字串描述, 如下所例。
 
 對于database-table兩級結構的資料庫：
@@ -1623,7 +1623,7 @@ class ModifySyncJobRequest(AbstractModel):
         :param JobName: 災備同步任務名稱
         :type JobName: str
         :param SyncOption: 災備同步任務配置選項
-        :type SyncOption: :class:`tencentcloud.dts.v20180330.models.SyncOption`
+        :type SyncOption: :class:`taifucloudcloud.dts.v20180330.models.SyncOption`
         :param DatabaseInfo: 當選擇'指定庫表'災備同步的時候, 需要設置待同步的源資料庫表訊息,用符合json數組格式的字串描述, 如下所例。
 對于database-table兩級結構的資料庫：
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
@@ -2041,7 +2041,7 @@ class SubscribeRegionConf(AbstractModel):
 
     def __init__(self):
         """
-        :param RegionName: 地域名稱，如廣州
+        :param RegionName: 地域名稱，如 
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RegionName: str
         :param Region: 地區标識，如ap-guangzhou
@@ -2080,7 +2080,7 @@ class SwitchDrToMasterRequest(AbstractModel):
     def __init__(self):
         """
         :param DstInfo: 災備實例的訊息
-        :type DstInfo: :class:`tencentcloud.dts.v20180330.models.SyncInstanceInfo`
+        :type DstInfo: :class:`taifucloudcloud.dts.v20180330.models.SyncInstanceInfo`
         :param DatabaseType: 資料庫的類型  （如 mysql）
         :type DatabaseType: str
         """
@@ -2224,21 +2224,21 @@ class SyncJobInfo(AbstractModel):
         :param JobName: 災備任務名
         :type JobName: str
         :param SyncOption: 任務同步
-        :type SyncOption: :class:`tencentcloud.dts.v20180330.models.SyncOption`
+        :type SyncOption: :class:`taifucloudcloud.dts.v20180330.models.SyncOption`
         :param SrcAccessType: 源接入類型
         :type SrcAccessType: str
         :param SrcDatabaseType: 源數據類型
         :type SrcDatabaseType: str
         :param SrcInfo: 源實例訊息
-        :type SrcInfo: :class:`tencentcloud.dts.v20180330.models.SyncInstanceInfo`
+        :type SrcInfo: :class:`taifucloudcloud.dts.v20180330.models.SyncInstanceInfo`
         :param DstAccessType: 災備接入類型
         :type DstAccessType: str
         :param DstDatabaseType: 災備數據類型
         :type DstDatabaseType: str
         :param DstInfo: 災備實例訊息
-        :type DstInfo: :class:`tencentcloud.dts.v20180330.models.SyncInstanceInfo`
+        :type DstInfo: :class:`taifucloudcloud.dts.v20180330.models.SyncInstanceInfo`
         :param Detail: 任務訊息
-        :type Detail: :class:`tencentcloud.dts.v20180330.models.SyncDetailInfo`
+        :type Detail: :class:`taifucloudcloud.dts.v20180330.models.SyncDetailInfo`
         :param Status: 任務狀态
         :type Status: int
         :param DatabaseInfo: 遷移庫表

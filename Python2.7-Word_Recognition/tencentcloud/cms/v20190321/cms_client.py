@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cms.v20190321 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cms.v20190321 import models
 
 
 class CmsClient(AbstractClient):
     _apiVersion = '2019-03-21'
-    _endpoint = 'cms.tencentcloudapi.com'
+    _endpoint = 'cms.taifucloudcloudapi.com'
 
 
     def AudioModeration(self, request):
@@ -31,8 +31,8 @@ class CmsClient(AbstractClient):
         通過API直接上傳音訊即可進行檢測，對于高危部分直接屏蔽，可疑部分人工複審，從而節省審核人力，釋放業務風險。
 
         :param request: 調用AudioModeration所需參數的結構體。
-        :type request: :class:`tencentcloud.cms.v20190321.models.AudioModerationRequest`
-        :rtype: :class:`tencentcloud.cms.v20190321.models.AudioModerationResponse`
+        :type request: :class:`taifucloudcloud.cms.v20190321.models.AudioModerationRequest`
+        :rtype: :class:`taifucloudcloud.cms.v20190321.models.AudioModerationResponse`
 
         """
         try:
@@ -59,8 +59,8 @@ class CmsClient(AbstractClient):
         """根據日期，管道和服務類型查詢識别結果概覽數據
 
         :param request: 調用DescribeModerationOverview所需參數的結構體。
-        :type request: :class:`tencentcloud.cms.v20190321.models.DescribeModerationOverviewRequest`
-        :rtype: :class:`tencentcloud.cms.v20190321.models.DescribeModerationOverviewResponse`
+        :type request: :class:`taifucloudcloud.cms.v20190321.models.DescribeModerationOverviewRequest`
+        :rtype: :class:`taifucloudcloud.cms.v20190321.models.DescribeModerationOverviewResponse`
 
         """
         try:
@@ -88,8 +88,8 @@ class CmsClient(AbstractClient):
         通過API獲取檢測的标簽及置信度，可直接采信高置信度的結果，人工複審低置信度的結果，從而降低人工成本，提高審核效率。
 
         :param request: 調用ImageModeration所需參數的結構體。
-        :type request: :class:`tencentcloud.cms.v20190321.models.ImageModerationRequest`
-        :rtype: :class:`tencentcloud.cms.v20190321.models.ImageModerationResponse`
+        :type request: :class:`taifucloudcloud.cms.v20190321.models.ImageModerationRequest`
+        :rtype: :class:`taifucloudcloud.cms.v20190321.models.ImageModerationResponse`
 
         """
         try:
@@ -117,8 +117,8 @@ class CmsClient(AbstractClient):
         通過API介面，能檢測内容的危險等級，對于高危部分直接過濾，可疑部分人工複審，從而節省審核人力，釋放業務風險。
 
         :param request: 調用TextModeration所需參數的結構體。
-        :type request: :class:`tencentcloud.cms.v20190321.models.TextModerationRequest`
-        :rtype: :class:`tencentcloud.cms.v20190321.models.TextModerationResponse`
+        :type request: :class:`taifucloudcloud.cms.v20190321.models.TextModerationRequest`
+        :rtype: :class:`taifucloudcloud.cms.v20190321.models.TextModerationResponse`
 
         """
         try:
@@ -146,8 +146,8 @@ class CmsClient(AbstractClient):
         通過API直接上傳視訊即可進行檢測，對于高危部分直接過濾，可疑部分人工複審，從而節省審核人力，釋放業務風險。
 
         :param request: 調用VideoModeration所需參數的結構體。
-        :type request: :class:`tencentcloud.cms.v20190321.models.VideoModerationRequest`
-        :rtype: :class:`tencentcloud.cms.v20190321.models.VideoModerationResponse`
+        :type request: :class:`taifucloudcloud.cms.v20190321.models.VideoModerationRequest`
+        :rtype: :class:`taifucloudcloud.cms.v20190321.models.VideoModerationResponse`
 
         """
         try:

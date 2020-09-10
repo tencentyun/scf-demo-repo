@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.bm.v20180423 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.bm.v20180423 import models
 
 
 class BmClient(AbstractClient):
     _apiVersion = '2018-04-23'
-    _endpoint = 'bm.tencentcloudapi.com'
+    _endpoint = 'bm.taifucloudcloudapi.com'
 
 
     def AttachCamRole(self, request):
         """服務器綁定CAM角色，該角色授權訪問黑石物理服務器服務，爲黑石物理服務器提供了訪問資源的權限，如請求服務器的臨時證書
 
         :param request: Request instance for AttachCamRole.
-        :type request: :class:`tencentcloud.bm.v20180423.models.AttachCamRoleRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.AttachCamRoleResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.AttachCamRoleRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.AttachCamRoleResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class BmClient(AbstractClient):
         """爲預授權規則綁定标簽
 
         :param request: Request instance for BindPsaTag.
-        :type request: :class:`tencentcloud.bm.v20180423.models.BindPsaTagRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.BindPsaTagResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.BindPsaTagRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.BindPsaTagResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class BmClient(AbstractClient):
         """購買黑石物理機
 
         :param request: Request instance for BuyDevices.
-        :type request: :class:`tencentcloud.bm.v20180423.models.BuyDevicesRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.BuyDevicesResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.BuyDevicesRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.BuyDevicesResponse`
 
         """
         try:
@@ -114,8 +114,8 @@ class BmClient(AbstractClient):
         每個AppId在每個可用區最多保留20個自定義映像
 
         :param request: Request instance for CreateCustomImage.
-        :type request: :class:`tencentcloud.bm.v20180423.models.CreateCustomImageRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.CreateCustomImageResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.CreateCustomImageRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.CreateCustomImageResponse`
 
         """
         try:
@@ -142,8 +142,8 @@ class BmClient(AbstractClient):
         """創建預授權規則
 
         :param request: Request instance for CreatePsaRegulation.
-        :type request: :class:`tencentcloud.bm.v20180423.models.CreatePsaRegulationRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.CreatePsaRegulationResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.CreatePsaRegulationRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.CreatePsaRegulationResponse`
 
         """
         try:
@@ -170,8 +170,8 @@ class BmClient(AbstractClient):
         """創建黑石競價實例
 
         :param request: Request instance for CreateSpotDevice.
-        :type request: :class:`tencentcloud.bm.v20180423.models.CreateSpotDeviceRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.CreateSpotDeviceResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.CreateSpotDeviceRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.CreateSpotDeviceResponse`
 
         """
         try:
@@ -198,8 +198,8 @@ class BmClient(AbstractClient):
         """創建自定義腳本
 
         :param request: Request instance for CreateUserCmd.
-        :type request: :class:`tencentcloud.bm.v20180423.models.CreateUserCmdRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.CreateUserCmdResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.CreateUserCmdRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.CreateUserCmdResponse`
 
         """
         try:
@@ -227,8 +227,8 @@ class BmClient(AbstractClient):
         正用于佈署或重裝中的映像被删除後，映像文件将保留一段時間，直到佈署或重裝結束
 
         :param request: Request instance for DeleteCustomImages.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DeleteCustomImagesRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DeleteCustomImagesResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DeleteCustomImagesRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DeleteCustomImagesResponse`
 
         """
         try:
@@ -255,8 +255,8 @@ class BmClient(AbstractClient):
         """删除預授權規則
 
         :param request: Request instance for DeletePsaRegulation.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DeletePsaRegulationRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DeletePsaRegulationResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DeletePsaRegulationRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DeletePsaRegulationResponse`
 
         """
         try:
@@ -283,8 +283,8 @@ class BmClient(AbstractClient):
         """删除自定義腳本
 
         :param request: Request instance for DeleteUserCmds.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DeleteUserCmdsRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DeleteUserCmdsResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DeleteUserCmdsRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DeleteUserCmdsResponse`
 
         """
         try:
@@ -311,8 +311,8 @@ class BmClient(AbstractClient):
         """查詢自定義映像制作進度
 
         :param request: Request instance for DescribeCustomImageProcess.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeCustomImageProcessRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeCustomImageProcessResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeCustomImageProcessRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeCustomImageProcessResponse`
 
         """
         try:
@@ -339,8 +339,8 @@ class BmClient(AbstractClient):
         """檢視自定義映像清單
 
         :param request: Request instance for DescribeCustomImages.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeCustomImagesRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeCustomImagesResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeCustomImagesRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeCustomImagesResponse`
 
         """
         try:
@@ -367,8 +367,8 @@ class BmClient(AbstractClient):
         """獲取獲取設備類型
 
         :param request: Request instance for DescribeDeviceClass.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeDeviceClassRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeDeviceClassResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeDeviceClassRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeDeviceClassResponse`
 
         """
         try:
@@ -395,8 +395,8 @@ class BmClient(AbstractClient):
         """查詢機型支援的RAID方式， 并返回系統盤的分區和邏輯盤的清單
 
         :param request: Request instance for DescribeDeviceClassPartition.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeDeviceClassPartitionRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeDeviceClassPartitionResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeDeviceClassPartitionRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeDeviceClassPartitionResponse`
 
         """
         try:
@@ -423,8 +423,8 @@ class BmClient(AbstractClient):
         """查詢設備硬體配置訊息，如 CPU 型号，内存大小，磁盤大小和數量
 
         :param request: Request instance for DescribeDeviceHardwareInfo.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeDeviceHardwareInfoRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeDeviceHardwareInfoResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeDeviceHardwareInfoRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeDeviceHardwareInfoResponse`
 
         """
         try:
@@ -451,8 +451,8 @@ class BmClient(AbstractClient):
         """查詢設備庫存
 
         :param request: Request instance for DescribeDeviceInventory.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeDeviceInventoryRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeDeviceInventoryResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeDeviceInventoryRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeDeviceInventoryResponse`
 
         """
         try:
@@ -479,8 +479,8 @@ class BmClient(AbstractClient):
         """查詢設備操作日志， 如設備重啓，重裝，設置密碼等操作
 
         :param request: Request instance for DescribeDeviceOperationLog.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeDeviceOperationLogRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeDeviceOperationLogResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeDeviceOperationLogRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeDeviceOperationLogResponse`
 
         """
         try:
@@ -507,8 +507,8 @@ class BmClient(AbstractClient):
         """獲取物理機的分區格式
 
         :param request: Request instance for DescribeDevicePartition.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeDevicePartitionRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeDevicePartitionResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeDevicePartitionRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeDevicePartitionResponse`
 
         """
         try:
@@ -535,8 +535,8 @@ class BmClient(AbstractClient):
         """查詢服務器所在的位置，如機架，上聯交換機等訊息
 
         :param request: Request instance for DescribeDevicePosition.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeDevicePositionRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeDevicePositionResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeDevicePositionRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeDevicePositionResponse`
 
         """
         try:
@@ -563,8 +563,8 @@ class BmClient(AbstractClient):
         """查詢服務器價格訊息，支援設備的批次查找，支援标準機型和彈性機型的混合查找
 
         :param request: Request instance for DescribeDevicePriceInfo.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeDevicePriceInfoRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeDevicePriceInfoResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeDevicePriceInfoRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeDevicePriceInfoResponse`
 
         """
         try:
@@ -591,8 +591,8 @@ class BmClient(AbstractClient):
         """查詢物理服務器，可以按照實例，業務IP等過濾
 
         :param request: Request instance for DescribeDevices.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeDevicesRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeDevicesResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeDevicesRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeDevicesResponse`
 
         """
         try:
@@ -619,8 +619,8 @@ class BmClient(AbstractClient):
         """查詢自定義機型部件訊息，包括CpuId對應的型号，DiskTypeId對應的磁盤類型
 
         :param request: Request instance for DescribeHardwareSpecification.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeHardwareSpecificationRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeHardwareSpecificationResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeHardwareSpecificationRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeHardwareSpecificationResponse`
 
         """
         try:
@@ -647,8 +647,8 @@ class BmClient(AbstractClient):
         """查詢托管設備帶外訊息
 
         :param request: Request instance for DescribeHostedDeviceOutBandInfo.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeHostedDeviceOutBandInfoRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeHostedDeviceOutBandInfoResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeHostedDeviceOutBandInfoRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeHostedDeviceOutBandInfoResponse`
 
         """
         try:
@@ -675,8 +675,8 @@ class BmClient(AbstractClient):
         """獲取異步操作狀态的完成狀态
 
         :param request: Request instance for DescribeOperationResult.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeOperationResultRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeOperationResultResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeOperationResultRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeOperationResultResponse`
 
         """
         try:
@@ -703,8 +703,8 @@ class BmClient(AbstractClient):
         """查詢指定機型所支援的作業系統
 
         :param request: Request instance for DescribeOsInfo.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeOsInfoRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeOsInfoResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeOsInfoRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeOsInfoResponse`
 
         """
         try:
@@ -731,8 +731,8 @@ class BmClient(AbstractClient):
         """獲取預授權規則清單
 
         :param request: Request instance for DescribePsaRegulations.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribePsaRegulationsRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribePsaRegulationsResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribePsaRegulationsRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribePsaRegulationsResponse`
 
         """
         try:
@@ -759,8 +759,8 @@ class BmClient(AbstractClient):
         """查詢地域以及可用區
 
         :param request: Request instance for DescribeRegions.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeRegionsRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeRegionsResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeRegionsRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeRegionsResponse`
 
         """
         try:
@@ -787,8 +787,8 @@ class BmClient(AbstractClient):
         """維修任務配置獲取
 
         :param request: Request instance for DescribeRepairTaskConstant.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeRepairTaskConstantRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeRepairTaskConstantResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeRepairTaskConstantRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeRepairTaskConstantResponse`
 
         """
         try:
@@ -823,8 +823,8 @@ class BmClient(AbstractClient):
         6：待确認-未恢複<br>
 
         :param request: Request instance for DescribeTaskInfo.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeTaskInfoRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeTaskInfoResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeTaskInfoRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeTaskInfoResponse`
 
         """
         try:
@@ -851,8 +851,8 @@ class BmClient(AbstractClient):
         """獲取維修任務操作日志
 
         :param request: Request instance for DescribeTaskOperationLog.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeTaskOperationLogRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeTaskOperationLogResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeTaskOperationLogRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeTaskOperationLogResponse`
 
         """
         try:
@@ -879,8 +879,8 @@ class BmClient(AbstractClient):
         """獲取自定義腳本任務詳細訊息
 
         :param request: Request instance for DescribeUserCmdTaskInfo.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeUserCmdTaskInfoRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeUserCmdTaskInfoResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeUserCmdTaskInfoRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeUserCmdTaskInfoResponse`
 
         """
         try:
@@ -907,8 +907,8 @@ class BmClient(AbstractClient):
         """獲取自定義腳本任務清單
 
         :param request: Request instance for DescribeUserCmdTasks.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeUserCmdTasksRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeUserCmdTasksResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeUserCmdTasksRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeUserCmdTasksResponse`
 
         """
         try:
@@ -935,8 +935,8 @@ class BmClient(AbstractClient):
         """獲取自定義腳本訊息清單
 
         :param request: Request instance for DescribeUserCmds.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DescribeUserCmdsRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DescribeUserCmdsResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeUserCmdsRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DescribeUserCmdsResponse`
 
         """
         try:
@@ -963,8 +963,8 @@ class BmClient(AbstractClient):
         """服務器綁定CAM角色
 
         :param request: Request instance for DetachCamRole.
-        :type request: :class:`tencentcloud.bm.v20180423.models.DetachCamRoleRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.DetachCamRoleResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.DetachCamRoleRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.DetachCamRoleResponse`
 
         """
         try:
@@ -991,8 +991,8 @@ class BmClient(AbstractClient):
         """用于修改自定義映像名或描述
 
         :param request: Request instance for ModifyCustomImageAttribute.
-        :type request: :class:`tencentcloud.bm.v20180423.models.ModifyCustomImageAttributeRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.ModifyCustomImageAttributeResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.ModifyCustomImageAttributeRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.ModifyCustomImageAttributeResponse`
 
         """
         try:
@@ -1019,8 +1019,8 @@ class BmClient(AbstractClient):
         """修改服務器名稱
 
         :param request: Request instance for ModifyDeviceAliases.
-        :type request: :class:`tencentcloud.bm.v20180423.models.ModifyDeviceAliasesRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.ModifyDeviceAliasesResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.ModifyDeviceAliasesRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.ModifyDeviceAliasesResponse`
 
         """
         try:
@@ -1047,8 +1047,8 @@ class BmClient(AbstractClient):
         """修改物理機服務器自動續約标志
 
         :param request: Request instance for ModifyDeviceAutoRenewFlag.
-        :type request: :class:`tencentcloud.bm.v20180423.models.ModifyDeviceAutoRenewFlagRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.ModifyDeviceAutoRenewFlagResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.ModifyDeviceAutoRenewFlagRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.ModifyDeviceAutoRenewFlagResponse`
 
         """
         try:
@@ -1075,8 +1075,8 @@ class BmClient(AbstractClient):
         """修改物理機内網IP（不重灌系統）
 
         :param request: Request instance for ModifyLanIp.
-        :type request: :class:`tencentcloud.bm.v20180423.models.ModifyLanIpRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.ModifyLanIpResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.ModifyLanIpRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.ModifyLanIpResponse`
 
         """
         try:
@@ -1103,8 +1103,8 @@ class BmClient(AbstractClient):
         """将設備的預付費模式修改爲後付費計費模式，支援批次轉換。（前提是客戶要加入黑石物理機後付費計費的白名單，申請黑石物理機後付費可以聯系Top Cloud 客服）
 
         :param request: Request instance for ModifyPayModePre2Post.
-        :type request: :class:`tencentcloud.bm.v20180423.models.ModifyPayModePre2PostRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.ModifyPayModePre2PostResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.ModifyPayModePre2PostRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.ModifyPayModePre2PostResponse`
 
         """
         try:
@@ -1131,8 +1131,8 @@ class BmClient(AbstractClient):
         """允許修改規則訊息及關聯故障類型
 
         :param request: Request instance for ModifyPsaRegulation.
-        :type request: :class:`tencentcloud.bm.v20180423.models.ModifyPsaRegulationRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.ModifyPsaRegulationResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.ModifyPsaRegulationRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.ModifyPsaRegulationResponse`
 
         """
         try:
@@ -1159,8 +1159,8 @@ class BmClient(AbstractClient):
         """修改自定義腳本
 
         :param request: Request instance for ModifyUserCmd.
-        :type request: :class:`tencentcloud.bm.v20180423.models.ModifyUserCmdRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.ModifyUserCmdResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.ModifyUserCmdRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.ModifyUserCmdResponse`
 
         """
         try:
@@ -1187,8 +1187,8 @@ class BmClient(AbstractClient):
         """銷毀黑石物理機實例：可以銷毀物理機清單中的競價實例，或資源回收筒清單中所有計費模式的實例
 
         :param request: Request instance for OfflineDevices.
-        :type request: :class:`tencentcloud.bm.v20180423.models.OfflineDevicesRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.OfflineDevicesResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.OfflineDevicesRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.OfflineDevicesResponse`
 
         """
         try:
@@ -1215,8 +1215,8 @@ class BmClient(AbstractClient):
         """重啓機器
 
         :param request: Request instance for RebootDevices.
-        :type request: :class:`tencentcloud.bm.v20180423.models.RebootDevicesRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.RebootDevicesResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.RebootDevicesRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.RebootDevicesResponse`
 
         """
         try:
@@ -1243,8 +1243,8 @@ class BmClient(AbstractClient):
         """恢複資源回收筒中的物理機（僅限後付費的物理機）
 
         :param request: Request instance for RecoverDevices.
-        :type request: :class:`tencentcloud.bm.v20180423.models.RecoverDevicesRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.RecoverDevicesResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.RecoverDevicesRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.RecoverDevicesResponse`
 
         """
         try:
@@ -1271,8 +1271,8 @@ class BmClient(AbstractClient):
         """重裝作業系統
 
         :param request: Request instance for ReloadDeviceOs.
-        :type request: :class:`tencentcloud.bm.v20180423.models.ReloadDeviceOsRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.ReloadDeviceOsResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.ReloadDeviceOsRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.ReloadDeviceOsResponse`
 
         """
         try:
@@ -1316,11 +1316,11 @@ class BmClient(AbstractClient):
         <br>
         處理中與已恢複狀态的任務不允許進行操作。<br>
         <br>
-        詳細訊息請訪問：https://cloud.tencent.com/document/product/386/18190
+        詳細訊息請訪問：https://cloud.taifucloud.com/document/product/386/18190
 
         :param request: Request instance for RepairTaskControl.
-        :type request: :class:`tencentcloud.bm.v20180423.models.RepairTaskControlRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.RepairTaskControlResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.RepairTaskControlRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.RepairTaskControlResponse`
 
         """
         try:
@@ -1347,8 +1347,8 @@ class BmClient(AbstractClient):
         """重置服務器密碼
 
         :param request: Request instance for ResetDevicePassword.
-        :type request: :class:`tencentcloud.bm.v20180423.models.ResetDevicePasswordRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.ResetDevicePasswordResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.ResetDevicePasswordRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.ResetDevicePasswordResponse`
 
         """
         try:
@@ -1375,8 +1375,8 @@ class BmClient(AbstractClient):
         """退回物理機至資源回收筒，支援批次退還不同計費模式的物理機（包括預付費、後付費、預付費轉後付費）
 
         :param request: Request instance for ReturnDevices.
-        :type request: :class:`tencentcloud.bm.v20180423.models.ReturnDevicesRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.ReturnDevicesResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.ReturnDevicesRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.ReturnDevicesResponse`
 
         """
         try:
@@ -1403,8 +1403,8 @@ class BmClient(AbstractClient):
         """運作自定義腳本
 
         :param request: Request instance for RunUserCmd.
-        :type request: :class:`tencentcloud.bm.v20180423.models.RunUserCmdRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.RunUserCmdResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.RunUserCmdRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.RunUserCmdResponse`
 
         """
         try:
@@ -1431,8 +1431,8 @@ class BmClient(AbstractClient):
         """設置帶外VPN認證用戶密碼
 
         :param request: Request instance for SetOutBandVpnAuthPassword.
-        :type request: :class:`tencentcloud.bm.v20180423.models.SetOutBandVpnAuthPasswordRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.SetOutBandVpnAuthPasswordResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.SetOutBandVpnAuthPasswordRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.SetOutBandVpnAuthPasswordResponse`
 
         """
         try:
@@ -1459,8 +1459,8 @@ class BmClient(AbstractClient):
         """關閉服務器
 
         :param request: Request instance for ShutdownDevices.
-        :type request: :class:`tencentcloud.bm.v20180423.models.ShutdownDevicesRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.ShutdownDevicesResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.ShutdownDevicesRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.ShutdownDevicesResponse`
 
         """
         try:
@@ -1487,8 +1487,8 @@ class BmClient(AbstractClient):
         """開啓服務器
 
         :param request: Request instance for StartDevices.
-        :type request: :class:`tencentcloud.bm.v20180423.models.StartDevicesRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.StartDevicesResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.StartDevicesRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.StartDevicesResponse`
 
         """
         try:
@@ -1515,8 +1515,8 @@ class BmClient(AbstractClient):
         """解除标簽與預授權規則的綁定
 
         :param request: Request instance for UnbindPsaTag.
-        :type request: :class:`tencentcloud.bm.v20180423.models.UnbindPsaTagRequest`
-        :rtype: :class:`tencentcloud.bm.v20180423.models.UnbindPsaTagResponse`
+        :type request: :class:`taifucloudcloud.bm.v20180423.models.UnbindPsaTagRequest`
+        :rtype: :class:`taifucloudcloud.bm.v20180423.models.UnbindPsaTagResponse`
 
         """
         try:

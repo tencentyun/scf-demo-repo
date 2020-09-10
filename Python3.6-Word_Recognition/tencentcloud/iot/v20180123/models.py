@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Action(AbstractModel):
@@ -24,11 +24,11 @@ class Action(AbstractModel):
     def __init__(self):
         """
         :param Topic: 轉發至topic
-        :type Topic: :class:`tencentcloud.iot.v20180123.models.TopicAction`
+        :type Topic: :class:`taifucloudcloud.iot.v20180123.models.TopicAction`
         :param Service: 轉發至第三發
-        :type Service: :class:`tencentcloud.iot.v20180123.models.ServiceAction`
+        :type Service: :class:`taifucloudcloud.iot.v20180123.models.ServiceAction`
         :param Ckafka: 轉發至第三發Ckafka
-        :type Ckafka: :class:`tencentcloud.iot.v20180123.models.CkafkaAction`
+        :type Ckafka: :class:`taifucloudcloud.iot.v20180123.models.CkafkaAction`
         """
         self.Topic = None
         self.Service = None
@@ -110,7 +110,7 @@ class AddDeviceResponse(AbstractModel):
     def __init__(self):
         """
         :param Device: 設備訊息
-        :type Device: :class:`tencentcloud.iot.v20180123.models.Device`
+        :type Device: :class:`taifucloudcloud.iot.v20180123.models.Device`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -179,7 +179,7 @@ class AddProductResponse(AbstractModel):
     def __init__(self):
         """
         :param Product: 産品訊息
-        :type Product: :class:`tencentcloud.iot.v20180123.models.Product`
+        :type Product: :class:`taifucloudcloud.iot.v20180123.models.Product`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -206,7 +206,7 @@ class AddRuleRequest(AbstractModel):
         :param Description: 描述
         :type Description: str
         :param Query: 查詢
-        :type Query: :class:`tencentcloud.iot.v20180123.models.RuleQuery`
+        :type Query: :class:`taifucloudcloud.iot.v20180123.models.RuleQuery`
         :param Actions: 轉發動作清單
         :type Actions: list of Action
         :param DataType: 數據類型（0：文本，1：二進制）
@@ -242,7 +242,7 @@ class AddRuleResponse(AbstractModel):
     def __init__(self):
         """
         :param Rule: 規則
-        :type Rule: :class:`tencentcloud.iot.v20180123.models.Rule`
+        :type Rule: :class:`taifucloudcloud.iot.v20180123.models.Rule`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -286,7 +286,7 @@ class AddTopicResponse(AbstractModel):
     def __init__(self):
         """
         :param Topic: Topic訊息
-        :type Topic: :class:`tencentcloud.iot.v20180123.models.Topic`
+        :type Topic: :class:`taifucloudcloud.iot.v20180123.models.Topic`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -330,7 +330,7 @@ class AppAddUserResponse(AbstractModel):
     def __init__(self):
         """
         :param AppUser: 應用用戶
-        :type AppUser: :class:`tencentcloud.iot.v20180123.models.AppUser`
+        :type AppUser: :class:`taifucloudcloud.iot.v20180123.models.AppUser`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -561,7 +561,7 @@ class AppGetDeviceResponse(AbstractModel):
     def __init__(self):
         """
         :param AppDevice: 綁定設備詳情
-        :type AppDevice: :class:`tencentcloud.iot.v20180123.models.AppDeviceDetail`
+        :type AppDevice: :class:`taifucloudcloud.iot.v20180123.models.AppDeviceDetail`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -737,7 +737,7 @@ class AppGetUserResponse(AbstractModel):
     def __init__(self):
         """
         :param AppUser: 用戶訊息
-        :type AppUser: :class:`tencentcloud.iot.v20180123.models.AppUser`
+        :type AppUser: :class:`taifucloudcloud.iot.v20180123.models.AppUser`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -873,7 +873,7 @@ class AppSecureAddDeviceResponse(AbstractModel):
     def __init__(self):
         """
         :param AppDevice: 綁定設備訊息
-        :type AppDevice: :class:`tencentcloud.iot.v20180123.models.AppDevice`
+        :type AppDevice: :class:`taifucloudcloud.iot.v20180123.models.AppDevice`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -925,7 +925,7 @@ class AppUpdateDeviceResponse(AbstractModel):
     def __init__(self):
         """
         :param AppDevice: 設備訊息
-        :type AppDevice: :class:`tencentcloud.iot.v20180123.models.AppDevice`
+        :type AppDevice: :class:`taifucloudcloud.iot.v20180123.models.AppDevice`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -969,7 +969,7 @@ class AppUpdateUserResponse(AbstractModel):
     def __init__(self):
         """
         :param AppUser: 應用用戶
-        :type AppUser: :class:`tencentcloud.iot.v20180123.models.AppUser`
+        :type AppUser: :class:`taifucloudcloud.iot.v20180123.models.AppUser`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1146,13 +1146,13 @@ class DataTemplate(AbstractModel):
     def __init__(self):
         """
         :param Number: 數字類型
-        :type Number: :class:`tencentcloud.iot.v20180123.models.NumberData`
+        :type Number: :class:`taifucloudcloud.iot.v20180123.models.NumberData`
         :param String: 字串類型
-        :type String: :class:`tencentcloud.iot.v20180123.models.StringData`
+        :type String: :class:`taifucloudcloud.iot.v20180123.models.StringData`
         :param Enum: 列舉類型
-        :type Enum: :class:`tencentcloud.iot.v20180123.models.EnumData`
+        :type Enum: :class:`taifucloudcloud.iot.v20180123.models.EnumData`
         :param Bool: 布爾類型
-        :type Bool: :class:`tencentcloud.iot.v20180123.models.BoolData`
+        :type Bool: :class:`taifucloudcloud.iot.v20180123.models.BoolData`
         """
         self.Number = None
         self.String = None
@@ -1917,7 +1917,7 @@ class GetDeviceResponse(AbstractModel):
     def __init__(self):
         """
         :param Device: 設備訊息
-        :type Device: :class:`tencentcloud.iot.v20180123.models.Device`
+        :type Device: :class:`taifucloudcloud.iot.v20180123.models.Device`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2165,7 +2165,7 @@ class GetProductResponse(AbstractModel):
     def __init__(self):
         """
         :param Product: 産品訊息
-        :type Product: :class:`tencentcloud.iot.v20180123.models.Product`
+        :type Product: :class:`taifucloudcloud.iot.v20180123.models.Product`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2256,7 +2256,7 @@ class GetRuleResponse(AbstractModel):
     def __init__(self):
         """
         :param Rule: 規則
-        :type Rule: :class:`tencentcloud.iot.v20180123.models.Rule`
+        :type Rule: :class:`taifucloudcloud.iot.v20180123.models.Rule`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2351,7 +2351,7 @@ class GetTopicResponse(AbstractModel):
     def __init__(self):
         """
         :param Topic: Topic訊息
-        :type Topic: :class:`tencentcloud.iot.v20180123.models.Topic`
+        :type Topic: :class:`taifucloudcloud.iot.v20180123.models.Topic`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2738,7 +2738,7 @@ class ResetDeviceResponse(AbstractModel):
     def __init__(self):
         """
         :param Device: 設備訊息
-        :type Device: :class:`tencentcloud.iot.v20180123.models.Device`
+        :type Device: :class:`taifucloudcloud.iot.v20180123.models.Device`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2769,7 +2769,7 @@ class Rule(AbstractModel):
         :param Description: 描述
         :type Description: str
         :param Query: 查詢
-        :type Query: :class:`tencentcloud.iot.v20180123.models.RuleQuery`
+        :type Query: :class:`taifucloudcloud.iot.v20180123.models.RuleQuery`
         :param Actions: 轉發
         :type Actions: list of Action
         :param Active: 已啓動
@@ -3046,7 +3046,7 @@ class UpdateProductResponse(AbstractModel):
     def __init__(self):
         """
         :param Product: 更新後的産品訊息
-        :type Product: :class:`tencentcloud.iot.v20180123.models.Product`
+        :type Product: :class:`taifucloudcloud.iot.v20180123.models.Product`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3075,7 +3075,7 @@ class UpdateRuleRequest(AbstractModel):
         :param Description: 描述
         :type Description: str
         :param Query: 查詢
-        :type Query: :class:`tencentcloud.iot.v20180123.models.RuleQuery`
+        :type Query: :class:`taifucloudcloud.iot.v20180123.models.RuleQuery`
         :param Actions: 轉發動作清單
         :type Actions: list of Action
         :param DataType: 數據類型（0：文本，1：二進制）
@@ -3113,7 +3113,7 @@ class UpdateRuleResponse(AbstractModel):
     def __init__(self):
         """
         :param Rule: 規則
-        :type Rule: :class:`tencentcloud.iot.v20180123.models.Rule`
+        :type Rule: :class:`taifucloudcloud.iot.v20180123.models.Rule`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

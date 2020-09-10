@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Aspect(AbstractModel):
@@ -52,7 +52,7 @@ class CompostionContext(AbstractModel):
         :type Content: str
         :param CorrectData: 批改結果
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CorrectData: :class:`tencentcloud.ecc.v20181213.models.CorrectData`
+        :type CorrectData: :class:`taifucloudcloud.ecc.v20181213.models.CorrectData`
         :param TaskId: 任務 id，用于查詢介面
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskId: str
@@ -85,7 +85,7 @@ class CorrectData(AbstractModel):
         :param Score: 總得分
         :type Score: float
         :param ScoreCat: 各項得分詳情
-        :type ScoreCat: :class:`tencentcloud.ecc.v20181213.models.ScoreCategory`
+        :type ScoreCat: :class:`taifucloudcloud.ecc.v20181213.models.ScoreCategory`
         :param Comment: 綜合評價
         :type Comment: str
         :param SentenceComments: 句子點評
@@ -176,7 +176,7 @@ class CorrectMultiImageResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 介面返回數據
-        :type Data: :class:`tencentcloud.ecc.v20181213.models.CompostionContext`
+        :type Data: :class:`taifucloudcloud.ecc.v20181213.models.CompostionContext`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -224,7 +224,7 @@ class DescribeTaskResponse(AbstractModel):
         :type Content: str
         :param CorrectData: 整體的批改結果
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CorrectData: :class:`tencentcloud.ecc.v20181213.models.CorrectData`
+        :type CorrectData: :class:`taifucloudcloud.ecc.v20181213.models.CorrectData`
         :param Status: 任務狀态，“Progressing”: 處理中（此時無結果返回）、“Finished”: 處理完成
         :type Status: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -303,7 +303,7 @@ class ECCResponse(AbstractModel):
         """
         :param Data: 整體的批改結果
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.ecc.v20181213.models.CorrectData`
+        :type Data: :class:`taifucloudcloud.ecc.v20181213.models.CorrectData`
         :param TaskId: 任務 id，用于查詢介面
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskId: str
@@ -388,7 +388,7 @@ class EHOCRResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 介面返回數據
-        :type Data: :class:`tencentcloud.ecc.v20181213.models.CompostionContext`
+        :type Data: :class:`taifucloudcloud.ecc.v20181213.models.CompostionContext`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -428,13 +428,13 @@ class ScoreCategory(AbstractModel):
     def __init__(self):
         """
         :param Words: 詞匯維度
-        :type Words: :class:`tencentcloud.ecc.v20181213.models.Aspect`
+        :type Words: :class:`taifucloudcloud.ecc.v20181213.models.Aspect`
         :param Sentences: 句子維度
-        :type Sentences: :class:`tencentcloud.ecc.v20181213.models.Aspect`
+        :type Sentences: :class:`taifucloudcloud.ecc.v20181213.models.Aspect`
         :param Structure: 篇章結構維度
-        :type Structure: :class:`tencentcloud.ecc.v20181213.models.Aspect`
+        :type Structure: :class:`taifucloudcloud.ecc.v20181213.models.Aspect`
         :param Content: 内容維度
-        :type Content: :class:`tencentcloud.ecc.v20181213.models.Aspect`
+        :type Content: :class:`taifucloudcloud.ecc.v20181213.models.Aspect`
         :param Score: 維度得分
         :type Score: float
         :param Percentage: 維度分數占比
@@ -475,7 +475,7 @@ class SentenceCom(AbstractModel):
         :param Suggestions: 句子錯誤糾正訊息
         :type Suggestions: list of SentenceSuggest
         :param Sentence: 句子訊息
-        :type Sentence: :class:`tencentcloud.ecc.v20181213.models.SentenceItem`
+        :type Sentence: :class:`taifucloudcloud.ecc.v20181213.models.SentenceItem`
         """
         self.Suggestions = None
         self.Sentence = None

@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cds.v20180420 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cds.v20180420 import models
 
 
 class CdsClient(AbstractClient):
     _apiVersion = '2018-04-20'
-    _endpoint = 'cds.tencentcloudapi.com'
+    _endpoint = 'cds.taifucloudcloudapi.com'
 
 
     def DescribeDasbImageIds(self, request):
         """獲取映像清單
 
         :param request: Request instance for DescribeDasbImageIds.
-        :type request: :class:`tencentcloud.cds.v20180420.models.DescribeDasbImageIdsRequest`
-        :rtype: :class:`tencentcloud.cds.v20180420.models.DescribeDasbImageIdsResponse`
+        :type request: :class:`taifucloudcloud.cds.v20180420.models.DescribeDasbImageIdsRequest`
+        :rtype: :class:`taifucloudcloud.cds.v20180420.models.DescribeDasbImageIdsResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class CdsClient(AbstractClient):
         """本介面 (DescribeDbauditInstanceType) 用于查詢可售賣的産品規格清單。
 
         :param request: Request instance for DescribeDbauditInstanceType.
-        :type request: :class:`tencentcloud.cds.v20180420.models.DescribeDbauditInstanceTypeRequest`
-        :rtype: :class:`tencentcloud.cds.v20180420.models.DescribeDbauditInstanceTypeResponse`
+        :type request: :class:`taifucloudcloud.cds.v20180420.models.DescribeDbauditInstanceTypeRequest`
+        :rtype: :class:`taifucloudcloud.cds.v20180420.models.DescribeDbauditInstanceTypeResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class CdsClient(AbstractClient):
         """本介面 (DescribeDbauditInstances) 用于查詢數據安全審計實例清單
 
         :param request: Request instance for DescribeDbauditInstances.
-        :type request: :class:`tencentcloud.cds.v20180420.models.DescribeDbauditInstancesRequest`
-        :rtype: :class:`tencentcloud.cds.v20180420.models.DescribeDbauditInstancesResponse`
+        :type request: :class:`taifucloudcloud.cds.v20180420.models.DescribeDbauditInstancesRequest`
+        :rtype: :class:`taifucloudcloud.cds.v20180420.models.DescribeDbauditInstancesResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class CdsClient(AbstractClient):
         """本介面 (DescribeDbauditUsedRegions) 用于查詢可售賣地域清單。
 
         :param request: Request instance for DescribeDbauditUsedRegions.
-        :type request: :class:`tencentcloud.cds.v20180420.models.DescribeDbauditUsedRegionsRequest`
-        :rtype: :class:`tencentcloud.cds.v20180420.models.DescribeDbauditUsedRegionsResponse`
+        :type request: :class:`taifucloudcloud.cds.v20180420.models.DescribeDbauditUsedRegionsRequest`
+        :rtype: :class:`taifucloudcloud.cds.v20180420.models.DescribeDbauditUsedRegionsResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class CdsClient(AbstractClient):
         """用于查詢數據安全審計産品實例價格
 
         :param request: Request instance for InquiryPriceDbauditInstance.
-        :type request: :class:`tencentcloud.cds.v20180420.models.InquiryPriceDbauditInstanceRequest`
-        :rtype: :class:`tencentcloud.cds.v20180420.models.InquiryPriceDbauditInstanceResponse`
+        :type request: :class:`taifucloudcloud.cds.v20180420.models.InquiryPriceDbauditInstanceRequest`
+        :rtype: :class:`taifucloudcloud.cds.v20180420.models.InquiryPriceDbauditInstanceResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class CdsClient(AbstractClient):
         """本介面 (ModifyDbauditInstancesRenewFlag) 用于修改數據安全審計産品實例續約标識
 
         :param request: Request instance for ModifyDbauditInstancesRenewFlag.
-        :type request: :class:`tencentcloud.cds.v20180420.models.ModifyDbauditInstancesRenewFlagRequest`
-        :rtype: :class:`tencentcloud.cds.v20180420.models.ModifyDbauditInstancesRenewFlagResponse`
+        :type request: :class:`taifucloudcloud.cds.v20180420.models.ModifyDbauditInstancesRenewFlagRequest`
+        :rtype: :class:`taifucloudcloud.cds.v20180420.models.ModifyDbauditInstancesRenewFlagResponse`
 
         """
         try:

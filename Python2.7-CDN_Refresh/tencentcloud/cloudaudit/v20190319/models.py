@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AttributeKeyDetail(AbstractModel):
@@ -338,7 +338,7 @@ class Event(AbstractModel):
     def __init__(self):
         """
         :param Resources: 資源對
-        :type Resources: :class:`tencentcloud.cloudaudit.v20190319.models.Resource`
+        :type Resources: :class:`taifucloudcloud.cloudaudit.v20190319.models.Resource`
         :param AccountID: 主賬号ID
         :type AccountID: int
         :param CloudAuditEvent: 日志詳情
@@ -518,7 +518,7 @@ class ListCmqEnableRegionRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param WebsiteType: 站點類型。zh表示中國區，en表示國際區。預設中國區。
+        :param WebsiteType: 站點類型。zh表示 區，en表示國際區。預設 區。
         :type WebsiteType: str
         """
         self.WebsiteType = None
@@ -561,7 +561,7 @@ class ListCosEnableRegionRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param WebsiteType: 站點類型。zh表示中國區，en表示國際區。預設中國區。
+        :param WebsiteType: 站點類型。zh表示 區，en表示國際區。預設 區。
         :type WebsiteType: str
         """
         self.WebsiteType = None

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Account(AbstractModel):
@@ -96,7 +96,7 @@ class AddLoginWhiteListRequest(AbstractModel):
     def __init__(self):
         """
         :param Rules: 白名單規則
-        :type Rules: :class:`tencentcloud.yunjing.v20180228.models.LoginWhiteListsRule`
+        :type Rules: :class:`taifucloudcloud.yunjing.v20180228.models.LoginWhiteListsRule`
         """
         self.Rules = None
 
@@ -369,7 +369,7 @@ class BruteAttack(AbstractModel):
         :type City: int
         :param Country: 國家ID。
         :type Country: int
-        :param Province: 省份ID。
+        :param Province:  ID。
         :type Province: int
         :param SrcIp: 來源IP。
         :type SrcIp: str
@@ -2743,10 +2743,10 @@ class DescribeOpenPortTaskStatusResponse(AbstractModel):
     def __init__(self):
         """
         :param Status: 任務狀态。
-<li>COMPLETE：完成（此時可以調用DescribeOpenPorts介面獲取實時程序清單）</li>
+<li>COMPLETE：完成（此時可以調用DescribeOpenPorts介面獲取實時程式清單）</li>
 <li>AGENT_OFFLINE：雲鏡用戶端離線</li>
 <li>COLLECTING：端口獲取中</li>
-<li>FAILED：程序獲取失敗</li>
+<li>FAILED：程式獲取失敗</li>
         :type Status: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -2777,7 +2777,7 @@ class DescribeOpenPortsRequest(AbstractModel):
         :type Offset: int
         :param Filters: 過濾條件。
 <li>Port - Uint64 - 是否必填：否 - 端口号</li>
-<li>ProcessName - String - 是否必填：否 - 程序名</li>
+<li>ProcessName - String - 是否必填：否 - 程式名</li>
 <li>MachineIp - String - 是否必填：否 - 主機内網IP</li>
         :type Filters: list of Filter
         """
@@ -2955,7 +2955,7 @@ class DescribePrivilegeRulesRequest(AbstractModel):
         :param Offset: 偏移量，預設爲0。
         :type Offset: int
         :param Filters: 過濾條件。
-<li>Keywords - String - 是否必填：否 - 關鍵字(程序名稱)</li>
+<li>Keywords - String - 是否必填：否 - 關鍵字(程式名稱)</li>
         :type Filters: list of Filter
         """
         self.Limit = None
@@ -3051,7 +3051,7 @@ class DescribeProcessStatisticsRequest(AbstractModel):
         :param Offset: 偏移量，預設爲0。
         :type Offset: int
         :param Filters: 過濾條件。
-<li>ProcessName - String - 是否必填：否 - 程序名</li>
+<li>ProcessName - String - 是否必填：否 - 程式名</li>
         :type Filters: list of Filter
         """
         self.Limit = None
@@ -3077,9 +3077,9 @@ class DescribeProcessStatisticsResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param TotalCount: 程序統計清單記錄總數。
+        :param TotalCount: 程式統計清單記錄總數。
         :type TotalCount: int
-        :param ProcessStatistics: 程序統計清單數據數組。
+        :param ProcessStatistics: 程式統計清單數據數組。
         :type ProcessStatistics: list of ProcessStatistics
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3125,10 +3125,10 @@ class DescribeProcessTaskStatusResponse(AbstractModel):
     def __init__(self):
         """
         :param Status: 任務狀态。
-<li>COMPLETE：完成（此時可以調用DescribeProcesses介面獲取實時程序清單）</li>
+<li>COMPLETE：完成（此時可以調用DescribeProcesses介面獲取實時程式清單）</li>
 <li>AGENT_OFFLINE：雲鏡用戶端離線</li>
-<li>COLLECTING：程序獲取中</li>
-<li>FAILED：程序獲取失敗</li>
+<li>COLLECTING：程式獲取中</li>
+<li>FAILED：程式獲取失敗</li>
         :type Status: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3151,14 +3151,14 @@ class DescribeProcessesRequest(AbstractModel):
         """
         :param Uuid: 雲鏡用戶端唯一Uuid。Uuid和ProcessName必填其一，使用Uuid表示，查詢該主機清單訊息。
         :type Uuid: str
-        :param ProcessName: 程序名。Uuid和ProcessName必填其一，使用ProcessName表示，查詢該程序清單訊息。
+        :param ProcessName: 程式名。Uuid和ProcessName必填其一，使用ProcessName表示，查詢該程式清單訊息。
         :type ProcessName: str
         :param Limit: 返回數量，預設爲10，最大值爲100。
         :type Limit: int
         :param Offset: 偏移量，預設爲0。
         :type Offset: int
         :param Filters: 過濾條件。
-<li>ProcessName - String - 是否必填：否 - 程序名</li>
+<li>ProcessName - String - 是否必填：否 - 程式名</li>
 <li>MachineIp - String - 是否必填：否 - 主機内網IP</li>
         :type Filters: list of Filter
         """
@@ -3189,9 +3189,9 @@ class DescribeProcessesResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param TotalCount: 程序清單記錄總數。
+        :param TotalCount: 程式清單記錄總數。
         :type TotalCount: int
-        :param Processes: 程序清單數據數組。
+        :param Processes: 程式清單數據數組。
         :type Processes: list of Process
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3224,7 +3224,7 @@ class DescribeReverseShellEventsRequest(AbstractModel):
         :param Offset: 偏移量，預設爲0。
         :type Offset: int
         :param Filters: 過濾條件。
-<li>Keywords - String - 是否必填：否 - 關鍵字(主機内網IP|程序名)</li>
+<li>Keywords - String - 是否必填：否 - 關鍵字(主機内網IP|程式名)</li>
         :type Filters: list of Filter
         """
         self.Limit = None
@@ -3285,7 +3285,7 @@ class DescribeReverseShellRulesRequest(AbstractModel):
         :param Offset: 偏移量，預設爲0。
         :type Offset: int
         :param Filters: 過濾條件。
-<li>Keywords - String - 是否必填：否 - 關鍵字(程序名稱)</li>
+<li>Keywords - String - 是否必填：否 - 關鍵字(程式名稱)</li>
         :type Filters: list of Filter
         """
         self.Limit = None
@@ -4196,9 +4196,9 @@ class EditPrivilegeRuleRequest(AbstractModel):
         :type Uuid: str
         :param Hostip: 主機IP(IsGlobal爲1時，Uuid或Hostip必填一個)
         :type Hostip: str
-        :param ProcessName: 程序名
+        :param ProcessName: 程式名
         :type ProcessName: str
-        :param SMode: 是否S權限程序
+        :param SMode: 是否S權限程式
         :type SMode: int
         :param IsGlobal: 是否全局規則(預設否)
         :type IsGlobal: int
@@ -4254,7 +4254,7 @@ class EditReverseShellRuleRequest(AbstractModel):
         :type DestIp: str
         :param DestPort: 目标端口
         :type DestPort: str
-        :param ProcessName: 程序名
+        :param ProcessName: 程式名
         :type ProcessName: str
         :param IsGlobal: 是否全局規則(預設否)
         :type IsGlobal: int
@@ -4718,7 +4718,7 @@ class InquiryPriceOpenProVersionPrepaidRequest(AbstractModel):
     def __init__(self):
         """
         :param ChargePrepaid: 預付費模式(包年包月)參數設置。
-        :type ChargePrepaid: :class:`tencentcloud.yunjing.v20180228.models.ChargePrepaid`
+        :type ChargePrepaid: :class:`taifucloudcloud.yunjing.v20180228.models.ChargePrepaid`
         :param Machines: 需要開通專業版機器清單數組。
         :type Machines: list of ProVersionMachine
         """
@@ -4976,7 +4976,7 @@ class MaliciousRequest(AbstractModel):
         :type Domain: str
         :param Count: 惡意請求數。
         :type Count: int
-        :param ProcessName: 程序名。
+        :param ProcessName: 程式名。
         :type ProcessName: str
         :param Status: 記錄狀态。
 <li>UN_OPERATED：待處理</li>
@@ -4991,12 +4991,12 @@ class MaliciousRequest(AbstractModel):
         :type CreateTime: str
         :param MergeTime: 記錄合并時間。
         :type MergeTime: str
-        :param ProcessMd5: 程序MD5
+        :param ProcessMd5: 程式MD5
 值。
         :type ProcessMd5: str
         :param CmdLine: 執行命令行。
         :type CmdLine: str
-        :param Pid: 程序PID。
+        :param Pid: 程式PID。
         :type Pid: int
         """
         self.Id = None
@@ -5207,7 +5207,7 @@ class ModifyLoginWhiteListRequest(AbstractModel):
     def __init__(self):
         """
         :param Rules: 白名單規則
-        :type Rules: :class:`tencentcloud.yunjing.v20180228.models.LoginWhiteListsRule`
+        :type Rules: :class:`taifucloudcloud.yunjing.v20180228.models.LoginWhiteListsRule`
         """
         self.Rules = None
 
@@ -5297,7 +5297,7 @@ class NonLocalLoginPlace(AbstractModel):
         :type City: int
         :param Country: 國家ID。
         :type Country: int
-        :param Province: 省份ID。
+        :param Province:  ID。
         :type Province: int
         :param SrcIp: 登入IP。
         :type SrcIp: str
@@ -5352,9 +5352,9 @@ class OpenPort(AbstractModel):
         :type MachineIp: str
         :param MachineName: 主機名。
         :type MachineName: str
-        :param ProcessName: 端口對應程序名。
+        :param ProcessName: 端口對應程式名。
         :type ProcessName: str
-        :param Pid: 端口對應程序Pid。
+        :param Pid: 端口對應程式Pid。
         :type Pid: int
         :param CreateTime: 記錄創建時間。
         :type CreateTime: str
@@ -5413,7 +5413,7 @@ class OpenProVersionPrepaidRequest(AbstractModel):
     def __init__(self):
         """
         :param ChargePrepaid: 購買相關參數。
-        :type ChargePrepaid: :class:`tencentcloud.yunjing.v20180228.models.ChargePrepaid`
+        :type ChargePrepaid: :class:`taifucloudcloud.yunjing.v20180228.models.ChargePrepaid`
         :param Machines: 需要開通專業版主機訊息數組。
         :type Machines: list of ProVersionMachine
         """
@@ -5513,7 +5513,7 @@ class Place(AbstractModel):
         """
         :param CityId: 城市 ID。
         :type CityId: int
-        :param ProvinceId: 省份 ID。
+        :param ProvinceId:   ID。
         :type ProvinceId: int
         :param CountryId: 國家ID，暫只支援國内：1。
         :type CountryId: int
@@ -5544,9 +5544,9 @@ class PrivilegeEscalationProcess(AbstractModel):
         :type Quuid: str
         :param Hostip: 主機内網IP
         :type Hostip: str
-        :param ProcessName: 程序名
+        :param ProcessName: 程式名
         :type ProcessName: str
-        :param FullPath: 程序路徑
+        :param FullPath: 程式路徑
         :type FullPath: str
         :param CmdLine: 執行命令
         :type CmdLine: str
@@ -5554,17 +5554,17 @@ class PrivilegeEscalationProcess(AbstractModel):
         :type UserName: str
         :param UserGroup: 用戶組
         :type UserGroup: str
-        :param ProcFilePrivilege: 程序文件權限
+        :param ProcFilePrivilege: 程式文件權限
         :type ProcFilePrivilege: str
-        :param ParentProcName: 父程序名
+        :param ParentProcName: 父程式名
         :type ParentProcName: str
-        :param ParentProcUser: 父程序用戶名
+        :param ParentProcUser: 父程式用戶名
         :type ParentProcUser: str
-        :param ParentProcGroup: 父程序用戶組
+        :param ParentProcGroup: 父程式用戶組
         :type ParentProcGroup: str
-        :param ParentProcPath: 父程序路徑
+        :param ParentProcPath: 父程式路徑
         :type ParentProcPath: str
-        :param ProcTree: 程序樹
+        :param ProcTree: 程式樹
         :type ProcTree: str
         :param Status: 處理狀态
         :type Status: int
@@ -5625,7 +5625,7 @@ class PrivilegeRule(AbstractModel):
         :type Id: int
         :param Uuid: 用戶端ID
         :type Uuid: str
-        :param ProcessName: 程序名
+        :param ProcessName: 程式名
         :type ProcessName: str
         :param SMode: 是否S權限
         :type SMode: int
@@ -5697,7 +5697,7 @@ class ProVersionMachine(AbstractModel):
 
 
 class Process(AbstractModel):
-    """程序訊息數據。
+    """程式訊息數據。
 
     """
 
@@ -5711,13 +5711,13 @@ class Process(AbstractModel):
         :type MachineIp: str
         :param MachineName: 主機名。
         :type MachineName: str
-        :param Pid: 程序Pid。
+        :param Pid: 程式Pid。
         :type Pid: int
-        :param Ppid: 程序Ppid。
+        :param Ppid: 程式Ppid。
         :type Ppid: int
-        :param ProcessName: 程序名。
+        :param ProcessName: 程式名。
         :type ProcessName: str
-        :param Username: 程序用戶名。
+        :param Username: 程式用戶名。
         :type Username: str
         :param Platform: 所屬平台。
 <li>WIN32：windows32位</li>
@@ -5725,7 +5725,7 @@ class Process(AbstractModel):
 <li>LINUX32：Linux32位</li>
 <li>LINUX64：Linux64位</li>
         :type Platform: str
-        :param FullPath: 程序路徑。
+        :param FullPath: 程式路徑。
         :type FullPath: str
         :param CreateTime: 創建時間。
         :type CreateTime: str
@@ -5758,13 +5758,13 @@ class Process(AbstractModel):
 
 
 class ProcessStatistics(AbstractModel):
-    """程序數據統計數據。
+    """程式數據統計數據。
 
     """
 
     def __init__(self):
         """
-        :param ProcessName: 程序名。
+        :param ProcessName: 程式名。
         :type ProcessName: str
         :param MachineNum: 主機數量。
         :type MachineNum: int
@@ -5828,7 +5828,7 @@ class RenewProVersionRequest(AbstractModel):
     def __init__(self):
         """
         :param ChargePrepaid: 購買相關參數。
-        :type ChargePrepaid: :class:`tencentcloud.yunjing.v20180228.models.ChargePrepaid`
+        :type ChargePrepaid: :class:`taifucloudcloud.yunjing.v20180228.models.ChargePrepaid`
         :param Quuid: 主機唯一ID，對應CVM的uuid、BM的InstanceId。
         :type Quuid: str
         """
@@ -5913,9 +5913,9 @@ class ReverseShell(AbstractModel):
         :type DstIp: str
         :param DstPort: 目标端口
         :type DstPort: int
-        :param ProcessName: 程序名
+        :param ProcessName: 程式名
         :type ProcessName: str
-        :param FullPath: 程序路徑
+        :param FullPath: 程式路徑
         :type FullPath: str
         :param CmdLine: 命令詳情
         :type CmdLine: str
@@ -5923,13 +5923,13 @@ class ReverseShell(AbstractModel):
         :type UserName: str
         :param UserGroup: 執行用戶組
         :type UserGroup: str
-        :param ParentProcName: 父程序名
+        :param ParentProcName: 父程式名
         :type ParentProcName: str
-        :param ParentProcUser: 父程序用戶
+        :param ParentProcUser: 父程式用戶
         :type ParentProcUser: str
-        :param ParentProcGroup: 父程序用戶組
+        :param ParentProcGroup: 父程式用戶組
         :type ParentProcGroup: str
-        :param ParentProcPath: 父程序路徑
+        :param ParentProcPath: 父程式路徑
         :type ParentProcPath: str
         :param Status: 處理狀态
         :type Status: int
@@ -5937,7 +5937,7 @@ class ReverseShell(AbstractModel):
         :type CreateTime: str
         :param MachineName: 主機名
         :type MachineName: str
-        :param ProcTree: 程序樹
+        :param ProcTree: 程式樹
         :type ProcTree: str
         """
         self.Id = None
@@ -5994,7 +5994,7 @@ class ReverseShellRule(AbstractModel):
         :type Id: int
         :param Uuid: 用戶端ID
         :type Uuid: str
-        :param ProcessName: 程序名稱
+        :param ProcessName: 程式名稱
         :type ProcessName: str
         :param DestIp: 目标IP
         :type DestIp: str
@@ -6428,7 +6428,7 @@ class UsualPlace(AbstractModel):
         :type Uuid: str
         :param CountryId: 國家 ID。
         :type CountryId: int
-        :param ProvinceId: 省份 ID。
+        :param ProvinceId:   ID。
         :type ProvinceId: int
         :param CityId: 城市 ID。
         :type CityId: int
@@ -6598,7 +6598,7 @@ class WeeklyReportNonlocalLoginPlace(AbstractModel):
         :type SrcIp: str
         :param Country: 國家ID。
         :type Country: int
-        :param Province: 省份ID。
+        :param Province:  ID。
         :type Province: int
         :param City: 城市ID。
         :type City: int

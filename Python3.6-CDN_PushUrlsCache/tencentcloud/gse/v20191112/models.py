@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CreateGameServerSessionRequest(AbstractModel):
@@ -79,7 +79,7 @@ class CreateGameServerSessionResponse(AbstractModel):
         """
         :param GameServerSession: 遊戲服務器會話
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type GameServerSession: :class:`tencentcloud.gse.v20191112.models.GameServerSession`
+        :type GameServerSession: :class:`taifucloudcloud.gse.v20191112.models.GameServerSession`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -209,7 +209,7 @@ class DescribeGameServerSessionPlacementResponse(AbstractModel):
     def __init__(self):
         """
         :param GameServerSessionPlacement: 遊戲服務器會話放置
-        :type GameServerSessionPlacement: :class:`tencentcloud.gse.v20191112.models.GameServerSessionPlacement`
+        :type GameServerSessionPlacement: :class:`taifucloudcloud.gse.v20191112.models.GameServerSessionPlacement`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -494,7 +494,7 @@ class GameServerSession(AbstractModel):
         :type GameServerSessionId: str
         :param IpAddress: CVM IP網址
         :type IpAddress: str
-        :param MatchmakerData: 對戰程序詳情
+        :param MatchmakerData: 對戰程式詳情
 注意：此欄位可能返回 null，表示取不到有效值。
         :type MatchmakerData: str
         :param MaximumPlayerSessionCount: 最大玩家數量
@@ -593,7 +593,7 @@ class GameServerSessionDetail(AbstractModel):
     def __init__(self):
         """
         :param GameServerSession: 遊戲服務器會話
-        :type GameServerSession: :class:`tencentcloud.gse.v20191112.models.GameServerSession`
+        :type GameServerSession: :class:`taifucloudcloud.gse.v20191112.models.GameServerSession`
         :param ProtectionPolicy: 保護策略，可選（NoProtection,FullProtection）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ProtectionPolicy: str
@@ -785,7 +785,7 @@ class GetInstanceAccessResponse(AbstractModel):
     def __init__(self):
         """
         :param InstanceAccess: 實例登入所需要的憑據
-        :type InstanceAccess: :class:`tencentcloud.gse.v20191112.models.InstanceAccess`
+        :type InstanceAccess: :class:`taifucloudcloud.gse.v20191112.models.InstanceAccess`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -861,7 +861,7 @@ class InstanceAccess(AbstractModel):
     def __init__(self):
         """
         :param Credentials: 訪問實例所需要的憑據
-        :type Credentials: :class:`tencentcloud.gse.v20191112.models.Credentials`
+        :type Credentials: :class:`taifucloudcloud.gse.v20191112.models.Credentials`
         :param FleetId: 服務佈署Id
         :type FleetId: str
         :param InstanceId: 實例ID
@@ -922,7 +922,7 @@ class JoinGameServerSessionResponse(AbstractModel):
         """
         :param PlayerSession: 玩家會話
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PlayerSession: :class:`tencentcloud.gse.v20191112.models.PlayerSession`
+        :type PlayerSession: :class:`taifucloudcloud.gse.v20191112.models.PlayerSession`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1199,7 +1199,7 @@ class StartGameServerSessionPlacementResponse(AbstractModel):
     def __init__(self):
         """
         :param GameServerSessionPlacement: 遊戲服務器會話放置
-        :type GameServerSessionPlacement: :class:`tencentcloud.gse.v20191112.models.GameServerSessionPlacement`
+        :type GameServerSessionPlacement: :class:`taifucloudcloud.gse.v20191112.models.GameServerSessionPlacement`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1239,7 +1239,7 @@ class StopGameServerSessionPlacementResponse(AbstractModel):
     def __init__(self):
         """
         :param GameServerSessionPlacement: 遊戲服務器會話放置
-        :type GameServerSessionPlacement: :class:`tencentcloud.gse.v20191112.models.GameServerSessionPlacement`
+        :type GameServerSessionPlacement: :class:`taifucloudcloud.gse.v20191112.models.GameServerSessionPlacement`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1295,7 +1295,7 @@ class UpdateGameServerSessionResponse(AbstractModel):
     def __init__(self):
         """
         :param GameServerSession: 更新後的遊戲會話
-        :type GameServerSession: :class:`tencentcloud.gse.v20191112.models.GameServerSession`
+        :type GameServerSession: :class:`taifucloudcloud.gse.v20191112.models.GameServerSession`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

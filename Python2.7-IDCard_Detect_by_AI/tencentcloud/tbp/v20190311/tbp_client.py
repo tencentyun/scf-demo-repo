@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tbp.v20190311 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tbp.v20190311 import models
 
 
 class TbpClient(AbstractClient):
     _apiVersion = '2019-03-11'
-    _endpoint = 'tbp.tencentcloudapi.com'
+    _endpoint = 'tbp.taifucloudcloudapi.com'
 
 
     def PostAudio(self, request):
         """機器人會話介面，接收音訊訊息，傳遞給後台機器人
 
         :param request: 調用PostAudio所需參數的結構體。
-        :type request: :class:`tencentcloud.tbp.v20190311.models.PostAudioRequest`
-        :rtype: :class:`tencentcloud.tbp.v20190311.models.PostAudioResponse`
+        :type request: :class:`taifucloudcloud.tbp.v20190311.models.PostAudioRequest`
+        :rtype: :class:`taifucloudcloud.tbp.v20190311.models.PostAudioResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TbpClient(AbstractClient):
         """機器人會話介面，接收文本訊息，傳遞給後台機器人
 
         :param request: 調用PostText所需參數的結構體。
-        :type request: :class:`tencentcloud.tbp.v20190311.models.PostTextRequest`
-        :rtype: :class:`tencentcloud.tbp.v20190311.models.PostTextResponse`
+        :type request: :class:`taifucloudcloud.tbp.v20190311.models.PostTextRequest`
+        :rtype: :class:`taifucloudcloud.tbp.v20190311.models.PostTextResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TbpClient(AbstractClient):
         """對當前機器人的會話狀态進行複位
 
         :param request: 調用Reset所需參數的結構體。
-        :type request: :class:`tencentcloud.tbp.v20190311.models.ResetRequest`
-        :rtype: :class:`tencentcloud.tbp.v20190311.models.ResetResponse`
+        :type request: :class:`taifucloudcloud.tbp.v20190311.models.ResetRequest`
+        :rtype: :class:`taifucloudcloud.tbp.v20190311.models.ResetResponse`
 
         """
         try:

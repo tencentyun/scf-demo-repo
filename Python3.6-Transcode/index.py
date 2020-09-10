@@ -1,7 +1,7 @@
 #####----------------------------------------------------------------#####
 #####                                                                #####
 #####   使用教程/readme:                                              #####
-#####   https://cloud.tencent.com/document/product/583/47071         #####
+#####   https://cloud.taifucloud.com/document/product/583/47071         #####
 #####                                                                #####
 #####----------------------------------------------------------------#####
 
@@ -32,7 +32,7 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
-# 移動ffmpeg到tmp目錄，并且賦予權限,tmp是雲函數的本地磁盤空間，可讀可寫
+#  ffmpeg到tmp目錄，并且賦予權限,tmp是雲函數的本地磁盤空間，可讀可寫
 with open("/var/user/ffmpeg", "rb") as rf:
     with open("/tmp/ffmpeg", "wb") as wf:
         wf.write(rf.read())

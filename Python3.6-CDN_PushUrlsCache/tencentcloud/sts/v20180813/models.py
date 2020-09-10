@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class ApiKey(AbstractModel):
@@ -56,8 +56,8 @@ class AssumeRoleRequest(AbstractModel):
         :type DurationSeconds: int
         :param Policy: 策略描述
 注意：
-1、policy 需要做 urlencode（如果通過 GET 方法請求雲 API，發送請求前，所有參數都需要按照[雲 API 規範](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2)再 urlencode 一次）。
-2、策略語法參照[ CAM 策略語法](https://cloud.tencent.com/document/product/598/10603)。
+1、policy 需要做 urlencode（如果通過 GET 方法請求雲 API，發送請求前，所有參數都需要按照[雲 API 規範](https://cloud.taifucloud.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2)再 urlencode 一次）。
+2、策略語法參照[ CAM 策略語法](https://cloud.taifucloud.com/document/product/598/10603)。
 3、策略中不能包含 principal 元素。
         :type Policy: str
         """
@@ -82,7 +82,7 @@ class AssumeRoleResponse(AbstractModel):
     def __init__(self):
         """
         :param Credentials: 臨時安全證書
-        :type Credentials: :class:`tencentcloud.sts.v20180813.models.Credentials`
+        :type Credentials: :class:`taifucloudcloud.sts.v20180813.models.Credentials`
         :param ExpiredTime: 證書無效的時間，返回 Unix 時間戳，精确到秒
         :type ExpiredTime: int
         :param Expiration: 證書無效的時間，以 iso8601 格式的 UTC 時間表示
@@ -146,7 +146,7 @@ class AssumeRoleWithSAMLResponse(AbstractModel):
     def __init__(self):
         """
         :param Credentials: 對象裏面包含 Token，TmpSecretId，TmpSecretKey 三元組
-        :type Credentials: :class:`tencentcloud.sts.v20180813.models.Credentials`
+        :type Credentials: :class:`taifucloudcloud.sts.v20180813.models.Credentials`
         :param ExpiredTime: 證書無效的時間，返回 Unix 時間戳，精确到秒
         :type ExpiredTime: int
         :param Expiration: 證書無效的時間，以 ISO8601 格式的 UTC 時間表示
@@ -205,8 +205,8 @@ class GetFederationTokenRequest(AbstractModel):
         :type Name: str
         :param Policy: 策略描述
 注意：
-1、policy 需要做 urlencode（如果通過 GET 方法請求雲 API，發送請求前，所有參數都需要按照[雲 API 規範](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2)再 urlencode 一次）。
-2、策略語法參照[ CAM 策略語法](https://cloud.tencent.com/document/product/598/10603)。
+1、policy 需要做 urlencode（如果通過 GET 方法請求雲 API，發送請求前，所有參數都需要按照[雲 API 規範](https://cloud.taifucloud.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2)再 urlencode 一次）。
+2、策略語法參照[ CAM 策略語法](https://cloud.taifucloud.com/document/product/598/10603)。
 3、策略中不能包含 principal 元素。
         :type Policy: str
         :param DurationSeconds: 指定臨時證書的有效期，單位：秒，預設1800秒，最長可設定有效期爲7200秒。
@@ -231,7 +231,7 @@ class GetFederationTokenResponse(AbstractModel):
     def __init__(self):
         """
         :param Credentials: 臨時證書
-        :type Credentials: :class:`tencentcloud.sts.v20180813.models.Credentials`
+        :type Credentials: :class:`taifucloudcloud.sts.v20180813.models.Credentials`
         :param ExpiredTime: 臨時證書有效的時間，返回 Unix 時間戳，精确到秒
         :type ExpiredTime: int
         :param Expiration: 證書有效的時間，以 iso8601 格式的 UTC 時間表示

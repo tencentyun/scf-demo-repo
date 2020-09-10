@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AgePortrait(AbstractModel):
@@ -701,15 +701,15 @@ class DescribeUserPortraitResponse(AbstractModel):
     def __init__(self):
         """
         :param Age: 年齡畫像
-        :type Age: :class:`tencentcloud.tbm.v20180129.models.AgePortraitInfo`
+        :type Age: :class:`taifucloudcloud.tbm.v20180129.models.AgePortraitInfo`
         :param Gender: 性别畫像
-        :type Gender: :class:`tencentcloud.tbm.v20180129.models.GenderPortraitInfo`
-        :param Province: 省份畫像
-        :type Province: :class:`tencentcloud.tbm.v20180129.models.ProvincePortraitInfo`
+        :type Gender: :class:`taifucloudcloud.tbm.v20180129.models.GenderPortraitInfo`
+        :param Province:  畫像
+        :type Province: :class:`taifucloudcloud.tbm.v20180129.models.ProvincePortraitInfo`
         :param Movie: 電影喜好畫像
-        :type Movie: :class:`tencentcloud.tbm.v20180129.models.MoviePortraitInfo`
+        :type Movie: :class:`taifucloudcloud.tbm.v20180129.models.MoviePortraitInfo`
         :param Star: 明星喜好畫像
-        :type Star: :class:`tencentcloud.tbm.v20180129.models.StarPortraitInfo`
+        :type Star: :class:`taifucloudcloud.tbm.v20180129.models.StarPortraitInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -876,13 +876,13 @@ class MoviePortraitInfo(AbstractModel):
 
 
 class ProvincePortrait(AbstractModel):
-    """省份畫像元素
+    """ 畫像元素
 
     """
 
     def __init__(self):
         """
-        :param Province: 省份名稱
+        :param Province:  名稱
         :type Province: str
         :param Percent: 百分比
         :type Percent: float
@@ -897,13 +897,13 @@ class ProvincePortrait(AbstractModel):
 
 
 class ProvincePortraitInfo(AbstractModel):
-    """用戶省份畫像元素數組
+    """用戶 畫像元素數組
 
     """
 
     def __init__(self):
         """
-        :param PortraitSet: 用戶省份畫像數組
+        :param PortraitSet: 用戶 畫像數組
         :type PortraitSet: list of ProvincePortrait
         """
         self.PortraitSet = None

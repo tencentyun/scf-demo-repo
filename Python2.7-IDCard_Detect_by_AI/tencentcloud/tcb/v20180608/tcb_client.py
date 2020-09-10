@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tcb.v20180608 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tcb.v20180608 import models
 
 
 class TcbClient(AbstractClient):
     _apiVersion = '2018-06-08'
-    _endpoint = 'tcb.tencentcloudapi.com'
+    _endpoint = 'tcb.taifucloudcloudapi.com'
 
 
     def DescribeDatabaseACL(self, request):
         """獲取資料庫權限
 
         :param request: 調用DescribeDatabaseACL所需參數的結構體。
-        :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeDatabaseACLRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.DescribeDatabaseACLResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.DescribeDatabaseACLRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.DescribeDatabaseACLResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TcbClient(AbstractClient):
         """獲取環境清單，含環境下的各個資源訊息。尤其是各資源的唯一标識，是請求各資源的關鍵參數
 
         :param request: 調用DescribeEnvs所需參數的結構體。
-        :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeEnvsRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.DescribeEnvsResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.DescribeEnvsRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.DescribeEnvsResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TcbClient(AbstractClient):
         """修改資料庫權限
 
         :param request: 調用ModifyDatabaseACL所需參數的結構體。
-        :type request: :class:`tencentcloud.tcb.v20180608.models.ModifyDatabaseACLRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.ModifyDatabaseACLResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.ModifyDatabaseACLRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.ModifyDatabaseACLResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TcbClient(AbstractClient):
         """更新環境訊息
 
         :param request: 調用ModifyEnv所需參數的結構體。
-        :type request: :class:`tencentcloud.tcb.v20180608.models.ModifyEnvRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.ModifyEnvResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.ModifyEnvRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.ModifyEnvResponse`
 
         """
         try:

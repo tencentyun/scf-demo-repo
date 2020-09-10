@@ -8,4 +8,3 @@ if __name__ == '__main__':
     pkg_dir = os.path.dirname(os.path.abspath(__file__))
     main = os.path.join(pkg_dir, '__main__.py')
     exec(open(main).read())
-

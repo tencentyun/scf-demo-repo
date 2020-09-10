@@ -1,7 +1,7 @@
 "use strict";
 /**************************************************
 Node8.9-WriteToES
-Reference: https://cloud.tencent.com/document/product/583/32553
+Reference: https://cloud.taifucloud.com/document/product/583/32553
 ***************************************************/
 
 // The host address of es cluster, es集群的主機網址

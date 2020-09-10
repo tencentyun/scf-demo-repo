@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.ecdn.v20191012 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.ecdn.v20191012 import models
 
 
 class EcdnClient(AbstractClient):
     _apiVersion = '2019-10-12'
-    _endpoint = 'ecdn.tencentcloudapi.com'
+    _endpoint = 'ecdn.taifucloudcloudapi.com'
 
 
     def AddEcdnDomain(self, request):
         """本介面（AddEcdnDomain）用于創建加速域名。
 
         :param request: Request instance for AddEcdnDomain.
-        :type request: :class:`tencentcloud.ecdn.v20191012.models.AddEcdnDomainRequest`
-        :rtype: :class:`tencentcloud.ecdn.v20191012.models.AddEcdnDomainResponse`
+        :type request: :class:`taifucloudcloud.ecdn.v20191012.models.AddEcdnDomainRequest`
+        :rtype: :class:`taifucloudcloud.ecdn.v20191012.models.AddEcdnDomainResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class EcdnClient(AbstractClient):
         """本介面（DeleteEcdnDomain）用于删除指定加速域名。待删除域名必須處于已停用狀态。
 
         :param request: Request instance for DeleteEcdnDomain.
-        :type request: :class:`tencentcloud.ecdn.v20191012.models.DeleteEcdnDomainRequest`
-        :rtype: :class:`tencentcloud.ecdn.v20191012.models.DeleteEcdnDomainResponse`
+        :type request: :class:`taifucloudcloud.ecdn.v20191012.models.DeleteEcdnDomainRequest`
+        :rtype: :class:`taifucloudcloud.ecdn.v20191012.models.DeleteEcdnDomainResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class EcdnClient(AbstractClient):
         """本介面（DescribeDomains）用于查詢CDN域名基本訊息，包括項目id，狀态，業務類型，創建時間，更新時間等。
 
         :param request: Request instance for DescribeDomains.
-        :type request: :class:`tencentcloud.ecdn.v20191012.models.DescribeDomainsRequest`
-        :rtype: :class:`tencentcloud.ecdn.v20191012.models.DescribeDomainsResponse`
+        :type request: :class:`taifucloudcloud.ecdn.v20191012.models.DescribeDomainsRequest`
+        :rtype: :class:`taifucloudcloud.ecdn.v20191012.models.DescribeDomainsResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class EcdnClient(AbstractClient):
         """本介面（DescribeDomainsConfig）用于查詢CDN加速域名詳細配置訊息。
 
         :param request: Request instance for DescribeDomainsConfig.
-        :type request: :class:`tencentcloud.ecdn.v20191012.models.DescribeDomainsConfigRequest`
-        :rtype: :class:`tencentcloud.ecdn.v20191012.models.DescribeDomainsConfigResponse`
+        :type request: :class:`taifucloudcloud.ecdn.v20191012.models.DescribeDomainsConfigRequest`
+        :rtype: :class:`taifucloudcloud.ecdn.v20191012.models.DescribeDomainsConfigResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class EcdnClient(AbstractClient):
         """本介面（DescribeEcdnDomainLogs）用于查詢域名的訪問日志下載網址。
 
         :param request: Request instance for DescribeEcdnDomainLogs.
-        :type request: :class:`tencentcloud.ecdn.v20191012.models.DescribeEcdnDomainLogsRequest`
-        :rtype: :class:`tencentcloud.ecdn.v20191012.models.DescribeEcdnDomainLogsResponse`
+        :type request: :class:`taifucloudcloud.ecdn.v20191012.models.DescribeEcdnDomainLogsRequest`
+        :rtype: :class:`taifucloudcloud.ecdn.v20191012.models.DescribeEcdnDomainLogsResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class EcdnClient(AbstractClient):
         """本介面（DescribeEcdnDomainStatistics）用于查詢指定時間段内的域名訪問統計指标
 
         :param request: Request instance for DescribeEcdnDomainStatistics.
-        :type request: :class:`tencentcloud.ecdn.v20191012.models.DescribeEcdnDomainStatisticsRequest`
-        :rtype: :class:`tencentcloud.ecdn.v20191012.models.DescribeEcdnDomainStatisticsResponse`
+        :type request: :class:`taifucloudcloud.ecdn.v20191012.models.DescribeEcdnDomainStatisticsRequest`
+        :rtype: :class:`taifucloudcloud.ecdn.v20191012.models.DescribeEcdnDomainStatisticsResponse`
 
         """
         try:
@@ -206,8 +206,8 @@ class EcdnClient(AbstractClient):
         + 狀态碼 5xx 匯總及各 5 開頭狀态碼明細（單位爲 個）
 
         :param request: Request instance for DescribeEcdnStatistics.
-        :type request: :class:`tencentcloud.ecdn.v20191012.models.DescribeEcdnStatisticsRequest`
-        :rtype: :class:`tencentcloud.ecdn.v20191012.models.DescribeEcdnStatisticsResponse`
+        :type request: :class:`taifucloudcloud.ecdn.v20191012.models.DescribeEcdnStatisticsRequest`
+        :rtype: :class:`taifucloudcloud.ecdn.v20191012.models.DescribeEcdnStatisticsResponse`
 
         """
         try:
@@ -234,8 +234,8 @@ class EcdnClient(AbstractClient):
         """查詢重新整理介面的用量配額。
 
         :param request: Request instance for DescribePurgeQuota.
-        :type request: :class:`tencentcloud.ecdn.v20191012.models.DescribePurgeQuotaRequest`
-        :rtype: :class:`tencentcloud.ecdn.v20191012.models.DescribePurgeQuotaResponse`
+        :type request: :class:`taifucloudcloud.ecdn.v20191012.models.DescribePurgeQuotaRequest`
+        :rtype: :class:`taifucloudcloud.ecdn.v20191012.models.DescribePurgeQuotaResponse`
 
         """
         try:
@@ -262,8 +262,8 @@ class EcdnClient(AbstractClient):
         """DescribePurgeTasks 用于查詢重新整理任務提交曆史記錄及執行進度。
 
         :param request: Request instance for DescribePurgeTasks.
-        :type request: :class:`tencentcloud.ecdn.v20191012.models.DescribePurgeTasksRequest`
-        :rtype: :class:`tencentcloud.ecdn.v20191012.models.DescribePurgeTasksResponse`
+        :type request: :class:`taifucloudcloud.ecdn.v20191012.models.DescribePurgeTasksRequest`
+        :rtype: :class:`taifucloudcloud.ecdn.v20191012.models.DescribePurgeTasksResponse`
 
         """
         try:
@@ -290,8 +290,8 @@ class EcdnClient(AbstractClient):
         """PurgeUrlsCache 用于批次重新整理目錄快取，一次提交将返回一個重新整理任務id。
 
         :param request: Request instance for PurgePathCache.
-        :type request: :class:`tencentcloud.ecdn.v20191012.models.PurgePathCacheRequest`
-        :rtype: :class:`tencentcloud.ecdn.v20191012.models.PurgePathCacheResponse`
+        :type request: :class:`taifucloudcloud.ecdn.v20191012.models.PurgePathCacheRequest`
+        :rtype: :class:`taifucloudcloud.ecdn.v20191012.models.PurgePathCacheResponse`
 
         """
         try:
@@ -318,8 +318,8 @@ class EcdnClient(AbstractClient):
         """PurgeUrlsCache 用于批次重新整理Url，一次提交将返回一個重新整理任務id。
 
         :param request: Request instance for PurgeUrlsCache.
-        :type request: :class:`tencentcloud.ecdn.v20191012.models.PurgeUrlsCacheRequest`
-        :rtype: :class:`tencentcloud.ecdn.v20191012.models.PurgeUrlsCacheResponse`
+        :type request: :class:`taifucloudcloud.ecdn.v20191012.models.PurgeUrlsCacheRequest`
+        :rtype: :class:`taifucloudcloud.ecdn.v20191012.models.PurgeUrlsCacheResponse`
 
         """
         try:
@@ -346,8 +346,8 @@ class EcdnClient(AbstractClient):
         """本介面（StartEcdnDomain）用于啓用加速域名，待啓用域名必須處于已下線狀态。
 
         :param request: Request instance for StartEcdnDomain.
-        :type request: :class:`tencentcloud.ecdn.v20191012.models.StartEcdnDomainRequest`
-        :rtype: :class:`tencentcloud.ecdn.v20191012.models.StartEcdnDomainResponse`
+        :type request: :class:`taifucloudcloud.ecdn.v20191012.models.StartEcdnDomainRequest`
+        :rtype: :class:`taifucloudcloud.ecdn.v20191012.models.StartEcdnDomainResponse`
 
         """
         try:
@@ -374,8 +374,8 @@ class EcdnClient(AbstractClient):
         """本介面（StopCdnDomain）用于停止加速域名，待停用加速域名必須處于已上線或佈署中狀态。
 
         :param request: Request instance for StopEcdnDomain.
-        :type request: :class:`tencentcloud.ecdn.v20191012.models.StopEcdnDomainRequest`
-        :rtype: :class:`tencentcloud.ecdn.v20191012.models.StopEcdnDomainResponse`
+        :type request: :class:`taifucloudcloud.ecdn.v20191012.models.StopEcdnDomainRequest`
+        :rtype: :class:`taifucloudcloud.ecdn.v20191012.models.StopEcdnDomainResponse`
 
         """
         try:
@@ -403,8 +403,8 @@ class EcdnClient(AbstractClient):
         注意：如果需要更新複雜類型的配置項，必須傳遞整個對象的所有屬性，未傳遞的屬性将使用預設值。建議通過查詢介面獲取配置屬性後，直接修改後傳遞給本介面。Https配置由于證書的特殊性，更新時不用傳遞證書和金鑰欄位。
 
         :param request: Request instance for UpdateDomainConfig.
-        :type request: :class:`tencentcloud.ecdn.v20191012.models.UpdateDomainConfigRequest`
-        :rtype: :class:`tencentcloud.ecdn.v20191012.models.UpdateDomainConfigResponse`
+        :type request: :class:`taifucloudcloud.ecdn.v20191012.models.UpdateDomainConfigRequest`
+        :rtype: :class:`taifucloudcloud.ecdn.v20191012.models.UpdateDomainConfigResponse`
 
         """
         try:

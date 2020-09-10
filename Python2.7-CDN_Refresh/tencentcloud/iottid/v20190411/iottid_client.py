@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.iottid.v20190411 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.iottid.v20190411 import models
 
 
 class IottidClient(AbstractClient):
     _apiVersion = '2019-04-11'
-    _endpoint = 'iottid.tencentcloudapi.com'
+    _endpoint = 'iottid.taifucloudcloudapi.com'
 
 
     def AuthTestTid(self, request):
         """單向認證測試TID
 
         :param request: Request instance for AuthTestTid.
-        :type request: :class:`tencentcloud.iottid.v20190411.models.AuthTestTidRequest`
-        :rtype: :class:`tencentcloud.iottid.v20190411.models.AuthTestTidResponse`
+        :type request: :class:`taifucloudcloud.iottid.v20190411.models.AuthTestTidRequest`
+        :rtype: :class:`taifucloudcloud.iottid.v20190411.models.AuthTestTidResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class IottidClient(AbstractClient):
         """安全晶片TID燒錄回執
 
         :param request: Request instance for BurnTidNotify.
-        :type request: :class:`tencentcloud.iottid.v20190411.models.BurnTidNotifyRequest`
-        :rtype: :class:`tencentcloud.iottid.v20190411.models.BurnTidNotifyResponse`
+        :type request: :class:`taifucloudcloud.iottid.v20190411.models.BurnTidNotifyRequest`
+        :rtype: :class:`taifucloudcloud.iottid.v20190411.models.BurnTidNotifyResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class IottidClient(AbstractClient):
         """安全晶片爲載體的TID空發回執，綁定TID與訂單号。
 
         :param request: Request instance for DeliverTidNotify.
-        :type request: :class:`tencentcloud.iottid.v20190411.models.DeliverTidNotifyRequest`
-        :rtype: :class:`tencentcloud.iottid.v20190411.models.DeliverTidNotifyResponse`
+        :type request: :class:`taifucloudcloud.iottid.v20190411.models.DeliverTidNotifyRequest`
+        :rtype: :class:`taifucloudcloud.iottid.v20190411.models.DeliverTidNotifyResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class IottidClient(AbstractClient):
         """設備服務商請求空發産品訂單的TID訊息
 
         :param request: Request instance for DeliverTids.
-        :type request: :class:`tencentcloud.iottid.v20190411.models.DeliverTidsRequest`
-        :rtype: :class:`tencentcloud.iottid.v20190411.models.DeliverTidsResponse`
+        :type request: :class:`taifucloudcloud.iottid.v20190411.models.DeliverTidsRequest`
+        :rtype: :class:`taifucloudcloud.iottid.v20190411.models.DeliverTidsResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class IottidClient(AbstractClient):
         """查詢指定訂單的可空發的白盒金鑰數量
 
         :param request: Request instance for DescribeAvailableLibCount.
-        :type request: :class:`tencentcloud.iottid.v20190411.models.DescribeAvailableLibCountRequest`
-        :rtype: :class:`tencentcloud.iottid.v20190411.models.DescribeAvailableLibCountResponse`
+        :type request: :class:`taifucloudcloud.iottid.v20190411.models.DescribeAvailableLibCountRequest`
+        :rtype: :class:`taifucloudcloud.iottid.v20190411.models.DescribeAvailableLibCountResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class IottidClient(AbstractClient):
         """查詢企業用戶TID平台控制台權限
 
         :param request: Request instance for DescribePermission.
-        :type request: :class:`tencentcloud.iottid.v20190411.models.DescribePermissionRequest`
-        :rtype: :class:`tencentcloud.iottid.v20190411.models.DescribePermissionResponse`
+        :type request: :class:`taifucloudcloud.iottid.v20190411.models.DescribePermissionRequest`
+        :rtype: :class:`taifucloudcloud.iottid.v20190411.models.DescribePermissionResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class IottidClient(AbstractClient):
         """下載晶片訂單的TID
 
         :param request: Request instance for DownloadTids.
-        :type request: :class:`tencentcloud.iottid.v20190411.models.DownloadTidsRequest`
-        :rtype: :class:`tencentcloud.iottid.v20190411.models.DownloadTidsResponse`
+        :type request: :class:`taifucloudcloud.iottid.v20190411.models.DownloadTidsRequest`
+        :rtype: :class:`taifucloudcloud.iottid.v20190411.models.DownloadTidsResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class IottidClient(AbstractClient):
         """上傳硬體唯一标識碼，是軟加固設備身份參數。本介面如遇到錯誤數據，則所有當次上傳數據失效。
 
         :param request: Request instance for UploadDeviceUniqueCode.
-        :type request: :class:`tencentcloud.iottid.v20190411.models.UploadDeviceUniqueCodeRequest`
-        :rtype: :class:`tencentcloud.iottid.v20190411.models.UploadDeviceUniqueCodeResponse`
+        :type request: :class:`taifucloudcloud.iottid.v20190411.models.UploadDeviceUniqueCodeRequest`
+        :rtype: :class:`taifucloudcloud.iottid.v20190411.models.UploadDeviceUniqueCodeResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class IottidClient(AbstractClient):
         """下載控制台驗證晶片燒錄訊息，保證TID與中心訊息一緻
 
         :param request: Request instance for VerifyChipBurnInfo.
-        :type request: :class:`tencentcloud.iottid.v20190411.models.VerifyChipBurnInfoRequest`
-        :rtype: :class:`tencentcloud.iottid.v20190411.models.VerifyChipBurnInfoResponse`
+        :type request: :class:`taifucloudcloud.iottid.v20190411.models.VerifyChipBurnInfoRequest`
+        :rtype: :class:`taifucloudcloud.iottid.v20190411.models.VerifyChipBurnInfoResponse`
 
         """
         try:

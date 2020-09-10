@@ -6,11 +6,11 @@ import os
 import string
 import sys
 import logging
-from tencentcloud.common import credential
-from tencentcloud.common.profile.client_profile import ClientProfile
-from tencentcloud.common.profile.http_profile import HttpProfile
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException 
-from tencentcloud.cdn.v20180606 import cdn_client, models 
+from taifucloudcloud.common import credential
+from taifucloudcloud.common.profile.client_profile import ClientProfile
+from taifucloudcloud.common.profile.http_profile import HttpProfile
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException 
+from taifucloudcloud.cdn.v20180606 import cdn_client, models 
 
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
@@ -44,7 +44,7 @@ def main_handler(event, context):
 
         cred = credential.Credential(secret_id, secret_key,token) 
         httpProfile = HttpProfile()
-        httpProfile.endpoint = "cdn.tencentcloudapi.com"
+        httpProfile.endpoint = "cdn.taifucloudcloudapi.com"
 
         clientProfile = ClientProfile()
         clientProfile.httpProfile = httpProfile

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AcceptDirectConnectTunnelRequest(AbstractModel):
@@ -120,7 +120,7 @@ class CreateDirectConnectRequest(AbstractModel):
         :param AccessPointId: 物理專線所在的接入點。
 您可以通過調用 DescribeAccessPoints介面獲取地域ID。所選擇的接入點必須存在且處于可接入的狀态。
         :type AccessPointId: str
-        :param LineOperator: 提供接入物理專線的運營商。ChinaTelecom：中國電信， ChinaMobile：中國移動，ChinaUnicom：中國聯通， In-houseWiring：樓内線，ChinaOther：中國其他， InternationalOperator：境外其他。
+        :param LineOperator: 提供接入物理專線的運營商。ChinaTelecom： 電信， ChinaMobile：  ，ChinaUnicom：  ， In-houseWiring：樓内線，ChinaOther： 其他， InternationalOperator：境外其他。
         :type LineOperator: str
         :param Location: 本地數據中心的地理位置。
         :type Location: str
@@ -134,7 +134,7 @@ class CreateDirectConnectRequest(AbstractModel):
         :type RedundantDirectConnectId: str
         :param Vlan: 物理專線調試VLAN。預設開啓VLAN，自動分配VLAN。
         :type Vlan: int
-        :param TencentAddress: 物理專線調試騰訊側互聯 IP。預設自動分配。
+        :param TencentAddress: 物理專線調試 側互聯 IP。預設自動分配。
         :type TencentAddress: str
         :param CustomerAddress: 物理專線調試用戶側互聯 IP。預設自動分配。
         :type CustomerAddress: str
@@ -240,14 +240,14 @@ STATIC：靜态
 預設爲 BGP 路由
         :type RouteType: str
         :param BgpPeer: BgpPeer，用戶側bgp訊息，包括Asn和AuthKey
-        :type BgpPeer: :class:`tencentcloud.dc.v20180410.models.BgpPeer`
+        :type BgpPeer: :class:`taifucloudcloud.dc.v20180410.models.BgpPeer`
         :param RouteFilterPrefixes: 靜态路由，用戶IDC的網段網址
         :type RouteFilterPrefixes: list of RouteFilterPrefix
         :param Vlan: vlan，範圍：0 ~ 3000
 0：不開啓子介面
 預設值是非0
         :type Vlan: int
-        :param TencentAddress: TencentAddress，騰訊側互聯 IP
+        :param TencentAddress: TencentAddress， 側互聯 IP
         :type TencentAddress: str
         :param CustomerAddress: CustomerAddress，用戶側互聯 IP
         :type CustomerAddress: str
@@ -597,7 +597,7 @@ class DirectConnect(AbstractModel):
         :type CreatedTime: str
         :param EnabledTime: 物理專線的開通時間。
         :type EnabledTime: str
-        :param LineOperator: 提供接入物理專線的運營商。ChinaTelecom：中國電信， ChinaMobile：中國移動，ChinaUnicom：中國聯通， In-houseWiring：樓内線，ChinaOther：中國其他， InternationalOperator：境外其他。
+        :param LineOperator: 提供接入物理專線的運營商。ChinaTelecom： 電信， ChinaMobile：  ，ChinaUnicom：  ， In-houseWiring：樓内線，ChinaOther： 其他， InternationalOperator：境外其他。
         :type LineOperator: str
         :param Location: 本地數據中心的地理位置。
         :type Location: str
@@ -613,7 +613,7 @@ class DirectConnect(AbstractModel):
         :param Vlan: 物理專線調試VLAN。預設開啓VLAN，自動分配VLAN。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Vlan: int
-        :param TencentAddress: 物理專線調試騰訊側互聯IP。
+        :param TencentAddress: 物理專線調試 側互聯IP。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TencentAddress: str
         :param CustomerAddress: 物理專線調試用戶側互聯IP。
@@ -728,12 +728,12 @@ REJECTED:拒絕
         :param RouteType: BGP ：BGP路由 STATIC：靜态 預設爲 BGP 路由
         :type RouteType: str
         :param BgpPeer: 用戶側BGP，Asn，AuthKey
-        :type BgpPeer: :class:`tencentcloud.dc.v20180410.models.BgpPeer`
+        :type BgpPeer: :class:`taifucloudcloud.dc.v20180410.models.BgpPeer`
         :param RouteFilterPrefixes: 用戶側網段網址
         :type RouteFilterPrefixes: list of RouteFilterPrefix
         :param Vlan: 專線通道的Vlan
         :type Vlan: int
-        :param TencentAddress: TencentAddress，騰訊側互聯 IP
+        :param TencentAddress: TencentAddress， 側互聯 IP
         :type TencentAddress: str
         :param CustomerAddress: CustomerAddress，用戶側互聯 IP
         :type CustomerAddress: str
@@ -828,7 +828,7 @@ class ModifyDirectConnectAttributeRequest(AbstractModel):
         :type CircuitCode: str
         :param Vlan: 物理專線調試VLAN。
         :type Vlan: int
-        :param TencentAddress: 物理專線調試騰訊側互聯 IP。
+        :param TencentAddress: 物理專線調試 側互聯 IP。
         :type TencentAddress: str
         :param CustomerAddress: 物理專線調試用戶側互聯 IP。
         :type CustomerAddress: str
@@ -899,10 +899,10 @@ class ModifyDirectConnectTunnelAttributeRequest(AbstractModel):
         :param DirectConnectTunnelName: 專用通道名稱
         :type DirectConnectTunnelName: str
         :param BgpPeer: 用戶側BGP，包括Asn，AuthKey
-        :type BgpPeer: :class:`tencentcloud.dc.v20180410.models.BgpPeer`
+        :type BgpPeer: :class:`taifucloudcloud.dc.v20180410.models.BgpPeer`
         :param RouteFilterPrefixes: 用戶側網段網址
         :type RouteFilterPrefixes: list of RouteFilterPrefix
-        :param TencentAddress: 騰訊側互聯IP
+        :param TencentAddress:  側互聯IP
         :type TencentAddress: str
         :param CustomerAddress: 用戶側互聯IP
         :type CustomerAddress: str

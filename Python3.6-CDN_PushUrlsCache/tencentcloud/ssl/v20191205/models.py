@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class ApplyCertificateRequest(AbstractModel):
@@ -210,7 +210,7 @@ class Certificates(AbstractModel):
         :type Status: int
         :param CertificateExtra: 證書擴展訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CertificateExtra: :class:`tencentcloud.ssl.v20191205.models.CertificateExtra`
+        :type CertificateExtra: :class:`taifucloudcloud.ssl.v20191205.models.CertificateExtra`
         :param VulnerabilityStatus: 漏洞掃描狀态：INACTIVE = 未開啓，ACTIVE = 已開啓
 注意：此欄位可能返回 null，表示取不到有效值。
         :type VulnerabilityStatus: str
@@ -261,7 +261,7 @@ class Certificates(AbstractModel):
         :type RenewAble: bool
         :param ProjectInfo: 項目訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ProjectInfo: :class:`tencentcloud.ssl.v20191205.models.ProjectInfo`
+        :type ProjectInfo: :class:`taifucloudcloud.ssl.v20191205.models.ProjectInfo`
         :param BoundResource: 關聯的雲資源，暫不可用
 注意：此欄位可能返回 null，表示取不到有效值。
         :type BoundResource: list of str
@@ -493,7 +493,7 @@ class DescribeCertificateDetailResponse(AbstractModel):
         :type OrderId: str
         :param CertificateExtra: 證書擴展訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CertificateExtra: :class:`tencentcloud.ssl.v20191205.models.CertificateExtra`
+        :type CertificateExtra: :class:`taifucloudcloud.ssl.v20191205.models.CertificateExtra`
         :param CertificatePrivateKey: 證書私鑰
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CertificatePrivateKey: str
@@ -502,7 +502,7 @@ class DescribeCertificateDetailResponse(AbstractModel):
         :type CertificatePublicKey: str
         :param DvAuthDetail: DV 認證訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type DvAuthDetail: :class:`tencentcloud.ssl.v20191205.models.DvAuthDetail`
+        :type DvAuthDetail: :class:`taifucloudcloud.ssl.v20191205.models.DvAuthDetail`
         :param VulnerabilityReport: 漏洞掃描評估報告。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type VulnerabilityReport: str
@@ -532,7 +532,7 @@ class DescribeCertificateDetailResponse(AbstractModel):
         :type IsVulnerability: bool
         :param SubmittedData: 提交的資料訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SubmittedData: :class:`tencentcloud.ssl.v20191205.models.SubmittedData`
+        :type SubmittedData: :class:`taifucloudcloud.ssl.v20191205.models.SubmittedData`
         :param RenewAble: 是否可重頒發證書。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RenewAble: bool
@@ -762,10 +762,10 @@ class DescribeCertificateResponse(AbstractModel):
         :type OrderId: str
         :param CertificateExtra: 證書擴展訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CertificateExtra: :class:`tencentcloud.ssl.v20191205.models.CertificateExtra`
+        :type CertificateExtra: :class:`taifucloudcloud.ssl.v20191205.models.CertificateExtra`
         :param DvAuthDetail: DV 認證訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type DvAuthDetail: :class:`tencentcloud.ssl.v20191205.models.DvAuthDetail`
+        :type DvAuthDetail: :class:`taifucloudcloud.ssl.v20191205.models.DvAuthDetail`
         :param VulnerabilityReport: 漏洞掃描評估報告。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type VulnerabilityReport: str
@@ -798,7 +798,7 @@ class DescribeCertificateResponse(AbstractModel):
         :type RenewAble: bool
         :param SubmittedData: 提交的資料訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SubmittedData: :class:`tencentcloud.ssl.v20191205.models.SubmittedData`
+        :type SubmittedData: :class:`taifucloudcloud.ssl.v20191205.models.SubmittedData`
         :param Deployable: 是否可部署。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Deployable: bool
@@ -1325,11 +1325,11 @@ class SubmitCertificateInformationRequest(AbstractModel):
         :type OrganizationDivision: str
         :param OrganizationAddress: 公司詳細網址。
         :type OrganizationAddress: str
-        :param OrganizationCountry: 國家名稱，如中國：CN 。
+        :param OrganizationCountry: 國家名稱，如 ：CN 。
         :type OrganizationCountry: str
         :param OrganizationCity: 公司所在城市。
         :type OrganizationCity: str
-        :param OrganizationRegion: 公司所在省份。
+        :param OrganizationRegion: 公司所在 。
         :type OrganizationRegion: str
         :param PostalCode: 公司郵編。
         :type PostalCode: str

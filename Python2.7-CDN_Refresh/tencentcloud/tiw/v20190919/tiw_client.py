@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tiw.v20190919 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tiw.v20190919 import models
 
 
 class TiwClient(AbstractClient):
     _apiVersion = '2019-09-19'
-    _endpoint = 'tiw.tencentcloudapi.com'
+    _endpoint = 'tiw.taifucloudcloudapi.com'
 
 
     def CreateTranscode(self, request):
         """創建一個文件轉碼任務
 
         :param request: Request instance for CreateTranscode.
-        :type request: :class:`tencentcloud.tiw.v20190919.models.CreateTranscodeRequest`
-        :rtype: :class:`tencentcloud.tiw.v20190919.models.CreateTranscodeResponse`
+        :type request: :class:`taifucloudcloud.tiw.v20190919.models.CreateTranscodeRequest`
+        :rtype: :class:`taifucloudcloud.tiw.v20190919.models.CreateTranscodeResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TiwClient(AbstractClient):
         """查詢實時錄制任務狀态與結果
 
         :param request: Request instance for DescribeOnlineRecord.
-        :type request: :class:`tencentcloud.tiw.v20190919.models.DescribeOnlineRecordRequest`
-        :rtype: :class:`tencentcloud.tiw.v20190919.models.DescribeOnlineRecordResponse`
+        :type request: :class:`taifucloudcloud.tiw.v20190919.models.DescribeOnlineRecordRequest`
+        :rtype: :class:`taifucloudcloud.tiw.v20190919.models.DescribeOnlineRecordResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TiwClient(AbstractClient):
         """查詢實時錄制回調網址
 
         :param request: Request instance for DescribeOnlineRecordCallback.
-        :type request: :class:`tencentcloud.tiw.v20190919.models.DescribeOnlineRecordCallbackRequest`
-        :rtype: :class:`tencentcloud.tiw.v20190919.models.DescribeOnlineRecordCallbackResponse`
+        :type request: :class:`taifucloudcloud.tiw.v20190919.models.DescribeOnlineRecordCallbackRequest`
+        :rtype: :class:`taifucloudcloud.tiw.v20190919.models.DescribeOnlineRecordCallbackResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TiwClient(AbstractClient):
         """查詢文件轉碼任務的執行進度與轉碼結果
 
         :param request: Request instance for DescribeTranscode.
-        :type request: :class:`tencentcloud.tiw.v20190919.models.DescribeTranscodeRequest`
-        :rtype: :class:`tencentcloud.tiw.v20190919.models.DescribeTranscodeResponse`
+        :type request: :class:`taifucloudcloud.tiw.v20190919.models.DescribeTranscodeRequest`
+        :rtype: :class:`taifucloudcloud.tiw.v20190919.models.DescribeTranscodeResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class TiwClient(AbstractClient):
         """查詢文件轉碼回調網址
 
         :param request: Request instance for DescribeTranscodeCallback.
-        :type request: :class:`tencentcloud.tiw.v20190919.models.DescribeTranscodeCallbackRequest`
-        :rtype: :class:`tencentcloud.tiw.v20190919.models.DescribeTranscodeCallbackResponse`
+        :type request: :class:`taifucloudcloud.tiw.v20190919.models.DescribeTranscodeCallbackRequest`
+        :rtype: :class:`taifucloudcloud.tiw.v20190919.models.DescribeTranscodeCallbackResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class TiwClient(AbstractClient):
         """暫停實時錄制
 
         :param request: Request instance for PauseOnlineRecord.
-        :type request: :class:`tencentcloud.tiw.v20190919.models.PauseOnlineRecordRequest`
-        :rtype: :class:`tencentcloud.tiw.v20190919.models.PauseOnlineRecordResponse`
+        :type request: :class:`taifucloudcloud.tiw.v20190919.models.PauseOnlineRecordRequest`
+        :rtype: :class:`taifucloudcloud.tiw.v20190919.models.PauseOnlineRecordResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class TiwClient(AbstractClient):
         """恢複實時錄制
 
         :param request: Request instance for ResumeOnlineRecord.
-        :type request: :class:`tencentcloud.tiw.v20190919.models.ResumeOnlineRecordRequest`
-        :rtype: :class:`tencentcloud.tiw.v20190919.models.ResumeOnlineRecordResponse`
+        :type request: :class:`taifucloudcloud.tiw.v20190919.models.ResumeOnlineRecordRequest`
+        :rtype: :class:`taifucloudcloud.tiw.v20190919.models.ResumeOnlineRecordResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class TiwClient(AbstractClient):
         """設置實時錄制回調網址
 
         :param request: Request instance for SetOnlineRecordCallback.
-        :type request: :class:`tencentcloud.tiw.v20190919.models.SetOnlineRecordCallbackRequest`
-        :rtype: :class:`tencentcloud.tiw.v20190919.models.SetOnlineRecordCallbackResponse`
+        :type request: :class:`taifucloudcloud.tiw.v20190919.models.SetOnlineRecordCallbackRequest`
+        :rtype: :class:`taifucloudcloud.tiw.v20190919.models.SetOnlineRecordCallbackResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class TiwClient(AbstractClient):
         """設置文件轉碼回調網址
 
         :param request: Request instance for SetTranscodeCallback.
-        :type request: :class:`tencentcloud.tiw.v20190919.models.SetTranscodeCallbackRequest`
-        :rtype: :class:`tencentcloud.tiw.v20190919.models.SetTranscodeCallbackResponse`
+        :type request: :class:`taifucloudcloud.tiw.v20190919.models.SetTranscodeCallbackRequest`
+        :rtype: :class:`taifucloudcloud.tiw.v20190919.models.SetTranscodeCallbackResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class TiwClient(AbstractClient):
         """發起一個實時錄制任務
 
         :param request: Request instance for StartOnlineRecord.
-        :type request: :class:`tencentcloud.tiw.v20190919.models.StartOnlineRecordRequest`
-        :rtype: :class:`tencentcloud.tiw.v20190919.models.StartOnlineRecordResponse`
+        :type request: :class:`taifucloudcloud.tiw.v20190919.models.StartOnlineRecordRequest`
+        :rtype: :class:`taifucloudcloud.tiw.v20190919.models.StartOnlineRecordResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class TiwClient(AbstractClient):
         """停止實時錄制
 
         :param request: Request instance for StopOnlineRecord.
-        :type request: :class:`tencentcloud.tiw.v20190919.models.StopOnlineRecordRequest`
-        :rtype: :class:`tencentcloud.tiw.v20190919.models.StopOnlineRecordResponse`
+        :type request: :class:`taifucloudcloud.tiw.v20190919.models.StopOnlineRecordRequest`
+        :rtype: :class:`taifucloudcloud.tiw.v20190919.models.StopOnlineRecordResponse`
 
         """
         try:

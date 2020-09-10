@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class InitOralProcessRequest(AbstractModel):
@@ -25,7 +25,7 @@ class InitOralProcessRequest(AbstractModel):
         """
         :param SessionId: 語音段唯一标識，一段語音一個SessionId
         :type SessionId: str
-        :param RefText: 被評估語音對應的文本，句子模式下不超過個 20 單詞或者中文文字，段落模式不超過 120 單詞或者中文文字，中文評估使用 utf-8 編碼，自由說模式該值傳空。如需要在單詞模式和句子模式下使用自定義音素，可以通過設置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
+        :param RefText: 被評估語音對應的文本，句子模式下不超過個 20 單詞或者中文文字，段落模式不超過 120 單詞或者中文文字，中文評估使用 utf-8 編碼，自由說模式該值傳空。如需要在單詞模式和句子模式下使用自定義音素，可以通過設置 TextMode 使用[音素标注](https://cloud.taifucloud.com/document/product/884/33698)。
         :type RefText: str
         :param WorkMode: 語音輸入模式，0：流式分片，1：非流式一次性評估
         :type WorkMode: int
@@ -33,7 +33,7 @@ class InitOralProcessRequest(AbstractModel):
         :type EvalMode: int
         :param ScoreCoeff: 評價苛刻指數，取值爲[1.0 - 4.0]範圍内的浮點數，用于平滑不同年齡段的分數，1.0爲小年齡段，4.0爲最高年齡段
         :type ScoreCoeff: float
-        :param SoeAppId: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【應用管理】下新建。
+        :param SoeAppId: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數，新的 SoeAppId 可以在[控制台](https://console.cloud.taifucloud.com/soe)【應用管理】下新建。
         :type SoeAppId: str
         :param IsLongLifeSession: 長效session标識，當該參數爲1時，session的持續時間爲300s，但會一定程度上影響第一個數據包的返回速度，且TransmitOralProcess必須同時爲1才可生效。
         :type IsLongLifeSession: int
@@ -43,9 +43,9 @@ class InitOralProcessRequest(AbstractModel):
         :type SentenceInfoEnabled: int
         :param ServerType: 評估語言，0：英文，1：中文。
         :type ServerType: int
-        :param IsAsync: 異步模式标識，0：同步模式，1：異步模式，可選值參考[服務模式](https://cloud.tencent.com/document/product/884/33697)。
+        :param IsAsync: 異步模式标識，0：同步模式，1：異步模式，可選值參考[服務模式](https://cloud.taifucloud.com/document/product/884/33697)。
         :type IsAsync: int
-        :param TextMode: 輸入文本模式，0: 普通文本，1：[音素結構](https://cloud.tencent.com/document/product/884/33698)文本。
+        :param TextMode: 輸入文本模式，0: 普通文本，1：[音素結構](https://cloud.taifucloud.com/document/product/884/33698)文本。
         :type TextMode: int
         """
         self.SessionId = None
@@ -196,7 +196,7 @@ class TransmitOralProcessRequest(AbstractModel):
         :type UserVoiceData: str
         :param SessionId: 語音段唯一标識，一個完整語音一個SessionId。
         :type SessionId: str
-        :param SoeAppId: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【應用管理】下新建。
+        :param SoeAppId: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數，新的 SoeAppId 可以在[控制台](https://console.cloud.taifucloud.com/soe)【應用管理】下新建。
         :type SoeAppId: str
         :param IsLongLifeSession: 長效session标識，當該參數爲1時，session的持續時間爲300s，但會一定程度上影響第一個數據包的返回速度。當InitOralProcess介面調用時此項爲1時，此項必填1才可生效。
         :type IsLongLifeSession: int
@@ -308,7 +308,7 @@ class TransmitOralProcessWithInitRequest(AbstractModel):
         :type UserVoiceData: str
         :param SessionId: 語音段唯一标識，一個完整語音一個SessionId。
         :type SessionId: str
-        :param RefText: 被評估語音對應的文本，句子模式下不超過個 20 單詞或者中文文字，段落模式不超過 120 單詞或者中文文字，中文評估使用 utf-8 編碼，自由說模式該值無效。如需要在單詞模式和句子模式下使用自定義音素，可以通過設置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
+        :param RefText: 被評估語音對應的文本，句子模式下不超過個 20 單詞或者中文文字，段落模式不超過 120 單詞或者中文文字，中文評估使用 utf-8 編碼，自由說模式該值無效。如需要在單詞模式和句子模式下使用自定義音素，可以通過設置 TextMode 使用[音素标注](https://cloud.taifucloud.com/document/product/884/33698)。
         :type RefText: str
         :param WorkMode: 語音輸入模式，0：流式分片，1：非流式一次性評估
         :type WorkMode: int
@@ -316,7 +316,7 @@ class TransmitOralProcessWithInitRequest(AbstractModel):
         :type EvalMode: int
         :param ScoreCoeff: 評價苛刻指數，取值爲[1.0 - 4.0]範圍内的浮點數，用于平滑不同年齡段的分數，1.0爲小年齡段，4.0爲最高年齡段
         :type ScoreCoeff: float
-        :param SoeAppId: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【應用管理】下新建。
+        :param SoeAppId: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數，新的 SoeAppId 可以在[控制台](https://console.cloud.taifucloud.com/soe)【應用管理】下新建。
         :type SoeAppId: str
         :param StorageMode: 音訊儲存模式，0：不儲存，1：儲存到公共物件儲存，輸出結果爲該會話最後一個分片TransmitOralProcess 返回結果 AudioUrl 欄位。
         :type StorageMode: int
@@ -324,11 +324,11 @@ class TransmitOralProcessWithInitRequest(AbstractModel):
         :type SentenceInfoEnabled: int
         :param ServerType: 評估語言，0：英文，1：中文。
         :type ServerType: int
-        :param IsAsync: 異步模式标識，0：同步模式，1：異步模式，可選值參考[服務模式](https://cloud.tencent.com/document/product/884/33697)。
+        :param IsAsync: 異步模式标識，0：同步模式，1：異步模式，可選值參考[服務模式](https://cloud.taifucloud.com/document/product/884/33697)。
         :type IsAsync: int
         :param IsQuery: 查詢标識，當該參數爲1時，該請求爲查詢請求，請求返回該 Session 評估結果。
         :type IsQuery: int
-        :param TextMode: 輸入文本模式，0: 普通文本，1：[音素結構](https://cloud.tencent.com/document/product/884/33698)文本。
+        :param TextMode: 輸入文本模式，0: 普通文本，1：[音素結構](https://cloud.taifucloud.com/document/product/884/33698)文本。
         :type TextMode: int
         """
         self.SeqId = None

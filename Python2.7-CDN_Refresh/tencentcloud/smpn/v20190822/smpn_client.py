@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.smpn.v20190822 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.smpn.v20190822 import models
 
 
 class SmpnClient(AbstractClient):
     _apiVersion = '2019-08-22'
-    _endpoint = 'smpn.tencentcloudapi.com'
+    _endpoint = 'smpn.taifucloudcloudapi.com'
 
 
     def CreateSmpnEpa(self, request):
         """企業号碼認證
 
         :param request: Request instance for CreateSmpnEpa.
-        :type request: :class:`tencentcloud.smpn.v20190822.models.CreateSmpnEpaRequest`
-        :rtype: :class:`tencentcloud.smpn.v20190822.models.CreateSmpnEpaResponse`
+        :type request: :class:`taifucloudcloud.smpn.v20190822.models.CreateSmpnEpaRequest`
+        :rtype: :class:`taifucloudcloud.smpn.v20190822.models.CreateSmpnEpaResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class SmpnClient(AbstractClient):
         """查詢号碼的标記和标記次數
 
         :param request: Request instance for DescribeSmpnChp.
-        :type request: :class:`tencentcloud.smpn.v20190822.models.DescribeSmpnChpRequest`
-        :rtype: :class:`tencentcloud.smpn.v20190822.models.DescribeSmpnChpResponse`
+        :type request: :class:`taifucloudcloud.smpn.v20190822.models.DescribeSmpnChpRequest`
+        :rtype: :class:`taifucloudcloud.smpn.v20190822.models.DescribeSmpnChpResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class SmpnClient(AbstractClient):
         """虛假号碼識别
 
         :param request: Request instance for DescribeSmpnFnr.
-        :type request: :class:`tencentcloud.smpn.v20190822.models.DescribeSmpnFnrRequest`
-        :rtype: :class:`tencentcloud.smpn.v20190822.models.DescribeSmpnFnrResponse`
+        :type request: :class:`taifucloudcloud.smpn.v20190822.models.DescribeSmpnFnrRequest`
+        :rtype: :class:`taifucloudcloud.smpn.v20190822.models.DescribeSmpnFnrResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class SmpnClient(AbstractClient):
         """号碼營銷監控
 
         :param request: Request instance for DescribeSmpnMhm.
-        :type request: :class:`tencentcloud.smpn.v20190822.models.DescribeSmpnMhmRequest`
-        :rtype: :class:`tencentcloud.smpn.v20190822.models.DescribeSmpnMhmResponse`
+        :type request: :class:`taifucloudcloud.smpn.v20190822.models.DescribeSmpnMhmRequest`
+        :rtype: :class:`taifucloudcloud.smpn.v20190822.models.DescribeSmpnMhmResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class SmpnClient(AbstractClient):
         """查詢号碼惡意标記等級
 
         :param request: Request instance for DescribeSmpnMrl.
-        :type request: :class:`tencentcloud.smpn.v20190822.models.DescribeSmpnMrlRequest`
-        :rtype: :class:`tencentcloud.smpn.v20190822.models.DescribeSmpnMrlResponse`
+        :type request: :class:`taifucloudcloud.smpn.v20190822.models.DescribeSmpnMrlRequest`
+        :rtype: :class:`taifucloudcloud.smpn.v20190822.models.DescribeSmpnMrlResponse`
 
         """
         try:

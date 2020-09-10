@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.sqlserver.v20180328 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.sqlserver.v20180328 import models
 
 
 class SqlserverClient(AbstractClient):
     _apiVersion = '2018-03-28'
-    _endpoint = 'sqlserver.tencentcloudapi.com'
+    _endpoint = 'sqlserver.taifucloudcloudapi.com'
 
 
     def CreateAccount(self, request):
         """本介面（CreateAccount）用于創建實例賬号
 
         :param request: 調用CreateAccount所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.CreateAccountRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.CreateAccountResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.CreateAccountRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.CreateAccountResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class SqlserverClient(AbstractClient):
         """本介面(CreateBackup)用于創建備份。
 
         :param request: 調用CreateBackup所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.CreateBackupRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.CreateBackupResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.CreateBackupRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.CreateBackupResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class SqlserverClient(AbstractClient):
         """本介面（CreateDB）用于創建資料庫。
 
         :param request: 調用CreateDB所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.CreateDBRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.CreateDBResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.CreateDBRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.CreateDBResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class SqlserverClient(AbstractClient):
         """本介面（CreateDBInstances）用于創建實例。
 
         :param request: 調用CreateDBInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.CreateDBInstancesRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.CreateDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.CreateDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.CreateDBInstancesResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class SqlserverClient(AbstractClient):
         """本介面（CreateMigration）作用是創建一個遷移任務
 
         :param request: 調用CreateMigration所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.CreateMigrationRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.CreateMigrationResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.CreateMigrationRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.CreateMigrationResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class SqlserverClient(AbstractClient):
         """本介面（DeleteAccount）用于删除實例賬号。
 
         :param request: 調用DeleteAccount所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.DeleteAccountRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.DeleteAccountResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DeleteAccountRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.DeleteAccountResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class SqlserverClient(AbstractClient):
         """本介面(DeleteDB)用于删除資料庫。
 
         :param request: 調用DeleteDB所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.DeleteDBRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.DeleteDBResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DeleteDBRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.DeleteDBResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class SqlserverClient(AbstractClient):
         """本介面（DeleteMigration）用于删除遷移任務
 
         :param request: 調用DeleteMigration所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.DeleteMigrationRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.DeleteMigrationResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DeleteMigrationRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.DeleteMigrationResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class SqlserverClient(AbstractClient):
         """本介面（DescribeAccounts）用于拉取實例帳戶清單。
 
         :param request: 調用DescribeAccounts所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeAccountsRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.DescribeAccountsResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeAccountsRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeAccountsResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class SqlserverClient(AbstractClient):
         """本介面(DescribeBackups)用于查詢備份清單。
 
         :param request: 調用DescribeBackups所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeBackupsRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.DescribeBackupsResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeBackupsRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeBackupsResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class SqlserverClient(AbstractClient):
         """本介面(DescribeDBInstances)用于查詢實例清單。
 
         :param request: 調用DescribeDBInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeDBInstancesRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.DescribeDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeDBInstancesResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class SqlserverClient(AbstractClient):
         """本介面（DescribeDBs）用于查詢資料庫清單。
 
         :param request: 調用DescribeDBs所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeDBsRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.DescribeDBsResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeDBsRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeDBsResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class SqlserverClient(AbstractClient):
         """本介面(DescribeFlowStatus)用于查詢流程狀态。
 
         :param request: 調用DescribeFlowStatus所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeFlowStatusRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.DescribeFlowStatusResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeFlowStatusRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeFlowStatusResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class SqlserverClient(AbstractClient):
         """本介面（DescribeMigrationDetail）用于查詢遷移任務的詳細情況
 
         :param request: 調用DescribeMigrationDetail所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeMigrationDetailRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.DescribeMigrationDetailResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeMigrationDetailRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeMigrationDetailResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class SqlserverClient(AbstractClient):
         """本介面（DescribeMigrations）根據輸入的限定條件，查詢符合條件的遷移任務清單
 
         :param request: 調用DescribeMigrations所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeMigrationsRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.DescribeMigrationsResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeMigrationsRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeMigrationsResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class SqlserverClient(AbstractClient):
         """本介面（DescribeOrders）用于查詢訂單訊息
 
         :param request: 調用DescribeOrders所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeOrdersRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.DescribeOrdersResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeOrdersRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeOrdersResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class SqlserverClient(AbstractClient):
         """本介面 (DescribeProductConfig) 用于查詢售賣規格配置。
 
         :param request: 調用DescribeProductConfig所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeProductConfigRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.DescribeProductConfigResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeProductConfigRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeProductConfigResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class SqlserverClient(AbstractClient):
         """本介面 (DescribeRegions) 用于查詢售賣地域訊息。
 
         :param request: 調用DescribeRegions所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeRegionsRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.DescribeRegionsResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeRegionsRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeRegionsResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class SqlserverClient(AbstractClient):
         """本介面（DescribeRollbackTime）用于查詢實例可回檔時間範圍
 
         :param request: 調用DescribeRollbackTime所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeRollbackTimeRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.DescribeRollbackTimeResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeRollbackTimeRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeRollbackTimeResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class SqlserverClient(AbstractClient):
         """本介面（DescribeSlowlogs）用于獲取慢查詢日志文件訊息
 
         :param request: 調用DescribeSlowlogs所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeSlowlogsRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.DescribeSlowlogsResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeSlowlogsRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeSlowlogsResponse`
 
         """
         try:
@@ -589,8 +589,8 @@ class SqlserverClient(AbstractClient):
         """本介面 (DescribeZones) 用于查詢當前可售賣的可用區訊息。
 
         :param request: 調用DescribeZones所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.DescribeZonesRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.DescribeZonesResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeZonesRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeZonesResponse`
 
         """
         try:
@@ -617,8 +617,8 @@ class SqlserverClient(AbstractClient):
         """本介面（InquiryPriceCreateDBInstances）用于查詢申請實例價格。
 
         :param request: 調用InquiryPriceCreateDBInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.InquiryPriceCreateDBInstancesRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.InquiryPriceCreateDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.InquiryPriceCreateDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.InquiryPriceCreateDBInstancesResponse`
 
         """
         try:
@@ -645,8 +645,8 @@ class SqlserverClient(AbstractClient):
         """本介面（InquiryPriceRenewDBInstance）用于查詢續約實例的價格。
 
         :param request: 調用InquiryPriceRenewDBInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.InquiryPriceRenewDBInstanceRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.InquiryPriceRenewDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.InquiryPriceRenewDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.InquiryPriceRenewDBInstanceResponse`
 
         """
         try:
@@ -673,8 +673,8 @@ class SqlserverClient(AbstractClient):
         """本介面（InquiryPriceUpgradeDBInstance）用于查詢升級實例的價格。
 
         :param request: 調用InquiryPriceUpgradeDBInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.InquiryPriceUpgradeDBInstanceRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.InquiryPriceUpgradeDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.InquiryPriceUpgradeDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.InquiryPriceUpgradeDBInstanceResponse`
 
         """
         try:
@@ -701,8 +701,8 @@ class SqlserverClient(AbstractClient):
         """本介面（ModifyAccountPrivilege）用于修改實例帳戶權限。
 
         :param request: 調用ModifyAccountPrivilege所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.ModifyAccountPrivilegeRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.ModifyAccountPrivilegeResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyAccountPrivilegeRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyAccountPrivilegeResponse`
 
         """
         try:
@@ -729,8 +729,8 @@ class SqlserverClient(AbstractClient):
         """本介面（ModifyAccountRemark）用于修改帳戶備注。
 
         :param request: 調用ModifyAccountRemark所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.ModifyAccountRemarkRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.ModifyAccountRemarkResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyAccountRemarkRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyAccountRemarkResponse`
 
         """
         try:
@@ -757,8 +757,8 @@ class SqlserverClient(AbstractClient):
         """本介面（ModifyDBInstanceName）用于修改實例名字。
 
         :param request: 調用ModifyDBInstanceName所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.ModifyDBInstanceNameRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.ModifyDBInstanceNameResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyDBInstanceNameRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyDBInstanceNameResponse`
 
         """
         try:
@@ -785,8 +785,8 @@ class SqlserverClient(AbstractClient):
         """本介面（ModifyDBInstanceProject）用于修改資料庫實例所屬項目。
 
         :param request: 調用ModifyDBInstanceProject所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.ModifyDBInstanceProjectRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.ModifyDBInstanceProjectResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyDBInstanceProjectRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyDBInstanceProjectResponse`
 
         """
         try:
@@ -813,8 +813,8 @@ class SqlserverClient(AbstractClient):
         """本介面（ModifyDBInstanceRenewFlag）用于修改實例續約标記
 
         :param request: 調用ModifyDBInstanceRenewFlag所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.ModifyDBInstanceRenewFlagRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.ModifyDBInstanceRenewFlagResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyDBInstanceRenewFlagRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyDBInstanceRenewFlagResponse`
 
         """
         try:
@@ -841,8 +841,8 @@ class SqlserverClient(AbstractClient):
         """本介面（ModifyDBName）用于更新資料庫名。
 
         :param request: 調用ModifyDBName所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.ModifyDBNameRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.ModifyDBNameResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyDBNameRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyDBNameResponse`
 
         """
         try:
@@ -869,8 +869,8 @@ class SqlserverClient(AbstractClient):
         """本介面（ModifyDBRemark）用于修改資料庫備注。
 
         :param request: 調用ModifyDBRemark所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.ModifyDBRemarkRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.ModifyDBRemarkResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyDBRemarkRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyDBRemarkResponse`
 
         """
         try:
@@ -897,8 +897,8 @@ class SqlserverClient(AbstractClient):
         """本介面（ModifyMigration）可以修改已有的遷移任務訊息
 
         :param request: 調用ModifyMigration所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.ModifyMigrationRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.ModifyMigrationResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyMigrationRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyMigrationResponse`
 
         """
         try:
@@ -925,8 +925,8 @@ class SqlserverClient(AbstractClient):
         """本介面（RenewDBInstance）用于續約實例。
 
         :param request: 調用RenewDBInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.RenewDBInstanceRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.RenewDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.RenewDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.RenewDBInstanceResponse`
 
         """
         try:
@@ -953,8 +953,8 @@ class SqlserverClient(AbstractClient):
         """本介面（ResetAccountPassword）用于重置實例的帳戶密碼。
 
         :param request: 調用ResetAccountPassword所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.ResetAccountPasswordRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.ResetAccountPasswordResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ResetAccountPasswordRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.ResetAccountPasswordResponse`
 
         """
         try:
@@ -981,8 +981,8 @@ class SqlserverClient(AbstractClient):
         """本介面（RestartDBInstance）用于重啓資料庫實例。
 
         :param request: 調用RestartDBInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.RestartDBInstanceRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.RestartDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.RestartDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.RestartDBInstanceResponse`
 
         """
         try:
@@ -1009,8 +1009,8 @@ class SqlserverClient(AbstractClient):
         """本介面（RestoreInstance）用于根據備份文件恢複實例。
 
         :param request: 調用RestoreInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.RestoreInstanceRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.RestoreInstanceResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.RestoreInstanceRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.RestoreInstanceResponse`
 
         """
         try:
@@ -1037,8 +1037,8 @@ class SqlserverClient(AbstractClient):
         """本介面（RollbackInstance）用于回檔實例
 
         :param request: 調用RollbackInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.RollbackInstanceRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.RollbackInstanceResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.RollbackInstanceRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.RollbackInstanceResponse`
 
         """
         try:
@@ -1065,8 +1065,8 @@ class SqlserverClient(AbstractClient):
         """本介面（RunMigration）用于啓動遷移任務，開始遷移
 
         :param request: 調用RunMigration所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.RunMigrationRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.RunMigrationResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.RunMigrationRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.RunMigrationResponse`
 
         """
         try:
@@ -1093,8 +1093,8 @@ class SqlserverClient(AbstractClient):
         """本介面（UpgradeDBInstance）用于升級實例
 
         :param request: 調用UpgradeDBInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.sqlserver.v20180328.models.UpgradeDBInstanceRequest`
-        :rtype: :class:`tencentcloud.sqlserver.v20180328.models.UpgradeDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.UpgradeDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.sqlserver.v20180328.models.UpgradeDBInstanceResponse`
 
         """
         try:

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AddMemberInfo(AbstractModel):
@@ -96,14 +96,14 @@ class AudioMaterial(AbstractModel):
     def __init__(self):
         """
         :param MetaData: 素材元訊息。
-        :type MetaData: :class:`tencentcloud.cme.v20191029.models.MediaMetaData`
+        :type MetaData: :class:`taifucloudcloud.cme.v20191029.models.MediaMetaData`
         :param MaterialUrl: 素材媒體文件的 URL 網址。
         :type MaterialUrl: str
         :param CoverUrl: 素材媒體文件的封面圖片網址。
         :type CoverUrl: str
         :param MaterialStatus: 素材狀态。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MaterialStatus: :class:`tencentcloud.cme.v20191029.models.MaterialStatus`
+        :type MaterialStatus: :class:`taifucloudcloud.cme.v20191029.models.MaterialStatus`
         """
         self.MetaData = None
         self.MaterialUrl = None
@@ -155,7 +155,7 @@ class AuthorizationInfo(AbstractModel):
     def __init__(self):
         """
         :param Authorizee: 被授權者實體。
-        :type Authorizee: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Authorizee: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param PermissionSet: 詳細授權值。 取值有：
 <li>R：可讀，可以浏覽素材，但不能使用該素材（将其添加到 Project），或複制到自己的媒資庫中</li>
 <li>X：可用，可以使用該素材（将其添加到 Project），但不能将其複制到自己的媒資庫中，意味着被授權者無法将該資源進一步擴散給其他個人或團隊。</li>
@@ -205,7 +205,7 @@ class CMEExportInfo(AbstractModel):
     def __init__(self):
         """
         :param Owner: 導出的歸屬者。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param Name: 導出的素材名稱，不得超過30個字元。
         :type Name: str
         :param Description: 導出的素材訊息，不得超過50個字元。
@@ -240,7 +240,7 @@ class ClassInfo(AbstractModel):
     def __init__(self):
         """
         :param Owner: 歸屬者。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param ClassPath: 分類路徑。
         :type ClassPath: str
         """
@@ -265,7 +265,7 @@ class CreateClassRequest(AbstractModel):
         :param Platform: 平台名稱，指定訪問的平台。
         :type Platform: str
         :param Owner: 歸屬者。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param ClassPath: 分類路徑。
         :type ClassPath: str
         :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
@@ -319,13 +319,13 @@ class CreateLinkRequest(AbstractModel):
         :param Name: 連結名稱，不能超過30個字元。
         :type Name: str
         :param Owner: 連結歸屬實體。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param DestinationId: 目标資源Id。取值：
 <li>當 Type 爲 MATERIAL 時填素材 ID；</li>
 <li>當 Type 爲 CLASS 時填寫分類路徑。</li>
         :type DestinationId: str
         :param DestinationOwner: 目标資源歸屬者。
-        :type DestinationOwner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type DestinationOwner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param ClassPath: 連結的分類路徑，如填"/a/b"則代表連結屬于該分類路徑，不填則預設爲根路徑。
         :type ClassPath: str
         :param Tags: 連結标簽，單個标簽長度不能超過10，數組長度不能超過10。
@@ -400,7 +400,7 @@ class CreateProjectRequest(AbstractModel):
 <li>9:16。</li>
         :type AspectRatio: str
         :param Owner: 歸屬者。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         """
         self.Platform = None
         self.Category = None
@@ -504,7 +504,7 @@ class DeleteClassRequest(AbstractModel):
         :param Platform: 平台名稱，指定訪問的平台。
         :type Platform: str
         :param Owner: 歸屬者。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param ClassPath: 分類路徑。
         :type ClassPath: str
         :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
@@ -758,7 +758,7 @@ class DescribeClassRequest(AbstractModel):
         :param Platform: 平台名稱，指定訪問的平台。
         :type Platform: str
         :param Owner: 歸屬者。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
         :type Operator: str
         """
@@ -921,7 +921,7 @@ class DescribeMaterialsRequest(AbstractModel):
         :param Sort: 清單排序，支援下列排序欄位：
 <li>CreateTime：創建時間；</li>
 <li>UpdateTime：更新時間。</li>
-        :type Sort: :class:`tencentcloud.cme.v20191029.models.SortBy`
+        :type Sort: :class:`taifucloudcloud.cme.v20191029.models.SortBy`
         :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
         :type Operator: str
         """
@@ -984,9 +984,9 @@ class DescribeProjectsRequest(AbstractModel):
         :param Sort: 清單排序，支援下列排序欄位：
 <li>CreateTime：創建時間；</li>
 <li>UpdateTime：更新時間。</li>
-        :type Sort: :class:`tencentcloud.cme.v20191029.models.SortBy`
+        :type Sort: :class:`taifucloudcloud.cme.v20191029.models.SortBy`
         :param Owner: 項目歸屬者。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param Offset: 分頁返回的起始偏移量，預設值：0。
         :type Offset: int
         :param Limit: 分頁返回的記錄條數，預設值：10。
@@ -1057,9 +1057,9 @@ class DescribeResourceAuthorizationRequest(AbstractModel):
         :param Platform: 平台名稱，指定訪問的平台。
         :type Platform: str
         :param Owner: 歸屬者。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param Resource: 資源。
-        :type Resource: :class:`tencentcloud.cme.v20191029.models.Resource`
+        :type Resource: :class:`taifucloudcloud.cme.v20191029.models.Resource`
         :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
         :type Operator: str
         """
@@ -1121,7 +1121,7 @@ class DescribeSharedSpaceRequest(AbstractModel):
         :param Platform: 平台名稱，指定訪問的平台。
         :type Platform: str
         :param Authorizee: 被授權目标實體。
-        :type Authorizee: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Authorizee: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
         :type Operator: str
         """
@@ -1215,7 +1215,7 @@ class DescribeTaskDetailResponse(AbstractModel):
         :type TaskType: str
         :param VideoEditProjectOutput: 導出項目輸出訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type VideoEditProjectOutput: :class:`tencentcloud.cme.v20191029.models.VideoEditProjectOutput`
+        :type VideoEditProjectOutput: :class:`taifucloudcloud.cme.v20191029.models.VideoEditProjectOutput`
         :param CreateTime: 創建時間，格式按照 ISO 8601 标準表示。
         :type CreateTime: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -1473,9 +1473,9 @@ class ExportVideoEditProjectRequest(AbstractModel):
 <li>VOD：雲點播，即導出爲雲點播媒資。</li>
         :type ExportDestination: str
         :param CMEExportInfo: 導出的雲剪素材訊息。指定 ExportDestination = CME 時有效。
-        :type CMEExportInfo: :class:`tencentcloud.cme.v20191029.models.CMEExportInfo`
+        :type CMEExportInfo: :class:`taifucloudcloud.cme.v20191029.models.CMEExportInfo`
         :param VODExportInfo: 導出的雲點播媒資訊息。指定 ExportDestination = VOD 時有效。
-        :type VODExportInfo: :class:`tencentcloud.cme.v20191029.models.VODExportInfo`
+        :type VODExportInfo: :class:`taifucloudcloud.cme.v20191029.models.VODExportInfo`
         """
         self.Platform = None
         self.ProjectId = None
@@ -1531,7 +1531,7 @@ class FlattenListMediaRequest(AbstractModel):
         :param ClassPath: 素材分類路徑，例如填寫"/a/b"，則代表平鋪該分類路徑下及其子分類路徑下的素材訊息。
         :type ClassPath: str
         :param Owner: 素材路徑的歸屬者。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param Offset: 分頁偏移量，預設值：0。
         :type Offset: int
         :param Limit: 返回記錄條數，預設值：10，最大值：50。
@@ -1598,7 +1598,7 @@ class GrantResourceAuthorizationRequest(AbstractModel):
         :param Platform: 平台名稱，指定訪問的平台。
         :type Platform: str
         :param Owner: 資源所屬實體。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param Resources: 被授權資源。
         :type Resources: list of Resource
         :param Authorizees: 被授權目标實體。
@@ -1699,7 +1699,7 @@ class ImportMaterialRequest(AbstractModel):
         :param VodFileId: 雲點播媒資 FileId。
         :type VodFileId: str
         :param Owner: 素材歸屬者。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param Name: 素材名稱，不能超過30個字元。
         :type Name: str
         :param ClassPath: 素材分類路徑，形如："/a/b"，層級數不能超過10，每個層級長度不能超過15字元。若不填則預設爲根路徑。
@@ -1890,10 +1890,10 @@ class LinkMaterial(AbstractModel):
         :type LinkStatus: str
         :param LinkMaterialInfo: 素材連結詳細訊息，當LinkType="MATERIAL"時有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type LinkMaterialInfo: :class:`tencentcloud.cme.v20191029.models.LinkMaterialInfo`
+        :type LinkMaterialInfo: :class:`taifucloudcloud.cme.v20191029.models.LinkMaterialInfo`
         :param LinkClassInfo: 分類連結目标訊息，當LinkType=“CLASS”時有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type LinkClassInfo: :class:`tencentcloud.cme.v20191029.models.ClassInfo`
+        :type LinkClassInfo: :class:`taifucloudcloud.cme.v20191029.models.ClassInfo`
         """
         self.LinkType = None
         self.LinkStatus = None
@@ -1920,16 +1920,16 @@ class LinkMaterialInfo(AbstractModel):
     def __init__(self):
         """
         :param BasicInfo: 素材基本訊息。
-        :type BasicInfo: :class:`tencentcloud.cme.v20191029.models.MaterialBasicInfo`
+        :type BasicInfo: :class:`taifucloudcloud.cme.v20191029.models.MaterialBasicInfo`
         :param VideoMaterial: 視訊素材訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type VideoMaterial: :class:`tencentcloud.cme.v20191029.models.VideoMaterial`
+        :type VideoMaterial: :class:`taifucloudcloud.cme.v20191029.models.VideoMaterial`
         :param AudioMaterial: 音訊素材訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AudioMaterial: :class:`tencentcloud.cme.v20191029.models.AudioMaterial`
+        :type AudioMaterial: :class:`taifucloudcloud.cme.v20191029.models.AudioMaterial`
         :param ImageMaterial: 圖片素材訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ImageMaterial: :class:`tencentcloud.cme.v20191029.models.ImageMaterial`
+        :type ImageMaterial: :class:`taifucloudcloud.cme.v20191029.models.ImageMaterial`
         """
         self.BasicInfo = None
         self.VideoMaterial = None
@@ -1964,7 +1964,7 @@ class ListMediaRequest(AbstractModel):
         :param ClassPath: 素材分類路徑，例如填寫"/a/b"，則代表浏覽該分類路徑下的素材和子分類訊息。
         :type ClassPath: str
         :param Owner: 素材和分類的歸屬者。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param Offset: 分頁偏移量，預設值：0。
         :type Offset: int
         :param Limit: 返回記錄條數，預設值：10，最大值：50。
@@ -2065,7 +2065,7 @@ class MaterialBasicInfo(AbstractModel):
         :param MaterialType: 素材類型，取值爲：音訊（AUDIO）、視訊（VIDEO）、圖片（IMAGE）、連結（LINK）、字幕 （SUBTITLE）、轉場（TRANSITION）、濾鏡（FILTER）、文本文字（TEXT）、圖文動效（TEXT_IMAGE）。
         :type MaterialType: str
         :param Owner: 素材歸屬實體。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param Name: 素材名稱。
         :type Name: str
         :param CreateTime: 素材文件的創建時間，使用 ISO 日期格式。
@@ -2114,19 +2114,19 @@ class MaterialInfo(AbstractModel):
     def __init__(self):
         """
         :param BasicInfo: 素材基本訊息。
-        :type BasicInfo: :class:`tencentcloud.cme.v20191029.models.MaterialBasicInfo`
+        :type BasicInfo: :class:`taifucloudcloud.cme.v20191029.models.MaterialBasicInfo`
         :param VideoMaterial: 視訊素材訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type VideoMaterial: :class:`tencentcloud.cme.v20191029.models.VideoMaterial`
+        :type VideoMaterial: :class:`taifucloudcloud.cme.v20191029.models.VideoMaterial`
         :param AudioMaterial: 音訊素材訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AudioMaterial: :class:`tencentcloud.cme.v20191029.models.AudioMaterial`
+        :type AudioMaterial: :class:`taifucloudcloud.cme.v20191029.models.AudioMaterial`
         :param ImageMaterial: 圖片素材訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ImageMaterial: :class:`tencentcloud.cme.v20191029.models.ImageMaterial`
+        :type ImageMaterial: :class:`taifucloudcloud.cme.v20191029.models.ImageMaterial`
         :param LinkMaterial: 連結素材訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type LinkMaterial: :class:`tencentcloud.cme.v20191029.models.LinkMaterial`
+        :type LinkMaterial: :class:`taifucloudcloud.cme.v20191029.models.LinkMaterial`
         """
         self.BasicInfo = None
         self.VideoMaterial = None
@@ -2277,7 +2277,7 @@ class ModifyMaterialRequest(AbstractModel):
         :param MaterialId: 素材 Id。
         :type MaterialId: str
         :param Owner: 素材歸屬。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param Name: 素材名稱，不能超過30個字元。
         :type Name: str
         :param Tags: 素材标簽，單個标簽長度不能超過10個字元，數組長度不能超過10。
@@ -2343,7 +2343,7 @@ class ModifyProjectRequest(AbstractModel):
 <li>9:16。</li>
         :type AspectRatio: str
         :param Owner: 歸屬者。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         """
         self.Platform = None
         self.ProjectId = None
@@ -2491,7 +2491,7 @@ class MoveClassRequest(AbstractModel):
         :param Platform: 平台名稱，指定訪問的平台。
         :type Platform: str
         :param Owner: 歸屬者。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param SourceClassPath: 源分類路徑。
         :type SourceClassPath: str
         :param DestinationClassPath: 目标分類路徑。
@@ -2549,7 +2549,7 @@ class ProjectInfo(AbstractModel):
         :param Category: 項目類别。
         :type Category: str
         :param Owner: 歸屬者。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param CoverUrl: 項目封面圖片網址。
         :type CoverUrl: str
         :param CreateTime: 項目創建時間，格式按照 ISO 8601 标準表示。
@@ -2613,7 +2613,7 @@ class RevokeResourceAuthorizationRequest(AbstractModel):
         :param Platform: 平台名稱，指定訪問的平台。
         :type Platform: str
         :param Owner: 資源所屬實體。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param Resources: 被授權資源。
         :type Resources: list of Resource
         :param Authorizees: 被授權目标實體。
@@ -2694,13 +2694,13 @@ class SearchMaterialRequest(AbstractModel):
         :param Resolution: 按畫質檢索，取值爲：LD/SD/HD/FHD/2K/4K。
         :type Resolution: str
         :param DurationRange: 按素材時長檢索，單位s。
-        :type DurationRange: :class:`tencentcloud.cme.v20191029.models.IntegerRange`
+        :type DurationRange: :class:`taifucloudcloud.cme.v20191029.models.IntegerRange`
         :param CreateTimeRange: 按照素材創建時間檢索。
-        :type CreateTimeRange: :class:`tencentcloud.cme.v20191029.models.TimeRange`
+        :type CreateTimeRange: :class:`taifucloudcloud.cme.v20191029.models.TimeRange`
         :param Tags: 标簽集合，比對集合中任意元素。單個标簽長度限制：10 個字元。數組長度限制：10。
         :type Tags: list of str
         :param Sort: 排序方式。Sort.Field 可選值：CreateTime。指定 Text 搜索時，将根據比對度排序，該欄位無效。
-        :type Sort: :class:`tencentcloud.cme.v20191029.models.SortBy`
+        :type Sort: :class:`taifucloudcloud.cme.v20191029.models.SortBy`
         :param Offset: 偏移量。預設值：0。
         :type Offset: int
         :param Limit: 返回記錄條數，預設值：50。
@@ -2786,7 +2786,7 @@ class SearchScope(AbstractModel):
     def __init__(self):
         """
         :param Owner: 分類路徑歸屬。
-        :type Owner: :class:`tencentcloud.cme.v20191029.models.Entity`
+        :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param ClassPath: 按分類路徑檢索。 不填則預設按根分類路徑檢索。
         :type ClassPath: str
         """
@@ -2984,7 +2984,7 @@ class VideoEditProjectOutput(AbstractModel):
         :param URL: 導出的媒資 URL。
         :type URL: str
         :param MetaData: 元訊息。
-        :type MetaData: :class:`tencentcloud.cme.v20191029.models.MediaMetaData`
+        :type MetaData: :class:`taifucloudcloud.cme.v20191029.models.MediaMetaData`
         """
         self.VodFileId = None
         self.URL = None
@@ -3007,9 +3007,9 @@ class VideoMaterial(AbstractModel):
     def __init__(self):
         """
         :param MetaData: 素材元訊息。
-        :type MetaData: :class:`tencentcloud.cme.v20191029.models.MediaMetaData`
+        :type MetaData: :class:`taifucloudcloud.cme.v20191029.models.MediaMetaData`
         :param ImageSpriteInfo: 雪碧圖訊息。
-        :type ImageSpriteInfo: :class:`tencentcloud.cme.v20191029.models.MediaImageSpriteInfo`
+        :type ImageSpriteInfo: :class:`taifucloudcloud.cme.v20191029.models.MediaImageSpriteInfo`
         :param MaterialUrl: 素材媒體文件的 URL 網址
         :type MaterialUrl: str
         :param CoverUrl: 素材媒體文件的封面圖片網址。
@@ -3018,7 +3018,7 @@ class VideoMaterial(AbstractModel):
         :type Resolution: str
         :param MaterialStatus: 素材狀态。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MaterialStatus: :class:`tencentcloud.cme.v20191029.models.MaterialStatus`
+        :type MaterialStatus: :class:`taifucloudcloud.cme.v20191029.models.MaterialStatus`
         """
         self.MetaData = None
         self.ImageSpriteInfo = None

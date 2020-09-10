@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class COSSettings(AbstractModel):
@@ -96,7 +96,7 @@ class ClusterInstanceInfo(AbstractModel):
         :type Runtime: str
         :param Config: 集群配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Config: :class:`tencentcloud.emr.v20190103.models.EMRProductConfigSettings`
+        :type Config: :class:`taifucloudcloud.emr.v20190103.models.EMRProductConfigSettings`
         :param MasterIp: 集群IP
         :type MasterIp: str
         :param EmrVersion: 集群版本
@@ -143,11 +143,11 @@ class CreateInstanceRequest(AbstractModel):
         :param ProductId: 産品ID
         :type ProductId: int
         :param VPCSettings: VPC設置參數
-        :type VPCSettings: :class:`tencentcloud.emr.v20190103.models.VPCSettings`
+        :type VPCSettings: :class:`taifucloudcloud.emr.v20190103.models.VPCSettings`
         :param Software: 軟體清單
         :type Software: list of str
         :param ResourceSpec: 資源描述
-        :type ResourceSpec: :class:`tencentcloud.emr.v20190103.models.ResourceSpec`
+        :type ResourceSpec: :class:`taifucloudcloud.emr.v20190103.models.ResourceSpec`
         :param SupportHA: 支援HA
         :type SupportHA: int
         :param InstanceName: 實例名稱
@@ -155,21 +155,21 @@ class CreateInstanceRequest(AbstractModel):
         :param PayMode: 計費類型
         :type PayMode: int
         :param Placement: 集群位置訊息
-        :type Placement: :class:`tencentcloud.emr.v20190103.models.Placement`
+        :type Placement: :class:`taifucloudcloud.emr.v20190103.models.Placement`
         :param TimeSpan: 時間長度
         :type TimeSpan: int
         :param TimeUnit: 時間單位
         :type TimeUnit: str
         :param LoginSettings: 登入配置
-        :type LoginSettings: :class:`tencentcloud.emr.v20190103.models.LoginSettings`
+        :type LoginSettings: :class:`taifucloudcloud.emr.v20190103.models.LoginSettings`
         :param ClientToken: 用戶端Token
         :type ClientToken: str
         :param COSSettings: COS設置參數
-        :type COSSettings: :class:`tencentcloud.emr.v20190103.models.COSSettings`
+        :type COSSettings: :class:`taifucloudcloud.emr.v20190103.models.COSSettings`
         :param SgId: 安全組ID
         :type SgId: str
         :param PreExecutedFileSettings: 預執行腳本設置
-        :type PreExecutedFileSettings: :class:`tencentcloud.emr.v20190103.models.PreExecuteFileSettings`
+        :type PreExecutedFileSettings: :class:`taifucloudcloud.emr.v20190103.models.PreExecuteFileSettings`
         :param AutoRenew: 自動續約
         :type AutoRenew: int
         :param NeedMasterWan: 是否需要外網Ip。支援填NEED_MASTER_WAN，不支援使用NOT_NEED_MASTER_WAN，預設使用NEED_MASTER_WAN
@@ -234,7 +234,7 @@ class CreateInstanceResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 創建實例結果訊息
-        :type Result: :class:`tencentcloud.emr.v20190103.models.CreateInstanceResult`
+        :type Result: :class:`taifucloudcloud.emr.v20190103.models.CreateInstanceResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -307,7 +307,7 @@ class DescribeInstancesResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 實例數量
-        :type Result: :class:`tencentcloud.emr.v20190103.models.ClusterInfoResult`
+        :type Result: :class:`taifucloudcloud.emr.v20190103.models.ClusterInfoResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -346,22 +346,22 @@ class EMRProductConfigSettings(AbstractModel):
         :type ComNodeSize: int
         :param MasterResourceSpec: master規格
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MasterResourceSpec: :class:`tencentcloud.emr.v20190103.models.NodeSpec`
+        :type MasterResourceSpec: :class:`taifucloudcloud.emr.v20190103.models.NodeSpec`
         :param CoreResourceSpec: core規格
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CoreResourceSpec: :class:`tencentcloud.emr.v20190103.models.NodeSpec`
+        :type CoreResourceSpec: :class:`taifucloudcloud.emr.v20190103.models.NodeSpec`
         :param TaskResourceSpec: task規格
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TaskResourceSpec: :class:`tencentcloud.emr.v20190103.models.NodeSpec`
+        :type TaskResourceSpec: :class:`taifucloudcloud.emr.v20190103.models.NodeSpec`
         :param CommonResourceSpec: common規格
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CommonResourceSpec: :class:`tencentcloud.emr.v20190103.models.NodeSpec`
+        :type CommonResourceSpec: :class:`taifucloudcloud.emr.v20190103.models.NodeSpec`
         :param Oncos: 是否使用COS
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Oncos: bool
         :param COSSettings: COS配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type COSSettings: :class:`tencentcloud.emr.v20190103.models.COSSettings`
+        :type COSSettings: :class:`taifucloudcloud.emr.v20190103.models.COSSettings`
         """
         self.SoftInfo = None
         self.MasterNodeSize = None
@@ -412,7 +412,7 @@ class InquiryPriceCreateInstanceRequest(AbstractModel):
         :param TimeSpan: 時間長度
         :type TimeSpan: int
         :param ResourceSpec: 詢價資源描述
-        :type ResourceSpec: :class:`tencentcloud.emr.v20190103.models.ResourceSpec`
+        :type ResourceSpec: :class:`taifucloudcloud.emr.v20190103.models.ResourceSpec`
         :param Currency: 貨币種類
         :type Currency: str
         :param PayMode: 計費類型
@@ -422,9 +422,9 @@ class InquiryPriceCreateInstanceRequest(AbstractModel):
         :param Software: 軟體清單
         :type Software: list of str
         :param Placement: 位置訊息
-        :type Placement: :class:`tencentcloud.emr.v20190103.models.Placement`
+        :type Placement: :class:`taifucloudcloud.emr.v20190103.models.Placement`
         :param VPCSettings: VPC訊息
-        :type VPCSettings: :class:`tencentcloud.emr.v20190103.models.VPCSettings`
+        :type VPCSettings: :class:`taifucloudcloud.emr.v20190103.models.VPCSettings`
         """
         self.TimeUnit = None
         self.TimeSpan = None
@@ -463,7 +463,7 @@ class InquiryPriceCreateInstanceResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 詢價結果
-        :type Result: :class:`tencentcloud.emr.v20190103.models.InquiryPriceResult`
+        :type Result: :class:`taifucloudcloud.emr.v20190103.models.InquiryPriceResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -560,7 +560,7 @@ class InquiryPriceScaleOutInstanceResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 擴容價格
-        :type Result: :class:`tencentcloud.emr.v20190103.models.InquiryPriceResult`
+        :type Result: :class:`taifucloudcloud.emr.v20190103.models.InquiryPriceResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -744,11 +744,11 @@ class ResourceSpec(AbstractModel):
         :param CommonCount: Common節點數量
         :type CommonCount: int
         :param MasterResourceSpec: 描述Master節點資源
-        :type MasterResourceSpec: :class:`tencentcloud.emr.v20190103.models.NodeSpec`
+        :type MasterResourceSpec: :class:`taifucloudcloud.emr.v20190103.models.NodeSpec`
         :param CoreResourceSpec: 描述Core節點資源
-        :type CoreResourceSpec: :class:`tencentcloud.emr.v20190103.models.NodeSpec`
+        :type CoreResourceSpec: :class:`taifucloudcloud.emr.v20190103.models.NodeSpec`
         :param TaskResourceSpec: 描述Task節點資源
-        :type TaskResourceSpec: :class:`tencentcloud.emr.v20190103.models.NodeSpec`
+        :type TaskResourceSpec: :class:`taifucloudcloud.emr.v20190103.models.NodeSpec`
         :param MasterCount: Master節點數量
         :type MasterCount: int
         :param CoreCount: Core節點數量
@@ -756,7 +756,7 @@ class ResourceSpec(AbstractModel):
         :param TaskCount: Task節點數量
         :type TaskCount: int
         :param CommonResourceSpec: 描述Common節點資源
-        :type CommonResourceSpec: :class:`tencentcloud.emr.v20190103.models.NodeSpec`
+        :type CommonResourceSpec: :class:`taifucloudcloud.emr.v20190103.models.NodeSpec`
         """
         self.CommonCount = None
         self.MasterResourceSpec = None
@@ -805,7 +805,7 @@ class ScaleOutInstanceRequest(AbstractModel):
         :param PayMode: 付費類型
         :type PayMode: int
         :param PreExecutedFileSettings: 預執行腳本設置
-        :type PreExecutedFileSettings: :class:`tencentcloud.emr.v20190103.models.PreExecuteFileSettings`
+        :type PreExecutedFileSettings: :class:`taifucloudcloud.emr.v20190103.models.PreExecuteFileSettings`
         :param TaskCount: 擴容Task節點數量
         :type TaskCount: int
         :param CoreCount: 擴容Core節點數量
@@ -842,7 +842,7 @@ class ScaleOutInstanceResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 擴容結果
-        :type Result: :class:`tencentcloud.emr.v20190103.models.ScaleOutInstanceResult`
+        :type Result: :class:`taifucloudcloud.emr.v20190103.models.ScaleOutInstanceResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -907,7 +907,7 @@ class TerminateInstanceResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 退單描述
-        :type Result: :class:`tencentcloud.emr.v20190103.models.TerminateResult`
+        :type Result: :class:`taifucloudcloud.emr.v20190103.models.TerminateResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -972,7 +972,7 @@ class TerminateTasksResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 退單結果
-        :type Result: :class:`tencentcloud.emr.v20190103.models.TerminateResult`
+        :type Result: :class:`taifucloudcloud.emr.v20190103.models.TerminateResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

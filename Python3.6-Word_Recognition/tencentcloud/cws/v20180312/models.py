@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CreateMonitorsRequest(AbstractModel):
@@ -1004,7 +1004,7 @@ class MonitorsDetail(AbstractModel):
         :param PageCount: 掃描頁面總數。
         :type PageCount: int
         :param Basic: 監控任務基礎訊息。
-        :type Basic: :class:`tencentcloud.cws.v20180312.models.Monitor`
+        :type Basic: :class:`taifucloudcloud.cws.v20180312.models.Monitor`
         :param Sites: 監控任務包含的站點清單。
         :type Sites: list of MonitorMiniSite
         :param SiteNumber: 監控任務包含的站點清單數量。

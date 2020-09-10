@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CodeDetail(AbstractModel):
@@ -580,23 +580,23 @@ class ImageData(AbstractModel):
 24001：暴恐
         :type EvilType: int
         :param CodeDetect: 圖片二維碼詳情
-        :type CodeDetect: :class:`tencentcloud.cms.v20190321.models.CodeDetect`
+        :type CodeDetect: :class:`taifucloudcloud.cms.v20190321.models.CodeDetect`
         :param HotDetect: 圖片性感詳情
-        :type HotDetect: :class:`tencentcloud.cms.v20190321.models.ImageHotDetect`
+        :type HotDetect: :class:`taifucloudcloud.cms.v20190321.models.ImageHotDetect`
         :param IllegalDetect: 圖片違法詳情
-        :type IllegalDetect: :class:`tencentcloud.cms.v20190321.models.ImageIllegalDetect`
+        :type IllegalDetect: :class:`taifucloudcloud.cms.v20190321.models.ImageIllegalDetect`
         :param LogoDetect: logo詳情
-        :type LogoDetect: :class:`tencentcloud.cms.v20190321.models.LogoDetail`
+        :type LogoDetect: :class:`taifucloudcloud.cms.v20190321.models.LogoDetail`
         :param OCRDetect: 圖片OCR詳情
-        :type OCRDetect: :class:`tencentcloud.cms.v20190321.models.OCRDetect`
+        :type OCRDetect: :class:`taifucloudcloud.cms.v20190321.models.OCRDetect`
         :param PolityDetect: 圖片涉政詳情
-        :type PolityDetect: :class:`tencentcloud.cms.v20190321.models.ImagePolityDetect`
+        :type PolityDetect: :class:`taifucloudcloud.cms.v20190321.models.ImagePolityDetect`
         :param PornDetect: 圖片涉黃詳情
-        :type PornDetect: :class:`tencentcloud.cms.v20190321.models.ImagePornDetect`
+        :type PornDetect: :class:`taifucloudcloud.cms.v20190321.models.ImagePornDetect`
         :param Similar: 圖片相似度詳情
-        :type Similar: :class:`tencentcloud.cms.v20190321.models.Similar`
+        :type Similar: :class:`taifucloudcloud.cms.v20190321.models.Similar`
         :param TerrorDetect: 圖片暴恐詳情
-        :type TerrorDetect: :class:`tencentcloud.cms.v20190321.models.ImageTerrorDetect`
+        :type TerrorDetect: :class:`taifucloudcloud.cms.v20190321.models.ImageTerrorDetect`
         """
         self.EvilFlag = None
         self.EvilType = None
@@ -746,7 +746,7 @@ class ImageModerationResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 識别結果
-        :type Data: :class:`tencentcloud.cms.v20190321.models.ImageData`
+        :type Data: :class:`taifucloudcloud.cms.v20190321.models.ImageData`
         :param BusinessCode: 業務返回碼
         :type BusinessCode: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -891,7 +891,7 @@ class Logo(AbstractModel):
     def __init__(self):
         """
         :param RrectF: logo圖标坐标訊息
-        :type RrectF: :class:`tencentcloud.cms.v20190321.models.RrectF`
+        :type RrectF: :class:`taifucloudcloud.cms.v20190321.models.RrectF`
         :param Confidence: logo圖标置信度
         :type Confidence: float
         :param Name: logo圖标名稱
@@ -1032,11 +1032,11 @@ class TextData(AbstractModel):
 24001：暴恐
         :type EvilType: int
         :param Common: 訊息類公共相關參數
-        :type Common: :class:`tencentcloud.cms.v20190321.models.TextOutputComm`
+        :type Common: :class:`taifucloudcloud.cms.v20190321.models.TextOutputComm`
         :param ID: 訊息類ID訊息
-        :type ID: :class:`tencentcloud.cms.v20190321.models.TextOutputID`
+        :type ID: :class:`taifucloudcloud.cms.v20190321.models.TextOutputID`
         :param Res: 訊息類輸出結果
-        :type Res: :class:`tencentcloud.cms.v20190321.models.TextOutputRes`
+        :type Res: :class:`taifucloudcloud.cms.v20190321.models.TextOutputRes`
         :param Keywords: 命中的關鍵詞
         :type Keywords: list of str
         """
@@ -1088,7 +1088,7 @@ class TextModerationResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 識别結果
-        :type Data: :class:`tencentcloud.cms.v20190321.models.TextData`
+        :type Data: :class:`taifucloudcloud.cms.v20190321.models.TextData`
         :param BusinessCode: 業務返回碼
         :type BusinessCode: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -1164,7 +1164,7 @@ class TextOutputRes(AbstractModel):
 
     def __init__(self):
         """
-        :param Operator: 操作人,信安處理人企業微信ID
+        :param Operator: 操作人,信安處理人企業 ID
         :type Operator: str
         :param ResultCode: 惡意操作碼，
 删除（1）， 通過（2）， 先審後發（100012）

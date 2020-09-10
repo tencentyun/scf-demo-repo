@@ -7,7 +7,7 @@ from os import getenv
 from pymysql.err import OperationalError
 
 # 從函數環境變量獲取資料庫訊息
-DB_HOST = os.getenv('dbhost') #'sh-cdb-irye027y.sql.tencentcdb.com:63374'
+DB_HOST = os.getenv('dbhost') #'sh-cdb-irye027y.sql.taifucloudcdb.com:63374'
 DB_USER = os.getenv('dbuser') #'root'
 DB_USER_PASSWORD = os.getenv('dbpwd')  #'abc123!@#'
 DB_DATABASE = os.getenv('dbdatabase') #'testDB'

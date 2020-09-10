@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class DetectAccountActivityRequest(AbstractModel):
@@ -24,7 +24,7 @@ class DetectAccountActivityRequest(AbstractModel):
     def __init__(self):
         """
         :param BusinessSecurityData: 業務入參
-        :type BusinessSecurityData: :class:`tencentcloud.taf.v20200210.models.InputDetectAccountActivity`
+        :type BusinessSecurityData: :class:`taifucloudcloud.taf.v20200210.models.InputDetectAccountActivity`
         """
         self.BusinessSecurityData = None
 
@@ -43,7 +43,7 @@ class DetectAccountActivityResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 回包數據
-        :type Data: :class:`tencentcloud.taf.v20200210.models.OutputDetectAccountActivity`
+        :type Data: :class:`taifucloudcloud.taf.v20200210.models.OutputDetectAccountActivity`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -66,7 +66,7 @@ class DetectFraudKOLRequest(AbstractModel):
     def __init__(self):
         """
         :param BspData: 業務數據
-        :type BspData: :class:`tencentcloud.taf.v20200210.models.InputKolBspData`
+        :type BspData: :class:`taifucloudcloud.taf.v20200210.models.InputKolBspData`
         """
         self.BspData = None
 
@@ -86,7 +86,7 @@ class DetectFraudKOLResponse(AbstractModel):
         """
         :param Data: 回包數據
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.taf.v20200210.models.OutputKolData`
+        :type Data: :class:`taifucloudcloud.taf.v20200210.models.OutputKolData`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -109,7 +109,7 @@ class EnhanceTaDegreeRequest(AbstractModel):
     def __init__(self):
         """
         :param BspData: 業務數據
-        :type BspData: :class:`tencentcloud.taf.v20200210.models.InputTaBspData`
+        :type BspData: :class:`taifucloudcloud.taf.v20200210.models.InputTaBspData`
         """
         self.BspData = None
 
@@ -129,7 +129,7 @@ class EnhanceTaDegreeResponse(AbstractModel):
         """
         :param Data: 回包數據
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.taf.v20200210.models.OutputTaData`
+        :type Data: :class:`taifucloudcloud.taf.v20200210.models.OutputTaData`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -151,11 +151,11 @@ class InputDetectAccountActivity(AbstractModel):
 
     def __init__(self):
         """
-        :param Uid: 用戶ID值，如微信/QQ openid，或 手機号等（如15912345687）
+        :param Uid: 用戶ID值，如 /  openid，或 手機号等（如15912345687）
         :type Uid: str
         :param AccountType: 用戶賬号類型 
-1：QQ開放帳号 
-2：微信開放賬号 
+1： 開放帳号 
+2： 開放賬号 
 4：手機号 （暫僅支援國内手機号）
 10004： 手機号MD5
         :type AccountType: int
@@ -163,7 +163,7 @@ class InputDetectAccountActivity(AbstractModel):
         :type UserIp: str
         :param PostTime: 用戶操作時間戳，單位秒（格林威治時間精确到秒，如1501590972）
         :type PostTime: int
-        :param AppIdU: accountType是QQ或微信開放賬号時，該參數必填，表示QQ或微信分配給網站或應用的appId，用來唯一标識網站或應用
+        :param AppIdU: accountType是 或 開放賬号時，該參數必填，表示 或 分配給網站或應用的appId，用來唯一标識網站或應用
         :type AppIdU: str
         :param NickName: 昵稱，UTF-8 編碼
         :type NickName: str
@@ -246,15 +246,15 @@ class InputKolDataList(AbstractModel):
 
     def __init__(self):
         """
-        :param Type: 賬号類型[1：微信；2：qq；3：微博]
+        :param Type: 賬号類型[1： ；2：qq；3： ]
         :type Type: int
-        :param Id: KOL賬号ID[比如微信公衆号ID]
+        :param Id: KOL賬号ID[比如 公衆号ID]
         :type Id: str
         :param Name: KOL名稱
         :type Name: str
         :param Phone: 手機号
         :type Phone: str
-        :param AgentInfo: 代理商名稱
+        :param AgentInfo:  名稱
         :type AgentInfo: str
         """
         self.Type = None
@@ -325,7 +325,7 @@ class InputRecognizeTargetAudience(AbstractModel):
         :type DeviceType: str
         :param AccessMode: 入網方式(wifi,4g,3g,2g)
         :type AccessMode: str
-        :param Sp: 運營商(1.移動 2.聯通 3.電信等)
+        :param Sp: 運營商(1.  2.  3.電信等)
         :type Sp: int
         :param DeviceW: 設備螢幕分辨率寬度像素數
         :type DeviceW: int
@@ -489,7 +489,7 @@ class InputTaBspData(AbstractModel):
         :type UserIp: str
         :param Mac: MAC網址[建議提供]
         :type Mac: str
-        :param PhoneNum: 手機号碼[中國大陸]
+        :param PhoneNum: 手機号碼[ 大陸]
         :type PhoneNum: str
         :param UserAgent: 浏覽器
         :type UserAgent: str
@@ -503,7 +503,7 @@ class InputTaBspData(AbstractModel):
         :type DeviceModule: str
         :param AccessMode: 入網方式[1：WIFI；2：4G；3：3G；4：2G；5：其它]
         :type AccessMode: str
-        :param Sp: 運營商[1：移動；2：聯通；3：電信；4：其它]
+        :param Sp: 運營商[1： ；2： ；3：電信；4：其它]
         :type Sp: str
         :param Url: 網址
         :type Url: str
@@ -586,7 +586,7 @@ class OutputDetectAccountActivity(AbstractModel):
         :type Message: str
         :param Value: 返回活躍度訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Value: :class:`tencentcloud.taf.v20200210.models.OutputDetectAccountActivityValue`
+        :type Value: :class:`taifucloudcloud.taf.v20200210.models.OutputDetectAccountActivityValue`
         """
         self.Code = None
         self.Message = None
@@ -608,7 +608,7 @@ class OutputDetectAccountActivityValue(AbstractModel):
 
     def __init__(self):
         """
-        :param Uid: 用戶 ID accountType 不同對應不同的用戶 ID。如是 QQ 或微信用戶則填入對應的 openId
+        :param Uid: 用戶 ID accountType 不同對應不同的用戶 ID。如是   或 用戶則填入對應的 openId
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Uid: str
         :param PostTime: 操作時間戳，單位：秒
@@ -622,7 +622,7 @@ class OutputDetectAccountActivityValue(AbstractModel):
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Level: int
         :param Type: 賬号标簽：
-3，無效賬号，送檢賬号參數無法成功解析，請檢查微信openid是否有誤 ，QQopenid是否與appidU對應，手機号是否有誤。
+3，無效賬号，送檢賬号參數無法成功解析，請檢查 openid是否有誤 ， openid是否與appidU對應，手機号是否有誤。
 4，黑名單，該賬号在業務側有過拉黑記錄
 5，白名單，該賬号在業務側有過加白名單記錄
 
@@ -686,7 +686,7 @@ class OutputKolValue(AbstractModel):
 
     def __init__(self):
         """
-        :param Id: KOL賬号ID[比如微信公衆号ID]
+        :param Id: KOL賬号ID[比如 公衆号ID]
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Id: str
         :param IsCheck: 是否查得[0：未查得；1：查得]
@@ -813,7 +813,7 @@ class OutputTaData(AbstractModel):
         :type Message: str
         :param Value: 結果數據
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Value: :class:`tencentcloud.taf.v20200210.models.OutputTaValue`
+        :type Value: :class:`taifucloudcloud.taf.v20200210.models.OutputTaValue`
         """
         self.Code = None
         self.Message = None
@@ -859,7 +859,7 @@ class RecognizeCustomizedAudienceRequest(AbstractModel):
     def __init__(self):
         """
         :param BspData: 業務入參
-        :type BspData: :class:`tencentcloud.taf.v20200210.models.InputRecognizeTargetAudience`
+        :type BspData: :class:`taifucloudcloud.taf.v20200210.models.InputRecognizeTargetAudience`
         """
         self.BspData = None
 
@@ -879,7 +879,7 @@ class RecognizeCustomizedAudienceResponse(AbstractModel):
         """
         :param Data: 業務出參
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.taf.v20200210.models.OutputRecognizeTargetAudience`
+        :type Data: :class:`taifucloudcloud.taf.v20200210.models.OutputRecognizeTargetAudience`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -902,7 +902,7 @@ class RecognizePreciseTargetAudienceRequest(AbstractModel):
     def __init__(self):
         """
         :param BspData: 業務數據
-        :type BspData: :class:`tencentcloud.taf.v20200210.models.InputRecognizeTargetAudience`
+        :type BspData: :class:`taifucloudcloud.taf.v20200210.models.InputRecognizeTargetAudience`
         """
         self.BspData = None
 
@@ -922,7 +922,7 @@ class RecognizePreciseTargetAudienceResponse(AbstractModel):
         """
         :param Data: 回包數據
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.taf.v20200210.models.OutputRecognizeTargetAudience`
+        :type Data: :class:`taifucloudcloud.taf.v20200210.models.OutputRecognizeTargetAudience`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -945,7 +945,7 @@ class RecognizeTargetAudienceRequest(AbstractModel):
     def __init__(self):
         """
         :param BspData: 業務數據
-        :type BspData: :class:`tencentcloud.taf.v20200210.models.InputRecognizeTargetAudience`
+        :type BspData: :class:`taifucloudcloud.taf.v20200210.models.InputRecognizeTargetAudience`
         """
         self.BspData = None
 
@@ -965,7 +965,7 @@ class RecognizeTargetAudienceResponse(AbstractModel):
         """
         :param Data: 回包數據
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.taf.v20200210.models.OutputRecognizeTargetAudience`
+        :type Data: :class:`taifucloudcloud.taf.v20200210.models.OutputRecognizeTargetAudience`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -988,7 +988,7 @@ class SendTrafficSecuritySmsMessageRequest(AbstractModel):
     def __init__(self):
         """
         :param BspData: 業務入參
-        :type BspData: :class:`tencentcloud.taf.v20200210.models.InputSendTrafficSecuritySmsMsg`
+        :type BspData: :class:`taifucloudcloud.taf.v20200210.models.InputSendTrafficSecuritySmsMsg`
         """
         self.BspData = None
 
@@ -1008,7 +1008,7 @@ class SendTrafficSecuritySmsMessageResponse(AbstractModel):
         """
         :param Data: 返回結果
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.taf.v20200210.models.OutputSendTrafficSecuritySmsMsg`
+        :type Data: :class:`taifucloudcloud.taf.v20200210.models.OutputSendTrafficSecuritySmsMsg`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

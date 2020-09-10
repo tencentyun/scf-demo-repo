@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.bmlb.v20180625 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.bmlb.v20180625 import models
 
 
 class BmlbClient(AbstractClient):
     _apiVersion = '2018-06-25'
-    _endpoint = 'bmlb.tencentcloudapi.com'
+    _endpoint = 'bmlb.taifucloudcloudapi.com'
 
 
     def BindL4Backends(self, request):
         """綁定黑石服務器到四層監聽器。服務器包括物理服務器、虛拟機以及半托管機器。
 
         :param request: 調用BindL4Backends所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.BindL4BackendsRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.BindL4BackendsResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.BindL4BackendsRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.BindL4BackendsResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class BmlbClient(AbstractClient):
         """綁定黑石物理服務器或半托管服務器到七層轉發路徑。
 
         :param request: 調用BindL7Backends所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.BindL7BackendsRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.BindL7BackendsResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.BindL7BackendsRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.BindL7BackendsResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class BmlbClient(AbstractClient):
         """綁定黑石服務器七層監聽器到流量映像實例。
 
         :param request: 調用BindTrafficMirrorListeners所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.BindTrafficMirrorListenersRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.BindTrafficMirrorListenersResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.BindTrafficMirrorListenersRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.BindTrafficMirrorListenersResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class BmlbClient(AbstractClient):
         """綁定黑石物理服務器成爲流量映像接收機。
 
         :param request: 調用BindTrafficMirrorReceivers所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.BindTrafficMirrorReceiversRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.BindTrafficMirrorReceiversResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.BindTrafficMirrorReceiversRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.BindTrafficMirrorReceiversResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class BmlbClient(AbstractClient):
         """創建黑石四層負載均衡監聽器功能。黑石負載均衡四層監聽器提供了轉發用戶請求的具體規則，包括端口、協議、會話保持、健康檢查等參數。
 
         :param request: 調用CreateL4Listeners所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.CreateL4ListenersRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.CreateL4ListenersResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.CreateL4ListenersRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.CreateL4ListenersResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class BmlbClient(AbstractClient):
         """創建黑石負載均衡七層監聽器功能。負載均衡七層監聽器提供了轉發用戶請求的具體規則，包括端口、協議等參數。
 
         :param request: 調用CreateL7Listeners所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.CreateL7ListenersRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.CreateL7ListenersResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.CreateL7ListenersRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.CreateL7ListenersResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class BmlbClient(AbstractClient):
         """創建黑石負載均衡七層轉發規則。
 
         :param request: 調用CreateL7Rules所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.CreateL7RulesRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.CreateL7RulesResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.CreateL7RulesRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.CreateL7RulesResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class BmlbClient(AbstractClient):
         """用來創建黑石負載均衡。爲了使用黑石負載均衡服務，您必須要創建一個或者多個負載均衡實例。通過成功調用該介面，會返回負載均衡實例的唯一ID。用戶可以購買的黑石負載均衡實例類型分爲：公網類型、内網類型。公網類型負載均衡對應一個BGP VIP，可用于快速訪問公網負載均衡綁定的物理服務器；内網類型負載均衡對應一個Top Cloud 内部的VIP，不能通過Internet訪問，可快速訪問内網負載均衡綁定的物理服務器。
 
         :param request: 調用CreateLoadBalancers所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.CreateLoadBalancersRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.CreateLoadBalancersResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.CreateLoadBalancersRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.CreateLoadBalancersResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class BmlbClient(AbstractClient):
         """創建流量映像實例。
 
         :param request: 調用CreateTrafficMirror所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.CreateTrafficMirrorRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.CreateTrafficMirrorResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.CreateTrafficMirrorRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.CreateTrafficMirrorResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class BmlbClient(AbstractClient):
         """删除黑石負載均衡七層轉發域名。
 
         :param request: 調用DeleteL7Domains所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DeleteL7DomainsRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DeleteL7DomainsResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DeleteL7DomainsRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DeleteL7DomainsResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class BmlbClient(AbstractClient):
         """删除黑石負載均衡七層轉發規則。
 
         :param request: 調用DeleteL7Rules所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DeleteL7RulesRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DeleteL7RulesResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DeleteL7RulesRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DeleteL7RulesResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class BmlbClient(AbstractClient):
         """删除黑石負載均衡監聽器。
 
         :param request: 調用DeleteListeners所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DeleteListenersRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DeleteListenersResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DeleteListenersRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DeleteListenersResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class BmlbClient(AbstractClient):
         """删除用戶指定的黑石負載均衡實例。
 
         :param request: 調用DeleteLoadBalancer所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DeleteLoadBalancerRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DeleteLoadBalancerResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DeleteLoadBalancerRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DeleteLoadBalancerResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class BmlbClient(AbstractClient):
         """删除已創建的黑石流量映像實例，删除過程是異步執行的，因此需要使用查詢任務介面獲取删除的結果。
 
         :param request: 調用DeleteTrafficMirror所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DeleteTrafficMirrorRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DeleteTrafficMirrorResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DeleteTrafficMirrorRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DeleteTrafficMirrorResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class BmlbClient(AbstractClient):
         """獲取黑石負載均衡證書詳情。
 
         :param request: 調用DescribeCertDetail所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeCertDetailRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeCertDetailResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeCertDetailRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeCertDetailResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class BmlbClient(AbstractClient):
         """查詢黑石物理機和虛機以及托管服務器綁定的黑石負載均衡詳情。
 
         :param request: 調用DescribeDevicesBindInfo所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeDevicesBindInfoRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeDevicesBindInfoResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeDevicesBindInfoRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeDevicesBindInfoResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class BmlbClient(AbstractClient):
         """獲取黑石負載均衡四層監聽器綁定的主機清單。
 
         :param request: 調用DescribeL4Backends所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeL4BackendsRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeL4BackendsResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeL4BackendsRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeL4BackendsResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class BmlbClient(AbstractClient):
         """查找綁定了某主機或者指定監聽器名稱的黑石負載均衡四層監聽器。
 
         :param request: 調用DescribeL4ListenerInfo所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeL4ListenerInfoRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeL4ListenerInfoResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeL4ListenerInfoRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeL4ListenerInfoResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class BmlbClient(AbstractClient):
         """獲取黑石負載均衡四層監聽器。
 
         :param request: 調用DescribeL4Listeners所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeL4ListenersRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeL4ListenersResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeL4ListenersRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeL4ListenersResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class BmlbClient(AbstractClient):
         """獲取黑石負載均衡七層監聽器綁定的主機清單
 
         :param request: 調用DescribeL7Backends所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7BackendsRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7BackendsResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeL7BackendsRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeL7BackendsResponse`
 
         """
         try:
@@ -589,8 +589,8 @@ class BmlbClient(AbstractClient):
         """查找綁定了某主機或者有某轉發域名黑石負載均衡七層監聽器。
 
         :param request: 調用DescribeL7ListenerInfo所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7ListenerInfoRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7ListenerInfoResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeL7ListenerInfoRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeL7ListenerInfoResponse`
 
         """
         try:
@@ -617,8 +617,8 @@ class BmlbClient(AbstractClient):
         """獲取黑石負載均衡七層監聽器清單訊息。
 
         :param request: 調用DescribeL7Listeners所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7ListenersRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7ListenersResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeL7ListenersRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeL7ListenersResponse`
 
         """
         try:
@@ -645,8 +645,8 @@ class BmlbClient(AbstractClient):
         """獲取指定VPC下的7層監聽器(支援模糊比對)。
 
         :param request: 調用DescribeL7ListenersEx所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7ListenersExRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7ListenersExResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeL7ListenersExRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeL7ListenersExResponse`
 
         """
         try:
@@ -673,8 +673,8 @@ class BmlbClient(AbstractClient):
         """獲取黑石負載均衡七層轉發規則。
 
         :param request: 調用DescribeL7Rules所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7RulesRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeL7RulesResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeL7RulesRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeL7RulesResponse`
 
         """
         try:
@@ -701,8 +701,8 @@ class BmlbClient(AbstractClient):
         """獲取黑石負載均衡端口相關訊息。
 
         :param request: 調用DescribeLoadBalancerPortInfo所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeLoadBalancerPortInfoRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeLoadBalancerPortInfoResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeLoadBalancerPortInfoRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeLoadBalancerPortInfoResponse`
 
         """
         try:
@@ -729,8 +729,8 @@ class BmlbClient(AbstractClient):
         """查詢負載均衡實例異步任務的執行情況。
 
         :param request: 調用DescribeLoadBalancerTaskResult所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeLoadBalancerTaskResultRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeLoadBalancerTaskResultResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeLoadBalancerTaskResultRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeLoadBalancerTaskResultResponse`
 
         """
         try:
@@ -757,8 +757,8 @@ class BmlbClient(AbstractClient):
         """獲取黑石負載均衡實例清單
 
         :param request: 調用DescribeLoadBalancers所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeLoadBalancersRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeLoadBalancersResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeLoadBalancersRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeLoadBalancersResponse`
 
         """
         try:
@@ -785,8 +785,8 @@ class BmlbClient(AbstractClient):
         """獲取流量映像的監聽器清單訊息。
 
         :param request: 調用DescribeTrafficMirrorListeners所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeTrafficMirrorListenersRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeTrafficMirrorListenersResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeTrafficMirrorListenersRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeTrafficMirrorListenersResponse`
 
         """
         try:
@@ -813,8 +813,8 @@ class BmlbClient(AbstractClient):
         """獲取流量映像接收機健康狀态。
 
         :param request: 調用DescribeTrafficMirrorReceiverHealthStatus所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeTrafficMirrorReceiverHealthStatusRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeTrafficMirrorReceiverHealthStatusResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeTrafficMirrorReceiverHealthStatusRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeTrafficMirrorReceiverHealthStatusResponse`
 
         """
         try:
@@ -841,8 +841,8 @@ class BmlbClient(AbstractClient):
         """獲取指定流量映像實例的接收機訊息。
 
         :param request: 調用DescribeTrafficMirrorReceivers所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeTrafficMirrorReceiversRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeTrafficMirrorReceiversResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeTrafficMirrorReceiversRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeTrafficMirrorReceiversResponse`
 
         """
         try:
@@ -869,8 +869,8 @@ class BmlbClient(AbstractClient):
         """獲取流量映像實例的清單訊息。
 
         :param request: 調用DescribeTrafficMirrors所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.DescribeTrafficMirrorsRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.DescribeTrafficMirrorsResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeTrafficMirrorsRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.DescribeTrafficMirrorsResponse`
 
         """
         try:
@@ -897,8 +897,8 @@ class BmlbClient(AbstractClient):
         """修改黑石負載均衡四層監聽器後端實例端口。
 
         :param request: 調用ModifyL4BackendPort所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyL4BackendPortRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyL4BackendPortResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyL4BackendPortRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyL4BackendPortResponse`
 
         """
         try:
@@ -925,8 +925,8 @@ class BmlbClient(AbstractClient):
         """修改黑石負載均衡四層監聽器後端探測端口。
 
         :param request: 調用ModifyL4BackendProbePort所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyL4BackendProbePortRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyL4BackendProbePortResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyL4BackendProbePortRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyL4BackendProbePortResponse`
 
         """
         try:
@@ -953,8 +953,8 @@ class BmlbClient(AbstractClient):
         """修改黑石負載均衡四層監聽器後端實例權重功能。
 
         :param request: 調用ModifyL4BackendWeight所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyL4BackendWeightRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyL4BackendWeightResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyL4BackendWeightRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyL4BackendWeightResponse`
 
         """
         try:
@@ -981,8 +981,8 @@ class BmlbClient(AbstractClient):
         """修改黑石負載均衡四層監聽器。
 
         :param request: 調用ModifyL4Listener所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyL4ListenerRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyL4ListenerResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyL4ListenerRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyL4ListenerResponse`
 
         """
         try:
@@ -1009,8 +1009,8 @@ class BmlbClient(AbstractClient):
         """修改黑石負載均衡七層轉發路徑後端實例端口。
 
         :param request: 調用ModifyL7BackendPort所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyL7BackendPortRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyL7BackendPortResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyL7BackendPortRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyL7BackendPortResponse`
 
         """
         try:
@@ -1037,8 +1037,8 @@ class BmlbClient(AbstractClient):
         """修改黑石負載均衡七層轉發路徑後端實例權重。
 
         :param request: 調用ModifyL7BackendWeight所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyL7BackendWeightRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyL7BackendWeightResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyL7BackendWeightRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyL7BackendWeightResponse`
 
         """
         try:
@@ -1065,8 +1065,8 @@ class BmlbClient(AbstractClient):
         """修改黑石負載均衡七層監聽器。
 
         :param request: 調用ModifyL7Listener所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyL7ListenerRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyL7ListenerResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyL7ListenerRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyL7ListenerResponse`
 
         """
         try:
@@ -1093,8 +1093,8 @@ class BmlbClient(AbstractClient):
         """修改黑石負載均衡七層轉發路徑。
 
         :param request: 調用ModifyL7Locations所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyL7LocationsRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyL7LocationsResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyL7LocationsRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyL7LocationsResponse`
 
         """
         try:
@@ -1121,8 +1121,8 @@ class BmlbClient(AbstractClient):
         """根據輸入參數來修改黑石負載均衡實例的基本配置訊息。可能的訊息包括負載均衡實例的名稱，域名前綴。
 
         :param request: 調用ModifyLoadBalancer所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyLoadBalancerRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyLoadBalancerResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyLoadBalancerRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyLoadBalancerResponse`
 
         """
         try:
@@ -1149,8 +1149,8 @@ class BmlbClient(AbstractClient):
         """更改黑石負載均衡的計費方式
 
         :param request: 調用ModifyLoadBalancerChargeMode所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.ModifyLoadBalancerChargeModeRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.ModifyLoadBalancerChargeModeResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyLoadBalancerChargeModeRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.ModifyLoadBalancerChargeModeResponse`
 
         """
         try:
@@ -1177,8 +1177,8 @@ class BmlbClient(AbstractClient):
         """更新黑石負載均衡證書。
 
         :param request: 調用ReplaceCert所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.ReplaceCertRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.ReplaceCertResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.ReplaceCertRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.ReplaceCertResponse`
 
         """
         try:
@@ -1205,8 +1205,8 @@ class BmlbClient(AbstractClient):
         """設置流量映像的别名。
 
         :param request: 調用SetTrafficMirrorAlias所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.SetTrafficMirrorAliasRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.SetTrafficMirrorAliasResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.SetTrafficMirrorAliasRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.SetTrafficMirrorAliasResponse`
 
         """
         try:
@@ -1233,8 +1233,8 @@ class BmlbClient(AbstractClient):
         """設置流量映像的健康檢查參數。
 
         :param request: 調用SetTrafficMirrorHealthSwitch所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.SetTrafficMirrorHealthSwitchRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.SetTrafficMirrorHealthSwitchResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.SetTrafficMirrorHealthSwitchRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.SetTrafficMirrorHealthSwitchResponse`
 
         """
         try:
@@ -1261,8 +1261,8 @@ class BmlbClient(AbstractClient):
         """解綁黑石負載均衡四層監聽器物理服務器。
 
         :param request: 調用UnbindL4Backends所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.UnbindL4BackendsRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.UnbindL4BackendsResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.UnbindL4BackendsRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.UnbindL4BackendsResponse`
 
         """
         try:
@@ -1289,8 +1289,8 @@ class BmlbClient(AbstractClient):
         """解綁黑石物理服務器或者托管服務器到七層轉發路徑功能。
 
         :param request: 調用UnbindL7Backends所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.UnbindL7BackendsRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.UnbindL7BackendsResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.UnbindL7BackendsRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.UnbindL7BackendsResponse`
 
         """
         try:
@@ -1317,8 +1317,8 @@ class BmlbClient(AbstractClient):
         """解綁流量映像監聽器。
 
         :param request: 調用UnbindTrafficMirrorListeners所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.UnbindTrafficMirrorListenersRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.UnbindTrafficMirrorListenersResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.UnbindTrafficMirrorListenersRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.UnbindTrafficMirrorListenersResponse`
 
         """
         try:
@@ -1345,8 +1345,8 @@ class BmlbClient(AbstractClient):
         """從流量映像實例上解綁流量映像接收機。
 
         :param request: 調用UnbindTrafficMirrorReceivers所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.UnbindTrafficMirrorReceiversRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.UnbindTrafficMirrorReceiversResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.UnbindTrafficMirrorReceiversRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.UnbindTrafficMirrorReceiversResponse`
 
         """
         try:
@@ -1373,8 +1373,8 @@ class BmlbClient(AbstractClient):
         """創建黑石負載均衡證書。
 
         :param request: 調用UploadCert所需參數的結構體。
-        :type request: :class:`tencentcloud.bmlb.v20180625.models.UploadCertRequest`
-        :rtype: :class:`tencentcloud.bmlb.v20180625.models.UploadCertResponse`
+        :type request: :class:`taifucloudcloud.bmlb.v20180625.models.UploadCertRequest`
+        :rtype: :class:`taifucloudcloud.bmlb.v20180625.models.UploadCertResponse`
 
         """
         try:

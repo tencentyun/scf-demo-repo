@@ -78,4 +78,3 @@ class ScramClient:
         params = dict(pair.split('=', 1) for pair in server_final_message.split(','))
         if self.server_signature != base64.b64decode(params['v'].encode('utf-8')):
             raise ValueError("Server sent wrong signature!")
-

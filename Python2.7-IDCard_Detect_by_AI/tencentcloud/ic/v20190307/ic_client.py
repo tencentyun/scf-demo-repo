@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.ic.v20190307 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.ic.v20190307 import models
 
 
 class IcClient(AbstractClient):
     _apiVersion = '2019-03-07'
-    _endpoint = 'ic.tencentcloudapi.com'
+    _endpoint = 'ic.taifucloudcloudapi.com'
 
 
     def DescribeApp(self, request):
         """根據應用id查詢物聯卡應用詳情
 
         :param request: 調用DescribeApp所需參數的結構體。
-        :type request: :class:`tencentcloud.ic.v20190307.models.DescribeAppRequest`
-        :rtype: :class:`tencentcloud.ic.v20190307.models.DescribeAppResponse`
+        :type request: :class:`taifucloudcloud.ic.v20190307.models.DescribeAppRequest`
+        :rtype: :class:`taifucloudcloud.ic.v20190307.models.DescribeAppResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class IcClient(AbstractClient):
         """查詢卡片詳細訊息
 
         :param request: 調用DescribeCard所需參數的結構體。
-        :type request: :class:`tencentcloud.ic.v20190307.models.DescribeCardRequest`
-        :rtype: :class:`tencentcloud.ic.v20190307.models.DescribeCardResponse`
+        :type request: :class:`taifucloudcloud.ic.v20190307.models.DescribeCardRequest`
+        :rtype: :class:`taifucloudcloud.ic.v20190307.models.DescribeCardResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class IcClient(AbstractClient):
         """查詢卡片清單訊息
 
         :param request: 調用DescribeCards所需參數的結構體。
-        :type request: :class:`tencentcloud.ic.v20190307.models.DescribeCardsRequest`
-        :rtype: :class:`tencentcloud.ic.v20190307.models.DescribeCardsResponse`
+        :type request: :class:`taifucloudcloud.ic.v20190307.models.DescribeCardsRequest`
+        :rtype: :class:`taifucloudcloud.ic.v20190307.models.DescribeCardsResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class IcClient(AbstractClient):
         """群發簡訊
 
         :param request: 調用SendMultiSms所需參數的結構體。
-        :type request: :class:`tencentcloud.ic.v20190307.models.SendMultiSmsRequest`
-        :rtype: :class:`tencentcloud.ic.v20190307.models.SendMultiSmsResponse`
+        :type request: :class:`taifucloudcloud.ic.v20190307.models.SendMultiSmsRequest`
+        :rtype: :class:`taifucloudcloud.ic.v20190307.models.SendMultiSmsResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class IcClient(AbstractClient):
         """發送短訊息介面
 
         :param request: 調用SendSms所需參數的結構體。
-        :type request: :class:`tencentcloud.ic.v20190307.models.SendSmsRequest`
-        :rtype: :class:`tencentcloud.ic.v20190307.models.SendSmsResponse`
+        :type request: :class:`taifucloudcloud.ic.v20190307.models.SendSmsRequest`
+        :rtype: :class:`taifucloudcloud.ic.v20190307.models.SendSmsResponse`
 
         """
         try:

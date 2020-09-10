@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Code(AbstractModel):
@@ -29,7 +29,7 @@ class Code(AbstractModel):
         :type CosObjectName: str
         :param ZipFile: 包含函數代碼文件及其依賴項的 zip 格式文件，使用該介面時要求将 zip 文件的内容轉成 base64 編碼，最大支援20M
         :type ZipFile: str
-        :param CosBucketRegion: 物件儲存的地域，地域爲北京時需要傳入ap-beijing,北京一區時需要傳遞ap-beijing-1，其他的地域不需要傳遞。
+        :param CosBucketRegion: 物件儲存的地域，地域爲 時需要傳入ap-beijing, 一區時需要傳遞ap-beijing-1，其他的地域不需要傳遞。
         :type CosBucketRegion: str
         :param DemoId: 如果是通過Demo創建的話，需要傳入DemoId
         :type DemoId: str
@@ -117,7 +117,7 @@ class CreateFunctionRequest(AbstractModel):
         :param FunctionName: 創建的函數名稱，函數名稱支援26個英文字母大小寫、數字、連接符和下劃線，第一個字元只能以字母開頭，最後一個字元不能爲連接符或者下劃線，名稱長度2-60
         :type FunctionName: str
         :param Code: 函數的代碼. 注意：不能同時指定Cos與ZipFile
-        :type Code: :class:`tencentcloud.scf.v20180416.models.Code`
+        :type Code: :class:`taifucloudcloud.scf.v20180416.models.Code`
         :param Handler: 函數處理方法名稱，名稱格式支援 "文件名稱.方法名稱" 形式，文件名稱和函數名稱之間以"."隔開，文件名稱和函數名稱要求以字母開始和結尾，中間允許插入字母、數字、下劃線和連接符，文件名稱和函數名字的長度要求是 2-60 個字元
         :type Handler: str
         :param Description: 函數描述,最大支援 1000 個英文字母、數字、空格、逗号、換行符和英文句号，支援中文
@@ -127,11 +127,11 @@ class CreateFunctionRequest(AbstractModel):
         :param Timeout: 函數最長執行時間，單位爲秒，可選值範圍 1-300 秒，預設爲 3 秒
         :type Timeout: int
         :param Environment: 函數的環境變量
-        :type Environment: :class:`tencentcloud.scf.v20180416.models.Environment`
+        :type Environment: :class:`taifucloudcloud.scf.v20180416.models.Environment`
         :param Runtime: 函數運作環境，目前僅支援 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，預設Python2.7
         :type Runtime: str
         :param VpcConfig: 函數的私有網絡配置
-        :type VpcConfig: :class:`tencentcloud.scf.v20180416.models.VpcConfig`
+        :type VpcConfig: :class:`taifucloudcloud.scf.v20180416.models.VpcConfig`
         :param ClsLogsetId: 函數日志投遞到的CLS LogsetID
         :type ClsLogsetId: str
         :param ClsTopicId: 函數日志投遞到的CLS TopicID
@@ -232,7 +232,7 @@ class CreateTriggerResponse(AbstractModel):
     def __init__(self):
         """
         :param TriggerInfo: 觸發器訊息
-        :type TriggerInfo: :class:`tencentcloud.scf.v20180416.models.Trigger`
+        :type TriggerInfo: :class:`taifucloudcloud.scf.v20180416.models.Trigger`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -505,7 +505,7 @@ class GetFunctionLogsRequest(AbstractModel):
         :param OrderBy: 根據某個欄位排序日志,支援以下欄位：function_name, duration, mem_usage, start_time
         :type OrderBy: str
         :param Filter: 日志過濾條件。可用來區分正确和錯誤日志，filter.retCode=not0 表示只返回錯誤日志，filter.retCode=is0 表示只返回正确日志，不傳，則返回所有日志
-        :type Filter: :class:`tencentcloud.scf.v20180416.models.LogFilter`
+        :type Filter: :class:`taifucloudcloud.scf.v20180416.models.LogFilter`
         :param Qualifier: 函數的版本
         :type Qualifier: str
         :param FunctionRequestId: 執行該函數對應的requestId
@@ -627,11 +627,11 @@ class GetFunctionResponse(AbstractModel):
         :param FunctionName: 函數的名稱
         :type FunctionName: str
         :param VpcConfig: 函數的私有網絡
-        :type VpcConfig: :class:`tencentcloud.scf.v20180416.models.VpcConfig`
+        :type VpcConfig: :class:`taifucloudcloud.scf.v20180416.models.VpcConfig`
         :param UseGpu: 是否使用GPU
         :type UseGpu: str
         :param Environment: 函數的環境變量
-        :type Environment: :class:`tencentcloud.scf.v20180416.models.Environment`
+        :type Environment: :class:`taifucloudcloud.scf.v20180416.models.Environment`
         :param CodeResult: 代碼是否正确
         :type CodeResult: str
         :param CodeError: 代碼錯誤訊息
@@ -777,7 +777,7 @@ class InvokeResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 函數執行結果
-        :type Result: :class:`tencentcloud.scf.v20180416.models.Result`
+        :type Result: :class:`taifucloudcloud.scf.v20180416.models.Result`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1012,7 +1012,7 @@ class UpdateFunctionCodeRequest(AbstractModel):
         :type CosObjectName: str
         :param ZipFile: 包含函數代碼文件及其依賴項的 zip 格式文件，使用該介面時要求将 zip 文件的内容轉成 base64 編碼，最大支援20M
         :type ZipFile: str
-        :param CosBucketRegion: 物件儲存的地域，注：北京分爲ap-beijing和ap-beijing-1
+        :param CosBucketRegion: 物件儲存的地域，注： 分爲ap-beijing和ap-beijing-1
         :type CosBucketRegion: str
         """
         self.Handler = None
@@ -1067,9 +1067,9 @@ class UpdateFunctionConfigurationRequest(AbstractModel):
         :param Runtime: 函數運作環境，目前僅支援 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
         :type Runtime: str
         :param Environment: 函數的環境變量
-        :type Environment: :class:`tencentcloud.scf.v20180416.models.Environment`
+        :type Environment: :class:`taifucloudcloud.scf.v20180416.models.Environment`
         :param VpcConfig: 函數的私有網絡配置
-        :type VpcConfig: :class:`tencentcloud.scf.v20180416.models.VpcConfig`
+        :type VpcConfig: :class:`taifucloudcloud.scf.v20180416.models.VpcConfig`
         """
         self.FunctionName = None
         self.Description = None

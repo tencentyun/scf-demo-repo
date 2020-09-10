@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cloudaudit.v20190319 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cloudaudit.v20190319 import models
 
 
 class CloudauditClient(AbstractClient):
     _apiVersion = '2019-03-19'
-    _endpoint = 'cloudaudit.tencentcloudapi.com'
+    _endpoint = 'cloudaudit.taifucloudcloudapi.com'
 
 
     def CreateAudit(self, request):
@@ -33,8 +33,8 @@ class CloudauditClient(AbstractClient):
         4、如果IsEnableKmsEncry的值是1的話，KmsRegion和KeyId屬于必填項
 
         :param request: Request instance for CreateAudit.
-        :type request: :class:`tencentcloud.cloudaudit.v20190319.models.CreateAuditRequest`
-        :rtype: :class:`tencentcloud.cloudaudit.v20190319.models.CreateAuditResponse`
+        :type request: :class:`taifucloudcloud.cloudaudit.v20190319.models.CreateAuditRequest`
+        :rtype: :class:`taifucloudcloud.cloudaudit.v20190319.models.CreateAuditResponse`
 
         """
         try:
@@ -61,8 +61,8 @@ class CloudauditClient(AbstractClient):
         """删除跟蹤集
 
         :param request: Request instance for DeleteAudit.
-        :type request: :class:`tencentcloud.cloudaudit.v20190319.models.DeleteAuditRequest`
-        :rtype: :class:`tencentcloud.cloudaudit.v20190319.models.DeleteAuditResponse`
+        :type request: :class:`taifucloudcloud.cloudaudit.v20190319.models.DeleteAuditRequest`
+        :rtype: :class:`taifucloudcloud.cloudaudit.v20190319.models.DeleteAuditResponse`
 
         """
         try:
@@ -89,8 +89,8 @@ class CloudauditClient(AbstractClient):
         """查詢跟蹤集詳情
 
         :param request: Request instance for DescribeAudit.
-        :type request: :class:`tencentcloud.cloudaudit.v20190319.models.DescribeAuditRequest`
-        :rtype: :class:`tencentcloud.cloudaudit.v20190319.models.DescribeAuditResponse`
+        :type request: :class:`taifucloudcloud.cloudaudit.v20190319.models.DescribeAuditRequest`
+        :rtype: :class:`taifucloudcloud.cloudaudit.v20190319.models.DescribeAuditResponse`
 
         """
         try:
@@ -117,8 +117,8 @@ class CloudauditClient(AbstractClient):
         """查詢AttributeKey的有效取值範圍
 
         :param request: Request instance for GetAttributeKey.
-        :type request: :class:`tencentcloud.cloudaudit.v20190319.models.GetAttributeKeyRequest`
-        :rtype: :class:`tencentcloud.cloudaudit.v20190319.models.GetAttributeKeyResponse`
+        :type request: :class:`taifucloudcloud.cloudaudit.v20190319.models.GetAttributeKeyRequest`
+        :rtype: :class:`taifucloudcloud.cloudaudit.v20190319.models.GetAttributeKeyResponse`
 
         """
         try:
@@ -145,8 +145,8 @@ class CloudauditClient(AbstractClient):
         """查詢用戶可創建跟蹤集的數量
 
         :param request: Request instance for InquireAuditCredit.
-        :type request: :class:`tencentcloud.cloudaudit.v20190319.models.InquireAuditCreditRequest`
-        :rtype: :class:`tencentcloud.cloudaudit.v20190319.models.InquireAuditCreditResponse`
+        :type request: :class:`taifucloudcloud.cloudaudit.v20190319.models.InquireAuditCreditRequest`
+        :rtype: :class:`taifucloudcloud.cloudaudit.v20190319.models.InquireAuditCreditResponse`
 
         """
         try:
@@ -173,8 +173,8 @@ class CloudauditClient(AbstractClient):
         """查詢跟蹤集概要
 
         :param request: Request instance for ListAudits.
-        :type request: :class:`tencentcloud.cloudaudit.v20190319.models.ListAuditsRequest`
-        :rtype: :class:`tencentcloud.cloudaudit.v20190319.models.ListAuditsResponse`
+        :type request: :class:`taifucloudcloud.cloudaudit.v20190319.models.ListAuditsRequest`
+        :rtype: :class:`taifucloudcloud.cloudaudit.v20190319.models.ListAuditsResponse`
 
         """
         try:
@@ -201,8 +201,8 @@ class CloudauditClient(AbstractClient):
         """查詢雲審計支援的cmq的可用區
 
         :param request: Request instance for ListCmqEnableRegion.
-        :type request: :class:`tencentcloud.cloudaudit.v20190319.models.ListCmqEnableRegionRequest`
-        :rtype: :class:`tencentcloud.cloudaudit.v20190319.models.ListCmqEnableRegionResponse`
+        :type request: :class:`taifucloudcloud.cloudaudit.v20190319.models.ListCmqEnableRegionRequest`
+        :rtype: :class:`taifucloudcloud.cloudaudit.v20190319.models.ListCmqEnableRegionResponse`
 
         """
         try:
@@ -229,8 +229,8 @@ class CloudauditClient(AbstractClient):
         """查詢雲審計支援的cos可用區
 
         :param request: Request instance for ListCosEnableRegion.
-        :type request: :class:`tencentcloud.cloudaudit.v20190319.models.ListCosEnableRegionRequest`
-        :rtype: :class:`tencentcloud.cloudaudit.v20190319.models.ListCosEnableRegionResponse`
+        :type request: :class:`taifucloudcloud.cloudaudit.v20190319.models.ListCosEnableRegionRequest`
+        :rtype: :class:`taifucloudcloud.cloudaudit.v20190319.models.ListCosEnableRegionResponse`
 
         """
         try:
@@ -257,8 +257,8 @@ class CloudauditClient(AbstractClient):
         """用于對操作日志進行檢索，便于用戶進行查詢相關的操作訊息。
 
         :param request: Request instance for LookUpEvents.
-        :type request: :class:`tencentcloud.cloudaudit.v20190319.models.LookUpEventsRequest`
-        :rtype: :class:`tencentcloud.cloudaudit.v20190319.models.LookUpEventsResponse`
+        :type request: :class:`taifucloudcloud.cloudaudit.v20190319.models.LookUpEventsRequest`
+        :rtype: :class:`taifucloudcloud.cloudaudit.v20190319.models.LookUpEventsResponse`
 
         """
         try:
@@ -285,8 +285,8 @@ class CloudauditClient(AbstractClient):
         """開啓跟蹤集
 
         :param request: Request instance for StartLogging.
-        :type request: :class:`tencentcloud.cloudaudit.v20190319.models.StartLoggingRequest`
-        :rtype: :class:`tencentcloud.cloudaudit.v20190319.models.StartLoggingResponse`
+        :type request: :class:`taifucloudcloud.cloudaudit.v20190319.models.StartLoggingRequest`
+        :rtype: :class:`taifucloudcloud.cloudaudit.v20190319.models.StartLoggingResponse`
 
         """
         try:
@@ -313,8 +313,8 @@ class CloudauditClient(AbstractClient):
         """關閉跟蹤集
 
         :param request: Request instance for StopLogging.
-        :type request: :class:`tencentcloud.cloudaudit.v20190319.models.StopLoggingRequest`
-        :rtype: :class:`tencentcloud.cloudaudit.v20190319.models.StopLoggingResponse`
+        :type request: :class:`taifucloudcloud.cloudaudit.v20190319.models.StopLoggingRequest`
+        :rtype: :class:`taifucloudcloud.cloudaudit.v20190319.models.StopLoggingResponse`
 
         """
         try:
@@ -345,8 +345,8 @@ class CloudauditClient(AbstractClient):
         4、如果IsEnableKmsEncry的值是1的話，KmsRegion和KeyId屬于必填項
 
         :param request: Request instance for UpdateAudit.
-        :type request: :class:`tencentcloud.cloudaudit.v20190319.models.UpdateAuditRequest`
-        :rtype: :class:`tencentcloud.cloudaudit.v20190319.models.UpdateAuditResponse`
+        :type request: :class:`taifucloudcloud.cloudaudit.v20190319.models.UpdateAuditRequest`
+        :rtype: :class:`taifucloudcloud.cloudaudit.v20190319.models.UpdateAuditResponse`
 
         """
         try:

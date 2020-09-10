@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CosBackup(AbstractModel):
@@ -72,9 +72,9 @@ class CreateInstanceRequest(AbstractModel):
         :type DiskType: str
         :param TimeUnit: 計費時長單位（ChargeType爲PREPAID時需要設置，預設值爲“m”，表示月，當前只支援“m”）
         :type TimeUnit: str
-        :param AutoVoucher: 是否自動使用代金券<li>0：不自動使用</li><li>1：自動使用</li>預設值0
+        :param AutoVoucher: 是否自動使用 <li>0：不自動使用</li><li>1：自動使用</li>預設值0
         :type AutoVoucher: int
-        :param VoucherIds: 代金券ID清單（目前僅支援指定一張代金券）
+        :param VoucherIds:  ID清單（目前僅支援指定一張 ）
         :type VoucherIds: list of str
         :param EnableDedicatedMaster: 是否創建專用主節點<li>true：開啓專用主節點</li><li>false：不開啓專用主節點</li>預設值false
         :type EnableDedicatedMaster: bool
@@ -554,7 +554,7 @@ class InstanceInfo(AbstractModel):
         :param EsConfig: ES配置項
         :type EsConfig: str
         :param EsAcl: ES訪問控制配置
-        :type EsAcl: :class:`tencentcloud.es.v20180416.models.EsAcl`
+        :type EsAcl: :class:`taifucloudcloud.es.v20180416.models.EsAcl`
         :param CreateTime: 實例創建時間
         :type CreateTime: str
         :param UpdateTime: 實例最後修改操作時間
@@ -564,11 +564,11 @@ class InstanceInfo(AbstractModel):
         :param InstanceType: 實例類型（實例類型标識，當前只有1,2兩種）
         :type InstanceType: int
         :param IkConfig: Ik分詞器配置
-        :type IkConfig: :class:`tencentcloud.es.v20180416.models.EsDictionaryInfo`
+        :type IkConfig: :class:`taifucloudcloud.es.v20180416.models.EsDictionaryInfo`
         :param MasterNodeInfo: 專用主節點配置
-        :type MasterNodeInfo: :class:`tencentcloud.es.v20180416.models.MasterNodeInfo`
+        :type MasterNodeInfo: :class:`taifucloudcloud.es.v20180416.models.MasterNodeInfo`
         :param CosBackup: cos自動備份配置
-        :type CosBackup: :class:`tencentcloud.es.v20180416.models.CosBackup`
+        :type CosBackup: :class:`taifucloudcloud.es.v20180416.models.CosBackup`
         :param AllowCosBackup: 是否允許cos自動備份
         :type AllowCosBackup: bool
         :param TagList: 實例擁有的标簽清單
@@ -790,7 +790,7 @@ class Operation(AbstractModel):
         :param Type: 操作類型
         :type Type: str
         :param Detail: 操作詳情
-        :type Detail: :class:`tencentcloud.es.v20180416.models.OperationDetail`
+        :type Detail: :class:`taifucloudcloud.es.v20180416.models.OperationDetail`
         :param Result: 操作結果
         :type Result: str
         :param Tasks: 流程任務訊息
@@ -991,7 +991,7 @@ class UpdateInstanceRequest(AbstractModel):
         :param Password: 預設用戶elastic的密碼（8到16位，至少包括兩項（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
         :type Password: str
         :param EsAcl: 訪問控制清單
-        :type EsAcl: :class:`tencentcloud.es.v20180416.models.EsAcl`
+        :type EsAcl: :class:`taifucloudcloud.es.v20180416.models.EsAcl`
         :param DiskSize: 磁盤大小（單位GB）
         :type DiskSize: int
         :param NodeType: 節點規格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
@@ -1005,7 +1005,7 @@ class UpdateInstanceRequest(AbstractModel):
         :param ForceRestart: 更新配置時是否強制重啓<li>true強制重啓</li><li>false不強制重啓</li>當前僅更新EsConfig時需要設置，預設值爲false
         :type ForceRestart: bool
         :param CosBackup: COS自動備份訊息
-        :type CosBackup: :class:`tencentcloud.es.v20180416.models.CosBackup`
+        :type CosBackup: :class:`taifucloudcloud.es.v20180416.models.CosBackup`
         """
         self.InstanceId = None
         self.InstanceName = None

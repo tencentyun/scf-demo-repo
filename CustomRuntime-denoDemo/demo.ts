@@ -52,4 +52,3 @@ async function postData(url = '', data = {}) {
   });
   return response.text(); // parses JSON response into native JavaScript objects
 }
-

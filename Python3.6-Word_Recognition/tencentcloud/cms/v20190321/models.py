@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AudioModerationRequest(AbstractModel):
@@ -141,15 +141,15 @@ class ImageData(AbstractModel):
 21000：綜合
         :type EvilType: int
         :param IllegalDetect: 圖片違法詳情
-        :type IllegalDetect: :class:`tencentcloud.cms.v20190321.models.ImageIllegalDetect`
+        :type IllegalDetect: :class:`taifucloudcloud.cms.v20190321.models.ImageIllegalDetect`
         :param PolityDetect: 圖片涉政詳情
-        :type PolityDetect: :class:`tencentcloud.cms.v20190321.models.ImagePolityDetect`
+        :type PolityDetect: :class:`taifucloudcloud.cms.v20190321.models.ImagePolityDetect`
         :param PornDetect: 圖片涉黃詳情
-        :type PornDetect: :class:`tencentcloud.cms.v20190321.models.ImagePornDetect`
+        :type PornDetect: :class:`taifucloudcloud.cms.v20190321.models.ImagePornDetect`
         :param Similar: 圖片相似度詳情
-        :type Similar: :class:`tencentcloud.cms.v20190321.models.Similar`
+        :type Similar: :class:`taifucloudcloud.cms.v20190321.models.Similar`
         :param TerrorDetect: 圖片暴恐詳情
-        :type TerrorDetect: :class:`tencentcloud.cms.v20190321.models.ImageTerrorDetect`
+        :type TerrorDetect: :class:`taifucloudcloud.cms.v20190321.models.ImageTerrorDetect`
         """
         self.EvilFlag = None
         self.EvilType = None
@@ -253,7 +253,7 @@ class ImageModerationResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 識别結果
-        :type Data: :class:`tencentcloud.cms.v20190321.models.ImageData`
+        :type Data: :class:`taifucloudcloud.cms.v20190321.models.ImageData`
         :param BusinessCode: 業務返回碼
         :type BusinessCode: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -510,7 +510,7 @@ class TextModerationResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 識别結果
-        :type Data: :class:`tencentcloud.cms.v20190321.models.TextData`
+        :type Data: :class:`taifucloudcloud.cms.v20190321.models.TextData`
         :param BusinessCode: 業務返回碼
         :type BusinessCode: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。

@@ -1,7 +1,7 @@
 'use strict'
 /**************************************************
 Nodejs8.9-Thumbnail
-Reference: https://cloud.tencent.com/document/product/460/6925
+Reference: https://cloud.taifucloud.com/document/product/460/6925
 ***************************************************/
 
 const path = require('path')

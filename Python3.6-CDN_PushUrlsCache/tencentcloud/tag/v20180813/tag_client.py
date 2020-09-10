@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tag.v20180813 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tag.v20180813 import models
 
 
 class TagClient(AbstractClient):
     _apiVersion = '2018-08-13'
-    _endpoint = 'tag.tencentcloudapi.com'
+    _endpoint = 'tag.taifucloudcloudapi.com'
 
 
     def AddResourceTag(self, request):
         """本介面用于給标簽關聯資源
 
         :param request: Request instance for AddResourceTag.
-        :type request: :class:`tencentcloud.tag.v20180813.models.AddResourceTagRequest`
-        :rtype: :class:`tencentcloud.tag.v20180813.models.AddResourceTagResponse`
+        :type request: :class:`taifucloudcloud.tag.v20180813.models.AddResourceTagRequest`
+        :rtype: :class:`taifucloudcloud.tag.v20180813.models.AddResourceTagResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TagClient(AbstractClient):
         """本介面用于創建一對标簽鍵和标簽值
 
         :param request: Request instance for CreateTag.
-        :type request: :class:`tencentcloud.tag.v20180813.models.CreateTagRequest`
-        :rtype: :class:`tencentcloud.tag.v20180813.models.CreateTagResponse`
+        :type request: :class:`taifucloudcloud.tag.v20180813.models.CreateTagRequest`
+        :rtype: :class:`taifucloudcloud.tag.v20180813.models.CreateTagResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TagClient(AbstractClient):
         """本介面用于解除标簽和資源的關聯關系
 
         :param request: Request instance for DeleteResourceTag.
-        :type request: :class:`tencentcloud.tag.v20180813.models.DeleteResourceTagRequest`
-        :rtype: :class:`tencentcloud.tag.v20180813.models.DeleteResourceTagResponse`
+        :type request: :class:`taifucloudcloud.tag.v20180813.models.DeleteResourceTagRequest`
+        :rtype: :class:`taifucloudcloud.tag.v20180813.models.DeleteResourceTagResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TagClient(AbstractClient):
         """本介面用于删除一對标簽鍵和标簽值
 
         :param request: Request instance for DeleteTag.
-        :type request: :class:`tencentcloud.tag.v20180813.models.DeleteTagRequest`
-        :rtype: :class:`tencentcloud.tag.v20180813.models.DeleteTagResponse`
+        :type request: :class:`taifucloudcloud.tag.v20180813.models.DeleteTagRequest`
+        :rtype: :class:`taifucloudcloud.tag.v20180813.models.DeleteTagResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class TagClient(AbstractClient):
         """查詢資源關聯标簽
 
         :param request: Request instance for DescribeResourceTags.
-        :type request: :class:`tencentcloud.tag.v20180813.models.DescribeResourceTagsRequest`
-        :rtype: :class:`tencentcloud.tag.v20180813.models.DescribeResourceTagsResponse`
+        :type request: :class:`taifucloudcloud.tag.v20180813.models.DescribeResourceTagsRequest`
+        :rtype: :class:`taifucloudcloud.tag.v20180813.models.DescribeResourceTagsResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class TagClient(AbstractClient):
         """用于查詢已有資源标簽鍵值對
 
         :param request: Request instance for DescribeResourceTagsByResourceIds.
-        :type request: :class:`tencentcloud.tag.v20180813.models.DescribeResourceTagsByResourceIdsRequest`
-        :rtype: :class:`tencentcloud.tag.v20180813.models.DescribeResourceTagsByResourceIdsResponse`
+        :type request: :class:`taifucloudcloud.tag.v20180813.models.DescribeResourceTagsByResourceIdsRequest`
+        :rtype: :class:`taifucloudcloud.tag.v20180813.models.DescribeResourceTagsByResourceIdsResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class TagClient(AbstractClient):
         """根據标簽鍵獲取資源标簽
 
         :param request: Request instance for DescribeResourceTagsByTagKeys.
-        :type request: :class:`tencentcloud.tag.v20180813.models.DescribeResourceTagsByTagKeysRequest`
-        :rtype: :class:`tencentcloud.tag.v20180813.models.DescribeResourceTagsByTagKeysResponse`
+        :type request: :class:`taifucloudcloud.tag.v20180813.models.DescribeResourceTagsByTagKeysRequest`
+        :rtype: :class:`taifucloudcloud.tag.v20180813.models.DescribeResourceTagsByTagKeysResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class TagClient(AbstractClient):
         """通過标簽查詢資源清單
 
         :param request: Request instance for DescribeResourcesByTags.
-        :type request: :class:`tencentcloud.tag.v20180813.models.DescribeResourcesByTagsRequest`
-        :rtype: :class:`tencentcloud.tag.v20180813.models.DescribeResourcesByTagsResponse`
+        :type request: :class:`taifucloudcloud.tag.v20180813.models.DescribeResourcesByTagsRequest`
+        :rtype: :class:`taifucloudcloud.tag.v20180813.models.DescribeResourcesByTagsResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class TagClient(AbstractClient):
         """用于查詢已建立的标簽清單中的标簽鍵。
 
         :param request: Request instance for DescribeTagKeys.
-        :type request: :class:`tencentcloud.tag.v20180813.models.DescribeTagKeysRequest`
-        :rtype: :class:`tencentcloud.tag.v20180813.models.DescribeTagKeysResponse`
+        :type request: :class:`taifucloudcloud.tag.v20180813.models.DescribeTagKeysRequest`
+        :rtype: :class:`taifucloudcloud.tag.v20180813.models.DescribeTagKeysResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class TagClient(AbstractClient):
         """用于查詢已建立的标簽清單中的标簽值。
 
         :param request: Request instance for DescribeTagValues.
-        :type request: :class:`tencentcloud.tag.v20180813.models.DescribeTagValuesRequest`
-        :rtype: :class:`tencentcloud.tag.v20180813.models.DescribeTagValuesResponse`
+        :type request: :class:`taifucloudcloud.tag.v20180813.models.DescribeTagValuesRequest`
+        :rtype: :class:`taifucloudcloud.tag.v20180813.models.DescribeTagValuesResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class TagClient(AbstractClient):
         """用于查詢已建立的标簽清單。
 
         :param request: Request instance for DescribeTags.
-        :type request: :class:`tencentcloud.tag.v20180813.models.DescribeTagsRequest`
-        :rtype: :class:`tencentcloud.tag.v20180813.models.DescribeTagsResponse`
+        :type request: :class:`taifucloudcloud.tag.v20180813.models.DescribeTagsRequest`
+        :rtype: :class:`taifucloudcloud.tag.v20180813.models.DescribeTagsResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class TagClient(AbstractClient):
         """本介面用于修改資源關聯的所有标簽
 
         :param request: Request instance for ModifyResourceTags.
-        :type request: :class:`tencentcloud.tag.v20180813.models.ModifyResourceTagsRequest`
-        :rtype: :class:`tencentcloud.tag.v20180813.models.ModifyResourceTagsResponse`
+        :type request: :class:`taifucloudcloud.tag.v20180813.models.ModifyResourceTagsRequest`
+        :rtype: :class:`taifucloudcloud.tag.v20180813.models.ModifyResourceTagsResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class TagClient(AbstractClient):
         """本介面用于修改資源已關聯的标簽值（标簽鍵不變）
 
         :param request: Request instance for UpdateResourceTagValue.
-        :type request: :class:`tencentcloud.tag.v20180813.models.UpdateResourceTagValueRequest`
-        :rtype: :class:`tencentcloud.tag.v20180813.models.UpdateResourceTagValueResponse`
+        :type request: :class:`taifucloudcloud.tag.v20180813.models.UpdateResourceTagValueRequest`
+        :rtype: :class:`taifucloudcloud.tag.v20180813.models.UpdateResourceTagValueResponse`
 
         """
         try:

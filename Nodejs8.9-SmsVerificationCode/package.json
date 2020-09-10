@@ -5,6 +5,6 @@
   "license": "MIT",
   "dependencies": {
     "ioredis": "^4.16.2",
-    "tencentcloud-sdk-nodejs": "^3.0.111"
+    "taifucloudcloud-sdk-nodejs": "^3.0.111"
   }
 }

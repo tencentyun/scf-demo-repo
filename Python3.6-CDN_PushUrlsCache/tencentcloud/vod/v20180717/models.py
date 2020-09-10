@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AIAnalysisTemplateItem(AbstractModel):
@@ -31,21 +31,21 @@ class AIAnalysisTemplateItem(AbstractModel):
         :type Comment: str
         :param ClassificationConfigure: 智慧分類任務控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ClassificationConfigure: :class:`tencentcloud.vod.v20180717.models.ClassificationConfigureInfo`
+        :type ClassificationConfigure: :class:`taifucloudcloud.vod.v20180717.models.ClassificationConfigureInfo`
         :param TagConfigure: 智慧标簽任務控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TagConfigure: :class:`tencentcloud.vod.v20180717.models.TagConfigureInfo`
+        :type TagConfigure: :class:`taifucloudcloud.vod.v20180717.models.TagConfigureInfo`
         :param CoverConfigure: 智慧封面任務控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CoverConfigure: :class:`tencentcloud.vod.v20180717.models.CoverConfigureInfo`
+        :type CoverConfigure: :class:`taifucloudcloud.vod.v20180717.models.CoverConfigureInfo`
         :param FrameTagConfigure: 智慧按幀标簽任務控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FrameTagConfigure: :class:`tencentcloud.vod.v20180717.models.FrameTagConfigureInfo`
+        :type FrameTagConfigure: :class:`taifucloudcloud.vod.v20180717.models.FrameTagConfigureInfo`
         :param HighlightConfigure: 智慧精彩集錦任務控制參數。
-        :type HighlightConfigure: :class:`tencentcloud.vod.v20180717.models.HighlightsConfigureInfo`
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :type HighlightConfigure: :class:`taifucloudcloud.vod.v20180717.models.HighlightsConfigureInfo`
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type UpdateTime: str
         """
         self.Definition = None
@@ -98,33 +98,33 @@ class AIRecognitionTemplateItem(AbstractModel):
         :type Comment: str
         :param HeadTailConfigure: 頭尾識别控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type HeadTailConfigure: :class:`tencentcloud.vod.v20180717.models.HeadTailConfigureInfo`
+        :type HeadTailConfigure: :class:`taifucloudcloud.vod.v20180717.models.HeadTailConfigureInfo`
         :param SegmentConfigure: 拆條識别控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SegmentConfigure: :class:`tencentcloud.vod.v20180717.models.SegmentConfigureInfo`
+        :type SegmentConfigure: :class:`taifucloudcloud.vod.v20180717.models.SegmentConfigureInfo`
         :param FaceConfigure: 人臉識别控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FaceConfigure: :class:`tencentcloud.vod.v20180717.models.FaceConfigureInfo`
+        :type FaceConfigure: :class:`taifucloudcloud.vod.v20180717.models.FaceConfigureInfo`
         :param OcrFullTextConfigure: 文本全文識别控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OcrFullTextConfigure: :class:`tencentcloud.vod.v20180717.models.OcrFullTextConfigureInfo`
+        :type OcrFullTextConfigure: :class:`taifucloudcloud.vod.v20180717.models.OcrFullTextConfigureInfo`
         :param OcrWordsConfigure: 文本關鍵詞識别控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OcrWordsConfigure: :class:`tencentcloud.vod.v20180717.models.OcrWordsConfigureInfo`
+        :type OcrWordsConfigure: :class:`taifucloudcloud.vod.v20180717.models.OcrWordsConfigureInfo`
         :param AsrFullTextConfigure: 語音全文識别控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AsrFullTextConfigure: :class:`tencentcloud.vod.v20180717.models.AsrFullTextConfigureInfo`
+        :type AsrFullTextConfigure: :class:`taifucloudcloud.vod.v20180717.models.AsrFullTextConfigureInfo`
         :param AsrWordsConfigure: 語音關鍵詞識别控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AsrWordsConfigure: :class:`tencentcloud.vod.v20180717.models.AsrWordsConfigureInfo`
+        :type AsrWordsConfigure: :class:`taifucloudcloud.vod.v20180717.models.AsrWordsConfigureInfo`
         :param ObjectConfigure: 物體識别控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ObjectConfigure: :class:`tencentcloud.vod.v20180717.models.ObjectConfigureInfo`
+        :type ObjectConfigure: :class:`taifucloudcloud.vod.v20180717.models.ObjectConfigureInfo`
         :param ScreenshotInterval: 截圖時間間隔，單位：秒。
         :type ScreenshotInterval: float
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type UpdateTime: str
         """
         self.Definition = None
@@ -267,9 +267,9 @@ class AdaptiveDynamicStreamingTemplate(AbstractModel):
 <li>0：否，</li>
 <li>1：是。</li>
         :type DisableHigherVideoResolution: int
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type UpdateTime: str
         """
         self.Definition = None
@@ -312,9 +312,9 @@ class AdaptiveStreamTemplate(AbstractModel):
     def __init__(self):
         """
         :param Video: 視訊參數訊息。
-        :type Video: :class:`tencentcloud.vod.v20180717.models.VideoTemplateInfo`
+        :type Video: :class:`taifucloudcloud.vod.v20180717.models.VideoTemplateInfo`
         :param Audio: 音訊參數訊息。
-        :type Audio: :class:`tencentcloud.vod.v20180717.models.AudioTemplateInfo`
+        :type Audio: :class:`taifucloudcloud.vod.v20180717.models.AudioTemplateInfo`
         :param RemoveAudio: 是否移除音訊流，取值範圍：
 <li>0：否，</li>
 <li>1：是。</li>
@@ -351,19 +351,19 @@ class AiAnalysisResult(AbstractModel):
         :type Type: str
         :param ClassificationTask: 視訊内容分析智慧分類任務的查詢結果，當任務類型爲 Classification 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ClassificationTask: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskClassificationResult`
+        :type ClassificationTask: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskClassificationResult`
         :param CoverTask: 視訊内容分析智慧封面任務的查詢結果，當任務類型爲 Cover 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CoverTask: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskCoverResult`
+        :type CoverTask: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskCoverResult`
         :param TagTask: 視訊内容分析智慧标簽任務的查詢結果，當任務類型爲 Tag 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TagTask: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskTagResult`
+        :type TagTask: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskTagResult`
         :param FrameTagTask: 視訊内容分析智慧按幀标簽任務的查詢結果，當任務類型爲 FrameTag 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FrameTagTask: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskFrameTagResult`
+        :type FrameTagTask: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskFrameTagResult`
         :param HighlightTask: 視訊内容分析智慧精彩集錦任務的查詢結果，當任務類型爲 Highlight 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type HighlightTask: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskHighlightResult`
+        :type HighlightTask: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskHighlightResult`
         """
         self.Type = None
         self.ClassificationTask = None
@@ -445,10 +445,10 @@ class AiAnalysisTaskClassificationResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 智慧分類任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskClassificationInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskClassificationInput`
         :param Output: 智慧分類任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskClassificationOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskClassificationOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -522,10 +522,10 @@ class AiAnalysisTaskCoverResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 智慧封面任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskCoverInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskCoverInput`
         :param Output: 智慧封面任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskCoverOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskCoverOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -599,10 +599,10 @@ class AiAnalysisTaskFrameTagResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 智慧按幀标簽任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskFrameTagInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskFrameTagInput`
         :param Output: 智慧按幀标簽任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskFrameTagOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskFrameTagOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -676,10 +676,10 @@ class AiAnalysisTaskHighlightResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 智慧精彩片段任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskHighlightInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskHighlightInput`
         :param Output: 智慧精彩片段任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskHighlightOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskHighlightOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -770,10 +770,10 @@ class AiAnalysisTaskTagResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 智慧标簽任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskTagInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskTagInput`
         :param Output: 智慧标簽任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskTagOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskTagOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -802,47 +802,47 @@ class AiContentReviewResult(AbstractModel):
     def __init__(self):
         """
         :param Type: 任務的類型，可以取的值有：
-<li>Porn：圖片鑒黃</li>
+<li>Porn：圖片 </li>
 <li>Terrorism：圖片鑒恐</li>
 <li>Political：圖片鑒政</li>
-<li>Porn.Asr：Asr 文字鑒黃</li>
-<li>Porn.Ocr：Ocr 文字鑒黃</li>
+<li>Porn.Asr：Asr 文字 </li>
+<li>Porn.Ocr：Ocr 文字 </li>
 <li>Political.Asr：Asr 文字鑒政</li>
 <li>Political.Ocr：Ocr 文字鑒政</li>
 <li>Terrorism.Ocr：Ocr 文字鑒恐</li>
 <li>Prohibited.Asr：Asr 文字鑒違禁</li>
 <li>Prohibited.Ocr：Ocr 文字鑒違禁</li>
         :type Type: str
-        :param PornTask: 視訊内容審核智慧畫面鑒黃任務的查詢結果，當任務類型爲 Porn 時有效。
+        :param PornTask: 視訊内容審核智慧畫面 任務的查詢結果，當任務類型爲 Porn 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PornTask: :class:`tencentcloud.vod.v20180717.models.AiReviewTaskPornResult`
+        :type PornTask: :class:`taifucloudcloud.vod.v20180717.models.AiReviewTaskPornResult`
         :param TerrorismTask: 視訊内容審核智慧畫面鑒恐任務的查詢結果，當任務類型爲 Terrorism 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TerrorismTask: :class:`tencentcloud.vod.v20180717.models.AiReviewTaskTerrorismResult`
+        :type TerrorismTask: :class:`taifucloudcloud.vod.v20180717.models.AiReviewTaskTerrorismResult`
         :param PoliticalTask: 視訊内容審核智慧畫面鑒政任務的查詢結果，當任務類型爲 Political 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PoliticalTask: :class:`tencentcloud.vod.v20180717.models.AiReviewTaskPoliticalResult`
-        :param PornAsrTask: 視訊内容審核 Asr 文字鑒黃任務的查詢結果，當任務類型爲 Porn.Asr 時有效。
+        :type PoliticalTask: :class:`taifucloudcloud.vod.v20180717.models.AiReviewTaskPoliticalResult`
+        :param PornAsrTask: 視訊内容審核 Asr 文字 任務的查詢結果，當任務類型爲 Porn.Asr 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PornAsrTask: :class:`tencentcloud.vod.v20180717.models.AiReviewTaskPornAsrResult`
-        :param PornOcrTask: 視訊内容審核 Ocr 文字鑒黃任務的查詢結果，當任務類型爲 Porn.Ocr 時有效。
+        :type PornAsrTask: :class:`taifucloudcloud.vod.v20180717.models.AiReviewTaskPornAsrResult`
+        :param PornOcrTask: 視訊内容審核 Ocr 文字 任務的查詢結果，當任務類型爲 Porn.Ocr 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PornOcrTask: :class:`tencentcloud.vod.v20180717.models.AiReviewTaskPornOcrResult`
+        :type PornOcrTask: :class:`taifucloudcloud.vod.v20180717.models.AiReviewTaskPornOcrResult`
         :param PoliticalAsrTask: 視訊内容審核 Asr 文字鑒政任務的查詢結果，當任務類型爲 Political.Asr 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PoliticalAsrTask: :class:`tencentcloud.vod.v20180717.models.AiReviewTaskPoliticalAsrResult`
+        :type PoliticalAsrTask: :class:`taifucloudcloud.vod.v20180717.models.AiReviewTaskPoliticalAsrResult`
         :param PoliticalOcrTask: 視訊内容審核 Ocr 文字鑒政任務的查詢結果，當任務類型爲 Political.Ocr 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PoliticalOcrTask: :class:`tencentcloud.vod.v20180717.models.AiReviewTaskPoliticalOcrResult`
+        :type PoliticalOcrTask: :class:`taifucloudcloud.vod.v20180717.models.AiReviewTaskPoliticalOcrResult`
         :param TerrorismOcrTask: 視訊内容審核 Ocr 文字鑒恐任務的查詢結果，當任務類型爲 Terrorism.Ocr 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TerrorismOcrTask: :class:`tencentcloud.vod.v20180717.models.AiReviewTaskTerrorismOcrResult`
+        :type TerrorismOcrTask: :class:`taifucloudcloud.vod.v20180717.models.AiReviewTaskTerrorismOcrResult`
         :param ProhibitedAsrTask: 視訊内容審核 Asr 文字鑒違禁任務的查詢結果，當任務類型爲 Prohibited.Asr 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ProhibitedAsrTask: :class:`tencentcloud.vod.v20180717.models.AiReviewTaskProhibitedAsrResult`
+        :type ProhibitedAsrTask: :class:`taifucloudcloud.vod.v20180717.models.AiReviewTaskProhibitedAsrResult`
         :param ProhibitedOcrTask: 視訊内容審核 Ocr 文字鑒違禁任務的查詢結果，當任務類型爲 Prohibited.Ocr 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ProhibitedOcrTask: :class:`tencentcloud.vod.v20180717.models.AiReviewTaskProhibitedOcrResult`
+        :type ProhibitedOcrTask: :class:`taifucloudcloud.vod.v20180717.models.AiReviewTaskProhibitedOcrResult`
         """
         self.Type = None
         self.PornTask = None
@@ -927,35 +927,35 @@ class AiRecognitionResult(AbstractModel):
         :param HeadTailTask: 視訊片頭片尾識别結果，當 Type 爲
  HeadTailRecognition 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type HeadTailTask: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskHeadTailResult`
+        :type HeadTailTask: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskHeadTailResult`
         :param SegmentTask: 視訊拆條識别結果，當 Type 爲
  SegmentRecognition 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SegmentTask: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskSegmentResult`
+        :type SegmentTask: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskSegmentResult`
         :param FaceTask: 人臉識别結果，當 Type 爲 
  FaceRecognition 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FaceTask: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskFaceResult`
+        :type FaceTask: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskFaceResult`
         :param AsrWordsTask: 語音關鍵詞識别結果，當 Type 爲
  AsrWordsRecognition 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AsrWordsTask: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskAsrWordsResult`
+        :type AsrWordsTask: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskAsrWordsResult`
         :param AsrFullTextTask: 語音全文識别結果，當 Type 爲
  AsrFullTextRecognition 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AsrFullTextTask: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskAsrFullTextResult`
+        :type AsrFullTextTask: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskAsrFullTextResult`
         :param OcrWordsTask: 文本關鍵詞識别結果，當 Type 爲
  OcrWordsRecognition 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OcrWordsTask: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskOcrWordsResult`
+        :type OcrWordsTask: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskOcrWordsResult`
         :param OcrFullTextTask: 文本全文識别結果，當 Type 爲
  OcrFullTextRecognition 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OcrFullTextTask: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskOcrFullTextResult`
+        :type OcrFullTextTask: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskOcrFullTextResult`
         :param ObjectTask: 物體識别結果，當 Type 爲
  ObjectRecognition 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ObjectTask: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskObjectResult`
+        :type ObjectTask: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskObjectResult`
         """
         self.Type = None
         self.HeadTailTask = None
@@ -1010,10 +1010,10 @@ class AiRecognitionTaskAsrFullTextResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 語音全文識别任務輸入訊息。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskAsrFullTextResultInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskAsrFullTextResultInput`
         :param Output: 語音全文識别任務輸出訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskAsrFullTextResultOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskAsrFullTextResultOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -1120,10 +1120,10 @@ class AiRecognitionTaskAsrWordsResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 語音關鍵詞識别任務輸入訊息。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskAsrWordsResultInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskAsrWordsResultInput`
         :param Output: 語音關鍵詞識别任務輸出訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskAsrWordsResultOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskAsrWordsResultOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -1248,10 +1248,10 @@ class AiRecognitionTaskFaceResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 人臉識别任務輸入訊息。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskFaceResultInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskFaceResultInput`
         :param Output: 人臉識别任務輸出訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskFaceResultOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskFaceResultOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -1390,10 +1390,10 @@ class AiRecognitionTaskHeadTailResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 視訊片頭片尾識别任務輸入訊息。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskHeadTailResultInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskHeadTailResultInput`
         :param Output: 視訊片頭片尾識别任務輸出訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskHeadTailResultOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskHeadTailResultOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -1491,10 +1491,10 @@ class AiRecognitionTaskObjectResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 物體識别任務輸入訊息。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskObjectResultInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskObjectResultInput`
         :param Output: 物體識别任務輸出訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskObjectResultOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskObjectResultOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -1623,10 +1623,10 @@ class AiRecognitionTaskOcrFullTextResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 文本全文識别任務輸入訊息。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskOcrFullTextResultInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskOcrFullTextResultInput`
         :param Output: 文本全文識别任務輸出訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskOcrFullTextResultOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskOcrFullTextResultOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -1755,10 +1755,10 @@ class AiRecognitionTaskOcrWordsResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 文本關鍵詞識别任務輸入訊息。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskOcrWordsResultInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskOcrWordsResultInput`
         :param Output: 文本關鍵詞識别任務輸出訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskOcrWordsResultOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskOcrWordsResultOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -1888,10 +1888,10 @@ class AiRecognitionTaskSegmentResult(AbstractModel):
         :type Message: str
         :param Input: 視訊拆條任務輸入訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskSegmentResultInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskSegmentResultInput`
         :param Output: 視訊拆條任務輸出訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskSegmentResultOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskSegmentResultOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -2149,13 +2149,13 @@ class AiReviewPoliticalTaskOutput(AbstractModel):
 
 
 class AiReviewPornAsrTaskInput(AbstractModel):
-    """内容審核 Asr 文字鑒黃任務輸入參數類型
+    """内容審核 Asr 文字 任務輸入參數類型
 
     """
 
     def __init__(self):
         """
-        :param Definition: 鑒黃範本 ID。
+        :param Definition:  範本 ID。
         :type Definition: int
         """
         self.Definition = None
@@ -2199,13 +2199,13 @@ class AiReviewPornAsrTaskOutput(AbstractModel):
 
 
 class AiReviewPornOcrTaskInput(AbstractModel):
-    """内容審核 Ocr 文字鑒黃任務輸入參數類型
+    """内容審核 Ocr 文字 任務輸入參數類型
 
     """
 
     def __init__(self):
         """
-        :param Definition: 鑒黃範本 ID。
+        :param Definition:  範本 ID。
         :type Definition: int
         """
         self.Definition = None
@@ -2249,13 +2249,13 @@ class AiReviewPornOcrTaskOutput(AbstractModel):
 
 
 class AiReviewPornTaskInput(AbstractModel):
-    """内容審核鑒黃任務輸入參數類型
+    """内容審核 任務輸入參數類型
 
     """
 
     def __init__(self):
         """
-        :param Definition: 鑒黃範本 ID。
+        :param Definition:  範本 ID。
         :type Definition: int
         """
         self.Definition = None
@@ -2266,20 +2266,20 @@ class AiReviewPornTaskInput(AbstractModel):
 
 
 class AiReviewPornTaskOutput(AbstractModel):
-    """鑒黃結果訊息
+    """ 結果訊息
 
     """
 
     def __init__(self):
         """
-        :param Confidence: 視訊鑒黃評分，分值爲0到100。
+        :param Confidence: 視訊 評分，分值爲0到100。
         :type Confidence: float
-        :param Suggestion: 鑒黃結果建議，取值範圍：
+        :param Suggestion:  結果建議，取值範圍：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
         :type Suggestion: str
-        :param Label: 視訊鑒黃結果标簽，取值範圍：
+        :param Label: 視訊 結果标簽，取值範圍：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
@@ -2423,9 +2423,9 @@ class AiReviewTaskPoliticalAsrResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 内容審核 Asr 文字鑒政任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiReviewPoliticalAsrTaskInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiReviewPoliticalAsrTaskInput`
         :param Output: 内容審核 Asr 文字鑒政任務輸出。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiReviewPoliticalAsrTaskOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiReviewPoliticalAsrTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -2463,10 +2463,10 @@ class AiReviewTaskPoliticalOcrResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 内容審核 Ocr 文字鑒政任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiReviewPoliticalOcrTaskInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiReviewPoliticalOcrTaskInput`
         :param Output: 内容審核 Ocr 文字鑒政任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiReviewPoliticalOcrTaskOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiReviewPoliticalOcrTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -2504,10 +2504,10 @@ class AiReviewTaskPoliticalResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 内容審核鑒政任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiReviewPoliticalTaskInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiReviewPoliticalTaskInput`
         :param Output: 内容審核鑒政任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiReviewPoliticalTaskOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiReviewPoliticalTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -2529,7 +2529,7 @@ class AiReviewTaskPoliticalResult(AbstractModel):
 
 
 class AiReviewTaskPornAsrResult(AbstractModel):
-    """内容審核 Asr 文字鑒黃任務結果類型
+    """内容審核 Asr 文字 任務結果類型
 
     """
 
@@ -2544,11 +2544,11 @@ class AiReviewTaskPornAsrResult(AbstractModel):
         :type ErrCode: int
         :param Message: 錯誤訊息。
         :type Message: str
-        :param Input: 内容審核 Asr 文字鑒黃任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiReviewPornAsrTaskInput`
-        :param Output: 内容審核 Asr 文字鑒黃任務輸出。
+        :param Input: 内容審核 Asr 文字 任務輸入。
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiReviewPornAsrTaskInput`
+        :param Output: 内容審核 Asr 文字 任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiReviewPornAsrTaskOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiReviewPornAsrTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -2570,7 +2570,7 @@ class AiReviewTaskPornAsrResult(AbstractModel):
 
 
 class AiReviewTaskPornOcrResult(AbstractModel):
-    """内容審核 Ocr 文字鑒黃任務結果類型
+    """内容審核 Ocr 文字 任務結果類型
 
     """
 
@@ -2585,11 +2585,11 @@ class AiReviewTaskPornOcrResult(AbstractModel):
         :type ErrCode: int
         :param Message: 錯誤訊息。
         :type Message: str
-        :param Input: 内容審核 Ocr 文字鑒黃任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiReviewPornOcrTaskInput`
-        :param Output: 内容審核 Ocr 文字鑒黃任務輸出。
+        :param Input: 内容審核 Ocr 文字 任務輸入。
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiReviewPornOcrTaskInput`
+        :param Output: 内容審核 Ocr 文字 任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiReviewPornOcrTaskOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiReviewPornOcrTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -2611,7 +2611,7 @@ class AiReviewTaskPornOcrResult(AbstractModel):
 
 
 class AiReviewTaskPornResult(AbstractModel):
-    """内容審核鑒黃任務結果類型
+    """内容審核 任務結果類型
 
     """
 
@@ -2626,11 +2626,11 @@ class AiReviewTaskPornResult(AbstractModel):
         :type ErrCode: int
         :param Message: 錯誤訊息。
         :type Message: str
-        :param Input: 内容審核鑒黃任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiReviewPornTaskInput`
-        :param Output: 内容審核鑒黃任務輸出。
+        :param Input: 内容審核 任務輸入。
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiReviewPornTaskInput`
+        :param Output: 内容審核 任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiReviewPornTaskOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiReviewPornTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -2668,10 +2668,10 @@ class AiReviewTaskProhibitedAsrResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 内容審核 Asr 文字鑒違禁任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiReviewProhibitedAsrTaskInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiReviewProhibitedAsrTaskInput`
         :param Output: 内容審核 Asr 文字鑒違禁任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiReviewProhibitedAsrTaskOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiReviewProhibitedAsrTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -2709,10 +2709,10 @@ class AiReviewTaskProhibitedOcrResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 内容審核 Ocr 文字鑒違禁任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiReviewProhibitedOcrTaskInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiReviewProhibitedOcrTaskInput`
         :param Output: 内容審核 Ocr 文字鑒違禁任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiReviewProhibitedOcrTaskOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiReviewProhibitedOcrTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -2750,10 +2750,10 @@ class AiReviewTaskTerrorismOcrResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 内容審核 Ocr 文字鑒恐任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiReviewTerrorismOcrTaskInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiReviewTerrorismOcrTaskInput`
         :param Output: 内容審核 Ocr 文字鑒恐任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiReviewTerrorismOcrTaskOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiReviewTerrorismOcrTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -2791,10 +2791,10 @@ class AiReviewTaskTerrorismResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 内容審核鑒恐任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AiReviewTerrorismTaskInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AiReviewTerrorismTaskInput`
         :param Output: 内容審核鑒恐任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AiReviewTerrorismTaskOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AiReviewTerrorismTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -3022,9 +3022,9 @@ class AiSamplePerson(AbstractModel):
         :type TagSet: list of str
         :param UsageSet: 應用場景。
         :type UsageSet: list of str
-        :param CreateTime: 創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param CreateTime: 創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
-        :param UpdateTime: 最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param UpdateTime: 最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type UpdateTime: str
         """
         self.PersonId = None
@@ -3087,9 +3087,9 @@ class AiSampleWord(AbstractModel):
         :type TagSet: list of str
         :param UsageSet: 關鍵詞應用場景。
         :type UsageSet: list of str
-        :param CreateTime: 創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param CreateTime: 創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
-        :param UpdateTime: 最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param UpdateTime: 最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type UpdateTime: str
         """
         self.Keyword = None
@@ -3197,9 +3197,9 @@ class AnimatedGraphicsTemplate(AbstractModel):
         :type Fps: int
         :param Quality: 圖片質量。
         :type Quality: float
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type UpdateTime: str
         """
         self.Definition = None
@@ -3305,7 +3305,7 @@ class ApplyUploadResponse(AbstractModel):
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CoverStoragePath: str
         :param TempCertificate: 臨時憑證，用于上傳介面的權限驗證。
-        :type TempCertificate: :class:`tencentcloud.vod.v20180717.models.TempCertificate`
+        :type TempCertificate: :class:`taifucloudcloud.vod.v20180717.models.TempCertificate`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3576,7 +3576,7 @@ class AudioTransform(AbstractModel):
         :type Type: str
         :param VolumeParam: 音量調節參數， 當 Type = Volume 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type VolumeParam: :class:`tencentcloud.vod.v20180717.models.AudioVolumeParam`
+        :type VolumeParam: :class:`taifucloudcloud.vod.v20180717.models.AudioVolumeParam`
         """
         self.Type = None
         self.VolumeParam = None
@@ -3721,7 +3721,7 @@ class ClipFileInfo2017(AbstractModel):
 
 
 class ClipTask2017(AbstractModel):
-    """視訊剪輯任務訊息，該結構僅用于對 2017 版[視訊剪輯](https://cloud.tencent.com/document/product/266/10156)介面發起的任務。
+    """視訊剪輯任務訊息，該結構僅用于對 2017 版[視訊剪輯](https://cloud.taifucloud.com/document/product/266/10156)介面發起的任務。
 
     """
 
@@ -3732,7 +3732,7 @@ class ClipTask2017(AbstractModel):
         :param SrcFileId: 視訊剪輯任務源文件 ID。
         :type SrcFileId: str
         :param FileInfo: 視訊剪輯輸出的文件訊息。
-        :type FileInfo: :class:`tencentcloud.vod.v20180717.models.ClipFileInfo2017`
+        :type FileInfo: :class:`taifucloudcloud.vod.v20180717.models.ClipFileInfo2017`
         """
         self.TaskId = None
         self.SrcFileId = None
@@ -3813,16 +3813,16 @@ class ComposeMediaOutput(AbstractModel):
         :param ClassId: 分類ID，用于對媒體進行分類管理，可通過 [創建分類](/document/product/266/7812) 介面，創建分類，獲得分類 ID。
 <li>預設值：0，表示其他分類。</li>
         :type ClassId: int
-        :param ExpireTime: 輸出文件的過期時間，超過該時間文件将被删除，預設爲永久不過期，格式按照 ISO 8601标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param ExpireTime: 輸出文件的過期時間，超過該時間文件将被删除，預設爲永久不過期，格式按照 ISO 8601标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type ExpireTime: str
         :param Container: 封裝格式，可選值：mp4、mp3。其中，mp3 爲純音訊文件。
         :type Container: str
         :param VideoStream: 輸出的視訊訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type VideoStream: :class:`tencentcloud.vod.v20180717.models.OutputVideoStream`
+        :type VideoStream: :class:`taifucloudcloud.vod.v20180717.models.OutputVideoStream`
         :param AudioStream: 輸出的音訊訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AudioStream: :class:`tencentcloud.vod.v20180717.models.OutputAudioStream`
+        :type AudioStream: :class:`taifucloudcloud.vod.v20180717.models.OutputAudioStream`
         :param RemoveVideo: 是否去除視訊數據，可選值：
 <li>0：保留</li>
 <li>1：去除</li>
@@ -3871,9 +3871,9 @@ class ComposeMediaRequest(AbstractModel):
         :param Tracks: 輸入的媒體軌道清單，包括視訊、音訊、圖片等素材組成的多個軌道訊息。輸入的多個軌道在時間軸上和輸出媒體文件的時間軸對齊，時間軸上相同時間點的各個軌道的素材進行重疊，視訊或者圖片按軌道順序進行圖像的疊加，軌道順序高的素材疊加在上面；音訊素材進行混音。
         :type Tracks: list of MediaTrack
         :param Output: 輸出的媒體文件訊息。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.ComposeMediaOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.ComposeMediaOutput`
         :param Canvas: 制作視訊文件時使用的畫布。
-        :type Canvas: :class:`tencentcloud.vod.v20180717.models.Canvas`
+        :type Canvas: :class:`taifucloudcloud.vod.v20180717.models.Canvas`
         :param SessionContext: 标識來源上下文，用于透傳用戶請求訊息，在ComposeMediaComplete回調将返回該欄位值，最長 1000個字元。
         :type SessionContext: str
         :param SessionId: 用于任務去重的識别碼，如果一天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長 50 個字元，不帶或者帶空字串表示不做去重。
@@ -3949,10 +3949,10 @@ class ComposeMediaTask(AbstractModel):
         :type Message: str
         :param Input: 制作媒體文件任務的輸入。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.ComposeMediaTaskInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.ComposeMediaTaskInput`
         :param Output: 制作媒體文件任務的輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.ComposeMediaTaskOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.ComposeMediaTaskOutput`
         """
         self.TaskId = None
         self.Status = None
@@ -3986,9 +3986,9 @@ class ComposeMediaTaskInput(AbstractModel):
         :type Tracks: list of MediaTrack
         :param Canvas: 制作視訊文件時使用的畫布。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Canvas: :class:`tencentcloud.vod.v20180717.models.Canvas`
+        :type Canvas: :class:`taifucloudcloud.vod.v20180717.models.Canvas`
         :param Output: 輸出的媒體文件訊息。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.ComposeMediaOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.ComposeMediaOutput`
         """
         self.Tracks = None
         self.Canvas = None
@@ -4028,7 +4028,7 @@ class ComposeMediaTaskOutput(AbstractModel):
         :param ClassId: 分類ID，用于對媒體進行分類管理，可通過 [創建分類](/document/product/266/7812) 介面，創建分類，獲得分類 ID。
 <li>預設值：0，表示其他分類。</li>
         :type ClassId: int
-        :param ExpireTime: 輸出文件的過期時間，超過該時間文件将被删除，預設爲永久不過期，格式按照 ISO 8601标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param ExpireTime: 輸出文件的過期時間，超過該時間文件将被删除，預設爲永久不過期，格式按照 ISO 8601标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type ExpireTime: str
         """
         self.FileType = None
@@ -4084,7 +4084,7 @@ class ConcatFileInfo2017(AbstractModel):
 
 
 class ConcatTask2017(AbstractModel):
-    """視訊拼接任務訊息，該結構僅用于對 2017 版[視訊拼接](https://cloud.tencent.com/document/product/266/7821)介面發起的任務。
+    """視訊拼接任務訊息，該結構僅用于對 2017 版[視訊拼接](https://cloud.taifucloud.com/document/product/266/7821)介面發起的任務。
 
     """
 
@@ -4165,33 +4165,33 @@ class ContentReviewTemplateItem(AbstractModel):
         :type Name: str
         :param Comment: 内容審核範本描述訊息，長度限制：256 個字元。
         :type Comment: str
-        :param PornConfigure: 鑒黃控制參數。
+        :param PornConfigure:  控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PornConfigure: :class:`tencentcloud.vod.v20180717.models.PornConfigureInfo`
+        :type PornConfigure: :class:`taifucloudcloud.vod.v20180717.models.PornConfigureInfo`
         :param TerrorismConfigure: 鑒恐控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TerrorismConfigure: :class:`tencentcloud.vod.v20180717.models.TerrorismConfigureInfo`
+        :type TerrorismConfigure: :class:`taifucloudcloud.vod.v20180717.models.TerrorismConfigureInfo`
         :param PoliticalConfigure: 鑒政控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PoliticalConfigure: :class:`tencentcloud.vod.v20180717.models.PoliticalConfigureInfo`
+        :type PoliticalConfigure: :class:`taifucloudcloud.vod.v20180717.models.PoliticalConfigureInfo`
         :param ProhibitedConfigure: 違禁控制參數。違禁内容包括：
 <li>謾罵；</li>
 <li>涉毒違法。</li>
 注意：此參數尚未支援。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ProhibitedConfigure: :class:`tencentcloud.vod.v20180717.models.ProhibitedConfigureInfo`
+        :type ProhibitedConfigure: :class:`taifucloudcloud.vod.v20180717.models.ProhibitedConfigureInfo`
         :param UserDefineConfigure: 用戶自定義内容審核控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type UserDefineConfigure: :class:`tencentcloud.vod.v20180717.models.UserDefineConfigureInfo`
+        :type UserDefineConfigure: :class:`taifucloudcloud.vod.v20180717.models.UserDefineConfigureInfo`
         :param ReviewWallSwitch: 審核結果是否進入審核牆（對審核結果進行人工複核）的開關。
 <li>ON：是；</li>
 <li>OFF：否。</li>
         :type ReviewWallSwitch: str
         :param ScreenshotInterval: 截幀間隔，單位爲秒。當不填時，預設截幀間隔爲 1 秒，最小值爲 0.5 秒。
         :type ScreenshotInterval: float
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type UpdateTime: str
         """
         self.Definition = None
@@ -4338,15 +4338,15 @@ class CreateAIAnalysisTemplateRequest(AbstractModel):
         :param Comment: 視訊内容分析範本描述訊息，長度限制：256 個字元。
         :type Comment: str
         :param ClassificationConfigure: 智慧分類任務控制參數。
-        :type ClassificationConfigure: :class:`tencentcloud.vod.v20180717.models.ClassificationConfigureInfo`
+        :type ClassificationConfigure: :class:`taifucloudcloud.vod.v20180717.models.ClassificationConfigureInfo`
         :param TagConfigure: 智慧标簽任務控制參數。
-        :type TagConfigure: :class:`tencentcloud.vod.v20180717.models.TagConfigureInfo`
+        :type TagConfigure: :class:`taifucloudcloud.vod.v20180717.models.TagConfigureInfo`
         :param CoverConfigure: 智慧封面任務控制參數。
-        :type CoverConfigure: :class:`tencentcloud.vod.v20180717.models.CoverConfigureInfo`
+        :type CoverConfigure: :class:`taifucloudcloud.vod.v20180717.models.CoverConfigureInfo`
         :param FrameTagConfigure: 智慧按幀标簽任務控制參數。
-        :type FrameTagConfigure: :class:`tencentcloud.vod.v20180717.models.FrameTagConfigureInfo`
+        :type FrameTagConfigure: :class:`taifucloudcloud.vod.v20180717.models.FrameTagConfigureInfo`
         :param HighlightConfigure: 智慧精彩集錦任務控制參數。
-        :type HighlightConfigure: :class:`tencentcloud.vod.v20180717.models.HighlightsConfigureInfo`
+        :type HighlightConfigure: :class:`taifucloudcloud.vod.v20180717.models.HighlightsConfigureInfo`
         :param SubAppId: 點播[子應用](/document/product/266/14574) ID。如果要訪問子應用中的資源，則将該欄位填寫爲子應用 ID；否則無需填寫該欄位。
         :type SubAppId: int
         """
@@ -4414,21 +4414,21 @@ class CreateAIRecognitionTemplateRequest(AbstractModel):
         :param Comment: 視訊内容識别範本描述訊息，長度限制：256 個字元。
         :type Comment: str
         :param HeadTailConfigure: 視訊片頭片尾識别控制參數。
-        :type HeadTailConfigure: :class:`tencentcloud.vod.v20180717.models.HeadTailConfigureInfo`
+        :type HeadTailConfigure: :class:`taifucloudcloud.vod.v20180717.models.HeadTailConfigureInfo`
         :param SegmentConfigure: 視訊拆條識别控制參數。
-        :type SegmentConfigure: :class:`tencentcloud.vod.v20180717.models.SegmentConfigureInfo`
+        :type SegmentConfigure: :class:`taifucloudcloud.vod.v20180717.models.SegmentConfigureInfo`
         :param FaceConfigure: 人臉識别控制參數。
-        :type FaceConfigure: :class:`tencentcloud.vod.v20180717.models.FaceConfigureInfo`
+        :type FaceConfigure: :class:`taifucloudcloud.vod.v20180717.models.FaceConfigureInfo`
         :param OcrFullTextConfigure: 文本全文識别控制參數。
-        :type OcrFullTextConfigure: :class:`tencentcloud.vod.v20180717.models.OcrFullTextConfigureInfo`
+        :type OcrFullTextConfigure: :class:`taifucloudcloud.vod.v20180717.models.OcrFullTextConfigureInfo`
         :param OcrWordsConfigure: 文本關鍵詞識别控制參數。
-        :type OcrWordsConfigure: :class:`tencentcloud.vod.v20180717.models.OcrWordsConfigureInfo`
+        :type OcrWordsConfigure: :class:`taifucloudcloud.vod.v20180717.models.OcrWordsConfigureInfo`
         :param AsrFullTextConfigure: 語音全文識别控制參數。
-        :type AsrFullTextConfigure: :class:`tencentcloud.vod.v20180717.models.AsrFullTextConfigureInfo`
+        :type AsrFullTextConfigure: :class:`taifucloudcloud.vod.v20180717.models.AsrFullTextConfigureInfo`
         :param AsrWordsConfigure: 語音關鍵詞識别控制參數。
-        :type AsrWordsConfigure: :class:`tencentcloud.vod.v20180717.models.AsrWordsConfigureInfo`
+        :type AsrWordsConfigure: :class:`taifucloudcloud.vod.v20180717.models.AsrWordsConfigureInfo`
         :param ObjectConfigure: 物體識别控制參數。
-        :type ObjectConfigure: :class:`tencentcloud.vod.v20180717.models.ObjectConfigureInfo`
+        :type ObjectConfigure: :class:`taifucloudcloud.vod.v20180717.models.ObjectConfigureInfo`
         :param ScreenshotInterval: 截幀間隔，單位爲秒。當不填時，預設截幀間隔爲 1 秒，最小值爲 0.5 秒。
         :type ScreenshotInterval: float
         :param SubAppId: 點播[子應用](/document/product/266/14574) ID。如果要訪問子應用中的資源，則将該欄位填寫爲子應用 ID；否則無需填寫該欄位。
@@ -4725,19 +4725,19 @@ class CreateContentReviewTemplateRequest(AbstractModel):
         :type Name: str
         :param Comment: 内容審核範本描述訊息，長度限制：256 個字元。
         :type Comment: str
-        :param PornConfigure: 鑒黃控制參數。
-        :type PornConfigure: :class:`tencentcloud.vod.v20180717.models.PornConfigureInfo`
+        :param PornConfigure:  控制參數。
+        :type PornConfigure: :class:`taifucloudcloud.vod.v20180717.models.PornConfigureInfo`
         :param TerrorismConfigure: 鑒恐控制參數。
-        :type TerrorismConfigure: :class:`tencentcloud.vod.v20180717.models.TerrorismConfigureInfo`
+        :type TerrorismConfigure: :class:`taifucloudcloud.vod.v20180717.models.TerrorismConfigureInfo`
         :param PoliticalConfigure: 鑒政控制參數。
-        :type PoliticalConfigure: :class:`tencentcloud.vod.v20180717.models.PoliticalConfigureInfo`
+        :type PoliticalConfigure: :class:`taifucloudcloud.vod.v20180717.models.PoliticalConfigureInfo`
         :param ProhibitedConfigure: 違禁控制參數。違禁内容包括：
 <li>謾罵；</li>
 <li>涉毒違法。</li>
 注意：此參數尚未支援。
-        :type ProhibitedConfigure: :class:`tencentcloud.vod.v20180717.models.ProhibitedConfigureInfo`
+        :type ProhibitedConfigure: :class:`taifucloudcloud.vod.v20180717.models.ProhibitedConfigureInfo`
         :param UserDefineConfigure: 用戶自定義内容審核控制參數。
-        :type UserDefineConfigure: :class:`tencentcloud.vod.v20180717.models.UserDefineConfigureInfo`
+        :type UserDefineConfigure: :class:`taifucloudcloud.vod.v20180717.models.UserDefineConfigureInfo`
         :param ScreenshotInterval: 截幀間隔，單位爲秒。當不填時，預設截幀間隔爲 1 秒，最小值爲 0.5 秒。
         :type ScreenshotInterval: float
         :param SubAppId: 點播[子應用](/document/product/266/14574) ID。如果要訪問子應用中的資源，則将該欄位填寫爲子應用 ID；否則無需填寫該欄位。
@@ -4800,7 +4800,7 @@ class CreateContentReviewTemplateResponse(AbstractModel):
 
 
 class CreateImageSpriteTask2017(AbstractModel):
-    """視訊截取雪碧圖任務，該結構僅用于對 2017 版[截取雪碧圖](https://cloud.tencent.com/document/product/266/8101)介面發起的任務。
+    """視訊截取雪碧圖任務，該結構僅用于對 2017 版[截取雪碧圖](https://cloud.taifucloud.com/document/product/266/8101)介面發起的任務。
 
     """
 
@@ -4816,7 +4816,7 @@ class CreateImageSpriteTask2017(AbstractModel):
         :type Message: str
         :param FileId: 截取雪碧圖文件 ID。
         :type FileId: str
-        :param Definition: 雪碧圖規格，參見[雪碧圖截圖範本](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+        :param Definition: 雪碧圖規格，參見[雪碧圖截圖範本](https://cloud.taifucloud.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
         :type Definition: int
         :param TotalCount: 雪碧圖小圖總數量。
         :type TotalCount: int
@@ -4995,7 +4995,7 @@ class CreatePersonSampleResponse(AbstractModel):
     def __init__(self):
         """
         :param Person: 人物訊息。
-        :type Person: :class:`tencentcloud.vod.v20180717.models.AiSamplePerson`
+        :type Person: :class:`taifucloudcloud.vod.v20180717.models.AiSamplePerson`
         :param FailFaceInfoSet: 處理失敗的人臉訊息。
         :type FailFaceInfoSet: list of AiSampleFailFaceInfo
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -5031,13 +5031,13 @@ class CreateProcedureTemplateRequest(AbstractModel):
         :param Comment: 範本描述訊息，長度限制：256 個字元。
         :type Comment: str
         :param MediaProcessTask: 視訊處理類型任務參數。
-        :type MediaProcessTask: :class:`tencentcloud.vod.v20180717.models.MediaProcessTaskInput`
+        :type MediaProcessTask: :class:`taifucloudcloud.vod.v20180717.models.MediaProcessTaskInput`
         :param AiContentReviewTask: AI 智慧内容審核類型任務參數。
-        :type AiContentReviewTask: :class:`tencentcloud.vod.v20180717.models.AiContentReviewTaskInput`
+        :type AiContentReviewTask: :class:`taifucloudcloud.vod.v20180717.models.AiContentReviewTaskInput`
         :param AiAnalysisTask: AI 智慧内容分析類型任務參數。
-        :type AiAnalysisTask: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskInput`
+        :type AiAnalysisTask: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskInput`
         :param AiRecognitionTask: AI 内容識别類型任務參數。
-        :type AiRecognitionTask: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskInput`
+        :type AiRecognitionTask: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskInput`
         :param SubAppId: 點播[子應用](/document/product/266/14574) ID。如果要訪問子應用中的資源，則将該欄位填寫爲子應用 ID；否則無需填寫該欄位。
         :type SubAppId: int
         """
@@ -5326,7 +5326,7 @@ class CreateSuperPlayerConfigRequest(AbstractModel):
         :param AdaptiveDynamicStreamingDefinition: 允許輸出的未加密的自适應碼流範本 ID，當 DrmSwitch 爲 OFF 時必填。
         :type AdaptiveDynamicStreamingDefinition: int
         :param DrmStreamingsInfo: 允許輸出的 DRM 自适應碼流範本内容，當 DrmSwitch 爲 ON 時必填。
-        :type DrmStreamingsInfo: :class:`tencentcloud.vod.v20180717.models.DrmStreamingsInfo`
+        :type DrmStreamingsInfo: :class:`taifucloudcloud.vod.v20180717.models.DrmStreamingsInfo`
         :param ImageSpriteDefinition: 允許輸出的雪碧圖範本 ID。
         :type ImageSpriteDefinition: int
         :param ResolutionNames: 播放器對不于不同分辨率的子流展示名字，不填或者填空數組則使用預設配置：
@@ -5410,11 +5410,11 @@ class CreateTranscodeTemplateRequest(AbstractModel):
 預設值：0。
         :type RemoveAudio: int
         :param VideoTemplate: 視訊流配置參數，當 RemoveVideo 爲 0，該欄位必填。
-        :type VideoTemplate: :class:`tencentcloud.vod.v20180717.models.VideoTemplateInfo`
+        :type VideoTemplate: :class:`taifucloudcloud.vod.v20180717.models.VideoTemplateInfo`
         :param AudioTemplate: 音訊流配置參數，當 RemoveAudio 爲 0，該欄位必填。
-        :type AudioTemplate: :class:`tencentcloud.vod.v20180717.models.AudioTemplateInfo`
+        :type AudioTemplate: :class:`taifucloudcloud.vod.v20180717.models.AudioTemplateInfo`
         :param TEHDConfig: 極速高清轉碼參數。
-        :type TEHDConfig: :class:`tencentcloud.vod.v20180717.models.TEHDConfig`
+        :type TEHDConfig: :class:`taifucloudcloud.vod.v20180717.models.TEHDConfig`
         :param SubAppId: 點播[子應用](/document/product/266/14574) ID。如果要訪問子應用中的資源，則将該欄位填寫爲子應用 ID；否則無需填寫該欄位。
         :type SubAppId: int
         """
@@ -5502,11 +5502,11 @@ class CreateWatermarkTemplateRequest(AbstractModel):
 預設值：0px。
         :type YPos: str
         :param ImageTemplate: 圖片浮水印範本，當 Type 爲 image，該欄位必填。當 Type 爲 text，該欄位無效。
-        :type ImageTemplate: :class:`tencentcloud.vod.v20180717.models.ImageWatermarkInput`
+        :type ImageTemplate: :class:`taifucloudcloud.vod.v20180717.models.ImageWatermarkInput`
         :param TextTemplate: 文字浮水印範本，當 Type 爲 text，該欄位必填。當 Type 爲 image，該欄位無效。
-        :type TextTemplate: :class:`tencentcloud.vod.v20180717.models.TextWatermarkTemplateInput`
+        :type TextTemplate: :class:`taifucloudcloud.vod.v20180717.models.TextWatermarkTemplateInput`
         :param SvgTemplate: SVG浮水印範本，當 Type 爲 svg，該欄位必填。當 Type 爲 image 或 text，該欄位無效。
-        :type SvgTemplate: :class:`tencentcloud.vod.v20180717.models.SvgWatermarkInput`
+        :type SvgTemplate: :class:`taifucloudcloud.vod.v20180717.models.SvgWatermarkInput`
         :param SubAppId: 點播[子應用](/document/product/266/14574) ID。如果要訪問子應用中的資源，則将該欄位填寫爲子應用 ID；否則無需填寫該欄位。
         :type SubAppId: int
         """
@@ -6537,9 +6537,9 @@ class DescribeCDNUsageDataRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 起始日期，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param StartTime: 起始日期，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type StartTime: str
-        :param EndTime: 結束日期，需大于開始日期，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param EndTime: 結束日期，需大于開始日期，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type EndTime: str
         :param DataType: CDN 統計數據類型，有效值：
 <li>Flux：流量，單位爲 byte。</li>
@@ -6803,9 +6803,9 @@ class DescribeMediaProcessUsageDataRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#52)。
+        :param StartTime: 起始日期。使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#52)。
         :type StartTime: str
-        :param EndTime: 結束日期，需大于等于起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#52)。
+        :param EndTime: 結束日期，需大于等于起始日期。使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#52)。
         :type EndTime: str
         :param Type: 查詢視訊處理任務類型，預設查詢轉碼。目前只支援轉碼類型數據查詢。
 <li>Transcode: 轉碼</li>
@@ -7000,9 +7000,9 @@ class DescribeReviewDetailsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param StartTime: 起始日期。使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type StartTime: str
-        :param EndTime: 結束日期，需大于起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param EndTime: 結束日期，需大于起始日期。使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type EndTime: str
         :param SubAppId: 點播[子應用](/document/product/266/14574) ID。如果要訪問子應用中的資源，則将該欄位填寫爲子應用 ID；否則無需填寫該欄位。
         :type SubAppId: int
@@ -7239,9 +7239,9 @@ class DescribeStorageDetailsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 起始時間，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#52)。
+        :param StartTime: 起始時間，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#52)。
         :type StartTime: str
-        :param EndTime: 結束時間，需大于開始日期，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#52)。
+        :param EndTime: 結束時間，需大于開始日期，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#52)。
         :type EndTime: str
         :param Interval: 查詢時間間隔，有效值：
 <li>Minute：每分鍾一個統計數據。</li>
@@ -7428,8 +7428,8 @@ class DescribeTaskDetailResponse(AbstractModel):
         :param TaskType: 任務類型，取值：
 <li>Procedure：視訊處理任務；</li>
 <li>EditMedia：視訊編輯任務；</li>
-<li>WechatPublish：微信發布任務；</li>
-<li>WechatMiniProgramPublish：微信小程式視訊發布任務；</li>
+<li>WechatPublish： 發布任務；</li>
+<li>WechatMiniProgramPublish： 小程式視訊發布任務；</li>
 <li>ComposeMedia：制作媒體文件任務；</li>
 <li>PullUpload：拉取上傳媒體文件任務。</li>
 
@@ -7445,45 +7445,45 @@ class DescribeTaskDetailResponse(AbstractModel):
 <li>PROCESSING：處理中；</li>
 <li>FINISH：已完成。</li>
         :type Status: str
-        :param CreateTime: 任務的創建時間，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param CreateTime: 任務的創建時間，采用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
-        :param BeginProcessTime: 任務開始執行的時間，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param BeginProcessTime: 任務開始執行的時間，采用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type BeginProcessTime: str
-        :param FinishTime: 任務執行完畢的時間，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param FinishTime: 任務執行完畢的時間，采用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type FinishTime: str
         :param ProcedureTask: 視訊處理任務訊息，僅當 TaskType 爲 Procedure，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ProcedureTask: :class:`tencentcloud.vod.v20180717.models.ProcedureTask`
+        :type ProcedureTask: :class:`taifucloudcloud.vod.v20180717.models.ProcedureTask`
         :param EditMediaTask: 視訊編輯任務訊息，僅當 TaskType 爲 EditMedia，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type EditMediaTask: :class:`tencentcloud.vod.v20180717.models.EditMediaTask`
-        :param WechatPublishTask: 微信發布任務訊息，僅當 TaskType 爲 WechatPublish，該欄位有值。
+        :type EditMediaTask: :class:`taifucloudcloud.vod.v20180717.models.EditMediaTask`
+        :param WechatPublishTask:  發布任務訊息，僅當 TaskType 爲 WechatPublish，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type WechatPublishTask: :class:`tencentcloud.vod.v20180717.models.WechatPublishTask`
+        :type WechatPublishTask: :class:`taifucloudcloud.vod.v20180717.models.WechatPublishTask`
         :param ComposeMediaTask: 制作媒體文件任務訊息，僅當 TaskType 爲 ComposeMedia，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ComposeMediaTask: :class:`tencentcloud.vod.v20180717.models.ComposeMediaTask`
+        :type ComposeMediaTask: :class:`taifucloudcloud.vod.v20180717.models.ComposeMediaTask`
         :param PullUploadTask: 拉取上傳媒體文件任務訊息，僅當 TaskType 爲 PullUpload，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PullUploadTask: :class:`tencentcloud.vod.v20180717.models.PullUploadTask`
+        :type PullUploadTask: :class:`taifucloudcloud.vod.v20180717.models.PullUploadTask`
         :param TranscodeTask: 視訊轉碼任務訊息，僅當 TaskType 爲 Transcode，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TranscodeTask: :class:`tencentcloud.vod.v20180717.models.TranscodeTask2017`
+        :type TranscodeTask: :class:`taifucloudcloud.vod.v20180717.models.TranscodeTask2017`
         :param SnapshotByTimeOffsetTask: 視訊指定時間點截圖任務訊息，僅當 TaskType 爲 SnapshotByTimeOffset，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SnapshotByTimeOffsetTask: :class:`tencentcloud.vod.v20180717.models.SnapshotByTimeOffsetTask2017`
+        :type SnapshotByTimeOffsetTask: :class:`taifucloudcloud.vod.v20180717.models.SnapshotByTimeOffsetTask2017`
         :param ConcatTask: 視訊拼接任務訊息，僅當 TaskType 爲 Concat，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ConcatTask: :class:`tencentcloud.vod.v20180717.models.ConcatTask2017`
+        :type ConcatTask: :class:`taifucloudcloud.vod.v20180717.models.ConcatTask2017`
         :param ClipTask: 視訊剪輯任務訊息，僅當 TaskType 爲 Clip，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ClipTask: :class:`tencentcloud.vod.v20180717.models.ClipTask2017`
+        :type ClipTask: :class:`taifucloudcloud.vod.v20180717.models.ClipTask2017`
         :param CreateImageSpriteTask: 截取雪碧圖任務訊息，僅當 TaskType 爲 ImageSprite，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CreateImageSpriteTask: :class:`tencentcloud.vod.v20180717.models.CreateImageSpriteTask2017`
-        :param WechatMiniProgramPublishTask: 微信小程式發布任務訊息，僅當 TaskType 爲 WechatMiniProgramPublish，該欄位有值。
+        :type CreateImageSpriteTask: :class:`taifucloudcloud.vod.v20180717.models.CreateImageSpriteTask2017`
+        :param WechatMiniProgramPublishTask:  小程式發布任務訊息，僅當 TaskType 爲 WechatMiniProgramPublish，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type WechatMiniProgramPublishTask: :class:`tencentcloud.vod.v20180717.models.WechatMiniProgramPublishTask`
+        :type WechatMiniProgramPublishTask: :class:`taifucloudcloud.vod.v20180717.models.WechatMiniProgramPublishTask`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -7906,7 +7906,7 @@ class EditMediaOutputConfig(AbstractModel):
         :param ClassId: 分類ID，用于對媒體進行分類管理，可通過 [創建分類](/document/product/266/7812) 介面，創建分類，獲得分類 ID。
 <li>預設值：0，表示其他分類。</li>
         :type ClassId: int
-        :param ExpireTime: 輸出文件的過期時間，超過該時間文件将被删除，預設爲永久不過期，格式按照 ISO 8601标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param ExpireTime: 輸出文件的過期時間，超過該時間文件将被删除，預設爲永久不過期，格式按照 ISO 8601标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type ExpireTime: str
         """
         self.MediaName = None
@@ -7942,7 +7942,7 @@ class EditMediaRequest(AbstractModel):
         :param ProcedureName: [任務流範本](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要對生成的新視訊執行任務流時填寫。
         :type ProcedureName: str
         :param OutputConfig: 編輯後生成的文件配置。
-        :type OutputConfig: :class:`tencentcloud.vod.v20180717.models.EditMediaOutputConfig`
+        :type OutputConfig: :class:`taifucloudcloud.vod.v20180717.models.EditMediaOutputConfig`
         :param SessionContext: 标識來源上下文，用于透傳用戶請求訊息，在EditMediaComplete回調和任務流狀态變更回調将返回該欄位值，最長 1000個字元。
         :type SessionContext: str
         :param TasksPriority: 任務的優先級，數值越大優先級越高，取值範圍是 -10 到 10，不填代表 0。
@@ -8019,9 +8019,9 @@ class EditMediaStreamInfo(AbstractModel):
         """
         :param StreamId: 錄制的流 ID
         :type StreamId: str
-        :param StartTime: 流剪輯的起始時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param StartTime: 流剪輯的起始時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type StartTime: str
-        :param EndTime: 流剪輯的結束時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param EndTime: 流剪輯的結束時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type EndTime: str
         """
         self.StreamId = None
@@ -8057,10 +8057,10 @@ class EditMediaTask(AbstractModel):
         :type Message: str
         :param Input: 視訊編輯任務的輸入。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.EditMediaTaskInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.EditMediaTaskInput`
         :param Output: 視訊編輯任務的輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.EditMediaTaskOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.EditMediaTaskOutput`
         :param ProcedureTaskId: 若發起視訊編輯任務時指定了視訊處理流程，則該欄位爲流程任務 ID。
         :type ProcedureTaskId: str
         :param SessionContext: 來源上下文，用于透傳用戶請求訊息，任務流狀态變更回調将返回該欄位值，最長 1000 個字元。
@@ -8148,7 +8148,7 @@ class EditMediaTaskOutput(AbstractModel):
         :param ClassId: 分類ID，用于對媒體進行分類管理，可通過 [創建分類](/document/product/266/7812) 介面，創建分類，獲得分類 ID。
 <li>預設值：0，表示其他分類。</li>
         :type ClassId: int
-        :param ExpireTime: 輸出文件的過期時間，超過該時間文件将被删除，預設爲永久不過期，格式按照 ISO 8601标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param ExpireTime: 輸出文件的過期時間，超過該時間文件将被删除，預設爲永久不過期，格式按照 ISO 8601标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type ExpireTime: str
         """
         self.FileType = None
@@ -8200,9 +8200,9 @@ class EventContent(AbstractModel):
 <li>FileDeleted：視訊删除完成；</li>
 <li>PullComplete：視訊轉拉完成；</li>
 <li>EditMediaComplete：視訊編輯完成；</li>
-<li>WechatPublishComplete：微信發布完成；</li>
+<li>WechatPublishComplete： 發布完成；</li>
 <li>ComposeMediaComplete：制作媒體文件完成；</li>
-<li>WechatMiniProgramPublishComplete：微信小程式發布完成。</li>
+<li>WechatMiniProgramPublishComplete： 小程式發布完成。</li>
 <b>兼容 2017 版的事件類型：</b>
 <li>TranscodeComplete：視訊轉碼完成；</li>
 <li>ConcatComplete：視訊拼接完成；</li>
@@ -8212,43 +8212,43 @@ class EventContent(AbstractModel):
         :type EventType: str
         :param FileUploadEvent: 視訊上傳完成事件，當事件類型爲 NewFileUpload 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FileUploadEvent: :class:`tencentcloud.vod.v20180717.models.FileUploadTask`
+        :type FileUploadEvent: :class:`taifucloudcloud.vod.v20180717.models.FileUploadTask`
         :param ProcedureStateChangeEvent: 任務流狀态變更事件，當事件類型爲 ProcedureStateChanged 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ProcedureStateChangeEvent: :class:`tencentcloud.vod.v20180717.models.ProcedureTask`
+        :type ProcedureStateChangeEvent: :class:`taifucloudcloud.vod.v20180717.models.ProcedureTask`
         :param FileDeleteEvent: 文件删除事件，當事件類型爲 FileDeleted 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FileDeleteEvent: :class:`tencentcloud.vod.v20180717.models.FileDeleteTask`
+        :type FileDeleteEvent: :class:`taifucloudcloud.vod.v20180717.models.FileDeleteTask`
         :param PullCompleteEvent: 視訊轉拉完成事件，當事件類型爲 PullComplete 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PullCompleteEvent: :class:`tencentcloud.vod.v20180717.models.PullUploadTask`
+        :type PullCompleteEvent: :class:`taifucloudcloud.vod.v20180717.models.PullUploadTask`
         :param EditMediaCompleteEvent: 視訊編輯完成事件，當事件類型爲 EditMediaComplete 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type EditMediaCompleteEvent: :class:`tencentcloud.vod.v20180717.models.EditMediaTask`
-        :param WechatPublishCompleteEvent: 微信發布完成事件，當事件類型爲 WechatPublishComplete 時有效。
+        :type EditMediaCompleteEvent: :class:`taifucloudcloud.vod.v20180717.models.EditMediaTask`
+        :param WechatPublishCompleteEvent:  發布完成事件，當事件類型爲 WechatPublishComplete 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type WechatPublishCompleteEvent: :class:`tencentcloud.vod.v20180717.models.WechatPublishTask`
+        :type WechatPublishCompleteEvent: :class:`taifucloudcloud.vod.v20180717.models.WechatPublishTask`
         :param TranscodeCompleteEvent: 視訊轉碼完成事件，當事件類型爲 TranscodeComplete 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TranscodeCompleteEvent: :class:`tencentcloud.vod.v20180717.models.TranscodeTask2017`
+        :type TranscodeCompleteEvent: :class:`taifucloudcloud.vod.v20180717.models.TranscodeTask2017`
         :param ConcatCompleteEvent: 視訊拼接完成事件，當事件類型爲 ConcatComplete 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ConcatCompleteEvent: :class:`tencentcloud.vod.v20180717.models.ConcatTask2017`
+        :type ConcatCompleteEvent: :class:`taifucloudcloud.vod.v20180717.models.ConcatTask2017`
         :param ClipCompleteEvent: 視訊剪輯完成事件，當事件類型爲 ClipComplete 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ClipCompleteEvent: :class:`tencentcloud.vod.v20180717.models.ClipTask2017`
+        :type ClipCompleteEvent: :class:`taifucloudcloud.vod.v20180717.models.ClipTask2017`
         :param CreateImageSpriteCompleteEvent: 視訊截取雪碧圖完成事件，當事件類型爲 CreateImageSpriteComplete 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CreateImageSpriteCompleteEvent: :class:`tencentcloud.vod.v20180717.models.CreateImageSpriteTask2017`
+        :type CreateImageSpriteCompleteEvent: :class:`taifucloudcloud.vod.v20180717.models.CreateImageSpriteTask2017`
         :param SnapshotByTimeOffsetCompleteEvent: 視訊按時間點截圖完成事件，當事件類型爲 CreateSnapshotByTimeOffsetComplete 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SnapshotByTimeOffsetCompleteEvent: :class:`tencentcloud.vod.v20180717.models.SnapshotByTimeOffsetTask2017`
+        :type SnapshotByTimeOffsetCompleteEvent: :class:`taifucloudcloud.vod.v20180717.models.SnapshotByTimeOffsetTask2017`
         :param ComposeMediaCompleteEvent: 制作媒體文件任務完成事件，當事件類型爲 ComposeMediaComplete 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ComposeMediaCompleteEvent: :class:`tencentcloud.vod.v20180717.models.ComposeMediaTask`
-        :param WechatMiniProgramPublishCompleteEvent: 微信小程式發布任務完成事件，當事件類型爲 WechatMiniProgramPublishComplete 時有效。
+        :type ComposeMediaCompleteEvent: :class:`taifucloudcloud.vod.v20180717.models.ComposeMediaTask`
+        :param WechatMiniProgramPublishCompleteEvent:  小程式發布任務完成事件，當事件類型爲 WechatMiniProgramPublishComplete 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type WechatMiniProgramPublishCompleteEvent: :class:`tencentcloud.vod.v20180717.models.WechatMiniProgramPublishTask`
+        :type WechatMiniProgramPublishCompleteEvent: :class:`taifucloudcloud.vod.v20180717.models.WechatMiniProgramPublishTask`
         """
         self.EventHandle = None
         self.EventType = None
@@ -8481,12 +8481,12 @@ class FileUploadTask(AbstractModel):
         :param FileId: 文件唯一 ID。
         :type FileId: str
         :param MediaBasicInfo: 上傳完成後生成的媒體文件基礎訊息。
-        :type MediaBasicInfo: :class:`tencentcloud.vod.v20180717.models.MediaBasicInfo`
+        :type MediaBasicInfo: :class:`taifucloudcloud.vod.v20180717.models.MediaBasicInfo`
         :param ProcedureTaskId: 若視訊上傳時指定了視訊處理流程，則該欄位爲流程任務 ID。
         :type ProcedureTaskId: str
         :param MetaData: 元訊息。包括大小、時長、視訊流訊息、音訊流訊息等。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MetaData: :class:`tencentcloud.vod.v20180717.models.MediaMetaData`
+        :type MetaData: :class:`taifucloudcloud.vod.v20180717.models.MediaMetaData`
         """
         self.FileId = None
         self.MediaBasicInfo = None
@@ -8757,9 +8757,9 @@ class ImageSpriteTemplate(AbstractModel):
         :type RowCount: int
         :param ColumnCount: 雪碧圖中小圖的列數。
         :type ColumnCount: int
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type UpdateTime: str
         :param FillType: 填充方式，當視訊流配置寬高參數與原始視訊的寬高比不一緻時，對轉碼的處理方式，即爲“填充”。可選填充方式：
 <li> stretch：拉伸，對每一幀進行拉伸，填滿整個畫面，可能導緻轉碼後的視訊被“壓扁“或者“拉長“；</li>
@@ -8930,17 +8930,17 @@ class LiveRealTimeClipRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param StreamId: 推流[直播碼](https://cloud.tencent.com/document/product/267/5959)。
+        :param StreamId: 推流[直播碼](https://cloud.taifucloud.com/document/product/267/5959)。
         :type StreamId: str
-        :param StartTime: 流剪輯的開始時間，格式參照 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param StartTime: 流剪輯的開始時間，格式參照 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type StartTime: str
-        :param EndTime: 流剪輯的結束時間，格式參照 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param EndTime: 流剪輯的結束時間，格式參照 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type EndTime: str
         :param IsPersistence: 是否固化。0 不固化，1 固化。預設不固化。
         :type IsPersistence: int
-        :param ExpireTime: 剪輯固化後的視訊儲存過期時間。格式參照 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。填“9999-12-31T23:59:59Z”表示永不過期。過期後該媒體文件及其相關資源（轉碼結果、雪碧圖等）将被永久删除。僅 IsPersistence 爲 1 時有效，預設剪輯固化的視訊永不過期。
+        :param ExpireTime: 剪輯固化後的視訊儲存過期時間。格式參照 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。填“9999-12-31T23:59:59Z”表示永不過期。過期後該媒體文件及其相關資源（轉碼結果、雪碧圖等）将被永久删除。僅 IsPersistence 爲 1 時有效，預設剪輯固化的視訊永不過期。
         :type ExpireTime: str
-        :param Procedure: 剪輯固化後的視訊點播任務流處理，詳見[上傳指定任務流](https://cloud.tencent.com/document/product/266/9759)。僅 IsPersistence 爲 1 時有效。
+        :param Procedure: 剪輯固化後的視訊點播任務流處理，詳見[上傳指定任務流](https://cloud.taifucloud.com/document/product/266/9759)。僅 IsPersistence 爲 1 時有效。
         :type Procedure: str
         :param MetaDataRequired: 是否需要返回剪輯後的視訊元訊息。0 不需要，1 需要。預設不需要。
         :type MetaDataRequired: int
@@ -8991,7 +8991,7 @@ class LiveRealTimeClipResponse(AbstractModel):
         :type VodTaskId: str
         :param MetaData: 剪輯後的視訊元訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MetaData: :class:`tencentcloud.vod.v20180717.models.MediaMetaData`
+        :type MetaData: :class:`taifucloudcloud.vod.v20180717.models.MediaMetaData`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -9217,7 +9217,7 @@ class MediaAnimatedGraphicsItem(AbstractModel):
         """
         :param Url: 轉動圖的文件網址。
         :type Url: str
-        :param Definition: 轉動圖範本 ID，參見[轉動圖參數範本](https://cloud.tencent.com/document/product/266/33481#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+        :param Definition: 轉動圖範本 ID，參見[轉動圖參數範本](https://cloud.taifucloud.com/document/product/266/33481#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
         :type Definition: int
         :param Container: 動圖格式，如 gif。
         :type Container: str
@@ -9297,11 +9297,11 @@ class MediaBasicInfo(AbstractModel):
         :type Name: str
         :param Description: 媒體文件描述。
         :type Description: str
-        :param CreateTime: 媒體文件的創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param CreateTime: 媒體文件的創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
-        :param UpdateTime: 媒體文件的最近更新時間（如修改視訊屬性、發起視訊處理等會觸發更新媒體文件訊息的操作），使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param UpdateTime: 媒體文件的最近更新時間（如修改視訊屬性、發起視訊處理等會觸發更新媒體文件訊息的操作），使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type UpdateTime: str
-        :param ExpireTime: 媒體文件的過期時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。過期後該媒體文件及其相關資源（轉碼結果、雪碧圖等）将被永久删除。“9999-12-31T23:59:59Z”表示永不過期。
+        :param ExpireTime: 媒體文件的過期時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。過期後該媒體文件及其相關資源（轉碼結果、雪碧圖等）将被永久删除。“9999-12-31T23:59:59Z”表示永不過期。
         :type ExpireTime: str
         :param ClassId: 媒體文件的分類 ID。
         :type ClassId: int
@@ -9317,8 +9317,8 @@ class MediaBasicInfo(AbstractModel):
         :type MediaUrl: str
         :param SourceInfo: 該媒體文件的來源訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SourceInfo: :class:`tencentcloud.vod.v20180717.models.MediaSourceData`
-        :param StorageRegion: 媒體文件儲存地區，如 ap-guangzhou，參見[地域清單](https://cloud.tencent.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
+        :type SourceInfo: :class:`taifucloudcloud.vod.v20180717.models.MediaSourceData`
+        :param StorageRegion: 媒體文件儲存地區，如 ap-guangzhou，參見[地域清單](https://cloud.taifucloud.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
         :type StorageRegion: str
         :param TagSet: 媒體文件的标簽訊息。
         :type TagSet: list of str
@@ -9463,7 +9463,7 @@ class MediaContentReviewOcrTextSegmentItem(AbstractModel):
         :param Url: 嫌疑圖片 URL （圖片不會永久儲存，到達
 PicUrlExpireTime 時間點後圖片将被删除）。
         :type Url: str
-        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type PicUrlExpireTime: str
         """
         self.StartTimeOffset = None
@@ -9516,7 +9516,7 @@ class MediaContentReviewPoliticalSegmentItem(AbstractModel):
         :type AreaCoordSet: list of int
         :param PicUrlExpireTimeStamp: 該欄位已廢棄，請使用 PicUrlExpireTime。
         :type PicUrlExpireTimeStamp: int
-        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type PicUrlExpireTime: str
         """
         self.StartTimeOffset = None
@@ -9557,9 +9557,9 @@ class MediaContentReviewSegmentItem(AbstractModel):
         :type EndTimeOffset: float
         :param Confidence: 嫌疑片段涉黃分數。
         :type Confidence: float
-        :param Label: 嫌疑片段鑒黃結果标簽。
+        :param Label: 嫌疑片段 結果标簽。
         :type Label: str
-        :param Suggestion: 嫌疑片段鑒黃結果建議，取值範圍：
+        :param Suggestion: 嫌疑片段 結果建議，取值範圍：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -9569,7 +9569,7 @@ class MediaContentReviewSegmentItem(AbstractModel):
         :type Url: str
         :param PicUrlExpireTimeStamp: 該欄位已廢棄，請使用 PicUrlExpireTime。
         :type PicUrlExpireTimeStamp: int
-        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type PicUrlExpireTime: str
         """
         self.StartTimeOffset = None
@@ -9602,9 +9602,9 @@ class MediaDeleteItem(AbstractModel):
         """
         :param Type: 所指定的删除部分。如果未填寫該欄位則參數無效。可選值有：
 <li>TranscodeFiles（删除轉碼文件）。</li>
-<li>WechatPublishFiles（删除微信發布文件）。</li>
+<li>WechatPublishFiles（删除 發布文件）。</li>
         :type Type: str
-        :param Definition: 删除由Type參數指定的種類下的視訊範本号，範本定義參見[轉碼範本](https://cloud.tencent.com/document/product/266/33478#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+        :param Definition: 删除由Type參數指定的種類下的視訊範本号，範本定義參見[轉碼範本](https://cloud.taifucloud.com/document/product/266/33478#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
 預設值爲0，表示删除參數Type指定種類下所有的視訊。
         :type Definition: int
         """
@@ -9646,7 +9646,7 @@ class MediaImageSpriteItem(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 雪碧圖規格，參見[雪碧圖參數範本](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+        :param Definition: 雪碧圖規格，參見[雪碧圖參數範本](https://cloud.taifucloud.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
         :type Definition: int
         :param Height: 雪碧圖小圖的高度。
         :type Height: int
@@ -9685,34 +9685,34 @@ class MediaInfo(AbstractModel):
         """
         :param BasicInfo: 基礎訊息。包括視訊名稱、分類、播放網址、封面圖片等。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type BasicInfo: :class:`tencentcloud.vod.v20180717.models.MediaBasicInfo`
+        :type BasicInfo: :class:`taifucloudcloud.vod.v20180717.models.MediaBasicInfo`
         :param MetaData: 元訊息。包括大小、時長、視訊流訊息、音訊流訊息等。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MetaData: :class:`tencentcloud.vod.v20180717.models.MediaMetaData`
+        :type MetaData: :class:`taifucloudcloud.vod.v20180717.models.MediaMetaData`
         :param TranscodeInfo: 轉碼結果訊息。包括該視訊轉碼生成的各種碼率的視訊的網址、規格、碼率、分辨率等。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TranscodeInfo: :class:`tencentcloud.vod.v20180717.models.MediaTranscodeInfo`
+        :type TranscodeInfo: :class:`taifucloudcloud.vod.v20180717.models.MediaTranscodeInfo`
         :param AnimatedGraphicsInfo: 轉動圖結果訊息。對視訊轉動圖（如 gif）後，動圖相關訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AnimatedGraphicsInfo: :class:`tencentcloud.vod.v20180717.models.MediaAnimatedGraphicsInfo`
+        :type AnimatedGraphicsInfo: :class:`taifucloudcloud.vod.v20180717.models.MediaAnimatedGraphicsInfo`
         :param SampleSnapshotInfo: 采樣截圖訊息。對視訊采樣截圖後，相關截圖訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SampleSnapshotInfo: :class:`tencentcloud.vod.v20180717.models.MediaSampleSnapshotInfo`
+        :type SampleSnapshotInfo: :class:`taifucloudcloud.vod.v20180717.models.MediaSampleSnapshotInfo`
         :param ImageSpriteInfo: 雪碧圖訊息。對視訊截取雪碧圖之後，雪碧的相關訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ImageSpriteInfo: :class:`tencentcloud.vod.v20180717.models.MediaImageSpriteInfo`
+        :type ImageSpriteInfo: :class:`taifucloudcloud.vod.v20180717.models.MediaImageSpriteInfo`
         :param SnapshotByTimeOffsetInfo: 指定時間點截圖訊息。對視訊依照指定時間點截圖後，各個截圖的訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SnapshotByTimeOffsetInfo: :class:`tencentcloud.vod.v20180717.models.MediaSnapshotByTimeOffsetInfo`
+        :type SnapshotByTimeOffsetInfo: :class:`taifucloudcloud.vod.v20180717.models.MediaSnapshotByTimeOffsetInfo`
         :param KeyFrameDescInfo: 視訊打點訊息。對視訊設置的各個打點訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type KeyFrameDescInfo: :class:`tencentcloud.vod.v20180717.models.MediaKeyFrameDescInfo`
+        :type KeyFrameDescInfo: :class:`taifucloudcloud.vod.v20180717.models.MediaKeyFrameDescInfo`
         :param AdaptiveDynamicStreamingInfo: 轉自适應碼流訊息。包括規格、加密類型、打包格式等相關訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AdaptiveDynamicStreamingInfo: :class:`tencentcloud.vod.v20180717.models.MediaAdaptiveDynamicStreamingInfo`
+        :type AdaptiveDynamicStreamingInfo: :class:`taifucloudcloud.vod.v20180717.models.MediaAdaptiveDynamicStreamingInfo`
         :param MiniProgramReviewInfo: 小程式審核訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MiniProgramReviewInfo: :class:`tencentcloud.vod.v20180717.models.MediaMiniProgramReviewInfo`
+        :type MiniProgramReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.MediaMiniProgramReviewInfo`
         :param FileId: 媒體文件唯一标識 ID。
         :type FileId: str
         """
@@ -9965,7 +9965,7 @@ class MediaMiniProgramReviewInfoItem(AbstractModel):
         :param Definition: 範本id。小程式視訊發布的視訊所對應的轉碼範本ID，爲0代表原始視訊。
         :type Definition: int
         :param MetaData: 視訊元訊息。
-        :type MetaData: :class:`tencentcloud.vod.v20180717.models.MediaMetaData`
+        :type MetaData: :class:`taifucloudcloud.vod.v20180717.models.MediaMetaData`
         :param Url: 小程式審核視訊播放網址。
         :type Url: str
         :param ReviewResult: 小程式視訊發布狀态：
@@ -10039,9 +10039,9 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 對視訊轉自适應碼流任務的輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AdaptiveDynamicStreamingTaskInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AdaptiveDynamicStreamingTaskInput`
         :param Output: 對視訊轉自适應碼流任務的輸出。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.AdaptiveDynamicStreamingInfoItem`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.AdaptiveDynamicStreamingInfoItem`
         """
         self.Status = None
         self.ErrCode = None
@@ -10079,10 +10079,10 @@ class MediaProcessTaskAnimatedGraphicResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 轉動圖任務的輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.AnimatedGraphicTaskInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.AnimatedGraphicTaskInput`
         :param Output: 轉動圖任務的輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.MediaAnimatedGraphicsItem`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.MediaAnimatedGraphicsItem`
         """
         self.Status = None
         self.ErrCode = None
@@ -10120,9 +10120,9 @@ class MediaProcessTaskCoverBySnapshotResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 對視訊截圖做封面任務的輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.CoverBySnapshotTaskInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.CoverBySnapshotTaskInput`
         :param Output: 對視訊截圖做封面任務的輸出。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.CoverBySnapshotTaskOutput`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.CoverBySnapshotTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -10160,10 +10160,10 @@ class MediaProcessTaskImageSpriteResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 對視訊截雪碧圖任務的輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.ImageSpriteTaskInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.ImageSpriteTaskInput`
         :param Output: 對視訊截雪碧圖任務的輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.MediaImageSpriteItem`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.MediaImageSpriteItem`
         """
         self.Status = None
         self.ErrCode = None
@@ -10278,25 +10278,25 @@ class MediaProcessTaskResult(AbstractModel):
         :type Type: str
         :param TranscodeTask: 視訊轉碼任務的查詢結果，當任務類型爲 Transcode 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TranscodeTask: :class:`tencentcloud.vod.v20180717.models.MediaProcessTaskTranscodeResult`
+        :type TranscodeTask: :class:`taifucloudcloud.vod.v20180717.models.MediaProcessTaskTranscodeResult`
         :param AnimatedGraphicTask: 視訊轉動圖任務的查詢結果，當任務類型爲 AnimatedGraphics 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AnimatedGraphicTask: :class:`tencentcloud.vod.v20180717.models.MediaProcessTaskAnimatedGraphicResult`
+        :type AnimatedGraphicTask: :class:`taifucloudcloud.vod.v20180717.models.MediaProcessTaskAnimatedGraphicResult`
         :param SnapshotByTimeOffsetTask: 對視訊按時間點截圖任務的查詢結果，當任務類型爲 SnapshotByTimeOffset 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SnapshotByTimeOffsetTask: :class:`tencentcloud.vod.v20180717.models.MediaProcessTaskSnapshotByTimeOffsetResult`
+        :type SnapshotByTimeOffsetTask: :class:`taifucloudcloud.vod.v20180717.models.MediaProcessTaskSnapshotByTimeOffsetResult`
         :param SampleSnapshotTask: 對視訊采樣截圖任務的查詢結果，當任務類型爲 SampleSnapshot 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SampleSnapshotTask: :class:`tencentcloud.vod.v20180717.models.MediaProcessTaskSampleSnapshotResult`
+        :type SampleSnapshotTask: :class:`taifucloudcloud.vod.v20180717.models.MediaProcessTaskSampleSnapshotResult`
         :param ImageSpriteTask: 對視訊截雪碧圖任務的查詢結果，當任務類型爲 ImageSprite 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ImageSpriteTask: :class:`tencentcloud.vod.v20180717.models.MediaProcessTaskImageSpriteResult`
+        :type ImageSpriteTask: :class:`taifucloudcloud.vod.v20180717.models.MediaProcessTaskImageSpriteResult`
         :param CoverBySnapshotTask: 對視訊截圖做封面任務的查詢結果，當任務類型爲 CoverBySnapshot 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CoverBySnapshotTask: :class:`tencentcloud.vod.v20180717.models.MediaProcessTaskCoverBySnapshotResult`
+        :type CoverBySnapshotTask: :class:`taifucloudcloud.vod.v20180717.models.MediaProcessTaskCoverBySnapshotResult`
         :param AdaptiveDynamicStreamingTask: 對視訊轉自适應碼流任務的查詢結果，當任務類型爲 AdaptiveDynamicStreaming 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AdaptiveDynamicStreamingTask: :class:`tencentcloud.vod.v20180717.models.MediaProcessTaskAdaptiveDynamicStreamingResult`
+        :type AdaptiveDynamicStreamingTask: :class:`taifucloudcloud.vod.v20180717.models.MediaProcessTaskAdaptiveDynamicStreamingResult`
         """
         self.Type = None
         self.TranscodeTask = None
@@ -10350,10 +10350,10 @@ class MediaProcessTaskSampleSnapshotResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 對視訊做采樣截圖任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.SampleSnapshotTaskInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.SampleSnapshotTaskInput`
         :param Output: 對視訊做采樣截圖任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.MediaSampleSnapshotItem`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.MediaSampleSnapshotItem`
         """
         self.Status = None
         self.ErrCode = None
@@ -10391,10 +10391,10 @@ class MediaProcessTaskSnapshotByTimeOffsetResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 對視訊按指定時間點截圖任務輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.SnapshotByTimeOffsetTaskInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.SnapshotByTimeOffsetTaskInput`
         :param Output: 對視訊按指定時間點截圖任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.MediaSnapshotByTimeOffsetItem`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.MediaSnapshotByTimeOffsetItem`
         """
         self.Status = None
         self.ErrCode = None
@@ -10432,10 +10432,10 @@ class MediaProcessTaskTranscodeResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 轉碼任務的輸入。
-        :type Input: :class:`tencentcloud.vod.v20180717.models.TranscodeTaskInput`
+        :type Input: :class:`taifucloudcloud.vod.v20180717.models.TranscodeTaskInput`
         :param Output: 轉碼任務的輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.vod.v20180717.models.MediaTranscodeItem`
+        :type Output: :class:`taifucloudcloud.vod.v20180717.models.MediaTranscodeItem`
         """
         self.Status = None
         self.ErrCode = None
@@ -10485,7 +10485,7 @@ class MediaSampleSnapshotItem(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 采樣截圖規格 ID，參見[采樣截圖參數範本](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+        :param Definition: 采樣截圖規格 ID，參見[采樣截圖參數範本](https://cloud.taifucloud.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
         :type Definition: int
         :param SampleType: 采樣方式，取值範圍：
 <li>Percent：根據百分比間隔采樣。</li>
@@ -10544,7 +10544,7 @@ class MediaSnapshotByTimeOffsetItem(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 指定時間點截圖規格，參見[指定時間點截圖參數範本](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+        :param Definition: 指定時間點截圖規格，參見[指定時間點截圖參數範本](https://cloud.taifucloud.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
         :type Definition: int
         :param PicInfoSet: 同一規格的截圖訊息集合，每個元素代表一張截圖。
         :type PicInfoSet: list of MediaSnapshotByTimePicInfoItem
@@ -10660,20 +10660,20 @@ class MediaTrackItem(AbstractModel):
         :type Type: str
         :param VideoItem: 視訊片段，當 Type = Video 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type VideoItem: :class:`tencentcloud.vod.v20180717.models.VideoTrackItem`
+        :type VideoItem: :class:`taifucloudcloud.vod.v20180717.models.VideoTrackItem`
         :param AudioItem: 音訊片段，當 Type = Audio 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AudioItem: :class:`tencentcloud.vod.v20180717.models.AudioTrackItem`
+        :type AudioItem: :class:`taifucloudcloud.vod.v20180717.models.AudioTrackItem`
         :param StickerItem: 貼圖片段，當 Type = Sticker 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type StickerItem: :class:`tencentcloud.vod.v20180717.models.StickerTrackItem`
+        :type StickerItem: :class:`taifucloudcloud.vod.v20180717.models.StickerTrackItem`
         :param TransitionItem: 轉場，當 Type = Transition 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TransitionItem: :class:`tencentcloud.vod.v20180717.models.MediaTransitionItem`
+        :type TransitionItem: :class:`taifucloudcloud.vod.v20180717.models.MediaTransitionItem`
         :param EmptyItem: 空白片段，當 Type = Empty 時有效。空片段用于時間軸的占位。<li>如需要兩個音訊片段之間有一段時間的靜音，可以用 EmptyTrackItem 來進行占位。</li>
 <li>使用 EmptyTrackItem 進行占位，來定位某個Item。</li>
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type EmptyItem: :class:`tencentcloud.vod.v20180717.models.EmptyTrackItem`
+        :type EmptyItem: :class:`taifucloudcloud.vod.v20180717.models.EmptyTrackItem`
         """
         self.Type = None
         self.VideoItem = None
@@ -10733,7 +10733,7 @@ class MediaTranscodeItem(AbstractModel):
         """
         :param Url: 轉碼後的視訊文件網址。
         :type Url: str
-        :param Definition: 轉碼規格 ID，參見[轉碼參數範本](https://cloud.tencent.com/document/product/266/33476)。
+        :param Definition: 轉碼規格 ID，參見[轉碼參數範本](https://cloud.taifucloud.com/document/product/266/33476)。
         :type Definition: int
         :param Bitrate: 視訊流碼率平均值與音訊流碼率平均值之和， 單位：bps。
         :type Bitrate: int
@@ -10864,15 +10864,15 @@ class ModifyAIAnalysisTemplateRequest(AbstractModel):
         :param Comment: 視訊内容分析範本描述訊息，長度限制：256 個字元。
         :type Comment: str
         :param ClassificationConfigure: 智慧分類任務控制參數。
-        :type ClassificationConfigure: :class:`tencentcloud.vod.v20180717.models.ClassificationConfigureInfoForUpdate`
+        :type ClassificationConfigure: :class:`taifucloudcloud.vod.v20180717.models.ClassificationConfigureInfoForUpdate`
         :param TagConfigure: 智慧标簽任務控制參數。
-        :type TagConfigure: :class:`tencentcloud.vod.v20180717.models.TagConfigureInfoForUpdate`
+        :type TagConfigure: :class:`taifucloudcloud.vod.v20180717.models.TagConfigureInfoForUpdate`
         :param CoverConfigure: 智慧封面任務控制參數。
-        :type CoverConfigure: :class:`tencentcloud.vod.v20180717.models.CoverConfigureInfoForUpdate`
+        :type CoverConfigure: :class:`taifucloudcloud.vod.v20180717.models.CoverConfigureInfoForUpdate`
         :param FrameTagConfigure: 智慧按幀标簽任務控制參數。
-        :type FrameTagConfigure: :class:`tencentcloud.vod.v20180717.models.FrameTagConfigureInfoForUpdate`
+        :type FrameTagConfigure: :class:`taifucloudcloud.vod.v20180717.models.FrameTagConfigureInfoForUpdate`
         :param HighlightConfigure: 智慧精彩集錦任務控制參數。
-        :type HighlightConfigure: :class:`tencentcloud.vod.v20180717.models.HighlightsConfigureInfoForUpdate`
+        :type HighlightConfigure: :class:`taifucloudcloud.vod.v20180717.models.HighlightsConfigureInfoForUpdate`
         :param SubAppId: 點播[子應用](/document/product/266/14574) ID。如果要訪問子應用中的資源，則将該欄位填寫爲子應用 ID；否則無需填寫該欄位。
         :type SubAppId: int
         """
@@ -10940,21 +10940,21 @@ class ModifyAIRecognitionTemplateRequest(AbstractModel):
         :param Comment: 視訊内容識别範本描述訊息，長度限制：256 個字元。
         :type Comment: str
         :param HeadTailConfigure: 視訊片頭片尾識别控制參數。
-        :type HeadTailConfigure: :class:`tencentcloud.vod.v20180717.models.HeadTailConfigureInfoForUpdate`
+        :type HeadTailConfigure: :class:`taifucloudcloud.vod.v20180717.models.HeadTailConfigureInfoForUpdate`
         :param SegmentConfigure: 視訊拆條識别控制參數。
-        :type SegmentConfigure: :class:`tencentcloud.vod.v20180717.models.SegmentConfigureInfoForUpdate`
+        :type SegmentConfigure: :class:`taifucloudcloud.vod.v20180717.models.SegmentConfigureInfoForUpdate`
         :param FaceConfigure: 人臉識别控制參數。
-        :type FaceConfigure: :class:`tencentcloud.vod.v20180717.models.FaceConfigureInfoForUpdate`
+        :type FaceConfigure: :class:`taifucloudcloud.vod.v20180717.models.FaceConfigureInfoForUpdate`
         :param OcrFullTextConfigure: 文本全文識别控制參數。
-        :type OcrFullTextConfigure: :class:`tencentcloud.vod.v20180717.models.OcrFullTextConfigureInfoForUpdate`
+        :type OcrFullTextConfigure: :class:`taifucloudcloud.vod.v20180717.models.OcrFullTextConfigureInfoForUpdate`
         :param OcrWordsConfigure: 文本關鍵詞識别控制參數。
-        :type OcrWordsConfigure: :class:`tencentcloud.vod.v20180717.models.OcrWordsConfigureInfoForUpdate`
+        :type OcrWordsConfigure: :class:`taifucloudcloud.vod.v20180717.models.OcrWordsConfigureInfoForUpdate`
         :param AsrFullTextConfigure: 語音全文識别控制參數。
-        :type AsrFullTextConfigure: :class:`tencentcloud.vod.v20180717.models.AsrFullTextConfigureInfoForUpdate`
+        :type AsrFullTextConfigure: :class:`taifucloudcloud.vod.v20180717.models.AsrFullTextConfigureInfoForUpdate`
         :param AsrWordsConfigure: 語音關鍵詞識别控制參數。
-        :type AsrWordsConfigure: :class:`tencentcloud.vod.v20180717.models.AsrWordsConfigureInfoForUpdate`
+        :type AsrWordsConfigure: :class:`taifucloudcloud.vod.v20180717.models.AsrWordsConfigureInfoForUpdate`
         :param ObjectConfigure: 物體識别控制參數。
-        :type ObjectConfigure: :class:`tencentcloud.vod.v20180717.models.ObjectConfigureInfoForUpdate`
+        :type ObjectConfigure: :class:`taifucloudcloud.vod.v20180717.models.ObjectConfigureInfoForUpdate`
         :param ScreenshotInterval: 截幀間隔，單位爲秒，最小值爲 0.5 秒。
         :type ScreenshotInterval: float
         :param SubAppId: 點播[子應用](/document/product/266/14574) ID。如果要訪問子應用中的資源，則将該欄位填寫爲子應用 ID；否則無需填寫該欄位。
@@ -11235,19 +11235,19 @@ class ModifyContentReviewTemplateRequest(AbstractModel):
         :type Name: str
         :param Comment: 内容審核範本描述訊息，長度限制：256 個字元。
         :type Comment: str
-        :param PornConfigure: 鑒黃控制參數。
-        :type PornConfigure: :class:`tencentcloud.vod.v20180717.models.PornConfigureInfoForUpdate`
+        :param PornConfigure:  控制參數。
+        :type PornConfigure: :class:`taifucloudcloud.vod.v20180717.models.PornConfigureInfoForUpdate`
         :param TerrorismConfigure: 鑒恐控制參數。
-        :type TerrorismConfigure: :class:`tencentcloud.vod.v20180717.models.TerrorismConfigureInfoForUpdate`
+        :type TerrorismConfigure: :class:`taifucloudcloud.vod.v20180717.models.TerrorismConfigureInfoForUpdate`
         :param PoliticalConfigure: 鑒政控制參數。
-        :type PoliticalConfigure: :class:`tencentcloud.vod.v20180717.models.PoliticalConfigureInfoForUpdate`
+        :type PoliticalConfigure: :class:`taifucloudcloud.vod.v20180717.models.PoliticalConfigureInfoForUpdate`
         :param ProhibitedConfigure: 違禁控制參數。違禁内容包括：
 <li>謾罵；</li>
 <li>涉毒違法。</li>
 注意：此參數尚未支援。
-        :type ProhibitedConfigure: :class:`tencentcloud.vod.v20180717.models.ProhibitedConfigureInfoForUpdate`
+        :type ProhibitedConfigure: :class:`taifucloudcloud.vod.v20180717.models.ProhibitedConfigureInfoForUpdate`
         :param UserDefineConfigure: 用戶自定義内容審核控制參數。
-        :type UserDefineConfigure: :class:`tencentcloud.vod.v20180717.models.UserDefineConfigureInfoForUpdate`
+        :type UserDefineConfigure: :class:`taifucloudcloud.vod.v20180717.models.UserDefineConfigureInfoForUpdate`
         :param ScreenshotInterval: 截幀間隔，單位爲秒，最小值爲 0.5 秒。
         :type ScreenshotInterval: float
         :param ReviewWallSwitch: 審核結果是否進入審核牆（對審核結果進行人工複核）的開關。
@@ -11414,7 +11414,7 @@ class ModifyMediaInfoRequest(AbstractModel):
         :type Description: str
         :param ClassId: 媒體文件分類 ID。
         :type ClassId: int
-        :param ExpireTime: 媒體文件過期時間，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。填“9999-12-31T23:59:59Z”表示永不過期。過期後該媒體文件及其相關資源（轉碼結果、雪碧圖等）将被永久删除。
+        :param ExpireTime: 媒體文件過期時間，采用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。填“9999-12-31T23:59:59Z”表示永不過期。過期後該媒體文件及其相關資源（轉碼結果、雪碧圖等）将被永久删除。
         :type ExpireTime: str
         :param CoverData: 視訊封面圖片文件（如 jpeg, png 等）進行 [Base64](https://tools.ietf.org/html/rfc4648) 編碼後的字串，僅支援 gif、jpeg、png 三種圖片格式。
         :type CoverData: str
@@ -11513,9 +11513,9 @@ class ModifyPersonSampleRequest(AbstractModel):
 3. All：用于内容識别、内容審核，等價于 1+2。
         :type Usages: list of str
         :param FaceOperationInfo: 人臉操作訊息。
-        :type FaceOperationInfo: :class:`tencentcloud.vod.v20180717.models.AiSampleFaceOperation`
+        :type FaceOperationInfo: :class:`taifucloudcloud.vod.v20180717.models.AiSampleFaceOperation`
         :param TagOperationInfo: 标簽操作訊息。
-        :type TagOperationInfo: :class:`tencentcloud.vod.v20180717.models.AiSampleTagOperation`
+        :type TagOperationInfo: :class:`taifucloudcloud.vod.v20180717.models.AiSampleTagOperation`
         :param SubAppId: 點播[子應用](/document/product/266/14574) ID。如果要訪問子應用中的資源，則将該欄位填寫爲子應用 ID；否則無需填寫該欄位。
         :type SubAppId: int
         """
@@ -11550,7 +11550,7 @@ class ModifyPersonSampleResponse(AbstractModel):
     def __init__(self):
         """
         :param Person: 人物訊息。
-        :type Person: :class:`tencentcloud.vod.v20180717.models.AiSamplePerson`
+        :type Person: :class:`taifucloudcloud.vod.v20180717.models.AiSamplePerson`
         :param FailFaceInfoSet: 處理失敗的人臉訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FailFaceInfoSet: list of AiSampleFailFaceInfo
@@ -11853,7 +11853,7 @@ class ModifySuperPlayerConfigRequest(AbstractModel):
         :param AdaptiveDynamicStreamingDefinition: 允許輸出的未加密的自适應碼流範本 ID。
         :type AdaptiveDynamicStreamingDefinition: int
         :param DrmStreamingsInfo: 允許輸出的 DRM 自适應碼流範本内容。
-        :type DrmStreamingsInfo: :class:`tencentcloud.vod.v20180717.models.DrmStreamingsInfoForUpdate`
+        :type DrmStreamingsInfo: :class:`taifucloudcloud.vod.v20180717.models.DrmStreamingsInfoForUpdate`
         :param ImageSpriteDefinition: 允許輸出的雪碧圖範本 ID。
         :type ImageSpriteDefinition: int
         :param ResolutionNames: 播放器對不于不同分辨率的子流展示名字。
@@ -11932,11 +11932,11 @@ class ModifyTranscodeTemplateRequest(AbstractModel):
 <li>1：去除</li>
         :type RemoveAudio: int
         :param VideoTemplate: 視訊流配置參數。
-        :type VideoTemplate: :class:`tencentcloud.vod.v20180717.models.VideoTemplateInfoForUpdate`
+        :type VideoTemplate: :class:`taifucloudcloud.vod.v20180717.models.VideoTemplateInfoForUpdate`
         :param AudioTemplate: 音訊流配置參數。
-        :type AudioTemplate: :class:`tencentcloud.vod.v20180717.models.AudioTemplateInfoForUpdate`
+        :type AudioTemplate: :class:`taifucloudcloud.vod.v20180717.models.AudioTemplateInfoForUpdate`
         :param TEHDConfig: 極速高清轉碼參數。
-        :type TEHDConfig: :class:`tencentcloud.vod.v20180717.models.TEHDConfigForUpdate`
+        :type TEHDConfig: :class:`taifucloudcloud.vod.v20180717.models.TEHDConfigForUpdate`
         :param SubAppId: 點播[子應用](/document/product/266/14574) ID。如果要訪問子應用中的資源，則将該欄位填寫爲子應用 ID；否則無需填寫該欄位。
         :type SubAppId: int
         """
@@ -12016,11 +12016,11 @@ class ModifyWatermarkTemplateRequest(AbstractModel):
 <li>當字串以 px 結尾，表示浮水印 YPos 爲指定像素，如 100px 表示 YPos 爲 100 像素。</li>
         :type YPos: str
         :param ImageTemplate: 圖片浮水印範本，該欄位僅對圖片水印範本有效。
-        :type ImageTemplate: :class:`tencentcloud.vod.v20180717.models.ImageWatermarkInputForUpdate`
+        :type ImageTemplate: :class:`taifucloudcloud.vod.v20180717.models.ImageWatermarkInputForUpdate`
         :param TextTemplate: 文字浮水印範本，該欄位僅對文字水印範本有效。
-        :type TextTemplate: :class:`tencentcloud.vod.v20180717.models.TextWatermarkTemplateInputForUpdate`
+        :type TextTemplate: :class:`taifucloudcloud.vod.v20180717.models.TextWatermarkTemplateInputForUpdate`
         :param SvgTemplate: SVG 浮水印範本，該欄位僅對 SVG 水印範本有效。
-        :type SvgTemplate: :class:`tencentcloud.vod.v20180717.models.SvgWatermarkInputForUpdate`
+        :type SvgTemplate: :class:`taifucloudcloud.vod.v20180717.models.SvgWatermarkInputForUpdate`
         :param SubAppId: 點播[子應用](/document/product/266/14574) ID。如果要訪問子應用中的資源，則将該欄位填寫爲子應用 ID；否則無需填寫該欄位。
         :type SubAppId: int
         """
@@ -12096,7 +12096,7 @@ class ModifyWordSampleRequest(AbstractModel):
 7. All：通過光學字元識别技術、語音識别技術，進行内容識别、内容審核，等價于 1+2+3+4。
         :type Usages: list of str
         :param TagOperationInfo: 标簽操作訊息。
-        :type TagOperationInfo: :class:`tencentcloud.vod.v20180717.models.AiSampleTagOperation`
+        :type TagOperationInfo: :class:`taifucloudcloud.vod.v20180717.models.AiSampleTagOperation`
         :param SubAppId: 點播[子應用](/document/product/266/14574) ID。如果要訪問子應用中的資源，則将該欄位填寫爲子應用 ID；否則無需填寫該欄位。
         :type SubAppId: int
         """
@@ -12457,14 +12457,14 @@ class PlayerConfig(AbstractModel):
         :type AdaptiveDynamicStreamingDefinition: int
         :param DrmStreamingsInfo: 允許輸出的 DRM 自适應碼流範本内容。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type DrmStreamingsInfo: :class:`tencentcloud.vod.v20180717.models.DrmStreamingsInfo`
+        :type DrmStreamingsInfo: :class:`taifucloudcloud.vod.v20180717.models.DrmStreamingsInfo`
         :param ImageSpriteDefinition: 允許輸出的雪碧圖範本 ID。
         :type ImageSpriteDefinition: int
         :param ResolutionNameSet: 播放器對不于不同分辨率的子流展示名字。
         :type ResolutionNameSet: list of ResolutionNameInfo
-        :param CreateTime: 播放器配置創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+        :param CreateTime: 播放器配置創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
         :type CreateTime: str
-        :param UpdateTime: 播放器配置最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+        :param UpdateTime: 播放器配置最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
         :type UpdateTime: str
         :param Comment: 範本描述訊息。
         :type Comment: str
@@ -12564,13 +12564,13 @@ class PoliticalConfigureInfo(AbstractModel):
         """
         :param ImgReviewInfo: 畫面鑒政控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ImgReviewInfo: :class:`tencentcloud.vod.v20180717.models.PoliticalImgReviewTemplateInfo`
+        :type ImgReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.PoliticalImgReviewTemplateInfo`
         :param AsrReviewInfo: 語音鑒政控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AsrReviewInfo: :class:`tencentcloud.vod.v20180717.models.PoliticalAsrReviewTemplateInfo`
+        :type AsrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.PoliticalAsrReviewTemplateInfo`
         :param OcrReviewInfo: 文本鑒政控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OcrReviewInfo: :class:`tencentcloud.vod.v20180717.models.PoliticalOcrReviewTemplateInfo`
+        :type OcrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.PoliticalOcrReviewTemplateInfo`
         """
         self.ImgReviewInfo = None
         self.AsrReviewInfo = None
@@ -12597,11 +12597,11 @@ class PoliticalConfigureInfoForUpdate(AbstractModel):
     def __init__(self):
         """
         :param ImgReviewInfo: 畫面鑒政控制參數。
-        :type ImgReviewInfo: :class:`tencentcloud.vod.v20180717.models.PoliticalImgReviewTemplateInfoForUpdate`
+        :type ImgReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.PoliticalImgReviewTemplateInfoForUpdate`
         :param AsrReviewInfo: 語音鑒政控制參數。
-        :type AsrReviewInfo: :class:`tencentcloud.vod.v20180717.models.PoliticalAsrReviewTemplateInfoForUpdate`
+        :type AsrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.PoliticalAsrReviewTemplateInfoForUpdate`
         :param OcrReviewInfo: 文本鑒政控制參數。
-        :type OcrReviewInfo: :class:`tencentcloud.vod.v20180717.models.PoliticalOcrReviewTemplateInfoForUpdate`
+        :type OcrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.PoliticalOcrReviewTemplateInfoForUpdate`
         """
         self.ImgReviewInfo = None
         self.AsrReviewInfo = None
@@ -12745,15 +12745,15 @@ class PoliticalOcrReviewTemplateInfoForUpdate(AbstractModel):
 
 
 class PornAsrReviewTemplateInfo(AbstractModel):
-    """語音鑒黃任務控制參數
+    """語音 任務控制參數
 
     """
 
     def __init__(self):
         """
-        :param Switch: 語音鑒黃任務開關，可選值：
-<li>ON：開啓語音鑒黃任務；</li>
-<li>OFF：關閉語音鑒黃任務。</li>
+        :param Switch: 語音 任務開關，可選值：
+<li>ON：開啓語音 任務；</li>
+<li>OFF：關閉語音 任務。</li>
         :type Switch: str
         :param BlockConfidence: 判定涉嫌違規的分數阈值，當智慧審核達到該分數以上，認爲涉嫌違規，不填預設爲 100 分。取值範圍：0~100。
         :type BlockConfidence: int
@@ -12772,15 +12772,15 @@ class PornAsrReviewTemplateInfo(AbstractModel):
 
 
 class PornAsrReviewTemplateInfoForUpdate(AbstractModel):
-    """語音鑒黃任務控制參數。
+    """語音 任務控制參數。
 
     """
 
     def __init__(self):
         """
-        :param Switch: 語音鑒黃任務開關，可選值：
-<li>ON：開啓語音鑒黃任務；</li>
-<li>OFF：關閉語音鑒黃任務。</li>
+        :param Switch: 語音 任務開關，可選值：
+<li>ON：開啓語音 任務；</li>
+<li>OFF：關閉語音 任務。</li>
         :type Switch: str
         :param BlockConfidence: 判定涉嫌違規的分數阈值，當智慧審核達到該分數以上，認爲涉嫌違規。取值範圍：0~100。
         :type BlockConfidence: int
@@ -12799,21 +12799,21 @@ class PornAsrReviewTemplateInfoForUpdate(AbstractModel):
 
 
 class PornConfigureInfo(AbstractModel):
-    """鑒黃任務控制參數
+    """ 任務控制參數
 
     """
 
     def __init__(self):
         """
-        :param ImgReviewInfo: 畫面鑒黃控制參數。
+        :param ImgReviewInfo: 畫面 控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ImgReviewInfo: :class:`tencentcloud.vod.v20180717.models.PornImgReviewTemplateInfo`
-        :param AsrReviewInfo: 語音鑒黃控制參數。
+        :type ImgReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.PornImgReviewTemplateInfo`
+        :param AsrReviewInfo: 語音 控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AsrReviewInfo: :class:`tencentcloud.vod.v20180717.models.PornAsrReviewTemplateInfo`
-        :param OcrReviewInfo: 文本鑒黃控制參數。
+        :type AsrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.PornAsrReviewTemplateInfo`
+        :param OcrReviewInfo: 文本 控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OcrReviewInfo: :class:`tencentcloud.vod.v20180717.models.PornOcrReviewTemplateInfo`
+        :type OcrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.PornOcrReviewTemplateInfo`
         """
         self.ImgReviewInfo = None
         self.AsrReviewInfo = None
@@ -12833,18 +12833,18 @@ class PornConfigureInfo(AbstractModel):
 
 
 class PornConfigureInfoForUpdate(AbstractModel):
-    """鑒黃任務控制參數。
+    """ 任務控制參數。
 
     """
 
     def __init__(self):
         """
-        :param ImgReviewInfo: 畫面鑒黃控制參數。
-        :type ImgReviewInfo: :class:`tencentcloud.vod.v20180717.models.PornImgReviewTemplateInfoForUpdate`
-        :param AsrReviewInfo: 語音鑒黃控制參數。
-        :type AsrReviewInfo: :class:`tencentcloud.vod.v20180717.models.PornAsrReviewTemplateInfoForUpdate`
-        :param OcrReviewInfo: 文本鑒黃控制參數。
-        :type OcrReviewInfo: :class:`tencentcloud.vod.v20180717.models.PornOcrReviewTemplateInfoForUpdate`
+        :param ImgReviewInfo: 畫面 控制參數。
+        :type ImgReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.PornImgReviewTemplateInfoForUpdate`
+        :param AsrReviewInfo: 語音 控制參數。
+        :type AsrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.PornAsrReviewTemplateInfoForUpdate`
+        :param OcrReviewInfo: 文本 控制參數。
+        :type OcrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.PornOcrReviewTemplateInfoForUpdate`
         """
         self.ImgReviewInfo = None
         self.AsrReviewInfo = None
@@ -12864,17 +12864,17 @@ class PornConfigureInfoForUpdate(AbstractModel):
 
 
 class PornImgReviewTemplateInfo(AbstractModel):
-    """畫面鑒黃任務控制參數
+    """畫面 任務控制參數
 
     """
 
     def __init__(self):
         """
-        :param Switch: 畫面鑒黃任務開關，可選值：
-<li>ON：開啓畫面鑒黃任務；</li>
-<li>OFF：關閉畫面鑒黃任務。</li>
+        :param Switch: 畫面 任務開關，可選值：
+<li>ON：開啓畫面 任務；</li>
+<li>OFF：關閉畫面 任務。</li>
         :type Switch: str
-        :param LabelSet: 畫面鑒黃過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回，可選值爲：
+        :param LabelSet: 畫面 過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回，可選值爲：
 <li>porn：色情；</li>
 <li>vulgar：低俗；</li>
 <li>intimacy：親密行爲；</li>
@@ -12899,17 +12899,17 @@ class PornImgReviewTemplateInfo(AbstractModel):
 
 
 class PornImgReviewTemplateInfoForUpdate(AbstractModel):
-    """畫面鑒黃任務控制參數。
+    """畫面 任務控制參數。
 
     """
 
     def __init__(self):
         """
-        :param Switch: 畫面鑒黃任務開關，可選值：
-<li>ON：開啓畫面鑒黃任務；</li>
-<li>OFF：關閉畫面鑒黃任務。</li>
+        :param Switch: 畫面 任務開關，可選值：
+<li>ON：開啓畫面 任務；</li>
+<li>OFF：關閉畫面 任務。</li>
         :type Switch: str
-        :param LabelSet: 畫面鑒黃過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回，可選值爲：
+        :param LabelSet: 畫面 過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回，可選值爲：
 <li>porn：色情；</li>
 <li>vulgar：低俗；</li>
 <li>intimacy：親密行爲；</li>
@@ -12934,15 +12934,15 @@ class PornImgReviewTemplateInfoForUpdate(AbstractModel):
 
 
 class PornOcrReviewTemplateInfo(AbstractModel):
-    """文本鑒黃任務控制參數
+    """文本 任務控制參數
 
     """
 
     def __init__(self):
         """
-        :param Switch: 文本鑒黃任務開關，可選值：
-<li>ON：開啓文本鑒黃任務；</li>
-<li>OFF：關閉文本鑒黃任務。</li>
+        :param Switch: 文本 任務開關，可選值：
+<li>ON：開啓文本 任務；</li>
+<li>OFF：關閉文本 任務。</li>
         :type Switch: str
         :param BlockConfidence: 判定涉嫌違規的分數阈值，當智慧審核達到該分數以上，認爲涉嫌違規，不填預設爲 100 分。取值範圍：0~100。
         :type BlockConfidence: int
@@ -12961,15 +12961,15 @@ class PornOcrReviewTemplateInfo(AbstractModel):
 
 
 class PornOcrReviewTemplateInfoForUpdate(AbstractModel):
-    """文本鑒黃任務控制參數。
+    """文本 任務控制參數。
 
     """
 
     def __init__(self):
         """
-        :param Switch: 文本鑒黃任務開關，可選值：
-<li>ON：開啓文本鑒黃任務；</li>
-<li>OFF：關閉文本鑒黃任務。</li>
+        :param Switch: 文本 任務開關，可選值：
+<li>ON：開啓文本 任務；</li>
+<li>OFF：關閉文本 任務。</li>
         :type Switch: str
         :param BlockConfidence: 判定涉嫌違規的分數阈值，當智慧審核達到該分數以上，認爲涉嫌違規。取值範圍：0~100。
         :type BlockConfidence: int
@@ -13005,20 +13005,20 @@ class ProcedureTask(AbstractModel):
         :param Message: 已棄用，請使用各個具體任務的 Message。
         :type Message: str
         :param FileId: 媒體文件 ID
-<li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 發起，該欄位表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 FileId；</li>
-<li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 發起，該欄位表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Id。</li>
+<li>若流程由 [ProcessMedia](https://cloud.taifucloud.com/document/product/266/33427) 發起，該欄位表示 [MediaInfo](https://cloud.taifucloud.com/document/product/266/31773#MediaInfo) 的 FileId；</li>
+<li>若流程由 [ProcessMediaByUrl](https://cloud.taifucloud.com/document/product/266/33426) 發起，該欄位表示 [MediaInputInfo](https://cloud.taifucloud.com/document/product/266/31773#MediaInputInfo) 的 Id。</li>
         :type FileId: str
         :param FileName: 媒體文件名稱
-<li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 發起，該欄位表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.Name；</li>
-<li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 發起，該欄位表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Name。</li>
+<li>若流程由 [ProcessMedia](https://cloud.taifucloud.com/document/product/266/33427) 發起，該欄位表示 [MediaInfo](https://cloud.taifucloud.com/document/product/266/31773#MediaInfo) 的 BasicInfo.Name；</li>
+<li>若流程由 [ProcessMediaByUrl](https://cloud.taifucloud.com/document/product/266/33426) 發起，該欄位表示 [MediaInputInfo](https://cloud.taifucloud.com/document/product/266/31773#MediaInputInfo) 的 Name。</li>
         :type FileName: str
         :param FileUrl: 媒體文件網址
-<li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 發起，該欄位表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.MediaUrl；</li>
-<li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 發起，該欄位表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Url。</li>
+<li>若流程由 [ProcessMedia](https://cloud.taifucloud.com/document/product/266/33427) 發起，該欄位表示 [MediaInfo](https://cloud.taifucloud.com/document/product/266/31773#MediaInfo) 的 BasicInfo.MediaUrl；</li>
+<li>若流程由 [ProcessMediaByUrl](https://cloud.taifucloud.com/document/product/266/33426) 發起，該欄位表示 [MediaInputInfo](https://cloud.taifucloud.com/document/product/266/31773#MediaInputInfo) 的 Url。</li>
         :type FileUrl: str
         :param MetaData: 原始視訊的元訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MetaData: :class:`tencentcloud.vod.v20180717.models.MediaMetaData`
+        :type MetaData: :class:`taifucloudcloud.vod.v20180717.models.MediaMetaData`
         :param MediaProcessResultSet: 視訊處理任務的執行狀态與結果。
         :type MediaProcessResultSet: list of MediaProcessTaskResult
         :param AiContentReviewResultSet: 視訊内容審核任務的執行狀态與結果。
@@ -13115,22 +13115,22 @@ class ProcedureTemplate(AbstractModel):
         :type Comment: str
         :param MediaProcessTask: 視訊處理類型任務參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MediaProcessTask: :class:`tencentcloud.vod.v20180717.models.MediaProcessTaskInput`
+        :type MediaProcessTask: :class:`taifucloudcloud.vod.v20180717.models.MediaProcessTaskInput`
         :param AiContentReviewTask: AI 智慧内容審核類型任務參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AiContentReviewTask: :class:`tencentcloud.vod.v20180717.models.AiContentReviewTaskInput`
+        :type AiContentReviewTask: :class:`taifucloudcloud.vod.v20180717.models.AiContentReviewTaskInput`
         :param AiAnalysisTask: AI 智慧内容分析類型任務參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AiAnalysisTask: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskInput`
+        :type AiAnalysisTask: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskInput`
         :param AiRecognitionTask: AI 内容識别類型任務參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AiRecognitionTask: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskInput`
-        :param MiniProgramPublishTask: 微信小程式發布任務參數。
+        :type AiRecognitionTask: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskInput`
+        :param MiniProgramPublishTask:  小程式發布任務參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MiniProgramPublishTask: :class:`tencentcloud.vod.v20180717.models.WechatMiniProgramPublishTaskInput`
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :type MiniProgramPublishTask: :class:`taifucloudcloud.vod.v20180717.models.WechatMiniProgramPublishTaskInput`
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type UpdateTime: str
         """
         self.Name = None
@@ -13242,15 +13242,15 @@ class ProcessMediaByUrlRequest(AbstractModel):
     def __init__(self):
         """
         :param InputInfo: 輸入視訊訊息，包括視訊 URL ， 名稱、視訊自定義 ID。
-        :type InputInfo: :class:`tencentcloud.vod.v20180717.models.MediaInputInfo`
+        :type InputInfo: :class:`taifucloudcloud.vod.v20180717.models.MediaInputInfo`
         :param OutputInfo: 輸出文件 COS 路徑訊息。
-        :type OutputInfo: :class:`tencentcloud.vod.v20180717.models.MediaOutputInfo`
+        :type OutputInfo: :class:`taifucloudcloud.vod.v20180717.models.MediaOutputInfo`
         :param AiContentReviewTask: 視訊内容審核類型任務參數。
-        :type AiContentReviewTask: :class:`tencentcloud.vod.v20180717.models.AiContentReviewTaskInput`
+        :type AiContentReviewTask: :class:`taifucloudcloud.vod.v20180717.models.AiContentReviewTaskInput`
         :param AiAnalysisTask: 視訊内容分析類型任務參數。
-        :type AiAnalysisTask: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskInput`
+        :type AiAnalysisTask: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskInput`
         :param AiRecognitionTask: 視訊内容識别類型任務參數。
-        :type AiRecognitionTask: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskInput`
+        :type AiRecognitionTask: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskInput`
         :param TasksPriority: 任務流的優先級，數值越大優先級越高，取值範圍是 -10 到 10，不填代表 0。
         :type TasksPriority: int
         :param TasksNotifyMode: 任務流狀态變更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
@@ -13325,16 +13325,16 @@ class ProcessMediaRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param FileId: 媒體文件 ID，即該文件在雲點播上的全局唯一标識符，在上傳成功後由雲點播後台分配。可以在 [視訊上傳完成事件通知](/document/product/266/7830) 或 [雲點播控制台](https://console.cloud.tencent.com/vod/media) 獲取該欄位。
+        :param FileId: 媒體文件 ID，即該文件在雲點播上的全局唯一标識符，在上傳成功後由雲點播後台分配。可以在 [視訊上傳完成事件通知](/document/product/266/7830) 或 [雲點播控制台](https://console.cloud.taifucloud.com/vod/media) 獲取該欄位。
         :type FileId: str
         :param MediaProcessTask: 視訊處理類型任務參數。
-        :type MediaProcessTask: :class:`tencentcloud.vod.v20180717.models.MediaProcessTaskInput`
+        :type MediaProcessTask: :class:`taifucloudcloud.vod.v20180717.models.MediaProcessTaskInput`
         :param AiContentReviewTask: 視訊内容審核類型任務參數。
-        :type AiContentReviewTask: :class:`tencentcloud.vod.v20180717.models.AiContentReviewTaskInput`
+        :type AiContentReviewTask: :class:`taifucloudcloud.vod.v20180717.models.AiContentReviewTaskInput`
         :param AiAnalysisTask: 視訊内容分析類型任務參數。
-        :type AiAnalysisTask: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskInput`
+        :type AiAnalysisTask: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskInput`
         :param AiRecognitionTask: 視訊内容識别類型任務參數。
-        :type AiRecognitionTask: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskInput`
+        :type AiRecognitionTask: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskInput`
         :param TasksPriority: 任務流的優先級，數值越大優先級越高，取值範圍是 -10 到 10，不填代表 0。
         :type TasksPriority: int
         :param TasksNotifyMode: 任務流狀态變更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
@@ -13467,10 +13467,10 @@ class ProhibitedConfigureInfo(AbstractModel):
         """
         :param AsrReviewInfo: 語音違禁控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AsrReviewInfo: :class:`tencentcloud.vod.v20180717.models.ProhibitedAsrReviewTemplateInfo`
+        :type AsrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.ProhibitedAsrReviewTemplateInfo`
         :param OcrReviewInfo: 文本違禁控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OcrReviewInfo: :class:`tencentcloud.vod.v20180717.models.ProhibitedOcrReviewTemplateInfo`
+        :type OcrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.ProhibitedOcrReviewTemplateInfo`
         """
         self.AsrReviewInfo = None
         self.OcrReviewInfo = None
@@ -13493,9 +13493,9 @@ class ProhibitedConfigureInfoForUpdate(AbstractModel):
     def __init__(self):
         """
         :param AsrReviewInfo: 語音違禁控制參數。
-        :type AsrReviewInfo: :class:`tencentcloud.vod.v20180717.models.ProhibitedAsrReviewTemplateInfoForUpdate`
+        :type AsrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.ProhibitedAsrReviewTemplateInfoForUpdate`
         :param OcrReviewInfo: 文本違禁控制參數。
-        :type OcrReviewInfo: :class:`tencentcloud.vod.v20180717.models.ProhibitedOcrReviewTemplateInfoForUpdate`
+        :type OcrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.ProhibitedOcrReviewTemplateInfoForUpdate`
         """
         self.AsrReviewInfo = None
         self.OcrReviewInfo = None
@@ -13620,19 +13620,19 @@ class PullUploadRequest(AbstractModel):
     def __init__(self):
         """
         :param MediaUrl: 要拉取的媒體 URL，暫不支援拉取 HLS 和 Dash 格式。
-支援的擴展名詳見[媒體類型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
+支援的擴展名詳見[媒體類型](https://cloud.taifucloud.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
         :type MediaUrl: str
         :param MediaName: 媒體名稱。
         :type MediaName: str
         :param CoverUrl: 要拉取的視訊封面 URL。僅支援 gif、jpeg、png 三種圖片格式。
         :type CoverUrl: str
-        :param Procedure: 媒體後續任務操作，詳見[上傳指定任務流](https://cloud.tencent.com/document/product/266/9759)。
+        :param Procedure: 媒體後續任務操作，詳見[上傳指定任務流](https://cloud.taifucloud.com/document/product/266/9759)。
         :type Procedure: str
-        :param ExpireTime: 媒體文件過期時間，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param ExpireTime: 媒體文件過期時間，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type ExpireTime: str
-        :param StorageRegion: 指定上傳園區，僅适用于對上傳地域有特殊需求的用戶（目前僅支援北京、上海和重慶園區）。
+        :param StorageRegion: 指定上傳園區，僅适用于對上傳地域有特殊需求的用戶（目前僅支援 、 和 園區）。
         :type StorageRegion: str
-        :param ClassId: 分類ID，用于對媒體進行分類管理，可通過[創建分類](https://cloud.tencent.com/document/product/266/7812)介面，創建分類，獲得分類 ID。
+        :param ClassId: 分類ID，用于對媒體進行分類管理，可通過[創建分類](https://cloud.taifucloud.com/document/product/266/7812)介面，創建分類，獲得分類 ID。
         :type ClassId: int
         :param SessionContext: 來源上下文，用于透傳用戶請求訊息，當指定 Procedure 任務後，任務流狀态變更回調将返回該欄位值，最長 1000 個字元。
         :type SessionContext: str
@@ -13715,7 +13715,7 @@ class PullUploadTask(AbstractModel):
         :type FileId: str
         :param MediaBasicInfo: 轉拉完成後生成的媒體文件基礎訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MediaBasicInfo: :class:`tencentcloud.vod.v20180717.models.MediaBasicInfo`
+        :type MediaBasicInfo: :class:`taifucloudcloud.vod.v20180717.models.MediaBasicInfo`
         :param FileUrl: 轉拉上傳完成後生成的播放網址。
         :type FileUrl: str
         :param ProcedureTaskId: 若轉拉上傳時指定了視訊處理流程，則該參數爲流程任務 ID。
@@ -13802,13 +13802,13 @@ class ResetProcedureTemplateRequest(AbstractModel):
         :param Comment: 範本描述訊息，長度限制：256 個字元。
         :type Comment: str
         :param MediaProcessTask: 視訊處理類型任務參數。
-        :type MediaProcessTask: :class:`tencentcloud.vod.v20180717.models.MediaProcessTaskInput`
+        :type MediaProcessTask: :class:`taifucloudcloud.vod.v20180717.models.MediaProcessTaskInput`
         :param AiContentReviewTask: AI 智慧内容審核類型任務參數。
-        :type AiContentReviewTask: :class:`tencentcloud.vod.v20180717.models.AiContentReviewTaskInput`
+        :type AiContentReviewTask: :class:`taifucloudcloud.vod.v20180717.models.AiContentReviewTaskInput`
         :param AiAnalysisTask: AI 智慧内容分析類型任務參數。
-        :type AiAnalysisTask: :class:`tencentcloud.vod.v20180717.models.AiAnalysisTaskInput`
+        :type AiAnalysisTask: :class:`taifucloudcloud.vod.v20180717.models.AiAnalysisTaskInput`
         :param AiRecognitionTask: AI 内容識别類型任務參數。
-        :type AiRecognitionTask: :class:`tencentcloud.vod.v20180717.models.AiRecognitionTaskInput`
+        :type AiRecognitionTask: :class:`taifucloudcloud.vod.v20180717.models.AiRecognitionTaskInput`
         :param SubAppId: 點播[子應用](/document/product/266/14574) ID。如果要訪問子應用中的資源，則将該欄位填寫爲子應用 ID；否則無需填寫該欄位。
         :type SubAppId: int
         """
@@ -13945,9 +13945,9 @@ class SampleSnapshotTemplate(AbstractModel):
         :type SampleType: str
         :param SampleInterval: 采樣間隔。
         :type SampleInterval: int
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type UpdateTime: str
         :param FillType: 填充方式，當視訊流配置寬高參數與原始視訊的寬高比不一緻時，對轉碼的處理方式，即爲“填充”。可選填充方式：
 <li> stretch：拉伸，對每一幀進行拉伸，填滿整個畫面，可能導緻轉碼後的視訊被“壓扁“或者“拉長“；</li>
@@ -14005,22 +14005,22 @@ class SearchMediaRequest(AbstractModel):
         :type ClassIds: list of int
         :param StartTime: 創建時間的開始時間。
 <li>大于等于開始時間。</li>
-<li>格式按照 ISO 8601标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
+<li>格式按照 ISO 8601标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。</li>
         :type StartTime: str
         :param EndTime: 創建時間的結束時間。
 <li>小於結束時間。</li>
-<li>格式按照 ISO 8601标準表示，詳見 [ISO 日期格式說明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
+<li>格式按照 ISO 8601标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。</li>
         :type EndTime: str
-        :param SourceType: 媒體文件來源，來源取值參見 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
+        :param SourceType: 媒體文件來源，來源取值參見 [SourceType](https://cloud.taifucloud.com/document/product/266/31773#MediaSourceData)。
         :type SourceType: str
-        :param StreamId: 推流 [直播碼](https://cloud.tencent.com/document/product/267/5959)。
+        :param StreamId: 推流 [直播碼](https://cloud.taifucloud.com/document/product/267/5959)。
         :type StreamId: str
         :param Vid: 直播錄制文件的唯一标識。
         :type Vid: str
         :param Sort: 排序方式。
 <li>Sort.Field 可選值：CreateTime</li>
 <li>指定 Text 搜索時，将根據比對度排序，該欄位無效</li>
-        :type Sort: :class:`tencentcloud.vod.v20180717.models.SortBy`
+        :type Sort: :class:`taifucloudcloud.vod.v20180717.models.SortBy`
         :param Offset: <div id="p_offset">分頁返回的起始偏移量，預設值：0。将返回第 Offset 到第 Offset+Limit-1 條。
 <li>取值範圍：Offset + Limit 不超過5000。（參見：<a href="#maxResultsDesc">介面返回結果數限制</a>）</li></div>
         :type Offset: int
@@ -14170,7 +14170,7 @@ class SimpleHlsClipResponse(AbstractModel):
         :param Url: 裁剪後的視訊網址。
         :type Url: str
         :param MetaData: 裁剪後的視訊元訊息。目前`Size`，`Rotate`，`VideoDuration`，`AudioDuration` 幾個欄位暫時缺省，沒有真實數據。
-        :type MetaData: :class:`tencentcloud.vod.v20180717.models.MediaMetaData`
+        :type MetaData: :class:`taifucloudcloud.vod.v20180717.models.MediaMetaData`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -14215,7 +14215,7 @@ class SnapshotByTimeOffset2017(AbstractModel):
 
 
 class SnapshotByTimeOffsetTask2017(AbstractModel):
-    """視訊指定時間點截圖任務訊息，該結構僅用于 2017 版[指定時間點截圖](https://cloud.tencent.com/document/product/266/8102)介面發起的任務。
+    """視訊指定時間點截圖任務訊息，該結構僅用于 2017 版[指定時間點截圖](https://cloud.taifucloud.com/document/product/266/8102)介面發起的任務。
 
     """
 
@@ -14225,7 +14225,7 @@ class SnapshotByTimeOffsetTask2017(AbstractModel):
         :type TaskId: str
         :param FileId: 截圖文件 ID。
         :type FileId: str
-        :param Definition: 截圖規格，參見[指定時間點截圖參數範本](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+        :param Definition: 截圖規格，參見[指定時間點截圖參數範本](https://cloud.taifucloud.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
         :type Definition: int
         :param SnapshotInfoSet: 截圖結果訊息。
         :type SnapshotInfoSet: list of SnapshotByTimeOffset2017
@@ -14316,9 +14316,9 @@ class SnapshotByTimeOffsetTemplate(AbstractModel):
         :type ResolutionAdaptive: str
         :param Format: 圖片格式。
         :type Format: str
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type UpdateTime: str
         :param FillType: 填充方式，當視訊流配置寬高參數與原始視訊的寬高比不一緻時，對轉碼的處理方式，即爲“填充”。可選填充方式：
 <li> stretch：拉伸，對每一幀進行拉伸，填滿整個畫面，可能導緻轉碼後的視訊被“壓扁“或者“拉長“；</li>
@@ -14409,7 +14409,7 @@ class StatDataItem(AbstractModel):
 
     def __init__(self):
         """
-        :param Time: 數據所在時間區間的開始時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。如：當時間粒度爲天，2018-12-01T00:00:00+08:00，表示2018年12月1日（含）到2018年12月2日（不含）區間。
+        :param Time: 數據所在時間區間的開始時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。如：當時間粒度爲天，2018-12-01T00:00:00+08:00，表示2018年12月1日（含）到2018年12月2日（不含）區間。
 <li>表示小時級别數據時，2019-08-22T00:00:00+08:00表示2019-08-22日0點到1點的統計數據。</li>
 <li>表示天級别數據時，2019-08-22T00:00:00+08:00表示2019-08-22日的統計數據。</li>
         :type Time: str
@@ -14513,7 +14513,7 @@ class SubAppIdInfo(AbstractModel):
         :type Name: str
         :param Description: 子應用簡介。
         :type Description: str
-        :param CreateTime: 子應用創建時間，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param CreateTime: 子應用創建時間，采用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
         :param Status: 子應用狀态，有效值：
 <li>On：啓用；</li>
@@ -14605,7 +14605,7 @@ class SvgWatermarkInputForUpdate(AbstractModel):
 花括号 {} 表示由 A、B、C、D 4 個浮水印組成的大週期，可以看出每個大週期持續 20 秒。
 可以看出，A、B、C、D 都是週期性地顯示 5 秒、隐藏 15 秒，且四者有固定的顯示順序。
 此配置項即用來描述單個浮水印的週期配置。
-        :type CycleConfig: :class:`tencentcloud.vod.v20180717.models.WatermarkCycleConfigForUpdate`
+        :type CycleConfig: :class:`taifucloudcloud.vod.v20180717.models.WatermarkCycleConfigForUpdate`
         """
         self.Width = None
         self.Height = None
@@ -14717,7 +14717,7 @@ class TaskSimpleInfo(AbstractModel):
         :param TaskType: 任務類型，取值：
 <li>Procedure：視訊處理任務；</li>
 <li>EditMedia：視訊編輯任務</li>
-<li>WechatDistribute：微信發布任務。</li>
+<li>WechatDistribute： 發布任務。</li>
 兼容 2017 版的任務類型：
 <li>Transcode：視訊轉碼任務；</li>
 <li>SnapshotByTimeOffset：視訊截圖任務；</li>
@@ -14725,11 +14725,11 @@ class TaskSimpleInfo(AbstractModel):
 <li>Clip：視訊剪輯任務；</li>
 <li>ImageSprites：截取雪碧圖任務。</li>
         :type TaskType: str
-        :param CreateTime: 任務創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param CreateTime: 任務創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
-        :param BeginProcessTime: 任務開始執行時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。若任務尚未開始，該欄位爲空。
+        :param BeginProcessTime: 任務開始執行時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。若任務尚未開始，該欄位爲空。
         :type BeginProcessTime: str
-        :param FinishTime: 任務結束時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。若任務尚未完成，該欄位爲空。
+        :param FinishTime: 任務結束時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。若任務尚未完成，該欄位爲空。
         :type FinishTime: str
         :param SessionId: 用于去重的識别碼，如果七天内曾有過相同的識别碼的請求。
         :type SessionId: str
@@ -14834,7 +14834,7 @@ class TaskStatDataItem(AbstractModel):
 
     def __init__(self):
         """
-        :param Time: 數據所在時間區間的開始時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#52)。如：當時間粒度爲天，2018-12-01T00:00:00+08:00，表示2018年12月1日（含）到2018年12月2日（不含）區間。
+        :param Time: 數據所在時間區間的開始時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#52)。如：當時間粒度爲天，2018-12-01T00:00:00+08:00，表示2018年12月1日（含）到2018年12月2日（不含）區間。
         :type Time: str
         :param Count: 任務數。
         :type Count: int
@@ -14890,10 +14890,10 @@ class TerrorismConfigureInfo(AbstractModel):
         """
         :param ImgReviewInfo: 畫面鑒恐任務控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ImgReviewInfo: :class:`tencentcloud.vod.v20180717.models.TerrorismImgReviewTemplateInfo`
+        :type ImgReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.TerrorismImgReviewTemplateInfo`
         :param OcrReviewInfo: 文字鑒恐任務控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OcrReviewInfo: :class:`tencentcloud.vod.v20180717.models.TerrorismOcrReviewTemplateInfo`
+        :type OcrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.TerrorismOcrReviewTemplateInfo`
         """
         self.ImgReviewInfo = None
         self.OcrReviewInfo = None
@@ -14916,9 +14916,9 @@ class TerrorismConfigureInfoForUpdate(AbstractModel):
     def __init__(self):
         """
         :param ImgReviewInfo: 畫面鑒恐任務控制參數。
-        :type ImgReviewInfo: :class:`tencentcloud.vod.v20180717.models.TerrorismImgReviewTemplateInfoForUpdate`
+        :type ImgReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.TerrorismImgReviewTemplateInfoForUpdate`
         :param OcrReviewInfo: 文本鑒恐任務控制參數。
-        :type OcrReviewInfo: :class:`tencentcloud.vod.v20180717.models.TerrorismOcrReviewTemplateInfoForUpdate`
+        :type OcrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.TerrorismOcrReviewTemplateInfoForUpdate`
         """
         self.ImgReviewInfo = None
         self.OcrReviewInfo = None
@@ -15141,7 +15141,7 @@ class TranscodePlayInfo2017(AbstractModel):
         """
         :param Url: 播放網址。
         :type Url: str
-        :param Definition: 轉碼規格 ID，參見[轉碼參數範本](https://cloud.tencent.com/document/product/266/33476)。
+        :param Definition: 轉碼規格 ID，參見[轉碼參數範本](https://cloud.taifucloud.com/document/product/266/33476)。
         :type Definition: int
         :param Bitrate: 視訊流碼率平均值與音訊流碼率平均值之和， 單位：bps。
         :type Bitrate: int
@@ -15166,7 +15166,7 @@ class TranscodePlayInfo2017(AbstractModel):
 
 
 class TranscodeTask2017(AbstractModel):
-    """視訊轉碼任務訊息，該結構僅用于對 2017 版[視訊轉碼](https://cloud.tencent.com/document/product/266/7822)介面發起的任務。
+    """視訊轉碼任務訊息，該結構僅用于對 2017 版[視訊轉碼](https://cloud.taifucloud.com/document/product/266/7822)介面發起的任務。
 
     """
 
@@ -15281,20 +15281,20 @@ class TranscodeTemplate(AbstractModel):
         :type RemoveAudio: int
         :param VideoTemplate: 視訊流配置參數，僅當 RemoveVideo 爲 0，該欄位有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type VideoTemplate: :class:`tencentcloud.vod.v20180717.models.VideoTemplateInfo`
+        :type VideoTemplate: :class:`taifucloudcloud.vod.v20180717.models.VideoTemplateInfo`
         :param AudioTemplate: 音訊流配置參數，僅當 RemoveAudio 爲 0，該欄位有效 。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AudioTemplate: :class:`tencentcloud.vod.v20180717.models.AudioTemplateInfo`
+        :type AudioTemplate: :class:`taifucloudcloud.vod.v20180717.models.AudioTemplateInfo`
         :param TEHDConfig: 極速高清轉碼參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TEHDConfig: :class:`tencentcloud.vod.v20180717.models.TEHDConfig`
+        :type TEHDConfig: :class:`taifucloudcloud.vod.v20180717.models.TEHDConfig`
         :param ContainerType: 封裝格式過濾條件，可選值：
 <li>Video：視訊格式，可以同時包含視訊流和音訊流的封裝格式；</li>
 <li>PureAudio：純音訊格式，只能包含音訊流的封裝格式板。</li>
         :type ContainerType: str
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type UpdateTime: str
         """
         self.Definition = None
@@ -15470,13 +15470,13 @@ class UserDefineConfigureInfo(AbstractModel):
         """
         :param FaceReviewInfo: 用戶自定義人物審核控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FaceReviewInfo: :class:`tencentcloud.vod.v20180717.models.UserDefineFaceReviewTemplateInfo`
+        :type FaceReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.UserDefineFaceReviewTemplateInfo`
         :param AsrReviewInfo: 用戶自定義語音審核控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AsrReviewInfo: :class:`tencentcloud.vod.v20180717.models.UserDefineAsrTextReviewTemplateInfo`
+        :type AsrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.UserDefineAsrTextReviewTemplateInfo`
         :param OcrReviewInfo: 用戶自定義文本審核控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OcrReviewInfo: :class:`tencentcloud.vod.v20180717.models.UserDefineOcrTextReviewTemplateInfo`
+        :type OcrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.UserDefineOcrTextReviewTemplateInfo`
         """
         self.FaceReviewInfo = None
         self.AsrReviewInfo = None
@@ -15503,11 +15503,11 @@ class UserDefineConfigureInfoForUpdate(AbstractModel):
     def __init__(self):
         """
         :param FaceReviewInfo: 用戶自定義人物審核控制參數。
-        :type FaceReviewInfo: :class:`tencentcloud.vod.v20180717.models.UserDefineFaceReviewTemplateInfoForUpdate`
+        :type FaceReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.UserDefineFaceReviewTemplateInfoForUpdate`
         :param AsrReviewInfo: 用戶自定義語音審核控制參數。
-        :type AsrReviewInfo: :class:`tencentcloud.vod.v20180717.models.UserDefineAsrTextReviewTemplateInfoForUpdate`
+        :type AsrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.UserDefineAsrTextReviewTemplateInfoForUpdate`
         :param OcrReviewInfo: 用戶自定義文本審核控制參數。
-        :type OcrReviewInfo: :class:`tencentcloud.vod.v20180717.models.UserDefineOcrTextReviewTemplateInfoForUpdate`
+        :type OcrReviewInfo: :class:`taifucloudcloud.vod.v20180717.models.UserDefineOcrTextReviewTemplateInfoForUpdate`
         """
         self.FaceReviewInfo = None
         self.AsrReviewInfo = None
@@ -15946,16 +15946,16 @@ class WatermarkTemplate(AbstractModel):
         :type YPos: str
         :param ImageTemplate: 圖片浮水印範本，僅當 Type 爲 image，該欄位有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ImageTemplate: :class:`tencentcloud.vod.v20180717.models.ImageWatermarkTemplate`
+        :type ImageTemplate: :class:`taifucloudcloud.vod.v20180717.models.ImageWatermarkTemplate`
         :param TextTemplate: 文字浮水印範本，僅當 Type 爲 text，該欄位有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TextTemplate: :class:`tencentcloud.vod.v20180717.models.TextWatermarkTemplateInput`
+        :type TextTemplate: :class:`taifucloudcloud.vod.v20180717.models.TextWatermarkTemplateInput`
         :param SvgTemplate: SVG 浮水印範本，當 Type 爲 svg，該欄位有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SvgTemplate: :class:`tencentcloud.vod.v20180717.models.SvgWatermarkInput`
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :type SvgTemplate: :class:`taifucloudcloud.vod.v20180717.models.SvgWatermarkInput`
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type UpdateTime: str
         :param CoordinateOrigin: 原點位置，可選值：
 <li>topLeft：表示坐标原點位于視訊圖像左上角，浮水印原點爲圖片或文字的左上角；</li>
@@ -16046,7 +16046,7 @@ class WeChatMiniProgramPublishResponse(AbstractModel):
 
 
 class WechatMiniProgramPublishTask(AbstractModel):
-    """微信小程式發布任務訊息
+    """ 小程式發布任務訊息
 
     """
 
@@ -16069,7 +16069,7 @@ FINISH：已完成。
         :type FileId: str
         :param SourceDefinition: 發布視訊所對應的轉碼範本 ID，爲 0 代表原始視訊。
         :type SourceDefinition: int
-        :param PublishResult: 微信小程式視訊發布狀态，取值：
+        :param PublishResult:  小程式視訊發布狀态，取值：
 <li>Pass：發布成功；</li>
 <li>Failed：發布失敗；</li>
 <li>Rejected：審核未通過。</li>
@@ -16095,7 +16095,7 @@ FINISH：已完成。
 
 
 class WechatMiniProgramPublishTaskInput(AbstractModel):
-    """微信小程式發布任務類型
+    """ 小程式發布任務類型
 
     """
 
@@ -16112,7 +16112,7 @@ class WechatMiniProgramPublishTaskInput(AbstractModel):
 
 
 class WechatPublishTask(AbstractModel):
-    """微信發布任務訊息
+    """ 發布任務訊息
 
     """
 
@@ -16133,19 +16133,19 @@ FINISH：已完成。
         :type Message: str
         :param FileId: 發布視訊文件 ID。
         :type FileId: str
-        :param Definition: 微信發布範本 ID。
+        :param Definition:  發布範本 ID。
         :type Definition: int
         :param SourceDefinition: 發布視訊所對應的轉碼範本 ID，爲 0 代表原始視訊。
         :type SourceDefinition: int
-        :param WechatStatus: 微信發布狀态，取值：
+        :param WechatStatus:  發布狀态，取值：
 <li>FAIL：失敗；</li>
 <li>SUCCESS：成功；</li>
 <li>AUDITNOTPASS：審核未通過；</li>
-<li>NOTTRIGGERED：尚未發起微信發布。</li>
+<li>NOTTRIGGERED：尚未發起 發布。</li>
         :type WechatStatus: str
-        :param WechatVid: 微信 Vid。
+        :param WechatVid:   Vid。
         :type WechatVid: str
-        :param WechatUrl: 微信網址。
+        :param WechatUrl:  網址。
         :type WechatUrl: str
         """
         self.TaskId = None

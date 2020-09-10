@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class BindEipAclsRequest(AbstractModel):
@@ -762,7 +762,7 @@ class EipInfo(AbstractModel):
         :type EipName: str
         :param Eip: EIP網址
         :type Eip: str
-        :param IspId: 運營商ID 0：電信； 1：聯通； 2：移動； 3：教育網； 4：盈科； 5：BGP； 6：中國香港
+        :param IspId: 運營商ID 0：電信； 1： ； 2： ； 3：教育網； 4：盈科； 5：BGP； 6：  
         :type IspId: int
         :param Status: 狀态 0：創建中； 1：綁定中； 2：已綁定； 3：解綁中； 4：未綁定； 6：下線中； 9：創建失敗
         :type Status: int

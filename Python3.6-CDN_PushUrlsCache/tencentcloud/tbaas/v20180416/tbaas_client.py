@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tbaas.v20180416 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tbaas.v20180416 import models
 
 
 class TbaasClient(AbstractClient):
     _apiVersion = '2018-04-16'
-    _endpoint = 'tbaas.tencentcloudapi.com'
+    _endpoint = 'tbaas.taifucloudcloudapi.com'
 
 
     def ApplyUserCert(self, request):
         """申請用戶證書
 
         :param request: Request instance for ApplyUserCert.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.ApplyUserCertRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.ApplyUserCertResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.ApplyUserCertRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.ApplyUserCertResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TbaasClient(AbstractClient):
         """Bcos根據塊高查詢區塊訊息
 
         :param request: Request instance for BlockByNumberHandler.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.BlockByNumberHandlerRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.BlockByNumberHandlerResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.BlockByNumberHandlerRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.BlockByNumberHandlerResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TbaasClient(AbstractClient):
         """動态佈署合約
 
         :param request: Request instance for DeployDynamicContractHandler.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.DeployDynamicContractHandlerRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.DeployDynamicContractHandlerResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.DeployDynamicContractHandlerRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.DeployDynamicContractHandlerResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TbaasClient(AbstractClient):
         """下載用戶證書
 
         :param request: Request instance for DownloadUserCert.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.DownloadUserCertRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.DownloadUserCertResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.DownloadUserCertRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.DownloadUserCertResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class TbaasClient(AbstractClient):
         """檢視當前網絡下的所有區塊清單，分頁展示
 
         :param request: Request instance for GetBlockList.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.GetBlockListRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetBlockListResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.GetBlockListRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.GetBlockListResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class TbaasClient(AbstractClient):
         """Bcos分頁查詢當前群組下的區塊清單
 
         :param request: Request instance for GetBlockListHandler.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.GetBlockListHandlerRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetBlockListHandlerResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.GetBlockListHandlerRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.GetBlockListHandlerResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class TbaasClient(AbstractClient):
         """獲取區塊内的交易清單
 
         :param request: Request instance for GetBlockTransactionListForUser.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.GetBlockTransactionListForUserRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetBlockTransactionListForUserResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.GetBlockTransactionListForUserRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.GetBlockTransactionListForUserResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class TbaasClient(AbstractClient):
         """獲取區塊鏈網絡概要
 
         :param request: Request instance for GetClusterSummary.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.GetClusterSummaryRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetClusterSummaryResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.GetClusterSummaryRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.GetClusterSummaryResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class TbaasClient(AbstractClient):
         """Invoke異步調用結果查詢
 
         :param request: Request instance for GetInvokeTx.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.GetInvokeTxRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetInvokeTxResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.GetInvokeTxRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.GetInvokeTxResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class TbaasClient(AbstractClient):
         """獲取最新交易清單
 
         :param request: Request instance for GetLatesdTransactionList.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.GetLatesdTransactionListRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetLatesdTransactionListResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.GetLatesdTransactionListRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.GetLatesdTransactionListResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class TbaasClient(AbstractClient):
         """Bcos根據交易哈希檢視交易詳細訊息
 
         :param request: Request instance for GetTransByHashHandler.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.GetTransByHashHandlerRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetTransByHashHandlerResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.GetTransByHashHandlerRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.GetTransByHashHandlerResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class TbaasClient(AbstractClient):
         """Bcos分頁查詢當前群組的交易訊息清單
 
         :param request: Request instance for GetTransListHandler.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.GetTransListHandlerRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetTransListHandlerResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.GetTransListHandlerRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.GetTransListHandlerResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class TbaasClient(AbstractClient):
         """獲取交易詳情
 
         :param request: Request instance for GetTransactionDetailForUser.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.GetTransactionDetailForUserRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetTransactionDetailForUserResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.GetTransactionDetailForUserRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.GetTransactionDetailForUserResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class TbaasClient(AbstractClient):
         """新增交易
 
         :param request: Request instance for Invoke.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.InvokeRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.InvokeResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.InvokeRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.InvokeResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class TbaasClient(AbstractClient):
         """查詢交易
 
         :param request: Request instance for Query.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.QueryRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.QueryResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.QueryRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.QueryResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class TbaasClient(AbstractClient):
         """Bcos發送交易
 
         :param request: Request instance for SendTransactionHandler.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.SendTransactionHandlerRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.SendTransactionHandlerResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.SendTransactionHandlerRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.SendTransactionHandlerResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class TbaasClient(AbstractClient):
         """trustsql服務統一介面
 
         :param request: Request instance for SrvInvoke.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.SrvInvokeRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.SrvInvokeResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.SrvInvokeRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.SrvInvokeResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class TbaasClient(AbstractClient):
         """根據動态佈署的合約發送交易
 
         :param request: Request instance for TransByDynamicContractHandler.
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.TransByDynamicContractHandlerRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.TransByDynamicContractHandlerResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.TransByDynamicContractHandlerRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.TransByDynamicContractHandlerResponse`
 
         """
         try:

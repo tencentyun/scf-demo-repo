@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.ecm.v20190719 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.ecm.v20190719 import models
 
 
 class EcmClient(AbstractClient):
     _apiVersion = '2019-07-19'
-    _endpoint = 'ecm.tencentcloudapi.com'
+    _endpoint = 'ecm.taifucloudcloudapi.com'
 
 
     def AllocateAddresses(self, request):
         """申請一個或多個彈性公網IP（簡稱 EIP）
 
         :param request: Request instance for AllocateAddresses.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.AllocateAddressesRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.AllocateAddressesResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.AllocateAddressesRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.AllocateAddressesResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class EcmClient(AbstractClient):
         """彈性網卡申請内網 IP
 
         :param request: Request instance for AssignPrivateIpAddresses.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.AssignPrivateIpAddressesRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.AssignPrivateIpAddressesResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.AssignPrivateIpAddressesRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.AssignPrivateIpAddressesResponse`
 
         """
         try:
@@ -91,8 +91,8 @@ class EcmClient(AbstractClient):
         只有狀态爲 UNBIND 的 EIP 才能夠被綁定。
 
         :param request: Request instance for AssociateAddress.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.AssociateAddressRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.AssociateAddressResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.AssociateAddressRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.AssociateAddressResponse`
 
         """
         try:
@@ -119,8 +119,8 @@ class EcmClient(AbstractClient):
         """彈性網卡綁定雲主機
 
         :param request: Request instance for AttachNetworkInterface.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.AttachNetworkInterfaceRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.AttachNetworkInterfaceResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.AttachNetworkInterfaceRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.AttachNetworkInterfaceResponse`
 
         """
         try:
@@ -147,8 +147,8 @@ class EcmClient(AbstractClient):
         """創模組化塊
 
         :param request: Request instance for CreateModule.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.CreateModuleRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.CreateModuleResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.CreateModuleRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.CreateModuleResponse`
 
         """
         try:
@@ -175,8 +175,8 @@ class EcmClient(AbstractClient):
         """創建彈性網卡
 
         :param request: Request instance for CreateNetworkInterface.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.CreateNetworkInterfaceRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.CreateNetworkInterfaceResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.CreateNetworkInterfaceRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.CreateNetworkInterfaceResponse`
 
         """
         try:
@@ -203,8 +203,8 @@ class EcmClient(AbstractClient):
         """創建子網
 
         :param request: Request instance for CreateSubnet.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.CreateSubnetRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.CreateSubnetResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.CreateSubnetRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.CreateSubnetResponse`
 
         """
         try:
@@ -231,8 +231,8 @@ class EcmClient(AbstractClient):
         """創建私有網絡
 
         :param request: Request instance for CreateVpc.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.CreateVpcRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.CreateVpcResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.CreateVpcRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.CreateVpcResponse`
 
         """
         try:
@@ -259,8 +259,8 @@ class EcmClient(AbstractClient):
         """删除映像
 
         :param request: Request instance for DeleteImage.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DeleteImageRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DeleteImageResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DeleteImageRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DeleteImageResponse`
 
         """
         try:
@@ -287,8 +287,8 @@ class EcmClient(AbstractClient):
         """删除業務模組
 
         :param request: Request instance for DeleteModule.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DeleteModuleRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DeleteModuleResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DeleteModuleRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DeleteModuleResponse`
 
         """
         try:
@@ -315,8 +315,8 @@ class EcmClient(AbstractClient):
         """删除彈性網卡
 
         :param request: Request instance for DeleteNetworkInterface.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DeleteNetworkInterfaceRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DeleteNetworkInterfaceResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DeleteNetworkInterfaceRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DeleteNetworkInterfaceResponse`
 
         """
         try:
@@ -343,8 +343,8 @@ class EcmClient(AbstractClient):
         """删除子網
 
         :param request: Request instance for DeleteSubnet.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DeleteSubnetRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DeleteSubnetResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DeleteSubnetRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DeleteSubnetResponse`
 
         """
         try:
@@ -371,8 +371,8 @@ class EcmClient(AbstractClient):
         """删除私有網絡
 
         :param request: Request instance for DeleteVpc.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DeleteVpcRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DeleteVpcResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DeleteVpcRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DeleteVpcResponse`
 
         """
         try:
@@ -399,8 +399,8 @@ class EcmClient(AbstractClient):
         """查詢您帳戶的彈性公網IP（簡稱 EIP）在當前地域的配額訊息
 
         :param request: Request instance for DescribeAddressQuota.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeAddressQuotaRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribeAddressQuotaResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribeAddressQuotaRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribeAddressQuotaResponse`
 
         """
         try:
@@ -427,8 +427,8 @@ class EcmClient(AbstractClient):
         """查詢彈性公網IP清單
 
         :param request: Request instance for DescribeAddresses.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeAddressesRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribeAddressesResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribeAddressesRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribeAddressesResponse`
 
         """
         try:
@@ -455,8 +455,8 @@ class EcmClient(AbstractClient):
         """獲取概覽頁統計的基本數據
 
         :param request: Request instance for DescribeBaseOverview.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeBaseOverviewRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribeBaseOverviewResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribeBaseOverviewRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribeBaseOverviewResponse`
 
         """
         try:
@@ -483,8 +483,8 @@ class EcmClient(AbstractClient):
         """獲取頻寬硬碟等數據的限制
 
         :param request: Request instance for DescribeConfig.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeConfigRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribeConfigResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribeConfigRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribeConfigResponse`
 
         """
         try:
@@ -511,8 +511,8 @@ class EcmClient(AbstractClient):
         """展示映像清單
 
         :param request: Request instance for DescribeImage.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeImageRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribeImageResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribeImageRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribeImageResponse`
 
         """
         try:
@@ -539,8 +539,8 @@ class EcmClient(AbstractClient):
         """獲取機型配置清單
 
         :param request: Request instance for DescribeInstanceTypeConfig.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeInstanceTypeConfigRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribeInstanceTypeConfigResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribeInstanceTypeConfigRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribeInstanceTypeConfigResponse`
 
         """
         try:
@@ -567,8 +567,8 @@ class EcmClient(AbstractClient):
         """獲取實例的相關訊息。
 
         :param request: Request instance for DescribeInstances.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeInstancesRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribeInstancesResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribeInstancesRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribeInstancesResponse`
 
         """
         try:
@@ -595,8 +595,8 @@ class EcmClient(AbstractClient):
         """通過實例id獲取當前禁止的操作
 
         :param request: Request instance for DescribeInstancesDeniedActions.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeInstancesDeniedActionsRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribeInstancesDeniedActionsResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribeInstancesDeniedActionsRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribeInstancesDeniedActionsResponse`
 
         """
         try:
@@ -623,8 +623,8 @@ class EcmClient(AbstractClient):
         """獲取模組清單
 
         :param request: Request instance for DescribeModule.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeModuleRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribeModuleResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribeModuleRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribeModuleResponse`
 
         """
         try:
@@ -651,8 +651,8 @@ class EcmClient(AbstractClient):
         """展示模組詳細訊息
 
         :param request: Request instance for DescribeModuleDetail.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeModuleDetailRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribeModuleDetailResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribeModuleDetailRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribeModuleDetailResponse`
 
         """
         try:
@@ -679,8 +679,8 @@ class EcmClient(AbstractClient):
         """查詢彈性網卡清單
 
         :param request: Request instance for DescribeNetworkInterfaces.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeNetworkInterfacesRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribeNetworkInterfacesResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribeNetworkInterfacesRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribeNetworkInterfacesResponse`
 
         """
         try:
@@ -707,8 +707,8 @@ class EcmClient(AbstractClient):
         """獲取節點清單
 
         :param request: Request instance for DescribeNode.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeNodeRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribeNodeResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribeNodeRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribeNodeResponse`
 
         """
         try:
@@ -735,8 +735,8 @@ class EcmClient(AbstractClient):
         """CPU 内存 硬碟等基礎訊息峰值數據
 
         :param request: Request instance for DescribePeakBaseOverview.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribePeakBaseOverviewRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribePeakBaseOverviewResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribePeakBaseOverviewRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribePeakBaseOverviewResponse`
 
         """
         try:
@@ -763,8 +763,8 @@ class EcmClient(AbstractClient):
         """獲取網絡峰值數據
 
         :param request: Request instance for DescribePeakNetworkOverview.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribePeakNetworkOverviewRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribePeakNetworkOverviewResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribePeakNetworkOverviewRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribePeakNetworkOverviewResponse`
 
         """
         try:
@@ -791,8 +791,8 @@ class EcmClient(AbstractClient):
         """查詢子網清單
 
         :param request: Request instance for DescribeSubnets.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeSubnetsRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribeSubnetsResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribeSubnetsRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribeSubnetsResponse`
 
         """
         try:
@@ -819,8 +819,8 @@ class EcmClient(AbstractClient):
         """查詢EIP異步任務執行結果
 
         :param request: Request instance for DescribeTaskResult.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeTaskResultRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribeTaskResultResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribeTaskResultRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribeTaskResultResponse`
 
         """
         try:
@@ -847,8 +847,8 @@ class EcmClient(AbstractClient):
         """查詢私有網絡清單
 
         :param request: Request instance for DescribeVpcs.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DescribeVpcsRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DescribeVpcsResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DescribeVpcsRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DescribeVpcsResponse`
 
         """
         try:
@@ -875,8 +875,8 @@ class EcmClient(AbstractClient):
         """彈性網卡解綁雲主機
 
         :param request: Request instance for DetachNetworkInterface.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DetachNetworkInterfaceRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DetachNetworkInterfaceResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DetachNetworkInterfaceRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DetachNetworkInterfaceResponse`
 
         """
         try:
@@ -905,8 +905,8 @@ class EcmClient(AbstractClient):
         EIP 如果被封堵，則不能進行解綁定操作。
 
         :param request: Request instance for DisassociateAddress.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.DisassociateAddressRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.DisassociateAddressResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.DisassociateAddressRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.DisassociateAddressResponse`
 
         """
         try:
@@ -933,8 +933,8 @@ class EcmClient(AbstractClient):
         """從CVM産品導入映像到ECM
 
         :param request: Request instance for ImportImage.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.ImportImageRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.ImportImageResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.ImportImageRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.ImportImageResponse`
 
         """
         try:
@@ -961,8 +961,8 @@ class EcmClient(AbstractClient):
         """彈性網卡遷移
 
         :param request: Request instance for MigrateNetworkInterface.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.MigrateNetworkInterfaceRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.MigrateNetworkInterfaceResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.MigrateNetworkInterfaceRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.MigrateNetworkInterfaceResponse`
 
         """
         try:
@@ -991,8 +991,8 @@ class EcmClient(AbstractClient):
         遷移前後的彈性網卡必須在同一個子網内。
 
         :param request: Request instance for MigratePrivateIpAddress.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.MigratePrivateIpAddressRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.MigratePrivateIpAddressResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.MigratePrivateIpAddressRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.MigratePrivateIpAddressResponse`
 
         """
         try:
@@ -1019,8 +1019,8 @@ class EcmClient(AbstractClient):
         """修改彈性公網IP屬性
 
         :param request: Request instance for ModifyAddressAttribute.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.ModifyAddressAttributeRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.ModifyAddressAttributeResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.ModifyAddressAttributeRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.ModifyAddressAttributeResponse`
 
         """
         try:
@@ -1047,8 +1047,8 @@ class EcmClient(AbstractClient):
         """調整彈性公網IP頻寬
 
         :param request: Request instance for ModifyAddressesBandwidth.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.ModifyAddressesBandwidthRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.ModifyAddressesBandwidthResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.ModifyAddressesBandwidthRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.ModifyAddressesBandwidthResponse`
 
         """
         try:
@@ -1075,8 +1075,8 @@ class EcmClient(AbstractClient):
         """修改實例的屬性。
 
         :param request: Request instance for ModifyInstancesAttribute.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.ModifyInstancesAttributeRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.ModifyInstancesAttributeResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.ModifyInstancesAttributeRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.ModifyInstancesAttributeResponse`
 
         """
         try:
@@ -1103,8 +1103,8 @@ class EcmClient(AbstractClient):
         """ModifyModuleImage
 
         :param request: Request instance for ModifyModuleImage.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.ModifyModuleImageRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.ModifyModuleImageResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.ModifyModuleImageRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.ModifyModuleImageResponse`
 
         """
         try:
@@ -1131,8 +1131,8 @@ class EcmClient(AbstractClient):
         """修改模組名稱
 
         :param request: Request instance for ModifyModuleName.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.ModifyModuleNameRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.ModifyModuleNameResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.ModifyModuleNameRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.ModifyModuleNameResponse`
 
         """
         try:
@@ -1159,8 +1159,8 @@ class EcmClient(AbstractClient):
         """修改模組預設頻寬上限
 
         :param request: Request instance for ModifyModuleNetwork.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.ModifyModuleNetworkRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.ModifyModuleNetworkResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.ModifyModuleNetworkRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.ModifyModuleNetworkResponse`
 
         """
         try:
@@ -1187,8 +1187,8 @@ class EcmClient(AbstractClient):
         """修改子網屬性
 
         :param request: Request instance for ModifySubnetAttribute.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.ModifySubnetAttributeRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.ModifySubnetAttributeResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.ModifySubnetAttributeRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.ModifySubnetAttributeResponse`
 
         """
         try:
@@ -1215,8 +1215,8 @@ class EcmClient(AbstractClient):
         """修改私有網絡（VPC）的相關屬性
 
         :param request: Request instance for ModifyVpcAttribute.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.ModifyVpcAttributeRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.ModifyVpcAttributeResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.ModifyVpcAttributeRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.ModifyVpcAttributeResponse`
 
         """
         try:
@@ -1243,8 +1243,8 @@ class EcmClient(AbstractClient):
         """只有狀态爲RUNNING的實例才可以進行此操作；介面調用成功時，實例會進入REBOOTING狀态；重啓實例成功時，實例會進入RUNNING狀态；支援強制重啓，強制重啓的效果等同于關閉物理電腦的電源開關再重新啓動。強制重啓可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常重啓時使用。
 
         :param request: Request instance for RebootInstances.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.RebootInstancesRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.RebootInstancesResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.RebootInstancesRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.RebootInstancesResponse`
 
         """
         try:
@@ -1273,8 +1273,8 @@ class EcmClient(AbstractClient):
         只有狀态爲 UNBIND 的 EIP 才能進行釋放操作。
 
         :param request: Request instance for ReleaseAddresses.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.ReleaseAddressesRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.ReleaseAddressesResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.ReleaseAddressesRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.ReleaseAddressesResponse`
 
         """
         try:
@@ -1302,8 +1302,8 @@ class EcmClient(AbstractClient):
         退還彈性網卡上的輔助内網IP，介面自動解關聯彈性公網 IP。不能退還彈性網卡的主内網IP。
 
         :param request: Request instance for RemovePrivateIpAddresses.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.RemovePrivateIpAddressesRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.RemovePrivateIpAddressesResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.RemovePrivateIpAddressesRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.RemovePrivateIpAddressesResponse`
 
         """
         try:
@@ -1330,8 +1330,8 @@ class EcmClient(AbstractClient):
         """重裝實例，若指定了ImageId參數，則使用指定的映像重裝；否則按照當前實例使用的映像進行重裝；若未指定密碼，則密碼通過站内信形式随後發送。
 
         :param request: Request instance for ResetInstances.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.ResetInstancesRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.ResetInstancesResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.ResetInstancesRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.ResetInstancesResponse`
 
         """
         try:
@@ -1358,8 +1358,8 @@ class EcmClient(AbstractClient):
         """重置實例的最大頻寬上限。
 
         :param request: Request instance for ResetInstancesMaxBandwidth.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.ResetInstancesMaxBandwidthRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.ResetInstancesMaxBandwidthResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.ResetInstancesMaxBandwidthRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.ResetInstancesMaxBandwidthResponse`
 
         """
         try:
@@ -1386,8 +1386,8 @@ class EcmClient(AbstractClient):
         """重置處于運作中狀态的實例的密碼，需要顯式指定強制關機參數ForceStop。如果沒有顯式指定強制關機參數，則只有處于關機狀态的實例才允許執行重置密碼操作。
 
         :param request: Request instance for ResetInstancesPassword.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.ResetInstancesPasswordRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.ResetInstancesPasswordResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.ResetInstancesPasswordRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.ResetInstancesPasswordResponse`
 
         """
         try:
@@ -1414,8 +1414,8 @@ class EcmClient(AbstractClient):
         """創建ECM實例
 
         :param request: Request instance for RunInstances.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.RunInstancesRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.RunInstancesResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.RunInstancesRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.RunInstancesResponse`
 
         """
         try:
@@ -1442,8 +1442,8 @@ class EcmClient(AbstractClient):
         """只有狀态爲STOPPED的實例才可以進行此操作；介面調用成功時，實例會進入STARTING狀态；啓動實例成功時，實例會進入RUNNING狀态。
 
         :param request: Request instance for StartInstances.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.StartInstancesRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.StartInstancesResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.StartInstancesRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.StartInstancesResponse`
 
         """
         try:
@@ -1472,8 +1472,8 @@ class EcmClient(AbstractClient):
         支援強制關閉，強制關機的效果等同于關閉物理電腦的電源開關，強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
 
         :param request: Request instance for StopInstances.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.StopInstancesRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.StopInstancesResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.StopInstancesRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.StopInstancesResponse`
 
         """
         try:
@@ -1500,8 +1500,8 @@ class EcmClient(AbstractClient):
         """銷毀實例
 
         :param request: Request instance for TerminateInstances.
-        :type request: :class:`tencentcloud.ecm.v20190719.models.TerminateInstancesRequest`
-        :rtype: :class:`tencentcloud.ecm.v20190719.models.TerminateInstancesResponse`
+        :type request: :class:`taifucloudcloud.ecm.v20190719.models.TerminateInstancesRequest`
+        :rtype: :class:`taifucloudcloud.ecm.v20190719.models.TerminateInstancesResponse`
 
         """
         try:

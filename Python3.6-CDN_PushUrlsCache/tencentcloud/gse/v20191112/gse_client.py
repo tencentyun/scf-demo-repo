@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.gse.v20191112 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.gse.v20191112 import models
 
 
 class GseClient(AbstractClient):
     _apiVersion = '2019-11-12'
-    _endpoint = 'gse.tencentcloudapi.com'
+    _endpoint = 'gse.taifucloudcloudapi.com'
 
 
     def CreateGameServerSession(self, request):
         """本介面（CreateGameServerSession）用于創建遊戲服務會話
 
         :param request: Request instance for CreateGameServerSession.
-        :type request: :class:`tencentcloud.gse.v20191112.models.CreateGameServerSessionRequest`
-        :rtype: :class:`tencentcloud.gse.v20191112.models.CreateGameServerSessionResponse`
+        :type request: :class:`taifucloudcloud.gse.v20191112.models.CreateGameServerSessionRequest`
+        :rtype: :class:`taifucloudcloud.gse.v20191112.models.CreateGameServerSessionResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class GseClient(AbstractClient):
         """本介面（DescribeGameServerSessionDetails）用于查詢遊戲服務器會話詳情清單
 
         :param request: Request instance for DescribeGameServerSessionDetails.
-        :type request: :class:`tencentcloud.gse.v20191112.models.DescribeGameServerSessionDetailsRequest`
-        :rtype: :class:`tencentcloud.gse.v20191112.models.DescribeGameServerSessionDetailsResponse`
+        :type request: :class:`taifucloudcloud.gse.v20191112.models.DescribeGameServerSessionDetailsRequest`
+        :rtype: :class:`taifucloudcloud.gse.v20191112.models.DescribeGameServerSessionDetailsResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class GseClient(AbstractClient):
         """本介面（DescribeGameServerSessionPlacement）用于查詢遊戲服務器會話的放置
 
         :param request: Request instance for DescribeGameServerSessionPlacement.
-        :type request: :class:`tencentcloud.gse.v20191112.models.DescribeGameServerSessionPlacementRequest`
-        :rtype: :class:`tencentcloud.gse.v20191112.models.DescribeGameServerSessionPlacementResponse`
+        :type request: :class:`taifucloudcloud.gse.v20191112.models.DescribeGameServerSessionPlacementRequest`
+        :rtype: :class:`taifucloudcloud.gse.v20191112.models.DescribeGameServerSessionPlacementResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class GseClient(AbstractClient):
         """本介面（DescribeGameServerSessions）用于查詢遊戲服務器會話清單
 
         :param request: Request instance for DescribeGameServerSessions.
-        :type request: :class:`tencentcloud.gse.v20191112.models.DescribeGameServerSessionsRequest`
-        :rtype: :class:`tencentcloud.gse.v20191112.models.DescribeGameServerSessionsResponse`
+        :type request: :class:`taifucloudcloud.gse.v20191112.models.DescribeGameServerSessionsRequest`
+        :rtype: :class:`taifucloudcloud.gse.v20191112.models.DescribeGameServerSessionsResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class GseClient(AbstractClient):
         """用于查詢服務器實例清單
 
         :param request: Request instance for DescribeInstances.
-        :type request: :class:`tencentcloud.gse.v20191112.models.DescribeInstancesRequest`
-        :rtype: :class:`tencentcloud.gse.v20191112.models.DescribeInstancesResponse`
+        :type request: :class:`taifucloudcloud.gse.v20191112.models.DescribeInstancesRequest`
+        :rtype: :class:`taifucloudcloud.gse.v20191112.models.DescribeInstancesResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class GseClient(AbstractClient):
         """本介面（DescribePlayerSessions）用于獲取玩家會話清單
 
         :param request: Request instance for DescribePlayerSessions.
-        :type request: :class:`tencentcloud.gse.v20191112.models.DescribePlayerSessionsRequest`
-        :rtype: :class:`tencentcloud.gse.v20191112.models.DescribePlayerSessionsResponse`
+        :type request: :class:`taifucloudcloud.gse.v20191112.models.DescribePlayerSessionsRequest`
+        :rtype: :class:`taifucloudcloud.gse.v20191112.models.DescribePlayerSessionsResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class GseClient(AbstractClient):
         """本介面（GetGameServerSessionLogUrl）用于獲取遊戲服務器會話的日志URL
 
         :param request: Request instance for GetGameServerSessionLogUrl.
-        :type request: :class:`tencentcloud.gse.v20191112.models.GetGameServerSessionLogUrlRequest`
-        :rtype: :class:`tencentcloud.gse.v20191112.models.GetGameServerSessionLogUrlResponse`
+        :type request: :class:`taifucloudcloud.gse.v20191112.models.GetGameServerSessionLogUrlRequest`
+        :rtype: :class:`taifucloudcloud.gse.v20191112.models.GetGameServerSessionLogUrlResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class GseClient(AbstractClient):
         """獲取實例登入所需要的憑據
 
         :param request: Request instance for GetInstanceAccess.
-        :type request: :class:`tencentcloud.gse.v20191112.models.GetInstanceAccessRequest`
-        :rtype: :class:`tencentcloud.gse.v20191112.models.GetInstanceAccessResponse`
+        :type request: :class:`taifucloudcloud.gse.v20191112.models.GetInstanceAccessRequest`
+        :rtype: :class:`taifucloudcloud.gse.v20191112.models.GetInstanceAccessResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class GseClient(AbstractClient):
         """本介面（JoinGameServerSession）用于加入遊戲服務器會話
 
         :param request: Request instance for JoinGameServerSession.
-        :type request: :class:`tencentcloud.gse.v20191112.models.JoinGameServerSessionRequest`
-        :rtype: :class:`tencentcloud.gse.v20191112.models.JoinGameServerSessionResponse`
+        :type request: :class:`taifucloudcloud.gse.v20191112.models.JoinGameServerSessionRequest`
+        :rtype: :class:`taifucloudcloud.gse.v20191112.models.JoinGameServerSessionResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class GseClient(AbstractClient):
         """本介面（SearchGameServerSessions）用于搜索遊戲服務器會話清單
 
         :param request: Request instance for SearchGameServerSessions.
-        :type request: :class:`tencentcloud.gse.v20191112.models.SearchGameServerSessionsRequest`
-        :rtype: :class:`tencentcloud.gse.v20191112.models.SearchGameServerSessionsResponse`
+        :type request: :class:`taifucloudcloud.gse.v20191112.models.SearchGameServerSessionsRequest`
+        :rtype: :class:`taifucloudcloud.gse.v20191112.models.SearchGameServerSessionsResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class GseClient(AbstractClient):
         """本介面（StartGameServerSessionPlacement）用于開始放置遊戲服務器會話
 
         :param request: Request instance for StartGameServerSessionPlacement.
-        :type request: :class:`tencentcloud.gse.v20191112.models.StartGameServerSessionPlacementRequest`
-        :rtype: :class:`tencentcloud.gse.v20191112.models.StartGameServerSessionPlacementResponse`
+        :type request: :class:`taifucloudcloud.gse.v20191112.models.StartGameServerSessionPlacementRequest`
+        :rtype: :class:`taifucloudcloud.gse.v20191112.models.StartGameServerSessionPlacementResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class GseClient(AbstractClient):
         """本介面（StopGameServerSessionPlacement）用于停止放置遊戲服務器會話
 
         :param request: Request instance for StopGameServerSessionPlacement.
-        :type request: :class:`tencentcloud.gse.v20191112.models.StopGameServerSessionPlacementRequest`
-        :rtype: :class:`tencentcloud.gse.v20191112.models.StopGameServerSessionPlacementResponse`
+        :type request: :class:`taifucloudcloud.gse.v20191112.models.StopGameServerSessionPlacementRequest`
+        :rtype: :class:`taifucloudcloud.gse.v20191112.models.StopGameServerSessionPlacementResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class GseClient(AbstractClient):
         """本介面（UpdateGameServerSession）用于更新遊戲服務器會話
 
         :param request: Request instance for UpdateGameServerSession.
-        :type request: :class:`tencentcloud.gse.v20191112.models.UpdateGameServerSessionRequest`
-        :rtype: :class:`tencentcloud.gse.v20191112.models.UpdateGameServerSessionResponse`
+        :type request: :class:`taifucloudcloud.gse.v20191112.models.UpdateGameServerSessionRequest`
+        :rtype: :class:`taifucloudcloud.gse.v20191112.models.UpdateGameServerSessionResponse`
 
         """
         try:

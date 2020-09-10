@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.ocr.v20181119 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.ocr.v20181119 import models
 
 
 class OcrClient(AbstractClient):
     _apiVersion = '2018-11-19'
-    _endpoint = 'ocr.tencentcloudapi.com'
+    _endpoint = 'ocr.taifucloudcloudapi.com'
 
 
     def ArithmeticOCR(self, request):
         """本介面支援作業算式題目的自動識别，目前函蓋 K12 學力範圍内的 14 種題型，包括加減乘除四則運算、分數四則運算、豎式四則運算、脫式計算等。
 
         :param request: Request instance for ArithmeticOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.ArithmeticOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.ArithmeticOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.ArithmeticOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.ArithmeticOCRResponse`
 
         """
         try:
@@ -54,11 +54,11 @@ class OcrClient(AbstractClient):
 
 
     def BankCardOCR(self, request):
-        """本介面支援對中國大陸主流銀行卡的卡号、銀行訊息、有效期等關鍵欄位的檢測與識别。
+        """本介面支援對 大陸主流銀行卡的卡号、銀行訊息、有效期等關鍵欄位的檢測與識别。
 
         :param request: Request instance for BankCardOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.BankCardOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.BankCardOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.BankCardOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.BankCardOCRResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class OcrClient(AbstractClient):
         """本介面支援快速精準識别營業執照上的欄位，包括注冊号、公司名稱、經營場所、主體類型、法定代表人、注冊資金、組成形式、成立日期、營業期限和經營範圍等欄位。
 
         :param request: Request instance for BizLicenseOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.BizLicenseOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.BizLicenseOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.BizLicenseOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.BizLicenseOCRResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class OcrClient(AbstractClient):
         """本介面支援識别公路汽車客票的發票代碼、發票号碼、日期、姓名、票價等欄位。
 
         :param request: Request instance for BusInvoiceOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.BusInvoiceOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.BusInvoiceOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.BusInvoiceOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.BusInvoiceOCRResponse`
 
         """
         try:
@@ -138,11 +138,11 @@ class OcrClient(AbstractClient):
 
 
     def BusinessCardOCR(self, request):
-        """本介面支援名片各欄位的自動定位與識别，包含姓名、電話、手機号、電子信箱、公司、部門、職位、網址、網址、QQ、微信、MSN等。
+        """本介面支援名片各欄位的自動定位與識别，包含姓名、電話、手機号、電子信箱、公司、部門、職位、網址、網址、 、 、MSN等。
 
         :param request: Request instance for BusinessCardOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.BusinessCardOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.BusinessCardOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.BusinessCardOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.BusinessCardOCRResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class OcrClient(AbstractClient):
         """本介面支援機動車銷售統一發票和二手車銷售統一發票的識别，包括發票号碼、發票代碼、合計金額、合計稅額等二十多個欄位。
 
         :param request: Request instance for CarInvoiceOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.CarInvoiceOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.CarInvoiceOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.CarInvoiceOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.CarInvoiceOCRResponse`
 
         """
         try:
@@ -203,8 +203,8 @@ class OcrClient(AbstractClient):
         另外，本介面還支援影印件、翻拍和PS告警功能。
 
         :param request: Request instance for DriverLicenseOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.DriverLicenseOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.DriverLicenseOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.DriverLicenseOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.DriverLicenseOCRResponse`
 
         """
         try:
@@ -231,8 +231,8 @@ class OcrClient(AbstractClient):
         """本介面支援對完稅證明的稅号、納稅人識别号、納稅人名稱、金額合計大寫、金額合計小寫、填發日期、稅務機關、填票人等關鍵欄位的識别。
 
         :param request: Request instance for DutyPaidProofOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.DutyPaidProofOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.DutyPaidProofOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.DutyPaidProofOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.DutyPaidProofOCRResponse`
 
         """
         try:
@@ -259,8 +259,8 @@ class OcrClient(AbstractClient):
         """本介面支援數學試題内容的識别和結構化輸出，包括通用文本解析和小學/初中/高中數學公式解析能力（包括91種題型，180種符号）。
 
         :param request: Request instance for EduPaperOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.EduPaperOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.EduPaperOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.EduPaperOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.EduPaperOCRResponse`
 
         """
         try:
@@ -287,8 +287,8 @@ class OcrClient(AbstractClient):
         """本介面支援圖像英文文字的檢測和識别，返回文字框位置與文字内容。支援多場景、任意版面下的英文、字母、數字和常見字元的識别，同時函蓋英文印刷體和英文手寫體識别。
 
         :param request: Request instance for EnglishOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.EnglishOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.EnglishOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.EnglishOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.EnglishOCRResponse`
 
         """
         try:
@@ -315,8 +315,8 @@ class OcrClient(AbstractClient):
         """本介面支援智慧化識别各類企業登記證書、許可證書、企業執照、三證合一類證書，結構化輸出統一社會信用代碼、公司名稱、法定代表人、公司網址、注冊資金、企業類型、經營範圍等關鍵欄位。
 
         :param request: Request instance for EnterpriseLicenseOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.EnterpriseLicenseOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.EnterpriseLicenseOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.EnterpriseLicenseOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.EnterpriseLicenseOCRResponse`
 
         """
         try:
@@ -345,8 +345,8 @@ class OcrClient(AbstractClient):
 
 
         :param request: Request instance for EstateCertOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.EstateCertOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.EstateCertOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.EstateCertOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.EstateCertOCRResponse`
 
         """
         try:
@@ -370,11 +370,11 @@ class OcrClient(AbstractClient):
 
 
     def FinanBillOCR(self, request):
-        """本介面支援常見銀行票據的自動分類和識别。整單識别包括支票（含現金支票、普通支票、轉賬支票），承兌匯票（含銀行承兌匯票、商業承兌匯票）以及進帳單等，适用于中國人民銀行印發的 2010 版銀行票據憑證版式（銀發[2010]299 号）。
+        """本介面支援常見銀行票據的自動分類和識别。整單識别包括支票（含現金支票、普通支票、轉賬支票），承兌匯票（含銀行承兌匯票、商業承兌匯票）以及進帳單等，适用于 人民銀行印發的 2010 版銀行票據憑證版式（銀發[2010]299 号）。
 
         :param request: Request instance for FinanBillOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.FinanBillOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.FinanBillOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.FinanBillOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.FinanBillOCRResponse`
 
         """
         try:
@@ -401,8 +401,8 @@ class OcrClient(AbstractClient):
         """本介面支援常見銀行票據的自動分類和識别。切片識别包括金融行業常見票據的重要切片欄位識别，包括金額、賬号、日期、憑證号碼等。（金融票據切片：金融票據中待識别欄位及其周圍局部區域的裁剪圖像。）
 
         :param request: Request instance for FinanBillSliceOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.FinanBillSliceOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.FinanBillSliceOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.FinanBillSliceOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.FinanBillSliceOCRResponse`
 
         """
         try:
@@ -429,8 +429,8 @@ class OcrClient(AbstractClient):
         """本介面支援機票行程單關鍵欄位的識别，包括姓名、身份證件号碼、航班号、票價 、合計、電子客票号碼、填開日期等。
 
         :param request: Request instance for FlightInvoiceOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.FlightInvoiceOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.FlightInvoiceOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.FlightInvoiceOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.FlightInvoiceOCRResponse`
 
         """
         try:
@@ -457,8 +457,8 @@ class OcrClient(AbstractClient):
         """本介面支援識别主流初高中數學符号和公式，返回公式的 Latex 格式文本。
 
         :param request: Request instance for FormulaOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.FormulaOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.FormulaOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.FormulaOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.FormulaOCRResponse`
 
         """
         try:
@@ -485,8 +485,8 @@ class OcrClient(AbstractClient):
         """本介面支援圖像整體文字的檢測和識别，返回文字框位置與文字内容。相比通用印刷體識别介面，高精度版在英文、數字、小字、模糊字、傾斜文本行等困難場景下，準确率和召回率更高。
 
         :param request: Request instance for GeneralAccurateOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.GeneralAccurateOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.GeneralAccurateOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.GeneralAccurateOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.GeneralAccurateOCRResponse`
 
         """
         try:
@@ -513,8 +513,8 @@ class OcrClient(AbstractClient):
         """本介面支援多場景、任意版面下整圖文字的識别。支援自動識别語言類型，同時支援自選語言種類（推薦），除中英文外，支援日語、韓語、西班牙語、法語、德語、葡萄牙語、越南語、馬來語、俄語、意大利語、荷蘭語、瑞典語、芬蘭語、丹麥語、挪威語、匈牙利語、泰語等多種語言。應用場景包括：印刷文件識别、網絡圖片識别、廣告圖文字識别、街景店招識别、清單識别、視訊标題識别、頭像文字識别等。
 
         :param request: Request instance for GeneralBasicOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.GeneralBasicOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.GeneralBasicOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.GeneralBasicOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.GeneralBasicOCRResponse`
 
         """
         try:
@@ -541,8 +541,8 @@ class OcrClient(AbstractClient):
         """本介面支援多場景、任意版面下整圖文字的識别。相較于“通用印刷體識别”介面，精簡版介面在準召率有一定損失的情況下，耗時更短。适用于對介面耗時較爲敏感的客戶。
 
         :param request: Request instance for GeneralEfficientOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.GeneralEfficientOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.GeneralEfficientOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.GeneralEfficientOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.GeneralEfficientOCRResponse`
 
         """
         try:
@@ -569,8 +569,8 @@ class OcrClient(AbstractClient):
         """本介面支援圖片中整體文字的檢測和識别，返回文字框位置與文字内容。相比通用印刷體識别介面，識别速度更快、支援的 QPS 更高。
 
         :param request: Request instance for GeneralFastOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.GeneralFastOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.GeneralFastOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.GeneralFastOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.GeneralFastOCRResponse`
 
         """
         try:
@@ -597,8 +597,8 @@ class OcrClient(AbstractClient):
         """本介面支援圖片内手寫體文字的檢測和識别，針對手寫字體無規則、字迹潦草、模糊等特點進行了識别能力的增強。
 
         :param request: Request instance for GeneralHandwritingOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.GeneralHandwritingOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.GeneralHandwritingOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.GeneralHandwritingOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.GeneralHandwritingOCRResponse`
 
         """
         try:
@@ -622,11 +622,11 @@ class OcrClient(AbstractClient):
 
 
     def HmtResidentPermitOCR(self, request):
-        """港澳台居住證OCR支援港澳台居住證正反面全欄位内容檢測識别功能，包括姓名、性别、出生日期、網址、身份證ID、簽發機關、有效期限、簽發次數、通行證号碼關鍵欄位識别。可以應用于港澳台居住證訊息有效性校驗場景，例如銀行開戶、用戶注冊等場景。
+        """ 居住證OCR支援 居住證正反面全欄位内容檢測識别功能，包括姓名、性别、出生日期、網址、身份證ID、簽發機關、有效期限、簽發次數、通行證号碼關鍵欄位識别。可以應用于 居住證訊息有效性校驗場景，例如銀行開戶、用戶注冊等場景。
 
         :param request: Request instance for HmtResidentPermitOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.HmtResidentPermitOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.HmtResidentPermitOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.HmtResidentPermitOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.HmtResidentPermitOCRResponse`
 
         """
         try:
@@ -650,7 +650,7 @@ class OcrClient(AbstractClient):
 
 
     def IDCardOCR(self, request):
-        """本介面支援中國大陸居民二代身份證正反面所有欄位的識别，包括姓名、性别、民族、出生日期、住址、公民身份證号、簽發機關、有效期限，識别準确度達到99%以上。
+        """本介面支援 大陸居民二代身份證正反面所有欄位的識别，包括姓名、性别、民族、出生日期、住址、公民身份證号、簽發機關、有效期限，識别準确度達到99%以上。
 
         另外，本介面還支援多種增值能力，滿足不同場景的需求。如身份證照片、人像照片的裁剪功能，同時具備9種告警功能，如下表所示。
 
@@ -698,8 +698,8 @@ class OcrClient(AbstractClient):
             </table>
 
         :param request: Request instance for IDCardOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.IDCardOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.IDCardOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.IDCardOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.IDCardOCRResponse`
 
         """
         try:
@@ -726,8 +726,8 @@ class OcrClient(AbstractClient):
         """本介面支援事業單位法人證書關鍵欄位識别，包括注冊号、有效期、住所、名稱、法定代表人等。
 
         :param request: Request instance for InstitutionOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.InstitutionOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.InstitutionOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.InstitutionOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.InstitutionOCRResponse`
 
         """
         try:
@@ -754,8 +754,8 @@ class OcrClient(AbstractClient):
         """本介面支援病案首頁、費用清單、結算單、醫療發票四種保險理賠單據的文本識别和結構化輸出。
 
         :param request: Request instance for InsuranceBillOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.InsuranceBillOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.InsuranceBillOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.InsuranceBillOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.InsuranceBillOCRResponse`
 
         """
         try:
@@ -782,8 +782,8 @@ class OcrClient(AbstractClient):
         """本介面支援對通用機打發票的發票代碼、發票号碼、日期、購買方識别号、銷售方識别号、校驗碼、小寫金額等關鍵欄位的識别。
 
         :param request: Request instance for InvoiceGeneralOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.InvoiceGeneralOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.InvoiceGeneralOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.InvoiceGeneralOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.InvoiceGeneralOCRResponse`
 
         """
         try:
@@ -807,11 +807,11 @@ class OcrClient(AbstractClient):
 
 
     def LicensePlateOCR(self, request):
-        """本介面支援對中國大陸機動車車牌的自動定位和識别，返回地域編号和車牌号訊息。
+        """本介面支援對 大陸機動車車牌的自動定位和識别，返回地域編号和車牌号訊息。
 
         :param request: Request instance for LicensePlateOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.LicensePlateOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.LicensePlateOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.LicensePlateOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.LicensePlateOCRResponse`
 
         """
         try:
@@ -836,11 +836,11 @@ class OcrClient(AbstractClient):
 
     def MLIDCardOCR(self, request):
         """本介面支援馬來西亞身份證識别，識别欄位包括身份證号、姓名、性别、網址；具備身份證人像照片的裁剪功能和翻拍、影印件告警功能。
-        本介面暫未完全對外開放，如需咨詢，請[聯系商務](https://cloud.tencent.com/about/connect)
+        本介面暫未完全對外開放，如需咨詢，請[聯系商務](https://cloud.taifucloud.com/about/connect)
 
         :param request: Request instance for MLIDCardOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.MLIDCardOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.MLIDCardOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.MLIDCardOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.MLIDCardOCRResponse`
 
         """
         try:
@@ -864,12 +864,12 @@ class OcrClient(AbstractClient):
 
 
     def MLIDPassportOCR(self, request):
-        """本介面支援中國港澳台地區以及其他國家、地區的護照。識别欄位包括護照ID、姓名、出生日期、性别、有效期、發行國、國籍；具備護照人像照片的裁剪功能和翻拍、影印件告警功能。
-        本介面暫未完全對外開放，如需咨詢，請[聯系商務](https://cloud.tencent.com/about/connect)
+        """本介面支援  地區以及其他國家、地區的護照。識别欄位包括護照ID、姓名、出生日期、性别、有效期、發行國、國籍；具備護照人像照片的裁剪功能和翻拍、影印件告警功能。
+        本介面暫未完全對外開放，如需咨詢，請[聯系商務](https://cloud.taifucloud.com/about/connect)
 
         :param request: Request instance for MLIDPassportOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.MLIDPassportOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.MLIDPassportOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.MLIDPassportOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.MLIDPassportOCRResponse`
 
         """
         try:
@@ -893,11 +893,11 @@ class OcrClient(AbstractClient):
 
 
     def MainlandPermitOCR(self, request):
-        """智慧識别并結構化港澳台居民來往内地通行證正面全部欄位，包含中文姓名、英文姓名、性别、出生日期、簽發機關、有效期限、證件号、簽發地點、簽發次數、證件類别。
+        """智慧識别并結構化 居民來往内地通行證正面全部欄位，包含中文姓名、英文姓名、性别、出生日期、簽發機關、有效期限、證件号、簽發地點、簽發次數、證件類别。
 
         :param request: Request instance for MainlandPermitOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.MainlandPermitOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.MainlandPermitOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.MainlandPermitOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.MainlandPermitOCRResponse`
 
         """
         try:
@@ -924,8 +924,8 @@ class OcrClient(AbstractClient):
         """本介面支援多張、多類型票據的混合檢測和自動分類，返回對應票據類型。目前已支援增值稅發票、增值稅發票（卷票）、定額發票、通用機打發票、購車發票、火車票、出租車發票、機票行程單、汽車票、輪船票、過路過橋費發票、酒店帳單、客運限額發票、購物小票、完稅證明共15種票據。
 
         :param request: Request instance for MixedInvoiceDetect.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.MixedInvoiceDetectRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.MixedInvoiceDetectResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.MixedInvoiceDetectRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.MixedInvoiceDetectResponse`
 
         """
         try:
@@ -952,8 +952,8 @@ class OcrClient(AbstractClient):
         """本介面支援多張、多類型票據的混合識别，系統自動實現分割、分類和識别，同時支援自選需要識别的票據類型。目前已支援增值稅發票、增值稅發票（卷票）、定額發票、通用機打發票、購車發票、火車票、出租車發票、機票行程單、汽車票、輪船票、過路過橋費發票共11種票據。
 
         :param request: Request instance for MixedInvoiceOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.MixedInvoiceOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.MixedInvoiceOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.MixedInvoiceOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.MixedInvoiceOCRResponse`
 
         """
         try:
@@ -980,8 +980,8 @@ class OcrClient(AbstractClient):
         """本介面支援組織機構代碼證關鍵欄位的識别，包括代碼、有效期、網址、機構名稱等。
 
         :param request: Request instance for OrgCodeCertOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.OrgCodeCertOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.OrgCodeCertOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.OrgCodeCertOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.OrgCodeCertOCRResponse`
 
         """
         try:
@@ -1005,11 +1005,11 @@ class OcrClient(AbstractClient):
 
 
     def PassportOCR(self, request):
-        """本介面支援中國大陸地區護照個人資料頁多個欄位的檢測與識别。已支援欄位包括英文姓名、中文姓名、國家碼、護照号、出生地、出生日期、國籍英文、性别英文、有效期、簽發地點英文、簽發日期、持證人簽名、護照機讀碼（MRZ碼）等。
+        """本介面支援 大陸地區護照個人資料頁多個欄位的檢測與識别。已支援欄位包括英文姓名、中文姓名、國家碼、護照号、出生地、出生日期、國籍英文、性别英文、有效期、簽發地點英文、簽發日期、持證人簽名、護照機讀碼（MRZ碼）等。
 
         :param request: Request instance for PassportOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.PassportOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.PassportOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.PassportOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.PassportOCRResponse`
 
         """
         try:
@@ -1033,11 +1033,11 @@ class OcrClient(AbstractClient):
 
 
     def PermitOCR(self, request):
-        """本介面支援對卡式港澳台通行證的識别，包括簽發地點、簽發機關、有效期限、性别、出生日期、英文姓名、姓名、證件号等欄位。
+        """本介面支援對卡式 通行證的識别，包括簽發地點、簽發機關、有效期限、性别、出生日期、英文姓名、姓名、證件号等欄位。
 
         :param request: Request instance for PermitOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.PermitOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.PermitOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.PermitOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.PermitOCRResponse`
 
         """
         try:
@@ -1064,8 +1064,8 @@ class OcrClient(AbstractClient):
         """本介面支援房産證關鍵欄位的識别，包括房地産權利人、共有情況、登記時間、規劃用途、房屋性質、房屋坐落等。
 
         :param request: Request instance for PropOwnerCertOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.PropOwnerCertOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.PropOwnerCertOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.PropOwnerCertOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.PropOwnerCertOCRResponse`
 
         """
         try:
@@ -1090,11 +1090,11 @@ class OcrClient(AbstractClient):
 
     def QrcodeOCR(self, request):
         """本介面支援條形碼和二維碼的識别（包括 DataMatrix 和 PDF417）。
-        本介面暫未完全對外開放，如需咨詢，請[聯系商務](https://cloud.tencent.com/about/connect)
+        本介面暫未完全對外開放，如需咨詢，請[聯系商務](https://cloud.taifucloud.com/about/connect)
 
         :param request: Request instance for QrcodeOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.QrcodeOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.QrcodeOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.QrcodeOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.QrcodeOCRResponse`
 
         """
         try:
@@ -1121,8 +1121,8 @@ class OcrClient(AbstractClient):
         """本介面支援定額發票的發票号碼、發票代碼、金額(大小寫)、發票消費類型、地區及是否有公司印章等關鍵欄位的識别。
 
         :param request: Request instance for QuotaInvoiceOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.QuotaInvoiceOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.QuotaInvoiceOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.QuotaInvoiceOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.QuotaInvoiceOCRResponse`
 
         """
         try:
@@ -1149,8 +1149,8 @@ class OcrClient(AbstractClient):
         """本介面支援居民戶口簿戶首頁及成員頁關鍵欄位的識别，包括姓名、戶别、網址、籍貫、身份證号碼等。
 
         :param request: Request instance for ResidenceBookletOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.ResidenceBookletOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.ResidenceBookletOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.ResidenceBookletOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.ResidenceBookletOCRResponse`
 
         """
         try:
@@ -1177,8 +1177,8 @@ class OcrClient(AbstractClient):
         """本介面支援識别輪船票的發票代碼、發票号碼、日期、姓名、票價等欄位。
 
         :param request: Request instance for ShipInvoiceOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.ShipInvoiceOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.ShipInvoiceOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.ShipInvoiceOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.ShipInvoiceOCRResponse`
 
         """
         try:
@@ -1205,8 +1205,8 @@ class OcrClient(AbstractClient):
         """本介面支援圖片内表格文件的檢測和識别，返回每個單元格的文字内容，支援将識别結果保存爲 Excel 格式。
 
         :param request: Request instance for TableOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.TableOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.TableOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.TableOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.TableOCRResponse`
 
         """
         try:
@@ -1233,8 +1233,8 @@ class OcrClient(AbstractClient):
         """本介面支援出租車發票關鍵欄位的識别，包括發票号碼、發票代碼、金額、日期、上下車時間、裏程、車牌号、發票類型及所屬地區等欄位。
 
         :param request: Request instance for TaxiInvoiceOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.TaxiInvoiceOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.TaxiInvoiceOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.TaxiInvoiceOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.TaxiInvoiceOCRResponse`
 
         """
         try:
@@ -1261,8 +1261,8 @@ class OcrClient(AbstractClient):
         """本介面通過檢測圖片中的文字訊息特征，快速判斷圖片中有無文字并返回判斷結果，幫助用戶過濾無文字的圖片。
 
         :param request: Request instance for TextDetect.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.TextDetectRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.TextDetectResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.TextDetectRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.TextDetectResponse`
 
         """
         try:
@@ -1289,8 +1289,8 @@ class OcrClient(AbstractClient):
         """本介面支援對過路過橋費發票的發票代碼、發票号碼、日期、小寫金額等關鍵欄位的識别。
 
         :param request: Request instance for TollInvoiceOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.TollInvoiceOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.TollInvoiceOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.TollInvoiceOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.TollInvoiceOCRResponse`
 
         """
         try:
@@ -1317,8 +1317,8 @@ class OcrClient(AbstractClient):
         """本介面支援火車票全欄位的識别，包括編号、票價、姓名、座位号、出發時間、出發站、到達站、車次、席别、發票類型及序列号等。
 
         :param request: Request instance for TrainTicketOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.TrainTicketOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.TrainTicketOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.TrainTicketOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.TrainTicketOCRResponse`
 
         """
         try:
@@ -1345,8 +1345,8 @@ class OcrClient(AbstractClient):
         """本介面支援增值稅專用發票、增值稅普通發票、增值稅電子發票全欄位的内容檢測和識别，包括發票代碼、發票号碼、開票日期、合計金額、校驗碼、稅率、合計稅額、價稅合計、購買方識别号、複核、銷售方識别号、開票人、密碼區1、密碼區2、密碼區3、密碼區4、發票名稱、購買方名稱、銷售方名稱、服務名稱、備注、規格型号、數量、單價、金額、稅額、收款人等欄位。
 
         :param request: Request instance for VatInvoiceOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.VatInvoiceOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.VatInvoiceOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.VatInvoiceOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.VatInvoiceOCRResponse`
 
         """
         try:
@@ -1373,8 +1373,8 @@ class OcrClient(AbstractClient):
         """本介面支援對增值稅發票（卷票）的發票代碼、發票号碼、日期、校驗碼、合計金額（小寫）等關鍵欄位的識别。
 
         :param request: Request instance for VatRollInvoiceOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.VatRollInvoiceOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.VatRollInvoiceOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.VatRollInvoiceOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.VatRollInvoiceOCRResponse`
 
         """
         try:
@@ -1407,8 +1407,8 @@ class OcrClient(AbstractClient):
         另外，本介面還支援影印件、翻拍和PS告警功能。
 
         :param request: Request instance for VehicleLicenseOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.VehicleLicenseOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.VehicleLicenseOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.VehicleLicenseOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.VehicleLicenseOCRResponse`
 
         """
         try:
@@ -1435,8 +1435,8 @@ class OcrClient(AbstractClient):
         """本介面支援國内機動車登記證書主要欄位的結構化識别，包括機動車所有人、身份證明名稱、号碼、車輛型号、車輛識别代号、發動機号、制造廠名稱等。
 
         :param request: Request instance for VehicleRegCertOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.VehicleRegCertOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.VehicleRegCertOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.VehicleRegCertOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.VehicleRegCertOCRResponse`
 
         """
         try:
@@ -1463,8 +1463,8 @@ class OcrClient(AbstractClient):
         """本介面支援圖片内車輛識别代号（VIN）的檢測和識别。
 
         :param request: Request instance for VinOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.VinOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.VinOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.VinOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.VinOCRResponse`
 
         """
         try:
@@ -1491,8 +1491,8 @@ class OcrClient(AbstractClient):
         """本介面支援市面上主流版式電子運單的識别，包括收件人和寄件人的姓名、電話、網址以及運單号等欄位。
 
         :param request: Request instance for WaybillOCR.
-        :type request: :class:`tencentcloud.ocr.v20181119.models.WaybillOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.WaybillOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.WaybillOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.WaybillOCRResponse`
 
         """
         try:

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AgeInfo(AbstractModel):
@@ -26,8 +26,8 @@ class AgeInfo(AbstractModel):
         :param Age: 當前只支援設置爲10且不可調整（後續放開後再知會）。
         :type Age: int
         :param FaceRect: 人臉框位置。若不輸入則選擇 Image 或 Url 中面積最大的人臉。  
-您可以通過 [人臉檢測與分析](https://cloud.tencent.com/document/api/867/32800)  介面獲取人臉框位置訊息。
-        :type FaceRect: :class:`tencentcloud.ft.v20200304.models.FaceRect`
+您可以通過 [人臉檢測與分析](https://cloud.taifucloud.com/document/api/867/32800)  介面獲取人臉框位置訊息。
+        :type FaceRect: :class:`taifucloudcloud.ft.v20200304.models.FaceRect`
         """
         self.Age = None
         self.FaceRect = None
@@ -136,8 +136,8 @@ class GenderInfo(AbstractModel):
         :param Gender: 選擇轉換方向，0：男變女，1：女變男。
         :type Gender: int
         :param FaceRect: 人臉框位置。若不輸入則選擇 Image 或 Url 中面積最大的人臉。  
-您可以通過 [人臉檢測與分析](https://cloud.tencent.com/document/api/867/32800)  介面獲取人臉框位置訊息。
-        :type FaceRect: :class:`tencentcloud.ft.v20200304.models.FaceRect`
+您可以通過 [人臉檢測與分析](https://cloud.taifucloud.com/document/api/867/32800)  介面獲取人臉框位置訊息。
+        :type FaceRect: :class:`taifucloudcloud.ft.v20200304.models.FaceRect`
         """
         self.Gender = None
         self.FaceRect = None

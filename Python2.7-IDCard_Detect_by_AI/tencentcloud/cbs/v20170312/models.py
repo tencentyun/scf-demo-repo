@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class ApplySnapshotRequest(AbstractModel):
@@ -296,13 +296,13 @@ class CreateDisksRequest(AbstractModel):
         :param DiskChargeType: 雲硬碟計費類型。<br><li>PREPAID：預付費，即包年包月<br><li>POSTPAID_BY_HOUR：按小時後付費<br><li>CDCPAID：獨享集群付費<br>各類型價格請參考雲硬碟[價格總覽](/document/product/362/2413)。
         :type DiskChargeType: str
         :param Placement: 實例所在的位置。通過該參數可以指定實例所屬可用區，所屬項目。若不指定項目，将在預設項目下進行創建。
-        :type Placement: :class:`tencentcloud.cbs.v20170312.models.Placement`
+        :type Placement: :class:`taifucloudcloud.cbs.v20170312.models.Placement`
         :param DiskName: 雲盤顯示名稱。不傳則預設爲“未命名”。最大長度不能超60個位元。
         :type DiskName: str
-        :param DiskCount: 創建雲硬碟數量，不傳則預設爲1。單次請求最多可創建的雲盤數有限制，具體參見[雲硬碟使用限制](https://cloud.tencent.com/doc/product/362/5145)。
+        :param DiskCount: 創建雲硬碟數量，不傳則預設爲1。單次請求最多可創建的雲盤數有限制，具體參見[雲硬碟使用限制](https://cloud.taifucloud.com/doc/product/362/5145)。
         :type DiskCount: int
         :param DiskChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數指定包年包月雲盤的購買時長、是否設置自動續約等屬性。<br>創建預付費雲盤該參數必傳，創建按小時後付費雲盤無需傳該參數。
-        :type DiskChargePrepaid: :class:`tencentcloud.cbs.v20170312.models.DiskChargePrepaid`
+        :type DiskChargePrepaid: :class:`taifucloudcloud.cbs.v20170312.models.DiskChargePrepaid`
         :param DiskSize: 雲硬碟大小，單位爲GB。<br><li>如果傳入`SnapshotId`則可不傳`DiskSize`，此時新建雲盤的大小爲快照大小<br><li>如果傳入`SnapshotId`同時傳入`DiskSize`，則雲盤大小必須大于或等于快照大小<br><li>雲盤大小取值範圍參見雲硬碟[産品分類](/document/product/362/2353)的說明。
         :type DiskSize: int
         :param SnapshotId: 快照ID，如果傳入則根據此快照創建雲硬碟，快照類型必須爲數據盤快照，可通過[DescribeSnapshots](/document/product/362/15647)介面查詢快照，見輸出參數DiskUsage解釋。
@@ -621,7 +621,7 @@ class DescribeDiskConfigQuotaRequest(AbstractModel):
         :type DiskTypes: list of str
         :param DiskUsage: 系統盤或數據盤。取值範圍：<br><li>SYSTEM_DISK：表示系統盤<br><li>DATA_DISK：表示數據盤。
         :type DiskUsage: str
-        :param InstanceFamilies: 按照實例機型系列過濾。實例機型系列形如：S1、I1、M1等。詳見[實例類型](https://cloud.tencent.com/document/product/213/11518)
+        :param InstanceFamilies: 按照實例機型系列過濾。實例機型系列形如：S1、I1、M1等。詳見[實例類型](https://cloud.taifucloud.com/document/product/213/11518)
         :type InstanceFamilies: list of str
         :param CPU: 實例CPU核數。
         :type CPU: int
@@ -1018,7 +1018,7 @@ class Disk(AbstractModel):
         :param Portable: 是否爲彈性雲盤，false表示非彈性雲盤，true表示彈性雲盤。
         :type Portable: bool
         :param Placement: 雲硬碟所在的位置。
-        :type Placement: :class:`tencentcloud.cbs.v20170312.models.Placement`
+        :type Placement: :class:`taifucloudcloud.cbs.v20170312.models.Placement`
         :param SnapshotAbility: 雲盤是否具備創建快照的能力。取值範圍：<br><li>false表示不具備<br><li>true表示具備。
         :type SnapshotAbility: bool
         :param DiskName: 雲硬碟名稱。
@@ -1202,7 +1202,7 @@ class DiskConfig(AbstractModel):
         :param DeviceClass: 實例機型。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DeviceClass: str
-        :param InstanceFamily: 實例機型系列。詳見[實例類型](https://cloud.tencent.com/document/product/213/11518)
+        :param InstanceFamily: 實例機型系列。詳見[實例類型](https://cloud.taifucloud.com/document/product/213/11518)
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceFamily: str
         """
@@ -1334,7 +1334,7 @@ class InquiryPriceCreateDisksRequest(AbstractModel):
         :param DiskChargeType: 雲硬碟計費類型。<br><li>PREPAID：預付費，即包年包月<br><li>POSTPAID_BY_HOUR：按小時後付費
         :type DiskChargeType: str
         :param DiskChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數指定包年包月雲盤的購買時長、是否設置自動續約等屬性。<br>創建預付費雲盤該參數必傳，創建按小時後付費雲盤無需傳該參數。
-        :type DiskChargePrepaid: :class:`tencentcloud.cbs.v20170312.models.DiskChargePrepaid`
+        :type DiskChargePrepaid: :class:`taifucloudcloud.cbs.v20170312.models.DiskChargePrepaid`
         :param DiskCount: 購買雲盤的數量。不填則預設爲1。
         :type DiskCount: int
         :param ProjectId: 雲盤所屬項目ID。
@@ -1367,7 +1367,7 @@ class InquiryPriceCreateDisksResponse(AbstractModel):
     def __init__(self):
         """
         :param DiskPrice: 描述了新購雲盤的價格。
-        :type DiskPrice: :class:`tencentcloud.cbs.v20170312.models.Price`
+        :type DiskPrice: :class:`taifucloudcloud.cbs.v20170312.models.Price`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1424,7 +1424,7 @@ class InquiryPriceRenewDisksResponse(AbstractModel):
     def __init__(self):
         """
         :param DiskPrice: 描述了續約雲盤的價格。
-        :type DiskPrice: :class:`tencentcloud.cbs.v20170312.models.PrepayPrice`
+        :type DiskPrice: :class:`taifucloudcloud.cbs.v20170312.models.PrepayPrice`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1472,7 +1472,7 @@ class InquiryPriceResizeDiskResponse(AbstractModel):
     def __init__(self):
         """
         :param DiskPrice: 描述了擴容雲盤的價格。
-        :type DiskPrice: :class:`tencentcloud.cbs.v20170312.models.PrepayPrice`
+        :type DiskPrice: :class:`taifucloudcloud.cbs.v20170312.models.PrepayPrice`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1745,7 +1745,7 @@ class RenewDiskRequest(AbstractModel):
     def __init__(self):
         """
         :param DiskChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月雲盤的續約時長。<br>在雲盤與掛載的實例一起續約的場景下，可以指定參數CurInstanceDeadline，此時雲盤會按對齊到實例續約後的到期時間來續約。
-        :type DiskChargePrepaid: :class:`tencentcloud.cbs.v20170312.models.DiskChargePrepaid`
+        :type DiskChargePrepaid: :class:`taifucloudcloud.cbs.v20170312.models.DiskChargePrepaid`
         :param DiskId: 雲硬碟ID， 通過[DescribeDisks](/document/product/362/16315)介面查詢。
         :type DiskId: str
         """
@@ -1825,7 +1825,7 @@ class Snapshot(AbstractModel):
         :param SnapshotId: 快照ID。
         :type SnapshotId: str
         :param Placement: 快照所在的位置。
-        :type Placement: :class:`tencentcloud.cbs.v20170312.models.Placement`
+        :type Placement: :class:`taifucloudcloud.cbs.v20170312.models.Placement`
         :param DiskUsage: 創建此快照的雲硬碟類型。取值範圍：<br><li>SYSTEM_DISK：系統盤<br><li>DATA_DISK：數據盤。
         :type DiskUsage: str
         :param DiskId: 創建此快照的雲硬碟ID。

@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cmq.v20190304 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cmq.v20190304 import models
 
 
 class CmqClient(AbstractClient):
     _apiVersion = '2019-03-04'
-    _endpoint = 'cmq.tencentcloudapi.com'
+    _endpoint = 'cmq.taifucloudcloudapi.com'
 
 
     def ClearQueue(self, request):
         """清除queue中的所有訊息
 
         :param request: Request instance for ClearQueue.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.ClearQueueRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.ClearQueueResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.ClearQueueRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.ClearQueueResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class CmqClient(AbstractClient):
         """清空訂閱者訊息标簽
 
         :param request: Request instance for ClearSubscriptionFilterTags.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.ClearSubscriptionFilterTagsRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.ClearSubscriptionFilterTagsResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.ClearSubscriptionFilterTagsRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.ClearSubscriptionFilterTagsResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class CmqClient(AbstractClient):
         """創建隊列介面
 
         :param request: Request instance for CreateQueue.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.CreateQueueRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.CreateQueueResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.CreateQueueRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.CreateQueueResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class CmqClient(AbstractClient):
         """創建訂閱介面
 
         :param request: Request instance for CreateSubscribe.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.CreateSubscribeRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.CreateSubscribeResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.CreateSubscribeRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.CreateSubscribeResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class CmqClient(AbstractClient):
         """創建主題
 
         :param request: Request instance for CreateTopic.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.CreateTopicRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.CreateTopicResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.CreateTopicRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.CreateTopicResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class CmqClient(AbstractClient):
         """DeleteQueue
 
         :param request: Request instance for DeleteQueue.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.DeleteQueueRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.DeleteQueueResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.DeleteQueueRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.DeleteQueueResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class CmqClient(AbstractClient):
         """删除訂閱
 
         :param request: Request instance for DeleteSubscribe.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.DeleteSubscribeRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.DeleteSubscribeResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.DeleteSubscribeRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.DeleteSubscribeResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class CmqClient(AbstractClient):
         """删除主題
 
         :param request: Request instance for DeleteTopic.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.DeleteTopicRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.DeleteTopicResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.DeleteTopicRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.DeleteTopicResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class CmqClient(AbstractClient):
         """列舉死信隊列源隊列
 
         :param request: Request instance for DescribeDeadLetterSourceQueues.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.DescribeDeadLetterSourceQueuesRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.DescribeDeadLetterSourceQueuesResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.DescribeDeadLetterSourceQueuesRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.DescribeDeadLetterSourceQueuesResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class CmqClient(AbstractClient):
         """列舉隊列
 
         :param request: Request instance for DescribeQueueDetail.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.DescribeQueueDetailRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.DescribeQueueDetailResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.DescribeQueueDetailRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.DescribeQueueDetailResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class CmqClient(AbstractClient):
         """查詢訂閱詳情
 
         :param request: Request instance for DescribeSubscriptionDetail.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.DescribeSubscriptionDetailRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.DescribeSubscriptionDetailResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.DescribeSubscriptionDetailRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.DescribeSubscriptionDetailResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class CmqClient(AbstractClient):
         """查詢主題詳情
 
         :param request: Request instance for DescribeTopicDetail.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.DescribeTopicDetailRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.DescribeTopicDetailResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.DescribeTopicDetailRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.DescribeTopicDetailResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class CmqClient(AbstractClient):
         """修改隊列屬性
 
         :param request: Request instance for ModifyQueueAttribute.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.ModifyQueueAttributeRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.ModifyQueueAttributeResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.ModifyQueueAttributeRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.ModifyQueueAttributeResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class CmqClient(AbstractClient):
         """修改訂閱屬性
 
         :param request: Request instance for ModifySubscriptionAttribute.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.ModifySubscriptionAttributeRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.ModifySubscriptionAttributeResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.ModifySubscriptionAttributeRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.ModifySubscriptionAttributeResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class CmqClient(AbstractClient):
         """修改主題屬性
 
         :param request: Request instance for ModifyTopicAttribute.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.ModifyTopicAttributeRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.ModifyTopicAttributeResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.ModifyTopicAttributeRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.ModifyTopicAttributeResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class CmqClient(AbstractClient):
         """回溯隊列
 
         :param request: Request instance for RewindQueue.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.RewindQueueRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.RewindQueueResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.RewindQueueRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.RewindQueueResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class CmqClient(AbstractClient):
         """解綁死信隊列
 
         :param request: Request instance for UnbindDeadLetter.
-        :type request: :class:`tencentcloud.cmq.v20190304.models.UnbindDeadLetterRequest`
-        :rtype: :class:`tencentcloud.cmq.v20190304.models.UnbindDeadLetterResponse`
+        :type request: :class:`taifucloudcloud.cmq.v20190304.models.UnbindDeadLetterRequest`
+        :rtype: :class:`taifucloudcloud.cmq.v20190304.models.UnbindDeadLetterResponse`
 
         """
         try:

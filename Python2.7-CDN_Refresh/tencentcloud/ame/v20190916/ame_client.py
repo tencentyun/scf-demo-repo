@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.ame.v20190916 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.ame.v20190916 import models
 
 
 class AmeClient(AbstractClient):
     _apiVersion = '2019-09-16'
-    _endpoint = 'ame.tencentcloudapi.com'
+    _endpoint = 'ame.taifucloudcloudapi.com'
 
 
     def DescribeItems(self, request):
         """分類内容下歌曲清單獲取，根據CategoryID或CategoryCode
 
         :param request: Request instance for DescribeItems.
-        :type request: :class:`tencentcloud.ame.v20190916.models.DescribeItemsRequest`
-        :rtype: :class:`tencentcloud.ame.v20190916.models.DescribeItemsResponse`
+        :type request: :class:`taifucloudcloud.ame.v20190916.models.DescribeItemsRequest`
+        :rtype: :class:`taifucloudcloud.ame.v20190916.models.DescribeItemsResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class AmeClient(AbstractClient):
         """根據介面的模式及歌曲ID來取得歌詞訊息。
 
         :param request: Request instance for DescribeLyric.
-        :type request: :class:`tencentcloud.ame.v20190916.models.DescribeLyricRequest`
-        :rtype: :class:`tencentcloud.ame.v20190916.models.DescribeLyricResponse`
+        :type request: :class:`taifucloudcloud.ame.v20190916.models.DescribeLyricRequest`
+        :rtype: :class:`taifucloudcloud.ame.v20190916.models.DescribeLyricResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class AmeClient(AbstractClient):
         """根據介面的模式及歌曲ID來取得對應權限的歌曲播放網址等訊息。
 
         :param request: Request instance for DescribeMusic.
-        :type request: :class:`tencentcloud.ame.v20190916.models.DescribeMusicRequest`
-        :rtype: :class:`tencentcloud.ame.v20190916.models.DescribeMusicResponse`
+        :type request: :class:`taifucloudcloud.ame.v20190916.models.DescribeMusicRequest`
+        :rtype: :class:`taifucloudcloud.ame.v20190916.models.DescribeMusicResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class AmeClient(AbstractClient):
         """獲取素材庫清單時使用
 
         :param request: Request instance for DescribeStations.
-        :type request: :class:`tencentcloud.ame.v20190916.models.DescribeStationsRequest`
-        :rtype: :class:`tencentcloud.ame.v20190916.models.DescribeStationsResponse`
+        :type request: :class:`taifucloudcloud.ame.v20190916.models.DescribeStationsRequest`
+        :rtype: :class:`taifucloudcloud.ame.v20190916.models.DescribeStationsResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class AmeClient(AbstractClient):
         """客戶上報用戶數據功能，爲了更好的爲用戶提供優質服務
 
         :param request: Request instance for ReportData.
-        :type request: :class:`tencentcloud.ame.v20190916.models.ReportDataRequest`
-        :rtype: :class:`tencentcloud.ame.v20190916.models.ReportDataResponse`
+        :type request: :class:`taifucloudcloud.ame.v20190916.models.ReportDataRequest`
+        :rtype: :class:`taifucloudcloud.ame.v20190916.models.ReportDataResponse`
 
         """
         try:

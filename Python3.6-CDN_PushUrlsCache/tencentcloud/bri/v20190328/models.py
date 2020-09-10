@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class BRIRequest(AbstractModel):
@@ -118,7 +118,7 @@ class DescribeBRIRequest(AbstractModel):
     def __init__(self):
         """
         :param RequestData: 業務風險情報請求體
-        :type RequestData: :class:`tencentcloud.bri.v20190328.models.BRIRequest`
+        :type RequestData: :class:`taifucloudcloud.bri.v20190328.models.BRIRequest`
         :param ResourceId: 客戶用于計費的資源ID
         :type ResourceId: str
         """
@@ -141,7 +141,7 @@ class DescribeBRIResponse(AbstractModel):
     def __init__(self):
         """
         :param ResponseData: 業務風險情報響應體
-        :type ResponseData: :class:`tencentcloud.bri.v20190328.models.BRIResponse`
+        :type ResponseData: :class:`taifucloudcloud.bri.v20190328.models.BRIResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

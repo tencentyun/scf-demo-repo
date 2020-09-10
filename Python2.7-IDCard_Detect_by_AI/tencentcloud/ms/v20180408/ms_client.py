@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.ms.v20180408 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.ms.v20180408 import models
 
 
 class MsClient(AbstractClient):
     _apiVersion = '2018-04-08'
-    _endpoint = 'ms.tencentcloudapi.com'
+    _endpoint = 'ms.taifucloudcloudapi.com'
 
 
     def CreateBindInstance(self, request):
         """将應用和資源進行綁定
 
         :param request: 調用CreateBindInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.ms.v20180408.models.CreateBindInstanceRequest`
-        :rtype: :class:`tencentcloud.ms.v20180408.models.CreateBindInstanceResponse`
+        :type request: :class:`taifucloudcloud.ms.v20180408.models.CreateBindInstanceRequest`
+        :rtype: :class:`taifucloudcloud.ms.v20180408.models.CreateBindInstanceResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class MsClient(AbstractClient):
         """獲取雲COS文件儲存臨時金鑰，金鑰僅限于臨時上傳文件，有訪問限制和時效性。
 
         :param request: 調用CreateCosSecKeyInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.ms.v20180408.models.CreateCosSecKeyInstanceRequest`
-        :rtype: :class:`tencentcloud.ms.v20180408.models.CreateCosSecKeyInstanceResponse`
+        :type request: :class:`taifucloudcloud.ms.v20180408.models.CreateCosSecKeyInstanceRequest`
+        :rtype: :class:`taifucloudcloud.ms.v20180408.models.CreateCosSecKeyInstanceResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class MsClient(AbstractClient):
         """用戶可以使用該介面自建資源，只支援白名單用戶
 
         :param request: 調用CreateResourceInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.ms.v20180408.models.CreateResourceInstancesRequest`
-        :rtype: :class:`tencentcloud.ms.v20180408.models.CreateResourceInstancesResponse`
+        :type request: :class:`taifucloudcloud.ms.v20180408.models.CreateResourceInstancesRequest`
+        :rtype: :class:`taifucloudcloud.ms.v20180408.models.CreateResourceInstancesResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class MsClient(AbstractClient):
         """用戶通過該介面批次提交應用進行應用掃描，掃描後需通過DescribeScanResults介面查詢掃描結果
 
         :param request: 調用CreateScanInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.ms.v20180408.models.CreateScanInstancesRequest`
-        :rtype: :class:`tencentcloud.ms.v20180408.models.CreateScanInstancesResponse`
+        :type request: :class:`taifucloudcloud.ms.v20180408.models.CreateScanInstancesRequest`
+        :rtype: :class:`taifucloudcloud.ms.v20180408.models.CreateScanInstancesResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class MsClient(AbstractClient):
         """用戶通過該介面提交應用進行應用加固，加固後需通過DescribeShieldResult介面查詢加固結果
 
         :param request: 調用CreateShieldInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.ms.v20180408.models.CreateShieldInstanceRequest`
-        :rtype: :class:`tencentcloud.ms.v20180408.models.CreateShieldInstanceResponse`
+        :type request: :class:`taifucloudcloud.ms.v20180408.models.CreateShieldInstanceRequest`
+        :rtype: :class:`taifucloudcloud.ms.v20180408.models.CreateShieldInstanceResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class MsClient(AbstractClient):
         """對資源進行策略新增
 
         :param request: 調用CreateShieldPlanInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.ms.v20180408.models.CreateShieldPlanInstanceRequest`
-        :rtype: :class:`tencentcloud.ms.v20180408.models.CreateShieldPlanInstanceResponse`
+        :type request: :class:`taifucloudcloud.ms.v20180408.models.CreateShieldPlanInstanceRequest`
+        :rtype: :class:`taifucloudcloud.ms.v20180408.models.CreateShieldPlanInstanceResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class MsClient(AbstractClient):
         """删除一個或者多個app掃描訊息
 
         :param request: 調用DeleteScanInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.ms.v20180408.models.DeleteScanInstancesRequest`
-        :rtype: :class:`tencentcloud.ms.v20180408.models.DeleteScanInstancesResponse`
+        :type request: :class:`taifucloudcloud.ms.v20180408.models.DeleteScanInstancesRequest`
+        :rtype: :class:`taifucloudcloud.ms.v20180408.models.DeleteScanInstancesResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class MsClient(AbstractClient):
         """删除一個或者多個app加固訊息
 
         :param request: 調用DeleteShieldInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.ms.v20180408.models.DeleteShieldInstancesRequest`
-        :rtype: :class:`tencentcloud.ms.v20180408.models.DeleteShieldInstancesResponse`
+        :type request: :class:`taifucloudcloud.ms.v20180408.models.DeleteShieldInstancesRequest`
+        :rtype: :class:`taifucloudcloud.ms.v20180408.models.DeleteShieldInstancesResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class MsClient(AbstractClient):
         """獲取某個用戶的所有資源訊息
 
         :param request: 調用DescribeResourceInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.ms.v20180408.models.DescribeResourceInstancesRequest`
-        :rtype: :class:`tencentcloud.ms.v20180408.models.DescribeResourceInstancesResponse`
+        :type request: :class:`taifucloudcloud.ms.v20180408.models.DescribeResourceInstancesRequest`
+        :rtype: :class:`taifucloudcloud.ms.v20180408.models.DescribeResourceInstancesResponse`
 
         """
         try:
@@ -282,8 +282,8 @@ class MsClient(AbstractClient):
         可以通過指定任務唯一标識ItemId來查詢指定app的詳細訊息，或通過設定過濾器來查詢滿足過濾條件的app的詳細訊息。 指定偏移(Offset)和限制(Limit)來選擇結果中的一部分，預設返回滿足條件的前20個app訊息。
 
         :param request: 調用DescribeScanInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.ms.v20180408.models.DescribeScanInstancesRequest`
-        :rtype: :class:`tencentcloud.ms.v20180408.models.DescribeScanInstancesResponse`
+        :type request: :class:`taifucloudcloud.ms.v20180408.models.DescribeScanInstancesRequest`
+        :rtype: :class:`taifucloudcloud.ms.v20180408.models.DescribeScanInstancesResponse`
 
         """
         try:
@@ -310,8 +310,8 @@ class MsClient(AbstractClient):
         """用戶通過CreateScanInstances介面提交應用進行風險批次掃描後，用此介面批次獲取風險詳細訊息,包含漏洞訊息，廣告訊息，插件訊息和病毒訊息
 
         :param request: 調用DescribeScanResults所需參數的結構體。
-        :type request: :class:`tencentcloud.ms.v20180408.models.DescribeScanResultsRequest`
-        :rtype: :class:`tencentcloud.ms.v20180408.models.DescribeScanResultsResponse`
+        :type request: :class:`taifucloudcloud.ms.v20180408.models.DescribeScanResultsRequest`
+        :rtype: :class:`taifucloudcloud.ms.v20180408.models.DescribeScanResultsResponse`
 
         """
         try:
@@ -339,8 +339,8 @@ class MsClient(AbstractClient):
         可以通過指定任務唯一标識ItemId來查詢指定app的詳細訊息，或通過設定過濾器來查詢滿足過濾條件的app的詳細訊息。 指定偏移(Offset)和限制(Limit)來選擇結果中的一部分，預設返回滿足條件的前20個app訊息。
 
         :param request: 調用DescribeShieldInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.ms.v20180408.models.DescribeShieldInstancesRequest`
-        :rtype: :class:`tencentcloud.ms.v20180408.models.DescribeShieldInstancesResponse`
+        :type request: :class:`taifucloudcloud.ms.v20180408.models.DescribeShieldInstancesRequest`
+        :rtype: :class:`taifucloudcloud.ms.v20180408.models.DescribeShieldInstancesResponse`
 
         """
         try:
@@ -367,8 +367,8 @@ class MsClient(AbstractClient):
         """查詢加固策略
 
         :param request: 調用DescribeShieldPlanInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.ms.v20180408.models.DescribeShieldPlanInstanceRequest`
-        :rtype: :class:`tencentcloud.ms.v20180408.models.DescribeShieldPlanInstanceResponse`
+        :type request: :class:`taifucloudcloud.ms.v20180408.models.DescribeShieldPlanInstanceRequest`
+        :rtype: :class:`taifucloudcloud.ms.v20180408.models.DescribeShieldPlanInstanceResponse`
 
         """
         try:
@@ -395,8 +395,8 @@ class MsClient(AbstractClient):
         """通過唯一标識獲取加固的結果
 
         :param request: 調用DescribeShieldResult所需參數的結構體。
-        :type request: :class:`tencentcloud.ms.v20180408.models.DescribeShieldResultRequest`
-        :rtype: :class:`tencentcloud.ms.v20180408.models.DescribeShieldResultResponse`
+        :type request: :class:`taifucloudcloud.ms.v20180408.models.DescribeShieldResultRequest`
+        :rtype: :class:`taifucloudcloud.ms.v20180408.models.DescribeShieldResultResponse`
 
         """
         try:
@@ -423,8 +423,8 @@ class MsClient(AbstractClient):
         """獲取用戶基礎訊息
 
         :param request: 調用DescribeUserBaseInfoInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.ms.v20180408.models.DescribeUserBaseInfoInstanceRequest`
-        :rtype: :class:`tencentcloud.ms.v20180408.models.DescribeUserBaseInfoInstanceResponse`
+        :type request: :class:`taifucloudcloud.ms.v20180408.models.DescribeUserBaseInfoInstanceRequest`
+        :rtype: :class:`taifucloudcloud.ms.v20180408.models.DescribeUserBaseInfoInstanceResponse`
 
         """
         try:

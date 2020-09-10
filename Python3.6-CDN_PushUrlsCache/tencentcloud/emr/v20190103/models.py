@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class COSSettings(AbstractModel):
@@ -207,7 +207,7 @@ class ClusterInstancesInfo(AbstractModel):
         :type RunTime: str
         :param Config: 集群産品配置訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Config: :class:`tencentcloud.emr.v20190103.models.EmrProductConfigOutter`
+        :type Config: :class:`taifucloudcloud.emr.v20190103.models.EmrProductConfigOutter`
         :param MasterIp: 主節點外網IP
 注意：此欄位可能返回 null，表示取不到有效值。
         :type MasterIp: str
@@ -335,7 +335,7 @@ class CreateInstanceRequest(AbstractModel):
 <li>7：表示EMR-V3.0.0。</li>
         :type ProductId: int
         :param VPCSettings: 私有網絡相關訊息配置。通過該參數可以指定私有網絡的ID，子網ID等訊息。
-        :type VPCSettings: :class:`tencentcloud.emr.v20190103.models.VPCSettings`
+        :type VPCSettings: :class:`taifucloudcloud.emr.v20190103.models.VPCSettings`
         :param Software: 佈署的元件清單。不同的EMR産品ID（ProductId：具體含義參考入參ProductId欄位）需要選擇不同的必選元件：
 <li>ProductId爲1的時候，必選元件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
 <li>ProductId爲2的時候，必選元件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
@@ -343,7 +343,7 @@ class CreateInstanceRequest(AbstractModel):
 <li>ProductId爲7的時候，必選元件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li>
         :type Software: list of str
         :param ResourceSpec: 節點資源的規格。
-        :type ResourceSpec: :class:`tencentcloud.emr.v20190103.models.NewResourceSpec`
+        :type ResourceSpec: :class:`taifucloudcloud.emr.v20190103.models.NewResourceSpec`
         :param SupportHA: 是否開啓節點高可用。取值範圍：
 <li>0：表示不開啓節點高可用。</li>
 <li>1：表示開啓節點高可用。</li>
@@ -357,7 +357,7 @@ class CreateInstanceRequest(AbstractModel):
 <li>1：表示包年包月。</li>
         :type PayMode: int
         :param Placement: 實例所在的位置。通過該參數可以指定實例所屬可用區，所屬項目等屬性。
-        :type Placement: :class:`tencentcloud.emr.v20190103.models.Placement`
+        :type Placement: :class:`taifucloudcloud.emr.v20190103.models.Placement`
         :param TimeSpan: 購買實例的時長。結合TimeUnit一起使用。
 <li>TimeUnit爲s時，該參數只能填寫3600，表示按量計費實例。</li>
 <li>TimeUnit爲m時，該參數填寫的數字表示包年包月實例的購買時長，如1表示購買一個月</li>
@@ -369,10 +369,10 @@ class CreateInstanceRequest(AbstractModel):
         :param LoginSettings: 實例登入設置。通過該參數可以設置所購買節點的登入方式密碼或者金鑰。
 <li>設置金鑰時，密碼僅用于元件原生WebUI快捷入口登入。</li>
 <li>未設置金鑰時，密碼用于登入所購節點以及元件原生WebUI快捷入口登入。</li>
-        :type LoginSettings: :class:`tencentcloud.emr.v20190103.models.LoginSettings`
+        :type LoginSettings: :class:`taifucloudcloud.emr.v20190103.models.LoginSettings`
         :param COSSettings: 開啓COS訪問需要設置的參數。
-        :type COSSettings: :class:`tencentcloud.emr.v20190103.models.COSSettings`
-        :param SgId: 實例所屬安全組的ID，形如sg-xxxxxxxx。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId欄位來獲取。
+        :type COSSettings: :class:`taifucloudcloud.emr.v20190103.models.COSSettings`
+        :param SgId: 實例所屬安全組的ID，形如sg-xxxxxxxx。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.taifucloud.com/document/api/215/15808) 的返回值中的SecurityGroupId欄位來獲取。
         :type SgId: str
         :param PreExecutedFileSettings: 引導操作腳本設置。
         :type PreExecutedFileSettings: list of PreExecuteFileSettings
@@ -406,7 +406,7 @@ class CreateInstanceRequest(AbstractModel):
         :param UnifyMetaInstanceId: EMR-MetaDB實例
         :type UnifyMetaInstanceId: str
         :param MetaDBInfo: 自定義MetaDB訊息
-        :type MetaDBInfo: :class:`tencentcloud.emr.v20190103.models.CustomMetaInfo`
+        :type MetaDBInfo: :class:`taifucloudcloud.emr.v20190103.models.CustomMetaInfo`
         """
         self.ProductId = None
         self.VPCSettings = None
@@ -616,7 +616,7 @@ class DescribeInstancesRequest(AbstractModel):
 <li>monitorManage：表示查詢除了已銷毀、創建中以及創建失敗的集群之外的集群清單。</li>
 <li>cloudHardwareManage/componentManage：目前這兩個取值爲預留取值，暫時和monitorManage表示同樣的含義。</li>
         :type DisplayStrategy: str
-        :param InstanceIds: 按照一個或者多個實例ID查詢。實例ID形如: emr-xxxxxxxx 。(此參數的具體格式可參考API[簡介](https://cloud.tencent.com/document/api/213/15688)的 Ids.N 一節)。如果不填寫實例ID，返回該APPID下所有實例清單。
+        :param InstanceIds: 按照一個或者多個實例ID查詢。實例ID形如: emr-xxxxxxxx 。(此參數的具體格式可參考API[簡介](https://cloud.taifucloud.com/document/api/213/15688)的 Ids.N 一節)。如果不填寫實例ID，返回該APPID下所有實例清單。
         :type InstanceIds: list of str
         :param Offset: 頁編号，預設值爲0，表示第一頁。
         :type Offset: int
@@ -624,7 +624,7 @@ class DescribeInstancesRequest(AbstractModel):
         :type Limit: int
         :param ProjectId: 建議必填-1，表示拉取所有項目下的集群。
 不填預設值爲0，表示拉取預設項目下的集群。
-實例所屬項目ID。該參數可以通過調用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 欄位來獲取。
+實例所屬項目ID。該參數可以通過調用 [DescribeProject](https://cloud.taifucloud.com/document/api/378/4400) 的返回值中的 projectId 欄位來獲取。
         :type ProjectId: int
         :param OrderField: 排序欄位。取值範圍：
 <li>clusterId：表示按照實例ID排序。</li>
@@ -715,16 +715,16 @@ class EmrProductConfigOutter(AbstractModel):
         :type ComNodeSize: int
         :param MasterResource: Master節點資源
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MasterResource: :class:`tencentcloud.emr.v20190103.models.OutterResource`
+        :type MasterResource: :class:`taifucloudcloud.emr.v20190103.models.OutterResource`
         :param CoreResource: Core節點資源
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CoreResource: :class:`tencentcloud.emr.v20190103.models.OutterResource`
+        :type CoreResource: :class:`taifucloudcloud.emr.v20190103.models.OutterResource`
         :param TaskResource: Task節點資源
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TaskResource: :class:`tencentcloud.emr.v20190103.models.OutterResource`
+        :type TaskResource: :class:`taifucloudcloud.emr.v20190103.models.OutterResource`
         :param ComResource: Common節點資源
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ComResource: :class:`tencentcloud.emr.v20190103.models.OutterResource`
+        :type ComResource: :class:`taifucloudcloud.emr.v20190103.models.OutterResource`
         :param OnCos: 是否使用COS
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OnCos: bool
@@ -808,7 +808,7 @@ class InquiryPriceCreateInstanceRequest(AbstractModel):
 <li>TimeUnit爲m時，該參數填寫的數字表示包年包月實例的購買時長，如1表示購買一個月</li>
         :type TimeSpan: int
         :param ResourceSpec: 詢價的節點規格。
-        :type ResourceSpec: :class:`tencentcloud.emr.v20190103.models.NewResourceSpec`
+        :type ResourceSpec: :class:`taifucloudcloud.emr.v20190103.models.NewResourceSpec`
         :param Currency: 貨币種類。取值範圍：
 <li>CNY：表示人民币。</li>
         :type Currency: str
@@ -827,9 +827,9 @@ class InquiryPriceCreateInstanceRequest(AbstractModel):
 <li>ProductId爲7的時候，必選元件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li>
         :type Software: list of str
         :param Placement: 實例所在的位置。通過該參數可以指定實例所屬可用區，所屬項目等屬性。
-        :type Placement: :class:`tencentcloud.emr.v20190103.models.Placement`
+        :type Placement: :class:`taifucloudcloud.emr.v20190103.models.Placement`
         :param VPCSettings: 私有網絡相關訊息配置。通過該參數可以指定私有網絡的ID，子網ID等訊息。
-        :type VPCSettings: :class:`tencentcloud.emr.v20190103.models.VPCSettings`
+        :type VPCSettings: :class:`taifucloudcloud.emr.v20190103.models.VPCSettings`
         :param MetaType: hive共享中繼資料庫類型。取值範圍：
 <li>EMR_NEW_META：表示集群預設創建</li>
 <li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
@@ -838,7 +838,7 @@ class InquiryPriceCreateInstanceRequest(AbstractModel):
         :param UnifyMetaInstanceId: EMR-MetaDB實例
         :type UnifyMetaInstanceId: str
         :param MetaDBInfo: 自定義MetaDB訊息
-        :type MetaDBInfo: :class:`tencentcloud.emr.v20190103.models.CustomMetaInfo`
+        :type MetaDBInfo: :class:`taifucloudcloud.emr.v20190103.models.CustomMetaInfo`
         :param ProductId: 産品ID，不同産品ID表示不同的EMR産品版本。取值範圍：
 <li>1：表示EMR-V1.3.1。</li>
 <li>2：表示EMR-V2.0.1。</li>
@@ -933,10 +933,10 @@ class InquiryPriceRenewInstanceRequest(AbstractModel):
         """
         :param TimeSpan: 實例續約的時長。需要結合TimeUnit一起使用。1表示續約1一個月
         :type TimeSpan: int
-        :param ResourceIds: 待續約節點的資源ID清單。資源ID形如：emr-vm-xxxxxxxx。有效的資源ID可通過登入[控制台](https://console.cloud.tencent.com/emr/static/hardware)查詢。
+        :param ResourceIds: 待續約節點的資源ID清單。資源ID形如：emr-vm-xxxxxxxx。有效的資源ID可通過登入[控制台](https://console.cloud.taifucloud.com/emr/static/hardware)查詢。
         :type ResourceIds: list of str
         :param Placement: 實例所在的位置。通過該參數可以指定實例所屬可用區，所屬項目等屬性。
-        :type Placement: :class:`tencentcloud.emr.v20190103.models.Placement`
+        :type Placement: :class:`taifucloudcloud.emr.v20190103.models.Placement`
         :param PayMode: 實例計費模式。此處只支援取值爲1，表示包年包月。
         :type PayMode: int
         :param TimeUnit: 實例續約的時間單位。取值範圍：
@@ -1018,7 +1018,7 @@ class InquiryPriceScaleOutInstanceRequest(AbstractModel):
 <li>TimeUnit爲s時，該參數只能填寫3600，表示按量計費實例。</li>
 <li>TimeUnit爲m時，該參數填寫的數字表示包年包月實例的購買時長，如1表示購買一個月</li>
         :type TimeSpan: int
-        :param ZoneId: 實例所屬的可用區ID，例如100003。該參數可以通過調用 [DescribeZones](https://cloud.tencent.com/document/api/213/15707) 的返回值中的ZoneId欄位來獲取。
+        :param ZoneId: 實例所屬的可用區ID，例如100003。該參數可以通過調用 [DescribeZones](https://cloud.taifucloud.com/document/api/213/15707) 的返回值中的ZoneId欄位來獲取。
         :type ZoneId: int
         :param PayMode: 實例計費模式。取值範圍：
 <li>0：表示按量計費。</li>
@@ -1079,7 +1079,7 @@ class InquiryPriceScaleOutInstanceResponse(AbstractModel):
         :type Unit: str
         :param PriceSpec: 詢價的節點規格。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PriceSpec: :class:`tencentcloud.emr.v20190103.models.PriceResource`
+        :type PriceSpec: :class:`taifucloudcloud.emr.v20190103.models.PriceResource`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1116,13 +1116,13 @@ class InquiryPriceUpdateInstanceRequest(AbstractModel):
 <li>TimeUnit爲m時，該參數填寫的數字表示包年包月實例的購買時長，如1表示購買一個月</li>
         :type TimeSpan: int
         :param UpdateSpec: 節點變配的目标配置。
-        :type UpdateSpec: :class:`tencentcloud.emr.v20190103.models.UpdateInstanceSettings`
+        :type UpdateSpec: :class:`taifucloudcloud.emr.v20190103.models.UpdateInstanceSettings`
         :param PayMode: 實例計費模式。取值範圍：
 <li>0：表示按量計費。</li>
 <li>1：表示包年包月。</li>
         :type PayMode: int
         :param Placement: 實例所在的位置。通過該參數可以指定實例所屬可用區，所屬項目等屬性。
-        :type Placement: :class:`tencentcloud.emr.v20190103.models.Placement`
+        :type Placement: :class:`taifucloudcloud.emr.v20190103.models.Placement`
         :param Currency: 貨币種類。取值範圍：
 <li>CNY：表示人民币。</li>
         :type Currency: str
@@ -1269,11 +1269,11 @@ class NewResourceSpec(AbstractModel):
     def __init__(self):
         """
         :param MasterResourceSpec: 描述Master節點資源
-        :type MasterResourceSpec: :class:`tencentcloud.emr.v20190103.models.Resource`
+        :type MasterResourceSpec: :class:`taifucloudcloud.emr.v20190103.models.Resource`
         :param CoreResourceSpec: 描述Core節點資源
-        :type CoreResourceSpec: :class:`tencentcloud.emr.v20190103.models.Resource`
+        :type CoreResourceSpec: :class:`taifucloudcloud.emr.v20190103.models.Resource`
         :param TaskResourceSpec: 描述Task節點資源
-        :type TaskResourceSpec: :class:`tencentcloud.emr.v20190103.models.Resource`
+        :type TaskResourceSpec: :class:`taifucloudcloud.emr.v20190103.models.Resource`
         :param MasterCount: Master節點數量
         :type MasterCount: int
         :param CoreCount: Core節點數量
@@ -1281,7 +1281,7 @@ class NewResourceSpec(AbstractModel):
         :param TaskCount: Task節點數量
         :type TaskCount: int
         :param CommonResourceSpec: 描述Common節點資源
-        :type CommonResourceSpec: :class:`tencentcloud.emr.v20190103.models.Resource`
+        :type CommonResourceSpec: :class:`taifucloudcloud.emr.v20190103.models.Resource`
         :param CommonCount: Common節點數量
         :type CommonCount: int
         """
@@ -1416,7 +1416,7 @@ class NodeHardwareInfo(AbstractModel):
         :type MCMultiDisk: list of MultiDiskMC
         :param CdbNodeInfo: 資料庫訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CdbNodeInfo: :class:`tencentcloud.emr.v20190103.models.CdbInfo`
+        :type CdbNodeInfo: :class:`taifucloudcloud.emr.v20190103.models.CdbInfo`
         :param Ip: 内網IP
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Ip: str
@@ -1859,7 +1859,7 @@ class ScaleOutInstanceRequest(AbstractModel):
         :type TaskCount: int
         :param CoreCount: 擴容的Core節點數量。
         :type CoreCount: int
-        :param UnNecessaryNodeList: 擴容時不需要安裝的程序。
+        :param UnNecessaryNodeList: 擴容時不需要安裝的程式。
         :type UnNecessaryNodeList: list of int non-negative
         :param RouterCount: 擴容的Router節點數量。
         :type RouterCount: int
@@ -1867,7 +1867,7 @@ class ScaleOutInstanceRequest(AbstractModel):
 <li>SoftDeployInfo和ServiceNodeInfo是同組參數，和UnNecessaryNodeList參數互斥。</li>
 <li>建議使用SoftDeployInfo和ServiceNodeInfo組合。</li>
         :type SoftDeployInfo: list of int non-negative
-        :param ServiceNodeInfo: 啓動的程序。
+        :param ServiceNodeInfo: 啓動的程式。
         :type ServiceNodeInfo: list of int non-negative
         :param DisasterRecoverGroupIds: 分散置放群組ID清單，當前僅支援指定一個。
         :type DisasterRecoverGroupIds: list of str
@@ -2026,7 +2026,7 @@ class TerminateTasksRequest(AbstractModel):
         """
         :param InstanceId: 實例ID。
         :type InstanceId: str
-        :param ResourceIds: 待銷毀節點的資源ID清單。資源ID形如：emr-vm-xxxxxxxx。有效的資源ID可通過登入[控制台](https://console.cloud.tencent.com/emr/static/hardware)查詢。
+        :param ResourceIds: 待銷毀節點的資源ID清單。資源ID形如：emr-vm-xxxxxxxx。有效的資源ID可通過登入[控制台](https://console.cloud.taifucloud.com/emr/static/hardware)查詢。
         :type ResourceIds: list of str
         """
         self.InstanceId = None

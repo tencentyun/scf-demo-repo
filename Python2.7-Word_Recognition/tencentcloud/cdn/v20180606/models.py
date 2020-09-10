@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CacheOptResult(AbstractModel):
@@ -61,7 +61,7 @@ statusCode：狀态碼，返回 2XX、3XX、4XX、5XX 匯總數據，單位爲 �
         :param DetailData: 明細數據組合
         :type DetailData: list of TimestampData
         :param SummarizedData: 匯總數據組合
-        :type SummarizedData: :class:`tencentcloud.cdn.v20180606.models.SummarizedData`
+        :type SummarizedData: :class:`taifucloudcloud.cdn.v20180606.models.SummarizedData`
         """
         self.Metric = None
         self.DetailData = None
@@ -111,7 +111,7 @@ statusCode：狀态碼，返回 2xx、3xx、4xx、5xx 匯總數據，單位爲 �
         :param Domains: 指定查詢域名清單
 最多可一次性查詢 30 個加速域名明細
         :type Domains: list of str
-        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.taifucloud.com/project)
 未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Project: int
         :param Interval: 時間粒度，支援以下幾種模式：
@@ -124,10 +124,10 @@ day：天粒度，指定查詢區間大于 31 天，可返回天粒度明細數�
 可按需指定爲 true，返回每一個 Domain 的明細數據（statusCode 指标暫不支援）
         :type Detail: bool
         :param Isp: 指定運營商查詢，不填充表示查詢所有運營商
-運營商編碼可以檢視 [運營商編碼映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
+運營商編碼可以檢視 [運營商編碼映射](https://cloud.taifucloud.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
         :type Isp: int
-        :param District: 指定省份查詢，不填充表示查詢所有省份
-省份編碼可以檢視 [省份編碼映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+        :param District: 指定 查詢，不填充表示查詢所有 
+ 編碼可以檢視 [ 編碼映射](https://cloud.taifucloud.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
         :type District: int
         :param Protocol: 指定協議查詢，不填充表示查詢所有協議
 all：所有協議
@@ -220,7 +220,7 @@ class DescribeIpVisitRequest(AbstractModel):
         :type EndTime: str
         :param Domains: 指定查詢域名清單，最多可一次性查詢 30 個加速域名明細
         :type Domains: list of str
-        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.taifucloud.com/project)
 未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Project: int
         :param Interval: 時間粒度，支援以下幾種模式：
@@ -282,7 +282,7 @@ class DescribeMapInfoRequest(AbstractModel):
         """
         :param Name: 映射查詢類别：
 ips：運營商映射查詢
-district：省份映射查詢
+district： 映射查詢
         :type Name: str
         """
         self.Name = None
@@ -348,7 +348,7 @@ statusCode：回源狀态碼，返回 2xx、3xx、4xx、5xx 匯總數據，單�
         :type Metric: str
         :param Domains: 指定查詢域名清單，最多可一次性查詢 30 個加速域名明細
         :type Domains: list of str
-        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.taifucloud.com/project)
 未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Project: int
         :param Interval: 時間粒度，支援以下幾種模式：
@@ -481,7 +481,7 @@ class DisableCachesResponse(AbstractModel):
         """
         :param CacheOptResult: 提交結果
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CacheOptResult: :class:`tencentcloud.cdn.v20180606.models.CacheOptResult`
+        :type CacheOptResult: :class:`taifucloudcloud.cdn.v20180606.models.CacheOptResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -522,7 +522,7 @@ class EnableCachesResponse(AbstractModel):
         """
         :param CacheOptResult: 結果清單
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CacheOptResult: :class:`tencentcloud.cdn.v20180606.models.CacheOptResult`
+        :type CacheOptResult: :class:`taifucloudcloud.cdn.v20180606.models.CacheOptResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -609,7 +609,7 @@ class ListTopDataRequest(AbstractModel):
         :param Metric: 排序對象，支援以下幾種形式：
 Url：訪問 URL 排序，帶參數統計，支援的 Filter 爲 flux、request（白名單功能）
 Path：訪問 URL 排序，不帶參數統計，支援的 Filter 爲 flux、request
-District：省份排序，支援的 Filter 爲 flux、request
+District： 排序，支援的 Filter 爲 flux、request
 Isp：運營商排序，支援的 Filter 爲 flux、request
 Host：域名訪問數據排序，支援的 Filter 爲：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具體狀态碼統計
 originHost：域名回源數據排序，支援的 Filter 爲 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具體回源狀态碼統計
@@ -632,7 +632,7 @@ OriginStatusCode：指定回源狀态碼統計，在 Code 參數中填充指定�
         :type Filter: str
         :param Domains: 指定查詢域名清單，最多可一次性查詢 30 個加速域名明細
         :type Domains: list of str
-        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.taifucloud.com/project)
 未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Project: int
         :param Detail: 多域名查詢時，預設（false)返回所有域名匯總排序結果

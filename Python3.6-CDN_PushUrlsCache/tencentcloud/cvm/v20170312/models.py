@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class ActionTimer(AbstractModel):
@@ -24,7 +24,7 @@ class ActionTimer(AbstractModel):
     def __init__(self):
         """
         :param Externals: 擴展數據
-        :type Externals: :class:`tencentcloud.cvm.v20170312.models.Externals`
+        :type Externals: :class:`taifucloudcloud.cvm.v20170312.models.Externals`
         :param TimerAction: 定時器名稱，目前僅支援銷毀一個值：TerminateInstances。
         :type TimerAction: str
         :param ActionTime: 執行時間，格式形如：2018-5-29 11:26:40,執行時間必須大于當前時間5分鍾。
@@ -51,11 +51,11 @@ class AllocateHostsRequest(AbstractModel):
     def __init__(self):
         """
         :param Placement: 實例所在的位置。通過該參數可以指定實例所屬可用區，所屬項目等屬性。
-        :type Placement: :class:`tencentcloud.cvm.v20170312.models.Placement`
+        :type Placement: :class:`taifucloudcloud.cvm.v20170312.models.Placement`
         :param ClientToken: 用于保證請求幂等性的字串。
         :type ClientToken: str
         :param HostChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的購買時長、是否設置自動續約等屬性。若指定實例的付費模式爲預付費則該參數必傳。
-        :type HostChargePrepaid: :class:`tencentcloud.cvm.v20170312.models.ChargePrepaid`
+        :type HostChargePrepaid: :class:`taifucloudcloud.cvm.v20170312.models.ChargePrepaid`
         :param HostChargeType: 實例計費類型。目前僅支援：PREPAID（預付費，即包年包月模式），預設爲：'PREPAID'。
         :type HostChargeType: str
         :param HostType: CDH實例機型，預設爲：'HS1'。
@@ -121,9 +121,9 @@ class AssociateInstancesKeyPairsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID，每次請求批次實例的上限爲100。<br>可以通過以下方式獲取可用的實例ID：<br><li>通過登入[控制台](https://console.cloud.tencent.com/cvm/index)查詢實例ID。<br><li>通過調用介面 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回訊息中的`InstanceId`獲取實例ID。
+        :param InstanceIds: 一個或多個待操作的實例ID，每次請求批次實例的上限爲100。<br>可以通過以下方式獲取可用的實例ID：<br><li>通過登入[控制台](https://console.cloud.taifucloud.com/cvm/index)查詢實例ID。<br><li>通過調用介面 [DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728) ，取返回訊息中的`InstanceId`獲取實例ID。
         :type InstanceIds: list of str
-        :param KeyIds: 一個或多個待操作的金鑰對ID，每次請求批次金鑰對的上限爲100。金鑰對ID形如：`skey-3glfot13`。<br>可以通過以下方式獲取可用的金鑰ID：<br><li>通過登入[控制台](https://console.cloud.tencent.com/cvm/sshkey)查詢金鑰ID。<br><li>通過調用介面 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699) ，取返回訊息中的`KeyId`獲取金鑰對ID。
+        :param KeyIds: 一個或多個待操作的金鑰對ID，每次請求批次金鑰對的上限爲100。金鑰對ID形如：`skey-3glfot13`。<br>可以通過以下方式獲取可用的金鑰ID：<br><li>通過登入[控制台](https://console.cloud.taifucloud.com/cvm/sshkey)查詢金鑰ID。<br><li>通過調用介面 [DescribeKeyPairs](https://cloud.taifucloud.com/document/api/213/15699) ，取返回訊息中的`KeyId`獲取金鑰對ID。
         :type KeyIds: list of str
         :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再綁定金鑰。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機。<br><li>FALSE：表示在正常關機失敗後不進行強制關機。<br>預設取值：FALSE。
         :type ForceStop: bool
@@ -381,7 +381,7 @@ class CreateKeyPairResponse(AbstractModel):
     def __init__(self):
         """
         :param KeyPair: 金鑰對訊息。
-        :type KeyPair: :class:`tencentcloud.cvm.v20170312.models.KeyPair`
+        :type KeyPair: :class:`taifucloudcloud.cvm.v20170312.models.KeyPair`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -403,9 +403,9 @@ class DataDisk(AbstractModel):
 
     def __init__(self):
         """
-        :param DiskSize: 數據盤大小，單位：GB。最小調整步長爲10G，不同數據盤類型取值範圍不同，具體限制詳見：[儲存概述](https://cloud.tencent.com/document/product/213/4952)。預設值爲0，表示不購買數據盤。更多限制詳見産品文件。
+        :param DiskSize: 數據盤大小，單位：GB。最小調整步長爲10G，不同數據盤類型取值範圍不同，具體限制詳見：[儲存概述](https://cloud.taifucloud.com/document/product/213/4952)。預設值爲0，表示不購買數據盤。更多限制詳見産品文件。
         :type DiskSize: int
-        :param DiskType: 數據盤類型。數據盤類型限制詳見[儲存概述](https://cloud.tencent.com/document/product/213/4952)。取值範圍：<br><li>LOCAL_BASIC：本地硬碟<br><li>LOCAL_SSD：本地SSD硬碟<br><li>CLOUD_BASIC：普通雲硬碟<br><li>CLOUD_PREMIUM：高效能雲硬碟<br><li>CLOUD_SSD：SSD雲硬碟<br><br>預設取值：LOCAL_BASIC。<br><br>該參數對`ResizeInstanceDisk`介面無效。
+        :param DiskType: 數據盤類型。數據盤類型限制詳見[儲存概述](https://cloud.taifucloud.com/document/product/213/4952)。取值範圍：<br><li>LOCAL_BASIC：本地硬碟<br><li>LOCAL_SSD：本地SSD硬碟<br><li>CLOUD_BASIC：普通雲硬碟<br><li>CLOUD_PREMIUM：高效能雲硬碟<br><li>CLOUD_SSD：SSD雲硬碟<br><br>預設取值：LOCAL_BASIC。<br><br>該參數對`ResizeInstanceDisk`介面無效。
         :type DiskType: str
         :param DiskId: 數據盤ID。LOCAL_BASIC 和 LOCAL_SSD 類型沒有ID，暫時不支援該參數。
         :type DiskId: str
@@ -451,7 +451,7 @@ class DeleteDisasterRecoverGroupsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param DisasterRecoverGroupIds: 分散置放群組ID清單，可通過[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)介面獲取。每次請求允許操作的分散置放群組數量上限是100。
+        :param DisasterRecoverGroupIds: 分散置放群組ID清單，可通過[DescribeDisasterRecoverGroups](https://cloud.taifucloud.com/document/api/213/17810)介面獲取。每次請求允許操作的分散置放群組數量上限是100。
         :type DisasterRecoverGroupIds: list of str
         """
         self.DisasterRecoverGroupIds = None
@@ -519,7 +519,7 @@ class DeleteKeyPairsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyIds: 一個或多個待操作的金鑰對ID。每次請求批次金鑰對的上限爲100。<br>可以通過以下方式獲取可用的金鑰ID：<br><li>通過登入[控制台](https://console.cloud.tencent.com/cvm/sshkey)查詢金鑰ID。<br><li>通過調用介面 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699) ，取返回訊息中的 `KeyId` 獲取金鑰對ID。
+        :param KeyIds: 一個或多個待操作的金鑰對ID。每次請求批次金鑰對的上限爲100。<br>可以通過以下方式獲取可用的金鑰ID：<br><li>通過登入[控制台](https://console.cloud.taifucloud.com/cvm/sshkey)查詢金鑰ID。<br><li>通過調用介面 [DescribeKeyPairs](https://cloud.taifucloud.com/document/api/213/15699) ，取返回訊息中的 `KeyId` 獲取金鑰對ID。
         :type KeyIds: list of str
         """
         self.KeyIds = None
@@ -600,9 +600,9 @@ class DescribeDisasterRecoverGroupsRequest(AbstractModel):
         :type DisasterRecoverGroupIds: list of str
         :param Name: 分散置放群組名稱，支援模糊比對。
         :type Name: str
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.DisasterRecoverGroupIds = None
@@ -656,11 +656,11 @@ class DescribeHostsRequest(AbstractModel):
     def __init__(self):
         """
         :param Filters: <li><strong>zone</strong></li>
-<p style="padding-left: 30px;">按照【<strong>可用區</strong>】進行過濾。可用區形如：ap-guangzhou-1。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：<a href="https://cloud.tencent.com/document/product/213/6091">可用區清單</a></p>
+<p style="padding-left: 30px;">按照【<strong>可用區</strong>】進行過濾。可用區形如：ap-guangzhou-1。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：<a href="https://cloud.taifucloud.com/document/product/213/6091">可用區清單</a></p>
 <li><strong>project-id</strong></li>
-<p style="padding-left: 30px;">按照【<strong>項目ID</strong>】進行過濾，可通過調用[DescribeProject](https://cloud.tencent.com/document/api/378/4400)查詢已創建的項目清單或登入[控制台](https://console.cloud.tencent.com/cvm/index)進行檢視；也可以調用[AddProject](https://cloud.tencent.com/document/api/378/4398)創建新的項目。項目ID形如：1002189。</p><p style="padding-left: 30px;">類型：Integer</p><p style="padding-left: 30px;">必選：否</p>
+<p style="padding-left: 30px;">按照【<strong>項目ID</strong>】進行過濾，可通過調用[DescribeProject](https://cloud.taifucloud.com/document/api/378/4400)查詢已創建的項目清單或登入[控制台](https://console.cloud.taifucloud.com/cvm/index)進行檢視；也可以調用[AddProject](https://cloud.taifucloud.com/document/api/378/4398)創建新的項目。項目ID形如：1002189。</p><p style="padding-left: 30px;">類型：Integer</p><p style="padding-left: 30px;">必選：否</p>
 <li><strong>host-id</strong></li>
-<p style="padding-left: 30px;">按照【<strong>[CDH](https://cloud.tencent.com/document/product/416) ID</strong>】進行過濾。[CDH](https://cloud.tencent.com/document/product/416) ID形如：host-xxxxxxxx。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p>
+<p style="padding-left: 30px;">按照【<strong>[CDH](https://cloud.taifucloud.com/document/product/416) ID</strong>】進行過濾。[CDH](https://cloud.taifucloud.com/document/product/416) ID形如：host-xxxxxxxx。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p>
 <li><strong>host-name</strong></li>
 <p style="padding-left: 30px;">按照【<strong>CDH實例名稱</strong>】進行過濾。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p>
 <li><strong>host-state</strong></li>
@@ -795,7 +795,7 @@ class DescribeImagesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ImageIds: 映像ID清單 。映像ID如：`img-gvbnzy6f`。array型參數的格式可以參考[API簡介](https://cloud.tencent.com/document/api/213/15688)。映像ID可以通過如下方式獲取：<br><li>通過[DescribeImages](https://cloud.tencent.com/document/api/213/15715)介面返回的`ImageId`獲取。<br><li>通過[映像控制台](https://console.cloud.tencent.com/cvm/image)獲取。
+        :param ImageIds: 映像ID清單 。映像ID如：`img-gvbnzy6f`。array型參數的格式可以參考[API簡介](https://cloud.taifucloud.com/document/api/213/15688)。映像ID可以通過如下方式獲取：<br><li>通過[DescribeImages](https://cloud.taifucloud.com/document/api/213/15715)介面返回的`ImageId`獲取。<br><li>通過[映像控制台](https://console.cloud.taifucloud.com/cvm/image)獲取。
         :type ImageIds: list of str
         :param Filters: 過濾條件，每次請求的`Filters`的上限爲0，`Filters.Values`的上限爲5。參數不可以同時指定`ImageIds`和`Filters`。詳細的過濾條件如下：
 <li> image-id - String - 是否必填： 否 - （過濾條件）按照映像ID進行過濾</li>
@@ -875,7 +875,7 @@ class DescribeImportImageOsResponse(AbstractModel):
     def __init__(self):
         """
         :param ImportImageOsListSupported: 支援的導入映像的作業系統類型。
-        :type ImportImageOsListSupported: :class:`tencentcloud.cvm.v20170312.models.ImageOsList`
+        :type ImportImageOsListSupported: :class:`taifucloudcloud.cvm.v20170312.models.ImageOsList`
         :param ImportImageOsVersionSet: 支援的導入映像的作業系統版本。
         :type ImportImageOsVersionSet: list of OsVersion
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -938,7 +938,7 @@ class DescribeInstanceInternetBandwidthConfigsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。
+        :param InstanceId: 待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -982,7 +982,7 @@ class DescribeInstanceTypeConfigsRequest(AbstractModel):
     def __init__(self):
         """
         :param Filters: <li><strong>zone</strong></li>
-<p style="padding-left: 30px;">按照【<strong>可用區</strong>】進行過濾。可用區形如：ap-guangzhou-1。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：<a href="https://cloud.tencent.com/document/product/213/6091">可用區清單</a></p>
+<p style="padding-left: 30px;">按照【<strong>可用區</strong>】進行過濾。可用區形如：ap-guangzhou-1。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：<a href="https://cloud.taifucloud.com/document/product/213/6091">可用區清單</a></p>
 <li><strong>instance-family</strong></li>
 <p style="padding-left: 30px;">按照【<strong>實例機型系列</strong>】進行過濾。實例機型系列形如：S1、I1、M1等。</p><p style="padding-left: 30px;">類型：Integer</p><p style="padding-left: 30px;">必選：否</p>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲1。
@@ -1033,7 +1033,7 @@ class DescribeInstanceVncUrlRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 一個操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`獲取。
+        :param InstanceId: 一個操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728) API返回值中的`InstanceId`獲取。
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -1071,7 +1071,7 @@ class DescribeInstancesOperationLimitRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 按照一個或者多個實例ID查詢，可通過[DescribeInstances](https://cloud.tencent.com/document/api/213/15728)API返回值中的InstanceId獲取。實例ID形如：ins-xxxxxxxx。（此參數的具體格式可參考API[簡介](https://cloud.tencent.com/document/api/213/15688)的ids.N一節）。每次請求的實例的上限爲100。
+        :param InstanceIds: 按照一個或者多個實例ID查詢，可通過[DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728)API返回值中的InstanceId獲取。實例ID形如：ins-xxxxxxxx。（此參數的具體格式可參考API[簡介](https://cloud.taifucloud.com/document/api/213/15688)的ids.N一節）。每次請求的實例的上限爲100。
         :type InstanceIds: list of str
         :param Operation: 實例操作。
 <li> INSTANCE_DEGRADE：實例降配操作</li>
@@ -1119,14 +1119,14 @@ class DescribeInstancesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 按照一個或者多個實例ID查詢。實例ID形如：`ins-xxxxxxxx`。（此參數的具體格式可參考API[簡介](https://cloud.tencent.com/document/api/213/15688)的`ids.N`一節）。每次請求的實例的上限爲100。參數不支援同時指定`InstanceIds`和`Filters`。
+        :param InstanceIds: 按照一個或者多個實例ID查詢。實例ID形如：`ins-xxxxxxxx`。（此參數的具體格式可參考API[簡介](https://cloud.taifucloud.com/document/api/213/15688)的`ids.N`一節）。每次請求的實例的上限爲100。參數不支援同時指定`InstanceIds`和`Filters`。
         :type InstanceIds: list of str
         :param Filters: <li><strong>zone</strong></li>
-<p style="padding-left: 30px;">按照【<strong>可用區</strong>】進行過濾。可用區形如：ap-guangzhou-1。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：<a href="https://cloud.tencent.com/document/product/213/6091">可用區清單</a></p>
+<p style="padding-left: 30px;">按照【<strong>可用區</strong>】進行過濾。可用區形如：ap-guangzhou-1。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：<a href="https://cloud.taifucloud.com/document/product/213/6091">可用區清單</a></p>
 <li><strong>project-id</strong></li>
-<p style="padding-left: 30px;">按照【<strong>項目ID</strong>】進行過濾，可通過調用[DescribeProject](https://cloud.tencent.com/document/api/378/4400)查詢已創建的項目清單或登入[控制台](https://console.cloud.tencent.com/cvm/index)進行檢視；也可以調用[AddProject](https://cloud.tencent.com/document/api/378/4398)創建新的項目。項目ID形如：1002189。</p><p style="padding-left: 30px;">類型：Integer</p><p style="padding-left: 30px;">必選：否</p>
+<p style="padding-left: 30px;">按照【<strong>項目ID</strong>】進行過濾，可通過調用[DescribeProject](https://cloud.taifucloud.com/document/api/378/4400)查詢已創建的項目清單或登入[控制台](https://console.cloud.taifucloud.com/cvm/index)進行檢視；也可以調用[AddProject](https://cloud.taifucloud.com/document/api/378/4398)創建新的項目。項目ID形如：1002189。</p><p style="padding-left: 30px;">類型：Integer</p><p style="padding-left: 30px;">必選：否</p>
 <li><strong>host-id</strong></li>
-<p style="padding-left: 30px;">按照【<strong>[CDH](https://cloud.tencent.com/document/product/416) ID</strong>】進行過濾。[CDH](https://cloud.tencent.com/document/product/416) ID形如：host-xxxxxxxx。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p>
+<p style="padding-left: 30px;">按照【<strong>[CDH](https://cloud.taifucloud.com/document/product/416) ID</strong>】進行過濾。[CDH](https://cloud.taifucloud.com/document/product/416) ID形如：host-xxxxxxxx。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p>
 <li><strong>vpc-id</strong></li>
 <p style="padding-left: 30px;">按照【<strong>VPC ID</strong>】進行過濾。VPC ID形如：vpc-xxxxxxxx。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p>
 <li><strong>subnet-id</strong></li>
@@ -1138,7 +1138,7 @@ class DescribeInstancesRequest(AbstractModel):
 <li><strong>instance-name</strong></li>
 <p style="padding-left: 30px;">按照【<strong>實例名稱</strong>】進行過濾。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p>
 <li><strong>instance-charge-type</strong></li>
-<p style="padding-left: 30px;">按照【<strong>實例計費模式</strong>】進行過濾。(PREPAID：表示預付費，即包年包月 | POSTPAID_BY_HOUR：表示後付費，即按量計費 | CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付費，即只對[CDH](https://cloud.tencent.com/document/product/416)計費，不對[CDH](https://cloud.tencent.com/document/product/416)上的實例計費。)</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p>
+<p style="padding-left: 30px;">按照【<strong>實例計費模式</strong>】進行過濾。(PREPAID：表示預付費，即包年包月 | POSTPAID_BY_HOUR：表示後付費，即按量計費 | CDHPAID：表示[CDH](https://cloud.taifucloud.com/document/product/416)付費，即只對[CDH](https://cloud.taifucloud.com/document/product/416)計費，不對[CDH](https://cloud.taifucloud.com/document/product/416)上的實例計費。)</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p>
 <li><strong>private-ip-address</strong></li>
 <p style="padding-left: 30px;">按照【<strong>實例主網卡的内網IP</strong>】進行過濾。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p>
 <li><strong>public-ip-address</strong></li>
@@ -1151,9 +1151,9 @@ class DescribeInstancesRequest(AbstractModel):
 <p style="padding-left: 30px;">按照【<strong>标簽鍵值對</strong>】進行過濾。tag-key使用具體的标簽鍵進行替換。使用請參考範例2。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`InstanceIds`和`Filters`。
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.InstanceIds = None
@@ -1211,11 +1211,11 @@ class DescribeInstancesStatusRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 按照一個或者多個實例ID查詢。實例ID形如：`ins-11112222`。此參數的具體格式可參考API[簡介](https://cloud.tencent.com/document/api/213/15688)的`ids.N`一節）。每次請求的實例的上限爲100。
+        :param InstanceIds: 按照一個或者多個實例ID查詢。實例ID形如：`ins-11112222`。此參數的具體格式可參考API[簡介](https://cloud.taifucloud.com/document/api/213/15688)的`ids.N`一節）。每次請求的實例的上限爲100。
         :type InstanceIds: list of str
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.InstanceIds = None
@@ -1238,7 +1238,7 @@ class DescribeInstancesStatusResponse(AbstractModel):
         """
         :param TotalCount: 符合條件的實例狀态數量。
         :type TotalCount: int
-        :param InstanceStatusSet: [實例狀态](https://cloud.tencent.com/document/api/213/15753#InstanceStatus) 清單。
+        :param InstanceStatusSet: [實例狀态](https://cloud.taifucloud.com/document/api/213/15753#InstanceStatus) 清單。
         :type InstanceStatusSet: list of InstanceStatus
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1298,15 +1298,15 @@ class DescribeKeyPairsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyIds: 金鑰對ID，金鑰對ID形如：`skey-11112222`（此介面支援同時傳入多個ID進行過濾。此參數的具體格式可參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)的 `id.N` 一節）。參數不支援同時指定 `KeyIds` 和 `Filters`。金鑰對ID可以通過登入[控制台](https://console.cloud.tencent.com/cvm/index)查詢。
+        :param KeyIds: 金鑰對ID，金鑰對ID形如：`skey-11112222`（此介面支援同時傳入多個ID進行過濾。此參數的具體格式可參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)的 `id.N` 一節）。參數不支援同時指定 `KeyIds` 和 `Filters`。金鑰對ID可以通過登入[控制台](https://console.cloud.taifucloud.com/cvm/index)查詢。
         :type KeyIds: list of str
         :param Filters: 過濾條件。
-<li> project-id - Integer - 是否必填：否 -（過濾條件）按照項目ID過濾。可以通過[項目清單](https://console.cloud.tencent.com/project)查詢項目ID，或者調用介面 [DescribeProject](https://cloud.tencent.com/document/api/378/4400)，取返回訊息中的projectId獲取項目ID。</li>
+<li> project-id - Integer - 是否必填：否 -（過濾條件）按照項目ID過濾。可以通過[項目清單](https://console.cloud.taifucloud.com/project)查詢項目ID，或者調用介面 [DescribeProject](https://cloud.taifucloud.com/document/api/378/4400)，取返回訊息中的projectId獲取項目ID。</li>
 <li> key-name - String - 是否必填：否 -（過濾條件）按照金鑰對名稱過濾。</li>參數不支援同時指定 `KeyIds` 和 `Filters`。
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于 `Offset` 的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。返回數量，預設爲20，最大值爲100。關于 `Limit` 的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于 `Offset` 的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。返回數量，預設爲20，最大值爲100。關于 `Limit` 的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于 `Limit` 的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于 `Limit` 的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.KeyIds = None
@@ -1402,9 +1402,9 @@ class DescribeReservedInstancesOfferingsRequest(AbstractModel):
         """
         :param DryRun: 試運作, 預設爲 false。
         :type DryRun: bool
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         :param MaxDuration: 以最大有效期作爲過濾參數。
 計量單位: 秒
@@ -1415,11 +1415,11 @@ class DescribeReservedInstancesOfferingsRequest(AbstractModel):
 預設爲 2592000。
         :type MinDuration: int
         :param Filters: <li><strong>zone</strong></li>
-<p style="padding-left: 30px;">按照預留實例計費可購買的【<strong>可用區</strong>】進行過濾。形如：ap-guangzhou-1。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：<a href="https://cloud.tencent.com/document/product/213/6091">可用區清單</a></p>
+<p style="padding-left: 30px;">按照預留實例計費可購買的【<strong>可用區</strong>】進行過濾。形如：ap-guangzhou-1。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：<a href="https://cloud.taifucloud.com/document/product/213/6091">可用區清單</a></p>
 <li><strong>duration</strong></li>
 <p style="padding-left: 30px;">按照預留實例計費【<strong>有效期</strong>】即預留實例計費購買時長進行過濾。形如：31536000。</p><p style="padding-left: 30px;">類型：Integer</p><p style="padding-left: 30px;">計量單位：秒</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：31536000 (1年) | 94608000（3年）</p>
 <li><strong>instance-type</strong></li>
-<p style="padding-left: 30px;">按照【<strong>預留實例計費類型</strong>】進行過濾。形如：S3.MEDIUM4。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：<a href="https://cloud.tencent.com/document/product/213/11518">預留實例計費類型清單</a></p>
+<p style="padding-left: 30px;">按照【<strong>預留實例計費類型</strong>】進行過濾。形如：S3.MEDIUM4。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：<a href="https://cloud.taifucloud.com/document/product/213/11518">預留實例計費類型清單</a></p>
 <li><strong>offering-type</strong></li>
 <p style="padding-left: 30px;">按照【<strong>付款類型</strong>】進行過濾。形如：All Upfront (預付全部費用)。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：All Upfront (預付全部費用)</p>
 <li><strong>product-description</strong></li>
@@ -1490,16 +1490,16 @@ class DescribeReservedInstancesRequest(AbstractModel):
         """
         :param DryRun: 試運作。預設爲 false。
         :type DryRun: bool
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         :param Filters: <li><strong>zone</strong></li>
-<p style="padding-left: 30px;">按照預留實例計費可購買的【<strong>可用區</strong>】進行過濾。形如：ap-guangzhou-1。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：<a href="https://cloud.tencent.com/document/product/213/6091">可用區清單</a></p>
+<p style="padding-left: 30px;">按照預留實例計費可購買的【<strong>可用區</strong>】進行過濾。形如：ap-guangzhou-1。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：<a href="https://cloud.taifucloud.com/document/product/213/6091">可用區清單</a></p>
 <li><strong>duration</strong></li>
 <p style="padding-left: 30px;">按照預留實例計費【<strong>有效期</strong>】即預留實例計費購買時長進行過濾。形如：31536000。</p><p style="padding-left: 30px;">類型：Integer</p><p style="padding-left: 30px;">計量單位：秒</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：31536000 (1年) | 94608000（3年）</p>
 <li><strong>instance-type</strong></li>
-<p style="padding-left: 30px;">按照【<strong>預留實例計費類型</strong>】進行過濾。形如：S3.MEDIUM4。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：<a href="https://cloud.tencent.com/document/product/213/11518">預留實例計費類型清單</a></p>
+<p style="padding-left: 30px;">按照【<strong>預留實例計費類型</strong>】進行過濾。形如：S3.MEDIUM4。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：<a href="https://cloud.taifucloud.com/document/product/213/11518">預留實例計費類型清單</a></p>
 <li><strong>offering-type</strong></li>
 <p style="padding-left: 30px;">按照【<strong>付款類型</strong>】進行過濾。形如：All Upfront (預付全部費用)。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：All Upfront (預付全部費用)</p>
 <li><strong>product-description</strong></li>
@@ -1567,13 +1567,13 @@ class DescribeZoneInstanceConfigInfosRequest(AbstractModel):
     def __init__(self):
         """
         :param Filters: <li><strong>zone</strong></li>
-<p style="padding-left: 30px;">按照【<strong>可用區</strong>】進行過濾。可用區形如：ap-guangzhou-1。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：<a href="https://cloud.tencent.com/document/product/213/6091">可用區清單</a></p>
+<p style="padding-left: 30px;">按照【<strong>可用區</strong>】進行過濾。可用區形如：ap-guangzhou-1。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p><p style="padding-left: 30px;">可選項：<a href="https://cloud.taifucloud.com/document/product/213/6091">可用區清單</a></p>
 <li><strong>instance-family</strong></li>
 <p style="padding-left: 30px;">按照【<strong>實例機型系列</strong>】進行過濾。實例機型系列形如：S1、I1、M1等。</p><p style="padding-left: 30px;">類型：Integer</p><p style="padding-left: 30px;">必選：否</p>
 <li><strong>instance-type</strong></li>
-<p style="padding-left: 30px;">按照【<strong>實例機型</strong>】進行過濾。不同實例機型指定了不同的資源規格，具體取值可通過調用介面 [DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/product/213/15749) 來獲得最新的規格表或參見[實例類型](https://cloud.tencent.com/document/product/213/11518)描述。若不指定該參數，則預設機型爲S1.SMALL1。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p>
+<p style="padding-left: 30px;">按照【<strong>實例機型</strong>】進行過濾。不同實例機型指定了不同的資源規格，具體取值可通過調用介面 [DescribeInstanceTypeConfigs](https://cloud.taifucloud.com/document/product/213/15749) 來獲得最新的規格表或參見[實例類型](https://cloud.taifucloud.com/document/product/213/11518)描述。若不指定該參數，則預設機型爲S1.SMALL1。</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p>
 <li><strong>instance-charge-type</strong></li>
-<p style="padding-left: 30px;">按照【<strong>實例計費模式</strong>】進行過濾。(PREPAID：表示預付費，即包年包月 | POSTPAID_BY_HOUR：表示後付費，即按量計費 | CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付費，即只對[CDH](https://cloud.tencent.com/document/product/416)計費，不對[CDH](https://cloud.tencent.com/document/product/416)上的實例計費。)</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p>
+<p style="padding-left: 30px;">按照【<strong>實例計費模式</strong>】進行過濾。(PREPAID：表示預付費，即包年包月 | POSTPAID_BY_HOUR：表示後付費，即按量計費 | CDHPAID：表示[CDH](https://cloud.taifucloud.com/document/product/416)付費，即只對[CDH](https://cloud.taifucloud.com/document/product/416)計費，不對[CDH](https://cloud.taifucloud.com/document/product/416)上的實例計費。)</p><p style="padding-left: 30px;">類型：String</p><p style="padding-left: 30px;">必選：否</p>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。
         :type Filters: list of Filter
         """
@@ -1658,9 +1658,9 @@ class DisassociateInstancesKeyPairsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID，每次請求批次實例的上限爲100。<br><br>可以通過以下方式獲取可用的實例ID：<br><li>通過登入[控制台](https://console.cloud.tencent.com/cvm/index)查詢實例ID。<br><li>通過調用介面 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回訊息中的 `InstanceId` 獲取實例ID。
+        :param InstanceIds: 一個或多個待操作的實例ID，每次請求批次實例的上限爲100。<br><br>可以通過以下方式獲取可用的實例ID：<br><li>通過登入[控制台](https://console.cloud.taifucloud.com/cvm/index)查詢實例ID。<br><li>通過調用介面 [DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728) ，取返回訊息中的 `InstanceId` 獲取實例ID。
         :type InstanceIds: list of str
-        :param KeyIds: 金鑰對ID清單，每次請求批次金鑰對的上限爲100。金鑰對ID形如：`skey-11112222`。<br><br>可以通過以下方式獲取可用的金鑰ID：<br><li>通過登入[控制台](https://console.cloud.tencent.com/cvm/sshkey)查詢金鑰ID。<br><li>通過調用介面 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699) ，取返回訊息中的 `KeyId` 獲取金鑰對ID。
+        :param KeyIds: 金鑰對ID清單，每次請求批次金鑰對的上限爲100。金鑰對ID形如：`skey-11112222`。<br><br>可以通過以下方式獲取可用的金鑰ID：<br><li>通過登入[控制台](https://console.cloud.taifucloud.com/cvm/sshkey)查詢金鑰ID。<br><li>通過調用介面 [DescribeKeyPairs](https://cloud.taifucloud.com/document/api/213/15699) ，取返回訊息中的 `KeyId` 獲取金鑰對ID。
         :type KeyIds: list of str
         :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再解綁金鑰。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機。<br><li>FALSE：表示在正常關機失敗後不進行強制關機。<br><br>預設取值：FALSE。
         :type ForceStop: bool
@@ -1782,9 +1782,9 @@ class EnhancedService(AbstractModel):
     def __init__(self):
         """
         :param SecurityService: 開啓雲安全服務。若不指定該參數，則預設開啓雲安全服務。
-        :type SecurityService: :class:`tencentcloud.cvm.v20170312.models.RunSecurityServiceEnabled`
+        :type SecurityService: :class:`taifucloudcloud.cvm.v20170312.models.RunSecurityServiceEnabled`
         :param MonitorService: 開啓雲監控服務。若不指定該參數，則預設開啓雲監控服務。
-        :type MonitorService: :class:`tencentcloud.cvm.v20170312.models.RunMonitorServiceEnabled`
+        :type MonitorService: :class:`taifucloudcloud.cvm.v20170312.models.RunMonitorServiceEnabled`
         """
         self.SecurityService = None
         self.MonitorService = None
@@ -1814,7 +1814,7 @@ class Externals(AbstractModel):
         :type UnsupportNetworks: list of str
         :param StorageBlockAttr: HDD本地儲存屬性
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type StorageBlockAttr: :class:`tencentcloud.cvm.v20170312.models.StorageBlock`
+        :type StorageBlockAttr: :class:`taifucloudcloud.cvm.v20170312.models.StorageBlock`
         """
         self.ReleaseAddress = None
         self.UnsupportNetworks = None
@@ -1834,7 +1834,7 @@ class Filter(AbstractModel):
     > * 若存在多個`Filter`時，`Filter`間的關系爲邏輯與（`AND`）關系。
     > * 若同一個`Filter`存在多個`Values`，同一`Filter`下`Values`間的關系爲邏輯或（`OR`）關系。
     >
-    > 以[DescribeInstances](https://cloud.tencent.com/document/api/213/15728)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲廣州一區 ***并且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
+    > 以[DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲 一區 ***并且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
     ```
     Filters.0.Name=zone
     &Filters.0.Values.0=ap-guangzhou-1
@@ -1869,7 +1869,7 @@ class HostItem(AbstractModel):
     def __init__(self):
         """
         :param Placement: cdh實例所在的位置。通過該參數可以指定實例所屬可用區，所屬項目等屬性。
-        :type Placement: :class:`tencentcloud.cvm.v20170312.models.Placement`
+        :type Placement: :class:`taifucloudcloud.cvm.v20170312.models.Placement`
         :param HostId: cdh實例id
         :type HostId: str
         :param HostType: cdh實例類型
@@ -1891,7 +1891,7 @@ class HostItem(AbstractModel):
         :param HostIp: cdh實例ip
         :type HostIp: str
         :param HostResource: cdh實例資源訊息
-        :type HostResource: :class:`tencentcloud.cvm.v20170312.models.HostResource`
+        :type HostResource: :class:`taifucloudcloud.cvm.v20170312.models.HostResource`
         :param CageId: 專用宿主機所屬的圍籠ID。該欄位僅對金融專區圍籠内的專用宿主機有效。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CageId: str
@@ -2104,7 +2104,7 @@ class ImportImageRequest(AbstractModel):
         :type ImageDescription: str
         :param DryRun: 只檢查參數，不執行任務
         :type DryRun: bool
-        :param Force: 是否強制導入，參考[強制導入映像](https://cloud.tencent.com/document/product/213/12849)
+        :param Force: 是否強制導入，參考[強制導入映像](https://cloud.taifucloud.com/document/product/213/12849)
         :type Force: bool
         """
         self.Architecture = None
@@ -2154,7 +2154,7 @@ class ImportKeyPairRequest(AbstractModel):
         """
         :param KeyName: 金鑰對名稱，可由數字，字母和下劃線組成，長度不超過25個字元。
         :type KeyName: str
-        :param ProjectId: 金鑰對創建後所屬的[項目](https://cloud.tencent.com/document/product/378/10861)ID。<br><br>可以通過以下方式獲取項目ID：<br><li>通過[項目清單](https://console.cloud.tencent.com/project)查詢項目ID。<br><li>通過調用介面 [DescribeProject](https://cloud.tencent.com/document/api/378/4400)，取返回訊息中的 `projectId ` 獲取項目ID。
+        :param ProjectId: 金鑰對創建後所屬的[項目](https://cloud.taifucloud.com/document/product/378/10861)ID。<br><br>可以通過以下方式獲取項目ID：<br><li>通過[項目清單](https://console.cloud.taifucloud.com/project)查詢項目ID。<br><li>通過調用介面 [DescribeProject](https://cloud.taifucloud.com/document/api/378/4400)，取返回訊息中的 `projectId ` 獲取項目ID。
 
 如果是預設項目，直接填0就可以。
         :type ProjectId: int
@@ -2200,12 +2200,12 @@ class InquiryPriceModifyInstancesChargeTypeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
-        :param InstanceChargeType: 實例[計費類型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：預付費，即包年包月。
+        :param InstanceChargeType: 實例[計費類型](https://cloud.taifucloud.com/document/product/213/2180)。<br><li>PREPAID：預付費，即包年包月。
         :type InstanceChargeType: str
         :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的續約時長、是否設置自動續約等屬性。
-        :type InstanceChargePrepaid: :class:`tencentcloud.cvm.v20170312.models.InstanceChargePrepaid`
+        :type InstanceChargePrepaid: :class:`taifucloudcloud.cvm.v20170312.models.InstanceChargePrepaid`
         """
         self.InstanceIds = None
         self.InstanceChargeType = None
@@ -2228,7 +2228,7 @@ class InquiryPriceModifyInstancesChargeTypeResponse(AbstractModel):
     def __init__(self):
         """
         :param Price: 該參數表示對應配置實例轉換計費模式的價格。
-        :type Price: :class:`tencentcloud.cvm.v20170312.models.Price`
+        :type Price: :class:`taifucloudcloud.cvm.v20170312.models.Price`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2250,10 +2250,10 @@ class InquiryPriceRenewInstancesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
         :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的續約時長、是否設置自動續約等屬性。
-        :type InstanceChargePrepaid: :class:`tencentcloud.cvm.v20170312.models.InstanceChargePrepaid`
+        :type InstanceChargePrepaid: :class:`taifucloudcloud.cvm.v20170312.models.InstanceChargePrepaid`
         :param DryRun: 試運作，測試使用，不執行具體邏輯。取值範圍：<br><li>TRUE：跳過執行邏輯<br><li>FALSE：執行邏輯<br><br>預設取值：FALSE。
         :type DryRun: bool
         :param RenewPortableDataDisk: 是否續約彈性數據盤。取值範圍：<br><li>TRUE：表示續約包年包月實例同時續約其掛載的彈性數據盤<br><li>FALSE：表示續約包年包月實例同時不再續約其掛載的彈性數據盤<br><br>預設取值：TRUE。
@@ -2282,7 +2282,7 @@ class InquiryPriceRenewInstancesResponse(AbstractModel):
     def __init__(self):
         """
         :param Price: 該參數表示對應配置實例的價格。
-        :type Price: :class:`tencentcloud.cvm.v20170312.models.Price`
+        :type Price: :class:`taifucloudcloud.cvm.v20170312.models.Price`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2304,16 +2304,16 @@ class InquiryPriceResetInstanceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例ID。可通過 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`獲取。
+        :param InstanceId: 實例ID。可通過 [DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728) API返回值中的`InstanceId`獲取。
         :type InstanceId: str
-        :param ImageId: 指定有效的[映像](/document/product/213/4940)ID，格式形如`img-xxx`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.tencent.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回訊息中的`ImageId`欄位。</li>
+        :param ImageId: 指定有效的[映像](/document/product/213/4940)ID，格式形如`img-xxx`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.taifucloud.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.taifucloud.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.taifucloud.com/document/api/213/15715) ，取返回訊息中的`ImageId`欄位。</li>
         :type ImageId: str
         :param SystemDisk: 實例系統盤配置訊息。系統盤爲雲盤的實例可以通過該參數指定重裝後的系統盤大小來實現對系統盤的擴容操作，若不指定則預設系統盤大小保持不變。系統盤大小只支援擴容不支援縮容；重裝只支援修改系統盤的大小，不能修改系統盤的類型。
-        :type SystemDisk: :class:`tencentcloud.cvm.v20170312.models.SystemDisk`
+        :type SystemDisk: :class:`taifucloudcloud.cvm.v20170312.models.SystemDisk`
         :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，并以站内信方式知會到用戶。
-        :type LoginSettings: :class:`tencentcloud.cvm.v20170312.models.LoginSettings`
+        :type LoginSettings: :class:`taifucloudcloud.cvm.v20170312.models.LoginSettings`
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
-        :type EnhancedService: :class:`tencentcloud.cvm.v20170312.models.EnhancedService`
+        :type EnhancedService: :class:`taifucloudcloud.cvm.v20170312.models.EnhancedService`
         """
         self.InstanceId = None
         self.ImageId = None
@@ -2344,7 +2344,7 @@ class InquiryPriceResetInstanceResponse(AbstractModel):
     def __init__(self):
         """
         :param Price: 該參數表示重裝成對應配置實例的價格。
-        :type Price: :class:`tencentcloud.cvm.v20170312.models.Price`
+        :type Price: :class:`taifucloudcloud.cvm.v20170312.models.Price`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2366,13 +2366,13 @@ class InquiryPriceResetInstancesInternetMaxBandwidthRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。當調整 `BANDWIDTH_PREPAID` 和 `BANDWIDTH_POSTPAID_BY_HOUR` 計費方式的頻寬時，只支援一個實例。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。當調整 `BANDWIDTH_PREPAID` 和 `BANDWIDTH_POSTPAID_BY_HOUR` 計費方式的頻寬時，只支援一個實例。
         :type InstanceIds: list of str
         :param InternetAccessible: 公網出頻寬配置。不同機型頻寬上限範圍不一緻，具體限制詳見頻寬限制對賬表。暫時只支援`InternetMaxBandwidthOut`參數。
-        :type InternetAccessible: :class:`tencentcloud.cvm.v20170312.models.InternetAccessible`
+        :type InternetAccessible: :class:`taifucloudcloud.cvm.v20170312.models.InternetAccessible`
         :param StartTime: 頻寬生效的起始時間。格式：`YYYY-MM-DD`，例如：`2016-10-30`。起始時間不能早于當前時間。如果起始時間是今天則新設置的頻寬立即生效。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
         :type StartTime: str
-        :param EndTime: 頻寬生效的終止時間。格式：`YYYY-MM-DD`，例如：`2016-10-30`。新設置的頻寬的有效期包含終止時間此日期。終止時間不能晚于包年包月實例的到期時間。實例的到期時間可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`ExpiredTime`獲取。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
+        :param EndTime: 頻寬生效的終止時間。格式：`YYYY-MM-DD`，例如：`2016-10-30`。新設置的頻寬的有效期包含終止時間此日期。終止時間不能晚于包年包月實例的到期時間。實例的到期時間可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`ExpiredTime`獲取。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
         :type EndTime: str
         """
         self.InstanceIds = None
@@ -2398,7 +2398,7 @@ class InquiryPriceResetInstancesInternetMaxBandwidthResponse(AbstractModel):
     def __init__(self):
         """
         :param Price: 該參數表示頻寬調整爲對應大小之後的價格。
-        :type Price: :class:`tencentcloud.cvm.v20170312.models.Price`
+        :type Price: :class:`taifucloudcloud.cvm.v20170312.models.Price`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2420,9 +2420,9 @@ class InquiryPriceResetInstancesTypeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。本介面每次請求批次實例的上限爲1。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。本介面每次請求批次實例的上限爲1。
         :type InstanceIds: list of str
-        :param InstanceType: 實例機型。不同實例機型指定了不同的資源規格，具體取值可參見附表[實例資源規格](https://cloud.tencent.com/document/product/213/11518)對照表，也可以調用查詢[實例資源規格清單](https://cloud.tencent.com/document/product/213/15749)介面獲得最新的規格表。
+        :param InstanceType: 實例機型。不同實例機型指定了不同的資源規格，具體取值可參見附表[實例資源規格](https://cloud.taifucloud.com/document/product/213/11518)對照表，也可以調用查詢[實例資源規格清單](https://cloud.taifucloud.com/document/product/213/15749)介面獲得最新的規格表。
         :type InstanceType: str
         """
         self.InstanceIds = None
@@ -2442,7 +2442,7 @@ class InquiryPriceResetInstancesTypeResponse(AbstractModel):
     def __init__(self):
         """
         :param Price: 該參數表示調整成對應機型實例的價格。
-        :type Price: :class:`tencentcloud.cvm.v20170312.models.Price`
+        :type Price: :class:`taifucloudcloud.cvm.v20170312.models.Price`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2464,9 +2464,9 @@ class InquiryPriceResizeInstanceDisksRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。
+        :param InstanceId: 待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。
         :type InstanceId: str
-        :param DataDisks: 待擴容的數據盤配置訊息。只支援擴容非彈性數據盤（[`DescribeDisks`](https://cloud.tencent.com/document/api/362/16315)介面返回值中的`Portable`爲`false`表示非彈性），且[數據盤類型](https://cloud.tencent.com/document/product/213/15753#DataDisk)爲：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。數據盤容量單位：GB。最小擴容步長：10G。關于數據盤類型的選擇請參考硬碟産品簡介。可選數據盤類型受到實例類型`InstanceType`限制。另外允許擴容的最大容量也因數據盤類型的不同而有所差異。
+        :param DataDisks: 待擴容的數據盤配置訊息。只支援擴容非彈性數據盤（[`DescribeDisks`](https://cloud.taifucloud.com/document/api/362/16315)介面返回值中的`Portable`爲`false`表示非彈性），且[數據盤類型](https://cloud.taifucloud.com/document/product/213/15753#DataDisk)爲：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。數據盤容量單位：GB。最小擴容步長：10G。關于數據盤類型的選擇請參考硬碟産品簡介。可選數據盤類型受到實例類型`InstanceType`限制。另外允許擴容的最大容量也因數據盤類型的不同而有所差異。
         :type DataDisks: list of DataDisk
         :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再重置用戶密碼。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機<br><li>FALSE：表示在正常關機失敗後不進行強制關機<br><br>預設取值：FALSE。<br><br>強制關機的效果等同于關閉物理電腦的電源開關。強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
         :type ForceStop: bool
@@ -2495,7 +2495,7 @@ class InquiryPriceResizeInstanceDisksResponse(AbstractModel):
     def __init__(self):
         """
         :param Price: 該參數表示磁盤擴容成對應配置的價格。
-        :type Price: :class:`tencentcloud.cvm.v20170312.models.Price`
+        :type Price: :class:`taifucloudcloud.cvm.v20170312.models.Price`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2518,33 +2518,33 @@ class InquiryPriceRunInstancesRequest(AbstractModel):
     def __init__(self):
         """
         :param Placement: 實例所在的位置。通過該參數可以指定實例所屬可用區，所屬項目等屬性。
-        :type Placement: :class:`tencentcloud.cvm.v20170312.models.Placement`
-        :param ImageId: 指定有效的[映像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.tencent.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回訊息中的`ImageId`欄位。</li>
+        :type Placement: :class:`taifucloudcloud.cvm.v20170312.models.Placement`
+        :param ImageId: 指定有效的[映像](https://cloud.taifucloud.com/document/product/213/4940)ID，格式形如`img-xxx`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.taifucloud.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.taifucloud.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.taifucloud.com/document/api/213/15715) ，取返回訊息中的`ImageId`欄位。</li>
         :type ImageId: str
-        :param InstanceChargeType: 實例[計費類型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：預付費，即包年包月<br><li>POSTPAID_BY_HOUR：按小時後付費<br><li>SPOTPAID：競價付費<br>預設值：POSTPAID_BY_HOUR。
+        :param InstanceChargeType: 實例[計費類型](https://cloud.taifucloud.com/document/product/213/2180)。<br><li>PREPAID：預付費，即包年包月<br><li>POSTPAID_BY_HOUR：按小時後付費<br><li>SPOTPAID：競價付費<br>預設值：POSTPAID_BY_HOUR。
         :type InstanceChargeType: str
         :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的購買時長、是否設置自動續約等屬性。若指定實例的付費模式爲預付費則該參數必傳。
-        :type InstanceChargePrepaid: :class:`tencentcloud.cvm.v20170312.models.InstanceChargePrepaid`
-        :param InstanceType: 實例機型。不同實例機型指定了不同的資源規格，具體取值可通過調用介面[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)來獲得最新的規格表或參見[實例規格](https://cloud.tencent.com/document/product/213/11518)描述。若不指定該參數，則預設機型爲S1.SMALL1。
+        :type InstanceChargePrepaid: :class:`taifucloudcloud.cvm.v20170312.models.InstanceChargePrepaid`
+        :param InstanceType: 實例機型。不同實例機型指定了不同的資源規格，具體取值可通過調用介面[DescribeInstanceTypeConfigs](https://cloud.taifucloud.com/document/api/213/15749)來獲得最新的規格表或參見[實例規格](https://cloud.taifucloud.com/document/product/213/11518)描述。若不指定該參數，則預設機型爲S1.SMALL1。
         :type InstanceType: str
         :param SystemDisk: 實例系統盤配置訊息。若不指定該參數，則按照系統預設值進行分配。
-        :type SystemDisk: :class:`tencentcloud.cvm.v20170312.models.SystemDisk`
+        :type SystemDisk: :class:`taifucloudcloud.cvm.v20170312.models.SystemDisk`
         :param DataDisks: 實例數據盤配置訊息。若不指定該參數，則預設不購買數據盤。支援購買的時候指定21塊數據盤，其中最多包含1塊LOCAL_BASIC數據盤或者LOCAL_SSD數據盤，最多包含20塊CLOUD_BASIC數據盤、CLOUD_PREMIUM數據盤或者CLOUD_SSD數據盤。
         :type DataDisks: list of DataDisk
         :param VirtualPrivateCloud: 私有網絡相關訊息配置。通過該參數可以指定私有網絡的ID，子網ID等訊息。若不指定該參數，則預設使用基礎網絡。若在此參數中指定了私有網絡IP，那麽InstanceCount參數只能爲1。
-        :type VirtualPrivateCloud: :class:`tencentcloud.cvm.v20170312.models.VirtualPrivateCloud`
+        :type VirtualPrivateCloud: :class:`taifucloudcloud.cvm.v20170312.models.VirtualPrivateCloud`
         :param InternetAccessible: 公網頻寬相關訊息設置。若不指定該參數，則預設公網頻寬爲0Mbps。
-        :type InternetAccessible: :class:`tencentcloud.cvm.v20170312.models.InternetAccessible`
-        :param InstanceCount: 購買實例數量。取值範圍：[1，100]。預設取值：1。指定購買實例的數量不能超過用戶所能購買的剩餘配額數量，具體配額相關限制詳見[CVM實例購買限制](https://cloud.tencent.com/document/product/213/2664)。
+        :type InternetAccessible: :class:`taifucloudcloud.cvm.v20170312.models.InternetAccessible`
+        :param InstanceCount: 購買實例數量。取值範圍：[1，100]。預設取值：1。指定購買實例的數量不能超過用戶所能購買的剩餘配額數量，具體配額相關限制詳見[CVM實例購買限制](https://cloud.taifucloud.com/document/product/213/2664)。
         :type InstanceCount: int
         :param InstanceName: 實例顯示名稱。<br><li>不指定實例顯示名稱則預設顯示‘未命名’。</li><li>購買多台實例，如果指定模式串`{R:x}`，表示生成數字`[x, x+n-1]`，其中`n`表示購買實例的數量，例如`server_{R:3}`，購買1台時，實例顯示名稱爲`server_3`；購買2台時，實例顯示名稱分别爲`server_3`，`server_4`。支援指定多個模式串`{R:x}`。</li><li>購買多台實例，如果不指定模式串，則在實例顯示名稱添加後綴`1、2...n`，其中`n`表示購買實例的數量，例如`server_`，購買2台時，實例顯示名稱分别爲`server_1`，`server_2`。</li><li>最多支援60個字元（包含模式串）。
         :type InstanceName: str
         :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，并以站内信方式知會到用戶。
-        :type LoginSettings: :class:`tencentcloud.cvm.v20170312.models.LoginSettings`
-        :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId欄位來獲取。若不指定該參數，則預設不綁定安全組。
+        :type LoginSettings: :class:`taifucloudcloud.cvm.v20170312.models.LoginSettings`
+        :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.taifucloud.com/document/api/215/15808) 的返回值中的sgId欄位來獲取。若不指定該參數，則預設不綁定安全組。
         :type SecurityGroupIds: list of str
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
-        :type EnhancedService: :class:`tencentcloud.cvm.v20170312.models.EnhancedService`
+        :type EnhancedService: :class:`taifucloudcloud.cvm.v20170312.models.EnhancedService`
         :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。<br>更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
         :param HostName: 雲伺服器的主機名。<br><li>點号（.）和短橫線（-）不能作爲 HostName 的首尾字元，不能連續使用。<br><li>Windows 實例：名字元長度爲[2, 15]，允許字母（不限制大小寫）、數字和短橫線（-）組成，不支援點号（.），不能全是數字。<br><li>其他類型（Linux 等）實例：字元長度爲[2, 30]，允許支援多個點号，點之間爲一段，每段允許字母（不限制大小寫）、數字和短橫線（-）組成。
@@ -2552,7 +2552,7 @@ class InquiryPriceRunInstancesRequest(AbstractModel):
         :param TagSpecification: 标簽描述清單。通過指定該參數可以同時綁定标簽到相應的資源實例，當前僅支援綁定标簽到雲伺服器實例。
         :type TagSpecification: list of TagSpecification
         :param InstanceMarketOptions: 實例的市場相關選項，如競價實例相關參數
-        :type InstanceMarketOptions: :class:`tencentcloud.cvm.v20170312.models.InstanceMarketOptionsRequest`
+        :type InstanceMarketOptions: :class:`taifucloudcloud.cvm.v20170312.models.InstanceMarketOptionsRequest`
         """
         self.Placement = None
         self.ImageId = None
@@ -2629,7 +2629,7 @@ class InquiryPriceRunInstancesResponse(AbstractModel):
     def __init__(self):
         """
         :param Price: 該參數表示對應配置實例的價格。
-        :type Price: :class:`tencentcloud.cvm.v20170312.models.Price`
+        :type Price: :class:`taifucloudcloud.cvm.v20170312.models.Price`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2652,7 +2652,7 @@ class Instance(AbstractModel):
     def __init__(self):
         """
         :param Placement: 實例所在的位置。
-        :type Placement: :class:`tencentcloud.cvm.v20170312.models.Placement`
+        :type Placement: :class:`taifucloudcloud.cvm.v20170312.models.Placement`
         :param InstanceId: 實例`ID`。
         :type InstanceId: str
         :param InstanceType: 實例機型。
@@ -2668,7 +2668,7 @@ class Instance(AbstractModel):
         :param InstanceChargeType: 實例計費模式。取值範圍：<br><li>`PREPAID`：表示預付費，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示後付費，即按量計費<br><li>`CDHPAID`：`CDH`付費，即只對`CDH`計費，不對`CDH`上的實例計費。<br><li>`SPOTPAID`：表示競價實例付費。
         :type InstanceChargeType: str
         :param SystemDisk: 實例系統盤訊息。
-        :type SystemDisk: :class:`tencentcloud.cvm.v20170312.models.SystemDisk`
+        :type SystemDisk: :class:`taifucloudcloud.cvm.v20170312.models.SystemDisk`
         :param DataDisks: 實例數據盤訊息。只包含随實例購買的數據盤。
         :type DataDisks: list of DataDisk
         :param PrivateIpAddresses: 實例主網卡的内網`IP`清單。
@@ -2677,9 +2677,9 @@ class Instance(AbstractModel):
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PublicIpAddresses: list of str
         :param InternetAccessible: 實例頻寬訊息。
-        :type InternetAccessible: :class:`tencentcloud.cvm.v20170312.models.InternetAccessible`
+        :type InternetAccessible: :class:`taifucloudcloud.cvm.v20170312.models.InternetAccessible`
         :param VirtualPrivateCloud: 實例所屬虛拟私有網絡訊息。
-        :type VirtualPrivateCloud: :class:`tencentcloud.cvm.v20170312.models.VirtualPrivateCloud`
+        :type VirtualPrivateCloud: :class:`taifucloudcloud.cvm.v20170312.models.VirtualPrivateCloud`
         :param ImageId: 生産實例所使用的映像`ID`。
         :type ImageId: str
         :param RenewFlag: 自動續約标識。取值範圍：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将過期，但不自動續約<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将過期，而且自動續約<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将過期，也不自動續約。
@@ -2691,10 +2691,10 @@ class Instance(AbstractModel):
         :type ExpiredTime: str
         :param OsName: 作業系統名稱。
         :type OsName: str
-        :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId欄位來獲取。
+        :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.taifucloud.com/document/api/215/15808) 的返回值中的sgId欄位來獲取。
         :type SecurityGroupIds: list of str
         :param LoginSettings: 實例登入設置。目前只返回實例所關聯的金鑰。
-        :type LoginSettings: :class:`tencentcloud.cvm.v20170312.models.LoginSettings`
+        :type LoginSettings: :class:`taifucloudcloud.cvm.v20170312.models.LoginSettings`
         :param InstanceState: 實例狀态。取值範圍：<br><li>PENDING：表示創建中<br></li><li>LAUNCH_FAILED：表示創建失敗<br></li><li>RUNNING：表示運作中<br></li><li>STOPPED：表示關機<br></li><li>STARTING：表示開機中<br></li><li>STOPPING：表示關機中<br></li><li>REBOOTING：表示重啓中<br></li><li>SHUTDOWN：表示停止待銷毀<br></li><li>TERMINATING：表示銷毀中。<br></li>
         :type InstanceState: str
         :param Tags: 實例關聯的标簽清單。
@@ -2861,7 +2861,7 @@ class InstanceMarketOptionsRequest(AbstractModel):
     def __init__(self):
         """
         :param SpotOptions: 競價相關選項
-        :type SpotOptions: :class:`tencentcloud.cvm.v20170312.models.SpotMarketOptions`
+        :type SpotOptions: :class:`taifucloudcloud.cvm.v20170312.models.SpotMarketOptions`
         :param MarketType: 市場選項類型，當前只支援取值：spot
         :type MarketType: str
         """
@@ -2949,13 +2949,13 @@ class InstanceTypeQuotaItem(AbstractModel):
         :type Zone: str
         :param InstanceType: 實例機型。
         :type InstanceType: str
-        :param InstanceChargeType: 實例計費模式。取值範圍： <br><li>PREPAID：表示預付費，即包年包月<br><li>POSTPAID_BY_HOUR：表示後付費，即按量計費<br><li>CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付費，即只對CDH計費，不對CDH上的實例計費。<br><li>`SPOTPAID`：表示競價實例付費。
+        :param InstanceChargeType: 實例計費模式。取值範圍： <br><li>PREPAID：表示預付費，即包年包月<br><li>POSTPAID_BY_HOUR：表示後付費，即按量計費<br><li>CDHPAID：表示[CDH](https://cloud.taifucloud.com/document/product/416)付費，即只對CDH計費，不對CDH上的實例計費。<br><li>`SPOTPAID`：表示競價實例付費。
         :type InstanceChargeType: str
         :param NetworkCard: 網卡類型，例如：25代表25G網卡
         :type NetworkCard: int
         :param Externals: 擴展屬性。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Externals: :class:`tencentcloud.cvm.v20170312.models.Externals`
+        :type Externals: :class:`taifucloudcloud.cvm.v20170312.models.Externals`
         :param Cpu: 實例的CPU核數，單位：核。
         :type Cpu: int
         :param Memory: 實例内存容量，單位：`GB`。
@@ -2969,7 +2969,7 @@ class InstanceTypeQuotaItem(AbstractModel):
         :param Status: 實例是否售賣。取值範圍： <br><li>SELL：表示實例可購買<br><li>SOLD_OUT：表示實例已售罄。
         :type Status: str
         :param Price: 實例的售賣價格。
-        :type Price: :class:`tencentcloud.cvm.v20170312.models.ItemPrice`
+        :type Price: :class:`taifucloudcloud.cvm.v20170312.models.ItemPrice`
         :param SoldOutReason: 售罄原因。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SoldOutReason: str
@@ -3023,11 +3023,11 @@ class InternetAccessible(AbstractModel):
         """
         :param InternetChargeType: 網絡計費類型。取值範圍：<br><li>BANDWIDTH_PREPAID：預付費按頻寬結算<br><li>TRAFFIC_POSTPAID_BY_HOUR：流量按小時後付費<br><li>BANDWIDTH_POSTPAID_BY_HOUR：頻寬按小時後付費<br><li>BANDWIDTH_PACKAGE：頻寬包用戶<br>預設取值：非頻寬包用戶預設與子機付費類型保持一緻。
         :type InternetChargeType: str
-        :param InternetMaxBandwidthOut: 公網出頻寬上限，單位：Mbps。預設值：0Mbps。不同機型頻寬上限範圍不一緻，具體限制詳見[購買網絡頻寬](https://cloud.tencent.com/document/product/213/12523)。
+        :param InternetMaxBandwidthOut: 公網出頻寬上限，單位：Mbps。預設值：0Mbps。不同機型頻寬上限範圍不一緻，具體限制詳見[購買網絡頻寬](https://cloud.taifucloud.com/document/product/213/12523)。
         :type InternetMaxBandwidthOut: int
         :param PublicIpAssigned: 是否分配公網IP。取值範圍：<br><li>TRUE：表示分配公網IP<br><li>FALSE：表示不分配公網IP<br><br>當公網頻寬大于0Mbps時，可自由選擇開通與否，預設開通公網IP；當公網頻寬爲0，則不允許分配公網IP。該參數僅在RunInstances介面中作爲入參使用。
         :type PublicIpAssigned: bool
-        :param BandwidthPackageId: 頻寬包ID。可通過[`DescribeBandwidthPackages`](https://cloud.tencent.com/document/api/215/19209)介面返回值中的`BandwidthPackageId`獲取。該參數僅在RunInstances介面中作爲入參使用。
+        :param BandwidthPackageId: 頻寬包ID。可通過[`DescribeBandwidthPackages`](https://cloud.taifucloud.com/document/api/215/19209)介面返回值中的`BandwidthPackageId`獲取。該參數僅在RunInstances介面中作爲入參使用。
         :type BandwidthPackageId: str
         """
         self.InternetChargeType = None
@@ -3055,7 +3055,7 @@ class InternetBandwidthConfig(AbstractModel):
         :param EndTime: 結束時間。按照`ISO8601`标準表示，并且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
         :type EndTime: str
         :param InternetAccessible: 實例頻寬訊息。
-        :type InternetAccessible: :class:`tencentcloud.cvm.v20170312.models.InternetAccessible`
+        :type InternetAccessible: :class:`taifucloudcloud.cvm.v20170312.models.InternetAccessible`
         """
         self.StartTime = None
         self.EndTime = None
@@ -3242,7 +3242,7 @@ class LoginSettings(AbstractModel):
         :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>Linux實例密碼必須8到30位，至少包括兩項[a-z]，[A-Z]、[0-9] 和 [( ) \` ~ ! @ # $ % ^ & *  - + = | { } [ ] : ; ' , . ? / ]中的特殊符号。<br><li>Windows實例密碼必須12到30位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) \` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? /]中的特殊符号。<br><br>若不指定該參數，則由系統随機生成密碼，并通過站内信方式通知到用戶。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Password: str
-        :param KeyIds: 金鑰ID清單。關聯金鑰後，就可以通過對應的私鑰來訪問實例；KeyId可通過介面[DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699)獲取，金鑰與密碼不能同時指定，同時Windows作業系統不支援指定金鑰。當前僅支援購買的時候指定一個金鑰。
+        :param KeyIds: 金鑰ID清單。關聯金鑰後，就可以通過對應的私鑰來訪問實例；KeyId可通過介面[DescribeKeyPairs](https://cloud.taifucloud.com/document/api/213/15699)獲取，金鑰與密碼不能同時指定，同時Windows作業系統不支援指定金鑰。當前僅支援購買的時候指定一個金鑰。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type KeyIds: list of str
         :param KeepImageLogin: 保持映像的原始設置。該參數與Password或KeyIds.N不能同時指定。只有使用自定義映像、共享映像或外部導入映像創建實例時才能指定該參數爲TRUE。取值範圍：<br><li>TRUE：表示保持映像的登入設置<br><li>FALSE：表示不保持映像的登入設置<br><br>預設取值：FALSE。
@@ -3267,7 +3267,7 @@ class ModifyDisasterRecoverGroupAttributeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param DisasterRecoverGroupId: 分散置放群組ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)介面獲取。
+        :param DisasterRecoverGroupId: 分散置放群組ID，可使用[DescribeDisasterRecoverGroups](https://cloud.taifucloud.com/document/api/213/17810)介面獲取。
         :type DisasterRecoverGroupId: str
         :param Name: 分散置放群組名稱，長度1-60個字元，支援中、英文。
         :type Name: str
@@ -3311,7 +3311,7 @@ class ModifyHostsAttributeRequest(AbstractModel):
         :type HostName: str
         :param RenewFlag: 自動續約标識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
         :type RenewFlag: str
-        :param ProjectId: 項目ID。項目可以使用[AddProject](https://cloud.tencent.com/doc/api/403/4398)介面創建。可通過[`DescribeProject`](https://cloud.tencent.com/document/product/378/4400) API返回值中的`projectId`獲取。後續使用[DescribeHosts](https://cloud.tencent.com/document/api/213/16474)介面查詢實例時，項目ID可用于過濾結果。
+        :param ProjectId: 項目ID。項目可以使用[AddProject](https://cloud.taifucloud.com/doc/api/403/4398)介面創建。可通過[`DescribeProject`](https://cloud.taifucloud.com/document/product/378/4400) API返回值中的`projectId`獲取。後續使用[DescribeHosts](https://cloud.taifucloud.com/document/api/213/16474)介面查詢實例時，項目ID可用于過濾結果。
         :type ProjectId: int
         """
         self.HostIds = None
@@ -3351,7 +3351,7 @@ class ModifyImageAttributeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ImageId: 映像ID，形如`img-gvbnzy6f`。映像ID可以通過如下方式獲取：<br><li>通過[DescribeImages](https://cloud.tencent.com/document/api/213/15715)介面返回的`ImageId`獲取。<br><li>通過[映像控制台](https://console.cloud.tencent.com/cvm/image)獲取。
+        :param ImageId: 映像ID，形如`img-gvbnzy6f`。映像ID可以通過如下方式獲取：<br><li>通過[DescribeImages](https://cloud.taifucloud.com/document/api/213/15715)介面返回的`ImageId`獲取。<br><li>通過[映像控制台](https://console.cloud.taifucloud.com/cvm/image)獲取。
         :type ImageId: str
         :param ImageName: 設置新的映像名稱；必須滿足下列限制：<br> <li> 不得超過20個字元。<br> <li> 映像名稱不能與已有映像重複。
         :type ImageName: str
@@ -3393,9 +3393,9 @@ class ModifyImageSharePermissionRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ImageId: 映像ID，形如`img-gvbnzy6f`。映像Id可以通過如下方式獲取：<br><li>通過[DescribeImages](https://cloud.tencent.com/document/api/213/15715)介面返回的`ImageId`獲取。<br><li>通過[映像控制台](https://console.cloud.tencent.com/cvm/image)獲取。 <br>映像ID必須指定爲狀态爲`NORMAL`的映像。映像狀态請參考[映像數據表](https://cloud.tencent.com/document/product/213/15753#Image)。
+        :param ImageId: 映像ID，形如`img-gvbnzy6f`。映像Id可以通過如下方式獲取：<br><li>通過[DescribeImages](https://cloud.taifucloud.com/document/api/213/15715)介面返回的`ImageId`獲取。<br><li>通過[映像控制台](https://console.cloud.taifucloud.com/cvm/image)獲取。 <br>映像ID必須指定爲狀态爲`NORMAL`的映像。映像狀态請參考[映像數據表](https://cloud.taifucloud.com/document/product/213/15753#Image)。
         :type ImageId: str
-        :param AccountIds: 接收分享映像的賬号Id清單，array型參數的格式可以參考[API簡介](/document/api/213/568)。帳号ID不同于QQ号，查詢用戶帳号ID請檢視[帳号訊息](https://console.cloud.tencent.com/developer)中的帳号ID欄。
+        :param AccountIds: 接收分享映像的賬号Id清單，array型參數的格式可以參考[API簡介](/document/api/213/568)。帳号ID不同于 号，查詢用戶帳号ID請檢視[帳号訊息](https://console.cloud.taifucloud.com/developer)中的帳号ID欄。
         :type AccountIds: list of str
         :param Permission: 操作，包括 `SHARE`，`CANCEL`。其中`SHARE`代表分享操作，`CANCEL`代表取消分享操作。
         :type Permission: str
@@ -3435,7 +3435,7 @@ class ModifyInstancesAttributeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`獲取。每次請求允許操作的實例數量上限是100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728) API返回值中的`InstanceId`獲取。每次請求允許操作的實例數量上限是100。
         :type InstanceIds: list of str
         :param InstanceName: 實例名稱。可任意命名，但不得超過60個字元。
         :type InstanceName: str
@@ -3477,12 +3477,12 @@ class ModifyInstancesChargeTypeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
-        :param InstanceChargeType: 實例[計費類型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：預付費，即包年包月。
+        :param InstanceChargeType: 實例[計費類型](https://cloud.taifucloud.com/document/product/213/2180)。<br><li>PREPAID：預付費，即包年包月。
         :type InstanceChargeType: str
         :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的購買時長、是否設置自動續約等屬性。若指定實例的付費模式爲預付費則該參數必傳。
-        :type InstanceChargePrepaid: :class:`tencentcloud.cvm.v20170312.models.InstanceChargePrepaid`
+        :type InstanceChargePrepaid: :class:`taifucloudcloud.cvm.v20170312.models.InstanceChargePrepaid`
         """
         self.InstanceIds = None
         self.InstanceChargeType = None
@@ -3521,9 +3521,9 @@ class ModifyInstancesProjectRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`獲取。每次請求允許操作的實例數量上限是100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728) API返回值中的`InstanceId`獲取。每次請求允許操作的實例數量上限是100。
         :type InstanceIds: list of str
-        :param ProjectId: 項目ID。項目可以使用[AddProject](https://cloud.tencent.com/doc/api/403/4398)介面創建。可通過[`DescribeProject`](https://cloud.tencent.com/document/product/378/4400) API返回值中的`projectId`獲取。後續使用[DescribeInstances](https://cloud.tencent.com/document/api/213/15728)介面查詢實例時，項目ID可用于過濾結果。
+        :param ProjectId: 項目ID。項目可以使用[AddProject](https://cloud.taifucloud.com/doc/api/403/4398)介面創建。可通過[`DescribeProject`](https://cloud.taifucloud.com/document/product/378/4400) API返回值中的`projectId`獲取。後續使用[DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728)介面查詢實例時，項目ID可用于過濾結果。
         :type ProjectId: int
         """
         self.InstanceIds = None
@@ -3559,7 +3559,7 @@ class ModifyInstancesRenewFlagRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`獲取。每次請求允許操作的實例數量上限是100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728) API返回值中的`InstanceId`獲取。每次請求允許操作的實例數量上限是100。
         :type InstanceIds: list of str
         :param RenewFlag: 自動續約标識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
         :type RenewFlag: str
@@ -3597,10 +3597,10 @@ class ModifyInstancesVpcAttributeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 待操作的實例ID數組。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。
+        :param InstanceIds: 待操作的實例ID數組。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。
         :type InstanceIds: list of str
         :param VirtualPrivateCloud: 私有網絡相關訊息配置。通過該參數指定私有網絡的ID，子網ID，私有網絡ip等訊息。當指定私有網絡ID和子網ID（子網必須在實例所在的可用區）與指定實例所在私有網絡不一緻時，會将實例遷移至指定的私有網絡的子網下。可通過`PrivateIpAddresses`指定私有網絡子網IP，若需指定則所有已指定的實例均需要指定子網IP，此時`InstanceIds`與`PrivateIpAddresses`一一對應。不指定`PrivateIpAddresses`時随機分配私有網絡子網IP。
-        :type VirtualPrivateCloud: :class:`tencentcloud.cvm.v20170312.models.VirtualPrivateCloud`
+        :type VirtualPrivateCloud: :class:`taifucloudcloud.cvm.v20170312.models.VirtualPrivateCloud`
         :param ForceStop: 是否對運作中的實例選擇強制關機。預設爲TRUE。
         :type ForceStop: bool
         :param ReserveHostName: 是否保留主機名。預設爲FALSE。
@@ -3645,7 +3645,7 @@ class ModifyKeyPairAttributeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: 金鑰對ID，金鑰對ID形如：`skey-xxxxxxxx`。<br><br>可以通過以下方式獲取可用的金鑰 ID：<br><li>通過登入[控制台](https://console.cloud.tencent.com/cvm/sshkey)查詢金鑰 ID。<br><li>通過調用介面 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/9403) ，取返回訊息中的 `KeyId` 獲取金鑰對 ID。
+        :param KeyId: 金鑰對ID，金鑰對ID形如：`skey-xxxxxxxx`。<br><br>可以通過以下方式獲取可用的金鑰 ID：<br><li>通過登入[控制台](https://console.cloud.taifucloud.com/cvm/sshkey)查詢金鑰 ID。<br><li>通過調用介面 [DescribeKeyPairs](https://cloud.taifucloud.com/document/api/213/9403) ，取返回訊息中的 `KeyId` 獲取金鑰對 ID。
         :type KeyId: str
         :param KeyName: 修改後的金鑰對名稱，可由數字，字母和下劃線組成，長度不超過25個字元。
         :type KeyName: str
@@ -3741,7 +3741,7 @@ class Placement(AbstractModel):
 
     def __init__(self):
         """
-        :param Zone: 實例所屬的[可用區](https://cloud.tencent.com/document/product/213/15753#ZoneInfo)ID。該參數也可以通過調用  [DescribeZones](https://cloud.tencent.com/document/product/213/15707) 的返回值中的Zone欄位來獲取。
+        :param Zone: 實例所屬的[可用區](https://cloud.taifucloud.com/document/product/213/15753#ZoneInfo)ID。該參數也可以通過調用  [DescribeZones](https://cloud.taifucloud.com/document/product/213/15707) 的返回值中的Zone欄位來獲取。
         :type Zone: str
         :param ProjectId: 實例所屬項目ID。該參數可以通過調用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 欄位來獲取。不填爲預設項目。
         :type ProjectId: int
@@ -3775,9 +3775,9 @@ class Price(AbstractModel):
     def __init__(self):
         """
         :param InstancePrice: 描述了實例價格。
-        :type InstancePrice: :class:`tencentcloud.cvm.v20170312.models.ItemPrice`
+        :type InstancePrice: :class:`taifucloudcloud.cvm.v20170312.models.ItemPrice`
         :param BandwidthPrice: 描述了網絡價格。
-        :type BandwidthPrice: :class:`tencentcloud.cvm.v20170312.models.ItemPrice`
+        :type BandwidthPrice: :class:`taifucloudcloud.cvm.v20170312.models.ItemPrice`
         """
         self.InstancePrice = None
         self.BandwidthPrice = None
@@ -3849,7 +3849,7 @@ class RebootInstancesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
         :param ForceReboot: 是否在正常重啓失敗後選擇強制重啓實例。取值範圍：<br><li>TRUE：表示在正常重啓失敗後進行強制重啓<br><li>FALSE：表示在正常重啓失敗後不進行強制重啓<br><br>預設取值：FALSE。
         :type ForceReboot: bool
@@ -3893,7 +3893,7 @@ class RegionInfo(AbstractModel):
         """
         :param Region: 地域名稱，例如，ap-guangzhou
         :type Region: str
-        :param RegionName: 地域描述，例如，華南地區(廣州)
+        :param RegionName: 地域描述，例如，華南地區( )
         :type RegionName: str
         :param RegionState: 地域是否可用狀态
         :type RegionState: str
@@ -3919,7 +3919,7 @@ class RenewHostsRequest(AbstractModel):
         :param HostIds: 一個或多個待操作的CDH實例ID。每次請求的CDH實例的上限爲100。
         :type HostIds: list of str
         :param HostChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的購買時長、是否設置自動續約等屬性。若指定實例的付費模式爲預付費則該參數必傳。
-        :type HostChargePrepaid: :class:`tencentcloud.cvm.v20170312.models.ChargePrepaid`
+        :type HostChargePrepaid: :class:`taifucloudcloud.cvm.v20170312.models.ChargePrepaid`
         """
         self.HostIds = None
         self.HostChargePrepaid = None
@@ -3956,10 +3956,10 @@ class RenewInstancesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
         :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的續約時長、是否設置自動續約等屬性。包年包月實例該參數爲必傳參數。
-        :type InstanceChargePrepaid: :class:`tencentcloud.cvm.v20170312.models.InstanceChargePrepaid`
+        :type InstanceChargePrepaid: :class:`taifucloudcloud.cvm.v20170312.models.InstanceChargePrepaid`
         :param RenewPortableDataDisk: 是否續約彈性數據盤。取值範圍：<br><li>TRUE：表示續約包年包月實例同時續約其掛載的彈性數據盤<br><li>FALSE：表示續約包年包月實例同時不再續約其掛載的彈性數據盤<br><br>預設取值：TRUE。
         :type RenewPortableDataDisk: bool
         """
@@ -4003,10 +4003,10 @@ class ReservedInstances(AbstractModel):
         :param ReservedInstancesId: 已購買的預留實例計費ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
         :type ReservedInstancesId: str
         :param InstanceType: 預留實例計費的類型。形如：S3.MEDIUM4。
-返回項：<a href="https://cloud.tencent.com/document/product/213/11518">預留實例計費類型清單</a>
+返回項：<a href="https://cloud.taifucloud.com/document/product/213/11518">預留實例計費類型清單</a>
         :type InstanceType: str
         :param Zone: 預留實例計費可購買的可用區。形如：ap-guangzhou-1。
-返回項：<a href="https://cloud.tencent.com/document/product/213/6091">可用區清單</a>
+返回項：<a href="https://cloud.taifucloud.com/document/product/213/6091">可用區清單</a>
         :type Zone: str
         :param StartTime: 預留實例計費開始時間。形如：1949-10-01 00:00:00
         :type StartTime: str
@@ -4065,7 +4065,7 @@ class ReservedInstancesOffering(AbstractModel):
     def __init__(self):
         """
         :param Zone: 預留實例計費可購買的可用區。形如：ap-guangzhou-1。
-返回項：<a href="https://cloud.tencent.com/document/product/213/6091">可用區清單</a>
+返回項：<a href="https://cloud.taifucloud.com/document/product/213/6091">可用區清單</a>
         :type Zone: str
         :param CurrencyCode: 可購買的預留實例計費類型的結算貨币，使用ISO 4217标準貨币代碼。
 返回項：USD（美元）。
@@ -4077,7 +4077,7 @@ class ReservedInstancesOffering(AbstractModel):
 計量單位：與 currencyCode 一緻，目前支援 USD（美元）
         :type FixedPrice: float
         :param InstanceType: 預留實例計費的實例類型。形如：S3.MEDIUM4。
-返回項：<a href="https://cloud.tencent.com/product/cvm/instances">預留實例計費類型清單</a>
+返回項：<a href="https://cloud.taifucloud.com/product/cvm/instances">預留實例計費類型清單</a>
         :type InstanceType: str
         :param OfferingType: 預留實例計費的付款類型。形如：All Upfront。
 返回項： All Upfront (預付全部費用)。
@@ -4122,17 +4122,17 @@ class ResetInstanceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例ID。可通過 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`獲取。
+        :param InstanceId: 實例ID。可通過 [DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728) API返回值中的`InstanceId`獲取。
         :type InstanceId: str
-        :param ImageId: 指定有效的[映像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.tencent.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回訊息中的`ImageId`欄位。</li>
+        :param ImageId: 指定有效的[映像](https://cloud.taifucloud.com/document/product/213/4940)ID，格式形如`img-xxx`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.taifucloud.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.taifucloud.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.taifucloud.com/document/api/213/15715) ，取返回訊息中的`ImageId`欄位。</li>
 <br>預設取值：預設使用當前映像。
         :type ImageId: str
         :param SystemDisk: 實例系統盤配置訊息。系統盤爲雲盤的實例可以通過該參數指定重裝後的系統盤大小來實現對系統盤的擴容操作，若不指定大小且原系統盤大小小於映像大小，則會自動擴容，産生多餘的磁盤費用。系統盤大小只支援擴容不支援縮容；重裝只支援修改系統盤的大小，不能修改系統盤的類型。
-        :type SystemDisk: :class:`tencentcloud.cvm.v20170312.models.SystemDisk`
+        :type SystemDisk: :class:`taifucloudcloud.cvm.v20170312.models.SystemDisk`
         :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，并以站内信方式知會到用戶。
-        :type LoginSettings: :class:`tencentcloud.cvm.v20170312.models.LoginSettings`
+        :type LoginSettings: :class:`taifucloudcloud.cvm.v20170312.models.LoginSettings`
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
-        :type EnhancedService: :class:`tencentcloud.cvm.v20170312.models.EnhancedService`
+        :type EnhancedService: :class:`taifucloudcloud.cvm.v20170312.models.EnhancedService`
         :param HostName: 重灌系統時，可以指定修改實例的主機名。<br><li>點号（.）和短橫線（-）不能作爲 HostName 的首尾字元，不能連續使用。<br><li>Windows 實例：名字元長度爲[2, 15]，允許字母（不限制大小寫）、數字和短橫線（-）組成，不支援點号（.），不能全是數字。<br><li>其他類型（Linux 等）實例：字元長度爲[2, 60]，允許支援多個點号，點之間爲一段，每段允許字母（不限制大小寫）、數字和短橫線（-）組成。
         :type HostName: str
         """
@@ -4183,13 +4183,13 @@ class ResetInstancesInternetMaxBandwidthRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)介面返回值中的 `InstanceId` 獲取。 每次請求批次實例的上限爲100。當調整 `BANDWIDTH_PREPAID` 和 `BANDWIDTH_POSTPAID_BY_HOUR` 計費方式的頻寬時，只支援一個實例。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/9388)介面返回值中的 `InstanceId` 獲取。 每次請求批次實例的上限爲100。當調整 `BANDWIDTH_PREPAID` 和 `BANDWIDTH_POSTPAID_BY_HOUR` 計費方式的頻寬時，只支援一個實例。
         :type InstanceIds: list of str
         :param InternetAccessible: 公網出頻寬配置。不同機型頻寬上限範圍不一緻，具體限制詳見頻寬限制對賬表。暫時只支援 `InternetMaxBandwidthOut` 參數。
-        :type InternetAccessible: :class:`tencentcloud.cvm.v20170312.models.InternetAccessible`
+        :type InternetAccessible: :class:`taifucloudcloud.cvm.v20170312.models.InternetAccessible`
         :param StartTime: 頻寬生效的起始時間。格式：`YYYY-MM-DD`，例如：`2016-10-30`。起始時間不能早于當前時間。如果起始時間是今天則新設置的頻寬立即生效。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
         :type StartTime: str
-        :param EndTime: 頻寬生效的終止時間。格式： `YYYY-MM-DD` ，例如：`2016-10-30` 。新設置的頻寬的有效期包含終止時間此日期。終止時間不能晚于包年包月實例的到期時間。實例的到期時間可通過 [`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)介面返回值中的`ExpiredTime`獲取。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
+        :param EndTime: 頻寬生效的終止時間。格式： `YYYY-MM-DD` ，例如：`2016-10-30` 。新設置的頻寬的有效期包含終止時間此日期。終止時間不能晚于包年包月實例的到期時間。實例的到期時間可通過 [`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/9388)介面返回值中的`ExpiredTime`獲取。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
         :type EndTime: str
         """
         self.InstanceIds = None
@@ -4231,7 +4231,7 @@ class ResetInstancesPasswordRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`獲取。每次請求允許操作的實例數量上限是100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728) API返回值中的`InstanceId`獲取。每次請求允許操作的實例數量上限是100。
         :type InstanceIds: list of str
         :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：
 Linux實例密碼必須8-30位，推薦使用12位以上密碼，不能以“/”開頭，至少包含以下字元中的三種不同字元，字元種類：<br><li>小寫字母：[a-z]<br><li>大寫字母：[A-Z]<br><li>數字：0-9<br><li>特殊字元： ()\`~!@#$%^&\*-+=\_|{}[]:;'<>,.?/
@@ -4279,9 +4279,9 @@ class ResetInstancesTypeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。本介面每次請求批次實例的上限爲1。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。本介面每次請求批次實例的上限爲1。
         :type InstanceIds: list of str
-        :param InstanceType: 實例機型。不同實例機型指定了不同的資源規格，具體取值可通過調用介面[`DescribeInstanceTypeConfigs`](https://cloud.tencent.com/document/api/213/15749)來獲得最新的規格表或參見[實例類型](https://cloud.tencent.com/document/product/213/11518)描述。
+        :param InstanceType: 實例機型。不同實例機型指定了不同的資源規格，具體取值可通過調用介面[`DescribeInstanceTypeConfigs`](https://cloud.taifucloud.com/document/api/213/15749)來獲得最新的規格表或參見[實例類型](https://cloud.taifucloud.com/document/product/213/11518)描述。
         :type InstanceType: str
         :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機<br><li>FALSE：表示在正常關機失敗後不進行強制關機<br><br>預設取值：FALSE。<br><br>強制關機的效果等同于關閉物理電腦的電源開關。強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
         :type ForceStop: bool
@@ -4321,9 +4321,9 @@ class ResizeInstanceDisksRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。
+        :param InstanceId: 待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。
         :type InstanceId: str
-        :param DataDisks: 待擴容的數據盤配置訊息。只支援擴容非彈性數據盤（[`DescribeDisks`](https://cloud.tencent.com/document/api/362/16315)介面返回值中的`Portable`爲`false`表示非彈性），且[數據盤類型](/document/api/213/9452#block_device)爲：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。數據盤容量單位：GB。最小擴容步長：10G。關于數據盤類型的選擇請參考[硬碟産品簡介](https://cloud.tencent.com/document/product/362/2353)。可選數據盤類型受到實例類型`InstanceType`限制。另外允許擴容的最大容量也因數據盤類型的不同而有所差異。
+        :param DataDisks: 待擴容的數據盤配置訊息。只支援擴容非彈性數據盤（[`DescribeDisks`](https://cloud.taifucloud.com/document/api/362/16315)介面返回值中的`Portable`爲`false`表示非彈性），且[數據盤類型](/document/api/213/9452#block_device)爲：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。數據盤容量單位：GB。最小擴容步長：10G。關于數據盤類型的選擇請參考[硬碟産品簡介](https://cloud.taifucloud.com/document/product/362/2353)。可選數據盤類型受到實例類型`InstanceType`限制。另外允許擴容的最大容量也因數據盤類型的不同而有所差異。
         :type DataDisks: list of DataDisk
         :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再重置用戶密碼。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機<br><li>FALSE：表示在正常關機失敗後不進行強制關機<br><br>預設取值：FALSE。<br><br>強制關機的效果等同于關閉物理電腦的電源開關。強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
         :type ForceStop: bool
@@ -4369,47 +4369,47 @@ class RunInstancesRequest(AbstractModel):
     def __init__(self):
         """
         :param Placement: 實例所在的位置。通過該參數可以指定實例所屬可用區，所屬項目，所屬宿主機（在專用宿主機上創建子機時指定）等屬性。
-        :type Placement: :class:`tencentcloud.cvm.v20170312.models.Placement`
-        :param ImageId: 指定有效的[映像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.tencent.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，傳入InstanceType獲取當前機型支援的映像清單，取返回訊息中的`ImageId`欄位。</li>
+        :type Placement: :class:`taifucloudcloud.cvm.v20170312.models.Placement`
+        :param ImageId: 指定有效的[映像](https://cloud.taifucloud.com/document/product/213/4940)ID，格式形如`img-xxx`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.taifucloud.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.taifucloud.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.taifucloud.com/document/api/213/15715) ，傳入InstanceType獲取當前機型支援的映像清單，取返回訊息中的`ImageId`欄位。</li>
         :type ImageId: str
-        :param InstanceChargeType: 實例[計費類型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：預付費，即包年包月<br><li>POSTPAID_BY_HOUR：按小時後付費<br><li>CDHPAID：獨享子機（基于專用宿主機創建，宿主機部分的資源不收費）<br><li>SPOTPAID：競價付費<br>預設值：POSTPAID_BY_HOUR。
+        :param InstanceChargeType: 實例[計費類型](https://cloud.taifucloud.com/document/product/213/2180)。<br><li>PREPAID：預付費，即包年包月<br><li>POSTPAID_BY_HOUR：按小時後付費<br><li>CDHPAID：獨享子機（基于專用宿主機創建，宿主機部分的資源不收費）<br><li>SPOTPAID：競價付費<br>預設值：POSTPAID_BY_HOUR。
         :type InstanceChargeType: str
         :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的購買時長、是否設置自動續約等屬性。若指定實例的付費模式爲預付費則該參數必傳。
-        :type InstanceChargePrepaid: :class:`tencentcloud.cvm.v20170312.models.InstanceChargePrepaid`
+        :type InstanceChargePrepaid: :class:`taifucloudcloud.cvm.v20170312.models.InstanceChargePrepaid`
         :param InstanceType: 實例機型。不同實例機型指定了不同的資源規格。
-<br><li>對于付費模式爲PREPAID或POSTPAID\_BY\_HOUR的實例創建，具體取值可通過調用介面[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)來獲得最新的規格表或參見[實例規格](https://cloud.tencent.com/document/product/213/11518)描述。若不指定該參數，則預設機型爲S1.SMALL1。<br><li>對于付費模式爲CDHPAID的實例創建，該參數以"CDH_"爲前綴，根據CPU和内存配置生成，具體形式爲：CDH_XCXG，例如對于創建CPU爲1核，内存爲1G大小的專用宿主機的實例，該參數應該爲CDH_1C1G。
+<br><li>對于付費模式爲PREPAID或POSTPAID\_BY\_HOUR的實例創建，具體取值可通過調用介面[DescribeInstanceTypeConfigs](https://cloud.taifucloud.com/document/api/213/15749)來獲得最新的規格表或參見[實例規格](https://cloud.taifucloud.com/document/product/213/11518)描述。若不指定該參數，則預設機型爲S1.SMALL1。<br><li>對于付費模式爲CDHPAID的實例創建，該參數以"CDH_"爲前綴，根據CPU和内存配置生成，具體形式爲：CDH_XCXG，例如對于創建CPU爲1核，内存爲1G大小的專用宿主機的實例，該參數應該爲CDH_1C1G。
         :type InstanceType: str
         :param SystemDisk: 實例系統盤配置訊息。若不指定該參數，則按照系統預設值進行分配。
-        :type SystemDisk: :class:`tencentcloud.cvm.v20170312.models.SystemDisk`
+        :type SystemDisk: :class:`taifucloudcloud.cvm.v20170312.models.SystemDisk`
         :param DataDisks: 實例數據盤配置訊息。若不指定該參數，則預設不購買數據盤。支援購買的時候指定21塊數據盤，其中最多包含1塊LOCAL_BASIC數據盤或者LOCAL_SSD數據盤，最多包含20塊CLOUD_BASIC數據盤、CLOUD_PREMIUM數據盤或者CLOUD_SSD數據盤。
         :type DataDisks: list of DataDisk
         :param VirtualPrivateCloud: 私有網絡相關訊息配置。通過該參數可以指定私有網絡的ID，子網ID等訊息。若不指定該參數，則預設使用基礎網絡。若在此參數中指定了私有網絡IP，表示每個實例的主網卡IP，而且InstanceCount參數必須與私有網絡IP的個數一緻。
-        :type VirtualPrivateCloud: :class:`tencentcloud.cvm.v20170312.models.VirtualPrivateCloud`
+        :type VirtualPrivateCloud: :class:`taifucloudcloud.cvm.v20170312.models.VirtualPrivateCloud`
         :param InternetAccessible: 公網頻寬相關訊息設置。若不指定該參數，則預設公網頻寬爲0Mbps。
-        :type InternetAccessible: :class:`tencentcloud.cvm.v20170312.models.InternetAccessible`
-        :param InstanceCount: 購買實例數量。包年包月實例取值範圍：[1，300]，按量計費實例取值範圍：[1，100]。預設取值：1。指定購買實例的數量不能超過用戶所能購買的剩餘配額數量，具體配額相關限制詳見[CVM實例購買限制](https://cloud.tencent.com/document/product/213/2664)。
+        :type InternetAccessible: :class:`taifucloudcloud.cvm.v20170312.models.InternetAccessible`
+        :param InstanceCount: 購買實例數量。包年包月實例取值範圍：[1，300]，按量計費實例取值範圍：[1，100]。預設取值：1。指定購買實例的數量不能超過用戶所能購買的剩餘配額數量，具體配額相關限制詳見[CVM實例購買限制](https://cloud.taifucloud.com/document/product/213/2664)。
         :type InstanceCount: int
         :param InstanceName: 實例顯示名稱。<br><li>不指定實例顯示名稱則預設顯示‘未命名’。</li><li>購買多台實例，如果指定模式串`{R:x}`，表示生成數字`[x, x+n-1]`，其中`n`表示購買實例的數量，例如`server_{R:3}`，購買1台時，實例顯示名稱爲`server_3`；購買2台時，實例顯示名稱分别爲`server_3`，`server_4`。支援指定多個模式串`{R:x}`。</li><li>購買多台實例，如果不指定模式串，則在實例顯示名稱添加後綴`1、2...n`，其中`n`表示購買實例的數量，例如`server_`，購買2台時，實例顯示名稱分别爲`server_1`，`server_2`。</li><li>最多支援60個字元（包含模式串）。
         :type InstanceName: str
         :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，并以站内信方式知會到用戶。
-        :type LoginSettings: :class:`tencentcloud.cvm.v20170312.models.LoginSettings`
-        :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId欄位來獲取。若不指定該參數，則綁定預設安全組。
+        :type LoginSettings: :class:`taifucloudcloud.cvm.v20170312.models.LoginSettings`
+        :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.taifucloud.com/document/api/215/15808) 的返回值中的sgId欄位來獲取。若不指定該參數，則綁定預設安全組。
         :type SecurityGroupIds: list of str
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設公共映像開啓雲監控、雲安全服務；自定義映像與映像市場映像預設不開啓雲監控，雲安全服務，而使用映像裏保留的服務。
-        :type EnhancedService: :class:`tencentcloud.cvm.v20170312.models.EnhancedService`
+        :type EnhancedService: :class:`taifucloudcloud.cvm.v20170312.models.EnhancedService`
         :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
         :type ClientToken: str
         :param HostName: 雲伺服器的主機名。<br><li>點号（.）和短橫線（-）不能作爲 HostName 的首尾字元，不能連續使用。<br><li>Windows 實例：名字元長度爲[2, 15]，允許字母（不限制大小寫）、數字和短橫線（-）組成，不支援點号（.），不能全是數字。<br><li>其他類型（Linux 等）實例：字元長度爲[2, 60]，允許支援多個點号，點之間爲一段，每段允許字母（不限制大小寫）、數字和短橫線（-）組成。
         :type HostName: str
         :param ActionTimer: 定時任務。通過該參數可以爲實例指定定時任務，目前僅支援定時銷毀。
-        :type ActionTimer: :class:`tencentcloud.cvm.v20170312.models.ActionTimer`
+        :type ActionTimer: :class:`taifucloudcloud.cvm.v20170312.models.ActionTimer`
         :param DisasterRecoverGroupIds: 置放群組id，僅支援指定一個。
         :type DisasterRecoverGroupIds: list of str
         :param TagSpecification: 标簽描述清單。通過指定該參數可以同時綁定标簽到相應的資源實例，當前僅支援綁定标簽到雲伺服器實例。
         :type TagSpecification: list of TagSpecification
         :param InstanceMarketOptions: 實例的市場相關選項，如競價實例相關參數，若指定實例的付費模式爲競價付費則該參數必傳。
-        :type InstanceMarketOptions: :class:`tencentcloud.cvm.v20170312.models.InstanceMarketOptionsRequest`
-        :param UserData: 提供給實例使用的用戶數據，需要以 base64 方式編碼，支援的最大數據大小爲 16KB。關于獲取此參數的詳細介紹，請參閱[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)啓動時運作命令。
+        :type InstanceMarketOptions: :class:`taifucloudcloud.cvm.v20170312.models.InstanceMarketOptionsRequest`
+        :param UserData: 提供給實例使用的用戶數據，需要以 base64 方式編碼，支援的最大數據大小爲 16KB。關于獲取此參數的詳細介紹，請參閱[Windows](https://cloud.taifucloud.com/document/product/213/17526)和[Linux](https://cloud.taifucloud.com/document/product/213/17525)啓動時運作命令。
         :type UserData: str
         :param DryRun: 是否只預檢此次請求。
 true：發送檢查請求，不會創建實例。檢查項包括是否填寫了必需參數，請求格式，業務限制和雲伺服器庫存。
@@ -4502,7 +4502,7 @@ class RunInstancesResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIdSet: 當通過本介面來創建實例時會返回該參數，表示一個或多個實例`ID`。返回實例`ID`清單并不代表實例創建成功，可根據 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 介面查詢返回的InstancesSet中對應實例的`ID`的狀态來判斷創建是否完成；如果實例狀态由“準備中”變爲“正在運作”，則爲創建成功。
+        :param InstanceIdSet: 當通過本介面來創建實例時會返回該參數，表示一個或多個實例`ID`。返回實例`ID`清單并不代表實例創建成功，可根據 [DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728) 介面查詢返回的InstancesSet中對應實例的`ID`的狀态來判斷創建是否完成；如果實例狀态由“準備中”變爲“正在運作”，則爲創建成功。
         :type InstanceIdSet: list of str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -4626,7 +4626,7 @@ class StartInstancesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
         """
         self.InstanceIds = None
@@ -4660,7 +4660,7 @@ class StopInstancesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
         :param ForceStop: 是否在正常關閉失敗後選擇強制關閉實例。取值範圍：<br><li>TRUE：表示在正常關閉失敗後進行強制關閉<br><li>FALSE：表示在正常關閉失敗後不進行強制關閉<br><br>預設取值：FALSE。
         :type ForceStop: bool
@@ -4668,7 +4668,7 @@ class StopInstancesRequest(AbstractModel):
         :type StopType: str
         :param StoppedMode: 按量計費實例關機收費模式。
 取值範圍：<br><li>KEEP_CHARGING：關機繼續收費<br><li>STOP_CHARGING：關機停止收費<br>預設取值：KEEP_CHARGING。
-該參數只針對部分按量計費雲硬碟實例生效，詳情參考[按量計費實例關機不收費說明](https://cloud.tencent.com/document/product/213/19918)
+該參數只針對部分按量計費雲硬碟實例生效，詳情參考[按量計費實例關機不收費說明](https://cloud.taifucloud.com/document/product/213/19918)
         :type StoppedMode: str
         """
         self.InstanceIds = None
@@ -4736,9 +4736,9 @@ class SyncImagesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ImageIds: 映像ID清單 ，映像ID可以通過如下方式獲取：<br><li>通過[DescribeImages](https://cloud.tencent.com/document/api/213/15715)介面返回的`ImageId`獲取。<br><li>通過[映像控制台](https://console.cloud.tencent.com/cvm/image)獲取。<br>映像ID必須滿足限制：<br><li>映像ID對應的映像狀态必須爲`NORMAL`。<br><li>映像大小小於50GB。<br>映像狀态請參考[映像數據表](https://cloud.tencent.com/document/product/213/15753#Image)。
+        :param ImageIds: 映像ID清單 ，映像ID可以通過如下方式獲取：<br><li>通過[DescribeImages](https://cloud.taifucloud.com/document/api/213/15715)介面返回的`ImageId`獲取。<br><li>通過[映像控制台](https://console.cloud.taifucloud.com/cvm/image)獲取。<br>映像ID必須滿足限制：<br><li>映像ID對應的映像狀态必須爲`NORMAL`。<br><li>映像大小小於50GB。<br>映像狀态請參考[映像數據表](https://cloud.taifucloud.com/document/product/213/15753#Image)。
         :type ImageIds: list of str
-        :param DestinationRegions: 目的同步地域清單；必須滿足限制：<br><li>不能爲源地域，<br><li>必須是一個合法的Region。<br><li>暫不支援部分地域同步。<br>具體地域參數請參考[Region](https://cloud.tencent.com/document/product/213/6091)。
+        :param DestinationRegions: 目的同步地域清單；必須滿足限制：<br><li>不能爲源地域，<br><li>必須是一個合法的Region。<br><li>暫不支援部分地域同步。<br>具體地域參數請參考[Region](https://cloud.taifucloud.com/document/product/213/6091)。
         :type DestinationRegions: list of str
         """
         self.ImageIds = None
@@ -4774,7 +4774,7 @@ class SystemDisk(AbstractModel):
 
     def __init__(self):
         """
-        :param DiskType: 系統盤類型。系統盤類型限制詳見[儲存概述](https://cloud.tencent.com/document/product/213/4952)。取值範圍：<br><li>LOCAL_BASIC：本地硬碟<br><li>LOCAL_SSD：本地SSD硬碟<br><li>CLOUD_BASIC：普通雲硬碟<br><li>CLOUD_SSD：SSD雲硬碟<br><li>CLOUD_PREMIUM：高效能雲硬碟<br><br>預設取值：CLOUD_BASIC。
+        :param DiskType: 系統盤類型。系統盤類型限制詳見[儲存概述](https://cloud.taifucloud.com/document/product/213/4952)。取值範圍：<br><li>LOCAL_BASIC：本地硬碟<br><li>LOCAL_SSD：本地SSD硬碟<br><li>CLOUD_BASIC：普通雲硬碟<br><li>CLOUD_SSD：SSD雲硬碟<br><li>CLOUD_PREMIUM：高效能雲硬碟<br><br>預設取值：CLOUD_BASIC。
         :type DiskType: str
         :param DiskId: 系統盤ID。LOCAL_BASIC 和 LOCAL_SSD 類型沒有ID。暫時不支援該參數。
         :type DiskId: str
@@ -4846,7 +4846,7 @@ class TerminateInstancesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
+        :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
         """
         self.InstanceIds = None
@@ -4880,9 +4880,9 @@ class VirtualPrivateCloud(AbstractModel):
 
     def __init__(self):
         """
-        :param VpcId: 私有網絡ID，形如`vpc-xxx`。有效的VpcId可通過登入[控制台](https://console.cloud.tencent.com/vpc/vpc?rid=1)查詢；也可以調用介面 [DescribeVpcEx](/document/api/215/1372) ，從介面返回中的`unVpcId`欄位獲取。若在創建子機時VpcId與SubnetId同時傳入`DEFAULT`，則強制使用預設vpc網絡。
+        :param VpcId: 私有網絡ID，形如`vpc-xxx`。有效的VpcId可通過登入[控制台](https://console.cloud.taifucloud.com/vpc/vpc?rid=1)查詢；也可以調用介面 [DescribeVpcEx](/document/api/215/1372) ，從介面返回中的`unVpcId`欄位獲取。若在創建子機時VpcId與SubnetId同時傳入`DEFAULT`，則強制使用預設vpc網絡。
         :type VpcId: str
-        :param SubnetId: 私有網絡子網ID，形如`subnet-xxx`。有效的私有網絡子網ID可通過登入[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查詢；也可以調用介面  [DescribeSubnets](/document/api/215/15784) ，從介面返回中的`unSubnetId`欄位獲取。若在創建子機時SubnetId與VpcId同時傳入`DEFAULT`，則強制使用預設vpc網絡。
+        :param SubnetId: 私有網絡子網ID，形如`subnet-xxx`。有效的私有網絡子網ID可通過登入[控制台](https://console.cloud.taifucloud.com/vpc/subnet?rid=1)查詢；也可以調用介面  [DescribeSubnets](/document/api/215/15784) ，從介面返回中的`unSubnetId`欄位獲取。若在創建子機時SubnetId與VpcId同時傳入`DEFAULT`，則強制使用預設vpc網絡。
         :type SubnetId: str
         :param AsVpcGateway: 是否用作公網閘道。公網閘道只有在實例擁有公網IP以及處于私有網絡下時才能正常使用。取值範圍：<br><li>TRUE：表示用作公網閘道<br><li>FALSE：表示不用作公網閘道<br><br>預設取值：FALSE。
         :type AsVpcGateway: bool
@@ -4954,7 +4954,7 @@ class ZoneInfo(AbstractModel):
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
         :type Zone: str
-        :param ZoneName: 可用區描述，例如，廣州三區
+        :param ZoneName: 可用區描述，例如， 三區
         :type ZoneName: str
         :param ZoneId: 可用區ID
         :type ZoneId: str

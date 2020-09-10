@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.es.v20180416 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.es.v20180416 import models
 
 
 class EsClient(AbstractClient):
     _apiVersion = '2018-04-16'
-    _endpoint = 'es.tencentcloudapi.com'
+    _endpoint = 'es.taifucloudcloudapi.com'
 
 
     def CreateInstance(self, request):
         """創建指定規格的ES集群實例
 
         :param request: Request instance for CreateInstance.
-        :type request: :class:`tencentcloud.es.v20180416.models.CreateInstanceRequest`
-        :rtype: :class:`tencentcloud.es.v20180416.models.CreateInstanceResponse`
+        :type request: :class:`taifucloudcloud.es.v20180416.models.CreateInstanceRequest`
+        :rtype: :class:`taifucloudcloud.es.v20180416.models.CreateInstanceResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class EsClient(AbstractClient):
         """銷毀集群實例
 
         :param request: Request instance for DeleteInstance.
-        :type request: :class:`tencentcloud.es.v20180416.models.DeleteInstanceRequest`
-        :rtype: :class:`tencentcloud.es.v20180416.models.DeleteInstanceResponse`
+        :type request: :class:`taifucloudcloud.es.v20180416.models.DeleteInstanceRequest`
+        :rtype: :class:`taifucloudcloud.es.v20180416.models.DeleteInstanceResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class EsClient(AbstractClient):
         """查詢用戶該地域下符合條件的ES集群的日志
 
         :param request: Request instance for DescribeInstanceLogs.
-        :type request: :class:`tencentcloud.es.v20180416.models.DescribeInstanceLogsRequest`
-        :rtype: :class:`tencentcloud.es.v20180416.models.DescribeInstanceLogsResponse`
+        :type request: :class:`taifucloudcloud.es.v20180416.models.DescribeInstanceLogsRequest`
+        :rtype: :class:`taifucloudcloud.es.v20180416.models.DescribeInstanceLogsResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class EsClient(AbstractClient):
         """查詢實例指定條件下的操作記錄
 
         :param request: Request instance for DescribeInstanceOperations.
-        :type request: :class:`tencentcloud.es.v20180416.models.DescribeInstanceOperationsRequest`
-        :rtype: :class:`tencentcloud.es.v20180416.models.DescribeInstanceOperationsResponse`
+        :type request: :class:`taifucloudcloud.es.v20180416.models.DescribeInstanceOperationsRequest`
+        :rtype: :class:`taifucloudcloud.es.v20180416.models.DescribeInstanceOperationsResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class EsClient(AbstractClient):
         """查詢用戶該地域下符合條件的所有實例
 
         :param request: Request instance for DescribeInstances.
-        :type request: :class:`tencentcloud.es.v20180416.models.DescribeInstancesRequest`
-        :rtype: :class:`tencentcloud.es.v20180416.models.DescribeInstancesResponse`
+        :type request: :class:`taifucloudcloud.es.v20180416.models.DescribeInstancesRequest`
+        :rtype: :class:`taifucloudcloud.es.v20180416.models.DescribeInstancesResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class EsClient(AbstractClient):
         """重啓ES集群實例(用于系統版本更新等操作)
 
         :param request: Request instance for RestartInstance.
-        :type request: :class:`tencentcloud.es.v20180416.models.RestartInstanceRequest`
-        :rtype: :class:`tencentcloud.es.v20180416.models.RestartInstanceResponse`
+        :type request: :class:`taifucloudcloud.es.v20180416.models.RestartInstanceRequest`
+        :rtype: :class:`taifucloudcloud.es.v20180416.models.RestartInstanceResponse`
 
         """
         try:
@@ -204,8 +204,8 @@ class EsClient(AbstractClient):
         以上參數組合只能傳遞一種，多傳或少傳均會導緻請求失敗
 
         :param request: Request instance for UpdateInstance.
-        :type request: :class:`tencentcloud.es.v20180416.models.UpdateInstanceRequest`
-        :rtype: :class:`tencentcloud.es.v20180416.models.UpdateInstanceResponse`
+        :type request: :class:`taifucloudcloud.es.v20180416.models.UpdateInstanceRequest`
+        :rtype: :class:`taifucloudcloud.es.v20180416.models.UpdateInstanceResponse`
 
         """
         try:
@@ -232,8 +232,8 @@ class EsClient(AbstractClient):
         """升級ES集群版本
 
         :param request: Request instance for UpgradeInstance.
-        :type request: :class:`tencentcloud.es.v20180416.models.UpgradeInstanceRequest`
-        :rtype: :class:`tencentcloud.es.v20180416.models.UpgradeInstanceResponse`
+        :type request: :class:`taifucloudcloud.es.v20180416.models.UpgradeInstanceRequest`
+        :rtype: :class:`taifucloudcloud.es.v20180416.models.UpgradeInstanceResponse`
 
         """
         try:
@@ -260,8 +260,8 @@ class EsClient(AbstractClient):
         """升級ES商業特性
 
         :param request: Request instance for UpgradeLicense.
-        :type request: :class:`tencentcloud.es.v20180416.models.UpgradeLicenseRequest`
-        :rtype: :class:`tencentcloud.es.v20180416.models.UpgradeLicenseResponse`
+        :type request: :class:`taifucloudcloud.es.v20180416.models.UpgradeLicenseRequest`
+        :rtype: :class:`taifucloudcloud.es.v20180416.models.UpgradeLicenseResponse`
 
         """
         try:

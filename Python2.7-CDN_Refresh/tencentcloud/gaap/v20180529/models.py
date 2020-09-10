@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AccessRegionDetial(AbstractModel):
@@ -1117,7 +1117,7 @@ class CreateRuleRequest(AbstractModel):
         :param HealthCheck: 規則是否開啓健康檢查，1開啓，0關閉。
         :type HealthCheck: int
         :param CheckParams: 源站健康檢查相關參數
-        :type CheckParams: :class:`tencentcloud.gaap.v20180529.models.RuleCheckParams`
+        :type CheckParams: :class:`taifucloudcloud.gaap.v20180529.models.RuleCheckParams`
         :param ForwardProtocol: 加速通道轉發到源站的協議類型：支援HTTP或HTTPS。
 不傳遞該欄位時表示使用對應監聽器的ForwardProtocol。
         :type ForwardProtocol: str
@@ -1820,7 +1820,7 @@ class DescribeCertificateDetailResponse(AbstractModel):
     def __init__(self):
         """
         :param CertificateDetail: 證書詳情。
-        :type CertificateDetail: :class:`tencentcloud.gaap.v20180529.models.CertificateDetail`
+        :type CertificateDetail: :class:`taifucloudcloud.gaap.v20180529.models.CertificateDetail`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2640,7 +2640,7 @@ class DescribeProxyDetailResponse(AbstractModel):
     def __init__(self):
         """
         :param ProxyDetail: 通道詳情訊息。
-        :type ProxyDetail: :class:`tencentcloud.gaap.v20180529.models.ProxyInfo`
+        :type ProxyDetail: :class:`taifucloudcloud.gaap.v20180529.models.ProxyInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2680,7 +2680,7 @@ class DescribeProxyGroupDetailsResponse(AbstractModel):
     def __init__(self):
         """
         :param ProxyGroupDetail: 通道組詳細訊息。
-        :type ProxyGroupDetail: :class:`tencentcloud.gaap.v20180529.models.ProxyGroupDetail`
+        :type ProxyGroupDetail: :class:`taifucloudcloud.gaap.v20180529.models.ProxyGroupDetail`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -4784,7 +4784,7 @@ lc，最小連接數。
 0，關閉。
         :type HealthCheck: int
         :param CheckParams: 健康檢查配置參數
-        :type CheckParams: :class:`tencentcloud.gaap.v20180529.models.RuleCheckParams`
+        :type CheckParams: :class:`taifucloudcloud.gaap.v20180529.models.RuleCheckParams`
         :param Path: 轉發規則路徑
         :type Path: str
         :param ForwardProtocol: 加速通道轉發到源站的協議類型，支援：default, HTTP和HTTPS。
@@ -5150,7 +5150,7 @@ class ProxyGroupDetail(AbstractModel):
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Domain: str
         :param RealServerRegionInfo: 目标地域
-        :type RealServerRegionInfo: :class:`tencentcloud.gaap.v20180529.models.RegionDetail`
+        :type RealServerRegionInfo: :class:`taifucloudcloud.gaap.v20180529.models.RegionDetail`
         :param IsOldGroup: 是否老通道組，2018-08-03之前創建的通道組爲老通道組
         :type IsOldGroup: bool
         :param GroupId: 通道組ID
@@ -5215,7 +5215,7 @@ class ProxyGroupInfo(AbstractModel):
         :param ProjectId: 項目ID
         :type ProjectId: int
         :param RealServerRegionInfo: 目标地域
-        :type RealServerRegionInfo: :class:`tencentcloud.gaap.v20180529.models.RegionDetail`
+        :type RealServerRegionInfo: :class:`taifucloudcloud.gaap.v20180529.models.RegionDetail`
         :param Status: 通道組狀态。
 其中，
 0表示運作中；
@@ -5327,10 +5327,10 @@ UNKNOWN表示未知狀态。
         :type PolicyId: str
         :param AccessRegionInfo: 接入地域詳細訊息，包括地域ID和地域名。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AccessRegionInfo: :class:`tencentcloud.gaap.v20180529.models.RegionDetail`
+        :type AccessRegionInfo: :class:`taifucloudcloud.gaap.v20180529.models.RegionDetail`
         :param RealServerRegionInfo: 源站地域詳細訊息，包括地域ID和地域名。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type RealServerRegionInfo: :class:`tencentcloud.gaap.v20180529.models.RegionDetail`
+        :type RealServerRegionInfo: :class:`taifucloudcloud.gaap.v20180529.models.RegionDetail`
         :param ForwardIP: 通道轉發IP
         :type ForwardIP: str
         :param TagSet: 标簽清單，不存在标簽時，該欄位爲空清單。
@@ -5665,7 +5665,7 @@ class RuleInfo(AbstractModel):
         :param RuleStatus: 規則狀态，0表示運作中，1表示創建中，2表示銷毀中，3表示綁定解綁源站中，4表示配置更新中
         :type RuleStatus: int
         :param CheckParams: 健康檢查相關參數
-        :type CheckParams: :class:`tencentcloud.gaap.v20180529.models.RuleCheckParams`
+        :type CheckParams: :class:`taifucloudcloud.gaap.v20180529.models.RuleCheckParams`
         :param RealServerSet: 已綁定的源站相關訊息
         :type RealServerSet: list of BindRealServer
         :param BindStatus: 源站的服務狀态，0表示異常，1表示正常。

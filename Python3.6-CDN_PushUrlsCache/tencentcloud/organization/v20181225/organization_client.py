@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.organization.v20181225 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.organization.v20181225 import models
 
 
 class OrganizationClient(AbstractClient):
     _apiVersion = '2018-12-25'
-    _endpoint = 'organization.tencentcloudapi.com'
+    _endpoint = 'organization.taifucloudcloudapi.com'
 
 
     def AcceptOrganizationInvitation(self, request):
         """接受加入企業組織邀請
 
         :param request: Request instance for AcceptOrganizationInvitation.
-        :type request: :class:`tencentcloud.organization.v20181225.models.AcceptOrganizationInvitationRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.AcceptOrganizationInvitationResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.AcceptOrganizationInvitationRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.AcceptOrganizationInvitationResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class OrganizationClient(AbstractClient):
         """添加企業組織單元
 
         :param request: Request instance for AddOrganizationNode.
-        :type request: :class:`tencentcloud.organization.v20181225.models.AddOrganizationNodeRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.AddOrganizationNodeResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.AddOrganizationNodeRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.AddOrganizationNodeResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class OrganizationClient(AbstractClient):
         """取消企業組織邀請
 
         :param request: Request instance for CancelOrganizationInvitation.
-        :type request: :class:`tencentcloud.organization.v20181225.models.CancelOrganizationInvitationRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.CancelOrganizationInvitationResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.CancelOrganizationInvitationRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.CancelOrganizationInvitationResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class OrganizationClient(AbstractClient):
         """創建企業組織
 
         :param request: Request instance for CreateOrganization.
-        :type request: :class:`tencentcloud.organization.v20181225.models.CreateOrganizationRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.CreateOrganizationResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.CreateOrganizationRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.CreateOrganizationResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class OrganizationClient(AbstractClient):
         """删除企業組織
 
         :param request: Request instance for DeleteOrganization.
-        :type request: :class:`tencentcloud.organization.v20181225.models.DeleteOrganizationRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.DeleteOrganizationResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.DeleteOrganizationRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.DeleteOrganizationResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class OrganizationClient(AbstractClient):
         """删除企業組織成員
 
         :param request: Request instance for DeleteOrganizationMemberFromNode.
-        :type request: :class:`tencentcloud.organization.v20181225.models.DeleteOrganizationMemberFromNodeRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.DeleteOrganizationMemberFromNodeResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.DeleteOrganizationMemberFromNodeRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.DeleteOrganizationMemberFromNodeResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class OrganizationClient(AbstractClient):
         """批次删除企業組織成員
 
         :param request: Request instance for DeleteOrganizationMembers.
-        :type request: :class:`tencentcloud.organization.v20181225.models.DeleteOrganizationMembersRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.DeleteOrganizationMembersResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.DeleteOrganizationMembersRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.DeleteOrganizationMembersResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class OrganizationClient(AbstractClient):
         """批次删除企業組織單元
 
         :param request: Request instance for DeleteOrganizationNodes.
-        :type request: :class:`tencentcloud.organization.v20181225.models.DeleteOrganizationNodesRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.DeleteOrganizationNodesResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.DeleteOrganizationNodesRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.DeleteOrganizationNodesResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class OrganizationClient(AbstractClient):
         """拒絕企業組織邀請
 
         :param request: Request instance for DenyOrganizationInvitation.
-        :type request: :class:`tencentcloud.organization.v20181225.models.DenyOrganizationInvitationRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.DenyOrganizationInvitationResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.DenyOrganizationInvitationRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.DenyOrganizationInvitationResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class OrganizationClient(AbstractClient):
         """獲取企業組織訊息
 
         :param request: Request instance for GetOrganization.
-        :type request: :class:`tencentcloud.organization.v20181225.models.GetOrganizationRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.GetOrganizationResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.GetOrganizationRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.GetOrganizationResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class OrganizationClient(AbstractClient):
         """獲取企業組織成員
 
         :param request: Request instance for GetOrganizationMember.
-        :type request: :class:`tencentcloud.organization.v20181225.models.GetOrganizationMemberRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.GetOrganizationMemberResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.GetOrganizationMemberRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.GetOrganizationMemberResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class OrganizationClient(AbstractClient):
         """獲取邀請訊息清單
 
         :param request: Request instance for ListOrganizationInvitations.
-        :type request: :class:`tencentcloud.organization.v20181225.models.ListOrganizationInvitationsRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.ListOrganizationInvitationsResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.ListOrganizationInvitationsRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.ListOrganizationInvitationsResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class OrganizationClient(AbstractClient):
         """獲取企業組織成員清單
 
         :param request: Request instance for ListOrganizationMembers.
-        :type request: :class:`tencentcloud.organization.v20181225.models.ListOrganizationMembersRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.ListOrganizationMembersResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.ListOrganizationMembersRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.ListOrganizationMembersResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class OrganizationClient(AbstractClient):
         """獲取企業組織單元成員清單
 
         :param request: Request instance for ListOrganizationNodeMembers.
-        :type request: :class:`tencentcloud.organization.v20181225.models.ListOrganizationNodeMembersRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.ListOrganizationNodeMembersResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.ListOrganizationNodeMembersRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.ListOrganizationNodeMembersResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class OrganizationClient(AbstractClient):
         """獲取企業組織單元清單
 
         :param request: Request instance for ListOrganizationNodes.
-        :type request: :class:`tencentcloud.organization.v20181225.models.ListOrganizationNodesRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.ListOrganizationNodesResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.ListOrganizationNodesRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.ListOrganizationNodesResponse`
 
         """
         try:
@@ -446,11 +446,11 @@ class OrganizationClient(AbstractClient):
 
 
     def MoveOrganizationMembersToNode(self, request):
-        """移動成員到指定企業組織單元
+        """ 成員到指定企業組織單元
 
         :param request: Request instance for MoveOrganizationMembersToNode.
-        :type request: :class:`tencentcloud.organization.v20181225.models.MoveOrganizationMembersToNodeRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.MoveOrganizationMembersToNodeResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.MoveOrganizationMembersToNodeRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.MoveOrganizationMembersToNodeResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class OrganizationClient(AbstractClient):
         """登出企業組織
 
         :param request: Request instance for QuitOrganization.
-        :type request: :class:`tencentcloud.organization.v20181225.models.QuitOrganizationRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.QuitOrganizationResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.QuitOrganizationRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.QuitOrganizationResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class OrganizationClient(AbstractClient):
         """發送企業組織邀請
 
         :param request: Request instance for SendOrganizationInvitation.
-        :type request: :class:`tencentcloud.organization.v20181225.models.SendOrganizationInvitationRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.SendOrganizationInvitationResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.SendOrganizationInvitationRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.SendOrganizationInvitationResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class OrganizationClient(AbstractClient):
         """更新企業成員訊息
 
         :param request: Request instance for UpdateOrganizationMember.
-        :type request: :class:`tencentcloud.organization.v20181225.models.UpdateOrganizationMemberRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.UpdateOrganizationMemberResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.UpdateOrganizationMemberRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.UpdateOrganizationMemberResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class OrganizationClient(AbstractClient):
         """更新企業組織單元
 
         :param request: Request instance for UpdateOrganizationNode.
-        :type request: :class:`tencentcloud.organization.v20181225.models.UpdateOrganizationNodeRequest`
-        :rtype: :class:`tencentcloud.organization.v20181225.models.UpdateOrganizationNodeResponse`
+        :type request: :class:`taifucloudcloud.organization.v20181225.models.UpdateOrganizationNodeRequest`
+        :rtype: :class:`taifucloudcloud.organization.v20181225.models.UpdateOrganizationNodeResponse`
 
         """
         try:

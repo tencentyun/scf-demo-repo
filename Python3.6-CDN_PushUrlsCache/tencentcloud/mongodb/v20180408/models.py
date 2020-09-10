@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AssignProjectRequest(AbstractModel):
@@ -596,7 +596,7 @@ class MongoDBInstanceDetail(AbstractModel):
         :type CloneInstances: list of MongoDBInstance
         :param RelatedInstance: 關聯實例訊息，對于正式實例，該欄位表示它的臨時實例訊息；對于臨時實例，則表示它的正式實例訊息;如果爲只讀/災備實例,則表示他的主實例訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type RelatedInstance: :class:`tencentcloud.mongodb.v20180408.models.MongoDBInstance`
+        :type RelatedInstance: :class:`taifucloudcloud.mongodb.v20180408.models.MongoDBInstance`
         :param Tags: 實例标簽訊息集合
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of TagInfo

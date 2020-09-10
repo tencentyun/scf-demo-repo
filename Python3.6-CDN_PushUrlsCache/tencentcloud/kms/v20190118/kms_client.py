@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.kms.v20190118 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.kms.v20190118 import models
 
 
 class KmsClient(AbstractClient):
     _apiVersion = '2019-01-18'
-    _endpoint = 'kms.tencentcloudapi.com'
+    _endpoint = 'kms.taifucloudcloudapi.com'
 
 
     def AsymmetricRsaDecrypt(self, request):
         """使用指定的RSA非對稱金鑰的私鑰進行數據解密，密文必須是使用對應公鑰加密的。處于Enabled 狀态的非對稱金鑰才能進行解密操作。
 
         :param request: Request instance for AsymmetricRsaDecrypt.
-        :type request: :class:`tencentcloud.kms.v20190118.models.AsymmetricRsaDecryptRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.AsymmetricRsaDecryptResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.AsymmetricRsaDecryptRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.AsymmetricRsaDecryptResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class KmsClient(AbstractClient):
         """使用指定的SM2非對稱金鑰的私鑰進行數據解密，密文必須是使用對應公鑰加密的。處于Enabled 狀态的非對稱金鑰才能進行解密操作。傳入的密文的長度不能超過256位元。
 
         :param request: Request instance for AsymmetricSm2Decrypt.
-        :type request: :class:`tencentcloud.kms.v20190118.models.AsymmetricSm2DecryptRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.AsymmetricSm2DecryptResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.AsymmetricSm2DecryptRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.AsymmetricSm2DecryptResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class KmsClient(AbstractClient):
         """取消CMK的計劃删除操作
 
         :param request: Request instance for CancelKeyDeletion.
-        :type request: :class:`tencentcloud.kms.v20190118.models.CancelKeyDeletionRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.CancelKeyDeletionResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.CancelKeyDeletionRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.CancelKeyDeletionResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class KmsClient(AbstractClient):
         """創建用戶管理數據金鑰的主金鑰CMK（Custom Master Key）。
 
         :param request: Request instance for CreateKey.
-        :type request: :class:`tencentcloud.kms.v20190118.models.CreateKeyRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.CreateKeyResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.CreateKeyRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.CreateKeyResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class KmsClient(AbstractClient):
         """創建白盒金鑰。 金鑰個數的上限爲 50。
 
         :param request: Request instance for CreateWhiteBoxKey.
-        :type request: :class:`tencentcloud.kms.v20190118.models.CreateWhiteBoxKeyRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.CreateWhiteBoxKeyResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.CreateWhiteBoxKeyRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.CreateWhiteBoxKeyResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class KmsClient(AbstractClient):
         """本介面用于解密密文，得到明文數據。
 
         :param request: Request instance for Decrypt.
-        :type request: :class:`tencentcloud.kms.v20190118.models.DecryptRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.DecryptResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.DecryptRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.DecryptResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class KmsClient(AbstractClient):
         """用于删除導入的金鑰材料，僅對EXTERNAL類型的CMK有效，該介面将CMK設置爲PendingImport 狀态，并不會删除CMK，在重新進行金鑰導入後可繼續使用。徹底删除CMK請使用 ScheduleKeyDeletion 介面。
 
         :param request: Request instance for DeleteImportedKeyMaterial.
-        :type request: :class:`tencentcloud.kms.v20190118.models.DeleteImportedKeyMaterialRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.DeleteImportedKeyMaterialResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.DeleteImportedKeyMaterialRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.DeleteImportedKeyMaterialResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class KmsClient(AbstractClient):
         """删除白盒金鑰, 注意：必須先禁用後，才可以删除。
 
         :param request: Request instance for DeleteWhiteBoxKey.
-        :type request: :class:`tencentcloud.kms.v20190118.models.DeleteWhiteBoxKeyRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.DeleteWhiteBoxKeyResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.DeleteWhiteBoxKeyRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.DeleteWhiteBoxKeyResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class KmsClient(AbstractClient):
         """用于獲取指定KeyId的主金鑰屬性詳情訊息。
 
         :param request: Request instance for DescribeKey.
-        :type request: :class:`tencentcloud.kms.v20190118.models.DescribeKeyRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.DescribeKeyResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.DescribeKeyRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.DescribeKeyResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class KmsClient(AbstractClient):
         """該介面用于批次獲取主金鑰屬性訊息。
 
         :param request: Request instance for DescribeKeys.
-        :type request: :class:`tencentcloud.kms.v20190118.models.DescribeKeysRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.DescribeKeysResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.DescribeKeysRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.DescribeKeysResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class KmsClient(AbstractClient):
         """獲取白盒解密金鑰
 
         :param request: Request instance for DescribeWhiteBoxDecryptKey.
-        :type request: :class:`tencentcloud.kms.v20190118.models.DescribeWhiteBoxDecryptKeyRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.DescribeWhiteBoxDecryptKeyResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.DescribeWhiteBoxDecryptKeyRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.DescribeWhiteBoxDecryptKeyResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class KmsClient(AbstractClient):
         """展示白盒金鑰的訊息
 
         :param request: Request instance for DescribeWhiteBoxKey.
-        :type request: :class:`tencentcloud.kms.v20190118.models.DescribeWhiteBoxKeyRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.DescribeWhiteBoxKeyResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.DescribeWhiteBoxKeyRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.DescribeWhiteBoxKeyResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class KmsClient(AbstractClient):
         """獲取白盒金鑰清單
 
         :param request: Request instance for DescribeWhiteBoxKeyDetails.
-        :type request: :class:`tencentcloud.kms.v20190118.models.DescribeWhiteBoxKeyDetailsRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.DescribeWhiteBoxKeyDetailsResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.DescribeWhiteBoxKeyDetailsRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.DescribeWhiteBoxKeyDetailsResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class KmsClient(AbstractClient):
         """獲取白盒金鑰服務狀态
 
         :param request: Request instance for DescribeWhiteBoxServiceStatus.
-        :type request: :class:`tencentcloud.kms.v20190118.models.DescribeWhiteBoxServiceStatusRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.DescribeWhiteBoxServiceStatusResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.DescribeWhiteBoxServiceStatusRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.DescribeWhiteBoxServiceStatusResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class KmsClient(AbstractClient):
         """本介面用于禁用一個主金鑰，處于禁用狀态的Key無法用于加密、解密操作。
 
         :param request: Request instance for DisableKey.
-        :type request: :class:`tencentcloud.kms.v20190118.models.DisableKeyRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.DisableKeyResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.DisableKeyRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.DisableKeyResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class KmsClient(AbstractClient):
         """對指定的CMK禁止金鑰輪換功能。
 
         :param request: Request instance for DisableKeyRotation.
-        :type request: :class:`tencentcloud.kms.v20190118.models.DisableKeyRotationRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.DisableKeyRotationResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.DisableKeyRotationRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.DisableKeyRotationResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class KmsClient(AbstractClient):
         """該介面用于批次禁止CMK的使用。
 
         :param request: Request instance for DisableKeys.
-        :type request: :class:`tencentcloud.kms.v20190118.models.DisableKeysRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.DisableKeysResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.DisableKeysRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.DisableKeysResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class KmsClient(AbstractClient):
         """禁用白盒金鑰
 
         :param request: Request instance for DisableWhiteBoxKey.
-        :type request: :class:`tencentcloud.kms.v20190118.models.DisableWhiteBoxKeyRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.DisableWhiteBoxKeyResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.DisableWhiteBoxKeyRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.DisableWhiteBoxKeyResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class KmsClient(AbstractClient):
         """批次禁用白盒金鑰
 
         :param request: Request instance for DisableWhiteBoxKeys.
-        :type request: :class:`tencentcloud.kms.v20190118.models.DisableWhiteBoxKeysRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.DisableWhiteBoxKeysResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.DisableWhiteBoxKeysRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.DisableWhiteBoxKeysResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class KmsClient(AbstractClient):
         """用于啓用一個指定的CMK。
 
         :param request: Request instance for EnableKey.
-        :type request: :class:`tencentcloud.kms.v20190118.models.EnableKeyRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.EnableKeyResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.EnableKeyRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.EnableKeyResponse`
 
         """
         try:
@@ -589,8 +589,8 @@ class KmsClient(AbstractClient):
         """對指定的CMK開啓金鑰輪換功能。
 
         :param request: Request instance for EnableKeyRotation.
-        :type request: :class:`tencentcloud.kms.v20190118.models.EnableKeyRotationRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.EnableKeyRotationResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.EnableKeyRotationRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.EnableKeyRotationResponse`
 
         """
         try:
@@ -617,8 +617,8 @@ class KmsClient(AbstractClient):
         """該介面用于批次啓用CMK。
 
         :param request: Request instance for EnableKeys.
-        :type request: :class:`tencentcloud.kms.v20190118.models.EnableKeysRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.EnableKeysResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.EnableKeysRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.EnableKeysResponse`
 
         """
         try:
@@ -645,8 +645,8 @@ class KmsClient(AbstractClient):
         """啓用白盒金鑰
 
         :param request: Request instance for EnableWhiteBoxKey.
-        :type request: :class:`tencentcloud.kms.v20190118.models.EnableWhiteBoxKeyRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.EnableWhiteBoxKeyResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.EnableWhiteBoxKeyRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.EnableWhiteBoxKeyResponse`
 
         """
         try:
@@ -673,8 +673,8 @@ class KmsClient(AbstractClient):
         """批次啓用白盒金鑰
 
         :param request: Request instance for EnableWhiteBoxKeys.
-        :type request: :class:`tencentcloud.kms.v20190118.models.EnableWhiteBoxKeysRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.EnableWhiteBoxKeysResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.EnableWhiteBoxKeysRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.EnableWhiteBoxKeysResponse`
 
         """
         try:
@@ -701,8 +701,8 @@ class KmsClient(AbstractClient):
         """本介面用于加密最多爲4KB任意數據，可用于加密資料庫密碼，RSA Key，或其它較小的敏感訊息。對于應用的數據加密，使用GenerateDataKey生成的DataKey進行本地數據的加解密操作
 
         :param request: Request instance for Encrypt.
-        :type request: :class:`tencentcloud.kms.v20190118.models.EncryptRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.EncryptResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.EncryptRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.EncryptResponse`
 
         """
         try:
@@ -729,8 +729,8 @@ class KmsClient(AbstractClient):
         """使用白盒金鑰進行加密
 
         :param request: Request instance for EncryptByWhiteBox.
-        :type request: :class:`tencentcloud.kms.v20190118.models.EncryptByWhiteBoxRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.EncryptByWhiteBoxResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.EncryptByWhiteBoxRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.EncryptByWhiteBoxResponse`
 
         """
         try:
@@ -757,8 +757,8 @@ class KmsClient(AbstractClient):
         """本介面生成一個數據金鑰，您可以用這個金鑰進行本地數據的加密。
 
         :param request: Request instance for GenerateDataKey.
-        :type request: :class:`tencentcloud.kms.v20190118.models.GenerateDataKeyRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.GenerateDataKeyResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.GenerateDataKeyRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.GenerateDataKeyResponse`
 
         """
         try:
@@ -785,8 +785,8 @@ class KmsClient(AbstractClient):
         """随機數生成介面。
 
         :param request: Request instance for GenerateRandom.
-        :type request: :class:`tencentcloud.kms.v20190118.models.GenerateRandomRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.GenerateRandomResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.GenerateRandomRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.GenerateRandomResponse`
 
         """
         try:
@@ -813,8 +813,8 @@ class KmsClient(AbstractClient):
         """查詢指定的CMK是否開啓了金鑰輪換功能。
 
         :param request: Request instance for GetKeyRotationStatus.
-        :type request: :class:`tencentcloud.kms.v20190118.models.GetKeyRotationStatusRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.GetKeyRotationStatusResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.GetKeyRotationStatusRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.GetKeyRotationStatusResponse`
 
         """
         try:
@@ -841,8 +841,8 @@ class KmsClient(AbstractClient):
         """獲取導入主金鑰（CMK）材料的參數，返回的Token作爲執行ImportKeyMaterial的參數之一，返回的PublicKey用于對自主導入金鑰材料進行加密。返回的Token和PublicKey 24小時後失效，失效後如需重新導入，需要再次調用該介面獲取新的Token和PublicKey。
 
         :param request: Request instance for GetParametersForImport.
-        :type request: :class:`tencentcloud.kms.v20190118.models.GetParametersForImportRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.GetParametersForImportResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.GetParametersForImportRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.GetParametersForImportResponse`
 
         """
         try:
@@ -869,8 +869,8 @@ class KmsClient(AbstractClient):
         """該介面用戶獲取 KeyUsage爲ASYMMETRIC_DECRYPT_RSA_2048 和 ASYMMETRIC_DECRYPT_SM2 的非對稱金鑰的公鑰訊息，使用該公鑰用戶可在本地進行數據加密，使用該公鑰加密的數據只能通過KMS使用對應的私鑰進行解密。只有處于Enabled狀态的非對稱金鑰才可能獲取公鑰。
 
         :param request: Request instance for GetPublicKey.
-        :type request: :class:`tencentcloud.kms.v20190118.models.GetPublicKeyRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.GetPublicKeyResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.GetPublicKeyRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.GetPublicKeyResponse`
 
         """
         try:
@@ -897,8 +897,8 @@ class KmsClient(AbstractClient):
         """用于查詢該用戶是否已開通KMS服務
 
         :param request: Request instance for GetServiceStatus.
-        :type request: :class:`tencentcloud.kms.v20190118.models.GetServiceStatusRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.GetServiceStatusResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.GetServiceStatusRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.GetServiceStatusResponse`
 
         """
         try:
@@ -926,8 +926,8 @@ class KmsClient(AbstractClient):
         只有Enabled 和 PendingImport狀态的CMK可以導入金鑰材料。
 
         :param request: Request instance for ImportKeyMaterial.
-        :type request: :class:`tencentcloud.kms.v20190118.models.ImportKeyMaterialRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.ImportKeyMaterialResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.ImportKeyMaterialRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.ImportKeyMaterialResponse`
 
         """
         try:
@@ -954,8 +954,8 @@ class KmsClient(AbstractClient):
         """列出當前Region支援的加密方式
 
         :param request: Request instance for ListAlgorithms.
-        :type request: :class:`tencentcloud.kms.v20190118.models.ListAlgorithmsRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.ListAlgorithmsResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.ListAlgorithmsRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.ListAlgorithmsResponse`
 
         """
         try:
@@ -982,8 +982,8 @@ class KmsClient(AbstractClient):
         """根據指定Offset和Limit獲取主金鑰清單詳情。
 
         :param request: Request instance for ListKeyDetail.
-        :type request: :class:`tencentcloud.kms.v20190118.models.ListKeyDetailRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.ListKeyDetailResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.ListKeyDetailRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.ListKeyDetailResponse`
 
         """
         try:
@@ -1010,8 +1010,8 @@ class KmsClient(AbstractClient):
         """列出賬号下面狀态爲Enabled， Disabled 和 PendingImport 的CMK KeyId 清單
 
         :param request: Request instance for ListKeys.
-        :type request: :class:`tencentcloud.kms.v20190118.models.ListKeysRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.ListKeysResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.ListKeysRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.ListKeysResponse`
 
         """
         try:
@@ -1038,8 +1038,8 @@ class KmsClient(AbstractClient):
         """使用指定CMK對密文重新加密。
 
         :param request: Request instance for ReEncrypt.
-        :type request: :class:`tencentcloud.kms.v20190118.models.ReEncryptRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.ReEncryptResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.ReEncryptRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.ReEncryptResponse`
 
         """
         try:
@@ -1066,8 +1066,8 @@ class KmsClient(AbstractClient):
         """CMK計劃删除介面，用于指定CMK删除的時間，可選時間區間爲[7,30]天
 
         :param request: Request instance for ScheduleKeyDeletion.
-        :type request: :class:`tencentcloud.kms.v20190118.models.ScheduleKeyDeletionRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.ScheduleKeyDeletionResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.ScheduleKeyDeletionRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.ScheduleKeyDeletionResponse`
 
         """
         try:
@@ -1094,8 +1094,8 @@ class KmsClient(AbstractClient):
         """用于修改CMK的别名。對于處于PendingDelete狀态的CMK禁止修改。
 
         :param request: Request instance for UpdateAlias.
-        :type request: :class:`tencentcloud.kms.v20190118.models.UpdateAliasRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.UpdateAliasResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.UpdateAliasRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.UpdateAliasResponse`
 
         """
         try:
@@ -1122,8 +1122,8 @@ class KmsClient(AbstractClient):
         """該介面用于對指定的cmk修改描述訊息。對于處于PendingDelete狀态的CMK禁止修改。
 
         :param request: Request instance for UpdateKeyDescription.
-        :type request: :class:`tencentcloud.kms.v20190118.models.UpdateKeyDescriptionRequest`
-        :rtype: :class:`tencentcloud.kms.v20190118.models.UpdateKeyDescriptionResponse`
+        :type request: :class:`taifucloudcloud.kms.v20190118.models.UpdateKeyDescriptionRequest`
+        :rtype: :class:`taifucloudcloud.kms.v20190118.models.UpdateKeyDescriptionResponse`
 
         """
         try:

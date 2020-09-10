@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AgentGroup(AbstractModel):
@@ -175,17 +175,17 @@ class BindAlarmPolicyResponse(AbstractModel):
 
 
 class CatAgent(AbstractModel):
-    """撥測Agent 所在省份、運營商
+    """撥測Agent 所在 、運營商
 
     """
 
     def __init__(self):
         """
-        :param Province: 撥測結點所在的省份（拼音縮寫）
+        :param Province: 撥測結點所在的 （拼音縮寫）
         :type Province: str
         :param Isp: 撥測結點所在的運營商（英文縮寫）
         :type Isp: str
-        :param ProvinceName: 撥測結點所在的省份（中文名稱）
+        :param ProvinceName: 撥測結點所在的 （中文名稱）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ProvinceName: str
         :param IspName: 撥測結點所在的運營商（中文名稱）
@@ -315,9 +315,9 @@ class CatReturnDetail(AbstractModel):
         """
         :param IspName: 運營商名稱
         :type IspName: str
-        :param Province: 省份全拼
+        :param Province:  全拼
         :type Province: str
-        :param ProvinceName: 省份中文名稱
+        :param ProvinceName:  中文名稱
         :type ProvinceName: str
         :param MapKey: Map鍵值
         :type MapKey: str
@@ -855,7 +855,7 @@ class DescribeAgentGroupsResponse(AbstractModel):
     def __init__(self):
         """
         :param SysDefaultGroup: 用戶所屬的系統預設撥測分組
-        :type SysDefaultGroup: :class:`tencentcloud.cat.v20180409.models.AgentGroup`
+        :type SysDefaultGroup: :class:`taifucloudcloud.cat.v20180409.models.AgentGroup`
         :param CustomGroups: 用戶創建的撥測分組清單
         :type CustomGroups: list of AgentGroup
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -1329,7 +1329,7 @@ class DimensionsDetail(AbstractModel):
         """
         :param Isp: 運營商清單
         :type Isp: list of str
-        :param Province: 省份清單
+        :param Province:  清單
         :type Province: list of str
         """
         self.Isp = None
@@ -1371,13 +1371,13 @@ class GetAvailRatioHistoryResponse(AbstractModel):
         """
         :param AvgAvailRatio: 整體平均可用率
         :type AvgAvailRatio: float
-        :param LowestAvailRatio: 各省份最低可用率
+        :param LowestAvailRatio: 各 最低可用率
         :type LowestAvailRatio: float
-        :param LowestProvince: 可用率最低的省份
+        :param LowestProvince: 可用率最低的 
         :type LowestProvince: str
         :param LowestIsp: 可用率最低的運營商
         :type LowestIsp: str
-        :param ProvinceData: 分省份的可用率數據
+        :param ProvinceData: 分 的可用率數據
         :type ProvinceData: list of ProvinceDetail
         :param AvgTime: 國内平均耗時，單位毫秒
         :type AvgTime: float
@@ -1463,11 +1463,11 @@ class GetDailyAvailRatioResponse(AbstractModel):
         """
         :param AvgAvailRatio: 整體平均可用率
         :type AvgAvailRatio: float
-        :param LowestAvailRatio: 各省份最低可用率
+        :param LowestAvailRatio: 各 最低可用率
         :type LowestAvailRatio: float
-        :param LowestProvince: 可用率最低的省份
+        :param LowestProvince: 可用率最低的 
         :type LowestProvince: str
-        :param ProvinceData: 分省份的可用率數據
+        :param ProvinceData: 分 的可用率數據
         :type ProvinceData: list of ProvinceDetail
         :param AvgTime: 國内平均耗時，單位毫秒
         :type AvgTime: float
@@ -1547,13 +1547,13 @@ class GetRealAvailRatioResponse(AbstractModel):
         """
         :param AvgAvailRatio: 國内平均可用率
         :type AvgAvailRatio: float
-        :param LowestAvailRatio: 各省份最低可用率
+        :param LowestAvailRatio: 各 最低可用率
         :type LowestAvailRatio: float
-        :param LowestProvince: 可用率最低的省份
+        :param LowestProvince: 可用率最低的 
         :type LowestProvince: str
         :param LowestIsp: 可用率最低的運營商
         :type LowestIsp: str
-        :param ProvinceData: 分省份的可用率數據
+        :param ProvinceData: 分 的可用率數據
         :type ProvinceData: list of ProvinceDetail
         :param AvgTime: 國内平均耗時，單位毫秒
         :type AvgTime: float
@@ -1627,7 +1627,7 @@ class GetRespTimeTrendExRequest(AbstractModel):
         :param Period: 數據的采集週期，單位分鍾。取值可爲 1, 5, 15, 30
         :type Period: int
         :param Dimensions: 可爲 Isp, Province
-        :type Dimensions: :class:`tencentcloud.cat.v20180409.models.DimensionsDetail`
+        :type Dimensions: :class:`taifucloudcloud.cat.v20180409.models.DimensionsDetail`
         :param MetricName: 可爲  totalTime, parseTime, connectTime, sendTime, waitTime, receiveTime, availRatio。缺省值爲 totalTime
         :type MetricName: str
         """
@@ -1739,7 +1739,7 @@ class GetReturnCodeHistoryRequest(AbstractModel):
         :type BeginTime: str
         :param EndTime: 結束時間點。格式如：2017-05-09 10:25:00。注意，BeginTime 和 EndTime 需要在同一天
         :type EndTime: str
-        :param Province: 省份名稱的全拼
+        :param Province:  名稱的全拼
         :type Province: str
         """
         self.TaskId = None
@@ -1811,7 +1811,7 @@ class GetReturnCodeInfoRequest(AbstractModel):
         :type BeginTime: str
         :param EndTime: 結束時間點。格式如：2017-05-09 10:25:00，最多拉群兩天的數據
         :type EndTime: str
-        :param Province: 省份名稱的全拼
+        :param Province:  名稱的全拼
         :type Province: str
         """
         self.TaskId = None
@@ -2155,7 +2155,7 @@ class PauseTaskResponse(AbstractModel):
 
 
 class ProvinceDetail(AbstractModel):
-    """省份可用率
+    """ 可用率
 
     """
 
@@ -2163,9 +2163,9 @@ class ProvinceDetail(AbstractModel):
         """
         :param AvgAvailRatio: 可用率
         :type AvgAvailRatio: float
-        :param ProvinceName: 省份名稱
+        :param ProvinceName:  名稱
         :type ProvinceName: str
-        :param Mapkey: 省份英文名稱
+        :param Mapkey:  英文名稱
         :type Mapkey: str
         :param TimeStamp: 統計時間點
         :type TimeStamp: str
@@ -2173,7 +2173,7 @@ class ProvinceDetail(AbstractModel):
         :type IspDetail: list of IspDetail
         :param AvgTime: 平均耗時，單位毫秒
         :type AvgTime: float
-        :param Province: 省份
+        :param Province:  
         :type Province: str
         """
         self.AvgAvailRatio = None

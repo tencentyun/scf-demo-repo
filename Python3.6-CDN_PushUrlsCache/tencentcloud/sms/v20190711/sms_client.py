@@ -15,23 +15,23 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.sms.v20190711 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.sms.v20190711 import models
 
 
 class SmsClient(AbstractClient):
     _apiVersion = '2019-07-11'
-    _endpoint = 'sms.tencentcloudapi.com'
+    _endpoint = 'sms.taifucloudcloudapi.com'
 
 
     def AddSmsSign(self, request):
-        """添加簡訊簽名，申請之前請先認證參閱 [Top Cloud 簡訊簽名審核标準](https://cloud.tencent.com/document/product/382/39022)。
-        >⚠️注意：個人認證用戶不支援使用 API 申請簡訊簽名，請參閱了解 [實名認證基本介紹](https://cloud.tencent.com/document/product/378/3629)，如果爲個人認證請登入控制台申請簡訊簽名，具體操作請參閱 [創建簡訊簽名](https://cloud.tencent.com/document/product/382/36136#Sign)。
+        """添加簡訊簽名，申請之前請先認證參閱 [Top Cloud 簡訊簽名審核标準](https://cloud.taifucloud.com/document/product/382/39022)。
+        >⚠️注意：個人認證用戶不支援使用 API 申請簡訊簽名，請參閱了解 [實名認證基本介紹](https://cloud.taifucloud.com/document/product/378/3629)，如果爲個人認證請登入控制台申請簡訊簽名，具體操作請參閱 [創建簡訊簽名](https://cloud.taifucloud.com/document/product/382/36136#Sign)。
 
         :param request: Request instance for AddSmsSign.
-        :type request: :class:`tencentcloud.sms.v20190711.models.AddSmsSignRequest`
-        :rtype: :class:`tencentcloud.sms.v20190711.models.AddSmsSignResponse`
+        :type request: :class:`taifucloudcloud.sms.v20190711.models.AddSmsSignRequest`
+        :rtype: :class:`taifucloudcloud.sms.v20190711.models.AddSmsSignResponse`
 
         """
         try:
@@ -55,12 +55,12 @@ class SmsClient(AbstractClient):
 
 
     def AddSmsTemplate(self, request):
-        """添加簡訊模版，申請之前請先認證參閱 [Top Cloud 簡訊正文模版審核标準](https://cloud.tencent.com/document/product/382/39023)。
-        >⚠️注意：個人認證用戶不支援使用 API 申請簡訊正文模版，請參閱了解 [實名認證基本介紹](https://cloud.tencent.com/document/product/378/3629)，如果爲個人認證請登入控制台申請簡訊正文模版，具體操作請參閱 [創建簡訊正文模版](https://cloud.tencent.com/document/product/382/36136#Template)。
+        """添加簡訊模版，申請之前請先認證參閱 [Top Cloud 簡訊正文模版審核标準](https://cloud.taifucloud.com/document/product/382/39023)。
+        >⚠️注意：個人認證用戶不支援使用 API 申請簡訊正文模版，請參閱了解 [實名認證基本介紹](https://cloud.taifucloud.com/document/product/378/3629)，如果爲個人認證請登入控制台申請簡訊正文模版，具體操作請參閱 [創建簡訊正文模版](https://cloud.taifucloud.com/document/product/382/36136#Template)。
 
         :param request: Request instance for AddSmsTemplate.
-        :type request: :class:`tencentcloud.sms.v20190711.models.AddSmsTemplateRequest`
-        :rtype: :class:`tencentcloud.sms.v20190711.models.AddSmsTemplateResponse`
+        :type request: :class:`taifucloudcloud.sms.v20190711.models.AddSmsTemplateRequest`
+        :rtype: :class:`taifucloudcloud.sms.v20190711.models.AddSmsTemplateResponse`
 
         """
         try:
@@ -87,8 +87,8 @@ class SmsClient(AbstractClient):
         """統計用戶回執的數據。
 
         :param request: Request instance for CallbackStatusStatistics.
-        :type request: :class:`tencentcloud.sms.v20190711.models.CallbackStatusStatisticsRequest`
-        :rtype: :class:`tencentcloud.sms.v20190711.models.CallbackStatusStatisticsResponse`
+        :type request: :class:`taifucloudcloud.sms.v20190711.models.CallbackStatusStatisticsRequest`
+        :rtype: :class:`taifucloudcloud.sms.v20190711.models.CallbackStatusStatisticsResponse`
 
         """
         try:
@@ -112,11 +112,11 @@ class SmsClient(AbstractClient):
 
 
     def DeleteSmsSign(self, request):
-        """>⚠️注意：個人認證用戶不支援使用 API 删除簡訊簽名，請參閱了解 [實名認證基本介紹](https://cloud.tencent.com/document/product/378/3629)，請登入控制台删除簡訊簽名，具體操作請參閱 [簡訊簽名操作](https://cloud.tencent.com/document/product/382/36136#Sign) 中檢視删除簡訊簽名須知。
+        """>⚠️注意：個人認證用戶不支援使用 API 删除簡訊簽名，請參閱了解 [實名認證基本介紹](https://cloud.taifucloud.com/document/product/378/3629)，請登入控制台删除簡訊簽名，具體操作請參閱 [簡訊簽名操作](https://cloud.taifucloud.com/document/product/382/36136#Sign) 中檢視删除簡訊簽名須知。
 
         :param request: Request instance for DeleteSmsSign.
-        :type request: :class:`tencentcloud.sms.v20190711.models.DeleteSmsSignRequest`
-        :rtype: :class:`tencentcloud.sms.v20190711.models.DeleteSmsSignResponse`
+        :type request: :class:`taifucloudcloud.sms.v20190711.models.DeleteSmsSignRequest`
+        :rtype: :class:`taifucloudcloud.sms.v20190711.models.DeleteSmsSignResponse`
 
         """
         try:
@@ -140,11 +140,11 @@ class SmsClient(AbstractClient):
 
 
     def DeleteSmsTemplate(self, request):
-        """>⚠️注意：個人認證用戶不支援使用 API 删除簡訊正文模版，請參閱了解 [實名認證基本介紹](https://cloud.tencent.com/document/product/378/3629)，請登入控制台删除簡訊正文模版，具體操作請參閱 [簡訊正文模版操作](https://cloud.tencent.com/document/product/382/36136#Template) 中檢視删除簡訊正文模版須知。
+        """>⚠️注意：個人認證用戶不支援使用 API 删除簡訊正文模版，請參閱了解 [實名認證基本介紹](https://cloud.taifucloud.com/document/product/378/3629)，請登入控制台删除簡訊正文模版，具體操作請參閱 [簡訊正文模版操作](https://cloud.taifucloud.com/document/product/382/36136#Template) 中檢視删除簡訊正文模版須知。
 
         :param request: Request instance for DeleteSmsTemplate.
-        :type request: :class:`tencentcloud.sms.v20190711.models.DeleteSmsTemplateRequest`
-        :rtype: :class:`tencentcloud.sms.v20190711.models.DeleteSmsTemplateResponse`
+        :type request: :class:`taifucloudcloud.sms.v20190711.models.DeleteSmsTemplateRequest`
+        :rtype: :class:`taifucloudcloud.sms.v20190711.models.DeleteSmsTemplateResponse`
 
         """
         try:
@@ -168,11 +168,11 @@ class SmsClient(AbstractClient):
 
 
     def DescribeSmsSignList(self, request):
-        """>⚠️注意：個人認證用戶不支援使用 API 查詢簡訊簽名，請參閱了解 [實名認證基本介紹](https://cloud.tencent.com/document/product/378/3629)。
+        """>⚠️注意：個人認證用戶不支援使用 API 查詢簡訊簽名，請參閱了解 [實名認證基本介紹](https://cloud.taifucloud.com/document/product/378/3629)。
 
         :param request: Request instance for DescribeSmsSignList.
-        :type request: :class:`tencentcloud.sms.v20190711.models.DescribeSmsSignListRequest`
-        :rtype: :class:`tencentcloud.sms.v20190711.models.DescribeSmsSignListResponse`
+        :type request: :class:`taifucloudcloud.sms.v20190711.models.DescribeSmsSignListRequest`
+        :rtype: :class:`taifucloudcloud.sms.v20190711.models.DescribeSmsSignListResponse`
 
         """
         try:
@@ -196,11 +196,11 @@ class SmsClient(AbstractClient):
 
 
     def DescribeSmsTemplateList(self, request):
-        """>⚠️注意：個人認證用戶不支援使用 API 查詢簡訊正文模版，請參閱了解 [實名認證基本介紹](https://cloud.tencent.com/document/product/378/3629)。
+        """>⚠️注意：個人認證用戶不支援使用 API 查詢簡訊正文模版，請參閱了解 [實名認證基本介紹](https://cloud.taifucloud.com/document/product/378/3629)。
 
         :param request: Request instance for DescribeSmsTemplateList.
-        :type request: :class:`tencentcloud.sms.v20190711.models.DescribeSmsTemplateListRequest`
-        :rtype: :class:`tencentcloud.sms.v20190711.models.DescribeSmsTemplateListResponse`
+        :type request: :class:`taifucloudcloud.sms.v20190711.models.DescribeSmsTemplateListRequest`
+        :rtype: :class:`taifucloudcloud.sms.v20190711.models.DescribeSmsTemplateListResponse`
 
         """
         try:
@@ -224,13 +224,13 @@ class SmsClient(AbstractClient):
 
 
     def ModifySmsSign(self, request):
-        """修改簡訊簽名，修改之前請先認證參閱 [Top Cloud 簡訊簽名審核标準](https://cloud.tencent.com/document/product/382/39022)。
-        >- ⚠️注意：個人認證用戶不支援使用 API 修改簡訊簽名，請參閱了解 [實名認證基本介紹](https://cloud.tencent.com/document/product/378/3629)，如果爲個人認證請登入控制台修改簡訊簽名。
+        """修改簡訊簽名，修改之前請先認證參閱 [Top Cloud 簡訊簽名審核标準](https://cloud.taifucloud.com/document/product/382/39022)。
+        >- ⚠️注意：個人認證用戶不支援使用 API 修改簡訊簽名，請參閱了解 [實名認證基本介紹](https://cloud.taifucloud.com/document/product/378/3629)，如果爲個人認證請登入控制台修改簡訊簽名。
         >- 修改簡訊簽名，僅當簽名爲待審核或已拒絕狀态時，才能進行修改，已審核通過的簽名不支援修改。
 
         :param request: Request instance for ModifySmsSign.
-        :type request: :class:`tencentcloud.sms.v20190711.models.ModifySmsSignRequest`
-        :rtype: :class:`tencentcloud.sms.v20190711.models.ModifySmsSignResponse`
+        :type request: :class:`taifucloudcloud.sms.v20190711.models.ModifySmsSignRequest`
+        :rtype: :class:`taifucloudcloud.sms.v20190711.models.ModifySmsSignResponse`
 
         """
         try:
@@ -254,13 +254,13 @@ class SmsClient(AbstractClient):
 
 
     def ModifySmsTemplate(self, request):
-        """修改簡訊正文模版，修改之前請先認真參閱 [Top Cloud 簡訊正文模版審核标準](https://cloud.tencent.com/document/product/382/39023)。
-        >- ⚠️注意：個人認證用戶不支援使用 API 修改簡訊正文模版，請參閱了解 [實名認證基本介紹](https://cloud.tencent.com/document/product/378/3629)，如果爲個人認證請登入控制台修改簡訊正文模版。
+        """修改簡訊正文模版，修改之前請先認真參閱 [Top Cloud 簡訊正文模版審核标準](https://cloud.taifucloud.com/document/product/382/39023)。
+        >- ⚠️注意：個人認證用戶不支援使用 API 修改簡訊正文模版，請參閱了解 [實名認證基本介紹](https://cloud.taifucloud.com/document/product/378/3629)，如果爲個人認證請登入控制台修改簡訊正文模版。
         >- 修改簡訊簽名，僅當正文模版爲待審核或已拒絕狀态時，才能進行修改，已審核通過的正文模版不支援修改。
 
         :param request: Request instance for ModifySmsTemplate.
-        :type request: :class:`tencentcloud.sms.v20190711.models.ModifySmsTemplateRequest`
-        :rtype: :class:`tencentcloud.sms.v20190711.models.ModifySmsTemplateResponse`
+        :type request: :class:`taifucloudcloud.sms.v20190711.models.ModifySmsTemplateRequest`
+        :rtype: :class:`taifucloudcloud.sms.v20190711.models.ModifySmsTemplateResponse`
 
         """
         try:
@@ -285,11 +285,11 @@ class SmsClient(AbstractClient):
 
     def PullSmsReplyStatus(self, request):
         """拉取簡訊回複狀态。
-        目前也支援 [配置回複回調](https://cloud.tencent.com/document/product/382/42907) 的方式來獲取上行回複。
+        目前也支援 [配置回複回調](https://cloud.taifucloud.com/document/product/382/42907) 的方式來獲取上行回複。
 
         :param request: Request instance for PullSmsReplyStatus.
-        :type request: :class:`tencentcloud.sms.v20190711.models.PullSmsReplyStatusRequest`
-        :rtype: :class:`tencentcloud.sms.v20190711.models.PullSmsReplyStatusResponse`
+        :type request: :class:`taifucloudcloud.sms.v20190711.models.PullSmsReplyStatusRequest`
+        :rtype: :class:`taifucloudcloud.sms.v20190711.models.PullSmsReplyStatusResponse`
 
         """
         try:
@@ -314,11 +314,11 @@ class SmsClient(AbstractClient):
 
     def PullSmsReplyStatusByPhoneNumber(self, request):
         """拉取單個号碼簡訊回複狀态。
-        目前也支援 [配置回複回調](https://cloud.tencent.com/document/product/382/42907) 的方式來獲取上行回複。
+        目前也支援 [配置回複回調](https://cloud.taifucloud.com/document/product/382/42907) 的方式來獲取上行回複。
 
         :param request: Request instance for PullSmsReplyStatusByPhoneNumber.
-        :type request: :class:`tencentcloud.sms.v20190711.models.PullSmsReplyStatusByPhoneNumberRequest`
-        :rtype: :class:`tencentcloud.sms.v20190711.models.PullSmsReplyStatusByPhoneNumberResponse`
+        :type request: :class:`taifucloudcloud.sms.v20190711.models.PullSmsReplyStatusByPhoneNumberRequest`
+        :rtype: :class:`taifucloudcloud.sms.v20190711.models.PullSmsReplyStatusByPhoneNumberResponse`
 
         """
         try:
@@ -343,11 +343,11 @@ class SmsClient(AbstractClient):
 
     def PullSmsSendStatus(self, request):
         """拉取簡訊下發狀态。
-        >- 目前也支援 [配置回調](https://cloud.tencent.com/document/product/382/37809#.E8.AE.BE.E7.BD.AE.E4.BA.8B.E4.BB.B6.E5.9B.9E.E8.B0.83.E9.85.8D.E7.BD.AE) 的方式來獲取下發狀态。
+        >- 目前也支援 [配置回調](https://cloud.taifucloud.com/document/product/382/37809#.E8.AE.BE.E7.BD.AE.E4.BA.8B.E4.BB.B6.E5.9B.9E.E8.B0.83.E9.85.8D.E7.BD.AE) 的方式來獲取下發狀态。
 
         :param request: Request instance for PullSmsSendStatus.
-        :type request: :class:`tencentcloud.sms.v20190711.models.PullSmsSendStatusRequest`
-        :rtype: :class:`tencentcloud.sms.v20190711.models.PullSmsSendStatusResponse`
+        :type request: :class:`taifucloudcloud.sms.v20190711.models.PullSmsSendStatusRequest`
+        :rtype: :class:`taifucloudcloud.sms.v20190711.models.PullSmsSendStatusResponse`
 
         """
         try:
@@ -372,11 +372,11 @@ class SmsClient(AbstractClient):
 
     def PullSmsSendStatusByPhoneNumber(self, request):
         """拉取單個号碼簡訊下發狀态。
-        >- 目前也支援 [配置回調](https://cloud.tencent.com/document/product/382/37809#.E8.AE.BE.E7.BD.AE.E4.BA.8B.E4.BB.B6.E5.9B.9E.E8.B0.83.E9.85.8D.E7.BD.AE) 的方式來獲取下發狀态。
+        >- 目前也支援 [配置回調](https://cloud.taifucloud.com/document/product/382/37809#.E8.AE.BE.E7.BD.AE.E4.BA.8B.E4.BB.B6.E5.9B.9E.E8.B0.83.E9.85.8D.E7.BD.AE) 的方式來獲取下發狀态。
 
         :param request: Request instance for PullSmsSendStatusByPhoneNumber.
-        :type request: :class:`tencentcloud.sms.v20190711.models.PullSmsSendStatusByPhoneNumberRequest`
-        :rtype: :class:`tencentcloud.sms.v20190711.models.PullSmsSendStatusByPhoneNumberResponse`
+        :type request: :class:`taifucloudcloud.sms.v20190711.models.PullSmsSendStatusByPhoneNumberRequest`
+        :rtype: :class:`taifucloudcloud.sms.v20190711.models.PullSmsSendStatusByPhoneNumberResponse`
 
         """
         try:
@@ -404,8 +404,8 @@ class SmsClient(AbstractClient):
 
 
         :param request: Request instance for SendSms.
-        :type request: :class:`tencentcloud.sms.v20190711.models.SendSmsRequest`
-        :rtype: :class:`tencentcloud.sms.v20190711.models.SendSmsResponse`
+        :type request: :class:`taifucloudcloud.sms.v20190711.models.SendSmsRequest`
+        :rtype: :class:`taifucloudcloud.sms.v20190711.models.SendSmsResponse`
 
         """
         try:
@@ -432,8 +432,8 @@ class SmsClient(AbstractClient):
         """統計用戶發送簡訊的數據。
 
         :param request: Request instance for SendStatusStatistics.
-        :type request: :class:`tencentcloud.sms.v20190711.models.SendStatusStatisticsRequest`
-        :rtype: :class:`tencentcloud.sms.v20190711.models.SendStatusStatisticsResponse`
+        :type request: :class:`taifucloudcloud.sms.v20190711.models.SendStatusStatisticsRequest`
+        :rtype: :class:`taifucloudcloud.sms.v20190711.models.SendStatusStatisticsResponse`
 
         """
         try:
@@ -460,8 +460,8 @@ class SmsClient(AbstractClient):
         """用戶套餐包訊息統計。
 
         :param request: Request instance for SmsPackagesStatistics.
-        :type request: :class:`tencentcloud.sms.v20190711.models.SmsPackagesStatisticsRequest`
-        :rtype: :class:`tencentcloud.sms.v20190711.models.SmsPackagesStatisticsResponse`
+        :type request: :class:`taifucloudcloud.sms.v20190711.models.SmsPackagesStatisticsRequest`
+        :rtype: :class:`taifucloudcloud.sms.v20190711.models.SmsPackagesStatisticsResponse`
 
         """
         try:

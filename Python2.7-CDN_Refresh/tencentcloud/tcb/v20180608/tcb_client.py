@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tcb.v20180608 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tcb.v20180608 import models
 
 
 class TcbClient(AbstractClient):
     _apiVersion = '2018-06-08'
-    _endpoint = 'tcb.tencentcloudapi.com'
+    _endpoint = 'tcb.taifucloudcloudapi.com'
 
 
     def CheckTcbService(self, request):
         """檢查是否開通Tcb服務
 
         :param request: Request instance for CheckTcbService.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.CheckTcbServiceRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.CheckTcbServiceResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.CheckTcbServiceRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.CheckTcbServiceResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TcbClient(AbstractClient):
         """TCB雲API統一入口
 
         :param request: Request instance for CommonServiceAPI.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.CommonServiceAPIRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.CommonServiceAPIResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.CommonServiceAPIRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.CommonServiceAPIResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TcbClient(AbstractClient):
         """增加安全域名
 
         :param request: Request instance for CreateAuthDomain.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.CreateAuthDomainRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.CreateAuthDomainResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.CreateAuthDomainRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.CreateAuthDomainResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TcbClient(AbstractClient):
         """創建托管域名
 
         :param request: Request instance for CreateHostingDomain.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.CreateHostingDomainRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.CreateHostingDomainResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.CreateHostingDomainRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.CreateHostingDomainResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class TcbClient(AbstractClient):
         """創建靜态托管資源，包括COS和CDN，異步任務創建，檢視創建結果需要根據DescribeStaticStore介面來檢視
 
         :param request: Request instance for CreateStaticStore.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.CreateStaticStoreRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.CreateStaticStoreResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.CreateStaticStoreRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.CreateStaticStoreResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class TcbClient(AbstractClient):
         """删除終端用戶
 
         :param request: Request instance for DeleteEndUser.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.DeleteEndUserRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.DeleteEndUserResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.DeleteEndUserRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.DeleteEndUserResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class TcbClient(AbstractClient):
         """獲取安全域名清單
 
         :param request: Request instance for DescribeAuthDomains.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeAuthDomainsRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.DescribeAuthDomainsResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.DescribeAuthDomainsRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.DescribeAuthDomainsResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class TcbClient(AbstractClient):
         """獲取資料庫權限
 
         :param request: Request instance for DescribeDatabaseACL.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeDatabaseACLRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.DescribeDatabaseACLResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.DescribeDatabaseACLRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.DescribeDatabaseACLResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class TcbClient(AbstractClient):
         """獲取終端用戶清單
 
         :param request: Request instance for DescribeEndUsers.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeEndUsersRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.DescribeEndUsersResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.DescribeEndUsersRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.DescribeEndUsersResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class TcbClient(AbstractClient):
         """查詢後付費免費配額訊息
 
         :param request: Request instance for DescribeEnvFreeQuota.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeEnvFreeQuotaRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.DescribeEnvFreeQuotaResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.DescribeEnvFreeQuotaRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.DescribeEnvFreeQuotaResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class TcbClient(AbstractClient):
         """查詢環境個數上限
 
         :param request: Request instance for DescribeEnvLimit.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeEnvLimitRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.DescribeEnvLimitResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.DescribeEnvLimitRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.DescribeEnvLimitResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class TcbClient(AbstractClient):
         """獲取環境清單，含環境下的各個資源訊息。尤其是各資源的唯一标識，是請求各資源的關鍵參數
 
         :param request: Request instance for DescribeEnvs.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeEnvsRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.DescribeEnvsResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.DescribeEnvsRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.DescribeEnvsResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class TcbClient(AbstractClient):
         """查詢指定指标的配額使用量
 
         :param request: Request instance for DescribeQuotaData.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.DescribeQuotaDataRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.DescribeQuotaDataResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.DescribeQuotaDataRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.DescribeQuotaDataResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class TcbClient(AbstractClient):
         """銷毀環境
 
         :param request: Request instance for DestroyEnv.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.DestroyEnvRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.DestroyEnvResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.DestroyEnvRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.DestroyEnvResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class TcbClient(AbstractClient):
         """銷毀靜态托管資源，該介面創建異步銷毀任務，資源最終狀态可從DestroyStaticStore介面檢視
 
         :param request: Request instance for DestroyStaticStore.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.DestroyStaticStoreRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.DestroyStaticStoreResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.DestroyStaticStoreRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.DestroyStaticStoreResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class TcbClient(AbstractClient):
         """修改資料庫權限
 
         :param request: Request instance for ModifyDatabaseACL.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.ModifyDatabaseACLRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.ModifyDatabaseACLResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.ModifyDatabaseACLRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.ModifyDatabaseACLResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class TcbClient(AbstractClient):
         """更新環境訊息
 
         :param request: Request instance for ModifyEnv.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.ModifyEnvRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.ModifyEnvResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.ModifyEnvRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.ModifyEnvResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class TcbClient(AbstractClient):
         """針對已隔離的免費環境，可以通過本介面将其恢複訪問。
 
         :param request: Request instance for ReinstateEnv.
-        :type request: :class:`tencentcloud.tcb.v20180608.models.ReinstateEnvRequest`
-        :rtype: :class:`tencentcloud.tcb.v20180608.models.ReinstateEnvResponse`
+        :type request: :class:`taifucloudcloud.tcb.v20180608.models.ReinstateEnvRequest`
+        :rtype: :class:`taifucloudcloud.tcb.v20180608.models.ReinstateEnvResponse`
 
         """
         try:

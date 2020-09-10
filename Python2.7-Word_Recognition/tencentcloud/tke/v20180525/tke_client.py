@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tke.v20180525 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tke.v20180525 import models
 
 
 class TkeClient(AbstractClient):
     _apiVersion = '2018-05-25'
-    _endpoint = 'tke.tencentcloudapi.com'
+    _endpoint = 'tke.taifucloudcloudapi.com'
 
 
     def AddExistedInstances(self, request):
         """添加已經存在的實例到集群
 
         :param request: 調用AddExistedInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.tke.v20180525.models.AddExistedInstancesRequest`
-        :rtype: :class:`tencentcloud.tke.v20180525.models.AddExistedInstancesResponse`
+        :type request: :class:`taifucloudcloud.tke.v20180525.models.AddExistedInstancesRequest`
+        :rtype: :class:`taifucloudcloud.tke.v20180525.models.AddExistedInstancesResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TkeClient(AbstractClient):
         """創建集群
 
         :param request: 調用CreateCluster所需參數的結構體。
-        :type request: :class:`tencentcloud.tke.v20180525.models.CreateClusterRequest`
-        :rtype: :class:`tencentcloud.tke.v20180525.models.CreateClusterResponse`
+        :type request: :class:`taifucloudcloud.tke.v20180525.models.CreateClusterRequest`
+        :rtype: :class:`taifucloudcloud.tke.v20180525.models.CreateClusterResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TkeClient(AbstractClient):
         """删除集群中的實例
 
         :param request: 調用DeleteClusterInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.tke.v20180525.models.DeleteClusterInstancesRequest`
-        :rtype: :class:`tencentcloud.tke.v20180525.models.DeleteClusterInstancesResponse`
+        :type request: :class:`taifucloudcloud.tke.v20180525.models.DeleteClusterInstancesRequest`
+        :rtype: :class:`taifucloudcloud.tke.v20180525.models.DeleteClusterInstancesResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TkeClient(AbstractClient):
         """查詢集群下節點實例訊息
 
         :param request: 調用DescribeClusterInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.tke.v20180525.models.DescribeClusterInstancesRequest`
-        :rtype: :class:`tencentcloud.tke.v20180525.models.DescribeClusterInstancesResponse`
+        :type request: :class:`taifucloudcloud.tke.v20180525.models.DescribeClusterInstancesRequest`
+        :rtype: :class:`taifucloudcloud.tke.v20180525.models.DescribeClusterInstancesResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class TkeClient(AbstractClient):
         """查詢集群清單
 
         :param request: 調用DescribeClusters所需參數的結構體。
-        :type request: :class:`tencentcloud.tke.v20180525.models.DescribeClustersRequest`
-        :rtype: :class:`tencentcloud.tke.v20180525.models.DescribeClustersResponse`
+        :type request: :class:`taifucloudcloud.tke.v20180525.models.DescribeClustersRequest`
+        :rtype: :class:`taifucloudcloud.tke.v20180525.models.DescribeClustersResponse`
 
         """
         try:

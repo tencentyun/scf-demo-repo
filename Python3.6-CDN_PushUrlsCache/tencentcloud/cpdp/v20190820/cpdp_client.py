@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cpdp.v20190820 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cpdp.v20190820 import models
 
 
 class CpdpClient(AbstractClient):
     _apiVersion = '2019-08-20'
-    _endpoint = 'cpdp.tencentcloudapi.com'
+    _endpoint = 'cpdp.taifucloudcloudapi.com'
 
 
     def ApplyApplicationMaterial(self, request):
         """跨境-提交申報材料
 
         :param request: Request instance for ApplyApplicationMaterial.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.ApplyApplicationMaterialRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.ApplyApplicationMaterialResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyApplicationMaterialRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyApplicationMaterialResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class CpdpClient(AbstractClient):
         """跨境-匯出指令申請
 
         :param request: Request instance for ApplyOutwardOrder.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.ApplyOutwardOrderRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.ApplyOutwardOrderResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyOutwardOrderRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyOutwardOrderResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class CpdpClient(AbstractClient):
         """跨境-付款人申請
 
         :param request: Request instance for ApplyPayerInfo.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.ApplyPayerInfoRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.ApplyPayerInfoResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyPayerInfoRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyPayerInfoResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class CpdpClient(AbstractClient):
         """正常結算提現失敗情況下，發起重新提現的請求介面
 
         :param request: Request instance for ApplyReWithdrawal.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.ApplyReWithdrawalRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.ApplyReWithdrawalResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyReWithdrawalRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyReWithdrawalResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class CpdpClient(AbstractClient):
         """跨境-提交貿易材料
 
         :param request: Request instance for ApplyTrade.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.ApplyTradeRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.ApplyTradeResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyTradeRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyTradeResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class CpdpClient(AbstractClient):
         """商戶提現
 
         :param request: Request instance for ApplyWithdrawal.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.ApplyWithdrawalRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.ApplyWithdrawalResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyWithdrawalRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyWithdrawalResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class CpdpClient(AbstractClient):
         """商戶綁定提現銀行卡，每個商戶只能綁定一張提現銀行卡
 
         :param request: Request instance for BindAcct.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.BindAcctRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.BindAcctResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.BindAcctRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.BindAcctResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class CpdpClient(AbstractClient):
         """會員綁定提現帳戶-回填銀聯鑒權簡訊碼。用于會員填寫動态驗證碼後，發往銀行進行驗證，驗證成功則完成綁定。
 
         :param request: Request instance for BindRelateAccReUnionPay.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.BindRelateAccReUnionPayRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.BindRelateAccReUnionPayResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.BindRelateAccReUnionPayRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.BindRelateAccReUnionPayResponse`
 
         """
         try:
@@ -256,8 +256,8 @@ class CpdpClient(AbstractClient):
         來賬鑒權：該介面發起成功後，銀行以簡訊通知客戶檢視，客戶檢視後，需通過待綁定的帳戶往市場的監管帳戶轉入簡訊上指定的金額。銀行檢索到該筆指定金額的來賬是源自待綁定帳戶，則綁定成功。平安銀行的帳戶，即BankType送1時，大小額行号和超級網銀号都不用送。
 
         :param request: Request instance for BindRelateAcctSmallAmount.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.BindRelateAcctSmallAmountRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.BindRelateAcctSmallAmountResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.BindRelateAcctSmallAmountRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.BindRelateAcctSmallAmountResponse`
 
         """
         try:
@@ -288,8 +288,8 @@ class CpdpClient(AbstractClient):
         大小額聯行号：單筆轉賬可超過5萬，需具體到支行，不能實時知道對方是否收款成功。金額超過5萬的，在工作日的8點30-17點間才會成功。
 
         :param request: Request instance for BindRelateAcctUnionPay.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.BindRelateAcctUnionPayRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.BindRelateAcctUnionPayResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.BindRelateAcctUnionPayRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.BindRelateAcctUnionPayResponse`
 
         """
         try:
@@ -316,8 +316,8 @@ class CpdpClient(AbstractClient):
         """商戶綁定提現銀行卡的驗證介面
 
         :param request: Request instance for CheckAcct.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.CheckAcctRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.CheckAcctResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.CheckAcctRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.CheckAcctResponse`
 
         """
         try:
@@ -344,8 +344,8 @@ class CpdpClient(AbstractClient):
         """驗證鑒權金額。此介面可受理BindRelateAcctSmallAmount介面發起的轉賬金額（往賬鑒權方式）的驗證處理。若所回填的驗證金額驗證通過，則會綁定原申請中的銀行帳戶作爲提現帳戶。通過此介面也可以查得BindRelateAcctSmallAmount介面發起的來賬鑒權方式的申請的當前狀态。
 
         :param request: Request instance for CheckAmount.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.CheckAmountRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.CheckAmountResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.CheckAmountRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.CheckAmountResponse`
 
         """
         try:
@@ -372,8 +372,8 @@ class CpdpClient(AbstractClient):
         """通過此介面關閉此前已創建的訂單，關閉後，用戶将無法繼續付款。僅能關閉創建後未支付的訂單
 
         :param request: Request instance for CloseOrder.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.CloseOrderRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.CloseOrderResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.CloseOrderRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.CloseOrderResponse`
 
         """
         try:
@@ -400,8 +400,8 @@ class CpdpClient(AbstractClient):
         """子商戶入駐聚鑫平台
 
         :param request: Request instance for CreateAcct.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.CreateAcctRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.CreateAcctResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.CreateAcctRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.CreateAcctResponse`
 
         """
         try:
@@ -429,8 +429,8 @@ class CpdpClient(AbstractClient):
         平台需保存銀行返回的子帳戶賬号，後續交易介面都會用到。會員屬性欄位爲預留擴展欄位，當前必須送預設值。
 
         :param request: Request instance for CreateCustAcctId.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.CreateCustAcctIdRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.CreateCustAcctIdResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.CreateCustAcctIdRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.CreateCustAcctIdResponse`
 
         """
         try:
@@ -457,8 +457,8 @@ class CpdpClient(AbstractClient):
         """智慧零售-發票開具
 
         :param request: Request instance for CreateInvoice.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.CreateInvoiceRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.CreateInvoiceResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.CreateInvoiceRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.CreateInvoiceResponse`
 
         """
         try:
@@ -485,8 +485,8 @@ class CpdpClient(AbstractClient):
         """智慧零售-商戶注冊
 
         :param request: Request instance for CreateMerchant.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.CreateMerchantRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.CreateMerchantResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.CreateMerchantRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.CreateMerchantResponse`
 
         """
         try:
@@ -513,8 +513,8 @@ class CpdpClient(AbstractClient):
         """智慧零售-發票紅沖
 
         :param request: Request instance for CreateRedInvoice.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.CreateRedInvoiceRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.CreateRedInvoiceResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.CreateRedInvoiceRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.CreateRedInvoiceResponse`
 
         """
         try:
@@ -541,8 +541,8 @@ class CpdpClient(AbstractClient):
         """帳單下載介面，根據本介面返回的URL網址，在D+1日下載對帳單。注意，本介面返回的URL網址有時效，請盡快下載。URL超時時效後，請重新調用本介面再次獲取。
 
         :param request: Request instance for DownloadBill.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.DownloadBillRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.DownloadBillResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.DownloadBillRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.DownloadBillResponse`
 
         """
         try:
@@ -569,8 +569,8 @@ class CpdpClient(AbstractClient):
         """維護會員綁定提現帳戶聯行号。此介面可以支援市場修改會員的提現帳戶的開戶行訊息，具體包括開戶行行名、開戶行的銀行聯行号（大小額聯行号）和超級網銀行号。
 
         :param request: Request instance for ModifyMntMbrBindRelateAcctBankCode.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.ModifyMntMbrBindRelateAcctBankCodeRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.ModifyMntMbrBindRelateAcctBankCodeResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.ModifyMntMbrBindRelateAcctBankCodeRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.ModifyMntMbrBindRelateAcctBankCodeResponse`
 
         """
         try:
@@ -597,8 +597,8 @@ class CpdpClient(AbstractClient):
         """聚鑫-查詢子帳戶綁定銀行卡
 
         :param request: Request instance for QueryAcctBinding.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryAcctBindingRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryAcctBindingResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryAcctBindingRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryAcctBindingResponse`
 
         """
         try:
@@ -625,8 +625,8 @@ class CpdpClient(AbstractClient):
         """聚鑫-開戶訊息查詢
 
         :param request: Request instance for QueryAcctInfo.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryAcctInfoRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryAcctInfoResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryAcctInfoRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryAcctInfoResponse`
 
         """
         try:
@@ -653,8 +653,8 @@ class CpdpClient(AbstractClient):
         """聚鑫-開戶訊息清單查詢, 查詢某一段時間的開戶訊息
 
         :param request: Request instance for QueryAcctInfoList.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryAcctInfoListRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryAcctInfoListResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryAcctInfoListRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryAcctInfoListResponse`
 
         """
         try:
@@ -681,8 +681,8 @@ class CpdpClient(AbstractClient):
         """跨境-成功申報材料查詢
 
         :param request: Request instance for QueryApplicationMaterial.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryApplicationMaterialRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryApplicationMaterialResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryApplicationMaterialRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryApplicationMaterialResponse`
 
         """
         try:
@@ -709,8 +709,8 @@ class CpdpClient(AbstractClient):
         """子商戶餘額查詢
 
         :param request: Request instance for QueryBalance.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryBalanceRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryBalanceResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryBalanceRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryBalanceResponse`
 
         """
         try:
@@ -737,8 +737,8 @@ class CpdpClient(AbstractClient):
         """查詢銀行在途清算結果。查詢時間段内交易網的在途清算結果。
 
         :param request: Request instance for QueryBankClear.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryBankClearRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryBankClearResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryBankClearRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryBankClearResponse`
 
         """
         try:
@@ -765,8 +765,8 @@ class CpdpClient(AbstractClient):
         """查詢銀行時間段内交易明細。查詢時間段的會員成功交易。
 
         :param request: Request instance for QueryBankTransactionDetails.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryBankTransactionDetailsRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryBankTransactionDetailsResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryBankTransactionDetailsRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryBankTransactionDetailsResponse`
 
         """
         try:
@@ -793,8 +793,8 @@ class CpdpClient(AbstractClient):
         """查詢銀行時間段内清分提現明細。查詢銀行時間段内清分提現明細介面：若爲“見證+收單退款”“見證+收單儲值”記錄時備注Note爲“見證+收單儲值,訂單号”“見證+收單退款,訂單号”，此介面可以查到T0/T1的儲值明細和退款記錄。查詢标志：儲值記錄仍用3清分選項查詢，退款記錄同提現用2選項查詢。
 
         :param request: Request instance for QueryBankWithdrawCashDetails.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryBankWithdrawCashDetailsRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryBankWithdrawCashDetailsResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryBankWithdrawCashDetailsRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryBankWithdrawCashDetailsResponse`
 
         """
         try:
@@ -821,8 +821,8 @@ class CpdpClient(AbstractClient):
         """查詢普通轉賬儲值明細。介面用于查詢會員主動轉賬進資金匯總帳戶的明細情況。若會員使用綁定賬号轉入，則直接入賬到會員子帳戶。若未使用綁定賬号轉入，則系統無法自動清分到對應子帳戶，則轉入挂賬子帳戶由平台自行清分。若是 “見證+收單儲值”T0儲值記錄時備注Note爲“見證+收單儲值,訂單号” 此介面可以查到T0到賬的“見證+收單儲值”儲值記錄。
 
         :param request: Request instance for QueryCommonTransferRecharge.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryCommonTransferRechargeRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryCommonTransferRechargeResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryCommonTransferRechargeRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryCommonTransferRechargeResponse`
 
         """
         try:
@@ -849,8 +849,8 @@ class CpdpClient(AbstractClient):
         """查詢銀行子帳戶餘額。查詢會員子帳戶以及平台的功能子帳戶的餘額。
 
         :param request: Request instance for QueryCustAcctIdBalance.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryCustAcctIdBalanceRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryCustAcctIdBalanceResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryCustAcctIdBalanceRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryCustAcctIdBalanceResponse`
 
         """
         try:
@@ -877,8 +877,8 @@ class CpdpClient(AbstractClient):
         """跨境-查詢匯率
 
         :param request: Request instance for QueryExchangeRate.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryExchangeRateRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryExchangeRateResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryExchangeRateRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryExchangeRateResponse`
 
         """
         try:
@@ -905,8 +905,8 @@ class CpdpClient(AbstractClient):
         """智慧零售-發票查詢
 
         :param request: Request instance for QueryInvoice.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryInvoiceRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryInvoiceResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryInvoiceRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryInvoiceResponse`
 
         """
         try:
@@ -934,8 +934,8 @@ class CpdpClient(AbstractClient):
         查詢标志爲“全部會員”的情況下，返回市場下的全部的有效的綁定帳戶訊息。查詢标志爲“單個會員的證件訊息”的情況下，返回市場下的指定的會員的留存在電商見證寶系統的證件訊息。
 
         :param request: Request instance for QueryMemberBind.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryMemberBindRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryMemberBindResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryMemberBindRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryMemberBindResponse`
 
         """
         try:
@@ -962,8 +962,8 @@ class CpdpClient(AbstractClient):
         """會員間交易-不驗證。此介面可以實現會員間的餘額的交易，實現資金在會員之間流動。
 
         :param request: Request instance for QueryMemberTransaction.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryMemberTransactionRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryMemberTransactionResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryMemberTransactionRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryMemberTransactionResponse`
 
         """
         try:
@@ -990,8 +990,8 @@ class CpdpClient(AbstractClient):
         """跨境-對接方帳戶餘額查詢
 
         :param request: Request instance for QueryMerchantBalance.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryMerchantBalanceRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryMerchantBalanceResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryMerchantBalanceRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryMerchantBalanceResponse`
 
         """
         try:
@@ -1018,8 +1018,8 @@ class CpdpClient(AbstractClient):
         """根據訂單号，或者用戶Id，查詢支付訂單狀态
 
         :param request: Request instance for QueryOrder.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryOrderRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryOrderResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryOrderRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryOrderResponse`
 
         """
         try:
@@ -1046,8 +1046,8 @@ class CpdpClient(AbstractClient):
         """跨境-查詢匯出結果
 
         :param request: Request instance for QueryOutwardOrder.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryOutwardOrderRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryOutwardOrderResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryOutwardOrderRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryOutwardOrderResponse`
 
         """
         try:
@@ -1074,8 +1074,8 @@ class CpdpClient(AbstractClient):
         """跨境-付款人查詢
 
         :param request: Request instance for QueryPayerInfo.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryPayerInfoRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryPayerInfoResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryPayerInfoRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryPayerInfoResponse`
 
         """
         try:
@@ -1102,8 +1102,8 @@ class CpdpClient(AbstractClient):
         """查詢對賬文件訊息。平台調用該介面獲取需下載對賬文件的文件名稱以及金鑰。 平台獲取到訊息後， 可以再調用OPENAPI的文件下載功能。
 
         :param request: Request instance for QueryReconciliationDocument.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryReconciliationDocumentRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryReconciliationDocumentResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryReconciliationDocumentRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryReconciliationDocumentResponse`
 
         """
         try:
@@ -1127,11 +1127,11 @@ class CpdpClient(AbstractClient):
 
 
     def QueryRefund(self, request):
-        """提交退款申請後，通過調用該介面查詢退款狀态。退款可能有一定延時，用微信零錢支付的退款約20分鍾内到賬，銀行卡支付的退款約3個工作日後到賬。
+        """提交退款申請後，通過調用該介面查詢退款狀态。退款可能有一定延時，用 零錢支付的退款約20分鍾内到賬，銀行卡支付的退款約3個工作日後到賬。
 
         :param request: Request instance for QueryRefund.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryRefundRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryRefundResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryRefundRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryRefundResponse`
 
         """
         try:
@@ -1158,8 +1158,8 @@ class CpdpClient(AbstractClient):
         """查詢銀行單筆交易狀态。查詢單筆交易的狀态。
 
         :param request: Request instance for QuerySingleTransactionStatus.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QuerySingleTransactionStatusRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QuerySingleTransactionStatusResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QuerySingleTransactionStatusRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QuerySingleTransactionStatusResponse`
 
         """
         try:
@@ -1186,8 +1186,8 @@ class CpdpClient(AbstractClient):
         """查詢小額鑒權轉賬結果。查詢小額往賬鑒權的轉賬狀态。
 
         :param request: Request instance for QuerySmallAmountTransfer.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QuerySmallAmountTransferRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QuerySmallAmountTransferResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QuerySmallAmountTransferRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QuerySmallAmountTransferResponse`
 
         """
         try:
@@ -1214,8 +1214,8 @@ class CpdpClient(AbstractClient):
         """跨境-貿易材料明細查詢
 
         :param request: Request instance for QueryTrade.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.QueryTradeRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.QueryTradeResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryTradeRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.QueryTradeResponse`
 
         """
         try:
@@ -1242,8 +1242,8 @@ class CpdpClient(AbstractClient):
         """見證寶-會員在途儲值(經第三方支付管道)
 
         :param request: Request instance for RechargeMemberThirdPay.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.RechargeMemberThirdPayRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.RechargeMemberThirdPayResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.RechargeMemberThirdPayRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.RechargeMemberThirdPayResponse`
 
         """
         try:
@@ -1270,8 +1270,8 @@ class CpdpClient(AbstractClient):
         """如交易訂單需退款，可以通過本介面将支付款全部或部分退還給付款方，聚鑫将在收到退款請求并且驗證成功之後，按照退款規則将支付款按原路退回到支付帳号。最長支援1年的訂單退款。在訂單包含多個子訂單的情況下，如果使用本介面傳入OutTradeNo或TransactionId退款，則只支援全單退款；如果需要部分退款，請通過傳入子訂單的方式來指定部分金額退款。
 
         :param request: Request instance for Refund.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.RefundRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.RefundResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.RefundRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.RefundResponse`
 
         """
         try:
@@ -1298,8 +1298,8 @@ class CpdpClient(AbstractClient):
         """登記挂賬(支援撤銷)。此介面可實現把不明來賬或自有資金等已登記在挂賬子帳戶下的資金調整到普通會員子帳戶。即通過申請調用此介面，将會減少挂賬子帳戶的資金，調增指定的普通會員子帳戶的可提現餘額及可用餘額。此介面不支援把挂賬子帳戶資金清分到功能子帳戶。
 
         :param request: Request instance for RegisterBillSupportWithdraw.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.RegisterBillSupportWithdrawRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.RegisterBillSupportWithdrawResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.RegisterBillSupportWithdrawRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.RegisterBillSupportWithdrawResponse`
 
         """
         try:
@@ -1326,8 +1326,8 @@ class CpdpClient(AbstractClient):
         """登記挂賬撤銷。此介面可以實現把RegisterBillSupportWithdraw介面完成的登記挂賬進行撤銷，即調減普通會員子帳戶的可提現和可用餘額，調增挂賬子帳戶的可用餘額。
 
         :param request: Request instance for RevRegisterBillSupportWithdraw.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.RevRegisterBillSupportWithdrawRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.RevRegisterBillSupportWithdrawResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.RevRegisterBillSupportWithdrawRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.RevRegisterBillSupportWithdrawResponse`
 
         """
         try:
@@ -1354,8 +1354,8 @@ class CpdpClient(AbstractClient):
         """登記挂賬撤銷。此介面可以實現把RegisterBillSupportWithdraw介面完成的登記挂賬進行撤銷，即調減普通會員子帳戶的可提現和可用餘額，調增挂賬子帳戶的可用餘額。
 
         :param request: Request instance for RevResigterBillSupportWithdraw.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.RevResigterBillSupportWithdrawRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.RevResigterBillSupportWithdrawResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.RevResigterBillSupportWithdrawRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.RevResigterBillSupportWithdrawResponse`
 
         """
         try:
@@ -1382,8 +1382,8 @@ class CpdpClient(AbstractClient):
         """修改會員屬性-普通商戶子帳戶。修改會員的會員屬性。
 
         :param request: Request instance for ReviseMbrProperty.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.ReviseMbrPropertyRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.ReviseMbrPropertyResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.ReviseMbrPropertyRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.ReviseMbrPropertyResponse`
 
         """
         try:
@@ -1410,8 +1410,8 @@ class CpdpClient(AbstractClient):
         """撤銷會員在途儲值(經第三方支付管道)
 
         :param request: Request instance for RevokeMemberRechargeThirdPay.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.RevokeMemberRechargeThirdPayRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.RevokeMemberRechargeThirdPayResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.RevokeMemberRechargeThirdPayRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.RevokeMemberRechargeThirdPayResponse`
 
         """
         try:
@@ -1438,8 +1438,8 @@ class CpdpClient(AbstractClient):
         """商戶解除綁定的提現銀行卡
 
         :param request: Request instance for UnBindAcct.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.UnBindAcctRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.UnBindAcctResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.UnBindAcctRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.UnBindAcctResponse`
 
         """
         try:
@@ -1466,8 +1466,8 @@ class CpdpClient(AbstractClient):
         """會員解綁提現帳戶。此介面可以支援會員解除名下的綁定帳戶關系。
 
         :param request: Request instance for UnbindRelateAcct.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.UnbindRelateAcctRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.UnbindRelateAcctResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.UnbindRelateAcctRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.UnbindRelateAcctResponse`
 
         """
         try:
@@ -1491,11 +1491,11 @@ class CpdpClient(AbstractClient):
 
 
     def UnifiedOrder(self, request):
-        """應用需要先調用本介面生成支付訂單号，并将應答的PayInfo透傳給聚鑫SDK，拉起用戶端（包括微信公衆号/微信小程式/用戶端App）支付。
+        """應用需要先調用本介面生成支付訂單号，并将應答的PayInfo透傳給聚鑫SDK，拉起用戶端（包括 公衆号/ 小程式/用戶端App）支付。
 
         :param request: Request instance for UnifiedOrder.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.UnifiedOrderRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.UnifiedOrderResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.UnifiedOrderRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.UnifiedOrderResponse`
 
         """
         try:
@@ -1522,8 +1522,8 @@ class CpdpClient(AbstractClient):
         """會員提現-不驗證。此介面受理會員發起的提現申請。會員子帳戶的可提現餘額、可用餘額會減少，市場的資金匯總帳戶(監管帳戶)會減少相應的發生金額，提現到會員申請的收款帳戶。
 
         :param request: Request instance for WithdrawCashMembership.
-        :type request: :class:`tencentcloud.cpdp.v20190820.models.WithdrawCashMembershipRequest`
-        :rtype: :class:`tencentcloud.cpdp.v20190820.models.WithdrawCashMembershipResponse`
+        :type request: :class:`taifucloudcloud.cpdp.v20190820.models.WithdrawCashMembershipRequest`
+        :rtype: :class:`taifucloudcloud.cpdp.v20190820.models.WithdrawCashMembershipResponse`
 
         """
         try:

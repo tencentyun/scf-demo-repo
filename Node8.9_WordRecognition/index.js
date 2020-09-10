@@ -7,7 +7,7 @@ TIPS:
    如若爲API閘道觸發方式, 只是取數據的方式有所不同
 
 Reference: 
-1. https://cloud.tencent.com/document/product/866/17594 - Tencent cloud image document
+1. https://cloud.taifucloud.com/document/product/866/17594 - Tencent cloud image document
 2. https://www.npmjs.com/package/tcb-ai - tcb-ai document
 ***************************************************/
 

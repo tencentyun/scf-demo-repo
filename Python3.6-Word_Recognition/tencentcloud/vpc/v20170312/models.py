@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AcceptAttachCcnInstancesRequest(AbstractModel):
@@ -570,11 +570,11 @@ class AssociateAddressRequest(AbstractModel):
         """
         :param AddressId: 标識 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
         :type AddressId: str
-        :param InstanceId: 要綁定的實例 ID。實例 ID 形如：`ins-11112222`。可通過登入[控制台](https://console.cloud.tencent.com/cvm)查詢，也可通過 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 介面返回值中的`InstanceId`獲取。
+        :param InstanceId: 要綁定的實例 ID。實例 ID 形如：`ins-11112222`。可通過登入[控制台](https://console.cloud.taifucloud.com/cvm)查詢，也可通過 [DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728) 介面返回值中的`InstanceId`獲取。
         :type InstanceId: str
-        :param NetworkInterfaceId: 要綁定的彈性網卡 ID。 彈性網卡 ID 形如：`eni-11112222`。`NetworkInterfaceId` 與 `InstanceId` 不可同時指定。彈性網卡 ID 可通過登入[控制台](https://console.cloud.tencent.com/vpc/eni)查詢，也可通過[DescribeNetworkInterfaces](https://cloud.tencent.com/document/api/215/15817)介面返回值中的`networkInterfaceId`獲取。
+        :param NetworkInterfaceId: 要綁定的彈性網卡 ID。 彈性網卡 ID 形如：`eni-11112222`。`NetworkInterfaceId` 與 `InstanceId` 不可同時指定。彈性網卡 ID 可通過登入[控制台](https://console.cloud.taifucloud.com/vpc/eni)查詢，也可通過[DescribeNetworkInterfaces](https://cloud.taifucloud.com/document/api/215/15817)介面返回值中的`networkInterfaceId`獲取。
         :type NetworkInterfaceId: str
-        :param PrivateIpAddress: 要綁定的内網 IP。如果指定了 `NetworkInterfaceId` 則也必須指定 `PrivateIpAddress` ，表示将 EIP 綁定到指定彈性網卡的指定内網 IP 上。同時要确保指定的 `PrivateIpAddress` 是指定的 `NetworkInterfaceId` 上的一個内網 IP。指定彈性網卡的内網 IP 可通過登入[控制台](https://console.cloud.tencent.com/vpc/eni)查詢，也可通過[DescribeNetworkInterfaces](https://cloud.tencent.com/document/api/215/15817)介面返回值中的`privateIpAddress`獲取。
+        :param PrivateIpAddress: 要綁定的内網 IP。如果指定了 `NetworkInterfaceId` 則也必須指定 `PrivateIpAddress` ，表示将 EIP 綁定到指定彈性網卡的指定内網 IP 上。同時要确保指定的 `PrivateIpAddress` 是指定的 `NetworkInterfaceId` 上的一個内網 IP。指定彈性網卡的内網 IP 可通過登入[控制台](https://console.cloud.taifucloud.com/vpc/eni)查詢，也可通過[DescribeNetworkInterfaces](https://cloud.taifucloud.com/document/api/215/15817)介面返回值中的`privateIpAddress`獲取。
         :type PrivateIpAddress: str
         """
         self.AddressId = None
@@ -1057,7 +1057,7 @@ class CreateAddressTemplateGroupResponse(AbstractModel):
     def __init__(self):
         """
         :param AddressTemplateGroup: IP網址範本集合對象。
-        :type AddressTemplateGroup: :class:`tencentcloud.vpc.v20170312.models.AddressTemplateGroup`
+        :type AddressTemplateGroup: :class:`taifucloudcloud.vpc.v20170312.models.AddressTemplateGroup`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1101,7 +1101,7 @@ class CreateAddressTemplateResponse(AbstractModel):
     def __init__(self):
         """
         :param AddressTemplate: IP網址範本對象。
-        :type AddressTemplate: :class:`tencentcloud.vpc.v20170312.models.AddressTemplate`
+        :type AddressTemplate: :class:`taifucloudcloud.vpc.v20170312.models.AddressTemplate`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1207,7 +1207,7 @@ class CreateCcnResponse(AbstractModel):
     def __init__(self):
         """
         :param Ccn: 雲聯網（CCN）對象。
-        :type Ccn: :class:`tencentcloud.vpc.v20170312.models.CCN`
+        :type Ccn: :class:`taifucloudcloud.vpc.v20170312.models.CCN`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1251,7 +1251,7 @@ class CreateCustomerGatewayResponse(AbstractModel):
     def __init__(self):
         """
         :param CustomerGateway: 對端閘道對象
-        :type CustomerGateway: :class:`tencentcloud.vpc.v20170312.models.CustomerGateway`
+        :type CustomerGateway: :class:`taifucloudcloud.vpc.v20170312.models.CustomerGateway`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1295,7 +1295,7 @@ class CreateDefaultVpcResponse(AbstractModel):
     def __init__(self):
         """
         :param Vpc: 預設VPC和子網ID
-        :type Vpc: :class:`tencentcloud.vpc.v20170312.models.DefaultVpcSubnet`
+        :type Vpc: :class:`taifucloudcloud.vpc.v20170312.models.DefaultVpcSubnet`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1395,7 +1395,7 @@ class CreateDirectConnectGatewayResponse(AbstractModel):
     def __init__(self):
         """
         :param DirectConnectGateway: 專線閘道對象。
-        :type DirectConnectGateway: :class:`tencentcloud.vpc.v20170312.models.DirectConnectGateway`
+        :type DirectConnectGateway: :class:`taifucloudcloud.vpc.v20170312.models.DirectConnectGateway`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1514,7 +1514,7 @@ class CreateHaVipResponse(AbstractModel):
     def __init__(self):
         """
         :param HaVip: `HAVIP`對象。
-        :type HaVip: :class:`tencentcloud.vpc.v20170312.models.HaVip`
+        :type HaVip: :class:`taifucloudcloud.vpc.v20170312.models.HaVip`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1629,7 +1629,7 @@ class CreateNetworkInterfaceResponse(AbstractModel):
     def __init__(self):
         """
         :param NetworkInterface: 彈性網卡實例。
-        :type NetworkInterface: :class:`tencentcloud.vpc.v20170312.models.NetworkInterface`
+        :type NetworkInterface: :class:`taifucloudcloud.vpc.v20170312.models.NetworkInterface`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1673,7 +1673,7 @@ class CreateRouteTableResponse(AbstractModel):
     def __init__(self):
         """
         :param RouteTable: 路由表對象。
-        :type RouteTable: :class:`tencentcloud.vpc.v20170312.models.RouteTable`
+        :type RouteTable: :class:`taifucloudcloud.vpc.v20170312.models.RouteTable`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1741,7 +1741,7 @@ class CreateSecurityGroupPoliciesRequest(AbstractModel):
         :param SecurityGroupId: 安全組實例ID，例如sg-33ocnj9n，可通過DescribeSecurityGroups獲取。
         :type SecurityGroupId: str
         :param SecurityGroupPolicySet: 安全組規則集合。
-        :type SecurityGroupPolicySet: :class:`tencentcloud.vpc.v20170312.models.SecurityGroupPolicySet`
+        :type SecurityGroupPolicySet: :class:`taifucloudcloud.vpc.v20170312.models.SecurityGroupPolicySet`
         """
         self.SecurityGroupId = None
         self.SecurityGroupPolicySet = None
@@ -1804,7 +1804,7 @@ class CreateSecurityGroupResponse(AbstractModel):
     def __init__(self):
         """
         :param SecurityGroup: 安全組對象。
-        :type SecurityGroup: :class:`tencentcloud.vpc.v20170312.models.SecurityGroup`
+        :type SecurityGroup: :class:`taifucloudcloud.vpc.v20170312.models.SecurityGroup`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1848,7 +1848,7 @@ class CreateServiceTemplateGroupResponse(AbstractModel):
     def __init__(self):
         """
         :param ServiceTemplateGroup: 協議端口範本集合對象。
-        :type ServiceTemplateGroup: :class:`tencentcloud.vpc.v20170312.models.ServiceTemplateGroup`
+        :type ServiceTemplateGroup: :class:`taifucloudcloud.vpc.v20170312.models.ServiceTemplateGroup`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1892,7 +1892,7 @@ class CreateServiceTemplateResponse(AbstractModel):
     def __init__(self):
         """
         :param ServiceTemplate: 協議端口範本對象。
-        :type ServiceTemplate: :class:`tencentcloud.vpc.v20170312.models.ServiceTemplate`
+        :type ServiceTemplate: :class:`taifucloudcloud.vpc.v20170312.models.ServiceTemplate`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1944,7 +1944,7 @@ class CreateSubnetResponse(AbstractModel):
     def __init__(self):
         """
         :param Subnet: 子網對象。
-        :type Subnet: :class:`tencentcloud.vpc.v20170312.models.Subnet`
+        :type Subnet: :class:`taifucloudcloud.vpc.v20170312.models.Subnet`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2052,7 +2052,7 @@ class CreateVpcResponse(AbstractModel):
     def __init__(self):
         """
         :param Vpc: Vpc對象。
-        :type Vpc: :class:`tencentcloud.vpc.v20170312.models.Vpc`
+        :type Vpc: :class:`taifucloudcloud.vpc.v20170312.models.Vpc`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2087,9 +2087,9 @@ class CreateVpnConnectionRequest(AbstractModel):
         :param SecurityPolicyDatabases: SPD策略組，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内網段172.123.10.5/16是IDC網段。用戶指定VPC内哪些網段可以和您IDC中哪些網段通信。
         :type SecurityPolicyDatabases: list of SecurityPolicyDatabase
         :param IKEOptionsSpecification: IKE配置（Internet Key Exchange，因特網金鑰交換），IKE具有一套自我保護機制，用戶配置網絡安全協議
-        :type IKEOptionsSpecification: :class:`tencentcloud.vpc.v20170312.models.IKEOptionsSpecification`
+        :type IKEOptionsSpecification: :class:`taifucloudcloud.vpc.v20170312.models.IKEOptionsSpecification`
         :param IPSECOptionsSpecification: IPSec配置，Top Cloud 提供IPSec安全會話設置
-        :type IPSECOptionsSpecification: :class:`tencentcloud.vpc.v20170312.models.IPSECOptionsSpecification`
+        :type IPSECOptionsSpecification: :class:`taifucloudcloud.vpc.v20170312.models.IPSECOptionsSpecification`
         """
         self.VpcId = None
         self.VpnGatewayId = None
@@ -2129,7 +2129,7 @@ class CreateVpnConnectionResponse(AbstractModel):
     def __init__(self):
         """
         :param VpnConnection: 通道實例對象。
-        :type VpnConnection: :class:`tencentcloud.vpc.v20170312.models.VpnConnection`
+        :type VpnConnection: :class:`taifucloudcloud.vpc.v20170312.models.VpnConnection`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2160,7 +2160,7 @@ class CreateVpnGatewayRequest(AbstractModel):
         :param InstanceChargeType: VPN閘道計費模式，PREPAID：表示預付費，即包年包月，POSTPAID_BY_HOUR：表示後付費，即按量計費。預設：POSTPAID_BY_HOUR，如果指定預付費模式，參數InstanceChargePrepaid必填。
         :type InstanceChargeType: str
         :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的購買時長、是否設置自動續約等屬性。若指定實例的付費模式爲預付費則該參數必傳。
-        :type InstanceChargePrepaid: :class:`tencentcloud.vpc.v20170312.models.InstanceChargePrepaid`
+        :type InstanceChargePrepaid: :class:`taifucloudcloud.vpc.v20170312.models.InstanceChargePrepaid`
         :param Zone: 可用區，如：ap-guangzhou-2。
         :type Zone: str
         """
@@ -2191,7 +2191,7 @@ class CreateVpnGatewayResponse(AbstractModel):
     def __init__(self):
         """
         :param VpnGateway: VPN閘道對象
-        :type VpnGateway: :class:`tencentcloud.vpc.v20170312.models.VpnGateway`
+        :type VpnGateway: :class:`taifucloudcloud.vpc.v20170312.models.VpnGateway`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2750,7 +2750,7 @@ class DeleteSecurityGroupPoliciesRequest(AbstractModel):
         :param SecurityGroupId: 安全組實例ID，例如sg-33ocnj9n，可通過DescribeSecurityGroups獲取。
         :type SecurityGroupId: str
         :param SecurityGroupPolicySet: 安全組規則集合。一個請求中只能删除單個方向的一條或多條規則。支援指定索引（PolicyIndex） 比對删除和安全組規則比對删除兩種方式，一個請求中只能使用一種比對方式。
-        :type SecurityGroupPolicySet: :class:`tencentcloud.vpc.v20170312.models.SecurityGroupPolicySet`
+        :type SecurityGroupPolicySet: :class:`taifucloudcloud.vpc.v20170312.models.SecurityGroupPolicySet`
         """
         self.SecurityGroupId = None
         self.SecurityGroupPolicySet = None
@@ -3223,15 +3223,15 @@ class DescribeAddressesRequest(AbstractModel):
 <li> address-id - String - 是否必填：否 - （過濾條件）按照 EIP 的唯一 ID 過濾。EIP 唯一 ID 形如：eip-11112222。</li>
 <li> address-name - String - 是否必填：否 - （過濾條件）按照 EIP 名稱過濾。不支援模糊過濾。</li>
 <li> address-ip - String - 是否必填：否 - （過濾條件）按照 EIP 的 IP 網址過濾。</li>
-<li> address-status - String - 是否必填：否 - （過濾條件）按照 EIP 的狀态過濾。取值範圍：[詳見EIP狀态清單](https://cloud.tencent.com/document/api/213/9452#eip_state)。</li>
+<li> address-status - String - 是否必填：否 - （過濾條件）按照 EIP 的狀态過濾。取值範圍：[詳見EIP狀态清單](https://cloud.taifucloud.com/document/api/213/9452#eip_state)。</li>
 <li> instance-id - String - 是否必填：否 - （過濾條件）按照 EIP 綁定的實例 ID 過濾。實例 ID 形如：ins-11112222。</li>
 <li> private-ip-address - String - 是否必填：否 - （過濾條件）按照 EIP 綁定的内網 IP 過濾。</li>
 <li> network-interface-id - String - 是否必填：否 - （過濾條件）按照 EIP 綁定的彈性網卡 ID 過濾。彈性網卡 ID 形如：eni-11112222。</li>
 <li> is-arrears - String - 是否必填：否 - （過濾條件）按照 EIP 是否欠費進行過濾。（TRUE：EIP 處于欠費狀态|FALSE：EIP 費用狀态正常）</li>
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/11646)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/11646)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/11646)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/11646)中的相關小節。
         :type Limit: int
         """
         self.AddressIds = None
@@ -4283,9 +4283,9 @@ class DescribeIp6TranslatorsRequest(AbstractModel):
 <li> ip6-translator-name - String - 是否必填：否 - （過濾條件）按照IPV6轉換實例名稱過濾。不支援模糊過濾。</li>
 <li> ip6-translator-status - String - 是否必填：否 - （過濾條件）按照IPV6轉換實例的狀态過濾。狀态取值範圍爲"CREATING","RUNNING","DELETING","MODIFYING"
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/11646)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/11646)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/11646)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/11646)中的相關小節。
         :type Limit: int
         """
         self.Ip6TranslatorIds = None
@@ -4590,7 +4590,7 @@ class DescribeSecurityGroupPoliciesResponse(AbstractModel):
     def __init__(self):
         """
         :param SecurityGroupPolicySet: 安全組規則集合。
-        :type SecurityGroupPolicySet: :class:`tencentcloud.vpc.v20170312.models.SecurityGroupPolicySet`
+        :type SecurityGroupPolicySet: :class:`taifucloudcloud.vpc.v20170312.models.SecurityGroupPolicySet`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -5475,7 +5475,7 @@ class DisassociateAddressRequest(AbstractModel):
         """
         :param AddressId: 标識 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
         :type AddressId: str
-        :param ReallocateNormalPublicIp: 表示解綁 EIP 之後是否分配普通公網 IP。取值範圍：<br><li>TRUE：表示解綁 EIP 之後分配普通公網 IP。<br><li>FALSE：表示解綁 EIP 之後不分配普通公網 IP。<br>預設取值：FALSE。<br><br>只有滿足以下條件時才能指定該參數：<br><li> 只有在解綁主網卡的主内網 IP 上的 EIP 時才能指定該參數。<br><li>解綁 EIP 後重新分配普通公網 IP 操作一個賬号每天最多操作 10 次；詳情可通過 [DescribeAddressQuota](https://cloud.tencent.com/document/api/213/1378) 介面獲取。
+        :param ReallocateNormalPublicIp: 表示解綁 EIP 之後是否分配普通公網 IP。取值範圍：<br><li>TRUE：表示解綁 EIP 之後分配普通公網 IP。<br><li>FALSE：表示解綁 EIP 之後不分配普通公網 IP。<br>預設取值：FALSE。<br><br>只有滿足以下條件時才能指定該參數：<br><li> 只有在解綁主網卡的主内網 IP 上的 EIP 時才能指定該參數。<br><li>解綁 EIP 後重新分配普通公網 IP 操作一個賬号每天最多操作 10 次；詳情可通過 [DescribeAddressQuota](https://cloud.taifucloud.com/document/api/213/1378) 介面獲取。
         :type ReallocateNormalPublicIp: bool
         """
         self.AddressId = None
@@ -5516,7 +5516,7 @@ class DownloadCustomerGatewayConfigurationRequest(AbstractModel):
         :param VpnConnectionId: VPN通道實例ID。形如：vpnx-f49l6u0z。
         :type VpnConnectionId: str
         :param CustomerGatewayVendor: 對端閘道廠商訊息對象，可通過DescribeCustomerGatewayVendors獲取。
-        :type CustomerGatewayVendor: :class:`tencentcloud.vpc.v20170312.models.CustomerGatewayVendor`
+        :type CustomerGatewayVendor: :class:`taifucloudcloud.vpc.v20170312.models.CustomerGatewayVendor`
         :param InterfaceName: 通道接入設備物理介面名稱。
         :type InterfaceName: str
         """
@@ -5993,7 +5993,7 @@ class InquiryPriceCreateVpnGatewayRequest(AbstractModel):
         :param InstanceChargeType: VPN閘道計費模式，PREPAID：表示預付費，即包年包月，POSTPAID_BY_HOUR：表示後付費，即按量計費。預設：POSTPAID_BY_HOUR，如果指定預付費模式，參數InstanceChargePrepaid必填。
         :type InstanceChargeType: str
         :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的購買時長、是否設置自動續約等屬性。若指定實例的付費模式爲預付費則該參數必傳。
-        :type InstanceChargePrepaid: :class:`tencentcloud.vpc.v20170312.models.InstanceChargePrepaid`
+        :type InstanceChargePrepaid: :class:`taifucloudcloud.vpc.v20170312.models.InstanceChargePrepaid`
         """
         self.InternetMaxBandwidthOut = None
         self.InstanceChargeType = None
@@ -6016,7 +6016,7 @@ class InquiryPriceCreateVpnGatewayResponse(AbstractModel):
     def __init__(self):
         """
         :param Price: 商品價格。
-        :type Price: :class:`tencentcloud.vpc.v20170312.models.Price`
+        :type Price: :class:`taifucloudcloud.vpc.v20170312.models.Price`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -6041,7 +6041,7 @@ class InquiryPriceRenewVpnGatewayRequest(AbstractModel):
         :param VpnGatewayId: VPN閘道實例ID。
         :type VpnGatewayId: str
         :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的購買時長、是否設置自動續約等屬性。若指定實例的付費模式爲預付費則該參數必傳。
-        :type InstanceChargePrepaid: :class:`tencentcloud.vpc.v20170312.models.InstanceChargePrepaid`
+        :type InstanceChargePrepaid: :class:`taifucloudcloud.vpc.v20170312.models.InstanceChargePrepaid`
         """
         self.VpnGatewayId = None
         self.InstanceChargePrepaid = None
@@ -6062,7 +6062,7 @@ class InquiryPriceRenewVpnGatewayResponse(AbstractModel):
     def __init__(self):
         """
         :param Price: 商品價格。
-        :type Price: :class:`tencentcloud.vpc.v20170312.models.Price`
+        :type Price: :class:`taifucloudcloud.vpc.v20170312.models.Price`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -6106,7 +6106,7 @@ class InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse(AbstractModel):
     def __init__(self):
         """
         :param Price: 商品價格。
-        :type Price: :class:`tencentcloud.vpc.v20170312.models.Price`
+        :type Price: :class:`taifucloudcloud.vpc.v20170312.models.Price`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -7188,7 +7188,7 @@ class ModifySecurityGroupPoliciesRequest(AbstractModel):
         :param SecurityGroupId: 安全組實例ID，例如sg-33ocnj9n，可通過DescribeSecurityGroups獲取。
         :type SecurityGroupId: str
         :param SecurityGroupPolicySet: 安全組規則集合。 SecurityGroupPolicySet對象必須同時指定新的出（Egress）入（Ingress）站規則。 SecurityGroupPolicy對象不支援自定義索引（PolicyIndex）。
-        :type SecurityGroupPolicySet: :class:`tencentcloud.vpc.v20170312.models.SecurityGroupPolicySet`
+        :type SecurityGroupPolicySet: :class:`taifucloudcloud.vpc.v20170312.models.SecurityGroupPolicySet`
         """
         self.SecurityGroupId = None
         self.SecurityGroupPolicySet = None
@@ -7410,9 +7410,9 @@ class ModifyVpnConnectionAttributeRequest(AbstractModel):
         :param SecurityPolicyDatabases: SPD策略組，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内網段172.123.10.5/16是IDC網段。用戶指定VPC内哪些網段可以和您IDC中哪些網段通信。
         :type SecurityPolicyDatabases: list of SecurityPolicyDatabase
         :param IKEOptionsSpecification: IKE配置（Internet Key Exchange，因特網金鑰交換），IKE具有一套自我保護機制，用戶配置網絡安全協議。
-        :type IKEOptionsSpecification: :class:`tencentcloud.vpc.v20170312.models.IKEOptionsSpecification`
+        :type IKEOptionsSpecification: :class:`taifucloudcloud.vpc.v20170312.models.IKEOptionsSpecification`
         :param IPSECOptionsSpecification: IPSec配置，Top Cloud 提供IPSec安全會話設置。
-        :type IPSECOptionsSpecification: :class:`tencentcloud.vpc.v20170312.models.IPSECOptionsSpecification`
+        :type IPSECOptionsSpecification: :class:`taifucloudcloud.vpc.v20170312.models.IPSECOptionsSpecification`
         """
         self.VpnConnectionId = None
         self.VpnConnectionName = None
@@ -7533,7 +7533,7 @@ class NetworkInterface(AbstractModel):
         :type PrivateIpAddressSet: list of PrivateIpAddressSpecification
         :param Attachment: 綁定的雲伺服器對象。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Attachment: :class:`tencentcloud.vpc.v20170312.models.NetworkInterfaceAttachment`
+        :type Attachment: :class:`taifucloudcloud.vpc.v20170312.models.NetworkInterfaceAttachment`
         :param Zone: 可用區。
         :type Zone: str
         :param CreatedTime: 創建時間。
@@ -7623,9 +7623,9 @@ class Price(AbstractModel):
     def __init__(self):
         """
         :param InstancePrice: 實例價格。
-        :type InstancePrice: :class:`tencentcloud.vpc.v20170312.models.ItemPrice`
+        :type InstancePrice: :class:`taifucloudcloud.vpc.v20170312.models.ItemPrice`
         :param BandwidthPrice: 網絡價格。
-        :type BandwidthPrice: :class:`tencentcloud.vpc.v20170312.models.ItemPrice`
+        :type BandwidthPrice: :class:`taifucloudcloud.vpc.v20170312.models.ItemPrice`
         """
         self.InstancePrice = None
         self.BandwidthPrice = None
@@ -7877,7 +7877,7 @@ class RenewVpnGatewayRequest(AbstractModel):
         :param VpnGatewayId: VPN閘道實例ID。
         :type VpnGatewayId: str
         :param InstanceChargePrepaid: 預付費計費模式。
-        :type InstanceChargePrepaid: :class:`tencentcloud.vpc.v20170312.models.InstanceChargePrepaid`
+        :type InstanceChargePrepaid: :class:`taifucloudcloud.vpc.v20170312.models.InstanceChargePrepaid`
         """
         self.VpnGatewayId = None
         self.InstanceChargePrepaid = None
@@ -8041,7 +8041,7 @@ class ReplaceSecurityGroupPolicyRequest(AbstractModel):
         :param SecurityGroupId: 安全組實例ID，例如sg-33ocnj9n，可通過DescribeSecurityGroups獲取。
         :type SecurityGroupId: str
         :param SecurityGroupPolicySet: 安全組規則集合對象。
-        :type SecurityGroupPolicySet: :class:`tencentcloud.vpc.v20170312.models.SecurityGroupPolicySet`
+        :type SecurityGroupPolicySet: :class:`taifucloudcloud.vpc.v20170312.models.SecurityGroupPolicySet`
         """
         self.SecurityGroupId = None
         self.SecurityGroupPolicySet = None
@@ -8520,13 +8520,13 @@ class SecurityGroupPolicy(AbstractModel):
         :param Port: 端口(all, 離散port,  range)。
         :type Port: str
         :param ServiceTemplate: 協議端口ID或者協議端口組ID。ServiceTemplate和Protocol+Port互斥。
-        :type ServiceTemplate: :class:`tencentcloud.vpc.v20170312.models.ServiceTemplateSpecification`
+        :type ServiceTemplate: :class:`taifucloudcloud.vpc.v20170312.models.ServiceTemplateSpecification`
         :param CidrBlock: 網段或IP(互斥)。
         :type CidrBlock: str
         :param SecurityGroupId: 安全組實例ID，例如：sg-ohuuioma。
         :type SecurityGroupId: str
         :param AddressTemplate: IP網址ID或者ID網址組ID。
-        :type AddressTemplate: :class:`tencentcloud.vpc.v20170312.models.AddressTemplateSpecification`
+        :type AddressTemplate: :class:`taifucloudcloud.vpc.v20170312.models.AddressTemplateSpecification`
         :param Action: ACCEPT 或 DROP。
         :type Action: str
         :param PolicyDescription: 安全組規則描述。
@@ -8838,7 +8838,7 @@ class TransformAddressRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 待操作有普通公網 IP 的實例 ID。實例 ID 形如：`ins-11112222`。可通過登入[控制台](https://console.cloud.tencent.com/cvm)查詢，也可通過 [DescribeInstances](https://cloud.tencent.com/document/api/213/9389) 介面返回值中的`InstanceId`獲取。
+        :param InstanceId: 待操作有普通公網 IP 的實例 ID。實例 ID 形如：`ins-11112222`。可通過登入[控制台](https://console.cloud.taifucloud.com/cvm)查詢，也可通過 [DescribeInstances](https://cloud.taifucloud.com/document/api/213/9389) 介面返回值中的`InstanceId`獲取。
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -9181,9 +9181,9 @@ class VpnConnection(AbstractModel):
         :param SecurityPolicyDatabaseSet: SPD。
         :type SecurityPolicyDatabaseSet: list of SecurityPolicyDatabase
         :param IKEOptionsSpecification: IKE選項。
-        :type IKEOptionsSpecification: :class:`tencentcloud.vpc.v20170312.models.IKEOptionsSpecification`
+        :type IKEOptionsSpecification: :class:`taifucloudcloud.vpc.v20170312.models.IKEOptionsSpecification`
         :param IPSECOptionsSpecification: IPSEC選擇。
-        :type IPSECOptionsSpecification: :class:`tencentcloud.vpc.v20170312.models.IPSECOptionsSpecification`
+        :type IPSECOptionsSpecification: :class:`taifucloudcloud.vpc.v20170312.models.IPSECOptionsSpecification`
         """
         self.VpnConnectionId = None
         self.VpnConnectionName = None

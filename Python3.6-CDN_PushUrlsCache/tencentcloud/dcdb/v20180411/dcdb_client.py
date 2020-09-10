@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.dcdb.v20180411 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.dcdb.v20180411 import models
 
 
 class DcdbClient(AbstractClient):
     _apiVersion = '2018-04-11'
-    _endpoint = 'dcdb.tencentcloudapi.com'
+    _endpoint = 'dcdb.taifucloudcloudapi.com'
 
 
     def CloneAccount(self, request):
         """本介面（CloneAccount）用于複製實例帳戶。
 
         :param request: Request instance for CloneAccount.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.CloneAccountRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.CloneAccountResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.CloneAccountRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.CloneAccountResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class DcdbClient(AbstractClient):
         """本介面(CloseDBExtranetAccess)用于關閉雲資料庫實例的外網訪問。關閉外網訪問後，外網網址将不可訪問，查詢實例清單介面将不返回對應實例的外網域名和端口訊息。
 
         :param request: Request instance for CloseDBExtranetAccess.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.CloseDBExtranetAccessRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.CloseDBExtranetAccessResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.CloseDBExtranetAccessRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.CloseDBExtranetAccessResponse`
 
         """
         try:
@@ -86,8 +86,8 @@ class DcdbClient(AbstractClient):
         注意：相同用戶名，不同Host是不同的賬号，Readonly屬性相同的賬号之間才能複制權限。
 
         :param request: Request instance for CopyAccountPrivileges.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.CopyAccountPrivilegesRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.CopyAccountPrivilegesResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.CopyAccountPrivilegesRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.CopyAccountPrivilegesResponse`
 
         """
         try:
@@ -114,8 +114,8 @@ class DcdbClient(AbstractClient):
         """本介面（CreateAccount）用于創建雲資料庫賬号。一個實例可以創建多個不同的賬号，相同的用戶名+不同的host是不同的賬号。
 
         :param request: Request instance for CreateAccount.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.CreateAccountRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.CreateAccountResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.CreateAccountRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.CreateAccountResponse`
 
         """
         try:
@@ -142,8 +142,8 @@ class DcdbClient(AbstractClient):
         """本介面（CreateDCDBInstance）用于創建包年包月的雲資料庫實例，可通過傳入實例規格、資料庫版本号、購買時長等訊息創建雲資料庫實例。
 
         :param request: Request instance for CreateDCDBInstance.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.CreateDCDBInstanceRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.CreateDCDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.CreateDCDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.CreateDCDBInstanceResponse`
 
         """
         try:
@@ -170,8 +170,8 @@ class DcdbClient(AbstractClient):
         """本介面（DeleteAccount）用于删除雲資料庫賬号。用戶名+host唯一确定一個賬号。
 
         :param request: Request instance for DeleteAccount.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DeleteAccountRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DeleteAccountResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DeleteAccountRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DeleteAccountResponse`
 
         """
         try:
@@ -199,8 +199,8 @@ class DcdbClient(AbstractClient):
         注意：注意：相同用戶名，不同Host是不同的賬号。
 
         :param request: Request instance for DescribeAccountPrivileges.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeAccountPrivilegesRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeAccountPrivilegesResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeAccountPrivilegesRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeAccountPrivilegesResponse`
 
         """
         try:
@@ -227,8 +227,8 @@ class DcdbClient(AbstractClient):
         """本介面（DescribeAccounts）用于查詢指定雲資料庫實例的賬号清單。
 
         :param request: Request instance for DescribeAccounts.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeAccountsRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeAccountsResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeAccountsRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeAccountsResponse`
 
         """
         try:
@@ -255,8 +255,8 @@ class DcdbClient(AbstractClient):
         """本介面(DescribeDBLogFiles)用于獲取資料庫的各種日志清單，包括冷備、binlog、errlog和slowlog。
 
         :param request: Request instance for DescribeDBLogFiles.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeDBLogFilesRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeDBLogFilesResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDBLogFilesRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDBLogFilesResponse`
 
         """
         try:
@@ -283,8 +283,8 @@ class DcdbClient(AbstractClient):
         """本介面(DescribeDBParameters)用于獲取資料庫的當前參數設置。
 
         :param request: Request instance for DescribeDBParameters.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeDBParametersRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeDBParametersResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDBParametersRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDBParametersResponse`
 
         """
         try:
@@ -311,8 +311,8 @@ class DcdbClient(AbstractClient):
         """本介面（DescribeDBSyncMode）用于查詢雲資料庫實例的同步模式。
 
         :param request: Request instance for DescribeDBSyncMode.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeDBSyncModeRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeDBSyncModeResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDBSyncModeRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDBSyncModeResponse`
 
         """
         try:
@@ -340,8 +340,8 @@ class DcdbClient(AbstractClient):
         如果不指定任何篩選條件，則預設返回10條實例記錄，單次請求最多支援返回100條實例記錄。
 
         :param request: Request instance for DescribeDCDBInstances.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeDCDBInstancesRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeDCDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBInstancesResponse`
 
         """
         try:
@@ -368,8 +368,8 @@ class DcdbClient(AbstractClient):
         """本介面（DescribeDCDBPrice）用于在購買實例前，查詢實例的價格。
 
         :param request: Request instance for DescribeDCDBPrice.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeDCDBPriceRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeDCDBPriceResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBPriceRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBPriceResponse`
 
         """
         try:
@@ -396,8 +396,8 @@ class DcdbClient(AbstractClient):
         """本介面（DescribeDCDBRenewalPrice）用于在續約分布式資料庫實例時，查詢續約的價格。
 
         :param request: Request instance for DescribeDCDBRenewalPrice.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeDCDBRenewalPriceRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeDCDBRenewalPriceResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBRenewalPriceRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBRenewalPriceResponse`
 
         """
         try:
@@ -424,8 +424,8 @@ class DcdbClient(AbstractClient):
         """本介面(DescribeDCDBSaleInfo)用于查詢分布式資料庫可售賣的地域和可用區訊息。
 
         :param request: Request instance for DescribeDCDBSaleInfo.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeDCDBSaleInfoRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeDCDBSaleInfoResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBSaleInfoRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBSaleInfoResponse`
 
         """
         try:
@@ -452,8 +452,8 @@ class DcdbClient(AbstractClient):
         """本介面（DescribeDCDBShards）用于查詢雲資料庫實例的分片訊息。
 
         :param request: Request instance for DescribeDCDBShards.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeDCDBShardsRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeDCDBShardsResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBShardsRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBShardsResponse`
 
         """
         try:
@@ -480,8 +480,8 @@ class DcdbClient(AbstractClient):
         """本介面（DescribeDCDBUpgradePrice）用于查詢升級分布式資料庫實例價格。
 
         :param request: Request instance for DescribeDCDBUpgradePrice.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeDCDBUpgradePriceRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeDCDBUpgradePriceResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBUpgradePriceRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBUpgradePriceResponse`
 
         """
         try:
@@ -508,8 +508,8 @@ class DcdbClient(AbstractClient):
         """本介面（DescribeDatabaseObjects）用于查詢雲資料庫實例的資料庫中的對象清單，包含表、儲存過程、視圖和函數。
 
         :param request: Request instance for DescribeDatabaseObjects.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeDatabaseObjectsRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeDatabaseObjectsResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDatabaseObjectsRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDatabaseObjectsResponse`
 
         """
         try:
@@ -536,8 +536,8 @@ class DcdbClient(AbstractClient):
         """本介面（DescribeDatabaseTable）用于查詢雲資料庫實例的表訊息。
 
         :param request: Request instance for DescribeDatabaseTable.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeDatabaseTableRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeDatabaseTableResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDatabaseTableRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDatabaseTableResponse`
 
         """
         try:
@@ -564,8 +564,8 @@ class DcdbClient(AbstractClient):
         """本介面（DescribeDatabases）用于查詢雲資料庫實例的資料庫清單。
 
         :param request: Request instance for DescribeDatabases.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeDatabasesRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeDatabasesResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDatabasesRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDatabasesResponse`
 
         """
         try:
@@ -592,8 +592,8 @@ class DcdbClient(AbstractClient):
         """本介面（DescribeOrders）用于查詢分布式資料庫訂單訊息。傳入訂單ID來查詢訂單關聯的分布式資料庫實例，和對應的任務流程ID。
 
         :param request: Request instance for DescribeOrders.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeOrdersRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeOrdersResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeOrdersRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeOrdersResponse`
 
         """
         try:
@@ -620,8 +620,8 @@ class DcdbClient(AbstractClient):
         """本介面（DescribeProjects）用于查詢項目清單
 
         :param request: Request instance for DescribeProjects.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeProjectsRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeProjectsResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeProjectsRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeProjectsResponse`
 
         """
         try:
@@ -648,8 +648,8 @@ class DcdbClient(AbstractClient):
         """查詢可創建的分布式資料庫可售賣的分片規格配置。
 
         :param request: Request instance for DescribeShardSpec.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeShardSpecRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeShardSpecResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeShardSpecRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeShardSpecResponse`
 
         """
         try:
@@ -676,8 +676,8 @@ class DcdbClient(AbstractClient):
         """本介面（DescribeSqlLogs）用于獲取實例SQL日志。
 
         :param request: Request instance for DescribeSqlLogs.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.DescribeSqlLogsRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.DescribeSqlLogsResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeSqlLogsRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeSqlLogsResponse`
 
         """
         try:
@@ -705,8 +705,8 @@ class DcdbClient(AbstractClient):
         注意：相同用戶名，不同Host是不同的賬号。
 
         :param request: Request instance for GrantAccountPrivileges.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.GrantAccountPrivilegesRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.GrantAccountPrivilegesResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.GrantAccountPrivilegesRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.GrantAccountPrivilegesResponse`
 
         """
         try:
@@ -733,8 +733,8 @@ class DcdbClient(AbstractClient):
         """本介面(InitDCDBInstances)用于初始化雲資料庫實例，包括設置預設字元集、表名大小寫敏感等。
 
         :param request: Request instance for InitDCDBInstances.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.InitDCDBInstancesRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.InitDCDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.InitDCDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.InitDCDBInstancesResponse`
 
         """
         try:
@@ -762,8 +762,8 @@ class DcdbClient(AbstractClient):
         注意：相同用戶名，不同Host是不同的賬号。
 
         :param request: Request instance for ModifyAccountDescription.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.ModifyAccountDescriptionRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.ModifyAccountDescriptionResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.ModifyAccountDescriptionRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.ModifyAccountDescriptionResponse`
 
         """
         try:
@@ -790,8 +790,8 @@ class DcdbClient(AbstractClient):
         """本介面（ModifyDBInstancesProject）用于修改雲資料庫實例所屬項目。
 
         :param request: Request instance for ModifyDBInstancesProject.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.ModifyDBInstancesProjectRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.ModifyDBInstancesProjectResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.ModifyDBInstancesProjectRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.ModifyDBInstancesProjectResponse`
 
         """
         try:
@@ -818,8 +818,8 @@ class DcdbClient(AbstractClient):
         """本介面(ModifyDBParameters)用于修改資料庫參數。
 
         :param request: Request instance for ModifyDBParameters.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.ModifyDBParametersRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.ModifyDBParametersResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.ModifyDBParametersRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.ModifyDBParametersResponse`
 
         """
         try:
@@ -846,8 +846,8 @@ class DcdbClient(AbstractClient):
         """本介面（ModifyDBSyncMode）用于修改雲資料庫實例的同步模式。
 
         :param request: Request instance for ModifyDBSyncMode.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.ModifyDBSyncModeRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.ModifyDBSyncModeResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.ModifyDBSyncModeRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.ModifyDBSyncModeResponse`
 
         """
         try:
@@ -874,8 +874,8 @@ class DcdbClient(AbstractClient):
         """本介面（OpenDBExtranetAccess）用于開通雲資料庫實例的外網訪問。開通外網訪問後，您可通過外網域名和端口訪問實例，可使用查詢實例清單介面獲取外網域名和端口訊息。
 
         :param request: Request instance for OpenDBExtranetAccess.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.OpenDBExtranetAccessRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.OpenDBExtranetAccessResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.OpenDBExtranetAccessRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.OpenDBExtranetAccessResponse`
 
         """
         try:
@@ -902,8 +902,8 @@ class DcdbClient(AbstractClient):
         """本介面（RenewDCDBInstance）用于續約分布式資料庫實例。
 
         :param request: Request instance for RenewDCDBInstance.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.RenewDCDBInstanceRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.RenewDCDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.RenewDCDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.RenewDCDBInstanceResponse`
 
         """
         try:
@@ -931,8 +931,8 @@ class DcdbClient(AbstractClient):
         注意：相同用戶名，不同Host是不同的賬号。
 
         :param request: Request instance for ResetAccountPassword.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.ResetAccountPasswordRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.ResetAccountPasswordResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.ResetAccountPasswordRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.ResetAccountPasswordResponse`
 
         """
         try:
@@ -959,8 +959,8 @@ class DcdbClient(AbstractClient):
         """本介面（UpgradeDCDBInstance）用于升級分布式資料庫實例。本介面完成下單和支付兩個動作，如果發生支付失敗的錯誤，調用用戶帳戶相關介面中的支付訂單介面（PayDeals）重新支付即可。
 
         :param request: Request instance for UpgradeDCDBInstance.
-        :type request: :class:`tencentcloud.dcdb.v20180411.models.UpgradeDCDBInstanceRequest`
-        :rtype: :class:`tencentcloud.dcdb.v20180411.models.UpgradeDCDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.dcdb.v20180411.models.UpgradeDCDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.dcdb.v20180411.models.UpgradeDCDBInstanceResponse`
 
         """
         try:

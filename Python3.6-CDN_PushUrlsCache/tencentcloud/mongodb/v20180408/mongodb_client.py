@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.mongodb.v20180408 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.mongodb.v20180408 import models
 
 
 class MongodbClient(AbstractClient):
     _apiVersion = '2018-04-08'
-    _endpoint = 'mongodb.tencentcloudapi.com'
+    _endpoint = 'mongodb.taifucloudcloudapi.com'
 
 
     def AssignProject(self, request):
@@ -30,8 +30,8 @@ class MongodbClient(AbstractClient):
 
 
         :param request: Request instance for AssignProject.
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.AssignProjectRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.AssignProjectResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.AssignProjectRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.AssignProjectResponse`
 
         """
         try:
@@ -58,8 +58,8 @@ class MongodbClient(AbstractClient):
         """本介面(CreateDBInstance)用于創建包年包月的MongoDB雲資料庫實例。
 
         :param request: Request instance for CreateDBInstance.
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.CreateDBInstanceRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.CreateDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.CreateDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.CreateDBInstanceResponse`
 
         """
         try:
@@ -86,8 +86,8 @@ class MongodbClient(AbstractClient):
         """本介面(CreateDBInstanceHour)用于創建按量計費的MongoDB雲資料庫實例（包括主實例、災備實例和只讀實例），可通過傳入實例規格、實例類型、MongoDB版本、購買時長和數量等訊息創建雲資料庫實例。
 
         :param request: Request instance for CreateDBInstanceHour.
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.CreateDBInstanceHourRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.CreateDBInstanceHourResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.CreateDBInstanceHourRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.CreateDBInstanceHourResponse`
 
         """
         try:
@@ -114,8 +114,8 @@ class MongodbClient(AbstractClient):
         """本介面(DescribeClientConnections)用于查詢實例用戶端連接訊息，包括連接IP和連接數量。目前只支援3.2版本的MongoDB實例。
 
         :param request: Request instance for DescribeClientConnections.
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.DescribeClientConnectionsRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.DescribeClientConnectionsResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.DescribeClientConnectionsRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.DescribeClientConnectionsResponse`
 
         """
         try:
@@ -142,8 +142,8 @@ class MongodbClient(AbstractClient):
         """本介面(DescribeDBInstances)用于查詢雲資料庫實例清單，支援通過項目ID、實例ID、實例狀态等過濾條件來篩選實例。支援查詢主實例、災備實例和只讀實例訊息清單。
 
         :param request: Request instance for DescribeDBInstances.
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.DescribeDBInstancesRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.DescribeDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.DescribeDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.DescribeDBInstancesResponse`
 
         """
         try:
@@ -170,8 +170,8 @@ class MongodbClient(AbstractClient):
         """本介面(DescribeSlowLogs)用于獲取雲資料庫實例的慢查詢日志。
 
         :param request: Request instance for DescribeSlowLog.
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.DescribeSlowLogRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.DescribeSlowLogResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.DescribeSlowLogRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.DescribeSlowLogResponse`
 
         """
         try:
@@ -198,8 +198,8 @@ class MongodbClient(AbstractClient):
         """本介面(DescribeSpecInfo)用于查詢實例的售賣規格。
 
         :param request: Request instance for DescribeSpecInfo.
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.DescribeSpecInfoRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.DescribeSpecInfoResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.DescribeSpecInfoRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.DescribeSpecInfoResponse`
 
         """
         try:
@@ -226,8 +226,8 @@ class MongodbClient(AbstractClient):
         """本介面(RenameInstance)用于修改雲資料庫實例的名稱。
 
         :param request: Request instance for RenameInstance.
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.RenameInstanceRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.RenameInstanceResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.RenameInstanceRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.RenameInstanceResponse`
 
         """
         try:
@@ -254,8 +254,8 @@ class MongodbClient(AbstractClient):
         """本介面(SetAutoRenew)用于設置包年包月雲資料庫實例的續約選項。
 
         :param request: Request instance for SetAutoRenew.
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.SetAutoRenewRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.SetAutoRenewResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.SetAutoRenewRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.SetAutoRenewResponse`
 
         """
         try:
@@ -283,8 +283,8 @@ class MongodbClient(AbstractClient):
 
 
         :param request: Request instance for SetPassword.
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.SetPasswordRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.SetPasswordResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.SetPasswordRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.SetPasswordResponse`
 
         """
         try:
@@ -311,8 +311,8 @@ class MongodbClient(AbstractClient):
         """本介面(TerminateDBInstance)用于銷毀按量計費的MongoDB雲資料庫實例
 
         :param request: Request instance for TerminateDBInstance.
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.TerminateDBInstanceRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.TerminateDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.TerminateDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.TerminateDBInstanceResponse`
 
         """
         try:
@@ -339,8 +339,8 @@ class MongodbClient(AbstractClient):
         """本介面(UpgradeDBInstance)用于升級包年包月的MongoDB雲資料庫實例，可以擴容内存、儲存以及Oplog
 
         :param request: Request instance for UpgradeDBInstance.
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.UpgradeDBInstanceRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.UpgradeDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.UpgradeDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.UpgradeDBInstanceResponse`
 
         """
         try:
@@ -367,8 +367,8 @@ class MongodbClient(AbstractClient):
         """本介面(UpgradeDBInstanceHour)用于升級按量計費的MongoDB雲資料庫實例，可以擴容内存、儲存以及oplog
 
         :param request: Request instance for UpgradeDBInstanceHour.
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.UpgradeDBInstanceHourRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.UpgradeDBInstanceHourResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.UpgradeDBInstanceHourRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.UpgradeDBInstanceHourResponse`
 
         """
         try:

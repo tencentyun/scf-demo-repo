@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cms.v20190321 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cms.v20190321 import models
 
 
 class CmsClient(AbstractClient):
     _apiVersion = '2019-03-21'
-    _endpoint = 'cms.tencentcloudapi.com'
+    _endpoint = 'cms.taifucloudcloudapi.com'
 
 
     def CreateFileSample(self, request):
@@ -31,8 +31,8 @@ class CmsClient(AbstractClient):
         通過該介面可以将圖片新增到樣本庫。
 
         :param request: Request instance for CreateFileSample.
-        :type request: :class:`tencentcloud.cms.v20190321.models.CreateFileSampleRequest`
-        :rtype: :class:`tencentcloud.cms.v20190321.models.CreateFileSampleResponse`
+        :type request: :class:`taifucloudcloud.cms.v20190321.models.CreateFileSampleRequest`
+        :rtype: :class:`taifucloudcloud.cms.v20190321.models.CreateFileSampleResponse`
 
         """
         try:
@@ -61,8 +61,8 @@ class CmsClient(AbstractClient):
         通過該介面可以将文本新增到樣本庫。
 
         :param request: Request instance for CreateTextSample.
-        :type request: :class:`tencentcloud.cms.v20190321.models.CreateTextSampleRequest`
-        :rtype: :class:`tencentcloud.cms.v20190321.models.CreateTextSampleResponse`
+        :type request: :class:`taifucloudcloud.cms.v20190321.models.CreateTextSampleRequest`
+        :rtype: :class:`taifucloudcloud.cms.v20190321.models.CreateTextSampleResponse`
 
         """
         try:
@@ -91,8 +91,8 @@ class CmsClient(AbstractClient):
         删除圖片樣本庫，支援批次删除，一次提交不超過20個。
 
         :param request: Request instance for DeleteFileSample.
-        :type request: :class:`tencentcloud.cms.v20190321.models.DeleteFileSampleRequest`
-        :rtype: :class:`tencentcloud.cms.v20190321.models.DeleteFileSampleResponse`
+        :type request: :class:`taifucloudcloud.cms.v20190321.models.DeleteFileSampleRequest`
+        :rtype: :class:`taifucloudcloud.cms.v20190321.models.DeleteFileSampleResponse`
 
         """
         try:
@@ -121,8 +121,8 @@ class CmsClient(AbstractClient):
         删除文本樣本庫，暫時只支援單個删除。
 
         :param request: Request instance for DeleteTextSample.
-        :type request: :class:`tencentcloud.cms.v20190321.models.DeleteTextSampleRequest`
-        :rtype: :class:`tencentcloud.cms.v20190321.models.DeleteTextSampleResponse`
+        :type request: :class:`taifucloudcloud.cms.v20190321.models.DeleteTextSampleRequest`
+        :rtype: :class:`taifucloudcloud.cms.v20190321.models.DeleteTextSampleResponse`
 
         """
         try:
@@ -151,8 +151,8 @@ class CmsClient(AbstractClient):
         查詢圖片樣本庫，支援批次查詢。
 
         :param request: Request instance for DescribeFileSample.
-        :type request: :class:`tencentcloud.cms.v20190321.models.DescribeFileSampleRequest`
-        :rtype: :class:`tencentcloud.cms.v20190321.models.DescribeFileSampleResponse`
+        :type request: :class:`taifucloudcloud.cms.v20190321.models.DescribeFileSampleRequest`
+        :rtype: :class:`taifucloudcloud.cms.v20190321.models.DescribeFileSampleResponse`
 
         """
         try:
@@ -181,8 +181,8 @@ class CmsClient(AbstractClient):
         支援批次查詢文本樣本庫。
 
         :param request: Request instance for DescribeTextSample.
-        :type request: :class:`tencentcloud.cms.v20190321.models.DescribeTextSampleRequest`
-        :rtype: :class:`tencentcloud.cms.v20190321.models.DescribeTextSampleResponse`
+        :type request: :class:`taifucloudcloud.cms.v20190321.models.DescribeTextSampleRequest`
+        :rtype: :class:`taifucloudcloud.cms.v20190321.models.DescribeTextSampleResponse`
 
         """
         try:
@@ -209,8 +209,8 @@ class CmsClient(AbstractClient):
         """圖片内容檢測服務（Image Moderation, IM）能自動掃描圖片，識别涉黃、涉恐、涉政、涉毒等有害内容，同時支援用戶配置圖片黑名單，打擊自定義的違規圖片。
 
         :param request: Request instance for ImageModeration.
-        :type request: :class:`tencentcloud.cms.v20190321.models.ImageModerationRequest`
-        :rtype: :class:`tencentcloud.cms.v20190321.models.ImageModerationResponse`
+        :type request: :class:`taifucloudcloud.cms.v20190321.models.ImageModerationRequest`
+        :rtype: :class:`taifucloudcloud.cms.v20190321.models.ImageModerationResponse`
 
         """
         try:
@@ -237,8 +237,8 @@ class CmsClient(AbstractClient):
         """文本内容檢測（Text Moderation）服務使用了深度學習技術，識别涉黃、涉政、涉恐等有害内容，同時支援用戶配置詞庫，打擊自定義的違規文本。
 
         :param request: Request instance for TextModeration.
-        :type request: :class:`tencentcloud.cms.v20190321.models.TextModerationRequest`
-        :rtype: :class:`tencentcloud.cms.v20190321.models.TextModerationResponse`
+        :type request: :class:`taifucloudcloud.cms.v20190321.models.TextModerationRequest`
+        :rtype: :class:`taifucloudcloud.cms.v20190321.models.TextModerationResponse`
 
         """
         try:

@@ -9,10 +9,10 @@ using System.Linq;
 
 public class HttpRequest
 {
-    // 使用post方法异步请求
-    // url 目标链接
-    // data 发送的参数字符串
-    // return 返回的字符串
+    // 使用post方法異步請求
+    // url 目标連結
+    // data 發送的參數字串
+    // return 返回的字串
     public static string PostAsync(string url, string data)
     {
         Console.WriteLine("Post Data :" + data);
@@ -24,15 +24,15 @@ public class HttpRequest
         return responseBody;
     }
 
-    // 使用get方法异步请求
-    // url 目标链接
-    // return 返回的字符串
+    // 使用get方法異步請求
+    // url 目标連結
+    // return 返回的字串
     public static string GetAndProcessEvent(string url)
     {
         // Use Get Api to grab events.
         HttpClient client = new HttpClient(new HttpClientHandler() { UseCookies = false });
         HttpResponseMessage response = client.GetAsync(url).Result;
-        response.EnsureSuccessStatusCode();  //用来抛异常的
+        response.EnsureSuccessStatusCode();  //用來抛異常的
         
         // Events in response body, other infos in header.
         string responseBody = response.Content.ReadAsStringAsync().Result;

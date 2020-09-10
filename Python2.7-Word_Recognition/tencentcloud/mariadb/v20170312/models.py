@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CloneAccountRequest(AbstractModel):
@@ -287,9 +287,9 @@ class CreateDBInstanceRequest(AbstractModel):
         :type Period: int
         :param Count: 欲購買的數量，預設查詢購買1個實例的價格。
         :type Count: int
-        :param AutoVoucher: 是否自動使用代金券進行支付，預設不使用。
+        :param AutoVoucher: 是否自動使用 進行支付，預設不使用。
         :type AutoVoucher: bool
-        :param VoucherIds: 代金券ID清單，目前僅支援指定一張代金券。
+        :param VoucherIds:  ID清單，目前僅支援指定一張 。
         :type VoucherIds: list of str
         :param VpcId: 虛拟私有網絡 ID，不傳表示創建爲基礎網絡
         :type VpcId: str
@@ -1147,13 +1147,13 @@ class DescribeDBPerformanceDetailsResponse(AbstractModel):
     def __init__(self):
         """
         :param Master: 主節點效能監控數據
-        :type Master: :class:`tencentcloud.mariadb.v20170312.models.PerformanceMonitorSet`
+        :type Master: :class:`taifucloudcloud.mariadb.v20170312.models.PerformanceMonitorSet`
         :param Slave1: 備機1效能監控數據
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Slave1: :class:`tencentcloud.mariadb.v20170312.models.PerformanceMonitorSet`
+        :type Slave1: :class:`taifucloudcloud.mariadb.v20170312.models.PerformanceMonitorSet`
         :param Slave2: 備機2效能監控數據，如果實例是一主一從，則沒有該欄位
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Slave2: :class:`tencentcloud.mariadb.v20170312.models.PerformanceMonitorSet`
+        :type Slave2: :class:`taifucloudcloud.mariadb.v20170312.models.PerformanceMonitorSet`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1213,25 +1213,25 @@ class DescribeDBPerformanceResponse(AbstractModel):
     def __init__(self):
         """
         :param LongQuery: 慢查詢數
-        :type LongQuery: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type LongQuery: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param SelectTotal: 查詢操作數SELECT
-        :type SelectTotal: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type SelectTotal: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param UpdateTotal: 更新操作數UPDATE
-        :type UpdateTotal: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type UpdateTotal: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param InsertTotal: 插入操作數INSERT
-        :type InsertTotal: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type InsertTotal: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param DeleteTotal: 删除操作數DELETE
-        :type DeleteTotal: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type DeleteTotal: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param MemHitRate: 快取命中率
-        :type MemHitRate: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type MemHitRate: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param DiskIops: 磁盤每秒IO次數
-        :type DiskIops: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type DiskIops: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param ConnActive: 活躍連接數
-        :type ConnActive: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type ConnActive: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param IsMasterSwitched: 是否發生主備切換，1爲發生，0否
-        :type IsMasterSwitched: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type IsMasterSwitched: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param SlaveDelay: 主備延遲
-        :type SlaveDelay: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type SlaveDelay: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1319,13 +1319,13 @@ class DescribeDBResourceUsageDetailsResponse(AbstractModel):
     def __init__(self):
         """
         :param Master: 主節點資源使用情況監控數據
-        :type Master: :class:`tencentcloud.mariadb.v20170312.models.ResourceUsageMonitorSet`
+        :type Master: :class:`taifucloudcloud.mariadb.v20170312.models.ResourceUsageMonitorSet`
         :param Slave1: 備機1資源使用情況監控數據
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Slave1: :class:`tencentcloud.mariadb.v20170312.models.ResourceUsageMonitorSet`
+        :type Slave1: :class:`taifucloudcloud.mariadb.v20170312.models.ResourceUsageMonitorSet`
         :param Slave2: 備機2資源使用情況監控數據
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Slave2: :class:`tencentcloud.mariadb.v20170312.models.ResourceUsageMonitorSet`
+        :type Slave2: :class:`taifucloudcloud.mariadb.v20170312.models.ResourceUsageMonitorSet`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1385,13 +1385,13 @@ class DescribeDBResourceUsageResponse(AbstractModel):
     def __init__(self):
         """
         :param BinlogDiskAvailable: binlog日志磁盤可用空間,單位GB
-        :type BinlogDiskAvailable: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type BinlogDiskAvailable: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param DataDiskAvailable: 磁盤可用空間,單位GB
-        :type DataDiskAvailable: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type DataDiskAvailable: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param CpuUsageRate: CPU使用率
-        :type CpuUsageRate: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type CpuUsageRate: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param MemAvailable: 内存可用空間,單位GB
-        :type MemAvailable: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type MemAvailable: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2416,7 +2416,7 @@ class ParamConstraint(AbstractModel):
         :type Enum: str
         :param Range: 約束類型爲section時的範圍
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Range: :class:`tencentcloud.mariadb.v20170312.models.ConstraintRange`
+        :type Range: :class:`taifucloudcloud.mariadb.v20170312.models.ConstraintRange`
         :param String: 約束類型爲string時的可選值清單
         :type String: str
         """
@@ -2452,7 +2452,7 @@ class ParamDesc(AbstractModel):
         :param Default: 系統預設值
         :type Default: str
         :param Constraint: 參數限制
-        :type Constraint: :class:`tencentcloud.mariadb.v20170312.models.ParamConstraint`
+        :type Constraint: :class:`taifucloudcloud.mariadb.v20170312.models.ParamConstraint`
         :param HaveSetValue: 是否有設置過值，false:沒有設置過值，true:有設置過值。
         :type HaveSetValue: bool
         """
@@ -2504,25 +2504,25 @@ class PerformanceMonitorSet(AbstractModel):
     def __init__(self):
         """
         :param UpdateTotal: 更新操作數UPDATE
-        :type UpdateTotal: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type UpdateTotal: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param DiskIops: 磁盤每秒IO次數
-        :type DiskIops: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type DiskIops: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param ConnActive: 活躍連接數
-        :type ConnActive: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type ConnActive: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param MemHitRate: 快取命中率
-        :type MemHitRate: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type MemHitRate: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param SlaveDelay: 主備延遲
-        :type SlaveDelay: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type SlaveDelay: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param SelectTotal: 查詢操作數SELECT
-        :type SelectTotal: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type SelectTotal: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param LongQuery: 慢查詢數
-        :type LongQuery: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type LongQuery: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param DeleteTotal: 删除操作數DELETE
-        :type DeleteTotal: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type DeleteTotal: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param InsertTotal: 插入操作數INSERT
-        :type InsertTotal: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type InsertTotal: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param IsMasterSwitched: 是否發生主備切換，1爲發生，0否
-        :type IsMasterSwitched: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type IsMasterSwitched: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         """
         self.UpdateTotal = None
         self.DiskIops = None
@@ -2623,9 +2623,9 @@ class RenewDBInstanceRequest(AbstractModel):
         :type InstanceId: str
         :param Period: 續約時長，單位：月。
         :type Period: int
-        :param AutoVoucher: 是否自動使用代金券進行支付，預設不使用。
+        :param AutoVoucher: 是否自動使用 進行支付，預設不使用。
         :type AutoVoucher: bool
-        :param VoucherIds: 代金券ID清單，目前僅支援指定一張代金券。
+        :param VoucherIds:  ID清單，目前僅支援指定一張 。
         :type VoucherIds: list of str
         """
         self.InstanceId = None
@@ -2717,13 +2717,13 @@ class ResourceUsageMonitorSet(AbstractModel):
     def __init__(self):
         """
         :param BinlogDiskAvailable: binlog日志磁盤可用空間,單位GB
-        :type BinlogDiskAvailable: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type BinlogDiskAvailable: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param CpuUsageRate: CPU使用率
-        :type CpuUsageRate: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type CpuUsageRate: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param MemAvailable: 内存可用空間,單位GB
-        :type MemAvailable: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type MemAvailable: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         :param DataDiskAvailable: 磁盤可用空間,單位GB
-        :type DataDiskAvailable: :class:`tencentcloud.mariadb.v20170312.models.MonitorData`
+        :type DataDiskAvailable: :class:`taifucloudcloud.mariadb.v20170312.models.MonitorData`
         """
         self.BinlogDiskAvailable = None
         self.CpuUsageRate = None
@@ -2940,9 +2940,9 @@ class UpgradeDBInstanceRequest(AbstractModel):
         :param Storage: 儲存空間大小，單位：GB，可以通過 DescribeDBInstanceSpecs
  查詢實例規格獲得不同内存大小對應的磁盤規格下限和上限。
         :type Storage: int
-        :param AutoVoucher: 是否自動使用代金券進行支付，預設不使用。
+        :param AutoVoucher: 是否自動使用 進行支付，預設不使用。
         :type AutoVoucher: bool
-        :param VoucherIds: 代金券ID清單，目前僅支援指定一張代金券。
+        :param VoucherIds:  ID清單，目前僅支援指定一張 。
         :type VoucherIds: list of str
         """
         self.InstanceId = None
@@ -2990,7 +2990,7 @@ class ZoneChooseInfo(AbstractModel):
     def __init__(self):
         """
         :param MasterZone: 主可用區
-        :type MasterZone: :class:`tencentcloud.mariadb.v20170312.models.ZonesInfo`
+        :type MasterZone: :class:`taifucloudcloud.mariadb.v20170312.models.ZonesInfo`
         :param SlaveZones: 可選的從可用區
         :type SlaveZones: list of ZonesInfo
         """

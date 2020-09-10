@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.monitor.v20180724 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.monitor.v20180724 import models
 
 
 class MonitorClient(AbstractClient):
     _apiVersion = '2018-07-24'
-    _endpoint = 'monitor.tencentcloudapi.com'
+    _endpoint = 'monitor.taifucloudcloudapi.com'
 
 
     def BindingPolicyObject(self, request):
         """将告警策略綁定到特定對象
 
         :param request: Request instance for BindingPolicyObject.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.BindingPolicyObjectRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.BindingPolicyObjectResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.BindingPolicyObjectRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.BindingPolicyObjectResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class MonitorClient(AbstractClient):
         """增加策略組
 
         :param request: Request instance for CreatePolicyGroup.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.CreatePolicyGroupRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.CreatePolicyGroupResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.CreatePolicyGroupRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.CreatePolicyGroupResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class MonitorClient(AbstractClient):
         """删除告警策略組
 
         :param request: Request instance for DeletePolicyGroup.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.DeletePolicyGroupRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.DeletePolicyGroupResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.DeletePolicyGroupRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.DeletePolicyGroupResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class MonitorClient(AbstractClient):
         """獲取平台事件清單
 
         :param request: Request instance for DescribeAccidentEventList.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.DescribeAccidentEventListRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.DescribeAccidentEventListResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.DescribeAccidentEventListRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.DescribeAccidentEventListResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class MonitorClient(AbstractClient):
         """獲取基礎指标詳情
 
         :param request: Request instance for DescribeBaseMetrics.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.DescribeBaseMetricsRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.DescribeBaseMetricsResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.DescribeBaseMetricsRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.DescribeBaseMetricsResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class MonitorClient(AbstractClient):
         """獲取基礎告警清單
 
         :param request: Request instance for DescribeBasicAlarmList.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.DescribeBasicAlarmListRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.DescribeBasicAlarmListResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.DescribeBasicAlarmListRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.DescribeBasicAlarmListResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class MonitorClient(AbstractClient):
         """獲取已綁定對象清單
 
         :param request: Request instance for DescribeBindingPolicyObjectList.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.DescribeBindingPolicyObjectListRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.DescribeBindingPolicyObjectListResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.DescribeBindingPolicyObjectListRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.DescribeBindingPolicyObjectListResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class MonitorClient(AbstractClient):
         """獲取基礎告警策略條件
 
         :param request: Request instance for DescribePolicyConditionList.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyConditionListRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyConditionListResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyConditionListRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyConditionListResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class MonitorClient(AbstractClient):
         """獲取基礎策略組詳情
 
         :param request: Request instance for DescribePolicyGroupInfo.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyGroupInfoRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyGroupInfoResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyGroupInfoRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyGroupInfoResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class MonitorClient(AbstractClient):
         """獲取基礎策略告警組清單
 
         :param request: Request instance for DescribePolicyGroupList.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyGroupListRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.DescribePolicyGroupListResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyGroupListRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyGroupListResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class MonitorClient(AbstractClient):
         """分頁獲取産品事件的清單
 
         :param request: Request instance for DescribeProductEventList.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.DescribeProductEventListRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.DescribeProductEventListResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.DescribeProductEventListRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.DescribeProductEventListResponse`
 
         """
         try:
@@ -339,8 +339,8 @@ class MonitorClient(AbstractClient):
         若您需要調用的指标、對象較多，可能存在因限頻出現拉取失敗的情況，建議盡量将請求按時間維度均攤。
 
         :param request: Request instance for GetMonitorData.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.GetMonitorDataRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.GetMonitorDataResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.GetMonitorDataRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.GetMonitorDataResponse`
 
         """
         try:
@@ -367,8 +367,8 @@ class MonitorClient(AbstractClient):
         """修改告警接收人
 
         :param request: Request instance for ModifyAlarmReceivers.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.ModifyAlarmReceiversRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.ModifyAlarmReceiversResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.ModifyAlarmReceiversRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.ModifyAlarmReceiversResponse`
 
         """
         try:
@@ -401,8 +401,8 @@ class MonitorClient(AbstractClient):
         同一 IP 指标對的數據需按分鍾先後順序上報。
 
         :param request: Request instance for PutMonitorData.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.PutMonitorDataRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.PutMonitorDataResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.PutMonitorDataRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.PutMonitorDataResponse`
 
         """
         try:
@@ -429,8 +429,8 @@ class MonitorClient(AbstractClient):
         """發送自定義訊息告警
 
         :param request: Request instance for SendCustomAlarmMsg.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.SendCustomAlarmMsgRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.SendCustomAlarmMsgResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.SendCustomAlarmMsgRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.SendCustomAlarmMsgResponse`
 
         """
         try:
@@ -457,8 +457,8 @@ class MonitorClient(AbstractClient):
         """删除全部的關聯對象
 
         :param request: Request instance for UnBindingAllPolicyObject.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.UnBindingAllPolicyObjectRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.UnBindingAllPolicyObjectResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.UnBindingAllPolicyObjectRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.UnBindingAllPolicyObjectResponse`
 
         """
         try:
@@ -485,8 +485,8 @@ class MonitorClient(AbstractClient):
         """删除策略的關聯對象
 
         :param request: Request instance for UnBindingPolicyObject.
-        :type request: :class:`tencentcloud.monitor.v20180724.models.UnBindingPolicyObjectRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.UnBindingPolicyObjectResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.UnBindingPolicyObjectRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.UnBindingPolicyObjectResponse`
 
         """
         try:

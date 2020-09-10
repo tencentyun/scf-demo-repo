@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CreateKeyRequest(AbstractModel):
@@ -159,7 +159,7 @@ class DescribeKeyResponse(AbstractModel):
         """
         :param KeyMetadata: 金鑰屬性訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type KeyMetadata: :class:`tencentcloud.kms.v20190118.models.KeyMetadata`
+        :type KeyMetadata: :class:`taifucloudcloud.kms.v20190118.models.KeyMetadata`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

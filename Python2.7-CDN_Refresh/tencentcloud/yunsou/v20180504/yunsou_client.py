@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.yunsou.v20180504 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.yunsou.v20180504 import models
 
 
 class YunsouClient(AbstractClient):
     _apiVersion = '2018-05-04'
-    _endpoint = 'yunsou.tencentcloudapi.com'
+    _endpoint = 'yunsou.taifucloudcloudapi.com'
 
 
     def DataManipulation(self, request):
         """上傳雲搜數據的API介面
 
         :param request: Request instance for DataManipulation.
-        :type request: :class:`tencentcloud.yunsou.v20180504.models.DataManipulationRequest`
-        :rtype: :class:`tencentcloud.yunsou.v20180504.models.DataManipulationResponse`
+        :type request: :class:`taifucloudcloud.yunsou.v20180504.models.DataManipulationRequest`
+        :rtype: :class:`taifucloudcloud.yunsou.v20180504.models.DataManipulationResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class YunsouClient(AbstractClient):
         """用于檢索雲搜中的數據
 
         :param request: Request instance for DataSearch.
-        :type request: :class:`tencentcloud.yunsou.v20180504.models.DataSearchRequest`
-        :rtype: :class:`tencentcloud.yunsou.v20180504.models.DataSearchResponse`
+        :type request: :class:`taifucloudcloud.yunsou.v20180504.models.DataSearchRequest`
+        :rtype: :class:`taifucloudcloud.yunsou.v20180504.models.DataSearchResponse`
 
         """
         try:

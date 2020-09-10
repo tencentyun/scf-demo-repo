@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AlgorithmSpecification(AbstractModel):
@@ -58,7 +58,7 @@ class CodeRepoSummary(AbstractModel):
         :param CodeRepositoryName: 儲存庫名稱
         :type CodeRepositoryName: str
         :param GitConfig: Git配置
-        :type GitConfig: :class:`tencentcloud.tione.v20191022.models.GitConfig`
+        :type GitConfig: :class:`taifucloudcloud.tione.v20191022.models.GitConfig`
         :param NoSecret: 是否有Git憑證
         :type NoSecret: bool
         """
@@ -122,9 +122,9 @@ class CreateCodeRepositoryRequest(AbstractModel):
         :param CodeRepositoryName: 儲存庫名稱
         :type CodeRepositoryName: str
         :param GitConfig: Git相關配置
-        :type GitConfig: :class:`tencentcloud.tione.v20191022.models.GitConfig`
+        :type GitConfig: :class:`taifucloudcloud.tione.v20191022.models.GitConfig`
         :param GitSecret: Git憑證
-        :type GitSecret: :class:`tencentcloud.tione.v20191022.models.GitSecret`
+        :type GitSecret: :class:`taifucloudcloud.tione.v20191022.models.GitSecret`
         """
         self.CodeRepositoryName = None
         self.GitConfig = None
@@ -330,19 +330,19 @@ class CreateTrainingJobRequest(AbstractModel):
     def __init__(self):
         """
         :param AlgorithmSpecification: 算法映像配置
-        :type AlgorithmSpecification: :class:`tencentcloud.tione.v20191022.models.AlgorithmSpecification`
+        :type AlgorithmSpecification: :class:`taifucloudcloud.tione.v20191022.models.AlgorithmSpecification`
         :param InputDataConfig: 輸入數據配置
         :type InputDataConfig: list of InputDataConfig
         :param OutputDataConfig: 輸出數據配置
-        :type OutputDataConfig: :class:`tencentcloud.tione.v20191022.models.OutputDataConfig`
+        :type OutputDataConfig: :class:`taifucloudcloud.tione.v20191022.models.OutputDataConfig`
         :param ResourceConfig: 資源實例配置
-        :type ResourceConfig: :class:`tencentcloud.tione.v20191022.models.ResourceConfig`
+        :type ResourceConfig: :class:`taifucloudcloud.tione.v20191022.models.ResourceConfig`
         :param TrainingJobName: 訓練任務名稱
         :type TrainingJobName: str
         :param StoppingCondition: 中止條件
-        :type StoppingCondition: :class:`tencentcloud.tione.v20191022.models.StoppingCondition`
+        :type StoppingCondition: :class:`taifucloudcloud.tione.v20191022.models.StoppingCondition`
         :param VpcConfig: 私有網絡配置
-        :type VpcConfig: :class:`tencentcloud.tione.v20191022.models.VpcConfig`
+        :type VpcConfig: :class:`taifucloudcloud.tione.v20191022.models.VpcConfig`
         :param HyperParameters: 算法超級參數
         :type HyperParameters: str
         :param EnvConfig: 環境變量配置
@@ -425,10 +425,10 @@ class DataSource(AbstractModel):
         """
         :param CosDataSource: cos數據源
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CosDataSource: :class:`tencentcloud.tione.v20191022.models.CosDataSource`
+        :type CosDataSource: :class:`taifucloudcloud.tione.v20191022.models.CosDataSource`
         :param FileSystemDataSource: 文件系統輸入源
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FileSystemDataSource: :class:`tencentcloud.tione.v20191022.models.FileSystemDataSource`
+        :type FileSystemDataSource: :class:`taifucloudcloud.tione.v20191022.models.FileSystemDataSource`
         """
         self.CosDataSource = None
         self.FileSystemDataSource = None
@@ -653,7 +653,7 @@ class DescribeCodeRepositoryResponse(AbstractModel):
         :param CodeRepositoryName: 儲存庫名稱
         :type CodeRepositoryName: str
         :param GitConfig: Git儲存配置
-        :type GitConfig: :class:`tencentcloud.tione.v20191022.models.GitConfig`
+        :type GitConfig: :class:`taifucloudcloud.tione.v20191022.models.GitConfig`
         :param NoSecret: 是否有Git憑證
         :type NoSecret: bool
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -1017,7 +1017,7 @@ class DescribeTrainingJobResponse(AbstractModel):
     def __init__(self):
         """
         :param AlgorithmSpecification: 算法映像配置
-        :type AlgorithmSpecification: :class:`tencentcloud.tione.v20191022.models.AlgorithmSpecification`
+        :type AlgorithmSpecification: :class:`taifucloudcloud.tione.v20191022.models.AlgorithmSpecification`
         :param TrainingJobName: 任務名稱
         :type TrainingJobName: str
         :param HyperParameters: 算法超級參數
@@ -1026,15 +1026,15 @@ class DescribeTrainingJobResponse(AbstractModel):
         :param InputDataConfig: 輸入數據配置
         :type InputDataConfig: list of InputDataConfig
         :param OutputDataConfig: 輸出數據配置
-        :type OutputDataConfig: :class:`tencentcloud.tione.v20191022.models.OutputDataConfig`
+        :type OutputDataConfig: :class:`taifucloudcloud.tione.v20191022.models.OutputDataConfig`
         :param StoppingCondition: 中止條件
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type StoppingCondition: :class:`tencentcloud.tione.v20191022.models.StoppingCondition`
+        :type StoppingCondition: :class:`taifucloudcloud.tione.v20191022.models.StoppingCondition`
         :param ResourceConfig: 計算實例配置
-        :type ResourceConfig: :class:`tencentcloud.tione.v20191022.models.ResourceConfig`
+        :type ResourceConfig: :class:`taifucloudcloud.tione.v20191022.models.ResourceConfig`
         :param VpcConfig: 私有網絡配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type VpcConfig: :class:`tencentcloud.tione.v20191022.models.VpcConfig`
+        :type VpcConfig: :class:`taifucloudcloud.tione.v20191022.models.VpcConfig`
         :param FailureReason: 失敗原因
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FailureReason: str
@@ -1048,7 +1048,7 @@ class DescribeTrainingJobResponse(AbstractModel):
         :type TrainingEndTime: str
         :param ModelArtifacts: 模型輸出配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ModelArtifacts: :class:`tencentcloud.tione.v20191022.models.ModelArtifacts`
+        :type ModelArtifacts: :class:`taifucloudcloud.tione.v20191022.models.ModelArtifacts`
         :param SecondaryStatus: 詳細狀态
         :type SecondaryStatus: str
         :param SecondaryStatusTransitions: 詳細狀态事件記錄
@@ -1257,7 +1257,7 @@ class InputDataConfig(AbstractModel):
         :type ChannelName: str
         :param DataSource: 數據源配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type DataSource: :class:`tencentcloud.tione.v20191022.models.DataSource`
+        :type DataSource: :class:`taifucloudcloud.tione.v20191022.models.DataSource`
         :param InputMode: 輸入類型
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InputMode: str
@@ -1580,7 +1580,7 @@ class UpdateCodeRepositoryRequest(AbstractModel):
         :param CodeRepositoryName: 查詢儲存庫名稱
         :type CodeRepositoryName: str
         :param GitSecret: Git憑證
-        :type GitSecret: :class:`tencentcloud.tione.v20191022.models.GitSecret`
+        :type GitSecret: :class:`taifucloudcloud.tione.v20191022.models.GitSecret`
         """
         self.CodeRepositoryName = None
         self.GitSecret = None

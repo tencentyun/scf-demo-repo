@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.memcached.v20190318 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.memcached.v20190318 import models
 
 
 class MemcachedClient(AbstractClient):
     _apiVersion = '2019-03-18'
-    _endpoint = 'memcached.tencentcloudapi.com'
+    _endpoint = 'memcached.taifucloudcloudapi.com'
 
 
     def DescribeInstances(self, request):
         """獲取Cmem實例清單
 
         :param request: Request instance for DescribeInstances.
-        :type request: :class:`tencentcloud.memcached.v20190318.models.DescribeInstancesRequest`
-        :rtype: :class:`tencentcloud.memcached.v20190318.models.DescribeInstancesResponse`
+        :type request: :class:`taifucloudcloud.memcached.v20190318.models.DescribeInstancesRequest`
+        :rtype: :class:`taifucloudcloud.memcached.v20190318.models.DescribeInstancesResponse`
 
         """
         try:

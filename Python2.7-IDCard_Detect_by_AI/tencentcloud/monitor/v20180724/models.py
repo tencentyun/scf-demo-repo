@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class DataPoint(AbstractModel):
@@ -140,7 +140,7 @@ class GetMonitorDataRequest(AbstractModel):
         """
         :param Namespace: 命名空間，每個雲産品會有一個命名空間
         :type Namespace: str
-        :param MetricName: 指标名稱，各個雲産品的詳細指标說明請參閱各個産品[監控介面](https://cloud.tencent.com/document/product/248/30384)文件
+        :param MetricName: 指标名稱，各個雲産品的詳細指标說明請參閱各個産品[監控介面](https://cloud.taifucloud.com/document/product/248/30384)文件
         :type MetricName: str
         :param Instances: 實例對象的維度組合
         :type Instances: list of Instance
@@ -278,7 +278,7 @@ class MetricSet(AbstractModel):
         :param Periods: 統計週期内指标方式
         :type Periods: list of PeriodsSt
         :param Meaning: 統計指标含義解釋
-        :type Meaning: :class:`tencentcloud.monitor.v20180724.models.MetricObjectMeaning`
+        :type Meaning: :class:`taifucloudcloud.monitor.v20180724.models.MetricObjectMeaning`
         :param Dimensions: 維度描述訊息
         :type Dimensions: list of DimensionsDesc
         """

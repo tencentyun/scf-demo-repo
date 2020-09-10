@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class BaradData(AbstractModel):
@@ -433,7 +433,7 @@ class CreateBoundIPResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -538,7 +538,7 @@ class CreateCCSelfDefinePolicyRequest(AbstractModel):
         :param Id: 資源ID
         :type Id: str
         :param Policy: CC策略描述
-        :type Policy: :class:`tencentcloud.dayu.v20180709.models.CCPolicy`
+        :type Policy: :class:`taifucloudcloud.dayu.v20180709.models.CCPolicy`
         """
         self.Business = None
         self.Id = None
@@ -561,7 +561,7 @@ class CreateCCSelfDefinePolicyResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -587,7 +587,7 @@ class CreateDDoSPolicyCaseRequest(AbstractModel):
         :type Business: str
         :param CaseName: 策略場景名，字串長度小於64
         :type CaseName: str
-        :param PlatformTypes: 開發平台，取值[PC（PC用戶端）， MOBILE（移動端）， TV（電視端）， SERVER（主機）]
+        :param PlatformTypes: 開發平台，取值[PC（PC用戶端）， MOBILE（ 端）， TV（電視端）， SERVER（主機）]
         :type PlatformTypes: list of str
         :param AppType: 細分品類，取值[WEB（網站）， GAME（遊戲）， APP（應用）， OTHER（其他）]
         :type AppType: str
@@ -826,7 +826,7 @@ class CreateInstanceNameResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -879,7 +879,7 @@ class CreateL4HealthConfigResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -932,7 +932,7 @@ class CreateL4RulesResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1049,7 +1049,7 @@ class CreateL7HealthConfigResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1113,7 +1113,7 @@ class CreateL7RuleCertResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1166,7 +1166,7 @@ class CreateL7RulesResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1219,7 +1219,7 @@ class CreateL7RulesUploadResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1314,7 +1314,7 @@ class CreateNewL4RulesResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1371,7 +1371,7 @@ class CreateNewL7RulesResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1466,7 +1466,7 @@ class DDoSAttackSourceRecord(AbstractModel):
         """
         :param SrcIp: 攻擊源ip
         :type SrcIp: str
-        :param Province: 省份（國内有效，不包含港澳台）
+        :param Province:  （國内有效，不包含 ）
         :type Province: str
         :param Nation: 國家
         :type Nation: str
@@ -1775,7 +1775,7 @@ class DDosPolicy(AbstractModel):
         :param Resources: 策略綁定的資源
         :type Resources: list of ResourceIp
         :param DropOptions: 禁用協議
-        :type DropOptions: :class:`tencentcloud.dayu.v20180709.models.DDoSPolicyDropOption`
+        :type DropOptions: :class:`taifucloudcloud.dayu.v20180709.models.DDoSPolicyDropOption`
         :param PortLimits: 禁用端口
         :type PortLimits: list of DDoSPolicyPortLimit
         :param PacketFilters: 報文過濾
@@ -1889,7 +1889,7 @@ class DeleteCCFrequencyRulesResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1937,7 +1937,7 @@ class DeleteCCSelfDefinePolicyResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1981,7 +1981,7 @@ class DeleteDDoSPolicyCaseResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2025,7 +2025,7 @@ class DeleteDDoSPolicyResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2073,7 +2073,7 @@ class DeleteL4RulesResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2121,7 +2121,7 @@ class DeleteL7RulesResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2170,7 +2170,7 @@ class DeleteNewL4RulesResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2219,7 +2219,7 @@ class DeleteNewL7RulesResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2587,7 +2587,7 @@ class DescribeCCAlarmThresholdResponse(AbstractModel):
     def __init__(self):
         """
         :param CCAlarmThreshold: CC告警阈值
-        :type CCAlarmThreshold: :class:`tencentcloud.dayu.v20180709.models.CCAlarmThreshold`
+        :type CCAlarmThreshold: :class:`taifucloudcloud.dayu.v20180709.models.CCAlarmThreshold`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3094,7 +3094,7 @@ class DescribeDDoSAlarmThresholdResponse(AbstractModel):
     def __init__(self):
         """
         :param DDoSAlarmThreshold: DDoS告警阈值
-        :type DDoSAlarmThreshold: :class:`tencentcloud.dayu.v20180709.models.DDoSAlarmThreshold`
+        :type DDoSAlarmThreshold: :class:`taifucloudcloud.dayu.v20180709.models.DDoSAlarmThreshold`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3151,7 +3151,7 @@ class DescribeDDoSAttackIPRegionMapResponse(AbstractModel):
         """
         :param NationCount: 全球地域分布數據
         :type NationCount: list of KeyValueRecord
-        :param ProvinceCount: 國内省份地域分布數據
+        :param ProvinceCount: 國内 地域分布數據
         :type ProvinceCount: list of KeyValueRecord
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3369,16 +3369,16 @@ class DescribeDDoSDefendStatusRequest(AbstractModel):
         :param InstanceId: 只有當Business爲基礎防護時才需要填寫此欄位，IP所屬的資源實例ID，當綁定新IP時必須填寫此欄位；例如是彈性網卡的IP，則InstanceId填寫彈性網卡的ID(eni-*);
         :type InstanceId: str
         :param IPRegion: 只有當Business爲基礎防護時才需要填寫此欄位，表示IP所屬的地域，取值：
-"bj":     華北地區(北京)
-"cd":     西南地區(成都)
-"cq":     西南地區(重慶)
-"gz":     華南地區(廣州)
-"gzopen": 華南地區(廣州Open)
-"hk":     中國香港
+"bj":     華北地區( )
+"cd":     西南地區( )
+"cq":     西南地區( )
+"gz":     華南地區( )
+"gzopen": 華南地區( Open)
+"hk":       
 "kr":     東南亞地區(首爾)
-"sh":     華東地區(上海)
-"shjr":   華東地區(上海金融)
-"szjr":   華南地區(深圳金融)
+"sh":     華東地區( )
+"shjr":   華東地區( 金融)
+"szjr":   華南地區( 金融)
 "sg":     東南亞地區(新加坡)
 "th":     東南亞地區(泰國)
 "de":     歐洲地區(德國)
@@ -3389,7 +3389,7 @@ class DescribeDDoSDefendStatusRequest(AbstractModel):
 "in":     印度
 "use":    美東地區（弗吉尼亞）
 "ru":     俄羅斯
-"tpe":    中國台灣
+"tpe":     台灣
 "nj":     南京
         :type IPRegion: str
         """
@@ -4511,7 +4511,7 @@ class DescribeIpUnBlockListRequest(AbstractModel):
         :param Ip: IP（不爲空時，進行IP過濾）
         :type Ip: str
         :param Paging: 分頁參數（不爲空時，進行分頁查詢），此欄位後面會棄用，請用Limit和Offset欄位代替；
-        :type Paging: :class:`tencentcloud.dayu.v20180709.models.Paging`
+        :type Paging: :class:`taifucloudcloud.dayu.v20180709.models.Paging`
         :param Limit: 一頁條數，填0表示不分頁
         :type Limit: int
         :param Offset: 頁起始偏移，取值爲(頁碼-1)*一頁條數
@@ -5124,7 +5124,7 @@ class DescribeResourceListRequest(AbstractModel):
         :type Business: str
         :param RegionList: 地域碼搜索，可選，當不指定地域時空數組，當指定地域時，填地域碼。例如：["gz", "sh"]
         :type RegionList: list of str
-        :param Line: 線路搜索，可選，只有當獲取高防IP資源清單是可以選填，取值爲[1（BGP線路），2（南京電信），3（南京聯通），99（第三方合作線路）]，當獲取其他産品時請填空數組；
+        :param Line: 線路搜索，可選，只有當獲取高防IP資源清單是可以選填，取值爲[1（BGP線路），2（南京電信），3（南京 ），99（第三方合作線路）]，當獲取其他産品時請填空數組；
         :type Line: list of int non-negative
         :param IdList: 資源ID搜索，可選，當不爲空數組時表示獲取指定資源的資源清單；
         :type IdList: list of str
@@ -5211,7 +5211,7 @@ class DescribeResourceListResponse(AbstractModel):
 "Key": "Expire" 表示資源實例的過期時間
 "Key": "CCThreshold" 表示資源實例的CC防護觸發阈值
 "Key": "AutoRenewFlag" 表示資源實例的自動續約是否開啓
-"Key": "IspCode" 表示獨享包或共享包的線路(0-電信, 1-聯通, 2-移動, 5-BGP)
+"Key": "IspCode" 表示獨享包或共享包的線路(0-電信, 1- , 2- , 5-BGP)
 "Key": "PackType" 表示套餐包類型
 "Key": "PackId" 表示套餐包ID
 "Key": "Name" 表示資源實例的名稱
@@ -5810,7 +5810,7 @@ class DescribleRegionCountRequest(AbstractModel):
         """
         :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；）
         :type Business: str
-        :param LineList: 根據線路統計，取值爲[1（BGP線路），2（南京電信），3（南京聯通），99（第三方合作線路）]；只對高防IP産品有效，其他産品此欄位忽略
+        :param LineList: 根據線路統計，取值爲[1（BGP線路），2（南京電信），3（南京 ），99（第三方合作線路）]；只對高防IP産品有效，其他産品此欄位忽略
         :type LineList: list of int non-negative
         """
         self.Business = None
@@ -6394,7 +6394,7 @@ class ModifyCCAlarmThresholdResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -6470,7 +6470,7 @@ class ModifyCCFrequencyRulesResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -6522,7 +6522,7 @@ class ModifyCCFrequencyRulesStatusResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -6574,7 +6574,7 @@ class ModifyCCHostProtectionResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -6643,7 +6643,7 @@ class ModifyCCIpAllowDenyResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -6699,7 +6699,7 @@ class ModifyCCLevelResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -6751,7 +6751,7 @@ class ModifyCCPolicySwitchResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -6780,7 +6780,7 @@ class ModifyCCSelfDefinePolicyRequest(AbstractModel):
         :param SetId: 策略ID
         :type SetId: str
         :param Policy: CC策略描述
-        :type Policy: :class:`tencentcloud.dayu.v20180709.models.CCPolicy`
+        :type Policy: :class:`taifucloudcloud.dayu.v20180709.models.CCPolicy`
         """
         self.Business = None
         self.Id = None
@@ -6805,7 +6805,7 @@ class ModifyCCSelfDefinePolicyResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -6896,7 +6896,7 @@ class ModifyCCThresholdResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -6967,7 +6967,7 @@ class ModifyCCUrlAllowResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -7077,7 +7077,7 @@ class ModifyDDoSAlarmThresholdResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -7116,16 +7116,16 @@ class ModifyDDoSDefendStatusRequest(AbstractModel):
         :param InstanceId: 只有當Business爲基礎防護時才需要填寫此欄位，IP所屬的資源實例ID，當綁定新IP時必須填寫此欄位；例如是彈性網卡的IP，則InstanceId填寫彈性網卡的ID(eni-*);
         :type InstanceId: str
         :param IPRegion: 只有當Business爲基礎防護時才需要填寫此欄位，表示IP所屬的地域，取值：
-"bj":     華北地區(北京)
-"cd":     西南地區(成都)
-"cq":     西南地區(重慶)
-"gz":     華南地區(廣州)
-"gzopen": 華南地區(廣州Open)
-"hk":     中國香港
+"bj":     華北地區( )
+"cd":     西南地區( )
+"cq":     西南地區( )
+"gz":     華南地區( )
+"gzopen": 華南地區( Open)
+"hk":       
 "kr":     東南亞地區(首爾)
-"sh":     華東地區(上海)
-"shjr":   華東地區(上海金融)
-"szjr":   華南地區(深圳金融)
+"sh":     華東地區( )
+"shjr":   華東地區( 金融)
+"szjr":   華南地區( 金融)
 "sg":     東南亞地區(新加坡)
 "th":     東南亞地區(泰國)
 "de":     歐洲地區(德國)
@@ -7136,7 +7136,7 @@ class ModifyDDoSDefendStatusRequest(AbstractModel):
 "in":     印度
 "use":    美東地區（弗吉尼亞）
 "ru":     俄羅斯
-"tpe":    中國台灣
+"tpe":     台灣
 "nj":     南京
         :type IPRegion: str
         """
@@ -7171,7 +7171,7 @@ class ModifyDDoSDefendStatusResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -7251,7 +7251,7 @@ class ModifyDDoSPolicyCaseRequest(AbstractModel):
         :type Business: str
         :param SceneId: 策略場景ID
         :type SceneId: str
-        :param PlatformTypes: 開發平台，取值[PC（PC用戶端）， MOBILE（移動端）， TV（電視端）， SERVER（主機）]
+        :param PlatformTypes: 開發平台，取值[PC（PC用戶端）， MOBILE（ 端）， TV（電視端）， SERVER（主機）]
         :type PlatformTypes: list of str
         :param AppType: 細分品類，取值[WEB（網站）， GAME（遊戲）， APP（應用）， OTHER（其他）]
         :type AppType: str
@@ -7357,7 +7357,7 @@ class ModifyDDoSPolicyCaseResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -7405,7 +7405,7 @@ class ModifyDDoSPolicyNameResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -7494,7 +7494,7 @@ class ModifyDDoSPolicyResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -7529,16 +7529,16 @@ class ModifyDDoSSwitchRequest(AbstractModel):
         :param InstanceId: 只有當Business爲基礎防護時才需要填寫此欄位，IP所屬的資源實例ID，當綁定新IP時必須填寫此欄位；例如是彈性網卡的IP，則InstanceId填寫彈性網卡的ID(eni-*);
         :type InstanceId: str
         :param IPRegion: 只有當Business爲基礎防護時才需要填寫此欄位，表示IP所屬的地域，取值：
-"bj":     華北地區(北京)
-"cd":     西南地區(成都)
-"cq":     西南地區(重慶)
-"gz":     華南地區(廣州)
-"gzopen": 華南地區(廣州Open)
-"hk":     中國香港
+"bj":     華北地區( )
+"cd":     西南地區( )
+"cq":     西南地區( )
+"gz":     華南地區( )
+"gzopen": 華南地區( Open)
+"hk":       
 "kr":     東南亞地區(首爾)
-"sh":     華東地區(上海)
-"shjr":   華東地區(上海金融)
-"szjr":   華南地區(深圳金融)
+"sh":     華東地區( )
+"shjr":   華東地區( 金融)
+"szjr":   華南地區( 金融)
 "sg":     東南亞地區(新加坡)
 "th":     東南亞地區(泰國)
 "de":     歐洲地區(德國)
@@ -7549,7 +7549,7 @@ class ModifyDDoSSwitchRequest(AbstractModel):
 "in":     印度
 "use":    美東地區（弗吉尼亞）
 "ru":     俄羅斯
-"tpe":    中國台灣
+"tpe":     台灣
 "nj":     南京
         :type IPRegion: str
         :param Status: 可選欄位，防護狀态值，取值[0（關閉），1（開啓）]；當Method爲get時可以不填寫此欄位；
@@ -7631,7 +7631,7 @@ class ModifyDDoSThresholdResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -7734,7 +7734,7 @@ class ModifyElasticLimitResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -7787,7 +7787,7 @@ class ModifyL4HealthResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -7843,7 +7843,7 @@ class ModifyL4KeepTimeResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -7870,7 +7870,7 @@ class ModifyL4RulesRequest(AbstractModel):
         :param Id: 資源ID
         :type Id: str
         :param Rule: 規則
-        :type Rule: :class:`tencentcloud.dayu.v20180709.models.L4RuleEntry`
+        :type Rule: :class:`taifucloudcloud.dayu.v20180709.models.L4RuleEntry`
         """
         self.Business = None
         self.Id = None
@@ -7893,7 +7893,7 @@ class ModifyL4RulesResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -7920,7 +7920,7 @@ class ModifyL7RulesRequest(AbstractModel):
         :param Id: 資源ID
         :type Id: str
         :param Rule: 規則
-        :type Rule: :class:`tencentcloud.dayu.v20180709.models.L7RuleEntry`
+        :type Rule: :class:`taifucloudcloud.dayu.v20180709.models.L7RuleEntry`
         """
         self.Business = None
         self.Id = None
@@ -7943,7 +7943,7 @@ class ModifyL7RulesResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -8041,7 +8041,7 @@ class ModifyResBindDDoSPolicyResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -8089,7 +8089,7 @@ class ModifyResourceRenewFlagResponse(AbstractModel):
     def __init__(self):
         """
         :param Success: 成功碼
-        :type Success: :class:`tencentcloud.dayu.v20180709.models.SuccessCode`
+        :type Success: :class:`taifucloudcloud.dayu.v20180709.models.SuccessCode`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -8417,9 +8417,9 @@ class SchedulingDomain(AbstractModel):
         :type BGPIpList: list of str
         :param CTCCIpList: 電信線路IP清單
         :type CTCCIpList: list of str
-        :param CUCCIpList: 聯通線路IP清單
+        :param CUCCIpList:  線路IP清單
         :type CUCCIpList: list of str
-        :param CMCCIpList: 移動線路IP清單
+        :param CMCCIpList:  線路IP清單
         :type CMCCIpList: list of str
         :param OverseaIpList: 海外線路IP清單
         :type OverseaIpList: list of str

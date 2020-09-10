@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cat.v20180409 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cat.v20180409 import models
 
 
 class CatClient(AbstractClient):
     _apiVersion = '2018-04-09'
-    _endpoint = 'cat.tencentcloudapi.com'
+    _endpoint = 'cat.taifucloudcloudapi.com'
 
 
     def BindAlarmPolicy(self, request):
         """綁定撥測任務和告警策略組
 
         :param request: Request instance for BindAlarmPolicy.
-        :type request: :class:`tencentcloud.cat.v20180409.models.BindAlarmPolicyRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.BindAlarmPolicyResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.BindAlarmPolicyRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.BindAlarmPolicyResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class CatClient(AbstractClient):
         """添加撥測分組
 
         :param request: Request instance for CreateAgentGroup.
-        :type request: :class:`tencentcloud.cat.v20180409.models.CreateAgentGroupRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.CreateAgentGroupResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.CreateAgentGroupRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.CreateAgentGroupResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class CatClient(AbstractClient):
         """創建撥測任務(擴展)
 
         :param request: Request instance for CreateTaskEx.
-        :type request: :class:`tencentcloud.cat.v20180409.models.CreateTaskExRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.CreateTaskExResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.CreateTaskExRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.CreateTaskExResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class CatClient(AbstractClient):
         """删除撥測分組
 
         :param request: Request instance for DeleteAgentGroup.
-        :type request: :class:`tencentcloud.cat.v20180409.models.DeleteAgentGroupRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.DeleteAgentGroupResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.DeleteAgentGroupRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.DeleteAgentGroupResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class CatClient(AbstractClient):
         """删除多個撥測任務
 
         :param request: Request instance for DeleteTasks.
-        :type request: :class:`tencentcloud.cat.v20180409.models.DeleteTasksRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.DeleteTasksResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.DeleteTasksRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.DeleteTasksResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class CatClient(AbstractClient):
         """查詢撥測分組清單
 
         :param request: Request instance for DescribeAgentGroups.
-        :type request: :class:`tencentcloud.cat.v20180409.models.DescribeAgentGroupsRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.DescribeAgentGroupsResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.DescribeAgentGroupsRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.DescribeAgentGroupsResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class CatClient(AbstractClient):
         """查詢本用戶可選的撥測點清單
 
         :param request: Request instance for DescribeAgents.
-        :type request: :class:`tencentcloud.cat.v20180409.models.DescribeAgentsRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.DescribeAgentsResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.DescribeAgentsRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.DescribeAgentsResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class CatClient(AbstractClient):
         """查詢用戶的告警主題清單
 
         :param request: Request instance for DescribeAlarmTopic.
-        :type request: :class:`tencentcloud.cat.v20180409.models.DescribeAlarmTopicRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.DescribeAlarmTopicResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.DescribeAlarmTopicRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.DescribeAlarmTopicResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class CatClient(AbstractClient):
         """查詢撥測告警清單
 
         :param request: Request instance for DescribeAlarms.
-        :type request: :class:`tencentcloud.cat.v20180409.models.DescribeAlarmsRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.DescribeAlarmsResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.DescribeAlarmsRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.DescribeAlarmsResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class CatClient(AbstractClient):
         """按任務查詢撥測告警清單
 
         :param request: Request instance for DescribeAlarmsByTask.
-        :type request: :class:`tencentcloud.cat.v20180409.models.DescribeAlarmsByTaskRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.DescribeAlarmsByTaskResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.DescribeAlarmsByTaskRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.DescribeAlarmsByTaskResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class CatClient(AbstractClient):
         """查詢撥測流水
 
         :param request: Request instance for DescribeCatLogs.
-        :type request: :class:`tencentcloud.cat.v20180409.models.DescribeCatLogsRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.DescribeCatLogsResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.DescribeCatLogsRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.DescribeCatLogsResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class CatClient(AbstractClient):
         """查詢撥測任務訊息
 
         :param request: Request instance for DescribeTaskDetail.
-        :type request: :class:`tencentcloud.cat.v20180409.models.DescribeTaskDetailRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.DescribeTaskDetailResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.DescribeTaskDetailRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.DescribeTaskDetailResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class CatClient(AbstractClient):
         """按類型查詢撥測任務清單
 
         :param request: Request instance for DescribeTasksByType.
-        :type request: :class:`tencentcloud.cat.v20180409.models.DescribeTasksByTypeRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.DescribeTasksByTypeResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.DescribeTasksByTypeRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.DescribeTasksByTypeResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class CatClient(AbstractClient):
         """獲取用戶可用資源限制
 
         :param request: Request instance for DescribeUserLimit.
-        :type request: :class:`tencentcloud.cat.v20180409.models.DescribeUserLimitRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.DescribeUserLimitResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.DescribeUserLimitRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.DescribeUserLimitResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class CatClient(AbstractClient):
         """獲取指定時刻的可用率地圖訊息
 
         :param request: Request instance for GetAvailRatioHistory.
-        :type request: :class:`tencentcloud.cat.v20180409.models.GetAvailRatioHistoryRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.GetAvailRatioHistoryResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.GetAvailRatioHistoryRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.GetAvailRatioHistoryResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class CatClient(AbstractClient):
         """獲取一天的整體可用率訊息
 
         :param request: Request instance for GetDailyAvailRatio.
-        :type request: :class:`tencentcloud.cat.v20180409.models.GetDailyAvailRatioRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.GetDailyAvailRatioResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.GetDailyAvailRatioRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.GetDailyAvailRatioResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class CatClient(AbstractClient):
         """獲取實時可用率訊息
 
         :param request: Request instance for GetRealAvailRatio.
-        :type request: :class:`tencentcloud.cat.v20180409.models.GetRealAvailRatioRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.GetRealAvailRatioResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.GetRealAvailRatioRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.GetRealAvailRatioResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class CatClient(AbstractClient):
         """查詢撥測任務的走勢數據
 
         :param request: Request instance for GetRespTimeTrendEx.
-        :type request: :class:`tencentcloud.cat.v20180409.models.GetRespTimeTrendExRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.GetRespTimeTrendExResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.GetRespTimeTrendExRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.GetRespTimeTrendExResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class CatClient(AbstractClient):
         """獲取任務清單的實時數據
 
         :param request: Request instance for GetResultSummary.
-        :type request: :class:`tencentcloud.cat.v20180409.models.GetResultSummaryRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.GetResultSummaryResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.GetResultSummaryRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.GetResultSummaryResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class CatClient(AbstractClient):
         """查詢撥測任務的曆史返回碼訊息
 
         :param request: Request instance for GetReturnCodeHistory.
-        :type request: :class:`tencentcloud.cat.v20180409.models.GetReturnCodeHistoryRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.GetReturnCodeHistoryResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.GetReturnCodeHistoryRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.GetReturnCodeHistoryResponse`
 
         """
         try:
@@ -589,8 +589,8 @@ class CatClient(AbstractClient):
         """查詢撥測任務的返回碼統計訊息
 
         :param request: Request instance for GetReturnCodeInfo.
-        :type request: :class:`tencentcloud.cat.v20180409.models.GetReturnCodeInfoRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.GetReturnCodeInfoResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.GetReturnCodeInfoRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.GetReturnCodeInfoResponse`
 
         """
         try:
@@ -617,8 +617,8 @@ class CatClient(AbstractClient):
         """獲取AppId下的撥測任務總數
 
         :param request: Request instance for GetTaskTotalNumber.
-        :type request: :class:`tencentcloud.cat.v20180409.models.GetTaskTotalNumberRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.GetTaskTotalNumberResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.GetTaskTotalNumberRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.GetTaskTotalNumberResponse`
 
         """
         try:
@@ -645,8 +645,8 @@ class CatClient(AbstractClient):
         """修改撥測分組
 
         :param request: Request instance for ModifyAgentGroup.
-        :type request: :class:`tencentcloud.cat.v20180409.models.ModifyAgentGroupRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.ModifyAgentGroupResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.ModifyAgentGroupRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.ModifyAgentGroupResponse`
 
         """
         try:
@@ -673,8 +673,8 @@ class CatClient(AbstractClient):
         """修改撥測任務(擴展)
 
         :param request: Request instance for ModifyTaskEx.
-        :type request: :class:`tencentcloud.cat.v20180409.models.ModifyTaskExRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.ModifyTaskExResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.ModifyTaskExRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.ModifyTaskExResponse`
 
         """
         try:
@@ -701,8 +701,8 @@ class CatClient(AbstractClient):
         """暫停撥測任務
 
         :param request: Request instance for PauseTask.
-        :type request: :class:`tencentcloud.cat.v20180409.models.PauseTaskRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.PauseTaskResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.PauseTaskRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.PauseTaskResponse`
 
         """
         try:
@@ -729,8 +729,8 @@ class CatClient(AbstractClient):
         """運作撥測任務
 
         :param request: Request instance for RunTask.
-        :type request: :class:`tencentcloud.cat.v20180409.models.RunTaskRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.RunTaskResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.RunTaskRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.RunTaskResponse`
 
         """
         try:
@@ -757,8 +757,8 @@ class CatClient(AbstractClient):
         """驗證撥測任務，結果驗證查詢（驗證成功的，才建議創建撥測任務）
 
         :param request: Request instance for VerifyResult.
-        :type request: :class:`tencentcloud.cat.v20180409.models.VerifyResultRequest`
-        :rtype: :class:`tencentcloud.cat.v20180409.models.VerifyResultResponse`
+        :type request: :class:`taifucloudcloud.cat.v20180409.models.VerifyResultRequest`
+        :rtype: :class:`taifucloudcloud.cat.v20180409.models.VerifyResultResponse`
 
         """
         try:

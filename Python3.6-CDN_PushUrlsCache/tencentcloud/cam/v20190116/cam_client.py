@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cam.v20190116 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cam.v20190116 import models
 
 
 class CamClient(AbstractClient):
     _apiVersion = '2019-01-16'
-    _endpoint = 'cam.tencentcloudapi.com'
+    _endpoint = 'cam.taifucloudcloudapi.com'
 
 
     def AddUser(self, request):
         """添加子用戶
 
         :param request: Request instance for AddUser.
-        :type request: :class:`tencentcloud.cam.v20190116.models.AddUserRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.AddUserResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.AddUserRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.AddUserResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class CamClient(AbstractClient):
         """用戶加入到用戶組
 
         :param request: Request instance for AddUserToGroup.
-        :type request: :class:`tencentcloud.cam.v20190116.models.AddUserToGroupRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.AddUserToGroupResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.AddUserToGroupRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.AddUserToGroupResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class CamClient(AbstractClient):
         """本介面（AttachGroupPolicy）可用于綁定策略到用戶組。
 
         :param request: Request instance for AttachGroupPolicy.
-        :type request: :class:`tencentcloud.cam.v20190116.models.AttachGroupPolicyRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.AttachGroupPolicyResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.AttachGroupPolicyRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.AttachGroupPolicyResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class CamClient(AbstractClient):
         """本介面（AttachRolePolicy）用于綁定策略到角色。
 
         :param request: Request instance for AttachRolePolicy.
-        :type request: :class:`tencentcloud.cam.v20190116.models.AttachRolePolicyRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.AttachRolePolicyResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.AttachRolePolicyRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.AttachRolePolicyResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class CamClient(AbstractClient):
         """本介面（AttachUserPolicy）可用于綁定到用戶的策略。
 
         :param request: Request instance for AttachUserPolicy.
-        :type request: :class:`tencentcloud.cam.v20190116.models.AttachUserPolicyRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.AttachUserPolicyResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.AttachUserPolicyRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.AttachUserPolicyResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class CamClient(AbstractClient):
         """驗證自定義多因子Token
 
         :param request: Request instance for ConsumeCustomMFAToken.
-        :type request: :class:`tencentcloud.cam.v20190116.models.ConsumeCustomMFATokenRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.ConsumeCustomMFATokenResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.ConsumeCustomMFATokenRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.ConsumeCustomMFATokenResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class CamClient(AbstractClient):
         """創建用戶組
 
         :param request: Request instance for CreateGroup.
-        :type request: :class:`tencentcloud.cam.v20190116.models.CreateGroupRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.CreateGroupResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.CreateGroupRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.CreateGroupResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class CamClient(AbstractClient):
         """本介面（CreatePolicy）可用于創建策略。
 
         :param request: Request instance for CreatePolicy.
-        :type request: :class:`tencentcloud.cam.v20190116.models.CreatePolicyRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.CreatePolicyResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.CreatePolicyRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.CreatePolicyResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class CamClient(AbstractClient):
         """該介面（CreatePolicyVersion）用于新增策略版本，用戶創建了一個策略版本之後可以方便的通過變更策略版本的方式來變更策略。
 
         :param request: Request instance for CreatePolicyVersion.
-        :type request: :class:`tencentcloud.cam.v20190116.models.CreatePolicyVersionRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.CreatePolicyVersionResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.CreatePolicyVersionRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.CreatePolicyVersionResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class CamClient(AbstractClient):
         """本介面（CreateRole）用于創建角色。
 
         :param request: Request instance for CreateRole.
-        :type request: :class:`tencentcloud.cam.v20190116.models.CreateRoleRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.CreateRoleResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.CreateRoleRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.CreateRoleResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class CamClient(AbstractClient):
         """創建SAML身份提供商
 
         :param request: Request instance for CreateSAMLProvider.
-        :type request: :class:`tencentcloud.cam.v20190116.models.CreateSAMLProviderRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.CreateSAMLProviderResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.CreateSAMLProviderRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.CreateSAMLProviderResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class CamClient(AbstractClient):
         """創建服務相關角色
 
         :param request: Request instance for CreateServiceLinkedRole.
-        :type request: :class:`tencentcloud.cam.v20190116.models.CreateServiceLinkedRoleRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.CreateServiceLinkedRoleResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.CreateServiceLinkedRoleRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.CreateServiceLinkedRoleResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class CamClient(AbstractClient):
         """删除用戶組
 
         :param request: Request instance for DeleteGroup.
-        :type request: :class:`tencentcloud.cam.v20190116.models.DeleteGroupRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.DeleteGroupResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.DeleteGroupRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.DeleteGroupResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class CamClient(AbstractClient):
         """本介面（DeletePolicy）可用于删除策略。
 
         :param request: Request instance for DeletePolicy.
-        :type request: :class:`tencentcloud.cam.v20190116.models.DeletePolicyRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.DeletePolicyResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.DeletePolicyRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.DeletePolicyResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class CamClient(AbstractClient):
         """本介面（DeletePolicyVersion）可用于删除一個策略的策略版本。
 
         :param request: Request instance for DeletePolicyVersion.
-        :type request: :class:`tencentcloud.cam.v20190116.models.DeletePolicyVersionRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.DeletePolicyVersionResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.DeletePolicyVersionRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.DeletePolicyVersionResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class CamClient(AbstractClient):
         """本介面（DeleteRole）用于删除指定角色。
 
         :param request: Request instance for DeleteRole.
-        :type request: :class:`tencentcloud.cam.v20190116.models.DeleteRoleRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.DeleteRoleResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.DeleteRoleRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.DeleteRoleResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class CamClient(AbstractClient):
         """删除SAML身份提供商
 
         :param request: Request instance for DeleteSAMLProvider.
-        :type request: :class:`tencentcloud.cam.v20190116.models.DeleteSAMLProviderRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.DeleteSAMLProviderResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.DeleteSAMLProviderRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.DeleteSAMLProviderResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class CamClient(AbstractClient):
         """删除服務相關角色
 
         :param request: Request instance for DeleteServiceLinkedRole.
-        :type request: :class:`tencentcloud.cam.v20190116.models.DeleteServiceLinkedRoleRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.DeleteServiceLinkedRoleResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.DeleteServiceLinkedRoleRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.DeleteServiceLinkedRoleResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class CamClient(AbstractClient):
         """删除子用戶
 
         :param request: Request instance for DeleteUser.
-        :type request: :class:`tencentcloud.cam.v20190116.models.DeleteUserRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.DeleteUserResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.DeleteUserRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.DeleteUserResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class CamClient(AbstractClient):
         """本介面（DescribeRoleList）用于獲取賬号下的角色清單。
 
         :param request: Request instance for DescribeRoleList.
-        :type request: :class:`tencentcloud.cam.v20190116.models.DescribeRoleListRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.DescribeRoleListResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.DescribeRoleListRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.DescribeRoleListResponse`
 
         """
         try:
@@ -589,8 +589,8 @@ class CamClient(AbstractClient):
         """本介面（DetachGroupPolicy）可用于解除綁定到用戶組的策略。
 
         :param request: Request instance for DetachGroupPolicy.
-        :type request: :class:`tencentcloud.cam.v20190116.models.DetachGroupPolicyRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.DetachGroupPolicyResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.DetachGroupPolicyRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.DetachGroupPolicyResponse`
 
         """
         try:
@@ -617,8 +617,8 @@ class CamClient(AbstractClient):
         """本介面（DetachRolePolicy）用于解除綁定角色的策略。
 
         :param request: Request instance for DetachRolePolicy.
-        :type request: :class:`tencentcloud.cam.v20190116.models.DetachRolePolicyRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.DetachRolePolicyResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.DetachRolePolicyRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.DetachRolePolicyResponse`
 
         """
         try:
@@ -645,8 +645,8 @@ class CamClient(AbstractClient):
         """本介面（DetachUserPolicy）可用于解除綁定到用戶的策略。
 
         :param request: Request instance for DetachUserPolicy.
-        :type request: :class:`tencentcloud.cam.v20190116.models.DetachUserPolicyRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.DetachUserPolicyResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.DetachUserPolicyRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.DetachUserPolicyResponse`
 
         """
         try:
@@ -673,8 +673,8 @@ class CamClient(AbstractClient):
         """獲取自定義多因子Token關聯訊息
 
         :param request: Request instance for GetCustomMFATokenInfo.
-        :type request: :class:`tencentcloud.cam.v20190116.models.GetCustomMFATokenInfoRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.GetCustomMFATokenInfoResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.GetCustomMFATokenInfoRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.GetCustomMFATokenInfoResponse`
 
         """
         try:
@@ -701,8 +701,8 @@ class CamClient(AbstractClient):
         """查詢用戶組詳情
 
         :param request: Request instance for GetGroup.
-        :type request: :class:`tencentcloud.cam.v20190116.models.GetGroupRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.GetGroupResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.GetGroupRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.GetGroupResponse`
 
         """
         try:
@@ -729,8 +729,8 @@ class CamClient(AbstractClient):
         """本介面（GetPolicy）可用于查詢檢視策略詳情。
 
         :param request: Request instance for GetPolicy.
-        :type request: :class:`tencentcloud.cam.v20190116.models.GetPolicyRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.GetPolicyResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.GetPolicyRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.GetPolicyResponse`
 
         """
         try:
@@ -757,8 +757,8 @@ class CamClient(AbstractClient):
         """該介面（GetPolicyVersion）用于查詢策略版本詳情
 
         :param request: Request instance for GetPolicyVersion.
-        :type request: :class:`tencentcloud.cam.v20190116.models.GetPolicyVersionRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.GetPolicyVersionResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.GetPolicyVersionRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.GetPolicyVersionResponse`
 
         """
         try:
@@ -785,8 +785,8 @@ class CamClient(AbstractClient):
         """本介面（GetRole）用于獲取指定角色的詳細訊息。
 
         :param request: Request instance for GetRole.
-        :type request: :class:`tencentcloud.cam.v20190116.models.GetRoleRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.GetRoleResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.GetRoleRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.GetRoleResponse`
 
         """
         try:
@@ -813,8 +813,8 @@ class CamClient(AbstractClient):
         """查詢SAML身份提供商詳情
 
         :param request: Request instance for GetSAMLProvider.
-        :type request: :class:`tencentcloud.cam.v20190116.models.GetSAMLProviderRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.GetSAMLProviderResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.GetSAMLProviderRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.GetSAMLProviderResponse`
 
         """
         try:
@@ -841,8 +841,8 @@ class CamClient(AbstractClient):
         """根據删除TaskId獲取服務相關角色删除狀态
 
         :param request: Request instance for GetServiceLinkedRoleDeletionStatus.
-        :type request: :class:`tencentcloud.cam.v20190116.models.GetServiceLinkedRoleDeletionStatusRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.GetServiceLinkedRoleDeletionStatusResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.GetServiceLinkedRoleDeletionStatusRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.GetServiceLinkedRoleDeletionStatusResponse`
 
         """
         try:
@@ -869,8 +869,8 @@ class CamClient(AbstractClient):
         """查詢子用戶
 
         :param request: Request instance for GetUser.
-        :type request: :class:`tencentcloud.cam.v20190116.models.GetUserRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.GetUserResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.GetUserRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.GetUserResponse`
 
         """
         try:
@@ -897,8 +897,8 @@ class CamClient(AbstractClient):
         """本介面（ListAttachedGroupPolicies）可用于查詢用戶組關聯的策略清單。
 
         :param request: Request instance for ListAttachedGroupPolicies.
-        :type request: :class:`tencentcloud.cam.v20190116.models.ListAttachedGroupPoliciesRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.ListAttachedGroupPoliciesResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.ListAttachedGroupPoliciesRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.ListAttachedGroupPoliciesResponse`
 
         """
         try:
@@ -925,8 +925,8 @@ class CamClient(AbstractClient):
         """本介面（ListAttachedRolePolicies）用于獲取角色綁定的策略清單。
 
         :param request: Request instance for ListAttachedRolePolicies.
-        :type request: :class:`tencentcloud.cam.v20190116.models.ListAttachedRolePoliciesRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.ListAttachedRolePoliciesResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.ListAttachedRolePoliciesRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.ListAttachedRolePoliciesResponse`
 
         """
         try:
@@ -953,8 +953,8 @@ class CamClient(AbstractClient):
         """本介面（ListAttachedUserPolicies）可用于查詢子賬号關聯的策略清單。
 
         :param request: Request instance for ListAttachedUserPolicies.
-        :type request: :class:`tencentcloud.cam.v20190116.models.ListAttachedUserPoliciesRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.ListAttachedUserPoliciesResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.ListAttachedUserPoliciesRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.ListAttachedUserPoliciesResponse`
 
         """
         try:
@@ -981,8 +981,8 @@ class CamClient(AbstractClient):
         """獲取協作者清單
 
         :param request: Request instance for ListCollaborators.
-        :type request: :class:`tencentcloud.cam.v20190116.models.ListCollaboratorsRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.ListCollaboratorsResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.ListCollaboratorsRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.ListCollaboratorsResponse`
 
         """
         try:
@@ -1009,8 +1009,8 @@ class CamClient(AbstractClient):
         """本介面（ListEntitiesForPolicy）可用于查詢策略關聯的實體清單。
 
         :param request: Request instance for ListEntitiesForPolicy.
-        :type request: :class:`tencentcloud.cam.v20190116.models.ListEntitiesForPolicyRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.ListEntitiesForPolicyResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.ListEntitiesForPolicyRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.ListEntitiesForPolicyResponse`
 
         """
         try:
@@ -1037,8 +1037,8 @@ class CamClient(AbstractClient):
         """查詢用戶組清單
 
         :param request: Request instance for ListGroups.
-        :type request: :class:`tencentcloud.cam.v20190116.models.ListGroupsRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.ListGroupsResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.ListGroupsRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.ListGroupsResponse`
 
         """
         try:
@@ -1065,8 +1065,8 @@ class CamClient(AbstractClient):
         """列出用戶關聯的用戶組
 
         :param request: Request instance for ListGroupsForUser.
-        :type request: :class:`tencentcloud.cam.v20190116.models.ListGroupsForUserRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.ListGroupsForUserResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.ListGroupsForUserRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.ListGroupsForUserResponse`
 
         """
         try:
@@ -1093,8 +1093,8 @@ class CamClient(AbstractClient):
         """本介面（ListPolicies）可用于查詢策略清單。
 
         :param request: Request instance for ListPolicies.
-        :type request: :class:`tencentcloud.cam.v20190116.models.ListPoliciesRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.ListPoliciesResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.ListPoliciesRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.ListPoliciesResponse`
 
         """
         try:
@@ -1121,8 +1121,8 @@ class CamClient(AbstractClient):
         """該介面（ListPolicyVersions）用于獲取策略版本清單
 
         :param request: Request instance for ListPolicyVersions.
-        :type request: :class:`tencentcloud.cam.v20190116.models.ListPolicyVersionsRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.ListPolicyVersionsResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.ListPolicyVersionsRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.ListPolicyVersionsResponse`
 
         """
         try:
@@ -1149,8 +1149,8 @@ class CamClient(AbstractClient):
         """查詢SAML身份提供商清單
 
         :param request: Request instance for ListSAMLProviders.
-        :type request: :class:`tencentcloud.cam.v20190116.models.ListSAMLProvidersRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.ListSAMLProvidersResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.ListSAMLProvidersRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.ListSAMLProvidersResponse`
 
         """
         try:
@@ -1177,8 +1177,8 @@ class CamClient(AbstractClient):
         """拉取子用戶
 
         :param request: Request instance for ListUsers.
-        :type request: :class:`tencentcloud.cam.v20190116.models.ListUsersRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.ListUsersResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.ListUsersRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.ListUsersResponse`
 
         """
         try:
@@ -1205,8 +1205,8 @@ class CamClient(AbstractClient):
         """查詢用戶組關聯的用戶清單
 
         :param request: Request instance for ListUsersForGroup.
-        :type request: :class:`tencentcloud.cam.v20190116.models.ListUsersForGroupRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.ListUsersForGroupResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.ListUsersForGroupRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.ListUsersForGroupResponse`
 
         """
         try:
@@ -1233,8 +1233,8 @@ class CamClient(AbstractClient):
         """從用戶組删除用戶
 
         :param request: Request instance for RemoveUserFromGroup.
-        :type request: :class:`tencentcloud.cam.v20190116.models.RemoveUserFromGroupRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.RemoveUserFromGroupResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.RemoveUserFromGroupRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.RemoveUserFromGroupResponse`
 
         """
         try:
@@ -1261,8 +1261,8 @@ class CamClient(AbstractClient):
         """本介面（SetDefaultPolicyVersion）可用于設置生效的策略版本。
 
         :param request: Request instance for SetDefaultPolicyVersion.
-        :type request: :class:`tencentcloud.cam.v20190116.models.SetDefaultPolicyVersionRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.SetDefaultPolicyVersionResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.SetDefaultPolicyVersionRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.SetDefaultPolicyVersionResponse`
 
         """
         try:
@@ -1289,8 +1289,8 @@ class CamClient(AbstractClient):
         """本介面（UpdateAssumeRolePolicy）用于修改角色信任策略的策略文件。
 
         :param request: Request instance for UpdateAssumeRolePolicy.
-        :type request: :class:`tencentcloud.cam.v20190116.models.UpdateAssumeRolePolicyRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.UpdateAssumeRolePolicyResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.UpdateAssumeRolePolicyRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.UpdateAssumeRolePolicyResponse`
 
         """
         try:
@@ -1317,8 +1317,8 @@ class CamClient(AbstractClient):
         """更新用戶組
 
         :param request: Request instance for UpdateGroup.
-        :type request: :class:`tencentcloud.cam.v20190116.models.UpdateGroupRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.UpdateGroupResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.UpdateGroupRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.UpdateGroupResponse`
 
         """
         try:
@@ -1346,8 +1346,8 @@ class CamClient(AbstractClient):
         如果已存在策略版本，本介面會直接更新策略的預設版本，不會創建新版本，如果不存在任何策略版本，則直接創建一個預設版本。
 
         :param request: Request instance for UpdatePolicy.
-        :type request: :class:`tencentcloud.cam.v20190116.models.UpdatePolicyRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.UpdatePolicyResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.UpdatePolicyRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.UpdatePolicyResponse`
 
         """
         try:
@@ -1374,8 +1374,8 @@ class CamClient(AbstractClient):
         """本介面（UpdateRoleConsoleLogin）用于修改角色是否可登入。
 
         :param request: Request instance for UpdateRoleConsoleLogin.
-        :type request: :class:`tencentcloud.cam.v20190116.models.UpdateRoleConsoleLoginRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.UpdateRoleConsoleLoginResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.UpdateRoleConsoleLoginRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.UpdateRoleConsoleLoginResponse`
 
         """
         try:
@@ -1402,8 +1402,8 @@ class CamClient(AbstractClient):
         """本介面（UpdateRoleDescription）用于修改角色的描述訊息。
 
         :param request: Request instance for UpdateRoleDescription.
-        :type request: :class:`tencentcloud.cam.v20190116.models.UpdateRoleDescriptionRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.UpdateRoleDescriptionResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.UpdateRoleDescriptionRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.UpdateRoleDescriptionResponse`
 
         """
         try:
@@ -1430,8 +1430,8 @@ class CamClient(AbstractClient):
         """更新SAML身份提供商訊息
 
         :param request: Request instance for UpdateSAMLProvider.
-        :type request: :class:`tencentcloud.cam.v20190116.models.UpdateSAMLProviderRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.UpdateSAMLProviderResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.UpdateSAMLProviderRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.UpdateSAMLProviderResponse`
 
         """
         try:
@@ -1458,8 +1458,8 @@ class CamClient(AbstractClient):
         """更新子用戶
 
         :param request: Request instance for UpdateUser.
-        :type request: :class:`tencentcloud.cam.v20190116.models.UpdateUserRequest`
-        :rtype: :class:`tencentcloud.cam.v20190116.models.UpdateUserResponse`
+        :type request: :class:`taifucloudcloud.cam.v20190116.models.UpdateUserRequest`
+        :rtype: :class:`taifucloudcloud.cam.v20190116.models.UpdateUserResponse`
 
         """
         try:

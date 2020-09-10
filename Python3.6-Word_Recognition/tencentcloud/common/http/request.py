@@ -10,7 +10,7 @@ except ImportError:
     from httplib import HTTPConnection, BadStatusLine, HTTPSConnection
     from urlparse import urlparse
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
 
 
 class ProxyHTTPSConnection(HTTPSConnection):

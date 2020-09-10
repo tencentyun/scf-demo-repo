@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class ClearTablesRequest(AbstractModel):
@@ -1209,7 +1209,7 @@ class IdlFileInfoWithoutContent(AbstractModel):
         :type FileId: int
         :param Error: 錯誤訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Error: :class:`tencentcloud.tcaplusdb.v20190823.models.ErrorInfo`
+        :type Error: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ErrorInfo`
         """
         self.FileName = None
         self.FileType = None
@@ -1588,7 +1588,7 @@ class ParsedTableInfoNew(AbstractModel):
         :type TdrVersion: int
         :param Error: 錯誤訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Error: :class:`tencentcloud.tcaplusdb.v20190823.models.ErrorInfo`
+        :type Error: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ErrorInfo`
         :param ListElementNum: LIST類型表格元素個數
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ListElementNum: int
@@ -1964,7 +1964,7 @@ class TableInfoNew(AbstractModel):
         :type Memo: str
         :param Error: 錯誤訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Error: :class:`tencentcloud.tcaplusdb.v20190823.models.ErrorInfo`
+        :type Error: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ErrorInfo`
         :param ApiAccessId: TcaplusDB SDK數據訪問接入ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ApiAccessId: str
@@ -2071,7 +2071,7 @@ class TableResultNew(AbstractModel):
         :type TableGroupId: str
         :param Error: 錯誤訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Error: :class:`tencentcloud.tcaplusdb.v20190823.models.ErrorInfo`
+        :type Error: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ErrorInfo`
         :param TaskIds: 任務ID清單，對于創建多任務的介面有效
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskIds: list of str
@@ -2126,7 +2126,7 @@ class TableRollbackResultNew(AbstractModel):
         :type TableGroupId: str
         :param Error: 錯誤訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Error: :class:`tencentcloud.tcaplusdb.v20190823.models.ErrorInfo`
+        :type Error: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ErrorInfo`
         :param TaskIds: 任務ID清單，對于創建多任務的介面有效
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskIds: list of str

@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tia.v20180226 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tia.v20180226 import models
 
 
 class TiaClient(AbstractClient):
     _apiVersion = '2018-02-26'
-    _endpoint = 'tia.tencentcloudapi.com'
+    _endpoint = 'tia.taifucloudcloudapi.com'
 
 
     def CreateJob(self, request):
         """創建訓練任務
 
         :param request: Request instance for CreateJob.
-        :type request: :class:`tencentcloud.tia.v20180226.models.CreateJobRequest`
-        :rtype: :class:`tencentcloud.tia.v20180226.models.CreateJobResponse`
+        :type request: :class:`taifucloudcloud.tia.v20180226.models.CreateJobRequest`
+        :rtype: :class:`taifucloudcloud.tia.v20180226.models.CreateJobResponse`
 
         """
         try:
@@ -54,11 +54,11 @@ class TiaClient(AbstractClient):
 
 
     def CreateModel(self, request):
-        """佈署模型，用以對外提供服務。有兩種佈署模式：`無服務器模式` 和 `集群模式`。`無服務器模式` 下，模型文件被佈署到無服務器雲函數，即 [SCF](https://cloud.tencent.com/product/scf)，用戶可以在其控制台上進一步操作。`集群模式` 下，模型文件被佈署到 TI-A 的計算集群中。
+        """佈署模型，用以對外提供服務。有兩種佈署模式：`無服務器模式` 和 `集群模式`。`無服務器模式` 下，模型文件被佈署到無服務器雲函數，即 [SCF](https://cloud.taifucloud.com/product/scf)，用戶可以在其控制台上進一步操作。`集群模式` 下，模型文件被佈署到 TI-A 的計算集群中。
 
         :param request: Request instance for CreateModel.
-        :type request: :class:`tencentcloud.tia.v20180226.models.CreateModelRequest`
-        :rtype: :class:`tencentcloud.tia.v20180226.models.CreateModelResponse`
+        :type request: :class:`taifucloudcloud.tia.v20180226.models.CreateModelRequest`
+        :rtype: :class:`taifucloudcloud.tia.v20180226.models.CreateModelResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TiaClient(AbstractClient):
         """删除訓練任務
 
         :param request: Request instance for DeleteJob.
-        :type request: :class:`tencentcloud.tia.v20180226.models.DeleteJobRequest`
-        :rtype: :class:`tencentcloud.tia.v20180226.models.DeleteJobResponse`
+        :type request: :class:`taifucloudcloud.tia.v20180226.models.DeleteJobRequest`
+        :rtype: :class:`taifucloudcloud.tia.v20180226.models.DeleteJobResponse`
 
         """
         try:
@@ -110,11 +110,11 @@ class TiaClient(AbstractClient):
 
 
     def DeleteModel(self, request):
-        """删除指定的佈署模型。模型有兩種佈署模式：`無服務器模式` 和 `集群模式`。`無服務器模式` 下，模型文件被佈署到無服務器雲函數，即 [SCF](https://cloud.tencent.com/product/scf)，用戶可以在其控制台上進一步操作。`集群模式` 下，模型文件被佈署到 TI-A 的計算集群中。
+        """删除指定的佈署模型。模型有兩種佈署模式：`無服務器模式` 和 `集群模式`。`無服務器模式` 下，模型文件被佈署到無服務器雲函數，即 [SCF](https://cloud.taifucloud.com/product/scf)，用戶可以在其控制台上進一步操作。`集群模式` 下，模型文件被佈署到 TI-A 的計算集群中。
 
         :param request: Request instance for DeleteModel.
-        :type request: :class:`tencentcloud.tia.v20180226.models.DeleteModelRequest`
-        :rtype: :class:`tencentcloud.tia.v20180226.models.DeleteModelResponse`
+        :type request: :class:`taifucloudcloud.tia.v20180226.models.DeleteModelRequest`
+        :rtype: :class:`taifucloudcloud.tia.v20180226.models.DeleteModelResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class TiaClient(AbstractClient):
         """獲取訓練任務詳情
 
         :param request: Request instance for DescribeJob.
-        :type request: :class:`tencentcloud.tia.v20180226.models.DescribeJobRequest`
-        :rtype: :class:`tencentcloud.tia.v20180226.models.DescribeJobResponse`
+        :type request: :class:`taifucloudcloud.tia.v20180226.models.DescribeJobRequest`
+        :rtype: :class:`taifucloudcloud.tia.v20180226.models.DescribeJobResponse`
 
         """
         try:
@@ -166,11 +166,11 @@ class TiaClient(AbstractClient):
 
 
     def DescribeModel(self, request):
-        """描述已經佈署的某個模型。而模型佈署有兩種模式：`無服務器模式` 和 `集群模式`。`無服務器模式` 下，模型文件被佈署到無服務器雲函數，即 [SCF](https://cloud.tencent.com/product/scf)，用戶可以在其控制台上進一步操作。`集群模式` 下，模型文件被佈署到 TI-A 的計算集群中。
+        """描述已經佈署的某個模型。而模型佈署有兩種模式：`無服務器模式` 和 `集群模式`。`無服務器模式` 下，模型文件被佈署到無服務器雲函數，即 [SCF](https://cloud.taifucloud.com/product/scf)，用戶可以在其控制台上進一步操作。`集群模式` 下，模型文件被佈署到 TI-A 的計算集群中。
 
         :param request: Request instance for DescribeModel.
-        :type request: :class:`tencentcloud.tia.v20180226.models.DescribeModelRequest`
-        :rtype: :class:`tencentcloud.tia.v20180226.models.DescribeModelResponse`
+        :type request: :class:`taifucloudcloud.tia.v20180226.models.DescribeModelRequest`
+        :rtype: :class:`taifucloudcloud.tia.v20180226.models.DescribeModelResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class TiaClient(AbstractClient):
         """安裝agent
 
         :param request: Request instance for InstallAgent.
-        :type request: :class:`tencentcloud.tia.v20180226.models.InstallAgentRequest`
-        :rtype: :class:`tencentcloud.tia.v20180226.models.InstallAgentResponse`
+        :type request: :class:`taifucloudcloud.tia.v20180226.models.InstallAgentRequest`
+        :rtype: :class:`taifucloudcloud.tia.v20180226.models.InstallAgentResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class TiaClient(AbstractClient):
         """列舉訓練任務
 
         :param request: Request instance for ListJobs.
-        :type request: :class:`tencentcloud.tia.v20180226.models.ListJobsRequest`
-        :rtype: :class:`tencentcloud.tia.v20180226.models.ListJobsResponse`
+        :type request: :class:`taifucloudcloud.tia.v20180226.models.ListJobsRequest`
+        :rtype: :class:`taifucloudcloud.tia.v20180226.models.ListJobsResponse`
 
         """
         try:
@@ -250,11 +250,11 @@ class TiaClient(AbstractClient):
 
 
     def ListModels(self, request):
-        """用以列舉已經佈署的模型。而佈署有兩種模式：`無服務器模式` 和 `集群模式`。`無服務器模式` 下，模型文件被佈署到無服務器雲函數，即 [SCF](https://cloud.tencent.com/product/scf)，用戶可以在其控制台上進一步操作。`集群模式` 下，模型文件被佈署到 TI-A 的計算集群中。不同佈署模式下的模型分開列出。
+        """用以列舉已經佈署的模型。而佈署有兩種模式：`無服務器模式` 和 `集群模式`。`無服務器模式` 下，模型文件被佈署到無服務器雲函數，即 [SCF](https://cloud.taifucloud.com/product/scf)，用戶可以在其控制台上進一步操作。`集群模式` 下，模型文件被佈署到 TI-A 的計算集群中。不同佈署模式下的模型分開列出。
 
         :param request: Request instance for ListModels.
-        :type request: :class:`tencentcloud.tia.v20180226.models.ListModelsRequest`
-        :rtype: :class:`tencentcloud.tia.v20180226.models.ListModelsResponse`
+        :type request: :class:`taifucloudcloud.tia.v20180226.models.ListModelsRequest`
+        :rtype: :class:`taifucloudcloud.tia.v20180226.models.ListModelsResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class TiaClient(AbstractClient):
         """查詢 TI-A 訓練任務的日志
 
         :param request: Request instance for QueryLogs.
-        :type request: :class:`tencentcloud.tia.v20180226.models.QueryLogsRequest`
-        :rtype: :class:`tencentcloud.tia.v20180226.models.QueryLogsResponse`
+        :type request: :class:`taifucloudcloud.tia.v20180226.models.QueryLogsRequest`
+        :rtype: :class:`taifucloudcloud.tia.v20180226.models.QueryLogsResponse`
 
         """
         try:

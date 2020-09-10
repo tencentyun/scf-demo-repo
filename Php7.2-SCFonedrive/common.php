@@ -1071,7 +1071,7 @@ function adminoperate($path)
         return output($result['body'], $result['stat']);
     }
     if (isset($_GET['move_folder'])) {
-        // move 移動
+        // move  
         $moveable = 1;
         if ($path == '/' && $_GET['move_folder'] == '/../') $moveable=0;
         if ($_GET['move_folder'] == $_GET['move_name']) $moveable=0;

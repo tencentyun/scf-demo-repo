@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class DataManipulationRequest(AbstractModel):
@@ -53,7 +53,7 @@ class DataManipulationResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 數據操作結果
-        :type Data: :class:`tencentcloud.yunsou.v20191115.models.DataManipulationResult`
+        :type Data: :class:`taifucloudcloud.yunsou.v20191115.models.DataManipulationResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -246,7 +246,7 @@ class DataSearchResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 檢索結果
-        :type Data: :class:`tencentcloud.yunsou.v20191115.models.SearchResult`
+        :type Data: :class:`taifucloudcloud.yunsou.v20191115.models.SearchResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

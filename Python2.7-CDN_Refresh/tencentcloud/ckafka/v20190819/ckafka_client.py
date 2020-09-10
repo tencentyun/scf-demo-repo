@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.ckafka.v20190819 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.ckafka.v20190819 import models
 
 
 class CkafkaClient(AbstractClient):
     _apiVersion = '2019-08-19'
-    _endpoint = 'ckafka.tencentcloudapi.com'
+    _endpoint = 'ckafka.taifucloudcloudapi.com'
 
 
     def CreateAcl(self, request):
         """添加 ACL 策略
 
         :param request: Request instance for CreateAcl.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.CreateAclRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.CreateAclResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.CreateAclRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.CreateAclResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class CkafkaClient(AbstractClient):
         """本介面用于增加主題中的分區
 
         :param request: Request instance for CreatePartition.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.CreatePartitionRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.CreatePartitionResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.CreatePartitionRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.CreatePartitionResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class CkafkaClient(AbstractClient):
         """創建ckafka主題
 
         :param request: Request instance for CreateTopic.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.CreateTopicRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.CreateTopicResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.CreateTopicRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.CreateTopicResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class CkafkaClient(AbstractClient):
         """創建主題ip白名單
 
         :param request: Request instance for CreateTopicIpWhiteList.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.CreateTopicIpWhiteListRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.CreateTopicIpWhiteListResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.CreateTopicIpWhiteListRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.CreateTopicIpWhiteListResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class CkafkaClient(AbstractClient):
         """添加用戶
 
         :param request: Request instance for CreateUser.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.CreateUserRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.CreateUserResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.CreateUserRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.CreateUserResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class CkafkaClient(AbstractClient):
         """删除ACL
 
         :param request: Request instance for DeleteAcl.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DeleteAclRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DeleteAclResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DeleteAclRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DeleteAclResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class CkafkaClient(AbstractClient):
         """删除ckafka主題
 
         :param request: Request instance for DeleteTopic.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DeleteTopicRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DeleteTopicResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DeleteTopicRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DeleteTopicResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class CkafkaClient(AbstractClient):
         """删除主題IP白名單
 
         :param request: Request instance for DeleteTopicIpWhiteList.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DeleteTopicIpWhiteListRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DeleteTopicIpWhiteListResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DeleteTopicIpWhiteListRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DeleteTopicIpWhiteListResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class CkafkaClient(AbstractClient):
         """删除用戶
 
         :param request: Request instance for DeleteUser.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DeleteUserRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DeleteUserResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DeleteUserRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DeleteUserResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class CkafkaClient(AbstractClient):
         """列舉ACL
 
         :param request: Request instance for DescribeACL.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DescribeACLRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DescribeACLResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeACLRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeACLResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class CkafkaClient(AbstractClient):
         """查詢用戶清單
 
         :param request: Request instance for DescribeAppInfo.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DescribeAppInfoRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DescribeAppInfoResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeAppInfoRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeAppInfoResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class CkafkaClient(AbstractClient):
         """查詢消費分組訊息
 
         :param request: Request instance for DescribeConsumerGroup.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DescribeConsumerGroupRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DescribeConsumerGroupResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeConsumerGroupRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeConsumerGroupResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class CkafkaClient(AbstractClient):
         """列舉消費分組(精簡版)
 
         :param request: Request instance for DescribeGroup.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DescribeGroupRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DescribeGroupResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeGroupRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeGroupResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class CkafkaClient(AbstractClient):
         """獲取消費分組訊息
 
         :param request: Request instance for DescribeGroupInfo.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DescribeGroupInfoRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DescribeGroupInfoResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeGroupInfoRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeGroupInfoResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class CkafkaClient(AbstractClient):
         """獲取消費分組offset
 
         :param request: Request instance for DescribeGroupOffsets.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DescribeGroupOffsetsRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DescribeGroupOffsetsResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeGroupOffsetsRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeGroupOffsetsResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class CkafkaClient(AbstractClient):
         """獲取實例屬性
 
         :param request: Request instance for DescribeInstanceAttributes.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DescribeInstanceAttributesRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DescribeInstanceAttributesResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeInstanceAttributesRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeInstanceAttributesResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class CkafkaClient(AbstractClient):
         """本介面（DescribeInstance）用于在用戶帳戶下獲取訊息隊列 CKafka 實例清單
 
         :param request: Request instance for DescribeInstances.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DescribeInstancesRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DescribeInstancesResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeInstancesRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeInstancesResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class CkafkaClient(AbstractClient):
         """用戶帳戶下獲取實例清單詳情
 
         :param request: Request instance for DescribeInstancesDetail.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DescribeInstancesDetailRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DescribeInstancesDetailResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeInstancesDetailRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeInstancesDetailResponse`
 
         """
         try:
@@ -530,12 +530,12 @@ class CkafkaClient(AbstractClient):
 
 
     def DescribeTopic(self, request):
-        """介面請求域名：https://ckafka.tencentcloudapi.com
+        """介面請求域名：https://ckafka.taifucloudcloudapi.com
         本介面（DescribeTopic）用于在用戶獲取訊息隊列 CKafka 實例的主題清單
 
         :param request: Request instance for DescribeTopic.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DescribeTopicRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DescribeTopicResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeTopicRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeTopicResponse`
 
         """
         try:
@@ -562,8 +562,8 @@ class CkafkaClient(AbstractClient):
         """獲取主題屬性
 
         :param request: Request instance for DescribeTopicAttributes.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DescribeTopicAttributesRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DescribeTopicAttributesResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeTopicAttributesRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeTopicAttributesResponse`
 
         """
         try:
@@ -590,8 +590,8 @@ class CkafkaClient(AbstractClient):
         """獲取主題清單詳情（僅控制台調用）
 
         :param request: Request instance for DescribeTopicDetail.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DescribeTopicDetailRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DescribeTopicDetailResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeTopicDetailRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeTopicDetailResponse`
 
         """
         try:
@@ -618,8 +618,8 @@ class CkafkaClient(AbstractClient):
         """查詢用戶訊息
 
         :param request: Request instance for DescribeUser.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.DescribeUserRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.DescribeUserResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeUserRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeUserResponse`
 
         """
         try:
@@ -646,8 +646,8 @@ class CkafkaClient(AbstractClient):
         """設置Groups 消費分組offset
 
         :param request: Request instance for ModifyGroupOffsets.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.ModifyGroupOffsetsRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.ModifyGroupOffsetsResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.ModifyGroupOffsetsRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.ModifyGroupOffsetsResponse`
 
         """
         try:
@@ -674,8 +674,8 @@ class CkafkaClient(AbstractClient):
         """設置實例屬性
 
         :param request: Request instance for ModifyInstanceAttributes.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.ModifyInstanceAttributesRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.ModifyInstanceAttributesResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.ModifyInstanceAttributesRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.ModifyInstanceAttributesResponse`
 
         """
         try:
@@ -702,8 +702,8 @@ class CkafkaClient(AbstractClient):
         """修改密碼
 
         :param request: Request instance for ModifyPassword.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.ModifyPasswordRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.ModifyPasswordResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.ModifyPasswordRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.ModifyPasswordResponse`
 
         """
         try:
@@ -730,8 +730,8 @@ class CkafkaClient(AbstractClient):
         """本介面用于修改主題屬性。
 
         :param request: Request instance for ModifyTopicAttributes.
-        :type request: :class:`tencentcloud.ckafka.v20190819.models.ModifyTopicAttributesRequest`
-        :rtype: :class:`tencentcloud.ckafka.v20190819.models.ModifyTopicAttributesResponse`
+        :type request: :class:`taifucloudcloud.ckafka.v20190819.models.ModifyTopicAttributesRequest`
+        :rtype: :class:`taifucloudcloud.ckafka.v20190819.models.ModifyTopicAttributesResponse`
 
         """
         try:

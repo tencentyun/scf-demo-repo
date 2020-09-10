@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class ActionSummaryOverviewItem(AbstractModel):
@@ -35,7 +35,7 @@ class ActionSummaryOverviewItem(AbstractModel):
         :type CashPayAmount: str
         :param IncentivePayAmount: 贈送金金額
         :type IncentivePayAmount: str
-        :param VoucherPayAmount: 代金券金額
+        :param VoucherPayAmount:  金額
         :type VoucherPayAmount: str
         :param BillMonth: 帳單月份，格式2019-08
         :type BillMonth: str
@@ -76,9 +76,9 @@ class BillDetail(AbstractModel):
         :type PayModeName: str
         :param ProjectName: 項目:資源所屬項目
         :type ProjectName: str
-        :param RegionName: 區域：資源所屬地域，如華南地區（廣州）
+        :param RegionName: 區域：資源所屬地域，如華南地區（ ）
         :type RegionName: str
-        :param ZoneName: 可用區：資源所屬可用區，如廣州三區
+        :param ZoneName: 可用區：資源所屬可用區，如 三區
         :type ZoneName: str
         :param ResourceId: 資源實例ID
         :type ResourceId: str
@@ -214,7 +214,7 @@ class BillDetailComponent(AbstractModel):
         :type ReduceType: str
         :param RealCost: 優惠後總價
         :type RealCost: str
-        :param VoucherPayAmount: 代金券支付金額
+        :param VoucherPayAmount:  支付金額
         :type VoucherPayAmount: str
         :param CashPayAmount: 現金支付金額
         :type CashPayAmount: str
@@ -320,7 +320,7 @@ class BillResourceSummary(AbstractModel):
         :type ReduceType: str
         :param RealTotalCost: 優惠後總價，單位爲元
         :type RealTotalCost: str
-        :param VoucherPayAmount: 代金券支付金額，單位爲元
+        :param VoucherPayAmount:  支付金額，單位爲元
         :type VoucherPayAmount: str
         :param CashPayAmount: 現金帳戶支付金額，單位爲元
         :type CashPayAmount: str
@@ -514,7 +514,7 @@ class BusinessSummaryOverviewItem(AbstractModel):
         :type CashPayAmount: str
         :param IncentivePayAmount: 贈送金金額
         :type IncentivePayAmount: str
-        :param VoucherPayAmount: 代金券金額
+        :param VoucherPayAmount:  金額
         :type VoucherPayAmount: str
         :param BillMonth: 帳單月份，格式2019-08
         :type BillMonth: str
@@ -549,7 +549,7 @@ class BusinessSummaryTotal(AbstractModel):
         """
         :param RealTotalCost: 總花費
         :type RealTotalCost: str
-        :param VoucherPayAmount: 代金券金額
+        :param VoucherPayAmount:  金額
         :type VoucherPayAmount: str
         :param IncentivePayAmount: 贈送金金額
         :type IncentivePayAmount: str
@@ -756,7 +756,7 @@ class ConsumptionBusinessSummaryDataItem(AbstractModel):
         :param RealTotalCost: 折後總價
         :type RealTotalCost: str
         :param Trend: 費用趨勢
-        :type Trend: :class:`tencentcloud.billing.v20180709.models.ConsumptionSummaryTrend`
+        :type Trend: :class:`taifucloudcloud.billing.v20180709.models.ConsumptionSummaryTrend`
         """
         self.BusinessCode = None
         self.BusinessCodeName = None
@@ -787,7 +787,7 @@ class ConsumptionProjectSummaryDataItem(AbstractModel):
         :param RealTotalCost: 折後總價
         :type RealTotalCost: str
         :param Trend: 趨勢
-        :type Trend: :class:`tencentcloud.billing.v20180709.models.ConsumptionSummaryTrend`
+        :type Trend: :class:`taifucloudcloud.billing.v20180709.models.ConsumptionSummaryTrend`
         :param Business: 産品消耗詳情
         :type Business: list of ConsumptionBusinessSummaryDataItem
         """
@@ -827,7 +827,7 @@ class ConsumptionRegionSummaryDataItem(AbstractModel):
         :param RealTotalCost: 折後總價
         :type RealTotalCost: str
         :param Trend: 趨勢
-        :type Trend: :class:`tencentcloud.billing.v20180709.models.ConsumptionSummaryTrend`
+        :type Trend: :class:`taifucloudcloud.billing.v20180709.models.ConsumptionSummaryTrend`
         :param Business: 産品消費詳情
         :type Business: list of ConsumptionBusinessSummaryDataItem
         """
@@ -1031,7 +1031,7 @@ class CostComponentSet(AbstractModel):
         :type Discount: str
         :param RealCost: 折後價
         :type RealCost: str
-        :param VoucherPayAmount: 代金券支付金額
+        :param VoucherPayAmount:  支付金額
         :type VoucherPayAmount: str
         :param CashPayAmount: 現金支付金額
         :type CashPayAmount: str
@@ -1169,7 +1169,7 @@ class Deal(AbstractModel):
         :type Creator: str
         :param RealTotalCost: 實際支付金額（分）
         :type RealTotalCost: int
-        :param VoucherDecline: 代金券抵扣金額（分）
+        :param VoucherDecline:  抵扣金額（分）
         :type VoucherDecline: int
         :param ProjectId: 項目ID
         :type ProjectId: int
@@ -1279,7 +1279,7 @@ class DescribeBillDetailRequest(AbstractModel):
         :type Offset: int
         :param Limit: 數量，最大值爲100
         :type Limit: int
-        :param PeriodType: 週期類型，byUsedTime按計費週期/byPayTime按扣費週期。需要與費用中心該月份帳單的週期保持一緻。您可前往[帳單概覽](https://console.cloud.tencent.com/expense/bill/overview)頁面頂部檢視确認您的帳單統計週期類型。
+        :param PeriodType: 週期類型，byUsedTime按計費週期/byPayTime按扣費週期。需要與費用中心該月份帳單的週期保持一緻。您可前往[帳單概覽](https://console.cloud.taifucloud.com/expense/bill/overview)頁面頂部檢視确認您的帳單統計週期類型。
         :type PeriodType: str
         :param Month: 月份，格式爲yyyy-mm，Month和BeginTime&EndTime必傳一個，如果有傳BeginTime&EndTime則Month欄位無效。不能早于開通帳單2.0的月份，最多可拉取24個月内的數據。
         :type Month: str
@@ -1459,7 +1459,7 @@ class DescribeBillResourceSummaryRequest(AbstractModel):
         :type Offset: int
         :param Limit: 數量，最大值爲1000
         :type Limit: int
-        :param PeriodType: 週期類型，byUsedTime按計費週期/byPayTime按扣費週期。需要與費用中心該月份帳單的週期保持一緻。您可前往[帳單概覽](https://console.cloud.tencent.com/expense/bill/overview)頁面頂部檢視确認您的帳單統計週期類型。
+        :param PeriodType: 週期類型，byUsedTime按計費週期/byPayTime按扣費週期。需要與費用中心該月份帳單的週期保持一緻。您可前往[帳單概覽](https://console.cloud.taifucloud.com/expense/bill/overview)頁面頂部檢視确認您的帳單統計週期類型。
         :type PeriodType: str
         :param Month: 月份，格式爲yyyy-mm。不能早于開通帳單2.0的月份，最多可拉取24個月内的數據。
         :type Month: str
@@ -1609,7 +1609,7 @@ class DescribeBillSummaryByProductResponse(AbstractModel):
         :type Ready: int
         :param SummaryTotal: 總花費詳情
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SummaryTotal: :class:`tencentcloud.billing.v20180709.models.BusinessSummaryTotal`
+        :type SummaryTotal: :class:`taifucloudcloud.billing.v20180709.models.BusinessSummaryTotal`
         :param SummaryOverview: 各産品花費分布
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SummaryOverview: list of BusinessSummaryOverviewItem
@@ -1937,7 +1937,7 @@ class DescribeCostSummaryByProductResponse(AbstractModel):
         :param Ready: 數據是否準備好，0未準備好，1準備好
         :type Ready: int
         :param Total: 消耗詳情
-        :type Total: :class:`tencentcloud.billing.v20180709.models.ConsumptionSummaryTotal`
+        :type Total: :class:`taifucloudcloud.billing.v20180709.models.ConsumptionSummaryTotal`
         :param Data: 消耗按産品匯總詳情
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: list of ConsumptionBusinessSummaryDataItem
@@ -2016,7 +2016,7 @@ class DescribeCostSummaryByProjectResponse(AbstractModel):
         :param Ready: 數據是否準備好，0未準備好，1準備好
         :type Ready: int
         :param Total: 消耗詳情
-        :type Total: :class:`tencentcloud.billing.v20180709.models.ConsumptionSummaryTotal`
+        :type Total: :class:`taifucloudcloud.billing.v20180709.models.ConsumptionSummaryTotal`
         :param Data: 消耗按業務匯總詳情
         :type Data: list of ConsumptionProjectSummaryDataItem
         :param RecordNum: 記錄數量，NeedRecordNum爲0是返回null
@@ -2093,7 +2093,7 @@ class DescribeCostSummaryByRegionResponse(AbstractModel):
         :param Ready: 數據是否準備好，0未準備好，1準備好
         :type Ready: int
         :param Total: 消耗詳情
-        :type Total: :class:`tencentcloud.billing.v20180709.models.ConsumptionSummaryTotal`
+        :type Total: :class:`taifucloudcloud.billing.v20180709.models.ConsumptionSummaryTotal`
         :param Data: 消耗按地域匯總詳情
         :type Data: list of ConsumptionRegionSummaryDataItem
         :param RecordNum: 記錄數量，NeedRecordNum爲0是返回null
@@ -2146,7 +2146,7 @@ class DescribeCostSummaryByResourceRequest(AbstractModel):
         :param NeedConditionValue: 是否需要返回過濾條件，0不需要，1需要，預設不需要
         :type NeedConditionValue: int
         :param Conditions: 過濾條件，只支援ResourceKeyword(資源關鍵字，支援資源id及資源名稱模糊查詢)，ProjectIds（項目id），RegionIds(地域id)，PayModes(付費模式，可選prePay和postPay)，HideFreeCost（是否隐藏0元流水，可選0和1），OrderByCost（按費用排序規則，可選desc和asc）
-        :type Conditions: :class:`tencentcloud.billing.v20180709.models.Conditions`
+        :type Conditions: :class:`taifucloudcloud.billing.v20180709.models.Conditions`
         """
         self.PayerUin = None
         self.BeginTime = None
@@ -2182,10 +2182,10 @@ class DescribeCostSummaryByResourceResponse(AbstractModel):
         :type Ready: int
         :param Total: 消耗詳情
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Total: :class:`tencentcloud.billing.v20180709.models.ConsumptionSummaryTotal`
+        :type Total: :class:`taifucloudcloud.billing.v20180709.models.ConsumptionSummaryTotal`
         :param ConditionValue: 過濾條件
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ConditionValue: :class:`tencentcloud.billing.v20180709.models.ConsumptionResourceSummaryConditionValue`
+        :type ConditionValue: :class:`taifucloudcloud.billing.v20180709.models.ConsumptionResourceSummaryConditionValue`
         :param RecordNum: 記錄數量
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RecordNum: int
@@ -2457,9 +2457,9 @@ class PayDealsRequest(AbstractModel):
         """
         :param OrderIds: 需要支付的一個或者多個訂單号
         :type OrderIds: list of str
-        :param AutoVoucher: 是否自動使用代金券,1:是,0否,預設0
+        :param AutoVoucher: 是否自動使用 ,1:是,0否,預設0
         :type AutoVoucher: int
-        :param VoucherIds: 代金券ID清單,目前僅支援指定一張代金券
+        :param VoucherIds:  ID清單,目前僅支援指定一張 
         :type VoucherIds: list of str
         """
         self.OrderIds = None
@@ -2519,7 +2519,7 @@ class PayModeSummaryOverviewItem(AbstractModel):
         :type CashPayAmount: str
         :param IncentivePayAmount: 贈送金金額
         :type IncentivePayAmount: str
-        :param VoucherPayAmount: 代金券金額
+        :param VoucherPayAmount:  金額
         :type VoucherPayAmount: str
         """
         self.PayMode = None
@@ -2588,7 +2588,7 @@ class ProjectSummaryOverviewItem(AbstractModel):
         :type CashPayAmount: str
         :param IncentivePayAmount: 贈送金金額
         :type IncentivePayAmount: str
-        :param VoucherPayAmount: 代金券金額
+        :param VoucherPayAmount:  金額
         :type VoucherPayAmount: str
         :param BillMonth: 帳單月份，格式2019-08
         :type BillMonth: str
@@ -2634,7 +2634,7 @@ class RegionSummaryOverviewItem(AbstractModel):
         :type CashPayAmount: str
         :param IncentivePayAmount: 贈送金金額
         :type IncentivePayAmount: str
-        :param VoucherPayAmount: 代金券金額
+        :param VoucherPayAmount:  金額
         :type VoucherPayAmount: str
         :param BillMonth: 帳單月份，格式2019-08
         :type BillMonth: str

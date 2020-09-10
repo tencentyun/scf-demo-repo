@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cdn.v20180606 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cdn.v20180606 import models
 
 
 class CdnClient(AbstractClient):
     _apiVersion = '2018-06-06'
-    _endpoint = 'cdn.tencentcloudapi.com'
+    _endpoint = 'cdn.taifucloudcloudapi.com'
 
 
     def AddCdnDomain(self, request):
         """AddCdnDomain 用于新增内容分發網絡加速域名。
 
         :param request: Request instance for AddCdnDomain.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.AddCdnDomainRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.AddCdnDomainResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.AddCdnDomainRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.AddCdnDomainResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class CdnClient(AbstractClient):
         """CreatClsLogTopic 用于創建日志主題。注意：一個日志集下至多可創建10個日志主題。
 
         :param request: Request instance for CreateClsLogTopic.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.CreateClsLogTopicRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.CreateClsLogTopicResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.CreateClsLogTopicRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.CreateClsLogTopicResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class CdnClient(AbstractClient):
         """DeleteCdnDomain 用于删除指定加速域名
 
         :param request: Request instance for DeleteCdnDomain.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DeleteCdnDomainRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DeleteCdnDomainResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DeleteCdnDomainRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DeleteCdnDomainResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class CdnClient(AbstractClient):
         """DeleteClsLogTopic 用于删除日志主題。注意：删除後，所有該日志主題下綁定域名的日志将不再繼續投遞至該主題，已經投遞的日志将會被全部清空。生效時間約爲 5~15 分鍾。
 
         :param request: Request instance for DeleteClsLogTopic.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DeleteClsLogTopicRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DeleteClsLogTopicResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DeleteClsLogTopicRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DeleteClsLogTopicResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class CdnClient(AbstractClient):
         """DescribeBillingData 用于查詢實際計費數據明細。
 
         :param request: Request instance for DescribeBillingData.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeBillingDataRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeBillingDataResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeBillingDataRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeBillingDataResponse`
 
         """
         try:
@@ -178,8 +178,8 @@ class CdnClient(AbstractClient):
         + 狀态碼 5xx 匯總及各 5 開頭狀态碼明細（單位爲 個）
 
         :param request: Request instance for DescribeCdnData.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeCdnDataRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeCdnDataResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeCdnDataRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeCdnDataResponse`
 
         """
         try:
@@ -206,8 +206,8 @@ class CdnClient(AbstractClient):
         """DescribeCdnDomainLogs 用于查詢訪問日志下載網址，僅支援 30 天以内的境内、境外訪問日志下載連結查詢。
 
         :param request: Request instance for DescribeCdnDomainLogs.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeCdnDomainLogsRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeCdnDomainLogsResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeCdnDomainLogsRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeCdnDomainLogsResponse`
 
         """
         try:
@@ -234,8 +234,8 @@ class CdnClient(AbstractClient):
         """DescribeCdnIp 用于查詢 CDN IP 歸屬。
 
         :param request: Request instance for DescribeCdnIp.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeCdnIpRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeCdnIpResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeCdnIpRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeCdnIpResponse`
 
         """
         try:
@@ -262,8 +262,8 @@ class CdnClient(AbstractClient):
         """校驗證書并提取SSL證書中包含的域名，返回CDN已接入的域名清單，及已配置證書的域名清單
 
         :param request: Request instance for DescribeCertDomains.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeCertDomainsRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeCertDomainsResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeCertDomainsRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeCertDomainsResponse`
 
         """
         try:
@@ -290,8 +290,8 @@ class CdnClient(AbstractClient):
         """DescribeDomains 用于查詢内容分發網絡加速域名（含境内、境外）基本配置訊息，包括項目ID、服務狀态，業務類型、創建時間、更新時間等訊息。
 
         :param request: Request instance for DescribeDomains.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeDomainsRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeDomainsResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeDomainsRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeDomainsResponse`
 
         """
         try:
@@ -318,8 +318,8 @@ class CdnClient(AbstractClient):
         """DescribeDomainsConfig 用于查詢内容分發網絡加速域名（含境内、境外）的所有配置訊息。
 
         :param request: Request instance for DescribeDomainsConfig.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeDomainsConfigRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeDomainsConfigResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeDomainsConfigRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeDomainsConfigResponse`
 
         """
         try:
@@ -346,8 +346,8 @@ class CdnClient(AbstractClient):
         """獲取域名圖片優化的當前配置，支援Webp、TPG、Guetzli
 
         :param request: Request instance for DescribeImageConfig.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeImageConfigRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeImageConfigResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeImageConfigRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeImageConfigResponse`
 
         """
         try:
@@ -375,8 +375,8 @@ class CdnClient(AbstractClient):
         注意事項：介面尚未全量開放，未在内測名單中的賬号不支援調用
 
         :param request: Request instance for DescribeIpStatus.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeIpStatusRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeIpStatusResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeIpStatusRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeIpStatusResponse`
 
         """
         try:
@@ -406,8 +406,8 @@ class CdnClient(AbstractClient):
         + 日活躍用戶數：根據日志中用戶端 IP，按天粒度去重統計
 
         :param request: Request instance for DescribeIpVisit.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeIpVisitRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeIpVisitResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeIpVisitRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeIpVisitResponse`
 
         """
         try:
@@ -431,11 +431,11 @@ class CdnClient(AbstractClient):
 
 
     def DescribeMapInfo(self, request):
-        """DescribeMapInfo 用于查詢省份對應的 ID，運營商對應的 ID 訊息。
+        """DescribeMapInfo 用于查詢 對應的 ID，運營商對應的 ID 訊息。
 
         :param request: Request instance for DescribeMapInfo.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeMapInfoRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeMapInfoResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeMapInfoRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeMapInfoResponse`
 
         """
         try:
@@ -472,8 +472,8 @@ class CdnClient(AbstractClient):
         + 回源狀态碼 5xx 匯總及各 5 開頭回源狀态碼明細（單位爲 個）
 
         :param request: Request instance for DescribeOriginData.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeOriginDataRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeOriginDataResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeOriginDataRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeOriginDataResponse`
 
         """
         try:
@@ -500,8 +500,8 @@ class CdnClient(AbstractClient):
         """DescribePayType 用于查詢用戶的計費類型，計費週期等訊息。
 
         :param request: Request instance for DescribePayType.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribePayTypeRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribePayTypeResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribePayTypeRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribePayTypeResponse`
 
         """
         try:
@@ -528,8 +528,8 @@ class CdnClient(AbstractClient):
         """DescribePurgeQuota 用于查詢帳戶重新整理配額和每日可用量。
 
         :param request: Request instance for DescribePurgeQuota.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribePurgeQuotaRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribePurgeQuotaResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribePurgeQuotaRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribePurgeQuotaResponse`
 
         """
         try:
@@ -556,8 +556,8 @@ class CdnClient(AbstractClient):
         """DescribePurgeTasks 用于查詢提交的 URL 重新整理、目錄重新整理記錄及執行進度，通過 PurgePathCache 與 PurgeUrlsCache 介面提交的任務均可通過此介面進行查詢。
 
         :param request: Request instance for DescribePurgeTasks.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribePurgeTasksRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribePurgeTasksResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribePurgeTasksRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribePurgeTasksResponse`
 
         """
         try:
@@ -584,8 +584,8 @@ class CdnClient(AbstractClient):
         """DescribePushQuota  用于查詢預熱配額和每日可用量。
 
         :param request: Request instance for DescribePushQuota.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribePushQuotaRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribePushQuotaResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribePushQuotaRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribePushQuotaResponse`
 
         """
         try:
@@ -613,8 +613,8 @@ class CdnClient(AbstractClient):
         介面灰度中，暫未全量開放，敬請期待。
 
         :param request: Request instance for DescribePushTasks.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribePushTasksRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribePushTasksResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribePushTasksRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribePushTasksResponse`
 
         """
         try:
@@ -641,8 +641,8 @@ class CdnClient(AbstractClient):
         """DescribeReportData 用于查詢域名/項目維度的日/周/月報表數據。
 
         :param request: Request instance for DescribeReportData.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeReportDataRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeReportDataResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeReportDataRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeReportDataResponse`
 
         """
         try:
@@ -669,8 +669,8 @@ class CdnClient(AbstractClient):
         """DescribeTrafficPackages 用于查詢境内 CDN 流量包詳情。
 
         :param request: Request instance for DescribeTrafficPackages.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeTrafficPackagesRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeTrafficPackagesResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeTrafficPackagesRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeTrafficPackagesResponse`
 
         """
         try:
@@ -695,11 +695,11 @@ class CdnClient(AbstractClient):
 
     def DescribeUrlViolations(self, request):
         """DescribeUrlViolations 用于查詢被 CDN 系統掃描到的域名違規 URL 清單及當前狀态。
-        對應内容分發網絡控制台【圖片鑒黃】頁面。
+        對應内容分發網絡控制台【圖片 】頁面。
 
         :param request: Request instance for DescribeUrlViolations.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DescribeUrlViolationsRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DescribeUrlViolationsResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeUrlViolationsRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DescribeUrlViolationsResponse`
 
         """
         try:
@@ -726,8 +726,8 @@ class CdnClient(AbstractClient):
         """DisableCaches 用于禁用 CDN 上指定 URL 的訪問，禁用完成後，全網訪問會直接返回 403。（介面尚在内測中，暫未全量開放使用）
 
         :param request: Request instance for DisableCaches.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DisableCachesRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DisableCachesResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DisableCachesRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DisableCachesResponse`
 
         """
         try:
@@ -754,8 +754,8 @@ class CdnClient(AbstractClient):
         """DisableClsLogTopic 用于停止日志主題投遞。注意：停止後，所有綁定該日志主題域名的日志将不再繼續投遞至該主題，已經投遞的日志将會繼續保留。生效時間約爲 5~15 分鍾。
 
         :param request: Request instance for DisableClsLogTopic.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.DisableClsLogTopicRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.DisableClsLogTopicResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.DisableClsLogTopicRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.DisableClsLogTopicResponse`
 
         """
         try:
@@ -782,8 +782,8 @@ class CdnClient(AbstractClient):
         """EnableCaches 用于解禁手工封禁的 URL，解禁成功後，全網生效時間約 5~10 分鍾。（介面尚在内測中，暫未全量開放使用）
 
         :param request: Request instance for EnableCaches.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.EnableCachesRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.EnableCachesResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.EnableCachesRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.EnableCachesResponse`
 
         """
         try:
@@ -810,8 +810,8 @@ class CdnClient(AbstractClient):
         """EnableClsLogTopic 用于啓動日志主題投遞。注意：啓動後，所有綁定該日志主題域名的日志将繼續投遞至該主題。生效時間約爲 5~15 分鍾。
 
         :param request: Request instance for EnableClsLogTopic.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.EnableClsLogTopicRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.EnableClsLogTopicResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.EnableClsLogTopicRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.EnableClsLogTopicResponse`
 
         """
         try:
@@ -838,8 +838,8 @@ class CdnClient(AbstractClient):
         """GetDisableRecords 用于查詢資源禁用曆史，及 URL 當前狀态。（介面尚在内測中，暫未全量開放使用）
 
         :param request: Request instance for GetDisableRecords.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.GetDisableRecordsRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.GetDisableRecordsResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.GetDisableRecordsRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.GetDisableRecordsResponse`
 
         """
         try:
@@ -866,8 +866,8 @@ class CdnClient(AbstractClient):
         """ListClsLogTopics 用于顯示日志主題清單。注意：一個日志集下至多含10個日志主題。
 
         :param request: Request instance for ListClsLogTopics.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.ListClsLogTopicsRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.ListClsLogTopicsResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.ListClsLogTopicsRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.ListClsLogTopicsResponse`
 
         """
         try:
@@ -894,8 +894,8 @@ class CdnClient(AbstractClient):
         """ListClsTopicDomains 用于獲取某日志主題下綁定的域名清單。
 
         :param request: Request instance for ListClsTopicDomains.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.ListClsTopicDomainsRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.ListClsTopicDomainsResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.ListClsTopicDomainsRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.ListClsTopicDomainsResponse`
 
         """
         try:
@@ -922,7 +922,7 @@ class CdnClient(AbstractClient):
         """ListTopData 通過入參 Metric 和 Filter 組合不同，可以查詢以下排序數據：
 
         + 依據總流量、總請求數對訪問 URL 排序，從大至小返回 TOP 1000 URL
-        + 依據總流量、總請求數對用戶端省份排序，從大至小返回省份清單
+        + 依據總流量、總請求數對用戶端 排序，從大至小返回 清單
         + 依據總流量、總請求數對用戶端運營商排序，從大至小返回運營商清單
         + 依據總流量、峰值頻寬、總請求數、平均命中率、2XX/3XX/4XX/5XX 狀态碼對域名排序，從大至小返回域名清單
         + 依據總回源流量、回源峰值頻寬、總回源請求數、平均回源失敗率、2XX/3XX/4XX/5XX 回源狀态碼對域名排序，從大至小返回域名清單
@@ -930,8 +930,8 @@ class CdnClient(AbstractClient):
         注意：僅支援 90 天内數據查詢
 
         :param request: Request instance for ListTopData.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.ListTopDataRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.ListTopDataResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.ListTopDataRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.ListTopDataResponse`
 
         """
         try:
@@ -958,8 +958,8 @@ class CdnClient(AbstractClient):
         """ManageClsTopicDomains 用于管理某日志主題下綁定的域名清單。
 
         :param request: Request instance for ManageClsTopicDomains.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.ManageClsTopicDomainsRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.ManageClsTopicDomainsResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.ManageClsTopicDomainsRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.ManageClsTopicDomainsResponse`
 
         """
         try:
@@ -987,8 +987,8 @@ class CdnClient(AbstractClient):
         預設情況下境内、境外加速區域每日目錄重新整理額度爲各 100 條，每次最多可提交 20 條。
 
         :param request: Request instance for PurgePathCache.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.PurgePathCacheRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.PurgePathCacheResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.PurgePathCacheRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.PurgePathCacheResponse`
 
         """
         try:
@@ -1016,8 +1016,8 @@ class CdnClient(AbstractClient):
         預設情況下境内、境外加速區域每日 URL 重新整理額度各爲 10000 條，每次最多可提交 1000 條。
 
         :param request: Request instance for PurgeUrlsCache.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.PurgeUrlsCacheRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.PurgeUrlsCacheResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.PurgeUrlsCacheRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.PurgeUrlsCacheResponse`
 
         """
         try:
@@ -1046,8 +1046,8 @@ class CdnClient(AbstractClient):
         介面灰度中，暫未全量開放，敬請期待。
 
         :param request: Request instance for PushUrlsCache.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.PushUrlsCacheRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.PushUrlsCacheResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.PushUrlsCacheRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.PushUrlsCacheResponse`
 
         """
         try:
@@ -1074,8 +1074,8 @@ class CdnClient(AbstractClient):
         """SearchClsLog 用于 CLS 日志檢索。支援檢索今天，24小時（可選近7中的某一天），近7天的日志數據。
 
         :param request: Request instance for SearchClsLog.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.SearchClsLogRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.SearchClsLogResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.SearchClsLogRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.SearchClsLogResponse`
 
         """
         try:
@@ -1102,8 +1102,8 @@ class CdnClient(AbstractClient):
         """StartCdnDomain 用于啓用已停用域名的加速服務
 
         :param request: Request instance for StartCdnDomain.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.StartCdnDomainRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.StartCdnDomainResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.StartCdnDomainRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.StartCdnDomainResponse`
 
         """
         try:
@@ -1131,8 +1131,8 @@ class CdnClient(AbstractClient):
         注意：停止加速服務後，訪問至加速節點的請求将會直接返回 404。爲避免對您的業務造成影響，請在停止加速服務前将解析切走。
 
         :param request: Request instance for StopCdnDomain.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.StopCdnDomainRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.StopCdnDomainResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.StopCdnDomainRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.StopCdnDomainResponse`
 
         """
         try:
@@ -1160,8 +1160,8 @@ class CdnClient(AbstractClient):
         注意：如果需要更新複雜類型的配置項，必須傳遞整個對象的所有屬性，未傳遞的屬性将使用預設值，建議通過查詢介面獲取配置屬性後，直接修改後傳遞給本介面。Https配置由于證書的特殊性，更新時不用傳遞證書和金鑰欄位。
 
         :param request: Request instance for UpdateDomainConfig.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.UpdateDomainConfigRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.UpdateDomainConfigResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.UpdateDomainConfigRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.UpdateDomainConfigResponse`
 
         """
         try:
@@ -1188,8 +1188,8 @@ class CdnClient(AbstractClient):
         """更新控制台圖片優化的相關配置，支援Webp、TPG、Guetzli
 
         :param request: Request instance for UpdateImageConfig.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.UpdateImageConfigRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.UpdateImageConfigResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.UpdateImageConfigRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.UpdateImageConfigResponse`
 
         """
         try:
@@ -1216,8 +1216,8 @@ class CdnClient(AbstractClient):
         """本介面(UpdatePayType)用于修改賬号計費類型，暫不支援月結用戶或子賬号修改。
 
         :param request: Request instance for UpdatePayType.
-        :type request: :class:`tencentcloud.cdn.v20180606.models.UpdatePayTypeRequest`
-        :rtype: :class:`tencentcloud.cdn.v20180606.models.UpdatePayTypeResponse`
+        :type request: :class:`taifucloudcloud.cdn.v20180606.models.UpdatePayTypeRequest`
+        :rtype: :class:`taifucloudcloud.cdn.v20180606.models.UpdatePayTypeResponse`
 
         """
         try:

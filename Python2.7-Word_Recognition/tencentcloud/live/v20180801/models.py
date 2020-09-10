@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AddDelayLiveStreamRequest(AbstractModel):
@@ -275,7 +275,7 @@ class CallBackTemplateInfo(AbstractModel):
         :type RecordNotifyUrl: str
         :param SnapshotNotifyUrl: 截圖回調URL。
         :type SnapshotNotifyUrl: str
-        :param PornCensorshipNotifyUrl: 鑒黃回調URL。
+        :param PornCensorshipNotifyUrl:  回調URL。
         :type PornCensorshipNotifyUrl: str
         :param CallbackKey: 回調的鑒權key
         :type CallbackKey: str
@@ -417,7 +417,7 @@ class CreateLiveCallbackTemplateRequest(AbstractModel):
         :param SnapshotNotifyUrl: 截圖回調URL，
 相關協議文件：[事件訊息通知](/document/product/267/32744)。
         :type SnapshotNotifyUrl: str
-        :param PornCensorshipNotifyUrl: 鑒黃回調URL，
+        :param PornCensorshipNotifyUrl:  回調URL，
 相關協議文件：[事件訊息通知](/document/product/267/32741)。
         :type PornCensorshipNotifyUrl: str
         :param CallbackKey: 回調key，回調URL公用，鑒權回調說明詳見回調格式文件
@@ -532,10 +532,10 @@ class CreateLiveRecordRequest(AbstractModel):
         :type AppName: str
         :param DomainName: 推流域名。多域名推流必須設置。
         :type DomainName: str
-        :param StartTime: 錄制開始時間。中國标準時間，需要URLEncode。如 2017-01-01 10:10:01，編碼爲：2017-01-01+10%3a10%3a01。
+        :param StartTime: 錄制開始時間。 标準時間，需要URLEncode。如 2017-01-01 10:10:01，編碼爲：2017-01-01+10%3a10%3a01。
 定時錄制模式，必須設置該欄位；實時視訊錄制模式，忽略該欄位。
         :type StartTime: str
-        :param EndTime: 錄制結束時間。中國标準時間，需要URLEncode。如 2017-01-01 10:30:01，編碼爲：2017-01-01+10%3a30%3a01。
+        :param EndTime: 錄制結束時間。 标準時間，需要URLEncode。如 2017-01-01 10:30:01，編碼爲：2017-01-01+10%3a30%3a01。
 定時錄制模式，必須設置該欄位；實時錄制模式，爲可選欄位。如果通過Highlight參數，設置錄制爲實時視訊錄制模式，其設置的結束時間不應超過當前時間+30分鍾，如果設置的結束時間超過當前時間+30分鍾或者小於當前時間或者不設置該參數，則實際結束時間爲當前時間+30分鍾。
         :type EndTime: str
         :param RecordType: 錄制類型。
@@ -665,18 +665,18 @@ class CreateLiveRecordTemplateRequest(AbstractModel):
         :param Description: 描述訊息。
         :type Description: str
         :param FlvParam: Flv錄制參數，開啓Flv錄制時設置。
-        :type FlvParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
+        :type FlvParam: :class:`taifucloudcloud.live.v20180801.models.RecordParam`
         :param HlsParam: Hls錄制參數，開啓hls錄制時設置。
-        :type HlsParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
+        :type HlsParam: :class:`taifucloudcloud.live.v20180801.models.RecordParam`
         :param Mp4Param: Mp4錄制參數，開啓Mp4錄制時設置。
-        :type Mp4Param: :class:`tencentcloud.live.v20180801.models.RecordParam`
+        :type Mp4Param: :class:`taifucloudcloud.live.v20180801.models.RecordParam`
         :param AacParam: Aac錄制參數，開啓Aac錄制時設置。
-        :type AacParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
+        :type AacParam: :class:`taifucloudcloud.live.v20180801.models.RecordParam`
         :param IsDelayLive: 0：普通直播，
 1：慢直播。
         :type IsDelayLive: int
         :param HlsSpecialParam: HLS專屬錄制參數。
-        :type HlsSpecialParam: :class:`tencentcloud.live.v20180801.models.HlsSpecialParam`
+        :type HlsSpecialParam: :class:`taifucloudcloud.live.v20180801.models.HlsSpecialParam`
         """
         self.TemplateName = None
         self.Description = None
@@ -800,7 +800,7 @@ class CreateLiveSnapshotTemplateRequest(AbstractModel):
         :type Width: int
         :param Height: 截圖高度。預設：0（原始高）。
         :type Height: int
-        :param PornFlag: 是否開啓鑒黃，0：不開啓，1：開啓。預設：0。
+        :param PornFlag: 是否開啓 ，0：不開啓，1：開啓。預設：0。
         :type PornFlag: int
         """
         self.TemplateName = None
@@ -1053,11 +1053,11 @@ class CreatePullStreamConfigRequest(AbstractModel):
         """
         :param FromUrl: 源Url。
         :type FromUrl: str
-        :param ToUrl: 目的Url，目前限制該目标網址爲騰訊域名。
+        :param ToUrl: 目的Url，目前限制該目标網址爲 域名。
         :type ToUrl: str
-        :param AreaId: 區域id,1-深圳,2-上海，3-天津,4-香港。
+        :param AreaId: 區域id,1- ,2- ，3- ,4- 。
         :type AreaId: int
-        :param IspId: 運營商id,1-電信,2-移動,3-聯通,4-其他,AreaId爲4的時候,IspId只能爲其他。
+        :param IspId: 運營商id,1-電信,2- ,3- ,4-其他,AreaId爲4的時候,IspId只能爲其他。
         :type IspId: int
         :param StartTime: 開始時間。
 使用UTC格式時間，
@@ -1730,7 +1730,7 @@ class DescribeLiveCallbackTemplateResponse(AbstractModel):
     def __init__(self):
         """
         :param Template: 回調範本訊息。
-        :type Template: :class:`tencentcloud.live.v20180801.models.CallBackTemplateInfo`
+        :type Template: :class:`taifucloudcloud.live.v20180801.models.CallBackTemplateInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1802,7 +1802,7 @@ class DescribeLiveCertResponse(AbstractModel):
     def __init__(self):
         """
         :param CertInfo: 證書訊息。
-        :type CertInfo: :class:`tencentcloud.live.v20180801.models.CertInfo`
+        :type CertInfo: :class:`taifucloudcloud.live.v20180801.models.CertInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1874,7 +1874,7 @@ class DescribeLiveDomainCertResponse(AbstractModel):
     def __init__(self):
         """
         :param DomainCertInfo: 證書訊息。
-        :type DomainCertInfo: :class:`tencentcloud.live.v20180801.models.DomainCertInfo`
+        :type DomainCertInfo: :class:`taifucloudcloud.live.v20180801.models.DomainCertInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1914,7 +1914,7 @@ class DescribeLiveDomainResponse(AbstractModel):
     def __init__(self):
         """
         :param DomainInfo: 域名訊息。
-        :type DomainInfo: :class:`tencentcloud.live.v20180801.models.DomainInfo`
+        :type DomainInfo: :class:`taifucloudcloud.live.v20180801.models.DomainInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2082,7 +2082,7 @@ class DescribeLivePlayAuthKeyResponse(AbstractModel):
     def __init__(self):
         """
         :param PlayAuthKeyInfo: 播放鑒權key訊息。
-        :type PlayAuthKeyInfo: :class:`tencentcloud.live.v20180801.models.PlayAuthKeyInfo`
+        :type PlayAuthKeyInfo: :class:`taifucloudcloud.live.v20180801.models.PlayAuthKeyInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2122,7 +2122,7 @@ class DescribeLivePushAuthKeyResponse(AbstractModel):
     def __init__(self):
         """
         :param PushAuthKeyInfo: 推流鑒權key訊息。
-        :type PushAuthKeyInfo: :class:`tencentcloud.live.v20180801.models.PushAuthKeyInfo`
+        :type PushAuthKeyInfo: :class:`taifucloudcloud.live.v20180801.models.PushAuthKeyInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2194,7 +2194,7 @@ class DescribeLiveRecordTemplateResponse(AbstractModel):
     def __init__(self):
         """
         :param Template: 錄制範本訊息。
-        :type Template: :class:`tencentcloud.live.v20180801.models.RecordTemplateInfo`
+        :type Template: :class:`taifucloudcloud.live.v20180801.models.RecordTemplateInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2309,7 +2309,7 @@ class DescribeLiveSnapshotTemplateResponse(AbstractModel):
     def __init__(self):
         """
         :param Template: 截圖範本訊息。
-        :type Template: :class:`tencentcloud.live.v20180801.models.SnapshotTemplateInfo`
+        :type Template: :class:`taifucloudcloud.live.v20180801.models.SnapshotTemplateInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2839,7 +2839,7 @@ class DescribeLiveTranscodeDetailInfoRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param DayTime: 起始時間，北京時間，
+        :param DayTime: 起始時間， 時間，
 格式：yyyymmdd。
 注意：當前只支援查詢近30天内某天的詳細數據。
         :type DayTime: str
@@ -2968,7 +2968,7 @@ class DescribeLiveTranscodeTemplateResponse(AbstractModel):
     def __init__(self):
         """
         :param Template: 範本訊息。
-        :type Template: :class:`tencentcloud.live.v20180801.models.TemplateInfo`
+        :type Template: :class:`taifucloudcloud.live.v20180801.models.TemplateInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3040,7 +3040,7 @@ class DescribeLiveWatermarkResponse(AbstractModel):
     def __init__(self):
         """
         :param Watermark: 浮水印訊息。
-        :type Watermark: :class:`tencentcloud.live.v20180801.models.WatermarkInfo`
+        :type Watermark: :class:`taifucloudcloud.live.v20180801.models.WatermarkInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3130,10 +3130,10 @@ class DescribeLogDownloadListRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 開始時間，北京時間。
+        :param StartTime: 開始時間， 時間。
 格式：yyyy-mm-dd HH:MM:SS。
         :type StartTime: str
-        :param EndTime: 結束時間，北京時間。
+        :param EndTime: 結束時間， 時間。
 格式：yyyy-mm-dd HH:MM:SS。
 注意：結束時間 - 開始時間 <=7天。
         :type EndTime: str
@@ -3188,10 +3188,10 @@ class DescribeProIspPlaySumInfoListRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 起始時間，北京時間，
+        :param StartTime: 起始時間， 時間，
 格式：yyyy-mm-dd HH:MM:SS。
         :type StartTime: str
-        :param EndTime: 結束時間，北京時間，
+        :param EndTime: 結束時間， 時間，
 格式：yyyy-mm-dd HH:MM:SS。
 注：EndTime 和 StartTime 只支援最近1天的數據查詢。
         :type EndTime: str
@@ -3245,7 +3245,7 @@ class DescribeProIspPlaySumInfoListResponse(AbstractModel):
         :type TotalNum: int
         :param TotalPage: 總頁數
         :type TotalPage: int
-        :param DataInfoList: 省份或運營商匯總數據清單
+        :param DataInfoList:  或運營商匯總數據清單
         :type DataInfoList: list of ProIspPlaySumInfo
         :param AvgFluxPerSecond: 平均頻寬
         :type AvgFluxPerSecond: float
@@ -3289,10 +3289,10 @@ class DescribeProvinceIspPlayInfoListRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 起始時間點，當前使用北京時間，
+        :param StartTime: 起始時間點，當前使用 時間，
 例：2019-02-21 10:00:00。
         :type StartTime: str
-        :param EndTime: 結束時間點，當前使用北京時間，
+        :param EndTime: 結束時間點，當前使用 時間，
 例：2019-02-21 12:00:00。
 注：EndTime 和 StartTime 只支援最近1天的數據查詢。
         :type EndTime: str
@@ -3308,7 +3308,7 @@ class DescribeProvinceIspPlayInfoListRequest(AbstractModel):
         :type StatType: str
         :param PlayDomains: 播放域名清單。
         :type PlayDomains: list of str
-        :param ProvinceNames: 非必傳參數，要查詢的省份（地區）英文名稱清單，如 Beijing
+        :param ProvinceNames: 非必傳參數，要查詢的 （地區）英文名稱清單，如 Beijing
         :type ProvinceNames: list of str
         :param IspNames: 非必傳參數，要查詢的運營商英文名稱清單，如 China Mobile ，如果爲空，查詢所有運營商的數據
         :type IspNames: list of str
@@ -3484,10 +3484,10 @@ class DescribeStreamPlayInfoListRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 開始時間，北京時間，格式爲yyyy-mm-dd HH:MM:SS，
+        :param StartTime: 開始時間， 時間，格式爲yyyy-mm-dd HH:MM:SS，
 當前時間 和 開始時間 間隔不超過30天。
         :type StartTime: str
-        :param EndTime: 結束時間，北京時間，格式爲yyyy-mm-dd HH:MM:SS，
+        :param EndTime: 結束時間， 時間，格式爲yyyy-mm-dd HH:MM:SS，
 結束時間 和 開始時間  必須在同一天内。
         :type EndTime: str
         :param PlayDomain: 播放域名，
@@ -3884,7 +3884,7 @@ class ModifyLiveCallbackTemplateRequest(AbstractModel):
         :type RecordNotifyUrl: str
         :param SnapshotNotifyUrl: 截圖回調URL。
         :type SnapshotNotifyUrl: str
-        :param PornCensorshipNotifyUrl: 鑒黃回調URL。
+        :param PornCensorshipNotifyUrl:  回調URL。
         :type PornCensorshipNotifyUrl: str
         :param CallbackKey: 回調key，回調URL公用，鑒權回調說明詳見回調格式文件
         :type CallbackKey: str
@@ -4177,15 +4177,15 @@ class ModifyLiveRecordTemplateRequest(AbstractModel):
         :param Description: 描述訊息。
         :type Description: str
         :param FlvParam: Flv錄制參數，開啓Flv錄制時設置。
-        :type FlvParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
+        :type FlvParam: :class:`taifucloudcloud.live.v20180801.models.RecordParam`
         :param HlsParam: Hls錄制參數，開啓hls錄制時設置。
-        :type HlsParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
+        :type HlsParam: :class:`taifucloudcloud.live.v20180801.models.RecordParam`
         :param Mp4Param: Mp4錄制參數，開啓Mp4錄制時設置。
-        :type Mp4Param: :class:`tencentcloud.live.v20180801.models.RecordParam`
+        :type Mp4Param: :class:`taifucloudcloud.live.v20180801.models.RecordParam`
         :param AacParam: Aac錄制參數，開啓Aac錄制時設置。
-        :type AacParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
+        :type AacParam: :class:`taifucloudcloud.live.v20180801.models.RecordParam`
         :param HlsSpecialParam: HLS錄制定制參數
-        :type HlsSpecialParam: :class:`tencentcloud.live.v20180801.models.HlsSpecialParam`
+        :type HlsSpecialParam: :class:`taifucloudcloud.live.v20180801.models.HlsSpecialParam`
         """
         self.TemplateId = None
         self.TemplateName = None
@@ -4254,7 +4254,7 @@ class ModifyLiveSnapshotTemplateRequest(AbstractModel):
         :type Width: int
         :param Height: 截圖高度。
         :type Height: int
-        :param PornFlag: 是否開啓鑒黃，0：不開啓，1：開啓。
+        :param PornFlag: 是否開啓 ，0：不開啓，1：開啓。
         :type PornFlag: int
         :param CosAppId: Cos AppId。
         :type CosAppId: int
@@ -4419,9 +4419,9 @@ class ModifyPullStreamConfigRequest(AbstractModel):
         :type FromUrl: str
         :param ToUrl: 目的Url。
         :type ToUrl: str
-        :param AreaId: 區域id,1-深圳,2-上海，3-天津,4-香港。如有改動，需同時傳入IspId。
+        :param AreaId: 區域id,1- ,2- ，3- ,4- 。如有改動，需同時傳入IspId。
         :type AreaId: int
-        :param IspId: 運營商id,1-電信,2-移動,3-聯通,4-其他,AreaId爲4的時候,IspId只能爲其他。如有改動，需同時傳入AreaId。
+        :param IspId: 運營商id,1-電信,2- ,3- ,4-其他,AreaId爲4的時候,IspId只能爲其他。如有改動，需同時傳入AreaId。
         :type IspId: int
         :param StartTime: 開始時間。
 使用UTC格式時間，
@@ -4565,7 +4565,7 @@ class PlayDataInfoByStream(AbstractModel):
 
 
 class PlayStatInfo(AbstractModel):
-    """按省份運營商查詢的播放訊息
+    """按 運營商查詢的播放訊息
 
     """
 
@@ -4587,13 +4587,13 @@ class PlayStatInfo(AbstractModel):
 
 
 class ProIspPlaySumInfo(AbstractModel):
-    """獲取省份/運營商的播放訊息
+    """獲取 /運營商的播放訊息
 
     """
 
     def __init__(self):
         """
-        :param Name: 省份/運營商。
+        :param Name:  /運營商。
         :type Name: str
         :param TotalFlux: 總流量，單位：MB。
         :type TotalFlux: float
@@ -4827,18 +4827,18 @@ class RecordTemplateInfo(AbstractModel):
         :param Description: 描述訊息。
         :type Description: str
         :param FlvParam: Flv錄制參數。
-        :type FlvParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
+        :type FlvParam: :class:`taifucloudcloud.live.v20180801.models.RecordParam`
         :param HlsParam: Hls錄制參數。
-        :type HlsParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
+        :type HlsParam: :class:`taifucloudcloud.live.v20180801.models.RecordParam`
         :param Mp4Param: Mp4錄制參數。
-        :type Mp4Param: :class:`tencentcloud.live.v20180801.models.RecordParam`
+        :type Mp4Param: :class:`taifucloudcloud.live.v20180801.models.RecordParam`
         :param AacParam: Aac錄制參數。
-        :type AacParam: :class:`tencentcloud.live.v20180801.models.RecordParam`
+        :type AacParam: :class:`taifucloudcloud.live.v20180801.models.RecordParam`
         :param IsDelayLive: 0：普通直播，
 1：慢直播。
         :type IsDelayLive: int
         :param HlsSpecialParam: HLS錄制定制參數
-        :type HlsSpecialParam: :class:`tencentcloud.live.v20180801.models.HlsSpecialParam`
+        :type HlsSpecialParam: :class:`taifucloudcloud.live.v20180801.models.HlsSpecialParam`
         """
         self.TemplateId = None
         self.TemplateName = None
@@ -5049,7 +5049,7 @@ class SnapshotTemplateInfo(AbstractModel):
         :type Width: int
         :param Height: 截圖高度。0-2000 0原始高度并适配原始比例
         :type Height: int
-        :param PornFlag: 是否開啓鑒黃，0：不開啓，1：開啓。
+        :param PornFlag: 是否開啓 ，0：不開啓，1：開啓。
         :type PornFlag: int
         :param CosAppId: Cos AppId。
         :type CosAppId: int
@@ -5365,10 +5365,10 @@ class TranscodeDetailInfo(AbstractModel):
         """
         :param StreamName: 流名稱。
         :type StreamName: str
-        :param StartTime: 開始時間，北京時間，
+        :param StartTime: 開始時間， 時間，
 格式：yyyy-mm-dd HH:MM。
         :type StartTime: str
-        :param EndTime: 結束時間，北京時間，
+        :param EndTime: 結束時間， 時間，
 格式：yyyy-mm-dd HH:MM。
         :type EndTime: str
         :param Duration: 轉碼時長，單位：分鍾。

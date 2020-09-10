@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cloudhsm.v20191112 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cloudhsm.v20191112 import models
 
 
 class CloudhsmClient(AbstractClient):
     _apiVersion = '2019-11-12'
-    _endpoint = 'cloudhsm.tencentcloudapi.com'
+    _endpoint = 'cloudhsm.taifucloudcloudapi.com'
 
 
     def DescribeHSMBySubnetId(self, request):
         """通過SubnetId獲取Hsm資源數
 
         :param request: Request instance for DescribeHSMBySubnetId.
-        :type request: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeHSMBySubnetIdRequest`
-        :rtype: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeHSMBySubnetIdResponse`
+        :type request: :class:`taifucloudcloud.cloudhsm.v20191112.models.DescribeHSMBySubnetIdRequest`
+        :rtype: :class:`taifucloudcloud.cloudhsm.v20191112.models.DescribeHSMBySubnetIdResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class CloudhsmClient(AbstractClient):
         """通過VpcId獲取Hsm資源數
 
         :param request: Request instance for DescribeHSMByVpcId.
-        :type request: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeHSMByVpcIdRequest`
-        :rtype: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeHSMByVpcIdResponse`
+        :type request: :class:`taifucloudcloud.cloudhsm.v20191112.models.DescribeHSMByVpcIdRequest`
+        :rtype: :class:`taifucloudcloud.cloudhsm.v20191112.models.DescribeHSMByVpcIdResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class CloudhsmClient(AbstractClient):
         """查詢子網清單
 
         :param request: Request instance for DescribeSubnet.
-        :type request: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeSubnetRequest`
-        :rtype: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeSubnetResponse`
+        :type request: :class:`taifucloudcloud.cloudhsm.v20191112.models.DescribeSubnetRequest`
+        :rtype: :class:`taifucloudcloud.cloudhsm.v20191112.models.DescribeSubnetResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class CloudhsmClient(AbstractClient):
         """根據用戶的AppId獲取用戶安全組清單
 
         :param request: Request instance for DescribeUsg.
-        :type request: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeUsgRequest`
-        :rtype: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeUsgResponse`
+        :type request: :class:`taifucloudcloud.cloudhsm.v20191112.models.DescribeUsgRequest`
+        :rtype: :class:`taifucloudcloud.cloudhsm.v20191112.models.DescribeUsgResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class CloudhsmClient(AbstractClient):
         """獲取安全組詳情
 
         :param request: Request instance for DescribeUsgRule.
-        :type request: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeUsgRuleRequest`
-        :rtype: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeUsgRuleResponse`
+        :type request: :class:`taifucloudcloud.cloudhsm.v20191112.models.DescribeUsgRuleRequest`
+        :rtype: :class:`taifucloudcloud.cloudhsm.v20191112.models.DescribeUsgRuleResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class CloudhsmClient(AbstractClient):
         """查詢用戶的私有網絡清單
 
         :param request: Request instance for DescribeVpc.
-        :type request: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeVpcRequest`
-        :rtype: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeVpcResponse`
+        :type request: :class:`taifucloudcloud.cloudhsm.v20191112.models.DescribeVpcRequest`
+        :rtype: :class:`taifucloudcloud.cloudhsm.v20191112.models.DescribeVpcResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class CloudhsmClient(AbstractClient):
         """獲取VSM屬性
 
         :param request: Request instance for DescribeVsmAttributes.
-        :type request: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeVsmAttributesRequest`
-        :rtype: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeVsmAttributesResponse`
+        :type request: :class:`taifucloudcloud.cloudhsm.v20191112.models.DescribeVsmAttributesRequest`
+        :rtype: :class:`taifucloudcloud.cloudhsm.v20191112.models.DescribeVsmAttributesResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class CloudhsmClient(AbstractClient):
         """獲取用戶VSM清單
 
         :param request: Request instance for DescribeVsms.
-        :type request: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeVsmsRequest`
-        :rtype: :class:`tencentcloud.cloudhsm.v20191112.models.DescribeVsmsResponse`
+        :type request: :class:`taifucloudcloud.cloudhsm.v20191112.models.DescribeVsmsRequest`
+        :rtype: :class:`taifucloudcloud.cloudhsm.v20191112.models.DescribeVsmsResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class CloudhsmClient(AbstractClient):
         """購買詢價介面
 
         :param request: Request instance for InquiryPriceBuyVsm.
-        :type request: :class:`tencentcloud.cloudhsm.v20191112.models.InquiryPriceBuyVsmRequest`
-        :rtype: :class:`tencentcloud.cloudhsm.v20191112.models.InquiryPriceBuyVsmResponse`
+        :type request: :class:`taifucloudcloud.cloudhsm.v20191112.models.InquiryPriceBuyVsmRequest`
+        :rtype: :class:`taifucloudcloud.cloudhsm.v20191112.models.InquiryPriceBuyVsmResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class CloudhsmClient(AbstractClient):
         """修改VSM屬性
 
         :param request: Request instance for ModifyVsmAttributes.
-        :type request: :class:`tencentcloud.cloudhsm.v20191112.models.ModifyVsmAttributesRequest`
-        :rtype: :class:`tencentcloud.cloudhsm.v20191112.models.ModifyVsmAttributesResponse`
+        :type request: :class:`taifucloudcloud.cloudhsm.v20191112.models.ModifyVsmAttributesRequest`
+        :rtype: :class:`taifucloudcloud.cloudhsm.v20191112.models.ModifyVsmAttributesResponse`
 
         """
         try:

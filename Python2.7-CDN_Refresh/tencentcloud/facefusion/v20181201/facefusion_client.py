@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.facefusion.v20181201 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.facefusion.v20181201 import models
 
 
 class FacefusionClient(AbstractClient):
     _apiVersion = '2018-12-01'
-    _endpoint = 'facefusion.tencentcloudapi.com'
+    _endpoint = 'facefusion.taifucloudcloudapi.com'
 
 
     def FaceFusion(self, request):
@@ -31,8 +31,8 @@ class FacefusionClient(AbstractClient):
         - 公共參數中的簽名方式必須指定爲V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for FaceFusion.
-        :type request: :class:`tencentcloud.facefusion.v20181201.models.FaceFusionRequest`
-        :rtype: :class:`tencentcloud.facefusion.v20181201.models.FaceFusionResponse`
+        :type request: :class:`taifucloudcloud.facefusion.v20181201.models.FaceFusionRequest`
+        :rtype: :class:`taifucloudcloud.facefusion.v20181201.models.FaceFusionResponse`
 
         """
         try:
@@ -56,15 +56,15 @@ class FacefusionClient(AbstractClient):
 
 
     def FuseFace(self, request):
-        """本介面用于單臉、多臉融合，用戶上傳人臉圖片，獲取與範本融合後的人臉圖片。檢視 <a href="https://cloud.tencent.com/document/product/670/38247" target="_blank">選臉融合接入指引</a>。
+        """本介面用于單臉、多臉融合，用戶上傳人臉圖片，獲取與範本融合後的人臉圖片。檢視 <a href="https://cloud.taifucloud.com/document/product/670/38247" target="_blank">選臉融合接入指引</a>。
 
         未發布的活動請求頻率限制爲1次/秒，已發布的活動請求頻率限制50次/秒。如有需要提高活動的請求頻率限制，請在控制台中申請。
         >
         - 公共參數中的簽名方式必須指定爲V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for FuseFace.
-        :type request: :class:`tencentcloud.facefusion.v20181201.models.FuseFaceRequest`
-        :rtype: :class:`tencentcloud.facefusion.v20181201.models.FuseFaceResponse`
+        :type request: :class:`taifucloudcloud.facefusion.v20181201.models.FuseFaceRequest`
+        :rtype: :class:`taifucloudcloud.facefusion.v20181201.models.FuseFaceResponse`
 
         """
         try:

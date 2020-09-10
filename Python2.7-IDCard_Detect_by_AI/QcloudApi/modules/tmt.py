@@ -18,6 +18,6 @@ from QcloudApi.modules import base
 class Tmt(base.Base):
     """Tencent Machine Translation.
 
-    document: https://cloud.tencent.com/document/product/551
+    document: https://cloud.taifucloud.com/document/product/551
     """
     requestHost = 'tmt.api.qcloud.com'

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AddExistedInstancesRequest(AbstractModel):
@@ -28,14 +28,14 @@ class AddExistedInstancesRequest(AbstractModel):
         :param InstanceIds: 實例清單
         :type InstanceIds: list of str
         :param InstanceAdvancedSettings: 實例額外需要設置參數訊息
-        :type InstanceAdvancedSettings: :class:`tencentcloud.tke.v20180525.models.InstanceAdvancedSettings`
+        :type InstanceAdvancedSettings: :class:`taifucloudcloud.tke.v20180525.models.InstanceAdvancedSettings`
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
-        :type EnhancedService: :class:`tencentcloud.tke.v20180525.models.EnhancedService`
+        :type EnhancedService: :class:`taifucloudcloud.tke.v20180525.models.EnhancedService`
         :param LoginSettings: 節點登入訊息（目前僅支援使用Password或者單個KeyIds）
-        :type LoginSettings: :class:`tencentcloud.tke.v20180525.models.LoginSettings`
+        :type LoginSettings: :class:`taifucloudcloud.tke.v20180525.models.LoginSettings`
         :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 DescribeSecurityGroups 的返回值中的sgId欄位來獲取。若不指定該參數，則綁定預設安全組。（目前僅支援設置單個sgId）
         :type SecurityGroupIds: list of str
-        :param HostName: 重灌系統時，可以指定修改實例的HostName(集群爲HostName模式時，此參數必傳，規則名稱除不支援大寫字元外與[CVM創建實例](https://cloud.tencent.com/document/product/213/15730)介面HostName一緻)
+        :param HostName: 重灌系統時，可以指定修改實例的HostName(集群爲HostName模式時，此參數必傳，規則名稱除不支援大寫字元外與[CVM創建實例](https://cloud.taifucloud.com/document/product/213/15730)介面HostName一緻)
         :type HostName: str
         """
         self.ClusterId = None
@@ -133,7 +133,7 @@ class Cluster(AbstractModel):
         :param ClusterType: 集群類型，托管集群：MANAGED_CLUSTER，獨立集群：INDEPENDENT_CLUSTER。
         :type ClusterType: str
         :param ClusterNetworkSettings: 集群網絡相關參數
-        :type ClusterNetworkSettings: :class:`tencentcloud.tke.v20180525.models.ClusterNetworkSettings`
+        :type ClusterNetworkSettings: :class:`taifucloudcloud.tke.v20180525.models.ClusterNetworkSettings`
         :param ClusterNodeNum: 集群當前node數量
         :type ClusterNodeNum: int
         :param ProjectId: 集群所屬的項目ID
@@ -223,7 +223,7 @@ class ClusterAdvancedSettings(AbstractModel):
         :param NodeNameType: 集群中節點NodeName類型（包括 hostname,lan-ip兩種形式，預設爲lan-ip。如果開啓了hostname模式，創建節點時需要設置HostName參數，并且InstanceName需要和HostName一緻）
         :type NodeNameType: str
         :param ExtraArgs: 集群自定義參數
-        :type ExtraArgs: :class:`tencentcloud.tke.v20180525.models.ClusterExtraArgs`
+        :type ExtraArgs: :class:`taifucloudcloud.tke.v20180525.models.ClusterExtraArgs`
         :param NetworkType: 集群網絡類型（包括GR(全局路由)和VPC-CNI兩種模式，預設爲GR。
         :type NetworkType: str
         :param IsNonStaticIpMode: 集群VPC-CNI模式是否爲非固定IP，預設: FALSE 固定IP。
@@ -298,7 +298,7 @@ class ClusterAsGroupAttribute(AbstractModel):
         :param AutoScalingGroupEnabled: 是否開啓
         :type AutoScalingGroupEnabled: bool
         :param AutoScalingGroupRange: 伸縮組最大最小實例數
-        :type AutoScalingGroupRange: :class:`tencentcloud.tke.v20180525.models.AutoScalingGroupRange`
+        :type AutoScalingGroupRange: :class:`taifucloudcloud.tke.v20180525.models.AutoScalingGroupRange`
         """
         self.AutoScalingGroupId = None
         self.AutoScalingGroupEnabled = None
@@ -544,12 +544,12 @@ class CreateClusterAsGroupRequest(AbstractModel):
         """
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param AutoScalingGroupPara: 伸縮組創建透傳參數，json化字串格式，詳見[伸縮組創建實例](https://cloud.tencent.com/document/api/377/20440)介面。LaunchConfigurationId由LaunchConfigurePara參數創建，不支援填寫
+        :param AutoScalingGroupPara: 伸縮組創建透傳參數，json化字串格式，詳見[伸縮組創建實例](https://cloud.taifucloud.com/document/api/377/20440)介面。LaunchConfigurationId由LaunchConfigurePara參數創建，不支援填寫
         :type AutoScalingGroupPara: str
-        :param LaunchConfigurePara: 啓動配置創建透傳參數，json化字串格式，詳見[創建啓動配置](https://cloud.tencent.com/document/api/377/20447)介面。另外ImageId參數由于集群維度已經有的ImageId訊息，這個欄位不需要填寫。UserData欄位設置通過UserScript設置，這個欄位不需要填寫。
+        :param LaunchConfigurePara: 啓動配置創建透傳參數，json化字串格式，詳見[創建啓動配置](https://cloud.taifucloud.com/document/api/377/20447)介面。另外ImageId參數由于集群維度已經有的ImageId訊息，這個欄位不需要填寫。UserData欄位設置通過UserScript設置，這個欄位不需要填寫。
         :type LaunchConfigurePara: str
         :param InstanceAdvancedSettings: 節點高級配置訊息
-        :type InstanceAdvancedSettings: :class:`tencentcloud.tke.v20180525.models.InstanceAdvancedSettings`
+        :type InstanceAdvancedSettings: :class:`taifucloudcloud.tke.v20180525.models.InstanceAdvancedSettings`
         :param Labels: 節點Label數組
         :type Labels: list of Label
         """
@@ -693,10 +693,10 @@ class CreateClusterInstancesRequest(AbstractModel):
         """
         :param ClusterId: 集群 ID，請填寫 查詢集群清單 介面中返回的 clusterId 欄位
         :type ClusterId: str
-        :param RunInstancePara: CVM創建透傳參數，json化字串格式，詳見[CVM創建實例](https://cloud.tencent.com/document/product/213/15730)介面。
+        :param RunInstancePara: CVM創建透傳參數，json化字串格式，詳見[CVM創建實例](https://cloud.taifucloud.com/document/product/213/15730)介面。
         :type RunInstancePara: str
         :param InstanceAdvancedSettings: 實例額外需要設置參數訊息
-        :type InstanceAdvancedSettings: :class:`tencentcloud.tke.v20180525.models.InstanceAdvancedSettings`
+        :type InstanceAdvancedSettings: :class:`taifucloudcloud.tke.v20180525.models.InstanceAdvancedSettings`
         """
         self.ClusterId = None
         self.RunInstancePara = None
@@ -740,17 +740,17 @@ class CreateClusterRequest(AbstractModel):
     def __init__(self):
         """
         :param ClusterCIDRSettings: 集群容器網絡配置訊息
-        :type ClusterCIDRSettings: :class:`tencentcloud.tke.v20180525.models.ClusterCIDRSettings`
+        :type ClusterCIDRSettings: :class:`taifucloudcloud.tke.v20180525.models.ClusterCIDRSettings`
         :param ClusterType: 集群類型，托管集群：MANAGED_CLUSTER，獨立集群：INDEPENDENT_CLUSTER。
         :type ClusterType: str
-        :param RunInstancesForNode: CVM創建透傳參數，json化字串格式，詳見[CVM創建實例](https://cloud.tencent.com/document/product/213/15730)介面。總機型(包括地域)數量不超過10個，相同機型(地域)購買多台機器可以通過設置參數中RunInstances中InstanceCount來實現。
+        :param RunInstancesForNode: CVM創建透傳參數，json化字串格式，詳見[CVM創建實例](https://cloud.taifucloud.com/document/product/213/15730)介面。總機型(包括地域)數量不超過10個，相同機型(地域)購買多台機器可以通過設置參數中RunInstances中InstanceCount來實現。
         :type RunInstancesForNode: list of RunInstancesForNode
         :param ClusterBasicSettings: 集群的基本配置訊息
-        :type ClusterBasicSettings: :class:`tencentcloud.tke.v20180525.models.ClusterBasicSettings`
+        :type ClusterBasicSettings: :class:`taifucloudcloud.tke.v20180525.models.ClusterBasicSettings`
         :param ClusterAdvancedSettings: 集群高級配置訊息
-        :type ClusterAdvancedSettings: :class:`tencentcloud.tke.v20180525.models.ClusterAdvancedSettings`
+        :type ClusterAdvancedSettings: :class:`taifucloudcloud.tke.v20180525.models.ClusterAdvancedSettings`
         :param InstanceAdvancedSettings: 節點高級配置訊息
-        :type InstanceAdvancedSettings: :class:`tencentcloud.tke.v20180525.models.InstanceAdvancedSettings`
+        :type InstanceAdvancedSettings: :class:`taifucloudcloud.tke.v20180525.models.InstanceAdvancedSettings`
         :param ExistedInstancesForNode: 已存在實例的配置訊息。所有實例必須在同一個VPC中，最大數量不超過100。
         :type ExistedInstancesForNode: list of ExistedInstancesForNode
         :param InstanceDataDiskMountSettings: CVM類型和其對應的數據盤掛載配置訊息
@@ -949,7 +949,7 @@ class DeleteClusterAsGroupsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ClusterId: 集群ID，通過[DescribeClusters](https://cloud.tencent.com/document/api/457/31862)介面獲取。
+        :param ClusterId: 集群ID，通過[DescribeClusters](https://cloud.taifucloud.com/document/api/457/31862)介面獲取。
         :type ClusterId: str
         :param AutoScalingGroupIds: 集群伸縮組ID的清單
         :type AutoScalingGroupIds: list of str
@@ -1251,7 +1251,7 @@ class DescribeClusterAsGroupOptionResponse(AbstractModel):
         """
         :param ClusterAsGroupOption: 集群彈性伸縮屬性
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ClusterAsGroupOption: :class:`tencentcloud.tke.v20180525.models.ClusterAsGroupOption`
+        :type ClusterAsGroupOption: :class:`taifucloudcloud.tke.v20180525.models.ClusterAsGroupOption`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1277,9 +1277,9 @@ class DescribeClusterAsGroupsRequest(AbstractModel):
         :type ClusterId: str
         :param AutoScalingGroupIds: 伸縮組ID清單，如果爲空，表示拉取集群關聯的所有伸縮組。
         :type AutoScalingGroupIds: list of str
-        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于Limit的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于Limit的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.ClusterId = None
@@ -1305,7 +1305,7 @@ class DescribeClusterAsGroupsResponse(AbstractModel):
         :param TotalCount: 集群關聯的伸縮組總數
         :type TotalCount: int
         :param ClusterAsGroupSet: 集群關聯的伸縮組清單
-        :type ClusterAsGroupSet: :class:`tencentcloud.tke.v20180525.models.ClusterAsGroup`
+        :type ClusterAsGroupSet: :class:`taifucloudcloud.tke.v20180525.models.ClusterAsGroup`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1417,9 +1417,9 @@ class DescribeClusterInstancesRequest(AbstractModel):
         """
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于Limit的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于Limit的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         :param InstanceIds: 需要獲取的節點實例Id清單。如果爲空，表示拉取集群下所有節點實例。
         :type InstanceIds: list of str
@@ -1697,15 +1697,15 @@ class DescribeExistedInstancesRequest(AbstractModel):
         :type ClusterId: str
         :param InstanceIds: 按照一個或者多個實例ID查詢。實例ID形如：ins-xxxxxxxx。（此參數的具體格式可參考API簡介的id.N一節）。每次請求的實例的上限爲100。參數不支援同時指定InstanceIds和Filters。
         :type InstanceIds: list of str
-        :param Filters: 過濾條件,欄位和詳見[CVM查詢實例](https://cloud.tencent.com/document/api/213/15728)如果設置了ClusterId，會附加集群的VPCID作爲查詢欄位，在此情況下如果在Filter中指定了"vpc-id"作爲過濾欄位，指定的VPCID必須與集群的VPCID相同。
+        :param Filters: 過濾條件,欄位和詳見[CVM查詢實例](https://cloud.taifucloud.com/document/api/213/15728)如果設置了ClusterId，會附加集群的VPCID作爲查詢欄位，在此情況下如果在Filter中指定了"vpc-id"作爲過濾欄位，指定的VPCID必須與集群的VPCID相同。
         :type Filters: list of Filter
         :param VagueIpAddress: 實例IP進行過濾(同時支援内網IP和外網IP)
         :type VagueIpAddress: str
         :param VagueInstanceName: 實例名稱進行過濾
         :type VagueInstanceName: str
-        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于Limit的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于Limit的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.ClusterId = None
@@ -1899,9 +1899,9 @@ class EnhancedService(AbstractModel):
     def __init__(self):
         """
         :param SecurityService: 開啓雲安全服務。若不指定該參數，則預設開啓雲安全服務。
-        :type SecurityService: :class:`tencentcloud.tke.v20180525.models.RunSecurityServiceEnabled`
+        :type SecurityService: :class:`taifucloudcloud.tke.v20180525.models.RunSecurityServiceEnabled`
         :param MonitorService: 開啓雲監控服務。若不指定該參數，則預設開啓雲監控服務。
-        :type MonitorService: :class:`tencentcloud.tke.v20180525.models.RunMonitorServiceEnabled`
+        :type MonitorService: :class:`taifucloudcloud.tke.v20180525.models.RunMonitorServiceEnabled`
         """
         self.SecurityService = None
         self.MonitorService = None
@@ -2007,9 +2007,9 @@ class ExistedInstancesForNode(AbstractModel):
         :param NodeRole: 節點角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在創建 INDEPENDENT_CLUSTER 獨立集群時需要指定。MASTER_ETCD節點數量爲3～7，建議爲奇數。MASTER_ETCD最小配置爲4C8G。
         :type NodeRole: str
         :param ExistedInstancesPara: 已存在實例的重裝參數
-        :type ExistedInstancesPara: :class:`tencentcloud.tke.v20180525.models.ExistedInstancesPara`
+        :type ExistedInstancesPara: :class:`taifucloudcloud.tke.v20180525.models.ExistedInstancesPara`
         :param InstanceAdvancedSettingsOverride: 節點高級設置，會函蓋集群級别設置的InstanceAdvancedSettings（當前只對節點自定義參數ExtraArgs生效）
-        :type InstanceAdvancedSettingsOverride: :class:`tencentcloud.tke.v20180525.models.InstanceAdvancedSettings`
+        :type InstanceAdvancedSettingsOverride: :class:`taifucloudcloud.tke.v20180525.models.InstanceAdvancedSettings`
         """
         self.NodeRole = None
         self.ExistedInstancesPara = None
@@ -2036,14 +2036,14 @@ class ExistedInstancesPara(AbstractModel):
         :param InstanceIds: 集群ID
         :type InstanceIds: list of str
         :param InstanceAdvancedSettings: 實例額外需要設置參數訊息
-        :type InstanceAdvancedSettings: :class:`tencentcloud.tke.v20180525.models.InstanceAdvancedSettings`
+        :type InstanceAdvancedSettings: :class:`taifucloudcloud.tke.v20180525.models.InstanceAdvancedSettings`
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
-        :type EnhancedService: :class:`tencentcloud.tke.v20180525.models.EnhancedService`
+        :type EnhancedService: :class:`taifucloudcloud.tke.v20180525.models.EnhancedService`
         :param LoginSettings: 節點登入訊息（目前僅支援使用Password或者單個KeyIds）
-        :type LoginSettings: :class:`tencentcloud.tke.v20180525.models.LoginSettings`
+        :type LoginSettings: :class:`taifucloudcloud.tke.v20180525.models.LoginSettings`
         :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 DescribeSecurityGroups 的返回值中的sgId欄位來獲取。若不指定該參數，則綁定預設安全組。
         :type SecurityGroupIds: list of str
-        :param HostName: 重灌系統時，可以指定修改實例的HostName(集群爲HostName模式時，此參數必傳，規則名稱除不支援大寫字元外與[CVM創建實例](https://cloud.tencent.com/document/product/213/15730)介面HostName一緻)
+        :param HostName: 重灌系統時，可以指定修改實例的HostName(集群爲HostName模式時，此參數必傳，規則名稱除不支援大寫字元外與[CVM創建實例](https://cloud.taifucloud.com/document/product/213/15730)介面HostName一緻)
         :type HostName: str
         """
         self.InstanceIds = None
@@ -2074,7 +2074,7 @@ class Filter(AbstractModel):
     > * 若存在多個`Filter`時，`Filter`間的關系爲邏輯與（`AND`）關系。
     > * 若同一個`Filter`存在多個`Values`，同一`Filter`下`Values`間的關系爲邏輯或（`OR`）關系。
     >
-    > 以[DescribeInstances](https://cloud.tencent.com/document/api/213/15728)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲廣州一區 ***并且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
+    > 以[DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲 一區 ***并且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
     ```
     Filters.0.Name=zone
     &Filters.0.Values.0=ap-guangzhou-1
@@ -2154,7 +2154,7 @@ class Instance(AbstractModel):
         :type DrainStatus: str
         :param InstanceAdvancedSettings: 節點配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type InstanceAdvancedSettings: :class:`tencentcloud.tke.v20180525.models.InstanceAdvancedSettings`
+        :type InstanceAdvancedSettings: :class:`taifucloudcloud.tke.v20180525.models.InstanceAdvancedSettings`
         :param CreatedTime: 添加時間
         :type CreatedTime: str
         :param LanIP: 節點内網IP
@@ -2204,7 +2204,7 @@ class InstanceAdvancedSettings(AbstractModel):
         :param DataDisks: 數據盤相關訊息
         :type DataDisks: list of DataDisk
         :param ExtraArgs: 節點相關的自定義參數訊息
-        :type ExtraArgs: :class:`tencentcloud.tke.v20180525.models.InstanceExtraArgs`
+        :type ExtraArgs: :class:`taifucloudcloud.tke.v20180525.models.InstanceExtraArgs`
         """
         self.MountTarget = None
         self.DockerGraphPath = None
@@ -2316,7 +2316,7 @@ class LoginSettings(AbstractModel):
         :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>Linux實例密碼必須8到30位，至少包括兩項[a-z]，[A-Z]、[0-9] 和 [( ) \` ~ ! @ # $ % ^ & *  - + = | { } [ ] : ; ' , . ? / ]中的特殊符号。<br><li>Windows實例密碼必須12到30位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) \` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? /]中的特殊符号。<br><br>若不指定該參數，則由系統随機生成密碼，并通過站内信方式通知到用戶。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Password: str
-        :param KeyIds: 金鑰ID清單。關聯金鑰後，就可以通過對應的私鑰來訪問實例；KeyId可通過介面[DescribeKeyPairs](https://cloud.tencent.com/document/api/213/15699)獲取，金鑰與密碼不能同時指定，同時Windows作業系統不支援指定金鑰。當前僅支援購買的時候指定一個金鑰。
+        :param KeyIds: 金鑰ID清單。關聯金鑰後，就可以通過對應的私鑰來訪問實例；KeyId可通過介面[DescribeKeyPairs](https://cloud.taifucloud.com/document/api/213/15699)獲取，金鑰與密碼不能同時指定，同時Windows作業系統不支援指定金鑰。當前僅支援購買的時候指定一個金鑰。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type KeyIds: list of str
         :param KeepImageLogin: 保持映像的原始設置。該參數與Password或KeyIds.N不能同時指定。只有使用自定義映像、共享映像或外部導入映像創建實例時才能指定該參數爲TRUE。取值範圍：<br><li>TRUE：表示保持映像的登入設置<br><li>FALSE：表示不保持映像的登入設置<br><br>預設取值：FALSE。
@@ -2344,7 +2344,7 @@ class ModifyClusterAsGroupAttributeRequest(AbstractModel):
         :param ClusterId: 集群ID
         :type ClusterId: str
         :param ClusterAsGroupAttribute: 集群關聯的伸縮組屬性
-        :type ClusterAsGroupAttribute: :class:`tencentcloud.tke.v20180525.models.ClusterAsGroupAttribute`
+        :type ClusterAsGroupAttribute: :class:`taifucloudcloud.tke.v20180525.models.ClusterAsGroupAttribute`
         """
         self.ClusterId = None
         self.ClusterAsGroupAttribute = None
@@ -2628,7 +2628,7 @@ class RunInstancesForNode(AbstractModel):
         """
         :param NodeRole: 節點角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在創建 INDEPENDENT_CLUSTER 獨立集群時需要指定。MASTER_ETCD節點數量爲3～7，建議爲奇數。MASTER_ETCD節點最小配置爲4C8G。
         :type NodeRole: str
-        :param RunInstancesPara: CVM創建透傳參數，json化字串格式，詳見[CVM創建實例](https://cloud.tencent.com/document/product/213/15730)介面，傳入公共參數外的其他參數即可，其中ImageId會替換爲TKE集群OS對應的映像。
+        :param RunInstancesPara: CVM創建透傳參數，json化字串格式，詳見[CVM創建實例](https://cloud.taifucloud.com/document/product/213/15730)介面，傳入公共參數外的其他參數即可，其中ImageId會替換爲TKE集群OS對應的映像。
         :type RunInstancesPara: list of str
         :param InstanceAdvancedSettingsOverrides: 節點高級設置，該參數會函蓋集群級别設置的InstanceAdvancedSettings，和上邊的RunInstancesPara按照順序一一對應（當前只對節點自定義參數ExtraArgs生效）。
         :type InstanceAdvancedSettingsOverrides: list of InstanceAdvancedSettings

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class BankCard2EVerificationRequest(AbstractModel):
@@ -243,7 +243,7 @@ class DetectAuthRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param RuleId: 用于細分客戶使用場景，申請開通服務後，可以在Top Cloud 慧眼人臉核身控制台（https://console.cloud.tencent.com/faceid） 自助接入裏面創建，審核通過後即可調用。如有疑問，請加慧眼小助手微信（faceid001）進行咨詢。
+        :param RuleId: 用于細分客戶使用場景，申請開通服務後，可以在Top Cloud 慧眼人臉核身控制台（https://console.cloud.taifucloud.com/faceid） 自助接入裏面創建，審核通過後即可調用。如有疑問，請加慧眼小助手 （faceid001）進行咨詢。
         :type RuleId: str
         :param TerminalType: 本介面不需要傳遞此參數。
         :type TerminalType: str
@@ -286,7 +286,7 @@ class DetectAuthResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Url: 用于發起核身流程的URL，僅微信H5場景使用。
+        :param Url: 用于發起核身流程的URL，僅 H5場景使用。
         :type Url: str
         :param BizToken: 一次核身流程的标識，有效時間爲7,200秒；
 完成核身後，可用該标識獲取驗證結果訊息。
@@ -616,7 +616,7 @@ class GetDetectInfoEnhancedRequest(AbstractModel):
         """
         :param BizToken: 人臉核身流程的标識，調用DetectAuth介面時生成。
         :type BizToken: str
-        :param RuleId: 用于細分客戶使用場景，由騰訊側在線下對接時分配。
+        :param RuleId: 用于細分客戶使用場景，由 側在線下對接時分配。
         :type RuleId: str
         :param InfoType: 指定拉取的結果訊息，取值（0：全部；1：文本類；2：身份證訊息；3：視訊最佳截圖訊息；4：視訊訊息）。
 如 134表示拉取文本類、視訊最佳截圖訊息、視訊訊息。
@@ -655,16 +655,16 @@ class GetDetectInfoEnhancedResponse(AbstractModel):
         """
         :param Text: 文本類訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Text: :class:`tencentcloud.faceid.v20180301.models.DetectInfoText`
+        :type Text: :class:`taifucloudcloud.faceid.v20180301.models.DetectInfoText`
         :param IdCardData: 身份證照片訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type IdCardData: :class:`tencentcloud.faceid.v20180301.models.DetectInfoIdCardData`
+        :type IdCardData: :class:`taifucloudcloud.faceid.v20180301.models.DetectInfoIdCardData`
         :param BestFrame: 最佳幀訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type BestFrame: :class:`tencentcloud.faceid.v20180301.models.DetectInfoBestFrame`
+        :type BestFrame: :class:`taifucloudcloud.faceid.v20180301.models.DetectInfoBestFrame`
         :param VideoData: 視訊訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type VideoData: :class:`tencentcloud.faceid.v20180301.models.DetectInfoVideoData`
+        :type VideoData: :class:`taifucloudcloud.faceid.v20180301.models.DetectInfoVideoData`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -700,7 +700,7 @@ class GetDetectInfoRequest(AbstractModel):
         """
         :param BizToken: 人臉核身流程的标識，調用DetectAuth介面時生成。
         :type BizToken: str
-        :param RuleId: 用于細分客戶使用場景，申請開通服務後，可以在Top Cloud 慧眼人臉核身控制台（https://console.cloud.tencent.com/faceid） 自助接入裏面創建，審核通過後即可調用。如有疑問，請加慧眼小助手微信（faceid001）進行咨詢。
+        :param RuleId: 用于細分客戶使用場景，申請開通服務後，可以在Top Cloud 慧眼人臉核身控制台（https://console.cloud.taifucloud.com/faceid） 自助接入裏面創建，審核通過後即可調用。如有疑問，請加慧眼小助手 （faceid001）進行咨詢。
         :type RuleId: str
         :param InfoType: 指定拉取的結果訊息，取值（0：全部；1：文本類；2：身份證正反面；3：視訊最佳截圖照片；4：視訊）。
 如 134表示拉取文本類、視訊最佳截圖照片、視訊。
@@ -1235,7 +1235,7 @@ class MinorsVerificationRequest(AbstractModel):
         :type Type: str
         :param Mobile: 手機号，11位數字，
 特别提示：
-手機号驗證只限制在騰訊健康守護可信模型函蓋的數據範圍内，與手機号本身在運營商是否實名無關聯，不在範圍會提示“手機号未實名”，建議客戶與傳入姓名和身份證号訊息組合使用。
+手機号驗證只限制在 健康守護可信模型函蓋的數據範圍内，與手機号本身在運營商是否實名無關聯，不在範圍會提示“手機号未實名”，建議客戶與傳入姓名和身份證号訊息組合使用。
         :type Mobile: str
         :param IdCard: 身份證号碼。
         :type IdCard: str

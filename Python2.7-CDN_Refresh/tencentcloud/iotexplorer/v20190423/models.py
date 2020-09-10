@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CallDeviceActionAsyncRequest(AbstractModel):
@@ -242,7 +242,7 @@ class CreateDeviceResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 設備參數描述。
-        :type Data: :class:`tencentcloud.iotexplorer.v20190423.models.DeviceData`
+        :type Data: :class:`taifucloudcloud.iotexplorer.v20190423.models.DeviceData`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -286,7 +286,7 @@ class CreateProjectResponse(AbstractModel):
     def __init__(self):
         """
         :param Project: 返回訊息
-        :type Project: :class:`tencentcloud.iotexplorer.v20190423.models.ProjectEntry`
+        :type Project: :class:`taifucloudcloud.iotexplorer.v20190423.models.ProjectEntry`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -354,7 +354,7 @@ class CreateStudioProductResponse(AbstractModel):
     def __init__(self):
         """
         :param Product: 産品描述
-        :type Product: :class:`tencentcloud.iotexplorer.v20190423.models.ProductEntry`
+        :type Product: :class:`taifucloudcloud.iotexplorer.v20190423.models.ProductEntry`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -637,7 +637,7 @@ class DescribeDeviceResponse(AbstractModel):
     def __init__(self):
         """
         :param Device: 設備訊息
-        :type Device: :class:`tencentcloud.iotexplorer.v20190423.models.DeviceInfo`
+        :type Device: :class:`taifucloudcloud.iotexplorer.v20190423.models.DeviceInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -677,7 +677,7 @@ class DescribeModelDefinitionResponse(AbstractModel):
     def __init__(self):
         """
         :param Model: 産品數據範本
-        :type Model: :class:`tencentcloud.iotexplorer.v20190423.models.ProductModelDefinition`
+        :type Model: :class:`taifucloudcloud.iotexplorer.v20190423.models.ProductModelDefinition`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -717,7 +717,7 @@ class DescribeProjectResponse(AbstractModel):
     def __init__(self):
         """
         :param Project: 返回訊息
-        :type Project: :class:`tencentcloud.iotexplorer.v20190423.models.ProjectEntryEx`
+        :type Project: :class:`taifucloudcloud.iotexplorer.v20190423.models.ProjectEntryEx`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -757,7 +757,7 @@ class DescribeStudioProductResponse(AbstractModel):
     def __init__(self):
         """
         :param Product: 産品詳情
-        :type Product: :class:`tencentcloud.iotexplorer.v20190423.models.ProductEntry`
+        :type Product: :class:`taifucloudcloud.iotexplorer.v20190423.models.ProductEntry`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1273,7 +1273,7 @@ class ModifyProjectResponse(AbstractModel):
     def __init__(self):
         """
         :param Project: 項目詳情
-        :type Project: :class:`tencentcloud.iotexplorer.v20190423.models.ProjectEntry`
+        :type Project: :class:`taifucloudcloud.iotexplorer.v20190423.models.ProjectEntry`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1329,7 +1329,7 @@ class ModifyStudioProductResponse(AbstractModel):
     def __init__(self):
         """
         :param Product: 産品描述
-        :type Product: :class:`tencentcloud.iotexplorer.v20190423.models.ProductEntry`
+        :type Product: :class:`taifucloudcloud.iotexplorer.v20190423.models.ProductEntry`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

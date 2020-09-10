@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.domain.v20180808 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.domain.v20180808 import models
 
 
 class DomainClient(AbstractClient):
     _apiVersion = '2018-08-08'
-    _endpoint = 'domain.tencentcloudapi.com'
+    _endpoint = 'domain.taifucloudcloudapi.com'
 
 
     def CheckDomain(self, request):
         """檢查域名是否可以注冊
 
         :param request: Request instance for CheckDomain.
-        :type request: :class:`tencentcloud.domain.v20180808.models.CheckDomainRequest`
-        :rtype: :class:`tencentcloud.domain.v20180808.models.CheckDomainResponse`
+        :type request: :class:`taifucloudcloud.domain.v20180808.models.CheckDomainRequest`
+        :rtype: :class:`taifucloudcloud.domain.v20180808.models.CheckDomainResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class DomainClient(AbstractClient):
         """按照域名後綴獲取對應的價格清單
 
         :param request: Request instance for DescribeDomainPriceList.
-        :type request: :class:`tencentcloud.domain.v20180808.models.DescribeDomainPriceListRequest`
-        :rtype: :class:`tencentcloud.domain.v20180808.models.DescribeDomainPriceListResponse`
+        :type request: :class:`taifucloudcloud.domain.v20180808.models.DescribeDomainPriceListRequest`
+        :rtype: :class:`taifucloudcloud.domain.v20180808.models.DescribeDomainPriceListResponse`
 
         """
         try:

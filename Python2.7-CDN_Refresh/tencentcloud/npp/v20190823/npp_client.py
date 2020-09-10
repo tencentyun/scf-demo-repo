@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.npp.v20190823 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.npp.v20190823 import models
 
 
 class NppClient(AbstractClient):
     _apiVersion = '2019-08-23'
-    _endpoint = 'npp.tencentcloudapi.com'
+    _endpoint = 'npp.taifucloudcloudapi.com'
 
 
     def CreateCallBack(self, request):
         """回撥呼叫請求
 
         :param request: Request instance for CreateCallBack.
-        :type request: :class:`tencentcloud.npp.v20190823.models.CreateCallBackRequest`
-        :rtype: :class:`tencentcloud.npp.v20190823.models.CreateCallBackResponse`
+        :type request: :class:`taifucloudcloud.npp.v20190823.models.CreateCallBackRequest`
+        :rtype: :class:`taifucloudcloud.npp.v20190823.models.CreateCallBackResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class NppClient(AbstractClient):
         """直撥解綁中間号
 
         :param request: Request instance for DelVirtualNum.
-        :type request: :class:`tencentcloud.npp.v20190823.models.DelVirtualNumRequest`
-        :rtype: :class:`tencentcloud.npp.v20190823.models.DelVirtualNumResponse`
+        :type request: :class:`taifucloudcloud.npp.v20190823.models.DelVirtualNumRequest`
+        :rtype: :class:`taifucloudcloud.npp.v20190823.models.DelVirtualNumResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class NppClient(AbstractClient):
         """回撥呼叫取消
 
         :param request: Request instance for DeleteCallBack.
-        :type request: :class:`tencentcloud.npp.v20190823.models.DeleteCallBackRequest`
-        :rtype: :class:`tencentcloud.npp.v20190823.models.DeleteCallBackResponse`
+        :type request: :class:`taifucloudcloud.npp.v20190823.models.DeleteCallBackRequest`
+        :rtype: :class:`taifucloudcloud.npp.v20190823.models.DeleteCallBackResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class NppClient(AbstractClient):
         """回撥話單獲取介面
 
         :param request: Request instance for DescribeCallBackCdr.
-        :type request: :class:`tencentcloud.npp.v20190823.models.DescribeCallBackCdrRequest`
-        :rtype: :class:`tencentcloud.npp.v20190823.models.DescribeCallBackCdrResponse`
+        :type request: :class:`taifucloudcloud.npp.v20190823.models.DescribeCallBackCdrRequest`
+        :rtype: :class:`taifucloudcloud.npp.v20190823.models.DescribeCallBackCdrResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class NppClient(AbstractClient):
         """回撥通話狀态獲取
 
         :param request: Request instance for DescribeCallBackStatus.
-        :type request: :class:`tencentcloud.npp.v20190823.models.DescribeCallBackStatusRequest`
-        :rtype: :class:`tencentcloud.npp.v20190823.models.DescribeCallBackStatusResponse`
+        :type request: :class:`taifucloudcloud.npp.v20190823.models.DescribeCallBackStatusRequest`
+        :rtype: :class:`taifucloudcloud.npp.v20190823.models.DescribeCallBackStatusResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class NppClient(AbstractClient):
         """回撥拉取主叫顯号号碼集合
 
         :param request: Request instance for DescribeCallerDisplayList.
-        :type request: :class:`tencentcloud.npp.v20190823.models.DescribeCallerDisplayListRequest`
-        :rtype: :class:`tencentcloud.npp.v20190823.models.DescribeCallerDisplayListResponse`
+        :type request: :class:`taifucloudcloud.npp.v20190823.models.DescribeCallerDisplayListRequest`
+        :rtype: :class:`taifucloudcloud.npp.v20190823.models.DescribeCallerDisplayListResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class NppClient(AbstractClient):
         """直撥話單獲取介面
 
         :param request: Request instance for Get400Cdr.
-        :type request: :class:`tencentcloud.npp.v20190823.models.Get400CdrRequest`
-        :rtype: :class:`tencentcloud.npp.v20190823.models.Get400CdrResponse`
+        :type request: :class:`taifucloudcloud.npp.v20190823.models.Get400CdrRequest`
+        :rtype: :class:`taifucloudcloud.npp.v20190823.models.Get400CdrResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class NppClient(AbstractClient):
         """直撥獲取中間号（App 使用方發起）
 
         :param request: Request instance for GetVirtualNum.
-        :type request: :class:`tencentcloud.npp.v20190823.models.GetVirtualNumRequest`
-        :rtype: :class:`tencentcloud.npp.v20190823.models.GetVirtualNumResponse`
+        :type request: :class:`taifucloudcloud.npp.v20190823.models.GetVirtualNumRequest`
+        :rtype: :class:`taifucloudcloud.npp.v20190823.models.GetVirtualNumResponse`
 
         """
         try:

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CreateSessionRequest(AbstractModel):
@@ -118,12 +118,12 @@ class DescribeStreamPlayInfoListRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param EndTime: 結束時間，北京時間，格式：2019-04-28 10:36:00
+        :param EndTime: 結束時間， 時間，格式：2019-04-28 10:36:00
 結束時間 和 開始時間  必須在同一天内。
         :type EndTime: str
         :param PlayDomain: 播放域名。
         :type PlayDomain: str
-        :param StartTime: 開始時間，北京時間，格式：2019-04-28 10:36:00
+        :param StartTime: 開始時間， 時間，格式：2019-04-28 10:36:00
 當前時間 和 開始時間 間隔不超過30天。
         :type StartTime: str
         :param StreamName: 流名稱，精确比對。

@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.emr.v20190103 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.emr.v20190103 import models
 
 
 class EmrClient(AbstractClient):
     _apiVersion = '2019-01-03'
-    _endpoint = 'emr.tencentcloudapi.com'
+    _endpoint = 'emr.taifucloudcloudapi.com'
 
 
     def CreateInstance(self, request):
         """創建EMR實例
 
         :param request: Request instance for CreateInstance.
-        :type request: :class:`tencentcloud.emr.v20190103.models.CreateInstanceRequest`
-        :rtype: :class:`tencentcloud.emr.v20190103.models.CreateInstanceResponse`
+        :type request: :class:`taifucloudcloud.emr.v20190103.models.CreateInstanceRequest`
+        :rtype: :class:`taifucloudcloud.emr.v20190103.models.CreateInstanceResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class EmrClient(AbstractClient):
         """查詢硬體節點訊息
 
         :param request: Request instance for DescribeClusterNodes.
-        :type request: :class:`tencentcloud.emr.v20190103.models.DescribeClusterNodesRequest`
-        :rtype: :class:`tencentcloud.emr.v20190103.models.DescribeClusterNodesResponse`
+        :type request: :class:`taifucloudcloud.emr.v20190103.models.DescribeClusterNodesRequest`
+        :rtype: :class:`taifucloudcloud.emr.v20190103.models.DescribeClusterNodesResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class EmrClient(AbstractClient):
         """查詢EMR實例
 
         :param request: Request instance for DescribeInstances.
-        :type request: :class:`tencentcloud.emr.v20190103.models.DescribeInstancesRequest`
-        :rtype: :class:`tencentcloud.emr.v20190103.models.DescribeInstancesResponse`
+        :type request: :class:`taifucloudcloud.emr.v20190103.models.DescribeInstancesRequest`
+        :rtype: :class:`taifucloudcloud.emr.v20190103.models.DescribeInstancesResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class EmrClient(AbstractClient):
         """創建實例詢價
 
         :param request: Request instance for InquiryPriceCreateInstance.
-        :type request: :class:`tencentcloud.emr.v20190103.models.InquiryPriceCreateInstanceRequest`
-        :rtype: :class:`tencentcloud.emr.v20190103.models.InquiryPriceCreateInstanceResponse`
+        :type request: :class:`taifucloudcloud.emr.v20190103.models.InquiryPriceCreateInstanceRequest`
+        :rtype: :class:`taifucloudcloud.emr.v20190103.models.InquiryPriceCreateInstanceResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class EmrClient(AbstractClient):
         """續約詢價。
 
         :param request: Request instance for InquiryPriceRenewInstance.
-        :type request: :class:`tencentcloud.emr.v20190103.models.InquiryPriceRenewInstanceRequest`
-        :rtype: :class:`tencentcloud.emr.v20190103.models.InquiryPriceRenewInstanceResponse`
+        :type request: :class:`taifucloudcloud.emr.v20190103.models.InquiryPriceRenewInstanceRequest`
+        :rtype: :class:`taifucloudcloud.emr.v20190103.models.InquiryPriceRenewInstanceResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class EmrClient(AbstractClient):
         """擴容詢價. 當擴容時候，請通過該介面查詢價格。
 
         :param request: Request instance for InquiryPriceScaleOutInstance.
-        :type request: :class:`tencentcloud.emr.v20190103.models.InquiryPriceScaleOutInstanceRequest`
-        :rtype: :class:`tencentcloud.emr.v20190103.models.InquiryPriceScaleOutInstanceResponse`
+        :type request: :class:`taifucloudcloud.emr.v20190103.models.InquiryPriceScaleOutInstanceRequest`
+        :rtype: :class:`taifucloudcloud.emr.v20190103.models.InquiryPriceScaleOutInstanceResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class EmrClient(AbstractClient):
         """變配詢價
 
         :param request: Request instance for InquiryPriceUpdateInstance.
-        :type request: :class:`tencentcloud.emr.v20190103.models.InquiryPriceUpdateInstanceRequest`
-        :rtype: :class:`tencentcloud.emr.v20190103.models.InquiryPriceUpdateInstanceResponse`
+        :type request: :class:`taifucloudcloud.emr.v20190103.models.InquiryPriceUpdateInstanceRequest`
+        :rtype: :class:`taifucloudcloud.emr.v20190103.models.InquiryPriceUpdateInstanceResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class EmrClient(AbstractClient):
         """實例擴容
 
         :param request: Request instance for ScaleOutInstance.
-        :type request: :class:`tencentcloud.emr.v20190103.models.ScaleOutInstanceRequest`
-        :rtype: :class:`tencentcloud.emr.v20190103.models.ScaleOutInstanceResponse`
+        :type request: :class:`taifucloudcloud.emr.v20190103.models.ScaleOutInstanceRequest`
+        :rtype: :class:`taifucloudcloud.emr.v20190103.models.ScaleOutInstanceResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class EmrClient(AbstractClient):
         """銷毀EMR實例。此介面僅支援彈性MapReduce正式計費版本。
 
         :param request: Request instance for TerminateInstance.
-        :type request: :class:`tencentcloud.emr.v20190103.models.TerminateInstanceRequest`
-        :rtype: :class:`tencentcloud.emr.v20190103.models.TerminateInstanceResponse`
+        :type request: :class:`taifucloudcloud.emr.v20190103.models.TerminateInstanceRequest`
+        :rtype: :class:`taifucloudcloud.emr.v20190103.models.TerminateInstanceResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class EmrClient(AbstractClient):
         """縮容Task節點
 
         :param request: Request instance for TerminateTasks.
-        :type request: :class:`tencentcloud.emr.v20190103.models.TerminateTasksRequest`
-        :rtype: :class:`tencentcloud.emr.v20190103.models.TerminateTasksResponse`
+        :type request: :class:`taifucloudcloud.emr.v20190103.models.TerminateTasksRequest`
+        :rtype: :class:`taifucloudcloud.emr.v20190103.models.TerminateTasksResponse`
 
         """
         try:

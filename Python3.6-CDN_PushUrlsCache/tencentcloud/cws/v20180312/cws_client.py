@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cws.v20180312 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cws.v20180312 import models
 
 
 class CwsClient(AbstractClient):
     _apiVersion = '2018-03-12'
-    _endpoint = 'cws.tencentcloudapi.com'
+    _endpoint = 'cws.taifucloudcloudapi.com'
 
 
     def CreateMonitors(self, request):
         """本介面（CreateMonitors）用于新增一個或多個站點的監測任務。
 
         :param request: Request instance for CreateMonitors.
-        :type request: :class:`tencentcloud.cws.v20180312.models.CreateMonitorsRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.CreateMonitorsResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.CreateMonitorsRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.CreateMonitorsResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class CwsClient(AbstractClient):
         """本介面（CreateSites）用于新增一個或多個站點。
 
         :param request: Request instance for CreateSites.
-        :type request: :class:`tencentcloud.cws.v20180312.models.CreateSitesRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.CreateSitesResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.CreateSitesRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.CreateSitesResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class CwsClient(AbstractClient):
         """本介面（CreateSitesScans）用于新增一個或多個站點的單次掃描任務。
 
         :param request: Request instance for CreateSitesScans.
-        :type request: :class:`tencentcloud.cws.v20180312.models.CreateSitesScansRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.CreateSitesScansResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.CreateSitesScansRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.CreateSitesScansResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class CwsClient(AbstractClient):
         """本介面（CreateVulsMisinformation）可以用于新增一個或多個漏洞誤報訊息。
 
         :param request: Request instance for CreateVulsMisinformation.
-        :type request: :class:`tencentcloud.cws.v20180312.models.CreateVulsMisinformationRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.CreateVulsMisinformationResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.CreateVulsMisinformationRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.CreateVulsMisinformationResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class CwsClient(AbstractClient):
         """本介面 (CreateVulsReport) 用于生成漏洞報告并返回下載連結。
 
         :param request: Request instance for CreateVulsReport.
-        :type request: :class:`tencentcloud.cws.v20180312.models.CreateVulsReportRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.CreateVulsReportResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.CreateVulsReportRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.CreateVulsReportResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class CwsClient(AbstractClient):
         """本介面 (DeleteMonitors) 用于删除用戶監控任務。
 
         :param request: Request instance for DeleteMonitors.
-        :type request: :class:`tencentcloud.cws.v20180312.models.DeleteMonitorsRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.DeleteMonitorsResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.DeleteMonitorsRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.DeleteMonitorsResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class CwsClient(AbstractClient):
         """本介面 (DeleteSites) 用于删除站點。
 
         :param request: Request instance for DeleteSites.
-        :type request: :class:`tencentcloud.cws.v20180312.models.DeleteSitesRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.DeleteSitesResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.DeleteSitesRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.DeleteSitesResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class CwsClient(AbstractClient):
         """本介面 (DescribeConfig) 用于查詢用戶配置的詳細訊息。
 
         :param request: Request instance for DescribeConfig.
-        :type request: :class:`tencentcloud.cws.v20180312.models.DescribeConfigRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.DescribeConfigResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.DescribeConfigRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.DescribeConfigResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class CwsClient(AbstractClient):
         """本介面 (DescribeMonitors) 用于查詢一個或多個監控任務的詳細訊息。
 
         :param request: Request instance for DescribeMonitors.
-        :type request: :class:`tencentcloud.cws.v20180312.models.DescribeMonitorsRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.DescribeMonitorsResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.DescribeMonitorsRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.DescribeMonitorsResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class CwsClient(AbstractClient):
         """本介面 (DescribeSiteQuota) 用于查詢用戶購買的掃描次數總數和已使用數。
 
         :param request: Request instance for DescribeSiteQuota.
-        :type request: :class:`tencentcloud.cws.v20180312.models.DescribeSiteQuotaRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.DescribeSiteQuotaResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.DescribeSiteQuotaRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.DescribeSiteQuotaResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class CwsClient(AbstractClient):
         """本介面 (DescribeSites) 用于查詢一個或多個站點的詳細訊息。
 
         :param request: Request instance for DescribeSites.
-        :type request: :class:`tencentcloud.cws.v20180312.models.DescribeSitesRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.DescribeSitesResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.DescribeSitesRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.DescribeSitesResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class CwsClient(AbstractClient):
         """本介面 (DescribeSitesVerification) 用于查詢一個或多個待驗證站點的驗證訊息。
 
         :param request: Request instance for DescribeSitesVerification.
-        :type request: :class:`tencentcloud.cws.v20180312.models.DescribeSitesVerificationRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.DescribeSitesVerificationResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.DescribeSitesVerificationRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.DescribeSitesVerificationResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class CwsClient(AbstractClient):
         """本介面 (DescribeVuls) 用于查詢一個或多個漏洞的詳細訊息。
 
         :param request: Request instance for DescribeVuls.
-        :type request: :class:`tencentcloud.cws.v20180312.models.DescribeVulsRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.DescribeVulsResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.DescribeVulsRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.DescribeVulsResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class CwsClient(AbstractClient):
         """本介面 (DescribeVulsNumber) 用于查詢用戶網站的漏洞總計數量。
 
         :param request: Request instance for DescribeVulsNumber.
-        :type request: :class:`tencentcloud.cws.v20180312.models.DescribeVulsNumberRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.DescribeVulsNumberResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.DescribeVulsNumberRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.DescribeVulsNumberResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class CwsClient(AbstractClient):
         """本介面 (DescribeVulsNumberTimeline) 用于查詢漏洞數随時間變化統計訊息。
 
         :param request: Request instance for DescribeVulsNumberTimeline.
-        :type request: :class:`tencentcloud.cws.v20180312.models.DescribeVulsNumberTimelineRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.DescribeVulsNumberTimelineResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.DescribeVulsNumberTimelineRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.DescribeVulsNumberTimelineResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class CwsClient(AbstractClient):
         """本介面 (ModifyConfigAttribute) 用于修改用戶配置的屬性。
 
         :param request: Request instance for ModifyConfigAttribute.
-        :type request: :class:`tencentcloud.cws.v20180312.models.ModifyConfigAttributeRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.ModifyConfigAttributeResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.ModifyConfigAttributeRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.ModifyConfigAttributeResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class CwsClient(AbstractClient):
         """本介面 (ModifyMonitorAttribute) 用于修改監測任務的屬性。
 
         :param request: Request instance for ModifyMonitorAttribute.
-        :type request: :class:`tencentcloud.cws.v20180312.models.ModifyMonitorAttributeRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.ModifyMonitorAttributeResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.ModifyMonitorAttributeRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.ModifyMonitorAttributeResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class CwsClient(AbstractClient):
         """本介面 (ModifySiteAttribute) 用于修改站點的屬性。
 
         :param request: Request instance for ModifySiteAttribute.
-        :type request: :class:`tencentcloud.cws.v20180312.models.ModifySiteAttributeRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.ModifySiteAttributeResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.ModifySiteAttributeRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.ModifySiteAttributeResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class CwsClient(AbstractClient):
         """本介面 (VerifySites) 用于驗證一個或多個待驗證站點。
 
         :param request: Request instance for VerifySites.
-        :type request: :class:`tencentcloud.cws.v20180312.models.VerifySitesRequest`
-        :rtype: :class:`tencentcloud.cws.v20180312.models.VerifySitesResponse`
+        :type request: :class:`taifucloudcloud.cws.v20180312.models.VerifySitesRequest`
+        :rtype: :class:`taifucloudcloud.cws.v20180312.models.VerifySitesResponse`
 
         """
         try:

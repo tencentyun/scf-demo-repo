@@ -18,6 +18,6 @@ from QcloudApi.modules import base
 class Sts(base.Base):
     """Security Token Service.
 
-    document: https://cloud.tencent.com/document/product/598
+    document: https://cloud.taifucloud.com/document/product/598
     """
     requestHost = 'sts.api.qcloud.com'

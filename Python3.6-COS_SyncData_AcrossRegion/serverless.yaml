@@ -30,4 +30,3 @@ inputs:
             prefix: copy/   #需要替換的欄位，可選，配置前綴過濾
           events: cos:ObjectCreated:*  
           enable: true
-

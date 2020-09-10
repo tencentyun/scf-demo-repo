@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class BeautifyPicRequest(AbstractModel):
@@ -86,7 +86,7 @@ class CreateModelRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param LUTFile: 用于試唇色，要求必須是LUT 格式的cube文件轉換成512*512的PNG圖片。檢視 [LUT文件的使用說明](https://cloud.tencent.com/document/product/1172/41701)。了解 [cube文件轉png圖片小工具](http://yyb.gtimg.com/aiplat/static/qcloud-cube-to-png.html)。
+        :param LUTFile: 用于試唇色，要求必須是LUT 格式的cube文件轉換成512*512的PNG圖片。檢視 [LUT文件的使用說明](https://cloud.taifucloud.com/document/product/1172/41701)。了解 [cube文件轉png圖片小工具](http://yyb.gtimg.com/aiplat/static/qcloud-cube-to-png.html)。
         :type LUTFile: str
         :param Description: 文件描述訊息，可用于備注。
         :type Description: str
@@ -244,13 +244,13 @@ class LipColorInfo(AbstractModel):
     def __init__(self):
         """
         :param RGBA: 使用RGBA模型試唇色。
-        :type RGBA: :class:`tencentcloud.fmu.v20191213.models.RGBAInfo`
+        :type RGBA: :class:`taifucloudcloud.fmu.v20191213.models.RGBAInfo`
         :param ModelId: 使用已注冊的 LUT 文件試唇色。  
 ModelId 和 RGBA 兩個參數只需提供一個，若都提供只使用 ModelId。
         :type ModelId: str
         :param FaceRect: 人臉框位置。若不輸入則選擇 Image 或 Url 中面積最大的人臉。  
-您可以通過 [人臉檢測與分析](https://cloud.tencent.com/document/api/867/32800)  介面獲取人臉框位置訊息。
-        :type FaceRect: :class:`tencentcloud.fmu.v20191213.models.FaceRect`
+您可以通過 [人臉檢測與分析](https://cloud.taifucloud.com/document/api/867/32800)  介面獲取人臉框位置訊息。
+        :type FaceRect: :class:`taifucloudcloud.fmu.v20191213.models.FaceRect`
         """
         self.RGBA = None
         self.ModelId = None

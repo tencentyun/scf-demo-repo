@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tcaplusdb.v20190823 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tcaplusdb.v20190823 import models
 
 
 class TcaplusdbClient(AbstractClient):
     _apiVersion = '2019-08-23'
-    _endpoint = 'tcaplusdb.tencentcloudapi.com'
+    _endpoint = 'tcaplusdb.taifucloudcloudapi.com'
 
 
     def ClearTables(self, request):
         """根據給定的表訊息，清除表數據。
 
         :param request: Request instance for ClearTables.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.ClearTablesRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.ClearTablesResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ClearTablesRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ClearTablesResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TcaplusdbClient(AbstractClient):
         """選中目标表格，上傳并校驗改表文件，返回是否允許修改表格結構的結果。
 
         :param request: Request instance for CompareIdlFiles.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.CompareIdlFilesRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.CompareIdlFilesResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.CompareIdlFilesRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.CompareIdlFilesResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TcaplusdbClient(AbstractClient):
         """用戶創建備份任務
 
         :param request: Request instance for CreateBackup.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.CreateBackupRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.CreateBackupResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.CreateBackupRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.CreateBackupResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TcaplusdbClient(AbstractClient):
         """本介面用于創建TcaplusDB集群
 
         :param request: Request instance for CreateCluster.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.CreateClusterRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.CreateClusterResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.CreateClusterRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.CreateClusterResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class TcaplusdbClient(AbstractClient):
         """在TcaplusDB集群下創建表格組
 
         :param request: Request instance for CreateTableGroup.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.CreateTableGroupRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.CreateTableGroupResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.CreateTableGroupRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.CreateTableGroupResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class TcaplusdbClient(AbstractClient):
         """根據選擇的IDL文件清單，批次創建表格
 
         :param request: Request instance for CreateTables.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.CreateTablesRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.CreateTablesResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.CreateTablesRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.CreateTablesResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class TcaplusdbClient(AbstractClient):
         """删除TcaplusDB集群，必須在集群所屬所有資源（包括表格組，表）都已經釋放的情況下才會成功。
 
         :param request: Request instance for DeleteCluster.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DeleteClusterRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.DeleteClusterResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DeleteClusterRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DeleteClusterResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class TcaplusdbClient(AbstractClient):
         """指定集群ID和待删除IDL文件的訊息，删除目标文件，如果文件正在被表關聯則删除失敗。
 
         :param request: Request instance for DeleteIdlFiles.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DeleteIdlFilesRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.DeleteIdlFilesResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DeleteIdlFilesRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DeleteIdlFilesResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class TcaplusdbClient(AbstractClient):
         """删除表格組
 
         :param request: Request instance for DeleteTableGroup.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DeleteTableGroupRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.DeleteTableGroupResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DeleteTableGroupRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DeleteTableGroupResponse`
 
         """
         try:
@@ -278,11 +278,11 @@ class TcaplusdbClient(AbstractClient):
 
 
     def DeleteTables(self, request):
-        """删除指定的表,第一次調用此介面代表将表移動至資源回收筒，再次調用代表将此表格從資源回收筒中徹底删除。
+        """删除指定的表,第一次調用此介面代表将表 至資源回收筒，再次調用代表将此表格從資源回收筒中徹底删除。
 
         :param request: Request instance for DeleteTables.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DeleteTablesRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.DeleteTablesResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DeleteTablesRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DeleteTablesResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class TcaplusdbClient(AbstractClient):
         """查詢TcaplusDB集群清單，包含集群詳細訊息。
 
         :param request: Request instance for DescribeClusters.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeClustersRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeClustersResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DescribeClustersRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DescribeClustersResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class TcaplusdbClient(AbstractClient):
         """查詢表描述文件詳情
 
         :param request: Request instance for DescribeIdlFileInfos.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeIdlFileInfosRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeIdlFileInfosResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DescribeIdlFileInfosRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DescribeIdlFileInfosResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class TcaplusdbClient(AbstractClient):
         """查詢TcaplusDB服務支援的地域清單
 
         :param request: Request instance for DescribeRegions.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeRegionsRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeRegionsResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DescribeRegionsRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DescribeRegionsResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class TcaplusdbClient(AbstractClient):
         """查詢表格組清單
 
         :param request: Request instance for DescribeTableGroups.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeTableGroupsRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeTableGroupsResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DescribeTableGroupsRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DescribeTableGroupsResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class TcaplusdbClient(AbstractClient):
         """查詢表詳情
 
         :param request: Request instance for DescribeTables.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeTablesRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeTablesResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DescribeTablesRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DescribeTablesResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class TcaplusdbClient(AbstractClient):
         """查詢資源回收筒中的表詳情
 
         :param request: Request instance for DescribeTablesInRecycle.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeTablesInRecycleRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeTablesInRecycleResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DescribeTablesInRecycleRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DescribeTablesInRecycleResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class TcaplusdbClient(AbstractClient):
         """查詢任務清單
 
         :param request: Request instance for DescribeTasks.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeTasksRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeTasksResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DescribeTasksRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DescribeTasksResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class TcaplusdbClient(AbstractClient):
         """查詢本用戶是否在白名單中，控制是否能創建TDR類型的APP或表
 
         :param request: Request instance for DescribeUinInWhitelist.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeUinInWhitelistRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.DescribeUinInWhitelistResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DescribeUinInWhitelistRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DescribeUinInWhitelistResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class TcaplusdbClient(AbstractClient):
         """修改指定的集群名稱
 
         :param request: Request instance for ModifyClusterName.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyClusterNameRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyClusterNameResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ModifyClusterNameRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ModifyClusterNameResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class TcaplusdbClient(AbstractClient):
         """修改指定集群的密碼，後台将在舊密碼失效之前同時支援TcaplusDB SDK使用舊密碼和新密碼訪問資料庫。在舊密碼失效之前不能提交新的密碼修改請求，在舊密碼失效之後不能提交修改舊密碼過期時間的請求。
 
         :param request: Request instance for ModifyClusterPassword.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyClusterPasswordRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyClusterPasswordResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ModifyClusterPasswordRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ModifyClusterPasswordResponse`
 
         """
         try:
@@ -589,8 +589,8 @@ class TcaplusdbClient(AbstractClient):
         """修改TcaplusDB表格組名稱
 
         :param request: Request instance for ModifyTableGroupName.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyTableGroupNameRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyTableGroupNameResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ModifyTableGroupNameRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ModifyTableGroupNameResponse`
 
         """
         try:
@@ -617,8 +617,8 @@ class TcaplusdbClient(AbstractClient):
         """修改表備注訊息
 
         :param request: Request instance for ModifyTableMemos.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyTableMemosRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyTableMemosResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ModifyTableMemosRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ModifyTableMemosResponse`
 
         """
         try:
@@ -645,8 +645,8 @@ class TcaplusdbClient(AbstractClient):
         """表格擴縮容
 
         :param request: Request instance for ModifyTableQuotas.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyTableQuotasRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyTableQuotasResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ModifyTableQuotasRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ModifyTableQuotasResponse`
 
         """
         try:
@@ -673,8 +673,8 @@ class TcaplusdbClient(AbstractClient):
         """根據用戶選定的表定義IDL文件，批次修改指定的表
 
         :param request: Request instance for ModifyTables.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyTablesRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.ModifyTablesResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ModifyTablesRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ModifyTablesResponse`
 
         """
         try:
@@ -701,8 +701,8 @@ class TcaplusdbClient(AbstractClient):
         """恢複資源回收筒中，用戶自行删除的表。對欠費待釋放的表無效。
 
         :param request: Request instance for RecoverRecycleTables.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.RecoverRecycleTablesRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.RecoverRecycleTablesResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.RecoverRecycleTablesRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.RecoverRecycleTablesResponse`
 
         """
         try:
@@ -729,8 +729,8 @@ class TcaplusdbClient(AbstractClient):
         """表格數據回檔
 
         :param request: Request instance for RollbackTables.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.RollbackTablesRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.RollbackTablesResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.RollbackTablesRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.RollbackTablesResponse`
 
         """
         try:
@@ -757,8 +757,8 @@ class TcaplusdbClient(AbstractClient):
         """上傳并校驗創建表格文件，返回校驗合法的表格定義
 
         :param request: Request instance for VerifyIdlFiles.
-        :type request: :class:`tencentcloud.tcaplusdb.v20190823.models.VerifyIdlFilesRequest`
-        :rtype: :class:`tencentcloud.tcaplusdb.v20190823.models.VerifyIdlFilesResponse`
+        :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.VerifyIdlFilesRequest`
+        :rtype: :class:`taifucloudcloud.tcaplusdb.v20190823.models.VerifyIdlFilesResponse`
 
         """
         try:

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Activity(AbstractModel):
@@ -106,11 +106,11 @@ class AnonymousComputeEnv(AbstractModel):
         :param EnvType: 計算環境管理類型
         :type EnvType: str
         :param EnvData: 計算環境具體參數
-        :type EnvData: :class:`tencentcloud.batch.v20170312.models.EnvData`
+        :type EnvData: :class:`taifucloudcloud.batch.v20170312.models.EnvData`
         :param MountDataDisks: 數據盤掛載選項
         :type MountDataDisks: list of MountDataDisk
         :param AgentRunningMode: agent運作模式，适用于Windows系統
-        :type AgentRunningMode: :class:`tencentcloud.batch.v20170312.models.AgentRunningMode`
+        :type AgentRunningMode: :class:`taifucloudcloud.batch.v20170312.models.AgentRunningMode`
         """
         self.EnvType = None
         self.EnvData = None
@@ -148,7 +148,7 @@ class Application(AbstractModel):
         :param PackagePath: 應用程式軟體包的遠端儲存路徑
         :type PackagePath: str
         :param Docker: 應用使用Docker的相關配置。在使用Docker配置的情況下，DeliveryForm 爲 LOCAL 表示直接使用Docker映像内部的應用軟體，通過Docker方式運作；DeliveryForm 爲 PACKAGE，表示将遠端應用包注入到Docker映像後，通過Docker方式運作。爲避免Docker不同版本的相容性問題，Docker安裝包及相關依賴由Batch統一負責，對于已安裝Docker的自定義映像，請卸載後再使用Docker特性。
-        :type Docker: :class:`tencentcloud.batch.v20170312.models.Docker`
+        :type Docker: :class:`taifucloudcloud.batch.v20170312.models.Docker`
         """
         self.Command = None
         self.DeliveryForm = None
@@ -208,7 +208,7 @@ class ComputeEnvCreateInfo(AbstractModel):
         :param EnvType: 計算環境類型，僅支援“MANAGED”類型
         :type EnvType: str
         :param EnvData: 計算環境參數
-        :type EnvData: :class:`tencentcloud.batch.v20170312.models.EnvData`
+        :type EnvData: :class:`taifucloudcloud.batch.v20170312.models.EnvData`
         :param MountDataDisks: 數據盤掛載選項
 注意：此欄位可能返回 null，表示取不到有效值。
         :type MountDataDisks: list of MountDataDisk
@@ -300,11 +300,11 @@ class ComputeEnvView(AbstractModel):
         :param EnvName: 計算環境名稱
         :type EnvName: str
         :param Placement: 位置訊息
-        :type Placement: :class:`tencentcloud.batch.v20170312.models.Placement`
+        :type Placement: :class:`taifucloudcloud.batch.v20170312.models.Placement`
         :param CreateTime: 創建時間
         :type CreateTime: str
         :param ComputeNodeMetrics: 計算節點統計指标
-        :type ComputeNodeMetrics: :class:`tencentcloud.batch.v20170312.models.ComputeNodeMetrics`
+        :type ComputeNodeMetrics: :class:`taifucloudcloud.batch.v20170312.models.ComputeNodeMetrics`
         :param EnvType: 計算環境類型
         :type EnvType: str
         :param DesiredComputeNodeCount: 計算節點期望個數
@@ -435,9 +435,9 @@ class CreateComputeEnvRequest(AbstractModel):
     def __init__(self):
         """
         :param ComputeEnv: 計算環境訊息
-        :type ComputeEnv: :class:`tencentcloud.batch.v20170312.models.NamedComputeEnv`
+        :type ComputeEnv: :class:`taifucloudcloud.batch.v20170312.models.NamedComputeEnv`
         :param Placement: 位置訊息
-        :type Placement: :class:`tencentcloud.batch.v20170312.models.Placement`
+        :type Placement: :class:`taifucloudcloud.batch.v20170312.models.Placement`
         :param ClientToken: 用于保證請求幂等性的字串。該字串由用戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
         :type ClientToken: str
         """
@@ -487,7 +487,7 @@ class CreateTaskTemplateRequest(AbstractModel):
         :param TaskTemplateName: 任務範本名稱
         :type TaskTemplateName: str
         :param TaskTemplateInfo: 任務範本内容，參數要求與任務一緻
-        :type TaskTemplateInfo: :class:`tencentcloud.batch.v20170312.models.Task`
+        :type TaskTemplateInfo: :class:`taifucloudcloud.batch.v20170312.models.Task`
         :param TaskTemplateDescription: 任務範本描述
         :type TaskTemplateDescription: str
         """
@@ -752,7 +752,7 @@ class DescribeComputeEnvActivitiesRequest(AbstractModel):
         :type Limit: int
         :param Filters: 過濾條件
 <li> compute-node-id - String - 是否必填：否 -（過濾條件）按照計算節點ID過濾。</li>
-        :type Filters: :class:`tencentcloud.batch.v20170312.models.Filter`
+        :type Filters: :class:`taifucloudcloud.batch.v20170312.models.Filter`
         """
         self.EnvId = None
         self.Offset = None
@@ -833,7 +833,7 @@ class DescribeComputeEnvCreateInfoResponse(AbstractModel):
         :param EnvType: 計算環境類型，僅支援“MANAGED”類型
         :type EnvType: str
         :param EnvData: 計算環境參數
-        :type EnvData: :class:`tencentcloud.batch.v20170312.models.EnvData`
+        :type EnvData: :class:`taifucloudcloud.batch.v20170312.models.EnvData`
         :param MountDataDisks: 數據盤掛載選項
         :type MountDataDisks: list of MountDataDisk
         :param InputMappings: 輸入映射
@@ -992,13 +992,13 @@ class DescribeComputeEnvResponse(AbstractModel):
         :param EnvName: 計算環境名稱
         :type EnvName: str
         :param Placement: 位置訊息
-        :type Placement: :class:`tencentcloud.batch.v20170312.models.Placement`
+        :type Placement: :class:`taifucloudcloud.batch.v20170312.models.Placement`
         :param CreateTime: 計算環境創建時間
         :type CreateTime: str
         :param ComputeNodeSet: 計算節點清單訊息
         :type ComputeNodeSet: list of ComputeNode
         :param ComputeNodeMetrics: 計算節點統計指标
-        :type ComputeNodeMetrics: :class:`tencentcloud.batch.v20170312.models.ComputeNodeMetrics`
+        :type ComputeNodeMetrics: :class:`taifucloudcloud.batch.v20170312.models.ComputeNodeMetrics`
         :param DesiredComputeNodeCount: 計算節點期望個數
         :type DesiredComputeNodeCount: int
         :param EnvType: 計算環境類型
@@ -1232,9 +1232,9 @@ class DescribeJobResponse(AbstractModel):
         :param DependenceSet: 任務間依賴訊息
         :type DependenceSet: list of Dependence
         :param TaskMetrics: 任務統計指标
-        :type TaskMetrics: :class:`tencentcloud.batch.v20170312.models.TaskMetrics`
+        :type TaskMetrics: :class:`taifucloudcloud.batch.v20170312.models.TaskMetrics`
         :param TaskInstanceMetrics: 任務實例統計指标
-        :type TaskInstanceMetrics: :class:`tencentcloud.batch.v20170312.models.TaskInstanceView`
+        :type TaskInstanceMetrics: :class:`taifucloudcloud.batch.v20170312.models.TaskInstanceView`
         :param StateReason: 作業失敗原因
         :type StateReason: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -1545,7 +1545,7 @@ class DescribeTaskResponse(AbstractModel):
         :param TaskInstanceSet: 任務實例訊息
         :type TaskInstanceSet: list of TaskInstanceView
         :param TaskInstanceMetrics: 任務實例統計指标
-        :type TaskInstanceMetrics: :class:`tencentcloud.batch.v20170312.models.TaskInstanceMetrics`
+        :type TaskInstanceMetrics: :class:`taifucloudcloud.batch.v20170312.models.TaskInstanceMetrics`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1655,9 +1655,9 @@ class Docker(AbstractModel):
         :type User: str
         :param Password: Docker Hub 密碼或 Tencent Registry 密碼
         :type Password: str
-        :param Image: Docker Hub填寫“[user/repo]:[tag]”，Tencent Registry填寫“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
+        :param Image: Docker Hub填寫“[user/repo]:[tag]”，Tencent Registry填寫“ccr.ccs.taifucloudyun.com/[namespace/repo]:[tag]”
         :type Image: str
-        :param Server: Docker Hub 可以不填，但确保具有公網訪問能力。或者是 Tencent Registry 服務網址“ccr.ccs.tencentyun.com”
+        :param Server: Docker Hub 可以不填，但确保具有公網訪問能力。或者是 Tencent Registry 服務網址“ccr.ccs.taifucloudyun.com”
         :type Server: str
         """
         self.User = None
@@ -1681,9 +1681,9 @@ class EnhancedService(AbstractModel):
     def __init__(self):
         """
         :param SecurityService: 開啓雲安全服務。若不指定該參數，則預設開啓雲安全服務。
-        :type SecurityService: :class:`tencentcloud.batch.v20170312.models.RunSecurityServiceEnabled`
+        :type SecurityService: :class:`taifucloudcloud.batch.v20170312.models.RunSecurityServiceEnabled`
         :param MonitorService: 開啓雲監控服務。若不指定該參數，則預設開啓雲監控服務。
-        :type MonitorService: :class:`tencentcloud.batch.v20170312.models.RunMonitorServiceEnabled`
+        :type MonitorService: :class:`taifucloudcloud.batch.v20170312.models.RunMonitorServiceEnabled`
         """
         self.SecurityService = None
         self.MonitorService = None
@@ -1710,29 +1710,29 @@ class EnvData(AbstractModel):
         :param ImageId: CVM映像ID
         :type ImageId: str
         :param SystemDisk: 實例系統盤配置訊息
-        :type SystemDisk: :class:`tencentcloud.batch.v20170312.models.SystemDisk`
+        :type SystemDisk: :class:`taifucloudcloud.batch.v20170312.models.SystemDisk`
         :param DataDisks: 實例數據盤配置訊息
         :type DataDisks: list of DataDisk
         :param VirtualPrivateCloud: 私有網絡相關訊息配置，與Zones和VirtualPrivateClouds不能同時指定。
-        :type VirtualPrivateCloud: :class:`tencentcloud.batch.v20170312.models.VirtualPrivateCloud`
+        :type VirtualPrivateCloud: :class:`taifucloudcloud.batch.v20170312.models.VirtualPrivateCloud`
         :param InternetAccessible: 公網頻寬相關訊息設置
-        :type InternetAccessible: :class:`tencentcloud.batch.v20170312.models.InternetAccessible`
+        :type InternetAccessible: :class:`taifucloudcloud.batch.v20170312.models.InternetAccessible`
         :param InstanceName: CVM實例顯示名稱
         :type InstanceName: str
         :param LoginSettings: 實例登入設置
-        :type LoginSettings: :class:`tencentcloud.batch.v20170312.models.LoginSettings`
+        :type LoginSettings: :class:`taifucloudcloud.batch.v20170312.models.LoginSettings`
         :param SecurityGroupIds: 實例所屬安全組
         :type SecurityGroupIds: list of str
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
-        :type EnhancedService: :class:`tencentcloud.batch.v20170312.models.EnhancedService`
+        :type EnhancedService: :class:`taifucloudcloud.batch.v20170312.models.EnhancedService`
         :param InstanceChargeType: CVM實例計費類型<br><li>POSTPAID_BY_HOUR：按小時後付費<br><li>SPOTPAID：競價付費<br>預設值：POSTPAID_BY_HOUR。
         :type InstanceChargeType: str
         :param InstanceMarketOptions: 實例的市場相關選項，如競價實例相關參數
-        :type InstanceMarketOptions: :class:`tencentcloud.batch.v20170312.models.InstanceMarketOptionsRequest`
+        :type InstanceMarketOptions: :class:`taifucloudcloud.batch.v20170312.models.InstanceMarketOptionsRequest`
         :param InstanceTypes: CVM實例類型清單，不能與InstanceType和InstanceTypeOptions同時出現。指定該欄位後，計算節點按照機型先後順序依次嘗試創建，直到實例創建成功，結束遍曆過程。最多支援10個機型。
         :type InstanceTypes: list of str
         :param InstanceTypeOptions: CVM實例機型配置。不能與InstanceType和InstanceTypes同時出現。
-        :type InstanceTypeOptions: :class:`tencentcloud.batch.v20170312.models.InstanceTypeOptions`
+        :type InstanceTypeOptions: :class:`taifucloudcloud.batch.v20170312.models.InstanceTypeOptions`
         :param Zones: 可用區清單，支援跨可用區創建CVM實例。與VirtualPrivateCloud和VirtualPrivateClouds不能同時指定。
         :type Zones: list of str
         :param VirtualPrivateClouds: 私有網絡清單，支援跨私有網絡創建CVM實例。與VirtualPrivateCloud和Zones不能同時指定。
@@ -1882,7 +1882,7 @@ class Externals(AbstractModel):
         :type UnsupportNetworks: list of str
         :param StorageBlockAttr: HDD本地儲存屬性
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type StorageBlockAttr: :class:`tencentcloud.batch.v20170312.models.StorageBlock`
+        :type StorageBlockAttr: :class:`taifucloudcloud.batch.v20170312.models.StorageBlock`
         """
         self.ReleaseAddress = None
         self.UnsupportNetworks = None
@@ -1902,7 +1902,7 @@ class Filter(AbstractModel):
     > * 若存在多個`Filter`時，`Filter`間的關系爲邏輯與（`AND`）關系。
     > * 若同一個`Filter`存在多個`Values`，同一`Filter`下`Values`間的關系爲邏輯或（`OR`）關系。
     >
-    > 以[DescribeInstances](https://cloud.tencent.com/document/api/213/15728)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲廣州一區 ***并且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
+    > 以[DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲 一區 ***并且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
     ```
     Filters.0.Name=zone
     &Filters.0.Values.0=ap-guangzhou-1
@@ -1983,7 +1983,7 @@ class InstanceMarketOptionsRequest(AbstractModel):
     def __init__(self):
         """
         :param SpotOptions: 競價相關選項
-        :type SpotOptions: :class:`tencentcloud.batch.v20170312.models.SpotMarketOptions`
+        :type SpotOptions: :class:`taifucloudcloud.batch.v20170312.models.SpotMarketOptions`
         :param MarketType: 市場選項類型，當前只支援取值：spot
         :type MarketType: str
         """
@@ -2067,13 +2067,13 @@ class InstanceTypeQuotaItem(AbstractModel):
         :type Zone: str
         :param InstanceType: 實例機型。
         :type InstanceType: str
-        :param InstanceChargeType: 實例計費模式。取值範圍： <br><li>PREPAID：表示預付費，即包年包月<br><li>POSTPAID_BY_HOUR：表示後付費，即按量計費<br><li>CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付費，即只對CDH計費，不對CDH上的實例計費。
+        :param InstanceChargeType: 實例計費模式。取值範圍： <br><li>PREPAID：表示預付費，即包年包月<br><li>POSTPAID_BY_HOUR：表示後付費，即按量計費<br><li>CDHPAID：表示[CDH](https://cloud.taifucloud.com/document/product/416)付費，即只對CDH計費，不對CDH上的實例計費。
         :type InstanceChargeType: str
         :param NetworkCard: 網卡類型，例如：25代表25G網卡
         :type NetworkCard: int
         :param Externals: 擴展屬性。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Externals: :class:`tencentcloud.batch.v20170312.models.Externals`
+        :type Externals: :class:`taifucloudcloud.batch.v20170312.models.Externals`
         :param Cpu: 實例的CPU核數，單位：核。
         :type Cpu: int
         :param Memory: 實例内存容量，單位：`GB`。
@@ -2087,7 +2087,7 @@ class InstanceTypeQuotaItem(AbstractModel):
         :param Status: 實例是否售賣。取值範圍： <br><li>SELL：表示實例可購買<br><li>SOLD_OUT：表示實例已售罄。
         :type Status: str
         :param Price: 實例的售賣價格。
-        :type Price: :class:`tencentcloud.batch.v20170312.models.ItemPrice`
+        :type Price: :class:`taifucloudcloud.batch.v20170312.models.ItemPrice`
         """
         self.Zone = None
         self.InstanceType = None
@@ -2140,7 +2140,7 @@ class InternetAccessible(AbstractModel):
         :type InternetMaxBandwidthOut: int
         :param PublicIpAssigned: 是否分配公網IP。取值範圍：<br><li>TRUE：表示分配公網IP<br><li>FALSE：表示不分配公網IP<br><br>當公網頻寬大于0Mbps時，可自由選擇開通與否，預設開通公網IP；當公網頻寬爲0，則不允許分配公網IP。
         :type PublicIpAssigned: bool
-        :param BandwidthPackageId: 頻寬包ID。可通過[`DescribeBandwidthPackages`](https://cloud.tencent.com/document/api/215/19209)介面返回值中的`BandwidthPackageId`獲取。
+        :param BandwidthPackageId: 頻寬包ID。可通過[`DescribeBandwidthPackages`](https://cloud.taifucloud.com/document/api/215/19209)介面返回值中的`BandwidthPackageId`獲取。
         :type BandwidthPackageId: str
         """
         self.InternetChargeType = None
@@ -2266,14 +2266,14 @@ class JobView(AbstractModel):
         :type Priority: int
         :param Placement: 位置訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Placement: :class:`tencentcloud.batch.v20170312.models.Placement`
+        :type Placement: :class:`taifucloudcloud.batch.v20170312.models.Placement`
         :param CreateTime: 創建時間
         :type CreateTime: str
         :param EndTime: 結束時間
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EndTime: str
         :param TaskMetrics: 任務統計指标
-        :type TaskMetrics: :class:`tencentcloud.batch.v20170312.models.TaskMetrics`
+        :type TaskMetrics: :class:`taifucloudcloud.batch.v20170312.models.TaskMetrics`
         """
         self.JobId = None
         self.JobName = None
@@ -2373,7 +2373,7 @@ class ModifyComputeEnvRequest(AbstractModel):
         :param EnvDescription: 計算環境描述
         :type EnvDescription: str
         :param EnvData: 計算環境屬性數據
-        :type EnvData: :class:`tencentcloud.batch.v20170312.models.ComputeEnvData`
+        :type EnvData: :class:`taifucloudcloud.batch.v20170312.models.ComputeEnvData`
         """
         self.EnvId = None
         self.DesiredComputeNodeCount = None
@@ -2423,7 +2423,7 @@ class ModifyTaskTemplateRequest(AbstractModel):
         :param TaskTemplateDescription: 任務範本描述
         :type TaskTemplateDescription: str
         :param TaskTemplateInfo: 任務範本訊息
-        :type TaskTemplateInfo: :class:`tencentcloud.batch.v20170312.models.Task`
+        :type TaskTemplateInfo: :class:`taifucloudcloud.batch.v20170312.models.Task`
         """
         self.TaskTemplateId = None
         self.TaskTemplateName = None
@@ -2494,7 +2494,7 @@ class NamedComputeEnv(AbstractModel):
         :param EnvType: 計算環境管理類型
         :type EnvType: str
         :param EnvData: 計算環境具體參數
-        :type EnvData: :class:`tencentcloud.batch.v20170312.models.EnvData`
+        :type EnvData: :class:`taifucloudcloud.batch.v20170312.models.EnvData`
         :param MountDataDisks: 數據盤掛載選項
         :type MountDataDisks: list of MountDataDisk
         :param Authentications: 授權訊息
@@ -2502,9 +2502,9 @@ class NamedComputeEnv(AbstractModel):
         :param InputMappings: 輸入映射訊息
         :type InputMappings: list of InputMapping
         :param AgentRunningMode: agent運作模式，适用于Windows系統
-        :type AgentRunningMode: :class:`tencentcloud.batch.v20170312.models.AgentRunningMode`
+        :type AgentRunningMode: :class:`taifucloudcloud.batch.v20170312.models.AgentRunningMode`
         :param Notifications: 通知訊息
-        :type Notifications: :class:`tencentcloud.batch.v20170312.models.Notification`
+        :type Notifications: :class:`taifucloudcloud.batch.v20170312.models.Notification`
         :param ActionIfComputeNodeInactive: 非活躍節點處理策略，預設“RECREATE”，即對于實例創建失敗或異常退還的計算節點，定期重新創建實例資源。
         :type ActionIfComputeNodeInactive: str
         """
@@ -2840,9 +2840,9 @@ class SubmitJobRequest(AbstractModel):
     def __init__(self):
         """
         :param Placement: 作業所提交的位置訊息。通過該參數可以指定作業關聯CVM所屬可用區等訊息。
-        :type Placement: :class:`tencentcloud.batch.v20170312.models.Placement`
+        :type Placement: :class:`taifucloudcloud.batch.v20170312.models.Placement`
         :param Job: 作業訊息
-        :type Job: :class:`tencentcloud.batch.v20170312.models.Job`
+        :type Job: :class:`taifucloudcloud.batch.v20170312.models.Job`
         :param ClientToken: 用于保證請求幂等性的字串。該字串由用戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
         :type ClientToken: str
         """
@@ -2915,19 +2915,19 @@ class Task(AbstractModel):
     def __init__(self):
         """
         :param Application: 應用程式訊息
-        :type Application: :class:`tencentcloud.batch.v20170312.models.Application`
+        :type Application: :class:`taifucloudcloud.batch.v20170312.models.Application`
         :param TaskName: 任務名稱，在一個作業内部唯一
         :type TaskName: str
         :param TaskInstanceNum: 任務實例運作個數
         :type TaskInstanceNum: int
         :param ComputeEnv: 運作環境訊息，ComputeEnv 和 EnvId 必須指定一個（且只有一個）參數。
-        :type ComputeEnv: :class:`tencentcloud.batch.v20170312.models.AnonymousComputeEnv`
+        :type ComputeEnv: :class:`taifucloudcloud.batch.v20170312.models.AnonymousComputeEnv`
         :param EnvId: 計算環境ID，ComputeEnv 和 EnvId 必須指定一個（且只有一個）參數。
         :type EnvId: str
         :param RedirectInfo: 重定向訊息
-        :type RedirectInfo: :class:`tencentcloud.batch.v20170312.models.RedirectInfo`
+        :type RedirectInfo: :class:`taifucloudcloud.batch.v20170312.models.RedirectInfo`
         :param RedirectLocalInfo: 重定向本地訊息
-        :type RedirectLocalInfo: :class:`tencentcloud.batch.v20170312.models.RedirectLocalInfo`
+        :type RedirectLocalInfo: :class:`taifucloudcloud.batch.v20170312.models.RedirectLocalInfo`
         :param InputMappings: 輸入映射
         :type InputMappings: list of InputMapping
         :param OutputMappings: 輸出映射
@@ -3144,7 +3144,7 @@ class TaskInstanceView(AbstractModel):
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EndTime: str
         :param RedirectInfo: 重定向訊息
-        :type RedirectInfo: :class:`tencentcloud.batch.v20170312.models.RedirectInfo`
+        :type RedirectInfo: :class:`taifucloudcloud.batch.v20170312.models.RedirectInfo`
         :param StateDetailedReason: 任務實例狀态原因詳情，任務實例失敗時，會記錄失敗原因
         :type StateDetailedReason: str
         """
@@ -3236,7 +3236,7 @@ class TaskTemplateView(AbstractModel):
         :param TaskTemplateDescription: 任務範本描述
         :type TaskTemplateDescription: str
         :param TaskTemplateInfo: 任務範本訊息
-        :type TaskTemplateInfo: :class:`tencentcloud.batch.v20170312.models.Task`
+        :type TaskTemplateInfo: :class:`taifucloudcloud.batch.v20170312.models.Task`
         :param CreateTime: 創建時間
         :type CreateTime: str
         """
@@ -3446,9 +3446,9 @@ class VirtualPrivateCloud(AbstractModel):
 
     def __init__(self):
         """
-        :param VpcId: 私有網絡ID，形如`vpc-xxx`。有效的VpcId可通過登入[控制台](https://console.cloud.tencent.com/vpc/vpc?rid=1)查詢；也可以調用介面 [DescribeVpcEx](/document/api/215/1372) ，從介面返回中的`unVpcId`欄位獲取。若在創建子機時VpcId與SubnetId同時傳入`DEFAULT`，則強制使用預設vpc網絡。
+        :param VpcId: 私有網絡ID，形如`vpc-xxx`。有效的VpcId可通過登入[控制台](https://console.cloud.taifucloud.com/vpc/vpc?rid=1)查詢；也可以調用介面 [DescribeVpcEx](/document/api/215/1372) ，從介面返回中的`unVpcId`欄位獲取。若在創建子機時VpcId與SubnetId同時傳入`DEFAULT`，則強制使用預設vpc網絡。
         :type VpcId: str
-        :param SubnetId: 私有網絡子網ID，形如`subnet-xxx`。有效的私有網絡子網ID可通過登入[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查詢；也可以調用介面  [DescribeSubnets](/document/api/215/15784) ，從介面返回中的`unSubnetId`欄位獲取。若在創建子機時SubnetId與VpcId同時傳入`DEFAULT`，則強制使用預設vpc網絡。
+        :param SubnetId: 私有網絡子網ID，形如`subnet-xxx`。有效的私有網絡子網ID可通過登入[控制台](https://console.cloud.taifucloud.com/vpc/subnet?rid=1)查詢；也可以調用介面  [DescribeSubnets](/document/api/215/15784) ，從介面返回中的`unSubnetId`欄位獲取。若在創建子機時SubnetId與VpcId同時傳入`DEFAULT`，則強制使用預設vpc網絡。
         :type SubnetId: str
         :param AsVpcGateway: 是否用作公網閘道。公網閘道只有在實例擁有公網IP以及處于私有網絡下時才能正常使用。取值範圍：<br><li>TRUE：表示用作公網閘道<br><li>FALSE：表示不用作公網閘道<br><br>預設取值：FALSE。
         :type AsVpcGateway: bool

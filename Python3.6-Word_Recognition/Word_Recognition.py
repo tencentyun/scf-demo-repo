@@ -1,15 +1,15 @@
-# readme :  https://cloud.tencent.com/document/product/583/30589
+# readme :  https://cloud.taifucloud.com/document/product/583/30589
 # -*- coding: utf-8 -*-
 import os
 import logging
 import datetime
 import base64
 import json
-from tencentcloud.common import credential
-from tencentcloud.common.profile.client_profile import ClientProfile
-from tencentcloud.common.profile.http_profile import HttpProfile
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException 
-from tencentcloud.ocr.v20181119 import ocr_client, models 
+from taifucloudcloud.common import credential
+from taifucloudcloud.common.profile.client_profile import ClientProfile
+from taifucloudcloud.common.profile.http_profile import HttpProfile
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException 
+from taifucloudcloud.ocr.v20181119 import ocr_client, models 
 import sys
 
 print('Loading function')
@@ -38,7 +38,7 @@ def main_handler(event, context):
         token = os.environ.get('TENCENTCLOUD_SESSIONTOKEN') 
         cred = credential.Credential(secret_id,secret_key,token) 
         httpProfile = HttpProfile()
-        httpProfile.endpoint = "ocr.tencentcloudapi.com"
+        httpProfile.endpoint = "ocr.taifucloudcloudapi.com"
 
         clientProfile = ClientProfile()
         clientProfile.httpProfile = httpProfile

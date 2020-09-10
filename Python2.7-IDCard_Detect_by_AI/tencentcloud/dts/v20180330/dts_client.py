@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.dts.v20180330 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.dts.v20180330 import models
 
 
 class DtsClient(AbstractClient):
     _apiVersion = '2018-03-30'
-    _endpoint = 'dts.tencentcloudapi.com'
+    _endpoint = 'dts.taifucloudcloudapi.com'
 
 
     def CompleteMigrateJob(self, request):
@@ -31,8 +31,8 @@ class DtsClient(AbstractClient):
         只有當正在遷移的任務, 進入了準備完成階段, 才能調用本介面完成遷移.
 
         :param request: 調用CompleteMigrateJob所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.CompleteMigrateJobRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.CompleteMigrateJobResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.CompleteMigrateJobRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.CompleteMigrateJobResponse`
 
         """
         try:
@@ -61,8 +61,8 @@ class DtsClient(AbstractClient):
         校驗成功後,遷移任務若有修改, 則必須重新創建校驗并通過後, 才能開始遷移.
 
         :param request: 調用CreateMigrateCheckJob所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.CreateMigrateCheckJobRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.CreateMigrateCheckJobResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.CreateMigrateCheckJobRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.CreateMigrateCheckJobResponse`
 
         """
         try:
@@ -88,11 +88,11 @@ class DtsClient(AbstractClient):
     def CreateMigrateJob(self, request):
         """本介面用于創建數據遷移任務。
 
-        如果是金融區鏈路, 請使用域名: dts.ap-shenzhen-fsi.tencentcloudapi.com
+        如果是金融區鏈路, 請使用域名: dts.ap-shenzhen-fsi.taifucloudcloudapi.com
 
         :param request: 調用CreateMigrateJob所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.CreateMigrateJobRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.CreateMigrateJobResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.CreateMigrateJobRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.CreateMigrateJobResponse`
 
         """
         try:
@@ -120,8 +120,8 @@ class DtsClient(AbstractClient):
         校驗成功後才能啓動同步.
 
         :param request: 調用CreateSyncCheckJob所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.CreateSyncCheckJobRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.CreateSyncCheckJobResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.CreateSyncCheckJobRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.CreateSyncCheckJobResponse`
 
         """
         try:
@@ -149,8 +149,8 @@ class DtsClient(AbstractClient):
         創建同步任務後，可以通過 CreateSyncCheckJob 介面發起校驗任務。校驗成功後才可以通過 StartSyncJob 介面啓動同步任務。
 
         :param request: 調用CreateSyncJob所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.CreateSyncJobRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.CreateSyncJobResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.CreateSyncJobRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.CreateSyncJobResponse`
 
         """
         try:
@@ -177,8 +177,8 @@ class DtsClient(AbstractClient):
         """删除數據遷移任務. 正在校驗和正在遷移的任務不允許删除
 
         :param request: 調用DeleteMigrateJob所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.DeleteMigrateJobRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.DeleteMigrateJobResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.DeleteMigrateJobRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.DeleteMigrateJobResponse`
 
         """
         try:
@@ -205,8 +205,8 @@ class DtsClient(AbstractClient):
         """删除災備同步任務 （運作中的同步任務不能删除）。
 
         :param request: 調用DeleteSyncJob所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.DeleteSyncJobRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.DeleteSyncJobResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.DeleteSyncJobRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.DeleteSyncJobResponse`
 
         """
         try:
@@ -235,8 +235,8 @@ class DtsClient(AbstractClient):
         若未通過校驗, 則能查詢到校驗失敗的原因. 請按照報錯, 通過'ModifyMigrateJob'修改遷移配置或是調整源/目标實例的相關參數.
 
         :param request: 調用DescribeMigrateCheckJob所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.DescribeMigrateCheckJobRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.DescribeMigrateCheckJobResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.DescribeMigrateCheckJobRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.DescribeMigrateCheckJobResponse`
 
         """
         try:
@@ -261,11 +261,11 @@ class DtsClient(AbstractClient):
 
     def DescribeMigrateJobs(self, request):
         """查詢數據遷移任務.
-        如果是金融區鏈路, 請使用域名: https://dts.ap-shenzhen-fsi.tencentcloudapi.com
+        如果是金融區鏈路, 請使用域名: https://dts.ap-shenzhen-fsi.taifucloudcloudapi.com
 
         :param request: 調用DescribeMigrateJobs所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.DescribeMigrateJobsRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.DescribeMigrateJobsResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.DescribeMigrateJobsRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.DescribeMigrateJobsResponse`
 
         """
         try:
@@ -297,8 +297,8 @@ class DtsClient(AbstractClient):
         如果 Status=finished 且 CheckFlag !=1 時表示校驗失敗。
 
         :param request: 調用DescribeSyncCheckJob所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.DescribeSyncCheckJobRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.DescribeSyncCheckJobResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.DescribeSyncCheckJobRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.DescribeSyncCheckJobResponse`
 
         """
         try:
@@ -325,8 +325,8 @@ class DtsClient(AbstractClient):
         """查詢在遷移平台發起的災備同步任務
 
         :param request: 調用DescribeSyncJobs所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.DescribeSyncJobsRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.DescribeSyncJobsResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.DescribeSyncJobsRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.DescribeSyncJobsResponse`
 
         """
         try:
@@ -354,11 +354,11 @@ class DtsClient(AbstractClient):
         當遷移任務處于下述狀态時, 允許調用本介面: 遷移創建中, 創建完成, 校驗成功, 校驗失敗, 遷移失敗.
         源實例和目标實例類型不允許修改, 目标實例地域不允許修改。
 
-        如果是金融區鏈路, 請使用域名: dts.ap-shenzhen-fsi.tencentcloudapi.com
+        如果是金融區鏈路, 請使用域名: dts.ap-shenzhen-fsi.taifucloudcloudapi.com
 
         :param request: 調用ModifyMigrateJob所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.ModifyMigrateJobRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.ModifyMigrateJobResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.ModifyMigrateJobRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.ModifyMigrateJobResponse`
 
         """
         try:
@@ -387,8 +387,8 @@ class DtsClient(AbstractClient):
         源實例和目标實例訊息不允許修改，可以修改任務名、需要同步的庫表。
 
         :param request: 調用ModifySyncJob所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.ModifySyncJobRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.ModifySyncJobResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.ModifySyncJobRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.ModifySyncJobResponse`
 
         """
         try:
@@ -416,8 +416,8 @@ class DtsClient(AbstractClient):
         調用此介面前，請務必先校驗數據遷移任務通過。
 
         :param request: 調用StartMigrateJob所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.StartMigrateJobRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.StartMigrateJobResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.StartMigrateJobRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.StartMigrateJobResponse`
 
         """
         try:
@@ -444,8 +444,8 @@ class DtsClient(AbstractClient):
         """創建的災備同步任務在通過 CreateSyncCheckJob 和 DescribeSyncCheckJob 确定校驗成功後，可以調用該介面啓動同步
 
         :param request: 調用StartSyncJob所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.StartSyncJobRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.StartSyncJobResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.StartSyncJobRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.StartSyncJobResponse`
 
         """
         try:
@@ -473,8 +473,8 @@ class DtsClient(AbstractClient):
         在遷移過程中允許調用該介面撤銷遷移, 撤銷遷移的任務會失敗.
 
         :param request: 調用StopMigrateJob所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.StopMigrateJobRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.StopMigrateJobResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.StopMigrateJobRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.StopMigrateJobResponse`
 
         """
         try:
@@ -501,8 +501,8 @@ class DtsClient(AbstractClient):
         """将災備升級爲主實例，停止從原來所屬主實例的同步，斷開主備關系。
 
         :param request: 調用SwitchDrToMaster所需參數的結構體。
-        :type request: :class:`tencentcloud.dts.v20180330.models.SwitchDrToMasterRequest`
-        :rtype: :class:`tencentcloud.dts.v20180330.models.SwitchDrToMasterResponse`
+        :type request: :class:`taifucloudcloud.dts.v20180330.models.SwitchDrToMasterRequest`
+        :rtype: :class:`taifucloudcloud.dts.v20180330.models.SwitchDrToMasterResponse`
 
         """
         try:

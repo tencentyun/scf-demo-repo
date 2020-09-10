@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.wss.v20180426 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.wss.v20180426 import models
 
 
 class WssClient(AbstractClient):
     _apiVersion = '2018-04-26'
-    _endpoint = 'wss.tencentcloudapi.com'
+    _endpoint = 'wss.taifucloudcloudapi.com'
 
 
     def DeleteCert(self, request):
         """本介面（DeleteCert）用于删除證書。
 
         :param request: Request instance for DeleteCert.
-        :type request: :class:`tencentcloud.wss.v20180426.models.DeleteCertRequest`
-        :rtype: :class:`tencentcloud.wss.v20180426.models.DeleteCertResponse`
+        :type request: :class:`taifucloudcloud.wss.v20180426.models.DeleteCertRequest`
+        :rtype: :class:`taifucloudcloud.wss.v20180426.models.DeleteCertResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class WssClient(AbstractClient):
         """本介面(DescribeCertList)用于獲驗證書清單。
 
         :param request: Request instance for DescribeCertList.
-        :type request: :class:`tencentcloud.wss.v20180426.models.DescribeCertListRequest`
-        :rtype: :class:`tencentcloud.wss.v20180426.models.DescribeCertListResponse`
+        :type request: :class:`taifucloudcloud.wss.v20180426.models.DescribeCertListRequest`
+        :rtype: :class:`taifucloudcloud.wss.v20180426.models.DescribeCertListResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class WssClient(AbstractClient):
         """本介面（UploadCert）用于上傳證書。
 
         :param request: Request instance for UploadCert.
-        :type request: :class:`tencentcloud.wss.v20180426.models.UploadCertRequest`
-        :rtype: :class:`tencentcloud.wss.v20180426.models.UploadCertResponse`
+        :type request: :class:`taifucloudcloud.wss.v20180426.models.UploadCertRequest`
+        :rtype: :class:`taifucloudcloud.wss.v20180426.models.UploadCertResponse`
 
         """
         try:

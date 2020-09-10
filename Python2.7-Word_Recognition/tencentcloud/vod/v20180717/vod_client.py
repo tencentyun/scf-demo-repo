@@ -15,23 +15,23 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.vod.v20180717 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.vod.v20180717 import models
 
 
 class VodClient(AbstractClient):
     _apiVersion = '2018-07-17'
-    _endpoint = 'vod.tencentcloudapi.com'
+    _endpoint = 'vod.taifucloudcloudapi.com'
 
 
     def ApplyUpload(self, request):
         """* 該介面用于申請媒體文件（和封面文件）的上傳，獲取文件上傳到Top Cloud 點播的元訊息（包括上傳路徑、上傳簽名等），用于後續上傳介面。
-        * 上傳流程請參考[服務端上傳綜述](https://cloud.tencent.com/document/product/266/9759)。
+        * 上傳流程請參考[服務端上傳綜述](https://cloud.taifucloud.com/document/product/266/9759)。
 
         :param request: 調用ApplyUpload所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.ApplyUploadRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.ApplyUploadResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.ApplyUploadRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.ApplyUploadResponse`
 
         """
         try:
@@ -58,8 +58,8 @@ class VodClient(AbstractClient):
         """該介面用于确認媒體文件（和封面文件）上傳到Top Cloud 點播的結果，并儲存媒體訊息，返回文件的播放網址和文件 ID。
 
         :param request: 調用CommitUpload所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.CommitUploadRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.CommitUploadResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.CommitUploadRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.CommitUploadResponse`
 
         """
         try:
@@ -85,11 +85,11 @@ class VodClient(AbstractClient):
     def ConfirmEvents(self, request):
         """* 開發者調用拉取事件通知，獲取到事件後，必須調用該介面來确認訊息已經收到；
         * 開發者獲取到事件句柄後，等待确認的有效時間爲 30 秒，超出 30 秒會報參數錯誤（4000）；
-        * 更多參考[服務端事件通知](https://cloud.tencent.com/document/product/266/7829)。
+        * 更多參考[服務端事件通知](https://cloud.taifucloud.com/document/product/266/7829)。
 
         :param request: 調用ConfirmEvents所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.ConfirmEventsRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.ConfirmEventsResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.ConfirmEventsRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.ConfirmEventsResponse`
 
         """
         try:
@@ -116,8 +116,8 @@ class VodClient(AbstractClient):
         """創建用戶自定義視訊内容分析範本，數量上限：50。
 
         :param request: 調用CreateAIAnalysisTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.CreateAIAnalysisTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.CreateAIAnalysisTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.CreateAIAnalysisTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.CreateAIAnalysisTemplateResponse`
 
         """
         try:
@@ -144,8 +144,8 @@ class VodClient(AbstractClient):
         """創建用戶自定義視訊内容識别範本，數量上限：50。
 
         :param request: 調用CreateAIRecognitionTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.CreateAIRecognitionTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.CreateAIRecognitionTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.CreateAIRecognitionTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.CreateAIRecognitionTemplateResponse`
 
         """
         try:
@@ -175,8 +175,8 @@ class VodClient(AbstractClient):
         * 每個分類的子類數量不可超過 500 個。
 
         :param request: 調用CreateClass所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.CreateClassRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.CreateClassResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.CreateClassRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.CreateClassResponse`
 
         """
         try:
@@ -203,8 +203,8 @@ class VodClient(AbstractClient):
         """創建用戶自定義視訊内容審核範本，數量上限：50。
 
         :param request: 調用CreateContentReviewTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.CreateContentReviewTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.CreateContentReviewTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.CreateContentReviewTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.CreateContentReviewTemplateResponse`
 
         """
         try:
@@ -231,8 +231,8 @@ class VodClient(AbstractClient):
         """該介面用于創建人物樣本，用于通過人臉識别等技術，進行内容識别、内容審核等視訊處理。
 
         :param request: 調用CreatePersonSample所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.CreatePersonSampleRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.CreatePersonSampleResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.CreatePersonSampleRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.CreatePersonSampleResponse`
 
         """
         try:
@@ -259,8 +259,8 @@ class VodClient(AbstractClient):
         """創建用戶自定義的任務流範本，範本上限：50。
 
         :param request: 調用CreateProcedureTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.CreateProcedureTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.CreateProcedureTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.CreateProcedureTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.CreateProcedureTemplateResponse`
 
         """
         try:
@@ -287,8 +287,8 @@ class VodClient(AbstractClient):
         """創建用戶自定義轉碼範本，數量上限：1000。
 
         :param request: 調用CreateTranscodeTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.CreateTranscodeTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.CreateTranscodeTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.CreateTranscodeTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.CreateTranscodeTemplateResponse`
 
         """
         try:
@@ -315,8 +315,8 @@ class VodClient(AbstractClient):
         """創建用戶自定義浮水印範本，數量上限：1000。
 
         :param request: 調用CreateWatermarkTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.CreateWatermarkTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.CreateWatermarkTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.CreateWatermarkTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.CreateWatermarkTemplateResponse`
 
         """
         try:
@@ -343,8 +343,8 @@ class VodClient(AbstractClient):
         """該介面用于批次創建關鍵詞樣本，樣本用于通過OCR、ASR技術，進行内容審核、内容識别等視訊處理。
 
         :param request: 調用CreateWordSamples所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.CreateWordSamplesRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.CreateWordSamplesResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.CreateWordSamplesRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.CreateWordSamplesResponse`
 
         """
         try:
@@ -373,8 +373,8 @@ class VodClient(AbstractClient):
         注意：範本 ID 爲 10000 以下的爲系統預置範本，不允許删除。
 
         :param request: 調用DeleteAIAnalysisTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DeleteAIAnalysisTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteAIAnalysisTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DeleteAIAnalysisTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DeleteAIAnalysisTemplateResponse`
 
         """
         try:
@@ -401,8 +401,8 @@ class VodClient(AbstractClient):
         """删除用戶自定義視訊内容識别範本。
 
         :param request: 調用DeleteAIRecognitionTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DeleteAIRecognitionTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteAIRecognitionTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DeleteAIRecognitionTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DeleteAIRecognitionTemplateResponse`
 
         """
         try:
@@ -430,8 +430,8 @@ class VodClient(AbstractClient):
         * 否則，請先執行[删除媒體](/document/product/266/31764)及子分類，再删除該分類；
 
         :param request: 調用DeleteClass所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DeleteClassRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteClassResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DeleteClassRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DeleteClassResponse`
 
         """
         try:
@@ -458,8 +458,8 @@ class VodClient(AbstractClient):
         """删除用戶自定義視訊内容審核範本。
 
         :param request: 調用DeleteContentReviewTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DeleteContentReviewTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteContentReviewTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DeleteContentReviewTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DeleteContentReviewTemplateResponse`
 
         """
         try:
@@ -483,12 +483,12 @@ class VodClient(AbstractClient):
 
 
     def DeleteMedia(self, request):
-        """* 删除媒體及其對應的視訊處理文件（如轉碼視訊、雪碧圖、截圖、微信發布視訊等）；
-        * 可單獨删除指定 ID 的視訊文件下的轉碼，或者微信發布文件；
+        """* 删除媒體及其對應的視訊處理文件（如轉碼視訊、雪碧圖、截圖、 發布視訊等）；
+        * 可單獨删除指定 ID 的視訊文件下的轉碼，或者 發布文件；
 
         :param request: 調用DeleteMedia所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DeleteMediaRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteMediaResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DeleteMediaRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DeleteMediaResponse`
 
         """
         try:
@@ -515,8 +515,8 @@ class VodClient(AbstractClient):
         """該介面用于根據人物 ID，删除人物樣本。
 
         :param request: 調用DeletePersonSample所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DeletePersonSampleRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DeletePersonSampleResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DeletePersonSampleRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DeletePersonSampleResponse`
 
         """
         try:
@@ -543,8 +543,8 @@ class VodClient(AbstractClient):
         """删除指定名字的任務流範本
 
         :param request: 調用DeleteProcedureTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DeleteProcedureTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteProcedureTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DeleteProcedureTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DeleteProcedureTemplateResponse`
 
         """
         try:
@@ -571,8 +571,8 @@ class VodClient(AbstractClient):
         """删除用戶自定義轉碼範本。
 
         :param request: 調用DeleteTranscodeTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DeleteTranscodeTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteTranscodeTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DeleteTranscodeTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DeleteTranscodeTemplateResponse`
 
         """
         try:
@@ -599,8 +599,8 @@ class VodClient(AbstractClient):
         """删除用戶自定義浮水印範本。
 
         :param request: 調用DeleteWatermarkTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DeleteWatermarkTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteWatermarkTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DeleteWatermarkTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DeleteWatermarkTemplateResponse`
 
         """
         try:
@@ -627,8 +627,8 @@ class VodClient(AbstractClient):
         """該介面用于批次删除關鍵詞樣本。
 
         :param request: 調用DeleteWordSamples所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DeleteWordSamplesRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DeleteWordSamplesResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DeleteWordSamplesRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DeleteWordSamplesResponse`
 
         """
         try:
@@ -655,8 +655,8 @@ class VodClient(AbstractClient):
         """根據視訊内容分析範本唯一标識，獲取視訊内容分析範本詳情清單。返回結果包含符合條件的所有用戶自定義視訊内容分析範本及[系統預置視訊内容分析範本]
 
         :param request: 調用DescribeAIAnalysisTemplates所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DescribeAIAnalysisTemplatesRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeAIAnalysisTemplatesResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribeAIAnalysisTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DescribeAIAnalysisTemplatesResponse`
 
         """
         try:
@@ -683,8 +683,8 @@ class VodClient(AbstractClient):
         """根據視訊内容識别範本唯一标識，獲取視訊内容識别範本詳情清單。返回結果包含符合條件的所有用戶自定義視訊内容識别範本及[系統預置視訊内容識别範本]
 
         :param request: 調用DescribeAIRecognitionTemplates所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DescribeAIRecognitionTemplatesRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeAIRecognitionTemplatesResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribeAIRecognitionTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DescribeAIRecognitionTemplatesResponse`
 
         """
         try:
@@ -711,8 +711,8 @@ class VodClient(AbstractClient):
         """* 獲得用戶的所有分類訊息。
 
         :param request: 調用DescribeAllClass所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DescribeAllClassRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeAllClassResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribeAllClassRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DescribeAllClassResponse`
 
         """
         try:
@@ -739,8 +739,8 @@ class VodClient(AbstractClient):
         """根據視訊内容審核範本唯一标識，獲取視訊内容審核範本詳情清單。返回結果包含符合條件的所有用戶自定義範本及[系統預置内容審核範本]。
 
         :param request: 調用DescribeContentReviewTemplates所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DescribeContentReviewTemplatesRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeContentReviewTemplatesResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribeContentReviewTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DescribeContentReviewTemplatesResponse`
 
         """
         try:
@@ -777,8 +777,8 @@ class VodClient(AbstractClient):
         2. 可以指定回包只返回部分訊息。
 
         :param request: 調用DescribeMediaInfos所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DescribeMediaInfosRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeMediaInfosResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribeMediaInfosRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DescribeMediaInfosResponse`
 
         """
         try:
@@ -805,8 +805,8 @@ class VodClient(AbstractClient):
         """該介面用于查詢人物樣本訊息，支援根據人物 ID、名稱、标簽，分頁查詢。
 
         :param request: 調用DescribePersonSamples所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DescribePersonSamplesRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DescribePersonSamplesResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribePersonSamplesRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DescribePersonSamplesResponse`
 
         """
         try:
@@ -833,8 +833,8 @@ class VodClient(AbstractClient):
         """根據任務流範本名字，獲取任務流範本詳情清單。
 
         :param request: 調用DescribeProcedureTemplates所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DescribeProcedureTemplatesRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeProcedureTemplatesResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribeProcedureTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DescribeProcedureTemplatesResponse`
 
         """
         try:
@@ -861,8 +861,8 @@ class VodClient(AbstractClient):
         """通過任務 ID 查詢任務的執行狀态和結果的詳細訊息（最多可以查詢3天之内提交的任務）。
 
         :param request: 調用DescribeTaskDetail所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DescribeTaskDetailRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeTaskDetailResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribeTaskDetailRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DescribeTaskDetailResponse`
 
         """
         try:
@@ -891,8 +891,8 @@ class VodClient(AbstractClient):
         * 只能查詢到最近三天（72 小時）内的任務。
 
         :param request: 調用DescribeTasks所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DescribeTasksRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeTasksResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribeTasksRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DescribeTasksResponse`
 
         """
         try:
@@ -916,11 +916,11 @@ class VodClient(AbstractClient):
 
 
     def DescribeTranscodeTemplates(self, request):
-        """根據轉碼範本唯一标識，獲取轉碼範本詳情清單。返回結果包含符合條件的所有用戶自定義範本及[系統預置轉碼範本](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+        """根據轉碼範本唯一标識，獲取轉碼範本詳情清單。返回結果包含符合條件的所有用戶自定義範本及[系統預置轉碼範本](https://cloud.taifucloud.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
 
         :param request: 調用DescribeTranscodeTemplates所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DescribeTranscodeTemplatesRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeTranscodeTemplatesResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribeTranscodeTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DescribeTranscodeTemplatesResponse`
 
         """
         try:
@@ -947,8 +947,8 @@ class VodClient(AbstractClient):
         """查詢用戶自定義浮水印範本，支援根據條件，分頁查詢。
 
         :param request: 調用DescribeWatermarkTemplates所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DescribeWatermarkTemplatesRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeWatermarkTemplatesResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribeWatermarkTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DescribeWatermarkTemplatesResponse`
 
         """
         try:
@@ -975,8 +975,8 @@ class VodClient(AbstractClient):
         """該介面用于根據應用場景、關鍵詞、标簽，分頁查詢關鍵詞樣本訊息。
 
         :param request: 調用DescribeWordSamples所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.DescribeWordSamplesRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.DescribeWordSamplesResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribeWordSamplesRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.DescribeWordSamplesResponse`
 
         """
         try:
@@ -1013,8 +1013,8 @@ class VodClient(AbstractClient):
         對于生成的新視訊，還可以指定生成後的視訊是否要執行任務流。
 
         :param request: 調用EditMedia所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.EditMediaRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.EditMediaResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.EditMediaRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.EditMediaResponse`
 
         """
         try:
@@ -1045,27 +1045,27 @@ class VodClient(AbstractClient):
         - 剪輯不固化：剪輯得到的視訊附屬于直播錄制文件，沒有獨立 FileId；适用于将精彩片段**臨時分享**的場景。
 
         注意：
-        - 使用直播即時剪輯功能的前提是：目标直播流開啓了[時移回看](https://cloud.tencent.com/document/product/267/32742)功能。
+        - 使用直播即時剪輯功能的前提是：目标直播流開啓了[時移回看](https://cloud.taifucloud.com/document/product/267/32742)功能。
         - 直播即時剪輯是基于直播錄制生成的 m3u8 文件進行的，故而其最小剪輯精度爲一個 ts 切片，無法實現秒級或者更爲精确的剪輯精度。
 
 
         ### 剪輯固化
-        所謂剪輯固化，是指将剪輯出來的視訊是保存成一個獨立的視訊（擁有獨立的 FileId）。其生命週期不受原始直播錄制視訊影響（即使原始錄制視訊被删除，剪輯結果也不會受到任何影響）；也可以對其進行轉碼、微信發布等二次處理。
+        所謂剪輯固化，是指将剪輯出來的視訊是保存成一個獨立的視訊（擁有獨立的 FileId）。其生命週期不受原始直播錄制視訊影響（即使原始錄制視訊被删除，剪輯結果也不會受到任何影響）；也可以對其進行轉碼、 發布等二次處理。
 
-        舉例如下：一場完整的足球比賽，直播錄制出來的原始視訊可能長達 2 個小時，客戶出于節省成本的目的可以對這個視訊儲存 2 個月，但對于直播即時剪輯的「精彩時刻」視訊卻可以指定儲存更長時間，同時可以單獨對「精彩時刻」視訊進行轉碼、微信發布等額外的點播操作，這時候可以選擇直播即時剪輯并且固化的方案。
+        舉例如下：一場完整的足球比賽，直播錄制出來的原始視訊可能長達 2 個小時，客戶出于節省成本的目的可以對這個視訊儲存 2 個月，但對于直播即時剪輯的「精彩時刻」視訊卻可以指定儲存更長時間，同時可以單獨對「精彩時刻」視訊進行轉碼、 發布等額外的點播操作，這時候可以選擇直播即時剪輯并且固化的方案。
 
         剪輯固化的優勢在于其生命週期與原始錄制視訊相互獨立，可以獨立管理、長久保存。
 
         ### 剪輯不固化
         所謂剪輯不固化，是指剪輯所得到的結果（m3u8 文件）與直播錄制視訊共享相同的 ts 分片，新生成的視訊不是一個獨立完整的視訊（沒有獨立 FileId，只有播放 URL），其有效期與直播錄制的完整視訊有效期是一緻的。一旦直播錄制出來的視訊被删除，也會導緻該片段無法播放。
 
-        剪輯不固化，由于其剪輯結果不是一個獨立的視訊，因而也不會納入點播媒資視訊管理（比如控制台的視訊總數不會統計這一片段）中，也無法單獨針對這個片段做轉碼、微信發布等任何視訊處理操作。
+        剪輯不固化，由于其剪輯結果不是一個獨立的視訊，因而也不會納入點播媒資視訊管理（比如控制台的視訊總數不會統計這一片段）中，也無法單獨針對這個片段做轉碼、 發布等任何視訊處理操作。
 
         剪輯不固化的優勢在于其剪輯操作十分“輕量化”，不會産生額外的儲存開銷。但其不足之處在于生命週期與原始錄制視訊相同，且無法進一步進行轉碼等視訊處理。
 
         :param request: 調用LiveRealTimeClip所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.LiveRealTimeClipRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.LiveRealTimeClipResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.LiveRealTimeClipRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.LiveRealTimeClipResponse`
 
         """
         try:
@@ -1094,8 +1094,8 @@ class VodClient(AbstractClient):
         注意：範本 ID 10000 以下的爲系統預置範本，不允許修改。
 
         :param request: 調用ModifyAIAnalysisTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.ModifyAIAnalysisTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyAIAnalysisTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.ModifyAIAnalysisTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.ModifyAIAnalysisTemplateResponse`
 
         """
         try:
@@ -1122,8 +1122,8 @@ class VodClient(AbstractClient):
         """修改用戶自定義視訊内容識别範本。
 
         :param request: 調用ModifyAIRecognitionTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.ModifyAIRecognitionTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyAIRecognitionTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.ModifyAIRecognitionTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.ModifyAIRecognitionTemplateResponse`
 
         """
         try:
@@ -1150,8 +1150,8 @@ class VodClient(AbstractClient):
         """修改媒體分類屬性。
 
         :param request: 調用ModifyClass所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.ModifyClassRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyClassResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.ModifyClassRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.ModifyClassResponse`
 
         """
         try:
@@ -1178,8 +1178,8 @@ class VodClient(AbstractClient):
         """修改用戶自定義視訊内容審核範本。
 
         :param request: 調用ModifyContentReviewTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.ModifyContentReviewTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyContentReviewTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.ModifyContentReviewTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.ModifyContentReviewTemplateResponse`
 
         """
         try:
@@ -1206,8 +1206,8 @@ class VodClient(AbstractClient):
         """修改媒體文件的屬性，包括分類、名稱、描述、标簽、過期時間、打點訊息、視訊封面等。
 
         :param request: 調用ModifyMediaInfo所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.ModifyMediaInfoRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyMediaInfoResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.ModifyMediaInfoRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.ModifyMediaInfoResponse`
 
         """
         try:
@@ -1234,8 +1234,8 @@ class VodClient(AbstractClient):
         """該介面用于根據人物 ID，修改人物樣本訊息，包括名稱、描述的修改，以及人臉、标簽的添加、删除、重置操作。人臉删除操作需保證至少剩餘 1 張圖片，否則，請使用重置操作。
 
         :param request: 調用ModifyPersonSample所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.ModifyPersonSampleRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyPersonSampleResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.ModifyPersonSampleRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.ModifyPersonSampleResponse`
 
         """
         try:
@@ -1262,8 +1262,8 @@ class VodClient(AbstractClient):
         """修改用戶自定義轉碼範本訊息。
 
         :param request: 調用ModifyTranscodeTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.ModifyTranscodeTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyTranscodeTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.ModifyTranscodeTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.ModifyTranscodeTemplateResponse`
 
         """
         try:
@@ -1290,8 +1290,8 @@ class VodClient(AbstractClient):
         """修改用戶自定義浮水印範本，水印類型不允許修改。
 
         :param request: 調用ModifyWatermarkTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.ModifyWatermarkTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyWatermarkTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.ModifyWatermarkTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.ModifyWatermarkTemplateResponse`
 
         """
         try:
@@ -1318,8 +1318,8 @@ class VodClient(AbstractClient):
         """該介面用于修改關鍵詞的應用場景、标簽，關鍵詞本身不可修改，如需修改，可删除重建。
 
         :param request: 調用ModifyWordSample所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.ModifyWordSampleRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.ModifyWordSampleResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.ModifyWordSampleRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.ModifyWordSampleResponse`
 
         """
         try:
@@ -1351,13 +1351,13 @@ class VodClient(AbstractClient):
         5. 對視訊截圖雪碧圖；
         6. 對視訊截取一張圖做封面；
         7. 對視訊轉自适應碼流（并加密）；
-        8. 智慧内容審核（鑒黃、鑒恐、鑒政）；
+        8. 智慧内容審核（ 、鑒恐、鑒政）；
         9. 智慧内容分析（标簽、分類、封面、按幀标簽）；
         10. 智慧内容識别（視訊片頭片尾、人臉、文本全文、文本關鍵詞、語音全文、語音關鍵詞、物體）。
 
         :param request: 調用ProcessMedia所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.ProcessMediaRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.ProcessMediaResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.ProcessMediaRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.ProcessMediaResponse`
 
         """
         try:
@@ -1387,8 +1387,8 @@ class VodClient(AbstractClient):
         2. 通過任務流範本介面創建任務流範本。
 
         :param request: 調用ProcessMediaByProcedure所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.ProcessMediaByProcedureRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.ProcessMediaByProcedureResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.ProcessMediaByProcedureRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.ProcessMediaByProcedureResponse`
 
         """
         try:
@@ -1414,13 +1414,13 @@ class VodClient(AbstractClient):
     def ProcessMediaByUrl(self, request):
         """對來源爲 URL 的影音媒體發起處理任務，功能包括：
 
-        1. 智慧内容審核（鑒黃、鑒恐、鑒政）；
+        1. 智慧内容審核（ 、鑒恐、鑒政）；
         2. 智慧内容分析（标簽、分類、封面、按幀标簽）；
         3. 智慧内容識别（視訊片頭片尾、人臉、文本全文、文本關鍵詞、語音全文、語音關鍵詞、物體）。
 
         :param request: 調用ProcessMediaByUrl所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.ProcessMediaByUrlRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.ProcessMediaByUrlResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.ProcessMediaByUrlRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.ProcessMediaByUrlResponse`
 
         """
         try:
@@ -1444,14 +1444,14 @@ class VodClient(AbstractClient):
 
 
     def PullEvents(self, request):
-        """* 該介面用于從點播服務端獲取事件通知，詳見[服務端事件通知](https://cloud.tencent.com/document/product/266/7829)；
+        """* 該介面用于從點播服務端獲取事件通知，詳見[服務端事件通知](https://cloud.taifucloud.com/document/product/266/7829)；
         * 介面爲長輪詢模式，即：如果服務端存在未消費事件，則立即返回給請求方；如果服務端沒有未消費事件，則後台會将請求挂起，直到有新的事件産生爲止；
         * 請求最多挂起 5 秒，建議請求方将超時時間設置爲 10 秒；
-        * 若該介面有事件返回，調用方必須再調用[确認事件通知](https://cloud.tencent.com/document/product/266/33434)介面，确認事件通知已經處理，否則該事件通知後續會再次被拉取到。
+        * 若該介面有事件返回，調用方必須再調用[确認事件通知](https://cloud.taifucloud.com/document/product/266/33434)介面，确認事件通知已經處理，否則該事件通知後續會再次被拉取到。
 
         :param request: 調用PullEvents所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.PullEventsRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.PullEventsResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.PullEventsRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.PullEventsResponse`
 
         """
         try:
@@ -1478,8 +1478,8 @@ class VodClient(AbstractClient):
         """重新設置已存在的任務流範本的任務内容
 
         :param request: 調用ResetProcedureTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.ResetProcedureTemplateRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.ResetProcedureTemplateResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.ResetProcedureTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.ResetProcedureTemplateResponse`
 
         """
         try:
@@ -1519,8 +1519,8 @@ class VodClient(AbstractClient):
         - 搜索結果超過 5000條，不再支援分頁查詢超過 5000 部分的數據。
 
         :param request: 調用SearchMedia所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.SearchMediaRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.SearchMediaResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.SearchMediaRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.SearchMediaResponse`
 
         """
         try:
@@ -1549,8 +1549,8 @@ class VodClient(AbstractClient):
         注意：裁剪出來的視訊與原始視訊共用 ts，僅生成新的 m3u8。原始視訊删除後，該裁剪視訊也會被删除。
 
         :param request: 調用SimpleHlsClip所需參數的結構體。
-        :type request: :class:`tencentcloud.vod.v20180717.models.SimpleHlsClipRequest`
-        :rtype: :class:`tencentcloud.vod.v20180717.models.SimpleHlsClipResponse`
+        :type request: :class:`taifucloudcloud.vod.v20180717.models.SimpleHlsClipRequest`
+        :rtype: :class:`taifucloudcloud.vod.v20180717.models.SimpleHlsClipResponse`
 
         """
         try:

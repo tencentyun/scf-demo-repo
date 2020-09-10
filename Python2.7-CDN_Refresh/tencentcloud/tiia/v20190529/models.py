@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AssessQualityRequest(AbstractModel):
@@ -294,7 +294,7 @@ FalseRate1Percent, FalseRate5Permil, FalseRate1Permil分别代表誤識率在百
 因爲阈值會存在變動，請勿将此處輸出的固定值處理，而是每次取值與confidence對比，來判斷本次的識别結果是否可信。
  例如，如果您業務中可以接受的誤識率是1%，則可以将所有confidence>=FalseRate1Percent的結論認爲是正确的。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Threshold: :class:`tencentcloud.tiia.v20190529.models.Threshold`
+        :type Threshold: :class:`taifucloudcloud.tiia.v20190529.models.Threshold`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -575,7 +575,7 @@ class DetectProductBetaResponse(AbstractModel):
         :type RegionDetected: list of RegionDetected
         :param ProductInfo: 圖像識别出的商品的詳細訊息。 
 當圖像中檢測到多個物品時，會對顯著性最高的進行識别。
-        :type ProductInfo: :class:`tencentcloud.tiia.v20190529.models.ProductInfo`
+        :type ProductInfo: :class:`taifucloudcloud.tiia.v20190529.models.ProductInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -863,7 +863,7 @@ class ProductInfo(AbstractModel):
 是否找到同款的判斷依據爲Score分值，分值越大則同款的可能性越大。
         :type FindSKU: int
         :param Location: 本商品在圖片中的坐标，表示爲矩形框的四個頂點坐标。
-        :type Location: :class:`tencentcloud.tiia.v20190529.models.Location`
+        :type Location: :class:`taifucloudcloud.tiia.v20190529.models.Location`
         :param Name: 商品名稱
         :type Name: str
         :param Brand: 商品品牌
@@ -982,7 +982,7 @@ class RegionDetected(AbstractModel):
         :param CategoryScore: 商品品類預測的置信度
         :type CategoryScore: float
         :param Location: 檢測到的主體在圖片中的坐标，表示爲矩形框的四個頂點坐标
-        :type Location: :class:`tencentcloud.tiia.v20190529.models.Location`
+        :type Location: :class:`taifucloudcloud.tiia.v20190529.models.Location`
         """
         self.Category = None
         self.CategoryScore = None

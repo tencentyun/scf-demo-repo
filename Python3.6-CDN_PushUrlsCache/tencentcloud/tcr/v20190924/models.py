@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AutoDelStrategyInfo(AbstractModel):
@@ -573,7 +573,7 @@ class CreateWebhookTriggerRequest(AbstractModel):
         :param RegistryId: 實例 Id
         :type RegistryId: str
         :param Trigger: 觸發器參數
-        :type Trigger: :class:`tencentcloud.tcr.v20190924.models.WebhookTrigger`
+        :type Trigger: :class:`taifucloudcloud.tcr.v20190924.models.WebhookTrigger`
         :param Namespace: 命名空間
         :type Namespace: str
         """
@@ -1032,7 +1032,7 @@ class DescribeApplicationTriggerLogPersonalResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 觸發日志返回值
-        :type Data: :class:`tencentcloud.tcr.v20190924.models.DescribeApplicationTriggerLogPersonalResp`
+        :type Data: :class:`taifucloudcloud.tcr.v20190924.models.DescribeApplicationTriggerLogPersonalResp`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1110,7 +1110,7 @@ class DescribeApplicationTriggerPersonalResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 觸發器清單返回值
-        :type Data: :class:`tencentcloud.tcr.v20190924.models.DescribeApplicationTriggerPersonalResp`
+        :type Data: :class:`taifucloudcloud.tcr.v20190924.models.DescribeApplicationTriggerPersonalResp`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1158,7 +1158,7 @@ class DescribeFavorRepositoryPersonalResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 個人收藏倉庫清單返回訊息
-        :type Data: :class:`tencentcloud.tcr.v20190924.models.FavorResp`
+        :type Data: :class:`taifucloudcloud.tcr.v20190924.models.FavorResp`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1202,7 +1202,7 @@ class DescribeImageFilterPersonalResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: payload
-        :type Data: :class:`tencentcloud.tcr.v20190924.models.SameImagesResp`
+        :type Data: :class:`taifucloudcloud.tcr.v20190924.models.SameImagesResp`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1231,7 +1231,7 @@ class DescribeImageLifecycleGlobalPersonalResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 全局自動删除策略訊息
-        :type Data: :class:`tencentcloud.tcr.v20190924.models.AutoDelStrategyInfoResp`
+        :type Data: :class:`taifucloudcloud.tcr.v20190924.models.AutoDelStrategyInfoResp`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1271,7 +1271,7 @@ class DescribeImageLifecyclePersonalResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 自動删除策略訊息
-        :type Data: :class:`tencentcloud.tcr.v20190924.models.AutoDelStrategyInfoResp`
+        :type Data: :class:`taifucloudcloud.tcr.v20190924.models.AutoDelStrategyInfoResp`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1377,7 +1377,7 @@ class DescribeImagePersonalResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 映像tag訊息
-        :type Data: :class:`tencentcloud.tcr.v20190924.models.TagInfoResp`
+        :type Data: :class:`taifucloudcloud.tcr.v20190924.models.TagInfoResp`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1661,7 +1661,7 @@ class DescribeNamespacePersonalResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 用戶命名空間返回訊息
-        :type Data: :class:`tencentcloud.tcr.v20190924.models.NamespaceInfoResp`
+        :type Data: :class:`taifucloudcloud.tcr.v20190924.models.NamespaceInfoResp`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1843,7 +1843,7 @@ class DescribeRepositoryFilterPersonalResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 倉庫訊息
-        :type Data: :class:`tencentcloud.tcr.v20190924.models.SearchUserRepositoryResp`
+        :type Data: :class:`taifucloudcloud.tcr.v20190924.models.SearchUserRepositoryResp`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1891,7 +1891,7 @@ class DescribeRepositoryOwnerPersonalResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 倉庫訊息
-        :type Data: :class:`tencentcloud.tcr.v20190924.models.RepoInfoResp`
+        :type Data: :class:`taifucloudcloud.tcr.v20190924.models.RepoInfoResp`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1931,7 +1931,7 @@ class DescribeRepositoryPersonalResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 倉庫訊息
-        :type Data: :class:`tencentcloud.tcr.v20190924.models.RepositoryInfoResp`
+        :type Data: :class:`taifucloudcloud.tcr.v20190924.models.RepositoryInfoResp`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1960,7 +1960,7 @@ class DescribeUserQuotaPersonalResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 配額返回訊息
-        :type Data: :class:`tencentcloud.tcr.v20190924.models.RespLimit`
+        :type Data: :class:`taifucloudcloud.tcr.v20190924.models.RespLimit`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2121,9 +2121,9 @@ class DuplicateImagePersonalRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param SrcImage: 源映像名稱，不包含domain。例如： tencentyun/foo:v1
+        :param SrcImage: 源映像名稱，不包含domain。例如： taifucloudyun/foo:v1
         :type SrcImage: str
-        :param DestImage: 目的映像名稱，不包含domain。例如： tencentyun/foo:latest
+        :param DestImage: 目的映像名稱，不包含domain。例如： taifucloudyun/foo:latest
         :type DestImage: str
         """
         self.SrcImage = None
@@ -2143,7 +2143,7 @@ class DuplicateImagePersonalResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 複制映像返回值
-        :type Data: :class:`tencentcloud.tcr.v20190924.models.DupImageTagResp`
+        :type Data: :class:`taifucloudcloud.tcr.v20190924.models.DupImageTagResp`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2374,7 +2374,7 @@ class ModifyApplicationTriggerPersonalRequest(AbstractModel):
         :type WorkloadName: str
         :param ContainerName: 應用所在TKE集群工作負載下容器名稱
         :type ContainerName: str
-        :param ClusterRegion: 應用所在TKE集群地域數字ID，如1（廣州）、16（成都）
+        :param ClusterRegion: 應用所在TKE集群地域數字ID，如1（ ）、16（ ）
         :type ClusterRegion: int
         :param NewTriggerName: 新觸發器名稱
         :type NewTriggerName: str
@@ -2677,7 +2677,7 @@ class ModifyWebhookTriggerRequest(AbstractModel):
         :param RegistryId: 實例Id
         :type RegistryId: str
         :param Trigger: 觸發器參數
-        :type Trigger: :class:`tencentcloud.tcr.v20190924.models.WebhookTrigger`
+        :type Trigger: :class:`taifucloudcloud.tcr.v20190924.models.WebhookTrigger`
         :param Namespace: 命名空間
         :type Namespace: str
         """
@@ -3486,13 +3486,13 @@ class TriggerLogResp(AbstractModel):
         :type InvokeTime: str
         :param InvokeCondition: 觸發條件
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type InvokeCondition: :class:`tencentcloud.tcr.v20190924.models.TriggerInvokeCondition`
+        :type InvokeCondition: :class:`taifucloudcloud.tcr.v20190924.models.TriggerInvokeCondition`
         :param InvokePara: 觸發參數
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type InvokePara: :class:`tencentcloud.tcr.v20190924.models.TriggerInvokePara`
+        :type InvokePara: :class:`taifucloudcloud.tcr.v20190924.models.TriggerInvokePara`
         :param InvokeResult: 觸發結果
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type InvokeResult: :class:`tencentcloud.tcr.v20190924.models.TriggerInvokeResult`
+        :type InvokeResult: :class:`taifucloudcloud.tcr.v20190924.models.TriggerInvokeResult`
         """
         self.RepoName = None
         self.TagName = None
@@ -3547,10 +3547,10 @@ class TriggerResp(AbstractModel):
         :type UpdateTime: str
         :param InvokeCondition: 觸發條件
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type InvokeCondition: :class:`tencentcloud.tcr.v20190924.models.TriggerInvokeCondition`
+        :type InvokeCondition: :class:`taifucloudcloud.tcr.v20190924.models.TriggerInvokeCondition`
         :param InvokePara: 觸發器參數
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type InvokePara: :class:`tencentcloud.tcr.v20190924.models.TriggerInvokePara`
+        :type InvokePara: :class:`taifucloudcloud.tcr.v20190924.models.TriggerInvokePara`
         """
         self.TriggerName = None
         self.InvokeSource = None
@@ -3600,7 +3600,7 @@ class ValidateNamespaceExistPersonalResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 命名空間是否存在
-        :type Data: :class:`tencentcloud.tcr.v20190924.models.NamespaceIsExistsResp`
+        :type Data: :class:`taifucloudcloud.tcr.v20190924.models.NamespaceIsExistsResp`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3640,7 +3640,7 @@ class ValidateRepositoryExistPersonalResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 倉庫是否存在
-        :type Data: :class:`tencentcloud.tcr.v20190924.models.RepoIsExistResp`
+        :type Data: :class:`taifucloudcloud.tcr.v20190924.models.RepoIsExistResp`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

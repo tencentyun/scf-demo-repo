@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AccessInfo(AbstractModel):
@@ -50,7 +50,7 @@ class Code(AbstractModel):
         :type CosObjectName: str
         :param ZipFile: 包含函數代碼文件及其依賴項的 zip 格式文件，使用該介面時要求将 zip 文件的内容轉成 base64 編碼，最大支援20M
         :type ZipFile: str
-        :param CosBucketRegion: 物件儲存的地域，地域爲北京時需要傳入ap-beijing,北京一區時需要傳遞ap-beijing-1，其他的地域不需要傳遞。
+        :param CosBucketRegion: 物件儲存的地域，地域爲 時需要傳入ap-beijing, 一區時需要傳遞ap-beijing-1，其他的地域不需要傳遞。
         :type CosBucketRegion: str
         :param DemoId: 如果是通過Demo創建的話，需要傳入DemoId
         :type DemoId: str
@@ -183,7 +183,7 @@ class CreateFunctionRequest(AbstractModel):
         :param FunctionName: 創建的函數名稱，函數名稱支援26個英文字母大小寫、數字、連接符和下劃線，第一個字元只能以字母開頭，最後一個字元不能爲連接符或者下劃線，名稱長度2-60
         :type FunctionName: str
         :param Code: 函數的代碼. 注意：不能同時指定Cos與ZipFile
-        :type Code: :class:`tencentcloud.scf.v20180416.models.Code`
+        :type Code: :class:`taifucloudcloud.scf.v20180416.models.Code`
         :param Handler: 函數處理方法名稱，名稱格式支援 "文件名稱.方法名稱" 形式，文件名稱和函數名稱之間以"."隔開，文件名稱和函數名稱要求以字母開始和結尾，中間允許插入字母、數字、下劃線和連接符，文件名稱和函數名字的長度要求是 2-60 個字元
         :type Handler: str
         :param Description: 函數描述,最大支援 1000 個英文字母、數字、空格、逗号、換行符和英文句号，支援中文
@@ -193,11 +193,11 @@ class CreateFunctionRequest(AbstractModel):
         :param Timeout: 函數最長執行時間，單位爲秒，可選值範圍 1-300 秒，預設爲 3 秒
         :type Timeout: int
         :param Environment: 函數的環境變量
-        :type Environment: :class:`tencentcloud.scf.v20180416.models.Environment`
+        :type Environment: :class:`taifucloudcloud.scf.v20180416.models.Environment`
         :param Runtime: 函數運作環境，目前僅支援 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，預設Python2.7
         :type Runtime: str
         :param VpcConfig: 函數的私有網絡配置
-        :type VpcConfig: :class:`tencentcloud.scf.v20180416.models.VpcConfig`
+        :type VpcConfig: :class:`taifucloudcloud.scf.v20180416.models.VpcConfig`
         :param Namespace: 函數所屬命名空間
         :type Namespace: str
         :param Role: 函數綁定的角色
@@ -213,7 +213,7 @@ class CreateFunctionRequest(AbstractModel):
         :param Layers: 函數要關聯的Layer版本清單，Layer會按照在清單中順序依次函蓋。
         :type Layers: list of LayerVersionSimple
         :param DeadLetterConfig: 死信隊列參數
-        :type DeadLetterConfig: :class:`tencentcloud.scf.v20180416.models.DeadLetterConfig`
+        :type DeadLetterConfig: :class:`taifucloudcloud.scf.v20180416.models.DeadLetterConfig`
         """
         self.FunctionName = None
         self.Code = None
@@ -335,7 +335,7 @@ class CreateTriggerRequest(AbstractModel):
         :type TriggerName: str
         :param Type: 觸發器類型，目前支援 cos 、cmq、 timer、 ckafka類型
         :type Type: str
-        :param TriggerDesc: 觸發器對應的參數，可見具體[觸發器描述說明](https://cloud.tencent.com/document/product/583/39901)
+        :param TriggerDesc: 觸發器對應的參數，可見具體[觸發器描述說明](https://cloud.taifucloud.com/document/product/583/39901)
         :type TriggerDesc: str
         :param Namespace: 函數的命名空間
         :type Namespace: str
@@ -371,7 +371,7 @@ class CreateTriggerResponse(AbstractModel):
     def __init__(self):
         """
         :param TriggerInfo: 觸發器訊息
-        :type TriggerInfo: :class:`tencentcloud.scf.v20180416.models.Trigger`
+        :type TriggerInfo: :class:`taifucloudcloud.scf.v20180416.models.Trigger`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -876,7 +876,7 @@ class GetFunctionLogsRequest(AbstractModel):
         :param OrderBy: 根據某個欄位排序日志,支援以下欄位：function_name, duration, mem_usage, start_time
         :type OrderBy: str
         :param Filter: 日志過濾條件。可用來區分正确和錯誤日志，filter.RetCode=not0 表示只返回錯誤日志，filter.RetCode=is0 表示只返回正确日志，不傳，則返回所有日志
-        :type Filter: :class:`tencentcloud.scf.v20180416.models.LogFilter`
+        :type Filter: :class:`taifucloudcloud.scf.v20180416.models.LogFilter`
         :param Namespace: 函數的命名空間
         :type Namespace: str
         :param Qualifier: 函數的版本
@@ -888,7 +888,7 @@ class GetFunctionLogsRequest(AbstractModel):
         :param EndTime: 查詢的具體日期，例如：2017-05-16 20:59:59，只能與startTime相差一天之内
         :type EndTime: str
         :param SearchContext: 服務日志相關參數，第一頁日志 Offset 爲空字串，後續分頁按響應欄位裏的SearchContext填寫
-        :type SearchContext: :class:`tencentcloud.scf.v20180416.models.LogSearchContext`
+        :type SearchContext: :class:`taifucloudcloud.scf.v20180416.models.LogSearchContext`
         """
         self.FunctionName = None
         self.Offset = None
@@ -935,7 +935,7 @@ class GetFunctionLogsResponse(AbstractModel):
         :param Data: 函數日志訊息
         :type Data: list of FunctionLog
         :param SearchContext: 日志服務分頁參數
-        :type SearchContext: :class:`tencentcloud.scf.v20180416.models.LogSearchContext`
+        :type SearchContext: :class:`taifucloudcloud.scf.v20180416.models.LogSearchContext`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1018,11 +1018,11 @@ class GetFunctionResponse(AbstractModel):
         :param FunctionName: 函數的名稱
         :type FunctionName: str
         :param VpcConfig: 函數的私有網絡
-        :type VpcConfig: :class:`tencentcloud.scf.v20180416.models.VpcConfig`
+        :type VpcConfig: :class:`taifucloudcloud.scf.v20180416.models.VpcConfig`
         :param UseGpu: 是否使用GPU
         :type UseGpu: str
         :param Environment: 函數的環境變量
-        :type Environment: :class:`tencentcloud.scf.v20180416.models.Environment`
+        :type Environment: :class:`taifucloudcloud.scf.v20180416.models.Environment`
         :param CodeResult: 代碼是否正确
         :type CodeResult: str
         :param CodeError: 代碼錯誤訊息
@@ -1048,9 +1048,9 @@ class GetFunctionResponse(AbstractModel):
         :param Tags: 函數的标簽清單
         :type Tags: list of Tag
         :param EipConfig: EipConfig配置
-        :type EipConfig: :class:`tencentcloud.scf.v20180416.models.EipOutConfig`
+        :type EipConfig: :class:`taifucloudcloud.scf.v20180416.models.EipOutConfig`
         :param AccessInfo: 域名訊息
-        :type AccessInfo: :class:`tencentcloud.scf.v20180416.models.AccessInfo`
+        :type AccessInfo: :class:`taifucloudcloud.scf.v20180416.models.AccessInfo`
         :param Type: 函數類型，取值爲HTTP或者Event
         :type Type: str
         :param L5Enable: 是否啓用L5
@@ -1058,12 +1058,12 @@ class GetFunctionResponse(AbstractModel):
         :param Layers: 函數關聯的Layer版本訊息
         :type Layers: list of LayerVersionInfo
         :param DeadLetterConfig: 函數關聯的死信隊列訊息
-        :type DeadLetterConfig: :class:`tencentcloud.scf.v20180416.models.DeadLetterConfig`
+        :type DeadLetterConfig: :class:`taifucloudcloud.scf.v20180416.models.DeadLetterConfig`
         :param AddTime: 函數創建回見
         :type AddTime: str
         :param PublicNetConfig: 公網訪問配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PublicNetConfig: :class:`tencentcloud.scf.v20180416.models.PublicNetConfigOut`
+        :type PublicNetConfig: :class:`taifucloudcloud.scf.v20180416.models.PublicNetConfigOut`
         :param OnsEnable: 是否啓用Ons
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OnsEnable: str
@@ -1297,7 +1297,7 @@ class InvokeResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 函數執行結果
-        :type Result: :class:`tencentcloud.scf.v20180416.models.Result`
+        :type Result: :class:`taifucloudcloud.scf.v20180416.models.Result`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1776,7 +1776,7 @@ class PublicNetConfigOut(AbstractModel):
         :param PublicNetStatus: 是否開啓公網訪問能力取值['DISABLE','ENABLE']
         :type PublicNetStatus: str
         :param EipConfig: Eip配置
-        :type EipConfig: :class:`tencentcloud.scf.v20180416.models.EipConfigOut`
+        :type EipConfig: :class:`taifucloudcloud.scf.v20180416.models.EipConfigOut`
         """
         self.PublicNetStatus = None
         self.EipConfig = None
@@ -1801,7 +1801,7 @@ class PublishLayerVersionRequest(AbstractModel):
         :param CompatibleRuntimes: 層适用的運作時，可多選，可選的值對應函數的 Runtime 可選值。
         :type CompatibleRuntimes: list of str
         :param Content: 層的文件來源或文件内容
-        :type Content: :class:`tencentcloud.scf.v20180416.models.Code`
+        :type Content: :class:`taifucloudcloud.scf.v20180416.models.Code`
         :param Description: 層的版本的描述
         :type Description: str
         :param LicenseInfo: 層的軟體許可證
@@ -2045,14 +2045,14 @@ class UpdateFunctionCodeRequest(AbstractModel):
         :type ZipFile: str
         :param Namespace: 函數所屬命名空間
         :type Namespace: str
-        :param CosBucketRegion: 物件儲存的地域，注：北京分爲ap-beijing和ap-beijing-1
+        :param CosBucketRegion: 物件儲存的地域，注： 分爲ap-beijing和ap-beijing-1
         :type CosBucketRegion: str
         :param EnvId: 函數所屬環境
         :type EnvId: str
         :param Publish: 在更新時是否同步發布新版本，預設爲：FALSE，不發布
         :type Publish: str
         :param Code: 函數代碼
-        :type Code: :class:`tencentcloud.scf.v20180416.models.Code`
+        :type Code: :class:`taifucloudcloud.scf.v20180416.models.Code`
         :param CodeSource: 代碼來源方式，支援以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git來源必須指定此欄位
         :type CodeSource: str
         """
@@ -2120,11 +2120,11 @@ class UpdateFunctionConfigurationRequest(AbstractModel):
         :param Runtime: 函數運作環境，目前僅支援 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
         :type Runtime: str
         :param Environment: 函數的環境變量
-        :type Environment: :class:`tencentcloud.scf.v20180416.models.Environment`
+        :type Environment: :class:`taifucloudcloud.scf.v20180416.models.Environment`
         :param Namespace: 函數所屬命名空間
         :type Namespace: str
         :param VpcConfig: 函數的私有網絡配置
-        :type VpcConfig: :class:`tencentcloud.scf.v20180416.models.VpcConfig`
+        :type VpcConfig: :class:`taifucloudcloud.scf.v20180416.models.VpcConfig`
         :param Role: 函數綁定的角色
         :type Role: str
         :param ClsLogsetId: 日志投遞到的cls日志集ID
@@ -2138,7 +2138,7 @@ class UpdateFunctionConfigurationRequest(AbstractModel):
         :param Layers: 函數要關聯的層版本清單，層的版本會按照在清單中順序依次函蓋。
         :type Layers: list of LayerVersionSimple
         :param DeadLetterConfig: 函數關聯的死信隊列訊息
-        :type DeadLetterConfig: :class:`tencentcloud.scf.v20180416.models.DeadLetterConfig`
+        :type DeadLetterConfig: :class:`taifucloudcloud.scf.v20180416.models.DeadLetterConfig`
         :param OnsEnable: 是否開啓Ons訪問能力，TRUE 爲開啓，FALSE爲關閉
         :type OnsEnable: str
         """

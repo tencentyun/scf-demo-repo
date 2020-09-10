@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cbs.v20170312 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cbs.v20170312 import models
 
 
 class CbsClient(AbstractClient):
     _apiVersion = '2017-03-12'
-    _endpoint = 'cbs.tencentcloudapi.com'
+    _endpoint = 'cbs.taifucloudcloudapi.com'
 
 
     def ApplySnapshot(self, request):
@@ -33,8 +33,8 @@ class CbsClient(AbstractClient):
         * 如果是彈性雲盤，則雲盤必須處于未掛載狀态，雲硬碟掛載狀态可以通過[DescribeDisks](/document/product/362/16315)介面查詢，見Attached欄位解釋；如果是随實例一起購買的非彈性雲盤，則實例必須處于關機狀态，實例狀态可以通過[DescribeInstancesStatus](/document/product/213/15738)介面查詢。
 
         :param request: 調用ApplySnapshot所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.ApplySnapshotRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.ApplySnapshotResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.ApplySnapshotRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.ApplySnapshotResponse`
 
         """
         try:
@@ -64,8 +64,8 @@ class CbsClient(AbstractClient):
         * 本介面爲異步介面，當掛載雲盤的請求成功返回時，表示後台已發起掛載雲盤的操作，可通過介面[DescribeDisks](/document/product/362/16315)來查詢對應雲盤的狀态，如果雲盤的狀态由“ATTACHING”變爲“ATTACHED”，則爲掛載成功。
 
         :param request: 調用AttachDisks所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.AttachDisksRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.AttachDisksResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.AttachDisksRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.AttachDisksResponse`
 
         """
         try:
@@ -95,8 +95,8 @@ class CbsClient(AbstractClient):
         * 當已綁定定期快照策略的雲硬碟處于未使用狀态（即彈性雲盤未掛載或非彈性雲盤的主機處于關機狀态）将不會創建定期快照。
 
         :param request: 調用BindAutoSnapshotPolicy所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.BindAutoSnapshotPolicyRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.BindAutoSnapshotPolicyResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.BindAutoSnapshotPolicyRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.BindAutoSnapshotPolicyResponse`
 
         """
         try:
@@ -126,8 +126,8 @@ class CbsClient(AbstractClient):
         * 每個地域可創建的快照有數量和容量的限制，具體請見Top Cloud 控制台快照頁面提示，如果快照超配額，定期快照創建會失敗。
 
         :param request: 調用CreateAutoSnapshotPolicy所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.CreateAutoSnapshotPolicyRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.CreateAutoSnapshotPolicyResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.CreateAutoSnapshotPolicyRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.CreateAutoSnapshotPolicyResponse`
 
         """
         try:
@@ -158,8 +158,8 @@ class CbsClient(AbstractClient):
         * 本介面爲異步介面，當創建請求下發成功後會返回一個新建的雲盤ID清單，此時雲盤的創建并未立即完成。可以通過調用[DescribeDisks](/document/product/362/16315)介面根據DiskId查詢對應雲盤，如果能查到雲盤，且狀态爲'UNATTACHED'或'ATTACHED'，則表示創建成功。
 
         :param request: 調用CreateDisks所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.CreateDisksRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.CreateDisksResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.CreateDisksRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.CreateDisksResponse`
 
         """
         try:
@@ -186,11 +186,11 @@ class CbsClient(AbstractClient):
         """本介面（CreateSnapshot）用于對指定雲盤創建快照。
 
         * 只有具有快照能力的雲硬碟才能創建快照。雲硬碟是否具有快照能力可由[DescribeDisks](/document/product/362/16315)介面查詢，見SnapshotAbility欄位。
-        * 可創建快照數量限制見[産品使用限制](https://cloud.tencent.com/doc/product/362/5145)。
+        * 可創建快照數量限制見[産品使用限制](https://cloud.taifucloud.com/doc/product/362/5145)。
 
         :param request: 調用CreateSnapshot所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.CreateSnapshotRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.CreateSnapshotResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.CreateSnapshotRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.CreateSnapshotResponse`
 
         """
         try:
@@ -219,8 +219,8 @@ class CbsClient(AbstractClient):
         *  支援批次操作。如果多個定期快照策略存在無法删除的，則操作不執行，以特定錯誤碼返回。
 
         :param request: 調用DeleteAutoSnapshotPolicies所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.DeleteAutoSnapshotPoliciesRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.DeleteAutoSnapshotPoliciesResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.DeleteAutoSnapshotPoliciesRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.DeleteAutoSnapshotPoliciesResponse`
 
         """
         try:
@@ -250,8 +250,8 @@ class CbsClient(AbstractClient):
         * 支援批次操作。如果多個快照存在無法删除的快照，則操作不執行，以返回特定的錯誤碼返回。
 
         :param request: 調用DeleteSnapshots所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.DeleteSnapshotsRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.DeleteSnapshotsResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.DeleteSnapshotsRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.DeleteSnapshotsResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class CbsClient(AbstractClient):
         * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的定期快照策略表。
 
         :param request: 調用DescribeAutoSnapshotPolicies所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.DescribeAutoSnapshotPoliciesRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.DescribeAutoSnapshotPoliciesResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.DescribeAutoSnapshotPoliciesRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.DescribeAutoSnapshotPoliciesResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class CbsClient(AbstractClient):
         """本介面（DescribeDiskAssociatedAutoSnapshotPolicy）用于查詢雲盤綁定的定期快照策略。
 
         :param request: 調用DescribeDiskAssociatedAutoSnapshotPolicy所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.DescribeDiskAssociatedAutoSnapshotPolicyRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.DescribeDiskAssociatedAutoSnapshotPolicyResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.DescribeDiskAssociatedAutoSnapshotPolicyRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.DescribeDiskAssociatedAutoSnapshotPolicyResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class CbsClient(AbstractClient):
         """本介面（DescribeDiskConfigQuota）用于查詢雲硬碟配額。
 
         :param request: 調用DescribeDiskConfigQuota所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.DescribeDiskConfigQuotaRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.DescribeDiskConfigQuotaResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.DescribeDiskConfigQuotaRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.DescribeDiskConfigQuotaResponse`
 
         """
         try:
@@ -367,8 +367,8 @@ class CbsClient(AbstractClient):
         可根據雲盤ID過濾。雲盤ID形如：disk-a1kmcp13。
 
         :param request: 調用DescribeDiskOperationLogs所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.DescribeDiskOperationLogsRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.DescribeDiskOperationLogsResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.DescribeDiskOperationLogsRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.DescribeDiskOperationLogsResponse`
 
         """
         try:
@@ -398,8 +398,8 @@ class CbsClient(AbstractClient):
         * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的雲硬碟清單。
 
         :param request: 調用DescribeDisks所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.DescribeDisksRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.DescribeDisksResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.DescribeDisksRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.DescribeDisksResponse`
 
         """
         try:
@@ -428,8 +428,8 @@ class CbsClient(AbstractClient):
         * 支援批次操作，當傳入多個雲伺服器實例ID，返回結果會分别列出每個雲伺服器掛載的雲硬碟數量。
 
         :param request: 調用DescribeInstancesDiskNum所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.DescribeInstancesDiskNumRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.DescribeInstancesDiskNumResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.DescribeInstancesDiskNumRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.DescribeInstancesDiskNumResponse`
 
         """
         try:
@@ -458,8 +458,8 @@ class CbsClient(AbstractClient):
         可根據快照ID過濾。快照ID形如：snap-a1kmcp13。
 
         :param request: 調用DescribeSnapshotOperationLogs所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.DescribeSnapshotOperationLogsRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.DescribeSnapshotOperationLogsResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.DescribeSnapshotOperationLogsRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.DescribeSnapshotOperationLogsResponse`
 
         """
         try:
@@ -489,8 +489,8 @@ class CbsClient(AbstractClient):
         *  如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的快照清單。
 
         :param request: 調用DescribeSnapshots所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.DescribeSnapshotsRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.DescribeSnapshotsResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.DescribeSnapshotsRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.DescribeSnapshotsResponse`
 
         """
         try:
@@ -520,8 +520,8 @@ class CbsClient(AbstractClient):
         * 本介面爲異步介面，當請求成功返回時，雲盤并未立即從主機解掛載，可通過介面[DescribeDisks](/document/product/362/16315)來查詢對應雲盤的狀态，如果雲盤的狀态由“ATTACHED”變爲“UNATTACHED”，則爲解掛載成功。
 
         :param request: 調用DetachDisks所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.DetachDisksRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.DetachDisksResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.DetachDisksRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.DetachDisksResponse`
 
         """
         try:
@@ -550,8 +550,8 @@ class CbsClient(AbstractClient):
         * 支援查詢創建多塊雲硬碟的價格，此時返回結果爲總價格。
 
         :param request: 調用InquiryPriceCreateDisks所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.InquiryPriceCreateDisksRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.InquiryPriceCreateDisksResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.InquiryPriceCreateDisksRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.InquiryPriceCreateDisksResponse`
 
         """
         try:
@@ -582,8 +582,8 @@ class CbsClient(AbstractClient):
         * 支援爲多塊雲盤指定不同的續約時長，此時返回的價格爲多塊雲盤續約的總價格。
 
         :param request: 調用InquiryPriceRenewDisks所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.InquiryPriceRenewDisksRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.InquiryPriceRenewDisksResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.InquiryPriceRenewDisksRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.InquiryPriceRenewDisksResponse`
 
         """
         try:
@@ -612,8 +612,8 @@ class CbsClient(AbstractClient):
         * 只支援預付費模式的雲硬碟擴容詢價。
 
         :param request: 調用InquiryPriceResizeDisk所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.InquiryPriceResizeDiskRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.InquiryPriceResizeDiskResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.InquiryPriceResizeDiskRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.InquiryPriceResizeDiskResponse`
 
         """
         try:
@@ -642,8 +642,8 @@ class CbsClient(AbstractClient):
         * 支援批次操作，如果傳入多個雲盤ID，則所有雲盤修改爲同一屬性。如果存在不允許操作的雲盤，則操作不執行，以特定錯誤碼返回。
 
         :param request: 調用ModifyDiskAttributes所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.ModifyDiskAttributesRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.ModifyDiskAttributesResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.ModifyDiskAttributesRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.ModifyDiskAttributesResponse`
 
         """
         try:
@@ -670,8 +670,8 @@ class CbsClient(AbstractClient):
         """本介面（ModifyDisksRenewFlag）用于修改雲硬碟續約标識，支援批次修改。
 
         :param request: 調用ModifyDisksRenewFlag所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.ModifyDisksRenewFlagRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.ModifyDisksRenewFlagResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.ModifyDisksRenewFlagRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.ModifyDisksRenewFlagResponse`
 
         """
         try:
@@ -701,8 +701,8 @@ class CbsClient(AbstractClient):
         * “快照名稱”僅爲方便用戶自己管理之用，Top Cloud 并不以此名稱作爲提交工單或是進行快照管理操作的依據。
 
         :param request: 調用ModifySnapshotAttribute所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.ModifySnapshotAttributeRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.ModifySnapshotAttributeResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.ModifySnapshotAttributeRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.ModifySnapshotAttributeResponse`
 
         """
         try:
@@ -732,8 +732,8 @@ class CbsClient(AbstractClient):
         * 支援與掛載實例一起續約的場景，需要在[DiskChargePrepaid](/document/product/362/15669#DiskChargePrepaid)參數中指定CurInstanceDeadline，此時會按對齊到子機續約後的到期時間來續約。
 
         :param request: 調用RenewDisk所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.RenewDiskRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.RenewDiskResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.RenewDiskRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.RenewDiskResponse`
 
         """
         try:
@@ -763,8 +763,8 @@ class CbsClient(AbstractClient):
         * 本介面爲異步介面，介面成功返回時，雲盤并未立即擴容到指定大小，可通過介面[DescribeDisks](/document/product/362/16315)來查詢對應雲盤的狀态，如果雲盤的狀态爲“EXPANDING”，表示正在擴容中，當狀态變爲“UNATTACHED”，表示擴容完成。
 
         :param request: 調用ResizeDisk所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.ResizeDiskRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.ResizeDiskResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.ResizeDiskRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.ResizeDiskResponse`
 
         """
         try:
@@ -795,8 +795,8 @@ class CbsClient(AbstractClient):
         * 支援批次操作，每次請求批次雲硬碟的上限爲50。如果批次雲盤存在不允許操作的，請求會以特定錯誤碼返回。
 
         :param request: 調用TerminateDisks所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.TerminateDisksRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.TerminateDisksResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.TerminateDisksRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.TerminateDisksResponse`
 
         """
         try:
@@ -826,8 +826,8 @@ class CbsClient(AbstractClient):
         * 如果傳入的雲盤未綁定到當前定期快照策略，介面将自動跳過，僅解綁與當前定期快照策略綁定的雲盤。
 
         :param request: 調用UnbindAutoSnapshotPolicy所需參數的結構體。
-        :type request: :class:`tencentcloud.cbs.v20170312.models.UnbindAutoSnapshotPolicyRequest`
-        :rtype: :class:`tencentcloud.cbs.v20170312.models.UnbindAutoSnapshotPolicyResponse`
+        :type request: :class:`taifucloudcloud.cbs.v20170312.models.UnbindAutoSnapshotPolicyRequest`
+        :rtype: :class:`taifucloudcloud.cbs.v20170312.models.UnbindAutoSnapshotPolicyResponse`
 
         """
         try:

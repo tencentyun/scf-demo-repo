@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.habo.v20181203 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.habo.v20181203 import models
 
 
 class HaboClient(AbstractClient):
     _apiVersion = '2018-12-03'
-    _endpoint = 'habo.tencentcloudapi.com'
+    _endpoint = 'habo.taifucloudcloudapi.com'
 
 
     def DescribeStatus(self, request):
         """查詢指定md5樣本是否分析完成，并獲取分析日志下載網址。
 
         :param request: 調用DescribeStatus所需參數的結構體。
-        :type request: :class:`tencentcloud.habo.v20181203.models.DescribeStatusRequest`
-        :rtype: :class:`tencentcloud.habo.v20181203.models.DescribeStatusResponse`
+        :type request: :class:`taifucloudcloud.habo.v20181203.models.DescribeStatusRequest`
+        :rtype: :class:`taifucloudcloud.habo.v20181203.models.DescribeStatusResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class HaboClient(AbstractClient):
         """上傳樣本到哈勃進行分析，異步生成分析日志。
 
         :param request: 調用StartAnalyse所需參數的結構體。
-        :type request: :class:`tencentcloud.habo.v20181203.models.StartAnalyseRequest`
-        :rtype: :class:`tencentcloud.habo.v20181203.models.StartAnalyseResponse`
+        :type request: :class:`taifucloudcloud.habo.v20181203.models.StartAnalyseRequest`
+        :rtype: :class:`taifucloudcloud.habo.v20181203.models.StartAnalyseResponse`
 
         """
         try:

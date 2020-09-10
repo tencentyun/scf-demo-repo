@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.batch.v20170312 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.batch.v20170312 import models
 
 
 class BatchClient(AbstractClient):
     _apiVersion = '2017-03-12'
-    _endpoint = 'batch.tencentcloudapi.com'
+    _endpoint = 'batch.taifucloudcloudapi.com'
 
 
     def CreateComputeEnv(self, request):
         """用于創建計算環境
 
         :param request: 調用CreateComputeEnv所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.CreateComputeEnvRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.CreateComputeEnvResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.CreateComputeEnvRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.CreateComputeEnvResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class BatchClient(AbstractClient):
         """用于創建任務範本
 
         :param request: 調用CreateTaskTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.CreateTaskTemplateRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.CreateTaskTemplateResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.CreateTaskTemplateRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.CreateTaskTemplateResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class BatchClient(AbstractClient):
         """用于删除計算環境
 
         :param request: 調用DeleteComputeEnv所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DeleteComputeEnvRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DeleteComputeEnvResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DeleteComputeEnvRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DeleteComputeEnvResponse`
 
         """
         try:
@@ -115,8 +115,8 @@ class BatchClient(AbstractClient):
         待删除的作業必須處于完結狀态，且其内部包含的所有任務實例也必須處于完結狀态，否則會禁止操作。完結狀态，是指處于 SUCCEED 或 FAILED 狀态。
 
         :param request: 調用DeleteJob所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DeleteJobRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DeleteJobResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DeleteJobRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DeleteJobResponse`
 
         """
         try:
@@ -143,8 +143,8 @@ class BatchClient(AbstractClient):
         """用于删除任務範本訊息
 
         :param request: 調用DeleteTaskTemplates所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DeleteTaskTemplatesRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DeleteTaskTemplatesResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DeleteTaskTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DeleteTaskTemplatesResponse`
 
         """
         try:
@@ -171,8 +171,8 @@ class BatchClient(AbstractClient):
         """檢視可用的CVM機型配置訊息
 
         :param request: 調用DescribeAvailableCvmInstanceTypes所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DescribeAvailableCvmInstanceTypesRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeAvailableCvmInstanceTypesResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeAvailableCvmInstanceTypesRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DescribeAvailableCvmInstanceTypesResponse`
 
         """
         try:
@@ -199,8 +199,8 @@ class BatchClient(AbstractClient):
         """用于查詢計算環境的詳細訊息
 
         :param request: 調用DescribeComputeEnv所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeComputeEnvRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DescribeComputeEnvResponse`
 
         """
         try:
@@ -227,8 +227,8 @@ class BatchClient(AbstractClient):
         """用于查詢計算環境的活動訊息
 
         :param request: 調用DescribeComputeEnvActivities所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvActivitiesRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvActivitiesResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeComputeEnvActivitiesRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DescribeComputeEnvActivitiesResponse`
 
         """
         try:
@@ -255,8 +255,8 @@ class BatchClient(AbstractClient):
         """檢視計算環境的創建訊息。
 
         :param request: 調用DescribeComputeEnvCreateInfo所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvCreateInfoRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvCreateInfoResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeComputeEnvCreateInfoRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DescribeComputeEnvCreateInfoResponse`
 
         """
         try:
@@ -283,8 +283,8 @@ class BatchClient(AbstractClient):
         """用于檢視計算環境創建訊息清單，包括名稱、描述、類型、環境參數、通知及期望節點數等。
 
         :param request: 調用DescribeComputeEnvCreateInfos所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvCreateInfosRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvCreateInfosResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeComputeEnvCreateInfosRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DescribeComputeEnvCreateInfosResponse`
 
         """
         try:
@@ -311,8 +311,8 @@ class BatchClient(AbstractClient):
         """用于檢視計算環境清單
 
         :param request: 調用DescribeComputeEnvs所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvsRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeComputeEnvsResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeComputeEnvsRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DescribeComputeEnvsResponse`
 
         """
         try:
@@ -339,8 +339,8 @@ class BatchClient(AbstractClient):
         """獲取批次計算可用區機型配置訊息
 
         :param request: 調用DescribeCvmZoneInstanceConfigInfos所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DescribeCvmZoneInstanceConfigInfosRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeCvmZoneInstanceConfigInfosResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeCvmZoneInstanceConfigInfosRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DescribeCvmZoneInstanceConfigInfosResponse`
 
         """
         try:
@@ -367,8 +367,8 @@ class BatchClient(AbstractClient):
         """目前對CVM現有實例族劃分爲四類，每一類包含若幹實例族。該介面用于查詢實例分類訊息。
 
         :param request: 調用DescribeInstanceCategories所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DescribeInstanceCategoriesRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeInstanceCategoriesResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeInstanceCategoriesRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DescribeInstanceCategoriesResponse`
 
         """
         try:
@@ -395,8 +395,8 @@ class BatchClient(AbstractClient):
         """用于檢視一個作業的詳細訊息，包括内部任務（Task）和依賴（Dependence）訊息。
 
         :param request: 調用DescribeJob所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DescribeJobRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeJobResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeJobRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DescribeJobResponse`
 
         """
         try:
@@ -423,8 +423,8 @@ class BatchClient(AbstractClient):
         """用于查詢指定作業的提交訊息，其返回内容包括 JobId 和 SubmitJob 介面中作爲輸入參數的作業提交訊息
 
         :param request: 調用DescribeJobSubmitInfo所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DescribeJobSubmitInfoRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeJobSubmitInfoResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeJobSubmitInfoRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DescribeJobSubmitInfoResponse`
 
         """
         try:
@@ -451,8 +451,8 @@ class BatchClient(AbstractClient):
         """用于查詢若幹個作業的概覽訊息
 
         :param request: 調用DescribeJobs所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DescribeJobsRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeJobsResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeJobsRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DescribeJobsResponse`
 
         """
         try:
@@ -479,8 +479,8 @@ class BatchClient(AbstractClient):
         """用于查詢指定任務的詳細訊息，包括任務内部的任務實例訊息。
 
         :param request: 調用DescribeTask所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DescribeTaskRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeTaskResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeTaskRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DescribeTaskResponse`
 
         """
         try:
@@ -507,8 +507,8 @@ class BatchClient(AbstractClient):
         """用于獲取任務多個實例标準輸出和标準錯誤日志。
 
         :param request: 調用DescribeTaskLogs所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DescribeTaskLogsRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeTaskLogsResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeTaskLogsRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DescribeTaskLogsResponse`
 
         """
         try:
@@ -535,8 +535,8 @@ class BatchClient(AbstractClient):
         """用于查詢任務範本訊息
 
         :param request: 調用DescribeTaskTemplates所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.DescribeTaskTemplatesRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.DescribeTaskTemplatesResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeTaskTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.DescribeTaskTemplatesResponse`
 
         """
         try:
@@ -563,8 +563,8 @@ class BatchClient(AbstractClient):
         """用于修改計算環境屬性
 
         :param request: 調用ModifyComputeEnv所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.ModifyComputeEnvRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.ModifyComputeEnvResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.ModifyComputeEnvRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.ModifyComputeEnvResponse`
 
         """
         try:
@@ -591,8 +591,8 @@ class BatchClient(AbstractClient):
         """用于修改任務範本
 
         :param request: 調用ModifyTaskTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.ModifyTaskTemplateRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.ModifyTaskTemplateResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.ModifyTaskTemplateRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.ModifyTaskTemplateResponse`
 
         """
         try:
@@ -620,8 +620,8 @@ class BatchClient(AbstractClient):
         當且僅當作業處于“FAILED”狀态，支援重試操作。重試操作成功後，作業會按照“DAG”中指定的任務依賴關系，依次重試各個任務中失敗的任務實例。任務實例的曆史訊息将被重置，如同首次運作一樣，參與後續的調度和執行。
 
         :param request: 調用RetryJobs所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.RetryJobsRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.RetryJobsResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.RetryJobsRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.RetryJobsResponse`
 
         """
         try:
@@ -648,8 +648,8 @@ class BatchClient(AbstractClient):
         """用于提交一個作業
 
         :param request: 調用SubmitJob所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.SubmitJobRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.SubmitJobResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.SubmitJobRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.SubmitJobResponse`
 
         """
         try:
@@ -677,8 +677,8 @@ class BatchClient(AbstractClient):
         對于狀态爲CREATED、CREATION_FAILED、RUNNING和ABNORMAL的節點，允許銷毀處理。
 
         :param request: 調用TerminateComputeNode所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.TerminateComputeNodeRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.TerminateComputeNodeResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.TerminateComputeNodeRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.TerminateComputeNodeResponse`
 
         """
         try:
@@ -705,8 +705,8 @@ class BatchClient(AbstractClient):
         """用于批次銷毀計算節點，不允許重複銷毀同一個節點。
 
         :param request: 調用TerminateComputeNodes所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.TerminateComputeNodesRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.TerminateComputeNodesResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.TerminateComputeNodesRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.TerminateComputeNodesResponse`
 
         """
         try:
@@ -735,8 +735,8 @@ class BatchClient(AbstractClient):
         終止作業是一個異步過程。整個終止過程的耗時和任務總數成正比。終止的效果相當于所含的所有任務實例進行TerminateTaskInstance操作。具體效果和用法可參考TerminateTaskInstance。
 
         :param request: 調用TerminateJob所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.TerminateJobRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.TerminateJobResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.TerminateJobRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.TerminateJobResponse`
 
         """
         try:
@@ -767,8 +767,8 @@ class BatchClient(AbstractClient):
         對于狀态爲“FAILED_INTERRUPTED”的任務實例，終止操作實際成功之後，相關資源和配額才會釋放。
 
         :param request: 調用TerminateTaskInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.batch.v20170312.models.TerminateTaskInstanceRequest`
-        :rtype: :class:`tencentcloud.batch.v20170312.models.TerminateTaskInstanceResponse`
+        :type request: :class:`taifucloudcloud.batch.v20170312.models.TerminateTaskInstanceRequest`
+        :rtype: :class:`taifucloudcloud.batch.v20170312.models.TerminateTaskInstanceResponse`
 
         """
         try:

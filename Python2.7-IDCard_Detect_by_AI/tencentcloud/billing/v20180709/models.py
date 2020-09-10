@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class BillDetail(AbstractModel):
@@ -139,7 +139,7 @@ class BillDetailComponent(AbstractModel):
         :type ReduceType: str
         :param RealCost: 優惠後總價
         :type RealCost: str
-        :param VoucherPayAmount: 代金券支付金額
+        :param VoucherPayAmount:  支付金額
         :type VoucherPayAmount: str
         :param CashPayAmount: 現金支付金額
         :type CashPayAmount: str
@@ -230,7 +230,7 @@ class BillResourceSummary(AbstractModel):
         :type ReduceType: str
         :param RealTotalCost: 優惠後總價，單位爲元
         :type RealTotalCost: str
-        :param VoucherPayAmount: 代金券支付金額，單位爲元
+        :param VoucherPayAmount:  支付金額，單位爲元
         :type VoucherPayAmount: str
         :param CashPayAmount: 現金帳戶支付金額，單位爲元
         :type CashPayAmount: str
@@ -319,7 +319,7 @@ class Deal(AbstractModel):
         :type Creator: str
         :param RealTotalCost: 實際支付金額（分）
         :type RealTotalCost: int
-        :param VoucherDecline: 代金券抵扣金額（分）
+        :param VoucherDecline:  抵扣金額（分）
         :type VoucherDecline: int
         :param ProjectId: 項目ID
         :type ProjectId: int
@@ -773,9 +773,9 @@ class PayDealsRequest(AbstractModel):
         """
         :param OrderIds: 需要支付的一個或者多個訂單号
         :type OrderIds: list of str
-        :param AutoVoucher: 是否自動使用代金券,1:是,0否,預設0
+        :param AutoVoucher: 是否自動使用 ,1:是,0否,預設0
         :type AutoVoucher: int
-        :param VoucherIds: 代金券ID清單,目前僅支援指定一張代金券
+        :param VoucherIds:  ID清單,目前僅支援指定一張 
         :type VoucherIds: list of str
         """
         self.OrderIds = None

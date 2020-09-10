@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.iotcloud.v20180614 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.iotcloud.v20180614 import models
 
 
 class IotcloudClient(AbstractClient):
     _apiVersion = '2018-06-14'
-    _endpoint = 'iotcloud.tencentcloudapi.com'
+    _endpoint = 'iotcloud.taifucloudcloudapi.com'
 
 
     def BindDevices(self, request):
         """本介面（BindDevices）用于閘道設備批次綁定子設備
 
         :param request: Request instance for BindDevices.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.BindDevicesRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.BindDevicesResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.BindDevicesRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.BindDevicesResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class IotcloudClient(AbstractClient):
         """本介面（CancelTask）用于取消一個未被調度的任務。
 
         :param request: Request instance for CancelTask.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.CancelTaskRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.CancelTaskResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.CancelTaskRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.CancelTaskResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class IotcloudClient(AbstractClient):
         """本介面（CreateDevice）用于新建一個物聯網通信設備。
 
         :param request: Request instance for CreateDevice.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.CreateDeviceRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.CreateDeviceResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateDeviceRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateDeviceResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class IotcloudClient(AbstractClient):
         """創建lora類型的設備
 
         :param request: Request instance for CreateLoraDevice.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.CreateLoraDeviceRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.CreateLoraDeviceResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateLoraDeviceRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateLoraDeviceResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class IotcloudClient(AbstractClient):
         """本介面（CreateMultiDevice）用于批次創建物聯雲設備。
 
         :param request: Request instance for CreateMultiDevice.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.CreateMultiDeviceRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.CreateMultiDeviceResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateMultiDeviceRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateMultiDeviceResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class IotcloudClient(AbstractClient):
         """本介面（CreateProduct）用于創建一個新的物聯網通信産品
 
         :param request: Request instance for CreateProduct.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.CreateProductRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.CreateProductResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateProductRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateProductResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class IotcloudClient(AbstractClient):
         """本介面（CreateTask）用于創建一個批次任務。目前此介面可以創建批次更新影子以及批次下發訊息的任務
 
         :param request: Request instance for CreateTask.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.CreateTaskRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.CreateTaskResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateTaskRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateTaskResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class IotcloudClient(AbstractClient):
         """本介面（CreateTopicPolicy）用于創建一個Topic
 
         :param request: Request instance for CreateTopicPolicy.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.CreateTopicPolicyRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.CreateTopicPolicyResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateTopicPolicyRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateTopicPolicyResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class IotcloudClient(AbstractClient):
         """本介面（CreateTopicRule）用于創建一個規則
 
         :param request: Request instance for CreateTopicRule.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.CreateTopicRuleRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.CreateTopicRuleResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateTopicRuleRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateTopicRuleResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class IotcloudClient(AbstractClient):
         """本介面（DeleteDevice）用于删除物聯網通信設備。
 
         :param request: Request instance for DeleteDevice.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.DeleteDeviceRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.DeleteDeviceResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DeleteDeviceRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.DeleteDeviceResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class IotcloudClient(AbstractClient):
         """删除lora類型的設備
 
         :param request: Request instance for DeleteLoraDevice.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.DeleteLoraDeviceRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.DeleteLoraDeviceResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DeleteLoraDeviceRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.DeleteLoraDeviceResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class IotcloudClient(AbstractClient):
         """本介面（DeleteProduct）用于删除一個物聯網通信産品
 
         :param request: Request instance for DeleteProduct.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.DeleteProductRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.DeleteProductResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DeleteProductRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.DeleteProductResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class IotcloudClient(AbstractClient):
         """本介面（DeleteTopicRule）用于删除規則
 
         :param request: Request instance for DeleteTopicRule.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.DeleteTopicRuleRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.DeleteTopicRuleResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DeleteTopicRuleRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.DeleteTopicRuleResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class IotcloudClient(AbstractClient):
         """本介面（DescribeDevice）用于檢視設備訊息
 
         :param request: Request instance for DescribeDevice.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.DescribeDeviceRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.DescribeDeviceResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeDeviceRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeDeviceResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class IotcloudClient(AbstractClient):
         """獲驗證書認證類型設備的私鑰，剛生成或者重置設備後僅可調用一次
 
         :param request: Request instance for DescribeDeviceClientKey.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.DescribeDeviceClientKeyRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.DescribeDeviceClientKeyResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeDeviceClientKeyRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeDeviceClientKeyResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class IotcloudClient(AbstractClient):
         """本介面（DescribeDeviceShadow）用于查詢虛拟設備訊息。
 
         :param request: Request instance for DescribeDeviceShadow.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.DescribeDeviceShadowRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.DescribeDeviceShadowResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeDeviceShadowRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeDeviceShadowResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class IotcloudClient(AbstractClient):
         """本介面（DescribeDevices）用于查詢物聯網通信設備的設備清單。
 
         :param request: Request instance for DescribeDevices.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.DescribeDevicesRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.DescribeDevicesResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeDevicesRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeDevicesResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class IotcloudClient(AbstractClient):
         """獲取lora類型設備的詳細訊息
 
         :param request: Request instance for DescribeLoraDevice.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.DescribeLoraDeviceRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.DescribeLoraDeviceResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeLoraDeviceRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeLoraDeviceResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class IotcloudClient(AbstractClient):
         """本介面（DescribeMultiDevTask）用于查詢批次創建設備任務的執行狀态。
 
         :param request: Request instance for DescribeMultiDevTask.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.DescribeMultiDevTaskRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.DescribeMultiDevTaskResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeMultiDevTaskRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeMultiDevTaskResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class IotcloudClient(AbstractClient):
         """本介面（DescribeMultiDevices）用于查詢批次創建設備的執行結果。
 
         :param request: Request instance for DescribeMultiDevices.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.DescribeMultiDevicesRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.DescribeMultiDevicesResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeMultiDevicesRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeMultiDevicesResponse`
 
         """
         try:
@@ -589,8 +589,8 @@ class IotcloudClient(AbstractClient):
         """本介面（DescribeProducts）用于列出産品清單。
 
         :param request: Request instance for DescribeProducts.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.DescribeProductsRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.DescribeProductsResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeProductsRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeProductsResponse`
 
         """
         try:
@@ -617,8 +617,8 @@ class IotcloudClient(AbstractClient):
         """本介面（DescribeTask）用于查詢一個已創建任務的詳情，任務保留一個月
 
         :param request: Request instance for DescribeTask.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.DescribeTaskRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.DescribeTaskResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeTaskRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeTaskResponse`
 
         """
         try:
@@ -645,8 +645,8 @@ class IotcloudClient(AbstractClient):
         """本介面（DescribeTasks）用于查詢已創建的任務清單，任務保留一個月
 
         :param request: Request instance for DescribeTasks.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.DescribeTasksRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.DescribeTasksResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeTasksRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeTasksResponse`
 
         """
         try:
@@ -673,8 +673,8 @@ class IotcloudClient(AbstractClient):
         """本介面（DisableTopicRule）用于禁用規則
 
         :param request: Request instance for DisableTopicRule.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.DisableTopicRuleRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.DisableTopicRuleResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DisableTopicRuleRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.DisableTopicRuleResponse`
 
         """
         try:
@@ -701,8 +701,8 @@ class IotcloudClient(AbstractClient):
         """本介面（EnableTopicRule）用于啓用規則
 
         :param request: Request instance for EnableTopicRule.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.EnableTopicRuleRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.EnableTopicRuleResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.EnableTopicRuleRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.EnableTopicRuleResponse`
 
         """
         try:
@@ -729,8 +729,8 @@ class IotcloudClient(AbstractClient):
         """模拟lora類型的設備端向服務器端發送訊息
 
         :param request: Request instance for PublishAsDevice.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.PublishAsDeviceRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.PublishAsDeviceResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.PublishAsDeviceRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.PublishAsDeviceResponse`
 
         """
         try:
@@ -757,8 +757,8 @@ class IotcloudClient(AbstractClient):
         """本介面（PublishMessage）用于向某個主題發訊息。
 
         :param request: Request instance for PublishMessage.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.PublishMessageRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.PublishMessageResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.PublishMessageRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.PublishMessageResponse`
 
         """
         try:
@@ -785,8 +785,8 @@ class IotcloudClient(AbstractClient):
         """服務器端下發訊息給lora類型的設備
 
         :param request: Request instance for PublishToDevice.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.PublishToDeviceRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.PublishToDeviceResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.PublishToDeviceRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.PublishToDeviceResponse`
 
         """
         try:
@@ -813,8 +813,8 @@ class IotcloudClient(AbstractClient):
         """本介面（ReplaceTopicRule）用于修改替換規則
 
         :param request: Request instance for ReplaceTopicRule.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.ReplaceTopicRuleRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.ReplaceTopicRuleResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.ReplaceTopicRuleRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.ReplaceTopicRuleResponse`
 
         """
         try:
@@ -841,8 +841,8 @@ class IotcloudClient(AbstractClient):
         """重置設備的連接狀态
 
         :param request: Request instance for ResetDeviceState.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.ResetDeviceStateRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.ResetDeviceStateResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.ResetDeviceStateRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.ResetDeviceStateResponse`
 
         """
         try:
@@ -869,8 +869,8 @@ class IotcloudClient(AbstractClient):
         """本介面（UnbindDevices）用于閘道設備批次解綁子設備
 
         :param request: Request instance for UnbindDevices.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.UnbindDevicesRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.UnbindDevicesResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.UnbindDevicesRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.UnbindDevicesResponse`
 
         """
         try:
@@ -897,8 +897,8 @@ class IotcloudClient(AbstractClient):
         """啓用或者禁用設備
 
         :param request: Request instance for UpdateDeviceAvailableState.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.UpdateDeviceAvailableStateRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.UpdateDeviceAvailableStateResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.UpdateDeviceAvailableStateRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.UpdateDeviceAvailableStateResponse`
 
         """
         try:
@@ -925,8 +925,8 @@ class IotcloudClient(AbstractClient):
         """本介面（UpdateDeviceShadow）用于更新虛拟設備訊息。
 
         :param request: Request instance for UpdateDeviceShadow.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.UpdateDeviceShadowRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.UpdateDeviceShadowResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.UpdateDeviceShadowRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.UpdateDeviceShadowResponse`
 
         """
         try:
@@ -953,8 +953,8 @@ class IotcloudClient(AbstractClient):
         """本介面（UpdateTopicPolicy）用于更新Topic訊息
 
         :param request: Request instance for UpdateTopicPolicy.
-        :type request: :class:`tencentcloud.iotcloud.v20180614.models.UpdateTopicPolicyRequest`
-        :rtype: :class:`tencentcloud.iotcloud.v20180614.models.UpdateTopicPolicyResponse`
+        :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.UpdateTopicPolicyRequest`
+        :rtype: :class:`taifucloudcloud.iotcloud.v20180614.models.UpdateTopicPolicyResponse`
 
         """
         try:

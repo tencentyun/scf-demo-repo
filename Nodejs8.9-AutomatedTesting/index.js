@@ -5,8 +5,8 @@ TIPS:
    CMQ暫時沒有node版本的SDK
 
 Reference: 
-1. https://cloud.tencent.com/document/product/583/19504 - Function test（python）
-2. https://cloud.tencent.com/document/product/406/5851 - CMQ interface files
+1. https://cloud.taifucloud.com/document/product/583/19504 - Function test（python）
+2. https://cloud.taifucloud.com/document/product/406/5851 - CMQ interface files
 ***************************************************/
 
 const Capi = require('qcloudapi-sdk')
@@ -28,7 +28,7 @@ const FROM_ADDR = '******@qq.com'
 
 // The test url list
 // 撥測網址清單
-const TEST_URL_LIST = ['http://wrong.tencent.com', 'http://www.qq.com']
+const TEST_URL_LIST = ['http://wrong.taifucloud.com', 'http://www.qq.com']
 
 /**Simple CMQ-SDK */
 function CMQRequestHelper(SecretId, SecretKey) {

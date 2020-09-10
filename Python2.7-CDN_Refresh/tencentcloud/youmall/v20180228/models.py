@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class ArrivedMallInfo(AbstractModel):
@@ -71,7 +71,7 @@ class CameraPersonInfo(AbstractModel):
         :param Time: 當次抓拍時間戳
         :type Time: int
         :param PersonInfo: 當前的person基本訊息，圖片以FacePic爲準，結構體内未填
-        :type PersonInfo: :class:`tencentcloud.youmall.v20180228.models.PersonInfo`
+        :type PersonInfo: :class:`taifucloudcloud.youmall.v20180228.models.PersonInfo`
         """
         self.TempId = None
         self.FaceId = None
@@ -554,7 +554,7 @@ class DescribeFaceIdByTempIdResponse(AbstractModel):
         :param FaceId: 臨時id對應的face id
         :type FaceId: int
         :param PersonInfo: 顧客屬性訊息
-        :type PersonInfo: :class:`tencentcloud.youmall.v20180228.models.PersonInfo`
+        :type PersonInfo: :class:`taifucloudcloud.youmall.v20180228.models.PersonInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -630,7 +630,7 @@ class DescribeHistoryNetworkInfoResponse(AbstractModel):
     def __init__(self):
         """
         :param InstanceSet: 網絡狀态數據
-        :type InstanceSet: :class:`tencentcloud.youmall.v20180228.models.NetworkHistoryInfo`
+        :type InstanceSet: :class:`taifucloudcloud.youmall.v20180228.models.NetworkHistoryInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -678,7 +678,7 @@ class DescribeNetworkInfoResponse(AbstractModel):
     def __init__(self):
         """
         :param InstanceSet: 網絡狀态詳情
-        :type InstanceSet: :class:`tencentcloud.youmall.v20180228.models.NetworkLastInfo`
+        :type InstanceSet: :class:`taifucloudcloud.youmall.v20180228.models.NetworkLastInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2211,7 +2211,7 @@ class NetworkAndShopInfo(AbstractModel):
         :type CompanyId: str
         :param ShopId: 店鋪id
         :type ShopId: int
-        :param Province: 店鋪省份
+        :param Province: 店鋪 
         :type Province: str
         :param City: 店鋪城市
         :type City: str
@@ -2282,7 +2282,7 @@ class NetworkHistoryInfo(AbstractModel):
         :type CompanyId: str
         :param ShopId: 店鋪id
         :type ShopId: int
-        :param Province: 店鋪省份
+        :param Province: 店鋪 
         :type Province: str
         :param City: 店鋪城市
         :type City: str
@@ -2648,7 +2648,7 @@ class PersonVisitInfo(AbstractModel):
         :param CapturedPictureUrl: 抓拍到的頭像Url，在有效期内可以訪問下載
         :type CapturedPictureUrl: str
         :param SceneInfo: 抓拍頭像的場景圖訊息
-        :type SceneInfo: :class:`tencentcloud.youmall.v20180228.models.SceneInfo`
+        :type SceneInfo: :class:`taifucloudcloud.youmall.v20180228.models.SceneInfo`
         """
         self.PersonId = None
         self.VisitId = None
@@ -2684,7 +2684,7 @@ class RegisterCallbackRequest(AbstractModel):
         """
         :param CompanyId: 集團id，通過"指定身份标識獲取客戶門店清單"介面獲取
         :type CompanyId: str
-        :param BackUrl: 通知回調網址，完整url，範例（http://youmall.tencentcloudapi.com/）
+        :param BackUrl: 通知回調網址，完整url，範例（http://youmall.taifucloudcloudapi.com/）
         :type BackUrl: str
         :param Time: 請求時間戳
         :type Time: int

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AddEcdnDomainRequest(AbstractModel):
@@ -26,25 +26,25 @@ class AddEcdnDomainRequest(AbstractModel):
         :param Domain: 域名。
         :type Domain: str
         :param Origin: 源站配置。
-        :type Origin: :class:`tencentcloud.ecdn.v20191012.models.Origin`
-        :param Area: 域名加速區域，mainland，overseas或global，分别表示中國境内加速，海外加速或全球加速。
+        :type Origin: :class:`taifucloudcloud.ecdn.v20191012.models.Origin`
+        :param Area: 域名加速區域，mainland，overseas或global，分别表示 境内加速，海外加速或全球加速。
         :type Area: str
         :param ProjectId: 項目id，預設0。
         :type ProjectId: int
         :param IpFilter: IP黑白名單配置。
-        :type IpFilter: :class:`tencentcloud.ecdn.v20191012.models.IpFilter`
+        :type IpFilter: :class:`taifucloudcloud.ecdn.v20191012.models.IpFilter`
         :param IpFreqLimit: IP限頻配置。
-        :type IpFreqLimit: :class:`tencentcloud.ecdn.v20191012.models.IpFreqLimit`
+        :type IpFreqLimit: :class:`taifucloudcloud.ecdn.v20191012.models.IpFreqLimit`
         :param ResponseHeader: 源站響應頭部配置。
-        :type ResponseHeader: :class:`tencentcloud.ecdn.v20191012.models.ResponseHeader`
+        :type ResponseHeader: :class:`taifucloudcloud.ecdn.v20191012.models.ResponseHeader`
         :param CacheKey: 節點快取配置。
-        :type CacheKey: :class:`tencentcloud.ecdn.v20191012.models.CacheKey`
+        :type CacheKey: :class:`taifucloudcloud.ecdn.v20191012.models.CacheKey`
         :param Cache: 快取規則配置。
-        :type Cache: :class:`tencentcloud.ecdn.v20191012.models.Cache`
+        :type Cache: :class:`taifucloudcloud.ecdn.v20191012.models.Cache`
         :param Https: Https配置。
-        :type Https: :class:`tencentcloud.ecdn.v20191012.models.Https`
+        :type Https: :class:`taifucloudcloud.ecdn.v20191012.models.Https`
         :param ForceRedirect: 訪問協議強制跳轉配置。
-        :type ForceRedirect: :class:`tencentcloud.ecdn.v20191012.models.ForceRedirect`
+        :type ForceRedirect: :class:`taifucloudcloud.ecdn.v20191012.models.ForceRedirect`
         """
         self.Domain = None
         self.Origin = None
@@ -259,7 +259,7 @@ class DescribeDomainsConfigRequest(AbstractModel):
         :param Filters: 查詢條件過濾器。
         :type Filters: list of DomainFilter
         :param Sort: 查詢結果排序規則。
-        :type Sort: :class:`tencentcloud.ecdn.v20191012.models.Sort`
+        :type Sort: :class:`taifucloudcloud.ecdn.v20191012.models.Sort`
         """
         self.Offset = None
         self.Limit = None
@@ -461,7 +461,7 @@ dynamic_bandwidth：動态頻寬，單位爲 bps
         :type Metrics: list of str
         :param Domains: 指定查詢域名清單
         :type Domains: list of str
-        :param Projects: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+        :param Projects: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.taifucloud.com/project)
 未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Projects: list of int
         :param Offset: 清單分頁起始網址，預設0。
@@ -555,7 +555,7 @@ dynamic_bandwidth：動态頻寬，單位爲 bps
 
 最多可一次性查詢30個加速域名。
         :type Domains: list of str
-        :param Projects: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+        :param Projects: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.taifucloud.com/project)
 未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Projects: list of int
         """
@@ -616,9 +616,9 @@ class DescribePurgeQuotaResponse(AbstractModel):
     def __init__(self):
         """
         :param UrlPurge: Url重新整理用量及配額。
-        :type UrlPurge: :class:`tencentcloud.ecdn.v20191012.models.Quota`
+        :type UrlPurge: :class:`taifucloudcloud.ecdn.v20191012.models.Quota`
         :param PathPurge: 目錄重新整理用量及配額。
-        :type PathPurge: :class:`tencentcloud.ecdn.v20191012.models.Quota`
+        :type PathPurge: :class:`taifucloudcloud.ecdn.v20191012.models.Quota`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -757,7 +757,7 @@ class DomainBriefInfo(AbstractModel):
         :param UpdateTime: 域名更新時間。
         :type UpdateTime: str
         :param Origin: 源站配置詳情。
-        :type Origin: :class:`tencentcloud.ecdn.v20191012.models.Origin`
+        :type Origin: :class:`taifucloudcloud.ecdn.v20191012.models.Origin`
         :param Disable: 域名封禁狀态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠費停服，試用客戶流量包耗盡，惡意用戶，ddos攻擊，無流量域名，未備案，頻寬封頂，只讀
         :type Disable: str
         :param Area: 加速區域，mainland，oversea或global。
@@ -847,31 +847,31 @@ class DomainDetailInfo(AbstractModel):
         :param UpdateTime: 域名更新時間。
         :type UpdateTime: str
         :param Origin: 源站配置。
-        :type Origin: :class:`tencentcloud.ecdn.v20191012.models.Origin`
+        :type Origin: :class:`taifucloudcloud.ecdn.v20191012.models.Origin`
         :param IpFilter: IP黑白名單配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type IpFilter: :class:`tencentcloud.ecdn.v20191012.models.IpFilter`
+        :type IpFilter: :class:`taifucloudcloud.ecdn.v20191012.models.IpFilter`
         :param IpFreqLimit: IP限頻配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type IpFreqLimit: :class:`tencentcloud.ecdn.v20191012.models.IpFreqLimit`
+        :type IpFreqLimit: :class:`taifucloudcloud.ecdn.v20191012.models.IpFreqLimit`
         :param ResponseHeader: 源站響應頭部配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ResponseHeader: :class:`tencentcloud.ecdn.v20191012.models.ResponseHeader`
+        :type ResponseHeader: :class:`taifucloudcloud.ecdn.v20191012.models.ResponseHeader`
         :param CacheKey: 節點快取配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CacheKey: :class:`tencentcloud.ecdn.v20191012.models.CacheKey`
+        :type CacheKey: :class:`taifucloudcloud.ecdn.v20191012.models.CacheKey`
         :param Cache: 快取規則配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Cache: :class:`tencentcloud.ecdn.v20191012.models.Cache`
+        :type Cache: :class:`taifucloudcloud.ecdn.v20191012.models.Cache`
         :param Https: Https配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Https: :class:`tencentcloud.ecdn.v20191012.models.Https`
+        :type Https: :class:`taifucloudcloud.ecdn.v20191012.models.Https`
         :param Disable: 域名封禁狀态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠費停服，試用客戶流量包耗盡，惡意用戶，ddos攻擊，無流量域名，未備案，頻寬封頂，只讀。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Disable: str
         :param ForceRedirect: 訪問協議強制跳轉配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ForceRedirect: :class:`tencentcloud.ecdn.v20191012.models.ForceRedirect`
+        :type ForceRedirect: :class:`taifucloudcloud.ecdn.v20191012.models.ForceRedirect`
         :param Area: 加速區域，mainland，overseas或global。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Area: str
@@ -1112,10 +1112,10 @@ class Https(AbstractModel):
         :type VerifyClient: str
         :param CertInfo: 服務器證書配置訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CertInfo: :class:`tencentcloud.ecdn.v20191012.models.ServerCert`
+        :type CertInfo: :class:`taifucloudcloud.ecdn.v20191012.models.ServerCert`
         :param ClientCertInfo: 用戶端證書配置訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ClientCertInfo: :class:`tencentcloud.ecdn.v20191012.models.ClientCert`
+        :type ClientCertInfo: :class:`taifucloudcloud.ecdn.v20191012.models.ClientCert`
         :param Spdy: 是否開啓Spdy，on或off。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Spdy: str
@@ -1397,7 +1397,7 @@ multiDomains：表示多域名匯總明細數據
 all：賬号維度明細數據
         :type Resource: str
         :param EcdnData: 資源對應的數據明細
-        :type EcdnData: :class:`tencentcloud.ecdn.v20191012.models.EcdnData`
+        :type EcdnData: :class:`taifucloudcloud.ecdn.v20191012.models.EcdnData`
         """
         self.Resource = None
         self.EcdnData = None
@@ -1608,24 +1608,24 @@ class UpdateDomainConfigRequest(AbstractModel):
         :param Domain: 域名。
         :type Domain: str
         :param Origin: 源站配置。
-        :type Origin: :class:`tencentcloud.ecdn.v20191012.models.Origin`
+        :type Origin: :class:`taifucloudcloud.ecdn.v20191012.models.Origin`
         :param ProjectId: 項目id。
         :type ProjectId: int
         :param IpFilter: IP黑白名單配置。
-        :type IpFilter: :class:`tencentcloud.ecdn.v20191012.models.IpFilter`
+        :type IpFilter: :class:`taifucloudcloud.ecdn.v20191012.models.IpFilter`
         :param IpFreqLimit: IP限頻配置。
-        :type IpFreqLimit: :class:`tencentcloud.ecdn.v20191012.models.IpFreqLimit`
+        :type IpFreqLimit: :class:`taifucloudcloud.ecdn.v20191012.models.IpFreqLimit`
         :param ResponseHeader: 源站響應頭部配置。
-        :type ResponseHeader: :class:`tencentcloud.ecdn.v20191012.models.ResponseHeader`
+        :type ResponseHeader: :class:`taifucloudcloud.ecdn.v20191012.models.ResponseHeader`
         :param CacheKey: 節點快取配置。
-        :type CacheKey: :class:`tencentcloud.ecdn.v20191012.models.CacheKey`
+        :type CacheKey: :class:`taifucloudcloud.ecdn.v20191012.models.CacheKey`
         :param Cache: 快取規則配置。
-        :type Cache: :class:`tencentcloud.ecdn.v20191012.models.Cache`
+        :type Cache: :class:`taifucloudcloud.ecdn.v20191012.models.Cache`
         :param Https: Https配置。
-        :type Https: :class:`tencentcloud.ecdn.v20191012.models.Https`
+        :type Https: :class:`taifucloudcloud.ecdn.v20191012.models.Https`
         :param ForceRedirect: 訪問協議強制跳轉配置。
-        :type ForceRedirect: :class:`tencentcloud.ecdn.v20191012.models.ForceRedirect`
-        :param Area: 域名加速區域，mainland，overseas或global，分别表示中國境内加速，海外加速或全球加速。
+        :type ForceRedirect: :class:`taifucloudcloud.ecdn.v20191012.models.ForceRedirect`
+        :param Area: 域名加速區域，mainland，overseas或global，分别表示 境内加速，海外加速或全球加速。
         :type Area: str
         """
         self.Domain = None

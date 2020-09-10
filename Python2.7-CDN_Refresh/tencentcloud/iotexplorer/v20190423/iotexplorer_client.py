@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.iotexplorer.v20190423 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.iotexplorer.v20190423 import models
 
 
 class IotexplorerClient(AbstractClient):
     _apiVersion = '2019-04-23'
-    _endpoint = 'iotexplorer.tencentcloudapi.com'
+    _endpoint = 'iotexplorer.taifucloudcloudapi.com'
 
 
     def CallDeviceActionAsync(self, request):
         """提供給用戶異步調用設備動作的能力
 
         :param request: Request instance for CallDeviceActionAsync.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.CallDeviceActionAsyncRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.CallDeviceActionAsyncResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.CallDeviceActionAsyncRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.CallDeviceActionAsyncResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class IotexplorerClient(AbstractClient):
         """爲用戶提供同步調用設備動作的能力。
 
         :param request: Request instance for CallDeviceActionSync.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.CallDeviceActionSyncRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.CallDeviceActionSyncResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.CallDeviceActionSyncRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.CallDeviceActionSyncResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class IotexplorerClient(AbstractClient):
         """根據設備産品ID、設備名稱，設置控制設備的屬性數據。
 
         :param request: Request instance for ControlDeviceData.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.ControlDeviceDataRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.ControlDeviceDataResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.ControlDeviceDataRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.ControlDeviceDataResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class IotexplorerClient(AbstractClient):
         """創建設備
 
         :param request: Request instance for CreateDevice.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.CreateDeviceRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.CreateDeviceResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.CreateDeviceRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.CreateDeviceResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class IotexplorerClient(AbstractClient):
         """爲用戶提供新建項目的能力，用于集中管理産品和應用。
 
         :param request: Request instance for CreateProject.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.CreateProjectRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.CreateProjectResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.CreateProjectRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.CreateProjectResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class IotexplorerClient(AbstractClient):
         """爲用戶提供新建産品的能力，用于管理用戶的設備
 
         :param request: Request instance for CreateStudioProduct.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.CreateStudioProductRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.CreateStudioProductResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.CreateStudioProductRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.CreateStudioProductResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class IotexplorerClient(AbstractClient):
         """删除設備
 
         :param request: Request instance for DeleteDevice.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DeleteDeviceRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.DeleteDeviceResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.DeleteDeviceRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.DeleteDeviceResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class IotexplorerClient(AbstractClient):
         """提供删除某個項目的能力
 
         :param request: Request instance for DeleteProject.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DeleteProjectRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.DeleteProjectResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.DeleteProjectRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.DeleteProjectResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class IotexplorerClient(AbstractClient):
         """提供删除某個項目下産品的能力
 
         :param request: Request instance for DeleteStudioProduct.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DeleteStudioProductRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.DeleteStudioProductResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.DeleteStudioProductRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.DeleteStudioProductResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class IotexplorerClient(AbstractClient):
         """用于檢視某個設備的詳細訊息
 
         :param request: Request instance for DescribeDevice.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeDeviceRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeDeviceResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.DescribeDeviceRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.DescribeDeviceResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class IotexplorerClient(AbstractClient):
         """根據設備産品ID、設備名稱，獲取設備上報的屬性數據。
 
         :param request: Request instance for DescribeDeviceData.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeDeviceDataRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeDeviceDataResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.DescribeDeviceDataRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.DescribeDeviceDataResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class IotexplorerClient(AbstractClient):
         """獲取設備在指定時間範圍内上報的曆史數據。
 
         :param request: Request instance for DescribeDeviceDataHistory.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeDeviceDataHistoryRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeDeviceDataHistoryResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.DescribeDeviceDataHistoryRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.DescribeDeviceDataHistoryResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class IotexplorerClient(AbstractClient):
         """查詢産品配置的數據範本訊息
 
         :param request: Request instance for DescribeModelDefinition.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeModelDefinitionRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeModelDefinitionResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.DescribeModelDefinitionRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.DescribeModelDefinitionResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class IotexplorerClient(AbstractClient):
         """查詢項目詳情
 
         :param request: Request instance for DescribeProject.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeProjectRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeProjectResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.DescribeProjectRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.DescribeProjectResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class IotexplorerClient(AbstractClient):
         """提供檢視茶品詳細訊息的能力，包括産品的ID、數據協議、認證類型等重要參數
 
         :param request: Request instance for DescribeStudioProduct.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeStudioProductRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.DescribeStudioProductResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.DescribeStudioProductRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.DescribeStudioProductResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class IotexplorerClient(AbstractClient):
         """用于查詢某個産品下的設備清單
 
         :param request: Request instance for GetDeviceList.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.GetDeviceListRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.GetDeviceListResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.GetDeviceListRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.GetDeviceListResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class IotexplorerClient(AbstractClient):
         """提供查詢用戶所創建的項目清單查詢功能。
 
         :param request: Request instance for GetProjectList.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.GetProjectListRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.GetProjectListResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.GetProjectListRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.GetProjectListResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class IotexplorerClient(AbstractClient):
         """提供查詢某個項目下所有産品訊息的能力。
 
         :param request: Request instance for GetStudioProductList.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.GetStudioProductListRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.GetStudioProductListResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.GetStudioProductListRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.GetStudioProductListResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class IotexplorerClient(AbstractClient):
         """獲取設備的曆史事件
 
         :param request: Request instance for ListEventHistory.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.ListEventHistoryRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.ListEventHistoryResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.ListEventHistoryRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.ListEventHistoryResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class IotexplorerClient(AbstractClient):
         """提供修改産品的數據範本的能力
 
         :param request: Request instance for ModifyModelDefinition.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.ModifyModelDefinitionRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.ModifyModelDefinitionResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.ModifyModelDefinitionRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.ModifyModelDefinitionResponse`
 
         """
         try:
@@ -589,8 +589,8 @@ class IotexplorerClient(AbstractClient):
         """修改項目
 
         :param request: Request instance for ModifyProject.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.ModifyProjectRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.ModifyProjectResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.ModifyProjectRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.ModifyProjectResponse`
 
         """
         try:
@@ -617,8 +617,8 @@ class IotexplorerClient(AbstractClient):
         """提供修改産品的名稱和描述等訊息的能力，對于已發布産品不允許進行修改。
 
         :param request: Request instance for ModifyStudioProduct.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.ModifyStudioProductRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.ModifyStudioProductResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.ModifyStudioProductRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.ModifyStudioProductResponse`
 
         """
         try:
@@ -645,8 +645,8 @@ class IotexplorerClient(AbstractClient):
         """産品開發完成并測試通過後，通過發布産品将産品設置爲發布狀态
 
         :param request: Request instance for ReleaseStudioProduct.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.ReleaseStudioProductRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.ReleaseStudioProductResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.ReleaseStudioProductRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.ReleaseStudioProductResponse`
 
         """
         try:
@@ -673,8 +673,8 @@ class IotexplorerClient(AbstractClient):
         """提供根據産品名稱查找産品的能力
 
         :param request: Request instance for SearchStudioProduct.
-        :type request: :class:`tencentcloud.iotexplorer.v20190423.models.SearchStudioProductRequest`
-        :rtype: :class:`tencentcloud.iotexplorer.v20190423.models.SearchStudioProductResponse`
+        :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.SearchStudioProductRequest`
+        :rtype: :class:`taifucloudcloud.iotexplorer.v20190423.models.SearchStudioProductResponse`
 
         """
         try:

@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.live.v20180801 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.live.v20180801 import models
 
 
 class LiveClient(AbstractClient):
     _apiVersion = '2018-08-01'
-    _endpoint = 'live.tencentcloudapi.com'
+    _endpoint = 'live.taifucloudcloudapi.com'
 
 
     def AddDelayLiveStream(self, request):
@@ -31,8 +31,8 @@ class LiveClient(AbstractClient):
         目前該介面只支援流粒度的，域名及應用粒度功能支援當前開發中。
 
         :param request: 調用AddDelayLiveStream所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.AddDelayLiveStreamRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.AddDelayLiveStreamResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.AddDelayLiveStreamRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.AddDelayLiveStreamResponse`
 
         """
         try:
@@ -59,8 +59,8 @@ class LiveClient(AbstractClient):
         """添加域名，一次只能提交一個域名。域名必須已備案。
 
         :param request: 調用AddLiveDomain所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.AddLiveDomainRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.AddLiveDomainResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.AddLiveDomainRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.AddLiveDomainResponse`
 
         """
         try:
@@ -87,8 +87,8 @@ class LiveClient(AbstractClient):
         """添加浮水印，成功返回水印id後，需要調用[CreateLiveWatermarkRule](/document/product/267/32629)介面将水印id綁定到流使用。
 
         :param request: 調用AddLiveWatermark所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.AddLiveWatermarkRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.AddLiveWatermarkResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.AddLiveWatermarkRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.AddLiveWatermarkResponse`
 
         """
         try:
@@ -115,8 +115,8 @@ class LiveClient(AbstractClient):
         """域名綁定證書
 
         :param request: 調用BindLiveDomainCert所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.BindLiveDomainCertRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.BindLiveDomainCertResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.BindLiveDomainCertRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.BindLiveDomainCertResponse`
 
         """
         try:
@@ -144,8 +144,8 @@ class LiveClient(AbstractClient):
         <br>回調協議相關文件：[事件訊息通知](/document/product/267/32744)。
 
         :param request: 調用CreateLiveCallbackRule所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveCallbackRuleRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveCallbackRuleResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.CreateLiveCallbackRuleRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.CreateLiveCallbackRuleResponse`
 
         """
         try:
@@ -173,8 +173,8 @@ class LiveClient(AbstractClient):
         <br>回調協議相關文件：[事件訊息通知](/document/product/267/32744)。
 
         :param request: 調用CreateLiveCallbackTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveCallbackTemplateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveCallbackTemplateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.CreateLiveCallbackTemplateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.CreateLiveCallbackTemplateResponse`
 
         """
         try:
@@ -201,8 +201,8 @@ class LiveClient(AbstractClient):
         """添加證書
 
         :param request: 調用CreateLiveCert所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveCertRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveCertResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.CreateLiveCertRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.CreateLiveCertResponse`
 
         """
         try:
@@ -228,7 +228,7 @@ class LiveClient(AbstractClient):
     def CreateLiveRecord(self, request):
         """- 使用前提
           1. 錄制文件存放于點播平台，所以用戶如需使用錄制功能，需首先自行開通點播服務。
-          2. 錄制文件存放後相關費用（含儲存以及下行播放流量）按照點播平台計費方式收取，具體請參考 [對應文件](https://cloud.tencent.com/document/product/266/2838)。
+          2. 錄制文件存放後相關費用（含儲存以及下行播放流量）按照點播平台計費方式收取，具體請參考 [對應文件](https://cloud.taifucloud.com/document/product/266/2838)。
 
         - 模式說明
           該介面支援兩種錄制模式：
@@ -241,8 +241,8 @@ class LiveClient(AbstractClient):
           1. 調用介面超時設置應大于3秒，小於3秒重試以及頻繁調用都有可能産生重複錄制任務。
 
         :param request: 調用CreateLiveRecord所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveRecordRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveRecordResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.CreateLiveRecordRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.CreateLiveRecordResponse`
 
         """
         try:
@@ -270,8 +270,8 @@ class LiveClient(AbstractClient):
         <br>錄制相關文件：[直播錄制](/document/product/267/32739)。
 
         :param request: 調用CreateLiveRecordRule所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveRecordRuleRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveRecordRuleResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.CreateLiveRecordRuleRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.CreateLiveRecordRuleResponse`
 
         """
         try:
@@ -299,8 +299,8 @@ class LiveClient(AbstractClient):
         <br>錄制相關文件：[直播錄制](/document/product/267/32739)。
 
         :param request: 調用CreateLiveRecordTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveRecordTemplateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveRecordTemplateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.CreateLiveRecordTemplateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.CreateLiveRecordTemplateResponse`
 
         """
         try:
@@ -328,8 +328,8 @@ class LiveClient(AbstractClient):
         <br>截圖相關文件：[直播截圖](/document/product/267/32737)。
 
         :param request: 調用CreateLiveSnapshotRule所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveSnapshotRuleRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveSnapshotRuleResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.CreateLiveSnapshotRuleRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.CreateLiveSnapshotRuleResponse`
 
         """
         try:
@@ -357,8 +357,8 @@ class LiveClient(AbstractClient):
         <br>截圖相關文件：[直播截圖](/document/product/267/32737)。
 
         :param request: 調用CreateLiveSnapshotTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveSnapshotTemplateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveSnapshotTemplateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.CreateLiveSnapshotTemplateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.CreateLiveSnapshotTemplateResponse`
 
         """
         try:
@@ -386,8 +386,8 @@ class LiveClient(AbstractClient):
         <br>轉碼相關文件：[直播轉封裝及轉碼](/document/product/267/32736)。
 
         :param request: 調用CreateLiveTranscodeRule所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveTranscodeRuleRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveTranscodeRuleResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.CreateLiveTranscodeRuleRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.CreateLiveTranscodeRuleResponse`
 
         """
         try:
@@ -415,8 +415,8 @@ class LiveClient(AbstractClient):
         <br>轉碼相關文件：[直播轉封裝及轉碼](/document/product/267/32736)。
 
         :param request: 調用CreateLiveTranscodeTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveTranscodeTemplateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveTranscodeTemplateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.CreateLiveTranscodeTemplateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.CreateLiveTranscodeTemplateResponse`
 
         """
         try:
@@ -443,8 +443,8 @@ class LiveClient(AbstractClient):
         """創建浮水印規則，需要先調用[AddLiveWatermark](/document/product/267/30154)介面添加水印，将返回的水印id綁定到流使用。
 
         :param request: 調用CreateLiveWatermarkRule所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.CreateLiveWatermarkRuleRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.CreateLiveWatermarkRuleResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.CreateLiveWatermarkRuleRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.CreateLiveWatermarkRuleResponse`
 
         """
         try:
@@ -471,12 +471,12 @@ class LiveClient(AbstractClient):
         """創建臨時拉流轉推任務，目前限制添加10條任務。
 
         注意：該介面用于創建臨時拉流轉推任務，
-        拉流源網址即FromUrl 可以是騰訊或非騰訊數據源，
-        但轉推目标網址即ToUrl 目前限制爲已注冊的騰訊直播域名。
+        拉流源網址即FromUrl 可以是 或非 數據源，
+        但轉推目标網址即ToUrl 目前限制爲已注冊的 直播域名。
 
         :param request: 調用CreatePullStreamConfig所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.CreatePullStreamConfigRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.CreatePullStreamConfigResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.CreatePullStreamConfigRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.CreatePullStreamConfigResponse`
 
         """
         try:
@@ -503,8 +503,8 @@ class LiveClient(AbstractClient):
         """删除回調規則
 
         :param request: 調用DeleteLiveCallbackRule所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveCallbackRuleRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveCallbackRuleResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveCallbackRuleRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveCallbackRuleResponse`
 
         """
         try:
@@ -531,8 +531,8 @@ class LiveClient(AbstractClient):
         """删除回調範本
 
         :param request: 調用DeleteLiveCallbackTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveCallbackTemplateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveCallbackTemplateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveCallbackTemplateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveCallbackTemplateResponse`
 
         """
         try:
@@ -559,8 +559,8 @@ class LiveClient(AbstractClient):
         """删除域名對應的證書
 
         :param request: 調用DeleteLiveCert所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveCertRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveCertResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveCertRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveCertResponse`
 
         """
         try:
@@ -587,8 +587,8 @@ class LiveClient(AbstractClient):
         """删除已添加的直播域名
 
         :param request: 調用DeleteLiveDomain所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveDomainRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveDomainResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveDomainRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveDomainResponse`
 
         """
         try:
@@ -615,8 +615,8 @@ class LiveClient(AbstractClient):
         """用于删除錄制任務。
 
         :param request: 調用DeleteLiveRecord所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveRecordRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveRecordResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveRecordRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveRecordResponse`
 
         """
         try:
@@ -643,8 +643,8 @@ class LiveClient(AbstractClient):
         """删除錄制規則
 
         :param request: 調用DeleteLiveRecordRule所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveRecordRuleRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveRecordRuleResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveRecordRuleRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveRecordRuleResponse`
 
         """
         try:
@@ -671,8 +671,8 @@ class LiveClient(AbstractClient):
         """删除錄制範本
 
         :param request: 調用DeleteLiveRecordTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveRecordTemplateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveRecordTemplateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveRecordTemplateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveRecordTemplateResponse`
 
         """
         try:
@@ -699,8 +699,8 @@ class LiveClient(AbstractClient):
         """删除截圖規則
 
         :param request: 調用DeleteLiveSnapshotRule所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveSnapshotRuleRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveSnapshotRuleResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveSnapshotRuleRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveSnapshotRuleResponse`
 
         """
         try:
@@ -727,8 +727,8 @@ class LiveClient(AbstractClient):
         """删除截圖範本
 
         :param request: 調用DeleteLiveSnapshotTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveSnapshotTemplateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveSnapshotTemplateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveSnapshotTemplateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveSnapshotTemplateResponse`
 
         """
         try:
@@ -755,8 +755,8 @@ class LiveClient(AbstractClient):
         """删除轉碼規則
 
         :param request: 調用DeleteLiveTranscodeRule所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveTranscodeRuleRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveTranscodeRuleResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveTranscodeRuleRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveTranscodeRuleResponse`
 
         """
         try:
@@ -783,8 +783,8 @@ class LiveClient(AbstractClient):
         """删除轉碼範本
 
         :param request: 調用DeleteLiveTranscodeTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveTranscodeTemplateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveTranscodeTemplateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveTranscodeTemplateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveTranscodeTemplateResponse`
 
         """
         try:
@@ -811,8 +811,8 @@ class LiveClient(AbstractClient):
         """删除浮水印
 
         :param request: 調用DeleteLiveWatermark所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveWatermarkRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveWatermarkResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveWatermarkRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveWatermarkResponse`
 
         """
         try:
@@ -839,8 +839,8 @@ class LiveClient(AbstractClient):
         """删除浮水印規則
 
         :param request: 調用DeleteLiveWatermarkRule所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DeleteLiveWatermarkRuleRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DeleteLiveWatermarkRuleResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveWatermarkRuleRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveWatermarkRuleResponse`
 
         """
         try:
@@ -867,8 +867,8 @@ class LiveClient(AbstractClient):
         """删除直播拉流配置
 
         :param request: 調用DeletePullStreamConfig所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DeletePullStreamConfigRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DeletePullStreamConfigResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DeletePullStreamConfigRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DeletePullStreamConfigResponse`
 
         """
         try:
@@ -895,8 +895,8 @@ class LiveClient(AbstractClient):
         """獲取回調規則清單
 
         :param request: 調用DescribeLiveCallbackRules所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveCallbackRulesRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveCallbackRulesResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveCallbackRulesRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveCallbackRulesResponse`
 
         """
         try:
@@ -923,8 +923,8 @@ class LiveClient(AbstractClient):
         """獲取單個回調範本
 
         :param request: 調用DescribeLiveCallbackTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveCallbackTemplateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveCallbackTemplateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveCallbackTemplateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveCallbackTemplateResponse`
 
         """
         try:
@@ -951,8 +951,8 @@ class LiveClient(AbstractClient):
         """獲取回調範本清單
 
         :param request: 調用DescribeLiveCallbackTemplates所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveCallbackTemplatesRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveCallbackTemplatesResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveCallbackTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveCallbackTemplatesResponse`
 
         """
         try:
@@ -979,8 +979,8 @@ class LiveClient(AbstractClient):
         """獲驗證書訊息
 
         :param request: 調用DescribeLiveCert所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveCertRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveCertResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveCertRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveCertResponse`
 
         """
         try:
@@ -1007,8 +1007,8 @@ class LiveClient(AbstractClient):
         """獲驗證書訊息清單
 
         :param request: 調用DescribeLiveCerts所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveCertsRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveCertsResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveCertsRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveCertsResponse`
 
         """
         try:
@@ -1035,8 +1035,8 @@ class LiveClient(AbstractClient):
         """查詢直播域名訊息。
 
         :param request: 調用DescribeLiveDomain所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveDomainRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveDomainResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveDomainRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveDomainResponse`
 
         """
         try:
@@ -1063,8 +1063,8 @@ class LiveClient(AbstractClient):
         """獲取域名證書訊息
 
         :param request: 調用DescribeLiveDomainCert所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveDomainCertRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveDomainCertResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveDomainCertRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveDomainCertResponse`
 
         """
         try:
@@ -1091,8 +1091,8 @@ class LiveClient(AbstractClient):
         """根據域名狀态、類型等訊息查詢用戶的域名訊息
 
         :param request: 調用DescribeLiveDomains所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveDomainsRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveDomainsResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveDomainsRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveDomainsResponse`
 
         """
         try:
@@ -1119,8 +1119,8 @@ class LiveClient(AbstractClient):
         """獲取禁推流清單
 
         :param request: 調用DescribeLiveForbidStreamList所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveForbidStreamListRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveForbidStreamListResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveForbidStreamListRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveForbidStreamListResponse`
 
         """
         try:
@@ -1147,8 +1147,8 @@ class LiveClient(AbstractClient):
         """查詢播放鑒權key
 
         :param request: 調用DescribeLivePlayAuthKey所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLivePlayAuthKeyRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLivePlayAuthKeyResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLivePlayAuthKeyRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLivePlayAuthKeyResponse`
 
         """
         try:
@@ -1175,8 +1175,8 @@ class LiveClient(AbstractClient):
         """查詢直播推流鑒權key
 
         :param request: 調用DescribeLivePushAuthKey所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLivePushAuthKeyRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLivePushAuthKeyResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLivePushAuthKeyRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLivePushAuthKeyResponse`
 
         """
         try:
@@ -1203,8 +1203,8 @@ class LiveClient(AbstractClient):
         """獲取錄制規則清單
 
         :param request: 調用DescribeLiveRecordRules所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveRecordRulesRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveRecordRulesResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveRecordRulesRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveRecordRulesResponse`
 
         """
         try:
@@ -1231,8 +1231,8 @@ class LiveClient(AbstractClient):
         """獲取單個錄制範本
 
         :param request: 調用DescribeLiveRecordTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveRecordTemplateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveRecordTemplateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveRecordTemplateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveRecordTemplateResponse`
 
         """
         try:
@@ -1259,8 +1259,8 @@ class LiveClient(AbstractClient):
         """獲取錄制範本清單
 
         :param request: 調用DescribeLiveRecordTemplates所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveRecordTemplatesRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveRecordTemplatesResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveRecordTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveRecordTemplatesResponse`
 
         """
         try:
@@ -1287,8 +1287,8 @@ class LiveClient(AbstractClient):
         """獲取截圖規則清單
 
         :param request: 調用DescribeLiveSnapshotRules所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveSnapshotRulesRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveSnapshotRulesResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveSnapshotRulesRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveSnapshotRulesResponse`
 
         """
         try:
@@ -1315,8 +1315,8 @@ class LiveClient(AbstractClient):
         """獲取單個截圖範本
 
         :param request: 調用DescribeLiveSnapshotTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveSnapshotTemplateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveSnapshotTemplateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveSnapshotTemplateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveSnapshotTemplateResponse`
 
         """
         try:
@@ -1343,8 +1343,8 @@ class LiveClient(AbstractClient):
         """獲取截圖範本清單
 
         :param request: 調用DescribeLiveSnapshotTemplates所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveSnapshotTemplatesRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveSnapshotTemplatesResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveSnapshotTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveSnapshotTemplatesResponse`
 
         """
         try:
@@ -1373,8 +1373,8 @@ class LiveClient(AbstractClient):
         注意：該介面可通過使用IsFilter進行過濾，返回推流曆史記錄。
 
         :param request: 調用DescribeLiveStreamEventList所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamEventListRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamEventListResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveStreamEventListRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveStreamEventListResponse`
 
         """
         try:
@@ -1401,8 +1401,8 @@ class LiveClient(AbstractClient):
         """查詢在線推流訊息清單
 
         :param request: 調用DescribeLiveStreamOnlineInfo所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamOnlineInfoRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamOnlineInfoResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveStreamOnlineInfoRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveStreamOnlineInfoResponse`
 
         """
         try:
@@ -1429,8 +1429,8 @@ class LiveClient(AbstractClient):
         """返回正在直播中的流清單
 
         :param request: 調用DescribeLiveStreamOnlineList所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamOnlineListRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamOnlineListResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveStreamOnlineListRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveStreamOnlineListResponse`
 
         """
         try:
@@ -1457,8 +1457,8 @@ class LiveClient(AbstractClient):
         """返回已經推過流的流清單
 
         :param request: 調用DescribeLiveStreamPublishedList所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamPublishedListRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamPublishedListResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveStreamPublishedListRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveStreamPublishedListResponse`
 
         """
         try:
@@ -1485,8 +1485,8 @@ class LiveClient(AbstractClient):
         """查詢所有實時流的推流訊息，包括用戶端IP，服務端IP，幀率，碼率，域名，開始推流時間。
 
         :param request: 調用DescribeLiveStreamPushInfoList所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamPushInfoListRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamPushInfoListResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveStreamPushInfoListRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveStreamPushInfoListResponse`
 
         """
         try:
@@ -1513,8 +1513,8 @@ class LiveClient(AbstractClient):
         """返回直播中、無推流或者禁播等狀态
 
         :param request: 調用DescribeLiveStreamState所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamStateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveStreamStateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveStreamStateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveStreamStateResponse`
 
         """
         try:
@@ -1542,8 +1542,8 @@ class LiveClient(AbstractClient):
         注意：當前只支援查詢近30天内某天的詳細數據。
 
         :param request: 調用DescribeLiveTranscodeDetailInfo所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveTranscodeDetailInfoRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveTranscodeDetailInfoResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveTranscodeDetailInfoRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveTranscodeDetailInfoResponse`
 
         """
         try:
@@ -1570,8 +1570,8 @@ class LiveClient(AbstractClient):
         """獲取轉碼規則清單
 
         :param request: 調用DescribeLiveTranscodeRules所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveTranscodeRulesRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveTranscodeRulesResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveTranscodeRulesRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveTranscodeRulesResponse`
 
         """
         try:
@@ -1598,8 +1598,8 @@ class LiveClient(AbstractClient):
         """獲取單個轉碼範本
 
         :param request: 調用DescribeLiveTranscodeTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveTranscodeTemplateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveTranscodeTemplateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveTranscodeTemplateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveTranscodeTemplateResponse`
 
         """
         try:
@@ -1626,8 +1626,8 @@ class LiveClient(AbstractClient):
         """獲取轉碼範本清單
 
         :param request: 調用DescribeLiveTranscodeTemplates所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveTranscodeTemplatesRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveTranscodeTemplatesResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveTranscodeTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveTranscodeTemplatesResponse`
 
         """
         try:
@@ -1654,8 +1654,8 @@ class LiveClient(AbstractClient):
         """獲取單個浮水印訊息
 
         :param request: 調用DescribeLiveWatermark所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveWatermarkRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveWatermarkResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveWatermarkRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveWatermarkResponse`
 
         """
         try:
@@ -1682,8 +1682,8 @@ class LiveClient(AbstractClient):
         """獲取浮水印規則清單
 
         :param request: 調用DescribeLiveWatermarkRules所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveWatermarkRulesRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveWatermarkRulesResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveWatermarkRulesRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveWatermarkRulesResponse`
 
         """
         try:
@@ -1710,8 +1710,8 @@ class LiveClient(AbstractClient):
         """查詢浮水印清單
 
         :param request: 調用DescribeLiveWatermarks所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLiveWatermarksRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLiveWatermarksResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveWatermarksRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveWatermarksResponse`
 
         """
         try:
@@ -1738,8 +1738,8 @@ class LiveClient(AbstractClient):
         """批次獲取日志URL。
 
         :param request: 調用DescribeLogDownloadList所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeLogDownloadListRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeLogDownloadListResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLogDownloadListRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeLogDownloadListResponse`
 
         """
         try:
@@ -1763,11 +1763,11 @@ class LiveClient(AbstractClient):
 
 
     def DescribeProIspPlaySumInfoList(self, request):
-        """查詢某段時間内每個省份每個運營商的平均每秒流量，總流量，總請求數訊息。
+        """查詢某段時間内每個 每個運營商的平均每秒流量，總流量，總請求數訊息。
 
         :param request: 調用DescribeProIspPlaySumInfoList所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeProIspPlaySumInfoListRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeProIspPlaySumInfoListResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeProIspPlaySumInfoListRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeProIspPlaySumInfoListResponse`
 
         """
         try:
@@ -1791,11 +1791,11 @@ class LiveClient(AbstractClient):
 
 
     def DescribeProvinceIspPlayInfoList(self, request):
-        """查詢某省份某運營商下行播放數據，包括頻寬，流量，請求數，并發連接數訊息。
+        """查詢某 某運營商下行播放數據，包括頻寬，流量，請求數，并發連接數訊息。
 
         :param request: 調用DescribeProvinceIspPlayInfoList所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeProvinceIspPlayInfoListRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeProvinceIspPlayInfoListResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeProvinceIspPlayInfoListRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeProvinceIspPlayInfoListResponse`
 
         """
         try:
@@ -1822,8 +1822,8 @@ class LiveClient(AbstractClient):
         """查詢拉流配置
 
         :param request: 調用DescribePullStreamConfigs所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribePullStreamConfigsRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribePullStreamConfigsResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribePullStreamConfigsRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribePullStreamConfigsResponse`
 
         """
         try:
@@ -1850,8 +1850,8 @@ class LiveClient(AbstractClient):
         """查詢天維度每條流的播放數據，包括總流量等。
 
         :param request: 調用DescribeStreamDayPlayInfoList所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeStreamDayPlayInfoListRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeStreamDayPlayInfoListResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeStreamDayPlayInfoListRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeStreamDayPlayInfoListResponse`
 
         """
         try:
@@ -1878,8 +1878,8 @@ class LiveClient(AbstractClient):
         """查詢播放數據，支援按流名稱查詢詳細播放數據，也可按播放域名查詢詳細總數據。
 
         :param request: 調用DescribeStreamPlayInfoList所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DescribeStreamPlayInfoListRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DescribeStreamPlayInfoListResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeStreamPlayInfoListRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DescribeStreamPlayInfoListResponse`
 
         """
         try:
@@ -1906,8 +1906,8 @@ class LiveClient(AbstractClient):
         """斷開推流連接，但可以重新推流
 
         :param request: 調用DropLiveStream所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.DropLiveStreamRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.DropLiveStreamResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.DropLiveStreamRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.DropLiveStreamResponse`
 
         """
         try:
@@ -1934,8 +1934,8 @@ class LiveClient(AbstractClient):
         """啓用狀态爲停用的直播域名
 
         :param request: 調用EnableLiveDomain所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.EnableLiveDomainRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.EnableLiveDomainResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.EnableLiveDomainRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.EnableLiveDomainResponse`
 
         """
         try:
@@ -1962,8 +1962,8 @@ class LiveClient(AbstractClient):
         """停用使用某個直播域名
 
         :param request: 調用ForbidLiveDomain所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.ForbidLiveDomainRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.ForbidLiveDomainResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.ForbidLiveDomainRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.ForbidLiveDomainResponse`
 
         """
         try:
@@ -1990,8 +1990,8 @@ class LiveClient(AbstractClient):
         """禁止某條流的推送，可以預設某個時刻将流恢複。
 
         :param request: 調用ForbidLiveStream所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.ForbidLiveStreamRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.ForbidLiveStreamResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.ForbidLiveStreamRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.ForbidLiveStreamResponse`
 
         """
         try:
@@ -2018,8 +2018,8 @@ class LiveClient(AbstractClient):
         """修改回調範本
 
         :param request: 調用ModifyLiveCallbackTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.ModifyLiveCallbackTemplateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLiveCallbackTemplateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.ModifyLiveCallbackTemplateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.ModifyLiveCallbackTemplateResponse`
 
         """
         try:
@@ -2046,8 +2046,8 @@ class LiveClient(AbstractClient):
         """修改證書
 
         :param request: 調用ModifyLiveCert所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.ModifyLiveCertRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLiveCertResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.ModifyLiveCertRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.ModifyLiveCertResponse`
 
         """
         try:
@@ -2074,8 +2074,8 @@ class LiveClient(AbstractClient):
         """修改域名和證書綁定訊息
 
         :param request: 調用ModifyLiveDomainCert所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.ModifyLiveDomainCertRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLiveDomainCertResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.ModifyLiveDomainCertRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.ModifyLiveDomainCertResponse`
 
         """
         try:
@@ -2102,8 +2102,8 @@ class LiveClient(AbstractClient):
         """修改播放鑒權key
 
         :param request: 調用ModifyLivePlayAuthKey所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.ModifyLivePlayAuthKeyRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLivePlayAuthKeyResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.ModifyLivePlayAuthKeyRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.ModifyLivePlayAuthKeyResponse`
 
         """
         try:
@@ -2130,8 +2130,8 @@ class LiveClient(AbstractClient):
         """修改播放域名訊息
 
         :param request: 調用ModifyLivePlayDomain所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.ModifyLivePlayDomainRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLivePlayDomainResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.ModifyLivePlayDomainRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.ModifyLivePlayDomainResponse`
 
         """
         try:
@@ -2158,8 +2158,8 @@ class LiveClient(AbstractClient):
         """修改直播推流鑒權key
 
         :param request: 調用ModifyLivePushAuthKey所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.ModifyLivePushAuthKeyRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLivePushAuthKeyResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.ModifyLivePushAuthKeyRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.ModifyLivePushAuthKeyResponse`
 
         """
         try:
@@ -2186,8 +2186,8 @@ class LiveClient(AbstractClient):
         """修改錄制範本配置
 
         :param request: 調用ModifyLiveRecordTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.ModifyLiveRecordTemplateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLiveRecordTemplateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.ModifyLiveRecordTemplateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.ModifyLiveRecordTemplateResponse`
 
         """
         try:
@@ -2214,8 +2214,8 @@ class LiveClient(AbstractClient):
         """修改截圖範本配置
 
         :param request: 調用ModifyLiveSnapshotTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.ModifyLiveSnapshotTemplateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLiveSnapshotTemplateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.ModifyLiveSnapshotTemplateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.ModifyLiveSnapshotTemplateResponse`
 
         """
         try:
@@ -2242,8 +2242,8 @@ class LiveClient(AbstractClient):
         """修改轉碼範本配置
 
         :param request: 調用ModifyLiveTranscodeTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.ModifyLiveTranscodeTemplateRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.ModifyLiveTranscodeTemplateResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.ModifyLiveTranscodeTemplateRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.ModifyLiveTranscodeTemplateResponse`
 
         """
         try:
@@ -2270,8 +2270,8 @@ class LiveClient(AbstractClient):
         """更新拉流配置
 
         :param request: 調用ModifyPullStreamConfig所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.ModifyPullStreamConfigRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.ModifyPullStreamConfigResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.ModifyPullStreamConfigRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.ModifyPullStreamConfigResponse`
 
         """
         try:
@@ -2298,8 +2298,8 @@ class LiveClient(AbstractClient):
         """修改直播拉流配置狀态
 
         :param request: 調用ModifyPullStreamStatus所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.ModifyPullStreamStatusRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.ModifyPullStreamStatusResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.ModifyPullStreamStatusRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.ModifyPullStreamStatusResponse`
 
         """
         try:
@@ -2326,8 +2326,8 @@ class LiveClient(AbstractClient):
         """恢複延遲播放設置
 
         :param request: 調用ResumeDelayLiveStream所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.ResumeDelayLiveStreamRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.ResumeDelayLiveStreamResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.ResumeDelayLiveStreamRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.ResumeDelayLiveStreamResponse`
 
         """
         try:
@@ -2354,8 +2354,8 @@ class LiveClient(AbstractClient):
         """恢複某條流的推送。
 
         :param request: 調用ResumeLiveStream所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.ResumeLiveStreamRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.ResumeLiveStreamResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.ResumeLiveStreamRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.ResumeLiveStreamResponse`
 
         """
         try:
@@ -2382,8 +2382,8 @@ class LiveClient(AbstractClient):
         """設置浮水印是否啓用
 
         :param request: 調用SetLiveWatermarkStatus所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.SetLiveWatermarkStatusRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.SetLiveWatermarkStatusResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.SetLiveWatermarkStatusRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.SetLiveWatermarkStatusResponse`
 
         """
         try:
@@ -2410,8 +2410,8 @@ class LiveClient(AbstractClient):
         """說明：錄制後的文件存放于點播平台。用戶如需使用錄制功能，需首先自行開通點播賬号并确保賬号可用。錄制文件存放後，相關費用（含儲存以及下行播放流量）按照點播平台計費方式收取，請參考對應文件。
 
         :param request: 調用StopLiveRecord所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.StopLiveRecordRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.StopLiveRecordResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.StopLiveRecordRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.StopLiveRecordResponse`
 
         """
         try:
@@ -2438,8 +2438,8 @@ class LiveClient(AbstractClient):
         """解綁域名證書
 
         :param request: 調用UnBindLiveDomainCert所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.UnBindLiveDomainCertRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.UnBindLiveDomainCertResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.UnBindLiveDomainCertRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.UnBindLiveDomainCertResponse`
 
         """
         try:
@@ -2466,8 +2466,8 @@ class LiveClient(AbstractClient):
         """更新浮水印
 
         :param request: 調用UpdateLiveWatermark所需參數的結構體。
-        :type request: :class:`tencentcloud.live.v20180801.models.UpdateLiveWatermarkRequest`
-        :rtype: :class:`tencentcloud.live.v20180801.models.UpdateLiveWatermarkResponse`
+        :type request: :class:`taifucloudcloud.live.v20180801.models.UpdateLiveWatermarkRequest`
+        :rtype: :class:`taifucloudcloud.live.v20180801.models.UpdateLiveWatermarkResponse`
 
         """
         try:

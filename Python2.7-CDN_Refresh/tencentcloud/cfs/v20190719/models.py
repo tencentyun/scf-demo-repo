@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AvailableProtoStatus(AbstractModel):
@@ -52,7 +52,7 @@ class AvailableRegion(AbstractModel):
         :type RegionStatus: str
         :param Zones: 可用區數組
         :type Zones: list of AvailableZone
-        :param RegionCnName: 區域中文名稱，如“廣州”
+        :param RegionCnName: 區域中文名稱，如“ ”
         :type RegionCnName: str
         """
         self.Region = None
@@ -146,7 +146,7 @@ class CreateCfsFileSystemRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Zone: 可用區名稱，例如ap-beijing-1，請參考 [概覽](https://cloud.tencent.com/document/product/582/13225) 文件中的地域與可用區清單
+        :param Zone: 可用區名稱，例如ap-beijing-1，請參考 [概覽](https://cloud.taifucloud.com/document/product/582/13225) 文件中的地域與可用區清單
         :type Zone: str
         :param NetInterface: 網絡類型，值爲 VPC，BASIC；其中 VPC 爲私有網絡，BASIC 爲基礎網絡
         :type NetInterface: str
@@ -806,7 +806,7 @@ class FileSystemInfo(AbstractModel):
         :param BandwidthResourcePkg: 文件系統綁定的預付費頻寬包（暫未支援）
         :type BandwidthResourcePkg: str
         :param PGroup: 文件系統綁定權限組訊息
-        :type PGroup: :class:`tencentcloud.cfs.v20190719.models.PGroup`
+        :type PGroup: :class:`taifucloudcloud.cfs.v20190719.models.PGroup`
         :param FsName: 用戶自定義名稱
         :type FsName: str
         :param Encrypted: 文件系統是否加密

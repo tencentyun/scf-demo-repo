@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Aspect(AbstractModel):
@@ -64,7 +64,7 @@ class CorrectData(AbstractModel):
         :param Score: 總得分
         :type Score: float
         :param ScoreCat: 各項得分詳情
-        :type ScoreCat: :class:`tencentcloud.ecc.v20181213.models.ScoreCategory`
+        :type ScoreCat: :class:`taifucloudcloud.ecc.v20181213.models.ScoreCategory`
         :param Comment: 綜合評價
         :type Comment: str
         :param SentenceComments: 句子點評
@@ -135,7 +135,7 @@ class ECCResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 整體的批改結果
-        :type Data: :class:`tencentcloud.ecc.v20181213.models.CorrectData`
+        :type Data: :class:`taifucloudcloud.ecc.v20181213.models.CorrectData`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -179,7 +179,7 @@ class EHOCRResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 識别後的作文内容
-        :type Data: :class:`tencentcloud.ecc.v20181213.models.CompostionContext`
+        :type Data: :class:`taifucloudcloud.ecc.v20181213.models.CompostionContext`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -202,13 +202,13 @@ class ScoreCategory(AbstractModel):
     def __init__(self):
         """
         :param Words: 詞匯項
-        :type Words: :class:`tencentcloud.ecc.v20181213.models.Aspect`
+        :type Words: :class:`taifucloudcloud.ecc.v20181213.models.Aspect`
         :param Sentences: 句子項
-        :type Sentences: :class:`tencentcloud.ecc.v20181213.models.Aspect`
+        :type Sentences: :class:`taifucloudcloud.ecc.v20181213.models.Aspect`
         :param Structure: 篇章結構
-        :type Structure: :class:`tencentcloud.ecc.v20181213.models.Aspect`
+        :type Structure: :class:`taifucloudcloud.ecc.v20181213.models.Aspect`
         :param Content: 内容
-        :type Content: :class:`tencentcloud.ecc.v20181213.models.Aspect`
+        :type Content: :class:`taifucloudcloud.ecc.v20181213.models.Aspect`
         """
         self.Words = None
         self.Sentences = None
@@ -241,7 +241,7 @@ class SentenceCom(AbstractModel):
         :param Suggestions: 點評内容
         :type Suggestions: list of SentenceSuggest
         :param Sentence: 點評的句子訊息
-        :type Sentence: :class:`tencentcloud.ecc.v20181213.models.SentenceItem`
+        :type Sentence: :class:`taifucloudcloud.ecc.v20181213.models.SentenceItem`
         """
         self.Suggestions = None
         self.Sentence = None

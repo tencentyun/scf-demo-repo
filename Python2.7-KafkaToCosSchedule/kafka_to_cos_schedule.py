@@ -5,10 +5,10 @@ import json
 import time
 import logging
 from multiprocessing import Process
-from tencentcloud.ckafka.v20190819 import ckafka_client, models as ckafka_models
-from tencentcloud.common import credential
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.scf.v20180416 import scf_client, models as scf_models
+from taifucloudcloud.ckafka.v20190819 import ckafka_client, models as ckafka_models
+from taifucloudcloud.common import credential
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.scf.v20180416 import scf_client, models as scf_models
 
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)

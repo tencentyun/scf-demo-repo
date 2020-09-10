@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CreateAsrVocabRequest(AbstractModel):
@@ -143,7 +143,7 @@ class CreateRecTaskResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 錄音文件識别的請求返回結果，包含結果查詢需要的TaskId
-        :type Data: :class:`tencentcloud.asr.v20190614.models.Task`
+        :type Data: :class:`taifucloudcloud.asr.v20190614.models.Task`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -217,7 +217,7 @@ class DescribeTaskStatusResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 錄音文件識别的請求返回結果。
-        :type Data: :class:`tencentcloud.asr.v20190614.models.TaskStatus`
+        :type Data: :class:`taifucloudcloud.asr.v20190614.models.TaskStatus`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

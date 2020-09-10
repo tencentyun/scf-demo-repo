@@ -18,6 +18,6 @@ from QcloudApi.modules import base
 class Emr(base.Base):
     """Elastic Map Reduce.
 
-    document: https://cloud.tencent.com/document/product/589
+    document: https://cloud.taifucloud.com/document/product/589
     """
     requestHost = 'emr.api.qcloud.com'

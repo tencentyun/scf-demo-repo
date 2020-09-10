@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AppInfo(AbstractModel):
@@ -249,7 +249,7 @@ class DescribeAppResponse(AbstractModel):
         """
         :param Data: 應用訊息詳情
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.ic.v20190307.models.AppInfo`
+        :type Data: :class:`taifucloudcloud.ic.v20190307.models.AppInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -294,7 +294,7 @@ class DescribeCardResponse(AbstractModel):
         """
         :param Data: 卡片詳細訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.ic.v20190307.models.CardInfo`
+        :type Data: :class:`taifucloudcloud.ic.v20190307.models.CardInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -342,7 +342,7 @@ class DescribeCardsResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 卡片清單訊息
-        :type Data: :class:`tencentcloud.ic.v20190307.models.CardList`
+        :type Data: :class:`taifucloudcloud.ic.v20190307.models.CardList`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -443,7 +443,7 @@ class SendSmsResponse(AbstractModel):
         """
         :param Data: 簡訊流水訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.ic.v20190307.models.SmsSid`
+        :type Data: :class:`taifucloudcloud.ic.v20190307.models.SmsSid`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

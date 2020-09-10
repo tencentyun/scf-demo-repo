@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.partners.v20180321 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.partners.v20180321 import models
 
 
 class PartnersClient(AbstractClient):
     _apiVersion = '2018-03-21'
-    _endpoint = 'partners.tencentcloudapi.com'
+    _endpoint = 'partners.taifucloudcloudapi.com'
 
 
     def AgentPayDeals(self, request):
-        """代理商支付訂單介面，支援自付/代付
+        """ 支付訂單介面，支援自付/代付
 
         :param request: 調用AgentPayDeals所需參數的結構體。
-        :type request: :class:`tencentcloud.partners.v20180321.models.AgentPayDealsRequest`
-        :rtype: :class:`tencentcloud.partners.v20180321.models.AgentPayDealsResponse`
+        :type request: :class:`taifucloudcloud.partners.v20180321.models.AgentPayDealsRequest`
+        :rtype: :class:`taifucloudcloud.partners.v20180321.models.AgentPayDealsResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class PartnersClient(AbstractClient):
         """爲合作夥伴提供轉賬給客戶能力。僅支援合作夥伴爲自己名下客戶轉賬。
 
         :param request: 調用AgentTransferMoney所需參數的結構體。
-        :type request: :class:`tencentcloud.partners.v20180321.models.AgentTransferMoneyRequest`
-        :rtype: :class:`tencentcloud.partners.v20180321.models.AgentTransferMoneyResponse`
+        :type request: :class:`taifucloudcloud.partners.v20180321.models.AgentTransferMoneyRequest`
+        :rtype: :class:`taifucloudcloud.partners.v20180321.models.AgentTransferMoneyResponse`
 
         """
         try:
@@ -82,11 +82,11 @@ class PartnersClient(AbstractClient):
 
 
     def AuditApplyClient(self, request):
-        """代理商可以審核其名下申請中代客
+        """ 可以審核其名下申請中代客
 
         :param request: 調用AuditApplyClient所需參數的結構體。
-        :type request: :class:`tencentcloud.partners.v20180321.models.AuditApplyClientRequest`
-        :rtype: :class:`tencentcloud.partners.v20180321.models.AuditApplyClientResponse`
+        :type request: :class:`taifucloudcloud.partners.v20180321.models.AuditApplyClientRequest`
+        :rtype: :class:`taifucloudcloud.partners.v20180321.models.AuditApplyClientResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class PartnersClient(AbstractClient):
         """查詢已審核客戶清單
 
         :param request: 調用DescribeAgentAuditedClients所需參數的結構體。
-        :type request: :class:`tencentcloud.partners.v20180321.models.DescribeAgentAuditedClientsRequest`
-        :rtype: :class:`tencentcloud.partners.v20180321.models.DescribeAgentAuditedClientsResponse`
+        :type request: :class:`taifucloudcloud.partners.v20180321.models.DescribeAgentAuditedClientsRequest`
+        :rtype: :class:`taifucloudcloud.partners.v20180321.models.DescribeAgentAuditedClientsResponse`
 
         """
         try:
@@ -138,11 +138,11 @@ class PartnersClient(AbstractClient):
 
 
     def DescribeAgentBills(self, request):
-        """代理商可查詢自己及名下代客所有業務明細
+        """ 可查詢自己及名下代客所有業務明細
 
         :param request: 調用DescribeAgentBills所需參數的結構體。
-        :type request: :class:`tencentcloud.partners.v20180321.models.DescribeAgentBillsRequest`
-        :rtype: :class:`tencentcloud.partners.v20180321.models.DescribeAgentBillsResponse`
+        :type request: :class:`taifucloudcloud.partners.v20180321.models.DescribeAgentBillsRequest`
+        :rtype: :class:`taifucloudcloud.partners.v20180321.models.DescribeAgentBillsResponse`
 
         """
         try:
@@ -166,11 +166,11 @@ class PartnersClient(AbstractClient):
 
 
     def DescribeAgentClients(self, request):
-        """代理商可查詢自己名下待審核客戶清單
+        """ 可查詢自己名下待審核客戶清單
 
         :param request: 調用DescribeAgentClients所需參數的結構體。
-        :type request: :class:`tencentcloud.partners.v20180321.models.DescribeAgentClientsRequest`
-        :rtype: :class:`tencentcloud.partners.v20180321.models.DescribeAgentClientsResponse`
+        :type request: :class:`taifucloudcloud.partners.v20180321.models.DescribeAgentClientsRequest`
+        :rtype: :class:`taifucloudcloud.partners.v20180321.models.DescribeAgentClientsResponse`
 
         """
         try:
@@ -194,11 +194,11 @@ class PartnersClient(AbstractClient):
 
 
     def DescribeAgentDealsCache(self, request):
-        """供超大型代理商（代客數量>=3000 ）拉取快取的全量客戶訂單。
+        """供超大型 （代客數量>=3000 ）拉取快取的全量客戶訂單。
 
         :param request: 調用DescribeAgentDealsCache所需參數的結構體。
-        :type request: :class:`tencentcloud.partners.v20180321.models.DescribeAgentDealsCacheRequest`
-        :rtype: :class:`tencentcloud.partners.v20180321.models.DescribeAgentDealsCacheResponse`
+        :type request: :class:`taifucloudcloud.partners.v20180321.models.DescribeAgentDealsCacheRequest`
+        :rtype: :class:`taifucloudcloud.partners.v20180321.models.DescribeAgentDealsCacheResponse`
 
         """
         try:
@@ -222,11 +222,11 @@ class PartnersClient(AbstractClient):
 
 
     def DescribeAgentPayDeals(self, request):
-        """可以查詢代理商代付的所有訂單
+        """可以查詢 代付的所有訂單
 
         :param request: 調用DescribeAgentPayDeals所需參數的結構體。
-        :type request: :class:`tencentcloud.partners.v20180321.models.DescribeAgentPayDealsRequest`
-        :rtype: :class:`tencentcloud.partners.v20180321.models.DescribeAgentPayDealsResponse`
+        :type request: :class:`taifucloudcloud.partners.v20180321.models.DescribeAgentPayDealsRequest`
+        :rtype: :class:`taifucloudcloud.partners.v20180321.models.DescribeAgentPayDealsResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class PartnersClient(AbstractClient):
         """爲合作夥伴提供查詢客戶餘額能力。調用者必須是合作夥伴，只能查詢自己名下客戶餘額
 
         :param request: 調用DescribeClientBalance所需參數的結構體。
-        :type request: :class:`tencentcloud.partners.v20180321.models.DescribeClientBalanceRequest`
-        :rtype: :class:`tencentcloud.partners.v20180321.models.DescribeClientBalanceResponse`
+        :type request: :class:`taifucloudcloud.partners.v20180321.models.DescribeClientBalanceRequest`
+        :rtype: :class:`taifucloudcloud.partners.v20180321.models.DescribeClientBalanceResponse`
 
         """
         try:
@@ -278,11 +278,11 @@ class PartnersClient(AbstractClient):
 
 
     def DescribeRebateInfos(self, request):
-        """代理商可查詢自己名下全部返傭訊息
+        """ 可查詢自己名下全部返傭訊息
 
         :param request: 調用DescribeRebateInfos所需參數的結構體。
-        :type request: :class:`tencentcloud.partners.v20180321.models.DescribeRebateInfosRequest`
-        :rtype: :class:`tencentcloud.partners.v20180321.models.DescribeRebateInfosResponse`
+        :type request: :class:`taifucloudcloud.partners.v20180321.models.DescribeRebateInfosRequest`
+        :rtype: :class:`taifucloudcloud.partners.v20180321.models.DescribeRebateInfosResponse`
 
         """
         try:
@@ -306,11 +306,11 @@ class PartnersClient(AbstractClient):
 
 
     def DescribeSalesmans(self, request):
-        """代理商查詢名下業務員清單訊息
+        """ 查詢名下業務員清單訊息
 
         :param request: 調用DescribeSalesmans所需參數的結構體。
-        :type request: :class:`tencentcloud.partners.v20180321.models.DescribeSalesmansRequest`
-        :rtype: :class:`tencentcloud.partners.v20180321.models.DescribeSalesmansResponse`
+        :type request: :class:`taifucloudcloud.partners.v20180321.models.DescribeSalesmansRequest`
+        :rtype: :class:`taifucloudcloud.partners.v20180321.models.DescribeSalesmansResponse`
 
         """
         try:
@@ -334,11 +334,11 @@ class PartnersClient(AbstractClient):
 
 
     def ModifyClientRemark(self, request):
-        """代理商可以對名下客戶添加備注、修改備注
+        """ 可以對名下客戶添加備注、修改備注
 
         :param request: 調用ModifyClientRemark所需參數的結構體。
-        :type request: :class:`tencentcloud.partners.v20180321.models.ModifyClientRemarkRequest`
-        :rtype: :class:`tencentcloud.partners.v20180321.models.ModifyClientRemarkResponse`
+        :type request: :class:`taifucloudcloud.partners.v20180321.models.ModifyClientRemarkRequest`
+        :rtype: :class:`taifucloudcloud.partners.v20180321.models.ModifyClientRemarkResponse`
 
         """
         try:

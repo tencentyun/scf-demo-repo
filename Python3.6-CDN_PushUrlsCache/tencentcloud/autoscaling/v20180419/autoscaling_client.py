@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.autoscaling.v20180419 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.autoscaling.v20180419 import models
 
 
 class AutoscalingClient(AbstractClient):
     _apiVersion = '2018-04-19'
-    _endpoint = 'as.tencentcloudapi.com'
+    _endpoint = 'as.taifucloudcloudapi.com'
 
 
     def AttachInstances(self, request):
         """本介面（AttachInstances）用于将 CVM 實例添加到伸縮組。
 
         :param request: Request instance for AttachInstances.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.AttachInstancesRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.AttachInstancesResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.AttachInstancesRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.AttachInstancesResponse`
 
         """
         try:
@@ -59,8 +59,8 @@ class AutoscalingClient(AbstractClient):
         * 用戶通過調用本介面，指定一個具體的生命週期挂鈎的結果（“CONITNUE”或者“ABANDON”）。如果一直不調用本介面，則生命週期挂鈎會在超時後按照“DefaultResult”進行處理。
 
         :param request: Request instance for CompleteLifecycleAction.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.CompleteLifecycleActionRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CompleteLifecycleActionResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.CompleteLifecycleActionRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.CompleteLifecycleActionResponse`
 
         """
         try:
@@ -87,8 +87,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（CreateAutoScalingGroup）用于創建伸縮組
 
         :param request: Request instance for CreateAutoScalingGroup.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.CreateAutoScalingGroupRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CreateAutoScalingGroupResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.CreateAutoScalingGroupRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.CreateAutoScalingGroupResponse`
 
         """
         try:
@@ -117,8 +117,8 @@ class AutoscalingClient(AbstractClient):
         說明：根據按包年包月計費的實例所創建的伸縮組，其擴容的實例爲按量計費實例。
 
         :param request: Request instance for CreateAutoScalingGroupFromInstance.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.CreateAutoScalingGroupFromInstanceRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CreateAutoScalingGroupFromInstanceResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.CreateAutoScalingGroupFromInstanceRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.CreateAutoScalingGroupFromInstanceResponse`
 
         """
         try:
@@ -146,11 +146,11 @@ class AutoscalingClient(AbstractClient):
 
         * 啓動配置，可以通過 `ModifyLaunchConfigurationAttributes` 修改少量欄位。如需使用新的啓動配置，建議重新創建啓動配置。
 
-        * 每個項目最多只能創建20個啓動配置，詳見[使用限制](https://cloud.tencent.com/document/product/377/3120)。
+        * 每個項目最多只能創建20個啓動配置，詳見[使用限制](https://cloud.taifucloud.com/document/product/377/3120)。
 
         :param request: Request instance for CreateLaunchConfiguration.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.CreateLaunchConfigurationRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CreateLaunchConfigurationResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.CreateLaunchConfigurationRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.CreateLaunchConfigurationResponse`
 
         """
         try:
@@ -195,8 +195,8 @@ class AutoscalingClient(AbstractClient):
         ```
 
         :param request: Request instance for CreateLifecycleHook.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.CreateLifecycleHookRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CreateLifecycleHookResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.CreateLifecycleHookRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.CreateLifecycleHookResponse`
 
         """
         try:
@@ -223,8 +223,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（CreateNotificationConfiguration）用于創建通知。
 
         :param request: Request instance for CreateNotificationConfiguration.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.CreateNotificationConfigurationRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CreateNotificationConfigurationResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.CreateNotificationConfigurationRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.CreateNotificationConfigurationResponse`
 
         """
         try:
@@ -251,8 +251,8 @@ class AutoscalingClient(AbstractClient):
         """本介面 (CreatePaiInstance) 用于創建一個指定配置的PAI實例。
 
         :param request: Request instance for CreatePaiInstance.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.CreatePaiInstanceRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CreatePaiInstanceResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.CreatePaiInstanceRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.CreatePaiInstanceResponse`
 
         """
         try:
@@ -279,8 +279,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（CreateScalingPolicy）用于創建告警觸發策略。
 
         :param request: Request instance for CreateScalingPolicy.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.CreateScalingPolicyRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CreateScalingPolicyResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.CreateScalingPolicyRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.CreateScalingPolicyResponse`
 
         """
         try:
@@ -307,8 +307,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（CreateScheduledAction）用于創建定時任務。
 
         :param request: Request instance for CreateScheduledAction.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.CreateScheduledActionRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.CreateScheduledActionResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.CreateScheduledActionRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.CreateScheduledActionResponse`
 
         """
         try:
@@ -335,8 +335,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（DeleteAutoScalingGroup）用于删除指定伸縮組，删除前提是伸縮組内無實例且當前未在執行伸縮活動。
 
         :param request: Request instance for DeleteAutoScalingGroup.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DeleteAutoScalingGroupRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DeleteAutoScalingGroupResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DeleteAutoScalingGroupRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DeleteAutoScalingGroupResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class AutoscalingClient(AbstractClient):
         * 若啓動配置在伸縮組中屬于生效狀态，則該啓動配置不允許删除。
 
         :param request: Request instance for DeleteLaunchConfiguration.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DeleteLaunchConfigurationRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DeleteLaunchConfigurationResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DeleteLaunchConfigurationRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DeleteLaunchConfigurationResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（DeleteLifecycleHook）用于删除生命週期挂鈎。
 
         :param request: Request instance for DeleteLifecycleHook.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DeleteLifecycleHookRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DeleteLifecycleHookResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DeleteLifecycleHookRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DeleteLifecycleHookResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（DeleteNotificationConfiguration）用于删除特定的通知。
 
         :param request: Request instance for DeleteNotificationConfiguration.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DeleteNotificationConfigurationRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DeleteNotificationConfigurationResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DeleteNotificationConfigurationRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DeleteNotificationConfigurationResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（DeleteScalingPolicy）用于删除告警觸發策略。
 
         :param request: Request instance for DeleteScalingPolicy.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DeleteScalingPolicyRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DeleteScalingPolicyResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DeleteScalingPolicyRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DeleteScalingPolicyResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（DeleteScheduledAction）用于删除特定的定時任務。
 
         :param request: Request instance for DeleteScheduledAction.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DeleteScheduledActionRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DeleteScheduledActionResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DeleteScheduledActionRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DeleteScheduledActionResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（DescribeAccountLimits）用于查詢用戶帳戶在彈性伸縮中的資源限制。
 
         :param request: Request instance for DescribeAccountLimits.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAccountLimitsRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAccountLimitsResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeAccountLimitsRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeAccountLimitsResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（DescribeAutoScalingActivities）用于查詢伸縮組的伸縮活動記錄。
 
         :param request: Request instance for DescribeAutoScalingActivities.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAutoScalingActivitiesRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAutoScalingActivitiesResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeAutoScalingActivitiesRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeAutoScalingActivitiesResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（DescribeAutoScalingGroupLastActivities）用于查詢伸縮組的最新一次伸縮活動記錄。
 
         :param request: Request instance for DescribeAutoScalingGroupLastActivities.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAutoScalingGroupLastActivitiesRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAutoScalingGroupLastActivitiesResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeAutoScalingGroupLastActivitiesRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeAutoScalingGroupLastActivitiesResponse`
 
         """
         try:
@@ -592,8 +592,8 @@ class AutoscalingClient(AbstractClient):
         * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的伸縮組。
 
         :param request: Request instance for DescribeAutoScalingGroups.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAutoScalingGroupsRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAutoScalingGroupsResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeAutoScalingGroupsRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeAutoScalingGroupsResponse`
 
         """
         try:
@@ -623,8 +623,8 @@ class AutoscalingClient(AbstractClient):
         * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的實例。
 
         :param request: Request instance for DescribeAutoScalingInstances.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAutoScalingInstancesRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeAutoScalingInstancesResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeAutoScalingInstancesRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeAutoScalingInstancesResponse`
 
         """
         try:
@@ -654,8 +654,8 @@ class AutoscalingClient(AbstractClient):
         * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的啓動配置。
 
         :param request: Request instance for DescribeLaunchConfigurations.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeLaunchConfigurationsRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeLaunchConfigurationsResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeLaunchConfigurationsRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeLaunchConfigurationsResponse`
 
         """
         try:
@@ -685,8 +685,8 @@ class AutoscalingClient(AbstractClient):
         * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的生命週期挂鈎。
 
         :param request: Request instance for DescribeLifecycleHooks.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeLifecycleHooksRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeLifecycleHooksResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeLifecycleHooksRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeLifecycleHooksResponse`
 
         """
         try:
@@ -716,8 +716,8 @@ class AutoscalingClient(AbstractClient):
         如果參數爲空，返回當前用戶一定數量（Limit所指定的數量，預設爲20）的通知。
 
         :param request: Request instance for DescribeNotificationConfigurations.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeNotificationConfigurationsRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeNotificationConfigurationsResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeNotificationConfigurationsRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeNotificationConfigurationsResponse`
 
         """
         try:
@@ -747,8 +747,8 @@ class AutoscalingClient(AbstractClient):
         * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的PAI實例。
 
         :param request: Request instance for DescribePaiInstances.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribePaiInstancesRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribePaiInstancesResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribePaiInstancesRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribePaiInstancesResponse`
 
         """
         try:
@@ -775,8 +775,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（DescribeScalingPolicies）用于查詢告警觸發策略。
 
         :param request: Request instance for DescribeScalingPolicies.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeScalingPoliciesRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeScalingPoliciesResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeScalingPoliciesRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeScalingPoliciesResponse`
 
         """
         try:
@@ -806,8 +806,8 @@ class AutoscalingClient(AbstractClient):
         * 如果參數爲空，返回當前用戶一定數量（Limit所指定的數量，預設爲20）的定時任務。
 
         :param request: Request instance for DescribeScheduledActions.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DescribeScheduledActionsRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DescribeScheduledActionsResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeScheduledActionsRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DescribeScheduledActionsResponse`
 
         """
         try:
@@ -834,8 +834,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（DetachInstances）用于從伸縮組移出 CVM 實例，本介面不會銷毀實例。
 
         :param request: Request instance for DetachInstances.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DetachInstancesRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DetachInstancesResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DetachInstancesRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DetachInstancesResponse`
 
         """
         try:
@@ -862,8 +862,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（DisableAutoScalingGroup）用于停用指定伸縮組。
 
         :param request: Request instance for DisableAutoScalingGroup.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.DisableAutoScalingGroupRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.DisableAutoScalingGroupResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.DisableAutoScalingGroupRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.DisableAutoScalingGroupResponse`
 
         """
         try:
@@ -890,8 +890,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（EnableAutoScalingGroup）用于啓用指定伸縮組。
 
         :param request: Request instance for EnableAutoScalingGroup.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.EnableAutoScalingGroupRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.EnableAutoScalingGroupResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.EnableAutoScalingGroupRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.EnableAutoScalingGroupResponse`
 
         """
         try:
@@ -921,8 +921,8 @@ class AutoscalingClient(AbstractClient):
         * 伸縮策略所屬伸縮組處于伸縮活動時，會拒絕執行伸縮策略。
 
         :param request: Request instance for ExecuteScalingPolicy.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.ExecuteScalingPolicyRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.ExecuteScalingPolicyResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.ExecuteScalingPolicyRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.ExecuteScalingPolicyResponse`
 
         """
         try:
@@ -949,8 +949,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（ModifyAutoScalingGroup）用于修改伸縮組。
 
         :param request: Request instance for ModifyAutoScalingGroup.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.ModifyAutoScalingGroupRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.ModifyAutoScalingGroupResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.ModifyAutoScalingGroupRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.ModifyAutoScalingGroupResponse`
 
         """
         try:
@@ -977,8 +977,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（ModifyDesiredCapacity）用于修改指定伸縮組的期望實例數
 
         :param request: Request instance for ModifyDesiredCapacity.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.ModifyDesiredCapacityRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.ModifyDesiredCapacityResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.ModifyDesiredCapacityRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.ModifyDesiredCapacityResponse`
 
         """
         try:
@@ -1008,8 +1008,8 @@ class AutoscalingClient(AbstractClient):
         * 本介面支援修改部分簡單類型。
 
         :param request: Request instance for ModifyLaunchConfigurationAttributes.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.ModifyLaunchConfigurationAttributesRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.ModifyLaunchConfigurationAttributesResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.ModifyLaunchConfigurationAttributesRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.ModifyLaunchConfigurationAttributesResponse`
 
         """
         try:
@@ -1040,8 +1040,8 @@ class AutoscalingClient(AbstractClient):
         * 本介面會立即修改伸縮組的負載均衡器，并生成一個伸縮活動，異步修改存量實例的負載均衡器。
 
         :param request: Request instance for ModifyLoadBalancers.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.ModifyLoadBalancersRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.ModifyLoadBalancersResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.ModifyLoadBalancersRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.ModifyLoadBalancersResponse`
 
         """
         try:
@@ -1068,8 +1068,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（ModifyNotificationConfiguration）用于修改通知。
 
         :param request: Request instance for ModifyNotificationConfiguration.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.ModifyNotificationConfigurationRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.ModifyNotificationConfigurationResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.ModifyNotificationConfigurationRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.ModifyNotificationConfigurationResponse`
 
         """
         try:
@@ -1096,8 +1096,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（ModifyScalingPolicy）用于修改告警觸發策略。
 
         :param request: Request instance for ModifyScalingPolicy.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.ModifyScalingPolicyRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.ModifyScalingPolicyResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.ModifyScalingPolicyRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.ModifyScalingPolicyResponse`
 
         """
         try:
@@ -1124,8 +1124,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（ModifyScheduledAction）用于修改定時任務。
 
         :param request: Request instance for ModifyScheduledAction.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.ModifyScheduledActionRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.ModifyScheduledActionResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.ModifyScheduledActionRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.ModifyScheduledActionResponse`
 
         """
         try:
@@ -1152,8 +1152,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（PreviewPaiDomainName）用于預覽PAI實例域名。
 
         :param request: Request instance for PreviewPaiDomainName.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.PreviewPaiDomainNameRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.PreviewPaiDomainNameResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.PreviewPaiDomainNameRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.PreviewPaiDomainNameResponse`
 
         """
         try:
@@ -1180,8 +1180,8 @@ class AutoscalingClient(AbstractClient):
         """本介面（RemoveInstances）用于從伸縮組删除 CVM 實例。根據當前的産品邏輯，如果實例由彈性伸縮自動創建，則實例會被銷毀；如果實例系創建後加入伸縮組的，則會從伸縮組中移除，保留實例。
 
         :param request: Request instance for RemoveInstances.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.RemoveInstancesRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.RemoveInstancesResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.RemoveInstancesRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.RemoveInstancesResponse`
 
         """
         try:
@@ -1209,8 +1209,8 @@ class AutoscalingClient(AbstractClient):
         子機設置爲移除保護之後，當發生不健康替換、報警策略、期望值變更等觸發縮容時，将不對此子機縮容操作。
 
         :param request: Request instance for SetInstancesProtection.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.SetInstancesProtectionRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.SetInstancesProtectionResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.SetInstancesProtectionRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.SetInstancesProtectionResponse`
 
         """
         try:
@@ -1239,8 +1239,8 @@ class AutoscalingClient(AbstractClient):
         * 本介面支援批次操作，每次請求開機實例的上限爲100
 
         :param request: Request instance for StartAutoScalingInstances.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.StartAutoScalingInstancesRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.StartAutoScalingInstancesResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.StartAutoScalingInstancesRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.StartAutoScalingInstancesResponse`
 
         """
         try:
@@ -1267,12 +1267,12 @@ class AutoscalingClient(AbstractClient):
         """本介面（StopAutoScalingInstances）用于關閉伸縮組内 CVM 實例。
         * 關機方式采用`SOFT_FIRST`方式，表示在正常關閉失敗後進行強制關閉
         * 關閉`IN_SERVICE`狀态的實例，會減少期望實例數，期望實例數不可低于設置的最小值
-        * 使用`STOP_CHARGING`選項關機，待關機的實例需要滿足[關機不收費條件](https://cloud.tencent.com/document/product/213/19918)
+        * 使用`STOP_CHARGING`選項關機，待關機的實例需要滿足[關機不收費條件](https://cloud.taifucloud.com/document/product/213/19918)
         * 本介面支援批次操作，每次請求關機實例的上限爲100
 
         :param request: Request instance for StopAutoScalingInstances.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.StopAutoScalingInstancesRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.StopAutoScalingInstancesResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.StopAutoScalingInstancesRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.StopAutoScalingInstancesResponse`
 
         """
         try:
@@ -1302,8 +1302,8 @@ class AutoscalingClient(AbstractClient):
         * 升級修改啓動配置後，已經使用該啓動配置擴容的存量實例不會發生變更，此後使用該啓動配置的新增實例會按照新的配置進行擴容。
 
         :param request: Request instance for UpgradeLaunchConfiguration.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.UpgradeLaunchConfigurationRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.UpgradeLaunchConfigurationResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.UpgradeLaunchConfigurationRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.UpgradeLaunchConfigurationResponse`
 
         """
         try:
@@ -1332,8 +1332,8 @@ class AutoscalingClient(AbstractClient):
         * 本介面用于升級生命週期挂鈎，采用“完全函蓋”風格，無論之前參數如何，統一按照介面參數設置爲新的配置。對于非必填欄位，不填寫則按照預設值賦值。
 
         :param request: Request instance for UpgradeLifecycleHook.
-        :type request: :class:`tencentcloud.autoscaling.v20180419.models.UpgradeLifecycleHookRequest`
-        :rtype: :class:`tencentcloud.autoscaling.v20180419.models.UpgradeLifecycleHookResponse`
+        :type request: :class:`taifucloudcloud.autoscaling.v20180419.models.UpgradeLifecycleHookRequest`
+        :rtype: :class:`taifucloudcloud.autoscaling.v20180419.models.UpgradeLifecycleHookResponse`
 
         """
         try:

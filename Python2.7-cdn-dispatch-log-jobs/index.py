@@ -25,9 +25,9 @@ import urlparse
 import logging
 import datetime
 
-from tencentcloud.common import credential
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.scf.v20180416 import scf_client,models
+from taifucloudcloud.common import credential
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.scf.v20180416 import scf_client,models
 from QcloudApi.qcloudapi import QcloudApi
 
 class Job:

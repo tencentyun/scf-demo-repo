@@ -1,7 +1,7 @@
 "use strict";
 /**************************************************
 Node8.9-WebsocketRegister
-Reference: https://cloud.tencent.com/document/product/583/32553
+Reference: https://cloud.taifucloud.com/document/product/583/32553
 ***************************************************/
 
 // The url of API gateway's send back host, API閘道的反向推送連結

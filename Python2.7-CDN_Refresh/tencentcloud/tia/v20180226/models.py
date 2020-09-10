@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CreateJobRequest(AbstractModel):
@@ -25,27 +25,27 @@ class CreateJobRequest(AbstractModel):
         """
         :param Name: 任務名稱
         :type Name: str
-        :param Cluster: 運作任務的集群，詳見 [使用集群](https://cloud.tencent.com/document/product/851/17317)
+        :param Cluster: 運作任務的集群，詳見 [使用集群](https://cloud.taifucloud.com/document/product/851/17317)
         :type Cluster: str
-        :param RuntimeVersion: 運作任務的環境，詳見 [運作環境](https://cloud.tencent.com/document/product/851/17320)
+        :param RuntimeVersion: 運作任務的環境，詳見 [運作環境](https://cloud.taifucloud.com/document/product/851/17320)
         :type RuntimeVersion: str
-        :param PackageDir: 掛載的路徑，支援 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制環境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支援
+        :param PackageDir: 掛載的路徑，支援 NFS，[CFS](https://cloud.taifucloud.com/product/cfs) 和 [COS](https://cloud.taifucloud.com/product/cos)，其中 COS 只在 [TI-A 定制環境](https://cloud.taifucloud.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支援
         :type PackageDir: list of str
         :param Command: 任務啓動命令
         :type Command: list of str
         :param Args: 任務啓動參數
         :type Args: list of str
-        :param ScaleTier: 運作任務的配置訊息，詳見 [訓練規模](https://cloud.tencent.com/document/product/851/17319)
+        :param ScaleTier: 運作任務的配置訊息，詳見 [訓練規模](https://cloud.taifucloud.com/document/product/851/17319)
         :type ScaleTier: str
-        :param MasterType: Master 機器類型，ScaleTier 取值爲 `CUSTOM` 時必填，詳見 [訓練規模](https://cloud.tencent.com/document/product/851/17319)
+        :param MasterType: Master 機器類型，ScaleTier 取值爲 `CUSTOM` 時必填，詳見 [訓練規模](https://cloud.taifucloud.com/document/product/851/17319)
         :type MasterType: str
-        :param WorkerType: Worker 機器類型，ScaleTier 取值爲 `CUSTOM` 時必填，詳見 [訓練規模](https://cloud.tencent.com/document/product/851/17319)
+        :param WorkerType: Worker 機器類型，ScaleTier 取值爲 `CUSTOM` 時必填，詳見 [訓練規模](https://cloud.taifucloud.com/document/product/851/17319)
         :type WorkerType: str
-        :param ParameterServerType: Parameter server 機器類型，ScaleTier 取值爲 `CUSTOM` 時必填,詳見 [訓練規模](https://cloud.tencent.com/document/product/851/17319)
+        :param ParameterServerType: Parameter server 機器類型，ScaleTier 取值爲 `CUSTOM` 時必填,詳見 [訓練規模](https://cloud.taifucloud.com/document/product/851/17319)
         :type ParameterServerType: str
-        :param WorkerCount: Worker 機器數量，ScaleTier 取值爲 `CUSTOM` 時必填,詳見 [訓練規模](https://cloud.tencent.com/document/product/851/17319)
+        :param WorkerCount: Worker 機器數量，ScaleTier 取值爲 `CUSTOM` 時必填,詳見 [訓練規模](https://cloud.taifucloud.com/document/product/851/17319)
         :type WorkerCount: int
-        :param ParameterServerCount: Parameter server 機器數量，ScaleTier 取值爲 `CUSTOM` 時必填,詳見 [訓練規模](https://cloud.tencent.com/document/product/851/17319)
+        :param ParameterServerCount: Parameter server 機器數量，ScaleTier 取值爲 `CUSTOM` 時必填,詳見 [訓練規模](https://cloud.taifucloud.com/document/product/851/17319)
         :type ParameterServerCount: int
         :param Debug: 啓動 debug 模式，預設爲 false
         :type Debug: bool
@@ -93,7 +93,7 @@ class CreateJobResponse(AbstractModel):
     def __init__(self):
         """
         :param Job: 訓練任務訊息
-        :type Job: :class:`tencentcloud.tia.v20180226.models.Job`
+        :type Job: :class:`taifucloudcloud.tia.v20180226.models.Job`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -123,15 +123,15 @@ class CreateModelRequest(AbstractModel):
         :type Description: str
         :param Cluster: 佈署目标集群的名稱，`集群模式` 必填
         :type Cluster: str
-        :param RuntimeVersion: 運作環境映像的标簽，詳見 [Serving 環境](https://cloud.tencent.com/document/product/851/17320#serving-.E7.8E.AF.E5.A2.83)
+        :param RuntimeVersion: 運作環境映像的标簽，詳見 [Serving 環境](https://cloud.taifucloud.com/document/product/851/17320#serving-.E7.8E.AF.E5.A2.83)
         :type RuntimeVersion: str
         :param Replicas: 要佈署的模型副本數目，`集群模式` 選填
         :type Replicas: int
         :param Expose: 暴露外網或内網，預設暴露外網，`集群模式` 選填
         :type Expose: str
-        :param ServType: 佈署模式，取值 `serverless` 即爲 `無服務器模式`，否則爲 `集群模式` 下服務的運作規模，形如 `2U4G1P`，詳見 [自定義的訓練規模](https://cloud.tencent.com/document/product/851/17319#.E8.87.AA.E5.AE.9A.E4.B9.89.E7.9A.84.E8.AE.AD.E7.BB.83.E8.A7.84.E6.A8.A1)
+        :param ServType: 佈署模式，取值 `serverless` 即爲 `無服務器模式`，否則爲 `集群模式` 下服務的運作規模，形如 `2U4G1P`，詳見 [自定義的訓練規模](https://cloud.taifucloud.com/document/product/851/17319#.E8.87.AA.E5.AE.9A.E4.B9.89.E7.9A.84.E8.AE.AD.E7.BB.83.E8.A7.84.E6.A8.A1)
         :type ServType: str
-        :param RuntimeConf: `無服務器模式` 可選的其他配置訊息，詳見 [利用無服務器函數佈署](https://cloud.tencent.com/document/product/851/17049#.E5.88.A9.E7.94.A8.E6.97.A0.E6.9C.8D.E5.8A.A1.E5.99.A8.E5.87.BD.E6.95.B0.E9.83.A8.E7.BD.B2)
+        :param RuntimeConf: `無服務器模式` 可選的其他配置訊息，詳見 [利用無服務器函數佈署](https://cloud.taifucloud.com/document/product/851/17049#.E5.88.A9.E7.94.A8.E6.97.A0.E6.9C.8D.E5.8A.A1.E5.99.A8.E5.87.BD.E6.95.B0.E9.83.A8.E7.BD.B2)
         :type RuntimeConf: list of str
         """
         self.Name = None
@@ -165,7 +165,7 @@ class CreateModelResponse(AbstractModel):
     def __init__(self):
         """
         :param Model: 模型的詳細訊息
-        :type Model: :class:`tencentcloud.tia.v20180226.models.Model`
+        :type Model: :class:`taifucloudcloud.tia.v20180226.models.Model`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -289,7 +289,7 @@ class DescribeJobResponse(AbstractModel):
     def __init__(self):
         """
         :param Job: 訓練任務訊息
-        :type Job: :class:`tencentcloud.tia.v20180226.models.Job`
+        :type Job: :class:`taifucloudcloud.tia.v20180226.models.Job`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -337,7 +337,7 @@ class DescribeModelResponse(AbstractModel):
     def __init__(self):
         """
         :param Model: 模型訊息
-        :type Model: :class:`tencentcloud.tia.v20180226.models.Model`
+        :type Model: :class:`taifucloudcloud.tia.v20180226.models.Model`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

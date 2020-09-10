@@ -1,7 +1,7 @@
 "use strict";
 /**************************************************
 Node8.9-DeleteESIndex
-Reference: https://cloud.tencent.com/document/product/583/32553
+Reference: https://cloud.taifucloud.com/document/product/583/32553
 ***************************************************/
 
 // The host's address of es, es集群的主機網址

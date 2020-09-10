@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.msp.v20180319 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.msp.v20180319 import models
 
 
 class MspClient(AbstractClient):
     _apiVersion = '2018-03-19'
-    _endpoint = 'msp.tencentcloudapi.com'
+    _endpoint = 'msp.taifucloudcloudapi.com'
 
 
     def DeregisterMigrationTask(self, request):
         """取消注冊遷移任務
 
         :param request: 調用DeregisterMigrationTask所需參數的結構體。
-        :type request: :class:`tencentcloud.msp.v20180319.models.DeregisterMigrationTaskRequest`
-        :rtype: :class:`tencentcloud.msp.v20180319.models.DeregisterMigrationTaskResponse`
+        :type request: :class:`taifucloudcloud.msp.v20180319.models.DeregisterMigrationTaskRequest`
+        :rtype: :class:`taifucloudcloud.msp.v20180319.models.DeregisterMigrationTaskResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class MspClient(AbstractClient):
         """獲取指定遷移任務詳情
 
         :param request: 調用DescribeMigrationTask所需參數的結構體。
-        :type request: :class:`tencentcloud.msp.v20180319.models.DescribeMigrationTaskRequest`
-        :rtype: :class:`tencentcloud.msp.v20180319.models.DescribeMigrationTaskResponse`
+        :type request: :class:`taifucloudcloud.msp.v20180319.models.DescribeMigrationTaskRequest`
+        :rtype: :class:`taifucloudcloud.msp.v20180319.models.DescribeMigrationTaskResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class MspClient(AbstractClient):
         """獲取遷移項目名稱清單
 
         :param request: 調用ListMigrationProject所需參數的結構體。
-        :type request: :class:`tencentcloud.msp.v20180319.models.ListMigrationProjectRequest`
-        :rtype: :class:`tencentcloud.msp.v20180319.models.ListMigrationProjectResponse`
+        :type request: :class:`taifucloudcloud.msp.v20180319.models.ListMigrationProjectRequest`
+        :rtype: :class:`taifucloudcloud.msp.v20180319.models.ListMigrationProjectResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class MspClient(AbstractClient):
         """獲取遷移任務清單
 
         :param request: 調用ListMigrationTask所需參數的結構體。
-        :type request: :class:`tencentcloud.msp.v20180319.models.ListMigrationTaskRequest`
-        :rtype: :class:`tencentcloud.msp.v20180319.models.ListMigrationTaskResponse`
+        :type request: :class:`taifucloudcloud.msp.v20180319.models.ListMigrationTaskRequest`
+        :rtype: :class:`taifucloudcloud.msp.v20180319.models.ListMigrationTaskResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class MspClient(AbstractClient):
         """更改遷移任務所屬項目
 
         :param request: 調用ModifyMigrationTaskBelongToProject所需參數的結構體。
-        :type request: :class:`tencentcloud.msp.v20180319.models.ModifyMigrationTaskBelongToProjectRequest`
-        :rtype: :class:`tencentcloud.msp.v20180319.models.ModifyMigrationTaskBelongToProjectResponse`
+        :type request: :class:`taifucloudcloud.msp.v20180319.models.ModifyMigrationTaskBelongToProjectRequest`
+        :rtype: :class:`taifucloudcloud.msp.v20180319.models.ModifyMigrationTaskBelongToProjectResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class MspClient(AbstractClient):
         """更新遷移任務狀态
 
         :param request: 調用ModifyMigrationTaskStatus所需參數的結構體。
-        :type request: :class:`tencentcloud.msp.v20180319.models.ModifyMigrationTaskStatusRequest`
-        :rtype: :class:`tencentcloud.msp.v20180319.models.ModifyMigrationTaskStatusResponse`
+        :type request: :class:`taifucloudcloud.msp.v20180319.models.ModifyMigrationTaskStatusRequest`
+        :rtype: :class:`taifucloudcloud.msp.v20180319.models.ModifyMigrationTaskStatusResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class MspClient(AbstractClient):
         """注冊遷移任務
 
         :param request: 調用RegisterMigrationTask所需參數的結構體。
-        :type request: :class:`tencentcloud.msp.v20180319.models.RegisterMigrationTaskRequest`
-        :rtype: :class:`tencentcloud.msp.v20180319.models.RegisterMigrationTaskResponse`
+        :type request: :class:`taifucloudcloud.msp.v20180319.models.RegisterMigrationTaskRequest`
+        :rtype: :class:`taifucloudcloud.msp.v20180319.models.RegisterMigrationTaskResponse`
 
         """
         try:

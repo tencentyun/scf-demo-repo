@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.bri.v20190328 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.bri.v20190328 import models
 
 
 class BriClient(AbstractClient):
     _apiVersion = '2019-03-28'
-    _endpoint = 'bri.tencentcloudapi.com'
+    _endpoint = 'bri.taifucloudcloudapi.com'
 
 
     def DescribeBRI(self, request):
@@ -39,8 +39,8 @@ class BriClient(AbstractClient):
         當業務名爲bri_url時，必須填Url欄位.
 
         :param request: Request instance for DescribeBRI.
-        :type request: :class:`tencentcloud.bri.v20190328.models.DescribeBRIRequest`
-        :rtype: :class:`tencentcloud.bri.v20190328.models.DescribeBRIResponse`
+        :type request: :class:`taifucloudcloud.bri.v20190328.models.DescribeBRIRequest`
+        :rtype: :class:`taifucloudcloud.bri.v20190328.models.DescribeBRIResponse`
 
         """
         try:

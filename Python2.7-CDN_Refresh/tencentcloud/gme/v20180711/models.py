@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AppStatisticsItem(AbstractModel):
@@ -25,13 +25,13 @@ class AppStatisticsItem(AbstractModel):
         """
         :param RealtimeSpeechStatisticsItem: 實時語音統計數據
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type RealtimeSpeechStatisticsItem: :class:`tencentcloud.gme.v20180711.models.RealTimeSpeechStatisticsItem`
+        :type RealtimeSpeechStatisticsItem: :class:`taifucloudcloud.gme.v20180711.models.RealTimeSpeechStatisticsItem`
         :param VoiceMessageStatisticsItem: 語音訊息統計數據
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type VoiceMessageStatisticsItem: :class:`tencentcloud.gme.v20180711.models.VoiceMessageStatisticsItem`
+        :type VoiceMessageStatisticsItem: :class:`taifucloudcloud.gme.v20180711.models.VoiceMessageStatisticsItem`
         :param VoiceFilterStatisticsItem: 語音過濾統計數據
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type VoiceFilterStatisticsItem: :class:`tencentcloud.gme.v20180711.models.VoiceFilterStatisticsItem`
+        :type VoiceFilterStatisticsItem: :class:`taifucloudcloud.gme.v20180711.models.VoiceFilterStatisticsItem`
         :param Date: 統計時間
         :type Date: str
         """
@@ -70,11 +70,11 @@ class CreateAppRequest(AbstractModel):
         :param RegionList: 服務區域清單，預設全選。
         :type RegionList: list of str
         :param RealtimeSpeechConf: 實時語音服務配置數據
-        :type RealtimeSpeechConf: :class:`tencentcloud.gme.v20180711.models.RealtimeSpeechConf`
+        :type RealtimeSpeechConf: :class:`taifucloudcloud.gme.v20180711.models.RealtimeSpeechConf`
         :param VoiceMessageConf: 語音訊息及轉文本服務配置數據
-        :type VoiceMessageConf: :class:`tencentcloud.gme.v20180711.models.VoiceMessageConf`
+        :type VoiceMessageConf: :class:`taifucloudcloud.gme.v20180711.models.VoiceMessageConf`
         :param VoiceFilterConf: 語音分析服務配置數據
-        :type VoiceFilterConf: :class:`tencentcloud.gme.v20180711.models.VoiceFilterConf`
+        :type VoiceFilterConf: :class:`taifucloudcloud.gme.v20180711.models.VoiceFilterConf`
         :param Tags: 需要添加的标簽清單
         :type Tags: list of Tag
         """
@@ -128,11 +128,11 @@ class CreateAppResponse(AbstractModel):
         :param CreateTime: 服務創建時間戳
         :type CreateTime: int
         :param RealtimeSpeechConf: 實時語音服務配置數據
-        :type RealtimeSpeechConf: :class:`tencentcloud.gme.v20180711.models.RealtimeSpeechConf`
+        :type RealtimeSpeechConf: :class:`taifucloudcloud.gme.v20180711.models.RealtimeSpeechConf`
         :param VoiceMessageConf: 語音訊息及轉文本服務配置數據
-        :type VoiceMessageConf: :class:`tencentcloud.gme.v20180711.models.VoiceMessageConf`
+        :type VoiceMessageConf: :class:`taifucloudcloud.gme.v20180711.models.VoiceMessageConf`
         :param VoiceFilterConf: 語音分析服務配置數據
-        :type VoiceFilterConf: :class:`tencentcloud.gme.v20180711.models.VoiceFilterConf`
+        :type VoiceFilterConf: :class:`taifucloudcloud.gme.v20180711.models.VoiceFilterConf`
         """
         self.BizId = None
         self.AppName = None
@@ -307,7 +307,7 @@ class DescribeFilterResultResponse(AbstractModel):
         """
         :param Data: 過濾結果
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.gme.v20180711.models.VoiceFilterInfo`
+        :type Data: :class:`taifucloudcloud.gme.v20180711.models.VoiceFilterInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -400,7 +400,7 @@ class DescribeScanResultListRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BizId: 應用 ID，登入[控制台](https://console.cloud.tencent.com/gamegme)創建應用得到的AppID
+        :param BizId: 應用 ID，登入[控制台](https://console.cloud.taifucloud.com/gamegme)創建應用得到的AppID
         :type BizId: int
         :param TaskIdList: 查詢的任務 ID 清單，任務 ID 清單最多支援 100 個。
         :type TaskIdList: list of str
@@ -552,7 +552,7 @@ class ScanDetail(AbstractModel):
 
     def __init__(self):
         """
-        :param Label: 違規場景，參照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定義
+        :param Label: 違規場景，參照<a href="https://cloud.taifucloud.com/document/product/607/37622#Label_Value">Label</a>定義
         :type Label: str
         :param Rate: 該場景下概率[0.00,100.00],分值越大違規概率越高
         :type Rate: str
@@ -651,7 +651,7 @@ class ScanVoiceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BizId: 應用ID，登入[控制台 - 服務管理](https://console.cloud.tencent.com/gamegme)創建應用得到的AppID
+        :param BizId: 應用ID，登入[控制台 - 服務管理](https://console.cloud.taifucloud.com/gamegme)創建應用得到的AppID
         :type BizId: int
         :param Scenes: 語音檢測場景，參數值目前要求爲 default。 預留場景設置： 謾罵、色情、涉政、廣告、暴恐、違禁等場景，<a href="#Label_Value">具體取值見上述 Label 說明。</a>
         :type Scenes: list of str
@@ -879,7 +879,7 @@ class VoiceFilterRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BizId: 應用ID，登入[控制台](https://console.cloud.tencent.com/gamegme)創建應用得到的AppID
+        :param BizId: 應用ID，登入[控制台](https://console.cloud.taifucloud.com/gamegme)創建應用得到的AppID
         :type BizId: int
         :param FileId: 文件ID，表示文件唯一ID
         :type FileId: str

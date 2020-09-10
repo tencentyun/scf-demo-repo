@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cr.v20180321 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cr.v20180321 import models
 
 
 class CrClient(AbstractClient):
     _apiVersion = '2018-03-21'
-    _endpoint = 'cr.tencentcloudapi.com'
+    _endpoint = 'cr.taifucloudcloudapi.com'
 
 
     def ApplyBlackList(self, request):
@@ -30,8 +30,8 @@ class CrClient(AbstractClient):
         将客戶進行黑名單的增加和移除，用于對某些客戶階段性停催。
 
         :param request: 調用ApplyBlackList所需參數的結構體。
-        :type request: :class:`tencentcloud.cr.v20180321.models.ApplyBlackListRequest`
-        :rtype: :class:`tencentcloud.cr.v20180321.models.ApplyBlackListResponse`
+        :type request: :class:`taifucloudcloud.cr.v20180321.models.ApplyBlackListRequest`
+        :rtype: :class:`taifucloudcloud.cr.v20180321.models.ApplyBlackListResponse`
 
         """
         try:
@@ -58,8 +58,8 @@ class CrClient(AbstractClient):
         """提交信審外呼申請，返回當次請求日期。
 
         :param request: 調用ApplyCreditAudit所需參數的結構體。
-        :type request: :class:`tencentcloud.cr.v20180321.models.ApplyCreditAuditRequest`
-        :rtype: :class:`tencentcloud.cr.v20180321.models.ApplyCreditAuditResponse`
+        :type request: :class:`taifucloudcloud.cr.v20180321.models.ApplyCreditAuditRequest`
+        :rtype: :class:`taifucloudcloud.cr.v20180321.models.ApplyCreditAuditResponse`
 
         """
         try:
@@ -86,8 +86,8 @@ class CrClient(AbstractClient):
         """根據信審任務ID和請求日期，獲取相關信審結果。
 
         :param request: 調用DescribeCreditResult所需參數的結構體。
-        :type request: :class:`tencentcloud.cr.v20180321.models.DescribeCreditResultRequest`
-        :rtype: :class:`tencentcloud.cr.v20180321.models.DescribeCreditResultResponse`
+        :type request: :class:`taifucloudcloud.cr.v20180321.models.DescribeCreditResultRequest`
+        :rtype: :class:`taifucloudcloud.cr.v20180321.models.DescribeCreditResultResponse`
 
         """
         try:
@@ -114,8 +114,8 @@ class CrClient(AbstractClient):
         """用于獲取指定案件的錄音網址，次日早上8:00後可查詢前日錄音。
 
         :param request: 調用DescribeRecords所需參數的結構體。
-        :type request: :class:`tencentcloud.cr.v20180321.models.DescribeRecordsRequest`
-        :rtype: :class:`tencentcloud.cr.v20180321.models.DescribeRecordsResponse`
+        :type request: :class:`taifucloudcloud.cr.v20180321.models.DescribeRecordsRequest`
+        :rtype: :class:`taifucloudcloud.cr.v20180321.models.DescribeRecordsResponse`
 
         """
         try:
@@ -142,8 +142,8 @@ class CrClient(AbstractClient):
         """根據上傳文件介面的輸出參數DataResId，獲取相關上傳結果。
 
         :param request: 調用DescribeTaskStatus所需參數的結構體。
-        :type request: :class:`tencentcloud.cr.v20180321.models.DescribeTaskStatusRequest`
-        :rtype: :class:`tencentcloud.cr.v20180321.models.DescribeTaskStatusResponse`
+        :type request: :class:`taifucloudcloud.cr.v20180321.models.DescribeTaskStatusRequest`
+        :rtype: :class:`taifucloudcloud.cr.v20180321.models.DescribeTaskStatusResponse`
 
         """
         try:
@@ -170,8 +170,8 @@ class CrClient(AbstractClient):
         """用于下載當日催收和回訪結果報表。當日23:00後，可獲取當日催收結果，次日00:30後，可獲取昨日回訪結果。
 
         :param request: 調用DownloadReport所需參數的結構體。
-        :type request: :class:`tencentcloud.cr.v20180321.models.DownloadReportRequest`
-        :rtype: :class:`tencentcloud.cr.v20180321.models.DownloadReportResponse`
+        :type request: :class:`taifucloudcloud.cr.v20180321.models.DownloadReportRequest`
+        :rtype: :class:`taifucloudcloud.cr.v20180321.models.DownloadReportResponse`
 
         """
         try:
@@ -204,8 +204,8 @@ class CrClient(AbstractClient):
         介面返回數據任務ID，支援xlsx、xls、csv、zip格式，文件大小不超過50MB。
 
         :param request: 調用UploadDataFile所需參數的結構體。
-        :type request: :class:`tencentcloud.cr.v20180321.models.UploadDataFileRequest`
-        :rtype: :class:`tencentcloud.cr.v20180321.models.UploadDataFileResponse`
+        :type request: :class:`taifucloudcloud.cr.v20180321.models.UploadDataFileRequest`
+        :rtype: :class:`taifucloudcloud.cr.v20180321.models.UploadDataFileResponse`
 
         """
         try:
@@ -233,8 +233,8 @@ class CrClient(AbstractClient):
         """客戶通過調用該介面上傳需催收文件，格式需爲excel格式。介面返回任務ID。
 
         :param request: 調用UploadFile所需參數的結構體。
-        :type request: :class:`tencentcloud.cr.v20180321.models.UploadFileRequest`
-        :rtype: :class:`tencentcloud.cr.v20180321.models.UploadFileResponse`
+        :type request: :class:`taifucloudcloud.cr.v20180321.models.UploadFileRequest`
+        :rtype: :class:`taifucloudcloud.cr.v20180321.models.UploadFileResponse`
 
         """
         try:

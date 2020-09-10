@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Address(AbstractModel):
@@ -52,7 +52,7 @@ class Address(AbstractModel):
         :type AddressType: str
         :param CascadeRelease: eip是否在解綁後自動釋放。true表示eip将會在解綁後自動釋放，false表示eip在解綁後不會自動釋放
         :type CascadeRelease: bool
-        :param InternetServiceProvider: 運營商，CTCC電信，CUCC聯通，CMCC移動
+        :param InternetServiceProvider: 運營商，CTCC電信，CUCC ，CMCC 
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InternetServiceProvider: str
         """
@@ -100,9 +100,9 @@ class AllocateAddressesRequest(AbstractModel):
         :type EcmRegion: str
         :param AddressCount: EIP數量。預設值：1。
         :type AddressCount: int
-        :param InternetServiceProvider: CMCC：中國移動
-CTCC：中國電信
-CUCC：中國聯通
+        :param InternetServiceProvider: CMCC：  
+CTCC： 電信
+CUCC：  
         :type InternetServiceProvider: str
         :param InternetMaxBandwidthOut: 1 Mbps 至 5000 Mbps，預設值：1 Mbps。
         :type InternetMaxBandwidthOut: int
@@ -536,7 +536,7 @@ class CreateNetworkInterfaceResponse(AbstractModel):
     def __init__(self):
         """
         :param NetworkInterface: 彈性網卡實例。
-        :type NetworkInterface: :class:`tencentcloud.ecm.v20190719.models.NetworkInterface`
+        :type NetworkInterface: :class:`taifucloudcloud.ecm.v20190719.models.NetworkInterface`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -601,7 +601,7 @@ class CreateSubnetResponse(AbstractModel):
     def __init__(self):
         """
         :param Subnet: 子網對象。
-        :type Subnet: :class:`tencentcloud.ecm.v20190719.models.Subnet`
+        :type Subnet: :class:`taifucloudcloud.ecm.v20190719.models.Subnet`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -670,7 +670,7 @@ class CreateVpcResponse(AbstractModel):
     def __init__(self):
         """
         :param Vpc: Vpc對象。
-        :type Vpc: :class:`tencentcloud.ecm.v20190719.models.VpcInfo`
+        :type Vpc: :class:`taifucloudcloud.ecm.v20190719.models.VpcInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1067,7 +1067,7 @@ class DescribeConfigResponse(AbstractModel):
     def __init__(self):
         """
         :param NetworkStorageRange: 網絡頻寬硬碟大小的範圍訊息。
-        :type NetworkStorageRange: :class:`tencentcloud.ecm.v20190719.models.NetworkStorageRange`
+        :type NetworkStorageRange: :class:`taifucloudcloud.ecm.v20190719.models.NetworkStorageRange`
         :param ImageWhiteSet: 映像作業系統白名單
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ImageWhiteSet: list of str
@@ -1332,10 +1332,10 @@ class DescribeModuleDetailResponse(AbstractModel):
         """
         :param Module: 模組的詳細訊息，詳細見數據結構中的ModuleInfo。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Module: :class:`tencentcloud.ecm.v20190719.models.Module`
+        :type Module: :class:`taifucloudcloud.ecm.v20190719.models.Module`
         :param ModuleCounter: 模組的統計訊息，詳細見數據結構中的ModuleCounterInfo。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ModuleCounter: :class:`tencentcloud.ecm.v20190719.models.ModuleCounter`
+        :type ModuleCounter: :class:`taifucloudcloud.ecm.v20190719.models.ModuleCounter`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1997,9 +1997,9 @@ class EnhancedService(AbstractModel):
     def __init__(self):
         """
         :param SecurityService: 是否開啓雲鏡服務。
-        :type SecurityService: :class:`tencentcloud.ecm.v20190719.models.RunSecurityServiceEnabled`
+        :type SecurityService: :class:`taifucloudcloud.ecm.v20190719.models.RunSecurityServiceEnabled`
         :param MonitorService: 是否開啓雲監控服務。
-        :type MonitorService: :class:`tencentcloud.ecm.v20190719.models.RunMonitorServiceEnabled`
+        :type MonitorService: :class:`taifucloudcloud.ecm.v20190719.models.RunMonitorServiceEnabled`
         """
         self.SecurityService = None
         self.MonitorService = None
@@ -2124,7 +2124,7 @@ class Image(AbstractModel):
         :param ImageSize: 映像大小。單位：GB
         :type ImageSize: int
         :param SrcImage: 映像來源訊息
-        :type SrcImage: :class:`tencentcloud.ecm.v20190719.models.SrcImage`
+        :type SrcImage: :class:`taifucloudcloud.ecm.v20190719.models.SrcImage`
         """
         self.ImageId = None
         self.ImageName = None
@@ -2228,19 +2228,19 @@ TERMINATING：表示銷毀中。
         :type InstanceState: str
         :param Image: 實例當前使用的映像的訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Image: :class:`tencentcloud.ecm.v20190719.models.Image`
+        :type Image: :class:`taifucloudcloud.ecm.v20190719.models.Image`
         :param SimpleModule: 實例當前所屬的模組簡要訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SimpleModule: :class:`tencentcloud.ecm.v20190719.models.SimpleModule`
+        :type SimpleModule: :class:`taifucloudcloud.ecm.v20190719.models.SimpleModule`
         :param Position: 實例所在的位置相關訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Position: :class:`tencentcloud.ecm.v20190719.models.Position`
+        :type Position: :class:`taifucloudcloud.ecm.v20190719.models.Position`
         :param Internet: 實例的網絡相關訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Internet: :class:`tencentcloud.ecm.v20190719.models.Internet`
+        :type Internet: :class:`taifucloudcloud.ecm.v20190719.models.Internet`
         :param InstanceTypeConfig: 實例的配置相關訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type InstanceTypeConfig: :class:`tencentcloud.ecm.v20190719.models.InstanceTypeConfig`
+        :type InstanceTypeConfig: :class:`taifucloudcloud.ecm.v20190719.models.InstanceTypeConfig`
         :param CreateTime: 實例的創建時間。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
@@ -2292,7 +2292,7 @@ PROTECTIVELY_ISOLATED：表示被安全隔離的實例。
         :type ExpireState: str
         :param SystemDisk: 系統盤訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SystemDisk: :class:`tencentcloud.ecm.v20190719.models.DiskInfo`
+        :type SystemDisk: :class:`taifucloudcloud.ecm.v20190719.models.DiskInfo`
         :param DataDisks: 數據盤訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DataDisks: list of DiskInfo
@@ -2452,7 +2452,7 @@ class InstanceTypeConfig(AbstractModel):
     def __init__(self):
         """
         :param InstanceFamilyConfig: 機型族配置訊息
-        :type InstanceFamilyConfig: :class:`tencentcloud.ecm.v20190719.models.InstanceFamilyConfig`
+        :type InstanceFamilyConfig: :class:`taifucloudcloud.ecm.v20190719.models.InstanceFamilyConfig`
         :param InstanceType: 機型
         :type InstanceType: str
         :param Vcpu: CPU核數
@@ -2464,7 +2464,7 @@ class InstanceTypeConfig(AbstractModel):
         :param CpuModelName: 處理器型号
         :type CpuModelName: str
         :param InstanceFamilyTypeConfig: 機型族類别配置訊息
-        :type InstanceFamilyTypeConfig: :class:`tencentcloud.ecm.v20190719.models.InstanceFamilyTypeConfig`
+        :type InstanceFamilyTypeConfig: :class:`taifucloudcloud.ecm.v20190719.models.InstanceFamilyTypeConfig`
         :param ExtInfo: 機型額外訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ExtInfo: str
@@ -3013,9 +3013,9 @@ DELETEFAILED：删除失敗
         :param DefaultDataDiskSize: 預設數據盤大小
         :type DefaultDataDiskSize: int
         :param InstanceTypeConfig: 預設機型
-        :type InstanceTypeConfig: :class:`tencentcloud.ecm.v20190719.models.InstanceTypeConfig`
+        :type InstanceTypeConfig: :class:`taifucloudcloud.ecm.v20190719.models.InstanceTypeConfig`
         :param DefaultImage: 預設映像
-        :type DefaultImage: :class:`tencentcloud.ecm.v20190719.models.Image`
+        :type DefaultImage: :class:`taifucloudcloud.ecm.v20190719.models.Image`
         :param CreateTime: 創建時間
         :type CreateTime: str
         :param DefaultBandwidth: 預設頻寬
@@ -3057,7 +3057,7 @@ class ModuleCounter(AbstractModel):
         """
         :param ISPCounterSet: 運營商統計訊息清單
         :type ISPCounterSet: list of ISPCounter
-        :param ProvinceNum: 省份數量
+        :param ProvinceNum:  數量
         :type ProvinceNum: int
         :param CityNum: 城市數量
         :type CityNum: int
@@ -3094,9 +3094,9 @@ class ModuleItem(AbstractModel):
     def __init__(self):
         """
         :param NodeInstanceNum: 節點實例統計訊息
-        :type NodeInstanceNum: :class:`tencentcloud.ecm.v20190719.models.NodeInstanceNum`
+        :type NodeInstanceNum: :class:`taifucloudcloud.ecm.v20190719.models.NodeInstanceNum`
         :param Module: 模組訊息
-        :type Module: :class:`tencentcloud.ecm.v20190719.models.Module`
+        :type Module: :class:`taifucloudcloud.ecm.v20190719.models.Module`
         """
         self.NodeInstanceNum = None
         self.Module = None
@@ -3148,7 +3148,7 @@ DELETING：删除中
         :param Attachment: 綁定的雲伺服器對象。
 注意：此欄位可能返回 null，表示取不到有效值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Attachment: :class:`tencentcloud.ecm.v20190719.models.NetworkInterfaceAttachment`
+        :type Attachment: :class:`taifucloudcloud.ecm.v20190719.models.NetworkInterfaceAttachment`
         :param Zone: 可用區。
         :type Zone: str
         :param CreatedTime: 創建時間。
@@ -3326,17 +3326,17 @@ class Node(AbstractModel):
     def __init__(self):
         """
         :param ZoneInfo: zone訊息
-        :type ZoneInfo: :class:`tencentcloud.ecm.v20190719.models.ZoneInfo`
+        :type ZoneInfo: :class:`taifucloudcloud.ecm.v20190719.models.ZoneInfo`
         :param Country: 國家訊息
-        :type Country: :class:`tencentcloud.ecm.v20190719.models.Country`
+        :type Country: :class:`taifucloudcloud.ecm.v20190719.models.Country`
         :param Area: 區域訊息
-        :type Area: :class:`tencentcloud.ecm.v20190719.models.Area`
-        :param Province: 省份訊息
-        :type Province: :class:`tencentcloud.ecm.v20190719.models.Province`
+        :type Area: :class:`taifucloudcloud.ecm.v20190719.models.Area`
+        :param Province:  訊息
+        :type Province: :class:`taifucloudcloud.ecm.v20190719.models.Province`
         :param City: 城市訊息
-        :type City: :class:`tencentcloud.ecm.v20190719.models.City`
+        :type City: :class:`taifucloudcloud.ecm.v20190719.models.City`
         :param RegionInfo: Region訊息
-        :type RegionInfo: :class:`tencentcloud.ecm.v20190719.models.RegionInfo`
+        :type RegionInfo: :class:`taifucloudcloud.ecm.v20190719.models.RegionInfo`
         :param ISPSet: 運營商清單
         :type ISPSet: list of ISP
         :param ISPNum: 運營商數量
@@ -3465,7 +3465,7 @@ class PeakFamilyInfo(AbstractModel):
     def __init__(self):
         """
         :param InstanceFamily: 機型類别訊息。
-        :type InstanceFamily: :class:`tencentcloud.ecm.v20190719.models.InstanceFamilyTypeConfig`
+        :type InstanceFamily: :class:`taifucloudcloud.ecm.v20190719.models.InstanceFamilyTypeConfig`
         :param PeakBaseSet: 基礎數據峰值訊息。
         :type PeakBaseSet: list of PeakBase
         """
@@ -3545,17 +3545,17 @@ class Position(AbstractModel):
     def __init__(self):
         """
         :param ZoneInfo: 實例所在的Zone的訊息。
-        :type ZoneInfo: :class:`tencentcloud.ecm.v20190719.models.ZoneInfo`
+        :type ZoneInfo: :class:`taifucloudcloud.ecm.v20190719.models.ZoneInfo`
         :param Country: 實例所在的國家的訊息。
-        :type Country: :class:`tencentcloud.ecm.v20190719.models.Country`
+        :type Country: :class:`taifucloudcloud.ecm.v20190719.models.Country`
         :param Area: 實例所在的Area的訊息。
-        :type Area: :class:`tencentcloud.ecm.v20190719.models.Area`
-        :param Province: 實例所在的省份的訊息。
-        :type Province: :class:`tencentcloud.ecm.v20190719.models.Province`
+        :type Area: :class:`taifucloudcloud.ecm.v20190719.models.Area`
+        :param Province: 實例所在的 的訊息。
+        :type Province: :class:`taifucloudcloud.ecm.v20190719.models.Province`
         :param City: 實例所在的城市的訊息。
-        :type City: :class:`tencentcloud.ecm.v20190719.models.City`
+        :type City: :class:`taifucloudcloud.ecm.v20190719.models.City`
         :param RegionInfo: 實例所在的Region的訊息。
-        :type RegionInfo: :class:`tencentcloud.ecm.v20190719.models.RegionInfo`
+        :type RegionInfo: :class:`taifucloudcloud.ecm.v20190719.models.RegionInfo`
         """
         self.ZoneInfo = None
         self.Country = None
@@ -3652,15 +3652,15 @@ AVAILABLE：可用的
 
 
 class Province(AbstractModel):
-    """省份訊息
+    """ 訊息
 
     """
 
     def __init__(self):
         """
-        :param ProvinceId: 省份Id
+        :param ProvinceId:  Id
         :type ProvinceId: str
-        :param ProvinceName: 省份名稱
+        :param ProvinceName:  名稱
         :type ProvinceName: str
         """
         self.ProvinceId = None
@@ -3684,7 +3684,7 @@ class PublicIPAddressInfo(AbstractModel):
         :param PublicIPAddress: 實例的公網ip。
         :type PublicIPAddress: str
         :param ISP: 實例的公網ip所屬的運營商。
-        :type ISP: :class:`tencentcloud.ecm.v20190719.models.ISP`
+        :type ISP: :class:`taifucloudcloud.ecm.v20190719.models.ISP`
         :param MaxBandwidthOut: 實例的最大出頻寬上限。
         :type MaxBandwidthOut: int
         """
@@ -3967,7 +3967,7 @@ class ResetInstancesRequest(AbstractModel):
         :param Password: 密碼設置，若未指定，則後續将以站内信的形式通知密碼。
         :type Password: str
         :param EnhancedService: 是否開啓雲監控和雲鏡服務，未指定時預設開啓。
-        :type EnhancedService: :class:`tencentcloud.ecm.v20190719.models.EnhancedService`
+        :type EnhancedService: :class:`taifucloudcloud.ecm.v20190719.models.EnhancedService`
         """
         self.InstanceIdSet = None
         self.ImageId = None
@@ -4035,7 +4035,7 @@ Windows 實例：名字元長度爲[2, 15]，允許字母（不限制大小寫�
         :param ClientToken: 用于保證請求幂等性的字串。目前爲保留參數，請勿使用。
         :type ClientToken: str
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設公共映像開啓雲監控、雲安全服務
-        :type EnhancedService: :class:`tencentcloud.ecm.v20190719.models.EnhancedService`
+        :type EnhancedService: :class:`taifucloudcloud.ecm.v20190719.models.EnhancedService`
         :param TagSpecification: 标簽清單
         :type TagSpecification: list of TagSpecification
         :param UserData: 提供給實例使用的用戶數據，需要以 base64 方式編碼，支援的最大數據大小爲 16KB

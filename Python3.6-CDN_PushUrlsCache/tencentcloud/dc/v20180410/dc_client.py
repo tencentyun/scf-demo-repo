@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.dc.v20180410 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.dc.v20180410 import models
 
 
 class DcClient(AbstractClient):
     _apiVersion = '2018-04-10'
-    _endpoint = 'dc.tencentcloudapi.com'
+    _endpoint = 'dc.taifucloudcloudapi.com'
 
 
     def AcceptDirectConnectTunnel(self, request):
         """接受專用通道申請
 
         :param request: Request instance for AcceptDirectConnectTunnel.
-        :type request: :class:`tencentcloud.dc.v20180410.models.AcceptDirectConnectTunnelRequest`
-        :rtype: :class:`tencentcloud.dc.v20180410.models.AcceptDirectConnectTunnelResponse`
+        :type request: :class:`taifucloudcloud.dc.v20180410.models.AcceptDirectConnectTunnelRequest`
+        :rtype: :class:`taifucloudcloud.dc.v20180410.models.AcceptDirectConnectTunnelResponse`
 
         """
         try:
@@ -60,8 +60,8 @@ class DcClient(AbstractClient):
         若帳戶下存在欠費狀态的物理專線，則不能申請更多的物理專線。
 
         :param request: Request instance for CreateDirectConnect.
-        :type request: :class:`tencentcloud.dc.v20180410.models.CreateDirectConnectRequest`
-        :rtype: :class:`tencentcloud.dc.v20180410.models.CreateDirectConnectResponse`
+        :type request: :class:`taifucloudcloud.dc.v20180410.models.CreateDirectConnectRequest`
+        :rtype: :class:`taifucloudcloud.dc.v20180410.models.CreateDirectConnectResponse`
 
         """
         try:
@@ -88,8 +88,8 @@ class DcClient(AbstractClient):
         """用于創建專用通道的介面
 
         :param request: Request instance for CreateDirectConnectTunnel.
-        :type request: :class:`tencentcloud.dc.v20180410.models.CreateDirectConnectTunnelRequest`
-        :rtype: :class:`tencentcloud.dc.v20180410.models.CreateDirectConnectTunnelResponse`
+        :type request: :class:`taifucloudcloud.dc.v20180410.models.CreateDirectConnectTunnelRequest`
+        :rtype: :class:`taifucloudcloud.dc.v20180410.models.CreateDirectConnectTunnelResponse`
 
         """
         try:
@@ -117,8 +117,8 @@ class DcClient(AbstractClient):
         只能删除處于已連接狀态的物理專線。
 
         :param request: Request instance for DeleteDirectConnect.
-        :type request: :class:`tencentcloud.dc.v20180410.models.DeleteDirectConnectRequest`
-        :rtype: :class:`tencentcloud.dc.v20180410.models.DeleteDirectConnectResponse`
+        :type request: :class:`taifucloudcloud.dc.v20180410.models.DeleteDirectConnectRequest`
+        :rtype: :class:`taifucloudcloud.dc.v20180410.models.DeleteDirectConnectResponse`
 
         """
         try:
@@ -145,8 +145,8 @@ class DcClient(AbstractClient):
         """删除專用通道
 
         :param request: Request instance for DeleteDirectConnectTunnel.
-        :type request: :class:`tencentcloud.dc.v20180410.models.DeleteDirectConnectTunnelRequest`
-        :rtype: :class:`tencentcloud.dc.v20180410.models.DeleteDirectConnectTunnelResponse`
+        :type request: :class:`taifucloudcloud.dc.v20180410.models.DeleteDirectConnectTunnelRequest`
+        :rtype: :class:`taifucloudcloud.dc.v20180410.models.DeleteDirectConnectTunnelResponse`
 
         """
         try:
@@ -173,8 +173,8 @@ class DcClient(AbstractClient):
         """查詢物理專線接入點
 
         :param request: Request instance for DescribeAccessPoints.
-        :type request: :class:`tencentcloud.dc.v20180410.models.DescribeAccessPointsRequest`
-        :rtype: :class:`tencentcloud.dc.v20180410.models.DescribeAccessPointsResponse`
+        :type request: :class:`taifucloudcloud.dc.v20180410.models.DescribeAccessPointsRequest`
+        :rtype: :class:`taifucloudcloud.dc.v20180410.models.DescribeAccessPointsResponse`
 
         """
         try:
@@ -201,8 +201,8 @@ class DcClient(AbstractClient):
         """用于查詢專用通道清單。
 
         :param request: Request instance for DescribeDirectConnectTunnels.
-        :type request: :class:`tencentcloud.dc.v20180410.models.DescribeDirectConnectTunnelsRequest`
-        :rtype: :class:`tencentcloud.dc.v20180410.models.DescribeDirectConnectTunnelsResponse`
+        :type request: :class:`taifucloudcloud.dc.v20180410.models.DescribeDirectConnectTunnelsRequest`
+        :rtype: :class:`taifucloudcloud.dc.v20180410.models.DescribeDirectConnectTunnelsResponse`
 
         """
         try:
@@ -229,8 +229,8 @@ class DcClient(AbstractClient):
         """查詢物理專線清單。
 
         :param request: Request instance for DescribeDirectConnects.
-        :type request: :class:`tencentcloud.dc.v20180410.models.DescribeDirectConnectsRequest`
-        :rtype: :class:`tencentcloud.dc.v20180410.models.DescribeDirectConnectsResponse`
+        :type request: :class:`taifucloudcloud.dc.v20180410.models.DescribeDirectConnectsRequest`
+        :rtype: :class:`taifucloudcloud.dc.v20180410.models.DescribeDirectConnectsResponse`
 
         """
         try:
@@ -257,8 +257,8 @@ class DcClient(AbstractClient):
         """修改物理專線的屬性。
 
         :param request: Request instance for ModifyDirectConnectAttribute.
-        :type request: :class:`tencentcloud.dc.v20180410.models.ModifyDirectConnectAttributeRequest`
-        :rtype: :class:`tencentcloud.dc.v20180410.models.ModifyDirectConnectAttributeResponse`
+        :type request: :class:`taifucloudcloud.dc.v20180410.models.ModifyDirectConnectAttributeRequest`
+        :rtype: :class:`taifucloudcloud.dc.v20180410.models.ModifyDirectConnectAttributeResponse`
 
         """
         try:
@@ -285,8 +285,8 @@ class DcClient(AbstractClient):
         """修改專用通道屬性
 
         :param request: Request instance for ModifyDirectConnectTunnelAttribute.
-        :type request: :class:`tencentcloud.dc.v20180410.models.ModifyDirectConnectTunnelAttributeRequest`
-        :rtype: :class:`tencentcloud.dc.v20180410.models.ModifyDirectConnectTunnelAttributeResponse`
+        :type request: :class:`taifucloudcloud.dc.v20180410.models.ModifyDirectConnectTunnelAttributeRequest`
+        :rtype: :class:`taifucloudcloud.dc.v20180410.models.ModifyDirectConnectTunnelAttributeResponse`
 
         """
         try:
@@ -313,8 +313,8 @@ class DcClient(AbstractClient):
         """拒絕專用通道申請
 
         :param request: Request instance for RejectDirectConnectTunnel.
-        :type request: :class:`tencentcloud.dc.v20180410.models.RejectDirectConnectTunnelRequest`
-        :rtype: :class:`tencentcloud.dc.v20180410.models.RejectDirectConnectTunnelResponse`
+        :type request: :class:`taifucloudcloud.dc.v20180410.models.RejectDirectConnectTunnelRequest`
+        :rtype: :class:`taifucloudcloud.dc.v20180410.models.RejectDirectConnectTunnelResponse`
 
         """
         try:

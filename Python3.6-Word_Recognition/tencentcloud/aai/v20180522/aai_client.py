@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.aai.v20180522 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.aai.v20180522 import models
 
 
 class AaiClient(AbstractClient):
     _apiVersion = '2018-05-22'
-    _endpoint = 'aai.tencentcloudapi.com'
+    _endpoint = 'aai.taifucloudcloudapi.com'
 
 
     def Chat(self, request):
         """提供基于文本的基礎聊天能力，可以讓您的應用快速擁有具備深度語義理解的機器聊天功能。
 
         :param request: 調用Chat所需參數的結構體。
-        :type request: :class:`tencentcloud.aai.v20180522.models.ChatRequest`
-        :rtype: :class:`tencentcloud.aai.v20180522.models.ChatResponse`
+        :type request: :class:`taifucloudcloud.aai.v20180522.models.ChatRequest`
+        :rtype: :class:`taifucloudcloud.aai.v20180522.models.ChatResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class AaiClient(AbstractClient):
         """識别60s内的短語音，當音訊放在請求body中傳輸時整個請求大小不能超過600KB，當音訊以url方式傳輸時，音訊時長不可超過60s。所有請求參數放在post的body中采用x-www-form-urlencoded（數據轉換成一個字串（name1=value1&name2=value2…）進行urlencode後）編碼傳輸。現暫只支援中文普通話識别，支援識别8k(16k)的16bit的mp3或者wav音訊。
 
         :param request: 調用SentenceRecognition所需參數的結構體。
-        :type request: :class:`tencentcloud.aai.v20180522.models.SentenceRecognitionRequest`
-        :rtype: :class:`tencentcloud.aai.v20180522.models.SentenceRecognitionResponse`
+        :type request: :class:`taifucloudcloud.aai.v20180522.models.SentenceRecognitionRequest`
+        :rtype: :class:`taifucloudcloud.aai.v20180522.models.SentenceRecognitionResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class AaiClient(AbstractClient):
         """該介面是實時流式識别，可同時返回語音識别文本及翻譯文本，當前僅支援中文和英文。該介面可配合同傳windows用戶端，提供會議現場同傳服務。
 
         :param request: 調用SimultaneousInterpreting所需參數的結構體。
-        :type request: :class:`tencentcloud.aai.v20180522.models.SimultaneousInterpretingRequest`
-        :rtype: :class:`tencentcloud.aai.v20180522.models.SimultaneousInterpretingResponse`
+        :type request: :class:`taifucloudcloud.aai.v20180522.models.SimultaneousInterpretingRequest`
+        :rtype: :class:`taifucloudcloud.aai.v20180522.models.SimultaneousInterpretingResponse`
 
         """
         try:
@@ -111,12 +111,12 @@ class AaiClient(AbstractClient):
 
     def TextToVoice(self, request):
         """Top Cloud 語音合成技術（TTS）可以将任意文本轉化爲語音，實現讓機器和應用張口說話。
-        騰訊TTS技術可以應用到很多場景，比如，行動APP語音播報新聞；智慧設備語音提醒；依靠網上現有節目或少量錄音，快速合成明星語音，降低邀約成本；支援車載導航語音合成的個性化語音播報。
+         TTS技術可以應用到很多場景，比如，行動APP語音播報新聞；智慧設備語音提醒；依靠網上現有節目或少量錄音，快速合成明星語音，降低邀約成本；支援車載導航語音合成的個性化語音播報。
         内測期間免費使用。
 
         :param request: 調用TextToVoice所需參數的結構體。
-        :type request: :class:`tencentcloud.aai.v20180522.models.TextToVoiceRequest`
-        :rtype: :class:`tencentcloud.aai.v20180522.models.TextToVoiceResponse`
+        :type request: :class:`taifucloudcloud.aai.v20180522.models.TextToVoiceRequest`
+        :rtype: :class:`taifucloudcloud.aai.v20180522.models.TextToVoiceResponse`
 
         """
         try:

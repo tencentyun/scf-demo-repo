@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.bizlive.v20190313 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.bizlive.v20190313 import models
 
 
 class BizliveClient(AbstractClient):
     _apiVersion = '2019-03-13'
-    _endpoint = 'bizlive.tencentcloudapi.com'
+    _endpoint = 'bizlive.taifucloudcloudapi.com'
 
 
     def CreateSession(self, request):
         """創建會話
 
         :param request: Request instance for CreateSession.
-        :type request: :class:`tencentcloud.bizlive.v20190313.models.CreateSessionRequest`
-        :rtype: :class:`tencentcloud.bizlive.v20190313.models.CreateSessionResponse`
+        :type request: :class:`taifucloudcloud.bizlive.v20190313.models.CreateSessionRequest`
+        :rtype: :class:`taifucloudcloud.bizlive.v20190313.models.CreateSessionResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class BizliveClient(AbstractClient):
         """查詢播放數據，支援按流名稱查詢詳細播放數據，也可按播放域名查詢詳細總數據。
 
         :param request: Request instance for DescribeStreamPlayInfoList.
-        :type request: :class:`tencentcloud.bizlive.v20190313.models.DescribeStreamPlayInfoListRequest`
-        :rtype: :class:`tencentcloud.bizlive.v20190313.models.DescribeStreamPlayInfoListResponse`
+        :type request: :class:`taifucloudcloud.bizlive.v20190313.models.DescribeStreamPlayInfoListRequest`
+        :rtype: :class:`taifucloudcloud.bizlive.v20190313.models.DescribeStreamPlayInfoListResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class BizliveClient(AbstractClient):
         """查詢空閑機器數量
 
         :param request: Request instance for DescribeWorkers.
-        :type request: :class:`tencentcloud.bizlive.v20190313.models.DescribeWorkersRequest`
-        :rtype: :class:`tencentcloud.bizlive.v20190313.models.DescribeWorkersResponse`
+        :type request: :class:`taifucloudcloud.bizlive.v20190313.models.DescribeWorkersRequest`
+        :rtype: :class:`taifucloudcloud.bizlive.v20190313.models.DescribeWorkersResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class BizliveClient(AbstractClient):
         """禁止某條流的推送，可以預設某個時刻将流恢複。
 
         :param request: Request instance for ForbidLiveStream.
-        :type request: :class:`tencentcloud.bizlive.v20190313.models.ForbidLiveStreamRequest`
-        :rtype: :class:`tencentcloud.bizlive.v20190313.models.ForbidLiveStreamResponse`
+        :type request: :class:`taifucloudcloud.bizlive.v20190313.models.ForbidLiveStreamRequest`
+        :rtype: :class:`taifucloudcloud.bizlive.v20190313.models.ForbidLiveStreamResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class BizliveClient(AbstractClient):
         """注冊聊天室
 
         :param request: Request instance for RegisterIM.
-        :type request: :class:`tencentcloud.bizlive.v20190313.models.RegisterIMRequest`
-        :rtype: :class:`tencentcloud.bizlive.v20190313.models.RegisterIMResponse`
+        :type request: :class:`taifucloudcloud.bizlive.v20190313.models.RegisterIMRequest`
+        :rtype: :class:`taifucloudcloud.bizlive.v20190313.models.RegisterIMResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class BizliveClient(AbstractClient):
         """強制登出遊戲
 
         :param request: Request instance for StopGame.
-        :type request: :class:`tencentcloud.bizlive.v20190313.models.StopGameRequest`
-        :rtype: :class:`tencentcloud.bizlive.v20190313.models.StopGameResponse`
+        :type request: :class:`taifucloudcloud.bizlive.v20190313.models.StopGameRequest`
+        :rtype: :class:`taifucloudcloud.bizlive.v20190313.models.StopGameResponse`
 
         """
         try:

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AcceptVpcPeerConnectionRequest(AbstractModel):
@@ -2027,7 +2027,7 @@ class DescribeVpcViewResponse(AbstractModel):
     def __init__(self):
         """
         :param VpcView: VPC視圖訊息
-        :type VpcView: :class:`tencentcloud.bmvpc.v20180625.models.VpcViewInfo`
+        :type VpcView: :class:`taifucloudcloud.bmvpc.v20180625.models.VpcViewInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2337,7 +2337,7 @@ class ModifyRoutePolicyRequest(AbstractModel):
         :param RouteTableId: 路由表ID
         :type RouteTableId: str
         :param RoutePolicy: 修改的路由
-        :type RoutePolicy: :class:`tencentcloud.bmvpc.v20180625.models.RoutePolicy`
+        :type RoutePolicy: :class:`taifucloudcloud.bmvpc.v20180625.models.RoutePolicy`
         """
         self.RouteTableId = None
         self.RoutePolicy = None
@@ -2607,9 +2607,9 @@ class ModifyVpnConnectionAttributeRequest(AbstractModel):
         :param SecurityPolicyDatabases: SPD策略組，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内網段172.123.10.5/16是IDC網段。用戶指定VPC内哪些網段可以和您IDC中哪些網段通信。
         :type SecurityPolicyDatabases: list of SecurityPolicyDatabase
         :param IKEOptionsSpecification: IKE配置（Internet Key Exchange，因特網金鑰交換），IKE具有一套自我保護機制，用戶配置網絡安全協議。
-        :type IKEOptionsSpecification: :class:`tencentcloud.bmvpc.v20180625.models.IKEOptionsSpecification`
+        :type IKEOptionsSpecification: :class:`taifucloudcloud.bmvpc.v20180625.models.IKEOptionsSpecification`
         :param IPSECOptionsSpecification: IPSec配置，Top Cloud 提供IPSec安全會話設置。
-        :type IPSECOptionsSpecification: :class:`tencentcloud.bmvpc.v20180625.models.IPSECOptionsSpecification`
+        :type IPSECOptionsSpecification: :class:`taifucloudcloud.bmvpc.v20180625.models.IPSECOptionsSpecification`
         """
         self.VpnConnectionId = None
         self.VpcId = None

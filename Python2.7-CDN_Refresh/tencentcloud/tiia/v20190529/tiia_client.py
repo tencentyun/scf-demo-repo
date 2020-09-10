@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tiia.v20190529 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tiia.v20190529 import models
 
 
 class TiiaClient(AbstractClient):
     _apiVersion = '2019-05-29'
-    _endpoint = 'tiia.tencentcloudapi.com'
+    _endpoint = 'tiia.taifucloudcloudapi.com'
 
 
     def AssessQuality(self, request):
@@ -31,8 +31,8 @@ class TiiaClient(AbstractClient):
         - 公共參數中的簽名方式必須指定爲V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for AssessQuality.
-        :type request: :class:`tencentcloud.tiia.v20190529.models.AssessQualityRequest`
-        :rtype: :class:`tencentcloud.tiia.v20190529.models.AssessQualityResponse`
+        :type request: :class:`taifucloudcloud.tiia.v20190529.models.AssessQualityRequest`
+        :rtype: :class:`taifucloudcloud.tiia.v20190529.models.AssessQualityResponse`
 
         """
         try:
@@ -63,8 +63,8 @@ class TiiaClient(AbstractClient):
         - 公共參數中的簽名方式必須指定爲V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for CropImage.
-        :type request: :class:`tencentcloud.tiia.v20190529.models.CropImageRequest`
-        :rtype: :class:`tencentcloud.tiia.v20190529.models.CropImageResponse`
+        :type request: :class:`taifucloudcloud.tiia.v20190529.models.CropImageRequest`
+        :rtype: :class:`taifucloudcloud.tiia.v20190529.models.CropImageResponse`
 
         """
         try:
@@ -95,8 +95,8 @@ class TiiaClient(AbstractClient):
         - 公共參數中的簽名方式必須指定爲V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for DetectCelebrity.
-        :type request: :class:`tencentcloud.tiia.v20190529.models.DetectCelebrityRequest`
-        :rtype: :class:`tencentcloud.tiia.v20190529.models.DetectCelebrityResponse`
+        :type request: :class:`taifucloudcloud.tiia.v20190529.models.DetectCelebrityRequest`
+        :rtype: :class:`taifucloudcloud.tiia.v20190529.models.DetectCelebrityResponse`
 
         """
         try:
@@ -127,8 +127,8 @@ class TiiaClient(AbstractClient):
         - 公共參數中的簽名方式必須指定爲V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for DetectDisgust.
-        :type request: :class:`tencentcloud.tiia.v20190529.models.DetectDisgustRequest`
-        :rtype: :class:`tencentcloud.tiia.v20190529.models.DetectDisgustResponse`
+        :type request: :class:`taifucloudcloud.tiia.v20190529.models.DetectDisgustRequest`
+        :rtype: :class:`taifucloudcloud.tiia.v20190529.models.DetectDisgustResponse`
 
         """
         try:
@@ -154,7 +154,7 @@ class TiiaClient(AbstractClient):
     def DetectLabel(self, request):
         """圖像标簽利用深度學習技術、海量訓練數據，可以對圖片進行智慧分類、物體識别等。
 
-        目前支援8個大類、六十多個子類、數千個标簽。涵蓋各種日常場景、動植物、物品、美食、卡證等。具體分類請見[圖像分析常見問題功能與限制相關](https://cloud.tencent.com/document/product/865/39164)。
+        目前支援8個大類、六十多個子類、數千個标簽。涵蓋各種日常場景、動植物、物品、美食、卡證等。具體分類請見[圖像分析常見問題功能與限制相關](https://cloud.taifucloud.com/document/product/865/39164)。
 
         圖像标簽提供三個版本供選擇：
 
@@ -173,8 +173,8 @@ class TiiaClient(AbstractClient):
         - 公共參數中的簽名方式必須指定爲V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for DetectLabel.
-        :type request: :class:`tencentcloud.tiia.v20190529.models.DetectLabelRequest`
-        :rtype: :class:`tencentcloud.tiia.v20190529.models.DetectLabelResponse`
+        :type request: :class:`taifucloudcloud.tiia.v20190529.models.DetectLabelRequest`
+        :rtype: :class:`taifucloudcloud.tiia.v20190529.models.DetectLabelResponse`
 
         """
         try:
@@ -203,8 +203,8 @@ class TiiaClient(AbstractClient):
         - 公共參數中的簽名方式必須指定爲V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for DetectMisbehavior.
-        :type request: :class:`tencentcloud.tiia.v20190529.models.DetectMisbehaviorRequest`
-        :rtype: :class:`tencentcloud.tiia.v20190529.models.DetectMisbehaviorResponse`
+        :type request: :class:`taifucloudcloud.tiia.v20190529.models.DetectMisbehaviorRequest`
+        :rtype: :class:`taifucloudcloud.tiia.v20190529.models.DetectMisbehaviorResponse`
 
         """
         try:
@@ -233,8 +233,8 @@ class TiiaClient(AbstractClient):
         - 公共參數中的簽名方式必須指定爲V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for DetectProduct.
-        :type request: :class:`tencentcloud.tiia.v20190529.models.DetectProductRequest`
-        :rtype: :class:`tencentcloud.tiia.v20190529.models.DetectProductResponse`
+        :type request: :class:`taifucloudcloud.tiia.v20190529.models.DetectProductRequest`
+        :rtype: :class:`taifucloudcloud.tiia.v20190529.models.DetectProductResponse`
 
         """
         try:
@@ -258,11 +258,11 @@ class TiiaClient(AbstractClient):
 
 
     def DetectProductBeta(self, request):
-        """商品識别-微信識物版，基于人工智慧技術、海量訓練圖片、億級商品庫，可以實現全函蓋、細粒度、高準确率的商品識别和商品推薦功能。
+        """商品識别- 識物版，基于人工智慧技術、海量訓練圖片、億級商品庫，可以實現全函蓋、細粒度、高準确率的商品識别和商品推薦功能。
         本服務可以識别出圖片中的主體位置、主體商品類型，函蓋億級SKU，輸出具體商品的價格、型号等詳細訊息。
         客戶無需自建商品庫，即可快速實現商品識别、拍照搜商品等功能。
 
-        目前“商品識别-微信識物版”爲内測服務，需要申請、開通後方可使用。請在[服務開通申請表](https://cloud.tencent.com/apply/p/y1q2mnf0vdl) 中填寫詳細訊息和需求，如果通過審核，我們将會在2個工作日内與您聯系，并開通服務。
+        目前“商品識别- 識物版”爲内測服務，需要申請、開通後方可使用。請在[服務開通申請表](https://cloud.taifucloud.com/apply/p/y1q2mnf0vdl) 中填寫詳細訊息和需求，如果通過審核，我們将會在2個工作日内與您聯系，并開通服務。
         内測期間，本服務免費提供最高2QPS，收費模式和标準會在正式版上線前通過站内信、簡訊通知客戶。如果需要提升并發，請與我們聯系洽談。
 
         注意：本文件爲内測版本，僅适用于功能體驗和測試，正式業務接入請等待正式版。正式版的輸入、輸出可能會與内測版存在少量差異。
@@ -270,8 +270,8 @@ class TiiaClient(AbstractClient):
         - 公共參數中的簽名方式必須指定爲V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for DetectProductBeta.
-        :type request: :class:`tencentcloud.tiia.v20190529.models.DetectProductBetaRequest`
-        :rtype: :class:`tencentcloud.tiia.v20190529.models.DetectProductBetaResponse`
+        :type request: :class:`taifucloudcloud.tiia.v20190529.models.DetectProductBetaRequest`
+        :rtype: :class:`taifucloudcloud.tiia.v20190529.models.DetectProductBetaResponse`
 
         """
         try:
@@ -302,8 +302,8 @@ class TiiaClient(AbstractClient):
         - 公共參數中的簽名方式必須指定爲V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for EnhanceImage.
-        :type request: :class:`tencentcloud.tiia.v20190529.models.EnhanceImageRequest`
-        :rtype: :class:`tencentcloud.tiia.v20190529.models.EnhanceImageResponse`
+        :type request: :class:`taifucloudcloud.tiia.v20190529.models.EnhanceImageRequest`
+        :rtype: :class:`taifucloudcloud.tiia.v20190529.models.EnhanceImageResponse`
 
         """
         try:
@@ -332,8 +332,8 @@ class TiiaClient(AbstractClient):
         - 公共參數中的簽名方式必須指定爲V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for RecognizeCar.
-        :type request: :class:`tencentcloud.tiia.v20190529.models.RecognizeCarRequest`
-        :rtype: :class:`tencentcloud.tiia.v20190529.models.RecognizeCarResponse`
+        :type request: :class:`taifucloudcloud.tiia.v20190529.models.RecognizeCarRequest`
+        :rtype: :class:`taifucloudcloud.tiia.v20190529.models.RecognizeCarResponse`
 
         """
         try:

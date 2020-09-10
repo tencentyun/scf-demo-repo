@@ -2,7 +2,7 @@
 /*************************************************************************
 *****                                                                *****
 *****    使用教程/readme ：                                            *****
-*****    https://cloud.tencent.com/document/product/583/47076        *****
+*****    https://cloud.taifucloud.com/document/product/583/47076        *****
 *****                                                                *****
 **************************************************************************/
 
@@ -126,4 +126,3 @@ exports.main_handler = async (event, context, callback) => {
   }
   return 'Success'
 }
-

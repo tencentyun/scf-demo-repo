@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AssumeRoleRequest(AbstractModel):
@@ -49,7 +49,7 @@ class AssumeRoleResponse(AbstractModel):
     def __init__(self):
         """
         :param Credentials: 臨時安全證書
-        :type Credentials: :class:`tencentcloud.sts.v20180813.models.Credentials`
+        :type Credentials: :class:`taifucloudcloud.sts.v20180813.models.Credentials`
         :param ExpiredTime: 證書無效的時間，返回 Unix 時間戳，精确到秒
         :type ExpiredTime: int
         :param Expiration: 證書無效的時間，以 iso8601 格式的 UTC 時間表示
@@ -134,7 +134,7 @@ class GetFederationTokenResponse(AbstractModel):
     def __init__(self):
         """
         :param Credentials: 臨時證書
-        :type Credentials: :class:`tencentcloud.sts.v20180813.models.Credentials`
+        :type Credentials: :class:`taifucloudcloud.sts.v20180813.models.Credentials`
         :param ExpiredTime: 臨時證書有效的時間，返回 Unix 時間戳，精确到秒
         :type ExpiredTime: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。

@@ -15,24 +15,24 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.afc.v20200226 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.afc.v20200226 import models
 
 
 class AfcClient(AbstractClient):
     _apiVersion = '2020-02-26'
-    _endpoint = 'afc.tencentcloudapi.com'
+    _endpoint = 'afc.taifucloudcloudapi.com'
 
 
     def QueryAntiFraudVip(self, request):
-        """天禦反欺詐服務，主要應用于銀行、證券、保險、P2P等金融行業客戶，通過騰訊的大數據風控能力，
+        """天禦反欺詐服務，主要應用于銀行、證券、保險、P2P等金融行業客戶，通過 的大數據風控能力，
         可以準确識别惡意用戶訊息，解決客戶在支付、活動、理财，風控等業務環節遇到的欺詐威脅，降低企業
         的損失。
 
         :param request: Request instance for QueryAntiFraudVip.
-        :type request: :class:`tencentcloud.afc.v20200226.models.QueryAntiFraudVipRequest`
-        :rtype: :class:`tencentcloud.afc.v20200226.models.QueryAntiFraudVipResponse`
+        :type request: :class:`taifucloudcloud.afc.v20200226.models.QueryAntiFraudVipRequest`
+        :rtype: :class:`taifucloudcloud.afc.v20200226.models.QueryAntiFraudVipResponse`
 
         """
         try:

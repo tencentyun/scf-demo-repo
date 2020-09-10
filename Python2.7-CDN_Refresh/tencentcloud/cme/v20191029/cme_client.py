@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cme.v20191029 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cme.v20191029 import models
 
 
 class CmeClient(AbstractClient):
     _apiVersion = '2019-10-29'
-    _endpoint = 'cme.tencentcloudapi.com'
+    _endpoint = 'cme.taifucloudcloudapi.com'
 
 
     def AddTeamMember(self, request):
         """向一個團隊中團隊成員，并且指定成員的角色。
 
         :param request: Request instance for AddTeamMember.
-        :type request: :class:`tencentcloud.cme.v20191029.models.AddTeamMemberRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.AddTeamMemberResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.AddTeamMemberRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.AddTeamMemberResponse`
 
         """
         try:
@@ -59,8 +59,8 @@ class CmeClient(AbstractClient):
         <li>子分類數不能超過10。</li>
 
         :param request: Request instance for CreateClass.
-        :type request: :class:`tencentcloud.cme.v20191029.models.CreateClassRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.CreateClassResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.CreateClassRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.CreateClassResponse`
 
         """
         try:
@@ -87,8 +87,8 @@ class CmeClient(AbstractClient):
         """創建素材連結或分類路徑連結，将源資源訊息連結到目标。
 
         :param request: Request instance for CreateLink.
-        :type request: :class:`tencentcloud.cme.v20191029.models.CreateLinkRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.CreateLinkResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.CreateLinkRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.CreateLinkResponse`
 
         """
         try:
@@ -115,8 +115,8 @@ class CmeClient(AbstractClient):
         """創建雲剪的編輯項目，支援創建視訊剪輯及直播剪輯兩大類項目。
 
         :param request: Request instance for CreateProject.
-        :type request: :class:`tencentcloud.cme.v20191029.models.CreateProjectRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.CreateProjectResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.CreateProjectRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.CreateProjectResponse`
 
         """
         try:
@@ -143,8 +143,8 @@ class CmeClient(AbstractClient):
         """創建一個團隊。
 
         :param request: Request instance for CreateTeam.
-        :type request: :class:`tencentcloud.cme.v20191029.models.CreateTeamRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.CreateTeamResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.CreateTeamRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.CreateTeamResponse`
 
         """
         try:
@@ -173,8 +173,8 @@ class CmeClient(AbstractClient):
         <li>分類下沒有綁定素材。</li>
 
         :param request: Request instance for DeleteClass.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DeleteClassRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DeleteClassResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DeleteClassRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DeleteClassResponse`
 
         """
         try:
@@ -201,8 +201,8 @@ class CmeClient(AbstractClient):
         """删除用戶登入态，使用戶登出雲剪平台。
 
         :param request: Request instance for DeleteLoginStatus.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DeleteLoginStatusRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DeleteLoginStatusResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DeleteLoginStatusRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DeleteLoginStatusResponse`
 
         """
         try:
@@ -229,8 +229,8 @@ class CmeClient(AbstractClient):
         """根據素材 Id 删除素材。
 
         :param request: Request instance for DeleteMaterial.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DeleteMaterialRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DeleteMaterialResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DeleteMaterialRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DeleteMaterialResponse`
 
         """
         try:
@@ -257,8 +257,8 @@ class CmeClient(AbstractClient):
         """删除雲剪編輯項目。
 
         :param request: Request instance for DeleteProject.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DeleteProjectRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DeleteProjectResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DeleteProjectRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DeleteProjectResponse`
 
         """
         try:
@@ -287,8 +287,8 @@ class CmeClient(AbstractClient):
         <li>要删除的團隊必須沒有歸屬的分類。</li>
 
         :param request: Request instance for DeleteTeam.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DeleteTeamRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DeleteTeamResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DeleteTeamRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DeleteTeamResponse`
 
         """
         try:
@@ -315,8 +315,8 @@ class CmeClient(AbstractClient):
         """将團隊成員從團隊中删除，預設只有 Owner 及管理員才有此權限。
 
         :param request: Request instance for DeleteTeamMembers.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DeleteTeamMembersRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DeleteTeamMembersResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DeleteTeamMembersRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DeleteTeamMembersResponse`
 
         """
         try:
@@ -343,8 +343,8 @@ class CmeClient(AbstractClient):
         """獲取指定歸屬者下所有的分類訊息。
 
         :param request: Request instance for DescribeClass.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DescribeClassRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DescribeClassResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DescribeClassRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DescribeClassResponse`
 
         """
         try:
@@ -371,8 +371,8 @@ class CmeClient(AbstractClient):
         """獲取指定的團隊成員所加入的團隊清單。
 
         :param request: Request instance for DescribeJoinTeams.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DescribeJoinTeamsRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DescribeJoinTeamsResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DescribeJoinTeamsRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DescribeJoinTeamsResponse`
 
         """
         try:
@@ -399,8 +399,8 @@ class CmeClient(AbstractClient):
         """查詢指定用戶的登入态。
 
         :param request: Request instance for DescribeLoginStatus.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DescribeLoginStatusRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DescribeLoginStatusResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DescribeLoginStatusRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DescribeLoginStatusResponse`
 
         """
         try:
@@ -427,8 +427,8 @@ class CmeClient(AbstractClient):
         """根據素材 Id 批次獲取素材詳情。
 
         :param request: Request instance for DescribeMaterials.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DescribeMaterialsRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DescribeMaterialsResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DescribeMaterialsRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DescribeMaterialsResponse`
 
         """
         try:
@@ -455,8 +455,8 @@ class CmeClient(AbstractClient):
         """支援根據多種條件過濾出項目清單。
 
         :param request: Request instance for DescribeProjects.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DescribeProjectsRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DescribeProjectsResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DescribeProjectsRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DescribeProjectsResponse`
 
         """
         try:
@@ -483,8 +483,8 @@ class CmeClient(AbstractClient):
         """查詢指定資源的授權清單。
 
         :param request: Request instance for DescribeResourceAuthorization.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DescribeResourceAuthorizationRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DescribeResourceAuthorizationResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DescribeResourceAuthorizationRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DescribeResourceAuthorizationResponse`
 
         """
         try:
@@ -511,8 +511,8 @@ class CmeClient(AbstractClient):
         """獲取共享空間。當實體A對實體B授權某資源以後，實體B的共享空間就會增加實體A。
 
         :param request: Request instance for DescribeSharedSpace.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DescribeSharedSpaceRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DescribeSharedSpaceResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DescribeSharedSpaceRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DescribeSharedSpaceResponse`
 
         """
         try:
@@ -541,8 +541,8 @@ class CmeClient(AbstractClient):
         <li>導出項目輸出訊息：包括輸出的素材 Id 等。</li>
 
         :param request: Request instance for DescribeTaskDetail.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DescribeTaskDetailRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DescribeTaskDetailResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DescribeTaskDetailRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DescribeTaskDetailResponse`
 
         """
         try:
@@ -569,8 +569,8 @@ class CmeClient(AbstractClient):
         """獲取任務清單，支援條件篩選，返回對應的任務基礎訊息清單。
 
         :param request: Request instance for DescribeTasks.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DescribeTasksRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DescribeTasksResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DescribeTasksRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DescribeTasksResponse`
 
         """
         try:
@@ -597,8 +597,8 @@ class CmeClient(AbstractClient):
         """獲取指定成員 ID 的訊息，同時支援拉取所有團隊成員訊息。
 
         :param request: Request instance for DescribeTeamMembers.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DescribeTeamMembersRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DescribeTeamMembersResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DescribeTeamMembersRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DescribeTeamMembersResponse`
 
         """
         try:
@@ -625,8 +625,8 @@ class CmeClient(AbstractClient):
         """獲取指定團隊的訊息。
 
         :param request: Request instance for DescribeTeams.
-        :type request: :class:`tencentcloud.cme.v20191029.models.DescribeTeamsRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.DescribeTeamsResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.DescribeTeamsRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.DescribeTeamsResponse`
 
         """
         try:
@@ -653,8 +653,8 @@ class CmeClient(AbstractClient):
         """導出視訊編輯項目，支援指定輸出的範本。
 
         :param request: Request instance for ExportVideoEditProject.
-        :type request: :class:`tencentcloud.cme.v20191029.models.ExportVideoEditProjectRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.ExportVideoEditProjectResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.ExportVideoEditProjectRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.ExportVideoEditProjectResponse`
 
         """
         try:
@@ -681,8 +681,8 @@ class CmeClient(AbstractClient):
         """平鋪分類路徑下及其子分類下的所有素材。
 
         :param request: Request instance for FlattenListMedia.
-        :type request: :class:`tencentcloud.cme.v20191029.models.FlattenListMediaRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.FlattenListMediaResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.FlattenListMediaRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.FlattenListMediaResponse`
 
         """
         try:
@@ -709,8 +709,8 @@ class CmeClient(AbstractClient):
         """資源所屬實體對目标實體授予目标資源的相應權限。
 
         :param request: Request instance for GrantResourceAuthorization.
-        :type request: :class:`tencentcloud.cme.v20191029.models.GrantResourceAuthorizationRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.GrantResourceAuthorizationResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.GrantResourceAuthorizationRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.GrantResourceAuthorizationResponse`
 
         """
         try:
@@ -737,8 +737,8 @@ class CmeClient(AbstractClient):
         """将雲點播媒資文件導入到雲剪素材庫。
 
         :param request: Request instance for ImportMaterial.
-        :type request: :class:`tencentcloud.cme.v20191029.models.ImportMaterialRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.ImportMaterialResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.ImportMaterialRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.ImportMaterialResponse`
 
         """
         try:
@@ -765,8 +765,8 @@ class CmeClient(AbstractClient):
         """将雲點播中的媒資添加到素材庫中，供後續視訊編輯使用。
 
         :param request: Request instance for ImportMediaToProject.
-        :type request: :class:`tencentcloud.cme.v20191029.models.ImportMediaToProjectRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.ImportMediaToProjectResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.ImportMediaToProjectRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.ImportMediaToProjectResponse`
 
         """
         try:
@@ -793,8 +793,8 @@ class CmeClient(AbstractClient):
         """浏覽當前分類路徑下的資源，包括素材和子分類。
 
         :param request: Request instance for ListMedia.
-        :type request: :class:`tencentcloud.cme.v20191029.models.ListMediaRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.ListMediaResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.ListMediaRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.ListMediaResponse`
 
         """
         try:
@@ -821,8 +821,8 @@ class CmeClient(AbstractClient):
         """修改素材訊息，支援修改素材名稱、分類路徑、标簽等訊息。
 
         :param request: Request instance for ModifyMaterial.
-        :type request: :class:`tencentcloud.cme.v20191029.models.ModifyMaterialRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.ModifyMaterialResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.ModifyMaterialRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.ModifyMaterialResponse`
 
         """
         try:
@@ -849,8 +849,8 @@ class CmeClient(AbstractClient):
         """修改雲剪編輯項目的訊息。
 
         :param request: Request instance for ModifyProject.
-        :type request: :class:`tencentcloud.cme.v20191029.models.ModifyProjectRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.ModifyProjectResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.ModifyProjectRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.ModifyProjectResponse`
 
         """
         try:
@@ -878,8 +878,8 @@ class CmeClient(AbstractClient):
         <li>修改團隊名稱。</li>
 
         :param request: Request instance for ModifyTeam.
-        :type request: :class:`tencentcloud.cme.v20191029.models.ModifyTeamRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.ModifyTeamResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.ModifyTeamRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.ModifyTeamResponse`
 
         """
         try:
@@ -906,8 +906,8 @@ class CmeClient(AbstractClient):
         """修改團隊成員訊息，包括成員備注、角色等。
 
         :param request: Request instance for ModifyTeamMember.
-        :type request: :class:`tencentcloud.cme.v20191029.models.ModifyTeamMemberRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.ModifyTeamMemberResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.ModifyTeamMemberRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.ModifyTeamMemberResponse`
 
         """
         try:
@@ -931,12 +931,12 @@ class CmeClient(AbstractClient):
 
 
     def MoveClass(self, request):
-        """移動某一個分類到另外一個分類下，也可用于分類重命名。
+        """ 某一個分類到另外一個分類下，也可用于分類重命名。
         <li>如果 SourceClassPath = /素材/視訊/NBA，DestinationClassPath = /素材/視訊/籃球，當 DestinationClassPath 不存在時候，操作結果爲重命名 ClassPath，如果 DestinationClassPath 存在時候，操作結果爲産生新目錄 /素材/視訊/籃球/NBA。</li>
 
         :param request: Request instance for MoveClass.
-        :type request: :class:`tencentcloud.cme.v20191029.models.MoveClassRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.MoveClassResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.MoveClassRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.MoveClassResponse`
 
         """
         try:
@@ -963,8 +963,8 @@ class CmeClient(AbstractClient):
         """資源所屬實體對目标實體回收目标資源的相應權限，若原本沒有相應權限則不産生變更。
 
         :param request: Request instance for RevokeResourceAuthorization.
-        :type request: :class:`tencentcloud.cme.v20191029.models.RevokeResourceAuthorizationRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.RevokeResourceAuthorizationResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.RevokeResourceAuthorizationRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.RevokeResourceAuthorizationResponse`
 
         """
         try:
@@ -991,8 +991,8 @@ class CmeClient(AbstractClient):
         """根據檢索條件搜索素材，返回素材的基本訊息。
 
         :param request: Request instance for SearchMaterial.
-        :type request: :class:`tencentcloud.cme.v20191029.models.SearchMaterialRequest`
-        :rtype: :class:`tencentcloud.cme.v20191029.models.SearchMaterialResponse`
+        :type request: :class:`taifucloudcloud.cme.v20191029.models.SearchMaterialRequest`
+        :rtype: :class:`taifucloudcloud.cme.v20191029.models.SearchMaterialResponse`
 
         """
         try:

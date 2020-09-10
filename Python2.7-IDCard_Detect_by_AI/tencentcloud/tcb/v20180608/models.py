@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class DatabasesInfo(AbstractModel):
@@ -145,7 +145,7 @@ class EnvInfo(AbstractModel):
         :param EnvId: 帳戶下該環境唯一标識
         :type EnvId: str
         :param Source: 環境來源。包含以下取值：
-<li>miniapp：微信小程式</li>
+<li>miniapp： 小程式</li>
 <li>qcloud ：Top Cloud </li>
         :type Source: str
         :param Alias: 環境别名，要以a-z開頭，不能包含 a-zA-z0-9- 以外的字元

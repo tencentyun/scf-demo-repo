@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cfs.v20190719 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cfs.v20190719 import models
 
 
 class CfsClient(AbstractClient):
     _apiVersion = '2019-07-19'
-    _endpoint = 'cfs.tencentcloudapi.com'
+    _endpoint = 'cfs.taifucloudcloudapi.com'
 
 
     def CreateCfsFileSystem(self, request):
         """用于添加新文件系統
 
         :param request: Request instance for CreateCfsFileSystem.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.CreateCfsFileSystemRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.CreateCfsFileSystemResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.CreateCfsFileSystemRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.CreateCfsFileSystemResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class CfsClient(AbstractClient):
         """本介面（CreateCfsPGroup）用于創建權限組
 
         :param request: Request instance for CreateCfsPGroup.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.CreateCfsPGroupRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.CreateCfsPGroupResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.CreateCfsPGroupRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.CreateCfsPGroupResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class CfsClient(AbstractClient):
         """本介面（CreateCfsRule）用于創建權限組規則。
 
         :param request: Request instance for CreateCfsRule.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.CreateCfsRuleRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.CreateCfsRuleResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.CreateCfsRuleRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.CreateCfsRuleResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class CfsClient(AbstractClient):
         """用于删除文件系統
 
         :param request: Request instance for DeleteCfsFileSystem.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.DeleteCfsFileSystemRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.DeleteCfsFileSystemResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.DeleteCfsFileSystemRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.DeleteCfsFileSystemResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class CfsClient(AbstractClient):
         """本介面（DeleteCfsPGroup）用于删除權限組。
 
         :param request: Request instance for DeleteCfsPGroup.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.DeleteCfsPGroupRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.DeleteCfsPGroupResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.DeleteCfsPGroupRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.DeleteCfsPGroupResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class CfsClient(AbstractClient):
         """本介面（DeleteCfsRule）用于删除權限組規則。
 
         :param request: Request instance for DeleteCfsRule.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.DeleteCfsRuleRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.DeleteCfsRuleResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.DeleteCfsRuleRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.DeleteCfsRuleResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class CfsClient(AbstractClient):
         """本介面（DeleteMountTarget）用于删除掛載點
 
         :param request: Request instance for DeleteMountTarget.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.DeleteMountTargetRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.DeleteMountTargetResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.DeleteMountTargetRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.DeleteMountTargetResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class CfsClient(AbstractClient):
         """本介面（DescribeAvailableZoneInfo）用于查詢區域的可用情況。
 
         :param request: Request instance for DescribeAvailableZoneInfo.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.DescribeAvailableZoneInfoRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.DescribeAvailableZoneInfoResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.DescribeAvailableZoneInfoRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.DescribeAvailableZoneInfoResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class CfsClient(AbstractClient):
         """本介面（DescribeCfsFileSystems）用于查詢文件系統
 
         :param request: Request instance for DescribeCfsFileSystems.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.DescribeCfsFileSystemsRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.DescribeCfsFileSystemsResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.DescribeCfsFileSystemsRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.DescribeCfsFileSystemsResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class CfsClient(AbstractClient):
         """本介面（DescribeCfsPGroups）用于查詢權限組清單。
 
         :param request: Request instance for DescribeCfsPGroups.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.DescribeCfsPGroupsRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.DescribeCfsPGroupsResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.DescribeCfsPGroupsRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.DescribeCfsPGroupsResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class CfsClient(AbstractClient):
         """本介面（DescribeCfsRules）用于查詢權限組規則清單。
 
         :param request: Request instance for DescribeCfsRules.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.DescribeCfsRulesRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.DescribeCfsRulesResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.DescribeCfsRulesRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.DescribeCfsRulesResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class CfsClient(AbstractClient):
         """本介面（DescribeCfsServiceStatus）用于查詢用戶使用CFS的服務狀态。
 
         :param request: Request instance for DescribeCfsServiceStatus.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.DescribeCfsServiceStatusRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.DescribeCfsServiceStatusResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.DescribeCfsServiceStatusRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.DescribeCfsServiceStatusResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class CfsClient(AbstractClient):
         """本介面（DescribeMountTargets）用于查詢文件系統掛載點訊息
 
         :param request: Request instance for DescribeMountTargets.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.DescribeMountTargetsRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.DescribeMountTargetsResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.DescribeMountTargetsRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.DescribeMountTargetsResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class CfsClient(AbstractClient):
         """本介面（SignUpCfsService）用于開通CFS服務。
 
         :param request: Request instance for SignUpCfsService.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.SignUpCfsServiceRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.SignUpCfsServiceResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.SignUpCfsServiceRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.SignUpCfsServiceResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class CfsClient(AbstractClient):
         """本介面（UpdateCfsFileSystemName）用于更新文件系統名
 
         :param request: Request instance for UpdateCfsFileSystemName.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.UpdateCfsFileSystemNameRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.UpdateCfsFileSystemNameResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.UpdateCfsFileSystemNameRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.UpdateCfsFileSystemNameResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class CfsClient(AbstractClient):
         """本介面（UpdateCfsFileSystemPGroup）用于更新文件系統所使用的權限組
 
         :param request: Request instance for UpdateCfsFileSystemPGroup.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.UpdateCfsFileSystemPGroupRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.UpdateCfsFileSystemPGroupResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.UpdateCfsFileSystemPGroupRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.UpdateCfsFileSystemPGroupResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class CfsClient(AbstractClient):
         """本介面（UpdateCfsFileSystemSizeLimit）用于更新文件系統儲存容量限制。
 
         :param request: Request instance for UpdateCfsFileSystemSizeLimit.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.UpdateCfsFileSystemSizeLimitRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.UpdateCfsFileSystemSizeLimitResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.UpdateCfsFileSystemSizeLimitRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.UpdateCfsFileSystemSizeLimitResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class CfsClient(AbstractClient):
         """本介面（UpdateCfsPGroup）更新權限組訊息。
 
         :param request: Request instance for UpdateCfsPGroup.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.UpdateCfsPGroupRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.UpdateCfsPGroupResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.UpdateCfsPGroupRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.UpdateCfsPGroupResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class CfsClient(AbstractClient):
         """本介面（UpdateCfsRule）用于更新權限規則。
 
         :param request: Request instance for UpdateCfsRule.
-        :type request: :class:`tencentcloud.cfs.v20190719.models.UpdateCfsRuleRequest`
-        :rtype: :class:`tencentcloud.cfs.v20190719.models.UpdateCfsRuleResponse`
+        :type request: :class:`taifucloudcloud.cfs.v20190719.models.UpdateCfsRuleRequest`
+        :rtype: :class:`taifucloudcloud.cfs.v20190719.models.UpdateCfsRuleResponse`
 
         """
         try:

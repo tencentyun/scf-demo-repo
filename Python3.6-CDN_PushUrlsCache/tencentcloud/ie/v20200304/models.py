@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CallbackInfo(AbstractModel):
@@ -165,7 +165,7 @@ class CosInfo(AbstractModel):
 對于讀表示文件路徑，例如：/test/test.mp4。
         :type Path: str
         :param CosAuthMode: cos 授權訊息，不填預設爲公有權限。
-        :type CosAuthMode: :class:`tencentcloud.ie.v20200304.models.CosAuthMode`
+        :type CosAuthMode: :class:`taifucloudcloud.ie.v20200304.models.CosAuthMode`
         """
         self.Region = None
         self.Bucket = None
@@ -269,13 +269,13 @@ class CreateEditingTaskRequest(AbstractModel):
     def __init__(self):
         """
         :param EditingInfo: 智慧編輯任務參數。
-        :type EditingInfo: :class:`tencentcloud.ie.v20200304.models.EditingInfo`
+        :type EditingInfo: :class:`taifucloudcloud.ie.v20200304.models.EditingInfo`
         :param DownInfo: 視訊源訊息。
-        :type DownInfo: :class:`tencentcloud.ie.v20200304.models.DownInfo`
+        :type DownInfo: :class:`taifucloudcloud.ie.v20200304.models.DownInfo`
         :param SaveInfo: 結果儲存訊息。對于包含智慧拆條、智慧集錦或者智慧封面的任務必選。
-        :type SaveInfo: :class:`tencentcloud.ie.v20200304.models.SaveInfo`
+        :type SaveInfo: :class:`taifucloudcloud.ie.v20200304.models.SaveInfo`
         :param CallbackInfo: 任務結果回調網址訊息。
-        :type CallbackInfo: :class:`tencentcloud.ie.v20200304.models.CallbackInfo`
+        :type CallbackInfo: :class:`taifucloudcloud.ie.v20200304.models.CallbackInfo`
         """
         self.EditingInfo = None
         self.DownInfo = None
@@ -344,7 +344,7 @@ class DescribeEditingTaskResultResponse(AbstractModel):
     def __init__(self):
         """
         :param TaskResult: 編輯任務結果訊息。
-        :type TaskResult: :class:`tencentcloud.ie.v20200304.models.EditingTaskResult`
+        :type TaskResult: :class:`taifucloudcloud.ie.v20200304.models.EditingTaskResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -371,9 +371,9 @@ class DownInfo(AbstractModel):
 1：CosInfo。
         :type Type: int
         :param UrlInfo: Url形式下載訊息，當Type等于0時必選。
-        :type UrlInfo: :class:`tencentcloud.ie.v20200304.models.UrlInfo`
+        :type UrlInfo: :class:`taifucloudcloud.ie.v20200304.models.UrlInfo`
         :param CosInfo: Cos形式下載訊息，當Type等于1時必選。
-        :type CosInfo: :class:`tencentcloud.ie.v20200304.models.CosInfo`
+        :type CosInfo: :class:`taifucloudcloud.ie.v20200304.models.CosInfo`
         """
         self.Type = None
         self.UrlInfo = None
@@ -398,17 +398,17 @@ class EditingInfo(AbstractModel):
     def __init__(self):
         """
         :param TagEditingInfo: 視訊标簽識别任務參數，不填則不開啓。
-        :type TagEditingInfo: :class:`tencentcloud.ie.v20200304.models.TagEditingInfo`
+        :type TagEditingInfo: :class:`taifucloudcloud.ie.v20200304.models.TagEditingInfo`
         :param ClassificationEditingInfo: 視訊分類識别任務參數，不填則不開啓。
-        :type ClassificationEditingInfo: :class:`tencentcloud.ie.v20200304.models.ClassificationEditingInfo`
+        :type ClassificationEditingInfo: :class:`taifucloudcloud.ie.v20200304.models.ClassificationEditingInfo`
         :param StripEditingInfo: 智慧拆條任務參數，不填則不開啓。
-        :type StripEditingInfo: :class:`tencentcloud.ie.v20200304.models.StripEditingInfo`
+        :type StripEditingInfo: :class:`taifucloudcloud.ie.v20200304.models.StripEditingInfo`
         :param HighlightsEditingInfo: 智慧集錦任務參數，不填則不開啓。
-        :type HighlightsEditingInfo: :class:`tencentcloud.ie.v20200304.models.HighlightsEditingInfo`
+        :type HighlightsEditingInfo: :class:`taifucloudcloud.ie.v20200304.models.HighlightsEditingInfo`
         :param CoverEditingInfo: 智慧封面任務參數，不填則不開啓。
-        :type CoverEditingInfo: :class:`tencentcloud.ie.v20200304.models.CoverEditingInfo`
+        :type CoverEditingInfo: :class:`taifucloudcloud.ie.v20200304.models.CoverEditingInfo`
         :param OpeningEndingEditingInfo: 片頭片尾識别任務參數，不填則不開啓。
-        :type OpeningEndingEditingInfo: :class:`tencentcloud.ie.v20200304.models.OpeningEndingEditingInfo`
+        :type OpeningEndingEditingInfo: :class:`taifucloudcloud.ie.v20200304.models.OpeningEndingEditingInfo`
         """
         self.TagEditingInfo = None
         self.ClassificationEditingInfo = None
@@ -453,22 +453,22 @@ class EditingTaskResult(AbstractModel):
         :type Status: int
         :param TagTaskResult: 視訊标簽識别結果。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TagTaskResult: :class:`tencentcloud.ie.v20200304.models.TagTaskResult`
+        :type TagTaskResult: :class:`taifucloudcloud.ie.v20200304.models.TagTaskResult`
         :param ClassificationTaskResult: 視訊分類識别結果。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ClassificationTaskResult: :class:`tencentcloud.ie.v20200304.models.ClassificationTaskResult`
+        :type ClassificationTaskResult: :class:`taifucloudcloud.ie.v20200304.models.ClassificationTaskResult`
         :param StripTaskResult: 智慧拆條結果。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type StripTaskResult: :class:`tencentcloud.ie.v20200304.models.StripTaskResult`
+        :type StripTaskResult: :class:`taifucloudcloud.ie.v20200304.models.StripTaskResult`
         :param HighlightsTaskResult: 智慧集錦結果。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type HighlightsTaskResult: :class:`tencentcloud.ie.v20200304.models.HighlightsTaskResult`
+        :type HighlightsTaskResult: :class:`taifucloudcloud.ie.v20200304.models.HighlightsTaskResult`
         :param CoverTaskResult: 智慧封面結果。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CoverTaskResult: :class:`tencentcloud.ie.v20200304.models.CoverTaskResult`
+        :type CoverTaskResult: :class:`taifucloudcloud.ie.v20200304.models.CoverTaskResult`
         :param OpeningEndingTaskResult: 片頭片尾識别結果。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OpeningEndingTaskResult: :class:`tencentcloud.ie.v20200304.models.OpeningEndingTaskResult`
+        :type OpeningEndingTaskResult: :class:`taifucloudcloud.ie.v20200304.models.OpeningEndingTaskResult`
         """
         self.TaskId = None
         self.Status = None
@@ -662,7 +662,7 @@ class OpeningEndingTaskResult(AbstractModel):
         :type ErrMsg: str
         :param Item: 片頭片尾識别結果項。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Item: :class:`tencentcloud.ie.v20200304.models.OpeningEndingTaskResultItem`
+        :type Item: :class:`taifucloudcloud.ie.v20200304.models.OpeningEndingTaskResultItem`
         """
         self.Status = None
         self.ErrCode = None
@@ -719,7 +719,7 @@ class SaveInfo(AbstractModel):
 1：CosInfo。
         :type Type: int
         :param CosInfo: Cos形式儲存訊息，當Type等于1時必選。
-        :type CosInfo: :class:`tencentcloud.ie.v20200304.models.CosInfo`
+        :type CosInfo: :class:`taifucloudcloud.ie.v20200304.models.CosInfo`
         """
         self.Type = None
         self.CosInfo = None

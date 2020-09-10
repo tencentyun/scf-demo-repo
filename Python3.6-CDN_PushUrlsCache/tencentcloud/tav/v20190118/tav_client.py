@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tav.v20190118 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tav.v20190118 import models
 
 
 class TavClient(AbstractClient):
     _apiVersion = '2019-01-18'
-    _endpoint = 'tav.tencentcloudapi.com'
+    _endpoint = 'tav.taifucloudcloudapi.com'
 
 
     def GetLocalEngine(self, request):
         """獲取TAV本地引擎
 
         :param request: Request instance for GetLocalEngine.
-        :type request: :class:`tencentcloud.tav.v20190118.models.GetLocalEngineRequest`
-        :rtype: :class:`tencentcloud.tav.v20190118.models.GetLocalEngineResponse`
+        :type request: :class:`taifucloudcloud.tav.v20190118.models.GetLocalEngineRequest`
+        :rtype: :class:`taifucloudcloud.tav.v20190118.models.GetLocalEngineResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TavClient(AbstractClient):
         """tav文件上傳掃描結果查詢
 
         :param request: Request instance for GetScanResult.
-        :type request: :class:`tencentcloud.tav.v20190118.models.GetScanResultRequest`
-        :rtype: :class:`tencentcloud.tav.v20190118.models.GetScanResultResponse`
+        :type request: :class:`taifucloudcloud.tav.v20190118.models.GetScanResultRequest`
+        :rtype: :class:`taifucloudcloud.tav.v20190118.models.GetScanResultResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TavClient(AbstractClient):
         """tav文件上傳掃描
 
         :param request: Request instance for ScanFile.
-        :type request: :class:`tencentcloud.tav.v20190118.models.ScanFileRequest`
-        :rtype: :class:`tencentcloud.tav.v20190118.models.ScanFileResponse`
+        :type request: :class:`taifucloudcloud.tav.v20190118.models.ScanFileRequest`
+        :rtype: :class:`taifucloudcloud.tav.v20190118.models.ScanFileResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TavClient(AbstractClient):
         """通過文件哈希值獲取文件黑白屬性
 
         :param request: Request instance for ScanFileHash.
-        :type request: :class:`tencentcloud.tav.v20190118.models.ScanFileHashRequest`
-        :rtype: :class:`tencentcloud.tav.v20190118.models.ScanFileHashResponse`
+        :type request: :class:`taifucloudcloud.tav.v20190118.models.ScanFileHashRequest`
+        :rtype: :class:`taifucloudcloud.tav.v20190118.models.ScanFileHashResponse`
 
         """
         try:

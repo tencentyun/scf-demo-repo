@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AddShardConfig(AbstractModel):
@@ -328,9 +328,9 @@ class CreateDCDBInstanceRequest(AbstractModel):
 5.7.17 - Percona 5.7.17。
 如果不填的話，預設爲10.1.9，表示Mariadb 10.1.9。
         :type DbVersionId: str
-        :param AutoVoucher: 是否自動使用代金券進行支付，預設不使用。
+        :param AutoVoucher: 是否自動使用 進行支付，預設不使用。
         :type AutoVoucher: bool
-        :param VoucherIds: 代金券ID清單，目前僅支援指定一張代金券。
+        :param VoucherIds:  ID清單，目前僅支援指定一張 。
         :type VoucherIds: list of str
         :param SecurityGroupId: 安全組id
         :type SecurityGroupId: str
@@ -1532,11 +1532,11 @@ class DescribeDCDBUpgradePriceRequest(AbstractModel):
  <li> SPLIT: 将已有分片中的數據切分到新增分片上</li>
         :type UpgradeType: str
         :param AddShardConfig: 新增分片配置，當UpgradeType爲ADD時生效。
-        :type AddShardConfig: :class:`tencentcloud.dcdb.v20180411.models.AddShardConfig`
+        :type AddShardConfig: :class:`taifucloudcloud.dcdb.v20180411.models.AddShardConfig`
         :param ExpandShardConfig: 擴容分片配置，當UpgradeType爲EXPAND時生效。
-        :type ExpandShardConfig: :class:`tencentcloud.dcdb.v20180411.models.ExpandShardConfig`
+        :type ExpandShardConfig: :class:`taifucloudcloud.dcdb.v20180411.models.ExpandShardConfig`
         :param SplitShardConfig: 切分分片配置，當UpgradeType爲SPLIT時生效。
-        :type SplitShardConfig: :class:`tencentcloud.dcdb.v20180411.models.SplitShardConfig`
+        :type SplitShardConfig: :class:`taifucloudcloud.dcdb.v20180411.models.SplitShardConfig`
         """
         self.InstanceId = None
         self.UpgradeType = None
@@ -2362,7 +2362,7 @@ class ParamConstraint(AbstractModel):
         :type Enum: str
         :param Range: 約束類型爲section時的範圍
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Range: :class:`tencentcloud.dcdb.v20180411.models.ConstraintRange`
+        :type Range: :class:`taifucloudcloud.dcdb.v20180411.models.ConstraintRange`
         :param String: 約束類型爲string時的可選值清單
         :type String: str
         """
@@ -2398,7 +2398,7 @@ class ParamDesc(AbstractModel):
         :param Default: 系統預設值
         :type Default: str
         :param Constraint: 參數限制
-        :type Constraint: :class:`tencentcloud.dcdb.v20180411.models.ParamConstraint`
+        :type Constraint: :class:`taifucloudcloud.dcdb.v20180411.models.ParamConstraint`
         :param HaveSetValue: 是否有設置過值，false:沒有設置過值，true:有設置過值。
         :type HaveSetValue: bool
         """
@@ -2553,9 +2553,9 @@ class RenewDCDBInstanceRequest(AbstractModel):
         :type InstanceId: str
         :param Period: 續約時長，單位：月。
         :type Period: int
-        :param AutoVoucher: 是否自動使用代金券進行支付，預設不使用。
+        :param AutoVoucher: 是否自動使用 進行支付，預設不使用。
         :type AutoVoucher: bool
-        :param VoucherIds: 代金券ID清單，目前僅支援指定一張代金券。
+        :param VoucherIds:  ID清單，目前僅支援指定一張 。
         :type VoucherIds: list of str
         """
         self.InstanceId = None
@@ -2700,7 +2700,7 @@ class ShardZoneChooseInfo(AbstractModel):
     def __init__(self):
         """
         :param MasterZone: 主可用區
-        :type MasterZone: :class:`tencentcloud.dcdb.v20180411.models.ZonesInfo`
+        :type MasterZone: :class:`taifucloudcloud.dcdb.v20180411.models.ZonesInfo`
         :param SlaveZones: 可選的從可用區
         :type SlaveZones: list of ZonesInfo
         """
@@ -2909,14 +2909,14 @@ class UpgradeDCDBInstanceRequest(AbstractModel):
  <li> SPLIT: 将已有分片中的數據切分到新增分片上</li>
         :type UpgradeType: str
         :param AddShardConfig: 新增分片配置，當UpgradeType爲ADD時生效。
-        :type AddShardConfig: :class:`tencentcloud.dcdb.v20180411.models.AddShardConfig`
+        :type AddShardConfig: :class:`taifucloudcloud.dcdb.v20180411.models.AddShardConfig`
         :param ExpandShardConfig: 擴容分片配置，當UpgradeType爲EXPAND時生效。
-        :type ExpandShardConfig: :class:`tencentcloud.dcdb.v20180411.models.ExpandShardConfig`
+        :type ExpandShardConfig: :class:`taifucloudcloud.dcdb.v20180411.models.ExpandShardConfig`
         :param SplitShardConfig: 切分分片配置，當UpgradeType爲SPLIT時生效。
-        :type SplitShardConfig: :class:`tencentcloud.dcdb.v20180411.models.SplitShardConfig`
-        :param AutoVoucher: 是否自動使用代金券進行支付，預設不使用。
+        :type SplitShardConfig: :class:`taifucloudcloud.dcdb.v20180411.models.SplitShardConfig`
+        :param AutoVoucher: 是否自動使用 進行支付，預設不使用。
         :type AutoVoucher: bool
-        :param VoucherIds: 代金券ID清單，目前僅支援指定一張代金券。
+        :param VoucherIds:  ID清單，目前僅支援指定一張 。
         :type VoucherIds: list of str
         """
         self.InstanceId = None

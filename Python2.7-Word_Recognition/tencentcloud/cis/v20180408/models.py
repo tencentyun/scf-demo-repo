@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Container(AbstractModel):
@@ -40,9 +40,9 @@ class Container(AbstractModel):
         :param RestartCount: 重啓次數
         :type RestartCount: int
         :param CurrentState: 當前狀态
-        :type CurrentState: :class:`tencentcloud.cis.v20180408.models.ContainerState`
+        :type CurrentState: :class:`taifucloudcloud.cis.v20180408.models.ContainerState`
         :param PreviousState: 上一次狀态
-        :type PreviousState: :class:`tencentcloud.cis.v20180408.models.ContainerState`
+        :type PreviousState: :class:`taifucloudcloud.cis.v20180408.models.ContainerState`
         :param WorkingDir: 容器工作目錄
         :type WorkingDir: str
         :param ContainerId: 容器ID
@@ -391,7 +391,7 @@ class DescribeContainerInstanceResponse(AbstractModel):
     def __init__(self):
         """
         :param ContainerInstance: 容器實例詳細訊息
-        :type ContainerInstance: :class:`tencentcloud.cis.v20180408.models.ContainerInstance`
+        :type ContainerInstance: :class:`taifucloudcloud.cis.v20180408.models.ContainerInstance`
         :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """
@@ -636,7 +636,7 @@ class InquiryPriceCreateCisResponse(AbstractModel):
     def __init__(self):
         """
         :param Price: 價格
-        :type Price: :class:`tencentcloud.cis.v20180408.models.Price`
+        :type Price: :class:`taifucloudcloud.cis.v20180408.models.Price`
         :param RequestId: 唯一請求ID，每次請求都會返回。定位問題時需要提供該次請求的RequestId。
         :type RequestId: str
         """

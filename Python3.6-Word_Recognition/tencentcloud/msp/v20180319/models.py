@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class DeregisterMigrationTaskRequest(AbstractModel):
@@ -339,9 +339,9 @@ class RegisterMigrationTaskRequest(AbstractModel):
         :param ServiceSupplier: 服務提供商名稱
         :type ServiceSupplier: str
         :param SrcInfo: 遷移任務源訊息
-        :type SrcInfo: :class:`tencentcloud.msp.v20180319.models.SrcInfo`
+        :type SrcInfo: :class:`taifucloudcloud.msp.v20180319.models.SrcInfo`
         :param DstInfo: 遷移任務目的訊息
-        :type DstInfo: :class:`tencentcloud.msp.v20180319.models.DstInfo`
+        :type DstInfo: :class:`taifucloudcloud.msp.v20180319.models.DstInfo`
         :param CreateTime: 遷移任務創建時間
         :type CreateTime: str
         :param UpdateTime: 遷移任務更新時間
@@ -460,13 +460,13 @@ class Task(AbstractModel):
         :param ProjectName: 項目名稱
         :type ProjectName: str
         :param SrcInfo: 遷移源訊息
-        :type SrcInfo: :class:`tencentcloud.msp.v20180319.models.SrcInfo`
+        :type SrcInfo: :class:`taifucloudcloud.msp.v20180319.models.SrcInfo`
         :param MigrationTimeLine: 遷移時間訊息
-        :type MigrationTimeLine: :class:`tencentcloud.msp.v20180319.models.TimeObj`
+        :type MigrationTimeLine: :class:`taifucloudcloud.msp.v20180319.models.TimeObj`
         :param Updated: 狀态更新時間
         :type Updated: str
         :param DstInfo: 遷移目的訊息
-        :type DstInfo: :class:`tencentcloud.msp.v20180319.models.DstInfo`
+        :type DstInfo: :class:`taifucloudcloud.msp.v20180319.models.DstInfo`
         """
         self.TaskId = None
         self.TaskName = None

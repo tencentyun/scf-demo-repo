@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AuthDomain(AbstractModel):
@@ -769,10 +769,10 @@ class EndUserInfo(AbstractModel):
         """
         :param UUId: 用戶唯一ID
         :type UUId: str
-        :param WXOpenId: 微信ID
+        :param WXOpenId:  ID
         :type WXOpenId: str
-        :param QQOpenId: qq ID
-        :type QQOpenId: str
+        :param  OpenId: qq ID
+        :type  OpenId: str
         :param Phone: 手機号
         :type Phone: str
         :param Email: 電子信箱
@@ -794,7 +794,7 @@ class EndUserInfo(AbstractModel):
         """
         self.UUId = None
         self.WXOpenId = None
-        self.QQOpenId = None
+        self. OpenId = None
         self.Phone = None
         self.Email = None
         self.NickName = None
@@ -809,7 +809,7 @@ class EndUserInfo(AbstractModel):
     def _deserialize(self, params):
         self.UUId = params.get("UUId")
         self.WXOpenId = params.get("WXOpenId")
-        self.QQOpenId = params.get("QQOpenId")
+        self. OpenId = params.get(" OpenId")
         self.Phone = params.get("Phone")
         self.Email = params.get("Email")
         self.NickName = params.get("NickName")
@@ -831,7 +831,7 @@ class EnvInfo(AbstractModel):
         :param EnvId: 帳戶下該環境唯一标識
         :type EnvId: str
         :param Source: 環境來源。包含以下取值：
-<li>miniapp：微信小程式</li>
+<li>miniapp： 小程式</li>
 <li>qcloud ：Top Cloud </li>
         :type Source: str
         :param Alias: 環境别名，要以a-z開頭，不能包含 a-zA-z0-9- 以外的字元

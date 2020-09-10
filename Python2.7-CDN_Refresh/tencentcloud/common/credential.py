@@ -12,13 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
 
 class Credential(object):
     def __init__(self, secretId, secretKey, token=None):
         """Tencent Cloud Credentials.
 
-        Access https://console.cloud.tencent.com/cam/capi to manage your
+        Access https://console.cloud.taifucloud.com/cam/capi to manage your
         credentials.
 
         :param secretId: The secret id of your credential.
@@ -27,7 +27,7 @@ class Credential(object):
         :type secretKey: str
         :param token: The federation token of your credential, if this field
                       is specified, secretId and secretKey should be set
-                      accordingly, see: https://cloud.tencent.com/document/product/598/13896
+                      accordingly, see: https://cloud.taifucloud.com/document/product/598/13896
         """
         if secretId is None or secretId.strip() == "":
             raise TencentCloudSDKException("InvalidCredential", "secret id should not be none or empty")

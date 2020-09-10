@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.sts.v20180813 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.sts.v20180813 import models
 
 
 class StsClient(AbstractClient):
     _apiVersion = '2018-08-13'
-    _endpoint = 'sts.tencentcloudapi.com'
+    _endpoint = 'sts.taifucloudcloudapi.com'
 
 
     def AssumeRole(self, request):
         """申請扮演角色
 
         :param request: Request instance for AssumeRole.
-        :type request: :class:`tencentcloud.sts.v20180813.models.AssumeRoleRequest`
-        :rtype: :class:`tencentcloud.sts.v20180813.models.AssumeRoleResponse`
+        :type request: :class:`taifucloudcloud.sts.v20180813.models.AssumeRoleRequest`
+        :rtype: :class:`taifucloudcloud.sts.v20180813.models.AssumeRoleResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class StsClient(AbstractClient):
         """本介面（AssumeRoleWithSAML）用于根據 SAML 斷言申請角色臨時憑證。
 
         :param request: Request instance for AssumeRoleWithSAML.
-        :type request: :class:`tencentcloud.sts.v20180813.models.AssumeRoleWithSAMLRequest`
-        :rtype: :class:`tencentcloud.sts.v20180813.models.AssumeRoleWithSAMLResponse`
+        :type request: :class:`taifucloudcloud.sts.v20180813.models.AssumeRoleWithSAMLRequest`
+        :rtype: :class:`taifucloudcloud.sts.v20180813.models.AssumeRoleWithSAMLResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class StsClient(AbstractClient):
         """獲取聯合身份臨時訪問憑證
 
         :param request: Request instance for GetFederationToken.
-        :type request: :class:`tencentcloud.sts.v20180813.models.GetFederationTokenRequest`
-        :rtype: :class:`tencentcloud.sts.v20180813.models.GetFederationTokenResponse`
+        :type request: :class:`taifucloudcloud.sts.v20180813.models.GetFederationTokenRequest`
+        :rtype: :class:`taifucloudcloud.sts.v20180813.models.GetFederationTokenResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class StsClient(AbstractClient):
         """拉取API金鑰清單
 
         :param request: Request instance for QueryApiKey.
-        :type request: :class:`tencentcloud.sts.v20180813.models.QueryApiKeyRequest`
-        :rtype: :class:`tencentcloud.sts.v20180813.models.QueryApiKeyResponse`
+        :type request: :class:`taifucloudcloud.sts.v20180813.models.QueryApiKeyRequest`
+        :rtype: :class:`taifucloudcloud.sts.v20180813.models.QueryApiKeyResponse`
 
         """
         try:

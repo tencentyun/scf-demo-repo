@@ -28,4 +28,3 @@ inputs:
           events: cos:ObjectCreated:*
           enable: true
 
-

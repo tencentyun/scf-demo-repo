@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CosBackup(AbstractModel):
@@ -76,9 +76,9 @@ class CreateInstanceRequest(AbstractModel):
         :type DiskSize: int
         :param TimeUnit: 計費時長單位（ChargeType爲PREPAID時需要設置，預設值爲“m”，表示月，當前只支援“m”）
         :type TimeUnit: str
-        :param AutoVoucher: 是否自動使用代金券<li>0：不自動使用</li><li>1：自動使用</li>預設值0
+        :param AutoVoucher: 是否自動使用 <li>0：不自動使用</li><li>1：自動使用</li>預設值0
         :type AutoVoucher: int
-        :param VoucherIds: 代金券ID清單（目前僅支援指定一張代金券）
+        :param VoucherIds:  ID清單（目前僅支援指定一張 ）
         :type VoucherIds: list of str
         :param EnableDedicatedMaster: 已廢棄請使用NodeInfoList
 是否創建專用主節點<li>true：開啓專用主節點</li><li>false：不開啓專用主節點</li>預設值false
@@ -618,7 +618,7 @@ class InstanceInfo(AbstractModel):
         :param EsConfig: ES配置項
         :type EsConfig: str
         :param EsAcl: Kibana訪問控制配置
-        :type EsAcl: :class:`tencentcloud.es.v20180416.models.EsAcl`
+        :type EsAcl: :class:`taifucloudcloud.es.v20180416.models.EsAcl`
         :param CreateTime: 實例創建時間
         :type CreateTime: str
         :param UpdateTime: 實例最後修改操作時間
@@ -628,11 +628,11 @@ class InstanceInfo(AbstractModel):
         :param InstanceType: 實例類型（實例類型标識，當前只有1,2兩種）
         :type InstanceType: int
         :param IkConfig: Ik分詞器配置
-        :type IkConfig: :class:`tencentcloud.es.v20180416.models.EsDictionaryInfo`
+        :type IkConfig: :class:`taifucloudcloud.es.v20180416.models.EsDictionaryInfo`
         :param MasterNodeInfo: 專用主節點配置
-        :type MasterNodeInfo: :class:`tencentcloud.es.v20180416.models.MasterNodeInfo`
+        :type MasterNodeInfo: :class:`taifucloudcloud.es.v20180416.models.MasterNodeInfo`
         :param CosBackup: cos自動備份配置
-        :type CosBackup: :class:`tencentcloud.es.v20180416.models.CosBackup`
+        :type CosBackup: :class:`taifucloudcloud.es.v20180416.models.CosBackup`
         :param AllowCosBackup: 是否允許cos自動備份
         :type AllowCosBackup: bool
         :param TagList: 實例擁有的标簽清單
@@ -676,7 +676,7 @@ class InstanceInfo(AbstractModel):
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PublicAccess: str
         :param EsPublicAcl: ES公網訪問控制配置
-        :type EsPublicAcl: :class:`tencentcloud.es.v20180416.models.EsAcl`
+        :type EsPublicAcl: :class:`taifucloudcloud.es.v20180416.models.EsAcl`
         :param KibanaPrivateUrl: Kibana内網網址
 注意：此欄位可能返回 null，表示取不到有效值。
         :type KibanaPrivateUrl: str
@@ -962,7 +962,7 @@ class NodeInfo(AbstractModel):
         :type DiskSize: int
         :param LocalDiskInfo: 節點本地盤訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type LocalDiskInfo: :class:`tencentcloud.es.v20180416.models.LocalDiskInfo`
+        :type LocalDiskInfo: :class:`taifucloudcloud.es.v20180416.models.LocalDiskInfo`
         :param DiskCount: 節點磁盤塊數
         :type DiskCount: int
         """
@@ -1001,7 +1001,7 @@ class Operation(AbstractModel):
         :param Type: 操作類型
         :type Type: str
         :param Detail: 操作詳情
-        :type Detail: :class:`tencentcloud.es.v20180416.models.OperationDetail`
+        :type Detail: :class:`taifucloudcloud.es.v20180416.models.OperationDetail`
         :param Result: 操作結果
         :type Result: str
         :param Tasks: 流程任務訊息
@@ -1223,7 +1223,7 @@ class UpdateInstanceRequest(AbstractModel):
         :param Password: 預設用戶elastic的密碼（8到16位，至少包括兩項（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
         :type Password: str
         :param EsAcl: 訪問控制清單
-        :type EsAcl: :class:`tencentcloud.es.v20180416.models.EsAcl`
+        :type EsAcl: :class:`taifucloudcloud.es.v20180416.models.EsAcl`
         :param DiskSize: 已廢棄請使用NodeInfoList
 磁盤大小（單位GB）
         :type DiskSize: int
@@ -1242,13 +1242,13 @@ class UpdateInstanceRequest(AbstractModel):
         :param ForceRestart: 更新配置時是否強制重啓<li>true強制重啓</li><li>false不強制重啓</li>當前僅更新EsConfig時需要設置，預設值爲false
         :type ForceRestart: bool
         :param CosBackup: COS自動備份訊息
-        :type CosBackup: :class:`tencentcloud.es.v20180416.models.CosBackup`
+        :type CosBackup: :class:`taifucloudcloud.es.v20180416.models.CosBackup`
         :param NodeInfoList: 節點訊息清單，可以只傳遞要更新的節點及其對應的規格訊息。支援的操作包括<li>修改一種節點的個數</li><li>修改一種節點的節點規格及磁盤大小</li><li>增加一種節點類型（需要同時指定該節點的類型，個數，規格，磁盤等訊息）</li>上述操作一次只能進行一種，且磁盤類型不支援修改
         :type NodeInfoList: list of NodeInfo
         :param PublicAccess: 公網訪問狀态
         :type PublicAccess: str
         :param EsPublicAcl: 公網訪問控制清單
-        :type EsPublicAcl: :class:`tencentcloud.es.v20180416.models.EsPublicAcl`
+        :type EsPublicAcl: :class:`taifucloudcloud.es.v20180416.models.EsPublicAcl`
         :param KibanaPublicAccess: Kibana公網訪問狀态
         :type KibanaPublicAccess: str
         :param KibanaPrivateAccess: Kibana内網訪問狀态
@@ -1388,9 +1388,9 @@ class UpgradeLicenseRequest(AbstractModel):
         :type InstanceId: str
         :param LicenseType: License類型<li>oss：開源版</li><li>basic：基礎版</li><li>platinum：白金版</li>預設值platinum
         :type LicenseType: str
-        :param AutoVoucher: 是否自動使用代金券<li>0：不自動使用</li><li>1：自動使用</li>預設值0
+        :param AutoVoucher: 是否自動使用 <li>0：不自動使用</li><li>1：自動使用</li>預設值0
         :type AutoVoucher: int
-        :param VoucherIds: 代金券ID清單（目前僅支援指定一張代金券）
+        :param VoucherIds:  ID清單（目前僅支援指定一張 ）
         :type VoucherIds: list of str
         :param BasicSecurityType: 6.8（及以上版本）基礎版是否開啓xpack security認證<li>1：不開啓</li><li>2：開啓</li>
         :type BasicSecurityType: int

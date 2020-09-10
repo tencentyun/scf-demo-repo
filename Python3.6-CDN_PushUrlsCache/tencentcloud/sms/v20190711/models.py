@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AddSignStatus(AbstractModel):
@@ -65,9 +65,9 @@ class AddSmsSignRequest(AbstractModel):
 6：小程式設置頁面截圖（個人認證小程式）。
 7：商标注冊書。
         :type DocumentType: int
-        :param International: 是否國際/港澳台簡訊：
+        :param International: 是否國際/ 簡訊：
 0：表示國内簡訊。
-1：表示國際/港澳台簡訊。
+1：表示國際/ 簡訊。
         :type International: int
         :param UsedMethod: 簽名用途：
 0：自用。
@@ -111,7 +111,7 @@ class AddSmsSignResponse(AbstractModel):
     def __init__(self):
         """
         :param AddSignStatus: 添加簽名響應
-        :type AddSignStatus: :class:`tencentcloud.sms.v20190711.models.AddSignStatus`
+        :type AddSignStatus: :class:`taifucloudcloud.sms.v20190711.models.AddSignStatus`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -139,9 +139,9 @@ class AddSmsTemplateRequest(AbstractModel):
         :type TemplateContent: str
         :param SmsType: 簡訊類型，0表示普通簡訊, 1表示營銷簡訊。
         :type SmsType: int
-        :param International: 是否國際/港澳台簡訊：
+        :param International: 是否國際/ 簡訊：
 0：表示國内簡訊。
-1：表示國際/港澳台簡訊。
+1：表示國際/ 簡訊。
         :type International: int
         :param Remark: 範本備注，例如申請原因，使用場景等。
         :type Remark: str
@@ -169,7 +169,7 @@ class AddSmsTemplateResponse(AbstractModel):
     def __init__(self):
         """
         :param AddTemplateStatus: 添加簡訊範本響應包體
-        :type AddTemplateStatus: :class:`tencentcloud.sms.v20190711.models.AddTemplateStatus`
+        :type AddTemplateStatus: :class:`taifucloudcloud.sms.v20190711.models.AddTemplateStatus`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -262,7 +262,7 @@ class CallbackStatusStatisticsRequest(AbstractModel):
         :param EndDataTime: 結束時間，yyyymmddhh 需要拉取的截止時間，精确到小時。
 注：EndDataTime 必須大于 StartDateTime。
         :type EndDataTime: int
-        :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.tencent.com/sms/smslist) 添加應用後生成的實際SdkAppid，範例如1400006666。
+        :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.taifucloud.com/sms/smslist) 添加應用後生成的實際SdkAppid，範例如1400006666。
         :type SmsSdkAppid: str
         :param Limit: 最大上限。
 注：目前固定設置爲0。
@@ -294,7 +294,7 @@ class CallbackStatusStatisticsResponse(AbstractModel):
     def __init__(self):
         """
         :param CallbackStatusStatistics: 回執數據統計響應包體。
-        :type CallbackStatusStatistics: :class:`tencentcloud.sms.v20190711.models.CallbackStatusStatistics`
+        :type CallbackStatusStatistics: :class:`taifucloudcloud.sms.v20190711.models.CallbackStatusStatistics`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -355,7 +355,7 @@ class DeleteSmsSignResponse(AbstractModel):
     def __init__(self):
         """
         :param DeleteSignStatus: 删除簽名響應
-        :type DeleteSignStatus: :class:`tencentcloud.sms.v20190711.models.DeleteSignStatus`
+        :type DeleteSignStatus: :class:`taifucloudcloud.sms.v20190711.models.DeleteSignStatus`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -395,7 +395,7 @@ class DeleteSmsTemplateResponse(AbstractModel):
     def __init__(self):
         """
         :param DeleteTemplateStatus: 删除範本響應
-        :type DeleteTemplateStatus: :class:`tencentcloud.sms.v20190711.models.DeleteTemplateStatus`
+        :type DeleteTemplateStatus: :class:`taifucloudcloud.sms.v20190711.models.DeleteTemplateStatus`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -440,9 +440,9 @@ class DescribeSignListStatus(AbstractModel):
         """
         :param SignId: 簽名Id
         :type SignId: int
-        :param International: 是否國際/港澳台簡訊：
+        :param International: 是否國際/ 簡訊：
 0：表示國内簡訊。
-1：表示國際/港澳台簡訊。
+1：表示國際/ 簡訊。
         :type International: int
         :param StatusCode: 申請簽名狀态。其中：
 0：表示審核通過。
@@ -481,9 +481,9 @@ class DescribeSmsSignListRequest(AbstractModel):
         """
         :param SignIdSet: 簽名 ID 數組。
         :type SignIdSet: list of int non-negative
-        :param International: 是否國際/港澳台簡訊：
+        :param International: 是否國際/ 簡訊：
 0：表示國内簡訊。
-1：表示國際/港澳台簡訊。
+1：表示國際/ 簡訊。
         :type International: int
         """
         self.SignIdSet = None
@@ -530,9 +530,9 @@ class DescribeSmsTemplateListRequest(AbstractModel):
         """
         :param TemplateIdSet: 範本 ID 數組。
         :type TemplateIdSet: list of int non-negative
-        :param International: 是否國際/港澳台簡訊：
+        :param International: 是否國際/ 簡訊：
 0：表示國内簡訊。
-1：表示國際/港澳台簡訊。
+1：表示國際/ 簡訊。
         :type International: int
         """
         self.TemplateIdSet = None
@@ -579,9 +579,9 @@ class DescribeTemplateListStatus(AbstractModel):
         """
         :param TemplateId: 範本Id
         :type TemplateId: int
-        :param International: 是否國際/港澳台簡訊：
+        :param International: 是否國際/ 簡訊：
 0：表示國内簡訊。
-1：表示國際/港澳台簡訊。
+1：表示國際/ 簡訊。
         :type International: int
         :param StatusCode: 申請簽名狀态。其中：
 0：表示審核通過。
@@ -662,9 +662,9 @@ class ModifySmsSignRequest(AbstractModel):
 6：小程式設置頁面截圖(個人認證小程式)。
 7：商标注冊書。
         :type DocumentType: int
-        :param International: 是否國際/港澳台簡訊：
+        :param International: 是否國際/ 簡訊：
 0：表示國内簡訊。
-1：表示國際/港澳台簡訊。
+1：表示國際/ 簡訊。
         :type International: int
         :param UsedMethod: 簽名用途：
 0：自用。
@@ -710,7 +710,7 @@ class ModifySmsSignResponse(AbstractModel):
     def __init__(self):
         """
         :param ModifySignStatus: 修改簽名響應
-        :type ModifySignStatus: :class:`tencentcloud.sms.v20190711.models.ModifySignStatus`
+        :type ModifySignStatus: :class:`taifucloudcloud.sms.v20190711.models.ModifySignStatus`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -740,9 +740,9 @@ class ModifySmsTemplateRequest(AbstractModel):
         :type TemplateContent: str
         :param SmsType: 簡訊類型，0表示普通簡訊, 1表示營銷簡訊。
         :type SmsType: int
-        :param International: 是否國際/港澳台簡訊：
+        :param International: 是否國際/ 簡訊：
 0：表示國内簡訊。
-1：表示國際/港澳台簡訊。
+1：表示國際/ 簡訊。
         :type International: int
         :param Remark: 範本備注，例如申請原因，使用場景等。
         :type Remark: str
@@ -772,7 +772,7 @@ class ModifySmsTemplateResponse(AbstractModel):
     def __init__(self):
         """
         :param ModifyTemplateStatus: 修改範本參數響應
-        :type ModifyTemplateStatus: :class:`tencentcloud.sms.v20190711.models.ModifyTemplateStatus`
+        :type ModifyTemplateStatus: :class:`taifucloudcloud.sms.v20190711.models.ModifyTemplateStatus`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -811,7 +811,7 @@ class PullSmsReplyStatus(AbstractModel):
 
     def __init__(self):
         """
-        :param ExtendCode: 簡訊碼号擴展号，預設未開通，如需開通請聯系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
+        :param ExtendCode: 簡訊碼号擴展号，預設未開通，如需開通請聯系 [sms helper](https://cloud.taifucloud.com/document/product/382/3773)。
         :type ExtendCode: str
         :param NationCode: 國家（或地區）碼。
         :type NationCode: str
@@ -861,7 +861,7 @@ class PullSmsReplyStatusByPhoneNumberRequest(AbstractModel):
         :type Limit: int
         :param PhoneNumber: 下發目的手機号碼，依據 e.164 标準爲：+[國家（或地區）碼][手機号] ，範例如：+8613711112222， 其中前面有一個+号 ，86爲國家碼，13711112222爲手機号。
         :type PhoneNumber: str
-        :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.tencent.com/sms/smslist) 添加應用後生成的實際SdkAppid，例如1400006666。
+        :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.taifucloud.com/sms/smslist) 添加應用後生成的實際SdkAppid，例如1400006666。
         :type SmsSdkAppid: str
         """
         self.SendDateTime = None
@@ -914,7 +914,7 @@ class PullSmsReplyStatusRequest(AbstractModel):
         """
         :param Limit: 拉取最大條數，最多100條。
         :type Limit: int
-        :param SmsSdkAppid: 簡訊 SdkAppid 在 [簡訊控制台](https://console.cloud.tencent.com/sms/smslist) 添加應用後生成的實際 SdkAppid，例如1400006666。
+        :param SmsSdkAppid: 簡訊 SdkAppid 在 [簡訊控制台](https://console.cloud.taifucloud.com/sms/smslist) 添加應用後生成的實際 SdkAppid，例如1400006666。
         :type SmsSdkAppid: str
         """
         self.Limit = None
@@ -1013,7 +1013,7 @@ class PullSmsSendStatusByPhoneNumberRequest(AbstractModel):
         :type Limit: int
         :param PhoneNumber: 下發目的手機号碼，依據 e.164 标準爲：+[國家（或地區）碼][手機号] ，範例如：+8613711112222， 其中前面有一個+号 ，86爲國家碼，13711112222爲手機号。
         :type PhoneNumber: str
-        :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.tencent.com/sms/smslist) 添加應用後生成的實際SdkAppid，例如1400006666。
+        :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.taifucloud.com/sms/smslist) 添加應用後生成的實際SdkAppid，例如1400006666。
         :type SmsSdkAppid: str
         """
         self.SendDateTime = None
@@ -1066,7 +1066,7 @@ class PullSmsSendStatusRequest(AbstractModel):
         """
         :param Limit: 拉取最大條數，最多100條。
         :type Limit: int
-        :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.tencent.com/sms/smslist) 添加應用後生成的實際SdkAppid，例如1400006666。
+        :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.taifucloud.com/sms/smslist) 添加應用後生成的實際SdkAppid，例如1400006666。
         :type SmsSdkAppid: str
         """
         self.Limit = None
@@ -1114,19 +1114,19 @@ class SendSmsRequest(AbstractModel):
         :param PhoneNumberSet: 下發手機号碼，采用 e.164 标準，格式爲+[國家或地區碼][手機号]，單次請求最多支援200個手機号且要求全爲境内手機号或全爲境外手機号。
 例如：+8613711112222， 其中前面有一個+号 ，86爲國家碼，13711112222爲手機号。
         :type PhoneNumberSet: list of str
-        :param TemplateID: 範本 ID，必須填寫已審核通過的範本 ID。範本ID可登入 [簡訊控制台](https://console.cloud.tencent.com/sms/smslist) 檢視。
+        :param TemplateID: 範本 ID，必須填寫已審核通過的範本 ID。範本ID可登入 [簡訊控制台](https://console.cloud.taifucloud.com/sms/smslist) 檢視。
         :type TemplateID: str
-        :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.tencent.com/sms/smslist)  添加應用後生成的實際SdkAppid，範例如1400006666。
+        :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.taifucloud.com/sms/smslist)  添加應用後生成的實際SdkAppid，範例如1400006666。
         :type SmsSdkAppid: str
-        :param Sign: 簡訊簽名内容，使用 UTF-8 編碼，必須填寫已審核通過的簽名，簽名訊息可登入 [簡訊控制台](https://console.cloud.tencent.com/sms/smslist)  檢視。注：國内簡訊爲必填參數。
+        :param Sign: 簡訊簽名内容，使用 UTF-8 編碼，必須填寫已審核通過的簽名，簽名訊息可登入 [簡訊控制台](https://console.cloud.taifucloud.com/sms/smslist)  檢視。注：國内簡訊爲必填參數。
         :type Sign: str
         :param TemplateParamSet: 範本參數，若無範本參數，則設置爲空。
         :type TemplateParamSet: list of str
-        :param ExtendCode: 簡訊碼号擴展号，預設未開通，如需開通請聯系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
+        :param ExtendCode: 簡訊碼号擴展号，預設未開通，如需開通請聯系 [sms helper](https://cloud.taifucloud.com/document/product/382/3773)。
         :type ExtendCode: str
         :param SessionContext: 用戶的 session 内容，可以攜帶用戶側 ID 等上下文訊息，server 會原樣返回。
         :type SessionContext: str
-        :param SenderId: 國際/港澳台簡訊 senderid，國内簡訊填空，預設未開通，如需開通請聯系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
+        :param SenderId: 國際/ 簡訊 senderid，國内簡訊填空，預設未開通，如需開通請聯系 [sms helper](https://cloud.taifucloud.com/document/product/382/3773)。
         :type SenderId: str
         """
         self.PhoneNumberSet = None
@@ -1187,7 +1187,7 @@ class SendStatus(AbstractModel):
         :type SerialNo: str
         :param PhoneNumber: 手機号碼,e.164标準，+[國家或地區碼][手機号] ，範例如：+8613711112222， 其中前面有一個+号 ，86爲國家碼，13711112222爲手機号。
         :type PhoneNumber: str
-        :param Fee: 計費條數，計費規則請查詢 [計費策略](https://cloud.tencent.com/document/product/382/36135)。
+        :param Fee: 計費條數，計費規則請查詢 [計費策略](https://cloud.taifucloud.com/document/product/382/36135)。
         :type Fee: int
         :param SessionContext: 用戶Session内容。
         :type SessionContext: str
@@ -1250,7 +1250,7 @@ class SendStatusStatisticsRequest(AbstractModel):
         :param EndDataTime: 結束時間，yyyymmddhh 需要拉取的截止時間，精确到小時
 注：EndDataTime 必須大于 StartDateTime。
         :type EndDataTime: int
-        :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.tencent.com/sms/smslist) 添加應用後生成的實際SdkAppid，範例如1400006666。
+        :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.taifucloud.com/sms/smslist) 添加應用後生成的實際SdkAppid，範例如1400006666。
         :type SmsSdkAppid: str
         :param Limit: 最大上限。
 注：目前固定設置爲0。
@@ -1282,7 +1282,7 @@ class SendStatusStatisticsResponse(AbstractModel):
     def __init__(self):
         """
         :param SendStatusStatistics: 發送數據統計響應包體。
-        :type SendStatusStatistics: :class:`tencentcloud.sms.v20190711.models.SendStatusStatistics`
+        :type SendStatusStatistics: :class:`taifucloudcloud.sms.v20190711.models.SendStatusStatistics`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1357,7 +1357,7 @@ class SmsPackagesStatisticsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.tencent.com/sms/smslist) 添加應用後生成的實際SdkAppid，範例如1400006666。
+        :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.taifucloud.com/sms/smslist) 添加應用後生成的實際SdkAppid，範例如1400006666。
         :type SmsSdkAppid: str
         :param Limit: 最大上限(需要拉取的套餐包個數)。
         :type Limit: int

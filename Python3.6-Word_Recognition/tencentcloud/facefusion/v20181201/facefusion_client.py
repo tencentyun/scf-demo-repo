@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.facefusion.v20181201 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.facefusion.v20181201 import models
 
 
 class FacefusionClient(AbstractClient):
     _apiVersion = '2018-12-01'
-    _endpoint = 'facefusion.tencentcloudapi.com'
+    _endpoint = 'facefusion.taifucloudcloudapi.com'
 
 
     def FaceFusion(self, request):
@@ -31,8 +31,8 @@ class FacefusionClient(AbstractClient):
         - 公共參數中的簽名方式必須指定爲V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: 調用FaceFusion所需參數的結構體。
-        :type request: :class:`tencentcloud.facefusion.v20181201.models.FaceFusionRequest`
-        :rtype: :class:`tencentcloud.facefusion.v20181201.models.FaceFusionResponse`
+        :type request: :class:`taifucloudcloud.facefusion.v20181201.models.FaceFusionRequest`
+        :rtype: :class:`taifucloudcloud.facefusion.v20181201.models.FaceFusionResponse`
 
         """
         try:

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class BindDevInfo(AbstractModel):
@@ -432,7 +432,7 @@ class CreateProductResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 産品詳細訊息
-        :type Data: :class:`tencentcloud.iotvideo.v20191126.models.ProductBase`
+        :type Data: :class:`taifucloudcloud.iotvideo.v20191126.models.ProductBase`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1034,7 +1034,7 @@ class DescribeDeviceModelResponse(AbstractModel):
         """
         :param Data: 設備物模型訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.iotvideo.v20191126.models.DeviceModelData`
+        :type Data: :class:`taifucloudcloud.iotvideo.v20191126.models.DeviceModelData`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1075,7 +1075,7 @@ class DescribeDeviceResponse(AbstractModel):
         """
         :param Data: 設備訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.iotvideo.v20191126.models.DeviceData`
+        :type Data: :class:`taifucloudcloud.iotvideo.v20191126.models.DeviceData`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1383,7 +1383,7 @@ class DescribeMessageQueueResponse(AbstractModel):
         """
         :param Data: 訊息隊列配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.iotvideo.v20191126.models.MsgQueueData`
+        :type Data: :class:`taifucloudcloud.iotvideo.v20191126.models.MsgQueueData`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1527,7 +1527,7 @@ class DescribeProductResponse(AbstractModel):
         """
         :param Data: 産品詳情
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.iotvideo.v20191126.models.ProductData`
+        :type Data: :class:`taifucloudcloud.iotvideo.v20191126.models.ProductData`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

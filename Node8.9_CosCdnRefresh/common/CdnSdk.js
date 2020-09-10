@@ -8,7 +8,7 @@ const {
   common: {
     Credential
   }
-} = require('tencentcloud-sdk-nodejs')
+} = require('taifucloudcloud-sdk-nodejs')
 
 const { sleep, getMatchNumber, logger } = require('./utils')
 

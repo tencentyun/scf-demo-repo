@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class DeleteCertRequest(AbstractModel):
@@ -186,7 +186,7 @@ class SSLCertificate(AbstractModel):
         :type InsertTime: str
         :param ProjectInfo: 項目訊息，ProjectId：項目ID，OwnerUin：項目所屬的 uin（預設項目爲0），Name：項目名稱，CreatorUin：創建項目的 uin，CreateTime：項目創建時間，Info：項目說明
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ProjectInfo: :class:`tencentcloud.wss.v20180426.models.SSLProjectInfo`
+        :type ProjectInfo: :class:`taifucloudcloud.wss.v20180426.models.SSLProjectInfo`
         :param Id: 證書ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Id: str
@@ -328,7 +328,7 @@ class UploadCertRequest(AbstractModel):
         :type Cert: str
         :param CertType: 證書類型（目前支援：CA 爲用戶端證書，SVR 爲服務器證書）。
         :type CertType: str
-        :param ProjectId: 項目ID，詳見用戶指南的 [項目與标簽](https://cloud.tencent.com/document/product/598/32738)。
+        :param ProjectId: 項目ID，詳見用戶指南的 [項目與标簽](https://cloud.taifucloud.com/document/product/598/32738)。
         :type ProjectId: str
         :param ModuleType: 模組名稱，應填 ssl。
         :type ModuleType: str

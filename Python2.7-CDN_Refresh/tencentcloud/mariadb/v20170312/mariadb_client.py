@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.mariadb.v20170312 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.mariadb.v20170312 import models
 
 
 class MariadbClient(AbstractClient):
     _apiVersion = '2017-03-12'
-    _endpoint = 'mariadb.tencentcloudapi.com'
+    _endpoint = 'mariadb.taifucloudcloudapi.com'
 
 
     def CloneAccount(self, request):
         """本介面（CloneAccount）用于複製實例帳戶。
 
         :param request: Request instance for CloneAccount.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.CloneAccountRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.CloneAccountResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.CloneAccountRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.CloneAccountResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class MariadbClient(AbstractClient):
         """本介面(CloseDBExtranetAccess)用于關閉雲資料庫實例的外網訪問。關閉外網訪問後，外網網址将不可訪問，查詢實例清單介面将不返回對應實例的外網域名和端口訊息。
 
         :param request: Request instance for CloseDBExtranetAccess.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.CloseDBExtranetAccessRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.CloseDBExtranetAccessResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.CloseDBExtranetAccessRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.CloseDBExtranetAccessResponse`
 
         """
         try:
@@ -86,8 +86,8 @@ class MariadbClient(AbstractClient):
         注意：相同用戶名，不同Host是不同的賬号，Readonly屬性相同的賬号之間才能複制權限。
 
         :param request: Request instance for CopyAccountPrivileges.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.CopyAccountPrivilegesRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.CopyAccountPrivilegesResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.CopyAccountPrivilegesRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.CopyAccountPrivilegesResponse`
 
         """
         try:
@@ -114,8 +114,8 @@ class MariadbClient(AbstractClient):
         """本介面（CreateAccount）用于創建雲資料庫賬号。一個實例可以創建多個不同的賬号，相同的用戶名+不同的host是不同的賬号。
 
         :param request: Request instance for CreateAccount.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.CreateAccountRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.CreateAccountResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.CreateAccountRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.CreateAccountResponse`
 
         """
         try:
@@ -142,8 +142,8 @@ class MariadbClient(AbstractClient):
         """本介面（CreateDBInstance）用于創建包年包月的雲資料庫實例，可通過傳入實例規格、資料庫版本号、購買時長和數量等訊息創建雲資料庫實例。
 
         :param request: Request instance for CreateDBInstance.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.CreateDBInstanceRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.CreateDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.CreateDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.CreateDBInstanceResponse`
 
         """
         try:
@@ -170,8 +170,8 @@ class MariadbClient(AbstractClient):
         """本介面（CreateTmpInstances）用于創建臨時實例。
 
         :param request: Request instance for CreateTmpInstances.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.CreateTmpInstancesRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.CreateTmpInstancesResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.CreateTmpInstancesRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.CreateTmpInstancesResponse`
 
         """
         try:
@@ -198,8 +198,8 @@ class MariadbClient(AbstractClient):
         """本介面（DeleteAccount）用于删除雲資料庫賬号。用戶名+host唯一确定一個賬号。
 
         :param request: Request instance for DeleteAccount.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DeleteAccountRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DeleteAccountResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DeleteAccountRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DeleteAccountResponse`
 
         """
         try:
@@ -227,8 +227,8 @@ class MariadbClient(AbstractClient):
         注意：注意：相同用戶名，不同Host是不同的賬号。
 
         :param request: Request instance for DescribeAccountPrivileges.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeAccountPrivilegesRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeAccountPrivilegesResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeAccountPrivilegesRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeAccountPrivilegesResponse`
 
         """
         try:
@@ -255,8 +255,8 @@ class MariadbClient(AbstractClient):
         """本介面（DescribeAccounts）用于查詢指定雲資料庫實例的賬号清單。
 
         :param request: Request instance for DescribeAccounts.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeAccountsRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeAccountsResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeAccountsRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeAccountsResponse`
 
         """
         try:
@@ -283,8 +283,8 @@ class MariadbClient(AbstractClient):
         """本介面（DescribeBackupTime）用于獲取雲資料庫的備份時間。後台系統将根據此配置定期進行實例備份。
 
         :param request: Request instance for DescribeBackupTime.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeBackupTimeRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeBackupTimeResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeBackupTimeRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeBackupTimeResponse`
 
         """
         try:
@@ -311,8 +311,8 @@ class MariadbClient(AbstractClient):
         """本介面(DescribeDBInstanceSpecs)用于查詢可創建的雲資料庫可售賣的規格配置。
 
         :param request: Request instance for DescribeDBInstanceSpecs.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBInstanceSpecsRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBInstanceSpecsResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBInstanceSpecsRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBInstanceSpecsResponse`
 
         """
         try:
@@ -340,8 +340,8 @@ class MariadbClient(AbstractClient):
         如果不指定任何篩選條件，則預設返回20條實例記錄，單次請求最多支援返回100條實例記錄。
 
         :param request: Request instance for DescribeDBInstances.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBInstancesRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBInstancesResponse`
 
         """
         try:
@@ -368,8 +368,8 @@ class MariadbClient(AbstractClient):
         """本介面(DescribeDBLogFiles)用于獲取資料庫的各種日志清單，包括冷備、binlog、errlog和slowlog。
 
         :param request: Request instance for DescribeDBLogFiles.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBLogFilesRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBLogFilesResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBLogFilesRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBLogFilesResponse`
 
         """
         try:
@@ -396,8 +396,8 @@ class MariadbClient(AbstractClient):
         """本介面(DescribeDBParameters)用于獲取資料庫的當前參數設置。
 
         :param request: Request instance for DescribeDBParameters.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBParametersRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBParametersResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBParametersRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBParametersResponse`
 
         """
         try:
@@ -424,8 +424,8 @@ class MariadbClient(AbstractClient):
         """本介面(DescribeDBPerformance)用于檢視資料庫實例當前效能數據。
 
         :param request: Request instance for DescribeDBPerformance.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBPerformanceRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBPerformanceResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBPerformanceRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBPerformanceResponse`
 
         """
         try:
@@ -452,8 +452,8 @@ class MariadbClient(AbstractClient):
         """本介面(DescribeDBPerformanceDetails)用于檢視實例效能數據詳情。
 
         :param request: Request instance for DescribeDBPerformanceDetails.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBPerformanceDetailsRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBPerformanceDetailsResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBPerformanceDetailsRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBPerformanceDetailsResponse`
 
         """
         try:
@@ -480,8 +480,8 @@ class MariadbClient(AbstractClient):
         """本介面(DescribeDBResourceUsage)用于檢視資料庫實例資源的使用情況。
 
         :param request: Request instance for DescribeDBResourceUsage.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBResourceUsageRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBResourceUsageResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBResourceUsageRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBResourceUsageResponse`
 
         """
         try:
@@ -508,8 +508,8 @@ class MariadbClient(AbstractClient):
         """本介面(DescribeDBResourceUsageDetails)用于檢視資料庫實例當前效能數據。
 
         :param request: Request instance for DescribeDBResourceUsageDetails.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBResourceUsageDetailsRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBResourceUsageDetailsResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBResourceUsageDetailsRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBResourceUsageDetailsResponse`
 
         """
         try:
@@ -536,8 +536,8 @@ class MariadbClient(AbstractClient):
         """本介面(DescribeDBSlowLogs)用于查詢慢查詢日志清單。
 
         :param request: Request instance for DescribeDBSlowLogs.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBSlowLogsRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDBSlowLogsResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBSlowLogsRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBSlowLogsResponse`
 
         """
         try:
@@ -564,8 +564,8 @@ class MariadbClient(AbstractClient):
         """本介面（DescribeDatabases）用于查詢雲資料庫實例的資料庫清單。
 
         :param request: Request instance for DescribeDatabases.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeDatabasesRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeDatabasesResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDatabasesRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDatabasesResponse`
 
         """
         try:
@@ -592,8 +592,8 @@ class MariadbClient(AbstractClient):
         """本介面（DescribeFlow）用于查詢流程狀态。
 
         :param request: Request instance for DescribeFlow.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeFlowRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeFlowResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeFlowRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeFlowResponse`
 
         """
         try:
@@ -620,8 +620,8 @@ class MariadbClient(AbstractClient):
         """本介面(DescribeLogFileRetentionPeriod)用于檢視資料庫備份日志的備份天數的設置情況。
 
         :param request: Request instance for DescribeLogFileRetentionPeriod.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeLogFileRetentionPeriodRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeLogFileRetentionPeriodResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeLogFileRetentionPeriodRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeLogFileRetentionPeriodResponse`
 
         """
         try:
@@ -648,8 +648,8 @@ class MariadbClient(AbstractClient):
         """本介面（DescribeOrders）用于查詢雲資料庫訂單訊息。傳入訂單ID來查詢訂單關聯的雲資料庫實例，和對應的任務流程ID。
 
         :param request: Request instance for DescribeOrders.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeOrdersRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeOrdersResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeOrdersRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeOrdersResponse`
 
         """
         try:
@@ -676,8 +676,8 @@ class MariadbClient(AbstractClient):
         """本介面（DescribePrice）用于在購買實例前，查詢實例的價格。
 
         :param request: Request instance for DescribePrice.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribePriceRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribePriceResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribePriceRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribePriceResponse`
 
         """
         try:
@@ -704,8 +704,8 @@ class MariadbClient(AbstractClient):
         """本介面（DescribeRenewalPrice）用于在續約雲資料庫實例時，查詢續約的價格。
 
         :param request: Request instance for DescribeRenewalPrice.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeRenewalPriceRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeRenewalPriceResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeRenewalPriceRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeRenewalPriceResponse`
 
         """
         try:
@@ -732,8 +732,8 @@ class MariadbClient(AbstractClient):
         """本介面(DescribeSaleInfo)用于查詢雲資料庫可售賣的地域和可用區訊息。
 
         :param request: Request instance for DescribeSaleInfo.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeSaleInfoRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeSaleInfoResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeSaleInfoRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeSaleInfoResponse`
 
         """
         try:
@@ -760,8 +760,8 @@ class MariadbClient(AbstractClient):
         """本介面（DescribeSqlLogs）用于獲取實例SQL日志。
 
         :param request: Request instance for DescribeSqlLogs.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeSqlLogsRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeSqlLogsResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeSqlLogsRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeSqlLogsResponse`
 
         """
         try:
@@ -788,8 +788,8 @@ class MariadbClient(AbstractClient):
         """本介面（DescribeUpgradePrice）用于在擴容雲資料庫實例時，查詢擴容的價格。
 
         :param request: Request instance for DescribeUpgradePrice.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.DescribeUpgradePriceRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.DescribeUpgradePriceResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeUpgradePriceRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeUpgradePriceResponse`
 
         """
         try:
@@ -817,8 +817,8 @@ class MariadbClient(AbstractClient):
         注意：相同用戶名，不同Host是不同的賬号。
 
         :param request: Request instance for GrantAccountPrivileges.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.GrantAccountPrivilegesRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.GrantAccountPrivilegesResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.GrantAccountPrivilegesRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.GrantAccountPrivilegesResponse`
 
         """
         try:
@@ -845,8 +845,8 @@ class MariadbClient(AbstractClient):
         """本介面(InitDBInstances)用于初始化雲資料庫實例，包括設置預設字元集、表名大小寫敏感等。
 
         :param request: Request instance for InitDBInstances.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.InitDBInstancesRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.InitDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.InitDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.InitDBInstancesResponse`
 
         """
         try:
@@ -874,8 +874,8 @@ class MariadbClient(AbstractClient):
         注意：相同用戶名，不同Host是不同的賬号。
 
         :param request: Request instance for ModifyAccountDescription.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.ModifyAccountDescriptionRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.ModifyAccountDescriptionResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyAccountDescriptionRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyAccountDescriptionResponse`
 
         """
         try:
@@ -902,8 +902,8 @@ class MariadbClient(AbstractClient):
         """本介面（ModifyBackupTime）用于設置雲資料庫實例的備份時間。後台系統将根據此配置定期進行實例備份。
 
         :param request: Request instance for ModifyBackupTime.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.ModifyBackupTimeRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.ModifyBackupTimeResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyBackupTimeRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyBackupTimeResponse`
 
         """
         try:
@@ -930,8 +930,8 @@ class MariadbClient(AbstractClient):
         """本介面（ModifyDBInstanceName）用于修改雲資料庫實例的名稱。
 
         :param request: Request instance for ModifyDBInstanceName.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.ModifyDBInstanceNameRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.ModifyDBInstanceNameResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyDBInstanceNameRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyDBInstanceNameResponse`
 
         """
         try:
@@ -958,8 +958,8 @@ class MariadbClient(AbstractClient):
         """本介面（ModifyDBInstancesProject）用于修改雲資料庫實例所屬項目。
 
         :param request: Request instance for ModifyDBInstancesProject.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.ModifyDBInstancesProjectRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.ModifyDBInstancesProjectResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyDBInstancesProjectRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyDBInstancesProjectResponse`
 
         """
         try:
@@ -986,8 +986,8 @@ class MariadbClient(AbstractClient):
         """本介面(ModifyDBParameters)用于修改資料庫參數。
 
         :param request: Request instance for ModifyDBParameters.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.ModifyDBParametersRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.ModifyDBParametersResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyDBParametersRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyDBParametersResponse`
 
         """
         try:
@@ -1014,8 +1014,8 @@ class MariadbClient(AbstractClient):
         """本介面(ModifyLogFileRetentionPeriod)用于修改資料庫備份日志保存天數。
 
         :param request: Request instance for ModifyLogFileRetentionPeriod.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.ModifyLogFileRetentionPeriodRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.ModifyLogFileRetentionPeriodResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyLogFileRetentionPeriodRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyLogFileRetentionPeriodResponse`
 
         """
         try:
@@ -1042,8 +1042,8 @@ class MariadbClient(AbstractClient):
         """本介面（OpenDBExtranetAccess）用于開通雲資料庫實例的外網訪問。開通外網訪問後，您可通過外網域名和端口訪問實例，可使用查詢實例清單介面獲取外網域名和端口訊息。
 
         :param request: Request instance for OpenDBExtranetAccess.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.OpenDBExtranetAccessRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.OpenDBExtranetAccessResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.OpenDBExtranetAccessRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.OpenDBExtranetAccessResponse`
 
         """
         try:
@@ -1070,8 +1070,8 @@ class MariadbClient(AbstractClient):
         """本介面（RenewDBInstance）用于續約雲資料庫實例。
 
         :param request: Request instance for RenewDBInstance.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.RenewDBInstanceRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.RenewDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.RenewDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.RenewDBInstanceResponse`
 
         """
         try:
@@ -1099,8 +1099,8 @@ class MariadbClient(AbstractClient):
         注意：相同用戶名，不同Host是不同的賬号。
 
         :param request: Request instance for ResetAccountPassword.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.ResetAccountPasswordRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.ResetAccountPasswordResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.ResetAccountPasswordRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.ResetAccountPasswordResponse`
 
         """
         try:
@@ -1127,8 +1127,8 @@ class MariadbClient(AbstractClient):
         """本介面（RestartDBInstances）用于重啓資料庫實例
 
         :param request: Request instance for RestartDBInstances.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.RestartDBInstancesRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.RestartDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.RestartDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.RestartDBInstancesResponse`
 
         """
         try:
@@ -1155,8 +1155,8 @@ class MariadbClient(AbstractClient):
         """本介面(UpgradeDBInstance)用于擴容雲資料庫實例。本介面完成下單和支付兩個動作，如果發生支付失敗的錯誤，調用用戶帳戶相關介面中的支付訂單介面（PayDeals）重新支付即可。
 
         :param request: Request instance for UpgradeDBInstance.
-        :type request: :class:`tencentcloud.mariadb.v20170312.models.UpgradeDBInstanceRequest`
-        :rtype: :class:`tencentcloud.mariadb.v20170312.models.UpgradeDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.mariadb.v20170312.models.UpgradeDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.mariadb.v20170312.models.UpgradeDBInstanceResponse`
 
         """
         try:

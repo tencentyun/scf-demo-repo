@@ -5,6 +5,6 @@
   "license": "ISC",
   "dependencies": {
     "cos-nodejs-sdk-v5": "^2.5.20",
-    "tencentcloud-sdk-nodejs": "^3.0.131"
+    "taifucloudcloud-sdk-nodejs": "^3.0.131"
   }
 }

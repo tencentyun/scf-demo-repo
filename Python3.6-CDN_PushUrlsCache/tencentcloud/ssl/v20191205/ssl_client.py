@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.ssl.v20191205 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.ssl.v20191205 import models
 
 
 class SslClient(AbstractClient):
     _apiVersion = '2019-12-05'
-    _endpoint = 'ssl.tencentcloudapi.com'
+    _endpoint = 'ssl.taifucloudcloudapi.com'
 
 
     def ApplyCertificate(self, request):
         """本介面（ApplyCertificate）用于免費證書申請。
 
         :param request: Request instance for ApplyCertificate.
-        :type request: :class:`tencentcloud.ssl.v20191205.models.ApplyCertificateRequest`
-        :rtype: :class:`tencentcloud.ssl.v20191205.models.ApplyCertificateResponse`
+        :type request: :class:`taifucloudcloud.ssl.v20191205.models.ApplyCertificateRequest`
+        :rtype: :class:`taifucloudcloud.ssl.v20191205.models.ApplyCertificateResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class SslClient(AbstractClient):
         """取消證書訂單。
 
         :param request: Request instance for CancelCertificateOrder.
-        :type request: :class:`tencentcloud.ssl.v20191205.models.CancelCertificateOrderRequest`
-        :rtype: :class:`tencentcloud.ssl.v20191205.models.CancelCertificateOrderResponse`
+        :type request: :class:`taifucloudcloud.ssl.v20191205.models.CancelCertificateOrderRequest`
+        :rtype: :class:`taifucloudcloud.ssl.v20191205.models.CancelCertificateOrderResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class SslClient(AbstractClient):
         """提交證書訂單。
 
         :param request: Request instance for CommitCertificateInformation.
-        :type request: :class:`tencentcloud.ssl.v20191205.models.CommitCertificateInformationRequest`
-        :rtype: :class:`tencentcloud.ssl.v20191205.models.CommitCertificateInformationResponse`
+        :type request: :class:`taifucloudcloud.ssl.v20191205.models.CommitCertificateInformationRequest`
+        :rtype: :class:`taifucloudcloud.ssl.v20191205.models.CommitCertificateInformationResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class SslClient(AbstractClient):
         """本介面（DeleteCertificate）用于删除證書。
 
         :param request: Request instance for DeleteCertificate.
-        :type request: :class:`tencentcloud.ssl.v20191205.models.DeleteCertificateRequest`
-        :rtype: :class:`tencentcloud.ssl.v20191205.models.DeleteCertificateResponse`
+        :type request: :class:`taifucloudcloud.ssl.v20191205.models.DeleteCertificateRequest`
+        :rtype: :class:`taifucloudcloud.ssl.v20191205.models.DeleteCertificateResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class SslClient(AbstractClient):
         """本介面（DescribeCertificate）用于獲驗證書訊息。
 
         :param request: Request instance for DescribeCertificate.
-        :type request: :class:`tencentcloud.ssl.v20191205.models.DescribeCertificateRequest`
-        :rtype: :class:`tencentcloud.ssl.v20191205.models.DescribeCertificateResponse`
+        :type request: :class:`taifucloudcloud.ssl.v20191205.models.DescribeCertificateRequest`
+        :rtype: :class:`taifucloudcloud.ssl.v20191205.models.DescribeCertificateResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class SslClient(AbstractClient):
         """獲驗證書詳情。
 
         :param request: Request instance for DescribeCertificateDetail.
-        :type request: :class:`tencentcloud.ssl.v20191205.models.DescribeCertificateDetailRequest`
-        :rtype: :class:`tencentcloud.ssl.v20191205.models.DescribeCertificateDetailResponse`
+        :type request: :class:`taifucloudcloud.ssl.v20191205.models.DescribeCertificateDetailRequest`
+        :rtype: :class:`taifucloudcloud.ssl.v20191205.models.DescribeCertificateDetailResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class SslClient(AbstractClient):
         """獲取用戶賬号下有關證書的操作日志。
 
         :param request: Request instance for DescribeCertificateOperateLogs.
-        :type request: :class:`tencentcloud.ssl.v20191205.models.DescribeCertificateOperateLogsRequest`
-        :rtype: :class:`tencentcloud.ssl.v20191205.models.DescribeCertificateOperateLogsResponse`
+        :type request: :class:`taifucloudcloud.ssl.v20191205.models.DescribeCertificateOperateLogsRequest`
+        :rtype: :class:`taifucloudcloud.ssl.v20191205.models.DescribeCertificateOperateLogsResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class SslClient(AbstractClient):
         """本介面（DescribeCertificates）用于獲驗證書清單。
 
         :param request: Request instance for DescribeCertificates.
-        :type request: :class:`tencentcloud.ssl.v20191205.models.DescribeCertificatesRequest`
-        :rtype: :class:`tencentcloud.ssl.v20191205.models.DescribeCertificatesResponse`
+        :type request: :class:`taifucloudcloud.ssl.v20191205.models.DescribeCertificatesRequest`
+        :rtype: :class:`taifucloudcloud.ssl.v20191205.models.DescribeCertificatesResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class SslClient(AbstractClient):
         """本介面（DownloadCertificate）用于下載證書。
 
         :param request: Request instance for DownloadCertificate.
-        :type request: :class:`tencentcloud.ssl.v20191205.models.DownloadCertificateRequest`
-        :rtype: :class:`tencentcloud.ssl.v20191205.models.DownloadCertificateResponse`
+        :type request: :class:`taifucloudcloud.ssl.v20191205.models.DownloadCertificateRequest`
+        :rtype: :class:`taifucloudcloud.ssl.v20191205.models.DownloadCertificateResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class SslClient(AbstractClient):
         """用戶傳入證書id和備注來修改證書備注。
 
         :param request: Request instance for ModifyCertificateAlias.
-        :type request: :class:`tencentcloud.ssl.v20191205.models.ModifyCertificateAliasRequest`
-        :rtype: :class:`tencentcloud.ssl.v20191205.models.ModifyCertificateAliasResponse`
+        :type request: :class:`taifucloudcloud.ssl.v20191205.models.ModifyCertificateAliasRequest`
+        :rtype: :class:`taifucloudcloud.ssl.v20191205.models.ModifyCertificateAliasResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class SslClient(AbstractClient):
         """批次修改證書所屬項目。
 
         :param request: Request instance for ModifyCertificateProject.
-        :type request: :class:`tencentcloud.ssl.v20191205.models.ModifyCertificateProjectRequest`
-        :rtype: :class:`tencentcloud.ssl.v20191205.models.ModifyCertificateProjectResponse`
+        :type request: :class:`taifucloudcloud.ssl.v20191205.models.ModifyCertificateProjectRequest`
+        :rtype: :class:`taifucloudcloud.ssl.v20191205.models.ModifyCertificateProjectResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class SslClient(AbstractClient):
         """本介面（ReplaceCertificate）用于重頒發證書。已申請的免費證書僅支援 RSA 算法、金鑰對參數爲2048的證書重頒發，并且目前僅支援1次重頒發。
 
         :param request: Request instance for ReplaceCertificate.
-        :type request: :class:`tencentcloud.ssl.v20191205.models.ReplaceCertificateRequest`
-        :rtype: :class:`tencentcloud.ssl.v20191205.models.ReplaceCertificateResponse`
+        :type request: :class:`taifucloudcloud.ssl.v20191205.models.ReplaceCertificateRequest`
+        :rtype: :class:`taifucloudcloud.ssl.v20191205.models.ReplaceCertificateResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class SslClient(AbstractClient):
         """提交證書資料。
 
         :param request: Request instance for SubmitCertificateInformation.
-        :type request: :class:`tencentcloud.ssl.v20191205.models.SubmitCertificateInformationRequest`
-        :rtype: :class:`tencentcloud.ssl.v20191205.models.SubmitCertificateInformationResponse`
+        :type request: :class:`taifucloudcloud.ssl.v20191205.models.SubmitCertificateInformationRequest`
+        :rtype: :class:`taifucloudcloud.ssl.v20191205.models.SubmitCertificateInformationResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class SslClient(AbstractClient):
         """本介面（UploadCertificate）用于上傳證書。
 
         :param request: Request instance for UploadCertificate.
-        :type request: :class:`tencentcloud.ssl.v20191205.models.UploadCertificateRequest`
-        :rtype: :class:`tencentcloud.ssl.v20191205.models.UploadCertificateResponse`
+        :type request: :class:`taifucloudcloud.ssl.v20191205.models.UploadCertificateRequest`
+        :rtype: :class:`taifucloudcloud.ssl.v20191205.models.UploadCertificateResponse`
 
         """
         try:

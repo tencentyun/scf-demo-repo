@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
-# Changing the time zone to Beijing. 更改時區爲北京時區
+# Changing the time zone to Beijing. 更改時區爲 時區
 tz = pytz.timezone('Asia/Shanghai')
 
 g_connection = None

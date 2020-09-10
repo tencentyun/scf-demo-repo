@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.monitor.v20180724 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.monitor.v20180724 import models
 
 
 class MonitorClient(AbstractClient):
     _apiVersion = '2018-07-24'
-    _endpoint = 'monitor.tencentcloudapi.com'
+    _endpoint = 'monitor.taifucloudcloudapi.com'
 
 
     def DescribeBaseMetrics(self, request):
         """獲取基礎指标詳情
 
         :param request: 調用DescribeBaseMetrics所需參數的結構體。
-        :type request: :class:`tencentcloud.monitor.v20180724.models.DescribeBaseMetricsRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.DescribeBaseMetricsResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.DescribeBaseMetricsRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.DescribeBaseMetricsResponse`
 
         """
         try:
@@ -59,8 +59,8 @@ class MonitorClient(AbstractClient):
         若您需要調用的指标、對象較多，可能存在因限頻出現拉取失敗的情況，建議盡量将請求按時間維度均攤。
 
         :param request: 調用GetMonitorData所需參數的結構體。
-        :type request: :class:`tencentcloud.monitor.v20180724.models.GetMonitorDataRequest`
-        :rtype: :class:`tencentcloud.monitor.v20180724.models.GetMonitorDataResponse`
+        :type request: :class:`taifucloudcloud.monitor.v20180724.models.GetMonitorDataRequest`
+        :rtype: :class:`taifucloudcloud.monitor.v20180724.models.GetMonitorDataResponse`
 
         """
         try:

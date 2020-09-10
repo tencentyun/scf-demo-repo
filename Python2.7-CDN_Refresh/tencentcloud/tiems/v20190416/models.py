@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Conditions(AbstractModel):
@@ -101,7 +101,7 @@ class CreateJobRequest(AbstractModel):
         :param Cluster: 運作集群
         :type Cluster: str
         :param PredictInput: 預測輸入
-        :type PredictInput: :class:`tencentcloud.tiems.v20190416.models.PredictInput`
+        :type PredictInput: :class:`taifucloudcloud.tiems.v20190416.models.PredictInput`
         :param Description: 任務描述
         :type Description: str
         :param WorkerCount: 同時處理任務的 Worker 個數
@@ -115,7 +115,7 @@ class CreateJobRequest(AbstractModel):
         :param GpuType: GPU類型
         :type GpuType: str
         :param QuantizationInput: 量化輸入
-        :type QuantizationInput: :class:`tencentcloud.tiems.v20190416.models.QuantizationInput`
+        :type QuantizationInput: :class:`taifucloudcloud.tiems.v20190416.models.QuantizationInput`
         :param LogTopicId: Cls日志主題ID
         :type LogTopicId: str
         """
@@ -164,7 +164,7 @@ class CreateJobResponse(AbstractModel):
     def __init__(self):
         """
         :param Job: 任務
-        :type Job: :class:`tencentcloud.tiems.v20190416.models.Job`
+        :type Job: :class:`taifucloudcloud.tiems.v20190416.models.Job`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -228,7 +228,7 @@ class CreateRsgAsGroupResponse(AbstractModel):
     def __init__(self):
         """
         :param RsgAsGroup: 所創建的資源組的伸縮組
-        :type RsgAsGroup: :class:`tencentcloud.tiems.v20190416.models.RsgAsGroup`
+        :type RsgAsGroup: :class:`taifucloudcloud.tiems.v20190416.models.RsgAsGroup`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -284,7 +284,7 @@ class CreateRuntimeResponse(AbstractModel):
     def __init__(self):
         """
         :param Runtime: 運作環境
-        :type Runtime: :class:`tencentcloud.tiems.v20190416.models.Runtime`
+        :type Runtime: :class:`taifucloudcloud.tiems.v20190416.models.Runtime`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -336,7 +336,7 @@ class CreateServiceConfigResponse(AbstractModel):
     def __init__(self):
         """
         :param ServiceConfig: 服務配置
-        :type ServiceConfig: :class:`tencentcloud.tiems.v20190416.models.Config`
+        :type ServiceConfig: :class:`taifucloudcloud.tiems.v20190416.models.Config`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -359,7 +359,7 @@ class CreateServiceRequest(AbstractModel):
     def __init__(self):
         """
         :param Scaler: 擴縮容配置
-        :type Scaler: :class:`tencentcloud.tiems.v20190416.models.Scaler`
+        :type Scaler: :class:`taifucloudcloud.tiems.v20190416.models.Scaler`
         :param ServiceConfigId: 服務配置Id
         :type ServiceConfigId: str
         :param Name: 服務名稱
@@ -430,7 +430,7 @@ class CreateServiceResponse(AbstractModel):
     def __init__(self):
         """
         :param Service: 服務
-        :type Service: :class:`tencentcloud.tiems.v20190416.models.ModelService`
+        :type Service: :class:`taifucloudcloud.tiems.v20190416.models.ModelService`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1305,7 +1305,7 @@ class ExposeServiceResponse(AbstractModel):
     def __init__(self):
         """
         :param Expose: 暴露方式
-        :type Expose: :class:`tencentcloud.tiems.v20190416.models.ExposeInfo`
+        :type Expose: :class:`taifucloudcloud.tiems.v20190416.models.ExposeInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1457,9 +1457,9 @@ class Job(AbstractModel):
         :type ConfigId: str
         :param PredictInput: 預測輸入
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PredictInput: :class:`tencentcloud.tiems.v20190416.models.PredictInput`
+        :type PredictInput: :class:`taifucloudcloud.tiems.v20190416.models.PredictInput`
         :param Status: 任務狀态
-        :type Status: :class:`tencentcloud.tiems.v20190416.models.JobStatus`
+        :type Status: :class:`taifucloudcloud.tiems.v20190416.models.JobStatus`
         :param CreateTime: 任務創建時間
         :type CreateTime: str
         :param StartTime: 任務開始時間
@@ -1503,7 +1503,7 @@ class Job(AbstractModel):
         :type JobType: str
         :param QuantizationInput: 量化輸入
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type QuantizationInput: :class:`tencentcloud.tiems.v20190416.models.QuantizationInput`
+        :type QuantizationInput: :class:`taifucloudcloud.tiems.v20190416.models.QuantizationInput`
         :param LogTopicId: Cls日志主題ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type LogTopicId: str
@@ -1649,9 +1649,9 @@ class ModelService(AbstractModel):
         :param ScaleMode: 支援AUTO, MANUAL
         :type ScaleMode: str
         :param Scaler: 彈性伸縮配置
-        :type Scaler: :class:`tencentcloud.tiems.v20190416.models.Scaler`
+        :type Scaler: :class:`taifucloudcloud.tiems.v20190416.models.Scaler`
         :param Status: 服務狀态
-        :type Status: :class:`tencentcloud.tiems.v20190416.models.ServiceStatus`
+        :type Status: :class:`taifucloudcloud.tiems.v20190416.models.ServiceStatus`
         :param AccessToken: 訪問金鑰
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AccessToken: str
@@ -2321,7 +2321,7 @@ class UpdateJobResponse(AbstractModel):
         """
         :param Job: 任務
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Job: :class:`tencentcloud.tiems.v20190416.models.Job`
+        :type Job: :class:`taifucloudcloud.tiems.v20190416.models.Job`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2377,7 +2377,7 @@ class UpdateRsgAsGroupResponse(AbstractModel):
     def __init__(self):
         """
         :param RsgAsGroup: 資源組的伸縮組
-        :type RsgAsGroup: :class:`tencentcloud.tiems.v20190416.models.RsgAsGroup`
+        :type RsgAsGroup: :class:`taifucloudcloud.tiems.v20190416.models.RsgAsGroup`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2402,7 +2402,7 @@ class UpdateServiceRequest(AbstractModel):
         :param ServiceId: 服務Id
         :type ServiceId: str
         :param Scaler: 擴縮容配置
-        :type Scaler: :class:`tencentcloud.tiems.v20190416.models.Scaler`
+        :type Scaler: :class:`taifucloudcloud.tiems.v20190416.models.Scaler`
         :param ServiceConfigId: 服務配置Id
         :type ServiceConfigId: str
         :param ScaleMode: 支援AUTO, MANUAL，分别表示自動擴縮容，手動擴縮容
@@ -2459,7 +2459,7 @@ class UpdateServiceResponse(AbstractModel):
     def __init__(self):
         """
         :param Service: 服務
-        :type Service: :class:`tencentcloud.tiems.v20190416.models.ModelService`
+        :type Service: :class:`taifucloudcloud.tiems.v20190416.models.ModelService`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

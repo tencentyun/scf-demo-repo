@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.bda.v20200324 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.bda.v20200324 import models
 
 
 class BdaClient(AbstractClient):
     _apiVersion = '2020-03-24'
-    _endpoint = 'bda.tencentcloudapi.com'
+    _endpoint = 'bda.taifucloudcloudapi.com'
 
 
     def CreateGroup(self, request):
@@ -35,8 +35,8 @@ class BdaClient(AbstractClient):
         單個人員（Person）最多添加 5 個人體軌迹（Trace）。
 
         :param request: Request instance for CreateGroup.
-        :type request: :class:`tencentcloud.bda.v20200324.models.CreateGroupRequest`
-        :rtype: :class:`tencentcloud.bda.v20200324.models.CreateGroupResponse`
+        :type request: :class:`taifucloudcloud.bda.v20200324.models.CreateGroupRequest`
+        :rtype: :class:`taifucloudcloud.bda.v20200324.models.CreateGroupResponse`
 
         """
         try:
@@ -70,8 +70,8 @@ class BdaClient(AbstractClient):
         - 構成人體軌迹單張圖片大小不得超過2M，分辨率不得超過1920*1080。
 
         :param request: Request instance for CreatePerson.
-        :type request: :class:`tencentcloud.bda.v20200324.models.CreatePersonRequest`
-        :rtype: :class:`tencentcloud.bda.v20200324.models.CreatePersonResponse`
+        :type request: :class:`taifucloudcloud.bda.v20200324.models.CreatePersonRequest`
+        :rtype: :class:`taifucloudcloud.bda.v20200324.models.CreatePersonResponse`
 
         """
         try:
@@ -105,8 +105,8 @@ class BdaClient(AbstractClient):
         - 構成人體軌迹單張圖片大小限制爲2M，分辨率限制爲1920*1080。
 
         :param request: Request instance for CreateTrace.
-        :type request: :class:`tencentcloud.bda.v20200324.models.CreateTraceRequest`
-        :rtype: :class:`tencentcloud.bda.v20200324.models.CreateTraceResponse`
+        :type request: :class:`taifucloudcloud.bda.v20200324.models.CreateTraceRequest`
+        :rtype: :class:`taifucloudcloud.bda.v20200324.models.CreateTraceResponse`
 
         """
         try:
@@ -133,8 +133,8 @@ class BdaClient(AbstractClient):
         """删除該人體庫及包含的所有的人員。
 
         :param request: Request instance for DeleteGroup.
-        :type request: :class:`tencentcloud.bda.v20200324.models.DeleteGroupRequest`
-        :rtype: :class:`tencentcloud.bda.v20200324.models.DeleteGroupResponse`
+        :type request: :class:`taifucloudcloud.bda.v20200324.models.DeleteGroupRequest`
+        :rtype: :class:`taifucloudcloud.bda.v20200324.models.DeleteGroupResponse`
 
         """
         try:
@@ -161,8 +161,8 @@ class BdaClient(AbstractClient):
         """删除人員。
 
         :param request: Request instance for DeletePerson.
-        :type request: :class:`tencentcloud.bda.v20200324.models.DeletePersonRequest`
-        :rtype: :class:`tencentcloud.bda.v20200324.models.DeletePersonResponse`
+        :type request: :class:`taifucloudcloud.bda.v20200324.models.DeletePersonRequest`
+        :rtype: :class:`taifucloudcloud.bda.v20200324.models.DeletePersonResponse`
 
         """
         try:
@@ -189,8 +189,8 @@ class BdaClient(AbstractClient):
         """檢測給定圖片中的人體（Body）的位置訊息（屬性訊息将在後續開放）。
 
         :param request: Request instance for DetectBody.
-        :type request: :class:`tencentcloud.bda.v20200324.models.DetectBodyRequest`
-        :rtype: :class:`tencentcloud.bda.v20200324.models.DetectBodyResponse`
+        :type request: :class:`taifucloudcloud.bda.v20200324.models.DetectBodyRequest`
+        :rtype: :class:`taifucloudcloud.bda.v20200324.models.DetectBodyResponse`
 
         """
         try:
@@ -217,8 +217,8 @@ class BdaClient(AbstractClient):
         """獲取人體庫清單。
 
         :param request: Request instance for GetGroupList.
-        :type request: :class:`tencentcloud.bda.v20200324.models.GetGroupListRequest`
-        :rtype: :class:`tencentcloud.bda.v20200324.models.GetGroupListResponse`
+        :type request: :class:`taifucloudcloud.bda.v20200324.models.GetGroupListRequest`
+        :rtype: :class:`taifucloudcloud.bda.v20200324.models.GetGroupListResponse`
 
         """
         try:
@@ -245,8 +245,8 @@ class BdaClient(AbstractClient):
         """獲取指定人體庫中的人員清單。
 
         :param request: Request instance for GetPersonList.
-        :type request: :class:`tencentcloud.bda.v20200324.models.GetPersonListRequest`
-        :rtype: :class:`tencentcloud.bda.v20200324.models.GetPersonListResponse`
+        :type request: :class:`taifucloudcloud.bda.v20200324.models.GetPersonListRequest`
+        :rtype: :class:`taifucloudcloud.bda.v20200324.models.GetPersonListResponse`
 
         """
         try:
@@ -273,8 +273,8 @@ class BdaClient(AbstractClient):
         """修改人體庫名稱、備注。
 
         :param request: Request instance for ModifyGroup.
-        :type request: :class:`tencentcloud.bda.v20200324.models.ModifyGroupRequest`
-        :rtype: :class:`tencentcloud.bda.v20200324.models.ModifyGroupResponse`
+        :type request: :class:`taifucloudcloud.bda.v20200324.models.ModifyGroupRequest`
+        :rtype: :class:`taifucloudcloud.bda.v20200324.models.ModifyGroupResponse`
 
         """
         try:
@@ -301,8 +301,8 @@ class BdaClient(AbstractClient):
         """修改人員訊息。
 
         :param request: Request instance for ModifyPersonInfo.
-        :type request: :class:`tencentcloud.bda.v20200324.models.ModifyPersonInfoRequest`
-        :rtype: :class:`tencentcloud.bda.v20200324.models.ModifyPersonInfoResponse`
+        :type request: :class:`taifucloudcloud.bda.v20200324.models.ModifyPersonInfoRequest`
+        :rtype: :class:`taifucloudcloud.bda.v20200324.models.ModifyPersonInfoResponse`
 
         """
         try:
@@ -336,8 +336,8 @@ class BdaClient(AbstractClient):
         - 構成人體軌迹單張圖片大小不得超過2M，分辨率不得超過1920*1080。
 
         :param request: Request instance for SearchTrace.
-        :type request: :class:`tencentcloud.bda.v20200324.models.SearchTraceRequest`
-        :rtype: :class:`tencentcloud.bda.v20200324.models.SearchTraceResponse`
+        :type request: :class:`taifucloudcloud.bda.v20200324.models.SearchTraceRequest`
+        :rtype: :class:`taifucloudcloud.bda.v20200324.models.SearchTraceResponse`
 
         """
         try:
@@ -364,8 +364,8 @@ class BdaClient(AbstractClient):
         """識别傳入圖片中人體的完整輪廓，進行摳像。
 
         :param request: Request instance for SegmentPortraitPic.
-        :type request: :class:`tencentcloud.bda.v20200324.models.SegmentPortraitPicRequest`
-        :rtype: :class:`tencentcloud.bda.v20200324.models.SegmentPortraitPicResponse`
+        :type request: :class:`taifucloudcloud.bda.v20200324.models.SegmentPortraitPicRequest`
+        :rtype: :class:`taifucloudcloud.bda.v20200324.models.SegmentPortraitPicResponse`
 
         """
         try:

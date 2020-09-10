@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.ocr.v20181119 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.ocr.v20181119 import models
 
 
 class OcrClient(AbstractClient):
     _apiVersion = '2018-11-19'
-    _endpoint = 'ocr.tencentcloudapi.com'
+    _endpoint = 'ocr.taifucloudcloudapi.com'
 
 
     def ArithmeticOCR(self, request):
         """本介面支援作業算式題目的自動識别，目前函蓋 K12 學力範圍内的 14 種題型，包括加減乘除四則運算、分數四則運算、豎式四則運算、脫式計算等。
 
         :param request: 調用ArithmeticOCR所需參數的結構體。
-        :type request: :class:`tencentcloud.ocr.v20181119.models.ArithmeticOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.ArithmeticOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.ArithmeticOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.ArithmeticOCRResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class OcrClient(AbstractClient):
         """本介面支援圖像英文文字的檢測和識别，返回文字框位置與文字内容。支援多場景、任意版面下的英文、字母、數字和常見字元的識别，同時函蓋英文印刷體和英文手寫體識别。
 
         :param request: 調用EnglishOCR所需參數的結構體。
-        :type request: :class:`tencentcloud.ocr.v20181119.models.EnglishOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.EnglishOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.EnglishOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.EnglishOCRResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class OcrClient(AbstractClient):
         """本介面支援圖像整體文字的檢測和識别，返回文字框位置與文字内容。相比通用印刷體識别介面，準确率和召回率更高。
 
         :param request: 調用GeneralAccurateOCR所需參數的結構體。
-        :type request: :class:`tencentcloud.ocr.v20181119.models.GeneralAccurateOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.GeneralAccurateOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.GeneralAccurateOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.GeneralAccurateOCRResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class OcrClient(AbstractClient):
         """本介面支援多場景、任意版面下整圖文字的識别，包括中英文、字母、數字和日文、韓文的識别。應用場景包括：印刷文件識别、網絡圖片識别、廣告圖文字識别、街景店招識别、清單識别、視訊标題識别、頭像文字識别等。
 
         :param request: 調用GeneralBasicOCR所需參數的結構體。
-        :type request: :class:`tencentcloud.ocr.v20181119.models.GeneralBasicOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.GeneralBasicOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.GeneralBasicOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.GeneralBasicOCRResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class OcrClient(AbstractClient):
         """本介面支援圖片中整體文字的檢測和識别，返回文字框位置與文字内容。相比通用印刷體識别介面，識别速度更快、支援的 QPS 更高。
 
         :param request: 調用GeneralFastOCR所需參數的結構體。
-        :type request: :class:`tencentcloud.ocr.v20181119.models.GeneralFastOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.GeneralFastOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.GeneralFastOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.GeneralFastOCRResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class OcrClient(AbstractClient):
         """本介面支援二代身份證正反面所有欄位的識别，包括姓名、性别、民族、出生日期、住址、公民身份證号、簽發機關、有效期限；具備身份證照片、人像照片的裁剪功能和翻拍件、影印件的識别告警功能。
 
         :param request: 調用IDCardOCR所需參數的結構體。
-        :type request: :class:`tencentcloud.ocr.v20181119.models.IDCardOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.IDCardOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.IDCardOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.IDCardOCRResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class OcrClient(AbstractClient):
         """本介面支援圖片内表格文件的檢測和識别，返回每個單元格的文字内容，支援将識别結果保存爲 Excel 格式。
 
         :param request: 調用TableOCR所需參數的結構體。
-        :type request: :class:`tencentcloud.ocr.v20181119.models.TableOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.TableOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.TableOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.TableOCRResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class OcrClient(AbstractClient):
         """本介面支援圖片内車輛識别代号（VIN）的檢測和識别。
 
         :param request: 調用VinOCR所需參數的結構體。
-        :type request: :class:`tencentcloud.ocr.v20181119.models.VinOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.VinOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.VinOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.VinOCRResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class OcrClient(AbstractClient):
         """本介面支援市面上主流版式電子運單的識别，包括收件人和寄件人的姓名、電話、網址以及運單号等欄位。
 
         :param request: 調用WaybillOCR所需參數的結構體。
-        :type request: :class:`tencentcloud.ocr.v20181119.models.WaybillOCRRequest`
-        :rtype: :class:`tencentcloud.ocr.v20181119.models.WaybillOCRResponse`
+        :type request: :class:`taifucloudcloud.ocr.v20181119.models.WaybillOCRRequest`
+        :rtype: :class:`taifucloudcloud.ocr.v20181119.models.WaybillOCRResponse`
 
         """
         try:

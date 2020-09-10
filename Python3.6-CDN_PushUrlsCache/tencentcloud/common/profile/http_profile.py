@@ -19,7 +19,7 @@ class HttpProfile(object):
         """HTTP profile.
         :param protocol: temporarily useless,set None
         :type protocol: str
-        :param endpoint: The domain to access, like: cvm.tencentcloudapi.com
+        :param endpoint: The domain to access, like: cvm.taifucloudcloudapi.com
         :type endpoint: str
         :param reqMethod: the http method, valid choice: GET, POST
         :type reqMethod: str

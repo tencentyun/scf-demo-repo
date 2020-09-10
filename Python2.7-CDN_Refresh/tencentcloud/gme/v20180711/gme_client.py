@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.gme.v20180711 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.gme.v20180711 import models
 
 
 class GmeClient(AbstractClient):
     _apiVersion = '2018-07-11'
-    _endpoint = 'gme.tencentcloudapi.com'
+    _endpoint = 'gme.taifucloudcloudapi.com'
 
 
     def CreateApp(self, request):
         """本介面(CreateApp)用于創建一個GME應用。
 
         :param request: Request instance for CreateApp.
-        :type request: :class:`tencentcloud.gme.v20180711.models.CreateAppRequest`
-        :rtype: :class:`tencentcloud.gme.v20180711.models.CreateAppResponse`
+        :type request: :class:`taifucloudcloud.gme.v20180711.models.CreateAppRequest`
+        :rtype: :class:`taifucloudcloud.gme.v20180711.models.CreateAppResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class GmeClient(AbstractClient):
         """本介面(DescribeAppStatistics)用于獲取某個GME應用的用量數據。包括實時語音，語音訊息及轉文本，語音分析等。最長查詢週期爲最近30天。
 
         :param request: Request instance for DescribeAppStatistics.
-        :type request: :class:`tencentcloud.gme.v20180711.models.DescribeAppStatisticsRequest`
-        :rtype: :class:`tencentcloud.gme.v20180711.models.DescribeAppStatisticsResponse`
+        :type request: :class:`taifucloudcloud.gme.v20180711.models.DescribeAppStatisticsRequest`
+        :rtype: :class:`taifucloudcloud.gme.v20180711.models.DescribeAppStatisticsResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class GmeClient(AbstractClient):
         """根據應用ID和文件ID查詢識别結果
 
         :param request: Request instance for DescribeFilterResult.
-        :type request: :class:`tencentcloud.gme.v20180711.models.DescribeFilterResultRequest`
-        :rtype: :class:`tencentcloud.gme.v20180711.models.DescribeFilterResultResponse`
+        :type request: :class:`taifucloudcloud.gme.v20180711.models.DescribeFilterResultRequest`
+        :rtype: :class:`taifucloudcloud.gme.v20180711.models.DescribeFilterResultResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class GmeClient(AbstractClient):
         """根據日期查詢識别結果清單
 
         :param request: Request instance for DescribeFilterResultList.
-        :type request: :class:`tencentcloud.gme.v20180711.models.DescribeFilterResultListRequest`
-        :rtype: :class:`tencentcloud.gme.v20180711.models.DescribeFilterResultListResponse`
+        :type request: :class:`taifucloudcloud.gme.v20180711.models.DescribeFilterResultListRequest`
+        :rtype: :class:`taifucloudcloud.gme.v20180711.models.DescribeFilterResultListResponse`
 
         """
         try:
@@ -142,8 +142,8 @@ class GmeClient(AbstractClient):
         <p style="color:red">如果在提交語音檢測任務時未設置 Callback 欄位，則需要通過本介面獲取檢測結果</p>
 
         :param request: Request instance for DescribeScanResultList.
-        :type request: :class:`tencentcloud.gme.v20180711.models.DescribeScanResultListRequest`
-        :rtype: :class:`tencentcloud.gme.v20180711.models.DescribeScanResultListResponse`
+        :type request: :class:`taifucloudcloud.gme.v20180711.models.DescribeScanResultListRequest`
+        :rtype: :class:`taifucloudcloud.gme.v20180711.models.DescribeScanResultListResponse`
 
         """
         try:
@@ -170,8 +170,8 @@ class GmeClient(AbstractClient):
         """本介面(ModifyAppStatus)用于修改應用總開關狀态。
 
         :param request: Request instance for ModifyAppStatus.
-        :type request: :class:`tencentcloud.gme.v20180711.models.ModifyAppStatusRequest`
-        :rtype: :class:`tencentcloud.gme.v20180711.models.ModifyAppStatusResponse`
+        :type request: :class:`taifucloudcloud.gme.v20180711.models.ModifyAppStatusRequest`
+        :rtype: :class:`taifucloudcloud.gme.v20180711.models.ModifyAppStatusResponse`
 
         """
         try:
@@ -195,11 +195,11 @@ class GmeClient(AbstractClient):
 
 
     def ScanVoice(self, request):
-        """本介面(ScanVoice)用于提交語音檢測任務，檢測任務清單最多支援100個。使用前請您登入[控制台 - 服務配置](https://console.cloud.tencent.com/gamegme/conf)開啓語音分析服務。
+        """本介面(ScanVoice)用于提交語音檢測任務，檢測任務清單最多支援100個。使用前請您登入[控制台 - 服務配置](https://console.cloud.taifucloud.com/gamegme/conf)開啓語音分析服務。
         </br></br>
 
         <h4><b>功能試用說明：</b></h4>
-        <li>打開前往<a href="https://console.cloud.tencent.com/gamegme/tryout">控制台 - 産品試用</a>免費試用語音分析服務。</li>
+        <li>打開前往<a href="https://console.cloud.taifucloud.com/gamegme/tryout">控制台 - 産品試用</a>免費試用語音分析服務。</li>
         </br>
 
         <h4><b>介面功能說明：</b></h4>
@@ -241,7 +241,7 @@ class GmeClient(AbstractClient):
         <p>ad :廣告</p>
         <p>terrorism:暴恐</p>
         <p>contraband :違禁</p>
-        <p>customized:自定義詞庫。目前白名單開放，如有需要請<a href="https://cloud.tencent.com/apply/p/8809fjcik56">聯系我們</a>。</p>
+        <p>customized:自定義詞庫。目前白名單開放，如有需要請<a href="https://cloud.taifucloud.com/apply/p/8809fjcik56">聯系我們</a>。</p>
         </td>
         </tr>
         </tbody>
@@ -279,7 +279,7 @@ class GmeClient(AbstractClient):
         </ul>
 
         <li>回調範例如下<font color="red">（詳細欄位說明見結構：
-        <a href="https://cloud.tencent.com/document/api/607/35375#DescribeScanResult" target="_blank">DescribeScanResult</a>）</font>：</li>
+        <a href="https://cloud.taifucloud.com/document/api/607/35375#DescribeScanResult" target="_blank">DescribeScanResult</a>）</font>：</li>
         <pre><code>{
         	"Code": 0,
         	"DataId": "1400000000_test_data_id",
@@ -334,8 +334,8 @@ class GmeClient(AbstractClient):
         </code></pre>
 
         :param request: Request instance for ScanVoice.
-        :type request: :class:`tencentcloud.gme.v20180711.models.ScanVoiceRequest`
-        :rtype: :class:`tencentcloud.gme.v20180711.models.ScanVoiceResponse`
+        :type request: :class:`taifucloudcloud.gme.v20180711.models.ScanVoiceRequest`
+        :rtype: :class:`taifucloudcloud.gme.v20180711.models.ScanVoiceResponse`
 
         """
         try:
@@ -364,8 +364,8 @@ class GmeClient(AbstractClient):
         Type表示過濾類型，1：政治，2：色情，3：謾罵
 
         :param request: Request instance for VoiceFilter.
-        :type request: :class:`tencentcloud.gme.v20180711.models.VoiceFilterRequest`
-        :rtype: :class:`tencentcloud.gme.v20180711.models.VoiceFilterResponse`
+        :type request: :class:`taifucloudcloud.gme.v20180711.models.VoiceFilterRequest`
+        :rtype: :class:`taifucloudcloud.gme.v20180711.models.VoiceFilterResponse`
 
         """
         try:

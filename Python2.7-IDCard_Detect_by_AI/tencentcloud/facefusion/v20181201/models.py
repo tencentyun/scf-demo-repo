@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class FaceFusionRequest(AbstractModel):
@@ -31,7 +31,7 @@ class FaceFusionRequest(AbstractModel):
         :type Image: str
         :param RspImgType: 返回圖像方式（url 或 base64) ，二選一。當前僅支援 url 方式，base64 方式後期開放。
         :type RspImgType: str
-        :param PornDetect: 0表示不需要鑒黃，1表示需要鑒黃。2018年12月1号以前創建的活動預設值爲0，其他情況預設值爲1.
+        :param PornDetect: 0表示不需要 ，1表示需要 。2018年12月1号以前創建的活動預設值爲0，其他情況預設值爲1.
         :type PornDetect: int
         :param CelebrityIdentify: 0表示不需要鑒政，1表示需要鑒政。2018年12月1号以前創建的活動預設值爲0，其他情況預設值爲1。鑒政介面同時會對名人明星進行識别，您可以根據實際需要過濾。
         :type CelebrityIdentify: int
@@ -62,7 +62,7 @@ class FaceFusionResponse(AbstractModel):
         """
         :param Image: RspImgType 爲 url 時，返回結果的 url， RspImgType 爲 base64 時返回 base64 數據。當前僅支援 url 方式，base64 方式後期開放。
         :type Image: str
-        :param ReviewResultSet: 鑒黃鑒政結果
+        :param ReviewResultSet:  鑒政結果
         :type ReviewResultSet: list of FuseFaceReviewResult
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -84,7 +84,7 @@ class FaceFusionResponse(AbstractModel):
 
 
 class FuseFaceReviewDetail(AbstractModel):
-    """人臉融合鑒黃鑒政人臉訊息
+    """人臉融合 鑒政人臉訊息
 
     """
 
@@ -113,7 +113,7 @@ class FuseFaceReviewDetail(AbstractModel):
 
 
 class FuseFaceReviewResult(AbstractModel):
-    """人臉融合鑒黃鑒政返回參數item
+    """人臉融合 鑒政返回參數item
 
     """
 

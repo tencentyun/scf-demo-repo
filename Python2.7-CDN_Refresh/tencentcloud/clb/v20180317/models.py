@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AssociateTargetGroupsRequest(AbstractModel):
@@ -772,9 +772,9 @@ class CreateListenerRequest(AbstractModel):
         :param ListenerNames: 要創建的監聽器名稱清單，名稱與Ports數組按序一一對應，如不需立即命名，則無需提供此參數
         :type ListenerNames: list of str
         :param HealthCheck: 健康檢查相關參數，此參數僅适用于TCP/UDP/TCP_SSL監聽器
-        :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
+        :type HealthCheck: :class:`taifucloudcloud.clb.v20180317.models.HealthCheck`
         :param Certificate: 證書相關訊息，此參數僅适用于TCP_SSL監聽器和未開啓SNI特性的HTTPS監聽器。
-        :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateInput`
+        :type Certificate: :class:`taifucloudcloud.clb.v20180317.models.CertificateInput`
         :param SessionExpireTime: 會話保持時間，單位：秒。可選值：30~3600，預設 0，表示不開啓。此參數僅适用于TCP/UDP監聽器。
         :type SessionExpireTime: int
         :param Scheduler: 監聽器轉發的方式。可選值：WRR、LEAST_CONN
@@ -862,8 +862,8 @@ OPEN：公網屬性， INTERNAL：内網屬性。
         :param ZoneId: 僅适用于公網負載均衡。可用區ID，指定可用區以創建負載均衡實例。如：ap-guangzhou-1
         :type ZoneId: str
         :param InternetAccessible: 僅适用于公網負載均衡。負載均衡的網絡計費模式。
-        :type InternetAccessible: :class:`tencentcloud.clb.v20180317.models.InternetAccessible`
-        :param VipIsp: 僅适用于公網負載均衡。CMCC | CTCC | CUCC，分别對應 移動 | 電信 | 聯通，如果不指定本參數，則預設使用BGP。可通過 DescribeSingleIsp 介面查詢一個地域所支援的Isp。如果指定運營商，則網絡計費式只能使用按頻寬包計費(BANDWIDTH_PACKAGE)。
+        :type InternetAccessible: :class:`taifucloudcloud.clb.v20180317.models.InternetAccessible`
+        :param VipIsp: 僅适用于公網負載均衡。CMCC | CTCC | CUCC，分别對應   | 電信 |  ，如果不指定本參數，則預設使用BGP。可通過 DescribeSingleIsp 介面查詢一個地域所支援的Isp。如果指定運營商，則網絡計費式只能使用按頻寬包計費(BANDWIDTH_PACKAGE)。
         :type VipIsp: str
         :param Tags: 購買負載均衡同時，給負載均衡打上标簽
         :type Tags: list of TagInfo
@@ -1937,11 +1937,11 @@ OPEN：公網屬性， INTERNAL：内網屬性。
         :type VpcId: str
         :param SecurityGroup: 安全組ID，如 sg-m1cc9123
         :type SecurityGroup: str
-        :param MasterZone: 主可用區ID，如 ："100001" （對應的是廣州一區）
+        :param MasterZone: 主可用區ID，如 ："100001" （對應的是 一區）
         :type MasterZone: str
         :param Filters: 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲100。詳細的過濾條件如下：
 <li> internet-charge-type - String - 是否必填：否 - （過濾條件）按照 CLB 的網絡計費模式過濾，包括"BANDWIDTH_PREPAID","TRAFFIC_POSTPAID_BY_HOUR","BANDWIDTH_POSTPAID_BY_HOUR","BANDWIDTH_PACKAGE"。</li>
-<li> master-zone-id - String - 是否必填：否 - （過濾條件）按照 CLB 的主可用區ID過濾，如 ："100001" （對應的是廣州一區）。</li>
+<li> master-zone-id - String - 是否必填：否 - （過濾條件）按照 CLB 的主可用區ID過濾，如 ："100001" （對應的是 一區）。</li>
 <li> tag-key - String - 是否必填：否 - （過濾條件）按照 CLB 标簽的鍵過濾。</li>
         :type Filters: list of Filter
         """
@@ -2458,7 +2458,7 @@ class ExclusiveCluster(AbstractModel):
         :type L7Clusters: list of ClusterItem
         :param ClassicalCluster: vpcgw集群
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ClassicalCluster: :class:`tencentcloud.clb.v20180317.models.ClusterItem`
+        :type ClassicalCluster: :class:`taifucloudcloud.clb.v20180317.models.ClusterItem`
         """
         self.L4Clusters = None
         self.L7Clusters = None
@@ -2683,10 +2683,10 @@ class Listener(AbstractModel):
         :type Port: int
         :param Certificate: 監聽器綁定的證書訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateOutput`
+        :type Certificate: :class:`taifucloudcloud.clb.v20180317.models.CertificateOutput`
         :param HealthCheck: 監聽器的健康檢查訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
+        :type HealthCheck: :class:`taifucloudcloud.clb.v20180317.models.HealthCheck`
         :param Scheduler: 請求的調度方式
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Scheduler: str
@@ -2713,7 +2713,7 @@ class Listener(AbstractModel):
         :type TargetType: str
         :param TargetGroup: 綁定的目标組基本訊息；當監聽器綁定目标組時，會返回該欄位
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TargetGroup: :class:`tencentcloud.clb.v20180317.models.BasicTargetGroupInfo`
+        :type TargetGroup: :class:`taifucloudcloud.clb.v20180317.models.BasicTargetGroupInfo`
         """
         self.ListenerId = None
         self.Protocol = None
@@ -2909,7 +2909,7 @@ OPEN：公網屬性， INTERNAL：内網屬性。
         :type SecureGroups: list of str
         :param TargetRegionInfo: 負載均衡實例綁定的後端設備的基本訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TargetRegionInfo: :class:`tencentcloud.clb.v20180317.models.TargetRegionInfo`
+        :type TargetRegionInfo: :class:`taifucloudcloud.clb.v20180317.models.TargetRegionInfo`
         :param AnycastZone: anycast負載均衡的發布域，對于非anycast的負載均衡，此欄位返回爲空字串
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AnycastZone: str
@@ -2924,7 +2924,7 @@ OPEN：公網屬性， INTERNAL：内網屬性。
         :type VipIsp: str
         :param MasterZone: 主可用區
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MasterZone: :class:`tencentcloud.clb.v20180317.models.ZoneInfo`
+        :type MasterZone: :class:`taifucloudcloud.clb.v20180317.models.ZoneInfo`
         :param BackupZoneSet: 備可用區
 注意：此欄位可能返回 null，表示取不到有效值。
         :type BackupZoneSet: list of ZoneInfo
@@ -2939,10 +2939,10 @@ OPEN：公網屬性， INTERNAL：内網屬性。
         :type ChargeType: str
         :param NetworkAttributes: 負載均衡實例的網絡屬性
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type NetworkAttributes: :class:`tencentcloud.clb.v20180317.models.InternetAccessible`
+        :type NetworkAttributes: :class:`taifucloudcloud.clb.v20180317.models.InternetAccessible`
         :param PrepaidAttributes: 負載均衡實例的預付費相關屬性
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PrepaidAttributes: :class:`tencentcloud.clb.v20180317.models.LBChargePrepaid`
+        :type PrepaidAttributes: :class:`taifucloudcloud.clb.v20180317.models.LBChargePrepaid`
         :param LogSetId: 負載均衡日志服務(CLS)的日志集ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type LogSetId: str
@@ -2954,7 +2954,7 @@ OPEN：公網屬性， INTERNAL：内網屬性。
         :type AddressIPv6: str
         :param ExtraInfo: 暫做保留，一般用戶無需關注。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ExtraInfo: :class:`tencentcloud.clb.v20180317.models.ExtraInfo`
+        :type ExtraInfo: :class:`taifucloudcloud.clb.v20180317.models.ExtraInfo`
         :param IsDDos: 是否可綁定高防包
 注意：此欄位可能返回 null，表示取不到有效值。
         :type IsDDos: bool
@@ -2966,7 +2966,7 @@ OPEN：公網屬性， INTERNAL：内網屬性。
         :type LoadBalancerPassToTarget: bool
         :param ExclusiveCluster: 内網獨占集群
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ExclusiveCluster: :class:`tencentcloud.clb.v20180317.models.ExclusiveCluster`
+        :type ExclusiveCluster: :class:`taifucloudcloud.clb.v20180317.models.ExclusiveCluster`
         :param IPv6Mode: IP網址版本爲ipv6時此欄位有意義， IPv6Nat64 | IPv6FullChain
 注意：此欄位可能返回 null，表示取不到有效值。
         :type IPv6Mode: str
@@ -3269,7 +3269,7 @@ class ModifyDomainAttributesRequest(AbstractModel):
         :param NewDomain: 要修改的新域名
         :type NewDomain: str
         :param Certificate: 域名相關的證書訊息，注意，僅對啓用SNI的監聽器适用。
-        :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateInput`
+        :type Certificate: :class:`taifucloudcloud.clb.v20180317.models.CertificateInput`
         :param Http2: 是否開啓Http2，注意，只有HTTPS域名才能開啓Http2。
         :type Http2: bool
         :param DefaultServer: 是否設爲預設域名，注意，一個監聽器下只能設置一個預設域名。
@@ -3375,9 +3375,9 @@ class ModifyListenerRequest(AbstractModel):
         :param SessionExpireTime: 會話保持時間，單位：秒。可選值：30~3600，預設 0，表示不開啓。此參數僅适用于TCP/UDP監聽器。
         :type SessionExpireTime: int
         :param HealthCheck: 健康檢查相關參數，此參數僅适用于TCP/UDP/TCP_SSL監聽器
-        :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
+        :type HealthCheck: :class:`taifucloudcloud.clb.v20180317.models.HealthCheck`
         :param Certificate: 證書相關訊息，此參數僅适用于HTTPS/TCP_SSL監聽器
-        :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateInput`
+        :type Certificate: :class:`taifucloudcloud.clb.v20180317.models.CertificateInput`
         :param Scheduler: 監聽器轉發的方式。可選值：WRR、LEAST_CONN
 分别表示按權重輪詢、最小連接數， 預設爲 WRR。
         :type Scheduler: str
@@ -3438,9 +3438,9 @@ class ModifyLoadBalancerAttributesRequest(AbstractModel):
         :param LoadBalancerName: 負載均衡實例名稱
         :type LoadBalancerName: str
         :param TargetRegionInfo: 負載均衡綁定的後端服務的地域訊息
-        :type TargetRegionInfo: :class:`tencentcloud.clb.v20180317.models.TargetRegionInfo`
+        :type TargetRegionInfo: :class:`taifucloudcloud.clb.v20180317.models.TargetRegionInfo`
         :param InternetChargeInfo: 網絡計費相關參數
-        :type InternetChargeInfo: :class:`tencentcloud.clb.v20180317.models.InternetAccessible`
+        :type InternetChargeInfo: :class:`taifucloudcloud.clb.v20180317.models.InternetAccessible`
         :param LoadBalancerPassToTarget: Target是否放通來自CLB的流量。開啓放通（true）：只驗證CLB上的安全組；不開啓放通（false）：需同時驗證CLB和後端實例上的安全組。
         :type LoadBalancerPassToTarget: bool
         :param SnatPro: 是否開啓SnatPro
@@ -3505,7 +3505,7 @@ class ModifyRuleRequest(AbstractModel):
         :param Url: 轉發規則的新的轉發路徑，如不需修改Url，則不需提供此參數
         :type Url: str
         :param HealthCheck: 健康檢查訊息
-        :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
+        :type HealthCheck: :class:`taifucloudcloud.clb.v20180317.models.HealthCheck`
         :param Scheduler: 規則的請求轉發方式，可選值：WRR、LEAST_CONN、IP_HASH
 分别表示按權重輪詢、最小連接數、按IP哈希， 預設爲 WRR。
         :type Scheduler: str
@@ -3971,7 +3971,7 @@ class ReplaceCertForLoadBalancersRequest(AbstractModel):
         :param OldCertificateId: 需要被替換的證書的ID，可以是服務端證書或用戶端證書
         :type OldCertificateId: str
         :param Certificate: 新證書的内容等相關訊息
-        :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateInput`
+        :type Certificate: :class:`taifucloudcloud.clb.v20180317.models.CertificateInput`
         """
         self.OldCertificateId = None
         self.Certificate = None
@@ -4140,9 +4140,9 @@ class RuleInput(AbstractModel):
         :param SessionExpireTime: 會話保持時間。設置爲0表示關閉會話保持，開啓會話保持可取值30~3600，單位：秒。
         :type SessionExpireTime: int
         :param HealthCheck: 健康檢查訊息
-        :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
+        :type HealthCheck: :class:`taifucloudcloud.clb.v20180317.models.HealthCheck`
         :param Certificate: 證書訊息
-        :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateInput`
+        :type Certificate: :class:`taifucloudcloud.clb.v20180317.models.CertificateInput`
         :param Scheduler: 規則的請求轉發方式，可選值：WRR、LEAST_CONN、IP_HASH
 分别表示按權重輪詢、最小連接數、按IP哈希， 預設爲 WRR。
         :type Scheduler: str
@@ -4215,17 +4215,17 @@ class RuleOutput(AbstractModel):
         :type SessionExpireTime: int
         :param HealthCheck: 健康檢查訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type HealthCheck: :class:`tencentcloud.clb.v20180317.models.HealthCheck`
+        :type HealthCheck: :class:`taifucloudcloud.clb.v20180317.models.HealthCheck`
         :param Certificate: 證書訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Certificate: :class:`tencentcloud.clb.v20180317.models.CertificateOutput`
+        :type Certificate: :class:`taifucloudcloud.clb.v20180317.models.CertificateOutput`
         :param Scheduler: 規則的請求轉發方式
         :type Scheduler: str
         :param ListenerId: 轉發規則所屬的監聽器 ID
         :type ListenerId: str
         :param RewriteTarget: 轉發規則的重定向目标訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type RewriteTarget: :class:`tencentcloud.clb.v20180317.models.RewriteTarget`
+        :type RewriteTarget: :class:`taifucloudcloud.clb.v20180317.models.RewriteTarget`
         :param HttpGzip: 是否開啓gzip
         :type HttpGzip: bool
         :param BeAutoCreated: 轉發規則是否爲自動創建
@@ -4242,7 +4242,7 @@ class RuleOutput(AbstractModel):
         :type TargetType: str
         :param TargetGroup: 綁定的目标組基本訊息；當規則綁定目标組時，會返回該欄位
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TargetGroup: :class:`tencentcloud.clb.v20180317.models.BasicTargetGroupInfo`
+        :type TargetGroup: :class:`taifucloudcloud.clb.v20180317.models.BasicTargetGroupInfo`
         :param WafDomainId: WAF實例ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type WafDomainId: str
@@ -4780,7 +4780,7 @@ class ZoneInfo(AbstractModel):
         :param Zone: 可用區字串形式的唯一ID，如：ap-guangzhou-1
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Zone: str
-        :param ZoneName: 可用區名稱，如：廣州一區
+        :param ZoneName: 可用區名稱，如： 一區
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ZoneName: str
         """

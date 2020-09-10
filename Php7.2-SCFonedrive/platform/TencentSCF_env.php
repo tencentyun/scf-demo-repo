@@ -200,7 +200,7 @@ language:<br>';
         <label><input type="radio" name="language" value="'.$key1.'" '.($key1==$constStr['language']?'checked':'').' onclick="changelanguage(\''.$key1.'\')">'.$value1.'</label><br>';
         }
         if (getConfig('SecretId')==''||getConfig('SecretKey')=='') $html .= '
-        <a href="https://console.cloud.tencent.com/cam/capi" target="_blank">' . getconstStr('Create') . ' SecretId & SecretKey</a><br>
+        <a href="https://console.cloud.taifucloud.com/cam/capi" target="_blank">' . getconstStr('Create') . ' SecretId & SecretKey</a><br>
         <label>SecretId:<input name="SecretId" type="text" placeholder="" size=""></label><br>
         <label>SecretKey:<input name="SecretKey" type="text" placeholder="" size=""></label><br>';
         $html .= '
@@ -280,7 +280,7 @@ function getfunctioninfo($function_name, $Region, $Namespace, $SecretId, $Secret
 {
     //$meth = 'GET';
     $meth = 'POST';
-    $host = 'scf.tencentcloudapi.com';
+    $host = 'scf.taifucloudcloudapi.com';
     $tmpdata['Action'] = 'GetFunction';
     $tmpdata['FunctionName'] = $function_name;
     $tmpdata['Namespace'] = $Namespace;
@@ -320,7 +320,7 @@ function updateEnvironment($Envs, $function_name, $Region, $Namespace, $SecretId
         $i++;
     }
     $meth = 'POST';
-    $host = 'scf.tencentcloudapi.com';
+    $host = 'scf.taifucloudcloudapi.com';
     $tmpdata['Action'] = 'UpdateFunctionConfiguration';
     $tmpdata['FunctionName'] = $function_name;
     $tmpdata['Namespace'] = $Namespace;
@@ -362,7 +362,7 @@ function SetbaseConfig($Envs, $function_name, $Region, $Namespace, $SecretId, $S
         $i++;
     }
     $meth = 'POST';
-    $host = 'scf.tencentcloudapi.com';
+    $host = 'scf.taifucloudcloudapi.com';
     $tmpdata['Action'] = 'UpdateFunctionConfiguration';
     $tmpdata['FunctionName'] = $function_name;
     $tmpdata['Namespace'] = $Namespace;
@@ -386,7 +386,7 @@ function updateProgram($function_name, $Region, $Namespace, $SecretId, $SecretKe
 {
     WaitSCFStat();
     $meth = 'POST';
-    $host = 'scf.tencentcloudapi.com';
+    $host = 'scf.taifucloudcloudapi.com';
     $tmpdata['Action'] = 'UpdateFunctionCode';
     $tmpdata['Code.GitUrl'] = $source['url'];
     $tmpdata['Code.GitBranch'] = $source['branch'];

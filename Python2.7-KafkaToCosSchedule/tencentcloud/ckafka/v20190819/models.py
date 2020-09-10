@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Acl(AbstractModel):
@@ -353,7 +353,7 @@ class CreateAclResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回結果
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.JgwOperateResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.JgwOperateResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -401,7 +401,7 @@ class CreatePartitionResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回的結果集
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.JgwOperateResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.JgwOperateResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -449,7 +449,7 @@ class CreateTopicIpWhiteListResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 删除主題IP白名單結果
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.JgwOperateResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.JgwOperateResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -550,7 +550,7 @@ class CreateTopicResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回創建結果
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.CreateTopicResp`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.CreateTopicResp`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -598,7 +598,7 @@ class CreateUserResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回的結果
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.JgwOperateResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.JgwOperateResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -662,7 +662,7 @@ class DeleteAclResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回結果
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.JgwOperateResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.JgwOperateResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -710,7 +710,7 @@ class DeleteTopicIpWhiteListResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 删除主題IP白名單結果
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.JgwOperateResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.JgwOperateResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -754,7 +754,7 @@ class DeleteTopicResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回的結果集
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.JgwOperateResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.JgwOperateResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -798,7 +798,7 @@ class DeleteUserResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回結果
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.JgwOperateResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.JgwOperateResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -858,7 +858,7 @@ class DescribeACLResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回的ACL結果集對象
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.AclResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.AclResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -902,7 +902,7 @@ class DescribeAppInfoResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回的符合要求的App Id清單
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.AppIdResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.AppIdResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -958,7 +958,7 @@ class DescribeConsumerGroupResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回的消費分組訊息
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.ConsumerGroupResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.ConsumerGroupResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1087,7 +1087,7 @@ class DescribeGroupOffsetsResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回的結果對象
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.GroupOffsetResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.GroupOffsetResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1139,7 +1139,7 @@ class DescribeGroupResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回結果集清單
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.GroupResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.GroupResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1179,7 +1179,7 @@ class DescribeInstanceAttributesResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 實例屬性返回結果對象
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.InstanceAttributesResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.InstanceAttributesResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1248,7 +1248,7 @@ class DescribeInstancesDetailResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回的實例詳情結果對象
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.InstanceDetailResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.InstanceDetailResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1308,7 +1308,7 @@ class DescribeInstancesResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回的結果
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.InstanceResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.InstanceResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1352,7 +1352,7 @@ class DescribeTopicAttributesResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回的結果對象
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.TopicAttributesResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.TopicAttributesResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1404,7 +1404,7 @@ class DescribeTopicDetailResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回的主題詳情實體
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.TopicDetailResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.TopicDetailResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1457,7 +1457,7 @@ class DescribeTopicResponse(AbstractModel):
         """
         :param Result: 返回的結果
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.TopicResult`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.TopicResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1509,7 +1509,7 @@ class DescribeUserResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回結果清單
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.UserResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.UserResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1580,7 +1580,7 @@ class GroupInfoMember(AbstractModel):
         :param ClientHost: 一般儲存客戶的 IP 網址
         :type ClientHost: str
         :param Assignment: 儲存着分配給該消費者的 partition 訊息
-        :type Assignment: :class:`tencentcloud.ckafka.v20190819.models.Assignment`
+        :type Assignment: :class:`taifucloudcloud.ckafka.v20190819.models.Assignment`
         """
         self.MemberId = None
         self.ClientId = None
@@ -1854,7 +1854,7 @@ class InstanceAttributesResponse(AbstractModel):
         :param MsgRetentionTime: 訊息保存時間,單位爲分鍾
         :type MsgRetentionTime: int
         :param Config: 自動創建 Topic 配置， 若該欄位爲空，則表示未開啓自動創建
-        :type Config: :class:`tencentcloud.ckafka.v20190819.models.InstanceConfigDO`
+        :type Config: :class:`taifucloudcloud.ckafka.v20190819.models.InstanceConfigDO`
         :param RemainderPartitions: 剩餘創建分區數
         :type RemainderPartitions: int
         :param RemainderTopics: 剩餘創建主題數
@@ -2157,7 +2157,7 @@ class JgwOperateResponse(AbstractModel):
         :type ReturnMessage: str
         :param Data: 操作型返回的Data數據,可能有flowId等
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.ckafka.v20190819.models.OperateResponseData`
+        :type Data: :class:`taifucloudcloud.ckafka.v20190819.models.OperateResponseData`
         """
         self.ReturnCode = None
         self.ReturnMessage = None
@@ -2183,11 +2183,11 @@ class ModifyGroupOffsetsRequest(AbstractModel):
         :type InstanceId: str
         :param Group: kafka 消費分組
         :type Group: str
-        :param Strategy: 重置offset的策略，入參含義 0. 對齊shift-by參數，代表把offset向前或向後移動shift條 1. 對齊參考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移動到指定timestamp的位置 2. 對齊參考(to-offset)，代表把offset移動到指定的offset位置
+        :param Strategy: 重置offset的策略，入參含義 0. 對齊shift-by參數，代表把offset向前或向後 shift條 1. 對齊參考(by-duration,to-datetime,to-earliest,to-latest),代表把offset 到指定timestamp的位置 2. 對齊參考(to-offset)，代表把offset 到指定的offset位置
         :type Strategy: int
         :param Topics: 表示需要重置的topics， 不填表示全部
         :type Topics: list of str
-        :param Shift: 當strategy爲0時，必須包含該欄位，可以大于零代表會把offset向後移動shift條，小於零則将offset向前回溯shift條數。正确重置後新的offset應該是(old_offset + shift)，需要注意的是如果新的offset小於partition的earliest則會設置爲earliest，如果大于partition 的latest則會設置爲latest
+        :param Shift: 當strategy爲0時，必須包含該欄位，可以大于零代表會把offset向後 shift條，小於零則将offset向前回溯shift條數。正确重置後新的offset應該是(old_offset + shift)，需要注意的是如果新的offset小於partition的earliest則會設置爲earliest，如果大于partition 的latest則會設置爲latest
         :type Shift: int
         :param ShiftTimestamp: 單位ms。當strategy爲1時，必須包含該欄位，其中-2表示重置offset到最開始的位置，-1表示重置到最新的位置(相當于清空)，其它值則代表指定的時間，會獲取topic中指定時間的offset然後進行重置，需要注意的時，如果指定的時間不存在訊息，則獲取最末尾的offset。
         :type ShiftTimestamp: int
@@ -2221,7 +2221,7 @@ class ModifyGroupOffsetsResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回結果
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.JgwOperateResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.JgwOperateResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2275,7 +2275,7 @@ class ModifyInstanceAttributesRequest(AbstractModel):
         :param InstanceName: 實例名稱，是一個不超過 64 個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)
         :type InstanceName: str
         :param Config: 實例配置
-        :type Config: :class:`tencentcloud.ckafka.v20190819.models.ModifyInstanceAttributesConfig`
+        :type Config: :class:`taifucloudcloud.ckafka.v20190819.models.ModifyInstanceAttributesConfig`
         """
         self.InstanceId = None
         self.MsgRetentionTime = None
@@ -2300,7 +2300,7 @@ class ModifyInstanceAttributesResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回結果
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.JgwOperateResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.JgwOperateResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2352,7 +2352,7 @@ class ModifyPasswordResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回結果
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.JgwOperateResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.JgwOperateResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2428,7 +2428,7 @@ class ModifyTopicAttributesResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 返回結果集
-        :type Result: :class:`tencentcloud.ckafka.v20190819.models.JgwOperateResponse`
+        :type Result: :class:`taifucloudcloud.ckafka.v20190819.models.JgwOperateResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2601,7 +2601,7 @@ class TopicAttributesResponse(AbstractModel):
         :param IpWhiteList: IP 白名單清單
         :type IpWhiteList: list of str
         :param Config: topic 配置數組
-        :type Config: :class:`tencentcloud.ckafka.v20190819.models.Config`
+        :type Config: :class:`taifucloudcloud.ckafka.v20190819.models.Config`
         :param Partitions: 分區詳情
         :type Partitions: list of TopicPartitionDO
         """
@@ -2666,7 +2666,7 @@ class TopicDetail(AbstractModel):
         :type ForwardInterval: int
         :param Config: 高級配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Config: :class:`tencentcloud.ckafka.v20190819.models.Config`
+        :type Config: :class:`taifucloudcloud.ckafka.v20190819.models.Config`
         """
         self.TopicName = None
         self.TopicId = None

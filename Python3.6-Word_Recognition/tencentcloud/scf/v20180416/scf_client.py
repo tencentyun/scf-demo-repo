@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.scf.v20180416 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.scf.v20180416 import models
 
 
 class ScfClient(AbstractClient):
     _apiVersion = '2018-04-16'
-    _endpoint = 'scf.tencentcloudapi.com'
+    _endpoint = 'scf.taifucloudcloudapi.com'
 
 
     def CopyFunction(self, request):
@@ -35,8 +35,8 @@ class ScfClient(AbstractClient):
         如有需要，您可以在複制後手動修改新函數。
 
         :param request: 調用CopyFunction所需參數的結構體。
-        :type request: :class:`tencentcloud.scf.v20180416.models.CopyFunctionRequest`
-        :rtype: :class:`tencentcloud.scf.v20180416.models.CopyFunctionResponse`
+        :type request: :class:`taifucloudcloud.scf.v20180416.models.CopyFunctionRequest`
+        :rtype: :class:`taifucloudcloud.scf.v20180416.models.CopyFunctionResponse`
 
         """
         try:
@@ -63,8 +63,8 @@ class ScfClient(AbstractClient):
         """該介面根據傳入參數創建新的函數。
 
         :param request: 調用CreateFunction所需參數的結構體。
-        :type request: :class:`tencentcloud.scf.v20180416.models.CreateFunctionRequest`
-        :rtype: :class:`tencentcloud.scf.v20180416.models.CreateFunctionResponse`
+        :type request: :class:`taifucloudcloud.scf.v20180416.models.CreateFunctionRequest`
+        :rtype: :class:`taifucloudcloud.scf.v20180416.models.CreateFunctionResponse`
 
         """
         try:
@@ -91,8 +91,8 @@ class ScfClient(AbstractClient):
         """該介面根據參數輸入設置新的觸發方式。
 
         :param request: 調用CreateTrigger所需參數的結構體。
-        :type request: :class:`tencentcloud.scf.v20180416.models.CreateTriggerRequest`
-        :rtype: :class:`tencentcloud.scf.v20180416.models.CreateTriggerResponse`
+        :type request: :class:`taifucloudcloud.scf.v20180416.models.CreateTriggerRequest`
+        :rtype: :class:`taifucloudcloud.scf.v20180416.models.CreateTriggerResponse`
 
         """
         try:
@@ -119,8 +119,8 @@ class ScfClient(AbstractClient):
         """該介面根據傳入參數删除函數。
 
         :param request: 調用DeleteFunction所需參數的結構體。
-        :type request: :class:`tencentcloud.scf.v20180416.models.DeleteFunctionRequest`
-        :rtype: :class:`tencentcloud.scf.v20180416.models.DeleteFunctionResponse`
+        :type request: :class:`taifucloudcloud.scf.v20180416.models.DeleteFunctionRequest`
+        :rtype: :class:`taifucloudcloud.scf.v20180416.models.DeleteFunctionResponse`
 
         """
         try:
@@ -147,8 +147,8 @@ class ScfClient(AbstractClient):
         """該介面根據參數傳入删除已有的觸發方式。
 
         :param request: 調用DeleteTrigger所需參數的結構體。
-        :type request: :class:`tencentcloud.scf.v20180416.models.DeleteTriggerRequest`
-        :rtype: :class:`tencentcloud.scf.v20180416.models.DeleteTriggerResponse`
+        :type request: :class:`taifucloudcloud.scf.v20180416.models.DeleteTriggerRequest`
+        :rtype: :class:`taifucloudcloud.scf.v20180416.models.DeleteTriggerResponse`
 
         """
         try:
@@ -175,8 +175,8 @@ class ScfClient(AbstractClient):
         """該介面獲取某個函數的詳細訊息，包括名稱、代碼、處理方法、關聯觸發器和超時時間等欄位。
 
         :param request: 調用GetFunction所需參數的結構體。
-        :type request: :class:`tencentcloud.scf.v20180416.models.GetFunctionRequest`
-        :rtype: :class:`tencentcloud.scf.v20180416.models.GetFunctionResponse`
+        :type request: :class:`taifucloudcloud.scf.v20180416.models.GetFunctionRequest`
+        :rtype: :class:`taifucloudcloud.scf.v20180416.models.GetFunctionResponse`
 
         """
         try:
@@ -203,8 +203,8 @@ class ScfClient(AbstractClient):
         """該介面根據指定的日志查詢條件返回函數運作日志。
 
         :param request: 調用GetFunctionLogs所需參數的結構體。
-        :type request: :class:`tencentcloud.scf.v20180416.models.GetFunctionLogsRequest`
-        :rtype: :class:`tencentcloud.scf.v20180416.models.GetFunctionLogsResponse`
+        :type request: :class:`taifucloudcloud.scf.v20180416.models.GetFunctionLogsRequest`
+        :rtype: :class:`taifucloudcloud.scf.v20180416.models.GetFunctionLogsResponse`
 
         """
         try:
@@ -231,8 +231,8 @@ class ScfClient(AbstractClient):
         """該介面用于運作函數。
 
         :param request: 調用Invoke所需參數的結構體。
-        :type request: :class:`tencentcloud.scf.v20180416.models.InvokeRequest`
-        :rtype: :class:`tencentcloud.scf.v20180416.models.InvokeResponse`
+        :type request: :class:`taifucloudcloud.scf.v20180416.models.InvokeRequest`
+        :rtype: :class:`taifucloudcloud.scf.v20180416.models.InvokeResponse`
 
         """
         try:
@@ -259,8 +259,8 @@ class ScfClient(AbstractClient):
         """該介面根據傳入的查詢參數返回相關函數訊息。
 
         :param request: 調用ListFunctions所需參數的結構體。
-        :type request: :class:`tencentcloud.scf.v20180416.models.ListFunctionsRequest`
-        :rtype: :class:`tencentcloud.scf.v20180416.models.ListFunctionsResponse`
+        :type request: :class:`taifucloudcloud.scf.v20180416.models.ListFunctionsRequest`
+        :rtype: :class:`taifucloudcloud.scf.v20180416.models.ListFunctionsResponse`
 
         """
         try:
@@ -287,8 +287,8 @@ class ScfClient(AbstractClient):
         """該介面根據傳入參數更新函數代碼。
 
         :param request: 調用UpdateFunctionCode所需參數的結構體。
-        :type request: :class:`tencentcloud.scf.v20180416.models.UpdateFunctionCodeRequest`
-        :rtype: :class:`tencentcloud.scf.v20180416.models.UpdateFunctionCodeResponse`
+        :type request: :class:`taifucloudcloud.scf.v20180416.models.UpdateFunctionCodeRequest`
+        :rtype: :class:`taifucloudcloud.scf.v20180416.models.UpdateFunctionCodeResponse`
 
         """
         try:
@@ -315,8 +315,8 @@ class ScfClient(AbstractClient):
         """該介面根據傳入參數更新函數配置。
 
         :param request: 調用UpdateFunctionConfiguration所需參數的結構體。
-        :type request: :class:`tencentcloud.scf.v20180416.models.UpdateFunctionConfigurationRequest`
-        :rtype: :class:`tencentcloud.scf.v20180416.models.UpdateFunctionConfigurationResponse`
+        :type request: :class:`taifucloudcloud.scf.v20180416.models.UpdateFunctionConfigurationRequest`
+        :rtype: :class:`taifucloudcloud.scf.v20180416.models.UpdateFunctionConfigurationResponse`
 
         """
         try:

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AccountCreateInfo(AbstractModel):
@@ -350,7 +350,7 @@ class CreateDBInstancesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Zone: 實例可用區，類似ap-guangzhou-1（廣州一區）；實例可售賣區域可以通過介面DescribeZones獲取
+        :param Zone: 實例可用區，類似ap-guangzhou-1（ 一區）；實例可售賣區域可以通過介面DescribeZones獲取
         :type Zone: str
         :param Memory: 實例内存大小，單位GB
         :type Memory: int
@@ -368,9 +368,9 @@ class CreateDBInstancesRequest(AbstractModel):
         :type VpcId: str
         :param Period: 購買實例週期，預設取值爲1，表示一個月。取值不超過48
         :type Period: int
-        :param AutoVoucher: 是否自動使用代金券；1 - 是，0 - 否，預設不使用
+        :param AutoVoucher: 是否自動使用 ；1 - 是，0 - 否，預設不使用
         :type AutoVoucher: int
-        :param VoucherIds: 代金券ID數組，目前單個訂單只能使用一張
+        :param VoucherIds:  ID數組，目前單個訂單只能使用一張
         :type VoucherIds: list of str
         :param DBVersion: sqlserver版本，目前只支援：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。每個地域支援售賣的版本不同，可通過DescribeProductConfig介面來拉取每個地域可售賣的版本訊息。不填，預設爲版本2008R2。
         :type DBVersion: str
@@ -494,9 +494,9 @@ class CreateMigrationRequest(AbstractModel):
         :param SourceType: 遷移源的類型 1:TencentDB for SQLServer 2:雲伺服器自建SQLServer資料庫 4:SQLServer備份還原 5:SQLServer備份還原（COS方式）
         :type SourceType: int
         :param Source: 遷移源
-        :type Source: :class:`tencentcloud.sqlserver.v20180328.models.MigrateSource`
+        :type Source: :class:`taifucloudcloud.sqlserver.v20180328.models.MigrateSource`
         :param Target: 遷移目标
-        :type Target: :class:`tencentcloud.sqlserver.v20180328.models.MigrateTarget`
+        :type Target: :class:`taifucloudcloud.sqlserver.v20180328.models.MigrateTarget`
         :param MigrateDBSet: 遷移DB對象 ，離線遷移不使用（SourceType=4或SourceType=5）。
         :type MigrateDBSet: list of MigrateDB
         """
@@ -1360,9 +1360,9 @@ class DescribeMigrationDetailResponse(AbstractModel):
         :param MigrateType: 遷移類型（1:結構遷移 2:數據遷移 3:增量同步）
         :type MigrateType: int
         :param Source: 遷移源
-        :type Source: :class:`tencentcloud.sqlserver.v20180328.models.MigrateSource`
+        :type Source: :class:`taifucloudcloud.sqlserver.v20180328.models.MigrateSource`
         :param Target: 遷移目标
-        :type Target: :class:`tencentcloud.sqlserver.v20180328.models.MigrateTarget`
+        :type Target: :class:`taifucloudcloud.sqlserver.v20180328.models.MigrateTarget`
         :param MigrateDBSet: 遷移DB對象 ，離線遷移（SourceType=4或SourceType=5）不使用。
         :type MigrateDBSet: list of MigrateDB
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -2116,7 +2116,7 @@ class MigrateTask(AbstractModel):
         :param Progress: 遷移任務當前進度（單位%）
         :type Progress: int
         :param MigrateDetail: 遷移任務進度細節
-        :type MigrateDetail: :class:`tencentcloud.sqlserver.v20180328.models.MigrateDetail`
+        :type MigrateDetail: :class:`taifucloudcloud.sqlserver.v20180328.models.MigrateDetail`
         """
         self.MigrateId = None
         self.MigrateName = None
@@ -2469,9 +2469,9 @@ class ModifyMigrationRequest(AbstractModel):
         :param SourceType: 遷移源的類型 1:TencentDB for SQLServer 2:雲伺服器自建SQLServer資料庫 4:SQLServer備份還原 5:SQLServer備份還原（COS方式），若不填則不修改
         :type SourceType: int
         :param Source: 遷移源，若不填則不修改
-        :type Source: :class:`tencentcloud.sqlserver.v20180328.models.MigrateSource`
+        :type Source: :class:`taifucloudcloud.sqlserver.v20180328.models.MigrateSource`
         :param Target: 遷移目标，若不填則不修改
-        :type Target: :class:`tencentcloud.sqlserver.v20180328.models.MigrateTarget`
+        :type Target: :class:`taifucloudcloud.sqlserver.v20180328.models.MigrateTarget`
         :param MigrateDBSet: 遷移DB對象 ，離線遷移（SourceType=4或SourceType=5）不使用，若不填則不修改
         :type MigrateDBSet: list of MigrateDB
         """
@@ -2564,9 +2564,9 @@ class RenewDBInstanceRequest(AbstractModel):
         :type InstanceId: str
         :param Period: 續約多少個月，取值範圍爲1-48，預設爲1
         :type Period: int
-        :param AutoVoucher: 是否自動使用代金券，0-不使用；1-使用；預設不實用
+        :param AutoVoucher: 是否自動使用 ，0-不使用；1-使用；預設不實用
         :type AutoVoucher: int
-        :param VoucherIds: 代金券ID數組，目前只支援使用1張代金券
+        :param VoucherIds:  ID數組，目前只支援使用1張 
         :type VoucherIds: list of str
         """
         self.InstanceId = None
@@ -2981,9 +2981,9 @@ class UpgradeDBInstanceRequest(AbstractModel):
         :type Memory: int
         :param Storage: 實例升級後磁盤大小，單位GB，其值不能小於當前實例磁盤大小
         :type Storage: int
-        :param AutoVoucher: 是否自動使用代金券，0 - 不使用；1 - 預設使用。取值預設爲0
+        :param AutoVoucher: 是否自動使用 ，0 - 不使用；1 - 預設使用。取值預設爲0
         :type AutoVoucher: int
-        :param VoucherIds: 代金券ID，目前單個訂單只能使用一張代金券
+        :param VoucherIds:  ID，目前單個訂單只能使用一張 
         :type VoucherIds: list of str
         """
         self.InstanceId = None
@@ -3029,7 +3029,7 @@ class ZoneInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param Zone: 可用區英文ID，形如ap-guangzhou-1，表示廣州一區
+        :param Zone: 可用區英文ID，形如ap-guangzhou-1，表示 一區
         :type Zone: str
         :param ZoneName: 可用區中文名稱
         :type ZoneName: str

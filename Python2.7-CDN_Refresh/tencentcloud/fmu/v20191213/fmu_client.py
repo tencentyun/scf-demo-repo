@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.fmu.v20191213 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.fmu.v20191213 import models
 
 
 class FmuClient(AbstractClient):
     _apiVersion = '2019-12-13'
-    _endpoint = 'fmu.tencentcloudapi.com'
+    _endpoint = 'fmu.taifucloudcloudapi.com'
 
 
     def BeautifyPic(self, request):
         """用戶上傳一張人臉圖片，精準定位五官，實現美膚、亮膚、祛痘等美顔功能。
 
         :param request: Request instance for BeautifyPic.
-        :type request: :class:`tencentcloud.fmu.v20191213.models.BeautifyPicRequest`
-        :rtype: :class:`tencentcloud.fmu.v20191213.models.BeautifyPicResponse`
+        :type request: :class:`taifucloudcloud.fmu.v20191213.models.BeautifyPicRequest`
+        :rtype: :class:`taifucloudcloud.fmu.v20191213.models.BeautifyPicResponse`
 
         """
         try:
@@ -54,13 +54,13 @@ class FmuClient(AbstractClient):
 
 
     def CreateModel(self, request):
-        """在使用LUT素材的modelid實現試唇色前，您需要先上傳 LUT 格式的cube文件注冊唇色ID。檢視 [LUT文件的使用說明](https://cloud.tencent.com/document/product/1172/41701)。
+        """在使用LUT素材的modelid實現試唇色前，您需要先上傳 LUT 格式的cube文件注冊唇色ID。檢視 [LUT文件的使用說明](https://cloud.taifucloud.com/document/product/1172/41701)。
 
-        注：您也可以直接使用 [試唇色介面](https://cloud.tencent.com/document/product/1172/40706)，通過輸入RGBA模型數值的方式指定唇色，更簡單易用。
+        注：您也可以直接使用 [試唇色介面](https://cloud.taifucloud.com/document/product/1172/40706)，通過輸入RGBA模型數值的方式指定唇色，更簡單易用。
 
         :param request: Request instance for CreateModel.
-        :type request: :class:`tencentcloud.fmu.v20191213.models.CreateModelRequest`
-        :rtype: :class:`tencentcloud.fmu.v20191213.models.CreateModelResponse`
+        :type request: :class:`taifucloudcloud.fmu.v20191213.models.CreateModelRequest`
+        :rtype: :class:`taifucloudcloud.fmu.v20191213.models.CreateModelResponse`
 
         """
         try:
@@ -87,8 +87,8 @@ class FmuClient(AbstractClient):
         """删除已注冊的唇色素材。
 
         :param request: Request instance for DeleteModel.
-        :type request: :class:`tencentcloud.fmu.v20191213.models.DeleteModelRequest`
-        :rtype: :class:`tencentcloud.fmu.v20191213.models.DeleteModelResponse`
+        :type request: :class:`taifucloudcloud.fmu.v20191213.models.DeleteModelRequest`
+        :rtype: :class:`taifucloudcloud.fmu.v20191213.models.DeleteModelResponse`
 
         """
         try:
@@ -115,8 +115,8 @@ class FmuClient(AbstractClient):
         """查詢已注冊的唇色素材。
 
         :param request: Request instance for GetModelList.
-        :type request: :class:`tencentcloud.fmu.v20191213.models.GetModelListRequest`
-        :rtype: :class:`tencentcloud.fmu.v20191213.models.GetModelListResponse`
+        :type request: :class:`taifucloudcloud.fmu.v20191213.models.GetModelListRequest`
+        :rtype: :class:`taifucloudcloud.fmu.v20191213.models.GetModelListResponse`
 
         """
         try:
@@ -150,8 +150,8 @@ class FmuClient(AbstractClient):
         - 公共參數中的簽名方式請使用V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for TryLipstickPic.
-        :type request: :class:`tencentcloud.fmu.v20191213.models.TryLipstickPicRequest`
-        :rtype: :class:`tencentcloud.fmu.v20191213.models.TryLipstickPicResponse`
+        :type request: :class:`taifucloudcloud.fmu.v20191213.models.TryLipstickPicRequest`
+        :rtype: :class:`taifucloudcloud.fmu.v20191213.models.TryLipstickPicResponse`
 
         """
         try:

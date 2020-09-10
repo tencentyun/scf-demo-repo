@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Acct(AbstractModel):
@@ -125,7 +125,7 @@ class ApplyApplicationMaterialResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 提交申報材料結果
-        :type Result: :class:`tencentcloud.cpdp.v20190820.models.ApplyDeclareResult`
+        :type Result: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyDeclareResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -188,7 +188,7 @@ class ApplyDeclareResult(AbstractModel):
         :param Code: 錯誤碼
         :type Code: str
         :param Data: 提交申報材料數據
-        :type Data: :class:`tencentcloud.cpdp.v20190820.models.ApplyDeclareData`
+        :type Data: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyDeclareData`
         """
         self.Code = None
         self.Data = None
@@ -327,7 +327,7 @@ class ApplyOutwardOrderResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 匯出指令申請
-        :type Result: :class:`tencentcloud.cpdp.v20190820.models.ApplyOutwardOrderResult`
+        :type Result: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyOutwardOrderResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -350,7 +350,7 @@ class ApplyOutwardOrderResult(AbstractModel):
     def __init__(self):
         """
         :param Data: 匯出指令申請數據
-        :type Data: :class:`tencentcloud.cpdp.v20190820.models.ApplyOutwardOrderData`
+        :type Data: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyOutwardOrderData`
         :param Code: 錯誤碼
         :type Code: str
         """
@@ -426,7 +426,7 @@ class ApplyPayerInfoResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 付款人申請結果
-        :type Result: :class:`tencentcloud.cpdp.v20190820.models.ApplyPayerinfoResult`
+        :type Result: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyPayerinfoResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -481,7 +481,7 @@ class ApplyPayerinfoResult(AbstractModel):
         :param Code: 錯誤碼
         :type Code: str
         :param Data: 數據
-        :type Data: :class:`tencentcloud.cpdp.v20190820.models.ApplyPayerinfoData`
+        :type Data: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyPayerinfoData`
         """
         self.Code = None
         self.Data = None
@@ -508,7 +508,7 @@ class ApplyReWithdrawalRequest(AbstractModel):
         :param MidasSignature: 計費簽名
         :type MidasSignature: str
         :param Body: 提現訊息
-        :type Body: :class:`tencentcloud.cpdp.v20190820.models.WithdrawBill`
+        :type Body: :class:`taifucloudcloud.cpdp.v20190820.models.WithdrawBill`
         :param MidasAppId: 聚鑫業務ID
         :type MidasAppId: str
         """
@@ -670,7 +670,7 @@ class ApplyTradeResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 提交貿易材料結果
-        :type Result: :class:`tencentcloud.cpdp.v20190820.models.ApplyTradeResult`
+        :type Result: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyTradeResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -695,7 +695,7 @@ class ApplyTradeResult(AbstractModel):
         :param Code: 錯誤碼
         :type Code: str
         :param Data: 提交貿易材料數據
-        :type Data: :class:`tencentcloud.cpdp.v20190820.models.ApplyTradeData`
+        :type Data: :class:`taifucloudcloud.cpdp.v20190820.models.ApplyTradeData`
         """
         self.Code = None
         self.Data = None
@@ -1903,7 +1903,7 @@ class CreateInvoiceResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 發票開具結果
-        :type Result: :class:`tencentcloud.cpdp.v20190820.models.CreateInvoiceResult`
+        :type Result: :class:`taifucloudcloud.cpdp.v20190820.models.CreateInvoiceResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1931,7 +1931,7 @@ class CreateInvoiceResult(AbstractModel):
         :type Code: int
         :param Data: 數據
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.cpdp.v20190820.models.CreateInvoiceResultData`
+        :type Data: :class:`taifucloudcloud.cpdp.v20190820.models.CreateInvoiceResultData`
         """
         self.Message = None
         self.Code = None
@@ -2080,7 +2080,7 @@ class CreateMerchantResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 商戶注冊結果
-        :type Result: :class:`tencentcloud.cpdp.v20190820.models.CreateMerchantResult`
+        :type Result: :class:`taifucloudcloud.cpdp.v20190820.models.CreateMerchantResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2108,7 +2108,7 @@ class CreateMerchantResult(AbstractModel):
         :type Message: str
         :param Data: 創建商戶結果數據
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.cpdp.v20190820.models.CreateMerchantResultData`
+        :type Data: :class:`taifucloudcloud.cpdp.v20190820.models.CreateMerchantResultData`
         """
         self.Code = None
         self.Message = None
@@ -2215,7 +2215,7 @@ class CreateRedInvoiceResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 紅沖結果
-        :type Result: :class:`tencentcloud.cpdp.v20190820.models.CreateRedInvoiceResult`
+        :type Result: :class:`taifucloudcloud.cpdp.v20190820.models.CreateRedInvoiceResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2782,7 +2782,7 @@ class QueryApplicationMaterialResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 成功申報材料查詢結果
-        :type Result: :class:`tencentcloud.cpdp.v20190820.models.QueryDeclareResult`
+        :type Result: :class:`taifucloudcloud.cpdp.v20190820.models.QueryDeclareResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3463,7 +3463,7 @@ class QueryDeclareResult(AbstractModel):
     def __init__(self):
         """
         :param Data: 成功申報材料查詢數據
-        :type Data: :class:`tencentcloud.cpdp.v20190820.models.QueryDeclareData`
+        :type Data: :class:`taifucloudcloud.cpdp.v20190820.models.QueryDeclareData`
         :param Code: 錯誤碼
         :type Code: str
         """
@@ -3511,7 +3511,7 @@ class QueryExchangeRateResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 查詢匯率結果
-        :type Result: :class:`tencentcloud.cpdp.v20190820.models.QueryExchangerateResult`
+        :type Result: :class:`taifucloudcloud.cpdp.v20190820.models.QueryExchangerateResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3628,7 +3628,7 @@ class QueryInvoiceResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 發票查詢結果
-        :type Result: :class:`tencentcloud.cpdp.v20190820.models.QueryInvoiceResult`
+        :type Result: :class:`taifucloudcloud.cpdp.v20190820.models.QueryInvoiceResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3656,7 +3656,7 @@ class QueryInvoiceResult(AbstractModel):
         :type Code: int
         :param Data: 查詢發票數據
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.cpdp.v20190820.models.QueryInvoiceResultData`
+        :type Data: :class:`taifucloudcloud.cpdp.v20190820.models.QueryInvoiceResultData`
         """
         self.Message = None
         self.Code = None
@@ -4053,7 +4053,7 @@ class QueryMerchantBalanceResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 對接方帳戶餘額查詢結果
-        :type Result: :class:`tencentcloud.cpdp.v20190820.models.QueryMerchantBalanceResult`
+        :type Result: :class:`taifucloudcloud.cpdp.v20190820.models.QueryMerchantBalanceResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -4078,7 +4078,7 @@ class QueryMerchantBalanceResult(AbstractModel):
         :param Code: 錯誤碼
         :type Code: str
         :param Data: 對接帳戶餘額查詢數據
-        :type Data: :class:`tencentcloud.cpdp.v20190820.models.QueryMerchantBalanceData`
+        :type Data: :class:`taifucloudcloud.cpdp.v20190820.models.QueryMerchantBalanceData`
         """
         self.Code = None
         self.Data = None
@@ -4127,8 +4127,8 @@ class QueryOrderOutOrderList(AbstractModel):
 5：聚鑫支付頁面正在失效中；
 6：聚鑫支付頁面已經失效；
         :type OrderState: str
-        :param Channel: 支付管道：wechat：微信支付;
-qqwallet：QQ錢包;
+        :param Channel: 支付管道：wechat： 支付;
+qqwallet： 錢包;
 bank：網銀
         :type Channel: str
         :param RefundFlag: 是否曾退款
@@ -4451,7 +4451,7 @@ class QueryOutwardOrderResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 查詢匯出結果
-        :type Result: :class:`tencentcloud.cpdp.v20190820.models.QueryOutwardOrderResult`
+        :type Result: :class:`taifucloudcloud.cpdp.v20190820.models.QueryOutwardOrderResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -4476,7 +4476,7 @@ class QueryOutwardOrderResult(AbstractModel):
         :param Code: 錯誤碼
         :type Code: str
         :param Data: 查詢匯出數據
-        :type Data: :class:`tencentcloud.cpdp.v20190820.models.QueryOutwardOrderData`
+        :type Data: :class:`taifucloudcloud.cpdp.v20190820.models.QueryOutwardOrderData`
         """
         self.Code = None
         self.Data = None
@@ -4518,7 +4518,7 @@ class QueryPayerInfoResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 付款人查詢結果
-        :type Result: :class:`tencentcloud.cpdp.v20190820.models.QueryPayerinfoResult`
+        :type Result: :class:`taifucloudcloud.cpdp.v20190820.models.QueryPayerinfoResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -4608,7 +4608,7 @@ class QueryPayerinfoResult(AbstractModel):
         :param Code: 錯誤碼
         :type Code: str
         :param Data: 付款人查詢數據
-        :type Data: :class:`tencentcloud.cpdp.v20190820.models.QueryPayerinfoData`
+        :type Data: :class:`taifucloudcloud.cpdp.v20190820.models.QueryPayerinfoData`
         """
         self.Code = None
         self.Data = None
@@ -5051,7 +5051,7 @@ class QueryTradeResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 貿易材料明細查詢結果
-        :type Result: :class:`tencentcloud.cpdp.v20190820.models.QueryTradeResult`
+        :type Result: :class:`taifucloudcloud.cpdp.v20190820.models.QueryTradeResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -5074,7 +5074,7 @@ class QueryTradeResult(AbstractModel):
     def __init__(self):
         """
         :param Data: 貿易材料明細查詢數據
-        :type Data: :class:`tencentcloud.cpdp.v20190820.models.QueryTradeData`
+        :type Data: :class:`taifucloudcloud.cpdp.v20190820.models.QueryTradeData`
         :param Code: 錯誤碼
         :type Code: str
         """
@@ -5105,7 +5105,7 @@ class RechargeMemberThirdPayRequest(AbstractModel):
         :param Ccy: STRING(3)，币種。如RMB
         :type Ccy: str
         :param PayChannelType: STRING(20)，支付管道類型。
-0001-微信
+0001- 
 0002-支付寶
 0003-京東支付
         :type PayChannelType: str
@@ -6160,7 +6160,7 @@ class UnifiedOrderRequest(AbstractModel):
         :type MidasSignature: str
         :param CallbackUrl: Web端回調網址
         :type CallbackUrl: str
-        :param Channel: 指定支付管道：  wechat：微信支付  qqwallet：QQ錢包 
+        :param Channel: 指定支付管道：  wechat： 支付  qqwallet： 錢包 
  bank：網銀支付  只有一個管道時需要指定
         :type Channel: str
         :param Metadata: 透傳欄位，支付成功回調透傳給應用，用于業務透傳自定義内容
@@ -6176,9 +6176,9 @@ class UnifiedOrderRequest(AbstractModel):
         :type TotalMchIncome: int
         :param TotalPlatformIncome: 平台應收金額，單位：分
         :type TotalPlatformIncome: int
-        :param WxOpenId: 微信公衆号/小程式支付時爲必選，需要傳微信下的openid
+        :param WxOpenId:  公衆号/小程式支付時爲必選，需要傳 下的openid
         :type WxOpenId: str
-        :param WxSubOpenId: 在服務商模式下，微信公衆号/小程式支付時wx_sub_openid和wx_openid二選一
+        :param WxSubOpenId: 在服務商模式下， 公衆号/小程式支付時wx_sub_openid和wx_openid二選一
         :type WxSubOpenId: str
         """
         self.CurrencyType = None

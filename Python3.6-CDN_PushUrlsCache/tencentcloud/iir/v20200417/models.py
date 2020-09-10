@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Location(AbstractModel):
@@ -58,7 +58,7 @@ class ProductInfo(AbstractModel):
 是否找到同款的判斷依據爲Score分值，分值越大則同款的可能性越大。
         :type FindSKU: int
         :param Location: 本商品在圖片中的坐标，表示爲矩形框的四個頂點坐标。
-        :type Location: :class:`tencentcloud.iir.v20200417.models.Location`
+        :type Location: :class:`taifucloudcloud.iir.v20200417.models.Location`
         :param Name: 商品名稱
         :type Name: str
         :param Brand: 商品品牌
@@ -134,7 +134,7 @@ class RecognizeProductResponse(AbstractModel):
         :type RegionDetected: list of RegionDetected
         :param ProductInfo: 圖像識别出的商品的詳細訊息。 
 當圖像中檢測到多個物品時，會對顯著性最高的進行識别。
-        :type ProductInfo: :class:`tencentcloud.iir.v20200417.models.ProductInfo`
+        :type ProductInfo: :class:`taifucloudcloud.iir.v20200417.models.ProductInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -171,7 +171,7 @@ class RegionDetected(AbstractModel):
         :param CategoryScore: 商品品類預測的置信度
         :type CategoryScore: float
         :param Location: 檢測到的主體在圖片中的坐标，表示爲矩形框的四個頂點坐标
-        :type Location: :class:`tencentcloud.iir.v20200417.models.Location`
+        :type Location: :class:`taifucloudcloud.iir.v20200417.models.Location`
         """
         self.Category = None
         self.CategoryScore = None

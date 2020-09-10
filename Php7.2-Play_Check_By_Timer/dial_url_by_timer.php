@@ -6,7 +6,7 @@ require_once("PHPMailer/Exception.php");
 use PHPMailer\PHPMailer;
 
 # The user's mail information, here we use qq mail as an example
-# 發送郵件使用的電子信箱相關訊息，第三方 SMTP 服務,以QQ電子信箱爲例
+# 發送郵件使用的電子信箱相關訊息，第三方 SMTP 服務,以 電子信箱爲例
 const mail_host="smtp.qq.com";         #SMTPhost
 const mail_user="XXXXXXXXX@qq.com";    #user's name
 const mail_pass="****************";    #SMTP service password，if you use qq mail, please fill in the authentication code
@@ -17,7 +17,7 @@ const mail_port=465;                   #SMTP port
 $test_url_list = array(
     "http://www.baidu.com",
     "http://www.qq.com",
-    "http://wrong.tencent.com",
+    "http://wrong.taifucloud.com",
     "http://unkownurl.com"
 );
 
@@ -48,7 +48,7 @@ function sendEmail($to,$title,$content){
     $mail->CharSet = 'UTF-8';
     $mail->Username =mail_user;
     //smtp password, if you use qq mail, fill in the generated authentication code
-    //smtp登入的密碼，如果使用QQ電子信箱，需使用生成的授權碼
+    //smtp登入的密碼，如果使用 電子信箱，需使用生成的授權碼
     $mail->Password = mail_pass;
     //The sender's email address
     //設置發件人電子信箱網址

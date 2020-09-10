@@ -2,8 +2,8 @@
 /**************************************************
 Node8.9-Mysql
 Reference: mysql api---https://www.npmjs.com/package/mysql
-Reference: How to access database---https://cloud.tencent.com/document/product/236/3130
-Reference: How to connect api gateway with scf---https://cloud.tencent.com/document/product/628/11983
+Reference: How to access database---https://cloud.taifucloud.com/document/product/236/3130
+Reference: How to connect api gateway with scf---https://cloud.taifucloud.com/document/product/628/11983
 ***************************************************/
 
 function wrapPromise(connection, sql) {

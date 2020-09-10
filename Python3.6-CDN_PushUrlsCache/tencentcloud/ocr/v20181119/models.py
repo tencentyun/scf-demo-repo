@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class ArithmeticOCRRequest(AbstractModel):
@@ -224,7 +224,7 @@ class BusInvoiceInfo(AbstractModel):
         :param Value: 識别出的欄位名稱對應的值，也就是欄位Name對應的字串結果。
         :type Value: str
         :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐标。
-        :type Rect: :class:`tencentcloud.ocr.v20181119.models.Rect`
+        :type Rect: :class:`taifucloudcloud.ocr.v20181119.models.Rect`
         """
         self.Name = None
         self.Value = None
@@ -305,7 +305,7 @@ class BusinessCardInfo(AbstractModel):
     def __init__(self):
         """
         :param Name: 識别出的欄位名稱（關鍵字，可能重複，比如多個手機），能識别的欄位名爲：
-姓名、英文姓名、英文網址、公司、英文公司、職位、英文職位、部門、英文部門、手機、電話、傳真、社交帳号、QQ、MSN、微信、微博、電子信箱、郵編、網址、公司賬号、其他。
+姓名、英文姓名、英文網址、公司、英文公司、職位、英文職位、部門、英文部門、手機、電話、傳真、社交帳号、 、MSN、 、 、電子信箱、郵編、網址、公司賬号、其他。
         :type Name: str
         :param Value: 識别出的欄位名稱對應的值，也就是欄位name對應的字串結果。
         :type Value: str
@@ -606,7 +606,7 @@ class DutyPaidProofInfo(AbstractModel):
         :param Value: 識别出的欄位名稱對應的值，也就是欄位Name對應的字串結果。
         :type Value: str
         :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐标。
-        :type Rect: :class:`tencentcloud.ocr.v20181119.models.Rect`
+        :type Rect: :class:`taifucloudcloud.ocr.v20181119.models.Rect`
         """
         self.Name = None
         self.Value = None
@@ -1951,7 +1951,7 @@ class InvoiceDetectInfo(AbstractModel):
 14：購物小票
         :type Type: int
         :param Rect: 識别出的圖片在混貼票據圖片中的位置訊息。與Angel結合可以得出原圖位置，組成RotatedRect((X,Y), (Width, Height), Angle)，詳情可參考OpenCV文件。
-        :type Rect: :class:`tencentcloud.ocr.v20181119.models.Rect`
+        :type Rect: :class:`taifucloudcloud.ocr.v20181119.models.Rect`
         :param Image: 入參 ReturnImage 爲 True 時返回 Base64 編碼後的圖片。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Image: str
@@ -1983,7 +1983,7 @@ class InvoiceGeneralInfo(AbstractModel):
         :param Value: 識别出的欄位名稱對應的值，也就是欄位Name對應的字串結果。
         :type Value: str
         :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐标。
-        :type Rect: :class:`tencentcloud.ocr.v20181119.models.Rect`
+        :type Rect: :class:`taifucloudcloud.ocr.v20181119.models.Rect`
         """
         self.Name = None
         self.Value = None
@@ -2149,7 +2149,7 @@ class MLIDCardOCRRequest(AbstractModel):
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經Base64編碼後不超過 3M。圖片下載時間不超過 3 秒。
         :type ImageBase64: str
-        :param ImageUrl: 圖片的 Url 網址。( 中國地區之外不支援這個欄位 )
+        :param ImageUrl: 圖片的 Url 網址。(  地區之外不支援這個欄位 )
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
 圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
@@ -2371,7 +2371,7 @@ class MainlandPermitOCRResponse(AbstractModel):
         :type IssueAddress: str
         :param IssueNumber: 簽發次數
         :type IssueNumber: str
-        :param Type: 證件類别， 如：台灣居民來往大陸通行證、港澳居民來往内地通行證。
+        :param Type: 證件類别， 如：台灣居民來往大陸通行證、 居民來往内地通行證。
         :type Type: str
         :param Profile: RetProfile爲True時返回頭像欄位， Base64編碼
         :type Profile: str
@@ -2492,7 +2492,7 @@ FailedOperation.UnKnowError：表示識别失敗；
 13：過路過橋費發票
         :type Type: int
         :param Rect: 識别出的圖片在混貼票據圖片中的位置訊息。與Angel結合可以得出原圖位置，組成RotatedRect((X,Y), (Width, Height), Angle)，詳情可參考OpenCV文件。
-        :type Rect: :class:`tencentcloud.ocr.v20181119.models.Rect`
+        :type Rect: :class:`taifucloudcloud.ocr.v20181119.models.Rect`
         :param Angle: 識别出的圖片在混貼票據圖片中的旋轉角度。
         :type Angle: float
         :param SingleInvoiceInfos: 識别到的内容。
@@ -2664,7 +2664,7 @@ class PassportOCRRequest(AbstractModel):
 建議圖片儲存于Top Cloud ，可保障更高的下載速度和穩定性。
         :type ImageUrl: str
         :param Type: 預設填寫CN
-支援中國大陸地區護照。
+支援 大陸地區護照。
         :type Type: str
         """
         self.ImageBase64 = None
@@ -2960,7 +2960,7 @@ class QrcodeOCRResponse(AbstractModel):
         :param CodeResults: 二維碼/條形碼識别結果訊息，具體内容請點擊左側連結。
         :type CodeResults: list of QrcodeResultsInfo
         :param ImgSize: 圖片大小，具體内容請點擊左側連結。
-        :type ImgSize: :class:`tencentcloud.ocr.v20181119.models.QrcodeImgSize`
+        :type ImgSize: :class:`taifucloudcloud.ocr.v20181119.models.QrcodeImgSize`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2990,13 +2990,13 @@ class QrcodePositionObj(AbstractModel):
     def __init__(self):
         """
         :param LeftTop: 左上頂點坐标（如果是條形碼，X和Y都爲-1）
-        :type LeftTop: :class:`tencentcloud.ocr.v20181119.models.Coord`
+        :type LeftTop: :class:`taifucloudcloud.ocr.v20181119.models.Coord`
         :param RightTop: 右上頂點坐标（如果是條形碼，X和Y都爲-1）
-        :type RightTop: :class:`tencentcloud.ocr.v20181119.models.Coord`
+        :type RightTop: :class:`taifucloudcloud.ocr.v20181119.models.Coord`
         :param RightBottom: 右下頂點坐标（如果是條形碼，X和Y都爲-1）
-        :type RightBottom: :class:`tencentcloud.ocr.v20181119.models.Coord`
+        :type RightBottom: :class:`taifucloudcloud.ocr.v20181119.models.Coord`
         :param LeftBottom: 左下頂點坐标（如果是條形碼，X和Y都爲-1）
-        :type LeftBottom: :class:`tencentcloud.ocr.v20181119.models.Coord`
+        :type LeftBottom: :class:`taifucloudcloud.ocr.v20181119.models.Coord`
         """
         self.LeftTop = None
         self.RightTop = None
@@ -3031,7 +3031,7 @@ class QrcodeResultsInfo(AbstractModel):
         :param Url: 二維碼/條形碼包含的網址
         :type Url: str
         :param Position: 二維碼/條形碼坐标（二維碼會返回位置坐标，條形碼暫不返回位置坐标，因此預設X和Y返回值均爲-1）
-        :type Position: :class:`tencentcloud.ocr.v20181119.models.QrcodePositionObj`
+        :type Position: :class:`taifucloudcloud.ocr.v20181119.models.QrcodePositionObj`
         """
         self.TypeName = None
         self.Url = None
@@ -3318,7 +3318,7 @@ class ShipInvoiceInfo(AbstractModel):
         :param Value: 識别出的欄位名稱對應的值，也就是欄位Name對應的字串結果。
         :type Value: str
         :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐标。
-        :type Rect: :class:`tencentcloud.ocr.v20181119.models.Rect`
+        :type Rect: :class:`taifucloudcloud.ocr.v20181119.models.Rect`
         """
         self.Name = None
         self.Value = None
@@ -3584,7 +3584,7 @@ class TextArithmetic(AbstractModel):
         :param AdvancedInfo: 保留欄位，暫不支援
         :type AdvancedInfo: str
         :param ItemCoord: 文本行旋轉糾正之後在圖像中的像素坐标，表示爲（左上角x, 左上角y，寬width，高height）
-        :type ItemCoord: :class:`tencentcloud.ocr.v20181119.models.ItemCoord`
+        :type ItemCoord: :class:`taifucloudcloud.ocr.v20181119.models.ItemCoord`
         :param ExpressionType: 算式題型編号：
 ‘1’: 加減乘除四則
 ‘2’: 加減乘除已知結果求運算因子
@@ -3692,7 +3692,7 @@ class TextDetection(AbstractModel):
 GeneralBasicOcr介面返回段落訊息Parag，包含ParagNo。
         :type AdvancedInfo: str
         :param ItemPolygon: 文本行在旋轉糾正之後的圖像中的像素坐标，表示爲（左上角x, 左上角y，寬width，高height）
-        :type ItemPolygon: :class:`tencentcloud.ocr.v20181119.models.ItemCoord`
+        :type ItemPolygon: :class:`taifucloudcloud.ocr.v20181119.models.ItemCoord`
         """
         self.DetectedText = None
         self.Confidence = None
@@ -3763,7 +3763,7 @@ class TextEduPaper(AbstractModel):
         :param DetectedText: 識别出的欄位名稱對應的值，也就是欄位Item對應的字串結果
         :type DetectedText: str
         :param Itemcoord: 文本行在旋轉糾正之後的圖像中的像素坐标，表示爲（左上角x, 左上角y，寬width，高height）
-        :type Itemcoord: :class:`tencentcloud.ocr.v20181119.models.ItemCoord`
+        :type Itemcoord: :class:`taifucloudcloud.ocr.v20181119.models.ItemCoord`
         """
         self.Item = None
         self.DetectedText = None
@@ -4045,19 +4045,19 @@ class TextWaybill(AbstractModel):
     def __init__(self):
         """
         :param RecName: 收件人姓名
-        :type RecName: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
+        :type RecName: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         :param RecNum: 收件人手機号
-        :type RecNum: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
+        :type RecNum: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         :param RecAddr: 收件人網址
-        :type RecAddr: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
+        :type RecAddr: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         :param SenderName: 寄件人姓名
-        :type SenderName: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
+        :type SenderName: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         :param SenderNum: 寄件人手機号
-        :type SenderNum: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
+        :type SenderNum: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         :param SenderAddr: 寄件人網址
-        :type SenderAddr: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
+        :type SenderAddr: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         :param WaybillNum: 運單号
-        :type WaybillNum: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
+        :type WaybillNum: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         """
         self.RecName = None
         self.RecNum = None
@@ -4104,7 +4104,7 @@ class TollInvoiceInfo(AbstractModel):
         :param Value: 識别出的欄位名稱對應的值，也就是欄位Name對應的字串結果。
         :type Value: str
         :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐标。
-        :type Rect: :class:`tencentcloud.ocr.v20181119.models.Rect`
+        :type Rect: :class:`taifucloudcloud.ocr.v20181119.models.Rect`
         """
         self.Name = None
         self.Value = None
@@ -4336,7 +4336,7 @@ class VatRollInvoiceInfo(AbstractModel):
         :param Value: 識别出的欄位名稱對應的值，也就是欄位Name對應的字串結果。
         :type Value: str
         :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐标。
-        :type Rect: :class:`tencentcloud.ocr.v20181119.models.Rect`
+        :type Rect: :class:`taifucloudcloud.ocr.v20181119.models.Rect`
         """
         self.Name = None
         self.Value = None
@@ -4446,10 +4446,10 @@ class VehicleLicenseOCRResponse(AbstractModel):
         """
         :param FrontInfo: 行駛證首頁正面的識别結果，CardSide 爲 FRONT。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FrontInfo: :class:`tencentcloud.ocr.v20181119.models.TextVehicleFront`
+        :type FrontInfo: :class:`taifucloudcloud.ocr.v20181119.models.TextVehicleFront`
         :param BackInfo: 行駛證副頁正面的識别結果，CardSide 爲 BACK。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type BackInfo: :class:`tencentcloud.ocr.v20181119.models.TextVehicleBack`
+        :type BackInfo: :class:`taifucloudcloud.ocr.v20181119.models.TextVehicleBack`
         :param RecognizeWarnCode: Code 告警碼清單和釋義：
 -9102 影印件告警
 -9103 翻拍件告警
@@ -4644,7 +4644,7 @@ class WaybillOCRResponse(AbstractModel):
     def __init__(self):
         """
         :param TextDetections: 檢測到的文本訊息，具體内容請點擊左側連結。
-        :type TextDetections: :class:`tencentcloud.ocr.v20181119.models.TextWaybill`
+        :type TextDetections: :class:`taifucloudcloud.ocr.v20181119.models.TextWaybill`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

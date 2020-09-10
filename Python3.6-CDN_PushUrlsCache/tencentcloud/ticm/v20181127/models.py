@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Candidate(AbstractModel):
@@ -70,22 +70,22 @@ FINISH：已完成。
         :type BeginProcessTime: str
         :param FinishTime: 任務執行完畢的時間，采用 ISO 日期格式。
         :type FinishTime: str
-        :param PornResult: 視訊内容審核智慧畫面鑒黃任務的查詢結果。
-        :type PornResult: :class:`tencentcloud.ticm.v20181127.models.VodPornReviewResult`
+        :param PornResult: 視訊内容審核智慧畫面 任務的查詢結果。
+        :type PornResult: :class:`taifucloudcloud.ticm.v20181127.models.VodPornReviewResult`
         :param TerrorismResult: 視訊内容審核智慧畫面鑒恐任務的查詢結果。
-        :type TerrorismResult: :class:`tencentcloud.ticm.v20181127.models.VodTerrorismReviewResult`
+        :type TerrorismResult: :class:`taifucloudcloud.ticm.v20181127.models.VodTerrorismReviewResult`
         :param PoliticalResult: 視訊内容審核智慧畫面鑒政任務的查詢結果。
-        :type PoliticalResult: :class:`tencentcloud.ticm.v20181127.models.VodPoliticalReviewResult`
+        :type PoliticalResult: :class:`taifucloudcloud.ticm.v20181127.models.VodPoliticalReviewResult`
         :param PoliticalOcrResult: 視訊内容審核 Ocr 文字鑒政任務的查詢結果。
-        :type PoliticalOcrResult: :class:`tencentcloud.ticm.v20181127.models.VodPoliticalOcrReviewResult`
-        :param PornAsrResult: 視訊内容審核 Asr 文字鑒黃任務的查詢結果。
-        :type PornAsrResult: :class:`tencentcloud.ticm.v20181127.models.VodPornAsrReviewResult`
+        :type PoliticalOcrResult: :class:`taifucloudcloud.ticm.v20181127.models.VodPoliticalOcrReviewResult`
+        :param PornAsrResult: 視訊内容審核 Asr 文字 任務的查詢結果。
+        :type PornAsrResult: :class:`taifucloudcloud.ticm.v20181127.models.VodPornAsrReviewResult`
         :param PoliticalAsrResult: 視訊内容審核 Asr 文字鑒政任務的查詢結果。
-        :type PoliticalAsrResult: :class:`tencentcloud.ticm.v20181127.models.VodPoliticalAsrReviewResult`
-        :param PornOcrResult: 視訊内容審核 Ocr 文字鑒黃任務的查詢結果。
-        :type PornOcrResult: :class:`tencentcloud.ticm.v20181127.models.VodPornOcrResult`
+        :type PoliticalAsrResult: :class:`taifucloudcloud.ticm.v20181127.models.VodPoliticalAsrReviewResult`
+        :param PornOcrResult: 視訊内容審核 Ocr 文字 任務的查詢結果。
+        :type PornOcrResult: :class:`taifucloudcloud.ticm.v20181127.models.VodPornOcrResult`
         :param MetaData: 原始視訊的元訊息。
-        :type MetaData: :class:`tencentcloud.ticm.v20181127.models.VodMetaData`
+        :type MetaData: :class:`taifucloudcloud.ticm.v20181127.models.VodMetaData`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -206,7 +206,7 @@ class FaceResult(AbstractModel):
     def __init__(self):
         """
         :param FaceRect: 檢測出的人臉框位置。
-        :type FaceRect: :class:`tencentcloud.ticm.v20181127.models.FaceRect`
+        :type FaceRect: :class:`taifucloudcloud.ticm.v20181127.models.FaceRect`
         :param Candidates: 候選人清單。當前返回相似度最高的候選人。
         :type Candidates: list of Candidate
         """
@@ -284,18 +284,18 @@ BLOCK：違規
         :type Suggestion: str
         :param PornResult: 色情識别結果。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PornResult: :class:`tencentcloud.ticm.v20181127.models.PornResult`
+        :type PornResult: :class:`taifucloudcloud.ticm.v20181127.models.PornResult`
         :param TerrorismResult: 暴恐識别結果。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TerrorismResult: :class:`tencentcloud.ticm.v20181127.models.TerrorismResult`
+        :type TerrorismResult: :class:`taifucloudcloud.ticm.v20181127.models.TerrorismResult`
         :param PoliticsResult: 政治敏感識别結果。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PoliticsResult: :class:`tencentcloud.ticm.v20181127.models.PoliticsResult`
+        :type PoliticsResult: :class:`taifucloudcloud.ticm.v20181127.models.PoliticsResult`
         :param Extra: 透傳欄位，透傳簡單訊息。
         :type Extra: str
         :param DisgustResult: 惡心内容識别結果。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type DisgustResult: :class:`tencentcloud.ticm.v20181127.models.DisgustResult`
+        :type DisgustResult: :class:`taifucloudcloud.ticm.v20181127.models.DisgustResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1016,7 +1016,7 @@ block。
 
 
 class VodPornOcrResult(AbstractModel):
-    """内容審核 Ocr 文字鑒黃任務結果類型
+    """内容審核 Ocr 文字 任務結果類型
 
     """
 
@@ -1067,7 +1067,7 @@ block。
 
 
 class VodPornReviewResult(AbstractModel):
-    """内容審核鑒黃任務結果類型
+    """内容審核 任務結果類型
 
     """
 
@@ -1081,17 +1081,17 @@ class VodPornReviewResult(AbstractModel):
         :param Msg: 錯誤訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Msg: str
-        :param Confidence: 視訊鑒黃評分，分值爲0到100。
+        :param Confidence: 視訊 評分，分值爲0到100。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Confidence: float
-        :param Suggestion: 鑒黃結果建議，取值範圍：
+        :param Suggestion:  結果建議，取值範圍：
 pass。
 review。
 block。
 
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Suggestion: str
-        :param Label: 視訊鑒黃結果标簽，取值範圍：
+        :param Label: 視訊 結果标簽，取值範圍：
 porn：色情。
 sexy：性感。
 vulgar：低俗。
@@ -1143,10 +1143,10 @@ class VodPornReviewSegmentItem(AbstractModel):
         :param Confidence: 嫌疑片段涉黃分數。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Confidence: float
-        :param Label: 嫌疑片段鑒黃結果标簽。
+        :param Label: 嫌疑片段 結果标簽。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Label: str
-        :param Suggestion: 嫌疑片段鑒黃結果建議，取值範圍：
+        :param Suggestion: 嫌疑片段 結果建議，取值範圍：
 pass。
 review。
 block。

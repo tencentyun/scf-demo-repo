@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class BindL4Backend(AbstractModel):
@@ -722,7 +722,7 @@ class CreateLoadBalancersRequest(AbstractModel):
         :param SpecifiedVips: 指定的VIP，如果指定，則數量必須與goodsNum一緻。如果不指定，則由後台分配随機VIP。
         :type SpecifiedVips: list of str
         :param BzConf: （未全地域開放）保障型負載均衡設定參數，如果類别選擇保障型則需傳入此參數。
-        :type BzConf: :class:`tencentcloud.bmlb.v20180625.models.CreateLoadBalancerBzConf`
+        :type BzConf: :class:`taifucloudcloud.bmlb.v20180625.models.CreateLoadBalancerBzConf`
         :param IpProtocolType: IP協議類型。可取的值爲“ipv4”或“ipv6”。
         :type IpProtocolType: str
         """
@@ -3130,7 +3130,7 @@ class LoadBalancer(AbstractModel):
         :type BzL4Metrics: str
         :param BzL7Metrics: 保障型閘道七層計費指标
         :type BzL7Metrics: str
-        :param IspId: Isp類型。5:騰訊CAP;7:内網。
+        :param IspId: Isp類型。5: CAP;7:内網。
         :type IspId: str
         """
         self.LoadBalancerId = None

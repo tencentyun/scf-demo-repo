@@ -39,7 +39,7 @@
       },
       "output_parameters":{
       },
-      "download_address":"https://github.com/tencentyun/scf-demo-repo/tree/master/Nodejs10.15-UnpackAndUploadToCOS",  //demo的git下載連結
+      "download_address":"https://github.com/taifucloudyun/scf-demo-repo/tree/master/Nodejs10.15-UnpackAndUploadToCOS",  //demo的git下載連結
       "tags":[
               "COS", "Nodejs10.15", "UNZIP"  // 标簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
       ],
@@ -70,7 +70,7 @@
               "unpack_to_cos.py"
           ],
           "CodeUri":[     // 代碼下載網址，和download_address保持一緻
-              "https://github.com/tencentyun/scf-demo-repo/tree/master/Nodejs10.15-UnpackAndUploadToCOS"
+              "https://github.com/taifucloudyun/scf-demo-repo/tree/master/Nodejs10.15-UnpackAndUploadToCOS"
           ]
       }
     }

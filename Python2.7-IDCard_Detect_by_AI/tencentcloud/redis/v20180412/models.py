@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CleanUpInstanceRequest(AbstractModel):
@@ -1343,7 +1343,7 @@ class InstanceSet(AbstractModel):
         :type Appid: int
         :param ProjectId: 項目Id
         :type ProjectId: int
-        :param RegionId: 地域id 1--廣州 4--上海 5-- 香港 6--多倫多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（矽谷）16--成都 17--德國 18--韓國 19--重慶 21--印度 22--美東（弗吉尼亞）23--泰國 24--俄羅斯 25--日本
+        :param RegionId: 地域id 1--  4--  5--   6--多倫多 7-- 金融 8--  9-- 新加坡 11-- 金融 15--美西（矽谷）16--  17--德國 18--韓國 19--  21--印度 22--美東（弗吉尼亞）23--泰國 24--俄羅斯 25--日本
         :type RegionId: int
         :param ZoneId: 區域id
         :type ZoneId: int

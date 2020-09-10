@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AddExistedInstancesRequest(AbstractModel):
@@ -28,11 +28,11 @@ class AddExistedInstancesRequest(AbstractModel):
         :param InstanceIds: 實例清單
         :type InstanceIds: list of str
         :param InstanceAdvancedSettings: 實例額外需要設置參數訊息
-        :type InstanceAdvancedSettings: :class:`tencentcloud.tke.v20180525.models.InstanceAdvancedSettings`
+        :type InstanceAdvancedSettings: :class:`taifucloudcloud.tke.v20180525.models.InstanceAdvancedSettings`
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
-        :type EnhancedService: :class:`tencentcloud.tke.v20180525.models.EnhancedService`
+        :type EnhancedService: :class:`taifucloudcloud.tke.v20180525.models.EnhancedService`
         :param LoginSettings: 節點登入訊息（目前僅支援使用Password或者單個KeyIds）
-        :type LoginSettings: :class:`tencentcloud.tke.v20180525.models.LoginSettings`
+        :type LoginSettings: :class:`taifucloudcloud.tke.v20180525.models.LoginSettings`
         :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 DescribeSecurityGroups 的返回值中的sgId欄位來獲取。若不指定該參數，則綁定預設安全組。（目前僅支援設置單個sgId）
         :type SecurityGroupIds: list of str
         """
@@ -96,7 +96,7 @@ class Cluster(AbstractModel):
         :param ClusterType: 集群類型，托管集群：MANAGED_CLUSTER，獨立集群：INDEPENDENT_CLUSTER。
         :type ClusterType: str
         :param ClusterNetworkSettings: 集群網絡相關參數
-        :type ClusterNetworkSettings: :class:`tencentcloud.tke.v20180525.models.ClusterNetworkSettings`
+        :type ClusterNetworkSettings: :class:`taifucloudcloud.tke.v20180525.models.ClusterNetworkSettings`
         :param ClusterNodeNum: 集群當前node數量
         :type ClusterNodeNum: int
         :param ProjectId: 集群所屬的項目ID
@@ -259,17 +259,17 @@ class CreateClusterRequest(AbstractModel):
     def __init__(self):
         """
         :param ClusterCIDRSettings: 集群容器網絡配置訊息
-        :type ClusterCIDRSettings: :class:`tencentcloud.tke.v20180525.models.ClusterCIDRSettings`
+        :type ClusterCIDRSettings: :class:`taifucloudcloud.tke.v20180525.models.ClusterCIDRSettings`
         :param ClusterType: 集群類型，托管集群：MANAGED_CLUSTER，獨立集群：INDEPENDENT_CLUSTER。
         :type ClusterType: str
-        :param RunInstancesForNode: CVM創建透傳參數，json化字串格式，詳見[CVM創建實例](https://cloud.tencent.com/document/product/213/15730)介面。
+        :param RunInstancesForNode: CVM創建透傳參數，json化字串格式，詳見[CVM創建實例](https://cloud.taifucloud.com/document/product/213/15730)介面。
         :type RunInstancesForNode: list of RunInstancesForNode
         :param ClusterBasicSettings: 集群的基本配置訊息
-        :type ClusterBasicSettings: :class:`tencentcloud.tke.v20180525.models.ClusterBasicSettings`
+        :type ClusterBasicSettings: :class:`taifucloudcloud.tke.v20180525.models.ClusterBasicSettings`
         :param ClusterAdvancedSettings: 集群高級配置訊息
-        :type ClusterAdvancedSettings: :class:`tencentcloud.tke.v20180525.models.ClusterAdvancedSettings`
+        :type ClusterAdvancedSettings: :class:`taifucloudcloud.tke.v20180525.models.ClusterAdvancedSettings`
         :param InstanceAdvancedSettings: 節點高級配置訊息
-        :type InstanceAdvancedSettings: :class:`tencentcloud.tke.v20180525.models.InstanceAdvancedSettings`
+        :type InstanceAdvancedSettings: :class:`taifucloudcloud.tke.v20180525.models.InstanceAdvancedSettings`
         :param ExistedInstancesForNode: 已存在實例的配置訊息
         :type ExistedInstancesForNode: list of ExistedInstancesForNode
         """
@@ -505,9 +505,9 @@ class EnhancedService(AbstractModel):
     def __init__(self):
         """
         :param SecurityService: 開啓雲安全服務。若不指定該參數，則預設開啓雲安全服務。
-        :type SecurityService: :class:`tencentcloud.tke.v20180525.models.RunSecurityServiceEnabled`
+        :type SecurityService: :class:`taifucloudcloud.tke.v20180525.models.RunSecurityServiceEnabled`
         :param MonitorService: 開啓雲監控服務。若不指定該參數，則預設開啓雲監控服務。
-        :type MonitorService: :class:`tencentcloud.tke.v20180525.models.RunMonitorServiceEnabled`
+        :type MonitorService: :class:`taifucloudcloud.tke.v20180525.models.RunMonitorServiceEnabled`
         """
         self.SecurityService = None
         self.MonitorService = None
@@ -532,7 +532,7 @@ class ExistedInstancesForNode(AbstractModel):
         :param NodeRole: 節點角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在創建 INDEPENDENT_CLUSTER 獨立集群時需要指定。
         :type NodeRole: str
         :param ExistedInstancesPara: 已存在實例的重裝參數
-        :type ExistedInstancesPara: :class:`tencentcloud.tke.v20180525.models.ExistedInstancesPara`
+        :type ExistedInstancesPara: :class:`taifucloudcloud.tke.v20180525.models.ExistedInstancesPara`
         """
         self.NodeRole = None
         self.ExistedInstancesPara = None
@@ -555,11 +555,11 @@ class ExistedInstancesPara(AbstractModel):
         :param InstanceIds: 集群ID
         :type InstanceIds: list of str
         :param InstanceAdvancedSettings: 實例額外需要設置參數訊息
-        :type InstanceAdvancedSettings: :class:`tencentcloud.tke.v20180525.models.InstanceAdvancedSettings`
+        :type InstanceAdvancedSettings: :class:`taifucloudcloud.tke.v20180525.models.InstanceAdvancedSettings`
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
-        :type EnhancedService: :class:`tencentcloud.tke.v20180525.models.EnhancedService`
+        :type EnhancedService: :class:`taifucloudcloud.tke.v20180525.models.EnhancedService`
         :param LoginSettings: 節點登入訊息（目前僅支援使用Password或者單個KeyIds）
-        :type LoginSettings: :class:`tencentcloud.tke.v20180525.models.LoginSettings`
+        :type LoginSettings: :class:`taifucloudcloud.tke.v20180525.models.LoginSettings`
         :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 DescribeSecurityGroups 的返回值中的sgId欄位來獲取。若不指定該參數，則綁定預設安全組。（目前僅支援設置單個sgId）
         :type SecurityGroupIds: list of str
         """
@@ -613,7 +613,7 @@ class Instance(AbstractModel):
     def __init__(self):
         """
         :param InstanceAdvanceSettings: 實例的附加訊息
-        :type InstanceAdvanceSettings: :class:`tencentcloud.tke.v20180525.models.InstanceAdvancedSettings`
+        :type InstanceAdvanceSettings: :class:`taifucloudcloud.tke.v20180525.models.InstanceAdvancedSettings`
         :param InstanceId: 實例ID
         :type InstanceId: str
         :param InstanceRole: 節點角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 預設爲WORKER
@@ -706,7 +706,7 @@ class RunInstancesForNode(AbstractModel):
         """
         :param NodeRole: 節點角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在創建 INDEPENDENT_CLUSTER 獨立集群時需要指定。
         :type NodeRole: str
-        :param RunInstancesPara: CVM創建透傳參數，json化字串格式，詳見[CVM創建實例](https://cloud.tencent.com/document/product/213/15730)介面，傳入公共參數外的其他參數即可，其中ImageId會替換爲TKE集群OS對應的映像。
+        :param RunInstancesPara: CVM創建透傳參數，json化字串格式，詳見[CVM創建實例](https://cloud.taifucloud.com/document/product/213/15730)介面，傳入公共參數外的其他參數即可，其中ImageId會替換爲TKE集群OS對應的映像。
         :type RunInstancesPara: list of str
         """
         self.NodeRole = None

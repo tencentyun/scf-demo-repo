@@ -5,12 +5,12 @@
 1.創模組化板函數後，請先添加函數運作角色，并給該角色關聯簡訊QcloudSMSFullAccess權限。
 2.本服務用到redis儲存驗證碼，請先申請redis資源，并将redis的host和密碼設置成環境變量。
 3.去雲簡訊控制台申請簡訊範本和簽名
-* 詳細請參考：https://github.com/tencentyun/scf-demo-repo/tree/master/Nodejs8.9-SmsVerificationCode
+* 詳細請參考：https://github.com/taifucloudyun/scf-demo-repo/tree/master/Nodejs8.9-SmsVerificationCode
 ***************************************************/
 
 'use strict';
 const redis = require('ioredis');
-const tencentcloud = require('tencentcloud-sdk-nodejs');
+const taifucloudcloud = require('taifucloudcloud-sdk-nodejs');
 const queryParse = require('querystring')
 const expireTime = 5 * 60;//驗證碼有效期5分鍾
 
@@ -118,17 +118,17 @@ async function getSms(queryString, redisStore) {
  * 參數 手機号、簡訊驗證碼
  */
 async function sendSms(phone, code) {
-  const SmsClient = tencentcloud.sms.v20190711.Client;
-  const Credential = tencentcloud.common.Credential;
-  const ClientProfile = tencentcloud.common.ClientProfile;
-  const HttpProfile = tencentcloud.common.HttpProfile;
+  const SmsClient = taifucloudcloud.sms.v20190711.Client;
+  const Credential = taifucloudcloud.common.Credential;
+  const ClientProfile = taifucloudcloud.common.ClientProfile;
+  const HttpProfile = taifucloudcloud.common.HttpProfile;
   const secretId = process.env.TENCENTCLOUD_SECRETID;
   const secretKey = process.env.TENCENTCLOUD_SECRETKEY;
   const token = process.env.TENCENTCLOUD_SESSIONTOKEN;
 
   let cred = new Credential(secretId, secretKey, token);
   let httpProfile = new HttpProfile();
-  httpProfile.endpoint = "sms.tencentcloudapi.com";
+  httpProfile.endpoint = "sms.taifucloudcloudapi.com";
   let clientProfile = new ClientProfile();
   clientProfile.httpProfile = httpProfile;
   let client = new SmsClient(cred, "ap-guangzhou", clientProfile);

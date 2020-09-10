@@ -18,6 +18,6 @@ from QcloudApi.modules import base
 class Athena(base.Base):
     """Financial Intelligent Customer Service.
 
-    document: https://cloud.tencent.com/document/product/671
+    document: https://cloud.taifucloud.com/document/product/671
     """
     requestHost = 'athena.api.qcloud.com'

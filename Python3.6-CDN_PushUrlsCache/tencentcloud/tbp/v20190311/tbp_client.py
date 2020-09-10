@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tbp.v20190311 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tbp.v20190311 import models
 
 
 class TbpClient(AbstractClient):
     _apiVersion = '2019-03-11'
-    _endpoint = 'tbp.tencentcloudapi.com'
+    _endpoint = 'tbp.taifucloudcloudapi.com'
 
 
     def CreateBot(self, request):
         """創建機器人
 
         :param request: Request instance for CreateBot.
-        :type request: :class:`tencentcloud.tbp.v20190311.models.CreateBotRequest`
-        :rtype: :class:`tencentcloud.tbp.v20190311.models.CreateBotResponse`
+        :type request: :class:`taifucloudcloud.tbp.v20190311.models.CreateBotRequest`
+        :rtype: :class:`taifucloudcloud.tbp.v20190311.models.CreateBotResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TbpClient(AbstractClient):
         """對當前機器人的會話狀态進行複位
 
         :param request: Request instance for Reset.
-        :type request: :class:`tencentcloud.tbp.v20190311.models.ResetRequest`
-        :rtype: :class:`tencentcloud.tbp.v20190311.models.ResetResponse`
+        :type request: :class:`taifucloudcloud.tbp.v20190311.models.ResetRequest`
+        :rtype: :class:`taifucloudcloud.tbp.v20190311.models.ResetResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TbpClient(AbstractClient):
         """接收調用側的文本輸入，返回應答文本。已廢棄，推薦使用最新版TextProcess介面。
 
         :param request: Request instance for TextProcess.
-        :type request: :class:`tencentcloud.tbp.v20190311.models.TextProcessRequest`
-        :rtype: :class:`tencentcloud.tbp.v20190311.models.TextProcessResponse`
+        :type request: :class:`taifucloudcloud.tbp.v20190311.models.TextProcessRequest`
+        :rtype: :class:`taifucloudcloud.tbp.v20190311.models.TextProcessResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TbpClient(AbstractClient):
         """會話重置介面。已廢棄，推薦使用最新版TextReset介面。
 
         :param request: Request instance for TextReset.
-        :type request: :class:`tencentcloud.tbp.v20190311.models.TextResetRequest`
-        :rtype: :class:`tencentcloud.tbp.v20190311.models.TextResetResponse`
+        :type request: :class:`taifucloudcloud.tbp.v20190311.models.TextResetRequest`
+        :rtype: :class:`taifucloudcloud.tbp.v20190311.models.TextResetResponse`
 
         """
         try:

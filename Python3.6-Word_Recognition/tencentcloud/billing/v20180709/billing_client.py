@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.billing.v20180709 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.billing.v20180709 import models
 
 
 class BillingClient(AbstractClient):
     _apiVersion = '2018-07-09'
-    _endpoint = 'billing.tencentcloudapi.com'
+    _endpoint = 'billing.taifucloudcloudapi.com'
 
 
     def DescribeAccountBalance(self, request):
         """獲取雲帳戶餘額訊息。
 
         :param request: 調用DescribeAccountBalance所需參數的結構體。
-        :type request: :class:`tencentcloud.billing.v20180709.models.DescribeAccountBalanceRequest`
-        :rtype: :class:`tencentcloud.billing.v20180709.models.DescribeAccountBalanceResponse`
+        :type request: :class:`taifucloudcloud.billing.v20180709.models.DescribeAccountBalanceRequest`
+        :rtype: :class:`taifucloudcloud.billing.v20180709.models.DescribeAccountBalanceResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class BillingClient(AbstractClient):
         """查詢帳單明細數據
 
         :param request: 調用DescribeBillDetail所需參數的結構體。
-        :type request: :class:`tencentcloud.billing.v20180709.models.DescribeBillDetailRequest`
-        :rtype: :class:`tencentcloud.billing.v20180709.models.DescribeBillDetailResponse`
+        :type request: :class:`taifucloudcloud.billing.v20180709.models.DescribeBillDetailRequest`
+        :rtype: :class:`taifucloudcloud.billing.v20180709.models.DescribeBillDetailResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class BillingClient(AbstractClient):
         """查詢帳單資源匯總數據
 
         :param request: 調用DescribeBillResourceSummary所需參數的結構體。
-        :type request: :class:`tencentcloud.billing.v20180709.models.DescribeBillResourceSummaryRequest`
-        :rtype: :class:`tencentcloud.billing.v20180709.models.DescribeBillResourceSummaryResponse`
+        :type request: :class:`taifucloudcloud.billing.v20180709.models.DescribeBillResourceSummaryRequest`
+        :rtype: :class:`taifucloudcloud.billing.v20180709.models.DescribeBillResourceSummaryResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class BillingClient(AbstractClient):
         """查詢訂單
 
         :param request: 調用DescribeDealsByCond所需參數的結構體。
-        :type request: :class:`tencentcloud.billing.v20180709.models.DescribeDealsByCondRequest`
-        :rtype: :class:`tencentcloud.billing.v20180709.models.DescribeDealsByCondResponse`
+        :type request: :class:`taifucloudcloud.billing.v20180709.models.DescribeDealsByCondRequest`
+        :rtype: :class:`taifucloudcloud.billing.v20180709.models.DescribeDealsByCondResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class BillingClient(AbstractClient):
         """按日期獲取産品用量明細
 
         :param request: 調用DescribeDosageDetailByDate所需參數的結構體。
-        :type request: :class:`tencentcloud.billing.v20180709.models.DescribeDosageDetailByDateRequest`
-        :rtype: :class:`tencentcloud.billing.v20180709.models.DescribeDosageDetailByDateResponse`
+        :type request: :class:`taifucloudcloud.billing.v20180709.models.DescribeDosageDetailByDateRequest`
+        :rtype: :class:`taifucloudcloud.billing.v20180709.models.DescribeDosageDetailByDateResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class BillingClient(AbstractClient):
         """支付訂單
 
         :param request: 調用PayDeals所需參數的結構體。
-        :type request: :class:`tencentcloud.billing.v20180709.models.PayDealsRequest`
-        :rtype: :class:`tencentcloud.billing.v20180709.models.PayDealsResponse`
+        :type request: :class:`taifucloudcloud.billing.v20180709.models.PayDealsRequest`
+        :rtype: :class:`taifucloudcloud.billing.v20180709.models.PayDealsResponse`
 
         """
         try:

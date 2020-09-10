@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.ssm.v20190923 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.ssm.v20190923 import models
 
 
 class SsmClient(AbstractClient):
     _apiVersion = '2019-09-23'
-    _endpoint = 'ssm.tencentcloudapi.com'
+    _endpoint = 'ssm.taifucloudcloudapi.com'
 
 
     def CreateSecret(self, request):
         """創建新的憑據訊息，通過KMS進行加密保護。每個Region最多可創建儲存1000個憑據訊息。
 
         :param request: Request instance for CreateSecret.
-        :type request: :class:`tencentcloud.ssm.v20190923.models.CreateSecretRequest`
-        :rtype: :class:`tencentcloud.ssm.v20190923.models.CreateSecretResponse`
+        :type request: :class:`taifucloudcloud.ssm.v20190923.models.CreateSecretRequest`
+        :rtype: :class:`taifucloudcloud.ssm.v20190923.models.CreateSecretResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class SsmClient(AbstractClient):
         """删除指定的憑據訊息，可以通過RecoveryWindowInDays參數設置立即删除或者計劃删除。對于計劃删除的憑據，在删除日期到達之前狀态爲 PendingDelete，并可以通過RestoreSecret 進行恢複，超出指定删除日期之後會被徹底删除。您必須先通過 DisableSecret 停用憑據後才可以進行（計劃）删除操作。
 
         :param request: Request instance for DeleteSecret.
-        :type request: :class:`tencentcloud.ssm.v20190923.models.DeleteSecretRequest`
-        :rtype: :class:`tencentcloud.ssm.v20190923.models.DeleteSecretResponse`
+        :type request: :class:`taifucloudcloud.ssm.v20190923.models.DeleteSecretRequest`
+        :rtype: :class:`taifucloudcloud.ssm.v20190923.models.DeleteSecretResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class SsmClient(AbstractClient):
         """該介面用于直接删除指定憑據下的單個版本憑據，删除操作立即生效，對所有狀态下的憑據版本都可以删除。
 
         :param request: Request instance for DeleteSecretVersion.
-        :type request: :class:`tencentcloud.ssm.v20190923.models.DeleteSecretVersionRequest`
-        :rtype: :class:`tencentcloud.ssm.v20190923.models.DeleteSecretVersionResponse`
+        :type request: :class:`taifucloudcloud.ssm.v20190923.models.DeleteSecretVersionRequest`
+        :rtype: :class:`taifucloudcloud.ssm.v20190923.models.DeleteSecretVersionResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class SsmClient(AbstractClient):
         """獲取憑據的詳細屬性訊息。
 
         :param request: Request instance for DescribeSecret.
-        :type request: :class:`tencentcloud.ssm.v20190923.models.DescribeSecretRequest`
-        :rtype: :class:`tencentcloud.ssm.v20190923.models.DescribeSecretResponse`
+        :type request: :class:`taifucloudcloud.ssm.v20190923.models.DescribeSecretRequest`
+        :rtype: :class:`taifucloudcloud.ssm.v20190923.models.DescribeSecretResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class SsmClient(AbstractClient):
         """停用指定的憑據，停用後狀态爲 Disabled，無法通過介面獲取該憑據的明文。
 
         :param request: Request instance for DisableSecret.
-        :type request: :class:`tencentcloud.ssm.v20190923.models.DisableSecretRequest`
-        :rtype: :class:`tencentcloud.ssm.v20190923.models.DisableSecretResponse`
+        :type request: :class:`taifucloudcloud.ssm.v20190923.models.DisableSecretRequest`
+        :rtype: :class:`taifucloudcloud.ssm.v20190923.models.DisableSecretResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class SsmClient(AbstractClient):
         """該介面用于開啓憑據，狀态爲Enabled。可以通過 GetSecretValue 介面獲取憑據明文。處于PendingDelete狀态的憑據不能直接開啓，需要通過RestoreSecret 恢複後再開啓使用。
 
         :param request: Request instance for EnableSecret.
-        :type request: :class:`tencentcloud.ssm.v20190923.models.EnableSecretRequest`
-        :rtype: :class:`tencentcloud.ssm.v20190923.models.EnableSecretResponse`
+        :type request: :class:`taifucloudcloud.ssm.v20190923.models.EnableSecretRequest`
+        :rtype: :class:`taifucloudcloud.ssm.v20190923.models.EnableSecretResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class SsmClient(AbstractClient):
         """獲取控制台展示region清單
 
         :param request: Request instance for GetRegions.
-        :type request: :class:`tencentcloud.ssm.v20190923.models.GetRegionsRequest`
-        :rtype: :class:`tencentcloud.ssm.v20190923.models.GetRegionsResponse`
+        :type request: :class:`taifucloudcloud.ssm.v20190923.models.GetRegionsRequest`
+        :rtype: :class:`taifucloudcloud.ssm.v20190923.models.GetRegionsResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class SsmClient(AbstractClient):
         """獲取指定憑據名稱和版本的憑據明文訊息，只能獲取啓用狀态的憑據明文。
 
         :param request: Request instance for GetSecretValue.
-        :type request: :class:`tencentcloud.ssm.v20190923.models.GetSecretValueRequest`
-        :rtype: :class:`tencentcloud.ssm.v20190923.models.GetSecretValueResponse`
+        :type request: :class:`taifucloudcloud.ssm.v20190923.models.GetSecretValueRequest`
+        :rtype: :class:`taifucloudcloud.ssm.v20190923.models.GetSecretValueResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class SsmClient(AbstractClient):
         """該介面用戶獲取用戶SecretsManager服務開通狀态。
 
         :param request: Request instance for GetServiceStatus.
-        :type request: :class:`tencentcloud.ssm.v20190923.models.GetServiceStatusRequest`
-        :rtype: :class:`tencentcloud.ssm.v20190923.models.GetServiceStatusResponse`
+        :type request: :class:`taifucloudcloud.ssm.v20190923.models.GetServiceStatusRequest`
+        :rtype: :class:`taifucloudcloud.ssm.v20190923.models.GetServiceStatusResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class SsmClient(AbstractClient):
         """該介面用于獲取指定憑據下的版本清單訊息
 
         :param request: Request instance for ListSecretVersionIds.
-        :type request: :class:`tencentcloud.ssm.v20190923.models.ListSecretVersionIdsRequest`
-        :rtype: :class:`tencentcloud.ssm.v20190923.models.ListSecretVersionIdsResponse`
+        :type request: :class:`taifucloudcloud.ssm.v20190923.models.ListSecretVersionIdsRequest`
+        :rtype: :class:`taifucloudcloud.ssm.v20190923.models.ListSecretVersionIdsResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class SsmClient(AbstractClient):
         """該介面用于獲取所有憑據的詳細清單，可以指定過濾欄位、排序方式等。
 
         :param request: Request instance for ListSecrets.
-        :type request: :class:`tencentcloud.ssm.v20190923.models.ListSecretsRequest`
-        :rtype: :class:`tencentcloud.ssm.v20190923.models.ListSecretsResponse`
+        :type request: :class:`taifucloudcloud.ssm.v20190923.models.ListSecretsRequest`
+        :rtype: :class:`taifucloudcloud.ssm.v20190923.models.ListSecretsResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class SsmClient(AbstractClient):
         """該介面在指定名稱的憑據下增加新版本的憑據内容，一個憑據下最多可以支援10個版本。只能對處于Enabled 和 Disabled 狀态的憑據添加新的版本。
 
         :param request: Request instance for PutSecretValue.
-        :type request: :class:`tencentcloud.ssm.v20190923.models.PutSecretValueRequest`
-        :rtype: :class:`tencentcloud.ssm.v20190923.models.PutSecretValueResponse`
+        :type request: :class:`taifucloudcloud.ssm.v20190923.models.PutSecretValueRequest`
+        :rtype: :class:`taifucloudcloud.ssm.v20190923.models.PutSecretValueResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class SsmClient(AbstractClient):
         """該介面用于恢複計劃删除（PendingDelete狀态）中的憑據，取消計劃删除。取消計劃删除的憑據将處于Disabled 狀态，如需恢複使用，通過EnableSecret 介面開啓憑據。
 
         :param request: Request instance for RestoreSecret.
-        :type request: :class:`tencentcloud.ssm.v20190923.models.RestoreSecretRequest`
-        :rtype: :class:`tencentcloud.ssm.v20190923.models.RestoreSecretResponse`
+        :type request: :class:`taifucloudcloud.ssm.v20190923.models.RestoreSecretRequest`
+        :rtype: :class:`taifucloudcloud.ssm.v20190923.models.RestoreSecretResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class SsmClient(AbstractClient):
         """該介面用于修改指定憑據的描述訊息，僅能修改Enabled 和 Disabled 狀态的憑據。
 
         :param request: Request instance for UpdateDescription.
-        :type request: :class:`tencentcloud.ssm.v20190923.models.UpdateDescriptionRequest`
-        :rtype: :class:`tencentcloud.ssm.v20190923.models.UpdateDescriptionResponse`
+        :type request: :class:`taifucloudcloud.ssm.v20190923.models.UpdateDescriptionRequest`
+        :rtype: :class:`taifucloudcloud.ssm.v20190923.models.UpdateDescriptionResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class SsmClient(AbstractClient):
         """該介面用于更新指定憑據名稱和版本号的内容，調用該介面會對新的憑據内容加密後函蓋舊的内容。僅允許更新Enabled 和 Disabled 狀态的憑據。
 
         :param request: Request instance for UpdateSecret.
-        :type request: :class:`tencentcloud.ssm.v20190923.models.UpdateSecretRequest`
-        :rtype: :class:`tencentcloud.ssm.v20190923.models.UpdateSecretResponse`
+        :type request: :class:`taifucloudcloud.ssm.v20190923.models.UpdateSecretRequest`
+        :rtype: :class:`taifucloudcloud.ssm.v20190923.models.UpdateSecretResponse`
 
         """
         try:

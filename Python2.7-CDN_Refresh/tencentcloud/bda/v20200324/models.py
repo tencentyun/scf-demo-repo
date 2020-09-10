@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class BodyDetectResult(AbstractModel):
@@ -28,7 +28,7 @@ class BodyDetectResult(AbstractModel):
 通常情況建議使用阈值0.32，可适用大多數情況。
         :type Confidence: float
         :param BodyRect: 圖中檢測出來的人體框
-        :type BodyRect: :class:`tencentcloud.bda.v20200324.models.BodyRect`
+        :type BodyRect: :class:`taifucloudcloud.bda.v20200324.models.BodyRect`
         """
         self.Confidence = None
         self.BodyRect = None
@@ -163,7 +163,7 @@ class CreatePersonRequest(AbstractModel):
 支援英文、數字、-%@#&_，，長度限制64B。
         :type PersonId: str
         :param Trace: 人體軌迹訊息。
-        :type Trace: :class:`tencentcloud.bda.v20200324.models.Trace`
+        :type Trace: :class:`taifucloudcloud.bda.v20200324.models.Trace`
         """
         self.GroupId = None
         self.PersonName = None
@@ -227,7 +227,7 @@ class CreateTraceRequest(AbstractModel):
         :param PersonId: 人員ID。
         :type PersonId: str
         :param Trace: 人體軌迹訊息。
-        :type Trace: :class:`tencentcloud.bda.v20200324.models.Trace`
+        :type Trace: :class:`taifucloudcloud.bda.v20200324.models.Trace`
         """
         self.PersonId = None
         self.Trace = None
@@ -672,7 +672,7 @@ class SearchTraceRequest(AbstractModel):
         :param GroupId: 希望搜索的人體庫ID。
         :type GroupId: str
         :param Trace: 人體軌迹訊息。
-        :type Trace: :class:`tencentcloud.bda.v20200324.models.Trace`
+        :type Trace: :class:`taifucloudcloud.bda.v20200324.models.Trace`
         :param MaxPersonNum: 單張被識别的人體軌迹返回的最相似人員數量。
 預設值爲5，最大值爲100。
  例，設MaxPersonNum爲8，則返回Top8相似的人員訊息。 值越大，需要處理的時間越長。建議不要超過10。

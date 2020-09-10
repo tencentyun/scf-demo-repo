@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AIAnalysisTemplateItem(AbstractModel):
@@ -31,19 +31,19 @@ class AIAnalysisTemplateItem(AbstractModel):
         :type Comment: str
         :param ClassificationConfigure: 智慧分類任務控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ClassificationConfigure: :class:`tencentcloud.mps.v20190612.models.ClassificationConfigureInfo`
+        :type ClassificationConfigure: :class:`taifucloudcloud.mps.v20190612.models.ClassificationConfigureInfo`
         :param TagConfigure: 智慧标簽任務控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TagConfigure: :class:`tencentcloud.mps.v20190612.models.TagConfigureInfo`
+        :type TagConfigure: :class:`taifucloudcloud.mps.v20190612.models.TagConfigureInfo`
         :param CoverConfigure: 智慧封面任務控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CoverConfigure: :class:`tencentcloud.mps.v20190612.models.CoverConfigureInfo`
+        :type CoverConfigure: :class:`taifucloudcloud.mps.v20190612.models.CoverConfigureInfo`
         :param FrameTagConfigure: 智慧按幀标簽任務控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FrameTagConfigure: :class:`tencentcloud.mps.v20190612.models.FrameTagConfigureInfo`
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :type FrameTagConfigure: :class:`taifucloudcloud.mps.v20190612.models.FrameTagConfigureInfo`
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type UpdateTime: str
         """
         self.Definition = None
@@ -91,18 +91,18 @@ class AIRecognitionTemplateItem(AbstractModel):
         :param Comment: 視訊内容識别範本描述訊息。
         :type Comment: str
         :param FaceConfigure: 人臉識别控制參數。
-        :type FaceConfigure: :class:`tencentcloud.mps.v20190612.models.FaceConfigureInfo`
+        :type FaceConfigure: :class:`taifucloudcloud.mps.v20190612.models.FaceConfigureInfo`
         :param OcrFullTextConfigure: 文本全文識别控制參數。
-        :type OcrFullTextConfigure: :class:`tencentcloud.mps.v20190612.models.OcrFullTextConfigureInfo`
+        :type OcrFullTextConfigure: :class:`taifucloudcloud.mps.v20190612.models.OcrFullTextConfigureInfo`
         :param OcrWordsConfigure: 文本關鍵詞識别控制參數。
-        :type OcrWordsConfigure: :class:`tencentcloud.mps.v20190612.models.OcrWordsConfigureInfo`
+        :type OcrWordsConfigure: :class:`taifucloudcloud.mps.v20190612.models.OcrWordsConfigureInfo`
         :param AsrFullTextConfigure: 語音全文識别控制參數。
-        :type AsrFullTextConfigure: :class:`tencentcloud.mps.v20190612.models.AsrFullTextConfigureInfo`
+        :type AsrFullTextConfigure: :class:`taifucloudcloud.mps.v20190612.models.AsrFullTextConfigureInfo`
         :param AsrWordsConfigure: 語音關鍵詞識别控制參數。
-        :type AsrWordsConfigure: :class:`tencentcloud.mps.v20190612.models.AsrWordsConfigureInfo`
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :type AsrWordsConfigure: :class:`taifucloudcloud.mps.v20190612.models.AsrWordsConfigureInfo`
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type UpdateTime: str
         """
         self.Definition = None
@@ -156,16 +156,16 @@ class AiAnalysisResult(AbstractModel):
         :type Type: str
         :param ClassificationTask: 視訊内容分析智慧分類任務的查詢結果，當任務類型爲 Classification 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ClassificationTask: :class:`tencentcloud.mps.v20190612.models.AiAnalysisTaskClassificationResult`
+        :type ClassificationTask: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskClassificationResult`
         :param CoverTask: 視訊内容分析智慧封面任務的查詢結果，當任務類型爲 Cover 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CoverTask: :class:`tencentcloud.mps.v20190612.models.AiAnalysisTaskCoverResult`
+        :type CoverTask: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskCoverResult`
         :param TagTask: 視訊内容分析智慧标簽任務的查詢結果，當任務類型爲 Tag 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TagTask: :class:`tencentcloud.mps.v20190612.models.AiAnalysisTaskTagResult`
+        :type TagTask: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskTagResult`
         :param FrameTagTask: 視訊内容分析智慧按幀标簽任務的查詢結果，當任務類型爲 FrameTag 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FrameTagTask: :class:`tencentcloud.mps.v20190612.models.AiAnalysisTaskFrameTagResult`
+        :type FrameTagTask: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskFrameTagResult`
         """
         self.Type = None
         self.ClassificationTask = None
@@ -243,10 +243,10 @@ class AiAnalysisTaskClassificationResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 智慧分類任務輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiAnalysisTaskClassificationInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskClassificationInput`
         :param Output: 智慧分類任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiAnalysisTaskClassificationOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskClassificationOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -294,7 +294,7 @@ class AiAnalysisTaskCoverOutput(AbstractModel):
         :param CoverSet: 智慧封面清單。
         :type CoverSet: list of MediaAiAnalysisCoverItem
         :param OutputStorage: 智慧封面的儲存位置。
-        :type OutputStorage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         """
         self.CoverSet = None
         self.OutputStorage = None
@@ -326,10 +326,10 @@ class AiAnalysisTaskCoverResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 智慧封面任務輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiAnalysisTaskCoverInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskCoverInput`
         :param Output: 智慧封面任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiAnalysisTaskCoverOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskCoverOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -403,10 +403,10 @@ class AiAnalysisTaskFrameTagResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 智慧按幀标簽任務輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiAnalysisTaskFrameTagInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskFrameTagInput`
         :param Output: 智慧按幀标簽任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiAnalysisTaskFrameTagOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskFrameTagOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -497,10 +497,10 @@ class AiAnalysisTaskTagResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 智慧标簽任務輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiAnalysisTaskTagInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskTagInput`
         :param Output: 智慧标簽任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiAnalysisTaskTagOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskTagOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -529,12 +529,12 @@ class AiContentReviewResult(AbstractModel):
     def __init__(self):
         """
         :param Type: 任務的類型，可以取的值有：
-<li>Porn：圖片鑒黃</li>
+<li>Porn：圖片 </li>
 <li>Terrorism：圖片鑒恐</li>
 <li>Political：圖片鑒政</li>
-<li>Porn.Asr：Asr 文字鑒黃</li>
-<li>Porn.Ocr：Ocr 文字鑒黃</li>
-<li>Porn.Voice：聲音鑒黃</li>
+<li>Porn.Asr：Asr 文字 </li>
+<li>Porn.Ocr：Ocr 文字 </li>
+<li>Porn.Voice：聲音 </li>
 <li>Political.Asr：Asr 文字鑒政</li>
 <li>Political.Ocr：Ocr 文字鑒政</li>
 <li>Terrorism.Ocr：Ocr 文字鑒恐</li>
@@ -545,36 +545,36 @@ class AiContentReviewResult(AbstractModel):
         :type SampleRate: float
         :param Duration: 審核的視訊時長，單位：秒。
         :type Duration: float
-        :param PornTask: 視訊内容審核智慧畫面鑒黃任務的查詢結果，當任務類型爲 Porn 時有效。
+        :param PornTask: 視訊内容審核智慧畫面 任務的查詢結果，當任務類型爲 Porn 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PornTask: :class:`tencentcloud.mps.v20190612.models.AiReviewTaskPornResult`
+        :type PornTask: :class:`taifucloudcloud.mps.v20190612.models.AiReviewTaskPornResult`
         :param TerrorismTask: 視訊内容審核智慧畫面鑒恐任務的查詢結果，當任務類型爲 Terrorism 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TerrorismTask: :class:`tencentcloud.mps.v20190612.models.AiReviewTaskTerrorismResult`
+        :type TerrorismTask: :class:`taifucloudcloud.mps.v20190612.models.AiReviewTaskTerrorismResult`
         :param PoliticalTask: 視訊内容審核智慧畫面鑒政任務的查詢結果，當任務類型爲 Political 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PoliticalTask: :class:`tencentcloud.mps.v20190612.models.AiReviewTaskPoliticalResult`
-        :param PornAsrTask: 視訊内容審核 Asr 文字鑒黃任務的查詢結果，當任務類型爲 Porn.Asr 時有效。
+        :type PoliticalTask: :class:`taifucloudcloud.mps.v20190612.models.AiReviewTaskPoliticalResult`
+        :param PornAsrTask: 視訊内容審核 Asr 文字 任務的查詢結果，當任務類型爲 Porn.Asr 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PornAsrTask: :class:`tencentcloud.mps.v20190612.models.AiReviewTaskPornAsrResult`
-        :param PornOcrTask: 視訊内容審核 Ocr 文字鑒黃任務的查詢結果，當任務類型爲 Porn.Ocr 時有效。
+        :type PornAsrTask: :class:`taifucloudcloud.mps.v20190612.models.AiReviewTaskPornAsrResult`
+        :param PornOcrTask: 視訊内容審核 Ocr 文字 任務的查詢結果，當任務類型爲 Porn.Ocr 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PornOcrTask: :class:`tencentcloud.mps.v20190612.models.AiReviewTaskPornOcrResult`
+        :type PornOcrTask: :class:`taifucloudcloud.mps.v20190612.models.AiReviewTaskPornOcrResult`
         :param PoliticalAsrTask: 視訊内容審核 Asr 文字鑒政任務的查詢結果，當任務類型爲 Political.Asr 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PoliticalAsrTask: :class:`tencentcloud.mps.v20190612.models.AiReviewTaskPoliticalAsrResult`
+        :type PoliticalAsrTask: :class:`taifucloudcloud.mps.v20190612.models.AiReviewTaskPoliticalAsrResult`
         :param PoliticalOcrTask: 視訊内容審核 Ocr 文字鑒政任務的查詢結果，當任務類型爲 Political.Ocr 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PoliticalOcrTask: :class:`tencentcloud.mps.v20190612.models.AiReviewTaskPoliticalOcrResult`
+        :type PoliticalOcrTask: :class:`taifucloudcloud.mps.v20190612.models.AiReviewTaskPoliticalOcrResult`
         :param TerrorismOcrTask: 視訊内容審核 Ocr 文字鑒恐任務的查詢結果，當任務類型爲 Terrorism.Ocr 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TerrorismOcrTask: :class:`tencentcloud.mps.v20190612.models.AiReviewTaskTerrorismOcrResult`
+        :type TerrorismOcrTask: :class:`taifucloudcloud.mps.v20190612.models.AiReviewTaskTerrorismOcrResult`
         :param ProhibitedAsrTask: 視訊内容審核 Asr 文字鑒違禁任務的查詢結果，當任務類型爲 Prohibited.Asr 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ProhibitedAsrTask: :class:`tencentcloud.mps.v20190612.models.AiReviewTaskProhibitedAsrResult`
+        :type ProhibitedAsrTask: :class:`taifucloudcloud.mps.v20190612.models.AiReviewTaskProhibitedAsrResult`
         :param ProhibitedOcrTask: 視訊内容審核 Ocr 文字鑒違禁任務的查詢結果，當任務類型爲 Prohibited.Ocr 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ProhibitedOcrTask: :class:`tencentcloud.mps.v20190612.models.AiReviewTaskProhibitedOcrResult`
+        :type ProhibitedOcrTask: :class:`taifucloudcloud.mps.v20190612.models.AiReviewTaskProhibitedOcrResult`
         """
         self.Type = None
         self.SampleRate = None
@@ -663,23 +663,23 @@ class AiRecognitionResult(AbstractModel):
         :param FaceTask: 人臉識别結果，當 Type 爲 
  FaceRecognition 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FaceTask: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskFaceResult`
+        :type FaceTask: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskFaceResult`
         :param AsrWordsTask: 語音關鍵詞識别結果，當 Type 爲
  AsrWordsRecognition 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AsrWordsTask: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskAsrWordsResult`
+        :type AsrWordsTask: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskAsrWordsResult`
         :param AsrFullTextTask: 語音全文識别結果，當 Type 爲
  AsrFullTextRecognition 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AsrFullTextTask: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskAsrFullTextResult`
+        :type AsrFullTextTask: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskAsrFullTextResult`
         :param OcrWordsTask: 文本關鍵詞識别結果，當 Type 爲
  OcrWordsRecognition 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OcrWordsTask: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskOcrWordsResult`
+        :type OcrWordsTask: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskOcrWordsResult`
         :param OcrFullTextTask: 文本全文識别結果，當 Type 爲
  OcrFullTextRecognition 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OcrFullTextTask: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskOcrFullTextResult`
+        :type OcrFullTextTask: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskOcrFullTextResult`
         """
         self.Type = None
         self.FaceTask = None
@@ -722,10 +722,10 @@ class AiRecognitionTaskAsrFullTextResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 語音全文識别任務輸入訊息。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskAsrFullTextResultInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskAsrFullTextResultInput`
         :param Output: 語音全文識别任務輸出訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskAsrFullTextResultOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskAsrFullTextResultOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -775,7 +775,7 @@ class AiRecognitionTaskAsrFullTextResultOutput(AbstractModel):
         :param SubtitlePath: 字幕文件網址。
         :type SubtitlePath: str
         :param OutputStorage: 字幕文件儲存位置。
-        :type OutputStorage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         """
         self.SegmentSet = None
         self.SubtitlePath = None
@@ -838,10 +838,10 @@ class AiRecognitionTaskAsrWordsResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 語音關鍵詞識别任務輸入訊息。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskAsrWordsResultInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskAsrWordsResultInput`
         :param Output: 語音關鍵詞識别任務輸出訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskAsrWordsResultOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskAsrWordsResultOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -966,10 +966,10 @@ class AiRecognitionTaskFaceResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 人臉識别任務輸入訊息。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskFaceResultInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskFaceResultInput`
         :param Output: 人臉識别任務輸出訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskFaceResultOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskFaceResultOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -1125,10 +1125,10 @@ class AiRecognitionTaskOcrFullTextResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 文本全文識别任務輸入訊息。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskOcrFullTextResultInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskOcrFullTextResultInput`
         :param Output: 文本全文識别任務輸出訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskOcrFullTextResultOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskOcrFullTextResultOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -1257,10 +1257,10 @@ class AiRecognitionTaskOcrWordsResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 文本關鍵詞識别任務輸入訊息。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskOcrWordsResultInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskOcrWordsResultInput`
         :param Output: 文本關鍵詞識别任務輸出訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskOcrWordsResultOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskOcrWordsResultOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -1532,13 +1532,13 @@ class AiReviewPoliticalTaskOutput(AbstractModel):
 
 
 class AiReviewPornAsrTaskInput(AbstractModel):
-    """内容審核 Asr 文字鑒黃任務輸入參數類型
+    """内容審核 Asr 文字 任務輸入參數類型
 
     """
 
     def __init__(self):
         """
-        :param Definition: 鑒黃範本 ID。
+        :param Definition:  範本 ID。
         :type Definition: int
         """
         self.Definition = None
@@ -1582,13 +1582,13 @@ class AiReviewPornAsrTaskOutput(AbstractModel):
 
 
 class AiReviewPornOcrTaskInput(AbstractModel):
-    """内容審核 Ocr 文字鑒黃任務輸入參數類型
+    """内容審核 Ocr 文字 任務輸入參數類型
 
     """
 
     def __init__(self):
         """
-        :param Definition: 鑒黃範本 ID。
+        :param Definition:  範本 ID。
         :type Definition: int
         """
         self.Definition = None
@@ -1632,13 +1632,13 @@ class AiReviewPornOcrTaskOutput(AbstractModel):
 
 
 class AiReviewPornTaskInput(AbstractModel):
-    """内容審核鑒黃任務輸入參數類型
+    """内容審核 任務輸入參數類型
 
     """
 
     def __init__(self):
         """
-        :param Definition: 鑒黃範本 ID。
+        :param Definition:  範本 ID。
         :type Definition: int
         """
         self.Definition = None
@@ -1649,20 +1649,20 @@ class AiReviewPornTaskInput(AbstractModel):
 
 
 class AiReviewPornTaskOutput(AbstractModel):
-    """鑒黃結果訊息
+    """ 結果訊息
 
     """
 
     def __init__(self):
         """
-        :param Confidence: 視訊鑒黃評分，分值爲0到100。
+        :param Confidence: 視訊 評分，分值爲0到100。
         :type Confidence: float
-        :param Suggestion: 鑒黃結果建議，取值範圍：
+        :param Suggestion:  結果建議，取值範圍：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
         :type Suggestion: str
-        :param Label: 視訊鑒黃結果标簽，取值範圍：
+        :param Label: 視訊 結果标簽，取值範圍：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
@@ -1803,10 +1803,10 @@ class AiReviewTaskPoliticalAsrResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 内容審核 Asr 文字鑒政任務輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiReviewPoliticalAsrTaskInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiReviewPoliticalAsrTaskInput`
         :param Output: 内容審核 Asr 文字鑒政任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiReviewPoliticalAsrTaskOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiReviewPoliticalAsrTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -1841,10 +1841,10 @@ class AiReviewTaskPoliticalOcrResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 内容審核 Ocr 文字鑒政任務輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiReviewPoliticalOcrTaskInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiReviewPoliticalOcrTaskInput`
         :param Output: 内容審核 Ocr 文字鑒政任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiReviewPoliticalOcrTaskOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiReviewPoliticalOcrTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -1879,10 +1879,10 @@ class AiReviewTaskPoliticalResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 内容審核鑒政任務輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiReviewPoliticalTaskInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiReviewPoliticalTaskInput`
         :param Output: 内容審核鑒政任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiReviewPoliticalTaskOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiReviewPoliticalTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -1904,7 +1904,7 @@ class AiReviewTaskPoliticalResult(AbstractModel):
 
 
 class AiReviewTaskPornAsrResult(AbstractModel):
-    """内容審核 Asr 文字鑒黃任務結果類型
+    """内容審核 Asr 文字 任務結果類型
 
     """
 
@@ -1916,11 +1916,11 @@ class AiReviewTaskPornAsrResult(AbstractModel):
         :type ErrCode: int
         :param Message: 錯誤訊息。
         :type Message: str
-        :param Input: 内容審核 Asr 文字鑒黃任務輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiReviewPornAsrTaskInput`
-        :param Output: 内容審核 Asr 文字鑒黃任務輸出。
+        :param Input: 内容審核 Asr 文字 任務輸入。
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiReviewPornAsrTaskInput`
+        :param Output: 内容審核 Asr 文字 任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiReviewPornAsrTaskOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiReviewPornAsrTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -1942,7 +1942,7 @@ class AiReviewTaskPornAsrResult(AbstractModel):
 
 
 class AiReviewTaskPornOcrResult(AbstractModel):
-    """内容審核 Ocr 文字鑒黃任務結果類型
+    """内容審核 Ocr 文字 任務結果類型
 
     """
 
@@ -1954,11 +1954,11 @@ class AiReviewTaskPornOcrResult(AbstractModel):
         :type ErrCode: int
         :param Message: 錯誤訊息。
         :type Message: str
-        :param Input: 内容審核 Ocr 文字鑒黃任務輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiReviewPornOcrTaskInput`
-        :param Output: 内容審核 Ocr 文字鑒黃任務輸出。
+        :param Input: 内容審核 Ocr 文字 任務輸入。
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiReviewPornOcrTaskInput`
+        :param Output: 内容審核 Ocr 文字 任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiReviewPornOcrTaskOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiReviewPornOcrTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -1980,7 +1980,7 @@ class AiReviewTaskPornOcrResult(AbstractModel):
 
 
 class AiReviewTaskPornResult(AbstractModel):
-    """内容審核鑒黃任務結果類型
+    """内容審核 任務結果類型
 
     """
 
@@ -1992,11 +1992,11 @@ class AiReviewTaskPornResult(AbstractModel):
         :type ErrCode: int
         :param Message: 錯誤訊息。
         :type Message: str
-        :param Input: 内容審核鑒黃任務輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiReviewPornTaskInput`
-        :param Output: 内容審核鑒黃任務輸出。
+        :param Input: 内容審核 任務輸入。
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiReviewPornTaskInput`
+        :param Output: 内容審核 任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiReviewPornTaskOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiReviewPornTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -2034,10 +2034,10 @@ class AiReviewTaskProhibitedAsrResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 内容審核 Asr 文字鑒違禁任務輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiReviewProhibitedAsrTaskInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiReviewProhibitedAsrTaskInput`
         :param Output: 内容審核 Asr 文字鑒違禁任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiReviewProhibitedAsrTaskOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiReviewProhibitedAsrTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -2075,10 +2075,10 @@ class AiReviewTaskProhibitedOcrResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 内容審核 Ocr 文字鑒違禁任務輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiReviewProhibitedOcrTaskInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiReviewProhibitedOcrTaskInput`
         :param Output: 内容審核 Ocr 文字鑒違禁任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiReviewProhibitedOcrTaskOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiReviewProhibitedOcrTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -2116,10 +2116,10 @@ class AiReviewTaskTerrorismOcrResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 内容審核 Ocr 文字鑒恐任務輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiReviewTerrorismOcrTaskInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiReviewTerrorismOcrTaskInput`
         :param Output: 内容審核 Ocr 文字鑒恐任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiReviewTerrorismOcrTaskOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiReviewTerrorismOcrTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -2154,10 +2154,10 @@ class AiReviewTaskTerrorismResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 内容審核鑒恐任務輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AiReviewTerrorismTaskInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiReviewTerrorismTaskInput`
         :param Output: 内容審核鑒恐任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.AiReviewTerrorismTaskOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiReviewTerrorismTaskOutput`
         """
         self.Status = None
         self.ErrCode = None
@@ -2385,9 +2385,9 @@ class AiSamplePerson(AbstractModel):
         :type TagSet: list of str
         :param UsageSet: 應用場景。
         :type UsageSet: list of str
-        :param CreateTime: 創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param CreateTime: 創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type CreateTime: str
-        :param UpdateTime: 最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param UpdateTime: 最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type UpdateTime: str
         """
         self.PersonId = None
@@ -2450,9 +2450,9 @@ class AiSampleWord(AbstractModel):
         :type TagSet: list of str
         :param UsageSet: 關鍵詞應用場景。
         :type UsageSet: list of str
-        :param CreateTime: 創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param CreateTime: 創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type CreateTime: str
-        :param UpdateTime: 最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param UpdateTime: 最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type UpdateTime: str
         """
         self.Keyword = None
@@ -2508,7 +2508,7 @@ class AnimatedGraphicTaskInput(AbstractModel):
         :type EndTimeOffset: float
         :param OutputStorage: 轉動圖後文件的目标儲存，不填則繼承上層的 OutputStorage 值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OutputStorage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param OutputObjectPath: 轉動圖後文件的輸出路徑，可以爲相對路徑或者絕對路徑。如果不填，則預設爲相對路徑：`{inputName}_animatedGraphic_{definition}.{format}`。
         :type OutputObjectPath: str
         """
@@ -2571,9 +2571,9 @@ class AnimatedGraphicsTemplate(AbstractModel):
         :type Fps: int
         :param Quality: 圖片質量。
         :type Quality: float
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type UpdateTime: str
         """
         self.Definition = None
@@ -2856,27 +2856,27 @@ class ContentReviewTemplateItem(AbstractModel):
         :type Name: str
         :param Comment: 内容審核範本描述訊息，長度限制：256 個字元。
         :type Comment: str
-        :param PornConfigure: 鑒黃控制參數。
+        :param PornConfigure:  控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PornConfigure: :class:`tencentcloud.mps.v20190612.models.PornConfigureInfo`
+        :type PornConfigure: :class:`taifucloudcloud.mps.v20190612.models.PornConfigureInfo`
         :param TerrorismConfigure: 鑒恐控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TerrorismConfigure: :class:`tencentcloud.mps.v20190612.models.TerrorismConfigureInfo`
+        :type TerrorismConfigure: :class:`taifucloudcloud.mps.v20190612.models.TerrorismConfigureInfo`
         :param PoliticalConfigure: 鑒政控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PoliticalConfigure: :class:`tencentcloud.mps.v20190612.models.PoliticalConfigureInfo`
+        :type PoliticalConfigure: :class:`taifucloudcloud.mps.v20190612.models.PoliticalConfigureInfo`
         :param ProhibitedConfigure: 違禁控制參數。違禁内容包括：
 <li>謾罵；</li>
 <li>涉毒違法。</li>
 注意：此參數尚未支援。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ProhibitedConfigure: :class:`tencentcloud.mps.v20190612.models.ProhibitedConfigureInfo`
+        :type ProhibitedConfigure: :class:`taifucloudcloud.mps.v20190612.models.ProhibitedConfigureInfo`
         :param UserDefineConfigure: 用戶自定義内容審核控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type UserDefineConfigure: :class:`tencentcloud.mps.v20190612.models.UserDefineConfigureInfo`
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :type UserDefineConfigure: :class:`taifucloudcloud.mps.v20190612.models.UserDefineConfigureInfo`
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type UpdateTime: str
         """
         self.Definition = None
@@ -3039,13 +3039,13 @@ class CreateAIAnalysisTemplateRequest(AbstractModel):
         :param Comment: 視訊内容分析範本描述訊息，長度限制：256 個字元。
         :type Comment: str
         :param ClassificationConfigure: 智慧分類任務控制參數。
-        :type ClassificationConfigure: :class:`tencentcloud.mps.v20190612.models.ClassificationConfigureInfo`
+        :type ClassificationConfigure: :class:`taifucloudcloud.mps.v20190612.models.ClassificationConfigureInfo`
         :param TagConfigure: 智慧标簽任務控制參數。
-        :type TagConfigure: :class:`tencentcloud.mps.v20190612.models.TagConfigureInfo`
+        :type TagConfigure: :class:`taifucloudcloud.mps.v20190612.models.TagConfigureInfo`
         :param CoverConfigure: 智慧封面任務控制參數。
-        :type CoverConfigure: :class:`tencentcloud.mps.v20190612.models.CoverConfigureInfo`
+        :type CoverConfigure: :class:`taifucloudcloud.mps.v20190612.models.CoverConfigureInfo`
         :param FrameTagConfigure: 智慧按幀标簽任務控制參數。
-        :type FrameTagConfigure: :class:`tencentcloud.mps.v20190612.models.FrameTagConfigureInfo`
+        :type FrameTagConfigure: :class:`taifucloudcloud.mps.v20190612.models.FrameTagConfigureInfo`
         """
         self.Name = None
         self.Comment = None
@@ -3105,15 +3105,15 @@ class CreateAIRecognitionTemplateRequest(AbstractModel):
         :param Comment: 視訊内容識别範本描述訊息，長度限制：256 個字元。
         :type Comment: str
         :param FaceConfigure: 人臉識别控制參數。
-        :type FaceConfigure: :class:`tencentcloud.mps.v20190612.models.FaceConfigureInfo`
+        :type FaceConfigure: :class:`taifucloudcloud.mps.v20190612.models.FaceConfigureInfo`
         :param OcrFullTextConfigure: 文本全文識别控制參數。
-        :type OcrFullTextConfigure: :class:`tencentcloud.mps.v20190612.models.OcrFullTextConfigureInfo`
+        :type OcrFullTextConfigure: :class:`taifucloudcloud.mps.v20190612.models.OcrFullTextConfigureInfo`
         :param OcrWordsConfigure: 文本關鍵詞識别控制參數。
-        :type OcrWordsConfigure: :class:`tencentcloud.mps.v20190612.models.OcrWordsConfigureInfo`
+        :type OcrWordsConfigure: :class:`taifucloudcloud.mps.v20190612.models.OcrWordsConfigureInfo`
         :param AsrFullTextConfigure: 語音全文識别控制參數。
-        :type AsrFullTextConfigure: :class:`tencentcloud.mps.v20190612.models.AsrFullTextConfigureInfo`
+        :type AsrFullTextConfigure: :class:`taifucloudcloud.mps.v20190612.models.AsrFullTextConfigureInfo`
         :param AsrWordsConfigure: 語音關鍵詞識别控制參數。
-        :type AsrWordsConfigure: :class:`tencentcloud.mps.v20190612.models.AsrWordsConfigureInfo`
+        :type AsrWordsConfigure: :class:`taifucloudcloud.mps.v20190612.models.AsrWordsConfigureInfo`
         """
         self.Name = None
         self.Comment = None
@@ -3255,19 +3255,19 @@ class CreateContentReviewTemplateRequest(AbstractModel):
         :type Name: str
         :param Comment: 内容審核範本描述訊息，長度限制：256 個字元。
         :type Comment: str
-        :param PornConfigure: 鑒黃控制參數。
-        :type PornConfigure: :class:`tencentcloud.mps.v20190612.models.PornConfigureInfo`
+        :param PornConfigure:  控制參數。
+        :type PornConfigure: :class:`taifucloudcloud.mps.v20190612.models.PornConfigureInfo`
         :param TerrorismConfigure: 鑒恐控制參數。
-        :type TerrorismConfigure: :class:`tencentcloud.mps.v20190612.models.TerrorismConfigureInfo`
+        :type TerrorismConfigure: :class:`taifucloudcloud.mps.v20190612.models.TerrorismConfigureInfo`
         :param PoliticalConfigure: 鑒政控制參數。
-        :type PoliticalConfigure: :class:`tencentcloud.mps.v20190612.models.PoliticalConfigureInfo`
+        :type PoliticalConfigure: :class:`taifucloudcloud.mps.v20190612.models.PoliticalConfigureInfo`
         :param ProhibitedConfigure: 違禁控制參數。違禁内容包括：
 <li>謾罵；</li>
 <li>涉毒違法。</li>
 注意：此參數尚未支援。
-        :type ProhibitedConfigure: :class:`tencentcloud.mps.v20190612.models.ProhibitedConfigureInfo`
+        :type ProhibitedConfigure: :class:`taifucloudcloud.mps.v20190612.models.ProhibitedConfigureInfo`
         :param UserDefineConfigure: 用戶自定義内容審核控制參數。
-        :type UserDefineConfigure: :class:`tencentcloud.mps.v20190612.models.UserDefineConfigureInfo`
+        :type UserDefineConfigure: :class:`taifucloudcloud.mps.v20190612.models.UserDefineConfigureInfo`
         """
         self.Name = None
         self.Comment = None
@@ -3460,7 +3460,7 @@ class CreatePersonSampleResponse(AbstractModel):
     def __init__(self):
         """
         :param Person: 人物訊息。
-        :type Person: :class:`tencentcloud.mps.v20190612.models.AiSamplePerson`
+        :type Person: :class:`taifucloudcloud.mps.v20190612.models.AiSamplePerson`
         :param FailFaceInfoSet: 處理失敗的人臉訊息。
         :type FailFaceInfoSet: list of AiSampleFailFaceInfo
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -3680,11 +3680,11 @@ class CreateTranscodeTemplateRequest(AbstractModel):
 預設值：0。
         :type RemoveAudio: int
         :param VideoTemplate: 視訊流配置參數，當 RemoveVideo 爲 0，該欄位必填。
-        :type VideoTemplate: :class:`tencentcloud.mps.v20190612.models.VideoTemplateInfo`
+        :type VideoTemplate: :class:`taifucloudcloud.mps.v20190612.models.VideoTemplateInfo`
         :param AudioTemplate: 音訊流配置參數，當 RemoveAudio 爲 0，該欄位必填。
-        :type AudioTemplate: :class:`tencentcloud.mps.v20190612.models.AudioTemplateInfo`
+        :type AudioTemplate: :class:`taifucloudcloud.mps.v20190612.models.AudioTemplateInfo`
         :param TEHDConfig: 極速高清轉碼參數。
-        :type TEHDConfig: :class:`tencentcloud.mps.v20190612.models.TEHDConfig`
+        :type TEHDConfig: :class:`taifucloudcloud.mps.v20190612.models.TEHDConfig`
         """
         self.Container = None
         self.Name = None
@@ -3768,11 +3768,11 @@ class CreateWatermarkTemplateRequest(AbstractModel):
 預設值：0px。
         :type YPos: str
         :param ImageTemplate: 圖片浮水印範本，僅當 Type 爲 image，該欄位必填且有效。
-        :type ImageTemplate: :class:`tencentcloud.mps.v20190612.models.ImageWatermarkInput`
+        :type ImageTemplate: :class:`taifucloudcloud.mps.v20190612.models.ImageWatermarkInput`
         :param TextTemplate: 文字浮水印範本，僅當 Type 爲 text，該欄位必填且有效。
-        :type TextTemplate: :class:`tencentcloud.mps.v20190612.models.TextWatermarkTemplateInput`
+        :type TextTemplate: :class:`taifucloudcloud.mps.v20190612.models.TextWatermarkTemplateInput`
         :param SvgTemplate: SVG 浮水印範本，僅當 Type 爲 svg，該欄位必填且有效。
-        :type SvgTemplate: :class:`tencentcloud.mps.v20190612.models.SvgWatermarkInput`
+        :type SvgTemplate: :class:`taifucloudcloud.mps.v20190612.models.SvgWatermarkInput`
         """
         self.Type = None
         self.Name = None
@@ -3889,21 +3889,21 @@ class CreateWorkflowRequest(AbstractModel):
         :param WorkflowName: 工作流名稱，最多128字元。同一個用戶該名稱唯一。
         :type WorkflowName: str
         :param Trigger: 工作流綁定的觸發規則，當上傳視訊命中該規則到該對象時即觸發工作流。
-        :type Trigger: :class:`tencentcloud.mps.v20190612.models.WorkflowTrigger`
+        :type Trigger: :class:`taifucloudcloud.mps.v20190612.models.WorkflowTrigger`
         :param OutputStorage: 視訊處理的文件輸出儲存位置。不填則繼承 Trigger 中的儲存位置。
-        :type OutputStorage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param OutputDir: 視訊處理生成的文件輸出的目标目錄，如`/movie/201907/`。如果不填，表示與觸發文件所在的目錄一緻。
         :type OutputDir: str
         :param MediaProcessTask: 視訊處理類型任務參數。
-        :type MediaProcessTask: :class:`tencentcloud.mps.v20190612.models.MediaProcessTaskInput`
+        :type MediaProcessTask: :class:`taifucloudcloud.mps.v20190612.models.MediaProcessTaskInput`
         :param AiContentReviewTask: 視訊内容審核類型任務參數。
-        :type AiContentReviewTask: :class:`tencentcloud.mps.v20190612.models.AiContentReviewTaskInput`
+        :type AiContentReviewTask: :class:`taifucloudcloud.mps.v20190612.models.AiContentReviewTaskInput`
         :param AiAnalysisTask: 視訊内容分析類型任務參數。
-        :type AiAnalysisTask: :class:`tencentcloud.mps.v20190612.models.AiAnalysisTaskInput`
+        :type AiAnalysisTask: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskInput`
         :param AiRecognitionTask: 視訊内容識别類型任務參數。
-        :type AiRecognitionTask: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskInput`
+        :type AiRecognitionTask: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskInput`
         :param TaskNotifyConfig: 任務的事件通知配置，不填代表不獲取事件通知。
-        :type TaskNotifyConfig: :class:`tencentcloud.mps.v20190612.models.TaskNotifyConfig`
+        :type TaskNotifyConfig: :class:`taifucloudcloud.mps.v20190612.models.TaskNotifyConfig`
         :param TaskPriority: 工作流的優先級，數值越大優先級越高，取值範圍是 -10 到 10，不填代表 0。
         :type TaskPriority: int
         """
@@ -4670,7 +4670,7 @@ class DescribeMediaMetaDataRequest(AbstractModel):
     def __init__(self):
         """
         :param InputInfo: 需要獲取元訊息的文件輸入訊息。
-        :type InputInfo: :class:`tencentcloud.mps.v20190612.models.MediaInputInfo`
+        :type InputInfo: :class:`taifucloudcloud.mps.v20190612.models.MediaInputInfo`
         """
         self.InputInfo = None
 
@@ -4689,7 +4689,7 @@ class DescribeMediaMetaDataResponse(AbstractModel):
     def __init__(self):
         """
         :param MetaData: 媒體元訊息。
-        :type MetaData: :class:`tencentcloud.mps.v20190612.models.MediaMetaData`
+        :type MetaData: :class:`taifucloudcloud.mps.v20190612.models.MediaMetaData`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -4932,24 +4932,24 @@ class DescribeTaskDetailResponse(AbstractModel):
 <li>PROCESSING：處理中；</li>
 <li>FINISH：已完成。</li>
         :type Status: str
-        :param CreateTime: 任務的創建時間，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param CreateTime: 任務的創建時間，采用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type CreateTime: str
-        :param BeginProcessTime: 任務開始執行的時間，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param BeginProcessTime: 任務開始執行的時間，采用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type BeginProcessTime: str
-        :param FinishTime: 任務執行完畢的時間，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param FinishTime: 任務執行完畢的時間，采用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type FinishTime: str
         :param WorkflowTask: 視訊處理任務訊息，僅當 TaskType 爲 WorkflowTask，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type WorkflowTask: :class:`tencentcloud.mps.v20190612.models.WorkflowTask`
+        :type WorkflowTask: :class:`taifucloudcloud.mps.v20190612.models.WorkflowTask`
         :param EditMediaTask: 視訊編輯任務訊息，僅當 TaskType 爲 EditMediaTask，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type EditMediaTask: :class:`tencentcloud.mps.v20190612.models.EditMediaTask`
+        :type EditMediaTask: :class:`taifucloudcloud.mps.v20190612.models.EditMediaTask`
         :param LiveStreamProcessTask: 直播流處理任務訊息，僅當 TaskType 爲 LiveStreamProcessTask，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type LiveStreamProcessTask: :class:`tencentcloud.mps.v20190612.models.LiveStreamProcessTask`
+        :type LiveStreamProcessTask: :class:`taifucloudcloud.mps.v20190612.models.LiveStreamProcessTask`
         :param TaskNotifyConfig: 任務的事件通知訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TaskNotifyConfig: :class:`tencentcloud.mps.v20190612.models.TaskNotifyConfig`
+        :type TaskNotifyConfig: :class:`taifucloudcloud.mps.v20190612.models.TaskNotifyConfig`
         :param TasksPriority: 任務流的優先級，取值範圍爲 [-10, 10]。
         :type TasksPriority: int
         :param SessionId: 用于去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長50個字元，不帶或者帶空字串表示不做去重。
@@ -5366,7 +5366,7 @@ class EditMediaFileInfo(AbstractModel):
     def __init__(self):
         """
         :param InputInfo: 視訊的輸入訊息。
-        :type InputInfo: :class:`tencentcloud.mps.v20190612.models.MediaInputInfo`
+        :type InputInfo: :class:`taifucloudcloud.mps.v20190612.models.MediaInputInfo`
         :param StartTimeOffset: 視訊剪輯的起始時間偏移，單位：秒。
         :type StartTimeOffset: float
         :param EndTimeOffset: 視訊剪輯的結束時間偏移，單位：秒。
@@ -5395,11 +5395,11 @@ class EditMediaRequest(AbstractModel):
         :param FileInfos: 輸入的視訊文件訊息。
         :type FileInfos: list of EditMediaFileInfo
         :param OutputStorage: 視訊處理輸出文件的目标儲存。
-        :type OutputStorage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param OutputObjectPath: 視訊處理輸出文件的目标路徑。
         :type OutputObjectPath: str
         :param TaskNotifyConfig: 任務的事件通知訊息，不填代表不獲取事件通知。
-        :type TaskNotifyConfig: :class:`tencentcloud.mps.v20190612.models.TaskNotifyConfig`
+        :type TaskNotifyConfig: :class:`taifucloudcloud.mps.v20190612.models.TaskNotifyConfig`
         :param TasksPriority: 任務優先級，數值越大優先級越高，取值範圍是-10到 10，不填代表0。
         :type TasksPriority: int
         :param SessionId: 用于去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長 50 個字元，不帶或者帶空字串表示不做去重。
@@ -5476,10 +5476,10 @@ class EditMediaTask(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 視訊編輯任務的輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.EditMediaTaskInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.EditMediaTaskInput`
         :param Output: 視訊編輯任務的輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.EditMediaTaskOutput`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.EditMediaTaskOutput`
         """
         self.TaskId = None
         self.Status = None
@@ -5532,7 +5532,7 @@ class EditMediaTaskOutput(AbstractModel):
     def __init__(self):
         """
         :param OutputStorage: 編輯後文件的目标儲存。
-        :type OutputStorage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param Path: 編輯後的視訊文件路徑。
         :type Path: str
         """
@@ -5715,14 +5715,14 @@ class ImageSpriteTaskInput(AbstractModel):
         :type Definition: int
         :param OutputStorage: 截取雪碧圖後文件的目标儲存，不填則繼承上層的 OutputStorage 值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OutputStorage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param OutputObjectPath: 截取雪碧圖後，雪碧圖圖片文件的輸出路徑，可以爲相對路徑或者絕對路徑。如果不填，則預設爲相對路徑：`{inputName}_imageSprite_{definition}_{number}.{format}`。
         :type OutputObjectPath: str
         :param WebVttObjectName: 截取雪碧圖後，Web VTT 文件的輸出路徑，只能爲相對路徑。如果不填，則預設爲相對路徑：`{inputName}_imageSprite_{definition}.{format}`。
         :type WebVttObjectName: str
         :param ObjectNumberFormat: 截取雪碧圖後輸出路徑中的`{number}`變量的規則。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ObjectNumberFormat: :class:`tencentcloud.mps.v20190612.models.NumberFormat`
+        :type ObjectNumberFormat: :class:`taifucloudcloud.mps.v20190612.models.NumberFormat`
         """
         self.Definition = None
         self.OutputStorage = None
@@ -5785,9 +5785,9 @@ class ImageSpriteTemplate(AbstractModel):
         :type RowCount: int
         :param ColumnCount: 雪碧圖中小圖的列數。
         :type ColumnCount: int
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type UpdateTime: str
         :param FillType: 填充方式，當視訊流配置寬高參數與原始視訊的寬高比不一緻時，對轉碼的處理方式，即爲“填充”。可選填充方式：
 <li> stretch：拉伸，對每一幀進行拉伸，填滿整個畫面，可能導緻轉碼後的視訊被“壓扁“或者“拉長“；</li>
@@ -6028,7 +6028,7 @@ class LiveStreamAiReviewImagePoliticalResult(AbstractModel):
         :type EndPtsTime: float
         :param Confidence: 嫌疑片段涉政分數。
         :type Confidence: float
-        :param Suggestion: 嫌疑片段鑒黃結果建議，取值範圍：
+        :param Suggestion: 嫌疑片段 結果建議，取值範圍：
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -6044,7 +6044,7 @@ class LiveStreamAiReviewImagePoliticalResult(AbstractModel):
         :param Url: 嫌疑圖片 URL （圖片不會永久儲存，到達
 PicUrlExpireTime 時間點後圖片将被删除）。
         :type Url: str
-        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type PicUrlExpireTime: str
         """
         self.StartPtsTime = None
@@ -6071,7 +6071,7 @@ PicUrlExpireTime 時間點後圖片将被删除）。
 
 
 class LiveStreamAiReviewImagePornResult(AbstractModel):
-    """直播 AI 内容審核圖片鑒黃結果
+    """直播 AI 内容審核圖片 結果
 
     """
 
@@ -6083,12 +6083,12 @@ class LiveStreamAiReviewImagePornResult(AbstractModel):
         :type EndPtsTime: float
         :param Confidence: 嫌疑片段涉黃分數。
         :type Confidence: float
-        :param Suggestion: 嫌疑片段鑒黃結果建議，取值範圍：
+        :param Suggestion: 嫌疑片段 結果建議，取值範圍：
 <li>pass</li>
 <li>review</li>
 <li>block</li>
         :type Suggestion: str
-        :param Label: 視訊鑒黃結果标簽，取值範圍：
+        :param Label: 視訊 結果标簽，取值範圍：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
@@ -6097,7 +6097,7 @@ class LiveStreamAiReviewImagePornResult(AbstractModel):
         :param Url: 嫌疑圖片 URL （圖片不會永久儲存，到達
 PicUrlExpireTime 時間點後圖片将被删除）。
         :type Url: str
-        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type PicUrlExpireTime: str
         """
         self.StartPtsTime = None
@@ -6150,7 +6150,7 @@ class LiveStreamAiReviewImageTerrorismResult(AbstractModel):
         :param Url: 嫌疑圖片 URL （圖片不會永久儲存，到達
 PicUrlExpireTime 時間點後圖片将被删除）。
         :type Url: str
-        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type PicUrlExpireTime: str
         """
         self.StartPtsTime = None
@@ -6202,18 +6202,18 @@ class LiveStreamAiReviewResultItem(AbstractModel):
     def __init__(self):
         """
         :param Type: 審核結果的類型，可以取的值有：
-<li>ImagePorn：圖片鑒黃</li>
+<li>ImagePorn：圖片 </li>
 <li>ImageTerrorism：圖片鑒恐</li>
 <li>ImagePolitical：圖片鑒政</li>
-<li>PornVoice：聲音鑒黃</li>
+<li>PornVoice：聲音 </li>
         :type Type: str
-        :param ImagePornResultSet: 圖片鑒黃的結果，當 Type 爲 ImagePorn 時有效。
+        :param ImagePornResultSet: 圖片 的結果，當 Type 爲 ImagePorn 時有效。
         :type ImagePornResultSet: list of LiveStreamAiReviewImagePornResult
         :param ImageTerrorismResultSet: 圖片鑒恐的結果，當 Type 爲 ImageTerrorism 時有效。
         :type ImageTerrorismResultSet: list of LiveStreamAiReviewImageTerrorismResult
         :param ImagePoliticalResultSet: 圖片鑒政的結果，當 Type 爲 ImagePolitical 時有效。
         :type ImagePoliticalResultSet: list of LiveStreamAiReviewImagePoliticalResult
-        :param VoicePornResultSet: 聲音鑒黃的結果，當 Type 爲 PornVoice 時有效。
+        :param VoicePornResultSet: 聲音 的結果，當 Type 爲 PornVoice 時有效。
         :type VoicePornResultSet: list of LiveStreamAiReviewVoicePornResult
         """
         self.Type = None
@@ -6252,7 +6252,7 @@ class LiveStreamAiReviewResultItem(AbstractModel):
 
 
 class LiveStreamAiReviewVoicePornResult(AbstractModel):
-    """直播 AI 内容審核聲音鑒黃結果
+    """直播 AI 内容審核聲音 結果
 
     """
 
@@ -6264,12 +6264,12 @@ class LiveStreamAiReviewVoicePornResult(AbstractModel):
         :type EndPtsTime: float
         :param Confidence: 嫌疑片段涉黃分數。
         :type Confidence: float
-        :param Suggestion: 嫌疑片段鑒黃結果建議，取值範圍：
+        :param Suggestion: 嫌疑片段 結果建議，取值範圍：
 <li>pass</li>
 <li>review</li>
 <li>block</li>
         :type Suggestion: str
-        :param Label: 視訊鑒黃結果标簽，取值範圍：
+        :param Label: 視訊 結果标簽，取值範圍：
 <li>sexual_moan：呻吟。</li>
         :type Label: str
         """
@@ -6702,10 +6702,10 @@ class MediaAnimatedGraphicsItem(AbstractModel):
     def __init__(self):
         """
         :param Storage: 轉動圖文件的儲存位置。
-        :type Storage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type Storage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param Path: 轉動圖的文件路徑。
         :type Path: str
-        :param Definition: 轉動圖範本 ID，參見[轉動圖參數範本](https://cloud.tencent.com/document/product/862/37042#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+        :param Definition: 轉動圖範本 ID，參見[轉動圖參數範本](https://cloud.taifucloud.com/document/product/862/37042#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
         :type Definition: int
         :param Container: 動圖格式，如 gif。
         :type Container: str
@@ -6839,7 +6839,7 @@ class MediaContentReviewOcrTextSegmentItem(AbstractModel):
         :param Url: 嫌疑圖片 URL （圖片不會永久儲存，到達
 PicUrlExpireTime 時間點後圖片将被删除）。
         :type Url: str
-        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type PicUrlExpireTime: str
         """
         self.StartTimeOffset = None
@@ -6890,7 +6890,7 @@ class MediaContentReviewPoliticalSegmentItem(AbstractModel):
         :type Url: str
         :param AreaCoordSet: 涉政人物、違規圖标出現的區域坐标 (像素級)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
         :type AreaCoordSet: list of int
-        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type PicUrlExpireTime: str
         """
         self.StartTimeOffset = None
@@ -6929,9 +6929,9 @@ class MediaContentReviewSegmentItem(AbstractModel):
         :type EndTimeOffset: float
         :param Confidence: 嫌疑片段涉黃分數。
         :type Confidence: float
-        :param Label: 嫌疑片段鑒黃結果标簽。
+        :param Label: 嫌疑片段 結果标簽。
         :type Label: str
-        :param Suggestion: 嫌疑片段鑒黃結果建議，取值範圍：
+        :param Suggestion: 嫌疑片段 結果建議，取值範圍：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -6939,7 +6939,7 @@ class MediaContentReviewSegmentItem(AbstractModel):
         :param Url: 嫌疑圖片 URL （圖片不會永久儲存，到達
  PicUrlExpireTime 時間點後圖片将被删除）。
         :type Url: str
-        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type PicUrlExpireTime: str
         """
         self.StartTimeOffset = None
@@ -6968,7 +6968,7 @@ class MediaImageSpriteItem(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 雪碧圖規格，參見[雪碧圖參數範本](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+        :param Definition: 雪碧圖規格，參見[雪碧圖參數範本](https://cloud.taifucloud.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
         :type Definition: int
         :param Height: 雪碧圖小圖的高度。
         :type Height: int
@@ -6981,7 +6981,7 @@ class MediaImageSpriteItem(AbstractModel):
         :param WebVttPath: 雪碧圖子圖位置與時間關系的 WebVtt 文件路徑。WebVtt 文件表明了各個雪碧圖小圖對應的時間點，以及在雪碧大圖裏的坐标位置，一般被播放器用于實現預覽。
         :type WebVttPath: str
         :param Storage: 雪碧圖文件的儲存位置。
-        :type Storage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type Storage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         """
         self.Definition = None
         self.Height = None
@@ -7014,7 +7014,7 @@ class MediaInputInfo(AbstractModel):
         :param Type: 輸入來源對象的類型，現在僅支援 COS。
         :type Type: str
         :param CosInputInfo: 當 Type 爲 COS 時有效，則該項爲必填，表示視訊處理 COS 對象訊息。
-        :type CosInputInfo: :class:`tencentcloud.mps.v20190612.models.CosInputInfo`
+        :type CosInputInfo: :class:`taifucloudcloud.mps.v20190612.models.CosInputInfo`
         """
         self.Type = None
         self.CosInputInfo = None
@@ -7111,10 +7111,10 @@ class MediaProcessTaskAnimatedGraphicResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 轉動圖任務的輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.AnimatedGraphicTaskInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.AnimatedGraphicTaskInput`
         :param Output: 轉動圖任務的輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.MediaAnimatedGraphicsItem`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.MediaAnimatedGraphicsItem`
         """
         self.Status = None
         self.ErrCode = None
@@ -7152,10 +7152,10 @@ class MediaProcessTaskImageSpriteResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 對視訊截雪碧圖任務的輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.ImageSpriteTaskInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.ImageSpriteTaskInput`
         :param Output: 對視訊截雪碧圖任務的輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.MediaImageSpriteItem`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.MediaImageSpriteItem`
         """
         self.Status = None
         self.ErrCode = None
@@ -7252,19 +7252,19 @@ class MediaProcessTaskResult(AbstractModel):
         :type Type: str
         :param TranscodeTask: 視訊轉碼任務的查詢結果，當任務類型爲 Transcode 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TranscodeTask: :class:`tencentcloud.mps.v20190612.models.MediaProcessTaskTranscodeResult`
+        :type TranscodeTask: :class:`taifucloudcloud.mps.v20190612.models.MediaProcessTaskTranscodeResult`
         :param AnimatedGraphicTask: 視訊轉動圖任務的查詢結果，當任務類型爲 AnimatedGraphics 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AnimatedGraphicTask: :class:`tencentcloud.mps.v20190612.models.MediaProcessTaskAnimatedGraphicResult`
+        :type AnimatedGraphicTask: :class:`taifucloudcloud.mps.v20190612.models.MediaProcessTaskAnimatedGraphicResult`
         :param SnapshotByTimeOffsetTask: 對視訊按時間點截圖任務的查詢結果，當任務類型爲 SnapshotByTimeOffset 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SnapshotByTimeOffsetTask: :class:`tencentcloud.mps.v20190612.models.MediaProcessTaskSnapshotByTimeOffsetResult`
+        :type SnapshotByTimeOffsetTask: :class:`taifucloudcloud.mps.v20190612.models.MediaProcessTaskSnapshotByTimeOffsetResult`
         :param SampleSnapshotTask: 對視訊采樣截圖任務的查詢結果，當任務類型爲 SampleSnapshot 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SampleSnapshotTask: :class:`tencentcloud.mps.v20190612.models.MediaProcessTaskSampleSnapshotResult`
+        :type SampleSnapshotTask: :class:`taifucloudcloud.mps.v20190612.models.MediaProcessTaskSampleSnapshotResult`
         :param ImageSpriteTask: 對視訊截雪碧圖任務的查詢結果，當任務類型爲 ImageSprite 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ImageSpriteTask: :class:`tencentcloud.mps.v20190612.models.MediaProcessTaskImageSpriteResult`
+        :type ImageSpriteTask: :class:`taifucloudcloud.mps.v20190612.models.MediaProcessTaskImageSpriteResult`
         """
         self.Type = None
         self.TranscodeTask = None
@@ -7310,10 +7310,10 @@ class MediaProcessTaskSampleSnapshotResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 對視訊做采樣截圖任務輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.SampleSnapshotTaskInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.SampleSnapshotTaskInput`
         :param Output: 對視訊做采樣截圖任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.MediaSampleSnapshotItem`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.MediaSampleSnapshotItem`
         """
         self.Status = None
         self.ErrCode = None
@@ -7351,10 +7351,10 @@ class MediaProcessTaskSnapshotByTimeOffsetResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 對視訊按指定時間點截圖任務輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.SnapshotByTimeOffsetTaskInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.SnapshotByTimeOffsetTaskInput`
         :param Output: 對視訊按指定時間點截圖任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.MediaSnapshotByTimeOffsetItem`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.MediaSnapshotByTimeOffsetItem`
         """
         self.Status = None
         self.ErrCode = None
@@ -7392,10 +7392,10 @@ class MediaProcessTaskTranscodeResult(AbstractModel):
         :param Message: 錯誤訊息。
         :type Message: str
         :param Input: 轉碼任務的輸入。
-        :type Input: :class:`tencentcloud.mps.v20190612.models.TranscodeTaskInput`
+        :type Input: :class:`taifucloudcloud.mps.v20190612.models.TranscodeTaskInput`
         :param Output: 轉碼任務的輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Output: :class:`tencentcloud.mps.v20190612.models.MediaTranscodeItem`
+        :type Output: :class:`taifucloudcloud.mps.v20190612.models.MediaTranscodeItem`
         """
         self.Status = None
         self.ErrCode = None
@@ -7423,7 +7423,7 @@ class MediaSampleSnapshotItem(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 采樣截圖規格 ID，參見[采樣截圖參數範本](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+        :param Definition: 采樣截圖規格 ID，參見[采樣截圖參數範本](https://cloud.taifucloud.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
         :type Definition: int
         :param SampleType: 采樣方式，取值範圍：
 <li>Percent：根據百分比間隔采樣。</li>
@@ -7434,7 +7434,7 @@ class MediaSampleSnapshotItem(AbstractModel):
 <li>當 SampleType 爲 Time 時，該值表示多少時間間隔一張圖，單位秒， 第一張圖均爲視訊首幀。</li>
         :type Interval: int
         :param Storage: 截圖後文件的儲存位置。
-        :type Storage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type Storage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param ImagePathSet: 生成的截圖 path 清單。
         :type ImagePathSet: list of str
         :param WaterMarkDefinition: 截圖如果被打上了浮水印，被打水印的範本 ID 清單。
@@ -7466,12 +7466,12 @@ class MediaSnapshotByTimeOffsetItem(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 指定時間點截圖規格，參見[指定時間點截圖參數範本](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+        :param Definition: 指定時間點截圖規格，參見[指定時間點截圖參數範本](https://cloud.taifucloud.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
         :type Definition: int
         :param PicInfoSet: 同一規格的截圖訊息集合，每個元素代表一張截圖。
         :type PicInfoSet: list of MediaSnapshotByTimePicInfoItem
         :param Storage: 指定時間點截圖文件的儲存位置。
-        :type Storage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type Storage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         """
         self.Definition = None
         self.PicInfoSet = None
@@ -7524,10 +7524,10 @@ class MediaTranscodeItem(AbstractModel):
     def __init__(self):
         """
         :param OutputStorage: 轉碼後文件的目标儲存。
-        :type OutputStorage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param Path: 轉碼後的視訊文件路徑。
         :type Path: str
-        :param Definition: 轉碼規格 ID，參見[轉碼參數範本](https://cloud.tencent.com/document/product/862/37042)。
+        :param Definition: 轉碼規格 ID，參見[轉碼參數範本](https://cloud.taifucloud.com/document/product/862/37042)。
         :type Definition: int
         :param Bitrate: 視訊流碼率平均值與音訊流碼率平均值之和， 單位：bps。
         :type Bitrate: int
@@ -7636,13 +7636,13 @@ class ModifyAIAnalysisTemplateRequest(AbstractModel):
         :param Comment: 視訊内容分析範本描述訊息，長度限制：256 個字元。
         :type Comment: str
         :param ClassificationConfigure: 智慧分類任務控制參數。
-        :type ClassificationConfigure: :class:`tencentcloud.mps.v20190612.models.ClassificationConfigureInfoForUpdate`
+        :type ClassificationConfigure: :class:`taifucloudcloud.mps.v20190612.models.ClassificationConfigureInfoForUpdate`
         :param TagConfigure: 智慧标簽任務控制參數。
-        :type TagConfigure: :class:`tencentcloud.mps.v20190612.models.TagConfigureInfoForUpdate`
+        :type TagConfigure: :class:`taifucloudcloud.mps.v20190612.models.TagConfigureInfoForUpdate`
         :param CoverConfigure: 智慧封面任務控制參數。
-        :type CoverConfigure: :class:`tencentcloud.mps.v20190612.models.CoverConfigureInfoForUpdate`
+        :type CoverConfigure: :class:`taifucloudcloud.mps.v20190612.models.CoverConfigureInfoForUpdate`
         :param FrameTagConfigure: 智慧按幀标簽任務控制參數。
-        :type FrameTagConfigure: :class:`tencentcloud.mps.v20190612.models.FrameTagConfigureInfoForUpdate`
+        :type FrameTagConfigure: :class:`taifucloudcloud.mps.v20190612.models.FrameTagConfigureInfoForUpdate`
         """
         self.Definition = None
         self.Name = None
@@ -7702,15 +7702,15 @@ class ModifyAIRecognitionTemplateRequest(AbstractModel):
         :param Comment: 視訊内容識别範本描述訊息，長度限制：256 個字元。
         :type Comment: str
         :param FaceConfigure: 人臉識别控制參數。
-        :type FaceConfigure: :class:`tencentcloud.mps.v20190612.models.FaceConfigureInfoForUpdate`
+        :type FaceConfigure: :class:`taifucloudcloud.mps.v20190612.models.FaceConfigureInfoForUpdate`
         :param OcrFullTextConfigure: 文本全文識别控制參數。
-        :type OcrFullTextConfigure: :class:`tencentcloud.mps.v20190612.models.OcrFullTextConfigureInfoForUpdate`
+        :type OcrFullTextConfigure: :class:`taifucloudcloud.mps.v20190612.models.OcrFullTextConfigureInfoForUpdate`
         :param OcrWordsConfigure: 文本關鍵詞識别控制參數。
-        :type OcrWordsConfigure: :class:`tencentcloud.mps.v20190612.models.OcrWordsConfigureInfoForUpdate`
+        :type OcrWordsConfigure: :class:`taifucloudcloud.mps.v20190612.models.OcrWordsConfigureInfoForUpdate`
         :param AsrFullTextConfigure: 語音全文識别控制參數。
-        :type AsrFullTextConfigure: :class:`tencentcloud.mps.v20190612.models.AsrFullTextConfigureInfoForUpdate`
+        :type AsrFullTextConfigure: :class:`taifucloudcloud.mps.v20190612.models.AsrFullTextConfigureInfoForUpdate`
         :param AsrWordsConfigure: 語音關鍵詞識别控制參數。
-        :type AsrWordsConfigure: :class:`tencentcloud.mps.v20190612.models.AsrWordsConfigureInfoForUpdate`
+        :type AsrWordsConfigure: :class:`taifucloudcloud.mps.v20190612.models.AsrWordsConfigureInfoForUpdate`
         """
         self.Definition = None
         self.Name = None
@@ -7852,19 +7852,19 @@ class ModifyContentReviewTemplateRequest(AbstractModel):
         :type Name: str
         :param Comment: 内容審核範本描述訊息，長度限制：256 個字元。
         :type Comment: str
-        :param PornConfigure: 鑒黃控制參數。
-        :type PornConfigure: :class:`tencentcloud.mps.v20190612.models.PornConfigureInfoForUpdate`
+        :param PornConfigure:  控制參數。
+        :type PornConfigure: :class:`taifucloudcloud.mps.v20190612.models.PornConfigureInfoForUpdate`
         :param TerrorismConfigure: 鑒恐控制參數。
-        :type TerrorismConfigure: :class:`tencentcloud.mps.v20190612.models.TerrorismConfigureInfoForUpdate`
+        :type TerrorismConfigure: :class:`taifucloudcloud.mps.v20190612.models.TerrorismConfigureInfoForUpdate`
         :param PoliticalConfigure: 鑒政控制參數。
-        :type PoliticalConfigure: :class:`tencentcloud.mps.v20190612.models.PoliticalConfigureInfoForUpdate`
+        :type PoliticalConfigure: :class:`taifucloudcloud.mps.v20190612.models.PoliticalConfigureInfoForUpdate`
         :param ProhibitedConfigure: 違禁控制參數。違禁内容包括：
 <li>謾罵；</li>
 <li>涉毒違法。</li>
 注意：此參數尚未支援。
-        :type ProhibitedConfigure: :class:`tencentcloud.mps.v20190612.models.ProhibitedConfigureInfoForUpdate`
+        :type ProhibitedConfigure: :class:`taifucloudcloud.mps.v20190612.models.ProhibitedConfigureInfoForUpdate`
         :param UserDefineConfigure: 用戶自定義内容審核控制參數。
-        :type UserDefineConfigure: :class:`tencentcloud.mps.v20190612.models.UserDefineConfigureInfoForUpdate`
+        :type UserDefineConfigure: :class:`taifucloudcloud.mps.v20190612.models.UserDefineConfigureInfoForUpdate`
         """
         self.Definition = None
         self.Name = None
@@ -8027,9 +8027,9 @@ class ModifyPersonSampleRequest(AbstractModel):
 3. All：用于内容識别、内容審核，等價于 1+2。
         :type Usages: list of str
         :param FaceOperationInfo: 人臉操作訊息。
-        :type FaceOperationInfo: :class:`tencentcloud.mps.v20190612.models.AiSampleFaceOperation`
+        :type FaceOperationInfo: :class:`taifucloudcloud.mps.v20190612.models.AiSampleFaceOperation`
         :param TagOperationInfo: 标簽操作訊息。
-        :type TagOperationInfo: :class:`tencentcloud.mps.v20190612.models.AiSampleTagOperation`
+        :type TagOperationInfo: :class:`taifucloudcloud.mps.v20190612.models.AiSampleTagOperation`
         """
         self.PersonId = None
         self.Name = None
@@ -8060,7 +8060,7 @@ class ModifyPersonSampleResponse(AbstractModel):
     def __init__(self):
         """
         :param Person: 人物訊息。
-        :type Person: :class:`tencentcloud.mps.v20190612.models.AiSamplePerson`
+        :type Person: :class:`taifucloudcloud.mps.v20190612.models.AiSamplePerson`
         :param FailFaceInfoSet: 處理失敗的人臉訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FailFaceInfoSet: list of AiSampleFailFaceInfo
@@ -8281,11 +8281,11 @@ class ModifyTranscodeTemplateRequest(AbstractModel):
 <li>1：去除</li>
         :type RemoveAudio: int
         :param VideoTemplate: 視訊流配置參數。
-        :type VideoTemplate: :class:`tencentcloud.mps.v20190612.models.VideoTemplateInfoForUpdate`
+        :type VideoTemplate: :class:`taifucloudcloud.mps.v20190612.models.VideoTemplateInfoForUpdate`
         :param AudioTemplate: 音訊流配置參數。
-        :type AudioTemplate: :class:`tencentcloud.mps.v20190612.models.AudioTemplateInfoForUpdate`
+        :type AudioTemplate: :class:`taifucloudcloud.mps.v20190612.models.AudioTemplateInfoForUpdate`
         :param TEHDConfig: 極速高清轉碼參數。
-        :type TEHDConfig: :class:`tencentcloud.mps.v20190612.models.TEHDConfigForUpdate`
+        :type TEHDConfig: :class:`taifucloudcloud.mps.v20190612.models.TEHDConfigForUpdate`
         """
         self.Definition = None
         self.Container = None
@@ -8361,11 +8361,11 @@ class ModifyWatermarkTemplateRequest(AbstractModel):
 <li>當字串以 px 結尾，表示浮水印 YPos 爲指定像素，如 100px 表示 YPos 爲 100 像素。</li>
         :type YPos: str
         :param ImageTemplate: 圖片浮水印範本，該欄位僅對圖片水印範本有效。
-        :type ImageTemplate: :class:`tencentcloud.mps.v20190612.models.ImageWatermarkInputForUpdate`
+        :type ImageTemplate: :class:`taifucloudcloud.mps.v20190612.models.ImageWatermarkInputForUpdate`
         :param TextTemplate: 文字浮水印範本，該欄位僅對文字水印範本有效。
-        :type TextTemplate: :class:`tencentcloud.mps.v20190612.models.TextWatermarkTemplateInputForUpdate`
+        :type TextTemplate: :class:`taifucloudcloud.mps.v20190612.models.TextWatermarkTemplateInputForUpdate`
         :param SvgTemplate: SVG浮水印範本，當 Type 爲 svg，該欄位必填。當 Type 爲 image 或 text，該欄位無效。
-        :type SvgTemplate: :class:`tencentcloud.mps.v20190612.models.SvgWatermarkInputForUpdate`
+        :type SvgTemplate: :class:`taifucloudcloud.mps.v20190612.models.SvgWatermarkInputForUpdate`
         """
         self.Definition = None
         self.Name = None
@@ -8437,7 +8437,7 @@ class ModifyWordSampleRequest(AbstractModel):
 7. All：通過光學字元識别技術、語音識别技術，進行内容識别、内容審核，等價于 1+2+3+4。
         :type Usages: list of str
         :param TagOperationInfo: 标簽操作訊息。
-        :type TagOperationInfo: :class:`tencentcloud.mps.v20190612.models.AiSampleTagOperation`
+        :type TagOperationInfo: :class:`taifucloudcloud.mps.v20190612.models.AiSampleTagOperation`
         """
         self.Keyword = None
         self.Usages = None
@@ -8617,13 +8617,13 @@ class ParseLiveStreamProcessNotificationResponse(AbstractModel):
         :type TaskId: str
         :param ProcessEofInfo: 直播流處理錯誤訊息，當 NotificationType 爲 ProcessEof 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ProcessEofInfo: :class:`tencentcloud.mps.v20190612.models.LiveStreamProcessErrorInfo`
+        :type ProcessEofInfo: :class:`taifucloudcloud.mps.v20190612.models.LiveStreamProcessErrorInfo`
         :param AiReviewResultInfo: 内容審核結果，當 NotificationType 爲 AiReviewResult 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AiReviewResultInfo: :class:`tencentcloud.mps.v20190612.models.LiveStreamAiReviewResultInfo`
+        :type AiReviewResultInfo: :class:`taifucloudcloud.mps.v20190612.models.LiveStreamAiReviewResultInfo`
         :param AiRecognitionResultInfo: 内容識别結果，當 NotificationType 爲 AiRecognitionResult 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AiRecognitionResultInfo: :class:`tencentcloud.mps.v20190612.models.LiveStreamAiRecognitionResultInfo`
+        :type AiRecognitionResultInfo: :class:`taifucloudcloud.mps.v20190612.models.LiveStreamAiRecognitionResultInfo`
         :param SessionId: 用于去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長50個字元，不帶或者帶空字串表示不做去重。
         :type SessionId: str
         :param SessionContext: 來源上下文，用于透傳用戶請求訊息，任務流狀态變更回調将返回該欄位值，最長1000個字元。
@@ -8688,10 +8688,10 @@ class ParseNotificationResponse(AbstractModel):
         :type EventType: str
         :param WorkflowTaskEvent: 視訊處理任務訊息，僅當 TaskType 爲 WorkflowTask，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type WorkflowTaskEvent: :class:`tencentcloud.mps.v20190612.models.WorkflowTask`
+        :type WorkflowTaskEvent: :class:`taifucloudcloud.mps.v20190612.models.WorkflowTask`
         :param EditMediaTaskEvent: 視訊編輯任務訊息，僅當 TaskType 爲 EditMediaTask，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type EditMediaTaskEvent: :class:`tencentcloud.mps.v20190612.models.EditMediaTask`
+        :type EditMediaTaskEvent: :class:`taifucloudcloud.mps.v20190612.models.EditMediaTask`
         :param SessionId: 用于去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長50個字元，不帶或者帶空字串表示不做去重。
         :type SessionId: str
         :param SessionContext: 來源上下文，用于透傳用戶請求訊息，任務流狀态變更回調将返回該欄位值，最長1000個字元。
@@ -8782,11 +8782,11 @@ class PoliticalConfigureInfo(AbstractModel):
     def __init__(self):
         """
         :param ImgReviewInfo: 畫面鑒政控制參數。
-        :type ImgReviewInfo: :class:`tencentcloud.mps.v20190612.models.PoliticalImgReviewTemplateInfo`
+        :type ImgReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.PoliticalImgReviewTemplateInfo`
         :param AsrReviewInfo: 語音鑒政控制參數。
-        :type AsrReviewInfo: :class:`tencentcloud.mps.v20190612.models.PoliticalAsrReviewTemplateInfo`
+        :type AsrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.PoliticalAsrReviewTemplateInfo`
         :param OcrReviewInfo: 文本鑒政控制參數。
-        :type OcrReviewInfo: :class:`tencentcloud.mps.v20190612.models.PoliticalOcrReviewTemplateInfo`
+        :type OcrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.PoliticalOcrReviewTemplateInfo`
         """
         self.ImgReviewInfo = None
         self.AsrReviewInfo = None
@@ -8813,11 +8813,11 @@ class PoliticalConfigureInfoForUpdate(AbstractModel):
     def __init__(self):
         """
         :param ImgReviewInfo: 畫面鑒政控制參數。
-        :type ImgReviewInfo: :class:`tencentcloud.mps.v20190612.models.PoliticalImgReviewTemplateInfoForUpdate`
+        :type ImgReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.PoliticalImgReviewTemplateInfoForUpdate`
         :param AsrReviewInfo: 語音鑒政控制參數。
-        :type AsrReviewInfo: :class:`tencentcloud.mps.v20190612.models.PoliticalAsrReviewTemplateInfoForUpdate`
+        :type AsrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.PoliticalAsrReviewTemplateInfoForUpdate`
         :param OcrReviewInfo: 文本鑒政控制參數。
-        :type OcrReviewInfo: :class:`tencentcloud.mps.v20190612.models.PoliticalOcrReviewTemplateInfoForUpdate`
+        :type OcrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.PoliticalOcrReviewTemplateInfoForUpdate`
         """
         self.ImgReviewInfo = None
         self.AsrReviewInfo = None
@@ -8961,15 +8961,15 @@ class PoliticalOcrReviewTemplateInfoForUpdate(AbstractModel):
 
 
 class PornAsrReviewTemplateInfo(AbstractModel):
-    """語音鑒黃任務控制參數
+    """語音 任務控制參數
 
     """
 
     def __init__(self):
         """
-        :param Switch: 語音鑒黃任務開關，可選值：
-<li>ON：開啓語音鑒黃任務；</li>
-<li>OFF：關閉語音鑒黃任務。</li>
+        :param Switch: 語音 任務開關，可選值：
+<li>ON：開啓語音 任務；</li>
+<li>OFF：關閉語音 任務。</li>
         :type Switch: str
         :param BlockConfidence: 判定涉嫌違規的分數阈值，當智慧審核達到該分數以上，認爲涉嫌違規，不填預設爲 100 分。取值範圍：0~100。
         :type BlockConfidence: int
@@ -8988,15 +8988,15 @@ class PornAsrReviewTemplateInfo(AbstractModel):
 
 
 class PornAsrReviewTemplateInfoForUpdate(AbstractModel):
-    """語音鑒黃任務控制參數。
+    """語音 任務控制參數。
 
     """
 
     def __init__(self):
         """
-        :param Switch: 語音鑒黃任務開關，可選值：
-<li>ON：開啓語音鑒黃任務；</li>
-<li>OFF：關閉語音鑒黃任務。</li>
+        :param Switch: 語音 任務開關，可選值：
+<li>ON：開啓語音 任務；</li>
+<li>OFF：關閉語音 任務。</li>
         :type Switch: str
         :param BlockConfidence: 判定涉嫌違規的分數阈值，當智慧審核達到該分數以上，認爲涉嫌違規。取值範圍：0~100。
         :type BlockConfidence: int
@@ -9015,18 +9015,18 @@ class PornAsrReviewTemplateInfoForUpdate(AbstractModel):
 
 
 class PornConfigureInfo(AbstractModel):
-    """鑒黃任務控制參數
+    """ 任務控制參數
 
     """
 
     def __init__(self):
         """
-        :param ImgReviewInfo: 畫面鑒黃控制參數。
-        :type ImgReviewInfo: :class:`tencentcloud.mps.v20190612.models.PornImgReviewTemplateInfo`
-        :param AsrReviewInfo: 語音鑒黃控制參數。
-        :type AsrReviewInfo: :class:`tencentcloud.mps.v20190612.models.PornAsrReviewTemplateInfo`
-        :param OcrReviewInfo: 文本鑒黃控制參數。
-        :type OcrReviewInfo: :class:`tencentcloud.mps.v20190612.models.PornOcrReviewTemplateInfo`
+        :param ImgReviewInfo: 畫面 控制參數。
+        :type ImgReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.PornImgReviewTemplateInfo`
+        :param AsrReviewInfo: 語音 控制參數。
+        :type AsrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.PornAsrReviewTemplateInfo`
+        :param OcrReviewInfo: 文本 控制參數。
+        :type OcrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.PornOcrReviewTemplateInfo`
         """
         self.ImgReviewInfo = None
         self.AsrReviewInfo = None
@@ -9046,18 +9046,18 @@ class PornConfigureInfo(AbstractModel):
 
 
 class PornConfigureInfoForUpdate(AbstractModel):
-    """鑒黃任務控制參數。
+    """ 任務控制參數。
 
     """
 
     def __init__(self):
         """
-        :param ImgReviewInfo: 畫面鑒黃控制參數。
-        :type ImgReviewInfo: :class:`tencentcloud.mps.v20190612.models.PornImgReviewTemplateInfoForUpdate`
-        :param AsrReviewInfo: 語音鑒黃控制參數。
-        :type AsrReviewInfo: :class:`tencentcloud.mps.v20190612.models.PornAsrReviewTemplateInfoForUpdate`
-        :param OcrReviewInfo: 文本鑒黃控制參數。
-        :type OcrReviewInfo: :class:`tencentcloud.mps.v20190612.models.PornOcrReviewTemplateInfoForUpdate`
+        :param ImgReviewInfo: 畫面 控制參數。
+        :type ImgReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.PornImgReviewTemplateInfoForUpdate`
+        :param AsrReviewInfo: 語音 控制參數。
+        :type AsrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.PornAsrReviewTemplateInfoForUpdate`
+        :param OcrReviewInfo: 文本 控制參數。
+        :type OcrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.PornOcrReviewTemplateInfoForUpdate`
         """
         self.ImgReviewInfo = None
         self.AsrReviewInfo = None
@@ -9077,17 +9077,17 @@ class PornConfigureInfoForUpdate(AbstractModel):
 
 
 class PornImgReviewTemplateInfo(AbstractModel):
-    """畫面鑒黃任務控制參數
+    """畫面 任務控制參數
 
     """
 
     def __init__(self):
         """
-        :param Switch: 畫面鑒黃任務開關，可選值：
-<li>ON：開啓畫面鑒黃任務；</li>
-<li>OFF：關閉畫面鑒黃任務。</li>
+        :param Switch: 畫面 任務開關，可選值：
+<li>ON：開啓畫面 任務；</li>
+<li>OFF：關閉畫面 任務。</li>
         :type Switch: str
-        :param LabelSet: 畫面鑒黃過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回，可選值爲：
+        :param LabelSet: 畫面 過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回，可選值爲：
 <li>porn：色情；</li>
 <li>vulgar：低俗；</li>
 <li>intimacy：親密行爲；</li>
@@ -9112,17 +9112,17 @@ class PornImgReviewTemplateInfo(AbstractModel):
 
 
 class PornImgReviewTemplateInfoForUpdate(AbstractModel):
-    """畫面鑒黃任務控制參數。
+    """畫面 任務控制參數。
 
     """
 
     def __init__(self):
         """
-        :param Switch: 畫面鑒黃任務開關，可選值：
-<li>ON：開啓畫面鑒黃任務；</li>
-<li>OFF：關閉畫面鑒黃任務。</li>
+        :param Switch: 畫面 任務開關，可選值：
+<li>ON：開啓畫面 任務；</li>
+<li>OFF：關閉畫面 任務。</li>
         :type Switch: str
-        :param LabelSet: 畫面鑒黃過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回，可選值爲：
+        :param LabelSet: 畫面 過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回，可選值爲：
 <li>porn：色情；</li>
 <li>vulgar：低俗；</li>
 <li>intimacy：親密行爲；</li>
@@ -9147,15 +9147,15 @@ class PornImgReviewTemplateInfoForUpdate(AbstractModel):
 
 
 class PornOcrReviewTemplateInfo(AbstractModel):
-    """文本鑒黃任務控制參數
+    """文本 任務控制參數
 
     """
 
     def __init__(self):
         """
-        :param Switch: 文本鑒黃任務開關，可選值：
-<li>ON：開啓文本鑒黃任務；</li>
-<li>OFF：關閉文本鑒黃任務。</li>
+        :param Switch: 文本 任務開關，可選值：
+<li>ON：開啓文本 任務；</li>
+<li>OFF：關閉文本 任務。</li>
         :type Switch: str
         :param BlockConfidence: 判定涉嫌違規的分數阈值，當智慧審核達到該分數以上，認爲涉嫌違規，不填預設爲 100 分。取值範圍：0~100。
         :type BlockConfidence: int
@@ -9174,15 +9174,15 @@ class PornOcrReviewTemplateInfo(AbstractModel):
 
 
 class PornOcrReviewTemplateInfoForUpdate(AbstractModel):
-    """文本鑒黃任務控制參數。
+    """文本 任務控制參數。
 
     """
 
     def __init__(self):
         """
-        :param Switch: 文本鑒黃任務開關，可選值：
-<li>ON：開啓文本鑒黃任務；</li>
-<li>OFF：關閉文本鑒黃任務。</li>
+        :param Switch: 文本 任務開關，可選值：
+<li>ON：開啓文本 任務；</li>
+<li>OFF：關閉文本 任務。</li>
         :type Switch: str
         :param BlockConfidence: 判定涉嫌違規的分數阈值，當智慧審核達到該分數以上，認爲涉嫌違規。取值範圍：0~100。
         :type BlockConfidence: int
@@ -9210,15 +9210,15 @@ class ProcessLiveStreamRequest(AbstractModel):
         :param Url: 直播流 URL（必須是直播文件網址，支援 rtmp，hls 和 flv 等）。
         :type Url: str
         :param TaskNotifyConfig: 任務的事件通知訊息，用于指定直播流處理的結果。
-        :type TaskNotifyConfig: :class:`tencentcloud.mps.v20190612.models.LiveStreamTaskNotifyConfig`
+        :type TaskNotifyConfig: :class:`taifucloudcloud.mps.v20190612.models.LiveStreamTaskNotifyConfig`
         :param OutputStorage: 直播流處理輸出文件的目标儲存。如處理有文件輸出，該參數爲必填項。
-        :type OutputStorage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param OutputDir: 直播流處理生成的文件輸出的目标目錄，如`/movie/201909/`，如果不填爲 `/` 目錄。
         :type OutputDir: str
         :param AiContentReviewTask: 視訊内容審核類型任務參數。
-        :type AiContentReviewTask: :class:`tencentcloud.mps.v20190612.models.AiContentReviewTaskInput`
+        :type AiContentReviewTask: :class:`taifucloudcloud.mps.v20190612.models.AiContentReviewTaskInput`
         :param AiRecognitionTask: 視訊内容識别類型任務參數。
-        :type AiRecognitionTask: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskInput`
+        :type AiRecognitionTask: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskInput`
         :param SessionId: 用于去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長 50 個字元，不帶或者帶空字串表示不做去重。
         :type SessionId: str
         :param SessionContext: 來源上下文，用于透傳用戶請求訊息，任務流狀态變更回調将返回該欄位值，最長 1000 個字元。
@@ -9282,21 +9282,21 @@ class ProcessMediaRequest(AbstractModel):
     def __init__(self):
         """
         :param InputInfo: 視訊處理的文件輸入訊息。
-        :type InputInfo: :class:`tencentcloud.mps.v20190612.models.MediaInputInfo`
+        :type InputInfo: :class:`taifucloudcloud.mps.v20190612.models.MediaInputInfo`
         :param OutputStorage: 視訊處理輸出文件的目标儲存。不填則繼承 InputInfo 中的儲存位置。
-        :type OutputStorage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param OutputDir: 視訊處理生成的文件輸出的目标目錄，如`/movie/201907/`。如果不填，表示與 InputInfo 中文件所在的目錄一緻。
         :type OutputDir: str
         :param MediaProcessTask: 視訊處理類型任務參數。
-        :type MediaProcessTask: :class:`tencentcloud.mps.v20190612.models.MediaProcessTaskInput`
+        :type MediaProcessTask: :class:`taifucloudcloud.mps.v20190612.models.MediaProcessTaskInput`
         :param AiContentReviewTask: 視訊内容審核類型任務參數。
-        :type AiContentReviewTask: :class:`tencentcloud.mps.v20190612.models.AiContentReviewTaskInput`
+        :type AiContentReviewTask: :class:`taifucloudcloud.mps.v20190612.models.AiContentReviewTaskInput`
         :param AiAnalysisTask: 視訊内容分析類型任務參數。
-        :type AiAnalysisTask: :class:`tencentcloud.mps.v20190612.models.AiAnalysisTaskInput`
+        :type AiAnalysisTask: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskInput`
         :param AiRecognitionTask: 視訊内容識别類型任務參數。
-        :type AiRecognitionTask: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskInput`
+        :type AiRecognitionTask: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskInput`
         :param TaskNotifyConfig: 任務的事件通知訊息，不填代表不獲取事件通知。
-        :type TaskNotifyConfig: :class:`tencentcloud.mps.v20190612.models.TaskNotifyConfig`
+        :type TaskNotifyConfig: :class:`taifucloudcloud.mps.v20190612.models.TaskNotifyConfig`
         :param TasksPriority: 任務流的優先級，數值越大優先級越高，取值範圍是-10到 10，不填代表0。
         :type TasksPriority: int
         :param SessionId: 用于去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長 50 個字元，不帶或者帶空字串表示不做去重。
@@ -9429,10 +9429,10 @@ class ProhibitedConfigureInfo(AbstractModel):
         """
         :param AsrReviewInfo: 語音違禁控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AsrReviewInfo: :class:`tencentcloud.mps.v20190612.models.ProhibitedAsrReviewTemplateInfo`
+        :type AsrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.ProhibitedAsrReviewTemplateInfo`
         :param OcrReviewInfo: 文本違禁控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OcrReviewInfo: :class:`tencentcloud.mps.v20190612.models.ProhibitedOcrReviewTemplateInfo`
+        :type OcrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.ProhibitedOcrReviewTemplateInfo`
         """
         self.AsrReviewInfo = None
         self.OcrReviewInfo = None
@@ -9455,9 +9455,9 @@ class ProhibitedConfigureInfoForUpdate(AbstractModel):
     def __init__(self):
         """
         :param AsrReviewInfo: 語音違禁控制參數。
-        :type AsrReviewInfo: :class:`tencentcloud.mps.v20190612.models.ProhibitedAsrReviewTemplateInfoForUpdate`
+        :type AsrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.ProhibitedAsrReviewTemplateInfoForUpdate`
         :param OcrReviewInfo: 文本違禁控制參數。
-        :type OcrReviewInfo: :class:`tencentcloud.mps.v20190612.models.ProhibitedOcrReviewTemplateInfoForUpdate`
+        :type OcrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.ProhibitedOcrReviewTemplateInfoForUpdate`
         """
         self.AsrReviewInfo = None
         self.OcrReviewInfo = None
@@ -9534,7 +9534,7 @@ class RawImageWatermarkInput(AbstractModel):
     def __init__(self):
         """
         :param ImageContent: 浮水印圖片的輸入内容。支援 jpeg、png 圖片格式。
-        :type ImageContent: :class:`tencentcloud.mps.v20190612.models.MediaInputInfo`
+        :type ImageContent: :class:`taifucloudcloud.mps.v20190612.models.MediaInputInfo`
         :param Width: 浮水印的寬度。支援 %、px 兩種格式：
 <li>當字串以 % 結尾，表示浮水印 Width 爲視訊寬度的百分比大小，如 10% 表示 Width 爲視訊寬度的 10%；</li>
 <li>當字串以 px 結尾，表示浮水印 Width 單位爲像素，如 100px 表示 Width 爲 100 像素。</li>
@@ -9579,11 +9579,11 @@ class RawTranscodeParameter(AbstractModel):
 預設值：0。
         :type RemoveAudio: int
         :param VideoTemplate: 視訊流配置參數，當 RemoveVideo 爲 0，該欄位必填。
-        :type VideoTemplate: :class:`tencentcloud.mps.v20190612.models.VideoTemplateInfo`
+        :type VideoTemplate: :class:`taifucloudcloud.mps.v20190612.models.VideoTemplateInfo`
         :param AudioTemplate: 音訊流配置參數，當 RemoveAudio 爲 0，該欄位必填。
-        :type AudioTemplate: :class:`tencentcloud.mps.v20190612.models.AudioTemplateInfo`
+        :type AudioTemplate: :class:`taifucloudcloud.mps.v20190612.models.AudioTemplateInfo`
         :param TEHDConfig: 極速高清轉碼參數。
-        :type TEHDConfig: :class:`tencentcloud.mps.v20190612.models.TEHDConfig`
+        :type TEHDConfig: :class:`taifucloudcloud.mps.v20190612.models.TEHDConfig`
         """
         self.Container = None
         self.RemoveVideo = None
@@ -9633,7 +9633,7 @@ class RawWatermarkParameter(AbstractModel):
 預設值：0px。
         :type YPos: str
         :param ImageTemplate: 圖片浮水印範本，當 Type 爲 image，該欄位必填。當 Type 爲 text，該欄位無效。
-        :type ImageTemplate: :class:`tencentcloud.mps.v20190612.models.RawImageWatermarkInput`
+        :type ImageTemplate: :class:`taifucloudcloud.mps.v20190612.models.RawImageWatermarkInput`
         """
         self.Type = None
         self.CoordinateOrigin = None
@@ -9664,23 +9664,23 @@ class ResetWorkflowRequest(AbstractModel):
         :param WorkflowName: 工作流名稱，最多128字元。同一個用戶該名稱唯一。
         :type WorkflowName: str
         :param Trigger: 工作流綁定的觸發規則，當上傳視訊命中該規則到該對象時即觸發工作流。
-        :type Trigger: :class:`tencentcloud.mps.v20190612.models.WorkflowTrigger`
+        :type Trigger: :class:`taifucloudcloud.mps.v20190612.models.WorkflowTrigger`
         :param OutputStorage: 視訊處理的文件輸出配置。不填則繼承 Trigger 中的儲存位置。
-        :type OutputStorage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param OutputDir: 視訊處理生成的文件輸出的目标目錄，如`/movie/201907/`。如果不填，表示與觸發文件所在的目錄一緻，即`{inputDir}`。
         :type OutputDir: str
         :param MediaProcessTask: 視訊處理類型任務參數。
-        :type MediaProcessTask: :class:`tencentcloud.mps.v20190612.models.MediaProcessTaskInput`
+        :type MediaProcessTask: :class:`taifucloudcloud.mps.v20190612.models.MediaProcessTaskInput`
         :param AiContentReviewTask: 視訊内容審核類型任務參數。
-        :type AiContentReviewTask: :class:`tencentcloud.mps.v20190612.models.AiContentReviewTaskInput`
+        :type AiContentReviewTask: :class:`taifucloudcloud.mps.v20190612.models.AiContentReviewTaskInput`
         :param AiAnalysisTask: 視訊内容分析類型任務參數。
-        :type AiAnalysisTask: :class:`tencentcloud.mps.v20190612.models.AiAnalysisTaskInput`
+        :type AiAnalysisTask: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskInput`
         :param AiRecognitionTask: 視訊内容識别類型任務參數。
-        :type AiRecognitionTask: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskInput`
+        :type AiRecognitionTask: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskInput`
         :param TaskPriority: 工作流的優先級，數值越大優先級越高，取值範圍是 -10 到 10，不填代表 0。
         :type TaskPriority: int
         :param TaskNotifyConfig: 任務的事件通知訊息，不填代表不獲取事件通知。
-        :type TaskNotifyConfig: :class:`tencentcloud.mps.v20190612.models.TaskNotifyConfig`
+        :type TaskNotifyConfig: :class:`taifucloudcloud.mps.v20190612.models.TaskNotifyConfig`
         """
         self.WorkflowId = None
         self.WorkflowName = None
@@ -9753,12 +9753,12 @@ class SampleSnapshotTaskInput(AbstractModel):
         :type WatermarkSet: list of WatermarkInput
         :param OutputStorage: 采樣截圖後文件的目标儲存，不填則繼承上層的 OutputStorage 值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OutputStorage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param OutputObjectPath: 采樣截圖後圖片文件的輸出路徑，可以爲相對路徑或者絕對路徑。如果不填，則預設爲相對路徑：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。
         :type OutputObjectPath: str
         :param ObjectNumberFormat: 采樣截圖後輸出路徑中的`{number}`變量的規則。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ObjectNumberFormat: :class:`tencentcloud.mps.v20190612.models.NumberFormat`
+        :type ObjectNumberFormat: :class:`taifucloudcloud.mps.v20190612.models.NumberFormat`
         """
         self.Definition = None
         self.WatermarkSet = None
@@ -9826,9 +9826,9 @@ class SampleSnapshotTemplate(AbstractModel):
         :type SampleType: str
         :param SampleInterval: 采樣間隔。
         :type SampleInterval: int
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type UpdateTime: str
         :param FillType: 填充方式，當視訊流配置寬高參數與原始視訊的寬高比不一緻時，對轉碼的處理方式，即爲“填充”。可選填充方式：
 <li> stretch：拉伸，對每一幀進行拉伸，填滿整個畫面，可能導緻轉碼後的視訊被“壓扁“或者“拉長“；</li>
@@ -9884,12 +9884,12 @@ class SnapshotByTimeOffsetTaskInput(AbstractModel):
         :type WatermarkSet: list of WatermarkInput
         :param OutputStorage: 時間點截圖後文件的目标儲存，不填則繼承上層的 OutputStorage 值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OutputStorage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param OutputObjectPath: 時間點截圖後圖片文件的輸出路徑，可以爲相對路徑或者絕對路徑。如果不填，則預設爲相對路徑：`{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`。
         :type OutputObjectPath: str
         :param ObjectNumberFormat: 時間點截圖後輸出路徑中的`{number}`變量的規則。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ObjectNumberFormat: :class:`tencentcloud.mps.v20190612.models.NumberFormat`
+        :type ObjectNumberFormat: :class:`taifucloudcloud.mps.v20190612.models.NumberFormat`
         """
         self.Definition = None
         self.TimeOffsetSet = None
@@ -9955,9 +9955,9 @@ class SnapshotByTimeOffsetTemplate(AbstractModel):
         :type ResolutionAdaptive: str
         :param Format: 圖片格式。
         :type Format: str
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type UpdateTime: str
         :param FillType: 填充方式，當視訊流配置寬高參數與原始視訊的寬高比不一緻時，對轉碼的處理方式，即爲“填充”。可選填充方式：
 <li> stretch：拉伸，對每一幀進行拉伸，填滿整個畫面，可能導緻轉碼後的視訊被“壓扁“或者“拉長“；</li>
@@ -10197,7 +10197,7 @@ class TaskOutputStorage(AbstractModel):
         :type Type: str
         :param CosOutputStorage: 當 Type 爲 COS 時有效，則該項爲必填，表示視訊處理 COS 輸出位置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CosOutputStorage: :class:`tencentcloud.mps.v20190612.models.CosOutputStorage`
+        :type CosOutputStorage: :class:`taifucloudcloud.mps.v20190612.models.CosOutputStorage`
         """
         self.Type = None
         self.CosOutputStorage = None
@@ -10224,11 +10224,11 @@ class TaskSimpleInfo(AbstractModel):
 <li> EditMediaTask：視訊編輯任務；</li>
 <li> LiveProcessTask：直播處理任務。</li>
         :type TaskType: str
-        :param CreateTime: 任務創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param CreateTime: 任務創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type CreateTime: str
-        :param BeginProcessTime: 任務開始執行時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。若任務尚未開始，該欄位爲：0000-00-00T00:00:00Z。
+        :param BeginProcessTime: 任務開始執行時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。若任務尚未開始，該欄位爲：0000-00-00T00:00:00Z。
         :type BeginProcessTime: str
-        :param FinishTime: 任務結束時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。若任務尚未完成，該欄位爲：0000-00-00T00:00:00Z。
+        :param FinishTime: 任務結束時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。若任務尚未完成，該欄位爲：0000-00-00T00:00:00Z。
         :type FinishTime: str
         """
         self.TaskId = None
@@ -10254,9 +10254,9 @@ class TerrorismConfigureInfo(AbstractModel):
     def __init__(self):
         """
         :param ImgReviewInfo: 畫面鑒恐任務控制參數。
-        :type ImgReviewInfo: :class:`tencentcloud.mps.v20190612.models.TerrorismImgReviewTemplateInfo`
+        :type ImgReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.TerrorismImgReviewTemplateInfo`
         :param OcrReviewInfo: 文本鑒恐任務控制參數。
-        :type OcrReviewInfo: :class:`tencentcloud.mps.v20190612.models.TerrorismOcrReviewTemplateInfo`
+        :type OcrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.TerrorismOcrReviewTemplateInfo`
         """
         self.ImgReviewInfo = None
         self.OcrReviewInfo = None
@@ -10279,9 +10279,9 @@ class TerrorismConfigureInfoForUpdate(AbstractModel):
     def __init__(self):
         """
         :param ImgReviewInfo: 畫面鑒恐任務控制參數。
-        :type ImgReviewInfo: :class:`tencentcloud.mps.v20190612.models.TerrorismImgReviewTemplateInfoForUpdate`
+        :type ImgReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.TerrorismImgReviewTemplateInfoForUpdate`
         :param OcrReviewInfo: 文本鑒恐任務控制參數。
-        :type OcrReviewInfo: :class:`tencentcloud.mps.v20190612.models.TerrorismOcrReviewTemplateInfoForUpdate`
+        :type OcrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.TerrorismOcrReviewTemplateInfoForUpdate`
         """
         self.ImgReviewInfo = None
         self.OcrReviewInfo = None
@@ -10507,20 +10507,20 @@ class TranscodeTaskInput(AbstractModel):
         :param RawParameter: 視訊轉碼自定義參數，當 Definition 填 0 時有效。
 該參數用于高度定制場景，建議您優先使用 Definition 指定轉碼參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type RawParameter: :class:`tencentcloud.mps.v20190612.models.RawTranscodeParameter`
+        :type RawParameter: :class:`taifucloudcloud.mps.v20190612.models.RawTranscodeParameter`
         :param WatermarkSet: 浮水印清單，支援多張圖片或文字水印，最大可支援 10 張。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type WatermarkSet: list of WatermarkInput
         :param OutputStorage: 轉碼後文件的目标儲存，不填則繼承上層的 OutputStorage 值。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OutputStorage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param OutputObjectPath: 轉碼後主文件的輸出路徑，可以爲相對路徑或者絕對路徑。如果不填，則預設爲相對路徑：`{inputName}_transcode_{definition}.{format}`。
         :type OutputObjectPath: str
         :param SegmentObjectName: 轉碼後分片文件的輸出路徑（轉碼 HLS 時 ts 的路徑），只能爲相對路徑。如果不填，則預設爲：`{inputName}_transcode_{definition}_{number}.{format}`。
         :type SegmentObjectName: str
         :param ObjectNumberFormat: 轉碼後輸出路徑中的`{number}`變量的規則。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ObjectNumberFormat: :class:`tencentcloud.mps.v20190612.models.NumberFormat`
+        :type ObjectNumberFormat: :class:`taifucloudcloud.mps.v20190612.models.NumberFormat`
         """
         self.Definition = None
         self.RawParameter = None
@@ -10580,19 +10580,19 @@ class TranscodeTemplate(AbstractModel):
 <li>1：去除。</li>
         :type RemoveAudio: int
         :param VideoTemplate: 視訊流配置參數，僅當 RemoveVideo 爲 0，該欄位有效。
-        :type VideoTemplate: :class:`tencentcloud.mps.v20190612.models.VideoTemplateInfo`
+        :type VideoTemplate: :class:`taifucloudcloud.mps.v20190612.models.VideoTemplateInfo`
         :param AudioTemplate: 音訊流配置參數，僅當 RemoveAudio 爲 0，該欄位有效 。
-        :type AudioTemplate: :class:`tencentcloud.mps.v20190612.models.AudioTemplateInfo`
+        :type AudioTemplate: :class:`taifucloudcloud.mps.v20190612.models.AudioTemplateInfo`
         :param TEHDConfig: 極速高清轉碼參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TEHDConfig: :class:`tencentcloud.mps.v20190612.models.TEHDConfig`
+        :type TEHDConfig: :class:`taifucloudcloud.mps.v20190612.models.TEHDConfig`
         :param ContainerType: 封裝格式過濾條件，可選值：
 <li>Video：視訊格式，可以同時包含視訊流和音訊流的封裝格式；</li>
 <li>PureAudio：純音訊格式，只能包含音訊流的封裝格式板。</li>
         :type ContainerType: str
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type UpdateTime: str
         """
         self.Definition = None
@@ -10704,11 +10704,11 @@ class UserDefineConfigureInfo(AbstractModel):
     def __init__(self):
         """
         :param FaceReviewInfo: 用戶自定義人物審核控制參數。
-        :type FaceReviewInfo: :class:`tencentcloud.mps.v20190612.models.UserDefineFaceReviewTemplateInfo`
+        :type FaceReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.UserDefineFaceReviewTemplateInfo`
         :param AsrReviewInfo: 用戶自定義語音審核控制參數。
-        :type AsrReviewInfo: :class:`tencentcloud.mps.v20190612.models.UserDefineAsrTextReviewTemplateInfo`
+        :type AsrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.UserDefineAsrTextReviewTemplateInfo`
         :param OcrReviewInfo: 用戶自定義文本審核控制參數。
-        :type OcrReviewInfo: :class:`tencentcloud.mps.v20190612.models.UserDefineOcrTextReviewTemplateInfo`
+        :type OcrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.UserDefineOcrTextReviewTemplateInfo`
         """
         self.FaceReviewInfo = None
         self.AsrReviewInfo = None
@@ -10735,11 +10735,11 @@ class UserDefineConfigureInfoForUpdate(AbstractModel):
     def __init__(self):
         """
         :param FaceReviewInfo: 用戶自定義人物審核控制參數。
-        :type FaceReviewInfo: :class:`tencentcloud.mps.v20190612.models.UserDefineFaceReviewTemplateInfoForUpdate`
+        :type FaceReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.UserDefineFaceReviewTemplateInfoForUpdate`
         :param AsrReviewInfo: 用戶自定義語音審核控制參數。
-        :type AsrReviewInfo: :class:`tencentcloud.mps.v20190612.models.UserDefineAsrTextReviewTemplateInfoForUpdate`
+        :type AsrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.UserDefineAsrTextReviewTemplateInfoForUpdate`
         :param OcrReviewInfo: 用戶自定義文本審核控制參數。
-        :type OcrReviewInfo: :class:`tencentcloud.mps.v20190612.models.UserDefineOcrTextReviewTemplateInfoForUpdate`
+        :type OcrReviewInfo: :class:`taifucloudcloud.mps.v20190612.models.UserDefineOcrTextReviewTemplateInfoForUpdate`
         """
         self.FaceReviewInfo = None
         self.AsrReviewInfo = None
@@ -11024,7 +11024,7 @@ class WatermarkInput(AbstractModel):
         :type Definition: int
         :param RawParameter: 浮水印自定義參數，當 Definition 填 0 時有效。
 該參數用于高度定制場景，建議您優先使用 Definition 指定浮水印參數。
-        :type RawParameter: :class:`tencentcloud.mps.v20190612.models.RawWatermarkParameter`
+        :type RawParameter: :class:`taifucloudcloud.mps.v20190612.models.RawWatermarkParameter`
         :param TextContent: 文字内容，長度不超過100個字元。僅當浮水印類型爲文字水印時填寫。
         :type TextContent: str
         :param SvgContent: SVG 内容。長度不超過 2000000 個字元。僅當浮水印類型爲 SVG 水印時填寫。
@@ -11086,16 +11086,16 @@ class WatermarkTemplate(AbstractModel):
         :type YPos: str
         :param ImageTemplate: 圖片浮水印範本，僅當 Type 爲 image，該欄位有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ImageTemplate: :class:`tencentcloud.mps.v20190612.models.ImageWatermarkTemplate`
+        :type ImageTemplate: :class:`taifucloudcloud.mps.v20190612.models.ImageWatermarkTemplate`
         :param TextTemplate: 文字浮水印範本，僅當 Type 爲 text，該欄位有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TextTemplate: :class:`tencentcloud.mps.v20190612.models.TextWatermarkTemplateInput`
+        :type TextTemplate: :class:`taifucloudcloud.mps.v20190612.models.TextWatermarkTemplateInput`
         :param SvgTemplate: SVG 浮水印範本，當 Type 爲 svg，該欄位有效。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SvgTemplate: :class:`tencentcloud.mps.v20190612.models.SvgWatermarkInput`
-        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :type SvgTemplate: :class:`taifucloudcloud.mps.v20190612.models.SvgWatermarkInput`
+        :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type CreateTime: str
-        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type UpdateTime: str
         :param CoordinateOrigin: 原點位置，可選值：
 <li>topLeft：表示坐标原點位于視訊圖像左上角，浮水印原點爲圖片或文字的左上角；</li>
@@ -11155,32 +11155,32 @@ class WorkflowInfo(AbstractModel):
 <li>Disabled：已禁用。</li>
         :type Status: str
         :param Trigger: 工作流綁定的輸入規則，當上傳視訊命中該規則到該對象時即觸發工作流。
-        :type Trigger: :class:`tencentcloud.mps.v20190612.models.WorkflowTrigger`
+        :type Trigger: :class:`taifucloudcloud.mps.v20190612.models.WorkflowTrigger`
         :param OutputStorage: 視訊處理的文件輸出儲存位置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OutputStorage: :class:`tencentcloud.mps.v20190612.models.TaskOutputStorage`
+        :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param MediaProcessTask: 視訊處理類型任務參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MediaProcessTask: :class:`tencentcloud.mps.v20190612.models.MediaProcessTaskInput`
+        :type MediaProcessTask: :class:`taifucloudcloud.mps.v20190612.models.MediaProcessTaskInput`
         :param AiContentReviewTask: 視訊内容審核類型任務參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AiContentReviewTask: :class:`tencentcloud.mps.v20190612.models.AiContentReviewTaskInput`
+        :type AiContentReviewTask: :class:`taifucloudcloud.mps.v20190612.models.AiContentReviewTaskInput`
         :param AiAnalysisTask: 視訊内容分析類型任務參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AiAnalysisTask: :class:`tencentcloud.mps.v20190612.models.AiAnalysisTaskInput`
+        :type AiAnalysisTask: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskInput`
         :param AiRecognitionTask: 視訊内容識别類型任務參數。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AiRecognitionTask: :class:`tencentcloud.mps.v20190612.models.AiRecognitionTaskInput`
+        :type AiRecognitionTask: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskInput`
         :param TaskNotifyConfig: 任務的事件通知訊息，不填代表不獲取事件通知。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TaskNotifyConfig: :class:`tencentcloud.mps.v20190612.models.TaskNotifyConfig`
+        :type TaskNotifyConfig: :class:`taifucloudcloud.mps.v20190612.models.TaskNotifyConfig`
         :param TaskPriority: 任務流的優先級，數值越大優先級越高，取值範圍是 -10 到 10，不填代表 0。
         :type TaskPriority: int
         :param OutputDir: 視訊處理生成的文件輸出的目标目錄，如`/movie/201907/`。
         :type OutputDir: str
-        :param CreateTime: 工作流創建時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param CreateTime: 工作流創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type CreateTime: str
-        :param UpdateTime: 工作流最後修改時間，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        :param UpdateTime: 工作流最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type UpdateTime: str
         """
         self.WorkflowId = None
@@ -11249,10 +11249,10 @@ class WorkflowTask(AbstractModel):
         :type Message: str
         :param InputInfo: 視訊處理的目标文件訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type InputInfo: :class:`tencentcloud.mps.v20190612.models.MediaInputInfo`
+        :type InputInfo: :class:`taifucloudcloud.mps.v20190612.models.MediaInputInfo`
         :param MetaData: 原始視訊的元訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MetaData: :class:`tencentcloud.mps.v20190612.models.MediaMetaData`
+        :type MetaData: :class:`taifucloudcloud.mps.v20190612.models.MediaMetaData`
         :param MediaProcessResultSet: 視訊處理任務的執行狀态與結果。
         :type MediaProcessResultSet: list of MediaProcessTaskResult
         :param AiContentReviewResultSet: 視訊内容審核任務的執行狀态與結果。
@@ -11322,7 +11322,7 @@ class WorkflowTrigger(AbstractModel):
         :type Type: str
         :param CosFileUploadTrigger: 當 Type 爲 CosFileUpload 時必填且有效，爲 COS 觸發規則。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CosFileUploadTrigger: :class:`tencentcloud.mps.v20190612.models.CosFileUploadTrigger`
+        :type CosFileUploadTrigger: :class:`taifucloudcloud.mps.v20190612.models.CosFileUploadTrigger`
         """
         self.Type = None
         self.CosFileUploadTrigger = None

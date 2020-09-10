@@ -23,4 +23,3 @@ inputs:
             suffix: 
           events: cos:ObjectCreated:*
           enable: true
-

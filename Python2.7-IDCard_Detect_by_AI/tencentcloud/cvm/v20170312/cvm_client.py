@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cvm.v20170312 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cvm.v20170312 import models
 
 
 class CvmClient(AbstractClient):
     _apiVersion = '2017-03-12'
-    _endpoint = 'cvm.tencentcloudapi.com'
+    _endpoint = 'cvm.taifucloudcloudapi.com'
 
 
     def AllocateHosts(self, request):
@@ -30,8 +30,8 @@ class CvmClient(AbstractClient):
         * 當HostChargeType爲PREPAID時，必須指定HostChargePrepaid參數。
 
         :param request: 調用AllocateHosts所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.AllocateHostsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.AllocateHostsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.AllocateHostsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.AllocateHostsResponse`
 
         """
         try:
@@ -63,8 +63,8 @@ class CvmClient(AbstractClient):
         * 支援批次操作。每次請求批次實例的上限爲100。如果批次實例存在不允許操作的實例，操作會以特定錯誤碼返回。
 
         :param request: 調用AssociateInstancesKeyPairs所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.AssociateInstancesKeyPairsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.AssociateInstancesKeyPairsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.AssociateInstancesKeyPairsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.AssociateInstancesKeyPairsResponse`
 
         """
         try:
@@ -91,8 +91,8 @@ class CvmClient(AbstractClient):
         """本介面 (AssociateSecurityGroups) 用于綁定安全組到指定實例。
 
         :param request: 調用AssociateSecurityGroups所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.AssociateSecurityGroupsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.AssociateSecurityGroupsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.AssociateSecurityGroupsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.AssociateSecurityGroupsResponse`
 
         """
         try:
@@ -116,11 +116,11 @@ class CvmClient(AbstractClient):
 
 
     def CreateDisasterRecoverGroup(self, request):
-        """本介面 (CreateDisasterRecoverGroup)用于創建[分散置放群組](https://cloud.tencent.com/document/product/213/15486)。創建好的置放群組，可在[創建實例](https://cloud.tencent.com/document/api/213/15730)時指定。
+        """本介面 (CreateDisasterRecoverGroup)用于創建[分散置放群組](https://cloud.taifucloud.com/document/product/213/15486)。創建好的置放群組，可在[創建實例](https://cloud.taifucloud.com/document/api/213/15730)時指定。
 
         :param request: 調用CreateDisasterRecoverGroup所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.CreateDisasterRecoverGroupRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.CreateDisasterRecoverGroupResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.CreateDisasterRecoverGroupRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.CreateDisasterRecoverGroupResponse`
 
         """
         try:
@@ -147,8 +147,8 @@ class CvmClient(AbstractClient):
         """本介面(CreateImage)用于将實例的系統盤制作爲新映像，創建後的映像可以用于創建實例。
 
         :param request: 調用CreateImage所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.CreateImageRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.CreateImageResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.CreateImageRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.CreateImageResponse`
 
         """
         try:
@@ -180,8 +180,8 @@ class CvmClient(AbstractClient):
         * Top Cloud 不會保存用戶的私鑰，請妥善保管。
 
         :param request: 調用CreateKeyPair所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.CreateKeyPairRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.CreateKeyPairResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.CreateKeyPairRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.CreateKeyPairResponse`
 
         """
         try:
@@ -205,11 +205,11 @@ class CvmClient(AbstractClient):
 
 
     def DeleteDisasterRecoverGroups(self, request):
-        """本介面 (DeleteDisasterRecoverGroups)用于删除[分散置放群組](https://cloud.tencent.com/document/product/213/15486)。只有空的置放群組才能被删除，非空的群組需要先銷毀組内所有雲主機，才能執行删除操作，不然會産生删除置放群組失敗的錯誤。
+        """本介面 (DeleteDisasterRecoverGroups)用于删除[分散置放群組](https://cloud.taifucloud.com/document/product/213/15486)。只有空的置放群組才能被删除，非空的群組需要先銷毀組内所有雲主機，才能執行删除操作，不然會産生删除置放群組失敗的錯誤。
 
         :param request: 調用DeleteDisasterRecoverGroups所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DeleteDisasterRecoverGroupsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DeleteDisasterRecoverGroupsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DeleteDisasterRecoverGroupsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DeleteDisasterRecoverGroupsResponse`
 
         """
         try:
@@ -235,13 +235,13 @@ class CvmClient(AbstractClient):
     def DeleteImages(self, request):
         """本介面（DeleteImages）用于删除一個或多個映像。
 
-        * 當[映像狀态](https://cloud.tencent.com/document/api/213/9452#image_state)爲`創建中`和`使用中`時, 不允許删除。映像狀态可以通過[DescribeImages](https://cloud.tencent.com/document/api/213/9418)獲取。
+        * 當[映像狀态](https://cloud.taifucloud.com/document/api/213/9452#image_state)爲`創建中`和`使用中`時, 不允許删除。映像狀态可以通過[DescribeImages](https://cloud.taifucloud.com/document/api/213/9418)獲取。
         * 每個地域最多只支援創建10個自定義映像，删除映像可以釋放帳戶的配額。
         * 當映像正在被其它帳戶分享時，不允許删除。
 
         :param request: 調用DeleteImages所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DeleteImagesRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DeleteImagesResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DeleteImagesRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DeleteImagesResponse`
 
         """
         try:
@@ -271,8 +271,8 @@ class CvmClient(AbstractClient):
         * 不能删除已被實例或映像引用的金鑰對，所以需要獨立判斷是否所有金鑰對都被成功删除。
 
         :param request: 調用DeleteKeyPairs所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DeleteKeyPairsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DeleteKeyPairsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DeleteKeyPairsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DeleteKeyPairsResponse`
 
         """
         try:
@@ -296,11 +296,11 @@ class CvmClient(AbstractClient):
 
 
     def DescribeDisasterRecoverGroupQuota(self, request):
-        """本介面 (DescribeDisasterRecoverGroupQuota)用于查詢[分散置放群組](https://cloud.tencent.com/document/product/213/15486)配額。
+        """本介面 (DescribeDisasterRecoverGroupQuota)用于查詢[分散置放群組](https://cloud.taifucloud.com/document/product/213/15486)配額。
 
         :param request: 調用DescribeDisasterRecoverGroupQuota所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeDisasterRecoverGroupQuotaRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeDisasterRecoverGroupQuotaResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeDisasterRecoverGroupQuotaRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeDisasterRecoverGroupQuotaResponse`
 
         """
         try:
@@ -324,11 +324,11 @@ class CvmClient(AbstractClient):
 
 
     def DescribeDisasterRecoverGroups(self, request):
-        """本介面 (DescribeDisasterRecoverGroups)用于查詢[分散置放群組](https://cloud.tencent.com/document/product/213/15486)訊息。
+        """本介面 (DescribeDisasterRecoverGroups)用于查詢[分散置放群組](https://cloud.taifucloud.com/document/product/213/15486)訊息。
 
         :param request: 調用DescribeDisasterRecoverGroups所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeDisasterRecoverGroupsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeDisasterRecoverGroupsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeDisasterRecoverGroupsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeDisasterRecoverGroupsResponse`
 
         """
         try:
@@ -355,8 +355,8 @@ class CvmClient(AbstractClient):
         """本介面 (DescribeHosts) 用于獲取一個或多個CDH實例的詳細訊息。
 
         :param request: 調用DescribeHosts所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeHostsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeHostsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeHostsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeHostsResponse`
 
         """
         try:
@@ -383,8 +383,8 @@ class CvmClient(AbstractClient):
         """本介面(DescribeImageQuota)用于查詢用戶帳号的映像配額。
 
         :param request: 調用DescribeImageQuota所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeImageQuotaRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeImageQuotaResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeImageQuotaRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeImageQuotaResponse`
 
         """
         try:
@@ -411,8 +411,8 @@ class CvmClient(AbstractClient):
         """本介面（DescribeImageSharePermission）用于查詢映像分享訊息。
 
         :param request: 調用DescribeImageSharePermission所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeImageSharePermissionRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeImageSharePermissionResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeImageSharePermissionRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeImageSharePermissionResponse`
 
         """
         try:
@@ -442,8 +442,8 @@ class CvmClient(AbstractClient):
         * 指定偏移(Offset)和限制(Limit)來選擇結果中的一部分，預設返回滿足條件的前20個映像訊息。
 
         :param request: 調用DescribeImages所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeImagesRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeImagesResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeImagesRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeImagesResponse`
 
         """
         try:
@@ -470,8 +470,8 @@ class CvmClient(AbstractClient):
         """檢視可以導入的映像作業系統訊息。
 
         :param request: 調用DescribeImportImageOs所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeImportImageOsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeImportImageOsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeImportImageOsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeImportImageOsResponse`
 
         """
         try:
@@ -498,8 +498,8 @@ class CvmClient(AbstractClient):
         """本介面（DescribeInstanceFamilyConfigs）查詢當前用戶和地域所支援的機型族清單訊息。
 
         :param request: 調用DescribeInstanceFamilyConfigs所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeInstanceFamilyConfigsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeInstanceFamilyConfigsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeInstanceFamilyConfigsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeInstanceFamilyConfigsResponse`
 
         """
         try:
@@ -529,8 +529,8 @@ class CvmClient(AbstractClient):
         * 介面返回實例的所有頻寬配置訊息（包含曆史的頻寬配置訊息）。
 
         :param request: 調用DescribeInstanceInternetBandwidthConfigs所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeInstanceInternetBandwidthConfigsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeInstanceInternetBandwidthConfigsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeInstanceInternetBandwidthConfigsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeInstanceInternetBandwidthConfigsResponse`
 
         """
         try:
@@ -560,8 +560,8 @@ class CvmClient(AbstractClient):
         * 如果參數爲空，返回指定地域的所有實例機型配置。
 
         :param request: 調用DescribeInstanceTypeConfigs所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeInstanceTypeConfigsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeInstanceTypeConfigsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeInstanceTypeConfigsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeInstanceTypeConfigsResponse`
 
         """
         try:
@@ -601,8 +601,8 @@ class CvmClient(AbstractClient):
         ```
 
         :param request: 調用DescribeInstanceVncUrl所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeInstanceVncUrlRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeInstanceVncUrlResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeInstanceVncUrlRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeInstanceVncUrlResponse`
 
         """
         try:
@@ -632,8 +632,8 @@ class CvmClient(AbstractClient):
         * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的實例。
 
         :param request: 調用DescribeInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeInstancesRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeInstancesResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeInstancesRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeInstancesResponse`
 
         """
         try:
@@ -662,8 +662,8 @@ class CvmClient(AbstractClient):
         * 目前支援調整配置操作限制次數查詢。
 
         :param request: 調用DescribeInstancesOperationLimit所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeInstancesOperationLimitRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeInstancesOperationLimitResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeInstancesOperationLimitRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeInstancesOperationLimitResponse`
 
         """
         try:
@@ -693,8 +693,8 @@ class CvmClient(AbstractClient):
         * 如果參數爲空，返回當前用戶一定數量（Limit所指定的數量，預設爲20）的實例狀态。
 
         :param request: 調用DescribeInstancesStatus所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeInstancesStatusRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeInstancesStatusResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeInstancesStatusRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeInstancesStatusResponse`
 
         """
         try:
@@ -721,8 +721,8 @@ class CvmClient(AbstractClient):
         """本介面（DescribeInternetChargeTypeConfigs）用于查詢網絡的計費類型。
 
         :param request: 調用DescribeInternetChargeTypeConfigs所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeInternetChargeTypeConfigsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeInternetChargeTypeConfigsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeInternetChargeTypeConfigsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeInternetChargeTypeConfigsResponse`
 
         """
         try:
@@ -751,8 +751,8 @@ class CvmClient(AbstractClient):
         * 金鑰對是通過一種算法生成的一對金鑰，在生成的金鑰對中，一個向外界公開，稱爲公鑰；另一個用戶自己保留，稱爲私鑰。金鑰對的公鑰内容可以通過這個介面查詢，但私鑰内容系統不保留。
 
         :param request: 調用DescribeKeyPairs所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeKeyPairsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeKeyPairsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeKeyPairsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeKeyPairsResponse`
 
         """
         try:
@@ -779,8 +779,8 @@ class CvmClient(AbstractClient):
         """本介面(DescribeRegions)用于查詢地域訊息。
 
         :param request: 調用DescribeRegions所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeRegionsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeRegionsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeRegionsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeRegionsResponse`
 
         """
         try:
@@ -807,8 +807,8 @@ class CvmClient(AbstractClient):
         """本介面(DescribeZoneInstanceConfigInfos) 獲取可用區的機型訊息。
 
         :param request: 調用DescribeZoneInstanceConfigInfos所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeZoneInstanceConfigInfosRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeZoneInstanceConfigInfosResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeZoneInstanceConfigInfosRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeZoneInstanceConfigInfosResponse`
 
         """
         try:
@@ -835,8 +835,8 @@ class CvmClient(AbstractClient):
         """本介面(DescribeZones)用于查詢可用區訊息。
 
         :param request: 調用DescribeZones所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DescribeZonesRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DescribeZonesResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DescribeZonesRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DescribeZonesResponse`
 
         """
         try:
@@ -862,14 +862,14 @@ class CvmClient(AbstractClient):
     def DisassociateInstancesKeyPairs(self, request):
         """本介面 (DisassociateInstancesKeyPairs) 用于解除實例的金鑰綁定關系。
 
-        * 只支援[`STOPPED`](https://cloud.tencent.com/document/api/213/9452#INSTANCE_STATE)狀态的`Linux`作業系統的實例。
+        * 只支援[`STOPPED`](https://cloud.taifucloud.com/document/api/213/9452#INSTANCE_STATE)狀态的`Linux`作業系統的實例。
         * 解綁金鑰後，實例可以通過原來設置的密碼登入。
-        * 如果原來沒有設置密碼，解綁後将無法使用 `SSH` 登入。可以調用 [ResetInstancesPassword](https://cloud.tencent.com/document/api/213/15736) 介面來設置登入密碼。
+        * 如果原來沒有設置密碼，解綁後将無法使用 `SSH` 登入。可以調用 [ResetInstancesPassword](https://cloud.taifucloud.com/document/api/213/15736) 介面來設置登入密碼。
         * 支援批次操作。每次請求批次實例的上限爲100。如果批次實例存在不允許操作的實例，操作會以特定錯誤碼返回。
 
         :param request: 調用DisassociateInstancesKeyPairs所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DisassociateInstancesKeyPairsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DisassociateInstancesKeyPairsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DisassociateInstancesKeyPairsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DisassociateInstancesKeyPairsResponse`
 
         """
         try:
@@ -896,8 +896,8 @@ class CvmClient(AbstractClient):
         """本介面 (DisassociateSecurityGroups) 用于解綁實例的指定安全組。
 
         :param request: 調用DisassociateSecurityGroups所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.DisassociateSecurityGroupsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.DisassociateSecurityGroupsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.DisassociateSecurityGroupsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.DisassociateSecurityGroupsResponse`
 
         """
         try:
@@ -924,8 +924,8 @@ class CvmClient(AbstractClient):
         """本介面(ImportImage)用于導入映像，導入後的映像可用于創建實例。
 
         :param request: 調用ImportImage所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ImportImageRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ImportImageResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ImportImageRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ImportImageResponse`
 
         """
         try:
@@ -951,13 +951,13 @@ class CvmClient(AbstractClient):
     def ImportKeyPair(self, request):
         """本介面 (ImportKeyPair) 用于導入金鑰對。
 
-        * 本介面的功能是将金鑰對導入到用戶帳戶，并不會自動綁定到實例。如需綁定可以使用[AssociasteInstancesKeyPair](https://cloud.tencent.com/document/api/213/9404)介面。
+        * 本介面的功能是将金鑰對導入到用戶帳戶，并不會自動綁定到實例。如需綁定可以使用[AssociasteInstancesKeyPair](https://cloud.taifucloud.com/document/api/213/9404)介面。
         * 需指定金鑰對名稱以及該金鑰對的公鑰文本。
         * 如果用戶只有私鑰，可以通過 `SSL` 工具将私鑰轉換成公鑰後再導入。
 
         :param request: 調用ImportKeyPair所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ImportKeyPairRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ImportKeyPairResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ImportKeyPairRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ImportKeyPairResponse`
 
         """
         try:
@@ -987,8 +987,8 @@ class CvmClient(AbstractClient):
         * 關機不收費的實例、`BC1`和`BS1`機型族的實例、設置定時銷毀的實例不支援該操作。
 
         :param request: 調用InquiryPriceModifyInstancesChargeType所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.InquiryPriceModifyInstancesChargeTypeRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.InquiryPriceModifyInstancesChargeTypeResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.InquiryPriceModifyInstancesChargeTypeRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.InquiryPriceModifyInstancesChargeTypeResponse`
 
         """
         try:
@@ -1017,8 +1017,8 @@ class CvmClient(AbstractClient):
         * 只支援查詢包年包月實例的續約價格。
 
         :param request: 調用InquiryPriceRenewInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.InquiryPriceRenewInstancesRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.InquiryPriceRenewInstancesResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.InquiryPriceRenewInstancesRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.InquiryPriceRenewInstancesResponse`
 
         """
         try:
@@ -1045,8 +1045,8 @@ class CvmClient(AbstractClient):
         """本介面 (InquiryPriceResetInstance) 用于重裝實例詢價。* 如果指定了`ImageId`參數，則使用指定的映像進行重裝詢價；否則按照當前實例使用的映像進行重裝詢價。* 目前只支援[系統盤類型](/document/api/213/9452#block_device)是`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`類型的實例使用該介面實現`Linux`和`Windows`作業系統切換的重裝詢價。* 目前不支援海外地域的實例使用該介面實現`Linux`和`Windows`作業系統切換的重裝詢價。
 
         :param request: 調用InquiryPriceResetInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.InquiryPriceResetInstanceRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.InquiryPriceResetInstanceResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.InquiryPriceResetInstanceRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.InquiryPriceResetInstanceResponse`
 
         """
         try:
@@ -1072,16 +1072,16 @@ class CvmClient(AbstractClient):
     def InquiryPriceResetInstancesInternetMaxBandwidth(self, request):
         """本介面 (InquiryPriceResetInstancesInternetMaxBandwidth) 用于調整實例公網頻寬上限詢價。
 
-        * 不同機型頻寬上限範圍不一緻，具體限制詳見[購買網絡頻寬](https://cloud.tencent.com/document/product/213/509)。
-        * 對于`BANDWIDTH_PREPAID`計費方式的頻寬，需要輸入參數`StartTime`和`EndTime`，指定調整後的頻寬的生效時間段。在這種場景下目前不支援調小頻寬，會涉及扣費，請确保帳戶餘額充足。可通過[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/378/4397)介面查詢帳戶餘額。
+        * 不同機型頻寬上限範圍不一緻，具體限制詳見[購買網絡頻寬](https://cloud.taifucloud.com/document/product/213/509)。
+        * 對于`BANDWIDTH_PREPAID`計費方式的頻寬，需要輸入參數`StartTime`和`EndTime`，指定調整後的頻寬的生效時間段。在這種場景下目前不支援調小頻寬，會涉及扣費，請确保帳戶餘額充足。可通過[`DescribeAccountBalance`](https://cloud.taifucloud.com/document/product/378/4397)介面查詢帳戶餘額。
         * 對于 `TRAFFIC_POSTPAID_BY_HOUR`、 `BANDWIDTH_POSTPAID_BY_HOUR` 和 `BANDWIDTH_PACKAGE` 計費方式的頻寬，使用該介面調整頻寬上限是實時生效的，可以在頻寬允許的範圍内調大或者調小頻寬，不支援輸入參數 `StartTime` 和 `EndTime` 。
         * 介面不支援調整`BANDWIDTH_POSTPAID_BY_MONTH`計費方式的頻寬。
         * 介面不支援批次調整 `BANDWIDTH_PREPAID` 和 `BANDWIDTH_POSTPAID_BY_HOUR` 計費方式的頻寬。
         * 介面不支援批次調整混合計費方式的頻寬。例如不支援同時調整`TRAFFIC_POSTPAID_BY_HOUR`和`BANDWIDTH_PACKAGE`計費方式的頻寬。
 
         :param request: 調用InquiryPriceResetInstancesInternetMaxBandwidth所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.InquiryPriceResetInstancesInternetMaxBandwidthRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.InquiryPriceResetInstancesInternetMaxBandwidthResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.InquiryPriceResetInstancesInternetMaxBandwidthRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.InquiryPriceResetInstancesInternetMaxBandwidthResponse`
 
         """
         try:
@@ -1107,13 +1107,13 @@ class CvmClient(AbstractClient):
     def InquiryPriceResetInstancesType(self, request):
         """本介面 (InquiryPriceResetInstancesType) 用于調整實例的機型詢價。
 
-        * 目前只支援[系統盤類型](https://cloud.tencent.com/document/api/213/9452#block_device)是`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`類型的實例使用該介面進行調整機型詢價。
-        * 目前不支援[CDH](https://cloud.tencent.com/document/product/416)實例使用該介面調整機型詢價。
-        * 對于包年包月實例，使用該介面會涉及扣費，請确保帳戶餘額充足。可通過[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/378/4397)介面查詢帳戶餘額。
+        * 目前只支援[系統盤類型](https://cloud.taifucloud.com/document/api/213/9452#block_device)是`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`類型的實例使用該介面進行調整機型詢價。
+        * 目前不支援[CDH](https://cloud.taifucloud.com/document/product/416)實例使用該介面調整機型詢價。
+        * 對于包年包月實例，使用該介面會涉及扣費，請确保帳戶餘額充足。可通過[`DescribeAccountBalance`](https://cloud.taifucloud.com/document/product/378/4397)介面查詢帳戶餘額。
 
         :param request: 調用InquiryPriceResetInstancesType所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.InquiryPriceResetInstancesTypeRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.InquiryPriceResetInstancesTypeResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.InquiryPriceResetInstancesTypeRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.InquiryPriceResetInstancesTypeResponse`
 
         """
         try:
@@ -1139,12 +1139,12 @@ class CvmClient(AbstractClient):
     def InquiryPriceResizeInstanceDisks(self, request):
         """本介面 (InquiryPriceResizeInstanceDisks) 用于擴容實例的數據盤詢價。
 
-        * 目前只支援擴容非彈性數據盤（[`DescribeDisks`](https://cloud.tencent.com/document/api/362/16315)介面返回值中的`Portable`爲`false`表示非彈性）詢價，且[數據盤類型](/document/api/213/9452#block_device)爲：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。
-        * 目前不支援[CDH](https://cloud.tencent.com/document/product/416)實例使用該介面擴容數據盤詢價。* 僅支援包年包月實例随機器購買的數據盤。* 目前只支援擴容一塊數據盤詢價。
+        * 目前只支援擴容非彈性數據盤（[`DescribeDisks`](https://cloud.taifucloud.com/document/api/362/16315)介面返回值中的`Portable`爲`false`表示非彈性）詢價，且[數據盤類型](/document/api/213/9452#block_device)爲：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。
+        * 目前不支援[CDH](https://cloud.taifucloud.com/document/product/416)實例使用該介面擴容數據盤詢價。* 僅支援包年包月實例随機器購買的數據盤。* 目前只支援擴容一塊數據盤詢價。
 
         :param request: 調用InquiryPriceResizeInstanceDisks所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.InquiryPriceResizeInstanceDisksRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.InquiryPriceResizeInstanceDisksResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.InquiryPriceResizeInstanceDisksRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.InquiryPriceResizeInstanceDisksResponse`
 
         """
         try:
@@ -1168,11 +1168,11 @@ class CvmClient(AbstractClient):
 
 
     def InquiryPriceRunInstances(self, request):
-        """本介面(InquiryPriceRunInstances)用于創建實例詢價。本介面僅允許針對購買限制範圍内的實例配置進行詢價, 詳見：[創建實例](https://cloud.tencent.com/document/api/213/15730)。
+        """本介面(InquiryPriceRunInstances)用于創建實例詢價。本介面僅允許針對購買限制範圍内的實例配置進行詢價, 詳見：[創建實例](https://cloud.taifucloud.com/document/api/213/15730)。
 
         :param request: 調用InquiryPriceRunInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.InquiryPriceRunInstancesRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.InquiryPriceRunInstancesResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.InquiryPriceRunInstancesRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.InquiryPriceRunInstancesResponse`
 
         """
         try:
@@ -1196,11 +1196,11 @@ class CvmClient(AbstractClient):
 
 
     def ModifyDisasterRecoverGroupAttribute(self, request):
-        """本介面 (ModifyDisasterRecoverGroupAttribute)用于修改[分散置放群組](https://cloud.tencent.com/document/product/213/15486)屬性。
+        """本介面 (ModifyDisasterRecoverGroupAttribute)用于修改[分散置放群組](https://cloud.taifucloud.com/document/product/213/15486)屬性。
 
         :param request: 調用ModifyDisasterRecoverGroupAttribute所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ModifyDisasterRecoverGroupAttributeRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ModifyDisasterRecoverGroupAttributeResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ModifyDisasterRecoverGroupAttributeRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ModifyDisasterRecoverGroupAttributeResponse`
 
         """
         try:
@@ -1227,8 +1227,8 @@ class CvmClient(AbstractClient):
         """本介面（ModifyHostsAttribute）用于修改CDH實例的屬性，如實例名稱和續約标記等。參數HostName和RenewFlag必須設置其中一個，但不能同時設置。
 
         :param request: 調用ModifyHostsAttribute所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ModifyHostsAttributeRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ModifyHostsAttributeResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ModifyHostsAttributeRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ModifyHostsAttributeResponse`
 
         """
         try:
@@ -1257,8 +1257,8 @@ class CvmClient(AbstractClient):
         * 已分享的映像無法修改屬性。
 
         :param request: 調用ModifyImageAttribute所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ModifyImageAttributeRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ModifyImageAttributeResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ModifyImageAttributeRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ModifyImageAttributeResponse`
 
         """
         try:
@@ -1290,8 +1290,8 @@ class CvmClient(AbstractClient):
         * 只支援分享到對方帳戶相同地域。
 
         :param request: 調用ModifyImageSharePermission所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ModifyImageSharePermissionRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ModifyImageSharePermissionResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ModifyImageSharePermissionRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ModifyImageSharePermissionResponse`
 
         """
         try:
@@ -1322,8 +1322,8 @@ class CvmClient(AbstractClient):
         * 修改關聯安全組時，子機原來關聯的安全組會被解綁。
 
         :param request: 調用ModifyInstancesAttribute所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ModifyInstancesAttributeRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ModifyInstancesAttributeResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ModifyInstancesAttributeRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ModifyInstancesAttributeResponse`
 
         """
         try:
@@ -1353,8 +1353,8 @@ class CvmClient(AbstractClient):
         * 關機不收費的實例、`BC1`和`BS1`機型族的實例、設置定時銷毀的實例不支援該操作。
 
         :param request: 調用ModifyInstancesChargeType所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ModifyInstancesChargeTypeRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ModifyInstancesChargeTypeResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ModifyInstancesChargeTypeRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ModifyInstancesChargeTypeResponse`
 
         """
         try:
@@ -1380,14 +1380,14 @@ class CvmClient(AbstractClient):
     def ModifyInstancesProject(self, request):
         """本介面 (ModifyInstancesProject) 用于修改實例所屬項目。
 
-        * 項目爲一個虛拟概念，用戶可以在一個帳戶下面建立多個項目，每個項目中管理不同的資源；将多個不同實例分屬到不同項目中，後續使用 [`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)介面查詢實例，項目ID可用于過濾結果。
-        * 綁定負載均衡的實例不支援修改實例所屬項目，請先使用[`DeregisterInstancesFromLoadBalancer`](https://cloud.tencent.com/document/api/214/1258)介面解綁負載均衡。
-        * 修改實例所屬項目會自動解關聯實例原來關聯的安全組，修改完成後可能使用[`ModifySecurityGroupsOfInstance`](https://cloud.tencent.com/document/api/213/1367)介面關聯安全組。
+        * 項目爲一個虛拟概念，用戶可以在一個帳戶下面建立多個項目，每個項目中管理不同的資源；将多個不同實例分屬到不同項目中，後續使用 [`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/9388)介面查詢實例，項目ID可用于過濾結果。
+        * 綁定負載均衡的實例不支援修改實例所屬項目，請先使用[`DeregisterInstancesFromLoadBalancer`](https://cloud.taifucloud.com/document/api/214/1258)介面解綁負載均衡。
+        * 修改實例所屬項目會自動解關聯實例原來關聯的安全組，修改完成後可能使用[`ModifySecurityGroupsOfInstance`](https://cloud.taifucloud.com/document/api/213/1367)介面關聯安全組。
         * 支援批次操作。每次請求批次實例的上限爲100。
 
         :param request: 調用ModifyInstancesProject所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ModifyInstancesProjectRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ModifyInstancesProjectResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ModifyInstancesProjectRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ModifyInstancesProjectResponse`
 
         """
         try:
@@ -1417,8 +1417,8 @@ class CvmClient(AbstractClient):
         * 支援批次操作。每次請求批次實例的上限爲100。
 
         :param request: 調用ModifyInstancesRenewFlag所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ModifyInstancesRenewFlagRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ModifyInstancesRenewFlagResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ModifyInstancesRenewFlagRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ModifyInstancesRenewFlagResponse`
 
         """
         try:
@@ -1444,11 +1444,11 @@ class CvmClient(AbstractClient):
     def ModifyInstancesVpcAttribute(self, request):
         """本介面(ModifyInstancesVpcAttribute)用于修改實例vpc屬性，如私有網絡ip。
         * 此操作預設會關閉實例，完成後再啓動。
-        * 當指定私有網絡ID和子網ID（子網必須在實例所在的可用區）與指定實例所在私有網絡不一緻時，會将實例遷移至指定的私有網絡的子網下。執行此操作前請确保指定的實例上沒有綁定[彈性網卡](https://cloud.tencent.com/document/product/576)和[負載均衡](https://cloud.tencent.com/document/product/214)。
+        * 當指定私有網絡ID和子網ID（子網必須在實例所在的可用區）與指定實例所在私有網絡不一緻時，會将實例遷移至指定的私有網絡的子網下。執行此操作前請确保指定的實例上沒有綁定[彈性網卡](https://cloud.taifucloud.com/document/product/576)和[負載均衡](https://cloud.taifucloud.com/document/product/214)。
 
         :param request: 調用ModifyInstancesVpcAttribute所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ModifyInstancesVpcAttributeRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ModifyInstancesVpcAttributeResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ModifyInstancesVpcAttributeRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ModifyInstancesVpcAttributeResponse`
 
         """
         try:
@@ -1479,8 +1479,8 @@ class CvmClient(AbstractClient):
         * 金鑰對ID是金鑰對的唯一标識，不可修改。
 
         :param request: 調用ModifyKeyPairAttribute所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ModifyKeyPairAttributeRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ModifyKeyPairAttributeResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ModifyKeyPairAttributeRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ModifyKeyPairAttributeResponse`
 
         """
         try:
@@ -1512,8 +1512,8 @@ class CvmClient(AbstractClient):
         * 支援批次操作，每次請求批次實例的上限爲100。
 
         :param request: 調用RebootInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.RebootInstancesRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.RebootInstancesResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.RebootInstancesRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.RebootInstancesResponse`
 
         """
         try:
@@ -1540,11 +1540,11 @@ class CvmClient(AbstractClient):
         """本介面 (RenewHosts) 用于續約包年包月CDH實例。
 
         * 只支援操作包年包月實例，否則操作會以特定[錯誤碼](#4.-.E9.94.99.E8.AF.AF.E7.A0.81)返回。
-        * 續約時請确保帳戶餘額充足。可通過[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/378/4397)介面查詢帳戶餘額。
+        * 續約時請确保帳戶餘額充足。可通過[`DescribeAccountBalance`](https://cloud.taifucloud.com/document/product/378/4397)介面查詢帳戶餘額。
 
         :param request: 調用RenewHosts所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.RenewHostsRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.RenewHostsResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.RenewHostsRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.RenewHostsResponse`
 
         """
         try:
@@ -1571,11 +1571,11 @@ class CvmClient(AbstractClient):
         """本介面 (RenewInstances) 用于續約包年包月實例。
 
         * 只支援操作包年包月實例。
-        * 續約時請确保帳戶餘額充足。可通過[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/378/4397)介面查詢帳戶餘額。
+        * 續約時請确保帳戶餘額充足。可通過[`DescribeAccountBalance`](https://cloud.taifucloud.com/document/product/378/4397)介面查詢帳戶餘額。
 
         :param request: 調用RenewInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.RenewInstancesRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.RenewInstancesResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.RenewInstancesRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.RenewInstancesResponse`
 
         """
         try:
@@ -1605,12 +1605,12 @@ class CvmClient(AbstractClient):
         * 系統盤将會被格式化，并重置；請确保系統盤中無重要文件。
         * `Linux`和`Windows`系統互相切換時，該實例系統盤`ID`将發生變化，系統盤關聯快照将無法回滾、恢複數據。
         * 密碼不指定将會通過站内信下發随機密碼。
-        * 目前只支援[系統盤類型](https://cloud.tencent.com/document/api/213/9452#block_device)是`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`類型的實例使用該介面實現`Linux`和`Windows`作業系統切換。
+        * 目前只支援[系統盤類型](https://cloud.taifucloud.com/document/api/213/9452#block_device)是`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`類型的實例使用該介面實現`Linux`和`Windows`作業系統切換。
         * 目前不支援海外地域的實例使用該介面實現`Linux`和`Windows`作業系統切換。
 
         :param request: 調用ResetInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ResetInstanceRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ResetInstanceResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ResetInstanceRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ResetInstanceResponse`
 
         """
         try:
@@ -1636,16 +1636,16 @@ class CvmClient(AbstractClient):
     def ResetInstancesInternetMaxBandwidth(self, request):
         """本介面 (ResetInstancesInternetMaxBandwidth) 用于調整實例公網頻寬上限。
 
-        * 不同機型頻寬上限範圍不一緻，具體限制詳見[購買網絡頻寬](https://cloud.tencent.com/document/product/213/509)。
-        * 對于 `BANDWIDTH_PREPAID` 計費方式的頻寬，需要輸入參數 `StartTime` 和 `EndTime` ，指定調整後的頻寬的生效時間段。在這種場景下目前不支援調小頻寬，會涉及扣費，請确保帳戶餘額充足。可通過 [`DescribeAccountBalance`](https://cloud.tencent.com/document/product/378/4397) 介面查詢帳戶餘額。
+        * 不同機型頻寬上限範圍不一緻，具體限制詳見[購買網絡頻寬](https://cloud.taifucloud.com/document/product/213/509)。
+        * 對于 `BANDWIDTH_PREPAID` 計費方式的頻寬，需要輸入參數 `StartTime` 和 `EndTime` ，指定調整後的頻寬的生效時間段。在這種場景下目前不支援調小頻寬，會涉及扣費，請确保帳戶餘額充足。可通過 [`DescribeAccountBalance`](https://cloud.taifucloud.com/document/product/378/4397) 介面查詢帳戶餘額。
         * 對于 `TRAFFIC_POSTPAID_BY_HOUR` 、 `BANDWIDTH_POSTPAID_BY_HOUR` 和 `BANDWIDTH_PACKAGE` 計費方式的頻寬，使用該介面調整頻寬上限是實時生效的，可以在頻寬允許的範圍内調大或者調小頻寬，不支援輸入參數 `StartTime` 和 `EndTime` 。
         * 介面不支援調整 `BANDWIDTH_POSTPAID_BY_MONTH` 計費方式的頻寬。
         * 介面不支援批次調整 `BANDWIDTH_PREPAID` 和 `BANDWIDTH_POSTPAID_BY_HOUR` 計費方式的頻寬。
         * 介面不支援批次調整混合計費方式的頻寬。例如不支援同時調整 `TRAFFIC_POSTPAID_BY_HOUR` 和 `BANDWIDTH_PACKAGE` 計費方式的頻寬。
 
         :param request: 調用ResetInstancesInternetMaxBandwidth所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ResetInstancesInternetMaxBandwidthRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ResetInstancesInternetMaxBandwidthResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ResetInstancesInternetMaxBandwidthRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ResetInstancesInternetMaxBandwidthResponse`
 
         """
         try:
@@ -1676,8 +1676,8 @@ class CvmClient(AbstractClient):
         * 支援批次操作。将多個實例作業系統的密碼重置爲相同的密碼。每次請求批次實例的上限爲100。
 
         :param request: 調用ResetInstancesPassword所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ResetInstancesPasswordRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ResetInstancesPasswordResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ResetInstancesPasswordRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ResetInstancesPasswordResponse`
 
         """
         try:
@@ -1703,11 +1703,11 @@ class CvmClient(AbstractClient):
     def ResetInstancesType(self, request):
         """本介面 (ResetInstancesType) 用于調整實例的機型。
         * 目前只支援[系統盤類型](/document/api/213/9452#block_device)是`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`類型的實例使用該介面進行機型調整。
-        * 目前不支援[CDH](https://cloud.tencent.com/document/product/416)實例使用該介面調整機型。對于包年包月實例，使用該介面會涉及扣費，請确保帳戶餘額充足。可通過[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/378/4397)介面查詢帳戶餘額。
+        * 目前不支援[CDH](https://cloud.taifucloud.com/document/product/416)實例使用該介面調整機型。對于包年包月實例，使用該介面會涉及扣費，請确保帳戶餘額充足。可通過[`DescribeAccountBalance`](https://cloud.taifucloud.com/document/product/378/4397)介面查詢帳戶餘額。
 
         :param request: 調用ResetInstancesType所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ResetInstancesTypeRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ResetInstancesTypeResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ResetInstancesTypeRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ResetInstancesTypeResponse`
 
         """
         try:
@@ -1733,14 +1733,14 @@ class CvmClient(AbstractClient):
     def ResizeInstanceDisks(self, request):
         """本介面 (ResizeInstanceDisks) 用于擴容實例的數據盤。
 
-        * 目前只支援擴容非彈性數據盤（[`DescribeDisks`](https://cloud.tencent.com/document/api/362/16315)介面返回值中的`Portable`爲`false`表示非彈性），且[數據盤類型](/document/api/213/9452#block_device)爲：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。
-        * 目前不支援[CDH](https://cloud.tencent.com/document/product/416)實例使用該介面擴容數據盤。
-        * 對于包年包月實例，使用該介面會涉及扣費，請确保帳戶餘額充足。可通過[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/378/4397)介面查詢帳戶餘額。
+        * 目前只支援擴容非彈性數據盤（[`DescribeDisks`](https://cloud.taifucloud.com/document/api/362/16315)介面返回值中的`Portable`爲`false`表示非彈性），且[數據盤類型](/document/api/213/9452#block_device)爲：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。
+        * 目前不支援[CDH](https://cloud.taifucloud.com/document/product/416)實例使用該介面擴容數據盤。
+        * 對于包年包月實例，使用該介面會涉及扣費，請确保帳戶餘額充足。可通過[`DescribeAccountBalance`](https://cloud.taifucloud.com/document/product/378/4397)介面查詢帳戶餘額。
         * 目前只支援擴容一塊數據盤。
 
         :param request: 調用ResizeInstanceDisks所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.ResizeInstanceDisksRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.ResizeInstanceDisksResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.ResizeInstanceDisksRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.ResizeInstanceDisksResponse`
 
         """
         try:
@@ -1768,12 +1768,12 @@ class CvmClient(AbstractClient):
 
         * 實例創建成功後将自動開機啓動，[實例狀态](/document/api/213/9452#instance_state)變爲“運作中”。
         * 預付費實例的購買會預先扣除本次實例購買所需金額，按小時後付費實例購買會預先鎖定本次實例購買一小時内所需金額，在調用本介面前請确保帳戶餘額充足。
-        * 本介面允許購買的實例數量遵循[CVM實例購買限制](https://cloud.tencent.com/document/product/213/2664)，所創建的實例和官網入口創建的實例共用配額。
-        * 本介面爲異步介面，當創建請求下發成功後會返回一個實例`ID`清單，此時實例的創建并立即未完成。在此期間實例的狀态将會處于“準備中”，可以通過調用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 介面查詢對應實例的狀态，來判斷創建有沒有最終成功。如果實例的狀态由“準備中”變爲“運作中”，則爲創建成功。
+        * 本介面允許購買的實例數量遵循[CVM實例購買限制](https://cloud.taifucloud.com/document/product/213/2664)，所創建的實例和官網入口創建的實例共用配額。
+        * 本介面爲異步介面，當創建請求下發成功後會返回一個實例`ID`清單，此時實例的創建并立即未完成。在此期間實例的狀态将會處于“準備中”，可以通過調用 [DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728) 介面查詢對應實例的狀态，來判斷創建有沒有最終成功。如果實例的狀态由“準備中”變爲“運作中”，則爲創建成功。
 
         :param request: 調用RunInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.RunInstancesRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.RunInstancesResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.RunInstancesRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.RunInstancesResponse`
 
         """
         try:
@@ -1804,8 +1804,8 @@ class CvmClient(AbstractClient):
         * 支援批次操作。每次請求批次實例的上限爲100。
 
         :param request: 調用StartInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.StartInstancesRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.StartInstancesResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.StartInstancesRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.StartInstancesResponse`
 
         """
         try:
@@ -1837,8 +1837,8 @@ class CvmClient(AbstractClient):
         * 支援批次操作。每次請求批次實例的上限爲100。
 
         :param request: 調用StopInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.StopInstancesRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.StopInstancesResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.StopInstancesRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.StopInstancesResponse`
 
         """
         try:
@@ -1869,8 +1869,8 @@ class CvmClient(AbstractClient):
         * 單個帳号在每個地域最多支援存在10個自定義映像。
 
         :param request: 調用SyncImages所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.SyncImagesRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.SyncImagesResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.SyncImagesRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.SyncImagesResponse`
 
         """
         try:
@@ -1897,12 +1897,12 @@ class CvmClient(AbstractClient):
         """本介面 (TerminateInstances) 用于主動退還實例。
 
         * 不再使用的實例，可通過本介面主動退還。
-        * 按量計費的實例通過本介面可直接退還；包年包月實例如符合[退還規則](https://cloud.tencent.com/document/product/213/9711)，也可通過本介面主動退還。
+        * 按量計費的實例通過本介面可直接退還；包年包月實例如符合[退還規則](https://cloud.taifucloud.com/document/product/213/9711)，也可通過本介面主動退還。
         * 支援批次操作，每次請求批次實例的上限爲100。
 
         :param request: 調用TerminateInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.cvm.v20170312.models.TerminateInstancesRequest`
-        :rtype: :class:`tencentcloud.cvm.v20170312.models.TerminateInstancesResponse`
+        :type request: :class:`taifucloudcloud.cvm.v20170312.models.TerminateInstancesRequest`
+        :rtype: :class:`taifucloudcloud.cvm.v20170312.models.TerminateInstancesResponse`
 
         """
         try:

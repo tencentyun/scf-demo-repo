@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class ClearQueueRequest(AbstractModel):
@@ -1010,10 +1010,10 @@ class QueueSet(AbstractModel):
         :type DeadLetterSource: list of DeadLetterSource
         :param DeadLetterPolicy: DeadLetterPolicy
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type DeadLetterPolicy: :class:`tencentcloud.cmq.v20190304.models.DeadLetterPolicy`
+        :type DeadLetterPolicy: :class:`taifucloudcloud.cmq.v20190304.models.DeadLetterPolicy`
         :param TransactionPolicy: TransactionPolicy
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TransactionPolicy: :class:`tencentcloud.cmq.v20190304.models.TransactionPolicy`
+        :type TransactionPolicy: :class:`taifucloudcloud.cmq.v20190304.models.TransactionPolicy`
         :param CreateUin: 創建者uin
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateUin: int

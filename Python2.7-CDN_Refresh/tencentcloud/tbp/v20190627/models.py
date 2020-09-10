@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Group(AbstractModel):
@@ -106,9 +106,9 @@ class TextProcessRequest(AbstractModel):
         :type InputText: str
         :param SessionAttributes: 透傳欄位，透傳給用戶自定義的WebService服務。
         :type SessionAttributes: str
-        :param PlatformType: 平台類型，{小程式：MiniProgram；小微：XiaoWei；公衆号：OfficialAccount；企業微信: WXWork}。
+        :param PlatformType: 平台類型，{小程式：MiniProgram；小微：XiaoWei；公衆号：OfficialAccount；企業 : WXWork}。
         :type PlatformType: str
-        :param PlatformId: 當PlatformType爲微信公衆号或企業微信時，傳遞對應微信公衆号或企業微信的唯一标識
+        :param PlatformId: 當PlatformType爲 公衆号或企業 時，傳遞對應 公衆号或企業 的唯一标識
         :type PlatformId: str
         """
         self.BotId = None
@@ -154,7 +154,7 @@ class TextProcessResponse(AbstractModel):
         :type InputText: str
         :param ResponseMessage: 機器人應答。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ResponseMessage: :class:`tencentcloud.tbp.v20190627.models.ResponseMessage`
+        :type ResponseMessage: :class:`taifucloudcloud.tbp.v20190627.models.ResponseMessage`
         :param SessionAttributes: 透傳欄位，由用戶自定義的WebService服務返回。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SessionAttributes: str
@@ -207,9 +207,9 @@ class TextResetRequest(AbstractModel):
         :type BotEnv: str
         :param TerminalId: 終端标識，每個終端(或線程)對應一個，區分并發多用戶。
         :type TerminalId: str
-        :param PlatformType: 平台類型，{小程式：MiniProgram；小微：XiaoWei；公衆号：OfficialAccount；企業微信: WXWork}。
+        :param PlatformType: 平台類型，{小程式：MiniProgram；小微：XiaoWei；公衆号：OfficialAccount；企業 : WXWork}。
         :type PlatformType: str
-        :param PlatformId: 當PlatformType爲微信公衆号或企業微信時，傳遞對應微信公衆号或企業微信的唯一标識
+        :param PlatformId: 當PlatformType爲 公衆号或企業 時，傳遞對應 公衆号或企業 的唯一标識
         :type PlatformId: str
         """
         self.BotId = None
@@ -251,7 +251,7 @@ class TextResetResponse(AbstractModel):
         :type InputText: str
         :param ResponseMessage: 機器人應答。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ResponseMessage: :class:`tencentcloud.tbp.v20190627.models.ResponseMessage`
+        :type ResponseMessage: :class:`taifucloudcloud.tbp.v20190627.models.ResponseMessage`
         :param SessionAttributes: 透傳欄位，由用戶自定義的WebService服務返回。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SessionAttributes: str

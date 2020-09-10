@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class DescribeDBDiagEventRequest(AbstractModel):
@@ -187,7 +187,7 @@ class DescribeSlowLogTimeSeriesStatsResponse(AbstractModel):
         :param TimeSeries: 單位時間間隔内慢日志數量統計。
         :type TimeSeries: list of TimeSlice
         :param SeriesData: 單位時間間隔内的實例 cpu 使用率監控數據。
-        :type SeriesData: :class:`tencentcloud.dbbrain.v20191016.models.MonitorMetricSeriesData`
+        :type SeriesData: :class:`taifucloudcloud.dbbrain.v20191016.models.MonitorMetricSeriesData`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

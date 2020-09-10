@@ -127,4 +127,3 @@ def main(arraytype=None):
 if __name__ == '__main__':
     main()
 
-

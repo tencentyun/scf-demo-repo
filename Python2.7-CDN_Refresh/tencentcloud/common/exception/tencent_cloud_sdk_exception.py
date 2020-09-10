@@ -3,7 +3,7 @@
 import sys
 
 class TencentCloudSDKException(Exception):
-    """tencentcloudapi sdk 異常類"""
+    """taifucloudcloudapi sdk 異常類"""
 
     def __init__(self, code=None, message=None, requestId=None):
         self.code = code

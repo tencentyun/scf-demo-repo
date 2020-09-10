@@ -1,7 +1,7 @@
 /**************************************************
 Node8.9-KafkaToCos
 Reference: 
-1. https://cloud.tencent.com/document/product/583/17530- SCF ckafka trigger document
+1. https://cloud.taifucloud.com/document/product/583/17530- SCF ckafka trigger document
 ***************************************************/
 
 const fs = require("fs")

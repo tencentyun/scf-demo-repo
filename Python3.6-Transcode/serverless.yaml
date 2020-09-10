@@ -47,4 +47,3 @@ inputs:
               method: ANY
               enableCORS: TRUE
               serviceTimeout: 300
-

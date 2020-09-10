@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tci.v20190318 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tci.v20190318 import models
 
 
 class TciClient(AbstractClient):
     _apiVersion = '2019-03-18'
-    _endpoint = 'tci.tencentcloudapi.com'
+    _endpoint = 'tci.taifucloudcloudapi.com'
 
 
     def AIAssistant(self, request):
         """提供 AI 助教基礎版本功能介面
 
         :param request: Request instance for AIAssistant.
-        :type request: :class:`tencentcloud.tci.v20190318.models.AIAssistantRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.AIAssistantResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.AIAssistantRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.AIAssistantResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TciClient(AbstractClient):
         """用于取消已經提交的任務，目前只支援圖像任務。
 
         :param request: Request instance for CancelTask.
-        :type request: :class:`tencentcloud.tci.v20190318.models.CancelTaskRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.CancelTaskResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.CancelTaskRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.CancelTaskResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TciClient(AbstractClient):
         """檢查人臉圖片是否合法
 
         :param request: Request instance for CheckFacePhoto.
-        :type request: :class:`tencentcloud.tci.v20190318.models.CheckFacePhotoRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.CheckFacePhotoResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.CheckFacePhotoRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.CheckFacePhotoResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TciClient(AbstractClient):
         """創建人臉
 
         :param request: Request instance for CreateFace.
-        :type request: :class:`tencentcloud.tci.v20190318.models.CreateFaceRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.CreateFaceResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.CreateFaceRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.CreateFaceResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class TciClient(AbstractClient):
         """創建人員庫
 
         :param request: Request instance for CreateLibrary.
-        :type request: :class:`tencentcloud.tci.v20190318.models.CreateLibraryRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.CreateLibraryResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.CreateLibraryRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.CreateLibraryResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class TciClient(AbstractClient):
         """創建人員
 
         :param request: Request instance for CreatePerson.
-        :type request: :class:`tencentcloud.tci.v20190318.models.CreatePersonRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.CreatePersonResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.CreatePersonRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.CreatePersonResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class TciClient(AbstractClient):
         """創建詞匯
 
         :param request: Request instance for CreateVocab.
-        :type request: :class:`tencentcloud.tci.v20190318.models.CreateVocabRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.CreateVocabResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.CreateVocabRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.CreateVocabResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class TciClient(AbstractClient):
         """建立詞匯庫
 
         :param request: Request instance for CreateVocabLib.
-        :type request: :class:`tencentcloud.tci.v20190318.models.CreateVocabLibRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.CreateVocabLibResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.CreateVocabLibRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.CreateVocabLibResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class TciClient(AbstractClient):
         """删除人臉
 
         :param request: Request instance for DeleteFace.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DeleteFaceRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DeleteFaceResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DeleteFaceRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DeleteFaceResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class TciClient(AbstractClient):
         """删除人員庫
 
         :param request: Request instance for DeleteLibrary.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DeleteLibraryRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DeleteLibraryResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DeleteLibraryRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DeleteLibraryResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class TciClient(AbstractClient):
         """删除人員
 
         :param request: Request instance for DeletePerson.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DeletePersonRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DeletePersonResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DeletePersonRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DeletePersonResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class TciClient(AbstractClient):
         """删除詞匯
 
         :param request: Request instance for DeleteVocab.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DeleteVocabRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DeleteVocabResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DeleteVocabRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DeleteVocabResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class TciClient(AbstractClient):
         """删除詞匯庫
 
         :param request: Request instance for DeleteVocabLib.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DeleteVocabLibRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DeleteVocabLibResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DeleteVocabLibRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DeleteVocabLibResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class TciClient(AbstractClient):
         """獲取标準化介面任務結果
 
         :param request: Request instance for DescribeAITaskResult.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DescribeAITaskResultRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DescribeAITaskResultResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DescribeAITaskResultRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DescribeAITaskResultResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class TciClient(AbstractClient):
         """人臉考勤查詢結果
 
         :param request: Request instance for DescribeAttendanceResult.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DescribeAttendanceResultRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DescribeAttendanceResultResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DescribeAttendanceResultRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DescribeAttendanceResultResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class TciClient(AbstractClient):
         """音訊評估任務訊息查詢介面，異步查詢客戶提交的請求的結果。
 
         :param request: Request instance for DescribeAudioTask.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DescribeAudioTaskRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DescribeAudioTaskResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DescribeAudioTaskRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DescribeAudioTaskResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class TciClient(AbstractClient):
         """音訊對話任務評估任務訊息查詢介面，異步查詢客戶提交的請求的結果。
 
         :param request: Request instance for DescribeConversationTask.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DescribeConversationTaskRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DescribeConversationTaskResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DescribeConversationTaskRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DescribeConversationTaskResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class TciClient(AbstractClient):
         """視訊精彩集錦結果查詢介面，異步查詢客戶提交的請求的結果。
 
         :param request: Request instance for DescribeHighlightResult.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DescribeHighlightResultRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DescribeHighlightResultResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DescribeHighlightResultRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DescribeHighlightResultResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class TciClient(AbstractClient):
         """拉取任務詳情
 
         :param request: Request instance for DescribeImageTask.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DescribeImageTaskRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DescribeImageTaskResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DescribeImageTaskRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DescribeImageTaskResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class TciClient(AbstractClient):
         """獲取圖像任務統計訊息
 
         :param request: Request instance for DescribeImageTaskStatistic.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DescribeImageTaskStatisticRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DescribeImageTaskStatisticResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DescribeImageTaskStatisticRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DescribeImageTaskStatisticResponse`
 
         """
         try:
@@ -589,8 +589,8 @@ class TciClient(AbstractClient):
         """獲取人員庫清單
 
         :param request: Request instance for DescribeLibraries.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DescribeLibrariesRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DescribeLibrariesResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DescribeLibrariesRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DescribeLibrariesResponse`
 
         """
         try:
@@ -617,8 +617,8 @@ class TciClient(AbstractClient):
         """獲取人員詳情
 
         :param request: Request instance for DescribePerson.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DescribePersonRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DescribePersonResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DescribePersonRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DescribePersonResponse`
 
         """
         try:
@@ -645,8 +645,8 @@ class TciClient(AbstractClient):
         """拉取人員清單
 
         :param request: Request instance for DescribePersons.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DescribePersonsRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DescribePersonsResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DescribePersonsRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DescribePersonsResponse`
 
         """
         try:
@@ -673,8 +673,8 @@ class TciClient(AbstractClient):
         """查詢詞匯
 
         :param request: Request instance for DescribeVocab.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DescribeVocabRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DescribeVocabResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DescribeVocabRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DescribeVocabResponse`
 
         """
         try:
@@ -701,8 +701,8 @@ class TciClient(AbstractClient):
         """查詢詞匯庫
 
         :param request: Request instance for DescribeVocabLib.
-        :type request: :class:`tencentcloud.tci.v20190318.models.DescribeVocabLibRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.DescribeVocabLibResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.DescribeVocabLibRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.DescribeVocabLibResponse`
 
         """
         try:
@@ -729,8 +729,8 @@ class TciClient(AbstractClient):
         """修改人員庫訊息
 
         :param request: Request instance for ModifyLibrary.
-        :type request: :class:`tencentcloud.tci.v20190318.models.ModifyLibraryRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.ModifyLibraryResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.ModifyLibraryRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.ModifyLibraryResponse`
 
         """
         try:
@@ -757,8 +757,8 @@ class TciClient(AbstractClient):
         """修改人員訊息
 
         :param request: Request instance for ModifyPerson.
-        :type request: :class:`tencentcloud.tci.v20190318.models.ModifyPersonRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.ModifyPersonResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.ModifyPersonRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.ModifyPersonResponse`
 
         """
         try:
@@ -785,8 +785,8 @@ class TciClient(AbstractClient):
         """音訊任務提交介面
 
         :param request: Request instance for SubmitAudioTask.
-        :type request: :class:`tencentcloud.tci.v20190318.models.SubmitAudioTaskRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.SubmitAudioTaskResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.SubmitAudioTaskRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.SubmitAudioTaskResponse`
 
         """
         try:
@@ -826,8 +826,8 @@ class TciClient(AbstractClient):
          | image_url | string | 識别到人臉的事件抓圖的下載網址，不長期保存，需要請及時下載 |
 
         :param request: Request instance for SubmitCheckAttendanceTask.
-        :type request: :class:`tencentcloud.tci.v20190318.models.SubmitCheckAttendanceTaskRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.SubmitCheckAttendanceTaskResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.SubmitCheckAttendanceTaskRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.SubmitCheckAttendanceTaskResponse`
 
         """
         try:
@@ -854,8 +854,8 @@ class TciClient(AbstractClient):
         """支援多路視訊流，提交高級人員考勤任務
 
         :param request: Request instance for SubmitCheckAttendanceTaskPlus.
-        :type request: :class:`tencentcloud.tci.v20190318.models.SubmitCheckAttendanceTaskPlusRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.SubmitCheckAttendanceTaskPlusResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.SubmitCheckAttendanceTaskPlusRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.SubmitCheckAttendanceTaskPlusResponse`
 
         """
         try:
@@ -882,8 +882,8 @@ class TciClient(AbstractClient):
         """對話任務分析介面
 
         :param request: Request instance for SubmitConversationTask.
-        :type request: :class:`tencentcloud.tci.v20190318.models.SubmitConversationTaskRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.SubmitConversationTaskResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.SubmitConversationTaskRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.SubmitConversationTaskResponse`
 
         """
         try:
@@ -911,8 +911,8 @@ class TciClient(AbstractClient):
         介面獲取生成結果。
 
         :param request: Request instance for SubmitDoubleVideoHighlights.
-        :type request: :class:`tencentcloud.tci.v20190318.models.SubmitDoubleVideoHighlightsRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.SubmitDoubleVideoHighlightsResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.SubmitDoubleVideoHighlightsRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.SubmitDoubleVideoHighlightsResponse`
 
         """
         try:
@@ -945,8 +945,8 @@ class TciClient(AbstractClient):
         **結果查詢方式：**圖像任務直接返回結果，點播及直播任務通過DescribeAITaskResult查詢結果。
 
         :param request: Request instance for SubmitFullBodyClassTask.
-        :type request: :class:`tencentcloud.tci.v20190318.models.SubmitFullBodyClassTaskRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.SubmitFullBodyClassTaskResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.SubmitFullBodyClassTaskRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.SubmitFullBodyClassTaskResponse`
 
         """
         try:
@@ -973,8 +973,8 @@ class TciClient(AbstractClient):
         """發起視訊生成精彩集錦介面。該介面可以通過客戶傳入的課程音訊數據及相關策略（如微笑抽取，專注抽取等），自動生成一堂課程的精彩集錦。需要通過QueryHighlightResult介面獲取生成結果。
 
         :param request: Request instance for SubmitHighlights.
-        :type request: :class:`tencentcloud.tci.v20190318.models.SubmitHighlightsRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.SubmitHighlightsResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.SubmitHighlightsRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.SubmitHighlightsResponse`
 
         """
         try:
@@ -1001,8 +1001,8 @@ class TciClient(AbstractClient):
         """提交圖像分析任務
 
         :param request: Request instance for SubmitImageTask.
-        :type request: :class:`tencentcloud.tci.v20190318.models.SubmitImageTaskRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.SubmitImageTaskResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.SubmitImageTaskRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.SubmitImageTaskResponse`
 
         """
         try:
@@ -1029,8 +1029,8 @@ class TciClient(AbstractClient):
         """高級圖像分析任務，開放了圖像任務裏的所有開關，可以根據場景深度定制圖像分析任務。支援的圖像類别有，圖片連結、圖片二進制數據、點播連結和直播連結。
 
         :param request: Request instance for SubmitImageTaskPlus.
-        :type request: :class:`tencentcloud.tci.v20190318.models.SubmitImageTaskPlusRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.SubmitImageTaskPlusResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.SubmitImageTaskPlusRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.SubmitImageTaskPlusResponse`
 
         """
         try:
@@ -1064,8 +1064,8 @@ class TciClient(AbstractClient):
         **結果查詢方式：**圖像任務直接返回結果，點播及直播任務通過DescribeAITaskResult查詢結果。
 
         :param request: Request instance for SubmitOneByOneClassTask.
-        :type request: :class:`tencentcloud.tci.v20190318.models.SubmitOneByOneClassTaskRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.SubmitOneByOneClassTaskResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.SubmitOneByOneClassTaskRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.SubmitOneByOneClassTaskResponse`
 
         """
         try:
@@ -1099,8 +1099,8 @@ class TciClient(AbstractClient):
         **結果查詢方式：**圖像任務直接返回結果，點播及直播任務通過DescribeAITaskResult查詢結果。
 
         :param request: Request instance for SubmitOpenClassTask.
-        :type request: :class:`tencentcloud.tci.v20190318.models.SubmitOpenClassTaskRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.SubmitOpenClassTaskResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.SubmitOpenClassTaskRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.SubmitOpenClassTaskResponse`
 
         """
         try:
@@ -1133,8 +1133,8 @@ class TciClient(AbstractClient):
         **結果查詢方式：**圖像任務直接返回結果，點播及直播任務通過DescribeAITaskResult查詢結果。
 
         :param request: Request instance for SubmitPartialBodyClassTask.
-        :type request: :class:`tencentcloud.tci.v20190318.models.SubmitPartialBodyClassTaskRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.SubmitPartialBodyClassTaskResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.SubmitPartialBodyClassTaskRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.SubmitPartialBodyClassTaskResponse`
 
         """
         try:
@@ -1169,8 +1169,8 @@ class TciClient(AbstractClient):
 
 
         :param request: Request instance for SubmitTraditionalClassTask.
-        :type request: :class:`tencentcloud.tci.v20190318.models.SubmitTraditionalClassTaskRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.SubmitTraditionalClassTaskResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.SubmitTraditionalClassTaskRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.SubmitTraditionalClassTaskResponse`
 
         """
         try:
@@ -1197,8 +1197,8 @@ class TciClient(AbstractClient):
         """分析音訊訊息
 
         :param request: Request instance for TransmitAudioStream.
-        :type request: :class:`tencentcloud.tci.v20190318.models.TransmitAudioStreamRequest`
-        :rtype: :class:`tencentcloud.tci.v20190318.models.TransmitAudioStreamResponse`
+        :type request: :class:`taifucloudcloud.tci.v20190318.models.TransmitAudioStreamRequest`
+        :rtype: :class:`taifucloudcloud.tci.v20190318.models.TransmitAudioStreamResponse`
 
         """
         try:

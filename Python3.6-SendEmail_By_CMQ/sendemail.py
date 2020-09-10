@@ -12,7 +12,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
 
-# hird-party SMTP service taking QQ mailbox as an example. 第三方 SMTP 服務,以QQ電子信箱爲例
+# hird-party SMTP service taking   mailbox as an example. 第三方 SMTP 服務,以 電子信箱爲例
 mail_host="smtp.qq.com"          # SMTP server. SMTP服務器
 mail_user="xxxxxxxxx@qq.com"     # Username 用戶名
 mail_pass="****************"     # SMTP service password. SMTP服務的密碼
@@ -20,7 +20,7 @@ mail_port=465                    # SMTP service port. SMTP服務端口
 
 def sendEmail(fromAddr,toAddr,subject,content):
     sender = fromAddr
-    receivers = [toAddr]  # Receiving emails, can be set as your QQ mailbox or other mailbox. 接收郵件，可設置爲您的QQ電子信箱或者其他電子信箱
+    receivers = [toAddr]  # Receiving emails, can be set as your   mailbox or other mailbox. 接收郵件，可設置爲您的 電子信箱或者其他電子信箱
 
     message = MIMEText(content, 'plain', 'utf-8')
     message['From'] = Header(fromAddr, 'utf-8')

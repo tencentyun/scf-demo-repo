@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class FaceFusionRequest(AbstractModel):
@@ -31,7 +31,7 @@ class FaceFusionRequest(AbstractModel):
         :type Image: str
         :param RspImgType: 返回圖像方式（url 或 base64) ，二選一。url有效期爲30天。
         :type RspImgType: str
-        :param PornDetect: 曆史遺留欄位，無需填寫。因爲融合只需提取人臉特征，不需要鑒黃。
+        :param PornDetect: 曆史遺留欄位，無需填寫。因爲融合只需提取人臉特征，不需要 。
         :type PornDetect: int
         :param CelebrityIdentify: 0表示不需要鑒政，1表示需要鑒政。預設值爲0。
 請注意，鑒政服務開啓後，您需要根據返回結果自行判斷是否調整您的業務邏輯。例如提示您的用戶圖片非法，請更換圖片。
@@ -194,7 +194,7 @@ class FuseFaceResponse(AbstractModel):
 
 
 class FuseFaceReviewDetail(AbstractModel):
-    """人臉融合鑒黃鑒政人臉訊息
+    """人臉融合 鑒政人臉訊息
 
     """
 
@@ -229,7 +229,7 @@ BLOCK：違規
 
 
 class FuseFaceReviewResult(AbstractModel):
-    """人臉融合鑒黃鑒政返回參數item
+    """人臉融合 鑒政返回參數item
 
     """
 
@@ -282,7 +282,7 @@ class MergeInfo(AbstractModel):
         :param Url: 輸入圖片url
         :type Url: str
         :param InputImageFaceRect: 上傳的圖片人臉位置訊息（人臉框）
-        :type InputImageFaceRect: :class:`tencentcloud.facefusion.v20181201.models.FaceRect`
+        :type InputImageFaceRect: :class:`taifucloudcloud.facefusion.v20181201.models.FaceRect`
         :param TemplateFaceID: 控制台上傳的素材人臉ID
         :type TemplateFaceID: str
         """

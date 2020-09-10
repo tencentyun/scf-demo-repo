@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cis.v20180408 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cis.v20180408 import models
 
 
 class CisClient(AbstractClient):
     _apiVersion = '2018-04-08'
-    _endpoint = 'cis.tencentcloudapi.com'
+    _endpoint = 'cis.taifucloudcloudapi.com'
 
 
     def CreateContainerInstance(self, request):
         """此介面（CreateContainerInstance）用于創建容器實例
 
         :param request: 調用CreateContainerInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.cis.v20180408.models.CreateContainerInstanceRequest`
-        :rtype: :class:`tencentcloud.cis.v20180408.models.CreateContainerInstanceResponse`
+        :type request: :class:`taifucloudcloud.cis.v20180408.models.CreateContainerInstanceRequest`
+        :rtype: :class:`taifucloudcloud.cis.v20180408.models.CreateContainerInstanceResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class CisClient(AbstractClient):
         """此介面（DeleteContainerInstance）用于删除容器實例
 
         :param request: 調用DeleteContainerInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.cis.v20180408.models.DeleteContainerInstanceRequest`
-        :rtype: :class:`tencentcloud.cis.v20180408.models.DeleteContainerInstanceResponse`
+        :type request: :class:`taifucloudcloud.cis.v20180408.models.DeleteContainerInstanceRequest`
+        :rtype: :class:`taifucloudcloud.cis.v20180408.models.DeleteContainerInstanceResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class CisClient(AbstractClient):
         """此介面（DescribeContainerInstance）用于獲取容器實例詳情
 
         :param request: 調用DescribeContainerInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.cis.v20180408.models.DescribeContainerInstanceRequest`
-        :rtype: :class:`tencentcloud.cis.v20180408.models.DescribeContainerInstanceResponse`
+        :type request: :class:`taifucloudcloud.cis.v20180408.models.DescribeContainerInstanceRequest`
+        :rtype: :class:`taifucloudcloud.cis.v20180408.models.DescribeContainerInstanceResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class CisClient(AbstractClient):
         """此介面（DescribeContainerInstanceEvents）用于查詢容器實例事件清單
 
         :param request: 調用DescribeContainerInstanceEvents所需參數的結構體。
-        :type request: :class:`tencentcloud.cis.v20180408.models.DescribeContainerInstanceEventsRequest`
-        :rtype: :class:`tencentcloud.cis.v20180408.models.DescribeContainerInstanceEventsResponse`
+        :type request: :class:`taifucloudcloud.cis.v20180408.models.DescribeContainerInstanceEventsRequest`
+        :rtype: :class:`taifucloudcloud.cis.v20180408.models.DescribeContainerInstanceEventsResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class CisClient(AbstractClient):
         """此介面（DescribeContainerInstances）查詢容器實例清單
 
         :param request: 調用DescribeContainerInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.cis.v20180408.models.DescribeContainerInstancesRequest`
-        :rtype: :class:`tencentcloud.cis.v20180408.models.DescribeContainerInstancesResponse`
+        :type request: :class:`taifucloudcloud.cis.v20180408.models.DescribeContainerInstancesRequest`
+        :rtype: :class:`taifucloudcloud.cis.v20180408.models.DescribeContainerInstancesResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class CisClient(AbstractClient):
         """此介面（DescribeContainerLog）用于獲取容器日志訊息
 
         :param request: 調用DescribeContainerLog所需參數的結構體。
-        :type request: :class:`tencentcloud.cis.v20180408.models.DescribeContainerLogRequest`
-        :rtype: :class:`tencentcloud.cis.v20180408.models.DescribeContainerLogResponse`
+        :type request: :class:`taifucloudcloud.cis.v20180408.models.DescribeContainerLogRequest`
+        :rtype: :class:`taifucloudcloud.cis.v20180408.models.DescribeContainerLogResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class CisClient(AbstractClient):
         """此介面（InquiryPriceCreateCis）用于查詢容器實例價格
 
         :param request: 調用InquiryPriceCreateCis所需參數的結構體。
-        :type request: :class:`tencentcloud.cis.v20180408.models.InquiryPriceCreateCisRequest`
-        :rtype: :class:`tencentcloud.cis.v20180408.models.InquiryPriceCreateCisResponse`
+        :type request: :class:`taifucloudcloud.cis.v20180408.models.InquiryPriceCreateCisRequest`
+        :rtype: :class:`taifucloudcloud.cis.v20180408.models.InquiryPriceCreateCisResponse`
 
         """
         try:

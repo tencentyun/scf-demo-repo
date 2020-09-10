@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class ImageRecord(AbstractModel):
@@ -89,7 +89,7 @@ class ImageTranslateResponse(AbstractModel):
         :param Target: 目标語言
         :type Target: str
         :param ImageRecord: 圖片翻譯結果，翻譯結果按識别的文本每一行獨立翻譯，後續會推出按段落劃分并翻譯的版本
-        :type ImageRecord: :class:`tencentcloud.tmt.v20180321.models.ImageRecord`
+        :type ImageRecord: :class:`taifucloudcloud.tmt.v20180321.models.ImageRecord`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

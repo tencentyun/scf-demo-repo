@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Activity(AbstractModel):
@@ -475,25 +475,25 @@ class CreateLaunchConfigurationRequest(AbstractModel):
         """
         :param LaunchConfigurationName: 啓動配置顯示名稱。名稱僅支援中文、英文、數字、下劃線、分隔符"-"、小數點，最大長度不能超60個位元。
         :type LaunchConfigurationName: str
-        :param ImageId: 指定有效的[映像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.tencent.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回訊息中的`ImageId`欄位。</li>
+        :param ImageId: 指定有效的[映像](https://cloud.taifucloud.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.taifucloud.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.taifucloud.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.taifucloud.com/document/api/213/15715) ，取返回訊息中的`ImageId`欄位。</li>
         :type ImageId: str
-        :param ProjectId: 實例所屬項目ID。該參數可以通過調用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的`projectId`欄位來獲取。不填爲預設項目。
+        :param ProjectId: 實例所屬項目ID。該參數可以通過調用 [DescribeProject](https://cloud.taifucloud.com/document/api/378/4400) 的返回值中的`projectId`欄位來獲取。不填爲預設項目。
         :type ProjectId: int
-        :param InstanceType: 實例機型。不同實例機型指定了不同的資源規格，具體取值可通過調用介面 [DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749) 來獲得最新的規格表或參見[實例類型](https://cloud.tencent.com/document/product/213/11518)描述。
+        :param InstanceType: 實例機型。不同實例機型指定了不同的資源規格，具體取值可通過調用介面 [DescribeInstanceTypeConfigs](https://cloud.taifucloud.com/document/api/213/15749) 來獲得最新的規格表或參見[實例類型](https://cloud.taifucloud.com/document/product/213/11518)描述。
 `InstanceType`和`InstanceTypes`參數互斥，二者必填一個且只能填寫一個。
         :type InstanceType: str
         :param SystemDisk: 實例系統盤配置訊息。若不指定該參數，則按照系統預設值進行分配。
-        :type SystemDisk: :class:`tencentcloud.autoscaling.v20180419.models.SystemDisk`
+        :type SystemDisk: :class:`taifucloudcloud.autoscaling.v20180419.models.SystemDisk`
         :param DataDisks: 實例數據盤配置訊息。若不指定該參數，則預設不購買數據盤，最多支援指定11塊數據盤。
         :type DataDisks: list of DataDisk
         :param InternetAccessible: 公網頻寬相關訊息設置。若不指定該參數，則預設公網頻寬爲0Mbps。
-        :type InternetAccessible: :class:`tencentcloud.autoscaling.v20180419.models.InternetAccessible`
+        :type InternetAccessible: :class:`taifucloudcloud.autoscaling.v20180419.models.InternetAccessible`
         :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，并以站内信方式知會到用戶。
-        :type LoginSettings: :class:`tencentcloud.autoscaling.v20180419.models.LoginSettings`
-        :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`欄位來獲取。若不指定該參數，則預設不綁定安全組。
+        :type LoginSettings: :class:`taifucloudcloud.autoscaling.v20180419.models.LoginSettings`
+        :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.taifucloud.com/document/api/215/15808) 的返回值中的`SecurityGroupId`欄位來獲取。若不指定該參數，則預設不綁定安全組。
         :type SecurityGroupIds: list of str
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
-        :type EnhancedService: :class:`tencentcloud.autoscaling.v20180419.models.EnhancedService`
+        :type EnhancedService: :class:`taifucloudcloud.autoscaling.v20180419.models.EnhancedService`
         :param UserData: 經過 Base64 編碼後的自定義數據，最大長度不超過16KB。
         :type UserData: str
         :param InstanceChargeType: 實例計費類型，CVM預設值按照POSTPAID_BY_HOUR處理。
@@ -501,7 +501,7 @@ class CreateLaunchConfigurationRequest(AbstractModel):
 <br><li>SPOTPAID：競價付費
         :type InstanceChargeType: str
         :param InstanceMarketOptions: 實例的市場相關選項，如競價實例相關參數，若指定實例的付費模式爲競價付費則該參數必傳。
-        :type InstanceMarketOptions: :class:`tencentcloud.autoscaling.v20180419.models.InstanceMarketOptionsRequest`
+        :type InstanceMarketOptions: :class:`taifucloudcloud.autoscaling.v20180419.models.InstanceMarketOptionsRequest`
         :param InstanceTypes: 實例機型清單，不同實例機型指定了不同的資源規格，最多支援5種實例機型。
 `InstanceType`和`InstanceTypes`參數互斥，二者必填一個且只能填寫一個。
         :type InstanceTypes: list of str
@@ -613,7 +613,7 @@ class CreateLifecycleHookRequest(AbstractModel):
         :param NotificationMetadata: 彈性伸縮向通知目标發送的附加訊息，預設值爲''。最大長度不能超過1024個位元。
         :type NotificationMetadata: str
         :param NotificationTarget: 通知目标
-        :type NotificationTarget: :class:`tencentcloud.autoscaling.v20180419.models.NotificationTarget`
+        :type NotificationTarget: :class:`taifucloudcloud.autoscaling.v20180419.models.NotificationTarget`
         """
         self.AutoScalingGroupId = None
         self.LifecycleHookName = None
@@ -674,7 +674,7 @@ class CreateNotificationConfigurationRequest(AbstractModel):
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL：替換不健康子機成功</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替換不健康子機失敗</li>
         :type NotificationTypes: list of str
-        :param NotificationUserGroupIds: 通知組ID，即爲用戶組ID集合，用戶組ID可以通過[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查詢。
+        :param NotificationUserGroupIds: 通知組ID，即爲用戶組ID集合，用戶組ID可以通過[DescribeUserGroup](https://cloud.taifucloud.com/document/api/378/4404)查詢。
         :type NotificationUserGroupIds: list of str
         """
         self.AutoScalingGroupId = None
@@ -719,7 +719,7 @@ class CreatePaiInstanceRequest(AbstractModel):
         :param DomainName: PAI實例的域名。
         :type DomainName: str
         :param InternetAccessible: 公網頻寬相關訊息設置。
-        :type InternetAccessible: :class:`tencentcloud.autoscaling.v20180419.models.InternetAccessible`
+        :type InternetAccessible: :class:`taifucloudcloud.autoscaling.v20180419.models.InternetAccessible`
         :param InitScript: 啓動腳本的base64編碼字串。
         :type InitScript: str
         :param Zones: 可用區清單。
@@ -733,11 +733,11 @@ class CreatePaiInstanceRequest(AbstractModel):
         :param InstanceTypes: 實例機型清單。
         :type InstanceTypes: list of str
         :param LoginSettings: 實例登入設置。
-        :type LoginSettings: :class:`tencentcloud.autoscaling.v20180419.models.LoginSettings`
+        :type LoginSettings: :class:`taifucloudcloud.autoscaling.v20180419.models.LoginSettings`
         :param InstanceChargeType: 實例計費類型。
         :type InstanceChargeType: str
         :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的購買時長、是否設置自動續約等屬性。若指定實例的付費模式爲預付費則該參數必傳。
-        :type InstanceChargePrepaid: :class:`tencentcloud.autoscaling.v20180419.models.InstanceChargePrepaid`
+        :type InstanceChargePrepaid: :class:`taifucloudcloud.autoscaling.v20180419.models.InstanceChargePrepaid`
         """
         self.DomainName = None
         self.InternetAccessible = None
@@ -779,7 +779,7 @@ class CreatePaiInstanceResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIdSet: 當通過本介面來創建實例時會返回該參數，表示一個或多個實例`ID`。返回實例`ID`清單并不代表實例創建成功，可根據 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 介面查詢返回的InstancesSet中對應實例的`ID`的狀态來判斷創建是否完成；如果實例狀态由“準備中”變爲“正在運作”，則爲創建成功。
+        :param InstanceIdSet: 當通過本介面來創建實例時會返回該參數，表示一個或多個實例`ID`。返回實例`ID`清單并不代表實例創建成功，可根據 [DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728) 介面查詢返回的InstancesSet中對應實例的`ID`的狀态來判斷創建是否完成；如果實例狀态由“準備中”變爲“正在運作”，則爲創建成功。
         :type InstanceIdSet: list of str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -809,10 +809,10 @@ class CreateScalingPolicyRequest(AbstractModel):
         :param AdjustmentValue: 告警觸發後，期望實例數的調整值。取值：<br><li>當 AdjustmentType 爲 CHANGE_IN_CAPACITY 時，AdjustmentValue 爲正數表示告警觸發後增加實例，爲負數表示告警觸發後減少實例 </li> <li> 當 AdjustmentType 爲 EXACT_CAPACITY 時，AdjustmentValue 的值即爲告警觸發後新的期望實例數，需要大于或等于0 </li> <li> 當 AdjustmentType 爲 PERCENT_CHANGE_IN_CAPACITY 時，AdjusmentValue 爲正數表示告警觸發後按百分比增加實例，爲負數表示告警觸發後按百分比減少實例，單位是：%。
         :type AdjustmentValue: int
         :param MetricAlarm: 告警監控指标。
-        :type MetricAlarm: :class:`tencentcloud.autoscaling.v20180419.models.MetricAlarm`
+        :type MetricAlarm: :class:`taifucloudcloud.autoscaling.v20180419.models.MetricAlarm`
         :param Cooldown: 冷卻時間，單位爲秒。預設冷卻時間300秒。
         :type Cooldown: int
-        :param NotificationUserGroupIds: 通知組ID，即爲用戶組ID集合，用戶組ID可以通過[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查詢。
+        :param NotificationUserGroupIds: 通知組ID，即爲用戶組ID集合，用戶組ID可以通過[DescribeUserGroup](https://cloud.taifucloud.com/document/api/378/4404)查詢。
         :type NotificationUserGroupIds: list of str
         """
         self.AutoScalingGroupId = None
@@ -874,9 +874,9 @@ class CreateScheduledActionRequest(AbstractModel):
         :type MinSize: int
         :param DesiredCapacity: 當定時任務觸發時，設置的伸縮組期望實例數。
         :type DesiredCapacity: int
-        :param StartTime: 定時任務的首次觸發時間，取值爲`北京時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+        :param StartTime: 定時任務的首次觸發時間，取值爲` 時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
         :type StartTime: str
-        :param EndTime: 定時任務的結束時間，取值爲`北京時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br><br>此參數與`Recurrence`需要同時指定，到達結束時間之後，定時任務将不再生效。
+        :param EndTime: 定時任務的結束時間，取值爲` 時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br><br>此參數與`Recurrence`需要同時指定，到達結束時間之後，定時任務将不再生效。
         :type EndTime: str
         :param Recurrence: 定時任務的重複方式。爲标準[Cron](https://zh.wikipedia.org/wiki/Cron)格式<br><br>此參數與`EndTime`需要同時指定。
         :type Recurrence: str
@@ -930,10 +930,10 @@ class DataDisk(AbstractModel):
 
     def __init__(self):
         """
-        :param DiskType: 數據盤類型。數據盤類型限制詳見[CVM實例配置](https://cloud.tencent.com/document/product/213/2177)。取值範圍：<br><li>LOCAL_BASIC：本地硬碟<br><li>LOCAL_SSD：本地SSD硬碟<br><li>CLOUD_BASIC：普通雲硬碟<br><li>CLOUD_PREMIUM：高效能雲硬碟<br><li>CLOUD_SSD：SSD雲硬碟<br><br>預設取值：LOCAL_BASIC。
+        :param DiskType: 數據盤類型。數據盤類型限制詳見[CVM實例配置](https://cloud.taifucloud.com/document/product/213/2177)。取值範圍：<br><li>LOCAL_BASIC：本地硬碟<br><li>LOCAL_SSD：本地SSD硬碟<br><li>CLOUD_BASIC：普通雲硬碟<br><li>CLOUD_PREMIUM：高效能雲硬碟<br><li>CLOUD_SSD：SSD雲硬碟<br><br>預設取值：LOCAL_BASIC。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DiskType: str
-        :param DiskSize: 數據盤大小，單位：GB。最小調整步長爲10G，不同數據盤類型取值範圍不同，具體限制詳見：[CVM實例配置](https://cloud.tencent.com/document/product/213/2177)。預設值爲0，表示不購買數據盤。更多限制詳見産品文件。
+        :param DiskSize: 數據盤大小，單位：GB。最小調整步長爲10G，不同數據盤類型取值範圍不同，具體限制詳見：[CVM實例配置](https://cloud.taifucloud.com/document/product/213/2177)。預設值爲0，表示不購買數據盤。更多限制詳見産品文件。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DiskSize: int
         :param SnapshotId: 數據盤快照 ID，類似 `snap-l8psqwnt`。
@@ -1210,9 +1210,9 @@ class DescribeAutoScalingActivitiesRequest(AbstractModel):
 <li> activity-id - String - 是否必填：否 -（過濾條件）按照伸縮活動ID過濾。</li>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`ActivityIds`和`Filters`。
         :type Filters: list of Filter
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
         :param StartTime: 伸縮活動最早的開始時間，如果指定了ActivityIds，此參數将被忽略。取值爲`UTC`時間，按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ssZ`。
         :type StartTime: str
@@ -1286,9 +1286,9 @@ class DescribeAutoScalingGroupsRequest(AbstractModel):
 <li> launch-configuration-id - String - 是否必填：否 -（過濾條件）按照啓動配置ID過濾。</li>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`AutoScalingGroupIds`和`Filters`。
         :type Filters: list of Filter
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
         """
         self.AutoScalingGroupIds = None
@@ -1353,9 +1353,9 @@ class DescribeAutoScalingInstancesRequest(AbstractModel):
 <li> auto-scaling-group-id - String - 是否必填：否 -（過濾條件）按照伸縮組ID過濾。</li>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`InstanceIds`和`Filters`。
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.InstanceIds = None
@@ -1420,9 +1420,9 @@ class DescribeLaunchConfigurationsRequest(AbstractModel):
 <li> launch-configuration-name - String - 是否必填：否 -（過濾條件）按照啓動配置名稱過濾。</li>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`LaunchConfigurationIds`和`Filters`。
         :type Filters: list of Filter
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
         """
         self.LaunchConfigurationIds = None
@@ -1492,9 +1492,9 @@ class DescribeLifecycleHooksRequest(AbstractModel):
 <li> auto-scaling-group-id - String - 是否必填：否 -（過濾條件）按照伸縮組ID過濾。</li>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`LifecycleHookIds `和`Filters`。
         :type Filters: list of Filter
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
         """
         self.LifecycleHookIds = None
@@ -1559,9 +1559,9 @@ class DescribeNotificationConfigurationsRequest(AbstractModel):
 <li> auto-scaling-group-id - String - 是否必填：否 -（過濾條件）按照伸縮組ID過濾。</li>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`AutoScalingNotificationIds`和`Filters`。
         :type Filters: list of Filter
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
         """
         self.AutoScalingNotificationIds = None
@@ -1691,9 +1691,9 @@ class DescribeScalingPoliciesRequest(AbstractModel):
 <li> scaling-policy-name - String - 是否必填：否 -（過濾條件）按照告警策略名稱過濾。</li>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`AutoScalingPolicyIds`和`Filters`。
         :type Filters: list of Filter
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
         """
         self.AutoScalingPolicyIds = None
@@ -1758,9 +1758,9 @@ class DescribeScheduledActionsRequest(AbstractModel):
 <li> scheduled-action-name - String - 是否必填：否 - （過濾條件） 按照定時任務名稱過濾。</li>
 <li> auto-scaling-group-id - String - 是否必填：否 - （過濾條件） 按照伸縮組ID過濾。</li>
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于Limit的更進一步介紹請參考 API [簡介](https://cloud.tencent.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關于Limit的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.ScheduledActionIds = None
@@ -1929,9 +1929,9 @@ class EnhancedService(AbstractModel):
     def __init__(self):
         """
         :param SecurityService: 開啓雲安全服務。若不指定該參數，則預設開啓雲安全服務。
-        :type SecurityService: :class:`tencentcloud.autoscaling.v20180419.models.RunSecurityServiceEnabled`
+        :type SecurityService: :class:`taifucloudcloud.autoscaling.v20180419.models.RunSecurityServiceEnabled`
         :param MonitorService: 開啓雲監控服務。若不指定該參數，則預設開啓雲監控服務。
-        :type MonitorService: :class:`tencentcloud.autoscaling.v20180419.models.RunMonitorServiceEnabled`
+        :type MonitorService: :class:`taifucloudcloud.autoscaling.v20180419.models.RunMonitorServiceEnabled`
         """
         self.SecurityService = None
         self.MonitorService = None
@@ -1951,7 +1951,7 @@ class Filter(AbstractModel):
     > * 若存在多個`Filter`時，`Filter`間的關系爲邏輯與（`AND`）關系。
     > * 若同一個`Filter`存在多個`Values`，同一`Filter`下`Values`間的關系爲邏輯或（`OR`）關系。
     >
-    > 以[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲廣州一區 ***并且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
+    > 以[DescribeInstances](https://cloud.taifucloud.com/document/api/213/9388)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲 一區 ***并且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
     ```
     Filters.0.Name=zone
     &Filters.0.Values.1=ap-guangzhou-1
@@ -2102,7 +2102,7 @@ class InstanceMarketOptionsRequest(AbstractModel):
     def __init__(self):
         """
         :param SpotOptions: 競價相關選項
-        :type SpotOptions: :class:`tencentcloud.autoscaling.v20180419.models.SpotMarketOptions`
+        :type SpotOptions: :class:`taifucloudcloud.autoscaling.v20180419.models.SpotMarketOptions`
         :param MarketType: 市場選項類型，當前只支援取值：spot
 注意：此欄位可能返回 null，表示取不到有效值。
         :type MarketType: str
@@ -2149,7 +2149,7 @@ class InternetAccessible(AbstractModel):
         :param InternetChargeType: 網絡計費類型。取值範圍：<br><li>BANDWIDTH_PREPAID：預付費按頻寬結算<br><li>TRAFFIC_POSTPAID_BY_HOUR：流量按小時後付費<br><li>BANDWIDTH_POSTPAID_BY_HOUR：頻寬按小時後付費<br><li>BANDWIDTH_PACKAGE：頻寬包用戶<br>預設取值：TRAFFIC_POSTPAID_BY_HOUR。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InternetChargeType: str
-        :param InternetMaxBandwidthOut: 公網出頻寬上限，單位：Mbps。預設值：0Mbps。不同機型頻寬上限範圍不一緻，具體限制詳見[購買網絡頻寬](https://cloud.tencent.com/document/product/213/509)。
+        :param InternetMaxBandwidthOut: 公網出頻寬上限，單位：Mbps。預設值：0Mbps。不同機型頻寬上限範圍不一緻，具體限制詳見[購買網絡頻寬](https://cloud.taifucloud.com/document/product/213/509)。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InternetMaxBandwidthOut: int
         :param PublicIpAssigned: 是否分配公網IP。取值範圍：<br><li>TRUE：表示分配公網IP<br><li>FALSE：表示不分配公網IP<br><br>當公網頻寬大于0Mbps時，可自由選擇開通與否，預設開通公網IP；當公網頻寬爲0，則不允許分配公網IP。
@@ -2183,13 +2183,13 @@ class LaunchConfiguration(AbstractModel):
         :param InstanceType: 實例機型。
         :type InstanceType: str
         :param SystemDisk: 實例系統盤配置訊息。
-        :type SystemDisk: :class:`tencentcloud.autoscaling.v20180419.models.SystemDisk`
+        :type SystemDisk: :class:`taifucloudcloud.autoscaling.v20180419.models.SystemDisk`
         :param DataDisks: 實例數據盤配置訊息。
         :type DataDisks: list of DataDisk
         :param LoginSettings: 實例登入設置。
-        :type LoginSettings: :class:`tencentcloud.autoscaling.v20180419.models.LimitedLoginSettings`
+        :type LoginSettings: :class:`taifucloudcloud.autoscaling.v20180419.models.LimitedLoginSettings`
         :param InternetAccessible: 公網頻寬相關訊息設置。
-        :type InternetAccessible: :class:`tencentcloud.autoscaling.v20180419.models.InternetAccessible`
+        :type InternetAccessible: :class:`taifucloudcloud.autoscaling.v20180419.models.InternetAccessible`
         :param SecurityGroupIds: 實例所屬安全組。
         :type SecurityGroupIds: list of str
         :param AutoScalingGroupAbstractSet: 啓動配置關聯的伸縮組。
@@ -2200,7 +2200,7 @@ class LaunchConfiguration(AbstractModel):
         :param CreatedTime: 啓動配置創建時間。
         :type CreatedTime: str
         :param EnhancedService: 實例的增強服務啓用情況與其設置。
-        :type EnhancedService: :class:`tencentcloud.autoscaling.v20180419.models.EnhancedService`
+        :type EnhancedService: :class:`taifucloudcloud.autoscaling.v20180419.models.EnhancedService`
         :param ImageId: 映像ID。
         :type ImageId: str
         :param LaunchConfigurationStatus: 啓動配置當前狀态。取值範圍：<br><li>NORMAL：正常<br><li>IMAGE_ABNORMAL：啓動配置映像異常<br><li>CBS_SNAP_ABNORMAL：啓動配置數據盤快照異常<br><li>SECURITY_GROUP_ABNORMAL：啓動配置安全組異常<br>
@@ -2211,7 +2211,7 @@ class LaunchConfiguration(AbstractModel):
         :type InstanceChargeType: str
         :param InstanceMarketOptions: 實例的市場相關選項，如競價實例相關參數，若指定實例的付費模式爲競價付費則該參數必傳。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type InstanceMarketOptions: :class:`tencentcloud.autoscaling.v20180419.models.InstanceMarketOptionsRequest`
+        :type InstanceMarketOptions: :class:`taifucloudcloud.autoscaling.v20180419.models.InstanceMarketOptionsRequest`
         :param InstanceTypes: 實例機型清單。
         :type InstanceTypes: list of str
         :param InstanceTags: 标簽清單。
@@ -2317,7 +2317,7 @@ class LifecycleHook(AbstractModel):
         :param CreatedTime: 創建時間
         :type CreatedTime: str
         :param NotificationTarget: 通知目标
-        :type NotificationTarget: :class:`tencentcloud.autoscaling.v20180419.models.NotificationTarget`
+        :type NotificationTarget: :class:`taifucloudcloud.autoscaling.v20180419.models.NotificationTarget`
         """
         self.LifecycleHookId = None
         self.LifecycleHookName = None
@@ -2567,7 +2567,7 @@ class ModifyLaunchConfigurationAttributesRequest(AbstractModel):
         """
         :param LaunchConfigurationId: 啓動配置ID
         :type LaunchConfigurationId: str
-        :param ImageId: 指定有效的[映像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.tencent.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回訊息中的`ImageId`欄位。</li>
+        :param ImageId: 指定有效的[映像](https://cloud.taifucloud.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.taifucloud.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.taifucloud.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.taifucloud.com/document/api/213/15715) ，取返回訊息中的`ImageId`欄位。</li>
         :type ImageId: str
         :param InstanceTypes: 實例類型清單，不同實例機型指定了不同的資源規格，最多支援5種實例機型。
 啓動配置，通過 InstanceType 表示單一實例類型，通過 InstanceTypes 表示多實例類型。指定 InstanceTypes 成功啓動配置後，原有的 InstanceType 自動失效。
@@ -2686,7 +2686,7 @@ class ModifyNotificationConfigurationRequest(AbstractModel):
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL：替換不健康子機成功</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替換不健康子機失敗</li>
         :type NotificationTypes: list of str
-        :param NotificationUserGroupIds: 通知組ID，即爲用戶組ID集合，用戶組ID可以通過[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查詢。
+        :param NotificationUserGroupIds: 通知組ID，即爲用戶組ID集合，用戶組ID可以通過[DescribeUserGroup](https://cloud.taifucloud.com/document/api/378/4404)查詢。
         :type NotificationUserGroupIds: list of str
         """
         self.AutoScalingNotificationId = None
@@ -2735,8 +2735,8 @@ class ModifyScalingPolicyRequest(AbstractModel):
         :param Cooldown: 冷卻時間，單位爲秒。
         :type Cooldown: int
         :param MetricAlarm: 告警監控指标。
-        :type MetricAlarm: :class:`tencentcloud.autoscaling.v20180419.models.MetricAlarm`
-        :param NotificationUserGroupIds: 通知組ID，即爲用戶組ID集合，用戶組ID可以通過[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查詢。
+        :type MetricAlarm: :class:`taifucloudcloud.autoscaling.v20180419.models.MetricAlarm`
+        :param NotificationUserGroupIds: 通知組ID，即爲用戶組ID集合，用戶組ID可以通過[DescribeUserGroup](https://cloud.taifucloud.com/document/api/378/4404)查詢。
 如果需要清空通知用戶組，需要在清單中傳入特定字串 "NULL"。
         :type NotificationUserGroupIds: list of str
         """
@@ -2795,9 +2795,9 @@ class ModifyScheduledActionRequest(AbstractModel):
         :type MinSize: int
         :param DesiredCapacity: 當定時任務觸發時，設置的伸縮組期望實例數。
         :type DesiredCapacity: int
-        :param StartTime: 定時任務的首次觸發時間，取值爲`北京時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+        :param StartTime: 定時任務的首次觸發時間，取值爲` 時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
         :type StartTime: str
-        :param EndTime: 定時任務的結束時間，取值爲`北京時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br>此參數與`Recurrence`需要同時指定，到達結束時間之後，定時任務将不再生效。
+        :param EndTime: 定時任務的結束時間，取值爲` 時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br>此參數與`Recurrence`需要同時指定，到達結束時間之後，定時任務将不再生效。
         :type EndTime: str
         :param Recurrence: 定時任務的重複方式。爲标準[Cron](https://zh.wikipedia.org/wiki/Cron)格式<br>此參數與`EndTime`需要同時指定。
         :type Recurrence: str
@@ -2975,7 +2975,7 @@ class RunMonitorServiceEnabled(AbstractModel):
 
     def __init__(self):
         """
-        :param Enabled: 是否開啓[雲監控](https://cloud.tencent.com/document/product/248)服務。取值範圍：<br><li>TRUE：表示開啓雲監控服務<br><li>FALSE：表示不開啓雲監控服務<br><br>預設取值：TRUE。
+        :param Enabled: 是否開啓[雲監控](https://cloud.taifucloud.com/document/product/248)服務。取值範圍：<br><li>TRUE：表示開啓雲監控服務<br><li>FALSE：表示不開啓雲監控服務<br><br>預設取值：TRUE。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Enabled: bool
         """
@@ -2993,7 +2993,7 @@ class RunSecurityServiceEnabled(AbstractModel):
 
     def __init__(self):
         """
-        :param Enabled: 是否開啓[雲安全](https://cloud.tencent.com/document/product/296)服務。取值範圍：<br><li>TRUE：表示開啓雲安全服務<br><li>FALSE：表示不開啓雲安全服務<br><br>預設取值：TRUE。
+        :param Enabled: 是否開啓[雲安全](https://cloud.taifucloud.com/document/product/296)服務。取值範圍：<br><li>TRUE：表示開啓雲安全服務<br><li>FALSE：表示不開啓雲安全服務<br><br>預設取值：TRUE。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Enabled: bool
         """
@@ -3024,7 +3024,7 @@ class ScalingPolicy(AbstractModel):
         :param Cooldown: 冷卻時間。
         :type Cooldown: int
         :param MetricAlarm: 告警監控指标。
-        :type MetricAlarm: :class:`tencentcloud.autoscaling.v20180419.models.MetricAlarm`
+        :type MetricAlarm: :class:`taifucloudcloud.autoscaling.v20180419.models.MetricAlarm`
         :param NotificationUserGroupIds: 通知組ID，即爲用戶組ID集合。
         :type NotificationUserGroupIds: list of str
         """
@@ -3064,11 +3064,11 @@ class ScheduledAction(AbstractModel):
         :type ScheduledActionName: str
         :param AutoScalingGroupId: 定時任務所在伸縮組ID。
         :type AutoScalingGroupId: str
-        :param StartTime: 定時任務的開始時間。取值爲`北京時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+        :param StartTime: 定時任務的開始時間。取值爲` 時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
         :type StartTime: str
         :param Recurrence: 定時任務的重複方式。
         :type Recurrence: str
-        :param EndTime: 定時任務的結束時間。取值爲`北京時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+        :param EndTime: 定時任務的結束時間。取值爲` 時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
         :type EndTime: str
         :param MaxSize: 定時任務設置的最大實例數。
         :type MaxSize: int
@@ -3175,7 +3175,7 @@ class SystemDisk(AbstractModel):
 
     def __init__(self):
         """
-        :param DiskType: 系統盤類型。系統盤類型限制詳見[CVM實例配置](https://cloud.tencent.com/document/product/213/2177)。取值範圍：<br><li>LOCAL_BASIC：本地硬碟<br><li>LOCAL_SSD：本地SSD硬碟<br><li>CLOUD_BASIC：普通雲硬碟<br><li>CLOUD_PREMIUM：高效能雲硬碟<br><li>CLOUD_SSD：SSD雲硬碟<br><br>預設取值：LOCAL_BASIC。
+        :param DiskType: 系統盤類型。系統盤類型限制詳見[CVM實例配置](https://cloud.taifucloud.com/document/product/213/2177)。取值範圍：<br><li>LOCAL_BASIC：本地硬碟<br><li>LOCAL_SSD：本地SSD硬碟<br><li>CLOUD_BASIC：普通雲硬碟<br><li>CLOUD_PREMIUM：高效能雲硬碟<br><li>CLOUD_SSD：SSD雲硬碟<br><br>預設取值：LOCAL_BASIC。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DiskType: str
         :param DiskSize: 系統盤大小，單位：GB。預設值爲 50
@@ -3221,7 +3221,7 @@ class UpgradeLaunchConfigurationRequest(AbstractModel):
         """
         :param LaunchConfigurationId: 啓動配置ID。
         :type LaunchConfigurationId: str
-        :param ImageId: 指定有效的[映像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.tencent.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回訊息中的`ImageId`欄位。</li>
+        :param ImageId: 指定有效的[映像](https://cloud.taifucloud.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.taifucloud.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.taifucloud.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.taifucloud.com/document/api/213/15715) ，取返回訊息中的`ImageId`欄位。</li>
         :type ImageId: str
         :param InstanceTypes: 實例機型清單，不同實例機型指定了不同的資源規格，最多支援5種實例機型。
         :type InstanceTypes: list of str
@@ -3230,13 +3230,13 @@ class UpgradeLaunchConfigurationRequest(AbstractModel):
         :param DataDisks: 實例數據盤配置訊息。若不指定該參數，則預設不購買數據盤，最多支援指定11塊數據盤。
         :type DataDisks: list of DataDisk
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
-        :type EnhancedService: :class:`tencentcloud.autoscaling.v20180419.models.EnhancedService`
+        :type EnhancedService: :class:`taifucloudcloud.autoscaling.v20180419.models.EnhancedService`
         :param InstanceChargeType: 實例計費類型，CVM預設值按照POSTPAID_BY_HOUR處理。
 <br><li>POSTPAID_BY_HOUR：按小時後付費
 <br><li>SPOTPAID：競價付費
         :type InstanceChargeType: str
         :param InstanceMarketOptions: 實例的市場相關選項，如競價實例相關參數，若指定實例的付費模式爲競價付費則該參數必傳。
-        :type InstanceMarketOptions: :class:`tencentcloud.autoscaling.v20180419.models.InstanceMarketOptionsRequest`
+        :type InstanceMarketOptions: :class:`taifucloudcloud.autoscaling.v20180419.models.InstanceMarketOptionsRequest`
         :param InstanceTypesCheckPolicy: 實例類型校驗策略，取值包括 ALL 和 ANY，預設取值爲ANY。
 <br><li> ALL，所有實例類型（InstanceType）都可用則通過校驗，否則校驗報錯。
 <br><li> ANY，存在任何一個實例類型（InstanceType）可用則通過校驗，否則校驗報錯。
@@ -3245,15 +3245,15 @@ class UpgradeLaunchConfigurationRequest(AbstractModel):
 如果 InstanceTypes 中一款機型不存在或者已下線，則無論 InstanceTypesCheckPolicy 采用何種取值，都會校驗報錯。
         :type InstanceTypesCheckPolicy: str
         :param InternetAccessible: 公網頻寬相關訊息設置。若不指定該參數，則預設公網頻寬爲0Mbps。
-        :type InternetAccessible: :class:`tencentcloud.autoscaling.v20180419.models.InternetAccessible`
+        :type InternetAccessible: :class:`taifucloudcloud.autoscaling.v20180419.models.InternetAccessible`
         :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，并以站内信方式知會到用戶。
-        :type LoginSettings: :class:`tencentcloud.autoscaling.v20180419.models.LoginSettings`
-        :param ProjectId: 實例所屬項目ID。該參數可以通過調用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的`projectId`欄位來獲取。不填爲預設項目。
+        :type LoginSettings: :class:`taifucloudcloud.autoscaling.v20180419.models.LoginSettings`
+        :param ProjectId: 實例所屬項目ID。該參數可以通過調用 [DescribeProject](https://cloud.taifucloud.com/document/api/378/4400) 的返回值中的`projectId`欄位來獲取。不填爲預設項目。
         :type ProjectId: int
-        :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`欄位來獲取。若不指定該參數，則預設不綁定安全組。
+        :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.taifucloud.com/document/api/215/15808) 的返回值中的`SecurityGroupId`欄位來獲取。若不指定該參數，則預設不綁定安全組。
         :type SecurityGroupIds: list of str
         :param SystemDisk: 實例系統盤配置訊息。若不指定該參數，則按照系統預設值進行分配。
-        :type SystemDisk: :class:`tencentcloud.autoscaling.v20180419.models.SystemDisk`
+        :type SystemDisk: :class:`taifucloudcloud.autoscaling.v20180419.models.SystemDisk`
         :param UserData: 經過 Base64 編碼後的自定義數據，最大長度不超過16KB。
         :type UserData: str
         :param InstanceTags: 标簽清單。通過指定該參數，可以爲擴容的實例綁定标簽。最多支援指定10個标簽。
@@ -3353,7 +3353,7 @@ class UpgradeLifecycleHookRequest(AbstractModel):
         :param NotificationMetadata: 彈性伸縮向通知目标發送的附加訊息，預設值爲''
         :type NotificationMetadata: str
         :param NotificationTarget: 通知目标
-        :type NotificationTarget: :class:`tencentcloud.autoscaling.v20180419.models.NotificationTarget`
+        :type NotificationTarget: :class:`taifucloudcloud.autoscaling.v20180419.models.NotificationTarget`
         """
         self.LifecycleHookId = None
         self.LifecycleHookName = None

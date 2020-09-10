@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Canvas(AbstractModel):
@@ -24,7 +24,7 @@ class Canvas(AbstractModel):
     def __init__(self):
         """
         :param LayoutParams: 混流畫布寬高配置
-        :type LayoutParams: :class:`tencentcloud.tiw.v20190919.models.LayoutParams`
+        :type LayoutParams: :class:`taifucloudcloud.tiw.v20190919.models.LayoutParams`
         :param BackgroundColor: 背景顔色，預設爲黑色，格式爲RGB格式，如紅色爲"#FF0000"
         :type BackgroundColor: str
         """
@@ -135,7 +135,7 @@ class CustomLayout(AbstractModel):
     def __init__(self):
         """
         :param Canvas: 混流畫布參數
-        :type Canvas: :class:`tencentcloud.tiw.v20190919.models.Canvas`
+        :type Canvas: :class:`taifucloudcloud.tiw.v20190919.models.Canvas`
         :param InputStreamList: 流布局參數，每路流的布局不能超出畫布區域
         :type InputStreamList: list of StreamLayout
         """
@@ -476,7 +476,7 @@ class MixStream(AbstractModel):
         :type TeacherId: str
         :param Custom: 自定義混流布局參數
 當此欄位存在時，ModelId 及 TeacherId 欄位将被忽略
-        :type Custom: :class:`tencentcloud.tiw.v20190919.models.CustomLayout`
+        :type Custom: :class:`taifucloudcloud.tiw.v20190919.models.CustomLayout`
         """
         self.Enabled = None
         self.DisableAudio = None
@@ -691,14 +691,14 @@ class StartOnlineRecordRequest(AbstractModel):
         :param GroupId: 白板的 IM 群組 Id，預設同房間号
         :type GroupId: str
         :param Concat: 實時錄制視訊拼接參數
-        :type Concat: :class:`tencentcloud.tiw.v20190919.models.Concat`
+        :type Concat: :class:`taifucloudcloud.tiw.v20190919.models.Concat`
         :param Whiteboard: 實時錄制白板參數，例如白板寬高等
-        :type Whiteboard: :class:`tencentcloud.tiw.v20190919.models.Whiteboard`
+        :type Whiteboard: :class:`taifucloudcloud.tiw.v20190919.models.Whiteboard`
         :param MixStream: 實時錄制混流參數
 特别說明：
 1. 混流功能需要根據額外開通， 請聯系Top Cloud 互動白板客服人員
 2. 使用混流功能，必須提供 Extras 參數，且 Extras 參數中必須包含 "MIX_STREAM"
-        :type MixStream: :class:`tencentcloud.tiw.v20190919.models.MixStream`
+        :type MixStream: :class:`taifucloudcloud.tiw.v20190919.models.MixStream`
         :param Extras: 使用到的高級功能清單
 可以選值清單：
 MIX_STREAM - 混流功能
@@ -804,7 +804,7 @@ class StreamLayout(AbstractModel):
     def __init__(self):
         """
         :param LayoutParams: 流布局配置參數
-        :type LayoutParams: :class:`tencentcloud.tiw.v20190919.models.LayoutParams`
+        :type LayoutParams: :class:`taifucloudcloud.tiw.v20190919.models.LayoutParams`
         :param InputStreamId: 視訊流ID
 流ID的取值含義如下：
 1. tic_record_user - 表示當前畫面用于顯示白板視訊流

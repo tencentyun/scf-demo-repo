@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tiems.v20190416 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tiems.v20190416 import models
 
 
 class TiemsClient(AbstractClient):
     _apiVersion = '2019-04-16'
-    _endpoint = 'tiems.tencentcloudapi.com'
+    _endpoint = 'tiems.taifucloudcloudapi.com'
 
 
     def CreateJob(self, request):
         """創建任務
 
         :param request: Request instance for CreateJob.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.CreateJobRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.CreateJobResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.CreateJobRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.CreateJobResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TiemsClient(AbstractClient):
         """創建資源組的伸縮組。當前一個資源組僅允許創建一個伸縮組。
 
         :param request: Request instance for CreateRsgAsGroup.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.CreateRsgAsGroupRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.CreateRsgAsGroupResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.CreateRsgAsGroupRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.CreateRsgAsGroupResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TiemsClient(AbstractClient):
         """創建運作環境
 
         :param request: Request instance for CreateRuntime.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.CreateRuntimeRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.CreateRuntimeResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.CreateRuntimeRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.CreateRuntimeResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TiemsClient(AbstractClient):
         """創建服務
 
         :param request: Request instance for CreateService.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.CreateServiceRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.CreateServiceResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.CreateServiceRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.CreateServiceResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class TiemsClient(AbstractClient):
         """創建服務配置
 
         :param request: Request instance for CreateServiceConfig.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.CreateServiceConfigRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.CreateServiceConfigResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.CreateServiceConfigRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.CreateServiceConfigResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class TiemsClient(AbstractClient):
         """删除資源組中的節點。目前僅支援删除已經到期的預付費節點，和按量付費節點。
 
         :param request: Request instance for DeleteInstance.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.DeleteInstanceRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.DeleteInstanceResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.DeleteInstanceRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.DeleteInstanceResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class TiemsClient(AbstractClient):
         """删除任務
 
         :param request: Request instance for DeleteJob.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.DeleteJobRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.DeleteJobResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.DeleteJobRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.DeleteJobResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class TiemsClient(AbstractClient):
         """删除資源組
 
         :param request: Request instance for DeleteResourceGroup.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.DeleteResourceGroupRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.DeleteResourceGroupResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.DeleteResourceGroupRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.DeleteResourceGroupResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class TiemsClient(AbstractClient):
         """伸縮
 
         :param request: Request instance for DeleteRsgAsGroup.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.DeleteRsgAsGroupRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.DeleteRsgAsGroupResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.DeleteRsgAsGroupRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.DeleteRsgAsGroupResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class TiemsClient(AbstractClient):
         """删除運作環境
 
         :param request: Request instance for DeleteRuntime.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.DeleteRuntimeRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.DeleteRuntimeResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.DeleteRuntimeRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.DeleteRuntimeResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class TiemsClient(AbstractClient):
         """删除服務
 
         :param request: Request instance for DeleteService.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.DeleteServiceRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.DeleteServiceResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.DeleteServiceRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.DeleteServiceResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class TiemsClient(AbstractClient):
         """删除服務配置
 
         :param request: Request instance for DeleteServiceConfig.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.DeleteServiceConfigRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.DeleteServiceConfigResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.DeleteServiceConfigRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.DeleteServiceConfigResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class TiemsClient(AbstractClient):
         """獲取節點清單
 
         :param request: Request instance for DescribeInstances.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.DescribeInstancesRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.DescribeInstancesResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.DescribeInstancesRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.DescribeInstancesResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class TiemsClient(AbstractClient):
         """獲取資源組清單
 
         :param request: Request instance for DescribeResourceGroups.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.DescribeResourceGroupsRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.DescribeResourceGroupsResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.DescribeResourceGroupsRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.DescribeResourceGroupsResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class TiemsClient(AbstractClient):
         """查詢伸縮組活動
 
         :param request: Request instance for DescribeRsgAsGroupActivities.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.DescribeRsgAsGroupActivitiesRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.DescribeRsgAsGroupActivitiesResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.DescribeRsgAsGroupActivitiesRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.DescribeRsgAsGroupActivitiesResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class TiemsClient(AbstractClient):
         """查詢資源組的伸縮組訊息
 
         :param request: Request instance for DescribeRsgAsGroups.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.DescribeRsgAsGroupsRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.DescribeRsgAsGroupsResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.DescribeRsgAsGroupsRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.DescribeRsgAsGroupsResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class TiemsClient(AbstractClient):
         """描述服務運作環境
 
         :param request: Request instance for DescribeRuntimes.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.DescribeRuntimesRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.DescribeRuntimesResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.DescribeRuntimesRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.DescribeRuntimesResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class TiemsClient(AbstractClient):
         """描述服務配置
 
         :param request: Request instance for DescribeServiceConfigs.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.DescribeServiceConfigsRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.DescribeServiceConfigsResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.DescribeServiceConfigsRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.DescribeServiceConfigsResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class TiemsClient(AbstractClient):
         """描述服務
 
         :param request: Request instance for DescribeServices.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.DescribeServicesRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.DescribeServicesResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.DescribeServicesRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.DescribeServicesResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class TiemsClient(AbstractClient):
         """停用資源組的伸縮組
 
         :param request: Request instance for DisableRsgAsGroup.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.DisableRsgAsGroupRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.DisableRsgAsGroupResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.DisableRsgAsGroupRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.DisableRsgAsGroupResponse`
 
         """
         try:
@@ -589,8 +589,8 @@ class TiemsClient(AbstractClient):
         """啓用資源組的伸縮組
 
         :param request: Request instance for EnableRsgAsGroup.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.EnableRsgAsGroupRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.EnableRsgAsGroupResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.EnableRsgAsGroupRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.EnableRsgAsGroupResponse`
 
         """
         try:
@@ -617,8 +617,8 @@ class TiemsClient(AbstractClient):
         """暴露服務
 
         :param request: Request instance for ExposeService.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.ExposeServiceRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.ExposeServiceResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.ExposeServiceRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.ExposeServiceResponse`
 
         """
         try:
@@ -645,8 +645,8 @@ class TiemsClient(AbstractClient):
         """更新任務
 
         :param request: Request instance for UpdateJob.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.UpdateJobRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.UpdateJobResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.UpdateJobRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.UpdateJobResponse`
 
         """
         try:
@@ -673,8 +673,8 @@ class TiemsClient(AbstractClient):
         """更新資源組的伸縮組
 
         :param request: Request instance for UpdateRsgAsGroup.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.UpdateRsgAsGroupRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.UpdateRsgAsGroupResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.UpdateRsgAsGroupRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.UpdateRsgAsGroupResponse`
 
         """
         try:
@@ -701,8 +701,8 @@ class TiemsClient(AbstractClient):
         """更新服務
 
         :param request: Request instance for UpdateService.
-        :type request: :class:`tencentcloud.tiems.v20190416.models.UpdateServiceRequest`
-        :rtype: :class:`tencentcloud.tiems.v20190416.models.UpdateServiceResponse`
+        :type request: :class:`taifucloudcloud.tiems.v20190416.models.UpdateServiceRequest`
+        :rtype: :class:`taifucloudcloud.tiems.v20190416.models.UpdateServiceResponse`
 
         """
         try:

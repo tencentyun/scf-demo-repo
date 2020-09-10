@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AddClusterInstancesRequest(AbstractModel):
@@ -70,7 +70,7 @@ class AddClusterInstancesResponse(AbstractModel):
         """
         :param Result: 添加雲主機的返回清單
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.AddInstanceResult`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.AddInstanceResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -363,7 +363,7 @@ class Cluster(AbstractModel):
         :type SubnetId: str
         :param OperationInfo: 返回給前端的控制訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OperationInfo: :class:`tencentcloud.tsf.v20180326.models.OperationInfo`
+        :type OperationInfo: :class:`taifucloudcloud.tsf.v20180326.models.OperationInfo`
         """
         self.ClusterId = None
         self.ClusterName = None
@@ -1034,7 +1034,7 @@ class CosDownloadInfo(AbstractModel):
         :type Path: str
         :param Credentials: 鑒權訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Credentials: :class:`tencentcloud.tsf.v20180326.models.CosCredentials`
+        :type Credentials: :class:`taifucloudcloud.tsf.v20180326.models.CosCredentials`
         """
         self.Bucket = None
         self.Region = None
@@ -1071,7 +1071,7 @@ class CosUploadInfo(AbstractModel):
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Path: str
         :param Credentials: 鑒權訊息
-        :type Credentials: :class:`tencentcloud.tsf.v20180326.models.CosCredentials`
+        :type Credentials: :class:`taifucloudcloud.tsf.v20180326.models.CosCredentials`
         """
         self.PkgId = None
         self.Bucket = None
@@ -2276,7 +2276,7 @@ class DeployGroupResponse(AbstractModel):
         """
         :param Result: 任務ID
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TaskId`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TaskId`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2370,7 +2370,7 @@ class DescribeApplicationAttributeResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 應用清單其它欄位返回參數
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.ApplicationAttribute`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.ApplicationAttribute`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2411,7 +2411,7 @@ class DescribeApplicationResponse(AbstractModel):
         """
         :param Result: 應用訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.ApplicationForPage`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.ApplicationForPage`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2480,7 +2480,7 @@ class DescribeApplicationsResponse(AbstractModel):
         """
         :param Result: 應用分頁清單訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageApplication`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageApplication`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2541,7 +2541,7 @@ class DescribeClusterInstancesResponse(AbstractModel):
         """
         :param Result: 集群機器實例分頁訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageInstance`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageInstance`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2602,7 +2602,7 @@ class DescribeConfigReleaseLogsResponse(AbstractModel):
         """
         :param Result: 分頁的配置項發布曆史清單
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageConfigReleaseLog`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageConfigReleaseLog`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2671,7 +2671,7 @@ class DescribeConfigReleasesResponse(AbstractModel):
         """
         :param Result: 分頁的配置發布訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageConfigRelease`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageConfigRelease`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2712,7 +2712,7 @@ class DescribeConfigResponse(AbstractModel):
         """
         :param Result: 配置項
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.Config`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.Config`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2764,7 +2764,7 @@ class DescribeConfigSummaryResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 配置項分頁對象
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageConfig`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageConfig`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2829,7 +2829,7 @@ class DescribeConfigsResponse(AbstractModel):
         """
         :param Result: 分頁後的配置項清單
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageConfig`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageConfig`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2869,7 +2869,7 @@ class DescribeContainerGroupDetailResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 容器佈署組詳情
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.ContainerGroupDetail`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.ContainerGroupDetail`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2937,7 +2937,7 @@ class DescribeContainerGroupsResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 查詢的權限數據對象
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.ContainGroupResult`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.ContainGroupResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2981,7 +2981,7 @@ class DescribeDownloadInfoResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: COS鑒權訊息
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.CosDownloadInfo`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.CosDownloadInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3042,7 +3042,7 @@ class DescribeGroupInstancesResponse(AbstractModel):
         """
         :param Result: 佈署組機器訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageInstance`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageInstance`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3083,7 +3083,7 @@ class DescribeGroupResponse(AbstractModel):
         """
         :param Result: 虛拟機佈署組詳情
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.VmGroup`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.VmGroup`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3156,7 +3156,7 @@ class DescribeGroupsResponse(AbstractModel):
         """
         :param Result: 虛拟機佈署組分頁訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageVmGroup`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageVmGroup`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3212,7 +3212,7 @@ class DescribeImageTagsResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 查詢的權限數據對象
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.ImageTagsResult`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.ImageTagsResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3261,7 +3261,7 @@ class DescribeMicroserviceResponse(AbstractModel):
         """
         :param Result: 微服務詳情實例清單
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageMsInstance`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageMsInstance`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3322,7 +3322,7 @@ class DescribeMicroservicesResponse(AbstractModel):
         """
         :param Result: 微服務分頁清單訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageMicroservice`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageMicroservice`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3382,7 +3382,7 @@ class DescribePkgsResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 符合查詢程式包訊息清單
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.PkgList`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.PkgList`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3430,7 +3430,7 @@ class DescribePodInstancesResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 查詢的權限數據對象
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.GroupPodResult`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.GroupPodResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3479,7 +3479,7 @@ class DescribePublicConfigReleaseLogsResponse(AbstractModel):
         """
         :param Result: 分頁後的公共配置項發布曆史清單
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageConfigReleaseLog`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageConfigReleaseLog`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3536,7 +3536,7 @@ class DescribePublicConfigReleasesResponse(AbstractModel):
         """
         :param Result: 公共配置發布訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageConfigRelease`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageConfigRelease`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3577,7 +3577,7 @@ class DescribePublicConfigResponse(AbstractModel):
         """
         :param Result: 全局配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.Config`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.Config`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3626,7 +3626,7 @@ class DescribePublicConfigSummaryResponse(AbstractModel):
         """
         :param Result: 分頁的全局配置統計訊息清單
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageConfig`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageConfig`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3687,7 +3687,7 @@ class DescribePublicConfigsResponse(AbstractModel):
         """
         :param Result: 分頁後的全局配置項清單
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageConfig`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageConfig`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3767,7 +3767,7 @@ class DescribeServerlessGroupResponse(AbstractModel):
         """
         :param Result: 結果
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.ServerlessGroup`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.ServerlessGroup`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3836,7 +3836,7 @@ class DescribeServerlessGroupsResponse(AbstractModel):
         """
         :param Result: 數據清單對象
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.ServerlessGroupPage`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.ServerlessGroupPage`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3901,7 +3901,7 @@ class DescribeSimpleApplicationsResponse(AbstractModel):
         """
         :param Result: 簡單應用分頁對象
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageSimpleApplication`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageSimpleApplication`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3958,7 +3958,7 @@ class DescribeSimpleClustersResponse(AbstractModel):
         """
         :param Result: TSF集群分頁對象
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageCluster`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageCluster`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -4031,7 +4031,7 @@ class DescribeSimpleGroupsResponse(AbstractModel):
         """
         :param Result: 簡單佈署組清單
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageSimpleGroup`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageSimpleGroup`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -4108,7 +4108,7 @@ class DescribeSimpleNamespacesResponse(AbstractModel):
         """
         :param Result: 命名空間分頁清單
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TsfPageNamespace`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TsfPageNamespace`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -4164,7 +4164,7 @@ class DescribeUploadInfoResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: COS上傳訊息
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.CosUploadInfo`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.CosUploadInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -4230,7 +4230,7 @@ class ExpandGroupResponse(AbstractModel):
         """
         :param Result: 任務ID
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TaskId`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TaskId`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -5095,13 +5095,13 @@ class OperationInfo(AbstractModel):
         """
         :param Init: 初始化按鈕的控制訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Init: :class:`tencentcloud.tsf.v20180326.models.OperationInfoDetail`
+        :type Init: :class:`taifucloudcloud.tsf.v20180326.models.OperationInfoDetail`
         :param AddInstance: 添加實例按鈕的控制訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AddInstance: :class:`tencentcloud.tsf.v20180326.models.OperationInfoDetail`
+        :type AddInstance: :class:`taifucloudcloud.tsf.v20180326.models.OperationInfoDetail`
         :param Destroy: 銷毀機器的控制訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Destroy: :class:`tencentcloud.tsf.v20180326.models.OperationInfoDetail`
+        :type Destroy: :class:`taifucloudcloud.tsf.v20180326.models.OperationInfoDetail`
         """
         self.Init = None
         self.AddInstance = None
@@ -5675,7 +5675,7 @@ class ShrinkGroupResponse(AbstractModel):
         """
         :param Result: 任務ID
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TaskId`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TaskId`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -5719,7 +5719,7 @@ class ShrinkInstancesResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 任務ID
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TaskId`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TaskId`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -5946,7 +5946,7 @@ class StartGroupResponse(AbstractModel):
         """
         :param Result: 任務ID
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TaskId`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TaskId`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -6027,7 +6027,7 @@ class StopGroupResponse(AbstractModel):
         """
         :param Result: 任務ID
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Result: :class:`tencentcloud.tsf.v20180326.models.TaskId`
+        :type Result: :class:`taifucloudcloud.tsf.v20180326.models.TaskId`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

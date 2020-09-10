@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.bmvpc.v20180625 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.bmvpc.v20180625 import models
 
 
 class BmvpcClient(AbstractClient):
     _apiVersion = '2018-06-25'
-    _endpoint = 'bmvpc.tencentcloudapi.com'
+    _endpoint = 'bmvpc.taifucloudcloudapi.com'
 
 
     def AcceptVpcPeerConnection(self, request):
         """接受黑石對等連接
 
         :param request: 調用AcceptVpcPeerConnection所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.AcceptVpcPeerConnectionRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.AcceptVpcPeerConnectionResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.AcceptVpcPeerConnectionRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.AcceptVpcPeerConnectionResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class BmvpcClient(AbstractClient):
         """批次注冊虛拟IP，異步介面。通過介面來查詢任務進度。每次請求最多注冊256個IP
 
         :param request: 調用AsyncRegisterIps所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.AsyncRegisterIpsRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.AsyncRegisterIpsResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.AsyncRegisterIpsRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.AsyncRegisterIpsResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class BmvpcClient(AbstractClient):
         """NAT閘道綁定EIP介面，可将EIP綁定到NAT閘道，該EIP作爲訪問外網的源IP網址，将流量發送到Internet
 
         :param request: 調用BindEipsToNatGateway所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.BindEipsToNatGatewayRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.BindEipsToNatGatewayResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.BindEipsToNatGatewayRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.BindEipsToNatGatewayResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class BmvpcClient(AbstractClient):
         """可用于将子網的部分IP綁定到NAT閘道
 
         :param request: 調用BindIpsToNatGateway所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.BindIpsToNatGatewayRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.BindIpsToNatGatewayResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.BindIpsToNatGatewayRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.BindIpsToNatGatewayResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class BmvpcClient(AbstractClient):
         """NAT閘道綁定子網後，該子網内全部IP可出公網
 
         :param request: 調用BindSubnetsToNatGateway所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.BindSubnetsToNatGatewayRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.BindSubnetsToNatGatewayResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.BindSubnetsToNatGatewayRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.BindSubnetsToNatGatewayResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class BmvpcClient(AbstractClient):
         """創建黑石Docker子網， 如果不指定VlanId，将會分配2000--2999範圍的VlanId; 子網會關閉分布式閘道
 
         :param request: 調用CreateDockerSubnetWithVlan所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateDockerSubnetWithVlanRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.CreateDockerSubnetWithVlanResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateDockerSubnetWithVlanRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateDockerSubnetWithVlanResponse`
 
         """
         try:
@@ -201,8 +201,8 @@ class BmvpcClient(AbstractClient):
         3) 每次調用最多能支援傳入10台托管機器。
 
         :param request: 調用CreateHostedInterface所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateHostedInterfaceRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.CreateHostedInterfaceResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateHostedInterfaceRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateHostedInterfaceResponse`
 
         """
         try:
@@ -229,8 +229,8 @@ class BmvpcClient(AbstractClient):
         """物理機加入子網
 
         :param request: 調用CreateInterfaces所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateInterfacesRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.CreateInterfacesResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateInterfacesRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateInterfacesResponse`
 
         """
         try:
@@ -257,8 +257,8 @@ class BmvpcClient(AbstractClient):
         """創建NAT閘道介面，可針對網段方式、子網全部IP、子網部分IP這三種方式創建NAT閘道
 
         :param request: 調用CreateNatGateway所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateNatGatewayRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.CreateNatGatewayResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateNatGatewayRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateNatGatewayResponse`
 
         """
         try:
@@ -285,8 +285,8 @@ class BmvpcClient(AbstractClient):
         """創建黑石路由表的路由規則
 
         :param request: 調用CreateRoutePolicies所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateRoutePoliciesRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.CreateRoutePoliciesResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateRoutePoliciesRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateRoutePoliciesResponse`
 
         """
         try:
@@ -314,8 +314,8 @@ class BmvpcClient(AbstractClient):
         訪問管理: 用戶可以對VpcId進行授權操作。比如設置資源爲["qcs::bmvpc:::unVpc/vpc-xxxxx"]
 
         :param request: 調用CreateSubnet所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateSubnetRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.CreateSubnetResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateSubnetRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateSubnetResponse`
 
         """
         try:
@@ -342,8 +342,8 @@ class BmvpcClient(AbstractClient):
         """創建黑石虛拟子網， 虛拟子網用于在黑石上創建虛拟網絡，與黑石子網要做好規劃。虛拟子網會分配2000-2999的VlanId。
 
         :param request: 調用CreateVirtualSubnetWithVlan所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateVirtualSubnetWithVlanRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.CreateVirtualSubnetWithVlanResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateVirtualSubnetWithVlanRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateVirtualSubnetWithVlanResponse`
 
         """
         try:
@@ -370,8 +370,8 @@ class BmvpcClient(AbstractClient):
         """創建黑石私有網絡
 
         :param request: 調用CreateVpc所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateVpcRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.CreateVpcResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateVpcRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateVpcResponse`
 
         """
         try:
@@ -398,8 +398,8 @@ class BmvpcClient(AbstractClient):
         """創建對等連接
 
         :param request: 調用CreateVpcPeerConnection所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.CreateVpcPeerConnectionRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.CreateVpcPeerConnectionResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateVpcPeerConnectionRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateVpcPeerConnectionResponse`
 
         """
         try:
@@ -426,8 +426,8 @@ class BmvpcClient(AbstractClient):
         """本介面（DeleteCustomerGateway）用于删除對端閘道。
 
         :param request: 調用DeleteCustomerGateway所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteCustomerGatewayRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DeleteCustomerGatewayResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteCustomerGatewayRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteCustomerGatewayResponse`
 
         """
         try:
@@ -456,8 +456,8 @@ class BmvpcClient(AbstractClient):
         2) 每次調用最多能支援傳入10台物理機。
 
         :param request: 調用DeleteHostedInterface所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteHostedInterfaceRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DeleteHostedInterfaceResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteHostedInterfaceRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteHostedInterfaceResponse`
 
         """
         try:
@@ -484,8 +484,8 @@ class BmvpcClient(AbstractClient):
         """托管機器移除子網批次介面，傳入一台托管機器和多個子網，批次移除這些子網。異步介面，介面返回TaskId。
 
         :param request: 調用DeleteHostedInterfaces所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteHostedInterfacesRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DeleteHostedInterfacesResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteHostedInterfacesRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteHostedInterfacesResponse`
 
         """
         try:
@@ -512,8 +512,8 @@ class BmvpcClient(AbstractClient):
         """物理機移除子網批次介面，傳入一台物理機和多個子網，批次移除這些子網。異步介面，介面返回TaskId。
 
         :param request: 調用DeleteInterfaces所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteInterfacesRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DeleteInterfacesResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteInterfacesRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteInterfacesResponse`
 
         """
         try:
@@ -540,8 +540,8 @@ class BmvpcClient(AbstractClient):
         """删除NAT閘道
 
         :param request: 調用DeleteNatGateway所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteNatGatewayRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DeleteNatGatewayResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteNatGatewayRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteNatGatewayResponse`
 
         """
         try:
@@ -568,8 +568,8 @@ class BmvpcClient(AbstractClient):
         """删除黑石路由表路由規則
 
         :param request: 調用DeleteRoutePolicy所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteRoutePolicyRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DeleteRoutePolicyResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteRoutePolicyRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteRoutePolicyResponse`
 
         """
         try:
@@ -597,8 +597,8 @@ class BmvpcClient(AbstractClient):
         删除子網前，請清理該子網下所有資源，包括物理機、負載均衡、黑石資料庫、彈性IP、NAT閘道等資源
 
         :param request: 調用DeleteSubnet所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteSubnetRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DeleteSubnetResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteSubnetRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteSubnetResponse`
 
         """
         try:
@@ -625,8 +625,8 @@ class BmvpcClient(AbstractClient):
         """退還虛拟IP。此介面只能退還虛拟IP，物理機IP不能退還。
 
         :param request: 調用DeleteVirtualIp所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteVirtualIpRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DeleteVirtualIpResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteVirtualIpRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteVirtualIpResponse`
 
         """
         try:
@@ -655,8 +655,8 @@ class BmvpcClient(AbstractClient):
         删除私有網絡前，請清理該私有網絡下所有資源，包括子網、負載均衡、彈性 IP、對等連接、NAT 閘道、專線通道、SSLVPN 等資源。
 
         :param request: 調用DeleteVpc所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteVpcRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DeleteVpcResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteVpcRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteVpcResponse`
 
         """
         try:
@@ -683,8 +683,8 @@ class BmvpcClient(AbstractClient):
         """删除黑石對等連接
 
         :param request: 調用DeleteVpcPeerConnection所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteVpcPeerConnectionRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DeleteVpcPeerConnectionResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteVpcPeerConnectionRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteVpcPeerConnectionResponse`
 
         """
         try:
@@ -711,8 +711,8 @@ class BmvpcClient(AbstractClient):
         """本介面(DeleteVpnConnection)用于删除VPN通道。
 
         :param request: 調用DeleteVpnConnection所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteVpnConnectionRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DeleteVpnConnectionResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteVpnConnectionRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteVpnConnectionResponse`
 
         """
         try:
@@ -739,8 +739,8 @@ class BmvpcClient(AbstractClient):
         """本介面（DeleteVpnGateway）用于删除VPN閘道。
 
         :param request: 調用DeleteVpnGateway所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeleteVpnGatewayRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DeleteVpnGatewayResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteVpnGatewayRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteVpnGatewayResponse`
 
         """
         try:
@@ -767,8 +767,8 @@ class BmvpcClient(AbstractClient):
         """注銷私有網絡IP爲空閑
 
         :param request: 調用DeregisterIps所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DeregisterIpsRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DeregisterIpsResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DeregisterIpsRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DeregisterIpsResponse`
 
         """
         try:
@@ -795,8 +795,8 @@ class BmvpcClient(AbstractClient):
         """本介面（DescribeCustomerGateways）用于查詢對端閘道清單。
 
         :param request: 調用DescribeCustomerGateways所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeCustomerGatewaysRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DescribeCustomerGatewaysResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeCustomerGatewaysRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeCustomerGatewaysResponse`
 
         """
         try:
@@ -823,8 +823,8 @@ class BmvpcClient(AbstractClient):
         """獲取NAT閘道訊息，包括NAT閘道 ID、閘道名稱、私有網絡、閘道并發連接上限、綁定EIP清單等
 
         :param request: 調用DescribeNatGateways所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeNatGatewaysRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DescribeNatGatewaysResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeNatGatewaysRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeNatGatewaysResponse`
 
         """
         try:
@@ -851,8 +851,8 @@ class BmvpcClient(AbstractClient):
         """可獲取NAT閘道綁定的子網訊息
 
         :param request: 調用DescribeNatSubnets所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeNatSubnetsRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DescribeNatSubnetsResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeNatSubnetsRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeNatSubnetsResponse`
 
         """
         try:
@@ -879,8 +879,8 @@ class BmvpcClient(AbstractClient):
         """本介面（DescribeRoutePolicies）用于查詢路由表條目。
 
         :param request: 調用DescribeRoutePolicies所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeRoutePoliciesRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DescribeRoutePoliciesResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeRoutePoliciesRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeRoutePoliciesResponse`
 
         """
         try:
@@ -907,8 +907,8 @@ class BmvpcClient(AbstractClient):
         """本介面（DescribeRouteTables）用于查詢路由表。
 
         :param request: 調用DescribeRouteTables所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeRouteTablesRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DescribeRouteTablesResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeRouteTablesRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeRouteTablesResponse`
 
         """
         try:
@@ -935,8 +935,8 @@ class BmvpcClient(AbstractClient):
         """獲取子網内可用IP清單
 
         :param request: 調用DescribeSubnetAvailableIps所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeSubnetAvailableIpsRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DescribeSubnetAvailableIpsResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeSubnetAvailableIpsRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeSubnetAvailableIpsResponse`
 
         """
         try:
@@ -963,8 +963,8 @@ class BmvpcClient(AbstractClient):
         """物理機可以加入物理機子網，虛拟子網，DOCKER子網，通過此介面可以查詢物理機加入的子網。
 
         :param request: 調用DescribeSubnetByDevice所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeSubnetByDeviceRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DescribeSubnetByDeviceResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeSubnetByDeviceRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeSubnetByDeviceResponse`
 
         """
         try:
@@ -991,8 +991,8 @@ class BmvpcClient(AbstractClient):
         """托管可以加入物理機子網，虛拟子網，DOCKER子網，通過此介面可以查詢托管加入的子網。
 
         :param request: 調用DescribeSubnetByHostedDevice所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeSubnetByHostedDeviceRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DescribeSubnetByHostedDeviceResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeSubnetByHostedDeviceRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeSubnetByHostedDeviceResponse`
 
         """
         try:
@@ -1019,8 +1019,8 @@ class BmvpcClient(AbstractClient):
         """本介面（DescribeSubnets）用于查詢黑石子網清單。
 
         :param request: 調用DescribeSubnets所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeSubnetsRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DescribeSubnetsResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeSubnetsRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeSubnetsResponse`
 
         """
         try:
@@ -1047,8 +1047,8 @@ class BmvpcClient(AbstractClient):
         """根據任務ID，獲取任務的執行狀态
 
         :param request: 調用DescribeTaskStatus所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeTaskStatusRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DescribeTaskStatusResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeTaskStatusRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeTaskStatusResponse`
 
         """
         try:
@@ -1075,8 +1075,8 @@ class BmvpcClient(AbstractClient):
         """本介面（DescribeVpcQuota）用于查詢用戶VPC相關配額限制。
 
         :param request: 調用DescribeVpcQuota所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeVpcQuotaRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DescribeVpcQuotaResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeVpcQuotaRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeVpcQuotaResponse`
 
         """
         try:
@@ -1103,8 +1103,8 @@ class BmvpcClient(AbstractClient):
         """查詢黑石私有網絡關聯資源
 
         :param request: 調用DescribeVpcResource所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeVpcResourceRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DescribeVpcResourceResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeVpcResourceRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeVpcResourceResponse`
 
         """
         try:
@@ -1131,8 +1131,8 @@ class BmvpcClient(AbstractClient):
         """本介面（DescribeVpcView）用于查詢VPC網絡拓撲視圖。
 
         :param request: 調用DescribeVpcView所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeVpcViewRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DescribeVpcViewResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeVpcViewRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeVpcViewResponse`
 
         """
         try:
@@ -1160,8 +1160,8 @@ class BmvpcClient(AbstractClient):
         本介面不傳參數時，返回預設排序下的前20條VPC訊息。
 
         :param request: 調用DescribeVpcs所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DescribeVpcsRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DescribeVpcsResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeVpcsRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeVpcsResponse`
 
         """
         try:
@@ -1188,8 +1188,8 @@ class BmvpcClient(AbstractClient):
         """本介面(DownloadCustomerGatewayConfiguration)用于下載VPN通道配置。
 
         :param request: 調用DownloadCustomerGatewayConfiguration所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.DownloadCustomerGatewayConfigurationRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.DownloadCustomerGatewayConfigurationResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DownloadCustomerGatewayConfigurationRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.DownloadCustomerGatewayConfigurationResponse`
 
         """
         try:
@@ -1216,8 +1216,8 @@ class BmvpcClient(AbstractClient):
         """本介面（ModifyCustomerGatewayAttribute）用于修改對端閘道訊息。
 
         :param request: 調用ModifyCustomerGatewayAttribute所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifyCustomerGatewayAttributeRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.ModifyCustomerGatewayAttributeResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyCustomerGatewayAttributeRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyCustomerGatewayAttributeResponse`
 
         """
         try:
@@ -1244,8 +1244,8 @@ class BmvpcClient(AbstractClient):
         """修改自定義路由
 
         :param request: 調用ModifyRoutePolicy所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifyRoutePolicyRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.ModifyRoutePolicyResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyRoutePolicyRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyRoutePolicyResponse`
 
         """
         try:
@@ -1272,8 +1272,8 @@ class BmvpcClient(AbstractClient):
         """修改路由表
 
         :param request: 調用ModifyRouteTable所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifyRouteTableRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.ModifyRouteTableResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyRouteTableRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyRouteTableResponse`
 
         """
         try:
@@ -1300,8 +1300,8 @@ class BmvpcClient(AbstractClient):
         """修改子網屬性
 
         :param request: 調用ModifySubnetAttribute所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifySubnetAttributeRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.ModifySubnetAttributeResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifySubnetAttributeRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifySubnetAttributeResponse`
 
         """
         try:
@@ -1328,8 +1328,8 @@ class BmvpcClient(AbstractClient):
         """修改子網DHCP Relay屬性
 
         :param request: 調用ModifySubnetDHCPRelay所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifySubnetDHCPRelayRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.ModifySubnetDHCPRelayResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifySubnetDHCPRelayRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifySubnetDHCPRelayResponse`
 
         """
         try:
@@ -1356,8 +1356,8 @@ class BmvpcClient(AbstractClient):
         """本介面（ModifyVpcAttribute）用于修改VPC的标識名稱和控制VPC的監控起停。
 
         :param request: 調用ModifyVpcAttribute所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifyVpcAttributeRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.ModifyVpcAttributeResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyVpcAttributeRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyVpcAttributeResponse`
 
         """
         try:
@@ -1384,8 +1384,8 @@ class BmvpcClient(AbstractClient):
         """修改黑石對等連接
 
         :param request: 調用ModifyVpcPeerConnection所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifyVpcPeerConnectionRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.ModifyVpcPeerConnectionResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyVpcPeerConnectionRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyVpcPeerConnectionResponse`
 
         """
         try:
@@ -1412,8 +1412,8 @@ class BmvpcClient(AbstractClient):
         """本介面（ModifyVpnConnectionAttribute）用于修改VPN通道。
 
         :param request: 調用ModifyVpnConnectionAttribute所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifyVpnConnectionAttributeRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.ModifyVpnConnectionAttributeResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyVpnConnectionAttributeRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyVpnConnectionAttributeResponse`
 
         """
         try:
@@ -1440,8 +1440,8 @@ class BmvpcClient(AbstractClient):
         """本介面（ModifyVpnGatewayAttribute）用于修改VPN閘道屬性。
 
         :param request: 調用ModifyVpnGatewayAttribute所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.ModifyVpnGatewayAttributeRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.ModifyVpnGatewayAttributeResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyVpnGatewayAttributeRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyVpnGatewayAttributeResponse`
 
         """
         try:
@@ -1468,8 +1468,8 @@ class BmvpcClient(AbstractClient):
         """拒絕黑石對等連接申請
 
         :param request: 調用RejectVpcPeerConnection所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.RejectVpcPeerConnectionRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.RejectVpcPeerConnectionResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.RejectVpcPeerConnectionRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.RejectVpcPeerConnectionResponse`
 
         """
         try:
@@ -1496,8 +1496,8 @@ class BmvpcClient(AbstractClient):
         """本介面(ResetVpnConnection)用于重置VPN通道。
 
         :param request: 調用ResetVpnConnection所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.ResetVpnConnectionRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.ResetVpnConnectionResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.ResetVpnConnectionRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.ResetVpnConnectionResponse`
 
         """
         try:
@@ -1524,8 +1524,8 @@ class BmvpcClient(AbstractClient):
         """NAT閘道解綁該EIP後，NAT閘道将不會使用該EIP作爲訪問外網的源IP網址
 
         :param request: 調用UnbindEipsFromNatGateway所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.UnbindEipsFromNatGatewayRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.UnbindEipsFromNatGatewayResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.UnbindEipsFromNatGatewayRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.UnbindEipsFromNatGatewayResponse`
 
         """
         try:
@@ -1552,8 +1552,8 @@ class BmvpcClient(AbstractClient):
         """NAT閘道解綁IP介面，可将子網的部分IP從NAT閘道中解綁
 
         :param request: 調用UnbindIpsFromNatGateway所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.UnbindIpsFromNatGatewayRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.UnbindIpsFromNatGatewayResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.UnbindIpsFromNatGatewayRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.UnbindIpsFromNatGatewayResponse`
 
         """
         try:
@@ -1580,8 +1580,8 @@ class BmvpcClient(AbstractClient):
         """NAT閘道解綁子網介面，可将子網解綁NAT閘道
 
         :param request: 調用UnbindSubnetsFromNatGateway所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.UnbindSubnetsFromNatGatewayRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.UnbindSubnetsFromNatGatewayResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.UnbindSubnetsFromNatGatewayRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.UnbindSubnetsFromNatGatewayResponse`
 
         """
         try:
@@ -1608,8 +1608,8 @@ class BmvpcClient(AbstractClient):
         """升級NAT閘道介面，可NAT閘道修改爲小型NAT閘道、中型NAT閘道、以及大型NAT閘道
 
         :param request: 調用UpgradeNatGateway所需參數的結構體。
-        :type request: :class:`tencentcloud.bmvpc.v20180625.models.UpgradeNatGatewayRequest`
-        :rtype: :class:`tencentcloud.bmvpc.v20180625.models.UpgradeNatGatewayResponse`
+        :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.UpgradeNatGatewayRequest`
+        :rtype: :class:`taifucloudcloud.bmvpc.v20180625.models.UpgradeNatGatewayResponse`
 
         """
         try:

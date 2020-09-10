@@ -8,11 +8,11 @@ from qcloud_cos_v5 import CosConfig
 from qcloud_cos_v5 import CosS3Client
 from qcloud_cos_v5 import CosServiceError
 from qcloud_cos_v5 import CosClientError
-from tencentcloud.common import credential
-from tencentcloud.common.profile.client_profile import ClientProfile
-from tencentcloud.common.profile.http_profile import HttpProfile
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException 
-from tencentcloud.ocr.v20181119 import ocr_client, models 
+from taifucloudcloud.common import credential
+from taifucloudcloud.common.profile.client_profile import ClientProfile
+from taifucloudcloud.common.profile.http_profile import HttpProfile
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException 
+from taifucloudcloud.ocr.v20181119 import ocr_client, models 
 import sys
 
 print('Loading function')
@@ -81,7 +81,7 @@ def main_handler(event, context):
     try: 
         cred = credential.Credential(secret_id,secret_key,token) 
         httpProfile = HttpProfile()
-        httpProfile.endpoint = "ocr.tencentcloudapi.com"
+        httpProfile.endpoint = "ocr.taifucloudcloudapi.com"
 
         clientProfile = ClientProfile()
         clientProfile.httpProfile = httpProfile

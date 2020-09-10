@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.postgres.v20170312 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.postgres.v20170312 import models
 
 
 class PostgresClient(AbstractClient):
     _apiVersion = '2017-03-12'
-    _endpoint = 'postgres.tencentcloudapi.com'
+    _endpoint = 'postgres.taifucloudcloudapi.com'
 
 
     def CloseDBExtranetAccess(self, request):
         """本介面（CloseDBExtranetAccess）用于關閉實例外網連結。
 
         :param request: Request instance for CloseDBExtranetAccess.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.CloseDBExtranetAccessRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.CloseDBExtranetAccessResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.CloseDBExtranetAccessRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.CloseDBExtranetAccessResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class PostgresClient(AbstractClient):
         """關閉serverlessDB實例外網
 
         :param request: Request instance for CloseServerlessDBExtranetAccess.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.CloseServerlessDBExtranetAccessRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.CloseServerlessDBExtranetAccessResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.CloseServerlessDBExtranetAccessRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.CloseServerlessDBExtranetAccessResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class PostgresClient(AbstractClient):
         """本介面 (CreateDBInstances) 用于創建一個或者多個PostgreSQL實例。
 
         :param request: Request instance for CreateDBInstances.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.CreateDBInstancesRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.CreateDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.CreateDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.CreateDBInstancesResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class PostgresClient(AbstractClient):
         """本介面 (CreateServerlessDBInstance) 用于創建一個ServerlessDB實例，創建成功返回實例ID。
 
         :param request: Request instance for CreateServerlessDBInstance.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.CreateServerlessDBInstanceRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.CreateServerlessDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.CreateServerlessDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.CreateServerlessDBInstanceResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class PostgresClient(AbstractClient):
         """本介面 (DeleteServerlessDBInstance) 用于删除一個ServerlessDB實例。
 
         :param request: Request instance for DeleteServerlessDBInstance.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.DeleteServerlessDBInstanceRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.DeleteServerlessDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.DeleteServerlessDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.DeleteServerlessDBInstanceResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class PostgresClient(AbstractClient):
         """本介面（DescribeAccounts）用于獲取實例用戶清單。
 
         :param request: Request instance for DescribeAccounts.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeAccountsRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.DescribeAccountsResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.DescribeAccountsRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.DescribeAccountsResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class PostgresClient(AbstractClient):
         """本介面（DescribeDBBackups）用于查詢實例備份清單。
 
         :param request: Request instance for DescribeDBBackups.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeDBBackupsRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.DescribeDBBackupsResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.DescribeDBBackupsRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.DescribeDBBackupsResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class PostgresClient(AbstractClient):
         """本介面（DescribeDBErrlogs）用于獲取錯誤日志。
 
         :param request: Request instance for DescribeDBErrlogs.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeDBErrlogsRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.DescribeDBErrlogsResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.DescribeDBErrlogsRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.DescribeDBErrlogsResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class PostgresClient(AbstractClient):
         """本介面 (DescribeDBInstanceAttribute) 用于查詢某個實例的詳情訊息。
 
         :param request: Request instance for DescribeDBInstanceAttribute.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeDBInstanceAttributeRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.DescribeDBInstanceAttributeResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.DescribeDBInstanceAttributeRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.DescribeDBInstanceAttributeResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class PostgresClient(AbstractClient):
         """本介面 (DescribeDBInstances) 用于查詢一個或多個實例的詳細訊息。
 
         :param request: Request instance for DescribeDBInstances.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeDBInstancesRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.DescribeDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.DescribeDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.DescribeDBInstancesResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class PostgresClient(AbstractClient):
         """本介面（DescribeDBSlowlogs）用于獲取慢查詢日志。
 
         :param request: Request instance for DescribeDBSlowlogs.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeDBSlowlogsRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.DescribeDBSlowlogsResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.DescribeDBSlowlogsRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.DescribeDBSlowlogsResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class PostgresClient(AbstractClient):
         """本介面（DescribeDBXlogs）用于獲取實例Xlog清單。
 
         :param request: Request instance for DescribeDBXlogs.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeDBXlogsRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.DescribeDBXlogsResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.DescribeDBXlogsRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.DescribeDBXlogsResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class PostgresClient(AbstractClient):
         """介面（DescribeDatabases）用來拉取資料庫清單
 
         :param request: Request instance for DescribeDatabases.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeDatabasesRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.DescribeDatabasesResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.DescribeDatabasesRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.DescribeDatabasesResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class PostgresClient(AbstractClient):
         """本介面（DescribeOrders）用于獲取訂單訊息。
 
         :param request: Request instance for DescribeOrders.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeOrdersRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.DescribeOrdersResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.DescribeOrdersRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.DescribeOrdersResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class PostgresClient(AbstractClient):
         """本介面 (DescribeProductConfig) 用于查詢售賣規格配置。
 
         :param request: Request instance for DescribeProductConfig.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeProductConfigRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.DescribeProductConfigResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.DescribeProductConfigRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.DescribeProductConfigResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class PostgresClient(AbstractClient):
         """本介面 (DescribeRegions) 用于查詢售賣地域訊息。
 
         :param request: Request instance for DescribeRegions.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeRegionsRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.DescribeRegionsResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.DescribeRegionsRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.DescribeRegionsResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class PostgresClient(AbstractClient):
         """用于查詢一個或多個serverlessDB實例的詳細訊息
 
         :param request: Request instance for DescribeServerlessDBInstances.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeServerlessDBInstancesRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.DescribeServerlessDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.DescribeServerlessDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.DescribeServerlessDBInstancesResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class PostgresClient(AbstractClient):
         """本介面 (DescribeZones) 用于查詢支援的可用區訊息。
 
         :param request: Request instance for DescribeZones.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.DescribeZonesRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.DescribeZonesResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.DescribeZonesRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.DescribeZonesResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class PostgresClient(AbstractClient):
         """本介面 (DestroyDBInstance) 用于銷毀指定DBInstanceId對應的實例。
 
         :param request: Request instance for DestroyDBInstance.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.DestroyDBInstanceRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.DestroyDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.DestroyDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.DestroyDBInstanceResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class PostgresClient(AbstractClient):
         """本介面 (InitDBInstances) 用于初始化雲資料庫PostgreSQL實例。
 
         :param request: Request instance for InitDBInstances.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.InitDBInstancesRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.InitDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.InitDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.InitDBInstancesResponse`
 
         """
         try:
@@ -589,8 +589,8 @@ class PostgresClient(AbstractClient):
         """本介面 (InquiryPriceCreateDBInstances) 用于查詢購買一個或多個實例的價格訊息。
 
         :param request: Request instance for InquiryPriceCreateDBInstances.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.InquiryPriceCreateDBInstancesRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.InquiryPriceCreateDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.InquiryPriceCreateDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.InquiryPriceCreateDBInstancesResponse`
 
         """
         try:
@@ -617,8 +617,8 @@ class PostgresClient(AbstractClient):
         """本介面（InquiryPriceRenewDBInstance）用于查詢續約實例的價格。
 
         :param request: Request instance for InquiryPriceRenewDBInstance.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.InquiryPriceRenewDBInstanceRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.InquiryPriceRenewDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.InquiryPriceRenewDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.InquiryPriceRenewDBInstanceResponse`
 
         """
         try:
@@ -645,8 +645,8 @@ class PostgresClient(AbstractClient):
         """本介面（InquiryPriceUpgradeDBInstance）用于查詢升級實例的價格。
 
         :param request: Request instance for InquiryPriceUpgradeDBInstance.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.InquiryPriceUpgradeDBInstanceRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.InquiryPriceUpgradeDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.InquiryPriceUpgradeDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.InquiryPriceUpgradeDBInstanceResponse`
 
         """
         try:
@@ -673,8 +673,8 @@ class PostgresClient(AbstractClient):
         """本介面（ModifyAccountRemark）用于修改帳号備注。
 
         :param request: Request instance for ModifyAccountRemark.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.ModifyAccountRemarkRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.ModifyAccountRemarkResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.ModifyAccountRemarkRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.ModifyAccountRemarkResponse`
 
         """
         try:
@@ -701,8 +701,8 @@ class PostgresClient(AbstractClient):
         """本介面（ModifyDBInstanceName）用于修改postgresql實例名字。
 
         :param request: Request instance for ModifyDBInstanceName.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.ModifyDBInstanceNameRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.ModifyDBInstanceNameResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.ModifyDBInstanceNameRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.ModifyDBInstanceNameResponse`
 
         """
         try:
@@ -729,8 +729,8 @@ class PostgresClient(AbstractClient):
         """本介面（ModifyDBInstancesProject）用于将實例轉至其他項目。
 
         :param request: Request instance for ModifyDBInstancesProject.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.ModifyDBInstancesProjectRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.ModifyDBInstancesProjectResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.ModifyDBInstancesProjectRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.ModifyDBInstancesProjectResponse`
 
         """
         try:
@@ -757,8 +757,8 @@ class PostgresClient(AbstractClient):
         """本介面（OpenDBExtranetAccess）用于開通外網。
 
         :param request: Request instance for OpenDBExtranetAccess.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.OpenDBExtranetAccessRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.OpenDBExtranetAccessResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.OpenDBExtranetAccessRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.OpenDBExtranetAccessResponse`
 
         """
         try:
@@ -785,8 +785,8 @@ class PostgresClient(AbstractClient):
         """開通serverlessDB實例外網
 
         :param request: Request instance for OpenServerlessDBExtranetAccess.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.OpenServerlessDBExtranetAccessRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.OpenServerlessDBExtranetAccessResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.OpenServerlessDBExtranetAccessRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.OpenServerlessDBExtranetAccessResponse`
 
         """
         try:
@@ -813,8 +813,8 @@ class PostgresClient(AbstractClient):
         """本介面（RenewInstance）用于續約實例。
 
         :param request: Request instance for RenewInstance.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.RenewInstanceRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.RenewInstanceResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.RenewInstanceRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.RenewInstanceResponse`
 
         """
         try:
@@ -841,8 +841,8 @@ class PostgresClient(AbstractClient):
         """本介面（ResetAccountPassword）用于重置實例的帳戶密碼。
 
         :param request: Request instance for ResetAccountPassword.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.ResetAccountPasswordRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.ResetAccountPasswordResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.ResetAccountPasswordRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.ResetAccountPasswordResponse`
 
         """
         try:
@@ -869,8 +869,8 @@ class PostgresClient(AbstractClient):
         """本介面（RestartDBInstance）用于重啓實例。
 
         :param request: Request instance for RestartDBInstance.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.RestartDBInstanceRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.RestartDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.RestartDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.RestartDBInstanceResponse`
 
         """
         try:
@@ -897,8 +897,8 @@ class PostgresClient(AbstractClient):
         """本介面（SetAutoRenewFlag）用于設置自動續約。
 
         :param request: Request instance for SetAutoRenewFlag.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.SetAutoRenewFlagRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.SetAutoRenewFlagResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.SetAutoRenewFlagRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.SetAutoRenewFlagResponse`
 
         """
         try:
@@ -925,8 +925,8 @@ class PostgresClient(AbstractClient):
         """本介面（UpgradeDBInstance）用于升級實例。
 
         :param request: Request instance for UpgradeDBInstance.
-        :type request: :class:`tencentcloud.postgres.v20170312.models.UpgradeDBInstanceRequest`
-        :rtype: :class:`tencentcloud.postgres.v20170312.models.UpgradeDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.postgres.v20170312.models.UpgradeDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.postgres.v20170312.models.UpgradeDBInstanceResponse`
 
         """
         try:

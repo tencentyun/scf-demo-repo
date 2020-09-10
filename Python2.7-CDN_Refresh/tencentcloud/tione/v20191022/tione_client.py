@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tione.v20191022 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tione.v20191022 import models
 
 
 class TioneClient(AbstractClient):
     _apiVersion = '2019-10-22'
-    _endpoint = 'tione.tencentcloudapi.com'
+    _endpoint = 'tione.taifucloudcloudapi.com'
 
 
     def CreateCodeRepository(self, request):
         """創建儲存庫
 
         :param request: Request instance for CreateCodeRepository.
-        :type request: :class:`tencentcloud.tione.v20191022.models.CreateCodeRepositoryRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.CreateCodeRepositoryResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.CreateCodeRepositoryRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.CreateCodeRepositoryResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TioneClient(AbstractClient):
         """創建Notebook實例
 
         :param request: Request instance for CreateNotebookInstance.
-        :type request: :class:`tencentcloud.tione.v20191022.models.CreateNotebookInstanceRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.CreateNotebookInstanceResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.CreateNotebookInstanceRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.CreateNotebookInstanceResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TioneClient(AbstractClient):
         """創建Notebook生命週期腳本
 
         :param request: Request instance for CreateNotebookLifecycleScript.
-        :type request: :class:`tencentcloud.tione.v20191022.models.CreateNotebookLifecycleScriptRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.CreateNotebookLifecycleScriptResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.CreateNotebookLifecycleScriptRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.CreateNotebookLifecycleScriptResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TioneClient(AbstractClient):
         """創建Notebook授權Url
 
         :param request: Request instance for CreatePresignedNotebookInstanceUrl.
-        :type request: :class:`tencentcloud.tione.v20191022.models.CreatePresignedNotebookInstanceUrlRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.CreatePresignedNotebookInstanceUrlResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.CreatePresignedNotebookInstanceUrlRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.CreatePresignedNotebookInstanceUrlResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class TioneClient(AbstractClient):
         """創建訓練任務
 
         :param request: Request instance for CreateTrainingJob.
-        :type request: :class:`tencentcloud.tione.v20191022.models.CreateTrainingJobRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.CreateTrainingJobResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.CreateTrainingJobRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.CreateTrainingJobResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class TioneClient(AbstractClient):
         """删除儲存庫
 
         :param request: Request instance for DeleteCodeRepository.
-        :type request: :class:`tencentcloud.tione.v20191022.models.DeleteCodeRepositoryRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.DeleteCodeRepositoryResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.DeleteCodeRepositoryRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.DeleteCodeRepositoryResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class TioneClient(AbstractClient):
         """删除notebook實例
 
         :param request: Request instance for DeleteNotebookInstance.
-        :type request: :class:`tencentcloud.tione.v20191022.models.DeleteNotebookInstanceRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.DeleteNotebookInstanceResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.DeleteNotebookInstanceRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.DeleteNotebookInstanceResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class TioneClient(AbstractClient):
         """删除Notebook生命週期腳本
 
         :param request: Request instance for DeleteNotebookLifecycleScript.
-        :type request: :class:`tencentcloud.tione.v20191022.models.DeleteNotebookLifecycleScriptRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.DeleteNotebookLifecycleScriptResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.DeleteNotebookLifecycleScriptRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.DeleteNotebookLifecycleScriptResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class TioneClient(AbstractClient):
         """查詢儲存庫清單
 
         :param request: Request instance for DescribeCodeRepositories.
-        :type request: :class:`tencentcloud.tione.v20191022.models.DescribeCodeRepositoriesRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.DescribeCodeRepositoriesResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.DescribeCodeRepositoriesRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.DescribeCodeRepositoriesResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class TioneClient(AbstractClient):
         """查詢儲存庫詳情
 
         :param request: Request instance for DescribeCodeRepository.
-        :type request: :class:`tencentcloud.tione.v20191022.models.DescribeCodeRepositoryRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.DescribeCodeRepositoryResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.DescribeCodeRepositoryRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.DescribeCodeRepositoryResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class TioneClient(AbstractClient):
         """查詢Notebook實例詳情
 
         :param request: Request instance for DescribeNotebookInstance.
-        :type request: :class:`tencentcloud.tione.v20191022.models.DescribeNotebookInstanceRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.DescribeNotebookInstanceResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.DescribeNotebookInstanceRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.DescribeNotebookInstanceResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class TioneClient(AbstractClient):
         """查詢Notebook實例清單
 
         :param request: Request instance for DescribeNotebookInstances.
-        :type request: :class:`tencentcloud.tione.v20191022.models.DescribeNotebookInstancesRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.DescribeNotebookInstancesResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.DescribeNotebookInstancesRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.DescribeNotebookInstancesResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class TioneClient(AbstractClient):
         """檢視notebook生命週期腳本詳情
 
         :param request: Request instance for DescribeNotebookLifecycleScript.
-        :type request: :class:`tencentcloud.tione.v20191022.models.DescribeNotebookLifecycleScriptRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.DescribeNotebookLifecycleScriptResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.DescribeNotebookLifecycleScriptRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.DescribeNotebookLifecycleScriptResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class TioneClient(AbstractClient):
         """檢視notebook生命週期腳本清單
 
         :param request: Request instance for DescribeNotebookLifecycleScripts.
-        :type request: :class:`tencentcloud.tione.v20191022.models.DescribeNotebookLifecycleScriptsRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.DescribeNotebookLifecycleScriptsResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.DescribeNotebookLifecycleScriptsRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.DescribeNotebookLifecycleScriptsResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class TioneClient(AbstractClient):
         """查詢訓練任務
 
         :param request: Request instance for DescribeTrainingJob.
-        :type request: :class:`tencentcloud.tione.v20191022.models.DescribeTrainingJobRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.DescribeTrainingJobResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.DescribeTrainingJobRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.DescribeTrainingJobResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class TioneClient(AbstractClient):
         """啓動Notebook實例
 
         :param request: Request instance for StartNotebookInstance.
-        :type request: :class:`tencentcloud.tione.v20191022.models.StartNotebookInstanceRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.StartNotebookInstanceResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.StartNotebookInstanceRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.StartNotebookInstanceResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class TioneClient(AbstractClient):
         """停止Notebook實例
 
         :param request: Request instance for StopNotebookInstance.
-        :type request: :class:`tencentcloud.tione.v20191022.models.StopNotebookInstanceRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.StopNotebookInstanceResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.StopNotebookInstanceRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.StopNotebookInstanceResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class TioneClient(AbstractClient):
         """停止訓練任務
 
         :param request: Request instance for StopTrainingJob.
-        :type request: :class:`tencentcloud.tione.v20191022.models.StopTrainingJobRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.StopTrainingJobResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.StopTrainingJobRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.StopTrainingJobResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class TioneClient(AbstractClient):
         """更新儲存庫
 
         :param request: Request instance for UpdateCodeRepository.
-        :type request: :class:`tencentcloud.tione.v20191022.models.UpdateCodeRepositoryRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.UpdateCodeRepositoryResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.UpdateCodeRepositoryRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.UpdateCodeRepositoryResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class TioneClient(AbstractClient):
         """更新Notebook實例
 
         :param request: Request instance for UpdateNotebookInstance.
-        :type request: :class:`tencentcloud.tione.v20191022.models.UpdateNotebookInstanceRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.UpdateNotebookInstanceResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.UpdateNotebookInstanceRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.UpdateNotebookInstanceResponse`
 
         """
         try:
@@ -589,8 +589,8 @@ class TioneClient(AbstractClient):
         """更新notebook生命週期腳本
 
         :param request: Request instance for UpdateNotebookLifecycleScript.
-        :type request: :class:`tencentcloud.tione.v20191022.models.UpdateNotebookLifecycleScriptRequest`
-        :rtype: :class:`tencentcloud.tione.v20191022.models.UpdateNotebookLifecycleScriptResponse`
+        :type request: :class:`taifucloudcloud.tione.v20191022.models.UpdateNotebookLifecycleScriptRequest`
+        :rtype: :class:`taifucloudcloud.tione.v20191022.models.UpdateNotebookLifecycleScriptResponse`
 
         """
         try:

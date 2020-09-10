@@ -12,7 +12,7 @@ logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
 # Need to add the appropriate configuration in environment variables. 需要在環境變量中添加相應的配置
-DB_HOST = os.getenv('dbhost') #'sh-cdb-irye027y.sql.tencentcdb.com'
+DB_HOST = os.getenv('dbhost') #'sh-cdb-irye027y.sql.taifucloudcdb.com'
 DB_PORT = os.getenv('dbport') #'63374'
 DB_USER = os.getenv('dbuser') #'root'
 DB_USER_PASSWORD = os.getenv('dbpwd') #'abc123!@#'

@@ -25,7 +25,7 @@ Port = 63054
 DB = u'SCF_Demo'
 Table = u'ConnectionID_List'
 
-#Changing the time zone to Beijing. 更改時區爲北京時區
+#Changing the time zone to Beijing. 更改時區爲 時區
 tz = pytz.timezone('Asia/Shanghai')
 
 def record_connectionID(connectionID):

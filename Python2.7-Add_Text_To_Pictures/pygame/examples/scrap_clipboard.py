@@ -83,4 +83,3 @@ while going:
     c.tick(40)
 
 
-

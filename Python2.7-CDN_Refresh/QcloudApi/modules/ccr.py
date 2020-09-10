@@ -18,6 +18,6 @@ from QcloudApi.modules import base
 class Ccr(base.Base):
     """Cloud Container Repository
 
-    document: https://cloud.tencent.com/document/product/457/9427
+    document: https://cloud.taifucloud.com/document/product/457/9427
     """
     requestHost = 'ccr.api.qcloud.com'

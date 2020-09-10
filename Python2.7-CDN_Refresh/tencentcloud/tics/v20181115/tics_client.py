@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tics.v20181115 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tics.v20181115 import models
 
 
 class TicsClient(AbstractClient):
     _apiVersion = '2018-11-15'
-    _endpoint = 'tics.tencentcloudapi.com'
+    _endpoint = 'tics.taifucloudcloudapi.com'
 
 
     def DescribeDomainInfo(self, request):
         """提供域名相關的基礎訊息以及與攻擊事件（團夥、家族）、惡意文件等相關聯訊息。
 
         :param request: Request instance for DescribeDomainInfo.
-        :type request: :class:`tencentcloud.tics.v20181115.models.DescribeDomainInfoRequest`
-        :rtype: :class:`tencentcloud.tics.v20181115.models.DescribeDomainInfoResponse`
+        :type request: :class:`taifucloudcloud.tics.v20181115.models.DescribeDomainInfoRequest`
+        :rtype: :class:`taifucloudcloud.tics.v20181115.models.DescribeDomainInfoResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TicsClient(AbstractClient):
         """提供文件相關的基礎訊息以及與攻擊事件（團夥、家族）、惡意文件等相關聯訊息。
 
         :param request: Request instance for DescribeFileInfo.
-        :type request: :class:`tencentcloud.tics.v20181115.models.DescribeFileInfoRequest`
-        :rtype: :class:`tencentcloud.tics.v20181115.models.DescribeFileInfoResponse`
+        :type request: :class:`taifucloudcloud.tics.v20181115.models.DescribeFileInfoRequest`
+        :rtype: :class:`taifucloudcloud.tics.v20181115.models.DescribeFileInfoResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TicsClient(AbstractClient):
         """提供IP相關的基礎訊息以及與攻擊事件（團夥、家族）、惡意文件等相關聯訊息。
 
         :param request: Request instance for DescribeIpInfo.
-        :type request: :class:`tencentcloud.tics.v20181115.models.DescribeIpInfoRequest`
-        :rtype: :class:`tencentcloud.tics.v20181115.models.DescribeIpInfoResponse`
+        :type request: :class:`taifucloudcloud.tics.v20181115.models.DescribeIpInfoRequest`
+        :rtype: :class:`taifucloudcloud.tics.v20181115.models.DescribeIpInfoResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TicsClient(AbstractClient):
         """提供IP和域名相關威脅情報訊息查詢，這些訊息可以輔助檢測失陷主機、幫助SIEM/SOC等系統做研判決策、幫助運營團隊對設備報警的編排處理。
 
         :param request: Request instance for DescribeThreatInfo.
-        :type request: :class:`tencentcloud.tics.v20181115.models.DescribeThreatInfoRequest`
-        :rtype: :class:`tencentcloud.tics.v20181115.models.DescribeThreatInfoResponse`
+        :type request: :class:`taifucloudcloud.tics.v20181115.models.DescribeThreatInfoRequest`
+        :rtype: :class:`taifucloudcloud.tics.v20181115.models.DescribeThreatInfoResponse`
 
         """
         try:

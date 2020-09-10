@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cdb.v20170320 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cdb.v20170320 import models
 
 
 class CdbClient(AbstractClient):
     _apiVersion = '2017-03-20'
-    _endpoint = 'cdb.tencentcloudapi.com'
+    _endpoint = 'cdb.taifucloudcloudapi.com'
 
 
     def AddTimeWindow(self, request):
         """本介面(AddTimeWindow)用于添加雲資料庫實例的維護時間視窗，以指定實例在哪些時間段可以自動執行切換訪問操作。
 
         :param request: 調用AddTimeWindow所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.AddTimeWindowRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.AddTimeWindowResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.AddTimeWindowRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.AddTimeWindowResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class CdbClient(AbstractClient):
         """本介面(AssociateSecurityGroups)用于安全組批次綁定實例。
 
         :param request: 調用AssociateSecurityGroups所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.AssociateSecurityGroupsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.AssociateSecurityGroupsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.AssociateSecurityGroupsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.AssociateSecurityGroupsResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class CdbClient(AbstractClient):
         """本介面(CloseWanService)用于關閉雲資料庫實例的外網訪問。關閉外網訪問後，外網網址将不可訪問。
 
         :param request: 調用CloseWanService所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.CloseWanServiceRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.CloseWanServiceResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.CloseWanServiceRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.CloseWanServiceResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class CdbClient(AbstractClient):
         """本介面(CreateAccounts)用于創建雲資料庫的帳戶，需要指定新的帳戶名和域名，以及所對應的密碼，同時可以設置賬号的備注訊息。
 
         :param request: 調用CreateAccounts所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.CreateAccountsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.CreateAccountsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.CreateAccountsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.CreateAccountsResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class CdbClient(AbstractClient):
         """本介面(CreateBackup)用于創建資料庫備份。
 
         :param request: 調用CreateBackup所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.CreateBackupRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.CreateBackupResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.CreateBackupRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.CreateBackupResponse`
 
         """
         try:
@@ -171,8 +171,8 @@ class CdbClient(AbstractClient):
         注意，用戶進行數據導入任務的文件，必須提前上傳到Top Cloud 。用戶須在控制台進行文件導入。
 
         :param request: 調用CreateDBImportJob所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.CreateDBImportJobRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.CreateDBImportJobResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.CreateDBImportJobRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.CreateDBImportJobResponse`
 
         """
         try:
@@ -198,17 +198,17 @@ class CdbClient(AbstractClient):
     def CreateDBInstance(self, request):
         """本介面(CreateDBInstance)用于創建包年包月的雲資料庫實例（包括主實例、災備實例和只讀實例），可通過傳入實例規格、MySQL 版本号、購買時長和數量等訊息創建雲資料庫實例。
 
-        該介面爲異步介面，您還可以使用[查詢實例清單](https://cloud.tencent.com/document/api/236/15872)介面查詢該實例的詳細訊息。當該實例的Status爲1，且TaskStatus爲0，表示實例已經發貨成功。
+        該介面爲異步介面，您還可以使用[查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872)介面查詢該實例的詳細訊息。當該實例的Status爲1，且TaskStatus爲0，表示實例已經發貨成功。
 
-        1. 首先請使用[獲取雲資料庫可售賣規格](https://cloud.tencent.com/document/api/236/17229)介面查詢可創建的實例規格訊息，然後請使用[查詢資料庫價格](https://cloud.tencent.com/document/api/236/18566)介面查詢可創建實例的售賣價格；
+        1. 首先請使用[獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/api/236/17229)介面查詢可創建的實例規格訊息，然後請使用[查詢資料庫價格](https://cloud.taifucloud.com/document/api/236/18566)介面查詢可創建實例的售賣價格；
         2. 單次創建實例最大支援 100 個，實例時長最大支援 36 個月；
         3. 支援創建 MySQL5.5 、 MySQL5.6 、 MySQL5.7 版本；
         4. 支援創建主實例、只讀實例、災備實例；
         5. 當入參指定Port或ParamList時，該實例會進行初始化操作；
 
         :param request: 調用CreateDBInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.CreateDBInstanceRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.CreateDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.CreateDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.CreateDBInstanceResponse`
 
         """
         try:
@@ -234,17 +234,17 @@ class CdbClient(AbstractClient):
     def CreateDBInstanceHour(self, request):
         """本介面(CreateDBInstanceHour)用于創建按量計費的實例，可通過傳入實例規格、MySQL 版本号和數量等訊息創建雲資料庫實例，支援主實例、災備實例和只讀實例的創建。
 
-        該介面爲異步介面，您還可以使用[查詢實例清單](https://cloud.tencent.com/document/api/236/15872)介面查詢該實例的詳細訊息。當該實例的Status爲1，且TaskStatus爲0，表示實例已經發貨成功。
+        該介面爲異步介面，您還可以使用[查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872)介面查詢該實例的詳細訊息。當該實例的Status爲1，且TaskStatus爲0，表示實例已經發貨成功。
 
-        1. 首先請使用[獲取雲資料庫可售賣規格](https://cloud.tencent.com/document/api/236/17229)介面查詢可創建的實例規格訊息，然後請使用[查詢資料庫價格](https://cloud.tencent.com/document/api/236/18566)介面查詢可創建實例的售賣價格；
+        1. 首先請使用[獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/api/236/17229)介面查詢可創建的實例規格訊息，然後請使用[查詢資料庫價格](https://cloud.taifucloud.com/document/api/236/18566)介面查詢可創建實例的售賣價格；
         2. 單次創建實例最大支援 100 個，實例時長最大支援 36 個月；
         3. 支援創建 MySQL5.5、MySQL5.6和MySQL5.7 版本；
         4. 支援創建主實例、災備實例和只讀實例；
         5. 當入參指定Port或ParamList時，該實例會進行初始化操作；
 
         :param request: 調用CreateDBInstanceHour所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.CreateDBInstanceHourRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.CreateDBInstanceHourResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.CreateDBInstanceHourRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.CreateDBInstanceHourResponse`
 
         """
         try:
@@ -271,8 +271,8 @@ class CdbClient(AbstractClient):
         """該介面（CreateParamTemplate）用于創建參數範本。
 
         :param request: 調用CreateParamTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.CreateParamTemplateRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.CreateParamTemplateResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.CreateParamTemplateRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.CreateParamTemplateResponse`
 
         """
         try:
@@ -299,8 +299,8 @@ class CdbClient(AbstractClient):
         """本介面(DeleteAccounts)用于删除雲資料庫的帳戶。
 
         :param request: 調用DeleteAccounts所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DeleteAccountsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DeleteAccountsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DeleteAccountsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DeleteAccountsResponse`
 
         """
         try:
@@ -327,8 +327,8 @@ class CdbClient(AbstractClient):
         """本介面(DeleteBackup)用于删除資料庫備份。
 
         :param request: 調用DeleteBackup所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DeleteBackupRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DeleteBackupResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DeleteBackupRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DeleteBackupResponse`
 
         """
         try:
@@ -355,8 +355,8 @@ class CdbClient(AbstractClient):
         """該介面（DeleteParamTemplate）用于删除參數範本。
 
         :param request: 調用DeleteParamTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DeleteParamTemplateRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DeleteParamTemplateResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DeleteParamTemplateRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DeleteParamTemplateResponse`
 
         """
         try:
@@ -383,8 +383,8 @@ class CdbClient(AbstractClient):
         """本介面(DeleteTimeWindow)用于删除雲資料庫實例的維護時間視窗。删除實例維護時間視窗之後，預設的維護時間窗爲 03:00-04:00，即當選擇在維護時間視窗内切換訪問新實例時，預設會在03:00-04:00點進行切換訪問新實例。
 
         :param request: 調用DeleteTimeWindow所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DeleteTimeWindowRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DeleteTimeWindowResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DeleteTimeWindowRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DeleteTimeWindowResponse`
 
         """
         try:
@@ -411,8 +411,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeAccountPrivileges)用于查詢雲資料庫帳戶支援的權限訊息。
 
         :param request: 調用DescribeAccountPrivileges所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeAccountPrivilegesRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeAccountPrivilegesResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeAccountPrivilegesRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeAccountPrivilegesResponse`
 
         """
         try:
@@ -439,8 +439,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeAccounts)用于查詢雲資料庫的所有帳戶訊息。
 
         :param request: 調用DescribeAccounts所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeAccountsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeAccountsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeAccountsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeAccountsResponse`
 
         """
         try:
@@ -467,8 +467,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeAsyncRequestInfo)用于查詢雲資料庫實例異步任務的執行結果。
 
         :param request: 調用DescribeAsyncRequestInfo所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeAsyncRequestInfoRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeAsyncRequestInfoResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeAsyncRequestInfoRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeAsyncRequestInfoResponse`
 
         """
         try:
@@ -495,8 +495,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeBackupConfig)用于查詢資料庫備份配置訊息。
 
         :param request: 調用DescribeBackupConfig所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeBackupConfigRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeBackupConfigResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeBackupConfigRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeBackupConfigResponse`
 
         """
         try:
@@ -523,8 +523,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeBackupDatabases)用于查詢備份資料庫清單 (将廢棄)。
 
         :param request: 調用DescribeBackupDatabases所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeBackupDatabasesRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeBackupDatabasesResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeBackupDatabasesRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeBackupDatabasesResponse`
 
         """
         try:
@@ -551,8 +551,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeBackupTables)用于查詢指定的資料庫的備份數據表名 (将廢棄)。
 
         :param request: 調用DescribeBackupTables所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeBackupTablesRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeBackupTablesResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeBackupTablesRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeBackupTablesResponse`
 
         """
         try:
@@ -579,8 +579,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeBackups)用于查詢雲資料庫實例的備份數據。
 
         :param request: 調用DescribeBackups所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeBackupsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeBackupsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeBackupsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeBackupsResponse`
 
         """
         try:
@@ -607,8 +607,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeBinlogs)用于查詢雲資料庫實例的二進制數據。
 
         :param request: 調用DescribeBinlogs所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeBinlogsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeBinlogsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeBinlogsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeBinlogsResponse`
 
         """
         try:
@@ -635,8 +635,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeDBImportRecords)用于查詢雲資料庫導入任務操作日志。
 
         :param request: 調用DescribeDBImportRecords所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeDBImportRecordsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeDBImportRecordsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBImportRecordsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBImportRecordsResponse`
 
         """
         try:
@@ -663,8 +663,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeDBInstanceCharset)用于查詢雲資料庫實例的字元集，獲取字元集的名稱。
 
         :param request: 調用DescribeDBInstanceCharset所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeDBInstanceCharsetRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeDBInstanceCharsetResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBInstanceCharsetRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBInstanceCharsetResponse`
 
         """
         try:
@@ -691,8 +691,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeDBInstanceConfig)用于雲資料庫實例的配置訊息，包括同步模式，佈署模式等。
 
         :param request: 調用DescribeDBInstanceConfig所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeDBInstanceConfigRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeDBInstanceConfigResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBInstanceConfigRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBInstanceConfigResponse`
 
         """
         try:
@@ -719,8 +719,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeDBInstanceGTID)用于查詢雲資料庫實例是否開通了GTID，不支援版本爲5.5以及以下的實例。
 
         :param request: 調用DescribeDBInstanceGTID所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeDBInstanceGTIDRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeDBInstanceGTIDResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBInstanceGTIDRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBInstanceGTIDResponse`
 
         """
         try:
@@ -747,8 +747,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeDBInstanceRebootTime)用于查詢雲資料庫實例重啓預計所需的時間。
 
         :param request: 調用DescribeDBInstanceRebootTime所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeDBInstanceRebootTimeRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeDBInstanceRebootTimeResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBInstanceRebootTimeRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBInstanceRebootTimeResponse`
 
         """
         try:
@@ -775,8 +775,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeDBInstances)用于查詢雲資料庫實例清單，支援通過項目ID、實例ID、訪問網址、實例狀态等過濾條件來篩選實例。支援查詢主實例、災備實例和只讀實例訊息清單。
 
         :param request: 調用DescribeDBInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeDBInstancesRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBInstancesResponse`
 
         """
         try:
@@ -802,11 +802,11 @@ class CdbClient(AbstractClient):
     def DescribeDBPrice(self, request):
         """本介面(DescribeDBPrice)用于查詢雲資料庫實例的價格，支援查詢按量計費或者包年包月的價格。可傳入實例類型、購買時長、購買數量、内存大小、硬碟大小和可用區訊息等來查詢實例價格。
 
-        注意：對某個地域進行詢價，請使用對應地域的接入點，接入點訊息請參照<a href="https://cloud.tencent.com/document/api/236/15832">服務網址</a>文件。例如：對廣州地域進行詢價，請把請求發到：cdb.ap-guangzhou.tencentcloudapi.com。同理對上海地域詢價，把請求發到：cdb.ap-shanghai.tencentcloudapi.com
+        注意：對某個地域進行詢價，請使用對應地域的接入點，接入點訊息請參照<a href="https://cloud.taifucloud.com/document/api/236/15832">服務網址</a>文件。例如：對 地域進行詢價，請把請求發到：cdb.ap-guangzhou.taifucloudcloudapi.com。同理對 地域詢價，把請求發到：cdb.ap-shanghai.taifucloudcloudapi.com
 
         :param request: 調用DescribeDBPrice所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeDBPriceRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeDBPriceResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBPriceRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBPriceResponse`
 
         """
         try:
@@ -833,8 +833,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeDBSecurityGroups)用于查詢實例的安全組詳情。
 
         :param request: 調用DescribeDBSecurityGroups所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeDBSecurityGroupsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeDBSecurityGroupsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBSecurityGroupsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBSecurityGroupsResponse`
 
         """
         try:
@@ -861,8 +861,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeDBSwitchRecords)用于查詢雲資料庫實例切換記錄。
 
         :param request: 調用DescribeDBSwitchRecords所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeDBSwitchRecordsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeDBSwitchRecordsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBSwitchRecordsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBSwitchRecordsResponse`
 
         """
         try:
@@ -889,8 +889,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeDBZoneConfig)用于查詢可創建的雲資料庫各地域可售賣的規格配置。
 
         :param request: 調用DescribeDBZoneConfig所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeDBZoneConfigRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeDBZoneConfigResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBZoneConfigRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBZoneConfigResponse`
 
         """
         try:
@@ -917,8 +917,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeDatabases)用于查詢雲資料庫實例的資料庫訊息。
 
         :param request: 調用DescribeDatabases所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeDatabasesRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeDatabasesResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDatabasesRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDatabasesResponse`
 
         """
         try:
@@ -945,8 +945,8 @@ class CdbClient(AbstractClient):
         """該介面（DescribeDefaultParams）用于查詢預設的可設置參數清單。
 
         :param request: 調用DescribeDefaultParams所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeDefaultParamsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeDefaultParamsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDefaultParamsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDefaultParamsResponse`
 
         """
         try:
@@ -973,8 +973,8 @@ class CdbClient(AbstractClient):
         """本介面（DescribeDeviceMonitorInfo）用于查詢雲資料庫物理機當天的監控訊息，暫只支援内存488G、硬碟6T的實例查詢。
 
         :param request: 調用DescribeDeviceMonitorInfo所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeDeviceMonitorInfoRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeDeviceMonitorInfoResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDeviceMonitorInfoRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDeviceMonitorInfoResponse`
 
         """
         try:
@@ -1001,8 +1001,8 @@ class CdbClient(AbstractClient):
         """該介面（DescribeInstanceParamRecords）用于查詢實例參數修改曆史。
 
         :param request: 調用DescribeInstanceParamRecords所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeInstanceParamRecordsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeInstanceParamRecordsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeInstanceParamRecordsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeInstanceParamRecordsResponse`
 
         """
         try:
@@ -1029,8 +1029,8 @@ class CdbClient(AbstractClient):
         """該介面（DescribeInstanceParams）用于查詢實例的參數清單。
 
         :param request: 調用DescribeInstanceParams所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeInstanceParamsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeInstanceParamsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeInstanceParamsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeInstanceParamsResponse`
 
         """
         try:
@@ -1057,8 +1057,8 @@ class CdbClient(AbstractClient):
         """該介面（DescribeParamTemplateInfo）用于查詢參數範本詳情。
 
         :param request: 調用DescribeParamTemplateInfo所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeParamTemplateInfoRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeParamTemplateInfoResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeParamTemplateInfoRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeParamTemplateInfoResponse`
 
         """
         try:
@@ -1085,8 +1085,8 @@ class CdbClient(AbstractClient):
         """該介面（DescribeParamTemplates）查詢參數範本清單。
 
         :param request: 調用DescribeParamTemplates所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeParamTemplatesRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeParamTemplatesResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeParamTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeParamTemplatesResponse`
 
         """
         try:
@@ -1113,8 +1113,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeProjectSecurityGroups)用于查詢項目的安全組詳情。
 
         :param request: 調用DescribeProjectSecurityGroups所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeProjectSecurityGroupsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeProjectSecurityGroupsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeProjectSecurityGroupsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeProjectSecurityGroupsResponse`
 
         """
         try:
@@ -1141,8 +1141,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeRollbackRangeTime)用于查詢雲資料庫實例可回檔的時間範圍。
 
         :param request: 調用DescribeRollbackRangeTime所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeRollbackRangeTimeRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeRollbackRangeTimeResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeRollbackRangeTimeRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeRollbackRangeTimeResponse`
 
         """
         try:
@@ -1169,8 +1169,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeSlowLogs)用于獲取雲資料庫實例的慢查詢日志。
 
         :param request: 調用DescribeSlowLogs所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeSlowLogsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeSlowLogsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeSlowLogsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeSlowLogsResponse`
 
         """
         try:
@@ -1197,8 +1197,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeSupportedPrivileges)用于查詢雲資料庫的支援的權限訊息，包括全局權限，資料庫權限，表權限以及列權限。
 
         :param request: 調用DescribeSupportedPrivileges所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeSupportedPrivilegesRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeSupportedPrivilegesResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeSupportedPrivilegesRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeSupportedPrivilegesResponse`
 
         """
         try:
@@ -1225,8 +1225,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeTables)用于查詢雲資料庫實例的資料庫表訊息。
 
         :param request: 調用DescribeTables所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeTablesRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeTablesResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeTablesRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeTablesResponse`
 
         """
         try:
@@ -1253,8 +1253,8 @@ class CdbClient(AbstractClient):
         """獲取實例綁定的标簽
 
         :param request: 調用DescribeTagsOfInstanceIds所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeTagsOfInstanceIdsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeTagsOfInstanceIdsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeTagsOfInstanceIdsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeTagsOfInstanceIdsResponse`
 
         """
         try:
@@ -1281,8 +1281,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeTasks)用于查詢雲資料庫實例任務清單。
 
         :param request: 調用DescribeTasks所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeTasksRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeTasksResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeTasksRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeTasksResponse`
 
         """
         try:
@@ -1309,8 +1309,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeTimeWindow)用于查詢雲資料庫實例的維護時間視窗。
 
         :param request: 調用DescribeTimeWindow所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeTimeWindowRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeTimeWindowResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeTimeWindowRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeTimeWindowResponse`
 
         """
         try:
@@ -1337,8 +1337,8 @@ class CdbClient(AbstractClient):
         """本介面(DescribeUploadedFiles)用于查詢用戶導入的SQL文件清單。
 
         :param request: 調用DescribeUploadedFiles所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DescribeUploadedFilesRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DescribeUploadedFilesResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeUploadedFilesRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DescribeUploadedFilesResponse`
 
         """
         try:
@@ -1365,8 +1365,8 @@ class CdbClient(AbstractClient):
         """本介面(DisassociateSecurityGroups)用于安全組批次解綁實例。
 
         :param request: 調用DisassociateSecurityGroups所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.DisassociateSecurityGroupsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.DisassociateSecurityGroupsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.DisassociateSecurityGroupsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.DisassociateSecurityGroupsResponse`
 
         """
         try:
@@ -1393,8 +1393,8 @@ class CdbClient(AbstractClient):
         """本介面(InitDBInstances)用于初始化雲資料庫實例，包括初始化密碼、預設字元集、實例端口号等
 
         :param request: 調用InitDBInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.InitDBInstancesRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.InitDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.InitDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.InitDBInstancesResponse`
 
         """
         try:
@@ -1421,8 +1421,8 @@ class CdbClient(AbstractClient):
         """本介面(InquiryPriceUpgradeInstances)用于查詢雲資料庫實例升級的價格，支援查詢按量計費或者包年包月實例的升級價格，實例類型支援主實例、災備實例和只讀實例。
 
         :param request: 調用InquiryPriceUpgradeInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.InquiryPriceUpgradeInstancesRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.InquiryPriceUpgradeInstancesResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.InquiryPriceUpgradeInstancesRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.InquiryPriceUpgradeInstancesResponse`
 
         """
         try:
@@ -1449,8 +1449,8 @@ class CdbClient(AbstractClient):
         """本介面(IsolateDBInstance)用于銷毀雲資料庫實例，銷毀之後不能通過IP和端口訪問資料庫，按量計費實例銷毀後直接下線。
 
         :param request: 調用IsolateDBInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.IsolateDBInstanceRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.IsolateDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.IsolateDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.IsolateDBInstanceResponse`
 
         """
         try:
@@ -1477,8 +1477,8 @@ class CdbClient(AbstractClient):
         """本介面(ModifyAccountDescription)用于修改雲資料庫帳戶的備注訊息。
 
         :param request: 調用ModifyAccountDescription所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.ModifyAccountDescriptionRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.ModifyAccountDescriptionResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyAccountDescriptionRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.ModifyAccountDescriptionResponse`
 
         """
         try:
@@ -1505,8 +1505,8 @@ class CdbClient(AbstractClient):
         """本介面(ModifyAccountPassword)用于修改雲資料庫帳戶的密碼。
 
         :param request: 調用ModifyAccountPassword所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.ModifyAccountPasswordRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.ModifyAccountPasswordResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyAccountPasswordRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.ModifyAccountPasswordResponse`
 
         """
         try:
@@ -1533,8 +1533,8 @@ class CdbClient(AbstractClient):
         """本介面(ModifyAccountPrivileges)用于修改雲資料庫的帳戶的權限訊息。
 
         :param request: 調用ModifyAccountPrivileges所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.ModifyAccountPrivilegesRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.ModifyAccountPrivilegesResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyAccountPrivilegesRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.ModifyAccountPrivilegesResponse`
 
         """
         try:
@@ -1561,8 +1561,8 @@ class CdbClient(AbstractClient):
         """本介面(ModifyAutoRenewFlag)用于修改雲資料庫實例的自動續約标記。僅支援包年包月的實例設置自動續約标記。
 
         :param request: 調用ModifyAutoRenewFlag所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.ModifyAutoRenewFlagRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.ModifyAutoRenewFlagResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyAutoRenewFlagRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.ModifyAutoRenewFlagResponse`
 
         """
         try:
@@ -1589,8 +1589,8 @@ class CdbClient(AbstractClient):
         """本介面(ModifyBackupConfig)用于修改資料庫備份配置訊息。
 
         :param request: 調用ModifyBackupConfig所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.ModifyBackupConfigRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.ModifyBackupConfigResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyBackupConfigRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.ModifyBackupConfigResponse`
 
         """
         try:
@@ -1617,8 +1617,8 @@ class CdbClient(AbstractClient):
         """本介面(ModifyDBInstanceName)用于修改雲資料庫實例的名稱。
 
         :param request: 調用ModifyDBInstanceName所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.ModifyDBInstanceNameRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.ModifyDBInstanceNameResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyDBInstanceNameRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.ModifyDBInstanceNameResponse`
 
         """
         try:
@@ -1645,8 +1645,8 @@ class CdbClient(AbstractClient):
         """本介面(ModifyDBInstanceProject)用于修改雲資料庫實例的所屬項目。
 
         :param request: 調用ModifyDBInstanceProject所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.ModifyDBInstanceProjectRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.ModifyDBInstanceProjectResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyDBInstanceProjectRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.ModifyDBInstanceProjectResponse`
 
         """
         try:
@@ -1673,8 +1673,8 @@ class CdbClient(AbstractClient):
         """本介面(ModifyDBInstanceSecurityGroups)用于修改實例綁定的安全組。
 
         :param request: 調用ModifyDBInstanceSecurityGroups所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.ModifyDBInstanceSecurityGroupsRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.ModifyDBInstanceSecurityGroupsResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyDBInstanceSecurityGroupsRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.ModifyDBInstanceSecurityGroupsResponse`
 
         """
         try:
@@ -1701,8 +1701,8 @@ class CdbClient(AbstractClient):
         """本介面(ModifyDBInstanceVipVport)用于修改雲資料庫實例的IP和端口号，也可進行基礎網絡轉VPC網絡和VPC網絡下的子網變更。
 
         :param request: 調用ModifyDBInstanceVipVport所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.ModifyDBInstanceVipVportRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.ModifyDBInstanceVipVportResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyDBInstanceVipVportRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.ModifyDBInstanceVipVportResponse`
 
         """
         try:
@@ -1729,8 +1729,8 @@ class CdbClient(AbstractClient):
         """本介面(ModifyInstanceParam)用于修改雲資料庫實例的參數。
 
         :param request: 調用ModifyInstanceParam所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.ModifyInstanceParamRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.ModifyInstanceParamResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyInstanceParamRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.ModifyInstanceParamResponse`
 
         """
         try:
@@ -1757,8 +1757,8 @@ class CdbClient(AbstractClient):
         """可以對實例标簽進行添加、修改或者删除
 
         :param request: 調用ModifyInstanceTag所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.ModifyInstanceTagRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.ModifyInstanceTagResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyInstanceTagRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.ModifyInstanceTagResponse`
 
         """
         try:
@@ -1785,8 +1785,8 @@ class CdbClient(AbstractClient):
         """該介面（ModifyParamTemplate）用于修改參數範本。
 
         :param request: 調用ModifyParamTemplate所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.ModifyParamTemplateRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.ModifyParamTemplateResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyParamTemplateRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.ModifyParamTemplateResponse`
 
         """
         try:
@@ -1813,8 +1813,8 @@ class CdbClient(AbstractClient):
         """本介面(ModifyTimeWindow)用于更新雲資料庫實例的維護時間視窗。
 
         :param request: 調用ModifyTimeWindow所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.ModifyTimeWindowRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.ModifyTimeWindowResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyTimeWindowRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.ModifyTimeWindowResponse`
 
         """
         try:
@@ -1841,8 +1841,8 @@ class CdbClient(AbstractClient):
         """本介面(OpenDBInstanceGTID)用于開啓雲資料庫實例的GTID，只支援版本爲5.6以及以上的實例。
 
         :param request: 調用OpenDBInstanceGTID所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.OpenDBInstanceGTIDRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.OpenDBInstanceGTIDResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.OpenDBInstanceGTIDRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.OpenDBInstanceGTIDResponse`
 
         """
         try:
@@ -1868,11 +1868,11 @@ class CdbClient(AbstractClient):
     def OpenWanService(self, request):
         """本介面(OpenWanService)用于開通實例外網訪問。
 
-        注意，實例開通外網訪問之前，需要先将實例進行[實例初始化](https://cloud.tencent.com/document/api/236/15873)操作。
+        注意，實例開通外網訪問之前，需要先将實例進行[實例初始化](https://cloud.taifucloud.com/document/api/236/15873)操作。
 
         :param request: 調用OpenWanService所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.OpenWanServiceRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.OpenWanServiceResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.OpenWanServiceRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.OpenWanServiceResponse`
 
         """
         try:
@@ -1899,8 +1899,8 @@ class CdbClient(AbstractClient):
         """本介面(RenewDBInstance)用于續約雲資料庫實例，僅支援付費模式爲包年包月的實例。按量計費實例不需要續約。
 
         :param request: 調用RenewDBInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.RenewDBInstanceRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.RenewDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.RenewDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.RenewDBInstanceResponse`
 
         """
         try:
@@ -1931,8 +1931,8 @@ class CdbClient(AbstractClient):
         2、實例狀态必須爲正常，并且沒有其他異步任務在執行中。
 
         :param request: 調用RestartDBInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.RestartDBInstancesRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.RestartDBInstancesResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.RestartDBInstancesRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.RestartDBInstancesResponse`
 
         """
         try:
@@ -1959,8 +1959,8 @@ class CdbClient(AbstractClient):
         """該介面（StartBatchRollback）用于批次回檔雲資料庫實例的庫表。
 
         :param request: 調用StartBatchRollback所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.StartBatchRollbackRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.StartBatchRollbackResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.StartBatchRollbackRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.StartBatchRollbackResponse`
 
         """
         try:
@@ -1987,8 +1987,8 @@ class CdbClient(AbstractClient):
         """本介面(StopDBImportJob)用于終止數據導入任務。
 
         :param request: 調用StopDBImportJob所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.StopDBImportJobRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.StopDBImportJobResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.StopDBImportJobRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.StopDBImportJobResponse`
 
         """
         try:
@@ -2015,8 +2015,8 @@ class CdbClient(AbstractClient):
         """本介面(SwitchForUpgrade)用于切換訪問新實例，針對主升級中的實例處于待切換狀态時，用戶可主動發起該流程
 
         :param request: 調用SwitchForUpgrade所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.SwitchForUpgradeRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.SwitchForUpgradeResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.SwitchForUpgradeRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.SwitchForUpgradeResponse`
 
         """
         try:
@@ -2043,8 +2043,8 @@ class CdbClient(AbstractClient):
         """本介面(UpgradeDBInstance)用于升級雲資料庫實例，實例類型支援主實例、災備實例和只讀實例
 
         :param request: 調用UpgradeDBInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.UpgradeDBInstanceRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.UpgradeDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.UpgradeDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.UpgradeDBInstanceResponse`
 
         """
         try:
@@ -2071,8 +2071,8 @@ class CdbClient(AbstractClient):
         """本介面(UpgradeDBInstanceEngineVersion)用于升級雲資料庫實例版本，實例類型支援主實例、災備實例和只讀實例。
 
         :param request: 調用UpgradeDBInstanceEngineVersion所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.UpgradeDBInstanceEngineVersionRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.UpgradeDBInstanceEngineVersionResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.UpgradeDBInstanceEngineVersionRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.UpgradeDBInstanceEngineVersionResponse`
 
         """
         try:
@@ -2099,8 +2099,8 @@ class CdbClient(AbstractClient):
         """本介面(VerifyRootAccount)用于校驗雲資料庫實例的ROOT賬号是否有足夠的權限進行授權操作。
 
         :param request: 調用VerifyRootAccount所需參數的結構體。
-        :type request: :class:`tencentcloud.cdb.v20170320.models.VerifyRootAccountRequest`
-        :rtype: :class:`tencentcloud.cdb.v20170320.models.VerifyRootAccountResponse`
+        :type request: :class:`taifucloudcloud.cdb.v20170320.models.VerifyRootAccountRequest`
+        :rtype: :class:`taifucloudcloud.cdb.v20170320.models.VerifyRootAccountResponse`
 
         """
         try:

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AnalyzeFaceRequest(AbstractModel):
@@ -585,7 +585,7 @@ class CreatePersonResponse(AbstractModel):
         :type FaceId: str
         :param FaceRect: 檢測出的人臉框的位置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FaceRect: :class:`tencentcloud.iai.v20180301.models.FaceRect`
+        :type FaceRect: :class:`taifucloudcloud.iai.v20180301.models.FaceRect`
         :param SimilarPersonId: 疑似同一人的PersonId。 
 當 UniquePersonControl 參數不爲0且人員庫中有疑似的同一人，此參數才有意義。
         :type SimilarPersonId: str
@@ -1000,7 +1000,7 @@ class FaceAttributesInfo(AbstractModel):
         :type Mask: bool
         :param Hair: 頭發訊息，包含頭發長度（length）、有無劉海（bang）、頭發顔色（color）。NeedFaceAttributes 不爲1 或檢測超過 5 張人臉時，此參數仍返回，但不具備參考意義。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Hair: :class:`tencentcloud.iai.v20180301.models.FaceHairAttributesInfo`
+        :type Hair: :class:`taifucloudcloud.iai.v20180301.models.FaceHairAttributesInfo`
         :param EyeOpen: 雙眼是否睜開 [true,false]。只要有超過一只眼睛閉眼，就返回false。 NeedFaceAttributes 不爲1 或檢測超過 5 張人臉時，此參數仍返回，但不具備參考意義。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EyeOpen: bool
@@ -1085,10 +1085,10 @@ class FaceInfo(AbstractModel):
         :type Height: int
         :param FaceAttributesInfo: 人臉屬性訊息，包含性别( gender )、年齡( age )、表情( expression )、 
 魅力( beauty )、眼鏡( glass )、口罩（mask）、頭發（hair）和姿态 (pitch，roll，yaw )。只有當 NeedFaceAttributes 設爲 1 時才返回有效訊息。
-        :type FaceAttributesInfo: :class:`tencentcloud.iai.v20180301.models.FaceAttributesInfo`
+        :type FaceAttributesInfo: :class:`taifucloudcloud.iai.v20180301.models.FaceAttributesInfo`
         :param FaceQualityInfo: 人臉質量訊息，包含質量分（score）、模糊分（sharpness）、光照分（brightness）、遮擋分（completeness）。只有當NeedFaceDetection設爲1時才返回有效訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FaceQualityInfo: :class:`tencentcloud.iai.v20180301.models.FaceQualityInfo`
+        :type FaceQualityInfo: :class:`taifucloudcloud.iai.v20180301.models.FaceQualityInfo`
         """
         self.X = None
         self.Y = None
@@ -1185,7 +1185,7 @@ class FaceQualityInfo(AbstractModel):
         :type Brightness: int
         :param Completeness: 五官遮擋分，評價眉毛（Eyebrow）、眼睛（Eye）、鼻子（Nose）、臉頰（Cheek）、嘴巴（Mouth）、下巴（Chin）的被遮擋程度。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Completeness: :class:`tencentcloud.iai.v20180301.models.FaceQualityCompleteness`
+        :type Completeness: :class:`taifucloudcloud.iai.v20180301.models.FaceQualityCompleteness`
         """
         self.Score = None
         self.Sharpness = None
@@ -2118,7 +2118,7 @@ class Result(AbstractModel):
         :param Candidates: 識别出的最相似候選人
         :type Candidates: list of Candidate
         :param FaceRect: 檢測出的人臉框位置
-        :type FaceRect: :class:`tencentcloud.iai.v20180301.models.FaceRect`
+        :type FaceRect: :class:`taifucloudcloud.iai.v20180301.models.FaceRect`
         :param RetCode: 檢測出的人臉圖片狀态返回碼。0 表示正常。 
 -1601代表不符合圖片質量控制要求，此時Candidate内容爲空。
         :type RetCode: int
@@ -2149,7 +2149,7 @@ class ResultsReturnsByGroup(AbstractModel):
     def __init__(self):
         """
         :param FaceRect: 檢測出的人臉框位置。
-        :type FaceRect: :class:`tencentcloud.iai.v20180301.models.FaceRect`
+        :type FaceRect: :class:`taifucloudcloud.iai.v20180301.models.FaceRect`
         :param GroupCandidates: 識别結果。
         :type GroupCandidates: list of GroupCandidate
         :param RetCode: 檢測出的人臉圖片狀态返回碼。0 表示正常。 

@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.gs.v20191118 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.gs.v20191118 import models
 
 
 class GsClient(AbstractClient):
     _apiVersion = '2019-11-18'
-    _endpoint = 'gs.tencentcloudapi.com'
+    _endpoint = 'gs.taifucloudcloudapi.com'
 
 
     def CreateSession(self, request):
         """創建會話
 
         :param request: Request instance for CreateSession.
-        :type request: :class:`tencentcloud.gs.v20191118.models.CreateSessionRequest`
-        :rtype: :class:`tencentcloud.gs.v20191118.models.CreateSessionResponse`
+        :type request: :class:`taifucloudcloud.gs.v20191118.models.CreateSessionRequest`
+        :rtype: :class:`taifucloudcloud.gs.v20191118.models.CreateSessionResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class GsClient(AbstractClient):
         """查詢空閑機器數量
 
         :param request: Request instance for DescribeWorkers.
-        :type request: :class:`tencentcloud.gs.v20191118.models.DescribeWorkersRequest`
-        :rtype: :class:`tencentcloud.gs.v20191118.models.DescribeWorkersResponse`
+        :type request: :class:`taifucloudcloud.gs.v20191118.models.DescribeWorkersRequest`
+        :rtype: :class:`taifucloudcloud.gs.v20191118.models.DescribeWorkersResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class GsClient(AbstractClient):
         """獲取機器訊息
 
         :param request: Request instance for DescribeWorkersInfo.
-        :type request: :class:`tencentcloud.gs.v20191118.models.DescribeWorkersInfoRequest`
-        :rtype: :class:`tencentcloud.gs.v20191118.models.DescribeWorkersInfoResponse`
+        :type request: :class:`taifucloudcloud.gs.v20191118.models.DescribeWorkersInfoRequest`
+        :rtype: :class:`taifucloudcloud.gs.v20191118.models.DescribeWorkersInfoResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class GsClient(AbstractClient):
         """進入排隊鎖定機器
 
         :param request: Request instance for EnterQueue.
-        :type request: :class:`tencentcloud.gs.v20191118.models.EnterQueueRequest`
-        :rtype: :class:`tencentcloud.gs.v20191118.models.EnterQueueResponse`
+        :type request: :class:`taifucloudcloud.gs.v20191118.models.EnterQueueRequest`
+        :rtype: :class:`taifucloudcloud.gs.v20191118.models.EnterQueueResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class GsClient(AbstractClient):
         """修改機器訊息
 
         :param request: Request instance for ModifyWorkers.
-        :type request: :class:`tencentcloud.gs.v20191118.models.ModifyWorkersRequest`
-        :rtype: :class:`tencentcloud.gs.v20191118.models.ModifyWorkersResponse`
+        :type request: :class:`taifucloudcloud.gs.v20191118.models.ModifyWorkersRequest`
+        :rtype: :class:`taifucloudcloud.gs.v20191118.models.ModifyWorkersResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class GsClient(AbstractClient):
         """登出排隊
 
         :param request: Request instance for QuitQueue.
-        :type request: :class:`tencentcloud.gs.v20191118.models.QuitQueueRequest`
-        :rtype: :class:`tencentcloud.gs.v20191118.models.QuitQueueResponse`
+        :type request: :class:`taifucloudcloud.gs.v20191118.models.QuitQueueRequest`
+        :rtype: :class:`taifucloudcloud.gs.v20191118.models.QuitQueueResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class GsClient(AbstractClient):
         """強制登出遊戲
 
         :param request: Request instance for StopGame.
-        :type request: :class:`tencentcloud.gs.v20191118.models.StopGameRequest`
-        :rtype: :class:`tencentcloud.gs.v20191118.models.StopGameResponse`
+        :type request: :class:`taifucloudcloud.gs.v20191118.models.StopGameRequest`
+        :rtype: :class:`taifucloudcloud.gs.v20191118.models.StopGameResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class GsClient(AbstractClient):
         """嘗試鎖定機器
 
         :param request: Request instance for TrylockWorker.
-        :type request: :class:`tencentcloud.gs.v20191118.models.TrylockWorkerRequest`
-        :rtype: :class:`tencentcloud.gs.v20191118.models.TrylockWorkerResponse`
+        :type request: :class:`taifucloudcloud.gs.v20191118.models.TrylockWorkerRequest`
+        :rtype: :class:`taifucloudcloud.gs.v20191118.models.TrylockWorkerResponse`
 
         """
         try:

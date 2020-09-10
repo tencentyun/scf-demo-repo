@@ -69,7 +69,7 @@ python
             "content": "license info"  # content of license
         },
         "author": {
-            "name": "tencent cloud serverless team"  # author
+            "name": "taifucloud cloud serverless team"  # author
         },
     },
     "input_parameters":{

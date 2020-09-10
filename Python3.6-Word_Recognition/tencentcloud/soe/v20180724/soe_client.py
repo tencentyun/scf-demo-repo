@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.soe.v20180724 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.soe.v20180724 import models
 
 
 class SoeClient(AbstractClient):
     _apiVersion = '2018-07-24'
-    _endpoint = 'soe.tencentcloudapi.com'
+    _endpoint = 'soe.taifucloudcloudapi.com'
 
 
     def InitOralProcess(self, request):
         """初始化發音評估過程，每一輪評估前進行調用。語音輸入模式分爲流式模式和非流式模式，流式模式支援數據分片傳輸，可以加快評估響應速度。評估模式分爲詞模式和句子模式，詞模式會标注每個音節的詳細訊息；句子模式會有完整度和流利度的評估。
 
         :param request: 調用InitOralProcess所需參數的結構體。
-        :type request: :class:`tencentcloud.soe.v20180724.models.InitOralProcessRequest`
-        :rtype: :class:`tencentcloud.soe.v20180724.models.InitOralProcessResponse`
+        :type request: :class:`taifucloudcloud.soe.v20180724.models.InitOralProcessRequest`
+        :rtype: :class:`taifucloudcloud.soe.v20180724.models.InitOralProcessResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class SoeClient(AbstractClient):
         """傳輸音訊數據，必須在完成發音評估初始化介面之後調用，且SessonId要與初始化介面保持一緻。分片傳輸時，盡量保證SeqId順序傳輸。音訊源目前僅支援16k采樣率16bit單聲道編碼方式，如有不一緻可能導緻評估不準确或失敗。
 
         :param request: 調用TransmitOralProcess所需參數的結構體。
-        :type request: :class:`tencentcloud.soe.v20180724.models.TransmitOralProcessRequest`
-        :rtype: :class:`tencentcloud.soe.v20180724.models.TransmitOralProcessResponse`
+        :type request: :class:`taifucloudcloud.soe.v20180724.models.TransmitOralProcessRequest`
+        :rtype: :class:`taifucloudcloud.soe.v20180724.models.TransmitOralProcessResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class SoeClient(AbstractClient):
         """初始化并傳輸音訊數據，分片傳輸時，盡量保證SeqId順序傳輸。音訊源目前僅支援16k采樣率16bit單聲道編碼方式，如有不一緻可能導緻評估不準确或失敗。
 
         :param request: 調用TransmitOralProcessWithInit所需參數的結構體。
-        :type request: :class:`tencentcloud.soe.v20180724.models.TransmitOralProcessWithInitRequest`
-        :rtype: :class:`tencentcloud.soe.v20180724.models.TransmitOralProcessWithInitResponse`
+        :type request: :class:`taifucloudcloud.soe.v20180724.models.TransmitOralProcessWithInitRequest`
+        :rtype: :class:`taifucloudcloud.soe.v20180724.models.TransmitOralProcessWithInitResponse`
 
         """
         try:

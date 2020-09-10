@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AddUserRequest(AbstractModel):
@@ -499,7 +499,7 @@ class CreatePolicyRequest(AbstractModel):
         """
         :param PolicyName: 策略名
         :type PolicyName: str
-        :param PolicyDocument: 策略文件，範例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授權對象。獲取該參數可參閱 獲取角色詳情（https://cloud.tencent.com/document/product/598/36221） 輸出參數RoleInfo
+        :param PolicyDocument: 策略文件，範例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.taifucloud.com","cls.cloud.taifucloud.com"]}}]}，principal用于指定角色的授權對象。獲取該參數可參閱 獲取角色詳情（https://cloud.taifucloud.com/document/product/598/36221） 輸出參數RoleInfo
         :type PolicyDocument: str
         :param Description: 策略描述
         :type Description: str
@@ -592,7 +592,7 @@ class CreateRoleRequest(AbstractModel):
         """
         :param RoleName: 角色名稱
         :type RoleName: str
-        :param PolicyDocument: 策略文件，範例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授權對象。獲取該參數可參閱 獲取角色詳情（https://cloud.tencent.com/document/product/598/36221） 輸出參數RoleInfo
+        :param PolicyDocument: 策略文件，範例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.taifucloud.com","cls.cloud.taifucloud.com"]}}]}，principal用于指定角色的授權對象。獲取該參數可參閱 獲取角色詳情（https://cloud.taifucloud.com/document/product/598/36221） 輸出參數RoleInfo
         :type PolicyDocument: str
         :param Description: 角色描述
         :type Description: str
@@ -1363,7 +1363,7 @@ class GetPolicyVersionResponse(AbstractModel):
         """
         :param PolicyVersion: 策略版本詳情
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PolicyVersion: :class:`tencentcloud.cam.v20190116.models.PolicyVersionDetail`
+        :type PolicyVersion: :class:`taifucloudcloud.cam.v20190116.models.PolicyVersionDetail`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1407,7 +1407,7 @@ class GetRoleResponse(AbstractModel):
     def __init__(self):
         """
         :param RoleInfo: 角色詳情
-        :type RoleInfo: :class:`tencentcloud.cam.v20190116.models.RoleInfo`
+        :type RoleInfo: :class:`taifucloudcloud.cam.v20190116.models.RoleInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2683,7 +2683,7 @@ class UpdateAssumeRolePolicyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param PolicyDocument: 策略文件，範例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授權對象。獲取該參數可參閱 獲取角色詳情（https://cloud.tencent.com/document/product/598/36221） 輸出參數RoleInfo
+        :param PolicyDocument: 策略文件，範例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.taifucloud.com","cls.cloud.taifucloud.com"]}}]}，principal用于指定角色的授權對象。獲取該參數可參閱 獲取角色詳情（https://cloud.taifucloud.com/document/product/598/36221） 輸出參數RoleInfo
         :type PolicyDocument: str
         :param RoleId: 角色ID，用于指定角色，入參 RoleId 與 RoleName 二選一
         :type RoleId: str
@@ -2773,7 +2773,7 @@ class UpdatePolicyRequest(AbstractModel):
         :type PolicyName: str
         :param Description: 策略描述
         :type Description: str
-        :param PolicyDocument: 策略文件，範例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授權對象。獲取該參數可參閱 獲取角色詳情（https://cloud.tencent.com/document/product/598/36221） 輸出參數RoleInfo
+        :param PolicyDocument: 策略文件，範例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.taifucloud.com","cls.cloud.taifucloud.com"]}}]}，principal用于指定角色的授權對象。獲取該參數可參閱 獲取角色詳情（https://cloud.taifucloud.com/document/product/598/36221） 輸出參數RoleInfo
         :type PolicyDocument: str
         :param Alias: 預設策略備注
         :type Alias: str

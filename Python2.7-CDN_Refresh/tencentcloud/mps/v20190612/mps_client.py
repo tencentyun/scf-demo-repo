@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.mps.v20190612 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.mps.v20190612 import models
 
 
 class MpsClient(AbstractClient):
     _apiVersion = '2019-06-12'
-    _endpoint = 'mps.tencentcloudapi.com'
+    _endpoint = 'mps.taifucloudcloudapi.com'
 
 
     def CreateAIAnalysisTemplate(self, request):
         """創建用戶自定義内容分析範本，數量上限：50。
 
         :param request: Request instance for CreateAIAnalysisTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.CreateAIAnalysisTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.CreateAIAnalysisTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.CreateAIAnalysisTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.CreateAIAnalysisTemplateResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class MpsClient(AbstractClient):
         """創建用戶自定義内容識别範本，數量上限：50。
 
         :param request: Request instance for CreateAIRecognitionTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.CreateAIRecognitionTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.CreateAIRecognitionTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.CreateAIRecognitionTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.CreateAIRecognitionTemplateResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class MpsClient(AbstractClient):
         """創建用戶自定義轉動圖範本，數量上限：16。
 
         :param request: Request instance for CreateAnimatedGraphicsTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.CreateAnimatedGraphicsTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.CreateAnimatedGraphicsTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.CreateAnimatedGraphicsTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.CreateAnimatedGraphicsTemplateResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class MpsClient(AbstractClient):
         """創建用戶自定義内容審核範本，數量上限：50。
 
         :param request: Request instance for CreateContentReviewTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.CreateContentReviewTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.CreateContentReviewTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.CreateContentReviewTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.CreateContentReviewTemplateResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class MpsClient(AbstractClient):
         """創建用戶自定義雪碧圖範本，數量上限：16。
 
         :param request: Request instance for CreateImageSpriteTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.CreateImageSpriteTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.CreateImageSpriteTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.CreateImageSpriteTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.CreateImageSpriteTemplateResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class MpsClient(AbstractClient):
         """該介面用于創建人物樣本，用于通過人臉識别等技術，進行内容識别、内容審核等視訊處理。
 
         :param request: Request instance for CreatePersonSample.
-        :type request: :class:`tencentcloud.mps.v20190612.models.CreatePersonSampleRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.CreatePersonSampleResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.CreatePersonSampleRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.CreatePersonSampleResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class MpsClient(AbstractClient):
         """創建用戶自定義采樣截圖範本，數量上限：16。
 
         :param request: Request instance for CreateSampleSnapshotTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.CreateSampleSnapshotTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.CreateSampleSnapshotTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.CreateSampleSnapshotTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.CreateSampleSnapshotTemplateResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class MpsClient(AbstractClient):
         """創建用戶自定義指定時間點截圖範本，數量上限：16。
 
         :param request: Request instance for CreateSnapshotByTimeOffsetTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.CreateSnapshotByTimeOffsetTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.CreateSnapshotByTimeOffsetTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.CreateSnapshotByTimeOffsetTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.CreateSnapshotByTimeOffsetTemplateResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class MpsClient(AbstractClient):
         """創建用戶自定義轉碼範本，數量上限：1000。
 
         :param request: Request instance for CreateTranscodeTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.CreateTranscodeTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.CreateTranscodeTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.CreateTranscodeTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.CreateTranscodeTemplateResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class MpsClient(AbstractClient):
         """創建用戶自定義浮水印範本，數量上限：1000。
 
         :param request: Request instance for CreateWatermarkTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.CreateWatermarkTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.CreateWatermarkTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.CreateWatermarkTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.CreateWatermarkTemplateResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class MpsClient(AbstractClient):
         """該介面用于批次創建關鍵詞樣本，樣本用于通過OCR、ASR技術，進行内容審核、内容識别等視訊處理。
 
         :param request: Request instance for CreateWordSamples.
-        :type request: :class:`tencentcloud.mps.v20190612.models.CreateWordSamplesRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.CreateWordSamplesResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.CreateWordSamplesRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.CreateWordSamplesResponse`
 
         """
         try:
@@ -341,15 +341,15 @@ class MpsClient(AbstractClient):
         4. 對視訊采樣截圖；
         5. 對視訊截圖雪碧圖；
         6. 對視訊轉自适應碼流；
-        7. 智慧内容審核（鑒黃、鑒恐、鑒政）；
+        7. 智慧内容審核（ 、鑒恐、鑒政）；
         8. 智慧内容分析（标簽、分類、封面、按幀标簽）；
         9. 智慧内容識别（人臉、文本全文、文本關鍵詞、語音全文、語音關鍵詞）。
 
         注意：創建工作流成功後是禁用狀态，需要手動啓用。
 
         :param request: Request instance for CreateWorkflow.
-        :type request: :class:`tencentcloud.mps.v20190612.models.CreateWorkflowRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.CreateWorkflowResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.CreateWorkflowRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.CreateWorkflowResponse`
 
         """
         try:
@@ -378,8 +378,8 @@ class MpsClient(AbstractClient):
         注意：範本 ID 爲 10000 以下的爲系統預置範本，不允許删除。
 
         :param request: Request instance for DeleteAIAnalysisTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DeleteAIAnalysisTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DeleteAIAnalysisTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DeleteAIAnalysisTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DeleteAIAnalysisTemplateResponse`
 
         """
         try:
@@ -406,8 +406,8 @@ class MpsClient(AbstractClient):
         """删除用戶自定義内容識别範本。
 
         :param request: Request instance for DeleteAIRecognitionTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DeleteAIRecognitionTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DeleteAIRecognitionTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DeleteAIRecognitionTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DeleteAIRecognitionTemplateResponse`
 
         """
         try:
@@ -434,8 +434,8 @@ class MpsClient(AbstractClient):
         """删除用戶自定義轉動圖範本。
 
         :param request: Request instance for DeleteAnimatedGraphicsTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DeleteAnimatedGraphicsTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DeleteAnimatedGraphicsTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DeleteAnimatedGraphicsTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DeleteAnimatedGraphicsTemplateResponse`
 
         """
         try:
@@ -462,8 +462,8 @@ class MpsClient(AbstractClient):
         """删除用戶自定義内容審核範本。
 
         :param request: Request instance for DeleteContentReviewTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DeleteContentReviewTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DeleteContentReviewTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DeleteContentReviewTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DeleteContentReviewTemplateResponse`
 
         """
         try:
@@ -490,8 +490,8 @@ class MpsClient(AbstractClient):
         """删除雪碧圖範本。
 
         :param request: Request instance for DeleteImageSpriteTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DeleteImageSpriteTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DeleteImageSpriteTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DeleteImageSpriteTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DeleteImageSpriteTemplateResponse`
 
         """
         try:
@@ -518,8 +518,8 @@ class MpsClient(AbstractClient):
         """該介面用于根據人物 ID，删除人物樣本。
 
         :param request: Request instance for DeletePersonSample.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DeletePersonSampleRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DeletePersonSampleResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DeletePersonSampleRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DeletePersonSampleResponse`
 
         """
         try:
@@ -546,8 +546,8 @@ class MpsClient(AbstractClient):
         """删除用戶自定義采樣截圖範本。
 
         :param request: Request instance for DeleteSampleSnapshotTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DeleteSampleSnapshotTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DeleteSampleSnapshotTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DeleteSampleSnapshotTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DeleteSampleSnapshotTemplateResponse`
 
         """
         try:
@@ -574,8 +574,8 @@ class MpsClient(AbstractClient):
         """删除用戶自定義指定時間點截圖範本。
 
         :param request: Request instance for DeleteSnapshotByTimeOffsetTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DeleteSnapshotByTimeOffsetTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DeleteSnapshotByTimeOffsetTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DeleteSnapshotByTimeOffsetTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DeleteSnapshotByTimeOffsetTemplateResponse`
 
         """
         try:
@@ -602,8 +602,8 @@ class MpsClient(AbstractClient):
         """删除用戶自定義轉碼範本。
 
         :param request: Request instance for DeleteTranscodeTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DeleteTranscodeTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DeleteTranscodeTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DeleteTranscodeTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DeleteTranscodeTemplateResponse`
 
         """
         try:
@@ -630,8 +630,8 @@ class MpsClient(AbstractClient):
         """删除用戶自定義浮水印範本。
 
         :param request: Request instance for DeleteWatermarkTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DeleteWatermarkTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DeleteWatermarkTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DeleteWatermarkTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DeleteWatermarkTemplateResponse`
 
         """
         try:
@@ -658,8 +658,8 @@ class MpsClient(AbstractClient):
         """該介面用于批次删除關鍵詞樣本。
 
         :param request: Request instance for DeleteWordSamples.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DeleteWordSamplesRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DeleteWordSamplesResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DeleteWordSamplesRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DeleteWordSamplesResponse`
 
         """
         try:
@@ -686,8 +686,8 @@ class MpsClient(AbstractClient):
         """删除工作流。對于已啓用的工作流，需要禁用後才能删除。
 
         :param request: Request instance for DeleteWorkflow.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DeleteWorkflowRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DeleteWorkflowResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DeleteWorkflowRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DeleteWorkflowResponse`
 
         """
         try:
@@ -714,8 +714,8 @@ class MpsClient(AbstractClient):
         """根據内容分析範本唯一标識，獲取内容分析範本詳情清單。返回結果包含符合條件的所有用戶自定義内容分析範本及系統預置視訊内容分析範本
 
         :param request: Request instance for DescribeAIAnalysisTemplates.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DescribeAIAnalysisTemplatesRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DescribeAIAnalysisTemplatesResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeAIAnalysisTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DescribeAIAnalysisTemplatesResponse`
 
         """
         try:
@@ -742,8 +742,8 @@ class MpsClient(AbstractClient):
         """根據内容識别範本唯一标識，獲取内容識别範本詳情清單。返回結果包含符合條件的所有用戶自定義内容識别範本及系統預置視訊内容識别範本
 
         :param request: Request instance for DescribeAIRecognitionTemplates.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DescribeAIRecognitionTemplatesRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DescribeAIRecognitionTemplatesResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeAIRecognitionTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DescribeAIRecognitionTemplatesResponse`
 
         """
         try:
@@ -770,8 +770,8 @@ class MpsClient(AbstractClient):
         """查詢轉動圖範本清單，支援根據條件，分頁查詢。
 
         :param request: Request instance for DescribeAnimatedGraphicsTemplates.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DescribeAnimatedGraphicsTemplatesRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DescribeAnimatedGraphicsTemplatesResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeAnimatedGraphicsTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DescribeAnimatedGraphicsTemplatesResponse`
 
         """
         try:
@@ -798,8 +798,8 @@ class MpsClient(AbstractClient):
         """根據内容審核範本唯一标識，獲取内容審核範本詳情清單。返回結果包含符合條件的所有用戶自定義範本及系統預置内容審核範本。
 
         :param request: Request instance for DescribeContentReviewTemplates.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DescribeContentReviewTemplatesRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DescribeContentReviewTemplatesResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeContentReviewTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DescribeContentReviewTemplatesResponse`
 
         """
         try:
@@ -826,8 +826,8 @@ class MpsClient(AbstractClient):
         """查詢雪碧圖範本，支援根據條件，分頁查詢。
 
         :param request: Request instance for DescribeImageSpriteTemplates.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DescribeImageSpriteTemplatesRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DescribeImageSpriteTemplatesResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeImageSpriteTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DescribeImageSpriteTemplatesResponse`
 
         """
         try:
@@ -854,8 +854,8 @@ class MpsClient(AbstractClient):
         """獲取媒體的元訊息，包括視訊畫面寬、高、編碼格式、時長、幀率等。
 
         :param request: Request instance for DescribeMediaMetaData.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DescribeMediaMetaDataRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DescribeMediaMetaDataResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeMediaMetaDataRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DescribeMediaMetaDataResponse`
 
         """
         try:
@@ -882,8 +882,8 @@ class MpsClient(AbstractClient):
         """該介面用于查詢人物樣本訊息，支援根據人物 ID、名稱、标簽，分頁查詢。
 
         :param request: Request instance for DescribePersonSamples.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DescribePersonSamplesRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DescribePersonSamplesResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribePersonSamplesRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DescribePersonSamplesResponse`
 
         """
         try:
@@ -910,8 +910,8 @@ class MpsClient(AbstractClient):
         """查詢采樣截圖範本，支援根據條件，分頁查詢。
 
         :param request: Request instance for DescribeSampleSnapshotTemplates.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DescribeSampleSnapshotTemplatesRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DescribeSampleSnapshotTemplatesResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeSampleSnapshotTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DescribeSampleSnapshotTemplatesResponse`
 
         """
         try:
@@ -938,8 +938,8 @@ class MpsClient(AbstractClient):
         """查詢指定時間點截圖範本，支援根據條件，分頁查詢。
 
         :param request: Request instance for DescribeSnapshotByTimeOffsetTemplates.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DescribeSnapshotByTimeOffsetTemplatesRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DescribeSnapshotByTimeOffsetTemplatesResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeSnapshotByTimeOffsetTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DescribeSnapshotByTimeOffsetTemplatesResponse`
 
         """
         try:
@@ -966,8 +966,8 @@ class MpsClient(AbstractClient):
         """通過任務 ID 查詢任務的執行狀态和結果的詳細訊息（最多可以查詢3天之内提交的任務）。
 
         :param request: Request instance for DescribeTaskDetail.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DescribeTaskDetailRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DescribeTaskDetailResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeTaskDetailRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DescribeTaskDetailResponse`
 
         """
         try:
@@ -996,8 +996,8 @@ class MpsClient(AbstractClient):
         * 只能查詢到最近三天（72 小時）内的任務。
 
         :param request: Request instance for DescribeTasks.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DescribeTasksRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DescribeTasksResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeTasksRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DescribeTasksResponse`
 
         """
         try:
@@ -1021,11 +1021,11 @@ class MpsClient(AbstractClient):
 
 
     def DescribeTranscodeTemplates(self, request):
-        """根據轉碼範本唯一标識，獲取轉碼範本詳情清單。返回結果包含符合條件的所有用戶自定義範本及[系統預置轉碼範本](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+        """根據轉碼範本唯一标識，獲取轉碼範本詳情清單。返回結果包含符合條件的所有用戶自定義範本及[系統預置轉碼範本](https://cloud.taifucloud.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
 
         :param request: Request instance for DescribeTranscodeTemplates.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DescribeTranscodeTemplatesRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DescribeTranscodeTemplatesResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeTranscodeTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DescribeTranscodeTemplatesResponse`
 
         """
         try:
@@ -1052,8 +1052,8 @@ class MpsClient(AbstractClient):
         """查詢用戶自定義浮水印範本，支援根據條件，分頁查詢。
 
         :param request: Request instance for DescribeWatermarkTemplates.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DescribeWatermarkTemplatesRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DescribeWatermarkTemplatesResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeWatermarkTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DescribeWatermarkTemplatesResponse`
 
         """
         try:
@@ -1080,8 +1080,8 @@ class MpsClient(AbstractClient):
         """該介面用于根據應用場景、關鍵詞、标簽，分頁查詢關鍵詞樣本訊息。
 
         :param request: Request instance for DescribeWordSamples.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DescribeWordSamplesRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DescribeWordSamplesResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeWordSamplesRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DescribeWordSamplesResponse`
 
         """
         try:
@@ -1108,8 +1108,8 @@ class MpsClient(AbstractClient):
         """根據工作流 ID，獲取工作流詳情清單。
 
         :param request: Request instance for DescribeWorkflows.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DescribeWorkflowsRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DescribeWorkflowsResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeWorkflowsRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DescribeWorkflowsResponse`
 
         """
         try:
@@ -1136,8 +1136,8 @@ class MpsClient(AbstractClient):
         """禁用工作流。
 
         :param request: Request instance for DisableWorkflow.
-        :type request: :class:`tencentcloud.mps.v20190612.models.DisableWorkflowRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.DisableWorkflowResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.DisableWorkflowRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.DisableWorkflowResponse`
 
         """
         try:
@@ -1168,8 +1168,8 @@ class MpsClient(AbstractClient):
         3. 對多個文件進行剪輯，然後再拼接，生成一個新的視訊。
 
         :param request: Request instance for EditMedia.
-        :type request: :class:`tencentcloud.mps.v20190612.models.EditMediaRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.EditMediaResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.EditMediaRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.EditMediaResponse`
 
         """
         try:
@@ -1196,8 +1196,8 @@ class MpsClient(AbstractClient):
         """啓用工作流。
 
         :param request: Request instance for EnableWorkflow.
-        :type request: :class:`tencentcloud.mps.v20190612.models.EnableWorkflowRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.EnableWorkflowResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.EnableWorkflowRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.EnableWorkflowResponse`
 
         """
         try:
@@ -1225,8 +1225,8 @@ class MpsClient(AbstractClient):
         > 注意：目前僅支援終止執行中的直播流處理任務。
 
         :param request: Request instance for ManageTask.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ManageTaskRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ManageTaskResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ManageTaskRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ManageTaskResponse`
 
         """
         try:
@@ -1255,8 +1255,8 @@ class MpsClient(AbstractClient):
         注意：範本 ID 10000 以下的爲系統預置範本，不允許修改。
 
         :param request: Request instance for ModifyAIAnalysisTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ModifyAIAnalysisTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ModifyAIAnalysisTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ModifyAIAnalysisTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ModifyAIAnalysisTemplateResponse`
 
         """
         try:
@@ -1283,8 +1283,8 @@ class MpsClient(AbstractClient):
         """修改用戶自定義内容識别範本。
 
         :param request: Request instance for ModifyAIRecognitionTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ModifyAIRecognitionTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ModifyAIRecognitionTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ModifyAIRecognitionTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ModifyAIRecognitionTemplateResponse`
 
         """
         try:
@@ -1311,8 +1311,8 @@ class MpsClient(AbstractClient):
         """修改用戶自定義轉動圖範本。
 
         :param request: Request instance for ModifyAnimatedGraphicsTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ModifyAnimatedGraphicsTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ModifyAnimatedGraphicsTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ModifyAnimatedGraphicsTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ModifyAnimatedGraphicsTemplateResponse`
 
         """
         try:
@@ -1339,8 +1339,8 @@ class MpsClient(AbstractClient):
         """修改用戶自定義内容審核範本。
 
         :param request: Request instance for ModifyContentReviewTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ModifyContentReviewTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ModifyContentReviewTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ModifyContentReviewTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ModifyContentReviewTemplateResponse`
 
         """
         try:
@@ -1367,8 +1367,8 @@ class MpsClient(AbstractClient):
         """修改用戶自定義雪碧圖範本。
 
         :param request: Request instance for ModifyImageSpriteTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ModifyImageSpriteTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ModifyImageSpriteTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ModifyImageSpriteTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ModifyImageSpriteTemplateResponse`
 
         """
         try:
@@ -1395,8 +1395,8 @@ class MpsClient(AbstractClient):
         """該介面用于根據人物 ID，修改人物樣本訊息，包括名稱、描述的修改，以及人臉、标簽的添加、删除、重置操作。人臉删除操作需保證至少剩餘 1 張圖片，否則，請使用重置操作。
 
         :param request: Request instance for ModifyPersonSample.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ModifyPersonSampleRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ModifyPersonSampleResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ModifyPersonSampleRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ModifyPersonSampleResponse`
 
         """
         try:
@@ -1423,8 +1423,8 @@ class MpsClient(AbstractClient):
         """修改用戶自定義采樣截圖範本。
 
         :param request: Request instance for ModifySampleSnapshotTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ModifySampleSnapshotTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ModifySampleSnapshotTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ModifySampleSnapshotTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ModifySampleSnapshotTemplateResponse`
 
         """
         try:
@@ -1451,8 +1451,8 @@ class MpsClient(AbstractClient):
         """修改用戶自定義指定時間點截圖範本。
 
         :param request: Request instance for ModifySnapshotByTimeOffsetTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ModifySnapshotByTimeOffsetTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ModifySnapshotByTimeOffsetTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ModifySnapshotByTimeOffsetTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ModifySnapshotByTimeOffsetTemplateResponse`
 
         """
         try:
@@ -1479,8 +1479,8 @@ class MpsClient(AbstractClient):
         """修改用戶自定義轉碼範本訊息。
 
         :param request: Request instance for ModifyTranscodeTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ModifyTranscodeTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ModifyTranscodeTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ModifyTranscodeTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ModifyTranscodeTemplateResponse`
 
         """
         try:
@@ -1507,8 +1507,8 @@ class MpsClient(AbstractClient):
         """修改用戶自定義浮水印範本，水印類型不允許修改。
 
         :param request: Request instance for ModifyWatermarkTemplate.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ModifyWatermarkTemplateRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ModifyWatermarkTemplateResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ModifyWatermarkTemplateRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ModifyWatermarkTemplateResponse`
 
         """
         try:
@@ -1535,8 +1535,8 @@ class MpsClient(AbstractClient):
         """該介面用于修改關鍵詞的應用場景、标簽，關鍵詞本身不可修改，如需修改，可删除重建。
 
         :param request: Request instance for ModifyWordSample.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ModifyWordSampleRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ModifyWordSampleResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ModifyWordSampleRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ModifyWordSampleResponse`
 
         """
         try:
@@ -1564,8 +1564,8 @@ class MpsClient(AbstractClient):
         該介面不用于發起網絡調用，而是用來幫助生成各個語言平台的 SDK，您可以參考 SDK 的中解析函數的實現事件通知的解析。
 
         :param request: Request instance for ParseLiveStreamProcessNotification.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ParseLiveStreamProcessNotificationRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ParseLiveStreamProcessNotificationResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ParseLiveStreamProcessNotificationRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ParseLiveStreamProcessNotificationResponse`
 
         """
         try:
@@ -1593,8 +1593,8 @@ class MpsClient(AbstractClient):
         該介面不用于發起網絡調用，而是用來幫助生成各個語言平台的 SDK，您可以參考 SDK 的中解析函數的實現事件通知的解析。
 
         :param request: Request instance for ParseNotification.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ParseNotificationRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ParseNotificationResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ParseNotificationRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ParseNotificationResponse`
 
         """
         try:
@@ -1620,13 +1620,13 @@ class MpsClient(AbstractClient):
     def ProcessLiveStream(self, request):
         """對直播流媒體發起處理任務，功能包括：
 
-        * 智慧内容審核（畫面鑒黃、鑒政、鑒暴、聲音鑒黃）。
+        * 智慧内容審核（畫面 、鑒政、鑒暴、聲音 ）。
 
         直播流處理事件通知實時寫入用戶指定的訊息隊列 CMQ 中，用戶需要從訊息隊列 CMQ 中獲取事件通知結果，同時處理過程中存在輸出文件的，會寫入用戶指定的輸出文件的目标儲存中。
 
         :param request: Request instance for ProcessLiveStream.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ProcessLiveStreamRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ProcessLiveStreamResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ProcessLiveStreamRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ProcessLiveStreamResponse`
 
         """
         try:
@@ -1657,13 +1657,13 @@ class MpsClient(AbstractClient):
         4. 對視訊采樣截圖；
         5. 對視訊截圖雪碧圖；
         6. 對視訊轉自适應碼流；
-        7. 智慧内容審核（鑒黃、鑒恐、鑒政）；
+        7. 智慧内容審核（ 、鑒恐、鑒政）；
         8. 智慧内容分析（标簽、分類、封面、按幀标簽）；
         9. 智慧内容識别（人臉、文本全文、文本關鍵詞、語音全文、語音關鍵詞）。
 
         :param request: Request instance for ProcessMedia.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ProcessMediaRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ProcessMediaResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ProcessMediaRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ProcessMediaResponse`
 
         """
         try:
@@ -1690,8 +1690,8 @@ class MpsClient(AbstractClient):
         """重新設置一個已經存在且處于禁用狀态的工作流。
 
         :param request: Request instance for ResetWorkflow.
-        :type request: :class:`tencentcloud.mps.v20190612.models.ResetWorkflowRequest`
-        :rtype: :class:`tencentcloud.mps.v20190612.models.ResetWorkflowResponse`
+        :type request: :class:`taifucloudcloud.mps.v20190612.models.ResetWorkflowRequest`
+        :rtype: :class:`taifucloudcloud.mps.v20190612.models.ResetWorkflowResponse`
 
         """
         try:

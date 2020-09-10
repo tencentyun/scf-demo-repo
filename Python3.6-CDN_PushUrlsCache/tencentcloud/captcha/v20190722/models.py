@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CaptchaOperDataInterceptUnit(AbstractModel):
@@ -486,7 +486,7 @@ class DescribeCaptchaOperDataResponse(AbstractModel):
         :type CaptchaMsg: str
         :param Data: 用戶操作數據
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Data: :class:`tencentcloud.captcha.v20190722.models.CaptchaOperDataRes`
+        :type Data: :class:`taifucloudcloud.captcha.v20190722.models.CaptchaOperDataRes`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

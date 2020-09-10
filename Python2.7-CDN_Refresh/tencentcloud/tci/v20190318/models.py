@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AIAssistantRequest(AbstractModel):
@@ -236,13 +236,13 @@ class ActionInfo(AbstractModel):
     def __init__(self):
         """
         :param BodyPosture: 軀體動作識别結果，包含坐着（sit）、站立（stand）和趴睡（sleep）
-        :type BodyPosture: :class:`tencentcloud.tci.v20190318.models.ActionType`
+        :type BodyPosture: :class:`taifucloudcloud.tci.v20190318.models.ActionType`
         :param Handup: 舉手識别結果，包含舉手（hand）和未檢測到舉手（nothand）
-        :type Handup: :class:`tencentcloud.tci.v20190318.models.ActionType`
+        :type Handup: :class:`taifucloudcloud.tci.v20190318.models.ActionType`
         :param LookHead: 是否低頭識别結果，包含擡頭（lookingahead）和未檢測到擡頭（notlookingahead）
-        :type LookHead: :class:`tencentcloud.tci.v20190318.models.ActionType`
+        :type LookHead: :class:`taifucloudcloud.tci.v20190318.models.ActionType`
         :param Writing: 是否寫字識别結果，包含寫字（write）和未檢測到寫字（notlookingahead）
-        :type Writing: :class:`tencentcloud.tci.v20190318.models.ActionType`
+        :type Writing: :class:`taifucloudcloud.tci.v20190318.models.ActionType`
         :param Height: 動作圖像高度
         :type Height: int
         :param Left: 動作出現圖像的左側起始坐标位置
@@ -380,7 +380,7 @@ class AttendanceInfo(AbstractModel):
     def __init__(self):
         """
         :param Face: 識别到的人員訊息
-        :type Face: :class:`tencentcloud.tci.v20190318.models.FrameInfo`
+        :type Face: :class:`taifucloudcloud.tci.v20190318.models.FrameInfo`
         :param PersonId: 識别到的人員id
         :type PersonId: str
         """
@@ -1037,11 +1037,11 @@ class DescribeAITaskResultResponse(AbstractModel):
     def __init__(self):
         """
         :param AudioResult: 音訊分析結果
-        :type AudioResult: :class:`tencentcloud.tci.v20190318.models.StandardAudioResult`
+        :type AudioResult: :class:`taifucloudcloud.tci.v20190318.models.StandardAudioResult`
         :param ImageResult: 圖像分析結果
-        :type ImageResult: :class:`tencentcloud.tci.v20190318.models.StandardImageResult`
+        :type ImageResult: :class:`taifucloudcloud.tci.v20190318.models.StandardImageResult`
         :param VideoResult: 視訊分析結果
-        :type VideoResult: :class:`tencentcloud.tci.v20190318.models.StandardVideoResult`
+        :type VideoResult: :class:`taifucloudcloud.tci.v20190318.models.StandardVideoResult`
         :param Status: 任務狀态
         :type Status: str
         :param TaskId: 任務唯一id。在URL方式時提交請求後會返回一個jobid，後續查詢該url的結果時使用這個jobid進行查詢。
@@ -1174,9 +1174,9 @@ class DescribeAudioTaskResponse(AbstractModel):
     def __init__(self):
         """
         :param AllMuteSlice: 如果請求中開啓了靜音檢測開關，則會返回所有的靜音片段（靜音時長超過阈值的片段）。
-        :type AllMuteSlice: :class:`tencentcloud.tci.v20190318.models.AllMuteSlice`
+        :type AllMuteSlice: :class:`taifucloudcloud.tci.v20190318.models.AllMuteSlice`
         :param AsrStat: 返回的當前音訊的統計訊息。當進度爲100時返回。
-        :type AsrStat: :class:`tencentcloud.tci.v20190318.models.ASRStat`
+        :type AsrStat: :class:`taifucloudcloud.tci.v20190318.models.ASRStat`
         :param Texts: 返回當前音訊流的詳細訊息，如果是流模式，返回的是對應流的詳細訊息，如果是 URL模式，返回的是查詢的那一段seq對應的音訊的詳細訊息。
         :type Texts: list of WholeTextItem
         :param VocabAnalysisDetailInfo: 返回詞匯庫中的單詞出現的詳細時間訊息。
@@ -1275,7 +1275,7 @@ class DescribeConversationTaskResponse(AbstractModel):
     def __init__(self):
         """
         :param AsrStat: 返回的當前音訊的統計訊息。當進度爲100時返回。
-        :type AsrStat: :class:`tencentcloud.tci.v20190318.models.ASRStat`
+        :type AsrStat: :class:`taifucloudcloud.tci.v20190318.models.ASRStat`
         :param Texts: 返回當前音訊流的詳細訊息，如果是流模式，返回的是對應流的詳細訊息，如果是 URL模式，返回的是查詢的那一段seq對應的音訊的詳細訊息。
         :type Texts: list of WholeTextItem
         :param VocabAnalysisDetailInfo: 返回詞匯庫中的單詞出現的詳細時間訊息。
@@ -1472,7 +1472,7 @@ class DescribeImageTaskStatisticResponse(AbstractModel):
     def __init__(self):
         """
         :param Statistic: 任務統計訊息
-        :type Statistic: :class:`tencentcloud.tci.v20190318.models.ImageTaskStatistic`
+        :type Statistic: :class:`taifucloudcloud.tci.v20190318.models.ImageTaskStatistic`
         :param JobId: 圖像任務唯一标識符
         :type JobId: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -2374,31 +2374,31 @@ class ImageTaskResult(AbstractModel):
     def __init__(self):
         """
         :param ActionInfo: 大教室場景學生肢體動作識别訊息
-        :type ActionInfo: :class:`tencentcloud.tci.v20190318.models.ActionInfo`
+        :type ActionInfo: :class:`taifucloudcloud.tci.v20190318.models.ActionInfo`
         :param FaceAttr: 屬性識别結果
-        :type FaceAttr: :class:`tencentcloud.tci.v20190318.models.FaceAttrResult`
+        :type FaceAttr: :class:`taifucloudcloud.tci.v20190318.models.FaceAttrResult`
         :param FaceExpression: 表情識别結果
-        :type FaceExpression: :class:`tencentcloud.tci.v20190318.models.FaceExpressionResult`
+        :type FaceExpression: :class:`taifucloudcloud.tci.v20190318.models.FaceExpressionResult`
         :param FaceIdentify: 人臉檢索結果
-        :type FaceIdentify: :class:`tencentcloud.tci.v20190318.models.FaceIdentifyResult`
+        :type FaceIdentify: :class:`taifucloudcloud.tci.v20190318.models.FaceIdentifyResult`
         :param FaceInfo: 人臉檢測結果
-        :type FaceInfo: :class:`tencentcloud.tci.v20190318.models.FaceInfoResult`
+        :type FaceInfo: :class:`taifucloudcloud.tci.v20190318.models.FaceInfoResult`
         :param FacePose: 姿勢識别結果
-        :type FacePose: :class:`tencentcloud.tci.v20190318.models.FacePoseResult`
+        :type FacePose: :class:`taifucloudcloud.tci.v20190318.models.FacePoseResult`
         :param Gesture: 動作分類結果
-        :type Gesture: :class:`tencentcloud.tci.v20190318.models.GestureResult`
+        :type Gesture: :class:`taifucloudcloud.tci.v20190318.models.GestureResult`
         :param HandTracking: 手勢分類結果
-        :type HandTracking: :class:`tencentcloud.tci.v20190318.models.HandTrackingResult`
+        :type HandTracking: :class:`taifucloudcloud.tci.v20190318.models.HandTrackingResult`
         :param Light: 光照識别結果
-        :type Light: :class:`tencentcloud.tci.v20190318.models.LightResult`
+        :type Light: :class:`taifucloudcloud.tci.v20190318.models.LightResult`
         :param StudentBodyMovement: 學生肢體動作識别結果
-        :type StudentBodyMovement: :class:`tencentcloud.tci.v20190318.models.StudentBodyMovementResult`
+        :type StudentBodyMovement: :class:`taifucloudcloud.tci.v20190318.models.StudentBodyMovementResult`
         :param TeacherBodyMovement: 老師肢體動作識别結果
-        :type TeacherBodyMovement: :class:`tencentcloud.tci.v20190318.models.BodyMovementResult`
+        :type TeacherBodyMovement: :class:`taifucloudcloud.tci.v20190318.models.BodyMovementResult`
         :param TeacherOutScreen: 教師是否在螢幕内判斷結果
-        :type TeacherOutScreen: :class:`tencentcloud.tci.v20190318.models.TeacherOutScreenResult`
+        :type TeacherOutScreen: :class:`taifucloudcloud.tci.v20190318.models.TeacherOutScreenResult`
         :param TimeInfo: 時間統計結果
-        :type TimeInfo: :class:`tencentcloud.tci.v20190318.models.TimeInfoResult`
+        :type TimeInfo: :class:`taifucloudcloud.tci.v20190318.models.TimeInfoResult`
         """
         self.ActionInfo = None
         self.FaceAttr = None
@@ -2471,15 +2471,15 @@ class ImageTaskStatistic(AbstractModel):
         :param FaceIdentify: 人臉檢索統計訊息
         :type FaceIdentify: list of FaceIdentifyStatistic
         :param Gesture: 姿勢識别統計訊息
-        :type Gesture: :class:`tencentcloud.tci.v20190318.models.ActionStatistic`
+        :type Gesture: :class:`taifucloudcloud.tci.v20190318.models.ActionStatistic`
         :param Handtracking: 手勢識别統計訊息
-        :type Handtracking: :class:`tencentcloud.tci.v20190318.models.ActionStatistic`
+        :type Handtracking: :class:`taifucloudcloud.tci.v20190318.models.ActionStatistic`
         :param Light: 光照統計訊息
-        :type Light: :class:`tencentcloud.tci.v20190318.models.LightStatistic`
+        :type Light: :class:`taifucloudcloud.tci.v20190318.models.LightStatistic`
         :param StudentMovement: 學生動作統計訊息
-        :type StudentMovement: :class:`tencentcloud.tci.v20190318.models.ActionStatistic`
+        :type StudentMovement: :class:`taifucloudcloud.tci.v20190318.models.ActionStatistic`
         :param TeacherMovement: 教師動作統計訊息
-        :type TeacherMovement: :class:`tencentcloud.tci.v20190318.models.ActionStatistic`
+        :type TeacherMovement: :class:`taifucloudcloud.tci.v20190318.models.ActionStatistic`
         """
         self.FaceDetect = None
         self.FaceExpression = None
@@ -2916,7 +2916,7 @@ class StandardAudioResult(AbstractModel):
     def __init__(self):
         """
         :param AsrStat: 返回的當前音訊的統計訊息。當進度爲100時返回。
-        :type AsrStat: :class:`tencentcloud.tci.v20190318.models.ASRStat`
+        :type AsrStat: :class:`taifucloudcloud.tci.v20190318.models.ASRStat`
         :param Texts: 返回當前音訊流的詳細訊息，如果是流模式，返回的是對應流的詳細訊息，如果是 URL模式，返回的是查詢的那一段seq對應的音訊的詳細訊息。
         :type Texts: list of WholeTextItem
         :param VocabAnalysisDetailInfo: 返回詞匯庫中的單詞出現的詳細時間訊息。
@@ -2976,7 +2976,7 @@ class StandardImageResult(AbstractModel):
         :param ResultSet: 詳細結果
         :type ResultSet: list of ImageTaskResult
         :param Statistic: 分析完成後的統計結果
-        :type Statistic: :class:`tencentcloud.tci.v20190318.models.ImageTaskStatistic`
+        :type Statistic: :class:`taifucloudcloud.tci.v20190318.models.ImageTaskStatistic`
         :param Message: 狀态描述
         :type Message: str
         :param Status: 任務狀态
@@ -3126,7 +3126,7 @@ class SubmitAudioTaskRequest(AbstractModel):
         :param VoiceFileType: 語音文件類型 1:raw, 2:wav, 3:mp3，10:視訊（三種音訊格式目前僅支援16k采樣率16bit）
         :type VoiceFileType: int
         :param Functions: 功能開關清單，表示是否需要打開相應的功能，返回相應的訊息
-        :type Functions: :class:`tencentcloud.tci.v20190318.models.Function`
+        :type Functions: :class:`taifucloudcloud.tci.v20190318.models.Function`
         :param FileType: 視訊文件類型，預設點播，直播填 live_url
         :type FileType: str
         :param MuteThreshold: 靜音阈值設置，如果靜音檢測開關開啓，則靜音時間超過這個阈值認爲是靜音片段，在結果中會返回, 沒給的話預設值爲3s
@@ -3348,7 +3348,7 @@ class SubmitConversationTaskRequest(AbstractModel):
         :param VoiceFileType: 語音文件類型 1:raw, 2:wav, 3:mp3（三種格式目前僅支援16k采樣率16bit）
         :type VoiceFileType: int
         :param Functions: 功能開關清單，表示是否需要打開相應的功能，返回相應的訊息
-        :type Functions: :class:`tencentcloud.tci.v20190318.models.Function`
+        :type Functions: :class:`taifucloudcloud.tci.v20190318.models.Function`
         :param VocabLibNameList: 識别詞庫名清單，評估過程使用這些詞匯庫中的詞匯進行詞匯使用行爲分析
         :type VocabLibNameList: list of str
         """
@@ -3406,7 +3406,7 @@ class SubmitDoubleVideoHighlightsRequest(AbstractModel):
         :param LibIds: 需要檢索的人臉合集庫，不在庫中的人臉将不參與精彩集錦；目前僅支援輸入一個人臉庫。
         :type LibIds: list of str
         :param Functions: 詳細功能開關配置項
-        :type Functions: :class:`tencentcloud.tci.v20190318.models.DoubleVideoFunction`
+        :type Functions: :class:`taifucloudcloud.tci.v20190318.models.DoubleVideoFunction`
         :param PersonInfoList: 需要比對的人員訊息清單。
         :type PersonInfoList: list of PersonInfo
         :param FrameInterval: 視訊處理的抽幀間隔，單位毫秒。建議留空。
@@ -3554,7 +3554,7 @@ class SubmitHighlightsRequest(AbstractModel):
     def __init__(self):
         """
         :param Functions: 表情配置開關項。
-        :type Functions: :class:`tencentcloud.tci.v20190318.models.HLFunction`
+        :type Functions: :class:`taifucloudcloud.tci.v20190318.models.HLFunction`
         :param FileContent: 視訊url。
         :type FileContent: str
         :param FileType: 視訊類型及來源，目前只支援點播類型："vod_url"。
@@ -3630,7 +3630,7 @@ class SubmitImageTaskPlusRequest(AbstractModel):
         :param FileType: 輸入分析對象類型，picture：二進制圖片的 base64 編碼字串，picture_url:圖片網址，vod_url：視訊網址，live_url：直播網址
         :type FileType: str
         :param Functions: 任務控制選項
-        :type Functions: :class:`tencentcloud.tci.v20190318.models.ImageTaskFunction`
+        :type Functions: :class:`taifucloudcloud.tci.v20190318.models.ImageTaskFunction`
         :param LightStandardSet: 光照标準清單
         :type LightStandardSet: list of LightStandard
         :param FrameInterval: 抽幀的時間間隔，單位毫秒，預設值1000，保留欄位，當前不支援填寫。
@@ -3720,7 +3720,7 @@ class SubmitImageTaskRequest(AbstractModel):
         :param FileType: 輸入分析對象類型，picture：二進制圖片的 base64 編碼字串，picture_url:圖片網址，vod_url：視訊網址，live_url：直播網址
         :type FileType: str
         :param Functions: 任務控制選項
-        :type Functions: :class:`tencentcloud.tci.v20190318.models.ImageTaskFunction`
+        :type Functions: :class:`taifucloudcloud.tci.v20190318.models.ImageTaskFunction`
         :param LightStandardSet: 光照标準清單
         :type LightStandardSet: list of LightStandard
         :param EventsCallBack: 結果更新回調網址。
@@ -4230,7 +4230,7 @@ class TransmitAudioStreamRequest(AbstractModel):
     def __init__(self):
         """
         :param Functions: 功能開關清單，表示是否需要打開相應的功能，返回相應的訊息
-        :type Functions: :class:`tencentcloud.tci.v20190318.models.Function`
+        :type Functions: :class:`taifucloudcloud.tci.v20190318.models.Function`
         :param SeqId: 流式數據包的序号，從1開始，當IsEnd欄位爲1後後續序号無意義。
         :type SeqId: int
         :param SessionId: 語音段唯一标識，一個完整語音一個SessionId。
@@ -4285,7 +4285,7 @@ class TransmitAudioStreamResponse(AbstractModel):
     def __init__(self):
         """
         :param AsrStat: 返回的當前音訊的統計訊息。當進度爲100時返回。
-        :type AsrStat: :class:`tencentcloud.tci.v20190318.models.ASRStat`
+        :type AsrStat: :class:`taifucloudcloud.tci.v20190318.models.ASRStat`
         :param Texts: 返回當前音訊流的詳細訊息，如果是流模式，返回的是對應流的詳細訊息，如果是 URL模式，返回的是查詢的那一段seq對應的音訊的詳細訊息。
         :type Texts: list of WholeTextItem
         :param VocabAnalysisDetailInfo: 返回詞匯庫中的單詞出現的詳細時間訊息。
@@ -4395,7 +4395,7 @@ class WholeTextItem(AbstractModel):
     def __init__(self):
         """
         :param TextItem: 當前句子的訊息
-        :type TextItem: :class:`tencentcloud.tci.v20190318.models.TextItem`
+        :type TextItem: :class:`taifucloudcloud.tci.v20190318.models.TextItem`
         :param AvgVolume: Vad的平均音量
         :type AvgVolume: float
         :param MaxVolume: Vad的最大音量

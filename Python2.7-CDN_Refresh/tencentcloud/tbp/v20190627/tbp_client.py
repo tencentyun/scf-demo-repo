@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tbp.v20190627 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tbp.v20190627 import models
 
 
 class TbpClient(AbstractClient):
     _apiVersion = '2019-06-27'
-    _endpoint = 'tbp.tencentcloudapi.com'
+    _endpoint = 'tbp.taifucloudcloudapi.com'
 
 
     def TextProcess(self, request):
         """接收調用側的文本輸入，返回應答文本。
 
         :param request: Request instance for TextProcess.
-        :type request: :class:`tencentcloud.tbp.v20190627.models.TextProcessRequest`
-        :rtype: :class:`tencentcloud.tbp.v20190627.models.TextProcessResponse`
+        :type request: :class:`taifucloudcloud.tbp.v20190627.models.TextProcessRequest`
+        :rtype: :class:`taifucloudcloud.tbp.v20190627.models.TextProcessResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TbpClient(AbstractClient):
         """會話重置介面。
 
         :param request: Request instance for TextReset.
-        :type request: :class:`tencentcloud.tbp.v20190627.models.TextResetRequest`
-        :rtype: :class:`tencentcloud.tbp.v20190627.models.TextResetResponse`
+        :type request: :class:`taifucloudcloud.tbp.v20190627.models.TextResetRequest`
+        :rtype: :class:`taifucloudcloud.tbp.v20190627.models.TextResetResponse`
 
         """
         try:

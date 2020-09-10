@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.trtc.v20190722 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.trtc.v20190722 import models
 
 
 class TrtcClient(AbstractClient):
     _apiVersion = '2019-07-22'
-    _endpoint = 'trtc.tencentcloudapi.com'
+    _endpoint = 'trtc.taifucloudcloudapi.com'
 
 
     def DescribeCallDetail(self, request):
         """查詢指定時間内的用戶清單及用戶通話質量數據。
 
         :param request: Request instance for DescribeCallDetail.
-        :type request: :class:`tencentcloud.trtc.v20190722.models.DescribeCallDetailRequest`
-        :rtype: :class:`tencentcloud.trtc.v20190722.models.DescribeCallDetailResponse`
+        :type request: :class:`taifucloudcloud.trtc.v20190722.models.DescribeCallDetailRequest`
+        :rtype: :class:`taifucloudcloud.trtc.v20190722.models.DescribeCallDetailResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TrtcClient(AbstractClient):
         """查詢sdkappid維度下實時網絡狀态，包括上行丢包與下行丢包。可查詢24小時内數據，查詢起止時間不超過1個小時。
 
         :param request: Request instance for DescribeRealtimeNetwork.
-        :type request: :class:`tencentcloud.trtc.v20190722.models.DescribeRealtimeNetworkRequest`
-        :rtype: :class:`tencentcloud.trtc.v20190722.models.DescribeRealtimeNetworkResponse`
+        :type request: :class:`taifucloudcloud.trtc.v20190722.models.DescribeRealtimeNetworkRequest`
+        :rtype: :class:`taifucloudcloud.trtc.v20190722.models.DescribeRealtimeNetworkResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TrtcClient(AbstractClient):
         """查詢sdkappid維度下實時質量數據，包括：進房成功率，首幀秒開率，音訊卡頓率，視訊卡頓率。可查詢24小時内數據，查詢起止時間不超過1個小時。
 
         :param request: Request instance for DescribeRealtimeQuality.
-        :type request: :class:`tencentcloud.trtc.v20190722.models.DescribeRealtimeQualityRequest`
-        :rtype: :class:`tencentcloud.trtc.v20190722.models.DescribeRealtimeQualityResponse`
+        :type request: :class:`taifucloudcloud.trtc.v20190722.models.DescribeRealtimeQualityRequest`
+        :rtype: :class:`taifucloudcloud.trtc.v20190722.models.DescribeRealtimeQualityResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TrtcClient(AbstractClient):
         """查詢sdkappid維度下實時規模，可查詢24小時内數據，查詢起止時間不超過1個小時。
 
         :param request: Request instance for DescribeRealtimeScale.
-        :type request: :class:`tencentcloud.trtc.v20190722.models.DescribeRealtimeScaleRequest`
-        :rtype: :class:`tencentcloud.trtc.v20190722.models.DescribeRealtimeScaleResponse`
+        :type request: :class:`taifucloudcloud.trtc.v20190722.models.DescribeRealtimeScaleRequest`
+        :rtype: :class:`taifucloudcloud.trtc.v20190722.models.DescribeRealtimeScaleResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class TrtcClient(AbstractClient):
         """查詢sdkappid下的房間清單。預設返回10條通話，一次最多返回100條通話。可查詢最近5天的數據。
 
         :param request: Request instance for DescribeRoomInformation.
-        :type request: :class:`tencentcloud.trtc.v20190722.models.DescribeRoomInformationRequest`
-        :rtype: :class:`tencentcloud.trtc.v20190722.models.DescribeRoomInformationResponse`
+        :type request: :class:`taifucloudcloud.trtc.v20190722.models.DescribeRoomInformationRequest`
+        :rtype: :class:`taifucloudcloud.trtc.v20190722.models.DescribeRoomInformationResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class TrtcClient(AbstractClient):
         """介面說明：把房間所有用戶從房間移出，解散房間。支援所有平台，Android、iOS、Windows 和 macOS 需升級到 TRTC SDK 6.6及以上版本。
 
         :param request: Request instance for DismissRoom.
-        :type request: :class:`tencentcloud.trtc.v20190722.models.DismissRoomRequest`
-        :rtype: :class:`tencentcloud.trtc.v20190722.models.DismissRoomResponse`
+        :type request: :class:`taifucloudcloud.trtc.v20190722.models.DismissRoomRequest`
+        :rtype: :class:`taifucloudcloud.trtc.v20190722.models.DismissRoomResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class TrtcClient(AbstractClient):
         """介面說明：将用戶從房間移出，适用于主播/房主/管理員踢人等場景。支援所有平台，Android、iOS、Windows 和 macOS 需升級到 TRTC SDK 6.6及以上版本。
 
         :param request: Request instance for RemoveUser.
-        :type request: :class:`tencentcloud.trtc.v20190722.models.RemoveUserRequest`
-        :rtype: :class:`tencentcloud.trtc.v20190722.models.RemoveUserResponse`
+        :type request: :class:`taifucloudcloud.trtc.v20190722.models.RemoveUserRequest`
+        :rtype: :class:`taifucloudcloud.trtc.v20190722.models.RemoveUserResponse`
 
         """
         try:

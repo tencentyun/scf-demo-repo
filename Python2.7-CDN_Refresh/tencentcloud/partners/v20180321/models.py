@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AgentAuditedClient(AbstractModel):
@@ -23,7 +23,7 @@ class AgentAuditedClient(AbstractModel):
 
     def __init__(self):
         """
-        :param Uin: 代理商賬号ID
+        :param Uin:  賬号ID
         :type Uin: str
         :param ClientUin: 代客賬号ID
         :type ClientUin: str
@@ -103,7 +103,7 @@ class AgentBillElem(AbstractModel):
 
     def __init__(self):
         """
-        :param Uin: 代理商賬号ID
+        :param Uin:  賬号ID
         :type Uin: str
         :param OrderId: 訂單号，僅對預付費帳單有意義
         :type OrderId: str
@@ -171,7 +171,7 @@ class AgentClientElem(AbstractModel):
 
     def __init__(self):
         """
-        :param Uin: 代理商賬号ID
+        :param Uin:  賬号ID
         :type Uin: str
         :param ClientUin: 代客賬号ID
         :type ClientUin: str
@@ -185,7 +185,7 @@ class AgentClientElem(AbstractModel):
         :type Phone: str
         :param HasOverdueBill: 0表示不欠費，1表示欠費
         :type HasOverdueBill: int
-        :param Status: 1:待代理商審核;2:待Top Cloud 審核
+        :param Status: 1:待 審核;2:待Top Cloud 審核
         :type Status: int
         :param SalesUin: 業務員ID
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -220,7 +220,7 @@ class AgentClientElem(AbstractModel):
 
 
 class AgentDealElem(AbstractModel):
-    """描述代理商代付的訂單訊息
+    """描述 代付的訂單訊息
 
     """
 
@@ -242,7 +242,7 @@ class AgentDealElem(AbstractModel):
         :type GoodsNum: str
         :param GoodsPrice: 價格詳情
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type GoodsPrice: :class:`tencentcloud.partners.v20180321.models.DealGoodsPriceElem`
+        :type GoodsPrice: :class:`taifucloudcloud.partners.v20180321.models.DealGoodsPriceElem`
         :param Creater: 下單人
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Creater: str
@@ -273,7 +273,7 @@ class AgentDealElem(AbstractModel):
         :param ActionType: 訂單操作類型，purchase（新購），renew（續約），modify（配置變更）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ActionType: str
-        :param VoucherDecline: 代金券抵扣金額，單位分
+        :param VoucherDecline:  抵扣金額，單位分
 注意：此欄位可能返回 null，表示取不到有效值。
         :type VoucherDecline: str
         :param BigDealId: 大訂單号
@@ -393,13 +393,13 @@ class AgentPayDealsResponse(AbstractModel):
 
 
 class AgentSalesmanElem(AbstractModel):
-    """代理商業務員訊息
+    """ 業務員訊息
 
     """
 
     def __init__(self):
         """
-        :param Uin: 代理商賬号ID
+        :param Uin:  賬号ID
         :type Uin: str
         :param SalesUin: 業務員ID
         :type SalesUin: str
@@ -491,7 +491,7 @@ class AuditApplyClientResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Uin: 代理商賬号ID
+        :param Uin:  賬号ID
         :type Uin: str
         :param ClientUin: 客戶賬号ID
         :type ClientUin: str
@@ -579,7 +579,7 @@ class DescribeAgentAuditedClientsRequest(AbstractModel):
         :type ClientUin: str
         :param ClientName: 客戶名稱。由于涉及隐私，名稱打碼顯示，故名稱僅支援打碼後的模糊搜索
         :type ClientName: str
-        :param ClientFlag: 客戶類型，a/b，類型定義參考代理商相關政策文件
+        :param ClientFlag: 客戶類型，a/b，類型定義參考 相關政策文件
         :type ClientFlag: str
         :param OrderDirection: ASC/DESC， 不區分大小寫，按審核通過時間排序
         :type OrderDirection: str
@@ -745,7 +745,7 @@ class DescribeAgentClientsRequest(AbstractModel):
         :type ClientUin: str
         :param ClientName: 客戶名稱。由于涉及隐私，名稱打碼顯示，故名稱僅支援打碼後的模糊搜索
         :type ClientName: str
-        :param ClientFlag: 客戶類型，a/b，類型定義參考代理商相關政策文件
+        :param ClientFlag: 客戶類型，a/b，類型定義參考 相關政策文件
         :type ClientFlag: str
         :param OrderDirection: ASC/DESC， 不區分大小寫，按申請時間排序
         :type OrderDirection: str
@@ -1164,7 +1164,7 @@ class RebateInfoElem(AbstractModel):
 
     def __init__(self):
         """
-        :param Uin: 代理商賬号ID
+        :param Uin:  賬号ID
         :type Uin: str
         :param RebateMonth: 返傭月份，如2018-02
         :type RebateMonth: str

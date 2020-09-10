@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Account(AbstractModel):
@@ -428,7 +428,7 @@ class CloseWanServiceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
+        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -699,21 +699,21 @@ class CreateDBInstanceHourRequest(AbstractModel):
         """
         :param GoodsNum: 實例數量，預設值爲 1，最小值 1，最大值爲 100。
         :type GoodsNum: int
-        :param Memory: 實例内存大小，單位：MB，請使用 [獲取雲資料庫可售賣規格](https://cloud.tencent.com/document/api/236/17229) 介面獲取可創建的内存規格。
+        :param Memory: 實例内存大小，單位：MB，請使用 [獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/api/236/17229) 介面獲取可創建的内存規格。
         :type Memory: int
-        :param Volume: 實例硬碟大小，單位：GB，請使用 [獲取雲資料庫可售賣規格](https://cloud.tencent.com/document/api/236/17229) 介面獲取可創建的硬碟範圍。
+        :param Volume: 實例硬碟大小，單位：GB，請使用 [獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/api/236/17229) 介面獲取可創建的硬碟範圍。
         :type Volume: int
-        :param EngineVersion: MySQL 版本，值包括：5.5、5.6 和 5.7，請使用 [獲取雲資料庫可售賣規格](https://cloud.tencent.com/document/api/236/17229) 介面獲取可創建的實例版本。
+        :param EngineVersion: MySQL 版本，值包括：5.5、5.6 和 5.7，請使用 [獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/api/236/17229) 介面獲取可創建的實例版本。
         :type EngineVersion: str
         :param UniqVpcId: 私有網絡 ID，如果不傳則預設選擇基礎網絡，請使用 [查詢私有網絡清單](/document/api/215/15778) 。
         :type UniqVpcId: str
         :param UniqSubnetId: 私有網絡下的子網 ID，如果設置了 UniqVpcId，則 UniqSubnetId 必填，請使用[查詢子網清單](/document/api/215/15784)。
         :type UniqSubnetId: str
-        :param ProjectId: 項目 ID，不填爲預設項目。請使用 [查詢項目清單](https://cloud.tencent.com/document/product/378/4400) 介面獲取項目 ID。
+        :param ProjectId: 項目 ID，不填爲預設項目。請使用 [查詢項目清單](https://cloud.taifucloud.com/document/product/378/4400) 介面獲取項目 ID。
         :type ProjectId: int
-        :param Zone: 可用區訊息，該參數缺省時，系統會自動選擇一個可用區，請使用 [獲取雲資料庫可售賣規格](https://cloud.tencent.com/document/api/236/17229) 介面獲取可創建的可用區。
+        :param Zone: 可用區訊息，該參數缺省時，系統會自動選擇一個可用區，請使用 [獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/api/236/17229) 介面獲取可創建的可用區。
         :type Zone: str
-        :param MasterInstanceId: 實例 ID，購買只讀實例或者災備實例時必填，該欄位表示只讀實例或者災備實例的主實例 ID，請使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面查詢雲資料庫實例 ID。
+        :param MasterInstanceId: 實例 ID，購買只讀實例或者災備實例時必填，該欄位表示只讀實例或者災備實例的主實例 ID，請使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面查詢雲資料庫實例 ID。
         :type MasterInstanceId: str
         :param InstanceRole: 實例類型，預設爲 master，支援值包括：master - 表示主實例，dr - 表示災備實例，ro - 表示只讀實例。
         :type InstanceRole: str
@@ -723,7 +723,7 @@ class CreateDBInstanceHourRequest(AbstractModel):
         :type Port: int
         :param Password: 設置 root 帳号密碼，密碼規則：8 - 64 個字元，至少包含字母、數字、字元（支援的字元：_+-&=!@#$%^*()）中的兩種，購買主實例時可指定該參數，購買只讀實例或者災備實例時指定該參數無意義。
         :type Password: str
-        :param ParamList: 參數清單，參數格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通過 [查詢預設的可設置參數清單](https://cloud.tencent.com/document/api/236/32662) 查詢支援設置的參數。
+        :param ParamList: 參數清單，參數格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通過 [查詢預設的可設置參數清單](https://cloud.taifucloud.com/document/api/236/32662) 查詢支援設置的參數。
         :type ParamList: list of ParamInfo
         :param ProtectMode: 數據複制方式，預設爲 0，支援值包括：0 - 表示異步複制，1 - 表示半同步複制，2 - 表示強同步複制，購買主實例時可指定該參數，購買只讀實例或者災備實例時指定該參數無意義。
         :type ProtectMode: int
@@ -733,10 +733,10 @@ class CreateDBInstanceHourRequest(AbstractModel):
         :type SlaveZone: str
         :param BackupZone: 備庫 2 的可用區訊息，預設爲空，購買強同步主實例時可指定該參數，購買其他類型實例時指定該參數無意義。
         :type BackupZone: str
-        :param SecurityGroup: 安全組參數，可使用 [查詢項目安全組訊息](https://cloud.tencent.com/document/api/236/15850) 介面查詢某個項目的安全組詳情。
+        :param SecurityGroup: 安全組參數，可使用 [查詢項目安全組訊息](https://cloud.taifucloud.com/document/api/236/15850) 介面查詢某個項目的安全組詳情。
         :type SecurityGroup: list of str
         :param RoGroup: 只讀實例訊息。購買只讀實例時，該參數必傳。
-        :type RoGroup: :class:`tencentcloud.cdb.v20170320.models.RoGroup`
+        :type RoGroup: :class:`taifucloudcloud.cdb.v20170320.models.RoGroup`
         :param AutoRenewFlag: 購買按量計費實例該欄位無意義。
         :type AutoRenewFlag: int
         :param InstanceName: 實例名稱。
@@ -851,29 +851,29 @@ class CreateDBInstanceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Memory: 實例内存大小，單位：MB，請使用 [獲取雲資料庫可售賣規格](https://cloud.tencent.com/document/api/236/17229) 介面獲取可創建的内存規格。
+        :param Memory: 實例内存大小，單位：MB，請使用 [獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/api/236/17229) 介面獲取可創建的内存規格。
         :type Memory: int
-        :param Volume: 實例硬碟大小，單位：GB，請使用 [獲取雲資料庫可售賣規格](https://cloud.tencent.com/document/api/236/17229) 介面獲取可創建的硬碟範圍。
+        :param Volume: 實例硬碟大小，單位：GB，請使用 [獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/api/236/17229) 介面獲取可創建的硬碟範圍。
         :type Volume: int
         :param Period: 實例時長，單位：月，可選值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
         :type Period: int
         :param GoodsNum: 實例數量，預設值爲1, 最小值1，最大值爲100。
         :type GoodsNum: int
-        :param Zone: 可用區訊息，該參數缺省時，系統會自動選擇一個可用區，請使用 [獲取雲資料庫可售賣規格](https://cloud.tencent.com/document/api/236/17229) 介面獲取可創建的可用區。
+        :param Zone: 可用區訊息，該參數缺省時，系統會自動選擇一個可用區，請使用 [獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/api/236/17229) 介面獲取可創建的可用區。
         :type Zone: str
         :param UniqVpcId: 私有網絡 ID，如果不傳則預設選擇基礎網絡，請使用 [查詢私有網絡清單](/document/api/215/15778) 。
         :type UniqVpcId: str
         :param UniqSubnetId: 私有網絡下的子網 ID，如果設置了 UniqVpcId，則 UniqSubnetId 必填，請使用 [查詢子網清單](/document/api/215/15784)。
         :type UniqSubnetId: str
-        :param ProjectId: 項目 ID，不填爲預設項目。請使用 [查詢項目清單](https://cloud.tencent.com/document/product/378/4400) 介面獲取項目 ID。購買只讀實例和災備實例時，項目 ID 預設和主實例保持一緻。
+        :param ProjectId: 項目 ID，不填爲預設項目。請使用 [查詢項目清單](https://cloud.taifucloud.com/document/product/378/4400) 介面獲取項目 ID。購買只讀實例和災備實例時，項目 ID 預設和主實例保持一緻。
         :type ProjectId: int
         :param Port: 自定義端口，端口支援範圍：[ 1024-65535 ]。
         :type Port: int
         :param InstanceRole: 實例類型，預設爲 master，支援值包括：master - 表示主實例，dr - 表示災備實例，ro - 表示只讀實例。
         :type InstanceRole: str
-        :param MasterInstanceId: 實例 ID，購買只讀實例時必填，該欄位表示只讀實例的主實例ID，請使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面查詢雲資料庫實例 ID。
+        :param MasterInstanceId: 實例 ID，購買只讀實例時必填，該欄位表示只讀實例的主實例ID，請使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面查詢雲資料庫實例 ID。
         :type MasterInstanceId: str
-        :param EngineVersion: MySQL 版本，值包括：5.5、5.6 和 5.7，請使用 [獲取雲資料庫可售賣規格](https://cloud.tencent.com/document/api/236/17229) 介面獲取可創建的實例版本。
+        :param EngineVersion: MySQL 版本，值包括：5.5、5.6 和 5.7，請使用 [獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/api/236/17229) 介面獲取可創建的實例版本。
         :type EngineVersion: str
         :param Password: 設置 root 帳号密碼，密碼規則：8 - 64 個字元，至少包含字母、數字、字元（支援的字元：_+-&=!@#$%^*()）中的兩種，購買主實例時可指定該參數，購買只讀實例或者災備實例時指定該參數無意義。
         :type Password: str
@@ -883,7 +883,7 @@ class CreateDBInstanceRequest(AbstractModel):
         :type DeployMode: int
         :param SlaveZone: 備庫 1 的可用區訊息，預設爲 Zone 的值。
         :type SlaveZone: str
-        :param ParamList: 參數清單，參數格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通過 [查詢預設的可設置參數清單](https://cloud.tencent.com/document/api/236/32662) 查詢支援設置的參數。
+        :param ParamList: 參數清單，參數格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通過 [查詢預設的可設置參數清單](https://cloud.taifucloud.com/document/api/236/32662) 查詢支援設置的參數。
         :type ParamList: list of ParamInfo
         :param BackupZone: 備庫 2 的可用區訊息，預設爲空，購買強同步主實例時可指定該參數，購買其他類型實例時指定該參數無意義。
         :type BackupZone: str
@@ -891,10 +891,10 @@ class CreateDBInstanceRequest(AbstractModel):
         :type AutoRenewFlag: int
         :param MasterRegion: 主實例地域訊息，購買災備實例時，該欄位必填。
         :type MasterRegion: str
-        :param SecurityGroup: 安全組參數，可使用 [查詢項目安全組訊息](https://cloud.tencent.com/document/api/236/15850) 介面查詢某個項目的安全組詳情。
+        :param SecurityGroup: 安全組參數，可使用 [查詢項目安全組訊息](https://cloud.taifucloud.com/document/api/236/15850) 介面查詢某個項目的安全組詳情。
         :type SecurityGroup: list of str
         :param RoGroup: 只讀實例參數。購買只讀實例時，該參數必傳。
-        :type RoGroup: :class:`tencentcloud.cdb.v20170320.models.RoGroup`
+        :type RoGroup: :class:`taifucloudcloud.cdb.v20170320.models.RoGroup`
         :param InstanceName: 實例名稱。
         :type InstanceName: str
         :param ResourceTags: 實例标簽訊息。
@@ -1230,7 +1230,7 @@ class DeleteBackupRequest(AbstractModel):
         """
         :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv。與雲資料庫控制台頁面中顯示的實例 ID 相同。
         :type InstanceId: str
-        :param BackupId: 備份任務 ID。該任務 ID 爲 [創建雲資料庫備份](https://cloud.tencent.com/document/api/236/15844) 介面返回的任務 ID。
+        :param BackupId: 備份任務 ID。該任務 ID 爲 [創建雲資料庫備份](https://cloud.taifucloud.com/document/api/236/15844) 介面返回的任務 ID。
         :type BackupId: int
         """
         self.InstanceId = None
@@ -1620,7 +1620,7 @@ class DescribeBackupConfigResponse(AbstractModel):
         :param BinlogExpireDays: Binlog 文件保留時間，單位爲天。
         :type BinlogExpireDays: int
         :param BackupTimeWindow: 實例自動備份的時間窗。
-        :type BackupTimeWindow: :class:`tencentcloud.cdb.v20170320.models.CommonTimeWindow`
+        :type BackupTimeWindow: :class:`taifucloudcloud.cdb.v20170320.models.CommonTimeWindow`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2110,7 +2110,7 @@ class DescribeDBInstanceCharsetRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
+        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -2172,9 +2172,9 @@ class DescribeDBInstanceConfigResponse(AbstractModel):
         :param Zone: 實例可用區訊息，格式如 "ap-shanghai-1"。
         :type Zone: str
         :param SlaveConfig: 備庫的配置訊息。
-        :type SlaveConfig: :class:`tencentcloud.cdb.v20170320.models.SlaveConfig`
+        :type SlaveConfig: :class:`taifucloudcloud.cdb.v20170320.models.SlaveConfig`
         :param BackupConfig: 強同步實例第二備庫的配置訊息。
-        :type BackupConfig: :class:`tencentcloud.cdb.v20170320.models.BackupConfig`
+        :type BackupConfig: :class:`taifucloudcloud.cdb.v20170320.models.BackupConfig`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2206,7 +2206,7 @@ class DescribeDBInstanceGTIDRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
+        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -2291,7 +2291,7 @@ class DescribeDBInstancesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ProjectId: 項目 ID，可使用 [查詢項目清單](https://cloud.tencent.com/document/product/378/4400) 介面查詢項目 ID。
+        :param ProjectId: 項目 ID，可使用 [查詢項目清單](https://cloud.taifucloud.com/document/product/378/4400) 介面查詢項目 ID。
         :type ProjectId: int
         :param InstanceTypes: 實例類型，可取值：1 - 主實例，2 - 災備實例，3 - 只讀實例。
         :type InstanceTypes: list of int non-negative
@@ -2438,7 +2438,7 @@ class DescribeDBPriceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Zone: 可用區訊息，格式如 "ap-guangzhou-2"。具體能設置的值請通過 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 介面查詢。
+        :param Zone: 可用區訊息，格式如 "ap-guangzhou-2"。具體能設置的值請通過 <a href="https://cloud.taifucloud.com/document/api/236/17229">DescribeDBZoneConfig</a> 介面查詢。
         :type Zone: str
         :param GoodsNum: 實例數量，預設值爲 1，最小值 1，最大值爲 100。
         :type GoodsNum: int
@@ -2883,13 +2883,13 @@ class DescribeDeviceMonitorInfoResponse(AbstractModel):
     def __init__(self):
         """
         :param Cpu: 實例CPU監控數據
-        :type Cpu: :class:`tencentcloud.cdb.v20170320.models.DeviceCpuInfo`
+        :type Cpu: :class:`taifucloudcloud.cdb.v20170320.models.DeviceCpuInfo`
         :param Mem: 實例内存監控數據
-        :type Mem: :class:`tencentcloud.cdb.v20170320.models.DeviceMemInfo`
+        :type Mem: :class:`taifucloudcloud.cdb.v20170320.models.DeviceMemInfo`
         :param Net: 實例網絡監控數據
-        :type Net: :class:`tencentcloud.cdb.v20170320.models.DeviceNetInfo`
+        :type Net: :class:`taifucloudcloud.cdb.v20170320.models.DeviceNetInfo`
         :param Disk: 實例磁盤監控數據
-        :type Disk: :class:`tencentcloud.cdb.v20170320.models.DeviceDiskInfo`
+        :type Disk: :class:`taifucloudcloud.cdb.v20170320.models.DeviceDiskInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -2991,7 +2991,7 @@ class DescribeInstanceParamRecordsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
+        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceId: str
         :param Offset: 分頁偏移量。
         :type Offset: int
@@ -3046,7 +3046,7 @@ class DescribeInstanceParamsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
+        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -3321,7 +3321,7 @@ class DescribeRollbackTaskDetailRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例 ID。與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單] (https://cloud.tencent.com/document/api/236/15872)。
+        :param InstanceId: 實例 ID。與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單] (https://cloud.taifucloud.com/document/api/236/15872)。
         :type InstanceId: str
         :param AsyncRequestId: 異步任務 ID。
         :type AsyncRequestId: str
@@ -3687,7 +3687,7 @@ class DescribeTasksRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
+        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceId: str
         :param AsyncRequestId: 異步任務請求 ID，執行雲資料庫相關操作返回的 AsyncRequestId。
         :type AsyncRequestId: str
@@ -4234,7 +4234,7 @@ class InitDBInstancesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 實例ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例ID相同，可使用[查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
+        :param InstanceIds: 實例ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例ID相同，可使用[查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceIds: list of str
         :param NewPassword: 實例新的密碼，密碼規則：8-64個字元，至少包含字母、數字、字元（支援的字元：!@#$%^*()）中的兩種。
         :type NewPassword: str
@@ -4289,13 +4289,13 @@ class InquiryPriceUpgradeInstancesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
+        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceId: str
-        :param Memory: 升級後的内存大小，單位：MB，爲保證傳入 Memory 值有效，請使用 [獲取雲資料庫可售賣規格](https://cloud.tencent.com/document/product/236/17229) 介面獲取可升級的内存規格。
+        :param Memory: 升級後的内存大小，單位：MB，爲保證傳入 Memory 值有效，請使用 [獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/product/236/17229) 介面獲取可升級的内存規格。
         :type Memory: int
-        :param Volume: 升級後的硬碟大小，單位：GB，爲保證傳入 Volume 值有效，請使用 [獲取雲資料庫可售賣規格](https://cloud.tencent.com/document/product/236/17229) 介面獲取可升級的硬碟範圍。
+        :param Volume: 升級後的硬碟大小，單位：GB，爲保證傳入 Volume 值有效，請使用 [獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/product/236/17229) 介面獲取可升級的硬碟範圍。
         :type Volume: int
-        :param Cpu: 升級後的核心數目，單位：核，爲保證傳入 CPU 值有效，請使用 [獲取雲資料庫可售賣規格](https://cloud.tencent.com/document/product/236/17229) 介面獲取可升級的核心數目，當未指定該值時，将按照 Memory 大小補全一個預設值。
+        :param Cpu: 升級後的核心數目，單位：核，爲保證傳入 CPU 值有效，請使用 [獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/product/236/17229) 介面獲取可升級的核心數目，當未指定該值時，将按照 Memory 大小補全一個預設值。
         :type Cpu: int
         :param ProtectMode: 數據複制方式，支援值包括：0 - 異步複制，1 - 半同步複制，2 - 強同步複制，升級主實例時可指定該參數，升級只讀實例或者災備實例時指定該參數無意義。
         :type ProtectMode: int
@@ -4355,7 +4355,7 @@ class InstanceInfo(AbstractModel):
         :type InitFlag: int
         :param RoVipInfo: 只讀vip訊息。單獨開通只讀實例訪問的只讀實例才有該欄位
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type RoVipInfo: :class:`tencentcloud.cdb.v20170320.models.RoVipInfo`
+        :type RoVipInfo: :class:`taifucloudcloud.cdb.v20170320.models.RoVipInfo`
         :param Memory: 内存容量，單位爲 MB
         :type Memory: int
         :param Status: 實例狀态，可能的返回值：0-創建中；1-運作中；4-隔離中；5-已隔離
@@ -4364,7 +4364,7 @@ class InstanceInfo(AbstractModel):
         :type VpcId: int
         :param SlaveInfo: 備機訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SlaveInfo: :class:`tencentcloud.cdb.v20170320.models.SlaveInfo`
+        :type SlaveInfo: :class:`taifucloudcloud.cdb.v20170320.models.SlaveInfo`
         :param InstanceId: 實例 ID
         :type InstanceId: str
         :param Volume: 硬碟容量，單位爲 GB
@@ -4392,7 +4392,7 @@ class InstanceInfo(AbstractModel):
         :type TaskStatus: int
         :param MasterInfo: 主實例詳細訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MasterInfo: :class:`tencentcloud.cdb.v20170320.models.MasterInfo`
+        :type MasterInfo: :class:`taifucloudcloud.cdb.v20170320.models.MasterInfo`
         :param DeviceType: 實例類型，可能的返回值：“HA”-高可用版；“FE”-金融版；“BASIC”-基礎版
         :type DeviceType: str
         :param EngineVersion: 内核版本
@@ -4603,7 +4603,7 @@ class IsolateDBInstanceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
+        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -4960,7 +4960,7 @@ class ModifyBackupConfigRequest(AbstractModel):
         :param BinlogExpireDays: binlog的保留時間，單位爲天。最小值爲7天，最大值爲732天。該值的設置不能大于備份文件的保留時間。
         :type BinlogExpireDays: int
         :param BackupTimeWindow: 備份時間窗，比如要設置每周二和周日 10:00-14:00之間備份，該參數如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以設置一周的某幾天備份，但是每天的備份時間需要設置爲相同的時間段。 如果設置了該欄位，将忽略StartTime欄位的設置）
-        :type BackupTimeWindow: :class:`tencentcloud.cdb.v20170320.models.CommonTimeWindow`
+        :type BackupTimeWindow: :class:`taifucloudcloud.cdb.v20170320.models.CommonTimeWindow`
         """
         self.InstanceId = None
         self.ExpireDays = None
@@ -5005,7 +5005,7 @@ class ModifyDBInstanceNameRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
+        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceId: str
         :param InstanceName: 實例名稱。
         :type InstanceName: str
@@ -5043,7 +5043,7 @@ class ModifyDBInstanceProjectRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 實例 ID 數組，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
+        :param InstanceIds: 實例 ID 數組，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceIds: list of str
         :param NewProjectId: 項目的 ID。
         :type NewProjectId: int
@@ -5119,7 +5119,7 @@ class ModifyDBInstanceVipVportRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
+        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceId: str
         :param DstIp: 目标 IP。該參數和 DstPort 參數，兩者必傳一個。
         :type DstIp: str
@@ -5373,7 +5373,7 @@ class ModifyRoGroupInfoRequest(AbstractModel):
         :param RoGroupId: RO 組的 ID。
         :type RoGroupId: str
         :param RoGroupInfo: RO 組的詳細訊息。
-        :type RoGroupInfo: :class:`tencentcloud.cdb.v20170320.models.RoGroupAttr`
+        :type RoGroupInfo: :class:`taifucloudcloud.cdb.v20170320.models.RoGroupAttr`
         :param RoWeightValues: RO 組内實例的權重。若修改 RO 組的權重模式爲用戶自定義模式（custom），則必須設置該參數，且需要設置每個 RO 實例的權重值。
         :type RoWeightValues: list of RoWeightValue
         :param IsBalanceRoLoad: 是否重新均衡 RO 組内的 RO 實例的負載。支援值包括：1 - 重新均衡負載；0 - 不重新均衡負載。預設值爲 0。注意，設置爲重新均衡負載是，RO 組内 RO 實例會有一次資料庫連接瞬斷，請确保應用程式能重連資料庫。
@@ -5537,7 +5537,7 @@ class OpenWanServiceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
+        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -5803,7 +5803,7 @@ class ReleaseIsolatedDBInstancesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 實例 ID 數組，單個實例 ID 格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
+        :param InstanceIds: 實例 ID 數組，單個實例 ID 格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceIds: list of str
         """
         self.InstanceIds = None
@@ -5871,7 +5871,7 @@ class RenewDBInstanceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 待續約的實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872)。
+        :param InstanceId: 待續約的實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872)。
         :type InstanceId: str
         :param TimeSpan: 續約時長，單位：月，可選值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
         :type TimeSpan: int
@@ -6585,10 +6585,10 @@ class SlaveInfo(AbstractModel):
     def __init__(self):
         """
         :param First: 第一備機訊息
-        :type First: :class:`tencentcloud.cdb.v20170320.models.SlaveInstanceInfo`
+        :type First: :class:`taifucloudcloud.cdb.v20170320.models.SlaveInstanceInfo`
         :param Second: 第二備機訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Second: :class:`tencentcloud.cdb.v20170320.models.SlaveInstanceInfo`
+        :type Second: :class:`taifucloudcloud.cdb.v20170320.models.SlaveInstanceInfo`
         """
         self.First = None
         self.Second = None
@@ -6747,7 +6747,7 @@ class SqlFileInfo(AbstractModel):
         :param UploadTime: 上傳時間
         :type UploadTime: str
         :param UploadInfo: 上傳進度
-        :type UploadInfo: :class:`tencentcloud.cdb.v20170320.models.UploadInfo`
+        :type UploadInfo: :class:`taifucloudcloud.cdb.v20170320.models.UploadInfo`
         :param FileName: 文件名
         :type FileName: str
         :param FileSize: 文件大小，單位爲Bytes
@@ -7078,11 +7078,11 @@ class UpgradeDBInstanceEngineVersionRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
+        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceId: str
         :param EngineVersion: 主實例資料庫引擎版本，支援值包括：5.6 和 5.7。
         :type EngineVersion: str
-        :param WaitSwitch: 切換訪問新實例的方式，預設爲 0。支援值包括：0 - 立刻切換，1 - 時間窗切換；當該值爲 1 時，升級中過程中，切換訪問新實例的流程将會在時間窗内進行，或者用戶主動調用介面 [切換訪問新實例](https://cloud.tencent.com/document/product/236/15864) 觸發該流程。
+        :param WaitSwitch: 切換訪問新實例的方式，預設爲 0。支援值包括：0 - 立刻切換，1 - 時間窗切換；當該值爲 1 時，升級中過程中，切換訪問新實例的流程将會在時間窗内進行，或者用戶主動調用介面 [切換訪問新實例](https://cloud.taifucloud.com/document/product/236/15864) 觸發該流程。
         :type WaitSwitch: int
         """
         self.InstanceId = None
@@ -7103,7 +7103,7 @@ class UpgradeDBInstanceEngineVersionResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param AsyncRequestId: 異步任務 ID，可使用 [查詢異步任務的執行結果](https://cloud.tencent.com/document/api/236/20410) 獲取其執行情況。
+        :param AsyncRequestId: 異步任務 ID，可使用 [查詢異步任務的執行結果](https://cloud.taifucloud.com/document/api/236/20410) 獲取其執行情況。
         :type AsyncRequestId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -7124,21 +7124,21 @@ class UpgradeDBInstanceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.tencent.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
+        :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceId: str
-        :param Memory: 升級後的内存大小，單位：MB，爲保證傳入 Memory 值有效，請使用 [獲取雲資料庫可售賣規格](https://cloud.tencent.com/document/product/236/17229) 介面獲取可升級的内存規格。
+        :param Memory: 升級後的内存大小，單位：MB，爲保證傳入 Memory 值有效，請使用 [獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/product/236/17229) 介面獲取可升級的内存規格。
         :type Memory: int
-        :param Volume: 升級後的硬碟大小，單位：GB，爲保證傳入 Volume 值有效，請使用 [獲取雲資料庫可售賣規格](https://cloud.tencent.com/document/product/236/17229) 介面獲取可升級的硬碟範圍。
+        :param Volume: 升級後的硬碟大小，單位：GB，爲保證傳入 Volume 值有效，請使用 [獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/product/236/17229) 介面獲取可升級的硬碟範圍。
         :type Volume: int
         :param ProtectMode: 數據複制方式，支援值包括：0 - 異步複制，1 - 半同步複制，2 - 強同步複制，升級主實例時可指定該參數，升級只讀實例或者災備實例時指定該參數無意義。
         :type ProtectMode: int
         :param DeployMode: 佈署模式，預設爲 0，支援值包括：0 - 單可用區佈署，1 - 多可用區佈署，升級主實例時可指定該參數，升級只讀實例或者災備實例時指定該參數無意義。
         :type DeployMode: int
-        :param SlaveZone: 備庫1的可用區訊息，預設和實例的 Zone 參數一緻，升級主實例爲多可用區佈署時可指定該參數，升級只讀實例或者災備實例時指定該參數無意義。可通過 [獲取雲資料庫可售賣規格](https://cloud.tencent.com/document/product/236/17229) 介面查詢支援的可用區。
+        :param SlaveZone: 備庫1的可用區訊息，預設和實例的 Zone 參數一緻，升級主實例爲多可用區佈署時可指定該參數，升級只讀實例或者災備實例時指定該參數無意義。可通過 [獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/product/236/17229) 介面查詢支援的可用區。
         :type SlaveZone: str
         :param EngineVersion: 主實例資料庫引擎版本，支援值包括：5.5、5.6 和 5.7。
         :type EngineVersion: str
-        :param WaitSwitch: 切換訪問新實例的方式，預設爲 0。支援值包括：0 - 立刻切換，1 - 時間窗切換；當該值爲 1 時，升級中過程中，切換訪問新實例的流程将會在時間窗内進行，或者用戶主動調用介面 [切換訪問新實例](https://cloud.tencent.com/document/product/236/15864) 觸發該流程。
+        :param WaitSwitch: 切換訪問新實例的方式，預設爲 0。支援值包括：0 - 立刻切換，1 - 時間窗切換；當該值爲 1 時，升級中過程中，切換訪問新實例的流程将會在時間窗内進行，或者用戶主動調用介面 [切換訪問新實例](https://cloud.taifucloud.com/document/product/236/15864) 觸發該流程。
         :type WaitSwitch: int
         :param BackupZone: 備庫 2 的可用區訊息，預設爲空，升級主實例時可指定該參數，升級只讀實例或者災備實例時指定該參數無意義。
         :type BackupZone: str
@@ -7319,7 +7319,7 @@ class ZoneSellConf(AbstractModel):
         :param SellType: 售賣實例類型數組
         :type SellType: list of SellType
         :param ZoneConf: 多可用區訊息
-        :type ZoneConf: :class:`tencentcloud.cdb.v20170320.models.ZoneConf`
+        :type ZoneConf: :class:`taifucloudcloud.cdb.v20170320.models.ZoneConf`
         :param DrZone: 可支援的災備可用區訊息
         :type DrZone: list of str
         :param IsSupportRemoteRo: 是否支援跨可用區只讀

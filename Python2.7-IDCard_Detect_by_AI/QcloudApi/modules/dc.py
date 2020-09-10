@@ -19,6 +19,6 @@ from QcloudApi.modules import base
 class Dc(base.Base):
     """Tencent Cloud Direct Connect
 
-    document: https://cloud.tencent.com/document/product/216/1711
+    document: https://cloud.taifucloud.com/document/product/216/1711
     """
     requestHost = 'dc.api.qcloud.com'

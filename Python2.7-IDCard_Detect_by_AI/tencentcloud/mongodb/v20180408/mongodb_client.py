@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.mongodb.v20180408 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.mongodb.v20180408 import models
 
 
 class MongodbClient(AbstractClient):
     _apiVersion = '2018-04-08'
-    _endpoint = 'mongodb.tencentcloudapi.com'
+    _endpoint = 'mongodb.taifucloudcloudapi.com'
 
 
     def CreateDBInstance(self, request):
         """本介面(CreateDBInstance)用于創建包年包月的MongoDB雲資料庫實例。
 
         :param request: 調用CreateDBInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.CreateDBInstanceRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.CreateDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.CreateDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.CreateDBInstanceResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class MongodbClient(AbstractClient):
         """本介面(CreateDBInstanceHour)用于創建按量計費的MongoDB雲資料庫實例（包括主實例、災備實例和只讀實例），可通過傳入實例規格、實例類型、MongoDB版本、購買時長和數量等訊息創建雲資料庫實例。
 
         :param request: 調用CreateDBInstanceHour所需參數的結構體。
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.CreateDBInstanceHourRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.CreateDBInstanceHourResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.CreateDBInstanceHourRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.CreateDBInstanceHourResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class MongodbClient(AbstractClient):
         """本介面(TerminateDBInstance)用于銷毀按量計費的MongoDB雲資料庫實例
 
         :param request: 調用TerminateDBInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.TerminateDBInstanceRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.TerminateDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.TerminateDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.TerminateDBInstanceResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class MongodbClient(AbstractClient):
         """本介面(UpgradeDBInstance)用于升級包年包月的MongoDB雲資料庫實例，可以擴容内存、儲存以及Oplog
 
         :param request: 調用UpgradeDBInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.UpgradeDBInstanceRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.UpgradeDBInstanceResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.UpgradeDBInstanceRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.UpgradeDBInstanceResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class MongodbClient(AbstractClient):
         """本介面(UpgradeDBInstanceHour)用于升級按量計費的MongoDB雲資料庫實例，可以擴容内存、儲存以及oplog
 
         :param request: 調用UpgradeDBInstanceHour所需參數的結構體。
-        :type request: :class:`tencentcloud.mongodb.v20180408.models.UpgradeDBInstanceHourRequest`
-        :rtype: :class:`tencentcloud.mongodb.v20180408.models.UpgradeDBInstanceHourResponse`
+        :type request: :class:`taifucloudcloud.mongodb.v20180408.models.UpgradeDBInstanceHourRequest`
+        :rtype: :class:`taifucloudcloud.mongodb.v20180408.models.UpgradeDBInstanceHourResponse`
 
         """
         try:

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Attribute(AbstractModel):
@@ -193,10 +193,10 @@ class CreateDeviceRequest(AbstractModel):
         :param DeviceName: 設備名稱。命名規則：[a-zA-Z0-9:_-]{1,48}。
         :type DeviceName: str
         :param Attribute: 設備屬性
-        :type Attribute: :class:`tencentcloud.iotcloud.v20180614.models.Attribute`
+        :type Attribute: :class:`taifucloudcloud.iotcloud.v20180614.models.Attribute`
         :param DefinedPsk: 是否使用自定義PSK，預設不使用
         :type DefinedPsk: str
-        :param Isp: 運營商類型，當産品是NB-IoT産品時，此欄位必填。1表示中國電信，2表示中國移動，3表示中國聯通
+        :param Isp: 運營商類型，當産品是NB-IoT産品時，此欄位必填。1表示 電信，2表示  ，3表示  
         :type Isp: int
         :param Imei: IMEI，當産品是NB-IoT産品時，此欄位必填
         :type Imei: str
@@ -415,7 +415,7 @@ class CreateProductRequest(AbstractModel):
         :param ProductName: 産品名稱，名稱不能和已經存在的産品名稱重複。命名規則：[a-zA-Z0-9:_-]{1,32}
         :type ProductName: str
         :param ProductProperties: 産品屬性
-        :type ProductProperties: :class:`tencentcloud.iotcloud.v20180614.models.ProductProperties`
+        :type ProductProperties: :class:`taifucloudcloud.iotcloud.v20180614.models.ProductProperties`
         :param Skey: 創建CLAA産品時，需要Skey
         :type Skey: str
         """
@@ -444,7 +444,7 @@ class CreateProductResponse(AbstractModel):
         :param ProductId: 産品 ID，Top Cloud 生成全局唯一 ID
         :type ProductId: str
         :param ProductProperties: 産品屬性
-        :type ProductProperties: :class:`tencentcloud.iotcloud.v20180614.models.ProductProperties`
+        :type ProductProperties: :class:`taifucloudcloud.iotcloud.v20180614.models.ProductProperties`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -479,7 +479,7 @@ class CreateTaskRequest(AbstractModel):
         :param ScheduleTimeInSeconds: 任務開始執行的時間。 取值爲 Unix 時間戳，單位秒，且需大于等于當前時間時間戳，0爲系統當前時間時間戳，即立即執行，最大爲當前時間86400秒後，超過則取值爲當前時間86400秒後
         :type ScheduleTimeInSeconds: int
         :param Tasks: 任務描述細節，描述見下 Task
-        :type Tasks: :class:`tencentcloud.iotcloud.v20180614.models.Task`
+        :type Tasks: :class:`taifucloudcloud.iotcloud.v20180614.models.Task`
         :param MaxExecutionTimeInSeconds: 最長執行時間，單位秒，被調度後超過此時間仍未有結果則視爲任務失敗。取值爲0-86400，預設爲86400
         :type MaxExecutionTimeInSeconds: int
         """
@@ -537,7 +537,7 @@ class CreateTopicPolicyRequest(AbstractModel):
         :param Privilege: Topic權限，1發布，2訂閱，3訂閱和發布
         :type Privilege: int
         :param BrokerSubscribe: 代理訂閱訊息，閘道産品爲綁定的子産品創建topic時需要填寫，内容爲子産品的ID和設備訊息。
-        :type BrokerSubscribe: :class:`tencentcloud.iotcloud.v20180614.models.BrokerSubscribe`
+        :type BrokerSubscribe: :class:`taifucloudcloud.iotcloud.v20180614.models.BrokerSubscribe`
         """
         self.ProductID = None
         self.TopicName = None
@@ -581,7 +581,7 @@ class CreateTopicRuleRequest(AbstractModel):
         :param RuleName: 規則名稱
         :type RuleName: str
         :param TopicRulePayload: 規則内容
-        :type TopicRulePayload: :class:`tencentcloud.iotcloud.v20180614.models.TopicRulePayload`
+        :type TopicRulePayload: :class:`taifucloudcloud.iotcloud.v20180614.models.TopicRulePayload`
         """
         self.RuleName = None
         self.TopicRulePayload = None
@@ -1689,9 +1689,9 @@ class ProductInfo(AbstractModel):
         :param ProductName: 産品名
         :type ProductName: str
         :param ProductMetadata: 産品中繼資料
-        :type ProductMetadata: :class:`tencentcloud.iotcloud.v20180614.models.ProductMetadata`
+        :type ProductMetadata: :class:`taifucloudcloud.iotcloud.v20180614.models.ProductMetadata`
         :param ProductProperties: 産品屬性
-        :type ProductProperties: :class:`tencentcloud.iotcloud.v20180614.models.ProductProperties`
+        :type ProductProperties: :class:`taifucloudcloud.iotcloud.v20180614.models.ProductProperties`
         """
         self.ProductId = None
         self.ProductName = None
@@ -1738,7 +1738,7 @@ class ProductProperties(AbstractModel):
         :type ProductDescription: str
         :param EncryptionType: 加密類型，1表示證書認證，2表示簽名認證。如不填寫，預設值是1
         :type EncryptionType: str
-        :param Region: 産品所屬區域，目前只支援廣州（gz）
+        :param Region: 産品所屬區域，目前只支援 （gz）
         :type Region: str
         :param ProductType: 産品類型，各個類型值代表的節點-類型如下：
 0 普通産品，2 NB-IoT産品，4 LoRa産品，3 LoRa閘道産品，5 普通閘道産品   預設值是0
@@ -1945,7 +1945,7 @@ class ReplaceTopicRuleRequest(AbstractModel):
         :param RuleName: 規則名稱
         :type RuleName: str
         :param TopicRulePayload: 替換的規則包體
-        :type TopicRulePayload: :class:`tencentcloud.iotcloud.v20180614.models.TopicRulePayload`
+        :type TopicRulePayload: :class:`taifucloudcloud.iotcloud.v20180614.models.TopicRulePayload`
         :param ModifyType: 修改類型，0：其他，1：創建行爲，2：更新行爲，3：删除行爲
         :type ModifyType: int
         :param ActionIndex: action增删改變更填對應topicRulePayload裏面第幾個action
@@ -2029,9 +2029,9 @@ class Task(AbstractModel):
     def __init__(self):
         """
         :param UpdateShadowTask: 批次更新影子任務的描述細節，當 taskType 取值爲 “UpdateShadow” 時，此欄位必填。描述見下 BatchUpdateShadow
-        :type UpdateShadowTask: :class:`tencentcloud.iotcloud.v20180614.models.BatchUpdateShadow`
+        :type UpdateShadowTask: :class:`taifucloudcloud.iotcloud.v20180614.models.BatchUpdateShadow`
         :param PublishMessageTask: 批次下發訊息任務的描述細節，當 taskType 取值爲 “PublishMessage” 時，此欄位必填。描述見下 BatchPublishMessage
-        :type PublishMessageTask: :class:`tencentcloud.iotcloud.v20180614.models.BatchPublishMessage`
+        :type PublishMessageTask: :class:`taifucloudcloud.iotcloud.v20180614.models.BatchPublishMessage`
         """
         self.UpdateShadowTask = None
         self.PublishMessageTask = None
@@ -2330,7 +2330,7 @@ class UpdateTopicPolicyRequest(AbstractModel):
         :param Privilege: Topic權限
         :type Privilege: int
         :param BrokerSubscribe: 代理訂閱訊息
-        :type BrokerSubscribe: :class:`tencentcloud.iotcloud.v20180614.models.BrokerSubscribe`
+        :type BrokerSubscribe: :class:`taifucloudcloud.iotcloud.v20180614.models.BrokerSubscribe`
         """
         self.ProductID = None
         self.TopicName = None

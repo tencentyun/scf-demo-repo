@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class QueryAntiFraudVipRequest(AbstractModel):
@@ -31,7 +31,7 @@ class QueryAntiFraudVipRequest(AbstractModel):
         :type BankCardNumber: str
         :param UserIp: 用戶請求來源 IP(五選二)
         :type UserIp: str
-        :param Imei: 國際移動設備識别碼(五選二)
+        :param Imei: 國際 設備識别碼(五選二)
         :type Imei: str
         :param Idfa: ios 系統廣告标示符(五選二)
         :type Idfa: str
@@ -43,12 +43,12 @@ class QueryAntiFraudVipRequest(AbstractModel):
         :type EmailAddress: str
         :param Address: 用戶住址
         :type Address: str
-        :param AccountType: 關聯的騰訊帳号 QQ：1；
-開放帳号微信： 2；
+        :param AccountType: 關聯的 帳号  ：1；
+開放帳号 ： 2；
         :type AccountType: str
-        :param Uid: 可選的 QQ 或微信 openid
+        :param Uid: 可選的   或  openid
         :type Uid: str
-        :param AppIdU: qq 或微信分配給網站或應用的 appid，用來
+        :param AppIdU: qq 或 分配給網站或應用的 appid，用來
 唯一标識網站或應用
         :type AppIdU: str
         :param WifiMac: WIFI MAC
@@ -73,7 +73,7 @@ ID 區分統計數據
         :type PhoneCryptoType: str
         :param Mac: MAC 網址
         :type Mac: str
-        :param Imsi: 國際移動用戶識别碼
+        :param Imsi: 國際 用戶識别碼
         :type Imsi: str
         :param NameCryptoType: 姓名加密類型
 0：不加密（預設值）

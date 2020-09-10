@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CHPRequest(AbstractModel):
@@ -70,7 +70,7 @@ class CreateSmpnEpaRequest(AbstractModel):
     def __init__(self):
         """
         :param RequestData: 企業号碼認證請求内容
-        :type RequestData: :class:`tencentcloud.smpn.v20190822.models.EPARequest`
+        :type RequestData: :class:`taifucloudcloud.smpn.v20190822.models.EPARequest`
         :param ResourceId: 用于計費的資源ID
         :type ResourceId: str
         """
@@ -93,7 +93,7 @@ class CreateSmpnEpaResponse(AbstractModel):
     def __init__(self):
         """
         :param ResponseData: 業号碼認證回應内容
-        :type ResponseData: :class:`tencentcloud.smpn.v20190822.models.EPAResponse`
+        :type ResponseData: :class:`taifucloudcloud.smpn.v20190822.models.EPAResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -118,7 +118,7 @@ class DescribeSmpnChpRequest(AbstractModel):
         :param ResourceId: 客戶用于計費的資源Id
         :type ResourceId: str
         :param RequestData: 終端騷擾保護請求
-        :type RequestData: :class:`tencentcloud.smpn.v20190822.models.CHPRequest`
+        :type RequestData: :class:`taifucloudcloud.smpn.v20190822.models.CHPRequest`
         """
         self.ResourceId = None
         self.RequestData = None
@@ -139,7 +139,7 @@ class DescribeSmpnChpResponse(AbstractModel):
     def __init__(self):
         """
         :param ResponseData: 終端騷擾保護回應
-        :type ResponseData: :class:`tencentcloud.smpn.v20190822.models.CHPResponse`
+        :type ResponseData: :class:`taifucloudcloud.smpn.v20190822.models.CHPResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -162,7 +162,7 @@ class DescribeSmpnFnrRequest(AbstractModel):
     def __init__(self):
         """
         :param RequestData: 虛假号碼識别請求内容
-        :type RequestData: :class:`tencentcloud.smpn.v20190822.models.FNRRequest`
+        :type RequestData: :class:`taifucloudcloud.smpn.v20190822.models.FNRRequest`
         :param ResourceId: 用于計費的資源ID
         :type ResourceId: str
         """
@@ -185,7 +185,7 @@ class DescribeSmpnFnrResponse(AbstractModel):
     def __init__(self):
         """
         :param ResponseData: 虛假号碼識别回應内容
-        :type ResponseData: :class:`tencentcloud.smpn.v20190822.models.FNRResponse`
+        :type ResponseData: :class:`taifucloudcloud.smpn.v20190822.models.FNRResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -208,7 +208,7 @@ class DescribeSmpnMhmRequest(AbstractModel):
     def __init__(self):
         """
         :param RequestData: 号碼營銷監控請求内容
-        :type RequestData: :class:`tencentcloud.smpn.v20190822.models.MHMRequest`
+        :type RequestData: :class:`taifucloudcloud.smpn.v20190822.models.MHMRequest`
         :param ResourceId: 用于計費的資源ID
         :type ResourceId: str
         """
@@ -231,7 +231,7 @@ class DescribeSmpnMhmResponse(AbstractModel):
     def __init__(self):
         """
         :param ResponseData: 号碼營銷監控回應内容
-        :type ResponseData: :class:`tencentcloud.smpn.v20190822.models.MHMResponse`
+        :type ResponseData: :class:`taifucloudcloud.smpn.v20190822.models.MHMResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -254,7 +254,7 @@ class DescribeSmpnMrlRequest(AbstractModel):
     def __init__(self):
         """
         :param RequestData: 惡意标記等級請求内容
-        :type RequestData: :class:`tencentcloud.smpn.v20190822.models.MRLRequest`
+        :type RequestData: :class:`taifucloudcloud.smpn.v20190822.models.MRLRequest`
         :param ResourceId: 用于計費的資源ID
         :type ResourceId: str
         """
@@ -277,7 +277,7 @@ class DescribeSmpnMrlResponse(AbstractModel):
     def __init__(self):
         """
         :param ResponseData: 惡意标記等級回應内容
-        :type ResponseData: :class:`tencentcloud.smpn.v20190822.models.MRLResponse`
+        :type ResponseData: :class:`taifucloudcloud.smpn.v20190822.models.MRLResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

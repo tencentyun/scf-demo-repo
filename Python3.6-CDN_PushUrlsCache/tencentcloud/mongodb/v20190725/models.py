@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AssignProjectRequest(AbstractModel):
@@ -942,7 +942,7 @@ class InquirePriceCreateDBInstancesResponse(AbstractModel):
     def __init__(self):
         """
         :param Price: 價格
-        :type Price: :class:`tencentcloud.mongodb.v20190725.models.DBInstancePrice`
+        :type Price: :class:`taifucloudcloud.mongodb.v20190725.models.DBInstancePrice`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -990,7 +990,7 @@ class InquirePriceModifyDBInstanceSpecResponse(AbstractModel):
     def __init__(self):
         """
         :param Price: 價格。
-        :type Price: :class:`tencentcloud.mongodb.v20190725.models.DBInstancePrice`
+        :type Price: :class:`taifucloudcloud.mongodb.v20190725.models.DBInstancePrice`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1015,7 +1015,7 @@ class InquirePriceRenewDBInstancesRequest(AbstractModel):
         :param InstanceIds: 實例ID，格式如：cmgo-p8vnipr5。與雲資料庫控制台頁面中顯示的實例ID相同，介面單次最多只支援5個實例進行操作。
         :type InstanceIds: list of str
         :param InstanceChargePrepaid: 預付費模式（即包年包月）相關參數設置。通過該參數可以指定包年包月實例的續約時長、是否設置自動續約等屬性。
-        :type InstanceChargePrepaid: :class:`tencentcloud.mongodb.v20190725.models.InstanceChargePrepaid`
+        :type InstanceChargePrepaid: :class:`taifucloudcloud.mongodb.v20190725.models.InstanceChargePrepaid`
         """
         self.InstanceIds = None
         self.InstanceChargePrepaid = None
@@ -1036,7 +1036,7 @@ class InquirePriceRenewDBInstancesResponse(AbstractModel):
     def __init__(self):
         """
         :param Price: 價格
-        :type Price: :class:`tencentcloud.mongodb.v20190725.models.DBInstancePrice`
+        :type Price: :class:`taifucloudcloud.mongodb.v20190725.models.DBInstancePrice`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1145,7 +1145,7 @@ class InstanceDetail(AbstractModel):
         :param CloneInstances: 臨時實例訊息
         :type CloneInstances: list of DBInstanceInfo
         :param RelatedInstance: 關聯實例訊息，對于正式實例，該欄位表示它的臨時實例訊息；對于臨時實例，則表示它的正式實例訊息;如果爲只讀/災備實例,則表示他的主實例訊息
-        :type RelatedInstance: :class:`tencentcloud.mongodb.v20190725.models.DBInstanceInfo`
+        :type RelatedInstance: :class:`taifucloudcloud.mongodb.v20190725.models.DBInstanceInfo`
         :param Tags: 實例标簽訊息集合
         :type Tags: list of TagInfo
         :param InstanceVer: 實例版本标記
@@ -1443,7 +1443,7 @@ class RenewDBInstancesRequest(AbstractModel):
         :param InstanceIds: 一個或多個待操作的實例ID。可通過DescribeInstances介面返回值中的InstanceId獲取。每次請求批次實例的上限爲100。
         :type InstanceIds: list of str
         :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的續約時長、是否設置自動續約等屬性。包年包月實例該參數爲必傳參數。
-        :type InstanceChargePrepaid: :class:`tencentcloud.mongodb.v20190725.models.InstanceChargePrepaid`
+        :type InstanceChargePrepaid: :class:`taifucloudcloud.mongodb.v20190725.models.InstanceChargePrepaid`
         """
         self.InstanceIds = None
         self.InstanceChargePrepaid = None

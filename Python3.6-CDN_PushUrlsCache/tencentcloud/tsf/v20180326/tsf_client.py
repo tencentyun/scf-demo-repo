@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tsf.v20180326 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tsf.v20180326 import models
 
 
 class TsfClient(AbstractClient):
     _apiVersion = '2018-03-26'
-    _endpoint = 'tsf.tencentcloudapi.com'
+    _endpoint = 'tsf.taifucloudcloudapi.com'
 
 
     def AddClusterInstances(self, request):
         """添加雲主機節點至TSF集群
 
         :param request: Request instance for AddClusterInstances.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.AddClusterInstancesRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.AddClusterInstancesResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.AddClusterInstancesRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.AddClusterInstancesResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TsfClient(AbstractClient):
         """添加雲主機節點至TSF集群
 
         :param request: Request instance for AddInstances.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.AddInstancesRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.AddInstancesResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.AddInstancesRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.AddInstancesResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TsfClient(AbstractClient):
         """創建應用
 
         :param request: Request instance for CreateApplication.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.CreateApplicationRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.CreateApplicationResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.CreateApplicationRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.CreateApplicationResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TsfClient(AbstractClient):
         """創建集群
 
         :param request: Request instance for CreateCluster.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.CreateClusterRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.CreateClusterResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.CreateClusterRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.CreateClusterResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class TsfClient(AbstractClient):
         """創建配置項
 
         :param request: Request instance for CreateConfig.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.CreateConfigRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.CreateConfigResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.CreateConfigRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.CreateConfigResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class TsfClient(AbstractClient):
         """創建容器佈署組
 
         :param request: Request instance for CreateContainGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.CreateContainGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.CreateContainGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.CreateContainGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.CreateContainGroupResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class TsfClient(AbstractClient):
         """創建虛拟機佈署組
 
         :param request: Request instance for CreateGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.CreateGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.CreateGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.CreateGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.CreateGroupResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class TsfClient(AbstractClient):
         """新增微服務
 
         :param request: Request instance for CreateMicroservice.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.CreateMicroserviceRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.CreateMicroserviceResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.CreateMicroserviceRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.CreateMicroserviceResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class TsfClient(AbstractClient):
         """創建命名空間
 
         :param request: Request instance for CreateNamespace.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.CreateNamespaceRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.CreateNamespaceResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.CreateNamespaceRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.CreateNamespaceResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class TsfClient(AbstractClient):
         """創建公共配置項
 
         :param request: Request instance for CreatePublicConfig.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.CreatePublicConfigRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.CreatePublicConfigResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.CreatePublicConfigRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.CreatePublicConfigResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class TsfClient(AbstractClient):
         """創建Serverless佈署組
 
         :param request: Request instance for CreateServerlessGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.CreateServerlessGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.CreateServerlessGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.CreateServerlessGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.CreateServerlessGroupResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class TsfClient(AbstractClient):
         """删除應用
 
         :param request: Request instance for DeleteApplication.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DeleteApplicationRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DeleteApplicationResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DeleteApplicationRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DeleteApplicationResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class TsfClient(AbstractClient):
         """删除配置項
 
         :param request: Request instance for DeleteConfig.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DeleteConfigRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DeleteConfigResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DeleteConfigRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DeleteConfigResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class TsfClient(AbstractClient):
         """删除容器佈署組
 
         :param request: Request instance for DeleteContainerGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DeleteContainerGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DeleteContainerGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DeleteContainerGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DeleteContainerGroupResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class TsfClient(AbstractClient):
         """删除容器佈署組
 
         :param request: Request instance for DeleteGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DeleteGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DeleteGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DeleteGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DeleteGroupResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class TsfClient(AbstractClient):
         """批次删除映像版本
 
         :param request: Request instance for DeleteImageTags.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DeleteImageTagsRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DeleteImageTagsResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DeleteImageTagsRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DeleteImageTagsResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class TsfClient(AbstractClient):
         """删除微服務
 
         :param request: Request instance for DeleteMicroservice.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DeleteMicroserviceRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DeleteMicroserviceResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DeleteMicroserviceRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DeleteMicroserviceResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class TsfClient(AbstractClient):
         """删除命名空間
 
         :param request: Request instance for DeleteNamespace.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DeleteNamespaceRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DeleteNamespaceResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DeleteNamespaceRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DeleteNamespaceResponse`
 
         """
         try:
@@ -534,8 +534,8 @@ class TsfClient(AbstractClient):
         一次最多支援删除1000個包，數量超過1000，返回UpperDeleteLimit錯誤。
 
         :param request: Request instance for DeletePkgs.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DeletePkgsRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DeletePkgsResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DeletePkgsRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DeletePkgsResponse`
 
         """
         try:
@@ -562,8 +562,8 @@ class TsfClient(AbstractClient):
         """删除公共配置項
 
         :param request: Request instance for DeletePublicConfig.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DeletePublicConfigRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DeletePublicConfigResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DeletePublicConfigRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DeletePublicConfigResponse`
 
         """
         try:
@@ -590,8 +590,8 @@ class TsfClient(AbstractClient):
         """删除Serverless佈署組
 
         :param request: Request instance for DeleteServerlessGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DeleteServerlessGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DeleteServerlessGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DeleteServerlessGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DeleteServerlessGroupResponse`
 
         """
         try:
@@ -618,8 +618,8 @@ class TsfClient(AbstractClient):
         """佈署容器應用
 
         :param request: Request instance for DeployContainerGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DeployContainerGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DeployContainerGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DeployContainerGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DeployContainerGroupResponse`
 
         """
         try:
@@ -646,8 +646,8 @@ class TsfClient(AbstractClient):
         """佈署虛拟機佈署組應用
 
         :param request: Request instance for DeployGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DeployGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DeployGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DeployGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DeployGroupResponse`
 
         """
         try:
@@ -674,8 +674,8 @@ class TsfClient(AbstractClient):
         """佈署Serverless應用
 
         :param request: Request instance for DeployServerlessGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DeployServerlessGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DeployServerlessGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DeployServerlessGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DeployServerlessGroupResponse`
 
         """
         try:
@@ -702,8 +702,8 @@ class TsfClient(AbstractClient):
         """獲取應用詳情
 
         :param request: Request instance for DescribeApplication.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeApplicationRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeApplicationResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeApplicationRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeApplicationResponse`
 
         """
         try:
@@ -730,8 +730,8 @@ class TsfClient(AbstractClient):
         """獲取應用清單其它欄位，如實例數量訊息等
 
         :param request: Request instance for DescribeApplicationAttribute.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeApplicationAttributeRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeApplicationAttributeResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeApplicationAttributeRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeApplicationAttributeResponse`
 
         """
         try:
@@ -758,8 +758,8 @@ class TsfClient(AbstractClient):
         """獲取應用清單
 
         :param request: Request instance for DescribeApplications.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeApplicationsRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeApplicationsResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeApplicationsRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeApplicationsResponse`
 
         """
         try:
@@ -786,8 +786,8 @@ class TsfClient(AbstractClient):
         """查詢集群實例
 
         :param request: Request instance for DescribeClusterInstances.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeClusterInstancesRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeClusterInstancesResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeClusterInstancesRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeClusterInstancesResponse`
 
         """
         try:
@@ -814,8 +814,8 @@ class TsfClient(AbstractClient):
         """查詢配置
 
         :param request: Request instance for DescribeConfig.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeConfigRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeConfigResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeConfigRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeConfigResponse`
 
         """
         try:
@@ -842,8 +842,8 @@ class TsfClient(AbstractClient):
         """查詢配置發布曆史
 
         :param request: Request instance for DescribeConfigReleaseLogs.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeConfigReleaseLogsRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeConfigReleaseLogsResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeConfigReleaseLogsRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeConfigReleaseLogsResponse`
 
         """
         try:
@@ -870,8 +870,8 @@ class TsfClient(AbstractClient):
         """查詢配置發布訊息
 
         :param request: Request instance for DescribeConfigReleases.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeConfigReleasesRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeConfigReleasesResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeConfigReleasesRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeConfigReleasesResponse`
 
         """
         try:
@@ -898,8 +898,8 @@ class TsfClient(AbstractClient):
         """查詢配置匯總清單
 
         :param request: Request instance for DescribeConfigSummary.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeConfigSummaryRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeConfigSummaryResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeConfigSummaryRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeConfigSummaryResponse`
 
         """
         try:
@@ -926,8 +926,8 @@ class TsfClient(AbstractClient):
         """查詢配置項清單
 
         :param request: Request instance for DescribeConfigs.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeConfigsRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeConfigsResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeConfigsRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeConfigsResponse`
 
         """
         try:
@@ -954,8 +954,8 @@ class TsfClient(AbstractClient):
         """容器佈署組詳情
 
         :param request: Request instance for DescribeContainerGroupDetail.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeContainerGroupDetailRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeContainerGroupDetailResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeContainerGroupDetailRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeContainerGroupDetailResponse`
 
         """
         try:
@@ -982,8 +982,8 @@ class TsfClient(AbstractClient):
         """容器佈署組清單
 
         :param request: Request instance for DescribeContainerGroups.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeContainerGroupsRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeContainerGroupsResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeContainerGroupsRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeContainerGroupsResponse`
 
         """
         try:
@@ -1008,11 +1008,11 @@ class TsfClient(AbstractClient):
 
     def DescribeDownloadInfo(self, request):
         """TSF上傳的程式包存放在Top Cloud 物件儲存（COS）中，通過該API可以獲取從COS下載程式包需要的訊息，包括包所在的桶、儲存路徑、鑒權訊息等，之後使用COS API（或SDK）進行下載。
-        COS相關文件請查閱：https://cloud.tencent.com/document/product/436
+        COS相關文件請查閱：https://cloud.taifucloud.com/document/product/436
 
         :param request: Request instance for DescribeDownloadInfo.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeDownloadInfoRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeDownloadInfoResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeDownloadInfoRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeDownloadInfoResponse`
 
         """
         try:
@@ -1039,8 +1039,8 @@ class TsfClient(AbstractClient):
         """查詢虛拟機佈署組詳情
 
         :param request: Request instance for DescribeGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeGroupResponse`
 
         """
         try:
@@ -1067,8 +1067,8 @@ class TsfClient(AbstractClient):
         """查詢虛拟機佈署組雲主機清單
 
         :param request: Request instance for DescribeGroupInstances.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeGroupInstancesRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeGroupInstancesResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeGroupInstancesRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeGroupInstancesResponse`
 
         """
         try:
@@ -1095,8 +1095,8 @@ class TsfClient(AbstractClient):
         """獲取虛拟機佈署組清單
 
         :param request: Request instance for DescribeGroups.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeGroupsRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeGroupsResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeGroupsRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeGroupsResponse`
 
         """
         try:
@@ -1123,8 +1123,8 @@ class TsfClient(AbstractClient):
         """映像版本清單
 
         :param request: Request instance for DescribeImageTags.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeImageTagsRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeImageTagsResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeImageTagsRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeImageTagsResponse`
 
         """
         try:
@@ -1151,8 +1151,8 @@ class TsfClient(AbstractClient):
         """查詢微服務詳情
 
         :param request: Request instance for DescribeMicroservice.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeMicroserviceRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeMicroserviceResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeMicroserviceRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeMicroserviceResponse`
 
         """
         try:
@@ -1179,8 +1179,8 @@ class TsfClient(AbstractClient):
         """獲取微服務清單
 
         :param request: Request instance for DescribeMicroservices.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeMicroservicesRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeMicroservicesResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeMicroservicesRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeMicroservicesResponse`
 
         """
         try:
@@ -1207,8 +1207,8 @@ class TsfClient(AbstractClient):
         """無
 
         :param request: Request instance for DescribePkgs.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribePkgsRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribePkgsResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribePkgsRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribePkgsResponse`
 
         """
         try:
@@ -1235,8 +1235,8 @@ class TsfClient(AbstractClient):
         """獲取佈署組實例清單
 
         :param request: Request instance for DescribePodInstances.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribePodInstancesRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribePodInstancesResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribePodInstancesRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribePodInstancesResponse`
 
         """
         try:
@@ -1263,8 +1263,8 @@ class TsfClient(AbstractClient):
         """查詢公共配置（單條）
 
         :param request: Request instance for DescribePublicConfig.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribePublicConfigRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribePublicConfigResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribePublicConfigRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribePublicConfigResponse`
 
         """
         try:
@@ -1291,8 +1291,8 @@ class TsfClient(AbstractClient):
         """查詢公共配置發布曆史
 
         :param request: Request instance for DescribePublicConfigReleaseLogs.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribePublicConfigReleaseLogsRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribePublicConfigReleaseLogsResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribePublicConfigReleaseLogsRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribePublicConfigReleaseLogsResponse`
 
         """
         try:
@@ -1319,8 +1319,8 @@ class TsfClient(AbstractClient):
         """查詢公共配置發布訊息
 
         :param request: Request instance for DescribePublicConfigReleases.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribePublicConfigReleasesRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribePublicConfigReleasesResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribePublicConfigReleasesRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribePublicConfigReleasesResponse`
 
         """
         try:
@@ -1347,8 +1347,8 @@ class TsfClient(AbstractClient):
         """查詢公共配置匯總清單
 
         :param request: Request instance for DescribePublicConfigSummary.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribePublicConfigSummaryRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribePublicConfigSummaryResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribePublicConfigSummaryRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribePublicConfigSummaryResponse`
 
         """
         try:
@@ -1375,8 +1375,8 @@ class TsfClient(AbstractClient):
         """查詢公共配置項清單
 
         :param request: Request instance for DescribePublicConfigs.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribePublicConfigsRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribePublicConfigsResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribePublicConfigsRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribePublicConfigsResponse`
 
         """
         try:
@@ -1403,8 +1403,8 @@ class TsfClient(AbstractClient):
         """查詢group發布的配置
 
         :param request: Request instance for DescribeReleasedConfig.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeReleasedConfigRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeReleasedConfigResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeReleasedConfigRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeReleasedConfigResponse`
 
         """
         try:
@@ -1431,8 +1431,8 @@ class TsfClient(AbstractClient):
         """查詢Serverless佈署組明細
 
         :param request: Request instance for DescribeServerlessGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeServerlessGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeServerlessGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeServerlessGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeServerlessGroupResponse`
 
         """
         try:
@@ -1459,8 +1459,8 @@ class TsfClient(AbstractClient):
         """查詢Serverless佈署組清單
 
         :param request: Request instance for DescribeServerlessGroups.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeServerlessGroupsRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeServerlessGroupsResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeServerlessGroupsRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeServerlessGroupsResponse`
 
         """
         try:
@@ -1487,8 +1487,8 @@ class TsfClient(AbstractClient):
         """查詢簡單應用清單
 
         :param request: Request instance for DescribeSimpleApplications.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeSimpleApplicationsRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeSimpleApplicationsResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeSimpleApplicationsRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeSimpleApplicationsResponse`
 
         """
         try:
@@ -1515,8 +1515,8 @@ class TsfClient(AbstractClient):
         """查詢簡單集群清單
 
         :param request: Request instance for DescribeSimpleClusters.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeSimpleClustersRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeSimpleClustersResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeSimpleClustersRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeSimpleClustersResponse`
 
         """
         try:
@@ -1543,8 +1543,8 @@ class TsfClient(AbstractClient):
         """查詢簡單佈署組清單
 
         :param request: Request instance for DescribeSimpleGroups.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeSimpleGroupsRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeSimpleGroupsResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeSimpleGroupsRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeSimpleGroupsResponse`
 
         """
         try:
@@ -1571,8 +1571,8 @@ class TsfClient(AbstractClient):
         """查詢簡單命名空間清單
 
         :param request: Request instance for DescribeSimpleNamespaces.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeSimpleNamespacesRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeSimpleNamespacesResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeSimpleNamespacesRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeSimpleNamespacesResponse`
 
         """
         try:
@@ -1597,11 +1597,11 @@ class TsfClient(AbstractClient):
 
     def DescribeUploadInfo(self, request):
         """TSF會将軟體包上傳到Top Cloud 物件儲存（COS）。調用此介面獲取上傳訊息，如目标地域，桶，包Id，儲存路徑，鑒權訊息等，之後請使用COS API（或SDK）進行上傳。
-        COS相關文件請查閱：https://cloud.tencent.com/document/product/436
+        COS相關文件請查閱：https://cloud.taifucloud.com/document/product/436
 
         :param request: Request instance for DescribeUploadInfo.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.DescribeUploadInfoRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.DescribeUploadInfoResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.DescribeUploadInfoRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.DescribeUploadInfoResponse`
 
         """
         try:
@@ -1628,8 +1628,8 @@ class TsfClient(AbstractClient):
         """虛拟機佈署組添加實例
 
         :param request: Request instance for ExpandGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.ExpandGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.ExpandGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.ExpandGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.ExpandGroupResponse`
 
         """
         try:
@@ -1656,8 +1656,8 @@ class TsfClient(AbstractClient):
         """修改容器佈署組
 
         :param request: Request instance for ModifyContainerGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.ModifyContainerGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.ModifyContainerGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.ModifyContainerGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.ModifyContainerGroupResponse`
 
         """
         try:
@@ -1684,8 +1684,8 @@ class TsfClient(AbstractClient):
         """修改容器佈署組實例數
 
         :param request: Request instance for ModifyContainerReplicas.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.ModifyContainerReplicasRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.ModifyContainerReplicasResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.ModifyContainerReplicasRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.ModifyContainerReplicasResponse`
 
         """
         try:
@@ -1712,8 +1712,8 @@ class TsfClient(AbstractClient):
         """修改微服務詳情
 
         :param request: Request instance for ModifyMicroservice.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.ModifyMicroserviceRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.ModifyMicroserviceResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.ModifyMicroserviceRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.ModifyMicroserviceResponse`
 
         """
         try:
@@ -1741,8 +1741,8 @@ class TsfClient(AbstractClient):
         調用此介面完成後，才标志上傳包流程結束。
 
         :param request: Request instance for ModifyUploadInfo.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.ModifyUploadInfoRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.ModifyUploadInfoResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.ModifyUploadInfoRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.ModifyUploadInfoResponse`
 
         """
         try:
@@ -1769,8 +1769,8 @@ class TsfClient(AbstractClient):
         """發布配置
 
         :param request: Request instance for ReleaseConfig.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.ReleaseConfigRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.ReleaseConfigResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.ReleaseConfigRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.ReleaseConfigResponse`
 
         """
         try:
@@ -1797,8 +1797,8 @@ class TsfClient(AbstractClient):
         """發布公共配置
 
         :param request: Request instance for ReleasePublicConfig.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.ReleasePublicConfigRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.ReleasePublicConfigResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.ReleasePublicConfigRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.ReleasePublicConfigResponse`
 
         """
         try:
@@ -1825,8 +1825,8 @@ class TsfClient(AbstractClient):
         """從 TSF 集群中批次移除雲主機節點
 
         :param request: Request instance for RemoveInstances.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.RemoveInstancesRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.RemoveInstancesResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.RemoveInstancesRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.RemoveInstancesResponse`
 
         """
         try:
@@ -1853,8 +1853,8 @@ class TsfClient(AbstractClient):
         """撤回已發布的配置
 
         :param request: Request instance for RevocationConfig.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.RevocationConfigRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.RevocationConfigResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.RevocationConfigRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.RevocationConfigResponse`
 
         """
         try:
@@ -1881,8 +1881,8 @@ class TsfClient(AbstractClient):
         """撤回已發布的公共配置
 
         :param request: Request instance for RevocationPublicConfig.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.RevocationPublicConfigRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.RevocationPublicConfigResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.RevocationPublicConfigRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.RevocationPublicConfigResponse`
 
         """
         try:
@@ -1909,8 +1909,8 @@ class TsfClient(AbstractClient):
         """回滾配置
 
         :param request: Request instance for RollbackConfig.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.RollbackConfigRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.RollbackConfigResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.RollbackConfigRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.RollbackConfigResponse`
 
         """
         try:
@@ -1937,8 +1937,8 @@ class TsfClient(AbstractClient):
         """下線佈署組所有機器實例
 
         :param request: Request instance for ShrinkGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.ShrinkGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.ShrinkGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.ShrinkGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.ShrinkGroupResponse`
 
         """
         try:
@@ -1965,8 +1965,8 @@ class TsfClient(AbstractClient):
         """虛拟機佈署組下線實例
 
         :param request: Request instance for ShrinkInstances.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.ShrinkInstancesRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.ShrinkInstancesResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.ShrinkInstancesRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.ShrinkInstancesResponse`
 
         """
         try:
@@ -1993,8 +1993,8 @@ class TsfClient(AbstractClient):
         """啓動容器佈署組
 
         :param request: Request instance for StartContainerGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.StartContainerGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.StartContainerGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.StartContainerGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.StartContainerGroupResponse`
 
         """
         try:
@@ -2021,8 +2021,8 @@ class TsfClient(AbstractClient):
         """啓動分組
 
         :param request: Request instance for StartGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.StartGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.StartGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.StartGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.StartGroupResponse`
 
         """
         try:
@@ -2049,8 +2049,8 @@ class TsfClient(AbstractClient):
         """停止容器佈署組
 
         :param request: Request instance for StopContainerGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.StopContainerGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.StopContainerGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.StopContainerGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.StopContainerGroupResponse`
 
         """
         try:
@@ -2077,8 +2077,8 @@ class TsfClient(AbstractClient):
         """停止虛拟機佈署組
 
         :param request: Request instance for StopGroup.
-        :type request: :class:`tencentcloud.tsf.v20180326.models.StopGroupRequest`
-        :rtype: :class:`tencentcloud.tsf.v20180326.models.StopGroupResponse`
+        :type request: :class:`taifucloudcloud.tsf.v20180326.models.StopGroupRequest`
+        :rtype: :class:`taifucloudcloud.tsf.v20180326.models.StopGroupResponse`
 
         """
         try:

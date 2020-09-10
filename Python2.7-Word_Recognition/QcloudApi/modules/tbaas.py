@@ -18,6 +18,6 @@ from QcloudApi.modules import base
 class Tbaas(base.Base):
     """Tencent Blockchain as a Service.
 
-    document: https://cloud.tencent.com/document/product/663
+    document: https://cloud.taifucloud.com/document/product/663
     """
     requestHost = 'tbaas.api.qcloud.com'

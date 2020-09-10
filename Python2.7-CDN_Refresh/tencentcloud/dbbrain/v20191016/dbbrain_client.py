@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.dbbrain.v20191016 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.dbbrain.v20191016 import models
 
 
 class DbbrainClient(AbstractClient):
     _apiVersion = '2019-10-16'
-    _endpoint = 'dbbrain.tencentcloudapi.com'
+    _endpoint = 'dbbrain.taifucloudcloudapi.com'
 
 
     def DescribeDBDiagEvent(self, request):
         """獲取實例異常診斷事件的詳情訊息。
 
         :param request: Request instance for DescribeDBDiagEvent.
-        :type request: :class:`tencentcloud.dbbrain.v20191016.models.DescribeDBDiagEventRequest`
-        :rtype: :class:`tencentcloud.dbbrain.v20191016.models.DescribeDBDiagEventResponse`
+        :type request: :class:`taifucloudcloud.dbbrain.v20191016.models.DescribeDBDiagEventRequest`
+        :rtype: :class:`taifucloudcloud.dbbrain.v20191016.models.DescribeDBDiagEventResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class DbbrainClient(AbstractClient):
         """獲取實例診斷事件的清單。
 
         :param request: Request instance for DescribeDBDiagHistory.
-        :type request: :class:`tencentcloud.dbbrain.v20191016.models.DescribeDBDiagHistoryRequest`
-        :rtype: :class:`tencentcloud.dbbrain.v20191016.models.DescribeDBDiagHistoryResponse`
+        :type request: :class:`taifucloudcloud.dbbrain.v20191016.models.DescribeDBDiagHistoryRequest`
+        :rtype: :class:`taifucloudcloud.dbbrain.v20191016.models.DescribeDBDiagHistoryResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class DbbrainClient(AbstractClient):
         """獲取慢日志統計柱狀圖
 
         :param request: Request instance for DescribeSlowLogTimeSeriesStats.
-        :type request: :class:`tencentcloud.dbbrain.v20191016.models.DescribeSlowLogTimeSeriesStatsRequest`
-        :rtype: :class:`tencentcloud.dbbrain.v20191016.models.DescribeSlowLogTimeSeriesStatsResponse`
+        :type request: :class:`taifucloudcloud.dbbrain.v20191016.models.DescribeSlowLogTimeSeriesStatsRequest`
+        :rtype: :class:`taifucloudcloud.dbbrain.v20191016.models.DescribeSlowLogTimeSeriesStatsResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class DbbrainClient(AbstractClient):
         """按照Sql範本+schema的聚合方式，統計排序指定時間段内的top慢sql。
 
         :param request: Request instance for DescribeSlowLogTopSqls.
-        :type request: :class:`tencentcloud.dbbrain.v20191016.models.DescribeSlowLogTopSqlsRequest`
-        :rtype: :class:`tencentcloud.dbbrain.v20191016.models.DescribeSlowLogTopSqlsResponse`
+        :type request: :class:`taifucloudcloud.dbbrain.v20191016.models.DescribeSlowLogTopSqlsRequest`
+        :rtype: :class:`taifucloudcloud.dbbrain.v20191016.models.DescribeSlowLogTopSqlsResponse`
 
         """
         try:

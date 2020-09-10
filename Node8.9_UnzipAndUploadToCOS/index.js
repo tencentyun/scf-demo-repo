@@ -5,8 +5,8 @@ TIPS:
   cos-nodejs-sdk-v5暫不支援promise和async/await用法
 
 Reference: 
-1. https://github.com/tencentyun/scf-demo-repo - the uploaded demo repo
-2. https://cloud.tencent.com/document/product/436/12264 - COS-NODE-SDK document
+1. https://github.com/taifucloudyun/scf-demo-repo - the uploaded demo repo
+2. https://cloud.taifucloud.com/document/product/436/12264 - COS-NODE-SDK document
 ***************************************************/
 
 const fs = require('fs')

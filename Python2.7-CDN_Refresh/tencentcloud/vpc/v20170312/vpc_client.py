@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.vpc.v20170312 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.vpc.v20170312 import models
 
 
 class VpcClient(AbstractClient):
     _apiVersion = '2017-03-12'
-    _endpoint = 'vpc.tencentcloudapi.com'
+    _endpoint = 'vpc.taifucloudcloudapi.com'
 
 
     def AcceptAttachCcnInstances(self, request):
         """本介面（AcceptAttachCcnInstances）用于跨賬号關聯實例時，雲聯網所有者接受并同意關聯操作。
 
         :param request: Request instance for AcceptAttachCcnInstances.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.AcceptAttachCcnInstancesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.AcceptAttachCcnInstancesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.AcceptAttachCcnInstancesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.AcceptAttachCcnInstancesResponse`
 
         """
         try:
@@ -54,11 +54,11 @@ class VpcClient(AbstractClient):
 
 
     def AddBandwidthPackageResources(self, request):
-        """介面用于添加頻寬包資源，包括[彈性公網IP](https://cloud.tencent.com/document/product/213/1941)和[負載均衡](https://cloud.tencent.com/document/product/214/517)等
+        """介面用于添加頻寬包資源，包括[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)和[負載均衡](https://cloud.taifucloud.com/document/product/214/517)等
 
         :param request: Request instance for AddBandwidthPackageResources.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.AddBandwidthPackageResourcesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.AddBandwidthPackageResourcesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.AddBandwidthPackageResourcesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.AddBandwidthPackageResourcesResponse`
 
         """
         try:
@@ -87,8 +87,8 @@ class VpcClient(AbstractClient):
         3. 一個完整的轉換規則包括vip6:vport6:protocol:vip:vport，其中vip6:vport6:protocol必須是唯一。
 
         :param request: Request instance for AddIp6Rules.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.AddIp6RulesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.AddIp6RulesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.AddIp6RulesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.AddIp6RulesResponse`
 
         """
         try:
@@ -112,14 +112,14 @@ class VpcClient(AbstractClient):
 
 
     def AllocateAddresses(self, request):
-        """本介面 (AllocateAddresses) 用于申請一個或多個[彈性公網IP](https://cloud.tencent.com/document/product/213/1941)（簡稱 EIP）。
+        """本介面 (AllocateAddresses) 用于申請一個或多個[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）。
         * EIP 是專爲動态雲計算設計的靜态 IP 網址。借助 EIP，您可以快速将 EIP 重新映射到您的另一個實例上，從而屏蔽實例故障。
         * 您的 EIP 與Top Cloud 帳戶相關聯，而不是與某個實例相關聯。在您選擇顯式釋放該網址，或欠費超過24小時之前，它會一直與您的Top Cloud 帳戶保持關聯。
-        * 一個Top Cloud 帳戶在每個地域能申請的 EIP 最大配額有所限制，可參見 [EIP 産品簡介](https://cloud.tencent.com/document/product/213/5733)，上述配額可通過 DescribeAddressQuota 介面獲取。
+        * 一個Top Cloud 帳戶在每個地域能申請的 EIP 最大配額有所限制，可參見 [EIP 産品簡介](https://cloud.taifucloud.com/document/product/213/5733)，上述配額可通過 DescribeAddressQuota 介面獲取。
 
         :param request: Request instance for AllocateAddresses.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.AllocateAddressesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.AllocateAddressesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.AllocateAddressesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.AllocateAddressesResponse`
 
         """
         try:
@@ -146,8 +146,8 @@ class VpcClient(AbstractClient):
         """該介面用于給IPv6網址初次分配公網頻寬
 
         :param request: Request instance for AllocateIp6AddressesBandwidth.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.AllocateIp6AddressesBandwidthRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.AllocateIp6AddressesBandwidthResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.AllocateIp6AddressesBandwidthRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.AllocateIp6AddressesBandwidthResponse`
 
         """
         try:
@@ -179,8 +179,8 @@ class VpcClient(AbstractClient):
         * 在彈性網卡上申請一個到多個輔助`IPv6`網址，介面會在彈性網卡所在子網段内返回指定數量的輔助`IPv6`網址。
 
         :param request: Request instance for AssignIpv6Addresses.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.AssignIpv6AddressesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.AssignIpv6AddressesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.AssignIpv6AddressesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.AssignIpv6AddressesResponse`
 
         """
         try:
@@ -205,12 +205,12 @@ class VpcClient(AbstractClient):
 
     def AssignIpv6CidrBlock(self, request):
         """本介面（AssignIpv6CidrBlock）用于分配IPv6網段。
-        * 使用本介面前，您需要已有VPC實例，如果沒有可通過介面<a href="https://cloud.tencent.com/document/api/215/15774" title="CreateVpc" target="_blank">CreateVpc</a>創建。
+        * 使用本介面前，您需要已有VPC實例，如果沒有可通過介面<a href="https://cloud.taifucloud.com/document/api/215/15774" title="CreateVpc" target="_blank">CreateVpc</a>創建。
         * 每個VPC只能申請一個IPv6網段
 
         :param request: Request instance for AssignIpv6CidrBlock.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.AssignIpv6CidrBlockRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.AssignIpv6CidrBlockResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.AssignIpv6CidrBlockRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.AssignIpv6CidrBlockResponse`
 
         """
         try:
@@ -239,8 +239,8 @@ class VpcClient(AbstractClient):
         * 每個子網只能分配一個IPv6網段。
 
         :param request: Request instance for AssignIpv6SubnetCidrBlock.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.AssignIpv6SubnetCidrBlockRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.AssignIpv6SubnetCidrBlockResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.AssignIpv6SubnetCidrBlockRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.AssignIpv6SubnetCidrBlockResponse`
 
         """
         try:
@@ -270,8 +270,8 @@ class VpcClient(AbstractClient):
         * 在彈性網卡上申請一個到多個輔助内網IP，介面會在彈性網卡所在子網網段内返回指定數量的輔助内網IP。
 
         :param request: Request instance for AssignPrivateIpAddresses.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.AssignPrivateIpAddressesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.AssignPrivateIpAddressesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.AssignPrivateIpAddressesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.AssignPrivateIpAddressesResponse`
 
         """
         try:
@@ -295,17 +295,17 @@ class VpcClient(AbstractClient):
 
 
     def AssociateAddress(self, request):
-        """本介面 (AssociateAddress) 用于将[彈性公網IP](https://cloud.tencent.com/document/product/213/1941)（簡稱 EIP）綁定到實例或彈性網卡的指定内網 IP 上。
+        """本介面 (AssociateAddress) 用于将[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）綁定到實例或彈性網卡的指定内網 IP 上。
         * 将 EIP 綁定到實例（CVM）上，其本質是将 EIP 綁定到實例上主網卡的主内網 IP 上。
         * 将 EIP 綁定到主網卡的主内網IP上，綁定過程會把其上綁定的普通公網 IP 自動解綁并釋放。
         * 将 EIP 綁定到指定網卡的内網 IP上（非主網卡的主内網IP），則必須先解綁該 EIP，才能再綁定新的。
-        * 将 EIP 綁定到NAT閘道，請使用介面[EipBindNatGateway](https://cloud.tencent.com/document/product/215/4093)
+        * 将 EIP 綁定到NAT閘道，請使用介面[EipBindNatGateway](https://cloud.taifucloud.com/document/product/215/4093)
         * EIP 如果欠費或被封堵，則不能被綁定。
         * 只有狀态爲 UNBIND 的 EIP 才能夠被綁定。
 
         :param request: Request instance for AssociateAddress.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.AssociateAddressRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.AssociateAddressResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.AssociateAddressRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.AssociateAddressResponse`
 
         """
         try:
@@ -332,8 +332,8 @@ class VpcClient(AbstractClient):
         """本介面(AssociateNatGatewayAddress)用于NAT閘道綁定彈性IP（EIP）。
 
         :param request: Request instance for AssociateNatGatewayAddress.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.AssociateNatGatewayAddressRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.AssociateNatGatewayAddressResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.AssociateNatGatewayAddressRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.AssociateNatGatewayAddressResponse`
 
         """
         try:
@@ -360,8 +360,8 @@ class VpcClient(AbstractClient):
         """本介面（AssociateNetworkAclSubnets）用于網絡ACL關聯vpc下的子網。
 
         :param request: Request instance for AssociateNetworkAclSubnets.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.AssociateNetworkAclSubnetsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.AssociateNetworkAclSubnetsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.AssociateNetworkAclSubnetsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.AssociateNetworkAclSubnetsResponse`
 
         """
         try:
@@ -388,8 +388,8 @@ class VpcClient(AbstractClient):
         """本介面（AssociateNetworkInterfaceSecurityGroups）用于彈性網卡綁定安全組（SecurityGroup）。
 
         :param request: Request instance for AssociateNetworkInterfaceSecurityGroups.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.AssociateNetworkInterfaceSecurityGroupsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.AssociateNetworkInterfaceSecurityGroupsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.AssociateNetworkInterfaceSecurityGroupsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.AssociateNetworkInterfaceSecurityGroupsResponse`
 
         """
         try:
@@ -417,8 +417,8 @@ class VpcClient(AbstractClient):
         每個雲聯網能夠關聯的網絡實例個數是有限的，詳請參考産品文件。如果需要擴充請聯系在線客服。
 
         :param request: Request instance for AttachCcnInstances.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.AttachCcnInstancesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.AttachCcnInstancesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.AttachCcnInstancesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.AttachCcnInstancesResponse`
 
         """
         try:
@@ -444,11 +444,11 @@ class VpcClient(AbstractClient):
     def AttachClassicLinkVpc(self, request):
         """本介面(AttachClassicLinkVpc)用于創建私有網絡和基礎網絡設備互通。
         * 私有網絡和基礎網絡設備必須在同一個地域。
-        * 私有網絡和基礎網絡的區别詳見vpc産品文件-<a href="https://cloud.tencent.com/document/product/215/30720">私有網絡與基礎網絡</a>。
+        * 私有網絡和基礎網絡的區别詳見vpc産品文件-<a href="https://cloud.taifucloud.com/document/product/215/30720">私有網絡與基礎網絡</a>。
 
         :param request: Request instance for AttachClassicLinkVpc.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.AttachClassicLinkVpcRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.AttachClassicLinkVpcResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.AttachClassicLinkVpcRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.AttachClassicLinkVpcResponse`
 
         """
         try:
@@ -473,14 +473,14 @@ class VpcClient(AbstractClient):
 
     def AttachNetworkInterface(self, request):
         """本介面（AttachNetworkInterface）用于彈性網卡綁定雲主機。
-        * 一個雲主機可以綁定多個彈性網卡，但只能綁定一個主網卡。更多限制訊息詳見<a href="https://cloud.tencent.com/document/product/576/18527">彈性網卡使用限制</a>。
+        * 一個雲主機可以綁定多個彈性網卡，但只能綁定一個主網卡。更多限制訊息詳見<a href="https://cloud.taifucloud.com/document/product/576/18527">彈性網卡使用限制</a>。
         * 一個彈性網卡只能同時綁定一個雲主機。
-        * 只有運作中或者已關機狀态的雲主機才能綁定彈性網卡，檢視雲主機狀态詳見<a href="https://cloud.tencent.com/document/api/213/9452#InstanceStatus">Top Cloud 主機訊息</a>。
+        * 只有運作中或者已關機狀态的雲主機才能綁定彈性網卡，檢視雲主機狀态詳見<a href="https://cloud.taifucloud.com/document/api/213/9452#InstanceStatus">Top Cloud 主機訊息</a>。
         * 彈性網卡綁定的雲主機必須是私有網絡的，而且雲主機所在可用區必須和彈性網卡子網的可用區相同。
 
         :param request: Request instance for AttachNetworkInterface.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.AttachNetworkInterfaceRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.AttachNetworkInterfaceResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.AttachNetworkInterfaceRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.AttachNetworkInterfaceResponse`
 
         """
         try:
@@ -510,8 +510,8 @@ class VpcClient(AbstractClient):
         * 檢測輔助CIDR是否與當前VPC的對等連接，對端VPC下的主CIDR或輔助CIDR存在重疊。
 
         :param request: Request instance for CheckAssistantCidr.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CheckAssistantCidrRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CheckAssistantCidrResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CheckAssistantCidrRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CheckAssistantCidrResponse`
 
         """
         try:
@@ -538,8 +538,8 @@ class VpcClient(AbstractClient):
         """本介面（CheckDefaultSubnet）用于預判是否可建預設子網。
 
         :param request: Request instance for CheckDefaultSubnet.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CheckDefaultSubnetRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CheckDefaultSubnetResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CheckDefaultSubnetRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CheckDefaultSubnetResponse`
 
         """
         try:
@@ -566,8 +566,8 @@ class VpcClient(AbstractClient):
         """本介面(CheckNetDetectState)用于驗證網絡探測。
 
         :param request: Request instance for CheckNetDetectState.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CheckNetDetectStateRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CheckNetDetectStateResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CheckNetDetectStateRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CheckNetDetectStateResponse`
 
         """
         try:
@@ -594,8 +594,8 @@ class VpcClient(AbstractClient):
         """本介面（CreateAddressTemplate）用于創建IP網址模版
 
         :param request: Request instance for CreateAddressTemplate.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateAddressTemplateRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateAddressTemplateResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateAddressTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateAddressTemplateResponse`
 
         """
         try:
@@ -622,8 +622,8 @@ class VpcClient(AbstractClient):
         """本介面（CreateAddressTemplateGroup）用于創建IP網址模版集合
 
         :param request: Request instance for CreateAddressTemplateGroup.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateAddressTemplateGroupRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateAddressTemplateGroupResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateAddressTemplateGroupRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateAddressTemplateGroupResponse`
 
         """
         try:
@@ -655,8 +655,8 @@ class VpcClient(AbstractClient):
         * 創建彈性網卡同時可以綁定标簽, 應答裏的标簽清單代表添加成功的标簽。
 
         :param request: Request instance for CreateAndAttachNetworkInterface.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateAndAttachNetworkInterfaceRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateAndAttachNetworkInterfaceResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateAndAttachNetworkInterfaceRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateAndAttachNetworkInterfaceResponse`
 
         """
         try:
@@ -683,8 +683,8 @@ class VpcClient(AbstractClient):
         """本介面(CreateAssistantCidr)用于批次創建輔助CIDR。（介面灰度中，如需使用請提工單。）
 
         :param request: Request instance for CreateAssistantCidr.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateAssistantCidrRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateAssistantCidrResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateAssistantCidrRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateAssistantCidrResponse`
 
         """
         try:
@@ -708,11 +708,11 @@ class VpcClient(AbstractClient):
 
 
     def CreateBandwidthPackage(self, request):
-        """介面支援創建[設備頻寬包](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85)和[IP頻寬包](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+        """介面支援創建[設備頻寬包](https://cloud.taifucloud.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85)和[IP頻寬包](https://cloud.taifucloud.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
 
         :param request: Request instance for CreateBandwidthPackage.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateBandwidthPackageRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateBandwidthPackageResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateBandwidthPackageRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateBandwidthPackageResponse`
 
         """
         try:
@@ -741,8 +741,8 @@ class VpcClient(AbstractClient):
         每個賬号能創建的雲聯網實例個數是有限的，詳請參考産品文件。如果需要擴充請聯系在線客服。
 
         :param request: Request instance for CreateCcn.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateCcnRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateCcnResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateCcnRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateCcnResponse`
 
         """
         try:
@@ -769,8 +769,8 @@ class VpcClient(AbstractClient):
         """本介面（CreateCustomerGateway）用于創建對端閘道。
 
         :param request: Request instance for CreateCustomerGateway.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateCustomerGatewayRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateCustomerGatewayResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateCustomerGatewayRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateCustomerGatewayResponse`
 
         """
         try:
@@ -795,13 +795,13 @@ class VpcClient(AbstractClient):
 
     def CreateDefaultSecurityGroup(self, request):
         """本介面（CreateDefaultSecurityGroup）用于創建（如果項目下未存在預設安全組，則創建；已存在則獲取。）預設安全組（SecurityGroup）。
-        * 每個帳戶下每個地域的每個項目的<a href="https://cloud.tencent.com/document/product/213/12453">安全組數量限制</a>。
+        * 每個帳戶下每個地域的每個項目的<a href="https://cloud.taifucloud.com/document/product/213/12453">安全組數量限制</a>。
         * 新建的安全組的入站和出站規則預設都是全部拒絕，在創建後通常您需要再調用CreateSecurityGroupPolicies将安全組的規則設置爲需要的規則。
         * 創建安全組同時可以綁定标簽, 應答裏的标簽清單代表添加成功的标簽。
 
         :param request: Request instance for CreateDefaultSecurityGroup.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateDefaultSecurityGroupRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateDefaultSecurityGroupResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateDefaultSecurityGroupRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateDefaultSecurityGroupResponse`
 
         """
         try:
@@ -836,8 +836,8 @@ class VpcClient(AbstractClient):
         您也可以通過 Force 參數，強制返回預設VPC
 
         :param request: Request instance for CreateDefaultVpc.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateDefaultVpcRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateDefaultVpcResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateDefaultVpcRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateDefaultVpcResponse`
 
         """
         try:
@@ -864,8 +864,8 @@ class VpcClient(AbstractClient):
         """本介面（CreateDirectConnectGateway）用于創建專線閘道。
 
         :param request: Request instance for CreateDirectConnectGateway.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateDirectConnectGatewayRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateDirectConnectGatewayResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateDirectConnectGatewayRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateDirectConnectGatewayResponse`
 
         """
         try:
@@ -892,8 +892,8 @@ class VpcClient(AbstractClient):
         """本介面（CreateDirectConnectGatewayCcnRoutes）用于創建專線閘道的雲聯網路由（IDC網段）
 
         :param request: Request instance for CreateDirectConnectGatewayCcnRoutes.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateDirectConnectGatewayCcnRoutesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateDirectConnectGatewayCcnRoutesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateDirectConnectGatewayCcnRoutesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateDirectConnectGatewayCcnRoutesResponse`
 
         """
         try:
@@ -920,8 +920,8 @@ class VpcClient(AbstractClient):
         """本介面（CreateFlowLog）用于創建流日志
 
         :param request: Request instance for CreateFlowLog.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateFlowLogRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateFlowLogResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateFlowLogRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateFlowLogResponse`
 
         """
         try:
@@ -948,8 +948,8 @@ class VpcClient(AbstractClient):
         """本介面（CreateHaVip）用于創建高可用虛拟IP（HAVIP）
 
         :param request: Request instance for CreateHaVip.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateHaVipRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateHaVipResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateHaVipRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateHaVipResponse`
 
         """
         try:
@@ -977,8 +977,8 @@ class VpcClient(AbstractClient):
         2. 同一個帳戶在一個地域最多允許創建10個轉換實例
 
         :param request: Request instance for CreateIp6Translators.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateIp6TranslatorsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateIp6TranslatorsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateIp6TranslatorsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateIp6TranslatorsResponse`
 
         """
         try:
@@ -1005,8 +1005,8 @@ class VpcClient(AbstractClient):
         """本介面(CreateNatGateway)用于創建NAT閘道。
 
         :param request: Request instance for CreateNatGateway.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateNatGatewayRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateNatGatewayResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateNatGatewayRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateNatGatewayResponse`
 
         """
         try:
@@ -1033,8 +1033,8 @@ class VpcClient(AbstractClient):
         """本介面(CreateNatGatewayDestinationIpPortTranslationNatRule)用于創建NAT閘道端口轉發規則。
 
         :param request: Request instance for CreateNatGatewayDestinationIpPortTranslationNatRule.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateNatGatewayDestinationIpPortTranslationNatRuleRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateNatGatewayDestinationIpPortTranslationNatRuleResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateNatGatewayDestinationIpPortTranslationNatRuleRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateNatGatewayDestinationIpPortTranslationNatRuleResponse`
 
         """
         try:
@@ -1061,8 +1061,8 @@ class VpcClient(AbstractClient):
         """本介面(CreateNetDetect)用于創建網絡探測。
 
         :param request: Request instance for CreateNetDetect.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateNetDetectRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateNetDetectResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateNetDetectRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateNetDetectResponse`
 
         """
         try:
@@ -1086,12 +1086,12 @@ class VpcClient(AbstractClient):
 
 
     def CreateNetworkAcl(self, request):
-        """本介面（CreateNetworkAcl）用于創建新的<a href="https://cloud.tencent.com/document/product/215/20088">網絡ACL</a>。
+        """本介面（CreateNetworkAcl）用于創建新的<a href="https://cloud.taifucloud.com/document/product/215/20088">網絡ACL</a>。
         * 新建的網絡ACL的入站和出站規則預設都是全部拒絕，在創建後通常您需要再調用ModifyNetworkAclEntries将網絡ACL的規則設置爲需要的規則。
 
         :param request: Request instance for CreateNetworkAcl.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateNetworkAclRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateNetworkAclResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateNetworkAclRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateNetworkAclResponse`
 
         """
         try:
@@ -1123,8 +1123,8 @@ class VpcClient(AbstractClient):
         * 創建彈性網卡同時可以綁定标簽, 應答裏的标簽清單代表添加成功的标簽。
 
         :param request: Request instance for CreateNetworkInterface.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateNetworkInterfaceRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateNetworkInterfaceResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateNetworkInterfaceRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateNetworkInterfaceResponse`
 
         """
         try:
@@ -1153,8 +1153,8 @@ class VpcClient(AbstractClient):
         * 創建路由表同時可以綁定标簽, 應答裏的标簽清單代表添加成功的标簽。
 
         :param request: Request instance for CreateRouteTable.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateRouteTableRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateRouteTableResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateRouteTableRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateRouteTableResponse`
 
         """
         try:
@@ -1182,8 +1182,8 @@ class VpcClient(AbstractClient):
         * 向指定路由表批次新增路由策略。
 
         :param request: Request instance for CreateRoutes.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateRoutesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateRoutesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateRoutesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateRoutesResponse`
 
         """
         try:
@@ -1208,13 +1208,13 @@ class VpcClient(AbstractClient):
 
     def CreateSecurityGroup(self, request):
         """本介面（CreateSecurityGroup）用于創建新的安全組（SecurityGroup）。
-        * 每個帳戶下每個地域的每個項目的<a href="https://cloud.tencent.com/document/product/213/12453">安全組數量限制</a>。
+        * 每個帳戶下每個地域的每個項目的<a href="https://cloud.taifucloud.com/document/product/213/12453">安全組數量限制</a>。
         * 新建的安全組的入站和出站規則預設都是全部拒絕，在創建後通常您需要再調用CreateSecurityGroupPolicies将安全組的規則設置爲需要的規則。
         * 創建安全組同時可以綁定标簽, 應答裏的标簽清單代表添加成功的标簽。
 
         :param request: Request instance for CreateSecurityGroup.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateSecurityGroupRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateSecurityGroupResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateSecurityGroupRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateSecurityGroupResponse`
 
         """
         try:
@@ -1251,8 +1251,8 @@ class VpcClient(AbstractClient):
         * 一次請求中只能創建單個方向的規則, 如果需要指定索引（PolicyIndex）參數, 多條規則的索引必須一緻。
 
         :param request: Request instance for CreateSecurityGroupPolicies.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateSecurityGroupPoliciesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateSecurityGroupPoliciesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateSecurityGroupPoliciesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateSecurityGroupPoliciesResponse`
 
         """
         try:
@@ -1277,7 +1277,7 @@ class VpcClient(AbstractClient):
 
     def CreateSecurityGroupWithPolicies(self, request):
         """本介面（CreateSecurityGroupWithPolicies）用于創建新的安全組（SecurityGroup），并且可以同時添加安全組規則（SecurityGroupPolicy）。
-        * 每個帳戶下每個地域的每個項目的<a href="https://cloud.tencent.com/document/product/213/12453">安全組數量限制</a>。
+        * 每個帳戶下每個地域的每個項目的<a href="https://cloud.taifucloud.com/document/product/213/12453">安全組數量限制</a>。
         * 新建的安全組的入站和出站規則預設都是全部拒絕，在創建後通常您需要再調用CreateSecurityGroupPolicies将安全組的規則設置爲需要的規則。
 
         安全組規則說明：
@@ -1292,8 +1292,8 @@ class VpcClient(AbstractClient):
         * 一次請求中只能創建單個方向的規則, 如果需要指定索引（PolicyIndex）參數, 多條規則的索引必須一緻。
 
         :param request: Request instance for CreateSecurityGroupWithPolicies.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateSecurityGroupWithPoliciesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateSecurityGroupWithPoliciesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateSecurityGroupWithPoliciesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateSecurityGroupWithPoliciesResponse`
 
         """
         try:
@@ -1320,8 +1320,8 @@ class VpcClient(AbstractClient):
         """本介面（CreateServiceTemplate）用于創建協議端口範本
 
         :param request: Request instance for CreateServiceTemplate.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateServiceTemplateRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateServiceTemplateResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateServiceTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateServiceTemplateResponse`
 
         """
         try:
@@ -1348,8 +1348,8 @@ class VpcClient(AbstractClient):
         """本介面（CreateServiceTemplateGroup）用于創建協議端口範本集合
 
         :param request: Request instance for CreateServiceTemplateGroup.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateServiceTemplateGroupRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateServiceTemplateGroupResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateServiceTemplateGroupRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateServiceTemplateGroupResponse`
 
         """
         try:
@@ -1382,8 +1382,8 @@ class VpcClient(AbstractClient):
         * 創建子網同時可以綁定标簽, 應答裏的标簽清單代表添加成功的标簽。
 
         :param request: Request instance for CreateSubnet.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateSubnetRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateSubnetResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateSubnetRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateSubnetResponse`
 
         """
         try:
@@ -1416,8 +1416,8 @@ class VpcClient(AbstractClient):
         * 創建子網同時可以綁定标簽, 應答裏的标簽清單代表添加成功的标簽。
 
         :param request: Request instance for CreateSubnets.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateSubnetsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateSubnetsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateSubnetsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateSubnetsResponse`
 
         """
         try:
@@ -1443,12 +1443,12 @@ class VpcClient(AbstractClient):
     def CreateVpc(self, request):
         """本介面(CreateVpc)用于創建私有網絡(VPC)。
         * 用戶可以創建的最小網段子網掩碼爲28（有16個IP網址），最大網段子網掩碼爲16（65,536個IP網址）,如果規劃VPC網段請參見VPC網段規劃說明。
-        * 同一個地域能創建的VPC資源個數也是有限制的，詳見 <a href="https://cloud.tencent.com/doc/product/215/537" title="VPC使用限制">VPC使用限制</a>,如果需要擴充請聯系在線客服。
+        * 同一個地域能創建的VPC資源個數也是有限制的，詳見 <a href="https://cloud.taifucloud.com/doc/product/215/537" title="VPC使用限制">VPC使用限制</a>,如果需要擴充請聯系在線客服。
         * 創建VPC同時可以綁定标簽, 應答裏的标簽清單代表添加成功的标簽。
 
         :param request: Request instance for CreateVpc.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateVpcRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateVpcResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateVpcRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateVpcResponse`
 
         """
         try:
@@ -1475,8 +1475,8 @@ class VpcClient(AbstractClient):
         """本介面（CreateVpnConnection）用于創建VPN通道。
 
         :param request: Request instance for CreateVpnConnection.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateVpnConnectionRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateVpnConnectionResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateVpnConnectionRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateVpnConnectionResponse`
 
         """
         try:
@@ -1503,8 +1503,8 @@ class VpcClient(AbstractClient):
         """本介面（CreateVpnGateway）用于創建VPN閘道。
 
         :param request: Request instance for CreateVpnGateway.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.CreateVpnGatewayRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.CreateVpnGatewayResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateVpnGatewayRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.CreateVpnGatewayResponse`
 
         """
         try:
@@ -1531,8 +1531,8 @@ class VpcClient(AbstractClient):
         """本介面（DeleteAddressTemplate）用于删除IP網址範本
 
         :param request: Request instance for DeleteAddressTemplate.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteAddressTemplateRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteAddressTemplateResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteAddressTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteAddressTemplateResponse`
 
         """
         try:
@@ -1559,8 +1559,8 @@ class VpcClient(AbstractClient):
         """本介面（DeleteAddressTemplateGroup）用于删除IP網址範本集合
 
         :param request: Request instance for DeleteAddressTemplateGroup.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteAddressTemplateGroupRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteAddressTemplateGroupResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteAddressTemplateGroupRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteAddressTemplateGroupResponse`
 
         """
         try:
@@ -1587,8 +1587,8 @@ class VpcClient(AbstractClient):
         """本介面(DeleteAssistantCidr)用于删除輔助CIDR。（介面灰度中，如需使用請提工單。）
 
         :param request: Request instance for DeleteAssistantCidr.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteAssistantCidrRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteAssistantCidrResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteAssistantCidrRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteAssistantCidrResponse`
 
         """
         try:
@@ -1612,11 +1612,11 @@ class VpcClient(AbstractClient):
 
 
     def DeleteBandwidthPackage(self, request):
-        """介面支援删除共享頻寬包，包括[設備頻寬包](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85)和[IP頻寬包](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+        """介面支援删除共享頻寬包，包括[設備頻寬包](https://cloud.taifucloud.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85)和[IP頻寬包](https://cloud.taifucloud.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
 
         :param request: Request instance for DeleteBandwidthPackage.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteBandwidthPackageRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteBandwidthPackageResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteBandwidthPackageRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteBandwidthPackageResponse`
 
         """
         try:
@@ -1645,8 +1645,8 @@ class VpcClient(AbstractClient):
         * 删除雲聯網是不可逆的操作，請謹慎處理。
 
         :param request: Request instance for DeleteCcn.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteCcnRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteCcnResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteCcnRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteCcnResponse`
 
         """
         try:
@@ -1673,8 +1673,8 @@ class VpcClient(AbstractClient):
         """本介面（DeleteCustomerGateway）用于删除對端閘道。
 
         :param request: Request instance for DeleteCustomerGateway.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteCustomerGatewayRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteCustomerGatewayResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteCustomerGatewayRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteCustomerGatewayResponse`
 
         """
         try:
@@ -1704,8 +1704,8 @@ class VpcClient(AbstractClient):
         本介面是異步完成，如需查詢異步任務執行結果，請使用本介面返回的`RequestId`輪詢`QueryTask`介面
 
         :param request: Request instance for DeleteDirectConnectGateway.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteDirectConnectGatewayRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteDirectConnectGatewayResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteDirectConnectGatewayRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteDirectConnectGatewayResponse`
 
         """
         try:
@@ -1732,8 +1732,8 @@ class VpcClient(AbstractClient):
         """本介面（DeleteDirectConnectGatewayCcnRoutes）用于删除專線閘道的雲聯網路由（IDC網段）
 
         :param request: Request instance for DeleteDirectConnectGatewayCcnRoutes.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteDirectConnectGatewayCcnRoutesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteDirectConnectGatewayCcnRoutesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteDirectConnectGatewayCcnRoutesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteDirectConnectGatewayCcnRoutesResponse`
 
         """
         try:
@@ -1760,8 +1760,8 @@ class VpcClient(AbstractClient):
         """本介面（DeleteFlowLog）用于删除流日志
 
         :param request: Request instance for DeleteFlowLog.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteFlowLogRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteFlowLogResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteFlowLogRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteFlowLogResponse`
 
         """
         try:
@@ -1789,8 +1789,8 @@ class VpcClient(AbstractClient):
         本介面是異步完成，如需查詢異步任務執行結果，請使用本介面返回的`RequestId`輪詢`QueryTask`介面
 
         :param request: Request instance for DeleteHaVip.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteHaVipRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteHaVipResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteHaVipRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteHaVipResponse`
 
         """
         try:
@@ -1818,8 +1818,8 @@ class VpcClient(AbstractClient):
         2.  如果IPV6轉換實例建立有轉換規則，會一并删除。
 
         :param request: Request instance for DeleteIp6Translators.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteIp6TranslatorsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteIp6TranslatorsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteIp6TranslatorsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteIp6TranslatorsResponse`
 
         """
         try:
@@ -1847,8 +1847,8 @@ class VpcClient(AbstractClient):
         删除 NAT 閘道後，系統會自動删除路由表中包含此 NAT 閘道的路由項，同時也會解綁彈性公網IP（EIP）。
 
         :param request: Request instance for DeleteNatGateway.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteNatGatewayRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteNatGatewayResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteNatGatewayRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteNatGatewayResponse`
 
         """
         try:
@@ -1875,8 +1875,8 @@ class VpcClient(AbstractClient):
         """本介面（DeleteNatGatewayDestinationIpPortTranslationNatRule）用于删除NAT閘道端口轉發規則。
 
         :param request: Request instance for DeleteNatGatewayDestinationIpPortTranslationNatRule.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse`
 
         """
         try:
@@ -1903,8 +1903,8 @@ class VpcClient(AbstractClient):
         """本介面(DeleteNetDetect)用于删除網絡探測實例。
 
         :param request: Request instance for DeleteNetDetect.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteNetDetectRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteNetDetectResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteNetDetectRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteNetDetectResponse`
 
         """
         try:
@@ -1931,8 +1931,8 @@ class VpcClient(AbstractClient):
         """本介面（DeleteNetworkAcl）用于删除網絡ACL。
 
         :param request: Request instance for DeleteNetworkAcl.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteNetworkAclRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteNetworkAclResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteNetworkAclRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteNetworkAclResponse`
 
         """
         try:
@@ -1961,8 +1961,8 @@ class VpcClient(AbstractClient):
         * 删除指定彈性網卡，彈性網卡必須先和子機解綁才能删除。删除之後彈性網卡上所有内網IP都将被退還。
 
         :param request: Request instance for DeleteNetworkInterface.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteNetworkInterfaceRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteNetworkInterfaceResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteNetworkInterfaceRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteNetworkInterfaceResponse`
 
         """
         try:
@@ -1989,8 +1989,8 @@ class VpcClient(AbstractClient):
         """删除路由表
 
         :param request: Request instance for DeleteRouteTable.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteRouteTableRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteRouteTableResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteRouteTableRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteRouteTableResponse`
 
         """
         try:
@@ -2017,8 +2017,8 @@ class VpcClient(AbstractClient):
         """本介面(DeleteRoutes)用于對某個路由表批次删除路由策略（Route）。
 
         :param request: Request instance for DeleteRoutes.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteRoutesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteRoutesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteRoutesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteRoutesResponse`
 
         """
         try:
@@ -2048,8 +2048,8 @@ class VpcClient(AbstractClient):
         * 删除的安全組無法再找回，請謹慎調用。
 
         :param request: Request instance for DeleteSecurityGroup.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteSecurityGroupRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteSecurityGroupResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteSecurityGroupRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteSecurityGroupResponse`
 
         """
         try:
@@ -2077,8 +2077,8 @@ class VpcClient(AbstractClient):
         * SecurityGroupPolicySet.Version 用于指定要操作的安全組的版本。傳入 Version 版本号若不等于當前安全組的最新版本，将返回失敗；若不傳 Version 則直接删除指定PolicyIndex的規則。
 
         :param request: Request instance for DeleteSecurityGroupPolicies.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteSecurityGroupPoliciesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteSecurityGroupPoliciesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteSecurityGroupPoliciesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteSecurityGroupPoliciesResponse`
 
         """
         try:
@@ -2105,8 +2105,8 @@ class VpcClient(AbstractClient):
         """本介面（DeleteServiceTemplate）用于删除協議端口範本
 
         :param request: Request instance for DeleteServiceTemplate.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteServiceTemplateRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteServiceTemplateResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteServiceTemplateRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteServiceTemplateResponse`
 
         """
         try:
@@ -2133,8 +2133,8 @@ class VpcClient(AbstractClient):
         """本介面（DeleteServiceTemplateGroup）用于删除協議端口範本集合
 
         :param request: Request instance for DeleteServiceTemplateGroup.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteServiceTemplateGroupRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteServiceTemplateGroupResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteServiceTemplateGroupRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteServiceTemplateGroupResponse`
 
         """
         try:
@@ -2162,8 +2162,8 @@ class VpcClient(AbstractClient):
         * 删除子網前，請清理該子網下所有資源，包括雲伺服器、負載均衡、雲數據、noSql、彈性網卡等資源。
 
         :param request: Request instance for DeleteSubnet.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteSubnetRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteSubnetResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteSubnetRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteSubnetResponse`
 
         """
         try:
@@ -2192,8 +2192,8 @@ class VpcClient(AbstractClient):
         * 删除私有網絡是不可逆的操作，請謹慎處理。
 
         :param request: Request instance for DeleteVpc.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteVpcRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteVpcResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteVpcRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteVpcResponse`
 
         """
         try:
@@ -2220,8 +2220,8 @@ class VpcClient(AbstractClient):
         """本介面(DeleteVpnConnection)用于删除VPN通道。
 
         :param request: Request instance for DeleteVpnConnection.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteVpnConnectionRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteVpnConnectionResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteVpnConnectionRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteVpnConnectionResponse`
 
         """
         try:
@@ -2248,8 +2248,8 @@ class VpcClient(AbstractClient):
         """本介面（DeleteVpnGateway）用于删除VPN閘道。目前只支援删除運作中的按量計費的IPSEC閘道實例。
 
         :param request: Request instance for DeleteVpnGateway.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DeleteVpnGatewayRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DeleteVpnGatewayResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteVpnGatewayRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DeleteVpnGatewayResponse`
 
         """
         try:
@@ -2276,8 +2276,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeAccountAttributes）用于查詢用戶賬号私有屬性。
 
         :param request: Request instance for DescribeAccountAttributes.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeAccountAttributesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeAccountAttributesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeAccountAttributesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeAccountAttributesResponse`
 
         """
         try:
@@ -2301,11 +2301,11 @@ class VpcClient(AbstractClient):
 
 
     def DescribeAddressQuota(self, request):
-        """本介面 (DescribeAddressQuota) 用于查詢您帳戶的[彈性公網IP](https://cloud.tencent.com/document/product/213/1941)（簡稱 EIP）在當前地域的配額訊息。配額詳情可參見 [EIP 産品簡介](https://cloud.tencent.com/document/product/213/5733)。
+        """本介面 (DescribeAddressQuota) 用于查詢您帳戶的[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）在當前地域的配額訊息。配額詳情可參見 [EIP 産品簡介](https://cloud.taifucloud.com/document/product/213/5733)。
 
         :param request: Request instance for DescribeAddressQuota.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeAddressQuotaRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeAddressQuotaResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeAddressQuotaRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeAddressQuotaResponse`
 
         """
         try:
@@ -2332,8 +2332,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeAddressTemplateGroups）用于查詢IP網址範本集合
 
         :param request: Request instance for DescribeAddressTemplateGroups.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeAddressTemplateGroupsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeAddressTemplateGroupsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeAddressTemplateGroupsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeAddressTemplateGroupsResponse`
 
         """
         try:
@@ -2360,8 +2360,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeAddressTemplates）用于查詢IP網址範本
 
         :param request: Request instance for DescribeAddressTemplates.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeAddressTemplatesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeAddressTemplatesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeAddressTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeAddressTemplatesResponse`
 
         """
         try:
@@ -2385,12 +2385,12 @@ class VpcClient(AbstractClient):
 
 
     def DescribeAddresses(self, request):
-        """本介面 (DescribeAddresses) 用于查詢一個或多個[彈性公網IP](https://cloud.tencent.com/document/product/213/1941)（簡稱 EIP）的詳細訊息。
+        """本介面 (DescribeAddresses) 用于查詢一個或多個[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）的詳細訊息。
         * 如果參數爲空，返回當前用戶一定數量（Limit所指定的數量，預設爲20）的 EIP。
 
         :param request: Request instance for DescribeAddresses.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeAddressesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeAddressesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeAddressesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeAddressesResponse`
 
         """
         try:
@@ -2417,8 +2417,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeAssistantCidr）用于查詢輔助CIDR清單。（介面灰度中，如需使用請提工單。）
 
         :param request: Request instance for DescribeAssistantCidr.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeAssistantCidrRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeAssistantCidrResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeAssistantCidrRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeAssistantCidrResponse`
 
         """
         try:
@@ -2445,8 +2445,8 @@ class VpcClient(AbstractClient):
         """介面用于查詢帳戶在當前地域的頻寬包上限數量以及使用數量
 
         :param request: Request instance for DescribeBandwidthPackageQuota.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeBandwidthPackageQuotaRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeBandwidthPackageQuotaResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeBandwidthPackageQuotaRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeBandwidthPackageQuotaResponse`
 
         """
         try:
@@ -2473,8 +2473,8 @@ class VpcClient(AbstractClient):
         """介面用于查詢頻寬包詳細訊息，包括頻寬包唯一标識ID，類型，計費模式，名稱，資源訊息等
 
         :param request: Request instance for DescribeBandwidthPackages.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeBandwidthPackagesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeBandwidthPackagesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeBandwidthPackagesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeBandwidthPackagesResponse`
 
         """
         try:
@@ -2501,8 +2501,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeCcnAttachedInstances）用于查詢雲聯網實例下已關聯的網絡實例。
 
         :param request: Request instance for DescribeCcnAttachedInstances.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeCcnAttachedInstancesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeCcnAttachedInstancesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCcnAttachedInstancesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCcnAttachedInstancesResponse`
 
         """
         try:
@@ -2529,8 +2529,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeCcnRegionBandwidthLimits）用于查詢雲聯網各地域出頻寬上限，該介面只返回已關聯網絡實例包含的地域
 
         :param request: Request instance for DescribeCcnRegionBandwidthLimits.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeCcnRegionBandwidthLimitsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeCcnRegionBandwidthLimitsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCcnRegionBandwidthLimitsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCcnRegionBandwidthLimitsResponse`
 
         """
         try:
@@ -2557,8 +2557,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeCcnRoutes）用于查詢已加入雲聯網（CCN）的路由
 
         :param request: Request instance for DescribeCcnRoutes.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeCcnRoutesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeCcnRoutesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCcnRoutesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCcnRoutesResponse`
 
         """
         try:
@@ -2585,8 +2585,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeCcns）用于查詢雲聯網（CCN）清單。
 
         :param request: Request instance for DescribeCcns.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeCcnsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeCcnsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCcnsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCcnsResponse`
 
         """
         try:
@@ -2613,8 +2613,8 @@ class VpcClient(AbstractClient):
         """本介面(DescribeClassicLinkInstances)用于查詢私有網絡和基礎網絡設備互通清單。
 
         :param request: Request instance for DescribeClassicLinkInstances.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeClassicLinkInstancesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeClassicLinkInstancesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeClassicLinkInstancesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeClassicLinkInstancesResponse`
 
         """
         try:
@@ -2641,8 +2641,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeCustomerGatewayVendors）用于查詢可支援的對端閘道廠商訊息。
 
         :param request: Request instance for DescribeCustomerGatewayVendors.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeCustomerGatewayVendorsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeCustomerGatewayVendorsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCustomerGatewayVendorsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCustomerGatewayVendorsResponse`
 
         """
         try:
@@ -2669,8 +2669,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeCustomerGateways）用于查詢對端閘道清單。
 
         :param request: Request instance for DescribeCustomerGateways.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeCustomerGatewaysRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeCustomerGatewaysResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCustomerGatewaysRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCustomerGatewaysResponse`
 
         """
         try:
@@ -2697,8 +2697,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeDirectConnectGatewayCcnRoutes）用于查詢專線閘道的雲聯網路由（IDC網段）
 
         :param request: Request instance for DescribeDirectConnectGatewayCcnRoutes.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeDirectConnectGatewayCcnRoutesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeDirectConnectGatewayCcnRoutesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeDirectConnectGatewayCcnRoutesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeDirectConnectGatewayCcnRoutesResponse`
 
         """
         try:
@@ -2725,8 +2725,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeDirectConnectGateways）用于查詢專線閘道。
 
         :param request: Request instance for DescribeDirectConnectGateways.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeDirectConnectGatewaysRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeDirectConnectGatewaysResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeDirectConnectGatewaysRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeDirectConnectGatewaysResponse`
 
         """
         try:
@@ -2753,8 +2753,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeFlowLog）用于查詢流日志實例訊息
 
         :param request: Request instance for DescribeFlowLog.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeFlowLogRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeFlowLogResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeFlowLogRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeFlowLogResponse`
 
         """
         try:
@@ -2781,8 +2781,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeFlowLogs）用于查詢獲取流日志集合
 
         :param request: Request instance for DescribeFlowLogs.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeFlowLogsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeFlowLogsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeFlowLogsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeFlowLogsResponse`
 
         """
         try:
@@ -2811,8 +2811,8 @@ class VpcClient(AbstractClient):
         * 如果閘道有流量，但調用本介面沒有返回數據，請在控制台對應閘道詳情頁确認是否開啓閘道流量監控。
 
         :param request: Request instance for DescribeGatewayFlowMonitorDetail.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeGatewayFlowMonitorDetailRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeGatewayFlowMonitorDetailResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeGatewayFlowMonitorDetailRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeGatewayFlowMonitorDetailResponse`
 
         """
         try:
@@ -2839,8 +2839,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeGatewayFlowQos）用于查詢閘道來訪IP流控頻寬。
 
         :param request: Request instance for DescribeGatewayFlowQos.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeGatewayFlowQosRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeGatewayFlowQosResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeGatewayFlowQosRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeGatewayFlowQosResponse`
 
         """
         try:
@@ -2867,8 +2867,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeHaVips）用于查詢高可用虛拟IP（HAVIP）清單。
 
         :param request: Request instance for DescribeHaVips.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeHaVipsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeHaVipsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeHaVipsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeHaVipsResponse`
 
         """
         try:
@@ -2895,8 +2895,8 @@ class VpcClient(AbstractClient):
         """該介面用于查詢IPV6網址訊息
 
         :param request: Request instance for DescribeIp6Addresses.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeIp6AddressesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeIp6AddressesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeIp6AddressesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeIp6AddressesResponse`
 
         """
         try:
@@ -2923,8 +2923,8 @@ class VpcClient(AbstractClient):
         """查詢帳戶在指定地域IPV6轉換實例和規則的配額
 
         :param request: Request instance for DescribeIp6TranslatorQuota.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeIp6TranslatorQuotaRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeIp6TranslatorQuotaResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeIp6TranslatorQuotaRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeIp6TranslatorQuotaResponse`
 
         """
         try:
@@ -2952,8 +2952,8 @@ class VpcClient(AbstractClient):
         2. 支援過濾查詢
 
         :param request: Request instance for DescribeIp6Translators.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeIp6TranslatorsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeIp6TranslatorsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeIp6TranslatorsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeIp6TranslatorsResponse`
 
         """
         try:
@@ -2980,8 +2980,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeNatGatewayDestinationIpPortTranslationNatRules）用于查詢NAT閘道端口轉發規則對象數組。
 
         :param request: Request instance for DescribeNatGatewayDestinationIpPortTranslationNatRules.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse`
 
         """
         try:
@@ -3008,8 +3008,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeNatGateways）用于查詢 NAT 閘道。
 
         :param request: Request instance for DescribeNatGateways.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeNatGatewaysRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeNatGatewaysResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeNatGatewaysRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeNatGatewaysResponse`
 
         """
         try:
@@ -3036,8 +3036,8 @@ class VpcClient(AbstractClient):
         """本介面(DescribeNetDetectStates)用于查詢網絡探測驗證結果清單。
 
         :param request: Request instance for DescribeNetDetectStates.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeNetDetectStatesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeNetDetectStatesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeNetDetectStatesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeNetDetectStatesResponse`
 
         """
         try:
@@ -3064,8 +3064,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeNetDetects）用于查詢網絡探測清單。
 
         :param request: Request instance for DescribeNetDetects.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeNetDetectsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeNetDetectsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeNetDetectsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeNetDetectsResponse`
 
         """
         try:
@@ -3092,8 +3092,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeNetworkAcls）用于查詢網絡ACL清單。
 
         :param request: Request instance for DescribeNetworkAcls.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeNetworkAclsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeNetworkAclsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeNetworkAclsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeNetworkAclsResponse`
 
         """
         try:
@@ -3120,8 +3120,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeNetworkInterfaceLimit）根據CVM實例ID或彈性網卡ID查詢彈性網卡配額，返回該CVM實例或彈性網卡能綁定的彈性網卡配額，以及彈性網卡可以分配的IP配額
 
         :param request: Request instance for DescribeNetworkInterfaceLimit.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeNetworkInterfaceLimitRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeNetworkInterfaceLimitResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeNetworkInterfaceLimitRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeNetworkInterfaceLimitResponse`
 
         """
         try:
@@ -3148,8 +3148,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeNetworkInterfaces）用于查詢彈性網卡清單。
 
         :param request: Request instance for DescribeNetworkInterfaces.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeNetworkInterfacesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeNetworkInterfacesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeNetworkInterfacesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeNetworkInterfacesResponse`
 
         """
         try:
@@ -3176,8 +3176,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeRouteConflicts）用于查詢自定義路由策略與雲聯網路由策略沖突清單
 
         :param request: Request instance for DescribeRouteConflicts.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeRouteConflictsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeRouteConflictsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeRouteConflictsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeRouteConflictsResponse`
 
         """
         try:
@@ -3204,8 +3204,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeRouteTables）用于查詢路由表。
 
         :param request: Request instance for DescribeRouteTables.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeRouteTablesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeRouteTablesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeRouteTablesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeRouteTablesResponse`
 
         """
         try:
@@ -3232,8 +3232,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeSecurityGroupAssociationStatistics）用于查詢安全組關聯的實例統計。
 
         :param request: Request instance for DescribeSecurityGroupAssociationStatistics.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeSecurityGroupAssociationStatisticsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeSecurityGroupAssociationStatisticsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeSecurityGroupAssociationStatisticsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeSecurityGroupAssociationStatisticsResponse`
 
         """
         try:
@@ -3260,8 +3260,8 @@ class VpcClient(AbstractClient):
         """本介面(DescribeSecurityGroupLimits)用于查詢用戶安全組配額。
 
         :param request: Request instance for DescribeSecurityGroupLimits.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeSecurityGroupLimitsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeSecurityGroupLimitsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeSecurityGroupLimitsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeSecurityGroupLimitsResponse`
 
         """
         try:
@@ -3288,8 +3288,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeSecurityGroupPolicies）用于查詢安全組規則。
 
         :param request: Request instance for DescribeSecurityGroupPolicies.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeSecurityGroupPoliciesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeSecurityGroupPoliciesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeSecurityGroupPoliciesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeSecurityGroupPoliciesResponse`
 
         """
         try:
@@ -3316,8 +3316,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeSecurityGroupReferences）用于查詢安全組被引用訊息。
 
         :param request: Request instance for DescribeSecurityGroupReferences.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeSecurityGroupReferencesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeSecurityGroupReferencesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeSecurityGroupReferencesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeSecurityGroupReferencesResponse`
 
         """
         try:
@@ -3344,8 +3344,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeSecurityGroups）用于查詢安全組。
 
         :param request: Request instance for DescribeSecurityGroups.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeSecurityGroupsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeSecurityGroupsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeSecurityGroupsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeSecurityGroupsResponse`
 
         """
         try:
@@ -3372,8 +3372,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeServiceTemplateGroups）用于查詢協議端口範本集合
 
         :param request: Request instance for DescribeServiceTemplateGroups.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeServiceTemplateGroupsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeServiceTemplateGroupsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeServiceTemplateGroupsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeServiceTemplateGroupsResponse`
 
         """
         try:
@@ -3400,8 +3400,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeServiceTemplates）用于查詢協議端口範本
 
         :param request: Request instance for DescribeServiceTemplates.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeServiceTemplatesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeServiceTemplatesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeServiceTemplatesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeServiceTemplatesResponse`
 
         """
         try:
@@ -3428,8 +3428,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeSubnets）用于查詢子網清單。
 
         :param request: Request instance for DescribeSubnets.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeSubnetsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeSubnetsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeSubnetsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeSubnetsResponse`
 
         """
         try:
@@ -3456,8 +3456,8 @@ class VpcClient(AbstractClient):
         """查詢EIP異步任務執行結果
 
         :param request: Request instance for DescribeTaskResult.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeTaskResultRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeTaskResultResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeTaskResultRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeTaskResultResponse`
 
         """
         try:
@@ -3484,8 +3484,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeTemplateLimits）用于查詢參數範本配額清單。
 
         :param request: Request instance for DescribeTemplateLimits.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeTemplateLimitsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeTemplateLimitsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeTemplateLimitsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeTemplateLimitsResponse`
 
         """
         try:
@@ -3512,8 +3512,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeVpcInstances）用于查詢VPC下的雲主機實例清單。
 
         :param request: Request instance for DescribeVpcInstances.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeVpcInstancesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeVpcInstancesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpcInstancesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpcInstancesResponse`
 
         """
         try:
@@ -3541,8 +3541,8 @@ class VpcClient(AbstractClient):
         只能查詢已使用的`IPv6`訊息，當查詢未使用的IP時，本介面不會報錯，但不會出現在返回結果裏。
 
         :param request: Request instance for DescribeVpcIpv6Addresses.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeVpcIpv6AddressesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeVpcIpv6AddressesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpcIpv6AddressesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpcIpv6AddressesResponse`
 
         """
         try:
@@ -3598,8 +3598,8 @@ class VpcClient(AbstractClient):
         * vpc-max-assistant_cidrs（每個VPC可分配的輔助CIDR數）
 
         :param request: Request instance for DescribeVpcLimits.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeVpcLimitsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeVpcLimitsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpcLimitsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpcLimitsResponse`
 
         """
         try:
@@ -3627,8 +3627,8 @@ class VpcClient(AbstractClient):
         只能查詢已使用的IP訊息，當查詢未使用的IP時，本介面不會報錯，但不會出現在返回結果裏。
 
         :param request: Request instance for DescribeVpcPrivateIpAddresses.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeVpcPrivateIpAddressesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeVpcPrivateIpAddressesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpcPrivateIpAddressesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpcPrivateIpAddressesResponse`
 
         """
         try:
@@ -3655,8 +3655,8 @@ class VpcClient(AbstractClient):
         """本介面(DescribeVpcResourceDashboard)用于檢視VPC資源訊息。
 
         :param request: Request instance for DescribeVpcResourceDashboard.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeVpcResourceDashboardRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeVpcResourceDashboardResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpcResourceDashboardRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpcResourceDashboardResponse`
 
         """
         try:
@@ -3683,8 +3683,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeVpcs）用于查詢私有網絡清單。
 
         :param request: Request instance for DescribeVpcs.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeVpcsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeVpcsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpcsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpcsResponse`
 
         """
         try:
@@ -3711,8 +3711,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeVpnConnections）查詢VPN通道清單。
 
         :param request: Request instance for DescribeVpnConnections.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeVpnConnectionsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeVpnConnectionsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpnConnectionsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpnConnectionsResponse`
 
         """
         try:
@@ -3739,8 +3739,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeVpnGatewayCcnRoutes）用于查詢VPN閘道雲聯網路由
 
         :param request: Request instance for DescribeVpnGatewayCcnRoutes.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeVpnGatewayCcnRoutesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeVpnGatewayCcnRoutesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpnGatewayCcnRoutesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpnGatewayCcnRoutesResponse`
 
         """
         try:
@@ -3767,8 +3767,8 @@ class VpcClient(AbstractClient):
         """本介面（DescribeVpnGateways）用于查詢VPN閘道清單。
 
         :param request: Request instance for DescribeVpnGateways.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DescribeVpnGatewaysRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DescribeVpnGatewaysResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpnGatewaysRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpnGatewaysResponse`
 
         """
         try:
@@ -3796,8 +3796,8 @@ class VpcClient(AbstractClient):
         解關聯網絡實例後，相應的路由策略會一并删除。
 
         :param request: Request instance for DetachCcnInstances.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DetachCcnInstancesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DetachCcnInstancesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DetachCcnInstancesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DetachCcnInstancesResponse`
 
         """
         try:
@@ -3824,8 +3824,8 @@ class VpcClient(AbstractClient):
         """本介面(DetachClassicLinkVpc)用于删除私有網絡和基礎網絡設備互通。
 
         :param request: Request instance for DetachClassicLinkVpc.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DetachClassicLinkVpcRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DetachClassicLinkVpcResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DetachClassicLinkVpcRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DetachClassicLinkVpcResponse`
 
         """
         try:
@@ -3852,8 +3852,8 @@ class VpcClient(AbstractClient):
         """本介面（DetachNetworkInterface）用于彈性網卡解綁雲主機。
 
         :param request: Request instance for DetachNetworkInterface.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DetachNetworkInterfaceRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DetachNetworkInterfaceResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DetachNetworkInterfaceRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DetachNetworkInterfaceResponse`
 
         """
         try:
@@ -3880,8 +3880,8 @@ class VpcClient(AbstractClient):
         """本介面（DisableCcnRoutes）用于禁用已經啓用的雲聯網（CCN）路由
 
         :param request: Request instance for DisableCcnRoutes.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DisableCcnRoutesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DisableCcnRoutesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DisableCcnRoutesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DisableCcnRoutesResponse`
 
         """
         try:
@@ -3908,8 +3908,8 @@ class VpcClient(AbstractClient):
         """本介面（DisableGatewayFlowMonitor）用于關閉閘道流量監控。
 
         :param request: Request instance for DisableGatewayFlowMonitor.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DisableGatewayFlowMonitorRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DisableGatewayFlowMonitorResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DisableGatewayFlowMonitorRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DisableGatewayFlowMonitorResponse`
 
         """
         try:
@@ -3936,8 +3936,8 @@ class VpcClient(AbstractClient):
         """本介面（DisableRoutes）用于禁用已啓用的子網路由
 
         :param request: Request instance for DisableRoutes.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DisableRoutesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DisableRoutesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DisableRoutesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DisableRoutesResponse`
 
         """
         try:
@@ -3961,15 +3961,15 @@ class VpcClient(AbstractClient):
 
 
     def DisassociateAddress(self, request):
-        """本介面 (DisassociateAddress) 用于解綁[彈性公網IP](https://cloud.tencent.com/document/product/213/1941)（簡稱 EIP）。
+        """本介面 (DisassociateAddress) 用于解綁[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）。
         * 支援CVM實例，彈性網卡上的EIP解綁
-        * 不支援NAT上的EIP解綁。NAT上的EIP解綁請參考[EipUnBindNatGateway](https://cloud.tencent.com/document/product/215/4092)
+        * 不支援NAT上的EIP解綁。NAT上的EIP解綁請參考[EipUnBindNatGateway](https://cloud.taifucloud.com/document/product/215/4092)
         * 只有狀态爲 BIND 和 BIND_ENI 的 EIP 才能進行解綁定操作。
         * EIP 如果被封堵，則不能進行解綁定操作。
 
         :param request: Request instance for DisassociateAddress.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DisassociateAddressRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DisassociateAddressResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DisassociateAddressRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DisassociateAddressResponse`
 
         """
         try:
@@ -3996,8 +3996,8 @@ class VpcClient(AbstractClient):
         """本介面（DisassociateNatGatewayAddress）用于NAT閘道解綁彈性IP。
 
         :param request: Request instance for DisassociateNatGatewayAddress.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DisassociateNatGatewayAddressRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DisassociateNatGatewayAddressResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DisassociateNatGatewayAddressRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DisassociateNatGatewayAddressResponse`
 
         """
         try:
@@ -4024,8 +4024,8 @@ class VpcClient(AbstractClient):
         """本介面（DisassociateNetworkAclSubnets）用于網絡ACL解關聯vpc下的子網。
 
         :param request: Request instance for DisassociateNetworkAclSubnets.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DisassociateNetworkAclSubnetsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DisassociateNetworkAclSubnetsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DisassociateNetworkAclSubnetsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DisassociateNetworkAclSubnetsResponse`
 
         """
         try:
@@ -4052,8 +4052,8 @@ class VpcClient(AbstractClient):
         """本介面（DisassociateNetworkInterfaceSecurityGroups）用于彈性網卡解綁安全組。支援彈性網卡完全解綁安全組。
 
         :param request: Request instance for DisassociateNetworkInterfaceSecurityGroups.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DisassociateNetworkInterfaceSecurityGroupsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DisassociateNetworkInterfaceSecurityGroupsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DisassociateNetworkInterfaceSecurityGroupsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DisassociateNetworkInterfaceSecurityGroupsResponse`
 
         """
         try:
@@ -4080,8 +4080,8 @@ class VpcClient(AbstractClient):
         """本介面(DownloadCustomerGatewayConfiguration)用于下載VPN通道配置。
 
         :param request: Request instance for DownloadCustomerGatewayConfiguration.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.DownloadCustomerGatewayConfigurationRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.DownloadCustomerGatewayConfigurationResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.DownloadCustomerGatewayConfigurationRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.DownloadCustomerGatewayConfigurationResponse`
 
         """
         try:
@@ -4109,8 +4109,8 @@ class VpcClient(AbstractClient):
         本介面會校驗啓用後，是否與已有路由沖突，如果沖突，則無法啓用，失敗處理。路由沖突時，需要先禁用與之沖突的路由，才能啓用該路由。
 
         :param request: Request instance for EnableCcnRoutes.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.EnableCcnRoutesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.EnableCcnRoutesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.EnableCcnRoutesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.EnableCcnRoutesResponse`
 
         """
         try:
@@ -4137,8 +4137,8 @@ class VpcClient(AbstractClient):
         """本介面（EnableGatewayFlowMonitor）用于開啓閘道流量監控。
 
         :param request: Request instance for EnableGatewayFlowMonitor.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.EnableGatewayFlowMonitorRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.EnableGatewayFlowMonitorResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.EnableGatewayFlowMonitorRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.EnableGatewayFlowMonitorResponse`
 
         """
         try:
@@ -4166,8 +4166,8 @@ class VpcClient(AbstractClient):
         本介面會校驗啓用後，是否與已有路由沖突，如果沖突，則無法啓用，失敗處理。路由沖突時，需要先禁用與之沖突的路由，才能啓用該路由。
 
         :param request: Request instance for EnableRoutes.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.EnableRoutesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.EnableRoutesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.EnableRoutesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.EnableRoutesResponse`
 
         """
         try:
@@ -4195,8 +4195,8 @@ class VpcClient(AbstractClient):
         本介面是異步完成，如需查詢異步任務執行結果，請使用本介面返回的`RequestId`輪詢`QueryTask`介面
 
         :param request: Request instance for HaVipAssociateAddressIp.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.HaVipAssociateAddressIpRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.HaVipAssociateAddressIpResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.HaVipAssociateAddressIpRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.HaVipAssociateAddressIpResponse`
 
         """
         try:
@@ -4224,8 +4224,8 @@ class VpcClient(AbstractClient):
         本介面是異步完成，如需查詢異步任務執行結果，請使用本介面返回的`RequestId`輪詢`QueryTask`介面
 
         :param request: Request instance for HaVipDisassociateAddressIp.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.HaVipDisassociateAddressIpRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.HaVipDisassociateAddressIpResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.HaVipDisassociateAddressIpRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.HaVipDisassociateAddressIpResponse`
 
         """
         try:
@@ -4252,8 +4252,8 @@ class VpcClient(AbstractClient):
         """本介面（InquiryPriceCreateVpnGateway）用于創建VPN閘道詢價。
 
         :param request: Request instance for InquiryPriceCreateVpnGateway.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.InquiryPriceCreateVpnGatewayRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.InquiryPriceCreateVpnGatewayResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.InquiryPriceCreateVpnGatewayRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.InquiryPriceCreateVpnGatewayResponse`
 
         """
         try:
@@ -4280,8 +4280,8 @@ class VpcClient(AbstractClient):
         """本介面（InquiryPriceRenewVpnGateway）用于續約VPN閘道詢價。目前僅支援IPSEC類型閘道的詢價。
 
         :param request: Request instance for InquiryPriceRenewVpnGateway.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.InquiryPriceRenewVpnGatewayRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.InquiryPriceRenewVpnGatewayResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.InquiryPriceRenewVpnGatewayRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.InquiryPriceRenewVpnGatewayResponse`
 
         """
         try:
@@ -4308,8 +4308,8 @@ class VpcClient(AbstractClient):
         """本介面（InquiryPriceResetVpnGatewayInternetMaxBandwidth）調整VPN閘道頻寬上限詢價。
 
         :param request: Request instance for InquiryPriceResetVpnGatewayInternetMaxBandwidth.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse`
 
         """
         try:
@@ -4336,8 +4336,8 @@ class VpcClient(AbstractClient):
         """本介面（MigrateNetworkInterface）用于彈性網卡遷移。
 
         :param request: Request instance for MigrateNetworkInterface.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.MigrateNetworkInterfaceRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.MigrateNetworkInterfaceResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.MigrateNetworkInterfaceRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.MigrateNetworkInterfaceResponse`
 
         """
         try:
@@ -4367,8 +4367,8 @@ class VpcClient(AbstractClient):
         * 遷移前後的彈性網卡必須在同一個子網内。
 
         :param request: Request instance for MigratePrivateIpAddress.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.MigratePrivateIpAddressRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.MigratePrivateIpAddressResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.MigratePrivateIpAddressRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.MigratePrivateIpAddressResponse`
 
         """
         try:
@@ -4392,11 +4392,11 @@ class VpcClient(AbstractClient):
 
 
     def ModifyAddressAttribute(self, request):
-        """本介面 (ModifyAddressAttribute) 用于修改[彈性公網IP](https://cloud.tencent.com/document/product/213/1941)（簡稱 EIP）的名稱。
+        """本介面 (ModifyAddressAttribute) 用于修改[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）的名稱。
 
         :param request: Request instance for ModifyAddressAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyAddressAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyAddressAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyAddressAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyAddressAttributeResponse`
 
         """
         try:
@@ -4425,8 +4425,8 @@ class VpcClient(AbstractClient):
         * 每個彈性公網IP支援調整兩次，次數超出則無法調整。
 
         :param request: Request instance for ModifyAddressInternetChargeType.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyAddressInternetChargeTypeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyAddressInternetChargeTypeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyAddressInternetChargeTypeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyAddressInternetChargeTypeResponse`
 
         """
         try:
@@ -4453,8 +4453,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyAddressTemplateAttribute）用于修改IP網址範本
 
         :param request: Request instance for ModifyAddressTemplateAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyAddressTemplateAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyAddressTemplateAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyAddressTemplateAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyAddressTemplateAttributeResponse`
 
         """
         try:
@@ -4481,8 +4481,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyAddressTemplateGroupAttribute）用于修改IP網址範本集合
 
         :param request: Request instance for ModifyAddressTemplateGroupAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyAddressTemplateGroupAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyAddressTemplateGroupAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyAddressTemplateGroupAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyAddressTemplateGroupAttributeResponse`
 
         """
         try:
@@ -4506,11 +4506,11 @@ class VpcClient(AbstractClient):
 
 
     def ModifyAddressesBandwidth(self, request):
-        """本介面（ModifyAddressesBandwidth）用于調整[彈性公網IP](https://cloud.tencent.com/document/product/213/1941)(簡稱EIP)頻寬，包括後付費EIP, 預付費EIP和頻寬包EIP
+        """本介面（ModifyAddressesBandwidth）用于調整[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)(簡稱EIP)頻寬，包括後付費EIP, 預付費EIP和頻寬包EIP
 
         :param request: Request instance for ModifyAddressesBandwidth.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyAddressesBandwidthRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyAddressesBandwidthResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyAddressesBandwidthRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyAddressesBandwidthResponse`
 
         """
         try:
@@ -4537,8 +4537,8 @@ class VpcClient(AbstractClient):
         """本介面(ModifyAssistantCidr)用于批次修改輔助CIDR，支援新增和删除。（介面灰度中，如需使用請提工單。）
 
         :param request: Request instance for ModifyAssistantCidr.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyAssistantCidrRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyAssistantCidrResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyAssistantCidrRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyAssistantCidrResponse`
 
         """
         try:
@@ -4565,8 +4565,8 @@ class VpcClient(AbstractClient):
         """介面用于修改頻寬包屬性，包括頻寬包名字等
 
         :param request: Request instance for ModifyBandwidthPackageAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyBandwidthPackageAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyBandwidthPackageAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyBandwidthPackageAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyBandwidthPackageAttributeResponse`
 
         """
         try:
@@ -4593,8 +4593,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyCcnAttribute）用于修改雲聯網（CCN）的相關屬性。
 
         :param request: Request instance for ModifyCcnAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyCcnAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyCcnAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyCcnAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyCcnAttributeResponse`
 
         """
         try:
@@ -4621,8 +4621,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyCcnRegionBandwidthLimitsType）用于修改後付費雲聯網實例修改頻寬限速策略。
 
         :param request: Request instance for ModifyCcnRegionBandwidthLimitsType.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyCcnRegionBandwidthLimitsTypeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyCcnRegionBandwidthLimitsTypeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyCcnRegionBandwidthLimitsTypeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyCcnRegionBandwidthLimitsTypeResponse`
 
         """
         try:
@@ -4649,8 +4649,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyCustomerGatewayAttribute）用于修改對端閘道訊息。
 
         :param request: Request instance for ModifyCustomerGatewayAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyCustomerGatewayAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyCustomerGatewayAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyCustomerGatewayAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyCustomerGatewayAttributeResponse`
 
         """
         try:
@@ -4677,8 +4677,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyDirectConnectGatewayAttribute）用于修改專線閘道屬性
 
         :param request: Request instance for ModifyDirectConnectGatewayAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyDirectConnectGatewayAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyDirectConnectGatewayAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyDirectConnectGatewayAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyDirectConnectGatewayAttributeResponse`
 
         """
         try:
@@ -4705,8 +4705,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyFlowLogAttribute）用于修改流日志屬性
 
         :param request: Request instance for ModifyFlowLogAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyFlowLogAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyFlowLogAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyFlowLogAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyFlowLogAttributeResponse`
 
         """
         try:
@@ -4733,8 +4733,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyGatewayFlowQos）用于調整閘道流控頻寬。
 
         :param request: Request instance for ModifyGatewayFlowQos.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyGatewayFlowQosRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyGatewayFlowQosResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyGatewayFlowQosRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyGatewayFlowQosResponse`
 
         """
         try:
@@ -4761,8 +4761,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyHaVipAttribute）用于修改高可用虛拟IP（HAVIP）屬性
 
         :param request: Request instance for ModifyHaVipAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyHaVipAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyHaVipAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyHaVipAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyHaVipAttributeResponse`
 
         """
         try:
@@ -4789,8 +4789,8 @@ class VpcClient(AbstractClient):
         """該介面用于修改IPV6網址訪問internet的頻寬
 
         :param request: Request instance for ModifyIp6AddressesBandwidth.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyIp6AddressesBandwidthRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyIp6AddressesBandwidthResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyIp6AddressesBandwidthRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyIp6AddressesBandwidthResponse`
 
         """
         try:
@@ -4817,8 +4817,8 @@ class VpcClient(AbstractClient):
         """該介面用于修改IPV6轉換規則，當前僅支援修改轉換規則名稱，IPV4網址和IPV4端口号
 
         :param request: Request instance for ModifyIp6Rule.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyIp6RuleRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyIp6RuleResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyIp6RuleRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyIp6RuleResponse`
 
         """
         try:
@@ -4845,8 +4845,8 @@ class VpcClient(AbstractClient):
         """該介面用于修改IP6轉換實例屬性，當前僅支援修改實例名稱。
 
         :param request: Request instance for ModifyIp6Translator.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyIp6TranslatorRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyIp6TranslatorResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyIp6TranslatorRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyIp6TranslatorResponse`
 
         """
         try:
@@ -4873,8 +4873,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyIpv6AddressesAttribute）用于修改彈性網卡内網IPv6網址屬性。
 
         :param request: Request instance for ModifyIpv6AddressesAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyIpv6AddressesAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyIpv6AddressesAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyIpv6AddressesAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyIpv6AddressesAttributeResponse`
 
         """
         try:
@@ -4901,8 +4901,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyNatGatewayAttribute）用于修改NAT閘道的屬性。
 
         :param request: Request instance for ModifyNatGatewayAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyNatGatewayAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyNatGatewayAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyNatGatewayAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyNatGatewayAttributeResponse`
 
         """
         try:
@@ -4929,8 +4929,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyNatGatewayDestinationIpPortTranslationNatRule）用于修改NAT閘道端口轉發規則。
 
         :param request: Request instance for ModifyNatGatewayDestinationIpPortTranslationNatRule.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse`
 
         """
         try:
@@ -4957,8 +4957,8 @@ class VpcClient(AbstractClient):
         """本介面(ModifyNetDetect)用于修改網絡探測參數。
 
         :param request: Request instance for ModifyNetDetect.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyNetDetectRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyNetDetectResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyNetDetectRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyNetDetectResponse`
 
         """
         try:
@@ -4985,8 +4985,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyNetworkAclAttribute）用于修改網絡ACL屬性。
 
         :param request: Request instance for ModifyNetworkAclAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyNetworkAclAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyNetworkAclAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyNetworkAclAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyNetworkAclAttributeResponse`
 
         """
         try:
@@ -5013,8 +5013,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyNetworkAclEntries）用于修改（包括添加和删除）網絡ACL的入站規則和出站規則。
 
         :param request: Request instance for ModifyNetworkAclEntries.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyNetworkAclEntriesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyNetworkAclEntriesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyNetworkAclEntriesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyNetworkAclEntriesResponse`
 
         """
         try:
@@ -5041,8 +5041,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyNetworkInterfaceAttribute）用于修改彈性網卡屬性。
 
         :param request: Request instance for ModifyNetworkInterfaceAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyNetworkInterfaceAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyNetworkInterfaceAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyNetworkInterfaceAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyNetworkInterfaceAttributeResponse`
 
         """
         try:
@@ -5069,8 +5069,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyPrivateIpAddressesAttribute）用于修改彈性網卡内網IP屬性。
 
         :param request: Request instance for ModifyPrivateIpAddressesAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyPrivateIpAddressesAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyPrivateIpAddressesAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyPrivateIpAddressesAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyPrivateIpAddressesAttributeResponse`
 
         """
         try:
@@ -5097,8 +5097,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyRouteTableAttribute）用于修改路由表（RouteTable）屬性。
 
         :param request: Request instance for ModifyRouteTableAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyRouteTableAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyRouteTableAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyRouteTableAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyRouteTableAttributeResponse`
 
         """
         try:
@@ -5125,8 +5125,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifySecurityGroupAttribute）用于修改安全組（SecurityGroupPolicy）屬性。
 
         :param request: Request instance for ModifySecurityGroupAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifySecurityGroupAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifySecurityGroupAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifySecurityGroupAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifySecurityGroupAttributeResponse`
 
         """
         try:
@@ -5163,8 +5163,8 @@ class VpcClient(AbstractClient):
         * CidrBlock, Ipv6CidrBlock, SecurityGroupId, AddressTemplate四者是排他關系，不允許同時輸入，Protocol + Port和ServiceTemplate二者是排他關系，不允許同時輸入。
 
         :param request: Request instance for ModifySecurityGroupPolicies.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifySecurityGroupPoliciesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifySecurityGroupPoliciesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifySecurityGroupPoliciesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifySecurityGroupPoliciesResponse`
 
         """
         try:
@@ -5191,8 +5191,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyServiceTemplateAttribute）用于修改協議端口範本
 
         :param request: Request instance for ModifyServiceTemplateAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyServiceTemplateAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyServiceTemplateAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyServiceTemplateAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyServiceTemplateAttributeResponse`
 
         """
         try:
@@ -5219,8 +5219,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyServiceTemplateGroupAttribute）用于修改協議端口範本集合。
 
         :param request: Request instance for ModifyServiceTemplateGroupAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyServiceTemplateGroupAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyServiceTemplateGroupAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyServiceTemplateGroupAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyServiceTemplateGroupAttributeResponse`
 
         """
         try:
@@ -5247,8 +5247,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifySubnetAttribute）用于修改子網屬性。
 
         :param request: Request instance for ModifySubnetAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifySubnetAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifySubnetAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifySubnetAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifySubnetAttributeResponse`
 
         """
         try:
@@ -5275,8 +5275,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyVpcAttribute）用于修改私有網絡（VPC）的相關屬性。
 
         :param request: Request instance for ModifyVpcAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyVpcAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyVpcAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyVpcAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyVpcAttributeResponse`
 
         """
         try:
@@ -5303,8 +5303,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyVpnConnectionAttribute）用于修改VPN通道。
 
         :param request: Request instance for ModifyVpnConnectionAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyVpnConnectionAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyVpnConnectionAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyVpnConnectionAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyVpnConnectionAttributeResponse`
 
         """
         try:
@@ -5331,8 +5331,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyVpnGatewayAttribute）用于修改VPN閘道屬性。
 
         :param request: Request instance for ModifyVpnGatewayAttribute.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyVpnGatewayAttributeRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyVpnGatewayAttributeResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyVpnGatewayAttributeRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyVpnGatewayAttributeResponse`
 
         """
         try:
@@ -5359,8 +5359,8 @@ class VpcClient(AbstractClient):
         """本介面（ModifyVpnGatewayCcnRoutes）用于修改VPN閘道雲聯網路由
 
         :param request: Request instance for ModifyVpnGatewayCcnRoutes.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ModifyVpnGatewayCcnRoutesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ModifyVpnGatewayCcnRoutesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyVpnGatewayCcnRoutesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ModifyVpnGatewayCcnRoutesResponse`
 
         """
         try:
@@ -5387,8 +5387,8 @@ class VpcClient(AbstractClient):
         """本介面（RejectAttachCcnInstances）用于跨賬号關聯實例時，雲聯網所有者拒絕關聯操作。
 
         :param request: Request instance for RejectAttachCcnInstances.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.RejectAttachCcnInstancesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.RejectAttachCcnInstancesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.RejectAttachCcnInstancesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.RejectAttachCcnInstancesResponse`
 
         """
         try:
@@ -5412,13 +5412,13 @@ class VpcClient(AbstractClient):
 
 
     def ReleaseAddresses(self, request):
-        """本介面 (ReleaseAddresses) 用于釋放一個或多個[彈性公網IP](https://cloud.tencent.com/document/product/213/1941)（簡稱 EIP）。
+        """本介面 (ReleaseAddresses) 用于釋放一個或多個[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）。
         * 該操作不可逆，釋放後 EIP 關聯的 IP 網址将不再屬于您的名下。
         * 只有狀态爲 UNBIND 的 EIP 才能進行釋放操作。
 
         :param request: Request instance for ReleaseAddresses.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ReleaseAddressesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ReleaseAddressesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ReleaseAddressesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ReleaseAddressesResponse`
 
         """
         try:
@@ -5445,8 +5445,8 @@ class VpcClient(AbstractClient):
         """該介面用于給彈性公網IPv6網址釋放頻寬。
 
         :param request: Request instance for ReleaseIp6AddressesBandwidth.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ReleaseIp6AddressesBandwidthRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ReleaseIp6AddressesBandwidthResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ReleaseIp6AddressesBandwidthRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ReleaseIp6AddressesBandwidthResponse`
 
         """
         try:
@@ -5470,11 +5470,11 @@ class VpcClient(AbstractClient):
 
 
     def RemoveBandwidthPackageResources(self, request):
-        """介面用于删除頻寬包資源，包括[彈性公網IP](https://cloud.tencent.com/document/product/213/1941)和[負載均衡](https://cloud.tencent.com/document/product/214/517)等
+        """介面用于删除頻寬包資源，包括[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)和[負載均衡](https://cloud.taifucloud.com/document/product/214/517)等
 
         :param request: Request instance for RemoveBandwidthPackageResources.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.RemoveBandwidthPackageResourcesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.RemoveBandwidthPackageResourcesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.RemoveBandwidthPackageResourcesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.RemoveBandwidthPackageResourcesResponse`
 
         """
         try:
@@ -5502,8 +5502,8 @@ class VpcClient(AbstractClient):
         2. 支援批次删除同一個轉換實例下的多個轉換規則
 
         :param request: Request instance for RemoveIp6Rules.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.RemoveIp6RulesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.RemoveIp6RulesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.RemoveIp6RulesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.RemoveIp6RulesResponse`
 
         """
         try:
@@ -5530,8 +5530,8 @@ class VpcClient(AbstractClient):
         """本介面（RenewVpnGateway）用于預付費（包年包月）VPN閘道續約。目前只支援IPSEC閘道。
 
         :param request: Request instance for RenewVpnGateway.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.RenewVpnGatewayRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.RenewVpnGatewayResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.RenewVpnGatewayRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.RenewVpnGatewayResponse`
 
         """
         try:
@@ -5558,8 +5558,8 @@ class VpcClient(AbstractClient):
         """本介面（ReplaceDirectConnectGatewayCcnRoutes）根據路由ID（RouteId）修改指定的路由（Route），支援批次修改。
 
         :param request: Request instance for ReplaceDirectConnectGatewayCcnRoutes.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ReplaceDirectConnectGatewayCcnRoutesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ReplaceDirectConnectGatewayCcnRoutesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ReplaceDirectConnectGatewayCcnRoutesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ReplaceDirectConnectGatewayCcnRoutesResponse`
 
         """
         try:
@@ -5587,8 +5587,8 @@ class VpcClient(AbstractClient):
         * 一個子網只能關聯一個路由表。
 
         :param request: Request instance for ReplaceRouteTableAssociation.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ReplaceRouteTableAssociationRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ReplaceRouteTableAssociationResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ReplaceRouteTableAssociationRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ReplaceRouteTableAssociationResponse`
 
         """
         try:
@@ -5615,8 +5615,8 @@ class VpcClient(AbstractClient):
         """本介面（ReplaceRoutes）根據路由策略ID（RouteId）修改指定的路由策略（Route），支援批次修改。
 
         :param request: Request instance for ReplaceRoutes.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ReplaceRoutesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ReplaceRoutesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ReplaceRoutesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ReplaceRoutesResponse`
 
         """
         try:
@@ -5644,8 +5644,8 @@ class VpcClient(AbstractClient):
         單個請求中只能替換單個方向的一條規則, 必須要指定索引（PolicyIndex）。
 
         :param request: Request instance for ReplaceSecurityGroupPolicy.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ReplaceSecurityGroupPolicyRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ReplaceSecurityGroupPolicyResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ReplaceSecurityGroupPolicyRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ReplaceSecurityGroupPolicyResponse`
 
         """
         try:
@@ -5672,8 +5672,8 @@ class VpcClient(AbstractClient):
         """本介面（ResetAttachCcnInstances）用于跨賬号關聯實例申請過期時，重新申請關聯操作。
 
         :param request: Request instance for ResetAttachCcnInstances.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ResetAttachCcnInstancesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ResetAttachCcnInstancesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ResetAttachCcnInstancesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ResetAttachCcnInstancesResponse`
 
         """
         try:
@@ -5700,8 +5700,8 @@ class VpcClient(AbstractClient):
         """本介面（ResetNatGatewayConnection）用來NAT閘道并發連接上限。
 
         :param request: Request instance for ResetNatGatewayConnection.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ResetNatGatewayConnectionRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ResetNatGatewayConnectionResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ResetNatGatewayConnectionRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ResetNatGatewayConnectionResponse`
 
         """
         try:
@@ -5729,8 +5729,8 @@ class VpcClient(AbstractClient):
         注意: 調用本介面是先删除當前路由表中所有路由策略, 再保存新提交的路由策略内容, 會引起網絡中斷。
 
         :param request: Request instance for ResetRoutes.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ResetRoutesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ResetRoutesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ResetRoutesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ResetRoutesResponse`
 
         """
         try:
@@ -5757,8 +5757,8 @@ class VpcClient(AbstractClient):
         """本介面(ResetVpnConnection)用于重置VPN通道。
 
         :param request: Request instance for ResetVpnConnection.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ResetVpnConnectionRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ResetVpnConnectionResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ResetVpnConnectionRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ResetVpnConnectionResponse`
 
         """
         try:
@@ -5785,8 +5785,8 @@ class VpcClient(AbstractClient):
         """本介面（ResetVpnGatewayInternetMaxBandwidth）調整VPN閘道頻寬上限。目前支援升級配置，如果是包年包月VPN閘道需要在有效期内。
 
         :param request: Request instance for ResetVpnGatewayInternetMaxBandwidth.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.ResetVpnGatewayInternetMaxBandwidthRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.ResetVpnGatewayInternetMaxBandwidthResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.ResetVpnGatewayInternetMaxBandwidthRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.ResetVpnGatewayInternetMaxBandwidthResponse`
 
         """
         try:
@@ -5813,8 +5813,8 @@ class VpcClient(AbstractClient):
         """本介面（SetCcnRegionBandwidthLimits）用于設置雲聯網（CCN）各地域出頻寬上限，該介面只能設置已關聯網絡實例包含的地域的出頻寬上限
 
         :param request: Request instance for SetCcnRegionBandwidthLimits.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.SetCcnRegionBandwidthLimitsRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.SetCcnRegionBandwidthLimitsResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.SetCcnRegionBandwidthLimitsRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.SetCcnRegionBandwidthLimitsResponse`
 
         """
         try:
@@ -5838,12 +5838,12 @@ class VpcClient(AbstractClient):
 
 
     def TransformAddress(self, request):
-        """本介面 (TransformAddress) 用于将實例的普通公網 IP 轉換爲[彈性公網IP](https://cloud.tencent.com/document/product/213/1941)（簡稱 EIP）。
-        * 平台對用戶每地域每日解綁 EIP 重新分配普通公網 IP 次數有所限制（可參見 [EIP 産品簡介](/document/product/213/1941)）。上述配額可通過 [DescribeAddressQuota](https://cloud.tencent.com/document/api/213/1378) 介面獲取。
+        """本介面 (TransformAddress) 用于将實例的普通公網 IP 轉換爲[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）。
+        * 平台對用戶每地域每日解綁 EIP 重新分配普通公網 IP 次數有所限制（可參見 [EIP 産品簡介](/document/product/213/1941)）。上述配額可通過 [DescribeAddressQuota](https://cloud.taifucloud.com/document/api/213/1378) 介面獲取。
 
         :param request: Request instance for TransformAddress.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.TransformAddressRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.TransformAddressResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.TransformAddressRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.TransformAddressResponse`
 
         """
         try:
@@ -5871,8 +5871,8 @@ class VpcClient(AbstractClient):
         本介面是異步完成，如需查詢異步任務執行結果，請使用本介面返回的`RequestId`輪詢`QueryTask`介面。
 
         :param request: Request instance for UnassignIpv6Addresses.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.UnassignIpv6AddressesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.UnassignIpv6AddressesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.UnassignIpv6AddressesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.UnassignIpv6AddressesResponse`
 
         """
         try:
@@ -5900,8 +5900,8 @@ class VpcClient(AbstractClient):
         網段如果還有IP占用且未回收，則網段無法釋放。
 
         :param request: Request instance for UnassignIpv6CidrBlock.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.UnassignIpv6CidrBlockRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.UnassignIpv6CidrBlockResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.UnassignIpv6CidrBlockRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.UnassignIpv6CidrBlockResponse`
 
         """
         try:
@@ -5929,8 +5929,8 @@ class VpcClient(AbstractClient):
         子網段如果還有IP占用且未回收，則子網段無法釋放。
 
         :param request: Request instance for UnassignIpv6SubnetCidrBlock.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.UnassignIpv6SubnetCidrBlockRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.UnassignIpv6SubnetCidrBlockResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.UnassignIpv6SubnetCidrBlockRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.UnassignIpv6SubnetCidrBlockResponse`
 
         """
         try:
@@ -5958,8 +5958,8 @@ class VpcClient(AbstractClient):
         * 退還彈性網卡上的輔助内網IP，介面自動解關聯彈性公網 IP。不能退還彈性網卡的主内網IP。
 
         :param request: Request instance for UnassignPrivateIpAddresses.
-        :type request: :class:`tencentcloud.vpc.v20170312.models.UnassignPrivateIpAddressesRequest`
-        :rtype: :class:`tencentcloud.vpc.v20170312.models.UnassignPrivateIpAddressesResponse`
+        :type request: :class:`taifucloudcloud.vpc.v20170312.models.UnassignPrivateIpAddressesRequest`
+        :rtype: :class:`taifucloudcloud.vpc.v20170312.models.UnassignPrivateIpAddressesResponse`
 
         """
         try:

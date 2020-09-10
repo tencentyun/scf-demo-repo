@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class BankCardVerificationRequest(AbstractModel):
@@ -91,7 +91,7 @@ class DetectAuthRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param RuleId: 用于細分客戶使用場景，由騰訊側在線下對接時分配。
+        :param RuleId: 用于細分客戶使用場景，由 側在線下對接時分配。
         :type RuleId: str
         :param TerminalType: 本介面不需要傳遞此參數。
         :type TerminalType: str
@@ -134,7 +134,7 @@ class DetectAuthResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Url: 用于發起核身流程的URL，僅微信H5場景使用。
+        :param Url: 用于發起核身流程的URL，僅 H5場景使用。
         :type Url: str
         :param BizToken: 一次核身流程的标識，有效時間爲7,200秒；
 完成核身後，可用該标識獲取驗證結果訊息。
@@ -189,7 +189,7 @@ class GetDetectInfoRequest(AbstractModel):
         """
         :param BizToken: 人臉核身流程的标識，調用DetectAuth介面時生成。
         :type BizToken: str
-        :param RuleId: 用于細分客戶使用場景，由騰訊側在線下對接時分配。
+        :param RuleId: 用于細分客戶使用場景，由 側在線下對接時分配。
         :type RuleId: str
         :param InfoType: 指定拉取的結果訊息，取值（0：全部；1：文本類；2：身份證正反面；3：視訊最佳截圖照片；4：視訊）。
 如 134表示拉取文本類、視訊最佳截圖照片、視訊。

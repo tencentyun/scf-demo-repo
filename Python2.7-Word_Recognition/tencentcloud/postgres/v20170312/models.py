@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AccountInfo(AbstractModel):
@@ -114,9 +114,9 @@ class CreateDBInstancesRequest(AbstractModel):
         :type ProjectId: int
         :param InstanceChargeType: 實例計費類型。目前只支援：PREPAID（預付費，即包年包月）。
         :type InstanceChargeType: str
-        :param AutoVoucher: 是否自動使用代金券。1（是），0（否），預設不使用。
+        :param AutoVoucher: 是否自動使用 。1（是），0（否），預設不使用。
         :type AutoVoucher: int
-        :param VoucherIds: 代金券ID清單，目前僅支援指定一張代金券。
+        :param VoucherIds:  ID清單，目前僅支援指定一張 。
         :type VoucherIds: list of str
         :param VpcId: 私有網絡ID。
         :type VpcId: str
@@ -599,7 +599,7 @@ class DescribeDBInstanceAttributeResponse(AbstractModel):
     def __init__(self):
         """
         :param DBInstance: 實例詳細訊息。
-        :type DBInstance: :class:`tencentcloud.postgres.v20170312.models.DBInstance`
+        :type DBInstance: :class:`taifucloudcloud.postgres.v20170312.models.DBInstance`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -729,7 +729,7 @@ class DescribeDBSlowlogsResponse(AbstractModel):
         :param TotalCount: 本次返回多少條數據
         :type TotalCount: int
         :param Detail: 慢查詢日志詳情
-        :type Detail: :class:`tencentcloud.postgres.v20170312.models.SlowlogDetail`
+        :type Detail: :class:`taifucloudcloud.postgres.v20170312.models.SlowlogDetail`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1549,9 +1549,9 @@ class RenewInstanceRequest(AbstractModel):
         :type DBInstanceId: str
         :param Period: 續約多少個月
         :type Period: int
-        :param AutoVoucher: 是否自動使用代金券,1是,0否，預設不使用
+        :param AutoVoucher: 是否自動使用 ,1是,0否，預設不使用
         :type AutoVoucher: int
-        :param VoucherIds: 代金券ID清單，目前僅支援指定一張代金券
+        :param VoucherIds:  ID清單，目前僅支援指定一張 
         :type VoucherIds: list of str
         """
         self.DBInstanceId = None
@@ -1832,9 +1832,9 @@ class UpgradeDBInstanceRequest(AbstractModel):
         :type Storage: int
         :param DBInstanceId: 實例ID，形如postgres-lnp6j617
         :type DBInstanceId: str
-        :param AutoVoucher: 是否自動使用代金券,1是,0否，預設不使用
+        :param AutoVoucher: 是否自動使用 ,1是,0否，預設不使用
         :type AutoVoucher: int
-        :param VoucherIds: 代金券ID清單，目前僅支援指定一張代金券
+        :param VoucherIds:  ID清單，目前僅支援指定一張 
         :type VoucherIds: list of str
         """
         self.Memory = None

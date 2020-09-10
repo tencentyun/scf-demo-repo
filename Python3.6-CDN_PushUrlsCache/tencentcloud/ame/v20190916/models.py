@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Album(AbstractModel):
@@ -104,9 +104,9 @@ class DescribeItemsRequest(AbstractModel):
         :type Offset: int
         :param Limit: 條數，必須大于0，最大值爲30
         :type Limit: int
-        :param CategoryId: （電台/歌單）ID，CategoryId和CategoryCode兩個必傳1個，可以從<a href="https://cloud.tencent.com/document/product/1155/40109">獲取分類内容（Station）清單介面</a>中獲取。
+        :param CategoryId: （電台/歌單）ID，CategoryId和CategoryCode兩個必傳1個，可以從<a href="https://cloud.taifucloud.com/document/product/1155/40109">獲取分類内容（Station）清單介面</a>中獲取。
         :type CategoryId: str
-        :param CategoryCode: （電台/歌單）ID，CategoryId和CategoryCode兩個必傳1個，可以從<a href="https://cloud.tencent.com/document/product/1155/40109">獲取分類内容（Station）清單介面</a>中獲取。
+        :param CategoryCode: （電台/歌單）ID，CategoryId和CategoryCode兩個必傳1個，可以從<a href="https://cloud.taifucloud.com/document/product/1155/40109">獲取分類内容（Station）清單介面</a>中獲取。
         :type CategoryCode: str
         """
         self.Offset = None
@@ -196,7 +196,7 @@ class DescribeLyricResponse(AbstractModel):
         """
         :param Lyric: 歌詞詳情
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Lyric: :class:`tencentcloud.ame.v20190916.models.Lyric`
+        :type Lyric: :class:`taifucloudcloud.ame.v20190916.models.Lyric`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -250,7 +250,7 @@ class DescribeMusicResponse(AbstractModel):
         """
         :param Music: 音樂相關訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Music: :class:`tencentcloud.ame.v20190916.models.Music`
+        :type Music: :class:`taifucloudcloud.ame.v20190916.models.Music`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -363,10 +363,10 @@ class Item(AbstractModel):
         :type ItemID: str
         :param DataInfo: Song info
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type DataInfo: :class:`tencentcloud.ame.v20190916.models.DataInfo`
+        :type DataInfo: :class:`taifucloudcloud.ame.v20190916.models.DataInfo`
         :param Album: 專輯訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Album: :class:`tencentcloud.ame.v20190916.models.Album`
+        :type Album: :class:`taifucloudcloud.ame.v20190916.models.Album`
         :param Artists: 多個歌手集合
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Artists: list of Artist

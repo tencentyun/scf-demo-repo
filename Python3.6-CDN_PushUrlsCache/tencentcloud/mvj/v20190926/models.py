@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Data(AbstractModel):
@@ -26,7 +26,7 @@ class Data(AbstractModel):
         :param PostTime: 操作時間戳，單位秒
         :type PostTime: int
         :param Uid: 用戶ID 
-accountType不同對應不同的用戶ID。如果是QQ或微信用戶則填入對應的openId
+accountType不同對應不同的用戶ID。如果是 或 用戶則填入對應的openId
         :type Uid: str
         :param UserIp: 操作來源的外網IP
         :type UserIp: str
@@ -94,7 +94,7 @@ class MarketingValueJudgementResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 返回數據
-        :type Data: :class:`tencentcloud.mvj.v20190926.models.Data`
+        :type Data: :class:`taifucloudcloud.mvj.v20190926.models.Data`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

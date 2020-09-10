@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.solar.v20181011 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.solar.v20181011 import models
 
 
 class SolarClient(AbstractClient):
     _apiVersion = '2018-10-11'
-    _endpoint = 'solar.tencentcloudapi.com'
+    _endpoint = 'solar.taifucloudcloudapi.com'
 
 
     def CheckStaffChUser(self, request):
         """員工管道更改員工狀态
 
         :param request: Request instance for CheckStaffChUser.
-        :type request: :class:`tencentcloud.solar.v20181011.models.CheckStaffChUserRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.CheckStaffChUserResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.CheckStaffChUserRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.CheckStaffChUserResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class SolarClient(AbstractClient):
         """複制活動管道的策略
 
         :param request: Request instance for CopyActivityChannel.
-        :type request: :class:`tencentcloud.solar.v20181011.models.CopyActivityChannelRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.CopyActivityChannelResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.CopyActivityChannelRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.CopyActivityChannelResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class SolarClient(AbstractClient):
         """創建項目
 
         :param request: Request instance for CreateProject.
-        :type request: :class:`tencentcloud.solar.v20181011.models.CreateProjectRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.CreateProjectResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.CreateProjectRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.CreateProjectResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class SolarClient(AbstractClient):
         """創建子項目
 
         :param request: Request instance for CreateSubProject.
-        :type request: :class:`tencentcloud.solar.v20181011.models.CreateSubProjectRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.CreateSubProjectResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.CreateSubProjectRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.CreateSubProjectResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class SolarClient(AbstractClient):
         """删除項目
 
         :param request: Request instance for DeleteProject.
-        :type request: :class:`tencentcloud.solar.v20181011.models.DeleteProjectRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.DeleteProjectResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.DeleteProjectRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.DeleteProjectResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class SolarClient(AbstractClient):
         """客戶檔案查詢客戶詳情
 
         :param request: Request instance for DescribeCustomer.
-        :type request: :class:`tencentcloud.solar.v20181011.models.DescribeCustomerRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.DescribeCustomerResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.DescribeCustomerRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.DescribeCustomerResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class SolarClient(AbstractClient):
         """查詢客戶檔案清單
 
         :param request: Request instance for DescribeCustomers.
-        :type request: :class:`tencentcloud.solar.v20181011.models.DescribeCustomersRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.DescribeCustomersResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.DescribeCustomersRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.DescribeCustomersResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class SolarClient(AbstractClient):
         """項目詳情展示
 
         :param request: Request instance for DescribeProject.
-        :type request: :class:`tencentcloud.solar.v20181011.models.DescribeProjectRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.DescribeProjectResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.DescribeProjectRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.DescribeProjectResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class SolarClient(AbstractClient):
         """項目庫存詳情
 
         :param request: Request instance for DescribeProjectStock.
-        :type request: :class:`tencentcloud.solar.v20181011.models.DescribeProjectStockRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.DescribeProjectStockResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.DescribeProjectStockRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.DescribeProjectStockResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class SolarClient(AbstractClient):
         """項目清單展示
 
         :param request: Request instance for DescribeProjects.
-        :type request: :class:`tencentcloud.solar.v20181011.models.DescribeProjectsRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.DescribeProjectsResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.DescribeProjectsRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.DescribeProjectsResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class SolarClient(AbstractClient):
         """素材查詢服務号範本的清單（樣例）
 
         :param request: Request instance for DescribeResourceTemplateHeaders.
-        :type request: :class:`tencentcloud.solar.v20181011.models.DescribeResourceTemplateHeadersRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.DescribeResourceTemplateHeadersResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.DescribeResourceTemplateHeadersRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.DescribeResourceTemplateHeadersResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class SolarClient(AbstractClient):
         """子項目詳情
 
         :param request: Request instance for DescribeSubProject.
-        :type request: :class:`tencentcloud.solar.v20181011.models.DescribeSubProjectRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.DescribeSubProjectResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.DescribeSubProjectRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.DescribeSubProjectResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class SolarClient(AbstractClient):
         """把審批中的工單置爲已失效
 
         :param request: Request instance for ExpireFlow.
-        :type request: :class:`tencentcloud.solar.v20181011.models.ExpireFlowRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.ExpireFlowResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.ExpireFlowRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.ExpireFlowResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class SolarClient(AbstractClient):
         """修改項目
 
         :param request: Request instance for ModifyProject.
-        :type request: :class:`tencentcloud.solar.v20181011.models.ModifyProjectRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.ModifyProjectResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.ModifyProjectRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.ModifyProjectResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class SolarClient(AbstractClient):
         """下線項目
 
         :param request: Request instance for OffLineProject.
-        :type request: :class:`tencentcloud.solar.v20181011.models.OffLineProjectRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.OffLineProjectResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.OffLineProjectRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.OffLineProjectResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class SolarClient(AbstractClient):
         """補充子項目庫存
 
         :param request: Request instance for ReplenishProjectStock.
-        :type request: :class:`tencentcloud.solar.v20181011.models.ReplenishProjectStockRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.ReplenishProjectStockResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.ReplenishProjectStockRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.ReplenishProjectStockResponse`
 
         """
         try:
@@ -474,11 +474,11 @@ class SolarClient(AbstractClient):
 
 
     def SendWxTouchTask(self, request):
-        """發送企業微信觸達任務
+        """發送企業 觸達任務
 
         :param request: Request instance for SendWxTouchTask.
-        :type request: :class:`tencentcloud.solar.v20181011.models.SendWxTouchTaskRequest`
-        :rtype: :class:`tencentcloud.solar.v20181011.models.SendWxTouchTaskResponse`
+        :type request: :class:`taifucloudcloud.solar.v20181011.models.SendWxTouchTaskRequest`
+        :rtype: :class:`taifucloudcloud.solar.v20181011.models.SendWxTouchTaskResponse`
 
         """
         try:

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class CallBackCdr(AbstractModel):
@@ -152,7 +152,7 @@ class CreateCallBackRequest(AbstractModel):
         :param LastCallId: 最後一次呼叫 callId，帶上該欄位以後，平台會參考該 callId 分配線路，優先不分配該 callId 通話線路（注：謹慎使用，這個會影響線路調度）
         :type LastCallId: str
         :param PreCallerHandle: 結構體，主叫呼叫預處理操作，根據不同操作确認是否呼通被叫。如需使用，本結構體需要與 keyList 結構體配合使用，此時這兩個參數都爲必填項
-        :type PreCallerHandle: :class:`tencentcloud.npp.v20190823.models.RreCallerHandle`
+        :type PreCallerHandle: :class:`taifucloudcloud.npp.v20190823.models.RreCallerHandle`
         :param OrderId: 訂單 ID，最大長度不超過64個位元，對于一些有訂單狀态 App 相關應用使用（如達人幫接入 App 應用)，該欄位只在帳單中帶上，其它回調不附帶該欄位
         :type OrderId: str
         """
@@ -651,11 +651,11 @@ class GetVirtualNumRequest(AbstractModel):
         :type Src: str
         :param AccreditList: {“accreditList”:[“008613631686024”,”008612345678910”]}，主要用于 N-1 場景，号碼綁定非共享是獨占型，指定了 dst 獨占中間号綁定，accreditList 表示這個清單成員可以撥打 dst 綁 定的中間号，預設值爲空，表示所有号碼都可以撥打獨占型中間号綁定，最大集合不允許超過 30 個，僅适用于xb模式
         :type AccreditList: list of str
-        :param AssignVirtualNum: 指定中間号（格式：008617013541251），如果該中間号已被使用則返回綁定失敗。如果不帶該欄位則由騰訊側從号碼池裏自動分配
+        :param AssignVirtualNum: 指定中間号（格式：008617013541251），如果該中間号已被使用則返回綁定失敗。如果不帶該欄位則由 側從号碼池裏自動分配
         :type AssignVirtualNum: str
         :param Record: 是否錄音，0表示不錄音，1表示錄音。預設爲不錄音，注意如果需要錄音回調，通話完成後需要等待一段時間，收到錄音回調之後，再解綁中間号。
         :type Record: str
-        :param CityId: 主被叫顯号号碼歸屬地，指定該參數說明顯号歸屬該城市，如果沒有該城市号碼會随機選取一個城市或者後台配置返回107，返回碼詳見 《騰訊-中間号-城市id.xlsx》
+        :param CityId: 主被叫顯号号碼歸屬地，指定該參數說明顯号歸屬該城市，如果沒有該城市号碼會随機選取一個城市或者後台配置返回107，返回碼詳見 《 -中間号-城市id.xlsx》
         :type CityId: str
         :param BizId: 應用二級業務 ID，bizId 需保證在該 appId 下全局唯一，最大長度不超過 16 個位元。
         :type BizId: str

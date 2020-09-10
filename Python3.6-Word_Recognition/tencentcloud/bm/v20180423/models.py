@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class BindPsaTagRequest(AbstractModel):
@@ -65,11 +65,11 @@ class BuyDevicesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Zone: 可用區ID。通過介面[查詢地域以及可用區(DescribeRegions)](https://cloud.tencent.com/document/api/386/6634)獲取可用區訊息
+        :param Zone: 可用區ID。通過介面[查詢地域以及可用區(DescribeRegions)](https://cloud.taifucloud.com/document/api/386/6634)獲取可用區訊息
         :type Zone: str
-        :param OsTypeId: 佈署服務器的作業系統ID。通過介面[查詢作業系統訊息(DescribeOsInfo)](https://cloud.tencent.com/document/api/386/31964)獲取作業系統訊息
+        :param OsTypeId: 佈署服務器的作業系統ID。通過介面[查詢作業系統訊息(DescribeOsInfo)](https://cloud.taifucloud.com/document/api/386/31964)獲取作業系統訊息
         :type OsTypeId: int
-        :param RaidId: RAID類型ID。通過介面[查詢機型RAID方式以及系統盤大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/api/386/7370)獲取RAID訊息
+        :param RaidId: RAID類型ID。通過介面[查詢機型RAID方式以及系統盤大小(DescribeDeviceClassPartition)](https://cloud.taifucloud.com/document/api/386/7370)獲取RAID訊息
         :type RaidId: int
         :param GoodsCount: 購買數量
         :type GoodsCount: int
@@ -77,7 +77,7 @@ class BuyDevicesRequest(AbstractModel):
         :type VpcId: str
         :param SubnetId: 購買至子網ID
         :type SubnetId: str
-        :param DeviceClassCode: 購買的機型ID。通過介面[查詢設備型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/6636)獲取機型訊息
+        :param DeviceClassCode: 購買的機型ID。通過介面[查詢設備型号(DescribeDeviceClass)](https://cloud.taifucloud.com/document/api/386/6636)獲取機型訊息
         :type DeviceClassCode: str
         :param TimeUnit: 購買時長單位，取值：M(月) D(天)
         :type TimeUnit: str
@@ -107,9 +107,9 @@ class BuyDevicesRequest(AbstractModel):
         :type Password: str
         :param AutoRenewFlag: 自動續約标志位，取值：1(自動續約) 0(不自動續約)，預設取值0
         :type AutoRenewFlag: int
-        :param SysRootSpace: 系統盤根分區大小，單位爲G，預設取值10G。通過介面[查詢機型RAID方式以及系統盤大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/api/386/7370)獲取根分區訊息
+        :param SysRootSpace: 系統盤根分區大小，單位爲G，預設取值10G。通過介面[查詢機型RAID方式以及系統盤大小(DescribeDeviceClassPartition)](https://cloud.taifucloud.com/document/api/386/7370)獲取根分區訊息
         :type SysRootSpace: int
-        :param SysSwaporuefiSpace: 系統盤swap分區或/boot/efi分區的大小，單位爲G。若是uefi啓動的機器，分區爲/boot/efi，且此值是預設是2G。 普通機器爲swap分區，可以不指定此分區。 機型是否是uefi啓動，參見介面[查詢設備型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/6636)
+        :param SysSwaporuefiSpace: 系統盤swap分區或/boot/efi分區的大小，單位爲G。若是uefi啓動的機器，分區爲/boot/efi，且此值是預設是2G。 普通機器爲swap分區，可以不指定此分區。 機型是否是uefi啓動，參見介面[查詢設備型号(DescribeDeviceClass)](https://cloud.taifucloud.com/document/api/386/6636)
         :type SysSwaporuefiSpace: int
         :param SysUsrlocalSpace: /usr/local分區大小，單位爲G
         :type SysUsrlocalSpace: int
@@ -126,15 +126,15 @@ class BuyDevicesRequest(AbstractModel):
         :type CpuId: int
         :param ContainRaidCard: 是否有RAID卡，取值：1(有) 0(無)，自定義機型需要傳入
         :type ContainRaidCard: int
-        :param MemSize: 内存大小，單位爲G，自定義機型需要傳入。取值參考介面[查詢自定義機型部件訊息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/10968)返回值
+        :param MemSize: 内存大小，單位爲G，自定義機型需要傳入。取值參考介面[查詢自定義機型部件訊息(DescribeHardwareSpecification)](https://cloud.taifucloud.com/document/api/386/10968)返回值
         :type MemSize: int
-        :param SystemDiskTypeId: 系統盤ID，自定義機型需要傳入。取值參考介面[查詢自定義機型部件訊息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/10968)返回值
+        :param SystemDiskTypeId: 系統盤ID，自定義機型需要傳入。取值參考介面[查詢自定義機型部件訊息(DescribeHardwareSpecification)](https://cloud.taifucloud.com/document/api/386/10968)返回值
         :type SystemDiskTypeId: int
-        :param SystemDiskCount: 系統盤數量，自定義機型需要傳入。取值參考介面[查詢自定義機型部件訊息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/10968)返回值
+        :param SystemDiskCount: 系統盤數量，自定義機型需要傳入。取值參考介面[查詢自定義機型部件訊息(DescribeHardwareSpecification)](https://cloud.taifucloud.com/document/api/386/10968)返回值
         :type SystemDiskCount: int
-        :param DataDiskTypeId: 數據盤ID，自定義機型需要傳入。取值參考介面[查詢自定義機型部件訊息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/10968)返回值
+        :param DataDiskTypeId: 數據盤ID，自定義機型需要傳入。取值參考介面[查詢自定義機型部件訊息(DescribeHardwareSpecification)](https://cloud.taifucloud.com/document/api/386/10968)返回值
         :type DataDiskTypeId: int
-        :param DataDiskCount: 數據盤數量，自定義機型需要傳入。取值參考介面[查詢自定義機型部件訊息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/10968)返回值
+        :param DataDiskCount: 數據盤數量，自定義機型需要傳入。取值參考介面[查詢自定義機型部件訊息(DescribeHardwareSpecification)](https://cloud.taifucloud.com/document/api/386/10968)返回值
         :type DataDiskCount: int
         :param Tags: 綁定的标簽清單
         :type Tags: list of Tag
@@ -380,7 +380,7 @@ class CreateSpotDeviceRequest(AbstractModel):
         """
         :param Zone: 可用區名稱。如ap-guangzhou-bls-1, 通過DescribeRegions獲取
         :type Zone: str
-        :param ComputeType: 計算單元類型, 如v3.c2.medium，更詳細的ComputeType參考[競價實例産品文件](https://cloud.tencent.com/document/product/386/30256)
+        :param ComputeType: 計算單元類型, 如v3.c2.medium，更詳細的ComputeType參考[競價實例産品文件](https://cloud.taifucloud.com/document/product/386/30256)
         :type ComputeType: str
         :param OsTypeId: 作業系統類型ID
         :type OsTypeId: int
@@ -815,7 +815,7 @@ class DescribeDeviceClassPartitionRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param DeviceClassCode: 設備類型代号。代号通過介面[查詢設備型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/17602)查詢。标準機型需要傳入此參數
+        :param DeviceClassCode: 設備類型代号。代号通過介面[查詢設備型号(DescribeDeviceClass)](https://cloud.taifucloud.com/document/api/386/17602)查詢。标準機型需要傳入此參數
         :type DeviceClassCode: str
         :param InstanceId: 需要查詢自定義機型RAID訊息時，傳入自定義機型實例ID。InstanceId存在時DeviceClassCode失效
         :type InstanceId: str
@@ -1092,7 +1092,7 @@ class DescribeDevicePartitionResponse(AbstractModel):
     def __init__(self):
         """
         :param DevicePartition: 物理機分區格式
-        :type DevicePartition: :class:`tencentcloud.bm.v20180423.models.DevicePartition`
+        :type DevicePartition: :class:`taifucloudcloud.bm.v20180423.models.DevicePartition`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1236,7 +1236,7 @@ class DescribeDevicesRequest(AbstractModel):
         :type Offset: int
         :param Limit: 返回數量
         :type Limit: int
-        :param DeviceClassCode: 機型ID，通過介面[查詢設備型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/31968)查詢
+        :param DeviceClassCode: 機型ID，通過介面[查詢設備型号(DescribeDeviceClass)](https://cloud.taifucloud.com/document/api/386/31968)查詢
         :type DeviceClassCode: str
         :param InstanceIds: 設備ID數組
         :type InstanceIds: list of str
@@ -1617,7 +1617,7 @@ class DescribeRegionsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param RegionId: 地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-廣州， 19-重慶
+        :param RegionId: 地域整型ID，目前黑石可用地域包括：8- ，4- ，1- ， 19- 
         :type RegionId: int
         """
         self.RegionId = None
@@ -2280,9 +2280,9 @@ class DeviceInfo(AbstractModel):
         :param OperateStatus: 設備操作狀态ID，取值：
 <li>1：運作中</li><li>2：正在關機</li><li>3：已關機</li><li>5：正在開機</li><li>7：重啓中</li><li>9：重裝中</li><li>12：綁定EIP</li><li>13：解綁EIP</li><li>14：綁定LB</li><li>15：解綁LB</li><li>19：更換IP中</li><li>20：制作映像中</li><li>21：制作映像失敗</li>
         :type OperateStatus: int
-        :param OsTypeId: 作業系統ID，參考介面[查詢作業系統訊息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
+        :param OsTypeId: 作業系統ID，參考介面[查詢作業系統訊息(DescribeOsInfo)](https://cloud.taifucloud.com/document/product/386/32902)
         :type OsTypeId: int
-        :param RaidId: RAID類型ID，參考介面[查詢機型RAID方式以及系統盤大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
+        :param RaidId: RAID類型ID，參考介面[查詢機型RAID方式以及系統盤大小(DescribeDeviceClassPartition)](https://cloud.taifucloud.com/document/product/386/32910)
         :type RaidId: int
         :param Alias: 設備别名
         :type Alias: str

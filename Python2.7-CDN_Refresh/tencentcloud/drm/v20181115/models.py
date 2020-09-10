@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AddFairPlayPemRequest(AbstractModel):
@@ -149,7 +149,7 @@ class CreateLicenseRequest(AbstractModel):
 該值爲空時，預設授權所有track播放。
         :type Tracks: list of str
         :param PlaybackPolicy: 播放策略參數。
-        :type PlaybackPolicy: :class:`tencentcloud.drm.v20181115.models.PlaybackPolicy`
+        :type PlaybackPolicy: :class:`taifucloudcloud.drm.v20181115.models.PlaybackPolicy`
         """
         self.DrmType = None
         self.LicenseRequest = None
@@ -438,7 +438,7 @@ class DrmOutputObject(AbstractModel):
         :param ObjectName: 輸出的對象名稱。
         :type ObjectName: str
         :param Para: 輸出對象參數。
-        :type Para: :class:`tencentcloud.drm.v20181115.models.DrmOutputPara`
+        :type Para: :class:`taifucloudcloud.drm.v20181115.models.DrmOutputPara`
         """
         self.BucketName = None
         self.ObjectName = None
@@ -703,7 +703,7 @@ class StartEncryptionRequest(AbstractModel):
         :param DrmType: 使用的DRM方案類型，介面取值WIDEVINE,FAIRPLAY
         :type DrmType: str
         :param SourceObject: 儲存在COS上的原始内容訊息
-        :type SourceObject: :class:`tencentcloud.drm.v20181115.models.DrmSourceObject`
+        :type SourceObject: :class:`taifucloudcloud.drm.v20181115.models.DrmSourceObject`
         :param OutputObjects: 加密後的内容儲存到COS的對象
         :type OutputObjects: list of DrmOutputObject
         """

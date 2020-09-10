@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.chdfs.v20190718 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.chdfs.v20190718 import models
 
 
 class ChdfsClient(AbstractClient):
     _apiVersion = '2019-07-18'
-    _endpoint = 'chdfs.tencentcloudapi.com'
+    _endpoint = 'chdfs.taifucloudcloudapi.com'
 
 
     def CreateAccessGroup(self, request):
         """創建權限組。
 
         :param request: Request instance for CreateAccessGroup.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.CreateAccessGroupRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.CreateAccessGroupResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.CreateAccessGroupRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.CreateAccessGroupResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class ChdfsClient(AbstractClient):
         """批次創建權限規則，權限規則ID和創建時間無需填寫。
 
         :param request: Request instance for CreateAccessRules.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.CreateAccessRulesRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.CreateAccessRulesResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.CreateAccessRulesRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.CreateAccessRulesResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class ChdfsClient(AbstractClient):
         """創建文件系統（異步）。
 
         :param request: Request instance for CreateFileSystem.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.CreateFileSystemRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.CreateFileSystemResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.CreateFileSystemRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.CreateFileSystemResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class ChdfsClient(AbstractClient):
         """創建文件系統掛載點，僅限于創建成功的文件系統。
 
         :param request: Request instance for CreateMountPoint.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.CreateMountPointRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.CreateMountPointResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.CreateMountPointRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.CreateMountPointResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class ChdfsClient(AbstractClient):
         """删除權限組。
 
         :param request: Request instance for DeleteAccessGroup.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.DeleteAccessGroupRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.DeleteAccessGroupResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.DeleteAccessGroupRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.DeleteAccessGroupResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class ChdfsClient(AbstractClient):
         """批次删除權限規則。
 
         :param request: Request instance for DeleteAccessRules.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.DeleteAccessRulesRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.DeleteAccessRulesResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.DeleteAccessRulesRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.DeleteAccessRulesResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class ChdfsClient(AbstractClient):
         """删除文件系統，不允許删除非空文件系統。
 
         :param request: Request instance for DeleteFileSystem.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.DeleteFileSystemRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.DeleteFileSystemResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.DeleteFileSystemRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.DeleteFileSystemResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class ChdfsClient(AbstractClient):
         """删除掛載點。
 
         :param request: Request instance for DeleteMountPoint.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.DeleteMountPointRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.DeleteMountPointResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.DeleteMountPointRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.DeleteMountPointResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class ChdfsClient(AbstractClient):
         """檢視權限組清單。
 
         :param request: Request instance for DescribeAccessGroups.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.DescribeAccessGroupsRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.DescribeAccessGroupsResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.DescribeAccessGroupsRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.DescribeAccessGroupsResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class ChdfsClient(AbstractClient):
         """通過權限組ID檢視權限規則清單。
 
         :param request: Request instance for DescribeAccessRules.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.DescribeAccessRulesRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.DescribeAccessRulesResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.DescribeAccessRulesRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.DescribeAccessRulesResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class ChdfsClient(AbstractClient):
         """檢視文件系統詳細訊息。
 
         :param request: Request instance for DescribeFileSystem.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.DescribeFileSystemRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.DescribeFileSystemResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.DescribeFileSystemRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.DescribeFileSystemResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class ChdfsClient(AbstractClient):
         """檢視文件系統清單。
 
         :param request: Request instance for DescribeFileSystems.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.DescribeFileSystemsRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.DescribeFileSystemsResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.DescribeFileSystemsRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.DescribeFileSystemsResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class ChdfsClient(AbstractClient):
         """檢視掛載點詳細訊息。
 
         :param request: Request instance for DescribeMountPoint.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.DescribeMountPointRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.DescribeMountPointResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.DescribeMountPointRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.DescribeMountPointResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class ChdfsClient(AbstractClient):
         """通過文件系統ID或者權限組ID檢視掛載點清單。
 
         :param request: Request instance for DescribeMountPoints.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.DescribeMountPointsRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.DescribeMountPointsResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.DescribeMountPointsRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.DescribeMountPointsResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class ChdfsClient(AbstractClient):
         """修改權限組屬性。
 
         :param request: Request instance for ModifyAccessGroup.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.ModifyAccessGroupRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.ModifyAccessGroupResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.ModifyAccessGroupRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.ModifyAccessGroupResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class ChdfsClient(AbstractClient):
         """批次修改權限規則屬性，需要指定權限規則ID。
 
         :param request: Request instance for ModifyAccessRules.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.ModifyAccessRulesRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.ModifyAccessRulesResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.ModifyAccessRulesRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.ModifyAccessRulesResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class ChdfsClient(AbstractClient):
         """修改文件系統屬性，僅限于創建成功的文件系統。
 
         :param request: Request instance for ModifyFileSystem.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.ModifyFileSystemRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.ModifyFileSystemResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.ModifyFileSystemRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.ModifyFileSystemResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class ChdfsClient(AbstractClient):
         """修改掛載點屬性。
 
         :param request: Request instance for ModifyMountPoint.
-        :type request: :class:`tencentcloud.chdfs.v20190718.models.ModifyMountPointRequest`
-        :rtype: :class:`tencentcloud.chdfs.v20190718.models.ModifyMountPointResponse`
+        :type request: :class:`taifucloudcloud.chdfs.v20190718.models.ModifyMountPointRequest`
+        :rtype: :class:`taifucloudcloud.chdfs.v20190718.models.ModifyMountPointResponse`
 
         """
         try:

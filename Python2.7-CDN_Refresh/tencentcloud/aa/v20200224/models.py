@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class QueryActivityAntiRushRequest(AbstractModel):
@@ -23,20 +23,20 @@ class QueryActivityAntiRushRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AccountType: 用戶賬号類型（預設開通 QQ 開放賬号、手機号，手機 MD5 賬号類型查詢。如需使用微信開放賬号，則需要 提交工單 由Top Cloud 進行資格審核，審核通過後方可正常使用微信開放賬号）：
-1：QQ 開放帳号。
-2：微信開放賬号。
+        :param AccountType: 用戶賬号類型（預設開通   開放賬号、手機号，手機 MD5 賬号類型查詢。如需使用 開放賬号，則需要 提交工單 由Top Cloud 進行資格審核，審核通過後方可正常使用 開放賬号）：
+1：  開放帳号。
+2： 開放賬号。
 4：手機号。
 0：其他。
 10004：手機号 MD5。
         :type AccountType: str
-        :param Uid: 用戶 ID 不同的 accountType 對應不同的用戶 ID。如果是 QQ，則填入對應的 openid，微信用戶則填入對應的 openid/unionid，手機号則填入對應真實用戶手機号（如13123456789）。
+        :param Uid: 用戶 ID 不同的 accountType 對應不同的用戶 ID。如果是  ，則填入對應的 openid， 用戶則填入對應的 openid/unionid，手機号則填入對應真實用戶手機号（如13123456789）。
         :type Uid: str
         :param UserIp: 用戶的真實外網 IP。若填入非外網有效ip，會返回level=0的風控結果，risktype中會有205的風險碼返回作爲标識
         :type UserIp: str
         :param PostTime: 用戶操作時間戳。
         :type PostTime: str
-        :param AppIdU: accountType 是QQ開放賬号時，該參數必填，表示 QQ 開放平台分配給網站或應用的 AppID，用來唯一标識網站或應用。
+        :param AppIdU: accountType 是 開放賬号時，該參數必填，表示   開放平台分配給網站或應用的 AppID，用來唯一标識網站或應用。
         :type AppIdU: str
         :param NickName: 昵稱，UTF-8 編碼。
         :type NickName: str
@@ -55,9 +55,9 @@ class QueryActivityAntiRushRequest(AbstractModel):
         :param LoginSource: 登入來源：
 0：其他。
 1：PC 網頁。
-2：移動頁面。
+2： 頁面。
 3：App。
-4：微信公衆号。
+4： 公衆号。
         :type LoginSource: str
         :param LoginType: 登入方式：
 0：其他。
@@ -95,13 +95,13 @@ class QueryActivityAntiRushRequest(AbstractModel):
         :type AppVersion: str
         :param BusinessId: 業務 ID 網站或應用在多個業務中使用此服務，通過此 ID 區分統計數據。
         :type BusinessId: str
-        :param WxSubType: 1：微信公衆号。
-2：微信小程式。
+        :param WxSubType: 1： 公衆号。
+2： 小程式。
         :type WxSubType: str
-        :param RandNum: Token 簽名随機數，WxSubType爲微信小程式時必填，建議16個字元。
+        :param RandNum: Token 簽名随機數，WxSubType爲 小程式時必填，建議16個字元。
         :type RandNum: str
         :param WxToken: 如果 accountType爲2而且wxSubType有填，該欄位必選，否則不需要填寫；
-如果是微信小程式（WxSubType=2），該欄位爲以ssesion_key爲key去簽名随機數radnNum得到的值（ hmac_sha256簽名算法）；如果是微信公衆号或第三方登入，則爲授權的access_token（網頁版本的access_Token,而且獲取token的scope欄位必需填寫snsapi_userinfo；）
+如果是 小程式（WxSubType=2），該欄位爲以ssesion_key爲key去簽名随機數radnNum得到的值（ hmac_sha256簽名算法）；如果是 公衆号或第三方登入，則爲授權的access_token（網頁版本的access_Token,而且獲取token的scope欄位必需填寫snsapi_userinfo；）
         :type WxToken: str
         :param CheckDevice: 是否識别設備異常：
 0：不識别。
@@ -197,25 +197,25 @@ class QueryActivityAntiRushResponse(AbstractModel):
 
 1，賬号信用低，賬号近期存在因惡意被處罰曆史，網絡低活躍，被舉報等因素；
 2，垃圾賬号，疑似批次注冊小号，近期存在嚴重違規或大量舉報；
-3，無效賬号，送檢賬号參數無法成功解析，請檢查微信openid是否有誤 ，QQopenid是否與appidU對應，手機号是否有誤。
+3，無效賬号，送檢賬号參數無法成功解析，請檢查 openid是否有誤 ， openid是否與appidU對應，手機号是否有誤。
 4，黑名單，該賬号在業務側有過拉黑記錄
 5，白名單，該賬号在業務側有過加白名單記錄
 
 行爲風險：
 101，批次操作，存在ip/設備/環境等因素的聚集性異常；
 102，自動機，疑似自動機批次請求；
-104，微信登入态無效，檢查wxToken參數，是否已經失效；
+104， 登入态無效，檢查wxToken參數，是否已經失效；
 
 環境風險：
 201，環境異常，操作ip/設備/環境存在異常。當前ip爲非常用ip或惡意ip段；
 205，非公網有效ip，傳進來的IP網址爲内網ip網址或者ip保留網址；
 206，設備異常，該設備存在異常的使用行爲
         :type RiskType: list of int
-        :param AssociateAccount: accountType是QQ或微信開放賬号時，用于标識QQ或微信用戶登入後關聯業務自身的賬号ID
+        :param AssociateAccount: accountType是 或 開放賬号時，用于标識 或 用戶登入後關聯業務自身的賬号ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AssociateAccount: str
         :param Uid: 用戶ID 
-accountType不同對應不同的用戶ID。如果是QQ或微信用戶則填入對應的openId
+accountType不同對應不同的用戶ID。如果是 或 用戶則填入對應的openId
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Uid: str
         :param RootId: 用戶操作的目的ID 

@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AdInfo(AbstractModel):
@@ -389,7 +389,7 @@ class CreateCosSecKeyInstanceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param CosRegion: 地域訊息，例如廣州：ap-guangzhou，上海：ap-shanghai，預設爲廣州。
+        :param CosRegion: 地域訊息，例如 ：ap-guangzhou， ：ap-shanghai，預設爲 。
         :type CosRegion: str
         :param Duration: 金鑰有效時間，預設爲1小時。
         :type Duration: int
@@ -512,7 +512,7 @@ class CreateScanInstancesRequest(AbstractModel):
         :param AppInfos: 待掃描的app訊息清單，一次最多提交20個
         :type AppInfos: list of AppInfo
         :param ScanInfo: 掃描訊息
-        :type ScanInfo: :class:`tencentcloud.ms.v20180408.models.ScanInfo`
+        :type ScanInfo: :class:`taifucloudcloud.ms.v20180408.models.ScanInfo`
         """
         self.AppInfos = None
         self.ScanInfo = None
@@ -575,9 +575,9 @@ class CreateShieldInstanceRequest(AbstractModel):
     def __init__(self):
         """
         :param AppInfo: 待加固的應用訊息
-        :type AppInfo: :class:`tencentcloud.ms.v20180408.models.AppInfo`
+        :type AppInfo: :class:`taifucloudcloud.ms.v20180408.models.AppInfo`
         :param ServiceInfo: 加固服務訊息
-        :type ServiceInfo: :class:`tencentcloud.ms.v20180408.models.ServiceInfo`
+        :type ServiceInfo: :class:`taifucloudcloud.ms.v20180408.models.ServiceInfo`
         """
         self.AppInfo = None
         self.ServiceInfo = None
@@ -629,7 +629,7 @@ class CreateShieldPlanInstanceRequest(AbstractModel):
         :param PlanName: 策略名稱
         :type PlanName: str
         :param PlanInfo: 策略具體訊息
-        :type PlanInfo: :class:`tencentcloud.ms.v20180408.models.PlanInfo`
+        :type PlanInfo: :class:`taifucloudcloud.ms.v20180408.models.PlanInfo`
         """
         self.ResourceId = None
         self.PlanName = None
@@ -1041,11 +1041,11 @@ class DescribeShieldPlanInstanceResponse(AbstractModel):
     def __init__(self):
         """
         :param BindInfo: 綁定資源訊息
-        :type BindInfo: :class:`tencentcloud.ms.v20180408.models.BindInfo`
+        :type BindInfo: :class:`taifucloudcloud.ms.v20180408.models.BindInfo`
         :param ShieldPlanInfo: 加固策略訊息
-        :type ShieldPlanInfo: :class:`tencentcloud.ms.v20180408.models.ShieldPlanInfo`
+        :type ShieldPlanInfo: :class:`taifucloudcloud.ms.v20180408.models.ShieldPlanInfo`
         :param ResourceServiceInfo: 加固資源訊息
-        :type ResourceServiceInfo: :class:`tencentcloud.ms.v20180408.models.ResourceServiceInfo`
+        :type ResourceServiceInfo: :class:`taifucloudcloud.ms.v20180408.models.ResourceServiceInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1095,9 +1095,9 @@ class DescribeShieldResultResponse(AbstractModel):
         :param TaskStatus: 任務狀态: 1-已完成,2-處理中,3-處理出錯,4-處理超時
         :type TaskStatus: int
         :param AppDetailInfo: app加固前的詳細訊息
-        :type AppDetailInfo: :class:`tencentcloud.ms.v20180408.models.AppDetailInfo`
+        :type AppDetailInfo: :class:`taifucloudcloud.ms.v20180408.models.AppDetailInfo`
         :param ShieldInfo: app加固後的詳細訊息
-        :type ShieldInfo: :class:`tencentcloud.ms.v20180408.models.ShieldInfo`
+        :type ShieldInfo: :class:`taifucloudcloud.ms.v20180408.models.ShieldInfo`
         :param StatusDesc: 狀态描述
         :type StatusDesc: str
         :param StatusRef: 狀态指引
@@ -1196,7 +1196,7 @@ class PlanDetailInfo(AbstractModel):
         :param PlanName: 策略名稱
         :type PlanName: str
         :param PlanInfo: 策略訊息
-        :type PlanInfo: :class:`tencentcloud.ms.v20180408.models.PlanInfo`
+        :type PlanInfo: :class:`taifucloudcloud.ms.v20180408.models.PlanInfo`
         """
         self.IsDefault = None
         self.PlanId = None
@@ -1237,7 +1237,7 @@ class PlanInfo(AbstractModel):
         :param DexSig: Dex簽名校驗，0關閉，1開啓
         :type DexSig: int
         :param SoInfo: So文件訊息
-        :type SoInfo: :class:`tencentcloud.ms.v20180408.models.SoInfo`
+        :type SoInfo: :class:`taifucloudcloud.ms.v20180408.models.SoInfo`
         :param AntiVMP: vmp，0關閉，1開啓
         :type AntiVMP: int
         :param SoType: 保護so的強度，
@@ -1335,7 +1335,7 @@ class ResourceInfo(AbstractModel):
         :param IsBind: 0-未綁定，1-已綁定
         :type IsBind: int
         :param BindInfo: 用戶綁定app的基本訊息
-        :type BindInfo: :class:`tencentcloud.ms.v20180408.models.BindInfo`
+        :type BindInfo: :class:`taifucloudcloud.ms.v20180408.models.BindInfo`
         :param ResourceName: 資源名稱，如應用加固，漏洞掃描
         :type ResourceName: str
         """
@@ -1416,13 +1416,13 @@ class ScanSetInfo(AbstractModel):
         :param TaskStatus: 任務狀态: 1-已完成,2-處理中,3-處理出錯,4-處理超時
         :type TaskStatus: int
         :param AppDetailInfo: app訊息
-        :type AppDetailInfo: :class:`tencentcloud.ms.v20180408.models.AppDetailInfo`
+        :type AppDetailInfo: :class:`taifucloudcloud.ms.v20180408.models.AppDetailInfo`
         :param VirusInfo: 病毒訊息
-        :type VirusInfo: :class:`tencentcloud.ms.v20180408.models.VirusInfo`
+        :type VirusInfo: :class:`taifucloudcloud.ms.v20180408.models.VirusInfo`
         :param VulInfo: 漏洞訊息
-        :type VulInfo: :class:`tencentcloud.ms.v20180408.models.VulInfo`
+        :type VulInfo: :class:`taifucloudcloud.ms.v20180408.models.VulInfo`
         :param AdInfo: 廣告插件訊息
-        :type AdInfo: :class:`tencentcloud.ms.v20180408.models.AdInfo`
+        :type AdInfo: :class:`taifucloudcloud.ms.v20180408.models.AdInfo`
         :param TaskTime: 提交掃描的時間
         :type TaskTime: int
         :param StatusCode: 狀态碼，成功返回0，失敗返回錯誤碼

@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.cim.v20190318 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.cim.v20190318 import models
 
 
 class CimClient(AbstractClient):
     _apiVersion = '2019-03-18'
-    _endpoint = 'cim.tencentcloudapi.com'
+    _endpoint = 'cim.taifucloudcloudapi.com'
 
 
     def DescribeSdkAppid(self, request):
         """獲取雲通信IM中Top Cloud 賬号對應的SDKAppID
 
         :param request: 調用DescribeSdkAppid所需參數的結構體。
-        :type request: :class:`tencentcloud.cim.v20190318.models.DescribeSdkAppidRequest`
-        :rtype: :class:`tencentcloud.cim.v20190318.models.DescribeSdkAppidResponse`
+        :type request: :class:`taifucloudcloud.cim.v20190318.models.DescribeSdkAppidRequest`
+        :rtype: :class:`taifucloudcloud.cim.v20190318.models.DescribeSdkAppidResponse`
 
         """
         try:

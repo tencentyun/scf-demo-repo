@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class ArithmeticOCRRequest(AbstractModel):
@@ -658,19 +658,19 @@ class TextWaybill(AbstractModel):
     def __init__(self):
         """
         :param RecName: 收件人姓名
-        :type RecName: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
+        :type RecName: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         :param RecNum: 收件人手機号
-        :type RecNum: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
+        :type RecNum: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         :param RecAddr: 收件人網址
-        :type RecAddr: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
+        :type RecAddr: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         :param SenderName: 寄件人姓名
-        :type SenderName: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
+        :type SenderName: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         :param SenderNum: 寄件人手機号
-        :type SenderNum: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
+        :type SenderNum: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         :param SenderAddr: 寄件人網址
-        :type SenderAddr: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
+        :type SenderAddr: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         :param WaybillNum: 運單号
-        :type WaybillNum: :class:`tencentcloud.ocr.v20181119.models.WaybillObj`
+        :type WaybillNum: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         """
         self.RecName = None
         self.RecNum = None
@@ -791,7 +791,7 @@ class WaybillOCRResponse(AbstractModel):
         """
         :param TextDetections: 檢測到的文本訊息，具體内容請點擊左側連結。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TextDetections: :class:`tencentcloud.ocr.v20181119.models.TextWaybill`
+        :type TextDetections: :class:`taifucloudcloud.ocr.v20181119.models.TextWaybill`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

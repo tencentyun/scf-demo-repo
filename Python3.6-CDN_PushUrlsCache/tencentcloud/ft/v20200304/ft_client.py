@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.ft.v20200304 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.ft.v20200304 import models
 
 
 class FtClient(AbstractClient):
     _apiVersion = '2020-03-04'
-    _endpoint = 'ft.tencentcloudapi.com'
+    _endpoint = 'ft.taifucloudcloudapi.com'
 
 
     def ChangeAgePic(self, request):
         """用戶上傳一張人臉圖片，基于人臉編輯與生成算法，輸出一張人臉變老或變年輕的圖片，支援實現人臉不同年齡的變化。（目前暫只支援10歲，後續放開再通知）
 
         :param request: Request instance for ChangeAgePic.
-        :type request: :class:`tencentcloud.ft.v20200304.models.ChangeAgePicRequest`
-        :rtype: :class:`tencentcloud.ft.v20200304.models.ChangeAgePicResponse`
+        :type request: :class:`taifucloudcloud.ft.v20200304.models.ChangeAgePicRequest`
+        :rtype: :class:`taifucloudcloud.ft.v20200304.models.ChangeAgePicResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class FtClient(AbstractClient):
         """用戶上傳一張人臉圖片，基于人臉編輯與生成算法，輸出一張人臉性别轉換的圖片。男變女可實現美顔、淡妝、加劉海和長發的效果；女變男可實現加胡須、變短發的效果。
 
         :param request: Request instance for SwapGenderPic.
-        :type request: :class:`tencentcloud.ft.v20200304.models.SwapGenderPicRequest`
-        :rtype: :class:`tencentcloud.ft.v20200304.models.SwapGenderPicResponse`
+        :type request: :class:`taifucloudcloud.ft.v20200304.models.SwapGenderPicRequest`
+        :rtype: :class:`taifucloudcloud.ft.v20200304.models.SwapGenderPicResponse`
 
         """
         try:

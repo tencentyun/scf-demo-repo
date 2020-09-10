@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.dayu.v20180709 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.dayu.v20180709 import models
 
 
 class DayuClient(AbstractClient):
     _apiVersion = '2018-07-09'
-    _endpoint = 'dayu.tencentcloudapi.com'
+    _endpoint = 'dayu.taifucloudcloudapi.com'
 
 
     def CreateBasicDDoSAlarmThreshold(self, request):
         """設置基礎防護的DDoS告警阈值，只支援基礎防護産品
 
         :param request: Request instance for CreateBasicDDoSAlarmThreshold.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateBasicDDoSAlarmThresholdRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateBasicDDoSAlarmThresholdResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateBasicDDoSAlarmThresholdRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateBasicDDoSAlarmThresholdResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class DayuClient(AbstractClient):
         """綁定IP到高防包實例，支援獨享包、共享包；需要注意的是此介面綁定或解綁IP是異步介面，當處于綁定或解綁中時，則不允許再進行綁定或解綁，需要等待當前綁定或解除綁定完成。
 
         :param request: Request instance for CreateBoundIP.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateBoundIPRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateBoundIPResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateBoundIPRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateBoundIPResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class DayuClient(AbstractClient):
         """添加CC防護的訪問頻率控制規則
 
         :param request: Request instance for CreateCCFrequencyRules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateCCFrequencyRulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateCCFrequencyRulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateCCFrequencyRulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateCCFrequencyRulesResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class DayuClient(AbstractClient):
         """創建CC自定義策略
 
         :param request: Request instance for CreateCCSelfDefinePolicy.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateCCSelfDefinePolicyRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateCCSelfDefinePolicyResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateCCSelfDefinePolicyRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateCCSelfDefinePolicyResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class DayuClient(AbstractClient):
         """添加DDoS高級策略
 
         :param request: Request instance for CreateDDoSPolicy.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateDDoSPolicyRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateDDoSPolicyResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateDDoSPolicyRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateDDoSPolicyResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class DayuClient(AbstractClient):
         """添加策略場景
 
         :param request: Request instance for CreateDDoSPolicyCase.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateDDoSPolicyCaseRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateDDoSPolicyCaseResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateDDoSPolicyCaseRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateDDoSPolicyCaseResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class DayuClient(AbstractClient):
         """資源實例重命名，支援獨享包、共享包、高防IP、高防IP專業版；
 
         :param request: Request instance for CreateInstanceName.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateInstanceNameRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateInstanceNameResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateInstanceNameRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateInstanceNameResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class DayuClient(AbstractClient):
         """上傳四層健康檢查配置
 
         :param request: Request instance for CreateL4HealthConfig.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateL4HealthConfigRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateL4HealthConfigResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateL4HealthConfigRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateL4HealthConfigResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class DayuClient(AbstractClient):
         """添加L4轉發規則
 
         :param request: Request instance for CreateL4Rules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateL4RulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateL4RulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateL4RulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateL4RulesResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class DayuClient(AbstractClient):
         """此介面是7層CC的訪問頻控自定義規則（IP+Host維度，不支援具體的URI），此介面已棄用，請調用新介面CreateCCFrequencyRules，新介面同時支援IP+Host維度以及具體的URI；
 
         :param request: Request instance for CreateL7CCRule.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateL7CCRuleRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateL7CCRuleResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateL7CCRuleRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateL7CCRuleResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class DayuClient(AbstractClient):
         """上傳七層健康檢查配置
 
         :param request: Request instance for CreateL7HealthConfig.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateL7HealthConfigRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateL7HealthConfigResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateL7HealthConfigRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateL7HealthConfigResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class DayuClient(AbstractClient):
         """配置7層轉發規則的證書
 
         :param request: Request instance for CreateL7RuleCert.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateL7RuleCertRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateL7RuleCertResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateL7RuleCertRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateL7RuleCertResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class DayuClient(AbstractClient):
         """添加7層(網站)轉發規則
 
         :param request: Request instance for CreateL7Rules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateL7RulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateL7RulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateL7RulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateL7RulesResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class DayuClient(AbstractClient):
         """批次上傳7層轉發規則
 
         :param request: Request instance for CreateL7RulesUpload.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateL7RulesUploadRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateL7RulesUploadResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateL7RulesUploadRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateL7RulesUploadResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class DayuClient(AbstractClient):
         """高防IP專業版一鍵切回源站
 
         :param request: Request instance for CreateNetReturn.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateNetReturnRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateNetReturnResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateNetReturnRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateNetReturnResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class DayuClient(AbstractClient):
         """添加L4轉發規則
 
         :param request: Request instance for CreateNewL4Rules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateNewL4RulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateNewL4RulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateNewL4RulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateNewL4RulesResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class DayuClient(AbstractClient):
         """添加7層轉發規則
 
         :param request: Request instance for CreateNewL7Rules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateNewL7RulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateNewL7RulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateNewL7RulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateNewL7RulesResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class DayuClient(AbstractClient):
         """IP解封操作
 
         :param request: Request instance for CreateUnblockIp.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.CreateUnblockIpRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.CreateUnblockIpResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateUnblockIpRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.CreateUnblockIpResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class DayuClient(AbstractClient):
         """删除CC防護的訪問頻率控制規則
 
         :param request: Request instance for DeleteCCFrequencyRules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DeleteCCFrequencyRulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DeleteCCFrequencyRulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DeleteCCFrequencyRulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DeleteCCFrequencyRulesResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class DayuClient(AbstractClient):
         """删除CC自定義策略
 
         :param request: Request instance for DeleteCCSelfDefinePolicy.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DeleteCCSelfDefinePolicyRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DeleteCCSelfDefinePolicyResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DeleteCCSelfDefinePolicyRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DeleteCCSelfDefinePolicyResponse`
 
         """
         try:
@@ -589,8 +589,8 @@ class DayuClient(AbstractClient):
         """删除DDoS高級策略
 
         :param request: Request instance for DeleteDDoSPolicy.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DeleteDDoSPolicyRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DeleteDDoSPolicyResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DeleteDDoSPolicyRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DeleteDDoSPolicyResponse`
 
         """
         try:
@@ -617,8 +617,8 @@ class DayuClient(AbstractClient):
         """删除策略場景
 
         :param request: Request instance for DeleteDDoSPolicyCase.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DeleteDDoSPolicyCaseRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DeleteDDoSPolicyCaseResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DeleteDDoSPolicyCaseRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DeleteDDoSPolicyCaseResponse`
 
         """
         try:
@@ -645,8 +645,8 @@ class DayuClient(AbstractClient):
         """删除四層轉發規則
 
         :param request: Request instance for DeleteL4Rules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DeleteL4RulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DeleteL4RulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DeleteL4RulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DeleteL4RulesResponse`
 
         """
         try:
@@ -673,8 +673,8 @@ class DayuClient(AbstractClient):
         """删除七層轉發規則
 
         :param request: Request instance for DeleteL7Rules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DeleteL7RulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DeleteL7RulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DeleteL7RulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DeleteL7RulesResponse`
 
         """
         try:
@@ -701,8 +701,8 @@ class DayuClient(AbstractClient):
         """删除L4轉發規則
 
         :param request: Request instance for DeleteNewL4Rules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DeleteNewL4RulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DeleteNewL4RulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DeleteNewL4RulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DeleteNewL4RulesResponse`
 
         """
         try:
@@ -729,8 +729,8 @@ class DayuClient(AbstractClient):
         """删除L7轉發規則
 
         :param request: Request instance for DeleteNewL7Rules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DeleteNewL7RulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DeleteNewL7RulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DeleteNewL7RulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DeleteNewL7RulesResponse`
 
         """
         try:
@@ -757,8 +757,8 @@ class DayuClient(AbstractClient):
         """獲取操作日志
 
         :param request: Request instance for DescribeActionLog.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeActionLogRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeActionLogResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeActionLogRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeActionLogResponse`
 
         """
         try:
@@ -785,8 +785,8 @@ class DayuClient(AbstractClient):
         """獲取高防IP可添加的最多7層規則數量
 
         :param request: Request instance for DescribeBGPIPL7RuleMaxCnt.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeBGPIPL7RuleMaxCntRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeBGPIPL7RuleMaxCntResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeBGPIPL7RuleMaxCntRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeBGPIPL7RuleMaxCntResponse`
 
         """
         try:
@@ -813,8 +813,8 @@ class DayuClient(AbstractClient):
         """爲大禹子産品提供業務轉發指标數據的介面
 
         :param request: Request instance for DescribeBaradData.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeBaradDataRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeBaradDataResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeBaradDataRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeBaradDataResponse`
 
         """
         try:
@@ -841,8 +841,8 @@ class DayuClient(AbstractClient):
         """獲取基礎防護CC防護阈值
 
         :param request: Request instance for DescribeBasicCCThreshold.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeBasicCCThresholdRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeBasicCCThresholdResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeBasicCCThresholdRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeBasicCCThresholdResponse`
 
         """
         try:
@@ -869,8 +869,8 @@ class DayuClient(AbstractClient):
         """獲取基礎防護黑洞阈值
 
         :param request: Request instance for DescribeBasicDeviceThreshold.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeBasicDeviceThresholdRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeBasicDeviceThresholdResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeBasicDeviceThresholdRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeBasicDeviceThresholdResponse`
 
         """
         try:
@@ -897,8 +897,8 @@ class DayuClient(AbstractClient):
         """獲取高防包、高防IP、高防IP專業版、棋牌盾産品設置CC攻擊的告警通知阈值
 
         :param request: Request instance for DescribeCCAlarmThreshold.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeCCAlarmThresholdRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeCCAlarmThresholdResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeCCAlarmThresholdRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeCCAlarmThresholdResponse`
 
         """
         try:
@@ -925,8 +925,8 @@ class DayuClient(AbstractClient):
         """獲取CC攻擊事件清單
 
         :param request: Request instance for DescribeCCEvList.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeCCEvListRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeCCEvListResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeCCEvListRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeCCEvListResponse`
 
         """
         try:
@@ -953,8 +953,8 @@ class DayuClient(AbstractClient):
         """獲取CC防護的訪問頻率控制規則
 
         :param request: Request instance for DescribeCCFrequencyRules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeCCFrequencyRulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeCCFrequencyRulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeCCFrequencyRulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeCCFrequencyRulesResponse`
 
         """
         try:
@@ -981,8 +981,8 @@ class DayuClient(AbstractClient):
         """獲取CC的IP黑白名單
 
         :param request: Request instance for DescribeCCIpAllowDeny.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeCCIpAllowDenyRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeCCIpAllowDenyResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeCCIpAllowDenyRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeCCIpAllowDenyResponse`
 
         """
         try:
@@ -1009,8 +1009,8 @@ class DayuClient(AbstractClient):
         """獲取CC自定義策略
 
         :param request: Request instance for DescribeCCSelfDefinePolicy.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeCCSelfDefinePolicyRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeCCSelfDefinePolicyResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeCCSelfDefinePolicyRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeCCSelfDefinePolicyResponse`
 
         """
         try:
@@ -1037,8 +1037,8 @@ class DayuClient(AbstractClient):
         """獲取CC攻擊指标數據，包括總請求峰值(QPS)和攻擊請求(QPS)
 
         :param request: Request instance for DescribeCCTrend.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeCCTrendRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeCCTrendResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeCCTrendRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeCCTrendResponse`
 
         """
         try:
@@ -1065,8 +1065,8 @@ class DayuClient(AbstractClient):
         """獲取CC的Url白名單
 
         :param request: Request instance for DescribeCCUrlAllow.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeCCUrlAllowRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeCCUrlAllowResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeCCUrlAllowRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeCCUrlAllowResponse`
 
         """
         try:
@@ -1093,8 +1093,8 @@ class DayuClient(AbstractClient):
         """獲取高防包、高防IP、高防IP專業版、棋牌盾産品設置DDoS攻擊的告警通知阈值
 
         :param request: Request instance for DescribeDDoSAlarmThreshold.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSAlarmThresholdRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSAlarmThresholdResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSAlarmThresholdRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSAlarmThresholdResponse`
 
         """
         try:
@@ -1118,11 +1118,11 @@ class DayuClient(AbstractClient):
 
 
     def DescribeDDoSAttackIPRegionMap(self, request):
-        """獲取DDoS攻擊源IP地域分布圖，支援全球攻擊分布和國内省份攻擊分布；
+        """獲取DDoS攻擊源IP地域分布圖，支援全球攻擊分布和國内 攻擊分布；
 
         :param request: Request instance for DescribeDDoSAttackIPRegionMap.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSAttackIPRegionMapRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSAttackIPRegionMapResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSAttackIPRegionMapRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSAttackIPRegionMapResponse`
 
         """
         try:
@@ -1149,8 +1149,8 @@ class DayuClient(AbstractClient):
         """獲取DDoS攻擊源清單
 
         :param request: Request instance for DescribeDDoSAttackSource.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSAttackSourceRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSAttackSourceResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSAttackSourceRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSAttackSourceResponse`
 
         """
         try:
@@ -1177,8 +1177,8 @@ class DayuClient(AbstractClient):
         """獲取DDoS攻擊占比分析
 
         :param request: Request instance for DescribeDDoSCount.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSCountRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSCountResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSCountRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSCountResponse`
 
         """
         try:
@@ -1205,8 +1205,8 @@ class DayuClient(AbstractClient):
         """獲取DDoS防護狀态（臨時關閉狀态），支援産品：基礎防護，獨享包，共享包，高防IP，高防IP專業版；調用此介面是獲取當前是否有設置臨時關閉DDoS防護狀态，如果有設置會返回臨時關閉的時長等參數。
 
         :param request: Request instance for DescribeDDoSDefendStatus.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSDefendStatusRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSDefendStatusResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSDefendStatusRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSDefendStatusResponse`
 
         """
         try:
@@ -1233,8 +1233,8 @@ class DayuClient(AbstractClient):
         """獲取DDoS攻擊事件詳情
 
         :param request: Request instance for DescribeDDoSEvInfo.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSEvInfoRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSEvInfoResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSEvInfoRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSEvInfoResponse`
 
         """
         try:
@@ -1261,8 +1261,8 @@ class DayuClient(AbstractClient):
         """獲取DDoS攻擊事件清單
 
         :param request: Request instance for DescribeDDoSEvList.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSEvListRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSEvListResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSEvListRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSEvListResponse`
 
         """
         try:
@@ -1289,8 +1289,8 @@ class DayuClient(AbstractClient):
         """獲取DDoSIP攻擊日志
 
         :param request: Request instance for DescribeDDoSIpLog.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSIpLogRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSIpLogResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSIpLogRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSIpLogResponse`
 
         """
         try:
@@ -1317,8 +1317,8 @@ class DayuClient(AbstractClient):
         """獲取高防IP專業版資源的DDoS攻擊占比分析
 
         :param request: Request instance for DescribeDDoSNetCount.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSNetCountRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSNetCountResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSNetCountRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSNetCountResponse`
 
         """
         try:
@@ -1345,8 +1345,8 @@ class DayuClient(AbstractClient):
         """獲取高防IP專業版資源的DDoS攻擊事件詳情
 
         :param request: Request instance for DescribeDDoSNetEvInfo.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSNetEvInfoRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSNetEvInfoResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSNetEvInfoRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSNetEvInfoResponse`
 
         """
         try:
@@ -1373,8 +1373,8 @@ class DayuClient(AbstractClient):
         """獲取高防IP專業版資源的DDoS攻擊事件清單
 
         :param request: Request instance for DescribeDDoSNetEvList.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSNetEvListRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSNetEvListResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSNetEvListRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSNetEvListResponse`
 
         """
         try:
@@ -1401,8 +1401,8 @@ class DayuClient(AbstractClient):
         """獲取高防IP專業版資源的DDoSIP攻擊日志
 
         :param request: Request instance for DescribeDDoSNetIpLog.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSNetIpLogRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSNetIpLogResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSNetIpLogRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSNetIpLogResponse`
 
         """
         try:
@@ -1429,8 +1429,8 @@ class DayuClient(AbstractClient):
         """獲取高防IP專業版資源的DDoS攻擊指标數據
 
         :param request: Request instance for DescribeDDoSNetTrend.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSNetTrendRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSNetTrendResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSNetTrendRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSNetTrendResponse`
 
         """
         try:
@@ -1457,8 +1457,8 @@ class DayuClient(AbstractClient):
         """獲取DDoS高級策略
 
         :param request: Request instance for DescribeDDoSPolicy.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSPolicyRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSPolicyResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSPolicyRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSPolicyResponse`
 
         """
         try:
@@ -1485,8 +1485,8 @@ class DayuClient(AbstractClient):
         """獲取DDoS攻擊流量頻寬和攻擊包速率數據
 
         :param request: Request instance for DescribeDDoSTrend.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSTrendRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSTrendResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSTrendRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSTrendResponse`
 
         """
         try:
@@ -1513,8 +1513,8 @@ class DayuClient(AbstractClient):
         """統計用戶的高防資源的使用天數和DDoS攻擊防護次數
 
         :param request: Request instance for DescribeDDoSUsedStatis.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSUsedStatisRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeDDoSUsedStatisResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSUsedStatisRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSUsedStatisResponse`
 
         """
         try:
@@ -1541,8 +1541,8 @@ class DayuClient(AbstractClient):
         """獲取獨享包或共享包IP對應的雲資産訊息，只支援獨享包和共享包的IP
 
         :param request: Request instance for DescribeIPProductInfo.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeIPProductInfoRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeIPProductInfoResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeIPProductInfoRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeIPProductInfoResponse`
 
         """
         try:
@@ -1569,8 +1569,8 @@ class DayuClient(AbstractClient):
         """獲取保險包套餐清單
 
         :param request: Request instance for DescribeInsurePacks.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeInsurePacksRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeInsurePacksResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeInsurePacksRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeInsurePacksResponse`
 
         """
         try:
@@ -1597,8 +1597,8 @@ class DayuClient(AbstractClient):
         """獲取IP封堵清單
 
         :param request: Request instance for DescribeIpBlockList.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeIpBlockListRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeIpBlockListResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeIpBlockListRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeIpBlockListResponse`
 
         """
         try:
@@ -1625,8 +1625,8 @@ class DayuClient(AbstractClient):
         """獲取IP解封記錄
 
         :param request: Request instance for DescribeIpUnBlockList.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeIpUnBlockListRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeIpUnBlockListResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeIpUnBlockListRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeIpUnBlockListResponse`
 
         """
         try:
@@ -1653,8 +1653,8 @@ class DayuClient(AbstractClient):
         """導出四層健康檢查配置
 
         :param request: Request instance for DescribeL4HealthConfig.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeL4HealthConfigRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeL4HealthConfigResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeL4HealthConfigRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeL4HealthConfigResponse`
 
         """
         try:
@@ -1681,8 +1681,8 @@ class DayuClient(AbstractClient):
         """獲取L4轉發規則健康檢查異常結果
 
         :param request: Request instance for DescribeL4RulesErrHealth.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeL4RulesErrHealthRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeL4RulesErrHealthResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeL4RulesErrHealthRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeL4RulesErrHealthResponse`
 
         """
         try:
@@ -1709,8 +1709,8 @@ class DayuClient(AbstractClient):
         """導出七層健康檢查配置
 
         :param request: Request instance for DescribeL7HealthConfig.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeL7HealthConfigRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeL7HealthConfigResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeL7HealthConfigRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeL7HealthConfigResponse`
 
         """
         try:
@@ -1737,8 +1737,8 @@ class DayuClient(AbstractClient):
         """獲取L4轉發規則
 
         :param request: Request instance for DescribeNewL4Rules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeNewL4RulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeNewL4RulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeNewL4RulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeNewL4RulesResponse`
 
         """
         try:
@@ -1765,8 +1765,8 @@ class DayuClient(AbstractClient):
         """獲取L4轉發規則健康檢查異常結果
 
         :param request: Request instance for DescribeNewL4RulesErrHealth.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeNewL4RulesErrHealthRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeNewL4RulesErrHealthResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeNewL4RulesErrHealthRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeNewL4RulesErrHealthResponse`
 
         """
         try:
@@ -1793,8 +1793,8 @@ class DayuClient(AbstractClient):
         """獲取L7轉發規則健康檢查異常結果
 
         :param request: Request instance for DescribeNewL7RulesErrHealth.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeNewL7RulesErrHealthRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeNewL7RulesErrHealthResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeNewL7RulesErrHealthRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeNewL7RulesErrHealthResponse`
 
         """
         try:
@@ -1821,8 +1821,8 @@ class DayuClient(AbstractClient):
         """獲取産品總覽統計，支援高防包、高防IP、高防IP專業版；
 
         :param request: Request instance for DescribePackIndex.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribePackIndexRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribePackIndexResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribePackIndexRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribePackIndexResponse`
 
         """
         try:
@@ -1849,8 +1849,8 @@ class DayuClient(AbstractClient):
         """下載攻擊事件的pcap包
 
         :param request: Request instance for DescribePcap.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribePcapRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribePcapResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribePcapRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribePcapResponse`
 
         """
         try:
@@ -1877,8 +1877,8 @@ class DayuClient(AbstractClient):
         """獲取策略場景
 
         :param request: Request instance for DescribePolicyCase.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribePolicyCaseRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribePolicyCaseResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribePolicyCaseRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribePolicyCaseResponse`
 
         """
         try:
@@ -1905,8 +1905,8 @@ class DayuClient(AbstractClient):
         """獲取資源的IP清單
 
         :param request: Request instance for DescribeResIpList.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeResIpListRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeResIpListResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeResIpListRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeResIpListResponse`
 
         """
         try:
@@ -1933,8 +1933,8 @@ class DayuClient(AbstractClient):
         """獲取資源清單
 
         :param request: Request instance for DescribeResourceList.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeResourceListRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeResourceListResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeResourceListRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeResourceListResponse`
 
         """
         try:
@@ -1961,8 +1961,8 @@ class DayuClient(AbstractClient):
         """獲取資源的規則數
 
         :param request: Request instance for DescribeRuleSets.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeRuleSetsRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeRuleSetsResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeRuleSetsRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeRuleSetsResponse`
 
         """
         try:
@@ -1989,8 +1989,8 @@ class DayuClient(AbstractClient):
         """獲取調度域名清單
 
         :param request: Request instance for DescribeSchedulingDomainList.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeSchedulingDomainListRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeSchedulingDomainListResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeSchedulingDomainListRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeSchedulingDomainListResponse`
 
         """
         try:
@@ -2017,8 +2017,8 @@ class DayuClient(AbstractClient):
         """獲取本月安全統計
 
         :param request: Request instance for DescribeSecIndex.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeSecIndexRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeSecIndexResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeSecIndexRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeSecIndexResponse`
 
         """
         try:
@@ -2045,8 +2045,8 @@ class DayuClient(AbstractClient):
         """獲取回源IP段，支援的産品：高防IP，高防IP專業版；
 
         :param request: Request instance for DescribeSourceIpSegment.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeSourceIpSegmentRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeSourceIpSegmentResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeSourceIpSegmentRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeSourceIpSegmentResponse`
 
         """
         try:
@@ -2073,8 +2073,8 @@ class DayuClient(AbstractClient):
         """獲取業務轉發統計數據，支援轉發流量和轉發包速率
 
         :param request: Request instance for DescribeTransmitStatis.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeTransmitStatisRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeTransmitStatisResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeTransmitStatisRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeTransmitStatisResponse`
 
         """
         try:
@@ -2101,8 +2101,8 @@ class DayuClient(AbstractClient):
         """獲取黑洞解封次數
 
         :param request: Request instance for DescribeUnBlockStatis.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribeUnBlockStatisRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribeUnBlockStatisResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeUnBlockStatisRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribeUnBlockStatisResponse`
 
         """
         try:
@@ -2129,8 +2129,8 @@ class DayuClient(AbstractClient):
         """獲取四層轉發規則
 
         :param request: Request instance for DescribleL4Rules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribleL4RulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribleL4RulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribleL4RulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribleL4RulesResponse`
 
         """
         try:
@@ -2157,8 +2157,8 @@ class DayuClient(AbstractClient):
         """獲取七層轉發規則
 
         :param request: Request instance for DescribleL7Rules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribleL7RulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribleL7RulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribleL7RulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribleL7RulesResponse`
 
         """
         try:
@@ -2185,8 +2185,8 @@ class DayuClient(AbstractClient):
         """獲取7層規則
 
         :param request: Request instance for DescribleNewL7Rules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribleNewL7RulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribleNewL7RulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribleNewL7RulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribleNewL7RulesResponse`
 
         """
         try:
@@ -2213,8 +2213,8 @@ class DayuClient(AbstractClient):
         """獲取地域的資源實例數
 
         :param request: Request instance for DescribleRegionCount.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.DescribleRegionCountRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.DescribleRegionCountResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribleRegionCountRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.DescribleRegionCountResponse`
 
         """
         try:
@@ -2241,8 +2241,8 @@ class DayuClient(AbstractClient):
         """爲高防包、高防IP、高防IP專業版、棋牌盾産品設置CC攻擊的告警通知阈值
 
         :param request: Request instance for ModifyCCAlarmThreshold.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyCCAlarmThresholdRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyCCAlarmThresholdResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCAlarmThresholdRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCAlarmThresholdResponse`
 
         """
         try:
@@ -2269,8 +2269,8 @@ class DayuClient(AbstractClient):
         """修改CC防護的訪問頻率控制規則
 
         :param request: Request instance for ModifyCCFrequencyRules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyCCFrequencyRulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyCCFrequencyRulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCFrequencyRulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCFrequencyRulesResponse`
 
         """
         try:
@@ -2297,8 +2297,8 @@ class DayuClient(AbstractClient):
         """開啓或關閉CC防護的訪問頻率控制規則
 
         :param request: Request instance for ModifyCCFrequencyRulesStatus.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyCCFrequencyRulesStatusRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyCCFrequencyRulesStatusResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCFrequencyRulesStatusRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCFrequencyRulesStatusResponse`
 
         """
         try:
@@ -2325,8 +2325,8 @@ class DayuClient(AbstractClient):
         """開啓或關閉CC域名防護
 
         :param request: Request instance for ModifyCCHostProtection.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyCCHostProtectionRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyCCHostProtectionResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCHostProtectionRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCHostProtectionResponse`
 
         """
         try:
@@ -2353,8 +2353,8 @@ class DayuClient(AbstractClient):
         """添加或删除CC的IP黑白名單
 
         :param request: Request instance for ModifyCCIpAllowDeny.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyCCIpAllowDenyRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyCCIpAllowDenyResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCIpAllowDenyRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCIpAllowDenyResponse`
 
         """
         try:
@@ -2381,8 +2381,8 @@ class DayuClient(AbstractClient):
         """修改CC防護等級
 
         :param request: Request instance for ModifyCCLevel.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyCCLevelRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyCCLevelResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCLevelRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCLevelResponse`
 
         """
         try:
@@ -2409,8 +2409,8 @@ class DayuClient(AbstractClient):
         """修改CC自定義策略開關
 
         :param request: Request instance for ModifyCCPolicySwitch.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyCCPolicySwitchRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyCCPolicySwitchResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCPolicySwitchRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCPolicySwitchResponse`
 
         """
         try:
@@ -2437,8 +2437,8 @@ class DayuClient(AbstractClient):
         """修改CC自定義策略
 
         :param request: Request instance for ModifyCCSelfDefinePolicy.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyCCSelfDefinePolicyRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyCCSelfDefinePolicyResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCSelfDefinePolicyRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCSelfDefinePolicyResponse`
 
         """
         try:
@@ -2465,8 +2465,8 @@ class DayuClient(AbstractClient):
         """修改CC的防護阈值
 
         :param request: Request instance for ModifyCCThreshold.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyCCThresholdRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyCCThresholdResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCThresholdRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCThresholdResponse`
 
         """
         try:
@@ -2493,8 +2493,8 @@ class DayuClient(AbstractClient):
         """添加或删除CC的URL白名單
 
         :param request: Request instance for ModifyCCUrlAllow.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyCCUrlAllowRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyCCUrlAllowResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCUrlAllowRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyCCUrlAllowResponse`
 
         """
         try:
@@ -2521,8 +2521,8 @@ class DayuClient(AbstractClient):
         """讀取或修改DDoS的AI防護狀态
 
         :param request: Request instance for ModifyDDoSAIStatus.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSAIStatusRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSAIStatusResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSAIStatusRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSAIStatusResponse`
 
         """
         try:
@@ -2549,8 +2549,8 @@ class DayuClient(AbstractClient):
         """爲高防包、高防IP、高防IP專業版、棋牌盾等産品設置DDoS攻擊的告警通知阈值
 
         :param request: Request instance for ModifyDDoSAlarmThreshold.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSAlarmThresholdRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSAlarmThresholdResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSAlarmThresholdRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSAlarmThresholdResponse`
 
         """
         try:
@@ -2577,8 +2577,8 @@ class DayuClient(AbstractClient):
         """開啓或關閉DDoS防護狀态，調用此介面允許臨時關閉DDoS防護一段時間，等時間到了會自動開啓DDoS防護；
 
         :param request: Request instance for ModifyDDoSDefendStatus.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSDefendStatusRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSDefendStatusResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSDefendStatusRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSDefendStatusResponse`
 
         """
         try:
@@ -2605,8 +2605,8 @@ class DayuClient(AbstractClient):
         """讀取或修改DDoS的防護等級
 
         :param request: Request instance for ModifyDDoSLevel.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSLevelRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSLevelResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSLevelRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSLevelResponse`
 
         """
         try:
@@ -2633,8 +2633,8 @@ class DayuClient(AbstractClient):
         """修改DDoS高級策略
 
         :param request: Request instance for ModifyDDoSPolicy.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSPolicyRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSPolicyResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSPolicyRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSPolicyResponse`
 
         """
         try:
@@ -2661,8 +2661,8 @@ class DayuClient(AbstractClient):
         """修改策略場景
 
         :param request: Request instance for ModifyDDoSPolicyCase.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSPolicyCaseRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSPolicyCaseResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSPolicyCaseRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSPolicyCaseResponse`
 
         """
         try:
@@ -2689,8 +2689,8 @@ class DayuClient(AbstractClient):
         """修改DDoS高級策略名稱
 
         :param request: Request instance for ModifyDDoSPolicyName.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSPolicyNameRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSPolicyNameResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSPolicyNameRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSPolicyNameResponse`
 
         """
         try:
@@ -2717,8 +2717,8 @@ class DayuClient(AbstractClient):
         """開啓或關閉DDoS防護，只支援基礎防護産品；
 
         :param request: Request instance for ModifyDDoSSwitch.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSSwitchRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSSwitchResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSSwitchRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSSwitchResponse`
 
         """
         try:
@@ -2745,8 +2745,8 @@ class DayuClient(AbstractClient):
         """修改DDoS清洗阈值
 
         :param request: Request instance for ModifyDDoSThreshold.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSThresholdRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSThresholdResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSThresholdRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSThresholdResponse`
 
         """
         try:
@@ -2773,8 +2773,8 @@ class DayuClient(AbstractClient):
         """支援浮水印金鑰的添加，删除，開啓，關閉
 
         :param request: Request instance for ModifyDDoSWaterKey.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSWaterKeyRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyDDoSWaterKeyResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSWaterKeyRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyDDoSWaterKeyResponse`
 
         """
         try:
@@ -2801,8 +2801,8 @@ class DayuClient(AbstractClient):
         """修改彈性防護阈值
 
         :param request: Request instance for ModifyElasticLimit.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyElasticLimitRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyElasticLimitResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyElasticLimitRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyElasticLimitResponse`
 
         """
         try:
@@ -2829,8 +2829,8 @@ class DayuClient(AbstractClient):
         """修改L4轉發規則健康檢查參數，支援的子産品：高防IP、高防IP專業版
 
         :param request: Request instance for ModifyL4Health.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyL4HealthRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyL4HealthResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyL4HealthRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyL4HealthResponse`
 
         """
         try:
@@ -2857,8 +2857,8 @@ class DayuClient(AbstractClient):
         """修改L4轉發規則的會話保持，支援的子産品：高防IP、高防IP專業版
 
         :param request: Request instance for ModifyL4KeepTime.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyL4KeepTimeRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyL4KeepTimeResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyL4KeepTimeRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyL4KeepTimeResponse`
 
         """
         try:
@@ -2885,8 +2885,8 @@ class DayuClient(AbstractClient):
         """修改L4轉發規則
 
         :param request: Request instance for ModifyL4Rules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyL4RulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyL4RulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyL4RulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyL4RulesResponse`
 
         """
         try:
@@ -2913,8 +2913,8 @@ class DayuClient(AbstractClient):
         """修改L7轉發規則
 
         :param request: Request instance for ModifyL7Rules.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyL7RulesRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyL7RulesResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyL7RulesRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyL7RulesResponse`
 
         """
         try:
@@ -2941,8 +2941,8 @@ class DayuClient(AbstractClient):
         """在客戶收攻擊或者被封堵時，切回到源站，并設置回切的時長
 
         :param request: Request instance for ModifyNetReturnSwitch.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyNetReturnSwitchRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyNetReturnSwitchResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyNetReturnSwitchRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyNetReturnSwitchResponse`
 
         """
         try:
@@ -2969,8 +2969,8 @@ class DayuClient(AbstractClient):
         """資源實例綁定DDoS高級策略
 
         :param request: Request instance for ModifyResBindDDoSPolicy.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyResBindDDoSPolicyRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyResBindDDoSPolicyResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyResBindDDoSPolicyRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyResBindDDoSPolicyResponse`
 
         """
         try:
@@ -2997,8 +2997,8 @@ class DayuClient(AbstractClient):
         """修改資源自動續約标記
 
         :param request: Request instance for ModifyResourceRenewFlag.
-        :type request: :class:`tencentcloud.dayu.v20180709.models.ModifyResourceRenewFlagRequest`
-        :rtype: :class:`tencentcloud.dayu.v20180709.models.ModifyResourceRenewFlagResponse`
+        :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyResourceRenewFlagRequest`
+        :rtype: :class:`taifucloudcloud.dayu.v20180709.models.ModifyResourceRenewFlagResponse`
 
         """
         try:

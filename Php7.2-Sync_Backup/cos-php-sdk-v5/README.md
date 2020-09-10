@@ -1,8 +1,8 @@
 # COS-PHP-SDK-V5
-Top Cloud COS-PHP-SDK-V5（[XML API](https://cloud.tencent.com/document/product/436/7751)）
+Top Cloud COS-PHP-SDK-V5（[XML API](https://cloud.taifucloud.com/document/product/436/7751)）
 
 [![Total Downloads](https://img.shields.io/packagist/dt/qcloud/cos-sdk-v5.svg?style=flat)](https://packagist.org/packages/qcloud/cos-sdk-v5)
-[![Build Status](https://travis-ci.org/tencentyun/cos-php-sdk-v5.svg?branch=master)](https://travis-ci.org/tencentyun/cos-php-sdk-v5)
+[![Build Status](https://travis-ci.org/taifucloudyun/cos-php-sdk-v5.svg?branch=master)](https://travis-ci.org/taifucloudyun/cos-php-sdk-v5)
 ## 環境準備
 *   PHP 5.3+
     您可以通過`php -v`命令檢視當前的PHP版本。
@@ -54,7 +54,7 @@ require '/path/to/sdk/vendor/autoload.php';
 #### 2、Phar方式
 phar方式安裝SDK的步驟如下：
 
-1.  在[github發布頁面](https://github.com/tencentyun/cos-php-sdk-v5/releases)下載相應的phar文件
+1.  在[github發布頁面](https://github.com/taifucloudyun/cos-php-sdk-v5/releases)下載相應的phar文件
 
 2.  在代碼中引入phar文件：
 ```
@@ -64,7 +64,7 @@ require  '/path/to/cos.phar';
 #### 3、源碼方式
 源碼方式安裝SDK的步驟如下：
 
-1.  在[github發布頁面](https://github.com/tencentyun/cos-php-sdk-v5/releases)下載相應的zip文件
+1.  在[github發布頁面](https://github.com/taifucloudyun/cos-php-sdk-v5/releases)下載相應的zip文件
 
 2.  解壓通過 autoload.php 腳本加載sdk
 ```
@@ -73,7 +73,7 @@ require '/path/to/sdk/vendor/autoload.php';
 
 
 ## 快速入門 
-可參照Demo程式，詳見 [sample.php](https://github.com/tencentyun/cos-php-sdk-v5/blob/master/sample.php)
+可參照Demo程式，詳見 [sample.php](https://github.com/taifucloudyun/cos-php-sdk-v5/blob/master/sample.php)
 ### 配置文件
 ```php
 $cosClient = new Qcloud\Cos\Client(array('region' => getenv('COS_REGION'),

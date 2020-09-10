@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AddCdnDomainRequest(AbstractModel):
@@ -31,66 +31,66 @@ download：下載加速
 media：流媒體點播加速
         :type ServiceType: str
         :param Origin: 源站配置
-        :type Origin: :class:`tencentcloud.cdn.v20180606.models.Origin`
+        :type Origin: :class:`taifucloudcloud.cdn.v20180606.models.Origin`
         :param ProjectId: 項目 ID，預設爲 0，代表【預設項目】
         :type ProjectId: int
         :param IpFilter: IP 黑白名單配置
-        :type IpFilter: :class:`tencentcloud.cdn.v20180606.models.IpFilter`
+        :type IpFilter: :class:`taifucloudcloud.cdn.v20180606.models.IpFilter`
         :param IpFreqLimit: IP 限頻配置
-        :type IpFreqLimit: :class:`tencentcloud.cdn.v20180606.models.IpFreqLimit`
+        :type IpFreqLimit: :class:`taifucloudcloud.cdn.v20180606.models.IpFreqLimit`
         :param StatusCodeCache: 狀态碼快取配置
-        :type StatusCodeCache: :class:`tencentcloud.cdn.v20180606.models.StatusCodeCache`
+        :type StatusCodeCache: :class:`taifucloudcloud.cdn.v20180606.models.StatusCodeCache`
         :param Compression: 智慧壓縮配置
-        :type Compression: :class:`tencentcloud.cdn.v20180606.models.Compression`
+        :type Compression: :class:`taifucloudcloud.cdn.v20180606.models.Compression`
         :param BandwidthAlert: 頻寬封頂配置
-        :type BandwidthAlert: :class:`tencentcloud.cdn.v20180606.models.BandwidthAlert`
+        :type BandwidthAlert: :class:`taifucloudcloud.cdn.v20180606.models.BandwidthAlert`
         :param RangeOriginPull: Range 回源配置
-        :type RangeOriginPull: :class:`tencentcloud.cdn.v20180606.models.RangeOriginPull`
+        :type RangeOriginPull: :class:`taifucloudcloud.cdn.v20180606.models.RangeOriginPull`
         :param FollowRedirect: 301/302 回源跟随配置。
-        :type FollowRedirect: :class:`tencentcloud.cdn.v20180606.models.FollowRedirect`
+        :type FollowRedirect: :class:`taifucloudcloud.cdn.v20180606.models.FollowRedirect`
         :param ErrorPage: 錯誤碼重定向配置（功能灰度中，尚未全量）
-        :type ErrorPage: :class:`tencentcloud.cdn.v20180606.models.ErrorPage`
+        :type ErrorPage: :class:`taifucloudcloud.cdn.v20180606.models.ErrorPage`
         :param RequestHeader: 請求頭部配置
-        :type RequestHeader: :class:`tencentcloud.cdn.v20180606.models.RequestHeader`
+        :type RequestHeader: :class:`taifucloudcloud.cdn.v20180606.models.RequestHeader`
         :param ResponseHeader: 響應頭部配置
-        :type ResponseHeader: :class:`tencentcloud.cdn.v20180606.models.ResponseHeader`
+        :type ResponseHeader: :class:`taifucloudcloud.cdn.v20180606.models.ResponseHeader`
         :param DownstreamCapping: 下載速度配置
-        :type DownstreamCapping: :class:`tencentcloud.cdn.v20180606.models.DownstreamCapping`
+        :type DownstreamCapping: :class:`taifucloudcloud.cdn.v20180606.models.DownstreamCapping`
         :param CacheKey: 節點快取鍵配置
-        :type CacheKey: :class:`tencentcloud.cdn.v20180606.models.CacheKey`
+        :type CacheKey: :class:`taifucloudcloud.cdn.v20180606.models.CacheKey`
         :param ResponseHeaderCache: 頭部快取配置
-        :type ResponseHeaderCache: :class:`tencentcloud.cdn.v20180606.models.ResponseHeaderCache`
+        :type ResponseHeaderCache: :class:`taifucloudcloud.cdn.v20180606.models.ResponseHeaderCache`
         :param VideoSeek: 視訊拖拽配置
-        :type VideoSeek: :class:`tencentcloud.cdn.v20180606.models.VideoSeek`
+        :type VideoSeek: :class:`taifucloudcloud.cdn.v20180606.models.VideoSeek`
         :param Cache: 快取過期時間配置
-        :type Cache: :class:`tencentcloud.cdn.v20180606.models.Cache`
+        :type Cache: :class:`taifucloudcloud.cdn.v20180606.models.Cache`
         :param OriginPullOptimization: 跨國鏈路優化配置
-        :type OriginPullOptimization: :class:`tencentcloud.cdn.v20180606.models.OriginPullOptimization`
+        :type OriginPullOptimization: :class:`taifucloudcloud.cdn.v20180606.models.OriginPullOptimization`
         :param Https: Https 加速配置
-        :type Https: :class:`tencentcloud.cdn.v20180606.models.Https`
+        :type Https: :class:`taifucloudcloud.cdn.v20180606.models.Https`
         :param Authentication: 時間戳防盜鏈配置
-        :type Authentication: :class:`tencentcloud.cdn.v20180606.models.Authentication`
+        :type Authentication: :class:`taifucloudcloud.cdn.v20180606.models.Authentication`
         :param Seo: SEO 優化配置
-        :type Seo: :class:`tencentcloud.cdn.v20180606.models.Seo`
+        :type Seo: :class:`taifucloudcloud.cdn.v20180606.models.Seo`
         :param ForceRedirect: 訪問協議強制跳轉配置
-        :type ForceRedirect: :class:`tencentcloud.cdn.v20180606.models.ForceRedirect`
+        :type ForceRedirect: :class:`taifucloudcloud.cdn.v20180606.models.ForceRedirect`
         :param Referer: Referer 防盜鏈配置
-        :type Referer: :class:`tencentcloud.cdn.v20180606.models.Referer`
+        :type Referer: :class:`taifucloudcloud.cdn.v20180606.models.Referer`
         :param MaxAge: 浏覽器快取配置（功能灰度中，尚未全量）
-        :type MaxAge: :class:`tencentcloud.cdn.v20180606.models.MaxAge`
+        :type MaxAge: :class:`taifucloudcloud.cdn.v20180606.models.MaxAge`
         :param Ipv6: Ipv6 配置（功能灰度中，尚未全量）
-        :type Ipv6: :class:`tencentcloud.cdn.v20180606.models.Ipv6`
+        :type Ipv6: :class:`taifucloudcloud.cdn.v20180606.models.Ipv6`
         :param SpecificConfig: 地域屬性特殊配置
 适用于域名境内加速、境外加速配置不一緻場景
-        :type SpecificConfig: :class:`tencentcloud.cdn.v20180606.models.SpecificConfig`
+        :type SpecificConfig: :class:`taifucloudcloud.cdn.v20180606.models.SpecificConfig`
         :param Area: 域名加速區域
-mainland：中國境内加速
-overseas：中國境外加速
+mainland： 境内加速
+overseas： 境外加速
 global：全球加速
-使用中國境外加速、全球加速時，需要先開通中國境外加速服務
+使用 境外加速、全球加速時，需要先開通 境外加速服務
         :type Area: str
         :param OriginPullTimeout: 回源超時配置
-        :type OriginPullTimeout: :class:`tencentcloud.cdn.v20180606.models.OriginPullTimeout`
+        :type OriginPullTimeout: :class:`taifucloudcloud.cdn.v20180606.models.OriginPullTimeout`
         """
         self.Domain = None
         self.ServiceType = None
@@ -320,16 +320,16 @@ off：關閉
         :type Switch: str
         :param TypeA: 時間戳防盜鏈模式 A 配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TypeA: :class:`tencentcloud.cdn.v20180606.models.AuthenticationTypeA`
+        :type TypeA: :class:`taifucloudcloud.cdn.v20180606.models.AuthenticationTypeA`
         :param TypeB: 時間戳防盜鏈模式 B 配置（模式 B 後台升級中，暫時不支援配置）
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TypeB: :class:`tencentcloud.cdn.v20180606.models.AuthenticationTypeB`
+        :type TypeB: :class:`taifucloudcloud.cdn.v20180606.models.AuthenticationTypeB`
         :param TypeC: 時間戳防盜鏈模式 C 配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TypeC: :class:`tencentcloud.cdn.v20180606.models.AuthenticationTypeC`
+        :type TypeC: :class:`taifucloudcloud.cdn.v20180606.models.AuthenticationTypeC`
         :param TypeD: 時間戳防盜鏈模式 D 配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TypeD: :class:`tencentcloud.cdn.v20180606.models.AuthenticationTypeD`
+        :type TypeD: :class:`taifucloudcloud.cdn.v20180606.models.AuthenticationTypeD`
         """
         self.Switch = None
         self.TypeA = None
@@ -618,7 +618,7 @@ media：流媒體點播加速
         :param UpdateTime: 域名更新時間
         :type UpdateTime: str
         :param Origin: 源站配置詳情
-        :type Origin: :class:`tencentcloud.cdn.v20180606.models.Origin`
+        :type Origin: :class:`taifucloudcloud.cdn.v20180606.models.Origin`
         :param Disable: 域名封禁狀态
 normal：正常狀态
 overdue：賬号欠費導緻域名關閉，儲值完成後可自行啓動加速服務
@@ -630,14 +630,14 @@ capping：觸發配置的頻寬阈值上限
 readonly：域名存在特殊配置，被鎖定
         :type Disable: str
         :param Area: 加速區域
-mainland：中國境内加速
-overseas：中國境外加速
+mainland： 境内加速
+overseas： 境外加速
 global：全球加速
         :type Area: str
         :param Readonly: 域名鎖定狀态
 normal：未鎖定
-mainland：中國境内鎖定
-overseas：中國境外鎖定
+mainland： 境内鎖定
+overseas： 境外鎖定
 global：全球鎖定
         :type Readonly: str
         """
@@ -685,10 +685,10 @@ class Cache(AbstractModel):
         """
         :param SimpleCache: 基礎快取過期時間配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SimpleCache: :class:`tencentcloud.cdn.v20180606.models.SimpleCache`
+        :type SimpleCache: :class:`taifucloudcloud.cdn.v20180606.models.SimpleCache`
         :param AdvancedCache: 高級快取過期時間配置（功能灰度中，尚未全量）
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AdvancedCache: :class:`tencentcloud.cdn.v20180606.models.AdvancedCache`
+        :type AdvancedCache: :class:`taifucloudcloud.cdn.v20180606.models.AdvancedCache`
         """
         self.SimpleCache = None
         self.AdvancedCache = None
@@ -800,7 +800,7 @@ statusCode：狀态碼，返回 2XX、3XX、4XX、5XX 匯總數據，單位爲 �
         :param DetailData: 明細數據組合
         :type DetailData: list of TimestampData
         :param SummarizedData: 匯總數據組合
-        :type SummarizedData: :class:`tencentcloud.cdn.v20180606.models.SummarizedData`
+        :type SummarizedData: :class:`taifucloudcloud.cdn.v20180606.models.SummarizedData`
         """
         self.Metric = None
         self.DetailData = None
@@ -833,14 +833,14 @@ class CdnIp(AbstractModel):
 yes：節點歸屬于Top Cloud  CDN
 no：節點不屬于Top Cloud  CDN
         :type Platform: str
-        :param Location: 節點所處的省份/國家
+        :param Location: 節點所處的 /國家
 unknown 表示節點位置未知
         :type Location: str
         :param History: 節點上下線曆史記錄
         :type History: list of CdnIpHistory
         :param Area: 節點的所在區域
-mainland：中國境内加速節點
-overseas：中國境外加速節點
+mainland： 境内加速節點
+overseas： 境外加速節點
 unknown：服務地域無法獲取
         :type Area: str
         """
@@ -1234,16 +1234,16 @@ Area 欄位爲 overseas 時暫不支援1分鍾粒度數據查詢
         :type Interval: str
         :param Domain: 指定域名查詢計費數據
         :type Domain: str
-        :param Project: 指定項目 ID 查詢，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+        :param Project: 指定項目 ID 查詢，[前往檢視項目 ID](https://console.cloud.taifucloud.com/project)
 若 Domain 參數填充了具體域名訊息，則返回該域名的計費數據，而非指定項目計費數據
         :type Project: int
         :param Area: 指定加速區域查詢計費數據：
-mainland：中國境内
-overseas：中國境外
+mainland： 境内
+overseas： 境外
 不填充時，預設爲 mainland
         :type Area: str
         :param District: Area 爲 overseas 時，指定國家/地區查詢
-省份、國家/地區編碼可以檢視 [省份編碼映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+ 、國家/地區編碼可以檢視 [ 編碼映射](https://cloud.taifucloud.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 不填充時，查詢所有國家/地區
         :type District: int
         :param Metric: 計費統計類型
@@ -1337,11 +1337,11 @@ statusCode：狀态碼，返回 2xx、3xx、4xx、5xx 匯總數據，單位爲 �
         :param Domains: 指定查詢域名清單
 最多可一次性查詢 30 個加速域名明細
         :type Domains: list of str
-        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.taifucloud.com/project)
 未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Project: int
         :param Interval: 時間粒度，支援以下幾種模式：
-min：1 分鍾粒度，指定查詢區間 24 小時内（含 24 小時），可返回 1 分鍾粒度明細數據（指定查詢服務地域爲中國境外時不支援 1 分鍾粒度）
+min：1 分鍾粒度，指定查詢區間 24 小時内（含 24 小時），可返回 1 分鍾粒度明細數據（指定查詢服務地域爲 境外時不支援 1 分鍾粒度）
 5min：5 分鍾粒度，指定查詢區間 31 天内（含 31 天），可返回 5 分鍾粒度明細數據
 hour：1 小時粒度，指定查詢區間 31 天内（含 31 天），可返回 1 小時粒度明細數據
 day：天粒度，指定查詢區間大于 31 天，可返回天粒度明細數據
@@ -1349,14 +1349,14 @@ day：天粒度，指定查詢區間大于 31 天，可返回天粒度明細數�
         :param Detail: 多域名查詢時，預設（false)返回多個域名的匯總數據
 可按需指定爲 true，返回每一個 Domain 的明細數據（statusCode 指标暫不支援）
         :type Detail: bool
-        :param Isp: 查詢中國境内CDN數據時，指定運營商查詢，不填充表示查詢所有運營商
-運營商編碼可以檢視 [運營商編碼映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-指定運營商查詢時，不可同時指定省份、IP協議查詢
+        :param Isp: 查詢 境内CDN數據時，指定運營商查詢，不填充表示查詢所有運營商
+運營商編碼可以檢視 [運營商編碼映射](https://cloud.taifucloud.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+指定運營商查詢時，不可同時指定 、IP協議查詢
         :type Isp: int
-        :param District: 查詢中國境内CDN數據時，指定省份查詢，不填充表示查詢所有省份
-查詢中國境外CDN數據時，指定國家/地區查詢，不填充表示查詢所有國家/地區
-省份、國家/地區編碼可以檢視 [省份編碼映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-指定（中國境内）省份查詢時，不可同時指定運營商、IP協議查詢
+        :param District: 查詢 境内CDN數據時，指定 查詢，不填充表示查詢所有 
+查詢 境外CDN數據時，指定國家/地區查詢，不填充表示查詢所有國家/地區
+ 、國家/地區編碼可以檢視 [ 編碼映射](https://cloud.taifucloud.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+指定（ 境内） 查詢時，不可同時指定運營商、IP協議查詢
         :type District: int
         :param Protocol: 指定協議查詢，不填充表示查詢所有協議
 all：所有協議
@@ -1369,13 +1369,13 @@ https：指定查詢 HTTPS 對應指标
 all：所有協議
 ipv4：指定查詢 ipv4 對應指标
 ipv6：指定查詢 ipv6 對應指标
-指定IP協議查詢時，不可同時指定省份、運營商查詢
+指定IP協議查詢時，不可同時指定 、運營商查詢
         :type IpProtocol: str
-        :param Area: 指定服務地域查詢，不填充表示查詢中國境内CDN數據
-mainland：指定查詢中國境内 CDN 數據
-overseas：指定查詢中國境外 CDN 數據
+        :param Area: 指定服務地域查詢，不填充表示查詢 境内CDN數據
+mainland：指定查詢 境内 CDN 數據
+overseas：指定查詢 境外 CDN 數據
         :type Area: str
-        :param AreaType: 查詢中國境外CDN數據時，可指定地區類型查詢，不填充表示查詢服務地區數據（僅在 Area 爲 overseas 時可用）
+        :param AreaType: 查詢 境外CDN數據時，可指定地區類型查詢，不填充表示查詢服務地區數據（僅在 Area 爲 overseas 時可用）
 server：指定查詢服務地區（Top Cloud  CDN 節點服務器所在地區）數據
 client：指定查詢用戶端地區（用戶請求終端所在地區）數據
         :type AreaType: str
@@ -1619,7 +1619,7 @@ class DescribeDomainsConfigRequest(AbstractModel):
         :param Filters: 查詢條件過濾器，複雜類型
         :type Filters: list of DomainFilter
         :param Sort: 排序規則
-        :type Sort: :class:`tencentcloud.cdn.v20180606.models.Sort`
+        :type Sort: :class:`taifucloudcloud.cdn.v20180606.models.Sort`
         """
         self.Offset = None
         self.Limit = None
@@ -1759,13 +1759,13 @@ class DescribeImageConfigResponse(AbstractModel):
         """
         :param WebpAdapter: WebpAdapter配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type WebpAdapter: :class:`tencentcloud.cdn.v20180606.models.WebpAdapter`
+        :type WebpAdapter: :class:`taifucloudcloud.cdn.v20180606.models.WebpAdapter`
         :param TpgAdapter: TpgAdapter配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TpgAdapter: :class:`tencentcloud.cdn.v20180606.models.TpgAdapter`
+        :type TpgAdapter: :class:`taifucloudcloud.cdn.v20180606.models.TpgAdapter`
         :param GuetzliAdapter: GuetzliAdapter配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type GuetzliAdapter: :class:`tencentcloud.cdn.v20180606.models.GuetzliAdapter`
+        :type GuetzliAdapter: :class:`taifucloudcloud.cdn.v20180606.models.GuetzliAdapter`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -1857,7 +1857,7 @@ class DescribeIpVisitRequest(AbstractModel):
         :type EndTime: str
         :param Domains: 指定查詢域名清單，最多可一次性查詢 30 個加速域名明細
         :type Domains: list of str
-        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.taifucloud.com/project)
 未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Project: int
         :param Interval: 時間粒度，支援以下幾種模式：
@@ -1919,7 +1919,7 @@ class DescribeMapInfoRequest(AbstractModel):
         """
         :param Name: 映射查詢類别：
 isp：運營商映射查詢
-district：省份（中國境内）、國家/地區（中國境外）映射查詢
+district： （ 境内）、國家/地區（ 境外）映射查詢
         :type Name: str
         """
         self.Name = None
@@ -2005,11 +2005,11 @@ statusCode：回源狀态碼，返回 2xx、3xx、4xx、5xx 匯總數據，單�
         :type Metric: str
         :param Domains: 指定查詢域名清單，最多可一次性查詢 30 個加速域名明細
         :type Domains: list of str
-        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.taifucloud.com/project)
 未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Project: int
         :param Interval: 時間粒度，支援以下幾種模式：
-min：1 分鍾粒度，指定查詢區間 24 小時内（含 24 小時），可返回 1 分鍾粒度明細數據（指定查詢服務地域爲中國境外時不支援 1 分鍾粒度）
+min：1 分鍾粒度，指定查詢區間 24 小時内（含 24 小時），可返回 1 分鍾粒度明細數據（指定查詢服務地域爲 境外時不支援 1 分鍾粒度）
 5min：5 分鍾粒度，指定查詢區間 31 天内（含 31 天），可返回 5 分鍾粒度明細數據
 hour：1 小時粒度，指定查詢區間 31 天内（含 31 天），可返回 1 小時粒度明細數據
 day：天粒度，指定查詢區間大于 31 天，可返回天粒度明細數據
@@ -2017,9 +2017,9 @@ day：天粒度，指定查詢區間大于 31 天，可返回天粒度明細數�
         :param Detail: Domains 傳入多個時，預設（false)返回多個域名的匯總數據
 可按需指定爲 true，返回每一個 Domain 的明細數據（statusCode 指标暫不支援）
         :type Detail: bool
-        :param Area: 指定服務地域查詢，不填充表示查詢中國境内 CDN 數據
-mainland：指定查詢中國境内 CDN 數據
-overseas：指定查詢中國境外 CDN 數據
+        :param Area: 指定服務地域查詢，不填充表示查詢 境内 CDN 數據
+mainland：指定查詢 境内 CDN 數據
+overseas：指定查詢 境外 CDN 數據
         :type Area: str
         """
         self.StartTime = None
@@ -2408,8 +2408,8 @@ weekly：周報表
 monthly：月報表
         :type ReportType: str
         :param Area: 域名加速區域
-mainland：中國境内
-overseas：中國境外
+mainland： 境内
+overseas： 境外
         :type Area: str
         :param Offset: 偏移量，預設0。
         :type Offset: int
@@ -2621,64 +2621,64 @@ media：流媒體點播加速
         :param UpdateTime: 域名更新時間
         :type UpdateTime: str
         :param Origin: 源站配置
-        :type Origin: :class:`tencentcloud.cdn.v20180606.models.Origin`
+        :type Origin: :class:`taifucloudcloud.cdn.v20180606.models.Origin`
         :param IpFilter: IP 黑白名單配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type IpFilter: :class:`tencentcloud.cdn.v20180606.models.IpFilter`
+        :type IpFilter: :class:`taifucloudcloud.cdn.v20180606.models.IpFilter`
         :param IpFreqLimit: IP 訪問限頻配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type IpFreqLimit: :class:`tencentcloud.cdn.v20180606.models.IpFreqLimit`
+        :type IpFreqLimit: :class:`taifucloudcloud.cdn.v20180606.models.IpFreqLimit`
         :param StatusCodeCache: 狀态碼快取配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type StatusCodeCache: :class:`tencentcloud.cdn.v20180606.models.StatusCodeCache`
+        :type StatusCodeCache: :class:`taifucloudcloud.cdn.v20180606.models.StatusCodeCache`
         :param Compression: 智慧壓縮配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Compression: :class:`tencentcloud.cdn.v20180606.models.Compression`
+        :type Compression: :class:`taifucloudcloud.cdn.v20180606.models.Compression`
         :param BandwidthAlert: 頻寬封頂配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type BandwidthAlert: :class:`tencentcloud.cdn.v20180606.models.BandwidthAlert`
+        :type BandwidthAlert: :class:`taifucloudcloud.cdn.v20180606.models.BandwidthAlert`
         :param RangeOriginPull: Range 回源配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type RangeOriginPull: :class:`tencentcloud.cdn.v20180606.models.RangeOriginPull`
+        :type RangeOriginPull: :class:`taifucloudcloud.cdn.v20180606.models.RangeOriginPull`
         :param FollowRedirect: 301/302 回源自動跟随配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FollowRedirect: :class:`tencentcloud.cdn.v20180606.models.FollowRedirect`
+        :type FollowRedirect: :class:`taifucloudcloud.cdn.v20180606.models.FollowRedirect`
         :param ErrorPage: 自定義錯誤頁面配置（功能灰度中，敬請期待）
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ErrorPage: :class:`tencentcloud.cdn.v20180606.models.ErrorPage`
+        :type ErrorPage: :class:`taifucloudcloud.cdn.v20180606.models.ErrorPage`
         :param RequestHeader: 自定義請求頭部配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type RequestHeader: :class:`tencentcloud.cdn.v20180606.models.RequestHeader`
+        :type RequestHeader: :class:`taifucloudcloud.cdn.v20180606.models.RequestHeader`
         :param ResponseHeader: 自定義響應頭部配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ResponseHeader: :class:`tencentcloud.cdn.v20180606.models.ResponseHeader`
+        :type ResponseHeader: :class:`taifucloudcloud.cdn.v20180606.models.ResponseHeader`
         :param DownstreamCapping: 單連結下行限速配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type DownstreamCapping: :class:`tencentcloud.cdn.v20180606.models.DownstreamCapping`
+        :type DownstreamCapping: :class:`taifucloudcloud.cdn.v20180606.models.DownstreamCapping`
         :param CacheKey: 帶參/不帶參快取配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CacheKey: :class:`tencentcloud.cdn.v20180606.models.CacheKey`
+        :type CacheKey: :class:`taifucloudcloud.cdn.v20180606.models.CacheKey`
         :param ResponseHeaderCache: 源站頭部快取配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ResponseHeaderCache: :class:`tencentcloud.cdn.v20180606.models.ResponseHeaderCache`
+        :type ResponseHeaderCache: :class:`taifucloudcloud.cdn.v20180606.models.ResponseHeaderCache`
         :param VideoSeek: 視訊拖拽配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type VideoSeek: :class:`tencentcloud.cdn.v20180606.models.VideoSeek`
+        :type VideoSeek: :class:`taifucloudcloud.cdn.v20180606.models.VideoSeek`
         :param Cache: 節點快取過期規則配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Cache: :class:`tencentcloud.cdn.v20180606.models.Cache`
+        :type Cache: :class:`taifucloudcloud.cdn.v20180606.models.Cache`
         :param OriginPullOptimization: 跨國鏈路優化配置（功能灰度中，敬請期待）
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OriginPullOptimization: :class:`tencentcloud.cdn.v20180606.models.OriginPullOptimization`
+        :type OriginPullOptimization: :class:`taifucloudcloud.cdn.v20180606.models.OriginPullOptimization`
         :param Https: Https 加速相關配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Https: :class:`tencentcloud.cdn.v20180606.models.Https`
+        :type Https: :class:`taifucloudcloud.cdn.v20180606.models.Https`
         :param Authentication: 時間戳防盜鏈配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Authentication: :class:`tencentcloud.cdn.v20180606.models.Authentication`
+        :type Authentication: :class:`taifucloudcloud.cdn.v20180606.models.Authentication`
         :param Seo: SEO 優化配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Seo: :class:`tencentcloud.cdn.v20180606.models.Seo`
+        :type Seo: :class:`taifucloudcloud.cdn.v20180606.models.Seo`
         :param Disable: 域名封禁狀态
 normal：正常狀态
 overdue：賬号欠費導緻域名關閉，儲值完成後可自行啓動加速服務
@@ -2692,47 +2692,47 @@ readonly：域名存在特殊配置，被鎖定
         :type Disable: str
         :param ForceRedirect: 訪問協議強制跳轉配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ForceRedirect: :class:`tencentcloud.cdn.v20180606.models.ForceRedirect`
+        :type ForceRedirect: :class:`taifucloudcloud.cdn.v20180606.models.ForceRedirect`
         :param Referer: Referer 防盜鏈配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Referer: :class:`tencentcloud.cdn.v20180606.models.Referer`
+        :type Referer: :class:`taifucloudcloud.cdn.v20180606.models.Referer`
         :param MaxAge: 浏覽器快取過期規則配置（功能灰度中，敬請期待）
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MaxAge: :class:`tencentcloud.cdn.v20180606.models.MaxAge`
+        :type MaxAge: :class:`taifucloudcloud.cdn.v20180606.models.MaxAge`
         :param Ipv6: Ipv6 配置（功能灰度中，敬請期待）
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Ipv6: :class:`tencentcloud.cdn.v20180606.models.Ipv6`
+        :type Ipv6: :class:`taifucloudcloud.cdn.v20180606.models.Ipv6`
         :param Compatibility: 是否兼容舊版本配置（内部相容性欄位）
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Compatibility: :class:`tencentcloud.cdn.v20180606.models.Compatibility`
+        :type Compatibility: :class:`taifucloudcloud.cdn.v20180606.models.Compatibility`
         :param SpecificConfig: 區域特殊配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SpecificConfig: :class:`tencentcloud.cdn.v20180606.models.SpecificConfig`
+        :type SpecificConfig: :class:`taifucloudcloud.cdn.v20180606.models.SpecificConfig`
         :param Area: 加速區域
-mainland：中國境内加速
-overseas：中國境外加速
+mainland： 境内加速
+overseas： 境外加速
 global：全球加速
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Area: str
         :param Readonly: 域名鎖定狀态
 normal：未鎖定
-mainland：中國境内鎖定
-overseas：中國境外鎖定
+mainland： 境内鎖定
+overseas： 境外鎖定
 global：全球鎖定
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Readonly: str
         :param OriginPullTimeout: 回源超時配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OriginPullTimeout: :class:`tencentcloud.cdn.v20180606.models.OriginPullTimeout`
+        :type OriginPullTimeout: :class:`taifucloudcloud.cdn.v20180606.models.OriginPullTimeout`
         :param AwsPrivateAccess: 回源S3鑒權配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type AwsPrivateAccess: :class:`tencentcloud.cdn.v20180606.models.AwsPrivateAccess`
+        :type AwsPrivateAccess: :class:`taifucloudcloud.cdn.v20180606.models.AwsPrivateAccess`
         :param SecurityConfig: Scdn配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type SecurityConfig: :class:`tencentcloud.cdn.v20180606.models.SecurityConfig`
+        :type SecurityConfig: :class:`taifucloudcloud.cdn.v20180606.models.SecurityConfig`
         :param ImageOptimization: ImageOptimization配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ImageOptimization: :class:`tencentcloud.cdn.v20180606.models.ImageOptimization`
+        :type ImageOptimization: :class:`taifucloudcloud.cdn.v20180606.models.ImageOptimization`
         """
         self.ResourceId = None
         self.AppId = None
@@ -2910,7 +2910,7 @@ class DisableCachesResponse(AbstractModel):
         """
         :param CacheOptResult: 提交結果
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CacheOptResult: :class:`tencentcloud.cdn.v20180606.models.CacheOptResult`
+        :type CacheOptResult: :class:`taifucloudcloud.cdn.v20180606.models.CacheOptResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3115,7 +3115,7 @@ class EnableCachesResponse(AbstractModel):
         """
         :param CacheOptResult: 結果清單
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CacheOptResult: :class:`tencentcloud.cdn.v20180606.models.CacheOptResult`
+        :type CacheOptResult: :class:`taifucloudcloud.cdn.v20180606.models.CacheOptResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -3454,10 +3454,10 @@ off：關閉
         :type VerifyClient: str
         :param CertInfo: 服務端證書配置訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CertInfo: :class:`tencentcloud.cdn.v20180606.models.ServerCert`
+        :type CertInfo: :class:`taifucloudcloud.cdn.v20180606.models.ServerCert`
         :param ClientCertInfo: 用戶端證書配置訊息
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ClientCertInfo: :class:`tencentcloud.cdn.v20180606.models.ClientCert`
+        :type ClientCertInfo: :class:`taifucloudcloud.cdn.v20180606.models.ClientCert`
         :param Spdy: Spdy 配置開關
 on：開啓
 off：關閉
@@ -3506,13 +3506,13 @@ class ImageOptimization(AbstractModel):
         """
         :param WebpAdapter: WebpAdapter配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type WebpAdapter: :class:`tencentcloud.cdn.v20180606.models.WebpAdapter`
+        :type WebpAdapter: :class:`taifucloudcloud.cdn.v20180606.models.WebpAdapter`
         :param TpgAdapter: TpgAdapter配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TpgAdapter: :class:`tencentcloud.cdn.v20180606.models.TpgAdapter`
+        :type TpgAdapter: :class:`taifucloudcloud.cdn.v20180606.models.TpgAdapter`
         :param GuetzliAdapter: GuetzliAdapter配置
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type GuetzliAdapter: :class:`tencentcloud.cdn.v20180606.models.GuetzliAdapter`
+        :type GuetzliAdapter: :class:`taifucloudcloud.cdn.v20180606.models.GuetzliAdapter`
         """
         self.WebpAdapter = None
         self.TpgAdapter = None
@@ -3667,7 +3667,7 @@ class ListClsLogTopicsResponse(AbstractModel):
     def __init__(self):
         """
         :param Logset: 日志集訊息
-        :type Logset: :class:`tencentcloud.cdn.v20180606.models.LogSetInfo`
+        :type Logset: :class:`taifucloudcloud.cdn.v20180606.models.LogSetInfo`
         :param Topics: 日志主題訊息清單
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Topics: list of TopicInfo
@@ -3788,7 +3788,7 @@ EndTime 需要大于等于 StartTime
         :param Metric: 排序對象，支援以下幾種形式：
 url：訪問 URL 排序，帶參數統計，支援的 Filter 爲 flux、request
 path：訪問 URL 排序，不帶參數統計，支援的 Filter 爲 flux、request（白名單功能）
-district：省份、國家/地區排序，支援的 Filter 爲 flux、request
+district： 、國家/地區排序，支援的 Filter 爲 flux、request
 isp：運營商排序，支援的 Filter 爲 flux、request
 host：域名訪問數據排序，支援的 Filter 爲：flux、request、bandwidth、fluxHitRate、2XX、3XX、4XX、5XX、statusCode
 originHost：域名回源數據排序，支援的 Filter 爲 flux、request、bandwidth、origin_2XX、origin_3XX、origin_4XX、origin_5XX、OriginStatusCode
@@ -3811,7 +3811,7 @@ OriginStatusCode：指定回源狀态碼統計，在 Code 參數中填充指定�
         :type Filter: str
         :param Domains: 指定查詢域名清單，最多可一次性查詢 30 個加速域名明細
         :type Domains: list of str
-        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.tencent.com/project)
+        :param Project: 指定要查詢的項目 ID，[前往檢視項目 ID](https://console.cloud.taifucloud.com/project)
 未填充域名情況下，指定項目查詢，若填充了具體域名訊息，以域名爲主
         :type Project: int
         :param Detail: 多域名查詢時，預設（false)返回所有域名匯總排序結果
@@ -3819,11 +3819,11 @@ Metric 爲 url、path、district、isp，Filter 爲 flux、request 時，可設�
         :type Detail: bool
         :param Code: Filter 爲 statusCode、OriginStatusCode 時，填充指定狀态碼查詢排序結果
         :type Code: str
-        :param Area: 指定服務地域查詢，不填充表示查詢中國境内 CDN 數據
-mainland：指定查詢中國境内 CDN 數據
-overseas：指定查詢中國境外 CDN 數據，支援的 Metric 爲 url、district、host、originHost，當 Metric 爲 originHost 時僅支援 flux、request、bandwidth Filter
+        :param Area: 指定服務地域查詢，不填充表示查詢 境内 CDN 數據
+mainland：指定查詢 境内 CDN 數據
+overseas：指定查詢 境外 CDN 數據，支援的 Metric 爲 url、district、host、originHost，當 Metric 爲 originHost 時僅支援 flux、request、bandwidth Filter
         :type Area: str
-        :param AreaType: 查詢中國境外CDN數據，且僅當 Metric 爲 district 或 host 時，可指定地區類型查詢，不填充表示查詢服務地區數據（僅在 Area 爲 overseas，且 Metric 是 district 或 host 時可用）
+        :param AreaType: 查詢 境外CDN數據，且僅當 Metric 爲 district 或 host 時，可指定地區類型查詢，不填充表示查詢服務地區數據（僅在 Area 爲 overseas，且 Metric 是 district 或 host 時可用）
 server：指定查詢服務地區（Top Cloud  CDN 節點服務器所在地區）數據
 client：指定查詢用戶端地區（用戶請求終端所在地區）數據，當 Metric 爲 host 時僅支援 flux、request、bandwidth Filter
         :type AreaType: str
@@ -3940,76 +3940,76 @@ class MainlandConfig(AbstractModel):
         """
         :param Authentication: 時間戳防盜鏈配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Authentication: :class:`tencentcloud.cdn.v20180606.models.Authentication`
+        :type Authentication: :class:`taifucloudcloud.cdn.v20180606.models.Authentication`
         :param BandwidthAlert: 頻寬封頂配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type BandwidthAlert: :class:`tencentcloud.cdn.v20180606.models.BandwidthAlert`
+        :type BandwidthAlert: :class:`taifucloudcloud.cdn.v20180606.models.BandwidthAlert`
         :param Cache: 快取規則配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Cache: :class:`tencentcloud.cdn.v20180606.models.Cache`
+        :type Cache: :class:`taifucloudcloud.cdn.v20180606.models.Cache`
         :param CacheKey: 快取相關配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CacheKey: :class:`tencentcloud.cdn.v20180606.models.CacheKey`
+        :type CacheKey: :class:`taifucloudcloud.cdn.v20180606.models.CacheKey`
         :param Compression: 智慧壓縮配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Compression: :class:`tencentcloud.cdn.v20180606.models.Compression`
+        :type Compression: :class:`taifucloudcloud.cdn.v20180606.models.Compression`
         :param DownstreamCapping: 下載限速配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type DownstreamCapping: :class:`tencentcloud.cdn.v20180606.models.DownstreamCapping`
+        :type DownstreamCapping: :class:`taifucloudcloud.cdn.v20180606.models.DownstreamCapping`
         :param ErrorPage: 錯誤碼重定向配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ErrorPage: :class:`tencentcloud.cdn.v20180606.models.ErrorPage`
+        :type ErrorPage: :class:`taifucloudcloud.cdn.v20180606.models.ErrorPage`
         :param FollowRedirect: 301和302自動回源跟随配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FollowRedirect: :class:`tencentcloud.cdn.v20180606.models.FollowRedirect`
+        :type FollowRedirect: :class:`taifucloudcloud.cdn.v20180606.models.FollowRedirect`
         :param ForceRedirect: 訪問協議強制跳轉配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ForceRedirect: :class:`tencentcloud.cdn.v20180606.models.ForceRedirect`
+        :type ForceRedirect: :class:`taifucloudcloud.cdn.v20180606.models.ForceRedirect`
         :param Https: Https配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Https: :class:`tencentcloud.cdn.v20180606.models.Https`
+        :type Https: :class:`taifucloudcloud.cdn.v20180606.models.Https`
         :param IpFilter: IP黑白名單配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type IpFilter: :class:`tencentcloud.cdn.v20180606.models.IpFilter`
+        :type IpFilter: :class:`taifucloudcloud.cdn.v20180606.models.IpFilter`
         :param IpFreqLimit: IP限頻配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type IpFreqLimit: :class:`tencentcloud.cdn.v20180606.models.IpFreqLimit`
+        :type IpFreqLimit: :class:`taifucloudcloud.cdn.v20180606.models.IpFreqLimit`
         :param MaxAge: 浏覽器快取規則配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MaxAge: :class:`tencentcloud.cdn.v20180606.models.MaxAge`
+        :type MaxAge: :class:`taifucloudcloud.cdn.v20180606.models.MaxAge`
         :param Origin: 源站配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Origin: :class:`tencentcloud.cdn.v20180606.models.Origin`
+        :type Origin: :class:`taifucloudcloud.cdn.v20180606.models.Origin`
         :param OriginPullOptimization: 跨國優化配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OriginPullOptimization: :class:`tencentcloud.cdn.v20180606.models.OriginPullOptimization`
+        :type OriginPullOptimization: :class:`taifucloudcloud.cdn.v20180606.models.OriginPullOptimization`
         :param RangeOriginPull: Range回源配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type RangeOriginPull: :class:`tencentcloud.cdn.v20180606.models.RangeOriginPull`
+        :type RangeOriginPull: :class:`taifucloudcloud.cdn.v20180606.models.RangeOriginPull`
         :param Referer: 防盜鏈配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Referer: :class:`tencentcloud.cdn.v20180606.models.Referer`
+        :type Referer: :class:`taifucloudcloud.cdn.v20180606.models.Referer`
         :param RequestHeader: 回源請求頭部配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type RequestHeader: :class:`tencentcloud.cdn.v20180606.models.RequestHeader`
+        :type RequestHeader: :class:`taifucloudcloud.cdn.v20180606.models.RequestHeader`
         :param ResponseHeader: 源站響應頭部配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ResponseHeader: :class:`tencentcloud.cdn.v20180606.models.ResponseHeader`
+        :type ResponseHeader: :class:`taifucloudcloud.cdn.v20180606.models.ResponseHeader`
         :param ResponseHeaderCache: 遵循源站快取頭部配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ResponseHeaderCache: :class:`tencentcloud.cdn.v20180606.models.ResponseHeaderCache`
+        :type ResponseHeaderCache: :class:`taifucloudcloud.cdn.v20180606.models.ResponseHeaderCache`
         :param Seo: seo優化配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Seo: :class:`tencentcloud.cdn.v20180606.models.Seo`
+        :type Seo: :class:`taifucloudcloud.cdn.v20180606.models.Seo`
         :param ServiceType: 域名業務類型，web，download，media分别表示靜态加速，下載加速和流媒體加速。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ServiceType: str
         :param StatusCodeCache: 狀态碼快取配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type StatusCodeCache: :class:`tencentcloud.cdn.v20180606.models.StatusCodeCache`
+        :type StatusCodeCache: :class:`taifucloudcloud.cdn.v20180606.models.StatusCodeCache`
         :param VideoSeek: 視訊拖拽配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type VideoSeek: :class:`tencentcloud.cdn.v20180606.models.VideoSeek`
+        :type VideoSeek: :class:`taifucloudcloud.cdn.v20180606.models.VideoSeek`
         """
         self.Authentication = None
         self.BandwidthAlert = None
@@ -4390,76 +4390,76 @@ class OverseaConfig(AbstractModel):
         """
         :param Authentication: 時間戳防盜鏈配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Authentication: :class:`tencentcloud.cdn.v20180606.models.Authentication`
+        :type Authentication: :class:`taifucloudcloud.cdn.v20180606.models.Authentication`
         :param BandwidthAlert: 頻寬封頂配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type BandwidthAlert: :class:`tencentcloud.cdn.v20180606.models.BandwidthAlert`
+        :type BandwidthAlert: :class:`taifucloudcloud.cdn.v20180606.models.BandwidthAlert`
         :param Cache: 快取規則配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Cache: :class:`tencentcloud.cdn.v20180606.models.Cache`
+        :type Cache: :class:`taifucloudcloud.cdn.v20180606.models.Cache`
         :param CacheKey: 快取相關配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type CacheKey: :class:`tencentcloud.cdn.v20180606.models.CacheKey`
+        :type CacheKey: :class:`taifucloudcloud.cdn.v20180606.models.CacheKey`
         :param Compression: 智慧壓縮配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Compression: :class:`tencentcloud.cdn.v20180606.models.Compression`
+        :type Compression: :class:`taifucloudcloud.cdn.v20180606.models.Compression`
         :param DownstreamCapping: 下載限速配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type DownstreamCapping: :class:`tencentcloud.cdn.v20180606.models.DownstreamCapping`
+        :type DownstreamCapping: :class:`taifucloudcloud.cdn.v20180606.models.DownstreamCapping`
         :param ErrorPage: 錯誤碼重定向配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ErrorPage: :class:`tencentcloud.cdn.v20180606.models.ErrorPage`
+        :type ErrorPage: :class:`taifucloudcloud.cdn.v20180606.models.ErrorPage`
         :param FollowRedirect: 301和302自動回源跟随配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type FollowRedirect: :class:`tencentcloud.cdn.v20180606.models.FollowRedirect`
+        :type FollowRedirect: :class:`taifucloudcloud.cdn.v20180606.models.FollowRedirect`
         :param ForceRedirect: 訪問協議強制跳轉配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ForceRedirect: :class:`tencentcloud.cdn.v20180606.models.ForceRedirect`
+        :type ForceRedirect: :class:`taifucloudcloud.cdn.v20180606.models.ForceRedirect`
         :param Https: Https配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Https: :class:`tencentcloud.cdn.v20180606.models.Https`
+        :type Https: :class:`taifucloudcloud.cdn.v20180606.models.Https`
         :param IpFilter: IP黑白名單配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type IpFilter: :class:`tencentcloud.cdn.v20180606.models.IpFilter`
+        :type IpFilter: :class:`taifucloudcloud.cdn.v20180606.models.IpFilter`
         :param IpFreqLimit: IP限頻配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type IpFreqLimit: :class:`tencentcloud.cdn.v20180606.models.IpFreqLimit`
+        :type IpFreqLimit: :class:`taifucloudcloud.cdn.v20180606.models.IpFreqLimit`
         :param MaxAge: 浏覽器快取規則配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type MaxAge: :class:`tencentcloud.cdn.v20180606.models.MaxAge`
+        :type MaxAge: :class:`taifucloudcloud.cdn.v20180606.models.MaxAge`
         :param Origin: 源站配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Origin: :class:`tencentcloud.cdn.v20180606.models.Origin`
+        :type Origin: :class:`taifucloudcloud.cdn.v20180606.models.Origin`
         :param OriginPullOptimization: 跨國優化配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type OriginPullOptimization: :class:`tencentcloud.cdn.v20180606.models.OriginPullOptimization`
+        :type OriginPullOptimization: :class:`taifucloudcloud.cdn.v20180606.models.OriginPullOptimization`
         :param RangeOriginPull: Range回源配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type RangeOriginPull: :class:`tencentcloud.cdn.v20180606.models.RangeOriginPull`
+        :type RangeOriginPull: :class:`taifucloudcloud.cdn.v20180606.models.RangeOriginPull`
         :param Referer: 防盜鏈配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Referer: :class:`tencentcloud.cdn.v20180606.models.Referer`
+        :type Referer: :class:`taifucloudcloud.cdn.v20180606.models.Referer`
         :param RequestHeader: 回源請求頭部配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type RequestHeader: :class:`tencentcloud.cdn.v20180606.models.RequestHeader`
+        :type RequestHeader: :class:`taifucloudcloud.cdn.v20180606.models.RequestHeader`
         :param ResponseHeader: 源站響應頭部配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ResponseHeader: :class:`tencentcloud.cdn.v20180606.models.ResponseHeader`
+        :type ResponseHeader: :class:`taifucloudcloud.cdn.v20180606.models.ResponseHeader`
         :param ResponseHeaderCache: 遵循源站快取頭部配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type ResponseHeaderCache: :class:`tencentcloud.cdn.v20180606.models.ResponseHeaderCache`
+        :type ResponseHeaderCache: :class:`taifucloudcloud.cdn.v20180606.models.ResponseHeaderCache`
         :param Seo: seo優化配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Seo: :class:`tencentcloud.cdn.v20180606.models.Seo`
+        :type Seo: :class:`taifucloudcloud.cdn.v20180606.models.Seo`
         :param ServiceType: 域名業務類型，web，download，media分别表示靜态加速，下載加速和流媒體加速。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ServiceType: str
         :param StatusCodeCache: 狀态碼快取配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type StatusCodeCache: :class:`tencentcloud.cdn.v20180606.models.StatusCodeCache`
+        :type StatusCodeCache: :class:`taifucloudcloud.cdn.v20180606.models.StatusCodeCache`
         :param VideoSeek: 視訊拖拽配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type VideoSeek: :class:`tencentcloud.cdn.v20180606.models.VideoSeek`
+        :type VideoSeek: :class:`taifucloudcloud.cdn.v20180606.models.VideoSeek`
         """
         self.Authentication = None
         self.BandwidthAlert = None
@@ -5151,7 +5151,7 @@ class SearchClsLogRequest(AbstractModel):
         :type Limit: int
         :param Channel: 接入管道，預設值爲cdn
         :type Channel: str
-        :param Query: 需要查詢的内容，詳情請參考https://cloud.tencent.com/document/product/614/16982
+        :param Query: 需要查詢的内容，詳情請參考https://cloud.taifucloud.com/document/product/614/16982
         :type Query: str
         :param Context: 加載更多使用，透傳上次返回的 context 值，獲取後續的日志内容，通過遊标最多可獲取10000條，請盡可能縮小時間範圍
         :type Context: str
@@ -5189,7 +5189,7 @@ class SearchClsLogResponse(AbstractModel):
     def __init__(self):
         """
         :param Logs: 查詢結果
-        :type Logs: :class:`tencentcloud.cdn.v20180606.models.ClsSearchLogs`
+        :type Logs: :class:`taifucloudcloud.cdn.v20180606.models.ClsSearchLogs`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -5425,10 +5425,10 @@ class SpecificConfig(AbstractModel):
         """
         :param Mainland: 國内特殊配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Mainland: :class:`tencentcloud.cdn.v20180606.models.MainlandConfig`
+        :type Mainland: :class:`taifucloudcloud.cdn.v20180606.models.MainlandConfig`
         :param Overseas: 海外特殊配置。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type Overseas: :class:`tencentcloud.cdn.v20180606.models.OverseaConfig`
+        :type Overseas: :class:`taifucloudcloud.cdn.v20180606.models.OverseaConfig`
         """
         self.Mainland = None
         self.Overseas = None
@@ -5782,51 +5782,51 @@ class UpdateDomainConfigRequest(AbstractModel):
         :param ProjectId: 項目 ID
         :type ProjectId: int
         :param Origin: 源站配置
-        :type Origin: :class:`tencentcloud.cdn.v20180606.models.Origin`
+        :type Origin: :class:`taifucloudcloud.cdn.v20180606.models.Origin`
         :param IpFilter: IP 黑白名單配置
-        :type IpFilter: :class:`tencentcloud.cdn.v20180606.models.IpFilter`
+        :type IpFilter: :class:`taifucloudcloud.cdn.v20180606.models.IpFilter`
         :param IpFreqLimit: IP 限頻配置
-        :type IpFreqLimit: :class:`tencentcloud.cdn.v20180606.models.IpFreqLimit`
+        :type IpFreqLimit: :class:`taifucloudcloud.cdn.v20180606.models.IpFreqLimit`
         :param StatusCodeCache: 狀态碼快取配置
-        :type StatusCodeCache: :class:`tencentcloud.cdn.v20180606.models.StatusCodeCache`
+        :type StatusCodeCache: :class:`taifucloudcloud.cdn.v20180606.models.StatusCodeCache`
         :param Compression: 智慧壓縮配置
-        :type Compression: :class:`tencentcloud.cdn.v20180606.models.Compression`
+        :type Compression: :class:`taifucloudcloud.cdn.v20180606.models.Compression`
         :param BandwidthAlert: 頻寬封頂配置
-        :type BandwidthAlert: :class:`tencentcloud.cdn.v20180606.models.BandwidthAlert`
+        :type BandwidthAlert: :class:`taifucloudcloud.cdn.v20180606.models.BandwidthAlert`
         :param RangeOriginPull: Range 回源配置
-        :type RangeOriginPull: :class:`tencentcloud.cdn.v20180606.models.RangeOriginPull`
+        :type RangeOriginPull: :class:`taifucloudcloud.cdn.v20180606.models.RangeOriginPull`
         :param FollowRedirect: 301/302 回源跟随配置
-        :type FollowRedirect: :class:`tencentcloud.cdn.v20180606.models.FollowRedirect`
+        :type FollowRedirect: :class:`taifucloudcloud.cdn.v20180606.models.FollowRedirect`
         :param ErrorPage: 錯誤碼重定向配置（功能灰度中，尚未全量）
-        :type ErrorPage: :class:`tencentcloud.cdn.v20180606.models.ErrorPage`
+        :type ErrorPage: :class:`taifucloudcloud.cdn.v20180606.models.ErrorPage`
         :param RequestHeader: 請求頭部配置
-        :type RequestHeader: :class:`tencentcloud.cdn.v20180606.models.RequestHeader`
+        :type RequestHeader: :class:`taifucloudcloud.cdn.v20180606.models.RequestHeader`
         :param ResponseHeader: 響應頭部配置
-        :type ResponseHeader: :class:`tencentcloud.cdn.v20180606.models.ResponseHeader`
+        :type ResponseHeader: :class:`taifucloudcloud.cdn.v20180606.models.ResponseHeader`
         :param DownstreamCapping: 下載速度配置
-        :type DownstreamCapping: :class:`tencentcloud.cdn.v20180606.models.DownstreamCapping`
+        :type DownstreamCapping: :class:`taifucloudcloud.cdn.v20180606.models.DownstreamCapping`
         :param CacheKey: 節點快取鍵配置
-        :type CacheKey: :class:`tencentcloud.cdn.v20180606.models.CacheKey`
+        :type CacheKey: :class:`taifucloudcloud.cdn.v20180606.models.CacheKey`
         :param ResponseHeaderCache: 頭部快取配置
-        :type ResponseHeaderCache: :class:`tencentcloud.cdn.v20180606.models.ResponseHeaderCache`
+        :type ResponseHeaderCache: :class:`taifucloudcloud.cdn.v20180606.models.ResponseHeaderCache`
         :param VideoSeek: 視訊拖拽配置
-        :type VideoSeek: :class:`tencentcloud.cdn.v20180606.models.VideoSeek`
+        :type VideoSeek: :class:`taifucloudcloud.cdn.v20180606.models.VideoSeek`
         :param Cache: 快取過期時間配置
-        :type Cache: :class:`tencentcloud.cdn.v20180606.models.Cache`
+        :type Cache: :class:`taifucloudcloud.cdn.v20180606.models.Cache`
         :param OriginPullOptimization: 跨國鏈路優化配置
-        :type OriginPullOptimization: :class:`tencentcloud.cdn.v20180606.models.OriginPullOptimization`
+        :type OriginPullOptimization: :class:`taifucloudcloud.cdn.v20180606.models.OriginPullOptimization`
         :param Https: Https 加速配置
-        :type Https: :class:`tencentcloud.cdn.v20180606.models.Https`
+        :type Https: :class:`taifucloudcloud.cdn.v20180606.models.Https`
         :param Authentication: 時間戳防盜鏈配置
-        :type Authentication: :class:`tencentcloud.cdn.v20180606.models.Authentication`
+        :type Authentication: :class:`taifucloudcloud.cdn.v20180606.models.Authentication`
         :param Seo: SEO 優化配置
-        :type Seo: :class:`tencentcloud.cdn.v20180606.models.Seo`
+        :type Seo: :class:`taifucloudcloud.cdn.v20180606.models.Seo`
         :param ForceRedirect: 訪問協議強制跳轉配置
-        :type ForceRedirect: :class:`tencentcloud.cdn.v20180606.models.ForceRedirect`
+        :type ForceRedirect: :class:`taifucloudcloud.cdn.v20180606.models.ForceRedirect`
         :param Referer: Referer 防盜鏈配置
-        :type Referer: :class:`tencentcloud.cdn.v20180606.models.Referer`
+        :type Referer: :class:`taifucloudcloud.cdn.v20180606.models.Referer`
         :param MaxAge: 浏覽器快取配置（功能灰度中，尚未全量）
-        :type MaxAge: :class:`tencentcloud.cdn.v20180606.models.MaxAge`
+        :type MaxAge: :class:`taifucloudcloud.cdn.v20180606.models.MaxAge`
         :param ServiceType: 域名業務類型
 web：靜态加速
 download：下載加速
@@ -5834,16 +5834,16 @@ media：流媒體點播加速
         :type ServiceType: str
         :param SpecificConfig: 地域屬性特殊配置
 适用于域名境内加速、境外加速配置不一緻場景
-        :type SpecificConfig: :class:`tencentcloud.cdn.v20180606.models.SpecificConfig`
+        :type SpecificConfig: :class:`taifucloudcloud.cdn.v20180606.models.SpecificConfig`
         :param Area: 域名加速區域
-mainland：中國境内加速
-overseas：中國境外加速
+mainland： 境内加速
+overseas： 境外加速
 global：全球加速
         :type Area: str
         :param OriginPullTimeout: 回源超時配置
-        :type OriginPullTimeout: :class:`tencentcloud.cdn.v20180606.models.OriginPullTimeout`
+        :type OriginPullTimeout: :class:`taifucloudcloud.cdn.v20180606.models.OriginPullTimeout`
         :param AwsPrivateAccess: 回源S3私有鑒權
-        :type AwsPrivateAccess: :class:`tencentcloud.cdn.v20180606.models.AwsPrivateAccess`
+        :type AwsPrivateAccess: :class:`taifucloudcloud.cdn.v20180606.models.AwsPrivateAccess`
         """
         self.Domain = None
         self.ProjectId = None
@@ -5989,11 +5989,11 @@ class UpdateImageConfigRequest(AbstractModel):
         :param Domain: 域名
         :type Domain: str
         :param WebpAdapter: WebpAdapter配置項
-        :type WebpAdapter: :class:`tencentcloud.cdn.v20180606.models.WebpAdapter`
+        :type WebpAdapter: :class:`taifucloudcloud.cdn.v20180606.models.WebpAdapter`
         :param TpgAdapter: TpgAdapter配置項
-        :type TpgAdapter: :class:`tencentcloud.cdn.v20180606.models.TpgAdapter`
+        :type TpgAdapter: :class:`taifucloudcloud.cdn.v20180606.models.TpgAdapter`
         :param GuetzliAdapter: GuetzliAdapter配置項
-        :type GuetzliAdapter: :class:`tencentcloud.cdn.v20180606.models.GuetzliAdapter`
+        :type GuetzliAdapter: :class:`taifucloudcloud.cdn.v20180606.models.GuetzliAdapter`
         """
         self.Domain = None
         self.WebpAdapter = None

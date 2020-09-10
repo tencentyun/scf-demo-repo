@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AccessGroup(AbstractModel):
@@ -107,7 +107,7 @@ class CreateAccessGroupResponse(AbstractModel):
     def __init__(self):
         """
         :param AccessGroup: 權限組
-        :type AccessGroup: :class:`tencentcloud.chdfs.v20190718.models.AccessGroup`
+        :type AccessGroup: :class:`taifucloudcloud.chdfs.v20190718.models.AccessGroup`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -198,7 +198,7 @@ class CreateFileSystemResponse(AbstractModel):
     def __init__(self):
         """
         :param FileSystem: 文件系統
-        :type FileSystem: :class:`tencentcloud.chdfs.v20190718.models.FileSystem`
+        :type FileSystem: :class:`taifucloudcloud.chdfs.v20190718.models.FileSystem`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -258,7 +258,7 @@ class CreateMountPointResponse(AbstractModel):
     def __init__(self):
         """
         :param MountPoint: 掛載點
-        :type MountPoint: :class:`tencentcloud.chdfs.v20190718.models.MountPoint`
+        :type MountPoint: :class:`taifucloudcloud.chdfs.v20190718.models.MountPoint`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """
@@ -541,7 +541,7 @@ class DescribeFileSystemResponse(AbstractModel):
     def __init__(self):
         """
         :param FileSystem: 文件系統
-        :type FileSystem: :class:`tencentcloud.chdfs.v20190718.models.FileSystem`
+        :type FileSystem: :class:`taifucloudcloud.chdfs.v20190718.models.FileSystem`
         :param FileSystemCapacityUsed: 文件系統已使用大小（byte）
         :type FileSystemCapacityUsed: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -632,7 +632,7 @@ class DescribeMountPointResponse(AbstractModel):
     def __init__(self):
         """
         :param MountPoint: 掛載點
-        :type MountPoint: :class:`tencentcloud.chdfs.v20190718.models.MountPoint`
+        :type MountPoint: :class:`taifucloudcloud.chdfs.v20190718.models.MountPoint`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

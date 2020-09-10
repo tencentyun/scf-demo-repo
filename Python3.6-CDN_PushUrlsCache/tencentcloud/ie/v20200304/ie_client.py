@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.ie.v20200304 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.ie.v20200304 import models
 
 
 class IeClient(AbstractClient):
     _apiVersion = '2020-03-04'
-    _endpoint = 'ie.tencentcloudapi.com'
+    _endpoint = 'ie.taifucloudcloudapi.com'
 
 
     def CreateEditingTask(self, request):
         """創建智慧編輯任務，可以同時選擇視訊标簽識别、分類識别、智慧拆條、智慧集錦、智慧封面和片頭片尾識别中的一項或者多項能力。
 
         :param request: Request instance for CreateEditingTask.
-        :type request: :class:`tencentcloud.ie.v20200304.models.CreateEditingTaskRequest`
-        :rtype: :class:`tencentcloud.ie.v20200304.models.CreateEditingTaskResponse`
+        :type request: :class:`taifucloudcloud.ie.v20200304.models.CreateEditingTaskRequest`
+        :rtype: :class:`taifucloudcloud.ie.v20200304.models.CreateEditingTaskResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class IeClient(AbstractClient):
         """獲取智慧編輯任務結果。
 
         :param request: Request instance for DescribeEditingTaskResult.
-        :type request: :class:`tencentcloud.ie.v20200304.models.DescribeEditingTaskResultRequest`
-        :rtype: :class:`tencentcloud.ie.v20200304.models.DescribeEditingTaskResultResponse`
+        :type request: :class:`taifucloudcloud.ie.v20200304.models.DescribeEditingTaskResultRequest`
+        :rtype: :class:`taifucloudcloud.ie.v20200304.models.DescribeEditingTaskResultResponse`
 
         """
         try:

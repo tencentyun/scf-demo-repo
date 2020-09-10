@@ -15,23 +15,23 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.ecc.v20181213 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.ecc.v20181213 import models
 
 
 class EccClient(AbstractClient):
     _apiVersion = '2018-12-13'
-    _endpoint = 'ecc.tencentcloudapi.com'
+    _endpoint = 'ecc.taifucloudcloudapi.com'
 
 
     def ECC(self, request):
-        """介面請求域名： ecc.tencentcloudapi.com
+        """介面請求域名： ecc.taifucloudcloudapi.com
         純文本英語作文批改
 
         :param request: 調用ECC所需參數的結構體。
-        :type request: :class:`tencentcloud.ecc.v20181213.models.ECCRequest`
-        :rtype: :class:`tencentcloud.ecc.v20181213.models.ECCResponse`
+        :type request: :class:`taifucloudcloud.ecc.v20181213.models.ECCRequest`
+        :rtype: :class:`taifucloudcloud.ecc.v20181213.models.ECCResponse`
 
         """
         try:
@@ -55,12 +55,12 @@ class EccClient(AbstractClient):
 
 
     def EHOCR(self, request):
-        """https://ecc.tencentcloudapi.com/?Action=EHOCR
+        """https://ecc.taifucloudcloudapi.com/?Action=EHOCR
         作文識别
 
         :param request: 調用EHOCR所需參數的結構體。
-        :type request: :class:`tencentcloud.ecc.v20181213.models.EHOCRRequest`
-        :rtype: :class:`tencentcloud.ecc.v20181213.models.EHOCRResponse`
+        :type request: :class:`taifucloudcloud.ecc.v20181213.models.EHOCRRequest`
+        :rtype: :class:`taifucloudcloud.ecc.v20181213.models.EHOCRResponse`
 
         """
         try:

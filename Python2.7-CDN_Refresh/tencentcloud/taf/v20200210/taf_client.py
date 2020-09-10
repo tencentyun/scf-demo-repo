@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.taf.v20200210 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.taf.v20200210 import models
 
 
 class TafClient(AbstractClient):
     _apiVersion = '2020-02-10'
-    _endpoint = 'taf.tencentcloudapi.com'
+    _endpoint = 'taf.taifucloudcloudapi.com'
 
 
     def DetectAccountActivity(self, request):
         """DetectAccountActivity
 
         :param request: Request instance for DetectAccountActivity.
-        :type request: :class:`tencentcloud.taf.v20200210.models.DetectAccountActivityRequest`
-        :rtype: :class:`tencentcloud.taf.v20200210.models.DetectAccountActivityResponse`
+        :type request: :class:`taifucloudcloud.taf.v20200210.models.DetectAccountActivityRequest`
+        :rtype: :class:`taifucloudcloud.taf.v20200210.models.DetectAccountActivityResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TafClient(AbstractClient):
         """DetectFraudKOL
 
         :param request: Request instance for DetectFraudKOL.
-        :type request: :class:`tencentcloud.taf.v20200210.models.DetectFraudKOLRequest`
-        :rtype: :class:`tencentcloud.taf.v20200210.models.DetectFraudKOLResponse`
+        :type request: :class:`taifucloudcloud.taf.v20200210.models.DetectFraudKOLRequest`
+        :rtype: :class:`taifucloudcloud.taf.v20200210.models.DetectFraudKOLResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TafClient(AbstractClient):
         """EnhanceTaDegree
 
         :param request: Request instance for EnhanceTaDegree.
-        :type request: :class:`tencentcloud.taf.v20200210.models.EnhanceTaDegreeRequest`
-        :rtype: :class:`tencentcloud.taf.v20200210.models.EnhanceTaDegreeResponse`
+        :type request: :class:`taifucloudcloud.taf.v20200210.models.EnhanceTaDegreeRequest`
+        :rtype: :class:`taifucloudcloud.taf.v20200210.models.EnhanceTaDegreeResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TafClient(AbstractClient):
         """流量反欺詐-流量驗準定制版
 
         :param request: Request instance for RecognizeCustomizedAudience.
-        :type request: :class:`tencentcloud.taf.v20200210.models.RecognizeCustomizedAudienceRequest`
-        :rtype: :class:`tencentcloud.taf.v20200210.models.RecognizeCustomizedAudienceResponse`
+        :type request: :class:`taifucloudcloud.taf.v20200210.models.RecognizeCustomizedAudienceRequest`
+        :rtype: :class:`taifucloudcloud.taf.v20200210.models.RecognizeCustomizedAudienceResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class TafClient(AbstractClient):
         """RecognizePreciseTargetAudience
 
         :param request: Request instance for RecognizePreciseTargetAudience.
-        :type request: :class:`tencentcloud.taf.v20200210.models.RecognizePreciseTargetAudienceRequest`
-        :rtype: :class:`tencentcloud.taf.v20200210.models.RecognizePreciseTargetAudienceResponse`
+        :type request: :class:`taifucloudcloud.taf.v20200210.models.RecognizePreciseTargetAudienceRequest`
+        :rtype: :class:`taifucloudcloud.taf.v20200210.models.RecognizePreciseTargetAudienceResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class TafClient(AbstractClient):
         """流量反欺詐-流量驗準
 
         :param request: Request instance for RecognizeTargetAudience.
-        :type request: :class:`tencentcloud.taf.v20200210.models.RecognizeTargetAudienceRequest`
-        :rtype: :class:`tencentcloud.taf.v20200210.models.RecognizeTargetAudienceResponse`
+        :type request: :class:`taifucloudcloud.taf.v20200210.models.RecognizeTargetAudienceRequest`
+        :rtype: :class:`taifucloudcloud.taf.v20200210.models.RecognizeTargetAudienceResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class TafClient(AbstractClient):
         """SendTrafficSecuritySmsMessage
 
         :param request: Request instance for SendTrafficSecuritySmsMessage.
-        :type request: :class:`tencentcloud.taf.v20200210.models.SendTrafficSecuritySmsMessageRequest`
-        :rtype: :class:`tencentcloud.taf.v20200210.models.SendTrafficSecuritySmsMessageResponse`
+        :type request: :class:`taifucloudcloud.taf.v20200210.models.SendTrafficSecuritySmsMessageRequest`
+        :rtype: :class:`taifucloudcloud.taf.v20200210.models.SendTrafficSecuritySmsMessageResponse`
 
         """
         try:

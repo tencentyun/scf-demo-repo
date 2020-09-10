@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tbaas.v20180416 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tbaas.v20180416 import models
 
 
 class TbaasClient(AbstractClient):
     _apiVersion = '2018-04-16'
-    _endpoint = 'tbaas.tencentcloudapi.com'
+    _endpoint = 'tbaas.taifucloudcloudapi.com'
 
 
     def GetBlockList(self, request):
         """檢視當前網絡下的所有區塊清單，分頁展示
 
         :param request: 調用GetBlockList所需參數的結構體。
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.GetBlockListRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetBlockListResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.GetBlockListRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.GetBlockListResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TbaasClient(AbstractClient):
         """獲取區塊鏈網絡概要
 
         :param request: 調用GetClusterSummary所需參數的結構體。
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.GetClusterSummaryRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetClusterSummaryResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.GetClusterSummaryRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.GetClusterSummaryResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TbaasClient(AbstractClient):
         """Invoke異步調用結果查詢
 
         :param request: 調用GetInvokeTx所需參數的結構體。
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.GetInvokeTxRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetInvokeTxResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.GetInvokeTxRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.GetInvokeTxResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TbaasClient(AbstractClient):
         """獲取最新交易清單
 
         :param request: 調用GetLatesdTransactionList所需參數的結構體。
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.GetLatesdTransactionListRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.GetLatesdTransactionListResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.GetLatesdTransactionListRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.GetLatesdTransactionListResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class TbaasClient(AbstractClient):
         """新增交易
 
         :param request: 調用Invoke所需參數的結構體。
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.InvokeRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.InvokeResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.InvokeRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.InvokeResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class TbaasClient(AbstractClient):
         """查詢交易
 
         :param request: 調用Query所需參數的結構體。
-        :type request: :class:`tencentcloud.tbaas.v20180416.models.QueryRequest`
-        :rtype: :class:`tencentcloud.tbaas.v20180416.models.QueryResponse`
+        :type request: :class:`taifucloudcloud.tbaas.v20180416.models.QueryRequest`
+        :rtype: :class:`taifucloudcloud.tbaas.v20180416.models.QueryResponse`
 
         """
         try:

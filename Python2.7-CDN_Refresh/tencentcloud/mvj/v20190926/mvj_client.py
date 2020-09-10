@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.mvj.v20190926 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.mvj.v20190926 import models
 
 
 class MvjClient(AbstractClient):
     _apiVersion = '2019-09-26'
-    _endpoint = 'mvj.tencentcloudapi.com'
+    _endpoint = 'mvj.taifucloudcloudapi.com'
 
 
     def MarketingValueJudgement(self, request):
@@ -31,8 +31,8 @@ class MvjClient(AbstractClient):
         營銷價值判斷（MVJ）是針對零售場景的風控服務，通過識别高價值顧客，以幫助零售商保障營銷資金
 
         :param request: Request instance for MarketingValueJudgement.
-        :type request: :class:`tencentcloud.mvj.v20190926.models.MarketingValueJudgementRequest`
-        :rtype: :class:`tencentcloud.mvj.v20190926.models.MarketingValueJudgementResponse`
+        :type request: :class:`taifucloudcloud.mvj.v20190926.models.MarketingValueJudgementRequest`
+        :rtype: :class:`taifucloudcloud.mvj.v20190926.models.MarketingValueJudgementResponse`
 
         """
         try:

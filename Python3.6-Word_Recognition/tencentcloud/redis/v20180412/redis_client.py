@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.redis.v20180412 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.redis.v20180412 import models
 
 
 class RedisClient(AbstractClient):
     _apiVersion = '2018-04-12'
-    _endpoint = 'redis.tencentcloudapi.com'
+    _endpoint = 'redis.taifucloudcloudapi.com'
 
 
     def CleanUpInstance(self, request):
         """資源回收筒實例立即下線
 
         :param request: 調用CleanUpInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.CleanUpInstanceRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.CleanUpInstanceResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.CleanUpInstanceRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.CleanUpInstanceResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class RedisClient(AbstractClient):
         """清空Redis實例的實例數據。
 
         :param request: 調用ClearInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.ClearInstanceRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.ClearInstanceResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.ClearInstanceRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.ClearInstanceResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class RedisClient(AbstractClient):
         """創建redis實例
 
         :param request: 調用CreateInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.CreateInstancesRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.CreateInstancesResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.CreateInstancesRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.CreateInstancesResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class RedisClient(AbstractClient):
         """獲取備份配置
 
         :param request: 調用DescribeAutoBackupConfig所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.DescribeAutoBackupConfigRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.DescribeAutoBackupConfigResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeAutoBackupConfigRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.DescribeAutoBackupConfigResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class RedisClient(AbstractClient):
         """查詢備份Rdb下載網址
 
         :param request: 調用DescribeBackupUrl所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.DescribeBackupUrlRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.DescribeBackupUrlResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeBackupUrlRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.DescribeBackupUrlResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class RedisClient(AbstractClient):
         """查詢 CRS 實例備份清單
 
         :param request: 調用DescribeInstanceBackups所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceBackupsRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceBackupsResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstanceBackupsRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstanceBackupsResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class RedisClient(AbstractClient):
         """查詢訂單訊息
 
         :param request: 調用DescribeInstanceDealDetail所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceDealDetailRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceDealDetailResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstanceDealDetailRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstanceDealDetailResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class RedisClient(AbstractClient):
         """查詢參數修改曆史清單
 
         :param request: 調用DescribeInstanceParamRecords所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceParamRecordsRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceParamRecordsResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstanceParamRecordsRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstanceParamRecordsResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class RedisClient(AbstractClient):
         """查詢實例參數清單
 
         :param request: 調用DescribeInstanceParams所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceParamsRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceParamsResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstanceParamsRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstanceParamsResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class RedisClient(AbstractClient):
         """查詢實例安全組訊息
 
         :param request: 調用DescribeInstanceSecurityGroup所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceSecurityGroupRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceSecurityGroupResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstanceSecurityGroupRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstanceSecurityGroupResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class RedisClient(AbstractClient):
         """獲取集群版實例分片訊息
 
         :param request: 調用DescribeInstanceShards所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceShardsRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.DescribeInstanceShardsResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstanceShardsRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstanceShardsResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class RedisClient(AbstractClient):
         """查詢Redis實例清單
 
         :param request: 調用DescribeInstances所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.DescribeInstancesRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.DescribeInstancesResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstancesRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstancesResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class RedisClient(AbstractClient):
         """本介面查詢指定可用區和實例類型下 Redis 的售賣規格， 如果用戶不在購買白名單中，将不能查詢該可用區或該類型的售賣規格詳情。申請購買某地域白名單可以提交工單
 
         :param request: 調用DescribeProductInfo所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.DescribeProductInfoRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.DescribeProductInfoResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeProductInfoRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.DescribeProductInfoResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class RedisClient(AbstractClient):
         """查詢項目安全組訊息
 
         :param request: 調用DescribeProjectSecurityGroup所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.DescribeProjectSecurityGroupRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.DescribeProjectSecurityGroupResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeProjectSecurityGroupRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.DescribeProjectSecurityGroupResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class RedisClient(AbstractClient):
         """用于查詢任務結果
 
         :param request: 調用DescribeTaskInfo所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.DescribeTaskInfoRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.DescribeTaskInfoResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeTaskInfoRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.DescribeTaskInfoResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class RedisClient(AbstractClient):
         """按量計費實例銷毀
 
         :param request: 調用DestroyPostpaidInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.DestroyPostpaidInstanceRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.DestroyPostpaidInstanceResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.DestroyPostpaidInstanceRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.DestroyPostpaidInstanceResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class RedisClient(AbstractClient):
         """包年包月實例退還
 
         :param request: 調用DestroyPrepaidInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.DestroyPrepaidInstanceRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.DestroyPrepaidInstanceResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.DestroyPrepaidInstanceRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.DestroyPrepaidInstanceResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class RedisClient(AbstractClient):
         """禁用讀寫分離
 
         :param request: 調用DisableReplicaReadonly所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.DisableReplicaReadonlyRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.DisableReplicaReadonlyResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.DisableReplicaReadonlyRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.DisableReplicaReadonlyResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class RedisClient(AbstractClient):
         """啓用讀寫分離
 
         :param request: 調用EnableReplicaReadonly所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.EnableReplicaReadonlyRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.EnableReplicaReadonlyResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.EnableReplicaReadonlyRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.EnableReplicaReadonlyResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class RedisClient(AbstractClient):
         """手動備份Redis實例
 
         :param request: 調用ManualBackupInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.ManualBackupInstanceRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.ManualBackupInstanceResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.ManualBackupInstanceRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.ManualBackupInstanceResponse`
 
         """
         try:
@@ -589,8 +589,8 @@ class RedisClient(AbstractClient):
         """修改redis密碼
 
         :param request: 調用ModfiyInstancePassword所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.ModfiyInstancePasswordRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.ModfiyInstancePasswordResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.ModfiyInstancePasswordRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.ModfiyInstancePasswordResponse`
 
         """
         try:
@@ -617,8 +617,8 @@ class RedisClient(AbstractClient):
         """設置自動備份時間
 
         :param request: 調用ModifyAutoBackupConfig所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.ModifyAutoBackupConfigRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.ModifyAutoBackupConfigResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.ModifyAutoBackupConfigRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.ModifyAutoBackupConfigResponse`
 
         """
         try:
@@ -645,8 +645,8 @@ class RedisClient(AbstractClient):
         """修改實例相關訊息（目前支援：實例重命名）
 
         :param request: 調用ModifyInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.ModifyInstanceRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.ModifyInstanceResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.ModifyInstanceRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.ModifyInstanceResponse`
 
         """
         try:
@@ -673,8 +673,8 @@ class RedisClient(AbstractClient):
         """修改實例參數
 
         :param request: 調用ModifyInstanceParams所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.ModifyInstanceParamsRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.ModifyInstanceParamsResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.ModifyInstanceParamsRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.ModifyInstanceParamsResponse`
 
         """
         try:
@@ -701,8 +701,8 @@ class RedisClient(AbstractClient):
         """修改實例網絡配置
 
         :param request: 調用ModifyNetworkConfig所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.ModifyNetworkConfigRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.ModifyNetworkConfigResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.ModifyNetworkConfigRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.ModifyNetworkConfigResponse`
 
         """
         try:
@@ -729,8 +729,8 @@ class RedisClient(AbstractClient):
         """續約實例
 
         :param request: 調用RenewInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.RenewInstanceRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.RenewInstanceResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.RenewInstanceRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.RenewInstanceResponse`
 
         """
         try:
@@ -757,8 +757,8 @@ class RedisClient(AbstractClient):
         """重置密碼
 
         :param request: 調用ResetPassword所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.ResetPasswordRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.ResetPasswordResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.ResetPasswordRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.ResetPasswordResponse`
 
         """
         try:
@@ -785,8 +785,8 @@ class RedisClient(AbstractClient):
         """恢複 CRS 實例
 
         :param request: 調用RestoreInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.RestoreInstanceRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.RestoreInstanceResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.RestoreInstanceRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.RestoreInstanceResponse`
 
         """
         try:
@@ -813,8 +813,8 @@ class RedisClient(AbstractClient):
         """升級實例
 
         :param request: 調用UpgradeInstance所需參數的結構體。
-        :type request: :class:`tencentcloud.redis.v20180412.models.UpgradeInstanceRequest`
-        :rtype: :class:`tencentcloud.redis.v20180412.models.UpgradeInstanceResponse`
+        :type request: :class:`taifucloudcloud.redis.v20180412.models.UpgradeInstanceRequest`
+        :rtype: :class:`taifucloudcloud.redis.v20180412.models.UpgradeInstanceResponse`
 
         """
         try:

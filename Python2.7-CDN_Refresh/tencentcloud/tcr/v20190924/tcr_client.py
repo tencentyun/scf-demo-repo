@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tcr.v20190924 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tcr.v20190924 import models
 
 
 class TcrClient(AbstractClient):
     _apiVersion = '2019-09-24'
-    _endpoint = 'tcr.tencentcloudapi.com'
+    _endpoint = 'tcr.taifucloudcloudapi.com'
 
 
     def BatchDeleteImagePersonal(self, request):
         """用于在個人版映像倉庫中批次删除Tag
 
         :param request: Request instance for BatchDeleteImagePersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.BatchDeleteImagePersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.BatchDeleteImagePersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.BatchDeleteImagePersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.BatchDeleteImagePersonalResponse`
 
         """
         try:
@@ -57,8 +57,8 @@ class TcrClient(AbstractClient):
         """用于個人版映像倉庫中批次删除映像倉庫
 
         :param request: Request instance for BatchDeleteRepositoryPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.BatchDeleteRepositoryPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.BatchDeleteRepositoryPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.BatchDeleteRepositoryPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.BatchDeleteRepositoryPersonalResponse`
 
         """
         try:
@@ -85,8 +85,8 @@ class TcrClient(AbstractClient):
         """用于創建應用更新觸發器
 
         :param request: Request instance for CreateApplicationTriggerPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.CreateApplicationTriggerPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.CreateApplicationTriggerPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.CreateApplicationTriggerPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.CreateApplicationTriggerPersonalResponse`
 
         """
         try:
@@ -113,8 +113,8 @@ class TcrClient(AbstractClient):
         """用于在個人版中創建清理策略
 
         :param request: Request instance for CreateImageLifecyclePersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.CreateImageLifecyclePersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.CreateImageLifecyclePersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.CreateImageLifecyclePersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.CreateImageLifecyclePersonalResponse`
 
         """
         try:
@@ -141,8 +141,8 @@ class TcrClient(AbstractClient):
         """創建實例
 
         :param request: Request instance for CreateInstance.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.CreateInstanceRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.CreateInstanceResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.CreateInstanceRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.CreateInstanceResponse`
 
         """
         try:
@@ -169,8 +169,8 @@ class TcrClient(AbstractClient):
         """創建實例的臨時或長期訪問憑證
 
         :param request: Request instance for CreateInstanceToken.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.CreateInstanceTokenRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.CreateInstanceTokenResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.CreateInstanceTokenRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.CreateInstanceTokenResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class TcrClient(AbstractClient):
         """用于在企業版中創建命名空間
 
         :param request: Request instance for CreateNamespace.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.CreateNamespaceRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.CreateNamespaceResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.CreateNamespaceRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.CreateNamespaceResponse`
 
         """
         try:
@@ -225,8 +225,8 @@ class TcrClient(AbstractClient):
         """創建個人版映像倉庫命名空間，此命名空間全局唯一
 
         :param request: Request instance for CreateNamespacePersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.CreateNamespacePersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.CreateNamespacePersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.CreateNamespacePersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.CreateNamespacePersonalResponse`
 
         """
         try:
@@ -253,8 +253,8 @@ class TcrClient(AbstractClient):
         """用于企業版創建映像倉庫
 
         :param request: Request instance for CreateRepository.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.CreateRepositoryRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.CreateRepositoryResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.CreateRepositoryRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.CreateRepositoryResponse`
 
         """
         try:
@@ -281,8 +281,8 @@ class TcrClient(AbstractClient):
         """用于在個人版倉庫中創建映像倉庫
 
         :param request: Request instance for CreateRepositoryPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.CreateRepositoryPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.CreateRepositoryPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.CreateRepositoryPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.CreateRepositoryPersonalResponse`
 
         """
         try:
@@ -309,8 +309,8 @@ class TcrClient(AbstractClient):
         """創建個人用戶
 
         :param request: Request instance for CreateUserPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.CreateUserPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.CreateUserPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.CreateUserPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.CreateUserPersonalResponse`
 
         """
         try:
@@ -337,8 +337,8 @@ class TcrClient(AbstractClient):
         """創建觸發器
 
         :param request: Request instance for CreateWebhookTrigger.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.CreateWebhookTriggerRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.CreateWebhookTriggerResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.CreateWebhookTriggerRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.CreateWebhookTriggerResponse`
 
         """
         try:
@@ -365,8 +365,8 @@ class TcrClient(AbstractClient):
         """用于删除應用更新觸發器
 
         :param request: Request instance for DeleteApplicationTriggerPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DeleteApplicationTriggerPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DeleteApplicationTriggerPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DeleteApplicationTriggerPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DeleteApplicationTriggerPersonalResponse`
 
         """
         try:
@@ -393,8 +393,8 @@ class TcrClient(AbstractClient):
         """用于删除個人版全局映像版本自動清理策略
 
         :param request: Request instance for DeleteImageLifecycleGlobalPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DeleteImageLifecycleGlobalPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DeleteImageLifecycleGlobalPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DeleteImageLifecycleGlobalPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DeleteImageLifecycleGlobalPersonalResponse`
 
         """
         try:
@@ -421,8 +421,8 @@ class TcrClient(AbstractClient):
         """用于在個人版映像倉庫中删除倉庫Tag自動清理策略
 
         :param request: Request instance for DeleteImageLifecyclePersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DeleteImageLifecyclePersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DeleteImageLifecyclePersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DeleteImageLifecyclePersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DeleteImageLifecyclePersonalResponse`
 
         """
         try:
@@ -449,8 +449,8 @@ class TcrClient(AbstractClient):
         """用于在個人版中删除tag
 
         :param request: Request instance for DeleteImagePersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DeleteImagePersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DeleteImagePersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DeleteImagePersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DeleteImagePersonalResponse`
 
         """
         try:
@@ -477,8 +477,8 @@ class TcrClient(AbstractClient):
         """删除長期訪問憑證
 
         :param request: Request instance for DeleteInstanceToken.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DeleteInstanceTokenRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DeleteInstanceTokenResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DeleteInstanceTokenRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DeleteInstanceTokenResponse`
 
         """
         try:
@@ -505,8 +505,8 @@ class TcrClient(AbstractClient):
         """删除命名空間
 
         :param request: Request instance for DeleteNamespace.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DeleteNamespaceRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DeleteNamespaceResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DeleteNamespaceRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DeleteNamespaceResponse`
 
         """
         try:
@@ -533,8 +533,8 @@ class TcrClient(AbstractClient):
         """删除共享版命名空間
 
         :param request: Request instance for DeleteNamespacePersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DeleteNamespacePersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DeleteNamespacePersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DeleteNamespacePersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DeleteNamespacePersonalResponse`
 
         """
         try:
@@ -561,8 +561,8 @@ class TcrClient(AbstractClient):
         """删除映像倉庫
 
         :param request: Request instance for DeleteRepository.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DeleteRepositoryRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DeleteRepositoryResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DeleteRepositoryRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DeleteRepositoryResponse`
 
         """
         try:
@@ -589,8 +589,8 @@ class TcrClient(AbstractClient):
         """用于個人版映像倉庫中删除
 
         :param request: Request instance for DeleteRepositoryPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DeleteRepositoryPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DeleteRepositoryPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DeleteRepositoryPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DeleteRepositoryPersonalResponse`
 
         """
         try:
@@ -617,8 +617,8 @@ class TcrClient(AbstractClient):
         """删除觸發器
 
         :param request: Request instance for DeleteWebhookTrigger.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DeleteWebhookTriggerRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DeleteWebhookTriggerResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DeleteWebhookTriggerRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DeleteWebhookTriggerResponse`
 
         """
         try:
@@ -645,8 +645,8 @@ class TcrClient(AbstractClient):
         """用于查詢應用更新觸發器觸發日志
 
         :param request: Request instance for DescribeApplicationTriggerLogPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeApplicationTriggerLogPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeApplicationTriggerLogPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeApplicationTriggerLogPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeApplicationTriggerLogPersonalResponse`
 
         """
         try:
@@ -673,8 +673,8 @@ class TcrClient(AbstractClient):
         """用于查詢應用更新觸發器
 
         :param request: Request instance for DescribeApplicationTriggerPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeApplicationTriggerPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeApplicationTriggerPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeApplicationTriggerPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeApplicationTriggerPersonalResponse`
 
         """
         try:
@@ -701,8 +701,8 @@ class TcrClient(AbstractClient):
         """查詢個人收藏倉庫
 
         :param request: Request instance for DescribeFavorRepositoryPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeFavorRepositoryPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeFavorRepositoryPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeFavorRepositoryPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeFavorRepositoryPersonalResponse`
 
         """
         try:
@@ -729,8 +729,8 @@ class TcrClient(AbstractClient):
         """用于在個人版中查詢與指定tag映像内容相同的tag清單
 
         :param request: Request instance for DescribeImageFilterPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeImageFilterPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeImageFilterPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeImageFilterPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeImageFilterPersonalResponse`
 
         """
         try:
@@ -757,8 +757,8 @@ class TcrClient(AbstractClient):
         """用于獲取個人版全局映像版本自動清理策略
 
         :param request: Request instance for DescribeImageLifecycleGlobalPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeImageLifecycleGlobalPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeImageLifecycleGlobalPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeImageLifecycleGlobalPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeImageLifecycleGlobalPersonalResponse`
 
         """
         try:
@@ -785,8 +785,8 @@ class TcrClient(AbstractClient):
         """用于獲取個人版倉庫中自動清理策略
 
         :param request: Request instance for DescribeImageLifecyclePersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeImageLifecyclePersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeImageLifecyclePersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeImageLifecyclePersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeImageLifecyclePersonalResponse`
 
         """
         try:
@@ -813,8 +813,8 @@ class TcrClient(AbstractClient):
         """查詢容器映像Manifest訊息
 
         :param request: Request instance for DescribeImageManifests.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeImageManifestsRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeImageManifestsResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeImageManifestsRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeImageManifestsResponse`
 
         """
         try:
@@ -841,8 +841,8 @@ class TcrClient(AbstractClient):
         """用于獲取個人版映像倉庫tag清單
 
         :param request: Request instance for DescribeImagePersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeImagePersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeImagePersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeImagePersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeImagePersonalResponse`
 
         """
         try:
@@ -869,8 +869,8 @@ class TcrClient(AbstractClient):
         """查詢映像版本清單或指定容器映像訊息
 
         :param request: Request instance for DescribeImages.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeImagesRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeImagesResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeImagesRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeImagesResponse`
 
         """
         try:
@@ -897,8 +897,8 @@ class TcrClient(AbstractClient):
         """查詢實例當前狀态以及過程訊息
 
         :param request: Request instance for DescribeInstanceStatus.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeInstanceStatusRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeInstanceStatusResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeInstanceStatusRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeInstanceStatusResponse`
 
         """
         try:
@@ -925,8 +925,8 @@ class TcrClient(AbstractClient):
         """查詢長期訪問憑證訊息
 
         :param request: Request instance for DescribeInstanceToken.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeInstanceTokenRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeInstanceTokenResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeInstanceTokenRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeInstanceTokenResponse`
 
         """
         try:
@@ -953,8 +953,8 @@ class TcrClient(AbstractClient):
         """查詢實例訊息
 
         :param request: Request instance for DescribeInstances.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeInstancesRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeInstancesResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeInstancesRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeInstancesResponse`
 
         """
         try:
@@ -981,8 +981,8 @@ class TcrClient(AbstractClient):
         """查詢個人版命名空間訊息
 
         :param request: Request instance for DescribeNamespacePersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeNamespacePersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeNamespacePersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeNamespacePersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeNamespacePersonalResponse`
 
         """
         try:
@@ -1009,8 +1009,8 @@ class TcrClient(AbstractClient):
         """查詢命名空間清單或指定命名空間訊息
 
         :param request: Request instance for DescribeNamespaces.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeNamespacesRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeNamespacesResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeNamespacesRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeNamespacesResponse`
 
         """
         try:
@@ -1037,8 +1037,8 @@ class TcrClient(AbstractClient):
         """查詢映像倉庫清單或指定映像倉庫訊息
 
         :param request: Request instance for DescribeRepositories.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeRepositoriesRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeRepositoriesResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeRepositoriesRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeRepositoriesResponse`
 
         """
         try:
@@ -1065,8 +1065,8 @@ class TcrClient(AbstractClient):
         """用于在個人版映像倉庫中，獲取滿足輸入搜索條件的用戶映像倉庫
 
         :param request: Request instance for DescribeRepositoryFilterPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeRepositoryFilterPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeRepositoryFilterPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeRepositoryFilterPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeRepositoryFilterPersonalResponse`
 
         """
         try:
@@ -1093,8 +1093,8 @@ class TcrClient(AbstractClient):
         """用于在個人版中獲取用戶全部的映像倉庫清單
 
         :param request: Request instance for DescribeRepositoryOwnerPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeRepositoryOwnerPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeRepositoryOwnerPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeRepositoryOwnerPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeRepositoryOwnerPersonalResponse`
 
         """
         try:
@@ -1121,8 +1121,8 @@ class TcrClient(AbstractClient):
         """查詢個人版倉庫訊息
 
         :param request: Request instance for DescribeRepositoryPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeRepositoryPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeRepositoryPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeRepositoryPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeRepositoryPersonalResponse`
 
         """
         try:
@@ -1149,8 +1149,8 @@ class TcrClient(AbstractClient):
         """查詢個人用戶配額
 
         :param request: Request instance for DescribeUserQuotaPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeUserQuotaPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeUserQuotaPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeUserQuotaPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeUserQuotaPersonalResponse`
 
         """
         try:
@@ -1177,8 +1177,8 @@ class TcrClient(AbstractClient):
         """查詢觸發器
 
         :param request: Request instance for DescribeWebhookTrigger.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeWebhookTriggerRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeWebhookTriggerResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeWebhookTriggerRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeWebhookTriggerResponse`
 
         """
         try:
@@ -1205,8 +1205,8 @@ class TcrClient(AbstractClient):
         """獲取觸發器日志
 
         :param request: Request instance for DescribeWebhookTriggerLog.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DescribeWebhookTriggerLogRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DescribeWebhookTriggerLogResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeWebhookTriggerLogRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DescribeWebhookTriggerLogResponse`
 
         """
         try:
@@ -1233,8 +1233,8 @@ class TcrClient(AbstractClient):
         """用于在個人版映像倉庫中複制映像版本
 
         :param request: Request instance for DuplicateImagePersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.DuplicateImagePersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.DuplicateImagePersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.DuplicateImagePersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.DuplicateImagePersonalResponse`
 
         """
         try:
@@ -1261,8 +1261,8 @@ class TcrClient(AbstractClient):
         """用于設置個人版全局映像版本自動清理策略
 
         :param request: Request instance for ManageImageLifecycleGlobalPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.ManageImageLifecycleGlobalPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.ManageImageLifecycleGlobalPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.ManageImageLifecycleGlobalPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.ManageImageLifecycleGlobalPersonalResponse`
 
         """
         try:
@@ -1289,8 +1289,8 @@ class TcrClient(AbstractClient):
         """用于修改應用更新觸發器
 
         :param request: Request instance for ModifyApplicationTriggerPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.ModifyApplicationTriggerPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.ModifyApplicationTriggerPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.ModifyApplicationTriggerPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.ModifyApplicationTriggerPersonalResponse`
 
         """
         try:
@@ -1317,8 +1317,8 @@ class TcrClient(AbstractClient):
         """更新實例内指定長期訪問憑證的啓用狀态
 
         :param request: Request instance for ModifyInstanceToken.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.ModifyInstanceTokenRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.ModifyInstanceTokenResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.ModifyInstanceTokenRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.ModifyInstanceTokenResponse`
 
         """
         try:
@@ -1345,8 +1345,8 @@ class TcrClient(AbstractClient):
         """更新命名空間訊息，當前僅支援修改命名空間訪問級别
 
         :param request: Request instance for ModifyNamespace.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.ModifyNamespaceRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.ModifyNamespaceResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.ModifyNamespaceRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.ModifyNamespaceResponse`
 
         """
         try:
@@ -1373,8 +1373,8 @@ class TcrClient(AbstractClient):
         """更新映像倉庫訊息，可修改倉庫描述訊息
 
         :param request: Request instance for ModifyRepository.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.ModifyRepositoryRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.ModifyRepositoryResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.ModifyRepositoryRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.ModifyRepositoryResponse`
 
         """
         try:
@@ -1401,8 +1401,8 @@ class TcrClient(AbstractClient):
         """用于更新個人版映像倉庫的訪問屬性
 
         :param request: Request instance for ModifyRepositoryAccessPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.ModifyRepositoryAccessPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.ModifyRepositoryAccessPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.ModifyRepositoryAccessPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.ModifyRepositoryAccessPersonalResponse`
 
         """
         try:
@@ -1429,8 +1429,8 @@ class TcrClient(AbstractClient):
         """用于在個人版映像倉庫中更新容器映像描述
 
         :param request: Request instance for ModifyRepositoryInfoPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.ModifyRepositoryInfoPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.ModifyRepositoryInfoPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.ModifyRepositoryInfoPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.ModifyRepositoryInfoPersonalResponse`
 
         """
         try:
@@ -1457,8 +1457,8 @@ class TcrClient(AbstractClient):
         """修改個人用戶登入密碼
 
         :param request: Request instance for ModifyUserPasswordPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.ModifyUserPasswordPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.ModifyUserPasswordPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.ModifyUserPasswordPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.ModifyUserPasswordPersonalResponse`
 
         """
         try:
@@ -1485,8 +1485,8 @@ class TcrClient(AbstractClient):
         """更新觸發器
 
         :param request: Request instance for ModifyWebhookTrigger.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.ModifyWebhookTriggerRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.ModifyWebhookTriggerResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.ModifyWebhookTriggerRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.ModifyWebhookTriggerResponse`
 
         """
         try:
@@ -1513,8 +1513,8 @@ class TcrClient(AbstractClient):
         """查詢個人版用戶命名空間是否存在
 
         :param request: Request instance for ValidateNamespaceExistPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.ValidateNamespaceExistPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.ValidateNamespaceExistPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.ValidateNamespaceExistPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.ValidateNamespaceExistPersonalResponse`
 
         """
         try:
@@ -1541,8 +1541,8 @@ class TcrClient(AbstractClient):
         """用于判斷個人版倉庫是否存在
 
         :param request: Request instance for ValidateRepositoryExistPersonal.
-        :type request: :class:`tencentcloud.tcr.v20190924.models.ValidateRepositoryExistPersonalRequest`
-        :rtype: :class:`tencentcloud.tcr.v20190924.models.ValidateRepositoryExistPersonalResponse`
+        :type request: :class:`taifucloudcloud.tcr.v20190924.models.ValidateRepositoryExistPersonalRequest`
+        :rtype: :class:`taifucloudcloud.tcr.v20190924.models.ValidateRepositoryExistPersonalResponse`
 
         """
         try:

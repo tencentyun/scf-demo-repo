@@ -257,4 +257,3 @@ class DummyConnectionPool(ConnectionPool):
     def _noop(self, *args, **kwargs):
         pass
     mark_dead = mark_live = resurrect = _noop
-

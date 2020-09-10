@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.clb.v20180317 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.clb.v20180317 import models
 
 
 class ClbClient(AbstractClient):
     _apiVersion = '2018-03-17'
-    _endpoint = 'clb.tencentcloudapi.com'
+    _endpoint = 'clb.taifucloudcloudapi.com'
 
 
     def AssociateTargetGroups(self, request):
@@ -30,8 +30,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的 RequestID 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for AssociateTargetGroups.
-        :type request: :class:`tencentcloud.clb.v20180317.models.AssociateTargetGroupsRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.AssociateTargetGroupsResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.AssociateTargetGroupsRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.AssociateTargetGroupsResponse`
 
         """
         try:
@@ -59,8 +59,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for AutoRewrite.
-        :type request: :class:`tencentcloud.clb.v20180317.models.AutoRewriteRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.AutoRewriteResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.AutoRewriteRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.AutoRewriteResponse`
 
         """
         try:
@@ -87,8 +87,8 @@ class ClbClient(AbstractClient):
         """批次解綁四七層後端服務。
 
         :param request: Request instance for BatchDeregisterTargets.
-        :type request: :class:`tencentcloud.clb.v20180317.models.BatchDeregisterTargetsRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.BatchDeregisterTargetsResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.BatchDeregisterTargetsRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.BatchDeregisterTargetsResponse`
 
         """
         try:
@@ -116,8 +116,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的 RequestID 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for BatchModifyTargetWeight.
-        :type request: :class:`tencentcloud.clb.v20180317.models.BatchModifyTargetWeightRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.BatchModifyTargetWeightResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.BatchModifyTargetWeightRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.BatchModifyTargetWeightResponse`
 
         """
         try:
@@ -144,8 +144,8 @@ class ClbClient(AbstractClient):
         """批次綁定虛拟主機或彈性網卡，支援跨域綁定，支援四層、七層（TCP、UDP、HTTP、HTTPS）協議綁定。
 
         :param request: Request instance for BatchRegisterTargets.
-        :type request: :class:`tencentcloud.clb.v20180317.models.BatchRegisterTargetsRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.BatchRegisterTargetsResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.BatchRegisterTargetsRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.BatchRegisterTargetsResponse`
 
         """
         try:
@@ -173,8 +173,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，介面返回成功後，需以返回的 RequestId 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for CreateListener.
-        :type request: :class:`tencentcloud.clb.v20180317.models.CreateListenerRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.CreateListenerResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.CreateListenerRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.CreateListenerResponse`
 
         """
         try:
@@ -199,12 +199,12 @@ class ClbClient(AbstractClient):
 
     def CreateLoadBalancer(self, request):
         """本介面(CreateLoadBalancer)用來創建負載均衡實例（本介面只支援購買按量計費的負載均衡，包年包月的負載均衡請通過控制台購買）。爲了使用負載均衡服務，您必須購買一個或多個負載均衡實例。成功調用該介面後，會返回負載均衡實例的唯一 ID。負載均衡實例的類型分爲：公網、内網。詳情可參考産品說明中的産品類型。
-        注意：(1)指定可用區申請負載均衡、跨zone容災(僅香港支援)【如果您需要體驗該功能，請通過 [工單申請](https://console.cloud.tencent.com/workorder/category)】；(2)目前只有北京、上海、廣州支援IPv6；(3)一個賬号在每個地域的預設購買配額爲：公網100個，内網100個。
+        注意：(1)指定可用區申請負載均衡、跨zone容災(僅 支援)【如果您需要體驗該功能，請通過 [工單申請](https://console.cloud.taifucloud.com/workorder/category)】；(2)目前只有 、 、 支援IPv6；(3)一個賬号在每個地域的預設購買配額爲：公網100個，内網100個。
         本介面爲異步介面，介面成功返回後，可使用 DescribeLoadBalancers 介面查詢負載均衡實例的狀态（如創建中、正常），以确定是否創建成功。
 
         :param request: Request instance for CreateLoadBalancer.
-        :type request: :class:`tencentcloud.clb.v20180317.models.CreateLoadBalancerRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.CreateLoadBalancerResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.CreateLoadBalancerRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.CreateLoadBalancerResponse`
 
         """
         try:
@@ -231,8 +231,8 @@ class ClbClient(AbstractClient):
         """針對SnatPro負載均衡，這個介面用于添加SnatIp，如果負載均衡沒有開啓SnatPro，添加SnatIp後會自動開啓
 
         :param request: Request instance for CreateLoadBalancerSnatIps.
-        :type request: :class:`tencentcloud.clb.v20180317.models.CreateLoadBalancerSnatIpsRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.CreateLoadBalancerSnatIpsResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.CreateLoadBalancerSnatIpsRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.CreateLoadBalancerSnatIpsResponse`
 
         """
         try:
@@ -260,8 +260,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for CreateRule.
-        :type request: :class:`tencentcloud.clb.v20180317.models.CreateRuleRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.CreateRuleResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.CreateRuleRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.CreateRuleResponse`
 
         """
         try:
@@ -288,8 +288,8 @@ class ClbClient(AbstractClient):
         """創建目标組。（目标組功能正在灰度中，需要開通白名單支援）
 
         :param request: Request instance for CreateTargetGroup.
-        :type request: :class:`tencentcloud.clb.v20180317.models.CreateTargetGroupRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.CreateTargetGroupResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.CreateTargetGroupRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.CreateTargetGroupResponse`
 
         """
         try:
@@ -317,8 +317,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，介面返回成功後，需以得到的 RequestID 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for DeleteListener.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DeleteListenerRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DeleteListenerResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DeleteListenerRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DeleteListenerResponse`
 
         """
         try:
@@ -346,8 +346,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，介面返回成功後，需以返回的 RequestId 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for DeleteLoadBalancer.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DeleteLoadBalancerRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DeleteLoadBalancerResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DeleteLoadBalancerRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DeleteLoadBalancerResponse`
 
         """
         try:
@@ -375,8 +375,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的 RequestID 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for DeleteLoadBalancerListeners.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DeleteLoadBalancerListenersRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DeleteLoadBalancerListenersResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DeleteLoadBalancerListenersRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DeleteLoadBalancerListenersResponse`
 
         """
         try:
@@ -403,8 +403,8 @@ class ClbClient(AbstractClient):
         """對于SnatPro的負載均衡，這個介面用于删除SnatIp
 
         :param request: Request instance for DeleteLoadBalancerSnatIps.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DeleteLoadBalancerSnatIpsRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DeleteLoadBalancerSnatIpsResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DeleteLoadBalancerSnatIpsRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DeleteLoadBalancerSnatIpsResponse`
 
         """
         try:
@@ -432,8 +432,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for DeleteRewrite.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DeleteRewriteRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DeleteRewriteResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DeleteRewriteRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DeleteRewriteResponse`
 
         """
         try:
@@ -461,8 +461,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for DeleteRule.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DeleteRuleRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DeleteRuleResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DeleteRuleRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DeleteRuleResponse`
 
         """
         try:
@@ -489,8 +489,8 @@ class ClbClient(AbstractClient):
         """删除目标組
 
         :param request: Request instance for DeleteTargetGroups.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DeleteTargetGroupsRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DeleteTargetGroupsResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DeleteTargetGroupsRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DeleteTargetGroupsResponse`
 
         """
         try:
@@ -518,8 +518,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的 RequestID 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for DeregisterTargetGroupInstances.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DeregisterTargetGroupInstancesRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DeregisterTargetGroupInstancesResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DeregisterTargetGroupInstancesRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DeregisterTargetGroupInstancesResponse`
 
         """
         try:
@@ -547,8 +547,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for DeregisterTargets.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DeregisterTargetsRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DeregisterTargetsResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DeregisterTargetsRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DeregisterTargetsResponse`
 
         """
         try:
@@ -576,8 +576,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，介面返回成功後，需以返回的 RequestId 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for DeregisterTargetsFromClassicalLB.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DeregisterTargetsFromClassicalLBRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DeregisterTargetsFromClassicalLBResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DeregisterTargetsFromClassicalLBRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DeregisterTargetsFromClassicalLBResponse`
 
         """
         try:
@@ -604,8 +604,8 @@ class ClbClient(AbstractClient):
         """查詢一個負載均衡所封禁的IP清單（黑名單）。（介面灰度中，如需使用請提工單）
 
         :param request: Request instance for DescribeBlockIPList.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DescribeBlockIPListRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DescribeBlockIPListResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeBlockIPListRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DescribeBlockIPListResponse`
 
         """
         try:
@@ -632,8 +632,8 @@ class ClbClient(AbstractClient):
         """根據 ModifyBlockIPList 介面返回的異步任務的ID，查詢封禁IP（黑名單）異步任務的執行狀态。（介面灰度中，如需使用請提工單）
 
         :param request: Request instance for DescribeBlockIPTask.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DescribeBlockIPTaskRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DescribeBlockIPTaskResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeBlockIPTaskRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DescribeBlockIPTaskResponse`
 
         """
         try:
@@ -660,8 +660,8 @@ class ClbClient(AbstractClient):
         """DescribeClassicalLBByInstanceId用于通過後端實例ID獲取傳統型負載均衡ID清單
 
         :param request: Request instance for DescribeClassicalLBByInstanceId.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DescribeClassicalLBByInstanceIdRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DescribeClassicalLBByInstanceIdResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeClassicalLBByInstanceIdRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DescribeClassicalLBByInstanceIdResponse`
 
         """
         try:
@@ -688,8 +688,8 @@ class ClbClient(AbstractClient):
         """DescribeClassicalLBHealthStatus用于獲取傳統型負載均衡後端的健康狀态
 
         :param request: Request instance for DescribeClassicalLBHealthStatus.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DescribeClassicalLBHealthStatusRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DescribeClassicalLBHealthStatusResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeClassicalLBHealthStatusRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DescribeClassicalLBHealthStatusResponse`
 
         """
         try:
@@ -716,8 +716,8 @@ class ClbClient(AbstractClient):
         """DescribeClassicalLBListeners 介面用于獲取傳統型負載均衡的監聽器訊息。
 
         :param request: Request instance for DescribeClassicalLBListeners.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DescribeClassicalLBListenersRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DescribeClassicalLBListenersResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeClassicalLBListenersRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DescribeClassicalLBListenersResponse`
 
         """
         try:
@@ -744,8 +744,8 @@ class ClbClient(AbstractClient):
         """DescribeClassicalLBTargets用于獲取傳統型負載均衡綁定的後端服務
 
         :param request: Request instance for DescribeClassicalLBTargets.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DescribeClassicalLBTargetsRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DescribeClassicalLBTargetsResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeClassicalLBTargetsRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DescribeClassicalLBTargetsResponse`
 
         """
         try:
@@ -772,8 +772,8 @@ class ClbClient(AbstractClient):
         """DescribeListeners 介面可根據負載均衡器 ID，監聽器的協議或端口作爲過濾條件獲取監聽器清單。如果不指定任何過濾條件，則返回該負載均衡實例下的所有監聽器。
 
         :param request: Request instance for DescribeListeners.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DescribeListenersRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DescribeListenersResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeListenersRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DescribeListenersResponse`
 
         """
         try:
@@ -800,8 +800,8 @@ class ClbClient(AbstractClient):
         """根據證書ID查詢其在一個地域中所關聯到負載均衡實例清單
 
         :param request: Request instance for DescribeLoadBalancerListByCertId.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DescribeLoadBalancerListByCertIdRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DescribeLoadBalancerListByCertIdResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeLoadBalancerListByCertIdRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DescribeLoadBalancerListByCertIdResponse`
 
         """
         try:
@@ -828,8 +828,8 @@ class ClbClient(AbstractClient):
         """查詢一個地域的負載均衡實例清單
 
         :param request: Request instance for DescribeLoadBalancers.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DescribeLoadBalancersRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DescribeLoadBalancersResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeLoadBalancersRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DescribeLoadBalancersResponse`
 
         """
         try:
@@ -856,8 +856,8 @@ class ClbClient(AbstractClient):
         """DescribeRewrite 介面可根據負載均衡實例ID，查詢一個負載均衡實例下轉發規則的重定向關系。如果不指定監聽器ID或轉發規則ID，則返回該負載均衡實例下的所有重定向關系。
 
         :param request: Request instance for DescribeRewrite.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DescribeRewriteRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DescribeRewriteResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeRewriteRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DescribeRewriteResponse`
 
         """
         try:
@@ -884,8 +884,8 @@ class ClbClient(AbstractClient):
         """獲取目标組綁定的服務器訊息
 
         :param request: Request instance for DescribeTargetGroupInstances.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DescribeTargetGroupInstancesRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DescribeTargetGroupInstancesResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeTargetGroupInstancesRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DescribeTargetGroupInstancesResponse`
 
         """
         try:
@@ -912,8 +912,8 @@ class ClbClient(AbstractClient):
         """獲取目标組清單
 
         :param request: Request instance for DescribeTargetGroupList.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DescribeTargetGroupListRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DescribeTargetGroupListResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeTargetGroupListRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DescribeTargetGroupListResponse`
 
         """
         try:
@@ -940,8 +940,8 @@ class ClbClient(AbstractClient):
         """查詢目标組訊息
 
         :param request: Request instance for DescribeTargetGroups.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DescribeTargetGroupsRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DescribeTargetGroupsResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeTargetGroupsRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DescribeTargetGroupsResponse`
 
         """
         try:
@@ -968,8 +968,8 @@ class ClbClient(AbstractClient):
         """DescribeTargetHealth 介面用來獲取負載均衡後端服務的健康檢查結果，不支援傳統型負載均衡。
 
         :param request: Request instance for DescribeTargetHealth.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DescribeTargetHealthRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DescribeTargetHealthResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeTargetHealthRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DescribeTargetHealthResponse`
 
         """
         try:
@@ -996,8 +996,8 @@ class ClbClient(AbstractClient):
         """DescribeTargets 介面用來查詢負載均衡實例的某些監聽器綁定的後端服務清單。
 
         :param request: Request instance for DescribeTargets.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DescribeTargetsRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DescribeTargetsResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeTargetsRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DescribeTargetsResponse`
 
         """
         try:
@@ -1024,8 +1024,8 @@ class ClbClient(AbstractClient):
         """本介面用于查詢異步任務的執行狀态，對于非查詢類的介面（創建/删除負載均衡實例、監聽器、規則以及綁定或解綁後端服務等），在介面調用成功後，都需要使用本介面查詢任務最終是否執行成功。
 
         :param request: Request instance for DescribeTaskStatus.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DescribeTaskStatusRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DescribeTaskStatusResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeTaskStatusRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DescribeTaskStatusResponse`
 
         """
         try:
@@ -1053,8 +1053,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的 RequestID 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for DisassociateTargetGroups.
-        :type request: :class:`tencentcloud.clb.v20180317.models.DisassociateTargetGroupsRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.DisassociateTargetGroupsResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.DisassociateTargetGroupsRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.DisassociateTargetGroupsResponse`
 
         """
         try:
@@ -1082,8 +1082,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for ManualRewrite.
-        :type request: :class:`tencentcloud.clb.v20180317.models.ManualRewriteRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.ManualRewriteResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.ManualRewriteRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.ManualRewriteResponse`
 
         """
         try:
@@ -1111,8 +1111,8 @@ class ClbClient(AbstractClient):
         （介面灰度中，如需使用請提工單）
 
         :param request: Request instance for ModifyBlockIPList.
-        :type request: :class:`tencentcloud.clb.v20180317.models.ModifyBlockIPListRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.ModifyBlockIPListResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.ModifyBlockIPListRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.ModifyBlockIPListResponse`
 
         """
         try:
@@ -1140,8 +1140,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for ModifyDomain.
-        :type request: :class:`tencentcloud.clb.v20180317.models.ModifyDomainRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.ModifyDomainResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.ModifyDomainRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.ModifyDomainResponse`
 
         """
         try:
@@ -1169,8 +1169,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後，需以返回的RequestId爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for ModifyDomainAttributes.
-        :type request: :class:`tencentcloud.clb.v20180317.models.ModifyDomainAttributesRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.ModifyDomainAttributesResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.ModifyDomainAttributesRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.ModifyDomainAttributesResponse`
 
         """
         try:
@@ -1198,8 +1198,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for ModifyListener.
-        :type request: :class:`tencentcloud.clb.v20180317.models.ModifyListenerRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.ModifyListenerResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.ModifyListenerRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.ModifyListenerResponse`
 
         """
         try:
@@ -1226,8 +1226,8 @@ class ClbClient(AbstractClient):
         """修改負載均衡實例的屬性。支援修改負載均衡實例的名稱、設置負載均衡的跨域屬性。
 
         :param request: Request instance for ModifyLoadBalancerAttributes.
-        :type request: :class:`tencentcloud.clb.v20180317.models.ModifyLoadBalancerAttributesRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.ModifyLoadBalancerAttributesResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.ModifyLoadBalancerAttributesRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.ModifyLoadBalancerAttributesResponse`
 
         """
         try:
@@ -1255,8 +1255,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for ModifyRule.
-        :type request: :class:`tencentcloud.clb.v20180317.models.ModifyRuleRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.ModifyRuleResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.ModifyRuleRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.ModifyRuleResponse`
 
         """
         try:
@@ -1283,8 +1283,8 @@ class ClbClient(AbstractClient):
         """修改目标組的名稱或者預設端口屬性
 
         :param request: Request instance for ModifyTargetGroupAttribute.
-        :type request: :class:`tencentcloud.clb.v20180317.models.ModifyTargetGroupAttributeRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.ModifyTargetGroupAttributeResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.ModifyTargetGroupAttributeRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.ModifyTargetGroupAttributeResponse`
 
         """
         try:
@@ -1312,8 +1312,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的 RequestID 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for ModifyTargetGroupInstancesPort.
-        :type request: :class:`tencentcloud.clb.v20180317.models.ModifyTargetGroupInstancesPortRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.ModifyTargetGroupInstancesPortResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.ModifyTargetGroupInstancesPortRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.ModifyTargetGroupInstancesPortResponse`
 
         """
         try:
@@ -1341,8 +1341,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的 RequestID 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for ModifyTargetGroupInstancesWeight.
-        :type request: :class:`tencentcloud.clb.v20180317.models.ModifyTargetGroupInstancesWeightRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.ModifyTargetGroupInstancesWeightResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.ModifyTargetGroupInstancesWeightRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.ModifyTargetGroupInstancesWeightResponse`
 
         """
         try:
@@ -1370,8 +1370,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for ModifyTargetPort.
-        :type request: :class:`tencentcloud.clb.v20180317.models.ModifyTargetPortRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.ModifyTargetPortResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.ModifyTargetPortRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.ModifyTargetPortResponse`
 
         """
         try:
@@ -1399,8 +1399,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for ModifyTargetWeight.
-        :type request: :class:`tencentcloud.clb.v20180317.models.ModifyTargetWeightRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.ModifyTargetWeightResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.ModifyTargetWeightRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.ModifyTargetWeightResponse`
 
         """
         try:
@@ -1428,8 +1428,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的 RequestID 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for RegisterTargetGroupInstances.
-        :type request: :class:`tencentcloud.clb.v20180317.models.RegisterTargetGroupInstancesRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.RegisterTargetGroupInstancesResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.RegisterTargetGroupInstancesRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.RegisterTargetGroupInstancesResponse`
 
         """
         try:
@@ -1457,8 +1457,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for RegisterTargets.
-        :type request: :class:`tencentcloud.clb.v20180317.models.RegisterTargetsRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.RegisterTargetsResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.RegisterTargetsRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.RegisterTargetsResponse`
 
         """
         try:
@@ -1486,8 +1486,8 @@ class ClbClient(AbstractClient):
         本介面爲異步介面，介面返回成功後，需以返回的 RequestId 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for RegisterTargetsWithClassicalLB.
-        :type request: :class:`tencentcloud.clb.v20180317.models.RegisterTargetsWithClassicalLBRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.RegisterTargetsWithClassicalLBResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.RegisterTargetsWithClassicalLBRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.RegisterTargetsWithClassicalLBResponse`
 
         """
         try:
@@ -1514,11 +1514,11 @@ class ClbClient(AbstractClient):
         """ReplaceCertForLoadBalancers 介面用以替換負載均衡實例所關聯的證書，對于各個地域的負載均衡，如果指定的老的證書ID與其有關聯關系，則會先解除關聯，再建立新證書與該負載均衡的關聯關系。
         此介面支援替換服務端證書或用戶端證書。
         需要使用的新證書，可以通過傳入證書ID來指定，如果不指定證書ID，則必須傳入證書内容等相關訊息，用以新建證書并綁定至負載均衡。
-        注：本介面僅可從廣州地域調用。
+        注：本介面僅可從 地域調用。
 
         :param request: Request instance for ReplaceCertForLoadBalancers.
-        :type request: :class:`tencentcloud.clb.v20180317.models.ReplaceCertForLoadBalancersRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.ReplaceCertForLoadBalancersResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.ReplaceCertForLoadBalancersRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.ReplaceCertForLoadBalancersResponse`
 
         """
         try:
@@ -1545,8 +1545,8 @@ class ClbClient(AbstractClient):
         """增加、删除、更新負載均衡的日志服務(CLS)主題
 
         :param request: Request instance for SetLoadBalancerClsLog.
-        :type request: :class:`tencentcloud.clb.v20180317.models.SetLoadBalancerClsLogRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.SetLoadBalancerClsLogResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.SetLoadBalancerClsLogRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.SetLoadBalancerClsLogResponse`
 
         """
         try:
@@ -1575,8 +1575,8 @@ class ClbClient(AbstractClient):
         解綁操作時，入參需要傳入負載均衡實例執行解綁後所綁定的所有安全組；如果要解綁所有安全組，可不傳此參數，或傳入空數組。注意：内網負載均衡不支援綁定安全組。
 
         :param request: Request instance for SetLoadBalancerSecurityGroups.
-        :type request: :class:`tencentcloud.clb.v20180317.models.SetLoadBalancerSecurityGroupsRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.SetLoadBalancerSecurityGroupsResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.SetLoadBalancerSecurityGroupsRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.SetLoadBalancerSecurityGroupsResponse`
 
         """
         try:
@@ -1603,8 +1603,8 @@ class ClbClient(AbstractClient):
         """綁定或解綁一個安全組到多個公網負載均衡實例。注意：内網負載均衡不支援綁定安全組。
 
         :param request: Request instance for SetSecurityGroupForLoadbalancers.
-        :type request: :class:`tencentcloud.clb.v20180317.models.SetSecurityGroupForLoadbalancersRequest`
-        :rtype: :class:`tencentcloud.clb.v20180317.models.SetSecurityGroupForLoadbalancersResponse`
+        :type request: :class:`taifucloudcloud.clb.v20180317.models.SetSecurityGroupForLoadbalancersRequest`
+        :rtype: :class:`taifucloudcloud.clb.v20180317.models.SetSecurityGroupForLoadbalancersResponse`
 
         """
         try:

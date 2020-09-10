@@ -42,7 +42,7 @@
           "body": "$content" //the content of return msg
         }
       },
-      "download_address": "https://github.com/tencentyun/scf-demo-repo/tree/master/Nodejs6.10-Apigateway", //demo's git download url
+      "download_address": "https://github.com/taifucloudyun/scf-demo-repo/tree/master/Nodejs6.10-Apigateway", //demo's git download url
       "tags": [
         "Nodejs6.10",
         "API GW",
@@ -78,7 +78,7 @@
         "codeFile": ["index.js"],
         "CodeUri": [
           // Code download url which should be same as 'download_address'. 代碼下載網址，和download_address保持一緻
-          "https://github.com/tencentyun/scf-demo-repo/tree/master/Nodejs6.10-Apigateway"
+          "https://github.com/taifucloudyun/scf-demo-repo/tree/master/Nodejs6.10-Apigateway"
         ]
       }
     }

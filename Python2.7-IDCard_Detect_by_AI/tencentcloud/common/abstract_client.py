@@ -29,12 +29,12 @@ try:
 except ImportError:
     from urllib import urlencode
 
-import tencentcloud
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.http.request import ApiRequest
-from tencentcloud.common.http.request import RequestInternal
-from tencentcloud.common.profile.client_profile import ClientProfile
-from tencentcloud.common.sign import Sign
+import taifucloudcloud
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.http.request import ApiRequest
+from taifucloudcloud.common.http.request import RequestInternal
+from taifucloudcloud.common.profile.client_profile import ClientProfile
+from taifucloudcloud.common.sign import Sign
 
 warnings.filterwarnings("ignore")
 
@@ -47,7 +47,7 @@ class AbstractClient(object):
     _params = {}
     _apiVersion = ''
     _endpoint = ''
-    _sdkVersion = 'SDK_PYTHON_%s' % tencentcloud.__version__
+    _sdkVersion = 'SDK_PYTHON_%s' % taifucloudcloud.__version__
     _default_content_type = _form_urlencoded_content
 
     def __init__(self, credential, region, profile=None):

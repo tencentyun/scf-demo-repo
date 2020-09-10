@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.tmt.v20180321 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.tmt.v20180321 import models
 
 
 class TmtClient(AbstractClient):
     _apiVersion = '2018-03-21'
-    _endpoint = 'tmt.tencentcloudapi.com'
+    _endpoint = 'tmt.taifucloudcloudapi.com'
 
 
     def ImageTranslate(self, request):
@@ -30,8 +30,8 @@ class TmtClient(AbstractClient):
         提示：對于一般開發者，我們建議優先使用SDK接入簡化開發。SDK使用介紹請直接檢視 5. 開發者資源 部分。
 
         :param request: 調用ImageTranslate所需參數的結構體。
-        :type request: :class:`tencentcloud.tmt.v20180321.models.ImageTranslateRequest`
-        :rtype: :class:`tencentcloud.tmt.v20180321.models.ImageTranslateResponse`
+        :type request: :class:`taifucloudcloud.tmt.v20180321.models.ImageTranslateRequest`
+        :rtype: :class:`taifucloudcloud.tmt.v20180321.models.ImageTranslateResponse`
 
         """
         try:
@@ -59,8 +59,8 @@ class TmtClient(AbstractClient):
         提示：對于一般開發者，我們建議優先使用SDK接入簡化開發。SDK使用介紹請直接檢視 5. 開發者資源 部分。
 
         :param request: 調用LanguageDetect所需參數的結構體。
-        :type request: :class:`tencentcloud.tmt.v20180321.models.LanguageDetectRequest`
-        :rtype: :class:`tencentcloud.tmt.v20180321.models.LanguageDetectResponse`
+        :type request: :class:`taifucloudcloud.tmt.v20180321.models.LanguageDetectRequest`
+        :rtype: :class:`taifucloudcloud.tmt.v20180321.models.LanguageDetectResponse`
 
         """
         try:
@@ -89,8 +89,8 @@ class TmtClient(AbstractClient):
         提示：對于一般開發者，我們建議優先使用SDK接入簡化開發。SDK使用介紹請直接檢視 5. 開發者資源 部分。
 
         :param request: 調用SpeechTranslate所需參數的結構體。
-        :type request: :class:`tencentcloud.tmt.v20180321.models.SpeechTranslateRequest`
-        :rtype: :class:`tencentcloud.tmt.v20180321.models.SpeechTranslateResponse`
+        :type request: :class:`taifucloudcloud.tmt.v20180321.models.SpeechTranslateRequest`
+        :rtype: :class:`taifucloudcloud.tmt.v20180321.models.SpeechTranslateResponse`
 
         """
         try:
@@ -118,8 +118,8 @@ class TmtClient(AbstractClient):
         提示：對于一般開發者，我們建議優先使用SDK接入簡化開發。SDK使用介紹請直接檢視 5. 開發者資源 部分。
 
         :param request: 調用TextTranslate所需參數的結構體。
-        :type request: :class:`tencentcloud.tmt.v20180321.models.TextTranslateRequest`
-        :rtype: :class:`tencentcloud.tmt.v20180321.models.TextTranslateResponse`
+        :type request: :class:`taifucloudcloud.tmt.v20180321.models.TextTranslateRequest`
+        :rtype: :class:`taifucloudcloud.tmt.v20180321.models.TextTranslateResponse`
 
         """
         try:

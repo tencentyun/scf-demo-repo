@@ -2,7 +2,7 @@
 /*************************************************************************
 *****                                                                *****
 *****    使用教程/readme ：                                            *****
-*****    https://cloud.tencent.com/document/product/583/47071        *****
+*****    https://cloud.taifucloud.com/document/product/583/47071        *****
 *****                                                                *****
 **************************************************************************/
 const fs = require('fs')
@@ -125,4 +125,3 @@ exports.main_handler = async (event, context, callback) => {
   }
   return 'Success'
 }
-

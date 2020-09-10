@@ -15,14 +15,14 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.iai.v20180301 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.iai.v20180301 import models
 
 
 class IaiClient(AbstractClient):
     _apiVersion = '2018-03-01'
-    _endpoint = 'iai.tencentcloudapi.com'
+    _endpoint = 'iai.taifucloudcloudapi.com'
 
 
     def AnalyzeFace(self, request):
@@ -32,8 +32,8 @@ class IaiClient(AbstractClient):
         - 公共參數中的簽名方式請使用V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for AnalyzeFace.
-        :type request: :class:`tencentcloud.iai.v20180301.models.AnalyzeFaceRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.AnalyzeFaceResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.AnalyzeFaceRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.AnalyzeFaceResponse`
 
         """
         try:
@@ -70,8 +70,8 @@ class IaiClient(AbstractClient):
         - 查重的人員庫狀态爲Top Cloud 開始進行查重任務的那一刻，即您可以理解爲當您發起查重請求後，若您的查重任務需要排隊，在排隊期間您對人員庫的增删操作均會會影響查重的結果。Top Cloud 将以開始進行查重任務的那一刻人員庫的狀态進行查重。查重任務開始後，您對人員庫的任何操作均不影響查重任務的進行。但建議查重任務開始後，請不要對人員庫中人員和人臉進行增删操作。
 
         :param request: Request instance for CheckSimilarPerson.
-        :type request: :class:`tencentcloud.iai.v20180301.models.CheckSimilarPersonRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.CheckSimilarPersonResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.CheckSimilarPersonRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.CheckSimilarPersonResponse`
 
         """
         try:
@@ -97,14 +97,14 @@ class IaiClient(AbstractClient):
     def CompareFace(self, request):
         """對兩張圖片中的人臉進行相似度比對，返回人臉相似度分數。
 
-        若您需要判斷 “此人是否是某人”，即驗證某張圖片中的人是否是已知身份的某人，如常見的人臉登入場景，建議使用[人臉驗證](https://cloud.tencent.com/document/product/867/32806)或[人員驗證](https://cloud.tencent.com/document/product/867/38879)介面。
+        若您需要判斷 “此人是否是某人”，即驗證某張圖片中的人是否是已知身份的某人，如常見的人臉登入場景，建議使用[人臉驗證](https://cloud.taifucloud.com/document/product/867/32806)或[人員驗證](https://cloud.taifucloud.com/document/product/867/38879)介面。
 
         >
         - 公共參數中的簽名方式請使用V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for CompareFace.
-        :type request: :class:`tencentcloud.iai.v20180301.models.CompareFaceRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.CompareFaceResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.CompareFaceRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.CompareFaceResponse`
 
         """
         try:
@@ -133,8 +133,8 @@ class IaiClient(AbstractClient):
         - 注：若該人員創建時算法模型版本爲2.0，複制到非2.0算法模型版本的Group中時，複制操作将會失敗。
 
         :param request: Request instance for CopyPerson.
-        :type request: :class:`tencentcloud.iai.v20180301.models.CopyPersonRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.CopyPersonResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.CopyPersonRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.CopyPersonResponse`
 
         """
         try:
@@ -164,8 +164,8 @@ class IaiClient(AbstractClient):
         - 公共參數中的簽名方式請使用V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for CreateFace.
-        :type request: :class:`tencentcloud.iai.v20180301.models.CreateFaceRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.CreateFaceResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.CreateFaceRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.CreateFaceResponse`
 
         """
         try:
@@ -197,8 +197,8 @@ class IaiClient(AbstractClient):
         不同算法模型版本（FaceModelVersion）的人員庫（Group）最多可包含人臉（Face）數不同。算法模型版本爲2.0的人員庫最多包含100萬張人臉，算法模型版本爲3.0的人員庫最多可包含300萬張人臉。
 
         :param request: Request instance for CreateGroup.
-        :type request: :class:`tencentcloud.iai.v20180301.models.CreateGroupRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.CreateGroupResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.CreateGroupRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.CreateGroupResponse`
 
         """
         try:
@@ -228,8 +228,8 @@ class IaiClient(AbstractClient):
         - 公共參數中的簽名方式請使用V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for CreatePerson.
-        :type request: :class:`tencentcloud.iai.v20180301.models.CreatePersonRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.CreatePersonResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.CreatePersonRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.CreatePersonResponse`
 
         """
         try:
@@ -256,8 +256,8 @@ class IaiClient(AbstractClient):
         """删除一個人員下的人臉圖片。如果該人員只有一張人臉圖片，則返回錯誤。
 
         :param request: Request instance for DeleteFace.
-        :type request: :class:`tencentcloud.iai.v20180301.models.DeleteFaceRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.DeleteFaceResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.DeleteFaceRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.DeleteFaceResponse`
 
         """
         try:
@@ -284,8 +284,8 @@ class IaiClient(AbstractClient):
         """删除該人員庫及包含的所有的人員。同時，人員對應的所有人臉訊息将被删除。若某人員同時存在多個人員庫中，該人員不會被删除，但屬于該人員庫中的自定義描述欄位訊息會被删除，屬于其他人員庫的自定義描述欄位訊息不受影響。
 
         :param request: Request instance for DeleteGroup.
-        :type request: :class:`tencentcloud.iai.v20180301.models.DeleteGroupRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.DeleteGroupResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.DeleteGroupRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.DeleteGroupResponse`
 
         """
         try:
@@ -312,8 +312,8 @@ class IaiClient(AbstractClient):
         """删除該人員訊息，此操作會導緻所有人員庫均删除此人員。同時，該人員的所有人臉訊息将被删除。
 
         :param request: Request instance for DeletePerson.
-        :type request: :class:`tencentcloud.iai.v20180301.models.DeletePersonRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.DeletePersonResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.DeletePersonRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.DeletePersonResponse`
 
         """
         try:
@@ -340,8 +340,8 @@ class IaiClient(AbstractClient):
         """從某人員庫中删除人員，此操作僅影響該人員庫。若該人員僅存在于指定的人員庫中，該人員将被删除，其所有的人臉訊息也将被删除。
 
         :param request: Request instance for DeletePersonFromGroup.
-        :type request: :class:`tencentcloud.iai.v20180301.models.DeletePersonFromGroupRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.DeletePersonFromGroupResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.DeletePersonFromGroupRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.DeletePersonFromGroupResponse`
 
         """
         try:
@@ -370,21 +370,21 @@ class IaiClient(AbstractClient):
 
         其中，人臉質量訊息主要用于評價輸入的人臉圖片的質量。在使用人臉識别服務時，建議您對輸入的人臉圖片進行質量檢測，提升後續業務處理的效果。該功能的應用場景包括：
 
-        1） 人員庫[創建人員](https://cloud.tencent.com/document/product/867/32793)/[增加人臉](https://cloud.tencent.com/document/product/867/32795)：保證人員人臉訊息的質量，便于後續的業務處理。
+        1） 人員庫[創建人員](https://cloud.taifucloud.com/document/product/867/32793)/[增加人臉](https://cloud.taifucloud.com/document/product/867/32795)：保證人員人臉訊息的質量，便于後續的業務處理。
 
-        2） [人臉搜索](https://cloud.tencent.com/document/product/867/32798)：保證輸入的圖片質量，快速準确比對到對應的人員。
+        2） [人臉搜索](https://cloud.taifucloud.com/document/product/867/32798)：保證輸入的圖片質量，快速準确比對到對應的人員。
 
-        3） [人臉驗證](https://cloud.tencent.com/document/product/867/32806)：保證人臉訊息的質量，避免明明是本人卻認證不通過的情況。
+        3） [人臉驗證](https://cloud.taifucloud.com/document/product/867/32806)：保證人臉訊息的質量，避免明明是本人卻認證不通過的情況。
 
-        4） [人臉融合](https://cloud.tencent.com/product/facefusion)：保證上傳的人臉質量，人臉融合的效果更好。
+        4） [人臉融合](https://cloud.taifucloud.com/product/facefusion)：保證上傳的人臉質量，人臉融合的效果更好。
 
         >
         - 公共參數中的簽名方式請使用V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
 
         :param request: Request instance for DetectFace.
-        :type request: :class:`tencentcloud.iai.v20180301.models.DetectFaceRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.DetectFaceResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.DetectFaceRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.DetectFaceResponse`
 
         """
         try:
@@ -410,7 +410,7 @@ class IaiClient(AbstractClient):
     def DetectLiveFace(self, request):
         """用于對用戶上傳的靜态圖片進行人臉活體檢測。與動态活體檢測的區别是：靜态活體檢測中，用戶不需要通過唇語或搖頭眨眼等動作來識别。
 
-        靜态活體檢測适用于手機自拍的場景，或對防攻擊要求不高的場景。如果對活體檢測有更高安全性要求，請使用[人臉核身·雲智慧眼](https://cloud.tencent.com/product/faceid)産品。
+        靜态活體檢測适用于手機自拍的場景，或對防攻擊要求不高的場景。如果對活體檢測有更高安全性要求，請使用[人臉核身·雲智慧眼](https://cloud.taifucloud.com/product/faceid)産品。
 
         >
         - 圖片的寬高比請接近3：4，不符合寬高比的圖片返回的分值不具備參考意義。本介面适用于類手機自拍場景，非類手機自拍照返回的分值不具備參考意義。
@@ -419,8 +419,8 @@ class IaiClient(AbstractClient):
         - 公共參數中的簽名方式請使用V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for DetectLiveFace.
-        :type request: :class:`tencentcloud.iai.v20180301.models.DetectLiveFaceRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.DetectLiveFaceResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.DetectLiveFaceRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.DetectLiveFaceResponse`
 
         """
         try:
@@ -451,8 +451,8 @@ class IaiClient(AbstractClient):
         若預估時間超過5小時，則無法使用人員查重功能。
 
         :param request: Request instance for EstimateCheckSimilarPersonCostTime.
-        :type request: :class:`tencentcloud.iai.v20180301.models.EstimateCheckSimilarPersonCostTimeRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.EstimateCheckSimilarPersonCostTimeResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.EstimateCheckSimilarPersonCostTimeRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.EstimateCheckSimilarPersonCostTimeResponse`
 
         """
         try:
@@ -481,8 +481,8 @@ class IaiClient(AbstractClient):
         只保留最近1年的數據。
 
         :param request: Request instance for GetCheckSimilarPersonJobIdList.
-        :type request: :class:`tencentcloud.iai.v20180301.models.GetCheckSimilarPersonJobIdListRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.GetCheckSimilarPersonJobIdListResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.GetCheckSimilarPersonJobIdListRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.GetCheckSimilarPersonJobIdListResponse`
 
         """
         try:
@@ -509,8 +509,8 @@ class IaiClient(AbstractClient):
         """獲取人員庫訊息。
 
         :param request: Request instance for GetGroupInfo.
-        :type request: :class:`tencentcloud.iai.v20180301.models.GetGroupInfoRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.GetGroupInfoResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.GetGroupInfoRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.GetGroupInfoResponse`
 
         """
         try:
@@ -537,8 +537,8 @@ class IaiClient(AbstractClient):
         """獲取人員庫清單。
 
         :param request: Request instance for GetGroupList.
-        :type request: :class:`tencentcloud.iai.v20180301.models.GetGroupListRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.GetGroupListResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.GetGroupListRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.GetGroupListResponse`
 
         """
         try:
@@ -565,8 +565,8 @@ class IaiClient(AbstractClient):
         """獲取指定人員的訊息，包括姓名、性别、人臉等。
 
         :param request: Request instance for GetPersonBaseInfo.
-        :type request: :class:`tencentcloud.iai.v20180301.models.GetPersonBaseInfoRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.GetPersonBaseInfoResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.GetPersonBaseInfoRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.GetPersonBaseInfoResponse`
 
         """
         try:
@@ -593,8 +593,8 @@ class IaiClient(AbstractClient):
         """獲取指定人員的訊息，包括加入的人員庫、描述内容等。
 
         :param request: Request instance for GetPersonGroupInfo.
-        :type request: :class:`tencentcloud.iai.v20180301.models.GetPersonGroupInfoRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.GetPersonGroupInfoResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.GetPersonGroupInfoRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.GetPersonGroupInfoResponse`
 
         """
         try:
@@ -621,8 +621,8 @@ class IaiClient(AbstractClient):
         """獲取指定人員庫中的人員清單。
 
         :param request: Request instance for GetPersonList.
-        :type request: :class:`tencentcloud.iai.v20180301.models.GetPersonListRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.GetPersonListResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.GetPersonListRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.GetPersonListResponse`
 
         """
         try:
@@ -649,8 +649,8 @@ class IaiClient(AbstractClient):
         """獲取指定人員庫中人員數量。
 
         :param request: Request instance for GetPersonListNum.
-        :type request: :class:`tencentcloud.iai.v20180301.models.GetPersonListNumRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.GetPersonListNumResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.GetPersonListNumRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.GetPersonListNumResponse`
 
         """
         try:
@@ -677,8 +677,8 @@ class IaiClient(AbstractClient):
         """獲取人員查重介面（CheckSimilarPerson）結果。
 
         :param request: Request instance for GetSimilarPersonResult.
-        :type request: :class:`tencentcloud.iai.v20180301.models.GetSimilarPersonResultRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.GetSimilarPersonResultResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.GetSimilarPersonResultRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.GetSimilarPersonResultResponse`
 
         """
         try:
@@ -705,8 +705,8 @@ class IaiClient(AbstractClient):
         """修改人員庫名稱、備注、自定義描述欄位名稱。
 
         :param request: Request instance for ModifyGroup.
-        :type request: :class:`tencentcloud.iai.v20180301.models.ModifyGroupRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.ModifyGroupResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.ModifyGroupRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.ModifyGroupResponse`
 
         """
         try:
@@ -733,8 +733,8 @@ class IaiClient(AbstractClient):
         """修改人員訊息，包括名稱、性别等。人員名稱和性别修改會同步到包含該人員的所有人員庫。
 
         :param request: Request instance for ModifyPersonBaseInfo.
-        :type request: :class:`tencentcloud.iai.v20180301.models.ModifyPersonBaseInfoRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.ModifyPersonBaseInfoResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.ModifyPersonBaseInfoRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.ModifyPersonBaseInfoResponse`
 
         """
         try:
@@ -761,8 +761,8 @@ class IaiClient(AbstractClient):
         """修改指定人員庫人員描述内容。
 
         :param request: Request instance for ModifyPersonGroupInfo.
-        :type request: :class:`tencentcloud.iai.v20180301.models.ModifyPersonGroupInfoRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.ModifyPersonGroupInfoResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.ModifyPersonGroupInfoRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.ModifyPersonGroupInfoResponse`
 
         """
         try:
@@ -792,17 +792,17 @@ class IaiClient(AbstractClient):
 
         單次搜索的人員庫人臉總數量和人員庫的算法模型版本（FaceModelVersion）相關。算法模型版本爲2.0的人員庫，單次搜索人員庫人臉總數量不得超過 100 萬張；算法模型版本爲3.0的人員庫，單次搜索人員庫人臉總數量不得超過 300 萬張。
 
-        與[人員搜索](https://cloud.tencent.com/document/product/867/38881)及[人員搜索按庫返回](https://cloud.tencent.com/document/product/867/38880)介面不同的是，本介面将該人員（Person）下的每個人臉（Face）都作爲單獨個體進行驗證，而人員搜索及人員搜索按庫返回介面 會将該人員（Person）下的所有人臉（Face）進行融合特征處理，即若某個Person下有4張 Face，本介面會将4張 Face 的特征進行融合處理，生成對應這個 Person 的特征，使搜索更加準确。
+        與[人員搜索](https://cloud.taifucloud.com/document/product/867/38881)及[人員搜索按庫返回](https://cloud.taifucloud.com/document/product/867/38880)介面不同的是，本介面将該人員（Person）下的每個人臉（Face）都作爲單獨個體進行驗證，而人員搜索及人員搜索按庫返回介面 會将該人員（Person）下的所有人臉（Face）進行融合特征處理，即若某個Person下有4張 Face，本介面會将4張 Face 的特征進行融合處理，生成對應這個 Person 的特征，使搜索更加準确。
 
 
-        本介面需與[人員庫管理相關介面](https://cloud.tencent.com/document/product/867/32794)結合使用。
+        本介面需與[人員庫管理相關介面](https://cloud.taifucloud.com/document/product/867/32794)結合使用。
 
         >
         - 公共參數中的簽名方式請使用V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for SearchFaces.
-        :type request: :class:`tencentcloud.iai.v20180301.models.SearchFacesRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.SearchFacesResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.SearchFacesRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.SearchFacesResponse`
 
         """
         try:
@@ -832,17 +832,17 @@ class IaiClient(AbstractClient):
 
         單次搜索的人員庫人臉總數量和人員庫的算法模型版本（FaceModelVersion）相關。算法模型版本爲2.0的人員庫，單次搜索人員庫人臉總數量不得超過 100 萬張；算法模型版本爲3.0的人員庫，單次搜索人員庫人臉總數量不得超過 300 萬張。
 
-        與[人員搜索](https://cloud.tencent.com/document/product/867/38881)及[人員搜索按庫返回](https://cloud.tencent.com/document/product/867/38880)介面不同的是，本介面将該人員（Person）下的每個人臉（Face）都作爲單獨個體進行驗證，而[人員搜索](https://cloud.tencent.com/document/product/867/38881)及[人員搜索按庫返回](https://cloud.tencent.com/document/product/867/38880)介面 會将該人員（Person）下的所有人臉（Face）進行融合特征處理，即若某個Person下有4張 Face，本介面會将4張 Face 的特征進行融合處理，生成對應這個 Person 的特征，使搜索更加準确。
+        與[人員搜索](https://cloud.taifucloud.com/document/product/867/38881)及[人員搜索按庫返回](https://cloud.taifucloud.com/document/product/867/38880)介面不同的是，本介面将該人員（Person）下的每個人臉（Face）都作爲單獨個體進行驗證，而[人員搜索](https://cloud.taifucloud.com/document/product/867/38881)及[人員搜索按庫返回](https://cloud.taifucloud.com/document/product/867/38880)介面 會将該人員（Person）下的所有人臉（Face）進行融合特征處理，即若某個Person下有4張 Face，本介面會将4張 Face 的特征進行融合處理，生成對應這個 Person 的特征，使搜索更加準确。
 
-        本介面需與[人員庫管理相關介面](https://cloud.tencent.com/document/product/867/32794)結合使用。
+        本介面需與[人員庫管理相關介面](https://cloud.taifucloud.com/document/product/867/32794)結合使用。
 
         >
         - 公共參數中的簽名方式請使用V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
 
         :param request: Request instance for SearchFacesReturnsByGroup.
-        :type request: :class:`tencentcloud.iai.v20180301.models.SearchFacesReturnsByGroupRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.SearchFacesReturnsByGroupResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.SearchFacesReturnsByGroupRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.SearchFacesReturnsByGroupResponse`
 
         """
         try:
@@ -872,15 +872,15 @@ class IaiClient(AbstractClient):
 
         單次搜索的人員庫人臉總數量和人員庫的算法模型版本（FaceModelVersion）相關。算法模型版本爲2.0的人員庫，單次搜索人員庫人臉總數量不得超過 100 萬張；算法模型版本爲3.0的人員庫，單次搜索人員庫人臉總數量不得超過 300 萬張。
 
-        本介面會将該人員（Person）下的所有人臉（Face）進行融合特征處理，即若某個 Person 下有4張 Face ，本介面會将4張 Face 的特征進行融合處理，生成對應這個 Person 的特征，使人員搜索（确定待識别的人臉圖片是某人）更加準确。而[人臉搜索](https://cloud.tencent.com/document/product/867/32798)及[人臉搜索按庫返回介面](https://cloud.tencent.com/document/product/867/38882)将該人員（Person）下的每個人臉（Face）都作爲單獨個體進行搜索。
+        本介面會将該人員（Person）下的所有人臉（Face）進行融合特征處理，即若某個 Person 下有4張 Face ，本介面會将4張 Face 的特征進行融合處理，生成對應這個 Person 的特征，使人員搜索（确定待識别的人臉圖片是某人）更加準确。而[人臉搜索](https://cloud.taifucloud.com/document/product/867/32798)及[人臉搜索按庫返回介面](https://cloud.taifucloud.com/document/product/867/38882)将該人員（Person）下的每個人臉（Face）都作爲單獨個體進行搜索。
 
         >
         - 公共參數中的簽名方式請使用V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
         - 僅支援算法模型版本（FaceModelVersion）爲3.0的人員庫。
 
         :param request: Request instance for SearchPersons.
-        :type request: :class:`tencentcloud.iai.v20180301.models.SearchPersonsRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.SearchPersonsResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.SearchPersonsRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.SearchPersonsResponse`
 
         """
         try:
@@ -910,14 +910,14 @@ class IaiClient(AbstractClient):
 
         單次搜索的人員庫人臉總數量和人員庫的算法模型版本（FaceModelVersion）相關。算法模型版本爲2.0的人員庫，單次搜索人員庫人臉總數量不得超過 100 萬張；算法模型版本爲3.0的人員庫，單次搜索人員庫人臉總數量不得超過 300 萬張。
 
-        本介面會将該人員（Person）下的所有人臉（Face）進行融合特征處理，即若某個 Person 下有4張 Face ，本介面會将4張 Face 的特征進行融合處理，生成對應這個 Person 的特征，使人員搜索（确定待識别的人臉圖片是某人）更加準确。而[人臉搜索](https://cloud.tencent.com/document/product/867/32798)及[人臉搜索按庫返回介面](https://cloud.tencent.com/document/product/867/38882)将該人員（Person）下的每個人臉（Face）都作爲單獨個體進行搜索。
+        本介面會将該人員（Person）下的所有人臉（Face）進行融合特征處理，即若某個 Person 下有4張 Face ，本介面會将4張 Face 的特征進行融合處理，生成對應這個 Person 的特征，使人員搜索（确定待識别的人臉圖片是某人）更加準确。而[人臉搜索](https://cloud.taifucloud.com/document/product/867/32798)及[人臉搜索按庫返回介面](https://cloud.taifucloud.com/document/product/867/38882)将該人員（Person）下的每個人臉（Face）都作爲單獨個體進行搜索。
         >
         - 公共參數中的簽名方式請使用V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
         - 僅支援算法模型版本（FaceModelVersion）爲3.0的人員庫。
 
         :param request: Request instance for SearchPersonsReturnsByGroup.
-        :type request: :class:`tencentcloud.iai.v20180301.models.SearchPersonsReturnsByGroupRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.SearchPersonsReturnsByGroupResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.SearchPersonsReturnsByGroupRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.SearchPersonsReturnsByGroupResponse`
 
         """
         try:
@@ -941,18 +941,18 @@ class IaiClient(AbstractClient):
 
 
     def VerifyFace(self, request):
-        """給定一張人臉圖片和一個 PersonId，判斷圖片中的人和 PersonId 對應的人是否爲同一人。PersonId 請參考[人員庫管理相關介面](https://cloud.tencent.com/document/product/867/32794)。
+        """給定一張人臉圖片和一個 PersonId，判斷圖片中的人和 PersonId 對應的人是否爲同一人。PersonId 請參考[人員庫管理相關介面](https://cloud.taifucloud.com/document/product/867/32794)。
 
-        與[人臉比對](https://cloud.tencent.com/document/product/867/32802)介面不同的是，人臉驗證用于判斷 “此人是否是此人”，“此人”的訊息已存于人員庫中，“此人”可能存在多張人臉圖片；而[人臉比對](https://cloud.tencent.com/document/product/867/32802)用于判斷兩張人臉的相似度。
+        與[人臉比對](https://cloud.taifucloud.com/document/product/867/32802)介面不同的是，人臉驗證用于判斷 “此人是否是此人”，“此人”的訊息已存于人員庫中，“此人”可能存在多張人臉圖片；而[人臉比對](https://cloud.taifucloud.com/document/product/867/32802)用于判斷兩張人臉的相似度。
 
-        與[人員驗證](https://cloud.tencent.com/document/product/867/38879)介面不同的是，人臉驗證将該人員（Person）下的每個人臉（Face）都作爲單獨個體進行驗證，而[人員驗證](https://cloud.tencent.com/document/product/867/38879)會将該人員（Person）下的所有人臉（Face）進行融合特征處理，即若某個 Person下有4張 Face，本介面會将4張 Face 的特征進行融合處理，生成對應這個 Person 的特征，使人員驗證（确定待識别的人臉圖片是某人員）更加準确。
+        與[人員驗證](https://cloud.taifucloud.com/document/product/867/38879)介面不同的是，人臉驗證将該人員（Person）下的每個人臉（Face）都作爲單獨個體進行驗證，而[人員驗證](https://cloud.taifucloud.com/document/product/867/38879)會将該人員（Person）下的所有人臉（Face）進行融合特征處理，即若某個 Person下有4張 Face，本介面會将4張 Face 的特征進行融合處理，生成對應這個 Person 的特征，使人員驗證（确定待識别的人臉圖片是某人員）更加準确。
 
         >
         - 公共參數中的簽名方式請使用V3版本，即配置SignatureMethod參數爲TC3-HMAC-SHA256。
 
         :param request: Request instance for VerifyFace.
-        :type request: :class:`tencentcloud.iai.v20180301.models.VerifyFaceRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.VerifyFaceResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.VerifyFaceRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.VerifyFaceResponse`
 
         """
         try:
@@ -976,7 +976,7 @@ class IaiClient(AbstractClient):
 
 
     def VerifyPerson(self, request):
-        """給定一張人臉圖片和一個 PersonId，判斷圖片中的人和 PersonId 對應的人是否爲同一人。PersonId 請參考[人員庫管理相關介面](https://cloud.tencent.com/document/product/867/32794)。
+        """給定一張人臉圖片和一個 PersonId，判斷圖片中的人和 PersonId 對應的人是否爲同一人。PersonId 請參考[人員庫管理相關介面](https://cloud.taifucloud.com/document/product/867/32794)。
         本介面會将該人員（Person）下的所有人臉（Face）進行融合特征處理，即若某個Person下有4張 Face，本介面會将4張 Face 的特征進行融合處理，生成對應這個 Person 的特征，使人員驗證（确定待識别的人臉圖片是某人員）更加準确。
 
          和人臉比對相關介面不同的是，人臉驗證相關介面用于判斷 “此人是否是此人”，“此人”的訊息已存于人員庫中，“此人”可能存在多張人臉圖片；而人臉比對相關介面用于判斷兩張人臉的相似度。
@@ -987,8 +987,8 @@ class IaiClient(AbstractClient):
         - 僅支援算法模型版本（FaceModelVersion）爲3.0的人員庫。
 
         :param request: Request instance for VerifyPerson.
-        :type request: :class:`tencentcloud.iai.v20180301.models.VerifyPersonRequest`
-        :rtype: :class:`tencentcloud.iai.v20180301.models.VerifyPersonResponse`
+        :type request: :class:`taifucloudcloud.iai.v20180301.models.VerifyPersonRequest`
+        :rtype: :class:`taifucloudcloud.iai.v20180301.models.VerifyPersonResponse`
 
         """
         try:

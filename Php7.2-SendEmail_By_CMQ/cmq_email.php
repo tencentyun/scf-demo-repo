@@ -5,10 +5,10 @@ require_once("PHPMailer/SMTP.php");
 require_once("PHPMailer/Exception.php");
 use PHPMailer\PHPMailer;
 
-# Mailbox related information for sending mail, third party SMTP service, taking QQ mailbox as an example. 發送郵件使用的電子信箱相關訊息，第三方 SMTP 服務,以QQ電子信箱爲例
+# Mailbox related information for sending mail, third party SMTP service, taking   mailbox as an example. 發送郵件使用的電子信箱相關訊息，第三方 SMTP 服務,以 電子信箱爲例
 const mail_host="smtp.qq.com";         # SMTP server. SMTP服務器
 const mail_user="XXXXXXXXX@qq.com";    # username. 用戶名
-const mail_pass="****************";    # The password of the SMTP service. If you use QQ mailbox, you need to use the generated authorization code. SMTP服務的密碼，如果使用QQ電子信箱，需使用生成的授權碼
+const mail_pass="****************";    # The password of the SMTP service. If you use   mailbox, you need to use the generated authorization code. SMTP服務的密碼，如果使用 電子信箱，需使用生成的授權碼
 const mail_port=465;                   # SMTP service port. SMTP服務端口
 
 function sendEmail($from,$to,$title,$content){
@@ -27,7 +27,7 @@ function sendEmail($from,$to,$title,$content){
     $mail->Port = mail_port;
     $mail->CharSet = 'UTF-8';
     $mail->Username =mail_user;
-    //Smtp login password, if you use QQ mailbox, you need to use the generated authorization code. smtp登入的密碼，如果使用QQ電子信箱，需使用生成的授權碼
+    //Smtp login password, if you use   mailbox, you need to use the generated authorization code. smtp登入的密碼，如果使用 電子信箱，需使用生成的授權碼
     $mail->Password = mail_pass;
     //Setting the sender's email address. 設置發件人電子信箱網址
     $mail->From = mail_user;

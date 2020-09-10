@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from tencentcloud.common.abstract_model import AbstractModel
+from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Candidate(AbstractModel):
@@ -109,7 +109,7 @@ class FaceResult(AbstractModel):
     def __init__(self):
         """
         :param FaceRect: 檢測出的人臉框位置。
-        :type FaceRect: :class:`tencentcloud.ticm.v20181127.models.FaceRect`
+        :type FaceRect: :class:`taifucloudcloud.ticm.v20181127.models.FaceRect`
         :param Candidates: 候選人清單。當前返回相似度最高的候選人。
         :type Candidates: list of Candidate
         """
@@ -187,18 +187,18 @@ BLOCK：違規
         :type Suggestion: str
         :param PornResult: 色情識别結果。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PornResult: :class:`tencentcloud.ticm.v20181127.models.PornResult`
+        :type PornResult: :class:`taifucloudcloud.ticm.v20181127.models.PornResult`
         :param TerrorismResult: 暴恐識别結果。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type TerrorismResult: :class:`tencentcloud.ticm.v20181127.models.TerrorismResult`
+        :type TerrorismResult: :class:`taifucloudcloud.ticm.v20181127.models.TerrorismResult`
         :param PoliticsResult: 政治敏感識别結果。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type PoliticsResult: :class:`tencentcloud.ticm.v20181127.models.PoliticsResult`
+        :type PoliticsResult: :class:`taifucloudcloud.ticm.v20181127.models.PoliticsResult`
         :param Extra: 透傳欄位，透傳簡單訊息。
         :type Extra: str
         :param DisgustResult: 惡心内容識别結果。
 注意：此欄位可能返回 null，表示取不到有效值。
-        :type DisgustResult: :class:`tencentcloud.ticm.v20181127.models.DisgustResult`
+        :type DisgustResult: :class:`taifucloudcloud.ticm.v20181127.models.DisgustResult`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
         """

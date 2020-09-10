@@ -15,22 +15,22 @@
 
 import json
 
-from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-from tencentcloud.common.abstract_client import AbstractClient
-from tencentcloud.rp.v20200224 import models
+from taifucloudcloud.common.exception.taifucloud_cloud_sdk_exception import TencentCloudSDKException
+from taifucloudcloud.common.abstract_client import AbstractClient
+from taifucloudcloud.rp.v20200224 import models
 
 
 class RpClient(AbstractClient):
     _apiVersion = '2020-02-24'
-    _endpoint = 'rp.tencentcloudapi.com'
+    _endpoint = 'rp.taifucloudcloudapi.com'
 
 
     def QueryRegisterProtection(self, request):
         """注冊保護服務（RegisterProtection，RP）針對網站、APP 的線上注冊場景，遇到 “惡意注冊” 、“小号注冊” 、“注冊器注冊” 等惡意行爲，提供基于天禦 DNA 算法的惡意防護引擎，從賬号、設備、行爲三個維度有效識别 “惡意注冊”，從“源頭”上防範業務風險。
 
         :param request: Request instance for QueryRegisterProtection.
-        :type request: :class:`tencentcloud.rp.v20200224.models.QueryRegisterProtectionRequest`
-        :rtype: :class:`tencentcloud.rp.v20200224.models.QueryRegisterProtectionResponse`
+        :type request: :class:`taifucloudcloud.rp.v20200224.models.QueryRegisterProtectionRequest`
+        :rtype: :class:`taifucloudcloud.rp.v20200224.models.QueryRegisterProtectionResponse`
 
         """
         try:
