@@ -45,7 +45,7 @@
               // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on.
               // 标簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
       ],
-      "version": "1.0.6"  
+      "version": "1.0.7"  
       // Version number, which identifies the demo version status. 
       // Demo will not to update to the page if the version number unmodified.
       //版本号，通過版本号标識 demo 升級情況，未修改版本号會導緻 demo 不更新至頁面
