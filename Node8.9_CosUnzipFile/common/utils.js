@@ -3,8 +3,7 @@
 const COS = require('cos-nodejs-sdk-v5')
 const path = require('path')
 const URL = require('url')
-const jschardet = require('jschardet')
-const legacy = require('legacy-encoding')
+const { detect, decode } = require('./encoding')
 const { promisify, inspect } = require('util')
 const { isFunction, isString, isObject } = require('lodash')
 
@@ -124,26 +123,11 @@ function getBatchLimit({
 }
 
 /**
- * try to decode buffer by jschardet encoding or gb2312
+ * try to decode buffer by detect encoding
  */
 function bufferToString(buffer) {
-  const testBuffer = getExactSizeBuffer({ buffer, size: 200 })
-  const { encoding, confidence } = jschardet.detect(testBuffer)
-  if (confidence > 0.8) {
-    return legacy.decode(buffer, encoding)
-  } else {
-    return legacy.decode(buffer, 'gb2312')
-  }
-}
-
-/**
- * create a new buffer with exact size
- * if buffer.length is shorter than size，copy the buffer multiple times to fulfill it
- */
-function getExactSizeBuffer({ buffer, size }) {
-  const copyTimes = Math.ceil(size / buffer.length)
-  const bufferList = Array(copyTimes).fill(buffer)
-  return Buffer.concat(bufferList, size)
+  const { encoding, confidence } = detect(buffer)
+  return decode(buffer, encoding)
 }
 
 /**

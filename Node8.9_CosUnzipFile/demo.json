@@ -40,7 +40,7 @@
       "output_parameters": {},
       "download_address": "https://github.com/tencentyun/scf-demo-repo/tree/master/Node8.9_CosUnzipFile",
       "tags": ["Unzip", "Nodejs8.9", "unzip file"],
-      "version": "1.0.7"
+      "version": "1.0.8"
     }
   }
 }
