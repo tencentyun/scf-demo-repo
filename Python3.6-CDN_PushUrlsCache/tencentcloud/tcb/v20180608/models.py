@@ -252,7 +252,7 @@ class DatabasesInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 資料庫唯一标識
+        :param InstanceId: 資料庫唯一標識
         :type InstanceId: str
         :param Status: 狀态。包含以下取值：
 <li>INITIALIZING：資源初始化中</li>
@@ -384,7 +384,7 @@ class DescribeDatabaseACLResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param AclTag: 權限标簽。包含以下取值：
+        :param AclTag: 權限標簽。包含以下取值：
 <li> READONLY：所有用戶可讀，僅創建者和管理員可寫</li>
 <li> PRIVATE：僅創建者及管理員可讀寫</li>
 <li> ADMINWRITE：所有用戶可讀，僅管理員可寫</li>
@@ -463,7 +463,7 @@ class DescribeEnvFreeQuotaRequest(AbstractModel):
         :param EnvId: 環境ID
         :type EnvId: str
         :param ResourceTypes: 資源類型：可選值：CDN, COS, FLEXDB, HOSTING, SCF
-不傳則返回全部資源指标
+不傳則返回全部資源指標
         :type ResourceTypes: list of str
         """
         self.EnvId = None
@@ -618,7 +618,7 @@ class DescribeQuotaDataRequest(AbstractModel):
         """
         :param EnvId: 環境ID
         :type EnvId: str
-        :param MetricName: <li> 指标名: </li>
+        :param MetricName: <li> 指標名: </li>
 <li> StorageSizepkg: 當月儲存空間容量, 單位MB </li>
 <li> StorageReadpkg: 當月儲存讀請求次數 </li>
 <li> StorageWritepkg: 當月儲存寫請求次數 </li>
@@ -641,7 +641,7 @@ class DescribeQuotaDataRequest(AbstractModel):
 <li> StaticFsFluxPkg: 當月靜态托管流量</li>
 <li> StaticFsSizePkg: 當月靜态托管容量 </li>
         :type MetricName: str
-        :param ResourceID: 資源ID, 目前僅對雲函數相關的指标(FunctionInvocationpkg, FunctionGBspkg, FunctionFluxpkg)有意義, 如果想查詢某個雲函數的指标則在ResourceId中傳入函數名; 如果只想查詢整個namespace的指标, 則留空或不傳.
+        :param ResourceID: 資源ID, 目前僅對雲函數相關的指標(FunctionInvocationpkg, FunctionGBspkg, FunctionFluxpkg)有意義, 如果想查詢某個雲函數的指標則在ResourceId中傳入函數名; 如果只想查詢整個namespace的指標, 則留空或不傳.
         :type ResourceID: str
         """
         self.EnvId = None
@@ -662,9 +662,9 @@ class DescribeQuotaDataResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param MetricName: 指标名
+        :param MetricName: 指標名
         :type MetricName: str
-        :param Value: 指标的值
+        :param Value: 指標的值
         :type Value: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -773,7 +773,7 @@ class EndUserInfo(AbstractModel):
         :type WXOpenId: str
         :param  OpenId: qq ID
         :type  OpenId: str
-        :param Phone: 手機号
+        :param Phone: 手機號
         :type Phone: str
         :param Email: 電子信箱
         :type Email: str
@@ -828,7 +828,7 @@ class EnvInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param EnvId: 帳戶下該環境唯一标識
+        :param EnvId: 帳戶下該環境唯一標識
         :type EnvId: str
         :param Source: 環境來源。包含以下取值：
 <li>miniapp： 小程式</li>
@@ -990,7 +990,7 @@ class ModifyDatabaseACLRequest(AbstractModel):
         :type EnvId: str
         :param CollectionName: 集合名稱
         :type CollectionName: str
-        :param AclTag: 權限标簽。包含以下取值：
+        :param AclTag: 權限標簽。包含以下取值：
 <li> READONLY：所有用戶可讀，僅創建者和管理員可寫</li>
 <li> PRIVATE：僅創建者及管理員可讀寫</li>
 <li> ADMINWRITE：所有用戶可讀，僅管理員可寫</li>
@@ -1072,7 +1072,7 @@ class PostpayEnvQuota(AbstractModel):
         """
         :param ResourceType: 資源類型
         :type ResourceType: str
-        :param MetricName: 指标名
+        :param MetricName: 指標名
         :type MetricName: str
         :param Value: 配額值
         :type Value: int
@@ -1180,7 +1180,7 @@ class StorageInfo(AbstractModel):
         :param Region: 資源所屬地域。
 當前支援ap-shanghai
         :type Region: str
-        :param Bucket: 桶名，儲存資源的唯一标識
+        :param Bucket: 桶名，儲存資源的唯一標識
         :type Bucket: str
         :param CdnDomain: cdn 域名
         :type CdnDomain: str

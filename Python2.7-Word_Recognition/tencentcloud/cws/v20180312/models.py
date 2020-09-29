@@ -79,7 +79,7 @@ class CreateSitesRequest(AbstractModel):
         """
         :param Urls: 站點的url清單
         :type Urls: list of str
-        :param UserAgent: 訪問網站的用戶端标識
+        :param UserAgent: 訪問網站的用戶端標識
         :type UserAgent: str
         """
         self.Urls = None
@@ -725,7 +725,7 @@ class DescribeVulsResponse(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """描述鍵值對過濾器，用于條件過濾查詢。例如過濾ID、名稱、狀态等
+    """描述鍵值對過濾器，用於條件過濾查詢。例如過濾ID、名稱、狀态等
 
     若存在多個Filter時，Filter間的關系爲邏輯與（AND）關系。
     若同一個Filter存在多個Values，同一Filter下Values間的關系爲邏輯或（OR）關系。
@@ -859,9 +859,9 @@ class ModifySiteAttributeRequest(AbstractModel):
         :type NeedLogin: int
         :param LoginCookie: 登入後的cookie
         :type LoginCookie: str
-        :param LoginCheckUrl: 用于測試cookie是否有效的URL
+        :param LoginCheckUrl: 用於測試cookie是否有效的URL
         :type LoginCheckUrl: str
-        :param LoginCheckKw: 用于測試cookie是否有效的關鍵字
+        :param LoginCheckKw: 用於測試cookie是否有效的關鍵字
         :type LoginCheckKw: str
         :param ScanDisallow: 禁止掃描器掃描的目錄關鍵字
         :type ScanDisallow: str
@@ -1072,7 +1072,7 @@ class Site(AbstractModel):
         :type Progress: int
         :param Appid: 雲用戶appid。
         :type Appid: int
-        :param Uin: 雲用戶标識。
+        :param Uin: 雲用戶標識。
         :type Uin: str
         :param NeedLogin: 網站是否需要登入掃描：0-未知；-1-不需要；1-需要。
         :type NeedLogin: int
@@ -1080,13 +1080,13 @@ class Site(AbstractModel):
         :type LoginCookie: str
         :param LoginCookieValid: 登入後的cookie是否有效：0-無效；1-有效。
         :type LoginCookieValid: int
-        :param LoginCheckUrl: 用于測試cookie是否有效的URL。
+        :param LoginCheckUrl: 用於測試cookie是否有效的URL。
         :type LoginCheckUrl: str
-        :param LoginCheckKw: 用于測試cookie是否有效的關鍵字。
+        :param LoginCheckKw: 用於測試cookie是否有效的關鍵字。
         :type LoginCheckKw: str
         :param ScanDisallow: 禁止掃描器掃描的目錄關鍵字。
         :type ScanDisallow: str
-        :param UserAgent: 訪問網站的用戶端标識。
+        :param UserAgent: 訪問網站的用戶端標識。
         :type UserAgent: str
         :param Id: 站點ID。
         :type Id: int
@@ -1213,7 +1213,7 @@ class SitesVerification(AbstractModel):
         :type Id: int
         :param Appid: 雲用戶appid
         :type Appid: int
-        :param VerifyUrl: 用于驗證站點的url，即訪問該url獲取驗證數據。
+        :param VerifyUrl: 用於驗證站點的url，即訪問該url獲取驗證數據。
         :type VerifyUrl: str
         :param VerifyFileUrl: 獲取驗證驗證文件的url。
         :type VerifyFileUrl: str
@@ -1312,7 +1312,7 @@ class Vul(AbstractModel):
         :type IsReported: int
         :param Appid: 雲用戶appid。
         :type Appid: int
-        :param Uin: 雲用戶标識。
+        :param Uin: 雲用戶標識。
         :type Uin: str
         :param Id: 漏洞ID。
         :type Id: int

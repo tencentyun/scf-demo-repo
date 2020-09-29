@@ -94,13 +94,13 @@ class AppDetailInfo(AbstractModel):
         :type AppName: str
         :param AppPkgName: app的包名
         :type AppPkgName: str
-        :param AppVersion: app的版本号
+        :param AppVersion: app的版本號
         :type AppVersion: str
         :param AppSize: app的大小
         :type AppSize: int
         :param AppMd5: app的md5
         :type AppMd5: str
-        :param AppIconUrl: app的圖标url
+        :param AppIconUrl: app的圖標url
         :type AppIconUrl: str
         :param FileName: app的文件名稱
         :type FileName: str
@@ -141,9 +141,9 @@ class AppInfo(AbstractModel):
         :type FileName: str
         :param AppPkgName: app的包名，如果是專業版加固和企業版本加固，需要正确的傳遞此欄位
         :type AppPkgName: str
-        :param AppVersion: app的版本号
+        :param AppVersion: app的版本號
         :type AppVersion: str
-        :param AppIconUrl: app的圖标url
+        :param AppIconUrl: app的圖標url
         :type AppIconUrl: str
         :param AppName: app的名稱
         :type AppName: str
@@ -176,13 +176,13 @@ class AppScanSet(AbstractModel):
 
     def __init__(self):
         """
-        :param ItemId: 任務唯一标識
+        :param ItemId: 任務唯一標識
         :type ItemId: str
         :param AppName: app的名稱
         :type AppName: str
         :param AppPkgName: app的包名
         :type AppPkgName: str
-        :param AppVersion: app的版本号
+        :param AppVersion: app的版本號
         :type AppVersion: str
         :param AppMd5: app的md5
         :type AppMd5: str
@@ -194,9 +194,9 @@ class AppScanSet(AbstractModel):
         :type TaskStatus: int
         :param TaskTime: 提交掃描時間
         :type TaskTime: int
-        :param AppIconUrl: app的圖标url
+        :param AppIconUrl: app的圖標url
         :type AppIconUrl: str
-        :param AppSid: 标識唯一該app，主要用于删除
+        :param AppSid: 標識唯一該app，主要用於删除
         :type AppSid: str
         :param SafeType: 安全類型:1-安全軟體，2-風險軟體，3病毒軟體
         :type SafeType: int
@@ -241,13 +241,13 @@ class AppSetInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param ItemId: 任務唯一标識
+        :param ItemId: 任務唯一標識
         :type ItemId: str
         :param AppName: app的名稱
         :type AppName: str
         :param AppPkgName: app的包名
         :type AppPkgName: str
-        :param AppVersion: app的版本号
+        :param AppVersion: app的版本號
         :type AppVersion: str
         :param AppMd5: app的md5
         :type AppMd5: str
@@ -265,7 +265,7 @@ class AppSetInfo(AbstractModel):
         :type ClientIp: str
         :param TaskTime: 提交加固時間
         :type TaskTime: int
-        :param AppIconUrl: app的圖标url
+        :param AppIconUrl: app的圖標url
         :type AppIconUrl: str
         :param ShieldMd5: 加固後app的md5
         :type ShieldMd5: str
@@ -537,7 +537,7 @@ class CreateScanInstancesResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param ItemId: 任務唯一标識
+        :param ItemId: 任務唯一標識
         :type ItemId: str
         :param Progress: 任務狀态: 1-已完成,2-處理中,3-處理出錯,4-處理超時
         :type Progress: int
@@ -601,7 +601,7 @@ class CreateShieldInstanceResponse(AbstractModel):
         """
         :param Progress: 任務狀态: 1-已完成,2-處理中,3-處理出錯,4-處理超時
         :type Progress: int
-        :param ItemId: 任務唯一标識
+        :param ItemId: 任務唯一標識
         :type ItemId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -714,7 +714,7 @@ class DeleteShieldInstancesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ItemIds: 任務唯一标識ItemId的清單
+        :param ItemIds: 任務唯一標識ItemId的清單
         :type ItemIds: list of str
         """
         self.ItemIds = None
@@ -868,7 +868,7 @@ class DescribeScanInstancesResponse(AbstractModel):
         """
         :param TotalCount: 符合要求的app數量
         :type TotalCount: int
-        :param ScanSet: 一個關于app詳細訊息的結構體，主要包括app的基本訊息和掃描狀态訊息。
+        :param ScanSet: 一個關於app詳細訊息的結構體，主要包括app的基本訊息和掃描狀态訊息。
         :type ScanSet: list of AppScanSet
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -896,7 +896,7 @@ class DescribeScanResultsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ItemId: 任務唯一标識
+        :param ItemId: 任務唯一標識
         :type ItemId: str
         :param AppMd5s: 批次查詢一個或者多個app的掃描結果，如果不傳表示查詢該任務下所提交的所有app
         :type AppMd5s: list of str
@@ -991,7 +991,7 @@ class DescribeShieldInstancesResponse(AbstractModel):
         """
         :param TotalCount: 符合要求的app數量
         :type TotalCount: int
-        :param AppSet: 一個關于app詳細訊息的結構體，主要包括app的基本訊息和加固訊息。
+        :param AppSet: 一個關於app詳細訊息的結構體，主要包括app的基本訊息和加固訊息。
         :type AppSet: list of AppSetInfo
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1075,7 +1075,7 @@ class DescribeShieldResultRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ItemId: 任務唯一标識
+        :param ItemId: 任務唯一標識
         :type ItemId: str
         """
         self.ItemId = None
@@ -1299,7 +1299,7 @@ class PluginInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param PluginType: 插件類型，分别爲 1-通知欄廣告，2-積分牆廣告，3-banner廣告，4- 懸浮窗圖标廣告，5-精品推薦清單廣告, 6-插播廣告
+        :param PluginType: 插件類型，分别爲 1-通知欄廣告，2-積分牆廣告，3-banner廣告，4- 懸浮窗圖標廣告，5-精品推薦清單廣告, 6-插播廣告
         :type PluginType: int
         :param PluginName: 插件名稱
         :type PluginName: str
@@ -1472,11 +1472,11 @@ class ServiceInfo(AbstractModel):
         """
         :param ServiceEdition: 服務版本，基礎版basic，專業版professional，企業版enterprise。
         :type ServiceEdition: str
-        :param CallbackUrl: 任務處理完成後的反向通知回調網址，如果不需要通知請傳遞空字串。通知爲POST請求，post包體數據範例{"Response":{"ItemId":"4cdad8fb86f036b06bccb3f58971c306","ShieldCode":0,"ShieldMd5":"78701576793c4a5f04e1c9660de0aa0b","ShieldSize":11997354,"TaskStatus":1,"TaskTime":1539148141}}，調用方需要返回如下訊息，{"Result":"ok","Reason":"xxxxx"}，如果Result欄位值不等于ok會繼續回調。
+        :param CallbackUrl: 任務處理完成後的反向通知回調網址，如果不需要通知請傳遞空字串。通知爲POST請求，post包體數據範例{"Response":{"ItemId":"4cdad8fb86f036b06bccb3f58971c306","ShieldCode":0,"ShieldMd5":"78701576793c4a5f04e1c9660de0aa0b","ShieldSize":11997354,"TaskStatus":1,"TaskTime":1539148141}}，調用方需要返回如下訊息，{"Result":"ok","Reason":"xxxxx"}，如果Result欄位值不等於ok會繼續回調。
         :type CallbackUrl: str
         :param SubmitSource: 提交來源 YYB-應用寶 RDM-rdm MC-控制台 MAC_TOOL-mac工具 WIN_TOOL-window工具。
         :type SubmitSource: str
-        :param PlanId: 加固策略編号，如果不傳則使用系統預設加固策略。如果指定的plan不存在會返回錯誤。
+        :param PlanId: 加固策略編號，如果不傳則使用系統預設加固策略。如果指定的plan不存在會返回錯誤。
         :type PlanId: int
         """
         self.ServiceEdition = None
@@ -1509,7 +1509,7 @@ class ShieldInfo(AbstractModel):
         :type AppUrl: str
         :param TaskTime: 加固的提交時間
         :type TaskTime: int
-        :param ItemId: 任務唯一标識
+        :param ItemId: 任務唯一標識
         :type ItemId: str
         :param ServiceEdition: 加固版本，basic基礎版，professional專業版，enterprise企業版
         :type ServiceEdition: str

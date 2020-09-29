@@ -84,7 +84,7 @@ class EcmClient(AbstractClient):
     def AssociateAddress(self, request):
         """将彈性公網IP（簡稱 EIP）綁定到實例或彈性網卡的指定内網 IP 上。
         将 EIP 綁定到實例（CVM）上，其本質是将 EIP 綁定到實例上主網卡的主内網 IP 上。
-        将 EIP 綁定到主網卡的主内網IP上，綁定過程會把其上綁定的普通公網 IP 自動解綁并釋放。
+        将 EIP 綁定到主網卡的主内網IP上，綁定過程會把其上綁定的普通公網 IP 自動解綁並釋放。
         将 EIP 綁定到指定網卡的内網 IP上（非主網卡的主内網IP），則必須先解綁該 EIP，才能再綁定新的。
         将 EIP 綁定到NAT閘道，請使用介面EipBindNatGateway
         EIP 如果欠費或被封堵，則不能被綁定。
@@ -987,7 +987,7 @@ class EcmClient(AbstractClient):
 
     def MigratePrivateIpAddress(self, request):
         """彈性網卡内網IP遷移。
-        該介面用于将一個内網IP從一個彈性網卡上遷移到另外一個彈性網卡，主IP網址不支援遷移。
+        該介面用於将一個内網IP從一個彈性網卡上遷移到另外一個彈性網卡，主IP網址不支援遷移。
         遷移前後的彈性網卡必須在同一個子網内。
 
         :param request: Request instance for MigratePrivateIpAddress.
@@ -1240,7 +1240,7 @@ class EcmClient(AbstractClient):
 
 
     def RebootInstances(self, request):
-        """只有狀态爲RUNNING的實例才可以進行此操作；介面調用成功時，實例會進入REBOOTING狀态；重啓實例成功時，實例會進入RUNNING狀态；支援強制重啓，強制重啓的效果等同于關閉物理電腦的電源開關再重新啓動。強制重啓可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常重啓時使用。
+        """只有狀态爲RUNNING的實例才可以進行此操作；介面調用成功時，實例會進入REBOOTING狀态；重啓實例成功時，實例會進入RUNNING狀态；支援強制重啓，強制重啓的效果等同於關閉物理電腦的電源開關再重新啓動。強制重啓可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常重啓時使用。
 
         :param request: Request instance for RebootInstances.
         :type request: :class:`taifucloudcloud.ecm.v20190719.models.RebootInstancesRequest`
@@ -1269,7 +1269,7 @@ class EcmClient(AbstractClient):
 
     def ReleaseAddresses(self, request):
         """釋放一個或多個彈性公網IP（簡稱 EIP）。
-        該操作不可逆，釋放後 EIP 關聯的 IP 網址将不再屬于您的名下。
+        該操作不可逆，釋放後 EIP 關聯的 IP 網址将不再屬於您的名下。
         只有狀态爲 UNBIND 的 EIP 才能進行釋放操作。
 
         :param request: Request instance for ReleaseAddresses.
@@ -1383,7 +1383,7 @@ class EcmClient(AbstractClient):
 
 
     def ResetInstancesPassword(self, request):
-        """重置處于運作中狀态的實例的密碼，需要顯式指定強制關機參數ForceStop。如果沒有顯式指定強制關機參數，則只有處于關機狀态的實例才允許執行重置密碼操作。
+        """重置處於運作中狀态的實例的密碼，需要顯式指定強制關機參數ForceStop。如果沒有顯式指定強制關機參數，則只有處於關機狀态的實例才允許執行重置密碼操作。
 
         :param request: Request instance for ResetInstancesPassword.
         :type request: :class:`taifucloudcloud.ecm.v20190719.models.ResetInstancesPasswordRequest`
@@ -1467,9 +1467,9 @@ class EcmClient(AbstractClient):
 
 
     def StopInstances(self, request):
-        """只有處于"RUNNING"狀态的實例才能夠進行關機操作；
+        """只有處於"RUNNING"狀态的實例才能夠進行關機操作；
         調用成功時，實例會進入STOPPING狀态；關閉實例成功時，實例會進入STOPPED狀态；
-        支援強制關閉，強制關機的效果等同于關閉物理電腦的電源開關，強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
+        支援強制關閉，強制關機的效果等同於關閉物理電腦的電源開關，強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
 
         :param request: Request instance for StopInstances.
         :type request: :class:`taifucloudcloud.ecm.v20190719.models.StopInstancesRequest`

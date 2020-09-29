@@ -31,13 +31,13 @@ class AddUserRequest(AbstractModel):
         :type ConsoleLogin: int
         :param UseApi: 是否生成子用戶金鑰。傳0不生成子用戶金鑰，傳1生成子用戶金鑰。
         :type UseApi: int
-        :param Password: 子用戶控制台登入密碼，若未進行密碼規則設置則預設密碼規則爲8位以上同時包含大寫小字母、數字和特殊字元。只有可以登入控制台時才有效，如果傳空并且上面指定允許登入控制台，則自動生成随機密碼，随機密碼規則爲32位包含大寫小字母、數字和特殊字元。
+        :param Password: 子用戶控制台登入密碼，若未進行密碼規則設置則預設密碼規則爲8位以上同時包含大寫小字母、數字和特殊字元。只有可以登入控制台時才有效，如果傳空並且上面指定允許登入控制台，則自動生成随機密碼，随機密碼規則爲32位包含大寫小字母、數字和特殊字元。
         :type Password: str
         :param NeedResetPassword: 子用戶是否要在下次登入時重置密碼。傳0子用戶下次登入控制台不需重置密碼，傳1子用戶下次登入控制台需要重置密碼。
         :type NeedResetPassword: int
-        :param PhoneNum: 手機号
+        :param PhoneNum: 手機號
         :type PhoneNum: str
-        :param CountryCode: 區号
+        :param CountryCode: 區號
         :type CountryCode: str
         :param Email: 電子信箱
         :type Email: str
@@ -260,7 +260,7 @@ class AttachUserPolicyRequest(AbstractModel):
         """
         :param PolicyId: 策略 id
         :type PolicyId: int
-        :param AttachUin: 子賬号 uin
+        :param AttachUin: 子賬號 uin
         :type AttachUin: int
         """
         self.PolicyId = None
@@ -606,7 +606,7 @@ class DetachUserPolicyRequest(AbstractModel):
         """
         :param PolicyId: 策略 id
         :type PolicyId: int
-        :param DetachUin: 子賬号 uin
+        :param DetachUin: 子賬號 uin
         :type DetachUin: int
         """
         self.PolicyId = None
@@ -850,9 +850,9 @@ class GetUserResponse(AbstractModel):
         :type Remark: str
         :param ConsoleLogin: 子用戶能否登入控制台
         :type ConsoleLogin: int
-        :param PhoneNum: 手機号
+        :param PhoneNum: 手機號
         :type PhoneNum: str
-        :param CountryCode: 區号
+        :param CountryCode: 區號
         :type CountryCode: str
         :param Email: 電子信箱
         :type Email: str
@@ -945,7 +945,7 @@ class GroupMemberInfo(AbstractModel):
         :type Uin: int
         :param Name: 子用戶名稱。
         :type Name: str
-        :param PhoneNum: 手機号。
+        :param PhoneNum: 手機號。
         :type PhoneNum: str
         :param CountryCode: 手機區域代碼。
         :type CountryCode: str
@@ -1051,7 +1051,7 @@ class ListAttachedUserPoliciesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TargetUin: 子賬号 uin
+        :param TargetUin: 子賬號 uin
         :type TargetUin: int
         :param Page: 頁碼，預設值是 1，從 1 開始
         :type Page: int
@@ -1112,7 +1112,7 @@ class ListEntitiesForPolicyRequest(AbstractModel):
         :type Page: int
         :param Rp: 每頁大小，預設值是 20
         :type Rp: int
-        :param EntityFilter: 可取值 'All'、'User'、'Group' 和 'Role'，'All' 表示獲取所有實體類型，'User' 表示只獲取子賬号，'Group' 表示只獲取用戶組，'Role' 表示只獲取角色，預設取 'All'
+        :param EntityFilter: 可取值 'All'、'User'、'Group' 和 'Role'，'All' 表示獲取所有實體類型，'User' 表示只獲取子賬號，'Group' 表示只獲取用戶組，'Role' 表示只獲取角色，預設取 'All'
         :type EntityFilter: str
         """
         self.PolicyId = None
@@ -1277,9 +1277,9 @@ class ListPoliciesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Rp: 每頁數量，預設值是 20，必須大于 0 且小於或等于 200
+        :param Rp: 每頁數量，預設值是 20，必須大於 0 且小於或等於 200
         :type Rp: int
-        :param Page: 頁碼，預設值是 1，從 1開始，不能大于 200
+        :param Page: 頁碼，預設值是 1，從 1開始，不能大於 200
         :type Page: int
         :param Scope: 可取值 'All'、'QCS' 和 'Local'，'All' 獲取所有策略，'QCS' 只獲取預設策略，'Local' 只獲取自定義策略，預設取 'All'
         :type Scope: str
@@ -1596,9 +1596,9 @@ class SubAccountInfo(AbstractModel):
         :type Remark: str
         :param ConsoleLogin: 子用戶能否登入控制台
         :type ConsoleLogin: int
-        :param PhoneNum: 手機号
+        :param PhoneNum: 手機號
         :type PhoneNum: str
-        :param CountryCode: 區号
+        :param CountryCode: 區號
         :type CountryCode: str
         :param Email: 電子信箱
         :type Email: str
@@ -1767,13 +1767,13 @@ class UpdateUserRequest(AbstractModel):
         :type Remark: str
         :param ConsoleLogin: 子用戶是否可以登入控制台。傳0子用戶無法登入控制台，傳1子用戶可以登入控制台。
         :type ConsoleLogin: int
-        :param Password: 子用戶控制台登入密碼，若未進行密碼規則設置則預設密碼規則爲8位以上同時包含大寫小字母、數字和特殊字元。只有可以登入控制台時才有效，如果傳空并且上面指定允許登入控制台，則自動生成随機密碼，随機密碼規則爲32位包含大寫小字母、數字和特殊字元。
+        :param Password: 子用戶控制台登入密碼，若未進行密碼規則設置則預設密碼規則爲8位以上同時包含大寫小字母、數字和特殊字元。只有可以登入控制台時才有效，如果傳空並且上面指定允許登入控制台，則自動生成随機密碼，随機密碼規則爲32位包含大寫小字母、數字和特殊字元。
         :type Password: str
         :param NeedResetPassword: 子用戶是否要在下次登入時重置密碼。傳0子用戶下次登入控制台不需重置密碼，傳1子用戶下次登入控制台需要重置密碼。
         :type NeedResetPassword: int
-        :param PhoneNum: 手機号
+        :param PhoneNum: 手機號
         :type PhoneNum: str
-        :param CountryCode: 區号
+        :param CountryCode: 區號
         :type CountryCode: str
         :param Email: 電子信箱
         :type Email: str

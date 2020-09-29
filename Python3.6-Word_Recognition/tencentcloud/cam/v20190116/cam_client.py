@@ -82,7 +82,7 @@ class CamClient(AbstractClient):
 
 
     def AttachGroupPolicy(self, request):
-        """本介面（AttachGroupPolicy）可用于綁定策略到用戶組。
+        """本介面（AttachGroupPolicy）可用於綁定策略到用戶組。
 
         :param request: 調用AttachGroupPolicy所需參數的結構體。
         :type request: :class:`taifucloudcloud.cam.v20190116.models.AttachGroupPolicyRequest`
@@ -110,7 +110,7 @@ class CamClient(AbstractClient):
 
 
     def AttachUserPolicy(self, request):
-        """本介面（AttachUserPolicy）可用于綁定到用戶的策略。
+        """本介面（AttachUserPolicy）可用於綁定到用戶的策略。
 
         :param request: 調用AttachUserPolicy所需參數的結構體。
         :type request: :class:`taifucloudcloud.cam.v20190116.models.AttachUserPolicyRequest`
@@ -166,7 +166,7 @@ class CamClient(AbstractClient):
 
 
     def CreatePolicy(self, request):
-        """本介面（CreatePolicy）可用于創建策略。
+        """本介面（CreatePolicy）可用於創建策略。
 
         :param request: 調用CreatePolicy所需參數的結構體。
         :type request: :class:`taifucloudcloud.cam.v20190116.models.CreatePolicyRequest`
@@ -250,7 +250,7 @@ class CamClient(AbstractClient):
 
 
     def DeletePolicy(self, request):
-        """本介面（DeletePolicy）可用于删除策略。
+        """本介面（DeletePolicy）可用於删除策略。
 
         :param request: 調用DeletePolicy所需參數的結構體。
         :type request: :class:`taifucloudcloud.cam.v20190116.models.DeletePolicyRequest`
@@ -334,7 +334,7 @@ class CamClient(AbstractClient):
 
 
     def DetachGroupPolicy(self, request):
-        """本介面（DetachGroupPolicy）可用于解除綁定到用戶組的策略。
+        """本介面（DetachGroupPolicy）可用於解除綁定到用戶組的策略。
 
         :param request: 調用DetachGroupPolicy所需參數的結構體。
         :type request: :class:`taifucloudcloud.cam.v20190116.models.DetachGroupPolicyRequest`
@@ -362,7 +362,7 @@ class CamClient(AbstractClient):
 
 
     def DetachUserPolicy(self, request):
-        """本介面（DetachUserPolicy）可用于解除綁定到用戶的策略。
+        """本介面（DetachUserPolicy）可用於解除綁定到用戶的策略。
 
         :param request: 調用DetachUserPolicy所需參數的結構體。
         :type request: :class:`taifucloudcloud.cam.v20190116.models.DetachUserPolicyRequest`
@@ -418,7 +418,7 @@ class CamClient(AbstractClient):
 
 
     def GetPolicy(self, request):
-        """本介面（GetPolicy）可用于查詢檢視策略詳情。
+        """本介面（GetPolicy）可用於查詢檢視策略詳情。
 
         :param request: 調用GetPolicy所需參數的結構體。
         :type request: :class:`taifucloudcloud.cam.v20190116.models.GetPolicyRequest`
@@ -502,7 +502,7 @@ class CamClient(AbstractClient):
 
 
     def ListAttachedGroupPolicies(self, request):
-        """本介面（ListAttachedGroupPolicies）可用于查詢用戶組關聯的策略清單。
+        """本介面（ListAttachedGroupPolicies）可用於查詢用戶組關聯的策略清單。
 
         :param request: 調用ListAttachedGroupPolicies所需參數的結構體。
         :type request: :class:`taifucloudcloud.cam.v20190116.models.ListAttachedGroupPoliciesRequest`
@@ -530,7 +530,7 @@ class CamClient(AbstractClient):
 
 
     def ListAttachedUserPolicies(self, request):
-        """本介面（ListAttachedUserPolicies）可用于查詢子賬号關聯的策略清單。
+        """本介面（ListAttachedUserPolicies）可用於查詢子賬號關聯的策略清單。
 
         :param request: 調用ListAttachedUserPolicies所需參數的結構體。
         :type request: :class:`taifucloudcloud.cam.v20190116.models.ListAttachedUserPoliciesRequest`
@@ -558,7 +558,7 @@ class CamClient(AbstractClient):
 
 
     def ListEntitiesForPolicy(self, request):
-        """本介面（ListEntitiesForPolicy）可用于查詢策略關聯的實體清單。
+        """本介面（ListEntitiesForPolicy）可用於查詢策略關聯的實體清單。
 
         :param request: 調用ListEntitiesForPolicy所需參數的結構體。
         :type request: :class:`taifucloudcloud.cam.v20190116.models.ListEntitiesForPolicyRequest`
@@ -642,7 +642,7 @@ class CamClient(AbstractClient):
 
 
     def ListPolicies(self, request):
-        """本介面（ListPolicies）可用于查詢策略清單
+        """本介面（ListPolicies）可用於查詢策略清單
 
         :param request: 調用ListPolicies所需參數的結構體。
         :type request: :class:`taifucloudcloud.cam.v20190116.models.ListPoliciesRequest`
@@ -810,7 +810,7 @@ class CamClient(AbstractClient):
 
 
     def UpdatePolicy(self, request):
-        """本介面（UpdatePolicy ）可用于更新策略。
+        """本介面（UpdatePolicy ）可用於更新策略。
 
         :param request: 調用UpdatePolicy所需參數的結構體。
         :type request: :class:`taifucloudcloud.cam.v20190116.models.UpdatePolicyRequest`

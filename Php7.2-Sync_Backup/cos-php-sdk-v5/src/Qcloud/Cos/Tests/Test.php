@@ -168,7 +168,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put bucket acl，設置bucket賬号權限爲grant-read
+     * put bucket acl，設置bucket賬號權限爲grant-read
      * 200
      */
     public function testPutBucketAclReadToUser()
@@ -184,7 +184,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put bucket acl，設置bucket賬号權限爲grant-write
+     * put bucket acl，設置bucket賬號權限爲grant-write
      * 200
      */
     public function testPutBucketAclWriteToUser()
@@ -200,7 +200,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put bucket acl，設置bucket賬号權限爲grant-full-control
+     * put bucket acl，設置bucket賬號權限爲grant-full-control
      * 200
      */
     public function testPutBucketAclFullToUser()
@@ -216,7 +216,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put bucket acl，設置bucket賬号權限，同時授權給多個帳戶
+     * put bucket acl，設置bucket賬號權限，同時授權給多個帳戶
      * 200
      */
     public function testPutBucketAclToUsers()
@@ -232,7 +232,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put bucket acl，設置bucket賬号權限，授權給子賬号
+     * put bucket acl，設置bucket賬號權限，授權給子賬號
      * 200
      */
     public function testPutBucketAclToSubuser()
@@ -248,7 +248,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put bucket acl，設置bucket賬号權限，同時指定read、write和fullcontrol
+     * put bucket acl，設置bucket賬號權限，同時指定read、write和fullcontrol
      * 200
      */
     public function testPutBucketAclReadWriteFull()
@@ -266,7 +266,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put bucket acl，設置bucket賬号權限，grant值非法
+     * put bucket acl，設置bucket賬號權限，grant值非法
      * InvalidArgument
      * 400
      */
@@ -283,7 +283,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put bucket acl，設置bucket賬号權限，通過body方式授權
+     * put bucket acl，設置bucket賬號權限，通過body方式授權
      * 200
      */
     public function testPutBucketAclByBody()
@@ -313,7 +313,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put bucket acl，設置bucket賬号權限，通過body方式授權給anyone
+     * put bucket acl，設置bucket賬號權限，通過body方式授權給anyone
      * 200
      */
     public function testPutBucketAclByBodyToAnyone()
@@ -1170,7 +1170,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put object acl，設置object賬号權限爲grant-read
+     * put object acl，設置object賬號權限爲grant-read
      * 200
      */
     public function testPutObjectAclReadToUser()
@@ -1188,7 +1188,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put object acl，設置object賬号權限爲grant-write
+     * put object acl，設置object賬號權限爲grant-write
      * 200
      */
     public function testPutObjectAclWriteToUser()
@@ -1206,7 +1206,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put object acl，設置object賬号權限爲grant-full-control
+     * put object acl，設置object賬號權限爲grant-full-control
      * 200
      */
     public function testPutObjectAclFullToUser()
@@ -1224,7 +1224,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put object acl，設置object賬号權限，同時授權給多個帳戶
+     * put object acl，設置object賬號權限，同時授權給多個帳戶
      * 200
      */
     public function testPutObjectAclToUsers()
@@ -1242,7 +1242,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put object acl，設置object賬号權限，授權給子賬号
+     * put object acl，設置object賬號權限，授權給子賬號
      * 200
      */
     public function testPutObjectAclToSubuser()
@@ -1260,7 +1260,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put object acl，設置object賬号權限，同時指定read、write和fullcontrol
+     * put object acl，設置object賬號權限，同時指定read、write和fullcontrol
      * 200
      */
     public function testPutObjectAclReadWriteFull()
@@ -1280,7 +1280,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put object acl，設置object賬号權限，grant值非法
+     * put object acl，設置object賬號權限，grant值非法
      * InvalidArgument
      * 400
      */
@@ -1299,7 +1299,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put object acl，設置object賬号權限，通過body方式授權
+     * put object acl，設置object賬號權限，通過body方式授權
      * 200
      */
     public function testPutObjectAclByBody()
@@ -1331,7 +1331,7 @@ class BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /*
-     * put object acl，設置object賬号權限，通過body方式授權給anyone
+     * put object acl，設置object賬號權限，通過body方式授權給anyone
      * 200
      */
     public function testPutObjectAclByBodyToAnyone()

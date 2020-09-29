@@ -34,7 +34,7 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
-#  ffmpeg到tmp目錄，并且賦予權限,tmp是雲函數的本地磁盤空間，可讀可寫
+#  ffmpeg到tmp目錄，並且賦予權限,tmp是雲函數的本地磁盤空間，可讀可寫
 with open("/var/user/ffmpeg", "rb") as rf:
     with open("/tmp/ffmpeg", "wb") as wf:
         wf.write(rf.read())
@@ -73,7 +73,7 @@ def main_handler(event, context):
 
     #判斷請求是否從COS傳遞
     elif "Records" in event.keys():
-        #從event裏獲取COS文件訊息，并獲取下載網址
+        #從event裏獲取COS文件訊息，並獲取下載網址
         bucket = event['Records'][0]['cos']['cosBucket']['name'] + '-' + event['Records'][0]['cos']['cosBucket']['appid']
         key = "/".join(event['Records'][0]['cos']['cosObject']['key'].split("/")[3:])
         download_path = event['Records'][0]['cos']['cosObject']['url']

@@ -26,7 +26,7 @@ class BmeipClient(AbstractClient):
 
 
     def BindEipAcls(self, request):
-        """此介面用于爲某個 EIP 關聯 ACL。
+        """此介面用於爲某個 EIP 關聯 ACL。
 
         :param request: 調用BindEipAcls所需參數的結構體。
         :type request: :class:`taifucloudcloud.bmeip.v20180625.models.BindEipAclsRequest`
@@ -54,7 +54,7 @@ class BmeipClient(AbstractClient):
 
 
     def BindHosted(self, request):
-        """BindHosted介面用于綁定黑石彈性公網IP到黑石托管機器上
+        """BindHosted介面用於綁定黑石彈性公網IP到黑石托管機器上
 
         :param request: 調用BindHosted所需參數的結構體。
         :type request: :class:`taifucloudcloud.bmeip.v20180625.models.BindHostedRequest`
@@ -474,7 +474,7 @@ class BmeipClient(AbstractClient):
 
 
     def UnbindHosted(self, request):
-        """UnbindHosted介面用于解綁托管機器上的EIP
+        """UnbindHosted介面用於解綁托管機器上的EIP
 
         :param request: 調用UnbindHosted所需參數的結構體。
         :type request: :class:`taifucloudcloud.bmeip.v20180625.models.UnbindHostedRequest`

@@ -68,7 +68,7 @@ maleware site = 惡意站點
 malware IP = 惡意IP
 等等
         :type ThreatTypes: list of str
-        :param Tags: 惡意标簽，對應的團夥，家族等訊息。
+        :param Tags: 惡意標簽，對應的團夥，家族等訊息。
         :type Tags: list of TagType
         :param Intelligences: 對應的曆史上的威脅情報事件
         :type Intelligences: list of IntelligenceType
@@ -146,7 +146,7 @@ class DescribeFileInfoResponse(AbstractModel):
 （md5,sha1,sha256）,文件大小等等文件
 基礎訊息
         :type FileInfo: list of FileInfoType
-        :param Tags: 惡意标簽，對應的團夥，家族等訊息。
+        :param Tags: 惡意標簽，對應的團夥，家族等訊息。
         :type Tags: list of TagType
         :param Intelligences: 對應的曆史上的威脅情報事件
         :type Intelligences: list of IntelligenceType
@@ -243,7 +243,7 @@ maleware site = 惡意站點
 malware IP = 惡意IP
 等等
         :type ThreatTypes: list of str
-        :param Tags: 惡意标簽，對應的團夥，家族等訊息。
+        :param Tags: 惡意標簽，對應的團夥，家族等訊息。
         :type Tags: list of TagType
         :param Intelligences: 對應的曆史上的威脅情報事件
         :type Intelligences: list of IntelligenceType
@@ -339,7 +339,7 @@ maleware site = 惡意站點
 malware IP = 惡意IP
 等等
         :type ThreatTypes: list of str
-        :param Tags: 惡意标簽，對應的團夥，家族等訊息。
+        :param Tags: 惡意標簽，對應的團夥，家族等訊息。
         :type Tags: list of str
         :param Status: 當前狀态
 active = 活躍
@@ -469,7 +469,7 @@ class IntelligenceType(AbstractModel):
         """
         :param Source: 來源
         :type Source: str
-        :param Stamp: 标記
+        :param Stamp: 標記
         :type Stamp: str
         :param Time: 時間
         :type Time: int
@@ -486,15 +486,15 @@ class IntelligenceType(AbstractModel):
 
 
 class TagType(AbstractModel):
-    """标簽及對應的解釋
+    """標簽及對應的解釋
 
     """
 
     def __init__(self):
         """
-        :param Tag: 标簽
+        :param Tag: 標簽
         :type Tag: str
-        :param Desc: 标簽對應的中文解釋
+        :param Desc: 標簽對應的中文解釋
         :type Desc: str
         """
         self.Tag = None

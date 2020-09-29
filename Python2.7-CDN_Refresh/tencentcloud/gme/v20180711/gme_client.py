@@ -26,7 +26,7 @@ class GmeClient(AbstractClient):
 
 
     def CreateApp(self, request):
-        """本介面(CreateApp)用于創建一個GME應用。
+        """本介面(CreateApp)用於創建一個GME應用。
 
         :param request: Request instance for CreateApp.
         :type request: :class:`taifucloudcloud.gme.v20180711.models.CreateAppRequest`
@@ -54,7 +54,7 @@ class GmeClient(AbstractClient):
 
 
     def DescribeAppStatistics(self, request):
-        """本介面(DescribeAppStatistics)用于獲取某個GME應用的用量數據。包括實時語音，語音訊息及轉文本，語音分析等。最長查詢週期爲最近30天。
+        """本介面(DescribeAppStatistics)用於獲取某個GME應用的用量數據。包括實時語音，語音訊息及轉文本，語音分析等。最長查詢週期爲最近30天。
 
         :param request: Request instance for DescribeAppStatistics.
         :type request: :class:`taifucloudcloud.gme.v20180711.models.DescribeAppStatisticsRequest`
@@ -138,7 +138,7 @@ class GmeClient(AbstractClient):
 
 
     def DescribeScanResultList(self, request):
-        """本介面(DescribeScanResultList)用于查詢語音檢測結果，查詢任務清單最多支援100個。
+        """本介面(DescribeScanResultList)用於查詢語音檢測結果，查詢任務清單最多支援100個。
         <p style="color:red">如果在提交語音檢測任務時未設置 Callback 欄位，則需要通過本介面獲取檢測結果</p>
 
         :param request: Request instance for DescribeScanResultList.
@@ -167,7 +167,7 @@ class GmeClient(AbstractClient):
 
 
     def ModifyAppStatus(self, request):
-        """本介面(ModifyAppStatus)用于修改應用總開關狀态。
+        """本介面(ModifyAppStatus)用於修改應用總開關狀态。
 
         :param request: Request instance for ModifyAppStatus.
         :type request: :class:`taifucloudcloud.gme.v20180711.models.ModifyAppStatusRequest`
@@ -195,7 +195,7 @@ class GmeClient(AbstractClient):
 
 
     def ScanVoice(self, request):
-        """本介面(ScanVoice)用于提交語音檢測任務，檢測任務清單最多支援100個。使用前請您登入[控制台 - 服務配置](https://console.cloud.taifucloud.com/gamegme/conf)開啓語音分析服務。
+        """本介面(ScanVoice)用於提交語音檢測任務，檢測任務清單最多支援100個。使用前請您登入[控制台 - 服務配置](https://console.cloud.taifucloud.com/gamegme/conf)開啓語音分析服務。
         </br></br>
 
         <h4><b>功能試用說明：</b></h4>
@@ -217,7 +217,7 @@ class GmeClient(AbstractClient):
         <li>語音流格式支援的類型：.m3u8、.flv</li>
         <li>語音流支援的傳輸協議：RTMP、HTTP、HTTPS</li>
         <li>語音流時長限制：4小時</li>
-        <li>支援影音流分離并對音訊流進行分析</li>
+        <li>支援影音流分離並對音訊流進行分析</li>
         </br>
         <h4 id="Label_Value"><b>Scenes 與 Label 參數說明：</b></h4>
         <p>提交語音檢測任務時，需要指定 Scenes 場景參數，<font color="red">目前要求您設置 Scenes 參數值爲：["default"]</font>；而在檢測結果中，則包含請求時指定的場景，以及對應類型的檢測結果。</p>
@@ -359,7 +359,7 @@ class GmeClient(AbstractClient):
 
 
     def VoiceFilter(self, request):
-        """本介面用于識别涉黃、涉政等違規音訊，成功會回調配置在應用的回調網址。回調範例如下：
+        """本介面用於識别涉黃、涉政等違規音訊，成功會回調配置在應用的回調網址。回調範例如下：
         {"BizId":0,"FileId":"test_file_id","FileName":"test_file_name","FileUrl":"test_file_url","OpenId":"test_open_id","TimeStamp":"0000-00-00 00:00:00","Data":[{"Type":1,"Word":"xx"}]}
         Type表示過濾類型，1：政治，2：色情，3：謾罵
 

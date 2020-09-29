@@ -77,7 +77,7 @@ class DataManipulationResult(AbstractModel):
         """
         :param AppId: 應用ID
         :type AppId: int
-        :param Seq: 序号
+        :param Seq: 序號
         :type Seq: int
         :param TotalResult: 結果
         :type TotalResult: str
@@ -148,7 +148,7 @@ class DataSearchRequest(AbstractModel):
         :type PageId: int
         :param NumPerPage: 每頁結果數
         :type NumPerPage: int
-        :param SearchId: 當前檢索号，用于定位問題，建議指定并且全局唯一
+        :param SearchId: 當前檢索號，用於定位問題，建議指定並且全局唯一
         :type SearchId: str
         :param QueryEncode: 請求編碼，0表示utf8，1表示gbk，建議指定
         :type QueryEncode: int
@@ -168,7 +168,7 @@ class DataSearchRequest(AbstractModel):
         :type MaxDocReturn: int
         :param IsSmartbox: 是否smartbox檢索，0關閉，1打開
         :type IsSmartbox: int
-        :param EnableAbsHighlight: 是否打開高紅标亮，0關閉，1打開
+        :param EnableAbsHighlight: 是否打開高紅標亮，0關閉，1打開
         :type EnableAbsHighlight: int
         :param QcBid: 指定訪問QC糾錯業務ID
         :type QcBid: int
@@ -184,7 +184,7 @@ class DataSearchRequest(AbstractModel):
         :type Longitude: float
         :param Latitude: 緯度訊息
         :type Latitude: float
-        :param MultiFilter: 分類過濾并集
+        :param MultiFilter: 分類過濾並集
         :type MultiFilter: list of str
         """
         self.ResourceId = None

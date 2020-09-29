@@ -54,7 +54,7 @@ class DayuClient(AbstractClient):
 
 
     def CreateBoundIP(self, request):
-        """綁定IP到高防包實例，支援獨享包、共享包；需要注意的是此介面綁定或解綁IP是異步介面，當處于綁定或解綁中時，則不允許再進行綁定或解綁，需要等待當前綁定或解除綁定完成。
+        """綁定IP到高防包實例，支援獨享包、共享包；需要注意的是此介面綁定或解綁IP是異步介面，當處於綁定或解綁中時，則不允許再進行綁定或解綁，需要等待當前綁定或解除綁定完成。
 
         :param request: Request instance for CreateBoundIP.
         :type request: :class:`taifucloudcloud.dayu.v20180709.models.CreateBoundIPRequest`
@@ -810,7 +810,7 @@ class DayuClient(AbstractClient):
 
 
     def DescribeBaradData(self, request):
-        """爲大禹子産品提供業務轉發指标數據的介面
+        """爲大禹子産品提供業務轉發指標數據的介面
 
         :param request: Request instance for DescribeBaradData.
         :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeBaradDataRequest`
@@ -1034,7 +1034,7 @@ class DayuClient(AbstractClient):
 
 
     def DescribeCCTrend(self, request):
-        """獲取CC攻擊指标數據，包括總請求峰值(QPS)和攻擊請求(QPS)
+        """獲取CC攻擊指標數據，包括總請求峰值(QPS)和攻擊請求(QPS)
 
         :param request: Request instance for DescribeCCTrend.
         :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeCCTrendRequest`
@@ -1426,7 +1426,7 @@ class DayuClient(AbstractClient):
 
 
     def DescribeDDoSNetTrend(self, request):
-        """獲取高防IP專業版資源的DDoS攻擊指标數據
+        """獲取高防IP專業版資源的DDoS攻擊指標數據
 
         :param request: Request instance for DescribeDDoSNetTrend.
         :type request: :class:`taifucloudcloud.dayu.v20180709.models.DescribeDDoSNetTrendRequest`
@@ -2938,7 +2938,7 @@ class DayuClient(AbstractClient):
 
 
     def ModifyNetReturnSwitch(self, request):
-        """在客戶收攻擊或者被封堵時，切回到源站，并設置回切的時長
+        """在客戶收攻擊或者被封堵時，切回到源站，並設置回切的時長
 
         :param request: Request instance for ModifyNetReturnSwitch.
         :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyNetReturnSwitchRequest`
@@ -2994,7 +2994,7 @@ class DayuClient(AbstractClient):
 
 
     def ModifyResourceRenewFlag(self, request):
-        """修改資源自動續約标記
+        """修改資源自動續約標記
 
         :param request: Request instance for ModifyResourceRenewFlag.
         :type request: :class:`taifucloudcloud.dayu.v20180709.models.ModifyResourceRenewFlagRequest`

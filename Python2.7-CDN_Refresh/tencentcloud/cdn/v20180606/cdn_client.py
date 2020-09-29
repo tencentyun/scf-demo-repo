@@ -26,7 +26,7 @@ class CdnClient(AbstractClient):
 
 
     def AddCdnDomain(self, request):
-        """AddCdnDomain 用于新增内容分發網絡加速域名。
+        """AddCdnDomain 用於新增内容分發網絡加速域名。
 
         :param request: Request instance for AddCdnDomain.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.AddCdnDomainRequest`
@@ -54,7 +54,7 @@ class CdnClient(AbstractClient):
 
 
     def CreateClsLogTopic(self, request):
-        """CreatClsLogTopic 用于創建日志主題。注意：一個日志集下至多可創建10個日志主題。
+        """CreatClsLogTopic 用於創建日志主題。注意：一個日志集下至多可創建10個日志主題。
 
         :param request: Request instance for CreateClsLogTopic.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.CreateClsLogTopicRequest`
@@ -82,7 +82,7 @@ class CdnClient(AbstractClient):
 
 
     def DeleteCdnDomain(self, request):
-        """DeleteCdnDomain 用于删除指定加速域名
+        """DeleteCdnDomain 用於删除指定加速域名
 
         :param request: Request instance for DeleteCdnDomain.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DeleteCdnDomainRequest`
@@ -110,7 +110,7 @@ class CdnClient(AbstractClient):
 
 
     def DeleteClsLogTopic(self, request):
-        """DeleteClsLogTopic 用于删除日志主題。注意：删除後，所有該日志主題下綁定域名的日志将不再繼續投遞至該主題，已經投遞的日志将會被全部清空。生效時間約爲 5~15 分鍾。
+        """DeleteClsLogTopic 用於删除日志主題。注意：删除後，所有該日志主題下綁定域名的日志将不再繼續投遞至該主題，已經投遞的日志将會被全部清空。生效時間約爲 5~15 分鍾。
 
         :param request: Request instance for DeleteClsLogTopic.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DeleteClsLogTopicRequest`
@@ -138,7 +138,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeBillingData(self, request):
-        """DescribeBillingData 用于查詢實際計費數據明細。
+        """DescribeBillingData 用於查詢實際計費數據明細。
 
         :param request: Request instance for DescribeBillingData.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeBillingDataRequest`
@@ -166,7 +166,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeCdnData(self, request):
-        """DescribeCdnData 用于查詢 CDN 實時訪問監控數據，支援以下指标查詢：
+        """DescribeCdnData 用於查詢 CDN 實時訪問監控數據，支援以下指標查詢：
 
         + 流量（單位爲 byte）
         + 頻寬（單位爲 bps）
@@ -203,7 +203,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeCdnDomainLogs(self, request):
-        """DescribeCdnDomainLogs 用于查詢訪問日志下載網址，僅支援 30 天以内的境内、境外訪問日志下載連結查詢。
+        """DescribeCdnDomainLogs 用於查詢訪問日志下載網址，僅支援 30 天以内的境内、境外訪問日志下載連結查詢。
 
         :param request: Request instance for DescribeCdnDomainLogs.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeCdnDomainLogsRequest`
@@ -231,7 +231,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeCdnIp(self, request):
-        """DescribeCdnIp 用于查詢 CDN IP 歸屬。
+        """DescribeCdnIp 用於查詢 CDN IP 歸屬。
 
         :param request: Request instance for DescribeCdnIp.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeCdnIpRequest`
@@ -259,7 +259,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeCertDomains(self, request):
-        """校驗證書并提取SSL證書中包含的域名，返回CDN已接入的域名清單，及已配置證書的域名清單
+        """校驗證書並提取SSL證書中包含的域名，返回CDN已接入的域名清單，及已配置證書的域名清單
 
         :param request: Request instance for DescribeCertDomains.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeCertDomainsRequest`
@@ -287,7 +287,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeDomains(self, request):
-        """DescribeDomains 用于查詢内容分發網絡加速域名（含境内、境外）基本配置訊息，包括項目ID、服務狀态，業務類型、創建時間、更新時間等訊息。
+        """DescribeDomains 用於查詢内容分發網絡加速域名（含境内、境外）基本配置訊息，包括項目ID、服務狀态，業務類型、創建時間、更新時間等訊息。
 
         :param request: Request instance for DescribeDomains.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeDomainsRequest`
@@ -315,7 +315,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeDomainsConfig(self, request):
-        """DescribeDomainsConfig 用于查詢内容分發網絡加速域名（含境内、境外）的所有配置訊息。
+        """DescribeDomainsConfig 用於查詢内容分發網絡加速域名（含境内、境外）的所有配置訊息。
 
         :param request: Request instance for DescribeDomainsConfig.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeDomainsConfigRequest`
@@ -371,8 +371,8 @@ class CdnClient(AbstractClient):
 
 
     def DescribeIpStatus(self, request):
-        """DescribeIpStatus 用于查詢域名所在加速平台的邊緣節點、回源節點明細
-        注意事項：介面尚未全量開放，未在内測名單中的賬号不支援調用
+        """DescribeIpStatus 用於查詢域名所在加速平台的邊緣節點、回源節點明細
+        注意事項：介面尚未全量開放，未在内測名單中的賬號不支援調用
 
         :param request: Request instance for DescribeIpStatus.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeIpStatusRequest`
@@ -400,7 +400,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeIpVisit(self, request):
-        """DescribeIpVisit 用于查詢 5 分鍾活躍用戶數，及日活躍用戶數明細
+        """DescribeIpVisit 用於查詢 5 分鍾活躍用戶數，及日活躍用戶數明細
 
         + 5 分鍾活躍用戶數：根據日志中用戶端 IP，5 分鍾粒度去重統計
         + 日活躍用戶數：根據日志中用戶端 IP，按天粒度去重統計
@@ -431,7 +431,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeMapInfo(self, request):
-        """DescribeMapInfo 用于查詢 對應的 ID，運營商對應的 ID 訊息。
+        """DescribeMapInfo 用於查詢 對應的 ID，運營商對應的 ID 訊息。
 
         :param request: Request instance for DescribeMapInfo.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeMapInfoRequest`
@@ -459,7 +459,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeOriginData(self, request):
-        """DescribeOriginData 用于查詢 CDN 實時回源監控數據，支援以下指标查詢：
+        """DescribeOriginData 用於查詢 CDN 實時回源監控數據，支援以下指標查詢：
 
         + 回源流量（單位爲 byte）
         + 回源頻寬（單位爲 bps）
@@ -497,7 +497,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribePayType(self, request):
-        """DescribePayType 用于查詢用戶的計費類型，計費週期等訊息。
+        """DescribePayType 用於查詢用戶的計費類型，計費週期等訊息。
 
         :param request: Request instance for DescribePayType.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribePayTypeRequest`
@@ -525,7 +525,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribePurgeQuota(self, request):
-        """DescribePurgeQuota 用于查詢帳戶重新整理配額和每日可用量。
+        """DescribePurgeQuota 用於查詢帳戶重新整理配額和每日可用量。
 
         :param request: Request instance for DescribePurgeQuota.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribePurgeQuotaRequest`
@@ -553,7 +553,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribePurgeTasks(self, request):
-        """DescribePurgeTasks 用于查詢提交的 URL 重新整理、目錄重新整理記錄及執行進度，通過 PurgePathCache 與 PurgeUrlsCache 介面提交的任務均可通過此介面進行查詢。
+        """DescribePurgeTasks 用於查詢提交的 URL 重新整理、目錄重新整理記錄及執行進度，通過 PurgePathCache 與 PurgeUrlsCache 介面提交的任務均可通過此介面進行查詢。
 
         :param request: Request instance for DescribePurgeTasks.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribePurgeTasksRequest`
@@ -581,7 +581,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribePushQuota(self, request):
-        """DescribePushQuota  用于查詢預熱配額和每日可用量。
+        """DescribePushQuota  用於查詢預熱配額和每日可用量。
 
         :param request: Request instance for DescribePushQuota.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribePushQuotaRequest`
@@ -609,7 +609,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribePushTasks(self, request):
-        """DescribePushTasks  用于查詢預熱任務提交曆史記錄及執行進度。
+        """DescribePushTasks  用於查詢預熱任務提交曆史記錄及執行進度。
         介面灰度中，暫未全量開放，敬請期待。
 
         :param request: Request instance for DescribePushTasks.
@@ -638,7 +638,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeReportData(self, request):
-        """DescribeReportData 用于查詢域名/項目維度的日/周/月報表數據。
+        """DescribeReportData 用於查詢域名/項目維度的日/周/月報表數據。
 
         :param request: Request instance for DescribeReportData.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeReportDataRequest`
@@ -666,7 +666,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeTrafficPackages(self, request):
-        """DescribeTrafficPackages 用于查詢境内 CDN 流量包詳情。
+        """DescribeTrafficPackages 用於查詢境内 CDN 流量包詳情。
 
         :param request: Request instance for DescribeTrafficPackages.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeTrafficPackagesRequest`
@@ -694,7 +694,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeUrlViolations(self, request):
-        """DescribeUrlViolations 用于查詢被 CDN 系統掃描到的域名違規 URL 清單及當前狀态。
+        """DescribeUrlViolations 用於查詢被 CDN 系統掃描到的域名違規 URL 清單及當前狀态。
         對應内容分發網絡控制台【圖片 】頁面。
 
         :param request: Request instance for DescribeUrlViolations.
@@ -723,7 +723,7 @@ class CdnClient(AbstractClient):
 
 
     def DisableCaches(self, request):
-        """DisableCaches 用于禁用 CDN 上指定 URL 的訪問，禁用完成後，全網訪問會直接返回 403。（介面尚在内測中，暫未全量開放使用）
+        """DisableCaches 用於禁用 CDN 上指定 URL 的訪問，禁用完成後，全網訪問會直接返回 403。（介面尚在内測中，暫未全量開放使用）
 
         :param request: Request instance for DisableCaches.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DisableCachesRequest`
@@ -751,7 +751,7 @@ class CdnClient(AbstractClient):
 
 
     def DisableClsLogTopic(self, request):
-        """DisableClsLogTopic 用于停止日志主題投遞。注意：停止後，所有綁定該日志主題域名的日志将不再繼續投遞至該主題，已經投遞的日志将會繼續保留。生效時間約爲 5~15 分鍾。
+        """DisableClsLogTopic 用於停止日志主題投遞。注意：停止後，所有綁定該日志主題域名的日志将不再繼續投遞至該主題，已經投遞的日志将會繼續保留。生效時間約爲 5~15 分鍾。
 
         :param request: Request instance for DisableClsLogTopic.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DisableClsLogTopicRequest`
@@ -779,7 +779,7 @@ class CdnClient(AbstractClient):
 
 
     def EnableCaches(self, request):
-        """EnableCaches 用于解禁手工封禁的 URL，解禁成功後，全網生效時間約 5~10 分鍾。（介面尚在内測中，暫未全量開放使用）
+        """EnableCaches 用於解禁手工封禁的 URL，解禁成功後，全網生效時間約 5~10 分鍾。（介面尚在内測中，暫未全量開放使用）
 
         :param request: Request instance for EnableCaches.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.EnableCachesRequest`
@@ -807,7 +807,7 @@ class CdnClient(AbstractClient):
 
 
     def EnableClsLogTopic(self, request):
-        """EnableClsLogTopic 用于啓動日志主題投遞。注意：啓動後，所有綁定該日志主題域名的日志将繼續投遞至該主題。生效時間約爲 5~15 分鍾。
+        """EnableClsLogTopic 用於啓動日志主題投遞。注意：啓動後，所有綁定該日志主題域名的日志将繼續投遞至該主題。生效時間約爲 5~15 分鍾。
 
         :param request: Request instance for EnableClsLogTopic.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.EnableClsLogTopicRequest`
@@ -835,7 +835,7 @@ class CdnClient(AbstractClient):
 
 
     def GetDisableRecords(self, request):
-        """GetDisableRecords 用于查詢資源禁用曆史，及 URL 當前狀态。（介面尚在内測中，暫未全量開放使用）
+        """GetDisableRecords 用於查詢資源禁用曆史，及 URL 當前狀态。（介面尚在内測中，暫未全量開放使用）
 
         :param request: Request instance for GetDisableRecords.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.GetDisableRecordsRequest`
@@ -863,7 +863,7 @@ class CdnClient(AbstractClient):
 
 
     def ListClsLogTopics(self, request):
-        """ListClsLogTopics 用于顯示日志主題清單。注意：一個日志集下至多含10個日志主題。
+        """ListClsLogTopics 用於顯示日志主題清單。注意：一個日志集下至多含10個日志主題。
 
         :param request: Request instance for ListClsLogTopics.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.ListClsLogTopicsRequest`
@@ -891,7 +891,7 @@ class CdnClient(AbstractClient):
 
 
     def ListClsTopicDomains(self, request):
-        """ListClsTopicDomains 用于獲取某日志主題下綁定的域名清單。
+        """ListClsTopicDomains 用於獲取某日志主題下綁定的域名清單。
 
         :param request: Request instance for ListClsTopicDomains.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.ListClsTopicDomainsRequest`
@@ -955,7 +955,7 @@ class CdnClient(AbstractClient):
 
 
     def ManageClsTopicDomains(self, request):
-        """ManageClsTopicDomains 用于管理某日志主題下綁定的域名清單。
+        """ManageClsTopicDomains 用於管理某日志主題下綁定的域名清單。
 
         :param request: Request instance for ManageClsTopicDomains.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.ManageClsTopicDomainsRequest`
@@ -983,7 +983,7 @@ class CdnClient(AbstractClient):
 
 
     def PurgePathCache(self, request):
-        """PurgePathCache 用于批次提交目錄重新整理，根據域名的加速區域進行對應區域的重新整理。
+        """PurgePathCache 用於批次提交目錄重新整理，根據域名的加速區域進行對應區域的重新整理。
         預設情況下境内、境外加速區域每日目錄重新整理額度爲各 100 條，每次最多可提交 20 條。
 
         :param request: Request instance for PurgePathCache.
@@ -1012,7 +1012,7 @@ class CdnClient(AbstractClient):
 
 
     def PurgeUrlsCache(self, request):
-        """PurgeUrlsCache 用于批次提交 URL 進行重新整理，根據 URL 中域名的當前加速區域進行對應區域的重新整理。
+        """PurgeUrlsCache 用於批次提交 URL 進行重新整理，根據 URL 中域名的當前加速區域進行對應區域的重新整理。
         預設情況下境内、境外加速區域每日 URL 重新整理額度各爲 10000 條，每次最多可提交 1000 條。
 
         :param request: Request instance for PurgeUrlsCache.
@@ -1041,7 +1041,7 @@ class CdnClient(AbstractClient):
 
 
     def PushUrlsCache(self, request):
-        """PushUrlsCache 用于将指定 URL 資源清單加載至 CDN 節點，支援指定加速區域預熱。
+        """PushUrlsCache 用於将指定 URL 資源清單加載至 CDN 節點，支援指定加速區域預熱。
         預設情況下境内、境外每日預熱 URL 限額爲各 1000 條，每次最多可提交 20 條。
         介面灰度中，暫未全量開放，敬請期待。
 
@@ -1071,7 +1071,7 @@ class CdnClient(AbstractClient):
 
 
     def SearchClsLog(self, request):
-        """SearchClsLog 用于 CLS 日志檢索。支援檢索今天，24小時（可選近7中的某一天），近7天的日志數據。
+        """SearchClsLog 用於 CLS 日志檢索。支援檢索今天，24小時（可選近7中的某一天），近7天的日志數據。
 
         :param request: Request instance for SearchClsLog.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.SearchClsLogRequest`
@@ -1099,7 +1099,7 @@ class CdnClient(AbstractClient):
 
 
     def StartCdnDomain(self, request):
-        """StartCdnDomain 用于啓用已停用域名的加速服務
+        """StartCdnDomain 用於啓用已停用域名的加速服務
 
         :param request: Request instance for StartCdnDomain.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.StartCdnDomainRequest`
@@ -1127,7 +1127,7 @@ class CdnClient(AbstractClient):
 
 
     def StopCdnDomain(self, request):
-        """StopCdnDomain 用于停止域名的加速服務。
+        """StopCdnDomain 用於停止域名的加速服務。
         注意：停止加速服務後，訪問至加速節點的請求将會直接返回 404。爲避免對您的業務造成影響，請在停止加速服務前将解析切走。
 
         :param request: Request instance for StopCdnDomain.
@@ -1156,8 +1156,8 @@ class CdnClient(AbstractClient):
 
 
     def UpdateDomainConfig(self, request):
-        """UpdateDomainConfig 用于修改内容分發網絡加速域名配置訊息
-        注意：如果需要更新複雜類型的配置項，必須傳遞整個對象的所有屬性，未傳遞的屬性将使用預設值，建議通過查詢介面獲取配置屬性後，直接修改後傳遞給本介面。Https配置由于證書的特殊性，更新時不用傳遞證書和金鑰欄位。
+        """UpdateDomainConfig 用於修改内容分發網絡加速域名配置訊息
+        注意：如果需要更新複雜類型的配置項，必須傳遞整個對象的所有屬性，未傳遞的屬性将使用預設值，建議通過查詢介面獲取配置屬性後，直接修改後傳遞給本介面。Https配置由於證書的特殊性，更新時不用傳遞證書和金鑰欄位。
 
         :param request: Request instance for UpdateDomainConfig.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.UpdateDomainConfigRequest`
@@ -1213,7 +1213,7 @@ class CdnClient(AbstractClient):
 
 
     def UpdatePayType(self, request):
-        """本介面(UpdatePayType)用于修改賬号計費類型，暫不支援月結用戶或子賬号修改。
+        """本介面(UpdatePayType)用於修改賬號計費類型，暫不支援月結用戶或子賬號修改。
 
         :param request: Request instance for UpdatePayType.
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.UpdatePayTypeRequest`

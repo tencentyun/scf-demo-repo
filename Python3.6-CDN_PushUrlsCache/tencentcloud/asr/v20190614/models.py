@@ -27,10 +27,10 @@ class CreateAsrVocabRequest(AbstractModel):
         :type Name: str
         :param Description: 熱詞表描述，長度在0-1000之間
         :type Description: str
-        :param WordWeights: 詞權重數組，包含全部的熱詞和對應的權重。每個熱詞的長度不大于10，權重爲[1,10]之間整數，數組長度不大于128
+        :param WordWeights: 詞權重數組，包含全部的熱詞和對應的權重。每個熱詞的長度不大於10，權重爲[1,10]之間整數，數組長度不大於128
         :type WordWeights: list of HotWord
-        :param WordWeightStr: 詞權重文件（純文本文件）的二進制base64編碼，以行分隔，每行的格式爲word|weight，即以英文符号|爲分割，左邊爲詞，右邊爲權重，如：你好|5。
-當用戶傳此參數（參數長度大于0），即以此參數解析詞權重，WordWeights會被忽略
+        :param WordWeightStr: 詞權重文件（純文本文件）的二進制base64編碼，以行分隔，每行的格式爲word|weight，即以英文符號|爲分割，左邊爲詞，右邊爲權重，如：你好|5。
+當用戶傳此參數（參數長度大於0），即以此參數解析詞權重，WordWeights會被忽略
         :type WordWeightStr: str
         """
         self.Name = None
@@ -58,7 +58,7 @@ class CreateAsrVocabResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param VocabId: 詞表ID，可用于獲取詞表訊息
+        :param VocabId: 詞表ID，可用於獲取詞表訊息
         :type VocabId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -80,8 +80,8 @@ class CreateRecTaskRequest(AbstractModel):
     def __init__(self):
         """
         :param EngineModelType: 引擎模型類型。
-8k_zh：電話 8k 中文普通話通用，可用于雙聲道音訊的識别；
-8k_zh_s：電話 8k 中文普通話話者分離，僅用于單聲道；
+8k_zh：電話 8k 中文普通話通用，可用於雙聲道音訊的識别；
+8k_zh_s：電話 8k 中文普通話話者分離，僅用於單聲道；
 16k_zh：16k 中文普通話通用；
 16k_en：16k 英語；
 16k_ca：16k 粵語；
@@ -89,11 +89,11 @@ class CreateRecTaskRequest(AbstractModel):
         :type EngineModelType: str
         :param ChannelNum: 語音聲道數。1：單聲道；2：雙聲道（僅支援 8k_zh 引擎模型）。
         :type ChannelNum: int
-        :param ResTextFormat: 識别結果返回形式。0： 識别結果文本(含分段時間戳)； 1：僅支援16k中文引擎，含識别結果詳情(詞時間戳清單，一般用于生成字幕場景)。
+        :param ResTextFormat: 識别結果返回形式。0： 識别結果文本(含分段時間戳)； 1：僅支援16k中文引擎，含識别結果詳情(詞時間戳清單，一般用於生成字幕場景)。
         :type ResTextFormat: int
         :param SourceType: 語音數據來源。0：語音 URL；1：語音數據（post body）。
         :type SourceType: int
-        :param CallbackUrl: 回調 URL，用戶自行搭建的用于接收識别結果的服務器網址， 長度小於2048位元。如果用戶使用回調方式獲取識别結果，需提交該參數；如果用戶使用輪詢方式獲取識别結果，則無需提交該參數。
+        :param CallbackUrl: 回調 URL，用戶自行搭建的用於接收識别結果的服務器網址， 長度小於2048位元。如果用戶使用回調方式獲取識别結果，需提交該參數；如果用戶使用輪詢方式獲取識别結果，則無需提交該參數。
         :type CallbackUrl: str
         :param Url: 語音的URL網址，需要公網可下載。長度小於2048位元，當 SourceType 值爲 0 時須填寫該欄位，爲 1 時不需要填寫。注意：請确保錄音文件時長在一個小時之内，否則可能識别失敗。請保證文件的下載速度，否則可能下載失敗。
         :type Url: str
@@ -101,7 +101,7 @@ class CreateRecTaskRequest(AbstractModel):
         :type Data: str
         :param DataLen: 數據長度，當 SourceType 值爲1時必須填寫，爲0可不寫（此數據長度爲數據未進行base64編碼時的數據長度）。
         :type DataLen: int
-        :param HotwordId: 熱詞id。用于調用對應的熱詞表，如果在調用語音識别服務時，不進行單獨的熱詞id設置，自動生效預設熱詞；如果進行了單獨的熱詞id設置，那麽将生效單獨設置的熱詞id。
+        :param HotwordId: 熱詞id。用於調用對應的熱詞表，如果在調用語音識别服務時，不進行單獨的熱詞id設置，自動生效預設熱詞；如果進行了單獨的熱詞id設置，那麽将生效單獨設置的熱詞id。
         :type HotwordId: str
         :param FilterDirty: 是否過濾髒詞（目前支援中文普通話引擎）。0：不過濾髒詞；1：過濾髒詞；2：将髒詞替換爲 * 。
         :type FilterDirty: int
@@ -199,7 +199,7 @@ class DescribeTaskStatusRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TaskId: 從CreateRecTask介面獲取的TaskId，用于獲取任務狀态與結果。
+        :param TaskId: 從CreateRecTask介面獲取的TaskId，用於獲取任務狀态與結果。
         :type TaskId: int
         """
         self.TaskId = None
@@ -395,7 +395,7 @@ class HotWord(AbstractModel):
 
 
 class SentenceDetail(AbstractModel):
-    """單句的詳細識别結果，包含單個詞的時間偏移，一般用于生成字幕的場景。
+    """單句的詳細識别結果，包含單個詞的時間偏移，一般用於生成字幕的場景。
 
     """
 
@@ -463,21 +463,21 @@ class SentenceRecognitionRequest(AbstractModel):
         :type SourceType: int
         :param VoiceFormat: 識别音訊的音訊格式。mp3、wav。
         :type VoiceFormat: str
-        :param UsrAudioKey: 用戶端對此任務的唯一标識，用戶自助生成，用于用戶查找識别結果。
+        :param UsrAudioKey: 用戶端對此任務的唯一標識，用戶自助生成，用於用戶查找識别結果。
         :type UsrAudioKey: str
-        :param Url: 語音 URL，公網可下載。當 SourceType 值爲 0（語音 URL上傳） 時須填寫該欄位，爲 1 時不填；URL 的長度大于 0，小於 2048，需進行urlencode編碼。音訊時間長度要小於60s。
+        :param Url: 語音 URL，公網可下載。當 SourceType 值爲 0（語音 URL上傳） 時須填寫該欄位，爲 1 時不填；URL 的長度大於 0，小於 2048，需進行urlencode編碼。音訊時間長度要小於60s。
         :type Url: str
         :param Data: 語音數據，當SourceType 值爲1（本地語音數據上傳）時必須填寫，當SourceType 值爲0（語音 URL上傳）可不寫。要使用base64編碼(采用python語言時注意讀取文件應該爲string而不是byte，以byte格式讀取後要decode()。編碼後的數據不可帶有回車換行符)。音訊數據要小於600KB。
         :type Data: str
         :param DataLen: 數據長度，單位爲位元。當 SourceType 值爲1（本地語音數據上傳）時必須填寫，當 SourceType 值爲0（語音 URL上傳）可不寫（此數據長度爲數據未進行base64編碼時的數據長度）。
         :type DataLen: int
-        :param HotwordId: 熱詞id。用于調用對應的熱詞表，如果在調用語音識别服務時，不進行單獨的熱詞id設置，自動生效預設熱詞；如果進行了單獨的熱詞id設置，那麽将生效單獨設置的熱詞id。
+        :param HotwordId: 熱詞id。用於調用對應的熱詞表，如果在調用語音識别服務時，不進行單獨的熱詞id設置，自動生效預設熱詞；如果進行了單獨的熱詞id設置，那麽将生效單獨設置的熱詞id。
         :type HotwordId: str
         :param FilterDirty: 是否過濾髒詞（目前支援中文普通話引擎）。0：不過濾髒詞；1：過濾髒詞；2：将髒詞替換爲 * 。
         :type FilterDirty: int
         :param FilterModal: 是否過語氣詞（目前支援中文普通話引擎）。0：不過濾語氣詞；1：部分過濾；2：嚴格過濾 。
         :type FilterModal: int
-        :param FilterPunc: 是否過濾句末的句号（目前支援中文普通話引擎）。0：不過濾句末的句号；1：過濾句末的句号。
+        :param FilterPunc: 是否過濾句末的句號（目前支援中文普通話引擎）。0：不過濾句末的句號；1：過濾句末的句號。
         :type FilterPunc: int
         """
         self.ProjectId = None
@@ -626,7 +626,7 @@ class TaskStatus(AbstractModel):
 
     def __init__(self):
         """
-        :param TaskId: 任務标識。
+        :param TaskId: 任務標識。
         :type TaskId: int
         :param Status: 任務狀态碼，0：任務等待，1：任務執行中，2：任務成功，3：任務失敗。
         :type Status: int
@@ -636,7 +636,7 @@ class TaskStatus(AbstractModel):
         :type Result: str
         :param ErrorMsg: 失敗原因說明。
         :type ErrorMsg: str
-        :param ResultDetail: 識别結果詳情，包含每個句子中的詞時間偏移，一般用于生成字幕的場景。(錄音識别請求中ResTextFormat=1時該欄位不爲空)
+        :param ResultDetail: 識别結果詳情，包含每個句子中的詞時間偏移，一般用於生成字幕的場景。(錄音識别請求中ResTextFormat=1時該欄位不爲空)
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ResultDetail: list of SentenceDetail
         """
@@ -673,10 +673,10 @@ class UpdateAsrVocabRequest(AbstractModel):
         :type VocabId: str
         :param Name: 熱詞表名稱
         :type Name: str
-        :param WordWeights: 詞權重數組，包含全部的熱詞和對應的權重。每個熱詞的長度不大于10，權重爲[1,10]之間整數，數組長度不大于128
+        :param WordWeights: 詞權重數組，包含全部的熱詞和對應的權重。每個熱詞的長度不大於10，權重爲[1,10]之間整數，數組長度不大於128
         :type WordWeights: list of HotWord
-        :param WordWeightStr: 詞權重文件（純文本文件）的二進制base64編碼，以行分隔，每行的格式爲word|weight，即以英文符号|爲分割，左邊爲詞，右邊爲權重，如：你好|5。
-當用戶傳此參數（參數長度大于0），即以此參數解析詞權重，WordWeights會被忽略
+        :param WordWeightStr: 詞權重文件（純文本文件）的二進制base64編碼，以行分隔，每行的格式爲word|weight，即以英文符號|爲分割，左邊爲詞，右邊爲權重，如：你好|5。
+當用戶傳此參數（參數長度大於0），即以此參數解析詞權重，WordWeights會被忽略
         :type WordWeightStr: str
         :param Description: 熱詞表描述
         :type Description: str

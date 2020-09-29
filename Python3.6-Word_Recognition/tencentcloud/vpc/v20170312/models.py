@@ -89,7 +89,7 @@ class AddBandwidthPackageResourcesRequest(AbstractModel):
         """
         :param ResourceIds: 資源Id，形如'eip-xxxx', 'lb-xxxx'
         :type ResourceIds: list of str
-        :param BandwidthPackageId: 頻寬包唯一标識ID，形如'bwp-xxxx'
+        :param BandwidthPackageId: 頻寬包唯一標識ID，形如'bwp-xxxx'
         :type BandwidthPackageId: str
         :param NetworkType: 頻寬包類型，包括'BGP', 'SINGLEISP', 'ANYCAST'
         :type NetworkType: str
@@ -184,7 +184,7 @@ class Address(AbstractModel):
 
     def __init__(self):
         """
-        :param AddressId: `EIP`的`ID`，是`EIP`的唯一标識。
+        :param AddressId: `EIP`的`ID`，是`EIP`的唯一標識。
         :type AddressId: str
         :param AddressName: `EIP`名稱。
         :type AddressName: str
@@ -194,15 +194,15 @@ class Address(AbstractModel):
         :type AddressIp: str
         :param InstanceId: 綁定的資源實例`ID`。可能是一個`CVM`，`NAT`。
         :type InstanceId: str
-        :param CreatedTime: 創建時間。按照`ISO8601`标準表示，并且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
+        :param CreatedTime: 創建時間。按照`ISO8601`標準表示，並且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
         :type CreatedTime: str
         :param NetworkInterfaceId: 綁定的彈性網卡ID
         :type NetworkInterfaceId: str
         :param PrivateAddressIp: 綁定的資源内網ip
         :type PrivateAddressIp: str
-        :param IsArrears: 資源隔離狀态。true表示eip處于隔離狀态，false表示資源處于未隔離狀态
+        :param IsArrears: 資源隔離狀态。true表示eip處於隔離狀态，false表示資源處於未隔離狀态
         :type IsArrears: bool
-        :param IsBlocked: 資源封堵狀态。true表示eip處于封堵狀态，false表示eip處于未封堵狀态
+        :param IsBlocked: 資源封堵狀态。true表示eip處於封堵狀态，false表示eip處於未封堵狀态
         :type IsBlocked: bool
         :param IsEipDirectConnection: eip是否支援直通模式。true表示eip支援直通模式，false表示資源不支援直通模式
         :type IsEipDirectConnection: bool
@@ -368,9 +368,9 @@ class AssignIpv6AddressesRequest(AbstractModel):
         """
         :param NetworkInterfaceId: 彈性網卡實例`ID`，形如：`eni-m6dyj72l`。
         :type NetworkInterfaceId: str
-        :param Ipv6Addresses: 指定的`IPv6`網址清單，單次最多指定10個。與入參`Ipv6AddressCount`合并計算配額。
+        :param Ipv6Addresses: 指定的`IPv6`網址清單，單次最多指定10個。與入參`Ipv6AddressCount`合並計算配額。
         :type Ipv6Addresses: list of Ipv6Address
-        :param Ipv6AddressCount: 自動分配`IPv6`網址個數，内網IP網址個數總和不能超過配數。與入參`Ipv6Addresses`合并計算配額。
+        :param Ipv6AddressCount: 自動分配`IPv6`網址個數，内網IP網址個數總和不能超過配數。與入參`Ipv6Addresses`合並計算配額。
         :type Ipv6AddressCount: int
         """
         self.NetworkInterfaceId = None
@@ -568,7 +568,7 @@ class AssociateAddressRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AddressId: 标識 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
+        :param AddressId: 標識 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
         :type AddressId: str
         :param InstanceId: 要綁定的實例 ID。實例 ID 形如：`ins-11112222`。可通過登入[控制台](https://console.cloud.taifucloud.com/cvm)查詢，也可通過 [DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728) 介面返回值中的`InstanceId`獲取。
         :type InstanceId: str
@@ -618,7 +618,7 @@ class AttachCcnInstancesRequest(AbstractModel):
         :type CcnId: str
         :param Instances: 關聯網絡實例清單
         :type Instances: list of CcnInstance
-        :param CcnUin: CCN所屬UIN（根賬号），預設當前賬号所屬UIN
+        :param CcnUin: CCN所屬UIN（根賬號），預設當前賬號所屬UIN
         :type CcnUin: str
         """
         self.CcnId = None
@@ -737,7 +737,7 @@ class BandwidthPackage(AbstractModel):
 
     def __init__(self):
         """
-        :param BandwidthPackageId: 頻寬包唯一标識Id
+        :param BandwidthPackageId: 頻寬包唯一標識Id
         :type BandwidthPackageId: str
         :param NetworkType: 頻寬包類型，包括'BGP','SINGLEISP','ANYCAST'
         :type NetworkType: str
@@ -745,7 +745,7 @@ class BandwidthPackage(AbstractModel):
         :type ChargeType: str
         :param BandwidthPackageName: 頻寬包名稱
         :type BandwidthPackageName: str
-        :param CreatedTime: 頻寬包創建時間。按照`ISO8601`标準表示，并且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
+        :param CreatedTime: 頻寬包創建時間。按照`ISO8601`標準表示，並且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
         :type CreatedTime: str
         :param Status: 頻寬包狀态，包括'CREATING','CREATED','DELETING','DELETED'
         :type Status: str
@@ -851,7 +851,7 @@ class CcnAttachedInstance(AbstractModel):
         :type InstanceName: str
         :param InstanceRegion: 關聯實例所屬大區，例如：ap-guangzhou。
         :type InstanceRegion: str
-        :param InstanceUin: 關聯實例所屬UIN（根賬号）。
+        :param InstanceUin: 關聯實例所屬UIN（根賬號）。
         :type InstanceUin: str
         :param CidrBlock: 關聯實例CIDR。
         :type CidrBlock: list of str
@@ -868,7 +868,7 @@ class CcnAttachedInstance(AbstractModel):
         :type State: str
         :param AttachedTime: 關聯時間。
         :type AttachedTime: str
-        :param CcnUin: 雲聯網所屬UIN（根賬号）。
+        :param CcnUin: 雲聯網所屬UIN（根賬號）。
         :type CcnUin: str
         """
         self.CcnId = None
@@ -981,7 +981,7 @@ class CcnRoute(AbstractModel):
         :type UpdateTime: str
         :param Enabled: 路由是否啓用
         :type Enabled: bool
-        :param InstanceUin: 關聯實例所屬UIN（根賬号）
+        :param InstanceUin: 關聯實例所屬UIN（根賬號）
         :type InstanceUin: str
         """
         self.RouteId = None
@@ -1158,7 +1158,7 @@ class CreateBandwidthPackageResponse(AbstractModel):
         """
         :param BandwidthPackageId: 頻寬包Id
         :type BandwidthPackageId: str
-        :param BandwidthPackageIds: 頻寬包Ids(申請數量大于1時有效)
+        :param BandwidthPackageIds: 頻寬包Ids(申請數量大於1時有效)
         :type BandwidthPackageIds: list of str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1370,7 +1370,7 @@ class CreateDirectConnectGatewayRequest(AbstractModel):
 <li>NetworkType 爲 CCN 時，這裏傳值爲雲聯網實例ID</li>
         :type NetworkInstanceId: str
         :param GatewayType: 閘道類型，可選值：
-<li>NORMAL - （預設）标準型，注：雲聯網只支援标準型</li>
+<li>NORMAL - （預設）標準型，注：雲聯網只支援標準型</li>
 <li>NAT - NAT型</li>NAT類型支援網絡網址轉換配置，類型确定後不能修改；一個私有網絡可以創建一個NAT類型的專線閘道和一個非NAT類型的專線閘道
         :type GatewayType: str
         """
@@ -3035,7 +3035,7 @@ class DescribeAccountAttributesResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param AccountAttributeSet: 用戶賬号屬性對象
+        :param AccountAttributeSet: 用戶賬號屬性對象
         :type AccountAttributeSet: list of AccountAttribute
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3217,7 +3217,7 @@ class DescribeAddressesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AddressIds: 标識 EIP 的唯一 ID 清單。EIP 唯一 ID 形如：`eip-11112222`。參數不支援同時指定`AddressIds`和`Filters`。
+        :param AddressIds: 標識 EIP 的唯一 ID 清單。EIP 唯一 ID 形如：`eip-11112222`。參數不支援同時指定`AddressIds`和`Filters`。
         :type AddressIds: list of str
         :param Filters: 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`AddressIds`和`Filters`。詳細的過濾條件如下：
 <li> address-id - String - 是否必填：否 - （過濾條件）按照 EIP 的唯一 ID 過濾。EIP 唯一 ID 形如：eip-11112222。</li>
@@ -3227,11 +3227,11 @@ class DescribeAddressesRequest(AbstractModel):
 <li> instance-id - String - 是否必填：否 - （過濾條件）按照 EIP 綁定的實例 ID 過濾。實例 ID 形如：ins-11112222。</li>
 <li> private-ip-address - String - 是否必填：否 - （過濾條件）按照 EIP 綁定的内網 IP 過濾。</li>
 <li> network-interface-id - String - 是否必填：否 - （過濾條件）按照 EIP 綁定的彈性網卡 ID 過濾。彈性網卡 ID 形如：eni-11112222。</li>
-<li> is-arrears - String - 是否必填：否 - （過濾條件）按照 EIP 是否欠費進行過濾。（TRUE：EIP 處于欠費狀态|FALSE：EIP 費用狀态正常）</li>
+<li> is-arrears - String - 是否必填：否 - （過濾條件）按照 EIP 是否欠費進行過濾。（TRUE：EIP 處於欠費狀态|FALSE：EIP 費用狀态正常）</li>
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/11646)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/11646)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/11646)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/11646)中的相關小節。
         :type Limit: int
         """
         self.AddressIds = None
@@ -3324,7 +3324,7 @@ class DescribeBandwidthPackagesRequest(AbstractModel):
         :param BandwidthPackageIds: 頻寬包Id，支援批次
         :type BandwidthPackageIds: list of str
         :param Filters: 每次請求的`Filters`的上限爲10。參數不支援同時指定`BandwidthPackageIds`和`Filters`。詳細的過濾條件如下：
-<li> bandwidth-package_id - String - 是否必填：否 - （過濾條件）按照頻寬包的唯一标識ID過濾。</li>
+<li> bandwidth-package_id - String - 是否必填：否 - （過濾條件）按照頻寬包的唯一標識ID過濾。</li>
 <li> bandwidth-package-name - String - 是否必填：否 - （過濾條件）按照 頻寬包名稱過濾。不支援模糊過濾。</li>
 <li> network-type - String - 是否必填：否 - （過濾條件）按照頻寬包的類型過濾。類型包括'BGP','SINGLEISP'和'ANYCAST'。</li>
 <li> charge-type - String - 是否必填：否 - （過濾條件）按照頻寬包的計費類型過濾。計費類型包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'</li>
@@ -3753,7 +3753,7 @@ class DescribeCustomerGatewaysRequest(AbstractModel):
 <li>customer-gateway-name - String - （過濾條件）用戶閘道名稱形如：`test-cgw`。</li>
 <li>ip-address - String - （過濾條件）公網網址形如：`58.211.1.12`。</li>
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API 簡介中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於Offset的更進一步介紹請參考 API 簡介中的相關小節。
         :type Offset: int
         :param Limit: 返回數量，預設爲20，最大值爲100。
         :type Limit: int
@@ -4283,9 +4283,9 @@ class DescribeIp6TranslatorsRequest(AbstractModel):
 <li> ip6-translator-name - String - 是否必填：否 - （過濾條件）按照IPV6轉換實例名稱過濾。不支援模糊過濾。</li>
 <li> ip6-translator-status - String - 是否必填：否 - （過濾條件）按照IPV6轉換實例的狀态過濾。狀态取值範圍爲"CREATING","RUNNING","DELETING","MODIFYING"
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/11646)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/11646)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/11646)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/11646)中的相關小節。
         :type Limit: int
         """
         self.Ip6TranslatorIds = None
@@ -5056,7 +5056,7 @@ class DescribeVpnConnectionsRequest(AbstractModel):
 <li>vpn-connection-name - String - 通道名稱，形如：`test-vpn`。</li>
 <li>vpn-connection-id - String - 通道實例ID，形如：`vpnx-5p7vkch8"`。</li>
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API 簡介中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於Offset的更進一步介紹請參考 API 簡介中的相關小節。
         :type Offset: int
         :param Limit: 返回數量，預設爲20，最大值爲100。
         :type Limit: int
@@ -5321,7 +5321,7 @@ class DirectConnectGateway(AbstractModel):
 <li>`NetworkType`爲`CCN`時，這裏爲雲聯網實例`ID`</li>
         :type NetworkInstanceId: str
         :param GatewayType: 閘道類型：
-<li>NORMAL - 标準型，注：雲聯網只支援标準型</li>
+<li>NORMAL - 標準型，注：雲聯網只支援標準型</li>
 <li>NAT - NAT型</li>
 NAT類型支援網絡網址轉換配置，類型确定後不能修改；一個私有網絡可以創建一個NAT類型的專線閘道和一個非NAT類型的專線閘道
         :type GatewayType: str
@@ -5473,9 +5473,9 @@ class DisassociateAddressRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AddressId: 标識 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
+        :param AddressId: 標識 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
         :type AddressId: str
-        :param ReallocateNormalPublicIp: 表示解綁 EIP 之後是否分配普通公網 IP。取值範圍：<br><li>TRUE：表示解綁 EIP 之後分配普通公網 IP。<br><li>FALSE：表示解綁 EIP 之後不分配普通公網 IP。<br>預設取值：FALSE。<br><br>只有滿足以下條件時才能指定該參數：<br><li> 只有在解綁主網卡的主内網 IP 上的 EIP 時才能指定該參數。<br><li>解綁 EIP 後重新分配普通公網 IP 操作一個賬号每天最多操作 10 次；詳情可通過 [DescribeAddressQuota](https://cloud.taifucloud.com/document/api/213/1378) 介面獲取。
+        :param ReallocateNormalPublicIp: 表示解綁 EIP 之後是否分配普通公網 IP。取值範圍：<br><li>TRUE：表示解綁 EIP 之後分配普通公網 IP。<br><li>FALSE：表示解綁 EIP 之後不分配普通公網 IP。<br>預設取值：FALSE。<br><br>只有滿足以下條件時才能指定該參數：<br><li> 只有在解綁主網卡的主内網 IP 上的 EIP 時才能指定該參數。<br><li>解綁 EIP 後重新分配普通公網 IP 操作一個賬號每天最多操作 10 次；詳情可通過 [DescribeAddressQuota](https://cloud.taifucloud.com/document/api/213/1378) 介面獲取。
         :type ReallocateNormalPublicIp: bool
         """
         self.AddressId = None
@@ -5767,7 +5767,7 @@ class HaVip(AbstractModel):
 
     def __init__(self):
         """
-        :param HaVipId: `HAVIP`的`ID`，是`HAVIP`的唯一标識。
+        :param HaVipId: `HAVIP`的`ID`，是`HAVIP`的唯一標識。
         :type HaVipId: str
         :param HaVipName: `HAVIP`名稱。
         :type HaVipName: str
@@ -5900,17 +5900,17 @@ class IKEOptionsSpecification(AbstractModel):
         :type PropoAuthenAlgorithm: str
         :param ExchangeMode: 協商模式：可選值：'AGGRESSIVE', 'MAIN'，預設爲MAIN
         :type ExchangeMode: str
-        :param LocalIdentity: 本端标識類型：可選值：'ADDRESS', 'FQDN'，預設爲ADDRESS
+        :param LocalIdentity: 本端標識類型：可選值：'ADDRESS', 'FQDN'，預設爲ADDRESS
         :type LocalIdentity: str
-        :param RemoteIdentity: 對端标識類型：可選值：'ADDRESS', 'FQDN'，預設爲ADDRESS
+        :param RemoteIdentity: 對端標識類型：可選值：'ADDRESS', 'FQDN'，預設爲ADDRESS
         :type RemoteIdentity: str
-        :param LocalAddress: 本端标識，當LocalIdentity選爲ADDRESS時，LocalAddress必填。localAddress預設爲vpn閘道公網IP
+        :param LocalAddress: 本端標識，當LocalIdentity選爲ADDRESS時，LocalAddress必填。localAddress預設爲vpn閘道公網IP
         :type LocalAddress: str
-        :param RemoteAddress: 對端标識，當RemoteIdentity選爲ADDRESS時，RemoteAddress必填
+        :param RemoteAddress: 對端標識，當RemoteIdentity選爲ADDRESS時，RemoteAddress必填
         :type RemoteAddress: str
-        :param LocalFqdnName: 本端标識，當LocalIdentity選爲FQDN時，LocalFqdnName必填
+        :param LocalFqdnName: 本端標識，當LocalIdentity選爲FQDN時，LocalFqdnName必填
         :type LocalFqdnName: str
-        :param RemoteFqdnName: 對端标識，當remoteIdentity選爲FQDN時，RemoteFqdnName必填
+        :param RemoteFqdnName: 對端標識，當remoteIdentity選爲FQDN時，RemoteFqdnName必填
         :type RemoteFqdnName: str
         :param DhGroupName: DH group，指定IKE交換金鑰時使用的DH組，可選值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
         :type DhGroupName: str
@@ -6130,7 +6130,7 @@ class InstanceChargePrepaid(AbstractModel):
         """
         :param Period: 購買實例的時長，單位：月。取值範圍：1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36。
         :type Period: int
-        :param RenewFlag: 自動續約标識。取值範圍： NOTIFY_AND_AUTO_RENEW：通知過期且自動續約， NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約。預設：NOTIFY_AND_MANUAL_RENEW
+        :param RenewFlag: 自動續約標識。取值範圍： NOTIFY_AND_AUTO_RENEW：通知過期且自動續約， NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約。預設：NOTIFY_AND_MANUAL_RENEW
         :type RenewFlag: str
         """
         self.Period = None
@@ -6143,7 +6143,7 @@ class InstanceChargePrepaid(AbstractModel):
 
 
 class InstanceStatistic(AbstractModel):
-    """用于描述實例的統計訊息
+    """用於描述實例的統計訊息
 
     """
 
@@ -6176,15 +6176,15 @@ class Ip6Rule(AbstractModel):
         :type Ip6RuleName: str
         :param Vip6: IPV6網址
         :type Vip6: str
-        :param Vport6: IPV6端口号
+        :param Vport6: IPV6端口號
         :type Vport6: int
         :param Protocol: 協議類型，支援TCP/UDP
         :type Protocol: str
         :param Vip: IPV4網址
         :type Vip: str
-        :param Vport: IPV4端口号
+        :param Vport: IPV4端口號
         :type Vport: int
-        :param RuleStatus: 轉換規則狀态，限于CREATING,RUNNING,DELETING,MODIFYING
+        :param RuleStatus: 轉換規則狀态，限於CREATING,RUNNING,DELETING,MODIFYING
         :type RuleStatus: str
         :param CreatedTime: 轉換規則創建時間
         :type CreatedTime: str
@@ -6219,13 +6219,13 @@ class Ip6RuleInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param Vport6: IPV6端口号，可在0~65535範圍取值
+        :param Vport6: IPV6端口號，可在0~65535範圍取值
         :type Vport6: int
         :param Protocol: 協議類型，支援TCP/UDP
         :type Protocol: str
         :param Vip: IPV4網址
         :type Vip: str
-        :param Vport: IPV4端口号，可在0~65535範圍取值
+        :param Vport: IPV4端口號，可在0~65535範圍取值
         :type Vport: int
         """
         self.Vport6 = None
@@ -6256,7 +6256,7 @@ class Ip6Translator(AbstractModel):
         :type Vip6: str
         :param IspName: IPV6轉換網址所屬運營商
         :type IspName: str
-        :param TranslatorStatus: 轉換實例狀态，限于CREATING,RUNNING,DELETING,MODIFYING
+        :param TranslatorStatus: 轉換實例狀态，限於CREATING,RUNNING,DELETING,MODIFYING
         :type TranslatorStatus: str
         :param CreatedTime: IPV6轉換實例創建時間
         :type CreatedTime: str
@@ -6473,7 +6473,7 @@ class ModifyAddressAttributeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AddressId: 标識 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
+        :param AddressId: 標識 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
         :type AddressId: str
         :param AddressName: 修改後的 EIP 名稱。長度上限爲20個字元。
         :type AddressName: str
@@ -6595,9 +6595,9 @@ class ModifyAddressesBandwidthRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AddressIds: EIP唯一标識id，形如'eip-xxxx'
+        :param AddressIds: EIP唯一標識id，形如'eip-xxxx'
         :type AddressIds: list of str
-        :param InternetMaxBandwidthOut: 調整頻寬目标值
+        :param InternetMaxBandwidthOut: 調整頻寬目標值
         :type InternetMaxBandwidthOut: int
         :param StartTime: 包月頻寬起始時間
         :type StartTime: str
@@ -6641,7 +6641,7 @@ class ModifyBandwidthPackageAttributeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BandwidthPackageId: 頻寬包唯一标識ID
+        :param BandwidthPackageId: 頻寬包唯一標識ID
         :type BandwidthPackageId: str
         :param BandwidthPackageName: 頻寬包名稱
         :type BandwidthPackageName: str
@@ -6893,7 +6893,7 @@ class ModifyIp6RuleRequest(AbstractModel):
         :type Ip6RuleName: str
         :param Vip: IPV6轉換規則修改後的IPV4網址
         :type Vip: str
-        :param Vport: IPV6轉換規則修改後的IPV4端口号
+        :param Vport: IPV6轉換規則修改後的IPV4端口號
         :type Vport: int
         """
         self.Ip6TranslatorId = None
@@ -7595,7 +7595,7 @@ class NetworkInterfaceAttachment(AbstractModel):
         """
         :param InstanceId: 雲主機實例ID。
         :type InstanceId: str
-        :param DeviceIndex: 網卡在雲主機實例内的序号。
+        :param DeviceIndex: 網卡在雲主機實例内的序號。
         :type DeviceIndex: int
         :param InstanceAccountId: 雲主機所有者帳戶訊息。
         :type InstanceAccountId: str
@@ -7760,7 +7760,7 @@ class ReleaseAddressesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AddressIds: 标識 EIP 的唯一 ID 清單。EIP 唯一 ID 形如：`eip-11112222`。
+        :param AddressIds: 標識 EIP 的唯一 ID 清單。EIP 唯一 ID 形如：`eip-11112222`。
         :type AddressIds: list of str
         """
         self.AddressIds = None
@@ -7794,7 +7794,7 @@ class RemoveBandwidthPackageResourcesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BandwidthPackageId: 頻寬包唯一标識ID，形如'bwp-xxxx'
+        :param BandwidthPackageId: 頻寬包唯一標識ID，形如'bwp-xxxx'
         :type BandwidthPackageId: str
         :param ResourceType: 資源類型，包括‘Address’, ‘LoadBalance’
         :type ResourceType: str
@@ -8080,7 +8080,7 @@ class ResetAttachCcnInstancesRequest(AbstractModel):
         """
         :param CcnId: CCN實例ID。形如：ccn-f49l6u0z。
         :type CcnId: str
-        :param CcnUin: CCN所屬UIN（根賬号）。
+        :param CcnUin: CCN所屬UIN（根賬號）。
         :type CcnUin: str
         :param Instances: 重新申請關聯網絡實例清單。
         :type Instances: list of CcnInstance
@@ -8513,7 +8513,7 @@ class SecurityGroupPolicy(AbstractModel):
 
     def __init__(self):
         """
-        :param PolicyIndex: 安全組規則索引号。
+        :param PolicyIndex: 安全組規則索引號。
         :type PolicyIndex: int
         :param Protocol: 協議, 取值: TCP,UDP, ICMP。
         :type Protocol: str

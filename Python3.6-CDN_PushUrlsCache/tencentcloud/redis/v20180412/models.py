@@ -17,7 +17,7 @@ from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Account(AbstractModel):
-    """子賬号訊息
+    """子賬號訊息
 
     """
 
@@ -26,10 +26,10 @@ class Account(AbstractModel):
         :param InstanceId: 實例ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceId: str
-        :param AccountName: 賬号名稱（如果是主賬号，名稱爲root）
+        :param AccountName: 賬號名稱（如果是主賬號，名稱爲root）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AccountName: str
-        :param Remark: 賬号描述訊息
+        :param Remark: 賬號描述訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Remark: str
         :param Privilege: 讀寫策略：r-只讀，w-只寫，rw-讀寫
@@ -38,7 +38,7 @@ class Account(AbstractModel):
         :param ReadonlyPolicy: 路由策略：master-主節點，replication-從節點
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ReadonlyPolicy: list of str
-        :param Status: 子賬号狀态：1-賬号變更中，2-賬号有效，-4-賬号已删除
+        :param Status: 子賬號狀态：1-賬號變更中，2-賬號有效，-4-賬號已删除
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: int
         """
@@ -273,15 +273,15 @@ class CreateInstanceAccountRequest(AbstractModel):
         """
         :param InstanceId: 實例ID
         :type InstanceId: str
-        :param AccountName: 子賬号名稱
+        :param AccountName: 子賬號名稱
         :type AccountName: str
-        :param AccountPassword: 子賬号密碼
+        :param AccountPassword: 子賬號密碼
         :type AccountPassword: str
         :param ReadonlyPolicy: 路由策略：填寫master或者replication，表示主節點或者從節點
         :type ReadonlyPolicy: list of str
         :param Privilege: 讀寫策略：填寫r、w、rw，表示只讀、只寫、讀寫
         :type Privilege: str
-        :param Remark: 子賬号描述訊息
+        :param Remark: 子賬號描述訊息
         :type Remark: str
         """
         self.InstanceId = None
@@ -349,7 +349,7 @@ class CreateInstancesRequest(AbstractModel):
         :type SubnetId: str
         :param ProjectId: 項目id，取值以用戶帳戶>用戶帳戶相關介面查詢>項目清單返回的projectId爲準
         :type ProjectId: int
-        :param AutoRenew: 自動續約标識。0 - 預設狀态（手動續約）；1 - 自動續約；2 - 明确不自動續約
+        :param AutoRenew: 自動續約標識。0 - 預設狀态（手動續約）；1 - 自動續約；2 - 明确不自動續約
         :type AutoRenew: int
         :param SecurityGroupIdList: 安全組id數組
         :type SecurityGroupIdList: list of str
@@ -466,7 +466,7 @@ class DeleteInstanceAccountRequest(AbstractModel):
         """
         :param InstanceId: 實例ID
         :type InstanceId: str
-        :param AccountName: 子賬号名稱
+        :param AccountName: 子賬號名稱
         :type AccountName: str
         """
         self.InstanceId = None
@@ -670,10 +670,10 @@ class DescribeInstanceAccountResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Accounts: 賬号詳細訊息
+        :param Accounts: 賬號詳細訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Accounts: list of Account
-        :param TotalCount: 賬号個數
+        :param TotalCount: 賬號個數
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -807,7 +807,7 @@ class DescribeInstanceDTSInfoResponse(AbstractModel):
         :param SrcInfo: 源實例訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SrcInfo: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstanceDTSInstanceInfo`
-        :param DstInfo: 目标實例訊息
+        :param DstInfo: 目標實例訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DstInfo: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstanceDTSInstanceInfo`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -1556,19 +1556,19 @@ class DescribeInstancesRequest(AbstractModel):
         :type OrderBy: str
         :param OrderType: 1倒序，0順序，預設倒序
         :type OrderType: int
-        :param VpcIds: 私有網絡ID數組，數組下标從0開始，如果不傳則預設選擇基礎網絡，如：47525
+        :param VpcIds: 私有網絡ID數組，數組下標從0開始，如果不傳則預設選擇基礎網絡，如：47525
         :type VpcIds: list of str
-        :param SubnetIds: 子網ID數組，數組下标從0開始，如：56854
+        :param SubnetIds: 子網ID數組，數組下標從0開始，如：56854
         :type SubnetIds: list of str
-        :param ProjectIds: 項目ID 組成的數組，數組下标從0開始
+        :param ProjectIds: 項目ID 組成的數組，數組下標從0開始
         :type ProjectIds: list of int
         :param SearchKey: 查找實例的ID。
         :type SearchKey: str
         :param InstanceName: 實例名稱
         :type InstanceName: str
-        :param UniqVpcIds: 私有網絡ID數組，數組下标從0開始，如果不傳則預設選擇基礎網絡，如：vpc-sad23jfdfk
+        :param UniqVpcIds: 私有網絡ID數組，數組下標從0開始，如果不傳則預設選擇基礎網絡，如：vpc-sad23jfdfk
         :type UniqVpcIds: list of str
-        :param UniqSubnetIds: 子網ID數組，數組下标從0開始，如：subnet-fdj24n34j2
+        :param UniqSubnetIds: 子網ID數組，數組下標從0開始，如：subnet-fdj24n34j2
         :type UniqSubnetIds: list of str
         :param RegionIds: 地域ID，已經棄用，可通過公共參數Region查詢對應地域
         :type RegionIds: list of int
@@ -2091,7 +2091,7 @@ class DisableReplicaReadonlyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例序号ID
+        :param InstanceId: 實例序號ID
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -2171,9 +2171,9 @@ class EnableReplicaReadonlyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例序号ID
+        :param InstanceId: 實例序號ID
         :type InstanceId: str
-        :param ReadonlyPolicy: 賬号路由策略：填寫master或者replication，表示路由主節點，從節點；不填路由策略預設爲寫主節點，讀從節點
+        :param ReadonlyPolicy: 賬號路由策略：填寫master或者replication，表示路由主節點，從節點；不填路由策略預設爲寫主節點，讀從節點
         :type ReadonlyPolicy: list of str
         """
         self.InstanceId = None
@@ -2827,7 +2827,7 @@ class InstanceSet(AbstractModel):
         :type Status: int
         :param WanIp: 實例vip
         :type WanIp: str
-        :param Port: 實例端口号
+        :param Port: 實例端口號
         :type Port: int
         :param Createtime: 實例創建時間
         :type Createtime: str
@@ -2837,7 +2837,7 @@ class InstanceSet(AbstractModel):
         :type SizeUsed: float
         :param Type: 實例類型，1：Redis2.8集群版；2：Redis2.8主從版；3：CKV主從版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8單機版；6：Redis4.0主從版；7：Redis4.0集群版；
         :type Type: int
-        :param AutoRenewFlag: 實例是否設置自動續約标識，1：設置自動續約；0：未設置自動續約
+        :param AutoRenewFlag: 實例是否設置自動續約標識，1：設置自動續約；0：未設置自動續約
         :type AutoRenewFlag: int
         :param DeadlineTime: 實例到期時間
         :type DeadlineTime: str
@@ -2857,7 +2857,7 @@ class InstanceSet(AbstractModel):
         :type OfflineTime: str
         :param SubStatus: 流程中的實例，返回子狀态
         :type SubStatus: int
-        :param Tags: 反親和性标簽
+        :param Tags: 反親和性標簽
         :type Tags: list of str
         :param InstanceNode: 實例節點訊息
         :type InstanceNode: list of InstanceNode
@@ -2873,7 +2873,7 @@ class InstanceSet(AbstractModel):
         :type CloseTime: str
         :param SlaveReadWeight: 從節點讀取權重
         :type SlaveReadWeight: int
-        :param InstanceTags: 實例關聯的标簽訊息
+        :param InstanceTags: 實例關聯的標簽訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceTags: list of InstanceTagInfo
         :param ProjectName: 項目名稱
@@ -2891,10 +2891,10 @@ class InstanceSet(AbstractModel):
         :param NetLimit: 分片頻寬上限，單位MB
 注意：此欄位可能返回 null，表示取不到有效值。
         :type NetLimit: int
-        :param PasswordFree: 免密實例标識（内部參數，用戶可忽略）
+        :param PasswordFree: 免密實例標識（内部參數，用戶可忽略）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PasswordFree: int
-        :param ReadOnly: 實例只讀标識（内部參數，用戶可忽略）
+        :param ReadOnly: 實例只讀標識（内部參數，用戶可忽略）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ReadOnly: int
         :param Vip6: 内部參數，用戶可忽略
@@ -3039,15 +3039,15 @@ class InstanceSlowlogDetail(AbstractModel):
 
 
 class InstanceTagInfo(AbstractModel):
-    """實例标簽訊息
+    """實例標簽訊息
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -3301,17 +3301,17 @@ class ModifyInstanceAccountRequest(AbstractModel):
         """
         :param InstanceId: 實例ID
         :type InstanceId: str
-        :param AccountName: 子賬号名稱，如果要修改主賬号，填root
+        :param AccountName: 子賬號名稱，如果要修改主賬號，填root
         :type AccountName: str
-        :param AccountPassword: 子賬号密碼
+        :param AccountPassword: 子賬號密碼
         :type AccountPassword: str
-        :param Remark: 子賬号描述訊息
+        :param Remark: 子賬號描述訊息
         :type Remark: str
-        :param ReadonlyPolicy: 子賬号路由策略：填寫master或者slave，表示路由主節點，從節點
+        :param ReadonlyPolicy: 子賬號路由策略：填寫master或者slave，表示路由主節點，從節點
         :type ReadonlyPolicy: list of str
-        :param Privilege: 子賬号讀寫策略：填寫r、w、rw，表示只讀，只寫，讀寫策略
+        :param Privilege: 子賬號讀寫策略：填寫r、w、rw，表示只讀，只寫，讀寫策略
         :type Privilege: str
-        :param NoAuth: true表示将主賬号切換爲免密賬号，這裏只适用于主賬号，子賬号不可免密
+        :param NoAuth: true表示将主賬號切換爲免密賬號，這裏只适用於主賬號，子賬號不可免密
         :type NoAuth: bool
         """
         self.InstanceId = None
@@ -3412,7 +3412,7 @@ class ModifyInstanceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Operation: 修改實例操作，如填寫：rename-表示實例重命名；modifyProject-修改實例所屬項目；modifyAutoRenew-修改實例續約标記
+        :param Operation: 修改實例操作，如填寫：rename-表示實例重命名；modifyProject-修改實例所屬項目；modifyAutoRenew-修改實例續約標記
         :type Operation: str
         :param InstanceIds: 實例Id
         :type InstanceIds: list of str
@@ -3420,7 +3420,7 @@ class ModifyInstanceRequest(AbstractModel):
         :type InstanceNames: list of str
         :param ProjectId: 項目Id
         :type ProjectId: int
-        :param AutoRenews: 自動續約标識。0 - 預設狀态（手動續約）；1 - 自動續約；2 - 明确不自動續約
+        :param AutoRenews: 自動續約標識。0 - 預設狀态（手動續約）；1 - 自動續約；2 - 明确不自動續約
         :type AutoRenews: list of int
         :param InstanceId: 已經廢棄
         :type InstanceId: str
@@ -3918,7 +3918,7 @@ class SecurityGroupDetail(AbstractModel):
         :type SecurityGroupId: str
         :param SecurityGroupName: 安全組名稱
         :type SecurityGroupName: str
-        :param SecurityGroupRemark: 安全組标記
+        :param SecurityGroupRemark: 安全組標記
         :type SecurityGroupRemark: str
         :param InboundRule: 安全組入站規則
         :type InboundRule: list of SecurityGroupsInboundAndOutbound
@@ -3965,7 +3965,7 @@ class SecurityGroupsInboundAndOutbound(AbstractModel):
         :type Action: str
         :param Ip: IP網址
         :type Ip: str
-        :param Port: 端口号
+        :param Port: 端口號
         :type Port: str
         :param Proto: 協議類型
         :type Proto: str
@@ -4076,9 +4076,9 @@ class SwitchInstanceVipRequest(AbstractModel):
         """
         :param SrcInstanceId: 源實例ID
         :type SrcInstanceId: str
-        :param DstInstanceId: 目标實例ID
+        :param DstInstanceId: 目標實例ID
         :type DstInstanceId: str
-        :param TimeDelay: 單位爲秒。源實例與目标實例間DTS已斷開時間，如果DTS斷開時間大于TimeDelay，則不切換VIP，建議盡量根據業務設置一個可接受的值。
+        :param TimeDelay: 單位爲秒。源實例與目標實例間DTS已斷開時間，如果DTS斷開時間大於TimeDelay，則不切換VIP，建議盡量根據業務設置一個可接受的值。
         :type TimeDelay: int
         :param ForceSwitch: 在DTS斷開的情況下是否強制切換。1：強制切換，0：不強制切換
         :type ForceSwitch: int
@@ -4186,7 +4186,7 @@ class TradeDealDetail(AbstractModel):
 
     def __init__(self):
         """
-        :param DealId: 訂單号ID，調用雲API時使用此ID
+        :param DealId: 訂單號ID，調用雲API時使用此ID
         :type DealId: str
         :param DealName: 長訂單ID，反饋訂單問題給官方客服使用此ID
         :type DealName: str

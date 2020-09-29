@@ -28,7 +28,7 @@ class CmsClient(AbstractClient):
     def AudioModeration(self, request):
         """音訊内容檢測（Audio Moderation, AM）服務使用了波形分析、聲紋分析等技術，能識别涉黃、涉政、涉恐等違規音訊，同時支援用戶配置音訊黑庫，打擊自定義的違規内容。
 
-        通過API直接上傳音訊即可進行檢測，對于高危部分直接屏蔽，可疑部分人工複審，從而節省審核人力，釋放業務風險。
+        通過API直接上傳音訊即可進行檢測，對於高危部分直接屏蔽，可疑部分人工複審，從而節省審核人力，釋放業務風險。
 
         :param request: 調用AudioModeration所需參數的結構體。
         :type request: :class:`taifucloudcloud.cms.v20190321.models.AudioModerationRequest`
@@ -85,7 +85,7 @@ class CmsClient(AbstractClient):
 
     def ImageModeration(self, request):
         """圖片内容檢測服務（Image Moderation, IM）能自動掃描圖片，識别涉黃、涉恐、涉政、涉毒等有害内容，同時支援用戶配置圖片黑名單，打擊自定義的違規圖片。
-        通過API獲取檢測的标簽及置信度，可直接采信高置信度的結果，人工複審低置信度的結果，從而降低人工成本，提高審核效率。
+        通過API獲取檢測的標簽及置信度，可直接采信高置信度的結果，人工複審低置信度的結果，從而降低人工成本，提高審核效率。
 
         :param request: 調用ImageModeration所需參數的結構體。
         :type request: :class:`taifucloudcloud.cms.v20190321.models.ImageModerationRequest`
@@ -114,7 +114,7 @@ class CmsClient(AbstractClient):
 
     def TextModeration(self, request):
         """文本内容檢測（Text Moderation）服務使用了深度學習技術，識别涉黃、涉政、涉恐等有害内容，同時支援用戶配置詞庫，打擊自定義的違規文本。
-        通過API介面，能檢測内容的危險等級，對于高危部分直接過濾，可疑部分人工複審，從而節省審核人力，釋放業務風險。
+        通過API介面，能檢測内容的危險等級，對於高危部分直接過濾，可疑部分人工複審，從而節省審核人力，釋放業務風險。
 
         :param request: 調用TextModeration所需參數的結構體。
         :type request: :class:`taifucloudcloud.cms.v20190321.models.TextModerationRequest`
@@ -143,7 +143,7 @@ class CmsClient(AbstractClient):
 
     def VideoModeration(self, request):
         """視訊内容檢測（Video Moderation, VM）服務能識别涉黃、涉政、涉恐等違規視訊，同時支援用戶配置視訊黑庫，打擊自定義的違規内容。
-        通過API直接上傳視訊即可進行檢測，對于高危部分直接過濾，可疑部分人工複審，從而節省審核人力，釋放業務風險。
+        通過API直接上傳視訊即可進行檢測，對於高危部分直接過濾，可疑部分人工複審，從而節省審核人力，釋放業務風險。
 
         :param request: 調用VideoModeration所需參數的結構體。
         :type request: :class:`taifucloudcloud.cms.v20190321.models.VideoModerationRequest`

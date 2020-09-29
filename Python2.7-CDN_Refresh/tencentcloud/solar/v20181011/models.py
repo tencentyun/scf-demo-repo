@@ -26,7 +26,7 @@ class ActivityInfo(AbstractModel):
         :param TemplateId: 活動使用範本id
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TemplateId: str
-        :param ActivityTitle: 活動标題
+        :param ActivityTitle: 活動標題
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ActivityTitle: str
         :param ActivityDesc: 活動描述
@@ -261,7 +261,7 @@ class CustomerInfo(AbstractModel):
         :param LastActiveTime: 最活躍時間
 注意：此欄位可能返回 null，表示取不到有效值。
         :type LastActiveTime: str
-        :param MarkFlag: 是否星标客戶
+        :param MarkFlag: 是否星標客戶
 注意：此欄位可能返回 null，表示取不到有效值。
         :type MarkFlag: str
         :param MonthActive: 30天活躍度
@@ -270,7 +270,7 @@ class CustomerInfo(AbstractModel):
         :param MonthRecommend: 30天推薦度
 注意：此欄位可能返回 null，表示取不到有效值。
         :type MonthRecommend: int
-        :param Phone: 手機号
+        :param Phone: 手機號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Phone: str
         :param Province: 最近記錄 
@@ -279,7 +279,7 @@ class CustomerInfo(AbstractModel):
         :param RealName: 姓名
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RealName: str
-        :param RelChannelFlag: 員工标識 0 未關聯 1 已關聯
+        :param RelChannelFlag: 員工標識 0 未關聯 1 已關聯
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RelChannelFlag: int
         :param Sex: 性别 1男 2女
@@ -437,10 +437,10 @@ class DescribeCustomerResponse(AbstractModel):
         :param LastActiveTime: 上次登入時間
 注意：此欄位可能返回 null，表示取不到有效值。
         :type LastActiveTime: str
-        :param MarkFlag: 是否星标 1是 0否
+        :param MarkFlag: 是否星標 1是 0否
 注意：此欄位可能返回 null，表示取不到有效值。
         :type MarkFlag: str
-        :param Model: 手機型号
+        :param Model: 手機型號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Model: str
         :param OpenId:  openid
@@ -449,10 +449,10 @@ class DescribeCustomerResponse(AbstractModel):
         :param PayFeature: 消費特點
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PayFeature: str
-        :param Phone: 手機号
+        :param Phone: 手機號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Phone: str
-        :param PhoneList: 手機号碼清單
+        :param PhoneList: 手機號碼清單
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PhoneList: str
         :param Province: 最近記錄 
@@ -461,7 +461,7 @@ class DescribeCustomerResponse(AbstractModel):
         :param RealName: 姓名
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RealName: str
-        :param RelChannelFlag: 員工标識 0：非員工 1：員工
+        :param RelChannelFlag: 員工標識 0：非員工 1：員工
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RelChannelFlag: str
         :param Remark: 備注
@@ -473,7 +473,7 @@ class DescribeCustomerResponse(AbstractModel):
         :param SourceAudienceVo: 最初來源
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SourceAudienceVo: str
-        :param SubWechats: 關注公衆号清單
+        :param SubWechats: 關注公衆號清單
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SubWechats: list of str
         :param UnionId:  unionid
@@ -576,11 +576,11 @@ class DescribeCustomersRequest(AbstractModel):
         :type QueryType: str
         :param GroupId: 分組ID
         :type GroupId: str
-        :param MarkFlag: 是否星級标記 1是 0否
+        :param MarkFlag: 是否星級標記 1是 0否
         :type MarkFlag: int
-        :param TagIds: 客戶标簽，多個标簽用逗号隔開
+        :param TagIds: 客戶標簽，多個標簽用逗號隔開
         :type TagIds: str
-        :param RelChannelFlag: 員工标識篩選，0：非員工，1：員工
+        :param RelChannelFlag: 員工標識篩選，0：非員工，1：員工
         :type RelChannelFlag: str
         :param NeedPhoneFlag: 必須存在手機 1是 0否
         :type NeedPhoneFlag: int
@@ -848,7 +848,7 @@ class DescribeResourceTemplateHeadersRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param WxAppId:  公衆号appId
+        :param WxAppId:  公衆號appId
         :type WxAppId: str
         """
         self.WxAppId = None
@@ -919,13 +919,13 @@ class DescribeSubProjectResponse(AbstractModel):
         :param ActivityInfo: 活動訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ActivityInfo: :class:`taifucloudcloud.solar.v20181011.models.ActivityInfo`
-        :param ShareTitle: 分享标題
+        :param ShareTitle: 分享標題
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ShareTitle: str
         :param ShareDesc: 分享描述
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ShareDesc: str
-        :param ShareImg: 分享圖标
+        :param ShareImg: 分享圖標
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ShareImg: str
         :param HasStrategy: 是否已創建策略
@@ -934,10 +934,10 @@ class DescribeSubProjectResponse(AbstractModel):
         :param SubProjectStatus: 子項目狀态
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SubProjectStatus: str
-        :param ShareAppId: 分享公衆号的appId
+        :param ShareAppId: 分享公衆號的appId
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ShareAppId: str
-        :param ShareWsId: 分享公衆号的wsId
+        :param ShareWsId: 分享公衆號的wsId
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ShareWsId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -1305,7 +1305,7 @@ class ReplenishProjectStockResponse(AbstractModel):
 
 
 class ResourceTemplateHeader(AbstractModel):
-    """素材範本訊息标題的樣例清單
+    """素材範本訊息標題的樣例清單
 
     """
 
@@ -1322,7 +1322,7 @@ class ResourceTemplateHeader(AbstractModel):
         :type KeyArray: str
         :param TemplateId: 範本id
         :type TemplateId: str
-        :param Title: 範本标題
+        :param Title: 範本標題
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Title: str
         """
@@ -1360,7 +1360,7 @@ class SendWxTouchTaskRequest(AbstractModel):
         :type TaskName: str
         :param WxTouchType:  觸達類型，text, news, smallapp, tmplmsg
         :type WxTouchType: str
-        :param Title: 标題
+        :param Title: 標題
         :type Title: str
         :param Content: 文本内容
         :type Content: str
@@ -1370,7 +1370,7 @@ class SendWxTouchTaskRequest(AbstractModel):
         :type SmallProgramId: str
         :param TemplateId: 範本訊息ID
         :type TemplateId: str
-        :param WxAppId:  公衆号appId
+        :param WxAppId:  公衆號appId
         :type WxAppId: str
         """
         self.GroupId = None

@@ -65,7 +65,7 @@ class Backend(AbstractModel):
 
     def __init__(self):
         """
-        :param Type: 轉發目标的類型，目前僅可取值爲 CVM
+        :param Type: 轉發目標的類型，目前僅可取值爲 CVM
         :type Type: str
         :param InstanceId: 雲伺服器的唯一 ID，可通過 DescribeInstances 介面返回欄位中的 unInstanceId 欄位獲取
         :type InstanceId: str
@@ -368,7 +368,7 @@ class ClassicalTarget(AbstractModel):
 
     def __init__(self):
         """
-        :param Type: 轉發目标的類型，目前僅可取值爲 CVM
+        :param Type: 轉發目標的類型，目前僅可取值爲 CVM
         :type Type: str
         :param InstanceId: 雲伺服器的唯一 ID，可通過 DescribeInstances 介面返回欄位中的 unInstanceId 欄位獲取
         :type InstanceId: str
@@ -443,16 +443,16 @@ class CreateListenerRequest(AbstractModel):
         :type Protocol: str
         :param ListenerNames: 要創建的監聽器名稱清單，名稱與Ports數組按序一一對應，如不需立即命名，則無需提供此參數
         :type ListenerNames: list of str
-        :param HealthCheck: 健康檢查相關參數，此參數僅适用于TCP/UDP/TCP_SSL監聽器
+        :param HealthCheck: 健康檢查相關參數，此參數僅适用於TCP/UDP/TCP_SSL監聽器
         :type HealthCheck: :class:`taifucloudcloud.clb.v20180317.models.HealthCheck`
-        :param Certificate: 證書相關訊息，此參數僅适用于HTTPS/TCP_SSL監聽器
+        :param Certificate: 證書相關訊息，此參數僅适用於HTTPS/TCP_SSL監聽器
         :type Certificate: :class:`taifucloudcloud.clb.v20180317.models.CertificateInput`
-        :param SessionExpireTime: 會話保持時間，單位：秒。可選值：30~3600，預設 0，表示不開啓。此參數僅适用于TCP/UDP監聽器。
+        :param SessionExpireTime: 會話保持時間，單位：秒。可選值：30~3600，預設 0，表示不開啓。此參數僅适用於TCP/UDP監聽器。
         :type SessionExpireTime: int
         :param Scheduler: 監聽器轉發的方式。可選值：WRR、LEAST_CONN
-分别表示按權重輪詢、最小連接數， 預設爲 WRR。此參數僅适用于TCP/UDP/TCP_SSL監聽器。
+分别表示按權重輪詢、最小連接數， 預設爲 WRR。此參數僅适用於TCP/UDP/TCP_SSL監聽器。
         :type Scheduler: str
-        :param SniSwitch: 是否開啓SNI特性，此參數僅适用于HTTPS監聽器。
+        :param SniSwitch: 是否開啓SNI特性，此參數僅适用於HTTPS監聽器。
         :type SniSwitch: int
         """
         self.LoadBalancerId = None
@@ -489,7 +489,7 @@ class CreateListenerResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param ListenerIds: 創建的監聽器的唯一标識數組
+        :param ListenerIds: 創建的監聽器的唯一標識數組
         :type ListenerIds: list of str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -522,7 +522,7 @@ OPEN：公網屬性， INTERNAL：内網屬性。
         :type VpcId: str
         :param SubnetId: 在私有網絡内購買内網負載均衡實例的時候需要指定子網 ID，内網負載均衡實例的 VIP 将從這個子網中産生。其他情況不用填寫該欄位。
         :type SubnetId: str
-        :param ProjectId: 負載均衡實例所屬的項目 ID，可以通過 DescribeProject 介面獲取。不填則屬于預設項目。
+        :param ProjectId: 負載均衡實例所屬的項目 ID，可以通過 DescribeProject 介面獲取。不填則屬於預設項目。
         :type ProjectId: int
         """
         self.LoadBalancerType = None
@@ -693,7 +693,7 @@ class DeleteRewriteRequest(AbstractModel):
         :type LoadBalancerId: str
         :param SourceListenerId: 源監聽器ID
         :type SourceListenerId: str
-        :param TargetListenerId: 目标監聽器ID
+        :param TargetListenerId: 目標監聽器ID
         :type TargetListenerId: str
         :param RewriteInfos: 轉發規則之間的重定向關系
         :type RewriteInfos: list of RewriteLocationMap
@@ -836,9 +836,9 @@ class DeregisterTargetsRequest(AbstractModel):
         :type Targets: list of Target
         :param LocationId: 轉發規則的ID，當從七層轉發規則解綁機器時，必須提供此參數或Domain+Url兩者之一
         :type LocationId: str
-        :param Domain: 目标規則的域名，提供LocationId參數時本參數不生效
+        :param Domain: 目標規則的域名，提供LocationId參數時本參數不生效
         :type Domain: str
-        :param Url: 目标規則的URL，提供LocationId參數時本參數不生效
+        :param Url: 目標規則的URL，提供LocationId參數時本參數不生效
         :type Url: str
         """
         self.LoadBalancerId = None
@@ -1452,17 +1452,17 @@ class HealthCheck(AbstractModel):
         :param UnHealthNum: 不健康阈值，預設值：3，表示當連續探測三次不健康則表示該轉發異常，可選值：2~10，單位：次。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type UnHealthNum: int
-        :param HttpCode: 健康檢查狀态碼（僅适用于HTTP/HTTPS轉發規則）。可選值：1~31，預設 31。
+        :param HttpCode: 健康檢查狀态碼（僅适用於HTTP/HTTPS轉發規則）。可選值：1~31，預設 31。
 1 表示探測後返回值 1xx 表示健康，2 表示返回 2xx 表示健康，4 表示返回 3xx 表示健康，8 表示返回 4xx 表示健康，16 表示返回 5xx 表示健康。若希望多種碼都表示健康，則将相應的值相加。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type HttpCode: int
-        :param HttpCheckPath: 健康檢查路徑（僅适用于HTTP/HTTPS轉發規則）。
+        :param HttpCheckPath: 健康檢查路徑（僅适用於HTTP/HTTPS轉發規則）。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type HttpCheckPath: str
-        :param HttpCheckDomain: 健康檢查域名（僅适用于HTTP/HTTPS轉發規則）。
+        :param HttpCheckDomain: 健康檢查域名（僅适用於HTTP/HTTPS轉發規則）。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type HttpCheckDomain: str
-        :param HttpCheckMethod: 健康檢查方法（僅适用于HTTP/HTTPS轉發規則），取值爲HEAD或GET。
+        :param HttpCheckMethod: 健康檢查方法（僅适用於HTTP/HTTPS轉發規則），取值爲HEAD或GET。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type HttpCheckMethod: str
         """
@@ -1514,10 +1514,10 @@ class Listener(AbstractModel):
         :param SessionExpireTime: 會話保持時間
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SessionExpireTime: int
-        :param SniSwitch: 是否開啓SNI特性（本參數僅對于HTTPS監聽器有意義）
+        :param SniSwitch: 是否開啓SNI特性（本參數僅對於HTTPS監聽器有意義）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SniSwitch: int
-        :param Rules: 監聽器下的全部轉發規則（本參數僅對于HTTP/HTTPS監聽器有意義）
+        :param Rules: 監聽器下的全部轉發規則（本參數僅對於HTTP/HTTPS監聽器有意義）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Rules: list of RuleOutput
         :param ListenerName: 監聽器的名稱
@@ -1571,10 +1571,10 @@ class ListenerBackend(AbstractModel):
         :type Protocol: str
         :param Port: 監聽器的端口
         :type Port: int
-        :param Rules: 監聽器下的規則訊息（僅适用于HTTP/HTTPS監聽器）
+        :param Rules: 監聽器下的規則訊息（僅适用於HTTP/HTTPS監聽器）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Rules: list of RuleTargets
-        :param Targets: 監聽器上注冊的機器清單（僅适用于TCP/UDP/TCP_SSL監聽器）
+        :param Targets: 監聽器上注冊的機器清單（僅适用於TCP/UDP/TCP_SSL監聽器）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Targets: list of Backend
         """
@@ -1657,7 +1657,7 @@ class LoadBalancer(AbstractModel):
         :param LoadBalancerType: 負載均衡實例的網絡類型：
 OPEN：公網屬性， INTERNAL：内網屬性。
         :type LoadBalancerType: str
-        :param Forward: 應用型負載均衡标識，1：應用型負載均衡，0：傳統型的負載均衡。
+        :param Forward: 應用型負載均衡標識，1：應用型負載均衡，0：傳統型的負載均衡。
         :type Forward: int
         :param Domain: 負載均衡實例的域名，内網類型負載均衡以及應用型負載均衡實例不提供該欄位
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -1680,7 +1680,7 @@ OPEN：公網屬性， INTERNAL：内網屬性。
         :param VpcId: 私有網絡的 ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type VpcId: str
-        :param OpenBgp: 高防 LB 的标識，1：高防負載均衡 0：非高防負載均衡。
+        :param OpenBgp: 高防 LB 的標識，1：高防負載均衡 0：非高防負載均衡。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OpenBgp: int
         :param Snat: 在 2016 年 12 月份之前的傳統型内網負載均衡都是開啓了 snat 的。
@@ -1695,7 +1695,7 @@ OPEN：公網屬性， INTERNAL：内網屬性。
         :param SubnetId: 負載均衡實例所在的子網（僅對内網VPC型LB有意義）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SubnetId: str
-        :param Tags: 負載均衡實例的标簽訊息
+        :param Tags: 負載均衡實例的標簽訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of TagInfo
         :param SecureGroups: 負載均衡實例的安全組
@@ -1704,7 +1704,7 @@ OPEN：公網屬性， INTERNAL：内網屬性。
         :param TargetRegionInfo: 負載均衡實例綁定的後端設備的基本訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TargetRegionInfo: :class:`taifucloudcloud.clb.v20180317.models.TargetRegionInfo`
-        :param AnycastZone: anycast負載均衡的發布域，對于非anycast的負載均衡，此欄位返回爲空字串
+        :param AnycastZone: anycast負載均衡的發布域，對於非anycast的負載均衡，此欄位返回爲空字串
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AnycastZone: str
         :param AddressIPVersion: IP版本，ipv4 | ipv6
@@ -1813,7 +1813,7 @@ class ManualRewriteRequest(AbstractModel):
         :type LoadBalancerId: str
         :param SourceListenerId: 源監聽器ID
         :type SourceListenerId: str
-        :param TargetListenerId: 目标監聽器ID
+        :param TargetListenerId: 目標監聽器ID
         :type TargetListenerId: str
         :param RewriteInfos: 轉發規則之間的重定向關系
         :type RewriteInfos: list of RewriteLocationMap
@@ -1912,11 +1912,11 @@ class ModifyListenerRequest(AbstractModel):
         :type ListenerId: str
         :param ListenerName: 新的監聽器名稱
         :type ListenerName: str
-        :param SessionExpireTime: 會話保持時間，單位：秒。可選值：30~3600，預設 0，表示不開啓。此參數僅适用于TCP/UDP監聽器。
+        :param SessionExpireTime: 會話保持時間，單位：秒。可選值：30~3600，預設 0，表示不開啓。此參數僅适用於TCP/UDP監聽器。
         :type SessionExpireTime: int
-        :param HealthCheck: 健康檢查相關參數，此參數僅适用于TCP/UDP/TCP_SSL監聽器
+        :param HealthCheck: 健康檢查相關參數，此參數僅适用於TCP/UDP/TCP_SSL監聽器
         :type HealthCheck: :class:`taifucloudcloud.clb.v20180317.models.HealthCheck`
-        :param Certificate: 證書相關訊息，此參數僅适用于HTTPS/TCP_SSL監聽器
+        :param Certificate: 證書相關訊息，此參數僅适用於HTTPS/TCP_SSL監聽器
         :type Certificate: :class:`taifucloudcloud.clb.v20180317.models.CertificateInput`
         :param Scheduler: 監聽器轉發的方式。可選值：WRR、LEAST_CONN
 分别表示按權重輪詢、最小連接數， 預設爲 WRR。
@@ -2083,9 +2083,9 @@ class ModifyTargetPortRequest(AbstractModel):
         :type NewPort: int
         :param LocationId: 轉發規則的ID
         :type LocationId: str
-        :param Domain: 目标規則的域名，提供LocationId參數時本參數不生效
+        :param Domain: 目標規則的域名，提供LocationId參數時本參數不生效
         :type Domain: str
-        :param Url: 目标規則的URL，提供LocationId參數時本參數不生效
+        :param Url: 目標規則的URL，提供LocationId參數時本參數不生效
         :type Url: str
         """
         self.LoadBalancerId = None
@@ -2144,9 +2144,9 @@ class ModifyTargetWeightRequest(AbstractModel):
         :type Weight: int
         :param LocationId: 轉發規則的ID，當綁定機器到七層轉發規則時，必須提供此參數或Domain+Url兩者之一
         :type LocationId: str
-        :param Domain: 目标規則的域名，提供LocationId參數時本參數不生效
+        :param Domain: 目標規則的域名，提供LocationId參數時本參數不生效
         :type Domain: str
-        :param Url: 目标規則的URL，提供LocationId參數時本參數不生效
+        :param Url: 目標規則的URL，提供LocationId參數時本參數不生效
         :type Url: str
         :param Targets: 要修改權重的後端機器清單
         :type Targets: list of Target
@@ -2207,9 +2207,9 @@ class RegisterTargetsRequest(AbstractModel):
         :type Targets: list of Target
         :param LocationId: 轉發規則的ID，當注冊機器到七層轉發規則時，必須提供此參數或Domain+Url兩者之一
         :type LocationId: str
-        :param Domain: 目标規則的域名，提供LocationId參數時本參數不生效
+        :param Domain: 目標規則的域名，提供LocationId參數時本參數不生效
         :type Domain: str
-        :param Url: 目标規則的URL，提供LocationId參數時本參數不生效
+        :param Url: 目標規則的URL，提供LocationId參數時本參數不生效
         :type Url: str
         """
         self.LoadBalancerId = None
@@ -2303,7 +2303,7 @@ class RewriteLocationMap(AbstractModel):
         """
         :param SourceLocationId: 源轉發規則ID
         :type SourceLocationId: str
-        :param TargetLocationId: 重定向至的目标轉發規則ID
+        :param TargetLocationId: 重定向至的目標轉發規則ID
         :type TargetLocationId: str
         """
         self.SourceLocationId = None
@@ -2316,17 +2316,17 @@ class RewriteLocationMap(AbstractModel):
 
 
 class RewriteTarget(AbstractModel):
-    """重定向目标的訊息
+    """重定向目標的訊息
 
     """
 
     def __init__(self):
         """
-        :param TargetListenerId: 重定向目标的監聽器ID
+        :param TargetListenerId: 重定向目標的監聽器ID
 注意：此欄位可能返回 null，表示無重定向。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TargetListenerId: str
-        :param TargetLocationId: 重定向目标的轉發規則ID
+        :param TargetLocationId: 重定向目標的轉發規則ID
 注意：此欄位可能返回 null，表示無重定向。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TargetLocationId: str
@@ -2353,9 +2353,9 @@ class RsWeightRule(AbstractModel):
         :type LocationId: str
         :param Targets: 要修改權重的後端機器清單
         :type Targets: list of Target
-        :param Domain: 目标規則的域名，提供LocationId參數時本參數不生效
+        :param Domain: 目標規則的域名，提供LocationId參數時本參數不生效
         :type Domain: str
-        :param Url: 目标規則的URL，提供LocationId參數時本參數不生效
+        :param Url: 目標規則的URL，提供LocationId參數時本參數不生效
         :type Url: str
         :param Weight: 後端雲伺服器新的轉發權重，取值範圍：0~100。
         :type Weight: int
@@ -2487,7 +2487,7 @@ class RuleOutput(AbstractModel):
         :type Scheduler: str
         :param ListenerId: 轉發規則所屬的監聽器 ID
         :type ListenerId: str
-        :param RewriteTarget: 轉發規則的重定向目标訊息
+        :param RewriteTarget: 轉發規則的重定向目標訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RewriteTarget: :class:`taifucloudcloud.clb.v20180317.models.RewriteTarget`
         :param HttpGzip: 是否開啓gzip
@@ -2610,15 +2610,15 @@ class SetLoadBalancerSecurityGroupsResponse(AbstractModel):
 
 
 class TagInfo(AbstractModel):
-    """負載均衡的标簽訊息
+    """負載均衡的標簽訊息
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽的鍵
+        :param TagKey: 標簽的鍵
         :type TagKey: str
-        :param TagValue: 标簽的值
+        :param TagValue: 標簽的值
         :type TagValue: str
         """
         self.TagKey = None
@@ -2631,7 +2631,7 @@ class TagInfo(AbstractModel):
 
 
 class Target(AbstractModel):
-    """轉發目标，即綁定在負載均衡上的後端機器
+    """轉發目標，即綁定在負載均衡上的後端機器
 
     """
 
@@ -2643,7 +2643,7 @@ class Target(AbstractModel):
         :param Port: 後端雲伺服器監聽端口
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Port: int
-        :param Type: 轉發目标的類型，目前僅可取值爲 CVM
+        :param Type: 轉發目標的類型，目前僅可取值爲 CVM
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Type: str
         :param Weight: 後端雲伺服器的轉發權重，取值範圍：0~100，預設爲 10。

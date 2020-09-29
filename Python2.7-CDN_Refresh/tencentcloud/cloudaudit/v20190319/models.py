@@ -23,7 +23,7 @@ class AttributeKeyDetail(AbstractModel):
 
     def __init__(self):
         """
-        :param Label: 中文标簽
+        :param Label: 中文標簽
         :type Label: str
         :param LabelType: 輸入框類型
         :type LabelType: str
@@ -139,19 +139,19 @@ class CreateAuditRequest(AbstractModel):
         :type IsEnableCmqNotify: int
         :param ReadWriteAttribute: 管理事件的讀寫屬性。1：只讀，2：只寫，3：全部。
         :type ReadWriteAttribute: int
-        :param CmqQueueName: 隊列名稱。隊列名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。如果IsEnableCmqNotify值是1的話，此值屬于必填欄位。如果不是新創建的隊列，雲審計不會去校驗該隊列是否真的存在，請謹慎填寫，避免日志通知不成功，導緻您的數據丢失。
+        :param CmqQueueName: 隊列名稱。隊列名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。如果IsEnableCmqNotify值是1的話，此值屬於必填欄位。如果不是新創建的隊列，雲審計不會去校驗該隊列是否真的存在，請謹慎填寫，避免日志通知不成功，導緻您的數據丢失。
         :type CmqQueueName: str
-        :param CmqRegion: 隊列所在的地域。可以通過ListCmqEnableRegion獲取支援的cmq地域。如果IsEnableCmqNotify值是1的話，此值屬于必填欄位。
+        :param CmqRegion: 隊列所在的地域。可以通過ListCmqEnableRegion獲取支援的cmq地域。如果IsEnableCmqNotify值是1的話，此值屬於必填欄位。
         :type CmqRegion: str
-        :param IsCreateNewQueue: 是否創建新的隊列。1：是，0：否。如果IsEnableCmqNotify值是1的話，此值屬于必填欄位。
+        :param IsCreateNewQueue: 是否創建新的隊列。1：是，0：否。如果IsEnableCmqNotify值是1的話，此值屬於必填欄位。
         :type IsCreateNewQueue: int
         :param IsEnableKmsEncry: 是否開啓kms加密。1：是，0：否。如果開啓KMS加密，數據在投遞到cos時，會将數據加密。
         :type IsEnableKmsEncry: int
-        :param KeyId: CMK的全局唯一标識符，如果不是新創建的kms，該值是必填值。可以通過ListKeyAliasByRegion來獲取。雲審計不會校驗KeyId的合法性，請您謹慎填寫，避免給您的數據造成損失。
+        :param KeyId: CMK的全局唯一標識符，如果不是新創建的kms，該值是必填值。可以通過ListKeyAliasByRegion來獲取。雲審計不會校驗KeyId的合法性，請您謹慎填寫，避免給您的數據造成損失。
         :type KeyId: str
         :param KmsRegion: kms地域。目前支援的地域可以使用ListKmsEnableRegion來獲取。必須要和cos的地域保持一緻。
         :type KmsRegion: str
-        :param LogFilePrefix: 日志文件前綴。3-40個字元，只能包含 ASCII 編碼字母 a-z，A-Z，數字 0-9。可以不填，預設以賬号ID作爲日志前綴。
+        :param LogFilePrefix: 日志文件前綴。3-40個字元，只能包含 ASCII 編碼字母 a-z，A-Z，數字 0-9。可以不填，預設以賬號ID作爲日志前綴。
         :type LogFilePrefix: str
         """
         self.AuditName = None
@@ -284,7 +284,7 @@ class DescribeAuditResponse(AbstractModel):
         :type IsEnableCmqNotify: int
         :param IsEnableKmsEncry: 是否開啓kms加密。1：是，0：否。如果開啓KMS加密，數據在投遞到cos時，會将數據加密。
         :type IsEnableKmsEncry: int
-        :param KeyId: CMK的全局唯一标識符。
+        :param KeyId: CMK的全局唯一標識符。
         :type KeyId: str
         :param KmsAlias: CMK别名。
         :type KmsAlias: str
@@ -339,7 +339,7 @@ class Event(AbstractModel):
         """
         :param Resources: 資源對
         :type Resources: :class:`taifucloudcloud.cloudaudit.v20190319.models.Resource`
-        :param AccountID: 主賬号ID
+        :param AccountID: 主賬號ID
         :type AccountID: int
         :param CloudAuditEvent: 日志詳情
         :type CloudAuditEvent: str
@@ -612,7 +612,7 @@ class LookUpEventsRequest(AbstractModel):
         :type LookupAttributes: list of LookupAttribute
         :param MaxResults: 返回日志的最大條數
         :type MaxResults: int
-        :param Mode: 雲審計模式，有效值：standard | quick，其中standard是标準模式，quick是極速模式。預設爲标準模式
+        :param Mode: 雲審計模式，有效值：standard | quick，其中standard是標準模式，quick是極速模式。預設爲標準模式
         :type Mode: str
         :param NextToken: 檢視更多日志的憑證
         :type NextToken: str
@@ -800,9 +800,9 @@ class UpdateAuditRequest(AbstractModel):
         """
         :param AuditName: 跟蹤集名稱
         :type AuditName: str
-        :param CmqQueueName: 隊列名稱。隊列名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。如果IsEnableCmqNotify值是1的話，此值屬于必填欄位。如果不是新創建的隊列，雲審計不會去校驗該隊列是否真的存在，請謹慎填寫，避免日志通知不成功，導緻您的數據丢失。
+        :param CmqQueueName: 隊列名稱。隊列名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。如果IsEnableCmqNotify值是1的話，此值屬於必填欄位。如果不是新創建的隊列，雲審計不會去校驗該隊列是否真的存在，請謹慎填寫，避免日志通知不成功，導緻您的數據丢失。
         :type CmqQueueName: str
-        :param CmqRegion: 隊列所在的地域。可以通過ListCmqEnableRegion獲取支援的cmq地域。如果IsEnableCmqNotify值是1的話，此值屬于必填欄位。
+        :param CmqRegion: 隊列所在的地域。可以通過ListCmqEnableRegion獲取支援的cmq地域。如果IsEnableCmqNotify值是1的話，此值屬於必填欄位。
         :type CmqRegion: str
         :param CosBucketName: cos的儲存桶名稱。僅支援小寫英文字母和數字即[a-z，0-9]、中劃線“-”及其組合。用戶自定義的字串支援1 - 40個字元。儲存桶命名不能以“-”開頭或結尾。如果不是新創建的儲存桶，雲審計不會去校驗該儲存桶是否真的存在，請謹慎填寫，避免日志投遞不成功，導緻您的數據丢失。
         :type CosBucketName: str
@@ -810,13 +810,13 @@ class UpdateAuditRequest(AbstractModel):
         :type CosRegion: str
         :param IsCreateNewBucket: 是否創建新的cos儲存桶。1：是，0：否。
         :type IsCreateNewBucket: int
-        :param IsCreateNewQueue: 是否創建新的隊列。1：是，0：否。如果IsEnableCmqNotify值是1的話，此值屬于必填欄位。
+        :param IsCreateNewQueue: 是否創建新的隊列。1：是，0：否。如果IsEnableCmqNotify值是1的話，此值屬於必填欄位。
         :type IsCreateNewQueue: int
         :param IsEnableCmqNotify: 是否開啓cmq訊息通知。1：是，0：否。目前僅支援cmq的隊列服務。如果開啓cmq訊息通知服務，雲審計會将您的日志内容實時投遞到您指定地域的指定隊列中。
         :type IsEnableCmqNotify: int
         :param IsEnableKmsEncry: 是否開啓kms加密。1：是，0：否。如果開啓KMS加密，數據在投遞到cos時，會将數據加密。
         :type IsEnableKmsEncry: int
-        :param KeyId: CMK的全局唯一标識符，如果不是新創建的kms，該值是必填值。可以通過ListKeyAliasByRegion來獲取。雲審計不會校驗KeyId的合法性，請您謹慎填寫，避免給您的數據造成損失。
+        :param KeyId: CMK的全局唯一標識符，如果不是新創建的kms，該值是必填值。可以通過ListKeyAliasByRegion來獲取。雲審計不會校驗KeyId的合法性，請您謹慎填寫，避免給您的數據造成損失。
         :type KeyId: str
         :param KmsRegion: kms地域。目前支援的地域可以使用ListKmsEnableRegion來獲取。必須要和cos的地域保持一緻。
         :type KmsRegion: str

@@ -176,9 +176,9 @@ class FaceRect(AbstractModel):
 
     def __init__(self):
         """
-        :param X: 人臉區域左上角橫坐标。
+        :param X: 人臉區域左上角橫坐標。
         :type X: int
-        :param Y: 人臉區域左上角縱坐标。
+        :param Y: 人臉區域左上角縱坐標。
         :type Y: int
         :param Width: 人臉區域寬度。
         :type Width: int
@@ -244,11 +244,11 @@ class ImageModerationRequest(AbstractModel):
 圖片限制： 
  • 圖片格式：PNG、JPG、JPEG。 
  • 圖片大小：所下載圖片經Base64編碼後不超過4M。圖片下載時間不超過3秒。 
- • 圖片像素：大于50*50像素，否則影響識别效果； 
+ • 圖片像素：大於50*50像素，否則影響識别效果； 
  • 長寬比：長邊：短邊<5； 
 介面響應時間會受到圖片下載時間的影響，建議使用更可靠的儲存服務，推薦将圖片儲存在Top Cloud COS。
         :type ImageUrl: str
-        :param Config: 預留欄位，後期用于展示更多識别訊息。
+        :param Config: 預留欄位，後期用於展示更多識别訊息。
         :type Config: str
         :param Extra: 透傳欄位，透傳簡單訊息。
         :type Extra: str
@@ -357,11 +357,11 @@ Type爲FACE時：
 55到60，Suggestion建議爲REVIEW
 60到100，Suggestion建議爲BLOCK
         :type Confidence: int
-        :param FaceResults: Type取值爲‘FACE’時，人臉識别的結果清單。基于圖片中實際檢測到的人臉數，返回數組最大值不超過5個。
+        :param FaceResults: Type取值爲‘FACE’時，人臉識别的結果清單。基於圖片中實際檢測到的人臉數，返回數組最大值不超過5個。
         :type FaceResults: list of FaceResult
         :param Type: 取值'DNA' 或‘FACE’。DNA表示結論和置信度來自圖像指紋，FACE表示結論和置信度來自人臉識别。
         :type Type: str
-        :param AdvancedInfo: 鑒政識别返回的詳細标簽後期開放。
+        :param AdvancedInfo: 鑒政識别返回的詳細標簽後期開放。
         :type AdvancedInfo: str
         """
         self.Code = None
@@ -408,11 +408,11 @@ PASS：正常
 REVIEW：疑似
 BLOCK：違規
         :type Suggestion: str
-        :param Confidence: 算法對于Suggestion的置信度，0-100之間，值越高，表示對于Suggestion越确定。
+        :param Confidence: 算法對於Suggestion的置信度，0-100之間，值越高，表示對於Suggestion越确定。
         :type Confidence: int
-        :param AdvancedInfo: 預留欄位，後期用于展示更多識别訊息。
+        :param AdvancedInfo: 預留欄位，後期用於展示更多識别訊息。
         :type AdvancedInfo: str
-        :param Type: 取值'LABEL‘，LABEL表示結論和置信度來自标簽分類。
+        :param Type: 取值'LABEL‘，LABEL表示結論和置信度來自標簽分類。
         :type Type: str
         """
         self.Code = None
@@ -462,11 +462,11 @@ Type爲FACE時：
 55到60，Suggestion建議爲REVIEW
 60到100，Suggestion建議爲BLOCK
         :type Confidence: int
-        :param FaceResults: Type取值爲‘FACE’時，人臉識别的結果清單。基于圖片中實際檢測到的人臉數，返回數組最大值不超過5個。
+        :param FaceResults: Type取值爲‘FACE’時，人臉識别的結果清單。基於圖片中實際檢測到的人臉數，返回數組最大值不超過5個。
         :type FaceResults: list of FaceResult
-        :param AdvancedInfo: 暴恐識别返回的詳細标簽後期開放。
+        :param AdvancedInfo: 暴恐識别返回的詳細標簽後期開放。
         :type AdvancedInfo: str
-        :param Type: 取值'LABEL' 或‘FACE’，LABEL表示結論和置信度來自标簽分類，FACE表示結論和置信度來自人臉識别。
+        :param Type: 取值'LABEL' 或‘FACE’，LABEL表示結論和置信度來自標簽分類，FACE表示結論和置信度來自人臉識别。
         :type Type: str
         """
         self.Code = None
@@ -502,7 +502,7 @@ class VideoModerationRequest(AbstractModel):
         """
         :param VideoUrl: 需要審核的視訊的URL網址
         :type VideoUrl: str
-        :param DeveloperId: 開發者标識
+        :param DeveloperId: 開發者標識
         :type DeveloperId: str
         :param CBUrl: 審核完成後回調網址
         :type CBUrl: str
@@ -717,7 +717,7 @@ block。
         :param KeywordSet: 嫌疑關鍵詞清單。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type KeywordSet: list of str
-        :param AreaCoordSet: 嫌疑文字出現的區域坐标 (像素級)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+        :param AreaCoordSet: 嫌疑文字出現的區域坐標 (像素級)，[x1, y1, x2, y2]，即左上角坐標、右下角坐標。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AreaCoordSet: list of int
         """
@@ -867,9 +867,9 @@ block。
 
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Suggestion: str
-        :param Label: 視訊鑒政結果标簽，取值範圍：
+        :param Label: 視訊鑒政結果標簽，取值範圍：
 politician：政治人物。
-violation_photo：違規圖标。
+violation_photo：違規圖標。
 
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Label: str
@@ -924,10 +924,10 @@ block。
 
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Suggestion: str
-        :param Name: 涉政人物、違規圖标名字。
+        :param Name: 涉政人物、違規圖標名字。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Name: str
-        :param Label: 嫌疑片段鑒政結果标簽。
+        :param Label: 嫌疑片段鑒政結果標簽。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Label: str
         :param Url: 嫌疑圖片 URL （圖片不會永久儲存，到達
@@ -937,7 +937,7 @@ PicUrlExpireTime 時間點後圖片将被删除）。
         :param PicUrlExpireTimeStamp: 嫌疑圖片 URL 失效時間，使用 ISO 日期格式。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PicUrlExpireTimeStamp: int
-        :param AreaCoordSet: 涉政人物、違規圖标出現的區域坐标 (像素級)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+        :param AreaCoordSet: 涉政人物、違規圖標出現的區域坐標 (像素級)，[x1, y1, x2, y2]，即左上角坐標、右下角坐標。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AreaCoordSet: list of int
         """
@@ -1091,7 +1091,7 @@ block。
 
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Suggestion: str
-        :param Label: 視訊 結果标簽，取值範圍：
+        :param Label: 視訊 結果標簽，取值範圍：
 porn：色情。
 sexy：性感。
 vulgar：低俗。
@@ -1143,7 +1143,7 @@ class VodPornReviewSegmentItem(AbstractModel):
         :param Confidence: 嫌疑片段涉黃分數。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Confidence: float
-        :param Label: 嫌疑片段 結果标簽。
+        :param Label: 嫌疑片段 結果標簽。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Label: str
         :param Suggestion: 嫌疑片段 結果建議，取值範圍：
@@ -1197,7 +1197,7 @@ block。
 
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Suggestion: str
-        :param Label: 視訊暴恐結果标簽，取值範圍：
+        :param Label: 視訊暴恐結果標簽，取值範圍：
 guns：武器槍支。
 crowd：人群聚集。
 police：警察部隊。

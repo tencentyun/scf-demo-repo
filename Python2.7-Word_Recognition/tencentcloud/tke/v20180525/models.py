@@ -192,7 +192,7 @@ class ClusterCIDRSettings(AbstractModel):
 
     def __init__(self):
         """
-        :param ClusterCIDR: 用于分配集群容器和服務 IP 的 CIDR，不得與 VPC CIDR 沖突，也不得與同 VPC 内其他集群 CIDR 沖突
+        :param ClusterCIDR: 用於分配集群容器和服務 IP 的 CIDR，不得與 VPC CIDR 沖突，也不得與同 VPC 内其他集群 CIDR 沖突
         :type ClusterCIDR: str
         :param IgnoreClusterCIDRConflict: 是否忽略 ClusterCIDR 沖突錯誤, 預設不忽略
         :type IgnoreClusterCIDRConflict: bool
@@ -221,7 +221,7 @@ class ClusterNetworkSettings(AbstractModel):
 
     def __init__(self):
         """
-        :param ClusterCIDR: 用于分配集群容器和服務 IP 的 CIDR，不得與 VPC CIDR 沖突，也不得與同 VPC 内其他集群 CIDR 沖突
+        :param ClusterCIDR: 用於分配集群容器和服務 IP 的 CIDR，不得與 VPC CIDR 沖突，也不得與同 VPC 内其他集群 CIDR 沖突
         :type ClusterCIDR: str
         :param IgnoreClusterCIDRConflict: 是否忽略 ClusterCIDR 沖突錯誤, 預設不忽略
         :type IgnoreClusterCIDRConflict: bool
@@ -440,7 +440,7 @@ class DescribeClustersRequest(AbstractModel):
     def __init__(self):
         """
         :param ClusterIds: 集群ID清單(爲空時，
-表示獲取賬号下所有集群)
+表示獲取賬號下所有集群)
         :type ClusterIds: list of str
         :param Offset: 偏移量,預設0
         :type Offset: int
@@ -618,7 +618,7 @@ class Instance(AbstractModel):
         :type InstanceId: str
         :param InstanceRole: 節點角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 預設爲WORKER
         :type InstanceRole: str
-        :param FailedReason: 實例異常(或者處于初始化中)的原因
+        :param FailedReason: 實例異常(或者處於初始化中)的原因
         :type FailedReason: str
         :param InstanceState: 實例的狀态（running 運作中，initializing 初始化中，failed 異常）
         :type InstanceState: str
@@ -647,7 +647,7 @@ class InstanceAdvancedSettings(AbstractModel):
 
     def __init__(self):
         """
-        :param MountTarget: 數據盤掛載點, 預設不掛載數據盤. 已格式化的 ext3，ext4，xfs 文件系統的數據盤将直接掛載，其他文件系統或未格式化的數據盤将自動格式化爲ext4 并掛載，請注意備份數據! 無數據盤或有多塊數據盤的雲主機此設置不生效。
+        :param MountTarget: 數據盤掛載點, 預設不掛載數據盤. 已格式化的 ext3，ext4，xfs 文件系統的數據盤将直接掛載，其他文件系統或未格式化的數據盤将自動格式化爲ext4 並掛載，請注意備份數據! 無數據盤或有多塊數據盤的雲主機此設置不生效。
         :type MountTarget: str
         :param DockerGraphPath: dockerd --graph 指定值, 預設爲 /var/lib/docker
         :type DockerGraphPath: str
@@ -676,7 +676,7 @@ class LoginSettings(AbstractModel):
 
     def __init__(self):
         """
-        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>Linux實例密碼必須8到16位，至少包括兩項[a-z，A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? / ]中的特殊符号。<br><li>Windows實例密碼必須12到16位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = { } [ ] : ; ' , . ? /]中的特殊符号。<br><br>若不指定該參數，則由系統随機生成密碼，并通過站内信方式通知到用戶。
+        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>Linux實例密碼必須8到16位，至少包括兩項[a-z，A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? / ]中的特殊符號。<br><li>Windows實例密碼必須12到16位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = { } [ ] : ; ' , . ? /]中的特殊符號。<br><br>若不指定該參數，則由系統随機生成密碼，並通過站内信方式通知到用戶。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Password: str
         :param KeyIds: 金鑰ID清單。關聯金鑰後，就可以通過對應的私鑰來訪問實例；KeyId可通過介面DescribeKeyPairs獲取，金鑰與密碼不能同時指定，同時Windows作業系統不支援指定金鑰。當前僅支援購買的時候指定一個金鑰。

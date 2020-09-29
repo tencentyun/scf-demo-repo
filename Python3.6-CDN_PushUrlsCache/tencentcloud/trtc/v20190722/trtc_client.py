@@ -194,7 +194,7 @@ class TrtcClient(AbstractClient):
 
 
     def RemoveUser(self, request):
-        """介面說明：将用戶從房間移出，适用于主播/房主/管理員踢人等場景。支援所有平台，Android、iOS、Windows 和 macOS 需升級到 TRTC SDK 6.6及以上版本。
+        """介面說明：将用戶從房間移出，适用於主播/房主/管理員踢人等場景。支援所有平台，Android、iOS、Windows 和 macOS 需升級到 TRTC SDK 6.6及以上版本。
 
         :param request: Request instance for RemoveUser.
         :type request: :class:`taifucloudcloud.trtc.v20190722.models.RemoveUserRequest`

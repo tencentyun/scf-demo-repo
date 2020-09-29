@@ -56,7 +56,7 @@ class DcClient(AbstractClient):
     def CreateDirectConnect(self, request):
         """申請物理專線接入。
         調用該介面時，請注意：
-        賬号要進行實名認證，否則不允許申請物理專線；
+        賬號要進行實名認證，否則不允許申請物理專線；
         若帳戶下存在欠費狀态的物理專線，則不能申請更多的物理專線。
 
         :param request: 調用CreateDirectConnect所需參數的結構體。
@@ -85,7 +85,7 @@ class DcClient(AbstractClient):
 
 
     def CreateDirectConnectTunnel(self, request):
-        """用于創建專用通道的介面
+        """用於創建專用通道的介面
 
         :param request: 調用CreateDirectConnectTunnel所需參數的結構體。
         :type request: :class:`taifucloudcloud.dc.v20180410.models.CreateDirectConnectTunnelRequest`
@@ -114,7 +114,7 @@ class DcClient(AbstractClient):
 
     def DeleteDirectConnect(self, request):
         """删除物理專線。
-        只能删除處于狀态的物理專線。
+        只能删除處於狀态的物理專線。
 
         :param request: 調用DeleteDirectConnect所需參數的結構體。
         :type request: :class:`taifucloudcloud.dc.v20180410.models.DeleteDirectConnectRequest`
@@ -198,7 +198,7 @@ class DcClient(AbstractClient):
 
 
     def DescribeDirectConnectTunnels(self, request):
-        """用于查詢專用通道清單。
+        """用於查詢專用通道清單。
 
         :param request: 調用DescribeDirectConnectTunnels所需參數的結構體。
         :type request: :class:`taifucloudcloud.dc.v20180410.models.DescribeDirectConnectTunnelsRequest`

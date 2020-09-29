@@ -17,7 +17,7 @@ from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AccessRegionDetial(AbstractModel):
-    """根據源站查詢的可用加速區域訊息及對應的可選頻寬和并發量
+    """根據源站查詢的可用加速區域訊息及對應的可選頻寬和並發量
 
     """
 
@@ -27,7 +27,7 @@ class AccessRegionDetial(AbstractModel):
         :type RegionId: str
         :param RegionName: 區域的中文或英文名稱
         :type RegionName: str
-        :param ConcurrentList: 可選的并發量取值數組
+        :param ConcurrentList: 可選的並發量取值數組
         :type ConcurrentList: list of int
         :param BandwidthList: 可選的頻寬取值數組
         :type BandwidthList: list of int
@@ -79,7 +79,7 @@ class AddRealServersRequest(AbstractModel):
         :type RealServerIP: list of str
         :param RealServerName: 源站名稱
         :type RealServerName: str
-        :param TagSet: 标簽清單
+        :param TagSet: 標簽清單
         :type TagSet: list of TagPair
         """
         self.ProjectId = None
@@ -209,7 +209,7 @@ class BindRealServer(AbstractModel):
 未開啓健康檢查狀态時，該狀态始終爲正常。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RealServerStatus: int
-        :param RealServerPort: 源站的端口号
+        :param RealServerPort: 源站的端口號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RealServerPort: int
         :param DownIPList: 當源站爲域名時，域名被解析成一個或者多個IP，該欄位表示其中異常的IP清單。狀态異常，但該欄位爲空時，表示域名解析異常。
@@ -247,7 +247,7 @@ class BindRealServerInfo(AbstractModel):
         :type RealServerName: str
         :param ProjectId: 項目ID
         :type ProjectId: int
-        :param TagSet: 标簽清單
+        :param TagSet: 標簽清單
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of TagPair
         """
@@ -465,7 +465,7 @@ class CheckProxyCreateRequest(AbstractModel):
         :type RealServerRegion: str
         :param Bandwidth: 通道頻寬上限，單位：Mbps。
         :type Bandwidth: int
-        :param Concurrent: 通道并發量上限，表示同時在線的連接數，單位：萬。
+        :param Concurrent: 通道並發量上限，表示同時在線的連接數，單位：萬。
         :type Concurrent: int
         """
         self.AccessRegion = None
@@ -511,7 +511,7 @@ class CloseProxiesRequest(AbstractModel):
         """
         :param InstanceIds: （舊參數，請切換到ProxyIds）通道的實例ID。
         :type InstanceIds: list of str
-        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+        :param ClientToken: 用於保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
 更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
         :param ProxyIds: （新參數）通道的實例ID。
@@ -763,12 +763,12 @@ class CreateDomainRequest(AbstractModel):
         :type ListenerId: str
         :param Domain: 需要創建的域名，一個監聽器下最大支援100個域名。
         :type Domain: str
-        :param CertificateId: 服務器證書，用于用戶端與GAAP的HTTPS的交互。
+        :param CertificateId: 服務器證書，用於用戶端與GAAP的HTTPS的交互。
         :type CertificateId: str
-        :param ClientCertificateId: 用戶端CA證書，用于用戶端與GAAP的HTTPS的交互。
+        :param ClientCertificateId: 用戶端CA證書，用於用戶端與GAAP的HTTPS的交互。
 僅當采用雙向認證的方式時，需要設置該欄位或PolyClientCertificateIds欄位。
         :type ClientCertificateId: str
-        :param PolyClientCertificateIds: 用戶端CA證書，用于用戶端與GAAP的HTTPS的交互。
+        :param PolyClientCertificateIds: 用戶端CA證書，用於用戶端與GAAP的HTTPS的交互。
 僅當采用雙向認證的方式時，需要設置該欄位或ClientCertificateId欄位。
         :type PolyClientCertificateIds: list of str
         """
@@ -813,7 +813,7 @@ class CreateHTTPListenerRequest(AbstractModel):
         """
         :param ListenerName: 監聽器名稱
         :type ListenerName: str
-        :param Port: 監聽器端口，基于同種傳輸層協議（TCP 或 UDP）的監聽器，端口不可重複
+        :param Port: 監聽器端口，基於同種傳輸層協議（TCP 或 UDP）的監聽器，端口不可重複
         :type Port: int
         :param ProxyId: 通道ID
         :type ProxyId: str
@@ -859,7 +859,7 @@ class CreateHTTPSListenerRequest(AbstractModel):
         """
         :param ListenerName: 監聽器名稱
         :type ListenerName: str
-        :param Port: 監聽器端口，基于同種傳輸層協議（TCP 或 UDP）的監聽器，端口不可重複
+        :param Port: 監聽器端口，基於同種傳輸層協議（TCP 或 UDP）的監聽器，端口不可重複
         :type Port: int
         :param CertificateId: 服務器證書ID
         :type CertificateId: str
@@ -970,7 +970,7 @@ class CreateProxyGroupRequest(AbstractModel):
         :type GroupName: str
         :param RealServerRegion: 源站地域，參考介面DescribeDestRegions 返回參數RegionDetail中的RegionId
         :type RealServerRegion: str
-        :param TagSet: 标簽清單
+        :param TagSet: 標簽清單
         :type TagSet: list of TagPair
         """
         self.ProjectId = None
@@ -1027,18 +1027,18 @@ class CreateProxyRequest(AbstractModel):
         :type AccessRegion: str
         :param Bandwidth: 通道頻寬上限，單位：Mbps。
         :type Bandwidth: int
-        :param Concurrent: 通道并發量上限，表示同時在線的連接數，單位：萬。
+        :param Concurrent: 通道並發量上限，表示同時在線的連接數，單位：萬。
         :type Concurrent: int
         :param RealServerRegion: 源站地域。當GroupId存在時，源站地域爲通道組的源站地域,此時可不填該欄位。當GroupId不存在時，需要填寫該欄位
         :type RealServerRegion: str
-        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+        :param ClientToken: 用於保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
 更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
         :param GroupId: 通道所在的通道組ID，當在通道組中創建通道時必帶，否則忽略該欄位。
         :type GroupId: str
-        :param TagSet: 通道需要添加的标簽清單。
+        :param TagSet: 通道需要添加的標簽清單。
         :type TagSet: list of TagPair
-        :param ClonedProxyId: 被複制的通道ID。只有處于運作中狀态的通道可以被複制。
+        :param ClonedProxyId: 被複制的通道ID。只有處於運作中狀态的通道可以被複制。
 當設置該參數時，表示複制該通道。
         :type ClonedProxyId: str
         :param BillingType: 計費方式 (0:按頻寬計費，1:按流量計費 預設按頻寬計費）
@@ -2374,7 +2374,7 @@ class DescribeListenerStatisticsRequest(AbstractModel):
         :type StartTime: str
         :param EndTime: 結束時間
         :type EndTime: str
-        :param MetricNames: 統計指标名稱清單，支援: 入頻寬:InBandwidth, 出頻寬:OutBandwidth, 并發:Concurrent, 入包量:InPackets, 出包量:OutPackets。
+        :param MetricNames: 統計指標名稱清單，支援: 入頻寬:InBandwidth, 出頻寬:OutBandwidth, 並發:Concurrent, 入包量:InPackets, 出包量:OutPackets。
         :type MetricNames: list of str
         :param Granularity: 監控粒度，目前支援300，3600，86400，單位：秒。
 查詢時間範圍不超過1天，支援最小粒度300秒；
@@ -2445,8 +2445,8 @@ GroupId - String - 是否必填：否 - （過濾條件）按照通道組ID過�
         :type Filters: list of Filter
         :param ProxyIds: （新參數，替代InstanceIds）按照一個或者多個實例ID查詢。每次請求的實例的上限爲100。參數不支援同時指定InstanceIds和Filters。
         :type ProxyIds: list of str
-        :param TagSet: 标簽清單，當存在該欄位時，拉取對應标簽下的資源清單。
-最多支援5個标簽，當存在兩個或兩個以上的标簽時，滿足其中任意一個标簽時，通道會被拉取出來。
+        :param TagSet: 標簽清單，當存在該欄位時，拉取對應標簽下的資源清單。
+最多支援5個標簽，當存在兩個或兩個以上的標簽時，滿足其中任意一個標簽時，通道會被拉取出來。
         :type TagSet: list of TagPair
         :param Independent: 當該欄位爲1時，僅拉取非通道組的通道，
 當該欄位爲0時，僅拉取通道組的通道，
@@ -2711,8 +2711,8 @@ class DescribeProxyGroupListRequest(AbstractModel):
 0，預設項目
 其他值，指定的項目
         :type ProjectId: int
-        :param TagSet: 标簽清單，當存在該欄位時，拉取對應标簽下的資源清單。
-最多支援5個标簽，當存在兩個或兩個以上的标簽時，滿足其中任意一個标簽時，該通道組會被拉取出來。
+        :param TagSet: 標簽清單，當存在該欄位時，拉取對應標簽下的資源清單。
+最多支援5個標簽，當存在兩個或兩個以上的標簽時，滿足其中任意一個標簽時，該通道組會被拉取出來。
         :type TagSet: list of TagPair
         :param Filters: 過濾條件。   
 每次請求的Filter.Values的上限爲5。
@@ -2788,7 +2788,7 @@ class DescribeProxyGroupStatisticsRequest(AbstractModel):
         :type StartTime: str
         :param EndTime: 結束時間
         :type EndTime: str
-        :param MetricNames: 統計指标名稱清單，支援: 入頻寬:InBandwidth, 出頻寬:OutBandwidth, 并發:Concurrent, 入包量:InPackets, 出包量:OutPackets
+        :param MetricNames: 統計指標名稱清單，支援: 入頻寬:InBandwidth, 出頻寬:OutBandwidth, 並發:Concurrent, 入包量:InPackets, 出包量:OutPackets
         :type MetricNames: list of str
         :param Granularity: 監控粒度，目前支援60，300，3600，86400，單位：秒。
 當時間範圍不超過1天，支援最小粒度60秒；
@@ -2850,7 +2850,7 @@ class DescribeProxyStatisticsRequest(AbstractModel):
         :type StartTime: str
         :param EndTime: 結束時間(2019-03-25 12:00:00)
         :type EndTime: str
-        :param MetricNames: 統計指标名稱清單，支援: 入頻寬:InBandwidth, 出頻寬:OutBandwidth, 并發:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延遲:Latency
+        :param MetricNames: 統計指標名稱清單，支援: 入頻寬:InBandwidth, 出頻寬:OutBandwidth, 並發:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延遲:Latency
         :type MetricNames: list of str
         :param Granularity: 監控粒度，目前支援60，300，3600，86400，單位：秒。
 當時間範圍不超過3天，支援最小粒度60秒；
@@ -2969,8 +2969,8 @@ class DescribeRealServersRequest(AbstractModel):
         :type Offset: int
         :param Limit: 返回數量，預設爲20個，最大值爲50個
         :type Limit: int
-        :param TagSet: 标簽清單，當存在該欄位時，拉取對應标簽下的資源清單。
-最多支援5個标簽，當存在兩個或兩個以上的标簽時，滿足其中任意一個标簽時，源站會被拉取出來。
+        :param TagSet: 標簽清單，當存在該欄位時，拉取對應標簽下的資源清單。
+最多支援5個標簽，當存在兩個或兩個以上的標簽時，滿足其中任意一個標簽時，源站會被拉取出來。
         :type TagSet: list of TagPair
         :param Filters: 過濾條件。filter的name取值(RealServerName,RealServerIP)
         :type Filters: list of Filter
@@ -3137,15 +3137,15 @@ class DescribeResourcesByTagRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵。
+        :param TagKey: 標簽鍵。
         :type TagKey: str
-        :param TagValue: 标簽值。
+        :param TagValue: 標簽值。
         :type TagValue: str
         :param ResourceType: 資源類型，其中：
 Proxy表示通道；
 ProxyGroup表示通道組；
 RealServer表示源站。
-不指定該欄位則查詢該标簽下所有資源。
+不指定該欄位則查詢該標簽下所有資源。
         :type ResourceType: str
         """
         self.TagKey = None
@@ -3168,7 +3168,7 @@ class DescribeResourcesByTagResponse(AbstractModel):
         """
         :param TotalCount: 資源總數
         :type TotalCount: int
-        :param ResourceSet: 标簽對應的資源清單
+        :param ResourceSet: 標簽對應的資源清單
         :type ResourceSet: list of TagResourceInfo
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3463,8 +3463,8 @@ class DescribeTCPListenersRequest(AbstractModel):
         :param ProxyId: 過濾條件，根據通道ID進行拉取，ProxyId/GroupId/ListenerId必須設置一個，但ProxyId和GroupId不能同時設置。
         :type ProxyId: str
         :param ListenerId: 過濾條件，根據監聽器ID精确查詢。
-當設置了ProxyId時，會檢查該監聽器是否歸屬于該通道。
-當設置了GroupId時，會檢查該監聽器是否歸屬于該通道組。
+當設置了ProxyId時，會檢查該監聽器是否歸屬於該通道。
+當設置了GroupId時，會檢查該監聽器是否歸屬於該通道組。
         :type ListenerId: str
         :param ListenerName: 過濾條件，根據監聽器名稱精确查詢
         :type ListenerName: str
@@ -3540,8 +3540,8 @@ class DescribeUDPListenersRequest(AbstractModel):
         :param ProxyId: 過濾條件，根據通道ID進行拉取，ProxyId/GroupId/ListenerId必須設置一個，但ProxyId和GroupId不能同時設置。
         :type ProxyId: str
         :param ListenerId: 過濾條件，根據監聽器ID精确查詢。
-當設置了ProxyId時，會檢查該監聽器是否歸屬于該通道。
-當設置了GroupId時，會檢查該監聽器是否歸屬于該通道組。
+當設置了ProxyId時，會檢查該監聽器是否歸屬於該通道。
+當設置了GroupId時，會檢查該監聽器是否歸屬於該通道組。
         :type ListenerId: str
         :param ListenerName: 過濾條件，根據監聽器名稱精确查詢
         :type ListenerName: str
@@ -3614,14 +3614,14 @@ class DestroyProxiesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Force: 強制删除标識。
+        :param Force: 強制删除標識。
 1，強制删除該通道清單，無論是否已經綁定了源站；
 0，如果已綁定了源站，則無法删除。
-删除多通道時，如果該标識爲0，只有所有的通道都沒有綁定源站，才允許删除。
+删除多通道時，如果該標識爲0，只有所有的通道都沒有綁定源站，才允許删除。
         :type Force: int
         :param InstanceIds: （舊參數，請切換到ProxyIds）通道實例ID清單。
         :type InstanceIds: list of str
-        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+        :param ClientToken: 用於保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
 更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
         :param ProxyIds: （新參數）通道實例ID清單。
@@ -3647,7 +3647,7 @@ class DestroyProxiesResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param InvalidStatusInstanceSet: 處于不可銷毀狀态下的通道實例ID清單。
+        :param InvalidStatusInstanceSet: 處於不可銷毀狀态下的通道實例ID清單。
         :type InvalidStatusInstanceSet: list of str
         :param OperationFailedInstanceSet: 銷毀操作失敗的通道實例ID清單。
         :type OperationFailedInstanceSet: list of str
@@ -4102,11 +4102,11 @@ class InquiryPriceCreateProxyRequest(AbstractModel):
         :type Bandwidth: int
         :param DestRegion: （舊參數，請切換到RealServerRegion）源站區域名稱。
         :type DestRegion: str
-        :param Concurrency: （舊參數，請切換到Concurrent）通道并發量上限，表示同時在線的連接數，單位：萬。
+        :param Concurrency: （舊參數，請切換到Concurrent）通道並發量上限，表示同時在線的連接數，單位：萬。
         :type Concurrency: int
         :param RealServerRegion: （新參數）源站區域名稱。
         :type RealServerRegion: str
-        :param Concurrent: （新參數）通道并發量上限，表示同時在線的連接數，單位：萬。
+        :param Concurrent: （新參數）通道並發量上限，表示同時在線的連接數，單位：萬。
         :type Concurrent: int
         :param BillingType: 計費方式 (0:按頻寬計費，1:按流量計費 預設按頻寬計費）
         :type BillingType: int
@@ -4209,15 +4209,15 @@ class ListenerInfo(AbstractModel):
 
 
 class MetricStatisticsInfo(AbstractModel):
-    """單指标的統計數據
+    """單指標的統計數據
 
     """
 
     def __init__(self):
         """
-        :param MetricName: 指标名稱
+        :param MetricName: 指標名稱
         :type MetricName: str
-        :param MetricData: 指标統計數據
+        :param MetricData: 指標統計數據
         :type MetricData: list of StatisticsDataInfo
         """
         self.MetricName = None
@@ -4339,19 +4339,19 @@ class ModifyDomainRequest(AbstractModel):
         :type OldDomain: str
         :param NewDomain: 修改後的域名訊息
         :type NewDomain: str
-        :param CertificateId: 服務器SSL證書ID，僅适用于version3.0的通道。其中：
+        :param CertificateId: 服務器SSL證書ID，僅适用於version3.0的通道。其中：
 不帶該欄位時，表示使用原證書；
-攜帶該欄位時并且CertificateId=default，表示使用監聽器證書；
+攜帶該欄位時並且CertificateId=default，表示使用監聽器證書；
 其他情況，使用該CertificateId指定的證書。
         :type CertificateId: str
-        :param ClientCertificateId: 用戶端CA證書ID，僅适用于version3.0的通道。其中：
+        :param ClientCertificateId: 用戶端CA證書ID，僅适用於version3.0的通道。其中：
 不帶該欄位和PolyClientCertificateIds時，表示使用原證書；
-攜帶該欄位時并且ClientCertificateId=default，表示使用監聽器證書；
+攜帶該欄位時並且ClientCertificateId=default，表示使用監聽器證書；
 其他情況，使用該ClientCertificateId或PolyClientCertificateIds指定的證書。
         :type ClientCertificateId: str
-        :param PolyClientCertificateIds: 用戶端CA證書ID，僅适用于version3.0的通道。其中：
+        :param PolyClientCertificateIds: 用戶端CA證書ID，僅适用於version3.0的通道。其中：
 不帶該欄位和ClientCertificateId時，表示使用原證書；
-攜帶該欄位時并且ClientCertificateId=default，表示使用監聽器證書；
+攜帶該欄位時並且ClientCertificateId=default，表示使用監聽器證書；
 其他情況，使用該ClientCertificateId或PolyClientCertificateIds指定的證書。
         :type PolyClientCertificateIds: list of str
         """
@@ -4547,7 +4547,7 @@ class ModifyProxiesAttributeRequest(AbstractModel):
         :type InstanceIds: list of str
         :param ProxyName: 通道名稱。可任意命名，但不得超過30個字元。
         :type ProxyName: str
-        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+        :param ClientToken: 用於保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
 更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
         :param ProxyIds: （新參數）一個或多個待操作的通道ID。
@@ -4594,7 +4594,7 @@ class ModifyProxiesProjectRequest(AbstractModel):
         :type ProjectId: int
         :param InstanceIds: （舊參數，請切換到ProxyIds）一個或多個待操作的通道ID。
         :type InstanceIds: list of str
-        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+        :param ClientToken: 用於保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
 更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
         :param ProxyIds: （新參數）一個或多個待操作的通道ID。
@@ -4639,13 +4639,13 @@ class ModifyProxyConfigurationRequest(AbstractModel):
         """
         :param InstanceId: （舊參數，請切換到ProxyId）通道的實例ID。
         :type InstanceId: str
-        :param Bandwidth: 需要調整到的目标頻寬，單位：Mbps。
+        :param Bandwidth: 需要調整到的目標頻寬，單位：Mbps。
 Bandwidth與Concurrent必須至少設置一個。取值範圍根據DescribeAccessRegionsByDestRegion介面獲取得到
         :type Bandwidth: int
-        :param Concurrent: 需要調整到的目标并發值，單位：萬。
+        :param Concurrent: 需要調整到的目標並發值，單位：萬。
 Bandwidth與Concurrent必須至少設置一個。取值範圍根據DescribeAccessRegionsByDestRegion介面獲取得到
         :type Concurrent: int
-        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+        :param ClientToken: 用於保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
 更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
         :param ProxyId: （新參數）通道的實例ID。
@@ -5039,7 +5039,7 @@ class OpenProxiesRequest(AbstractModel):
         """
         :param InstanceIds: （舊參數，請切換到ProxyIds）通道的實例ID清單。
         :type InstanceIds: list of str
-        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+        :param ClientToken: 用於保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
 更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
         :param ProxyIds: （新參數）通道的實例ID清單。
@@ -5149,13 +5149,13 @@ class ProxyGroupDetail(AbstractModel):
         :param Domain: 通道組域名
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Domain: str
-        :param RealServerRegionInfo: 目标地域
+        :param RealServerRegionInfo: 目標地域
         :type RealServerRegionInfo: :class:`taifucloudcloud.gaap.v20180529.models.RegionDetail`
         :param IsOldGroup: 是否老通道組，2018-08-03之前創建的通道組爲老通道組
         :type IsOldGroup: bool
         :param GroupId: 通道組ID
         :type GroupId: str
-        :param TagSet: 标簽清單
+        :param TagSet: 標簽清單
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of TagPair
         """
@@ -5214,7 +5214,7 @@ class ProxyGroupInfo(AbstractModel):
         :type GroupName: str
         :param ProjectId: 項目ID
         :type ProjectId: int
-        :param RealServerRegionInfo: 目标地域
+        :param RealServerRegionInfo: 目標地域
         :type RealServerRegionInfo: :class:`taifucloudcloud.gaap.v20180529.models.RegionDetail`
         :param Status: 通道組狀态。
 其中，
@@ -5223,7 +5223,7 @@ class ProxyGroupInfo(AbstractModel):
 4表示銷毀中；
 11表示通道遷移中。
         :type Status: str
-        :param TagSet: 标簽清單。
+        :param TagSet: 標簽清單。
         :type TagSet: list of TagPair
         """
         self.GroupId = None
@@ -5291,7 +5291,7 @@ class ProxyInfo(AbstractModel):
         :type RealServerRegion: str
         :param Bandwidth: 頻寬，單位：Mbps。
         :type Bandwidth: int
-        :param Concurrent: 并發，單位：個/秒。
+        :param Concurrent: 並發，單位：個/秒。
         :type Concurrent: int
         :param Status: 通道狀态。其中：
 RUNNING表示運作中；
@@ -5310,7 +5310,7 @@ UNKNOWN表示未知狀态。
         :type Domain: str
         :param IP: 接入IP。
         :type IP: str
-        :param Version: 通道版本号：1.0，2.0，3.0。
+        :param Version: 通道版本號：1.0，2.0，3.0。
         :type Version: str
         :param ProxyId: （新參數）通道實例ID。
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -5319,7 +5319,7 @@ UNKNOWN表示未知狀态。
         :type Scalarable: int
         :param SupportProtocols: 支援的協議類型。
         :type SupportProtocols: list of str
-        :param GroupId: 通道組ID，當通道歸屬于某一通道組時，存在該欄位。
+        :param GroupId: 通道組ID，當通道歸屬於某一通道組時，存在該欄位。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type GroupId: str
         :param PolicyId: 安全策略ID，當設置了安全策略時，存在該欄位。
@@ -5333,7 +5333,7 @@ UNKNOWN表示未知狀态。
         :type RealServerRegionInfo: :class:`taifucloudcloud.gaap.v20180529.models.RegionDetail`
         :param ForwardIP: 通道轉發IP
         :type ForwardIP: str
-        :param TagSet: 标簽清單，不存在标簽時，該欄位爲空清單。
+        :param TagSet: 標簽清單，不存在標簽時，該欄位爲空清單。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of TagPair
         :param SupportSecurity: 是否支援安全組配置
@@ -5660,7 +5660,7 @@ class RuleInfo(AbstractModel):
         :type RealServerType: str
         :param Scheduler: 轉發源站策略
         :type Scheduler: str
-        :param HealthCheck: 是否開啓健康檢查标志，1表示開啓，0表示關閉
+        :param HealthCheck: 是否開啓健康檢查標志，1表示開啓，0表示關閉
         :type HealthCheck: int
         :param RuleStatus: 規則狀态，0表示運作中，1表示創建中，2表示銷毀中，3表示綁定解綁源站中，4表示配置更新中
         :type RuleStatus: int
@@ -5727,7 +5727,7 @@ class SecurityPolicyRuleIn(AbstractModel):
         :type AliasName: str
         :param Protocol: 協議：TCP或UDP，ALL表示所有協議
         :type Protocol: str
-        :param DestPortRange: 目标端口，填寫格式舉例：
+        :param DestPortRange: 目標端口，填寫格式舉例：
 單個端口: 80
 多個端口: 80,443
 連續端口: 3306-20000
@@ -5762,7 +5762,7 @@ class SecurityPolicyRuleOut(AbstractModel):
         :type SourceCidr: str
         :param AliasName: 規則别名
         :type AliasName: str
-        :param DestPortRange: 目标端口範圍
+        :param DestPortRange: 目標端口範圍
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DestPortRange: str
         :param RuleId: 規則ID
@@ -5809,12 +5809,12 @@ class SetAuthenticationRequest(AbstractModel):
 1，開啓基礎認證。
 預設爲0。
         :type BasicAuth: int
-        :param GaapAuth: 通道認證開關，用于源站對Gaap的認證，其中：
+        :param GaapAuth: 通道認證開關，用於源站對Gaap的認證，其中：
 0，關閉通道認證；
 1，開啓通道認證。
 預設爲0。
         :type GaapAuth: int
-        :param RealServerAuth: 源站認證開關，用于Gaap對服務器的認證，其中：
+        :param RealServerAuth: 源站認證開關，用於Gaap對服務器的認證，其中：
 0，關閉源站認證；
 1，開啓源站認證。
 預設爲0。
@@ -5983,15 +5983,15 @@ lc表示最小連接數。
 
 
 class TagPair(AbstractModel):
-    """标簽鍵值對
+    """標簽鍵值對
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -6004,7 +6004,7 @@ class TagPair(AbstractModel):
 
 
 class TagResourceInfo(AbstractModel):
-    """标簽對應資源訊息
+    """標簽對應資源訊息
 
     """
 

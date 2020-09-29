@@ -58,7 +58,7 @@ class CreateInstanceRequest(AbstractModel):
         :type VpcId: str
         :param SubnetId: 子網ID
         :type SubnetId: str
-        :param Password: 訪問密碼（密碼需8到16位，至少包括兩項（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
+        :param Password: 訪問密碼（密碼需8到16位，至少包括兩項（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符號）
         :type Password: str
         :param InstanceName: 實例名稱（1-50 個英文、漢字、數字、連接線-或下劃線_）
         :type InstanceName: str
@@ -66,7 +66,7 @@ class CreateInstanceRequest(AbstractModel):
         :type ChargeType: str
         :param ChargePeriod: 包年包月購買時長（單位由參數TimeUint決定）
         :type ChargePeriod: int
-        :param RenewFlag: 自動續約标識<li>RENEW_FLAG_AUTO：自動續約</li><li>RENEW_FLAG_MANUAL：不自動續約，用戶手動續約</li>ChargeType爲PREPAID時需要設置，如不傳遞該參數，普通用于預設不自動續約，SVIP用戶自動續約
+        :param RenewFlag: 自動續約標識<li>RENEW_FLAG_AUTO：自動續約</li><li>RENEW_FLAG_MANUAL：不自動續約，用戶手動續約</li>ChargeType爲PREPAID時需要設置，如不傳遞該參數，普通用於預設不自動續約，SVIP用戶自動續約
         :type RenewFlag: str
         :param DiskType: 節點磁盤類型<li>CLOUD_SSD：SSD雲硬碟</li><li>CLOUD_PREMIUM：高硬能雲硬碟</li>預設值CLOUD_SSD
         :type DiskType: str
@@ -527,7 +527,7 @@ class InstanceInfo(AbstractModel):
         :type ChargeType: str
         :param ChargePeriod: 包年包月購買時長,單位:月
         :type ChargePeriod: int
-        :param RenewFlag: 自動續約标識。取值範圍：  NOTIFY_AND_AUTO_RENEW：通知過期且自動續約  NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約  預設取值：NOTIFY_AND_AUTO_RENEW。若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
+        :param RenewFlag: 自動續約標識。取值範圍：  NOTIFY_AND_AUTO_RENEW：通知過期且自動續約  NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約  預設取值：NOTIFY_AND_AUTO_RENEW。若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
         :type RenewFlag: str
         :param NodeType: 節點規格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
         :type NodeType: str
@@ -549,7 +549,7 @@ class InstanceInfo(AbstractModel):
         :type EsPort: int
         :param KibanaUrl: Kibana訪問url
         :type KibanaUrl: str
-        :param EsVersion: ES版本号
+        :param EsVersion: ES版本號
         :type EsVersion: str
         :param EsConfig: ES配置項
         :type EsConfig: str
@@ -561,7 +561,7 @@ class InstanceInfo(AbstractModel):
         :type UpdateTime: str
         :param Deadline: 實例到期時間
         :type Deadline: str
-        :param InstanceType: 實例類型（實例類型标識，當前只有1,2兩種）
+        :param InstanceType: 實例類型（實例類型標識，當前只有1,2兩種）
         :type InstanceType: int
         :param IkConfig: Ik分詞器配置
         :type IkConfig: :class:`taifucloudcloud.es.v20180416.models.EsDictionaryInfo`
@@ -571,7 +571,7 @@ class InstanceInfo(AbstractModel):
         :type CosBackup: :class:`taifucloudcloud.es.v20180416.models.CosBackup`
         :param AllowCosBackup: 是否允許cos自動備份
         :type AllowCosBackup: bool
-        :param TagList: 實例擁有的标簽清單
+        :param TagList: 實例擁有的標簽清單
         :type TagList: list of TagInfo
         :param LicenseType: License類型<li>oss：開源版</li><li>basic：基礎版</li><li>platinum：白金版</li>預設值platinum
         :type LicenseType: str
@@ -919,15 +919,15 @@ class SubTaskDetail(AbstractModel):
 
 
 class TagInfo(AbstractModel):
-    """實例标簽訊息
+    """實例標簽訊息
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -988,7 +988,7 @@ class UpdateInstanceRequest(AbstractModel):
         :type NodeNum: int
         :param EsConfig: 配置項（JSON格式字串）。當前僅支援以下配置項：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
         :type EsConfig: str
-        :param Password: 預設用戶elastic的密碼（8到16位，至少包括兩項（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
+        :param Password: 預設用戶elastic的密碼（8到16位，至少包括兩項（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符號）
         :type Password: str
         :param EsAcl: 訪問控制清單
         :type EsAcl: :class:`taifucloudcloud.es.v20180416.models.EsAcl`

@@ -23,7 +23,7 @@ class CHPRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param PhoneNumber: 電話号碼
+        :param PhoneNumber: 電話號碼
         :type PhoneNumber: str
         """
         self.PhoneNumber = None
@@ -40,8 +40,8 @@ class CHPResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param TagType: 标記類型
- 0: 無标記
+        :param TagType: 標記類型
+ 0: 無標記
  50:騷擾電話
  51:房産中介
  52:保險理财
@@ -50,7 +50,7 @@ class CHPResponse(AbstractModel):
  55:快遞電話
  56:出租車專車
         :type TagType: int
-        :param TagCount: 标記次數
+        :param TagCount: 標記次數
         :type TagCount: int
         """
         self.TagType = None
@@ -69,9 +69,9 @@ class CreateSmpnEpaRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param RequestData: 企業号碼認證請求内容
+        :param RequestData: 企業號碼認證請求内容
         :type RequestData: :class:`taifucloudcloud.smpn.v20190822.models.EPARequest`
-        :param ResourceId: 用于計費的資源ID
+        :param ResourceId: 用於計費的資源ID
         :type ResourceId: str
         """
         self.RequestData = None
@@ -92,7 +92,7 @@ class CreateSmpnEpaResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param ResponseData: 業号碼認證回應内容
+        :param ResponseData: 業號碼認證回應内容
         :type ResponseData: :class:`taifucloudcloud.smpn.v20190822.models.EPAResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -115,7 +115,7 @@ class DescribeSmpnChpRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ResourceId: 客戶用于計費的資源Id
+        :param ResourceId: 客戶用於計費的資源Id
         :type ResourceId: str
         :param RequestData: 終端騷擾保護請求
         :type RequestData: :class:`taifucloudcloud.smpn.v20190822.models.CHPRequest`
@@ -161,9 +161,9 @@ class DescribeSmpnFnrRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param RequestData: 虛假号碼識别請求内容
+        :param RequestData: 虛假號碼識别請求内容
         :type RequestData: :class:`taifucloudcloud.smpn.v20190822.models.FNRRequest`
-        :param ResourceId: 用于計費的資源ID
+        :param ResourceId: 用於計費的資源ID
         :type ResourceId: str
         """
         self.RequestData = None
@@ -184,7 +184,7 @@ class DescribeSmpnFnrResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param ResponseData: 虛假号碼識别回應内容
+        :param ResponseData: 虛假號碼識别回應内容
         :type ResponseData: :class:`taifucloudcloud.smpn.v20190822.models.FNRResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -207,9 +207,9 @@ class DescribeSmpnMhmRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param RequestData: 号碼營銷監控請求内容
+        :param RequestData: 號碼營銷監控請求内容
         :type RequestData: :class:`taifucloudcloud.smpn.v20190822.models.MHMRequest`
-        :param ResourceId: 用于計費的資源ID
+        :param ResourceId: 用於計費的資源ID
         :type ResourceId: str
         """
         self.RequestData = None
@@ -230,7 +230,7 @@ class DescribeSmpnMhmResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param ResponseData: 号碼營銷監控回應内容
+        :param ResponseData: 號碼營銷監控回應内容
         :type ResponseData: :class:`taifucloudcloud.smpn.v20190822.models.MHMResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -253,9 +253,9 @@ class DescribeSmpnMrlRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param RequestData: 惡意标記等級請求内容
+        :param RequestData: 惡意標記等級請求内容
         :type RequestData: :class:`taifucloudcloud.smpn.v20190822.models.MRLRequest`
-        :param ResourceId: 用于計費的資源ID
+        :param ResourceId: 用於計費的資源ID
         :type ResourceId: str
         """
         self.RequestData = None
@@ -276,7 +276,7 @@ class DescribeSmpnMrlResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param ResponseData: 惡意标記等級回應内容
+        :param ResponseData: 惡意標記等級回應内容
         :type ResponseData: :class:`taifucloudcloud.smpn.v20190822.models.MRLResponse`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -293,13 +293,13 @@ class DescribeSmpnMrlResponse(AbstractModel):
 
 
 class EPARequest(AbstractModel):
-    """企業号碼認證請求
+    """企業號碼認證請求
 
     """
 
     def __init__(self):
         """
-        :param PhoneNumber: 電話号碼
+        :param PhoneNumber: 電話號碼
         :type PhoneNumber: str
         :param Name: 黃頁名稱
         :type Name: str
@@ -314,7 +314,7 @@ class EPARequest(AbstractModel):
 
 
 class EPAResponse(AbstractModel):
-    """企業号碼認證回應
+    """企業號碼認證回應
 
     """
 
@@ -331,13 +331,13 @@ class EPAResponse(AbstractModel):
 
 
 class FNRRequest(AbstractModel):
-    """虛假号碼識别請求
+    """虛假號碼識别請求
 
     """
 
     def __init__(self):
         """
-        :param PhoneNumber: 電話号碼
+        :param PhoneNumber: 電話號碼
         :type PhoneNumber: str
         """
         self.PhoneNumber = None
@@ -348,13 +348,13 @@ class FNRRequest(AbstractModel):
 
 
 class FNRResponse(AbstractModel):
-    """虛假号碼識别回應
+    """虛假號碼識别回應
 
     """
 
     def __init__(self):
         """
-        :param Status: 虛假号碼描述
+        :param Status: 虛假號碼描述
         :type Status: int
         """
         self.Status = None
@@ -365,13 +365,13 @@ class FNRResponse(AbstractModel):
 
 
 class MHMRequest(AbstractModel):
-    """号碼營銷監控請求
+    """號碼營銷監控請求
 
     """
 
     def __init__(self):
         """
-        :param PhoneNumber: 電話号碼
+        :param PhoneNumber: 電話號碼
         :type PhoneNumber: str
         """
         self.PhoneNumber = None
@@ -382,14 +382,14 @@ class MHMRequest(AbstractModel):
 
 
 class MHMResponse(AbstractModel):
-    """号碼營銷監控回應
+    """號碼營銷監控回應
 
     """
 
     def __init__(self):
         """
-        :param TagType: 标記類型
- 0: 無标記
+        :param TagType: 標記類型
+ 0: 無標記
  50:騷擾電話
  51:房産中介
  52:保險理财
@@ -398,7 +398,7 @@ class MHMResponse(AbstractModel):
  55:快遞電話
  56:出租車專車
         :type TagType: int
-        :param TagCount: 标記次數
+        :param TagCount: 標記次數
         :type TagCount: int
         """
         self.TagType = None
@@ -411,13 +411,13 @@ class MHMResponse(AbstractModel):
 
 
 class MRLRequest(AbstractModel):
-    """号碼惡意标記等級請求
+    """號碼惡意標記等級請求
 
     """
 
     def __init__(self):
         """
-        :param PhoneNumber: 電話号碼
+        :param PhoneNumber: 電話號碼
         :type PhoneNumber: str
         """
         self.PhoneNumber = None
@@ -428,21 +428,21 @@ class MRLRequest(AbstractModel):
 
 
 class MRLResponse(AbstractModel):
-    """号碼惡意标記等級
+    """號碼惡意標記等級
 
     """
 
     def __init__(self):
         """
-        :param DisturbLevel: 騷擾電話惡意标記等級
+        :param DisturbLevel: 騷擾電話惡意標記等級
         :type DisturbLevel: int
-        :param HouseAgentLevel: 房産中介惡意标記等級
+        :param HouseAgentLevel: 房産中介惡意標記等級
         :type HouseAgentLevel: int
-        :param InsuranceLevel: 保險理财惡意标記等級
+        :param InsuranceLevel: 保險理财惡意標記等級
         :type InsuranceLevel: int
-        :param SalesLevel: 廣告推銷惡意标記等級
+        :param SalesLevel: 廣告推銷惡意標記等級
         :type SalesLevel: int
-        :param CheatLevel: 詐騙電話惡意标記等級
+        :param CheatLevel: 詐騙電話惡意標記等級
         :type CheatLevel: int
         """
         self.DisturbLevel = None

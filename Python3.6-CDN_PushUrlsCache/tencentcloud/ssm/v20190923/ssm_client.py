@@ -54,7 +54,7 @@ class SsmClient(AbstractClient):
 
 
     def DeleteSecret(self, request):
-        """删除指定的憑據訊息，可以通過RecoveryWindowInDays參數設置立即删除或者計劃删除。對于計劃删除的憑據，在删除日期到達之前狀态爲 PendingDelete，并可以通過RestoreSecret 進行恢複，超出指定删除日期之後會被徹底删除。您必須先通過 DisableSecret 停用憑據後才可以進行（計劃）删除操作。
+        """删除指定的憑據訊息，可以通過RecoveryWindowInDays參數設置立即删除或者計劃删除。對於計劃删除的憑據，在删除日期到達之前狀态爲 PendingDelete，並可以通過RestoreSecret 進行恢複，超出指定删除日期之後會被徹底删除。您必須先通過 DisableSecret 停用憑據後才可以進行（計劃）删除操作。
 
         :param request: Request instance for DeleteSecret.
         :type request: :class:`taifucloudcloud.ssm.v20190923.models.DeleteSecretRequest`
@@ -82,7 +82,7 @@ class SsmClient(AbstractClient):
 
 
     def DeleteSecretVersion(self, request):
-        """該介面用于直接删除指定憑據下的單個版本憑據，删除操作立即生效，對所有狀态下的憑據版本都可以删除。
+        """該介面用於直接删除指定憑據下的單個版本憑據，删除操作立即生效，對所有狀态下的憑據版本都可以删除。
 
         :param request: Request instance for DeleteSecretVersion.
         :type request: :class:`taifucloudcloud.ssm.v20190923.models.DeleteSecretVersionRequest`
@@ -166,7 +166,7 @@ class SsmClient(AbstractClient):
 
 
     def EnableSecret(self, request):
-        """該介面用于開啓憑據，狀态爲Enabled。可以通過 GetSecretValue 介面獲取憑據明文。處于PendingDelete狀态的憑據不能直接開啓，需要通過RestoreSecret 恢複後再開啓使用。
+        """該介面用於開啓憑據，狀态爲Enabled。可以通過 GetSecretValue 介面獲取憑據明文。處於PendingDelete狀态的憑據不能直接開啓，需要通過RestoreSecret 恢複後再開啓使用。
 
         :param request: Request instance for EnableSecret.
         :type request: :class:`taifucloudcloud.ssm.v20190923.models.EnableSecretRequest`
@@ -278,7 +278,7 @@ class SsmClient(AbstractClient):
 
 
     def ListSecretVersionIds(self, request):
-        """該介面用于獲取指定憑據下的版本清單訊息
+        """該介面用於獲取指定憑據下的版本清單訊息
 
         :param request: Request instance for ListSecretVersionIds.
         :type request: :class:`taifucloudcloud.ssm.v20190923.models.ListSecretVersionIdsRequest`
@@ -306,7 +306,7 @@ class SsmClient(AbstractClient):
 
 
     def ListSecrets(self, request):
-        """該介面用于獲取所有憑據的詳細清單，可以指定過濾欄位、排序方式等。
+        """該介面用於獲取所有憑據的詳細清單，可以指定過濾欄位、排序方式等。
 
         :param request: Request instance for ListSecrets.
         :type request: :class:`taifucloudcloud.ssm.v20190923.models.ListSecretsRequest`
@@ -334,7 +334,7 @@ class SsmClient(AbstractClient):
 
 
     def PutSecretValue(self, request):
-        """該介面在指定名稱的憑據下增加新版本的憑據内容，一個憑據下最多可以支援10個版本。只能對處于Enabled 和 Disabled 狀态的憑據添加新的版本。
+        """該介面在指定名稱的憑據下增加新版本的憑據内容，一個憑據下最多可以支援10個版本。只能對處於Enabled 和 Disabled 狀态的憑據添加新的版本。
 
         :param request: Request instance for PutSecretValue.
         :type request: :class:`taifucloudcloud.ssm.v20190923.models.PutSecretValueRequest`
@@ -362,7 +362,7 @@ class SsmClient(AbstractClient):
 
 
     def RestoreSecret(self, request):
-        """該介面用于恢複計劃删除（PendingDelete狀态）中的憑據，取消計劃删除。取消計劃删除的憑據将處于Disabled 狀态，如需恢複使用，通過EnableSecret 介面開啓憑據。
+        """該介面用於恢複計劃删除（PendingDelete狀态）中的憑據，取消計劃删除。取消計劃删除的憑據将處於Disabled 狀态，如需恢複使用，通過EnableSecret 介面開啓憑據。
 
         :param request: Request instance for RestoreSecret.
         :type request: :class:`taifucloudcloud.ssm.v20190923.models.RestoreSecretRequest`
@@ -390,7 +390,7 @@ class SsmClient(AbstractClient):
 
 
     def UpdateDescription(self, request):
-        """該介面用于修改指定憑據的描述訊息，僅能修改Enabled 和 Disabled 狀态的憑據。
+        """該介面用於修改指定憑據的描述訊息，僅能修改Enabled 和 Disabled 狀态的憑據。
 
         :param request: Request instance for UpdateDescription.
         :type request: :class:`taifucloudcloud.ssm.v20190923.models.UpdateDescriptionRequest`
@@ -418,7 +418,7 @@ class SsmClient(AbstractClient):
 
 
     def UpdateSecret(self, request):
-        """該介面用于更新指定憑據名稱和版本号的内容，調用該介面會對新的憑據内容加密後函蓋舊的内容。僅允許更新Enabled 和 Disabled 狀态的憑據。
+        """該介面用於更新指定憑據名稱和版本號的内容，調用該介面會對新的憑據内容加密後函蓋舊的内容。僅允許更新Enabled 和 Disabled 狀态的憑據。
 
         :param request: Request instance for UpdateSecret.
         :type request: :class:`taifucloudcloud.ssm.v20190923.models.UpdateSecretRequest`

@@ -175,9 +175,9 @@ class CopyAccountPrivilegesRequest(AbstractModel):
         :type DstUserName: str
         :param DstHost: 目的用戶允許的訪問 host
         :type DstHost: str
-        :param SrcReadOnly: 源賬号的 ReadOnly 屬性
+        :param SrcReadOnly: 源賬號的 ReadOnly 屬性
         :type SrcReadOnly: str
-        :param DstReadOnly: 目的賬号的 ReadOnly 屬性
+        :param DstReadOnly: 目的賬號的 ReadOnly 屬性
         :type DstReadOnly: str
         """
         self.InstanceId = None
@@ -227,16 +227,16 @@ class CreateAccountRequest(AbstractModel):
         :type InstanceId: str
         :param UserName: AccountName
         :type UserName: str
-        :param Host: 可以登入的主機，與mysql 賬号的 host 格式一緻，可以支援通配符，例如 %，10.%，10.20.%。
+        :param Host: 可以登入的主機，與mysql 賬號的 host 格式一緻，可以支援通配符，例如 %，10.%，10.20.%。
         :type Host: str
-        :param Password: 賬号密碼，由字母、數字或常見符号組成，不能包含分号、單引号和雙引号，長度爲6~32位。
+        :param Password: 賬號密碼，由字母、數字或常見符號組成，不能包含分號、單引號和雙引號，長度爲6~32位。
         :type Password: str
-        :param ReadOnly: 是否創建爲只讀賬号，0：否， 1：該賬号的sql請求優先選擇備機執行，備機不可用時選擇主機執行，2：優先選擇備機執行，備機不可用時操作失敗，3：只從備機讀取。
+        :param ReadOnly: 是否創建爲只讀賬號，0：否， 1：該賬號的sql請求優先選擇備機執行，備機不可用時選擇主機執行，2：優先選擇備機執行，備機不可用時操作失敗，3：只從備機讀取。
         :type ReadOnly: int
-        :param Description: 賬号備注，可以包含中文、英文字元、常見符号和數字，長度爲0~256字元
+        :param Description: 賬號備注，可以包含中文、英文字元、常見符號和數字，長度爲0~256字元
         :type Description: str
         :param DelayThresh: 如果備機延遲超過本參數設置值，系統将認爲備機發生故障
-建議該參數值大于10。當ReadOnly選擇1、2時該參數生效。
+建議該參數值大於10。當ReadOnly選擇1、2時該參數生效。
         :type DelayThresh: int
         """
         self.InstanceId = None
@@ -370,8 +370,8 @@ class CreateDCDBInstanceResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param DealName: 長訂單号。可以據此調用 DescribeOrders
- 查詢訂單詳細訊息，或在支付失敗時調用用戶賬号相關介面進行支付。
+        :param DealName: 長訂單號。可以據此調用 DescribeOrders
+ 查詢訂單詳細訊息，或在支付失敗時調用用戶賬號相關介面進行支付。
         :type DealName: str
         :param InstanceIds: 訂單對應的實例 ID 清單，如果此處沒有返回實例 ID，可以通過訂單查詢介面獲取。還可通過實例查詢介面查詢實例是否創建完成。
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -391,7 +391,7 @@ class CreateDCDBInstanceResponse(AbstractModel):
 
 
 class DBAccount(AbstractModel):
-    """雲資料庫賬号訊息
+    """雲資料庫賬號訊息
 
     """
 
@@ -399,7 +399,7 @@ class DBAccount(AbstractModel):
         """
         :param UserName: 用戶名
         :type UserName: str
-        :param Host: 用戶可以從哪台主機登入（對應 MySQL 用戶的 host 欄位，UserName + Host 唯一标識一個用戶，IP形式，IP段以%結尾；支援填入%；爲空預設等于%）
+        :param Host: 用戶可以從哪台主機登入（對應 MySQL 用戶的 host 欄位，UserName + Host 唯一標識一個用戶，IP形式，IP段以%結尾；支援填入%；爲空預設等於%）
         :type Host: str
         :param Description: 用戶備注訊息
         :type Description: str
@@ -407,10 +407,10 @@ class DBAccount(AbstractModel):
         :type CreateTime: str
         :param UpdateTime: 最後更新時間
         :type UpdateTime: str
-        :param ReadOnly: 只讀标記，0：否， 1：該賬号的sql請求優先選擇備機執行，備機不可用時選擇主機執行，2：優先選擇備機執行，備機不可用時操作失敗。
+        :param ReadOnly: 只讀標記，0：否， 1：該賬號的sql請求優先選擇備機執行，備機不可用時選擇主機執行，2：優先選擇備機執行，備機不可用時操作失敗。
         :type ReadOnly: int
         :param DelayThresh: 如果備機延遲超過本參數設置值，系統将認爲備機發生故障
-建議該參數值大于10。當ReadOnly選擇1、2時該參數生效。
+建議該參數值大於10。當ReadOnly選擇1、2時該參數生效。
         :type DelayThresh: int
         """
         self.UserName = None
@@ -486,7 +486,7 @@ class DCDBInstanceInfo(AbstractModel):
         :type Vport: int
         :param CreateTime: 創建時間
         :type CreateTime: str
-        :param AutoRenewFlag: 自動續約标志
+        :param AutoRenewFlag: 自動續約標志
         :type AutoRenewFlag: int
         :param Memory: 内存大小，單位 GB
         :type Memory: int
@@ -504,7 +504,7 @@ class DCDBInstanceInfo(AbstractModel):
         :type ShardDetail: list of ShardInfo
         :param NodeCount: 節點數，2 爲一主一從， 3 爲一主二從
         :type NodeCount: int
-        :param IsTmp: 臨時實例标記，0 爲非臨時實例
+        :param IsTmp: 臨時實例標記，0 爲非臨時實例
         :type IsTmp: int
         :param ExclusterId: 獨享集群Id，爲空表示非獨享集群實例
         :type ExclusterId: str
@@ -530,7 +530,7 @@ class DCDBInstanceInfo(AbstractModel):
         :type DbVersion: str
         :param Paymode: 付費模式
         :type Paymode: str
-        :param Locker: 實例處于異步任務狀态時，表示異步任務流程ID
+        :param Locker: 實例處於異步任務狀态時，表示異步任務流程ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Locker: int
         :param WanStatus: 外網狀态，0-未開通；1-已開通；2-關閉；3-開通中
@@ -633,7 +633,7 @@ class DCDBShardInfo(AbstractModel):
         """
         :param InstanceId: 所屬實例Id
         :type InstanceId: str
-        :param ShardSerialId: 分片SQL透傳Id，用于将sql透傳到指定分片執行
+        :param ShardSerialId: 分片SQL透傳Id，用於将sql透傳到指定分片執行
         :type ShardSerialId: str
         :param ShardInstanceId: 全局唯一的分片Id
         :type ShardInstanceId: str
@@ -801,13 +801,13 @@ class Deal(AbstractModel):
 
     def __init__(self):
         """
-        :param DealName: 訂單号
+        :param DealName: 訂單號
         :type DealName: str
-        :param OwnerUin: 所屬賬号
+        :param OwnerUin: 所屬賬號
         :type OwnerUin: str
         :param Count: 商品數量
         :type Count: int
-        :param FlowId: 關聯的流程 Id，可用于查詢流程執行狀态
+        :param FlowId: 關聯的流程 Id，可用於查詢流程執行狀态
         :type FlowId: int
         :param InstanceIds: 只有創建實例的訂單會填充該欄位，表示該訂單創建的實例的 ID。
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -885,7 +885,7 @@ class DescribeAccountPrivilegesRequest(AbstractModel):
         :type InstanceId: str
         :param UserName: 登入用戶名。
         :type UserName: str
-        :param Host: 用戶允許的訪問 host，用戶名+host唯一确定一個賬号。
+        :param Host: 用戶允許的訪問 host，用戶名+host唯一确定一個賬號。
         :type Host: str
         :param DbName: 資料庫名。如果爲 \*，表示查詢全局權限（即 \*.\*），此時忽略 Type 和 Object 參數
         :type DbName: str
@@ -926,9 +926,9 @@ class DescribeAccountPrivilegesResponse(AbstractModel):
         :type InstanceId: str
         :param Privileges: 權限清單。
         :type Privileges: list of str
-        :param UserName: 資料庫賬号用戶名
+        :param UserName: 資料庫賬號用戶名
         :type UserName: str
-        :param Host: 資料庫賬号Host
+        :param Host: 資料庫賬號Host
         :type Host: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1191,7 +1191,7 @@ class DescribeDCDBInstancesRequest(AbstractModel):
         :type Limit: int
         :param ExclusterType: 1非獨享集群，2獨享集群， 0全部
         :type ExclusterType: int
-        :param IsFilterExcluster: 标識是否使用ExclusterType欄位, false不使用，true使用
+        :param IsFilterExcluster: 標識是否使用ExclusterType欄位, false不使用，true使用
         :type IsFilterExcluster: bool
         """
         self.InstanceIds = None
@@ -1735,7 +1735,7 @@ class DescribeOrdersRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param DealNames: 待查詢的長訂單号清單，創建實例、續約實例、擴容實例介面返回。
+        :param DealNames: 待查詢的長訂單號清單，創建實例、續約實例、擴容實例介面返回。
         :type DealNames: list of str
         """
         self.DealNames = None
@@ -1914,7 +1914,7 @@ class GrantAccountPrivilegesRequest(AbstractModel):
         :type InstanceId: str
         :param UserName: 登入用戶名。
         :type UserName: str
-        :param Host: 用戶允許的訪問 host，用戶名+host唯一确定一個賬号。
+        :param Host: 用戶允許的訪問 host，用戶名+host唯一确定一個賬號。
         :type Host: str
         :param DbName: 資料庫名。如果爲 \*，表示查詢全局權限（即 \*.\*），此時忽略 Type 和 Object 參數
         :type DbName: str
@@ -2031,7 +2031,7 @@ class LogFileInfo(AbstractModel):
         :type Mtime: int
         :param Length: 文件長度
         :type Length: int
-        :param Uri: 下載Log時用到的統一資源标識符
+        :param Uri: 下載Log時用到的統一資源標識符
         :type Uri: str
         :param FileName: 文件名
         :type FileName: str
@@ -2060,9 +2060,9 @@ class ModifyAccountDescriptionRequest(AbstractModel):
         :type InstanceId: str
         :param UserName: 登入用戶名。
         :type UserName: str
-        :param Host: 用戶允許的訪問 host，用戶名+host唯一确定一個賬号。
+        :param Host: 用戶允許的訪問 host，用戶名+host唯一确定一個賬號。
         :type Host: str
-        :param Description: 新的賬号備注，長度 0~256。
+        :param Description: 新的賬號備注，長度 0~256。
         :type Description: str
         """
         self.InstanceId = None
@@ -2437,8 +2437,8 @@ class RenewDCDBInstanceResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param DealName: 長訂單号。可以據此調用 DescribeOrders
- 查詢訂單詳細訊息，或在支付失敗時調用用戶賬号相關介面進行支付。
+        :param DealName: 長訂單號。可以據此調用 DescribeOrders
+ 查詢訂單詳細訊息，或在支付失敗時調用用戶賬號相關介面進行支付。
         :type DealName: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -2463,9 +2463,9 @@ class ResetAccountPasswordRequest(AbstractModel):
         :type InstanceId: str
         :param UserName: 登入用戶名。
         :type UserName: str
-        :param Host: 用戶允許的訪問 host，用戶名+host唯一确定一個賬号。
+        :param Host: 用戶允許的訪問 host，用戶名+host唯一确定一個賬號。
         :type Host: str
-        :param Password: 新密碼，由字母、數字或常見符号組成，不能包含分号、單引号和雙引号，長度爲6~32位。
+        :param Password: 新密碼，由字母、數字或常見符號組成，不能包含分號、單引號和雙引號，長度爲6~32位。
         :type Password: str
         """
         self.InstanceId = None
@@ -2802,8 +2802,8 @@ class UpgradeDCDBInstanceResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param DealName: 長訂單号。可以據此調用 DescribeOrders
- 查詢訂單詳細訊息，或在支付失敗時調用用戶賬号相關介面進行支付。
+        :param DealName: 長訂單號。可以據此調用 DescribeOrders
+ 查詢訂單詳細訊息，或在支付失敗時調用用戶賬號相關介面進行支付。
         :type DealName: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str

@@ -7,7 +7,7 @@ inputs:
   name: unpack_to_cos
   src: ./
   description: >-
-    上傳壓縮包至COS時，可觸發雲函數下載壓縮包并解壓，然後将解壓縮後的文件上傳至另一個 COS 儲存桶
+    上傳壓縮包至COS時，可觸發雲函數下載壓縮包並解壓，然後将解壓縮後的文件上傳至另一個 COS 儲存桶
   handler: index.main_handler
   runtime: Nodejs10.15
   namespace: default

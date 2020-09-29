@@ -26,7 +26,7 @@ class RedisClient(AbstractClient):
 
 
     def AssociateSecurityGroups(self, request):
-        """本介面 (AssociateSecurityGroups) 用于綁定安全組到指定實例。
+        """本介面 (AssociateSecurityGroups) 用於綁定安全組到指定實例。
 
         :param request: Request instance for AssociateSecurityGroups.
         :type request: :class:`taifucloudcloud.redis.v20180412.models.AssociateSecurityGroupsRequest`
@@ -110,7 +110,7 @@ class RedisClient(AbstractClient):
 
 
     def CreateInstanceAccount(self, request):
-        """創建實例子賬号
+        """創建實例子賬號
 
         :param request: Request instance for CreateInstanceAccount.
         :type request: :class:`taifucloudcloud.redis.v20180412.models.CreateInstanceAccountRequest`
@@ -166,7 +166,7 @@ class RedisClient(AbstractClient):
 
 
     def DeleteInstanceAccount(self, request):
-        """删除實例子賬号
+        """删除實例子賬號
 
         :param request: Request instance for DeleteInstanceAccount.
         :type request: :class:`taifucloudcloud.redis.v20180412.models.DeleteInstanceAccountRequest`
@@ -250,7 +250,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeDBSecurityGroups(self, request):
-        """本介面(DescribeDBSecurityGroups)用于查詢實例的安全組詳情。
+        """本介面(DescribeDBSecurityGroups)用於查詢實例的安全組詳情。
 
         :param request: Request instance for DescribeDBSecurityGroups.
         :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeDBSecurityGroupsRequest`
@@ -278,7 +278,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeInstanceAccount(self, request):
-        """檢視實例子賬号訊息
+        """檢視實例子賬號訊息
 
         :param request: Request instance for DescribeInstanceAccount.
         :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeInstanceAccountRequest`
@@ -810,7 +810,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeProjectSecurityGroups(self, request):
-        """本介面(DescribeProjectSecurityGroups)用于查詢項目的安全組詳情。
+        """本介面(DescribeProjectSecurityGroups)用於查詢項目的安全組詳情。
 
         :param request: Request instance for DescribeProjectSecurityGroups.
         :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeProjectSecurityGroupsRequest`
@@ -866,7 +866,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeTaskInfo(self, request):
-        """用于查詢任務結果
+        """用於查詢任務結果
 
         :param request: Request instance for DescribeTaskInfo.
         :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeTaskInfoRequest`
@@ -1006,7 +1006,7 @@ class RedisClient(AbstractClient):
 
 
     def DisassociateSecurityGroups(self, request):
-        """本介面(DisassociateSecurityGroups)用于安全組批次解綁實例。
+        """本介面(DisassociateSecurityGroups)用於安全組批次解綁實例。
 
         :param request: Request instance for DisassociateSecurityGroups.
         :type request: :class:`taifucloudcloud.redis.v20180412.models.DisassociateSecurityGroupsRequest`
@@ -1230,7 +1230,7 @@ class RedisClient(AbstractClient):
 
 
     def ModifyDBInstanceSecurityGroups(self, request):
-        """本介面(ModifyDBInstanceSecurityGroups)用于修改實例綁定的安全組
+        """本介面(ModifyDBInstanceSecurityGroups)用於修改實例綁定的安全組
 
         :param request: Request instance for ModifyDBInstanceSecurityGroups.
         :type request: :class:`taifucloudcloud.redis.v20180412.models.ModifyDBInstanceSecurityGroupsRequest`
@@ -1286,7 +1286,7 @@ class RedisClient(AbstractClient):
 
 
     def ModifyInstanceAccount(self, request):
-        """修改實例子賬号
+        """修改實例子賬號
 
         :param request: Request instance for ModifyInstanceAccount.
         :type request: :class:`taifucloudcloud.redis.v20180412.models.ModifyInstanceAccountRequest`
@@ -1482,7 +1482,7 @@ class RedisClient(AbstractClient):
 
 
     def SwitchInstanceVip(self, request):
-        """在通過DTS支援跨可用區災備的場景中，通過該介面交換實例VIP完成實例災備切換。交換VIP後目标實例可寫，源和目标實例VIP互換，同時源與目标實例間DTS同步任務斷開
+        """在通過DTS支援跨可用區災備的場景中，通過該介面交換實例VIP完成實例災備切換。交換VIP後目標實例可寫，源和目標實例VIP互換，同時源與目標實例間DTS同步任務斷開
 
         :param request: Request instance for SwitchInstanceVip.
         :type request: :class:`taifucloudcloud.redis.v20180412.models.SwitchInstanceVipRequest`

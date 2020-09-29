@@ -24,16 +24,16 @@ class AddFairPlayPemRequest(AbstractModel):
     def __init__(self):
         """
         :param Pem: 加密後的fairplay方案申請時使用的私鑰。
-請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對私鑰文件中的欄位進行加密，并對加密結果進行base64編碼。
+請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對私鑰文件中的欄位進行加密，並對加密結果進行base64編碼。
         :type Pem: str
         :param Ask: 加密後的fairplay方案申請返回的ask數據。
-請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對Ask字串進行加密，并對加密結果進行base64編碼。
+請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對Ask字串進行加密，並對加密結果進行base64編碼。
         :type Ask: str
         :param PemDecryptKey: 私鑰的解密金鑰。
 openssl在生成rsa時，可能會需要設置加密金鑰，請記住設置的金鑰。
-請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對解密金鑰進行加密，并對加密結果進行base64編碼。
+請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對解密金鑰進行加密，並對加密結果進行base64編碼。
         :type PemDecryptKey: str
-        :param BailorId: 委托者Id,适用于托管自身證書的客戶。普通客戶無需填該欄位。
+        :param BailorId: 委托者Id,适用於托管自身證書的客戶。普通客戶無需填該欄位。
         :type BailorId: int
         :param Priority: 私鑰的優先級，優先級數值越高，優先級越高。
 該值可以不傳，後台将自動分配一個優先級。
@@ -61,7 +61,7 @@ class AddFairPlayPemResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param FairPlayPemId: 設置私鑰後，後台返回的pem id，用來唯一标識一個私鑰。
+        :param FairPlayPemId: 設置私鑰後，後台返回的pem id，用來唯一標識一個私鑰。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FairPlayPemId: int
         :param Priority: 私鑰的優先級，優先級數值越高，優先級越高。
@@ -92,7 +92,7 @@ class CreateEncryptKeysRequest(AbstractModel):
         :type DrmType: str
         :param Keys: 設置的加密金鑰清單。
         :type Keys: list of KeyParam
-        :param ContentId: 一個加密内容的唯一标識。
+        :param ContentId: 一個加密内容的唯一標識。
         :type ContentId: str
         :param ContentType: 内容類型。介面取值VodVideo,LiveVideo。
         :type ContentType: str
@@ -200,7 +200,7 @@ class DeleteFairPlayPemRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BailorId: 委托者Id,适用于托管自身證書的客戶。普通客戶無需填該欄位。
+        :param BailorId: 委托者Id,适用於托管自身證書的客戶。普通客戶無需填該欄位。
         :type BailorId: int
         :param FairPlayPemId: 要删除的pem id。
 當未傳入該值時，将删除所有的私鑰。
@@ -244,7 +244,7 @@ class DescribeAllKeysRequest(AbstractModel):
         :param RsaPublicKey: Base64編碼的Rsa公鑰，用來加密出參中的SessionKey。
 如果該參數爲空，則出參中SessionKey爲明文。
         :type RsaPublicKey: str
-        :param ContentId: 一個加密内容的唯一标識。
+        :param ContentId: 一個加密内容的唯一標識。
         :type ContentId: str
         :param ContentType: 内容類型。介面取值VodVideo,LiveVideo。
         :type ContentType: str
@@ -308,7 +308,7 @@ class DescribeFairPlayPemRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BailorId: 委托者Id,适用于托管自身證書的客戶。普通客戶無需填該欄位。
+        :param BailorId: 委托者Id,适用於托管自身證書的客戶。普通客戶無需填該欄位。
         :type BailorId: int
         :param FairPlayPemId: 需要查詢的pem id。
 當該值未填入時，将返回所有的私鑰訊息。
@@ -366,7 +366,7 @@ class DescribeKeysRequest(AbstractModel):
         :param RsaPublicKey: Base64編碼的Rsa公鑰，用來加密出參中的SessionKey。
 如果該參數爲空，則出參中SessionKey爲明文。
         :type RsaPublicKey: str
-        :param ContentId: 一個加密内容的唯一标識。
+        :param ContentId: 一個加密内容的唯一標識。
 如果該參數爲空，則後台自動生成
         :type ContentId: str
         """
@@ -475,7 +475,7 @@ class DrmOutputPara(AbstractModel):
 
 
 class DrmSourceObject(AbstractModel):
-    """用于DRM加密的源對象
+    """用於DRM加密的源對象
 
     """
 
@@ -577,11 +577,11 @@ class KeyParam(AbstractModel):
         :param Track: 加密track類型。取值範圍：
 SD、HD、UHD1、UHD2、AUDIO
         :type Track: str
-        :param Key: 請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對解密金鑰進行加密，并對加密結果進行base64編碼。
+        :param Key: 請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對解密金鑰進行加密，並對加密結果進行base64編碼。
         :type Key: str
         :param KeyId: 金鑰ID。
         :type KeyId: str
-        :param Iv: 請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對解密金鑰進行加密，并對加密結果進行base64編碼。
+        :param Iv: 請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對解密金鑰進行加密，並對加密結果進行base64編碼。
         :type Iv: str
         """
         self.Track = None
@@ -605,18 +605,18 @@ class ModifyFairPlayPemRequest(AbstractModel):
     def __init__(self):
         """
         :param Pem: 加密後的fairplay方案申請時使用的私鑰。
-請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對私鑰文件中的欄位進行加密，并對加密結果進行base64編碼。
+請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對私鑰文件中的欄位進行加密，並對加密結果進行base64編碼。
         :type Pem: str
         :param Ask: 加密後的fairplay方案申請返回的ask數據。
-請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對Ask字串進行加密，并對加密結果進行base64編碼。
+請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對Ask字串進行加密，並對加密結果進行base64編碼。
         :type Ask: str
         :param FairPlayPemId: 要修改的私鑰id
         :type FairPlayPemId: int
         :param PemDecryptKey: 私鑰的解密金鑰。
 openssl在生成rsa時，可能會需要設置加密金鑰，請記住設置的金鑰。
-請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對解密金鑰進行加密，并對加密結果進行base64編碼。
+請使用Top Cloud DRM 提供的公鑰，使用rsa加密算法，PKCS1填充方式對解密金鑰進行加密，並對加密結果進行base64編碼。
         :type PemDecryptKey: str
-        :param BailorId: 委托者Id,适用于托管自身證書的客戶。普通客戶無需填該欄位。
+        :param BailorId: 委托者Id,适用於托管自身證書的客戶。普通客戶無需填該欄位。
         :type BailorId: int
         :param Priority: 私鑰的優先級，優先級數值越高，優先級越高。
 該值可以不傳，後台将自動分配一個優先級。
@@ -646,7 +646,7 @@ class ModifyFairPlayPemResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param FairPlayPemId: 設置私鑰後，後台返回的pem id，用來唯一标識一個私鑰。
+        :param FairPlayPemId: 設置私鑰後，後台返回的pem id，用來唯一標識一個私鑰。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FairPlayPemId: int
         :param Priority: 私鑰的優先級，優先級數值越高，優先級越高。

@@ -334,7 +334,7 @@ class TcbClient(AbstractClient):
 
 
     def DescribeEnvs(self, request):
-        """獲取環境清單，含環境下的各個資源訊息。尤其是各資源的唯一标識，是請求各資源的關鍵參數
+        """獲取環境清單，含環境下的各個資源訊息。尤其是各資源的唯一標識，是請求各資源的關鍵參數
 
         :param request: Request instance for DescribeEnvs.
         :type request: :class:`taifucloudcloud.tcb.v20180608.models.DescribeEnvsRequest`
@@ -362,7 +362,7 @@ class TcbClient(AbstractClient):
 
 
     def DescribeQuotaData(self, request):
-        """查詢指定指标的配額使用量
+        """查詢指定指標的配額使用量
 
         :param request: Request instance for DescribeQuotaData.
         :type request: :class:`taifucloudcloud.tcb.v20180608.models.DescribeQuotaDataRequest`

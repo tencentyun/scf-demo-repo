@@ -151,23 +151,23 @@ class InputDetectAccountActivity(AbstractModel):
 
     def __init__(self):
         """
-        :param Uid: 用戶ID值，如 /  openid，或 手機号等（如15912345687）
+        :param Uid: 用戶ID值，如 /  openid，或 手機號等（如15912345687）
         :type Uid: str
-        :param AccountType: 用戶賬号類型 
-1： 開放帳号 
-2： 開放賬号 
-4：手機号 （暫僅支援國内手機号）
-10004： 手機号MD5
+        :param AccountType: 用戶賬號類型 
+1： 開放帳號 
+2： 開放賬號 
+4：手機號 （暫僅支援國内手機號）
+10004： 手機號MD5
         :type AccountType: int
         :param UserIp: 用戶真實外網IP
         :type UserIp: str
         :param PostTime: 用戶操作時間戳，單位秒（格林威治時間精确到秒，如1501590972）
         :type PostTime: int
-        :param AppIdU: accountType是 或 開放賬号時，該參數必填，表示 或 分配給網站或應用的appId，用來唯一标識網站或應用
+        :param AppIdU: accountType是 或 開放賬號時，該參數必填，表示 或 分配給網站或應用的appId，用來唯一標識網站或應用
         :type AppIdU: str
         :param NickName: 昵稱，UTF-8 編碼
         :type NickName: str
-        :param PhoneNumber: 手機号。若 accountType 選4（手機号）、或10004（手機号 MD5），則無需重複填寫。否則填入對應的手機号（如15912345687）
+        :param PhoneNumber: 手機號。若 accountType 選4（手機號）、或10004（手機號 MD5），則無需重複填寫。否則填入對應的手機號（如15912345687）
         :type PhoneNumber: str
         :param EmailAddress: 用戶電子信箱網址（非系統自動生成）
         :type EmailAddress: str
@@ -177,11 +177,11 @@ class InputDetectAccountActivity(AbstractModel):
         :type UserAgent: str
         :param XForwardedFor: 用戶HTTP請求中的 x_forward_for
         :type XForwardedFor: str
-        :param MacAddress: Mac網址或設備唯一标識
+        :param MacAddress: Mac網址或設備唯一標識
         :type MacAddress: str
         :param VendorId: 手機制造商ID，如果手機注冊，請帶上此訊息
         :type VendorId: str
-        :param Imei: 手機設備号
+        :param Imei: 手機設備號
         :type Imei: str
         """
         self.Uid = None
@@ -246,13 +246,13 @@ class InputKolDataList(AbstractModel):
 
     def __init__(self):
         """
-        :param Type: 賬号類型[1： ；2：qq；3： ]
+        :param Type: 賬號類型[1： ；2：qq；3： ]
         :type Type: int
-        :param Id: KOL賬号ID[比如 公衆号ID]
+        :param Id: KOL賬號ID[比如 公衆號ID]
         :type Id: str
         :param Name: KOL名稱
         :type Name: str
-        :param Phone: 手機号
+        :param Phone: 手機號
         :type Phone: str
         :param AgentInfo:  名稱
         :type AgentInfo: str
@@ -281,7 +281,7 @@ class InputRecognizeTargetAudience(AbstractModel):
         """
         :param Uid: 設備ID，AccountType指定的類型
         :type Uid: str
-        :param AccountType: 設備号類型，1.imei 2.imeiMd5（小寫後轉MD5轉小寫）3.idfa， 4.idfaMd5（大寫後轉MD5轉小寫），5.手機号,256.其它
+        :param AccountType: 設備號類型，1.imei 2.imeiMd5（小寫後轉MD5轉小寫）3.idfa， 4.idfaMd5（大寫後轉MD5轉小寫），5.手機號,256.其它
         :type AccountType: int
         :param ModelIdList: 模型ID清單
         :type ModelIdList: list of int
@@ -295,7 +295,7 @@ class InputRecognizeTargetAudience(AbstractModel):
         :type Lat: str
         :param Lon: 經度
         :type Lon: str
-        :param DeviceModel: 設備型号(MI 6)
+        :param DeviceModel: 設備型號(MI 6)
         :type DeviceModel: str
         :param BidFloor: 競價底價
         :type BidFloor: int
@@ -311,7 +311,7 @@ class InputRecognizeTargetAudience(AbstractModel):
         :type AdvertisingType: int
         :param Mac: mac網址，建議提供
         :type Mac: str
-        :param Phone: 電話号碼
+        :param Phone: 電話號碼
         :type Phone: str
         :param Ua: 浏覽器類型
         :type Ua: str
@@ -446,7 +446,7 @@ class InputSendTrafficSecuritySmsMsg(AbstractModel):
         """
         :param TaskId: 投放任務ID
         :type TaskId: str
-        :param Mobiles: 手機号碼清單（号碼量<=200）
+        :param Mobiles: 手機號碼清單（號碼量<=200）
         :type Mobiles: list of str
         """
         self.TaskId = None
@@ -465,7 +465,7 @@ class InputTaBspData(AbstractModel):
 
     def __init__(self):
         """
-        :param Seq: 請求序列号
+        :param Seq: 請求序列號
         :type Seq: int
         :param OsType: 作業系統類型[0：未知；1：android；2：ios；3：windows]
         :type OsType: str
@@ -489,7 +489,7 @@ class InputTaBspData(AbstractModel):
         :type UserIp: str
         :param Mac: MAC網址[建議提供]
         :type Mac: str
-        :param PhoneNum: 手機号碼[ 大陸]
+        :param PhoneNum: 手機號碼[ 大陸]
         :type PhoneNum: str
         :param UserAgent: 浏覽器
         :type UserAgent: str
@@ -499,7 +499,7 @@ class InputTaBspData(AbstractModel):
         :type Package: str
         :param DeviceMaker: 設備制造商
         :type DeviceMaker: str
-        :param DeviceModule: 設備型号
+        :param DeviceModule: 設備型號
         :type DeviceModule: str
         :param AccessMode: 入網方式[1：WIFI；2：4G；3：3G；4：2G；5：其它]
         :type AccessMode: str
@@ -621,12 +621,12 @@ class OutputDetectAccountActivityValue(AbstractModel):
 1 - 4：活躍等級由低到高
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Level: int
-        :param Type: 賬号标簽：
-3，無效賬号，送檢賬号參數無法成功解析，請檢查 openid是否有誤 ， openid是否與appidU對應，手機号是否有誤。
-4，黑名單，該賬号在業務側有過拉黑記錄
-5，白名單，該賬号在業務側有過加白名單記錄
+        :param Type: 賬號標簽：
+3，無效賬號，送檢賬號參數無法成功解析，請檢查 openid是否有誤 ， openid是否與appidU對應，手機號是否有誤。
+4，黑名單，該賬號在業務側有過拉黑記錄
+5，白名單，該賬號在業務側有過加白名單記錄
 
-環境标簽：
+環境標簽：
 205，非公網有效ip，傳進來的IP網址爲内網ip網址或者ip保留網址；
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Type: list of int
@@ -686,7 +686,7 @@ class OutputKolValue(AbstractModel):
 
     def __init__(self):
         """
-        :param Id: KOL賬号ID[比如 公衆号ID]
+        :param Id: KOL賬號ID[比如 公衆號ID]
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Id: str
         :param IsCheck: 是否查得[0：未查得；1：查得]
@@ -784,7 +784,7 @@ class OutputSendTrafficSecuritySmsMsg(AbstractModel):
         :param Message: 返回碼對應的訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Message: str
-        :param Value: 發送失敗的号碼清單
+        :param Value: 發送失敗的號碼清單
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Value: list of str
         """

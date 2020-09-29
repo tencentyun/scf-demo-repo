@@ -26,7 +26,7 @@ class IeClient(AbstractClient):
 
 
     def CreateEditingTask(self, request):
-        """創建智慧編輯任務，可以同時選擇視訊标簽識别、分類識别、智慧拆條、智慧集錦、智慧封面和片頭片尾識别中的一項或者多項能力。
+        """創建智慧編輯任務，可以同時選擇視訊標簽識别、分類識别、智慧拆條、智慧集錦、智慧封面和片頭片尾識别中的一項或者多項能力。
 
         :param request: Request instance for CreateEditingTask.
         :type request: :class:`taifucloudcloud.ie.v20200304.models.CreateEditingTaskRequest`

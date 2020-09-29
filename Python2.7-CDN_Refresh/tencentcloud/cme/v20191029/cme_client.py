@@ -26,7 +26,7 @@ class CmeClient(AbstractClient):
 
 
     def AddTeamMember(self, request):
-        """向一個團隊中團隊成員，并且指定成員的角色。
+        """向一個團隊中團隊成員，並且指定成員的角色。
 
         :param request: Request instance for AddTeamMember.
         :type request: :class:`taifucloudcloud.cme.v20191029.models.AddTeamMemberRequest`
@@ -54,7 +54,7 @@ class CmeClient(AbstractClient):
 
 
     def CreateClass(self, request):
-        """新增分類，用于管理素材。
+        """新增分類，用於管理素材。
         <li>分類層數不能超過10；</li>
         <li>子分類數不能超過10。</li>
 
@@ -84,7 +84,7 @@ class CmeClient(AbstractClient):
 
 
     def CreateLink(self, request):
-        """創建素材連結或分類路徑連結，将源資源訊息連結到目标。
+        """創建素材連結或分類路徑連結，将源資源訊息連結到目標。
 
         :param request: Request instance for CreateLink.
         :type request: :class:`taifucloudcloud.cme.v20191029.models.CreateLinkRequest`
@@ -706,7 +706,7 @@ class CmeClient(AbstractClient):
 
 
     def GrantResourceAuthorization(self, request):
-        """資源所屬實體對目标實體授予目标資源的相應權限。
+        """資源所屬實體對目標實體授予目標資源的相應權限。
 
         :param request: Request instance for GrantResourceAuthorization.
         :type request: :class:`taifucloudcloud.cme.v20191029.models.GrantResourceAuthorizationRequest`
@@ -818,7 +818,7 @@ class CmeClient(AbstractClient):
 
 
     def ModifyMaterial(self, request):
-        """修改素材訊息，支援修改素材名稱、分類路徑、标簽等訊息。
+        """修改素材訊息，支援修改素材名稱、分類路徑、標簽等訊息。
 
         :param request: Request instance for ModifyMaterial.
         :type request: :class:`taifucloudcloud.cme.v20191029.models.ModifyMaterialRequest`
@@ -931,7 +931,7 @@ class CmeClient(AbstractClient):
 
 
     def MoveClass(self, request):
-        """ 某一個分類到另外一個分類下，也可用于分類重命名。
+        """ 某一個分類到另外一個分類下，也可用於分類重命名。
         <li>如果 SourceClassPath = /素材/視訊/NBA，DestinationClassPath = /素材/視訊/籃球，當 DestinationClassPath 不存在時候，操作結果爲重命名 ClassPath，如果 DestinationClassPath 存在時候，操作結果爲産生新目錄 /素材/視訊/籃球/NBA。</li>
 
         :param request: Request instance for MoveClass.
@@ -960,7 +960,7 @@ class CmeClient(AbstractClient):
 
 
     def RevokeResourceAuthorization(self, request):
-        """資源所屬實體對目标實體回收目标資源的相應權限，若原本沒有相應權限則不産生變更。
+        """資源所屬實體對目標實體回收目標資源的相應權限，若原本沒有相應權限則不産生變更。
 
         :param request: Request instance for RevokeResourceAuthorization.
         :type request: :class:`taifucloudcloud.cme.v20191029.models.RevokeResourceAuthorizationRequest`

@@ -31,7 +31,7 @@ class ArithmeticOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -85,7 +85,7 @@ class BankCardOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 7M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -105,7 +105,7 @@ class BankCardOCRResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param CardNo: 卡号
+        :param CardNo: 卡號
         :type CardNo: str
         :param BankInfo: 銀行訊息
         :type BankInfo: str
@@ -142,7 +142,7 @@ class BizLicenseOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 7M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -162,7 +162,7 @@ class BizLicenseOCRResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param RegNum: 注冊号
+        :param RegNum: 注冊號
         :type RegNum: str
         :param Name: 公司名稱
         :type Name: str
@@ -223,7 +223,7 @@ class BusInvoiceInfo(AbstractModel):
         :type Name: str
         :param Value: 識别出的欄位名稱對應的值，也就是欄位Name對應的字串結果。
         :type Value: str
-        :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐标。
+        :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐標。
         :type Rect: :class:`taifucloudcloud.ocr.v20181119.models.Rect`
         """
         self.Name = None
@@ -254,7 +254,7 @@ class BusInvoiceOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -305,7 +305,7 @@ class BusinessCardInfo(AbstractModel):
     def __init__(self):
         """
         :param Name: 識别出的欄位名稱（關鍵字，可能重複，比如多個手機），能識别的欄位名爲：
-姓名、英文姓名、英文網址、公司、英文公司、職位、英文職位、部門、英文部門、手機、電話、傳真、社交帳号、 、MSN、 、 、電子信箱、郵編、網址、公司賬号、其他。
+姓名、英文姓名、英文網址、公司、英文公司、職位、英文職位、部門、英文部門、手機、電話、傳真、社交帳號、 、MSN、 、 、電子信箱、郵編、網址、公司賬號、其他。
         :type Name: str
         :param Value: 識别出的欄位名稱對應的值，也就是欄位name對應的字串結果。
         :type Value: str
@@ -334,7 +334,7 @@ class BusinessCardOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 7M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         :param Config: 可選欄位，根據需要選擇是否請求對應欄位。
@@ -425,7 +425,7 @@ class CarInvoiceOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -465,15 +465,15 @@ class CarInvoiceOCRResponse(AbstractModel):
 
 
 class Coord(AbstractModel):
-    """坐标
+    """坐標
 
     """
 
     def __init__(self):
         """
-        :param X: 橫坐标
+        :param X: 橫坐標
         :type X: int
-        :param Y: 縱坐标
+        :param Y: 縱坐標
         :type Y: int
         """
         self.X = None
@@ -496,10 +496,10 @@ class DriverLicenseOCRRequest(AbstractModel):
 圖片的 ImageUrl、ImageBase64 必須提供一個，如果都提供，只使用 ImageUrl。
         :type ImageBase64: str
         :param ImageUrl: 圖片的 Url 網址。要求圖片經Base64編碼後不超過 7M，分辨率建議500*800以上，支援PNG、JPG、JPEG、BMP格式。建議卡片部分占據圖片2/3以上。圖片下載時間不超過 3 秒。
-建議圖片儲存于Top Cloud ，可保障更高的下載速度和穩定性。
+建議圖片儲存於Top Cloud ，可保障更高的下載速度和穩定性。
         :type ImageUrl: str
         :param CardSide: FRONT 爲駕駛證首頁正面（有紅色印章的一面），
-BACK 爲駕駛證副頁正面（有檔案編号的一面）。
+BACK 爲駕駛證副頁正面（有檔案編號的一面）。
         :type CardSide: str
         """
         self.ImageBase64 = None
@@ -538,9 +538,9 @@ class DriverLicenseOCRResponse(AbstractModel):
         :type StartDate: str
         :param EndDate: 有效期截止時間
         :type EndDate: str
-        :param CardCode: 證号
+        :param CardCode: 證號
         :type CardCode: str
-        :param ArchivesCode: 檔案編号
+        :param ArchivesCode: 檔案編號
         :type ArchivesCode: str
         :param Record: 記錄
         :type Record: str
@@ -605,7 +605,7 @@ class DutyPaidProofInfo(AbstractModel):
         :type Name: str
         :param Value: 識别出的欄位名稱對應的值，也就是欄位Name對應的字串結果。
         :type Value: str
-        :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐标。
+        :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐標。
         :type Rect: :class:`taifucloudcloud.ocr.v20181119.models.Rect`
         """
         self.Name = None
@@ -636,7 +636,7 @@ class DutyPaidProofOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -694,15 +694,15 @@ class EduPaperOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         :param Config: 擴展配置訊息。
 配置格式：{"option1":value1,"option2":value2}
 可配置訊息：
       參數名稱  是否必選   類型   可選值  預設值  描述
-      task_type  否  Int32  [0,1]  1  用于選擇任務類型: 0: 關閉版式分析與處理 1: 開啓版式分析處理
-      is_structuralization 否 Bool false\true true  用于選擇是否結構化輸出：false：返回包體返回通用輸出 true：返回包體同時返回通用和結構化輸出
+      task_type  否  Int32  [0,1]  1  用於選擇任務類型: 0: 關閉版式分析與處理 1: 開啓版式分析處理
+      is_structuralization 否 Bool false\true true  用於選擇是否結構化輸出：false：返回包體返回通用輸出 true：返回包體同時返回通用和結構化輸出
       if_readable_format 否 Bool false\true false 是否按照版式整合通用文本/公式輸出結果
 例子：
 {"task_type": 1,"is_structuralization": true,"if_readable_format": true}
@@ -773,7 +773,7 @@ class EnglishOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -848,7 +848,7 @@ class EnterpriseLicenseOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -906,7 +906,7 @@ class EstateCertOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -932,7 +932,7 @@ class EstateCertOCRResponse(AbstractModel):
         :type Ownership: str
         :param Location: 坐落
         :type Location: str
-        :param Unit: 不動産單元号
+        :param Unit: 不動産單元號
         :type Unit: str
         :param Type: 權利類型
         :type Type: str
@@ -948,7 +948,7 @@ class EstateCertOCRResponse(AbstractModel):
         :type Other: str
         :param Angle: 圖片旋轉角度
         :type Angle: float
-        :param Number: 不動産權号
+        :param Number: 不動産權號
         :type Number: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1020,7 +1020,7 @@ class FinanBillOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -1095,7 +1095,7 @@ class FinanBillSliceOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -1170,7 +1170,7 @@ class FlightInvoiceOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -1224,7 +1224,7 @@ class FormulaOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -1282,7 +1282,7 @@ class GeneralAccurateOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -1340,7 +1340,7 @@ class GeneralBasicOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         :param Scene: 保留欄位。
@@ -1423,7 +1423,7 @@ class GeneralEfficientOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -1481,7 +1481,7 @@ class GeneralFastOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -1544,7 +1544,7 @@ class GeneralHandwritingOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         :param Scene: 場景欄位，預設不用填寫。
@@ -1603,7 +1603,7 @@ class HmtResidentPermitOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         :param CardSide: FRONT：有照片的一面（人像面），
@@ -1637,7 +1637,7 @@ class HmtResidentPermitOCRResponse(AbstractModel):
         :type Birth: str
         :param Address: 網址
         :type Address: str
-        :param IdCardNo: 身份證号
+        :param IdCardNo: 身份證號
         :type IdCardNo: str
         :param CardType: 0-正面
 1-反面
@@ -1683,7 +1683,7 @@ class IDCardOCRRequest(AbstractModel):
 圖片的 ImageUrl、ImageBase64 必須提供一個，如果都提供，只使用 ImageUrl。
         :type ImageBase64: str
         :param ImageUrl: 圖片的 Url 網址。要求圖片經Base64編碼後不超過 7M，分辨率建議500*800以上，支援PNG、JPG、JPEG、BMP格式。建議卡片部分占據圖片2/3以上。
-建議圖片儲存于Top Cloud ，可保障更高的下載速度和穩定性。
+建議圖片儲存於Top Cloud ，可保障更高的下載速度和穩定性。
         :type ImageUrl: str
         :param CardSide: FRONT：身份證有照片的一面（人像面），
 BACK：身份證有國徽的一面（國徽面），
@@ -1736,7 +1736,7 @@ class IDCardOCRResponse(AbstractModel):
         :type Birth: str
         :param Address: 網址（人像面）
         :type Address: str
-        :param IdNum: 身份證号（人像面）
+        :param IdNum: 身份證號（人像面）
         :type IdNum: str
         :param Authority: 發證機關（國徽面）
         :type Authority: str
@@ -1798,7 +1798,7 @@ class InstitutionOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -1818,7 +1818,7 @@ class InstitutionOCRResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param RegId: 注冊号
+        :param RegId: 注冊號
         :type RegId: str
         :param ValidDate: 有效期
         :type ValidDate: str
@@ -1884,7 +1884,7 @@ class InsuranceBillOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -1982,7 +1982,7 @@ class InvoiceGeneralInfo(AbstractModel):
         :type Name: str
         :param Value: 識别出的欄位名稱對應的值，也就是欄位Name對應的字串結果。
         :type Value: str
-        :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐标。
+        :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐標。
         :type Rect: :class:`taifucloudcloud.ocr.v20181119.models.Rect`
         """
         self.Name = None
@@ -2013,7 +2013,7 @@ class InvoiceGeneralOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -2057,7 +2057,7 @@ class InvoiceGeneralOCRResponse(AbstractModel):
 
 
 class ItemCoord(AbstractModel):
-    """文本行在旋轉糾正之後的圖像中的像素坐标，表示爲（左上角x, 左上角y，寬width，高height）
+    """文本行在旋轉糾正之後的圖像中的像素坐標，表示爲（左上角x, 左上角y，寬width，高height）
 
     """
 
@@ -2100,7 +2100,7 @@ class LicensePlateOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -2120,7 +2120,7 @@ class LicensePlateOCRResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Number: 識别出的車牌号碼。
+        :param Number: 識别出的車牌號碼。
         :type Number: str
         :param Confidence: 置信度，0 - 100 之間。
         :type Confidence: int
@@ -2152,7 +2152,7 @@ class MLIDCardOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。(  地區之外不支援這個欄位 )
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         :param RetImage: 是否返回圖片
@@ -2176,7 +2176,7 @@ class MLIDCardOCRResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param ID: 身份證号
+        :param ID: 身份證號
         :type ID: str
         :param Name: 姓名
         :type Name: str
@@ -2329,7 +2329,7 @@ class MainlandPermitOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         :param RetProfile: 是非返回頭像。預設不返回。
@@ -2365,7 +2365,7 @@ class MainlandPermitOCRResponse(AbstractModel):
         :type IssueAuthority: str
         :param ValidDate: 有效期限
         :type ValidDate: str
-        :param Number: 證件号
+        :param Number: 證件號
         :type Number: str
         :param IssueAddress: 簽發地點
         :type IssueAddress: str
@@ -2424,7 +2424,7 @@ class MixedInvoiceDetectRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -2535,7 +2535,7 @@ class MixedInvoiceOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         :param Types: 需要識别的票據類型清單，爲空或不填表示識别全部類型。
@@ -2604,7 +2604,7 @@ class OrgCodeCertOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -2661,7 +2661,7 @@ class PassportOCRRequest(AbstractModel):
 圖片的 ImageUrl、ImageBase64 必須提供一個，如果都提供，只使用 ImageUrl。
         :type ImageBase64: str
         :param ImageUrl: 圖片的 Url 網址。要求圖片經Base64編碼後不超過 7M，分辨率建議500*800以上，支援PNG、JPG、JPEG、BMP格式。建議卡片部分占據圖片2/3以上。
-建議圖片儲存于Top Cloud ，可保障更高的下載速度和穩定性。
+建議圖片儲存於Top Cloud ，可保障更高的下載速度和穩定性。
         :type ImageUrl: str
         :param Type: 預設填寫CN
 支援 大陸地區護照。
@@ -2687,7 +2687,7 @@ class PassportOCRResponse(AbstractModel):
         """
         :param Country: 國家碼
         :type Country: str
-        :param PassportNo: 護照号
+        :param PassportNo: 護照號
         :type PassportNo: str
         :param Sex: 性别
         :type Sex: str
@@ -2770,7 +2770,7 @@ class PermitOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -2794,7 +2794,7 @@ class PermitOCRResponse(AbstractModel):
         :type Name: str
         :param EnglishName: 英文姓名
         :type EnglishName: str
-        :param Number: 證件号
+        :param Number: 證件號
         :type Number: str
         :param Sex: 性别
         :type Sex: str
@@ -2847,7 +2847,7 @@ class PropOwnerCertOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -2937,7 +2937,7 @@ class QrcodeOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -2983,19 +2983,19 @@ class QrcodeOCRResponse(AbstractModel):
 
 
 class QrcodePositionObj(AbstractModel):
-    """二維碼/條形碼坐标訊息
+    """二維碼/條形碼坐標訊息
 
     """
 
     def __init__(self):
         """
-        :param LeftTop: 左上頂點坐标（如果是條形碼，X和Y都爲-1）
+        :param LeftTop: 左上頂點坐標（如果是條形碼，X和Y都爲-1）
         :type LeftTop: :class:`taifucloudcloud.ocr.v20181119.models.Coord`
-        :param RightTop: 右上頂點坐标（如果是條形碼，X和Y都爲-1）
+        :param RightTop: 右上頂點坐標（如果是條形碼，X和Y都爲-1）
         :type RightTop: :class:`taifucloudcloud.ocr.v20181119.models.Coord`
-        :param RightBottom: 右下頂點坐标（如果是條形碼，X和Y都爲-1）
+        :param RightBottom: 右下頂點坐標（如果是條形碼，X和Y都爲-1）
         :type RightBottom: :class:`taifucloudcloud.ocr.v20181119.models.Coord`
-        :param LeftBottom: 左下頂點坐标（如果是條形碼，X和Y都爲-1）
+        :param LeftBottom: 左下頂點坐標（如果是條形碼，X和Y都爲-1）
         :type LeftBottom: :class:`taifucloudcloud.ocr.v20181119.models.Coord`
         """
         self.LeftTop = None
@@ -3030,7 +3030,7 @@ class QrcodeResultsInfo(AbstractModel):
         :type TypeName: str
         :param Url: 二維碼/條形碼包含的網址
         :type Url: str
-        :param Position: 二維碼/條形碼坐标（二維碼會返回位置坐标，條形碼暫不返回位置坐标，因此預設X和Y返回值均爲-1）
+        :param Position: 二維碼/條形碼坐標（二維碼會返回位置坐標，條形碼暫不返回位置坐標，因此預設X和Y返回值均爲-1）
         :type Position: :class:`taifucloudcloud.ocr.v20181119.models.QrcodePositionObj`
         """
         self.TypeName = None
@@ -3075,7 +3075,7 @@ class QuestionObj(AbstractModel):
 
     def __init__(self):
         """
-        :param QuestionTextNo: 題号
+        :param QuestionTextNo: 題號
         :type QuestionTextNo: str
         :param QuestionTextType: 題型：
 1: "選擇題"
@@ -3119,7 +3119,7 @@ class QuotaInvoiceOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -3139,7 +3139,7 @@ class QuotaInvoiceOCRResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param InvoiceNum: 發票号碼
+        :param InvoiceNum: 發票號碼
         :type InvoiceNum: str
         :param InvoiceCode: 發票代碼
         :type InvoiceCode: str
@@ -3185,7 +3185,7 @@ class QuotaInvoiceOCRResponse(AbstractModel):
 
 
 class Rect(AbstractModel):
-    """矩形坐标
+    """矩形坐標
 
     """
 
@@ -3228,7 +3228,7 @@ class ResidenceBookletOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -3248,7 +3248,7 @@ class ResidenceBookletOCRResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param HouseholdNumber: 戶号
+        :param HouseholdNumber: 戶號
         :type HouseholdNumber: str
         :param Name: 姓名
         :type Name: str
@@ -3262,7 +3262,7 @@ class ResidenceBookletOCRResponse(AbstractModel):
         :type NativePlace: str
         :param BirthDate: 出生日期
         :type BirthDate: str
-        :param IdCardNumber: 公民身份證件編号
+        :param IdCardNumber: 公民身份證件編號
         :type IdCardNumber: str
         :param EducationDegree: 文化程度
         :type EducationDegree: str
@@ -3317,7 +3317,7 @@ class ShipInvoiceInfo(AbstractModel):
         :type Name: str
         :param Value: 識别出的欄位名稱對應的值，也就是欄位Name對應的字串結果。
         :type Value: str
-        :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐标。
+        :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐標。
         :type Rect: :class:`taifucloudcloud.ocr.v20181119.models.Rect`
         """
         self.Name = None
@@ -3348,7 +3348,7 @@ class ShipInvoiceOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -3427,7 +3427,7 @@ class TableOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -3485,7 +3485,7 @@ class TaxiInvoiceOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -3507,7 +3507,7 @@ class TaxiInvoiceOCRResponse(AbstractModel):
         """
         :param InvoiceNum: 發票代碼
         :type InvoiceNum: str
-        :param InvoiceCode: 發票号碼
+        :param InvoiceCode: 發票號碼
         :type InvoiceCode: str
         :param Date: 日期
         :type Date: str
@@ -3521,7 +3521,7 @@ class TaxiInvoiceOCRResponse(AbstractModel):
         :type Distance: str
         :param Location: 發票所在地
         :type Location: str
-        :param PlateNumber: 車牌号
+        :param PlateNumber: 車牌號
         :type PlateNumber: str
         :param InvoiceType: 發票消費類型
         :type InvoiceType: str
@@ -3578,18 +3578,18 @@ class TextArithmetic(AbstractModel):
         :type Result: bool
         :param Confidence: 保留欄位，暫不支援
         :type Confidence: int
-        :param Polygon: 原圖文本行坐标，以四個頂點坐标表示（保留欄位，暫不支援）
+        :param Polygon: 原圖文本行坐標，以四個頂點坐標表示（保留欄位，暫不支援）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Polygon: list of Coord
         :param AdvancedInfo: 保留欄位，暫不支援
         :type AdvancedInfo: str
-        :param ItemCoord: 文本行旋轉糾正之後在圖像中的像素坐标，表示爲（左上角x, 左上角y，寬width，高height）
+        :param ItemCoord: 文本行旋轉糾正之後在圖像中的像素坐標，表示爲（左上角x, 左上角y，寬width，高height）
         :type ItemCoord: :class:`taifucloudcloud.ocr.v20181119.models.ItemCoord`
-        :param ExpressionType: 算式題型編号：
+        :param ExpressionType: 算式題型編號：
 ‘1’: 加減乘除四則
 ‘2’: 加減乘除已知結果求運算因子
 ‘3’: 判斷大小
-‘4’: 約等于估算
+‘4’: 約等於估算
 ‘5’: 帶餘數除法
 ‘6’: 分數四則運算
 ‘7’: 單位換算
@@ -3640,7 +3640,7 @@ class TextDetectRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -3685,13 +3685,13 @@ class TextDetection(AbstractModel):
         :type DetectedText: str
         :param Confidence: 置信度 0 ~100
         :type Confidence: int
-        :param Polygon: 文本行坐标，以四個頂點坐标表示
+        :param Polygon: 文本行坐標，以四個頂點坐標表示
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Polygon: list of Coord
         :param AdvancedInfo: 此欄位爲擴展欄位。
 GeneralBasicOcr介面返回段落訊息Parag，包含ParagNo。
         :type AdvancedInfo: str
-        :param ItemPolygon: 文本行在旋轉糾正之後的圖像中的像素坐标，表示爲（左上角x, 左上角y，寬width，高height）
+        :param ItemPolygon: 文本行在旋轉糾正之後的圖像中的像素坐標，表示爲（左上角x, 左上角y，寬width，高height）
         :type ItemPolygon: :class:`taifucloudcloud.ocr.v20181119.models.ItemCoord`
         """
         self.DetectedText = None
@@ -3727,7 +3727,7 @@ class TextDetectionEn(AbstractModel):
         :type DetectedText: str
         :param Confidence: 置信度 0 ~100
         :type Confidence: int
-        :param Polygon: 文本行坐标，以四個頂點坐标表示
+        :param Polygon: 文本行坐標，以四個頂點坐標表示
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Polygon: list of Coord
         :param AdvancedInfo: 此欄位爲擴展欄位。目前EnglishOCR介面返回内容爲空。
@@ -3762,7 +3762,7 @@ class TextEduPaper(AbstractModel):
         :type Item: str
         :param DetectedText: 識别出的欄位名稱對應的值，也就是欄位Item對應的字串結果
         :type DetectedText: str
-        :param Itemcoord: 文本行在旋轉糾正之後的圖像中的像素坐标，表示爲（左上角x, 左上角y，寬width，高height）
+        :param Itemcoord: 文本行在旋轉糾正之後的圖像中的像素坐標，表示爲（左上角x, 左上角y，寬width，高height）
         :type Itemcoord: :class:`taifucloudcloud.ocr.v20181119.models.ItemCoord`
         """
         self.Item = None
@@ -3806,7 +3806,7 @@ class TextGeneralHandwriting(AbstractModel):
         :type DetectedText: str
         :param Confidence: 置信度 0 - 100
         :type Confidence: int
-        :param Polygon: 文本行坐标，以四個頂點坐标表示
+        :param Polygon: 文本行坐標，以四個頂點坐標表示
         :type Polygon: list of Coord
         :param AdvancedInfo: 此欄位爲擴展欄位。
 能返回文本行的段落訊息，例如：{\"Parag\":{\"ParagNo\":2}}，
@@ -3852,7 +3852,7 @@ class TextTable(AbstractModel):
         :type Type: str
         :param Confidence: 置信度 0 ~100
         :type Confidence: int
-        :param Polygon: 文本行坐标，以四個頂點坐标表示
+        :param Polygon: 文本行坐標，以四個頂點坐標表示
         :type Polygon: list of Coord
         :param AdvancedInfo: 此欄位爲擴展欄位
         :type AdvancedInfo: str
@@ -3913,10 +3913,10 @@ class TextVehicleBack(AbstractModel):
 
     def __init__(self):
         """
-        :param PlateNo: 号牌号碼
+        :param PlateNo: 號牌號碼
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PlateNo: str
-        :param FileNo: 檔案編号
+        :param FileNo: 檔案編號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FileNo: str
         :param AllowNum: 核定人數
@@ -3976,7 +3976,7 @@ class TextVehicleFront(AbstractModel):
 
     def __init__(self):
         """
-        :param PlateNo: 号牌号碼
+        :param PlateNo: 號牌號碼
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PlateNo: str
         :param VehicleType: 車輛類型
@@ -3991,13 +3991,13 @@ class TextVehicleFront(AbstractModel):
         :param UseCharacter: 使用性質
 注意：此欄位可能返回 null，表示取不到有效值。
         :type UseCharacter: str
-        :param Model: 品牌型号
+        :param Model: 品牌型號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Model: str
-        :param Vin: 車輛識别代号
+        :param Vin: 車輛識别代號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Vin: str
-        :param EngineNo: 發動機号碼
+        :param EngineNo: 發動機號碼
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EngineNo: str
         :param RegisterDate: 注冊日期
@@ -4046,17 +4046,17 @@ class TextWaybill(AbstractModel):
         """
         :param RecName: 收件人姓名
         :type RecName: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
-        :param RecNum: 收件人手機号
+        :param RecNum: 收件人手機號
         :type RecNum: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         :param RecAddr: 收件人網址
         :type RecAddr: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         :param SenderName: 寄件人姓名
         :type SenderName: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
-        :param SenderNum: 寄件人手機号
+        :param SenderNum: 寄件人手機號
         :type SenderNum: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         :param SenderAddr: 寄件人網址
         :type SenderAddr: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
-        :param WaybillNum: 運單号
+        :param WaybillNum: 運單號
         :type WaybillNum: :class:`taifucloudcloud.ocr.v20181119.models.WaybillObj`
         """
         self.RecName = None
@@ -4103,7 +4103,7 @@ class TollInvoiceInfo(AbstractModel):
         :type Name: str
         :param Value: 識别出的欄位名稱對應的值，也就是欄位Name對應的字串結果。
         :type Value: str
-        :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐标。
+        :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐標。
         :type Rect: :class:`taifucloudcloud.ocr.v20181119.models.Rect`
         """
         self.Name = None
@@ -4134,7 +4134,7 @@ class TollInvoiceOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -4192,7 +4192,7 @@ class TrainTicketOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -4212,7 +4212,7 @@ class TrainTicketOCRResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param TicketNum: 編号
+        :param TicketNum: 編號
         :type TicketNum: str
         :param StartStation: 出發站
         :type StartStation: str
@@ -4222,7 +4222,7 @@ class TrainTicketOCRResponse(AbstractModel):
         :type Date: str
         :param TrainNum: 車次
         :type TrainNum: str
-        :param Seat: 座位号
+        :param Seat: 座位號
         :type Seat: str
         :param Name: 姓名
         :type Name: str
@@ -4230,11 +4230,11 @@ class TrainTicketOCRResponse(AbstractModel):
         :type Price: str
         :param SeatCategory: 席别
         :type SeatCategory: str
-        :param ID: 身份證号
+        :param ID: 身份證號
         :type ID: str
         :param InvoiceType: 發票消費類型
         :type InvoiceType: str
-        :param SerialNumber: 序列号
+        :param SerialNumber: 序列號
         :type SerialNumber: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -4285,7 +4285,7 @@ class VatInvoiceOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -4335,7 +4335,7 @@ class VatRollInvoiceInfo(AbstractModel):
         :type Name: str
         :param Value: 識别出的欄位名稱對應的值，也就是欄位Name對應的字串結果。
         :type Value: str
-        :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐标。
+        :param Rect: 文本行在旋轉糾正之後的圖像中的像素坐標。
         :type Rect: :class:`taifucloudcloud.ocr.v20181119.models.Rect`
         """
         self.Name = None
@@ -4366,7 +4366,7 @@ class VatRollInvoiceOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -4420,10 +4420,10 @@ class VehicleLicenseOCRRequest(AbstractModel):
 圖片的 ImageUrl、ImageBase64 必須提供一個，如果都提供，只使用 ImageUrl。
         :type ImageBase64: str
         :param ImageUrl: 圖片的 Url 網址。要求圖片經Base64編碼後不超過 7M，分辨率建議500*800以上，支援PNG、JPG、JPEG、BMP格式。建議卡片部分占據圖片2/3以上。圖片下載時間不超過 3 秒。
-建議圖片儲存于Top Cloud ，可保障更高的下載速度和穩定性。
+建議圖片儲存於Top Cloud ，可保障更高的下載速度和穩定性。
         :type ImageUrl: str
         :param CardSide: FRONT 爲行駛證首頁正面（有紅色印章的一面），
-BACK 爲行駛證副頁正面（有号碼号牌的一面）。
+BACK 爲行駛證副頁正面（有號碼號牌的一面）。
         :type CardSide: str
         """
         self.ImageBase64 = None
@@ -4520,7 +4520,7 @@ class VehicleRegCertOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -4574,7 +4574,7 @@ class VinOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -4623,7 +4623,7 @@ class WaybillOCRRequest(AbstractModel):
         :param ImageUrl: 圖片的 Url 網址。
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """

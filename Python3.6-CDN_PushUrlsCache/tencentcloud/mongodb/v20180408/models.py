@@ -90,7 +90,7 @@ class CreateDBInstanceHourRequest(AbstractModel):
         :type Memory: int
         :param Volume: 實例硬碟大小，單位：GB
         :type Volume: int
-        :param ReplicateSetNum: 副本集個數，1爲單副本集實例，大于1爲分片集群實例，最大不超過10
+        :param ReplicateSetNum: 副本集個數，1爲單副本集實例，大於1爲分片集群實例，最大不超過10
         :type ReplicateSetNum: int
         :param SecondaryNum: 每個副本集内從節點個數，目前只支援從節點數爲2
         :type SecondaryNum: int
@@ -190,7 +190,7 @@ class CreateDBInstanceRequest(AbstractModel):
         :type Memory: int
         :param Volume: 實例硬碟大小，單位：GB
         :type Volume: int
-        :param MongoVersion: 版本号，當前支援 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
+        :param MongoVersion: 版本號，當前支援 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
         :type MongoVersion: str
         :param MachineCode: 機器類型，GIO：高IO版；TGIO：高IO萬兆
         :type MachineCode: str
@@ -555,7 +555,7 @@ class MongoDBInstanceDetail(AbstractModel):
         :type Status: int
         :param Vip: 實例IP
         :type Vip: str
-        :param Vport: 端口号
+        :param Vport: 端口號
         :type Vport: int
         :param CreateTime: 實例創建時間
         :type CreateTime: str
@@ -575,7 +575,7 @@ class MongoDBInstanceDetail(AbstractModel):
         :type SecondaryNum: int
         :param ReplicationSetNum: 實例分片數
         :type ReplicationSetNum: int
-        :param AutoRenewFlag: 實例自動續約标志，可能的返回值：0-手動續約，1-自動續約，2-确認不續約
+        :param AutoRenewFlag: 實例自動續約標志，可能的返回值：0-手動續約，1-自動續約，2-确認不續約
         :type AutoRenewFlag: int
         :param UsedVolume: 已用容量，單位MB
         :type UsedVolume: int
@@ -594,15 +594,15 @@ class MongoDBInstanceDetail(AbstractModel):
         :param CloneInstances: 臨時實例訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CloneInstances: list of MongoDBInstance
-        :param RelatedInstance: 關聯實例訊息，對于正式實例，該欄位表示它的臨時實例訊息；對于臨時實例，則表示它的正式實例訊息;如果爲只讀/災備實例,則表示他的主實例訊息
+        :param RelatedInstance: 關聯實例訊息，對於正式實例，該欄位表示它的臨時實例訊息；對於臨時實例，則表示它的正式實例訊息;如果爲只讀/災備實例,則表示他的主實例訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RelatedInstance: :class:`taifucloudcloud.mongodb.v20180408.models.MongoDBInstance`
-        :param Tags: 實例标簽訊息集合
+        :param Tags: 實例標簽訊息集合
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of TagInfo
-        :param InstanceVer: 實例标記
+        :param InstanceVer: 實例標記
         :type InstanceVer: int
-        :param ClusterVer: 實例标記
+        :param ClusterVer: 實例標記
         :type ClusterVer: int
         :param Protocol: 協議訊息，可能的返回值：1-mongodb，2-dynamodb
         :type Protocol: int
@@ -610,7 +610,7 @@ class MongoDBInstanceDetail(AbstractModel):
         :type InstanceType: int
         :param InstanceStatusDesc: 實例狀态描述
         :type InstanceStatusDesc: str
-        :param RealInstanceId: 實例對應的物理實例ID，回檔并替換過的實例有不同的InstanceId和RealInstanceId，從barad獲取監控數據等場景下需要用物理id獲取
+        :param RealInstanceId: 實例對應的物理實例ID，回檔並替換過的實例有不同的InstanceId和RealInstanceId，從barad獲取監控數據等場景下需要用物理id獲取
         :type RealInstanceId: str
         """
         self.InstanceId = None
@@ -895,9 +895,9 @@ class SpecItem(AbstractModel):
 
     def __init__(self):
         """
-        :param SpecCode: 規格訊息标識
+        :param SpecCode: 規格訊息標識
         :type SpecCode: str
-        :param Status: 規格有效标志，取值：0-停止售賣，1-開放售賣
+        :param Status: 規格有效標志，取值：0-停止售賣，1-開放售賣
         :type Status: int
         :param MachineType: 機器類型，取值：0-HIO，4-HIO10G
         :type MachineType: str
@@ -917,9 +917,9 @@ class SpecItem(AbstractModel):
         :type Conns: int
         :param MongoVersionCode: 實例mongodb版本訊息
         :type MongoVersionCode: str
-        :param MongoVersionValue: 實例mongodb版本号
+        :param MongoVersionValue: 實例mongodb版本號
         :type MongoVersionValue: int
-        :param Version: 實例mongodb版本号（短）
+        :param Version: 實例mongodb版本號（短）
         :type Version: str
         :param EngineName: 儲存引擎
         :type EngineName: str
@@ -1016,15 +1016,15 @@ class SpecificationInfo(AbstractModel):
 
 
 class TagInfo(AbstractModel):
-    """實例标簽訊息
+    """實例標簽訊息
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽Key值
+        :param TagKey: 標簽Key值
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: str
         """
         self.TagKey = None

@@ -101,7 +101,7 @@ def main_handler(event, context):
             "出生：": res_ai["Birth"],
             "住址：": res_ai["Address"],
             "民族：": res_ai["Nation"],
-            "公民身份證号：": res_ai['IdNum']
+            "公民身份證號：": res_ai['IdNum']
         }
         print (json.dumps(res_print).decode('unicode-escape'))
     else:

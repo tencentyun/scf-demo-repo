@@ -26,7 +26,7 @@ class FtClient(AbstractClient):
 
 
     def ChangeAgePic(self, request):
-        """用戶上傳一張人臉圖片，基于人臉編輯與生成算法，輸出一張人臉變老或變年輕的圖片，支援實現人臉不同年齡的變化。（目前暫只支援10歲，後續放開再通知）
+        """用戶上傳一張人臉圖片，基於人臉編輯與生成算法，輸出一張人臉變老或變年輕的圖片，支援實現人臉不同年齡的變化。（目前暫只支援10歲，後續放開再通知）
 
         :param request: Request instance for ChangeAgePic.
         :type request: :class:`taifucloudcloud.ft.v20200304.models.ChangeAgePicRequest`
@@ -54,7 +54,7 @@ class FtClient(AbstractClient):
 
 
     def SwapGenderPic(self, request):
-        """用戶上傳一張人臉圖片，基于人臉編輯與生成算法，輸出一張人臉性别轉換的圖片。男變女可實現美顔、淡妝、加劉海和長發的效果；女變男可實現加胡須、變短發的效果。
+        """用戶上傳一張人臉圖片，基於人臉編輯與生成算法，輸出一張人臉性别轉換的圖片。男變女可實現美顔、淡妝、加劉海和長發的效果；女變男可實現加胡須、變短發的效果。
 
         :param request: Request instance for SwapGenderPic.
         :type request: :class:`taifucloudcloud.ft.v20200304.models.SwapGenderPicRequest`

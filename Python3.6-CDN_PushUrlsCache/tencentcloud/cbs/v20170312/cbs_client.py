@@ -26,11 +26,11 @@ class CbsClient(AbstractClient):
 
 
     def ApplySnapshot(self, request):
-        """本介面（ApplySnapshot）用于回滾快照到原雲硬碟。
+        """本介面（ApplySnapshot）用於回滾快照到原雲硬碟。
 
-        * 僅支援回滾到原雲硬碟上。對于數據盤快照，如果您需要複制快照數據到其它雲硬碟上，請使用[CreateDisks](/document/product/362/16312)介面創建新的彈性雲盤，将快照數據複制到新購雲盤上。
-        * 用于回滾的快照必須處于NORMAL狀态。快照狀态可以通過[DescribeSnapshots](/document/product/362/15647)介面查詢，見輸出參數中SnapshotState欄位解釋。
-        * 如果是彈性雲盤，則雲盤必須處于未掛載狀态，雲硬碟掛載狀态可以通過[DescribeDisks](/document/product/362/16315)介面查詢，見Attached欄位解釋；如果是随實例一起購買的非彈性雲盤，則實例必須處于關機狀态，實例狀态可以通過[DescribeInstancesStatus](/document/product/213/15738)介面查詢。
+        * 僅支援回滾到原雲硬碟上。對於數據盤快照，如果您需要複制快照數據到其它雲硬碟上，請使用[CreateDisks](/document/product/362/16312)介面創建新的彈性雲盤，将快照數據複制到新購雲盤上。
+        * 用於回滾的快照必須處於NORMAL狀态。快照狀态可以通過[DescribeSnapshots](/document/product/362/15647)介面查詢，見輸出參數中SnapshotState欄位解釋。
+        * 如果是彈性雲盤，則雲盤必須處於未掛載狀态，雲硬碟掛載狀态可以通過[DescribeDisks](/document/product/362/16315)介面查詢，見Attached欄位解釋；如果是随實例一起購買的非彈性雲盤，則實例必須處於關機狀态，實例狀态可以通過[DescribeInstancesStatus](/document/product/213/15738)介面查詢。
 
         :param request: Request instance for ApplySnapshot.
         :type request: :class:`taifucloudcloud.cbs.v20170312.models.ApplySnapshotRequest`
@@ -58,7 +58,7 @@ class CbsClient(AbstractClient):
 
 
     def AttachDisks(self, request):
-        """本介面（AttachDisks）用于掛載雲硬碟。
+        """本介面（AttachDisks）用於掛載雲硬碟。
 
         * 支援批次操作，将多塊雲盤掛載到同一雲主機。如果多個雲盤存在不允許掛載的雲盤，則操作不執行，以返回特定的錯誤碼返回。
         * 本介面爲異步介面，當掛載雲盤的請求成功返回時，表示後台已發起掛載雲盤的操作，可通過介面[DescribeDisks](/document/product/362/16315)來查詢對應雲盤的狀态，如果雲盤的狀态由“ATTACHING”變爲“ATTACHED”，則爲掛載成功。
@@ -89,10 +89,10 @@ class CbsClient(AbstractClient):
 
 
     def BindAutoSnapshotPolicy(self, request):
-        """本介面（BindAutoSnapshotPolicy）用于綁定雲硬碟到指定的定期快照策略。
+        """本介面（BindAutoSnapshotPolicy）用於綁定雲硬碟到指定的定期快照策略。
 
         * 每個地域下的定期快照策略配額限制請參考文件[定期快照](/document/product/362/8191)。
-        * 當已綁定定期快照策略的雲硬碟處于未使用狀态（即彈性雲盤未掛載或非彈性雲盤的主機處于關機狀态）将不會創建定期快照。
+        * 當已綁定定期快照策略的雲硬碟處於未使用狀态（即彈性雲盤未掛載或非彈性雲盤的主機處於關機狀态）将不會創建定期快照。
 
         :param request: Request instance for BindAutoSnapshotPolicy.
         :type request: :class:`taifucloudcloud.cbs.v20170312.models.BindAutoSnapshotPolicyRequest`
@@ -120,7 +120,7 @@ class CbsClient(AbstractClient):
 
 
     def CreateAutoSnapshotPolicy(self, request):
-        """本介面（CreateAutoSnapshotPolicy）用于創建定期快照策略。
+        """本介面（CreateAutoSnapshotPolicy）用於創建定期快照策略。
 
         * 每個地域可創建的定期快照策略數量限制請參考文件[定期快照](/document/product/362/8191)。
         * 每個地域可創建的快照有數量和容量的限制，具體請見Top Cloud 控制台快照頁面提示，如果快照超配額，定期快照創建會失敗。
@@ -151,11 +151,11 @@ class CbsClient(AbstractClient):
 
 
     def CreateDisks(self, request):
-        """本介面（CreateDisks）用于創建雲硬碟。
+        """本介面（CreateDisks）用於創建雲硬碟。
 
         * 預付費雲盤的購買會預先扣除本次雲盤購買所需金額，在調用本介面前請确保帳戶餘額充足。
         * 本介面支援傳入數據盤快照來創建雲盤，實現将快照數據複制到新購雲盤上。
-        * 本介面爲異步介面，當創建請求下發成功後會返回一個新建的雲盤ID清單，此時雲盤的創建并未立即完成。可以通過調用[DescribeDisks](/document/product/362/16315)介面根據DiskId查詢對應雲盤，如果能查到雲盤，且狀态爲'UNATTACHED'或'ATTACHED'，則表示創建成功。
+        * 本介面爲異步介面，當創建請求下發成功後會返回一個新建的雲盤ID清單，此時雲盤的創建並未立即完成。可以通過調用[DescribeDisks](/document/product/362/16315)介面根據DiskId查詢對應雲盤，如果能查到雲盤，且狀态爲'UNATTACHED'或'ATTACHED'，則表示創建成功。
 
         :param request: Request instance for CreateDisks.
         :type request: :class:`taifucloudcloud.cbs.v20170312.models.CreateDisksRequest`
@@ -183,7 +183,7 @@ class CbsClient(AbstractClient):
 
 
     def CreateSnapshot(self, request):
-        """本介面（CreateSnapshot）用于對指定雲盤創建快照。
+        """本介面（CreateSnapshot）用於對指定雲盤創建快照。
 
         * 只有具有快照能力的雲硬碟才能創建快照。雲硬碟是否具有快照能力可由[DescribeDisks](/document/product/362/16315)介面查詢，見SnapshotAbility欄位。
         * 可創建快照數量限制見[産品使用限制](https://cloud.taifucloud.com/doc/product/362/5145)。
@@ -214,7 +214,7 @@ class CbsClient(AbstractClient):
 
 
     def DeleteAutoSnapshotPolicies(self, request):
-        """本介面（DeleteAutoSnapshotPolicies）用于删除定期快照策略。
+        """本介面（DeleteAutoSnapshotPolicies）用於删除定期快照策略。
 
         *  支援批次操作。如果多個定期快照策略存在無法删除的，則操作不執行，以特定錯誤碼返回。
 
@@ -244,9 +244,9 @@ class CbsClient(AbstractClient):
 
 
     def DeleteSnapshots(self, request):
-        """本介面（DeleteSnapshots）用于删除快照。
+        """本介面（DeleteSnapshots）用於删除快照。
 
-        * 快照必須處于NORMAL狀态，快照狀态可以通過[DescribeSnapshots](/document/product/362/15647)介面查詢，見輸出參數中SnapshotState欄位解釋。
+        * 快照必須處於NORMAL狀态，快照狀态可以通過[DescribeSnapshots](/document/product/362/15647)介面查詢，見輸出參數中SnapshotState欄位解釋。
         * 支援批次操作。如果多個快照存在無法删除的快照，則操作不執行，以返回特定的錯誤碼返回。
 
         :param request: Request instance for DeleteSnapshots.
@@ -275,7 +275,7 @@ class CbsClient(AbstractClient):
 
 
     def DescribeAutoSnapshotPolicies(self, request):
-        """本介面（DescribeAutoSnapshotPolicies）用于查詢定期快照策略。
+        """本介面（DescribeAutoSnapshotPolicies）用於查詢定期快照策略。
 
         * 可以根據定期快照策略ID、名稱或者狀态等訊息來查詢定期快照策略的詳細訊息，不同條件之間爲與(AND)的關系，過濾訊息詳細請見過濾器`Filter`。
         * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的定期快照策略表。
@@ -306,7 +306,7 @@ class CbsClient(AbstractClient):
 
 
     def DescribeDiskAssociatedAutoSnapshotPolicy(self, request):
-        """本介面（DescribeDiskAssociatedAutoSnapshotPolicy）用于查詢雲盤綁定的定期快照策略。
+        """本介面（DescribeDiskAssociatedAutoSnapshotPolicy）用於查詢雲盤綁定的定期快照策略。
 
         :param request: Request instance for DescribeDiskAssociatedAutoSnapshotPolicy.
         :type request: :class:`taifucloudcloud.cbs.v20170312.models.DescribeDiskAssociatedAutoSnapshotPolicyRequest`
@@ -334,7 +334,7 @@ class CbsClient(AbstractClient):
 
 
     def DescribeDiskConfigQuota(self, request):
-        """本介面（DescribeDiskConfigQuota）用于查詢雲硬碟配額。
+        """本介面（DescribeDiskConfigQuota）用於查詢雲硬碟配額。
 
         :param request: Request instance for DescribeDiskConfigQuota.
         :type request: :class:`taifucloudcloud.cbs.v20170312.models.DescribeDiskConfigQuotaRequest`
@@ -362,7 +362,7 @@ class CbsClient(AbstractClient):
 
 
     def DescribeDiskOperationLogs(self, request):
-        """本介面（DescribeDiskOperationLogs）用于查詢雲盤操作日志清單。
+        """本介面（DescribeDiskOperationLogs）用於查詢雲盤操作日志清單。
 
         可根據雲盤ID過濾。雲盤ID形如：disk-a1kmcp13。
 
@@ -392,7 +392,7 @@ class CbsClient(AbstractClient):
 
 
     def DescribeDisks(self, request):
-        """本介面（DescribeDisks）用于查詢雲硬碟清單。
+        """本介面（DescribeDisks）用於查詢雲硬碟清單。
 
         * 可以根據雲硬碟ID、雲硬碟類型或者雲硬碟狀态等訊息來查詢雲硬碟的詳細訊息，不同條件之間爲與(AND)的關系，過濾訊息詳細請見過濾器`Filter`。
         * 如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的雲硬碟清單。
@@ -423,7 +423,7 @@ class CbsClient(AbstractClient):
 
 
     def DescribeInstancesDiskNum(self, request):
-        """本介面（DescribeInstancesDiskNum）用于查詢實例已掛載雲硬碟數量。
+        """本介面（DescribeInstancesDiskNum）用於查詢實例已掛載雲硬碟數量。
 
         * 支援批次操作，當傳入多個雲伺服器實例ID，返回結果會分别列出每個雲伺服器掛載的雲硬碟數量。
 
@@ -453,7 +453,7 @@ class CbsClient(AbstractClient):
 
 
     def DescribeSnapshotOperationLogs(self, request):
-        """本介面（DescribeSnapshotOperationLogs）用于查詢快照操作日志清單。
+        """本介面（DescribeSnapshotOperationLogs）用於查詢快照操作日志清單。
 
         可根據快照ID過濾。快照ID形如：snap-a1kmcp13。
 
@@ -483,7 +483,7 @@ class CbsClient(AbstractClient):
 
 
     def DescribeSnapshotSharePermission(self, request):
-        """本介面（DescribeSnapshotSharePermission）用于查詢快照的分享訊息。
+        """本介面（DescribeSnapshotSharePermission）用於查詢快照的分享訊息。
 
         :param request: Request instance for DescribeSnapshotSharePermission.
         :type request: :class:`taifucloudcloud.cbs.v20170312.models.DescribeSnapshotSharePermissionRequest`
@@ -511,7 +511,7 @@ class CbsClient(AbstractClient):
 
 
     def DescribeSnapshots(self, request):
-        """本介面（DescribeSnapshots）用于查詢快照的詳細訊息。
+        """本介面（DescribeSnapshots）用於查詢快照的詳細訊息。
 
         * 根據快照ID、創建快照的雲硬碟ID、創建快照的雲硬碟類型等對結果進行過濾，不同條件之間爲與(AND)的關系，過濾訊息詳細請見過濾器`Filter`。
         *  如果參數爲空，返回當前用戶一定數量（`Limit`所指定的數量，預設爲20）的快照清單。
@@ -542,10 +542,10 @@ class CbsClient(AbstractClient):
 
 
     def DetachDisks(self, request):
-        """本介面（DetachDisks）用于解挂雲硬碟。
+        """本介面（DetachDisks）用於解挂雲硬碟。
 
         * 支援批次操作，解挂掛載在同一主機上的多塊雲盤。如果多塊雲盤存在不允許解掛載的雲盤，則操作不執行，以返回特定的錯誤碼返回。
-        * 本介面爲異步介面，當請求成功返回時，雲盤并未立即從主機解掛載，可通過介面[DescribeDisks](/document/product/362/16315)來查詢對應雲盤的狀态，如果雲盤的狀态由“ATTACHED”變爲“UNATTACHED”，則爲解掛載成功。
+        * 本介面爲異步介面，當請求成功返回時，雲盤並未立即從主機解掛載，可通過介面[DescribeDisks](/document/product/362/16315)來查詢對應雲盤的狀态，如果雲盤的狀态由“ATTACHED”變爲“UNATTACHED”，則爲解掛載成功。
 
         :param request: Request instance for DetachDisks.
         :type request: :class:`taifucloudcloud.cbs.v20170312.models.DetachDisksRequest`
@@ -601,7 +601,7 @@ class CbsClient(AbstractClient):
 
 
     def InquiryPriceCreateDisks(self, request):
-        """本介面（InquiryPriceCreateDisks）用于創建雲硬碟詢價。
+        """本介面（InquiryPriceCreateDisks）用於創建雲硬碟詢價。
 
         * 支援查詢創建多塊雲硬碟的價格，此時返回結果爲總價格。
 
@@ -631,7 +631,7 @@ class CbsClient(AbstractClient):
 
 
     def InquiryPriceRenewDisks(self, request):
-        """本介面（InquiryPriceRenewDisks）用于續約雲硬碟詢價。
+        """本介面（InquiryPriceRenewDisks）用於續約雲硬碟詢價。
 
         * 只支援查詢預付費模式的彈性雲盤續約價格。
         * 支援與掛載實例一起續約的場景，需要在[DiskChargePrepaid](/document/product/362/15669#DiskChargePrepaid)參數中指定CurInstanceDeadline，此時會按對齊到實例續約後的到期時間來續約詢價。
@@ -663,7 +663,7 @@ class CbsClient(AbstractClient):
 
 
     def InquiryPriceResizeDisk(self, request):
-        """本介面（InquiryPriceResizeDisk）用于擴容雲硬碟詢價。
+        """本介面（InquiryPriceResizeDisk）用於擴容雲硬碟詢價。
 
         * 只支援預付費模式的雲硬碟擴容詢價。
 
@@ -693,7 +693,7 @@ class CbsClient(AbstractClient):
 
 
     def ModifyAutoSnapshotPolicyAttribute(self, request):
-        """本介面（ModifyAutoSnapshotPolicyAttribute）用于修改定期快照策略屬性。
+        """本介面（ModifyAutoSnapshotPolicyAttribute）用於修改定期快照策略屬性。
 
         * 可通過該介面修改定期快照策略的執行策略、名稱、是否啟動等屬性。
         * 修改保留天數時必須保證不與是否永久保留屬性沖突，否則整個操作失敗，以特定的錯誤碼返回。
@@ -725,7 +725,7 @@ class CbsClient(AbstractClient):
 
     def ModifyDiskAttributes(self, request):
         """* 只支援修改彈性雲盤的項目ID。随雲主機創建的雲硬碟項目ID與雲主機聯動。可以通過[DescribeDisks](/document/product/362/16315)介面查詢，見輸出參數中Portable欄位解釋。
-        * “雲硬碟名稱”僅爲方便用戶自己管理之用，Top Cloud 并不以此名稱作爲提交工單或是進行雲盤管理操作的依據。
+        * “雲硬碟名稱”僅爲方便用戶自己管理之用，Top Cloud 並不以此名稱作爲提交工單或是進行雲盤管理操作的依據。
         * 支援批次操作，如果傳入多個雲盤ID，則所有雲盤修改爲同一屬性。如果存在不允許操作的雲盤，則操作不執行，以特定錯誤碼返回。
 
         :param request: Request instance for ModifyDiskAttributes.
@@ -756,7 +756,7 @@ class CbsClient(AbstractClient):
     def ModifyDisksChargeType(self, request):
         """介面請求域名： cbs.taifucloudcloudapi.com 。
 
-        本介面 (ModifyDisksChargeType) 用于切換雲盤的計費模式。
+        本介面 (ModifyDisksChargeType) 用於切換雲盤的計費模式。
 
         只支援從 POSTPAID_BY_HOUR 計費模式切換爲PREPAID計費模式。
         非彈性雲盤不支援此介面，請通過修改實例計費模式介面将實例連同非彈性雲盤一起轉換。
@@ -788,7 +788,7 @@ class CbsClient(AbstractClient):
 
 
     def ModifyDisksRenewFlag(self, request):
-        """本介面（ModifyDisksRenewFlag）用于修改雲硬碟續約标識，支援批次修改。
+        """本介面（ModifyDisksRenewFlag）用於修改雲硬碟續約標識，支援批次修改。
 
         :param request: Request instance for ModifyDisksRenewFlag.
         :type request: :class:`taifucloudcloud.cbs.v20170312.models.ModifyDisksRenewFlagRequest`
@@ -816,10 +816,10 @@ class CbsClient(AbstractClient):
 
 
     def ModifySnapshotAttribute(self, request):
-        """本介面（ModifySnapshotAttribute）用于修改指定快照的屬性。
+        """本介面（ModifySnapshotAttribute）用於修改指定快照的屬性。
 
         * 當前僅支援修改快照名稱及将非永久快照修改爲永久快照。
-        * “快照名稱”僅爲方便用戶自己管理之用，Top Cloud 并不以此名稱作爲提交工單或是進行快照管理操作的依據。
+        * “快照名稱”僅爲方便用戶自己管理之用，Top Cloud 並不以此名稱作爲提交工單或是進行快照管理操作的依據。
 
         :param request: Request instance for ModifySnapshotAttribute.
         :type request: :class:`taifucloudcloud.cbs.v20170312.models.ModifySnapshotAttributeRequest`
@@ -847,11 +847,11 @@ class CbsClient(AbstractClient):
 
 
     def ModifySnapshotsSharePermission(self, request):
-        """本介面（ModifySnapshotsSharePermission）用于修改快照分享訊息。
+        """本介面（ModifySnapshotsSharePermission）用於修改快照分享訊息。
 
         分享快照後，被分享帳戶可以通過該快照創建雲硬碟。
         * 每個快照最多可分享給50個帳戶。
-        * 分享快照無法更改名稱，描述，僅可用于創建雲硬碟。
+        * 分享快照無法更改名稱，描述，僅可用於創建雲硬碟。
         * 只支援分享到對方帳戶相同地域。
         * 僅支援分享數據盤快照。
 
@@ -881,7 +881,7 @@ class CbsClient(AbstractClient):
 
 
     def RenewDisk(self, request):
-        """本介面（RenewDisk）用于續約雲硬碟。
+        """本介面（RenewDisk）用於續約雲硬碟。
 
         * 只支援預付費的雲硬碟。雲硬碟類型可以通過[DescribeDisks](/document/product/362/16315)介面查詢，見輸出參數中DiskChargeType欄位解釋。
         * 支援與掛載實例一起續約的場景，需要在[DiskChargePrepaid](/document/product/362/15669#DiskChargePrepaid)參數中指定CurInstanceDeadline，此時會按對齊到子機續約後的到期時間來續約。
@@ -912,10 +912,10 @@ class CbsClient(AbstractClient):
 
 
     def ResizeDisk(self, request):
-        """本介面（ResizeDisk）用于擴容雲硬碟。
+        """本介面（ResizeDisk）用於擴容雲硬碟。
 
         * 只支援擴容彈性雲盤。雲硬碟類型可以通過[DescribeDisks](/document/product/362/16315)介面查詢，見輸出參數中Portable欄位解釋。随雲主機創建的雲硬碟需通過[ResizeInstanceDisks](/document/product/213/15731)介面擴容。
-        * 本介面爲異步介面，介面成功返回時，雲盤并未立即擴容到指定大小，可通過介面[DescribeDisks](/document/product/362/16315)來查詢對應雲盤的狀态，如果雲盤的狀态爲“EXPANDING”，表示正在擴容中，當狀态變爲“UNATTACHED”，表示擴容完成。
+        * 本介面爲異步介面，介面成功返回時，雲盤並未立即擴容到指定大小，可通過介面[DescribeDisks](/document/product/362/16315)來查詢對應雲盤的狀态，如果雲盤的狀态爲“EXPANDING”，表示正在擴容中，當狀态變爲“UNATTACHED”，表示擴容完成。
 
         :param request: Request instance for ResizeDisk.
         :type request: :class:`taifucloudcloud.cbs.v20170312.models.ResizeDiskRequest`
@@ -943,7 +943,7 @@ class CbsClient(AbstractClient):
 
 
     def TerminateDisks(self, request):
-        """本介面（TerminateDisks）用于退還雲硬碟。
+        """本介面（TerminateDisks）用於退還雲硬碟。
 
         * 不再使用的雲盤，可通過本介面主動退還。
         * 本介面支援退還預付費雲盤和按小時後付費雲盤。按小時後付費雲盤可直接退還，預付費雲盤需符合退還規則。
@@ -975,7 +975,7 @@ class CbsClient(AbstractClient):
 
 
     def UnbindAutoSnapshotPolicy(self, request):
-        """本介面（UnbindAutoSnapshotPolicy）用于解除雲硬碟綁定的定期快照策略。
+        """本介面（UnbindAutoSnapshotPolicy）用於解除雲硬碟綁定的定期快照策略。
 
         * 支援批次操作，可一次解除多個雲盤與同一定期快照策略的綁定。
         * 如果傳入的雲盤未綁定到當前定期快照策略，介面将自動跳過，僅解綁與當前定期快照策略綁定的雲盤。

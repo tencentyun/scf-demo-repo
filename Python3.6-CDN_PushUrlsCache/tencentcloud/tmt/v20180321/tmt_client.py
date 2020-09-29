@@ -26,8 +26,8 @@ class TmtClient(AbstractClient):
 
 
     def ImageTranslate(self, request):
-        """提供中文到英文、英文到中文兩種語言的圖片翻譯服務，可自動識别圖片中的文本内容并翻譯成目标語言，識别後的文本按行翻譯，後續會提供可按段落翻譯的版本。<br />
-        提示：對于一般開發者，我們建議優先使用SDK接入簡化開發。SDK使用介紹請直接檢視 5. 開發者資源 部分。
+        """提供中文到英文、英文到中文兩種語言的圖片翻譯服務，可自動識别圖片中的文本内容並翻譯成目標語言，識别後的文本按行翻譯，後續會提供可按段落翻譯的版本。<br />
+        提示：對於一般開發者，我們建議優先使用SDK接入簡化開發。SDK使用介紹請直接檢視 5. 開發者資源 部分。
 
         :param request: Request instance for ImageTranslate.
         :type request: :class:`taifucloudcloud.tmt.v20180321.models.ImageTranslateRequest`
@@ -56,7 +56,7 @@ class TmtClient(AbstractClient):
 
     def LanguageDetect(self, request):
         """可自動識别文本内容的語言種類，輕量高效，無需額外實現判斷方式，使面向客戶的服務體驗更佳。 <br />
-        提示：對于一般開發者，我們建議優先使用SDK接入簡化開發。SDK使用介紹請直接檢視 5. 開發者資源 部分。
+        提示：對於一般開發者，我們建議優先使用SDK接入簡化開發。SDK使用介紹請直接檢視 5. 開發者資源 部分。
 
         :param request: Request instance for LanguageDetect.
         :type request: :class:`taifucloudcloud.tmt.v20180321.models.LanguageDetectRequest`
@@ -84,10 +84,10 @@ class TmtClient(AbstractClient):
 
 
     def SpeechTranslate(self, request):
-        """本介面提供上傳音訊，将音訊進行語音識别并翻譯成文本的服務，目前開放中英互譯的語音翻譯服務。
+        """本介面提供上傳音訊，将音訊進行語音識别並翻譯成文本的服務，目前開放中英互譯的語音翻譯服務。
         待識别和翻譯的音訊文件可以是 pcm、mp3和speex 格式，pcm采樣率要求16kHz、位深16bit、單聲道，音訊内語音清晰。<br/>
         如果采用流式傳輸的方式，要求每個分片時長200ms~500ms；如果采用非流式的傳輸方式，要求音訊時長不超過8s。注意最後一個分片的IsEnd參數設置爲1。<br />
-        提示：對于一般開發者，我們建議優先使用SDK接入簡化開發。SDK使用介紹請直接檢視 5. 開發者資源部分。
+        提示：對於一般開發者，我們建議優先使用SDK接入簡化開發。SDK使用介紹請直接檢視 5. 開發者資源部分。
 
         :param request: Request instance for SpeechTranslate.
         :type request: :class:`taifucloudcloud.tmt.v20180321.models.SpeechTranslateRequest`
@@ -115,8 +115,8 @@ class TmtClient(AbstractClient):
 
 
     def TextTranslate(self, request):
-        """提供中文到英文、英文到中文的等多種語言的文本内容翻譯服務， 經過大數據語料庫、多種解碼算法、翻譯引擎深度優化，在新聞文章、生活口語等不同語言場景中都有深厚積累，翻譯結果專業評價處于行業領先水平。<br />
-        提示：對于一般開發者，我們建議優先使用SDK接入簡化開發。SDK使用介紹請直接檢視 5. 開發者資源 部分。
+        """提供中文到英文、英文到中文的等多種語言的文本内容翻譯服務， 經過大數據語料庫、多種解碼算法、翻譯引擎深度優化，在新聞文章、生活口語等不同語言場景中都有深厚積累，翻譯結果專業評價處於行業領先水平。<br />
+        提示：對於一般開發者，我們建議優先使用SDK接入簡化開發。SDK使用介紹請直接檢視 5. 開發者資源 部分。
 
         :param request: Request instance for TextTranslate.
         :type request: :class:`taifucloudcloud.tmt.v20180321.models.TextTranslateRequest`

@@ -3,8 +3,8 @@
     "application":{
       "Chinese":{
         "name": "文件解壓縮",
-        "description": "上傳壓縮包至COS時，可觸發雲函數下載壓縮包并解壓，并把解壓後的文件上傳到COS另一個targetBucket環境變量指定的儲存桶中，支援如下壓縮格式：ZIP, RAR, 7Z, BZIP2, GZIP, TAR, XZ",
-        "attention": "該雲函數需要配置COS觸發器，解壓後的文件總大小要<500M，另外在使用本範例代碼時需要函數運作角色有讀寫COS的權限。需要設置如下環境變量：targetBucket-目标儲存桶名稱，targetPrefix-目标儲存桶前綴, targetRegion-目标儲存桶地域, suffix-解壓的後綴",
+        "description": "上傳壓縮包至COS時，可觸發雲函數下載壓縮包並解壓，並把解壓後的文件上傳到COS另一個targetBucket環境變量指定的儲存桶中，支援如下壓縮格式：ZIP, RAR, 7Z, BZIP2, GZIP, TAR, XZ",
+        "attention": "該雲函數需要配置COS觸發器，解壓後的文件總大小要<500M，另外在使用本範例代碼時需要函數運作角色有讀寫COS的權限。需要設置如下環境變量：targetBucket-目標儲存桶名稱，targetPrefix-目標儲存桶前綴, targetRegion-目標儲存桶地域, suffix-解壓的後綴",
         "readme": {
             "file": "",
             "content": ""
@@ -41,19 +41,19 @@
       },
       "download_address":"https://github.com/taifucloudyun/scf-demo-repo/tree/master/Python2.7-UnpackAndUploadToCOS",  //demo的git下載連結
       "tags":[
-              "COS", "Python2.7", "UNZIP"  // 标簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
+              "COS", "Python2.7", "UNZIP"  // 標簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
       ],
-      "version": "1.0.3"  //版本号，通過版本号标識 demo 升級情況，未修改版本号會導緻 demo 不更新至頁面
+      "version": "1.0.3"  //版本號，通過版本號標識 demo 升級情況，未修改版本號會導緻 demo 不更新至頁面
     },
     "functions": {
       "name": "unpack_to_cos",  // 函數名稱，只支援英文
-      "description": "本範例通過配置COS觸發，上傳到COS的壓縮包，使用SCF下載并本地解壓，支援中文欄位解壓，并把解壓後的文件上傳到COS另一個targetBucket環境變量指定的儲存桶中，支援如下壓縮格式：ZIP, RAR, 7Z, BZIP2, GZIP, TAR, XZ",
+      "description": "本範例通過配置COS觸發，上傳到COS的壓縮包，使用SCF下載並本地解壓，支援中文欄位解壓，並把解壓後的文件上傳到COS另一個targetBucket環境變量指定的儲存桶中，支援如下壓縮格式：ZIP, RAR, 7Z, BZIP2, GZIP, TAR, XZ",
       "handler":"unpack_to_cos.main_handler",
       "memorySize": 128,  // 運作配置内存
       "timeout": 900,  // 運作超時時間，15分鍾
       "runtime": "Python2.7", //運作環境，用戶可以通過該關鍵字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
       "Environment":{
-      },      // 可選，用于定義環境變量
+      },      // 可選，用於定義環境變量
       "Events":{
         "Type": "COS",
         "Properties":{
@@ -62,9 +62,9 @@
           "Filter": "",
           "Enable":"true"
         }
-      },      // 可選，用于定義觸發此函數的事件源
+      },      // 可選，用於定義觸發此函數的事件源
       "VpcConfig":{
-      },      // 可選， 用于配置雲函數訪問 VPC 私有網絡。
+      },      // 可選， 用於配置雲函數訪問 VPC 私有網絡。
       "codeObject": {
           "codeFile": [
               "unpack_to_cos.py"

@@ -82,7 +82,7 @@ class IotClient(AbstractClient):
 
 
     def AddProduct(self, request):
-        """本介面(AddProduct)用于創建、定義某款硬體産品。
+        """本介面(AddProduct)用於創建、定義某款硬體産品。
 
         :param request: 調用AddProduct所需參數的結構體。
         :type request: :class:`taifucloudcloud.iot.v20180123.models.AddProductRequest`
@@ -138,7 +138,7 @@ class IotClient(AbstractClient):
 
 
     def AddTopic(self, request):
-        """新增Topic，用于設備或應用發布訊息至該Topic或訂閱該Topic的訊息。
+        """新增Topic，用於設備或應用發布訊息至該Topic或訂閱該Topic的訊息。
 
         :param request: 調用AddTopic所需參數的結構體。
         :type request: :class:`taifucloudcloud.iot.v20180123.models.AddTopicRequest`
@@ -250,7 +250,7 @@ class IotClient(AbstractClient):
 
 
     def AppGetDeviceData(self, request):
-        """獲取綁定設備數據，用于實時展示設備的最新數據
+        """獲取綁定設備數據，用於實時展示設備的最新數據
 
         :param request: 調用AppGetDeviceData所需參數的結構體。
         :type request: :class:`taifucloudcloud.iot.v20180123.models.AppGetDeviceDataRequest`
@@ -474,7 +474,7 @@ class IotClient(AbstractClient):
 
 
     def AppUpdateDevice(self, request):
-        """修改設備别名，便于用戶個性化定義設備的名稱
+        """修改設備别名，便於用戶個性化定義設備的名稱
 
         :param request: 調用AppUpdateDevice所需參數的結構體。
         :type request: :class:`taifucloudcloud.iot.v20180123.models.AppUpdateDeviceRequest`
@@ -698,7 +698,7 @@ class IotClient(AbstractClient):
 
 
     def GetDataHistory(self, request):
-        """批次獲取設備某一段時間範圍的設備上報數據。該介面适用于使用高級版類型的産品
+        """批次獲取設備某一段時間範圍的設備上報數據。該介面适用於使用高級版類型的産品
 
         :param request: 調用GetDataHistory所需參數的結構體。
         :type request: :class:`taifucloudcloud.iot.v20180123.models.GetDataHistoryRequest`
@@ -726,7 +726,7 @@ class IotClient(AbstractClient):
 
 
     def GetDebugLog(self, request):
-        """獲取設備的調試日志，用于定位問題
+        """獲取設備的調試日志，用於定位問題
 
         :param request: 調用GetDebugLog所需參數的結構體。
         :type request: :class:`taifucloudcloud.iot.v20180123.models.GetDebugLogRequest`
@@ -782,7 +782,7 @@ class IotClient(AbstractClient):
 
 
     def GetDeviceData(self, request):
-        """獲取某個設備當前上報到雲端的數據，該介面适用于使用數據範本協議的産品。
+        """獲取某個設備當前上報到雲端的數據，該介面适用於使用數據範本協議的産品。
 
         :param request: 調用GetDeviceData所需參數的結構體。
         :type request: :class:`taifucloudcloud.iot.v20180123.models.GetDeviceDataRequest`
@@ -810,7 +810,7 @@ class IotClient(AbstractClient):
 
 
     def GetDeviceLog(self, request):
-        """批次獲取設備與雲端的詳細通信日志，該介面适用于使用高級版類型的産品。
+        """批次獲取設備與雲端的詳細通信日志，該介面适用於使用高級版類型的産品。
 
         :param request: 調用GetDeviceLog所需參數的結構體。
         :type request: :class:`taifucloudcloud.iot.v20180123.models.GetDeviceLogRequest`
@@ -838,7 +838,7 @@ class IotClient(AbstractClient):
 
 
     def GetDeviceSignatures(self, request):
-        """獲取設備綁定簽名，用于用戶綁定某個設備的應用場景
+        """獲取設備綁定簽名，用於用戶綁定某個設備的應用場景
 
         :param request: 調用GetDeviceSignatures所需參數的結構體。
         :type request: :class:`taifucloudcloud.iot.v20180123.models.GetDeviceSignaturesRequest`
@@ -1118,7 +1118,7 @@ class IotClient(AbstractClient):
 
 
     def IssueDeviceControl(self, request):
-        """提供下發控制指令到指定設備的能力，該介面适用于使用高級版類型的産品。
+        """提供下發控制指令到指定設備的能力，該介面适用於使用高級版類型的産品。
 
         :param request: 調用IssueDeviceControl所需參數的結構體。
         :type request: :class:`taifucloudcloud.iot.v20180123.models.IssueDeviceControlRequest`
@@ -1146,7 +1146,7 @@ class IotClient(AbstractClient):
 
 
     def PublishMsg(self, request):
-        """提供向指定的Topic發布訊息的能力，常用于向設備下發控制指令。該介面只适用于産品版本爲“基礎版”類型的産品，使用高級版的産品需使用“下發設備控制指令”介面
+        """提供向指定的Topic發布訊息的能力，常用於向設備下發控制指令。該介面只适用於産品版本爲“基礎版”類型的産品，使用高級版的産品需使用“下發設備控制指令”介面
 
         :param request: 調用PublishMsg所需參數的結構體。
         :type request: :class:`taifucloudcloud.iot.v20180123.models.PublishMsgRequest`

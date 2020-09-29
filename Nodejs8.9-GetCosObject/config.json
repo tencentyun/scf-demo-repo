@@ -3,7 +3,7 @@
     "application": {
       "Chinese": {
         "name": "從物件儲存獲取文件",
-        "description": "本範例配置了 COS 觸發器，當有文件上傳到對應的 COS bucket時，會觸發雲函數執行，并把文件下載到本地臨時目錄，用做後續處理",
+        "description": "本範例配置了 COS 觸發器，當有文件上傳到對應的 COS bucket時，會觸發雲函數執行，並把文件下載到本地臨時目錄，用做後續處理",
         "attention": "該雲函數需要配置 COS 觸發器，另外在使用本範例代碼時需要在函數裏修改 appid、secret_id、secret_key",
         "readme": {
           "file": "",
@@ -44,21 +44,21 @@
         "Nodejs8.9",
         "object" 
         // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on
-        // 标簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
+        // 標簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
       ],
       "version": "1.0.8" 
       // Version number, which identifies the demo version status. 
       // Demo will not to update to the page if the version number unmodified.
-      //版本号，通過版本号标識 demo 升級情況，未修改版本号會導緻 demo 不更新至頁面
+      //版本號，通過版本號標識 demo 升級情況，未修改版本號會導緻 demo 不更新至頁面
     },
     "functions": {
       "name": "Get_COS_Object", // Function name, only support English, 函數名稱，只支援英文
-      "description": "本範例配置了 COS 觸發器，當有文件上傳到對應的 COS bucket時，會觸發雲函數執行，并把文件下載到本地臨時目錄，用做後續處理",
+      "description": "本範例配置了 COS 觸發器，當有文件上傳到對應的 COS bucket時，會觸發雲函數執行，並把文件下載到本地臨時目錄，用做後續處理",
       "handler": "index.main_handler",
       "memorySize": 128, // Memorysize, 運作配置内存
       "timeout": 5, // Timeout, 運作超時時間
       "runtime": "Nodejs8.9", //Runtime, users can search by this keyword, 運作環境，用戶可以通過該關鍵字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
-      "Environment": {}, // Optional, used to define environment variables. 可選，用于定義環境變量
+      "Environment": {}, // Optional, used to define environment variables. 可選，用於定義環境變量
       "Events": {
         "Type": "COS",
         "Properties": {
@@ -67,8 +67,8 @@
           "Filter": "",
           "Enable": "true"
         }
-      }, // Optional, used define the event source that triggers this function. 可選，用于定義觸發此函數的事件源
-      "VpcConfig": {}, // Optional, used configure cloud function's private network. 可選， 用于配置雲函數訪問 VPC 私有網絡。
+      }, // Optional, used define the event source that triggers this function. 可選，用於定義觸發此函數的事件源
+      "VpcConfig": {}, // Optional, used configure cloud function's private network. 可選， 用於配置雲函數訪問 VPC 私有網絡。
       "codeObject": {
         "codeFile": [
           "index.js"

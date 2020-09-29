@@ -120,18 +120,18 @@ class CosAuthMode(AbstractModel):
     def __init__(self):
         """
         :param Type: 授權類型，可選值： 
-0：bucket授權，需要将對應bucket授權給本服務帳号（3020447271），否則會讀寫cos失敗； 
-1：key托管，把cos的賬号id和key托管于本服務，本服務會提供一個托管id； 
+0：bucket授權，需要将對應bucket授權給本服務帳號（3020447271），否則會讀寫cos失敗； 
+1：key托管，把cos的賬號id和key托管於本服務，本服務會提供一個托管id； 
 3：臨時key授權。
 注意：目前智慧編輯還不支援臨時key授權。
         :type Type: int
-        :param HostedId: cos賬号托管id，Type等于1時必選。
+        :param HostedId: cos賬號托管id，Type等於1時必選。
         :type HostedId: str
-        :param SecretId: cos身份識别id，Type等于3時必選。
+        :param SecretId: cos身份識别id，Type等於3時必選。
         :type SecretId: str
-        :param SecretKey: cos身份秘鑰，Type等于3時必選。
+        :param SecretKey: cos身份秘鑰，Type等於3時必選。
         :type SecretKey: str
-        :param Token: 臨時授權 token，Type等于3時必選。
+        :param Token: 臨時授權 token，Type等於3時必選。
         :type Token: str
         """
         self.Type = None
@@ -161,8 +161,8 @@ class CosInfo(AbstractModel):
         :param Bucket: cos 儲存桶，格式爲BuketName-AppId。例如：test-123456。
         :type Bucket: str
         :param Path: cos 路徑。 
-對于寫表示目錄，例如：/test； 
-對于讀表示文件路徑，例如：/test/test.mp4。
+對於寫表示目錄，例如：/test； 
+對於讀表示文件路徑，例如：/test/test.mp4。
         :type Path: str
         :param CosAuthMode: cos 授權訊息，不填預設爲公有權限。
         :type CosAuthMode: :class:`taifucloudcloud.ie.v20200304.models.CosAuthMode`
@@ -272,7 +272,7 @@ class CreateEditingTaskRequest(AbstractModel):
         :type EditingInfo: :class:`taifucloudcloud.ie.v20200304.models.EditingInfo`
         :param DownInfo: 視訊源訊息。
         :type DownInfo: :class:`taifucloudcloud.ie.v20200304.models.DownInfo`
-        :param SaveInfo: 結果儲存訊息。對于包含智慧拆條、智慧集錦或者智慧封面的任務必選。
+        :param SaveInfo: 結果儲存訊息。對於包含智慧拆條、智慧集錦或者智慧封面的任務必選。
         :type SaveInfo: :class:`taifucloudcloud.ie.v20200304.models.SaveInfo`
         :param CallbackInfo: 任務結果回調網址訊息。
         :type CallbackInfo: :class:`taifucloudcloud.ie.v20200304.models.CallbackInfo`
@@ -370,9 +370,9 @@ class DownInfo(AbstractModel):
 0：UrlInfo； 
 1：CosInfo。
         :type Type: int
-        :param UrlInfo: Url形式下載訊息，當Type等于0時必選。
+        :param UrlInfo: Url形式下載訊息，當Type等於0時必選。
         :type UrlInfo: :class:`taifucloudcloud.ie.v20200304.models.UrlInfo`
-        :param CosInfo: Cos形式下載訊息，當Type等于1時必選。
+        :param CosInfo: Cos形式下載訊息，當Type等於1時必選。
         :type CosInfo: :class:`taifucloudcloud.ie.v20200304.models.CosInfo`
         """
         self.Type = None
@@ -397,7 +397,7 @@ class EditingInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param TagEditingInfo: 視訊标簽識别任務參數，不填則不開啓。
+        :param TagEditingInfo: 視訊標簽識别任務參數，不填則不開啓。
         :type TagEditingInfo: :class:`taifucloudcloud.ie.v20200304.models.TagEditingInfo`
         :param ClassificationEditingInfo: 視訊分類識别任務參數，不填則不開啓。
         :type ClassificationEditingInfo: :class:`taifucloudcloud.ie.v20200304.models.ClassificationEditingInfo`
@@ -451,7 +451,7 @@ class EditingTaskResult(AbstractModel):
         :param Status: 編輯任務狀态。 
 1：執行中；2：已完成。
         :type Status: int
-        :param TagTaskResult: 視訊标簽識别結果。
+        :param TagTaskResult: 視訊標簽識别結果。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagTaskResult: :class:`taifucloudcloud.ie.v20200304.models.TagTaskResult`
         :param ClassificationTaskResult: 視訊分類識别結果。
@@ -718,7 +718,7 @@ class SaveInfo(AbstractModel):
         :param Type: 儲存類型，可選值： 
 1：CosInfo。
         :type Type: int
-        :param CosInfo: Cos形式儲存訊息，當Type等于1時必選。
+        :param CosInfo: Cos形式儲存訊息，當Type等於1時必選。
         :type CosInfo: :class:`taifucloudcloud.ie.v20200304.models.CosInfo`
         """
         self.Type = None
@@ -824,13 +824,13 @@ class StripTaskResultItem(AbstractModel):
 
 
 class TagEditingInfo(AbstractModel):
-    """視訊标簽識别任務參數訊息
+    """視訊標簽識别任務參數訊息
 
     """
 
     def __init__(self):
         """
-        :param Switch: 是否開啓視訊标簽識别。0爲關閉，1爲開啓。其他非0非1值預設爲0。
+        :param Switch: 是否開啓視訊標簽識别。0爲關閉，1爲開啓。其他非0非1值預設爲0。
         :type Switch: int
         :param CustomInfo: 額外定制化服務參數。參數爲序列化的Json字串，例如：{"k1":"v1"}。
         :type CustomInfo: str
@@ -845,7 +845,7 @@ class TagEditingInfo(AbstractModel):
 
 
 class TagTaskResult(AbstractModel):
-    """視訊标簽識别結果訊息
+    """視訊標簽識别結果訊息
 
     """
 
@@ -859,7 +859,7 @@ class TagTaskResult(AbstractModel):
         :type ErrCode: int
         :param ErrMsg: 編輯任務失敗錯誤描述。
         :type ErrMsg: str
-        :param ItemSet: 視訊标簽識别結果集。
+        :param ItemSet: 視訊標簽識别結果集。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ItemSet: list of TagTaskResultItem
         """
@@ -882,13 +882,13 @@ class TagTaskResult(AbstractModel):
 
 
 class TagTaskResultItem(AbstractModel):
-    """視訊标簽識别結果項
+    """視訊標簽識别結果項
 
     """
 
     def __init__(self):
         """
-        :param Tag: 标簽名稱。
+        :param Tag: 標簽名稱。
         :type Tag: str
         :param Confidence: 置信度，取值範圍是 0 到 100。
         :type Confidence: float

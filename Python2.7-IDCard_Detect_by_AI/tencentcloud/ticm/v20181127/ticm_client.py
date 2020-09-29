@@ -26,7 +26,7 @@ class TicmClient(AbstractClient):
 
 
     def ImageModeration(self, request):
-        """本介面提供多種維度的圖像審核能力，支援色情和性感内容識别，政治人物和涉政敏感場景識别，以及暴恐人物、場景、旗幟标識等違禁内容的識别。
+        """本介面提供多種維度的圖像審核能力，支援色情和性感内容識别，政治人物和涉政敏感場景識别，以及暴恐人物、場景、旗幟標識等違禁内容的識别。
 
         :param request: 調用ImageModeration所需參數的結構體。
         :type request: :class:`taifucloudcloud.ticm.v20181127.models.ImageModerationRequest`

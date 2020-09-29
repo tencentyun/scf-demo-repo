@@ -173,9 +173,9 @@ class DescribeCreditResultResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param ResultCode: <p>呼叫結果，取值範圍：</p><ul style="margin-bottom:0px;"><li>NON：接通</li><li>DBU：号碼忙</li><li>DRF：不在服務區</li><li>ANA：欠費未接聽</li><li>REJ：拒接</li><li>SHU：關機</li><li>NAN：空号</li><li>HAL：停機</li><li>DAD：未接聽</li><li>EXE：其他異常</li></ul>
+        :param ResultCode: <p>呼叫結果，取值範圍：</p><ul style="margin-bottom:0px;"><li>NON：接通</li><li>DBU：號碼忙</li><li>DRF：不在服務區</li><li>ANA：欠費未接聽</li><li>REJ：拒接</li><li>SHU：關機</li><li>NAN：空號</li><li>HAL：停機</li><li>DAD：未接聽</li><li>EXE：其他異常</li></ul>
         :type ResultCode: str
-        :param ClientCode: 客戶标識代碼，多個标識碼以英文逗号分隔，ResultCode爲NON時才有。
+        :param ClientCode: 客戶標識代碼，多個標識碼以英文逗號分隔，ResultCode爲NON時才有。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ClientCode: str
         :param RingStartTime: 開始振鈴時間，ResultCode爲NON或DAD時才有此欄位。
@@ -223,9 +223,9 @@ class DescribeRecordsRequest(AbstractModel):
         :type Operation: str
         :param ProductId: 産品ID
         :type ProductId: str
-        :param AccountNum: 案件編号
+        :param AccountNum: 案件編號
         :type AccountNum: str
-        :param CalledPhone: 被叫号碼
+        :param CalledPhone: 被叫號碼
         :type CalledPhone: str
         :param StartBizDate: 查詢起始日期
         :type StartBizDate: str
@@ -432,11 +432,11 @@ class SingleBlackApply(AbstractModel):
 
     def __init__(self):
         """
-        :param BlackType: 黑名單類型，01代表手機号碼。
+        :param BlackType: 黑名單類型，01代表手機號碼。
         :type BlackType: str
         :param OperationType: 操作類型，A爲新增，D爲删除。
         :type OperationType: str
-        :param BlackValue: 黑名單值，BlackType爲01時，填寫11位手機号碼。
+        :param BlackValue: 黑名單值，BlackType爲01時，填寫11位手機號碼。
         :type BlackValue: str
         :param BlackDescription: 備注。
         :type BlackDescription: str
@@ -465,13 +465,13 @@ class SingleRecord(AbstractModel):
 
     def __init__(self):
         """
-        :param AccountNum: 案件編号。
+        :param AccountNum: 案件編號。
         :type AccountNum: str
         :param BizDate: 外呼日期。
         :type BizDate: str
         :param CallStartTime: 開始呼叫時間。
         :type CallStartTime: str
-        :param CallerPhone: 主叫号碼。
+        :param CallerPhone: 主叫號碼。
         :type CallerPhone: str
         :param Direction: 呼叫方向，O爲呼出，I爲呼入。
         :type Direction: str

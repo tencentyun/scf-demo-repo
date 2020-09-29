@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: Get_COS_Object
   src: ./
-  description: 本範例配置了 COS 觸發器，當有文件上傳到對應的 COS bucket時，會觸發雲函數執行，并把文件下載到本地臨時目錄，用做後續處理
+  description: 本範例配置了 COS 觸發器，當有文件上傳到對應的 COS bucket時，會觸發雲函數執行，並把文件下載到本地臨時目錄，用做後續處理
   handler: index.main_handler
   runtime: Nodejs8.9
   namespace: default

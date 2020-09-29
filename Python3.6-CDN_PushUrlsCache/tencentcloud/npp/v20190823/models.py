@@ -25,9 +25,9 @@ class CallBackCdr(AbstractModel):
         """
         :param CallId: 呼叫通話 ID
         :type CallId: str
-        :param Src: 主叫号碼
+        :param Src: 主叫號碼
         :type Src: str
-        :param Dst: 被叫号碼
+        :param Dst: 被叫號碼
         :type Dst: str
         :param StartSrcCallTime: 主叫呼叫開始時間
         :type StartSrcCallTime: str
@@ -55,7 +55,7 @@ class CallBackCdr(AbstractModel):
         :param BizId: 同回撥請求中的 bizId，如果回撥請求中帶 bizId 會有該欄位返回
 注意：此欄位可能返回 null，表示取不到有效值。
         :type BizId: str
-        :param OrderId: 訂單 ID,最大長度不超過 64 個位元，對于一些有訂單狀态 App 相關應用（如達人幫接入 App 應用)，該欄位只在帳單中帶上，其它回調不附帶該欄位
+        :param OrderId: 訂單 ID,最大長度不超過 64 個位元，對於一些有訂單狀态 App 相關應用（如達人幫接入 App 應用)，該欄位只在帳單中帶上，其它回調不附帶該欄位
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OrderId: str
         """
@@ -97,7 +97,7 @@ class CallBackCdr(AbstractModel):
 
 
 class CallBackPhoneCode(AbstractModel):
-    """回撥号碼欄位
+    """回撥號碼欄位
 
     """
 
@@ -105,7 +105,7 @@ class CallBackPhoneCode(AbstractModel):
         """
         :param Nation: 國家碼，統一以 00 開頭
         :type Nation: str
-        :param Phone: 号碼（固話區号前加 0，如075586013388）
+        :param Phone: 號碼（固話區號前加 0，如075586013388）
         :type Phone: str
         """
         self.Nation = None
@@ -126,13 +126,13 @@ class CreateCallBackRequest(AbstractModel):
         """
         :param BizAppId: 業務appid
         :type BizAppId: str
-        :param Src: 主叫号碼(必須爲 11 位手機号，号碼前加 0086，如 008613631686024)
+        :param Src: 主叫號碼(必須爲 11 位手機號，號碼前加 0086，如 008613631686024)
         :type Src: str
-        :param Dst: 被叫号碼(必須爲 11 位手機或固話号碼,号碼前加 0086，如008613631686024，固話如：0086075586013388)
+        :param Dst: 被叫號碼(必須爲 11 位手機或固話號碼,號碼前加 0086，如008613631686024，固話如：0086075586013388)
         :type Dst: str
-        :param SrcDisplayNum: 主叫顯示系統分配的固話号碼，如不填顯示随機分配号碼
+        :param SrcDisplayNum: 主叫顯示系統分配的固話號碼，如不填顯示随機分配號碼
         :type SrcDisplayNum: str
-        :param DstDisplayNum: 被叫顯示系統分配的固話号碼，如不填顯示随機分配号碼
+        :param DstDisplayNum: 被叫顯示系統分配的固話號碼，如不填顯示随機分配號碼
         :type DstDisplayNum: str
         :param Record: 是否錄音，0 表示不錄音，1 表示錄音。預設爲不錄音
         :type Record: str
@@ -153,7 +153,7 @@ class CreateCallBackRequest(AbstractModel):
         :type LastCallId: str
         :param PreCallerHandle: 結構體，主叫呼叫預處理操作，根據不同操作确認是否呼通被叫。如需使用，本結構體需要與 keyList 結構體配合使用，此時這兩個參數都爲必填項
         :type PreCallerHandle: :class:`taifucloudcloud.npp.v20190823.models.RreCallerHandle`
-        :param OrderId: 訂單 ID，最大長度不超過64個位元，對于一些有訂單狀态 App 相關應用使用（如達人幫接入 App 應用)，該欄位只在帳單中帶上，其它回調不附帶該欄位
+        :param OrderId: 訂單 ID，最大長度不超過64個位元，對於一些有訂單狀态 App 相關應用使用（如達人幫接入 App 應用)，該欄位只在帳單中帶上，其它回調不附帶該欄位
         :type OrderId: str
         """
         self.BizAppId = None
@@ -203,10 +203,10 @@ class CreateCallBackResponse(AbstractModel):
         :param CallId: 話單id
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CallId: str
-        :param SrcDisplayNum: 主叫顯示系統分配的固話号碼
+        :param SrcDisplayNum: 主叫顯示系統分配的固話號碼
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SrcDisplayNum: str
-        :param DstDisplayNum: 被叫顯示系統分配的固話号碼
+        :param DstDisplayNum: 被叫顯示系統分配的固話號碼
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DstDisplayNum: str
         :param ErrorCode: 錯誤碼
@@ -243,7 +243,7 @@ class DelVirtualNumRequest(AbstractModel):
         """
         :param BizAppId: 業務appid
         :type BizAppId: str
-        :param BindId: 雙方号碼 + 中間号綁定 ID，該 ID 全局唯一
+        :param BindId: 雙方號碼 + 中間號綁定 ID，該 ID 全局唯一
         :type BindId: str
         :param BizId: 應用二級業務 ID，bizId 需保證在該 appId 下全局唯一，最大長度不超過 16 個位元。
         :type BizId: str
@@ -274,7 +274,7 @@ class DelVirtualNumResponse(AbstractModel):
         :param BindId: 綁定 ID，該 ID 全局唯一
 注意：此欄位可能返回 null，表示取不到有效值。
         :type BindId: str
-        :param RefLeftNum: 中間号還剩引用計數，如果計數爲 0 會解綁
+        :param RefLeftNum: 中間號還剩引用計數，如果計數爲 0 會解綁
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RefLeftNum: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -437,9 +437,9 @@ class DescribeCallBackStatusRequest(AbstractModel):
         :type BizAppId: str
         :param CallId: 回撥請求響應中返回的 callId
         :type CallId: str
-        :param Src: 主叫号碼
+        :param Src: 主叫號碼
         :type Src: str
-        :param Dst: 被叫号碼
+        :param Dst: 被叫號碼
         :type Dst: str
         :param CallStatus: 通話最後狀态：0：未知狀态 1：主叫響鈴中 2：主叫接聽 3：被叫響鈴中 4：正常通話中 5：通話結束
         :type CallStatus: str
@@ -474,9 +474,9 @@ class DescribeCallBackStatusResponse(AbstractModel):
         :type AppId: str
         :param CallId: 回撥請求響應中返回的 callId
         :type CallId: str
-        :param Src: 主叫号碼
+        :param Src: 主叫號碼
         :type Src: str
-        :param Dst: 被叫号碼
+        :param Dst: 被叫號碼
         :type Dst: str
         :param CallStatus: 通話最後狀态：0：未知狀态 1：主叫響鈴中 2：主叫接聽 3：被叫響鈴中 4：正常通話中 5：通話結束
         :type CallStatus: str
@@ -531,7 +531,7 @@ class DescribeCallerDisplayListResponse(AbstractModel):
         :param AppId: appid
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AppId: str
-        :param CodeList: 主叫顯号号碼集合，codeList[0...*] 結構體數組，如果業務是主被叫互顯，該欄位爲空
+        :param CodeList: 主叫顯號號碼集合，codeList[0...*] 結構體數組，如果業務是主被叫互顯，該欄位爲空
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CodeList: list of CallBackPhoneCode
         :param ErrorCode: 錯誤碼
@@ -571,7 +571,7 @@ class Get400CdrRequest(AbstractModel):
         """
         :param BizAppId: 業務appid
         :type BizAppId: str
-        :param CallId: 通話唯一标識 callId，即直撥呼叫響應中返回的 callId
+        :param CallId: 通話唯一標識 callId，即直撥呼叫響應中返回的 callId
         :type CallId: str
         :param Src: 查詢主叫用戶産生的呼叫話單（0086開頭），設置爲空表示拉取該時間段的所有話單
         :type Src: str
@@ -645,21 +645,21 @@ class GetVirtualNumRequest(AbstractModel):
         """
         :param BizAppId: 業務appid
         :type BizAppId: str
-        :param Dst: 被叫号碼(号碼前加 0086，如 008613631686024)
+        :param Dst: 被叫號碼(號碼前加 0086，如 008613631686024)
         :type Dst: str
-        :param Src: 主叫号碼(号碼前加 0086，如 008613631686024)，xb 模式下是不用填寫，axb 模式下是必選
+        :param Src: 主叫號碼(號碼前加 0086，如 008613631686024)，xb 模式下是不用填寫，axb 模式下是必選
         :type Src: str
-        :param AccreditList: {“accreditList”:[“008613631686024”,”008612345678910”]}，主要用于 N-1 場景，号碼綁定非共享是獨占型，指定了 dst 獨占中間号綁定，accreditList 表示這個清單成員可以撥打 dst 綁 定的中間号，預設值爲空，表示所有号碼都可以撥打獨占型中間号綁定，最大集合不允許超過 30 個，僅适用于xb模式
+        :param AccreditList: {“accreditList”:[“008613631686024”,”008612345678910”]}，主要用於 N-1 場景，號碼綁定非共享是獨占型，指定了 dst 獨占中間號綁定，accreditList 表示這個清單成員可以撥打 dst 綁 定的中間號，預設值爲空，表示所有號碼都可以撥打獨占型中間號綁定，最大集合不允許超過 30 個，僅适用於xb模式
         :type AccreditList: list of str
-        :param AssignVirtualNum: 指定中間号（格式：008617013541251），如果該中間号已被使用則返回綁定失敗。如果不帶該欄位則由 側從号碼池裏自動分配
+        :param AssignVirtualNum: 指定中間號（格式：008617013541251），如果該中間號已被使用則返回綁定失敗。如果不帶該欄位則由 側從號碼池裏自動分配
         :type AssignVirtualNum: str
-        :param Record: 是否錄音，0表示不錄音，1表示錄音。預設爲不錄音，注意如果需要錄音回調，通話完成後需要等待一段時間，收到錄音回調之後，再解綁中間号。
+        :param Record: 是否錄音，0表示不錄音，1表示錄音。預設爲不錄音，注意如果需要錄音回調，通話完成後需要等待一段時間，收到錄音回調之後，再解綁中間號。
         :type Record: str
-        :param CityId: 主被叫顯号号碼歸屬地，指定該參數說明顯号歸屬該城市，如果沒有該城市号碼會随機選取一個城市或者後台配置返回107，返回碼詳見 《 -中間号-城市id.xlsx》
+        :param CityId: 主被叫顯號號碼歸屬地，指定該參數說明顯號歸屬該城市，如果沒有該城市號碼會随機選取一個城市或者後台配置返回107，返回碼詳見 《 -中間號-城市id.xlsx》
         :type CityId: str
         :param BizId: 應用二級業務 ID，bizId 需保證在該 appId 下全局唯一，最大長度不超過 16 個位元。
         :type BizId: str
-        :param MaxAssignTime: 号碼最大綁定時間，不填預設爲 24 小時，最長綁定時間是168小時，單位秒
+        :param MaxAssignTime: 號碼最大綁定時間，不填預設爲 24 小時，最長綁定時間是168小時，單位秒
         :type MaxAssignTime: str
         :param StatusFlag: 主叫發起呼叫狀态：1
 被叫發起呼叫狀态：256
@@ -679,7 +679,7 @@ class GetVirtualNumRequest(AbstractModel):
 值爲 4：表示只要推送主叫接聽狀态
 值爲 16191：表示所有狀态都需要推送（上面所有值和）
         :type StatusFlag: str
-        :param StatusUrl: 請填寫statusFlag并設置值，狀态回調通知網址，正式環境可以配置預設推送網址
+        :param StatusUrl: 請填寫statusFlag並設置值，狀态回調通知網址，正式環境可以配置預設推送網址
         :type StatusUrl: str
         :param HangupUrl: 話單回調通知網址，正式環境可以配置預設推送網址
         :type HangupUrl: str
@@ -729,10 +729,10 @@ class GetVirtualNumResponse(AbstractModel):
         :param BindId: 綁定 ID，該 ID 全局唯一
 注意：此欄位可能返回 null，表示取不到有效值。
         :type BindId: str
-        :param RefNum: 中間号還剩引用計數，如果計數爲 0 會解綁
+        :param RefNum: 中間號還剩引用計數，如果計數爲 0 會解綁
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RefNum: str
-        :param VirtualNum: 中間号
+        :param VirtualNum: 中間號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type VirtualNum: str
         :param Msg: 錯誤原因
@@ -830,15 +830,15 @@ class VirturalNumCdr(AbstractModel):
         """
         :param CallId: 呼叫通話 ID
         :type CallId: str
-        :param BindId: 雙方号碼 + 中間号綁定 ID，該 ID 全局唯一
+        :param BindId: 雙方號碼 + 中間號綁定 ID，該 ID 全局唯一
         :type BindId: str
-        :param Src: 主叫号碼
+        :param Src: 主叫號碼
         :type Src: str
-        :param Dst: 被叫号碼
+        :param Dst: 被叫號碼
         :type Dst: str
-        :param DstVirtualNum: 主叫通訊錄直撥虛拟保護号碼
+        :param DstVirtualNum: 主叫通訊錄直撥虛拟保護號碼
         :type DstVirtualNum: str
-        :param CallCenterAcceptTime: 虛拟保護号碼平台收到呼叫時間
+        :param CallCenterAcceptTime: 虛拟保護號碼平台收到呼叫時間
         :type CallCenterAcceptTime: str
         :param StartDstCallTime: 被叫呼叫開始時間
         :type StartDstCallTime: str
@@ -848,9 +848,9 @@ class VirturalNumCdr(AbstractModel):
         :type DstAcceptTime: str
         :param EndCallTime: 用戶挂機通話結束時間
         :type EndCallTime: str
-        :param CallEndStatus: 通話最後狀态：0：未知狀态 1：正常通話 2：查詢呼叫轉移被叫号異常 3：未接通 4：未接聽 5：拒接挂斷 6：關機 7：空号 8：通話中 9：欠費 10：運營商線路或平台異常
+        :param CallEndStatus: 通話最後狀态：0：未知狀态 1：正常通話 2：查詢呼叫轉移被叫號異常 3：未接通 4：未接聽 5：拒接挂斷 6：關機 7：空號 8：通話中 9：欠費 10：運營商線路或平台異常
         :type CallEndStatus: str
-        :param SrcDuration: 主叫接通虛拟保護号碼到通話結束通話時間
+        :param SrcDuration: 主叫接通虛拟保護號碼到通話結束通話時間
         :type SrcDuration: str
         :param DstDuration: 呼叫轉接被叫接通到通話結束通話時間
         :type DstDuration: str

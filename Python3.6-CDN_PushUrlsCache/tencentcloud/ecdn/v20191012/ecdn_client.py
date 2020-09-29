@@ -26,7 +26,7 @@ class EcdnClient(AbstractClient):
 
 
     def AddEcdnDomain(self, request):
-        """本介面（AddEcdnDomain）用于創建加速域名。
+        """本介面（AddEcdnDomain）用於創建加速域名。
 
         :param request: Request instance for AddEcdnDomain.
         :type request: :class:`taifucloudcloud.ecdn.v20191012.models.AddEcdnDomainRequest`
@@ -54,7 +54,7 @@ class EcdnClient(AbstractClient):
 
 
     def DeleteEcdnDomain(self, request):
-        """本介面（DeleteEcdnDomain）用于删除指定加速域名。待删除域名必須處于已停用狀态。
+        """本介面（DeleteEcdnDomain）用於删除指定加速域名。待删除域名必須處於已停用狀态。
 
         :param request: Request instance for DeleteEcdnDomain.
         :type request: :class:`taifucloudcloud.ecdn.v20191012.models.DeleteEcdnDomainRequest`
@@ -82,7 +82,7 @@ class EcdnClient(AbstractClient):
 
 
     def DescribeDomains(self, request):
-        """本介面（DescribeDomains）用于查詢CDN域名基本訊息，包括項目id，狀态，業務類型，創建時間，更新時間等。
+        """本介面（DescribeDomains）用於查詢CDN域名基本訊息，包括項目id，狀态，業務類型，創建時間，更新時間等。
 
         :param request: Request instance for DescribeDomains.
         :type request: :class:`taifucloudcloud.ecdn.v20191012.models.DescribeDomainsRequest`
@@ -110,7 +110,7 @@ class EcdnClient(AbstractClient):
 
 
     def DescribeDomainsConfig(self, request):
-        """本介面（DescribeDomainsConfig）用于查詢CDN加速域名詳細配置訊息。
+        """本介面（DescribeDomainsConfig）用於查詢CDN加速域名詳細配置訊息。
 
         :param request: Request instance for DescribeDomainsConfig.
         :type request: :class:`taifucloudcloud.ecdn.v20191012.models.DescribeDomainsConfigRequest`
@@ -138,7 +138,7 @@ class EcdnClient(AbstractClient):
 
 
     def DescribeEcdnDomainLogs(self, request):
-        """本介面（DescribeEcdnDomainLogs）用于查詢域名的訪問日志下載網址。
+        """本介面（DescribeEcdnDomainLogs）用於查詢域名的訪問日志下載網址。
 
         :param request: Request instance for DescribeEcdnDomainLogs.
         :type request: :class:`taifucloudcloud.ecdn.v20191012.models.DescribeEcdnDomainLogsRequest`
@@ -166,7 +166,7 @@ class EcdnClient(AbstractClient):
 
 
     def DescribeEcdnDomainStatistics(self, request):
-        """本介面（DescribeEcdnDomainStatistics）用于查詢指定時間段内的域名訪問統計指标
+        """本介面（DescribeEcdnDomainStatistics）用於查詢指定時間段内的域名訪問統計指標
 
         :param request: Request instance for DescribeEcdnDomainStatistics.
         :type request: :class:`taifucloudcloud.ecdn.v20191012.models.DescribeEcdnDomainStatisticsRequest`
@@ -194,7 +194,7 @@ class EcdnClient(AbstractClient):
 
 
     def DescribeEcdnStatistics(self, request):
-        """DescribeEcdnStatistics用于查詢 ECDN 實時訪問監控數據，支援以下指标查詢：
+        """DescribeEcdnStatistics用於查詢 ECDN 實時訪問監控數據，支援以下指標查詢：
 
         + 流量（單位爲 byte）
         + 頻寬（單位爲 bps）
@@ -259,7 +259,7 @@ class EcdnClient(AbstractClient):
 
 
     def DescribePurgeTasks(self, request):
-        """DescribePurgeTasks 用于查詢重新整理任務提交曆史記錄及執行進度。
+        """DescribePurgeTasks 用於查詢重新整理任務提交曆史記錄及執行進度。
 
         :param request: Request instance for DescribePurgeTasks.
         :type request: :class:`taifucloudcloud.ecdn.v20191012.models.DescribePurgeTasksRequest`
@@ -287,7 +287,7 @@ class EcdnClient(AbstractClient):
 
 
     def PurgePathCache(self, request):
-        """PurgeUrlsCache 用于批次重新整理目錄快取，一次提交将返回一個重新整理任務id。
+        """PurgeUrlsCache 用於批次重新整理目錄快取，一次提交将返回一個重新整理任務id。
 
         :param request: Request instance for PurgePathCache.
         :type request: :class:`taifucloudcloud.ecdn.v20191012.models.PurgePathCacheRequest`
@@ -315,7 +315,7 @@ class EcdnClient(AbstractClient):
 
 
     def PurgeUrlsCache(self, request):
-        """PurgeUrlsCache 用于批次重新整理Url，一次提交将返回一個重新整理任務id。
+        """PurgeUrlsCache 用於批次重新整理Url，一次提交将返回一個重新整理任務id。
 
         :param request: Request instance for PurgeUrlsCache.
         :type request: :class:`taifucloudcloud.ecdn.v20191012.models.PurgeUrlsCacheRequest`
@@ -343,7 +343,7 @@ class EcdnClient(AbstractClient):
 
 
     def StartEcdnDomain(self, request):
-        """本介面（StartEcdnDomain）用于啓用加速域名，待啓用域名必須處于已下線狀态。
+        """本介面（StartEcdnDomain）用於啓用加速域名，待啓用域名必須處於已下線狀态。
 
         :param request: Request instance for StartEcdnDomain.
         :type request: :class:`taifucloudcloud.ecdn.v20191012.models.StartEcdnDomainRequest`
@@ -371,7 +371,7 @@ class EcdnClient(AbstractClient):
 
 
     def StopEcdnDomain(self, request):
-        """本介面（StopCdnDomain）用于停止加速域名，待停用加速域名必須處于已上線或佈署中狀态。
+        """本介面（StopCdnDomain）用於停止加速域名，待停用加速域名必須處於已上線或佈署中狀态。
 
         :param request: Request instance for StopEcdnDomain.
         :type request: :class:`taifucloudcloud.ecdn.v20191012.models.StopEcdnDomainRequest`
@@ -399,8 +399,8 @@ class EcdnClient(AbstractClient):
 
 
     def UpdateDomainConfig(self, request):
-        """本介面（UpdateDomainConfig）用于更新ECDN加速域名配置訊息。
-        注意：如果需要更新複雜類型的配置項，必須傳遞整個對象的所有屬性，未傳遞的屬性将使用預設值。建議通過查詢介面獲取配置屬性後，直接修改後傳遞給本介面。Https配置由于證書的特殊性，更新時不用傳遞證書和金鑰欄位。
+        """本介面（UpdateDomainConfig）用於更新ECDN加速域名配置訊息。
+        注意：如果需要更新複雜類型的配置項，必須傳遞整個對象的所有屬性，未傳遞的屬性将使用預設值。建議通過查詢介面獲取配置屬性後，直接修改後傳遞給本介面。Https配置由於證書的特殊性，更新時不用傳遞證書和金鑰欄位。
 
         :param request: Request instance for UpdateDomainConfig.
         :type request: :class:`taifucloudcloud.ecdn.v20191012.models.UpdateDomainConfigRequest`

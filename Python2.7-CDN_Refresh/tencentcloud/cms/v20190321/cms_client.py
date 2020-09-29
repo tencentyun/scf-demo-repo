@@ -26,7 +26,7 @@ class CmsClient(AbstractClient):
 
 
     def CreateFileSample(self, request):
-        """本文件适用于圖片内容安全、視訊内容安全自定義識别庫的管理。
+        """本文件适用於圖片内容安全、視訊内容安全自定義識别庫的管理。
         <br>
         通過該介面可以将圖片新增到樣本庫。
 
@@ -56,7 +56,7 @@ class CmsClient(AbstractClient):
 
 
     def CreateTextSample(self, request):
-        """本文件适用于文本内容安全、音訊内容安全自定義識别庫的管理。
+        """本文件适用於文本内容安全、音訊内容安全自定義識别庫的管理。
         <br>
         通過該介面可以将文本新增到樣本庫。
 
@@ -86,7 +86,7 @@ class CmsClient(AbstractClient):
 
 
     def DeleteFileSample(self, request):
-        """本文件适用于圖片内容安全、視訊内容安全自定義識别庫的管理。
+        """本文件适用於圖片内容安全、視訊内容安全自定義識别庫的管理。
         <br>
         删除圖片樣本庫，支援批次删除，一次提交不超過20個。
 
@@ -116,7 +116,7 @@ class CmsClient(AbstractClient):
 
 
     def DeleteTextSample(self, request):
-        """本文件适用于文本内容安全、音訊内容安全自定義識别庫的管理。
+        """本文件适用於文本内容安全、音訊内容安全自定義識别庫的管理。
         <br>
         删除文本樣本庫，暫時只支援單個删除。
 
@@ -146,7 +146,7 @@ class CmsClient(AbstractClient):
 
 
     def DescribeFileSample(self, request):
-        """本文件适用于圖片内容安全、視訊内容安全自定義識别庫的管理。
+        """本文件适用於圖片内容安全、視訊内容安全自定義識别庫的管理。
         <br>
         查詢圖片樣本庫，支援批次查詢。
 
@@ -176,7 +176,7 @@ class CmsClient(AbstractClient):
 
 
     def DescribeTextSample(self, request):
-        """本文件适用于文本内容安全、音訊内容安全自定義識别庫的管理。
+        """本文件适用於文本内容安全、音訊内容安全自定義識别庫的管理。
         <br>
         支援批次查詢文本樣本庫。
 

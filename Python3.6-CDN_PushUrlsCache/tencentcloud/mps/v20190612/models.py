@@ -23,7 +23,7 @@ class AIAnalysisTemplateItem(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 智慧分析範本唯一标識。
+        :param Definition: 智慧分析範本唯一標識。
         :type Definition: int
         :param Name: 智慧分析範本名稱。
         :type Name: str
@@ -32,13 +32,13 @@ class AIAnalysisTemplateItem(AbstractModel):
         :param ClassificationConfigure: 智慧分類任務控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ClassificationConfigure: :class:`taifucloudcloud.mps.v20190612.models.ClassificationConfigureInfo`
-        :param TagConfigure: 智慧标簽任務控制參數。
+        :param TagConfigure: 智慧標簽任務控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagConfigure: :class:`taifucloudcloud.mps.v20190612.models.TagConfigureInfo`
         :param CoverConfigure: 智慧封面任務控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CoverConfigure: :class:`taifucloudcloud.mps.v20190612.models.CoverConfigureInfo`
-        :param FrameTagConfigure: 智慧按幀标簽任務控制參數。
+        :param FrameTagConfigure: 智慧按幀標簽任務控制參數。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FrameTagConfigure: :class:`taifucloudcloud.mps.v20190612.models.FrameTagConfigureInfo`
         :param CreateTime: 範本創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
@@ -84,7 +84,7 @@ class AIRecognitionTemplateItem(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 視訊内容識别範本唯一标識。
+        :param Definition: 視訊内容識别範本唯一標識。
         :type Definition: int
         :param Name: 視訊内容識别範本名稱。
         :type Name: str
@@ -150,8 +150,8 @@ class AiAnalysisResult(AbstractModel):
         :param Type: 任務的類型，可以取的值有：
 <li>Classification：智慧分類</li>
 <li>Cover：智慧封面</li>
-<li>Tag：智慧标簽</li>
-<li>FrameTag：智慧按幀标簽</li>
+<li>Tag：智慧標簽</li>
+<li>FrameTag：智慧按幀標簽</li>
 <li>Highlight：智慧精彩集錦</li>
         :type Type: str
         :param ClassificationTask: 視訊内容分析智慧分類任務的查詢結果，當任務類型爲 Classification 時有效。
@@ -160,10 +160,10 @@ class AiAnalysisResult(AbstractModel):
         :param CoverTask: 視訊内容分析智慧封面任務的查詢結果，當任務類型爲 Cover 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CoverTask: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskCoverResult`
-        :param TagTask: 視訊内容分析智慧标簽任務的查詢結果，當任務類型爲 Tag 時有效。
+        :param TagTask: 視訊内容分析智慧標簽任務的查詢結果，當任務類型爲 Tag 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagTask: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskTagResult`
-        :param FrameTagTask: 視訊内容分析智慧按幀标簽任務的查詢結果，當任務類型爲 FrameTag 時有效。
+        :param FrameTagTask: 視訊内容分析智慧按幀標簽任務的查詢結果，當任務類型爲 FrameTag 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FrameTagTask: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskFrameTagResult`
         """
@@ -351,13 +351,13 @@ class AiAnalysisTaskCoverResult(AbstractModel):
 
 
 class AiAnalysisTaskFrameTagInput(AbstractModel):
-    """智慧按幀标簽任務輸入類型
+    """智慧按幀標簽任務輸入類型
 
     """
 
     def __init__(self):
         """
-        :param Definition: 視訊智慧按幀标簽範本 ID。
+        :param Definition: 視訊智慧按幀標簽範本 ID。
         :type Definition: int
         """
         self.Definition = None
@@ -368,13 +368,13 @@ class AiAnalysisTaskFrameTagInput(AbstractModel):
 
 
 class AiAnalysisTaskFrameTagOutput(AbstractModel):
-    """智慧按幀标簽結果訊息
+    """智慧按幀標簽結果訊息
 
     """
 
     def __init__(self):
         """
-        :param SegmentSet: 視訊按幀标簽清單。
+        :param SegmentSet: 視訊按幀標簽清單。
         :type SegmentSet: list of MediaAiAnalysisFrameTagSegmentItem
         """
         self.SegmentSet = None
@@ -390,7 +390,7 @@ class AiAnalysisTaskFrameTagOutput(AbstractModel):
 
 
 class AiAnalysisTaskFrameTagResult(AbstractModel):
-    """智慧按幀标簽結果類型
+    """智慧按幀標簽結果類型
 
     """
 
@@ -402,9 +402,9 @@ class AiAnalysisTaskFrameTagResult(AbstractModel):
         :type ErrCode: int
         :param Message: 錯誤訊息。
         :type Message: str
-        :param Input: 智慧按幀标簽任務輸入。
+        :param Input: 智慧按幀標簽任務輸入。
         :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskFrameTagInput`
-        :param Output: 智慧按幀标簽任務輸出。
+        :param Output: 智慧按幀標簽任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskFrameTagOutput`
         """
@@ -445,13 +445,13 @@ class AiAnalysisTaskInput(AbstractModel):
 
 
 class AiAnalysisTaskTagInput(AbstractModel):
-    """智慧标簽任務輸入類型
+    """智慧標簽任務輸入類型
 
     """
 
     def __init__(self):
         """
-        :param Definition: 視訊智慧标簽範本 ID。
+        :param Definition: 視訊智慧標簽範本 ID。
         :type Definition: int
         """
         self.Definition = None
@@ -462,13 +462,13 @@ class AiAnalysisTaskTagInput(AbstractModel):
 
 
 class AiAnalysisTaskTagOutput(AbstractModel):
-    """智慧标簽結果訊息
+    """智慧標簽結果訊息
 
     """
 
     def __init__(self):
         """
-        :param TagSet: 視訊智慧标簽清單。
+        :param TagSet: 視訊智慧標簽清單。
         :type TagSet: list of MediaAiAnalysisTagItem
         """
         self.TagSet = None
@@ -484,7 +484,7 @@ class AiAnalysisTaskTagOutput(AbstractModel):
 
 
 class AiAnalysisTaskTagResult(AbstractModel):
-    """智慧标簽結果類型
+    """智慧標簽結果類型
 
     """
 
@@ -496,9 +496,9 @@ class AiAnalysisTaskTagResult(AbstractModel):
         :type ErrCode: int
         :param Message: 錯誤訊息。
         :type Message: str
-        :param Input: 智慧标簽任務輸入。
+        :param Input: 智慧標簽任務輸入。
         :type Input: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskTagInput`
-        :param Output: 智慧标簽任務輸出。
+        :param Output: 智慧標簽任務輸出。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Output: :class:`taifucloudcloud.mps.v20190612.models.AiAnalysisTaskTagOutput`
         """
@@ -1014,7 +1014,7 @@ class AiRecognitionTaskFaceResultItem(AbstractModel):
 
     def __init__(self):
         """
-        :param Id: 人物唯一标識 ID。
+        :param Id: 人物唯一標識 ID。
         :type Id: str
         :param Type: 人物庫類型，表示識别出的人物來自哪個人物庫：
 <li>Default：預設人物庫；</li>
@@ -1078,7 +1078,7 @@ class AiRecognitionTaskFaceSegmentItem(AbstractModel):
         :type EndTimeOffset: float
         :param Confidence: 識别片段置信度。取值：0~100。
         :type Confidence: float
-        :param AreaCoordSet: 識别結果的區域坐标。數組包含 4 個元素 [x1,y1,x2,y2]，依次表示區域左上點、右下點的橫縱坐标。
+        :param AreaCoordSet: 識别結果的區域坐標。數組包含 4 個元素 [x1,y1,x2,y2]，依次表示區域左上點、右下點的橫縱坐標。
         :type AreaCoordSet: list of int
         """
         self.StartTimeOffset = None
@@ -1227,7 +1227,7 @@ class AiRecognitionTaskOcrFullTextSegmentTextItem(AbstractModel):
         """
         :param Confidence: 識别片段置信度。取值：0~100。
         :type Confidence: float
-        :param AreaCoordSet: 識别結果的區域坐标。數組包含 4 個元素 [x1,y1,x2,y2]，依次表示區域左上點、右下點的橫縱坐标。
+        :param AreaCoordSet: 識别結果的區域坐標。數組包含 4 個元素 [x1,y1,x2,y2]，依次表示區域左上點、右下點的橫縱坐標。
         :type AreaCoordSet: list of int
         :param Text: 識别文本。
         :type Text: str
@@ -1359,7 +1359,7 @@ class AiRecognitionTaskOcrWordsSegmentItem(AbstractModel):
         :type EndTimeOffset: float
         :param Confidence: 識别片段置信度。取值：0~100。
         :type Confidence: float
-        :param AreaCoordSet: 識别結果的區域坐标。數組包含 4 個元素 [x1,y1,x2,y2]，依次表示區域左上點、右下點的橫縱坐标。
+        :param AreaCoordSet: 識别結果的區域坐標。數組包含 4 個元素 [x1,y1,x2,y2]，依次表示區域左上點、右下點的橫縱坐標。
         :type AreaCoordSet: list of int
         """
         self.StartTimeOffset = None
@@ -1506,9 +1506,9 @@ class AiReviewPoliticalTaskOutput(AbstractModel):
 <li>review。</li>
 <li>block。</li>
         :type Suggestion: str
-        :param Label: 視訊鑒政結果标簽，取值範圍：
+        :param Label: 視訊鑒政結果標簽，取值範圍：
 <li>politician：政治人物。</li>
-<li>violation_photo：違規圖标。</li>
+<li>violation_photo：違規圖標。</li>
         :type Label: str
         :param SegmentSet: 有涉政嫌疑的視訊片段清單。
         :type SegmentSet: list of MediaContentReviewPoliticalSegmentItem
@@ -1662,7 +1662,7 @@ class AiReviewPornTaskOutput(AbstractModel):
 <li>review。</li>
 <li>block。</li>
         :type Suggestion: str
-        :param Label: 視訊 結果标簽，取值範圍：
+        :param Label: 視訊 結果標簽，取值範圍：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
@@ -2259,7 +2259,7 @@ class AiReviewTerrorismTaskOutput(AbstractModel):
 <li>review。</li>
 <li>block。</li>
         :type Suggestion: str
-        :param Label: 視訊暴恐結果标簽，取值範圍：
+        :param Label: 視訊暴恐結果標簽，取值範圍：
 <li>guns：武器槍支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部隊。</li>
@@ -2318,14 +2318,14 @@ class AiSampleFaceOperation(AbstractModel):
 
     def __init__(self):
         """
-        :param Type: 操作類型，可選值：add（添加）、delete（删除）、reset（重置）。重置操作将清空該人物已有人臉數據，并添加 FaceContents 指定人臉數據。
+        :param Type: 操作類型，可選值：add（添加）、delete（删除）、reset（重置）。重置操作将清空該人物已有人臉數據，並添加 FaceContents 指定人臉數據。
         :type Type: str
         :param FaceIds: 人臉 ID 集合，當 Type爲delete 時，該欄位必填。
         :type FaceIds: list of str
         :param FaceContents: 人臉圖片 [Base64](https://tools.ietf.org/html/rfc4648) 編碼後的字串集合。
 <li>當 Type爲add 或 reset 時，該欄位必填；</li>
 <li>數組長度限制：5 張圖片。</li>
-注意：圖片必須是單人像正面人臉較清晰的照片，像素不低于 200*200。
+注意：圖片必須是單人像正面人臉較清晰的照片，像素不低於 200*200。
         :type FaceContents: list of str
         """
         self.Type = None
@@ -2346,7 +2346,7 @@ class AiSampleFailFaceInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param Index: 對應入參 FaceContents 中錯誤圖片下标，從 0 開始。
+        :param Index: 對應入參 FaceContents 中錯誤圖片下標，從 0 開始。
         :type Index: int
         :param ErrCode: 錯誤碼，取值：
 <li>0：成功；</li>
@@ -2381,7 +2381,7 @@ class AiSamplePerson(AbstractModel):
         :type Description: str
         :param FaceInfoSet: 人臉訊息。
         :type FaceInfoSet: list of AiSampleFaceInfo
-        :param TagSet: 人物标簽。
+        :param TagSet: 人物標簽。
         :type TagSet: list of str
         :param UsageSet: 應用場景。
         :type UsageSet: list of str
@@ -2417,7 +2417,7 @@ class AiSamplePerson(AbstractModel):
 
 
 class AiSampleTagOperation(AbstractModel):
-    """AI 樣本管理，标簽操作。
+    """AI 樣本管理，標簽操作。
 
     """
 
@@ -2425,7 +2425,7 @@ class AiSampleTagOperation(AbstractModel):
         """
         :param Type: 操作類型，可選值：add（添加）、delete（删除）、reset（重置）。
         :type Type: str
-        :param Tags: 标簽，長度限制：128 個字元。
+        :param Tags: 標簽，長度限制：128 個字元。
         :type Tags: list of str
         """
         self.Type = None
@@ -2446,7 +2446,7 @@ class AiSampleWord(AbstractModel):
         """
         :param Keyword: 關鍵詞。
         :type Keyword: str
-        :param TagSet: 關鍵詞标簽。
+        :param TagSet: 關鍵詞標簽。
         :type TagSet: list of str
         :param UsageSet: 關鍵詞應用場景。
         :type UsageSet: list of str
@@ -2479,9 +2479,9 @@ class AiSampleWordInfo(AbstractModel):
         """
         :param Keyword: 關鍵詞，長度限制：20 個字元。
         :type Keyword: str
-        :param Tags: 關鍵詞标簽
-<li>數組長度限制：20 個标簽；</li>
-<li>單個标簽長度限制：128 個字元。</li>
+        :param Tags: 關鍵詞標簽
+<li>數組長度限制：20 個標簽；</li>
+<li>單個標簽長度限制：128 個字元。</li>
         :type Tags: list of str
         """
         self.Keyword = None
@@ -2506,7 +2506,7 @@ class AnimatedGraphicTaskInput(AbstractModel):
         :type StartTimeOffset: float
         :param EndTimeOffset: 動圖在視訊中的結束時間，單位爲秒。
         :type EndTimeOffset: float
-        :param OutputStorage: 轉動圖後文件的目标儲存，不填則繼承上層的 OutputStorage 值。
+        :param OutputStorage: 轉動圖後文件的目標儲存，不填則繼承上層的 OutputStorage 值。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param OutputObjectPath: 轉動圖後文件的輸出路徑，可以爲相對路徑或者絕對路徑。如果不填，則預設爲相對路徑：`{inputName}_animatedGraphic_{definition}.{format}`。
@@ -2536,7 +2536,7 @@ class AnimatedGraphicsTemplate(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 轉動圖範本唯一标識。
+        :param Definition: 轉動圖範本唯一標識。
         :type Definition: int
         :param Type: 範本類型，取值範圍：
 <li>Preset：系統預置範本；</li>
@@ -2664,8 +2664,8 @@ class AsrWordsConfigureInfo(AbstractModel):
 <li>ON：開啓語音關鍵詞識别任務；</li>
 <li>OFF：關閉語音關鍵詞識别任務。</li>
         :type Switch: str
-        :param LabelSet: 關鍵詞過濾标簽，指定需要返回的關鍵詞的标簽。如果未填或者爲空，則全部結果都返回。
-标簽個數最多 10 個，每個标簽長度最多 16 個字元。
+        :param LabelSet: 關鍵詞過濾標簽，指定需要返回的關鍵詞的標簽。如果未填或者爲空，則全部結果都返回。
+標簽個數最多 10 個，每個標簽長度最多 16 個字元。
         :type LabelSet: list of str
         """
         self.Switch = None
@@ -2688,8 +2688,8 @@ class AsrWordsConfigureInfoForUpdate(AbstractModel):
 <li>ON：開啓語音關鍵詞識别任務；</li>
 <li>OFF：關閉語音關鍵詞識别任務。</li>
         :type Switch: str
-        :param LabelSet: 關鍵詞過濾标簽，指定需要返回的關鍵詞的标簽。如果未填或者爲空，則全部結果都返回。
-标簽個數最多 10 個，每個标簽長度最多 16 個字元。
+        :param LabelSet: 關鍵詞過濾標簽，指定需要返回的關鍵詞的標簽。如果未填或者爲空，則全部結果都返回。
+標簽個數最多 10 個，每個標簽長度最多 16 個字元。
         :type LabelSet: list of str
         """
         self.Switch = None
@@ -2850,7 +2850,7 @@ class ContentReviewTemplateItem(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 内容審核範本唯一标識。
+        :param Definition: 内容審核範本唯一標識。
         :type Definition: int
         :param Name: 内容審核範本名稱，長度限制：64 個字元。
         :type Name: str
@@ -2975,9 +2975,9 @@ class CosOutputStorage(AbstractModel):
 
     def __init__(self):
         """
-        :param Bucket: 視訊處理生成的文件輸出的目标 Bucket 名，如 TopRankVideo-125xxx88。如果不填，表示繼承上層。
+        :param Bucket: 視訊處理生成的文件輸出的目標 Bucket 名，如 TopRankVideo-125xxx88。如果不填，表示繼承上層。
         :type Bucket: str
-        :param Region: 視訊處理生成的文件輸出的目标 Bucket 的園區，如 ap-chongqing。如果不填，表示繼承上層。
+        :param Region: 視訊處理生成的文件輸出的目標 Bucket 的園區，如 ap-chongqing。如果不填，表示繼承上層。
         :type Region: str
         """
         self.Bucket = None
@@ -3040,11 +3040,11 @@ class CreateAIAnalysisTemplateRequest(AbstractModel):
         :type Comment: str
         :param ClassificationConfigure: 智慧分類任務控制參數。
         :type ClassificationConfigure: :class:`taifucloudcloud.mps.v20190612.models.ClassificationConfigureInfo`
-        :param TagConfigure: 智慧标簽任務控制參數。
+        :param TagConfigure: 智慧標簽任務控制參數。
         :type TagConfigure: :class:`taifucloudcloud.mps.v20190612.models.TagConfigureInfo`
         :param CoverConfigure: 智慧封面任務控制參數。
         :type CoverConfigure: :class:`taifucloudcloud.mps.v20190612.models.CoverConfigureInfo`
-        :param FrameTagConfigure: 智慧按幀标簽任務控制參數。
+        :param FrameTagConfigure: 智慧按幀標簽任務控制參數。
         :type FrameTagConfigure: :class:`taifucloudcloud.mps.v20190612.models.FrameTagConfigureInfo`
         """
         self.Name = None
@@ -3079,7 +3079,7 @@ class CreateAIAnalysisTemplateResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 視訊内容分析範本唯一标識。
+        :param Definition: 視訊内容分析範本唯一標識。
         :type Definition: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3151,7 +3151,7 @@ class CreateAIRecognitionTemplateResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 視訊内容識别範本唯一标識。
+        :param Definition: 視訊内容識别範本唯一標識。
         :type Definition: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3230,7 +3230,7 @@ class CreateAnimatedGraphicsTemplateResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 轉動圖範本唯一标識。
+        :param Definition: 轉動圖範本唯一標識。
         :type Definition: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3305,7 +3305,7 @@ class CreateContentReviewTemplateResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 内容審核範本唯一标識。
+        :param Definition: 内容審核範本唯一標識。
         :type Definition: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3399,7 +3399,7 @@ class CreateImageSpriteTemplateResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 雪碧圖範本唯一标識。
+        :param Definition: 雪碧圖範本唯一標識。
         :type Definition: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3423,18 +3423,18 @@ class CreatePersonSampleRequest(AbstractModel):
         :param Name: 人物名稱，長度限制：20 個字元。
         :type Name: str
         :param Usages: 人物應用場景，可選值：
-1. Recognition：用于内容識别，等價于 Recognition.Face。
-2. Review：用于内容審核，等價于 Review.Face。
-3. All：用于内容識别、内容審核，等價于 1+2。
+1. Recognition：用於内容識别，等價於 Recognition.Face。
+2. Review：用於内容審核，等價於 Review.Face。
+3. All：用於内容識别、内容審核，等價於 1+2。
         :type Usages: list of str
         :param Description: 人物描述，長度限制：1024 個字元。
         :type Description: str
         :param FaceContents: 人臉圖片 [Base64](https://tools.ietf.org/html/rfc4648) 編碼後的字串，僅支援 jpeg、png 圖片格式。數組長度限制：5 張圖片。
-注意：圖片必須是單人像正面人臉較清晰的照片，像素不低于 200*200。
+注意：圖片必須是單人像正面人臉較清晰的照片，像素不低於 200*200。
         :type FaceContents: list of str
-        :param Tags: 人物标簽
-<li>數組長度限制：20 個标簽；</li>
-<li>單個标簽長度限制：128 個字元。</li>
+        :param Tags: 人物標簽
+<li>數組長度限制：20 個標簽；</li>
+<li>單個標簽長度限制：128 個字元。</li>
         :type Tags: list of str
         """
         self.Name = None
@@ -3562,7 +3562,7 @@ class CreateSampleSnapshotTemplateResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 采樣截圖範本唯一标識。
+        :param Definition: 采樣截圖範本唯一標識。
         :type Definition: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3642,7 +3642,7 @@ class CreateSnapshotByTimeOffsetTemplateResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 時間點截圖範本唯一标識。
+        :param Definition: 時間點截圖範本唯一標識。
         :type Definition: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3720,7 +3720,7 @@ class CreateTranscodeTemplateResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 轉碼範本唯一标識。
+        :param Definition: 轉碼範本唯一標識。
         :type Definition: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3751,18 +3751,18 @@ class CreateWatermarkTemplateRequest(AbstractModel):
         :param Comment: 範本描述訊息，長度限制：256 個字元。
         :type Comment: str
         :param CoordinateOrigin: 原點位置，可選值：
-<li>TopLeft：表示坐标原點位于視訊圖像左上角，浮水印原點爲圖片或文字的左上角；</li>
-<li>TopRight：表示坐标原點位于視訊圖像的右上角，浮水印原點爲圖片或文字的右上角；</li>
-<li>BottomLeft：表示坐标原點位于視訊圖像的左下角，浮水印原點爲圖片或文字的左下角；</li>
-<li>BottomRight：表示坐标原點位于視訊圖像的右下角，浮水印原點爲圖片或文字的右下角。</li>
+<li>TopLeft：表示坐標原點位於視訊圖像左上角，浮水印原點爲圖片或文字的左上角；</li>
+<li>TopRight：表示坐標原點位於視訊圖像的右上角，浮水印原點爲圖片或文字的右上角；</li>
+<li>BottomLeft：表示坐標原點位於視訊圖像的左下角，浮水印原點爲圖片或文字的左下角；</li>
+<li>BottomRight：表示坐標原點位於視訊圖像的右下角，浮水印原點爲圖片或文字的右下角。</li>
 預設值：TopLeft。
         :type CoordinateOrigin: str
-        :param XPos: 浮水印原點距離視訊圖像坐标原點的水平位置。支援 %、px 兩種格式：
+        :param XPos: 浮水印原點距離視訊圖像坐標原點的水平位置。支援 %、px 兩種格式：
 <li>當字串以 % 結尾，表示浮水印 XPos 爲視訊寬度指定百分比，如 10% 表示 XPos 爲視訊寬度的 10%；</li>
 <li>當字串以 px 結尾，表示浮水印 XPos 爲指定像素，如 100px 表示 XPos 爲 100 像素。</li>
 預設值：0px。
         :type XPos: str
-        :param YPos: 浮水印原點距離視訊圖像坐标原點的垂直位置。支援 %、px 兩種格式：
+        :param YPos: 浮水印原點距離視訊圖像坐標原點的垂直位置。支援 %、px 兩種格式：
 <li>當字串以 % 結尾，表示浮水印 YPos 爲視訊高度指定百分比，如 10% 表示 YPos 爲視訊高度的 10%；</li>
 <li>當字串以 px 結尾，表示浮水印 YPos 爲指定像素，如 100px 表示 YPos 爲 100 像素。</li>
 預設值：0px。
@@ -3810,7 +3810,7 @@ class CreateWatermarkTemplateResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 浮水印範本唯一标識。
+        :param Definition: 浮水印範本唯一標識。
         :type Definition: int
         :param ImageUrl: 浮水印圖片網址，僅當 Type 爲 image，該欄位有效。
         :type ImageUrl: str
@@ -3840,10 +3840,10 @@ class CreateWordSamplesRequest(AbstractModel):
 2. Recognition.Asr：通過語音識别技術，進行内容識别；
 3. Review.Ocr：通過光學字元識别技術，進行内容審核；
 4. Review.Asr：通過語音識别技術，進行内容審核；
-<b>可合并簡寫爲：</b>
-5. Recognition：通過光學字元識别技術、語音識别技術，進行内容識别，等價于 1+2；
-6. Review：通過光學字元識别技術、語音識别技術，進行内容審核，等價于 3+4；
-7. All：通過光學字元識别技術、語音識别技術，進行内容識别、内容審核，等價于 1+2+3+4。
+<b>可合並簡寫爲：</b>
+5. Recognition：通過光學字元識别技術、語音識别技術，進行内容識别，等價於 1+2；
+6. Review：通過光學字元識别技術、語音識别技術，進行内容審核，等價於 3+4；
+7. All：通過光學字元識别技術、語音識别技術，進行内容識别、内容審核，等價於 1+2+3+4。
         :type Usages: list of str
         :param Words: 關鍵詞，數組長度限制：100。
         :type Words: list of AiSampleWordInfo
@@ -3892,7 +3892,7 @@ class CreateWorkflowRequest(AbstractModel):
         :type Trigger: :class:`taifucloudcloud.mps.v20190612.models.WorkflowTrigger`
         :param OutputStorage: 視訊處理的文件輸出儲存位置。不填則繼承 Trigger 中的儲存位置。
         :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
-        :param OutputDir: 視訊處理生成的文件輸出的目标目錄，如`/movie/201907/`。如果不填，表示與觸發文件所在的目錄一緻。
+        :param OutputDir: 視訊處理生成的文件輸出的目標目錄，如`/movie/201907/`。如果不填，表示與觸發文件所在的目錄一緻。
         :type OutputDir: str
         :param MediaProcessTask: 視訊處理類型任務參數。
         :type MediaProcessTask: :class:`taifucloudcloud.mps.v20190612.models.MediaProcessTaskInput`
@@ -3974,7 +3974,7 @@ class DeleteAIAnalysisTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 視訊内容分析範本唯一标識。
+        :param Definition: 視訊内容分析範本唯一標識。
         :type Definition: int
         """
         self.Definition = None
@@ -4008,7 +4008,7 @@ class DeleteAIRecognitionTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 視訊内容識别範本唯一标識。
+        :param Definition: 視訊内容識别範本唯一標識。
         :type Definition: int
         """
         self.Definition = None
@@ -4042,7 +4042,7 @@ class DeleteAnimatedGraphicsTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 轉動圖範本唯一标識。
+        :param Definition: 轉動圖範本唯一標識。
         :type Definition: int
         """
         self.Definition = None
@@ -4076,7 +4076,7 @@ class DeleteContentReviewTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 内容審核範本唯一标識。
+        :param Definition: 内容審核範本唯一標識。
         :type Definition: int
         """
         self.Definition = None
@@ -4110,7 +4110,7 @@ class DeleteImageSpriteTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 雪碧圖範本唯一标識。
+        :param Definition: 雪碧圖範本唯一標識。
         :type Definition: int
         """
         self.Definition = None
@@ -4178,7 +4178,7 @@ class DeleteSampleSnapshotTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 采樣截圖範本唯一标識。
+        :param Definition: 采樣截圖範本唯一標識。
         :type Definition: int
         """
         self.Definition = None
@@ -4212,7 +4212,7 @@ class DeleteSnapshotByTimeOffsetTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 指定時間點截圖範本唯一标識。
+        :param Definition: 指定時間點截圖範本唯一標識。
         :type Definition: int
         """
         self.Definition = None
@@ -4246,7 +4246,7 @@ class DeleteTranscodeTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 轉碼範本唯一标識。
+        :param Definition: 轉碼範本唯一標識。
         :type Definition: int
         """
         self.Definition = None
@@ -4280,7 +4280,7 @@ class DeleteWatermarkTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 浮水印範本唯一标識。
+        :param Definition: 浮水印範本唯一標識。
         :type Definition: int
         """
         self.Definition = None
@@ -4382,7 +4382,7 @@ class DescribeAIAnalysisTemplatesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definitions: 視訊内容分析範本唯一标識過濾條件，數組長度限制：10。
+        :param Definitions: 視訊内容分析範本唯一標識過濾條件，數組長度限制：10。
         :type Definitions: list of int
         :param Offset: 分頁偏移量，預設值：0。
         :type Offset: int
@@ -4437,7 +4437,7 @@ class DescribeAIRecognitionTemplatesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definitions: 視訊内容識别範本唯一标識過濾條件，數組長度限制：10。
+        :param Definitions: 視訊内容識别範本唯一標識過濾條件，數組長度限制：10。
         :type Definitions: list of int
         :param Offset: 分頁偏移量，預設值：0。
         :type Offset: int
@@ -4492,7 +4492,7 @@ class DescribeAnimatedGraphicsTemplatesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definitions: 轉動圖範本唯一标識過濾條件，數組長度限制：100。
+        :param Definitions: 轉動圖範本唯一標識過濾條件，數組長度限制：100。
         :type Definitions: list of int non-negative
         :param Offset: 分頁偏移量，預設值：0。
         :type Offset: int
@@ -4553,7 +4553,7 @@ class DescribeContentReviewTemplatesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definitions: 内容審核範本唯一标識過濾條件，數組長度限制：50。
+        :param Definitions: 内容審核範本唯一標識過濾條件，數組長度限制：50。
         :type Definitions: list of int
         :param Offset: 分頁偏移量，預設值：0。
         :type Offset: int
@@ -4608,7 +4608,7 @@ class DescribeImageSpriteTemplatesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definitions: 雪碧圖範本唯一标識過濾條件，數組長度限制：100。
+        :param Definitions: 雪碧圖範本唯一標識過濾條件，數組長度限制：100。
         :type Definitions: list of int non-negative
         :param Offset: 分頁偏移量，預設值：0。
         :type Offset: int
@@ -4722,7 +4722,7 @@ class DescribePersonSamplesRequest(AbstractModel):
         :type PersonIds: list of str
         :param Names: 人物名稱，數組長度限制：20。
         :type Names: list of str
-        :param Tags: 人物标簽，數組長度限制：20。
+        :param Tags: 人物標簽，數組長度限制：20。
         :type Tags: list of str
         :param Offset: 分頁偏移量，預設值：0。
         :type Offset: int
@@ -4783,7 +4783,7 @@ class DescribeSampleSnapshotTemplatesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definitions: 采樣截圖範本唯一标識過濾條件，數組長度限制：100。
+        :param Definitions: 采樣截圖範本唯一標識過濾條件，數組長度限制：100。
         :type Definitions: list of int non-negative
         :param Offset: 分頁偏移量，預設值：0。
         :type Offset: int
@@ -4844,7 +4844,7 @@ class DescribeSnapshotByTimeOffsetTemplatesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definitions: 指定時間點截圖範本唯一标識過濾條件，數組長度限制：100。
+        :param Definitions: 指定時間點截圖範本唯一標識過濾條件，數組長度限制：100。
         :type Definitions: list of int non-negative
         :param Offset: 分頁偏移量，預設值：0。
         :type Offset: int
@@ -4952,9 +4952,9 @@ class DescribeTaskDetailResponse(AbstractModel):
         :type TaskNotifyConfig: :class:`taifucloudcloud.mps.v20190612.models.TaskNotifyConfig`
         :param TasksPriority: 任務流的優先級，取值範圍爲 [-10, 10]。
         :type TasksPriority: int
-        :param SessionId: 用于去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長50個字元，不帶或者帶空字串表示不做去重。
+        :param SessionId: 用於去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長50個字元，不帶或者帶空字串表示不做去重。
         :type SessionId: str
-        :param SessionContext: 來源上下文，用于透傳用戶請求訊息，任務流狀态變更回調将返回該欄位值，最長1000個字元。
+        :param SessionContext: 來源上下文，用於透傳用戶請求訊息，任務流狀态變更回調将返回該欄位值，最長1000個字元。
         :type SessionContext: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -5009,7 +5009,7 @@ class DescribeTasksRequest(AbstractModel):
         :type Status: str
         :param Limit: 返回記錄條數，預設值：10，最大值：100。
         :type Limit: int
-        :param ScrollToken: 翻頁标識，分批拉取時使用：當單次請求無法拉取所有數據，介面将會返回 ScrollToken，下一次請求攜帶該 Token，将會從下一條記錄開始獲取。
+        :param ScrollToken: 翻頁標識，分批拉取時使用：當單次請求無法拉取所有數據，介面将會返回 ScrollToken，下一次請求攜帶該 Token，将會從下一條記錄開始獲取。
         :type ScrollToken: str
         """
         self.Status = None
@@ -5032,7 +5032,7 @@ class DescribeTasksResponse(AbstractModel):
         """
         :param TaskSet: 任務概要清單。
         :type TaskSet: list of TaskSimpleInfo
-        :param ScrollToken: 翻頁标識，當請求未返回所有數據，該欄位表示下一條記錄的 ID。當該欄位爲空字串，說明已無更多數據。
+        :param ScrollToken: 翻頁標識，當請求未返回所有數據，該欄位表示下一條記錄的 ID。當該欄位爲空字串，說明已無更多數據。
         :type ScrollToken: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -5060,7 +5060,7 @@ class DescribeTranscodeTemplatesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definitions: 轉碼範本唯一标識過濾條件，數組長度限制：100。
+        :param Definitions: 轉碼範本唯一標識過濾條件，數組長度限制：100。
         :type Definitions: list of int
         :param Type: 範本類型過濾條件，可選值：
 <li>Preset：系統預置範本；</li>
@@ -5070,7 +5070,7 @@ class DescribeTranscodeTemplatesRequest(AbstractModel):
 <li>Video：視訊格式，可以同時包含視訊流和音訊流的封裝格式板；</li>
 <li>PureAudio：純音訊格式，只能包含音訊流的封裝格式。</li>
         :type ContainerType: str
-        :param TEHDType: 極速高清過濾條件，用于過濾普通轉碼或極速高清轉碼範本，可選值：
+        :param TEHDType: 極速高清過濾條件，用於過濾普通轉碼或極速高清轉碼範本，可選值：
 <li>Common：普通轉碼範本；</li>
 <li>TEHD：極速高清範本。</li>
         :type TEHDType: str
@@ -5133,7 +5133,7 @@ class DescribeWatermarkTemplatesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definitions: 浮水印範本唯一标識過濾條件，數組長度限制：100。
+        :param Definitions: 浮水印範本唯一標識過濾條件，數組長度限制：100。
         :type Definitions: list of int
         :param Type: 浮水印類型過濾條件，可選值：
 <li>image：圖片浮水印；</li>
@@ -5201,14 +5201,14 @@ class DescribeWordSamplesRequest(AbstractModel):
 2. Recognition.Asr：通過語音識别技術，進行内容識别；
 3. Review.Ocr：通過光學字元識别技術，進行内容審核；
 4. Review.Asr：通過語音識别技術，進行内容審核；
-<b>可合并簡寫爲：</b>
-5. Recognition：通過光學字元識别技術、語音識别技術，進行内容識别，等價于 1+2；
-6. Review：通過光學字元識别技術、語音識别技術，進行内容審核，等價于 3+4；
+<b>可合並簡寫爲：</b>
+5. Recognition：通過光學字元識别技術、語音識别技術，進行内容識别，等價於 1+2；
+6. Review：通過光學字元識别技術、語音識别技術，進行内容審核，等價於 3+4；
 可多選，元素間關系爲 or，即關鍵詞的應用場景包含該欄位集合中任意元素的記錄，均符合該條件。
         :type Usages: list of str
         :param Keywords: 關鍵詞過濾條件，數組長度限制：100 個詞。
         :type Keywords: list of str
-        :param Tags: 标簽過濾條件，數組長度限制：20 個詞。
+        :param Tags: 標簽過濾條件，數組長度限制：20 個詞。
         :type Tags: list of str
         :param Offset: 分頁偏移量，預設值：0。
         :type Offset: int
@@ -5394,17 +5394,17 @@ class EditMediaRequest(AbstractModel):
         """
         :param FileInfos: 輸入的視訊文件訊息。
         :type FileInfos: list of EditMediaFileInfo
-        :param OutputStorage: 視訊處理輸出文件的目标儲存。
+        :param OutputStorage: 視訊處理輸出文件的目標儲存。
         :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
-        :param OutputObjectPath: 視訊處理輸出文件的目标路徑。
+        :param OutputObjectPath: 視訊處理輸出文件的目標路徑。
         :type OutputObjectPath: str
         :param TaskNotifyConfig: 任務的事件通知訊息，不填代表不獲取事件通知。
         :type TaskNotifyConfig: :class:`taifucloudcloud.mps.v20190612.models.TaskNotifyConfig`
         :param TasksPriority: 任務優先級，數值越大優先級越高，取值範圍是-10到 10，不填代表0。
         :type TasksPriority: int
-        :param SessionId: 用于去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長 50 個字元，不帶或者帶空字串表示不做去重。
+        :param SessionId: 用於去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長 50 個字元，不帶或者帶空字串表示不做去重。
         :type SessionId: str
-        :param SessionContext: 來源上下文，用于透傳用戶請求訊息，任務流狀态變更回調将返回該欄位值，最長 1000 個字元。
+        :param SessionContext: 來源上下文，用於透傳用戶請求訊息，任務流狀态變更回調将返回該欄位值，最長 1000 個字元。
         :type SessionContext: str
         """
         self.FileInfos = None
@@ -5531,7 +5531,7 @@ class EditMediaTaskOutput(AbstractModel):
 
     def __init__(self):
         """
-        :param OutputStorage: 編輯後文件的目标儲存。
+        :param OutputStorage: 編輯後文件的目標儲存。
         :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param Path: 編輯後的視訊文件路徑。
         :type Path: str
@@ -5594,13 +5594,13 @@ class FaceConfigureInfo(AbstractModel):
         :type Switch: str
         :param Score: 人臉識别過濾分數，當識别結果達到該分數以上，返回識别結果。預設 95 分。取值範圍：0 - 100。
         :type Score: float
-        :param DefaultLibraryLabelSet: 預設人物過濾标簽，指定需要返回的預設人物的标簽。如果未填或者爲空，則全部預設人物結果都返回。标簽可選值：
+        :param DefaultLibraryLabelSet: 預設人物過濾標簽，指定需要返回的預設人物的標簽。如果未填或者爲空，則全部預設人物結果都返回。標簽可選值：
 <li>entertainment：娛樂明星；</li>
 <li>sport：體育明星；</li>
 <li>politician：政治人物。</li>
         :type DefaultLibraryLabelSet: list of str
-        :param UserDefineLibraryLabelSet: 用戶自定義人物過濾标簽，指定需要返回的用戶自定義人物的标簽。如果未填或者爲空，則全部自定義人物結果都返回。
-标簽個數最多 10 個，每個标簽長度最多 16 個字元。
+        :param UserDefineLibraryLabelSet: 用戶自定義人物過濾標簽，指定需要返回的用戶自定義人物的標簽。如果未填或者爲空，則全部自定義人物結果都返回。
+標簽個數最多 10 個，每個標簽長度最多 16 個字元。
         :type UserDefineLibraryLabelSet: list of str
         :param FaceLibrary: 人物庫選擇，可選值：
 <li>Default：使用預設人物庫；</li>
@@ -5637,13 +5637,13 @@ class FaceConfigureInfoForUpdate(AbstractModel):
         :type Switch: str
         :param Score: 人臉識别過濾分數，當識别結果達到該分數以上，返回識别結果。取值範圍：0-100。
         :type Score: float
-        :param DefaultLibraryLabelSet: 預設人物過濾标簽，指定需要返回的預設人物的标簽。如果未填或者爲空，則全部預設人物結果都返回。标簽可選值：
+        :param DefaultLibraryLabelSet: 預設人物過濾標簽，指定需要返回的預設人物的標簽。如果未填或者爲空，則全部預設人物結果都返回。標簽可選值：
 <li>entertainment：娛樂明星；</li>
 <li>sport：體育明星；</li>
 <li>politician：政治人物。</li>
         :type DefaultLibraryLabelSet: list of str
-        :param UserDefineLibraryLabelSet: 用戶自定義人物過濾标簽，指定需要返回的用戶自定義人物的标簽。如果未填或者爲空，則全部自定義人物結果都返回。
-标簽個數最多 10 個，每個标簽長度最多 16 個字元。
+        :param UserDefineLibraryLabelSet: 用戶自定義人物過濾標簽，指定需要返回的用戶自定義人物的標簽。如果未填或者爲空，則全部自定義人物結果都返回。
+標簽個數最多 10 個，每個標簽長度最多 16 個字元。
         :type UserDefineLibraryLabelSet: list of str
         :param FaceLibrary: 人物庫選擇，可選值：
 <li>Default：使用預設人物庫；</li>
@@ -5667,15 +5667,15 @@ class FaceConfigureInfoForUpdate(AbstractModel):
 
 
 class FrameTagConfigureInfo(AbstractModel):
-    """智慧按幀标簽任務控制參數
+    """智慧按幀標簽任務控制參數
 
     """
 
     def __init__(self):
         """
-        :param Switch: 智慧按幀标簽任務開關，可選值：
-<li>ON：開啓智慧按幀标簽任務；</li>
-<li>OFF：關閉智慧按幀标簽任務。</li>
+        :param Switch: 智慧按幀標簽任務開關，可選值：
+<li>ON：開啓智慧按幀標簽任務；</li>
+<li>OFF：關閉智慧按幀標簽任務。</li>
         :type Switch: str
         """
         self.Switch = None
@@ -5686,15 +5686,15 @@ class FrameTagConfigureInfo(AbstractModel):
 
 
 class FrameTagConfigureInfoForUpdate(AbstractModel):
-    """智慧按幀标簽任務控制參數
+    """智慧按幀標簽任務控制參數
 
     """
 
     def __init__(self):
         """
-        :param Switch: 智慧按幀标簽任務開關，可選值：
-<li>ON：開啓智慧按幀标簽任務；</li>
-<li>OFF：關閉智慧按幀标簽任務。</li>
+        :param Switch: 智慧按幀標簽任務開關，可選值：
+<li>ON：開啓智慧按幀標簽任務；</li>
+<li>OFF：關閉智慧按幀標簽任務。</li>
         :type Switch: str
         """
         self.Switch = None
@@ -5713,7 +5713,7 @@ class ImageSpriteTaskInput(AbstractModel):
         """
         :param Definition: 雪碧圖範本 ID。
         :type Definition: int
-        :param OutputStorage: 截取雪碧圖後文件的目标儲存，不填則繼承上層的 OutputStorage 值。
+        :param OutputStorage: 截取雪碧圖後文件的目標儲存，不填則繼承上層的 OutputStorage 值。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param OutputObjectPath: 截取雪碧圖後，雪碧圖圖片文件的輸出路徑，可以爲相對路徑或者絕對路徑。如果不填，則預設爲相對路徑：`{inputName}_imageSprite_{definition}_{number}.{format}`。
@@ -5750,7 +5750,7 @@ class ImageSpriteTemplate(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 雪碧圖範本唯一标識。
+        :param Definition: 雪碧圖範本唯一標識。
         :type Definition: int
         :param Type: 範本類型，取值範圍：
 <li>Preset：系統預置範本；</li>
@@ -6033,13 +6033,13 @@ class LiveStreamAiReviewImagePoliticalResult(AbstractModel):
 <li>review</li>
 <li>block</li>
         :type Suggestion: str
-        :param Label: 視訊鑒政結果标簽，取值範圍：
+        :param Label: 視訊鑒政結果標簽，取值範圍：
 <li>politician：政治人物。</li>
-<li>violation_photo：違規圖标。</li>
+<li>violation_photo：違規圖標。</li>
         :type Label: str
-        :param Name: 涉政人物、違規圖标名字。
+        :param Name: 涉政人物、違規圖標名字。
         :type Name: str
-        :param AreaCoordSet: 涉政人物、違規圖标出現的區域坐标 (像素級)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+        :param AreaCoordSet: 涉政人物、違規圖標出現的區域坐標 (像素級)，[x1, y1, x2, y2]，即左上角坐標、右下角坐標。
         :type AreaCoordSet: list of int
         :param Url: 嫌疑圖片 URL （圖片不會永久儲存，到達
 PicUrlExpireTime 時間點後圖片将被删除）。
@@ -6088,7 +6088,7 @@ class LiveStreamAiReviewImagePornResult(AbstractModel):
 <li>review</li>
 <li>block</li>
         :type Suggestion: str
-        :param Label: 視訊 結果标簽，取值範圍：
+        :param Label: 視訊 結果標簽，取值範圍：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
@@ -6137,7 +6137,7 @@ class LiveStreamAiReviewImageTerrorismResult(AbstractModel):
 <li>review</li>
 <li>block</li>
         :type Suggestion: str
-        :param Label: 視訊暴恐結果标簽，取值範圍：
+        :param Label: 視訊暴恐結果標簽，取值範圍：
 <li>guns：武器槍支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部隊。</li>
@@ -6269,7 +6269,7 @@ class LiveStreamAiReviewVoicePornResult(AbstractModel):
 <li>review</li>
 <li>block</li>
         :type Suggestion: str
-        :param Label: 視訊 結果标簽，取值範圍：
+        :param Label: 視訊 結果標簽，取值範圍：
 <li>sexual_moan：呻吟。</li>
         :type Label: str
         """
@@ -6353,7 +6353,7 @@ class LiveStreamFaceRecognitionResult(AbstractModel):
 
     def __init__(self):
         """
-        :param Id: 人物唯一标識 ID。
+        :param Id: 人物唯一標識 ID。
         :type Id: str
         :param Name: 人物名稱。
         :type Name: str
@@ -6366,7 +6366,7 @@ class LiveStreamFaceRecognitionResult(AbstractModel):
         :type EndPtsTime: float
         :param Confidence: 識别片段置信度。取值：0~100。
         :type Confidence: float
-        :param AreaCoordSet: 識别結果的區域坐标。數組包含 4 個元素 [x1,y1,x2,y2]，依次表示區域左上點、右下點的橫縱坐标。
+        :param AreaCoordSet: 識别結果的區域坐標。數組包含 4 個元素 [x1,y1,x2,y2]，依次表示區域左上點、右下點的橫縱坐標。
         :type AreaCoordSet: list of int
         """
         self.Id = None
@@ -6403,7 +6403,7 @@ class LiveStreamOcrFullTextRecognitionResult(AbstractModel):
         :type EndPtsTime: float
         :param Confidence: 識别片段置信度。取值：0~100。
         :type Confidence: float
-        :param AreaCoordSet: 識别結果的區域坐标。數組包含 4 個元素 [x1,y1,x2,y2]，依次表示區域左上點、右下點的橫縱坐标。
+        :param AreaCoordSet: 識别結果的區域坐標。數組包含 4 個元素 [x1,y1,x2,y2]，依次表示區域左上點、右下點的橫縱坐標。
         :type AreaCoordSet: list of int
         """
         self.Text = None
@@ -6436,7 +6436,7 @@ class LiveStreamOcrWordsRecognitionResult(AbstractModel):
         :type EndPtsTime: float
         :param Confidence: 識别片段置信度。取值：0~100。
         :type Confidence: float
-        :param AreaCoords: 識别結果的區域坐标。數組包含 4 個元素 [x1,y1,x2,y2]，依次表示區域左上點、右下點的橫縱坐标。
+        :param AreaCoords: 識别結果的區域坐標。數組包含 4 個元素 [x1,y1,x2,y2]，依次表示區域左上點、右下點的橫縱坐標。
         :type AreaCoords: list of int
         """
         self.Word = None
@@ -6623,15 +6623,15 @@ class MediaAiAnalysisCoverItem(AbstractModel):
 
 
 class MediaAiAnalysisFrameTagItem(AbstractModel):
-    """智慧按幀标簽結果訊息
+    """智慧按幀標簽結果訊息
 
     """
 
     def __init__(self):
         """
-        :param Tag: 按幀标簽名稱。
+        :param Tag: 按幀標簽名稱。
         :type Tag: str
-        :param Confidence: 按幀标簽的可信度，取值範圍是 0 到 100。
+        :param Confidence: 按幀標簽的可信度，取值範圍是 0 到 100。
         :type Confidence: float
         """
         self.Tag = None
@@ -6644,17 +6644,17 @@ class MediaAiAnalysisFrameTagItem(AbstractModel):
 
 
 class MediaAiAnalysisFrameTagSegmentItem(AbstractModel):
-    """按幀标簽片段清單
+    """按幀標簽片段清單
 
     """
 
     def __init__(self):
         """
-        :param StartTimeOffset: 按幀标簽起始的偏移時間。
+        :param StartTimeOffset: 按幀標簽起始的偏移時間。
         :type StartTimeOffset: float
-        :param EndTimeOffset: 按幀标簽結束的偏移時間。
+        :param EndTimeOffset: 按幀標簽結束的偏移時間。
         :type EndTimeOffset: float
-        :param TagSet: 時間片段内的标簽清單。
+        :param TagSet: 時間片段内的標簽清單。
         :type TagSet: list of MediaAiAnalysisFrameTagItem
         """
         self.StartTimeOffset = None
@@ -6674,15 +6674,15 @@ class MediaAiAnalysisFrameTagSegmentItem(AbstractModel):
 
 
 class MediaAiAnalysisTagItem(AbstractModel):
-    """智慧标簽結果訊息
+    """智慧標簽結果訊息
 
     """
 
     def __init__(self):
         """
-        :param Tag: 标簽名稱。
+        :param Tag: 標簽名稱。
         :type Tag: str
-        :param Confidence: 标簽的可信度，取值範圍是 0 到 100。
+        :param Confidence: 標簽的可信度，取值範圍是 0 到 100。
         :type Confidence: float
         """
         self.Tag = None
@@ -6834,7 +6834,7 @@ class MediaContentReviewOcrTextSegmentItem(AbstractModel):
         :type Suggestion: str
         :param KeywordSet: 嫌疑關鍵詞清單。
         :type KeywordSet: list of str
-        :param AreaCoordSet: 嫌疑文字出現的區域坐标 (像素級)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+        :param AreaCoordSet: 嫌疑文字出現的區域坐標 (像素級)，[x1, y1, x2, y2]，即左上角坐標、右下角坐標。
         :type AreaCoordSet: list of int
         :param Url: 嫌疑圖片 URL （圖片不會永久儲存，到達
 PicUrlExpireTime 時間點後圖片将被删除）。
@@ -6881,14 +6881,14 @@ class MediaContentReviewPoliticalSegmentItem(AbstractModel):
 <li>review。</li>
 <li>block。</li>
         :type Suggestion: str
-        :param Name: 涉政人物、違規圖标名字。
+        :param Name: 涉政人物、違規圖標名字。
         :type Name: str
-        :param Label: 嫌疑片段鑒政結果标簽。
+        :param Label: 嫌疑片段鑒政結果標簽。
         :type Label: str
         :param Url: 嫌疑圖片 URL （圖片不會永久儲存，到達
  PicUrlExpireTime 時間點後圖片将被删除）。
         :type Url: str
-        :param AreaCoordSet: 涉政人物、違規圖标出現的區域坐标 (像素級)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+        :param AreaCoordSet: 涉政人物、違規圖標出現的區域坐標 (像素級)，[x1, y1, x2, y2]，即左上角坐標、右下角坐標。
         :type AreaCoordSet: list of int
         :param PicUrlExpireTime: 嫌疑圖片 URL 失效時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type PicUrlExpireTime: str
@@ -6929,7 +6929,7 @@ class MediaContentReviewSegmentItem(AbstractModel):
         :type EndTimeOffset: float
         :param Confidence: 嫌疑片段涉黃分數。
         :type Confidence: float
-        :param Label: 嫌疑片段 結果标簽。
+        :param Label: 嫌疑片段 結果標簽。
         :type Label: str
         :param Suggestion: 嫌疑片段 結果建議，取值範圍：
 <li>pass。</li>
@@ -6978,7 +6978,7 @@ class MediaImageSpriteItem(AbstractModel):
         :type TotalCount: int
         :param ImagePathSet: 每一張雪碧圖大圖的路徑。
         :type ImagePathSet: list of str
-        :param WebVttPath: 雪碧圖子圖位置與時間關系的 WebVtt 文件路徑。WebVtt 文件表明了各個雪碧圖小圖對應的時間點，以及在雪碧大圖裏的坐标位置，一般被播放器用于實現預覽。
+        :param WebVttPath: 雪碧圖子圖位置與時間關系的 WebVtt 文件路徑。WebVtt 文件表明了各個雪碧圖小圖對應的時間點，以及在雪碧大圖裏的坐標位置，一般被播放器用於實現預覽。
         :type WebVttPath: str
         :param Storage: 雪碧圖文件的儲存位置。
         :type Storage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
@@ -7523,7 +7523,7 @@ class MediaTranscodeItem(AbstractModel):
 
     def __init__(self):
         """
-        :param OutputStorage: 轉碼後文件的目标儲存。
+        :param OutputStorage: 轉碼後文件的目標儲存。
         :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param Path: 轉碼後的視訊文件路徑。
         :type Path: str
@@ -7629,7 +7629,7 @@ class ModifyAIAnalysisTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 視訊内容分析範本唯一标識。
+        :param Definition: 視訊内容分析範本唯一標識。
         :type Definition: int
         :param Name: 視訊内容分析範本名稱，長度限制：64 個字元。
         :type Name: str
@@ -7637,11 +7637,11 @@ class ModifyAIAnalysisTemplateRequest(AbstractModel):
         :type Comment: str
         :param ClassificationConfigure: 智慧分類任務控制參數。
         :type ClassificationConfigure: :class:`taifucloudcloud.mps.v20190612.models.ClassificationConfigureInfoForUpdate`
-        :param TagConfigure: 智慧标簽任務控制參數。
+        :param TagConfigure: 智慧標簽任務控制參數。
         :type TagConfigure: :class:`taifucloudcloud.mps.v20190612.models.TagConfigureInfoForUpdate`
         :param CoverConfigure: 智慧封面任務控制參數。
         :type CoverConfigure: :class:`taifucloudcloud.mps.v20190612.models.CoverConfigureInfoForUpdate`
-        :param FrameTagConfigure: 智慧按幀标簽任務控制參數。
+        :param FrameTagConfigure: 智慧按幀標簽任務控制參數。
         :type FrameTagConfigure: :class:`taifucloudcloud.mps.v20190612.models.FrameTagConfigureInfoForUpdate`
         """
         self.Definition = None
@@ -7695,7 +7695,7 @@ class ModifyAIRecognitionTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 視訊内容識别範本唯一标識。
+        :param Definition: 視訊内容識别範本唯一標識。
         :type Definition: int
         :param Name: 視訊内容識别範本名稱，長度限制：64 個字元。
         :type Name: str
@@ -7767,7 +7767,7 @@ class ModifyAnimatedGraphicsTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 轉動圖範本唯一标識。
+        :param Definition: 轉動圖範本唯一標識。
         :type Definition: int
         :param Name: 轉動圖範本名稱，長度限制：64 個字元。
         :type Name: str
@@ -7846,7 +7846,7 @@ class ModifyContentReviewTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 内容審核範本唯一标識。
+        :param Definition: 内容審核範本唯一標識。
         :type Definition: int
         :param Name: 内容審核範本名稱，長度限制：64 個字元。
         :type Name: str
@@ -7921,7 +7921,7 @@ class ModifyImageSpriteTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 雪碧圖範本唯一标識。
+        :param Definition: 雪碧圖範本唯一標識。
         :type Definition: int
         :param Name: 雪碧圖範本名稱，長度限制：64 個字元。
         :type Name: str
@@ -8022,13 +8022,13 @@ class ModifyPersonSampleRequest(AbstractModel):
         :param Description: 描述，長度限制：1024 個字元。
         :type Description: str
         :param Usages: 人物應用場景，可選值：
-1. Recognition：用于内容識别，等價于 Recognition.Face。
-2. Review：用于内容審核，等價于 Review.Face。
-3. All：用于内容識别、内容審核，等價于 1+2。
+1. Recognition：用於内容識别，等價於 Recognition.Face。
+2. Review：用於内容審核，等價於 Review.Face。
+3. All：用於内容識别、内容審核，等價於 1+2。
         :type Usages: list of str
         :param FaceOperationInfo: 人臉操作訊息。
         :type FaceOperationInfo: :class:`taifucloudcloud.mps.v20190612.models.AiSampleFaceOperation`
-        :param TagOperationInfo: 标簽操作訊息。
+        :param TagOperationInfo: 標簽操作訊息。
         :type TagOperationInfo: :class:`taifucloudcloud.mps.v20190612.models.AiSampleTagOperation`
         """
         self.PersonId = None
@@ -8092,7 +8092,7 @@ class ModifySampleSnapshotTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 采樣截圖範本唯一标識。
+        :param Definition: 采樣截圖範本唯一標識。
         :type Definition: int
         :param Name: 采樣截圖範本名稱，長度限制：64 個字元。
         :type Name: str
@@ -8184,7 +8184,7 @@ class ModifySnapshotByTimeOffsetTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 指定時間點截圖範本唯一标識。
+        :param Definition: 指定時間點截圖範本唯一標識。
         :type Definition: int
         :param Name: 指定時間點截圖範本名稱，長度限制：64 個字元。
         :type Name: str
@@ -8264,7 +8264,7 @@ class ModifyTranscodeTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 轉碼範本唯一标識。
+        :param Definition: 轉碼範本唯一標識。
         :type Definition: int
         :param Container: 封裝格式，可選值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 爲純音訊文件。
         :type Container: str
@@ -8340,23 +8340,23 @@ class ModifyWatermarkTemplateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 浮水印範本唯一标識。
+        :param Definition: 浮水印範本唯一標識。
         :type Definition: int
         :param Name: 浮水印範本名稱，長度限制：64 個字元。
         :type Name: str
         :param Comment: 範本描述訊息，長度限制：256 個字元。
         :type Comment: str
         :param CoordinateOrigin: 原點位置，可選值：
-<li>TopLeft：表示坐标原點位于視訊圖像左上角，浮水印原點爲圖片或文字的左上角；</li>
-<li>TopRight：表示坐标原點位于視訊圖像的右上角，浮水印原點爲圖片或文字的右上角；</li>
-<li>BottomLeft：表示坐标原點位于視訊圖像的左下角，浮水印原點爲圖片或文字的左下角；</li>
-<li>BottomRight：表示坐标原點位于視訊圖像的右下角，浮水印原點爲圖片或文字的右下角。</li>
+<li>TopLeft：表示坐標原點位於視訊圖像左上角，浮水印原點爲圖片或文字的左上角；</li>
+<li>TopRight：表示坐標原點位於視訊圖像的右上角，浮水印原點爲圖片或文字的右上角；</li>
+<li>BottomLeft：表示坐標原點位於視訊圖像的左下角，浮水印原點爲圖片或文字的左下角；</li>
+<li>BottomRight：表示坐標原點位於視訊圖像的右下角，浮水印原點爲圖片或文字的右下角。</li>
         :type CoordinateOrigin: str
-        :param XPos: 浮水印原點距離視訊圖像坐标原點的水平位置。支援 %、px 兩種格式：
+        :param XPos: 浮水印原點距離視訊圖像坐標原點的水平位置。支援 %、px 兩種格式：
 <li>當字串以 % 結尾，表示浮水印 XPos 爲視訊寬度指定百分比，如 10% 表示 XPos 爲視訊寬度的 10%；</li>
 <li>當字串以 px 結尾，表示浮水印 XPos 爲指定像素，如 100px 表示 XPos 爲 100 像素。</li>
         :type XPos: str
-        :param YPos: 浮水印原點距離視訊圖像坐标原點的垂直位置。支援 %、px 兩種格式：
+        :param YPos: 浮水印原點距離視訊圖像坐標原點的垂直位置。支援 %、px 兩種格式：
 <li>當字串以 % 結尾，表示浮水印 YPos 爲視訊高度指定百分比，如 10% 表示 YPos 爲視訊高度的 10%；</li>
 <li>當字串以 px 結尾，表示浮水印 YPos 爲指定像素，如 100px 表示 YPos 爲 100 像素。</li>
         :type YPos: str
@@ -8431,12 +8431,12 @@ class ModifyWordSampleRequest(AbstractModel):
 2. Recognition.Asr：通過語音識别技術，進行内容識别；
 3. Review.Ocr：通過光學字元識别技術，進行内容審核；
 4. Review.Asr：通過語音識别技術，進行内容審核；
-<b>可合并簡寫爲：</b>
-5. Recognition：通過光學字元識别技術、語音識别技術，進行内容識别，等價于 1+2；
-6. Review：通過光學字元識别技術、語音識别技術，進行内容審核，等價于 3+4；
-7. All：通過光學字元識别技術、語音識别技術，進行内容識别、内容審核，等價于 1+2+3+4。
+<b>可合並簡寫爲：</b>
+5. Recognition：通過光學字元識别技術、語音識别技術，進行内容識别，等價於 1+2；
+6. Review：通過光學字元識别技術、語音識别技術，進行内容審核，等價於 3+4；
+7. All：通過光學字元識别技術、語音識别技術，進行内容識别、内容審核，等價於 1+2+3+4。
         :type Usages: list of str
-        :param TagOperationInfo: 标簽操作訊息。
+        :param TagOperationInfo: 標簽操作訊息。
         :type TagOperationInfo: :class:`taifucloudcloud.mps.v20190612.models.AiSampleTagOperation`
         """
         self.Keyword = None
@@ -8547,8 +8547,8 @@ class OcrWordsConfigureInfo(AbstractModel):
 <li>ON：開啓文本關鍵詞識别任務；</li>
 <li>OFF：關閉文本關鍵詞識别任務。</li>
         :type Switch: str
-        :param LabelSet: 關鍵詞過濾标簽，指定需要返回的關鍵詞的标簽。如果未填或者爲空，則全部結果都返回。
-标簽個數最多 10 個，每個标簽長度最多 16 個字元。
+        :param LabelSet: 關鍵詞過濾標簽，指定需要返回的關鍵詞的標簽。如果未填或者爲空，則全部結果都返回。
+標簽個數最多 10 個，每個標簽長度最多 16 個字元。
         :type LabelSet: list of str
         """
         self.Switch = None
@@ -8571,8 +8571,8 @@ class OcrWordsConfigureInfoForUpdate(AbstractModel):
 <li>ON：開啓文本關鍵詞識别任務；</li>
 <li>OFF：關閉文本關鍵詞識别任務。</li>
         :type Switch: str
-        :param LabelSet: 關鍵詞過濾标簽，指定需要返回的關鍵詞的标簽。如果未填或者爲空，則全部結果都返回。
-标簽個數最多 10 個，每個标簽長度最多 16 個字元。
+        :param LabelSet: 關鍵詞過濾標簽，指定需要返回的關鍵詞的標簽。如果未填或者爲空，則全部結果都返回。
+標簽個數最多 10 個，每個標簽長度最多 16 個字元。
         :type LabelSet: list of str
         """
         self.Switch = None
@@ -8624,9 +8624,9 @@ class ParseLiveStreamProcessNotificationResponse(AbstractModel):
         :param AiRecognitionResultInfo: 内容識别結果，當 NotificationType 爲 AiRecognitionResult 時有效。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AiRecognitionResultInfo: :class:`taifucloudcloud.mps.v20190612.models.LiveStreamAiRecognitionResultInfo`
-        :param SessionId: 用于去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長50個字元，不帶或者帶空字串表示不做去重。
+        :param SessionId: 用於去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長50個字元，不帶或者帶空字串表示不做去重。
         :type SessionId: str
-        :param SessionContext: 來源上下文，用于透傳用戶請求訊息，任務流狀态變更回調将返回該欄位值，最長1000個字元。
+        :param SessionContext: 來源上下文，用於透傳用戶請求訊息，任務流狀态變更回調将返回該欄位值，最長1000個字元。
         :type SessionContext: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -8692,9 +8692,9 @@ class ParseNotificationResponse(AbstractModel):
         :param EditMediaTaskEvent: 視訊編輯任務訊息，僅當 TaskType 爲 EditMediaTask，該欄位有值。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EditMediaTaskEvent: :class:`taifucloudcloud.mps.v20190612.models.EditMediaTask`
-        :param SessionId: 用于去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長50個字元，不帶或者帶空字串表示不做去重。
+        :param SessionId: 用於去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長50個字元，不帶或者帶空字串表示不做去重。
         :type SessionId: str
-        :param SessionContext: 來源上下文，用于透傳用戶請求訊息，任務流狀态變更回調将返回該欄位值，最長1000個字元。
+        :param SessionContext: 來源上下文，用於透傳用戶請求訊息，任務流狀态變更回調将返回該欄位值，最長1000個字元。
         :type SessionContext: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -8847,8 +8847,8 @@ class PoliticalImgReviewTemplateInfo(AbstractModel):
 <li>ON：開啓畫面鑒政任務；</li>
 <li>OFF：關閉畫面鑒政任務。</li>
         :type Switch: str
-        :param LabelSet: 畫面鑒政過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回，可選值爲：
-<li>violation_photo：違規圖标；</li>
+        :param LabelSet: 畫面鑒政過濾標簽，審核結果包含選擇的標簽則返回結果，如果過濾標簽爲空，則審核結果全部返回，可選值爲：
+<li>violation_photo：違規圖標；</li>
 <li>politician：政治人物；</li>
 <li>entertainment：娛樂明星；</li>
 <li>sport：體育明星。</li>
@@ -8882,8 +8882,8 @@ class PoliticalImgReviewTemplateInfoForUpdate(AbstractModel):
 <li>ON：開啓畫面鑒政任務；</li>
 <li>OFF：關閉畫面鑒政任務。</li>
         :type Switch: str
-        :param LabelSet: 畫面鑒政過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回，可選值爲：
-<li>violation_photo：違規圖标；</li>
+        :param LabelSet: 畫面鑒政過濾標簽，審核結果包含選擇的標簽則返回結果，如果過濾標簽爲空，則審核結果全部返回，可選值爲：
+<li>violation_photo：違規圖標；</li>
 <li>politician：政治人物；</li>
 <li>entertainment：娛樂明星；</li>
 <li>sport：體育明星。</li>
@@ -9087,7 +9087,7 @@ class PornImgReviewTemplateInfo(AbstractModel):
 <li>ON：開啓畫面 任務；</li>
 <li>OFF：關閉畫面 任務。</li>
         :type Switch: str
-        :param LabelSet: 畫面 過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回，可選值爲：
+        :param LabelSet: 畫面 過濾標簽，審核結果包含選擇的標簽則返回結果，如果過濾標簽爲空，則審核結果全部返回，可選值爲：
 <li>porn：色情；</li>
 <li>vulgar：低俗；</li>
 <li>intimacy：親密行爲；</li>
@@ -9122,7 +9122,7 @@ class PornImgReviewTemplateInfoForUpdate(AbstractModel):
 <li>ON：開啓畫面 任務；</li>
 <li>OFF：關閉畫面 任務。</li>
         :type Switch: str
-        :param LabelSet: 畫面 過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回，可選值爲：
+        :param LabelSet: 畫面 過濾標簽，審核結果包含選擇的標簽則返回結果，如果過濾標簽爲空，則審核結果全部返回，可選值爲：
 <li>porn：色情；</li>
 <li>vulgar：低俗；</li>
 <li>intimacy：親密行爲；</li>
@@ -9209,19 +9209,19 @@ class ProcessLiveStreamRequest(AbstractModel):
         """
         :param Url: 直播流 URL（必須是直播文件網址，支援 rtmp，hls 和 flv 等）。
         :type Url: str
-        :param TaskNotifyConfig: 任務的事件通知訊息，用于指定直播流處理的結果。
+        :param TaskNotifyConfig: 任務的事件通知訊息，用於指定直播流處理的結果。
         :type TaskNotifyConfig: :class:`taifucloudcloud.mps.v20190612.models.LiveStreamTaskNotifyConfig`
-        :param OutputStorage: 直播流處理輸出文件的目标儲存。如處理有文件輸出，該參數爲必填項。
+        :param OutputStorage: 直播流處理輸出文件的目標儲存。如處理有文件輸出，該參數爲必填項。
         :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
-        :param OutputDir: 直播流處理生成的文件輸出的目标目錄，如`/movie/201909/`，如果不填爲 `/` 目錄。
+        :param OutputDir: 直播流處理生成的文件輸出的目標目錄，如`/movie/201909/`，如果不填爲 `/` 目錄。
         :type OutputDir: str
         :param AiContentReviewTask: 視訊内容審核類型任務參數。
         :type AiContentReviewTask: :class:`taifucloudcloud.mps.v20190612.models.AiContentReviewTaskInput`
         :param AiRecognitionTask: 視訊内容識别類型任務參數。
         :type AiRecognitionTask: :class:`taifucloudcloud.mps.v20190612.models.AiRecognitionTaskInput`
-        :param SessionId: 用于去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長 50 個字元，不帶或者帶空字串表示不做去重。
+        :param SessionId: 用於去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長 50 個字元，不帶或者帶空字串表示不做去重。
         :type SessionId: str
-        :param SessionContext: 來源上下文，用于透傳用戶請求訊息，任務流狀态變更回調将返回該欄位值，最長 1000 個字元。
+        :param SessionContext: 來源上下文，用於透傳用戶請求訊息，任務流狀态變更回調将返回該欄位值，最長 1000 個字元。
         :type SessionContext: str
         """
         self.Url = None
@@ -9283,9 +9283,9 @@ class ProcessMediaRequest(AbstractModel):
         """
         :param InputInfo: 視訊處理的文件輸入訊息。
         :type InputInfo: :class:`taifucloudcloud.mps.v20190612.models.MediaInputInfo`
-        :param OutputStorage: 視訊處理輸出文件的目标儲存。不填則繼承 InputInfo 中的儲存位置。
+        :param OutputStorage: 視訊處理輸出文件的目標儲存。不填則繼承 InputInfo 中的儲存位置。
         :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
-        :param OutputDir: 視訊處理生成的文件輸出的目标目錄，如`/movie/201907/`。如果不填，表示與 InputInfo 中文件所在的目錄一緻。
+        :param OutputDir: 視訊處理生成的文件輸出的目標目錄，如`/movie/201907/`。如果不填，表示與 InputInfo 中文件所在的目錄一緻。
         :type OutputDir: str
         :param MediaProcessTask: 視訊處理類型任務參數。
         :type MediaProcessTask: :class:`taifucloudcloud.mps.v20190612.models.MediaProcessTaskInput`
@@ -9299,9 +9299,9 @@ class ProcessMediaRequest(AbstractModel):
         :type TaskNotifyConfig: :class:`taifucloudcloud.mps.v20190612.models.TaskNotifyConfig`
         :param TasksPriority: 任務流的優先級，數值越大優先級越高，取值範圍是-10到 10，不填代表0。
         :type TasksPriority: int
-        :param SessionId: 用于去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長 50 個字元，不帶或者帶空字串表示不做去重。
+        :param SessionId: 用於去重的識别碼，如果七天内曾有過相同的識别碼的請求，則本次的請求會返回錯誤。最長 50 個字元，不帶或者帶空字串表示不做去重。
         :type SessionId: str
-        :param SessionContext: 來源上下文，用于透傳用戶請求訊息，任務流狀态變更回調将返回該欄位值，最長 1000 個字元。
+        :param SessionContext: 來源上下文，用於透傳用戶請求訊息，任務流狀态變更回調将返回該欄位值，最長 1000 個字元。
         :type SessionContext: str
         """
         self.InputInfo = None
@@ -9619,15 +9619,15 @@ class RawWatermarkParameter(AbstractModel):
 <li>image：圖片浮水印。</li>
         :type Type: str
         :param CoordinateOrigin: 原點位置，目前僅支援：
-<li>TopLeft：表示坐标原點位于視訊圖像左上角，浮水印原點爲圖片或文字的左上角。</li>
+<li>TopLeft：表示坐標原點位於視訊圖像左上角，浮水印原點爲圖片或文字的左上角。</li>
 預設值：TopLeft。
         :type CoordinateOrigin: str
-        :param XPos: 浮水印原點距離視訊圖像坐标原點的水平位置。支援 %、px 兩種格式：
+        :param XPos: 浮水印原點距離視訊圖像坐標原點的水平位置。支援 %、px 兩種格式：
 <li>當字串以 % 結尾，表示浮水印 XPos 爲視訊寬度指定百分比，如 10% 表示 XPos 爲視訊寬度的 10%；</li>
 <li>當字串以 px 結尾，表示浮水印 XPos 爲指定像素，如 100px 表示 XPos 爲 100 像素。</li>
 預設值：0px。
         :type XPos: str
-        :param YPos: 浮水印原點距離視訊圖像坐标原點的垂直位置。支援 %、px 兩種格式：
+        :param YPos: 浮水印原點距離視訊圖像坐標原點的垂直位置。支援 %、px 兩種格式：
 <li>當字串以 % 結尾，表示浮水印 YPos 爲視訊高度指定百分比，如 10% 表示 YPos 爲視訊高度的 10%；</li>
 <li>當字串以 px 結尾，表示浮水印 YPos 爲指定像素，如 100px 表示 YPos 爲 100 像素。</li>
 預設值：0px。
@@ -9667,7 +9667,7 @@ class ResetWorkflowRequest(AbstractModel):
         :type Trigger: :class:`taifucloudcloud.mps.v20190612.models.WorkflowTrigger`
         :param OutputStorage: 視訊處理的文件輸出配置。不填則繼承 Trigger 中的儲存位置。
         :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
-        :param OutputDir: 視訊處理生成的文件輸出的目标目錄，如`/movie/201907/`。如果不填，表示與觸發文件所在的目錄一緻，即`{inputDir}`。
+        :param OutputDir: 視訊處理生成的文件輸出的目標目錄，如`/movie/201907/`。如果不填，表示與觸發文件所在的目錄一緻，即`{inputDir}`。
         :type OutputDir: str
         :param MediaProcessTask: 視訊處理類型任務參數。
         :type MediaProcessTask: :class:`taifucloudcloud.mps.v20190612.models.MediaProcessTaskInput`
@@ -9751,7 +9751,7 @@ class SampleSnapshotTaskInput(AbstractModel):
         :type Definition: int
         :param WatermarkSet: 浮水印清單，支援多張圖片或文字水印，最大可支援 10 張。
         :type WatermarkSet: list of WatermarkInput
-        :param OutputStorage: 采樣截圖後文件的目标儲存，不填則繼承上層的 OutputStorage 值。
+        :param OutputStorage: 采樣截圖後文件的目標儲存，不填則繼承上層的 OutputStorage 值。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param OutputObjectPath: 采樣截圖後圖片文件的輸出路徑，可以爲相對路徑或者絕對路徑。如果不填，則預設爲相對路徑：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。
@@ -9791,7 +9791,7 @@ class SampleSnapshotTemplate(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 采樣截圖範本唯一标識。
+        :param Definition: 采樣截圖範本唯一標識。
         :type Definition: int
         :param Type: 範本類型，取值範圍：
 <li>Preset：系統預置範本；</li>
@@ -9882,7 +9882,7 @@ class SnapshotByTimeOffsetTaskInput(AbstractModel):
         :type TimeOffsetSet: list of float
         :param WatermarkSet: 浮水印清單，支援多張圖片或文字水印，最大可支援 10 張。
         :type WatermarkSet: list of WatermarkInput
-        :param OutputStorage: 時間點截圖後文件的目标儲存，不填則繼承上層的 OutputStorage 值。
+        :param OutputStorage: 時間點截圖後文件的目標儲存，不填則繼承上層的 OutputStorage 值。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param OutputObjectPath: 時間點截圖後圖片文件的輸出路徑，可以爲相對路徑或者絕對路徑。如果不填，則預設爲相對路徑：`{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`。
@@ -9924,7 +9924,7 @@ class SnapshotByTimeOffsetTemplate(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 時間點截圖範本唯一标識。
+        :param Definition: 時間點截圖範本唯一標識。
         :type Definition: int
         :param Type: 範本類型，取值範圍：
 <li>Preset：系統預置範本；</li>
@@ -10116,15 +10116,15 @@ class TEHDConfigForUpdate(AbstractModel):
 
 
 class TagConfigureInfo(AbstractModel):
-    """智慧标簽任務控制參數
+    """智慧標簽任務控制參數
 
     """
 
     def __init__(self):
         """
-        :param Switch: 智慧标簽任務開關，可選值：
-<li>ON：開啓智慧标簽任務；</li>
-<li>OFF：關閉智慧标簽任務。</li>
+        :param Switch: 智慧標簽任務開關，可選值：
+<li>ON：開啓智慧標簽任務；</li>
+<li>OFF：關閉智慧標簽任務。</li>
         :type Switch: str
         """
         self.Switch = None
@@ -10135,15 +10135,15 @@ class TagConfigureInfo(AbstractModel):
 
 
 class TagConfigureInfoForUpdate(AbstractModel):
-    """智慧标簽任務控制參數
+    """智慧標簽任務控制參數
 
     """
 
     def __init__(self):
         """
-        :param Switch: 智慧标簽任務開關，可選值：
-<li>ON：開啓智慧标簽任務；</li>
-<li>OFF：關閉智慧标簽任務。</li>
+        :param Switch: 智慧標簽任務開關，可選值：
+<li>ON：開啓智慧標簽任務；</li>
+<li>OFF：關閉智慧標簽任務。</li>
         :type Switch: str
         """
         self.Switch = None
@@ -10307,7 +10307,7 @@ class TerrorismImgReviewTemplateInfo(AbstractModel):
 <li>ON：開啓畫面鑒恐任務；</li>
 <li>OFF：關閉畫面鑒恐任務。</li>
         :type Switch: str
-        :param LabelSet: 畫面鑒恐過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回，可選值爲：
+        :param LabelSet: 畫面鑒恐過濾標簽，審核結果包含選擇的標簽則返回結果，如果過濾標簽爲空，則審核結果全部返回，可選值爲：
 <li>guns：武器槍支；</li>
 <li>crowd：人群聚集；</li>
 <li>bloody：血腥畫面；</li>
@@ -10346,7 +10346,7 @@ class TerrorismImgReviewTemplateInfoForUpdate(AbstractModel):
 <li>ON：開啓畫面鑒恐任務；</li>
 <li>OFF：關閉畫面鑒恐任務。</li>
         :type Switch: str
-        :param LabelSet: 畫面鑒恐過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回，可選值爲：
+        :param LabelSet: 畫面鑒恐過濾標簽，審核結果包含選擇的標簽則返回結果，如果過濾標簽爲空，則審核結果全部返回，可選值爲：
 <li>guns：武器槍支；</li>
 <li>crowd：人群聚集；</li>
 <li>bloody：血腥畫面；</li>
@@ -10505,13 +10505,13 @@ class TranscodeTaskInput(AbstractModel):
         :param Definition: 視訊轉碼範本 ID。
         :type Definition: int
         :param RawParameter: 視訊轉碼自定義參數，當 Definition 填 0 時有效。
-該參數用于高度定制場景，建議您優先使用 Definition 指定轉碼參數。
+該參數用於高度定制場景，建議您優先使用 Definition 指定轉碼參數。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RawParameter: :class:`taifucloudcloud.mps.v20190612.models.RawTranscodeParameter`
         :param WatermarkSet: 浮水印清單，支援多張圖片或文字水印，最大可支援 10 張。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type WatermarkSet: list of WatermarkInput
-        :param OutputStorage: 轉碼後文件的目标儲存，不填則繼承上層的 OutputStorage 值。
+        :param OutputStorage: 轉碼後文件的目標儲存，不填則繼承上層的 OutputStorage 值。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OutputStorage: :class:`taifucloudcloud.mps.v20190612.models.TaskOutputStorage`
         :param OutputObjectPath: 轉碼後主文件的輸出路徑，可以爲相對路徑或者絕對路徑。如果不填，則預設爲相對路徑：`{inputName}_transcode_{definition}.{format}`。
@@ -10559,7 +10559,7 @@ class TranscodeTemplate(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 轉碼範本唯一标識。
+        :param Definition: 轉碼範本唯一標識。
         :type Definition: str
         :param Container: 封裝格式，取值：mp4、flv、hls、mp3、flac、ogg。
         :type Container: str
@@ -10643,8 +10643,8 @@ class UserDefineAsrTextReviewTemplateInfo(AbstractModel):
 <li>ON：開啓自定義語音審核任務；</li>
 <li>OFF：關閉自定義語音審核任務。</li>
         :type Switch: str
-        :param LabelSet: 用戶自定義語音過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回。如果要使用标簽過濾功能，添加自定義語音關鍵詞素材時需要添加對應标簽。
-标簽個數最多 10 個，每個标簽長度最多 16 個字元。
+        :param LabelSet: 用戶自定義語音過濾標簽，審核結果包含選擇的標簽則返回結果，如果過濾標簽爲空，則審核結果全部返回。如果要使用標簽過濾功能，添加自定義語音關鍵詞素材時需要添加對應標簽。
+標簽個數最多 10 個，每個標簽長度最多 16 個字元。
         :type LabelSet: list of str
         :param BlockConfidence: 判定涉嫌違規的分數阈值，當智慧審核達到該分數以上，認爲涉嫌違規，不填預設爲 100 分。取值範圍：0~100。
         :type BlockConfidence: int
@@ -10675,8 +10675,8 @@ class UserDefineAsrTextReviewTemplateInfoForUpdate(AbstractModel):
 <li>ON：開啓自定義語音審核任務；</li>
 <li>OFF：關閉自定義語音審核任務。</li>
         :type Switch: str
-        :param LabelSet: 用戶自定義語音過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回。如果要使用标簽過濾功能，添加自定義語音關鍵詞素材時需要添加對應标簽。
-标簽個數最多 10 個，每個标簽長度最多 16 個字元。
+        :param LabelSet: 用戶自定義語音過濾標簽，審核結果包含選擇的標簽則返回結果，如果過濾標簽爲空，則審核結果全部返回。如果要使用標簽過濾功能，添加自定義語音關鍵詞素材時需要添加對應標簽。
+標簽個數最多 10 個，每個標簽長度最多 16 個字元。
         :type LabelSet: list of str
         :param BlockConfidence: 判定涉嫌違規的分數阈值，當智慧審核達到該分數以上，認爲涉嫌違規。取值範圍：0~100。
         :type BlockConfidence: int
@@ -10769,8 +10769,8 @@ class UserDefineFaceReviewTemplateInfo(AbstractModel):
 <li>ON：開啓自定義人物審核任務；</li>
 <li>OFF：關閉自定義人物審核任務。</li>
         :type Switch: str
-        :param LabelSet: 用戶自定義人物過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回。如果要使用标簽過濾功能，添加自定義人物庫的時，需要添加對應人物标簽。
-标簽個數最多 10 個，每個标簽長度最多 16 個字元。
+        :param LabelSet: 用戶自定義人物過濾標簽，審核結果包含選擇的標簽則返回結果，如果過濾標簽爲空，則審核結果全部返回。如果要使用標簽過濾功能，添加自定義人物庫的時，需要添加對應人物標簽。
+標簽個數最多 10 個，每個標簽長度最多 16 個字元。
         :type LabelSet: list of str
         :param BlockConfidence: 判定涉嫌違規的分數阈值，當智慧審核達到該分數以上，認爲涉嫌違規，不填預設爲 97 分。取值範圍：0~100。
         :type BlockConfidence: int
@@ -10801,8 +10801,8 @@ class UserDefineFaceReviewTemplateInfoForUpdate(AbstractModel):
 <li>ON：開啓自定義人物審核任務；</li>
 <li>OFF：關閉自定義人物審核任務。</li>
         :type Switch: str
-        :param LabelSet: 用戶自定義人物過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回。如果要使用标簽過濾功能，添加自定義人物庫的時，需要添加對應人物标簽。
-标簽個數最多 10 個，每個标簽長度最多 16 個字元。
+        :param LabelSet: 用戶自定義人物過濾標簽，審核結果包含選擇的標簽則返回結果，如果過濾標簽爲空，則審核結果全部返回。如果要使用標簽過濾功能，添加自定義人物庫的時，需要添加對應人物標簽。
+標簽個數最多 10 個，每個標簽長度最多 16 個字元。
         :type LabelSet: list of str
         :param BlockConfidence: 判定涉嫌違規的分數阈值，當智慧審核達到該分數以上，認爲涉嫌違規。取值範圍：0~100。
         :type BlockConfidence: int
@@ -10833,8 +10833,8 @@ class UserDefineOcrTextReviewTemplateInfo(AbstractModel):
 <li>ON：開啓自定義文本審核任務；</li>
 <li>OFF：關閉自定義文本審核任務。</li>
         :type Switch: str
-        :param LabelSet: 用戶自定義文本過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回。如果要使用标簽過濾功能，添加自定義文本關鍵詞素材時需要添加對應标簽。
-标簽個數最多 10 個，每個标簽長度最多 16 個字元。
+        :param LabelSet: 用戶自定義文本過濾標簽，審核結果包含選擇的標簽則返回結果，如果過濾標簽爲空，則審核結果全部返回。如果要使用標簽過濾功能，添加自定義文本關鍵詞素材時需要添加對應標簽。
+標簽個數最多 10 個，每個標簽長度最多 16 個字元。
         :type LabelSet: list of str
         :param BlockConfidence: 判定涉嫌違規的分數阈值，當智慧審核達到該分數以上，認爲涉嫌違規，不填預設爲 100 分。取值範圍：0~100。
         :type BlockConfidence: int
@@ -10865,8 +10865,8 @@ class UserDefineOcrTextReviewTemplateInfoForUpdate(AbstractModel):
 <li>ON：開啓自定義文本審核任務；</li>
 <li>OFF：關閉自定義文本審核任務。</li>
         :type Switch: str
-        :param LabelSet: 用戶自定義文本過濾标簽，審核結果包含選擇的标簽則返回結果，如果過濾标簽爲空，則審核結果全部返回。如果要使用标簽過濾功能，添加自定義文本關鍵詞素材時需要添加對應标簽。
-标簽個數最多 10 個，每個标簽長度最多 16 個字元。
+        :param LabelSet: 用戶自定義文本過濾標簽，審核結果包含選擇的標簽則返回結果，如果過濾標簽爲空，則審核結果全部返回。如果要使用標簽過濾功能，添加自定義文本關鍵詞素材時需要添加對應標簽。
+標簽個數最多 10 個，每個標簽長度最多 16 個字元。
         :type LabelSet: str
         :param BlockConfidence: 判定涉嫌違規的分數阈值，當智慧審核達到該分數以上，認爲涉嫌違規。取值範圍：0~100。
         :type BlockConfidence: int
@@ -10897,7 +10897,7 @@ class VideoTemplateInfo(AbstractModel):
 <li>libx264：H.264 編碼</li>
 <li>libx265：H.265 編碼</li>
 <li>av1：AOMedia Video 1 編碼</li>
-目前 H.265 編碼必須指定分辨率，并且需要在 640*480 以内。av1 編碼容器目前只支援 mp4 。
+目前 H.265 編碼必須指定分辨率，並且需要在 640*480 以内。av1 編碼容器目前只支援 mp4 。
         :type Codec: str
         :param Fps: 視訊幀率，取值範圍：[0, 60]，單位：Hz。
 當取值爲 0，表示幀率和原始視訊保持一緻。
@@ -10965,7 +10965,7 @@ class VideoTemplateInfoForUpdate(AbstractModel):
 <li>libx264：H.264 編碼</li>
 <li>libx265：H.265 編碼</li>
 <li>av1：AOMedia Video 1 編碼</li>
-目前 H.265 編碼必須指定分辨率，并且需要在 640*480 以内。av1 編碼容器目前只支援 mp4 。
+目前 H.265 編碼必須指定分辨率，並且需要在 640*480 以内。av1 編碼容器目前只支援 mp4 。
         :type Codec: str
         :param Fps: 視訊幀率，取值範圍：[0, 60]，單位：Hz。
 當取值爲 0，表示幀率和原始視訊保持一緻。
@@ -11023,7 +11023,7 @@ class WatermarkInput(AbstractModel):
         :param Definition: 浮水印範本 ID。
         :type Definition: int
         :param RawParameter: 浮水印自定義參數，當 Definition 填 0 時有效。
-該參數用于高度定制場景，建議您優先使用 Definition 指定浮水印參數。
+該參數用於高度定制場景，建議您優先使用 Definition 指定浮水印參數。
         :type RawParameter: :class:`taifucloudcloud.mps.v20190612.models.RawWatermarkParameter`
         :param TextContent: 文字内容，長度不超過100個字元。僅當浮水印類型爲文字水印時填寫。
         :type TextContent: str
@@ -11031,12 +11031,12 @@ class WatermarkInput(AbstractModel):
         :type SvgContent: str
         :param StartTimeOffset: 浮水印的起始時間偏移，單位：秒。不填或填0，表示水印從畫面出現時開始顯現。
 <li>不填或填0，表示浮水印從畫面開始就出現；</li>
-<li>當數值大于0時（假設爲 n），表示浮水印從畫面開始的第 n 秒出現；</li>
+<li>當數值大於0時（假設爲 n），表示浮水印從畫面開始的第 n 秒出現；</li>
 <li>當數值小於0時（假設爲 -n），表示浮水印從離畫面結束 n 秒前開始出現。</li>
         :type StartTimeOffset: float
         :param EndTimeOffset: 浮水印的結束時間偏移，單位：秒。
 <li>不填或填0，表示浮水印持續到畫面結束；</li>
-<li>當數值大于0時（假設爲 n），表示浮水印持續到第 n 秒時消失；</li>
+<li>當數值大於0時（假設爲 n），表示浮水印持續到第 n 秒時消失；</li>
 <li>當數值小於0時（假設爲 -n），表示浮水印持續到離畫面結束 n 秒前消失。</li>
         :type EndTimeOffset: float
         """
@@ -11066,7 +11066,7 @@ class WatermarkTemplate(AbstractModel):
 
     def __init__(self):
         """
-        :param Definition: 浮水印範本唯一标識。
+        :param Definition: 浮水印範本唯一標識。
         :type Definition: int
         :param Type: 浮水印類型，取值：
 <li>image：圖片浮水印；</li>
@@ -11098,10 +11098,10 @@ class WatermarkTemplate(AbstractModel):
         :param UpdateTime: 範本最後修改時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type UpdateTime: str
         :param CoordinateOrigin: 原點位置，可選值：
-<li>topLeft：表示坐标原點位于視訊圖像左上角，浮水印原點爲圖片或文字的左上角；</li>
-<li>topRight：表示坐标原點位于視訊圖像的右上角，浮水印原點爲圖片或文字的右上角；</li>
-<li>bottomLeft：表示坐标原點位于視訊圖像的左下角，浮水印原點爲圖片或文字的左下角；</li>
-<li>bottomRight：表示坐标原點位于視訊圖像的右下角，浮水印原點爲圖片或文字的右下。；</li>
+<li>topLeft：表示坐標原點位於視訊圖像左上角，浮水印原點爲圖片或文字的左上角；</li>
+<li>topRight：表示坐標原點位於視訊圖像的右上角，浮水印原點爲圖片或文字的右上角；</li>
+<li>bottomLeft：表示坐標原點位於視訊圖像的左下角，浮水印原點爲圖片或文字的左下角；</li>
+<li>bottomRight：表示坐標原點位於視訊圖像的右下角，浮水印原點爲圖片或文字的右下。；</li>
         :type CoordinateOrigin: str
         """
         self.Definition = None
@@ -11176,7 +11176,7 @@ class WorkflowInfo(AbstractModel):
         :type TaskNotifyConfig: :class:`taifucloudcloud.mps.v20190612.models.TaskNotifyConfig`
         :param TaskPriority: 任務流的優先級，數值越大優先級越高，取值範圍是 -10 到 10，不填代表 0。
         :type TaskPriority: int
-        :param OutputDir: 視訊處理生成的文件輸出的目标目錄，如`/movie/201907/`。
+        :param OutputDir: 視訊處理生成的文件輸出的目標目錄，如`/movie/201907/`。
         :type OutputDir: str
         :param CreateTime: 工作流創建時間，使用 [ISO 日期格式](https://cloud.taifucloud.com/document/product/862/37710#52)。
         :type CreateTime: str
@@ -11247,7 +11247,7 @@ class WorkflowTask(AbstractModel):
         :type ErrCode: int
         :param Message: 已棄用，請使用各個具體任務的 Message。
         :type Message: str
-        :param InputInfo: 視訊處理的目标文件訊息。
+        :param InputInfo: 視訊處理的目標文件訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InputInfo: :class:`taifucloudcloud.mps.v20190612.models.MediaInputInfo`
         :param MetaData: 原始視訊的元訊息。

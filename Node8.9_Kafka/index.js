@@ -2,7 +2,7 @@
 Nodejs8.9 - kafka 
 TIPS: 
 1. The cloud function and kafka should in same vpc
-   雲函數需求kafka實例位于相同的vpc内
+   雲函數需求kafka實例位於相同的vpc内
 Reference: 
 1. https://www.npmjs.com/package/kafka-node - kafka Node.js 
 2. https://cloud.taifucloud.com/product/ckafka/getting-started - ckafka document

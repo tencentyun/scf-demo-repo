@@ -56,15 +56,15 @@ class MarketingValueJudgementRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AccountType: 手機賬号類型填寫4
+        :param AccountType: 手機賬號類型填寫4
         :type AccountType: int
-        :param Uid: 填寫手機号碼，如15317537488
+        :param Uid: 填寫手機號碼，如15317537488
         :type Uid: str
         :param UserIp: 用戶請求時的用戶端外網IP
         :type UserIp: str
         :param PostTime: 用戶操作時間戳，單位秒（格林威治時間精确到秒，如1501590972）
         :type PostTime: int
-        :param Imei: 用戶設備号imei/idfa(建議填寫)
+        :param Imei: 用戶設備號imei/idfa(建議填寫)
         :type Imei: str
         :param Referer: 活動連結(建議填寫)
         :type Referer: str

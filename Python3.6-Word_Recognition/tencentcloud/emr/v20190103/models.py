@@ -479,7 +479,7 @@ class InquiryPriceCreateInstanceResponse(AbstractModel):
 
 
 class InquiryPriceResult(AbstractModel):
-    """用于詢價輸出
+    """用於詢價輸出
 
     """
 

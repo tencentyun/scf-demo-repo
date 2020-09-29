@@ -10,7 +10,7 @@ inputs:
     This demo uses API GW trigger and SCF to build WEB backend service.It can
     realize word recognition from picture. 本範例使用 API
     閘道觸發器和雲函數快速構建web後台，實現圖片中文字識别的功能，用戶通過 API
-    閘道上傳圖片文件，上傳後的文件會保存在COS，并調用AI介面實現文字識别，把結果返回前端
+    閘道上傳圖片文件，上傳後的文件會保存在COS，並調用AI介面實現文字識别，把結果返回前端
   handler: Word_Recognition.main_handler
   runtime: Python3.6
   namespace: default

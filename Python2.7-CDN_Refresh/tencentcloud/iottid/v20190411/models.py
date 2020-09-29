@@ -61,9 +61,9 @@ class BurnTidNotifyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param OrderId: 訂單編号
+        :param OrderId: 訂單編號
         :type OrderId: str
-        :param Tid: TID編号
+        :param Tid: TID編號
         :type Tid: str
         """
         self.OrderId = None
@@ -103,9 +103,9 @@ class DeliverTidNotifyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param OrderId: 訂單編号
+        :param OrderId: 訂單編號
         :type OrderId: str
-        :param Tid: TID編号
+        :param Tid: TID編號
         :type Tid: str
         """
         self.OrderId = None
@@ -205,7 +205,7 @@ class DescribeAvailableLibCountRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param OrderId: 訂單編号
+        :param OrderId: 訂單編號
         :type OrderId: str
         """
         self.OrderId = None
@@ -278,7 +278,7 @@ class DownloadTidsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param OrderId: 訂單編号
+        :param OrderId: 訂單編號
         :type OrderId: str
         :param Quantity: 下載數量：1~10
         :type Quantity: int
@@ -326,7 +326,7 @@ class TidKeysInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param Tid: TID号碼
+        :param Tid: TID號碼
         :type Tid: str
         :param PublicKey: 公鑰
         :type PublicKey: str
@@ -336,7 +336,7 @@ class TidKeysInfo(AbstractModel):
         :type Psk: str
         :param DownloadUrl: 軟加固白盒金鑰下載網址
         :type DownloadUrl: str
-        :param DeviceCode: 軟加固設備标識碼
+        :param DeviceCode: 軟加固設備標識碼
         :type DeviceCode: str
         """
         self.Tid = None
@@ -363,9 +363,9 @@ class UploadDeviceUniqueCodeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param CodeSet: 硬體唯一标識碼
+        :param CodeSet: 硬體唯一標識碼
         :type CodeSet: list of str
-        :param OrderId: 硬體标識碼綁定的申請編号
+        :param OrderId: 硬體標識碼綁定的申請編號
         :type OrderId: str
         """
         self.CodeSet = None
@@ -386,12 +386,12 @@ class UploadDeviceUniqueCodeResponse(AbstractModel):
         """
         :param Count: 本次已上傳數量
         :type Count: int
-        :param ExistedCodeSet: 重複的硬體唯一标識碼
+        :param ExistedCodeSet: 重複的硬體唯一標識碼
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ExistedCodeSet: list of str
         :param LeftQuantity: 剩餘可上傳數量
         :type LeftQuantity: int
-        :param IllegalCodeSet: 錯誤的硬體唯一标識碼
+        :param IllegalCodeSet: 錯誤的硬體唯一標識碼
 注意：此欄位可能返回 null，表示取不到有效值。
         :type IllegalCodeSet: list of str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。

@@ -26,7 +26,7 @@ class MariadbClient(AbstractClient):
 
 
     def CloneAccount(self, request):
-        """本介面（CloneAccount）用于複製實例帳戶。
+        """本介面（CloneAccount）用於複製實例帳戶。
 
         :param request: 調用CloneAccount所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.CloneAccountRequest`
@@ -54,7 +54,7 @@ class MariadbClient(AbstractClient):
 
 
     def CloseDBExtranetAccess(self, request):
-        """本介面(CloseDBExtranetAccess)用于關閉雲資料庫實例的外網訪問。關閉外網訪問後，外網網址将不可訪問，查詢實例清單介面将不返回對應實例的外網域名和端口訊息。
+        """本介面(CloseDBExtranetAccess)用於關閉雲資料庫實例的外網訪問。關閉外網訪問後，外網網址将不可訪問，查詢實例清單介面将不返回對應實例的外網域名和端口訊息。
 
         :param request: 調用CloseDBExtranetAccess所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.CloseDBExtranetAccessRequest`
@@ -82,8 +82,8 @@ class MariadbClient(AbstractClient):
 
 
     def CopyAccountPrivileges(self, request):
-        """本介面（CopyAccountPrivileges）用于複制雲資料庫賬号的權限。
-        注意：相同用戶名，不同Host是不同的賬号，Readonly屬性相同的賬号之間才能複制權限。
+        """本介面（CopyAccountPrivileges）用於複制雲資料庫賬號的權限。
+        注意：相同用戶名，不同Host是不同的賬號，Readonly屬性相同的賬號之間才能複制權限。
 
         :param request: 調用CopyAccountPrivileges所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.CopyAccountPrivilegesRequest`
@@ -111,7 +111,7 @@ class MariadbClient(AbstractClient):
 
 
     def CreateAccount(self, request):
-        """本介面（CreateAccount）用于創建雲資料庫賬号。一個實例可以創建多個不同的賬号，相同的用戶名+不同的host是不同的賬号。
+        """本介面（CreateAccount）用於創建雲資料庫賬號。一個實例可以創建多個不同的賬號，相同的用戶名+不同的host是不同的賬號。
 
         :param request: 調用CreateAccount所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.CreateAccountRequest`
@@ -139,7 +139,7 @@ class MariadbClient(AbstractClient):
 
 
     def CreateDBInstance(self, request):
-        """本介面（CreateDBInstance）用于創建包年包月的雲資料庫實例，可通過傳入實例規格、資料庫版本号、購買時長和數量等訊息創建雲資料庫實例。
+        """本介面（CreateDBInstance）用於創建包年包月的雲資料庫實例，可通過傳入實例規格、資料庫版本號、購買時長和數量等訊息創建雲資料庫實例。
 
         :param request: 調用CreateDBInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.CreateDBInstanceRequest`
@@ -167,7 +167,7 @@ class MariadbClient(AbstractClient):
 
 
     def DeleteAccount(self, request):
-        """本介面（DeleteAccount）用于删除雲資料庫賬号。用戶名+host唯一确定一個賬号。
+        """本介面（DeleteAccount）用於删除雲資料庫賬號。用戶名+host唯一确定一個賬號。
 
         :param request: 調用DeleteAccount所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DeleteAccountRequest`
@@ -195,8 +195,8 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeAccountPrivileges(self, request):
-        """本介面（DescribeAccountPrivileges）用于查詢雲資料庫賬号權限。
-        注意：注意：相同用戶名，不同Host是不同的賬号。
+        """本介面（DescribeAccountPrivileges）用於查詢雲資料庫賬號權限。
+        注意：注意：相同用戶名，不同Host是不同的賬號。
 
         :param request: 調用DescribeAccountPrivileges所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeAccountPrivilegesRequest`
@@ -224,7 +224,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeAccounts(self, request):
-        """本介面（DescribeAccounts）用于查詢指定雲資料庫實例的賬号清單。
+        """本介面（DescribeAccounts）用於查詢指定雲資料庫實例的賬號清單。
 
         :param request: 調用DescribeAccounts所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeAccountsRequest`
@@ -252,7 +252,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeBackupTime(self, request):
-        """本介面（DescribeBackupTime）用于獲取雲資料庫的備份時間。後台系統将根據此配置定期進行實例備份。
+        """本介面（DescribeBackupTime）用於獲取雲資料庫的備份時間。後台系統将根據此配置定期進行實例備份。
 
         :param request: 調用DescribeBackupTime所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeBackupTimeRequest`
@@ -280,7 +280,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBInstanceSpecs(self, request):
-        """本介面(DescribeDBInstanceSpecs)用于查詢可創建的雲資料庫可售賣的規格配置。
+        """本介面(DescribeDBInstanceSpecs)用於查詢可創建的雲資料庫可售賣的規格配置。
 
         :param request: 調用DescribeDBInstanceSpecs所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBInstanceSpecsRequest`
@@ -308,7 +308,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBInstances(self, request):
-        """本介面（DescribeDBInstances）用于查詢雲資料庫實例清單，支援通過項目ID、實例ID、内網網址、實例名稱等來篩選實例。
+        """本介面（DescribeDBInstances）用於查詢雲資料庫實例清單，支援通過項目ID、實例ID、内網網址、實例名稱等來篩選實例。
         如果不指定任何篩選條件，則預設返回20條實例記錄，單次請求最多支援返回100條實例記錄。
 
         :param request: 調用DescribeDBInstances所需參數的結構體。
@@ -337,7 +337,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBLogFiles(self, request):
-        """本介面(DescribeDBLogFiles)用于獲取資料庫的各種日志清單，包括冷備、binlog、errlog和slowlog。
+        """本介面(DescribeDBLogFiles)用於獲取資料庫的各種日志清單，包括冷備、binlog、errlog和slowlog。
 
         :param request: 調用DescribeDBLogFiles所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBLogFilesRequest`
@@ -365,7 +365,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBParameters(self, request):
-        """本介面(DescribeDBParameters)用于獲取資料庫的當前參數設置。
+        """本介面(DescribeDBParameters)用於獲取資料庫的當前參數設置。
 
         :param request: 調用DescribeDBParameters所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBParametersRequest`
@@ -393,7 +393,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBPerformance(self, request):
-        """本介面(DescribeDBPerformance)用于檢視資料庫實例當前效能數據。
+        """本介面(DescribeDBPerformance)用於檢視資料庫實例當前效能數據。
 
         :param request: 調用DescribeDBPerformance所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBPerformanceRequest`
@@ -421,7 +421,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBPerformanceDetails(self, request):
-        """本介面(DescribeDBPerformanceDetails)用于檢視實例效能數據詳情。
+        """本介面(DescribeDBPerformanceDetails)用於檢視實例效能數據詳情。
 
         :param request: 調用DescribeDBPerformanceDetails所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBPerformanceDetailsRequest`
@@ -449,7 +449,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBResourceUsage(self, request):
-        """本介面(DescribeDBResourceUsage)用于檢視資料庫實例資源的使用情況。
+        """本介面(DescribeDBResourceUsage)用於檢視資料庫實例資源的使用情況。
 
         :param request: 調用DescribeDBResourceUsage所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBResourceUsageRequest`
@@ -477,7 +477,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBResourceUsageDetails(self, request):
-        """本介面(DescribeDBResourceUsageDetails)用于檢視資料庫實例當前效能數據。
+        """本介面(DescribeDBResourceUsageDetails)用於檢視資料庫實例當前效能數據。
 
         :param request: 調用DescribeDBResourceUsageDetails所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBResourceUsageDetailsRequest`
@@ -505,7 +505,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeDBSlowLogs(self, request):
-        """本介面(DescribeDBSlowLogs)用于查詢慢查詢日志清單。
+        """本介面(DescribeDBSlowLogs)用於查詢慢查詢日志清單。
 
         :param request: 調用DescribeDBSlowLogs所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeDBSlowLogsRequest`
@@ -533,7 +533,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeFlow(self, request):
-        """本介面（DescribeFlow）用于查詢流程狀态。
+        """本介面（DescribeFlow）用於查詢流程狀态。
 
         :param request: 調用DescribeFlow所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeFlowRequest`
@@ -561,7 +561,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeLogFileRetentionPeriod(self, request):
-        """本介面(DescribeLogFileRetentionPeriod)用于檢視資料庫備份日志的備份天數的設置情況。
+        """本介面(DescribeLogFileRetentionPeriod)用於檢視資料庫備份日志的備份天數的設置情況。
 
         :param request: 調用DescribeLogFileRetentionPeriod所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeLogFileRetentionPeriodRequest`
@@ -589,7 +589,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeOrders(self, request):
-        """本介面（DescribeOrders）用于查詢雲資料庫訂單訊息。傳入訂單Id來查詢訂單關聯的雲資料庫實例，和對應的任務流程ID。
+        """本介面（DescribeOrders）用於查詢雲資料庫訂單訊息。傳入訂單Id來查詢訂單關聯的雲資料庫實例，和對應的任務流程ID。
 
         :param request: 調用DescribeOrders所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeOrdersRequest`
@@ -617,7 +617,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribePrice(self, request):
-        """本介面（DescribePrice）用于在購買實例前，查詢實例的價格。
+        """本介面（DescribePrice）用於在購買實例前，查詢實例的價格。
 
         :param request: 調用DescribePrice所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribePriceRequest`
@@ -645,7 +645,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeRenewalPrice(self, request):
-        """本介面（DescribeRenewalPrice）用于在續約雲資料庫實例時，查詢續約的價格。
+        """本介面（DescribeRenewalPrice）用於在續約雲資料庫實例時，查詢續約的價格。
 
         :param request: 調用DescribeRenewalPrice所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeRenewalPriceRequest`
@@ -673,7 +673,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeSaleInfo(self, request):
-        """本介面(DescribeSaleInfo)用于查詢雲資料庫可售賣的地域和可用區訊息。
+        """本介面(DescribeSaleInfo)用於查詢雲資料庫可售賣的地域和可用區訊息。
 
         :param request: 調用DescribeSaleInfo所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeSaleInfoRequest`
@@ -701,7 +701,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeSqlLogs(self, request):
-        """本介面（DescribeSqlLogs）用于獲取實例SQL日志。
+        """本介面（DescribeSqlLogs）用於獲取實例SQL日志。
 
         :param request: 調用DescribeSqlLogs所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeSqlLogsRequest`
@@ -729,7 +729,7 @@ class MariadbClient(AbstractClient):
 
 
     def DescribeUpgradePrice(self, request):
-        """本介面（DescribeUpgradePrice）用于在擴容雲資料庫實例時，查詢擴容的價格。
+        """本介面（DescribeUpgradePrice）用於在擴容雲資料庫實例時，查詢擴容的價格。
 
         :param request: 調用DescribeUpgradePrice所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.DescribeUpgradePriceRequest`
@@ -757,8 +757,8 @@ class MariadbClient(AbstractClient):
 
 
     def GrantAccountPrivileges(self, request):
-        """本介面（GrantAccountPrivileges）用于給雲資料庫賬号賦權。
-        注意：相同用戶名，不同Host是不同的賬号。
+        """本介面（GrantAccountPrivileges）用於給雲資料庫賬號賦權。
+        注意：相同用戶名，不同Host是不同的賬號。
 
         :param request: 調用GrantAccountPrivileges所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.GrantAccountPrivilegesRequest`
@@ -786,7 +786,7 @@ class MariadbClient(AbstractClient):
 
 
     def InitDBInstances(self, request):
-        """本介面(InitDBInstances)用于初始化雲資料庫實例，包括設置預設字元集、表名大小寫敏感等。
+        """本介面(InitDBInstances)用於初始化雲資料庫實例，包括設置預設字元集、表名大小寫敏感等。
 
         :param request: 調用InitDBInstances所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.InitDBInstancesRequest`
@@ -814,8 +814,8 @@ class MariadbClient(AbstractClient):
 
 
     def ModifyAccountDescription(self, request):
-        """本介面（ModifyAccountDescription）用于修改雲資料庫賬号備注。
-        注意：相同用戶名，不同Host是不同的賬号。
+        """本介面（ModifyAccountDescription）用於修改雲資料庫賬號備注。
+        注意：相同用戶名，不同Host是不同的賬號。
 
         :param request: 調用ModifyAccountDescription所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyAccountDescriptionRequest`
@@ -843,7 +843,7 @@ class MariadbClient(AbstractClient):
 
 
     def ModifyBackupTime(self, request):
-        """本介面（ModifyBackupTime）用于設置雲資料庫實例的備份時間。後台系統将根據此配置定期進行實例備份。
+        """本介面（ModifyBackupTime）用於設置雲資料庫實例的備份時間。後台系統将根據此配置定期進行實例備份。
 
         :param request: 調用ModifyBackupTime所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyBackupTimeRequest`
@@ -871,7 +871,7 @@ class MariadbClient(AbstractClient):
 
 
     def ModifyDBInstanceName(self, request):
-        """本介面（ModifyDBInstanceName）用于修改雲資料庫實例的名稱。
+        """本介面（ModifyDBInstanceName）用於修改雲資料庫實例的名稱。
 
         :param request: 調用ModifyDBInstanceName所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyDBInstanceNameRequest`
@@ -899,7 +899,7 @@ class MariadbClient(AbstractClient):
 
 
     def ModifyDBInstancesProject(self, request):
-        """本介面（ModifyDBInstancesProject）用于修改雲資料庫實例所屬項目。
+        """本介面（ModifyDBInstancesProject）用於修改雲資料庫實例所屬項目。
 
         :param request: 調用ModifyDBInstancesProject所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyDBInstancesProjectRequest`
@@ -927,7 +927,7 @@ class MariadbClient(AbstractClient):
 
 
     def ModifyDBParameters(self, request):
-        """本介面(ModifyDBParameters)用于修改資料庫參數。
+        """本介面(ModifyDBParameters)用於修改資料庫參數。
 
         :param request: 調用ModifyDBParameters所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyDBParametersRequest`
@@ -955,7 +955,7 @@ class MariadbClient(AbstractClient):
 
 
     def ModifyLogFileRetentionPeriod(self, request):
-        """本介面(ModifyLogFileRetentionPeriod)用于修改資料庫備份日志保存天數。
+        """本介面(ModifyLogFileRetentionPeriod)用於修改資料庫備份日志保存天數。
 
         :param request: 調用ModifyLogFileRetentionPeriod所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.ModifyLogFileRetentionPeriodRequest`
@@ -983,7 +983,7 @@ class MariadbClient(AbstractClient):
 
 
     def OpenDBExtranetAccess(self, request):
-        """本介面（OpenDBExtranetAccess）用于開通雲資料庫實例的外網訪問。開通外網訪問後，您可通過外網域名和端口訪問實例，可使用查詢實例清單介面獲取外網域名和端口訊息。
+        """本介面（OpenDBExtranetAccess）用於開通雲資料庫實例的外網訪問。開通外網訪問後，您可通過外網域名和端口訪問實例，可使用查詢實例清單介面獲取外網域名和端口訊息。
 
         :param request: 調用OpenDBExtranetAccess所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.OpenDBExtranetAccessRequest`
@@ -1011,7 +1011,7 @@ class MariadbClient(AbstractClient):
 
 
     def RenewDBInstance(self, request):
-        """本介面（RenewDBInstance）用于續約雲資料庫實例。
+        """本介面（RenewDBInstance）用於續約雲資料庫實例。
 
         :param request: 調用RenewDBInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.RenewDBInstanceRequest`
@@ -1039,8 +1039,8 @@ class MariadbClient(AbstractClient):
 
 
     def ResetAccountPassword(self, request):
-        """本介面（ResetAccountPassword）用于重置雲資料庫賬号的密碼。
-        注意：相同用戶名，不同Host是不同的賬号。
+        """本介面（ResetAccountPassword）用於重置雲資料庫賬號的密碼。
+        注意：相同用戶名，不同Host是不同的賬號。
 
         :param request: 調用ResetAccountPassword所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.ResetAccountPasswordRequest`
@@ -1068,7 +1068,7 @@ class MariadbClient(AbstractClient):
 
 
     def UpgradeDBInstance(self, request):
-        """本介面(UpgradeDBInstance)用于擴容雲資料庫實例。本介面完成下單和支付兩個動作，如果發生支付失敗的錯誤，調用用戶帳戶相關介面中的支付訂單介面（PayDeals）重新支付即可。
+        """本介面(UpgradeDBInstance)用於擴容雲資料庫實例。本介面完成下單和支付兩個動作，如果發生支付失敗的錯誤，調用用戶帳戶相關介面中的支付訂單介面（PayDeals）重新支付即可。
 
         :param request: 調用UpgradeDBInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.mariadb.v20170312.models.UpgradeDBInstanceRequest`

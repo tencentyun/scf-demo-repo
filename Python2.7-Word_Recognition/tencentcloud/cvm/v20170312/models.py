@@ -27,7 +27,7 @@ class ActionTimer(AbstractModel):
         :type Externals: :class:`taifucloudcloud.cvm.v20170312.models.Externals`
         :param TimerAction: 定時器名稱，目前僅支援銷毀一個值：TerminateInstances。
         :type TimerAction: str
-        :param ActionTime: 執行時間，格式形如：2018-5-29 11:26:40,執行時間必須大于當前時間5分鍾。
+        :param ActionTime: 執行時間，格式形如：2018-5-29 11:26:40,執行時間必須大於當前時間5分鍾。
         :type ActionTime: str
         """
         self.Externals = None
@@ -52,7 +52,7 @@ class AllocateHostsRequest(AbstractModel):
         """
         :param Placement: 實例所在的位置。通過該參數可以指定實例所屬可用區，所屬項目等屬性。
         :type Placement: :class:`taifucloudcloud.cvm.v20170312.models.Placement`
-        :param ClientToken: 用于保證請求幂等性的字串。
+        :param ClientToken: 用於保證請求幂等性的字串。
         :type ClientToken: str
         :param HostChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的購買時長、是否設置自動續約等屬性。若指定實例的付費模式爲預付費則該參數必傳。
         :type HostChargePrepaid: :class:`taifucloudcloud.cvm.v20170312.models.ChargePrepaid`
@@ -62,7 +62,7 @@ class AllocateHostsRequest(AbstractModel):
         :type HostType: str
         :param HostCount: 購買CDH實例數量。
         :type HostCount: int
-        :param TagSpecification: 标簽描述清單。通過指定該參數可以同時綁定标簽到相應的資源實例。
+        :param TagSpecification: 標簽描述清單。通過指定該參數可以同時綁定標簽到相應的資源實例。
         :type TagSpecification: list of TagSpecification
         """
         self.Placement = None
@@ -203,7 +203,7 @@ class ChargePrepaid(AbstractModel):
         """
         :param Period: 購買實例的時長，單位：月。取值範圍：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
         :type Period: int
-        :param RenewFlag: 自動續約标識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>預設取值：NOTIFY_AND_AUTO_RENEW。若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
+        :param RenewFlag: 自動續約標識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>預設取值：NOTIFY_AND_AUTO_RENEW。若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
         :type RenewFlag: str
         """
         self.Period = None
@@ -226,7 +226,7 @@ class CreateDisasterRecoverGroupRequest(AbstractModel):
         :type Name: str
         :param Type: 分散置放群組類型，取值範圍：<br><li>HOST：物理機<br><li>SW：交換機<br><li>RACK：機架
         :type Type: str
-        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。<br>更多詳細訊息請參閱：如何保證幂等性。
+        :param ClientToken: 用於保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。<br>更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
         """
         self.Name = None
@@ -298,7 +298,7 @@ class CreateImageRequest(AbstractModel):
         :type ForcePoweroff: str
         :param Sysprep: 創建Windows映像時是否啓用Sysprep
         :type Sysprep: str
-        :param Reboot: 實例處于運作中時，是否允許關機執行制作映像任務。
+        :param Reboot: 實例處於運作中時，是否允許關機執行制作映像任務。
         :type Reboot: str
         :param DataDiskIds: 實例需要制作映像的數據盤Id
         :type DataDiskIds: list of str
@@ -411,7 +411,7 @@ class DataDisk(AbstractModel):
 <li>TRUE：子機銷毀時，銷毀數據盤，只支援按小時後付費雲盤
 <li>FALSE：子機銷毀時，保留數據盤<br>
 預設取值：TRUE<br>
-該參數目前僅用于 `RunInstances` 介面。
+該參數目前僅用於 `RunInstances` 介面。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DeleteWithInstance: bool
         :param SnapshotId: 數據盤快照ID。選擇的數據盤快照大小需小於數據盤大小。
@@ -589,9 +589,9 @@ class DescribeDisasterRecoverGroupsRequest(AbstractModel):
         :type DisasterRecoverGroupIds: list of str
         :param Name: 分散置放群組名稱，支援模糊比對。
         :type Name: str
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.DisasterRecoverGroupIds = None
@@ -786,9 +786,9 @@ class DescribeImagesRequest(AbstractModel):
 <li> image-type - String - 是否必填： 否 - （過濾條件）按照映像類型進行過濾。取值範圍：詳見[映像類型](https://cloud.taifucloud.com/document/product/213/9452#image_type)。</li>
 <li> image-state - String - 是否必填： 否 - （過濾條件）按照映像狀态進行過濾。取值範圍：詳見[映像狀态](https://cloud.taifucloud.com/document/product/213/9452#image_state)。</li>
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于Offset詳見[API簡介](/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)。
+        :param Offset: 偏移量，預設爲0。關於Offset詳見[API簡介](/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)。
         :type Offset: int
-        :param Limit: 數量限制，預設爲20，最大值爲100。關于Limit詳見[API簡介](/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)。
+        :param Limit: 數量限制，預設爲20，最大值爲100。關於Limit詳見[API簡介](/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)。
         :type Limit: int
         :param InstanceType: 實例類型，如 `S1.SMALL1`
         :type InstanceType: str
@@ -820,7 +820,7 @@ class DescribeImagesResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param ImageSet: 一個關于映像詳細訊息的結構體，主要包括映像的主要狀态與屬性。
+        :param ImageSet: 一個關於映像詳細訊息的結構體，主要包括映像的主要狀态與屬性。
         :type ImageSet: list of Image
         :param TotalCount: 符合要求的映像數量。
         :type TotalCount: int
@@ -1114,14 +1114,14 @@ class DescribeInstancesRequest(AbstractModel):
 <li> instance-charge-type - String - 是否必填：否 -（過濾條件）按照實例計費模式過濾。 (PREPAID：表示預付費，即包年包月 | POSTPAID_BY_HOUR：表示後付費，即按量計費 | CDHPAID：表示[CDH](https://cloud.taifucloud.com/document/product/416)付費，即只對[CDH](https://cloud.taifucloud.com/document/product/416)計費，不對[CDH](https://cloud.taifucloud.com/document/product/416)上的實例計費。 )  </li>
 <li> private-ip-address - String - 是否必填：否 - （過濾條件）按照實例主網卡的内網IP過濾。</li>
 <li> public-ip-address - String - 是否必填：否 - （過濾條件）按照實例主網卡的公網IP過濾，包含實例創建時自動分配的IP和實例創建後手動綁定的彈性IP。</li>
-<li> tag-key - String - 是否必填：否 - （過濾條件）按照标簽鍵進行過濾。</li>
-<li> tag-value - String - 是否必填：否 - （過濾條件）按照标簽值進行過濾。</li>
-<li> tag:tag-key - String - 是否必填：否 - （過濾條件）按照标簽鍵值對進行過濾。 tag-key使用具體的标簽鍵進行替換。使用請參考範例2。</li>
+<li> tag-key - String - 是否必填：否 - （過濾條件）按照標簽鍵進行過濾。</li>
+<li> tag-value - String - 是否必填：否 - （過濾條件）按照標簽值進行過濾。</li>
+<li> tag:tag-key - String - 是否必填：否 - （過濾條件）按照標簽鍵值對進行過濾。 tag-key使用具體的標簽鍵進行替換。使用請參考範例2。</li>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`InstanceIds`和`Filters`。
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.InstanceIds = None
@@ -1181,9 +1181,9 @@ class DescribeInstancesStatusRequest(AbstractModel):
         """
         :param InstanceIds: 按照一個或者多個實例ID查詢。實例ID形如：`ins-11112222`。此參數的具體格式可參考API[簡介](https://cloud.taifucloud.com/document/api/213/15688)的`id.N`一節）。每次請求的實例的上限爲100。
         :type InstanceIds: list of str
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.InstanceIds = None
@@ -1272,9 +1272,9 @@ class DescribeKeyPairsRequest(AbstractModel):
 <li> project-id - Integer - 是否必填：否 -（過濾條件）按照項目ID過濾。可以通過[項目清單](https://console.cloud.taifucloud.com/project)查詢項目ID，或者調用介面 [DescribeProject](https://cloud.taifucloud.com/document/api/378/4400)，取返回訊息中的projectId獲取項目ID。</li>
 <li> key-name - String - 是否必填：否 -（過濾條件）按照金鑰對名稱過濾。</li>參數不支援同時指定 `KeyIds` 和 `Filters`。
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于 `Offset` 的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。返回數量，預設爲20，最大值爲100。關于 `Limit` 的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於 `Offset` 的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。返回數量，預設爲20，最大值爲100。關於 `Limit` 的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于 `Limit` 的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於 `Limit` 的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.KeyIds = None
@@ -1632,11 +1632,11 @@ class Externals(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """>描述鍵值對過濾器，用于條件過濾查詢。例如過濾ID、名稱、狀态等
+    """>描述鍵值對過濾器，用於條件過濾查詢。例如過濾ID、名稱、狀态等
     > * 若存在多個`Filter`時，`Filter`間的關系爲邏輯與（`AND`）關系。
     > * 若同一個`Filter`存在多個`Values`，同一`Filter`下`Values`間的關系爲邏輯或（`OR`）關系。
     >
-    > 以[DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲 一區 ***并且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
+    > 以[DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲 一區 ***並且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
     ```
     Filters.0.Name=zone
     &Filters.0.Values.0=ap-guangzhou-1
@@ -1680,7 +1680,7 @@ class HostItem(AbstractModel):
         :type HostName: str
         :param HostChargeType: cdh實例付費模式
         :type HostChargeType: str
-        :param RenewFlag: cdh實例自動續約标記
+        :param RenewFlag: cdh實例自動續約標記
         :type RenewFlag: str
         :param CreatedTime: cdh實例創建時間
         :type CreatedTime: str
@@ -1771,7 +1771,7 @@ class HostResource(AbstractModel):
 
 
 class Image(AbstractModel):
-    """一個關于映像詳細訊息的結構體，主要包括映像的主要狀态與屬性。
+    """一個關於映像詳細訊息的結構體，主要包括映像的主要狀态與屬性。
 
     """
 
@@ -2101,7 +2101,7 @@ class InquiryPriceResetInstanceRequest(AbstractModel):
         :type ImageId: str
         :param SystemDisk: 實例系統盤配置訊息。系統盤爲雲盤的實例可以通過該參數指定重裝後的系統盤大小來實現對系統盤的擴容操作，若不指定則預設系統盤大小保持不變。系統盤大小只支援擴容不支援縮容；重裝只支援修改系統盤的大小，不能修改系統盤的類型。
         :type SystemDisk: :class:`taifucloudcloud.cvm.v20170312.models.SystemDisk`
-        :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，并以站内信方式知會到用戶。
+        :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，並以站内信方式知會到用戶。
         :type LoginSettings: :class:`taifucloudcloud.cvm.v20170312.models.LoginSettings`
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
         :type EnhancedService: :class:`taifucloudcloud.cvm.v20170312.models.EnhancedService`
@@ -2161,9 +2161,9 @@ class InquiryPriceResetInstancesInternetMaxBandwidthRequest(AbstractModel):
         :type InstanceIds: list of str
         :param InternetAccessible: 公網出頻寬配置。不同機型頻寬上限範圍不一緻，具體限制詳見頻寬限制對賬表。暫時只支援`InternetMaxBandwidthOut`參數。
         :type InternetAccessible: :class:`taifucloudcloud.cvm.v20170312.models.InternetAccessible`
-        :param StartTime: 頻寬生效的起始時間。格式：`YYYY-MM-DD`，例如：`2016-10-30`。起始時間不能早于當前時間。如果起始時間是今天則新設置的頻寬立即生效。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
+        :param StartTime: 頻寬生效的起始時間。格式：`YYYY-MM-DD`，例如：`2016-10-30`。起始時間不能早於當前時間。如果起始時間是今天則新設置的頻寬立即生效。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
         :type StartTime: str
-        :param EndTime: 頻寬生效的終止時間。格式：`YYYY-MM-DD`，例如：`2016-10-30`。新設置的頻寬的有效期包含終止時間此日期。終止時間不能晚于包年包月實例的到期時間。實例的到期時間可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`ExpiredTime`獲取。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
+        :param EndTime: 頻寬生效的終止時間。格式：`YYYY-MM-DD`，例如：`2016-10-30`。新設置的頻寬的有效期包含終止時間此日期。終止時間不能晚於包年包月實例的到期時間。實例的到期時間可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`ExpiredTime`獲取。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
         :type EndTime: str
         """
         self.InstanceIds = None
@@ -2257,9 +2257,9 @@ class InquiryPriceResizeInstanceDisksRequest(AbstractModel):
         """
         :param InstanceId: 待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。
         :type InstanceId: str
-        :param DataDisks: 待擴容的數據盤配置訊息。只支援擴容非彈性數據盤（[`DescribeDisks`](https://cloud.taifucloud.com/document/api/362/16315)介面返回值中的`Portable`爲`false`表示非彈性），且[數據盤類型](/document/api/213/9452#block_device)爲：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。數據盤容量單位：GB。最小擴容步長：10G。關于數據盤類型的選擇請參考硬碟産品簡介。可選數據盤類型受到實例類型`InstanceType`限制。另外允許擴容的最大容量也因數據盤類型的不同而有所差異。
+        :param DataDisks: 待擴容的數據盤配置訊息。只支援擴容非彈性數據盤（[`DescribeDisks`](https://cloud.taifucloud.com/document/api/362/16315)介面返回值中的`Portable`爲`false`表示非彈性），且[數據盤類型](/document/api/213/9452#block_device)爲：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。數據盤容量單位：GB。最小擴容步長：10G。關於數據盤類型的選擇請參考硬碟産品簡介。可選數據盤類型受到實例類型`InstanceType`限制。另外允許擴容的最大容量也因數據盤類型的不同而有所差異。
         :type DataDisks: list of DataDisk
-        :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再重置用戶密碼。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機<br><li>FALSE：表示在正常關機失敗後不進行強制關機<br><br>預設取值：FALSE。<br><br>強制關機的效果等同于關閉物理電腦的電源開關。強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
+        :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再重置用戶密碼。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機<br><li>FALSE：表示在正常關機失敗後不進行強制關機<br><br>預設取值：FALSE。<br><br>強制關機的效果等同於關閉物理電腦的電源開關。強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
         :type ForceStop: bool
         """
         self.InstanceId = None
@@ -2330,17 +2330,17 @@ class InquiryPriceRunInstancesRequest(AbstractModel):
         :type InstanceCount: int
         :param InstanceName: 實例顯示名稱。<br><li>不指定實例顯示名稱則預設顯示‘未命名’。</li><li>購買多台實例，如果指定模式串`{R:x}`，表示生成數字`[x, x+n-1]`，其中`n`表示購買實例的數量，例如`server_{R:3}`，購買1台時，實例顯示名稱爲`server_3`；購買2台時，實例顯示名稱分别爲`server_3`，`server_4`。支援指定多個模式串`{R:x}`。</li><li>購買多台實例，如果不指定模式串，則在實例顯示名稱添加後綴`1、2...n`，其中`n`表示購買實例的數量，例如`server_`，購買2台時，實例顯示名稱分别爲`server_1`，`server_2`。
         :type InstanceName: str
-        :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，并以站内信方式知會到用戶。
+        :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，並以站内信方式知會到用戶。
         :type LoginSettings: :class:`taifucloudcloud.cvm.v20170312.models.LoginSettings`
         :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.taifucloud.com/document/api/215/15808) 的返回值中的sgId欄位來獲取。若不指定該參數，則預設不綁定安全組。
         :type SecurityGroupIds: list of str
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
         :type EnhancedService: :class:`taifucloudcloud.cvm.v20170312.models.EnhancedService`
-        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。<br>更多詳細訊息請參閱：如何保證幂等性。
+        :param ClientToken: 用於保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。<br>更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
-        :param HostName: 雲伺服器的主機名。<br><li>點号（.）和短橫線（-）不能作爲 HostName 的首尾字元，不能連續使用。<br><li>Windows 實例：名字元長度爲[2, 15]，允許字母（不限制大小寫）、數字和短橫線（-）組成，不支援點号（.），不能全是數字。<br><li>其他類型（Linux 等）實例：字元長度爲[2, 30]，允許支援多個點号，點之間爲一段，每段允許字母（不限制大小寫）、數字和短橫線（-）組成。
+        :param HostName: 雲伺服器的主機名。<br><li>點號（.）和短橫線（-）不能作爲 HostName 的首尾字元，不能連續使用。<br><li>Windows 實例：名字元長度爲[2, 15]，允許字母（不限制大小寫）、數字和短橫線（-）組成，不支援點號（.），不能全是數字。<br><li>其他類型（Linux 等）實例：字元長度爲[2, 30]，允許支援多個點號，點之間爲一段，每段允許字母（不限制大小寫）、數字和短橫線（-）組成。
         :type HostName: str
-        :param TagSpecification: 标簽描述清單。通過指定該參數可以同時綁定标簽到相應的資源實例，當前僅支援綁定标簽到雲主機實例。
+        :param TagSpecification: 標簽描述清單。通過指定該參數可以同時綁定標簽到相應的資源實例，當前僅支援綁定標簽到雲主機實例。
         :type TagSpecification: list of TagSpecification
         :param InstanceMarketOptions: 實例的市場相關選項，如競價實例相關參數
         :type InstanceMarketOptions: :class:`taifucloudcloud.cvm.v20170312.models.InstanceMarketOptionsRequest`
@@ -2473,11 +2473,11 @@ class Instance(AbstractModel):
         :type VirtualPrivateCloud: :class:`taifucloudcloud.cvm.v20170312.models.VirtualPrivateCloud`
         :param ImageId: 生産實例所使用的映像`ID`。
         :type ImageId: str
-        :param RenewFlag: 自動續約标識。取值範圍：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将過期，但不自動續約<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将過期，而且自動續約<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将過期，也不自動續約。
+        :param RenewFlag: 自動續約標識。取值範圍：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将過期，但不自動續約<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将過期，而且自動續約<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将過期，也不自動續約。
         :type RenewFlag: str
-        :param CreatedTime: 創建時間。按照`ISO8601`标準表示，并且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
+        :param CreatedTime: 創建時間。按照`ISO8601`標準表示，並且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
         :type CreatedTime: str
-        :param ExpiredTime: 到期時間。按照`ISO8601`标準表示，并且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
+        :param ExpiredTime: 到期時間。按照`ISO8601`標準表示，並且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
         :type ExpiredTime: str
         :param OsName: 作業系統名稱。
         :type OsName: str
@@ -2487,10 +2487,10 @@ class Instance(AbstractModel):
         :type LoginSettings: :class:`taifucloudcloud.cvm.v20170312.models.LoginSettings`
         :param InstanceState: 實例狀态。取值範圍：<br><li>PENDING：表示創建中<br></li><li>LAUNCH_FAILED：表示創建失敗<br></li><li>RUNNING：表示運作中<br></li><li>STOPPED：表示關機<br></li><li>STARTING：表示開機中<br></li><li>STOPPING：表示關機中<br></li><li>REBOOTING：表示重啓中<br></li><li>SHUTDOWN：表示停止待銷毀<br></li><li>TERMINATING：表示銷毀中。<br></li>
         :type InstanceState: str
-        :param Tags: 實例關聯的标簽清單。
+        :param Tags: 實例關聯的標簽清單。
         :type Tags: list of Tag
         :param StopChargingMode: 實例的關機計費模式。
-取值範圍：<br><li>KEEP_CHARGING：關機繼續收費<br><li>STOP_CHARGING：關機停止收費<li>NOT_APPLICABLE：實例處于非關機狀态或者不适用關機停止計費的條件<br>
+取值範圍：<br><li>KEEP_CHARGING：關機繼續收費<br><li>STOP_CHARGING：關機停止收費<li>NOT_APPLICABLE：實例處於非關機狀态或者不适用關機停止計費的條件<br>
         :type StopChargingMode: str
         """
         self.Placement = None
@@ -2575,7 +2575,7 @@ class InstanceChargePrepaid(AbstractModel):
         """
         :param Period: 購買實例的時長，單位：月。取值範圍：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
         :type Period: int
-        :param RenewFlag: 自動續約标識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>預設取值：NOTIFY_AND_MANUAL_RENEW。若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
+        :param RenewFlag: 自動續約標識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>預設取值：NOTIFY_AND_MANUAL_RENEW。若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
         :type RenewFlag: str
         """
         self.Period = None
@@ -2589,7 +2589,7 @@ class InstanceChargePrepaid(AbstractModel):
 
 class InstanceFamilyConfig(AbstractModel):
     """描述實例的機型族配置訊息
-    形如：{'InstanceFamilyName': '标準型S1', 'InstanceFamily': 'S1'}、{'InstanceFamilyName': '網絡優化型N1', 'InstanceFamily': 'N1'}、{'InstanceFamilyName': '高IO型I1', 'InstanceFamily': 'I1'}等。
+    形如：{'InstanceFamilyName': '標準型S1', 'InstanceFamily': 'S1'}、{'InstanceFamilyName': '網絡優化型N1', 'InstanceFamily': 'N1'}、{'InstanceFamilyName': '高IO型I1', 'InstanceFamily': 'I1'}等。
 
     """
 
@@ -2772,7 +2772,7 @@ class InternetAccessible(AbstractModel):
         :type InternetChargeType: str
         :param InternetMaxBandwidthOut: 公網出頻寬上限，單位：Mbps。預設值：0Mbps。不同機型頻寬上限範圍不一緻，具體限制詳見[購買網絡頻寬](/document/product/213/509)。
         :type InternetMaxBandwidthOut: int
-        :param PublicIpAssigned: 是否分配公網IP。取值範圍：<br><li>TRUE：表示分配公網IP<br><li>FALSE：表示不分配公網IP<br><br>當公網頻寬大于0Mbps時，可自由選擇開通與否，預設開通公網IP；當公網頻寬爲0，則不允許分配公網IP。
+        :param PublicIpAssigned: 是否分配公網IP。取值範圍：<br><li>TRUE：表示分配公網IP<br><li>FALSE：表示不分配公網IP<br><br>當公網頻寬大於0Mbps時，可自由選擇開通與否，預設開通公網IP；當公網頻寬爲0，則不允許分配公網IP。
         :type PublicIpAssigned: bool
         :param BandwidthPackageId: 頻寬包ID。可通過[`DescribeBandwidthPackages`](https://cloud.taifucloud.com/document/api/215/19209)介面返回值中的`BandwidthPackageId`獲取。
         :type BandwidthPackageId: str
@@ -2797,9 +2797,9 @@ class InternetBandwidthConfig(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 開始時間。按照`ISO8601`标準表示，并且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
+        :param StartTime: 開始時間。按照`ISO8601`標準表示，並且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
         :type StartTime: str
-        :param EndTime: 結束時間。按照`ISO8601`标準表示，并且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
+        :param EndTime: 結束時間。按照`ISO8601`標準表示，並且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
         :type EndTime: str
         :param InternetAccessible: 實例頻寬訊息。
         :type InternetAccessible: :class:`taifucloudcloud.cvm.v20170312.models.InternetAccessible`
@@ -2878,7 +2878,7 @@ class KeyPair(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: 金鑰對的`ID`，是金鑰對的唯一标識。
+        :param KeyId: 金鑰對的`ID`，是金鑰對的唯一標識。
         :type KeyId: str
         :param KeyName: 金鑰對名稱。
         :type KeyName: str
@@ -2892,7 +2892,7 @@ class KeyPair(AbstractModel):
         :type PrivateKey: str
         :param AssociatedInstanceIds: 金鑰關聯的實例`ID`清單。
         :type AssociatedInstanceIds: list of str
-        :param CreatedTime: 創建時間。按照`ISO8601`标準表示，并且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
+        :param CreatedTime: 創建時間。按照`ISO8601`標準表示，並且使用`UTC`時間。格式爲：`YYYY-MM-DDThh:mm:ssZ`。
         :type CreatedTime: str
         """
         self.KeyId = None
@@ -2952,7 +2952,7 @@ class LoginSettings(AbstractModel):
 
     def __init__(self):
         """
-        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>Linux實例密碼必須8到16位，至少包括兩項[a-z，A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? / ]中的特殊符号。<br><li>Windows實例密碼必須12到16位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = { } [ ] : ; ' , . ? /]中的特殊符号。<br><br>若不指定該參數，則由系統随機生成密碼，并通過站内信方式通知到用戶。
+        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>Linux實例密碼必須8到16位，至少包括兩項[a-z，A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? / ]中的特殊符號。<br><li>Windows實例密碼必須12到16位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = { } [ ] : ; ' , . ? /]中的特殊符號。<br><br>若不指定該參數，則由系統随機生成密碼，並通過站内信方式通知到用戶。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Password: str
         :param KeyIds: 金鑰ID清單。關聯金鑰後，就可以通過對應的私鑰來訪問實例；KeyId可通過介面DescribeKeyPairs獲取，金鑰與密碼不能同時指定，同時Windows作業系統不支援指定金鑰。當前僅支援購買的時候指定一個金鑰。
@@ -3022,7 +3022,7 @@ class ModifyHostsAttributeRequest(AbstractModel):
         :type HostIds: list of str
         :param HostName: CDH實例顯示名稱。可任意命名，但不得超過60個字元。
         :type HostName: str
-        :param RenewFlag: 自動續約标識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
+        :param RenewFlag: 自動續約標識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
         :type RenewFlag: str
         """
         self.HostIds = None
@@ -3104,7 +3104,7 @@ class ModifyImageSharePermissionRequest(AbstractModel):
         """
         :param ImageId: 映像ID，形如`img-gvbnzy6f`。映像Id可以通過如下方式獲取：<br><li>通過[DescribeImages](https://cloud.taifucloud.com/document/api/213/15715)介面返回的`ImageId`獲取。<br><li>通過[映像控制台](https://console.cloud.taifucloud.com/cvm/image)獲取。 <br>映像ID必須指定爲狀态爲`NORMAL`的映像。映像狀态請參考[映像數據表](/document/api/213/9452#image_state)。
         :type ImageId: str
-        :param AccountIds: 接收分享映像的賬号Id清單，array型參數的格式可以參考[API簡介](/document/api/213/568)。帳号ID不同于 号，查詢用戶帳号ID請檢視[帳号訊息](https://console.cloud.taifucloud.com/developer)中的帳号ID欄。
+        :param AccountIds: 接收分享映像的賬號Id清單，array型參數的格式可以參考[API簡介](/document/api/213/568)。帳號ID不同於 號，查詢用戶帳號ID請檢視[帳號訊息](https://console.cloud.taifucloud.com/developer)中的帳號ID欄。
         :type AccountIds: list of str
         :param Permission: 操作，包括 `SHARE`，`CANCEL`。其中`SHARE`代表分享操作，`CANCEL`代表取消分享操作。
         :type Permission: str
@@ -3232,7 +3232,7 @@ class ModifyInstancesProjectRequest(AbstractModel):
         """
         :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/9388) API返回值中的`InstanceId`獲取。每次請求允許操作的實例數量上限是100。
         :type InstanceIds: list of str
-        :param ProjectId: 項目ID。項目可以使用[AddProject](https://cloud.taifucloud.com/doc/api/403/4398)介面創建。後續使用[DescribeInstances](https://cloud.taifucloud.com/document/api/213/9388)介面查詢實例時，項目ID可用于過濾結果。
+        :param ProjectId: 項目ID。項目可以使用[AddProject](https://cloud.taifucloud.com/doc/api/403/4398)介面創建。後續使用[DescribeInstances](https://cloud.taifucloud.com/document/api/213/9388)介面查詢實例時，項目ID可用於過濾結果。
         :type ProjectId: int
         """
         self.InstanceIds = None
@@ -3270,7 +3270,7 @@ class ModifyInstancesRenewFlagRequest(AbstractModel):
         """
         :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/9388) API返回值中的`InstanceId`獲取。每次請求允許操作的實例數量上限是100。
         :type InstanceIds: list of str
-        :param RenewFlag: 自動續約标識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
+        :param RenewFlag: 自動續約標識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
         :type RenewFlag: str
         """
         self.InstanceIds = None
@@ -3454,7 +3454,7 @@ class Placement(AbstractModel):
         :type Zone: str
         :param ProjectId: 實例所屬項目ID。該參數可以通過調用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 欄位來獲取。不填爲預設項目。
         :type ProjectId: int
-        :param HostIds: 實例所屬的專用宿主機ID清單。如果您有購買專用宿主機并且指定了該參數，則您購買的實例就會随機的佈署在這些專用宿主機上。
+        :param HostIds: 實例所屬的專用宿主機ID清單。如果您有購買專用宿主機並且指定了該參數，則您購買的實例就會随機的佈署在這些專用宿主機上。
         :type HostIds: list of str
         """
         self.Zone = None
@@ -3654,7 +3654,7 @@ class ResetInstanceRequest(AbstractModel):
         :type ImageId: str
         :param SystemDisk: 實例系統盤配置訊息。系統盤爲雲盤的實例可以通過該參數指定重裝後的系統盤大小來實現對系統盤的擴容操作，若不指定則預設系統盤大小保持不變。系統盤大小只支援擴容不支援縮容；重裝只支援修改系統盤的大小，不能修改系統盤的類型。
         :type SystemDisk: :class:`taifucloudcloud.cvm.v20170312.models.SystemDisk`
-        :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，并以站内信方式知會到用戶。
+        :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，並以站内信方式知會到用戶。
         :type LoginSettings: :class:`taifucloudcloud.cvm.v20170312.models.LoginSettings`
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
         :type EnhancedService: :class:`taifucloudcloud.cvm.v20170312.models.EnhancedService`
@@ -3712,9 +3712,9 @@ class ResetInstancesInternetMaxBandwidthRequest(AbstractModel):
         :type InstanceIds: list of str
         :param InternetAccessible: 公網出頻寬配置。不同機型頻寬上限範圍不一緻，具體限制詳見頻寬限制對賬表。暫時只支援 `InternetMaxBandwidthOut` 參數。
         :type InternetAccessible: :class:`taifucloudcloud.cvm.v20170312.models.InternetAccessible`
-        :param StartTime: 頻寬生效的起始時間。格式：`YYYY-MM-DD`，例如：`2016-10-30`。起始時間不能早于當前時間。如果起始時間是今天則新設置的頻寬立即生效。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
+        :param StartTime: 頻寬生效的起始時間。格式：`YYYY-MM-DD`，例如：`2016-10-30`。起始時間不能早於當前時間。如果起始時間是今天則新設置的頻寬立即生效。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
         :type StartTime: str
-        :param EndTime: 頻寬生效的終止時間。格式： `YYYY-MM-DD` ，例如：`2016-10-30` 。新設置的頻寬的有效期包含終止時間此日期。終止時間不能晚于包年包月實例的到期時間。實例的到期時間可通過 [`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/9388)介面返回值中的`ExpiredTime`獲取。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
+        :param EndTime: 頻寬生效的終止時間。格式： `YYYY-MM-DD` ，例如：`2016-10-30` 。新設置的頻寬的有效期包含終止時間此日期。終止時間不能晚於包年包月實例的到期時間。實例的到期時間可通過 [`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/9388)介面返回值中的`ExpiredTime`獲取。該參數只對包年包月頻寬有效，其他模式頻寬不支援該參數，否則介面會以相應錯誤碼返回。
         :type EndTime: str
         """
         self.InstanceIds = None
@@ -3758,11 +3758,11 @@ class ResetInstancesPasswordRequest(AbstractModel):
         """
         :param InstanceIds: 一個或多個待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728) API返回值中的`InstanceId`獲取。每次請求允許操作的實例數量上限是100。
         :type InstanceIds: list of str
-        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>`Linux`實例密碼必須8到16位，至少包括兩項`[a-z，A-Z]、[0-9]`和`[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]`中的符号。密碼不允許以`/`符号開頭。<br><li>`Windows`實例密碼必須12到16位，至少包括三項`[a-z]，[A-Z]，[0-9]`和`[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]`中的符号。密碼不允許以`/`符号開頭。<br><li>如果實例即包含`Linux`實例又包含`Windows`實例，則密碼複雜度限制按照`Windows`實例的限制。
+        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>`Linux`實例密碼必須8到16位，至少包括兩項`[a-z，A-Z]、[0-9]`和`[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]`中的符號。密碼不允許以`/`符號開頭。<br><li>`Windows`實例密碼必須12到16位，至少包括三項`[a-z]，[A-Z]，[0-9]`和`[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]`中的符號。密碼不允許以`/`符號開頭。<br><li>如果實例即包含`Linux`實例又包含`Windows`實例，則密碼複雜度限制按照`Windows`實例的限制。
         :type Password: str
         :param UserName: 待重置密碼的實例作業系統用戶名。不得超過64個字元。
         :type UserName: str
-        :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再重置用戶密碼。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機<br><li>FALSE：表示在正常關機失敗後不進行強制關機<br><br>預設取值：FALSE。<br><br>強制關機的效果等同于關閉物理電腦的電源開關。強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
+        :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再重置用戶密碼。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機<br><li>FALSE：表示在正常關機失敗後不進行強制關機<br><br>預設取值：FALSE。<br><br>強制關機的效果等同於關閉物理電腦的電源開關。強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
         :type ForceStop: bool
         """
         self.InstanceIds = None
@@ -3806,7 +3806,7 @@ class ResetInstancesTypeRequest(AbstractModel):
         :type InstanceIds: list of str
         :param InstanceType: 實例機型。不同實例機型指定了不同的資源規格，具體取值可通過調用介面[`DescribeInstanceTypeConfigs`](https://cloud.taifucloud.com/document/api/213/15749)來獲得最新的規格表或參見[實例類型](https://cloud.taifucloud.com/document/product/213/11518)描述。
         :type InstanceType: str
-        :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再重置用戶密碼。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機<br><li>FALSE：表示在正常關機失敗後不進行強制關機<br><br>預設取值：FALSE。<br><br>強制關機的效果等同于關閉物理電腦的電源開關。強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
+        :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再重置用戶密碼。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機<br><li>FALSE：表示在正常關機失敗後不進行強制關機<br><br>預設取值：FALSE。<br><br>強制關機的效果等同於關閉物理電腦的電源開關。強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
         :type ForceStop: bool
         """
         self.InstanceIds = None
@@ -3846,9 +3846,9 @@ class ResizeInstanceDisksRequest(AbstractModel):
         """
         :param InstanceId: 待操作的實例ID。可通過[`DescribeInstances`](https://cloud.taifucloud.com/document/api/213/15728)介面返回值中的`InstanceId`獲取。
         :type InstanceId: str
-        :param DataDisks: 待擴容的數據盤配置訊息。只支援擴容非彈性數據盤（[`DescribeDisks`](https://cloud.taifucloud.com/document/api/362/16315)介面返回值中的`Portable`爲`false`表示非彈性），且[數據盤類型](/document/api/213/9452#block_device)爲：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。數據盤容量單位：GB。最小擴容步長：10G。關于數據盤類型的選擇請參考硬碟産品簡介。可選數據盤類型受到實例類型`InstanceType`限制。另外允許擴容的最大容量也因數據盤類型的不同而有所差異。
+        :param DataDisks: 待擴容的數據盤配置訊息。只支援擴容非彈性數據盤（[`DescribeDisks`](https://cloud.taifucloud.com/document/api/362/16315)介面返回值中的`Portable`爲`false`表示非彈性），且[數據盤類型](/document/api/213/9452#block_device)爲：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。數據盤容量單位：GB。最小擴容步長：10G。關於數據盤類型的選擇請參考硬碟産品簡介。可選數據盤類型受到實例類型`InstanceType`限制。另外允許擴容的最大容量也因數據盤類型的不同而有所差異。
         :type DataDisks: list of DataDisk
-        :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再重置用戶密碼。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機<br><li>FALSE：表示在正常關機失敗後不進行強制關機<br><br>預設取值：FALSE。<br><br>強制關機的效果等同于關閉物理電腦的電源開關。強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
+        :param ForceStop: 是否對運作中的實例選擇強制關機。建議對運作中的實例先手動關機，然後再重置用戶密碼。取值範圍：<br><li>TRUE：表示在正常關機失敗後進行強制關機<br><li>FALSE：表示在正常關機失敗後不進行強制關機<br><br>預設取值：FALSE。<br><br>強制關機的效果等同於關閉物理電腦的電源開關。強制關機可能會導緻數據丢失或文件系統損壞，請僅在服務器不能正常關機時使用。
         :type ForceStop: bool
         """
         self.InstanceId = None
@@ -3895,12 +3895,12 @@ class RunInstancesRequest(AbstractModel):
         :type Placement: :class:`taifucloudcloud.cvm.v20170312.models.Placement`
         :param ImageId: 指定有效的[映像](https://cloud.taifucloud.com/document/product/213/4940)ID，格式形如`img-xxx`。映像類型分爲四種：<br/><li>公共映像</li><li>自定義映像</li><li>共享映像</li><li>服務市場映像</li><br/>可通過以下方式獲取可用的映像ID：<br/><li>`公共映像`、`自定義映像`、`共享映像`的映像ID可通過登入[控制台](https://console.cloud.taifucloud.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查詢；`服務映像市場`的映像ID可通過[雲市場](https://market.cloud.taifucloud.com/list)查詢。</li><li>通過調用介面 [DescribeImages](https://cloud.taifucloud.com/document/api/213/15715) ，取返回訊息中的`ImageId`欄位。</li>
         :type ImageId: str
-        :param InstanceChargeType: 實例[計費類型](https://cloud.taifucloud.com/document/product/213/2180)。<br><li>PREPAID：預付費，即包年包月<br><li>POSTPAID_BY_HOUR：按小時後付費<br><li>CDHPAID：獨享子機（基于專用宿主機創建，宿主機部分的資源不收費）<br><li>SPOTPAID：競價付費<br>預設值：POSTPAID_BY_HOUR。
+        :param InstanceChargeType: 實例[計費類型](https://cloud.taifucloud.com/document/product/213/2180)。<br><li>PREPAID：預付費，即包年包月<br><li>POSTPAID_BY_HOUR：按小時後付費<br><li>CDHPAID：獨享子機（基於專用宿主機創建，宿主機部分的資源不收費）<br><li>SPOTPAID：競價付費<br>預設值：POSTPAID_BY_HOUR。
         :type InstanceChargeType: str
         :param InstanceChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數可以指定包年包月實例的購買時長、是否設置自動續約等屬性。若指定實例的付費模式爲預付費則該參數必傳。
         :type InstanceChargePrepaid: :class:`taifucloudcloud.cvm.v20170312.models.InstanceChargePrepaid`
         :param InstanceType: 實例機型。不同實例機型指定了不同的資源規格。
-<br><li>對于付費模式爲PREPAID或POSTPAID\_BY\_HOUR的實例創建，具體取值可通過調用介面[DescribeInstanceTypeConfigs](https://cloud.taifucloud.com/document/api/213/15749)來獲得最新的規格表或參見[實例類型](https://cloud.taifucloud.com/document/product/213/11518)描述。若不指定該參數，則預設機型爲S1.SMALL1。<br><li>對于付費模式爲CDHPAID的實例創建，該參數以"CDH_"爲前綴，根據cpu和内存配置生成，具體形式爲：CDH_XCXG，例如對于創建cpu爲1核，内存爲1G大小的專用宿主機的實例，該參數應該爲CDH_1C1G。
+<br><li>對於付費模式爲PREPAID或POSTPAID\_BY\_HOUR的實例創建，具體取值可通過調用介面[DescribeInstanceTypeConfigs](https://cloud.taifucloud.com/document/api/213/15749)來獲得最新的規格表或參見[實例類型](https://cloud.taifucloud.com/document/product/213/11518)描述。若不指定該參數，則預設機型爲S1.SMALL1。<br><li>對於付費模式爲CDHPAID的實例創建，該參數以"CDH_"爲前綴，根據cpu和内存配置生成，具體形式爲：CDH_XCXG，例如對於創建cpu爲1核，内存爲1G大小的專用宿主機的實例，該參數應該爲CDH_1C1G。
         :type InstanceType: str
         :param SystemDisk: 實例系統盤配置訊息。若不指定該參數，則按照系統預設值進行分配。
         :type SystemDisk: :class:`taifucloudcloud.cvm.v20170312.models.SystemDisk`
@@ -3914,25 +3914,25 @@ class RunInstancesRequest(AbstractModel):
         :type InstanceCount: int
         :param InstanceName: 實例顯示名稱。<br><li>不指定實例顯示名稱則預設顯示‘未命名’。</li><li>購買多台實例，如果指定模式串`{R:x}`，表示生成數字`[x, x+n-1]`，其中`n`表示購買實例的數量，例如`server_{R:3}`，購買1台時，實例顯示名稱爲`server_3`；購買2台時，實例顯示名稱分别爲`server_3`，`server_4`。支援指定多個模式串`{R:x}`。</li><li>購買多台實例，如果不指定模式串，則在實例顯示名稱添加後綴`1、2...n`，其中`n`表示購買實例的數量，例如`server_`，購買2台時，實例顯示名稱分别爲`server_1`，`server_2`。
         :type InstanceName: str
-        :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，并以站内信方式知會到用戶。
+        :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，並以站内信方式知會到用戶。
         :type LoginSettings: :class:`taifucloudcloud.cvm.v20170312.models.LoginSettings`
         :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.taifucloud.com/document/api/215/15808) 的返回值中的sgId欄位來獲取。若不指定該參數，則綁定預設安全組。
         :type SecurityGroupIds: list of str
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設開啓雲監控、雲安全服務。
         :type EnhancedService: :class:`taifucloudcloud.cvm.v20170312.models.EnhancedService`
-        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。<br>更多詳細訊息請參閱：如何保證幂等性。
+        :param ClientToken: 用於保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。<br>更多詳細訊息請參閱：如何保證幂等性。
         :type ClientToken: str
-        :param HostName: 雲伺服器的主機名。<br><li>點号（.）和短橫線（-）不能作爲 HostName 的首尾字元，不能連續使用。<br><li>Windows 實例：名字元長度爲[2, 15]，允許字母（不限制大小寫）、數字和短橫線（-）組成，不支援點号（.），不能全是數字。<br><li>其他類型（Linux 等）實例：字元長度爲[2, 60]，允許支援多個點号，點之間爲一段，每段允許字母（不限制大小寫）、數字和短橫線（-）組成。
+        :param HostName: 雲伺服器的主機名。<br><li>點號（.）和短橫線（-）不能作爲 HostName 的首尾字元，不能連續使用。<br><li>Windows 實例：名字元長度爲[2, 15]，允許字母（不限制大小寫）、數字和短橫線（-）組成，不支援點號（.），不能全是數字。<br><li>其他類型（Linux 等）實例：字元長度爲[2, 60]，允許支援多個點號，點之間爲一段，每段允許字母（不限制大小寫）、數字和短橫線（-）組成。
         :type HostName: str
         :param ActionTimer: 定時任務。通過該參數可以爲實例指定定時任務，目前僅支援定時銷毀。
         :type ActionTimer: :class:`taifucloudcloud.cvm.v20170312.models.ActionTimer`
         :param DisasterRecoverGroupIds: 置放群組id，僅支援指定一個。
         :type DisasterRecoverGroupIds: list of str
-        :param TagSpecification: 标簽描述清單。通過指定該參數可以同時綁定标簽到相應的資源實例，當前僅支援綁定标簽到雲主機實例。
+        :param TagSpecification: 標簽描述清單。通過指定該參數可以同時綁定標簽到相應的資源實例，當前僅支援綁定標簽到雲主機實例。
         :type TagSpecification: list of TagSpecification
         :param InstanceMarketOptions: 實例的市場相關選項，如競價實例相關參數，若指定實例的付費模式爲競價付費則該參數必傳。
         :type InstanceMarketOptions: :class:`taifucloudcloud.cvm.v20170312.models.InstanceMarketOptionsRequest`
-        :param UserData: 提供給實例使用的用戶數據，需要以 base64 方式編碼，支援的最大數據大小爲 16KB。關于獲取此參數的詳細介紹，請參閱[Windows](https://cloud.taifucloud.com/document/product/213/17526)和[Linux](https://cloud.taifucloud.com/document/product/213/17525)啓動時運作命令。
+        :param UserData: 提供給實例使用的用戶數據，需要以 base64 方式編碼，支援的最大數據大小爲 16KB。關於獲取此參數的詳細介紹，請參閱[Windows](https://cloud.taifucloud.com/document/product/213/17526)和[Linux](https://cloud.taifucloud.com/document/product/213/17525)啓動時運作命令。
         :type UserData: str
         """
         self.Placement = None
@@ -4017,7 +4017,7 @@ class RunInstancesResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIdSet: 當通過本介面來創建實例時會返回該參數，表示一個或多個實例`ID`。返回實例`ID`清單并不代表實例創建成功，可根據 [DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728) 介面查詢返回的InstancesSet中對應實例的`ID`的狀态來判斷創建是否完成；如果實例狀态由“準備中”變爲“正在運作”，則爲創建成功。
+        :param InstanceIdSet: 當通過本介面來創建實例時會返回該參數，表示一個或多個實例`ID`。返回實例`ID`清單並不代表實例創建成功，可根據 [DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728) 介面查詢返回的InstancesSet中對應實例的`ID`的狀态來判斷創建是否完成；如果實例狀态由“準備中”變爲“正在運作”，則爲創建成功。
         :type InstanceIdSet: list of str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -4308,15 +4308,15 @@ class SystemDisk(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """标簽鍵值對
+    """標簽鍵值對
 
     """
 
     def __init__(self):
         """
-        :param Key: 标簽鍵
+        :param Key: 標簽鍵
         :type Key: str
-        :param Value: 标簽值
+        :param Value: 標簽值
         :type Value: str
         """
         self.Key = None
@@ -4329,15 +4329,15 @@ class Tag(AbstractModel):
 
 
 class TagSpecification(AbstractModel):
-    """創建資源實例時同時綁定的标簽對說明
+    """創建資源實例時同時綁定的標簽對說明
 
     """
 
     def __init__(self):
         """
-        :param ResourceType: 标簽綁定的資源類型，當前支援類型："instance"和"host"
+        :param ResourceType: 標簽綁定的資源類型，當前支援類型："instance"和"host"
         :type ResourceType: str
-        :param Tags: 标簽對清單
+        :param Tags: 標簽對清單
         :type Tags: list of Tag
         """
         self.ResourceType = None
@@ -4399,7 +4399,7 @@ class VirtualPrivateCloud(AbstractModel):
         :type VpcId: str
         :param SubnetId: 私有網絡子網ID，形如`subnet-xxx`。有效的私有網絡子網ID可通過登入[控制台](https://console.cloud.taifucloud.com/vpc/subnet?rid=1)查詢；也可以調用介面  [DescribeSubnets](/document/api/215/15784) ，從介面返回中的`unSubnetId`欄位獲取。若在創建子機時SubnetId與VpcId同時傳入`DEFAULT`，則強制使用預設vpc網絡。
         :type SubnetId: str
-        :param AsVpcGateway: 是否用作公網閘道。公網閘道只有在實例擁有公網IP以及處于私有網絡下時才能正常使用。取值範圍：<br><li>TRUE：表示用作公網閘道<br><li>FALSE：表示不用作公網閘道<br><br>預設取值：FALSE。
+        :param AsVpcGateway: 是否用作公網閘道。公網閘道只有在實例擁有公網IP以及處於私有網絡下時才能正常使用。取值範圍：<br><li>TRUE：表示用作公網閘道<br><li>FALSE：表示不用作公網閘道<br><br>預設取值：FALSE。
         :type AsVpcGateway: bool
         :param PrivateIpAddresses: 私有網絡子網 IP 數組，在創建實例、修改實例vpc屬性操作中可使用此參數。當前僅批次創建多台實例時支援傳入相同子網的多個 IP。
         :type PrivateIpAddresses: list of str

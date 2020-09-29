@@ -325,7 +325,7 @@ class Cluster(AbstractModel):
         :param NormalInstanceCount: 集群正常狀态的機器實例數量
 注意：此欄位可能返回 null，表示取不到有效值。
         :type NormalInstanceCount: int
-        :param DeleteFlag: 删除标記：true：可以删除；false：不可删除
+        :param DeleteFlag: 删除標記：true：可以删除；false：不可删除
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DeleteFlag: bool
         :param CreateTime: 創建時間
@@ -460,7 +460,7 @@ class Config(AbstractModel):
         :param ApplicationName: 應用名稱
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ApplicationName: str
-        :param DeleteFlag: 删除标識，true：可以删除；false：不可删除
+        :param DeleteFlag: 删除標識，true：可以删除；false：不可删除
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DeleteFlag: bool
         :param LastUpdateTime: 最後更新時間
@@ -627,7 +627,7 @@ class ConfigReleaseLog(AbstractModel):
         :param LastConfigVersion: 上次發布的配置項版本
 注意：此欄位可能返回 null，表示取不到有效值。
         :type LastConfigVersion: str
-        :param RollbackFlag: 回滾标識
+        :param RollbackFlag: 回滾標識
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RollbackFlag: bool
         """
@@ -974,7 +974,7 @@ class ContainerGroupDetail(AbstractModel):
 
 
 class CosCredentials(AbstractModel):
-    """cos臨時帳号訊息
+    """cos臨時帳號訊息
 
     """
 
@@ -1064,7 +1064,7 @@ class CosUploadInfo(AbstractModel):
         :param Bucket: 桶
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Bucket: str
-        :param Region: 目标地域
+        :param Region: 目標地域
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Region: str
         :param Path: 儲存路徑
@@ -1307,7 +1307,7 @@ class CreateContainGroupRequest(AbstractModel):
         :type CpuLimit: str
         :param MemLimit: 最大分配内存 MiB 數，對應 K8S limit
         :type MemLimit: str
-        :param GroupComment: 分組備注欄位，長度應不大于200字元
+        :param GroupComment: 分組備注欄位，長度應不大於200字元
         :type GroupComment: str
         :param UpdateType: 更新方式：0:快速更新 1:滾動更新
         :type UpdateType: int
@@ -1779,7 +1779,7 @@ class DeleteContainerGroupRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param GroupId: 佈署組ID，分組唯一标識
+        :param GroupId: 佈署組ID，分組唯一標識
         :type GroupId: str
         """
         self.GroupId = None
@@ -1862,7 +1862,7 @@ class DeleteImageTag(AbstractModel):
         """
         :param RepoName: 倉庫名，如/tsf/nginx
         :type RepoName: str
-        :param TagName: 版本号:如V1
+        :param TagName: 版本號:如V1
         :type TagName: str
         """
         self.RepoName = None
@@ -2087,7 +2087,7 @@ class DeleteServerlessGroupRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param GroupId: groupId，分組唯一标識
+        :param GroupId: groupId，分組唯一標識
         :type GroupId: str
         """
         self.GroupId = None
@@ -2125,7 +2125,7 @@ class DeployContainerGroupRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param GroupId: 佈署組ID，分組唯一标識
+        :param GroupId: 佈署組ID，分組唯一標識
         :type GroupId: str
         :param Server: 映像server
         :type Server: str
@@ -3186,7 +3186,7 @@ class DescribeImageTagsRequest(AbstractModel):
         :type Limit: int
         :param QueryImageIdFlag: 不填和0:查詢 1:不查詢
         :type QueryImageIdFlag: int
-        :param SearchWord: 可用于搜索的 tag 名字
+        :param SearchWord: 可用於搜索的 tag 名字
         :type SearchWord: str
         """
         self.ApplicationId = None
@@ -3346,7 +3346,7 @@ class DescribePkgsRequest(AbstractModel):
         """
         :param ApplicationId: 應用ID（只傳入應用ID，返回該應用下所有軟體包訊息）
         :type ApplicationId: str
-        :param SearchWord: 查詢關鍵字（支援根據包ID，包名，包版本号搜索）
+        :param SearchWord: 查詢關鍵字（支援根據包ID，包名，包版本號搜索）
         :type SearchWord: str
         :param OrderBy: 排序關鍵字（預設爲"UploadTime"：上傳時間）
         :type OrderBy: str
@@ -4261,7 +4261,7 @@ class GroupPod(AbstractModel):
         :param Status: 實例狀态，請參考後面的實例以及容器的狀态定義
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: str
-        :param Reason: 實例處于當前狀态的原因，例如容器下載映像失敗
+        :param Reason: 實例處於當前狀态的原因，例如容器下載映像失敗
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Reason: str
         :param NodeIp: 主機IP
@@ -4488,7 +4488,7 @@ class Instance(AbstractModel):
         :param ServiceInstanceStatus: 服務下的服務實例的狀态 虛機：應用是否可用 + Agent狀态 容器：Pod狀态
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ServiceInstanceStatus: str
-        :param CountInTsf: 标識此instance是否已添加在tsf中
+        :param CountInTsf: 標識此instance是否已添加在tsf中
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CountInTsf: int
         :param GroupId: 機器所屬佈署組ID
@@ -4761,7 +4761,7 @@ class ModifyContainerReplicasRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param GroupId: 佈署組ID，佈署組唯一标識
+        :param GroupId: 佈署組ID，佈署組唯一標識
         :type GroupId: str
         :param InstanceNum: 實例數量
         :type InstanceNum: int
@@ -4903,7 +4903,7 @@ class MsInstance(AbstractModel):
         :param InstanceName: 機器實例名稱訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceName: str
-        :param Port: 服務運作的端口号
+        :param Port: 服務運作的端口號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Port: str
         :param LanIp: 機器實例内網IP
@@ -5028,7 +5028,7 @@ class Namespace(AbstractModel):
         :param NamespaceStatus: 命名空間狀态
 注意：此欄位可能返回 null，表示取不到有效值。
         :type NamespaceStatus: str
-        :param DeleteFlag: 删除标識
+        :param DeleteFlag: 删除標識
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DeleteFlag: bool
         :param CreateTime: 創建時間
@@ -6416,7 +6416,7 @@ class VmGroup(AbstractModel):
         :param PackageName: 程式包名稱
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PackageName: str
-        :param PackageVersion: 程式包版本号
+        :param PackageVersion: 程式包版本號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PackageVersion: str
         :param ClusterId: 集群ID

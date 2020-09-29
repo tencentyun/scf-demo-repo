@@ -54,7 +54,7 @@ class CmqClient(AbstractClient):
 
 
     def ClearSubscriptionFilterTags(self, request):
-        """清空訂閱者訊息标簽
+        """清空訂閱者訊息標簽
 
         :param request: Request instance for ClearSubscriptionFilterTags.
         :type request: :class:`taifucloudcloud.cmq.v20190304.models.ClearSubscriptionFilterTagsRequest`

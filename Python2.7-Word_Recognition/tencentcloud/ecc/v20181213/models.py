@@ -101,11 +101,11 @@ class ECCRequest(AbstractModel):
         :type Content: str
         :param Title: 作文題目，可選參數
         :type Title: str
-        :param Grade: 年級标準， 預設以cet4爲标準，取值與意義如下：elementary 小學，grade7 grade8 grade9分别對應初一，初二，初三。 grade10 grade11 grade12 分别對應高一，高二，高三，以及cet4和cet6 分别表示 英語4級和6級。
+        :param Grade: 年級標準， 預設以cet4爲標準，取值與意義如下：elementary 小學，grade7 grade8 grade9分别對應初一，初二，初三。 grade10 grade11 grade12 分别對應高一，高二，高三，以及cet4和cet6 分别表示 英語4級和6級。
         :type Grade: str
         :param Outline: 作文提綱，可選參數，作文的寫作要求。
         :type Outline: str
-        :param ModelSubject: 範文标題，可選參數，本介面可以依據提供的範文對作文進行評分。
+        :param ModelSubject: 範文標題，可選參數，本介面可以依據提供的範文對作文進行評分。
         :type ModelSubject: str
         :param ModelContent: 範文内容，可選參數，同上，範文的正文部分。
         :type ModelContent: str

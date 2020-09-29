@@ -54,7 +54,7 @@ class FaceidClient(AbstractClient):
 
 
     def DetectAuth(self, request):
-        """每次開始核身前，需先調用本介面獲取BizToken，用來串聯核身流程，在核身完成後，用于獲取驗證結果訊息。
+        """每次開始核身前，需先調用本介面獲取BizToken，用來串聯核身流程，在核身完成後，用於獲取驗證結果訊息。
 
         :param request: 調用DetectAuth所需參數的結構體。
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.DetectAuthRequest`
@@ -166,7 +166,7 @@ class FaceidClient(AbstractClient):
 
 
     def IdCardVerification(self, request):
-        """傳入姓名和身份證号，校驗兩者的真實性和一緻性。
+        """傳入姓名和身份證號，校驗兩者的真實性和一緻性。
 
         :param request: 調用IdCardVerification所需參數的結構體。
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.IdCardVerificationRequest`
@@ -194,7 +194,7 @@ class FaceidClient(AbstractClient):
 
 
     def ImageRecognition(self, request):
-        """傳入照片和身份訊息，判斷該照片與警察權威庫的證件照是否屬于同一個人。
+        """傳入照片和身份訊息，判斷該照片與警察權威庫的證件照是否屬於同一個人。
 
         :param request: 調用ImageRecognition所需參數的結構體。
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.ImageRecognitionRequest`
@@ -222,7 +222,7 @@ class FaceidClient(AbstractClient):
 
 
     def LivenessCompare(self, request):
-        """傳入視訊和照片，先判斷視訊中是否爲真人，判斷爲真人後，再判斷該視訊中的人與上傳照片是否屬于同一個人。
+        """傳入視訊和照片，先判斷視訊中是否爲真人，判斷爲真人後，再判斷該視訊中的人與上傳照片是否屬於同一個人。
 
         :param request: 調用LivenessCompare所需參數的結構體。
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.LivenessCompareRequest`
@@ -250,7 +250,7 @@ class FaceidClient(AbstractClient):
 
 
     def LivenessRecognition(self, request):
-        """傳入視訊和身份訊息，先判斷視訊中是否爲真人，判斷爲真人後，再判斷該視訊中的人與警察權威庫的證件照是否屬于同一個人。
+        """傳入視訊和身份訊息，先判斷視訊中是否爲真人，判斷爲真人後，再判斷該視訊中的人與警察權威庫的證件照是否屬於同一個人。
 
         :param request: 調用LivenessRecognition所需參數的結構體。
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.LivenessRecognitionRequest`

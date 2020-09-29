@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: Kafka_To_Cos
   src: ./
-  description: 本範例通過配置kafka觸發器，從kafka接收到訊息後，寫入文件并上傳到cos中
+  description: 本範例通過配置kafka觸發器，從kafka接收到訊息後，寫入文件並上傳到cos中
   handler: index.main_handler
   runtime: Nodejs8.9
   namespace: default

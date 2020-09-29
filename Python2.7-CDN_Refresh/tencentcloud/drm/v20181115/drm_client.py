@@ -114,7 +114,7 @@ class DrmClient(AbstractClient):
     def DeleteFairPlayPem(self, request):
         """本介面用來删除fairplay方案的私鑰、ask等訊息
         注：高風險操作，删除後，您将無法使用Top Cloud DRM提供的fairplay服務。
-        由于快取，删除操作需要約半小時生效
+        由於快取，删除操作需要約半小時生效
 
         :param request: Request instance for DeleteFairPlayPem.
         :type request: :class:`taifucloudcloud.drm.v20181115.models.DeleteFairPlayPemRequest`

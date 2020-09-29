@@ -26,7 +26,7 @@ class VpcClient(AbstractClient):
 
 
     def AcceptAttachCcnInstances(self, request):
-        """本介面（AcceptAttachCcnInstances）用于跨賬号關聯實例時，雲聯網所有者接受并同意關聯操作。
+        """本介面（AcceptAttachCcnInstances）用於跨賬號關聯實例時，雲聯網所有者接受並同意關聯操作。
 
         :param request: 調用AcceptAttachCcnInstances所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.AcceptAttachCcnInstancesRequest`
@@ -54,7 +54,7 @@ class VpcClient(AbstractClient):
 
 
     def AddBandwidthPackageResources(self, request):
-        """介面用于添加頻寬包資源，包括[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)和[負載均衡](https://cloud.taifucloud.com/document/product/214/517)等
+        """介面用於添加頻寬包資源，包括[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)和[負載均衡](https://cloud.taifucloud.com/document/product/214/517)等
 
         :param request: 調用AddBandwidthPackageResources所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.AddBandwidthPackageResourcesRequest`
@@ -82,7 +82,7 @@ class VpcClient(AbstractClient):
 
 
     def AddIp6Rules(self, request):
-        """1. 該介面用于在轉換實例下添加IPV6轉換規則。
+        """1. 該介面用於在轉換實例下添加IPV6轉換規則。
         2. 支援在同一個轉換實例下批次添加轉換規則，一個帳戶在一個地域最多50個。
         3. 一個完整的轉換規則包括vip6:vport6:protocol:vip:vport，其中vip6:vport6:protocol必須是唯一。
 
@@ -112,7 +112,7 @@ class VpcClient(AbstractClient):
 
 
     def AllocateAddresses(self, request):
-        """本介面 (AllocateAddresses) 用于申請一個或多個[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）。
+        """本介面 (AllocateAddresses) 用於申請一個或多個[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）。
         * EIP 是專爲動态雲計算設計的靜态 IP 網址。借助 EIP，您可以快速将 EIP 重新映射到您的另一個實例上，從而屏蔽實例故障。
         * 您的 EIP 與Top Cloud 帳戶相關聯，而不是與某個實例相關聯。在您選擇顯式釋放該網址，或欠費超過七天之前，它會一直與您的Top Cloud 帳戶保持關聯。
         * 平台對用戶每地域能申請的 EIP 最大配額有所限制，可參見 [EIP 産品簡介](https://cloud.taifucloud.com/document/product/213/5733)，上述配額可通過 DescribeAddressQuota 介面獲取。
@@ -143,7 +143,7 @@ class VpcClient(AbstractClient):
 
 
     def AssignIpv6Addresses(self, request):
-        """本介面（AssignIpv6Addresses）用于彈性網卡申請`IPv6`網址。<br />
+        """本介面（AssignIpv6Addresses）用於彈性網卡申請`IPv6`網址。<br />
         本介面是異步完成，如需查詢異步任務執行結果，請使用本介面返回的`RequestId`輪詢`QueryTask`介面。
         * 一個彈性網卡支援綁定的IP網址是有限制的，更多資源限制訊息詳見<a href="/document/product/576/18527">彈性網卡使用限制</a>。
         * 可以指定`IPv6`網址申請，網址類型不能爲主`IP`，`IPv6`網址暫時只支援作爲輔助`IP`。
@@ -176,7 +176,7 @@ class VpcClient(AbstractClient):
 
 
     def AssignIpv6CidrBlock(self, request):
-        """本介面（AssignIpv6CidrBlock）用于分配IPv6網段。
+        """本介面（AssignIpv6CidrBlock）用於分配IPv6網段。
         * 使用本介面前，你需要已有VPC實例，如果沒有可通過介面<a href="https://cloud.taifucloud.com/document/api/215/15774" title="CreateVpc" target="_blank">CreateVpc</a>創建。
         * 每個VPC只能申請一個IPv6網段
 
@@ -206,7 +206,7 @@ class VpcClient(AbstractClient):
 
 
     def AssignIpv6SubnetCidrBlock(self, request):
-        """本介面（AssignIpv6SubnetCidrBlock）用于分配IPv6子網段。
+        """本介面（AssignIpv6SubnetCidrBlock）用於分配IPv6子網段。
         * 給子網分配 `IPv6` 網段，要求子網所屬 `VPC` 已獲得 `IPv6` 網段。如果尚未分配，請先通過介面 `AssignIpv6CidrBlock` 給子網所屬 `VPC` 分配一個 `IPv6` 網段。否則無法分配 `IPv6` 子網段。
         * 每個子網只能分配一個IPv6網段。
 
@@ -236,7 +236,7 @@ class VpcClient(AbstractClient):
 
 
     def AssignPrivateIpAddresses(self, request):
-        """本介面（AssignPrivateIpAddresses）用于彈性網卡申請内網 IP。
+        """本介面（AssignPrivateIpAddresses）用於彈性網卡申請内網 IP。
         * 一個彈性網卡支援綁定的IP網址是有限制的，更多資源限制訊息詳見<a href="/document/product/576/18527">彈性網卡使用限制</a>。
         * 可以指定内網IP網址申請，内網IP網址類型不能爲主IP，主IP已存在，不能修改，内網IP必須要彈性網卡所在子網内，而且不能被占用。
         * 在彈性網卡上申請一個到多個輔助内網IP，介面會在彈性網卡所在子網網段内返回指定數量的輔助内網IP。
@@ -267,9 +267,9 @@ class VpcClient(AbstractClient):
 
 
     def AssociateAddress(self, request):
-        """本介面 (AssociateAddress) 用于将[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）綁定到實例或彈性網卡的指定内網 IP 上。
+        """本介面 (AssociateAddress) 用於将[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）綁定到實例或彈性網卡的指定内網 IP 上。
         * 将 EIP 綁定到實例（CVM）上，其本質是将 EIP 綁定到實例上主網卡的主内網 IP 上。
-        * 将 EIP 綁定到主網卡的主内網IP上，綁定過程會把其上綁定的普通公網 IP 自動解綁并釋放。
+        * 将 EIP 綁定到主網卡的主内網IP上，綁定過程會把其上綁定的普通公網 IP 自動解綁並釋放。
         * 将 EIP 綁定到指定網卡的内網 IP上（非主網卡的主内網IP），則必須先解綁該 EIP，才能再綁定新的。
         * 将 EIP 綁定到NAT閘道，請使用介面[EipBindNatGateway](https://cloud.taifucloud.com/document/product/215/4093)
         * EIP 如果欠費或被封堵，則不能被綁定。
@@ -301,7 +301,7 @@ class VpcClient(AbstractClient):
 
 
     def AttachCcnInstances(self, request):
-        """本介面（AttachCcnInstances）用于将網絡實例加載到雲聯網實例中，網絡實例包括VPC和專線閘道。<br />
+        """本介面（AttachCcnInstances）用於将網絡實例加載到雲聯網實例中，網絡實例包括VPC和專線閘道。<br />
         每個雲聯網能夠關聯的網絡實例個數是有限的，詳請參考産品文件。如果需要擴充請聯系在線客服。
 
         :param request: 調用AttachCcnInstances所需參數的結構體。
@@ -330,7 +330,7 @@ class VpcClient(AbstractClient):
 
 
     def AttachClassicLinkVpc(self, request):
-        """本介面(AttachClassicLinkVpc)用于創建私有網絡和基礎網絡設備互通。
+        """本介面(AttachClassicLinkVpc)用於創建私有網絡和基礎網絡設備互通。
         * 私有網絡和基礎網絡設備必須在同一個地域。
         * 私有網絡和基礎網絡的區别詳見vpc産品文件-<a href="https://cloud.taifucloud.com/document/product/215/535#2.-.E7.A7.81.E6.9C.89.E7.BD.91.E7.BB.9C.E4.B8.8E.E5.9F.BA.E7.A1.80.E7.BD.91.E7.BB.9C">私有網絡與基礎網絡</a>。
 
@@ -360,7 +360,7 @@ class VpcClient(AbstractClient):
 
 
     def AttachNetworkInterface(self, request):
-        """本介面（AttachNetworkInterface）用于彈性網卡綁定雲主機。
+        """本介面（AttachNetworkInterface）用於彈性網卡綁定雲主機。
         * 一個雲主機可以綁定多個彈性網卡，但只能綁定一個主網卡。更多限制訊息詳見<a href="https://cloud.taifucloud.com/document/product/215/6513">彈性網卡使用限制</a>。
         * 一個彈性網卡只能同時綁定一個雲主機。
         * 只有運作中或者已關機狀态的雲主機才能綁定彈性網卡，檢視雲主機狀态詳見<a href="https://cloud.taifucloud.com/document/api/213/9452#instance_state">Top Cloud 主機訊息</a>。
@@ -392,7 +392,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateAddressTemplate(self, request):
-        """本介面（CreateAddressTemplate）用于創建IP網址模版
+        """本介面（CreateAddressTemplate）用於創建IP網址模版
 
         :param request: 調用CreateAddressTemplate所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateAddressTemplateRequest`
@@ -420,7 +420,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateAddressTemplateGroup(self, request):
-        """本介面（CreateAddressTemplateGroup）用于創建IP網址模版集合
+        """本介面（CreateAddressTemplateGroup）用於創建IP網址模版集合
 
         :param request: 調用CreateAddressTemplateGroup所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateAddressTemplateGroupRequest`
@@ -476,8 +476,8 @@ class VpcClient(AbstractClient):
 
 
     def CreateCcn(self, request):
-        """本介面（CreateCcn）用于創建雲聯網（CCN）。<br />
-        每個賬号能創建的雲聯網實例個數是有限的，詳請參考産品文件。如果需要擴充請聯系在線客服。
+        """本介面（CreateCcn）用於創建雲聯網（CCN）。<br />
+        每個賬號能創建的雲聯網實例個數是有限的，詳請參考産品文件。如果需要擴充請聯系在線客服。
 
         :param request: 調用CreateCcn所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateCcnRequest`
@@ -505,7 +505,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateCustomerGateway(self, request):
-        """本介面（CreateCustomerGateway）用于創建對端閘道。
+        """本介面（CreateCustomerGateway）用於創建對端閘道。
 
         :param request: 調用CreateCustomerGateway所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateCustomerGatewayRequest`
@@ -533,11 +533,11 @@ class VpcClient(AbstractClient):
 
 
     def CreateDefaultVpc(self, request):
-        """本介面（CreateDefaultVpc）用于創建預設私有網絡(VPC）。
+        """本介面（CreateDefaultVpc）用於創建預設私有網絡(VPC）。
 
-        預設VPC适用于快速入門和啓動公共實例，您可以像使用任何其他VPC一樣使用預設VPC。如果你想創建标準VPC，即指定VPC名稱、VPC網段、子網網段、子網可用區，請使用常規創建VPC介面（CreateVpc）
+        預設VPC适用於快速入門和啓動公共實例，您可以像使用任何其他VPC一樣使用預設VPC。如果你想創建標準VPC，即指定VPC名稱、VPC網段、子網網段、子網可用區，請使用常規創建VPC介面（CreateVpc）
 
-        正常情況，本介面并不一定生産預設VPC，而是根據用戶賬号的網絡屬性（DescribeAccountAttributes）來決定的
+        正常情況，本介面並不一定生産預設VPC，而是根據用戶賬號的網絡屬性（DescribeAccountAttributes）來決定的
         * 支援基礎網絡、VPC，返回VpcId爲0
         * 只支援VPC，返回預設VPC訊息
 
@@ -569,7 +569,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateDirectConnectGateway(self, request):
-        """本介面（CreateDirectConnectGateway）用于創建專線閘道。
+        """本介面（CreateDirectConnectGateway）用於創建專線閘道。
 
         :param request: 調用CreateDirectConnectGateway所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateDirectConnectGatewayRequest`
@@ -597,7 +597,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateDirectConnectGatewayCcnRoutes(self, request):
-        """本介面（CreateDirectConnectGatewayCcnRoutes）用于創建專線閘道的雲聯網路由（IDC網段）
+        """本介面（CreateDirectConnectGatewayCcnRoutes）用於創建專線閘道的雲聯網路由（IDC網段）
 
         :param request: 調用CreateDirectConnectGatewayCcnRoutes所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateDirectConnectGatewayCcnRoutesRequest`
@@ -625,7 +625,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateFlowLog(self, request):
-        """本介面（CreateFlowLog）用于創建流日志
+        """本介面（CreateFlowLog）用於創建流日志
 
         :param request: 調用CreateFlowLog所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateFlowLogRequest`
@@ -653,7 +653,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateHaVip(self, request):
-        """本介面（CreateHaVip）用于創建高可用虛拟IP（HAVIP）
+        """本介面（CreateHaVip）用於創建高可用虛拟IP（HAVIP）
 
         :param request: 調用CreateHaVip所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateHaVipRequest`
@@ -681,7 +681,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateIp6Translators(self, request):
-        """1. 該介面用于創建IPV6轉換IPV4實例，支援批次
+        """1. 該介面用於創建IPV6轉換IPV4實例，支援批次
         2. 同一個帳戶在在一個地域最多允許創建10個轉換實例
 
         :param request: 調用CreateIp6Translators所需參數的結構體。
@@ -710,8 +710,8 @@ class VpcClient(AbstractClient):
 
 
     def CreateNetworkInterface(self, request):
-        """本介面（CreateNetworkInterface）用于創建彈性網卡。
-        * 創建彈性網卡時可以指定内網IP，并且可以指定一個主IP，指定的内網IP必須在彈性網卡所在子網内，而且不能被占用。
+        """本介面（CreateNetworkInterface）用於創建彈性網卡。
+        * 創建彈性網卡時可以指定内網IP，並且可以指定一個主IP，指定的内網IP必須在彈性網卡所在子網内，而且不能被占用。
         * 創建彈性網卡時可以指定需要申請的内網IP數量，系統會随機生成内網IP網址。
         * 一個彈性網卡支援綁定的IP網址是有限制的，更多資源限制訊息詳見<a href="/document/product/576/18527">彈性網卡使用限制</a>。
         * 創建彈性網卡同時可以綁定已有安全組。
@@ -742,7 +742,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateRouteTable(self, request):
-        """本介面(CreateRouteTable)用于創建路由表。
+        """本介面(CreateRouteTable)用於創建路由表。
         * 創建了VPC後，系統會創建一個預設路由表，所有新建的子網都會關聯到預設路由表。預設情況下您可以直接使用預設路由表來管理您的路由策略。當您的路由策略較多時，您可以調用創建路由表介面創建更多路由表管理您的路由策略。
 
         :param request: 調用CreateRouteTable所需參數的結構體。
@@ -771,7 +771,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateRoutes(self, request):
-        """本介面(CreateRoutes)用于創建路由策略。
+        """本介面(CreateRoutes)用於創建路由策略。
         * 向指定路由表批次新增路由策略。
 
         :param request: 調用CreateRoutes所需參數的結構體。
@@ -800,7 +800,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateSecurityGroup(self, request):
-        """本介面（CreateSecurityGroup）用于創建新的安全組（SecurityGroup）。
+        """本介面（CreateSecurityGroup）用於創建新的安全組（SecurityGroup）。
         * 每個帳戶下每個地域的每個項目的<a href="https://cloud.taifucloud.com/document/product/213/500#2.-.E5.AE.89.E5.85.A8.E7.BB.84.E7.9A.84.E9.99.90.E5.88.B6">安全組數量限制</a>。
         * 新建的安全組的入站和出站規則預設都是全部拒絕，在創建後通常您需要再調用CreateSecurityGroupPolicies将安全組的規則設置爲需要的規則。
 
@@ -830,13 +830,13 @@ class VpcClient(AbstractClient):
 
 
     def CreateSecurityGroupPolicies(self, request):
-        """本介面（CreateSecurityGroupPolicies）用于創建安全組規則（SecurityGroupPolicy）。
+        """本介面（CreateSecurityGroupPolicies）用於創建安全組規則（SecurityGroupPolicy）。
 
-        * Version安全組規則版本号，用戶每次更新安全規則版本會自動加1，防止你更新的路由規則已過期，不填不考慮沖突。
+        * Version安全組規則版本號，用戶每次更新安全規則版本會自動加1，防止你更新的路由規則已過期，不填不考慮沖突。
         * Protocol欄位支援輸入TCP, UDP, ICMP, GRE, ALL。
-        * CidrBlock欄位允許輸入符合cidr格式标準的任意字串。(展開)在基礎網絡中，如果CidrBlock包含您的帳戶内的雲伺服器之外的設備在Top Cloud 的内網IP，并不代表此規則允許您訪問這些設備，租戶之間網絡隔離規則優先于安全組中的内網規則。
-        * SecurityGroupId欄位允許輸入與待修改的安全組位于相同項目中的安全組ID，包括這個安全組ID本身，代表安全組下所有雲伺服器的内網IP。使用這個欄位時，這條規則用來比對網絡報文的過程中會随着被使用的這個ID所關聯的雲伺服器變化而變化，不需要重新修改。
-        * Port欄位允許輸入一個單獨端口号，或者用減号分隔的兩個端口号代表端口範圍，例如80或8000-8010。只有當Protocol欄位是TCP或UDP時，Port欄位才被接受，即Protocol欄位不是TCP或UDP時，Protocol和Port排他關系，不允許同時輸入，否則會介面報錯。
+        * CidrBlock欄位允許輸入符合cidr格式標準的任意字串。(展開)在基礎網絡中，如果CidrBlock包含您的帳戶内的雲伺服器之外的設備在Top Cloud 的内網IP，並不代表此規則允許您訪問這些設備，租戶之間網絡隔離規則優先於安全組中的内網規則。
+        * SecurityGroupId欄位允許輸入與待修改的安全組位於相同項目中的安全組ID，包括這個安全組ID本身，代表安全組下所有雲伺服器的内網IP。使用這個欄位時，這條規則用來比對網絡報文的過程中會随着被使用的這個ID所關聯的雲伺服器變化而變化，不需要重新修改。
+        * Port欄位允許輸入一個單獨端口號，或者用減號分隔的兩個端口號代表端口範圍，例如80或8000-8010。只有當Protocol欄位是TCP或UDP時，Port欄位才被接受，即Protocol欄位不是TCP或UDP時，Protocol和Port排他關系，不允許同時輸入，否則會介面報錯。
         * Action欄位只允許輸入ACCEPT或DROP。
         * CidrBlock, SecurityGroupId, AddressTemplate三者是排他關系，不允許同時輸入，Protocol + Port和ServiceTemplate二者是排他關系，不允許同時輸入。
         * 一次請求中只能創建單個方向的規則, 如果需要指定索引（PolicyIndex）參數, 多條規則的索引必須一緻。
@@ -867,7 +867,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateServiceTemplate(self, request):
-        """本介面（CreateServiceTemplate）用于創建協議端口範本
+        """本介面（CreateServiceTemplate）用於創建協議端口範本
 
         :param request: 調用CreateServiceTemplate所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateServiceTemplateRequest`
@@ -895,7 +895,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateServiceTemplateGroup(self, request):
-        """本介面（CreateServiceTemplateGroup）用于創建協議端口範本集合
+        """本介面（CreateServiceTemplateGroup）用於創建協議端口範本集合
 
         :param request: 調用CreateServiceTemplateGroup所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateServiceTemplateGroupRequest`
@@ -923,7 +923,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateSubnet(self, request):
-        """本介面(CreateSubnet)用于創建子網。
+        """本介面(CreateSubnet)用於創建子網。
         * 創建子網前必須創建好 VPC。
         * 子網創建成功後，子網網段不能修改。子網網段必須在VPC網段内，可以和VPC網段相同（VPC有且只有一個子網時），建議子網網段在VPC網段内，預留網段給其他子網使用。
         * 你可以創建的最小網段子網掩碼爲28（有16個IP網址），最大網段子網掩碼爲16（65,536個IP網址）。
@@ -956,7 +956,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateSubnets(self, request):
-        """本介面(CreateSubnets)用于批次創建子網。
+        """本介面(CreateSubnets)用於批次創建子網。
         * 創建子網前必須創建好 VPC。
         * 子網創建成功後，子網網段不能修改。子網網段必須在VPC網段内，可以和VPC網段相同（VPC有且只有一個子網時），建議子網網段在VPC網段内，預留網段給其他子網使用。
         * 你可以創建的最小網段子網掩碼爲28（有16個IP網址），最大網段子網掩碼爲16（65,536個IP網址）。
@@ -989,7 +989,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateVpc(self, request):
-        """本介面(CreateVpc)用于創建私有網絡(VPC)。
+        """本介面(CreateVpc)用於創建私有網絡(VPC)。
         * 用戶可以創建的最小網段子網掩碼爲28（有16個IP網址），最大網段子網掩碼爲16（65,536個IP網址）,如果規劃VPC網段請參見VPC網段規劃說明。
         * 同一個地域能創建的VPC資源個數也是有限制的，詳見 <a href="https://cloud.taifucloud.com/doc/product/215/537" title="VPC使用限制">VPC使用限制</a>,如果需要擴充請聯系在線客服。
 
@@ -1019,7 +1019,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateVpnConnection(self, request):
-        """本介面（CreateVpnConnection）用于創建VPN通道。
+        """本介面（CreateVpnConnection）用於創建VPN通道。
 
         :param request: 調用CreateVpnConnection所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateVpnConnectionRequest`
@@ -1047,7 +1047,7 @@ class VpcClient(AbstractClient):
 
 
     def CreateVpnGateway(self, request):
-        """本介面（CreateVpnGateway）用于創建VPN閘道。
+        """本介面（CreateVpnGateway）用於創建VPN閘道。
 
         :param request: 調用CreateVpnGateway所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.CreateVpnGatewayRequest`
@@ -1075,7 +1075,7 @@ class VpcClient(AbstractClient):
 
 
     def DeleteAddressTemplate(self, request):
-        """本介面（DeleteAddressTemplate）用于删除IP網址範本
+        """本介面（DeleteAddressTemplate）用於删除IP網址範本
 
         :param request: 調用DeleteAddressTemplate所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteAddressTemplateRequest`
@@ -1103,7 +1103,7 @@ class VpcClient(AbstractClient):
 
 
     def DeleteAddressTemplateGroup(self, request):
-        """本介面（DeleteAddressTemplateGroup）用于删除IP網址範本集合
+        """本介面（DeleteAddressTemplateGroup）用於删除IP網址範本集合
 
         :param request: 調用DeleteAddressTemplateGroup所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteAddressTemplateGroupRequest`
@@ -1159,7 +1159,7 @@ class VpcClient(AbstractClient):
 
 
     def DeleteCcn(self, request):
-        """本介面（DeleteCcn）用于删除雲聯網。
+        """本介面（DeleteCcn）用於删除雲聯網。
         * 删除後，雲聯閘道聯的所有實例間路由将被删除，網絡将會中斷，請務必确認
         * 删除雲聯網是不可逆的操作，請謹慎處理。
 
@@ -1189,7 +1189,7 @@ class VpcClient(AbstractClient):
 
 
     def DeleteCustomerGateway(self, request):
-        """本介面（DeleteCustomerGateway）用于删除對端閘道。
+        """本介面（DeleteCustomerGateway）用於删除對端閘道。
 
         :param request: 調用DeleteCustomerGateway所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteCustomerGatewayRequest`
@@ -1217,7 +1217,7 @@ class VpcClient(AbstractClient):
 
 
     def DeleteDirectConnectGateway(self, request):
-        """本介面（DeleteDirectConnectGateway）用于删除專線閘道。
+        """本介面（DeleteDirectConnectGateway）用於删除專線閘道。
         <li>如果是 NAT 閘道，删除專線閘道後，NAT 規則以及 ACL 策略都被清理了。</li>
         <li>删除專線閘道後，系統會删除路由表中跟該專線閘道相關的路由策略。</li>
         本介面是異步完成，如需查詢異步任務執行結果，請使用本介面返回的`RequestId`輪詢`QueryTask`介面
@@ -1248,7 +1248,7 @@ class VpcClient(AbstractClient):
 
 
     def DeleteDirectConnectGatewayCcnRoutes(self, request):
-        """本介面（DeleteDirectConnectGatewayCcnRoutes）用于删除專線閘道的雲聯網路由（IDC網段）
+        """本介面（DeleteDirectConnectGatewayCcnRoutes）用於删除專線閘道的雲聯網路由（IDC網段）
 
         :param request: 調用DeleteDirectConnectGatewayCcnRoutes所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteDirectConnectGatewayCcnRoutesRequest`
@@ -1276,7 +1276,7 @@ class VpcClient(AbstractClient):
 
 
     def DeleteFlowLog(self, request):
-        """本介面（DeleteFlowLog）用于删除流日志
+        """本介面（DeleteFlowLog）用於删除流日志
 
         :param request: 調用DeleteFlowLog所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteFlowLogRequest`
@@ -1304,7 +1304,7 @@ class VpcClient(AbstractClient):
 
 
     def DeleteHaVip(self, request):
-        """本介面（DeleteHaVip）用于删除高可用虛拟IP（HAVIP）<br />
+        """本介面（DeleteHaVip）用於删除高可用虛拟IP（HAVIP）<br />
         本介面是異步完成，如需查詢異步任務執行結果，請使用本介面返回的`RequestId`輪詢`QueryTask`介面
 
         :param request: 調用DeleteHaVip所需參數的結構體。
@@ -1333,8 +1333,8 @@ class VpcClient(AbstractClient):
 
 
     def DeleteIp6Translators(self, request):
-        """1. 該介面用于釋放IPV6轉換實例，支援批次。
-        2.  如果IPV6轉換實例建立有轉換規則，會一并删除。
+        """1. 該介面用於釋放IPV6轉換實例，支援批次。
+        2.  如果IPV6轉換實例建立有轉換規則，會一並删除。
 
         :param request: 調用DeleteIp6Translators所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteIp6TranslatorsRequest`
@@ -1362,7 +1362,7 @@ class VpcClient(AbstractClient):
 
 
     def DeleteNetworkInterface(self, request):
-        """本介面（DeleteNetworkInterface）用于删除彈性網卡。
+        """本介面（DeleteNetworkInterface）用於删除彈性網卡。
         * 彈性網卡上綁定了雲主機時，不能被删除。
         * 删除指定彈性網卡，彈性網卡必須先和子機解綁才能删除。删除之後彈性網卡上所有内網IP都将被退還。
 
@@ -1420,7 +1420,7 @@ class VpcClient(AbstractClient):
 
 
     def DeleteRoutes(self, request):
-        """本介面(DeleteRoutes)用于對某個路由表批次删除路由策略（Route）。
+        """本介面(DeleteRoutes)用於對某個路由表批次删除路由策略（Route）。
 
         :param request: 調用DeleteRoutes所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteRoutesRequest`
@@ -1448,8 +1448,8 @@ class VpcClient(AbstractClient):
 
 
     def DeleteSecurityGroup(self, request):
-        """本介面（DeleteSecurityGroup）用于删除安全組（SecurityGroup）。
-        * 只有當前賬号下的安全組允許被删除。
+        """本介面（DeleteSecurityGroup）用於删除安全組（SecurityGroup）。
+        * 只有當前賬號下的安全組允許被删除。
         * 安全組實例ID如果在其他安全組的規則中被引用，則無法直接删除。這種情況下，需要先進行規則修改，再删除安全組。
         * 删除的安全組無法再找回，請謹慎調用。
 
@@ -1479,8 +1479,8 @@ class VpcClient(AbstractClient):
 
 
     def DeleteSecurityGroupPolicies(self, request):
-        """本介面（DeleteSecurityGroupPolicies）用于用于删除安全組規則（SecurityGroupPolicy）。
-        * SecurityGroupPolicySet.Version 用于指定要操作的安全組的版本。傳入 Version 版本号若不等于當前安全組的最新版本，将返回失敗；若不傳 Version 則直接删除指定PolicyIndex的規則。
+        """本介面（DeleteSecurityGroupPolicies）用於用於删除安全組規則（SecurityGroupPolicy）。
+        * SecurityGroupPolicySet.Version 用於指定要操作的安全組的版本。傳入 Version 版本號若不等於當前安全組的最新版本，将返回失敗；若不傳 Version 則直接删除指定PolicyIndex的規則。
 
         :param request: 調用DeleteSecurityGroupPolicies所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteSecurityGroupPoliciesRequest`
@@ -1508,7 +1508,7 @@ class VpcClient(AbstractClient):
 
 
     def DeleteServiceTemplate(self, request):
-        """本介面（DeleteServiceTemplate）用于删除協議端口範本
+        """本介面（DeleteServiceTemplate）用於删除協議端口範本
 
         :param request: 調用DeleteServiceTemplate所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteServiceTemplateRequest`
@@ -1536,7 +1536,7 @@ class VpcClient(AbstractClient):
 
 
     def DeleteServiceTemplateGroup(self, request):
-        """本介面（DeleteServiceTemplateGroup）用于删除協議端口範本集合
+        """本介面（DeleteServiceTemplateGroup）用於删除協議端口範本集合
 
         :param request: 調用DeleteServiceTemplateGroup所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteServiceTemplateGroupRequest`
@@ -1564,7 +1564,7 @@ class VpcClient(AbstractClient):
 
 
     def DeleteSubnet(self, request):
-        """本介面（DeleteSubnet）用于用于删除子網(Subnet)。
+        """本介面（DeleteSubnet）用於用於删除子網(Subnet)。
         * 删除子網前，請清理該子網下所有資源，包括雲主機、負載均衡、雲數據、noSql、彈性網卡等資源。
 
         :param request: 調用DeleteSubnet所需參數的結構體。
@@ -1593,7 +1593,7 @@ class VpcClient(AbstractClient):
 
 
     def DeleteVpc(self, request):
-        """本介面（DeleteVpc）用于删除私有網絡。
+        """本介面（DeleteVpc）用於删除私有網絡。
         * 删除前請确保 VPC 内已經沒有相關資源，例如雲主機、雲資料庫、NoSQL、VPN閘道、專線閘道、負載均衡、對等連接、與之互通的基礎網絡設備等。
         * 删除私有網絡是不可逆的操作，請謹慎處理。
 
@@ -1623,7 +1623,7 @@ class VpcClient(AbstractClient):
 
 
     def DeleteVpnConnection(self, request):
-        """本介面(DeleteVpnConnection)用于删除VPN通道。
+        """本介面(DeleteVpnConnection)用於删除VPN通道。
 
         :param request: 調用DeleteVpnConnection所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteVpnConnectionRequest`
@@ -1651,7 +1651,7 @@ class VpcClient(AbstractClient):
 
 
     def DeleteVpnGateway(self, request):
-        """本介面（DeleteVpnGateway）用于删除VPN閘道。目前只支援删除運作中的按量計費的IPSEC閘道實例。
+        """本介面（DeleteVpnGateway）用於删除VPN閘道。目前只支援删除運作中的按量計費的IPSEC閘道實例。
 
         :param request: 調用DeleteVpnGateway所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DeleteVpnGatewayRequest`
@@ -1679,7 +1679,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeAccountAttributes(self, request):
-        """本介面（DescribeAccountAttributes）用于查詢用戶賬号私有屬性。
+        """本介面（DescribeAccountAttributes）用於查詢用戶賬號私有屬性。
 
         :param request: 調用DescribeAccountAttributes所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeAccountAttributesRequest`
@@ -1707,7 +1707,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeAddressQuota(self, request):
-        """本介面 (DescribeAddressQuota) 用于查詢您帳戶的[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）在當前地域的配額訊息。配額詳情可參見 [EIP 産品簡介](https://cloud.taifucloud.com/document/product/213/5733)。
+        """本介面 (DescribeAddressQuota) 用於查詢您帳戶的[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）在當前地域的配額訊息。配額詳情可參見 [EIP 産品簡介](https://cloud.taifucloud.com/document/product/213/5733)。
 
         :param request: 調用DescribeAddressQuota所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeAddressQuotaRequest`
@@ -1735,7 +1735,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeAddressTemplateGroups(self, request):
-        """本介面（DescribeAddressTemplateGroups）用于查詢IP網址範本集合
+        """本介面（DescribeAddressTemplateGroups）用於查詢IP網址範本集合
 
         :param request: 調用DescribeAddressTemplateGroups所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeAddressTemplateGroupsRequest`
@@ -1763,7 +1763,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeAddressTemplates(self, request):
-        """本介面（DescribeAddressTemplates）用于查詢IP網址範本
+        """本介面（DescribeAddressTemplates）用於查詢IP網址範本
 
         :param request: 調用DescribeAddressTemplates所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeAddressTemplatesRequest`
@@ -1791,7 +1791,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeAddresses(self, request):
-        """本介面 (DescribeAddresses) 用于查詢一個或多個[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）的詳細訊息。
+        """本介面 (DescribeAddresses) 用於查詢一個或多個[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）的詳細訊息。
         * 如果參數爲空，返回當前用戶一定數量（Limit所指定的數量，預設爲20）的 EIP。
 
         :param request: 調用DescribeAddresses所需參數的結構體。
@@ -1820,7 +1820,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeBandwidthPackageQuota(self, request):
-        """介面用于查詢帳戶在當前地域的頻寬包上限數量以及使用數量
+        """介面用於查詢帳戶在當前地域的頻寬包上限數量以及使用數量
 
         :param request: 調用DescribeBandwidthPackageQuota所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeBandwidthPackageQuotaRequest`
@@ -1848,7 +1848,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeBandwidthPackages(self, request):
-        """介面用于查詢頻寬包詳細訊息，包括頻寬包唯一标識ID，類型，計費模式，名稱，資源訊息等
+        """介面用於查詢頻寬包詳細訊息，包括頻寬包唯一標識ID，類型，計費模式，名稱，資源訊息等
 
         :param request: 調用DescribeBandwidthPackages所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeBandwidthPackagesRequest`
@@ -1876,7 +1876,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeCcnAttachedInstances(self, request):
-        """本介面（DescribeCcnAttachedInstances）用于查詢雲聯網實例下已關聯的網絡實例。
+        """本介面（DescribeCcnAttachedInstances）用於查詢雲聯網實例下已關聯的網絡實例。
 
         :param request: 調用DescribeCcnAttachedInstances所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCcnAttachedInstancesRequest`
@@ -1904,7 +1904,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeCcnRegionBandwidthLimits(self, request):
-        """本介面（DescribeCcnRegionBandwidthLimits）用于查詢雲聯網各地域出頻寬上限，該介面只返回已關聯網絡實例包含的地域
+        """本介面（DescribeCcnRegionBandwidthLimits）用於查詢雲聯網各地域出頻寬上限，該介面只返回已關聯網絡實例包含的地域
 
         :param request: 調用DescribeCcnRegionBandwidthLimits所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCcnRegionBandwidthLimitsRequest`
@@ -1932,7 +1932,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeCcnRoutes(self, request):
-        """本介面（DescribeCcnRoutes）用于查詢已加入雲聯網（CCN）的路由
+        """本介面（DescribeCcnRoutes）用於查詢已加入雲聯網（CCN）的路由
 
         :param request: 調用DescribeCcnRoutes所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCcnRoutesRequest`
@@ -1960,7 +1960,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeCcns(self, request):
-        """本介面（DescribeCcns）用于查詢雲聯網（CCN）清單。
+        """本介面（DescribeCcns）用於查詢雲聯網（CCN）清單。
 
         :param request: 調用DescribeCcns所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCcnsRequest`
@@ -1988,7 +1988,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeClassicLinkInstances(self, request):
-        """本介面(DescribeClassicLinkInstances)用于查詢私有網絡和基礎網絡設備互通清單。
+        """本介面(DescribeClassicLinkInstances)用於查詢私有網絡和基礎網絡設備互通清單。
 
         :param request: 調用DescribeClassicLinkInstances所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeClassicLinkInstancesRequest`
@@ -2016,7 +2016,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeCustomerGatewayVendors(self, request):
-        """本介面（DescribeCustomerGatewayVendors）用于查詢可支援的對端閘道廠商訊息。
+        """本介面（DescribeCustomerGatewayVendors）用於查詢可支援的對端閘道廠商訊息。
 
         :param request: 調用DescribeCustomerGatewayVendors所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCustomerGatewayVendorsRequest`
@@ -2044,7 +2044,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeCustomerGateways(self, request):
-        """本介面（DescribeCustomerGateways）用于查詢對端閘道清單。
+        """本介面（DescribeCustomerGateways）用於查詢對端閘道清單。
 
         :param request: 調用DescribeCustomerGateways所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeCustomerGatewaysRequest`
@@ -2072,7 +2072,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeDirectConnectGatewayCcnRoutes(self, request):
-        """本介面（DescribeDirectConnectGatewayCcnRoutes）用于查詢專線閘道的雲聯網路由（IDC網段）
+        """本介面（DescribeDirectConnectGatewayCcnRoutes）用於查詢專線閘道的雲聯網路由（IDC網段）
 
         :param request: 調用DescribeDirectConnectGatewayCcnRoutes所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeDirectConnectGatewayCcnRoutesRequest`
@@ -2100,7 +2100,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeDirectConnectGateways(self, request):
-        """本介面（DescribeDirectConnectGateways）用于查詢專線閘道。
+        """本介面（DescribeDirectConnectGateways）用於查詢專線閘道。
 
         :param request: 調用DescribeDirectConnectGateways所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeDirectConnectGatewaysRequest`
@@ -2128,7 +2128,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeFlowLog(self, request):
-        """本介面（DescribeFlowLog）用于查詢流日志實例訊息
+        """本介面（DescribeFlowLog）用於查詢流日志實例訊息
 
         :param request: 調用DescribeFlowLog所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeFlowLogRequest`
@@ -2156,7 +2156,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeFlowLogs(self, request):
-        """本介面（DescribeFlowLogs）用于查詢獲取流日志集合
+        """本介面（DescribeFlowLogs）用於查詢獲取流日志集合
 
         :param request: 調用DescribeFlowLogs所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeFlowLogsRequest`
@@ -2184,7 +2184,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeGatewayFlowMonitorDetail(self, request):
-        """本介面（DescribeGatewayFlowMonitorDetail）用于查詢閘道流量監控明細。
+        """本介面（DescribeGatewayFlowMonitorDetail）用於查詢閘道流量監控明細。
         * 只支援單個閘道實例查詢。即入參 `VpnId` `DirectConnectGatewayId` `PeeringConnectionId` `NatId` 最多只支援傳一個，且必須傳一個。
         * 如果閘道有流量，但調用本介面沒有返回數據，請在控制台對應閘道詳情頁确認是否開啓閘道流量監控。
 
@@ -2214,7 +2214,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeHaVips(self, request):
-        """本介面（DescribeHaVips）用于查詢高可用虛拟IP（HAVIP）清單。
+        """本介面（DescribeHaVips）用於查詢高可用虛拟IP（HAVIP）清單。
 
         :param request: 調用DescribeHaVips所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeHaVipsRequest`
@@ -2270,7 +2270,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeIp6Translators(self, request):
-        """1. 該介面用于查詢帳戶下的IPV6轉換實例及其綁定的轉換規則訊息
+        """1. 該介面用於查詢帳戶下的IPV6轉換實例及其綁定的轉換規則訊息
         2. 支援過濾查詢
 
         :param request: 調用DescribeIp6Translators所需參數的結構體。
@@ -2299,7 +2299,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeNetworkInterfaces(self, request):
-        """本介面（DescribeNetworkInterfaces）用于查詢彈性網卡清單。
+        """本介面（DescribeNetworkInterfaces）用於查詢彈性網卡清單。
 
         :param request: 調用DescribeNetworkInterfaces所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeNetworkInterfacesRequest`
@@ -2327,7 +2327,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeRouteConflicts(self, request):
-        """本介面（DescribeRouteConflicts）用于查詢自定義路由策略與雲聯網路由策略沖突清單
+        """本介面（DescribeRouteConflicts）用於查詢自定義路由策略與雲聯網路由策略沖突清單
 
         :param request: 調用DescribeRouteConflicts所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeRouteConflictsRequest`
@@ -2355,7 +2355,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeRouteTables(self, request):
-        """本介面（DescribeRouteTables）用于查詢路由表。
+        """本介面（DescribeRouteTables）用於查詢路由表。
 
         :param request: 調用DescribeRouteTables所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeRouteTablesRequest`
@@ -2383,7 +2383,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeSecurityGroupAssociationStatistics(self, request):
-        """本介面（DescribeSecurityGroupAssociationStatistics）用于查詢安全組關聯的實例統計。
+        """本介面（DescribeSecurityGroupAssociationStatistics）用於查詢安全組關聯的實例統計。
 
         :param request: 調用DescribeSecurityGroupAssociationStatistics所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeSecurityGroupAssociationStatisticsRequest`
@@ -2411,7 +2411,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeSecurityGroupPolicies(self, request):
-        """本介面（DescribeSecurityGroupPolicies）用于查詢安全組規則。
+        """本介面（DescribeSecurityGroupPolicies）用於查詢安全組規則。
 
         :param request: 調用DescribeSecurityGroupPolicies所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeSecurityGroupPoliciesRequest`
@@ -2439,7 +2439,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeSecurityGroups(self, request):
-        """本介面（DescribeSecurityGroups）用于查詢安全組。
+        """本介面（DescribeSecurityGroups）用於查詢安全組。
 
         :param request: 調用DescribeSecurityGroups所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeSecurityGroupsRequest`
@@ -2467,7 +2467,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeServiceTemplateGroups(self, request):
-        """本介面（DescribeServiceTemplateGroups）用于查詢協議端口範本集合
+        """本介面（DescribeServiceTemplateGroups）用於查詢協議端口範本集合
 
         :param request: 調用DescribeServiceTemplateGroups所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeServiceTemplateGroupsRequest`
@@ -2495,7 +2495,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeServiceTemplates(self, request):
-        """本介面（DescribeServiceTemplates）用于查詢協議端口範本
+        """本介面（DescribeServiceTemplates）用於查詢協議端口範本
 
         :param request: 調用DescribeServiceTemplates所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeServiceTemplatesRequest`
@@ -2523,7 +2523,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeSubnets(self, request):
-        """本介面（DescribeSubnets）用于查詢子網清單。
+        """本介面（DescribeSubnets）用於查詢子網清單。
 
         :param request: 調用DescribeSubnets所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeSubnetsRequest`
@@ -2551,7 +2551,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeVpcIpv6Addresses(self, request):
-        """本介面（DescribeVpcIpv6Addresses）用于查詢 `VPC` `IPv6` 訊息。
+        """本介面（DescribeVpcIpv6Addresses）用於查詢 `VPC` `IPv6` 訊息。
         只能查詢已使用的`IPv6`訊息，當查詢未使用的IP時，本介面不會報錯，但不會出現在返回結果裏。
 
         :param request: 調用DescribeVpcIpv6Addresses所需參數的結構體。
@@ -2580,7 +2580,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeVpcPrivateIpAddresses(self, request):
-        """本介面（DescribeVpcPrivateIpAddresses）用于查詢VPC内網IP訊息。<br />
+        """本介面（DescribeVpcPrivateIpAddresses）用於查詢VPC内網IP訊息。<br />
         只能查詢已使用的IP訊息，當查詢未使用的IP時，本介面不會報錯，但不會出現在返回結果裏。
 
         :param request: 調用DescribeVpcPrivateIpAddresses所需參數的結構體。
@@ -2609,7 +2609,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeVpcs(self, request):
-        """本介面（DescribeVpcs）用于查詢私有網絡清單。
+        """本介面（DescribeVpcs）用於查詢私有網絡清單。
 
         :param request: 調用DescribeVpcs所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpcsRequest`
@@ -2665,7 +2665,7 @@ class VpcClient(AbstractClient):
 
 
     def DescribeVpnGateways(self, request):
-        """本介面（DescribeVpnGateways）用于查詢VPN閘道清單。
+        """本介面（DescribeVpnGateways）用於查詢VPN閘道清單。
 
         :param request: 調用DescribeVpnGateways所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DescribeVpnGatewaysRequest`
@@ -2693,8 +2693,8 @@ class VpcClient(AbstractClient):
 
 
     def DetachCcnInstances(self, request):
-        """本介面（DetachCcnInstances）用于從雲聯網實例中解關聯指定的網絡實例。<br />
-        解關聯網絡實例後，相應的路由策略會一并删除。
+        """本介面（DetachCcnInstances）用於從雲聯網實例中解關聯指定的網絡實例。<br />
+        解關聯網絡實例後，相應的路由策略會一並删除。
 
         :param request: 調用DetachCcnInstances所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DetachCcnInstancesRequest`
@@ -2722,7 +2722,7 @@ class VpcClient(AbstractClient):
 
 
     def DetachClassicLinkVpc(self, request):
-        """本介面(DetachClassicLinkVpc)用于删除私有網絡和基礎網絡設備互通。
+        """本介面(DetachClassicLinkVpc)用於删除私有網絡和基礎網絡設備互通。
 
         :param request: 調用DetachClassicLinkVpc所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DetachClassicLinkVpcRequest`
@@ -2750,7 +2750,7 @@ class VpcClient(AbstractClient):
 
 
     def DetachNetworkInterface(self, request):
-        """本介面（DetachNetworkInterface）用于彈性網卡解綁雲主機。
+        """本介面（DetachNetworkInterface）用於彈性網卡解綁雲主機。
 
         :param request: 調用DetachNetworkInterface所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DetachNetworkInterfaceRequest`
@@ -2778,7 +2778,7 @@ class VpcClient(AbstractClient):
 
 
     def DisableCcnRoutes(self, request):
-        """本介面（DisableCcnRoutes）用于禁用已經啓用的雲聯網（CCN）路由
+        """本介面（DisableCcnRoutes）用於禁用已經啓用的雲聯網（CCN）路由
 
         :param request: 調用DisableCcnRoutes所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DisableCcnRoutesRequest`
@@ -2806,7 +2806,7 @@ class VpcClient(AbstractClient):
 
 
     def DisableRoutes(self, request):
-        """本介面（DisableRoutes）用于禁用已啓用的子網路由
+        """本介面（DisableRoutes）用於禁用已啓用的子網路由
 
         :param request: 調用DisableRoutes所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DisableRoutesRequest`
@@ -2834,7 +2834,7 @@ class VpcClient(AbstractClient):
 
 
     def DisassociateAddress(self, request):
-        """本介面 (DisassociateAddress) 用于解綁[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）。
+        """本介面 (DisassociateAddress) 用於解綁[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）。
         * 支援CVM實例，彈性網卡上的EIP解綁
         * 不支援NAT上的EIP解綁。NAT上的EIP解綁請參考[EipUnBindNatGateway](https://cloud.taifucloud.com/document/product/215/4092)
         * 只有狀态爲 BIND 和 BIND_ENI 的 EIP 才能進行解綁定操作。
@@ -2866,7 +2866,7 @@ class VpcClient(AbstractClient):
 
 
     def DownloadCustomerGatewayConfiguration(self, request):
-        """本介面(DownloadCustomerGatewayConfiguration)用于下載VPN通道配置。
+        """本介面(DownloadCustomerGatewayConfiguration)用於下載VPN通道配置。
 
         :param request: 調用DownloadCustomerGatewayConfiguration所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.DownloadCustomerGatewayConfigurationRequest`
@@ -2894,7 +2894,7 @@ class VpcClient(AbstractClient):
 
 
     def EnableCcnRoutes(self, request):
-        """本介面（EnableCcnRoutes）用于啓用已經加入雲聯網（CCN）的路由。<br />
+        """本介面（EnableCcnRoutes）用於啓用已經加入雲聯網（CCN）的路由。<br />
         本介面會校驗啓用後，是否與已有路由沖突，如果沖突，則無法啓用，失敗處理。路由沖突時，需要先禁用與之沖突的路由，才能啓用該路由。
 
         :param request: 調用EnableCcnRoutes所需參數的結構體。
@@ -2923,7 +2923,7 @@ class VpcClient(AbstractClient):
 
 
     def EnableRoutes(self, request):
-        """本介面（EnableRoutes）用于啓用已禁用的子網路由。<br />
+        """本介面（EnableRoutes）用於啓用已禁用的子網路由。<br />
         本介面會校驗啓用後，是否與已有路由沖突，如果沖突，則無法啓用，失敗處理。路由沖突時，需要先禁用與之沖突的路由，才能啓用該路由。
 
         :param request: 調用EnableRoutes所需參數的結構體。
@@ -2952,7 +2952,7 @@ class VpcClient(AbstractClient):
 
 
     def HaVipAssociateAddressIp(self, request):
-        """本介面（HaVipAssociateAddressIp）用于高可用虛拟IP（HAVIP）綁定彈性公網IP（EIP）<br />
+        """本介面（HaVipAssociateAddressIp）用於高可用虛拟IP（HAVIP）綁定彈性公網IP（EIP）<br />
         本介面是異步完成，如需查詢異步任務執行結果，請使用本介面返回的`RequestId`輪詢`QueryTask`介面
 
         :param request: 調用HaVipAssociateAddressIp所需參數的結構體。
@@ -2981,7 +2981,7 @@ class VpcClient(AbstractClient):
 
 
     def HaVipDisassociateAddressIp(self, request):
-        """本介面（HaVipDisassociateAddressIp）用于将高可用虛拟IP（HAVIP）已綁定的彈性公網IP（EIP）解除綁定<br />
+        """本介面（HaVipDisassociateAddressIp）用於将高可用虛拟IP（HAVIP）已綁定的彈性公網IP（EIP）解除綁定<br />
         本介面是異步完成，如需查詢異步任務執行結果，請使用本介面返回的`RequestId`輪詢`QueryTask`介面
 
         :param request: 調用HaVipDisassociateAddressIp所需參數的結構體。
@@ -3010,7 +3010,7 @@ class VpcClient(AbstractClient):
 
 
     def InquiryPriceCreateVpnGateway(self, request):
-        """本介面（InquiryPriceCreateVpnGateway）用于創建VPN閘道詢價。
+        """本介面（InquiryPriceCreateVpnGateway）用於創建VPN閘道詢價。
 
         :param request: 調用InquiryPriceCreateVpnGateway所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.InquiryPriceCreateVpnGatewayRequest`
@@ -3038,7 +3038,7 @@ class VpcClient(AbstractClient):
 
 
     def InquiryPriceRenewVpnGateway(self, request):
-        """本介面（InquiryPriceRenewVpnGateway）用于續約VPN閘道詢價。目前僅支援IPSEC類型閘道的詢價。
+        """本介面（InquiryPriceRenewVpnGateway）用於續約VPN閘道詢價。目前僅支援IPSEC類型閘道的詢價。
 
         :param request: 調用InquiryPriceRenewVpnGateway所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.InquiryPriceRenewVpnGatewayRequest`
@@ -3094,7 +3094,7 @@ class VpcClient(AbstractClient):
 
 
     def MigrateNetworkInterface(self, request):
-        """本介面（MigrateNetworkInterface）用于彈性網卡遷移。
+        """本介面（MigrateNetworkInterface）用於彈性網卡遷移。
 
         :param request: 調用MigrateNetworkInterface所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.MigrateNetworkInterfaceRequest`
@@ -3122,9 +3122,9 @@ class VpcClient(AbstractClient):
 
 
     def MigratePrivateIpAddress(self, request):
-        """本介面（MigratePrivateIpAddress）用于彈性網卡内網IP遷移。
+        """本介面（MigratePrivateIpAddress）用於彈性網卡内網IP遷移。
 
-        * 該介面用于将一個内網IP從一個彈性網卡上遷移到另外一個彈性網卡，主IP網址不支援遷移。
+        * 該介面用於将一個内網IP從一個彈性網卡上遷移到另外一個彈性網卡，主IP網址不支援遷移。
         * 遷移前後的彈性網卡必須在同一個子網内。
 
         :param request: 調用MigratePrivateIpAddress所需參數的結構體。
@@ -3153,7 +3153,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyAddressAttribute(self, request):
-        """本介面 (ModifyAddressAttribute) 用于修改[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）的名稱。
+        """本介面 (ModifyAddressAttribute) 用於修改[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）的名稱。
 
         :param request: 調用ModifyAddressAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyAddressAttributeRequest`
@@ -3181,7 +3181,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyAddressTemplateAttribute(self, request):
-        """本介面（ModifyAddressTemplateAttribute）用于修改IP網址範本
+        """本介面（ModifyAddressTemplateAttribute）用於修改IP網址範本
 
         :param request: 調用ModifyAddressTemplateAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyAddressTemplateAttributeRequest`
@@ -3209,7 +3209,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyAddressTemplateGroupAttribute(self, request):
-        """本介面（ModifyAddressTemplateGroupAttribute）用于修改IP網址範本集合
+        """本介面（ModifyAddressTemplateGroupAttribute）用於修改IP網址範本集合
 
         :param request: 調用ModifyAddressTemplateGroupAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyAddressTemplateGroupAttributeRequest`
@@ -3237,7 +3237,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyAddressesBandwidth(self, request):
-        """本介面（ModifyAddressesBandwidth）用于調整[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)(簡稱EIP)頻寬，包括後付費EIP, 預付費EIP和頻寬包EIP
+        """本介面（ModifyAddressesBandwidth）用於調整[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)(簡稱EIP)頻寬，包括後付費EIP, 預付費EIP和頻寬包EIP
 
         :param request: 調用ModifyAddressesBandwidth所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyAddressesBandwidthRequest`
@@ -3265,7 +3265,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyBandwidthPackageAttribute(self, request):
-        """介面用于修改頻寬包屬性，包括頻寬包名字等
+        """介面用於修改頻寬包屬性，包括頻寬包名字等
 
         :param request: 調用ModifyBandwidthPackageAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyBandwidthPackageAttributeRequest`
@@ -3293,7 +3293,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyCcnAttribute(self, request):
-        """本介面（ModifyCcnAttribute）用于修改雲聯網（CCN）的相關屬性。
+        """本介面（ModifyCcnAttribute）用於修改雲聯網（CCN）的相關屬性。
 
         :param request: 調用ModifyCcnAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyCcnAttributeRequest`
@@ -3321,7 +3321,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyCustomerGatewayAttribute(self, request):
-        """本介面（ModifyCustomerGatewayAttribute）用于修改對端閘道訊息。
+        """本介面（ModifyCustomerGatewayAttribute）用於修改對端閘道訊息。
 
         :param request: 調用ModifyCustomerGatewayAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyCustomerGatewayAttributeRequest`
@@ -3349,7 +3349,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyDirectConnectGatewayAttribute(self, request):
-        """本介面（ModifyDirectConnectGatewayAttribute）用于修改專線閘道屬性
+        """本介面（ModifyDirectConnectGatewayAttribute）用於修改專線閘道屬性
 
         :param request: 調用ModifyDirectConnectGatewayAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyDirectConnectGatewayAttributeRequest`
@@ -3377,7 +3377,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyFlowLogAttribute(self, request):
-        """本介面（ModifyFlowLogAttribute）用于修改流日志屬性
+        """本介面（ModifyFlowLogAttribute）用於修改流日志屬性
 
         :param request: 調用ModifyFlowLogAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyFlowLogAttributeRequest`
@@ -3405,7 +3405,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyHaVipAttribute(self, request):
-        """本介面（ModifyHaVipAttribute）用于修改高可用虛拟IP（HAVIP）屬性
+        """本介面（ModifyHaVipAttribute）用於修改高可用虛拟IP（HAVIP）屬性
 
         :param request: 調用ModifyHaVipAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyHaVipAttributeRequest`
@@ -3433,7 +3433,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyIp6Rule(self, request):
-        """該介面用于修改IPV6轉換規則，當前僅支援修改轉換規則名稱，IPV4網址和IPV4端口号
+        """該介面用於修改IPV6轉換規則，當前僅支援修改轉換規則名稱，IPV4網址和IPV4端口號
 
         :param request: 調用ModifyIp6Rule所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyIp6RuleRequest`
@@ -3461,7 +3461,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyIp6Translator(self, request):
-        """該介面用于修改IP6轉換實例屬性，當前僅支援修改實例名稱。
+        """該介面用於修改IP6轉換實例屬性，當前僅支援修改實例名稱。
 
         :param request: 調用ModifyIp6Translator所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyIp6TranslatorRequest`
@@ -3489,7 +3489,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyIpv6AddressesAttribute(self, request):
-        """本介面（ModifyIpv6AddressesAttribute）用于修改彈性網卡内網IPv6網址屬性。
+        """本介面（ModifyIpv6AddressesAttribute）用於修改彈性網卡内網IPv6網址屬性。
 
         :param request: 調用ModifyIpv6AddressesAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyIpv6AddressesAttributeRequest`
@@ -3517,7 +3517,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyNetworkInterfaceAttribute(self, request):
-        """本介面（ModifyNetworkInterfaceAttribute）用于修改彈性網卡屬性。
+        """本介面（ModifyNetworkInterfaceAttribute）用於修改彈性網卡屬性。
 
         :param request: 調用ModifyNetworkInterfaceAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyNetworkInterfaceAttributeRequest`
@@ -3545,7 +3545,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyPrivateIpAddressesAttribute(self, request):
-        """本介面（ModifyPrivateIpAddressesAttribute）用于修改彈性網卡内網IP屬性。
+        """本介面（ModifyPrivateIpAddressesAttribute）用於修改彈性網卡内網IP屬性。
 
         :param request: 調用ModifyPrivateIpAddressesAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyPrivateIpAddressesAttributeRequest`
@@ -3573,7 +3573,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyRouteTableAttribute(self, request):
-        """本介面（ModifyRouteTableAttribute）用于修改路由表（RouteTable）屬性。
+        """本介面（ModifyRouteTableAttribute）用於修改路由表（RouteTable）屬性。
 
         :param request: 調用ModifyRouteTableAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyRouteTableAttributeRequest`
@@ -3601,7 +3601,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifySecurityGroupAttribute(self, request):
-        """本介面（ModifySecurityGroupAttribute）用于修改安全組（SecurityGroupPolicy）屬性。
+        """本介面（ModifySecurityGroupAttribute）用於修改安全組（SecurityGroupPolicy）屬性。
 
         :param request: 調用ModifySecurityGroupAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifySecurityGroupAttributeRequest`
@@ -3629,14 +3629,14 @@ class VpcClient(AbstractClient):
 
 
     def ModifySecurityGroupPolicies(self, request):
-        """本介面（ModifySecurityGroupPolicies）用于重置安全組出站和入站規則（SecurityGroupPolicy）。
+        """本介面（ModifySecurityGroupPolicies）用於重置安全組出站和入站規則（SecurityGroupPolicy）。
 
         * 介面是先删除當前所有的出入站規則，然後再添加 Egress 和 Ingress 規則，不支援自定義索引 PolicyIndex 。
-        * 如果指定 SecurityGroupPolicySet.Version 爲0, 表示清空所有規則，并忽略Egress和Ingress。
+        * 如果指定 SecurityGroupPolicySet.Version 爲0, 表示清空所有規則，並忽略Egress和Ingress。
         * Protocol欄位支援輸入TCP, UDP, ICMP, GRE, ALL。
-        * CidrBlock欄位允許輸入符合cidr格式标準的任意字串。(展開)在基礎網絡中，如果CidrBlock包含您的帳戶内的雲伺服器之外的設備在Top Cloud 的内網IP，并不代表此規則允許您訪問這些設備，租戶之間網絡隔離規則優先于安全組中的内網規則。
-        * SecurityGroupId欄位允許輸入與待修改的安全組位于相同項目中的安全組ID，包括這個安全組ID本身，代表安全組下所有雲伺服器的内網IP。使用這個欄位時，這條規則用來比對網絡報文的過程中會随着被使用的這個ID所關聯的雲伺服器變化而變化，不需要重新修改。
-        * Port欄位允許輸入一個單獨端口号，或者用減号分隔的兩個端口号代表端口範圍，例如80或8000-8010。只有當Protocol欄位是TCP或UDP時，Port欄位才被接受。
+        * CidrBlock欄位允許輸入符合cidr格式標準的任意字串。(展開)在基礎網絡中，如果CidrBlock包含您的帳戶内的雲伺服器之外的設備在Top Cloud 的内網IP，並不代表此規則允許您訪問這些設備，租戶之間網絡隔離規則優先於安全組中的内網規則。
+        * SecurityGroupId欄位允許輸入與待修改的安全組位於相同項目中的安全組ID，包括這個安全組ID本身，代表安全組下所有雲伺服器的内網IP。使用這個欄位時，這條規則用來比對網絡報文的過程中會随着被使用的這個ID所關聯的雲伺服器變化而變化，不需要重新修改。
+        * Port欄位允許輸入一個單獨端口號，或者用減號分隔的兩個端口號代表端口範圍，例如80或8000-8010。只有當Protocol欄位是TCP或UDP時，Port欄位才被接受。
         * Action欄位只允許輸入ACCEPT或DROP。
         * CidrBlock, SecurityGroupId, AddressTemplate三者是排他關系，不允許同時輸入，Protocol + Port和ServiceTemplate二者是排他關系，不允許同時輸入。
 
@@ -3666,7 +3666,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyServiceTemplateAttribute(self, request):
-        """本介面（ModifyServiceTemplateAttribute）用于修改協議端口範本
+        """本介面（ModifyServiceTemplateAttribute）用於修改協議端口範本
 
         :param request: 調用ModifyServiceTemplateAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyServiceTemplateAttributeRequest`
@@ -3694,7 +3694,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyServiceTemplateGroupAttribute(self, request):
-        """本介面（ModifyServiceTemplateGroupAttribute）用于修改協議端口範本集合。
+        """本介面（ModifyServiceTemplateGroupAttribute）用於修改協議端口範本集合。
 
         :param request: 調用ModifyServiceTemplateGroupAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyServiceTemplateGroupAttributeRequest`
@@ -3722,7 +3722,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifySubnetAttribute(self, request):
-        """本介面（ModifySubnetAttribute）用于修改子網屬性。
+        """本介面（ModifySubnetAttribute）用於修改子網屬性。
 
         :param request: 調用ModifySubnetAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifySubnetAttributeRequest`
@@ -3750,7 +3750,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyVpcAttribute(self, request):
-        """本介面（ModifyVpcAttribute）用于修改私有網絡（VPC）的相關屬性。
+        """本介面（ModifyVpcAttribute）用於修改私有網絡（VPC）的相關屬性。
 
         :param request: 調用ModifyVpcAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyVpcAttributeRequest`
@@ -3778,7 +3778,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyVpnConnectionAttribute(self, request):
-        """本介面（ModifyVpnConnectionAttribute）用于修改VPN通道。
+        """本介面（ModifyVpnConnectionAttribute）用於修改VPN通道。
 
         :param request: 調用ModifyVpnConnectionAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyVpnConnectionAttributeRequest`
@@ -3806,7 +3806,7 @@ class VpcClient(AbstractClient):
 
 
     def ModifyVpnGatewayAttribute(self, request):
-        """本介面（ModifyVpnGatewayAttribute）用于修改VPN閘道屬性。
+        """本介面（ModifyVpnGatewayAttribute）用於修改VPN閘道屬性。
 
         :param request: 調用ModifyVpnGatewayAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ModifyVpnGatewayAttributeRequest`
@@ -3834,7 +3834,7 @@ class VpcClient(AbstractClient):
 
 
     def RejectAttachCcnInstances(self, request):
-        """本介面（RejectAttachCcnInstances）用于跨賬号關聯實例時，雲聯網所有者拒絕關聯操作。
+        """本介面（RejectAttachCcnInstances）用於跨賬號關聯實例時，雲聯網所有者拒絕關聯操作。
 
         :param request: 調用RejectAttachCcnInstances所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.RejectAttachCcnInstancesRequest`
@@ -3862,8 +3862,8 @@ class VpcClient(AbstractClient):
 
 
     def ReleaseAddresses(self, request):
-        """本介面 (ReleaseAddresses) 用于釋放一個或多個[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）。
-        * 該操作不可逆，釋放後 EIP 關聯的 IP 網址将不再屬于您的名下。
+        """本介面 (ReleaseAddresses) 用於釋放一個或多個[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）。
+        * 該操作不可逆，釋放後 EIP 關聯的 IP 網址将不再屬於您的名下。
         * 只有狀态爲 UNBIND 的 EIP 才能進行釋放操作。
 
         :param request: 調用ReleaseAddresses所需參數的結構體。
@@ -3892,7 +3892,7 @@ class VpcClient(AbstractClient):
 
 
     def RemoveBandwidthPackageResources(self, request):
-        """介面用于删除頻寬包資源，包括[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)和[負載均衡](https://cloud.taifucloud.com/document/product/214/517)等
+        """介面用於删除頻寬包資源，包括[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)和[負載均衡](https://cloud.taifucloud.com/document/product/214/517)等
 
         :param request: 調用RemoveBandwidthPackageResources所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.RemoveBandwidthPackageResourcesRequest`
@@ -3920,7 +3920,7 @@ class VpcClient(AbstractClient):
 
 
     def RemoveIp6Rules(self, request):
-        """1. 該介面用于删除IPV6轉換規則
+        """1. 該介面用於删除IPV6轉換規則
         2. 支援批次删除同一個轉換實例下的多個轉換規則
 
         :param request: 調用RemoveIp6Rules所需參數的結構體。
@@ -3949,7 +3949,7 @@ class VpcClient(AbstractClient):
 
 
     def RenewVpnGateway(self, request):
-        """本介面（RenewVpnGateway）用于預付費（包年包月）VPN閘道續約。目前只支援IPSEC閘道。
+        """本介面（RenewVpnGateway）用於預付費（包年包月）VPN閘道續約。目前只支援IPSEC閘道。
 
         :param request: 調用RenewVpnGateway所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.RenewVpnGatewayRequest`
@@ -4005,7 +4005,7 @@ class VpcClient(AbstractClient):
 
 
     def ReplaceRouteTableAssociation(self, request):
-        """本介面（ReplaceRouteTableAssociation)用于修改子網（Subnet）關聯的路由表（RouteTable）。
+        """本介面（ReplaceRouteTableAssociation)用於修改子網（Subnet）關聯的路由表（RouteTable）。
         * 一個子網只能關聯一個路由表。
 
         :param request: 調用ReplaceRouteTableAssociation所需參數的結構體。
@@ -4062,7 +4062,7 @@ class VpcClient(AbstractClient):
 
 
     def ReplaceSecurityGroupPolicy(self, request):
-        """本介面（ReplaceSecurityGroupPolicy）用于替換單條安全組規則（SecurityGroupPolicy）。
+        """本介面（ReplaceSecurityGroupPolicy）用於替換單條安全組規則（SecurityGroupPolicy）。
         單個請求中只能替換單個方向的一條規則, 必須要指定索引（PolicyIndex）。
 
         :param request: 調用ReplaceSecurityGroupPolicy所需參數的結構體。
@@ -4091,7 +4091,7 @@ class VpcClient(AbstractClient):
 
 
     def ResetAttachCcnInstances(self, request):
-        """本介面（ResetAttachCcnInstances）用于跨賬号關聯實例申請過期時，重新申請關聯操作。
+        """本介面（ResetAttachCcnInstances）用於跨賬號關聯實例申請過期時，重新申請關聯操作。
 
         :param request: 調用ResetAttachCcnInstances所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ResetAttachCcnInstancesRequest`
@@ -4119,7 +4119,7 @@ class VpcClient(AbstractClient):
 
 
     def ResetRoutes(self, request):
-        """本介面（ResetRoutes）用于對某個路由表名稱和所有路由策略（Route）進行重新設置。<br />
+        """本介面（ResetRoutes）用於對某個路由表名稱和所有路由策略（Route）進行重新設置。<br />
         注意: 調用本介面是先删除當前路由表中所有路由策略, 再保存新提交的路由策略内容, 會引起網絡中斷。
 
         :param request: 調用ResetRoutes所需參數的結構體。
@@ -4148,7 +4148,7 @@ class VpcClient(AbstractClient):
 
 
     def ResetVpnConnection(self, request):
-        """本介面(ResetVpnConnection)用于重置VPN通道。
+        """本介面(ResetVpnConnection)用於重置VPN通道。
 
         :param request: 調用ResetVpnConnection所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.ResetVpnConnectionRequest`
@@ -4204,7 +4204,7 @@ class VpcClient(AbstractClient):
 
 
     def SetCcnRegionBandwidthLimits(self, request):
-        """本介面（SetCcnRegionBandwidthLimits）用于設置雲聯網（CCN）各地域出頻寬上限，該介面只能設置已關聯網絡實例包含的地域的出頻寬上限
+        """本介面（SetCcnRegionBandwidthLimits）用於設置雲聯網（CCN）各地域出頻寬上限，該介面只能設置已關聯網絡實例包含的地域的出頻寬上限
 
         :param request: 調用SetCcnRegionBandwidthLimits所需參數的結構體。
         :type request: :class:`taifucloudcloud.vpc.v20170312.models.SetCcnRegionBandwidthLimitsRequest`
@@ -4232,7 +4232,7 @@ class VpcClient(AbstractClient):
 
 
     def TransformAddress(self, request):
-        """本介面 (TransformAddress) 用于将實例的普通公網 IP 轉換爲[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）。
+        """本介面 (TransformAddress) 用於将實例的普通公網 IP 轉換爲[彈性公網IP](https://cloud.taifucloud.com/document/product/213/1941)（簡稱 EIP）。
         * 平台對用戶每地域每日解綁 EIP 重新分配普通公網 IP 次數有所限制（可參見 [EIP 産品簡介](/document/product/213/1941)）。上述配額可通過 [DescribeAddressQuota](https://cloud.taifucloud.com/document/api/213/1378) 介面獲取。
 
         :param request: 調用TransformAddress所需參數的結構體。
@@ -4261,7 +4261,7 @@ class VpcClient(AbstractClient):
 
 
     def UnassignIpv6Addresses(self, request):
-        """本介面（UnassignIpv6Addresses）用于釋放彈性網卡`IPv6`網址。<br />
+        """本介面（UnassignIpv6Addresses）用於釋放彈性網卡`IPv6`網址。<br />
         本介面是異步完成，如需查詢異步任務執行結果，請使用本介面返回的`RequestId`輪詢`QueryTask`介面。
 
         :param request: 調用UnassignIpv6Addresses所需參數的結構體。
@@ -4290,7 +4290,7 @@ class VpcClient(AbstractClient):
 
 
     def UnassignIpv6CidrBlock(self, request):
-        """本介面（UnassignIpv6CidrBlock）用于釋放IPv6網段。<br />
+        """本介面（UnassignIpv6CidrBlock）用於釋放IPv6網段。<br />
         網段如果還有IP占用且未回收，則網段無法釋放。
 
         :param request: 調用UnassignIpv6CidrBlock所需參數的結構體。
@@ -4319,7 +4319,7 @@ class VpcClient(AbstractClient):
 
 
     def UnassignIpv6SubnetCidrBlock(self, request):
-        """本介面（UnassignIpv6SubnetCidrBlock）用于釋放IPv6子網段。<br />
+        """本介面（UnassignIpv6SubnetCidrBlock）用於釋放IPv6子網段。<br />
         子網段如果還有IP占用且未回收，則子網段無法釋放。
 
         :param request: 調用UnassignIpv6SubnetCidrBlock所需參數的結構體。
@@ -4348,7 +4348,7 @@ class VpcClient(AbstractClient):
 
 
     def UnassignPrivateIpAddresses(self, request):
-        """本介面（UnassignPrivateIpAddresses）用于彈性網卡退還内網 IP。
+        """本介面（UnassignPrivateIpAddresses）用於彈性網卡退還内網 IP。
         * 退還彈性網卡上的輔助内網IP，介面自動解關聯彈性公網 IP。不能退還彈性網卡的主内網IP。
 
         :param request: 調用UnassignPrivateIpAddresses所需參數的結構體。

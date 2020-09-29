@@ -150,9 +150,9 @@ class CopyAccountPrivilegesRequest(AbstractModel):
         :type DstUserName: str
         :param DstHost: 目的用戶允許的訪問 host
         :type DstHost: str
-        :param SrcReadOnly: 源賬号的 ReadOnly 屬性
+        :param SrcReadOnly: 源賬號的 ReadOnly 屬性
         :type SrcReadOnly: str
-        :param DstReadOnly: 目的賬号的 ReadOnly 屬性
+        :param DstReadOnly: 目的賬號的 ReadOnly 屬性
         :type DstReadOnly: str
         """
         self.InstanceId = None
@@ -202,13 +202,13 @@ class CreateAccountRequest(AbstractModel):
         :type InstanceId: str
         :param UserName: 登入用戶名，由字幕、數字、下劃線和連字元組成，長度爲1~32位。
         :type UserName: str
-        :param Host: 可以登入的主機，與mysql 賬号的 host 格式一緻，可以支援通配符，例如 %，10.%，10.20.%。
+        :param Host: 可以登入的主機，與mysql 賬號的 host 格式一緻，可以支援通配符，例如 %，10.%，10.20.%。
         :type Host: str
-        :param Password: 賬号密碼，由字母、數字或常見符号組成，不能包含分号、單引号和雙引号，長度爲6~32位。
+        :param Password: 賬號密碼，由字母、數字或常見符號組成，不能包含分號、單引號和雙引號，長度爲6~32位。
         :type Password: str
-        :param ReadOnly: 是否創建爲只讀賬号，0：否， 1：該賬号的sql請求優先選擇備機執行，備機不可用時選擇主機執行，2：優先選擇備機執行，備機不可用時操作失敗。
+        :param ReadOnly: 是否創建爲只讀賬號，0：否， 1：該賬號的sql請求優先選擇備機執行，備機不可用時選擇主機執行，2：優先選擇備機執行，備機不可用時操作失敗。
         :type ReadOnly: int
-        :param Description: 賬号備注，可以包含中文、英文字元、常見符号和數字，長度爲0~256字元
+        :param Description: 賬號備注，可以包含中文、英文字元、常見符號和數字，長度爲0~256字元
         :type Description: str
         :param DelayThresh: 根據傳入時間判斷備機不可用
         :type DelayThresh: int
@@ -336,8 +336,8 @@ class CreateDBInstanceResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param DealName: 長訂單号。可以據此調用 DescribeOrders
- 查詢訂單詳細訊息，或在支付失敗時調用用戶賬号相關介面進行支付。
+        :param DealName: 長訂單號。可以據此調用 DescribeOrders
+ 查詢訂單詳細訊息，或在支付失敗時調用用戶賬號相關介面進行支付。
         :type DealName: str
         :param InstanceIds: 訂單對應的實例 ID 清單，如果此處沒有返回實例 ID，可以通過訂單查詢介面獲取。還可通過實例查詢介面查詢實例是否創建完成。
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -357,7 +357,7 @@ class CreateDBInstanceResponse(AbstractModel):
 
 
 class DBAccount(AbstractModel):
-    """雲資料庫賬号訊息
+    """雲資料庫賬號訊息
 
     """
 
@@ -365,7 +365,7 @@ class DBAccount(AbstractModel):
         """
         :param UserName: 用戶名
         :type UserName: str
-        :param Host: 用戶可以從哪台主機登入（對應 MySQL 用戶的 host 欄位，UserName + Host 唯一标識一個用戶，IP形式，IP段以%結尾；支援填入%；爲空預設等于%）
+        :param Host: 用戶可以從哪台主機登入（對應 MySQL 用戶的 host 欄位，UserName + Host 唯一標識一個用戶，IP形式，IP段以%結尾；支援填入%；爲空預設等於%）
         :type Host: str
         :param Description: 用戶備注訊息
         :type Description: str
@@ -373,9 +373,9 @@ class DBAccount(AbstractModel):
         :type CreateTime: str
         :param UpdateTime: 最後更新時間
         :type UpdateTime: str
-        :param ReadOnly: 只讀标記，0：否， 1：該賬号的sql請求優先選擇備機執行，備機不可用時選擇主機執行，2：優先選擇備機執行，備機不可用時操作失敗。
+        :param ReadOnly: 只讀標記，0：否， 1：該賬號的sql請求優先選擇備機執行，備機不可用時選擇主機執行，2：優先選擇備機執行，備機不可用時操作失敗。
         :type ReadOnly: int
-        :param DelayThresh: 該欄位對只讀帳号有意義，表示選擇主備延遲小於該值的備機
+        :param DelayThresh: 該欄位對只讀帳號有意義，表示選擇主備延遲小於該值的備機
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DelayThresh: int
         """
@@ -430,7 +430,7 @@ class DBInstance(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例 Id，唯一标識一個 TDSQL 實例
+        :param InstanceId: 實例 Id，唯一標識一個 TDSQL 實例
         :type InstanceId: str
         :param InstanceName: 實例名稱，用戶可修改
         :type InstanceName: str
@@ -462,11 +462,11 @@ class DBInstance(AbstractModel):
         :type CreateTime: str
         :param UpdateTime: 實例最後更新時間，格式爲 2006-01-02 15:04:05
         :type UpdateTime: str
-        :param AutoRenewFlag: 自動續約标志：0 否，1 是
+        :param AutoRenewFlag: 自動續約標志：0 否，1 是
         :type AutoRenewFlag: int
         :param PeriodEndTime: 實例到期時間，格式爲 2006-01-02 15:04:05
         :type PeriodEndTime: str
-        :param Uin: 實例所屬賬号
+        :param Uin: 實例所屬賬號
         :type Uin: str
         :param TdsqlVersion: TDSQL 版本訊息
         :type TdsqlVersion: str
@@ -495,7 +495,7 @@ class DBInstance(AbstractModel):
         :param Paymode: 付費模式
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Paymode: str
-        :param Locker: 實例處于異步任務時的異步任務流程ID
+        :param Locker: 實例處於異步任務時的異步任務流程ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Locker: int
         :param StatusDesc: 實例目前運作狀态描述
@@ -505,7 +505,7 @@ class DBInstance(AbstractModel):
         :type WanStatus: int
         :param IsAuditSupported: 該實例是否支援審計。1-支援；0-不支援
         :type IsAuditSupported: int
-        :param Machine: 機器型号
+        :param Machine: 機器型號
         :type Machine: str
         :param IsEncryptSupported: 是否支援數據加密。1-支援；0-不支援
         :type IsEncryptSupported: int
@@ -619,13 +619,13 @@ class Deal(AbstractModel):
 
     def __init__(self):
         """
-        :param DealName: 訂單号
+        :param DealName: 訂單號
         :type DealName: str
-        :param OwnerUin: 所屬賬号
+        :param OwnerUin: 所屬賬號
         :type OwnerUin: str
         :param Count: 商品數量
         :type Count: int
-        :param FlowId: 關聯的流程 Id，可用于查詢流程執行狀态
+        :param FlowId: 關聯的流程 Id，可用於查詢流程執行狀态
         :type FlowId: int
         :param InstanceIds: 只有創建實例的訂單會填充該欄位，表示該訂單創建的實例的 ID。
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -703,7 +703,7 @@ class DescribeAccountPrivilegesRequest(AbstractModel):
         :type InstanceId: str
         :param UserName: 登入用戶名。
         :type UserName: str
-        :param Host: 用戶允許的訪問 host，用戶名+host唯一确定一個賬号。
+        :param Host: 用戶允許的訪問 host，用戶名+host唯一确定一個賬號。
         :type Host: str
         :param DbName: 資料庫名。如果爲 \*，表示查詢全局權限（即 \*.\*），此時忽略 Type 和 Object 參數
         :type DbName: str
@@ -744,9 +744,9 @@ class DescribeAccountPrivilegesResponse(AbstractModel):
         :type InstanceId: str
         :param Privileges: 權限清單。
         :type Privileges: list of str
-        :param UserName: 資料庫賬号用戶名
+        :param UserName: 資料庫賬號用戶名
         :type UserName: str
-        :param Host: 資料庫賬号Host
+        :param Host: 資料庫賬號Host
         :type Host: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -924,7 +924,7 @@ class DescribeDBInstancesRequest(AbstractModel):
         :type Limit: int
         :param OriginSerialIds: 按 OriginSerialId 查詢
         :type OriginSerialIds: list of str
-        :param IsFilterExcluster: 标識是否使用ExclusterType欄位, false不使用，true使用
+        :param IsFilterExcluster: 標識是否使用ExclusterType欄位, false不使用，true使用
         :type IsFilterExcluster: bool
         :param ExclusterType: 實例所屬獨享集群類型。取值範圍：1-非獨享集群，2-獨享集群， 0-全部
         :type ExclusterType: int
@@ -1123,7 +1123,7 @@ class DescribeDBPerformanceDetailsRequest(AbstractModel):
         :type StartTime: str
         :param EndTime: 結束日期，格式yyyy-mm-dd
         :type EndTime: str
-        :param MetricName: 拉取的指标名，支援的值爲：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
+        :param MetricName: 拉取的指標名，支援的值爲：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
         :type MetricName: str
         """
         self.InstanceId = None
@@ -1189,7 +1189,7 @@ class DescribeDBPerformanceRequest(AbstractModel):
         :type StartTime: str
         :param EndTime: 結束日期，格式yyyy-mm-dd
         :type EndTime: str
-        :param MetricName: 拉取的指标名，支援的值爲：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
+        :param MetricName: 拉取的指標名，支援的值爲：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
         :type MetricName: str
         """
         self.InstanceId = None
@@ -1295,7 +1295,7 @@ class DescribeDBResourceUsageDetailsRequest(AbstractModel):
         :type StartTime: str
         :param EndTime: 結束日期，格式yyyy-mm-dd
         :type EndTime: str
-        :param MetricName: 拉取的指标名稱，支援的值爲：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate
+        :param MetricName: 拉取的指標名稱，支援的值爲：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate
         :type MetricName: str
         """
         self.InstanceId = None
@@ -1361,7 +1361,7 @@ class DescribeDBResourceUsageRequest(AbstractModel):
         :type StartTime: str
         :param EndTime: 結束日期，格式yyyy-mm-dd
         :type EndTime: str
-        :param MetricName: 拉取的指标名稱，支援的值爲：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate
+        :param MetricName: 拉取的指標名稱，支援的值爲：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate
         :type MetricName: str
         """
         self.InstanceId = None
@@ -1437,7 +1437,7 @@ class DescribeDBSlowLogsRequest(AbstractModel):
         :type EndTime: str
         :param Db: 要查詢的具體資料庫名稱
         :type Db: str
-        :param OrderBy: 排序指标，取值爲query_time_sum或者query_count
+        :param OrderBy: 排序指標，取值爲query_time_sum或者query_count
         :type OrderBy: str
         :param OrderByType: 排序類型，desc或者asc
         :type OrderByType: str
@@ -1516,7 +1516,7 @@ class DescribeFlowRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param FlowId: 異步請求介面返回的任務流程号。
+        :param FlowId: 異步請求介面返回的任務流程號。
         :type FlowId: int
         """
         self.FlowId = None
@@ -1596,7 +1596,7 @@ class DescribeOrdersRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param DealNames: 待查詢的長訂單号清單，創建實例、續約實例、擴容實例介面返回。
+        :param DealNames: 待查詢的長訂單號清單，創建實例、續約實例、擴容實例介面返回。
         :type DealNames: list of str
         """
         self.DealNames = None
@@ -1913,7 +1913,7 @@ class GrantAccountPrivilegesRequest(AbstractModel):
         :type InstanceId: str
         :param UserName: 登入用戶名。
         :type UserName: str
-        :param Host: 用戶允許的訪問 host，用戶名+host唯一确定一個賬号。
+        :param Host: 用戶允許的訪問 host，用戶名+host唯一确定一個賬號。
         :type Host: str
         :param DbName: 資料庫名。如果爲 \*，表示設置全局權限（即 \*.\*），此時忽略 Type 和 Object 參數。當DbName不爲\*時，需要傳入參 Type。
         :type DbName: str
@@ -2026,7 +2026,7 @@ class InstanceSpec(AbstractModel):
 
     def __init__(self):
         """
-        :param Machine: 設備型号
+        :param Machine: 設備型號
         :type Machine: str
         :param SpecInfos: 該機型對應的可售賣規格清單
         :type SpecInfos: list of SpecConfigInfo
@@ -2056,7 +2056,7 @@ class LogFileInfo(AbstractModel):
         :type Mtime: int
         :param Length: 文件長度
         :type Length: int
-        :param Uri: 下載Log時用到的統一資源标識符
+        :param Uri: 下載Log時用到的統一資源標識符
         :type Uri: str
         :param FileName: 文件名
         :type FileName: str
@@ -2085,9 +2085,9 @@ class ModifyAccountDescriptionRequest(AbstractModel):
         :type InstanceId: str
         :param UserName: 登入用戶名。
         :type UserName: str
-        :param Host: 用戶允許的訪問 host，用戶名+host唯一确定一個賬号。
+        :param Host: 用戶允許的訪問 host，用戶名+host唯一确定一個賬號。
         :type Host: str
-        :param Description: 新的賬号備注，長度 0~256。
+        :param Description: 新的賬號備注，長度 0~256。
         :type Description: str
         """
         self.InstanceId = None
@@ -2497,7 +2497,7 @@ class ParamModifyResult(AbstractModel):
 
 
 class PerformanceMonitorSet(AbstractModel):
-    """DB效能監控指标集合
+    """DB效能監控指標集合
 
     """
 
@@ -2648,8 +2648,8 @@ class RenewDBInstanceResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param DealName: 長訂單号。可以據此調用 DescribeOrders
- 查詢訂單詳細訊息，或在支付失敗時調用用戶賬号相關介面進行支付。
+        :param DealName: 長訂單號。可以據此調用 DescribeOrders
+ 查詢訂單詳細訊息，或在支付失敗時調用用戶賬號相關介面進行支付。
         :type DealName: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -2674,9 +2674,9 @@ class ResetAccountPasswordRequest(AbstractModel):
         :type InstanceId: str
         :param UserName: 登入用戶名。
         :type UserName: str
-        :param Host: 用戶允許的訪問 host，用戶名+host唯一确定一個賬号。
+        :param Host: 用戶允許的訪問 host，用戶名+host唯一确定一個賬號。
         :type Host: str
-        :param Password: 新密碼，由字母、數字或常見符号組成，不能包含分号、單引号和雙引号，長度爲6~32位。
+        :param Password: 新密碼，由字母、數字或常見符號組成，不能包含分號、單引號和雙引號，長度爲6~32位。
         :type Password: str
         """
         self.InstanceId = None
@@ -2710,7 +2710,7 @@ class ResetAccountPasswordResponse(AbstractModel):
 
 
 class ResourceUsageMonitorSet(AbstractModel):
-    """DB資源使用情況監控指标集合
+    """DB資源使用情況監控指標集合
 
     """
 
@@ -2753,7 +2753,7 @@ class SlowLogData(AbstractModel):
 
     def __init__(self):
         """
-        :param CheckSum: 語句校驗和，用于查詢詳情
+        :param CheckSum: 語句校驗和，用於查詢詳情
         :type CheckSum: str
         :param Db: 資料庫名稱
         :type Db: str
@@ -2785,7 +2785,7 @@ class SlowLogData(AbstractModel):
         :type TsMax: str
         :param TsMin: 首次執行時間
         :type TsMin: str
-        :param User: 帳号
+        :param User: 帳號
         :type User: str
         """
         self.CheckSum = None
@@ -2834,7 +2834,7 @@ class SpecConfigInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param Machine: 設備型号
+        :param Machine: 設備型號
         :type Machine: str
         :param Memory: 内存大小，單位 GB
         :type Memory: int
@@ -2967,8 +2967,8 @@ class UpgradeDBInstanceResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param DealName: 長訂單号。可以據此調用 DescribeOrders
- 查詢訂單詳細訊息，或在支付失敗時調用用戶賬号相關介面進行支付。
+        :param DealName: 長訂單號。可以據此調用 DescribeOrders
+ 查詢訂單詳細訊息，或在支付失敗時調用用戶賬號相關介面進行支付。
         :type DealName: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str

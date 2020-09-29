@@ -352,9 +352,9 @@ class RegisterMigrationTaskRequest(AbstractModel):
         :type SrcAccessType: str
         :param SrcDatabaseType: 源實例資料庫類型，資料庫遷移時填寫，取值爲mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
         :type SrcDatabaseType: str
-        :param DstAccessType: 目标實例接入類型，資料庫遷移時填寫值爲：extranet(外網),cvm(cvm自建實例),dcg(專線接入的實例),vpncloud(雲vpn接入的實例),vpnselfbuild(自建vpn接入的實例)，cdb(雲上cdb實例)
+        :param DstAccessType: 目標實例接入類型，資料庫遷移時填寫值爲：extranet(外網),cvm(cvm自建實例),dcg(專線接入的實例),vpncloud(雲vpn接入的實例),vpnselfbuild(自建vpn接入的實例)，cdb(雲上cdb實例)
         :type DstAccessType: str
-        :param DstDatabaseType: 目标實例資料庫類型,資料庫遷移時填寫，取值爲mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
+        :param DstDatabaseType: 目標實例資料庫類型,資料庫遷移時填寫，取值爲mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
         :type DstDatabaseType: str
         """
         self.TaskType = None

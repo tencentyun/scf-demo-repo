@@ -7,7 +7,7 @@ inputs:
   name: Unzip
   src: ./
   description: >-
-    本範例通過配置COS觸發，上傳到COS的ZIP包，使用SCF下載并本地解壓，支援帶密碼解壓，支援中文欄位解壓，并把解壓後的文件上傳到COS另一個bucket中，您還可以擴充支援RAR包的解壓
+    本範例通過配置COS觸發，上傳到COS的ZIP包，使用SCF下載並本地解壓，支援帶密碼解壓，支援中文欄位解壓，並把解壓後的文件上傳到COS另一個bucket中，您還可以擴充支援RAR包的解壓
   handler: index.main_handler
   runtime: Nodejs8.9
   namespace: default

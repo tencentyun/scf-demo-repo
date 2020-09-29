@@ -3,7 +3,7 @@
       "application": {
         "Chinese": {
           "name": "簡訊驗證碼登入",
-          "description": "本範例通過Top Cloud 簡訊實現發送驗證碼，并校驗驗證碼以實現登入",
+          "description": "本範例通過Top Cloud 簡訊實現發送驗證碼，並校驗驗證碼以實現登入",
           "attention": "",
           "readme": {
             "file": "",
@@ -46,11 +46,11 @@
         "version": "1.0.10" 
         // Version number, which identifies the demo version status. 
         // Demo will not to update to the page if the version number unmodified.
-        //版本号，通過版本号标識 demo 升級情況，未修改版本号會導緻 demo 不更新至頁面
+        //版本號，通過版本號標識 demo 升級情況，未修改版本號會導緻 demo 不更新至頁面
       },
       "functions": {
         "name": "SmsVerificationCode", // Function name which only be in English. 函數名稱，只支援英文
-        "description": "本範例通過Top Cloud 簡訊實現發送驗證碼，并校驗驗證碼以實現登入",
+        "description": "本範例通過Top Cloud 簡訊實現發送驗證碼，並校驗驗證碼以實現登入",
         "handler": "index.main_handler",
         "memorySize": 128, //Running memory.  運作配置内存
         "timeout": 3, // Running timeout.運作超時時間
@@ -61,9 +61,9 @@
             "SMS_TEMPLATE_ID": "sms_info",
             "SMS_SIGN": "sms_info",
             "SMS_SDKAPPID": "sms_info"
-        }, // Optional, used to define environment variables. 可選，用于定義環境變量
-        "Events": {}, // Optional, used define the event source that triggers this function.  可選，用于定義觸發此函數的事件源
-        "VpcConfig": {}, // Optional, used configure cloud function's private network. 可選， 用于配置雲函數訪問 VPC 私有網絡。
+        }, // Optional, used to define environment variables. 可選，用於定義環境變量
+        "Events": {}, // Optional, used define the event source that triggers this function.  可選，用於定義觸發此函數的事件源
+        "VpcConfig": {}, // Optional, used configure cloud function's private network. 可選， 用於配置雲函數訪問 VPC 私有網絡。
         "codeObject": {
           "codeFile": [
             "index.js"

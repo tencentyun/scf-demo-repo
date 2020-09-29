@@ -351,7 +351,7 @@ function copyFolder($from, $to)
 
 function updateEnvironment($Envs, $function_name, $Region, $Namespace, $SecretId, $SecretKey)
 {
-    // 獲取當前代碼并解壓
+    // 獲取當前代碼並解壓
     //$codeurl = json_decode(getfunctioncodeurl($function_name, $Region, $Namespace, $SecretId, $SecretKey), true)['Response']['Url'];
     //$codezip = '/tmp/oldcode.zip';
     $outPath = '/tmp/code/';
@@ -376,7 +376,7 @@ function updateEnvironment($Envs, $function_name, $Region, $Namespace, $SecretId
     //$zip=new ZipArchive();
     $zip=new PharData($source);
     //if($zip->open($source, ZipArchive::CREATE)){
-        addFileToZip($zip, $outPath); //調用方法，對要打包的根目錄進行操作，并将ZipArchive的對象傳遞給方法
+        addFileToZip($zip, $outPath); //調用方法，對要打包的根目錄進行操作，並将ZipArchive的對象傳遞給方法
     //    $zip->close(); //關閉處理的zip文件
     //}
 
@@ -562,7 +562,7 @@ function OnekeyUpate($auth = 'qkqpttgf', $project = 'OneManager-php', $branch = 
     $source = '/tmp/code.zip';
     $outPath = '/tmp/';
 
-    // 從github下載對應tar.gz，并解壓
+    // 從github下載對應tar.gz，並解壓
     $url = 'https://github.com/' . $auth . '/' . $project . '/tarball/' . urlencode($branch) . '/';
     $tarfile = '/tmp/github.tar.gz';
     file_put_contents($tarfile, file_get_contents($url));
@@ -585,7 +585,7 @@ function OnekeyUpate($auth = 'qkqpttgf', $project = 'OneManager-php', $branch = 
     //$zip=new ZipArchive();
     $zip=new PharData($source);
     //if($zip->open($source, ZipArchive::CREATE)){
-        addFileToZip($zip, $outPath); //調用方法，對要打包的根目錄進行操作，并将ZipArchive的對象傳遞給方法
+        addFileToZip($zip, $outPath); //調用方法，對要打包的根目錄進行操作，並将ZipArchive的對象傳遞給方法
     //    $zip->close(); //關閉處理的zip文件
     //}
 

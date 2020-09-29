@@ -23,17 +23,17 @@ class QueryAntiFraudRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param PhoneNumber: 電話号碼(五選二)
+        :param PhoneNumber: 電話號碼(五選二)
         :type PhoneNumber: str
         :param IdNumber: Id(五選二)
         :type IdNumber: str
-        :param BankCardNumber: 銀行卡号(五選二)
+        :param BankCardNumber: 銀行卡號(五選二)
         :type BankCardNumber: str
         :param UserIp: 用戶請求來源 IP(五選二)
         :type UserIp: str
         :param Imei: 國際 設備識别碼(五選二)
         :type Imei: str
-        :param Idfa: ios 系統廣告标示符(五選二)
+        :param Idfa: ios 系統廣告標示符(五選二)
         :type Idfa: str
         :param Scene: 業務場景 ID，需要找技術對接
         :type Scene: str
@@ -47,17 +47,17 @@ class QueryAntiFraudRequest(AbstractModel):
         :type Mac: str
         :param Imsi: 國際 用戶識别碼
         :type Imsi: str
-        :param AccountType: 關聯的 帳号  ：1；
-開放帳号 ： 2；
+        :param AccountType: 關聯的 帳號  ：1；
+開放帳號 ： 2；
         :type AccountType: str
         :param Uid: 可選的   或  openid
         :type Uid: str
         :param AppIdU: qq 或 分配給網站或應用的 appid，用來
-唯一标識網站或應用
+唯一標識網站或應用
         :type AppIdU: str
         :param WifiMac: WIFI MAC
         :type WifiMac: str
-        :param WifiSSID: WIFI 服務集标識
+        :param WifiSSID: WIFI 服務集標識
         :type WifiSSID: str
         :param WifiBSSID: WIFI-BSSID
         :type WifiBSSID: str
@@ -70,7 +70,7 @@ ID 區分統計數據
 2：sha256
 3：SM3
         :type IdCryptoType: str
-        :param PhoneCryptoType: 手機号加密類型
+        :param PhoneCryptoType: 手機號加密類型
 0：不加密（預設值）
 1：md5, 2：sha256
 3：SM3

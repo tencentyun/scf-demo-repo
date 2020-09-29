@@ -6,7 +6,7 @@ $appid = XXXXXXXX;  # 請替換爲您的 APPID
 $secret_id = '************';  # 請替換爲您的 SecretId
 $secret_key = '************';  # 請替換爲您的 SecretKey
 $region = 'ap-guangzhou';
-$backup_bucket = "XXXX".'-'.$appid;  # 請替換爲您用于存放壓縮後圖片的bucket
+$backup_bucket = "XXXX".'-'.$appid;  # 請替換爲您用於存放壓縮後圖片的bucket
 
 $cosClient = new Qcloud\Cos\Client(array('region' => $region,
     'credentials'=> array(

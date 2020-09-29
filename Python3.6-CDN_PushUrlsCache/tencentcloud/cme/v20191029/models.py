@@ -50,7 +50,7 @@ class AddTeamMemberRequest(AbstractModel):
         :type TeamId: str
         :param TeamMembers: 要添加的成員清單，一次最多添加30個成員。
         :type TeamMembers: list of AddMemberInfo
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -212,7 +212,7 @@ class CMEExportInfo(AbstractModel):
         :type Description: str
         :param ClassPath: 導出的素材分類路徑，長度不能超過15字元。
         :type ClassPath: str
-        :param TagSet: 導出的素材标簽，單個标簽不得超過10個字元。
+        :param TagSet: 導出的素材標簽，單個標簽不得超過10個字元。
         :type TagSet: list of str
         """
         self.Owner = None
@@ -268,7 +268,7 @@ class CreateClassRequest(AbstractModel):
         :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param ClassPath: 分類路徑。
         :type ClassPath: str
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -320,17 +320,17 @@ class CreateLinkRequest(AbstractModel):
         :type Name: str
         :param Owner: 連結歸屬實體。
         :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
-        :param DestinationId: 目标資源Id。取值：
+        :param DestinationId: 目標資源Id。取值：
 <li>當 Type 爲 MATERIAL 時填素材 ID；</li>
 <li>當 Type 爲 CLASS 時填寫分類路徑。</li>
         :type DestinationId: str
-        :param DestinationOwner: 目标資源歸屬者。
+        :param DestinationOwner: 目標資源歸屬者。
         :type DestinationOwner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
-        :param ClassPath: 連結的分類路徑，如填"/a/b"則代表連結屬于該分類路徑，不填則預設爲根路徑。
+        :param ClassPath: 連結的分類路徑，如填"/a/b"則代表連結屬於該分類路徑，不填則預設爲根路徑。
         :type ClassPath: str
-        :param Tags: 連結标簽，單個标簽長度不能超過10，數組長度不能超過10。
+        :param Tags: 連結標簽，單個標簽長度不能超過10，數組長度不能超過10。
         :type Tags: list of str
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -507,7 +507,7 @@ class DeleteClassRequest(AbstractModel):
         :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param ClassPath: 分類路徑。
         :type ClassPath: str
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -591,7 +591,7 @@ class DeleteMaterialRequest(AbstractModel):
         :type Platform: str
         :param MaterialId: 素材 Id。
         :type MaterialId: str
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -673,7 +673,7 @@ class DeleteTeamMembersRequest(AbstractModel):
         :type TeamId: str
         :param MemberIds: 要删除的成員清單。
         :type MemberIds: list of str
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -717,7 +717,7 @@ class DeleteTeamRequest(AbstractModel):
         :type Platform: str
         :param TeamId: 要删除的團隊  ID。
         :type TeamId: str
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -759,7 +759,7 @@ class DescribeClassRequest(AbstractModel):
         :type Platform: str
         :param Owner: 歸屬者。
         :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -922,7 +922,7 @@ class DescribeMaterialsRequest(AbstractModel):
 <li>CreateTime：創建時間；</li>
 <li>UpdateTime：更新時間。</li>
         :type Sort: :class:`taifucloudcloud.cme.v20191029.models.SortBy`
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -1060,7 +1060,7 @@ class DescribeResourceAuthorizationRequest(AbstractModel):
         :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param Resource: 資源。
         :type Resource: :class:`taifucloudcloud.cme.v20191029.models.Resource`
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -1120,9 +1120,9 @@ class DescribeSharedSpaceRequest(AbstractModel):
         """
         :param Platform: 平台名稱，指定訪問的平台。
         :type Platform: str
-        :param Authorizee: 被授權目标實體。
+        :param Authorizee: 被授權目標實體。
         :type Authorizee: :class:`taifucloudcloud.cme.v20191029.models.Entity`
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -1216,7 +1216,7 @@ class DescribeTaskDetailResponse(AbstractModel):
         :param VideoEditProjectOutput: 導出項目輸出訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type VideoEditProjectOutput: :class:`taifucloudcloud.cme.v20191029.models.VideoEditProjectOutput`
-        :param CreateTime: 創建時間，格式按照 ISO 8601 标準表示。
+        :param CreateTime: 創建時間，格式按照 ISO 8601 標準表示。
         :type CreateTime: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1332,7 +1332,7 @@ class DescribeTeamMembersRequest(AbstractModel):
         :type Offset: int
         :param Limit: 返回記錄條數，預設值：30，最大值：30。
         :type Limit: int
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -1430,7 +1430,7 @@ class DescribeTeamsResponse(AbstractModel):
 
 
 class Entity(AbstractModel):
-    """用于描述資源的歸屬實體。
+    """用於描述資源的歸屬實體。
 
     """
 
@@ -1468,7 +1468,7 @@ class ExportVideoEditProjectRequest(AbstractModel):
 <li>11：分辨率爲 720P，輸出視訊格式爲 MP4；</li>
 <li>12：分辨率爲 1080P，輸出視訊格式爲 MP4。</li>
         :type Definition: int
-        :param ExportDestination: 導出目标。
+        :param ExportDestination: 導出目標。
 <li>CME：雲剪，即導出爲雲剪素材；</li>
 <li>VOD：雲點播，即導出爲雲點播媒資。</li>
         :type ExportDestination: str
@@ -1536,7 +1536,7 @@ class FlattenListMediaRequest(AbstractModel):
         :type Offset: int
         :param Limit: 返回記錄條數，預設值：10，最大值：50。
         :type Limit: int
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -1601,7 +1601,7 @@ class GrantResourceAuthorizationRequest(AbstractModel):
         :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param Resources: 被授權資源。
         :type Resources: list of Resource
-        :param Authorizees: 被授權目标實體。
+        :param Authorizees: 被授權目標實體。
         :type Authorizees: list of Entity
         :param Permissions: 詳細授權值。 取值有：
 <li>R：可讀，可以浏覽素材，但不能使用該素材（将其添加到 Project），或複制到自己的媒資庫中</li>
@@ -1609,7 +1609,7 @@ class GrantResourceAuthorizationRequest(AbstractModel):
 <li>C：可複制，既可以使用該素材（将其添加到 Project），也可以将其複制到自己的媒資庫中。</li>
 <li>W：可修改、删除媒資。</li>
         :type Permissions: list of str
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -1704,12 +1704,12 @@ class ImportMaterialRequest(AbstractModel):
         :type Name: str
         :param ClassPath: 素材分類路徑，形如："/a/b"，層級數不能超過10，每個層級長度不能超過15字元。若不填則預設爲根路徑。
         :type ClassPath: str
-        :param Tags: 素材标簽，單個标簽長度不能超過10，數組長度不能超過10。
+        :param Tags: 素材標簽，單個標簽長度不能超過10，數組長度不能超過10。
         :type Tags: list of str
         :param PreProcessDefinition: 素材預處理任務範本 ID。取值：
 <li>10：進行編輯預處理。</li>
         :type PreProcessDefinition: int
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -1886,12 +1886,12 @@ class LinkMaterial(AbstractModel):
         :type LinkType: str
         :param LinkStatus: 連結狀态取值：
 <li> Normal：正常 ；</li>
-<li>NotFound：連結目标不存在；</li> <li>Forbidden：無權限。</li>
+<li>NotFound：連結目標不存在；</li> <li>Forbidden：無權限。</li>
         :type LinkStatus: str
         :param LinkMaterialInfo: 素材連結詳細訊息，當LinkType="MATERIAL"時有值。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type LinkMaterialInfo: :class:`taifucloudcloud.cme.v20191029.models.LinkMaterialInfo`
-        :param LinkClassInfo: 分類連結目标訊息，當LinkType=“CLASS”時有值。
+        :param LinkClassInfo: 分類連結目標訊息，當LinkType=“CLASS”時有值。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type LinkClassInfo: :class:`taifucloudcloud.cme.v20191029.models.ClassInfo`
         """
@@ -1969,7 +1969,7 @@ class ListMediaRequest(AbstractModel):
         :type Offset: int
         :param Limit: 返回記錄條數，預設值：10，最大值：50。
         :type Limit: int
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -2074,7 +2074,7 @@ class MaterialBasicInfo(AbstractModel):
         :type UpdateTime: str
         :param ClassPath: 素材的分類目錄路徑。
         :type ClassPath: str
-        :param TagSet: 素材标簽訊息。
+        :param TagSet: 素材標簽訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of str
         :param PreviewUrl: 素材媒體文件的預覽圖。
@@ -2161,9 +2161,9 @@ class MaterialStatus(AbstractModel):
     def __init__(self):
         """
         :param EditorUsableStatus: 素材編輯可用狀态，取值有：
-<li>NORMAL：正常，可直接用于編輯；</li>
-<li>ABNORMAL : 異常，不可用于編輯；</li>
-<li>PROCESSING：處理中，暫不可用于編輯。</li>
+<li>NORMAL：正常，可直接用於編輯；</li>
+<li>ABNORMAL : 異常，不可用於編輯；</li>
+<li>PROCESSING：處理中，暫不可用於編輯。</li>
         :type EditorUsableStatus: str
         """
         self.EditorUsableStatus = None
@@ -2188,7 +2188,7 @@ class MediaImageSpriteInfo(AbstractModel):
         :type TotalCount: int
         :param ImageUrlSet: 截取雪碧圖輸出的網址。
         :type ImageUrlSet: list of str
-        :param WebVttUrl: 雪碧圖子圖位置與時間關系的 WebVtt 文件網址。WebVtt 文件表明了各個雪碧圖小圖對應的時間點，以及在雪碧大圖裏的坐标位置，一般被播放器用于實現預覽。
+        :param WebVttUrl: 雪碧圖子圖位置與時間關系的 WebVtt 文件網址。WebVtt 文件表明了各個雪碧圖小圖對應的時間點，以及在雪碧大圖裏的坐標位置，一般被播放器用於實現預覽。
         :type WebVttUrl: str
         """
         self.Height = None
@@ -2280,11 +2280,11 @@ class ModifyMaterialRequest(AbstractModel):
         :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param Name: 素材名稱，不能超過30個字元。
         :type Name: str
-        :param Tags: 素材标簽，單個标簽長度不能超過10個字元，數組長度不能超過10。
+        :param Tags: 素材標簽，單個標簽長度不能超過10個字元，數組長度不能超過10。
         :type Tags: list of str
         :param ClassPath: 素材分類路徑，例如填寫"/a/b"，則代表該素材儲存的路徑爲"/a/b"。
         :type ClassPath: str
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -2398,7 +2398,7 @@ class ModifyTeamMemberRequest(AbstractModel):
 <li>Admin：團隊管理員；</li>
 <li>Member：普通成員。</li>
         :type Role: str
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -2448,7 +2448,7 @@ class ModifyTeamRequest(AbstractModel):
         :type TeamId: str
         :param Name: 團隊名稱，不能超過 30 個字元。
         :type Name: str
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -2494,9 +2494,9 @@ class MoveClassRequest(AbstractModel):
         :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param SourceClassPath: 源分類路徑。
         :type SourceClassPath: str
-        :param DestinationClassPath: 目标分類路徑。
+        :param DestinationClassPath: 目標分類路徑。
         :type DestinationClassPath: str
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -2552,9 +2552,9 @@ class ProjectInfo(AbstractModel):
         :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param CoverUrl: 項目封面圖片網址。
         :type CoverUrl: str
-        :param CreateTime: 項目創建時間，格式按照 ISO 8601 标準表示。
+        :param CreateTime: 項目創建時間，格式按照 ISO 8601 標準表示。
         :type CreateTime: str
-        :param UpdateTime: 項目更新時間，格式按照 ISO 8601 标準表示。
+        :param UpdateTime: 項目更新時間，格式按照 ISO 8601 標準表示。
         :type UpdateTime: str
         """
         self.ProjectId = None
@@ -2581,7 +2581,7 @@ class ProjectInfo(AbstractModel):
 
 
 class Resource(AbstractModel):
-    """用于描述資源
+    """用於描述資源
 
     """
 
@@ -2616,7 +2616,7 @@ class RevokeResourceAuthorizationRequest(AbstractModel):
         :type Owner: :class:`taifucloudcloud.cme.v20191029.models.Entity`
         :param Resources: 被授權資源。
         :type Resources: list of Resource
-        :param Authorizees: 被授權目标實體。
+        :param Authorizees: 被授權目標實體。
         :type Authorizees: list of Entity
         :param Permissions: 詳細授權值。 取值有：
 <li>R：可讀，可以浏覽素材，但不能使用該素材（将其添加到 Project），或複制到自己的媒資庫中</li>
@@ -2624,7 +2624,7 @@ class RevokeResourceAuthorizationRequest(AbstractModel):
 <li>C：可複制，既可以使用該素材（将其添加到 Project），也可以将其複制到自己的媒資庫中。</li>
 <li>W：可修改、删除媒資。</li>
         :type Permissions: list of str
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -2697,7 +2697,7 @@ class SearchMaterialRequest(AbstractModel):
         :type DurationRange: :class:`taifucloudcloud.cme.v20191029.models.IntegerRange`
         :param CreateTimeRange: 按照素材創建時間檢索。
         :type CreateTimeRange: :class:`taifucloudcloud.cme.v20191029.models.TimeRange`
-        :param Tags: 标簽集合，比對集合中任意元素。單個标簽長度限制：10 個字元。數組長度限制：10。
+        :param Tags: 標簽集合，比對集合中任意元素。單個標簽長度限制：10 個字元。數組長度限制：10。
         :type Tags: list of str
         :param Sort: 排序方式。Sort.Field 可選值：CreateTime。指定 Text 搜索時，将根據比對度排序，該欄位無效。
         :type Sort: :class:`taifucloudcloud.cme.v20191029.models.SortBy`
@@ -2705,7 +2705,7 @@ class SearchMaterialRequest(AbstractModel):
         :type Offset: int
         :param Limit: 返回記錄條數，預設值：50。
         :type Limit: int
-        :param Operator: 操作者。填寫用戶的 Id，用于标識調用者及校驗操作權限。
+        :param Operator: 操作者。填寫用戶的 Id，用於標識調用者及校驗操作權限。
         :type Operator: str
         """
         self.Platform = None
@@ -2847,7 +2847,7 @@ class TaskBaseInfo(AbstractModel):
         :type ErrCode: int
         :param ErrMsg: 錯誤訊息。
         :type ErrMsg: str
-        :param CreateTime: 創建時間，格式按照 ISO 8601 标準表示。
+        :param CreateTime: 創建時間，格式按照 ISO 8601 標準表示。
         :type CreateTime: str
         """
         self.TaskId = None
@@ -2882,9 +2882,9 @@ class TeamInfo(AbstractModel):
         :type Name: str
         :param MemberCount: 團隊成員個數
         :type MemberCount: int
-        :param CreateTime: 團隊創建時間，格式按照 ISO 8601 标準表示。
+        :param CreateTime: 團隊創建時間，格式按照 ISO 8601 標準表示。
         :type CreateTime: str
-        :param UpdateTime: 團隊最後更新時間，格式按照 ISO 8601 标準表示。
+        :param UpdateTime: 團隊最後更新時間，格式按照 ISO 8601 標準表示。
         :type UpdateTime: str
         """
         self.TeamId = None

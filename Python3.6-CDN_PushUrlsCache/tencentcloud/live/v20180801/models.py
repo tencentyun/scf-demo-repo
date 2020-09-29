@@ -34,7 +34,7 @@ class AddDelayLiveStreamRequest(AbstractModel):
         :param ExpireTime: 延播設置的過期時間。UTC 格式，例如：2018-11-29T19:00:00Z。
 注意：
 1. 預設7天後過期，且最長支援7天内生效。
-2.  時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
+2.  時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 標準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type ExpireTime: str
         """
         self.AppName = None
@@ -94,7 +94,7 @@ class AddLiveDomainRequest(AbstractModel):
 預設值： 0。
         :type IsDelayLive: int
         :param IsMiniProgramLive: 是否是小程式直播：
-0： 标準直播，
+0： 標準直播，
 1 ：小程式直播 。
 預設值： 0。
         :type IsMiniProgramLive: int
@@ -353,7 +353,7 @@ class CancelCommonMixStreamRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MixStreamSessionId: 混流會話（申請混流開始到取消混流結束）标識 ID。
+        :param MixStreamSessionId: 混流會話（申請混流開始到取消混流結束）標識 ID。
         :type MixStreamSessionId: str
         """
         self.MixStreamSessionId = None
@@ -381,7 +381,7 @@ class CancelCommonMixStreamResponse(AbstractModel):
 
 
 class CdnPlayStatData(AbstractModel):
-    """下行播放統計指标
+    """下行播放統計指標
 
     """
 
@@ -395,7 +395,7 @@ class CdnPlayStatData(AbstractModel):
         :type Flux: float
         :param Request: 新增請求數。
         :type Request: int
-        :param Online: 并發連接數。
+        :param Online: 並發連接數。
         :type Online: int
         """
         self.Time = None
@@ -526,9 +526,9 @@ class CommonMixCropParams(AbstractModel):
         :type CropWidth: float
         :param CropHeight: 裁剪的高度。取值範圍[0，3000]。
         :type CropHeight: float
-        :param CropStartLocationX: 裁剪的起始X坐标。取值範圍[0，3000]。
+        :param CropStartLocationX: 裁剪的起始X坐標。取值範圍[0，3000]。
         :type CropStartLocationX: float
-        :param CropStartLocationY: 裁剪的起始Y坐标。取值範圍[0，3000]。
+        :param CropStartLocationY: 裁剪的起始Y坐標。取值範圍[0，3000]。
         :type CropStartLocationY: float
         """
         self.CropWidth = None
@@ -608,14 +608,14 @@ class CommonMixLayoutParams(AbstractModel):
 像素：[0，3000]
 百分比：[0.01，0.99]
 不填預設爲0。
-相對于大主播背景畫面左上角的橫向偏移。 
+相對於大主播背景畫面左上角的橫向偏移。 
 使用百分比時，期望輸出爲（百分比 * 背景寬）。
         :type LocationX: float
         :param LocationY: 輸入在輸出畫面的Y偏移。取值範圍：
 像素：[0，3000]
 百分比：[0.01，0.99]
 不填預設爲0。
-相對于大主播背景畫面左上角的縱向偏移。 
+相對於大主播背景畫面左上角的縱向偏移。 
 使用百分比時，期望輸出爲（百分比 * 背景寬）
         :type LocationY: float
         :param Color: 當InputType爲3(畫布)時，該值表示畫布的顔色。
@@ -712,7 +712,7 @@ class CommonMixOutputParams(AbstractModel):
 
 
 class ConcurrentRecordStreamNum(AbstractModel):
-    """并發錄制路數
+    """並發錄制路數
 
     """
 
@@ -739,7 +739,7 @@ class CreateCommonMixStreamRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MixStreamSessionId: 混流會話（申請混流開始到取消混流結束）标識 ID。
+        :param MixStreamSessionId: 混流會話（申請混流開始到取消混流結束）標識 ID。
         :type MixStreamSessionId: str
         :param InputStreamList: 混流輸入流清單。
         :type InputStreamList: list of CommonMixInputParam
@@ -988,10 +988,10 @@ class CreateLiveRecordRequest(AbstractModel):
         :type AppName: str
         :param DomainName: 推流域名。多域名推流必須設置。
         :type DomainName: str
-        :param StartTime: 錄制開始時間。 标準時間，需要 URLEncode(rfc3986)。如 2017-01-01 10:10:01，編碼爲：2017-01-01+10%3a10%3a01。
+        :param StartTime: 錄制開始時間。 標準時間，需要 URLEncode(rfc3986)。如 2017-01-01 10:10:01，編碼爲：2017-01-01+10%3a10%3a01。
 定時錄制模式，必須設置該欄位；實時視訊錄制模式，忽略該欄位。
         :type StartTime: str
-        :param EndTime: 錄制結束時間。 标準時間，需要 URLEncode(rfc3986)。如 2017-01-01 10:30:01，編碼爲：2017-01-01+10%3a30%3a01。
+        :param EndTime: 錄制結束時間。 標準時間，需要 URLEncode(rfc3986)。如 2017-01-01 10:30:01，編碼爲：2017-01-01+10%3a30%3a01。
 定時錄制模式，必須設置該欄位；實時錄制模式，爲可選欄位。如果通過Highlight參數，設置錄制爲實時視訊錄制模式，其設置的結束時間不應超過當前時間+30分鍾，如果設置的結束時間超過當前時間+30分鍾或者小於當前時間或者不設置該參數，則實際結束時間爲當前時間+30分鍾。
         :type EndTime: str
         :param RecordType: 錄制類型。
@@ -1003,11 +1003,11 @@ class CreateLiveRecordRequest(AbstractModel):
 “flv”【預設】,“hls”,”mp4”,“aac”,”mp3”。
 在定時錄制模式或實時視訊錄制模式下，該參數均有效，不區分大小寫。
         :type FileFormat: str
-        :param Highlight: 開啓實時視訊錄制模式标志。
+        :param Highlight: 開啓實時視訊錄制模式標志。
 0：不開啓實時視訊錄制模式，即定時錄制模式【預設】。見[範例一](#.E7.A4.BA.E4.BE.8B1-.E5.88.9B.E5.BB.BA.E5.AE.9A.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
 1：開啓實時視訊錄制模式。見[範例二](#.E7.A4.BA.E4.BE.8B2-.E5.88.9B.E5.BB.BA.E5.AE.9E.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
         :type Highlight: int
-        :param MixStream: 開啓 A+B=C混流C流錄制标志。
+        :param MixStream: 開啓 A+B=C混流C流錄制標志。
 0：不開啓 A+B=C混流C流錄制【預設】。
 1：開啓 A+B=C混流C流錄制。
 在定時錄制模式或實時視訊錄制模式下，該參數均有效。
@@ -1052,7 +1052,7 @@ class CreateLiveRecordResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param TaskId: 任務 ID，全局唯一标識錄制任務。
+        :param TaskId: 任務 ID，全局唯一標識錄制任務。
         :type TaskId: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1539,13 +1539,13 @@ class CreatePullStreamConfigRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param FromUrl: 源 Url ，用于拉流的網址。目前可支援直播流及點播文件。
+        :param FromUrl: 源 Url ，用於拉流的網址。目前可支援直播流及點播文件。
 注意：
 1. 多個點播url之間使用空格拼接。
 2. 目前上限支援10個url。
 3. 支援拉流文件格式：flv，rtmp，hls，mp4。
         :type FromUrl: str
-        :param ToUrl: 目的 Url ，用于推流的網址，目前限制該目标網址爲 域名。
+        :param ToUrl: 目的 Url ，用於推流的網址，目前限制該目標網址爲 域名。
 僅支援：rtmp 協議。
         :type ToUrl: str
         :param AreaId: 選擇完成轉拉推的服務所在區域:
@@ -1564,15 +1564,15 @@ class CreatePullStreamConfigRequest(AbstractModel):
         :param StartTime: 開始時間。
 使用 UTC 格式時間，
 例如：2019-01-08T10:00:00Z。
-注意： 時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
+注意： 時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 標準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type StartTime: str
         :param EndTime: 結束時間，注意：
-1. 結束時間必須大于開始時間；
-2. 結束時間和開始時間必須大于當前時間；
+1. 結束時間必須大於開始時間；
+2. 結束時間和開始時間必須大於當前時間；
 3. 結束時間 和 開始時間 間隔必須小於七天。
 使用 UTC 格式時間，
 例如：2019-01-08T10:00:00Z。
-注意： 時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
+注意： 時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 標準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type EndTime: str
         """
         self.FromUrl = None
@@ -1849,7 +1849,7 @@ class DeleteLiveRecordRequest(AbstractModel):
         """
         :param StreamName: 流名稱。
         :type StreamName: str
-        :param TaskId: 任務ID，全局唯一标識錄制任務。
+        :param TaskId: 任務ID，全局唯一標識錄制任務。
 從介面 [CreateLiveRecord](/document/product/267/30148) 的返回值中獲取TaskId。
         :type TaskId: int
         """
@@ -1887,13 +1887,13 @@ class DeleteLiveRecordRuleRequest(AbstractModel):
     def __init__(self):
         """
         :param DomainName: 推流域名。
-域名+AppName+StreamName唯一标識單個轉碼規則，如需删除需要強比對，例如AppName爲空也需要傳空字串進行強比對。
+域名+AppName+StreamName唯一標識單個轉碼規則，如需删除需要強比對，例如AppName爲空也需要傳空字串進行強比對。
         :type DomainName: str
         :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻，預設爲 live。
-域名+AppName+StreamName唯一标識單個轉碼規則，如需删除需要強比對，例如AppName爲空也需要傳空字串進行強比對。
+域名+AppName+StreamName唯一標識單個轉碼規則，如需删除需要強比對，例如AppName爲空也需要傳空字串進行強比對。
         :type AppName: str
         :param StreamName: 流名稱。
-域名+AppName+StreamName唯一标識單個轉碼規則，如需删除需要強比對，例如AppName爲空也需要傳空字串進行強比對。
+域名+AppName+StreamName唯一標識單個轉碼規則，如需删除需要強比對，例如AppName爲空也需要傳空字串進行強比對。
         :type StreamName: str
         """
         self.DomainName = None
@@ -2303,7 +2303,7 @@ Oversea：則查詢國外數據，
 1440：天粒度（跨度不支援超過一個月）。
 預設值：5。
         :type Granularity: int
-        :param ServiceName: 服務名稱，可選值包括LVB(标準直播)，LEB(快直播)，預設值是LVB。
+        :param ServiceName: 服務名稱，可選值包括LVB(標準直播)，LEB(快直播)，預設值是LVB。
         :type ServiceName: str
         """
         self.StartTime = None
@@ -3240,8 +3240,8 @@ class DescribeLiveRecordTemplatesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param IsDelayLive: 是否屬于慢直播範本，預設：0。
-0： 标準直播。
+        :param IsDelayLive: 是否屬於慢直播範本，預設：0。
+0： 標準直播。
 1：慢直播。
         :type IsDelayLive: int
         """
@@ -3513,7 +3513,7 @@ class DescribeLiveStreamOnlineListRequest(AbstractModel):
 取值：10~100之間的任意整數。
 預設值：10。
         :type PageSize: int
-        :param StreamName: 流名稱，用于精确查詢。
+        :param StreamName: 流名稱，用於精确查詢。
         :type StreamName: str
         """
         self.DomainName = None
@@ -4287,7 +4287,7 @@ class DescribePlayErrorCodeSumInfoListResponse(AbstractModel):
         :type TotalCode5xx: int
         :param TotalCodeList: 各狀态碼的總次數。
         :type TotalCodeList: list of PlayCodeTotalInfo
-        :param PageNum: 頁号。
+        :param PageNum: 頁號。
         :type PageNum: int
         :param PageSize: 每頁大小。
         :type PageSize: int
@@ -4359,7 +4359,7 @@ class DescribeProIspPlaySumInfoListRequest(AbstractModel):
         :type StatType: str
         :param PlayDomains: 不填則爲總體數據。
         :type PlayDomains: list of str
-        :param PageNum: 頁号，範圍是[1,1000]，預設值是1。
+        :param PageNum: 頁號，範圍是[1,1000]，預設值是1。
         :type PageNum: int
         :param PageSize: 每頁個數，範圍是[1,1000]，預設值是20。
         :type PageSize: int
@@ -4404,7 +4404,7 @@ class DescribeProIspPlaySumInfoListResponse(AbstractModel):
         :type StatType: str
         :param PageSize: 每頁的記錄數。
         :type PageSize: int
-        :param PageNum: 頁号。
+        :param PageNum: 頁號。
         :type PageNum: int
         :param TotalNum: 總記錄數。
         :type TotalNum: int
@@ -4464,12 +4464,12 @@ class DescribeProvinceIspPlayInfoListRequest(AbstractModel):
         :param Granularity: 支援如下粒度：
 1：1分鍾粒度（跨度不支援超過1天）
         :type Granularity: int
-        :param StatType: 統計指标類型：
+        :param StatType: 統計指標類型：
 “Bandwidth”：頻寬
 “FluxPerSecond”：平均流量
 “Flux”：流量
 “Request”：請求數
-“Online”：并發連接數
+“Online”：並發連接數
         :type StatType: str
         :param PlayDomains: 播放域名清單。
         :type PlayDomains: list of str
@@ -4645,7 +4645,7 @@ class DescribeStreamDayPlayInfoListRequest(AbstractModel):
         :type DayTime: str
         :param PlayDomain: 播放域名。
         :type PlayDomain: str
-        :param PageNum: 頁号，範圍[1,1000]，預設值是1。
+        :param PageNum: 頁號，範圍[1,1000]，預設值是1。
         :type PageNum: int
         :param PageSize: 每頁個數，範圍[100,1000]，預設值是1000。
         :type PageSize: int
@@ -4843,11 +4843,11 @@ class DescribeTopClientIpSumInfoListRequest(AbstractModel):
         :type EndTime: str
         :param PlayDomains: 播放域名，預設爲不填，表示求總體數據。
         :type PlayDomains: list of str
-        :param PageNum: 頁号，範圍是[1,1000]，預設值是1。
+        :param PageNum: 頁號，範圍是[1,1000]，預設值是1。
         :type PageNum: int
         :param PageSize: 每頁個數，範圍是[1,1000]，預設值是20。
         :type PageSize: int
-        :param OrderParam: 排序指标，可選值包括TotalRequest（預設值），FailedRequest,TotalFlux。
+        :param OrderParam: 排序指標，可選值包括TotalRequest（預設值），FailedRequest,TotalFlux。
         :type OrderParam: str
         :param MainlandOrOversea: 地域，可選值：Mainland，Oversea，China，Foreign，Global（預設值）；如果爲空，查詢總的數據；如果爲“Mainland”，查詢 大陸的數據；如果爲“Oversea”，則查詢 大陸以外的數據；如果爲China，查詢 的數據（包括 ）；如果爲Foreign，查詢國外的數據（不包括 ）。
         :type MainlandOrOversea: str
@@ -4882,11 +4882,11 @@ class DescribeTopClientIpSumInfoListResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param PageNum: 頁号，範圍是[1,1000]，預設值是1。
+        :param PageNum: 頁號，範圍是[1,1000]，預設值是1。
         :type PageNum: int
         :param PageSize: 每頁個數，範圍是[1,1000]，預設值是20。
         :type PageSize: int
-        :param OrderParam: 排序指标，可選值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
+        :param OrderParam: 排序指標，可選值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
         :type OrderParam: str
         :param TotalNum: 記錄總數。
         :type TotalNum: int
@@ -4933,18 +4933,18 @@ class DescribeVisitTopSumInfoListRequest(AbstractModel):
         :param EndTime: 結束時間點，格式爲yyyy-mm-dd HH:MM:SS
 時間跨度在(0,4小時]，支援最近1天數據查詢。
         :type EndTime: str
-        :param TopIndex: 峰值指标，可選值包括”Domain”，”StreamId”。
+        :param TopIndex: 峰值指標，可選值包括”Domain”，”StreamId”。
         :type TopIndex: str
         :param PlayDomains: 播放域名，預設爲不填，表示求總體數據。
         :type PlayDomains: list of str
-        :param PageNum: 頁号，
+        :param PageNum: 頁號，
 範圍是[1,1000]，
 預設值是1。
         :type PageNum: int
         :param PageSize: 每頁個數，範圍是[1,1000]，
 預設值是20。
         :type PageSize: int
-        :param OrderParam: 排序指标，可選值包括” AvgFluxPerSecond”，”TotalRequest”（預設）,“TotalFlux”。
+        :param OrderParam: 排序指標，可選值包括” AvgFluxPerSecond”，”TotalRequest”（預設）,“TotalFlux”。
         :type OrderParam: str
         """
         self.StartTime = None
@@ -4973,16 +4973,16 @@ class DescribeVisitTopSumInfoListResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param PageNum: 頁号，
+        :param PageNum: 頁號，
 範圍是[1,1000]，
 預設值是1。
         :type PageNum: int
         :param PageSize: 每頁個數，範圍是[1,1000]，
 預設值是20。
         :type PageSize: int
-        :param TopIndex: 峰值指标，可選值包括”Domain”，”StreamId”。
+        :param TopIndex: 峰值指標，可選值包括”Domain”，”StreamId”。
         :type TopIndex: str
-        :param OrderParam: 排序指标，可選值包括” AvgFluxPerSecond”，”TotalRequest”（預設）,“TotalFlux”。
+        :param OrderParam: 排序指標，可選值包括” AvgFluxPerSecond”，”TotalRequest”（預設）,“TotalFlux”。
         :type OrderParam: str
         :param TotalNum: 記錄總數。
         :type TotalNum: int
@@ -5145,7 +5145,7 @@ class DomainInfo(AbstractModel):
         :type RentTag: int
         :param RentExpireTime: 失效參數，可忽略。
         :type RentExpireTime: str
-        :param IsMiniProgramLive: 0: 标準直播。
+        :param IsMiniProgramLive: 0: 標準直播。
 1: 小程式直播。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type IsMiniProgramLive: int
@@ -5331,7 +5331,7 @@ class ForbidLiveStreamRequest(AbstractModel):
         :param ResumeTime: 恢複流的時間。UTC 格式，例如：2018-11-29T19:00:00Z。
 注意：
 1. 預設禁播7天，且最長支援禁播90天。
-2.  時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
+2.  時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 標準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type ResumeTime: str
         :param Reason: 禁推原因。
 注明：請務必填寫禁推原因，防止誤操作。
@@ -5396,7 +5396,7 @@ class ForbidStreamInfo(AbstractModel):
 
 
 class GroupProIspDataInfo(AbstractModel):
-    """某 某運營商在某段時間内的頻寬，流量，請求數和并發數
+    """某 某運營商在某段時間内的頻寬，流量，請求數和並發數
 
     """
 
@@ -5452,7 +5452,7 @@ class HttpCodeInfo(AbstractModel):
         :param HttpCode: HTTP協議返回碼。
 例："2xx", "3xx", "4xx", "5xx"。
         :type HttpCode: str
-        :param ValueList: 統計訊息，對于無數據的時間點，會補0。
+        :param ValueList: 統計訊息，對於無數據的時間點，會補0。
         :type ValueList: list of HttpCodeValue
         """
         self.HttpCode = None
@@ -6223,16 +6223,16 @@ class ModifyPullStreamConfigRequest(AbstractModel):
         :param StartTime: 開始時間。
 使用UTC格式時間，
 例如：2019-01-08T10:00:00Z。
-注意： 時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
+注意： 時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 標準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type StartTime: str
         :param EndTime: 結束時間，注意：
-1. 結束時間必須大于開始時間；
-2. 結束時間和開始時間必須大于當前時間；
+1. 結束時間必須大於開始時間；
+2. 結束時間和開始時間必須大於當前時間；
 3. 結束時間 和 開始時間 間隔必須小於七天。
 
 使用UTC格式時間，
 例如：2019-01-08T10:00:00Z。
-注意： 時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
+注意： 時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 標準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type EndTime: str
         """
         self.ConfigId = None
@@ -6280,7 +6280,7 @@ class ModifyPullStreamStatusRequest(AbstractModel):
         """
         :param ConfigIds: 配置 ID 清單。
         :type ConfigIds: list of str
-        :param Status: 目标狀态。0無效，2正在運作，4暫停。
+        :param Status: 目標狀态。0無效，2正在運作，4暫停。
         :type Status: str
         """
         self.ConfigIds = None
@@ -6437,7 +6437,7 @@ class PlayStatInfo(AbstractModel):
         """
         :param Time: 數據時間點。
         :type Time: str
-        :param Value: 頻寬/流量/請求數/并發連接數/下載速度的值，若沒數據返回時該值爲0。
+        :param Value: 頻寬/流量/請求數/並發連接數/下載速度的值，若沒數據返回時該值爲0。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Value: float
         """
@@ -6588,12 +6588,12 @@ class PullStreamConfig(AbstractModel):
         :type IspName: str
         :param StartTime: 開始時間。
 UTC格式時間，例如: 2019-01-08T10:00:00Z。
-注意： 時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
+注意： 時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 標準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type StartTime: str
         :param EndTime: 結束時間。
 
 UTC格式時間，例如：2019-01-08T10:00:00Z。
-注意： 時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 标準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
+注意： 時間值爲 UTC 時間值 + 8 小時，格式按照 ISO 8601 標準表示，詳見 [ISO 日期格式說明](https://cloud.taifucloud.com/document/product/266/11732#I)。
         :type EndTime: str
         :param Status: 狀态:
 0: 無效。
@@ -6763,7 +6763,7 @@ class PushQualityData(AbstractModel):
         :type VCodec: str
         :param ACodec: 音訊編碼格式。
         :type ACodec: str
-        :param Sequence: 推流序列号，用來唯一的标志一次推流。
+        :param Sequence: 推流序列號，用來唯一的標志一次推流。
         :type Sequence: str
         :param VideoFps: 視訊幀率。
         :type VideoFps: int
@@ -7064,10 +7064,10 @@ class SnapshotTemplateInfo(AbstractModel):
         :param SnapshotInterval: 截圖時間間隔，5-300秒。
         :type SnapshotInterval: int
         :param Width: 截圖寬度，範圍：0-3000。 
-0：原始寬度并适配原始比例。
+0：原始寬度並适配原始比例。
         :type Width: int
         :param Height: 截圖高度，範圍：0-2000。
-0：原始高度并适配原始比例。
+0：原始高度並适配原始比例。
         :type Height: int
         :param PornFlag: 是否開啓 ，0：不開啓，1：開啓。
         :type PornFlag: int
@@ -7124,7 +7124,7 @@ class StopLiveRecordRequest(AbstractModel):
         """
         :param StreamName: 流名稱。
         :type StreamName: str
-        :param TaskId: 任務ID，全局唯一标識錄制任務。
+        :param TaskId: 任務ID，全局唯一標識錄制任務。
         :type TaskId: int
         """
         self.StreamName = None
@@ -7385,7 +7385,7 @@ baseline，main，high。
 
 
 class TimeValue(AbstractModel):
-    """某個時間點的指标的數值是多少。
+    """某個時間點的指標的數值是多少。
 
     """
 
@@ -7419,7 +7419,7 @@ class TranscodeDetailInfo(AbstractModel):
         :param EndTime: 結束時間（ 時間），格式：yyyy-mm-dd HH:MM。
         :type EndTime: str
         :param Duration: 轉碼時長，單位：分鍾。
-注意：因推流過程中可能有中斷重推情況，此處時長爲真實轉碼時長累加值，并非結束時間和開始時間的間隔。
+注意：因推流過程中可能有中斷重推情況，此處時長爲真實轉碼時長累加值，並非結束時間和開始時間的間隔。
         :type Duration: int
         :param ModuleCodec: 編碼方式，帶模組，
 範例：

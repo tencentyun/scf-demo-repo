@@ -86,7 +86,7 @@ class IaiClient(AbstractClient):
 
 
     def CopyPerson(self, request):
-        """将已存在于某人員庫的人員複制到其他人員庫，該人員的描述訊息不會被複制。單個人員最多只能同時存在100個人員庫中。
+        """将已存在於某人員庫的人員複制到其他人員庫，該人員的描述訊息不會被複制。單個人員最多只能同時存在100個人員庫中。
 
         :param request: 調用CopyPerson所需參數的結構體。
         :type request: :class:`taifucloudcloud.iai.v20180301.models.CopyPersonRequest`
@@ -142,7 +142,7 @@ class IaiClient(AbstractClient):
 
 
     def CreateGroup(self, request):
-        """用于創建一個空的人員庫，如果人員庫已存在返回錯誤。可根據需要創建自定義描述欄位，用于輔助描述該人員庫下的人員訊息。1個APPID下最多創建2萬個人員庫（Group）、最多包含1000萬張人臉（Face），單個人員庫（Group）最多包含100萬張人臉（Face）。
+        """用於創建一個空的人員庫，如果人員庫已存在返回錯誤。可根據需要創建自定義描述欄位，用於輔助描述該人員庫下的人員訊息。1個APPID下最多創建2萬個人員庫（Group）、最多包含1000萬張人臉（Face），單個人員庫（Group）最多包含100萬張人臉（Face）。
 
         :param request: 調用CreateGroup所需參數的結構體。
         :type request: :class:`taifucloudcloud.iai.v20180301.models.CreateGroupRequest`
@@ -226,7 +226,7 @@ class IaiClient(AbstractClient):
 
 
     def DeleteGroup(self, request):
-        """删除該人員庫及包含的所有的人員。同時，人員對應的所有人臉訊息将被删除。若某人員同時存在多個人員庫中，該人員不會被删除，但屬于該人員庫中的自定義描述欄位訊息會被删除。
+        """删除該人員庫及包含的所有的人員。同時，人員對應的所有人臉訊息将被删除。若某人員同時存在多個人員庫中，該人員不會被删除，但屬於該人員庫中的自定義描述欄位訊息會被删除。
 
         注：删除人員庫的操作爲異步執行，删除單張人臉時間約爲10ms，即一小時内可以删除36萬張。删除期間，無法向該人員庫添加人員。
 
@@ -284,7 +284,7 @@ class IaiClient(AbstractClient):
 
 
     def DeletePersonFromGroup(self, request):
-        """從某人員庫中删除人員，此操作僅影響該人員庫。若該人員僅存在于指定的人員庫中，該人員将被删除，其所有的人臉訊息也将被删除。
+        """從某人員庫中删除人員，此操作僅影響該人員庫。若該人員僅存在於指定的人員庫中，該人員将被删除，其所有的人臉訊息也将被删除。
 
         :param request: 調用DeletePersonFromGroup所需參數的結構體。
         :type request: :class:`taifucloudcloud.iai.v20180301.models.DeletePersonFromGroupRequest`
@@ -315,9 +315,9 @@ class IaiClient(AbstractClient):
         """檢測給定圖片中的人臉（Face）的位置、相應的面部屬性和人臉質量訊息，位置包括 (x，y，w，h)，面部屬性包括性别（gender）、年齡（age）、表情（expression）、魅力（beauty）、眼鏡（glass）、發型（hair）、口罩（mask）和姿态 (pitch，roll，yaw)，人臉質量訊息包括整體質量分（score）、模糊分（sharpness）、光照分（brightness）和五官遮擋分（completeness）。
 
 
-        其中，人臉質量訊息主要用于評價輸入的人臉圖片的質量。在使用人臉識别服務時，建議您對輸入的人臉圖片進行質量檢測，提升後續業務處理的效果。該功能的應用場景包括：
+        其中，人臉質量訊息主要用於評價輸入的人臉圖片的質量。在使用人臉識别服務時，建議您對輸入的人臉圖片進行質量檢測，提升後續業務處理的效果。該功能的應用場景包括：
 
-        1） 人員庫[創建人員](https://cloud.taifucloud.com/document/product/867/32793)/[增加人臉](https://cloud.taifucloud.com/document/product/867/32795)：保證人員人臉訊息的質量，便于後續的業務處理。
+        1） 人員庫[創建人員](https://cloud.taifucloud.com/document/product/867/32793)/[增加人臉](https://cloud.taifucloud.com/document/product/867/32795)：保證人員人臉訊息的質量，便於後續的業務處理。
 
         2） [人臉搜索](https://cloud.taifucloud.com/document/product/867/32798)：保證輸入的圖片質量，快速準确比對到對應的人員。
 
@@ -352,12 +352,12 @@ class IaiClient(AbstractClient):
 
 
     def DetectLiveFace(self, request):
-        """用于對用戶上傳的靜态圖片進行人臉活體檢測。與動态活體檢測的區别是：靜态活體檢測中，用戶不需要通過唇語或搖頭眨眼等動作來識别。
+        """用於對用戶上傳的靜态圖片進行人臉活體檢測。與動态活體檢測的區别是：靜态活體檢測中，用戶不需要通過唇語或搖頭眨眼等動作來識别。
 
-        靜态活體檢測适用于手機自拍的場景，或對防攻擊要求不高的場景。如果對活體檢測有更高安全性要求，請使用[人臉核身·雲智慧眼](https://cloud.taifucloud.com/product/faceid)産品。
+        靜态活體檢測适用於手機自拍的場景，或對防攻擊要求不高的場景。如果對活體檢測有更高安全性要求，請使用[人臉核身·雲智慧眼](https://cloud.taifucloud.com/product/faceid)産品。
 
         >
-        - 圖片的寬高比請接近3：4，不符合寬高比的圖片返回的分值不具備參考意義。本介面适用于類手機自拍場景，非類手機自拍照返回的分值不具備參考意義。
+        - 圖片的寬高比請接近3：4，不符合寬高比的圖片返回的分值不具備參考意義。本介面适用於類手機自拍場景，非類手機自拍照返回的分值不具備參考意義。
 
         :param request: 調用DetectLiveFace所需參數的結構體。
         :type request: :class:`taifucloudcloud.iai.v20180301.models.DetectLiveFaceRequest`
@@ -609,7 +609,7 @@ class IaiClient(AbstractClient):
 
 
     def SearchFaces(self, request):
-        """用于對一張待識别的人臉圖片，在一個或多個人員庫中識别出最相似的 TopN 人員，識别結果按照相似度從大到小排序。單次搜索的人員庫人臉總數量不得超過 100 萬張。
+        """用於對一張待識别的人臉圖片，在一個或多個人員庫中識别出最相似的 TopN 人員，識别結果按照相似度從大到小排序。單次搜索的人員庫人臉總數量不得超過 100 萬張。
         此介面需與[人員庫管理相關介面](https://cloud.taifucloud.com/document/product/867/32794)結合使用。
 
         :param request: 調用SearchFaces所需參數的結構體。
@@ -638,7 +638,7 @@ class IaiClient(AbstractClient):
 
 
     def VerifyFace(self, request):
-        """給定一張人臉圖片和一個 PersonId，判斷圖片中的人和 PersonId 對應的人是否爲同一人。PersonId 請參考[人員庫管理相關介面](https://cloud.taifucloud.com/document/product/867/32794)。 和[人臉比對](https://cloud.taifucloud.com/document/product/867/32802)介面不同的是，[人臉驗證](https://cloud.taifucloud.com/document/product/867/32806)用于判斷 “此人是否是此人”，“此人”的訊息已存于人員庫中，“此人”可能存在多張人臉圖片；而[人臉比對](https://cloud.taifucloud.com/document/product/867/32802)用于判斷兩張人臉的相似度。
+        """給定一張人臉圖片和一個 PersonId，判斷圖片中的人和 PersonId 對應的人是否爲同一人。PersonId 請參考[人員庫管理相關介面](https://cloud.taifucloud.com/document/product/867/32794)。 和[人臉比對](https://cloud.taifucloud.com/document/product/867/32802)介面不同的是，[人臉驗證](https://cloud.taifucloud.com/document/product/867/32806)用於判斷 “此人是否是此人”，“此人”的訊息已存於人員庫中，“此人”可能存在多張人臉圖片；而[人臉比對](https://cloud.taifucloud.com/document/product/867/32802)用於判斷兩張人臉的相似度。
 
         :param request: 調用VerifyFace所需參數的結構體。
         :type request: :class:`taifucloudcloud.iai.v20180301.models.VerifyFaceRequest`

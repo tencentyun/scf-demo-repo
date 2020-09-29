@@ -26,7 +26,7 @@ class DtsClient(AbstractClient):
 
 
     def ActivateSubscribe(self, request):
-        """本介面用于配置數據訂閱，只有在未配置狀态的訂閱實例才能調用此介面。
+        """本介面用於配置數據訂閱，只有在未配置狀态的訂閱實例才能調用此介面。
 
         :param request: Request instance for ActivateSubscribe.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.ActivateSubscribeRequest`
@@ -54,7 +54,7 @@ class DtsClient(AbstractClient):
 
 
     def CompleteMigrateJob(self, request):
-        """本介面（CompleteMigrateJob）用于完成數據遷移任務。
+        """本介面（CompleteMigrateJob）用於完成數據遷移任務。
         選擇采用增量遷移方式的任務, 需要在遷移進度進入準備完成階段後, 調用本介面, 停止遷移增量數據。
         通過DescribeMigrateJobs介面查詢到任務的狀态爲準備完成（status=8）時，此時可以調用本介面完成遷移任務。
 
@@ -86,7 +86,7 @@ class DtsClient(AbstractClient):
     def CreateMigrateCheckJob(self, request):
         """創建校驗遷移任務
         在開始遷移前, 必須調用本介面創建校驗, 且校驗成功後才能開始遷移. 校驗的結果可以通過DescribeMigrateCheckJob檢視.
-        校驗成功後,遷移任務若有修改, 則必須重新創建校驗并通過後, 才能開始遷移.
+        校驗成功後,遷移任務若有修改, 則必須重新創建校驗並通過後, 才能開始遷移.
 
         :param request: Request instance for CreateMigrateCheckJob.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.CreateMigrateCheckJobRequest`
@@ -114,7 +114,7 @@ class DtsClient(AbstractClient):
 
 
     def CreateMigrateJob(self, request):
-        """本介面（CreateMigrateJob）用于創建數據遷移任務。
+        """本介面（CreateMigrateJob）用於創建數據遷移任務。
 
         如果是金融區鏈路, 請使用域名: dts.ap-shenzhen-fsi.taifucloudcloudapi.com
 
@@ -144,7 +144,7 @@ class DtsClient(AbstractClient):
 
 
     def CreateSubscribe(self, request):
-        """本介面(CreateSubscribe)用于創建一個數據訂閱實例。
+        """本介面(CreateSubscribe)用於創建一個數據訂閱實例。
 
         :param request: Request instance for CreateSubscribe.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.CreateSubscribeRequest`
@@ -201,7 +201,7 @@ class DtsClient(AbstractClient):
 
 
     def CreateSyncJob(self, request):
-        """本介面(CreateSyncJob)用于創建災備同步任務。
+        """本介面(CreateSyncJob)用於創建災備同步任務。
         創建同步任務後，可以通過 CreateSyncCheckJob 介面發起校驗任務。校驗成功後才可以通過 StartSyncJob 介面啓動同步任務。
 
         :param request: Request instance for CreateSyncJob.
@@ -230,7 +230,7 @@ class DtsClient(AbstractClient):
 
 
     def DeleteMigrateJob(self, request):
-        """本介面（DeleteMigrationJob）用于删除數據遷移任務。當通過DescribeMigrateJobs介面查詢到任務的狀态爲：檢驗中（status=3）、運作中（status=7）、準備完成（status=8）、撤銷中（status=11）或者完成中（status=12）時，不允許删除任務。
+        """本介面（DeleteMigrationJob）用於删除數據遷移任務。當通過DescribeMigrateJobs介面查詢到任務的狀态爲：檢驗中（status=3）、運作中（status=7）、準備完成（status=8）、撤銷中（status=11）或者完成中（status=12）時，不允許删除任務。
 
         :param request: Request instance for DeleteMigrateJob.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.DeleteMigrateJobRequest`
@@ -286,7 +286,7 @@ class DtsClient(AbstractClient):
 
 
     def DescribeAsyncRequestInfo(self, request):
-        """本介面（DescribeAsyncRequestInfo）用于查詢任務執行結果
+        """本介面（DescribeAsyncRequestInfo）用於查詢任務執行結果
 
         :param request: Request instance for DescribeAsyncRequestInfo.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.DescribeAsyncRequestInfoRequest`
@@ -314,9 +314,9 @@ class DtsClient(AbstractClient):
 
 
     def DescribeMigrateCheckJob(self, request):
-        """本介面用于創建校驗後,獲取校驗的結果. 能查詢到當前校驗的狀态和進度.
+        """本介面用於創建校驗後,獲取校驗的結果. 能查詢到當前校驗的狀态和進度.
         若通過校驗, 則可調用'StartMigrateJob' 開始遷移.
-        若未通過校驗, 則能查詢到校驗失敗的原因. 請按照報錯, 通過'ModifyMigrateJob'修改遷移配置或是調整源/目标實例的相關參數.
+        若未通過校驗, 則能查詢到校驗失敗的原因. 請按照報錯, 通過'ModifyMigrateJob'修改遷移配置或是調整源/目標實例的相關參數.
 
         :param request: Request instance for DescribeMigrateCheckJob.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.DescribeMigrateCheckJobRequest`
@@ -373,7 +373,7 @@ class DtsClient(AbstractClient):
 
 
     def DescribeRegionConf(self, request):
-        """本介面（DescribeRegionConf）用于查詢可售賣訂閱實例的地域
+        """本介面（DescribeRegionConf）用於查詢可售賣訂閱實例的地域
 
         :param request: Request instance for DescribeRegionConf.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.DescribeRegionConfRequest`
@@ -401,7 +401,7 @@ class DtsClient(AbstractClient):
 
 
     def DescribeSubscribeConf(self, request):
-        """本介面（DescribeSubscribeConf）用于查詢訂閱實例配置
+        """本介面（DescribeSubscribeConf）用於查詢訂閱實例配置
 
         :param request: Request instance for DescribeSubscribeConf.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.DescribeSubscribeConfRequest`
@@ -457,7 +457,7 @@ class DtsClient(AbstractClient):
 
 
     def DescribeSyncCheckJob(self, request):
-        """本介面用于在通過 CreateSyncCheckJob 介面創建災備同步校驗任務後，獲取校驗的結果。能查詢到當前校驗的狀态和進度。
+        """本介面用於在通過 CreateSyncCheckJob 介面創建災備同步校驗任務後，獲取校驗的結果。能查詢到當前校驗的狀态和進度。
         若通過校驗, 則可調用 StartSyncJob 啓動同步任務。
         若未通過校驗, 則會返回校驗失敗的原因。 可通過 ModifySyncJob 修改配置，然後再次發起校驗。
         校驗任務需要大概約30秒，當返回的 Status 不爲 finished 時表示尚未校驗完成，需要輪詢該介面。
@@ -518,7 +518,7 @@ class DtsClient(AbstractClient):
 
 
     def IsolateSubscribe(self, request):
-        """本介面（IsolateSubscribe）用于隔離小時計費的訂閱實例。調用後，訂閱實例将不能使用，同時停止計費。
+        """本介面（IsolateSubscribe）用於隔離小時計費的訂閱實例。調用後，訂閱實例将不能使用，同時停止計費。
 
         :param request: Request instance for IsolateSubscribe.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.IsolateSubscribeRequest`
@@ -546,8 +546,8 @@ class DtsClient(AbstractClient):
 
 
     def ModifyMigrateJob(self, request):
-        """本介面（ModifyMigrateJob）用于修改數據遷移任務。
-        當遷移任務處于下述狀态時，允許調用本介面修改遷移任務：遷移創建中（status=1）、 校驗成功(status=4)、校驗失敗(status=5)、遷移失敗(status=10)。但源實例、目标實例類型和目标實例地域不允許修改。
+        """本介面（ModifyMigrateJob）用於修改數據遷移任務。
+        當遷移任務處於下述狀态時，允許調用本介面修改遷移任務：遷移創建中（status=1）、 校驗成功(status=4)、校驗失敗(status=5)、遷移失敗(status=10)。但源實例、目標實例類型和目標實例地域不允許修改。
 
         如果是金融區鏈路, 請使用域名: dts.ap-shenzhen-fsi.taifucloudcloudapi.com
 
@@ -577,7 +577,7 @@ class DtsClient(AbstractClient):
 
 
     def ModifySubscribeConsumeTime(self, request):
-        """本介面(ModifySubscribeConsumeTime)用于修改數據訂閱通道的消費時間點
+        """本介面(ModifySubscribeConsumeTime)用於修改數據訂閱通道的消費時間點
 
         :param request: Request instance for ModifySubscribeConsumeTime.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.ModifySubscribeConsumeTimeRequest`
@@ -605,7 +605,7 @@ class DtsClient(AbstractClient):
 
 
     def ModifySubscribeName(self, request):
-        """本介面(ModifySubscribeName)用于修改數據訂閱實例的名稱
+        """本介面(ModifySubscribeName)用於修改數據訂閱實例的名稱
 
         :param request: Request instance for ModifySubscribeName.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.ModifySubscribeNameRequest`
@@ -633,7 +633,7 @@ class DtsClient(AbstractClient):
 
 
     def ModifySubscribeObjects(self, request):
-        """本介面(ModifySubscribeObjects)用于修改數據訂閱通道的訂閱規則
+        """本介面(ModifySubscribeObjects)用於修改數據訂閱通道的訂閱規則
 
         :param request: Request instance for ModifySubscribeObjects.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.ModifySubscribeObjectsRequest`
@@ -661,7 +661,7 @@ class DtsClient(AbstractClient):
 
 
     def ModifySubscribeVipVport(self, request):
-        """本介面(ModifySubscribeVipVport)用于修改數據訂閱實例的IP和端口号
+        """本介面(ModifySubscribeVipVport)用於修改數據訂閱實例的IP和端口號
 
         :param request: Request instance for ModifySubscribeVipVport.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.ModifySubscribeVipVportRequest`
@@ -690,8 +690,8 @@ class DtsClient(AbstractClient):
 
     def ModifySyncJob(self, request):
         """修改災備同步任務.
-        當同步任務處于下述狀态時, 允許調用本介面: 同步任務創建中, 創建完成, 校驗成功, 校驗失敗.
-        源實例和目标實例訊息不允許修改，可以修改任務名、需要同步的庫表。
+        當同步任務處於下述狀态時, 允許調用本介面: 同步任務創建中, 創建完成, 校驗成功, 校驗失敗.
+        源實例和目標實例訊息不允許修改，可以修改任務名、需要同步的庫表。
 
         :param request: Request instance for ModifySyncJob.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.ModifySyncJobRequest`
@@ -719,7 +719,7 @@ class DtsClient(AbstractClient):
 
 
     def OfflineIsolatedSubscribe(self, request):
-        """本介面（OfflineIsolatedSubscribe）用于下線已隔離的數據訂閱實例
+        """本介面（OfflineIsolatedSubscribe）用於下線已隔離的數據訂閱實例
 
         :param request: Request instance for OfflineIsolatedSubscribe.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.OfflineIsolatedSubscribeRequest`
@@ -747,7 +747,7 @@ class DtsClient(AbstractClient):
 
 
     def ResetSubscribe(self, request):
-        """本介面(ResetSubscribe)用于重置數據訂閱實例，已經啟動的數據訂閱實例，重置後可以使用ActivateSubscribe介面綁定其他的資料庫實例
+        """本介面(ResetSubscribe)用於重置數據訂閱實例，已經啟動的數據訂閱實例，重置後可以使用ActivateSubscribe介面綁定其他的資料庫實例
 
         :param request: Request instance for ResetSubscribe.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.ResetSubscribeRequest`
@@ -775,8 +775,8 @@ class DtsClient(AbstractClient):
 
 
     def StartMigrateJob(self, request):
-        """本介面（StartMigrationJob）用于啓動遷移任務。非定時遷移任務會在調用後立即開始遷移，定時任務則會開始倒計時。
-        調用此介面前，請務必先使用CreateMigrateCheckJob校驗數據遷移任務，并通過DescribeMigrateJobs介面查詢到任務狀态爲校驗通過（status=4）時，才能啓動數據遷移任務。
+        """本介面（StartMigrationJob）用於啓動遷移任務。非定時遷移任務會在調用後立即開始遷移，定時任務則會開始倒計時。
+        調用此介面前，請務必先使用CreateMigrateCheckJob校驗數據遷移任務，並通過DescribeMigrateJobs介面查詢到任務狀态爲校驗通過（status=4）時，才能啓動數據遷移任務。
 
         :param request: Request instance for StartMigrateJob.
         :type request: :class:`taifucloudcloud.dts.v20180330.models.StartMigrateJobRequest`
@@ -832,7 +832,7 @@ class DtsClient(AbstractClient):
 
 
     def StopMigrateJob(self, request):
-        """本介面（StopMigrateJob）用于撤銷數據遷移任務。
+        """本介面（StopMigrateJob）用於撤銷數據遷移任務。
         在遷移過程中允許調用該介面撤銷遷移, 撤銷遷移的任務會失敗。通過DescribeMigrateJobs介面查詢到任務狀态爲運作中（status=7）或準備完成（status=8）時，才能撤銷數據遷移任務。
 
         :param request: Request instance for StopMigrateJob.

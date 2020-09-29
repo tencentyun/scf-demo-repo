@@ -54,7 +54,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def CreateProject(self, request):
-        """爲用戶提供新建項目的能力，用于集中管理産品和應用。
+        """爲用戶提供新建項目的能力，用於集中管理産品和應用。
 
         :param request: 調用CreateProject所需參數的結構體。
         :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.CreateProjectRequest`
@@ -82,7 +82,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def CreateStudioProduct(self, request):
-        """爲用戶提供新建産品的能力，用于管理用戶的設備
+        """爲用戶提供新建産品的能力，用於管理用戶的設備
 
         :param request: 調用CreateStudioProduct所需參數的結構體。
         :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.CreateStudioProductRequest`
@@ -446,7 +446,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def ReleaseStudioProduct(self, request):
-        """産品開發完成并測試通過後，通過發布産品将産品設置爲發布狀态
+        """産品開發完成並測試通過後，通過發布産品将産品設置爲發布狀态
 
         :param request: 調用ReleaseStudioProduct所需參數的結構體。
         :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.ReleaseStudioProductRequest`

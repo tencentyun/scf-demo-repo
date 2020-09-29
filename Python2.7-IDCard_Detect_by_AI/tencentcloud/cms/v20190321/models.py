@@ -82,7 +82,7 @@ class DescribeModerationOverviewRequest(AbstractModel):
         :type Date: str
         :param ServiceTypes: 服務類型數組，可以動态配置，Text:文本，Image:圖片，Audio:音訊，Video:視訊, 使用"ALL"表示所有類型, 不區分大小寫，如 ["Text", "Image"]查詢文本和圖片服務的數據，["all"]查詢所有服務的數據。
         :type ServiceTypes: list of str
-        :param Channels: 管道号數組，1:直播 2:點播 3:IM 4:GME，統計指定管道組合的匯總數據，如[1,2]表示獲取直播和點播兩個管道的匯總數據，不填[]爲所有管道匯總數據
+        :param Channels: 管道號數組，1:直播 2:點播 3:IM 4:GME，統計指定管道組合的匯總數據，如[1,2]表示獲取直播和點播兩個管道的匯總數據，不填[]爲所有管道匯總數據
         :type Channels: list of int non-negative
         """
         self.Date = None
@@ -200,7 +200,7 @@ class ImageIllegalDetect(AbstractModel):
         :type HitFlag: int
         :param Keywords: 關鍵詞明細
         :type Keywords: list of str
-        :param Labels: 違法标簽：返回違法特征中文描述，如賭桌，槍支
+        :param Labels: 違法標簽：返回違法特征中文描述，如賭桌，槍支
         :type Labels: list of str
         :param Score: 違法分：分值範圍 0-100，分數越高違法傾向越明顯
         :type Score: int
@@ -332,7 +332,7 @@ class ImagePornDetect(AbstractModel):
         :type HitFlag: int
         :param Keywords: 關鍵詞明細
         :type Keywords: list of str
-        :param Labels: 色情标簽：色情特征中文描述
+        :param Labels: 色情標簽：色情特征中文描述
         :type Labels: list of str
         :param Score: 色情分：分值範圍 0-100，分數越高色情傾向越明顯
         :type Score: int
@@ -372,7 +372,7 @@ class ImageTerrorDetect(AbstractModel):
         :type HitFlag: int
         :param Keywords: 關鍵詞明細
         :type Keywords: list of str
-        :param Labels: 暴恐标簽：返回暴恐特征中文描述
+        :param Labels: 暴恐標簽：返回暴恐特征中文描述
         :type Labels: list of str
         :param Score: 暴恐分：分值範圍0--100，分數越高暴恐傾向越明顯
         :type Score: int

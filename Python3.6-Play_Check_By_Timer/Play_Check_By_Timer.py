@@ -14,7 +14,7 @@ import smtplib
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
-# Third-party SMTP service for sending alert emails. 第三方 SMTP 服務，用于發送告警郵件
+# Third-party SMTP service for sending alert emails. 第三方 SMTP 服務，用於發送告警郵件
 mail_host = "smtp.qq.com"       # SMTP server, such as   mailbox, need to open SMTP service in the account. SMTP服務器,如 電子信箱，需要在帳戶裏開啓SMTP服務
 mail_user = "XXXXXXXXX@qq.com"  # Username 用戶名
 mail_pass = "****************"  # Password, SMTP service password. 密碼，SMTP服務密碼

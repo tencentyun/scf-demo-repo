@@ -71,7 +71,7 @@ class CardInfo(AbstractModel):
         """
         :param Iccid: 卡片id
         :type Iccid: str
-        :param Msisdn: 卡電話号碼
+        :param Msisdn: 卡電話號碼
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Msisdn: str
         :param Imsi: 卡imsi
@@ -82,7 +82,7 @@ class CardInfo(AbstractModel):
         :type Imei: str
         :param Sdkappid: 應用id
         :type Sdkappid: str
-        :param Teleoperator: 運營商編号
+        :param Teleoperator: 運營商編號
         :type Teleoperator: int
         :param CardStatus: 卡片狀态 1:未啟動 2：啟動 3：停卡 5：銷卡
         :type CardStatus: int
@@ -119,7 +119,7 @@ class CardInfo(AbstractModel):
         :param PreorderCnt: 套餐周期
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PreorderCnt: int
-        :param IsActivated: 啟動被回調标志
+        :param IsActivated: 啟動被回調標志
 注意：此欄位可能返回 null，表示取不到有效值。
         :type IsActivated: int
         :param OrderId: 訂單id

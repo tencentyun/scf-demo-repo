@@ -42,7 +42,7 @@ exports.main_handler = (event, context, callback) => {
   let promiseArr = []
   /**
    * Ger original data from uploaded pictures and write them into temporary directory /tmp/
-   * 從cos上傳的圖片中，獲取中繼資料，并寫入到臨時目錄/tmp/中
+   * 從cos上傳的圖片中，獲取中繼資料，並寫入到臨時目錄/tmp/中
    */
   for (let record of event['Records']) {
     const bucket = `${record['cos']['cosBucket']['name']}-${APPID}`

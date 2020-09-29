@@ -13,13 +13,13 @@ inputs:
   region: ap-guangzhou
   memorySize: 128 # 根據需要設置，預設 128M
   timeout: 300 # 建議設置爲 300s，不建議設置時間太短，以免超時
-  vpcConfig: # 如果連接目标 ckafka 不是走公網，需要配置 vpc 訊息，vpcId 和 subnetId 要跟 ckakfa 所在的 vpc 一緻
+  vpcConfig: # 如果連接目標 ckafka 不是走公網，需要配置 vpc 訊息，vpcId 和 subnetId 要跟 ckakfa 所在的 vpc 一緻
     vpcId: vpc-kdx2xxxx
     subnetId: subnet-a8x0xxxx
   environment:
     variables:
-      kafka_address: 172.16.xx.xxx:9092 # 必填，目标 ckafka 網址
-      kafka_topic_name: xxxx # 必填，需要轉存的目标 kafka topic 名稱
+      kafka_address: 172.16.xx.xxx:9092 # 必填，目標 ckafka 網址
+      kafka_topic_name: xxxx # 必填，需要轉存的目標 kafka topic 名稱
 
   events:
     - ckafka: # ckafka 觸發器

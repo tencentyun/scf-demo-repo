@@ -82,7 +82,7 @@ class CamClient(AbstractClient):
 
 
     def AttachGroupPolicy(self, request):
-        """本介面（AttachGroupPolicy）可用于綁定策略到用戶組。
+        """本介面（AttachGroupPolicy）可用於綁定策略到用戶組。
 
         :param request: Request instance for AttachGroupPolicy.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.AttachGroupPolicyRequest`
@@ -110,7 +110,7 @@ class CamClient(AbstractClient):
 
 
     def AttachRolePolicy(self, request):
-        """本介面（AttachRolePolicy）用于綁定策略到角色。
+        """本介面（AttachRolePolicy）用於綁定策略到角色。
 
         :param request: Request instance for AttachRolePolicy.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.AttachRolePolicyRequest`
@@ -138,7 +138,7 @@ class CamClient(AbstractClient):
 
 
     def AttachUserPolicy(self, request):
-        """本介面（AttachUserPolicy）可用于綁定到用戶的策略。
+        """本介面（AttachUserPolicy）可用於綁定到用戶的策略。
 
         :param request: Request instance for AttachUserPolicy.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.AttachUserPolicyRequest`
@@ -222,7 +222,7 @@ class CamClient(AbstractClient):
 
 
     def CreatePolicy(self, request):
-        """本介面（CreatePolicy）可用于創建策略。
+        """本介面（CreatePolicy）可用於創建策略。
 
         :param request: Request instance for CreatePolicy.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.CreatePolicyRequest`
@@ -250,7 +250,7 @@ class CamClient(AbstractClient):
 
 
     def CreatePolicyVersion(self, request):
-        """該介面（CreatePolicyVersion）用于新增策略版本，用戶創建了一個策略版本之後可以方便的通過變更策略版本的方式來變更策略。
+        """該介面（CreatePolicyVersion）用於新增策略版本，用戶創建了一個策略版本之後可以方便的通過變更策略版本的方式來變更策略。
 
         :param request: Request instance for CreatePolicyVersion.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.CreatePolicyVersionRequest`
@@ -278,7 +278,7 @@ class CamClient(AbstractClient):
 
 
     def CreateRole(self, request):
-        """本介面（CreateRole）用于創建角色。
+        """本介面（CreateRole）用於創建角色。
 
         :param request: Request instance for CreateRole.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.CreateRoleRequest`
@@ -390,7 +390,7 @@ class CamClient(AbstractClient):
 
 
     def DeletePolicy(self, request):
-        """本介面（DeletePolicy）可用于删除策略。
+        """本介面（DeletePolicy）可用於删除策略。
 
         :param request: Request instance for DeletePolicy.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.DeletePolicyRequest`
@@ -418,7 +418,7 @@ class CamClient(AbstractClient):
 
 
     def DeletePolicyVersion(self, request):
-        """本介面（DeletePolicyVersion）可用于删除一個策略的策略版本。
+        """本介面（DeletePolicyVersion）可用於删除一個策略的策略版本。
 
         :param request: Request instance for DeletePolicyVersion.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.DeletePolicyVersionRequest`
@@ -446,7 +446,7 @@ class CamClient(AbstractClient):
 
 
     def DeleteRole(self, request):
-        """本介面（DeleteRole）用于删除指定角色。
+        """本介面（DeleteRole）用於删除指定角色。
 
         :param request: Request instance for DeleteRole.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.DeleteRoleRequest`
@@ -558,7 +558,7 @@ class CamClient(AbstractClient):
 
 
     def DescribeRoleList(self, request):
-        """本介面（DescribeRoleList）用于獲取賬号下的角色清單。
+        """本介面（DescribeRoleList）用於獲取賬號下的角色清單。
 
         :param request: Request instance for DescribeRoleList.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.DescribeRoleListRequest`
@@ -586,7 +586,7 @@ class CamClient(AbstractClient):
 
 
     def DetachGroupPolicy(self, request):
-        """本介面（DetachGroupPolicy）可用于解除綁定到用戶組的策略。
+        """本介面（DetachGroupPolicy）可用於解除綁定到用戶組的策略。
 
         :param request: Request instance for DetachGroupPolicy.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.DetachGroupPolicyRequest`
@@ -614,7 +614,7 @@ class CamClient(AbstractClient):
 
 
     def DetachRolePolicy(self, request):
-        """本介面（DetachRolePolicy）用于解除綁定角色的策略。
+        """本介面（DetachRolePolicy）用於解除綁定角色的策略。
 
         :param request: Request instance for DetachRolePolicy.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.DetachRolePolicyRequest`
@@ -642,7 +642,7 @@ class CamClient(AbstractClient):
 
 
     def DetachUserPolicy(self, request):
-        """本介面（DetachUserPolicy）可用于解除綁定到用戶的策略。
+        """本介面（DetachUserPolicy）可用於解除綁定到用戶的策略。
 
         :param request: Request instance for DetachUserPolicy.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.DetachUserPolicyRequest`
@@ -726,7 +726,7 @@ class CamClient(AbstractClient):
 
 
     def GetPolicy(self, request):
-        """本介面（GetPolicy）可用于查詢檢視策略詳情。
+        """本介面（GetPolicy）可用於查詢檢視策略詳情。
 
         :param request: Request instance for GetPolicy.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.GetPolicyRequest`
@@ -754,7 +754,7 @@ class CamClient(AbstractClient):
 
 
     def GetPolicyVersion(self, request):
-        """該介面（GetPolicyVersion）用于查詢策略版本詳情
+        """該介面（GetPolicyVersion）用於查詢策略版本詳情
 
         :param request: Request instance for GetPolicyVersion.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.GetPolicyVersionRequest`
@@ -782,7 +782,7 @@ class CamClient(AbstractClient):
 
 
     def GetRole(self, request):
-        """本介面（GetRole）用于獲取指定角色的詳細訊息。
+        """本介面（GetRole）用於獲取指定角色的詳細訊息。
 
         :param request: Request instance for GetRole.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.GetRoleRequest`
@@ -894,7 +894,7 @@ class CamClient(AbstractClient):
 
 
     def ListAttachedGroupPolicies(self, request):
-        """本介面（ListAttachedGroupPolicies）可用于查詢用戶組關聯的策略清單。
+        """本介面（ListAttachedGroupPolicies）可用於查詢用戶組關聯的策略清單。
 
         :param request: Request instance for ListAttachedGroupPolicies.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.ListAttachedGroupPoliciesRequest`
@@ -922,7 +922,7 @@ class CamClient(AbstractClient):
 
 
     def ListAttachedRolePolicies(self, request):
-        """本介面（ListAttachedRolePolicies）用于獲取角色綁定的策略清單。
+        """本介面（ListAttachedRolePolicies）用於獲取角色綁定的策略清單。
 
         :param request: Request instance for ListAttachedRolePolicies.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.ListAttachedRolePoliciesRequest`
@@ -950,7 +950,7 @@ class CamClient(AbstractClient):
 
 
     def ListAttachedUserPolicies(self, request):
-        """本介面（ListAttachedUserPolicies）可用于查詢子賬号關聯的策略清單。
+        """本介面（ListAttachedUserPolicies）可用於查詢子賬號關聯的策略清單。
 
         :param request: Request instance for ListAttachedUserPolicies.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.ListAttachedUserPoliciesRequest`
@@ -1006,7 +1006,7 @@ class CamClient(AbstractClient):
 
 
     def ListEntitiesForPolicy(self, request):
-        """本介面（ListEntitiesForPolicy）可用于查詢策略關聯的實體清單。
+        """本介面（ListEntitiesForPolicy）可用於查詢策略關聯的實體清單。
 
         :param request: Request instance for ListEntitiesForPolicy.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.ListEntitiesForPolicyRequest`
@@ -1090,7 +1090,7 @@ class CamClient(AbstractClient):
 
 
     def ListPolicies(self, request):
-        """本介面（ListPolicies）可用于查詢策略清單。
+        """本介面（ListPolicies）可用於查詢策略清單。
 
         :param request: Request instance for ListPolicies.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.ListPoliciesRequest`
@@ -1118,7 +1118,7 @@ class CamClient(AbstractClient):
 
 
     def ListPolicyVersions(self, request):
-        """該介面（ListPolicyVersions）用于獲取策略版本清單
+        """該介面（ListPolicyVersions）用於獲取策略版本清單
 
         :param request: Request instance for ListPolicyVersions.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.ListPolicyVersionsRequest`
@@ -1258,7 +1258,7 @@ class CamClient(AbstractClient):
 
 
     def SetDefaultPolicyVersion(self, request):
-        """本介面（SetDefaultPolicyVersion）可用于設置生效的策略版本。
+        """本介面（SetDefaultPolicyVersion）可用於設置生效的策略版本。
 
         :param request: Request instance for SetDefaultPolicyVersion.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.SetDefaultPolicyVersionRequest`
@@ -1286,7 +1286,7 @@ class CamClient(AbstractClient):
 
 
     def UpdateAssumeRolePolicy(self, request):
-        """本介面（UpdateAssumeRolePolicy）用于修改角色信任策略的策略文件。
+        """本介面（UpdateAssumeRolePolicy）用於修改角色信任策略的策略文件。
 
         :param request: Request instance for UpdateAssumeRolePolicy.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.UpdateAssumeRolePolicyRequest`
@@ -1342,7 +1342,7 @@ class CamClient(AbstractClient):
 
 
     def UpdatePolicy(self, request):
-        """本介面（UpdatePolicy ）可用于更新策略。
+        """本介面（UpdatePolicy ）可用於更新策略。
         如果已存在策略版本，本介面會直接更新策略的預設版本，不會創建新版本，如果不存在任何策略版本，則直接創建一個預設版本。
 
         :param request: Request instance for UpdatePolicy.
@@ -1371,7 +1371,7 @@ class CamClient(AbstractClient):
 
 
     def UpdateRoleConsoleLogin(self, request):
-        """本介面（UpdateRoleConsoleLogin）用于修改角色是否可登入。
+        """本介面（UpdateRoleConsoleLogin）用於修改角色是否可登入。
 
         :param request: Request instance for UpdateRoleConsoleLogin.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.UpdateRoleConsoleLoginRequest`
@@ -1399,7 +1399,7 @@ class CamClient(AbstractClient):
 
 
     def UpdateRoleDescription(self, request):
-        """本介面（UpdateRoleDescription）用于修改角色的描述訊息。
+        """本介面（UpdateRoleDescription）用於修改角色的描述訊息。
 
         :param request: Request instance for UpdateRoleDescription.
         :type request: :class:`taifucloudcloud.cam.v20190116.models.UpdateRoleDescriptionRequest`

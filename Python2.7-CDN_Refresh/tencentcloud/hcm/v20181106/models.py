@@ -23,11 +23,11 @@ class EvaluationRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param SessionId: 圖片唯一标識，一張圖片一個SessionId；
+        :param SessionId: 圖片唯一標識，一張圖片一個SessionId；
         :type SessionId: str
         :param Image: 圖片數據，需要使用base64對圖片的二進制數據進行編碼，與url參數二者填一即可；
         :type Image: str
-        :param HcmAppid: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數，新的 HcmAppid 可以在[控制台](https://console.cloud.taifucloud.com/hcm)【應用管理】下新建。
+        :param HcmAppid: 業務應用ID，與賬號應用APPID無關，是用來方便客戶管理服務的參數，新的 HcmAppid 可以在[控制台](https://console.cloud.taifucloud.com/hcm)【應用管理】下新建。
         :type HcmAppid: str
         :param Url: 圖片url，與Image參數二者填一即可；
         :type Url: str
@@ -35,7 +35,7 @@ class EvaluationRequest(AbstractModel):
         :type SupportHorizontalImage: bool
         :param RejectNonArithmeticImage: 拒絕非速算圖（如風景圖、人物圖）開關，若開啓，則遇到非速算圖會快速返回拒絕的結果，但極端情況下可能會影響評估結果（比如算式截圖貼到風景畫裏可能被判爲非速算圖直接返回了）。
         :type RejectNonArithmeticImage: bool
-        :param IsAsync: 異步模式标識，0：同步模式，1：異步模式。預設爲同步模式
+        :param IsAsync: 異步模式標識，0：同步模式，1：異步模式。預設爲同步模式
         :type IsAsync: int
         """
         self.SessionId = None
@@ -64,12 +64,12 @@ class EvaluationResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param SessionId: 圖片唯一标識，一張圖片一個SessionId；
+        :param SessionId: 圖片唯一標識，一張圖片一個SessionId；
         :type SessionId: str
         :param Items: 識别出的算式訊息；
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Items: list of Item
-        :param TaskId: 任務 id，用于查詢介面
+        :param TaskId: 任務 id，用於查詢介面
         :type TaskId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -107,7 +107,7 @@ class Item(AbstractModel):
         :type ItemCoord: :class:`taifucloudcloud.hcm.v20181106.models.ItemCoord`
         :param Answer: 推薦的答案，暫不支援多個關系運算符、無關系運算符、單位換算錯題的推薦答案返回。
         :type Answer: str
-        :param ExpressionType: 算式題型編号，如加減乘除四則題型，具體題型及編号如下：1 加減乘除四則 2 加減乘除已知結果求運算因子3 判斷大小 4 約等于估算 5 帶餘數除法 6 分數四則運算 7 單位換算 8 豎式加減法 9 豎式乘除法 10 脫式計算 11 解方程
+        :param ExpressionType: 算式題型編號，如加減乘除四則題型，具體題型及編號如下：1 加減乘除四則 2 加減乘除已知結果求運算因子3 判斷大小 4 約等於估算 5 帶餘數除法 6 分數四則運算 7 單位換算 8 豎式加減法 9 豎式乘除法 10 脫式計算 11 解方程
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ExpressionType: str
         """
@@ -129,7 +129,7 @@ class Item(AbstractModel):
 
 
 class ItemCoord(AbstractModel):
-    """目标算式在圖片上的坐标訊息
+    """目標算式在圖片上的坐標訊息
 
     """
 
@@ -139,9 +139,9 @@ class ItemCoord(AbstractModel):
         :type Height: int
         :param Width: 算式寬度
         :type Width: int
-        :param X: 算式圖的左上角橫坐标
+        :param X: 算式圖的左上角橫坐標
         :type X: int
-        :param Y: 算式圖的左上角縱坐标
+        :param Y: 算式圖的左上角縱坐標
         :type Y: int
         """
         self.Height = None

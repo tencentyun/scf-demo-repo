@@ -54,7 +54,7 @@ class MsClient(AbstractClient):
 
 
     def CreateCosSecKeyInstance(self, request):
-        """獲取雲COS文件儲存臨時金鑰，金鑰僅限于臨時上傳文件，有訪問限制和時效性。
+        """獲取雲COS文件儲存臨時金鑰，金鑰僅限於臨時上傳文件，有訪問限制和時效性。
 
         :param request: Request instance for CreateCosSecKeyInstance.
         :type request: :class:`taifucloudcloud.ms.v20180408.models.CreateCosSecKeyInstanceRequest`
@@ -278,8 +278,8 @@ class MsClient(AbstractClient):
 
 
     def DescribeScanInstances(self, request):
-        """本介面用于檢視app清單。
-        可以通過指定任務唯一标識ItemId來查詢指定app的詳細訊息，或通過設定過濾器來查詢滿足過濾條件的app的詳細訊息。 指定偏移(Offset)和限制(Limit)來選擇結果中的一部分，預設返回滿足條件的前20個app訊息。
+        """本介面用於檢視app清單。
+        可以通過指定任務唯一標識ItemId來查詢指定app的詳細訊息，或通過設定過濾器來查詢滿足過濾條件的app的詳細訊息。 指定偏移(Offset)和限制(Limit)來選擇結果中的一部分，預設返回滿足條件的前20個app訊息。
 
         :param request: Request instance for DescribeScanInstances.
         :type request: :class:`taifucloudcloud.ms.v20180408.models.DescribeScanInstancesRequest`
@@ -335,8 +335,8 @@ class MsClient(AbstractClient):
 
 
     def DescribeShieldInstances(self, request):
-        """本介面用于檢視app清單。
-        可以通過指定任務唯一标識ItemId來查詢指定app的詳細訊息，或通過設定過濾器來查詢滿足過濾條件的app的詳細訊息。 指定偏移(Offset)和限制(Limit)來選擇結果中的一部分，預設返回滿足條件的前20個app訊息。
+        """本介面用於檢視app清單。
+        可以通過指定任務唯一標識ItemId來查詢指定app的詳細訊息，或通過設定過濾器來查詢滿足過濾條件的app的詳細訊息。 指定偏移(Offset)和限制(Limit)來選擇結果中的一部分，預設返回滿足條件的前20個app訊息。
 
         :param request: Request instance for DescribeShieldInstances.
         :type request: :class:`taifucloudcloud.ms.v20180408.models.DescribeShieldInstancesRequest`
@@ -392,7 +392,7 @@ class MsClient(AbstractClient):
 
 
     def DescribeShieldResult(self, request):
-        """通過唯一标識獲取加固的結果
+        """通過唯一標識獲取加固的結果
 
         :param request: Request instance for DescribeShieldResult.
         :type request: :class:`taifucloudcloud.ms.v20180408.models.DescribeShieldResultRequest`

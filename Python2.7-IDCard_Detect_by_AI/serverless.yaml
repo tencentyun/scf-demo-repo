@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: idcard_detection
   src: ./
-  description: idcard_detection. 本範例使用 COS 觸發器，并調用AI介面實現身份證識别
+  description: idcard_detection. 本範例使用 COS 觸發器，並調用AI介面實現身份證識别
   handler: idcard_detection.main_handler
   runtime: Python2.7
   namespace: default

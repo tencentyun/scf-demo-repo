@@ -54,7 +54,7 @@ class CkafkaClient(AbstractClient):
 
 
     def CreatePartition(self, request):
-        """本介面用于增加主題中的分區
+        """本介面用於增加主題中的分區
 
         :param request: Request instance for CreatePartition.
         :type request: :class:`taifucloudcloud.ckafka.v20190819.models.CreatePartitionRequest`
@@ -474,7 +474,7 @@ class CkafkaClient(AbstractClient):
 
 
     def DescribeInstances(self, request):
-        """本介面（DescribeInstance）用于在用戶帳戶下獲取訊息隊列 CKafka 實例清單
+        """本介面（DescribeInstance）用於在用戶帳戶下獲取訊息隊列 CKafka 實例清單
 
         :param request: Request instance for DescribeInstances.
         :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeInstancesRequest`
@@ -531,7 +531,7 @@ class CkafkaClient(AbstractClient):
 
     def DescribeTopic(self, request):
         """介面請求域名：https://ckafka.taifucloudcloudapi.com
-        本介面（DescribeTopic）用于在用戶獲取訊息隊列 CKafka 實例的主題清單
+        本介面（DescribeTopic）用於在用戶獲取訊息隊列 CKafka 實例的主題清單
 
         :param request: Request instance for DescribeTopic.
         :type request: :class:`taifucloudcloud.ckafka.v20190819.models.DescribeTopicRequest`
@@ -727,7 +727,7 @@ class CkafkaClient(AbstractClient):
 
 
     def ModifyTopicAttributes(self, request):
-        """本介面用于修改主題屬性。
+        """本介面用於修改主題屬性。
 
         :param request: Request instance for ModifyTopicAttributes.
         :type request: :class:`taifucloudcloud.ckafka.v20190819.models.ModifyTopicAttributesRequest`

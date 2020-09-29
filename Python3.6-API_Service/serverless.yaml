@@ -8,7 +8,7 @@ inputs:
   src: ./
   description: >-
     This demo uses API GW to provide API service. You can expand to do WEB API
-    based on this. 本範例演示基于API閘道提供博客内的文章查詢和文章内容，您可以擴展函數來實現 Web 後端服務
+    based on this. 本範例演示基於API閘道提供博客内的文章查詢和文章内容，您可以擴展函數來實現 Web 後端服務
   handler: api_service.main_handler
   runtime: Python3.6
   namespace: default

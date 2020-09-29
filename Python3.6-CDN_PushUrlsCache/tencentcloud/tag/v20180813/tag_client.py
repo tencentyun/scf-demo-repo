@@ -26,7 +26,7 @@ class TagClient(AbstractClient):
 
 
     def AddResourceTag(self, request):
-        """本介面用于給标簽關聯資源
+        """本介面用於給標簽關聯資源
 
         :param request: Request instance for AddResourceTag.
         :type request: :class:`taifucloudcloud.tag.v20180813.models.AddResourceTagRequest`
@@ -54,7 +54,7 @@ class TagClient(AbstractClient):
 
 
     def CreateTag(self, request):
-        """本介面用于創建一對标簽鍵和标簽值
+        """本介面用於創建一對標簽鍵和標簽值
 
         :param request: Request instance for CreateTag.
         :type request: :class:`taifucloudcloud.tag.v20180813.models.CreateTagRequest`
@@ -82,7 +82,7 @@ class TagClient(AbstractClient):
 
 
     def DeleteResourceTag(self, request):
-        """本介面用于解除标簽和資源的關聯關系
+        """本介面用於解除標簽和資源的關聯關系
 
         :param request: Request instance for DeleteResourceTag.
         :type request: :class:`taifucloudcloud.tag.v20180813.models.DeleteResourceTagRequest`
@@ -110,7 +110,7 @@ class TagClient(AbstractClient):
 
 
     def DeleteTag(self, request):
-        """本介面用于删除一對标簽鍵和标簽值
+        """本介面用於删除一對標簽鍵和標簽值
 
         :param request: Request instance for DeleteTag.
         :type request: :class:`taifucloudcloud.tag.v20180813.models.DeleteTagRequest`
@@ -138,7 +138,7 @@ class TagClient(AbstractClient):
 
 
     def DescribeResourceTags(self, request):
-        """查詢資源關聯标簽
+        """查詢資源關聯標簽
 
         :param request: Request instance for DescribeResourceTags.
         :type request: :class:`taifucloudcloud.tag.v20180813.models.DescribeResourceTagsRequest`
@@ -166,7 +166,7 @@ class TagClient(AbstractClient):
 
 
     def DescribeResourceTagsByResourceIds(self, request):
-        """用于查詢已有資源标簽鍵值對
+        """用於查詢已有資源標簽鍵值對
 
         :param request: Request instance for DescribeResourceTagsByResourceIds.
         :type request: :class:`taifucloudcloud.tag.v20180813.models.DescribeResourceTagsByResourceIdsRequest`
@@ -194,7 +194,7 @@ class TagClient(AbstractClient):
 
 
     def DescribeResourceTagsByTagKeys(self, request):
-        """根據标簽鍵獲取資源标簽
+        """根據標簽鍵獲取資源標簽
 
         :param request: Request instance for DescribeResourceTagsByTagKeys.
         :type request: :class:`taifucloudcloud.tag.v20180813.models.DescribeResourceTagsByTagKeysRequest`
@@ -222,7 +222,7 @@ class TagClient(AbstractClient):
 
 
     def DescribeResourcesByTags(self, request):
-        """通過标簽查詢資源清單
+        """通過標簽查詢資源清單
 
         :param request: Request instance for DescribeResourcesByTags.
         :type request: :class:`taifucloudcloud.tag.v20180813.models.DescribeResourcesByTagsRequest`
@@ -250,7 +250,7 @@ class TagClient(AbstractClient):
 
 
     def DescribeTagKeys(self, request):
-        """用于查詢已建立的标簽清單中的标簽鍵。
+        """用於查詢已建立的標簽清單中的標簽鍵。
 
         :param request: Request instance for DescribeTagKeys.
         :type request: :class:`taifucloudcloud.tag.v20180813.models.DescribeTagKeysRequest`
@@ -278,7 +278,7 @@ class TagClient(AbstractClient):
 
 
     def DescribeTagValues(self, request):
-        """用于查詢已建立的标簽清單中的标簽值。
+        """用於查詢已建立的標簽清單中的標簽值。
 
         :param request: Request instance for DescribeTagValues.
         :type request: :class:`taifucloudcloud.tag.v20180813.models.DescribeTagValuesRequest`
@@ -306,7 +306,7 @@ class TagClient(AbstractClient):
 
 
     def DescribeTags(self, request):
-        """用于查詢已建立的标簽清單。
+        """用於查詢已建立的標簽清單。
 
         :param request: Request instance for DescribeTags.
         :type request: :class:`taifucloudcloud.tag.v20180813.models.DescribeTagsRequest`
@@ -334,7 +334,7 @@ class TagClient(AbstractClient):
 
 
     def ModifyResourceTags(self, request):
-        """本介面用于修改資源關聯的所有标簽
+        """本介面用於修改資源關聯的所有標簽
 
         :param request: Request instance for ModifyResourceTags.
         :type request: :class:`taifucloudcloud.tag.v20180813.models.ModifyResourceTagsRequest`
@@ -362,7 +362,7 @@ class TagClient(AbstractClient):
 
 
     def UpdateResourceTagValue(self, request):
-        """本介面用于修改資源已關聯的标簽值（标簽鍵不變）
+        """本介面用於修改資源已關聯的標簽值（標簽鍵不變）
 
         :param request: Request instance for UpdateResourceTagValue.
         :type request: :class:`taifucloudcloud.tag.v20180813.models.UpdateResourceTagValueRequest`

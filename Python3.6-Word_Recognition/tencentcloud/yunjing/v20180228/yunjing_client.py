@@ -26,7 +26,7 @@ class YunjingClient(AbstractClient):
 
 
     def CloseProVersion(self, request):
-        """本介面 (CloseProVersion) 用于關閉專業版。
+        """本介面 (CloseProVersion) 用於關閉專業版。
 
         :param request: 調用CloseProVersion所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.CloseProVersionRequest`
@@ -54,7 +54,7 @@ class YunjingClient(AbstractClient):
 
 
     def CreateProcessTask(self, request):
-        """本介面 (CreateProcessTask) 用于創建實時拉取程式任務。
+        """本介面 (CreateProcessTask) 用於創建實時拉取程式任務。
 
         :param request: 調用CreateProcessTask所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.CreateProcessTaskRequest`
@@ -82,7 +82,7 @@ class YunjingClient(AbstractClient):
 
 
     def CreateUsualLoginPlaces(self, request):
-        """此介面（CreateUsualLoginPlaces）用于添加常用登入地。
+        """此介面（CreateUsualLoginPlaces）用於添加常用登入地。
 
         :param request: 調用CreateUsualLoginPlaces所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.CreateUsualLoginPlacesRequest`
@@ -110,7 +110,7 @@ class YunjingClient(AbstractClient):
 
 
     def DeleteBruteAttacks(self, request):
-        """本介面 (DeleteBruteAttacks) 用于删除暴力破解記錄。
+        """本介面 (DeleteBruteAttacks) 用於删除暴力破解記錄。
 
         :param request: 調用DeleteBruteAttacks所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DeleteBruteAttacksRequest`
@@ -138,7 +138,7 @@ class YunjingClient(AbstractClient):
 
 
     def DeleteMachine(self, request):
-        """本介面（DeleteMachine）用于卸載雲鏡用戶端。
+        """本介面（DeleteMachine）用於卸載雲鏡用戶端。
 
         :param request: 調用DeleteMachine所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DeleteMachineRequest`
@@ -166,7 +166,7 @@ class YunjingClient(AbstractClient):
 
 
     def DeleteMaliciousRequests(self, request):
-        """本介面 (DeleteMaliciousRequests) 用于删除惡意請求記錄。
+        """本介面 (DeleteMaliciousRequests) 用於删除惡意請求記錄。
 
         :param request: 調用DeleteMaliciousRequests所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DeleteMaliciousRequestsRequest`
@@ -194,7 +194,7 @@ class YunjingClient(AbstractClient):
 
 
     def DeleteMalwares(self, request):
-        """本介面 (DeleteMalwares) 用于删除木馬記錄。
+        """本介面 (DeleteMalwares) 用於删除木馬記錄。
 
         :param request: 調用DeleteMalwares所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DeleteMalwaresRequest`
@@ -222,7 +222,7 @@ class YunjingClient(AbstractClient):
 
 
     def DeleteNonlocalLoginPlaces(self, request):
-        """本介面 (DeleteNonlocalLoginPlaces) 用于删除異地登入記錄。
+        """本介面 (DeleteNonlocalLoginPlaces) 用於删除異地登入記錄。
 
         :param request: 調用DeleteNonlocalLoginPlaces所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DeleteNonlocalLoginPlacesRequest`
@@ -250,7 +250,7 @@ class YunjingClient(AbstractClient):
 
 
     def DeleteUsualLoginPlaces(self, request):
-        """本介面（DeleteUsualLoginPlaces）用于删除常用登入地。
+        """本介面（DeleteUsualLoginPlaces）用於删除常用登入地。
 
         :param request: 調用DeleteUsualLoginPlaces所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DeleteUsualLoginPlacesRequest`
@@ -278,7 +278,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeAccountStatistics(self, request):
-        """本介面 (DescribeAccountStatistics) 用于獲取帳号統計清單數據。
+        """本介面 (DescribeAccountStatistics) 用於獲取帳號統計清單數據。
 
         :param request: 調用DescribeAccountStatistics所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeAccountStatisticsRequest`
@@ -306,7 +306,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeAccounts(self, request):
-        """本介面 (DescribeAccounts) 用于獲取帳号清單數據。
+        """本介面 (DescribeAccounts) 用於獲取帳號清單數據。
 
         :param request: 調用DescribeAccounts所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeAccountsRequest`
@@ -334,7 +334,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeAgentVuls(self, request):
-        """本介面 (DescribeAgentVuls) 用于獲取主機的漏洞清單。
+        """本介面 (DescribeAgentVuls) 用於獲取主機的漏洞清單。
 
         :param request: 調用DescribeAgentVuls所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeAgentVulsRequest`
@@ -362,7 +362,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeAlarmAttribute(self, request):
-        """本介面 (DescribeAlarmAttribute) 用于獲取告警設置。
+        """本介面 (DescribeAlarmAttribute) 用於獲取告警設置。
 
         :param request: 調用DescribeAlarmAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeAlarmAttributeRequest`
@@ -390,7 +390,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeBruteAttacks(self, request):
-        """本介面{DescribeBruteAttacks}用于獲取暴力破解事件清單。
+        """本介面{DescribeBruteAttacks}用於獲取暴力破解事件清單。
 
         :param request: 調用DescribeBruteAttacks所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeBruteAttacksRequest`
@@ -418,7 +418,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeComponentInfo(self, request):
-        """本介面 (DescribeComponentInfo) 用于獲取元件訊息數據。
+        """本介面 (DescribeComponentInfo) 用於獲取元件訊息數據。
 
         :param request: 調用DescribeComponentInfo所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeComponentInfoRequest`
@@ -446,7 +446,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeComponentStatistics(self, request):
-        """本介面 (DescribeComponentStatistics) 用于獲取元件統計清單數據。
+        """本介面 (DescribeComponentStatistics) 用於獲取元件統計清單數據。
 
         :param request: 調用DescribeComponentStatistics所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeComponentStatisticsRequest`
@@ -474,7 +474,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeComponents(self, request):
-        """本介面 (DescribeComponents) 用于獲取元件清單數據。
+        """本介面 (DescribeComponents) 用於獲取元件清單數據。
 
         :param request: 調用DescribeComponents所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeComponentsRequest`
@@ -502,7 +502,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeHistoryAccounts(self, request):
-        """本介面 (DescribeHistoryAccounts) 用于獲取帳号變更曆史清單數據。
+        """本介面 (DescribeHistoryAccounts) 用於獲取帳號變更曆史清單數據。
 
         :param request: 調用DescribeHistoryAccounts所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeHistoryAccountsRequest`
@@ -530,7 +530,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeImpactedHosts(self, request):
-        """本介面 (DescribeImpactedHosts) 用于獲取漏洞受影響機器清單。
+        """本介面 (DescribeImpactedHosts) 用於獲取漏洞受影響機器清單。
 
         :param request: 調用DescribeImpactedHosts所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeImpactedHostsRequest`
@@ -558,7 +558,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeMachineInfo(self, request):
-        """本介面（DescribeMachineInfo）用于獲取機器詳細訊息。
+        """本介面（DescribeMachineInfo）用於獲取機器詳細訊息。
 
         :param request: 調用DescribeMachineInfo所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeMachineInfoRequest`
@@ -586,7 +586,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeMachines(self, request):
-        """本介面 (DescribeMachines) 用于獲取區域主機清單。
+        """本介面 (DescribeMachines) 用於獲取區域主機清單。
 
         :param request: 調用DescribeMachines所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeMachinesRequest`
@@ -614,7 +614,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeMaliciousRequests(self, request):
-        """本介面 (DescribeMaliciousRequests) 用于獲取惡意請求數據。
+        """本介面 (DescribeMaliciousRequests) 用於獲取惡意請求數據。
 
         :param request: 調用DescribeMaliciousRequests所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeMaliciousRequestsRequest`
@@ -642,7 +642,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeMalwares(self, request):
-        """本介面（DescribeMalwares）用于獲取木馬事件清單。
+        """本介面（DescribeMalwares）用於獲取木馬事件清單。
 
         :param request: 調用DescribeMalwares所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeMalwaresRequest`
@@ -670,7 +670,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeNonlocalLoginPlaces(self, request):
-        """本介面(DescribeNonlocalLoginPlaces)用于獲取異地登入事件。
+        """本介面(DescribeNonlocalLoginPlaces)用於獲取異地登入事件。
 
         :param request: 調用DescribeNonlocalLoginPlaces所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeNonlocalLoginPlacesRequest`
@@ -698,7 +698,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeOpenPortStatistics(self, request):
-        """本介面 (DescribeOpenPortStatistics) 用于獲取端口統計清單。
+        """本介面 (DescribeOpenPortStatistics) 用於獲取端口統計清單。
 
         :param request: 調用DescribeOpenPortStatistics所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeOpenPortStatisticsRequest`
@@ -726,7 +726,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeOpenPorts(self, request):
-        """本介面 (DescribeOpenPorts) 用于獲取端口清單數據。
+        """本介面 (DescribeOpenPorts) 用於獲取端口清單數據。
 
         :param request: 調用DescribeOpenPorts所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeOpenPortsRequest`
@@ -754,7 +754,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeOverviewStatistics(self, request):
-        """本介面用于（DescribeOverviewStatistics）獲取概覽統計數據。
+        """本介面用於（DescribeOverviewStatistics）獲取概覽統計數據。
 
         :param request: 調用DescribeOverviewStatistics所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeOverviewStatisticsRequest`
@@ -782,7 +782,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeProVersionInfo(self, request):
-        """本介面 (DescribeProVersionInfo) 用于獲取專業版訊息。
+        """本介面 (DescribeProVersionInfo) 用於獲取專業版訊息。
 
         :param request: 調用DescribeProVersionInfo所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeProVersionInfoRequest`
@@ -810,7 +810,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeProcessStatistics(self, request):
-        """本介面 (DescribeProcessStatistics) 用于獲取程式統計清單數據。
+        """本介面 (DescribeProcessStatistics) 用於獲取程式統計清單數據。
 
         :param request: 調用DescribeProcessStatistics所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeProcessStatisticsRequest`
@@ -838,7 +838,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeProcessTaskStatus(self, request):
-        """本介面 (DescribeProcessTaskStatus) 用于獲取實時拉取程式任務狀态。
+        """本介面 (DescribeProcessTaskStatus) 用於獲取實時拉取程式任務狀态。
 
         :param request: 調用DescribeProcessTaskStatus所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeProcessTaskStatusRequest`
@@ -866,7 +866,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeProcesses(self, request):
-        """本介面 (DescribeProcesses) 用于獲取程式清單數據。
+        """本介面 (DescribeProcesses) 用於獲取程式清單數據。
 
         :param request: 調用DescribeProcesses所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeProcessesRequest`
@@ -894,7 +894,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeSecurityDynamics(self, request):
-        """本介面 (DescribeSecurityDynamics) 用于獲取安全事件訊息數據。
+        """本介面 (DescribeSecurityDynamics) 用於獲取安全事件訊息數據。
 
         :param request: 調用DescribeSecurityDynamics所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeSecurityDynamicsRequest`
@@ -922,7 +922,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeSecurityTrends(self, request):
-        """本介面 (DescribeSecurityTrends) 用于獲取安全事件統計數據。
+        """本介面 (DescribeSecurityTrends) 用於獲取安全事件統計數據。
 
         :param request: 調用DescribeSecurityTrends所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeSecurityTrendsRequest`
@@ -950,7 +950,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeUsualLoginPlaces(self, request):
-        """此介面（DescribeUsualLoginPlaces）用于查詢常用登入地。
+        """此介面（DescribeUsualLoginPlaces）用於查詢常用登入地。
 
         :param request: 調用DescribeUsualLoginPlaces所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeUsualLoginPlacesRequest`
@@ -978,7 +978,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeVulInfo(self, request):
-        """本介面 (DescribeVulInfo) 用于獲取漏洞詳情。
+        """本介面 (DescribeVulInfo) 用於獲取漏洞詳情。
 
         :param request: 調用DescribeVulInfo所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeVulInfoRequest`
@@ -1006,7 +1006,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeVulScanResult(self, request):
-        """本介面 (DescribeVulScanResult) 用于獲取漏洞檢測結果。
+        """本介面 (DescribeVulScanResult) 用於獲取漏洞檢測結果。
 
         :param request: 調用DescribeVulScanResult所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeVulScanResultRequest`
@@ -1034,7 +1034,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeVuls(self, request):
-        """本介面 (DescribeVuls) 用于獲取漏洞清單數據。
+        """本介面 (DescribeVuls) 用於獲取漏洞清單數據。
 
         :param request: 調用DescribeVuls所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeVulsRequest`
@@ -1062,7 +1062,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeWeeklyReportBruteAttacks(self, request):
-        """本介面 (DescribeWeeklyReportBruteAttacks) 用于獲取專業周報密碼破解數據。
+        """本介面 (DescribeWeeklyReportBruteAttacks) 用於獲取專業周報密碼破解數據。
 
         :param request: 調用DescribeWeeklyReportBruteAttacks所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeWeeklyReportBruteAttacksRequest`
@@ -1090,7 +1090,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeWeeklyReportInfo(self, request):
-        """本介面 (DescribeWeeklyReportInfo) 用于獲取專業周報詳情數據。
+        """本介面 (DescribeWeeklyReportInfo) 用於獲取專業周報詳情數據。
 
         :param request: 調用DescribeWeeklyReportInfo所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeWeeklyReportInfoRequest`
@@ -1118,7 +1118,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeWeeklyReportMalwares(self, request):
-        """本介面 (DescribeWeeklyReportMalwares) 用于獲取專業周報木馬數據。
+        """本介面 (DescribeWeeklyReportMalwares) 用於獲取專業周報木馬數據。
 
         :param request: 調用DescribeWeeklyReportMalwares所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeWeeklyReportMalwaresRequest`
@@ -1146,7 +1146,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeWeeklyReportNonlocalLoginPlaces(self, request):
-        """本介面 (DescribeWeeklyReportNonlocalLoginPlaces) 用于獲取專業周報異地登入數據。
+        """本介面 (DescribeWeeklyReportNonlocalLoginPlaces) 用於獲取專業周報異地登入數據。
 
         :param request: 調用DescribeWeeklyReportNonlocalLoginPlaces所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeWeeklyReportNonlocalLoginPlacesRequest`
@@ -1174,7 +1174,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeWeeklyReportVuls(self, request):
-        """本介面 (DescribeWeeklyReportVuls) 用于專業版周報漏洞數據。
+        """本介面 (DescribeWeeklyReportVuls) 用於專業版周報漏洞數據。
 
         :param request: 調用DescribeWeeklyReportVuls所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeWeeklyReportVulsRequest`
@@ -1202,7 +1202,7 @@ class YunjingClient(AbstractClient):
 
 
     def DescribeWeeklyReports(self, request):
-        """本介面 (DescribeWeeklyReports) 用于獲取周報清單數據。
+        """本介面 (DescribeWeeklyReports) 用於獲取周報清單數據。
 
         :param request: 調用DescribeWeeklyReports所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.DescribeWeeklyReportsRequest`
@@ -1230,7 +1230,7 @@ class YunjingClient(AbstractClient):
 
 
     def ExportMaliciousRequests(self, request):
-        """本介面 (ExportMaliciousRequests) 用于導出下載惡意請求文件。
+        """本介面 (ExportMaliciousRequests) 用於導出下載惡意請求文件。
 
         :param request: 調用ExportMaliciousRequests所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.ExportMaliciousRequestsRequest`
@@ -1258,7 +1258,7 @@ class YunjingClient(AbstractClient):
 
 
     def IgnoreImpactedHosts(self, request):
-        """本介面 (IngoreImpactedHosts) 用于忽略漏洞。
+        """本介面 (IngoreImpactedHosts) 用於忽略漏洞。
 
         :param request: 調用IgnoreImpactedHosts所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.IgnoreImpactedHostsRequest`
@@ -1286,7 +1286,7 @@ class YunjingClient(AbstractClient):
 
 
     def InquiryPriceOpenProVersionPrepaid(self, request):
-        """本介面 (InquiryPriceOpenProVersionPrepaid) 用于開通專業版詢價(預付費)。
+        """本介面 (InquiryPriceOpenProVersionPrepaid) 用於開通專業版詢價(預付費)。
 
         :param request: 調用InquiryPriceOpenProVersionPrepaid所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.InquiryPriceOpenProVersionPrepaidRequest`
@@ -1342,7 +1342,7 @@ class YunjingClient(AbstractClient):
 
 
     def ModifyAlarmAttribute(self, request):
-        """本介面（ModifyAlarmAttribute）用于修改告警設置。
+        """本介面（ModifyAlarmAttribute）用於修改告警設置。
 
         :param request: 調用ModifyAlarmAttribute所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.ModifyAlarmAttributeRequest`
@@ -1370,7 +1370,7 @@ class YunjingClient(AbstractClient):
 
 
     def ModifyAutoOpenProVersionConfig(self, request):
-        """本介面 (ModifyAutoOpenProVersionConfig) 用于設置新增主機自動開通專業版配置。
+        """本介面 (ModifyAutoOpenProVersionConfig) 用於設置新增主機自動開通專業版配置。
 
         :param request: 調用ModifyAutoOpenProVersionConfig所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.ModifyAutoOpenProVersionConfigRequest`
@@ -1398,7 +1398,7 @@ class YunjingClient(AbstractClient):
 
 
     def ModifyProVersionRenewFlag(self, request):
-        """本介面 (ModifyProVersionRenewFlag) 用于修改專業版包年包月續約标識。
+        """本介面 (ModifyProVersionRenewFlag) 用於修改專業版包年包月續約標識。
 
         :param request: 調用ModifyProVersionRenewFlag所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.ModifyProVersionRenewFlagRequest`
@@ -1426,7 +1426,7 @@ class YunjingClient(AbstractClient):
 
 
     def OpenProVersionPrepaid(self, request):
-        """本介面 (OpenProVersionPrepaid) 用于開通專業版(包年包月)。
+        """本介面 (OpenProVersionPrepaid) 用於開通專業版(包年包月)。
 
         :param request: 調用OpenProVersionPrepaid所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.OpenProVersionPrepaidRequest`
@@ -1454,7 +1454,7 @@ class YunjingClient(AbstractClient):
 
 
     def RecoverMalwares(self, request):
-        """本介面（RecoverMalwares）用于批次恢複已經被隔離的木馬文件。
+        """本介面（RecoverMalwares）用於批次恢複已經被隔離的木馬文件。
 
         :param request: 調用RecoverMalwares所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.RecoverMalwaresRequest`
@@ -1482,7 +1482,7 @@ class YunjingClient(AbstractClient):
 
 
     def RenewProVersion(self, request):
-        """本介面 (RenewProVersion) 用于續約專業版(包年包月)。
+        """本介面 (RenewProVersion) 用於續約專業版(包年包月)。
 
         :param request: 調用RenewProVersion所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.RenewProVersionRequest`
@@ -1510,7 +1510,7 @@ class YunjingClient(AbstractClient):
 
 
     def RescanImpactedHost(self, request):
-        """本介面 (RescanImpactedHosts) 用于漏洞重新檢測。
+        """本介面 (RescanImpactedHosts) 用於漏洞重新檢測。
 
         :param request: 調用RescanImpactedHost所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.RescanImpactedHostRequest`
@@ -1538,7 +1538,7 @@ class YunjingClient(AbstractClient):
 
 
     def SeparateMalwares(self, request):
-        """本介面（SeparateMalwares）用于隔離木馬。
+        """本介面（SeparateMalwares）用於隔離木馬。
 
         :param request: 調用SeparateMalwares所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.SeparateMalwaresRequest`
@@ -1566,7 +1566,7 @@ class YunjingClient(AbstractClient):
 
 
     def TrustMaliciousRequest(self, request):
-        """本介面 (TrustMaliciousRequest) 用于惡意請求添加信任。
+        """本介面 (TrustMaliciousRequest) 用於惡意請求添加信任。
 
         :param request: 調用TrustMaliciousRequest所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.TrustMaliciousRequestRequest`
@@ -1622,7 +1622,7 @@ class YunjingClient(AbstractClient):
 
 
     def UntrustMaliciousRequest(self, request):
-        """本介面 (UntrustMaliciousRequest) 用于取消信任惡意請求。
+        """本介面 (UntrustMaliciousRequest) 用於取消信任惡意請求。
 
         :param request: 調用UntrustMaliciousRequest所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.UntrustMaliciousRequestRequest`
@@ -1650,7 +1650,7 @@ class YunjingClient(AbstractClient):
 
 
     def UntrustMalwares(self, request):
-        """本介面（UntrustMalwares）用于取消信任木馬文件。
+        """本介面（UntrustMalwares）用於取消信任木馬文件。
 
         :param request: 調用UntrustMalwares所需參數的結構體。
         :type request: :class:`taifucloudcloud.yunjing.v20180228.models.UntrustMalwaresRequest`

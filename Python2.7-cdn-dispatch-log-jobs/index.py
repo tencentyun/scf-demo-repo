@@ -12,7 +12,7 @@
 # 1.    在第143行的config變量中，填寫對應的配置訊息。                                                                                 #
 #     secret_id、secret_key、cos_region、cos_bucket、scf_region等欄位需填寫；                                                       #
 #     scf_function 即儲存函數名：cdn-save-log-into-cos，函數地域即函數所在地域；                                                       #
-#     cdn_host 的預設值爲空數組（即保存賬号下所有域名的日志），如有需要可以修改填入指定域名清單。                                             #
+#     cdn_host 的預設值爲空數組（即保存賬號下所有域名的日志），如有需要可以修改填入指定域名清單。                                             #
 # 2. 該函數需要配置定時觸發器，觸發週期爲1小時。                                                                                       #
 #################################################################################################################################
 
@@ -76,7 +76,7 @@ class Job:
         return urls
 
     def get_cdn_hosts(self):
-        '''Getting a list of all domain names under the account （獲取賬号下全部域名清單）'''
+        '''Getting a list of all domain names under the account （獲取賬號下全部域名清單）'''
         action = "DescribeCdnHosts"
         end = datetime.datetime.now()
         start = end - datetime.timedelta(days=1)
@@ -117,7 +117,7 @@ class Job:
             'ClientContext': json.dumps(event),
         }
 
-        # Calling the interface, initiating the request, and printing the returned result. 調用介面，發起請求，并列印返回結果
+        # Calling the interface, initiating the request, and printing the returned result. 調用介面，發起請求，並列印返回結果
         try:
             ret = self.scf_client.call(action, action_params)
             print(json.loads(ret)["Response"]["Result"]["RetMsg"])
@@ -154,7 +154,7 @@ def run_app():
         'scf_function': 'cdn-save-log-into-cos',
 
         # CDN configuration. CDN配置
-        # If the domain name list is empty, it means to synchronize the logs of all domain names under the entire account. 如果域名清單爲空，則表示同步整個賬号下全部域名的日志
+        # If the domain name list is empty, it means to synchronize the logs of all domain names under the entire account. 如果域名清單爲空，則表示同步整個賬號下全部域名的日志
         'cdn_host':     [],
         #'cdn_host':     ['tx-cdn.talebook.org','js.talebook.org'],
     }

@@ -3,8 +3,8 @@
     "application":{
       "Chinese":{
         "name": "定時撥測",
-        "description": "本範例代碼的功能是定時撥測 URL 清單中的網址，并通過郵件發送告警",
-        "attention": "在使用本範例代碼時，需要設置定時觸發器，并修改撥測清單、配置發送電子信箱、修改接收電子信箱的網址",
+        "description": "本範例代碼的功能是定時撥測 URL 清單中的網址，並通過郵件發送告警",
+        "attention": "在使用本範例代碼時，需要設置定時觸發器，並修改撥測清單、配置發送電子信箱、修改接收電子信箱的網址",
         "readme": {
             "file": "",
             "content": ""
@@ -43,31 +43,31 @@
       "tags":[
               "url","Python2.7","timer"  
               // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on.
-              // 标簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
+              // 標簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
       ],
       "version": "1.0.7"  
       // Version number, which identifies the demo version status. 
       // Demo will not to update to the page if the version number unmodified.
-      //版本号，通過版本号标識 demo 升級情況，未修改版本号會導緻 demo 不更新至頁面
+      //版本號，通過版本號標識 demo 升級情況，未修改版本號會導緻 demo 不更新至頁面
     },
     "functions": {
       "name": "ES_curator_clear",  // Function name which only be in English. 函數名稱，只支援英文
-      "description": "This demo will use timer trigger to check url list. If there are wrong lists, it will send alarm by email. 本範例代碼的功能是定時撥測 URL 清單中的網址，并通過郵件發送告警",
+      "description": "This demo will use timer trigger to check url list. If there are wrong lists, it will send alarm by email. 本範例代碼的功能是定時撥測 URL 清單中的網址，並通過郵件發送告警",
       "handler":"Play_Check_By_Timer.main_handler",
       "memorySize": 128,  // Running memory. 運作配置内存
       "timeout": 10,  // Running timeout.  運作超時時間
       "runtime": "Python2.7", //Runtime which users can search demo by this keyword.  運作環境，用戶可以通過該關鍵字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
       "Environment":{
-      },      // Optional, used to define environment variables. 可選，用于定義環境變量
+      },      // Optional, used to define environment variables. 可選，用於定義環境變量
       "Events":{
         "Type": "Timer",
         "Properties":{
           "CronExpression": "* */1 * * * * *",
           "Enable": "true"
         }
-      },      // Optional, used define the event source that triggers this function. 可選，用于定義觸發此函數的事件源
+      },      // Optional, used define the event source that triggers this function. 可選，用於定義觸發此函數的事件源
       "VpcConfig":{
-      },      // Optional, used configure cloud function's private network. 可選， 用于配置雲函數訪問 VPC 私有網絡。
+      },      // Optional, used configure cloud function's private network. 可選， 用於配置雲函數訪問 VPC 私有網絡。
       "codeObject": {
           "codeFile": [
               "Play_Check_By_Timer.py"

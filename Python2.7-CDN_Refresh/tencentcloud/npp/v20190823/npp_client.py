@@ -54,7 +54,7 @@ class NppClient(AbstractClient):
 
 
     def DelVirtualNum(self, request):
-        """直撥解綁中間号
+        """直撥解綁中間號
 
         :param request: Request instance for DelVirtualNum.
         :type request: :class:`taifucloudcloud.npp.v20190823.models.DelVirtualNumRequest`
@@ -166,7 +166,7 @@ class NppClient(AbstractClient):
 
 
     def DescribeCallerDisplayList(self, request):
-        """回撥拉取主叫顯号号碼集合
+        """回撥拉取主叫顯號號碼集合
 
         :param request: Request instance for DescribeCallerDisplayList.
         :type request: :class:`taifucloudcloud.npp.v20190823.models.DescribeCallerDisplayListRequest`
@@ -222,7 +222,7 @@ class NppClient(AbstractClient):
 
 
     def GetVirtualNum(self, request):
-        """直撥獲取中間号（App 使用方發起）
+        """直撥獲取中間號（App 使用方發起）
 
         :param request: Request instance for GetVirtualNum.
         :type request: :class:`taifucloudcloud.npp.v20190823.models.GetVirtualNumRequest`

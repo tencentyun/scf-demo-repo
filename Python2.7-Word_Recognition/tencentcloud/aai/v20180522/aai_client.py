@@ -26,7 +26,7 @@ class AaiClient(AbstractClient):
 
 
     def Chat(self, request):
-        """提供基于文本的基礎聊天能力，可以讓您的應用快速擁有具備深度語義理解的機器聊天功能。
+        """提供基於文本的基礎聊天能力，可以讓您的應用快速擁有具備深度語義理解的機器聊天功能。
 
         :param request: 調用Chat所需參數的結構體。
         :type request: :class:`taifucloudcloud.aai.v20180522.models.ChatRequest`

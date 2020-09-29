@@ -26,7 +26,7 @@ class BriClient(AbstractClient):
 
 
     def DescribeBRI(self, request):
-        """輸入業務名 (bri_num, bri_dev, bri_ip, bri_apk, bri_url 五種之一)  及其 相應欄位, 獲取業務風險分數和标簽。
+        """輸入業務名 (bri_num, bri_dev, bri_ip, bri_apk, bri_url 五種之一)  及其 相應欄位, 獲取業務風險分數和標簽。
 
         當業務名爲bri_num時，必須填PhoneNumber欄位.
 

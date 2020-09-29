@@ -166,7 +166,7 @@ class MpsClient(AbstractClient):
 
 
     def CreatePersonSample(self, request):
-        """該介面用于創建人物樣本，用于通過人臉識别等技術，進行内容識别、内容審核等視訊處理。
+        """該介面用於創建人物樣本，用於通過人臉識别等技術，進行内容識别、内容審核等視訊處理。
 
         :param request: Request instance for CreatePersonSample.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.CreatePersonSampleRequest`
@@ -306,7 +306,7 @@ class MpsClient(AbstractClient):
 
 
     def CreateWordSamples(self, request):
-        """該介面用于批次創建關鍵詞樣本，樣本用于通過OCR、ASR技術，進行内容審核、内容識别等視訊處理。
+        """該介面用於批次創建關鍵詞樣本，樣本用於通過OCR、ASR技術，進行内容審核、内容識别等視訊處理。
 
         :param request: Request instance for CreateWordSamples.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.CreateWordSamplesRequest`
@@ -342,7 +342,7 @@ class MpsClient(AbstractClient):
         5. 對視訊截圖雪碧圖；
         6. 對視訊轉自适應碼流；
         7. 智慧内容審核（ 、鑒恐、鑒政）；
-        8. 智慧内容分析（标簽、分類、封面、按幀标簽）；
+        8. 智慧内容分析（標簽、分類、封面、按幀標簽）；
         9. 智慧内容識别（人臉、文本全文、文本關鍵詞、語音全文、語音關鍵詞）。
 
         注意：創建工作流成功後是禁用狀态，需要手動啓用。
@@ -515,7 +515,7 @@ class MpsClient(AbstractClient):
 
 
     def DeletePersonSample(self, request):
-        """該介面用于根據人物 ID，删除人物樣本。
+        """該介面用於根據人物 ID，删除人物樣本。
 
         :param request: Request instance for DeletePersonSample.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.DeletePersonSampleRequest`
@@ -655,7 +655,7 @@ class MpsClient(AbstractClient):
 
 
     def DeleteWordSamples(self, request):
-        """該介面用于批次删除關鍵詞樣本。
+        """該介面用於批次删除關鍵詞樣本。
 
         :param request: Request instance for DeleteWordSamples.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.DeleteWordSamplesRequest`
@@ -683,7 +683,7 @@ class MpsClient(AbstractClient):
 
 
     def DeleteWorkflow(self, request):
-        """删除工作流。對于已啓用的工作流，需要禁用後才能删除。
+        """删除工作流。對於已啓用的工作流，需要禁用後才能删除。
 
         :param request: Request instance for DeleteWorkflow.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.DeleteWorkflowRequest`
@@ -711,7 +711,7 @@ class MpsClient(AbstractClient):
 
 
     def DescribeAIAnalysisTemplates(self, request):
-        """根據内容分析範本唯一标識，獲取内容分析範本詳情清單。返回結果包含符合條件的所有用戶自定義内容分析範本及系統預置視訊内容分析範本
+        """根據内容分析範本唯一標識，獲取内容分析範本詳情清單。返回結果包含符合條件的所有用戶自定義内容分析範本及系統預置視訊内容分析範本
 
         :param request: Request instance for DescribeAIAnalysisTemplates.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeAIAnalysisTemplatesRequest`
@@ -739,7 +739,7 @@ class MpsClient(AbstractClient):
 
 
     def DescribeAIRecognitionTemplates(self, request):
-        """根據内容識别範本唯一标識，獲取内容識别範本詳情清單。返回結果包含符合條件的所有用戶自定義内容識别範本及系統預置視訊内容識别範本
+        """根據内容識别範本唯一標識，獲取内容識别範本詳情清單。返回結果包含符合條件的所有用戶自定義内容識别範本及系統預置視訊内容識别範本
 
         :param request: Request instance for DescribeAIRecognitionTemplates.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeAIRecognitionTemplatesRequest`
@@ -795,7 +795,7 @@ class MpsClient(AbstractClient):
 
 
     def DescribeContentReviewTemplates(self, request):
-        """根據内容審核範本唯一标識，獲取内容審核範本詳情清單。返回結果包含符合條件的所有用戶自定義範本及系統預置内容審核範本。
+        """根據内容審核範本唯一標識，獲取内容審核範本詳情清單。返回結果包含符合條件的所有用戶自定義範本及系統預置内容審核範本。
 
         :param request: Request instance for DescribeContentReviewTemplates.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeContentReviewTemplatesRequest`
@@ -879,7 +879,7 @@ class MpsClient(AbstractClient):
 
 
     def DescribePersonSamples(self, request):
-        """該介面用于查詢人物樣本訊息，支援根據人物 ID、名稱、标簽，分頁查詢。
+        """該介面用於查詢人物樣本訊息，支援根據人物 ID、名稱、標簽，分頁查詢。
 
         :param request: Request instance for DescribePersonSamples.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribePersonSamplesRequest`
@@ -991,7 +991,7 @@ class MpsClient(AbstractClient):
 
 
     def DescribeTasks(self, request):
-        """* 該介面用于查詢任務清單；
+        """* 該介面用於查詢任務清單；
         * 當清單數據比較多時，單次介面調用無法拉取整個清單，可通過 ScrollToken 參數，分批拉取；
         * 只能查詢到最近三天（72 小時）内的任務。
 
@@ -1021,7 +1021,7 @@ class MpsClient(AbstractClient):
 
 
     def DescribeTranscodeTemplates(self, request):
-        """根據轉碼範本唯一标識，獲取轉碼範本詳情清單。返回結果包含符合條件的所有用戶自定義範本及[系統預置轉碼範本](https://cloud.taifucloud.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+        """根據轉碼範本唯一標識，獲取轉碼範本詳情清單。返回結果包含符合條件的所有用戶自定義範本及[系統預置轉碼範本](https://cloud.taifucloud.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
 
         :param request: Request instance for DescribeTranscodeTemplates.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeTranscodeTemplatesRequest`
@@ -1077,7 +1077,7 @@ class MpsClient(AbstractClient):
 
 
     def DescribeWordSamples(self, request):
-        """該介面用于根據應用場景、關鍵詞、标簽，分頁查詢關鍵詞樣本訊息。
+        """該介面用於根據應用場景、關鍵詞、標簽，分頁查詢關鍵詞樣本訊息。
 
         :param request: Request instance for DescribeWordSamples.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.DescribeWordSamplesRequest`
@@ -1392,7 +1392,7 @@ class MpsClient(AbstractClient):
 
 
     def ModifyPersonSample(self, request):
-        """該介面用于根據人物 ID，修改人物樣本訊息，包括名稱、描述的修改，以及人臉、标簽的添加、删除、重置操作。人臉删除操作需保證至少剩餘 1 張圖片，否則，請使用重置操作。
+        """該介面用於根據人物 ID，修改人物樣本訊息，包括名稱、描述的修改，以及人臉、標簽的添加、删除、重置操作。人臉删除操作需保證至少剩餘 1 張圖片，否則，請使用重置操作。
 
         :param request: Request instance for ModifyPersonSample.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.ModifyPersonSampleRequest`
@@ -1532,7 +1532,7 @@ class MpsClient(AbstractClient):
 
 
     def ModifyWordSample(self, request):
-        """該介面用于修改關鍵詞的應用場景、标簽，關鍵詞本身不可修改，如需修改，可删除重建。
+        """該介面用於修改關鍵詞的應用場景、標簽，關鍵詞本身不可修改，如需修改，可删除重建。
 
         :param request: Request instance for ModifyWordSample.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.ModifyWordSampleRequest`
@@ -1561,7 +1561,7 @@ class MpsClient(AbstractClient):
 
     def ParseLiveStreamProcessNotification(self, request):
         """從 CMQ 獲取到訊息後，從訊息的 msgBody 欄位中解析出 MPS 直播流處理事件通知的内容。
-        該介面不用于發起網絡調用，而是用來幫助生成各個語言平台的 SDK，您可以參考 SDK 的中解析函數的實現事件通知的解析。
+        該介面不用於發起網絡調用，而是用來幫助生成各個語言平台的 SDK，您可以參考 SDK 的中解析函數的實現事件通知的解析。
 
         :param request: Request instance for ParseLiveStreamProcessNotification.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.ParseLiveStreamProcessNotificationRequest`
@@ -1590,7 +1590,7 @@ class MpsClient(AbstractClient):
 
     def ParseNotification(self, request):
         """從 CMQ 獲取到訊息後，從訊息的 msgBody 欄位中解析出 MPS 事件通知的内容。
-        該介面不用于發起網絡調用，而是用來幫助生成各個語言平台的 SDK，您可以參考 SDK 的中解析函數的實現事件通知的解析。
+        該介面不用於發起網絡調用，而是用來幫助生成各個語言平台的 SDK，您可以參考 SDK 的中解析函數的實現事件通知的解析。
 
         :param request: Request instance for ParseNotification.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.ParseNotificationRequest`
@@ -1622,7 +1622,7 @@ class MpsClient(AbstractClient):
 
         * 智慧内容審核（畫面 、鑒政、鑒暴、聲音 ）。
 
-        直播流處理事件通知實時寫入用戶指定的訊息隊列 CMQ 中，用戶需要從訊息隊列 CMQ 中獲取事件通知結果，同時處理過程中存在輸出文件的，會寫入用戶指定的輸出文件的目标儲存中。
+        直播流處理事件通知實時寫入用戶指定的訊息隊列 CMQ 中，用戶需要從訊息隊列 CMQ 中獲取事件通知結果，同時處理過程中存在輸出文件的，會寫入用戶指定的輸出文件的目標儲存中。
 
         :param request: Request instance for ProcessLiveStream.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.ProcessLiveStreamRequest`
@@ -1658,7 +1658,7 @@ class MpsClient(AbstractClient):
         5. 對視訊截圖雪碧圖；
         6. 對視訊轉自适應碼流；
         7. 智慧内容審核（ 、鑒恐、鑒政）；
-        8. 智慧内容分析（标簽、分類、封面、按幀标簽）；
+        8. 智慧内容分析（標簽、分類、封面、按幀標簽）；
         9. 智慧内容識别（人臉、文本全文、文本關鍵詞、語音全文、語音關鍵詞）。
 
         :param request: Request instance for ProcessMedia.
@@ -1687,7 +1687,7 @@ class MpsClient(AbstractClient):
 
 
     def ResetWorkflow(self, request):
-        """重新設置一個已經存在且處于禁用狀态的工作流。
+        """重新設置一個已經存在且處於禁用狀态的工作流。
 
         :param request: Request instance for ResetWorkflow.
         :type request: :class:`taifucloudcloud.mps.v20190612.models.ResetWorkflowRequest`

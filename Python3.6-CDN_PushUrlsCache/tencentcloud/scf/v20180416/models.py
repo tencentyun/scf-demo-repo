@@ -125,12 +125,12 @@ class CopyFunctionRequest(AbstractModel):
         :type Description: str
         :param TargetRegion: 要将函數複制到的地域，不填則預設爲當前地域
         :type TargetRegion: str
-        :param Override: 如果目标Namespace下已有同名函數，是否函蓋，預設爲否
+        :param Override: 如果目標Namespace下已有同名函數，是否函蓋，預設爲否
 （注意：如果選擇函蓋，會導緻同名函數被删除，請慎重操作）
 TRUE：函蓋同名函數
 FALSE：不函蓋同名函數
         :type Override: bool
-        :param CopyConfiguration: 是否複制函數的屬性，包括環境變量、内存、超時、函數描述、标簽、VPC等，預設爲是。
+        :param CopyConfiguration: 是否複制函數的屬性，包括環境變量、内存、超時、函數描述、標簽、VPC等，預設爲是。
 TRUE：複制函數配置
 FALSE：不複制函數配置
         :type CopyConfiguration: bool
@@ -186,9 +186,9 @@ class CreateFunctionRequest(AbstractModel):
         :type Code: :class:`taifucloudcloud.scf.v20180416.models.Code`
         :param Handler: 函數處理方法名稱，名稱格式支援 "文件名稱.方法名稱" 形式，文件名稱和函數名稱之間以"."隔開，文件名稱和函數名稱要求以字母開始和結尾，中間允許插入字母、數字、下劃線和連接符，文件名稱和函數名字的長度要求是 2-60 個字元
         :type Handler: str
-        :param Description: 函數描述,最大支援 1000 個英文字母、數字、空格、逗号、換行符和英文句号，支援中文
+        :param Description: 函數描述,最大支援 1000 個英文字母、數字、空格、逗號、換行符和英文句號，支援中文
         :type Description: str
-        :param MemorySize: 函數運作時内存大小，預設爲 128M，可選範圍 64、128MB-3072MB，并且以 128MB 爲階梯
+        :param MemorySize: 函數運作時内存大小，預設爲 128M，可選範圍 64、128MB-3072MB，並且以 128MB 爲階梯
         :type MemorySize: int
         :param Timeout: 函數最長執行時間，單位爲秒，可選值範圍 1-900 秒，預設爲 3 秒
         :type Timeout: int
@@ -331,7 +331,7 @@ class CreateTriggerRequest(AbstractModel):
         """
         :param FunctionName: 新建觸發器綁定的函數名稱
         :type FunctionName: str
-        :param TriggerName: 新建觸發器名稱。如果是定時觸發器，名稱支援英文字母、數字、連接符和下劃線，最長100個字元；如果是cos觸發器，需要是對應cos儲存桶适用于XML API的訪問域名(例如:5401-5ff414-12345.cos.ap-shanghai.myqcloud.com);如果是其他觸發器，見具體觸發器綁定參數的說明
+        :param TriggerName: 新建觸發器名稱。如果是定時觸發器，名稱支援英文字母、數字、連接符和下劃線，最長100個字元；如果是cos觸發器，需要是對應cos儲存桶适用於XML API的訪問域名(例如:5401-5ff414-12345.cos.ap-shanghai.myqcloud.com);如果是其他觸發器，見具體觸發器綁定參數的說明
         :type TriggerName: str
         :param Type: 觸發器類型，目前支援 cos 、cmq、 timer、 ckafka類型
         :type Type: str
@@ -397,7 +397,7 @@ class DeadLetterConfig(AbstractModel):
         :type Type: str
         :param Name: 死信隊列名稱
         :type Name: str
-        :param FilterType: 死信隊列主題模式的标簽形式
+        :param FilterType: 死信隊列主題模式的標簽形式
         :type FilterType: str
         """
         self.Type = None
@@ -500,7 +500,7 @@ class DeleteLayerVersionRequest(AbstractModel):
         """
         :param LayerName: 層名稱
         :type LayerName: str
-        :param LayerVersion: 版本号
+        :param LayerVersion: 版本號
         :type LayerVersion: int
         """
         self.LayerName = None
@@ -683,7 +683,7 @@ class Environment(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """描述鍵值對過濾器，用于條件過濾查詢。例如過濾ID、名稱、狀态等
+    """描述鍵值對過濾器，用於條件過濾查詢。例如過濾ID、名稱、狀态等
     若存在多個Filter時，Filter間的關系爲邏輯與（AND）關系。
     若同一個Filter存在多個Values，同一Filter下Values間的關系爲邏輯或（OR）關系。
 
@@ -730,7 +730,7 @@ class Function(AbstractModel):
         :type StatusDesc: str
         :param Description: 函數描述
         :type Description: str
-        :param Tags: 函數标簽
+        :param Tags: 函數標簽
         :type Tags: list of Tag
         :param Type: 函數類型，取值爲 HTTP 或者 Event
         :type Type: str
@@ -919,9 +919,9 @@ class GetFunctionLogsRequest(AbstractModel):
         """
         :param FunctionName: 函數的名稱
         :type FunctionName: str
-        :param Offset: 數據的偏移量，Offset+Limit不能大于10000
+        :param Offset: 數據的偏移量，Offset+Limit不能大於10000
         :type Offset: int
-        :param Limit: 返回數據的長度，Offset+Limit不能大于10000
+        :param Limit: 返回數據的長度，Offset+Limit不能大於10000
         :type Limit: int
         :param Order: 以升序還是降序的方式對日志進行排序，可選值 desc和 asc
         :type Order: str
@@ -1020,11 +1020,11 @@ class GetFunctionRequest(AbstractModel):
         """
         :param FunctionName: 需要獲取詳情的函數名稱
         :type FunctionName: str
-        :param Qualifier: 函數的版本号
+        :param Qualifier: 函數的版本號
         :type Qualifier: str
         :param Namespace: 函數所屬命名空間
         :type Namespace: str
-        :param ShowCode: 是否顯示代碼, TRUE表示顯示代碼，FALSE表示不顯示代碼,大于1M的入口文件不會顯示
+        :param ShowCode: 是否顯示代碼, TRUE表示顯示代碼，FALSE表示不顯示代碼,大於1M的入口文件不會顯示
         :type ShowCode: str
         """
         self.FunctionName = None
@@ -1097,7 +1097,7 @@ class GetFunctionResponse(AbstractModel):
         :type ClsTopicId: str
         :param FunctionId: 函數ID
         :type FunctionId: str
-        :param Tags: 函數的标簽清單
+        :param Tags: 函數的標簽清單
         :type Tags: list of Tag
         :param EipConfig: EipConfig配置
         :type EipConfig: :class:`taifucloudcloud.scf.v20180416.models.EipOutConfig`
@@ -1235,7 +1235,7 @@ class GetLayerVersionRequest(AbstractModel):
         """
         :param LayerName: 層名稱
         :type LayerName: str
-        :param LayerVersion: 版本号
+        :param LayerVersion: 版本號
         :type LayerVersion: int
         """
         self.LayerName = None
@@ -1266,7 +1266,7 @@ class GetLayerVersionResponse(AbstractModel):
         :type Description: str
         :param LicenseInfo: 許可證訊息
         :type LicenseInfo: str
-        :param LayerVersion: 版本号
+        :param LayerVersion: 版本號
         :type LayerVersion: int
         :param LayerName: 層名稱
         :type LayerName: str
@@ -1315,7 +1315,7 @@ class InvokeRequest(AbstractModel):
         :type FunctionName: str
         :param InvocationType: RequestResponse(同步) 和 Event(異步)，預設爲同步
         :type InvocationType: str
-        :param Qualifier: 觸發函數的版本号
+        :param Qualifier: 觸發函數的版本號
         :type Qualifier: str
         :param ClientContext: 運作函數時的參數，以json格式傳入，最大支援的參數長度是 1M
         :type ClientContext: str
@@ -1386,7 +1386,7 @@ class LayerVersionInfo(AbstractModel):
         :param LicenseInfo: 許可證訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type LicenseInfo: str
-        :param LayerVersion: 版本号
+        :param LayerVersion: 版本號
         :type LayerVersion: int
         :param LayerName: 層名稱
         :type LayerName: str
@@ -1425,7 +1425,7 @@ class LayerVersionSimple(AbstractModel):
         """
         :param LayerName: layer名稱
         :type LayerName: str
-        :param LayerVersion: 版本号
+        :param LayerVersion: 版本號
         :type LayerVersion: int
         """
         self.LayerName = None
@@ -1459,7 +1459,7 @@ class ListFunctionsRequest(AbstractModel):
         :param Description: 函數描述，支援模糊搜索
         :type Description: str
         :param Filters: 過濾條件。
-- tag:tag-key - String - 是否必填：否 - （過濾條件）按照标簽鍵值對進行過濾。 tag-key使用具體的标簽鍵進行替換。
+- tag:tag-key - String - 是否必填：否 - （過濾條件）按照標簽鍵值對進行過濾。 tag-key使用具體的標簽鍵進行替換。
 
 每次請求的Filters的上限爲10，Filter.Values的上限爲5。
         :type Filters: list of Filter
@@ -1759,7 +1759,7 @@ class ListVersionByFunctionResponse(AbstractModel):
 
 
 class LogFilter(AbstractModel):
-    """日志過濾條件，用于區分正确與錯誤日志
+    """日志過濾條件，用於區分正确與錯誤日志
 
     """
 
@@ -1908,7 +1908,7 @@ class PublishLayerVersionResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param LayerVersion: 本次創建的層的版本号
+        :param LayerVersion: 本次創建的層的版本號
         :type LayerVersion: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -2042,15 +2042,15 @@ class Result(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """函數标簽
+    """函數標簽
 
     """
 
     def __init__(self):
         """
-        :param Key: 标簽的key
+        :param Key: 標簽的key
         :type Key: str
-        :param Value: 标簽的value
+        :param Value: 標簽的value
         :type Value: str
         """
         self.Key = None
@@ -2192,7 +2192,7 @@ class UpdateFunctionConfigurationRequest(AbstractModel):
         """
         :param FunctionName: 要修改的函數名稱
         :type FunctionName: str
-        :param Description: 函數描述。最大支援 1000 個英文字母、數字、空格、逗号和英文句号，支援中文
+        :param Description: 函數描述。最大支援 1000 個英文字母、數字、空格、逗號和英文句號，支援中文
         :type Description: str
         :param MemorySize: 函數運作時内存大小，預設爲 128 M，可選範64M、128 M-3072 M，以 128MB 爲階梯。
         :type MemorySize: int

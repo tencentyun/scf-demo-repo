@@ -48,9 +48,9 @@ class BodyRect(AbstractModel):
 
     def __init__(self):
         """
-        :param X: 人體框左上角橫坐标。
+        :param X: 人體框左上角橫坐標。
         :type X: int
-        :param Y: 人體框左上角縱坐标。
+        :param Y: 人體框左上角縱坐標。
         :type Y: int
         :param Width: 人體寬度。
         :type Width: int
@@ -115,7 +115,7 @@ class CreateGroupRequest(AbstractModel):
         :type Tag: str
         :param BodyModelVersion: 人體識别所用的算法模型版本。 
 目前入參僅支援 “1.0”1個輸入。 預設爲"1.0"。  
-不同算法模型版本對應的人體識别算法不同，新版本的整體效果會優于舊版本，後續我們将推出更新版本。
+不同算法模型版本對應的人體識别算法不同，新版本的整體效果會優於舊版本，後續我們将推出更新版本。
         :type BodyModelVersion: str
         """
         self.GroupName = None
@@ -159,7 +159,7 @@ class CreatePersonRequest(AbstractModel):
         :type GroupId: str
         :param PersonName: 人員名稱。[1，60]個字元，可修改，可重複。
         :type PersonName: str
-        :param PersonId: 人員ID，單個Top Cloud 賬号下不可修改，不可重複。 
+        :param PersonId: 人員ID，單個Top Cloud 賬號下不可修改，不可重複。 
 支援英文、數字、-%@#&_，，長度限制64B。
         :type PersonId: str
         :param Trace: 人體軌迹訊息。
@@ -187,7 +187,7 @@ class CreatePersonResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param TraceId: 人員軌迹唯一标識。
+        :param TraceId: 人員軌迹唯一標識。
         :type TraceId: str
         :param BodyModelVersion: 人體識别所用的算法模型版本。
         :type BodyModelVersion: str
@@ -247,7 +247,7 @@ class CreateTraceResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param TraceId: 人員軌迹唯一标識。
+        :param TraceId: 人員軌迹唯一標識。
         :type TraceId: str
         :param BodyModelVersion: 人體識别所用的算法模型版本。
         :type BodyModelVersion: str
@@ -360,7 +360,7 @@ class DetectBodyRequest(AbstractModel):
 Url、Image必須提供一個，如果都提供，只使用 Url。
 圖片 base64 編碼後大小不可超過5M。 
 圖片分辨率不得超過 2048*2048。
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。 
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
@@ -415,7 +415,7 @@ class GetGroupListRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Offset: 起始序号，預設值爲0。
+        :param Offset: 起始序號，預設值爲0。
         :type Offset: int
         :param Limit: 返回數量，預設值爲10，最大值爲1000。
         :type Limit: int
@@ -468,7 +468,7 @@ class GetPersonListRequest(AbstractModel):
         """
         :param GroupId: 人體庫ID。
         :type GroupId: str
-        :param Offset: 起始序号，預設值爲0。
+        :param Offset: 起始序號，預設值爲0。
         :type Offset: int
         :param Limit: 返回數量，預設值爲10，最大值爲1000。
         :type Limit: int
@@ -751,7 +751,7 @@ class SegmentPortraitPicRequest(AbstractModel):
         :param Url: 圖片的 Url 。
 Url、Image必須提供一個，如果都提供，只使用 Url。
 圖片分辨率須小於2000*2000 ，圖片 base64 編碼後大小不可超過5M。 
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。  
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。  
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。 
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
@@ -774,7 +774,7 @@ class SegmentPortraitPicResponse(AbstractModel):
         """
         :param ResultImage: 處理後的圖片 base64 數據，透明背景圖
         :type ResultImage: str
-        :param ResultMask: 一個通過 Base64 編碼的文件，解碼後文件由 Float 型浮點數組成。這些浮點數代表原圖從左上角開始的每一行的每一個像素點，每一個浮點數的值是原圖相應像素點位于人體輪廓内的置信度（0-1）轉化的灰度值（0-255）
+        :param ResultMask: 一個通過 Base64 編碼的文件，解碼後文件由 Float 型浮點數組成。這些浮點數代表原圖從左上角開始的每一行的每一個像素點，每一個浮點數的值是原圖相應像素點位於人體輪廓内的置信度（0-1）轉化的灰度值（0-255）
         :type ResultMask: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -806,7 +806,7 @@ class Trace(AbstractModel):
 數組長度最小爲1最大爲5。 
 單個圖片 base64 編碼後大小不可超過2M。 
 Urls、Images必須提供一個，如果都提供，只使用 Urls。 
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。 
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Urls: list of str

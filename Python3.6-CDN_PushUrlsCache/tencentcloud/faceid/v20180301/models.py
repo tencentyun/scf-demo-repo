@@ -51,7 +51,7 @@ class BankCard2EVerificationResponse(AbstractModel):
  '-4': '持卡人訊息有誤'
   '-5': '未開通無卡支付'
   '-6': '此卡被沒收'
-  '-7': '無效卡号'
+  '-7': '無效卡號'
   '-8': '此卡無對應發卡行'
   '-9': '該卡未初始化或睡眠卡'
   '-10': '作弊卡、吞卡'
@@ -62,7 +62,7 @@ class BankCard2EVerificationResponse(AbstractModel):
   '-15': '發卡行不支援此交易'
 不計費結果碼：
   '-2': '姓名校驗不通過'
-  '-3': '銀行卡号碼有誤'
+  '-3': '銀行卡號碼有誤'
   '-16': '驗證中心服務繁忙'
         :type Result: str
         :param Description: 業務結果描述。
@@ -92,11 +92,11 @@ class BankCard4EVerificationRequest(AbstractModel):
         :type Name: str
         :param BankCard: 銀行卡
         :type BankCard: str
-        :param Phone: 手機号碼
+        :param Phone: 手機號碼
         :type Phone: str
-        :param IdCard: 開戶證件号，與CertType參數的證件類型一緻，如：身份證，則傳入身份證号。
+        :param IdCard: 開戶證件號，與CertType參數的證件類型一緻，如：身份證，則傳入身份證號。
         :type IdCard: str
-        :param CertType: 證件類型，請确認該證件爲開戶時使用的證件類型，未用于開戶的證件訊息不支援驗證。
+        :param CertType: 證件類型，請确認該證件爲開戶時使用的證件類型，未用於開戶的證件訊息不支援驗證。
 目前預設：0 身份證，其他證件類型需求可以聯系小助手faceid001确認。
         :type CertType: int
         """
@@ -129,7 +129,7 @@ class BankCard4EVerificationResponse(AbstractModel):
 '-6': '持卡人訊息有誤'
 '-7': '未開通無卡支付'
 '-8': '此卡被沒收'
-'-9': '無效卡号'
+'-9': '無效卡號'
 '-10': '此卡無對應發卡行'
 '-11': '該卡未初始化或睡眠卡'
 '-12': '作弊卡、吞卡'
@@ -140,9 +140,9 @@ class BankCard4EVerificationResponse(AbstractModel):
 '-17': '發卡行不支援此交易'
 不收費結果碼：
 '-2': '姓名校驗不通過'
-'-3': '身份證号碼有誤'
-'-4': '銀行卡号碼有誤'
-'-5': '手機号碼不合法'
+'-3': '身份證號碼有誤'
+'-4': '銀行卡號碼有誤'
+'-5': '手機號碼不合法'
 '-18': '驗證中心服務繁忙'
         :type Result: str
         :param Description: 業務結果描述。
@@ -168,13 +168,13 @@ class BankCardVerificationRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param IdCard: 開戶證件号，與CertType參數的證件類型一緻，如：身份證，則傳入身份證号。
+        :param IdCard: 開戶證件號，與CertType參數的證件類型一緻，如：身份證，則傳入身份證號。
         :type IdCard: str
         :param Name: 姓名
         :type Name: str
         :param BankCard: 銀行卡
         :type BankCard: str
-        :param CertType: 證件類型，請确認該證件爲開戶時使用的證件類型，未用于開戶的證件訊息不支援驗證。
+        :param CertType: 證件類型，請确認該證件爲開戶時使用的證件類型，未用於開戶的證件訊息不支援驗證。
 目前預設：0 身份證，其他證件類型需求可以聯系小助手faceid001确認。
         :type CertType: int
         """
@@ -205,7 +205,7 @@ class BankCardVerificationResponse(AbstractModel):
 '-5': '持卡人訊息有誤'
 '-6': '未開通無卡支付'
 '-7': '此卡被沒收'
-'-8': '無效卡号'
+'-8': '無效卡號'
 '-9': '此卡無對應發卡行'
 '-10': '該卡未初始化或睡眠卡'
 '-11': '作弊卡、吞卡'
@@ -216,8 +216,8 @@ class BankCardVerificationResponse(AbstractModel):
 '-16': '發卡行不支援此交易'
 不收費結果碼：
 '-2': '姓名校驗不通過'
-'-3': '身份證号碼有誤'
-'-4': '銀行卡号碼有誤'
+'-3': '身份證號碼有誤'
+'-4': '銀行卡號碼有誤'
 '-17': '驗證中心服務繁忙'
         :type Result: str
         :param Description: 業務結果描述。
@@ -243,11 +243,11 @@ class DetectAuthRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param RuleId: 用于細分客戶使用場景，申請開通服務後，可以在Top Cloud 慧眼人臉核身控制台（https://console.cloud.taifucloud.com/faceid） 自助接入裏面創建，審核通過後即可調用。如有疑問，請加慧眼小助手 （faceid001）進行咨詢。
+        :param RuleId: 用於細分客戶使用場景，申請開通服務後，可以在Top Cloud 慧眼人臉核身控制台（https://console.cloud.taifucloud.com/faceid） 自助接入裏面創建，審核通過後即可調用。如有疑問，請加慧眼小助手 （faceid001）進行咨詢。
         :type RuleId: str
         :param TerminalType: 本介面不需要傳遞此參數。
         :type TerminalType: str
-        :param IdCard: 身份标識（未使用OCR服務時，必須傳入）。
+        :param IdCard: 身份標識（未使用OCR服務時，必須傳入）。
 規則：a-zA-Z0-9組合。最長長度32位。
         :type IdCard: str
         :param Name: 姓名。（未使用OCR服務時，必須傳入）最長長度32位。中文請使用UTF-8編碼。
@@ -256,7 +256,7 @@ class DetectAuthRequest(AbstractModel):
         :type RedirectUrl: str
         :param Extra: 透傳欄位，在獲取驗證結果時返回。
         :type Extra: str
-        :param ImageBase64: 用于人臉比對的照片，圖片的BASE64值；
+        :param ImageBase64: 用於人臉比對的照片，圖片的BASE64值；
 BASE64編碼後的圖片數據大小不超過3M，僅支援jpg、png格式。
         :type ImageBase64: str
         """
@@ -286,10 +286,10 @@ class DetectAuthResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Url: 用于發起核身流程的URL，僅 H5場景使用。
+        :param Url: 用於發起核身流程的URL，僅 H5場景使用。
         :type Url: str
-        :param BizToken: 一次核身流程的标識，有效時間爲7,200秒；
-完成核身後，可用該标識獲取驗證結果訊息。
+        :param BizToken: 一次核身流程的標識，有效時間爲7,200秒；
+完成核身後，可用該標識獲取驗證結果訊息。
         :type BizToken: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -315,10 +315,10 @@ class DetectDetail(AbstractModel):
         :param ReqTime: 請求時間戳。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ReqTime: str
-        :param Seq: 本次活體一比一請求的唯一标記。
+        :param Seq: 本次活體一比一請求的唯一標記。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Seq: str
-        :param Idcard: 參與本次活體一比一的身份證号。
+        :param Idcard: 參與本次活體一比一的身份證號。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Idcard: str
         :param Name: 參與本次活體一比一的姓名。
@@ -452,7 +452,7 @@ class DetectInfoText(AbstractModel):
         :param ErrMsg: 本次流程最終驗證結果描述。（僅描述用，文案更新時不會通知。）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ErrMsg: str
-        :param IdCard: 本次驗證使用的身份證号。
+        :param IdCard: 本次驗證使用的身份證號。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type IdCard: str
         :param Name: 本次驗證使用的姓名。
@@ -476,7 +476,7 @@ class DetectInfoText(AbstractModel):
         :param OcrName: Ocr識别結果。姓名。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OcrName: str
-        :param OcrIdCard: Ocr識别結果。身份證号。
+        :param OcrIdCard: Ocr識别結果。身份證號。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OcrIdCard: str
         :param OcrGender: Ocr識别結果。性别。
@@ -506,7 +506,7 @@ class DetectInfoText(AbstractModel):
         :param LivenessDetail: 本次流程進行的活體一比一流水。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type LivenessDetail: list of DetectDetail
-        :param Mobile: 手機号碼。
+        :param Mobile: 手機號碼。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Mobile: str
         """
@@ -614,9 +614,9 @@ class GetDetectInfoEnhancedRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BizToken: 人臉核身流程的标識，調用DetectAuth介面時生成。
+        :param BizToken: 人臉核身流程的標識，調用DetectAuth介面時生成。
         :type BizToken: str
-        :param RuleId: 用于細分客戶使用場景，由 側在線下對接時分配。
+        :param RuleId: 用於細分客戶使用場景，由 側在線下對接時分配。
         :type RuleId: str
         :param InfoType: 指定拉取的結果訊息，取值（0：全部；1：文本類；2：身份證訊息；3：視訊最佳截圖訊息；4：視訊訊息）。
 如 134表示拉取文本類、視訊最佳截圖訊息、視訊訊息。
@@ -698,9 +698,9 @@ class GetDetectInfoRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BizToken: 人臉核身流程的标識，調用DetectAuth介面時生成。
+        :param BizToken: 人臉核身流程的標識，調用DetectAuth介面時生成。
         :type BizToken: str
-        :param RuleId: 用于細分客戶使用場景，申請開通服務後，可以在Top Cloud 慧眼人臉核身控制台（https://console.cloud.taifucloud.com/faceid） 自助接入裏面創建，審核通過後即可調用。如有疑問，請加慧眼小助手 （faceid001）進行咨詢。
+        :param RuleId: 用於細分客戶使用場景，申請開通服務後，可以在Top Cloud 慧眼人臉核身控制台（https://console.cloud.taifucloud.com/faceid） 自助接入裏面創建，審核通過後即可調用。如有疑問，請加慧眼小助手 （faceid001）進行咨詢。
         :type RuleId: str
         :param InfoType: 指定拉取的結果訊息，取值（0：全部；1：文本類；2：身份證正反面；3：視訊最佳截圖照片；4：視訊）。
 如 134表示拉取文本類、視訊最佳截圖照片、視訊。
@@ -731,7 +731,7 @@ class GetDetectInfoResponse(AbstractModel):
   "Text": {
     "ErrCode": null,      // 本次核身最終結果。0爲成功
     "ErrMsg": null,       // 本次核身最終結果訊息描述。
-    "IdCard": "",         // 本次核身最終獲得的身份證号。
+    "IdCard": "",         // 本次核身最終獲得的身份證號。
     "Name": "",           // 本次核身最終獲得的姓名。
     "OcrNation": null,    // ocr階段獲取的民族
     "OcrAddress": null,   // ocr階段獲取的網址
@@ -739,7 +739,7 @@ class GetDetectInfoResponse(AbstractModel):
     "OcrAuthority": null, // ocr階段獲取的證件簽發機關
     "OcrValidDate": null, // ocr階段獲取的證件有效期
     "OcrName": null,      // ocr階段獲取的姓名
-    "OcrIdCard": null,    // ocr階段獲取的身份證号
+    "OcrIdCard": null,    // ocr階段獲取的身份證號
     "OcrGender": null,    // ocr階段獲取的性别
     "LiveStatus": null,   // 活體檢測階段的錯誤碼。0爲成功
     "LiveMsg": null,      // 活體檢測階段的錯誤訊息
@@ -812,8 +812,8 @@ class IdCardOCRVerificationRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param IdCard: 身份證号
-姓名和身份證号、ImageBase64、ImageUrl三者必須提供其中之一。若都提供了，則按照姓名和身份證号>ImageBase64>ImageUrl的優先級使用參數。
+        :param IdCard: 身份證號
+姓名和身份證號、ImageBase64、ImageUrl三者必須提供其中之一。若都提供了，則按照姓名和身份證號>ImageBase64>ImageUrl的優先級使用參數。
         :type IdCard: str
         :param Name: 姓名
         :type Name: str
@@ -824,7 +824,7 @@ class IdCardOCRVerificationRequest(AbstractModel):
         :param ImageUrl: 身份證人像面的 Url 網址
 支援的圖片格式：PNG、JPG、JPEG，暫不支援 GIF 格式。
 支援的圖片大小：所下載圖片經 Base64 編碼後不超過 3M。圖片下載時間不超過 3 秒。
-圖片儲存于Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的 Url 可保障更高的下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的 Url 速度和穩定性可能受一定影響。
         :type ImageUrl: str
         """
@@ -850,19 +850,19 @@ class IdCardOCRVerificationResponse(AbstractModel):
         """
         :param Result: 認證結果碼，收費情況如下。
 收費結果碼：
-0: 姓名和身份證号一緻
--1: 姓名和身份證号不一緻
+0: 姓名和身份證號一緻
+-1: 姓名和身份證號不一緻
 不收費結果碼：
--2: 非法身份證号（長度、校驗位等不正确）
+-2: 非法身份證號（長度、校驗位等不正确）
 -3: 非法姓名（長度、格式等不正确）
 -4: 證件庫服務異常
 -5: 證件庫中無此身份證記錄
         :type Result: str
         :param Description: 業務結果描述。
         :type Description: str
-        :param Name: 用于驗證的姓名
+        :param Name: 用於驗證的姓名
         :type Name: str
-        :param IdCard: 用于驗證的身份證号
+        :param IdCard: 用於驗證的身份證號
         :type IdCard: str
         :param Sex: OCR得到的性别
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -909,7 +909,7 @@ class IdCardVerificationRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param IdCard: 身份證号
+        :param IdCard: 身份證號
         :type IdCard: str
         :param Name: 姓名
         :type Name: str
@@ -932,10 +932,10 @@ class IdCardVerificationResponse(AbstractModel):
         """
         :param Result: 認證結果碼，收費情況如下。
 收費結果碼：
-0: 姓名和身份證号一緻
--1: 姓名和身份證号不一緻
+0: 姓名和身份證號一緻
+-1: 姓名和身份證號不一緻
 不收費結果碼：
--2: 非法身份證号（長度、校驗位等不正确）
+-2: 非法身份證號（長度、校驗位等不正确）
 -3: 非法姓名（長度、格式等不正确）
 -4: 證件庫服務異常
 -5: 證件庫中無此身份證記錄
@@ -963,11 +963,11 @@ class ImageRecognitionRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param IdCard: 身份證号
+        :param IdCard: 身份證號
         :type IdCard: str
         :param Name: 姓名。中文請使用UTF-8編碼。
         :type Name: str
-        :param ImageBase64: 用于人臉比對的照片，圖片的BASE64值；
+        :param ImageBase64: 用於人臉比對的照片，圖片的BASE64值；
 BASE64編碼後的圖片數據大小不超過3M，僅支援jpg、png格式。
         :type ImageBase64: str
         :param Optional: 本介面不需要傳遞此參數。
@@ -993,7 +993,7 @@ class ImageRecognitionResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Sim: 相似度，取值範圍 [0.00, 100.00]。推薦相似度大于等于70時可判斷爲同一人，可根據具體場景自行調整阈值（阈值70的誤通過率爲千分之一，阈值80的誤通過率是萬分之一）
+        :param Sim: 相似度，取值範圍 [0.00, 100.00]。推薦相似度大於等於70時可判斷爲同一人，可根據具體場景自行調整阈值（阈值70的誤通過率爲千分之一，阈值80的誤通過率是萬分之一）
         :type Sim: float
         :param Result: 業務錯誤碼，成功情況返回Success, 錯誤情況請參考下方錯誤碼 清單中FailedOperation部分
         :type Result: str
@@ -1022,10 +1022,10 @@ class LivenessCompareRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ImageBase64: 用于人臉比對的照片，圖片的BASE64值；
+        :param ImageBase64: 用於人臉比對的照片，圖片的BASE64值；
 BASE64編碼後的圖片數據大小不超過3M，僅支援jpg、png格式。
         :type ImageBase64: str
-        :param VideoBase64: 用于活體檢測的視訊，視訊的BASE64值；
+        :param VideoBase64: 用於活體檢測的視訊，視訊的BASE64值；
 BASE64編碼後的大小不超過5M，支援mp4、avi、flv格式。
         :type VideoBase64: str
         :param LivenessType: 活體檢測類型，取值：LIP/ACTION/SILENT。
@@ -1062,7 +1062,7 @@ class LivenessCompareResponse(AbstractModel):
         """
         :param BestFrameBase64: 驗證通過後的視訊最佳截圖照片，照片爲BASE64編碼後的值，jpg格式。
         :type BestFrameBase64: str
-        :param Sim: 相似度，取值範圍 [0.00, 100.00]。推薦相似度大于等于70時可判斷爲同一人，可根據具體場景自行調整阈值（阈值70的誤通過率爲千分之一，阈值80的誤通過率是萬分之一）。
+        :param Sim: 相似度，取值範圍 [0.00, 100.00]。推薦相似度大於等於70時可判斷爲同一人，可根據具體場景自行調整阈值（阈值70的誤通過率爲千分之一，阈值80的誤通過率是萬分之一）。
         :type Sim: float
         :param Result: 業務錯誤碼，成功情況返回Success, 錯誤情況請參考下方錯誤碼 清單中FailedOperation部分
         :type Result: str
@@ -1093,11 +1093,11 @@ class LivenessRecognitionRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param IdCard: 身份證号
+        :param IdCard: 身份證號
         :type IdCard: str
         :param Name: 姓名。中文請使用UTF-8編碼。
         :type Name: str
-        :param VideoBase64: 用于活體檢測的視訊，視訊的BASE64值；
+        :param VideoBase64: 用於活體檢測的視訊，視訊的BASE64值；
 BASE64編碼後的大小不超過5M，支援mp4、avi、flv格式。
         :type VideoBase64: str
         :param LivenessType: 活體檢測類型，取值：LIP/ACTION/SILENT。
@@ -1136,7 +1136,7 @@ class LivenessRecognitionResponse(AbstractModel):
         """
         :param BestFrameBase64: 驗證通過後的視訊最佳截圖照片，照片爲BASE64編碼後的值，jpg格式。
         :type BestFrameBase64: str
-        :param Sim: 相似度，取值範圍 [0.00, 100.00]。推薦相似度大于等于70時可判斷爲同一人，可根據具體場景自行調整阈值（阈值70的誤通過率爲千分之一，阈值80的誤通過率是萬分之一）
+        :param Sim: 相似度，取值範圍 [0.00, 100.00]。推薦相似度大於等於70時可判斷爲同一人，可根據具體場景自行調整阈值（阈值70的誤通過率爲千分之一，阈值80的誤通過率是萬分之一）
         :type Sim: float
         :param Result: 業務錯誤碼，成功情況返回Success, 錯誤情況請參考下方錯誤碼 清單中FailedOperation部分
         :type Result: str
@@ -1167,7 +1167,7 @@ class LivenessRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param VideoBase64: 用于活體檢測的視訊，視訊的BASE64值；
+        :param VideoBase64: 用於活體檢測的視訊，視訊的BASE64值；
 BASE64編碼後的大小不超過5M，支援mp4、avi、flv格式。
         :type VideoBase64: str
         :param LivenessType: 活體檢測類型，取值：LIP/ACTION/SILENT。
@@ -1230,14 +1230,14 @@ class MinorsVerificationRequest(AbstractModel):
     def __init__(self):
         """
         :param Type: 參與校驗的參數類型。
-0：使用手機号進行校驗；
-1：使用姓名與身份證号進行校驗。
+0：使用手機號進行校驗；
+1：使用姓名與身份證號進行校驗。
         :type Type: str
-        :param Mobile: 手機号，11位數字，
+        :param Mobile: 手機號，11位數字，
 特别提示：
-手機号驗證只限制在 健康守護可信模型函蓋的數據範圍内，與手機号本身在運營商是否實名無關聯，不在範圍會提示“手機号未實名”，建議客戶與傳入姓名和身份證号訊息組合使用。
+手機號驗證只限制在 健康守護可信模型函蓋的數據範圍内，與手機號本身在運營商是否實名無關聯，不在範圍會提示“手機號未實名”，建議客戶與傳入姓名和身份證號訊息組合使用。
         :type Mobile: str
-        :param IdCard: 身份證号碼。
+        :param IdCard: 身份證號碼。
         :type IdCard: str
         :param Name: 姓名。
         :type Name: str
@@ -1266,11 +1266,11 @@ class MinorsVerificationResponse(AbstractModel):
 收費結果碼：
 0: 成年
 -1: 未成年
--2: 手機号未實名
--3: 姓名和身份證号不一緻
+-2: 手機號未實名
+-3: 姓名和身份證號不一緻
 
 不收費結果碼：
--4: 非法身份證号（長度、校驗位等不正确）
+-4: 非法身份證號（長度、校驗位等不正确）
 -5: 非法姓名（長度、格式等不正确）
 -6: 數據源服務異常
 -7: 數據源中無此身份證記錄
@@ -1304,7 +1304,7 @@ class MobileNetworkTimeVerificationRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Mobile: 手機号碼。不支援電信手機号。
+        :param Mobile: 手機號碼。不支援電信手機號。
         :type Mobile: str
         """
         self.Mobile = None
@@ -1324,10 +1324,10 @@ class MobileNetworkTimeVerificationResponse(AbstractModel):
         :param Result: 認證結果碼，收費情況如下。
 收費結果碼：
 0: 成功
--2: 手機号不存在
--3: 手機号存在，但無法查詢到在網時長
+-2: 手機號不存在
+-3: 手機號存在，但無法查詢到在網時長
 不收費結果碼：
--1: 手機号格式不正确
+-1: 手機號格式不正确
 -4: 驗證中心服務繁忙
         :type Result: str
         :param Description: 業務結果描述。
@@ -1358,7 +1358,7 @@ class MobileStatusRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Mobile: 手機号碼
+        :param Mobile: 手機號碼
         :type Mobile: str
         """
         self.Mobile = None
@@ -1380,7 +1380,7 @@ class MobileStatusResponse(AbstractModel):
 0：成功
 不收費結果碼：
 -1：未查詢到結果
--2：手機号格式不正确
+-2：手機號格式不正确
 -3：驗證中心服務繁忙
         :type Result: str
         :param Description: 業務結果描述。
@@ -1388,8 +1388,8 @@ class MobileStatusResponse(AbstractModel):
         :param StatusCode: 狀态碼：
 0：正常
 1：停機
-2：銷号
-3：空号
+2：銷號
+3：空號
 4：不在網
 99：未知狀态
         :type StatusCode: int
@@ -1416,11 +1416,11 @@ class PhoneVerificationRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param IdCard: 身份證号
+        :param IdCard: 身份證號
         :type IdCard: str
         :param Name: 姓名
         :type Name: str
-        :param Phone: 手機号
+        :param Phone: 手機號
         :type Phone: str
         """
         self.IdCard = None
@@ -1443,13 +1443,13 @@ class PhoneVerificationResponse(AbstractModel):
         """
         :param Result: 認證結果碼:
 0: 認證通過
--1: 手機号已實名，但是身份證和姓名均與實名訊息不一緻 
--2: 手機号已實名，手機号和證件号一緻，姓名不一緻
--3: 手機号已實名，手機号和姓名一緻，身份證不一緻
+-1: 手機號已實名，但是身份證和姓名均與實名訊息不一緻 
+-2: 手機號已實名，手機號和證件號一緻，姓名不一緻
+-3: 手機號已實名，手機號和姓名一緻，身份證不一緻
 -4: 訊息不一緻
--5: 手機号未實名
--6: 手機号碼不合法
--7: 身份證号碼有誤
+-5: 手機號未實名
+-6: 手機號碼不合法
+-7: 身份證號碼有誤
 -8: 姓名校驗不通過
 -9: 沒有記錄
 -10: 認證未通過

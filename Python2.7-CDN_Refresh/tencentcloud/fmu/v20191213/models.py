@@ -28,7 +28,7 @@ class BeautifyPicRequest(AbstractModel):
         :type Image: str
         :param Url: 圖片的 Url 。對應圖片 base64 編碼後大小不可超過5M。 
 Url、Image必須提供一個，如果都提供，只使用 Url。  
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。  
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。  
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。 
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
@@ -86,9 +86,9 @@ class CreateModelRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param LUTFile: 用于試唇色，要求必須是LUT 格式的cube文件轉換成512*512的PNG圖片。檢視 [LUT文件的使用說明](https://cloud.taifucloud.com/document/product/1172/41701)。了解 [cube文件轉png圖片小工具](http://yyb.gtimg.com/aiplat/static/qcloud-cube-to-png.html)。
+        :param LUTFile: 用於試唇色，要求必須是LUT 格式的cube文件轉換成512*512的PNG圖片。檢視 [LUT文件的使用說明](https://cloud.taifucloud.com/document/product/1172/41701)。了解 [cube文件轉png圖片小工具](http://yyb.gtimg.com/aiplat/static/qcloud-cube-to-png.html)。
         :type LUTFile: str
-        :param Description: 文件描述訊息，可用于備注。
+        :param Description: 文件描述訊息，可用於備注。
         :type Description: str
         """
         self.LUTFile = None
@@ -162,9 +162,9 @@ class FaceRect(AbstractModel):
 
     def __init__(self):
         """
-        :param X: 人臉框左上角橫坐标。
+        :param X: 人臉框左上角橫坐標。
         :type X: int
-        :param Y: 人臉框左上角縱坐标。
+        :param Y: 人臉框左上角縱坐標。
         :type Y: int
         :param Width: 人臉框寬度。
         :type Width: int
@@ -191,7 +191,7 @@ class GetModelListRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Offset: 起始序号，預設值爲0。
+        :param Offset: 起始序號，預設值爲0。
         :type Offset: int
         :param Limit: 返回數量，預設值爲10，最大值爲100。
         :type Limit: int
@@ -336,7 +336,7 @@ class TryLipstickPicRequest(AbstractModel):
         :type Image: str
         :param Url: 圖片的 Url ，對應圖片 base64 編碼後大小不可超過6M。 
 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
-圖片儲存于Top Cloud 的 Url 可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的 Url 可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。 
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str

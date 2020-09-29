@@ -222,7 +222,7 @@ class BmlbClient(AbstractClient):
 
 
     def CreateLoadBalancers(self, request):
-        """用來創建黑石負載均衡。爲了使用黑石負載均衡服務，您必須要創建一個或者多個負載均衡實例。通過成功調用該介面，會返回負載均衡實例的唯一ID。用戶可以購買的黑石負載均衡實例類型分爲：公網類型、内網類型。公網類型負載均衡對應一個BGP VIP，可用于快速訪問公網負載均衡綁定的物理服務器；内網類型負載均衡對應一個Top Cloud 内部的VIP，不能通過Internet訪問，可快速訪問内網負載均衡綁定的物理服務器。
+        """用來創建黑石負載均衡。爲了使用黑石負載均衡服務，您必須要創建一個或者多個負載均衡實例。通過成功調用該介面，會返回負載均衡實例的唯一ID。用戶可以購買的黑石負載均衡實例類型分爲：公網類型、内網類型。公網類型負載均衡對應一個BGP VIP，可用於快速訪問公網負載均衡綁定的物理服務器；内網類型負載均衡對應一個Top Cloud 内部的VIP，不能通過Internet訪問，可快速訪問内網負載均衡綁定的物理服務器。
 
         :param request: Request instance for CreateLoadBalancers.
         :type request: :class:`taifucloudcloud.bmlb.v20180625.models.CreateLoadBalancersRequest`

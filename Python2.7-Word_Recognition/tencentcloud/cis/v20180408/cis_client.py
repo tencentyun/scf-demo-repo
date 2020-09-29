@@ -26,7 +26,7 @@ class CisClient(AbstractClient):
 
 
     def CreateContainerInstance(self, request):
-        """此介面（CreateContainerInstance）用于創建容器實例
+        """此介面（CreateContainerInstance）用於創建容器實例
 
         :param request: 調用CreateContainerInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.cis.v20180408.models.CreateContainerInstanceRequest`
@@ -54,7 +54,7 @@ class CisClient(AbstractClient):
 
 
     def DeleteContainerInstance(self, request):
-        """此介面（DeleteContainerInstance）用于删除容器實例
+        """此介面（DeleteContainerInstance）用於删除容器實例
 
         :param request: 調用DeleteContainerInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.cis.v20180408.models.DeleteContainerInstanceRequest`
@@ -82,7 +82,7 @@ class CisClient(AbstractClient):
 
 
     def DescribeContainerInstance(self, request):
-        """此介面（DescribeContainerInstance）用于獲取容器實例詳情
+        """此介面（DescribeContainerInstance）用於獲取容器實例詳情
 
         :param request: 調用DescribeContainerInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.cis.v20180408.models.DescribeContainerInstanceRequest`
@@ -110,7 +110,7 @@ class CisClient(AbstractClient):
 
 
     def DescribeContainerInstanceEvents(self, request):
-        """此介面（DescribeContainerInstanceEvents）用于查詢容器實例事件清單
+        """此介面（DescribeContainerInstanceEvents）用於查詢容器實例事件清單
 
         :param request: 調用DescribeContainerInstanceEvents所需參數的結構體。
         :type request: :class:`taifucloudcloud.cis.v20180408.models.DescribeContainerInstanceEventsRequest`
@@ -166,7 +166,7 @@ class CisClient(AbstractClient):
 
 
     def DescribeContainerLog(self, request):
-        """此介面（DescribeContainerLog）用于獲取容器日志訊息
+        """此介面（DescribeContainerLog）用於獲取容器日志訊息
 
         :param request: 調用DescribeContainerLog所需參數的結構體。
         :type request: :class:`taifucloudcloud.cis.v20180408.models.DescribeContainerLogRequest`
@@ -194,7 +194,7 @@ class CisClient(AbstractClient):
 
 
     def InquiryPriceCreateCis(self, request):
-        """此介面（InquiryPriceCreateCis）用于查詢容器實例價格
+        """此介面（InquiryPriceCreateCis）用於查詢容器實例價格
 
         :param request: 調用InquiryPriceCreateCis所需參數的結構體。
         :type request: :class:`taifucloudcloud.cis.v20180408.models.InquiryPriceCreateCisRequest`

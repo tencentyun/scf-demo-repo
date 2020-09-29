@@ -53,10 +53,10 @@ class CompostionContext(AbstractModel):
         :param CorrectData: 批改結果
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CorrectData: :class:`taifucloudcloud.ecc.v20181213.models.CorrectData`
-        :param TaskId: 任務 id，用于查詢介面
+        :param TaskId: 任務 id，用於查詢介面
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskId: str
-        :param SessionId: 圖像識别唯一标識，一次識别一個 SessionId
+        :param SessionId: 圖像識别唯一標識，一次識别一個 SessionId
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SessionId: str
         """
@@ -122,23 +122,23 @@ class CorrectMultiImageRequest(AbstractModel):
         :type Image: list of str
         :param InputType: 輸出圖片類型，0 表示 Image 欄位是圖片所在的 url，1 表示 Image 欄位是 base64 編碼後的圖像數據。
         :type InputType: int
-        :param EccAppid: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數。
+        :param EccAppid: 業務應用ID，與賬號應用APPID無關，是用來方便客戶管理服務的參數。
         :type EccAppid: str
-        :param SessionId: 圖像識别唯一标識，一次識别一個 SessionId，使用識别功能時 SessionId 可用于使用文本批改介面，此時按圖像批改價格收費；如使用文本批改介面時沒有傳入 SessionId，則需要收取文本批改的費用。
+        :param SessionId: 圖像識别唯一標識，一次識别一個 SessionId，使用識别功能時 SessionId 可用於使用文本批改介面，此時按圖像批改價格收費；如使用文本批改介面時沒有傳入 SessionId，則需要收取文本批改的費用。
         :type SessionId: str
         :param ServerType: 服務類型，0：“多圖像識别”，只返回識别結果；1：“多圖像批改”，同時返回識别結果與批改結果。預設爲 0。
         :type ServerType: int
         :param Title: 作文題目，可選參數
         :type Title: str
-        :param Grade: 年級标準， 預設以 cet4 爲标準，取值與意義如下：elementary 小學，grade7 grade8 grade9分别對應初一，初二，初三。 grade10 grade11 grade12 分别對應高一，高二，高三，以及 cet4 和 cet6 分别表示 英語4級和6級。
+        :param Grade: 年級標準， 預設以 cet4 爲標準，取值與意義如下：elementary 小學，grade7 grade8 grade9分别對應初一，初二，初三。 grade10 grade11 grade12 分别對應高一，高二，高三，以及 cet4 和 cet6 分别表示 英語4級和6級。
         :type Grade: str
         :param Requirement: 作文提綱，可選參數，作文的寫作要求。
         :type Requirement: str
-        :param ModelTitle: 範文标題，可選參數，本介面可以依據提供的範文對作文進行評分。
+        :param ModelTitle: 範文標題，可選參數，本介面可以依據提供的範文對作文進行評分。
         :type ModelTitle: str
         :param ModelContent: 範文内容，可選參數，同上，範文的正文部分。
         :type ModelContent: str
-        :param IsAsync: 異步模式标識，0：同步模式，1：異步模式。預設爲同步模式
+        :param IsAsync: 異步模式標識，0：同步模式，1：異步模式。預設爲同步模式
         :type IsAsync: int
         """
         self.Image = None
@@ -200,7 +200,7 @@ class DescribeTaskRequest(AbstractModel):
         """
         :param TaskId: 任務 ID
         :type TaskId: str
-        :param EccAppid: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數（暫時無需傳入）。
+        :param EccAppid: 業務應用ID，與賬號應用APPID無關，是用來方便客戶管理服務的參數（暫時無需傳入）。
         :type EccAppid: str
         """
         self.TaskId = None
@@ -256,19 +256,19 @@ class ECCRequest(AbstractModel):
         :type Content: str
         :param Title: 作文題目，可選參數
         :type Title: str
-        :param Grade: 年級标準， 預設以cet4爲标準，取值與意義如下：elementary 小學，grade7 grade8 grade9分别對應初一，初二，初三。 grade10 grade11 grade12 分别對應高一，高二，高三，以及cet4和cet6 分别表示 英語4級和6級。
+        :param Grade: 年級標準， 預設以cet4爲標準，取值與意義如下：elementary 小學，grade7 grade8 grade9分别對應初一，初二，初三。 grade10 grade11 grade12 分别對應高一，高二，高三，以及cet4和cet6 分别表示 英語4級和6級。
         :type Grade: str
         :param Requirement: 作文提綱，可選參數，作文的寫作要求。
         :type Requirement: str
-        :param ModelTitle: 範文标題，可選參數，本介面可以依據提供的範文對作文進行評分。
+        :param ModelTitle: 範文標題，可選參數，本介面可以依據提供的範文對作文進行評分。
         :type ModelTitle: str
         :param ModelContent: 範文内容，可選參數，同上，範文的正文部分。
         :type ModelContent: str
-        :param EccAppid: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數（暫時無需傳入）。
+        :param EccAppid: 業務應用ID，與賬號應用APPID無關，是用來方便客戶管理服務的參數（暫時無需傳入）。
         :type EccAppid: str
-        :param IsAsync: 異步模式标識，0：同步模式，1：異步模式，預設爲同步模式
+        :param IsAsync: 異步模式標識，0：同步模式，1：異步模式，預設爲同步模式
         :type IsAsync: int
-        :param SessionId: 圖像識别唯一标識，一次識别一個 SessionId。當傳入此前識别介面使用過的 SessionId，則本次批改按圖像批改價格收費；如使用了識别介面且本次沒有傳入 SessionId，則需要加取文本批改的費用；如果直接使用文本批改介面，則只收取文本批改的費用
+        :param SessionId: 圖像識别唯一標識，一次識别一個 SessionId。當傳入此前識别介面使用過的 SessionId，則本次批改按圖像批改價格收費；如使用了識别介面且本次沒有傳入 SessionId，則需要加取文本批改的費用；如果直接使用文本批改介面，則只收取文本批改的費用
         :type SessionId: str
         """
         self.Content = None
@@ -304,7 +304,7 @@ class ECCResponse(AbstractModel):
         :param Data: 整體的批改結果
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Data: :class:`taifucloudcloud.ecc.v20181213.models.CorrectData`
-        :param TaskId: 任務 id，用于查詢介面
+        :param TaskId: 任務 id，用於查詢介面
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -334,23 +334,23 @@ class EHOCRRequest(AbstractModel):
         :type Image: str
         :param InputType: 輸出圖片類型，0 表示 Image 欄位是圖片所在的 url，1 表示 Image 欄位是 base64 編碼後的圖像數據
         :type InputType: int
-        :param EccAppid: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數（暫時無需傳入）。
+        :param EccAppid: 業務應用ID，與賬號應用APPID無關，是用來方便客戶管理服務的參數（暫時無需傳入）。
         :type EccAppid: str
-        :param SessionId: 圖像識别唯一标識，一次識别一個 SessionId，使用識别功能時 SessionId 可用于使用文本批改介面，此時按圖像批改價格收費；如使用文本批改介面時沒有傳入 SessionId，則需要收取文本批改的費用
+        :param SessionId: 圖像識别唯一標識，一次識别一個 SessionId，使用識别功能時 SessionId 可用於使用文本批改介面，此時按圖像批改價格收費；如使用文本批改介面時沒有傳入 SessionId，則需要收取文本批改的費用
         :type SessionId: str
         :param ServerType: 服務類型，0：“圖像識别”，只返回識别結果，1：“圖像批改”，同時返回識别結果與批改結果。預設爲 0
         :type ServerType: int
         :param Title: 作文題目，可選參數
         :type Title: str
-        :param Grade: 年級标準， 預設以 cet4 爲标準，取值與意義如下：elementary 小學，grade7 grade8 grade9分别對應初一，初二，初三。 grade10 grade11 grade12 分别對應高一，高二，高三，以及 cet4 和 cet6 分别表示 英語4級和6級。
+        :param Grade: 年級標準， 預設以 cet4 爲標準，取值與意義如下：elementary 小學，grade7 grade8 grade9分别對應初一，初二，初三。 grade10 grade11 grade12 分别對應高一，高二，高三，以及 cet4 和 cet6 分别表示 英語4級和6級。
         :type Grade: str
         :param Requirement: 作文提綱，可選參數，作文的寫作要求。
         :type Requirement: str
-        :param ModelTitle: 範文标題，可選參數，本介面可以依據提供的範文對作文進行評分。
+        :param ModelTitle: 範文標題，可選參數，本介面可以依據提供的範文對作文進行評分。
         :type ModelTitle: str
         :param ModelContent: 範文内容，可選參數，同上，範文的正文部分。
         :type ModelContent: str
-        :param IsAsync: 異步模式标識，0：同步模式，1：異步模式。預設爲同步模式
+        :param IsAsync: 異步模式標識，0：同步模式，1：異步模式。預設爲同步模式
         :type IsAsync: int
         """
         self.Image = None
@@ -404,13 +404,13 @@ class EHOCRResponse(AbstractModel):
 
 
 class ErrorCoordinate(AbstractModel):
-    """維度單詞坐标
+    """維度單詞坐標
 
     """
 
     def __init__(self):
         """
-        :param Coordinate: 維度單詞坐标
+        :param Coordinate: 維度單詞坐標
         :type Coordinate: list of int
         """
         self.Coordinate = None
@@ -537,7 +537,7 @@ class SentenceSuggest(AbstractModel):
         :type Message: str
         :param ErrorPosition: 維度單詞位置，在句子的第幾個到第幾個單詞之間
         :type ErrorPosition: list of int
-        :param ErrorCoordinates: 維度單詞坐标，錯誤單詞在圖片中的坐标，只有傳圖片時正常返回，傳文字時返回[ ]
+        :param ErrorCoordinates: 維度單詞坐標，錯誤單詞在圖片中的坐標，只有傳圖片時正常返回，傳文字時返回[ ]
         :type ErrorCoordinates: list of ErrorCoordinate
         """
         self.Type = None

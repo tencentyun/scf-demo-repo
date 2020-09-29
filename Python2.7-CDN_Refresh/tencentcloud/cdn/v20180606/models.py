@@ -81,7 +81,7 @@ media：流媒體點播加速
         :param Ipv6: Ipv6 配置（功能灰度中，尚未全量）
         :type Ipv6: :class:`taifucloudcloud.cdn.v20180606.models.Ipv6`
         :param SpecificConfig: 地域屬性特殊配置
-适用于域名境内加速、境外加速配置不一緻場景
+适用於域名境内加速、境外加速配置不一緻場景
         :type SpecificConfig: :class:`taifucloudcloud.cdn.v20180606.models.SpecificConfig`
         :param Area: 域名加速區域
 mainland： 境内加速
@@ -594,7 +594,7 @@ class BriefDomain(AbstractModel):
         """
         :param ResourceId: 域名 ID
         :type ResourceId: str
-        :param AppId: Top Cloud 賬号 ID
+        :param AppId: Top Cloud 賬號 ID
         :type AppId: int
         :param Domain: 加速域名
         :type Domain: str
@@ -621,7 +621,7 @@ media：流媒體點播加速
         :type Origin: :class:`taifucloudcloud.cdn.v20180606.models.Origin`
         :param Disable: 域名封禁狀态
 normal：正常狀态
-overdue：賬号欠費導緻域名關閉，儲值完成後可自行啓動加速服務
+overdue：賬號欠費導緻域名關閉，儲值完成後可自行啓動加速服務
 malicious：域名出現惡意行爲，強制關閉加速服務
 ddos：域名被大規模 DDoS 攻擊，關閉加速服務
 idle：域名超過 90 天内無任何操作、數據産生，判定爲不活躍域名自動關閉加速服務，可自行啓動加速服務
@@ -785,7 +785,7 @@ class CdnData(AbstractModel):
 
     def __init__(self):
         """
-        :param Metric: 查詢指定的指标名稱：
+        :param Metric: 查詢指定的指標名稱：
 flux：流量，單位爲 byte
 bandwidth：頻寬，單位爲 bps
 request：請求數，單位爲 次
@@ -830,8 +830,8 @@ class CdnIp(AbstractModel):
         :param Ip: 指定查詢的 IP
         :type Ip: str
         :param Platform: IP 歸屬：
-yes：節點歸屬于Top Cloud  CDN
-no：節點不屬于Top Cloud  CDN
+yes：節點歸屬於Top Cloud  CDN
+no：節點不屬於Top Cloud  CDN
         :type Platform: str
         :param Location: 節點所處的 /國家
 unknown 表示節點位置未知
@@ -969,7 +969,7 @@ class ClsSearchLogs(AbstractModel):
 
     def __init__(self):
         """
-        :param Context: 獲取更多檢索結果的遊标
+        :param Context: 獲取更多檢索結果的遊標
         :type Context: str
         :param Listover: 搜索結果是否已經全部返回
         :type Listover: bool
@@ -999,7 +999,7 @@ class Compatibility(AbstractModel):
 
     def __init__(self):
         """
-        :param Code: 兼容标志狀态碼。
+        :param Code: 兼容標志狀态碼。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Code: int
         """
@@ -1216,19 +1216,19 @@ class DescribeBillingDataRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:00，返回結果大于等于指定時間
+        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:00，返回結果大於等於指定時間
 根據指定時間粒度參數不同，會進行向前取整，如指定起始時間爲 2018-09-04 10:40:00 按小時粒度查詢，返回的第一個數據對應時間點爲 2018-09-04 10:00:00
-起始時間與結束時間間隔小於等于 90 天
+起始時間與結束時間間隔小於等於 90 天
         :type StartTime: str
-        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:00，返回結果小於等于指定時間
+        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:00，返回結果小於等於指定時間
 根據指定時間粒度參數不同，會進行向前取整，如指定結束時間爲  2018-09-04 10:40:00 按小時粒度查詢時，返回的最後一個數據對應時間點爲 2018-09-04 10:00:00
-起始時間與結束時間間隔小於等于 90 天
+起始時間與結束時間間隔小於等於 90 天
         :type EndTime: str
         :param Interval: 時間粒度，支援模式如下：
-min：1 分鍾粒度，查詢區間需要小於等于 24 小時
-5min：5 分鍾粒度，查詢區間需要小於等于 31 天
-hour：1 小時粒度，查詢區間需要小於等于 31 天内
-day：天粒度，查詢區間需要大于 31 天
+min：1 分鍾粒度，查詢區間需要小於等於 24 小時
+5min：5 分鍾粒度，查詢區間需要小於等於 31 天
+hour：1 小時粒度，查詢區間需要小於等於 31 天内
+day：天粒度，查詢區間需要大於 31 天
 
 Area 欄位爲 overseas 時暫不支援1分鍾粒度數據查詢
         :type Interval: str
@@ -1314,15 +1314,15 @@ class DescribeCdnDataRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:00，返回結果大于等于指定時間
+        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:00，返回結果大於等於指定時間
 根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:00 在按 1 小時的時間粒度查詢時，返回的第一個數據對應時間點爲 2018-09-04 10:00:00
-起始時間與結束時間間隔小於等于 90 天
+起始時間與結束時間間隔小於等於 90 天
         :type StartTime: str
-        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:00，返回結果小於等于指定時間
+        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:00，返回結果小於等於指定時間
 根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:00 在按 1 小時的時間粒度查詢時，返回的最後一個數據對應時間點爲 2018-09-04 10:00:00
-起始時間與結束時間間隔小於等于 90 天
+起始時間與結束時間間隔小於等於 90 天
         :type EndTime: str
-        :param Metric: 指定查詢指标，支援的類型有：
+        :param Metric: 指定查詢指標，支援的類型有：
 flux：流量，單位爲 byte
 bandwidth：頻寬，單位爲 bps
 request：請求數，單位爲 次
@@ -1344,10 +1344,10 @@ statusCode：狀态碼，返回 2xx、3xx、4xx、5xx 匯總數據，單位爲 �
 min：1 分鍾粒度，指定查詢區間 24 小時内（含 24 小時），可返回 1 分鍾粒度明細數據（指定查詢服務地域爲 境外時不支援 1 分鍾粒度）
 5min：5 分鍾粒度，指定查詢區間 31 天内（含 31 天），可返回 5 分鍾粒度明細數據
 hour：1 小時粒度，指定查詢區間 31 天内（含 31 天），可返回 1 小時粒度明細數據
-day：天粒度，指定查詢區間大于 31 天，可返回天粒度明細數據
+day：天粒度，指定查詢區間大於 31 天，可返回天粒度明細數據
         :type Interval: str
         :param Detail: 多域名查詢時，預設（false)返回多個域名的匯總數據
-可按需指定爲 true，返回每一個 Domain 的明細數據（statusCode 指标暫不支援）
+可按需指定爲 true，返回每一個 Domain 的明細數據（statusCode 指標暫不支援）
         :type Detail: bool
         :param Isp: 查詢 境内CDN數據時，指定運營商查詢，不填充表示查詢所有運營商
 運營商編碼可以檢視 [運營商編碼映射](https://cloud.taifucloud.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
@@ -1360,15 +1360,15 @@ day：天粒度，指定查詢區間大于 31 天，可返回天粒度明細數�
         :type District: int
         :param Protocol: 指定協議查詢，不填充表示查詢所有協議
 all：所有協議
-http：指定查詢 HTTP 對應指标
-https：指定查詢 HTTPS 對應指标
+http：指定查詢 HTTP 對應指標
+https：指定查詢 HTTPS 對應指標
         :type Protocol: str
         :param DataSource: 指定數據源查詢，白名單功能
         :type DataSource: str
         :param IpProtocol: 指定IP協議查詢，不填充表示查詢所有協議
 all：所有協議
-ipv4：指定查詢 ipv4 對應指标
-ipv6：指定查詢 ipv6 對應指标
+ipv4：指定查詢 ipv4 對應指標
+ipv6：指定查詢 ipv6 對應指標
 指定IP協議查詢時，不可同時指定 、運營商查詢
         :type IpProtocol: str
         :param Area: 指定服務地域查詢，不填充表示查詢 境内CDN數據
@@ -1651,7 +1651,7 @@ class DescribeDomainsConfigResponse(AbstractModel):
         :param Domains: 域名清單
         :type Domains: list of DetailDomain
         :param TotalNumber: 符合查詢條件的域名總數
-用于分頁查詢
+用於分頁查詢
         :type TotalNumber: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1712,7 +1712,7 @@ class DescribeDomainsResponse(AbstractModel):
         :param Domains: 域名清單
         :type Domains: list of BriefDomain
         :param TotalNumber: 符合查詢條件的域名總數
-用于分頁查詢
+用於分頁查詢
         :type TotalNumber: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1849,10 +1849,10 @@ class DescribeIpVisitRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:10，返回結果大于等于指定時間
+        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:10，返回結果大於等於指定時間
 根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:10 在按 5 分鍾的時間粒度查詢時，返回的第一個數據對應時間點爲 2018-09-04 10:40:00
         :type StartTime: str
-        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:10，返回結果小於等于指定時間
+        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:10，返回結果小於等於指定時間
 根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:10 在按 5 分鍾的時間粒度查詢時，返回的最後一個數據對應時間點爲 2018-09-04 10:40:00
         :type EndTime: str
         :param Domains: 指定查詢域名清單，最多可一次性查詢 30 個加速域名明細
@@ -1862,7 +1862,7 @@ class DescribeIpVisitRequest(AbstractModel):
         :type Project: int
         :param Interval: 時間粒度，支援以下幾種模式：
 5min：5 分鍾粒度，查詢時間區間 24 小時内，預設返回 5 分鍾粒度活躍用戶數
-day：天粒度，查詢時間區間大于 1 天時，預設返回天粒度活躍用戶數
+day：天粒度，查詢時間區間大於 1 天時，預設返回天粒度活躍用戶數
         :type Interval: str
         """
         self.StartTime = None
@@ -1982,15 +1982,15 @@ class DescribeOriginDataRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:00，返回結果大于等于指定時間
+        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:00，返回結果大於等於指定時間
 根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:00 在按 1 小時的時間粒度查詢時，返回的第一個數據對應時間點爲 2018-09-04 10:00:00
-起始時間與結束時間間隔小於等于 90 天
+起始時間與結束時間間隔小於等於 90 天
         :type StartTime: str
-        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:00，返回結果小於等于指定時間
+        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:00，返回結果小於等於指定時間
 根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:00 在按 1 小時的時間粒度查詢時，返回的最後一個數據對應時間點爲 2018-09-04 10:00:00
-起始時間與結束時間間隔小於等于 90 天
+起始時間與結束時間間隔小於等於 90 天
         :type EndTime: str
-        :param Metric: 指定查詢指标，支援的類型有：
+        :param Metric: 指定查詢指標，支援的類型有：
 flux：回源流量，單位爲 byte
 bandwidth：回源頻寬，單位爲 bps
 request：回源請求數，單位爲 次
@@ -2012,10 +2012,10 @@ statusCode：回源狀态碼，返回 2xx、3xx、4xx、5xx 匯總數據，單�
 min：1 分鍾粒度，指定查詢區間 24 小時内（含 24 小時），可返回 1 分鍾粒度明細數據（指定查詢服務地域爲 境外時不支援 1 分鍾粒度）
 5min：5 分鍾粒度，指定查詢區間 31 天内（含 31 天），可返回 5 分鍾粒度明細數據
 hour：1 小時粒度，指定查詢區間 31 天内（含 31 天），可返回 1 小時粒度明細數據
-day：天粒度，指定查詢區間大于 31 天，可返回天粒度明細數據
+day：天粒度，指定查詢區間大於 31 天，可返回天粒度明細數據
         :type Interval: str
         :param Detail: Domains 傳入多個時，預設（false)返回多個域名的匯總數據
-可按需指定爲 true，返回每一個 Domain 的明細數據（statusCode 指标暫不支援）
+可按需指定爲 true，返回每一個 Domain 的明細數據（statusCode 指標暫不支援）
         :type Detail: bool
         :param Area: 指定服務地域查詢，不填充表示查詢 境内 CDN 數據
 mainland：指定查詢 境内 CDN 數據
@@ -2253,7 +2253,7 @@ class DescribePurgeTasksResponse(AbstractModel):
         :param PurgeLogs: 詳細重新整理記錄
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PurgeLogs: list of PurgeTask
-        :param TotalCount: 任務總數，用于分頁
+        :param TotalCount: 任務總數，用於分頁
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -2369,7 +2369,7 @@ class DescribePushTasksResponse(AbstractModel):
         :param PushLogs: 預熱曆史記錄
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PushLogs: list of PushTask
-        :param TotalCount: 任務總數，用于分頁
+        :param TotalCount: 任務總數，用於分頁
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -2566,7 +2566,7 @@ class DescribeUrlViolationsResponse(AbstractModel):
         :param UrlRecordList: 違規 URL 詳情
 注意：此欄位可能返回 null，表示取不到有效值。
         :type UrlRecordList: list of ViolationUrl
-        :param TotalCount: 記錄總數，用于分頁
+        :param TotalCount: 記錄總數，用於分頁
         :type TotalCount: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -2596,7 +2596,7 @@ class DetailDomain(AbstractModel):
         """
         :param ResourceId: 域名 ID
         :type ResourceId: str
-        :param AppId: Top Cloud 賬号ID
+        :param AppId: Top Cloud 賬號ID
         :type AppId: int
         :param Domain: 加速域名
         :type Domain: str
@@ -2681,7 +2681,7 @@ media：流媒體點播加速
         :type Seo: :class:`taifucloudcloud.cdn.v20180606.models.Seo`
         :param Disable: 域名封禁狀态
 normal：正常狀态
-overdue：賬号欠費導緻域名關閉，儲值完成後可自行啓動加速服務
+overdue：賬號欠費導緻域名關閉，儲值完成後可自行啓動加速服務
 malicious：域名出現惡意行爲，強制關閉加速服務
 ddos：域名被大規模 DDoS 攻擊，關閉加速服務
 idle：域名超過 90 天内無任何操作、數據産生，判定爲不活躍域名自動關閉加速服務，可自行啓動加速服務
@@ -3006,7 +3006,7 @@ class DomainFilter(AbstractModel):
 - fullUrlCache：全路徑快取，on或off。
 - https：是否配置https，on，off或processing。
 - originPullProtocol：回源協議類型，支援http，follow或https。
-- tagKey：标簽鍵。
+- tagKey：標簽鍵。
         :type Name: str
         :param Value: 過濾欄位值。
         :type Value: list of str
@@ -3331,7 +3331,7 @@ class GetDisableRecordsResponse(AbstractModel):
         :param UrlRecordList: 封禁曆史記錄
 注意：此欄位可能返回 null，表示取不到有效值。
         :type UrlRecordList: list of UrlRecord
-        :param TotalCount: 任務總數，用于分頁
+        :param TotalCount: 任務總數，用於分頁
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TotalCount: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -3777,13 +3777,13 @@ class ListTopDataRequest(AbstractModel):
         """
         :param StartTime: 查詢起始日期，如：2018-09-09
 僅支援按天粒度的數據查詢，取入參中的天訊息作爲起始日期
-返回大于等于起始日期當天 00:00:00 點産生的數據
+返回大於等於起始日期當天 00:00:00 點産生的數據
 僅支援 90 天内數據查詢
         :type StartTime: str
         :param EndTime: 查詢結束日期，如：2018-09-10
 僅支援按天粒度的數據查詢，取入參中的天訊息作爲結束日期
-返回小於等于結束日期當天 23:59:59 産生的數據
-EndTime 需要大于等于 StartTime
+返回小於等於結束日期當天 23:59:59 産生的數據
+EndTime 需要大於等於 StartTime
         :type EndTime: str
         :param Metric: 排序對象，支援以下幾種形式：
 url：訪問 URL 排序，帶參數統計，支援的 Filter 爲 flux、request
@@ -3793,7 +3793,7 @@ isp：運營商排序，支援的 Filter 爲 flux、request
 host：域名訪問數據排序，支援的 Filter 爲：flux、request、bandwidth、fluxHitRate、2XX、3XX、4XX、5XX、statusCode
 originHost：域名回源數據排序，支援的 Filter 爲 flux、request、bandwidth、origin_2XX、origin_3XX、origin_4XX、origin_5XX、OriginStatusCode
         :type Metric: str
-        :param Filter: 排序使用的指标名稱：
+        :param Filter: 排序使用的指標名稱：
 flux：Metric 爲 host 時指代訪問流量，originHost 時指代回源流量
 bandwidth：Metric 爲 host 時指代訪問頻寬，originHost 時指代回源頻寬
 request：Metric 爲 host 時指代訪問請求數，originHost 時指代回源請求數
@@ -4183,7 +4183,7 @@ class MapInfo(AbstractModel):
 
 
 class MaxAge(AbstractModel):
-    """浏覽器快取規則配置，用于設置 MaxAge 預設值，預設爲關閉狀态（功能灰度中，尚未全量）
+    """浏覽器快取規則配置，用於設置 MaxAge 預設值，預設爲關閉狀态（功能灰度中，尚未全量）
 
     """
 
@@ -5005,7 +5005,7 @@ class ResourceBillingData(AbstractModel):
 某一個具體域名：表示該域名明細數據
 multiDomains：表示多域名匯總明細數據
 某一個項目 ID：指定項目查詢時，顯示爲項目 ID
-all：賬号維度數據明細
+all：賬號維度數據明細
         :type Resource: str
         :param BillingData: 計費數據詳情
         :type BillingData: list of CdnData
@@ -5035,7 +5035,7 @@ class ResourceData(AbstractModel):
 具體域名：表示該域名明細數據
 multiDomains：表示多域名匯總明細數據
 項目 ID：指定項目查詢時，顯示爲項目 ID
-all：賬号維度明細數據
+all：賬號維度明細數據
         :type Resource: str
         :param CdnData: 資源對應的數據明細
         :type CdnData: list of CdnData
@@ -5065,7 +5065,7 @@ class ResourceOriginData(AbstractModel):
 具體域名：表示該域名明細數據
 multiDomains：表示多域名匯總明細數據
 項目 ID：指定項目查詢時，顯示爲項目 ID
-all：賬号維度明細數據
+all：賬號維度明細數據
         :type Resource: str
         :param OriginData: 回源數據詳情
         :type OriginData: list of CdnData
@@ -5141,7 +5141,7 @@ class SearchClsLogRequest(AbstractModel):
         """
         :param LogsetId: 需要查詢的日志集ID
         :type LogsetId: str
-        :param TopicIds: 需要查詢的日志主題ID組合，以逗号分隔
+        :param TopicIds: 需要查詢的日志主題ID組合，以逗號分隔
         :type TopicIds: str
         :param StartTime: 需要查詢的日志的起始時間，格式 YYYY-mm-dd HH:MM:SS
         :type StartTime: str
@@ -5153,7 +5153,7 @@ class SearchClsLogRequest(AbstractModel):
         :type Channel: str
         :param Query: 需要查詢的内容，詳情請參考https://cloud.taifucloud.com/document/product/614/16982
         :type Query: str
-        :param Context: 加載更多使用，透傳上次返回的 context 值，獲取後續的日志内容，通過遊标最多可獲取10000條，請盡可能縮小時間範圍
+        :param Context: 加載更多使用，透傳上次返回的 context 值，獲取後續的日志内容，通過遊標最多可獲取10000條，請盡可能縮小時間範圍
         :type Context: str
         :param Sort: 按日志時間排序， asc（升序）或者 desc（降序），預設爲 desc
         :type Sort: str
@@ -5566,7 +5566,7 @@ class StopCdnDomainResponse(AbstractModel):
 
 
 class SummarizedData(AbstractModel):
-    """明細數據的匯總值，各指标根據其特性不同擁有不同匯總方式
+    """明細數據的匯總值，各指標根據其特性不同擁有不同匯總方式
 
     """
 
@@ -5622,7 +5622,7 @@ class TopData(AbstractModel):
 具體域名：表示該域名明細數據
 multiDomains：表示多域名匯總明細數據
 項目 ID：指定項目查詢時，顯示爲項目 ID
-all：賬号維度明細數據
+all：賬號維度明細數據
         :type Resource: str
         :param DetailData: 排序結果詳情
         :type DetailData: list of TopDetailData
@@ -5833,7 +5833,7 @@ download：下載加速
 media：流媒體點播加速
         :type ServiceType: str
         :param SpecificConfig: 地域屬性特殊配置
-适用于域名境内加速、境外加速配置不一緻場景
+适用於域名境内加速、境外加速配置不一緻場景
         :type SpecificConfig: :class:`taifucloudcloud.cdn.v20180606.models.SpecificConfig`
         :param Area: 域名加速區域
 mainland： 境内加速
@@ -6132,7 +6132,7 @@ class ViolationUrl(AbstractModel):
         :type Id: int
         :param RealUrl: 違規資源原始訪問 URL
         :type RealUrl: str
-        :param DownloadUrl: 快照路徑，用于控制台展示違規内容快照
+        :param DownloadUrl: 快照路徑，用於控制台展示違規内容快照
         :type DownloadUrl: str
         :param UrlStatus: 違規資源當前狀态
 forbid：已封禁

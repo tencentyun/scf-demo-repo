@@ -1161,10 +1161,10 @@ class IdlFileInfo(AbstractModel):
         :type FileExtType: str
         :param FileSize: 文件大小（Bytes）
         :type FileSize: int
-        :param FileId: 文件ID，對于已上傳的文件有意義
+        :param FileId: 文件ID，對於已上傳的文件有意義
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FileId: int
-        :param FileContent: 文件内容，對于本次新上傳的文件有意義
+        :param FileContent: 文件内容，對於本次新上傳的文件有意義
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FileContent: str
         """
@@ -1329,7 +1329,7 @@ class ModifyTableGroupNameRequest(AbstractModel):
         :type ClusterId: str
         :param TableGroupId: 待修改名稱的表格組ID
         :type TableGroupId: str
-        :param TableGroupName: 新的表格組名稱，可以使用中英文字元和符号
+        :param TableGroupName: 新的表格組名稱，可以使用中英文字元和符號
         :type TableGroupName: str
         """
         self.ClusterId = None
@@ -1583,7 +1583,7 @@ class ParsedTableInfoNew(AbstractModel):
         :param ShardingKeySet: 分表因子集合
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ShardingKeySet: str
-        :param TdrVersion: TDR版本号
+        :param TdrVersion: TDR版本號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TdrVersion: int
         :param Error: 錯誤訊息
@@ -2054,7 +2054,7 @@ class TableResultNew(AbstractModel):
         :param TableInstanceId: 表格實例ID，形如：tcaplus-3be64cbb
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TableInstanceId: str
-        :param TaskId: 任務ID，對于創建單任務的介面有效
+        :param TaskId: 任務ID，對於創建單任務的介面有效
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskId: str
         :param TableName: 表格名稱
@@ -2072,7 +2072,7 @@ class TableResultNew(AbstractModel):
         :param Error: 錯誤訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Error: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ErrorInfo`
-        :param TaskIds: 任務ID清單，對于創建多任務的介面有效
+        :param TaskIds: 任務ID清單，對於創建多任務的介面有效
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskIds: list of str
         """
@@ -2109,7 +2109,7 @@ class TableRollbackResultNew(AbstractModel):
         :param TableInstanceId: 表格實例ID，形如：tcaplus-3be64cbb
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TableInstanceId: str
-        :param TaskId: 任務ID，對于創建單任務的介面有效
+        :param TaskId: 任務ID，對於創建單任務的介面有效
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskId: str
         :param TableName: 表格名稱
@@ -2127,7 +2127,7 @@ class TableRollbackResultNew(AbstractModel):
         :param Error: 錯誤訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Error: :class:`taifucloudcloud.tcaplusdb.v20190823.models.ErrorInfo`
-        :param TaskIds: 任務ID清單，對于創建多任務的介面有效
+        :param TaskIds: 任務ID清單，對於創建多任務的介面有效
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TaskIds: list of str
         :param FileId: 上傳的key文件ID

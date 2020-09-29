@@ -285,7 +285,7 @@ class LiveClient(AbstractClient):
 
     def CreateLiveRecord(self, request):
         """- 使用前提
-          1. 錄制文件存放于點播平台，所以用戶如需使用錄制功能，需首先自行開通點播服務。
+          1. 錄制文件存放於點播平台，所以用戶如需使用錄制功能，需首先自行開通點播服務。
           2. 錄制文件存放後相關費用（含儲存以及下行播放流量）按照點播平台計費方式收取，具體請參考 [對應文件](https://cloud.taifucloud.com/document/product/266/2838)。
 
         - 模式說明
@@ -293,12 +293,12 @@ class LiveClient(AbstractClient):
           1. 定時錄制模式【預設模式】。
             需要傳入開始時間與結束時間，錄制任務根據時間自動開始與結束。
           2. 實時視訊錄制模式。
-            忽略傳入的開始時間，在錄制任務創建後立即開始錄制，錄制時長支援最大爲30分鍾，如果傳入的結束時間與當前時間差大于30分鍾，則按30分鍾計算，實時視訊錄制主要用于錄制精彩視訊場景，時長建議控制在5分鍾以内。
+            忽略傳入的開始時間，在錄制任務創建後立即開始錄制，錄制時長支援最大爲30分鍾，如果傳入的結束時間與當前時間差大於30分鍾，則按30分鍾計算，實時視訊錄制主要用於錄制精彩視訊場景，時長建議控制在5分鍾以内。
 
         - 注意事項
-          1. 調用介面超時設置應大于3秒，小於3秒重試以及頻繁調用都有可能産生重複錄制任務。
-          2. 受限于影音文件格式（FLV/MP4/HLS）對編碼類型的支援，視訊編碼類型支援 H.264，音訊編碼類型支援 AAC。
-          3. 爲避免惡意或非主觀的頻繁 API 請求，對定時錄制模式最大創建任務數做了限制：其中，當天可以創建的最大任務數不超過4000（不含已删除的任務）；當前時刻并發運作的任務數不超過400。有超出此限制的需要提工單申請。
+          1. 調用介面超時設置應大於3秒，小於3秒重試以及頻繁調用都有可能産生重複錄制任務。
+          2. 受限於影音文件格式（FLV/MP4/HLS）對編碼類型的支援，視訊編碼類型支援 H.264，音訊編碼類型支援 AAC。
+          3. 爲避免惡意或非主觀的頻繁 API 請求，對定時錄制模式最大創建任務數做了限制：其中，當天可以創建的最大任務數不超過4000（不含已删除的任務）；當前時刻並發運作的任務數不超過400。有超出此限制的需要提工單申請。
 
         :param request: Request instance for CreateLiveRecord.
         :type request: :class:`taifucloudcloud.live.v20180801.models.CreateLiveRecordRequest`
@@ -531,9 +531,9 @@ class LiveClient(AbstractClient):
     def CreatePullStreamConfig(self, request):
         """創建臨時拉流轉推任務，目前限制添加10條任務。
 
-        注意：該介面用于創建臨時拉流轉推任務，
+        注意：該介面用於創建臨時拉流轉推任務，
         拉流源網址即 FromUrl 可以是 或非 數據源，
-        但轉推目标網址即 ToUrl 目前限制爲已注冊的 直播域名。
+        但轉推目標網址即 ToUrl 目前限制爲已注冊的 直播域名。
 
         :param request: Request instance for CreatePullStreamConfig.
         :type request: :class:`taifucloudcloud.live.v20180801.models.CreatePullStreamConfigRequest`
@@ -673,7 +673,7 @@ class LiveClient(AbstractClient):
 
 
     def DeleteLiveRecord(self, request):
-        """注：DeleteLiveRecord 介面僅用于删除錄制任務記錄，不具備停止錄制的功能，也不能删除正在進行中的錄制。如果需要停止錄制任務，請使用終止錄制[StopLiveRecord](/document/product/267/30146) 介面。
+        """注：DeleteLiveRecord 介面僅用於删除錄制任務記錄，不具備停止錄制的功能，也不能删除正在進行中的錄制。如果需要停止錄制任務，請使用終止錄制[StopLiveRecord](/document/product/267/30146) 介面。
 
         :param request: Request instance for DeleteLiveRecord.
         :type request: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveRecordRequest`
@@ -814,7 +814,7 @@ class LiveClient(AbstractClient):
 
     def DeleteLiveTranscodeRule(self, request):
         """删除轉碼規則。
-        DomainName+AppName+StreamName+TemplateId唯一标識單個轉碼規則，如需删除需要強比對。其中TemplateId必填，其餘參數爲空時也需要傳空字串進行強比對。
+        DomainName+AppName+StreamName+TemplateId唯一標識單個轉碼規則，如需删除需要強比對。其中TemplateId必填，其餘參數爲空時也需要傳空字串進行強比對。
 
         :param request: Request instance for DeleteLiveTranscodeRule.
         :type request: :class:`taifucloudcloud.live.v20180801.models.DeleteLiveTranscodeRuleRequest`
@@ -1010,7 +1010,7 @@ class LiveClient(AbstractClient):
 
 
     def DescribeConcurrentRecordStreamNum(self, request):
-        """查詢并發錄制路數，對慢直播和普通直播适用。
+        """查詢並發錄制路數，對慢直播和普通直播适用。
 
         :param request: Request instance for DescribeConcurrentRecordStreamNum.
         :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeConcurrentRecordStreamNumRequest`
@@ -1319,7 +1319,7 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveDomainPlayInfoList(self, request):
-        """查詢實時的域名維度下行播放數據，由于數據處理有耗時，介面預設查詢4分鍾前的準實時數據。
+        """查詢實時的域名維度下行播放數據，由於數據處理有耗時，介面預設查詢4分鍾前的準實時數據。
 
         :param request: Request instance for DescribeLiveDomainPlayInfoList.
         :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeLiveDomainPlayInfoListRequest`
@@ -1655,7 +1655,7 @@ class LiveClient(AbstractClient):
 
 
     def DescribeLiveStreamEventList(self, request):
-        """用于查詢推斷流事件。<br>
+        """用於查詢推斷流事件。<br>
 
         注意：該介面可通過使用IsFilter進行過濾，返回推流曆史記錄。
 
@@ -2107,7 +2107,7 @@ class LiveClient(AbstractClient):
 
 
     def DescribeProvinceIspPlayInfoList(self, request):
-        """查詢某 某運營商下行播放數據，包括頻寬，流量，請求數，并發連接數訊息。
+        """查詢某 某運營商下行播放數據，包括頻寬，流量，請求數，並發連接數訊息。
 
         :param request: Request instance for DescribeProvinceIspPlayInfoList.
         :type request: :class:`taifucloudcloud.live.v20180801.models.DescribeProvinceIspPlayInfoListRequest`
@@ -2808,7 +2808,7 @@ class LiveClient(AbstractClient):
 
 
     def StopLiveRecord(self, request):
-        """說明：錄制後的文件存放于點播平台。用戶如需使用錄制功能，需首先自行開通點播賬号并确保賬号可用。錄制文件存放後，相關費用（含儲存以及下行播放流量）按照點播平台計費方式收取，請參考對應文件。
+        """說明：錄制後的文件存放於點播平台。用戶如需使用錄制功能，需首先自行開通點播賬號並确保賬號可用。錄制文件存放後，相關費用（含儲存以及下行播放流量）按照點播平台計費方式收取，請參考對應文件。
 
         :param request: Request instance for StopLiveRecord.
         :type request: :class:`taifucloudcloud.live.v20180801.models.StopLiveRecordRequest`

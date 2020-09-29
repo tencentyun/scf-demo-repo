@@ -130,7 +130,7 @@ class DescribeGameServerSessionDetailsRequest(AbstractModel):
         :type GameServerSessionId: str
         :param Limit: 單次查詢記錄數上限
         :type Limit: int
-        :param NextToken: 頁偏移，用于查詢下一頁
+        :param NextToken: 頁偏移，用於查詢下一頁
         :type NextToken: str
         :param StatusFilter: 遊戲服務器會話狀态(ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR)
         :type StatusFilter: str
@@ -162,7 +162,7 @@ class DescribeGameServerSessionDetailsResponse(AbstractModel):
         :param GameServerSessionDetails: 遊戲服務器會話詳情清單
 注意：此欄位可能返回 null，表示取不到有效值。
         :type GameServerSessionDetails: list of GameServerSessionDetail
-        :param NextToken: 頁偏移，用于查詢下一頁
+        :param NextToken: 頁偏移，用於查詢下一頁
 注意：此欄位可能返回 null，表示取不到有效值。
         :type NextToken: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -191,7 +191,7 @@ class DescribeGameServerSessionPlacementRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param PlacementId: 遊戲服務器會話放置的唯一标識符
+        :param PlacementId: 遊戲服務器會話放置的唯一標識符
         :type PlacementId: str
         """
         self.PlacementId = None
@@ -239,7 +239,7 @@ class DescribeGameServerSessionsRequest(AbstractModel):
         :type GameServerSessionId: str
         :param Limit: 單次查詢記錄數上限
         :type Limit: int
-        :param NextToken: 頁偏移，用于查詢下一頁
+        :param NextToken: 頁偏移，用於查詢下一頁
         :type NextToken: str
         :param StatusFilter: 遊戲服務器會話狀态
         :type StatusFilter: str
@@ -271,7 +271,7 @@ class DescribeGameServerSessionsResponse(AbstractModel):
         :param GameServerSessions: 遊戲服務器會話清單
 注意：此欄位可能返回 null，表示取不到有效值。
         :type GameServerSessions: list of GameServerSession
-        :param NextToken: 頁便宜，用于查詢下一頁
+        :param NextToken: 頁便宜，用於查詢下一頁
 注意：此欄位可能返回 null，表示取不到有效值。
         :type NextToken: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -365,7 +365,7 @@ class DescribePlayerSessionsRequest(AbstractModel):
         :type GameServerSessionId: str
         :param Limit: 單次查詢記錄數上限
         :type Limit: int
-        :param NextToken: 頁偏移，用于查詢下一頁
+        :param NextToken: 頁偏移，用於查詢下一頁
         :type NextToken: str
         :param PlayerId: 玩家ID
         :type PlayerId: str
@@ -430,7 +430,7 @@ class DesiredPlayerSession(AbstractModel):
 
     def __init__(self):
         """
-        :param PlayerId: 與玩家會話關聯的唯一玩家标識
+        :param PlayerId: 與玩家會話關聯的唯一玩家標識
         :type PlayerId: str
         :param PlayerData: 開發人員定義的玩家數據
         :type PlayerData: str
@@ -479,7 +479,7 @@ class GameServerSession(AbstractModel):
         :type CreatorId: str
         :param CurrentPlayerSessionCount: 當前玩家數量
         :type CurrentPlayerSessionCount: int
-        :param DnsName: CVM的DNS标識符
+        :param DnsName: CVM的DNS標識符
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DnsName: str
         :param FleetId: 艦隊ID
@@ -505,7 +505,7 @@ class GameServerSession(AbstractModel):
         :param PlayerSessionCreationPolicy: 玩家會話創建策略
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PlayerSessionCreationPolicy: str
-        :param Port: 端口号
+        :param Port: 端口號
         :type Port: int
         :param Status: 遊戲服務器會話狀态
         :type Status: str
@@ -625,7 +625,7 @@ class GameServerSessionPlacement(AbstractModel):
         :type PlayerLatencies: list of PlayerLatency
         :param Status: 服務佈署狀态
         :type Status: str
-        :param DnsName: 分配給正在運作遊戲會話的實例的DNS标識符
+        :param DnsName: 分配給正在運作遊戲會話的實例的DNS標識符
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DnsName: str
         :param GameServerSessionId: 遊戲會話Id
@@ -648,7 +648,7 @@ class GameServerSessionPlacement(AbstractModel):
         :param IpAddress: 運作遊戲會話的實例的IP網址
 注意：此欄位可能返回 null，表示取不到有效值。
         :type IpAddress: str
-        :param Port: 運作遊戲會話的實例的端口号
+        :param Port: 運作遊戲會話的實例的端口號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Port: int
         :param MatchmakerData: 遊戲比對數據
@@ -994,7 +994,7 @@ class PlayerSession(AbstractModel):
         """
         :param CreationTime: 玩家會話創建時間
         :type CreationTime: str
-        :param DnsName: 遊戲服務器會話運作的DNS标識
+        :param DnsName: 遊戲服務器會話運作的DNS標識
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DnsName: str
         :param FleetId: 艦隊ID
@@ -1011,7 +1011,7 @@ class PlayerSession(AbstractModel):
         :type PlayerId: str
         :param PlayerSessionId: 玩家會話ID
         :type PlayerSessionId: str
-        :param Port: 端口号
+        :param Port: 端口號
         :type Port: int
         :param Status: 玩家會話的狀态
         :type Status: str
@@ -1059,7 +1059,7 @@ class SearchGameServerSessionsRequest(AbstractModel):
         :type FleetId: str
         :param Limit: 單次查詢記錄數上限
         :type Limit: int
-        :param NextToken: 頁偏移，用于查詢下一頁
+        :param NextToken: 頁偏移，用於查詢下一頁
         :type NextToken: str
         :param FilterExpression: 搜索條件表達式，支援如下變量
 gameServerSessionName 遊戲會話名稱 String
@@ -1070,7 +1070,7 @@ playerSessionCount 當前玩家會話數 Number
 hasAvailablePlayerSessions 是否有可用玩家數 String 取值true或false
 gameServerSessionProperties 遊戲會話屬性 String
 
-表達式String類型 等于=，不等于<>判斷
+表達式String類型 等於=，不等於<>判斷
 表示Number類型支援 =,<>,>,>=,<,<=
         :type FilterExpression: str
         :param SortExpression: 排序條件關鍵字
@@ -1109,7 +1109,7 @@ class SearchGameServerSessionsResponse(AbstractModel):
         :param GameServerSessions: 遊戲服務器會話清單
 注意：此欄位可能返回 null，表示取不到有效值。
         :type GameServerSessions: list of GameServerSession
-        :param NextToken: 頁偏移，用于查詢下一頁
+        :param NextToken: 頁偏移，用於查詢下一頁
 注意：此欄位可能返回 null，表示取不到有效值。
         :type NextToken: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -1138,7 +1138,7 @@ class StartGameServerSessionPlacementRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param PlacementId: 開始佈署遊戲服務器會話的唯一标識符
+        :param PlacementId: 開始佈署遊戲服務器會話的唯一標識符
         :type PlacementId: str
         :param GameServerSessionQueueName: 遊戲服務器會話隊列名稱
         :type GameServerSessionQueueName: str
@@ -1221,7 +1221,7 @@ class StopGameServerSessionPlacementRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param PlacementId: 遊戲服務器會話放置的唯一标識符
+        :param PlacementId: 遊戲服務器會話放置的唯一標識符
         :type PlacementId: str
         """
         self.PlacementId = None

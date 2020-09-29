@@ -138,7 +138,7 @@ class Cluster(AbstractModel):
         :type ClusterNodeNum: int
         :param ProjectId: 集群所屬的項目ID
         :type ProjectId: int
-        :param TagSpecification: 标簽描述清單。
+        :param TagSpecification: 標簽描述清單。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSpecification: list of TagSpecification
         :param ClusterStatus: 集群狀态 (Running 運作中  Creating 創建中 Abnormal 異常  )
@@ -220,7 +220,7 @@ class ClusterAdvancedSettings(AbstractModel):
         :type AsEnabled: bool
         :param ContainerRuntime: 集群使用的runtime類型，包括"docker"和"containerd"兩種類型，預設爲"docker"
         :type ContainerRuntime: str
-        :param NodeNameType: 集群中節點NodeName類型（包括 hostname,lan-ip兩種形式，預設爲lan-ip。如果開啓了hostname模式，創建節點時需要設置HostName參數，并且InstanceName需要和HostName一緻）
+        :param NodeNameType: 集群中節點NodeName類型（包括 hostname,lan-ip兩種形式，預設爲lan-ip。如果開啓了hostname模式，創建節點時需要設置HostName參數，並且InstanceName需要和HostName一緻）
         :type NodeNameType: str
         :param ExtraArgs: 集群自定義參數
         :type ExtraArgs: :class:`taifucloudcloud.tke.v20180525.models.ClusterExtraArgs`
@@ -326,7 +326,7 @@ class ClusterAsGroupOption(AbstractModel):
         :param Expander: 多伸縮組情況下擴容選擇算法(random 随機選擇，most-pods 最多類型的Pod least-waste 最少的資源浪費，預設爲random)
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Expander: str
-        :param MaxEmptyBulkDelete: 最大并發縮容數
+        :param MaxEmptyBulkDelete: 最大並發縮容數
 注意：此欄位可能返回 null，表示取不到有效值。
         :type MaxEmptyBulkDelete: int
         :param ScaleDownDelay: 集群擴容後多少分鍾開始判斷縮容（預設爲10分鍾）
@@ -335,7 +335,7 @@ class ClusterAsGroupOption(AbstractModel):
         :param ScaleDownUnneededTime: 節點連續空閑多少分鍾後被縮容（預設爲 10分鍾）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ScaleDownUnneededTime: int
-        :param ScaleDownUtilizationThreshold: 節點資源使用量低于多少(百分比)時認爲空閑(預設: 50(百分比))
+        :param ScaleDownUtilizationThreshold: 節點資源使用量低於多少(百分比)時認爲空閑(預設: 50(百分比))
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ScaleDownUtilizationThreshold: int
         :param SkipNodesWithLocalStorage: 含有本地儲存Pod的節點是否不縮容(預設： FALSE)
@@ -390,7 +390,7 @@ class ClusterBasicSettings(AbstractModel):
         :type VpcId: str
         :param ProjectId: 集群内新增資源所屬項目ID。
         :type ProjectId: int
-        :param TagSpecification: 标簽描述清單。通過指定該參數可以同時綁定标簽到相應的資源實例，當前僅支援綁定标簽到集群實例。
+        :param TagSpecification: 標簽描述清單。通過指定該參數可以同時綁定標簽到相應的資源實例，當前僅支援綁定標簽到集群實例。
         :type TagSpecification: list of TagSpecification
         :param OsCustomizeType: 容器的映像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，預設值)
         :type OsCustomizeType: str
@@ -432,7 +432,7 @@ class ClusterCIDRSettings(AbstractModel):
 
     def __init__(self):
         """
-        :param ClusterCIDR: 用于分配集群容器和服務 IP 的 CIDR，不得與 VPC CIDR 沖突，也不得與同 VPC 内其他集群 CIDR 沖突。且網段範圍必須在内網網段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
+        :param ClusterCIDR: 用於分配集群容器和服務 IP 的 CIDR，不得與 VPC CIDR 沖突，也不得與同 VPC 内其他集群 CIDR 沖突。且網段範圍必須在内網網段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
         :type ClusterCIDR: str
         :param IgnoreClusterCIDRConflict: 是否忽略 ClusterCIDR 沖突錯誤, 預設不忽略
         :type IgnoreClusterCIDRConflict: bool
@@ -440,7 +440,7 @@ class ClusterCIDRSettings(AbstractModel):
         :type MaxNodePodNum: int
         :param MaxClusterServiceNum: 集群最大的service數量。取值範圍32～32768，不爲2的幂值時會向上取最接近的2的幂值。
         :type MaxClusterServiceNum: int
-        :param ServiceCIDR: 用于分配集群服務 IP 的 CIDR，不得與 VPC CIDR 沖突，也不得與同 VPC 内其他集群 CIDR 沖突。且網段範圍必須在内網網段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
+        :param ServiceCIDR: 用於分配集群服務 IP 的 CIDR，不得與 VPC CIDR 沖突，也不得與同 VPC 内其他集群 CIDR 沖突。且網段範圍必須在内網網段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
         :type ServiceCIDR: str
         :param EniSubnetIds: VPC-CNI網絡模式下，彈性網卡的子網Id。
         :type EniSubnetIds: list of str
@@ -501,7 +501,7 @@ class ClusterNetworkSettings(AbstractModel):
 
     def __init__(self):
         """
-        :param ClusterCIDR: 用于分配集群容器和服務 IP 的 CIDR，不得與 VPC CIDR 沖突，也不得與同 VPC 内其他集群 CIDR 沖突
+        :param ClusterCIDR: 用於分配集群容器和服務 IP 的 CIDR，不得與 VPC CIDR 沖突，也不得與同 VPC 内其他集群 CIDR 沖突
         :type ClusterCIDR: str
         :param IgnoreClusterCIDRConflict: 是否忽略 ClusterCIDR 沖突錯誤, 預設不忽略
         :type IgnoreClusterCIDRConflict: bool
@@ -546,7 +546,7 @@ class CreateClusterAsGroupRequest(AbstractModel):
         :type ClusterId: str
         :param AutoScalingGroupPara: 伸縮組創建透傳參數，json化字串格式，詳見[伸縮組創建實例](https://cloud.taifucloud.com/document/api/377/20440)介面。LaunchConfigurationId由LaunchConfigurePara參數創建，不支援填寫
         :type AutoScalingGroupPara: str
-        :param LaunchConfigurePara: 啓動配置創建透傳參數，json化字串格式，詳見[創建啓動配置](https://cloud.taifucloud.com/document/api/377/20447)介面。另外ImageId參數由于集群維度已經有的ImageId訊息，這個欄位不需要填寫。UserData欄位設置通過UserScript設置，這個欄位不需要填寫。
+        :param LaunchConfigurePara: 啓動配置創建透傳參數，json化字串格式，詳見[創建啓動配置](https://cloud.taifucloud.com/document/api/377/20447)介面。另外ImageId參數由於集群維度已經有的ImageId訊息，這個欄位不需要填寫。UserData欄位設置通過UserScript設置，這個欄位不需要填寫。
         :type LaunchConfigurePara: str
         :param InstanceAdvancedSettings: 節點高級配置訊息
         :type InstanceAdvancedSettings: :class:`taifucloudcloud.tke.v20180525.models.InstanceAdvancedSettings`
@@ -922,7 +922,7 @@ class DataDisk(AbstractModel):
         :type FileSystem: str
         :param DiskSize: 雲盤大小(G）
         :type DiskSize: int
-        :param AutoFormatAndMount: 是否自動化格式盤并掛載
+        :param AutoFormatAndMount: 是否自動化格式盤並掛載
         :type AutoFormatAndMount: bool
         :param MountTarget: 掛載目錄
         :type MountTarget: str
@@ -1277,9 +1277,9 @@ class DescribeClusterAsGroupsRequest(AbstractModel):
         :type ClusterId: str
         :param AutoScalingGroupIds: 伸縮組ID清單，如果爲空，表示拉取集群關聯的所有伸縮組。
         :type AutoScalingGroupIds: list of str
-        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於Offset的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于Limit的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於Limit的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.ClusterId = None
@@ -1417,9 +1417,9 @@ class DescribeClusterInstancesRequest(AbstractModel):
         """
         :param ClusterId: 集群ID
         :type ClusterId: str
-        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於Offset的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于Limit的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於Limit的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         :param InstanceIds: 需要獲取的節點實例Id清單。如果爲空，表示拉取集群下所有節點實例。
         :type InstanceIds: list of str
@@ -1578,7 +1578,7 @@ class DescribeClusterSecurityResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param UserName: 集群的賬号名稱
+        :param UserName: 集群的賬號名稱
         :type UserName: str
         :param Password: 集群的訪問密碼
         :type Password: str
@@ -1629,7 +1629,7 @@ class DescribeClustersRequest(AbstractModel):
     def __init__(self):
         """
         :param ClusterIds: 集群ID清單(爲空時，
-表示獲取賬号下所有集群)
+表示獲取賬號下所有集群)
         :type ClusterIds: list of str
         :param Offset: 偏移量,預設0
         :type Offset: int
@@ -1703,9 +1703,9 @@ class DescribeExistedInstancesRequest(AbstractModel):
         :type VagueIpAddress: str
         :param VagueInstanceName: 實例名稱進行過濾
         :type VagueInstanceName: str
-        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於Offset的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于Limit的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於Limit的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.ClusterId = None
@@ -1944,7 +1944,7 @@ class ExistedInstance(AbstractModel):
 注意：此欄位可能返回 null，表示取不到有效值。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PublicIpAddresses: list of str
-        :param CreatedTime: 創建時間。按照ISO8601标準表示，并且使用UTC時間。格式爲：YYYY-MM-DDThh:mm:ssZ。
+        :param CreatedTime: 創建時間。按照ISO8601標準表示，並且使用UTC時間。格式爲：YYYY-MM-DDThh:mm:ssZ。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CreatedTime: str
         :param InstanceChargeType: 實例計費模式。取值範圍：
@@ -2070,11 +2070,11 @@ class ExistedInstancesPara(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """>描述鍵值對過濾器，用于條件過濾查詢。例如過濾ID、名稱、狀态等
+    """>描述鍵值對過濾器，用於條件過濾查詢。例如過濾ID、名稱、狀态等
     > * 若存在多個`Filter`時，`Filter`間的關系爲邏輯與（`AND`）關系。
     > * 若同一個`Filter`存在多個`Values`，同一`Filter`下`Values`間的關系爲邏輯或（`OR`）關系。
     >
-    > 以[DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲 一區 ***并且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
+    > 以[DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲 一區 ***並且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
     ```
     Filters.0.Name=zone
     &Filters.0.Values.0=ap-guangzhou-1
@@ -2145,7 +2145,7 @@ class Instance(AbstractModel):
         :type InstanceId: str
         :param InstanceRole: 節點角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 預設爲WORKER
         :type InstanceRole: str
-        :param FailedReason: 實例異常(或者處于初始化中)的原因
+        :param FailedReason: 實例異常(或者處於初始化中)的原因
         :type FailedReason: str
         :param InstanceState: 實例的狀态（running 運作中，initializing 初始化中，failed 異常）
         :type InstanceState: str
@@ -2191,7 +2191,7 @@ class InstanceAdvancedSettings(AbstractModel):
 
     def __init__(self):
         """
-        :param MountTarget: 數據盤掛載點, 預設不掛載數據盤. 已格式化的 ext3，ext4，xfs 文件系統的數據盤将直接掛載，其他文件系統或未格式化的數據盤将自動格式化爲ext4 并掛載，請注意備份數據! 無數據盤或有多塊數據盤的雲主機此設置不生效。
+        :param MountTarget: 數據盤掛載點, 預設不掛載數據盤. 已格式化的 ext3，ext4，xfs 文件系統的數據盤将直接掛載，其他文件系統或未格式化的數據盤将自動格式化爲ext4 並掛載，請注意備份數據! 無數據盤或有多塊數據盤的雲主機此設置不生效。
         :type MountTarget: str
         :param DockerGraphPath: dockerd --graph 指定值, 預設爲 /var/lib/docker
         :type DockerGraphPath: str
@@ -2286,7 +2286,7 @@ class InstanceExtraArgs(AbstractModel):
 
 
 class Label(AbstractModel):
-    """k8s中标簽，一般以數組的方式存在
+    """k8s中標簽，一般以數組的方式存在
 
     """
 
@@ -2313,7 +2313,7 @@ class LoginSettings(AbstractModel):
 
     def __init__(self):
         """
-        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>Linux實例密碼必須8到30位，至少包括兩項[a-z]，[A-Z]、[0-9] 和 [( ) \` ~ ! @ # $ % ^ & *  - + = | { } [ ] : ; ' , . ? / ]中的特殊符号。<br><li>Windows實例密碼必須12到30位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) \` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? /]中的特殊符号。<br><br>若不指定該參數，則由系統随機生成密碼，并通過站内信方式通知到用戶。
+        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>Linux實例密碼必須8到30位，至少包括兩項[a-z]，[A-Z]、[0-9] 和 [( ) \` ~ ! @ # $ % ^ & *  - + = | { } [ ] : ; ' , . ? / ]中的特殊符號。<br><li>Windows實例密碼必須12到30位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) \` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? /]中的特殊符號。<br><br>若不指定該參數，則由系統随機生成密碼，並通過站内信方式通知到用戶。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Password: str
         :param KeyIds: 金鑰ID清單。關聯金鑰後，就可以通過對應的私鑰來訪問實例；KeyId可通過介面[DescribeKeyPairs](https://cloud.taifucloud.com/document/api/213/15699)獲取，金鑰與密碼不能同時指定，同時Windows作業系統不支援指定金鑰。當前僅支援購買的時候指定一個金鑰。
@@ -2684,15 +2684,15 @@ class RunSecurityServiceEnabled(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """标簽綁定的資源類型，當前支援類型："cluster"
+    """標簽綁定的資源類型，當前支援類型："cluster"
 
     """
 
     def __init__(self):
         """
-        :param Key: 标簽鍵
+        :param Key: 標簽鍵
         :type Key: str
-        :param Value: 标簽值
+        :param Value: 標簽值
         :type Value: str
         """
         self.Key = None
@@ -2705,16 +2705,16 @@ class Tag(AbstractModel):
 
 
 class TagSpecification(AbstractModel):
-    """标簽描述清單。通過指定該參數可以同時綁定标簽到相應的資源實例，當前僅支援綁定标簽到雲主機實例。
+    """標簽描述清單。通過指定該參數可以同時綁定標簽到相應的資源實例，當前僅支援綁定標簽到雲主機實例。
 
     """
 
     def __init__(self):
         """
-        :param ResourceType: 标簽綁定的資源類型，當前支援類型："cluster"
+        :param ResourceType: 標簽綁定的資源類型，當前支援類型："cluster"
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ResourceType: str
-        :param Tags: 标簽對清單
+        :param Tags: 標簽對清單
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of Tag
         """

@@ -307,7 +307,7 @@ class Deal(AbstractModel):
 
     def __init__(self):
         """
-        :param OrderId: 訂單号
+        :param OrderId: 訂單號
         :type OrderId: str
         :param Status: 訂單狀态
         :type Status: int
@@ -422,11 +422,11 @@ class DescribeBillDetailRequest(AbstractModel):
         :type Limit: int
         :param PeriodType: 週期類型，byPayTime按扣費週期/byUsedTime按計費週期。需要與費用中心該月份帳單的週期保持一緻。
         :type PeriodType: str
-        :param Month: 月份，格式爲yyyy-mm，Month和BeginTime&EndTime必傳一個，如果有傳BeginTime&EndTime則Month欄位無效。不能早于開通帳單2.0的月份，最多可拉取24個月内的數據。
+        :param Month: 月份，格式爲yyyy-mm，Month和BeginTime&EndTime必傳一個，如果有傳BeginTime&EndTime則Month欄位無效。不能早於開通帳單2.0的月份，最多可拉取24個月内的數據。
         :type Month: str
-        :param BeginTime: 週期開始時間，格式爲Y-m-d H:i:s，Month和BeginTime&EndTime必傳一個，如果有該欄位則Month欄位無效。BeginTime和EndTime必須一起傳。不能早于開通帳單2.0的月份，最多可拉取24個月内的數據。
+        :param BeginTime: 週期開始時間，格式爲Y-m-d H:i:s，Month和BeginTime&EndTime必傳一個，如果有該欄位則Month欄位無效。BeginTime和EndTime必須一起傳。不能早於開通帳單2.0的月份，最多可拉取24個月内的數據。
         :type BeginTime: str
-        :param EndTime: 週期結束時間，格式爲Y-m-d H:i:s，Month和BeginTime&EndTime必傳一個，如果有該欄位則Month欄位無效。BeginTime和EndTime必須一起傳。不能早于開通帳單2.0的月份，最多可拉取24個月内的數據。
+        :param EndTime: 週期結束時間，格式爲Y-m-d H:i:s，Month和BeginTime&EndTime必傳一個，如果有該欄位則Month欄位無效。BeginTime和EndTime必須一起傳。不能早於開通帳單2.0的月份，最多可拉取24個月内的數據。
         :type EndTime: str
         """
         self.Offset = None
@@ -485,9 +485,9 @@ class DescribeBillResourceSummaryRequest(AbstractModel):
         :type Limit: int
         :param PeriodType: 週期類型，byUsedTime按計費週期/byPayTime按扣費週期。需要與費用中心該月份帳單的週期保持一緻。
         :type PeriodType: str
-        :param Month: 月份，格式爲yyyy-mm。不能早于開通帳單2.0的月份，最多可拉取24個月内的數據。
+        :param Month: 月份，格式爲yyyy-mm。不能早於開通帳單2.0的月份，最多可拉取24個月内的數據。
         :type Month: str
-        :param NeedRecordNum: 是否需要訪問清單的總記錄數，用于前端分頁
+        :param NeedRecordNum: 是否需要訪問清單的總記錄數，用於前端分頁
 1-表示需要， 0-表示不需要
         :type NeedRecordNum: int
         """
@@ -566,7 +566,7 @@ class DescribeDealsByCondRequest(AbstractModel):
 11：代付拒絕
 12：支付中
         :type Status: int
-        :param OrderId: 訂單号
+        :param OrderId: 訂單號
         :type OrderId: str
         """
         self.StartTime = None
@@ -771,7 +771,7 @@ class PayDealsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param OrderIds: 需要支付的一個或者多個訂單号
+        :param OrderIds: 需要支付的一個或者多個訂單號
         :type OrderIds: list of str
         :param AutoVoucher: 是否自動使用 ,1:是,0否,預設0
         :type AutoVoucher: int
@@ -796,7 +796,7 @@ class PayDealsResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param OrderIds: 此次操作支付成功的訂單号數組
+        :param OrderIds: 此次操作支付成功的訂單號數組
         :type OrderIds: list of str
         :param ResourceIds: 此次操作支付成功的資源Id數組
         :type ResourceIds: list of str
@@ -821,7 +821,7 @@ class ProductInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param Name: 商品詳情名稱标識
+        :param Name: 商品詳情名稱標識
         :type Name: str
         :param Value: 商品詳情
         :type Value: str

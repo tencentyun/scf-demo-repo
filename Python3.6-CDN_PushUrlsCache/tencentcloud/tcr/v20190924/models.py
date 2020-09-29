@@ -1136,7 +1136,7 @@ class DescribeFavorRepositoryPersonalRequest(AbstractModel):
         :type RepoName: str
         :param Limit: 分頁Limit
         :type Limit: int
-        :param Offset: Offset用于分頁
+        :param Offset: Offset用於分頁
         :type Offset: int
         """
         self.RepoName = None
@@ -1407,7 +1407,7 @@ class DescribeImagesRequest(AbstractModel):
         :type RepositoryName: str
         :param ImageVersion: 指定映像版本(Tag)，不填預設返回倉庫内全部容器映像
         :type ImageVersion: str
-        :param Limit: 每頁個數，用于分頁，預設20
+        :param Limit: 每頁個數，用於分頁，預設20
         :type Limit: int
         :param Offset: 頁數，預設值爲1
         :type Offset: int
@@ -1566,7 +1566,7 @@ class DescribeInstancesRequest(AbstractModel):
     def __init__(self):
         """
         :param Registryids: 實例ID清單(爲空時，
-表示獲取賬号下所有實例)
+表示獲取賬號下所有實例)
         :type Registryids: list of str
         :param Offset: 偏移量,預設0
         :type Offset: int
@@ -1748,11 +1748,11 @@ class DescribeRepositoriesRequest(AbstractModel):
         :type NamespaceName: str
         :param RepositoryName: 指定映像倉庫，不填寫預設查詢指定命名空間下所有映像倉庫
         :type RepositoryName: str
-        :param Offset: 頁數，用于分頁
+        :param Offset: 頁數，用於分頁
         :type Offset: int
-        :param Limit: 每頁個數，用于分頁
+        :param Limit: 每頁個數，用於分頁
         :type Limit: int
-        :param SortBy: 基于欄位排序，支援的值有-creation_time,-name, -update_time
+        :param SortBy: 基於欄位排序，支援的值有-creation_time,-name, -update_time
         :type SortBy: str
         """
         self.RegistryId = None
@@ -2159,7 +2159,7 @@ class DuplicateImagePersonalResponse(AbstractModel):
 
 
 class FavorResp(AbstractModel):
-    """用于獲取收藏倉庫的響應
+    """用於獲取收藏倉庫的響應
 
     """
 
@@ -3656,13 +3656,13 @@ class ValidateRepositoryExistPersonalResponse(AbstractModel):
 
 
 class WebhookTarget(AbstractModel):
-    """觸發器目标
+    """觸發器目標
 
     """
 
     def __init__(self):
         """
-        :param Address: 目标網址
+        :param Address: 目標網址
         :type Address: str
         :param Headers: 自定義 Headers
         :type Headers: list of Header
@@ -3690,7 +3690,7 @@ class WebhookTrigger(AbstractModel):
         """
         :param Name: 觸發器名稱
         :type Name: str
-        :param Targets: 觸發器目标
+        :param Targets: 觸發器目標
         :type Targets: list of WebhookTarget
         :param EventTypes: 觸發動作
         :type EventTypes: list of str

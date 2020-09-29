@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # The user needs to create two COS Buckets, one for uploading the original pictures, and configurated as a trigger of SCF and the other for receiving the compressed pictures.
-# 用戶需要創建2個COS Bucket，一個用于上傳原始圖片，并配置SCF爲該COS Bucket觸發，另一個用于接收壓縮後的圖片
+# 用戶需要創建2個COS Bucket，一個用於上傳原始圖片，並配置SCF爲該COS Bucket觸發，另一個用於接收壓縮後的圖片
 
 import os
 from PIL import Image
@@ -19,7 +19,7 @@ secret_id = u'**************'  # Please replace with your SecretId. 請替換爲
 secret_key = u'*************'  # Please replace with your SecretKey. 請替換爲您的 SecretKey
 region = u'ap-shanghai'        # Please replace with the region where your COS bucket located. 請替換爲您bucket 所在的地域
 token = ''
-resized_bucket = 'XXXXXX'         # Please replace with the bucket you use to store the compressed pictures. 請替換爲您用于存放壓縮後圖片的bucket
+resized_bucket = 'XXXXXX'         # Please replace with the bucket you use to store the compressed pictures. 請替換爲您用於存放壓縮後圖片的bucket
 
 config = CosConfig(Secret_id=secret_id, Secret_key=secret_key, Region=region, Token=token)
 client = CosS3Client(config)

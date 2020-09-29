@@ -23,10 +23,10 @@ class Acct(AbstractModel):
 
     def __init__(self):
         """
-        :param SubAcctNo: STRING(50)，見證子帳戶的賬号（可重複）
+        :param SubAcctNo: STRING(50)，見證子帳戶的賬號（可重複）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SubAcctNo: str
-        :param SubAcctProperty: STRING(10)，見證子帳戶的屬性（可重複。1: 普通會員子賬号; 2: 挂賬子賬号; 3: 手續約子賬号; 4: 利息子賬号; 5: 平台擔保子賬号）
+        :param SubAcctProperty: STRING(10)，見證子帳戶的屬性（可重複。1: 普通會員子賬號; 2: 挂賬子賬號; 3: 手續約子賬號; 4: 利息子賬號; 5: 平台擔保子賬號）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SubAcctProperty: str
         :param TranNetMemberCode: STRING(32)，交易網會員代碼（可重複）
@@ -71,9 +71,9 @@ class ApplyApplicationMaterialRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TransactionId: 對接方匯出指令編号
+        :param TransactionId: 對接方匯出指令編號
         :type TransactionId: str
-        :param DeclareId: 申報流水号
+        :param DeclareId: 申報流水號
         :type DeclareId: str
         :param PayerId: 付款人ID
         :type PayerId: str
@@ -83,7 +83,7 @@ class ApplyApplicationMaterialRequest(AbstractModel):
         :type TargetCurrency: str
         :param TradeCode: 貿易編碼
         :type TradeCode: str
-        :param OriginalDeclareId: 原申報流水号
+        :param OriginalDeclareId: 原申報流水號
         :type OriginalDeclareId: str
         :param SourceAmount: 源金額
         :type SourceAmount: int
@@ -147,15 +147,15 @@ class ApplyDeclareData(AbstractModel):
 
     def __init__(self):
         """
-        :param MerchantId: 商戶号
+        :param MerchantId: 商戶號
         :type MerchantId: str
-        :param TransactionId: 第三方指令編号
+        :param TransactionId: 第三方指令編號
         :type TransactionId: str
         :param Status: 受理狀态
         :type Status: str
-        :param DeclareId: 申報流水号
+        :param DeclareId: 申報流水號
         :type DeclareId: str
-        :param OriginalDeclareId: 原申報流水号
+        :param OriginalDeclareId: 原申報流水號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OriginalDeclareId: str
         :param PayerId: 付款人ID
@@ -208,9 +208,9 @@ class ApplyOutwardOrderData(AbstractModel):
 
     def __init__(self):
         """
-        :param MerchantId: 商戶号
+        :param MerchantId: 商戶號
         :type MerchantId: str
-        :param TransactionId: 對接方匯出指令編号
+        :param TransactionId: 對接方匯出指令編號
         :type TransactionId: str
         :param Status: 受理狀态
         :type Status: str
@@ -233,7 +233,7 @@ class ApplyOutwardOrderRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TransactionId: 對接方匯出指令編号
+        :param TransactionId: 對接方匯出指令編號
         :type TransactionId: str
         :param PricingCurrency: 定價币種
         :type PricingCurrency: str
@@ -243,7 +243,7 @@ class ApplyOutwardOrderRequest(AbstractModel):
         :type TargetCurrency: str
         :param PayeeType: 收款人類型
         :type PayeeType: str
-        :param PayeeAccount: 收款人賬号
+        :param PayeeAccount: 收款人賬號
         :type PayeeAccount: str
         :param SourceAmount: 源币種金額
         :type SourceAmount: float
@@ -253,7 +253,7 @@ class ApplyOutwardOrderRequest(AbstractModel):
         :type PayeeName: str
         :param PayeeAddress: 收款人網址
         :type PayeeAddress: str
-        :param PayeeBankAccountType: 收款人銀行賬号類型
+        :param PayeeBankAccountType: 收款人銀行賬號類型
         :type PayeeBankAccountType: str
         :param PayeeCountryCode: 收款人國家或地區編碼
         :type PayeeCountryCode: str
@@ -380,7 +380,7 @@ class ApplyPayerInfoRequest(AbstractModel):
         :type PayerName: str
         :param PayerIdType: 付款人證件類型 (身份證: ID_CARD, 統一社會信用代碼: UNIFIED_CREDIT_CODE)
         :type PayerIdType: str
-        :param PayerIdNo: 付款人證件号
+        :param PayerIdNo: 付款人證件號
         :type PayerIdNo: str
         :param PayerCountryCode: 付款人常駐國家或地區編碼 (見常見問題-國家/地區編碼)
         :type PayerCountryCode: str
@@ -448,7 +448,7 @@ class ApplyPayerinfoData(AbstractModel):
 
     def __init__(self):
         """
-        :param MerchantId: 商戶号
+        :param MerchantId: 商戶號
         :type MerchantId: str
         :param PayerId: 付款人ID
         :type PayerId: str
@@ -536,7 +536,7 @@ class ApplyReWithdrawalResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param WithdrawOrderId: 重新提現業務訂單号
+        :param WithdrawOrderId: 重新提現業務訂單號
         :type WithdrawOrderId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -557,9 +557,9 @@ class ApplyTradeData(AbstractModel):
 
     def __init__(self):
         """
-        :param MerchantId: 商戶号
+        :param MerchantId: 商戶號
         :type MerchantId: str
-        :param TradeFileId: 貿易材料流水号
+        :param TradeFileId: 貿易材料流水號
         :type TradeFileId: str
         :param TradeCurrency: 交易币種
         :type TradeCurrency: str
@@ -594,9 +594,9 @@ class ApplyTradeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TradeFileId: 貿易材料流水号
+        :param TradeFileId: 貿易材料流水號
         :type TradeFileId: str
-        :param TradeOrderId: 貿易材料訂單号
+        :param TradeOrderId: 貿易材料訂單號
         :type TradeOrderId: str
         :param PayerId: 付款人ID
         :type PayerId: str
@@ -719,7 +719,7 @@ class ApplyWithdrawalRequest(AbstractModel):
         :type MidasAppId: str
         :param SubAppId: 聚鑫計費SubAppId，代表子商戶
         :type SubAppId: str
-        :param SettleAcctNo: 用于提現
+        :param SettleAcctNo: 用於提現
 <敏感訊息>加密詳見《商戶端介面敏感訊息加密說明》
         :type SettleAcctNo: str
         :param SettleAcctName: 結算帳戶戶名
@@ -735,7 +735,7 @@ class ApplyWithdrawalRequest(AbstractModel):
         :type TranWebName: str
         :param IdType: 會員證件類型
         :type IdType: str
-        :param IdCode: 會員證件号碼
+        :param IdCode: 會員證件號碼
 <敏感訊息>加密詳見《商戶端介面敏感訊息加密說明》
         :type IdCode: str
         :param MidasSecretId: 聚鑫分配的安全ID
@@ -796,9 +796,9 @@ class BankCardItem(AbstractModel):
 
     def __init__(self):
         """
-        :param EiconBankBranchId: 超級網銀行号
+        :param EiconBankBranchId: 超級網銀行號
         :type EiconBankBranchId: str
-        :param CnapsBranchId: 大小額行号
+        :param CnapsBranchId: 大小額行號
         :type CnapsBranchId: str
         :param SettleAcctType: 結算帳戶類型
 1 – 本行帳戶
@@ -809,7 +809,7 @@ class BankCardItem(AbstractModel):
         :type SettleAcctName: str
         :param AcctBranchName: 開戶行名稱
         :type AcctBranchName: str
-        :param SettleAcctNo: 用于提現
+        :param SettleAcctNo: 用於提現
 <敏感訊息>
         :type SettleAcctNo: str
         :param SubAppId: 聚鑫計費SubAppId，代表子商戶
@@ -818,13 +818,13 @@ class BankCardItem(AbstractModel):
 1 – 小額轉賬驗證
 2 – 簡訊驗證
         :type BindType: int
-        :param Mobile: 用于簡訊驗證
+        :param Mobile: 用於簡訊驗證
 BindType==2時必填
 <敏感訊息>
         :type Mobile: str
         :param IdType: 證件類型
         :type IdType: str
-        :param IdCode: 證件号碼
+        :param IdCode: 證件號碼
 <敏感訊息>
         :type IdCode: str
         """
@@ -870,7 +870,7 @@ class BindAcctRequest(AbstractModel):
 2 – 簡訊驗證
 每個結算帳戶每天只能使用一次小額轉賬驗證
         :type BindType: int
-        :param SettleAcctNo: 用于提現
+        :param SettleAcctNo: 用於提現
 <敏感訊息>加密詳見《商戶端介面敏感訊息加密說明》
         :type SettleAcctNo: str
         :param SettleAcctName: 結算帳戶戶名
@@ -881,7 +881,7 @@ class BindAcctRequest(AbstractModel):
         :type SettleAcctType: int
         :param IdType: 證件類型，見《證件類型》表
         :type IdType: str
-        :param IdCode: 證件号碼
+        :param IdCode: 證件號碼
 <敏感訊息>加密詳見《商戶端介面敏感訊息加密說明》
         :type IdCode: str
         :param AcctBranchName: 開戶行名稱
@@ -890,14 +890,14 @@ class BindAcctRequest(AbstractModel):
         :type MidasSecretId: str
         :param MidasSignature: 按照聚鑫安全金鑰計算的簽名
         :type MidasSignature: str
-        :param Mobile: 用于簡訊驗證
+        :param Mobile: 用於簡訊驗證
 BindType==2時必填
 <敏感訊息>加密詳見《商戶端介面敏感訊息加密說明》
         :type Mobile: str
-        :param CnapsBranchId: 大小額行号，超級網銀行号和大小額行号
+        :param CnapsBranchId: 大小額行號，超級網銀行號和大小額行號
 二選一
         :type CnapsBranchId: str
-        :param EiconBankBranchId: 超級網銀行号，超級網銀行号和大小額行号
+        :param EiconBankBranchId: 超級網銀行號，超級網銀行號和大小額行號
 二選一
         :type EiconBankBranchId: str
         """
@@ -958,11 +958,11 @@ class BindRelateAccReUnionPayRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
-        :param TranNetMemberCode: STRING(32)，交易網會員代碼（若需要把一個待綁定帳戶關聯到兩個會員名下，此欄位可上送兩個會員的交易網代碼，并且須用“|::|”（右側）進行分隔）
+        :param TranNetMemberCode: STRING(32)，交易網會員代碼（若需要把一個待綁定帳戶關聯到兩個會員名下，此欄位可上送兩個會員的交易網代碼，並且須用“|::|”（右側）進行分隔）
         :type TranNetMemberCode: str
-        :param MemberAcctNo: STRING(50)，會員的待綁定帳戶的賬号（即 BindRelateAcctUnionPay介面中的“會員的待綁定帳戶的賬号”）
+        :param MemberAcctNo: STRING(50)，會員的待綁定帳戶的賬號（即 BindRelateAcctUnionPay介面中的“會員的待綁定帳戶的賬號”）
         :type MemberAcctNo: str
         :param MessageCheckCode: STRING(20)，簡訊驗證碼（即 BindRelateAcctUnionPay介面中的手機所接收到的簡訊驗證碼）
         :type MessageCheckCode: str
@@ -991,7 +991,7 @@ class BindRelateAccReUnionPayResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param FrontSeqNo: STRING(52)，見證系統流水号
+        :param FrontSeqNo: STRING(52)，見證系統流水號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FrontSeqNo: str
         :param ReservedMsg: STRING(1027)，保留域
@@ -1001,7 +1001,7 @@ class BindRelateAccReUnionPayResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1030,27 +1030,27 @@ class BindRelateAcctSmallAmountRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
-        :param TranNetMemberCode: STRING(32)，交易網會員代碼（若需要把一個待綁定帳戶關聯到兩個會員名下，此欄位可上送兩個會員的交易網代碼，并且須用“|::|”(右側)進行分隔）
+        :param TranNetMemberCode: STRING(32)，交易網會員代碼（若需要把一個待綁定帳戶關聯到兩個會員名下，此欄位可上送兩個會員的交易網代碼，並且須用“|::|”(右側)進行分隔）
         :type TranNetMemberCode: str
         :param MemberName: STRING(150)，見證子帳戶的戶名（首次綁定的情況下，此欄位即爲待綁定的提現帳戶的戶名。非首次綁定的情況下，須注意帶綁定的提現帳戶的戶名須與留存在後台系統的會員戶名一緻）
         :type MemberName: str
         :param MemberGlobalType: STRING(5)，會員證件類型（詳情見“常見問題”）
         :type MemberGlobalType: str
-        :param MemberGlobalId: STRING(32)，會員證件号碼
+        :param MemberGlobalId: STRING(32)，會員證件號碼
         :type MemberGlobalId: str
-        :param MemberAcctNo: STRING(50)，會員的待綁定帳戶的賬号（提現的銀行卡）
+        :param MemberAcctNo: STRING(50)，會員的待綁定帳戶的賬號（提現的銀行卡）
         :type MemberAcctNo: str
         :param BankType: STRING(10)，會員的待綁定帳戶的本他行類型（1: 本行; 2: 他行）
         :type BankType: str
         :param AcctOpenBranchName: STRING(150)，會員的待綁定帳戶的開戶行名稱
         :type AcctOpenBranchName: str
-        :param Mobile: STRING(30)，會員的手機号（手機号須由長度爲11位的數字構成）
+        :param Mobile: STRING(30)，會員的手機號（手機號須由長度爲11位的數字構成）
         :type Mobile: str
-        :param CnapsBranchId: STRING(20)，會員的待綁定帳戶的開戶行的聯行号（本他行類型爲他行的情況下，此欄位和下一個欄位至少一個不爲空）
+        :param CnapsBranchId: STRING(20)，會員的待綁定帳戶的開戶行的聯行號（本他行類型爲他行的情況下，此欄位和下一個欄位至少一個不爲空）
         :type CnapsBranchId: str
-        :param EiconBankBranchId: STRING(20)，會員的待綁定帳戶的開戶行的超級網銀行号（本他行類型爲他行的情況下，此欄位和上一個欄位至少一個不爲空）
+        :param EiconBankBranchId: STRING(20)，會員的待綁定帳戶的開戶行的超級網銀行號（本他行類型爲他行的情況下，此欄位和上一個欄位至少一個不爲空）
         :type EiconBankBranchId: str
         :param ReservedMsg: STRING(1027)，轉賬方式（1: 往賬鑒權(預設值); 2: 來賬鑒權）
         :type ReservedMsg: str
@@ -1095,7 +1095,7 @@ class BindRelateAcctSmallAmountResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
         :param ReservedMsg: STRING(1027)，保留域（來賬鑒權的方式下，此欄位的值爲客戶需往監管帳戶轉入的金額。在同名子帳戶綁定的場景下，若返回""VERIFIED""則說明無需驗證直接綁定成功）
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -1125,27 +1125,27 @@ class BindRelateAcctUnionPayRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TranNetMemberCode: STRING(32)，交易網會員代碼（若需要把一個待綁定帳戶關聯到兩個會員名下，此欄位可上送兩個會員的交易網代碼，并且須用“|::|”（右側）進行分隔）
+        :param TranNetMemberCode: STRING(32)，交易網會員代碼（若需要把一個待綁定帳戶關聯到兩個會員名下，此欄位可上送兩個會員的交易網代碼，並且須用“|::|”（右側）進行分隔）
         :type TranNetMemberCode: str
         :param MemberName: STRING(150)，見證子帳戶的戶名（首次綁定的情況下，此欄位即爲待綁定的提現帳戶的戶名。非首次綁定的情況下，須注意帶綁定的提現帳戶的戶名須與留存在後台系統的會員戶名一緻）
         :type MemberName: str
         :param MemberGlobalType: STRING(5)，會員證件類型（詳情見“常見問題”）
         :type MemberGlobalType: str
-        :param MemberGlobalId: STRING(32)，會員證件号碼
+        :param MemberGlobalId: STRING(32)，會員證件號碼
         :type MemberGlobalId: str
-        :param MemberAcctNo: STRING(50)，會員的待綁定帳戶的賬号（提現的銀行卡）
+        :param MemberAcctNo: STRING(50)，會員的待綁定帳戶的賬號（提現的銀行卡）
         :type MemberAcctNo: str
         :param BankType: STRING(10)，會員的待綁定帳戶的本他行類型（1: 本行; 2: 他行）
         :type BankType: str
-        :param AcctOpenBranchName: STRING(150)，會員的待綁定帳戶的開戶行名稱（若大小額行号不填則送超級網銀号對應的銀行名稱，若填大小額行号則送大小額行号對應的銀行名稱）
+        :param AcctOpenBranchName: STRING(150)，會員的待綁定帳戶的開戶行名稱（若大小額行號不填則送超級網銀號對應的銀行名稱，若填大小額行號則送大小額行號對應的銀行名稱）
         :type AcctOpenBranchName: str
-        :param Mobile: STRING(30)，會員的手機号（手機号須由長度爲11位的數字構成）
+        :param Mobile: STRING(30)，會員的手機號（手機號須由長度爲11位的數字構成）
         :type Mobile: str
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
-        :param CnapsBranchId: STRING(20)，會員的待綁定帳戶的開戶行的聯行号（本他行類型爲他行的情況下，此欄位和下一個欄位至少一個不爲空）
+        :param CnapsBranchId: STRING(20)，會員的待綁定帳戶的開戶行的聯行號（本他行類型爲他行的情況下，此欄位和下一個欄位至少一個不爲空）
         :type CnapsBranchId: str
-        :param EiconBankBranchId: STRING(20)，會員的待綁定帳戶的開戶行的超級網銀行号（本他行類型爲他行的情況下，此欄位和上一個欄位至少一個不爲空）
+        :param EiconBankBranchId: STRING(20)，會員的待綁定帳戶的開戶行的超級網銀行號（本他行類型爲他行的情況下，此欄位和上一個欄位至少一個不爲空）
         :type EiconBankBranchId: str
         :param ReservedMsg: STRING(1027)，保留域
         :type ReservedMsg: str
@@ -1193,7 +1193,7 @@ class BindRelateAcctUnionPayResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1227,7 +1227,7 @@ class CheckAcctRequest(AbstractModel):
         :param BindType: 1：小額鑒權
 2：簡訊校驗鑒權
         :type BindType: int
-        :param SettleAcctNo: 結算帳戶賬号
+        :param SettleAcctNo: 結算帳戶賬號
 <敏感訊息>加密詳見《商戶端介面敏感訊息加密說明》
         :type SettleAcctNo: str
         :param MidasSecretId: 聚鑫分配的安全ID
@@ -1280,7 +1280,7 @@ class CheckAcctResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param FrontSeqNo: 前置流水号，請保存
+        :param FrontSeqNo: 前置流水號，請保存
         :type FrontSeqNo: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1301,11 +1301,11 @@ class CheckAmountRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
-        :param TranNetMemberCode: STRING(32)，交易網會員代碼（若需要把一個待綁定帳戶關聯到兩個會員名下，此欄位可上送兩個會員的交易網代碼，并且須用“|::|”(右側)進行分隔）
+        :param TranNetMemberCode: STRING(32)，交易網會員代碼（若需要把一個待綁定帳戶關聯到兩個會員名下，此欄位可上送兩個會員的交易網代碼，並且須用“|::|”(右側)進行分隔）
         :type TranNetMemberCode: str
-        :param TakeCashAcctNo: STRING(50)，會員的待綁定帳戶的賬号（即 BindRelateAcctSmallAmount介面中的“會員的待綁定帳戶的賬号”）
+        :param TakeCashAcctNo: STRING(50)，會員的待綁定帳戶的賬號（即 BindRelateAcctSmallAmount介面中的“會員的待綁定帳戶的賬號”）
         :type TakeCashAcctNo: str
         :param AuthAmt: STRING(20)，鑒權驗證金額（即 BindRelateAcctSmallAmount介面中的“會員的待綁定帳戶收到的驗證金額。原小額轉賬鑒權方式爲來賬鑒權的情況下此欄位須賦值爲0.00）
         :type AuthAmt: str
@@ -1342,9 +1342,9 @@ class CheckAmountResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
-        :param FrontSeqNo: STRING(52)，見證系統流水号（即電商見證寶系統生成的流水号，可關聯具體一筆請求）
+        :param FrontSeqNo: STRING(52)，見證系統流水號（即電商見證寶系統生成的流水號，可關聯具體一筆請求）
         :type FrontSeqNo: str
         :param ReservedMsg: STRING(1027)，保留域
         :type ReservedMsg: str
@@ -1378,7 +1378,7 @@ class ClearItem(AbstractModel):
         :param Date: STRING(8)，日期（格式: 20190101）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Date: str
-        :param SubAcctType: STRING(40)，子賬号類型（子帳号類型。1: 普通會員子賬号; 2: 挂賬子賬号; 3: 手續約子賬号; 4: 利息子賬号; 5: 平台擔保子賬号; 7: 在途; 8: 理财購買子帳号; 9: 理财贖回子帳号; 10: 平台子擁有結算子帳号）
+        :param SubAcctType: STRING(40)，子賬號類型（子帳號類型。1: 普通會員子賬號; 2: 挂賬子賬號; 3: 手續約子賬號; 4: 利息子賬號; 5: 平台擔保子賬號; 7: 在途; 8: 理财購買子帳號; 9: 理财贖回子帳號; 10: 平台子擁有結算子帳號）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SubAcctType: str
         :param ReconcileStatus: STRING(3)，對賬狀态（0: 成功; 1: 失敗）
@@ -1431,9 +1431,9 @@ class CloseOrderRequest(AbstractModel):
         :type MidasSecretId: str
         :param MidasSignature: 按照聚鑫安全金鑰計算的簽名
         :type MidasSignature: str
-        :param OutTradeNo: 業務訂單号，OutTradeNo ， TransactionId二選一，不能都爲空,優先使用 OutTradeNo
+        :param OutTradeNo: 業務訂單號，OutTradeNo ， TransactionId二選一，不能都爲空,優先使用 OutTradeNo
         :type OutTradeNo: str
-        :param TransactionId: 聚鑫訂單号，OutTradeNo ， TransactionId二選一，不能都爲空,優先使用 OutTradeNo
+        :param TransactionId: 聚鑫訂單號，OutTradeNo ， TransactionId二選一，不能都爲空,優先使用 OutTradeNo
         :type TransactionId: str
         """
         self.MidasAppId = None
@@ -1488,7 +1488,7 @@ class CreateAcctRequest(AbstractModel):
         :param Contact: 子商戶聯系人
 <敏感訊息>加密詳見《商戶端介面敏感訊息加密說明》
         :type Contact: str
-        :param Mobile: 聯系人手機号
+        :param Mobile: 聯系人手機號
 <敏感訊息>加密詳見《商戶端介面敏感訊息加密說明》
         :type Mobile: str
         :param Email: 電子信箱 
@@ -1572,17 +1572,17 @@ class CreateCustAcctIdRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param FunctionFlag: STRING(2)，功能标志（1: 開戶; 3: 銷戶）
+        :param FunctionFlag: STRING(2)，功能標志（1: 開戶; 3: 銷戶）
         :type FunctionFlag: str
-        :param FundSummaryAcctNo: STRING(50)，資金匯總賬号（即收單資金歸集入賬的賬号）
+        :param FundSummaryAcctNo: STRING(50)，資金匯總賬號（即收單資金歸集入賬的賬號）
         :type FundSummaryAcctNo: str
         :param TranNetMemberCode: STRING(32)，交易網會員代碼（平台端的用戶ID，需要保證唯一性，可數字字母混合，如HY_120）
         :type TranNetMemberCode: str
         :param MemberProperty: STRING(10)，會員屬性（00-普通子帳戶(預設); SH-商戶子帳戶）
         :type MemberProperty: str
-        :param Mobile: STRING(30)，手機号碼
+        :param Mobile: STRING(30)，手機號碼
         :type Mobile: str
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
         :param SelfBusiness: String(2)，是否爲自營業務（0位非自營，1爲自營）
         :type SelfBusiness: bool
@@ -1641,17 +1641,17 @@ class CreateCustAcctIdResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param SubAcctNo: STRING(50)，見證子帳戶的賬号（平台需要記錄下來，後續所有介面交互都會用到）
+        :param SubAcctNo: STRING(50)，見證子帳戶的賬號（平台需要記錄下來，後續所有介面交互都會用到）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SubAcctNo: str
-        :param ReservedMsg: STRING(1027)，保留域（需要開通智慧收款，此處返回智慧收款賬号，正常情況下返回空）
+        :param ReservedMsg: STRING(1027)，保留域（需要開通智慧收款，此處返回智慧收款賬號，正常情況下返回空）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ReservedMsg: str
         :param TxnReturnCode: String(20)，返回碼
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1702,9 +1702,9 @@ class CreateInvoiceItem(AbstractModel):
         :type Price: str
         :param Discount: 含稅折扣總額。單位爲分
         :type Discount: int
-        :param PreferentialPolicyFlag: 優惠政策标志。0：不使用優惠政策；1：使用優惠政策。
+        :param PreferentialPolicyFlag: 優惠政策標志。0：不使用優惠政策；1：使用優惠政策。
         :type PreferentialPolicyFlag: str
-        :param ZeroTaxFlag: 零稅率标識：
+        :param ZeroTaxFlag: 零稅率標識：
 空：非零稅率；
 0：出口零稅率；
 1：免稅；
@@ -1760,7 +1760,7 @@ class CreateInvoiceRequest(AbstractModel):
         :type TitleType: int
         :param BuyerTitle: 購方名稱
         :type BuyerTitle: str
-        :param OrderId: 業務開票号
+        :param OrderId: 業務開票號
         :type OrderId: str
         :param AmountHasTax: 含稅總金額（單位爲分）
         :type AmountHasTax: int
@@ -1768,7 +1768,7 @@ class CreateInvoiceRequest(AbstractModel):
         :type TaxAmount: int
         :param AmountWithoutTax: 不含稅總金額（單位爲分）
         :type AmountWithoutTax: int
-        :param SellerTaxpayerNum: 銷方納稅人識别号
+        :param SellerTaxpayerNum: 銷方納稅人識别號
         :type SellerTaxpayerNum: str
         :param SellerName: 銷方名稱。（不填預設讀取商戶注冊時輸入的訊息）
         :type SellerName: str
@@ -1778,21 +1778,21 @@ class CreateInvoiceRequest(AbstractModel):
         :type SellerPhone: str
         :param SellerBankName: 銷方銀行名稱。（不填預設讀取商戶注冊時輸入的訊息）
         :type SellerBankName: str
-        :param SellerBankAccount: 銷方銀行賬号。（不填預設讀取商戶注冊時輸入的訊息）
+        :param SellerBankAccount: 銷方銀行賬號。（不填預設讀取商戶注冊時輸入的訊息）
         :type SellerBankAccount: str
-        :param BuyerTaxpayerNum: 購方納稅人識别号（購方票面訊息）,若擡頭類型爲2時，必傳
+        :param BuyerTaxpayerNum: 購方納稅人識别號（購方票面訊息）,若擡頭類型爲2時，必傳
         :type BuyerTaxpayerNum: str
         :param BuyerAddress: 購方網址。開具專用發票時必填
         :type BuyerAddress: str
         :param BuyerBankName: 購方銀行名稱。開具專用發票時必填
         :type BuyerBankName: str
-        :param BuyerBankAccount: 購方銀行賬号。開具專用發票時必填
+        :param BuyerBankAccount: 購方銀行賬號。開具專用發票時必填
         :type BuyerBankAccount: str
         :param BuyerPhone: 購方電話。開具專用發票時必填
         :type BuyerPhone: str
         :param BuyerEmail: 收票人電子信箱。若填入，會收到發票推送郵件
         :type BuyerEmail: str
-        :param TakerPhone: 收票人手機号。若填入，會收到發票推送簡訊
+        :param TakerPhone: 收票人手機號。若填入，會收到發票推送簡訊
         :type TakerPhone: str
         :param InvoiceType: 開票類型：
 1：增值稅專用發票；
@@ -1810,7 +1810,7 @@ class CreateInvoiceRequest(AbstractModel):
         :type Payee: str
         :param Checker: 複核人姓名。（不填預設讀取商戶注冊時輸入的訊息）
         :type Checker: str
-        :param TerminalCode: 稅盤号
+        :param TerminalCode: 稅盤號
         :type TerminalCode: str
         :param LevyMethod: 征收方式。開具差額征稅發票時必填2。開具普通征稅發票時爲空
         :type LevyMethod: str
@@ -1957,7 +1957,7 @@ class CreateInvoiceResultData(AbstractModel):
         :type State: int
         :param InvoiceId: 發票ID
         :type InvoiceId: str
-        :param OrderSn: 業務開票号
+        :param OrderSn: 業務開票號
         :type OrderSn: str
         """
         self.State = None
@@ -1982,13 +1982,13 @@ class CreateMerchantRequest(AbstractModel):
         :type InvoicePlatformId: int
         :param TaxpayerName: 企業名稱
         :type TaxpayerName: str
-        :param TaxpayerNum: 銷方納稅人識别号
+        :param TaxpayerNum: 銷方納稅人識别號
         :type TaxpayerNum: str
         :param LegalPersonName: 注冊企業法定代表人名稱
         :type LegalPersonName: str
         :param ContactsName: 聯系人
         :type ContactsName: str
-        :param Phone: 聯系人手機号
+        :param Phone: 聯系人手機號
         :type Phone: str
         :param Address: 不包含省市名稱的網址
         :type Address: str
@@ -2006,7 +2006,7 @@ class CreateMerchantRequest(AbstractModel):
         :type BusinessMobile: str
         :param BankName: 銀行名稱
         :type BankName: str
-        :param BankAccount: 銀行賬号
+        :param BankAccount: 銀行賬號
         :type BankAccount: str
         :param Reviewer: 複核人
         :type Reviewer: str
@@ -2132,9 +2132,9 @@ class CreateMerchantResultData(AbstractModel):
         """
         :param TaxpayerName: 企業名稱
         :type TaxpayerName: str
-        :param SerialNo: 請求流水号
+        :param SerialNo: 請求流水號
         :type SerialNo: str
-        :param TaxpayerNum: 納稅号
+        :param TaxpayerNum: 納稅號
         :type TaxpayerNum: str
         """
         self.TaxpayerName = None
@@ -2155,11 +2155,11 @@ class CreateRedInvoiceItem(AbstractModel):
 
     def __init__(self):
         """
-        :param OrderId: 訂單号
+        :param OrderId: 訂單號
         :type OrderId: str
         :param CallbackUrl: 發票結果回傳網址
         :type CallbackUrl: str
-        :param OrderSn: 業務開票号
+        :param OrderSn: 業務開票號
         :type OrderSn: str
         :param RedSerialNo: 紅字訊息表編碼
         :type RedSerialNo: str
@@ -2274,7 +2274,7 @@ class CreateRedInvoiceResultData(AbstractModel):
         :type Message: str
         :param InvoiceId: 發票ID
         :type InvoiceId: str
-        :param OrderSn: 業務開票号
+        :param OrderSn: 業務開票號
         :type OrderSn: str
         """
         self.Code = None
@@ -2388,17 +2388,17 @@ class ModifyMntMbrBindRelateAcctBankCodeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
-        :param SubAcctNo: STRING(50)，見證子帳戶的賬号
+        :param SubAcctNo: STRING(50)，見證子帳戶的賬號
         :type SubAcctNo: str
-        :param MemberBindAcctNo: STRING(50)，會員綁定賬号
+        :param MemberBindAcctNo: STRING(50)，會員綁定賬號
         :type MemberBindAcctNo: str
-        :param AcctOpenBranchName: STRING(150)，開戶行名稱（若大小額行号不填則送超級網銀号對應的銀行名稱，若填大小額行号則送大小額行号對應的銀行名稱）
+        :param AcctOpenBranchName: STRING(150)，開戶行名稱（若大小額行號不填則送超級網銀號對應的銀行名稱，若填大小額行號則送大小額行號對應的銀行名稱）
         :type AcctOpenBranchName: str
-        :param CnapsBranchId: STRING(20)，大小額行号（CnapsBranchId和EiconBankBranchId兩者二選一必填）
+        :param CnapsBranchId: STRING(20)，大小額行號（CnapsBranchId和EiconBankBranchId兩者二選一必填）
         :type CnapsBranchId: str
-        :param EiconBankBranchId: STRING(20)，超級網銀行号
+        :param EiconBankBranchId: STRING(20)，超級網銀行號
         :type EiconBankBranchId: str
         :param ReservedMsg: STRING(1027)，保留域
         :type ReservedMsg: str
@@ -2433,7 +2433,7 @@ class ModifyMntMbrBindRelateAcctBankCodeResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
         :param ReservedMsg: STRING(1027)，保留域
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -2528,7 +2528,7 @@ class QueryAcctInfoListRequest(AbstractModel):
         :type QueryAcctBeginTime: str
         :param QueryAcctEndTime: 查詢結束時間(以開戶時間爲準)
         :type QueryAcctEndTime: str
-        :param PageOffset: 分頁号,  起始值爲1，每次最多返回20條記錄，第二頁返回的記錄數爲第21至40條記錄，第三頁爲41至60條記錄，順序均按照開戶時間的先後
+        :param PageOffset: 分頁號,  起始值爲1，每次最多返回20條記錄，第二頁返回的記錄數爲第21至40條記錄，第三頁爲41至60條記錄，順序均按照開戶時間的先後
         :type PageOffset: str
         :param MidasSecretId: 由平台客服提供的計費金鑰Id
         :type MidasSecretId: str
@@ -2638,7 +2638,7 @@ class QueryAcctInfoResponse(AbstractModel):
         :param Contact: 子商戶聯系人子商戶聯系人
 <敏感訊息>
         :type Contact: str
-        :param Mobile: 聯系人手機号
+        :param Mobile: 聯系人手機號
 <敏感訊息>
         :type Mobile: str
         :param Email: 電子信箱 
@@ -2700,7 +2700,7 @@ class QueryAcctItem(AbstractModel):
         :type SubMchType: str
         :param SubMchName: 子商戶名稱
         :type SubMchName: str
-        :param SubAcctNo: 子賬号号
+        :param SubAcctNo: 子賬號號
         :type SubAcctNo: str
         :param ShortName: 不填則預設子商戶名稱
         :type ShortName: str
@@ -2713,7 +2713,7 @@ class QueryAcctItem(AbstractModel):
         :type Contact: str
         :param Address: 子商戶網址
         :type Address: str
-        :param Mobile: 聯系人手機号
+        :param Mobile: 聯系人手機號
 <敏感訊息>
         :type Mobile: str
         :param Email: 電子信箱 
@@ -2760,7 +2760,7 @@ class QueryApplicationMaterialRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param DeclareId: 申報流水号
+        :param DeclareId: 申報流水號
         :type DeclareId: str
         :param Profile: 接入環境。沙箱環境填sandbox
         :type Profile: str
@@ -2808,8 +2808,8 @@ class QueryBalanceRequest(AbstractModel):
         :type MidasAppId: str
         :param SubAppId: 聚鑫計費SubAppId，代表子商戶
         :type SubAppId: str
-        :param QueryFlag: 2：普通會員子賬号
-3：功能子賬号
+        :param QueryFlag: 2：普通會員子賬號
+3：功能子賬號
         :type QueryFlag: str
         :param PageOffset: 起始值爲1，每次最多返回20條記錄，第二頁返回的記錄數爲第21至40條記錄，第三頁爲41至60條記錄，順序均按照建立時間的先後
         :type PageOffset: str
@@ -2844,9 +2844,9 @@ class QueryBalanceResponse(AbstractModel):
         """
         :param ResultCount: 本次交易返回查詢結果記錄數
         :type ResultCount: str
-        :param StartRecordOffset: 起始記錄号
+        :param StartRecordOffset: 起始記錄號
         :type StartRecordOffset: str
-        :param EndFlag: 結束标志
+        :param EndFlag: 結束標志
         :type EndFlag: str
         :param TotalCount: 符合業務查詢條件的記錄總數
         :type TotalCount: str
@@ -2884,9 +2884,9 @@ class QueryBankClearRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
-        :param FunctionFlag: STRING(2)，功能标志（1: 全部; 2: 指定時間段）
+        :param FunctionFlag: STRING(2)，功能標志（1: 全部; 2: 指定時間段）
         :type FunctionFlag: str
         :param PageNum: STRING (10)，頁碼（起始值爲1，每次最多返回20條記錄，第二頁返回的記錄數爲第21至40條記錄，第三頁爲41至60條記錄，順序均按照建立時間的先後）
         :type PageNum: str
@@ -2925,15 +2925,15 @@ class QueryBankClearResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
         :param ResultNum: STRING (10)，本次交易返回查詢結果記錄數
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ResultNum: str
-        :param StartRecordNo: STRING(30)，起始記錄号
+        :param StartRecordNo: STRING(30)，起始記錄號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type StartRecordNo: str
-        :param EndFlag: STRING(2)，結束标志（0: 否; 1: 是）
+        :param EndFlag: STRING(2)，結束標志（0: 否; 1: 是）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EndFlag: str
         :param TotalNum: STRING (10)，符合業務查詢條件的記錄總數（重複次數, 一次最多返回20條記錄）
@@ -2985,13 +2985,13 @@ class QueryBankTransactionDetailsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
-        :param FunctionFlag: STRING(2)，功能标志（1: 當日; 2: 曆史）
+        :param FunctionFlag: STRING(2)，功能標志（1: 當日; 2: 曆史）
         :type FunctionFlag: str
-        :param SubAcctNo: STRING(50)，見證子帳戶的帳号
+        :param SubAcctNo: STRING(50)，見證子帳戶的帳號
         :type SubAcctNo: str
-        :param QueryFlag: STRING(4)，查詢标志（1: 全部; 2: 轉出; 3: 轉入 ）
+        :param QueryFlag: STRING(4)，查詢標志（1: 全部; 2: 轉出; 3: 轉入 ）
         :type QueryFlag: str
         :param PageNum: STRING(10)，頁碼（起始值爲1，每次最多返回20條記錄，第二頁返回的記錄數爲第21至40條記錄，第三頁爲41至60條記錄，順序均按照建立時間的先後）
         :type PageNum: str
@@ -3034,15 +3034,15 @@ class QueryBankTransactionDetailsResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
         :param ResultNum: STRING(10)，本次交易返回查詢結果記錄數
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ResultNum: str
-        :param StartRecordNo: STRING(30)，起始記錄号
+        :param StartRecordNo: STRING(30)，起始記錄號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type StartRecordNo: str
-        :param EndFlag: STRING(2)，結束标志（0: 否; 1: 是）
+        :param EndFlag: STRING(2)，結束標志（0: 否; 1: 是）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EndFlag: str
         :param TotalNum: STRING(10)，符合業務查詢條件的記錄總數（重複次數，一次最多返回20條記錄）
@@ -3094,13 +3094,13 @@ class QueryBankWithdrawCashDetailsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
-        :param FunctionFlag: STRING(2)，功能标志（1: 當日; 2: 曆史）
+        :param FunctionFlag: STRING(2)，功能標志（1: 當日; 2: 曆史）
         :type FunctionFlag: str
-        :param SubAcctNo: STRING(50)，見證子帳戶的帳号
+        :param SubAcctNo: STRING(50)，見證子帳戶的帳號
         :type SubAcctNo: str
-        :param QueryFlag: STRING(4)，查詢标志（2: 提現; 3: 清分）
+        :param QueryFlag: STRING(4)，查詢標志（2: 提現; 3: 清分）
         :type QueryFlag: str
         :param PageNum: STRING(10)，頁碼（起始值爲1，每次最多返回20條記錄，第二頁返回的記錄數爲第21至40條記錄，第三頁爲41至60條記錄，順序均按照建立時間的先後）
         :type PageNum: str
@@ -3143,15 +3143,15 @@ class QueryBankWithdrawCashDetailsResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
         :param ResultNum: STRING(10)，本次交易返回查詢結果記錄數
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ResultNum: str
-        :param StartRecordNo: STRING(30)，起始記錄号
+        :param StartRecordNo: STRING(30)，起始記錄號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type StartRecordNo: str
-        :param EndFlag: STRING(2)，結束标志（0:否; 1:是）
+        :param EndFlag: STRING(2)，結束標志（0:否; 1:是）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EndFlag: str
         :param TotalNum: STRING(10)，符合業務查詢條件的記錄總數（重複次數，一次最多返回20條記錄）
@@ -3203,9 +3203,9 @@ class QueryCommonTransferRechargeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
-        :param FunctionFlag: STRING(2)，功能标志（1爲查詢當日數據，0查詢曆史數據）
+        :param FunctionFlag: STRING(2)，功能標志（1爲查詢當日數據，0查詢曆史數據）
         :type FunctionFlag: str
         :param StartDate: STRING(8)，開始日期（格式：20190101）
         :type StartDate: str
@@ -3244,15 +3244,15 @@ class QueryCommonTransferRechargeResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
         :param ResultNum: STRING(10)，本次交易返回查詢結果記錄數
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ResultNum: str
-        :param StartRecordNo: STRING(30)，起始記錄号
+        :param StartRecordNo: STRING(30)，起始記錄號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type StartRecordNo: str
-        :param EndFlag: STRING(2)，結束标志（0: 否; 1: 是）
+        :param EndFlag: STRING(2)，結束標志（0: 否; 1: 是）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EndFlag: str
         :param TotalNum: STRING(10)，符合業務查詢條件的記錄總數（重複次數，一次最多返回20條記錄）
@@ -3304,13 +3304,13 @@ class QueryCustAcctIdBalanceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
-        :param QueryFlag: STRING(4)，查詢标志（2: 普通會員子賬号; 3: 功能子賬号）
+        :param QueryFlag: STRING(4)，查詢標志（2: 普通會員子賬號; 3: 功能子賬號）
         :type QueryFlag: str
         :param PageNum: STRING(10)，頁碼（起始值爲1，每次最多返回20條記錄，第二頁返回的記錄數爲第21至40條記錄，第三頁爲41至60條記錄，順序均按照建立時間的先後）
         :type PageNum: str
-        :param SubAcctNo: STRING(50)，見證子帳戶的賬号（若SelectFlag爲2時，子賬号必輸）
+        :param SubAcctNo: STRING(50)，見證子帳戶的賬號（若SelectFlag爲2時，子賬號必輸）
         :type SubAcctNo: str
         :param ReservedMsg: STRING(1027)，保留域
         :type ReservedMsg: str
@@ -3341,15 +3341,15 @@ class QueryCustAcctIdBalanceResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
         :param ResultNum: STRING(10)，本次交易返回查詢結果記錄數
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ResultNum: str
-        :param StartRecordNo: STRING(30)，起始記錄号
+        :param StartRecordNo: STRING(30)，起始記錄號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type StartRecordNo: str
-        :param EndFlag: STRING(2)，結束标志（0: 否; 1: 是）
+        :param EndFlag: STRING(2)，結束標志（0: 否; 1: 是）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EndFlag: str
         :param TotalNum: STRING(10)，符合業務查詢條件的記錄總數（重複次數，一次最多返回20條記錄）
@@ -3401,13 +3401,13 @@ class QueryDeclareData(AbstractModel):
 
     def __init__(self):
         """
-        :param MerchantId: 商戶号
+        :param MerchantId: 商戶號
         :type MerchantId: str
-        :param TransactionId: 對接方匯出指令編号
+        :param TransactionId: 對接方匯出指令編號
         :type TransactionId: str
-        :param DeclareId: 申報流水号
+        :param DeclareId: 申報流水號
         :type DeclareId: str
-        :param OriginalDeclareId: 原申報流水号
+        :param OriginalDeclareId: 原申報流水號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OriginalDeclareId: str
         :param PayerId: 付款人ID
@@ -3594,9 +3594,9 @@ class QueryInvoiceRequest(AbstractModel):
         """
         :param InvoicePlatformId: 開票平台ID
         :type InvoicePlatformId: int
-        :param OrderId: 訂單号
+        :param OrderId: 訂單號
         :type OrderId: str
-        :param OrderSn: 業務開票号
+        :param OrderSn: 業務開票號
         :type OrderSn: str
         :param IsRed: 發票種類：
 0：藍票
@@ -3678,9 +3678,9 @@ class QueryInvoiceResultData(AbstractModel):
 
     def __init__(self):
         """
-        :param OrderId: 訂單号
+        :param OrderId: 訂單號
         :type OrderId: str
-        :param OrderSn: 業務開票号
+        :param OrderSn: 業務開票號
         :type OrderSn: str
         :param Status: 發票狀态
         :type Status: int
@@ -3688,7 +3688,7 @@ class QueryInvoiceResultData(AbstractModel):
         :type Message: str
         :param TicketDate: 開票日期
         :type TicketDate: str
-        :param TicketSn: 發票号碼
+        :param TicketSn: 發票號碼
         :type TicketSn: str
         :param TicketCode: 發票代碼
         :type TicketCode: str
@@ -3746,11 +3746,11 @@ class QueryItem(AbstractModel):
         :param SubAcctNo: 子商戶帳戶
         :type SubAcctNo: str
         :param SubAcctProperty: 子帳戶屬性 
-1：普通會員子賬号 
-2：挂賬子賬号 
-3：手續約子賬号 
-4：利息子賬号
-5：平台擔保子賬号
+1：普通會員子賬號 
+2：挂賬子賬號 
+3：手續約子賬號 
+4：利息子賬號
+5：平台擔保子賬號
         :type SubAcctProperty: str
         :param SubMchId: 業務平台的子商戶Id，唯一
         :type SubMchId: str
@@ -3789,13 +3789,13 @@ class QueryMemberBindRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
-        :param QueryFlag: STRING(4)，查詢标志（1: 全部會員; 2: 單個會員; 3: 單個會員的證件訊息）
+        :param QueryFlag: STRING(4)，查詢標志（1: 全部會員; 2: 單個會員; 3: 單個會員的證件訊息）
         :type QueryFlag: str
         :param PageNum: STRING (10)，頁碼（起始值爲1，每次最多返回20條記錄，第二頁返回的記錄數爲第21至40條記錄，第三頁爲41至60條記錄，順序均按照建立時間的先後）
         :type PageNum: str
-        :param SubAcctNo: STRING(50)，見證子帳戶的賬号（若SelectFlag爲2或3時，子帳戶賬号必輸）
+        :param SubAcctNo: STRING(50)，見證子帳戶的賬號（若SelectFlag爲2或3時，子帳戶賬號必輸）
         :type SubAcctNo: str
         :param ReservedMsg: STRING(1027)，保留域
         :type ReservedMsg: str
@@ -3825,10 +3825,10 @@ class QueryMemberBindResponse(AbstractModel):
         :param ResultNum: STRING (10)，本次交易返回查詢結果記錄數
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ResultNum: str
-        :param StartRecordNo: STRING(30)，起始記錄号
+        :param StartRecordNo: STRING(30)，起始記錄號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type StartRecordNo: str
-        :param EndFlag: STRING(2)，結束标志（0: 否; 1: 是）
+        :param EndFlag: STRING(2)，結束標志（0: 否; 1: 是）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EndFlag: str
         :param TotalNum: STRING (10)，符合業務查詢條件的記錄總數（重複次數，一次最多返回20條記錄）
@@ -3844,7 +3844,7 @@ class QueryMemberBindResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3886,17 +3886,17 @@ class QueryMemberTransactionRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
-        :param FunctionFlag: STRING(2)，功能标志（1: 下單預支付; 2: 确認并付款; 3: 退款; 6: 直接支付T+1; 9: 直接支付T+0）
+        :param FunctionFlag: STRING(2)，功能標志（1: 下單預支付; 2: 确認並付款; 3: 退款; 6: 直接支付T+1; 9: 直接支付T+0）
         :type FunctionFlag: str
-        :param OutSubAcctNo: STRING(50)，轉出方的見證子帳戶的賬号（付款方）
+        :param OutSubAcctNo: STRING(50)，轉出方的見證子帳戶的賬號（付款方）
         :type OutSubAcctNo: str
         :param OutMemberCode: STRING(32)，轉出方的交易網會員代碼
         :type OutMemberCode: str
         :param OutSubAcctName: STRING(150)，轉出方的見證子帳戶的戶名（戶名是綁卡時上送的帳戶名稱，如果未綁卡，就送OpenCustAcctId介面上送的用戶昵稱UserNickname）
         :type OutSubAcctName: str
-        :param InSubAcctNo: STRING(50)，轉入方的見證子帳戶的賬号（收款方）
+        :param InSubAcctNo: STRING(50)，轉入方的見證子帳戶的賬號（收款方）
         :type InSubAcctNo: str
         :param InMemberCode: STRING(32)，轉入方的交易網會員代碼
         :type InMemberCode: str
@@ -3910,13 +3910,13 @@ class QueryMemberTransactionRequest(AbstractModel):
         :type TranType: str
         :param Ccy: STRING(3)，币種（預設: RMB）
         :type Ccy: str
-        :param OrderNo: STRING(50)，訂單号（功能标志爲1,2,3時必輸）
+        :param OrderNo: STRING(50)，訂單號（功能標志爲1,2,3時必輸）
         :type OrderNo: str
         :param OrderContent: STRING(500)，訂單内容
         :type OrderContent: str
-        :param Remark: STRING(300)，備注（建議可送訂單号，可在對賬文件的備注欄位獲取到）
+        :param Remark: STRING(300)，備注（建議可送訂單號，可在對賬文件的備注欄位獲取到）
         :type Remark: str
-        :param ReservedMsg: STRING(1027)，保留域（若需簡訊驗證碼則此項必輸簡訊指令号）
+        :param ReservedMsg: STRING(1027)，保留域（若需簡訊驗證碼則此項必輸簡訊指令號）
         :type ReservedMsg: str
         :param WebSign: STRING(300)，網銀簽名（若需簡訊驗證碼則此項必輸）
         :type WebSign: str
@@ -3971,9 +3971,9 @@ class QueryMemberTransactionResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
-        :param FrontSeqNo: STRING(52)，見證系統流水号（即電商見證寶系統生成的流水号，可關聯具體一筆請求）
+        :param FrontSeqNo: STRING(52)，見證系統流水號（即電商見證寶系統生成的流水號，可關聯具體一筆請求）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FrontSeqNo: str
         :param ReservedMsg: STRING(1027)，保留域
@@ -4106,7 +4106,7 @@ class QueryOrderOutOrderList(AbstractModel):
         :type UserId: str
         :param CashAmt: 現金支付金額
         :type CashAmt: str
-        :param Metadata: 發貨标識，由業務在調用聚鑫下單 介面的時候下發
+        :param Metadata: 發貨標識，由業務在調用聚鑫下單 介面的時候下發
         :type Metadata: str
         :param PayTime: 支付時間unix時間戳
         :type PayTime: str
@@ -4133,7 +4133,7 @@ bank：網銀
         :type Channel: str
         :param RefundFlag: 是否曾退款
         :type RefundFlag: str
-        :param OutTradeNo: 務支付訂單号
+        :param OutTradeNo: 務支付訂單號
         :type OutTradeNo: str
         :param ProductName: 商品名稱
         :type ProductName: str
@@ -4145,11 +4145,11 @@ bank：網銀
         :type AcctSubAppId: str
         :param TransactionId: 調用下單介面獲取的聚鑫交易訂單
         :type TransactionId: str
-        :param ChannelOrderId: 聚鑫内部管道訂單号
+        :param ChannelOrderId: 聚鑫内部管道訂單號
         :type ChannelOrderId: str
         :param SubOrderList: 調用下單介面傳進來的 SubOutTradeNoList
         :type SubOrderList: list of QueryOrderOutSubOrderList
-        :param ChannelExternalOrderId: 支付機構訂單号
+        :param ChannelExternalOrderId: 支付機構訂單號
         :type ChannelExternalOrderId: str
         """
         self.MidasAppId = None
@@ -4217,7 +4217,7 @@ class QueryOrderOutSubOrderList(AbstractModel):
         :type Amt: int
         :param SubMchIncome: 子訂單結算應收金額，單位：分
         :type SubMchIncome: int
-        :param Metadata: 發貨标識，由業務在調用Midas下單介面的時候下發。
+        :param Metadata: 發貨標識，由業務在調用Midas下單介面的時候下發。
         :type Metadata: str
         :param OriginalAmt: 子訂單原始金額
         :type OriginalAmt: int
@@ -4231,7 +4231,7 @@ class QueryOrderOutSubOrderList(AbstractModel):
         :type SettleCheck: int
         :param SubAppId: 聚鑫計費SubAppId，代表子商戶
         :type SubAppId: str
-        :param SubOutTradeNo: 子訂單号
+        :param SubOutTradeNo: 子訂單號
         :type SubOutTradeNo: str
         """
         self.Amt = None
@@ -4270,24 +4270,24 @@ class QueryOrderRequest(AbstractModel):
         :type MidasAppId: str
         :param UserId: 用戶ID，長度不小於5位， 僅支援字母和數字的組合
         :type UserId: str
-        :param Type: type=by_order根據訂單号 查訂單；
+        :param Type: type=by_order根據訂單號 查訂單；
 type=by_user根據用戶id 查訂單 。
         :type Type: str
         :param MidasSecretId: 聚鑫分配的安全ID
         :type MidasSecretId: str
         :param MidasSignature: 按照聚鑫安全金鑰計算的簽名
         :type MidasSignature: str
-        :param Count: 每頁返回的記錄數。根據用戶 号碼查詢訂單清單時需要傳。 用于分頁展示。Type=by_order時必填
+        :param Count: 每頁返回的記錄數。根據用戶 號碼查詢訂單清單時需要傳。 用於分頁展示。Type=by_order時必填
         :type Count: int
-        :param Offset: 記錄數偏移量，預設從0開 始。根據用戶号碼查詢訂單列 表時需要傳。用于分頁展示。Type=by_order時必填
+        :param Offset: 記錄數偏移量，預設從0開 始。根據用戶號碼查詢訂單列 表時需要傳。用於分頁展示。Type=by_order時必填
         :type Offset: int
         :param StartTime: 查詢開始時間，Unix時間戳。Type=by_order時必填
         :type StartTime: str
         :param EndTime: 查詢結束時間，Unix時間戳。Type=by_order時必填
         :type EndTime: str
-        :param OutTradeNo: 業務訂單号，OutTradeNo與 TransactionId不能同時爲 空，都傳優先使用 OutTradeNo
+        :param OutTradeNo: 業務訂單號，OutTradeNo與 TransactionId不能同時爲 空，都傳優先使用 OutTradeNo
         :type OutTradeNo: str
-        :param TransactionId: 聚鑫訂單号，OutTradeNo與 TransactionId不能同時爲 空，都傳優先使用 OutTradeNo
+        :param TransactionId: 聚鑫訂單號，OutTradeNo與 TransactionId不能同時爲 空，都傳優先使用 OutTradeNo
         :type TransactionId: str
         """
         self.MidasAppId = None
@@ -4354,9 +4354,9 @@ class QueryOutwardOrderData(AbstractModel):
 
     def __init__(self):
         """
-        :param MerchantId: 商戶号
+        :param MerchantId: 商戶號
         :type MerchantId: str
-        :param TransactionId: 對接方匯出指令編号
+        :param TransactionId: 對接方匯出指令編號
         :type TransactionId: str
         :param AcctDate: 财務日期
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -4429,7 +4429,7 @@ class QueryOutwardOrderRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TransactionId: 對接方匯出指令編号
+        :param TransactionId: 對接方匯出指令編號
         :type TransactionId: str
         :param Profile: 接入環境。沙箱環境填sandbox
         :type Profile: str
@@ -4540,7 +4540,7 @@ class QueryPayerinfoData(AbstractModel):
 
     def __init__(self):
         """
-        :param MerchantId: 商戶号
+        :param MerchantId: 商戶號
         :type MerchantId: str
         :param PayerId: 付款人ID
         :type PayerId: str
@@ -4555,7 +4555,7 @@ class QueryPayerinfoData(AbstractModel):
         :type PayerName: str
         :param PayerIdType: 付款人證件類型
         :type PayerIdType: str
-        :param PayerIdNo: 付款人證件号
+        :param PayerIdNo: 付款人證件號
         :type PayerIdNo: str
         :param PayerContactNumber: 付款人聯系電話
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -4628,7 +4628,7 @@ class QueryReconciliationDocumentRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号
+        :param MrchCode: String(22)，商戶號
         :type MrchCode: str
         :param FileType: STRING(10)，文件類型（儲值文件-CZ; 提現文件-TX; 交易文件-JY; 餘額文件-YE; 合約文件-HY）
         :type FileType: str
@@ -4661,7 +4661,7 @@ class QueryReconciliationDocumentResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
         :param ResultNum: STRING(10)，本次交易返回查詢結果記錄數
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -4708,7 +4708,7 @@ class QueryRefundRequest(AbstractModel):
         """
         :param UserId: 用戶ID，長度不小於5位，僅支援字母和數字的組合。
         :type UserId: str
-        :param RefundId: 退款訂單号，僅支援數字、字母、下劃線（_）、橫杠字元（-）、點（.）的組合。
+        :param RefundId: 退款訂單號，僅支援數字、字母、下劃線（_）、橫杠字元（-）、點（.）的組合。
         :type RefundId: str
         :param MidasAppId: 聚鑫分配的支付主MidasAppId
         :type MidasAppId: str
@@ -4760,13 +4760,13 @@ class QuerySingleTransactionStatusRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
-        :param FunctionFlag: STRING(2)，功能标志（2: 會員間交易; 3: 提現; 4: 儲值）
+        :param FunctionFlag: STRING(2)，功能標志（2: 會員間交易; 3: 提現; 4: 儲值）
         :type FunctionFlag: str
-        :param TranNetSeqNo: STRING(52)，交易網流水号（提現，儲值或會員交易請求時的CnsmrSeqNo值）
+        :param TranNetSeqNo: STRING(52)，交易網流水號（提現，儲值或會員交易請求時的CnsmrSeqNo值）
         :type TranNetSeqNo: str
-        :param SubAcctNo: STRING(50)，見證子帳戶的帳号（未啓用）
+        :param SubAcctNo: STRING(50)，見證子帳戶的帳號（未啓用）
         :type SubAcctNo: str
         :param TranDate: STRING(8)，交易日期（未啓用）
         :type TranDate: str
@@ -4801,9 +4801,9 @@ class QuerySingleTransactionStatusResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
-        :param BookingFlag: STRING(2)，記賬标志（記賬标志。1: 登記挂賬; 2: 支付; 3: 提現; 4: 清分; 5: 下單預支付; 6: 确認并付款; 7: 退款; 8: 支付到平台; N: 其他）
+        :param BookingFlag: STRING(2)，記賬標志（記賬標志。1: 登記挂賬; 2: 支付; 3: 提現; 4: 清分; 5: 下單預支付; 6: 确認並付款; 7: 退款; 8: 支付到平台; N: 其他）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type BookingFlag: str
         :param TranStatus: STRING(32)，交易狀态（0: 成功; 1: 失敗; 2: 待确認; 5: 待處理; 6: 處理中。0和1是終态，2、5、6是中間态，其中2是特指提現後待确認提現是否成功，5是銀行收到交易等待處理，6是交易正在處理）
@@ -4818,16 +4818,16 @@ class QuerySingleTransactionStatusResponse(AbstractModel):
         :param TranTime: STRING(20)，交易時間
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TranTime: str
-        :param InSubAcctNo: STRING(50)，轉入子帳戶賬号
+        :param InSubAcctNo: STRING(50)，轉入子帳戶賬號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InSubAcctNo: str
-        :param OutSubAcctNo: STRING(50)，轉出子帳戶賬号
+        :param OutSubAcctNo: STRING(50)，轉出子帳戶賬號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OutSubAcctNo: str
         :param FailMsg: STRING(300)，失敗訊息（當提現失敗時，返回交易失敗原因）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FailMsg: str
-        :param OldTranFrontSeqNo: STRING(50)，原前置流水号
+        :param OldTranFrontSeqNo: STRING(50)，原前置流水號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OldTranFrontSeqNo: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -4871,9 +4871,9 @@ class QuerySmallAmountTransferRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
-        :param OldTranSeqNo: STRING(52)，原交易流水号（小額鑒權交易請求時的CnsmrSeqNo值）
+        :param OldTranSeqNo: STRING(52)，原交易流水號（小額鑒權交易請求時的CnsmrSeqNo值）
         :type OldTranSeqNo: str
         :param TranDate: STRING(8)，交易日期（格式：20190101）
         :type TranDate: str
@@ -4904,7 +4904,7 @@ class QuerySmallAmountTransferResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
         :param ReturnStatus: STRING(10)，返回狀态（0: 成功; 1: 失敗; 2: 待确認）
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -4944,11 +4944,11 @@ class QueryTradeData(AbstractModel):
 
     def __init__(self):
         """
-        :param MerchantId: 商戶号
+        :param MerchantId: 商戶號
         :type MerchantId: str
-        :param TradeFileId: 貿易材料流水号
+        :param TradeFileId: 貿易材料流水號
         :type TradeFileId: str
-        :param TradeOrderId: 貿易材料訂單号
+        :param TradeOrderId: 貿易材料訂單號
         :type TradeOrderId: str
         :param Status: 審核狀态
         :type Status: str
@@ -5029,7 +5029,7 @@ class QueryTradeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TradeFileId: 貿易材料流水号
+        :param TradeFileId: 貿易材料流水號
         :type TradeFileId: str
         :param Profile: 接入環境。沙箱環境填sandbox
         :type Profile: str
@@ -5109,13 +5109,13 @@ class RechargeMemberThirdPayRequest(AbstractModel):
 0002-支付寶
 0003-京東支付
         :type PayChannelType: str
-        :param PayChannelAssignMerNo: STRING(50)，支付管道所分配的商戶号
+        :param PayChannelAssignMerNo: STRING(50)，支付管道所分配的商戶號
         :type PayChannelAssignMerNo: str
-        :param PayChannelTranSeqNo: STRING(52)，支付管道交易流水号
+        :param PayChannelTranSeqNo: STRING(52)，支付管道交易流水號
         :type PayChannelTranSeqNo: str
-        :param EjzbOrderNo: STRING(52)，電商見證寶訂單号
+        :param EjzbOrderNo: STRING(52)，電商見證寶訂單號
         :type EjzbOrderNo: str
-        :param MrchCode: String(22)，商戶号
+        :param MrchCode: String(22)，商戶號
         :type MrchCode: str
         :param EjzbOrderContent: STRING(500)，電商見證寶訂單内容
         :type EjzbOrderContent: str
@@ -5172,9 +5172,9 @@ class RechargeMemberThirdPayResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
-        :param FrontSeqNo: STRING(52)，前置流水号
+        :param FrontSeqNo: STRING(52)，前置流水號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FrontSeqNo: str
         :param MemberSubAcctPreAvailBal: STRING(20)，會員子帳戶交易前可用餘額
@@ -5223,9 +5223,9 @@ class RefundOutSubOrderRefundList(AbstractModel):
         :type RefundAmt: int
         :param SubMchRefundAmt: 商家應退金額
         :type SubMchRefundAmt: int
-        :param SubOutTradeNo: 子訂單号
+        :param SubOutTradeNo: 子訂單號
         :type SubOutTradeNo: str
-        :param SubRefundId: 子退款單号，調用方需要保證 全局唯一性
+        :param SubRefundId: 子退款單號，調用方需要保證 全局唯一性
         :type SubRefundId: str
         """
         self.PlatformRefundAmt = None
@@ -5252,7 +5252,7 @@ class RefundRequest(AbstractModel):
         """
         :param UserId: 用戶ID，長度不小於5位， 僅支援字母和數字的組合
         :type UserId: str
-        :param RefundId: 退款訂單号，僅支援數字、 字母、下劃線（_）、橫杠字 符（-）、點（.）的組合
+        :param RefundId: 退款訂單號，僅支援數字、 字母、下劃線（_）、橫杠字 符（-）、點（.）的組合
         :type RefundId: str
         :param MidasAppId: 聚鑫分配的支付主MidasAppId
         :type MidasAppId: str
@@ -5331,13 +5331,13 @@ class RegisterBillSupportWithdrawRequest(AbstractModel):
         """
         :param TranNetMemberCode: STRING(32)，交易網會員代碼
         :type TranNetMemberCode: str
-        :param OrderNo: STRING(50)，訂單号
+        :param OrderNo: STRING(50)，訂單號
         :type OrderNo: str
         :param SuspendAmt: STRING(20)，挂賬金額（包含交易費用）
         :type SuspendAmt: str
         :param TranFee: STRING(20)，交易費用（暫未使用，預設傳0.0）
         :type TranFee: str
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
         :param Remark: STRING(300)，備注
         :type Remark: str
@@ -5382,10 +5382,10 @@ class RegisterBillSupportWithdrawResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param FrontSeqNo: STRING(52)，見證系統流水号
+        :param FrontSeqNo: STRING(52)，見證系統流水號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FrontSeqNo: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CnsmrSeqNo: str
         :param ReservedMsg: STRING(1027)，保留域
@@ -5418,13 +5418,13 @@ class RevRegisterBillSupportWithdrawRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
         :param TranNetMemberCode: STRING(32)，交易網會員代碼
         :type TranNetMemberCode: str
-        :param OldOrderNo: STRING(30)，原訂單号（RegisterBillSupportWithdraw介面中的訂單号）
+        :param OldOrderNo: STRING(30)，原訂單號（RegisterBillSupportWithdraw介面中的訂單號）
         :type OldOrderNo: str
-        :param CancelAmt: STRING(20)，撤銷金額（支援部分撤銷，不能大于原訂單可用金額，包含交易費用）
+        :param CancelAmt: STRING(20)，撤銷金額（支援部分撤銷，不能大於原訂單可用金額，包含交易費用）
         :type CancelAmt: str
         :param TranFee: STRING(20)，交易費用（暫未使用，預設傳0.0）
         :type TranFee: str
@@ -5471,9 +5471,9 @@ class RevRegisterBillSupportWithdrawResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
-        :param FrontSeqNo: STRING(52)，見證系統流水号
+        :param FrontSeqNo: STRING(52)，見證系統流水號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FrontSeqNo: str
         :param ReservedMsg: STRING(1027)，保留域
@@ -5506,13 +5506,13 @@ class RevResigterBillSupportWithdrawRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
         :param TranNetMemberCode: STRING(32)，交易網會員代碼
         :type TranNetMemberCode: str
-        :param OldOrderNo: STRING(30)，原訂單号（RegisterBillSupportWithdraw介面中的訂單号）
+        :param OldOrderNo: STRING(30)，原訂單號（RegisterBillSupportWithdraw介面中的訂單號）
         :type OldOrderNo: str
-        :param CancelAmt: STRING(20)，撤銷金額（支援部分撤銷，不能大于原訂單可用金額，包含交易費用）
+        :param CancelAmt: STRING(20)，撤銷金額（支援部分撤銷，不能大於原訂單可用金額，包含交易費用）
         :type CancelAmt: str
         :param TranFee: STRING(20)，交易費用（暫未使用，預設傳0.0）
         :type TranFee: str
@@ -5559,9 +5559,9 @@ class RevResigterBillSupportWithdrawResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
-        :param FrontSeqNo: STRING(52)，見證系統流水号
+        :param FrontSeqNo: STRING(52)，見證系統流水號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FrontSeqNo: str
         :param ReservedMsg: STRING(1027)，保留域
@@ -5594,11 +5594,11 @@ class ReviseMbrPropertyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
-        :param SubAcctNo: STRING(50)，見證子帳戶的賬号
+        :param SubAcctNo: STRING(50)，見證子帳戶的賬號
         :type SubAcctNo: str
-        :param MemberProperty: STRING(10)，會員屬性（00-普通子賬号; SH-商戶子帳戶。暫時只支援00-普通子賬号改爲SH-商戶子帳戶）
+        :param MemberProperty: STRING(10)，會員屬性（00-普通子賬號; SH-商戶子帳戶。暫時只支援00-普通子賬號改爲SH-商戶子帳戶）
         :type MemberProperty: str
         :param ReservedMsg: STRING(1027)，保留域
         :type ReservedMsg: str
@@ -5627,7 +5627,7 @@ class ReviseMbrPropertyResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
         :param ReservedMsg: STRING(1027)，保留域
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -5657,19 +5657,19 @@ class RevokeMemberRechargeThirdPayRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param OldFillFrontSeqNo: STRING(52)，原儲值的前置流水号
+        :param OldFillFrontSeqNo: STRING(52)，原儲值的前置流水號
         :type OldFillFrontSeqNo: str
         :param OldFillPayChannelType: STRING(20)，原儲值的支付管道類型
         :type OldFillPayChannelType: str
-        :param OldPayChannelTranSeqNo: STRING(52)，原儲值的支付管道交易流水号
+        :param OldPayChannelTranSeqNo: STRING(52)，原儲值的支付管道交易流水號
         :type OldPayChannelTranSeqNo: str
-        :param OldFillEjzbOrderNo: STRING(52)，原儲值的電商見證寶訂單号
+        :param OldFillEjzbOrderNo: STRING(52)，原儲值的電商見證寶訂單號
         :type OldFillEjzbOrderNo: str
         :param ApplyCancelMemberAmt: STRING(20)，申請撤銷的會員金額
         :type ApplyCancelMemberAmt: str
         :param ApplyCancelCommission: STRING(20)，申請撤銷的手續約金額
         :type ApplyCancelCommission: str
-        :param MrchCode: String(22)，商戶号
+        :param MrchCode: String(22)，商戶號
         :type MrchCode: str
         :param Remark: STRING(300)，備注
         :type Remark: str
@@ -5718,9 +5718,9 @@ class RevokeMemberRechargeThirdPayResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
-        :param FrontSeqNo: STRING(52)，前置流水号
+        :param FrontSeqNo: STRING(52)，前置流水號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FrontSeqNo: str
         :param ReservedMsgOne: STRING(300)，保留域1
@@ -5758,10 +5758,10 @@ class TranItem(AbstractModel):
 
     def __init__(self):
         """
-        :param FundSummaryAcctNo: STRING(50)，資金匯總賬号
+        :param FundSummaryAcctNo: STRING(50)，資金匯總賬號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FundSummaryAcctNo: str
-        :param SubAcctNo: STRING(50)，見證子帳戶的賬号
+        :param SubAcctNo: STRING(50)，見證子帳戶的賬號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SubAcctNo: str
         :param TranNetMemberCode: STRING(32)，交易網會員代碼
@@ -5773,10 +5773,10 @@ class TranItem(AbstractModel):
         :param MemberGlobalType: STRING(5)，會員證件類型（詳情見“常見問題”）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type MemberGlobalType: str
-        :param MemberGlobalId: STRING(32)，會員證件号碼
+        :param MemberGlobalId: STRING(32)，會員證件號碼
 注意：此欄位可能返回 null，表示取不到有效值。
         :type MemberGlobalId: str
-        :param MemberAcctNo: STRING(50)，會員綁定帳戶的賬号（提現的銀行卡）
+        :param MemberAcctNo: STRING(50)，會員綁定帳戶的賬號（提現的銀行卡）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type MemberAcctNo: str
         :param BankType: STRING(10)，會員綁定帳戶的本他行類型（1: 本行; 2: 他行）
@@ -5785,13 +5785,13 @@ class TranItem(AbstractModel):
         :param AcctOpenBranchName: STRING(150)，會員綁定帳戶的開戶行名稱
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AcctOpenBranchName: str
-        :param CnapsBranchId: STRING(20)，會員綁定帳戶的開戶行的聯行号
+        :param CnapsBranchId: STRING(20)，會員綁定帳戶的開戶行的聯行號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CnapsBranchId: str
-        :param EiconBankBranchId: STRING(20)，會員綁定帳戶的開戶行的超級網銀行号
+        :param EiconBankBranchId: STRING(20)，會員綁定帳戶的開戶行的超級網銀行號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EiconBankBranchId: str
-        :param Mobile: STRING(30)，會員的手機号
+        :param Mobile: STRING(30)，會員的手機號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Mobile: str
         """
@@ -5831,7 +5831,7 @@ class TransactionItem(AbstractModel):
 
     def __init__(self):
         """
-        :param BookingFlag: STRING(2)，記賬标志（1: 轉出; 2: 轉入）
+        :param BookingFlag: STRING(2)，記賬標志（1: 轉出; 2: 轉入）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type BookingFlag: str
         :param TranStatus: STRING(32)，交易狀态（0: 成功）
@@ -5846,19 +5846,19 @@ class TransactionItem(AbstractModel):
         :param TranTime: STRING(20)，交易時間
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TranTime: str
-        :param FrontSeqNo: STRING(52)，見證系統流水号
+        :param FrontSeqNo: STRING(52)，見證系統流水號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FrontSeqNo: str
         :param BookingType: STRING(20)，記賬類型（詳情見“常見問題”）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type BookingType: str
-        :param InSubAcctNo: STRING(50)，轉入見證子帳戶的帳号
+        :param InSubAcctNo: STRING(50)，轉入見證子帳戶的帳號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InSubAcctNo: str
-        :param OutSubAcctNo: STRING(50)，轉出見證子帳戶的帳号
+        :param OutSubAcctNo: STRING(50)，轉出見證子帳戶的帳號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OutSubAcctNo: str
-        :param Remark: STRING(300)，備注（返回交易訂單号）
+        :param Remark: STRING(300)，備注（返回交易訂單號）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Remark: str
         """
@@ -5900,13 +5900,13 @@ class TransferItem(AbstractModel):
         :param TranNetMemberCode: STRING(32)，交易網會員代碼
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TranNetMemberCode: str
-        :param SubAcctNo: STRING(50)，見證子帳戶的帳号
+        :param SubAcctNo: STRING(50)，見證子帳戶的帳號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SubAcctNo: str
         :param TranAmt: STRING(20)，入金金額
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TranAmt: str
-        :param InAcctNo: STRING(50)，入金賬号
+        :param InAcctNo: STRING(50)，入金賬號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InAcctNo: str
         :param InAcctName: STRING(150)，入金帳戶名稱
@@ -5924,7 +5924,7 @@ class TransferItem(AbstractModel):
         :param Remark: STRING(300)，轉賬備注
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Remark: str
-        :param FrontSeqNo: STRING(52)，見證系統流水号
+        :param FrontSeqNo: STRING(52)，見證系統流水號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FrontSeqNo: str
         """
@@ -5966,7 +5966,7 @@ class UnBindAcctRequest(AbstractModel):
         :type MidasAppId: str
         :param SubAppId: 聚鑫計費SubAppId，代表子商戶
         :type SubAppId: str
-        :param SettleAcctNo: 用于提現
+        :param SettleAcctNo: 用於提現
 <敏感訊息>加密詳見《商戶端介面敏感訊息加密說明》
         :type SettleAcctNo: str
         :param MidasSecretId: 聚鑫分配的安全ID
@@ -6013,13 +6013,13 @@ class UnbindRelateAcctRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
-        :param FunctionFlag: STRING(2)，功能标志（1: 解綁）
+        :param FunctionFlag: STRING(2)，功能標志（1: 解綁）
         :type FunctionFlag: str
-        :param TranNetMemberCode: STRING(32)，交易網會員代碼（若需要把一個待綁定帳戶關聯到兩個會員名下，此欄位可上送兩個會員的交易網代碼，并且須用“|::|”(右側)進行分隔）
+        :param TranNetMemberCode: STRING(32)，交易網會員代碼（若需要把一個待綁定帳戶關聯到兩個會員名下，此欄位可上送兩個會員的交易網代碼，並且須用“|::|”(右側)進行分隔）
         :type TranNetMemberCode: str
-        :param MemberAcctNo: STRING(50)，待解綁的提現帳戶的賬号（提現賬号）
+        :param MemberAcctNo: STRING(50)，待解綁的提現帳戶的賬號（提現賬號）
         :type MemberAcctNo: str
         :param ReservedMsg: STRING(1027)，保留域
         :type ReservedMsg: str
@@ -6050,9 +6050,9 @@ class UnbindRelateAcctResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
-        :param FrontSeqNo: STRING(52)，見證系統流水号（即電商見證寶系統生成的流水号，可關聯具體一筆請求）
+        :param FrontSeqNo: STRING(52)，見證系統流水號（即電商見證寶系統生成的流水號，可關聯具體一筆請求）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FrontSeqNo: str
         :param ReservedMsg: STRING(1027)，保留域
@@ -6095,11 +6095,11 @@ class UnifiedOrderInSubOrderList(AbstractModel):
         :type ProductName: str
         :param SubAppId: 聚鑫計費SubAppId，代表子商戶
         :type SubAppId: str
-        :param SubOutTradeNo: 子訂單号
+        :param SubOutTradeNo: 子訂單號
         :type SubOutTradeNo: str
         :param Amt: 子訂單支付金額
         :type Amt: int
-        :param Metadata: 發貨标識，由業務在調用聚鑫下單介面的 時候下發
+        :param Metadata: 發貨標識，由業務在調用聚鑫下單介面的 時候下發
         :type Metadata: str
         :param OriginalAmt: 子訂單原始金額
         :type OriginalAmt: int
@@ -6138,7 +6138,7 @@ class UnifiedOrderRequest(AbstractModel):
         :type CurrencyType: str
         :param MidasAppId: 聚鑫分配的支付主MidasAppId
         :type MidasAppId: str
-        :param OutTradeNo: 支付訂單号，僅支援數字、字母、下劃線（_）、橫杠字元（-）、點（.）的組合
+        :param OutTradeNo: 支付訂單號，僅支援數字、字母、下劃線（_）、橫杠字元（-）、點（.）的組合
         :type OutTradeNo: str
         :param ProductDetail: 商品詳情，需要URL編碼
         :type ProductDetail: str
@@ -6163,22 +6163,22 @@ class UnifiedOrderRequest(AbstractModel):
         :param Channel: 指定支付管道：  wechat： 支付  qqwallet： 錢包 
  bank：網銀支付  只有一個管道時需要指定
         :type Channel: str
-        :param Metadata: 透傳欄位，支付成功回調透傳給應用，用于業務透傳自定義内容
+        :param Metadata: 透傳欄位，支付成功回調透傳給應用，用於業務透傳自定義内容
         :type Metadata: str
         :param Quantity: 購買數量，不傳預設爲1
         :type Quantity: int
         :param SubAppId: 聚鑫計費SubAppId，代表子商戶
         :type SubAppId: str
-        :param SubOrderList: 子訂單訊息清單，格式：子訂單号、子應用ID、金額。 壓縮後最長不可超過65535位元(去除空格，換行，制表符等無意義字元)
+        :param SubOrderList: 子訂單訊息清單，格式：子訂單號、子應用ID、金額。 壓縮後最長不可超過65535位元(去除空格，換行，制表符等無意義字元)
 注：接入銀行或其他支付管道服務商模式下，必傳
         :type SubOrderList: list of UnifiedOrderInSubOrderList
         :param TotalMchIncome: 結算應收金額，單位：分
         :type TotalMchIncome: int
         :param TotalPlatformIncome: 平台應收金額，單位：分
         :type TotalPlatformIncome: int
-        :param WxOpenId:  公衆号/小程式支付時爲必選，需要傳 下的openid
+        :param WxOpenId:  公衆號/小程式支付時爲必選，需要傳 下的openid
         :type WxOpenId: str
-        :param WxSubOpenId: 在服務商模式下， 公衆号/小程式支付時wx_sub_openid和wx_openid二選一
+        :param WxSubOpenId: 在服務商模式下， 公衆號/小程式支付時wx_sub_openid和wx_openid二選一
         :type WxSubOpenId: str
         """
         self.CurrencyType = None
@@ -6244,7 +6244,7 @@ class UnifiedOrderResponse(AbstractModel):
         """
         :param TotalAmt: 支付金額，單位： 分
         :type TotalAmt: int
-        :param OutTradeNo: 應用支付訂單号
+        :param OutTradeNo: 應用支付訂單號
         :type OutTradeNo: str
         :param PayInfo: 支付參數透傳給聚鑫SDK（原文透傳給SDK即可，不需要解碼）
         :type PayInfo: str
@@ -6275,7 +6275,7 @@ class WithdrawBill(AbstractModel):
 
     def __init__(self):
         """
-        :param WithdrawOrderId: 業務提現訂單号
+        :param WithdrawOrderId: 業務提現訂單號
         :type WithdrawOrderId: str
         :param Date: 提現日期
         :type Date: str
@@ -6320,19 +6320,19 @@ class WithdrawCashMembershipRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param MrchCode: String(22)，商戶号（簽約客戶号）
+        :param MrchCode: String(22)，商戶號（簽約客戶號）
         :type MrchCode: str
         :param TranWebName: STRING(150)，交易網名稱（市場名稱）
         :type TranWebName: str
         :param MemberGlobalType: STRING(5)，會員證件類型（詳情見“常見問題”）
         :type MemberGlobalType: str
-        :param MemberGlobalId: STRING(32)，會員證件号碼
+        :param MemberGlobalId: STRING(32)，會員證件號碼
         :type MemberGlobalId: str
         :param TranNetMemberCode: STRING(32)，交易網會員代碼
         :type TranNetMemberCode: str
         :param MemberName: STRING(150)，會員名稱
         :type MemberName: str
-        :param TakeCashAcctNo: STRING(50)，提現賬号（銀行卡）
+        :param TakeCashAcctNo: STRING(50)，提現賬號（銀行卡）
         :type TakeCashAcctNo: str
         :param OutAmtAcctName: STRING(150)，出金帳戶名稱（銀行卡戶名）
         :type OutAmtAcctName: str
@@ -6340,7 +6340,7 @@ class WithdrawCashMembershipRequest(AbstractModel):
         :type Ccy: str
         :param CashAmt: STRING(20)，可提現金額
         :type CashAmt: str
-        :param Remark: STRING(300)，備注（建議可送訂單号，可在對賬文件的備注欄位獲取到）
+        :param Remark: STRING(300)，備注（建議可送訂單號，可在對賬文件的備注欄位獲取到）
         :type Remark: str
         :param ReservedMsg: STRING(1027)，保留域
         :type ReservedMsg: str
@@ -6389,9 +6389,9 @@ class WithdrawCashMembershipResponse(AbstractModel):
         :type TxnReturnCode: str
         :param TxnReturnMsg: String(100)，返回訊息
         :type TxnReturnMsg: str
-        :param CnsmrSeqNo: String(22)，交易流水号
+        :param CnsmrSeqNo: String(22)，交易流水號
         :type CnsmrSeqNo: str
-        :param FrontSeqNo: STRING(52)，見證系統流水号
+        :param FrontSeqNo: STRING(52)，見證系統流水號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FrontSeqNo: str
         :param TransferFee: STRING(20)，轉賬手續約（固定返回0.00）
@@ -6429,7 +6429,7 @@ class WithdrawItem(AbstractModel):
 
     def __init__(self):
         """
-        :param BookingFlag: STRING(2)，記賬标志（01: 提現; 02: 清分 ）
+        :param BookingFlag: STRING(2)，記賬標志（01: 提現; 02: 清分 ）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type BookingFlag: str
         :param TranStatus: STRING(32)，交易狀态（0: 成功）
@@ -6441,7 +6441,7 @@ class WithdrawItem(AbstractModel):
         :param TranNetMemberCode: STRING(32)，交易網會員代碼
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TranNetMemberCode: str
-        :param SubAcctNo: STRING(50)，見證子帳戶的帳号
+        :param SubAcctNo: STRING(50)，見證子帳戶的帳號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SubAcctNo: str
         :param SubAcctName: STRING(150)，見證子帳戶的名稱
@@ -6459,7 +6459,7 @@ class WithdrawItem(AbstractModel):
         :param TranTime: STRING(20)，交易時間
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TranTime: str
-        :param FrontSeqNo: STRING(52)，見證系統流水号
+        :param FrontSeqNo: STRING(52)，見證系統流水號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FrontSeqNo: str
         :param Remark: STRING(300)，備注

@@ -63,7 +63,7 @@ class CdbInfo(AbstractModel):
         :param Volume: 資料庫磁盤規格
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Volume: int
-        :param Service: 服務标識
+        :param Service: 服務標識
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Service: str
         :param ExpireTime: 過期時間
@@ -75,13 +75,13 @@ class CdbInfo(AbstractModel):
         :param PayType: 付費類型
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PayType: int
-        :param ExpireFlag: 過期标識
+        :param ExpireFlag: 過期標識
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ExpireFlag: bool
         :param Status: 資料庫狀态
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Status: int
-        :param IsAutoRenew: 續約标識
+        :param IsAutoRenew: 續約標識
 注意：此欄位可能返回 null，表示取不到有效值。
         :type IsAutoRenew: int
         :param SerialNo: 資料庫字串
@@ -136,13 +136,13 @@ class ClusterInstancesInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param Id: ID号
+        :param Id: ID號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Id: int
         :param ClusterId: 集群ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterId: str
-        :param Ftitle: 标題
+        :param Ftitle: 標題
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Ftitle: str
         :param ClusterName: 集群名
@@ -235,7 +235,7 @@ class ClusterInstancesInfo(AbstractModel):
         :param MetaDb: 中繼資料庫訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type MetaDb: str
-        :param Tags: 标簽訊息
+        :param Tags: 標簽訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of Tag
         :param HiveMetaDb: Hive中繼資料訊息
@@ -367,8 +367,8 @@ class CreateInstanceRequest(AbstractModel):
 <li>m：表示月份。PayMode取值爲1時，TimeUnit只能取值爲m。</li>
         :type TimeUnit: str
         :param LoginSettings: 實例登入設置。通過該參數可以設置所購買節點的登入方式密碼或者金鑰。
-<li>設置金鑰時，密碼僅用于元件原生WebUI快捷入口登入。</li>
-<li>未設置金鑰時，密碼用于登入所購節點以及元件原生WebUI快捷入口登入。</li>
+<li>設置金鑰時，密碼僅用於元件原生WebUI快捷入口登入。</li>
+<li>未設置金鑰時，密碼用於登入所購節點以及元件原生WebUI快捷入口登入。</li>
         :type LoginSettings: :class:`taifucloudcloud.emr.v20190103.models.LoginSettings`
         :param COSSettings: 開啓COS訪問需要設置的參數。
         :type COSSettings: :class:`taifucloudcloud.emr.v20190103.models.COSSettings`
@@ -386,13 +386,13 @@ class CreateInstanceRequest(AbstractModel):
 <li>NEED_MASTER_WAN：表示開啓集群Master節點公網。</li>
 <li>NOT_NEED_MASTER_WAN：表示不開啓。</li>預設開啓集群Master節點公網。
         :type NeedMasterWan: str
-        :param RemoteLoginAtCreate: 是否需要開啓外網遠端登入，即22号端口。在SgId不爲空時，該參數無效。
+        :param RemoteLoginAtCreate: 是否需要開啓外網遠端登入，即22號端口。在SgId不爲空時，該參數無效。
         :type RemoteLoginAtCreate: int
         :param CheckSecurity: 是否開啓安全集群。0表示不開啓，非0表示開啓。
         :type CheckSecurity: int
         :param ExtendFsField: 訪問外部文件系統。
         :type ExtendFsField: str
-        :param Tags: 标簽描述清單。通過指定該參數可以同時綁定标簽到相應的實例。
+        :param Tags: 標簽描述清單。通過指定該參數可以同時綁定標簽到相應的實例。
         :type Tags: list of Tag
         :param DisasterRecoverGroupIds: 分散置放群組ID清單，當前只支援指定一個。
         :type DisasterRecoverGroupIds: list of str
@@ -538,7 +538,7 @@ class DescribeClusterNodesRequest(AbstractModel):
         """
         :param InstanceId: 集群實例ID,實例ID形如: emr-xxxxxxxx
         :type InstanceId: str
-        :param NodeFlag: 節點标識，取值爲：
+        :param NodeFlag: 節點標識，取值爲：
 <li>all：表示獲取全部類型節點，cdb訊息除外。</li>
 <li>master：表示獲取master節點訊息。</li>
 <li>core：表示獲取core節點訊息。</li>
@@ -550,7 +550,7 @@ class DescribeClusterNodesRequest(AbstractModel):
 <li>renew：表示獲取所有待續約的節點訊息，包括cdb訊息，自動續約節點不會返回。</li>
 注意：現在只支援以上取值，輸入其他值會導緻錯誤。
         :type NodeFlag: str
-        :param Offset: 頁編号，預設值爲0，表示第一頁。
+        :param Offset: 頁編號，預設值爲0，表示第一頁。
         :type Offset: int
         :param Limit: 每頁返回數量，預設值爲100，最大值爲100。
         :type Limit: int
@@ -580,7 +580,7 @@ class DescribeClusterNodesResponse(AbstractModel):
         :param NodeList: 節點詳細訊息清單
 注意：此欄位可能返回 null，表示取不到有效值。
         :type NodeList: list of NodeHardwareInfo
-        :param TagKeys: 用戶所有的标簽鍵清單
+        :param TagKeys: 用戶所有的標簽鍵清單
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagKeys: list of str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -618,7 +618,7 @@ class DescribeInstancesRequest(AbstractModel):
         :type DisplayStrategy: str
         :param InstanceIds: 按照一個或者多個實例ID查詢。實例ID形如: emr-xxxxxxxx 。(此參數的具體格式可參考API[簡介](https://cloud.taifucloud.com/document/api/213/15688)的 Ids.N 一節)。如果不填寫實例ID，返回該APPID下所有實例清單。
         :type InstanceIds: list of str
-        :param Offset: 頁編号，預設值爲0，表示第一頁。
+        :param Offset: 頁編號，預設值爲0，表示第一頁。
         :type Offset: int
         :param Limit: 每頁返回數量，預設值爲10，最大值爲100。
         :type Limit: int
@@ -667,7 +667,7 @@ class DescribeInstancesResponse(AbstractModel):
         :param ClusterList: EMR實例詳細訊息清單。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ClusterList: list of ClusterInstancesInfo
-        :param TagKeys: 實例關聯的标簽鍵清單。
+        :param TagKeys: 實例關聯的標簽鍵清單。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagKeys: list of str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -1115,7 +1115,7 @@ class InquiryPriceUpdateInstanceRequest(AbstractModel):
 <li>TimeUnit爲s時，該參數只能填寫3600，表示按量計費實例。</li>
 <li>TimeUnit爲m時，該參數填寫的數字表示包年包月實例的購買時長，如1表示購買一個月</li>
         :type TimeSpan: int
-        :param UpdateSpec: 節點變配的目标配置。
+        :param UpdateSpec: 節點變配的目標配置。
         :type UpdateSpec: :class:`taifucloudcloud.emr.v20190103.models.UpdateInstanceSettings`
         :param PayMode: 實例計費模式。取值範圍：
 <li>0：表示按量計費。</li>
@@ -1324,7 +1324,7 @@ class NodeHardwareInfo(AbstractModel):
         :param AppId: 用戶APPID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AppId: int
-        :param SerialNo: 序列号
+        :param SerialNo: 序列號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SerialNo: str
         :param OrderNo: 機器實例ID
@@ -1402,10 +1402,10 @@ class NodeHardwareInfo(AbstractModel):
         :param EmrResourceId: 節點資源ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EmrResourceId: str
-        :param IsAutoRenew: 續約标志
+        :param IsAutoRenew: 續約標志
 注意：此欄位可能返回 null，表示取不到有效值。
         :type IsAutoRenew: int
-        :param DeviceClass: 設備标識
+        :param DeviceClass: 設備標識
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DeviceClass: str
         :param Mutable: 支援變配
@@ -1423,7 +1423,7 @@ class NodeHardwareInfo(AbstractModel):
         :param Destroyable: 此節點是否可銷毀，1可銷毀，0不可銷毀
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Destroyable: int
-        :param Tags: 節點綁定的标簽
+        :param Tags: 節點綁定的標簽
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of Tag
         :param AutoFlag: 是否是自動擴縮容節點，0爲普通節點，1爲自動擴縮容節點。
@@ -1696,7 +1696,7 @@ class PriceResource(AbstractModel):
         :param InstanceType: 規格
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceType: str
-        :param Tags: 标簽
+        :param Tags: 標簽
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of Tag
         :param DiskNum: 磁盤數量
@@ -1778,7 +1778,7 @@ class Resource(AbstractModel):
         :param MultiDisks: 雲盤清單，當數據盤爲一塊雲盤時，直接使用DiskType和DiskSize參數，超出部分使用MultiDisks
 注意：此欄位可能返回 null，表示取不到有效值。
         :type MultiDisks: list of MultiDisk
-        :param Tags: 需要綁定的标簽清單
+        :param Tags: 需要綁定的標簽清單
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of Tag
         :param InstanceType: 規格類型
@@ -1871,7 +1871,7 @@ class ScaleOutInstanceRequest(AbstractModel):
         :type ServiceNodeInfo: list of int non-negative
         :param DisasterRecoverGroupIds: 分散置放群組ID清單，當前僅支援指定一個。
         :type DisasterRecoverGroupIds: list of str
-        :param Tags: 擴容節點綁定标簽清單。
+        :param Tags: 擴容節點綁定標簽清單。
         :type Tags: list of Tag
         """
         self.TimeUnit = None
@@ -1926,7 +1926,7 @@ class ScaleOutInstanceResponse(AbstractModel):
         """
         :param InstanceId: 實例ID。
         :type InstanceId: str
-        :param DealNames: 訂單号。
+        :param DealNames: 訂單號。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DealNames: list of str
         :param ClientToken: 用戶端Token。
@@ -1935,7 +1935,7 @@ class ScaleOutInstanceResponse(AbstractModel):
         :param FlowId: 擴容流程ID。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FlowId: int
-        :param BillId: 大訂單号。
+        :param BillId: 大訂單號。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type BillId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -1959,15 +1959,15 @@ class ScaleOutInstanceResponse(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """标簽
+    """標簽
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -2066,7 +2066,7 @@ class UpdateInstanceSettings(AbstractModel):
         :type Memory: int
         :param CPUCores: CPU核數
         :type CPUCores: int
-        :param ResourceId: 機器資源ID（EMR測資源标識）
+        :param ResourceId: 機器資源ID（EMR測資源標識）
         :type ResourceId: str
         :param InstanceType: 變配機器規格
         :type InstanceType: str

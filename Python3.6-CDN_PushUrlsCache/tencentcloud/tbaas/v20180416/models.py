@@ -31,11 +31,11 @@ class ApplyUserCertRequest(AbstractModel):
         :type ClusterId: str
         :param GroupName: 申請證書的組織名稱，可以在組織管理清單中獲取當前組織的名稱
         :type GroupName: str
-        :param UserIdentity: 用戶證書标識，用于标識用戶證書，要求由純小寫字母組成，長度小於10
+        :param UserIdentity: 用戶證書標識，用於標識用戶證書，要求由純小寫字母組成，長度小於10
         :type UserIdentity: str
-        :param Applicant: 證書申請實體，使用Top Cloud 賬号實名認證的名稱
+        :param Applicant: 證書申請實體，使用Top Cloud 賬號實名認證的名稱
         :type Applicant: str
-        :param IdentityNum: 證件号碼。如果Top Cloud 賬号對應的實名認證類型爲企業認證，填入“0”；如果Top Cloud 賬号對應的實名認證類型爲個人認證，填入個人身份證号碼
+        :param IdentityNum: 證件號碼。如果Top Cloud 賬號對應的實名認證類型爲企業認證，填入“0”；如果Top Cloud 賬號對應的實名認證類型爲個人認證，填入個人身份證號碼
         :type IdentityNum: str
         :param CsrData: csr p10證書文件。需要用戶根據文件生成證書的CSR文件
         :type CsrData: str
@@ -183,11 +183,11 @@ class Block(AbstractModel):
 
     def __init__(self):
         """
-        :param BlockNum: 區塊編号
+        :param BlockNum: 區塊編號
         :type BlockNum: int
         :param DataHash: 區塊Hash數值
         :type DataHash: str
-        :param BlockId: 區塊ID，與區塊編号一緻
+        :param BlockId: 區塊ID，與區塊編號一緻
         :type BlockId: int
         :param PreHash: 前一個區塊Hash（未使用）,與區塊Hash數值一緻
         :type PreHash: str
@@ -220,7 +220,7 @@ class BlockByNumberHandlerRequest(AbstractModel):
         :type Module: str
         :param Operation: 操作名，固定欄位：block_by_number
         :type Operation: str
-        :param GroupPk: 當前群組編号
+        :param GroupPk: 當前群組編號
         :type GroupPk: str
         :param BlockNumber: 區塊高度
         :type BlockNumber: int
@@ -270,7 +270,7 @@ class DeployDynamicContractHandlerRequest(AbstractModel):
         :type Module: str
         :param Operation: 操作名，固定欄位：deploy_by_dynamic_contract
         :type Operation: str
-        :param GroupPk: 群組編号
+        :param GroupPk: 群組編號
         :type GroupPk: str
         :param ContractName: 合約名稱
         :type ContractName: str
@@ -419,7 +419,7 @@ class GetBlockListHandlerRequest(AbstractModel):
         :type Offset: int
         :param Limit: 每頁記錄數
         :type Limit: int
-        :param GroupPk: 當前群組編号
+        :param GroupPk: 當前群組編號
         :type GroupPk: str
         :param BlockHash: 區塊哈希
         :type BlockHash: str
@@ -450,7 +450,7 @@ class GetBlockListHandlerResponse(AbstractModel):
         """
         :param TotalCount: 總記錄數
         :type TotalCount: int
-        :param GroupPk: 當前群組編号
+        :param GroupPk: 當前群組編號
         :type GroupPk: str
         :param List: 返回數據清單
         :type List: list of BcosBlockObj
@@ -907,7 +907,7 @@ class GetTransByHashHandlerRequest(AbstractModel):
         :type Module: str
         :param Operation: 操作名，固定欄位：get_trans_by_hash
         :type Operation: str
-        :param GroupPk: 群組編号
+        :param GroupPk: 群組編號
         :type GroupPk: str
         :param TransHash: 交易哈希
         :type TransHash: str
@@ -961,7 +961,7 @@ class GetTransListHandlerRequest(AbstractModel):
         :type Offset: int
         :param Limit: 每頁記錄數
         :type Limit: int
-        :param GroupPk: 群組編号
+        :param GroupPk: 群組編號
         :type GroupPk: str
         :param TransHash: 交易哈希
         :type TransHash: str
@@ -992,7 +992,7 @@ class GetTransListHandlerResponse(AbstractModel):
         """
         :param TotalCount: 總記錄數
         :type TotalCount: int
-        :param GroupPk: 當前群組編号
+        :param GroupPk: 當前群組編號
         :type GroupPk: str
         :param List: 返回數據清單
         :type List: list of BcosTransInfo
@@ -1079,7 +1079,7 @@ class GetTransactionDetailForUserResponse(AbstractModel):
         :type CreateTime: str
         :param TransactionData: 交易數據
         :type TransactionData: str
-        :param BlockId: 交易所在區塊号
+        :param BlockId: 交易所在區塊號
         :type BlockId: int
         :param BlockHash: 交易所在區塊哈希
         :type BlockHash: str
@@ -1157,7 +1157,7 @@ class InvokeRequest(AbstractModel):
         :type GroupName: str
         :param Args: 被調用的函數參數清單
         :type Args: list of str
-        :param AsyncFlag: 同步調用标識，可選參數，值爲0或者不傳表示使用同步方法調用，調用後會等待交易執行後再返回執行結果；值爲1時表示使用異步方式調用Invoke，執行後會立即返回交易對應的Txid，後續需要通過GetInvokeTx這個API查詢該交易的執行結果。（對于邏輯較爲簡單的交易，可以使用同步模式；對于邏輯較爲複雜的交易，建議使用異步模式，否則容易導緻API因等待時間過長，返回等待超時）
+        :param AsyncFlag: 同步調用標識，可選參數，值爲0或者不傳表示使用同步方法調用，調用後會等待交易執行後再返回執行結果；值爲1時表示使用異步方式調用Invoke，執行後會立即返回交易對應的Txid，後續需要通過GetInvokeTx這個API查詢該交易的執行結果。（對於邏輯較爲簡單的交易，可以使用同步模式；對於邏輯較爲複雜的交易，建議使用異步模式，否則容易導緻API因等待時間過長，返回等待超時）
         :type AsyncFlag: int
         """
         self.Module = None
@@ -1322,9 +1322,9 @@ class SendTransactionHandlerRequest(AbstractModel):
         :type Module: str
         :param Operation: 操作名，固定欄位：send_transaction
         :type Operation: str
-        :param GroupPk: 群組編号
+        :param GroupPk: 群組編號
         :type GroupPk: str
-        :param ContractId: 合約編号
+        :param ContractId: 合約編號
         :type ContractId: int
         :param FuncName: 合約方法名
         :type FuncName: str
@@ -1434,7 +1434,7 @@ class TransByDynamicContractHandlerRequest(AbstractModel):
         :type Module: str
         :param Operation: 操作名，固定欄位：trans_by_dynamic_contract
         :type Operation: str
-        :param GroupPk: 群組編号
+        :param GroupPk: 群組編號
         :type GroupPk: str
         :param ContractAddress: 合約網址（合約佈署成功，可得到合約網址）
         :type ContractAddress: str
@@ -1502,7 +1502,7 @@ class TransactionItem(AbstractModel):
         :type TransactionHash: str
         :param CreateOrgName: 創建交易的組織名
         :type CreateOrgName: str
-        :param BlockId: 交易所在區塊号
+        :param BlockId: 交易所在區塊號
         :type BlockId: int
         :param TransactionType: 交易類型（普通交易和配置交易）
         :type TransactionType: str

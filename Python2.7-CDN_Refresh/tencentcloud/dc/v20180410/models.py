@@ -118,7 +118,7 @@ class CreateDirectConnectRequest(AbstractModel):
         :param DirectConnectName: 物理專線的名稱。
         :type DirectConnectName: str
         :param AccessPointId: 物理專線所在的接入點。
-您可以通過調用 DescribeAccessPoints介面獲取地域ID。所選擇的接入點必須存在且處于可接入的狀态。
+您可以通過調用 DescribeAccessPoints介面獲取地域ID。所選擇的接入點必須存在且處於可接入的狀态。
         :type AccessPointId: str
         :param LineOperator: 提供接入物理專線的運營商。ChinaTelecom： 電信， ChinaMobile：  ，ChinaUnicom：  ， In-houseWiring：樓内線，ChinaOther： 其他， InternationalOperator：境外其他。
         :type LineOperator: str
@@ -142,7 +142,7 @@ class CreateDirectConnectRequest(AbstractModel):
         :type CustomerName: str
         :param CustomerContactMail: 物理專線申請者聯系電子信箱。預設從帳戶體系獲取。
         :type CustomerContactMail: str
-        :param CustomerContactNumber: 物理專線申請者聯系号碼。預設從帳戶體系獲取。
+        :param CustomerContactNumber: 物理專線申請者聯系號碼。預設從帳戶體系獲取。
         :type CustomerContactNumber: str
         :param FaultReportContactPerson: 報障聯系人。
         :type FaultReportContactPerson: str
@@ -219,7 +219,7 @@ class CreateDirectConnectTunnelRequest(AbstractModel):
         :param DirectConnectTunnelName: 專用通道名稱
         :type DirectConnectTunnelName: str
         :param DirectConnectOwnerAccount: 物理專線 owner，缺省爲當前客戶（物理專線 owner）
-共享專線時這裏需要填寫共享專線的開發商賬号 ID
+共享專線時這裏需要填寫共享專線的開發商賬號 ID
         :type DirectConnectOwnerAccount: str
         :param NetworkType: 網絡類型，分别爲VPC、BMVPC，CCN，預設是VPC
 VPC：私有網絡
@@ -629,7 +629,7 @@ class DirectConnect(AbstractModel):
         :param CustomerContactMail: 物理專線申請者聯系電子信箱。預設從帳戶體系獲取。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CustomerContactMail: str
-        :param CustomerContactNumber: 物理專線申請者聯系号碼。預設從帳戶體系獲取。
+        :param CustomerContactNumber: 物理專線申請者聯系號碼。預設從帳戶體系獲取。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CustomerContactNumber: str
         :param ExpiredTime: 物理專線的過期時間。
@@ -644,7 +644,7 @@ class DirectConnect(AbstractModel):
         :param FaultReportContactNumber: 報障聯系電話。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FaultReportContactNumber: str
-        :param TagSet: 标簽鍵值對
+        :param TagSet: 標簽鍵值對
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of Tag
         :param AccessPointType: 物理專線的接入點類型。
@@ -740,9 +740,9 @@ DELETED:删除完成
 COMFIRMING:待接受
 REJECTED:拒絕
         :type State: str
-        :param DirectConnectOwnerAccount: 物理專線的擁有者，開發商賬号 ID
+        :param DirectConnectOwnerAccount: 物理專線的擁有者，開發商賬號 ID
         :type DirectConnectOwnerAccount: str
-        :param OwnerAccount: 專用通道的擁有者，開發商賬号 ID
+        :param OwnerAccount: 專用通道的擁有者，開發商賬號 ID
         :type OwnerAccount: str
         :param NetworkType: 網絡類型，分别爲VPC、BMVPC、CCN
  VPC：私有網絡 ，BMVPC：黑石網絡，CCN：雲聯網
@@ -771,7 +771,7 @@ REJECTED:拒絕
         :type CreatedTime: str
         :param Bandwidth: 專用通道頻寬值
         :type Bandwidth: int
-        :param TagSet: 專用通道标簽值
+        :param TagSet: 專用通道標簽值
         :type TagSet: list of Tag
         :param NetDetectId: 關聯的網絡自定義探測ID
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -875,7 +875,7 @@ REJECTED:拒絕
 
 
 class Filter(AbstractModel):
-    """用于條件過濾查詢
+    """用於條件過濾查詢
 
     """
 
@@ -918,7 +918,7 @@ class ModifyDirectConnectAttributeRequest(AbstractModel):
         :type CustomerName: str
         :param CustomerContactMail: 物理專線申請者聯系電子信箱。預設從帳戶體系獲取。
         :type CustomerContactMail: str
-        :param CustomerContactNumber: 物理專線申請者聯系号碼。預設從帳戶體系獲取。
+        :param CustomerContactNumber: 物理專線申請者聯系號碼。預設從帳戶體系獲取。
         :type CustomerContactNumber: str
         :param FaultReportContactPerson: 報障聯系人。
         :type FaultReportContactPerson: str
@@ -1090,16 +1090,16 @@ class RouteFilterPrefix(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """标簽鍵值對
+    """標簽鍵值對
 
     """
 
     def __init__(self):
         """
-        :param Key: 标簽鍵
+        :param Key: 標簽鍵
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Key: str
-        :param Value: 标簽值
+        :param Value: 標簽值
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Value: str
         """

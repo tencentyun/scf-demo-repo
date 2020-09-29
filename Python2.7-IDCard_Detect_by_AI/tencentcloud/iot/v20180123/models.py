@@ -90,7 +90,7 @@ class AddDeviceRequest(AbstractModel):
         """
         :param ProductId: 産品Id
         :type ProductId: str
-        :param DeviceName: 設備名稱，唯一标識某産品下的一個設備
+        :param DeviceName: 設備名稱，唯一標識某産品下的一個設備
         :type DeviceName: str
         """
         self.ProductId = None
@@ -1632,7 +1632,7 @@ class GetDataHistoryRequest(AbstractModel):
         :type Size: list of int non-negative
         :param Order: 時間排序（desc/asc）
         :type Order: str
-        :param ScrollId: 查詢遊标
+        :param ScrollId: 查詢遊標
         :type ScrollId: str
         """
         self.ProductId = None
@@ -1663,9 +1663,9 @@ class GetDataHistoryResponse(AbstractModel):
         """
         :param DataHistory: 數據曆史
         :type DataHistory: list of DataHistoryEntry
-        :param ScrollId: 查詢遊标
+        :param ScrollId: 查詢遊標
         :type ScrollId: str
-        :param ScrollTimeout: 查詢遊标超時
+        :param ScrollTimeout: 查詢遊標超時
         :type ScrollTimeout: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1707,7 +1707,7 @@ class GetDebugLogRequest(AbstractModel):
         :type Size: int
         :param Order: 時間排序（desc/asc）
         :type Order: str
-        :param ScrollId: 查詢遊标
+        :param ScrollId: 查詢遊標
         :type ScrollId: str
         :param Type: 日志類型（shadow/action/mqtt）
         :type Type: str
@@ -1742,9 +1742,9 @@ class GetDebugLogResponse(AbstractModel):
         """
         :param DebugLog: 調試日志
         :type DebugLog: list of DebugLogEntry
-        :param ScrollId: 查詢遊标
+        :param ScrollId: 查詢遊標
         :type ScrollId: str
-        :param ScrollTimeout: 遊标超時
+        :param ScrollTimeout: 遊標超時
         :type ScrollTimeout: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1828,7 +1828,7 @@ class GetDeviceLogRequest(AbstractModel):
         :type Size: int
         :param Order: 時間排序（desc/asc）
         :type Order: str
-        :param ScrollId: 查詢遊标
+        :param ScrollId: 查詢遊標
         :type ScrollId: str
         :param Type: 日志類型（comm/status）
         :type Type: str
@@ -1863,9 +1863,9 @@ class GetDeviceLogResponse(AbstractModel):
         """
         :param DeviceLog: 設備日志
         :type DeviceLog: list of DeviceLogEntry
-        :param ScrollId: 查詢遊标
+        :param ScrollId: 查詢遊標
         :type ScrollId: str
-        :param ScrollTimeout: 遊标超時
+        :param ScrollTimeout: 遊標超時
         :type ScrollTimeout: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -2956,7 +2956,7 @@ class TopicAction(AbstractModel):
 
     def __init__(self):
         """
-        :param Topic: 目标topic
+        :param Topic: 目標topic
         :type Topic: str
         """
         self.Topic = None

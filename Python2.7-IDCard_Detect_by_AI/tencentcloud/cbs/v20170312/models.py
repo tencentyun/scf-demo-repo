@@ -303,15 +303,15 @@ class CreateDisksRequest(AbstractModel):
         :type DiskCount: int
         :param DiskChargePrepaid: 預付費模式，即包年包月相關參數設置。通過該參數指定包年包月雲盤的購買時長、是否設置自動續約等屬性。<br>創建預付費雲盤該參數必傳，創建按小時後付費雲盤無需傳該參數。
         :type DiskChargePrepaid: :class:`taifucloudcloud.cbs.v20170312.models.DiskChargePrepaid`
-        :param DiskSize: 雲硬碟大小，單位爲GB。<br><li>如果傳入`SnapshotId`則可不傳`DiskSize`，此時新建雲盤的大小爲快照大小<br><li>如果傳入`SnapshotId`同時傳入`DiskSize`，則雲盤大小必須大于或等于快照大小<br><li>雲盤大小取值範圍參見雲硬碟[産品分類](/document/product/362/2353)的說明。
+        :param DiskSize: 雲硬碟大小，單位爲GB。<br><li>如果傳入`SnapshotId`則可不傳`DiskSize`，此時新建雲盤的大小爲快照大小<br><li>如果傳入`SnapshotId`同時傳入`DiskSize`，則雲盤大小必須大於或等於快照大小<br><li>雲盤大小取值範圍參見雲硬碟[産品分類](/document/product/362/2353)的說明。
         :type DiskSize: int
         :param SnapshotId: 快照ID，如果傳入則根據此快照創建雲硬碟，快照類型必須爲數據盤快照，可通過[DescribeSnapshots](/document/product/362/15647)介面查詢快照，見輸出參數DiskUsage解釋。
         :type SnapshotId: str
-        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+        :param ClientToken: 用於保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
         :type ClientToken: str
-        :param Encrypt: 傳入該參數用于創建加密雲盤，取值固定爲ENCRYPT。
+        :param Encrypt: 傳入該參數用於創建加密雲盤，取值固定爲ENCRYPT。
         :type Encrypt: str
-        :param Tags: 雲盤綁定的标簽。
+        :param Tags: 雲盤綁定的標簽。
         :type Tags: list of Tag
         :param Shareable: 可選參數，預設爲False。傳入True時，雲盤将創建爲共享型雲盤。
         :type Shareable: bool
@@ -496,9 +496,9 @@ class DescribeAutoSnapshotPoliciesRequest(AbstractModel):
         :type AutoSnapshotPolicyIds: list of str
         :param Filters: 過濾條件。參數不支援同時指定`AutoSnapshotPolicyIds`和`Filters`。<br><li>auto-snapshot-policy-id - Array of String - 是否必填：否 -（過濾條件）按定期快照策略ID進行過濾。定期快照策略ID形如：`asp-11112222`。<br><li>auto-snapshot-policy-state - Array of String - 是否必填：否 -（過濾條件）按定期快照策略的狀态進行過濾。定期快照策略ID形如：`asp-11112222`。(NORMAL：正常 | ISOLATED：已隔離。)<br><li>auto-snapshot-policy-name - Array of String - 是否必填：否 -（過濾條件）按定期快照策略名稱進行過濾。
         :type Filters: list of Filter
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](/document/362/13158)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於`Limit`的更進一步介紹請參考 API [簡介](/document/362/13158)中的相關小節。
         :type Limit: int
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考API[簡介](/document/362/13158)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於`Offset`的更進一步介紹請參考API[簡介](/document/362/13158)中的相關小節。
         :type Offset: int
         :param Order: 輸出定期快照清單的排列順序。取值範圍：<br><li>ASC：升序排列<br><li>DESC：降序排列。
         :type Order: str
@@ -733,11 +733,11 @@ class DescribeDisksRequest(AbstractModel):
         """
         :param DiskIds: 按照一個或者多個雲硬碟ID查詢。雲硬碟ID形如：`disk-11112222`，此參數的具體格式可參考API[簡介](/document/product/362/15633)的ids.N一節）。參數不支援同時指定`DiskIds`和`Filters`。
         :type DiskIds: list of str
-        :param Filters: 過濾條件。參數不支援同時指定`DiskIds`和`Filters`。<br><li>disk-usage - Array of String - 是否必填：否 -（過濾條件）按雲盤類型過濾。 (SYSTEM_DISK：表示系統盤 | DATA_DISK：表示數據盤)<br><li>disk-charge-type - Array of String - 是否必填：否 -（過濾條件）按照雲硬碟計費模式過濾。 (PREPAID：表示預付費，即包年包月 | POSTPAID_BY_HOUR：表示後付費，即按量計費。)<br><li>portable - Array of String - 是否必填：否 -（過濾條件）按是否爲彈性雲盤過濾。 (TRUE：表示彈性雲盤 | FALSE：表示非彈性雲盤。)<br><li>project-id - Array of Integer - 是否必填：否 -（過濾條件）按雲硬碟所屬項目ID過濾。<br><li>disk-id - Array of String - 是否必填：否 -（過濾條件）按照雲硬碟ID過濾。雲盤ID形如：`disk-11112222`。<br><li>disk-name - Array of String - 是否必填：否 -（過濾條件）按照雲盤名稱過濾。<br><li>disk-type - Array of String - 是否必填：否 -（過濾條件）按照雲盤媒體類型過濾。(CLOUD_BASIC：表示普通雲硬碟 | CLOUD_PREMIUM：表示高效能雲硬碟。| CLOUD_SSD：SSD表示SSD雲硬碟。)<br><li>disk-state - Array of String - 是否必填：否 -（過濾條件）按照雲盤狀态過濾。(UNATTACHED：未掛載 | ATTACHING：掛載中 | ATTACHED：已掛載 | DETACHING：解挂中 | EXPANDING：擴容中 | ROLLBACKING：回滾中 | TORECYCLE：待回收。)<br><li>instance-id - Array of String - 是否必填：否 -（過濾條件）按照雲盤掛載的雲主機實例ID過濾。可根據此參數查詢掛載在指定雲主機下的雲硬碟。<br><li>zone - Array of String - 是否必填：否 -（過濾條件）按照[可用區](/document/product/213/15753#ZoneInfo)過濾。<br><li>instance-ip-address - Array of String - 是否必填：否 -（過濾條件）按雲盤所掛載雲主機的内網或外網IP過濾。<br><li>instance-name - Array of String - 是否必填：否 -（過濾條件）按雲盤所掛載的實例名稱過濾。<br><li>tag-key - Array of String - 是否必填：否 -（過濾條件）按照标簽鍵進行過濾。<br><li>tag-value - Array of String - 是否必填：否 -（過濾條件）照标簽值進行過濾。<br><li>tag:tag-key - Array of String - 是否必填：否 -（過濾條件）按照标簽鍵值對進行過濾。 tag-key使用具體的标簽鍵進行替換。
+        :param Filters: 過濾條件。參數不支援同時指定`DiskIds`和`Filters`。<br><li>disk-usage - Array of String - 是否必填：否 -（過濾條件）按雲盤類型過濾。 (SYSTEM_DISK：表示系統盤 | DATA_DISK：表示數據盤)<br><li>disk-charge-type - Array of String - 是否必填：否 -（過濾條件）按照雲硬碟計費模式過濾。 (PREPAID：表示預付費，即包年包月 | POSTPAID_BY_HOUR：表示後付費，即按量計費。)<br><li>portable - Array of String - 是否必填：否 -（過濾條件）按是否爲彈性雲盤過濾。 (TRUE：表示彈性雲盤 | FALSE：表示非彈性雲盤。)<br><li>project-id - Array of Integer - 是否必填：否 -（過濾條件）按雲硬碟所屬項目ID過濾。<br><li>disk-id - Array of String - 是否必填：否 -（過濾條件）按照雲硬碟ID過濾。雲盤ID形如：`disk-11112222`。<br><li>disk-name - Array of String - 是否必填：否 -（過濾條件）按照雲盤名稱過濾。<br><li>disk-type - Array of String - 是否必填：否 -（過濾條件）按照雲盤媒體類型過濾。(CLOUD_BASIC：表示普通雲硬碟 | CLOUD_PREMIUM：表示高效能雲硬碟。| CLOUD_SSD：SSD表示SSD雲硬碟。)<br><li>disk-state - Array of String - 是否必填：否 -（過濾條件）按照雲盤狀态過濾。(UNATTACHED：未掛載 | ATTACHING：掛載中 | ATTACHED：已掛載 | DETACHING：解挂中 | EXPANDING：擴容中 | ROLLBACKING：回滾中 | TORECYCLE：待回收。)<br><li>instance-id - Array of String - 是否必填：否 -（過濾條件）按照雲盤掛載的雲主機實例ID過濾。可根據此參數查詢掛載在指定雲主機下的雲硬碟。<br><li>zone - Array of String - 是否必填：否 -（過濾條件）按照[可用區](/document/product/213/15753#ZoneInfo)過濾。<br><li>instance-ip-address - Array of String - 是否必填：否 -（過濾條件）按雲盤所掛載雲主機的内網或外網IP過濾。<br><li>instance-name - Array of String - 是否必填：否 -（過濾條件）按雲盤所掛載的實例名稱過濾。<br><li>tag-key - Array of String - 是否必填：否 -（過濾條件）按照標簽鍵進行過濾。<br><li>tag-value - Array of String - 是否必填：否 -（過濾條件）照標簽值進行過濾。<br><li>tag:tag-key - Array of String - 是否必填：否 -（過濾條件）按照標簽鍵值對進行過濾。 tag-key使用具體的標簽鍵進行替換。
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考API[簡介](/document/product/362/15633)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於`Offset`的更進一步介紹請參考API[簡介](/document/product/362/15633)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](/document/product/362/15633)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於`Limit`的更進一步介紹請參考 API [簡介](/document/product/362/15633)中的相關小節。
         :type Limit: int
         :param Order: 輸出雲盤清單的排列順序。取值範圍：<br><li>ASC：升序排列<br><li>DESC：降序排列。
         :type Order: str
@@ -903,9 +903,9 @@ class DescribeSnapshotsRequest(AbstractModel):
         :type SnapshotIds: list of str
         :param Filters: 過濾條件。參數不支援同時指定`SnapshotIds`和`Filters`。<br><li>snapshot-id - Array of String - 是否必填：否 -（過濾條件）按照快照的ID過濾。快照ID形如：`snap-11112222`。<br><li>snapshot-name - Array of String - 是否必填：否 -（過濾條件）按照快照名稱過濾。<br><li>snapshot-state - Array of String - 是否必填：否 -（過濾條件）按照快照狀态過濾。 (NORMAL：正常 | CREATING：創建中 | ROLLBACKING：回滾中。)<br><li>disk-usage - Array of String - 是否必填：否 -（過濾條件）按創建快照的雲盤類型過濾。 (SYSTEM_DISK：代表系統盤 | DATA_DISK：代表數據盤。)<br><li>project-id  - Array of String - 是否必填：否 -（過濾條件）按雲硬碟所屬項目ID過濾。<br><li>disk-id  - Array of String - 是否必填：否 -（過濾條件）按照創建快照的雲硬碟ID過濾。<br><li>zone - Array of String - 是否必填：否 -（過濾條件）按照[可用區](/document/product/213/15753#ZoneInfo)過濾。<br><li>encrypt - Array of String - 是否必填：否 -（過濾條件）按是否加密盤快照過濾。 (TRUE：表示加密盤快照 | FALSE：表示非加密盤快照。)
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考API[簡介](/document/product/362/15633)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於`Offset`的更進一步介紹請參考API[簡介](/document/product/362/15633)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](/document/product/362/15633)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於`Limit`的更進一步介紹請參考 API [簡介](/document/product/362/15633)中的相關小節。
         :type Limit: int
         :param Order: 輸出雲盤清單的排列順序。取值範圍：<br><li>ASC：升序排列<br><li>DESC：降序排列。
         :type Order: str
@@ -973,7 +973,7 @@ class DetachDisksRequest(AbstractModel):
         """
         :param DiskIds: 将要解挂的雲硬碟ID， 通過[DescribeDisks](/document/product/362/16315)介面查詢，單次請求最多可解挂10塊彈性雲盤。
         :type DiskIds: list of str
-        :param InstanceId: 對于非共享型雲盤，會忽略該參數；對于共享型雲盤，該參數表示要從哪個CVM實例上解挂雲盤。
+        :param InstanceId: 對於非共享型雲盤，會忽略該參數；對於共享型雲盤，該參數表示要從哪個CVM實例上解挂雲盤。
         :type InstanceId: str
         """
         self.DiskIds = None
@@ -1037,19 +1037,19 @@ class Disk(AbstractModel):
         :type CreateTime: str
         :param DeadlineTime: 雲硬碟的到期時間。
         :type DeadlineTime: str
-        :param Rollbacking: 雲盤是否處于快照回滾狀态。取值範圍：<br><li>false:表示不處于快照回滾狀态<br><li>true:表示處于快照回滾狀态。
+        :param Rollbacking: 雲盤是否處於快照回滾狀态。取值範圍：<br><li>false:表示不處於快照回滾狀态<br><li>true:表示處於快照回滾狀态。
         :type Rollbacking: bool
         :param RollbackPercent: 雲盤快照回滾的進度。
         :type RollbackPercent: int
         :param Encrypt: 雲盤是否爲加密盤。取值範圍：<br><li>false:表示非加密盤<br><li>true:表示加密盤。
         :type Encrypt: bool
-        :param AutoRenewFlagError: 雲盤已掛載到子機，且子機與雲盤都是包年包月。<br><li>true：子機設置了自動續約标識，但雲盤未設置<br><li>false：雲盤自動續約标識正常。
+        :param AutoRenewFlagError: 雲盤已掛載到子機，且子機與雲盤都是包年包月。<br><li>true：子機設置了自動續約標識，但雲盤未設置<br><li>false：雲盤自動續約標識正常。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AutoRenewFlagError: bool
-        :param RenewFlag: 自動續約标識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約。
+        :param RenewFlag: 自動續約標識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RenewFlag: str
-        :param DeadlineError: 在雲盤已掛載到實例，且實例與雲盤都是包年包月的條件下，此欄位才有意義。<br><li>true:雲盤到期時間早于實例。<br><li>false：雲盤到期時間晚于實例。
+        :param DeadlineError: 在雲盤已掛載到實例，且實例與雲盤都是包年包月的條件下，此欄位才有意義。<br><li>true:雲盤到期時間早於實例。<br><li>false：雲盤到期時間晚於實例。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DeadlineError: bool
         :param IsReturnable: 判斷預付費的雲盤是否支援主動退還。<br><li>true:支援主動退還<br><li>false:不支援主動退還。
@@ -1061,7 +1061,7 @@ class Disk(AbstractModel):
         :param AutoSnapshotPolicyIds: 雲盤關聯的定期快照ID。只有在調用DescribeDisks介面時，入參ReturnBindAutoSnapshotPolicy取值爲TRUE才會返回該參數。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AutoSnapshotPolicyIds: list of str
-        :param Tags: 與雲盤綁定的标簽，雲盤未綁定标簽則取值爲空。
+        :param Tags: 與雲盤綁定的標簽，雲盤未綁定標簽則取值爲空。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of Tag
         :param DeleteWithInstance: 雲盤是否與掛載的實例一起銷毀。<br><li>true:銷毀實例時會同時銷毀雲盤，只支援按小時後付費雲盤。<br><li>false：銷毀實例時不銷毀雲盤。
@@ -1070,7 +1070,7 @@ class Disk(AbstractModel):
         :param DifferDaysOfDeadline: 當前時間距離盤到期的天數（僅對預付費盤有意義）。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DifferDaysOfDeadline: int
-        :param Migrating: 雲盤是否處于類型變更中。取值範圍：<br><li>false:表示雲盤不處于類型變更中<br><li>true:表示雲盤已發起類型變更，正處于遷移中。
+        :param Migrating: 雲盤是否處於類型變更中。取值範圍：<br><li>false:表示雲盤不處於類型變更中<br><li>true:表示雲盤已發起類型變更，正處於遷移中。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Migrating: bool
         :param MigratePercent: 雲盤類型變更的遷移進度，取值0到100。
@@ -1078,7 +1078,7 @@ class Disk(AbstractModel):
         :type MigratePercent: int
         :param Shareable: 雲盤是否爲共享型雲盤。
         :type Shareable: bool
-        :param InstanceIdList: 對于非共享型雲盤，該參數爲空數組。對于共享型雲盤，則表示該雲盤當前被掛載到的CVM實例InstanceId
+        :param InstanceIdList: 對於非共享型雲盤，該參數爲空數組。對於共享型雲盤，則表示該雲盤當前被掛載到的CVM實例InstanceId
         :type InstanceIdList: list of str
         """
         self.DiskId = None
@@ -1162,7 +1162,7 @@ class DiskChargePrepaid(AbstractModel):
         """
         :param Period: 購買雲盤的時長，預設單位爲月，取值範圍：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
         :type Period: int
-        :param RenewFlag: 自動續約标識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>預設取值：NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約。
+        :param RenewFlag: 自動續約標識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>預設取值：NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約。
         :type RenewFlag: str
         :param CurInstanceDeadline: 需要将雲盤的到期時間與掛載的子機對齊時，可傳入該參數。該參數表示子機當前的到期時間，此時Period如果傳入，則表示子機需要續約的時長，雲盤會自動按對齊到子機續約後的到期時間續約，範例取值：2018-03-30 20:15:03。
         :type CurInstanceDeadline: str
@@ -1279,7 +1279,7 @@ PROCESSING :表示操作中。
 
 
 class Filter(AbstractModel):
-    """描述鍵值對過濾器，用于條件過濾查詢。
+    """描述鍵值對過濾器，用於條件過濾查詢。
 
     """
 
@@ -1395,7 +1395,7 @@ class InquiryPriceRenewDisksRequest(AbstractModel):
         :type DiskChargePrepaids: list of DiskChargePrepaid
         :param NewDeadline: 指定雲盤新的到期時間，形式如：2017-12-17 00:00:00。參數`NewDeadline`和`DiskChargePrepaids`是兩種指定詢價時長的方式，兩者必傳一個。
         :type NewDeadline: str
-        :param ProjectId: 雲盤所屬項目ID。 如傳入則僅用于鑒權。
+        :param ProjectId: 雲盤所屬項目ID。 如傳入則僅用於鑒權。
         :type ProjectId: int
         """
         self.DiskIds = None
@@ -1450,7 +1450,7 @@ class InquiryPriceResizeDiskRequest(AbstractModel):
         :type DiskId: str
         :param DiskSize: 雲硬碟擴容後的大小，單位爲GB，不得小於當前雲硬碟大小。雲盤大小取值範圍參見雲硬碟[産品分類](/document/product/362/2353)的說明。
         :type DiskSize: int
-        :param ProjectId: 雲盤所屬項目ID。 如傳入則僅用于鑒權。
+        :param ProjectId: 雲盤所屬項目ID。 如傳入則僅用於鑒權。
         :type ProjectId: int
         """
         self.DiskId = None
@@ -1504,7 +1504,7 @@ class ModifyDiskAttributesRequest(AbstractModel):
         :type Portable: bool
         :param DeleteWithInstance: 成功掛載到雲主機後該雲硬碟是否随雲主機銷毀，TRUE表示随雲主機銷毀，FALSE表示不随雲主機銷毀。僅支援按量計費雲硬碟數據盤。
         :type DeleteWithInstance: bool
-        :param DiskType: 變更雲盤類型時，可傳入該參數，表示變更的目标類型，取值範圍：<br><li>CLOUD_PREMIUM：表示高效能雲硬碟<br><li>CLOUD_SSD：表示SSD雲硬碟。<br>當前不支援批次變更類型，即傳入DiskType時，DiskIds僅支援傳入一塊雲盤；<br>變更雲盤類型時不支援同時變更其他屬性。
+        :param DiskType: 變更雲盤類型時，可傳入該參數，表示變更的目標類型，取值範圍：<br><li>CLOUD_PREMIUM：表示高效能雲硬碟<br><li>CLOUD_SSD：表示SSD雲硬碟。<br>當前不支援批次變更類型，即傳入DiskType時，DiskIds僅支援傳入一塊雲盤；<br>變更雲盤類型時不支援同時變更其他屬性。
         :type DiskType: str
         """
         self.DiskIds = None
@@ -1550,7 +1550,7 @@ class ModifyDisksRenewFlagRequest(AbstractModel):
         """
         :param DiskIds: 一個或多個待操作的雲硬碟ID。
         :type DiskIds: list of str
-        :param RenewFlag: 雲盤的續約标識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約。
+        :param RenewFlag: 雲盤的續約標識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約。
         :type RenewFlag: str
         """
         self.DiskIds = None
@@ -1786,7 +1786,7 @@ class ResizeDiskRequest(AbstractModel):
         """
         :param DiskId: 雲硬碟ID， 通過[DescribeDisks](/document/product/362/16315)介面查詢。
         :type DiskId: str
-        :param DiskSize: 雲硬碟擴容後的大小，單位爲GB，必須大于當前雲硬碟大小。雲盤大小取值範圍參見雲硬碟[産品分類](/document/product/362/2353)的說明。
+        :param DiskSize: 雲硬碟擴容後的大小，單位爲GB，必須大於當前雲硬碟大小。雲盤大小取值範圍參見雲硬碟[産品分類](/document/product/362/2353)的說明。
         :type DiskSize: int
         """
         self.DiskId = None
@@ -1948,15 +1948,15 @@ PROCESSING :表示操作中。
 
 
 class Tag(AbstractModel):
-    """标簽。
+    """標簽。
 
     """
 
     def __init__(self):
         """
-        :param Key: 标簽健。
+        :param Key: 標簽健。
         :type Key: str
-        :param Value: 标簽值。
+        :param Value: 標簽值。
         :type Value: str
         """
         self.Key = None

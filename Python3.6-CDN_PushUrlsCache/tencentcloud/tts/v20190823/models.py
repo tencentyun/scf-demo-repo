@@ -24,9 +24,9 @@ class TextToVoiceRequest(AbstractModel):
     def __init__(self):
         """
         :param Text: 合成語音的源文本，按UTF-8編碼統一計算。
-中文最大支援110個漢字（全角标點符号算一個漢字）；英文最大支援350個字母（半角标點符号算一個字母）。
+中文最大支援110個漢字（全角標點符號算一個漢字）；英文最大支援350個字母（半角標點符號算一個字母）。
         :type Text: str
-        :param SessionId: 一次請求對應一個SessionId，會原樣返回，建議傳入類似于uuid的字串防止重複。
+        :param SessionId: 一次請求對應一個SessionId，會原樣返回，建議傳入類似於uuid的字串防止重複。
         :type SessionId: str
         :param ModelType: 模型類型，1-預設模型。
         :type ModelType: int

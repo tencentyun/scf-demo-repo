@@ -247,9 +247,9 @@ class CreateDeviceResponse(AbstractModel):
         :type DeviceName: str
         :param DevicePsk: 對稱加密金鑰，base64編碼。采用對稱加密時返回該參數
         :type DevicePsk: str
-        :param DeviceCert: 設備證書，用于 TLS 建立連結時校驗用戶端身份。采用非對稱加密時返回該參數
+        :param DeviceCert: 設備證書，用於 TLS 建立連結時校驗用戶端身份。采用非對稱加密時返回該參數
         :type DeviceCert: str
-        :param DevicePrivateKey: 設備私鑰，用于 TLS 建立連結時校驗用戶端身份，Top Cloud 後台不保存，請妥善保管。采用非對稱加密時返回該參數
+        :param DevicePrivateKey: 設備私鑰，用於 TLS 建立連結時校驗用戶端身份，Top Cloud 後台不保存，請妥善保管。采用非對稱加密時返回該參數
         :type DevicePrivateKey: str
         :param LoraDevEui: LoRa設備的DevEui，當設備是LoRa設備時，會返回該欄位
         :type LoraDevEui: str
@@ -476,7 +476,7 @@ class CreateTaskRequest(AbstractModel):
         :type ProductId: str
         :param DeviceNameFilter: 執行任務的設備名的正規表示式
         :type DeviceNameFilter: str
-        :param ScheduleTimeInSeconds: 任務開始執行的時間。 取值爲 Unix 時間戳，單位秒，且需大于等于當前時間時間戳，0爲系統當前時間時間戳，即立即執行，最大爲當前時間86400秒後，超過則取值爲當前時間86400秒後
+        :param ScheduleTimeInSeconds: 任務開始執行的時間。 取值爲 Unix 時間戳，單位秒，且需大於等於當前時間時間戳，0爲系統當前時間時間戳，即立即執行，最大爲當前時間86400秒後，超過則取值爲當前時間86400秒後
         :type ScheduleTimeInSeconds: int
         :param Tasks: 任務描述細節，描述見下 Task
         :type Tasks: :class:`taifucloudcloud.iotcloud.v20180614.models.Task`
@@ -881,7 +881,7 @@ class DescribeDeviceResponse(AbstractModel):
         :param EnableState: 設備啓用狀态
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EnableState: int
-        :param Labels: 設備标簽
+        :param Labels: 設備標簽
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Labels: list of DeviceLabel
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -1003,7 +1003,7 @@ class DescribeDevicesRequest(AbstractModel):
         :type Offset: int
         :param Limit: 分頁的大小，數值範圍 10-250
         :type Limit: int
-        :param FirmwareVersion: 設備固件版本号，若不帶此參數會返回所有固件版本的設備
+        :param FirmwareVersion: 設備固件版本號，若不帶此參數會返回所有固件版本的設備
         :type FirmwareVersion: str
         """
         self.ProductId = None
@@ -1463,7 +1463,7 @@ class DeviceInfo(AbstractModel):
         :param EnableState: 設備可用狀态，0禁用，1啓用
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EnableState: int
-        :param Labels: 設備标簽
+        :param Labels: 設備標簽
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Labels: list of DeviceLabel
         """
@@ -1527,15 +1527,15 @@ class DeviceInfo(AbstractModel):
 
 
 class DeviceLabel(AbstractModel):
-    """設備标簽
+    """設備標簽
 
     """
 
     def __init__(self):
         """
-        :param Key: 标簽标識
+        :param Key: 標簽標識
         :type Key: str
-        :param Value: 标簽值
+        :param Value: 標簽值
         :type Value: str
         """
         self.Key = None
@@ -2273,7 +2273,7 @@ class UpdateDeviceShadowRequest(AbstractModel):
         :type DeviceName: str
         :param State: 虛拟設備的狀态，JSON字串格式，由desired結構組成
         :type State: str
-        :param ShadowVersion: 當前版本号，需要和後台的version保持一緻，才能更新成功
+        :param ShadowVersion: 當前版本號，需要和後台的version保持一緻，才能更新成功
         :type ShadowVersion: int
         :param Prefix: 下發delta訊息的topic前綴，可選類型: "$shadow","$template"。不填寫預設"$shadow"。
         :type Prefix: str

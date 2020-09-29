@@ -26,7 +26,7 @@ class SqlserverClient(AbstractClient):
 
 
     def CreateAccount(self, request):
-        """本介面（CreateAccount）用于創建實例賬号
+        """本介面（CreateAccount）用於創建實例賬號
 
         :param request: 調用CreateAccount所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.CreateAccountRequest`
@@ -54,7 +54,7 @@ class SqlserverClient(AbstractClient):
 
 
     def CreateBackup(self, request):
-        """本介面(CreateBackup)用于創建備份。
+        """本介面(CreateBackup)用於創建備份。
 
         :param request: 調用CreateBackup所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.CreateBackupRequest`
@@ -82,7 +82,7 @@ class SqlserverClient(AbstractClient):
 
 
     def CreateDB(self, request):
-        """本介面（CreateDB）用于創建資料庫。
+        """本介面（CreateDB）用於創建資料庫。
 
         :param request: 調用CreateDB所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.CreateDBRequest`
@@ -110,7 +110,7 @@ class SqlserverClient(AbstractClient):
 
 
     def CreateDBInstances(self, request):
-        """本介面（CreateDBInstances）用于創建實例。
+        """本介面（CreateDBInstances）用於創建實例。
 
         :param request: 調用CreateDBInstances所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.CreateDBInstancesRequest`
@@ -166,7 +166,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DeleteAccount(self, request):
-        """本介面（DeleteAccount）用于删除實例賬号。
+        """本介面（DeleteAccount）用於删除實例賬號。
 
         :param request: 調用DeleteAccount所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DeleteAccountRequest`
@@ -194,7 +194,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DeleteDB(self, request):
-        """本介面(DeleteDB)用于删除資料庫。
+        """本介面(DeleteDB)用於删除資料庫。
 
         :param request: 調用DeleteDB所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DeleteDBRequest`
@@ -222,7 +222,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DeleteMigration(self, request):
-        """本介面（DeleteMigration）用于删除遷移任務
+        """本介面（DeleteMigration）用於删除遷移任務
 
         :param request: 調用DeleteMigration所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DeleteMigrationRequest`
@@ -250,7 +250,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeAccounts(self, request):
-        """本介面（DescribeAccounts）用于拉取實例帳戶清單。
+        """本介面（DescribeAccounts）用於拉取實例帳戶清單。
 
         :param request: 調用DescribeAccounts所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeAccountsRequest`
@@ -278,7 +278,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeBackups(self, request):
-        """本介面(DescribeBackups)用于查詢備份清單。
+        """本介面(DescribeBackups)用於查詢備份清單。
 
         :param request: 調用DescribeBackups所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeBackupsRequest`
@@ -306,7 +306,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeDBInstances(self, request):
-        """本介面(DescribeDBInstances)用于查詢實例清單。
+        """本介面(DescribeDBInstances)用於查詢實例清單。
 
         :param request: 調用DescribeDBInstances所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeDBInstancesRequest`
@@ -334,7 +334,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeDBs(self, request):
-        """本介面（DescribeDBs）用于查詢資料庫清單。
+        """本介面（DescribeDBs）用於查詢資料庫清單。
 
         :param request: 調用DescribeDBs所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeDBsRequest`
@@ -362,7 +362,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeFlowStatus(self, request):
-        """本介面(DescribeFlowStatus)用于查詢流程狀态。
+        """本介面(DescribeFlowStatus)用於查詢流程狀态。
 
         :param request: 調用DescribeFlowStatus所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeFlowStatusRequest`
@@ -390,7 +390,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeMigrationDetail(self, request):
-        """本介面（DescribeMigrationDetail）用于查詢遷移任務的詳細情況
+        """本介面（DescribeMigrationDetail）用於查詢遷移任務的詳細情況
 
         :param request: 調用DescribeMigrationDetail所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeMigrationDetailRequest`
@@ -446,7 +446,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeOrders(self, request):
-        """本介面（DescribeOrders）用于查詢訂單訊息
+        """本介面（DescribeOrders）用於查詢訂單訊息
 
         :param request: 調用DescribeOrders所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeOrdersRequest`
@@ -474,7 +474,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeProductConfig(self, request):
-        """本介面 (DescribeProductConfig) 用于查詢售賣規格配置。
+        """本介面 (DescribeProductConfig) 用於查詢售賣規格配置。
 
         :param request: 調用DescribeProductConfig所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeProductConfigRequest`
@@ -502,7 +502,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeRegions(self, request):
-        """本介面 (DescribeRegions) 用于查詢售賣地域訊息。
+        """本介面 (DescribeRegions) 用於查詢售賣地域訊息。
 
         :param request: 調用DescribeRegions所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeRegionsRequest`
@@ -530,7 +530,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeRollbackTime(self, request):
-        """本介面（DescribeRollbackTime）用于查詢實例可回檔時間範圍
+        """本介面（DescribeRollbackTime）用於查詢實例可回檔時間範圍
 
         :param request: 調用DescribeRollbackTime所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeRollbackTimeRequest`
@@ -558,7 +558,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeSlowlogs(self, request):
-        """本介面（DescribeSlowlogs）用于獲取慢查詢日志文件訊息
+        """本介面（DescribeSlowlogs）用於獲取慢查詢日志文件訊息
 
         :param request: 調用DescribeSlowlogs所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeSlowlogsRequest`
@@ -586,7 +586,7 @@ class SqlserverClient(AbstractClient):
 
 
     def DescribeZones(self, request):
-        """本介面 (DescribeZones) 用于查詢當前可售賣的可用區訊息。
+        """本介面 (DescribeZones) 用於查詢當前可售賣的可用區訊息。
 
         :param request: 調用DescribeZones所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.DescribeZonesRequest`
@@ -614,7 +614,7 @@ class SqlserverClient(AbstractClient):
 
 
     def InquiryPriceCreateDBInstances(self, request):
-        """本介面（InquiryPriceCreateDBInstances）用于查詢申請實例價格。
+        """本介面（InquiryPriceCreateDBInstances）用於查詢申請實例價格。
 
         :param request: 調用InquiryPriceCreateDBInstances所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.InquiryPriceCreateDBInstancesRequest`
@@ -642,7 +642,7 @@ class SqlserverClient(AbstractClient):
 
 
     def InquiryPriceRenewDBInstance(self, request):
-        """本介面（InquiryPriceRenewDBInstance）用于查詢續約實例的價格。
+        """本介面（InquiryPriceRenewDBInstance）用於查詢續約實例的價格。
 
         :param request: 調用InquiryPriceRenewDBInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.InquiryPriceRenewDBInstanceRequest`
@@ -670,7 +670,7 @@ class SqlserverClient(AbstractClient):
 
 
     def InquiryPriceUpgradeDBInstance(self, request):
-        """本介面（InquiryPriceUpgradeDBInstance）用于查詢升級實例的價格。
+        """本介面（InquiryPriceUpgradeDBInstance）用於查詢升級實例的價格。
 
         :param request: 調用InquiryPriceUpgradeDBInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.InquiryPriceUpgradeDBInstanceRequest`
@@ -698,7 +698,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ModifyAccountPrivilege(self, request):
-        """本介面（ModifyAccountPrivilege）用于修改實例帳戶權限。
+        """本介面（ModifyAccountPrivilege）用於修改實例帳戶權限。
 
         :param request: 調用ModifyAccountPrivilege所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyAccountPrivilegeRequest`
@@ -726,7 +726,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ModifyAccountRemark(self, request):
-        """本介面（ModifyAccountRemark）用于修改帳戶備注。
+        """本介面（ModifyAccountRemark）用於修改帳戶備注。
 
         :param request: 調用ModifyAccountRemark所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyAccountRemarkRequest`
@@ -754,7 +754,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ModifyDBInstanceName(self, request):
-        """本介面（ModifyDBInstanceName）用于修改實例名字。
+        """本介面（ModifyDBInstanceName）用於修改實例名字。
 
         :param request: 調用ModifyDBInstanceName所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyDBInstanceNameRequest`
@@ -782,7 +782,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ModifyDBInstanceProject(self, request):
-        """本介面（ModifyDBInstanceProject）用于修改資料庫實例所屬項目。
+        """本介面（ModifyDBInstanceProject）用於修改資料庫實例所屬項目。
 
         :param request: 調用ModifyDBInstanceProject所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyDBInstanceProjectRequest`
@@ -810,7 +810,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ModifyDBInstanceRenewFlag(self, request):
-        """本介面（ModifyDBInstanceRenewFlag）用于修改實例續約标記
+        """本介面（ModifyDBInstanceRenewFlag）用於修改實例續約標記
 
         :param request: 調用ModifyDBInstanceRenewFlag所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyDBInstanceRenewFlagRequest`
@@ -838,7 +838,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ModifyDBName(self, request):
-        """本介面（ModifyDBName）用于更新資料庫名。
+        """本介面（ModifyDBName）用於更新資料庫名。
 
         :param request: 調用ModifyDBName所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyDBNameRequest`
@@ -866,7 +866,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ModifyDBRemark(self, request):
-        """本介面（ModifyDBRemark）用于修改資料庫備注。
+        """本介面（ModifyDBRemark）用於修改資料庫備注。
 
         :param request: 調用ModifyDBRemark所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ModifyDBRemarkRequest`
@@ -922,7 +922,7 @@ class SqlserverClient(AbstractClient):
 
 
     def RenewDBInstance(self, request):
-        """本介面（RenewDBInstance）用于續約實例。
+        """本介面（RenewDBInstance）用於續約實例。
 
         :param request: 調用RenewDBInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.RenewDBInstanceRequest`
@@ -950,7 +950,7 @@ class SqlserverClient(AbstractClient):
 
 
     def ResetAccountPassword(self, request):
-        """本介面（ResetAccountPassword）用于重置實例的帳戶密碼。
+        """本介面（ResetAccountPassword）用於重置實例的帳戶密碼。
 
         :param request: 調用ResetAccountPassword所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.ResetAccountPasswordRequest`
@@ -978,7 +978,7 @@ class SqlserverClient(AbstractClient):
 
 
     def RestartDBInstance(self, request):
-        """本介面（RestartDBInstance）用于重啓資料庫實例。
+        """本介面（RestartDBInstance）用於重啓資料庫實例。
 
         :param request: 調用RestartDBInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.RestartDBInstanceRequest`
@@ -1006,7 +1006,7 @@ class SqlserverClient(AbstractClient):
 
 
     def RestoreInstance(self, request):
-        """本介面（RestoreInstance）用于根據備份文件恢複實例。
+        """本介面（RestoreInstance）用於根據備份文件恢複實例。
 
         :param request: 調用RestoreInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.RestoreInstanceRequest`
@@ -1034,7 +1034,7 @@ class SqlserverClient(AbstractClient):
 
 
     def RollbackInstance(self, request):
-        """本介面（RollbackInstance）用于回檔實例
+        """本介面（RollbackInstance）用於回檔實例
 
         :param request: 調用RollbackInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.RollbackInstanceRequest`
@@ -1062,7 +1062,7 @@ class SqlserverClient(AbstractClient):
 
 
     def RunMigration(self, request):
-        """本介面（RunMigration）用于啓動遷移任務，開始遷移
+        """本介面（RunMigration）用於啓動遷移任務，開始遷移
 
         :param request: 調用RunMigration所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.RunMigrationRequest`
@@ -1090,7 +1090,7 @@ class SqlserverClient(AbstractClient):
 
 
     def UpgradeDBInstance(self, request):
-        """本介面（UpgradeDBInstance）用于升級實例
+        """本介面（UpgradeDBInstance）用於升級實例
 
         :param request: 調用UpgradeDBInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.sqlserver.v20180328.models.UpgradeDBInstanceRequest`

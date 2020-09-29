@@ -28,7 +28,7 @@ python
 ```
 
 
-注：對于java語言來說入口文件是jar包，對于golang語言來說入口文件必須是可執行文件。
+注：對於java語言來說入口文件是jar包，對於golang語言來說入口文件必須是可執行文件。
 
 ## 配置文件說明
 
@@ -39,9 +39,9 @@ python
             "Chinese"{  # "Chinese"對應中文版本
         "name": "API閘道觸發器基礎應用",
     # 應用名稱,Chinese對應中文，如果是java demo的話，必須和jar文件的名稱一緻，其他語言不做限制。前台需要展示，請認真填寫，名稱要具有一定的意義，不支援中文，名稱裏統一剝離掉runtime
-        "description": "此範例使用 API 閘道作爲觸發器，實現 http 介面，并返回 html 格式頁面。",
+        "description": "此範例使用 API 閘道作爲觸發器，實現 http 介面，並返回 html 格式頁面。",
     # 應用描述，主要是介紹該應用的用途、用法、涉及到的關鍵技術等，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，支援中文。
-        "attention": "該雲函數使用了API閘道觸發器，并使用了內建響應功能，返回值需要構造爲Json格式" ,   #demo使用的注意事項，在範本詳情裏展示
+        "attention": "該雲函數使用了API閘道觸發器，並使用了內建響應功能，返回值需要構造爲Json格式" ,   #demo使用的注意事項，在範本詳情裏展示
         "readme": {  # readme 說明，非必選，file 或 content 二選一即可
             "file": "readme.md",  # readme文件内容
             "content": "此範例使用 API 閘道作爲觸發器，實現 http 介面"  # readme内容
@@ -84,13 +84,13 @@ python
     },
     "download_address":"demo的git下載連結",  #demo的git下載連結
     "tags":[
-            "apigw", "Python2.7", "api"  # 标簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
+            "apigw", "Python2.7", "api"  # 標簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
     ],
-    "version": "1.0.1",  # 版本号，通過版本号标識 demo 升級情況，未修改版本号會導緻 demo 不更新至頁面
+    "version": "1.0.1",  # 版本號，通過版本號標識 demo 升級情況，未修改版本號會導緻 demo 不更新至頁面
 },
 "functions": {
     "name": "test-function",  # 函數名稱，只支援英文
-    "description": "此範例使用 API 閘道作爲觸發器，實現 http 介面，并返回 html 格式頁面。" # 和"application"保持一緻，可爲英文或中文，前台不展示
+    "description": "此範例使用 API 閘道作爲觸發器，實現 http 介面，並返回 html 格式頁面。" # 和"application"保持一緻，可爲英文或中文，前台不展示
     "handler":"index.main_hanlder",
 # 函數入口 不支援中文，如果是一段式的話，必須和對應的二進制文件名稱一緻，第一段不能使用readme、license、config；如果二段式的，第一段必須是對應的入口文件名，第一段不能使用readme、license、config；三段式的話，必須是對應的handler
     "memorySize": 128,  # 運作配置内存
@@ -100,9 +100,9 @@ python
             "DB_NAME": "mydb" # 可選，函數環境變量
     },
     "Events":{
-    },      # 可選，用于定義觸發此函數的事件源
+    },      # 可選，用於定義觸發此函數的事件源
     "VpcConfig":{
-    },     # 可選， 用于配置雲函數訪問 VPC 私有網絡。
+    },     # 可選， 用於配置雲函數訪問 VPC 私有網絡。
     "codeObject": {
         "codeFile": [  # 代碼文件
             "index.py"
@@ -124,7 +124,7 @@ python
 # Demo 開發注意事項
 
 1. 需要注意代碼提交時不要帶有 SecretID，SecretKey 等訊息。
-2. 關鍵訊息可修改爲通過環境變量讀取，并定義好所需配置的環境變量。
+2. 關鍵訊息可修改爲通過環境變量讀取，並定義好所需配置的環境變量。
 3. Demo 描述盡量使用中文，簡潔扼要的描述 Demo 的實現功能，可适用的場景，使用的方式。
 4. 每個Demo的英文名稱必填且唯一,不同開發語言可以一樣。
 

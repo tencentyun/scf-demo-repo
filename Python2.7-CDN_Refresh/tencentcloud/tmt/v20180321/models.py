@@ -53,9 +53,9 @@ class ImageTranslateRequest(AbstractModel):
         :type Data: str
         :param Source: 源語言，支援語言清單<li> zh : 中文 </li> <li> en : 英文 </li>
         :type Source: str
-        :param Target: 目标語言，支援語言清單<li> zh : 中文 </li> <li> en : 英文 </li>
+        :param Target: 目標語言，支援語言清單<li> zh : 中文 </li> <li> en : 英文 </li>
         :type Target: str
-        :param ProjectId: 項目ID，可以根據控制台-賬号中心-項目管理中的配置填寫，如無配置請填寫預設項目ID:0
+        :param ProjectId: 項目ID，可以根據控制台-賬號中心-項目管理中的配置填寫，如無配置請填寫預設項目ID:0
         :type ProjectId: int
         """
         self.SessionUuid = None
@@ -86,9 +86,9 @@ class ImageTranslateResponse(AbstractModel):
         :type SessionUuid: str
         :param Source: 源語言
         :type Source: str
-        :param Target: 目标語言
+        :param Target: 目標語言
         :type Target: str
-        :param ImageRecord: 圖片翻譯結果，翻譯結果按識别的文本每一行獨立翻譯，後續會推出按段落劃分并翻譯的版本
+        :param ImageRecord: 圖片翻譯結果，翻譯結果按識别的文本每一行獨立翻譯，後續會推出按段落劃分並翻譯的版本
         :type ImageRecord: :class:`taifucloudcloud.tmt.v20180321.models.ImageRecord`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -121,9 +121,9 @@ class ItemValue(AbstractModel):
         :type SourceText: str
         :param TargetText: 翻譯後的譯文
         :type TargetText: str
-        :param X: X坐标
+        :param X: X坐標
         :type X: int
-        :param Y: Y坐标
+        :param Y: Y坐標
         :type Y: int
         :param W: 寬度
         :type W: int
@@ -154,9 +154,9 @@ class LanguageDetectRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Text: 待識别的文本，文本統一使用utf-8格式編碼，非utf-8格式編碼字元會翻譯失敗。單次請求的文本長度需要低于2000。
+        :param Text: 待識别的文本，文本統一使用utf-8格式編碼，非utf-8格式編碼字元會翻譯失敗。單次請求的文本長度需要低於2000。
         :type Text: str
-        :param ProjectId: 項目ID，可以根據控制台-賬号中心-項目管理中的配置填寫，如無配置請填寫預設項目ID:0
+        :param ProjectId: 項目ID，可以根據控制台-賬號中心-項目管理中的配置填寫，如無配置請填寫預設項目ID:0
         :type ProjectId: int
         """
         self.Text = None
@@ -201,17 +201,17 @@ class SpeechTranslateRequest(AbstractModel):
         :type SessionUuid: str
         :param Source: 音訊中的語言類型，支援語言清單<li> zh : 中文 </li> <li> en : 英文 </li>
         :type Source: str
-        :param Target: 翻譯目标語⾔言類型 ，支援的語言清單<li> zh : 中文 </li> <li> en : 英文 </li>
+        :param Target: 翻譯目標語⾔言類型 ，支援的語言清單<li> zh : 中文 </li> <li> en : 英文 </li>
         :type Target: str
         :param AudioFormat: pcm : 146   speex : 16779154   mp3 : 83886080
         :type AudioFormat: int
-        :param Seq: 語音分片的序号，從0開始
+        :param Seq: 語音分片的序號，從0開始
         :type Seq: int
         :param IsEnd: 是否最後一片語音分片，0-否，1-是
         :type IsEnd: int
-        :param Data: 語音分片内容的base64字元串，音訊内容應含有效并可識别的文本
+        :param Data: 語音分片内容的base64字元串，音訊内容應含有效並可識别的文本
         :type Data: str
-        :param ProjectId: 項目ID，可以根據控制台-賬号中心-項目管理中的配置填寫，如無配置請填寫預設項目ID:0
+        :param ProjectId: 項目ID，可以根據控制台-賬號中心-項目管理中的配置填寫，如無配置請填寫預設項目ID:0
         :type ProjectId: int
         :param Mode: 識别模式，該參數已廢棄
         :type Mode: str
@@ -258,9 +258,9 @@ class SpeechTranslateResponse(AbstractModel):
         :type Seq: int
         :param Source: 原語言
         :type Source: str
-        :param Target: 目标語言
+        :param Target: 目標語言
         :type Target: str
-        :param VadSeq: 當請求的Mode參數填寫bvad是，啓動VadSeq。此時Seq會被設置爲後台vad（靜音檢測）後的新序号，而VadSeq代表用戶端原始Seq值
+        :param VadSeq: 當請求的Mode參數填寫bvad是，啓動VadSeq。此時Seq會被設置爲後台vad（靜音檢測）後的新序號，而VadSeq代表用戶端原始Seq值
         :type VadSeq: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -316,7 +316,7 @@ ms：馬來西亞語
 ar：阿拉伯語
 hi：印地語
         :type Source: str
-        :param Target: 目标語言，各源語言的目标語言支援清單如下
+        :param Target: 目標語言，各源語言的目標語言支援清單如下
 
 <li> zh（簡體中文）：en（英語）、ja（日語）、ko（韓語）、fr（法語）、es（西班牙語）、it（意大利語）、de（德語）、tr（土耳其語）、ru（俄語）、pt（葡萄牙語）、vi（越南語）、id（印尼語）、th（泰語）、ms（馬來語）</li>
 <li>zh-TW（繁體中文）：en（英語）、ja（日語）、ko（韓語）、fr（法語）、es（西班牙語）、it（意大利語）、de（德語）、tr（土耳其語）、ru（俄語）、pt（葡萄牙語）、vi（越南語）、id（印尼語）、th（泰語）、ms（馬來語）</li>
@@ -337,9 +337,9 @@ hi：印地語
 <li>ar（阿拉伯語）：en（英語）</li>
 <li>hi（印地語）：en（英語）</li>
         :type Target: str
-        :param ProjectId: 項目ID，可以根據控制台-賬号中心-項目管理中的配置填寫，如無配置請填寫預設項目ID:0
+        :param ProjectId: 項目ID，可以根據控制台-賬號中心-項目管理中的配置填寫，如無配置請填寫預設項目ID:0
         :type ProjectId: int
-        :param SourceTextList: 待翻譯的文本清單，批次介面可以以數組方式在一次請求中填寫多個待翻譯文本。文本統一使用utf-8格式編碼，非utf-8格式編碼字元會翻譯失敗，請傳入有效文本，html标記等非常規翻譯文本可能會翻譯失敗。單次請求的文本長度總和需要低于2000。
+        :param SourceTextList: 待翻譯的文本清單，批次介面可以以數組方式在一次請求中填寫多個待翻譯文本。文本統一使用utf-8格式編碼，非utf-8格式編碼字元會翻譯失敗，請傳入有效文本，html標記等非常規翻譯文本可能會翻譯失敗。單次請求的文本長度總和需要低於2000。
         :type SourceTextList: list of str
         """
         self.Source = None
@@ -364,7 +364,7 @@ class TextTranslateBatchResponse(AbstractModel):
         """
         :param Source: 源語言，詳見入參Target
         :type Source: str
-        :param Target: 目标語言，詳見入參Target
+        :param Target: 目標語言，詳見入參Target
         :type Target: str
         :param TargetTextList: 翻譯後的文本清單
         :type TargetTextList: list of str
@@ -391,7 +391,7 @@ class TextTranslateRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param SourceText: 待翻譯的文本，文本統一使用utf-8格式編碼，非utf-8格式編碼字元會翻譯失敗，請傳入有效文本，html标記等非常規翻譯文本可能會翻譯失敗。單次請求的文本長度需要低于2000。
+        :param SourceText: 待翻譯的文本，文本統一使用utf-8格式編碼，非utf-8格式編碼字元會翻譯失敗，請傳入有效文本，html標記等非常規翻譯文本可能會翻譯失敗。單次請求的文本長度需要低於2000。
         :type SourceText: str
         :param Source: 源語言，支援：
 auto：自動識别（識别爲一種語言）
@@ -414,7 +414,7 @@ ms：馬來西亞語
 ar：阿拉伯語
 hi：印地語
         :type Source: str
-        :param Target: 目标語言，各源語言的目标語言支援清單如下
+        :param Target: 目標語言，各源語言的目標語言支援清單如下
 
 <li> zh（簡體中文）：en（英語）、ja（日語）、ko（韓語）、fr（法語）、es（西班牙語）、it（意大利語）、de（德語）、tr（土耳其語）、ru（俄語）、pt（葡萄牙語）、vi（越南語）、id（印尼語）、th（泰語）、ms（馬來語）</li>
 <li>zh-TW（繁體中文）：en（英語）、ja（日語）、ko（韓語）、fr（法語）、es（西班牙語）、it（意大利語）、de（德語）、tr（土耳其語）、ru（俄語）、pt（葡萄牙語）、vi（越南語）、id（印尼語）、th（泰語）、ms（馬來語）</li>
@@ -435,9 +435,9 @@ hi：印地語
 <li>ar（阿拉伯語）：en（英語）</li>
 <li>hi（印地語）：en（英語）</li>
         :type Target: str
-        :param ProjectId: 項目ID，可以根據控制台-賬号中心-項目管理中的配置填寫，如無配置請填寫預設項目ID:0
+        :param ProjectId: 項目ID，可以根據控制台-賬號中心-項目管理中的配置填寫，如無配置請填寫預設項目ID:0
         :type ProjectId: int
-        :param UntranslatedText: 用來标記不希望被翻譯的文本内容，如句子中的特殊符号、人名、地名等；每次請求只支援配置一個不被翻譯的單詞；僅支援配置人名、地名等名詞，不要配置動詞或短語，否則會影響翻譯結果。
+        :param UntranslatedText: 用來標記不希望被翻譯的文本内容，如句子中的特殊符號、人名、地名等；每次請求只支援配置一個不被翻譯的單詞；僅支援配置人名、地名等名詞，不要配置動詞或短語，否則會影響翻譯結果。
         :type UntranslatedText: str
         """
         self.SourceText = None
@@ -466,7 +466,7 @@ class TextTranslateResponse(AbstractModel):
         :type TargetText: str
         :param Source: 源語言，詳見入參Target
         :type Source: str
-        :param Target: 目标語言，詳見入參Target
+        :param Target: 目標語言，詳見入參Target
         :type Target: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str

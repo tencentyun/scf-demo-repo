@@ -26,8 +26,8 @@ class CrClient(AbstractClient):
 
 
     def ApplyBlackList(self, request):
-        """加入黑名單的客戶，将停止撥打。用于：
-        将客戶進行黑名單的增加和移除，用于對某些客戶階段性停催。
+        """加入黑名單的客戶，将停止撥打。用於：
+        将客戶進行黑名單的增加和移除，用於對某些客戶階段性停催。
 
         :param request: 調用ApplyBlackList所需參數的結構體。
         :type request: :class:`taifucloudcloud.cr.v20180321.models.ApplyBlackListRequest`
@@ -111,7 +111,7 @@ class CrClient(AbstractClient):
 
 
     def DescribeRecords(self, request):
-        """用于獲取指定案件的錄音網址，次日早上8:00後可查詢前日錄音。
+        """用於獲取指定案件的錄音網址，次日早上8:00後可查詢前日錄音。
 
         :param request: 調用DescribeRecords所需參數的結構體。
         :type request: :class:`taifucloudcloud.cr.v20180321.models.DescribeRecordsRequest`
@@ -167,7 +167,7 @@ class CrClient(AbstractClient):
 
 
     def DownloadReport(self, request):
-        """用于下載當日催收和回訪結果報表。當日23:00後，可獲取當日催收結果，次日00:30後，可獲取昨日回訪結果。
+        """用於下載當日催收和回訪結果報表。當日23:00後，可獲取當日催收結果，次日00:30後，可獲取昨日回訪結果。
 
         :param request: 調用DownloadReport所需參數的結構體。
         :type request: :class:`taifucloudcloud.cr.v20180321.models.DownloadReportRequest`
@@ -197,9 +197,9 @@ class CrClient(AbstractClient):
     def UploadDataFile(self, request):
         """<p>該介面包含上傳下列文件：</p>
         <ol style="margin-bottom:10px;">
-          <li>入催文件：用于每天入催文件的上傳</li>
-          <li>回訪文件：用于每天貸中回訪文件的上傳</li>
-          <li>還款文件：實時上傳當前已還款客戶，用于還款客戶的實時停催</li>
+          <li>入催文件：用於每天入催文件的上傳</li>
+          <li>回訪文件：用於每天貸中回訪文件的上傳</li>
+          <li>還款文件：實時上傳當前已還款客戶，用於還款客戶的實時停催</li>
         </ol>
         介面返回數據任務ID，支援xlsx、xls、csv、zip格式，文件大小不超過50MB。
 

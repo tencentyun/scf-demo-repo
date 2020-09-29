@@ -54,7 +54,7 @@ class OcrClient(AbstractClient):
 
 
     def BankCardOCR(self, request):
-        """本介面支援對 大陸主流銀行卡的卡号、銀行訊息、有效期等關鍵欄位的檢測與識别。
+        """本介面支援對 大陸主流銀行卡的卡號、銀行訊息、有效期等關鍵欄位的檢測與識别。
 
         :param request: Request instance for BankCardOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.BankCardOCRRequest`
@@ -82,7 +82,7 @@ class OcrClient(AbstractClient):
 
 
     def BizLicenseOCR(self, request):
-        """本介面支援快速精準識别營業執照上的欄位，包括注冊号、公司名稱、經營場所、主體類型、法定代表人、注冊資金、組成形式、成立日期、營業期限和經營範圍等欄位。
+        """本介面支援快速精準識别營業執照上的欄位，包括注冊號、公司名稱、經營場所、主體類型、法定代表人、注冊資金、組成形式、成立日期、營業期限和經營範圍等欄位。
 
         :param request: Request instance for BizLicenseOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.BizLicenseOCRRequest`
@@ -110,7 +110,7 @@ class OcrClient(AbstractClient):
 
 
     def BusInvoiceOCR(self, request):
-        """本介面支援識别公路汽車客票的發票代碼、發票号碼、日期、姓名、票價等欄位。
+        """本介面支援識别公路汽車客票的發票代碼、發票號碼、日期、姓名、票價等欄位。
 
         :param request: Request instance for BusInvoiceOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.BusInvoiceOCRRequest`
@@ -138,7 +138,7 @@ class OcrClient(AbstractClient):
 
 
     def BusinessCardOCR(self, request):
-        """本介面支援名片各欄位的自動定位與識别，包含姓名、電話、手機号、電子信箱、公司、部門、職位、網址、網址、 、 、MSN等。
+        """本介面支援名片各欄位的自動定位與識别，包含姓名、電話、手機號、電子信箱、公司、部門、職位、網址、網址、 、 、MSN等。
 
         :param request: Request instance for BusinessCardOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.BusinessCardOCRRequest`
@@ -166,7 +166,7 @@ class OcrClient(AbstractClient):
 
 
     def CarInvoiceOCR(self, request):
-        """本介面支援機動車銷售統一發票和二手車銷售統一發票的識别，包括發票号碼、發票代碼、合計金額、合計稅額等二十多個欄位。
+        """本介面支援機動車銷售統一發票和二手車銷售統一發票的識别，包括發票號碼、發票代碼、合計金額、合計稅額等二十多個欄位。
 
         :param request: Request instance for CarInvoiceOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.CarInvoiceOCRRequest`
@@ -196,9 +196,9 @@ class OcrClient(AbstractClient):
     def DriverLicenseOCR(self, request):
         """本介面支援駕駛證首頁和副頁所有欄位的自動定位與識别，重點欄位的識别準确度達到99%以上。
 
-        駕駛證首頁：包括證号、姓名、性别、國籍、住址、出生日期、初次領證日期、準駕車型、有效期限。
+        駕駛證首頁：包括證號、姓名、性别、國籍、住址、出生日期、初次領證日期、準駕車型、有效期限。
 
-        駕駛證副頁：包括證号、姓名、檔案編号、記錄。
+        駕駛證副頁：包括證號、姓名、檔案編號、記錄。
 
         另外，本介面還支援影印件、翻拍和PS告警功能。
 
@@ -228,7 +228,7 @@ class OcrClient(AbstractClient):
 
 
     def DutyPaidProofOCR(self, request):
-        """本介面支援對完稅證明的稅号、納稅人識别号、納稅人名稱、金額合計大寫、金額合計小寫、填發日期、稅務機關、填票人等關鍵欄位的識别。
+        """本介面支援對完稅證明的稅號、納稅人識别號、納稅人名稱、金額合計大寫、金額合計小寫、填發日期、稅務機關、填票人等關鍵欄位的識别。
 
         :param request: Request instance for DutyPaidProofOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.DutyPaidProofOCRRequest`
@@ -256,7 +256,7 @@ class OcrClient(AbstractClient):
 
 
     def EduPaperOCR(self, request):
-        """本介面支援數學試題内容的識别和結構化輸出，包括通用文本解析和小學/初中/高中數學公式解析能力（包括91種題型，180種符号）。
+        """本介面支援數學試題内容的識别和結構化輸出，包括通用文本解析和小學/初中/高中數學公式解析能力（包括91種題型，180種符號）。
 
         :param request: Request instance for EduPaperOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.EduPaperOCRRequest`
@@ -370,7 +370,7 @@ class OcrClient(AbstractClient):
 
 
     def FinanBillOCR(self, request):
-        """本介面支援常見銀行票據的自動分類和識别。整單識别包括支票（含現金支票、普通支票、轉賬支票），承兌匯票（含銀行承兌匯票、商業承兌匯票）以及進帳單等，适用于 人民銀行印發的 2010 版銀行票據憑證版式（銀發[2010]299 号）。
+        """本介面支援常見銀行票據的自動分類和識别。整單識别包括支票（含現金支票、普通支票、轉賬支票），承兌匯票（含銀行承兌匯票、商業承兌匯票）以及進帳單等，适用於 人民銀行印發的 2010 版銀行票據憑證版式（銀發[2010]299 號）。
 
         :param request: Request instance for FinanBillOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.FinanBillOCRRequest`
@@ -398,7 +398,7 @@ class OcrClient(AbstractClient):
 
 
     def FinanBillSliceOCR(self, request):
-        """本介面支援常見銀行票據的自動分類和識别。切片識别包括金融行業常見票據的重要切片欄位識别，包括金額、賬号、日期、憑證号碼等。（金融票據切片：金融票據中待識别欄位及其周圍局部區域的裁剪圖像。）
+        """本介面支援常見銀行票據的自動分類和識别。切片識别包括金融行業常見票據的重要切片欄位識别，包括金額、賬號、日期、憑證號碼等。（金融票據切片：金融票據中待識别欄位及其周圍局部區域的裁剪圖像。）
 
         :param request: Request instance for FinanBillSliceOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.FinanBillSliceOCRRequest`
@@ -426,7 +426,7 @@ class OcrClient(AbstractClient):
 
 
     def FlightInvoiceOCR(self, request):
-        """本介面支援機票行程單關鍵欄位的識别，包括姓名、身份證件号碼、航班号、票價 、合計、電子客票号碼、填開日期等。
+        """本介面支援機票行程單關鍵欄位的識别，包括姓名、身份證件號碼、航班號、票價 、合計、電子客票號碼、填開日期等。
 
         :param request: Request instance for FlightInvoiceOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.FlightInvoiceOCRRequest`
@@ -454,7 +454,7 @@ class OcrClient(AbstractClient):
 
 
     def FormulaOCR(self, request):
-        """本介面支援識别主流初高中數學符号和公式，返回公式的 Latex 格式文本。
+        """本介面支援識别主流初高中數學符號和公式，返回公式的 Latex 格式文本。
 
         :param request: Request instance for FormulaOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.FormulaOCRRequest`
@@ -510,7 +510,7 @@ class OcrClient(AbstractClient):
 
 
     def GeneralBasicOCR(self, request):
-        """本介面支援多場景、任意版面下整圖文字的識别。支援自動識别語言類型，同時支援自選語言種類（推薦），除中英文外，支援日語、韓語、西班牙語、法語、德語、葡萄牙語、越南語、馬來語、俄語、意大利語、荷蘭語、瑞典語、芬蘭語、丹麥語、挪威語、匈牙利語、泰語等多種語言。應用場景包括：印刷文件識别、網絡圖片識别、廣告圖文字識别、街景店招識别、清單識别、視訊标題識别、頭像文字識别等。
+        """本介面支援多場景、任意版面下整圖文字的識别。支援自動識别語言類型，同時支援自選語言種類（推薦），除中英文外，支援日語、韓語、西班牙語、法語、德語、葡萄牙語、越南語、馬來語、俄語、意大利語、荷蘭語、瑞典語、芬蘭語、丹麥語、挪威語、匈牙利語、泰語等多種語言。應用場景包括：印刷文件識别、網絡圖片識别、廣告圖文字識别、街景店招識别、清單識别、視訊標題識别、頭像文字識别等。
 
         :param request: Request instance for GeneralBasicOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.GeneralBasicOCRRequest`
@@ -538,7 +538,7 @@ class OcrClient(AbstractClient):
 
 
     def GeneralEfficientOCR(self, request):
-        """本介面支援多場景、任意版面下整圖文字的識别。相較于“通用印刷體識别”介面，精簡版介面在準召率有一定損失的情況下，耗時更短。适用于對介面耗時較爲敏感的客戶。
+        """本介面支援多場景、任意版面下整圖文字的識别。相較於“通用印刷體識别”介面，精簡版介面在準召率有一定損失的情況下，耗時更短。适用於對介面耗時較爲敏感的客戶。
 
         :param request: Request instance for GeneralEfficientOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.GeneralEfficientOCRRequest`
@@ -622,7 +622,7 @@ class OcrClient(AbstractClient):
 
 
     def HmtResidentPermitOCR(self, request):
-        """ 居住證OCR支援 居住證正反面全欄位内容檢測識别功能，包括姓名、性别、出生日期、網址、身份證ID、簽發機關、有效期限、簽發次數、通行證号碼關鍵欄位識别。可以應用于 居住證訊息有效性校驗場景，例如銀行開戶、用戶注冊等場景。
+        """ 居住證OCR支援 居住證正反面全欄位内容檢測識别功能，包括姓名、性别、出生日期、網址、身份證ID、簽發機關、有效期限、簽發次數、通行證號碼關鍵欄位識别。可以應用於 居住證訊息有效性校驗場景，例如銀行開戶、用戶注冊等場景。
 
         :param request: Request instance for HmtResidentPermitOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.HmtResidentPermitOCRRequest`
@@ -650,7 +650,7 @@ class OcrClient(AbstractClient):
 
 
     def IDCardOCR(self, request):
-        """本介面支援 大陸居民二代身份證正反面所有欄位的識别，包括姓名、性别、民族、出生日期、住址、公民身份證号、簽發機關、有效期限，識别準确度達到99%以上。
+        """本介面支援 大陸居民二代身份證正反面所有欄位的識别，包括姓名、性别、民族、出生日期、住址、公民身份證號、簽發機關、有效期限，識别準确度達到99%以上。
 
         另外，本介面還支援多種增值能力，滿足不同場景的需求。如身份證照片、人像照片的裁剪功能，同時具備9種告警功能，如下表所示。
 
@@ -723,7 +723,7 @@ class OcrClient(AbstractClient):
 
 
     def InstitutionOCR(self, request):
-        """本介面支援事業單位法人證書關鍵欄位識别，包括注冊号、有效期、住所、名稱、法定代表人等。
+        """本介面支援事業單位法人證書關鍵欄位識别，包括注冊號、有效期、住所、名稱、法定代表人等。
 
         :param request: Request instance for InstitutionOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.InstitutionOCRRequest`
@@ -779,7 +779,7 @@ class OcrClient(AbstractClient):
 
 
     def InvoiceGeneralOCR(self, request):
-        """本介面支援對通用機打發票的發票代碼、發票号碼、日期、購買方識别号、銷售方識别号、校驗碼、小寫金額等關鍵欄位的識别。
+        """本介面支援對通用機打發票的發票代碼、發票號碼、日期、購買方識别號、銷售方識别號、校驗碼、小寫金額等關鍵欄位的識别。
 
         :param request: Request instance for InvoiceGeneralOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.InvoiceGeneralOCRRequest`
@@ -807,7 +807,7 @@ class OcrClient(AbstractClient):
 
 
     def LicensePlateOCR(self, request):
-        """本介面支援對 大陸機動車車牌的自動定位和識别，返回地域編号和車牌号訊息。
+        """本介面支援對 大陸機動車車牌的自動定位和識别，返回地域編號和車牌號訊息。
 
         :param request: Request instance for LicensePlateOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.LicensePlateOCRRequest`
@@ -835,7 +835,7 @@ class OcrClient(AbstractClient):
 
 
     def MLIDCardOCR(self, request):
-        """本介面支援馬來西亞身份證識别，識别欄位包括身份證号、姓名、性别、網址；具備身份證人像照片的裁剪功能和翻拍、影印件告警功能。
+        """本介面支援馬來西亞身份證識别，識别欄位包括身份證號、姓名、性别、網址；具備身份證人像照片的裁剪功能和翻拍、影印件告警功能。
         本介面暫未完全對外開放，如需咨詢，請[聯系商務](https://cloud.taifucloud.com/about/connect)
 
         :param request: Request instance for MLIDCardOCR.
@@ -893,7 +893,7 @@ class OcrClient(AbstractClient):
 
 
     def MainlandPermitOCR(self, request):
-        """智慧識别并結構化 居民來往内地通行證正面全部欄位，包含中文姓名、英文姓名、性别、出生日期、簽發機關、有效期限、證件号、簽發地點、簽發次數、證件類别。
+        """智慧識别並結構化 居民來往内地通行證正面全部欄位，包含中文姓名、英文姓名、性别、出生日期、簽發機關、有效期限、證件號、簽發地點、簽發次數、證件類别。
 
         :param request: Request instance for MainlandPermitOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.MainlandPermitOCRRequest`
@@ -1005,7 +1005,7 @@ class OcrClient(AbstractClient):
 
 
     def PassportOCR(self, request):
-        """本介面支援 大陸地區護照個人資料頁多個欄位的檢測與識别。已支援欄位包括英文姓名、中文姓名、國家碼、護照号、出生地、出生日期、國籍英文、性别英文、有效期、簽發地點英文、簽發日期、持證人簽名、護照機讀碼（MRZ碼）等。
+        """本介面支援 大陸地區護照個人資料頁多個欄位的檢測與識别。已支援欄位包括英文姓名、中文姓名、國家碼、護照號、出生地、出生日期、國籍英文、性别英文、有效期、簽發地點英文、簽發日期、持證人簽名、護照機讀碼（MRZ碼）等。
 
         :param request: Request instance for PassportOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.PassportOCRRequest`
@@ -1033,7 +1033,7 @@ class OcrClient(AbstractClient):
 
 
     def PermitOCR(self, request):
-        """本介面支援對卡式 通行證的識别，包括簽發地點、簽發機關、有效期限、性别、出生日期、英文姓名、姓名、證件号等欄位。
+        """本介面支援對卡式 通行證的識别，包括簽發地點、簽發機關、有效期限、性别、出生日期、英文姓名、姓名、證件號等欄位。
 
         :param request: Request instance for PermitOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.PermitOCRRequest`
@@ -1118,7 +1118,7 @@ class OcrClient(AbstractClient):
 
 
     def QuotaInvoiceOCR(self, request):
-        """本介面支援定額發票的發票号碼、發票代碼、金額(大小寫)、發票消費類型、地區及是否有公司印章等關鍵欄位的識别。
+        """本介面支援定額發票的發票號碼、發票代碼、金額(大小寫)、發票消費類型、地區及是否有公司印章等關鍵欄位的識别。
 
         :param request: Request instance for QuotaInvoiceOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.QuotaInvoiceOCRRequest`
@@ -1146,7 +1146,7 @@ class OcrClient(AbstractClient):
 
 
     def ResidenceBookletOCR(self, request):
-        """本介面支援居民戶口簿戶首頁及成員頁關鍵欄位的識别，包括姓名、戶别、網址、籍貫、身份證号碼等。
+        """本介面支援居民戶口簿戶首頁及成員頁關鍵欄位的識别，包括姓名、戶别、網址、籍貫、身份證號碼等。
 
         :param request: Request instance for ResidenceBookletOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.ResidenceBookletOCRRequest`
@@ -1174,7 +1174,7 @@ class OcrClient(AbstractClient):
 
 
     def ShipInvoiceOCR(self, request):
-        """本介面支援識别輪船票的發票代碼、發票号碼、日期、姓名、票價等欄位。
+        """本介面支援識别輪船票的發票代碼、發票號碼、日期、姓名、票價等欄位。
 
         :param request: Request instance for ShipInvoiceOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.ShipInvoiceOCRRequest`
@@ -1230,7 +1230,7 @@ class OcrClient(AbstractClient):
 
 
     def TaxiInvoiceOCR(self, request):
-        """本介面支援出租車發票關鍵欄位的識别，包括發票号碼、發票代碼、金額、日期、上下車時間、裏程、車牌号、發票類型及所屬地區等欄位。
+        """本介面支援出租車發票關鍵欄位的識别，包括發票號碼、發票代碼、金額、日期、上下車時間、裏程、車牌號、發票類型及所屬地區等欄位。
 
         :param request: Request instance for TaxiInvoiceOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.TaxiInvoiceOCRRequest`
@@ -1258,7 +1258,7 @@ class OcrClient(AbstractClient):
 
 
     def TextDetect(self, request):
-        """本介面通過檢測圖片中的文字訊息特征，快速判斷圖片中有無文字并返回判斷結果，幫助用戶過濾無文字的圖片。
+        """本介面通過檢測圖片中的文字訊息特征，快速判斷圖片中有無文字並返回判斷結果，幫助用戶過濾無文字的圖片。
 
         :param request: Request instance for TextDetect.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.TextDetectRequest`
@@ -1286,7 +1286,7 @@ class OcrClient(AbstractClient):
 
 
     def TollInvoiceOCR(self, request):
-        """本介面支援對過路過橋費發票的發票代碼、發票号碼、日期、小寫金額等關鍵欄位的識别。
+        """本介面支援對過路過橋費發票的發票代碼、發票號碼、日期、小寫金額等關鍵欄位的識别。
 
         :param request: Request instance for TollInvoiceOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.TollInvoiceOCRRequest`
@@ -1314,7 +1314,7 @@ class OcrClient(AbstractClient):
 
 
     def TrainTicketOCR(self, request):
-        """本介面支援火車票全欄位的識别，包括編号、票價、姓名、座位号、出發時間、出發站、到達站、車次、席别、發票類型及序列号等。
+        """本介面支援火車票全欄位的識别，包括編號、票價、姓名、座位號、出發時間、出發站、到達站、車次、席别、發票類型及序列號等。
 
         :param request: Request instance for TrainTicketOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.TrainTicketOCRRequest`
@@ -1342,7 +1342,7 @@ class OcrClient(AbstractClient):
 
 
     def VatInvoiceOCR(self, request):
-        """本介面支援增值稅專用發票、增值稅普通發票、增值稅電子發票全欄位的内容檢測和識别，包括發票代碼、發票号碼、開票日期、合計金額、校驗碼、稅率、合計稅額、價稅合計、購買方識别号、複核、銷售方識别号、開票人、密碼區1、密碼區2、密碼區3、密碼區4、發票名稱、購買方名稱、銷售方名稱、服務名稱、備注、規格型号、數量、單價、金額、稅額、收款人等欄位。
+        """本介面支援增值稅專用發票、增值稅普通發票、增值稅電子發票全欄位的内容檢測和識别，包括發票代碼、發票號碼、開票日期、合計金額、校驗碼、稅率、合計稅額、價稅合計、購買方識别號、複核、銷售方識别號、開票人、密碼區1、密碼區2、密碼區3、密碼區4、發票名稱、購買方名稱、銷售方名稱、服務名稱、備注、規格型號、數量、單價、金額、稅額、收款人等欄位。
 
         :param request: Request instance for VatInvoiceOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.VatInvoiceOCRRequest`
@@ -1370,7 +1370,7 @@ class OcrClient(AbstractClient):
 
 
     def VatRollInvoiceOCR(self, request):
-        """本介面支援對增值稅發票（卷票）的發票代碼、發票号碼、日期、校驗碼、合計金額（小寫）等關鍵欄位的識别。
+        """本介面支援對增值稅發票（卷票）的發票代碼、發票號碼、日期、校驗碼、合計金額（小寫）等關鍵欄位的識别。
 
         :param request: Request instance for VatRollInvoiceOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.VatRollInvoiceOCRRequest`
@@ -1400,9 +1400,9 @@ class OcrClient(AbstractClient):
     def VehicleLicenseOCR(self, request):
         """本介面支援行駛證首頁和副頁所有欄位的自動定位與識别。
 
-        行駛證首頁：車牌号碼、車輛類型、所有人、住址、使用性質、品牌型号、識别代碼、發動機号、注冊日期、發證日期、發證單位。
+        行駛證首頁：車牌號碼、車輛類型、所有人、住址、使用性質、品牌型號、識别代碼、發動機號、注冊日期、發證日期、發證單位。
 
-        行駛證副頁：号牌号碼、檔案編号、核定載人數、總質量、整備質量、核定載質量、外廓尺寸、準牽引總質量、備注、檢驗記錄。
+        行駛證副頁：號牌號碼、檔案編號、核定載人數、總質量、整備質量、核定載質量、外廓尺寸、準牽引總質量、備注、檢驗記錄。
 
         另外，本介面還支援影印件、翻拍和PS告警功能。
 
@@ -1432,7 +1432,7 @@ class OcrClient(AbstractClient):
 
 
     def VehicleRegCertOCR(self, request):
-        """本介面支援國内機動車登記證書主要欄位的結構化識别，包括機動車所有人、身份證明名稱、号碼、車輛型号、車輛識别代号、發動機号、制造廠名稱等。
+        """本介面支援國内機動車登記證書主要欄位的結構化識别，包括機動車所有人、身份證明名稱、號碼、車輛型號、車輛識别代號、發動機號、制造廠名稱等。
 
         :param request: Request instance for VehicleRegCertOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.VehicleRegCertOCRRequest`
@@ -1460,7 +1460,7 @@ class OcrClient(AbstractClient):
 
 
     def VinOCR(self, request):
-        """本介面支援圖片内車輛識别代号（VIN）的檢測和識别。
+        """本介面支援圖片内車輛識别代號（VIN）的檢測和識别。
 
         :param request: Request instance for VinOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.VinOCRRequest`
@@ -1488,7 +1488,7 @@ class OcrClient(AbstractClient):
 
 
     def WaybillOCR(self, request):
-        """本介面支援市面上主流版式電子運單的識别，包括收件人和寄件人的姓名、電話、網址以及運單号等欄位。
+        """本介面支援市面上主流版式電子運單的識别，包括收件人和寄件人的姓名、電話、網址以及運單號等欄位。
 
         :param request: Request instance for WaybillOCR.
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.WaybillOCRRequest`

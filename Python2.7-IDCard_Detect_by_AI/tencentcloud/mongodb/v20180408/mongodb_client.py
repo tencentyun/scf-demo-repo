@@ -26,7 +26,7 @@ class MongodbClient(AbstractClient):
 
 
     def CreateDBInstance(self, request):
-        """本介面(CreateDBInstance)用于創建包年包月的MongoDB雲資料庫實例。
+        """本介面(CreateDBInstance)用於創建包年包月的MongoDB雲資料庫實例。
 
         :param request: 調用CreateDBInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.mongodb.v20180408.models.CreateDBInstanceRequest`
@@ -54,7 +54,7 @@ class MongodbClient(AbstractClient):
 
 
     def CreateDBInstanceHour(self, request):
-        """本介面(CreateDBInstanceHour)用于創建按量計費的MongoDB雲資料庫實例（包括主實例、災備實例和只讀實例），可通過傳入實例規格、實例類型、MongoDB版本、購買時長和數量等訊息創建雲資料庫實例。
+        """本介面(CreateDBInstanceHour)用於創建按量計費的MongoDB雲資料庫實例（包括主實例、災備實例和只讀實例），可通過傳入實例規格、實例類型、MongoDB版本、購買時長和數量等訊息創建雲資料庫實例。
 
         :param request: 調用CreateDBInstanceHour所需參數的結構體。
         :type request: :class:`taifucloudcloud.mongodb.v20180408.models.CreateDBInstanceHourRequest`
@@ -82,7 +82,7 @@ class MongodbClient(AbstractClient):
 
 
     def TerminateDBInstance(self, request):
-        """本介面(TerminateDBInstance)用于銷毀按量計費的MongoDB雲資料庫實例
+        """本介面(TerminateDBInstance)用於銷毀按量計費的MongoDB雲資料庫實例
 
         :param request: 調用TerminateDBInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.mongodb.v20180408.models.TerminateDBInstanceRequest`
@@ -110,7 +110,7 @@ class MongodbClient(AbstractClient):
 
 
     def UpgradeDBInstance(self, request):
-        """本介面(UpgradeDBInstance)用于升級包年包月的MongoDB雲資料庫實例，可以擴容内存、儲存以及Oplog
+        """本介面(UpgradeDBInstance)用於升級包年包月的MongoDB雲資料庫實例，可以擴容内存、儲存以及Oplog
 
         :param request: 調用UpgradeDBInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.mongodb.v20180408.models.UpgradeDBInstanceRequest`
@@ -138,7 +138,7 @@ class MongodbClient(AbstractClient):
 
 
     def UpgradeDBInstanceHour(self, request):
-        """本介面(UpgradeDBInstanceHour)用于升級按量計費的MongoDB雲資料庫實例，可以擴容内存、儲存以及oplog
+        """本介面(UpgradeDBInstanceHour)用於升級按量計費的MongoDB雲資料庫實例，可以擴容内存、儲存以及oplog
 
         :param request: 調用UpgradeDBInstanceHour所需參數的結構體。
         :type request: :class:`taifucloudcloud.mongodb.v20180408.models.UpgradeDBInstanceHourRequest`

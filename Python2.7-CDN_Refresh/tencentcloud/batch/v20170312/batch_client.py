@@ -29,7 +29,7 @@ class BatchClient(AbstractClient):
         """此介面可将已存在實例添加到計算環境中。
         實例需要滿足如下條件：<br/>
         1.實例不在批次計算系統中。<br/>
-        2.實例狀态要求處于運作中。<br/>
+        2.實例狀态要求處於運作中。<br/>
         3.支援預付費實例，按小時後付費實例，專享子機實例。不支援競價實例。<br/>
 
         此介面會将加入到計算環境中的實例重設UserData和重裝作業系統。
@@ -60,7 +60,7 @@ class BatchClient(AbstractClient):
 
 
     def CreateComputeEnv(self, request):
-        """用于創建計算環境
+        """用於創建計算環境
 
         :param request: Request instance for CreateComputeEnv.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.CreateComputeEnvRequest`
@@ -116,7 +116,7 @@ class BatchClient(AbstractClient):
 
 
     def CreateTaskTemplate(self, request):
-        """用于創建任務範本
+        """用於創建任務範本
 
         :param request: Request instance for CreateTaskTemplate.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.CreateTaskTemplateRequest`
@@ -144,7 +144,7 @@ class BatchClient(AbstractClient):
 
 
     def DeleteComputeEnv(self, request):
-        """用于删除計算環境
+        """用於删除計算環境
 
         :param request: Request instance for DeleteComputeEnv.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.DeleteComputeEnvRequest`
@@ -172,9 +172,9 @@ class BatchClient(AbstractClient):
 
 
     def DeleteJob(self, request):
-        """用于删除作業記錄。
-        删除作業的效果相當于删除作業相關的所有訊息。删除成功後，作業相關的所有訊息都無法查詢。
-        待删除的作業必須處于完結狀态，且其内部包含的所有任務實例也必須處于完結狀态，否則會禁止操作。完結狀态，是指處于 SUCCEED 或 FAILED 狀态。
+        """用於删除作業記錄。
+        删除作業的效果相當於删除作業相關的所有訊息。删除成功後，作業相關的所有訊息都無法查詢。
+        待删除的作業必須處於完結狀态，且其内部包含的所有任務實例也必須處於完結狀态，否則會禁止操作。完結狀态，是指處於 SUCCEED 或 FAILED 狀态。
 
         :param request: Request instance for DeleteJob.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.DeleteJobRequest`
@@ -202,7 +202,7 @@ class BatchClient(AbstractClient):
 
 
     def DeleteTaskTemplates(self, request):
-        """用于删除任務範本訊息
+        """用於删除任務範本訊息
 
         :param request: Request instance for DeleteTaskTemplates.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.DeleteTaskTemplatesRequest`
@@ -258,7 +258,7 @@ class BatchClient(AbstractClient):
 
 
     def DescribeComputeEnv(self, request):
-        """用于查詢計算環境的詳細訊息
+        """用於查詢計算環境的詳細訊息
 
         :param request: Request instance for DescribeComputeEnv.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeComputeEnvRequest`
@@ -286,7 +286,7 @@ class BatchClient(AbstractClient):
 
 
     def DescribeComputeEnvActivities(self, request):
-        """用于查詢計算環境的活動訊息
+        """用於查詢計算環境的活動訊息
 
         :param request: Request instance for DescribeComputeEnvActivities.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeComputeEnvActivitiesRequest`
@@ -342,7 +342,7 @@ class BatchClient(AbstractClient):
 
 
     def DescribeComputeEnvCreateInfos(self, request):
-        """用于檢視計算環境創建訊息清單，包括名稱、描述、類型、環境參數、通知及期望節點數等。
+        """用於檢視計算環境創建訊息清單，包括名稱、描述、類型、環境參數、通知及期望節點數等。
 
         :param request: Request instance for DescribeComputeEnvCreateInfos.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeComputeEnvCreateInfosRequest`
@@ -370,7 +370,7 @@ class BatchClient(AbstractClient):
 
 
     def DescribeComputeEnvs(self, request):
-        """用于檢視計算環境清單
+        """用於檢視計算環境清單
 
         :param request: Request instance for DescribeComputeEnvs.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeComputeEnvsRequest`
@@ -454,7 +454,7 @@ class BatchClient(AbstractClient):
 
 
     def DescribeInstanceCategories(self, request):
-        """目前對CVM現有實例族分類，每一類包含若幹實例族。該介面用于查詢實例分類訊息。
+        """目前對CVM現有實例族分類，每一類包含若幹實例族。該介面用於查詢實例分類訊息。
 
         :param request: Request instance for DescribeInstanceCategories.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeInstanceCategoriesRequest`
@@ -482,7 +482,7 @@ class BatchClient(AbstractClient):
 
 
     def DescribeJob(self, request):
-        """用于檢視一個作業的詳細訊息，包括内部任務（Task）和依賴（Dependence）訊息。
+        """用於檢視一個作業的詳細訊息，包括内部任務（Task）和依賴（Dependence）訊息。
 
         :param request: Request instance for DescribeJob.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeJobRequest`
@@ -510,7 +510,7 @@ class BatchClient(AbstractClient):
 
 
     def DescribeJobSubmitInfo(self, request):
-        """用于查詢指定作業的提交訊息，其返回内容包括 JobId 和 SubmitJob 介面中作爲輸入參數的作業提交訊息
+        """用於查詢指定作業的提交訊息，其返回内容包括 JobId 和 SubmitJob 介面中作爲輸入參數的作業提交訊息
 
         :param request: Request instance for DescribeJobSubmitInfo.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeJobSubmitInfoRequest`
@@ -538,7 +538,7 @@ class BatchClient(AbstractClient):
 
 
     def DescribeJobs(self, request):
-        """用于查詢若幹個作業的概覽訊息
+        """用於查詢若幹個作業的概覽訊息
 
         :param request: Request instance for DescribeJobs.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeJobsRequest`
@@ -566,7 +566,7 @@ class BatchClient(AbstractClient):
 
 
     def DescribeTask(self, request):
-        """用于查詢指定任務的詳細訊息，包括任務内部的任務實例訊息。
+        """用於查詢指定任務的詳細訊息，包括任務内部的任務實例訊息。
 
         :param request: Request instance for DescribeTask.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeTaskRequest`
@@ -594,7 +594,7 @@ class BatchClient(AbstractClient):
 
 
     def DescribeTaskLogs(self, request):
-        """用于獲取任務多個實例标準輸出和标準錯誤日志。
+        """用於獲取任務多個實例標準輸出和標準錯誤日志。
 
         :param request: Request instance for DescribeTaskLogs.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeTaskLogsRequest`
@@ -622,7 +622,7 @@ class BatchClient(AbstractClient):
 
 
     def DescribeTaskTemplates(self, request):
-        """用于查詢任務範本訊息
+        """用於查詢任務範本訊息
 
         :param request: Request instance for DescribeTaskTemplates.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.DescribeTaskTemplatesRequest`
@@ -678,7 +678,7 @@ class BatchClient(AbstractClient):
 
 
     def ModifyComputeEnv(self, request):
-        """用于修改計算環境屬性
+        """用於修改計算環境屬性
 
         :param request: Request instance for ModifyComputeEnv.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.ModifyComputeEnvRequest`
@@ -706,7 +706,7 @@ class BatchClient(AbstractClient):
 
 
     def ModifyTaskTemplate(self, request):
-        """用于修改任務範本
+        """用於修改任務範本
 
         :param request: Request instance for ModifyTaskTemplate.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.ModifyTaskTemplateRequest`
@@ -734,8 +734,8 @@ class BatchClient(AbstractClient):
 
 
     def RetryJobs(self, request):
-        """用于重試作業中失敗的任務實例。
-        當且僅當作業處于“FAILED”狀态，支援重試操作。重試操作成功後，作業會按照“DAG”中指定的任務依賴關系，依次重試各個任務中失敗的任務實例。任務實例的曆史訊息将被重置，如同首次運作一樣，參與後續的調度和執行。
+        """用於重試作業中失敗的任務實例。
+        當且僅當作業處於“FAILED”狀态，支援重試操作。重試操作成功後，作業會按照“DAG”中指定的任務依賴關系，依次重試各個任務中失敗的任務實例。任務實例的曆史訊息将被重置，如同首次運作一樣，參與後續的調度和執行。
 
         :param request: Request instance for RetryJobs.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.RetryJobsRequest`
@@ -763,7 +763,7 @@ class BatchClient(AbstractClient):
 
 
     def SubmitJob(self, request):
-        """用于提交一個作業
+        """用於提交一個作業
 
         :param request: Request instance for SubmitJob.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.SubmitJobRequest`
@@ -791,8 +791,8 @@ class BatchClient(AbstractClient):
 
 
     def TerminateComputeNode(self, request):
-        """用于銷毀計算節點。
-        對于狀态爲CREATED、CREATION_FAILED、RUNNING和ABNORMAL的節點，允許銷毀處理。
+        """用於銷毀計算節點。
+        對於狀态爲CREATED、CREATION_FAILED、RUNNING和ABNORMAL的節點，允許銷毀處理。
 
         :param request: Request instance for TerminateComputeNode.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.TerminateComputeNodeRequest`
@@ -820,7 +820,7 @@ class BatchClient(AbstractClient):
 
 
     def TerminateComputeNodes(self, request):
-        """用于批次銷毀計算節點，不允許重複銷毀同一個節點。
+        """用於批次銷毀計算節點，不允許重複銷毀同一個節點。
 
         :param request: Request instance for TerminateComputeNodes.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.TerminateComputeNodesRequest`
@@ -848,9 +848,9 @@ class BatchClient(AbstractClient):
 
 
     def TerminateJob(self, request):
-        """用于終止作業。
-        當作業處于“SUBMITTED”狀态時，禁止終止操作；當作業處于“SUCCEED”狀态時，終止操作不會生效。
-        終止作業是一個異步過程。整個終止過程的耗時和任務總數成正比。終止的效果相當于所含的所有任務實例進行TerminateTaskInstance操作。具體效果和用法可參考TerminateTaskInstance。
+        """用於終止作業。
+        當作業處於“SUBMITTED”狀态時，禁止終止操作；當作業處於“SUCCEED”狀态時，終止操作不會生效。
+        終止作業是一個異步過程。整個終止過程的耗時和任務總數成正比。終止的效果相當於所含的所有任務實例進行TerminateTaskInstance操作。具體效果和用法可參考TerminateTaskInstance。
 
         :param request: Request instance for TerminateJob.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.TerminateJobRequest`
@@ -878,11 +878,11 @@ class BatchClient(AbstractClient):
 
 
     def TerminateTaskInstance(self, request):
-        """用于終止任務實例。
-        對于狀态已經爲“SUCCEED”和“FAILED”的任務實例，不做處理。
-        對于狀态爲“SUBMITTED”、“PENDING”、“RUNNABLE”的任務實例，狀态将置爲“FAILED”狀态。
-        對于狀态爲“STARTING”、“RUNNING”、“FAILED_INTERRUPTED”的任務實例，分區兩種情況：如果未顯示指定計算環境，會先銷毀CVM服務器，然後将狀态置爲“FAILED”，具有一定耗時；如果指定了計算環境EnvId，任務實例狀态置爲“FAILED”，并重啓執行該任務的CVM服務器，具有一定的耗時。
-        對于狀态爲“FAILED_INTERRUPTED”的任務實例，終止操作實際成功之後，相關資源和配額才會釋放。
+        """用於終止任務實例。
+        對於狀态已經爲“SUCCEED”和“FAILED”的任務實例，不做處理。
+        對於狀态爲“SUBMITTED”、“PENDING”、“RUNNABLE”的任務實例，狀态将置爲“FAILED”狀态。
+        對於狀态爲“STARTING”、“RUNNING”、“FAILED_INTERRUPTED”的任務實例，分區兩種情況：如果未顯示指定計算環境，會先銷毀CVM服務器，然後将狀态置爲“FAILED”，具有一定耗時；如果指定了計算環境EnvId，任務實例狀态置爲“FAILED”，並重啓執行該任務的CVM服務器，具有一定的耗時。
+        對於狀态爲“FAILED_INTERRUPTED”的任務實例，終止操作實際成功之後，相關資源和配額才會釋放。
 
         :param request: Request instance for TerminateTaskInstance.
         :type request: :class:`taifucloudcloud.batch.v20170312.models.TerminateTaskInstanceRequest`

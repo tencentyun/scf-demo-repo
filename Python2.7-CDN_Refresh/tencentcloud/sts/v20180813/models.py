@@ -262,7 +262,7 @@ class QueryApiKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TargetUin: 待查詢的賬号(不填預設查當前賬号)
+        :param TargetUin: 待查詢的賬號(不填預設查當前賬號)
         :type TargetUin: int
         """
         self.TargetUin = None

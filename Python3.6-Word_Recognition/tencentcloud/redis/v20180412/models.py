@@ -123,7 +123,7 @@ class CreateInstancesRequest(AbstractModel):
         :type SubnetId: str
         :param ProjectId: 項目id，取值以用戶帳戶>用戶帳戶相關介面查詢>項目清單返回的projectId爲準
         :type ProjectId: int
-        :param AutoRenew: 自動續約标識。0 - 預設狀态（手動續約）；1 - 自動續約；2 - 明确不自動續約
+        :param AutoRenew: 自動續約標識。0 - 預設狀态（手動續約）；1 - 自動續約；2 - 明确不自動續約
         :type AutoRenew: int
         :param SecurityGroupIdList: 安全組id數組
         :type SecurityGroupIdList: list of str
@@ -631,19 +631,19 @@ class DescribeInstancesRequest(AbstractModel):
         :type OrderBy: str
         :param OrderType: 1倒序，0順序，預設倒序
         :type OrderType: int
-        :param VpcIds: 私有網絡ID數組，數組下标從0開始，如果不傳則預設選擇基礎網絡，如：47525
+        :param VpcIds: 私有網絡ID數組，數組下標從0開始，如果不傳則預設選擇基礎網絡，如：47525
         :type VpcIds: list of str
-        :param SubnetIds: 子網ID數組，數組下标從0開始，如：56854
+        :param SubnetIds: 子網ID數組，數組下標從0開始，如：56854
         :type SubnetIds: list of str
-        :param ProjectIds: 項目ID 組成的數組，數組下标從0開始
+        :param ProjectIds: 項目ID 組成的數組，數組下標從0開始
         :type ProjectIds: list of int
         :param SearchKey: 查找實例的ID。
         :type SearchKey: str
         :param InstanceName: 實例名稱
         :type InstanceName: str
-        :param UniqVpcIds: 私有網絡ID數組，數組下标從0開始，如果不傳則預設選擇基礎網絡，如：vpc-sad23jfdfk
+        :param UniqVpcIds: 私有網絡ID數組，數組下標從0開始，如果不傳則預設選擇基礎網絡，如：vpc-sad23jfdfk
         :type UniqVpcIds: list of str
-        :param UniqSubnetIds: 子網ID數組，數組下标從0開始，如：subnet-fdj24n34j2
+        :param UniqSubnetIds: 子網ID數組，數組下標從0開始，如：subnet-fdj24n34j2
         :type UniqSubnetIds: list of str
         :param RegionIds: 地域ID，已經棄用，可通過公共參數Region查詢對應地域
         :type RegionIds: list of int
@@ -953,7 +953,7 @@ class DisableReplicaReadonlyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例序号ID
+        :param InstanceId: 實例序號ID
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -991,7 +991,7 @@ class EnableReplicaReadonlyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 實例序号ID
+        :param InstanceId: 實例序號ID
         :type InstanceId: str
         """
         self.InstanceId = None
@@ -1355,7 +1355,7 @@ class InstanceSet(AbstractModel):
         :type Status: int
         :param WanIp: 實例vip
         :type WanIp: str
-        :param Port: 實例端口号
+        :param Port: 實例端口號
         :type Port: int
         :param Createtime: 實例創建時間
         :type Createtime: str
@@ -1365,7 +1365,7 @@ class InstanceSet(AbstractModel):
         :type SizeUsed: float
         :param Type: 實例類型，1：Redis2.8集群版；2：Redis2.8主從版；3：CKV主從版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8單機版；7：Redis4.0集群版；
         :type Type: int
-        :param AutoRenewFlag: 實例是否設置自動續約标識，1：設置自動續約；0：未設置自動續約
+        :param AutoRenewFlag: 實例是否設置自動續約標識，1：設置自動續約；0：未設置自動續約
         :type AutoRenewFlag: int
         :param DeadlineTime: 實例到期時間
         :type DeadlineTime: str
@@ -1385,7 +1385,7 @@ class InstanceSet(AbstractModel):
         :type OfflineTime: str
         :param SubStatus: 流程中的實例，返回子狀态
         :type SubStatus: int
-        :param Tags: 反親和性标簽
+        :param Tags: 反親和性標簽
         :type Tags: list of str
         :param InstanceNode: 實例節點訊息
         :type InstanceNode: list of InstanceNode
@@ -1401,7 +1401,7 @@ class InstanceSet(AbstractModel):
         :type CloseTime: str
         :param SlaveReadWeight: 從節點讀取權重
         :type SlaveReadWeight: int
-        :param InstanceTags: 實例關聯的标簽訊息
+        :param InstanceTags: 實例關聯的標簽訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceTags: list of InstanceTagInfo
         :param ProjectName: 項目名稱
@@ -1494,15 +1494,15 @@ class InstanceSet(AbstractModel):
 
 
 class InstanceTagInfo(AbstractModel):
-    """實例标簽訊息
+    """實例標簽訊息
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -1755,7 +1755,7 @@ class ModifyInstanceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Operation: 修改實例操作，如填寫：rename-表示實例重命名；modifyProject-修改實例所屬項目；modifyAutoRenew-修改實例續約标記
+        :param Operation: 修改實例操作，如填寫：rename-表示實例重命名；modifyProject-修改實例所屬項目；modifyAutoRenew-修改實例續約標記
         :type Operation: str
         :param InstanceId: 實例Id
         :type InstanceId: str
@@ -1763,7 +1763,7 @@ class ModifyInstanceRequest(AbstractModel):
         :type InstanceName: str
         :param ProjectId: 項目Id
         :type ProjectId: int
-        :param AutoRenew: 自動續約标識。0 - 預設狀态（手動續約）；1 - 自動續約；2 - 明确不自動續約
+        :param AutoRenew: 自動續約標識。0 - 預設狀态（手動續約）；1 - 自動續約；2 - 明确不自動續約
         :type AutoRenew: int
         """
         self.Operation = None
@@ -2149,7 +2149,7 @@ class SecurityGroupDetail(AbstractModel):
         :type SecurityGroupId: str
         :param SecurityGroupName: 安全組名稱
         :type SecurityGroupName: str
-        :param SecurityGroupRemark: 安全組标記
+        :param SecurityGroupRemark: 安全組標記
         :type SecurityGroupRemark: str
         :param InboundRule: 安全組入站規則
         :type InboundRule: list of SecurityGroupsInboundAndOutbound
@@ -2196,7 +2196,7 @@ class SecurityGroupsInboundAndOutbound(AbstractModel):
         :type Action: str
         :param Ip: IP網址
         :type Ip: str
-        :param Port: 端口号
+        :param Port: 端口號
         :type Port: str
         :param Proto: 協議類型
         :type Proto: str
@@ -2221,7 +2221,7 @@ class TradeDealDetail(AbstractModel):
 
     def __init__(self):
         """
-        :param DealId: 訂單号ID，調用雲API時使用此ID
+        :param DealId: 訂單號ID，調用雲API時使用此ID
         :type DealId: str
         :param DealName: 長訂單ID，反饋訂單問題給官方客服使用此ID
         :type DealName: str

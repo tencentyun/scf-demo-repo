@@ -43,7 +43,7 @@ function sendEmail($to,$title,$content){
     //設置使用ssl加密方式登入鑒權
     $mail->SMTPSecure = 'ssl';
     //Setting remote smtp host port for ssl connection
-    //設置ssl連接smtp服務器的遠端服務器端口号
+    //設置ssl連接smtp服務器的遠端服務器端口號
     $mail->Port = mail_port;
     $mail->CharSet = 'UTF-8';
     $mail->Username =mail_user;

@@ -26,7 +26,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeCdnData(self, request):
-        """DescribeCdnData 用于查詢 CDN 實時訪問監控數據，支援以下指标查詢：
+        """DescribeCdnData 用於查詢 CDN 實時訪問監控數據，支援以下指標查詢：
 
         + 流量（單位爲 byte）
         + 頻寬（單位爲 bps）
@@ -63,7 +63,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeIpVisit(self, request):
-        """DescribeIpVisit 用于查詢 5 分鍾活躍用戶數，及日活躍用戶數明細
+        """DescribeIpVisit 用於查詢 5 分鍾活躍用戶數，及日活躍用戶數明細
 
         + 5 分鍾活躍用戶數：根據日志中用戶端 IP，5 分鍾粒度去重統計
         + 日活躍用戶數：根據日志中用戶端 IP，按天粒度去重統計
@@ -94,7 +94,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeMapInfo(self, request):
-        """DescribeMapInfo 用于查詢 對應的 ID，運營商對應的 ID 訊息。
+        """DescribeMapInfo 用於查詢 對應的 ID，運營商對應的 ID 訊息。
 
         :param request: 調用DescribeMapInfo所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribeMapInfoRequest`
@@ -122,7 +122,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribeOriginData(self, request):
-        """DescribeOriginData 用于查詢 CDN 實時回源監控數據，支援以下指标查詢：
+        """DescribeOriginData 用於查詢 CDN 實時回源監控數據，支援以下指標查詢：
 
         + 回源流量（單位爲 byte）
         + 回源頻寬（單位爲 bps）
@@ -160,7 +160,7 @@ class CdnClient(AbstractClient):
 
 
     def DescribePayType(self, request):
-        """DescribePayType 用于查詢用戶的計費類型，計費週期等訊息。
+        """DescribePayType 用於查詢用戶的計費類型，計費週期等訊息。
 
         :param request: 調用DescribePayType所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DescribePayTypeRequest`
@@ -188,7 +188,7 @@ class CdnClient(AbstractClient):
 
 
     def DisableCaches(self, request):
-        """DisableCaches 用于禁用 CDN 上指定 URL 的訪問，禁用完成後，全網訪問會直接返回 403。（介面尚在内測中，暫未全量開放使用）
+        """DisableCaches 用於禁用 CDN 上指定 URL 的訪問，禁用完成後，全網訪問會直接返回 403。（介面尚在内測中，暫未全量開放使用）
 
         :param request: 調用DisableCaches所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.DisableCachesRequest`
@@ -216,7 +216,7 @@ class CdnClient(AbstractClient):
 
 
     def EnableCaches(self, request):
-        """EnableCaches 用于解禁手工封禁的 URL，解禁成功後，全網生效時間約 5~10 分鍾。（介面尚在内測中，暫未全量開放使用）
+        """EnableCaches 用於解禁手工封禁的 URL，解禁成功後，全網生效時間約 5~10 分鍾。（介面尚在内測中，暫未全量開放使用）
 
         :param request: 調用EnableCaches所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdn.v20180606.models.EnableCachesRequest`

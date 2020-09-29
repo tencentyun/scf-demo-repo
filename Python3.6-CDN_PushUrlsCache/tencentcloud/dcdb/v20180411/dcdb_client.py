@@ -26,7 +26,7 @@ class DcdbClient(AbstractClient):
 
 
     def CloneAccount(self, request):
-        """本介面（CloneAccount）用于複製實例帳戶。
+        """本介面（CloneAccount）用於複製實例帳戶。
 
         :param request: Request instance for CloneAccount.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.CloneAccountRequest`
@@ -54,7 +54,7 @@ class DcdbClient(AbstractClient):
 
 
     def CloseDBExtranetAccess(self, request):
-        """本介面(CloseDBExtranetAccess)用于關閉雲資料庫實例的外網訪問。關閉外網訪問後，外網網址将不可訪問，查詢實例清單介面将不返回對應實例的外網域名和端口訊息。
+        """本介面(CloseDBExtranetAccess)用於關閉雲資料庫實例的外網訪問。關閉外網訪問後，外網網址将不可訪問，查詢實例清單介面将不返回對應實例的外網域名和端口訊息。
 
         :param request: Request instance for CloseDBExtranetAccess.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.CloseDBExtranetAccessRequest`
@@ -82,8 +82,8 @@ class DcdbClient(AbstractClient):
 
 
     def CopyAccountPrivileges(self, request):
-        """本介面（CopyAccountPrivileges）用于複制雲資料庫賬号的權限。
-        注意：相同用戶名，不同Host是不同的賬号，Readonly屬性相同的賬号之間才能複制權限。
+        """本介面（CopyAccountPrivileges）用於複制雲資料庫賬號的權限。
+        注意：相同用戶名，不同Host是不同的賬號，Readonly屬性相同的賬號之間才能複制權限。
 
         :param request: Request instance for CopyAccountPrivileges.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.CopyAccountPrivilegesRequest`
@@ -111,7 +111,7 @@ class DcdbClient(AbstractClient):
 
 
     def CreateAccount(self, request):
-        """本介面（CreateAccount）用于創建雲資料庫賬号。一個實例可以創建多個不同的賬号，相同的用戶名+不同的host是不同的賬号。
+        """本介面（CreateAccount）用於創建雲資料庫賬號。一個實例可以創建多個不同的賬號，相同的用戶名+不同的host是不同的賬號。
 
         :param request: Request instance for CreateAccount.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.CreateAccountRequest`
@@ -139,7 +139,7 @@ class DcdbClient(AbstractClient):
 
 
     def CreateDCDBInstance(self, request):
-        """本介面（CreateDCDBInstance）用于創建包年包月的雲資料庫實例，可通過傳入實例規格、資料庫版本号、購買時長等訊息創建雲資料庫實例。
+        """本介面（CreateDCDBInstance）用於創建包年包月的雲資料庫實例，可通過傳入實例規格、資料庫版本號、購買時長等訊息創建雲資料庫實例。
 
         :param request: Request instance for CreateDCDBInstance.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.CreateDCDBInstanceRequest`
@@ -167,7 +167,7 @@ class DcdbClient(AbstractClient):
 
 
     def DeleteAccount(self, request):
-        """本介面（DeleteAccount）用于删除雲資料庫賬号。用戶名+host唯一确定一個賬号。
+        """本介面（DeleteAccount）用於删除雲資料庫賬號。用戶名+host唯一确定一個賬號。
 
         :param request: Request instance for DeleteAccount.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DeleteAccountRequest`
@@ -195,8 +195,8 @@ class DcdbClient(AbstractClient):
 
 
     def DescribeAccountPrivileges(self, request):
-        """本介面（DescribeAccountPrivileges）用于查詢雲資料庫賬号權限。
-        注意：注意：相同用戶名，不同Host是不同的賬号。
+        """本介面（DescribeAccountPrivileges）用於查詢雲資料庫賬號權限。
+        注意：注意：相同用戶名，不同Host是不同的賬號。
 
         :param request: Request instance for DescribeAccountPrivileges.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeAccountPrivilegesRequest`
@@ -224,7 +224,7 @@ class DcdbClient(AbstractClient):
 
 
     def DescribeAccounts(self, request):
-        """本介面（DescribeAccounts）用于查詢指定雲資料庫實例的賬号清單。
+        """本介面（DescribeAccounts）用於查詢指定雲資料庫實例的賬號清單。
 
         :param request: Request instance for DescribeAccounts.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeAccountsRequest`
@@ -252,7 +252,7 @@ class DcdbClient(AbstractClient):
 
 
     def DescribeDBLogFiles(self, request):
-        """本介面(DescribeDBLogFiles)用于獲取資料庫的各種日志清單，包括冷備、binlog、errlog和slowlog。
+        """本介面(DescribeDBLogFiles)用於獲取資料庫的各種日志清單，包括冷備、binlog、errlog和slowlog。
 
         :param request: Request instance for DescribeDBLogFiles.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDBLogFilesRequest`
@@ -280,7 +280,7 @@ class DcdbClient(AbstractClient):
 
 
     def DescribeDBParameters(self, request):
-        """本介面(DescribeDBParameters)用于獲取資料庫的當前參數設置。
+        """本介面(DescribeDBParameters)用於獲取資料庫的當前參數設置。
 
         :param request: Request instance for DescribeDBParameters.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDBParametersRequest`
@@ -308,7 +308,7 @@ class DcdbClient(AbstractClient):
 
 
     def DescribeDBSyncMode(self, request):
-        """本介面（DescribeDBSyncMode）用于查詢雲資料庫實例的同步模式。
+        """本介面（DescribeDBSyncMode）用於查詢雲資料庫實例的同步模式。
 
         :param request: Request instance for DescribeDBSyncMode.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDBSyncModeRequest`
@@ -365,7 +365,7 @@ class DcdbClient(AbstractClient):
 
 
     def DescribeDCDBPrice(self, request):
-        """本介面（DescribeDCDBPrice）用于在購買實例前，查詢實例的價格。
+        """本介面（DescribeDCDBPrice）用於在購買實例前，查詢實例的價格。
 
         :param request: Request instance for DescribeDCDBPrice.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBPriceRequest`
@@ -393,7 +393,7 @@ class DcdbClient(AbstractClient):
 
 
     def DescribeDCDBRenewalPrice(self, request):
-        """本介面（DescribeDCDBRenewalPrice）用于在續約分布式資料庫實例時，查詢續約的價格。
+        """本介面（DescribeDCDBRenewalPrice）用於在續約分布式資料庫實例時，查詢續約的價格。
 
         :param request: Request instance for DescribeDCDBRenewalPrice.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBRenewalPriceRequest`
@@ -421,7 +421,7 @@ class DcdbClient(AbstractClient):
 
 
     def DescribeDCDBSaleInfo(self, request):
-        """本介面(DescribeDCDBSaleInfo)用于查詢分布式資料庫可售賣的地域和可用區訊息。
+        """本介面(DescribeDCDBSaleInfo)用於查詢分布式資料庫可售賣的地域和可用區訊息。
 
         :param request: Request instance for DescribeDCDBSaleInfo.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBSaleInfoRequest`
@@ -449,7 +449,7 @@ class DcdbClient(AbstractClient):
 
 
     def DescribeDCDBShards(self, request):
-        """本介面（DescribeDCDBShards）用于查詢雲資料庫實例的分片訊息。
+        """本介面（DescribeDCDBShards）用於查詢雲資料庫實例的分片訊息。
 
         :param request: Request instance for DescribeDCDBShards.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBShardsRequest`
@@ -477,7 +477,7 @@ class DcdbClient(AbstractClient):
 
 
     def DescribeDCDBUpgradePrice(self, request):
-        """本介面（DescribeDCDBUpgradePrice）用于查詢升級分布式資料庫實例價格。
+        """本介面（DescribeDCDBUpgradePrice）用於查詢升級分布式資料庫實例價格。
 
         :param request: Request instance for DescribeDCDBUpgradePrice.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDCDBUpgradePriceRequest`
@@ -505,7 +505,7 @@ class DcdbClient(AbstractClient):
 
 
     def DescribeDatabaseObjects(self, request):
-        """本介面（DescribeDatabaseObjects）用于查詢雲資料庫實例的資料庫中的對象清單，包含表、儲存過程、視圖和函數。
+        """本介面（DescribeDatabaseObjects）用於查詢雲資料庫實例的資料庫中的對象清單，包含表、儲存過程、視圖和函數。
 
         :param request: Request instance for DescribeDatabaseObjects.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDatabaseObjectsRequest`
@@ -533,7 +533,7 @@ class DcdbClient(AbstractClient):
 
 
     def DescribeDatabaseTable(self, request):
-        """本介面（DescribeDatabaseTable）用于查詢雲資料庫實例的表訊息。
+        """本介面（DescribeDatabaseTable）用於查詢雲資料庫實例的表訊息。
 
         :param request: Request instance for DescribeDatabaseTable.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDatabaseTableRequest`
@@ -561,7 +561,7 @@ class DcdbClient(AbstractClient):
 
 
     def DescribeDatabases(self, request):
-        """本介面（DescribeDatabases）用于查詢雲資料庫實例的資料庫清單。
+        """本介面（DescribeDatabases）用於查詢雲資料庫實例的資料庫清單。
 
         :param request: Request instance for DescribeDatabases.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeDatabasesRequest`
@@ -589,7 +589,7 @@ class DcdbClient(AbstractClient):
 
 
     def DescribeOrders(self, request):
-        """本介面（DescribeOrders）用于查詢分布式資料庫訂單訊息。傳入訂單ID來查詢訂單關聯的分布式資料庫實例，和對應的任務流程ID。
+        """本介面（DescribeOrders）用於查詢分布式資料庫訂單訊息。傳入訂單ID來查詢訂單關聯的分布式資料庫實例，和對應的任務流程ID。
 
         :param request: Request instance for DescribeOrders.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeOrdersRequest`
@@ -617,7 +617,7 @@ class DcdbClient(AbstractClient):
 
 
     def DescribeProjects(self, request):
-        """本介面（DescribeProjects）用于查詢項目清單
+        """本介面（DescribeProjects）用於查詢項目清單
 
         :param request: Request instance for DescribeProjects.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeProjectsRequest`
@@ -673,7 +673,7 @@ class DcdbClient(AbstractClient):
 
 
     def DescribeSqlLogs(self, request):
-        """本介面（DescribeSqlLogs）用于獲取實例SQL日志。
+        """本介面（DescribeSqlLogs）用於獲取實例SQL日志。
 
         :param request: Request instance for DescribeSqlLogs.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.DescribeSqlLogsRequest`
@@ -701,8 +701,8 @@ class DcdbClient(AbstractClient):
 
 
     def GrantAccountPrivileges(self, request):
-        """本介面（GrantAccountPrivileges）用于給雲資料庫賬号賦權。
-        注意：相同用戶名，不同Host是不同的賬号。
+        """本介面（GrantAccountPrivileges）用於給雲資料庫賬號賦權。
+        注意：相同用戶名，不同Host是不同的賬號。
 
         :param request: Request instance for GrantAccountPrivileges.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.GrantAccountPrivilegesRequest`
@@ -730,7 +730,7 @@ class DcdbClient(AbstractClient):
 
 
     def InitDCDBInstances(self, request):
-        """本介面(InitDCDBInstances)用于初始化雲資料庫實例，包括設置預設字元集、表名大小寫敏感等。
+        """本介面(InitDCDBInstances)用於初始化雲資料庫實例，包括設置預設字元集、表名大小寫敏感等。
 
         :param request: Request instance for InitDCDBInstances.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.InitDCDBInstancesRequest`
@@ -758,8 +758,8 @@ class DcdbClient(AbstractClient):
 
 
     def ModifyAccountDescription(self, request):
-        """本介面（ModifyAccountDescription）用于修改雲資料庫賬号備注。
-        注意：相同用戶名，不同Host是不同的賬号。
+        """本介面（ModifyAccountDescription）用於修改雲資料庫賬號備注。
+        注意：相同用戶名，不同Host是不同的賬號。
 
         :param request: Request instance for ModifyAccountDescription.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.ModifyAccountDescriptionRequest`
@@ -787,7 +787,7 @@ class DcdbClient(AbstractClient):
 
 
     def ModifyDBInstancesProject(self, request):
-        """本介面（ModifyDBInstancesProject）用于修改雲資料庫實例所屬項目。
+        """本介面（ModifyDBInstancesProject）用於修改雲資料庫實例所屬項目。
 
         :param request: Request instance for ModifyDBInstancesProject.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.ModifyDBInstancesProjectRequest`
@@ -815,7 +815,7 @@ class DcdbClient(AbstractClient):
 
 
     def ModifyDBParameters(self, request):
-        """本介面(ModifyDBParameters)用于修改資料庫參數。
+        """本介面(ModifyDBParameters)用於修改資料庫參數。
 
         :param request: Request instance for ModifyDBParameters.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.ModifyDBParametersRequest`
@@ -843,7 +843,7 @@ class DcdbClient(AbstractClient):
 
 
     def ModifyDBSyncMode(self, request):
-        """本介面（ModifyDBSyncMode）用于修改雲資料庫實例的同步模式。
+        """本介面（ModifyDBSyncMode）用於修改雲資料庫實例的同步模式。
 
         :param request: Request instance for ModifyDBSyncMode.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.ModifyDBSyncModeRequest`
@@ -871,7 +871,7 @@ class DcdbClient(AbstractClient):
 
 
     def OpenDBExtranetAccess(self, request):
-        """本介面（OpenDBExtranetAccess）用于開通雲資料庫實例的外網訪問。開通外網訪問後，您可通過外網域名和端口訪問實例，可使用查詢實例清單介面獲取外網域名和端口訊息。
+        """本介面（OpenDBExtranetAccess）用於開通雲資料庫實例的外網訪問。開通外網訪問後，您可通過外網域名和端口訪問實例，可使用查詢實例清單介面獲取外網域名和端口訊息。
 
         :param request: Request instance for OpenDBExtranetAccess.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.OpenDBExtranetAccessRequest`
@@ -899,7 +899,7 @@ class DcdbClient(AbstractClient):
 
 
     def RenewDCDBInstance(self, request):
-        """本介面（RenewDCDBInstance）用于續約分布式資料庫實例。
+        """本介面（RenewDCDBInstance）用於續約分布式資料庫實例。
 
         :param request: Request instance for RenewDCDBInstance.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.RenewDCDBInstanceRequest`
@@ -927,8 +927,8 @@ class DcdbClient(AbstractClient):
 
 
     def ResetAccountPassword(self, request):
-        """本介面（ResetAccountPassword）用于重置雲資料庫賬号的密碼。
-        注意：相同用戶名，不同Host是不同的賬号。
+        """本介面（ResetAccountPassword）用於重置雲資料庫賬號的密碼。
+        注意：相同用戶名，不同Host是不同的賬號。
 
         :param request: Request instance for ResetAccountPassword.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.ResetAccountPasswordRequest`
@@ -956,7 +956,7 @@ class DcdbClient(AbstractClient):
 
 
     def UpgradeDCDBInstance(self, request):
-        """本介面（UpgradeDCDBInstance）用于升級分布式資料庫實例。本介面完成下單和支付兩個動作，如果發生支付失敗的錯誤，調用用戶帳戶相關介面中的支付訂單介面（PayDeals）重新支付即可。
+        """本介面（UpgradeDCDBInstance）用於升級分布式資料庫實例。本介面完成下單和支付兩個動作，如果發生支付失敗的錯誤，調用用戶帳戶相關介面中的支付訂單介面（PayDeals）重新支付即可。
 
         :param request: Request instance for UpgradeDCDBInstance.
         :type request: :class:`taifucloudcloud.dcdb.v20180411.models.UpgradeDCDBInstanceRequest`

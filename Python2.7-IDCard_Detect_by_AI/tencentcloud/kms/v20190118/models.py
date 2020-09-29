@@ -27,7 +27,7 @@ class CreateKeyRequest(AbstractModel):
         :type Alias: str
         :param Description: CMK 的描述，最大1024位元
         :type Description: str
-        :param KeyUsage: 指定key的用途。目前，僅支援"ENCRYPT_DECRYPT"，預設爲  "ENCRYPT_DECRYPT"，即key用于加密和解密
+        :param KeyUsage: 指定key的用途。目前，僅支援"ENCRYPT_DECRYPT"，預設爲  "ENCRYPT_DECRYPT"，即key用於加密和解密
         :type KeyUsage: str
         :param Type: 指定key類型，1爲當前地域預設類型，預設爲1，且當前只支援該類型
         :type Type: int
@@ -52,7 +52,7 @@ class CreateKeyResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的全局唯一标識符
+        :param KeyId: CMK的全局唯一標識符
         :type KeyId: str
         :param Alias: 作爲金鑰更容易辨識，更容易被人看懂的别名
         :type Alias: str
@@ -115,7 +115,7 @@ class DecryptResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的全局唯一标識
+        :param KeyId: CMK的全局唯一標識
         :type KeyId: str
         :param Plaintext: 解密後的明文。該欄位是base64編碼的，爲了得到原始明文，調用方需要進行base64解碼
         :type Plaintext: str
@@ -140,7 +140,7 @@ class DescribeKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK全局唯一标識符
+        :param KeyId: CMK全局唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -225,7 +225,7 @@ class DisableKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK唯一标識符
+        :param KeyId: CMK唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -259,7 +259,7 @@ class DisableKeyRotationRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK唯一标識符
+        :param KeyId: CMK唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -327,7 +327,7 @@ class EnableKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK唯一标識符
+        :param KeyId: CMK唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -361,7 +361,7 @@ class EnableKeyRotationRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK唯一标識符
+        :param KeyId: CMK唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -429,7 +429,7 @@ class EncryptRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: 調用CreateKey生成的CMK全局唯一标識符
+        :param KeyId: 調用CreateKey生成的CMK全局唯一標識符
         :type KeyId: str
         :param Plaintext: 被加密的明文數據，該欄位必須使用base64編碼，原文最大長度支援4K
         :type Plaintext: str
@@ -456,7 +456,7 @@ class EncryptResponse(AbstractModel):
         """
         :param CiphertextBlob: 加密後的密文
         :type CiphertextBlob: str
-        :param KeyId: 加密使用的CMK的全局唯一标識
+        :param KeyId: 加密使用的CMK的全局唯一標識
         :type KeyId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -479,7 +479,7 @@ class GenerateDataKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK全局唯一标識符
+        :param KeyId: CMK全局唯一標識符
         :type KeyId: str
         :param KeySpec: 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。預設爲AES_256
         :type KeySpec: str
@@ -508,7 +508,7 @@ class GenerateDataKeyResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的全局唯一标識
+        :param KeyId: CMK的全局唯一標識
         :type KeyId: str
         :param Plaintext: 生成的DataKey的明文，該明文使用base64編碼，用戶需要使用base64解碼得到明文
         :type Plaintext: str
@@ -537,7 +537,7 @@ class GetKeyRotationStatusRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK唯一标識符
+        :param KeyId: CMK唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -602,7 +602,7 @@ class Key(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的全局唯一标識。
+        :param KeyId: CMK的全局唯一標識。
         :type KeyId: str
         """
         self.KeyId = None
@@ -619,7 +619,7 @@ class KeyMetadata(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的全局唯一标識
+        :param KeyId: CMK的全局唯一標識
         :type KeyId: str
         :param Alias: 作爲金鑰更容易辨識，更容易被人看懂的别名
         :type Alias: str
@@ -864,7 +864,7 @@ class UpdateAliasRequest(AbstractModel):
         """
         :param Alias: 新的别名，1-64個字元或數字的組合
         :type Alias: str
-        :param KeyId: CMK的全局唯一标識符
+        :param KeyId: CMK的全局唯一標識符
         :type KeyId: str
         """
         self.Alias = None

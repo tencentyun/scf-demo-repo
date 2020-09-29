@@ -48,7 +48,7 @@ class AvailableRegion(AbstractModel):
         :type Region: str
         :param RegionName: 區域名稱，如“bj”
         :type RegionName: str
-        :param RegionStatus: 區域可用情況，當區域内至少有一個可用區處于可售狀态時，取值爲AVAILABLE，否則爲UNAVAILABLE
+        :param RegionStatus: 區域可用情況，當區域内至少有一個可用區處於可售狀态時，取值爲AVAILABLE，否則爲UNAVAILABLE
         :type RegionStatus: str
         :param Zones: 可用區數組
         :type Zones: list of AvailableZone
@@ -84,7 +84,7 @@ class AvailableType(AbstractModel):
         """
         :param Protocols: 協議與售賣詳情
         :type Protocols: list of AvailableProtoStatus
-        :param Type: 儲存類型。可選值有 SD 标準型儲存、HP效能型儲存
+        :param Type: 儲存類型。可選值有 SD 標準型儲存、HP效能型儲存
         :type Type: str
         """
         self.Protocols = None
@@ -154,7 +154,7 @@ class CreateCfsFileSystemRequest(AbstractModel):
         :type PGroupId: str
         :param Protocol: 文件系統協議類型， 值爲 NFS、CIFS; 若留空則預設爲 NFS協議
         :type Protocol: str
-        :param StorageType: 文件系統儲存類型，值爲 SD ；其中 SD 爲标準型儲存， HP爲效能儲存。
+        :param StorageType: 文件系統儲存類型，值爲 SD ；其中 SD 爲標準型儲存， HP爲效能儲存。
         :type StorageType: str
         :param VpcId: 私有網絡（VPC） ID，若網絡類型選擇的是VPC，該欄位爲必填。
         :type VpcId: str
@@ -164,7 +164,7 @@ class CreateCfsFileSystemRequest(AbstractModel):
         :type MountIP: str
         :param FsName: 用戶自定義文件系統名稱
         :type FsName: str
-        :param ResourceTags: 文件系統标簽
+        :param ResourceTags: 文件系統標簽
         :type ResourceTags: list of TagInfo
         """
         self.Zone = None
@@ -319,7 +319,7 @@ class CreateCfsRuleRequest(AbstractModel):
         :type Priority: int
         :param RWPermission: 讀寫權限, 值爲 RO、RW；其中 RO 爲只讀，RW 爲讀寫，不填預設爲只讀
         :type RWPermission: str
-        :param UserPermission: 用戶權限，值爲 all_squash、no_all_squash、root_squash、no_root_squash。其中all_squash爲所有訪問用戶都會被映射爲匿名用戶或用戶組；no_all_squash爲訪問用戶會先與本機用戶比對，比對失敗後再映射爲匿名用戶或用戶組；root_squash爲将來訪的root用戶映射爲匿名用戶或用戶組；no_root_squash爲來訪的root用戶保持root帳号權限。不填預設爲root_squash。
+        :param UserPermission: 用戶權限，值爲 all_squash、no_all_squash、root_squash、no_root_squash。其中all_squash爲所有訪問用戶都會被映射爲匿名用戶或用戶組；no_all_squash爲訪問用戶會先與本機用戶比對，比對失敗後再映射爲匿名用戶或用戶組；root_squash爲将來訪的root用戶映射爲匿名用戶或用戶組；no_root_squash爲來訪的root用戶保持root帳號權限。不填預設爲root_squash。
         :type UserPermission: str
         """
         self.PGroupId = None
@@ -977,7 +977,7 @@ class PGroupRuleInfo(AbstractModel):
         :type AuthClientIp: str
         :param RWPermission: 讀寫權限, ro爲只讀，rw爲讀寫
         :type RWPermission: str
-        :param UserPermission: 用戶權限。其中all_squash爲所有訪問用戶都會被映射爲匿名用戶或用戶組；no_all_squash爲訪問用戶會先與本機用戶比對，比對失敗後再映射爲匿名用戶或用戶組；root_squash爲将來訪的root用戶映射爲匿名用戶或用戶組；no_root_squash爲來訪的root用戶保持root帳号權限。
+        :param UserPermission: 用戶權限。其中all_squash爲所有訪問用戶都會被映射爲匿名用戶或用戶組；no_all_squash爲訪問用戶會先與本機用戶比對，比對失敗後再映射爲匿名用戶或用戶組；root_squash爲将來訪的root用戶映射爲匿名用戶或用戶組；no_root_squash爲來訪的root用戶保持root帳號權限。
         :type UserPermission: str
         :param Priority: 規則優先級，1-100。 其中 1 爲最高，100爲最低
         :type Priority: int
@@ -1031,9 +1031,9 @@ class TagInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -1248,7 +1248,7 @@ class UpdateCfsRuleRequest(AbstractModel):
         :type AuthClientIp: str
         :param RWPermission: 讀寫權限, 值爲RO、RW；其中 RO 爲只讀，RW 爲讀寫，不填預設爲只讀
         :type RWPermission: str
-        :param UserPermission: 用戶權限，值爲all_squash、no_all_squash、root_squash、no_root_squash。其中all_squash爲所有訪問用戶都會被映射爲匿名用戶或用戶組；no_all_squash爲訪問用戶會先與本機用戶比對，比對失敗後再映射爲匿名用戶或用戶組；root_squash爲将來訪的root用戶映射爲匿名用戶或用戶組；no_root_squash爲來訪的root用戶保持root帳号權限。不填預設爲root_squash。
+        :param UserPermission: 用戶權限，值爲all_squash、no_all_squash、root_squash、no_root_squash。其中all_squash爲所有訪問用戶都會被映射爲匿名用戶或用戶組；no_all_squash爲訪問用戶會先與本機用戶比對，比對失敗後再映射爲匿名用戶或用戶組；root_squash爲将來訪的root用戶映射爲匿名用戶或用戶組；no_root_squash爲來訪的root用戶保持root帳號權限。不填預設爲root_squash。
         :type UserPermission: str
         :param Priority: 規則優先級，參數範圍1-100。 其中 1 爲最高，100爲最低
         :type Priority: int

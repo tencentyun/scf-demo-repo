@@ -33,7 +33,7 @@ class DescribeCallDetailRequest(AbstractModel):
         :type SdkAppId: str
         :param UserIds: 需查詢的用戶數組，不填預設返回6個用戶
         :type UserIds: list of str
-        :param DataType: 需查詢的指标，不填則只返回用戶清單，填all則返回所有指标。
+        :param DataType: 需查詢的指標，不填則只返回用戶清單，填all則返回所有指標。
 appCpu：APP CPU使用率；
 sysCpu：系統 CPU使用率；
 aBit：上/下行音訊碼率；
@@ -293,7 +293,7 @@ class DescribeRoomInformationRequest(AbstractModel):
         :type StartTime: int
         :param EndTime: 查詢結束時間
         :type EndTime: int
-        :param RoomId: 數字房間号
+        :param RoomId: 數字房間號
         :type RoomId: str
         :param PageNumber: 分頁index（不填預設只返回10個）
         :type PageNumber: str
@@ -356,7 +356,7 @@ class DismissRoomRequest(AbstractModel):
         """
         :param SdkAppId: TRTC的SDKAppId。
         :type SdkAppId: int
-        :param RoomId: 房間号。
+        :param RoomId: 房間號。
         :type RoomId: int
         """
         self.SdkAppId = None
@@ -456,7 +456,7 @@ class RemoveUserRequest(AbstractModel):
         """
         :param SdkAppId: TRTC的SDKAppId。
         :type SdkAppId: int
-        :param RoomId: 房間号。
+        :param RoomId: 房間號。
         :type RoomId: int
         :param UserIds: 要移出的用戶清單，最多10個。
         :type UserIds: list of str
@@ -496,9 +496,9 @@ class RoomState(AbstractModel):
 
     def __init__(self):
         """
-        :param CommId: 通話ID（唯一标識一次通話）
+        :param CommId: 通話ID（唯一標識一次通話）
         :type CommId: str
-        :param RoomString: 房間号
+        :param RoomString: 房間號
         :type RoomString: str
         :param CreateTime: 房間創建時間
         :type CreateTime: int
@@ -554,7 +554,7 @@ class UserInformation(AbstractModel):
 
     def __init__(self):
         """
-        :param RoomStr: 房間号
+        :param RoomStr: 房間號
         :type RoomStr: str
         :param UserId: 用戶Id
         :type UserId: str
@@ -564,7 +564,7 @@ class UserInformation(AbstractModel):
         :type LeaveTs: int
         :param DeviceType: 終端類型
         :type DeviceType: str
-        :param SdkVersion: Sdk版本号
+        :param SdkVersion: Sdk版本號
         :type SdkVersion: str
         :param ClientIp: 用戶端IP網址
         :type ClientIp: str

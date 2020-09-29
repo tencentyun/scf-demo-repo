@@ -26,7 +26,7 @@ class SmpnClient(AbstractClient):
 
 
     def CreateSmpnEpa(self, request):
-        """企業号碼認證
+        """企業號碼認證
 
         :param request: Request instance for CreateSmpnEpa.
         :type request: :class:`taifucloudcloud.smpn.v20190822.models.CreateSmpnEpaRequest`
@@ -54,7 +54,7 @@ class SmpnClient(AbstractClient):
 
 
     def DescribeSmpnChp(self, request):
-        """查詢号碼的标記和标記次數
+        """查詢號碼的標記和標記次數
 
         :param request: Request instance for DescribeSmpnChp.
         :type request: :class:`taifucloudcloud.smpn.v20190822.models.DescribeSmpnChpRequest`
@@ -82,7 +82,7 @@ class SmpnClient(AbstractClient):
 
 
     def DescribeSmpnFnr(self, request):
-        """虛假号碼識别
+        """虛假號碼識别
 
         :param request: Request instance for DescribeSmpnFnr.
         :type request: :class:`taifucloudcloud.smpn.v20190822.models.DescribeSmpnFnrRequest`
@@ -110,7 +110,7 @@ class SmpnClient(AbstractClient):
 
 
     def DescribeSmpnMhm(self, request):
-        """号碼營銷監控
+        """號碼營銷監控
 
         :param request: Request instance for DescribeSmpnMhm.
         :type request: :class:`taifucloudcloud.smpn.v20190822.models.DescribeSmpnMhmRequest`
@@ -138,7 +138,7 @@ class SmpnClient(AbstractClient):
 
 
     def DescribeSmpnMrl(self, request):
-        """查詢号碼惡意标記等級
+        """查詢號碼惡意標記等級
 
         :param request: Request instance for DescribeSmpnMrl.
         :type request: :class:`taifucloudcloud.smpn.v20190822.models.DescribeSmpnMrlRequest`

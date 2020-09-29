@@ -180,7 +180,7 @@ class AutoScalingGroup(AbstractModel):
         :type AutoScalingGroupName: str
         :param AutoScalingGroupStatus: 伸縮組當前狀态。取值範圍：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：啓動配置異常<br><li>LB_ABNORMAL：負載均衡器異常<br><li>VPC_ABNORMAL：VPC網絡異常<br><li>INSUFFICIENT_BALANCE：餘額不足<br><li>LB_BACKEND_REGION_NOT_MATCH：CLB實例後端地域與AS服務所在地域不比對<br>
         :type AutoScalingGroupStatus: str
-        :param CreatedTime: 創建時間，采用UTC标準計時
+        :param CreatedTime: 創建時間，采用UTC標準計時
         :type CreatedTime: str
         :param DefaultCooldown: 預設冷卻時間，單位秒
         :type DefaultCooldown: int
@@ -210,15 +210,15 @@ class AutoScalingGroup(AbstractModel):
         :type SubnetIdSet: list of str
         :param TerminationPolicySet: 銷毀策略
         :type TerminationPolicySet: list of str
-        :param VpcId: VPC标識
+        :param VpcId: VPC標識
         :type VpcId: str
         :param ZoneSet: 可用區清單
         :type ZoneSet: list of str
         :param RetryPolicy: 重試策略
         :type RetryPolicy: str
-        :param InActivityStatus: 伸縮組是否處于伸縮活動中，`IN_ACTIVITY`表示處于伸縮活動中，`NOT_IN_ACTIVITY`表示不處于伸縮活動中。
+        :param InActivityStatus: 伸縮組是否處於伸縮活動中，`IN_ACTIVITY`表示處於伸縮活動中，`NOT_IN_ACTIVITY`表示不處於伸縮活動中。
         :type InActivityStatus: str
-        :param Tags: 伸縮組标簽清單
+        :param Tags: 伸縮組標簽清單
         :type Tags: list of Tag
         :param ServiceSettings: 服務設置
         :type ServiceSettings: :class:`taifucloudcloud.autoscaling.v20180419.models.ServiceSettings`
@@ -401,7 +401,7 @@ class CreateAutoScalingGroupFromInstanceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AutoScalingGroupName: 伸縮組名稱，在您賬号中必須唯一。名稱僅支援中文、英文、數字、下劃線、分隔符"-"、小數點，最大長度不能超55個位元。
+        :param AutoScalingGroupName: 伸縮組名稱，在您賬號中必須唯一。名稱僅支援中文、英文、數字、下劃線、分隔符"-"、小數點，最大長度不能超55個位元。
         :type AutoScalingGroupName: str
         :param InstanceId: 實例ID
         :type InstanceId: str
@@ -409,9 +409,9 @@ class CreateAutoScalingGroupFromInstanceRequest(AbstractModel):
         :type MinSize: int
         :param MaxSize: 最小實例數，取值範圍爲0-2000。
         :type MaxSize: int
-        :param DesiredCapacity: 期望實例數，大小介于最小實例數和最大實例數之間。
+        :param DesiredCapacity: 期望實例數，大小介於最小實例數和最大實例數之間。
         :type DesiredCapacity: int
-        :param InheritInstanceTag: 是否繼承實例标簽，預設值爲False
+        :param InheritInstanceTag: 是否繼承實例標簽，預設值爲False
         :type InheritInstanceTag: bool
         """
         self.AutoScalingGroupName = None
@@ -459,7 +459,7 @@ class CreateAutoScalingGroupRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AutoScalingGroupName: 伸縮組名稱，在您賬号中必須唯一。名稱僅支援中文、英文、數字、下劃線、分隔符"-"、小數點，最大長度不能超55個位元。
+        :param AutoScalingGroupName: 伸縮組名稱，在您賬號中必須唯一。名稱僅支援中文、英文、數字、下劃線、分隔符"-"、小數點，最大長度不能超55個位元。
         :type AutoScalingGroupName: str
         :param LaunchConfigurationId: 啓動配置ID
         :type LaunchConfigurationId: str
@@ -471,7 +471,7 @@ class CreateAutoScalingGroupRequest(AbstractModel):
         :type VpcId: str
         :param DefaultCooldown: 預設冷卻時間，單位秒，預設值爲300
         :type DefaultCooldown: int
-        :param DesiredCapacity: 期望實例數，大小介于最小實例數和最大實例數之間
+        :param DesiredCapacity: 期望實例數，大小介於最小實例數和最大實例數之間
         :type DesiredCapacity: int
         :param LoadBalancerIds: 傳統負載均衡器ID清單，目前長度上限爲20，LoadBalancerIds 和 ForwardLoadBalancers 二者同時最多只能指定一個
         :type LoadBalancerIds: list of str
@@ -499,7 +499,7 @@ class CreateAutoScalingGroupRequest(AbstractModel):
 可用區或子網不可用的常見原因包括該可用區CVM實例類型售罄、該可用區CBS雲盤售罄、該可用區配額不足、該子網IP不足等。
 如果 Zones/SubnetIds 中可用區或者子網不存在，則無論 ZonesCheckPolicy 采用何種取值，都會校驗報錯。
         :type ZonesCheckPolicy: str
-        :param Tags: 标簽描述清單。通過指定該參數可以支援綁定标簽到伸縮組。同時綁定标簽到相應的資源實例，
+        :param Tags: 標簽描述清單。通過指定該參數可以支援綁定標簽到伸縮組。同時綁定標簽到相應的資源實例，
         :type Tags: list of Tag
         :param ServiceSettings: 服務設置，包括雲監控不健康替換等服務設置。
         :type ServiceSettings: :class:`taifucloudcloud.autoscaling.v20180419.models.ServiceSettings`
@@ -510,8 +510,8 @@ class CreateAutoScalingGroupRequest(AbstractModel):
 <br><li> EQUALITY：每次選擇當前實例數最少的可用區/子網進行擴容，使得每個可用區/子網都有機會發生擴容，多次擴容出的實例會打散到多個可用區/子網。
 
 與本策略相關的注意點：
-<br><li> 當伸縮組爲基礎網絡時，本策略适用于多可用區；當伸縮組爲VPC網絡時，本策略适用于多子網，此時不再考慮可用區因素，例如四個子網ABCD，其中ABC處于可用區1，D處于可用區2，此時考慮子網ABCD進行排序，而不考慮可用區1、2。
-<br><li> 本策略适用于多可用區/子網，不适用于啓動配置的多機型。多機型按照優先級策略進行選擇。
+<br><li> 當伸縮組爲基礎網絡時，本策略适用於多可用區；當伸縮組爲VPC網絡時，本策略适用於多子網，此時不再考慮可用區因素，例如四個子網ABCD，其中ABC處於可用區1，D處於可用區2，此時考慮子網ABCD進行排序，而不考慮可用區1、2。
+<br><li> 本策略适用於多可用區/子網，不适用於啓動配置的多機型。多機型按照優先級策略進行選擇。
 <br><li> 創建實例時，先保證多機型的策略，後保證多可用區/子網的策略。例如多機型A、B，多子網1、2、3（按照PRIORITY策略），會按照A1、A2、A3、B1、B2、B3 進行嘗試，如果A1售罄，會嘗試A2（而非B1）。
 <br><li> 無論使用哪種策略，單次伸縮活動總是優先保持使用一種具體配置（機型 * 可用區/子網）。
         :type MultiZoneSubnetPolicy: str
@@ -614,7 +614,7 @@ class CreateLaunchConfigurationRequest(AbstractModel):
         :type DataDisks: list of DataDisk
         :param InternetAccessible: 公網頻寬相關訊息設置。若不指定該參數，則預設公網頻寬爲0Mbps。
         :type InternetAccessible: :class:`taifucloudcloud.autoscaling.v20180419.models.InternetAccessible`
-        :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，并以站内信方式知會到用戶。
+        :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，並以站内信方式知會到用戶。
         :type LoginSettings: :class:`taifucloudcloud.autoscaling.v20180419.models.LoginSettings`
         :param SecurityGroupIds: 實例所屬安全組。該參數可以通過調用 [DescribeSecurityGroups](https://cloud.taifucloud.com/document/api/215/15808) 的返回值中的`SecurityGroupId`欄位來獲取。若不指定該參數，則預設不綁定安全組。
         :type SecurityGroupIds: list of str
@@ -638,7 +638,7 @@ class CreateLaunchConfigurationRequest(AbstractModel):
 實例類型不可用的常見原因包括該實例類型售罄、對應雲盤售罄等。
 如果 InstanceTypes 中一款機型不存在或者已下線，則無論 InstanceTypesCheckPolicy 采用何種取值，都會校驗報錯。
         :type InstanceTypesCheckPolicy: str
-        :param InstanceTags: 标簽清單。通過指定該參數，可以爲擴容的實例綁定标簽。最多支援指定10個标簽。
+        :param InstanceTags: 標簽清單。通過指定該參數，可以爲擴容的實例綁定標簽。最多支援指定10個標簽。
         :type InstanceTags: list of InstanceTag
         :param CamRoleName: CAM角色名稱。可通過DescribeRoleList介面返回值中的roleName獲取。
         :type CamRoleName: str
@@ -758,9 +758,9 @@ class CreateLifecycleHookRequest(AbstractModel):
         :type DefaultResult: str
         :param HeartbeatTimeout: 生命週期挂鈎超時之前可以經過的最長時間（以秒爲單位），範圍從30到3600秒，預設值爲300秒
         :type HeartbeatTimeout: int
-        :param NotificationMetadata: 彈性伸縮向通知目标發送的附加訊息，預設值爲空字串“”。最大長度不能超過1024個位元。
+        :param NotificationMetadata: 彈性伸縮向通知目標發送的附加訊息，預設值爲空字串“”。最大長度不能超過1024個位元。
         :type NotificationMetadata: str
-        :param NotificationTarget: 通知目标
+        :param NotificationTarget: 通知目標
         :type NotificationTarget: :class:`taifucloudcloud.autoscaling.v20180419.models.NotificationTarget`
         :param LifecycleTransitionType: 進行生命週期挂鈎的場景類型，取值範圍包括NORMAL 和 EXTENSION。說明：設置爲EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces介面時會觸發生命週期挂鈎操作，值爲NORMAL則不會在這些介面中觸發生命週期挂鈎。
         :type LifecycleTransitionType: str
@@ -931,7 +931,7 @@ class CreatePaiInstanceResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIdSet: 當通過本介面來創建實例時會返回該參數，表示一個或多個實例`ID`。返回實例`ID`清單并不代表實例創建成功，可根據 [DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728) 介面查詢返回的InstancesSet中對應實例的`ID`的狀态來判斷創建是否完成；如果實例狀态由“準備中”變爲“正在運作”，則爲創建成功。
+        :param InstanceIdSet: 當通過本介面來創建實例時會返回該參數，表示一個或多個實例`ID`。返回實例`ID`清單並不代表實例創建成功，可根據 [DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728) 介面查詢返回的InstancesSet中對應實例的`ID`的狀态來判斷創建是否完成；如果實例狀态由“準備中”變爲“正在運作”，則爲創建成功。
         :type InstanceIdSet: list of str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -958,9 +958,9 @@ class CreateScalingPolicyRequest(AbstractModel):
         :type ScalingPolicyName: str
         :param AdjustmentType: 告警觸發後，期望實例數修改方式。取值 ：<br><li>CHANGE_IN_CAPACITY：增加或減少若幹期望實例數</li><li>EXACT_CAPACITY：調整至指定期望實例數</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比調整期望實例數</li>
         :type AdjustmentType: str
-        :param AdjustmentValue: 告警觸發後，期望實例數的調整值。取值：<br><li>當 AdjustmentType 爲 CHANGE_IN_CAPACITY 時，AdjustmentValue 爲正數表示告警觸發後增加實例，爲負數表示告警觸發後減少實例 </li> <li> 當 AdjustmentType 爲 EXACT_CAPACITY 時，AdjustmentValue 的值即爲告警觸發後新的期望實例數，需要大于或等于0 </li> <li> 當 AdjustmentType 爲 PERCENT_CHANGE_IN_CAPACITY 時，AdjusmentValue 爲正數表示告警觸發後按百分比增加實例，爲負數表示告警觸發後按百分比減少實例，單位是：%。
+        :param AdjustmentValue: 告警觸發後，期望實例數的調整值。取值：<br><li>當 AdjustmentType 爲 CHANGE_IN_CAPACITY 時，AdjustmentValue 爲正數表示告警觸發後增加實例，爲負數表示告警觸發後減少實例 </li> <li> 當 AdjustmentType 爲 EXACT_CAPACITY 時，AdjustmentValue 的值即爲告警觸發後新的期望實例數，需要大於或等於0 </li> <li> 當 AdjustmentType 爲 PERCENT_CHANGE_IN_CAPACITY 時，AdjusmentValue 爲正數表示告警觸發後按百分比增加實例，爲負數表示告警觸發後按百分比減少實例，單位是：%。
         :type AdjustmentValue: int
-        :param MetricAlarm: 告警監控指标。
+        :param MetricAlarm: 告警監控指標。
         :type MetricAlarm: :class:`taifucloudcloud.autoscaling.v20180419.models.MetricAlarm`
         :param Cooldown: 冷卻時間，單位爲秒。預設冷卻時間300秒。
         :type Cooldown: int
@@ -1026,11 +1026,11 @@ class CreateScheduledActionRequest(AbstractModel):
         :type MinSize: int
         :param DesiredCapacity: 當定時任務觸發時，設置的伸縮組期望實例數。
         :type DesiredCapacity: int
-        :param StartTime: 定時任務的首次觸發時間，取值爲` 時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+        :param StartTime: 定時任務的首次觸發時間，取值爲` 時間`（UTC+8），按照`ISO8601`標準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
         :type StartTime: str
-        :param EndTime: 定時任務的結束時間，取值爲` 時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br><br>此參數與`Recurrence`需要同時指定，到達結束時間之後，定時任務将不再生效。
+        :param EndTime: 定時任務的結束時間，取值爲` 時間`（UTC+8），按照`ISO8601`標準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br><br>此參數與`Recurrence`需要同時指定，到達結束時間之後，定時任務将不再生效。
         :type EndTime: str
-        :param Recurrence: 定時任務的重複方式。爲标準 Cron 格式<br><br>此參數與`EndTime`需要同時指定。
+        :param Recurrence: 定時任務的重複方式。爲標準 Cron 格式<br><br>此參數與`EndTime`需要同時指定。
         :type Recurrence: str
         """
         self.AutoScalingGroupId = None
@@ -1362,13 +1362,13 @@ class DescribeAutoScalingActivitiesRequest(AbstractModel):
 <li> activity-id - String - 是否必填：否 -（過濾條件）按照伸縮活動ID過濾。</li>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`ActivityIds`和`Filters`。
         :type Filters: list of Filter
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param StartTime: 伸縮活動最早的開始時間，如果指定了ActivityIds，此參數将被忽略。取值爲`UTC`時間，按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ssZ`。
+        :param StartTime: 伸縮活動最早的開始時間，如果指定了ActivityIds，此參數将被忽略。取值爲`UTC`時間，按照`ISO8601`標準，格式：`YYYY-MM-DDThh:mm:ssZ`。
         :type StartTime: str
-        :param EndTime: 伸縮活動最晚的結束時間，如果指定了ActivityIds，此參數将被忽略。取值爲`UTC`時間，按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ssZ`。
+        :param EndTime: 伸縮活動最晚的結束時間，如果指定了ActivityIds，此參數将被忽略。取值爲`UTC`時間，按照`ISO8601`標準，格式：`YYYY-MM-DDThh:mm:ssZ`。
         :type EndTime: str
         """
         self.ActivityIds = None
@@ -1480,14 +1480,14 @@ class DescribeAutoScalingGroupsRequest(AbstractModel):
 <li> auto-scaling-group-name - String - 是否必填：否 -（過濾條件）按照伸縮組名稱過濾。</li>
 <li> vague-auto-scaling-group-name - String - 是否必填：否 -（過濾條件）按照伸縮組名稱模糊搜索。</li>
 <li> launch-configuration-id - String - 是否必填：否 -（過濾條件）按照啓動配置ID過濾。</li>
-<li> tag-key - String - 是否必填：否 -（過濾條件）按照标簽鍵進行過濾。</li>
-<li> tag-value - String - 是否必填：否 -（過濾條件）按照标簽值進行過濾。</li>
-<li> tag:tag-key - String - 是否必填：否 -（過濾條件）按照标簽鍵值對進行過濾。 tag-key使用具體的标簽鍵進行替換。使用請參考範例2</li>
+<li> tag-key - String - 是否必填：否 -（過濾條件）按照標簽鍵進行過濾。</li>
+<li> tag-value - String - 是否必填：否 -（過濾條件）按照標簽值進行過濾。</li>
+<li> tag:tag-key - String - 是否必填：否 -（過濾條件）按照標簽鍵值對進行過濾。 tag-key使用具體的標簽鍵進行替換。使用請參考範例2</li>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`AutoScalingGroupIds`和`Filters`。
         :type Filters: list of Filter
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
         """
         self.AutoScalingGroupIds = None
@@ -1552,9 +1552,9 @@ class DescribeAutoScalingInstancesRequest(AbstractModel):
 <li> auto-scaling-group-id - String - 是否必填：否 -（過濾條件）按照伸縮組ID過濾。</li>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`InstanceIds`和`Filters`。
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.InstanceIds = None
@@ -1620,9 +1620,9 @@ class DescribeLaunchConfigurationsRequest(AbstractModel):
 <li> vague-launch-configuration-name - String - 是否必填：否 -（過濾條件）按照啓動配置名稱模糊搜索。</li>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`LaunchConfigurationIds`和`Filters`。
         :type Filters: list of Filter
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
         """
         self.LaunchConfigurationIds = None
@@ -1692,9 +1692,9 @@ class DescribeLifecycleHooksRequest(AbstractModel):
 <li> auto-scaling-group-id - String - 是否必填：否 -（過濾條件）按照伸縮組ID過濾。</li>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`LifecycleHookIds `和`Filters`。
         :type Filters: list of Filter
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
         """
         self.LifecycleHookIds = None
@@ -1759,9 +1759,9 @@ class DescribeNotificationConfigurationsRequest(AbstractModel):
 <li> auto-scaling-group-id - String - 是否必填：否 -（過濾條件）按照伸縮組ID過濾。</li>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`AutoScalingNotificationIds`和`Filters`。
         :type Filters: list of Filter
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
         """
         self.AutoScalingNotificationIds = None
@@ -1891,9 +1891,9 @@ class DescribeScalingPoliciesRequest(AbstractModel):
 <li> scaling-policy-name - String - 是否必填：否 -（過濾條件）按照告警策略名稱過濾。</li>
 每次請求的`Filters`的上限爲10，`Filter.Values`的上限爲5。參數不支援同時指定`AutoScalingPolicyIds`和`Filters`。
         :type Filters: list of Filter
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於`Limit`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
-        :param Offset: 偏移量，預設爲0。關于`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於`Offset`的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
         """
         self.AutoScalingPolicyIds = None
@@ -1958,9 +1958,9 @@ class DescribeScheduledActionsRequest(AbstractModel):
 <li> scheduled-action-name - String - 是否必填：否 - （過濾條件） 按照定時任務名稱過濾。</li>
 <li> auto-scaling-group-id - String - 是否必填：否 - （過濾條件） 按照伸縮組ID過濾。</li>
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於Offset的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于Limit的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於Limit的更進一步介紹請參考 API [簡介](https://cloud.taifucloud.com/document/api/213/15688)中的相關小節。
         :type Limit: int
         """
         self.ScheduledActionIds = None
@@ -2155,7 +2155,7 @@ class ExecuteScalingPolicyRequest(AbstractModel):
         """
         :param AutoScalingPolicyId: 告警伸縮策略ID
         :type AutoScalingPolicyId: str
-        :param HonorCooldown: 是否檢查伸縮組活動處于冷卻時間内，預設值爲false
+        :param HonorCooldown: 是否檢查伸縮組活動處於冷卻時間内，預設值爲false
         :type HonorCooldown: bool
         """
         self.AutoScalingPolicyId = None
@@ -2189,11 +2189,11 @@ class ExecuteScalingPolicyResponse(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """>描述鍵值對過濾器，用于條件過濾查詢。例如過濾ID、名稱、狀态等
+    """>描述鍵值對過濾器，用於條件過濾查詢。例如過濾ID、名稱、狀态等
     > * 若存在多個`Filter`時，`Filter`間的關系爲邏輯與（`AND`）關系。
     > * 若同一個`Filter`存在多個`Values`，同一`Filter`下`Values`間的關系爲邏輯或（`OR`）關系。
     >
-    > 以[DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲 一區 ***并且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
+    > 以[DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲 一區 ***並且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
     ```
     Filters.0.Name=zone
     &Filters.0.Values.0=ap-guangzhou-1
@@ -2231,7 +2231,7 @@ class ForwardLoadBalancer(AbstractModel):
         :type LoadBalancerId: str
         :param ListenerId: 應用型負載均衡監聽器 ID
         :type ListenerId: str
-        :param TargetAttributes: 目标規則屬性清單
+        :param TargetAttributes: 目標規則屬性清單
         :type TargetAttributes: list of TargetAttribute
         :param LocationId: 轉發規則ID，注意：針對七層監聽器此參數必填
         :type LocationId: str
@@ -2266,14 +2266,14 @@ class HostNameSettings(AbstractModel):
     def __init__(self):
         """
         :param HostName: 雲伺服器的主機名。
-<br><li> 點号（.）和短橫線（-）不能作爲 HostName 的首尾字元，不能連續使用。
+<br><li> 點號（.）和短橫線（-）不能作爲 HostName 的首尾字元，不能連續使用。
 <br><li> 不支援 Windows 實例。
-<br><li> 其他類型（Linux 等）實例：字元長度爲[2, 40]，允許支援多個點号，點之間爲一段，每段允許字母（不限制大小寫）、數字和短橫線（-）組成。
+<br><li> 其他類型（Linux 等）實例：字元長度爲[2, 40]，允許支援多個點號，點之間爲一段，每段允許字母（不限制大小寫）、數字和短橫線（-）組成。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type HostName: str
         :param HostNameStyle: 雲伺服器主機名的風格，取值範圍包括 ORIGINAL 和  UNIQUE，預設爲 ORIGINAL。
-<br><li> ORIGINAL，AS 直接将入參中所填的 HostName 傳遞給 CVM，CVM 可能會對 HostName 追加序列号，伸縮組中實例的 HostName 會出現沖突的情況。
-<br><li> UNIQUE，入參所填的 HostName 相當于主機名前綴，AS 和 CVM 會對其進行拓展，伸縮組中實例的 HostName 可以保證唯一。
+<br><li> ORIGINAL，AS 直接将入參中所填的 HostName 傳遞給 CVM，CVM 可能會對 HostName 追加序列號，伸縮組中實例的 HostName 會出現沖突的情況。
+<br><li> UNIQUE，入參所填的 HostName 相當於主機名前綴，AS 和 CVM 會對其進行拓展，伸縮組中實例的 HostName 可以保證唯一。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type HostNameStyle: str
         """
@@ -2328,7 +2328,7 @@ class Instance(AbstractModel):
         :type AddTime: str
         :param InstanceType: 實例類型
         :type InstanceType: str
-        :param VersionNumber: 版本号
+        :param VersionNumber: 版本號
         :type VersionNumber: int
         :param AutoScalingGroupName: 伸縮組名稱
         :type AutoScalingGroupName: str
@@ -2373,7 +2373,7 @@ class InstanceChargePrepaid(AbstractModel):
         """
         :param Period: 購買實例的時長，單位：月。取值範圍：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
         :type Period: int
-        :param RenewFlag: 自動續約标識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>預設取值：NOTIFY_AND_MANUAL_RENEW。若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
+        :param RenewFlag: 自動續約標識。取值範圍：<br><li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約<br><li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約<br><br>預設取值：NOTIFY_AND_MANUAL_RENEW。若該參數指定爲NOTIFY_AND_AUTO_RENEW，在帳戶餘額充足的情況下，實例到期後将按月自動續約。
         :type RenewFlag: str
         """
         self.Period = None
@@ -2418,16 +2418,16 @@ class InstanceNameSettings(AbstractModel):
         """
         :param InstanceName: 雲伺服器的實例名。
 
-點号（.）和短橫線（-）不能作爲 InstanceName 的首尾字元，不能連續使用。
+點號（.）和短橫線（-）不能作爲 InstanceName 的首尾字元，不能連續使用。
 
-其他類型（Linux 等）實例：字元長度爲[2, 40]，允許支援多個點号，點之間爲一段，每段允許字母（不限制大小寫）、數字和短橫線（-）組成。
+其他類型（Linux 等）實例：字元長度爲[2, 40]，允許支援多個點號，點之間爲一段，每段允許字母（不限制大小寫）、數字和短橫線（-）組成。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceName: str
         :param InstanceNameStyle: 雲伺服器實例名的風格，取值範圍包括 ORIGINAL 和 UNIQUE，預設爲 ORIGINAL。
 
-ORIGINAL，AS 直接将入參中所填的 InstanceName 傳遞給 CVM，CVM 可能會對 InstanceName 追加序列号，伸縮組中實例的 InstanceName 會出現沖突的情況。
+ORIGINAL，AS 直接将入參中所填的 InstanceName 傳遞給 CVM，CVM 可能會對 InstanceName 追加序列號，伸縮組中實例的 InstanceName 會出現沖突的情況。
 
-UNIQUE，入參所填的 InstanceName 相當于實例名前綴，AS 和 CVM 會對其進行拓展，伸縮組中實例的 InstanceName 可以保證唯一。
+UNIQUE，入參所填的 InstanceName 相當於實例名前綴，AS 和 CVM 會對其進行拓展，伸縮組中實例的 InstanceName 可以保證唯一。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceNameStyle: str
         """
@@ -2441,15 +2441,15 @@ UNIQUE，入參所填的 InstanceName 相當于實例名前綴，AS 和 CVM 會�
 
 
 class InstanceTag(AbstractModel):
-    """實例标簽。通過指定該參數，可以爲擴容的實例綁定标簽。
+    """實例標簽。通過指定該參數，可以爲擴容的實例綁定標簽。
 
     """
 
     def __init__(self):
         """
-        :param Key: 标簽鍵
+        :param Key: 標簽鍵
         :type Key: str
-        :param Value: 标簽值
+        :param Value: 標簽值
         :type Value: str
         """
         self.Key = None
@@ -2474,7 +2474,7 @@ class InternetAccessible(AbstractModel):
         :param InternetMaxBandwidthOut: 公網出頻寬上限，單位：Mbps。預設值：0Mbps。不同機型頻寬上限範圍不一緻，具體限制詳見[購買網絡頻寬](https://cloud.taifucloud.com/document/product/213/509)。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InternetMaxBandwidthOut: int
-        :param PublicIpAssigned: 是否分配公網IP。取值範圍：<br><li>TRUE：表示分配公網IP<br><li>FALSE：表示不分配公網IP<br><br>當公網頻寬大于0Mbps時，可自由選擇開通與否，預設開通公網IP；當公網頻寬爲0，則不允許分配公網IP。
+        :param PublicIpAssigned: 是否分配公網IP。取值範圍：<br><li>TRUE：表示分配公網IP<br><li>FALSE：表示不分配公網IP<br><br>當公網頻寬大於0Mbps時，可自由選擇開通與否，預設開通公網IP；當公網頻寬爲0，則不允許分配公網IP。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PublicIpAssigned: bool
         """
@@ -2536,9 +2536,9 @@ class LaunchConfiguration(AbstractModel):
         :type InstanceMarketOptions: :class:`taifucloudcloud.autoscaling.v20180419.models.InstanceMarketOptionsRequest`
         :param InstanceTypes: 實例機型清單。
         :type InstanceTypes: list of str
-        :param InstanceTags: 标簽清單。
+        :param InstanceTags: 標簽清單。
         :type InstanceTags: list of InstanceTag
-        :param VersionNumber: 版本号。
+        :param VersionNumber: 版本號。
         :type VersionNumber: int
         :param UpdatedTime: 更新時間。
         :type UpdatedTime: str
@@ -2648,9 +2648,9 @@ class LifecycleActionResultInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param LifecycleHookId: 生命週期挂鈎标識。
+        :param LifecycleHookId: 生命週期挂鈎標識。
         :type LifecycleHookId: str
-        :param InstanceId: 實例标識。
+        :param InstanceId: 實例標識。
         :type InstanceId: str
         :param NotificationResult: 通知的結果，表示通知CMQ是否成功。
         :type NotificationResult: str
@@ -2693,11 +2693,11 @@ class LifecycleHook(AbstractModel):
         :type HeartbeatTimeout: int
         :param LifecycleTransition: 生命週期挂鈎适用場景
         :type LifecycleTransition: str
-        :param NotificationMetadata: 通知目标的附加訊息
+        :param NotificationMetadata: 通知目標的附加訊息
         :type NotificationMetadata: str
         :param CreatedTime: 創建時間
         :type CreatedTime: str
-        :param NotificationTarget: 通知目标
+        :param NotificationTarget: 通知目標
         :type NotificationTarget: :class:`taifucloudcloud.autoscaling.v20180419.models.NotificationTarget`
         :param LifecycleTransitionType: 生命週期挂鈎适用場景
         :type LifecycleTransitionType: str
@@ -2730,7 +2730,7 @@ class LifecycleHook(AbstractModel):
 
 
 class LimitedLoginSettings(AbstractModel):
-    """描述了實例登入相關配置與訊息，出于安全性考慮，不會描述敏感訊息。
+    """描述了實例登入相關配置與訊息，出於安全性考慮，不會描述敏感訊息。
 
     """
 
@@ -2753,7 +2753,7 @@ class LoginSettings(AbstractModel):
 
     def __init__(self):
         """
-        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>Linux實例密碼必須8到16位，至少包括兩項[a-z，A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? / ]中的特殊符号。<br><li>Windows實例密碼必須12到16位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = { } [ ] : ; ' , . ? /]中的特殊符号。<br><br>若不指定該參數，則由系統随機生成密碼，并通過站内信方式通知到用戶。
+        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>Linux實例密碼必須8到16位，至少包括兩項[a-z，A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? / ]中的特殊符號。<br><li>Windows實例密碼必須12到16位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = { } [ ] : ; ' , . ? /]中的特殊符號。<br><br>若不指定該參數，則由系統随機生成密碼，並通過站内信方式通知到用戶。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Password: str
         :param KeyIds: 金鑰ID清單。關聯金鑰後，就可以通過對應的私鑰來訪問實例；KeyId可通過介面DescribeKeyPairs獲取，金鑰與密碼不能同時指定，同時Windows作業系統不支援指定金鑰。當前僅支援購買的時候指定一個金鑰。
@@ -2774,15 +2774,15 @@ class LoginSettings(AbstractModel):
 
 
 class MetricAlarm(AbstractModel):
-    """彈性伸縮告警指标
+    """彈性伸縮告警指標
 
     """
 
     def __init__(self):
         """
-        :param ComparisonOperator: 比較運算符，可選值：<br><li>GREATER_THAN：大于</li><li>GREATER_THAN_OR_EQUAL_TO：大于或等于</li><li>LESS_THAN：小於</li><li> LESS_THAN_OR_EQUAL_TO：小於或等于</li><li> EQUAL_TO：等于</li> <li>NOT_EQUAL_TO：不等于</li>
+        :param ComparisonOperator: 比較運算符，可選值：<br><li>GREATER_THAN：大於</li><li>GREATER_THAN_OR_EQUAL_TO：大於或等於</li><li>LESS_THAN：小於</li><li> LESS_THAN_OR_EQUAL_TO：小於或等於</li><li> EQUAL_TO：等於</li> <li>NOT_EQUAL_TO：不等於</li>
         :type ComparisonOperator: str
-        :param MetricName: 指标名稱，可選欄位如下：<br><li>CPU_UTILIZATION：CPU使用率</li><li>MEM_UTILIZATION：内存使用率</li><li>LAN_TRAFFIC_OUT：内網出頻寬</li><li>LAN_TRAFFIC_IN：内網入頻寬</li><li>WAN_TRAFFIC_OUT：外網出頻寬</li><li>WAN_TRAFFIC_IN：外網入頻寬</li>
+        :param MetricName: 指標名稱，可選欄位如下：<br><li>CPU_UTILIZATION：CPU使用率</li><li>MEM_UTILIZATION：内存使用率</li><li>LAN_TRAFFIC_OUT：内網出頻寬</li><li>LAN_TRAFFIC_IN：内網入頻寬</li><li>WAN_TRAFFIC_OUT：外網出頻寬</li><li>WAN_TRAFFIC_IN：外網入頻寬</li>
         :type MetricName: str
         :param Threshold: 告警阈值：<br><li>CPU_UTILIZATION：[1, 100]，單位：%</li><li>MEM_UTILIZATION：[1, 100]，單位：%</li><li>LAN_TRAFFIC_OUT：>0，單位：Mbps </li><li>LAN_TRAFFIC_IN：>0，單位：Mbps</li><li>WAN_TRAFFIC_OUT：>0，單位：Mbps</li><li>WAN_TRAFFIC_IN：>0，單位：Mbps</li>
         :type Threshold: int
@@ -2819,11 +2819,11 @@ class ModifyAutoScalingGroupRequest(AbstractModel):
         """
         :param AutoScalingGroupId: 伸縮組ID
         :type AutoScalingGroupId: str
-        :param AutoScalingGroupName: 伸縮組名稱，在您賬号中必須唯一。名稱僅支援中文、英文、數字、下劃線、分隔符"-"、小數點，最大長度不能超55個位元。
+        :param AutoScalingGroupName: 伸縮組名稱，在您賬號中必須唯一。名稱僅支援中文、英文、數字、下劃線、分隔符"-"、小數點，最大長度不能超55個位元。
         :type AutoScalingGroupName: str
         :param DefaultCooldown: 預設冷卻時間，單位秒，預設值爲300
         :type DefaultCooldown: int
-        :param DesiredCapacity: 期望實例數，大小介于最小實例數和最大實例數之間
+        :param DesiredCapacity: 期望實例數，大小介於最小實例數和最大實例數之間
         :type DesiredCapacity: int
         :param LaunchConfigurationId: 啓動配置ID
         :type LaunchConfigurationId: str
@@ -2864,8 +2864,8 @@ class ModifyAutoScalingGroupRequest(AbstractModel):
 <br><li> EQUALITY：每次選擇當前實例數最少的可用區/子網進行擴容，使得每個可用區/子網都有機會發生擴容，多次擴容出的實例會打散到多個可用區/子網。
 
 與本策略相關的注意點：
-<br><li> 當伸縮組爲基礎網絡時，本策略适用于多可用區；當伸縮組爲VPC網絡時，本策略适用于多子網，此時不再考慮可用區因素，例如四個子網ABCD，其中ABC處于可用區1，D處于可用區2，此時考慮子網ABCD進行排序，而不考慮可用區1、2。
-<br><li> 本策略适用于多可用區/子網，不适用于啓動配置的多機型。多機型按照優先級策略進行選擇。
+<br><li> 當伸縮組爲基礎網絡時，本策略适用於多可用區；當伸縮組爲VPC網絡時，本策略适用於多子網，此時不再考慮可用區因素，例如四個子網ABCD，其中ABC處於可用區1，D處於可用區2，此時考慮子網ABCD進行排序，而不考慮可用區1、2。
+<br><li> 本策略适用於多可用區/子網，不适用於啓動配置的多機型。多機型按照優先級策略進行選擇。
 <br><li> 創建實例時，先保證多機型的策略，後保證多可用區/子網的策略。例如多機型A、B，多子網1、2、3（按照PRIORITY策略），會按照A1、A2、A3、B1、B2、B3 進行嘗試，如果A1售罄，會嘗試A2（而非B1）。
 <br><li> 無論使用哪種策略，單次伸縮活動總是優先保持使用一種具體配置（機型 * 可用區/子網）。
         :type MultiZoneSubnetPolicy: str
@@ -3144,11 +3144,11 @@ class ModifyScalingPolicyRequest(AbstractModel):
         :type ScalingPolicyName: str
         :param AdjustmentType: 告警觸發後，期望實例數修改方式。取值 ：<br><li>CHANGE_IN_CAPACITY：增加或減少若幹期望實例數</li><li>EXACT_CAPACITY：調整至指定期望實例數</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比調整期望實例數</li>
         :type AdjustmentType: str
-        :param AdjustmentValue: 告警觸發後，期望實例數的調整值。取值：<br><li>當 AdjustmentType 爲 CHANGE_IN_CAPACITY 時，AdjustmentValue 爲正數表示告警觸發後增加實例，爲負數表示告警觸發後減少實例 </li> <li> 當 AdjustmentType 爲 EXACT_CAPACITY 時，AdjustmentValue 的值即爲告警觸發後新的期望實例數，需要大于或等于0 </li> <li> 當 AdjustmentType 爲 PERCENT_CHANGE_IN_CAPACITY 時，AdjusmentValue 爲正數表示告警觸發後按百分比增加實例，爲負數表示告警觸發後按百分比減少實例，單位是：%。
+        :param AdjustmentValue: 告警觸發後，期望實例數的調整值。取值：<br><li>當 AdjustmentType 爲 CHANGE_IN_CAPACITY 時，AdjustmentValue 爲正數表示告警觸發後增加實例，爲負數表示告警觸發後減少實例 </li> <li> 當 AdjustmentType 爲 EXACT_CAPACITY 時，AdjustmentValue 的值即爲告警觸發後新的期望實例數，需要大於或等於0 </li> <li> 當 AdjustmentType 爲 PERCENT_CHANGE_IN_CAPACITY 時，AdjusmentValue 爲正數表示告警觸發後按百分比增加實例，爲負數表示告警觸發後按百分比減少實例，單位是：%。
         :type AdjustmentValue: int
         :param Cooldown: 冷卻時間，單位爲秒。
         :type Cooldown: int
-        :param MetricAlarm: 告警監控指标。
+        :param MetricAlarm: 告警監控指標。
         :type MetricAlarm: :class:`taifucloudcloud.autoscaling.v20180419.models.MetricAlarm`
         :param NotificationUserGroupIds: 通知組ID，即爲用戶組ID集合，用戶組ID可以通過[ListGroups](https://cloud.taifucloud.com/document/product/598/34589)查詢。
 如果需要清空通知用戶組，需要在清單中傳入特定字串 "NULL"。
@@ -3209,11 +3209,11 @@ class ModifyScheduledActionRequest(AbstractModel):
         :type MinSize: int
         :param DesiredCapacity: 當定時任務觸發時，設置的伸縮組期望實例數。
         :type DesiredCapacity: int
-        :param StartTime: 定時任務的首次觸發時間，取值爲` 時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+        :param StartTime: 定時任務的首次觸發時間，取值爲` 時間`（UTC+8），按照`ISO8601`標準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
         :type StartTime: str
-        :param EndTime: 定時任務的結束時間，取值爲` 時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br>此參數與`Recurrence`需要同時指定，到達結束時間之後，定時任務将不再生效。
+        :param EndTime: 定時任務的結束時間，取值爲` 時間`（UTC+8），按照`ISO8601`標準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br>此參數與`Recurrence`需要同時指定，到達結束時間之後，定時任務将不再生效。
         :type EndTime: str
-        :param Recurrence: 定時任務的重複方式。爲标準 Cron 格式<br>此參數與`EndTime`需要同時指定。
+        :param Recurrence: 定時任務的重複方式。爲標準 Cron 格式<br>此參數與`EndTime`需要同時指定。
         :type Recurrence: str
         """
         self.ScheduledActionId = None
@@ -3255,13 +3255,13 @@ class ModifyScheduledActionResponse(AbstractModel):
 
 
 class NotificationTarget(AbstractModel):
-    """通知目标
+    """通知目標
 
     """
 
     def __init__(self):
         """
-        :param TargetType: 目标類型，取值範圍包括`CMQ_QUEUE`、`CMQ_TOPIC`。
+        :param TargetType: 目標類型，取值範圍包括`CMQ_QUEUE`、`CMQ_TOPIC`。
 <li> CMQ_QUEUE，指Top Cloud 訊息隊列-隊列模型。</li>
 <li> CMQ_TOPIC，指Top Cloud 訊息隊列-主題模型。</li>
         :type TargetType: str
@@ -3441,7 +3441,7 @@ class ScalingPolicy(AbstractModel):
         :type AdjustmentValue: int
         :param Cooldown: 冷卻時間。
         :type Cooldown: int
-        :param MetricAlarm: 告警監控指标。
+        :param MetricAlarm: 告警監控指標。
         :type MetricAlarm: :class:`taifucloudcloud.autoscaling.v20180419.models.MetricAlarm`
         :param NotificationUserGroupIds: 通知組ID，即爲用戶組ID集合。
         :type NotificationUserGroupIds: list of str
@@ -3482,11 +3482,11 @@ class ScheduledAction(AbstractModel):
         :type ScheduledActionName: str
         :param AutoScalingGroupId: 定時任務所在伸縮組ID。
         :type AutoScalingGroupId: str
-        :param StartTime: 定時任務的開始時間。取值爲` 時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+        :param StartTime: 定時任務的開始時間。取值爲` 時間`（UTC+8），按照`ISO8601`標準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
         :type StartTime: str
         :param Recurrence: 定時任務的重複方式。
         :type Recurrence: str
-        :param EndTime: 定時任務的結束時間。取值爲` 時間`（UTC+8），按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+        :param EndTime: 定時任務的結束時間。取值爲` 時間`（UTC+8），按照`ISO8601`標準，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
         :type EndTime: str
         :param MaxSize: 定時任務設置的最大實例數。
         :type MaxSize: int
@@ -3494,7 +3494,7 @@ class ScheduledAction(AbstractModel):
         :type DesiredCapacity: int
         :param MinSize: 定時任務設置的最小實例數。
         :type MinSize: int
-        :param CreatedTime: 定時任務的創建時間。取值爲`UTC`時間，按照`ISO8601`标準，格式：`YYYY-MM-DDThh:mm:ssZ`。
+        :param CreatedTime: 定時任務的創建時間。取值爲`UTC`時間，按照`ISO8601`標準，格式：`YYYY-MM-DDThh:mm:ssZ`。
         :type CreatedTime: str
         """
         self.ScheduledActionId = None
@@ -3529,11 +3529,11 @@ class ServiceSettings(AbstractModel):
 
     def __init__(self):
         """
-        :param ReplaceMonitorUnhealthy: 開啓監控不健康替換服務。若開啓則對于雲監控标記爲不健康的實例，彈性伸縮服務會進行替換。若不指定該參數，則預設爲 False。
+        :param ReplaceMonitorUnhealthy: 開啓監控不健康替換服務。若開啓則對於雲監控標記爲不健康的實例，彈性伸縮服務會進行替換。若不指定該參數，則預設爲 False。
         :type ReplaceMonitorUnhealthy: bool
         :param ScalingMode: 取值範圍： 
 CLASSIC_SCALING：經典方式，使用創建、銷毀實例來實現擴縮容； 
-WAKE_UP_STOPPED_SCALING：擴容優先開機。擴容時優先對已關機的實例執行開機操作，若開機後實例數仍低于期望實例數，則創建實例，縮容仍采用銷毀實例的方式。用戶可以使用StopAutoScalingInstances介面來關閉伸縮組内的實例。監控告警觸發的擴容仍将創建實例
+WAKE_UP_STOPPED_SCALING：擴容優先開機。擴容時優先對已關機的實例執行開機操作，若開機後實例數仍低於期望實例數，則創建實例，縮容仍采用銷毀實例的方式。用戶可以使用StopAutoScalingInstances介面來關閉伸縮組内的實例。監控告警觸發的擴容仍将創建實例
 預設取值：CLASSIC_SCALING
         :type ScalingMode: str
         """
@@ -3725,17 +3725,17 @@ class SystemDisk(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """資源類型及标簽鍵值對
+    """資源類型及標簽鍵值對
 
     """
 
     def __init__(self):
         """
-        :param Key: 标簽鍵
+        :param Key: 標簽鍵
         :type Key: str
-        :param Value: 标簽值
+        :param Value: 標簽值
         :type Value: str
-        :param ResourceType: 标簽綁定的資源類型，當前支援類型："auto-scaling-group
+        :param ResourceType: 標簽綁定的資源類型，當前支援類型："auto-scaling-group
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ResourceType: str
         """
@@ -3751,7 +3751,7 @@ class Tag(AbstractModel):
 
 
 class TargetAttribute(AbstractModel):
-    """負載均衡器目标屬性
+    """負載均衡器目標屬性
 
     """
 
@@ -3805,7 +3805,7 @@ class UpgradeLaunchConfigurationRequest(AbstractModel):
         :type InstanceTypesCheckPolicy: str
         :param InternetAccessible: 公網頻寬相關訊息設置。若不指定該參數，則預設公網頻寬爲0Mbps。
         :type InternetAccessible: :class:`taifucloudcloud.autoscaling.v20180419.models.InternetAccessible`
-        :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，并以站内信方式知會到用戶。
+        :param LoginSettings: 實例登入設置。通過該參數可以設置實例的登入方式密碼、金鑰或保持映像的原始登入設置。預設情況下會随機生成密碼，並以站内信方式知會到用戶。
         :type LoginSettings: :class:`taifucloudcloud.autoscaling.v20180419.models.LoginSettings`
         :param ProjectId: 實例所屬項目ID。該參數可以通過調用 [DescribeProject](https://cloud.taifucloud.com/document/api/378/4400) 的返回值中的`projectId`欄位來獲取。不填爲預設項目。
         :type ProjectId: int
@@ -3815,7 +3815,7 @@ class UpgradeLaunchConfigurationRequest(AbstractModel):
         :type SystemDisk: :class:`taifucloudcloud.autoscaling.v20180419.models.SystemDisk`
         :param UserData: 經過 Base64 編碼後的自定義數據，最大長度不超過16KB。
         :type UserData: str
-        :param InstanceTags: 标簽清單。通過指定該參數，可以爲擴容的實例綁定标簽。最多支援指定10個标簽。
+        :param InstanceTags: 標簽清單。通過指定該參數，可以爲擴容的實例綁定標簽。最多支援指定10個標簽。
         :type InstanceTags: list of InstanceTag
         :param CamRoleName: CAM角色名稱。可通過DescribeRoleList介面返回值中的roleName獲取。
         :type CamRoleName: str
@@ -3931,9 +3931,9 @@ class UpgradeLifecycleHookRequest(AbstractModel):
         :type DefaultResult: str
         :param HeartbeatTimeout: 生命週期挂鈎超時之前可以經過的最長時間（以秒爲單位），範圍從30到3600秒，預設值爲300秒
         :type HeartbeatTimeout: int
-        :param NotificationMetadata: 彈性伸縮向通知目标發送的附加訊息，預設值爲''
+        :param NotificationMetadata: 彈性伸縮向通知目標發送的附加訊息，預設值爲''
         :type NotificationMetadata: str
-        :param NotificationTarget: 通知目标
+        :param NotificationTarget: 通知目標
         :type NotificationTarget: :class:`taifucloudcloud.autoscaling.v20180419.models.NotificationTarget`
         :param LifecycleTransitionType: 進行生命週期挂鈎的場景類型，取值範圍包括NORMAL 和 EXTENSION。說明：設置爲EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces介面時會觸發生命週期挂鈎操作，值爲NORMAL則不會在這些介面中觸發生命週期挂鈎。
         :type LifecycleTransitionType: str

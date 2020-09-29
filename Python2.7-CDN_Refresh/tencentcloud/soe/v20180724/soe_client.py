@@ -26,7 +26,7 @@ class SoeClient(AbstractClient):
 
 
     def InitOralProcess(self, request):
-        """初始化發音評估過程，每一輪評估前進行調用。語音輸入模式分爲流式模式和非流式模式，流式模式支援數據分片傳輸，可以加快評估響應速度。評估模式分爲詞模式和句子模式，詞模式會标注每個音節的詳細訊息；句子模式會有完整度和流利度的評估。
+        """初始化發音評估過程，每一輪評估前進行調用。語音輸入模式分爲流式模式和非流式模式，流式模式支援數據分片傳輸，可以加快評估響應速度。評估模式分爲詞模式和句子模式，詞模式會標注每個音節的詳細訊息；句子模式會有完整度和流利度的評估。
 
         :param request: Request instance for InitOralProcess.
         :type request: :class:`taifucloudcloud.soe.v20180724.models.InitOralProcessRequest`
@@ -110,7 +110,7 @@ class SoeClient(AbstractClient):
 
 
     def TransmitOralProcessWithInit(self, request):
-        """初始化并傳輸音訊數據，分片傳輸時，盡量保證SeqId順序傳輸。音訊源目前僅支援16k采樣率16bit單聲道編碼方式，如有不一緻可能導緻評估不準确或失敗。
+        """初始化並傳輸音訊數據，分片傳輸時，盡量保證SeqId順序傳輸。音訊源目前僅支援16k采樣率16bit單聲道編碼方式，如有不一緻可能導緻評估不準确或失敗。
 
         :param request: Request instance for TransmitOralProcessWithInit.
         :type request: :class:`taifucloudcloud.soe.v20180724.models.TransmitOralProcessWithInitRequest`

@@ -2,8 +2,8 @@
 /**************************************************
 * 功能：1.發送簡訊 2.登入（校驗簡訊驗證碼）
 * 函數運作的前提條件： 
-1.創模組化板函數後，請先添加函數運作角色，并給該角色關聯簡訊QcloudSMSFullAccess權限。
-2.本服務用到redis儲存驗證碼，請先申請redis資源，并将redis的host和密碼設置成環境變量。
+1.創模組化板函數後，請先添加函數運作角色，並給該角色關聯簡訊QcloudSMSFullAccess權限。
+2.本服務用到redis儲存驗證碼，請先申請redis資源，並将redis的host和密碼設置成環境變量。
 3.去雲簡訊控制台申請簡訊範本和簽名
 * 詳細請參考：https://github.com/taifucloudyun/scf-demo-repo/tree/master/Nodejs8.9-SmsVerificationCode
 ***************************************************/
@@ -78,7 +78,7 @@ async function loginSms(queryString, redisStore) {
     updateRedis(redisStore, queryString.phone, result, false)
     return {
       codeStr: 'CodeIsError',
-      msg: "請檢查手機号和驗證碼是否正确"
+      msg: "請檢查手機號和驗證碼是否正确"
     }
   }
 }
@@ -98,7 +98,7 @@ function updateRedis(redisStore, phone, result, used) {
   }
 }
 /*
- * 功能：根據手機号獲取簡訊驗證碼
+ * 功能：根據手機號獲取簡訊驗證碼
  */
 async function getSms(queryString, redisStore) {
   const code = Math.random().toString().slice(-6);//生成6位數随機驗證碼
@@ -115,7 +115,7 @@ async function getSms(queryString, redisStore) {
 }
 /*
  * 功能：通過sdk調用簡訊api發送簡訊
- * 參數 手機号、簡訊驗證碼
+ * 參數 手機號、簡訊驗證碼
  */
 async function sendSms(phone, code) {
   const SmsClient = taifucloudcloud.sms.v20190711.Client;
@@ -134,7 +134,7 @@ async function sendSms(phone, code) {
   let client = new SmsClient(cred, "ap-guangzhou", clientProfile);
 
   let req = {
-      PhoneNumberSet: ["+" + phone], //大陸手機号861856624****
+      PhoneNumberSet: ["+" + phone], //大陸手機號861856624****
       TemplateID: process.env.SMS_TEMPLATE_ID, //Top Cloud 簡訊範本id
       Sign: process.env.SMS_SIGN, //Top Cloud 簡訊簽名
       TemplateParamSet: [code],

@@ -46,7 +46,7 @@ class Job:
                 raise e
 
     def download_url_into_cos(self):
-        '''Uploading files and downloading them to COS by streaming fragment upload 采用流式分片上傳的方式，下載文件并存入COS'''
+        '''Uploading files and downloading them to COS by streaming fragment upload 采用流式分片上傳的方式，下載文件並存入COS'''
         response = requests.get(self.url, stream=True)
 
         # start

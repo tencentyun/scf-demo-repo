@@ -197,9 +197,9 @@ class CreateDeviceResponse(AbstractModel):
         :type DeviceName: str
         :param DevicePsk: 對稱加密金鑰，base64編碼。采用對稱加密時返回該參數
         :type DevicePsk: str
-        :param DeviceCert: 設備證書，用于 TLS 建立連結時校驗用戶端身份。采用非對稱加密時返回該參數
+        :param DeviceCert: 設備證書，用於 TLS 建立連結時校驗用戶端身份。采用非對稱加密時返回該參數
         :type DeviceCert: str
-        :param DevicePrivateKey: 設備私鑰，用于 TLS 建立連結時校驗用戶端身份，Top Cloud 後台不保存，請妥善保管。采用非對稱加密時返回該參數
+        :param DevicePrivateKey: 設備私鑰，用於 TLS 建立連結時校驗用戶端身份，Top Cloud 後台不保存，請妥善保管。采用非對稱加密時返回該參數
         :type DevicePrivateKey: str
         :param LoraDevEui: LoRa設備的DevEui，當設備是LoRa設備時，會返回該欄位
         :type LoraDevEui: str
@@ -426,7 +426,7 @@ class CreateTaskRequest(AbstractModel):
         :type ProductId: str
         :param DeviceNameFilter: 執行任務的設備名的正規表示式
         :type DeviceNameFilter: str
-        :param ScheduleTimeInSeconds: 任務開始執行的時間。 取值爲 Unix 時間戳，單位秒，且需大于等于當前時間時間戳，0爲系統當前時間時間戳，即立即執行，最大爲當前時間86400秒後，超過則取值爲當前時間86400秒後
+        :param ScheduleTimeInSeconds: 任務開始執行的時間。 取值爲 Unix 時間戳，單位秒，且需大於等於當前時間時間戳，0爲系統當前時間時間戳，即立即執行，最大爲當前時間86400秒後，超過則取值爲當前時間86400秒後
         :type ScheduleTimeInSeconds: int
         :param Tasks: 任務描述細節，描述見下 Task
         :type Tasks: :class:`taifucloudcloud.iotcloud.v20180614.models.Task`
@@ -918,7 +918,7 @@ class DescribeDevicesRequest(AbstractModel):
         :type Offset: int
         :param Limit: 分頁的大小，數值範圍 10-100
         :type Limit: int
-        :param FirmwareVersion: 設備固件版本号，若不帶此參數會返回所有固件版本的設備
+        :param FirmwareVersion: 設備固件版本號，若不帶此參數會返回所有固件版本的設備
         :type FirmwareVersion: str
         """
         self.ProductId = None
@@ -1529,7 +1529,7 @@ class EnableTopicRuleResponse(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """描述鍵值對過濾器，用于條件過濾查詢。例如過濾ID、名稱、狀态等
+    """描述鍵值對過濾器，用於條件過濾查詢。例如過濾ID、名稱、狀态等
 
     """
 
@@ -2043,7 +2043,7 @@ class UpdateDeviceShadowRequest(AbstractModel):
         :type DeviceName: str
         :param State: 虛拟設備的狀态，JSON字串格式，由desired結構組成
         :type State: str
-        :param ShadowVersion: 當前版本号，需要和後台的version保持一緻，才能更新成功
+        :param ShadowVersion: 當前版本號，需要和後台的version保持一緻，才能更新成功
         :type ShadowVersion: int
         """
         self.ProductId = None

@@ -26,7 +26,7 @@ class SslClient(AbstractClient):
 
 
     def ApplyCertificate(self, request):
-        """本介面（ApplyCertificate）用于免費證書申請。
+        """本介面（ApplyCertificate）用於免費證書申請。
 
         :param request: Request instance for ApplyCertificate.
         :type request: :class:`taifucloudcloud.ssl.v20191205.models.ApplyCertificateRequest`
@@ -110,7 +110,7 @@ class SslClient(AbstractClient):
 
 
     def DeleteCertificate(self, request):
-        """本介面（DeleteCertificate）用于删除證書。
+        """本介面（DeleteCertificate）用於删除證書。
 
         :param request: Request instance for DeleteCertificate.
         :type request: :class:`taifucloudcloud.ssl.v20191205.models.DeleteCertificateRequest`
@@ -138,7 +138,7 @@ class SslClient(AbstractClient):
 
 
     def DescribeCertificate(self, request):
-        """本介面（DescribeCertificate）用于獲驗證書訊息。
+        """本介面（DescribeCertificate）用於獲驗證書訊息。
 
         :param request: Request instance for DescribeCertificate.
         :type request: :class:`taifucloudcloud.ssl.v20191205.models.DescribeCertificateRequest`
@@ -194,7 +194,7 @@ class SslClient(AbstractClient):
 
 
     def DescribeCertificateOperateLogs(self, request):
-        """獲取用戶賬号下有關證書的操作日志。
+        """獲取用戶賬號下有關證書的操作日志。
 
         :param request: Request instance for DescribeCertificateOperateLogs.
         :type request: :class:`taifucloudcloud.ssl.v20191205.models.DescribeCertificateOperateLogsRequest`
@@ -222,7 +222,7 @@ class SslClient(AbstractClient):
 
 
     def DescribeCertificates(self, request):
-        """本介面（DescribeCertificates）用于獲驗證書清單。
+        """本介面（DescribeCertificates）用於獲驗證書清單。
 
         :param request: Request instance for DescribeCertificates.
         :type request: :class:`taifucloudcloud.ssl.v20191205.models.DescribeCertificatesRequest`
@@ -250,7 +250,7 @@ class SslClient(AbstractClient):
 
 
     def DownloadCertificate(self, request):
-        """本介面（DownloadCertificate）用于下載證書。
+        """本介面（DownloadCertificate）用於下載證書。
 
         :param request: Request instance for DownloadCertificate.
         :type request: :class:`taifucloudcloud.ssl.v20191205.models.DownloadCertificateRequest`
@@ -334,7 +334,7 @@ class SslClient(AbstractClient):
 
 
     def ReplaceCertificate(self, request):
-        """本介面（ReplaceCertificate）用于重頒發證書。已申請的免費證書僅支援 RSA 算法、金鑰對參數爲2048的證書重頒發，并且目前僅支援1次重頒發。
+        """本介面（ReplaceCertificate）用於重頒發證書。已申請的免費證書僅支援 RSA 算法、金鑰對參數爲2048的證書重頒發，並且目前僅支援1次重頒發。
 
         :param request: Request instance for ReplaceCertificate.
         :type request: :class:`taifucloudcloud.ssl.v20191205.models.ReplaceCertificateRequest`
@@ -390,7 +390,7 @@ class SslClient(AbstractClient):
 
 
     def UploadCertificate(self, request):
-        """本介面（UploadCertificate）用于上傳證書。
+        """本介面（UploadCertificate）用於上傳證書。
 
         :param request: Request instance for UploadCertificate.
         :type request: :class:`taifucloudcloud.ssl.v20191205.models.UploadCertificateRequest`

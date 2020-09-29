@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: Video_Transcode
   src: ./
-  description: 本範例通過配置COS觸發器，當你在通過上傳視訊文件到cos時，通過雲點播提供的介面，進行視訊轉碼，并寫入目标bucket中
+  description: 本範例通過配置COS觸發器，當你在通過上傳視訊文件到cos時，通過雲點播提供的介面，進行視訊轉碼，並寫入目標bucket中
   handler: index.main_handler
   runtime: Nodejs8.9
   namespace: default

@@ -26,7 +26,7 @@ class IotvideoClient(AbstractClient):
 
 
     def CreateAppUsr(self, request):
-        """本介面（CreateAppUsr）用于接收由廠商雲發送過來的注冊請求,建立廠商雲終端用戶與IoT Video終端用戶的映射關系。
+        """本介面（CreateAppUsr）用於接收由廠商雲發送過來的注冊請求,建立廠商雲終端用戶與IoT Video終端用戶的映射關系。
 
         :param request: Request instance for CreateAppUsr.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.CreateAppUsrRequest`
@@ -54,7 +54,7 @@ class IotvideoClient(AbstractClient):
 
 
     def CreateBinding(self, request):
-        """本介面（CreateBinding）用于終端用戶和設備進行綁定，具體的應用場景如下：
+        """本介面（CreateBinding）用於終端用戶和設備進行綁定，具體的應用場景如下：
             終端用戶與設備具有“強關聯”關系。用戶與設備綁定之後，用戶終端即具備了該設備的訪問權限,訪問或操作設備時，無需獲取設備訪問Token。
 
         :param request: Request instance for CreateBinding.
@@ -83,7 +83,7 @@ class IotvideoClient(AbstractClient):
 
 
     def CreateDevToken(self, request):
-        """本介面（CreateDevToken）用于以下場景：
+        """本介面（CreateDevToken）用於以下場景：
         終端用戶與設備沒有強綁定關聯關系;
         允許終端用戶短時或一次性臨時訪問設備;
         當終端用戶與設備有強綁定關系時，可以不用調用此介面
@@ -114,7 +114,7 @@ class IotvideoClient(AbstractClient):
 
 
     def CreateDevices(self, request):
-        """本介面（CreateDevices）用于批次創建新的物聯網視訊通信設備。
+        """本介面（CreateDevices）用於批次創建新的物聯網視訊通信設備。
         注意：Top Cloud 不會對設備私鑰進行保存，請自行保管好您的設備私鑰。
 
         :param request: Request instance for CreateDevices.
@@ -143,7 +143,7 @@ class IotvideoClient(AbstractClient):
 
 
     def CreateGencode(self, request):
-        """本介面（CreateGencode）用于生成設備物模型原始碼
+        """本介面（CreateGencode）用於生成設備物模型原始碼
 
         :param request: Request instance for CreateGencode.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.CreateGencodeRequest`
@@ -171,7 +171,7 @@ class IotvideoClient(AbstractClient):
 
 
     def CreateIotDataType(self, request):
-        """本介面（CreateIotDataType）用于創建自定義物模型數據類型。
+        """本介面（CreateIotDataType）用於創建自定義物模型數據類型。
 
         :param request: Request instance for CreateIotDataType.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.CreateIotDataTypeRequest`
@@ -199,7 +199,7 @@ class IotvideoClient(AbstractClient):
 
 
     def CreateIotModel(self, request):
-        """本介面（CreateIotModel）用于定義的物模型提交。
+        """本介面（CreateIotModel）用於定義的物模型提交。
         該介面實現了物模型草稿箱的功能，保存用戶最後一次編輯的物模型數據。
 
         :param request: Request instance for CreateIotModel.
@@ -228,7 +228,7 @@ class IotvideoClient(AbstractClient):
 
 
     def CreateProduct(self, request):
-        """本介面（CreateProduct）用于創建一個新的物聯網智慧視訊産品。
+        """本介面（CreateProduct）用於創建一個新的物聯網智慧視訊産品。
 
         :param request: Request instance for CreateProduct.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.CreateProductRequest`
@@ -256,7 +256,7 @@ class IotvideoClient(AbstractClient):
 
 
     def CreateStorage(self, request):
-        """本介面（CreateStorage）用于購買雲存套餐。
+        """本介面（CreateStorage）用於購買雲存套餐。
 
         :param request: Request instance for CreateStorage.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.CreateStorageRequest`
@@ -284,7 +284,7 @@ class IotvideoClient(AbstractClient):
 
 
     def CreateTraceIds(self, request):
-        """本介面（CreateTraceIds）用于将設備加到日志跟蹤白名單。
+        """本介面（CreateTraceIds）用於将設備加到日志跟蹤白名單。
 
         :param request: Request instance for CreateTraceIds.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.CreateTraceIdsRequest`
@@ -312,7 +312,7 @@ class IotvideoClient(AbstractClient):
 
 
     def CreateUploadPath(self, request):
-        """本介面（CreateUploadPath）用于獲取固件上傳路徑。
+        """本介面（CreateUploadPath）用於獲取固件上傳路徑。
 
         :param request: Request instance for CreateUploadPath.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.CreateUploadPathRequest`
@@ -340,7 +340,7 @@ class IotvideoClient(AbstractClient):
 
 
     def CreateUsrToken(self, request):
-        """本介面（CreateUsrToken）用于終端用戶獲取IoT Video平台的accessToken，初始化SDK,連接到IoT Video接入服務器。
+        """本介面（CreateUsrToken）用於終端用戶獲取IoT Video平台的accessToken，初始化SDK,連接到IoT Video接入服務器。
 
         :param request: Request instance for CreateUsrToken.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.CreateUsrTokenRequest`
@@ -368,7 +368,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DeleteAppUsr(self, request):
-        """本介面（DeleteAppUsr）用于删除終端用戶。
+        """本介面（DeleteAppUsr）用於删除終端用戶。
 
         :param request: Request instance for DeleteAppUsr.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DeleteAppUsrRequest`
@@ -396,7 +396,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DeleteBinding(self, request):
-        """本介面（DeleteBinding）用于終端用戶和設備進行解綁定。
+        """本介面（DeleteBinding）用於終端用戶和設備進行解綁定。
 
         :param request: Request instance for DeleteBinding.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DeleteBindingRequest`
@@ -424,7 +424,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DeleteDevice(self, request):
-        """本介面（DeleteDevice）用于删除設備，可進行批次操作，每次操作最多100台設備。
+        """本介面（DeleteDevice）用於删除設備，可進行批次操作，每次操作最多100台設備。
 
         :param request: Request instance for DeleteDevice.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DeleteDeviceRequest`
@@ -452,7 +452,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DeleteIotDataType(self, request):
-        """本介面（DeleteIotDataType）用于删除自定義物模型數據類型。
+        """本介面（DeleteIotDataType）用於删除自定義物模型數據類型。
 
         :param request: Request instance for DeleteIotDataType.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DeleteIotDataTypeRequest`
@@ -480,7 +480,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DeleteMessageQueue(self, request):
-        """本介面（DeleteMessageQueue）用于删除物聯網智慧視訊産品的轉發訊息配置訊息。
+        """本介面（DeleteMessageQueue）用於删除物聯網智慧視訊産品的轉發訊息配置訊息。
 
         :param request: Request instance for DeleteMessageQueue.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DeleteMessageQueueRequest`
@@ -508,7 +508,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DeleteOtaVersion(self, request):
-        """本介面（DeleteOtaVersion）用于删除固件版本訊息。
+        """本介面（DeleteOtaVersion）用於删除固件版本訊息。
 
         :param request: Request instance for DeleteOtaVersion.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DeleteOtaVersionRequest`
@@ -536,7 +536,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DeleteProduct(self, request):
-        """本介面（DeleteProduct）用于删除一個物聯網智慧視訊産品。
+        """本介面（DeleteProduct）用於删除一個物聯網智慧視訊産品。
 
         :param request: Request instance for DeleteProduct.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DeleteProductRequest`
@@ -564,7 +564,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DeleteTraceIds(self, request):
-        """本介面（DeleteTraceIds）用于将設備從日志跟蹤白名單中删除，該介面可批次操作，最多支援同時操作100台設備。
+        """本介面（DeleteTraceIds）用於将設備從日志跟蹤白名單中删除，該介面可批次操作，最多支援同時操作100台設備。
 
         :param request: Request instance for DeleteTraceIds.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DeleteTraceIdsRequest`
@@ -592,7 +592,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeBindDev(self, request):
-        """本介面（DescribeBindDev）用于查詢終端用戶綁定的設備清單。
+        """本介面（DescribeBindDev）用於查詢終端用戶綁定的設備清單。
 
         :param request: Request instance for DescribeBindDev.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribeBindDevRequest`
@@ -620,7 +620,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeBindUsr(self, request):
-        """本介面（DescribeBindUsr）用于查詢設備被分享的所有用戶清單。
+        """本介面（DescribeBindUsr）用於查詢設備被分享的所有用戶清單。
 
         :param request: Request instance for DescribeBindUsr.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribeBindUsrRequest`
@@ -676,7 +676,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeDeviceModel(self, request):
-        """本介面（DescribeDeviceModel）用于獲取設備物模型。
+        """本介面（DescribeDeviceModel）用於獲取設備物模型。
 
         :param request: Request instance for DescribeDeviceModel.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribeDeviceModelRequest`
@@ -704,7 +704,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeDevices(self, request):
-        """本介面（DescribeDevices）用于獲取設備訊息清單。
+        """本介面（DescribeDevices）用於獲取設備訊息清單。
 
         :param request: Request instance for DescribeDevices.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribeDevicesRequest`
@@ -732,7 +732,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeIotDataType(self, request):
-        """本介面（DescribeIotDataType）用于查詢自定義的物模型數據類型。
+        """本介面（DescribeIotDataType）用於查詢自定義的物模型數據類型。
 
         :param request: Request instance for DescribeIotDataType.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribeIotDataTypeRequest`
@@ -760,7 +760,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeIotModel(self, request):
-        """本介面（DescribeIotModel）用于獲取物模型定義詳情。
+        """本介面（DescribeIotModel）用於獲取物模型定義詳情。
 
         :param request: Request instance for DescribeIotModel.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribeIotModelRequest`
@@ -788,7 +788,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeIotModels(self, request):
-        """本介面（DescribeIotModels）用于列出物模型曆史版本清單。
+        """本介面（DescribeIotModels）用於列出物模型曆史版本清單。
 
         :param request: Request instance for DescribeIotModels.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribeIotModelsRequest`
@@ -816,7 +816,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeLogs(self, request):
-        """本介面（DescribeLogs）用于查詢設備日志清單。
+        """本介面（DescribeLogs）用於查詢設備日志清單。
         設備日志最長保留時長爲15天,超期自動清除。
 
         :param request: Request instance for DescribeLogs.
@@ -845,7 +845,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeMessageQueue(self, request):
-        """本介面（DescribeMessageQueue）用于查詢物聯網智慧視訊産品轉發訊息配置。
+        """本介面（DescribeMessageQueue）用於查詢物聯網智慧視訊産品轉發訊息配置。
 
         :param request: Request instance for DescribeMessageQueue.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribeMessageQueueRequest`
@@ -873,7 +873,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeModelDataRet(self, request):
-        """本介面（DescribeModelDataRet）用于根據TaskId獲取對設備物模型操作最終響應的結果。
+        """本介面（DescribeModelDataRet）用於根據TaskId獲取對設備物模型操作最終響應的結果。
 
         :param request: Request instance for DescribeModelDataRet.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribeModelDataRetRequest`
@@ -901,7 +901,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeOtaVersions(self, request):
-        """本介面（DescribeOtaVersions）用于查詢固件版本訊息清單。
+        """本介面（DescribeOtaVersions）用於查詢固件版本訊息清單。
 
         :param request: Request instance for DescribeOtaVersions.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribeOtaVersionsRequest`
@@ -929,7 +929,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeProduct(self, request):
-        """本介面（DescribeProduct）用于獲取單個産品的詳細訊息。
+        """本介面（DescribeProduct）用於獲取單個産品的詳細訊息。
 
         :param request: Request instance for DescribeProduct.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribeProductRequest`
@@ -957,7 +957,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeProducts(self, request):
-        """本介面（DescribeProducts）用于列出用戶賬号下的物聯網智慧視訊産品清單。
+        """本介面（DescribeProducts）用於列出用戶賬號下的物聯網智慧視訊産品清單。
 
         :param request: Request instance for DescribeProducts.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribeProductsRequest`
@@ -985,7 +985,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribePubVersions(self, request):
-        """本介面（DescribePubVersions）用于獲取某一産品發布過的全部固件版本。
+        """本介面（DescribePubVersions）用於獲取某一産品發布過的全部固件版本。
 
         :param request: Request instance for DescribePubVersions.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribePubVersionsRequest`
@@ -1013,7 +1013,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeRegistrationStatus(self, request):
-        """本介面（DescribeRegistrationStatus）用于查詢終端用戶的注冊狀态。
+        """本介面（DescribeRegistrationStatus）用於查詢終端用戶的注冊狀态。
 
         :param request: Request instance for DescribeRegistrationStatus.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribeRegistrationStatusRequest`
@@ -1041,7 +1041,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeRunLog(self, request):
-        """本介面（DescribeRunLog）用于獲取設備運作日志。
+        """本介面（DescribeRunLog）用於獲取設備運作日志。
 
         :param request: Request instance for DescribeRunLog.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribeRunLogRequest`
@@ -1069,7 +1069,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeTraceIds(self, request):
-        """本介面（DescribeTraceIds）用于查詢設備日志跟蹤白名單。
+        """本介面（DescribeTraceIds）用於查詢設備日志跟蹤白名單。
 
         :param request: Request instance for DescribeTraceIds.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribeTraceIdsRequest`
@@ -1097,7 +1097,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DescribeTraceStatus(self, request):
-        """本介面（DescribeTraceStatus）用于查詢指定設備是否在白名單中。
+        """本介面（DescribeTraceStatus）用於查詢指定設備是否在白名單中。
 
         :param request: Request instance for DescribeTraceStatus.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DescribeTraceStatusRequest`
@@ -1125,7 +1125,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DisableDevice(self, request):
-        """本介面（DisableDevice）用于禁用設備，可進行批次操作，每次操作最多100台設備。
+        """本介面（DisableDevice）用於禁用設備，可進行批次操作，每次操作最多100台設備。
 
         :param request: Request instance for DisableDevice.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DisableDeviceRequest`
@@ -1153,7 +1153,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DisableDeviceStream(self, request):
-        """本介面（DisableDeviceStream）用于停止設備推流，可進行批次操作，每次操作最多100台設備。
+        """本介面（DisableDeviceStream）用於停止設備推流，可進行批次操作，每次操作最多100台設備。
 
         :param request: Request instance for DisableDeviceStream.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DisableDeviceStreamRequest`
@@ -1181,7 +1181,7 @@ class IotvideoClient(AbstractClient):
 
 
     def DisableOtaVersion(self, request):
-        """本介面（DisableOtaVersion）用于禁用固件版本。
+        """本介面（DisableOtaVersion）用於禁用固件版本。
 
         :param request: Request instance for DisableOtaVersion.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.DisableOtaVersionRequest`
@@ -1209,9 +1209,9 @@ class IotvideoClient(AbstractClient):
 
 
     def ModifyDeviceAction(self, request):
-        """本介面（ModifyDeviceAction）用于修改設備物模型的行爲（Action）。
+        """本介面（ModifyDeviceAction）用於修改設備物模型的行爲（Action）。
 
-        可對ctlVal數據屬性進行寫入,如:Action.takePhoto.ctlVal,設備在線且成功發送到設備才返回,物模型寫入數據時,不需要傳入時标訊息,平台以當前時标作爲數據的時标更新物模型中的時标訊息。
+        可對ctlVal數據屬性進行寫入,如:Action.takePhoto.ctlVal,設備在線且成功發送到設備才返回,物模型寫入數據時,不需要傳入時標訊息,平台以當前時標作爲數據的時標更新物模型中的時標訊息。
         注意:
           1.若設備當前不在線,會直接返回錯誤
           2.若設備網絡出現異常時,訊息發送可能超時,超時等待最長時間爲3秒
@@ -1243,13 +1243,13 @@ class IotvideoClient(AbstractClient):
 
 
     def ModifyDeviceProperty(self, request):
-        """本介面（ModifyDeviceProperty）用于修改設備物模型的屬性（ProWritable）。
+        """本介面（ModifyDeviceProperty）用於修改設備物模型的屬性（ProWritable）。
         可對setVal數據屬性進行寫入,如:
         ProWritable.Pos.setVal
-        對于嵌套類型的可寫屬性，可以僅對其部分數據内容進行寫入，如:
+        對於嵌套類型的可寫屬性，可以僅對其部分數據内容進行寫入，如:
         ProWritable.Pos.setVal.x;
         可寫屬性雲端寫入成功即返回;雲端向設備端發布屬性變更參數;若當前設備不在線,在設備下次上線時會自動更新這些屬性參數;
-        物模型寫入數據時,不需要傳入時标訊息,平台以當前時标作爲數據的時标更新物模型中的時标訊息。
+        物模型寫入數據時,不需要傳入時標訊息,平台以當前時標作爲數據的時標更新物模型中的時標訊息。
 
         :param request: Request instance for ModifyDeviceProperty.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.ModifyDevicePropertyRequest`
@@ -1277,7 +1277,7 @@ class IotvideoClient(AbstractClient):
 
 
     def ModifyProduct(self, request):
-        """本介面（ModifyProduct）用于編輯物聯網智慧視訊産品的相關訊息。
+        """本介面（ModifyProduct）用於編輯物聯網智慧視訊産品的相關訊息。
 
         :param request: Request instance for ModifyProduct.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.ModifyProductRequest`
@@ -1305,7 +1305,7 @@ class IotvideoClient(AbstractClient):
 
 
     def RunDevice(self, request):
-        """本介面（RunDevice）用于啓用設備，可進行批次操作，每次操作最多100台設備。
+        """本介面（RunDevice）用於啓用設備，可進行批次操作，每次操作最多100台設備。
 
         :param request: Request instance for RunDevice.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.RunDeviceRequest`
@@ -1333,7 +1333,7 @@ class IotvideoClient(AbstractClient):
 
 
     def RunDeviceStream(self, request):
-        """本介面（RunDeviceStream）用于開啓設備推流，可進行批次操作，每次操作最多100台設備。
+        """本介面（RunDeviceStream）用於開啓設備推流，可進行批次操作，每次操作最多100台設備。
 
         :param request: Request instance for RunDeviceStream.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.RunDeviceStreamRequest`
@@ -1361,7 +1361,7 @@ class IotvideoClient(AbstractClient):
 
 
     def RunIotModel(self, request):
-        """本介面（RunIotModel）用于對定義的物模型進行發布。
+        """本介面（RunIotModel）用於對定義的物模型進行發布。
 
         :param request: Request instance for RunIotModel.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.RunIotModelRequest`
@@ -1389,7 +1389,7 @@ class IotvideoClient(AbstractClient):
 
 
     def RunOtaVersion(self, request):
-        """本介面（RunOtaVersion）用于固件版本正式發布。
+        """本介面（RunOtaVersion）用於固件版本正式發布。
 
         :param request: Request instance for RunOtaVersion.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.RunOtaVersionRequest`
@@ -1417,7 +1417,7 @@ class IotvideoClient(AbstractClient):
 
 
     def RunTestOtaVersion(self, request):
-        """本介面（RunTestOtaVersion）用于固件版本測試發布。
+        """本介面（RunTestOtaVersion）用於固件版本測試發布。
 
         :param request: Request instance for RunTestOtaVersion.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.RunTestOtaVersionRequest`
@@ -1445,7 +1445,7 @@ class IotvideoClient(AbstractClient):
 
 
     def SendOnlineMsg(self, request):
-        """本介面（SendOnlineMsg）用于向設備發送在線訊息。
+        """本介面（SendOnlineMsg）用於向設備發送在線訊息。
         注意：
         若設備當前不在線,會直接返回錯誤;
         若設備網絡出現異常時,訊息發送可能超時,超時等待最長時間爲3秒.waitresp非0情況下,會導緻本介面阻塞3秒。
@@ -1476,7 +1476,7 @@ class IotvideoClient(AbstractClient):
 
 
     def SetMessageQueue(self, request):
-        """本介面（SetMessageQueue）用于配置物聯網智慧視訊産品的轉發訊息隊列。
+        """本介面（SetMessageQueue）用於配置物聯網智慧視訊産品的轉發訊息隊列。
 
         :param request: Request instance for SetMessageQueue.
         :type request: :class:`taifucloudcloud.iotvideo.v20191126.models.SetMessageQueueRequest`
@@ -1504,7 +1504,7 @@ class IotvideoClient(AbstractClient):
 
 
     def UpgradeDevice(self, request):
-        """本介面（UpgradeDevice）用于對設備進行固件升級。
+        """本介面（UpgradeDevice）用於對設備進行固件升級。
         該介面向指定的設備下發固件更新指令,可将固件升級到任意版本(可實現固件降級)。
         警告:使能UpgradeNow參數存在一定的風險性！建議僅在debug場景下使用!
 

@@ -101,7 +101,7 @@ class CreateAccountRequest(AbstractModel):
         """
         :param CompanyId: 集團ID
         :type CompanyId: str
-        :param Name: 賬号名；需要是手機号
+        :param Name: 賬號名；需要是手機號
         :type Name: str
         :param Password: 密碼；需要是(`~!@#$%^&*()_+=-）中的至少兩種且八位以上
         :type Password: str
@@ -188,7 +188,7 @@ class CreateFacePictureResponse(AbstractModel):
         """
         :param PersonId: 人物ID
         :type PersonId: int
-        :param Status: 0.正常建檔 1.重複身份 2.未檢測到人臉 3.檢測到多個人臉 4.人臉大小過小 5.人臉質量不達标 6.其他錯誤
+        :param Status: 0.正常建檔 1.重複身份 2.未檢測到人臉 3.檢測到多個人臉 4.人臉大小過小 5.人臉質量不達標 6.其他錯誤
         :type Status: int
         :param PictureUrl: 圖片url
         :type PictureUrl: str
@@ -283,9 +283,9 @@ class DescribeCameraPersonRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param CompanyId: 優mall集團id，通過"指定身份标識獲取客戶門店清單"介面獲取
+        :param CompanyId: 優mall集團id，通過"指定身份標識獲取客戶門店清單"介面獲取
         :type CompanyId: str
-        :param ShopId: 優mall店鋪id，通過"指定身份标識獲取客戶門店清單"介面獲取
+        :param ShopId: 優mall店鋪id，通過"指定身份標識獲取客戶門店清單"介面獲取
         :type ShopId: int
         :param CameraId: 攝像頭id
         :type CameraId: int
@@ -504,9 +504,9 @@ class DescribeFaceIdByTempIdRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param CompanyId: 優mall集團id，通過"指定身份标識獲取客戶門店清單"介面獲取
+        :param CompanyId: 優mall集團id，通過"指定身份標識獲取客戶門店清單"介面獲取
         :type CompanyId: str
-        :param ShopId: 優mall店鋪id，通過"指定身份标識獲取客戶門店清單"介面獲取
+        :param ShopId: 優mall店鋪id，通過"指定身份標識獲取客戶門店清單"介面獲取
         :type ShopId: int
         :param TempId: 臨時id
         :type TempId: str
@@ -590,9 +590,9 @@ class DescribeHistoryNetworkInfoRequest(AbstractModel):
         """
         :param Time: 請求時間戳
         :type Time: int
-        :param CompanyId: 優mall集團id，通過"指定身份标識獲取客戶門店清單"介面獲取
+        :param CompanyId: 優mall集團id，通過"指定身份標識獲取客戶門店清單"介面獲取
         :type CompanyId: str
-        :param ShopId: 優mall店鋪id，通過"指定身份标識獲取客戶門店清單"介面獲取，爲0則拉取集團全部店鋪當前
+        :param ShopId: 優mall店鋪id，通過"指定身份標識獲取客戶門店清單"介面獲取，爲0則拉取集團全部店鋪當前
         :type ShopId: int
         :param StartDay: 拉取開始日期，格式：2018-09-05
         :type StartDay: str
@@ -654,9 +654,9 @@ class DescribeNetworkInfoRequest(AbstractModel):
         """
         :param Time: 請求時間戳
         :type Time: int
-        :param CompanyId: 優mall集團id，通過"指定身份标識獲取客戶門店清單"介面獲取
+        :param CompanyId: 優mall集團id，通過"指定身份標識獲取客戶門店清單"介面獲取
         :type CompanyId: str
-        :param ShopId: 優mall店鋪id，通過"指定身份标識獲取客戶門店清單"介面獲取，不填則拉取集團全部店鋪當前
+        :param ShopId: 優mall店鋪id，通過"指定身份標識獲取客戶門店清單"介面獲取，不填則拉取集團全部店鋪當前
         :type ShopId: int
         """
         self.Time = None
@@ -767,9 +767,9 @@ class DescribePersonInfoByFacePictureRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param CompanyId: 優mall集團id，通過"指定身份标識獲取客戶門店清單"介面獲取
+        :param CompanyId: 優mall集團id，通過"指定身份標識獲取客戶門店清單"介面獲取
         :type CompanyId: str
-        :param ShopId: 優mall店鋪id，通過"指定身份标識獲取客戶門店清單"介面獲取
+        :param ShopId: 優mall店鋪id，通過"指定身份標識獲取客戶門店清單"介面獲取
         :type ShopId: int
         :param Picture: 人臉圖片BASE編碼
         :type Picture: str
@@ -1002,7 +1002,7 @@ class DescribePersonTraceDetailResponse(AbstractModel):
         :type PersonId: str
         :param TraceId: 軌迹編碼
         :type TraceId: str
-        :param CoordinateSet: 軌迹點坐标序列
+        :param CoordinateSet: 軌迹點坐標序列
         :type CoordinateSet: list of PersonCoordinate
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -2107,9 +2107,9 @@ class ModifyPersonTagInfoRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param CompanyId: 優mall集團id，通過"指定身份标識獲取客戶門店清單"介面獲取
+        :param CompanyId: 優mall集團id，通過"指定身份標識獲取客戶門店清單"介面獲取
         :type CompanyId: str
-        :param ShopId: 優mall店鋪id，通過"指定身份标識獲取客戶門店清單"介面獲取，爲0則拉取集團全部店鋪當前
+        :param ShopId: 優mall店鋪id，通過"指定身份標識獲取客戶門店清單"介面獲取，爲0則拉取集團全部店鋪當前
         :type ShopId: int
         :param Tags: 需要設置的顧客訊息，批次設置最大爲10個
         :type Tags: list of PersonTagInfo
@@ -2391,15 +2391,15 @@ class NetworkLastInfo(AbstractModel):
 
 
 class PersonCoordinate(AbstractModel):
-    """軌迹點坐标
+    """軌迹點坐標
 
     """
 
     def __init__(self):
         """
-        :param CADX: CAD圖X坐标
+        :param CADX: CAD圖X坐標
         :type CADX: float
-        :param CADY: CAD圖Y坐标
+        :param CADY: CAD圖Y坐標
         :type CADY: float
         :param CapTime: 抓拍時間點
         :type CapTime: str
@@ -2407,9 +2407,9 @@ class PersonCoordinate(AbstractModel):
         :type CapPic: str
         :param MallAreaType: 賣場區域類型
         :type MallAreaType: int
-        :param PosId: 坐标編号
+        :param PosId: 坐標編號
         :type PosId: int
-        :param ShopId: 門店編号
+        :param ShopId: 門店編號
         :type ShopId: int
         :param Event: 事件
         :type Event: str
@@ -2682,7 +2682,7 @@ class RegisterCallbackRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param CompanyId: 集團id，通過"指定身份标識獲取客戶門店清單"介面獲取
+        :param CompanyId: 集團id，通過"指定身份標識獲取客戶門店清單"介面獲取
         :type CompanyId: str
         :param BackUrl: 通知回調網址，完整url，範例（http://youmall.taifucloudcloudapi.com/）
         :type BackUrl: str
@@ -2730,9 +2730,9 @@ class SceneInfo(AbstractModel):
         """
         :param ScenePictureURL: 場景圖
         :type ScenePictureURL: str
-        :param HeadX: 抓拍頭像左上角X坐标在場景圖中的像素點位置
+        :param HeadX: 抓拍頭像左上角X坐標在場景圖中的像素點位置
         :type HeadX: int
-        :param HeadY: 抓拍頭像左上角Y坐标在場景圖中的像素點位置
+        :param HeadY: 抓拍頭像左上角Y坐標在場景圖中的像素點位置
         :type HeadY: int
         :param HeadWidth: 抓拍頭像在場景圖中占有的像素寬度
         :type HeadWidth: int

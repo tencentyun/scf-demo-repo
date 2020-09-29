@@ -25,15 +25,15 @@ class AccountInfo(AbstractModel):
         """
         :param DBInstanceId: 實例ID，形如postgres-lnp6j617
         :type DBInstanceId: str
-        :param UserName: 帳号
+        :param UserName: 帳號
         :type UserName: str
-        :param Remark: 帳号備注
+        :param Remark: 帳號備注
         :type Remark: str
-        :param Status: 帳号狀态。 1-創建中，2-正常，3-修改中，4-密碼重置中，-1-删除中
+        :param Status: 帳號狀态。 1-創建中，2-正常，3-修改中，4-密碼重置中，-1-删除中
         :type Status: int
-        :param CreateTime: 帳号創建時間
+        :param CreateTime: 帳號創建時間
         :type CreateTime: str
-        :param UpdateTime: 帳号最後一次更新時間
+        :param UpdateTime: 帳號最後一次更新時間
         :type UpdateTime: str
         """
         self.DBInstanceId = None
@@ -159,7 +159,7 @@ class CreateDBInstancesResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param DealNames: 訂單号清單。每個實例對應一個訂單号。
+        :param DealNames: 訂單號清單。每個實例對應一個訂單號。
         :type DealNames: list of str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -180,7 +180,7 @@ class DBBackup(AbstractModel):
 
     def __init__(self):
         """
-        :param Id: 備份文件唯一标識
+        :param Id: 備份文件唯一標識
         :type Id: int
         :param StartTime: 文件生成的開始時間
         :type StartTime: str
@@ -415,7 +415,7 @@ class DescribeAccountsResponse(AbstractModel):
         """
         :param TotalCount: 本次調用介面共返回了多少條數據。
         :type TotalCount: int
-        :param Details: 帳号清單詳細訊息。
+        :param Details: 帳號清單詳細訊息。
         :type Details: list of AccountInfo
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -625,7 +625,7 @@ class DescribeDBInstancesRequest(AbstractModel):
         :type Filters: list of Filter
         :param Limit: 每頁顯示數量，預設返回10條。
         :type Limit: int
-        :param Offset: 分頁序号，從0開始。
+        :param Offset: 分頁序號，從0開始。
         :type Offset: int
         """
         self.Filters = None
@@ -689,7 +689,7 @@ class DescribeDBSlowlogsRequest(AbstractModel):
         :type EndTime: str
         :param DatabaseName: 資料庫名字
         :type DatabaseName: str
-        :param OrderBy: 按照何種指标排序，取值爲sum_calls或者sum_cost_time。sum_calls-總調用次數；sum_cost_time-總的花費時間
+        :param OrderBy: 按照何種指標排序，取值爲sum_calls或者sum_cost_time。sum_calls-總調用次數；sum_cost_time-總的花費時間
         :type OrderBy: str
         :param OrderByType: 排序規則。desc-降序；asc-升序
         :type OrderByType: str
@@ -1001,7 +1001,7 @@ class ErrLogDetail(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """描述鍵值對過濾器，用于條件過濾查詢。例如過濾ID、名稱等
+    """描述鍵值對過濾器，用於條件過濾查詢。例如過濾ID、名稱等
     * 若存在多個Filter時，Filter間的關系爲邏輯與（AND）關系。
     * 若同一個Filter存在多個Values，同一Filter下Values間的關系爲邏輯或（OR）關系。
 
@@ -1032,9 +1032,9 @@ class InitDBInstancesRequest(AbstractModel):
         """
         :param DBInstanceIdSet: 實例ID集合。
         :type DBInstanceIdSet: list of str
-        :param AdminName: 實例根賬号用戶名。
+        :param AdminName: 實例根賬號用戶名。
         :type AdminName: str
-        :param AdminPassword: 實例根賬号用戶名對應的密碼。
+        :param AdminPassword: 實例根賬號用戶名對應的密碼。
         :type AdminPassword: str
         :param Charset: 實例字元集，目前只支援：UTF8、LATIN1。
         :type Charset: str
@@ -1520,7 +1520,7 @@ class RegionInfo(AbstractModel):
         :type Region: str
         :param RegionName: 該地域對應的中文名稱
         :type RegionName: str
-        :param RegionId: 該地域對應的數字編号
+        :param RegionId: 該地域對應的數字編號
         :type RegionId: int
         :param RegionState: 可用狀态，UNAVAILABLE表示不可用，AVAILABLE表示可用
         :type RegionState: str
@@ -1677,7 +1677,7 @@ class SetAutoRenewFlagRequest(AbstractModel):
         """
         :param DBInstanceIdSet: 實例ID數組
         :type DBInstanceIdSet: list of str
-        :param AutoRenewFlag: 續約标記。0-正常續約；1-自動續約；2-到期不續約
+        :param AutoRenewFlag: 續約標記。0-正常續約；1-自動續約；2-到期不續約
         :type AutoRenewFlag: int
         """
         self.DBInstanceIdSet = None
@@ -1779,9 +1779,9 @@ class SpecItemInfo(AbstractModel):
         """
         :param SpecCode: 規格ID
         :type SpecCode: str
-        :param Version: PostgreSQL的内核版本編号
+        :param Version: PostgreSQL的内核版本編號
         :type Version: str
-        :param VersionName: 内核編号對應的完整版本名稱
+        :param VersionName: 内核編號對應的完整版本名稱
         :type VersionName: str
         :param Cpu: CPU核數
         :type Cpu: int
@@ -1880,7 +1880,7 @@ class Xlog(AbstractModel):
 
     def __init__(self):
         """
-        :param Id: 備份文件唯一标識
+        :param Id: 備份文件唯一標識
         :type Id: int
         :param StartTime: 文件生成的開始時間
         :type StartTime: str
@@ -1917,7 +1917,7 @@ class ZoneInfo(AbstractModel):
         :type Zone: str
         :param ZoneName: 該可用區的中文名稱
         :type ZoneName: str
-        :param ZoneId: 該可用區對應的數字編号
+        :param ZoneId: 該可用區對應的數字編號
         :type ZoneId: int
         :param ZoneState: 可用狀态，UNAVAILABLE表示不可用，AVAILABLE表示可用
         :type ZoneState: str

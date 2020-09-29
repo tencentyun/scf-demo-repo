@@ -23,7 +23,7 @@ class PostAudioRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BotId: 機器人标識
+        :param BotId: 機器人標識
         :type BotId: str
         :param EngineModelType: 語音識别引擎類型,{8k_0、16k_0、16k_en}
         :type EngineModelType: str
@@ -31,7 +31,7 @@ class PostAudioRequest(AbstractModel):
         :type AsrVoiceFormat: int
         :param VoiceId: asr請求Id。長度爲16位的字串，同一句話VoiceId保持一緻
         :type VoiceId: str
-        :param Seq: 語音分片序列号。同一句話必須從0開始，依次遞增
+        :param Seq: 語音分片序列號。同一句話必須從0開始，依次遞增
         :type Seq: int
         :param IsEnd: 是否爲尾包。傳遞最後一個語音分片時爲true，其他爲false
         :type IsEnd: bool
@@ -39,13 +39,13 @@ class PostAudioRequest(AbstractModel):
         :type WaveData: str
         :param UserId: 子帳戶id，每個終端對應一個
         :type UserId: str
-        :param BotVersion: 機器人版本号。BotVersion/BotEnv二選一：二者均填，僅BotVersion有效；二者均不填，預設BotEnv=dev
+        :param BotVersion: 機器人版本號。BotVersion/BotEnv二選一：二者均填，僅BotVersion有效；二者均不填，預設BotEnv=dev
         :type BotVersion: str
         :param ResultTextFormat: 識别返回文本編碼格式	0：UTF-8（預設）；1：GB2312；2：GBK；3：BIG5
         :type ResultTextFormat: int
         :param SessionAttributes: 透傳欄位，傳遞給後台
         :type SessionAttributes: str
-        :param NeedTts: 是否将機器人回答合成音訊并返回url
+        :param NeedTts: 是否将機器人回答合成音訊並返回url
         :type NeedTts: bool
         :param Volume: 音量大小，範圍：[0，10]。預設值爲0，代表正常音量
         :type Volume: int
@@ -174,17 +174,17 @@ class PostTextRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BotId: 機器人标識
+        :param BotId: 機器人標識
         :type BotId: str
         :param InputText: 請求的文本
         :type InputText: str
         :param UserId: 子帳戶id，每個終端對應一個
         :type UserId: str
-        :param BotVersion: 機器人版本号。BotVersion/BotEnv二選一：二者均填，僅BotVersion有效；二者均不填，預設BotEnv=dev
+        :param BotVersion: 機器人版本號。BotVersion/BotEnv二選一：二者均填，僅BotVersion有效；二者均不填，預設BotEnv=dev
         :type BotVersion: str
         :param SessionAttributes: 透傳欄位，傳遞給後台
         :type SessionAttributes: str
-        :param NeedTts: 是否将機器人回答合成音訊并返回url
+        :param NeedTts: 是否将機器人回答合成音訊並返回url
         :type NeedTts: bool
         :param Volume: 音量大小，範圍：[0，10]。預設值爲0，代表正常音量
         :type Volume: int
@@ -300,11 +300,11 @@ class ResetRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BotId: 機器人标識
+        :param BotId: 機器人標識
         :type BotId: str
         :param UserId: 子帳戶id，每個終端對應一個
         :type UserId: str
-        :param BotVersion: 機器人版本号。BotVersion/BotEnv二選一：二者均填，僅BotVersion有效；二者均不填，預設BotEnv=dev
+        :param BotVersion: 機器人版本號。BotVersion/BotEnv二選一：二者均填，僅BotVersion有效；二者均不填，預設BotEnv=dev
         :type BotVersion: str
         :param BotEnv: 機器人環境{dev:測試;release:線上}。BotVersion/BotEnv二選一：二者均填，僅BotVersion有效；二者均不填，預設BotEnv=dev
         :type BotEnv: str

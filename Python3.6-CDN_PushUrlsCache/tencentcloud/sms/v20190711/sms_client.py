@@ -26,7 +26,7 @@ class SmsClient(AbstractClient):
 
 
     def AddSmsSign(self, request):
-        """添加簡訊簽名，申請之前請先認證參閱 [Top Cloud 簡訊簽名審核标準](https://cloud.taifucloud.com/document/product/382/39022)。
+        """添加簡訊簽名，申請之前請先認證參閱 [Top Cloud 簡訊簽名審核標準](https://cloud.taifucloud.com/document/product/382/39022)。
         >⚠️注意：個人認證用戶不支援使用 API 申請簡訊簽名，請參閱了解 [實名認證基本介紹](https://cloud.taifucloud.com/document/product/378/3629)，如果爲個人認證請登入控制台申請簡訊簽名，具體操作請參閱 [創建簡訊簽名](https://cloud.taifucloud.com/document/product/382/36136#Sign)。
 
         :param request: Request instance for AddSmsSign.
@@ -55,7 +55,7 @@ class SmsClient(AbstractClient):
 
 
     def AddSmsTemplate(self, request):
-        """添加簡訊模版，申請之前請先認證參閱 [Top Cloud 簡訊正文模版審核标準](https://cloud.taifucloud.com/document/product/382/39023)。
+        """添加簡訊模版，申請之前請先認證參閱 [Top Cloud 簡訊正文模版審核標準](https://cloud.taifucloud.com/document/product/382/39023)。
         >⚠️注意：個人認證用戶不支援使用 API 申請簡訊正文模版，請參閱了解 [實名認證基本介紹](https://cloud.taifucloud.com/document/product/378/3629)，如果爲個人認證請登入控制台申請簡訊正文模版，具體操作請參閱 [創建簡訊正文模版](https://cloud.taifucloud.com/document/product/382/36136#Template)。
 
         :param request: Request instance for AddSmsTemplate.
@@ -224,7 +224,7 @@ class SmsClient(AbstractClient):
 
 
     def ModifySmsSign(self, request):
-        """修改簡訊簽名，修改之前請先認證參閱 [Top Cloud 簡訊簽名審核标準](https://cloud.taifucloud.com/document/product/382/39022)。
+        """修改簡訊簽名，修改之前請先認證參閱 [Top Cloud 簡訊簽名審核標準](https://cloud.taifucloud.com/document/product/382/39022)。
         >- ⚠️注意：個人認證用戶不支援使用 API 修改簡訊簽名，請參閱了解 [實名認證基本介紹](https://cloud.taifucloud.com/document/product/378/3629)，如果爲個人認證請登入控制台修改簡訊簽名。
         >- 修改簡訊簽名，僅當簽名爲待審核或已拒絕狀态時，才能進行修改，已審核通過的簽名不支援修改。
 
@@ -254,7 +254,7 @@ class SmsClient(AbstractClient):
 
 
     def ModifySmsTemplate(self, request):
-        """修改簡訊正文模版，修改之前請先認真參閱 [Top Cloud 簡訊正文模版審核标準](https://cloud.taifucloud.com/document/product/382/39023)。
+        """修改簡訊正文模版，修改之前請先認真參閱 [Top Cloud 簡訊正文模版審核標準](https://cloud.taifucloud.com/document/product/382/39023)。
         >- ⚠️注意：個人認證用戶不支援使用 API 修改簡訊正文模版，請參閱了解 [實名認證基本介紹](https://cloud.taifucloud.com/document/product/378/3629)，如果爲個人認證請登入控制台修改簡訊正文模版。
         >- 修改簡訊簽名，僅當正文模版爲待審核或已拒絕狀态時，才能進行修改，已審核通過的正文模版不支援修改。
 
@@ -313,7 +313,7 @@ class SmsClient(AbstractClient):
 
 
     def PullSmsReplyStatusByPhoneNumber(self, request):
-        """拉取單個号碼簡訊回複狀态。
+        """拉取單個號碼簡訊回複狀态。
         目前也支援 [配置回複回調](https://cloud.taifucloud.com/document/product/382/42907) 的方式來獲取上行回複。
 
         :param request: Request instance for PullSmsReplyStatusByPhoneNumber.
@@ -371,7 +371,7 @@ class SmsClient(AbstractClient):
 
 
     def PullSmsSendStatusByPhoneNumber(self, request):
-        """拉取單個号碼簡訊下發狀态。
+        """拉取單個號碼簡訊下發狀态。
         >- 目前也支援 [配置回調](https://cloud.taifucloud.com/document/product/382/37809#.E8.AE.BE.E7.BD.AE.E4.BA.8B.E4.BB.B6.E5.9B.9E.E8.B0.83.E9.85.8D.E7.BD.AE) 的方式來獲取下發狀态。
 
         :param request: Request instance for PullSmsSendStatusByPhoneNumber.

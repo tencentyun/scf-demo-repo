@@ -82,7 +82,7 @@ class IottidClient(AbstractClient):
 
 
     def DeliverTidNotify(self, request):
-        """安全晶片爲載體的TID空發回執，綁定TID與訂單号。
+        """安全晶片爲載體的TID空發回執，綁定TID與訂單號。
 
         :param request: Request instance for DeliverTidNotify.
         :type request: :class:`taifucloudcloud.iottid.v20190411.models.DeliverTidNotifyRequest`
@@ -222,7 +222,7 @@ class IottidClient(AbstractClient):
 
 
     def UploadDeviceUniqueCode(self, request):
-        """上傳硬體唯一标識碼，是軟加固設備身份參數。本介面如遇到錯誤數據，則所有當次上傳數據失效。
+        """上傳硬體唯一標識碼，是軟加固設備身份參數。本介面如遇到錯誤數據，則所有當次上傳數據失效。
 
         :param request: Request instance for UploadDeviceUniqueCode.
         :type request: :class:`taifucloudcloud.iottid.v20190411.models.UploadDeviceUniqueCodeRequest`

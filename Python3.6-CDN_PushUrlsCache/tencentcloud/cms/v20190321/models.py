@@ -23,7 +23,7 @@ class CodeDetail(AbstractModel):
 
     def __init__(self):
         """
-        :param CodePosition: 二維碼在圖片中的位置，由邊界點的坐标表示
+        :param CodePosition: 二維碼在圖片中的位置，由邊界點的坐標表示
         :type CodePosition: list of CodePosition
         :param CodeCharset: 二維碼文本的編碼格式
         :type CodeCharset: str
@@ -77,15 +77,15 @@ class CodeDetect(AbstractModel):
 
 
 class CodePosition(AbstractModel):
-    """二維碼在圖片中的位置，由邊界點的坐标表示
+    """二維碼在圖片中的位置，由邊界點的坐標表示
 
     """
 
     def __init__(self):
         """
-        :param FloatX: 二維碼邊界點X軸坐标
+        :param FloatX: 二維碼邊界點X軸坐標
         :type FloatX: float
-        :param FloatY: 二維碼邊界點Y軸坐标
+        :param FloatY: 二維碼邊界點Y軸坐標
         :type FloatY: float
         """
         self.FloatX = None
@@ -235,7 +235,7 @@ class DeleteFileSampleRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Ids: 唯一标識數組
+        :param Ids: 唯一標識數組
         :type Ids: list of str
         """
         self.Ids = None
@@ -275,7 +275,7 @@ class DeleteTextSampleRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Ids: 唯一标識數組，目前暫時只支援單個删除
+        :param Ids: 唯一標識數組，目前暫時只支援單個删除
         :type Ids: list of str
         """
         self.Ids = None
@@ -315,7 +315,7 @@ class DescribeFileSampleRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Filters: 支援通過标簽值進行篩選
+        :param Filters: 支援通過標簽值進行篩選
         :type Filters: list of Filter
         :param Limit: 數量限制，預設爲20，最大值爲100
         :type Limit: int
@@ -383,7 +383,7 @@ class DescribeTextSampleRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Filters: 支援通過标簽值進行篩選
+        :param Filters: 支援通過標簽值進行篩選
         :type Filters: list of Filter
         :param Limit: 數量限制，預設爲20，最大值爲100
         :type Limit: int
@@ -498,7 +498,7 @@ class FileSampleInfo(AbstractModel):
         :type FileName: str
         :param FileType: 文件類型
         :type FileType: str
-        :param Id: 唯一标識
+        :param Id: 唯一標識
         :type Id: str
         :param Label: 樣本類型
 1：黑庫
@@ -658,7 +658,7 @@ class ImageHotDetect(AbstractModel):
         :type HitFlag: int
         :param Keywords: 關鍵詞明細
         :type Keywords: list of str
-        :param Labels: 性感标簽：性感特征中文描述
+        :param Labels: 性感標簽：性感特征中文描述
         :type Labels: list of str
         :param Score: 性感分：分值範圍 0-100，分數越高性感傾向越明顯
         :type Score: int
@@ -693,7 +693,7 @@ class ImageIllegalDetect(AbstractModel):
         :type HitFlag: int
         :param Keywords: 關鍵詞明細
         :type Keywords: list of str
-        :param Labels: 違法标簽：返回違法特征中文描述，如賭桌，槍支
+        :param Labels: 違法標簽：返回違法特征中文描述，如賭桌，槍支
         :type Labels: list of str
         :param Score: 違法分：分值範圍 0-100，分數越高違法傾向越明顯
         :type Score: int
@@ -778,7 +778,7 @@ class ImagePolityDetect(AbstractModel):
         :type EvilType: int
         :param HitFlag: 處置判定  0：正常 1：可疑
         :type HitFlag: int
-        :param PolityLogoDetail: 命中的logo标簽訊息
+        :param PolityLogoDetail: 命中的logo標簽訊息
         :type PolityLogoDetail: list of Logo
         :param FaceNames: 命中的人臉名稱
         :type FaceNames: list of str
@@ -828,7 +828,7 @@ class ImagePornDetect(AbstractModel):
         :type HitFlag: int
         :param Keywords: 關鍵詞明細
         :type Keywords: list of str
-        :param Labels: 色情标簽：色情特征中文描述
+        :param Labels: 色情標簽：色情特征中文描述
         :type Labels: list of str
         :param Score: 色情分：分值範圍 0-100，分數越高色情傾向越明顯
         :type Score: int
@@ -863,7 +863,7 @@ class ImageTerrorDetect(AbstractModel):
         :type HitFlag: int
         :param Keywords: 關鍵詞明細
         :type Keywords: list of str
-        :param Labels: 暴恐标簽：返回暴恐特征中文描述
+        :param Labels: 暴恐標簽：返回暴恐特征中文描述
         :type Labels: list of str
         :param Score: 暴恐分：分值範圍0--100，分數越高暴恐傾向越明顯
         :type Score: int
@@ -890,11 +890,11 @@ class Logo(AbstractModel):
 
     def __init__(self):
         """
-        :param RrectF: logo圖标坐标訊息
+        :param RrectF: logo圖標坐標訊息
         :type RrectF: :class:`taifucloudcloud.cms.v20190321.models.RrectF`
-        :param Confidence: logo圖标置信度
+        :param Confidence: logo圖標置信度
         :type Confidence: float
-        :param Name: logo圖标名稱
+        :param Name: logo圖標名稱
         :type Name: str
         """
         self.RrectF = None
@@ -956,15 +956,15 @@ class RrectF(AbstractModel):
 
     def __init__(self):
         """
-        :param Cx: logo橫坐标
+        :param Cx: logo橫坐標
         :type Cx: float
-        :param Cy: logo縱坐标
+        :param Cy: logo縱坐標
         :type Cy: float
-        :param Height: logo圖标高度
+        :param Height: logo圖標高度
         :type Height: float
-        :param Rotate: logo圖标中心旋轉度
+        :param Rotate: logo圖標中心旋轉度
         :type Rotate: float
-        :param Width: logo圖标寬度
+        :param Width: logo圖標寬度
         :type Width: float
         """
         self.Cx = None
@@ -1116,7 +1116,7 @@ class TextOutputComm(AbstractModel):
         """
         :param AppID: 接入業務的唯一ID
         :type AppID: int
-        :param BUCtrlID: 介面唯一ID，旁路調用介面返回有該欄位，标識唯一介面
+        :param BUCtrlID: 介面唯一ID，旁路調用介面返回有該欄位，標識唯一介面
         :type BUCtrlID: int
         :param SendTime: 訊息發送時間
         :type SendTime: int
@@ -1145,7 +1145,7 @@ class TextOutputID(AbstractModel):
         """
         :param MsgID: 接入業務的唯一ID
         :type MsgID: str
-        :param Uin: 用戶賬号uin，對應請求協議裏的Content.User.Uin。旁路結果有回帶，串聯結果無該欄位
+        :param Uin: 用戶賬號uin，對應請求協議裏的Content.User.Uin。旁路結果有回帶，串聯結果無該欄位
         :type Uin: str
         """
         self.MsgID = None
@@ -1209,7 +1209,7 @@ class TextSample(AbstractModel):
 20105：廣告引流 
 24001：暴恐
         :type EvilType: int
-        :param Id: 唯一标識
+        :param Id: 唯一標識
         :type Id: str
         :param Label: 樣本類型
 1：黑庫

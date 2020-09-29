@@ -27,7 +27,7 @@ class CheckVcodeRequest(AbstractModel):
         :type Module: str
         :param Operation: 操作名CheckVcode
         :type Operation: str
-        :param AccountResId: 帳号ID
+        :param AccountResId: 帳號ID
         :type AccountResId: str
         :param ContractResId: 合同ID
         :type ContractResId: str
@@ -83,7 +83,7 @@ class CreateContractByUploadRequest(AbstractModel):
         :type ContractFile: str
         :param ContractName: 合同名稱
         :type ContractName: str
-        :param Initiator: 合同發起方帳号ID
+        :param Initiator: 合同發起方帳號ID
         :type Initiator: str
         :param Remarks: 備注
         :type Remarks: str
@@ -152,17 +152,17 @@ class CreateEnterpriseAccountRequest(AbstractModel):
         :type Name: str
         :param IdentType: 企業用戶證件類型，8代表營業執照
         :type IdentType: int
-        :param IdentNo: 企業用戶營業執照号碼
+        :param IdentNo: 企業用戶營業執照號碼
         :type IdentNo: str
-        :param MobilePhone: 企業聯系人手機号
+        :param MobilePhone: 企業聯系人手機號
         :type MobilePhone: str
         :param TransactorName: 經辦人姓名
         :type TransactorName: str
         :param TransactorIdentType: 經辦人證件類型，0代表身份證
         :type TransactorIdentType: int
-        :param TransactorIdentNo: 經辦人證件号碼
+        :param TransactorIdentNo: 經辦人證件號碼
         :type TransactorIdentNo: str
-        :param TransactorPhone: 經辦人手機号
+        :param TransactorPhone: 經辦人手機號
         :type TransactorPhone: str
         """
         self.Module = None
@@ -197,7 +197,7 @@ class CreateEnterpriseAccountResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param AccountResId: 帳号ID
+        :param AccountResId: 帳號ID
         :type AccountResId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -226,9 +226,9 @@ class CreatePersonalAccountRequest(AbstractModel):
         :type Name: str
         :param IdentType: 個人用戶證件類型。0代表身份證
         :type IdentType: int
-        :param IdentNo: 個人用戶證件号碼
+        :param IdentNo: 個人用戶證件號碼
         :type IdentNo: str
-        :param MobilePhone: 個人用戶手機号
+        :param MobilePhone: 個人用戶手機號
         :type MobilePhone: str
         """
         self.Module = None
@@ -255,7 +255,7 @@ class CreatePersonalAccountResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param AccountResId: 賬号ID
+        :param AccountResId: 賬號ID
         :type AccountResId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -280,7 +280,7 @@ class CreateSealRequest(AbstractModel):
         :type Module: str
         :param Operation: 操作名CreateSeal
         :type Operation: str
-        :param AccountResId: 帳号ID
+        :param AccountResId: 帳號ID
         :type AccountResId: str
         :param ImgUrl: 簽章連結，圖片必須爲png格式
         :type ImgUrl: str
@@ -334,7 +334,7 @@ class DeleteAccountRequest(AbstractModel):
         :type Module: str
         :param Operation: 操作名DeleteAccount
         :type Operation: str
-        :param AccountList: 帳号ID清單
+        :param AccountList: 帳號ID清單
         :type AccountList: list of str
         """
         self.Module = None
@@ -355,9 +355,9 @@ class DeleteAccountResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param DelSuccessList: 删除成功帳号ID清單
+        :param DelSuccessList: 删除成功帳號ID清單
         :type DelSuccessList: list of str
-        :param DelFailedList: 删除失敗帳号ID清單
+        :param DelFailedList: 删除失敗帳號ID清單
         :type DelFailedList: list of str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -384,7 +384,7 @@ class DeleteSealRequest(AbstractModel):
         :type Module: str
         :param Operation: 操作名DeleteSeal
         :type Operation: str
-        :param AccountResId: 帳号ID
+        :param AccountResId: 帳號ID
         :type AccountResId: str
         :param SealResId: 簽章ID
         :type SealResId: str
@@ -532,7 +532,7 @@ class SendVcodeRequest(AbstractModel):
         :type Operation: str
         :param ContractResId: 合同ID
         :type ContractResId: str
-        :param AccountResId: 帳号ID
+        :param AccountResId: 帳號ID
         :type AccountResId: str
         """
         self.Module = None
@@ -584,7 +584,7 @@ class SignContractByCoordinateRequest(AbstractModel):
         :type AuthorizationTime: str
         :param Position: 授權IP網址
         :type Position: str
-        :param SignLocations: 簽署坐标，坐标原點在文件左下角，坐标單位爲磅，坐标不得超過合同文件邊界
+        :param SignLocations: 簽署坐標，坐標原點在文件左下角，坐標單位爲磅，坐標不得超過合同文件邊界
         :type SignLocations: list of SignLocation
         :param SealResId: 印章ID
         :type SealResId: str
@@ -659,7 +659,7 @@ class SignContractByKeywordRequest(AbstractModel):
         :type AuthorizationTime: str
         :param Position: 授權IP網址
         :type Position: str
-        :param SignKeyword: 簽署關鍵字，偏移坐标原點爲關鍵字中心
+        :param SignKeyword: 簽署關鍵字，偏移坐標原點爲關鍵字中心
         :type SignKeyword: :class:`taifucloudcloud.ds.v20180523.models.SignKeyword`
         :param SealResId: 簽章ID
         :type SealResId: str
@@ -731,7 +731,7 @@ class SignInfo(AbstractModel):
         :type ImageData: str
         :param CertType: 預設值：1  表示RSA證書， 2 表示國密證書， 參數不傳時預設爲1
         :type CertType: int
-        :param SignLocation: 簽名域的标簽值
+        :param SignLocation: 簽名域的標簽值
         :type SignLocation: str
         """
         self.AccountResId = None
@@ -762,9 +762,9 @@ class SignKeyword(AbstractModel):
         """
         :param Keyword: 關鍵字
         :type Keyword: str
-        :param OffsetCoordX: X軸偏移坐标
+        :param OffsetCoordX: X軸偏移坐標
         :type OffsetCoordX: str
-        :param OffsetCoordY: Y軸偏移坐标
+        :param OffsetCoordY: Y軸偏移坐標
         :type OffsetCoordY: str
         :param ImageWidth: 簽章突破寬度
         :type ImageWidth: str
@@ -787,7 +787,7 @@ class SignKeyword(AbstractModel):
 
 
 class SignLocation(AbstractModel):
-    """簽署坐标對象
+    """簽署坐標對象
 
     """
 
@@ -795,13 +795,13 @@ class SignLocation(AbstractModel):
         """
         :param SignOnPage: 簽名域頁數
         :type SignOnPage: str
-        :param SignLocationLBX: 簽名域左下角X軸坐标軸
+        :param SignLocationLBX: 簽名域左下角X軸坐標軸
         :type SignLocationLBX: str
-        :param SignLocationLBY: 簽名域左下角Y軸坐标軸
+        :param SignLocationLBY: 簽名域左下角Y軸坐標軸
         :type SignLocationLBY: str
-        :param SignLocationRUX: 簽名域右上角X軸坐标軸
+        :param SignLocationRUX: 簽名域右上角X軸坐標軸
         :type SignLocationRUX: str
-        :param SignLocationRUY: 簽名域右上角Y軸坐标軸
+        :param SignLocationRUY: 簽名域右上角Y軸坐標軸
         :type SignLocationRUY: str
         """
         self.SignOnPage = None

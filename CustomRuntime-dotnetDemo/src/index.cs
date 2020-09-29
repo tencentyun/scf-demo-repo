@@ -10,7 +10,7 @@ using System.Linq;
 public class HttpRequest
 {
     // 使用post方法異步請求
-    // url 目标連結
+    // url 目標連結
     // data 發送的參數字串
     // return 返回的字串
     public static string PostAsync(string url, string data)
@@ -25,7 +25,7 @@ public class HttpRequest
     }
 
     // 使用get方法異步請求
-    // url 目标連結
+    // url 目標連結
     // return 返回的字串
     public static string GetAndProcessEvent(string url)
     {

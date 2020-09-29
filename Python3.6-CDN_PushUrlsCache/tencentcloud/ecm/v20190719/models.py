@@ -23,7 +23,7 @@ class Address(AbstractModel):
 
     def __init__(self):
         """
-        :param AddressId: EIP的ID，是EIP的唯一标識。
+        :param AddressId: EIP的ID，是EIP的唯一標識。
         :type AddressId: str
         :param AddressName: EIP名稱。
         :type AddressName: str
@@ -42,9 +42,9 @@ class Address(AbstractModel):
         :param PrivateAddressIp: 綁定的資源内網ip
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PrivateAddressIp: str
-        :param IsArrears: 資源隔離狀态。true表示eip處于隔離狀态，false表示資源處于未隔離狀态
+        :param IsArrears: 資源隔離狀态。true表示eip處於隔離狀态，false表示資源處於未隔離狀态
         :type IsArrears: bool
-        :param IsBlocked: 資源封堵狀态。true表示eip處于封堵狀态，false表示eip處于未封堵狀态
+        :param IsBlocked: 資源封堵狀态。true表示eip處於封堵狀态，false表示eip處於未封堵狀态
         :type IsBlocked: bool
         :param IsEipDirectConnection: eip是否支援直通模式。true表示eip支援直通模式，false表示資源不支援直通模式
         :type IsEipDirectConnection: bool
@@ -106,7 +106,7 @@ CUCC：
         :type InternetServiceProvider: str
         :param InternetMaxBandwidthOut: 1 Mbps 至 5000 Mbps，預設值：1 Mbps。
         :type InternetMaxBandwidthOut: int
-        :param Tags: 需要關聯的标簽清單。
+        :param Tags: 需要關聯的標簽清單。
         :type Tags: list of Tag
         """
         self.EcmRegion = None
@@ -282,7 +282,7 @@ class AssociateAddressRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param AddressId: 标識 EIP 的唯一 ID。EIP 唯一 ID 形如：eip-11112222。
+        :param AddressId: 標識 EIP 的唯一 ID。EIP 唯一 ID 形如：eip-11112222。
         :type AddressId: str
         :param InstanceId: 要綁定的實例 ID。
         :type InstanceId: str
@@ -492,7 +492,7 @@ class CreateNetworkInterfaceRequest(AbstractModel):
         :type SecurityGroupIds: list of str
         :param PrivateIpAddresses: 指定的内網IP訊息，單次最多指定10個。
         :type PrivateIpAddresses: list of PrivateIpAddressSpecification
-        :param Tags: 指定綁定的标簽清單，例如：[{"Key": "city", "Value": "shanghai"}]
+        :param Tags: 指定綁定的標簽清單，例如：[{"Key": "city", "Value": "shanghai"}]
         :type Tags: list of Tag
         """
         self.VpcId = None
@@ -568,7 +568,7 @@ class CreateSubnetRequest(AbstractModel):
         :type Zone: str
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param Tags: 指定綁定的标簽清單，例如：[{"Key": "city", "Value": "shanghai"}]
+        :param Tags: 指定綁定的標簽清單，例如：[{"Key": "city", "Value": "shanghai"}]
         :type Tags: list of Tag
         """
         self.VpcId = None
@@ -635,7 +635,7 @@ class CreateVpcRequest(AbstractModel):
         :type DnsServers: list of str
         :param DomainName: 域名
         :type DomainName: str
-        :param Tags: 指定綁定的标簽清單，例如：[{"Key": "city", "Value": "shanghai"}]
+        :param Tags: 指定綁定的標簽清單，例如：[{"Key": "city", "Value": "shanghai"}]
         :type Tags: list of Tag
         """
         self.VpcName = None
@@ -919,7 +919,7 @@ class DescribeAddressesRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param AddressIds: 标識 EIP 的唯一 ID 清單。EIP 唯一 ID 形如：eip-11112222。參數不支援同時指定AddressIds和Filters。
+        :param AddressIds: 標識 EIP 的唯一 ID 清單。EIP 唯一 ID 形如：eip-11112222。參數不支援同時指定AddressIds和Filters。
         :type AddressIds: list of str
         :param Filters: 每次請求的Filters的上限爲10，Filter.Values的上限爲5。參數不支援同時指定AddressIds和Filters。詳細的過濾條件如下：
 address-id - String - 是否必填：否 - （過濾條件）按照 EIP 的唯一 ID 過濾。EIP 唯一 ID 形如：eip-11112222。
@@ -929,7 +929,7 @@ address-status - String - 是否必填：否 - （過濾條件）按照 EIP 的�
 instance-id - String - 是否必填：否 - （過濾條件）按照 EIP 綁定的實例 ID 過濾。實例 ID 形如：ins-11112222。
 private-ip-address - String - 是否必填：否 - （過濾條件）按照 EIP 綁定的内網 IP 過濾。
 network-interface-id - String - 是否必填：否 - （過濾條件）按照 EIP 綁定的彈性網卡 ID 過濾。彈性網卡 ID 形如：eni-11112222。
-is-arrears - String - 是否必填：否 - （過濾條件）按照 EIP 是否欠費進行過濾。（TRUE：EIP 處于欠費狀态|FALSE：EIP 費用狀态正常）
+is-arrears - String - 是否必填：否 - （過濾條件）按照 EIP 是否欠費進行過濾。（TRUE：EIP 處於欠費狀态|FALSE：EIP 費用狀态正常）
         :type Filters: list of Filter
         :param Offset: 偏移量，預設爲0。
         :type Offset: int
@@ -1100,9 +1100,9 @@ image-type - String - 是否必填： 否 - （過濾條件）按照映像類型
 PRIVATE_IMAGE: 私有映像 (本帳戶創建的映像) 
 PUBLIC_IMAGE: 公共映像 (Top Cloud 官方映像)
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API 簡介中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於Offset的更進一步介紹請參考 API 簡介中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于Limit的更進一步介紹請參考 API 簡介中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於Limit的更進一步介紹請參考 API 簡介中的相關小節。
         :type Limit: int
         """
         self.Filters = None
@@ -1249,14 +1249,14 @@ ip-address      String      是否必填：否      （過濾條件）按照實�
 instance-uuid   string 是否必填：否 （過濾條件）按照uuid過濾實例清單。
 instance-state  string  是否必填：否 （過濾條件）按照實例狀态更新實例清單。
 internet-service-provider      String      是否必填：否      （過濾條件）按照實例公網IP所屬的運營商進行過濾。
-tag-key      String      是否必填：否      （過濾條件）按照标簽鍵進行過濾。
-tag:tag-key      String      是否必填：否      （過濾條件）按照标簽鍵值對進行過濾。 tag-key使用具體的标簽鍵進行替換。
+tag-key      String      是否必填：否      （過濾條件）按照標簽鍵進行過濾。
+tag:tag-key      String      是否必填：否      （過濾條件）按照標簽鍵值對進行過濾。 tag-key使用具體的標簽鍵進行替換。
 若不傳Filters參數則表示查詢所有相關的實例訊息。
 單次請求的Filter.Values的上限爲5。
         :type Filters: list of Filter
         :param Offset: 偏移量，預設爲0。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20(如果查詢結果數目大于等于20)，最大值爲100。
+        :param Limit: 返回數量，預設爲20(如果查詢結果數目大於等於20)，最大值爲100。
         :type Limit: int
         """
         self.Filters = None
@@ -1366,9 +1366,9 @@ module-name - string - 是否必填：否 - （過濾條件）按照模組名稱
 module-id - string - 是否必填：否 - （過濾條件）按照模組ID過濾。
 每次請求的Filters的上限爲10，Filter.Values的上限爲5。
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API 簡介中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於Offset的更進一步介紹請參考 API 簡介中的相關小節。
         :type Offset: int
-        :param Limit: 返回數量，預設爲20，最大值爲100。關于Limit的更進一步介紹請參考 API 簡介中的相關小節。
+        :param Limit: 返回數量，預設爲20，最大值爲100。關於Limit的更進一步介紹請參考 API 簡介中的相關小節。
         :type Limit: int
         """
         self.Filters = None
@@ -1439,8 +1439,8 @@ groups.security-group-id - String - （過濾條件）綁定的安全組實例ID
 network-interface-name - String - （過濾條件）網卡實例名稱。
 network-interface-description - String - （過濾條件）網卡實例描述。
 address-ip - String - （過濾條件）内網IPv4網址。
-tag-key - String -是否必填：否- （過濾條件）按照标簽鍵進行過濾。使用請參考範例2
-tag:tag-key - String - 是否必填：否 - （過濾條件）按照标簽鍵值對進行過濾。 tag-key使用具體的标簽鍵進行替換。使用請參考範例3。
+tag-key - String -是否必填：否- （過濾條件）按照標簽鍵進行過濾。使用請參考範例2
+tag:tag-key - String - 是否必填：否 - （過濾條件）按照標簽鍵值對進行過濾。 tag-key使用具體的標簽鍵進行替換。使用請參考範例3。
 is-primary - Boolean - 是否必填：否 - （過濾條件）按照是否主網卡進行過濾。值爲true時，僅過濾主網卡；值爲false時，僅過濾輔助網卡；次過濾參數爲提供時，同時過濾主網卡和輔助網卡。
         :type Filters: list of Filter
         :param Offset: 偏移量，預設爲0。
@@ -1661,8 +1661,8 @@ is-default - Boolean - （過濾條件）是否是預設子網。
 is-remote-vpc-snat - Boolean - （過濾條件）是否爲VPC SNAT網址池子網。
 subnet-name - String - （過濾條件）子網名稱。
 zone - String - （過濾條件）可用區。
-tag-key - String -是否必填：否- （過濾條件）按照标簽鍵進行過濾。
-tag:tag-key - String - 是否必填：否 - （過濾條件）按照标簽鍵值對進行過濾。 tag-key使用具體的标簽鍵進行替換。使用請參考範例
+tag-key - String -是否必填：否- （過濾條件）按照標簽鍵進行過濾。
+tag:tag-key - String - 是否必填：否 - （過濾條件）按照標簽鍵值對進行過濾。 tag-key使用具體的標簽鍵進行替換。使用請參考範例
         :type Filters: list of Filter
         :param Offset: 偏移量
         :type Offset: str
@@ -1780,8 +1780,8 @@ vpc-name - String - （過濾條件）VPC實例名稱。
 is-default - String - （過濾條件）是否預設VPC。
 vpc-id - String - （過濾條件）VPC實例ID形如：vpc-f49l6u0z。
 cidr-block - String - （過濾條件）vpc的cidr。
-tag-key - String -是否必填：否- （過濾條件）按照标簽鍵進行過濾。
-tag:tag-key - String - 是否必填：否 - （過濾條件）按照标簽鍵值對進行過濾。 tag-key使用具體的标簽鍵進行替換。使用請參考範例
+tag-key - String -是否必填：否- （過濾條件）按照標簽鍵進行過濾。
+tag:tag-key - String - 是否必填：否 - （過濾條件）按照標簽鍵值對進行過濾。 tag-key使用具體的標簽鍵進行替換。使用請參考範例
         :type Filters: list of Filter
         :param Offset: 偏移量
         :type Offset: int
@@ -1892,7 +1892,7 @@ class DisassociateAddressRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param AddressId: 标識 EIP 的唯一 ID。EIP 唯一 ID 形如：eip-11112222。
+        :param AddressId: 標識 EIP 的唯一 ID。EIP 唯一 ID 形如：eip-11112222。
         :type AddressId: str
         :param ReallocateNormalPublicIp: 表示解綁 EIP 之後是否分配普通公網 IP。取值範圍：
 TRUE：表示解綁 EIP 之後分配普通公網 IP。
@@ -1901,7 +1901,7 @@ FALSE：表示解綁 EIP 之後不分配普通公網 IP。
 
 只有滿足以下條件時才能指定該參數：
 只有在解綁主網卡的主内網 IP 上的 EIP 時才能指定該參數。
-解綁 EIP 後重新分配普通公網 IP 操作一個賬号每天最多操作 10 次；詳情可通過 DescribeAddressQuota 介面獲取。
+解綁 EIP 後重新分配普通公網 IP 操作一個賬號每天最多操作 10 次；詳情可通過 DescribeAddressQuota 介面獲取。
         :type ReallocateNormalPublicIp: bool
         """
         self.EcmRegion = None
@@ -2204,7 +2204,7 @@ class ImportImageResponse(AbstractModel):
 
 
 class Instance(AbstractModel):
-    """用于描述實例相關的訊息。
+    """用於描述實例相關的訊息。
 
     """
 
@@ -2244,7 +2244,7 @@ TERMINATING：表示銷毀中。
         :param CreateTime: 實例的創建時間。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: str
-        :param TagSet: 實例的标簽訊息。
+        :param TagSet: 實例的標簽訊息。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of Tag
         :param LatestOperation: 實例最後一次操作。
@@ -2296,7 +2296,7 @@ PROTECTIVELY_ISOLATED：表示被安全隔離的實例。
         :param DataDisks: 數據盤訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DataDisks: list of DiskInfo
-        :param NewFlag: 新實例标志
+        :param NewFlag: 新實例標志
 注意：此欄位可能返回 null，表示取不到有效值。
         :type NewFlag: int
         """
@@ -2461,7 +2461,7 @@ class InstanceTypeConfig(AbstractModel):
         :type Memory: int
         :param Frequency: 主頻
         :type Frequency: str
-        :param CpuModelName: 處理器型号
+        :param CpuModelName: 處理器型號
         :type CpuModelName: str
         :param InstanceFamilyTypeConfig: 機型族類别配置訊息
         :type InstanceFamilyTypeConfig: :class:`taifucloudcloud.ecm.v20190719.models.InstanceFamilyTypeConfig`
@@ -2669,7 +2669,7 @@ class ModifyAddressAttributeRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param AddressId: 标識 EIP 的唯一 ID。EIP 唯一 ID 形如：eip-11112222。
+        :param AddressId: 標識 EIP 的唯一 ID。EIP 唯一 ID 形如：eip-11112222。
         :type AddressId: str
         :param AddressName: 修改後的 EIP 名稱。長度上限爲20個字元。
         :type AddressName: str
@@ -2715,9 +2715,9 @@ class ModifyAddressesBandwidthRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param AddressIds: EIP唯一标識ID，形如'eip-xxxxxxx'
+        :param AddressIds: EIP唯一標識ID，形如'eip-xxxxxxx'
         :type AddressIds: list of str
-        :param InternetMaxBandwidthOut: 調整頻寬目标值
+        :param InternetMaxBandwidthOut: 調整頻寬目標值
         :type InternetMaxBandwidthOut: int
         """
         self.EcmRegion = None
@@ -3156,7 +3156,7 @@ DELETING：删除中
         :param Ipv6AddressSet: IPv6網址清單。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Ipv6AddressSet: list of Ipv6Address
-        :param TagSet: 标簽鍵值對。
+        :param TagSet: 標簽鍵值對。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of Tag
         :param EniType: 網卡類型。0 - 彈性網卡；1 - evm彈性網卡。
@@ -3225,7 +3225,7 @@ class NetworkInterfaceAttachment(AbstractModel):
         """
         :param InstanceId: 雲主機實例ID。
         :type InstanceId: str
-        :param DeviceIndex: 網卡在雲主機實例内的序号。
+        :param DeviceIndex: 網卡在雲主機實例内的序號。
         :type DeviceIndex: int
         :param InstanceAccountId: 雲主機所有者帳戶訊息。
         :type InstanceAccountId: str
@@ -3787,7 +3787,7 @@ class ReleaseAddressesRequest(AbstractModel):
         """
         :param EcmRegion: ECM 地域
         :type EcmRegion: str
-        :param AddressIds: 标識 EIP 的唯一 ID 清單。
+        :param AddressIds: 標識 EIP 的唯一 ID 清單。
         :type AddressIds: list of str
         """
         self.EcmRegion = None
@@ -3914,13 +3914,13 @@ class ResetInstancesPasswordRequest(AbstractModel):
         """
         :param InstanceIdSet: 待重置密碼的實例ID清單。在單次請求的過程中，單個region下的請求實例數上限爲100。
         :type InstanceIdSet: list of str
-        :param Password: 新密碼，Linux實例密碼必須8到16位，至少包括兩項[a-z，A-Z]、[0-9]和[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]中的符号。密碼不允許以/符号開頭。
-Windows實例密碼必須12到16位，至少包括三項[a-z]，[A-Z]，[0-9]和[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]中的符号。密碼不允許以/符号開頭。
+        :param Password: 新密碼，Linux實例密碼必須8到16位，至少包括兩項[a-z，A-Z]、[0-9]和[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]中的符號。密碼不允許以/符號開頭。
+Windows實例密碼必須12到16位，至少包括三項[a-z]，[A-Z]，[0-9]和[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]中的符號。密碼不允許以/符號開頭。
 如果實例即包含Linux實例又包含Windows實例，則密碼複雜度限制按照Windows實例的限制。
         :type Password: str
         :param ForceStop: 是否強制關機，預設爲false。
         :type ForceStop: bool
-        :param UserName: 待重置密碼的實例的用戶名，不得超過64個字元。若未指定用戶名，則對于Linux而言，預設重置root用戶的密碼，對于Windows而言，預設重置administrator的密碼。
+        :param UserName: 待重置密碼的實例的用戶名，不得超過64個字元。若未指定用戶名，則對於Linux而言，預設重置root用戶的密碼，對於Windows而言，預設重置administrator的密碼。
         :type UserName: str
         """
         self.InstanceIdSet = None
@@ -4013,7 +4013,7 @@ class RunInstancesRequest(AbstractModel):
         :param ModuleId: 模組ID
         :type ModuleId: str
         :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：
-Linux實例密碼必須8到30位，至少包括兩項[a-z]，[A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? / ]中的特殊符。Windows實例密碼必須12到30位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? /]中的特殊符号。
+Linux實例密碼必須8到30位，至少包括兩項[a-z]，[A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? / ]中的特殊符。Windows實例密碼必須12到30位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? /]中的特殊符號。
         :type Password: str
         :param InternetMaxBandwidthOut: 公網出頻寬上限，單位：Mbps
         :type InternetMaxBandwidthOut: int
@@ -4024,19 +4024,19 @@ Linux實例密碼必須8到30位，至少包括兩項[a-z]，[A-Z]、[0-9] 和 [
 購買多台實例，如果指定模式串{R:x}，表示生成數字[x, x+n-1]，其中n表示購買實例的數量，例如server\_{R:3}，購買1台時，實例顯示名稱爲server\_3；購買2台時，實例顯示名稱分别爲server\_3，server\_4。
 支援指定多個模式串{R:x}。
 購買多台實例，如果不指定模式串，則在實例顯示名稱添加後綴1、2...n，其中n表示購買實例的數量，例如server_，購買2台時，實例顯示名稱分别爲server\_1，server\_2。
-如果購買的實例屬于不同的地域或運營商，則上述規則在每個地域和運營商内獨立計數。
+如果購買的實例屬於不同的地域或運營商，則上述規則在每個地域和運營商内獨立計數。
 最多支援60個字元（包含模式串）。
         :type InstanceName: str
         :param HostName: 主機名稱
-點号（.）和短橫線（-）不能作爲 HostName 的首尾字元，不能連續使用。
-Windows 實例：名字元長度爲[2, 15]，允許字母（不限制大小寫）、數字和短橫線（-）組成，不支援點号（.），不能全是數字。
-其他類型（Linux 等）實例：字元長度爲[2, 60]，允許支援多個點号，點之間爲一段，每段允許字母（不限制大小寫）、數字和短橫線（-）組成。
+點號（.）和短橫線（-）不能作爲 HostName 的首尾字元，不能連續使用。
+Windows 實例：名字元長度爲[2, 15]，允許字母（不限制大小寫）、數字和短橫線（-）組成，不支援點號（.），不能全是數字。
+其他類型（Linux 等）實例：字元長度爲[2, 60]，允許支援多個點號，點之間爲一段，每段允許字母（不限制大小寫）、數字和短橫線（-）組成。
         :type HostName: str
-        :param ClientToken: 用于保證請求幂等性的字串。目前爲保留參數，請勿使用。
+        :param ClientToken: 用於保證請求幂等性的字串。目前爲保留參數，請勿使用。
         :type ClientToken: str
         :param EnhancedService: 增強服務。通過該參數可以指定是否開啓雲安全、雲監控等服務。若不指定該參數，則預設公共映像開啓雲監控、雲安全服務
         :type EnhancedService: :class:`taifucloudcloud.ecm.v20190719.models.EnhancedService`
-        :param TagSpecification: 标簽清單
+        :param TagSpecification: 標簽清單
         :type TagSpecification: list of TagSpecification
         :param UserData: 提供給實例使用的用戶數據，需要以 base64 方式編碼，支援的最大數據大小爲 16KB
         :type UserData: str
@@ -4313,7 +4313,7 @@ class Subnet(AbstractModel):
         :type NetworkAclId: str
         :param IsRemoteVpcSnat: 是否爲 SNAT 網址池子網。
         :type IsRemoteVpcSnat: bool
-        :param TagSet: 标簽鍵值對。
+        :param TagSet: 標簽鍵值對。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of Tag
         """
@@ -4354,16 +4354,16 @@ class Subnet(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """标簽訊息。
+    """標簽訊息。
 
     """
 
     def __init__(self):
         """
-        :param Key: 标簽的鍵。
+        :param Key: 標簽的鍵。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Key: str
-        :param Value: 标簽的值。
+        :param Value: 標簽的值。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Value: str
         """
@@ -4385,7 +4385,7 @@ class TagSpecification(AbstractModel):
         """
         :param ResourceType: 資源類型，目前僅支援"instance"
         :type ResourceType: str
-        :param Tags: 标簽清單
+        :param Tags: 標簽清單
         :type Tags: list of Tag
         """
         self.ResourceType = None
@@ -4474,7 +4474,7 @@ class VpcInfo(AbstractModel):
         :type EnableDhcp: bool
         :param Ipv6CidrBlock: VPC的IPv6 CIDR。
         :type Ipv6CidrBlock: str
-        :param TagSet: 标簽鍵值對
+        :param TagSet: 標簽鍵值對
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagSet: list of Tag
         :param AssistantCidrSet: 輔助CIDR

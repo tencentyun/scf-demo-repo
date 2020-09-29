@@ -3,8 +3,8 @@
     "application":{
       "Chinese":{
         "name": "HTTP 自定義邀請函",
-        "description": "使用API閘道+雲函數構建REST API，提供圖片上添加文字的功能，并把HTML頁面佈署至物件儲存，提供靜态網站服務；當在網頁上輸入文字時，生成定制化的邀請函",
-        "attention": "1. 本範例需要在環境變量配置COS的bucket訊息，并設置API閘道觸發器配合使用；2. 另外在函數配置中會使用運作角色來操作COS資源，需要确保有cos bucket的對象上傳權限；3. 源文件所在bucket需要設置爲公有讀私有寫。",
+        "description": "使用API閘道+雲函數構建REST API，提供圖片上添加文字的功能，並把HTML頁面佈署至物件儲存，提供靜态網站服務；當在網頁上輸入文字時，生成定制化的邀請函",
+        "attention": "1. 本範例需要在環境變量配置COS的bucket訊息，並設置API閘道觸發器配合使用；2. 另外在函數配置中會使用運作角色來操作COS資源，需要确保有cos bucket的對象上傳權限；3. 源文件所在bucket需要設置爲公有讀私有寫。",
         "readme": {
             "file": "",
             "content": ""
@@ -43,16 +43,16 @@
       "tags":[
               "HTTP", "Python2.7", "REST API"
               // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on.
-              // 标簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
+              // 標簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
       ],
       "version": "1.5"  
       // Version number, which identifies the demo version status. 
       // Demo will not to update to the page if the version number unmodified.
-      //版本号，通過版本号标識 demo 升級情況，未修改版本号會導緻 demo 不更新至頁面
+      //版本號，通過版本號標識 demo 升級情況，未修改版本號會導緻 demo 不更新至頁面
     },
     "functions": {
       "name": "Add_Text_To_Pictures",  // Function name which only be in English. 函數名稱，只支援英文
-      "description": "本範例演示從http api post姓名到雲函數，在雲函數中給邀請函添加姓名，并把處理後的圖片上傳COS，返回下載網址到調用端。注意：1. 本範例需要在環境變量配置COS的bucket訊息，并設置API閘道觸發器配合使用；2. 另外在函數配置中會使用運作角色來操作COS資源，需要确保有cos bucket的對象上傳權限；3. 源文件所在bucket需要設置爲公有讀私有寫。",
+      "description": "本範例演示從http api post姓名到雲函數，在雲函數中給邀請函添加姓名，並把處理後的圖片上傳COS，返回下載網址到調用端。注意：1. 本範例需要在環境變量配置COS的bucket訊息，並設置API閘道觸發器配合使用；2. 另外在函數配置中會使用運作角色來操作COS資源，需要确保有cos bucket的對象上傳權限；3. 源文件所在bucket需要設置爲公有讀私有寫。",
       "handler":"index.main_handler",
       "memorySize": 512,  // Running memory. 運作配置内存
       "timeout": 60,  // Running timeout. 運作超時時間
@@ -61,11 +61,11 @@
         "region": "ap-shanghai",
         "target_bucket": "serverless-demo-1256608914",
         "target_path": "/invitation"
-      },      // Optional, used to define environment variables.  可選，用于定義環境變量
+      },      // Optional, used to define environment variables.  可選，用於定義環境變量
       "Events":{
-      },      // Optional, used define the event source that triggers this function. 可選，用于定義觸發此函數的事件源
+      },      // Optional, used define the event source that triggers this function. 可選，用於定義觸發此函數的事件源
       "VpcConfig":{
-      },      // Optional, used configure cloud function's private network. 可選， 用于配置雲函數訪問 VPC 私有網絡。
+      },      // Optional, used configure cloud function's private network. 可選， 用於配置雲函數訪問 VPC 私有網絡。
       "codeObject": {
           "codeFile": [
               "index.py"

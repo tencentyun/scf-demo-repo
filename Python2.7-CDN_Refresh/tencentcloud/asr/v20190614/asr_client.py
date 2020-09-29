@@ -30,7 +30,7 @@ class AsrClient(AbstractClient):
         <br>•   預設最多可創建30個熱詞表。
         <br>•   每個熱詞表最多可添加128個詞，每個詞最長10個字，不能超出限制。
         <br>•   熱詞表可以通過數組或者本地文件形式上傳。
-        <br>•   本地文件必須爲UTF-8編碼格式，每行僅添加一個熱詞且不能包含标點和特殊字元。
+        <br>•   本地文件必須爲UTF-8編碼格式，每行僅添加一個熱詞且不能包含標點和特殊字元。
         <br>•   熱詞權重取值範圍爲[1,10]之間的整數，權重越大代表該詞被識别出來的概率越大。
 
         :param request: Request instance for CreateAsrVocab.
@@ -63,7 +63,7 @@ class AsrClient(AbstractClient):
         <br>• 介面是 HTTP RESTful 形式
         <br>• 介面支援wav、mp3、silk、amr、m4a等主流音訊格式
         <br>• 支援語音 URL 和本地語音文件兩種請求方式
-        <br>• 本地語音文件上傳的文件不能大于5MB，語音 URL的音訊時長不能長于1小時
+        <br>• 本地語音文件上傳的文件不能大於5MB，語音 URL的音訊時長不能長於1小時
         <br>• 支援中文普通話、英語和粵語。
         <br>• 支援回調或輪詢的方式獲取結果，結果獲取請參考[ 錄音文件識别結果查詢](https://cloud.taifucloud.com/document/product/1093/37822)。
 
@@ -235,7 +235,7 @@ class AsrClient(AbstractClient):
 
 
     def SentenceRecognition(self, request):
-        """本介面用于對60秒之内的短音訊文件進行識别。
+        """本介面用於對60秒之内的短音訊文件進行識别。
         <br>•   支援中文普通話、英語、粵語。
         <br>•   支援本地語音文件上傳和語音URL上傳兩種請求方式。
         <br>•   音訊格式支援wav、mp3；采樣率支援8000Hz或者16000Hz；采樣精度支援16bits；聲道支援單聲道。

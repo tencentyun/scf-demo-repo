@@ -23,7 +23,7 @@ class DatabasesInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 資料庫唯一标識
+        :param InstanceId: 資料庫唯一標識
         :type InstanceId: str
         :param Status: 狀态。包含以下取值：
 <li>INITIALIZING：資源初始化中</li>
@@ -74,7 +74,7 @@ class DescribeDatabaseACLResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param AclTag: 權限标簽。取值範圍：
+        :param AclTag: 權限標簽。取值範圍：
 <li> READONLY：所有用戶可讀，僅創建者和管理員可寫</li>
 <li> PRIVATE：僅創建者及管理員可讀寫</li>
 <li> ADMINWRITE：所有用戶可讀，僅管理員可寫</li>
@@ -142,7 +142,7 @@ class EnvInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param EnvId: 帳戶下該環境唯一标識
+        :param EnvId: 帳戶下該環境唯一標識
         :type EnvId: str
         :param Source: 環境來源。包含以下取值：
 <li>miniapp： 小程式</li>
@@ -247,7 +247,7 @@ class ModifyDatabaseACLRequest(AbstractModel):
         :type EnvId: str
         :param CollectionName: 集合名稱
         :type CollectionName: str
-        :param AclTag: 權限标簽。取值範圍：
+        :param AclTag: 權限標簽。取值範圍：
 <li> READONLY：所有用戶可讀，僅創建者和管理員可寫</li>
 <li> PRIVATE：僅創建者及管理員可讀寫</li>
 <li> ADMINWRITE：所有用戶可讀，僅管理員可寫</li>
@@ -330,7 +330,7 @@ class StorageInfo(AbstractModel):
         :param Region: 資源所屬地域。
 當前支援ap-shanghai
         :type Region: str
-        :param Bucket: 桶名，儲存資源的唯一标識
+        :param Bucket: 桶名，儲存資源的唯一標識
         :type Bucket: str
         :param CdnDomain: cdn 域名
         :type CdnDomain: str

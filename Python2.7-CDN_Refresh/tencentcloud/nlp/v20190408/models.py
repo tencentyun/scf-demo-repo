@@ -26,7 +26,7 @@ class AutoSummarizationRequest(AbstractModel):
         :param Text: 待處理的文本（僅支援UTF-8格式，不超過2000字）
         :type Text: str
         :param Length: 指定摘要的長度上限（預設值爲200）
-注：爲保證摘要的可讀性，最終生成的摘要長度會低于指定的長度上限。
+注：爲保證摘要的可讀性，最終生成的摘要長度會低於指定的長度上限。
         :type Length: int
         """
         self.Text = None
@@ -95,7 +95,7 @@ class ChatBotRequest(AbstractModel):
         :type Query: str
         :param Flag: 0: 通用閑聊, 1:兒童閑聊, 預設是通用閑聊
         :type Flag: int
-        :param OpenId: 服務的id,  主要用于兒童閑聊介面，比如手Q的openid
+        :param OpenId: 服務的id,  主要用於兒童閑聊介面，比如手Q的openid
         :type OpenId: str
         """
         self.Query = None
@@ -116,7 +116,7 @@ class ChatBotResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Confidence: 對于當前輸出回複的自信度
+        :param Confidence: 對於當前輸出回複的自信度
         :type Confidence: float
         :param Reply: 閑聊回複
         :type Reply: str
@@ -196,12 +196,12 @@ class DependencyParsingResponse(AbstractModel):
 <li>定中關系，eg: 紅蘋果 (紅 <-- 蘋果)
 <li>狀中結構，eg: 非常美麗 (非常 <-- 美麗)
 <li>動補結構，eg: 做完了作業 (做 --> 完)
-<li>并列關系，eg: 大山和大海 (大山 --> 大海)
+<li>並列關系，eg: 大山和大海 (大山 --> 大海)
 <li>介賓關系，eg: 在貿易區内 (在 --> 内)
 <li>左附加關系，eg: 大山和大海 (和 <-- 大海)
 <li>右附加關系，eg: 孩子們 (孩子 --> 們)
 <li>獨立結構，eg: 兩個單句在結構上彼此獨立
-<li>标點符号，eg: 。
+<li>標點符號，eg: 。
 <li>核心關系，eg: 整個句子的核心
         :type DpTokens: list of DpToken
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -350,15 +350,15 @@ class DescribeTripleResponse(AbstractModel):
 
 
 class DpToken(AbstractModel):
-    """句法依存分析結果，包括基礎詞，基礎詞的序号，當前詞父節點的序号，句法依存關系的類型
+    """句法依存分析結果，包括基礎詞，基礎詞的序號，當前詞父節點的序號，句法依存關系的類型
 
     """
 
     def __init__(self):
         """
-        :param HeadId: 當前詞父節點的序号
+        :param HeadId: 當前詞父節點的序號
         :type HeadId: int
-        :param Id: 基礎詞的序号
+        :param Id: 基礎詞的序號
         :type Id: int
         :param Relation: 句法依存關系的類型
         :type Relation: str
@@ -566,7 +566,7 @@ class LexicalAnalysisResponse(AbstractModel):
 <li>LOC：表示地名</li>
 <li>ORG：表示機構團體名</li>
         :type NerTokens: list of NerToken
-        :param PosTokens: 分詞&詞性标注結果（詞性表請參見附錄）
+        :param PosTokens: 分詞&詞性標注結果（詞性表請參見附錄）
         :type PosTokens: list of PosToken
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -622,7 +622,7 @@ class NerToken(AbstractModel):
 
 
 class PosToken(AbstractModel):
-    """分詞&詞性标注結果
+    """分詞&詞性標注結果
 
     """
 
@@ -701,7 +701,7 @@ class SentenceSimilarityRequest(AbstractModel):
         """
         :param SrcText: 計算相似度的源句子（僅支援UTF-8格式，不超過500字）
         :type SrcText: str
-        :param TargetText: 計算相似度的目标句子（僅支援UTF-8格式，不超過500字）
+        :param TargetText: 計算相似度的目標句子（僅支援UTF-8格式，不超過500字）
         :type TargetText: str
         """
         self.SrcText = None
@@ -1006,7 +1006,7 @@ class WordSimilarityRequest(AbstractModel):
         """
         :param SrcWord: 計算相似度的源詞（僅支援UTF-8格式，不超過20字）
         :type SrcWord: str
-        :param TargetWord: 計算相似度的目标詞（僅支援UTF-8格式，不超過20字）
+        :param TargetWord: 計算相似度的目標詞（僅支援UTF-8格式，不超過20字）
         :type TargetWord: str
         """
         self.SrcWord = None

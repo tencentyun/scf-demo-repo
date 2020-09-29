@@ -26,7 +26,7 @@ class YoumallClient(AbstractClient):
 
 
     def CreateAccount(self, request):
-        """創建集團門店管理員賬号
+        """創建集團門店管理員賬號
 
         :param request: 調用CreateAccount所需參數的結構體。
         :type request: :class:`taifucloudcloud.youmall.v20180228.models.CreateAccountRequest`
@@ -503,7 +503,7 @@ class YoumallClient(AbstractClient):
 
 
     def DescribeShopInfo(self, request):
-        """根據客戶身份标識獲取客戶下所有的門店訊息清單
+        """根據客戶身份標識獲取客戶下所有的門店訊息清單
 
         :param request: 調用DescribeShopInfo所需參數的結構體。
         :type request: :class:`taifucloudcloud.youmall.v20180228.models.DescribeShopInfoRequest`
@@ -811,7 +811,7 @@ class YoumallClient(AbstractClient):
 
 
     def ModifyPersonTagInfo(self, request):
-        """标記到店顧客的身份類型，例如黑名單、白名單等
+        """標記到店顧客的身份類型，例如黑名單、白名單等
 
         :param request: 調用ModifyPersonTagInfo所需參數的結構體。
         :type request: :class:`taifucloudcloud.youmall.v20180228.models.ModifyPersonTagInfoRequest`

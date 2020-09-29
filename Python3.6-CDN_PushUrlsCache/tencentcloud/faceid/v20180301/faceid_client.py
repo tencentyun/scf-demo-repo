@@ -26,7 +26,7 @@ class FaceidClient(AbstractClient):
 
 
     def BankCard2EVerification(self, request):
-        """本介面用于校驗姓名和銀行卡号的真實性和一緻性。
+        """本介面用於校驗姓名和銀行卡號的真實性和一緻性。
 
         :param request: Request instance for BankCard2EVerification.
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.BankCard2EVerificationRequest`
@@ -54,7 +54,7 @@ class FaceidClient(AbstractClient):
 
 
     def BankCard4EVerification(self, request):
-        """本介面用于輸入銀行卡号、姓名、開戶證件号、開戶手機号，校驗訊息的真實性和一緻性。
+        """本介面用於輸入銀行卡號、姓名、開戶證件號、開戶手機號，校驗訊息的真實性和一緻性。
 
         :param request: Request instance for BankCard4EVerification.
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.BankCard4EVerificationRequest`
@@ -82,7 +82,7 @@ class FaceidClient(AbstractClient):
 
 
     def BankCardVerification(self, request):
-        """本介面用于銀行卡号、姓名、開戶證件号訊息的真實性和一緻性。
+        """本介面用於銀行卡號、姓名、開戶證件號訊息的真實性和一緻性。
 
         :param request: Request instance for BankCardVerification.
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.BankCardVerificationRequest`
@@ -110,7 +110,7 @@ class FaceidClient(AbstractClient):
 
 
     def DetectAuth(self, request):
-        """每次調用人臉核身SaaS化服務前，需先調用本介面獲取BizToken，用來串聯核身流程，在驗證完成後，用于獲取驗證結果訊息。
+        """每次調用人臉核身SaaS化服務前，需先調用本介面獲取BizToken，用來串聯核身流程，在驗證完成後，用於獲取驗證結果訊息。
 
         :param request: Request instance for DetectAuth.
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.DetectAuthRequest`
@@ -250,7 +250,7 @@ class FaceidClient(AbstractClient):
 
 
     def IdCardOCRVerification(self, request):
-        """本介面用于校驗姓名和身份證号的真實性和一緻性，您可以通過輸入姓名和身份證号或傳入身份證人像面照片提供所需驗證訊息。
+        """本介面用於校驗姓名和身份證號的真實性和一緻性，您可以通過輸入姓名和身份證號或傳入身份證人像面照片提供所需驗證訊息。
 
         :param request: Request instance for IdCardOCRVerification.
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.IdCardOCRVerificationRequest`
@@ -278,7 +278,7 @@ class FaceidClient(AbstractClient):
 
 
     def IdCardVerification(self, request):
-        """傳入姓名和身份證号，校驗兩者的真實性和一緻性。
+        """傳入姓名和身份證號，校驗兩者的真實性和一緻性。
 
         :param request: Request instance for IdCardVerification.
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.IdCardVerificationRequest`
@@ -306,7 +306,7 @@ class FaceidClient(AbstractClient):
 
 
     def ImageRecognition(self, request):
-        """傳入照片和身份訊息，判斷該照片與警察權威庫的證件照是否屬于同一個人。
+        """傳入照片和身份訊息，判斷該照片與警察權威庫的證件照是否屬於同一個人。
 
         :param request: Request instance for ImageRecognition.
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.ImageRecognitionRequest`
@@ -362,7 +362,7 @@ class FaceidClient(AbstractClient):
 
 
     def LivenessCompare(self, request):
-        """傳入視訊和照片，先判斷視訊中是否爲真人，判斷爲真人後，再判斷該視訊中的人與上傳照片是否屬于同一個人。
+        """傳入視訊和照片，先判斷視訊中是否爲真人，判斷爲真人後，再判斷該視訊中的人與上傳照片是否屬於同一個人。
 
         :param request: Request instance for LivenessCompare.
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.LivenessCompareRequest`
@@ -390,7 +390,7 @@ class FaceidClient(AbstractClient):
 
 
     def LivenessRecognition(self, request):
-        """傳入視訊和身份訊息，先判斷視訊中是否爲真人，判斷爲真人後，再判斷該視訊中的人與警察權威庫的證件照是否屬于同一個人。
+        """傳入視訊和身份訊息，先判斷視訊中是否爲真人，判斷爲真人後，再判斷該視訊中的人與警察權威庫的證件照是否屬於同一個人。
 
         :param request: Request instance for LivenessRecognition.
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.LivenessRecognitionRequest`
@@ -418,7 +418,7 @@ class FaceidClient(AbstractClient):
 
 
     def MinorsVerification(self, request):
-        """未成年人守護介面是通過傳入手機号或姓名和身份證号，結合權威數據源和 健康守護可信模型，判斷該訊息是否真實且年滿18周歲。 健康守護可信模型函蓋了上十億手機庫源，函蓋率高、準确率高，如果不在庫中的手機号，還可以通過姓名+身份證進行兜底驗證。
+        """未成年人守護介面是通過傳入手機號或姓名和身份證號，結合權威數據源和 健康守護可信模型，判斷該訊息是否真實且年滿18周歲。 健康守護可信模型函蓋了上十億手機庫源，函蓋率高、準确率高，如果不在庫中的手機號，還可以通過姓名+身份證進行兜底驗證。
 
         :param request: Request instance for MinorsVerification.
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.MinorsVerificationRequest`
@@ -446,7 +446,7 @@ class FaceidClient(AbstractClient):
 
 
     def MobileNetworkTimeVerification(self, request):
-        """本介面用于查詢手機号在網時長，輸入手機号進行查詢。
+        """本介面用於查詢手機號在網時長，輸入手機號進行查詢。
 
         :param request: Request instance for MobileNetworkTimeVerification.
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.MobileNetworkTimeVerificationRequest`
@@ -474,7 +474,7 @@ class FaceidClient(AbstractClient):
 
 
     def MobileStatus(self, request):
-        """本介面用于驗證手機号的狀态，您可以輸入手機号進行查詢。
+        """本介面用於驗證手機號的狀态，您可以輸入手機號進行查詢。
 
         :param request: Request instance for MobileStatus.
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.MobileStatusRequest`
@@ -502,7 +502,7 @@ class FaceidClient(AbstractClient):
 
 
     def PhoneVerification(self, request):
-        """本介面用于校驗手機号、姓名和身份證号的真實性和一緻性。
+        """本介面用於校驗手機號、姓名和身份證號的真實性和一緻性。
 
         :param request: Request instance for PhoneVerification.
         :type request: :class:`taifucloudcloud.faceid.v20180301.models.PhoneVerificationRequest`

@@ -23,9 +23,9 @@ class AgentAuditedClient(AbstractModel):
 
     def __init__(self):
         """
-        :param Uin:  賬号ID
+        :param Uin:  賬號ID
         :type Uin: str
-        :param ClientUin: 代客賬号ID
+        :param ClientUin: 代客賬號ID
         :type ClientUin: str
         :param AgentTime: 代客審核通過時間戳
         :type AgentTime: str
@@ -103,11 +103,11 @@ class AgentBillElem(AbstractModel):
 
     def __init__(self):
         """
-        :param Uin:  賬号ID
+        :param Uin:  賬號ID
         :type Uin: str
-        :param OrderId: 訂單号，僅對預付費帳單有意義
+        :param OrderId: 訂單號，僅對預付費帳單有意義
         :type OrderId: str
-        :param ClientUin: 代客賬号ID
+        :param ClientUin: 代客賬號ID
         :type ClientUin: str
         :param ClientRemark: 代客備注名稱
         :type ClientRemark: str
@@ -171,9 +171,9 @@ class AgentClientElem(AbstractModel):
 
     def __init__(self):
         """
-        :param Uin:  賬号ID
+        :param Uin:  賬號ID
         :type Uin: str
-        :param ClientUin: 代客賬号ID
+        :param ClientUin: 代客賬號ID
         :type ClientUin: str
         :param ApplyTime: 代客申請時間戳
         :type ApplyTime: int
@@ -228,7 +228,7 @@ class AgentDealElem(AbstractModel):
         """
         :param DealId: 訂單自增 ID
         :type DealId: str
-        :param DealName: 訂單号
+        :param DealName: 訂單號
         :type DealName: str
         :param GoodsCategoryId: 商品類型 ID
         :type GoodsCategoryId: str
@@ -252,7 +252,7 @@ class AgentDealElem(AbstractModel):
         :param PayEndTime: 支付結束時間
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PayEndTime: str
-        :param BillId: 扣費流水号
+        :param BillId: 扣費流水號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type BillId: str
         :param Payer: 支付人
@@ -276,7 +276,7 @@ class AgentDealElem(AbstractModel):
         :param VoucherDecline:  抵扣金額，單位分
 注意：此欄位可能返回 null，表示取不到有效值。
         :type VoucherDecline: str
-        :param BigDealId: 大訂單号
+        :param BigDealId: 大訂單號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type BigDealId: str
         :param ClientType: 客戶類型（new：新拓；old：存量；assign：指派）
@@ -285,7 +285,7 @@ class AgentDealElem(AbstractModel):
         :param ProjectType: 項目類型（self：自拓；repeat：直銷；platform：官網合作）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ProjectType: str
-        :param SalesUin: 業務員賬号ID
+        :param SalesUin: 業務員賬號ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SalesUin: str
         :param PayerMode: 支付方式，0：自付；1：代付
@@ -359,9 +359,9 @@ class AgentPayDealsRequest(AbstractModel):
         """
         :param OwnerUin: 訂單所有者uin
         :type OwnerUin: str
-        :param AgentPay: 代付标志，1：代付；0：自付
+        :param AgentPay: 代付標志，1：代付；0：自付
         :type AgentPay: int
-        :param DealNames: 訂單号數組
+        :param DealNames: 訂單號數組
         :type DealNames: list of str
         """
         self.OwnerUin = None
@@ -399,7 +399,7 @@ class AgentSalesmanElem(AbstractModel):
 
     def __init__(self):
         """
-        :param Uin:  賬号ID
+        :param Uin:  賬號ID
         :type Uin: str
         :param SalesUin: 業務員ID
         :type SalesUin: str
@@ -428,7 +428,7 @@ class AgentTransferMoneyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ClientUin: 客戶賬号ID
+        :param ClientUin: 客戶賬號ID
         :type ClientUin: str
         :param Amount: 轉賬金額，單位分
         :type Amount: int
@@ -466,7 +466,7 @@ class AuditApplyClientRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ClientUin: 待審核客戶賬号ID
+        :param ClientUin: 待審核客戶賬號ID
         :type ClientUin: str
         :param AuditResult: 審核結果，可能的取值：accept/reject
         :type AuditResult: str
@@ -491,9 +491,9 @@ class AuditApplyClientResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Uin:  賬号ID
+        :param Uin:  賬號ID
         :type Uin: str
-        :param ClientUin: 客戶賬号ID
+        :param ClientUin: 客戶賬號ID
         :type ClientUin: str
         :param AuditResult: 審核結果，包括accept/reject/qcloudaudit（Top Cloud 審核）
         :type AuditResult: str
@@ -524,7 +524,7 @@ class CreatePayRelationForClientRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ClientUin: 客戶賬号ID
+        :param ClientUin: 客戶賬號ID
         :type ClientUin: str
         """
         self.ClientUin = None
@@ -575,15 +575,15 @@ class DescribeAgentAuditedClientsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ClientUin: 客戶賬号ID
+        :param ClientUin: 客戶賬號ID
         :type ClientUin: str
-        :param ClientName: 客戶名稱。由于涉及隐私，名稱打碼顯示，故名稱僅支援打碼後的模糊搜索
+        :param ClientName: 客戶名稱。由於涉及隐私，名稱打碼顯示，故名稱僅支援打碼後的模糊搜索
         :type ClientName: str
         :param ClientFlag: 客戶類型，a/b，類型定義參考 相關政策文件
         :type ClientFlag: str
         :param OrderDirection: ASC/DESC， 不區分大小寫，按審核通過時間排序
         :type OrderDirection: str
-        :param ClientUins: 客戶賬号ID清單
+        :param ClientUins: 客戶賬號ID清單
         :type ClientUins: list of str
         :param HasOverdueBill: 是否欠費。0：不欠費；1：欠費
         :type HasOverdueBill: int
@@ -672,11 +672,11 @@ class DescribeAgentBillsRequest(AbstractModel):
         """
         :param SettleMonth: 支付月份，如2018-02
         :type SettleMonth: str
-        :param ClientUin: 客戶賬号ID
+        :param ClientUin: 客戶賬號ID
         :type ClientUin: str
         :param PayMode: 支付方式，prepay/postpay
         :type PayMode: str
-        :param OrderId: 預付費訂單号
+        :param OrderId: 預付費訂單號
         :type OrderId: str
         :param ClientRemark: 客戶備注名稱
         :type ClientRemark: str
@@ -741,9 +741,9 @@ class DescribeAgentClientsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ClientUin: 客戶賬号ID
+        :param ClientUin: 客戶賬號ID
         :type ClientUin: str
-        :param ClientName: 客戶名稱。由于涉及隐私，名稱打碼顯示，故名稱僅支援打碼後的模糊搜索
+        :param ClientName: 客戶名稱。由於涉及隐私，名稱打碼顯示，故名稱僅支援打碼後的模糊搜索
         :type ClientName: str
         :param ClientFlag: 客戶類型，a/b，類型定義參考 相關政策文件
         :type ClientFlag: str
@@ -828,9 +828,9 @@ class DescribeAgentDealsCacheRequest(AbstractModel):
         :type Order: int
         :param Status: 訂單的狀态(1：未支付;2：已支付;3：發貨中;4：已發貨;5：發貨失敗;6：已退款;7：已關單;8：訂單過期;9：訂單已失效;10：産品已失效;11：代付拒絕;12：支付中)
         :type Status: int
-        :param OwnerUins: 下單人賬号ID清單
+        :param OwnerUins: 下單人賬號ID清單
         :type OwnerUins: list of str
-        :param DealNames: 訂單号清單
+        :param DealNames: 訂單號清單
         :type DealNames: list of str
         :param PayerMode: 支付方式，0：自付；1：代付
         :type PayerMode: int
@@ -907,9 +907,9 @@ class DescribeAgentPayDealsRequest(AbstractModel):
         :type Order: int
         :param Status: 訂單的狀态(1：未支付;2：已支付;3：發貨中;4：已發貨;5：發貨失敗;6：已退款;7：已關單;8：訂單過期;9：訂單已失效;10：産品已失效;11：代付拒絕;12：支付中)
         :type Status: int
-        :param OwnerUins: 下單人賬号ID清單
+        :param OwnerUins: 下單人賬號ID清單
         :type OwnerUins: list of str
-        :param DealNames: 訂單号清單
+        :param DealNames: 訂單號清單
         :type DealNames: list of str
         """
         self.Offset = None
@@ -970,7 +970,7 @@ class DescribeClientBalanceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ClientUin: 客戶(代客)賬号ID
+        :param ClientUin: 客戶(代客)賬號ID
         :type ClientUin: str
         """
         self.ClientUin = None
@@ -1128,7 +1128,7 @@ class ModifyClientRemarkRequest(AbstractModel):
         """
         :param ClientRemark: 客戶備注名稱
         :type ClientRemark: str
-        :param ClientUin: 客戶賬号ID
+        :param ClientUin: 客戶賬號ID
         :type ClientUin: str
         """
         self.ClientRemark = None
@@ -1164,7 +1164,7 @@ class RebateInfoElem(AbstractModel):
 
     def __init__(self):
         """
-        :param Uin:  賬号ID
+        :param Uin:  賬號ID
         :type Uin: str
         :param RebateMonth: 返傭月份，如2018-02
         :type RebateMonth: str
@@ -1201,7 +1201,7 @@ class RemovePayRelationForClientRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ClientUin: 客戶賬号ID
+        :param ClientUin: 客戶賬號ID
         :type ClientUin: str
         """
         self.ClientUin = None

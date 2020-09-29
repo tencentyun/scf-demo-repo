@@ -332,7 +332,7 @@ class CertDetailLoadBalancer(AbstractModel):
 
 
 class CreateL4Listener(AbstractModel):
-    """用于創建四層監聽器的監聽器訊息。目前一個負載均衡下面最多允許創建50個監聽器。
+    """用於創建四層監聽器的監聽器訊息。目前一個負載均衡下面最多允許創建50個監聽器。
 
     """
 
@@ -356,7 +356,7 @@ class CreateL4Listener(AbstractModel):
         :type HealthNum: int
         :param UnhealthNum: 不健康阈值，預設值：3，表示當連續探測三次不健康則表示該轉發不正常，可選值：2-10，單位：次。
         :type UnhealthNum: int
-        :param Bandwidth: 監聽器最大頻寬值，用于計費模式爲固定頻寬計費，可選值：0-1000，單位：Mbps。
+        :param Bandwidth: 監聽器最大頻寬值，用於計費模式爲固定頻寬計費，可選值：0-1000，單位：Mbps。
         :type Bandwidth: int
         :param CustomHealthSwitch: 是否開啓自定義健康檢查：1（開啓）、0（關閉）。預設值0，表示關閉。（該欄位在健康檢查開啓的情況下才生效）
         :type CustomHealthSwitch: int
@@ -456,7 +456,7 @@ class CreateL4ListenersResponse(AbstractModel):
 
 
 class CreateL7Listener(AbstractModel):
-    """用于創建四層監聽器的監聽器訊息。目前一個負載均衡下面最多允許創建50個七層監聽器。
+    """用於創建四層監聽器的監聽器訊息。目前一個負載均衡下面最多允許創建50個七層監聽器。
 
     """
 
@@ -468,7 +468,7 @@ class CreateL7Listener(AbstractModel):
         :type Protocol: str
         :param ListenerName: 七層監聽器名稱。
         :type ListenerName: str
-        :param SslMode: 認證方式：0（不認證，用于http），1（單向認證，用于https），2（雙向認證，用于https）。當創建的是https類型的監聽器時，此值必選。
+        :param SslMode: 認證方式：0（不認證，用於http），1（單向認證，用於https），2（雙向認證，用於https）。當創建的是https類型的監聽器時，此值必選。
         :type SslMode: int
         :param CertId: 服務端證書ID。當創建的是https類型的監聽器時，此值必選。
         :type CertId: str
@@ -484,9 +484,9 @@ class CreateL7Listener(AbstractModel):
         :type CertCaName: str
         :param CertCaContent: 用戶端證書内容。
         :type CertCaContent: str
-        :param Bandwidth: 用于計費模式爲固定頻寬計費，指定監聽器最大頻寬值，可選值：0-1000，單位：Mbps。
+        :param Bandwidth: 用於計費模式爲固定頻寬計費，指定監聽器最大頻寬值，可選值：0-1000，單位：Mbps。
         :type Bandwidth: int
-        :param ForwardProtocol: 轉發協議。當Protocol爲https時并且SslMode爲1或2時，有意義。可選的值爲0：https，1：spdy，2：http2，3：spdy+http2。
+        :param ForwardProtocol: 轉發協議。當Protocol爲https時並且SslMode爲1或2時，有意義。可選的值爲0：https，1：spdy，2：http2，3：spdy+http2。
         :type ForwardProtocol: int
         """
         self.LoadBalancerPort = None
@@ -568,7 +568,7 @@ class CreateL7ListenersResponse(AbstractModel):
 
 
 class CreateL7Rule(AbstractModel):
-    """用于創建七層監聽器的轉發規則的訊息。目前一個七層監聽器下面最多允許創建50個七層轉發域名，而每一個轉發域名下最多可以創建100個轉發規則。
+    """用於創建七層監聽器的轉發規則的訊息。目前一個七層監聽器下面最多允許創建50個七層轉發域名，而每一個轉發域名下最多可以創建100個轉發規則。
 
     """
 
@@ -676,7 +676,7 @@ class CreateL7RulesResponse(AbstractModel):
 
 
 class CreateLoadBalancerBzConf(AbstractModel):
-    """用于創建負載均衡的個性化配置。
+    """用於創建負載均衡的個性化配置。
 
     """
 
@@ -713,7 +713,7 @@ class CreateLoadBalancersRequest(AbstractModel):
         :type LoadBalancerType: str
         :param SubnetId: 在私有網絡内購買内網負載均衡實例的時候需要指定子網ID，内網負載均衡實例的VIP将從這個子網中産生。其他情況不用填寫該欄位。
         :type SubnetId: str
-        :param ProjectId: 負載均衡所屬項目ID。不填則屬于預設項目。
+        :param ProjectId: 負載均衡所屬項目ID。不填則屬於預設項目。
         :type ProjectId: int
         :param GoodsNum: 購買黑石負載均衡實例的數量。預設值爲1, 最大值爲20。
         :type GoodsNum: int
@@ -931,7 +931,7 @@ class DeleteListenersRequest(AbstractModel):
         """
         :param LoadBalancerId: 負載均衡實例ID，可通過介面DescribeLoadBalancers查詢。
         :type LoadBalancerId: str
-        :param ListenerIds: 待删除的負載均衡四層和七層監聽器ID清單，可通過介面DescribeL4Listeners和DescribeL7Listeners查詢。目前同時只能删除一種類型的監聽器，并且删除七層監聽器的數量上限爲一個。
+        :param ListenerIds: 待删除的負載均衡四層和七層監聽器ID清單，可通過介面DescribeL4Listeners和DescribeL7Listeners查詢。目前同時只能删除一種類型的監聽器，並且删除七層監聽器的數量上限爲一個。
         :type ListenerIds: list of str
         """
         self.LoadBalancerId = None
@@ -1128,7 +1128,7 @@ class DescribeDevicesBindInfoRequest(AbstractModel):
         """
         :param VpcId: 黑石私有網絡唯一ID。
         :type VpcId: str
-        :param InstanceIds: 主機ID或虛機IP清單，可用于獲取綁定了該主機的負載均衡清單。
+        :param InstanceIds: 主機ID或虛機IP清單，可用於獲取綁定了該主機的負載均衡清單。
         :type InstanceIds: list of str
         """
         self.VpcId = None
@@ -1252,9 +1252,9 @@ class DescribeL4ListenerInfoRequest(AbstractModel):
         """
         :param LoadBalancerId: 負載均衡實例ID，可通過介面DescribeLoadBalancers查詢。
         :type LoadBalancerId: str
-        :param SearchKey: 查找的鍵值，可用于模糊查找該名稱的監聽器。
+        :param SearchKey: 查找的鍵值，可用於模糊查找該名稱的監聽器。
         :type SearchKey: str
-        :param InstanceIds: 主機ID或虛機IP清單，可用于獲取綁定了該主機的監聽器。
+        :param InstanceIds: 主機ID或虛機IP清單，可用於獲取綁定了該主機的監聽器。
         :type InstanceIds: list of str
         """
         self.LoadBalancerId = None
@@ -1409,9 +1409,9 @@ class DescribeL7ListenerInfoRequest(AbstractModel):
         """
         :param LoadBalancerId: 負載均衡實例ID，可通過介面DescribeLoadBalancers查詢。
         :type LoadBalancerId: str
-        :param SearchKey: 查找的鍵值，可用于模糊查找有該轉發域名的監聽器。
+        :param SearchKey: 查找的鍵值，可用於模糊查找有該轉發域名的監聽器。
         :type SearchKey: str
-        :param InstanceIds: 主機ID或虛機IP清單，可用于獲取綁定了該主機的監聽器。
+        :param InstanceIds: 主機ID或虛機IP清單，可用於獲取綁定了該主機的監聽器。
         :type InstanceIds: list of str
         :param IfGetBackendInfo: 是否獲取轉發規則下的主機訊息。預設爲0，不獲取。
         :type IfGetBackendInfo: int
@@ -1462,7 +1462,7 @@ class DescribeL7ListenersExRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TrafficMirrorId: 返回的監聽器中标識是否綁定在此流量映像中。
+        :param TrafficMirrorId: 返回的監聽器中標識是否綁定在此流量映像中。
         :type TrafficMirrorId: str
         :param VpcId: 待獲取監聽器所在的VPC的ID。
         :type VpcId: str
@@ -1722,7 +1722,7 @@ class DescribeLoadBalancersRequest(AbstractModel):
         :type LoadBalancerType: str
         :param LoadBalancerName: 負載均衡器名稱
         :type LoadBalancerName: str
-        :param Domain: 負載均衡域名。規則：1-60個小寫英文字母、數字、點号“.”或連接線“-”。内網類型的負載均衡不能配置該欄位
+        :param Domain: 負載均衡域名。規則：1-60個小寫英文字母、數字、點號“.”或連接線“-”。内網類型的負載均衡不能配置該欄位
         :type Domain: str
         :param LoadBalancerVips: 負載均衡獲得的公網IP網址,支援多個
         :type LoadBalancerVips: list of str
@@ -2415,7 +2415,7 @@ class L4Listener(AbstractModel):
         :type Protocol: str
         :param LoadBalancerPort: 負載均衡監聽器的監聽介面，可選值1~65535。
         :type LoadBalancerPort: int
-        :param Bandwidth: 用于計費模式爲固定頻寬計費，指定監聽器最大頻寬值，可選值：0-1000，單位：Mbps。
+        :param Bandwidth: 用於計費模式爲固定頻寬計費，指定監聽器最大頻寬值，可選值：0-1000，單位：Mbps。
         :type Bandwidth: int
         :param ListenerType: 監聽器的類别：L4Listener（四層監聽器），L7Listener（七層監聽器）。
         :type ListenerType: str
@@ -2512,7 +2512,7 @@ class L4ListenerInfo(AbstractModel):
         :type Protocol: str
         :param LoadBalancerPort: 負載均衡監聽器的監聽介面，可選值1~65535。
         :type LoadBalancerPort: int
-        :param Bandwidth: 用于計費模式爲固定頻寬計費，指定監聽器最大頻寬值，可選值：0-1000，單位：Mbps。
+        :param Bandwidth: 用於計費模式爲固定頻寬計費，指定監聽器最大頻寬值，可選值：0-1000，單位：Mbps。
         :type Bandwidth: int
         :param ListenerType: 監聽器的類别：L4Listener（四層監聽器），L7Listener（七層監聽器）。
         :type ListenerType: str
@@ -2664,7 +2664,7 @@ class L7ExListener(AbstractModel):
         :type MaxBandwidth: int
         :param ListenerType: 監聽器類型。
         :type ListenerType: str
-        :param SslMode: 認證方式：0（不認證，用于http），1（單向認證，用于https），2（雙向認證，用于https）。
+        :param SslMode: 認證方式：0（不認證，用於http），1（單向認證，用於https），2（雙向認證，用於https）。
         :type SslMode: int
         :param CertId: 服務端證書ID。
         :type CertId: str
@@ -2751,7 +2751,7 @@ class L7Listener(AbstractModel):
         :type Bandwidth: int
         :param ListenerType: 監聽器的類别：L4Listener（四層監聽器），L7Listener（七層監聽器）。
         :type ListenerType: str
-        :param SslMode: 七層監聽器的認證方式：0（不認證，用于http），1（單向認證，用于https），2（雙向認證，用于https）。
+        :param SslMode: 七層監聽器的認證方式：0（不認證，用於http），1（單向認證，用於https），2（雙向認證，用於https）。
         :type SslMode: int
         :param CertId: 七層監聽器關聯的服務端證書ID。
         :type CertId: str
@@ -2812,7 +2812,7 @@ class L7ListenerInfo(AbstractModel):
         :type Bandwidth: int
         :param ListenerType: 監聽器的類别：L4Listener（四層監聽器），L7Listener（七層監聽器）。
         :type ListenerType: str
-        :param SslMode: 七層監聽器的認證方式：0（不認證，用于http），1（單向認證，用于https），2（雙向認證，用于https）。
+        :param SslMode: 七層監聽器的認證方式：0（不認證，用於http），1（單向認證，用於https），2（雙向認證，用於https）。
         :type SslMode: int
         :param CertId: 七層監聽器關聯的服務端證書ID。
         :type CertId: str
@@ -3138,7 +3138,7 @@ class LoadBalancer(AbstractModel):
         :type Exclusive: int
         :param TgwSetType: 該負載均衡對應的tgw集群（fullnat,tunnel,dnat）
         :type TgwSetType: str
-        :param Domain: 負載均衡域名。規則：1-60個小寫英文字母、數字、點号“.”或連接線“-”。内網類型的負載均衡不能配置該欄位
+        :param Domain: 負載均衡域名。規則：1-60個小寫英文字母、數字、點號“.”或連接線“-”。内網類型的負載均衡不能配置該欄位
         :type Domain: str
         :param VpcId: 該負載均衡對應的所在的VpcId
         :type VpcId: str
@@ -3174,9 +3174,9 @@ class LoadBalancer(AbstractModel):
         :type IpProtocolType: str
         :param BzPayMode: 保障型閘道計費形式
         :type BzPayMode: str
-        :param BzL4Metrics: 保障型閘道四層計費指标
+        :param BzL4Metrics: 保障型閘道四層計費指標
         :type BzL4Metrics: str
-        :param BzL7Metrics: 保障型閘道七層計費指标
+        :param BzL7Metrics: 保障型閘道七層計費指標
         :type BzL7Metrics: str
         :param IntVpcId: 該負載均衡對應的所在的整形類型的VpcId
         :type IntVpcId: int
@@ -3485,7 +3485,7 @@ class ModifyL4ListenerRequest(AbstractModel):
         :type HealthNum: int
         :param UnhealthNum: 不健康阈值，預設值：3，表示當連續探測三次不健康則表示該轉發不正常，可選值：2-10，單位：次。
         :type UnhealthNum: int
-        :param Bandwidth: 監聽器最大頻寬值，用于計費模式爲固定頻寬計費。可選值：0-1000，單位：Mbps。
+        :param Bandwidth: 監聽器最大頻寬值，用於計費模式爲固定頻寬計費。可選值：0-1000，單位：Mbps。
         :type Bandwidth: int
         :param CustomHealthSwitch: 是否開啓自定義健康檢查：1（開啓）、0（關閉）。預設值0，表示關閉。（該欄位在健康檢查開啓的情況下才生效）
         :type CustomHealthSwitch: int
@@ -3707,7 +3707,7 @@ class ModifyL7ListenerRequest(AbstractModel):
         :type ListenerId: str
         :param ListenerName: 七層監聽器名稱。
         :type ListenerName: str
-        :param SslMode: 認證方式：0（不認證，用于http），1（單向認證，用于https），2（雙向認證，用于https）。
+        :param SslMode: 認證方式：0（不認證，用於http），1（單向認證，用於https），2（雙向認證，用於https）。
         :type SslMode: int
         :param CertId: 服務端證書ID。
         :type CertId: str
@@ -3725,7 +3725,7 @@ class ModifyL7ListenerRequest(AbstractModel):
         :type CertCaContent: str
         :param Bandwidth: 計費模式爲按固定頻寬方式時監聽器的限速值，可選值：0-1000，單位：Mbps。
         :type Bandwidth: int
-        :param ForwardProtocol: 轉發協議。當監聽器Protocol爲https時并且SslMode爲1或2時，有意義。可選的值爲0：https，1：spdy，2：http2，3：spdy+http2。
+        :param ForwardProtocol: 轉發協議。當監聽器Protocol爲https時並且SslMode爲1或2時，有意義。可選的值爲0：https，1：spdy，2：http2，3：spdy+http2。
         :type ForwardProtocol: int
         """
         self.LoadBalancerId = None
@@ -4266,7 +4266,7 @@ class TrafficMirrorListener(AbstractModel):
         :type MaxBandwidth: int
         :param ListenerType: 監聽器類型。
         :type ListenerType: str
-        :param SslMode: 認證方式：0（不認證，用于http），1（單向認證，用于https），2（雙向認證，用于https）。
+        :param SslMode: 認證方式：0（不認證，用於http），1（單向認證，用於https），2（雙向認證，用於https）。
         :type SslMode: int
         :param CertId: 服務端證書ID。
         :type CertId: str

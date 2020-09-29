@@ -54,7 +54,7 @@ class ClbClient(AbstractClient):
 
 
     def BatchModifyTargetWeight(self, request):
-        """BatchModifyTargetWeight介面用于批次修改監聽器綁定的後端機器的轉發權重，當前介面只支援應用型HTTP/HTTPS監聽器。
+        """BatchModifyTargetWeight介面用於批次修改監聽器綁定的後端機器的轉發權重，當前介面只支援應用型HTTP/HTTPS監聽器。
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: 調用BatchModifyTargetWeight所需參數的結構體。
@@ -141,7 +141,7 @@ class ClbClient(AbstractClient):
 
 
     def CreateRule(self, request):
-        """CreateRule 介面用于在一個已存在的應用型負載均衡七層監聽器下創建轉發規則，七層監聽器中，後端機器必須綁定到規則上而非監聽器上。
+        """CreateRule 介面用於在一個已存在的應用型負載均衡七層監聽器下創建轉發規則，七層監聽器中，後端機器必須綁定到規則上而非監聽器上。
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: 調用CreateRule所需參數的結構體。
@@ -285,7 +285,7 @@ class ClbClient(AbstractClient):
 
 
     def DeregisterTargets(self, request):
-        """DeregisterTargets 介面用來将一台或多台後端機器從應用型負載均衡的監聽器上解綁，對于四層監聽器（TCP、UDP），只需指定監聽器ID即可，對于七層監聽器（HTTP、HTTPS），還需通過LocationId或者Domain+Url指定轉發規則。
+        """DeregisterTargets 介面用來将一台或多台後端機器從應用型負載均衡的監聽器上解綁，對於四層監聽器（TCP、UDP），只需指定監聽器ID即可，對於七層監聽器（HTTP、HTTPS），還需通過LocationId或者Domain+Url指定轉發規則。
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: 調用DeregisterTargets所需參數的結構體。
@@ -314,7 +314,7 @@ class ClbClient(AbstractClient):
 
 
     def DeregisterTargetsFromClassicalLB(self, request):
-        """DeregisterTargetsFromClassicalLB用于解綁後端服務器
+        """DeregisterTargetsFromClassicalLB用於解綁後端服務器
 
         :param request: 調用DeregisterTargetsFromClassicalLB所需參數的結構體。
         :type request: :class:`taifucloudcloud.clb.v20180317.models.DeregisterTargetsFromClassicalLBRequest`
@@ -342,7 +342,7 @@ class ClbClient(AbstractClient):
 
 
     def DescribeClassicalLBByInstanceId(self, request):
-        """DescribeClassicalLBByInstanceId用于通過後端實例ID獲取傳統型負載均衡ID清單
+        """DescribeClassicalLBByInstanceId用於通過後端實例ID獲取傳統型負載均衡ID清單
 
         :param request: 調用DescribeClassicalLBByInstanceId所需參數的結構體。
         :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeClassicalLBByInstanceIdRequest`
@@ -370,7 +370,7 @@ class ClbClient(AbstractClient):
 
 
     def DescribeClassicalLBHealthStatus(self, request):
-        """DescribeClassicalLBHealthStatus用于獲取傳統型負載均衡後端的健康狀态
+        """DescribeClassicalLBHealthStatus用於獲取傳統型負載均衡後端的健康狀态
 
         :param request: 調用DescribeClassicalLBHealthStatus所需參數的結構體。
         :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeClassicalLBHealthStatusRequest`
@@ -398,7 +398,7 @@ class ClbClient(AbstractClient):
 
 
     def DescribeClassicalLBListeners(self, request):
-        """DescribeClassicalLBListeners用于獲取傳統型負載均衡訊息
+        """DescribeClassicalLBListeners用於獲取傳統型負載均衡訊息
 
         :param request: 調用DescribeClassicalLBListeners所需參數的結構體。
         :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeClassicalLBListenersRequest`
@@ -426,7 +426,7 @@ class ClbClient(AbstractClient):
 
 
     def DescribeClassicalLBTargets(self, request):
-        """DescribeClassicalLBTargets用于獲取傳統型負載均衡綁定的後端服務
+        """DescribeClassicalLBTargets用於獲取傳統型負載均衡綁定的後端服務
 
         :param request: 調用DescribeClassicalLBTargets所需參數的結構體。
         :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeClassicalLBTargetsRequest`
@@ -594,7 +594,7 @@ class ClbClient(AbstractClient):
 
 
     def DescribeTaskStatus(self, request):
-        """本介面用于查詢異步執行任務的狀态，對于非查詢類的介面（創建/删除負載均衡實例、監聽器、規則以及綁定或解綁後端機器等），在調用成功後都需要使用本介面查詢任務是否最終執行成功。
+        """本介面用於查詢異步執行任務的狀态，對於非查詢類的介面（創建/删除負載均衡實例、監聽器、規則以及綁定或解綁後端機器等），在調用成功後都需要使用本介面查詢任務是否最終執行成功。
 
         :param request: 調用DescribeTaskStatus所需參數的結構體。
         :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeTaskStatusRequest`
@@ -766,7 +766,7 @@ class ClbClient(AbstractClient):
 
 
     def ModifyTargetPort(self, request):
-        """ModifyTargetPort介面用于修改監聽器綁定的後端雲伺服器的端口。
+        """ModifyTargetPort介面用於修改監聽器綁定的後端雲伺服器的端口。
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: 調用ModifyTargetPort所需參數的結構體。
@@ -795,7 +795,7 @@ class ClbClient(AbstractClient):
 
 
     def ModifyTargetWeight(self, request):
-        """ModifyTargetWeight 介面用于修改監聽器綁定的後端機器的轉發權重。
+        """ModifyTargetWeight 介面用於修改監聽器綁定的後端機器的轉發權重。
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: 調用ModifyTargetWeight所需參數的結構體。
@@ -824,7 +824,7 @@ class ClbClient(AbstractClient):
 
 
     def RegisterTargets(self, request):
-        """RegisterTargets 介面用來将一台或多台後端機器注冊到應用型負載均衡的監聽器，對于四層監聽器（TCP、UDP），只需指定監聽器ID即可，對于七層監聽器（HTTP、HTTPS），還需通過LocationId或者Domain+Url指定轉發規則。
+        """RegisterTargets 介面用來将一台或多台後端機器注冊到應用型負載均衡的監聽器，對於四層監聽器（TCP、UDP），只需指定監聽器ID即可，對於七層監聽器（HTTP、HTTPS），還需通過LocationId或者Domain+Url指定轉發規則。
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: 調用RegisterTargets所需參數的結構體。
@@ -853,7 +853,7 @@ class ClbClient(AbstractClient):
 
 
     def RegisterTargetsWithClassicalLB(self, request):
-        """RegisterTargetsWithClassicalLB用于綁定後端服務到傳統型負載均衡
+        """RegisterTargetsWithClassicalLB用於綁定後端服務到傳統型負載均衡
 
         :param request: 調用RegisterTargetsWithClassicalLB所需參數的結構體。
         :type request: :class:`taifucloudcloud.clb.v20180317.models.RegisterTargetsWithClassicalLBRequest`

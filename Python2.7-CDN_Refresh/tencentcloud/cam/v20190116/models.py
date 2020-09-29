@@ -31,13 +31,13 @@ class AddUserRequest(AbstractModel):
         :type ConsoleLogin: int
         :param UseApi: 是否生成子用戶金鑰。傳0不生成子用戶金鑰，傳1生成子用戶金鑰。
         :type UseApi: int
-        :param Password: 子用戶控制台登入密碼，若未進行密碼規則設置則預設密碼規則爲8位以上同時包含大小寫字母、數字和特殊字元。只有可以登入控制台時才有效，如果傳空并且上面指定允許登入控制台，則自動生成随機密碼，随機密碼規則爲32位包含大小寫字母、數字和特殊字元。
+        :param Password: 子用戶控制台登入密碼，若未進行密碼規則設置則預設密碼規則爲8位以上同時包含大小寫字母、數字和特殊字元。只有可以登入控制台時才有效，如果傳空並且上面指定允許登入控制台，則自動生成随機密碼，随機密碼規則爲32位包含大小寫字母、數字和特殊字元。
         :type Password: str
         :param NeedResetPassword: 子用戶是否要在下次登入時重置密碼。傳0子用戶下次登入控制台不需重置密碼，傳1子用戶下次登入控制台需要重置密碼。
         :type NeedResetPassword: int
-        :param PhoneNum: 手機号
+        :param PhoneNum: 手機號
         :type PhoneNum: str
-        :param CountryCode: 區号
+        :param CountryCode: 區號
         :type CountryCode: str
         :param Email: 電子信箱
         :type Email: str
@@ -238,13 +238,13 @@ class AttachPolicyInfo(AbstractModel):
         :param Remark: 策略備注
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Remark: str
-        :param OperateOwnerUin: 策略關聯操作者主張号
+        :param OperateOwnerUin: 策略關聯操作者主張號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OperateOwnerUin: str
-        :param OperateUin: 策略關聯操作者ID，如果UinType爲0表示子帳号Uin，如果UinType爲1表示角色ID
+        :param OperateUin: 策略關聯操作者ID，如果UinType爲0表示子帳號Uin，如果UinType爲1表示角色ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OperateUin: str
-        :param OperateUinType: UinType爲0表示OperateUin欄位是子帳号Uin，如果UinType爲1表示OperateUin欄位是角色ID
+        :param OperateUinType: UinType爲0表示OperateUin欄位是子帳號Uin，如果UinType爲1表示OperateUin欄位是角色ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OperateUinType: int
         :param Deactived: 是否已下線
@@ -290,9 +290,9 @@ class AttachRolePolicyRequest(AbstractModel):
         """
         :param PolicyId: 策略ID，入參PolicyId與PolicyName二選一
         :type PolicyId: int
-        :param AttachRoleId: 角色ID，用于指定角色，入參 AttachRoleId 與 AttachRoleName 二選一
+        :param AttachRoleId: 角色ID，用於指定角色，入參 AttachRoleId 與 AttachRoleName 二選一
         :type AttachRoleId: str
-        :param AttachRoleName: 角色名稱，用于指定角色，入參 AttachRoleId 與 AttachRoleName 二選一
+        :param AttachRoleName: 角色名稱，用於指定角色，入參 AttachRoleId 與 AttachRoleName 二選一
         :type AttachRoleName: str
         :param PolicyName: 策略名，入參PolicyId與PolicyName二選一
         :type PolicyName: str
@@ -336,7 +336,7 @@ class AttachUserPolicyRequest(AbstractModel):
         """
         :param PolicyId: 策略 id
         :type PolicyId: int
-        :param AttachUin: 子賬号 uin
+        :param AttachUin: 子賬號 uin
         :type AttachUin: int
         """
         self.PolicyId = None
@@ -499,7 +499,7 @@ class CreatePolicyRequest(AbstractModel):
         """
         :param PolicyName: 策略名
         :type PolicyName: str
-        :param PolicyDocument: 策略文件，範例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.taifucloud.com","cls.cloud.taifucloud.com"]}}]}，principal用于指定角色的授權對象。獲取該參數可參閱 獲取角色詳情（https://cloud.taifucloud.com/document/product/598/36221） 輸出參數RoleInfo
+        :param PolicyDocument: 策略文件，範例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.taifucloud.com","cls.cloud.taifucloud.com"]}}]}，principal用於指定角色的授權對象。獲取該參數可參閱 獲取角色詳情（https://cloud.taifucloud.com/document/product/598/36221） 輸出參數RoleInfo
         :type PolicyDocument: str
         :param Description: 策略描述
         :type Description: str
@@ -568,7 +568,7 @@ class CreatePolicyVersionResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param VersionId: 策略版本号
+        :param VersionId: 策略版本號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type VersionId: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -592,7 +592,7 @@ class CreateRoleRequest(AbstractModel):
         """
         :param RoleName: 角色名稱
         :type RoleName: str
-        :param PolicyDocument: 策略文件，範例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.taifucloud.com","cls.cloud.taifucloud.com"]}}]}，principal用于指定角色的授權對象。獲取該參數可參閱 獲取角色詳情（https://cloud.taifucloud.com/document/product/598/36221） 輸出參數RoleInfo
+        :param PolicyDocument: 策略文件，範例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.taifucloud.com","cls.cloud.taifucloud.com"]}}]}，principal用於指定角色的授權對象。獲取該參數可參閱 獲取角色詳情（https://cloud.taifucloud.com/document/product/598/36221） 輸出參數RoleInfo
         :type PolicyDocument: str
         :param Description: 角色描述
         :type Description: str
@@ -807,7 +807,7 @@ class DeletePolicyVersionRequest(AbstractModel):
         """
         :param PolicyId: 策略ID
         :type PolicyId: int
-        :param VersionId: 策略版本号
+        :param VersionId: 策略版本號
         :type VersionId: list of int non-negative
         """
         self.PolicyId = None
@@ -843,9 +843,9 @@ class DeleteRoleRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param RoleId: 角色ID，用于指定角色，入參 RoleId 與 RoleName 二選一
+        :param RoleId: 角色ID，用於指定角色，入參 RoleId 與 RoleName 二選一
         :type RoleId: str
-        :param RoleName: 角色名稱，用于指定角色，入參 RoleId 與 RoleName 二選一
+        :param RoleName: 角色名稱，用於指定角色，入參 RoleId 與 RoleName 二選一
         :type RoleName: str
         """
         self.RoleId = None
@@ -932,7 +932,7 @@ class DeleteServiceLinkedRoleResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param DeletionTaskId: 删除任務ID，可用于檢查删除服務相關角色狀态。
+        :param DeletionTaskId: 删除任務ID，可用於檢查删除服務相關角色狀态。
         :type DeletionTaskId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -993,7 +993,7 @@ class DescribeRoleListRequest(AbstractModel):
         """
         :param Page: 頁碼，從1開始
         :type Page: int
-        :param Rp: 每頁行數，不能大于200
+        :param Rp: 每頁行數，不能大於200
         :type Rp: int
         """
         self.Page = None
@@ -1083,9 +1083,9 @@ class DetachRolePolicyRequest(AbstractModel):
         """
         :param PolicyId: 策略ID，入參PolicyId與PolicyName二選一
         :type PolicyId: int
-        :param DetachRoleId: 角色ID，用于指定角色，入參 AttachRoleId 與 AttachRoleName 二選一
+        :param DetachRoleId: 角色ID，用於指定角色，入參 AttachRoleId 與 AttachRoleName 二選一
         :type DetachRoleId: str
-        :param DetachRoleName: 角色名稱，用于指定角色，入參 AttachRoleId 與 AttachRoleName 二選一
+        :param DetachRoleName: 角色名稱，用於指定角色，入參 AttachRoleId 與 AttachRoleName 二選一
         :type DetachRoleName: str
         :param PolicyName: 策略名，入參PolicyId與PolicyName二選一
         :type PolicyName: str
@@ -1129,7 +1129,7 @@ class DetachUserPolicyRequest(AbstractModel):
         """
         :param PolicyId: 策略 id
         :type PolicyId: int
-        :param DetachUin: 子賬号 uin
+        :param DetachUin: 子賬號 uin
         :type DetachUin: int
         """
         self.PolicyId = None
@@ -1182,7 +1182,7 @@ class GetCustomMFATokenInfoResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Uin: 自定義多因子驗證Token對應的帳号Id
+        :param Uin: 自定義多因子驗證Token對應的帳號Id
         :type Uin: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1342,7 +1342,7 @@ class GetPolicyVersionRequest(AbstractModel):
         """
         :param PolicyId: 策略ID
         :type PolicyId: int
-        :param VersionId: 策略版本号
+        :param VersionId: 策略版本號
         :type VersionId: int
         """
         self.PolicyId = None
@@ -1385,9 +1385,9 @@ class GetRoleRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param RoleId: 角色 ID，用于指定角色，入參 RoleId 與 RoleName 二選一
+        :param RoleId: 角色 ID，用於指定角色，入參 RoleId 與 RoleName 二選一
         :type RoleId: str
-        :param RoleName: 角色名，用于指定角色，入參 RoleId 與 RoleName 二選一
+        :param RoleName: 角色名，用於指定角色，入參 RoleId 與 RoleName 二選一
         :type RoleName: str
         """
         self.RoleId = None
@@ -1562,9 +1562,9 @@ class GetUserResponse(AbstractModel):
         :type Remark: str
         :param ConsoleLogin: 子用戶能否登入控制台
         :type ConsoleLogin: int
-        :param PhoneNum: 手機号
+        :param PhoneNum: 手機號
         :type PhoneNum: str
-        :param CountryCode: 區号
+        :param CountryCode: 區號
         :type CountryCode: str
         :param Email: 電子信箱
         :type Email: str
@@ -1657,7 +1657,7 @@ class GroupMemberInfo(AbstractModel):
         :type Uin: int
         :param Name: 子用戶名稱。
         :type Name: str
-        :param PhoneNum: 手機号。
+        :param PhoneNum: 手機號。
         :type PhoneNum: str
         :param CountryCode: 手機區域代碼。
         :type CountryCode: str
@@ -1765,11 +1765,11 @@ class ListAttachedRolePoliciesRequest(AbstractModel):
         """
         :param Page: 頁碼，從 1 開始
         :type Page: int
-        :param Rp: 每頁行數，不能大于200
+        :param Rp: 每頁行數，不能大於200
         :type Rp: int
-        :param RoleId: 角色 ID。用于指定角色，入參 RoleId 與 RoleName 二選一
+        :param RoleId: 角色 ID。用於指定角色，入參 RoleId 與 RoleName 二選一
         :type RoleId: str
-        :param RoleName: 角色名。用于指定角色，入參 RoleId 與 RoleName 二選一
+        :param RoleName: 角色名。用於指定角色，入參 RoleId 與 RoleName 二選一
         :type RoleName: str
         :param PolicyType: 按策略類型過濾，User表示僅查詢自定義策略，QCS表示僅查詢預設策略
         :type PolicyType: str
@@ -1826,7 +1826,7 @@ class ListAttachedUserPoliciesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TargetUin: 子賬号 uin
+        :param TargetUin: 子賬號 uin
         :type TargetUin: int
         :param Page: 頁碼，預設值是 1，從 1 開始
         :type Page: int
@@ -1938,7 +1938,7 @@ class ListEntitiesForPolicyRequest(AbstractModel):
         :type Page: int
         :param Rp: 每頁大小，預設值是 20
         :type Rp: int
-        :param EntityFilter: 可取值 'All'、'User'、'Group' 和 'Role'，'All' 表示獲取所有實體類型，'User' 表示只獲取子賬号，'Group' 表示只獲取用戶組，'Role' 表示只獲取角色，預設取 'All'
+        :param EntityFilter: 可取值 'All'、'User'、'Group' 和 'Role'，'All' 表示獲取所有實體類型，'User' 表示只獲取子賬號，'Group' 表示只獲取用戶組，'Role' 表示只獲取角色，預設取 'All'
         :type EntityFilter: str
         """
         self.PolicyId = None
@@ -1999,7 +1999,7 @@ class ListGroupsForUserRequest(AbstractModel):
         :type Rp: int
         :param Page: 頁碼。預設爲1。
         :type Page: int
-        :param SubUin: 子賬号UIN
+        :param SubUin: 子賬號UIN
         :type SubUin: int
         """
         self.Uid = None
@@ -2107,9 +2107,9 @@ class ListPoliciesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Rp: 每頁數量，預設值是 20，必須大于 0 且小於或等于 200
+        :param Rp: 每頁數量，預設值是 20，必須大於 0 且小於或等於 200
         :type Rp: int
-        :param Page: 頁碼，預設值是 1，從 1開始，不能大于 200
+        :param Page: 頁碼，預設值是 1，從 1開始，不能大於 200
         :type Page: int
         :param Scope: 可取值 'All'、'QCS' 和 'Local'，'All' 獲取所有策略，'QCS' 只獲取預設策略，'Local' 只獲取自定義策略，預設取 'All'
         :type Scope: str
@@ -2147,7 +2147,7 @@ description：策略描述
 createMode：1 表示按業務權限創建的策略，其他值表示可以檢視策略語法和通過策略語法更新策略
 Attachments: 關聯的用戶數
 ServiceType: 策略關聯的産品
-IsAttached: 當需要查詢标記實體是否已經關聯策略時不爲null。0表示未關聯策略，1表示已關聯策略
+IsAttached: 當需要查詢標記實體是否已經關聯策略時不爲null。0表示未關聯策略，1表示已關聯策略
         :type List: list of StrategyInfo
         :param ServiceTypeList: 保留欄位
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -2347,7 +2347,7 @@ class PolicyVersionDetail(AbstractModel):
 
     def __init__(self):
         """
-        :param VersionId: 策略版本号
+        :param VersionId: 策略版本號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type VersionId: int
         :param CreateDate: 策略版本創建時間
@@ -2380,7 +2380,7 @@ class PolicyVersionItem(AbstractModel):
 
     def __init__(self):
         """
-        :param VersionId: 策略版本号
+        :param VersionId: 策略版本號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type VersionId: int
         :param CreateDate: 策略版本創建時間
@@ -2534,7 +2534,7 @@ class SetDefaultPolicyVersionRequest(AbstractModel):
         """
         :param PolicyId: 策略ID
         :type PolicyId: int
-        :param VersionId: 策略版本号
+        :param VersionId: 策略版本號
         :type VersionId: int
         """
         self.PolicyId = None
@@ -2589,7 +2589,7 @@ class StrategyInfo(AbstractModel):
         :param ServiceType: 策略關聯的産品
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ServiceType: str
-        :param IsAttached: 當需要查詢标記實體是否已經關聯策略時不爲null。0表示未關聯策略，1表示已關聯策略
+        :param IsAttached: 當需要查詢標記實體是否已經關聯策略時不爲null。0表示未關聯策略，1表示已關聯策略
 注意：此欄位可能返回 null，表示取不到有效值。
         :type IsAttached: int
         :param Deactived: 是否已下線
@@ -2648,9 +2648,9 @@ class SubAccountInfo(AbstractModel):
         :type Remark: str
         :param ConsoleLogin: 子用戶能否登入控制台
         :type ConsoleLogin: int
-        :param PhoneNum: 手機号
+        :param PhoneNum: 手機號
         :type PhoneNum: str
-        :param CountryCode: 區号
+        :param CountryCode: 區號
         :type CountryCode: str
         :param Email: 電子信箱
         :type Email: str
@@ -2683,11 +2683,11 @@ class UpdateAssumeRolePolicyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param PolicyDocument: 策略文件，範例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.taifucloud.com","cls.cloud.taifucloud.com"]}}]}，principal用于指定角色的授權對象。獲取該參數可參閱 獲取角色詳情（https://cloud.taifucloud.com/document/product/598/36221） 輸出參數RoleInfo
+        :param PolicyDocument: 策略文件，範例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.taifucloud.com","cls.cloud.taifucloud.com"]}}]}，principal用於指定角色的授權對象。獲取該參數可參閱 獲取角色詳情（https://cloud.taifucloud.com/document/product/598/36221） 輸出參數RoleInfo
         :type PolicyDocument: str
-        :param RoleId: 角色ID，用于指定角色，入參 RoleId 與 RoleName 二選一
+        :param RoleId: 角色ID，用於指定角色，入參 RoleId 與 RoleName 二選一
         :type RoleId: str
-        :param RoleName: 角色名稱，用于指定角色，入參 RoleId 與 RoleName 二選一
+        :param RoleName: 角色名稱，用於指定角色，入參 RoleId 與 RoleName 二選一
         :type RoleName: str
         """
         self.PolicyDocument = None
@@ -2773,7 +2773,7 @@ class UpdatePolicyRequest(AbstractModel):
         :type PolicyName: str
         :param Description: 策略描述
         :type Description: str
-        :param PolicyDocument: 策略文件，範例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.taifucloud.com","cls.cloud.taifucloud.com"]}}]}，principal用于指定角色的授權對象。獲取該參數可參閱 獲取角色詳情（https://cloud.taifucloud.com/document/product/598/36221） 輸出參數RoleInfo
+        :param PolicyDocument: 策略文件，範例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.taifucloud.com","cls.cloud.taifucloud.com"]}}]}，principal用於指定角色的授權對象。獲取該參數可參閱 獲取角色詳情（https://cloud.taifucloud.com/document/product/598/36221） 輸出參數RoleInfo
         :type PolicyDocument: str
         :param Alias: 預設策略備注
         :type Alias: str
@@ -2866,9 +2866,9 @@ class UpdateRoleDescriptionRequest(AbstractModel):
         """
         :param Description: 角色描述
         :type Description: str
-        :param RoleId: 角色ID，用于指定角色，入參 RoleId 與 RoleName 二選一
+        :param RoleId: 角色ID，用於指定角色，入參 RoleId 與 RoleName 二選一
         :type RoleId: str
-        :param RoleName: 角色名稱，用于指定角色，入參 RoleId 與 RoleName 二選一
+        :param RoleName: 角色名稱，用於指定角色，入參 RoleId 與 RoleName 二選一
         :type RoleName: str
         """
         self.Description = None
@@ -2954,13 +2954,13 @@ class UpdateUserRequest(AbstractModel):
         :type Remark: str
         :param ConsoleLogin: 子用戶是否可以登入控制台。傳0子用戶無法登入控制台，傳1子用戶可以登入控制台。
         :type ConsoleLogin: int
-        :param Password: 子用戶控制台登入密碼，若未進行密碼規則設置則預設密碼規則爲8位以上同時包含大小寫字母、數字和特殊字元。只有可以登入控制台時才有效，如果傳空并且上面指定允許登入控制台，則自動生成随機密碼，随機密碼規則爲32位包含大小寫字母、數字和特殊字元。
+        :param Password: 子用戶控制台登入密碼，若未進行密碼規則設置則預設密碼規則爲8位以上同時包含大小寫字母、數字和特殊字元。只有可以登入控制台時才有效，如果傳空並且上面指定允許登入控制台，則自動生成随機密碼，随機密碼規則爲32位包含大小寫字母、數字和特殊字元。
         :type Password: str
         :param NeedResetPassword: 子用戶是否要在下次登入時重置密碼。傳0子用戶下次登入控制台不需重置密碼，傳1子用戶下次登入控制台需要重置密碼。
         :type NeedResetPassword: int
-        :param PhoneNum: 手機号
+        :param PhoneNum: 手機號
         :type PhoneNum: str
-        :param CountryCode: 區号
+        :param CountryCode: 區號
         :type CountryCode: str
         :param Email: 電子信箱
         :type Email: str

@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: mongodb_basic_demo
   src: ./
-  description: mongodb_basic_demo. 本範例演示基于API閘道提供博客内的文章查詢和文章内容，您可以擴展函數來實現 Web 後端服務
+  description: mongodb_basic_demo. 本範例演示基於API閘道提供博客内的文章查詢和文章内容，您可以擴展函數來實現 Web 後端服務
   handler: index.main_handler
   runtime: Python2.7
   namespace: default

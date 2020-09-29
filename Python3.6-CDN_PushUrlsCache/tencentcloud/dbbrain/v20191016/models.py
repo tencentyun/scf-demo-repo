@@ -345,11 +345,11 @@ class MonitorMetric(AbstractModel):
 
     def __init__(self):
         """
-        :param Metric: 指标名稱。
+        :param Metric: 指標名稱。
         :type Metric: str
-        :param Unit: 指标單位。
+        :param Unit: 指標單位。
         :type Unit: str
-        :param Values: 指标值。
+        :param Values: 指標值。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Values: list of int
         """
@@ -365,15 +365,15 @@ class MonitorMetric(AbstractModel):
 
 
 class MonitorMetricSeriesData(AbstractModel):
-    """單位時間間隔内的監控指标數據
+    """單位時間間隔内的監控指標數據
 
     """
 
     def __init__(self):
         """
-        :param Series: 監控指标。
+        :param Series: 監控指標。
         :type Series: list of MonitorMetric
-        :param Timestamp: 監控指标對應的時間戳。
+        :param Timestamp: 監控指標對應的時間戳。
         :type Timestamp: list of int
         """
         self.Series = None

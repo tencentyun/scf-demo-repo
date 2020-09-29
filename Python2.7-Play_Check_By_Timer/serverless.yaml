@@ -8,7 +8,7 @@ inputs:
   src: ./
   description: >-
     This demo will use timer trigger to check url list. If there are wrong
-    lists, it will send alarm by email. 本範例代碼的功能是定時撥測 URL 清單中的網址，并通過郵件發送告警
+    lists, it will send alarm by email. 本範例代碼的功能是定時撥測 URL 清單中的網址，並通過郵件發送告警
   handler: Play_Check_By_Timer.main_handler
   runtime: Python2.7
   namespace: default

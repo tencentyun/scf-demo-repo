@@ -17,13 +17,13 @@ from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AlgorithmInfo(AbstractModel):
-    """算法的名稱 和 标識
+    """算法的名稱 和 標識
 
     """
 
     def __init__(self):
         """
-        :param KeyUsage: 算法的标識
+        :param KeyUsage: 算法的標識
         :type KeyUsage: str
         :param Algorithm: 算法的名稱
         :type Algorithm: str
@@ -44,7 +44,7 @@ class AsymmetricRsaDecryptRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的唯一标識
+        :param KeyId: CMK的唯一標識
         :type KeyId: str
         :param Ciphertext: 使用PublicKey加密的密文，Base64編碼
         :type Ciphertext: str
@@ -69,7 +69,7 @@ class AsymmetricRsaDecryptResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的唯一标識
+        :param KeyId: CMK的唯一標識
         :type KeyId: str
         :param Plaintext: 解密後的明文，base64編碼
         :type Plaintext: str
@@ -94,7 +94,7 @@ class AsymmetricSm2DecryptRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的唯一标識
+        :param KeyId: CMK的唯一標識
         :type KeyId: str
         :param Ciphertext: 使用PublicKey加密的密文，Base64編碼。密文長度不能超過256位元。
         :type Ciphertext: str
@@ -115,7 +115,7 @@ class AsymmetricSm2DecryptResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的唯一标識
+        :param KeyId: CMK的唯一標識
         :type KeyId: str
         :param Plaintext: 解密後的明文，base64編碼
         :type Plaintext: str
@@ -140,7 +140,7 @@ class CancelKeyDeletionRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: 需要被取消删除的CMK的唯一标志
+        :param KeyId: 需要被取消删除的CMK的唯一標志
         :type KeyId: str
         """
         self.KeyId = None
@@ -157,7 +157,7 @@ class CancelKeyDeletionResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: 唯一标志被取消删除的CMK。
+        :param KeyId: 唯一標志被取消删除的CMK。
         :type KeyId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -178,11 +178,11 @@ class CreateKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Alias: 作爲金鑰更容易辨識，更容易被人看懂的别名， 不可爲空，1-60個字母數字 - _ 的組合，首字元必須爲字母或者數字。以 kms- 作爲前綴的用于雲産品使用，Alias 不可重複。
+        :param Alias: 作爲金鑰更容易辨識，更容易被人看懂的别名， 不可爲空，1-60個字母數字 - _ 的組合，首字元必須爲字母或者數字。以 kms- 作爲前綴的用於雲産品使用，Alias 不可重複。
         :type Alias: str
         :param Description: CMK 的描述，最大1024位元
         :type Description: str
-        :param KeyUsage: 指定key的用途，預設爲  "ENCRYPT_DECRYPT" 表示創建對稱加解密金鑰，其它支援用途 “ASYMMETRIC_DECRYPT_RSA_2048” 表示創建用于加解密的RSA2048非對稱金鑰，“ASYMMETRIC_DECRYPT_SM2” 表示創建用于加解密的SM2非對稱金鑰
+        :param KeyUsage: 指定key的用途，預設爲  "ENCRYPT_DECRYPT" 表示創建對稱加解密金鑰，其它支援用途 “ASYMMETRIC_DECRYPT_RSA_2048” 表示創建用於加解密的RSA2048非對稱金鑰，“ASYMMETRIC_DECRYPT_SM2” 表示創建用於加解密的SM2非對稱金鑰
         :type KeyUsage: str
         :param Type: 指定key類型，預設爲1，1表示預設類型，由KMS創建CMK金鑰，2 表示EXTERNAL 類型，該類型需要用戶導入金鑰材料，參考 GetParametersForImport 和 ImportKeyMaterial 介面
         :type Type: int
@@ -207,7 +207,7 @@ class CreateKeyResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的全局唯一标識符
+        :param KeyId: CMK的全局唯一標識符
         :type KeyId: str
         :param Alias: 作爲金鑰更容易辨識，更容易被人看懂的别名
         :type Alias: str
@@ -274,11 +274,11 @@ class CreateWhiteBoxKeyResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param EncryptKey: 用于加密的金鑰，base64編碼
+        :param EncryptKey: 用於加密的金鑰，base64編碼
         :type EncryptKey: str
-        :param DecryptKey: 用于解密的金鑰，base64編碼
+        :param DecryptKey: 用於解密的金鑰，base64編碼
         :type DecryptKey: str
-        :param KeyId: 白盒金鑰的全局唯一标識符
+        :param KeyId: 白盒金鑰的全局唯一標識符
         :type KeyId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -324,7 +324,7 @@ class DecryptResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的全局唯一标識
+        :param KeyId: CMK的全局唯一標識
         :type KeyId: str
         :param Plaintext: 解密後的明文。該欄位是base64編碼的，爲了得到原始明文，調用方需要進行base64解碼
         :type Plaintext: str
@@ -383,7 +383,7 @@ class DeleteWhiteBoxKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: 白盒金鑰的全局唯一标識符
+        :param KeyId: 白盒金鑰的全局唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -417,7 +417,7 @@ class DescribeKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK全局唯一标識符
+        :param KeyId: CMK全局唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -502,7 +502,7 @@ class DescribeWhiteBoxDecryptKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: 白盒金鑰的全局唯一标識符
+        :param KeyId: 白盒金鑰的全局唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -583,7 +583,7 @@ class DescribeWhiteBoxKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: 白盒金鑰的全局唯一标識符
+        :param KeyId: 白盒金鑰的全局唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -650,7 +650,7 @@ class DisableKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK唯一标識符
+        :param KeyId: CMK唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -684,7 +684,7 @@ class DisableKeyRotationRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK唯一标識符
+        :param KeyId: CMK唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -752,7 +752,7 @@ class DisableWhiteBoxKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: 白盒金鑰的全局唯一标識符
+        :param KeyId: 白盒金鑰的全局唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -786,7 +786,7 @@ class DisableWhiteBoxKeysRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyIds: 白盒金鑰的全局唯一标識符清單。注意：要确保所有提供的KeyId是格式有效的，沒有重複，個數不超過50個，并且都是有效存在的。
+        :param KeyIds: 白盒金鑰的全局唯一標識符清單。注意：要确保所有提供的KeyId是格式有效的，沒有重複，個數不超過50個，並且都是有效存在的。
         :type KeyIds: list of str
         """
         self.KeyIds = None
@@ -820,7 +820,7 @@ class EnableKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK唯一标識符
+        :param KeyId: CMK唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -854,7 +854,7 @@ class EnableKeyRotationRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK唯一标識符
+        :param KeyId: CMK唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -922,7 +922,7 @@ class EnableWhiteBoxKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: 白盒金鑰的全局唯一标識符
+        :param KeyId: 白盒金鑰的全局唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -956,7 +956,7 @@ class EnableWhiteBoxKeysRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyIds: 白盒金鑰的全局唯一标識符清單。注意：要确保所有提供的KeyId是格式有效的，沒有重複，個數不超過50個，并且都是有效存在的。
+        :param KeyIds: 白盒金鑰的全局唯一標識符清單。注意：要确保所有提供的KeyId是格式有效的，沒有重複，個數不超過50個，並且都是有效存在的。
         :type KeyIds: list of str
         """
         self.KeyIds = None
@@ -990,7 +990,7 @@ class EncryptByWhiteBoxRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: 白盒金鑰的全局唯一标識符
+        :param KeyId: 白盒金鑰的全局唯一標識符
         :type KeyId: str
         :param PlainText: 待加密的文本， base64編碼，文本的原始長度最大不超過4KB
         :type PlainText: str
@@ -1015,7 +1015,7 @@ class EncryptByWhiteBoxResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param InitializationVector: 初始化向量，加密算法會使用到, base64編碼。如果由調用方在入參中傳入，則原樣返回。如果調用方沒有傳入，則後端服務随機生成，并返回
+        :param InitializationVector: 初始化向量，加密算法會使用到, base64編碼。如果由調用方在入參中傳入，則原樣返回。如果調用方沒有傳入，則後端服務随機生成，並返回
         :type InitializationVector: str
         :param CipherText: 加密後的密文，base64編碼
         :type CipherText: str
@@ -1040,7 +1040,7 @@ class EncryptRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: 調用CreateKey生成的CMK全局唯一标識符
+        :param KeyId: 調用CreateKey生成的CMK全局唯一標識符
         :type KeyId: str
         :param Plaintext: 被加密的明文數據，該欄位必須使用base64編碼，原文最大長度支援4K
         :type Plaintext: str
@@ -1067,7 +1067,7 @@ class EncryptResponse(AbstractModel):
         """
         :param CiphertextBlob: 加密後經過base64編碼的密文
         :type CiphertextBlob: str
-        :param KeyId: 加密使用的CMK的全局唯一标識
+        :param KeyId: 加密使用的CMK的全局唯一標識
         :type KeyId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1090,7 +1090,7 @@ class GenerateDataKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK全局唯一标識符
+        :param KeyId: CMK全局唯一標識符
         :type KeyId: str
         :param KeySpec: 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。KeySpec 和 NumberOfBytes 必須指定一個
         :type KeySpec: str
@@ -1119,7 +1119,7 @@ class GenerateDataKeyResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的全局唯一标識
+        :param KeyId: CMK的全局唯一標識
         :type KeyId: str
         :param Plaintext: 生成的DataKey的明文，該明文使用base64編碼，用戶需要使用base64解碼得到明文
         :type Plaintext: str
@@ -1186,7 +1186,7 @@ class GetKeyRotationStatusRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK唯一标識符
+        :param KeyId: CMK唯一標識符
         :type KeyId: str
         """
         self.KeyId = None
@@ -1224,7 +1224,7 @@ class GetParametersForImportRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的唯一标識，獲取金鑰參數的CMK必須是EXTERNAL類型，即在CreateKey時指定Type=2 類型的CMK。
+        :param KeyId: CMK的唯一標識，獲取金鑰參數的CMK必須是EXTERNAL類型，即在CreateKey時指定Type=2 類型的CMK。
         :type KeyId: str
         :param WrappingAlgorithm: 指定加密金鑰材料的算法，目前支援RSAES_PKCS1_V1_5、RSAES_OAEP_SHA_1、RSAES_OAEP_SHA_256
         :type WrappingAlgorithm: str
@@ -1249,11 +1249,11 @@ class GetParametersForImportResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的唯一标識，用于指定目标導入金鑰材料的CMK。
+        :param KeyId: CMK的唯一標識，用於指定目標導入金鑰材料的CMK。
         :type KeyId: str
-        :param ImportToken: 導入金鑰材料需要的token，用于作爲 ImportKeyMaterial 的參數。
+        :param ImportToken: 導入金鑰材料需要的token，用於作爲 ImportKeyMaterial 的參數。
         :type ImportToken: str
-        :param PublicKey: 用于加密金鑰材料的RSA公鑰，base64編碼。使用PublicKey base64解碼後的公鑰将導入金鑰進行加密後作爲 ImportKeyMaterial 的參數。
+        :param PublicKey: 用於加密金鑰材料的RSA公鑰，base64編碼。使用PublicKey base64解碼後的公鑰将導入金鑰進行加密後作爲 ImportKeyMaterial 的參數。
         :type PublicKey: str
         :param ParametersValidTo: 該導出token和公鑰的有效期，超過該時間後無法導入，需要重新調用GetParametersForImport獲取。
         :type ParametersValidTo: int
@@ -1282,7 +1282,7 @@ class GetPublicKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的唯一标識。
+        :param KeyId: CMK的唯一標識。
         :type KeyId: str
         """
         self.KeyId = None
@@ -1299,7 +1299,7 @@ class GetPublicKeyResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的唯一标識。
+        :param KeyId: CMK的唯一標識。
         :type KeyId: str
         :param PublicKey: 經過base64編碼的公鑰内容。
         :type PublicKey: str
@@ -1360,13 +1360,13 @@ class ImportKeyMaterialRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param EncryptedKeyMaterial: 使用GetParametersForImport 返回的PublicKey加密後的金鑰材料base64編碼。對于國密版本region的KMS，導入的金鑰材料長度要求爲 128 bit，FIPS版本region的KMS， 導入的金鑰材料長度要求爲 256 bit。
+        :param EncryptedKeyMaterial: 使用GetParametersForImport 返回的PublicKey加密後的金鑰材料base64編碼。對於國密版本region的KMS，導入的金鑰材料長度要求爲 128 bit，FIPS版本region的KMS， 導入的金鑰材料長度要求爲 256 bit。
         :type EncryptedKeyMaterial: str
         :param ImportToken: 通過調用GetParametersForImport獲得的導入令牌。
         :type ImportToken: str
         :param KeyId: 指定導入金鑰材料的CMK，需要和GetParametersForImport 指定的CMK相同。
         :type KeyId: str
-        :param ValidTo: 金鑰材料過期時間 unix 時間戳，不指定或者 0 表示金鑰材料不會過期，若指定過期時間，需要大于當前時間點，最大支援 2147443200。
+        :param ValidTo: 金鑰材料過期時間 unix 時間戳，不指定或者 0 表示金鑰材料不會過期，若指定過期時間，需要大於當前時間點，最大支援 2147443200。
         :type ValidTo: int
         """
         self.EncryptedKeyMaterial = None
@@ -1406,7 +1406,7 @@ class Key(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的全局唯一标識。
+        :param KeyId: CMK的全局唯一標識。
         :type KeyId: str
         """
         self.KeyId = None
@@ -1423,7 +1423,7 @@ class KeyMetadata(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的全局唯一标識
+        :param KeyId: CMK的全局唯一標識
         :type KeyId: str
         :param Alias: 作爲金鑰更容易辨識，更容易被人看懂的别名
         :type Alias: str
@@ -1435,7 +1435,7 @@ class KeyMetadata(AbstractModel):
         :type KeyState: str
         :param KeyUsage: CMK用途，取值爲: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2
         :type KeyUsage: str
-        :param Type: CMK類型，2 表示符合FIPS标準，4表示符合國密标準
+        :param Type: CMK類型，2 表示符合FIPS標準，4表示符合國密標準
         :type Type: int
         :param CreatorUin: 創建者
         :type CreatorUin: int
@@ -1548,7 +1548,7 @@ class ListKeyDetailRequest(AbstractModel):
         :type Role: int
         :param OrderType: 根據CMK創建時間排序， 0 表示按照降序排序，1表示按照升序排序
         :type OrderType: int
-        :param KeyState: 根據CMK狀态篩選， 0表示全部CMK， 1 表示僅查詢Enabled CMK， 2 表示僅查詢Disabled CMK，3 表示查詢PendingDelete 狀态的CMK(處于計劃删除狀态的Key)，4 表示查詢 PendingImport 狀态的CMK
+        :param KeyState: 根據CMK狀态篩選， 0表示全部CMK， 1 表示僅查詢Enabled CMK， 2 表示僅查詢Disabled CMK，3 表示查詢PendingDelete 狀态的CMK(處於計劃删除狀态的Key)，4 表示查詢 PendingImport 狀态的CMK
         :type KeyState: int
         :param SearchKeyAlias: 根據KeyId或者Alias進行模糊比對查詢
         :type SearchKeyAlias: str
@@ -1734,7 +1734,7 @@ class ScheduleKeyDeletionRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: CMK的唯一标志
+        :param KeyId: CMK的唯一標志
         :type KeyId: str
         :param PendingWindowInDays: 計劃删除時間區間[7,30]
         :type PendingWindowInDays: int
@@ -1757,7 +1757,7 @@ class ScheduleKeyDeletionResponse(AbstractModel):
         """
         :param DeletionDate: 計劃删除執行時間
         :type DeletionDate: int
-        :param KeyId: 唯一标志被計劃删除的CMK
+        :param KeyId: 唯一標志被計劃删除的CMK
         :type KeyId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1782,7 +1782,7 @@ class UpdateAliasRequest(AbstractModel):
         """
         :param Alias: 新的别名，1-60個字元或數字的組合
         :type Alias: str
-        :param KeyId: CMK的全局唯一标識符
+        :param KeyId: CMK的全局唯一標識符
         :type KeyId: str
         """
         self.Alias = None
@@ -1856,7 +1856,7 @@ class WhiteboxKeyInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param KeyId: 白盒金鑰的全局唯一标識符
+        :param KeyId: 白盒金鑰的全局唯一標識符
         :type KeyId: str
         :param Alias: 作爲金鑰更容易辨識，更容易被人看懂的别名， 不可爲空，1-60個字母數字 - _ 的組合，首字元必須爲字母或者數字. 不可重複
         :type Alias: str

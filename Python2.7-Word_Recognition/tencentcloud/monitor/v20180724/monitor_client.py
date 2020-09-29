@@ -26,7 +26,7 @@ class MonitorClient(AbstractClient):
 
 
     def DescribeBaseMetrics(self, request):
-        """獲取基礎指标詳情
+        """獲取基礎指標詳情
 
         :param request: 調用DescribeBaseMetrics所需參數的結構體。
         :type request: :class:`taifucloudcloud.monitor.v20180724.models.DescribeBaseMetricsRequest`
@@ -54,9 +54,9 @@ class MonitorClient(AbstractClient):
 
 
     def GetMonitorData(self, request):
-        """獲取雲産品的監控數據。傳入産品的命名空間、對象維度描述和監控指标即可獲得相應的監控數據。
+        """獲取雲産品的監控數據。傳入産品的命名空間、對象維度描述和監控指標即可獲得相應的監控數據。
         介面調用頻率限制爲：20次/秒，1200次/分鍾。
-        若您需要調用的指标、對象較多，可能存在因限頻出現拉取失敗的情況，建議盡量将請求按時間維度均攤。
+        若您需要調用的指標、對象較多，可能存在因限頻出現拉取失敗的情況，建議盡量将請求按時間維度均攤。
 
         :param request: 調用GetMonitorData所需參數的結構體。
         :type request: :class:`taifucloudcloud.monitor.v20180724.models.GetMonitorDataRequest`

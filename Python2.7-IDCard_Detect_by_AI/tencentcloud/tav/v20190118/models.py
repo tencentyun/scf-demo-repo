@@ -23,7 +23,7 @@ class GetLocalEngineRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Key: 購買服務後獲得的授權訊息，用于保證請求有效性
+        :param Key: 購買服務後獲得的授權訊息，用於保證請求有效性
         :type Key: str
         """
         self.Key = None
@@ -69,7 +69,7 @@ class GetScanResultRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Key: 購買服務後獲得的授權訊息，用于保證請求有效性
+        :param Key: 購買服務後獲得的授權訊息，用於保證請求有效性
         :type Key: str
         :param Md5: 需要獲取掃描介面的md5（只允許單個md5）
         :type Md5: str
@@ -120,13 +120,13 @@ class ScanFileHashRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Key: 購買服務後獲得的授權訊息，用于保證請求有效性
+        :param Key: 購買服務後獲得的授權訊息，用於保證請求有效性
         :type Key: str
-        :param Md5s: 需要查詢的md5值（支援單個和多個，多個md5間用逗号分格）
+        :param Md5s: 需要查詢的md5值（支援單個和多個，多個md5間用逗號分格）
         :type Md5s: str
         :param WithCategory: 保留欄位預設填0
         :type WithCategory: str
-        :param SensitiveLevel: 松嚴規則控制欄位預設填10（5-松、10-标準、15-嚴）
+        :param SensitiveLevel: 松嚴規則控制欄位預設填10（5-松、10-標準、15-嚴）
         :type SensitiveLevel: str
         """
         self.Key = None
@@ -153,7 +153,7 @@ class ScanFileHashResponse(AbstractModel):
         :type Status: int
         :param Info: 介面調用描述訊息，成功返回"scan success"，失敗返回"scan error"
         :type Info: str
-        :param Data: 雲查實際結果訊息，包括md5、return_state、virus_state、virus_name字元逗号間隔；        
+        :param Data: 雲查實際結果訊息，包括md5、return_state、virus_state、virus_name字元逗號間隔；        
 return_state查詢狀态：-1/0代表失敗、1/2代表成功；
 virus_state文狀件态：0文件不存在、1白、2黑、3未知、4感染性、5低可信白；
         :type Data: str
@@ -180,7 +180,7 @@ class ScanFileRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Key: 購買服務後獲得的授權訊息，用于保證請求有效性
+        :param Key: 購買服務後獲得的授權訊息，用於保證請求有效性
         :type Key: str
         :param Sample: 文件下載url網址
         :type Sample: str

@@ -28,7 +28,7 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
-#  原圖到tmp目錄，并且賦予權限,tmp是雲函數的本地磁盤空間，可讀可寫
+#  原圖到tmp目錄，並且賦予權限,tmp是雲函數的本地磁盤空間，可讀可寫
 with open("./source.jpg", "rb") as rf:
     with open("/tmp/source.jpg", "wb") as wf:
         wf.write(rf.read())
@@ -73,7 +73,7 @@ def main_handler(event, context):
                 "isBase64Encoded": False,"statusCode": 410,"headers": {"Content-Type": "text", "Access-Control-Allow-Origin": "*"},"body": "Error: Name is null"
             }
 
-    #  原圖到tmp目錄，并且賦予權限,tmp是雲函數的本地磁盤空間，可讀可寫
+    #  原圖到tmp目錄，並且賦予權限,tmp是雲函數的本地磁盤空間，可讀可寫
     upload_path = '/tmp/邀請函-%s-ServerlessDays.jpg'% name
     logger.info('upload_path: '+ upload_path)
 
@@ -84,7 +84,7 @@ def main_handler(event, context):
 
     # 添加常規字體
     logger.info('add_txt')
-    #如果字元長度小於等于5，采用PIL庫添加字體
+    #如果字元長度小於等於5，采用PIL庫添加字體
     if len(name.decode('utf-8')) <= 5:
         font_pil = ImageFont.truetype("./STXINWEI.TTF", 90)
         draw = ImageDraw.Draw(img)
@@ -94,11 +94,11 @@ def main_handler(event, context):
         logger.info('height: ' + str(height))
         draw.text( (width,height), name.decode('utf-8'), font = font_pil, fill=(255,255,255))
         img.save(upload_path)
-    #如果字元長度大于5，采用pygame給字體加格式，生成圖片後加浮水印的方式合成新的邀請函
+    #如果字元長度大於5，采用pygame給字體加格式，生成圖片後加浮水印的方式合成新的邀請函
     else:
         # pygame初始化，生成加粗+斜體的浮水印圖片
         pygame.init()
-        # 設置字體和字号，自定義
+        # 設置字體和字號，自定義
         font = pygame.font.Font('./STXINWEI.TTF', 90)
         font.set_bold(True)
         font.set_italic(True) 

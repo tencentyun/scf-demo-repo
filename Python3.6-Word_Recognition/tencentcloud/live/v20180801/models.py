@@ -532,10 +532,10 @@ class CreateLiveRecordRequest(AbstractModel):
         :type AppName: str
         :param DomainName: 推流域名。多域名推流必須設置。
         :type DomainName: str
-        :param StartTime: 錄制開始時間。 标準時間，需要URLEncode。如 2017-01-01 10:10:01，編碼爲：2017-01-01+10%3a10%3a01。
+        :param StartTime: 錄制開始時間。 標準時間，需要URLEncode。如 2017-01-01 10:10:01，編碼爲：2017-01-01+10%3a10%3a01。
 定時錄制模式，必須設置該欄位；實時視訊錄制模式，忽略該欄位。
         :type StartTime: str
-        :param EndTime: 錄制結束時間。 标準時間，需要URLEncode。如 2017-01-01 10:30:01，編碼爲：2017-01-01+10%3a30%3a01。
+        :param EndTime: 錄制結束時間。 標準時間，需要URLEncode。如 2017-01-01 10:30:01，編碼爲：2017-01-01+10%3a30%3a01。
 定時錄制模式，必須設置該欄位；實時錄制模式，爲可選欄位。如果通過Highlight參數，設置錄制爲實時視訊錄制模式，其設置的結束時間不應超過當前時間+30分鍾，如果設置的結束時間超過當前時間+30分鍾或者小於當前時間或者不設置該參數，則實際結束時間爲當前時間+30分鍾。
         :type EndTime: str
         :param RecordType: 錄制類型。
@@ -547,9 +547,9 @@ class CreateLiveRecordRequest(AbstractModel):
 “flv”,“hls”,”mp4”,“aac”,”mp3”，預設“flv”。
 在定時錄制模式或實時視訊錄制模式下，該參數均有效，不區分大小寫。
         :type FileFormat: str
-        :param Highlight: 開啓實時視訊錄制模式标志。0：不開啓實時視訊錄制模式，即采用定時錄制模式【預設】；1：開啓實時視訊錄制模式。
+        :param Highlight: 開啓實時視訊錄制模式標志。0：不開啓實時視訊錄制模式，即采用定時錄制模式【預設】；1：開啓實時視訊錄制模式。
         :type Highlight: int
-        :param MixStream: 開啓A+B=C混流C流錄制标志。0：不開啓A+B=C混流C流錄制【預設】；1：開啓A+B=C混流C流錄制。
+        :param MixStream: 開啓A+B=C混流C流錄制標志。0：不開啓A+B=C混流C流錄制【預設】；1：開啓A+B=C混流C流錄制。
 在定時錄制模式或實時視訊錄制模式下，該參數均有效。
         :type MixStream: int
         :param StreamParam: 錄制流參數。當前支援以下參數：
@@ -592,7 +592,7 @@ class CreateLiveRecordResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param TaskId: 任務ID，全局唯一标識錄制任務。
+        :param TaskId: 任務ID，全局唯一標識錄制任務。
         :type TaskId: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1053,7 +1053,7 @@ class CreatePullStreamConfigRequest(AbstractModel):
         """
         :param FromUrl: 源Url。
         :type FromUrl: str
-        :param ToUrl: 目的Url，目前限制該目标網址爲 域名。
+        :param ToUrl: 目的Url，目前限制該目標網址爲 域名。
         :type ToUrl: str
         :param AreaId: 區域id,1- ,2- ，3- ,4- 。
         :type AreaId: int
@@ -1064,8 +1064,8 @@ class CreatePullStreamConfigRequest(AbstractModel):
 例如：2019-01-08T10:00:00Z。
         :type StartTime: str
         :param EndTime: 結束時間，注意：
-1. 結束時間必須大于開始時間；
-2. 結束時間和開始時間必須大于當前時間；
+1. 結束時間必須大於開始時間；
+2. 結束時間和開始時間必須大於當前時間；
 3. 結束時間 和 開始時間 間隔必須小於七天。
 使用UTC格式時間，
 例如：2019-01-08T10:00:00Z。
@@ -1295,7 +1295,7 @@ class DeleteLiveRecordRequest(AbstractModel):
         """
         :param StreamName: 流名稱。
         :type StreamName: str
-        :param TaskId: 任務ID，全局唯一标識錄制任務。
+        :param TaskId: 任務ID，全局唯一標識錄制任務。
         :type TaskId: int
         """
         self.StreamName = None
@@ -1332,13 +1332,13 @@ class DeleteLiveRecordRuleRequest(AbstractModel):
     def __init__(self):
         """
         :param DomainName: 推流域名。
-域名+AppName+StreamName唯一标識單個轉碼規則，如需删除需要強比對，比如AppName爲空也需要傳空字串進行強比對。
+域名+AppName+StreamName唯一標識單個轉碼規則，如需删除需要強比對，比如AppName爲空也需要傳空字串進行強比對。
         :type DomainName: str
         :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻，預設爲 live。
-域名+AppName+StreamName唯一标識單個轉碼規則，如需删除需要強比對，比如AppName爲空也需要傳空字串進行強比對。
+域名+AppName+StreamName唯一標識單個轉碼規則，如需删除需要強比對，比如AppName爲空也需要傳空字串進行強比對。
         :type AppName: str
         :param StreamName: 流名稱。
-域名+AppName+StreamName唯一标識單個轉碼規則，如需删除需要強比對，比如AppName爲空也需要傳空字串進行強比對。
+域名+AppName+StreamName唯一標識單個轉碼規則，如需删除需要強比對，比如AppName爲空也需要傳空字串進行強比對。
         :type StreamName: str
         """
         self.DomainName = None
@@ -1487,16 +1487,16 @@ class DeleteLiveTranscodeRuleRequest(AbstractModel):
     def __init__(self):
         """
         :param DomainName: 推流域名。
-域名維度轉碼，域名+AppName+StreamName唯一标識單個轉碼規則，如需删除需要強比對，比如AppName爲空也需要傳空字串進行強比對。
+域名維度轉碼，域名+AppName+StreamName唯一標識單個轉碼規則，如需删除需要強比對，比如AppName爲空也需要傳空字串進行強比對。
         :type DomainName: str
         :param AppName: 推流路徑，與推流和播放網址中的AppName保持一緻，預設爲 live。
-域名+AppName+StreamName+TemplateId唯一标識單個轉碼規則，如需删除需要強比對，比如AppName爲空也需要傳空字串進行強比對。
+域名+AppName+StreamName+TemplateId唯一標識單個轉碼規則，如需删除需要強比對，比如AppName爲空也需要傳空字串進行強比對。
         :type AppName: str
         :param StreamName: 流名稱。
-域名+AppName+StreamName+TemplateId唯一标識單個轉碼規則，如需删除需要強比對，比如AppName爲空也需要傳空字串進行強比對。
+域名+AppName+StreamName+TemplateId唯一標識單個轉碼規則，如需删除需要強比對，比如AppName爲空也需要傳空字串進行強比對。
         :type StreamName: str
         :param TemplateId: 範本ID。
-域名+AppName+StreamName+TemplateId唯一标識單個轉碼規則，如需删除需要強比對，比如AppName爲空也需要傳空字串進行強比對。
+域名+AppName+StreamName+TemplateId唯一標識單個轉碼規則，如需删除需要強比對，比如AppName爲空也需要傳空字串進行強比對。
         :type TemplateId: int
         """
         self.DomainName = None
@@ -2216,7 +2216,7 @@ class DescribeLiveRecordTemplatesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param IsDelayLive: 是否屬于慢直播範本
+        :param IsDelayLive: 是否屬於慢直播範本
         :type IsDelayLive: int
         """
         self.IsDelayLive = None
@@ -2561,7 +2561,7 @@ class DescribeLiveStreamOnlineListRequest(AbstractModel):
 取值：10~100之間的任意整數。
 預設值：10。
         :type PageSize: int
-        :param StreamName: 流名稱，用于精确查詢。
+        :param StreamName: 流名稱，用於精确查詢。
         :type StreamName: str
         """
         self.DomainName = None
@@ -3199,7 +3199,7 @@ class DescribeProIspPlaySumInfoListRequest(AbstractModel):
         :type StatType: str
         :param PlayDomains: 不填則爲總體數據。
         :type PlayDomains: list of str
-        :param PageNum: 頁号，
+        :param PageNum: 頁號，
 範圍是[1,1000]，
 預設值是1
         :type PageNum: int
@@ -3239,7 +3239,7 @@ class DescribeProIspPlaySumInfoListResponse(AbstractModel):
         :type StatType: str
         :param PageSize: 每頁的記錄數
         :type PageSize: int
-        :param PageNum: 頁号
+        :param PageNum: 頁號
         :type PageNum: int
         :param TotalNum: 總記錄數
         :type TotalNum: int
@@ -3299,12 +3299,12 @@ class DescribeProvinceIspPlayInfoListRequest(AbstractModel):
         :param Granularity: 支援如下粒度：
 1：1分鍾粒度（跨度不支援超過1天）
         :type Granularity: int
-        :param StatType: 統計指标類型：
+        :param StatType: 統計指標類型：
 “Bandwidth”：頻寬
 “FluxPerSecond”：平均流量
 “Flux”：流量
 “Request”：請求數
-“Online”：并發連接數
+“Online”：並發連接數
         :type StatType: str
         :param PlayDomains: 播放域名清單。
         :type PlayDomains: list of str
@@ -3417,7 +3417,7 @@ class DescribeStreamDayPlayInfoListRequest(AbstractModel):
         :type DayTime: str
         :param PlayDomain: 播放域名。
         :type PlayDomain: str
-        :param PageNum: 頁号，範圍[1,10]，預設值是1。
+        :param PageNum: 頁號，範圍[1,10]，預設值是1。
         :type PageNum: int
         :param PageSize: 每頁個數，範圍[100,1000]，預設值是1000。
         :type PageSize: int
@@ -4428,8 +4428,8 @@ class ModifyPullStreamConfigRequest(AbstractModel):
 例如：2019-01-08T10:00:00Z。
         :type StartTime: str
         :param EndTime: 結束時間，注意：
-1. 結束時間必須大于開始時間；
-2. 結束時間和開始時間必須大于當前時間；
+1. 結束時間必須大於開始時間；
+2. 結束時間和開始時間必須大於當前時間；
 3. 結束時間 和 開始時間 間隔必須小於七天。
 
 使用UTC格式時間，
@@ -4481,7 +4481,7 @@ class ModifyPullStreamStatusRequest(AbstractModel):
         """
         :param ConfigIds: 配置id清單。
         :type ConfigIds: list of str
-        :param Status: 目标狀态。0無效，2正在運作，4暫停。
+        :param Status: 目標狀态。0無效，2正在運作，4暫停。
         :type Status: str
         """
         self.ConfigIds = None
@@ -4573,7 +4573,7 @@ class PlayStatInfo(AbstractModel):
         """
         :param Time: 數據時間點。
         :type Time: str
-        :param Value: 頻寬/流量/請求數/并發連接數/下載速度的值，若沒數據返回時該值爲0
+        :param Value: 頻寬/流量/請求數/並發連接數/下載速度的值，若沒數據返回時該值爲0
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Value: float
         """
@@ -5045,9 +5045,9 @@ class SnapshotTemplateInfo(AbstractModel):
         :type TemplateName: str
         :param SnapshotInterval: 截圖時間間隔。5-300
         :type SnapshotInterval: int
-        :param Width: 截圖寬度。0-3000 0原始寬度并适配原始比例
+        :param Width: 截圖寬度。0-3000 0原始寬度並适配原始比例
         :type Width: int
-        :param Height: 截圖高度。0-2000 0原始高度并适配原始比例
+        :param Height: 截圖高度。0-2000 0原始高度並适配原始比例
         :type Height: int
         :param PornFlag: 是否開啓 ，0：不開啓，1：開啓。
         :type PornFlag: int
@@ -5094,7 +5094,7 @@ class StopLiveRecordRequest(AbstractModel):
         """
         :param StreamName: 流名稱。
         :type StreamName: str
-        :param TaskId: 任務ID，全局唯一标識錄制任務。
+        :param TaskId: 任務ID，全局唯一標識錄制任務。
         :type TaskId: int
         """
         self.StreamName = None
@@ -5372,7 +5372,7 @@ class TranscodeDetailInfo(AbstractModel):
 格式：yyyy-mm-dd HH:MM。
         :type EndTime: str
         :param Duration: 轉碼時長，單位：分鍾。
-注意：因推流過程中可能有中斷重推情況，此處時長爲真實轉碼時長累加值，并非結束時間和開始時間的間隔。
+注意：因推流過程中可能有中斷重推情況，此處時長爲真實轉碼時長累加值，並非結束時間和開始時間的間隔。
         :type Duration: int
         :param ModuleCodec: 編碼方式，帶模組，
 範例：

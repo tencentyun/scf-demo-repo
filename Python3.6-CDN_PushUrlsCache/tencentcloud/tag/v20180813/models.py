@@ -23,9 +23,9 @@ class AddResourceTagRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: str
         :param Resource: 資源六段式描述
         :type Resource: str
@@ -65,9 +65,9 @@ class CreateTagRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -103,7 +103,7 @@ class DeleteResourceTagRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
         :param Resource: 資源六段式描述
         :type Resource: str
@@ -141,9 +141,9 @@ class DeleteTagRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TagKey: 需要删除的标簽鍵
+        :param TagKey: 需要删除的標簽鍵
         :type TagKey: str
-        :param TagValue: 需要删除的标簽值
+        :param TagValue: 需要删除的標簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -183,7 +183,7 @@ class DescribeResourceTagsByResourceIdsRequest(AbstractModel):
         :type ServiceType: str
         :param ResourcePrefix: 資源前綴
         :type ResourcePrefix: str
-        :param ResourceIds: 資源唯一标記
+        :param ResourceIds: 資源唯一標記
         :type ResourceIds: list of str
         :param ResourceRegion: 資源所在地域
         :type ResourceRegion: str
@@ -222,7 +222,7 @@ class DescribeResourceTagsByResourceIdsResponse(AbstractModel):
         :type Offset: int
         :param Limit: 每頁大小
         :type Limit: int
-        :param Tags: 标簽清單
+        :param Tags: 標簽清單
         :type Tags: list of TagResource
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -260,9 +260,9 @@ class DescribeResourceTagsByTagKeysRequest(AbstractModel):
         :type ResourcePrefix: str
         :param ResourceRegion: 資源地域
         :type ResourceRegion: str
-        :param ResourceIds: 資源唯一标識
+        :param ResourceIds: 資源唯一標識
         :type ResourceIds: list of str
-        :param TagKeys: 資源标簽鍵
+        :param TagKeys: 資源標簽鍵
         :type TagKeys: list of str
         :param Limit: 每頁大小，預設爲 400
         :type Limit: int
@@ -301,7 +301,7 @@ class DescribeResourceTagsByTagKeysResponse(AbstractModel):
         :type Offset: int
         :param Limit: 每頁大小
         :type Limit: int
-        :param Rows: 資源标簽
+        :param Rows: 資源標簽
         :type Rows: list of ResourceIdTag
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -341,7 +341,7 @@ class DescribeResourceTagsRequest(AbstractModel):
         :type ServiceType: str
         :param ResourcePrefix: 資源前綴
         :type ResourcePrefix: str
-        :param ResourceId: 資源唯一标識
+        :param ResourceId: 資源唯一標識
         :type ResourceId: str
         :param Offset: 數據偏移量，預設爲 0, 必須爲Limit參數的整數倍
         :type Offset: int
@@ -385,7 +385,7 @@ class DescribeResourceTagsResponse(AbstractModel):
         :param Limit: 每頁大小
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Limit: int
-        :param Rows: 資源标簽
+        :param Rows: 資源標簽
         :type Rows: list of TagResource
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -417,9 +417,9 @@ class DescribeResourcesByTagsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TagFilters: 标簽過濾數組
+        :param TagFilters: 標簽過濾數組
         :type TagFilters: list of TagFilter
-        :param CreateUin: 創建标簽者uin
+        :param CreateUin: 創建標簽者uin
         :type CreateUin: int
         :param Offset: 數據偏移量，預設爲 0, 必須爲Limit參數的整數倍
         :type Offset: int
@@ -427,7 +427,7 @@ class DescribeResourcesByTagsRequest(AbstractModel):
         :type Limit: int
         :param ResourcePrefix: 資源前綴
         :type ResourcePrefix: str
-        :param ResourceId: 資源唯一标記
+        :param ResourceId: 資源唯一標記
         :type ResourceId: str
         :param ResourceRegion: 資源所在地域
         :type ResourceRegion: str
@@ -474,7 +474,7 @@ class DescribeResourcesByTagsResponse(AbstractModel):
         :param Limit: 每頁大小
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Limit: int
-        :param Rows: 資源标簽
+        :param Rows: 資源標簽
         :type Rows: list of ResourceTag
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -541,7 +541,7 @@ class DescribeTagKeysResponse(AbstractModel):
         :type Offset: int
         :param Limit: 每頁大小
         :type Limit: int
-        :param Tags: 标簽清單
+        :param Tags: 標簽清單
         :type Tags: list of str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -568,7 +568,7 @@ class DescribeTagValuesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TagKeys: 标簽鍵清單
+        :param TagKeys: 標簽鍵清單
         :type TagKeys: list of str
         :param CreateUin: 創建者用戶 Uin，不傳或爲空只将 Uin 作爲條件查詢
         :type CreateUin: int
@@ -603,7 +603,7 @@ class DescribeTagValuesResponse(AbstractModel):
         :type Offset: int
         :param Limit: 每頁大小
         :type Limit: int
-        :param Tags: 标簽清單
+        :param Tags: 標簽清單
         :type Tags: list of Tag
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -635,9 +635,9 @@ class DescribeTagsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵,與标簽值同時存在或同時不存在，不存在時表示查詢該用戶所有标簽
+        :param TagKey: 標簽鍵,與標簽值同時存在或同時不存在，不存在時表示查詢該用戶所有標簽
         :type TagKey: str
-        :param TagValue: 标簽值,與标簽鍵同時存在或同時不存在，不存在時表示查詢該用戶所有标簽
+        :param TagValue: 標簽值,與標簽鍵同時存在或同時不存在，不存在時表示查詢該用戶所有標簽
         :type TagValue: str
         :param Offset: 數據偏移量，預設爲 0, 必須爲Limit參數的整數倍
         :type Offset: int
@@ -645,9 +645,9 @@ class DescribeTagsRequest(AbstractModel):
         :type Limit: int
         :param CreateUin: 創建者用戶 Uin，不傳或爲空只将 Uin 作爲條件查詢
         :type CreateUin: int
-        :param TagKeys: 标簽鍵數組,與标簽值同時存在或同時不存在，不存在時表示查詢該用戶所有标簽,當與TagKey同時傳遞時只會本值
+        :param TagKeys: 標簽鍵數組,與標簽值同時存在或同時不存在，不存在時表示查詢該用戶所有標簽,當與TagKey同時傳遞時只會本值
         :type TagKeys: list of str
-        :param ShowProject: 是否展現項目标簽
+        :param ShowProject: 是否展現項目標簽
         :type ShowProject: int
         """
         self.TagKey = None
@@ -682,7 +682,7 @@ class DescribeTagsResponse(AbstractModel):
         :type Offset: int
         :param Limit: 每頁大小
         :type Limit: int
-        :param Tags: 标簽清單
+        :param Tags: 標簽清單
         :type Tags: list of TagWithDelete
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -716,9 +716,9 @@ class ModifyResourceTagsRequest(AbstractModel):
         """
         :param Resource: 資源的六段式描述
         :type Resource: str
-        :param ReplaceTags: 需要增加或修改的标簽集合。如果Resource描述的資源未關聯輸入的标簽鍵，則增加關聯；若已關聯，則将該資源關聯的鍵對應的标簽值修改爲輸入值。本介面中ReplaceTags和DeleteTags二者必須存在其一，且二者不能包含相同的标簽鍵
+        :param ReplaceTags: 需要增加或修改的標簽集合。如果Resource描述的資源未關聯輸入的標簽鍵，則增加關聯；若已關聯，則将該資源關聯的鍵對應的標簽值修改爲輸入值。本介面中ReplaceTags和DeleteTags二者必須存在其一，且二者不能包含相同的標簽鍵
         :type ReplaceTags: list of Tag
-        :param DeleteTags: 需要解關聯的标簽集合。本介面中ReplaceTags和DeleteTags二者必須存在其一，且二者不能包含相同的标簽鍵
+        :param DeleteTags: 需要解關聯的標簽集合。本介面中ReplaceTags和DeleteTags二者必須存在其一，且二者不能包含相同的標簽鍵
         :type DeleteTags: list of TagKeyObject
         """
         self.Resource = None
@@ -760,16 +760,16 @@ class ModifyResourceTagsResponse(AbstractModel):
 
 
 class ResourceIdTag(AbstractModel):
-    """資源标簽鍵值
+    """資源標簽鍵值
 
     """
 
     def __init__(self):
         """
-        :param ResourceId: 資源唯一标識
+        :param ResourceId: 資源唯一標識
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ResourceId: str
-        :param TagKeyValues: 标簽鍵值對
+        :param TagKeyValues: 標簽鍵值對
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagKeyValues: list of Tag
         """
@@ -788,7 +788,7 @@ class ResourceIdTag(AbstractModel):
 
 
 class ResourceTag(AbstractModel):
-    """資源标簽
+    """資源標簽
 
     """
 
@@ -803,10 +803,10 @@ class ResourceTag(AbstractModel):
         :param ResourcePrefix: 資源前綴
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ResourcePrefix: str
-        :param ResourceId: 資源唯一标記
+        :param ResourceId: 資源唯一標記
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ResourceId: str
-        :param Tags: 資源标簽
+        :param Tags: 資源標簽
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of Tag
         """
@@ -831,15 +831,15 @@ class ResourceTag(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """表示一個标簽鍵值對
+    """表示一個標簽鍵值對
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -858,9 +858,9 @@ class TagFilter(AbstractModel):
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值數組 多個值的話是或的關系
+        :param TagValue: 標簽值數組 多個值的話是或的關系
         :type TagValue: list of str
         """
         self.TagKey = None
@@ -873,13 +873,13 @@ class TagFilter(AbstractModel):
 
 
 class TagKeyObject(AbstractModel):
-    """标簽鍵對象
+    """標簽鍵對象
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
         """
         self.TagKey = None
@@ -890,21 +890,21 @@ class TagKeyObject(AbstractModel):
 
 
 class TagResource(AbstractModel):
-    """标簽鍵值對以及資源ID
+    """標簽鍵值對以及資源ID
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: str
         :param ResourceId: 資源ID
         :type ResourceId: str
-        :param TagKeyMd5: 标簽鍵MD5值
+        :param TagKeyMd5: 標簽鍵MD5值
         :type TagKeyMd5: str
-        :param TagValueMd5: 标簽值MD5值
+        :param TagValueMd5: 標簽值MD5值
         :type TagValueMd5: str
         :param ServiceType: 資源類型
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -928,15 +928,15 @@ class TagResource(AbstractModel):
 
 
 class TagWithDelete(AbstractModel):
-    """表示一個标簽鍵值對以及是否允許删除
+    """表示一個標簽鍵值對以及是否允許删除
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: str
         :param CanDelete: 是否可以删除
         :type CanDelete: int
@@ -959,9 +959,9 @@ class UpdateResourceTagValueRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TagKey: 資源關聯的标簽鍵
+        :param TagKey: 資源關聯的標簽鍵
         :type TagKey: str
-        :param TagValue: 修改後的标簽值
+        :param TagValue: 修改後的標簽值
         :type TagValue: str
         :param Resource: 資源的六段式描述
         :type Resource: str

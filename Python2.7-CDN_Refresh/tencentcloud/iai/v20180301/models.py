@@ -30,13 +30,13 @@ class AnalyzeFaceRequest(AbstractModel):
         :type Image: str
         :param Url: 圖片的 Url 。對應圖片 base64 編碼後大小不可超過5M。
 Url、Image必須提供一個，如果都提供，只使用 Url。  
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
         :param FaceModelVersion: 人臉識别服務所用的算法模型版本。目前入參支援 “2.0”和“3.0“ 兩個輸入。  
-2020年4月2日開始，預設爲“3.0”，之前使用過本介面的賬号若未填寫本參數預設爲“2.0”。  
-不同算法模型版本對應的人臉識别算法不同，新版本的整體效果會優于舊版本，建議使用最新版本。
+2020年4月2日開始，預設爲“3.0”，之前使用過本介面的賬號若未填寫本參數預設爲“2.0”。  
+不同算法模型版本對應的人臉識别算法不同，新版本的整體效果會優於舊版本，建議使用最新版本。
         :type FaceModelVersion: str
         :param NeedRotateDetection: 是否開啓圖片旋轉識别支援。0爲不開啓，1爲開啓。預設爲0。本參數的作用爲，當圖片中的人臉被旋轉且圖片沒有exif訊息時，如果不開啓圖片旋轉識别支援則無法正确檢測、識别圖片中的人臉。若您确認圖片包含exif訊息或者您确認輸入圖中人臉不會出現被旋轉情況，請不要開啓本參數。開啓後，整體耗時将可能增加數百毫秒。
         :type NeedRotateDetection: int
@@ -176,7 +176,7 @@ class CheckSimilarPersonResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param JobId: 查重任務ID，用于查詢、獲取查重的進度和結果。
+        :param JobId: 查重任務ID，用於查詢、獲取查重的進度和結果。
         :type JobId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -207,21 +207,21 @@ class CompareFaceRequest(AbstractModel):
         :type ImageB: str
         :param UrlA: A 圖片的 Url ，對應圖片 base64 編碼後大小不可超過5M。
 A 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type UrlA: str
         :param UrlB: B 圖片的 Url ，對應圖片 base64 編碼後大小不可超過5M。
 B 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type UrlB: str
         :param FaceModelVersion: 人臉識别服務所用的算法模型版本。目前入參支援 “2.0”和“3.0“ 兩個輸入。 
-2020年4月2日開始，預設爲“3.0”，之前使用過本介面的賬号若未填寫本參數預設爲“2.0”。 
-不同算法模型版本對應的人臉識别算法不同，新版本的整體效果會優于舊版本，建議使用“3.0”版本。
+2020年4月2日開始，預設爲“3.0”，之前使用過本介面的賬號若未填寫本參數預設爲“2.0”。 
+不同算法模型版本對應的人臉識别算法不同，新版本的整體效果會優於舊版本，建議使用“3.0”版本。
         :type FaceModelVersion: str
         :param QualityControl: 圖片質量控制。 
 0: 不進行控制； 
@@ -345,7 +345,7 @@ class CreateFaceRequest(AbstractModel):
         :type Images: list of str
         :param Urls: 圖片的 Url 。對應圖片 base64 編碼後大小不可超過5M。
 Url、Image必須提供一個，如果都提供，只使用 Url。  
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
 人員人臉總數量不可超過5張。
@@ -444,19 +444,19 @@ class CreateGroupRequest(AbstractModel):
         :type GroupName: str
         :param GroupId: 人員庫 ID，不可修改，不可重複。支援英文、數字、-%@#&_，長度限制64B。
         :type GroupId: str
-        :param GroupExDescriptions: 人員庫自定義描述欄位，用于描述人員庫中人員屬性，該人員庫下所有人員将擁有此描述欄位。 
+        :param GroupExDescriptions: 人員庫自定義描述欄位，用於描述人員庫中人員屬性，該人員庫下所有人員将擁有此描述欄位。 
 最多可以創建5個。 
 每個自定義描述欄位支援[1,30]個字元。 
 在同一人員庫中自定義描述欄位不可重複。 
-例： 設置某人員庫“自定義描述欄位”爲["學号","工号","手機号"]， 
-則該人員庫下所有人員将擁有名爲“學号”、“工号”、“手機号”的描述欄位， 
-可在對應人員描述欄位中填寫内容，登記該人員的學号、工号、手機号等訊息。
+例： 設置某人員庫“自定義描述欄位”爲["學號","工號","手機號"]， 
+則該人員庫下所有人員将擁有名爲“學號”、“工號”、“手機號”的描述欄位， 
+可在對應人員描述欄位中填寫内容，登記該人員的學號、工號、手機號等訊息。
         :type GroupExDescriptions: list of str
         :param Tag: 人員庫訊息備注，[0，40]個字元。
         :type Tag: str
         :param FaceModelVersion: 人臉識别服務所用的算法模型版本。目前入參支援 “2.0”和“3.0“ 兩個輸入。
-2020年4月2日開始，預設爲“3.0”，之前使用過本介面的賬号若未填寫本參數預設爲“2.0”。 
-不同算法模型版本對應的人臉識别算法不同，新版本的整體效果會優于舊版本，建議使用“3.0”版本。
+2020年4月2日開始，預設爲“3.0”，之前使用過本介面的賬號若未填寫本參數預設爲“2.0”。 
+不同算法模型版本對應的人臉識别算法不同，新版本的整體效果會優於舊版本，建議使用“3.0”版本。
         :type FaceModelVersion: str
         """
         self.GroupName = None
@@ -506,7 +506,7 @@ class CreatePersonRequest(AbstractModel):
         :type GroupId: str
         :param PersonName: 人員名稱。[1，60]個字元，可修改，可重複。
         :type PersonName: str
-        :param PersonId: 人員ID，單個Top Cloud 賬号下不可修改，不可重複。支援英文、數字、-%@#&_，長度限制64B。
+        :param PersonId: 人員ID，單個Top Cloud 賬號下不可修改，不可重複。支援英文、數字、-%@#&_，長度限制64B。
         :type PersonId: str
         :param Gender: 0代表未填寫，1代表男性，2代表女性。
         :type Gender: int
@@ -517,11 +517,11 @@ class CreatePersonRequest(AbstractModel):
         :type Image: str
         :param Url: 圖片的 Url 。對應圖片 base64 編碼後大小不可超過5M。
 Url、Image必須提供一個，如果都提供，只使用 Url。  
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
-        :param UniquePersonControl: 此參數用于控制判斷 Image 或 Url 中圖片包含的人臉，是否在人員庫中已有疑似的同一人。 
+        :param UniquePersonControl: 此參數用於控制判斷 Image 或 Url 中圖片包含的人臉，是否在人員庫中已有疑似的同一人。 
 如果判斷爲已有相同人在人員庫中，則不會創建新的人員，返回疑似同一人的人員訊息。 
 如果判斷沒有，則完成創建人員。 
 0: 不進行判斷，無論是否有疑似同一人在庫中均完成入庫； 
@@ -581,7 +581,7 @@ class CreatePersonResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param FaceId: 人臉圖片唯一标識。
+        :param FaceId: 人臉圖片唯一標識。
         :type FaceId: str
         :param FaceRect: 檢測出的人臉框的位置。
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -771,18 +771,18 @@ class DetectFaceRequest(AbstractModel):
     def __init__(self):
         """
         :param MaxFaceNum: 最多處理的人臉數目。預設值爲1（僅檢測圖片中面積最大的那張人臉），最大值爲120。 
-此參數用于控制處理待檢測圖片中的人臉個數，值越小，處理速度越快。
+此參數用於控制處理待檢測圖片中的人臉個數，值越小，處理速度越快。
         :type MaxFaceNum: int
         :param MinFaceSize: 人臉長和寬的最小尺寸，單位爲像素。
-預設爲34。建議不低于34。
-低于MinFaceSize值的人臉不會被檢測。
+預設爲34。建議不低於34。
+低於MinFaceSize值的人臉不會被檢測。
         :type MinFaceSize: int
         :param Image: 圖片 base64 數據，base64 編碼後大小不可超過5M。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
         :param Url: 圖片的 Url 。對應圖片 base64 編碼後大小不可超過5M。
 Url、Image必須提供一個，如果都提供，只使用 Url。  
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
@@ -797,8 +797,8 @@ Url、Image必須提供一個，如果都提供，只使用 Url。
 建議：人臉入庫操作建議開啓此功能。
         :type NeedQualityDetection: int
         :param FaceModelVersion: 人臉識别服務所用的算法模型版本。目前入參支援 “2.0”和“3.0“ 兩個輸入。  
-2020年4月2日開始，預設爲“3.0”，之前使用過本介面的賬号若未填寫本參數預設爲“2.0”。 
-不同算法模型版本對應的人臉識别算法不同，新版本的整體效果會優于舊版本，建議使用“3.0”版本。
+2020年4月2日開始，預設爲“3.0”，之前使用過本介面的賬號若未填寫本參數預設爲“2.0”。 
+不同算法模型版本對應的人臉識别算法不同，新版本的整體效果會優於舊版本，建議使用“3.0”版本。
         :type FaceModelVersion: str
         :param NeedRotateDetection: 是否開啓圖片旋轉識别支援。0爲不開啓，1爲開啓。預設爲0。本參數的作用爲，當圖片中的人臉被旋轉且圖片沒有exif訊息時，如果不開啓圖片旋轉識别支援則無法正确檢測、識别圖片中的人臉。若您确認圖片包含exif訊息或者您确認輸入圖中人臉不會出現被旋轉情況，請不要開啓本參數。開啓後，整體耗時将可能增加數百毫秒。
         :type NeedRotateDetection: int
@@ -835,7 +835,7 @@ class DetectFaceResponse(AbstractModel):
         :type ImageWidth: int
         :param ImageHeight: 請求的圖片高度。
         :type ImageHeight: int
-        :param FaceInfos: 人臉訊息清單。包含人臉坐标訊息、屬性訊息（若需要）、質量分訊息（若需要）。
+        :param FaceInfos: 人臉訊息清單。包含人臉坐標訊息、屬性訊息（若需要）、質量分訊息（若需要）。
         :type FaceInfos: list of FaceInfo
         :param FaceModelVersion: 人臉識别所用的算法模型版本。
         :type FaceModelVersion: str
@@ -875,13 +875,13 @@ class DetectLiveFaceRequest(AbstractModel):
         :param Url: 圖片的 Url 。對應圖片 base64 編碼後大小不可超過5M。
 Url、Image必須提供一個，如果都提供，只使用 Url。 
 （圖片的寬高比請接近 3:4，不符合寬高比的圖片返回的分值不具備參考意義） 
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
         :param FaceModelVersion: 人臉識别服務所用的算法模型版本。目前入參支援 “2.0”和“3.0“ 兩個輸入。  
-2020年4月2日開始，預設爲“3.0”，之前使用過本介面的賬号若未填寫本參數預設爲“2.0”。 
-不同算法模型版本對應的人臉識别算法不同，新版本的整體效果會優于舊版本，建議使用“3.0”版本。
+2020年4月2日開始，預設爲“3.0”，之前使用過本介面的賬號若未填寫本參數預設爲“2.0”。 
+不同算法模型版本對應的人臉識别算法不同，新版本的整體效果會優於舊版本，建議使用“3.0”版本。
         :type FaceModelVersion: str
         """
         self.Image = None
@@ -902,7 +902,7 @@ class DetectLiveFaceResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Score: 活體打分，取值範圍 [0,100]，分數一般落于[80, 100]區間内，0分也爲常見值。推薦相大于 87 時可判斷爲活體。可根據具體場景自行調整阈值。
+        :param Score: 活體打分，取值範圍 [0,100]，分數一般落於[80, 100]區間内，0分也爲常見值。推薦相大於 87 時可判斷爲活體。可根據具體場景自行調整阈值。
 本欄位當且僅當FaceModelVersion爲2.0時才具備參考意義。
         :type Score: float
         :param FaceModelVersion: 人臉識别所用的算法模型版本。
@@ -1071,13 +1071,13 @@ class FaceInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param X: 人臉框左上角橫坐标。
-人臉框包含人臉五官位置并在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐标負值。 
-若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐标取0。
+        :param X: 人臉框左上角橫坐標。
+人臉框包含人臉五官位置並在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐標負值。 
+若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐標取0。
         :type X: int
-        :param Y: 人臉框左上角縱坐标。 
-人臉框包含人臉五官位置并在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐标負值。 
-若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐标取0。
+        :param Y: 人臉框左上角縱坐標。 
+人臉框包含人臉五官位置並在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐標負值。 
+若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐標取0。
         :type Y: int
         :param Width: 人臉框寬度。
         :type Width: int
@@ -1168,7 +1168,7 @@ class FaceQualityInfo(AbstractModel):
     def __init__(self):
         """
         :param Score: 質量分: [0,100]，綜合評價圖像質量是否适合人臉識别，分數越高質量越好。 
-正常情況，只需要使用Score作爲質量分總體的判斷标準即可。Sharpness、Brightness、Completeness等細項分僅供參考。
+正常情況，只需要使用Score作爲質量分總體的判斷標準即可。Sharpness、Brightness、Completeness等細項分僅供參考。
 參考範圍：[0,40]較差，[40,60] 一般，[60,80]較好，[80,100]很好。 
 建議：人臉入庫選取70以上的圖片。
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -1209,13 +1209,13 @@ class FaceRect(AbstractModel):
 
     def __init__(self):
         """
-        :param X: 人臉框左上角橫坐标。 
-人臉框包含人臉五官位置并在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐标負值。 
-若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐标取0。
+        :param X: 人臉框左上角橫坐標。 
+人臉框包含人臉五官位置並在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐標負值。 
+若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐標取0。
         :type X: int
-        :param Y: 人臉框左上角縱坐标。 
-人臉框包含人臉五官位置并在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐标負值。 
-若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐标取0。
+        :param Y: 人臉框左上角縱坐標。 
+人臉框包含人臉五官位置並在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐標負值。 
+若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐標取0。
         :type Y: int
         :param Width: 人臉寬度
         :type Width: int
@@ -1336,7 +1336,7 @@ class GetCheckSimilarPersonJobIdListRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Offset: 起始序号，預設值爲0。
+        :param Offset: 起始序號，預設值爲0。
         :type Offset: int
         :param Limit: 返回數量，預設值爲10，最大值爲1000。
         :type Limit: int
@@ -1445,7 +1445,7 @@ class GetGroupListRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Offset: 起始序号，預設值爲0
+        :param Offset: 起始序號，預設值爲0
         :type Offset: int
         :param Limit: 返回數量，預設值爲10，最大值爲1000
         :type Limit: int
@@ -1545,7 +1545,7 @@ class GetPersonGroupInfoRequest(AbstractModel):
         """
         :param PersonId: 人員ID
         :type PersonId: str
-        :param Offset: 起始序号，預設值爲0
+        :param Offset: 起始序號，預設值爲0
         :type Offset: int
         :param Limit: 返回數量，預設值爲10，最大值爲100
         :type Limit: int
@@ -1648,7 +1648,7 @@ class GetPersonListRequest(AbstractModel):
         """
         :param GroupId: 人員庫ID
         :type GroupId: str
-        :param Offset: 起始序号，預設值爲0
+        :param Offset: 起始序號，預設值爲0
         :type Offset: int
         :param Limit: 返回數量，預設值爲10，最大值爲1000
         :type Limit: int
@@ -1712,7 +1712,7 @@ class GetSimilarPersonResultRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param JobId: 查重任務ID，用于查詢、獲取查重的進度和結果。
+        :param JobId: 查重任務ID，用於查詢、獲取查重的進度和結果。
         :type JobId: str
         """
         self.JobId = None
@@ -1845,7 +1845,7 @@ class JobIdInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param JobId: 查重任務ID，用于查詢、獲取查重的進度和結果。
+        :param JobId: 查重任務ID，用於查詢、獲取查重的進度和結果。
         :type JobId: str
         :param StartTime: 查重起始時間。 
 StartTime的值是自 Unix 紀元時間到Group創建時間的毫秒數。 
@@ -2088,15 +2088,15 @@ Unix 紀元時間是 1970 年 1 月 1 日星期四，協調世界時 (UTC) 00:00
 
 
 class Point(AbstractModel):
-    """坐标
+    """坐標
 
     """
 
     def __init__(self):
         """
-        :param X: x坐标
+        :param X: x坐標
         :type X: int
-        :param Y: Y坐标
+        :param Y: Y坐標
         :type Y: int
         """
         self.X = None
@@ -2188,15 +2188,15 @@ class SearchFacesRequest(AbstractModel):
         :type Image: str
         :param Url: 圖片的 Url 。對應圖片 base64 編碼後大小不可超過5M。
 Url、Image必須提供一個，如果都提供，只使用 Url。  
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
         :param MaxFaceNum: 最多識别的人臉數目。預設值爲1（僅檢測圖片中面積最大的那張人臉），最大值爲10。 
-MaxFaceNum用于，當輸入的待識别圖片包含多張人臉時，設定要搜索的人臉的數量。 
+MaxFaceNum用於，當輸入的待識别圖片包含多張人臉時，設定要搜索的人臉的數量。 
 例：輸入的Image或Url中的圖片包含多張人臉，設MaxFaceNum=5，則會識别圖片中面積最大的5張人臉。
         :type MaxFaceNum: int
-        :param MinFaceSize: 人臉長和寬的最小尺寸，單位爲像素。預設爲34。低于34的人臉圖片無法被識别。建議設置爲80。
+        :param MinFaceSize: 人臉長和寬的最小尺寸，單位爲像素。預設爲34。低於34的人臉圖片無法被識别。建議設置爲80。
         :type MinFaceSize: int
         :param MaxPersonNum: 單張被識别的人臉返回的最相似人員數量。預設值爲5，最大值爲100。 
 例，設MaxFaceNum爲1，MaxPersonNum爲8，則返回Top8相似的人員訊息。
@@ -2291,15 +2291,15 @@ class SearchFacesReturnsByGroupRequest(AbstractModel):
         :type Image: str
         :param Url: 圖片的 Url 。對應圖片 base64 編碼後大小不可超過5M。
 Url、Image必須提供一個，如果都提供，只使用 Url。
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
         :param MaxFaceNum: 最多識别的人臉數目。預設值爲1（僅檢測圖片中面積最大的那張人臉），最大值爲10。
-MaxFaceNum用于，當輸入的待識别圖片包含多張人臉時，設定要搜索的人臉的數量。
+MaxFaceNum用於，當輸入的待識别圖片包含多張人臉時，設定要搜索的人臉的數量。
 例：輸入的Image或Url中的圖片包含多張人臉，設MaxFaceNum=5，則會識别圖片中面積最大的5張人臉。
         :type MaxFaceNum: int
-        :param MinFaceSize: 人臉長和寬的最小尺寸，單位爲像素。預設爲34。低于34将影響搜索精度。建議設置爲80。
+        :param MinFaceSize: 人臉長和寬的最小尺寸，單位爲像素。預設爲34。低於34将影響搜索精度。建議設置爲80。
         :type MinFaceSize: int
         :param MaxPersonNumPerGroup: 被檢測到的人臉，對應最多返回的最相似人員數目。預設值爲5，最大值爲10。  
 例，設MaxFaceNum爲3，MaxPersonNum爲5，則最多可能返回3*5=15個人員。
@@ -2315,7 +2315,7 @@ MaxFaceNum用于，當輸入的待識别圖片包含多張人臉時，設定要�
 預設 0。 
 若圖片質量不滿足要求，則返回結果中會提示圖片質量檢測不符要求。
         :type QualityControl: int
-        :param FaceMatchThreshold: 出參Score中，只有大于等于FaceMatchThreshold值的結果才會返回。
+        :param FaceMatchThreshold: 出參Score中，只有大於等於FaceMatchThreshold值的結果才會返回。
 預設爲0。
 取值範圍[0.0,100.0) 。
         :type FaceMatchThreshold: float
@@ -2396,15 +2396,15 @@ class SearchPersonsRequest(AbstractModel):
         :type Image: str
         :param Url: 圖片的 Url 。對應圖片 base64 編碼後大小不可超過5M。
 Url、Image必須提供一個，如果都提供，只使用 Url。
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
         :param MaxFaceNum: 最多識别的人臉數目。預設值爲1（僅檢測圖片中面積最大的那張人臉），最大值爲10。
-MaxFaceNum用于，當輸入的待識别圖片包含多張人臉時，設定要搜索的人臉的數量。
+MaxFaceNum用於，當輸入的待識别圖片包含多張人臉時，設定要搜索的人臉的數量。
 例：輸入的Image或Url中的圖片包含多張人臉，設MaxFaceNum=5，則會識别圖片中面積最大的5張人臉。
         :type MaxFaceNum: int
-        :param MinFaceSize: 人臉長和寬的最小尺寸，單位爲像素。預設爲34。低于34将影響搜索精度。建議設置爲80。
+        :param MinFaceSize: 人臉長和寬的最小尺寸，單位爲像素。預設爲34。低於34将影響搜索精度。建議設置爲80。
         :type MinFaceSize: int
         :param MaxPersonNum: 單張被識别的人臉返回的最相似人員數量。預設值爲5，最大值爲100。
 例，設MaxFaceNum爲1，MaxPersonNum爲8，則返回Top8相似的人員訊息。
@@ -2419,7 +2419,7 @@ MaxFaceNum用于，當輸入的待識别圖片包含多張人臉時，設定要�
 預設 0。 
 若圖片質量不滿足要求，則返回結果中會提示圖片質量檢測不符要求。
         :type QualityControl: int
-        :param FaceMatchThreshold: 出參Score中，只有大于等于FaceMatchThreshold值的結果才會返回。預設爲0。取值範圍[0.0,100.0) 。
+        :param FaceMatchThreshold: 出參Score中，只有大於等於FaceMatchThreshold值的結果才會返回。預設爲0。取值範圍[0.0,100.0) 。
         :type FaceMatchThreshold: float
         :param NeedPersonInfo: 是否返回人員具體訊息。0 爲關閉，1 爲開啓。預設爲 0。其他非0非1值預設爲0
         :type NeedPersonInfo: int
@@ -2500,15 +2500,15 @@ class SearchPersonsReturnsByGroupRequest(AbstractModel):
         :type Image: str
         :param Url: 圖片的 Url 。對應圖片 base64 編碼後大小不可超過5M。
 Url、Image必須提供一個，如果都提供，只使用 Url。
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
         :param MaxFaceNum: 最多識别的人臉數目。預設值爲1（僅檢測圖片中面積最大的那張人臉），最大值爲10。
-MaxFaceNum用于，當輸入的待識别圖片包含多張人臉時，設定要搜索的人臉的數量。
+MaxFaceNum用於，當輸入的待識别圖片包含多張人臉時，設定要搜索的人臉的數量。
 例：輸入的Image或Url中的圖片包含多張人臉，設MaxFaceNum=5，則會識别圖片中面積最大的5張人臉。
         :type MaxFaceNum: int
-        :param MinFaceSize: 人臉長和寬的最小尺寸，單位爲像素。預設爲34。低于34将影響搜索精度。建議設置爲80。
+        :param MinFaceSize: 人臉長和寬的最小尺寸，單位爲像素。預設爲34。低於34将影響搜索精度。建議設置爲80。
         :type MinFaceSize: int
         :param MaxPersonNumPerGroup: 被檢測到的人臉，對應最多返回的最相似人員數目。預設值爲5，最大值爲10。  
 例，設MaxFaceNum爲3，MaxPersonNumPerGroup爲5，GroupIds長度爲3，則最多可能返回3*5*3=45個人員。
@@ -2603,7 +2603,7 @@ class VerifyFaceRequest(AbstractModel):
         :type Image: str
         :param Url: 圖片的 Url 。對應圖片 base64 編碼後大小不可超過5M。
 Url、Image必須提供一個，如果都提供，只使用 Url。  
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
@@ -2680,7 +2680,7 @@ class VerifyPersonRequest(AbstractModel):
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
         :param Url: 圖片的 Url 。 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。

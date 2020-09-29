@@ -26,7 +26,7 @@ class VodClient(AbstractClient):
 
 
     def ApplyUpload(self, request):
-        """* 該介面用于申請媒體文件（和封面文件）的上傳，獲取文件上傳到Top Cloud 點播的元訊息（包括上傳路徑、上傳簽名等），用于後續上傳介面。
+        """* 該介面用於申請媒體文件（和封面文件）的上傳，獲取文件上傳到Top Cloud 點播的元訊息（包括上傳路徑、上傳簽名等），用於後續上傳介面。
         * 上傳流程請參考[服務端上傳綜述](https://cloud.taifucloud.com/document/product/266/9759)。
 
         :param request: 調用ApplyUpload所需參數的結構體。
@@ -55,7 +55,7 @@ class VodClient(AbstractClient):
 
 
     def CommitUpload(self, request):
-        """該介面用于确認媒體文件（和封面文件）上傳到Top Cloud 點播的結果，并儲存媒體訊息，返回文件的播放網址和文件 ID。
+        """該介面用於确認媒體文件（和封面文件）上傳到Top Cloud 點播的結果，並儲存媒體訊息，返回文件的播放網址和文件 ID。
 
         :param request: 調用CommitUpload所需參數的結構體。
         :type request: :class:`taifucloudcloud.vod.v20180717.models.CommitUploadRequest`
@@ -169,7 +169,7 @@ class VodClient(AbstractClient):
 
 
     def CreateClass(self, request):
-        """* 用于對媒體進行分類管理；
+        """* 用於對媒體進行分類管理；
         * 該介面不影響既有媒體的分類，如需修改媒體分類，請調用[修改媒體文件屬性](/document/product/266/31762)介面。
         * 分類層次不可超過 4 層。
         * 每個分類的子類數量不可超過 500 個。
@@ -228,7 +228,7 @@ class VodClient(AbstractClient):
 
 
     def CreatePersonSample(self, request):
-        """該介面用于創建人物樣本，用于通過人臉識别等技術，進行内容識别、内容審核等視訊處理。
+        """該介面用於創建人物樣本，用於通過人臉識别等技術，進行内容識别、内容審核等視訊處理。
 
         :param request: 調用CreatePersonSample所需參數的結構體。
         :type request: :class:`taifucloudcloud.vod.v20180717.models.CreatePersonSampleRequest`
@@ -340,7 +340,7 @@ class VodClient(AbstractClient):
 
 
     def CreateWordSamples(self, request):
-        """該介面用于批次創建關鍵詞樣本，樣本用于通過OCR、ASR技術，進行内容審核、内容識别等視訊處理。
+        """該介面用於批次創建關鍵詞樣本，樣本用於通過OCR、ASR技術，進行内容審核、内容識别等視訊處理。
 
         :param request: 調用CreateWordSamples所需參數的結構體。
         :type request: :class:`taifucloudcloud.vod.v20180717.models.CreateWordSamplesRequest`
@@ -512,7 +512,7 @@ class VodClient(AbstractClient):
 
 
     def DeletePersonSample(self, request):
-        """該介面用于根據人物 ID，删除人物樣本。
+        """該介面用於根據人物 ID，删除人物樣本。
 
         :param request: 調用DeletePersonSample所需參數的結構體。
         :type request: :class:`taifucloudcloud.vod.v20180717.models.DeletePersonSampleRequest`
@@ -624,7 +624,7 @@ class VodClient(AbstractClient):
 
 
     def DeleteWordSamples(self, request):
-        """該介面用于批次删除關鍵詞樣本。
+        """該介面用於批次删除關鍵詞樣本。
 
         :param request: 調用DeleteWordSamples所需參數的結構體。
         :type request: :class:`taifucloudcloud.vod.v20180717.models.DeleteWordSamplesRequest`
@@ -652,7 +652,7 @@ class VodClient(AbstractClient):
 
 
     def DescribeAIAnalysisTemplates(self, request):
-        """根據視訊内容分析範本唯一标識，獲取視訊内容分析範本詳情清單。返回結果包含符合條件的所有用戶自定義視訊内容分析範本及[系統預置視訊内容分析範本]
+        """根據視訊内容分析範本唯一標識，獲取視訊内容分析範本詳情清單。返回結果包含符合條件的所有用戶自定義視訊内容分析範本及[系統預置視訊内容分析範本]
 
         :param request: 調用DescribeAIAnalysisTemplates所需參數的結構體。
         :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribeAIAnalysisTemplatesRequest`
@@ -680,7 +680,7 @@ class VodClient(AbstractClient):
 
 
     def DescribeAIRecognitionTemplates(self, request):
-        """根據視訊内容識别範本唯一标識，獲取視訊内容識别範本詳情清單。返回結果包含符合條件的所有用戶自定義視訊内容識别範本及[系統預置視訊内容識别範本]
+        """根據視訊内容識别範本唯一標識，獲取視訊内容識别範本詳情清單。返回結果包含符合條件的所有用戶自定義視訊内容識别範本及[系統預置視訊内容識别範本]
 
         :param request: 調用DescribeAIRecognitionTemplates所需參數的結構體。
         :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribeAIRecognitionTemplatesRequest`
@@ -736,7 +736,7 @@ class VodClient(AbstractClient):
 
 
     def DescribeContentReviewTemplates(self, request):
-        """根據視訊内容審核範本唯一标識，獲取視訊内容審核範本詳情清單。返回結果包含符合條件的所有用戶自定義範本及[系統預置内容審核範本]。
+        """根據視訊内容審核範本唯一標識，獲取視訊内容審核範本詳情清單。返回結果包含符合條件的所有用戶自定義範本及[系統預置内容審核範本]。
 
         :param request: 調用DescribeContentReviewTemplates所需參數的結構體。
         :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribeContentReviewTemplatesRequest`
@@ -802,7 +802,7 @@ class VodClient(AbstractClient):
 
 
     def DescribePersonSamples(self, request):
-        """該介面用于查詢人物樣本訊息，支援根據人物 ID、名稱、标簽，分頁查詢。
+        """該介面用於查詢人物樣本訊息，支援根據人物 ID、名稱、標簽，分頁查詢。
 
         :param request: 調用DescribePersonSamples所需參數的結構體。
         :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribePersonSamplesRequest`
@@ -886,7 +886,7 @@ class VodClient(AbstractClient):
 
 
     def DescribeTasks(self, request):
-        """* 該介面用于查詢任務清單；
+        """* 該介面用於查詢任務清單；
         * 當清單數據比較多時，單次介面調用無法拉取整個清單，可通過 ScrollToken 參數，分批拉取；
         * 只能查詢到最近三天（72 小時）内的任務。
 
@@ -916,7 +916,7 @@ class VodClient(AbstractClient):
 
 
     def DescribeTranscodeTemplates(self, request):
-        """根據轉碼範本唯一标識，獲取轉碼範本詳情清單。返回結果包含符合條件的所有用戶自定義範本及[系統預置轉碼範本](https://cloud.taifucloud.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+        """根據轉碼範本唯一標識，獲取轉碼範本詳情清單。返回結果包含符合條件的所有用戶自定義範本及[系統預置轉碼範本](https://cloud.taifucloud.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
 
         :param request: 調用DescribeTranscodeTemplates所需參數的結構體。
         :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribeTranscodeTemplatesRequest`
@@ -972,7 +972,7 @@ class VodClient(AbstractClient):
 
 
     def DescribeWordSamples(self, request):
-        """該介面用于根據應用場景、關鍵詞、标簽，分頁查詢關鍵詞樣本訊息。
+        """該介面用於根據應用場景、關鍵詞、標簽，分頁查詢關鍵詞樣本訊息。
 
         :param request: 調用DescribeWordSamples所需參數的結構體。
         :type request: :class:`taifucloudcloud.vod.v20180717.models.DescribeWordSamplesRequest`
@@ -1010,7 +1010,7 @@ class VodClient(AbstractClient):
         6. 對點播中的多個流進行拼接，生成一個新的視訊；
         7. 對點播中的多個流進行剪輯，然後拼接，生成一個新的視訊。
 
-        對于生成的新視訊，還可以指定生成後的視訊是否要執行任務流。
+        對於生成的新視訊，還可以指定生成後的視訊是否要執行任務流。
 
         :param request: 調用EditMedia所需參數的結構體。
         :type request: :class:`taifucloudcloud.vod.v20180717.models.EditMediaRequest`
@@ -1041,27 +1041,27 @@ class VodClient(AbstractClient):
         """直播即時剪輯，是指在直播過程中（即直播尚未結束時），客戶可以在過往直播内容中選擇一段，實時生成一個新的視訊（HLS 格式），開發者可以将其立即分享出去，或者長久保存起來。
 
         Top Cloud 點播支援兩種即時剪輯模式：
-        - 剪輯固化：将剪輯出來的視訊保存成獨立的視訊，擁有獨立 FileId；适用于将精彩片段**長久保存**的場景；
-        - 剪輯不固化：剪輯得到的視訊附屬于直播錄制文件，沒有獨立 FileId；适用于将精彩片段**臨時分享**的場景。
+        - 剪輯固化：将剪輯出來的視訊保存成獨立的視訊，擁有獨立 FileId；适用於将精彩片段**長久保存**的場景；
+        - 剪輯不固化：剪輯得到的視訊附屬於直播錄制文件，沒有獨立 FileId；适用於将精彩片段**臨時分享**的場景。
 
         注意：
-        - 使用直播即時剪輯功能的前提是：目标直播流開啓了[時移回看](https://cloud.taifucloud.com/document/product/267/32742)功能。
-        - 直播即時剪輯是基于直播錄制生成的 m3u8 文件進行的，故而其最小剪輯精度爲一個 ts 切片，無法實現秒級或者更爲精确的剪輯精度。
+        - 使用直播即時剪輯功能的前提是：目標直播流開啓了[時移回看](https://cloud.taifucloud.com/document/product/267/32742)功能。
+        - 直播即時剪輯是基於直播錄制生成的 m3u8 文件進行的，故而其最小剪輯精度爲一個 ts 切片，無法實現秒級或者更爲精确的剪輯精度。
 
 
         ### 剪輯固化
         所謂剪輯固化，是指将剪輯出來的視訊是保存成一個獨立的視訊（擁有獨立的 FileId）。其生命週期不受原始直播錄制視訊影響（即使原始錄制視訊被删除，剪輯結果也不會受到任何影響）；也可以對其進行轉碼、 發布等二次處理。
 
-        舉例如下：一場完整的足球比賽，直播錄制出來的原始視訊可能長達 2 個小時，客戶出于節省成本的目的可以對這個視訊儲存 2 個月，但對于直播即時剪輯的「精彩時刻」視訊卻可以指定儲存更長時間，同時可以單獨對「精彩時刻」視訊進行轉碼、 發布等額外的點播操作，這時候可以選擇直播即時剪輯并且固化的方案。
+        舉例如下：一場完整的足球比賽，直播錄制出來的原始視訊可能長達 2 個小時，客戶出於節省成本的目的可以對這個視訊儲存 2 個月，但對於直播即時剪輯的「精彩時刻」視訊卻可以指定儲存更長時間，同時可以單獨對「精彩時刻」視訊進行轉碼、 發布等額外的點播操作，這時候可以選擇直播即時剪輯並且固化的方案。
 
-        剪輯固化的優勢在于其生命週期與原始錄制視訊相互獨立，可以獨立管理、長久保存。
+        剪輯固化的優勢在於其生命週期與原始錄制視訊相互獨立，可以獨立管理、長久保存。
 
         ### 剪輯不固化
         所謂剪輯不固化，是指剪輯所得到的結果（m3u8 文件）與直播錄制視訊共享相同的 ts 分片，新生成的視訊不是一個獨立完整的視訊（沒有獨立 FileId，只有播放 URL），其有效期與直播錄制的完整視訊有效期是一緻的。一旦直播錄制出來的視訊被删除，也會導緻該片段無法播放。
 
-        剪輯不固化，由于其剪輯結果不是一個獨立的視訊，因而也不會納入點播媒資視訊管理（比如控制台的視訊總數不會統計這一片段）中，也無法單獨針對這個片段做轉碼、 發布等任何視訊處理操作。
+        剪輯不固化，由於其剪輯結果不是一個獨立的視訊，因而也不會納入點播媒資視訊管理（比如控制台的視訊總數不會統計這一片段）中，也無法單獨針對這個片段做轉碼、 發布等任何視訊處理操作。
 
-        剪輯不固化的優勢在于其剪輯操作十分“輕量化”，不會産生額外的儲存開銷。但其不足之處在于生命週期與原始錄制視訊相同，且無法進一步進行轉碼等視訊處理。
+        剪輯不固化的優勢在於其剪輯操作十分“輕量化”，不會産生額外的儲存開銷。但其不足之處在於生命週期與原始錄制視訊相同，且無法進一步進行轉碼等視訊處理。
 
         :param request: 調用LiveRealTimeClip所需參數的結構體。
         :type request: :class:`taifucloudcloud.vod.v20180717.models.LiveRealTimeClipRequest`
@@ -1203,7 +1203,7 @@ class VodClient(AbstractClient):
 
 
     def ModifyMediaInfo(self, request):
-        """修改媒體文件的屬性，包括分類、名稱、描述、标簽、過期時間、打點訊息、視訊封面等。
+        """修改媒體文件的屬性，包括分類、名稱、描述、標簽、過期時間、打點訊息、視訊封面等。
 
         :param request: 調用ModifyMediaInfo所需參數的結構體。
         :type request: :class:`taifucloudcloud.vod.v20180717.models.ModifyMediaInfoRequest`
@@ -1231,7 +1231,7 @@ class VodClient(AbstractClient):
 
 
     def ModifyPersonSample(self, request):
-        """該介面用于根據人物 ID，修改人物樣本訊息，包括名稱、描述的修改，以及人臉、标簽的添加、删除、重置操作。人臉删除操作需保證至少剩餘 1 張圖片，否則，請使用重置操作。
+        """該介面用於根據人物 ID，修改人物樣本訊息，包括名稱、描述的修改，以及人臉、標簽的添加、删除、重置操作。人臉删除操作需保證至少剩餘 1 張圖片，否則，請使用重置操作。
 
         :param request: 調用ModifyPersonSample所需參數的結構體。
         :type request: :class:`taifucloudcloud.vod.v20180717.models.ModifyPersonSampleRequest`
@@ -1315,7 +1315,7 @@ class VodClient(AbstractClient):
 
 
     def ModifyWordSample(self, request):
-        """該介面用于修改關鍵詞的應用場景、标簽，關鍵詞本身不可修改，如需修改，可删除重建。
+        """該介面用於修改關鍵詞的應用場景、標簽，關鍵詞本身不可修改，如需修改，可删除重建。
 
         :param request: 調用ModifyWordSample所需參數的結構體。
         :type request: :class:`taifucloudcloud.vod.v20180717.models.ModifyWordSampleRequest`
@@ -1350,9 +1350,9 @@ class VodClient(AbstractClient):
         4. 對視訊采樣截圖；
         5. 對視訊截圖雪碧圖；
         6. 對視訊截取一張圖做封面；
-        7. 對視訊轉自适應碼流（并加密）；
+        7. 對視訊轉自适應碼流（並加密）；
         8. 智慧内容審核（ 、鑒恐、鑒政）；
-        9. 智慧内容分析（标簽、分類、封面、按幀标簽）；
+        9. 智慧内容分析（標簽、分類、封面、按幀標簽）；
         10. 智慧内容識别（視訊片頭片尾、人臉、文本全文、文本關鍵詞、語音全文、語音關鍵詞、物體）。
 
         :param request: 調用ProcessMedia所需參數的結構體。
@@ -1415,7 +1415,7 @@ class VodClient(AbstractClient):
         """對來源爲 URL 的影音媒體發起處理任務，功能包括：
 
         1. 智慧内容審核（ 、鑒恐、鑒政）；
-        2. 智慧内容分析（标簽、分類、封面、按幀标簽）；
+        2. 智慧内容分析（標簽、分類、封面、按幀標簽）；
         3. 智慧内容識别（視訊片頭片尾、人臉、文本全文、文本關鍵詞、語音全文、語音關鍵詞、物體）。
 
         :param request: 調用ProcessMediaByUrl所需參數的結構體。
@@ -1444,7 +1444,7 @@ class VodClient(AbstractClient):
 
 
     def PullEvents(self, request):
-        """* 該介面用于從點播服務端獲取事件通知，詳見[服務端事件通知](https://cloud.taifucloud.com/document/product/266/7829)；
+        """* 該介面用於從點播服務端獲取事件通知，詳見[服務端事件通知](https://cloud.taifucloud.com/document/product/266/7829)；
         * 介面爲長輪詢模式，即：如果服務端存在未消費事件，則立即返回給請求方；如果服務端沒有未消費事件，則後台會将請求挂起，直到有新的事件産生爲止；
         * 請求最多挂起 5 秒，建議請求方将超時時間設置爲 10 秒；
         * 若該介面有事件返回，調用方必須再調用[确認事件通知](https://cloud.taifucloud.com/document/product/266/33434)介面，确認事件通知已經處理，否則該事件通知後續會再次被拉取到。
@@ -1505,14 +1505,14 @@ class VodClient(AbstractClient):
     def SearchMedia(self, request):
         """搜索媒體訊息，支援各種條件篩選，以及對返回結果進行排序、過濾等功能，具體包括：
         - 根據媒體文件名或描述訊息進行文本模糊搜索。
-        - 根據媒體分類、标簽進行檢索。
+        - 根據媒體分類、標簽進行檢索。
             - 指定分類集合 ClassIds（見輸入參數），返回滿足集合中任意分類的媒體。例如：假設媒體分類有電影、電視劇、綜藝，其中電影又有子分類曆史片、動作片、言情片。如果 ClassIds 指定了電影、電視劇，那麽電影和電視劇下的所有子分類
             都會返回；而如果 ClassIds 指定的是曆史片、動作片，那麽只有這 2 個子分類下的媒體才會返回。
-            - 指定标簽集合 Tags（見輸入參數），返回滿足集合中任意标簽的媒體。例如：假設媒體标簽有二次元、宮鬥、鬼畜，如果 Tags 指定了二次元、鬼畜 2 個标簽，那麽只要符合這 2 個标簽中任意一個的媒體都會被檢索出來。
+            - 指定標簽集合 Tags（見輸入參數），返回滿足集合中任意標簽的媒體。例如：假設媒體標簽有二次元、宮鬥、鬼畜，如果 Tags 指定了二次元、鬼畜 2 個標簽，那麽只要符合這 2 個標簽中任意一個的媒體都會被檢索出來。
         - 允許指定篩選某一來源 Source（見輸入參數）的媒體。
         - 允許根據直播推流碼、Vid（見輸入參數）篩選直播錄制的媒體。
         - 允許根據媒體的創建範圍篩選媒體。
-        - 允許對上述條件進行任意組合，檢索同時滿足以上條件的媒體。例如可以篩選從 2018 年 12 月 1 日到 2018 年 12 月 8 日創建的電影、電視劇分類下帶有宮鬥、鬼畜标簽的媒體。
+        - 允許對上述條件進行任意組合，檢索同時滿足以上條件的媒體。例如可以篩選從 2018 年 12 月 1 日到 2018 年 12 月 8 日創建的電影、電視劇分類下帶有宮鬥、鬼畜標簽的媒體。
         - 允許對結果進行排序，允許通過 Offset 和 Limit 實現只返回部分結果。
 
         介面搜索限制：

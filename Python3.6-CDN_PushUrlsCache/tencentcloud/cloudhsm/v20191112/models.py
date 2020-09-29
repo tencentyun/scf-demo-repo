@@ -23,7 +23,7 @@ class DescribeHSMBySubnetIdRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param SubnetId: Subnet标識符
+        :param SubnetId: Subnet標識符
         :type SubnetId: str
         """
         self.SubnetId = None
@@ -65,7 +65,7 @@ class DescribeHSMByVpcIdRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param VpcId: VPC标識符
+        :param VpcId: VPC標識符
         :type VpcId: str
         """
         self.VpcId = None

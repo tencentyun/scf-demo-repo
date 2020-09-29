@@ -110,7 +110,7 @@ class OcrClient(AbstractClient):
 
 
     def GeneralBasicOCR(self, request):
-        """本介面支援多場景、任意版面下整圖文字的識别，包括中英文、字母、數字和日文、韓文的識别。應用場景包括：印刷文件識别、網絡圖片識别、廣告圖文字識别、街景店招識别、清單識别、視訊标題識别、頭像文字識别等。
+        """本介面支援多場景、任意版面下整圖文字的識别，包括中英文、字母、數字和日文、韓文的識别。應用場景包括：印刷文件識别、網絡圖片識别、廣告圖文字識别、街景店招識别、清單識别、視訊標題識别、頭像文字識别等。
 
         :param request: 調用GeneralBasicOCR所需參數的結構體。
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.GeneralBasicOCRRequest`
@@ -166,7 +166,7 @@ class OcrClient(AbstractClient):
 
 
     def IDCardOCR(self, request):
-        """本介面支援二代身份證正反面所有欄位的識别，包括姓名、性别、民族、出生日期、住址、公民身份證号、簽發機關、有效期限；具備身份證照片、人像照片的裁剪功能和翻拍件、影印件的識别告警功能。
+        """本介面支援二代身份證正反面所有欄位的識别，包括姓名、性别、民族、出生日期、住址、公民身份證號、簽發機關、有效期限；具備身份證照片、人像照片的裁剪功能和翻拍件、影印件的識别告警功能。
 
         :param request: 調用IDCardOCR所需參數的結構體。
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.IDCardOCRRequest`
@@ -222,7 +222,7 @@ class OcrClient(AbstractClient):
 
 
     def VinOCR(self, request):
-        """本介面支援圖片内車輛識别代号（VIN）的檢測和識别。
+        """本介面支援圖片内車輛識别代號（VIN）的檢測和識别。
 
         :param request: 調用VinOCR所需參數的結構體。
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.VinOCRRequest`
@@ -250,7 +250,7 @@ class OcrClient(AbstractClient):
 
 
     def WaybillOCR(self, request):
-        """本介面支援市面上主流版式電子運單的識别，包括收件人和寄件人的姓名、電話、網址以及運單号等欄位。
+        """本介面支援市面上主流版式電子運單的識别，包括收件人和寄件人的姓名、電話、網址以及運單號等欄位。
 
         :param request: 調用WaybillOCR所需參數的結構體。
         :type request: :class:`taifucloudcloud.ocr.v20181119.models.WaybillOCRRequest`

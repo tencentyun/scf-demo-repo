@@ -82,4 +82,3 @@ while going:
     pygame.display.flip()
     c.tick(40)
 
-

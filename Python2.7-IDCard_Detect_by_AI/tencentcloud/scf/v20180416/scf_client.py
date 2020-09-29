@@ -30,7 +30,7 @@ class ScfClient(AbstractClient):
         注：本介面**不會**複制函數的以下對象或屬性：
         1. 函數的觸發器
         2. 除了$LATEST以外的其它版本
-        3. 函數配置的日志投遞到的CLS目标
+        3. 函數配置的日志投遞到的CLS目標
 
         如有需要，您可以在複制後手動修改新函數。
 
@@ -228,7 +228,7 @@ class ScfClient(AbstractClient):
 
 
     def Invoke(self, request):
-        """該介面用于運作函數。
+        """該介面用於運作函數。
 
         :param request: 調用Invoke所需參數的結構體。
         :type request: :class:`taifucloudcloud.scf.v20180416.models.InvokeRequest`

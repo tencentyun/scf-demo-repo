@@ -37,7 +37,7 @@ class CreateSessionRequest(AbstractModel):
         :type Resolution: str
         :param ImageUrl: 背景圖url，格式爲png或jpeg，寬高1920*1080
         :type ImageUrl: str
-        :param SetNo: 資源池編号，1表示正式，2表示測試
+        :param SetNo: 資源池編號，1表示正式，2表示測試
         :type SetNo: int
         :param Bitrate: 單位Mbps，固定碼率，後端不動态調整(MaxBitrate和MinBitrate将無效)
         :type Bitrate: int
@@ -47,9 +47,9 @@ class CreateSessionRequest(AbstractModel):
         :type MinBitrate: int
         :param Fps: 幀率，可設置爲30、45或60
         :type Fps: int
-        :param UserIp: 遊戲用戶IP，用于就近調度，例如125.127.178.228
+        :param UserIp: 遊戲用戶IP，用於就近調度，例如125.127.178.228
         :type UserIp: str
-        :param Optimization: 優化項，便于客戶灰度開啓新的優化項，預設爲0
+        :param Optimization: 優化項，便於客戶灰度開啓新的優化項，預設爲0
         :type Optimization: int
         """
         self.ClientSession = None
@@ -149,7 +149,7 @@ class DescribeWorkersRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param SetNo: 資源池編号，1表示正式，2表示測試
+        :param SetNo: 資源池編號，1表示正式，2表示測試
         :type SetNo: int
         """
         self.SetNo = None
@@ -206,7 +206,7 @@ class EnterQueueRequest(AbstractModel):
         :type GameId: str
         :param UserId: 用戶ID
         :type UserId: str
-        :param SetNumber: 資源池編号
+        :param SetNumber: 資源池編號
         :type SetNumber: int
         """
         self.First = None
@@ -256,7 +256,7 @@ class ModifyWorkersRequest(AbstractModel):
         """
         :param InstanceIds: 批次機器ID，最多不超過100個
         :type InstanceIds: list of str
-        :param SetNo: 資源池編号，修改有效範圍爲[1,100]，在idle狀态下才能修改成功
+        :param SetNo: 資源池編號，修改有效範圍爲[1,100]，在idle狀态下才能修改成功
         :type SetNo: int
         """
         self.InstanceIds = None
@@ -294,7 +294,7 @@ class QuitQueueRequest(AbstractModel):
         """
         :param UserId: 用戶ID
         :type UserId: str
-        :param SetNumber: 資源池編号
+        :param SetNumber: 資源池編號
         :type SetNumber: int
         """
         self.UserId = None
@@ -370,9 +370,9 @@ class TrylockWorkerRequest(AbstractModel):
         :type GameId: str
         :param GameRegion: 遊戲區域，ap-guangzhou、ap-shanghai、ap-beijing等
         :type GameRegion: str
-        :param SetNo: 資源池編号，1表示共用，2表示測試
+        :param SetNo: 資源池編號，1表示共用，2表示測試
         :type SetNo: int
-        :param UserIp: 遊戲用戶IP，用于就近調度，例如125.127.178.228
+        :param UserIp: 遊戲用戶IP，用於就近調度，例如125.127.178.228
         :type UserIp: str
         """
         self.UserId = None
@@ -416,7 +416,7 @@ class WorkerDetail(AbstractModel):
         """
         :param AppId: 客戶appid
         :type AppId: int
-        :param SetNo: 資源池編号
+        :param SetNo: 資源池編號
         :type SetNo: int
         :param Region: 機器所屬區域
         :type Region: str

@@ -70,7 +70,7 @@ class BillDetail(AbstractModel):
         """
         :param BusinessCodeName: 産品名稱：雲産品大類，如雲伺服器CVM、雲資料庫MySQL
         :type BusinessCodeName: str
-        :param ProductCodeName: 子産品名稱：雲産品子類，如雲伺服器CVM-标準型S1
+        :param ProductCodeName: 子産品名稱：雲産品子類，如雲伺服器CVM-標準型S1
         :type ProductCodeName: str
         :param PayModeName: 計費模式：包年包月和按量計費
         :type PayModeName: str
@@ -282,7 +282,7 @@ class BillResourceSummary(AbstractModel):
         """
         :param BusinessCodeName: 産品名稱：雲産品大類，如雲伺服器CVM、雲資料庫MySQL
         :type BusinessCodeName: str
-        :param ProductCodeName: 子産品：雲産品子類，如雲伺服器CVM-标準型S1， 當沒有獲取到子産品名稱時，返回"-"
+        :param ProductCodeName: 子産品：雲産品子類，如雲伺服器CVM-標準型S1， 當沒有獲取到子産品名稱時，返回"-"
         :type ProductCodeName: str
         :param PayModeName: 計費模式：包年包月和按量計費
         :type PayModeName: str
@@ -431,9 +431,9 @@ class BillTagInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param TagKey: 分賬标簽鍵
+        :param TagKey: 分賬標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -458,7 +458,7 @@ class BillTransactionInfo(AbstractModel):
         :type Amount: int
         :param Balance: 可用餘額，單位（分）；正數表示入賬，負數表示出賬
         :type Balance: int
-        :param BillId: 流水号，如20190131020000236005203583326401
+        :param BillId: 流水號，如20190131020000236005203583326401
         :type BillId: str
         :param OperationInfo: 描述訊息
         :type OperationInfo: str
@@ -1157,7 +1157,7 @@ class Deal(AbstractModel):
 
     def __init__(self):
         """
-        :param OrderId: 訂單号
+        :param OrderId: 訂單號
         :type OrderId: str
         :param Status: 訂單狀态
         :type Status: int
@@ -1281,13 +1281,13 @@ class DescribeBillDetailRequest(AbstractModel):
         :type Limit: int
         :param PeriodType: 週期類型，byUsedTime按計費週期/byPayTime按扣費週期。需要與費用中心該月份帳單的週期保持一緻。您可前往[帳單概覽](https://console.cloud.taifucloud.com/expense/bill/overview)頁面頂部檢視确認您的帳單統計週期類型。
         :type PeriodType: str
-        :param Month: 月份，格式爲yyyy-mm，Month和BeginTime&EndTime必傳一個，如果有傳BeginTime&EndTime則Month欄位無效。不能早于開通帳單2.0的月份，最多可拉取24個月内的數據。
+        :param Month: 月份，格式爲yyyy-mm，Month和BeginTime&EndTime必傳一個，如果有傳BeginTime&EndTime則Month欄位無效。不能早於開通帳單2.0的月份，最多可拉取24個月内的數據。
         :type Month: str
-        :param BeginTime: 週期開始時間，格式爲Y-m-d H:i:s，Month和BeginTime&EndTime必傳一個，如果有該欄位則Month欄位無效。BeginTime和EndTime必須一起傳。不能早于開通帳單2.0的月份，最多可拉取24個月内的數據。(不支援跨月查詢)
+        :param BeginTime: 週期開始時間，格式爲Y-m-d H:i:s，Month和BeginTime&EndTime必傳一個，如果有該欄位則Month欄位無效。BeginTime和EndTime必須一起傳。不能早於開通帳單2.0的月份，最多可拉取24個月内的數據。(不支援跨月查詢)
         :type BeginTime: str
-        :param EndTime: 週期結束時間，格式爲Y-m-d H:i:s，Month和BeginTime&EndTime必傳一個，如果有該欄位則Month欄位無效。BeginTime和EndTime必須一起傳。不能早于開通帳單2.0的月份，最多可拉取24個月内的數據。（不支援跨月查詢）
+        :param EndTime: 週期結束時間，格式爲Y-m-d H:i:s，Month和BeginTime&EndTime必傳一個，如果有該欄位則Month欄位無效。BeginTime和EndTime必須一起傳。不能早於開通帳單2.0的月份，最多可拉取24個月内的數據。（不支援跨月查詢）
         :type EndTime: str
-        :param NeedRecordNum: 是否需要訪問清單的總記錄數，用于前端分頁
+        :param NeedRecordNum: 是否需要訪問清單的總記錄數，用於前端分頁
 1-表示需要， 0-表示不需要
         :type NeedRecordNum: int
         :param ProductCode: 查詢指定産品訊息
@@ -1461,9 +1461,9 @@ class DescribeBillResourceSummaryRequest(AbstractModel):
         :type Limit: int
         :param PeriodType: 週期類型，byUsedTime按計費週期/byPayTime按扣費週期。需要與費用中心該月份帳單的週期保持一緻。您可前往[帳單概覽](https://console.cloud.taifucloud.com/expense/bill/overview)頁面頂部檢視确認您的帳單統計週期類型。
         :type PeriodType: str
-        :param Month: 月份，格式爲yyyy-mm。不能早于開通帳單2.0的月份，最多可拉取24個月内的數據。
+        :param Month: 月份，格式爲yyyy-mm。不能早於開通帳單2.0的月份，最多可拉取24個月内的數據。
         :type Month: str
-        :param NeedRecordNum: 是否需要訪問清單的總記錄數，用于前端分頁
+        :param NeedRecordNum: 是否需要訪問清單的總記錄數，用於前端分頁
 1-表示需要， 0-表示不需要
         :type NeedRecordNum: int
         :param ActionType: 查詢交易類型。如 按量計費日結，按量計費小時結 等
@@ -1761,7 +1761,7 @@ class DescribeBillSummaryByTagRequest(AbstractModel):
         :type BeginTime: str
         :param EndTime: 目前只支援傳當月結束，且必須和BeginTime爲相同月份，例 2018-09-30 23:59:59
         :type EndTime: str
-        :param TagKey: 分賬标簽鍵
+        :param TagKey: 分賬標簽鍵
         :type TagKey: str
         """
         self.PayerUin = None
@@ -1786,7 +1786,7 @@ class DescribeBillSummaryByTagResponse(AbstractModel):
         """
         :param Ready: 數據是否準備好，0未準備好，1準備好
         :type Ready: int
-        :param SummaryOverview: 各标簽值花費分布詳情
+        :param SummaryOverview: 各標簽值花費分布詳情
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SummaryOverview: list of TagSummaryOverviewItem
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -1819,14 +1819,14 @@ class DescribeCostDetailRequest(AbstractModel):
         :type Limit: int
         :param Offset: 偏移量
         :type Offset: int
-        :param BeginTime: 週期開始時間，格式爲Y-m-d H:i:s，Month和BeginTime&EndTime必傳一個，如果有該欄位則Month欄位無效。BeginTime和EndTime必須一起傳。不能早于開通成本分析的月份，最多可拉取24個月内的數據。
+        :param BeginTime: 週期開始時間，格式爲Y-m-d H:i:s，Month和BeginTime&EndTime必傳一個，如果有該欄位則Month欄位無效。BeginTime和EndTime必須一起傳。不能早於開通成本分析的月份，最多可拉取24個月内的數據。
         :type BeginTime: str
-        :param EndTime: 週期結束時間，格式爲Y-m-d H:i:s，Month和BeginTime&EndTime必傳一個，如果有該欄位則Month欄位無效。BeginTime和EndTime必須一起傳。不能早于開通成本分析的月份，最多可拉取24個月内的數據。
+        :param EndTime: 週期結束時間，格式爲Y-m-d H:i:s，Month和BeginTime&EndTime必傳一個，如果有該欄位則Month欄位無效。BeginTime和EndTime必須一起傳。不能早於開通成本分析的月份，最多可拉取24個月内的數據。
         :type EndTime: str
-        :param NeedRecordNum: 是否需要訪問清單的總記錄數，用于前端分頁
+        :param NeedRecordNum: 是否需要訪問清單的總記錄數，用於前端分頁
 1-表示需要， 0-表示不需要
         :type NeedRecordNum: int
-        :param Month: 月份，格式爲yyyy-mm，Month和BeginTime&EndTime必傳一個，如果有傳BeginTime&EndTime則Month欄位無效。不能早于開通成本分析的月份，最多可拉取24個月内的數據。
+        :param Month: 月份，格式爲yyyy-mm，Month和BeginTime&EndTime必傳一個，如果有傳BeginTime&EndTime則Month欄位無效。不能早於開通成本分析的月份，最多可拉取24個月内的數據。
         :type Month: str
         :param ProductCode: 查詢指定産品訊息
         :type ProductCode: str
@@ -1899,7 +1899,7 @@ class DescribeCostSummaryByProductRequest(AbstractModel):
         """
         :param PayerUin: 查詢帳單數據的用戶UIN
         :type PayerUin: str
-        :param BeginTime: 目前只支援傳當月1号 00:00:00，且必須和EndTime爲相同月份，不支援跨月查詢，例 2018-09-01 00:00:00
+        :param BeginTime: 目前只支援傳當月1號 00:00:00，且必須和EndTime爲相同月份，不支援跨月查詢，例 2018-09-01 00:00:00
         :type BeginTime: str
         :param EndTime: 目前只支援傳當月最後一天 23:59:59，且必須和BeginTime爲相同月份，不支援跨月查詢，例 2018-09-30 23:59:59
         :type EndTime: str
@@ -1978,7 +1978,7 @@ class DescribeCostSummaryByProjectRequest(AbstractModel):
         """
         :param PayerUin: 查詢帳單數據的用戶UIN
         :type PayerUin: str
-        :param BeginTime: 目前只支援傳當月1号 00:00:00，且必須和EndTime爲相同月份，不支援跨月查詢，例 2018-09-01 00:00:00
+        :param BeginTime: 目前只支援傳當月1號 00:00:00，且必須和EndTime爲相同月份，不支援跨月查詢，例 2018-09-01 00:00:00
         :type BeginTime: str
         :param EndTime: 目前只支援傳當月最後一天 23:59:59，且必須和BeginTime爲相同月份，不支援跨月查詢，例 2018-09-30 23:59:59
         :type EndTime: str
@@ -2055,7 +2055,7 @@ class DescribeCostSummaryByRegionRequest(AbstractModel):
         """
         :param PayerUin: 查詢帳單數據的用戶UIN
         :type PayerUin: str
-        :param BeginTime: 目前只支援傳當月1号 00:00:00，且必須和EndTime爲相同月份，不支援跨月查詢，例 2018-09-01 00:00:00
+        :param BeginTime: 目前只支援傳當月1號 00:00:00，且必須和EndTime爲相同月份，不支援跨月查詢，例 2018-09-01 00:00:00
         :type BeginTime: str
         :param EndTime: 目前只支援傳當月最後一天 23:59:59，且必須和BeginTime爲相同月份，不支援跨月查詢，例 2018-09-30 23:59:59
         :type EndTime: str
@@ -2133,7 +2133,7 @@ class DescribeCostSummaryByResourceRequest(AbstractModel):
         """
         :param PayerUin: 查詢帳單數據的用戶UIN
         :type PayerUin: str
-        :param BeginTime: 目前只支援傳當月1号 00:00:00，且必須和EndTime爲相同月份，不支援跨月查詢，例 2018-09-01 00:00:00
+        :param BeginTime: 目前只支援傳當月1號 00:00:00，且必須和EndTime爲相同月份，不支援跨月查詢，例 2018-09-01 00:00:00
         :type BeginTime: str
         :param EndTime: 目前只支援傳當月最後一天 23:59:59，且必須和BeginTime爲相同月份，不支援跨月查詢，例 2018-09-30 23:59:59
         :type EndTime: str
@@ -2250,7 +2250,7 @@ class DescribeDealsByCondRequest(AbstractModel):
 11：代付拒絕
 12：支付中
         :type Status: int
-        :param OrderId: 訂單号
+        :param OrderId: 訂單號
         :type OrderId: str
         """
         self.StartTime = None
@@ -2455,7 +2455,7 @@ class PayDealsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param OrderIds: 需要支付的一個或者多個訂單号
+        :param OrderIds: 需要支付的一個或者多個訂單號
         :type OrderIds: list of str
         :param AutoVoucher: 是否自動使用 ,1:是,0否,預設0
         :type AutoVoucher: int
@@ -2480,7 +2480,7 @@ class PayDealsResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param OrderIds: 此次操作支付成功的訂單号數組
+        :param OrderIds: 此次操作支付成功的訂單號數組
         :type OrderIds: list of str
         :param ResourceIds: 此次操作支付成功的資源Id數組
         :type ResourceIds: list of str
@@ -2555,7 +2555,7 @@ class ProductInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param Name: 商品詳情名稱标識
+        :param Name: 商品詳情名稱標識
         :type Name: str
         :param Value: 商品詳情
         :type Value: str
@@ -2661,13 +2661,13 @@ class RegionSummaryOverviewItem(AbstractModel):
 
 
 class TagSummaryOverviewItem(AbstractModel):
-    """按标簽匯總消費詳情
+    """按標簽匯總消費詳情
 
     """
 
     def __init__(self):
         """
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagValue: str
         :param RealTotalCost: 實際花費

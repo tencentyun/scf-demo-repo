@@ -17,7 +17,7 @@ from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Account(AbstractModel):
-    """資料庫賬号訊息
+    """資料庫賬號訊息
 
     """
 
@@ -38,23 +38,23 @@ class Account(AbstractModel):
 
 
 class AccountInfo(AbstractModel):
-    """賬号詳細訊息
+    """賬號詳細訊息
 
     """
 
     def __init__(self):
         """
-        :param Notes: 賬号備注訊息
+        :param Notes: 賬號備注訊息
         :type Notes: str
-        :param Host: 賬号的域名
+        :param Host: 賬號的域名
         :type Host: str
-        :param User: 賬号的名稱
+        :param User: 賬號的名稱
         :type User: str
-        :param ModifyTime: 賬号訊息修改時間
+        :param ModifyTime: 賬號訊息修改時間
         :type ModifyTime: str
         :param ModifyPasswordTime: 修改密碼的時間
         :type ModifyPasswordTime: str
-        :param CreateTime: 賬号的創建時間
+        :param CreateTime: 賬號的創建時間
         :type CreateTime: str
         """
         self.Notes = None
@@ -538,7 +538,7 @@ class CreateAccountsRequest(AbstractModel):
         """
         :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同。
         :type InstanceId: str
-        :param Accounts: 雲資料庫賬号。
+        :param Accounts: 雲資料庫賬號。
         :type Accounts: list of Account
         :param Password: 新帳戶的密碼。
         :type Password: str
@@ -593,7 +593,7 @@ class CreateBackupRequest(AbstractModel):
         """
         :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv。與雲資料庫控制台頁面中顯示的實例 ID 相同。
         :type InstanceId: str
-        :param BackupMethod: 目标備份方法，可選的值：logical - 邏輯冷備，physical - 物理冷備。
+        :param BackupMethod: 目標備份方法，可選的值：logical - 邏輯冷備，physical - 物理冷備。
         :type BackupMethod: str
         :param BackupDBTableList: 需要備份的庫表訊息，如果不設置該參數，則預設整實例備份。在 BackupMethod=logical 邏輯備份中才可設置該參數。指定的庫表必須存在，否則可能導緻備份失敗。
 例：如果需要備份 db1 庫的 tb1、tb2 表 和 db2 庫。則該參數設置爲 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]。
@@ -649,9 +649,9 @@ class CreateDBImportJobRequest(AbstractModel):
         :type FileName: str
         :param User: 雲資料庫的用戶名。
         :type User: str
-        :param Password: 雲資料庫實例 User 賬号的密碼。
+        :param Password: 雲資料庫實例 User 賬號的密碼。
         :type Password: str
-        :param DbName: 導入的目标資料庫名，不傳表示不指定資料庫。
+        :param DbName: 導入的目標資料庫名，不傳表示不指定資料庫。
         :type DbName: str
         """
         self.InstanceId = None
@@ -721,7 +721,7 @@ class CreateDBInstanceHourRequest(AbstractModel):
         :type MasterRegion: str
         :param Port: 自定義端口，端口支援範圍：[ 1024-65535 ] 。
         :type Port: int
-        :param Password: 設置 root 帳号密碼，密碼規則：8 - 64 個字元，至少包含字母、數字、字元（支援的字元：_+-&=!@#$%^*()）中的兩種，購買主實例時可指定該參數，購買只讀實例或者災備實例時指定該參數無意義。
+        :param Password: 設置 root 帳號密碼，密碼規則：8 - 64 個字元，至少包含字母、數字、字元（支援的字元：_+-&=!@#$%^*()）中的兩種，購買主實例時可指定該參數，購買只讀實例或者災備實例時指定該參數無意義。
         :type Password: str
         :param ParamList: 參數清單，參數格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通過 [查詢預設的可設置參數清單](https://cloud.taifucloud.com/document/api/236/32662) 查詢支援設置的參數。
         :type ParamList: list of ParamInfo
@@ -741,11 +741,11 @@ class CreateDBInstanceHourRequest(AbstractModel):
         :type AutoRenewFlag: int
         :param InstanceName: 實例名稱。
         :type InstanceName: str
-        :param ResourceTags: 實例标簽訊息。
+        :param ResourceTags: 實例標簽訊息。
         :type ResourceTags: list of TagInfo
         :param DeployGroupId: 置放群組 ID。
         :type DeployGroupId: str
-        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間在當天内唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+        :param ClientToken: 用於保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間在當天内唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
         :type ClientToken: str
         :param DeviceType: 實例類型。支援值包括： "HA" - 高可用版實例， "BASIC" - 基礎版實例。 不指定則預設爲高可用版。
         :type DeviceType: str
@@ -875,7 +875,7 @@ class CreateDBInstanceRequest(AbstractModel):
         :type MasterInstanceId: str
         :param EngineVersion: MySQL 版本，值包括：5.5、5.6 和 5.7，請使用 [獲取雲資料庫可售賣規格](https://cloud.taifucloud.com/document/api/236/17229) 介面獲取可創建的實例版本。
         :type EngineVersion: str
-        :param Password: 設置 root 帳号密碼，密碼規則：8 - 64 個字元，至少包含字母、數字、字元（支援的字元：_+-&=!@#$%^*()）中的兩種，購買主實例時可指定該參數，購買只讀實例或者災備實例時指定該參數無意義。
+        :param Password: 設置 root 帳號密碼，密碼規則：8 - 64 個字元，至少包含字母、數字、字元（支援的字元：_+-&=!@#$%^*()）中的兩種，購買主實例時可指定該參數，購買只讀實例或者災備實例時指定該參數無意義。
         :type Password: str
         :param ProtectMode: 數據複制方式，預設爲 0，支援值包括：0 - 表示異步複制，1 - 表示半同步複制，2 - 表示強同步複制。
         :type ProtectMode: int
@@ -887,7 +887,7 @@ class CreateDBInstanceRequest(AbstractModel):
         :type ParamList: list of ParamInfo
         :param BackupZone: 備庫 2 的可用區訊息，預設爲空，購買強同步主實例時可指定該參數，購買其他類型實例時指定該參數無意義。
         :type BackupZone: str
-        :param AutoRenewFlag: 自動續約标記，可選值爲：0 - 不自動續約；1 - 自動續約。
+        :param AutoRenewFlag: 自動續約標記，可選值爲：0 - 不自動續約；1 - 自動續約。
         :type AutoRenewFlag: int
         :param MasterRegion: 主實例地域訊息，購買災備實例時，該欄位必填。
         :type MasterRegion: str
@@ -897,11 +897,11 @@ class CreateDBInstanceRequest(AbstractModel):
         :type RoGroup: :class:`taifucloudcloud.cdb.v20170320.models.RoGroup`
         :param InstanceName: 實例名稱。
         :type InstanceName: str
-        :param ResourceTags: 實例标簽訊息。
+        :param ResourceTags: 實例標簽訊息。
         :type ResourceTags: list of TagInfo
         :param DeployGroupId: 置放群組 ID。
         :type DeployGroupId: str
-        :param ClientToken: 用于保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間在當天内唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+        :param ClientToken: 用於保證請求幂等性的字串。該字串由客戶生成，需保證不同請求之間在當天内唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
         :type ClientToken: str
         :param DeviceType: 實例類型。支援值包括： "HA" - 高可用版實例， "BASIC" - 基礎版實例。 不指定則預設爲高可用版。
         :type DeviceType: str
@@ -1067,7 +1067,7 @@ class CreateParamTemplateRequest(AbstractModel):
         :type Name: str
         :param Description: 參數範本描述。
         :type Description: str
-        :param EngineVersion: MySQL 版本号。
+        :param EngineVersion: MySQL 版本號。
         :type EngineVersion: str
         :param TemplateId: 源參數範本 ID。
         :type TemplateId: int
@@ -1183,7 +1183,7 @@ class DeleteAccountsRequest(AbstractModel):
         """
         :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同。
         :type InstanceId: str
-        :param Accounts: 雲資料庫賬号。
+        :param Accounts: 雲資料庫賬號。
         :type Accounts: list of Account
         """
         self.InstanceId = None
@@ -1418,9 +1418,9 @@ class DescribeAccountPrivilegesRequest(AbstractModel):
         """
         :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同。
         :type InstanceId: str
-        :param User: 資料庫的賬号名稱。
+        :param User: 資料庫的賬號名稱。
         :type User: str
-        :param Host: 資料庫的賬号域名。
+        :param Host: 資料庫的賬號域名。
         :type Host: str
         """
         self.InstanceId = None
@@ -1495,7 +1495,7 @@ class DescribeAccountsRequest(AbstractModel):
         :type Offset: int
         :param Limit: 單次請求返回的數量，預設值爲20，最小值爲1，最大值爲100。
         :type Limit: int
-        :param AccountRegexp: 比對賬号名的正規表示式，規則同 MySQL 官網。
+        :param AccountRegexp: 比對賬號名的正規表示式，規則同 MySQL 官網。
         :type AccountRegexp: str
         """
         self.InstanceId = None
@@ -1518,9 +1518,9 @@ class DescribeAccountsResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param TotalCount: 符合查詢條件的賬号數量。
+        :param TotalCount: 符合查詢條件的賬號數量。
         :type TotalCount: int
-        :param Items: 符合查詢條件的賬号詳細訊息。
+        :param Items: 符合查詢條件的賬號詳細訊息。
         :type Items: list of AccountInfo
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -2223,7 +2223,7 @@ class DescribeDBInstanceGTIDResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param IsGTIDOpen: GTID 是否開通的标記，可能的取值爲：0 - 未開通，1 - 已開通。
+        :param IsGTIDOpen: GTID 是否開通的標記，可能的取值爲：0 - 未開通，1 - 已開通。
         :type IsGTIDOpen: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -2319,7 +2319,7 @@ class DescribeDBInstancesRequest(AbstractModel):
         :type ZoneIds: list of int non-negative
         :param SubnetIds: 子網 ID。
         :type SubnetIds: list of int non-negative
-        :param CdbErrors: 是否鎖定标記。
+        :param CdbErrors: 是否鎖定標記。
         :type CdbErrors: list of int
         :param OrderBy: 返回結果集排序的欄位，目前支援："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
         :type OrderBy: str
@@ -2333,7 +2333,7 @@ class DescribeDBInstancesRequest(AbstractModel):
         :type ExClusterId: str
         :param InstanceIds: 實例 ID。
         :type InstanceIds: list of str
-        :param InitFlag: 初始化标記，可取值：0 - 未初始化，1 - 初始化。
+        :param InitFlag: 初始化標記，可取值：0 - 未初始化，1 - 初始化。
         :type InitFlag: int
         :param WithDr: 是否包含災備關系對應的實例，可取值：0 - 不包含，1 - 包含。預設取值爲1。如果拉取主實例，則災備關系的數據在DrInfo欄位中， 如果拉取災備實例， 則災備關系的數據在MasterInfo欄位中。災備關系中只包含部分基本的數據，詳細的數據需要自行調介面拉取。
         :type WithDr: int
@@ -3657,7 +3657,7 @@ class DescribeTagsOfInstanceIdsResponse(AbstractModel):
         :type Offset: int
         :param Limit: 分頁大小。
         :type Limit: int
-        :param Rows: 實例标簽訊息。
+        :param Rows: 實例標簽訊息。
         :type Rows: list of TagsInfoOfInstance
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3715,9 +3715,9 @@ class DescribeTasksRequest(AbstractModel):
 5 - 已删除；
 6 - 已暫停。
         :type TaskStatus: list of int
-        :param StartTimeBegin: 第一個任務的開始時間，用于範圍查詢，時間格式如：2017-12-31 10:40:01。
+        :param StartTimeBegin: 第一個任務的開始時間，用於範圍查詢，時間格式如：2017-12-31 10:40:01。
         :type StartTimeBegin: str
-        :param StartTimeEnd: 最後一個任務的開始時間，用于範圍查詢，時間格式如：2017-12-31 10:40:01。
+        :param StartTimeEnd: 最後一個任務的開始時間，用於範圍查詢，時間格式如：2017-12-31 10:40:01。
         :type StartTimeEnd: str
         :param Offset: 記錄偏移量，預設值爲0。
         :type Offset: int
@@ -3844,7 +3844,7 @@ class DescribeUploadedFilesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Path: 文件路徑。該欄位應填用戶主賬号的OwnerUin訊息。
+        :param Path: 文件路徑。該欄位應填用戶主賬號的OwnerUin訊息。
         :type Path: str
         :param Offset: 記錄偏移量，預設值爲0。
         :type Offset: int
@@ -3925,7 +3925,7 @@ class DeviceCpuRateInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param CpuCore: Cpu核編号
+        :param CpuCore: Cpu核編號
         :type CpuCore: int
         :param Rate: Cpu使用率
         :type Rate: list of int
@@ -3946,7 +3946,7 @@ class DeviceDiskInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param IoRatioPerSec: 平均每秒有百分之幾的時間用于IO操作
+        :param IoRatioPerSec: 平均每秒有百分之幾的時間用於IO操作
         :type IoRatioPerSec: list of int
         :param IoWaitTime: 平均每次設備I/O操作的等待時間*100，單位爲毫秒。例如：該值爲201，表示平均每次I/O操作等待時間爲：201/100=2.1毫秒
         :type IoWaitTime: list of int
@@ -4351,7 +4351,7 @@ class InstanceInfo(AbstractModel):
         :type WanStatus: int
         :param Zone: 可用區訊息
         :type Zone: str
-        :param InitFlag: 初始化标志，可能的返回值爲：0-未初始化；1-已初始化
+        :param InitFlag: 初始化標志，可能的返回值爲：0-未初始化；1-已初始化
         :type InitFlag: int
         :param RoVipInfo: 只讀vip訊息。單獨開通只讀實例訪問的只讀實例才有該欄位
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -4369,7 +4369,7 @@ class InstanceInfo(AbstractModel):
         :type InstanceId: str
         :param Volume: 硬碟容量，單位爲 GB
         :type Volume: int
-        :param AutoRenew: 自動續約标志，可能的返回值：0-未開通自動續約；1-已開通自動續約；2-已關閉自動續約
+        :param AutoRenew: 自動續約標志，可能的返回值：0-未開通自動續約；1-已開通自動續約；2-已關閉自動續約
         :type AutoRenew: int
         :param ProtectMode: 數據複制方式。0 - 異步複制；1 - 半同步複制；2 - 強同步複制
         :type ProtectMode: int
@@ -4404,7 +4404,7 @@ class InstanceInfo(AbstractModel):
         :type DrInfo: list of DrInfo
         :param WanDomain: 外網域名
         :type WanDomain: str
-        :param WanPort: 外網端口号
+        :param WanPort: 外網端口號
         :type WanPort: int
         :param PayType: 付費類型，可能的返回值：0-包年包月；1-按量計費
         :type PayType: int
@@ -4412,9 +4412,9 @@ class InstanceInfo(AbstractModel):
         :type CreateTime: str
         :param Vip: 實例 IP
         :type Vip: str
-        :param Vport: 端口号
+        :param Vport: 端口號
         :type Vport: int
-        :param CdbError: 是否鎖定标記
+        :param CdbError: 是否鎖定標記
         :type CdbError: int
         :param UniqVpcId: 私有網絡描述符，例如：“vpc-5v8wn9mg”
         :type UniqVpcId: str
@@ -4729,9 +4729,9 @@ class ModifyAccountDescriptionRequest(AbstractModel):
         """
         :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同。
         :type InstanceId: str
-        :param Accounts: 雲資料庫賬号。
+        :param Accounts: 雲資料庫賬號。
         :type Accounts: list of Account
-        :param Description: 資料庫賬号的備注訊息。
+        :param Description: 資料庫賬號的備注訊息。
         :type Description: str
         """
         self.InstanceId = None
@@ -4780,9 +4780,9 @@ class ModifyAccountPasswordRequest(AbstractModel):
         """
         :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同。
         :type InstanceId: str
-        :param NewPassword: 資料庫賬号的新密碼。密碼應至少包含字母、數字和字元（_+-&=!@#$%^*()）中的兩種，長度爲8-64個字元。
+        :param NewPassword: 資料庫賬號的新密碼。密碼應至少包含字母、數字和字元（_+-&=!@#$%^*()）中的兩種，長度爲8-64個字元。
         :type NewPassword: str
-        :param Accounts: 雲資料庫賬号。
+        :param Accounts: 雲資料庫賬號。
         :type Accounts: list of Account
         """
         self.InstanceId = None
@@ -4831,7 +4831,7 @@ class ModifyAccountPrivilegesRequest(AbstractModel):
         """
         :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同。
         :type InstanceId: str
-        :param Accounts: 資料庫的賬号，包括用戶名和域名。
+        :param Accounts: 資料庫的賬號，包括用戶名和域名。
         :type Accounts: list of Account
         :param GlobalPrivileges: 全局權限。其中，GlobalPrivileges 中權限的可選值爲："SELECT","INSERT","UPDATE","DELETE","CREATE", "PROCESS", "DROP","REFERENCES","INDEX","ALTER","SHOW DATABASES","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
 注意，不傳該參數表示清除該權限。
@@ -4913,7 +4913,7 @@ class ModifyAutoRenewFlagRequest(AbstractModel):
         """
         :param InstanceIds: 實例的 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同。
         :type InstanceIds: list of str
-        :param AutoRenew: 自動續約标記，可取值的有：0 - 不自動續約，1 - 自動續約。
+        :param AutoRenew: 自動續約標記，可取值的有：0 - 不自動續約，1 - 自動續約。
         :type AutoRenew: int
         """
         self.InstanceIds = None
@@ -4957,7 +4957,7 @@ class ModifyBackupConfigRequest(AbstractModel):
         :type StartTime: str
         :param BackupMethod: 自動備份方式，僅支援：physical - 物理冷備
         :type BackupMethod: str
-        :param BinlogExpireDays: binlog的保留時間，單位爲天。最小值爲7天，最大值爲732天。該值的設置不能大于備份文件的保留時間。
+        :param BinlogExpireDays: binlog的保留時間，單位爲天。最小值爲7天，最大值爲732天。該值的設置不能大於備份文件的保留時間。
         :type BinlogExpireDays: int
         :param BackupTimeWindow: 備份時間窗，比如要設置每周二和周日 10:00-14:00之間備份，該參數如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以設置一周的某幾天備份，但是每天的備份時間需要設置爲相同的時間段。 如果設置了該欄位，将忽略StartTime欄位的設置）
         :type BackupTimeWindow: :class:`taifucloudcloud.cdb.v20170320.models.CommonTimeWindow`
@@ -5121,9 +5121,9 @@ class ModifyDBInstanceVipVportRequest(AbstractModel):
         """
         :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同，可使用 [查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872) 介面獲取，其值爲輸出參數中欄位 InstanceId 的值。
         :type InstanceId: str
-        :param DstIp: 目标 IP。該參數和 DstPort 參數，兩者必傳一個。
+        :param DstIp: 目標 IP。該參數和 DstPort 參數，兩者必傳一個。
         :type DstIp: str
-        :param DstPort: 目标端口，支援範圍爲：[1024-65535]。該參數和 DstIp 參數，兩者必傳一個。
+        :param DstPort: 目標端口，支援範圍爲：[1024-65535]。該參數和 DstIp 參數，兩者必傳一個。
         :type DstPort: int
         :param UniqVpcId: 私有網絡統一 ID。
         :type UniqVpcId: str
@@ -5204,7 +5204,7 @@ class ModifyInstanceParamResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param AsyncRequestId: 異步任務 ID，可用于查詢任務進度。
+        :param AsyncRequestId: 異步任務 ID，可用於查詢任務進度。
         :type AsyncRequestId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -5227,9 +5227,9 @@ class ModifyInstanceTagRequest(AbstractModel):
         """
         :param InstanceId: 實例 ID。
         :type InstanceId: str
-        :param ReplaceTags: 要增加或修改的标簽。
+        :param ReplaceTags: 要增加或修改的標簽。
         :type ReplaceTags: list of TagInfo
-        :param DeleteTags: 要删除的标簽。
+        :param DeleteTags: 要删除的標簽。
         :type DeleteTags: list of TagInfo
         """
         self.InstanceId = None
@@ -5975,7 +5975,7 @@ class RoGroup(AbstractModel):
         :type RoInstances: list of RoInstanceInfo
         :param Vip: 只讀組的内網 IP。
         :type Vip: str
-        :param Vport: 只讀組的内網端口号。
+        :param Vport: 只讀組的内網端口號。
         :type Vport: int
         :param UniqVpcId: 私有網絡 ID。
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -6043,7 +6043,7 @@ class RoGroupAttr(AbstractModel):
         :type RoMaxDelayTime: int
         :param RoOfflineDelay: 是否開啓實例延遲剔除。支援的值包括：1 - 開啓；0 - 不開啓。注意，若設置開啓實例延遲剔除，則必須設置延遲阈值（RoMaxDelayTime）參數。
         :type RoOfflineDelay: int
-        :param MinRoInGroup: 最少保留實例數。可設置爲小於或等于該 RO 組下 RO 實例個數的任意值。注意，若設置值大于 RO 實例數量将不做剔除；若設置爲 0，所有實例延遲超限都會被剔除。
+        :param MinRoInGroup: 最少保留實例數。可設置爲小於或等於該 RO 組下 RO 實例個數的任意值。注意，若設置值大於 RO 實例數量将不做剔除；若設置爲 0，所有實例延遲超限都會被剔除。
         :type MinRoInGroup: int
         :param WeightMode: 權重模式。支援值包括："system" - 系統自動分配； "custom" - 用戶自定義設置。注意，若設置 "custom" 模式，則必須設置 RO 實例權重配置（RoWeightValues）參數。
         :type WeightMode: str
@@ -6181,7 +6181,7 @@ class RoVipInfo(AbstractModel):
         :type RoSubnetId: int
         :param RoVpcId: 只讀vip的私有網絡
         :type RoVpcId: int
-        :param RoVport: 只讀vip的端口号
+        :param RoVport: 只讀vip的端口號
         :type RoVport: int
         :param RoVip: 只讀vip
         :type RoVip: str
@@ -6223,7 +6223,7 @@ class RoWeightValue(AbstractModel):
 
 
 class RollbackDBName(AbstractModel):
-    """用于回檔的資料庫名
+    """用於回檔的資料庫名
 
     """
 
@@ -6246,7 +6246,7 @@ class RollbackDBName(AbstractModel):
 
 
 class RollbackInstancesInfo(AbstractModel):
-    """用于回檔的實例詳情
+    """用於回檔的實例詳情
 
     """
 
@@ -6292,7 +6292,7 @@ class RollbackInstancesInfo(AbstractModel):
 
 
 class RollbackTableName(AbstractModel):
-    """用于回檔的資料庫表名
+    """用於回檔的資料庫表名
 
     """
 
@@ -6315,7 +6315,7 @@ class RollbackTableName(AbstractModel):
 
 
 class RollbackTables(AbstractModel):
-    """用于回檔的資料庫表詳情
+    """用於回檔的資料庫表詳情
 
     """
 
@@ -6490,7 +6490,7 @@ class SellConfig(AbstractModel):
         :type Info: str
         :param Status: 狀态值
         :type Status: int
-        :param Tag: 标簽值
+        :param Tag: 標簽值
         :type Tag: int
         """
         self.Device = None
@@ -6535,7 +6535,7 @@ class SellType(AbstractModel):
         """
         :param TypeName: 售賣實例名稱
         :type TypeName: str
-        :param EngineVersion: 内核版本号
+        :param EngineVersion: 内核版本號
         :type EngineVersion: list of str
         :param Configs: 售賣規格詳細配置
         :type Configs: list of SellConfig
@@ -6610,7 +6610,7 @@ class SlaveInstanceInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param Vport: 端口号
+        :param Vport: 端口號
         :type Vport: int
         :param Region: 地域訊息
         :type Region: str
@@ -6752,7 +6752,7 @@ class SqlFileInfo(AbstractModel):
         :type FileName: str
         :param FileSize: 文件大小，單位爲Bytes
         :type FileSize: int
-        :param IsUploadFinished: 上傳是否完成标志，可選值：0 - 未完成，1 - 已完成
+        :param IsUploadFinished: 上傳是否完成標志，可選值：0 - 未完成，1 - 已完成
         :type IsUploadFinished: int
         :param FileId: 文件ID
         :type FileId: str
@@ -6783,7 +6783,7 @@ class StartBatchRollbackRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Instances: 用于回檔的實例詳情訊息。
+        :param Instances: 用於回檔的實例詳情訊息。
         :type Instances: list of RollbackInstancesInfo
         """
         self.Instances = None
@@ -6930,15 +6930,15 @@ class TablePrivilege(AbstractModel):
 
 
 class TagInfo(AbstractModel):
-    """标簽訊息
+    """標簽訊息
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: list of str
         """
         self.TagKey = None
@@ -6957,9 +6957,9 @@ class TagInfoUnit(AbstractModel):
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: str
         """
         self.TagKey = None
@@ -6972,7 +6972,7 @@ class TagInfoUnit(AbstractModel):
 
 
 class TagsInfoOfInstance(AbstractModel):
-    """實例的标簽訊息
+    """實例的標簽訊息
 
     """
 
@@ -6980,7 +6980,7 @@ class TagsInfoOfInstance(AbstractModel):
         """
         :param InstanceId: 實例Id
         :type InstanceId: str
-        :param Tags: 标簽訊息
+        :param Tags: 標簽訊息
         :type Tags: list of TagInfoUnit
         """
         self.InstanceId = None
@@ -7225,7 +7225,7 @@ class VerifyRootAccountRequest(AbstractModel):
         """
         :param InstanceId: 實例 ID，格式如：cdb-c1nl9rpv，與雲資料庫控制台頁面中顯示的實例 ID 相同。
         :type InstanceId: str
-        :param Password: 實例 ROOT 賬号的密碼。
+        :param Password: 實例 ROOT 賬號的密碼。
         :type Password: str
         """
         self.InstanceId = None

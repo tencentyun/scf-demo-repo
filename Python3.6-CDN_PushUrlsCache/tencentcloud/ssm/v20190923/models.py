@@ -25,9 +25,9 @@ class CreateSecretRequest(AbstractModel):
         """
         :param SecretName: 憑據名稱，同一region内不可重複，最長128位元，使用字母、數字或者 - _ 的組合，第一個字元必須爲字母或者數字。
         :type SecretName: str
-        :param VersionId: 憑據版本，查詢憑據訊息時需要根據SecretName 和 VersionId進行查詢，最長64 位元，使用字母、數字或者 - _ . 的組合并且以字母或數字開頭。
+        :param VersionId: 憑據版本，查詢憑據訊息時需要根據SecretName 和 VersionId進行查詢，最長64 位元，使用字母、數字或者 - _ . 的組合並且以字母或數字開頭。
         :type VersionId: str
-        :param Description: 描述訊息，用于詳細描述用途等，最大支援2048位元。
+        :param Description: 描述訊息，用於詳細描述用途等，最大支援2048位元。
         :type Description: str
         :param KmsKeyId: 指定對憑據進行加密的KMS CMK。如果爲空則表示使用Secrets Manager爲您預設創建的CMK進行加密。您也可以指定在同region 下自行創建的KMS CMK進行加密。
         :type KmsKeyId: str
@@ -133,7 +133,7 @@ class DeleteSecretVersionRequest(AbstractModel):
         """
         :param SecretName: 指定憑據名稱。
         :type SecretName: str
-        :param VersionId: 指定該名稱下需要删除的憑據的版本号。
+        :param VersionId: 指定該名稱下需要删除的憑據的版本號。
         :type VersionId: str
         """
         self.SecretName = None
@@ -154,7 +154,7 @@ class DeleteSecretVersionResponse(AbstractModel):
         """
         :param SecretName: 憑據名稱。
         :type SecretName: str
-        :param VersionId: 憑據版本号。
+        :param VersionId: 憑據版本號。
         :type VersionId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -198,7 +198,7 @@ class DescribeSecretResponse(AbstractModel):
         :type SecretName: str
         :param Description: 憑據描述訊息。
         :type Description: str
-        :param KmsKeyId: 用于加密的KMS CMK ID。
+        :param KmsKeyId: 用於加密的KMS CMK ID。
         :type KmsKeyId: str
         :param CreateUin: 創建者UIN。
         :type CreateUin: int
@@ -344,7 +344,7 @@ class GetSecretValueRequest(AbstractModel):
         """
         :param SecretName: 指定憑據的名稱。
         :type SecretName: str
-        :param VersionId: 指定對應憑據的版本号。
+        :param VersionId: 指定對應憑據的版本號。
         :type VersionId: str
         """
         self.SecretName = None
@@ -365,9 +365,9 @@ class GetSecretValueResponse(AbstractModel):
         """
         :param SecretName: 憑據的名稱。
         :type SecretName: str
-        :param VersionId: 該憑據對應的版本号。
+        :param VersionId: 該憑據對應的版本號。
         :type VersionId: str
-        :param SecretBinary: 在創建憑據(CreateSecret)時，如果指定的是二進制數據，則該欄位爲返回結果，并且使用base64進行編碼，應用方需要進行base64解碼後獲取原始數據。SecretBinary和SecretString只有一個不爲空。
+        :param SecretBinary: 在創建憑據(CreateSecret)時，如果指定的是二進制數據，則該欄位爲返回結果，並且使用base64進行編碼，應用方需要進行base64解碼後獲取原始數據。SecretBinary和SecretString只有一個不爲空。
         :type SecretBinary: str
         :param SecretString: 在創建憑據(CreateSecret)時，如果指定的是普通文本數據，則該欄位爲返回結果。SecretBinary和SecretString只有一個不爲空。
         :type SecretString: str
@@ -540,7 +540,7 @@ class PutSecretValueRequest(AbstractModel):
         """
         :param SecretName: 指定需要增加版本的憑據名稱。
         :type SecretName: str
-        :param VersionId: 指定新增加的版本号，最長64 位元，使用字母、數字或者 - _ . 的組合并且以字母或數字開頭。
+        :param VersionId: 指定新增加的版本號，最長64 位元，使用字母、數字或者 - _ . 的組合並且以字母或數字開頭。
         :type VersionId: str
         :param SecretBinary: 二進制憑據訊息，使用base64編碼。SecretBinary 和 SecretString 必須且只能設置一個。
         :type SecretBinary: str
@@ -569,7 +569,7 @@ class PutSecretValueResponse(AbstractModel):
         """
         :param SecretName: 憑據名稱。
         :type SecretName: str
-        :param VersionId: 新增加的版本号。
+        :param VersionId: 新增加的版本號。
         :type VersionId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -634,17 +634,17 @@ class SecretMetadata(AbstractModel):
         :type SecretName: str
         :param Description: 憑據的描述訊息。
         :type Description: str
-        :param KmsKeyId: 用于加密憑據的KMS KeyId。
+        :param KmsKeyId: 用於加密憑據的KMS KeyId。
         :type KmsKeyId: str
         :param CreateUin: 創建者UIN。
         :type CreateUin: int
         :param Status: 憑據狀态：Enabled、Disabled、PendingDelete
         :type Status: str
-        :param DeleteTime: 憑據删除日期，對于status爲PendingDelete 的有效，unix時間戳。
+        :param DeleteTime: 憑據删除日期，對於status爲PendingDelete 的有效，unix時間戳。
         :type DeleteTime: int
         :param CreateTime: 憑據創建時間，unix時間戳。
         :type CreateTime: int
-        :param KmsKeyType: 用于加密憑據的KMS CMK類型，DEFAULT 表示SecretsManager 創建的預設金鑰， CUSTOMER 表示用戶指定的金鑰。
+        :param KmsKeyType: 用於加密憑據的KMS CMK類型，DEFAULT 表示SecretsManager 創建的預設金鑰， CUSTOMER 表示用戶指定的金鑰。
         :type KmsKeyType: str
         """
         self.SecretName = None
@@ -719,9 +719,9 @@ class UpdateSecretRequest(AbstractModel):
         """
         :param SecretName: 指定需要更新憑據内容的名稱。
         :type SecretName: str
-        :param VersionId: 指定需要更新憑據内容的版本号。
+        :param VersionId: 指定需要更新憑據内容的版本號。
         :type VersionId: str
-        :param SecretBinary: 新的憑據内容爲二進制的場景使用該欄位，并使用base64進行編碼。SecretBinary 和 SecretString 只能一個不爲空。
+        :param SecretBinary: 新的憑據内容爲二進制的場景使用該欄位，並使用base64進行編碼。SecretBinary 和 SecretString 只能一個不爲空。
         :type SecretBinary: str
         :param SecretString: 新的憑據内容爲文本的場景使用該欄位，不需要base64編碼。SecretBinary 和 SecretString 只能一個不爲空。
         :type SecretString: str
@@ -748,7 +748,7 @@ class UpdateSecretResponse(AbstractModel):
         """
         :param SecretName: 憑據名稱。
         :type SecretName: str
-        :param VersionId: 憑據版本号。
+        :param VersionId: 憑據版本號。
         :type VersionId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -765,13 +765,13 @@ class UpdateSecretResponse(AbstractModel):
 
 
 class VersionInfo(AbstractModel):
-    """憑據版本号清單訊息
+    """憑據版本號清單訊息
 
     """
 
     def __init__(self):
         """
-        :param VersionId: 版本号。
+        :param VersionId: 版本號。
         :type VersionId: str
         :param CreateTime: 創建時間，unix時間戳。
         :type CreateTime: int

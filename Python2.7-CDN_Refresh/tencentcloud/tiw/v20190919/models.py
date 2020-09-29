@@ -113,7 +113,7 @@ class CreateTranscodeResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param TaskId: 文件轉碼任務的唯一标識Id，用于查詢該任務的進度以及轉碼結果
+        :param TaskId: 文件轉碼任務的唯一標識Id，用於查詢該任務的進度以及轉碼結果
         :type TaskId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -232,10 +232,10 @@ class DescribeOnlineRecordResponse(AbstractModel):
 - PREPARED: 表示錄制正在準備中（進房/啓動錄制服務等操作）
 - RECORDING: 表示錄制已開始
 - PAUSED: 表示錄制已暫停
-- STOPPED: 表示錄制已停止，正在處理并上傳視訊
-- FINISHED: 表示視訊處理并上傳完成，成功生成錄制結果
+- STOPPED: 表示錄制已停止，正在處理並上傳視訊
+- FINISHED: 表示視訊處理並上傳完成，成功生成錄制結果
         :type Status: str
-        :param RoomId: 房間号
+        :param RoomId: 房間號
         :type RoomId: int
         :param GroupId: 白板的群組 Id
         :type GroupId: str
@@ -344,7 +344,7 @@ class DescribeTranscodeRequest(AbstractModel):
         """
         :param SdkAppId: 客戶的SdkAppId
         :type SdkAppId: int
-        :param TaskId: 文件轉碼任務的唯一标識Id
+        :param TaskId: 文件轉碼任務的唯一標識Id
         :type TaskId: str
         """
         self.SdkAppId = None
@@ -379,14 +379,14 @@ class DescribeTranscodeResponse(AbstractModel):
 - PROCESSING: 轉換中
 - FINISHED: 轉換完成
         :type Status: str
-        :param TaskId: 轉碼任務的唯一标識Id
+        :param TaskId: 轉碼任務的唯一標識Id
         :type TaskId: str
         :param Title: 文件的文件名
         :type Title: str
         :param ThumbnailUrl: 縮略圖URL前綴，比如，該URL前綴爲`http://example.com/g0jb42ps49vtebjshilb/ `，那麽動态PPT第1頁的縮略圖URL爲
 `http://example.com/g0jb42ps49vtebjshilb/1.jpg`，其它頁以此類推
 
-如果發起文件轉碼請求參數中帶了ThumbnailResolution參數，并且轉碼類型爲動态轉碼，該參數不爲空，其餘情況該參數爲空字串
+如果發起文件轉碼請求參數中帶了ThumbnailResolution參數，並且轉碼類型爲動态轉碼，該參數不爲空，其餘情況該參數爲空字串
         :type ThumbnailUrl: str
         :param ThumbnailResolution: 動态轉碼縮略圖生成分辨率
         :type ThumbnailResolution: str
@@ -433,12 +433,12 @@ class LayoutParams(AbstractModel):
         :type Width: int
         :param Height: 流畫面高，取值範圍[2,3000]
         :type Height: int
-        :param X: 當前畫面左上角頂點相對于Canvas左上角頂點的x軸偏移量，預設爲0，取值範圍[0,3000]
+        :param X: 當前畫面左上角頂點相對於Canvas左上角頂點的x軸偏移量，預設爲0，取值範圍[0,3000]
         :type X: int
-        :param Y: 當前畫面左上角頂點相對于Canvas左上角頂點的y軸偏移量，預設爲0， 取值範圍[0,3000]
+        :param Y: 當前畫面左上角頂點相對於Canvas左上角頂點的y軸偏移量，預設爲0， 取值範圍[0,3000]
         :type Y: int
         :param ZOrder: 畫面z軸位置，預設爲0
-z軸确定了重疊畫面的遮蓋順序，z軸值大的畫面處于頂層
+z軸确定了重疊畫面的遮蓋順序，z軸值大的畫面處於頂層
         :type ZOrder: int
         """
         self.Width = None
@@ -681,14 +681,14 @@ class StartOnlineRecordRequest(AbstractModel):
         """
         :param SdkAppId: 客戶的SdkAppId
         :type SdkAppId: int
-        :param RoomId: 需要錄制的房間号
+        :param RoomId: 需要錄制的房間號
         :type RoomId: int
-        :param RecordUserId: 用于實時錄制服務進房的用戶Id，格式爲`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId}` 與錄制房間号對應，`${Random}`爲一個随機字串。
+        :param RecordUserId: 用於實時錄制服務進房的用戶Id，格式爲`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId}` 與錄制房間號對應，`${Random}`爲一個随機字串。
 實時錄制服務會使用這個用戶Id進房進行錄制房間内的影音與白板，爲了防止進房沖突，請保證此 用戶Id不重複
         :type RecordUserId: str
         :param RecordUserSig: 與RecordUserId對應的簽名
         :type RecordUserSig: str
-        :param GroupId: 白板的 IM 群組 Id，預設同房間号
+        :param GroupId: 白板的 IM 群組 Id，預設同房間號
         :type GroupId: str
         :param Concat: 實時錄制視訊拼接參數
         :type Concat: :class:`taifucloudcloud.tiw.v20190919.models.Concat`
@@ -807,10 +807,10 @@ class StreamLayout(AbstractModel):
         :type LayoutParams: :class:`taifucloudcloud.tiw.v20190919.models.LayoutParams`
         :param InputStreamId: 視訊流ID
 流ID的取值含義如下：
-1. tic_record_user - 表示當前畫面用于顯示白板視訊流
-2. tic_substream - 表示當前畫面用于顯示輔路視訊流
-3. 特定用戶ID - 表示當前畫面用于顯示指定用戶的視訊流
-4. 不填 - 表示當前畫面用于備選，當有新的視訊流加入時，會從這些備選的空位中選擇一個沒有被占用的位置來顯示新的視訊流畫面
+1. tic_record_user - 表示當前畫面用於顯示白板視訊流
+2. tic_substream - 表示當前畫面用於顯示輔路視訊流
+3. 特定用戶ID - 表示當前畫面用於顯示指定用戶的視訊流
+4. 不填 - 表示當前畫面用於備選，當有新的視訊流加入時，會從這些備選的空位中選擇一個沒有被占用的位置來顯示新的視訊流畫面
         :type InputStreamId: str
         :param BackgroundColor: 背景顔色，預設爲黑色，格式爲RGB格式，如紅色爲"#FF0000"
         :type BackgroundColor: str
@@ -854,7 +854,7 @@ class VideoInfo(AbstractModel):
 - 3：混流視訊
 - 4：純音訊（mp3)
         :type VideoType: int
-        :param UserId: 攝像頭/螢幕分享視訊所屬用戶的 Id（白板視訊爲空、混流視訊tic_mixstream_房間号_混流布局類型、輔路視訊tic_substream_用戶Id）
+        :param UserId: 攝像頭/螢幕分享視訊所屬用戶的 Id（白板視訊爲空、混流視訊tic_mixstream_房間號_混流布局類型、輔路視訊tic_substream_用戶Id）
         :type UserId: str
         """
         self.VideoPlayTime = None

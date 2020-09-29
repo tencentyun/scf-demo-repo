@@ -418,7 +418,7 @@ class RedisClient(AbstractClient):
 
 
     def DescribeTaskInfo(self, request):
-        """用于查詢任務結果
+        """用於查詢任務結果
 
         :param request: 調用DescribeTaskInfo所需參數的結構體。
         :type request: :class:`taifucloudcloud.redis.v20180412.models.DescribeTaskInfoRequest`

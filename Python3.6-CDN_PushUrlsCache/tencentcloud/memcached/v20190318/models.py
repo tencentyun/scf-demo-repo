@@ -23,9 +23,9 @@ class DescribeInstancesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceIds: 實例ID組成的數組，數組下标從0開始
+        :param InstanceIds: 實例ID組成的數組，數組下標從0開始
         :type InstanceIds: list of str
-        :param InstanceNames: 實例名稱組成的數組，數組下标從0開始
+        :param InstanceNames: 實例名稱組成的數組，數組下標從0開始
         :type InstanceNames: list of str
         :param Limit: 實例清單的大小，參數預設值100
         :type Limit: int
@@ -35,15 +35,15 @@ class DescribeInstancesRequest(AbstractModel):
         :type OrderBy: str
         :param OrderType: 0倒序，1正序，預設倒序
         :type OrderType: int
-        :param ProjectIds: 項目ID組成的數組，數組下标從0開始
+        :param ProjectIds: 項目ID組成的數組，數組下標從0開始
         :type ProjectIds: list of int
         :param SearchKeys: 搜索關鍵詞：支援實例ID、實例名稱、完整IP
         :type SearchKeys: list of str
-        :param UniqSubnetIds: 子網ID數組，數組下标從0開始，如：subnet-fdj24n34j2
+        :param UniqSubnetIds: 子網ID數組，數組下標從0開始，如：subnet-fdj24n34j2
         :type UniqSubnetIds: list of str
-        :param UniqVpcIds: 私有網絡ID數組，數組下标從0開始，如果不傳則預設選擇基礎網絡，如：vpc-sad23jfdfk
+        :param UniqVpcIds: 私有網絡ID數組，數組下標從0開始，如果不傳則預設選擇基礎網絡，如：vpc-sad23jfdfk
         :type UniqVpcIds: list of str
-        :param Vips: 實例服務IP組成的數組，數組下标從0開始
+        :param Vips: 實例服務IP組成的數組，數組下標從0開始
         :type Vips: list of str
         """
         self.InstanceIds = None
@@ -110,13 +110,13 @@ class InstanceListInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param Tags: 實例關聯的标簽訊息
+        :param Tags: 實例關聯的標簽訊息
         :type Tags: list of TagInfo
         :param AddTimeStamp: 實例創建時間
         :type AddTimeStamp: str
         :param AppId: 用戶AppID
         :type AppId: int
-        :param AutoRenewFlag: 實例是否設置自動續約标識，1：設置自動續約；0：未設置自動續約
+        :param AutoRenewFlag: 實例是否設置自動續約標識，1：設置自動續約；0：未設置自動續約
         :type AutoRenewFlag: int
         :param CmemId: 實例内置ID
         :type CmemId: int
@@ -154,7 +154,7 @@ class InstanceListInfo(AbstractModel):
         :type Vip: str
         :param VpcId: vpc網絡id 如：75101
         :type VpcId: int
-        :param Vport: 實例端口号
+        :param Vport: 實例端口號
         :type Vport: int
         :param ZoneId: 區域ID
         :type ZoneId: int
@@ -218,15 +218,15 @@ class InstanceListInfo(AbstractModel):
 
 
 class TagInfo(AbstractModel):
-    """标簽訊息
+    """標簽訊息
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: str
         """
         self.TagKey = None

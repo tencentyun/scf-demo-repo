@@ -66,7 +66,7 @@ class BrandReportArticle(AbstractModel):
 
     def __init__(self):
         """
-        :param Title: 文章标題
+        :param Title: 文章標題
         :type Title: str
         :param Url: 文章url網址
         :type Url: str
@@ -74,7 +74,7 @@ class BrandReportArticle(AbstractModel):
         :type FromSite: str
         :param PubTime: 文章發表日期
         :type PubTime: str
-        :param Flag: 文章标識
+        :param Flag: 文章標識
         :type Flag: int
         :param Hot: 文章熱度值
         :type Hot: int
@@ -479,7 +479,7 @@ class DescribeBrandSocialOpinionRequest(AbstractModel):
         :type Offset: int
         :param Limit: 查詢條數上限，預設20
         :type Limit: int
-        :param ShowList: 清單顯示标記，若爲true，則返回文章清單詳情
+        :param ShowList: 清單顯示標記，若爲true，則返回文章清單詳情
         :type ShowList: bool
         """
         self.BrandId = None
@@ -796,7 +796,7 @@ class IndustryNews(AbstractModel):
         :type PubTime: str
         :param FromSite: 報道來源
         :type FromSite: str
-        :param Title: 報道标題
+        :param Title: 報道標題
         :type Title: str
         :param Url: 報道來源url
         :type Url: str
@@ -804,7 +804,7 @@ class IndustryNews(AbstractModel):
         :type Level: int
         :param Hot: 熱度值
         :type Hot: int
-        :param Flag: 報道标識
+        :param Flag: 報道標識
         :type Flag: int
         :param Abstract: 報道摘要
         :type Abstract: str

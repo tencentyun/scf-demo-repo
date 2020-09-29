@@ -17,7 +17,7 @@ logger.setLevel(level=logging.INFO)
 # The reverse push link for API gateway. API閘道的反向推送連結
 sendbackHost = "*******"
 # MySql database account information, you need to create a database and form in advance, the new two columns in the form: `ConnectionID`, `Date` 
-# MySql資料庫賬号訊息,需要提前創建好資料庫和表單,表單中新建2列：`ConnectionID`, `Date`
+# MySql資料庫賬號訊息,需要提前創建好資料庫和表單,表單中新建2列：`ConnectionID`, `Date`
 Host = '******'
 User = '****'
 Password = '****'
@@ -28,7 +28,7 @@ Table = u'ConnectionID_List'
 # Changing the time zone to Beijing. 更改時區爲 時區
 tz = pytz.timezone('Asia/Shanghai')
 
-# Looking up and deleting the 'connectionID' in the database. 查詢資料庫中的connectionID并删除
+# Looking up and deleting the 'connectionID' in the database. 查詢資料庫中的connectionID並删除
 def delete_connectionID(connectionID):
     print('Start delete_connectionID function')
     print("connectionID is %s"%connectionID)

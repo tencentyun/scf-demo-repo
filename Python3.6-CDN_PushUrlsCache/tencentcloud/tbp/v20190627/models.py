@@ -17,13 +17,13 @@ from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Group(AbstractModel):
-    """Group是訊息組的具體定義，當前包含ContentType、Url、Content三個欄位。其中，具體的ContentType欄位定義，參考網際網路MIME類型标準。
+    """Group是訊息組的具體定義，當前包含ContentType、Url、Content三個欄位。其中，具體的ContentType欄位定義，參考網際網路MIME類型標準。
 
     """
 
     def __init__(self):
         """
-        :param ContentType: 訊息類型參考網際網路MIME類型标準，當前僅支援"text/plain"。
+        :param ContentType: 訊息類型參考網際網路MIME類型標準，當前僅支援"text/plain"。
         :type ContentType: str
         :param Url: 返回内容以連結形式提供。
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -96,19 +96,19 @@ class TextProcessRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BotId: 機器人标識，用于定義抽象機器人。
+        :param BotId: 機器人標識，用於定義抽象機器人。
         :type BotId: str
         :param BotEnv: 機器人版本，取值"dev"或"release"，{調試版本：dev；線上版本：release}。
         :type BotEnv: str
-        :param TerminalId: 終端标識，每個終端(或線程)對應一個，區分并發多用戶。
+        :param TerminalId: 終端標識，每個終端(或線程)對應一個，區分並發多用戶。
         :type TerminalId: str
         :param InputText: 請求的文本。
         :type InputText: str
         :param SessionAttributes: 透傳欄位，透傳給用戶自定義的WebService服務。
         :type SessionAttributes: str
-        :param PlatformType: 平台類型，{小程式：MiniProgram；小微：XiaoWei；公衆号：OfficialAccount；企業 : WXWork}。
+        :param PlatformType: 平台類型，{小程式：MiniProgram；小微：XiaoWei；公衆號：OfficialAccount；企業 : WXWork}。
         :type PlatformType: str
-        :param PlatformId: 當PlatformType爲 公衆号或企業 時，傳遞對應 公衆号或企業 的唯一标識
+        :param PlatformId: 當PlatformType爲 公衆號或企業 時，傳遞對應 公衆號或企業 的唯一標識
         :type PlatformId: str
         """
         self.BotId = None
@@ -201,15 +201,15 @@ class TextResetRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BotId: 機器人标識，用于定義抽象機器人。
+        :param BotId: 機器人標識，用於定義抽象機器人。
         :type BotId: str
         :param BotEnv: 機器人版本，取值"dev"或"release"，{調試版本：dev；線上版本：release}。
         :type BotEnv: str
-        :param TerminalId: 終端标識，每個終端(或線程)對應一個，區分并發多用戶。
+        :param TerminalId: 終端標識，每個終端(或線程)對應一個，區分並發多用戶。
         :type TerminalId: str
-        :param PlatformType: 平台類型，{小程式：MiniProgram；小微：XiaoWei；公衆号：OfficialAccount；企業 : WXWork}。
+        :param PlatformType: 平台類型，{小程式：MiniProgram；小微：XiaoWei；公衆號：OfficialAccount；企業 : WXWork}。
         :type PlatformType: str
-        :param PlatformId: 當PlatformType爲 公衆号或企業 時，傳遞對應 公衆号或企業 的唯一标識
+        :param PlatformId: 當PlatformType爲 公衆號或企業 時，傳遞對應 公衆號或企業 的唯一標識
         :type PlatformId: str
         """
         self.BotId = None

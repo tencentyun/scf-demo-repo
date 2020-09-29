@@ -120,9 +120,9 @@ class CreateFunctionRequest(AbstractModel):
         :type Code: :class:`taifucloudcloud.scf.v20180416.models.Code`
         :param Handler: 函數處理方法名稱，名稱格式支援 "文件名稱.方法名稱" 形式，文件名稱和函數名稱之間以"."隔開，文件名稱和函數名稱要求以字母開始和結尾，中間允許插入字母、數字、下劃線和連接符，文件名稱和函數名字的長度要求是 2-60 個字元
         :type Handler: str
-        :param Description: 函數描述,最大支援 1000 個英文字母、數字、空格、逗号、換行符和英文句号，支援中文
+        :param Description: 函數描述,最大支援 1000 個英文字母、數字、空格、逗號、換行符和英文句號，支援中文
         :type Description: str
-        :param MemorySize: 函數運作時内存大小，預設爲 128M，可選範圍 128MB-1536MB，并且以 128MB 爲階梯
+        :param MemorySize: 函數運作時内存大小，預設爲 128M，可選範圍 128MB-1536MB，並且以 128MB 爲階梯
         :type MemorySize: int
         :param Timeout: 函數最長執行時間，單位爲秒，可選值範圍 1-300 秒，預設爲 3 秒
         :type Timeout: int
@@ -354,7 +354,7 @@ class Environment(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """描述鍵值對過濾器，用于條件過濾查詢。例如過濾ID、名稱、狀态等
+    """描述鍵值對過濾器，用於條件過濾查詢。例如過濾ID、名稱、狀态等
     若存在多個Filter時，Filter間的關系爲邏輯與（AND）關系。
     若同一個Filter存在多個Values，同一Filter下Values間的關系爲邏輯或（OR）關系。
 
@@ -401,7 +401,7 @@ class Function(AbstractModel):
         :type StatusDesc: str
         :param Description: 函數描述
         :type Description: str
-        :param Tags: 函數标簽
+        :param Tags: 函數標簽
         :type Tags: list of Tag
         """
         self.ModTime = None
@@ -496,9 +496,9 @@ class GetFunctionLogsRequest(AbstractModel):
         """
         :param FunctionName: 函數的名稱
         :type FunctionName: str
-        :param Offset: 數據的偏移量，Offset+Limit不能大于10000
+        :param Offset: 數據的偏移量，Offset+Limit不能大於10000
         :type Offset: int
-        :param Limit: 返回數據的長度，Offset+Limit不能大于10000
+        :param Limit: 返回數據的長度，Offset+Limit不能大於10000
         :type Limit: int
         :param Order: 以升序還是降序的方式對日志進行排序，可選值 desc和 asc
         :type Order: str
@@ -581,9 +581,9 @@ class GetFunctionRequest(AbstractModel):
         """
         :param FunctionName: 需要獲取詳情的函數名稱
         :type FunctionName: str
-        :param Qualifier: 函數的版本号
+        :param Qualifier: 函數的版本號
         :type Qualifier: str
-        :param ShowCode: 是否顯示代碼, TRUE表示顯示代碼，FALSE表示不顯示代碼,大于1M的入口文件不會顯示
+        :param ShowCode: 是否顯示代碼, TRUE表示顯示代碼，FALSE表示不顯示代碼,大於1M的入口文件不會顯示
         :type ShowCode: str
         """
         self.FunctionName = None
@@ -654,7 +654,7 @@ class GetFunctionResponse(AbstractModel):
         :type ClsTopicId: str
         :param FunctionId: 函數ID
         :type FunctionId: str
-        :param Tags: 函數的标簽清單
+        :param Tags: 函數的標簽清單
         :type Tags: list of Tag
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -743,7 +743,7 @@ class InvokeRequest(AbstractModel):
         :type FunctionName: str
         :param InvocationType: RequestResponse(同步) 和 Event(異步)，預設爲同步
         :type InvocationType: str
-        :param Qualifier: 觸發函數的版本号
+        :param Qualifier: 觸發函數的版本號
         :type Qualifier: str
         :param ClientContext: 運作函數時的參數，以json格式傳入，最大支援的參數長度是 1M
         :type ClientContext: str
@@ -812,7 +812,7 @@ class ListFunctionsRequest(AbstractModel):
         :param Description: 函數描述，支援模糊搜索
         :type Description: str
         :param Filters: 過濾條件。
-- tag:tag-key - String - 是否必填：否 - （過濾條件）按照标簽鍵值對進行過濾。 tag-key使用具體的标簽鍵進行替換。
+- tag:tag-key - String - 是否必填：否 - （過濾條件）按照標簽鍵值對進行過濾。 tag-key使用具體的標簽鍵進行替換。
 
 每次請求的Filters的上限爲10，Filter.Values的上限爲5。
         :type Filters: list of Filter
@@ -872,7 +872,7 @@ class ListFunctionsResponse(AbstractModel):
 
 
 class LogFilter(AbstractModel):
-    """日志過濾條件，用于區分正确與錯誤日志
+    """日志過濾條件，用於區分正确與錯誤日志
 
     """
 
@@ -934,15 +934,15 @@ class Result(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """函數标簽
+    """函數標簽
 
     """
 
     def __init__(self):
         """
-        :param Key: 标簽的key
+        :param Key: 標簽的key
         :type Key: str
-        :param Value: 标簽的value
+        :param Value: 標簽的value
         :type Value: str
         """
         self.Key = None
@@ -1058,7 +1058,7 @@ class UpdateFunctionConfigurationRequest(AbstractModel):
         """
         :param FunctionName: 要修改的函數名稱
         :type FunctionName: str
-        :param Description: 函數描述。最大支援 1000 個英文字母、數字、空格、逗号和英文句号，支援中文
+        :param Description: 函數描述。最大支援 1000 個英文字母、數字、空格、逗號和英文句號，支援中文
         :type Description: str
         :param MemorySize: 函數運作時内存大小，預設爲 128 M，可選範 128 M-1536 M
         :type MemorySize: int

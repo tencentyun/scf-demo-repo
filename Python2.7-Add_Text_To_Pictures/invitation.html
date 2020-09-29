@@ -32,7 +32,7 @@
             var value = document.getElementById("textId").value 
             console.log(value);
             ajaxObj.send(value);
-            // 發送并接受返回值
+            // 發送並接受返回值
             ajaxObj.onreadystatechange = function () {
                 // 這步爲判斷服務器是否正确響應
                 if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {

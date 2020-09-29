@@ -54,7 +54,7 @@ class GaapClient(AbstractClient):
 
 
     def BindListenerRealServers(self, request):
-        """本介面（BindListenerRealServers）用于TCP/UDP監聽器綁定解綁源站。
+        """本介面（BindListenerRealServers）用於TCP/UDP監聽器綁定解綁源站。
         注意：本介面會解綁之前綁定的源站，綁定本次調用所選擇的源站。例如：原來綁定的源站爲A，B，C，本次調用的選擇綁定的源站爲C，D，E，那麽調用後所綁定的源站爲C，D，E。
 
         :param request: Request instance for BindListenerRealServers.
@@ -83,7 +83,7 @@ class GaapClient(AbstractClient):
 
 
     def BindRuleRealServers(self, request):
-        """該介面用于7層監聽器的轉發規則綁定源站。注意：本介面會解綁之前綁定的源站，綁定本次調用所選擇的源站。
+        """該介面用於7層監聽器的轉發規則綁定源站。注意：本介面會解綁之前綁定的源站，綁定本次調用所選擇的源站。
 
         :param request: Request instance for BindRuleRealServers.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.BindRuleRealServersRequest`
@@ -111,7 +111,7 @@ class GaapClient(AbstractClient):
 
 
     def CheckProxyCreate(self, request):
-        """本介面(CheckProxyCreate)用于查詢能否創建指定配置的加速通道。
+        """本介面(CheckProxyCreate)用於查詢能否創建指定配置的加速通道。
 
         :param request: Request instance for CheckProxyCreate.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.CheckProxyCreateRequest`
@@ -139,7 +139,7 @@ class GaapClient(AbstractClient):
 
 
     def CloseProxies(self, request):
-        """本介面（CloseProxies）用于關閉通道。通道關閉後，不再産生流量，但每天仍然收取通道基礎配置費用。
+        """本介面（CloseProxies）用於關閉通道。通道關閉後，不再産生流量，但每天仍然收取通道基礎配置費用。
 
         :param request: Request instance for CloseProxies.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.CloseProxiesRequest`
@@ -195,7 +195,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateCertificate(self, request):
-        """本介面（CreateCertificate）用于創建Gaap相關證書和配置文件，包括基礎認證配置文件，用戶端CA證書，服務器SSL證書，Gaap SSL證書以及源站CA證書。
+        """本介面（CreateCertificate）用於創建Gaap相關證書和配置文件，包括基礎認證配置文件，用戶端CA證書，服務器SSL證書，Gaap SSL證書以及源站CA證書。
 
         :param request: Request instance for CreateCertificate.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateCertificateRequest`
@@ -223,7 +223,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateDomain(self, request):
-        """本介面（CreateDomain）用于創建HTTP/HTTPS監聽器的訪問域名，用戶端請求通過訪問該域名來請求後端業務。
+        """本介面（CreateDomain）用於創建HTTP/HTTPS監聽器的訪問域名，用戶端請求通過訪問該域名來請求後端業務。
         該介面僅支援version3.0的通道。
 
         :param request: Request instance for CreateDomain.
@@ -280,7 +280,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateHTTPListener(self, request):
-        """該介面（CreateHTTPListener）用于在通道實例下創建HTTP協議類型的監聽器。
+        """該介面（CreateHTTPListener）用於在通道實例下創建HTTP協議類型的監聽器。
 
         :param request: Request instance for CreateHTTPListener.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateHTTPListenerRequest`
@@ -308,7 +308,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateHTTPSListener(self, request):
-        """該介面（CreateHTTPSListener）用于在通道實例下創建HTTPS協議類型的監聽器。
+        """該介面（CreateHTTPSListener）用於在通道實例下創建HTTPS協議類型的監聽器。
 
         :param request: Request instance for CreateHTTPSListener.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateHTTPSListenerRequest`
@@ -336,7 +336,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateProxy(self, request):
-        """本介面（CreateProxy）用于創建/複制一個指定配置的加速通道。當複制通道時，需要設置新通道的基本配置參數，并設置ClonedProxyId來指定被複制的通道。
+        """本介面（CreateProxy）用於創建/複制一個指定配置的加速通道。當複制通道時，需要設置新通道的基本配置參數，並設置ClonedProxyId來指定被複制的通道。
 
         :param request: Request instance for CreateProxy.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateProxyRequest`
@@ -364,7 +364,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateProxyGroup(self, request):
-        """本介面（CreateProxyGroup）用于創建通道組。
+        """本介面（CreateProxyGroup）用於創建通道組。
 
         :param request: Request instance for CreateProxyGroup.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateProxyGroupRequest`
@@ -392,7 +392,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateProxyGroupDomain(self, request):
-        """本介面（CreateProxyGroupDomain）用于創建通道組域名，并開啓域名解析。
+        """本介面（CreateProxyGroupDomain）用於創建通道組域名，並開啓域名解析。
 
         :param request: Request instance for CreateProxyGroupDomain.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateProxyGroupDomainRequest`
@@ -420,7 +420,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateRule(self, request):
-        """該介面（CreateRule）用于創建HTTP/HTTPS監聽器轉發規則。
+        """該介面（CreateRule）用於創建HTTP/HTTPS監聽器轉發規則。
 
         :param request: Request instance for CreateRule.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateRuleRequest`
@@ -504,7 +504,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateTCPListeners(self, request):
-        """該介面（CreateTCPListeners）用于批次創建單通道或者通道組的TCP協議類型的監聽器。
+        """該介面（CreateTCPListeners）用於批次創建單通道或者通道組的TCP協議類型的監聽器。
 
         :param request: Request instance for CreateTCPListeners.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateTCPListenersRequest`
@@ -532,7 +532,7 @@ class GaapClient(AbstractClient):
 
 
     def CreateUDPListeners(self, request):
-        """該介面（CreateUDPListeners）用于批次創建單通道或者通道組的UDP協議類型的監聽器。
+        """該介面（CreateUDPListeners）用於批次創建單通道或者通道組的UDP協議類型的監聽器。
 
         :param request: Request instance for CreateUDPListeners.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.CreateUDPListenersRequest`
@@ -560,7 +560,7 @@ class GaapClient(AbstractClient):
 
 
     def DeleteCertificate(self, request):
-        """本介面（DeleteCertificate）用于删除證書。
+        """本介面（DeleteCertificate）用於删除證書。
 
         :param request: Request instance for DeleteCertificate.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DeleteCertificateRequest`
@@ -588,7 +588,7 @@ class GaapClient(AbstractClient):
 
 
     def DeleteDomain(self, request):
-        """本介面（DeleteDomain）僅适用于7層監聽器，用于删除該監聽器下對應域名及域名下的所有規則，所有已綁定源站的規則将自動解綁。
+        """本介面（DeleteDomain）僅适用於7層監聽器，用於删除該監聽器下對應域名及域名下的所有規則，所有已綁定源站的規則将自動解綁。
 
         :param request: Request instance for DeleteDomain.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DeleteDomainRequest`
@@ -644,7 +644,7 @@ class GaapClient(AbstractClient):
 
 
     def DeleteListeners(self, request):
-        """該介面（DeleteListeners）用于批次删除通道或通道組的監聽器，包括4/7層監聽器。
+        """該介面（DeleteListeners）用於批次删除通道或通道組的監聽器，包括4/7層監聽器。
 
         :param request: Request instance for DeleteListeners.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DeleteListenersRequest`
@@ -672,7 +672,7 @@ class GaapClient(AbstractClient):
 
 
     def DeleteProxyGroup(self, request):
-        """本介面（DeleteProxyGroup）用于删除通道組。
+        """本介面（DeleteProxyGroup）用於删除通道組。
 
         :param request: Request instance for DeleteProxyGroup.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DeleteProxyGroupRequest`
@@ -700,7 +700,7 @@ class GaapClient(AbstractClient):
 
 
     def DeleteRule(self, request):
-        """該介面（DeleteRule）用于删除HTTP/HTTPS監聽器的轉發規則。
+        """該介面（DeleteRule）用於删除HTTP/HTTPS監聽器的轉發規則。
 
         :param request: Request instance for DeleteRule.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DeleteRuleRequest`
@@ -784,7 +784,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeAccessRegions(self, request):
-        """本介面（DescribeAccessRegions）用于查詢加速區域，即用戶端接入區域。
+        """本介面（DescribeAccessRegions）用於查詢加速區域，即用戶端接入區域。
 
         :param request: Request instance for DescribeAccessRegions.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeAccessRegionsRequest`
@@ -840,7 +840,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeCertificateDetail(self, request):
-        """本介面（DescribeCertificateDetail）用于查詢證書詳情，包括證書ID，證書名字，證書類型，證書内容以及金鑰等訊息。
+        """本介面（DescribeCertificateDetail）用於查詢證書詳情，包括證書ID，證書名字，證書類型，證書内容以及金鑰等訊息。
 
         :param request: Request instance for DescribeCertificateDetail.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeCertificateDetailRequest`
@@ -896,7 +896,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeCountryAreaMapping(self, request):
-        """本介面（DescribeCountryAreaMapping）用于獲取國家地區編碼映射表。
+        """本介面（DescribeCountryAreaMapping）用於獲取國家地區編碼映射表。
 
         :param request: Request instance for DescribeCountryAreaMapping.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeCountryAreaMappingRequest`
@@ -924,7 +924,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeDestRegions(self, request):
-        """本介面（DescribeDestRegions）用于查詢源站區域，即源站服務器所在區域。
+        """本介面（DescribeDestRegions）用於查詢源站區域，即源站服務器所在區域。
 
         :param request: Request instance for DescribeDestRegions.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeDestRegionsRequest`
@@ -1008,7 +1008,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeGroupAndStatisticsProxy(self, request):
-        """該介面爲内部介面，用于查詢可以獲取統計數據的通道組和通道訊息
+        """該介面爲内部介面，用於查詢可以獲取統計數據的通道組和通道訊息
 
         :param request: Request instance for DescribeGroupAndStatisticsProxy.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeGroupAndStatisticsProxyRequest`
@@ -1036,7 +1036,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeGroupDomainConfig(self, request):
-        """本介面（DescribeGroupDomainConfig）用于獲取通道組域名解析配置詳情。
+        """本介面（DescribeGroupDomainConfig）用於獲取通道組域名解析配置詳情。
 
         :param request: Request instance for DescribeGroupDomainConfig.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeGroupDomainConfigRequest`
@@ -1120,7 +1120,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeListenerRealServers(self, request):
-        """該介面（DescribeListenerRealServers）用于查詢TCP/UDP監聽器源站清單，包括該監聽器已經綁定的源站清單以及可以綁定的源站清單。
+        """該介面（DescribeListenerRealServers）用於查詢TCP/UDP監聽器源站清單，包括該監聽器已經綁定的源站清單以及可以綁定的源站清單。
 
         :param request: Request instance for DescribeListenerRealServers.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeListenerRealServersRequest`
@@ -1148,7 +1148,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeListenerStatistics(self, request):
-        """該介面用于查詢監聽器統計數據，包括出入頻寬，出入包量，并發數據。支援300秒, 3600秒和86400秒的細粒度，取值爲細粒度範圍内最大值。
+        """該介面用於查詢監聽器統計數據，包括出入頻寬，出入包量，並發數據。支援300秒, 3600秒和86400秒的細粒度，取值爲細粒度範圍内最大值。
 
         :param request: Request instance for DescribeListenerStatistics.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeListenerStatisticsRequest`
@@ -1176,7 +1176,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeProxies(self, request):
-        """本介面（DescribeProxies）用于查詢通道實例清單。
+        """本介面（DescribeProxies）用於查詢通道實例清單。
 
         :param request: Request instance for DescribeProxies.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxiesRequest`
@@ -1204,7 +1204,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeProxiesStatus(self, request):
-        """本介面（DescribeProxiesStatus）用于查詢通道狀态清單。
+        """本介面（DescribeProxiesStatus）用於查詢通道狀态清單。
 
         :param request: Request instance for DescribeProxiesStatus.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxiesStatusRequest`
@@ -1232,7 +1232,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeProxyAndStatisticsListeners(self, request):
-        """該介面爲内部介面，用于查詢可以獲取統計數據的通道和監聽器訊息
+        """該介面爲内部介面，用於查詢可以獲取統計數據的通道和監聽器訊息
 
         :param request: Request instance for DescribeProxyAndStatisticsListeners.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyAndStatisticsListenersRequest`
@@ -1260,7 +1260,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeProxyDetail(self, request):
-        """本介面（DescribeProxyDetail）用于查詢通道詳情。
+        """本介面（DescribeProxyDetail）用於查詢通道詳情。
 
         :param request: Request instance for DescribeProxyDetail.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyDetailRequest`
@@ -1288,7 +1288,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeProxyGroupDetails(self, request):
-        """本介面（DescribeProxyGroupDetails）用于查詢通道組詳情。
+        """本介面（DescribeProxyGroupDetails）用於查詢通道組詳情。
 
         :param request: Request instance for DescribeProxyGroupDetails.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyGroupDetailsRequest`
@@ -1316,7 +1316,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeProxyGroupList(self, request):
-        """本介面（DescribeProxyGroupList）用于拉取通道組清單及各通道組基本訊息。
+        """本介面（DescribeProxyGroupList）用於拉取通道組清單及各通道組基本訊息。
 
         :param request: Request instance for DescribeProxyGroupList.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyGroupListRequest`
@@ -1344,7 +1344,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeProxyGroupStatistics(self, request):
-        """該介面用于查詢監聽器統計數據，包括出入頻寬，出入包量，并發數據。支援300, 3600和86400的細粒度，取值爲細粒度範圍内最大值。
+        """該介面用於查詢監聽器統計數據，包括出入頻寬，出入包量，並發數據。支援300, 3600和86400的細粒度，取值爲細粒度範圍内最大值。
 
         :param request: Request instance for DescribeProxyGroupStatistics.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyGroupStatisticsRequest`
@@ -1372,7 +1372,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeProxyStatistics(self, request):
-        """該介面用于查詢監聽器統計數據，包括出入頻寬，出入包量，并發，丢包和延遲數據。支援300, 3600和86400的細粒度，取值爲細粒度範圍内最大值。
+        """該介面用於查詢監聽器統計數據，包括出入頻寬，出入包量，並發，丢包和延遲數據。支援300, 3600和86400的細粒度，取值爲細粒度範圍内最大值。
 
         :param request: Request instance for DescribeProxyStatistics.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeProxyStatisticsRequest`
@@ -1400,7 +1400,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeRealServerStatistics(self, request):
-        """該介面（DescribeRealServerStatistics）用于查詢源站健康檢查結果的統計數據。源站狀态展示位爲1：正常或者0：異常。查詢的源站需要在監聽器或者規則上進行了綁定，查詢時需指定綁定的監聽器或者規則ID。該介面支援最近1，3，6，12，24小時内1分鍾細粒度的源站狀态統計數據展示。
+        """該介面（DescribeRealServerStatistics）用於查詢源站健康檢查結果的統計數據。源站狀态展示位爲1：正常或者0：異常。查詢的源站需要在監聽器或者規則上進行了綁定，查詢時需指定綁定的監聽器或者規則ID。該介面支援最近1，3，6，12，24小時内1分鍾細粒度的源站狀态統計數據展示。
 
         :param request: Request instance for DescribeRealServerStatistics.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRealServerStatisticsRequest`
@@ -1428,7 +1428,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeRealServers(self, request):
-        """本介面（DescribeRealServers）用于查詢源站訊息，可以根據項目名查詢所有的源站訊息，此外支援指定IP機或者域名的源站模糊查詢。
+        """本介面（DescribeRealServers）用於查詢源站訊息，可以根據項目名查詢所有的源站訊息，此外支援指定IP機或者域名的源站模糊查詢。
 
         :param request: Request instance for DescribeRealServers.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRealServersRequest`
@@ -1456,7 +1456,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeRealServersStatus(self, request):
-        """本介面（DescribeRealServersStatus）用于查詢源站是否已被規則或者監聽器綁定
+        """本介面（DescribeRealServersStatus）用於查詢源站是否已被規則或者監聽器綁定
 
         :param request: Request instance for DescribeRealServersStatus.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRealServersStatusRequest`
@@ -1484,7 +1484,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeRegionAndPrice(self, request):
-        """該介面（DescribeRegionAndPrice）用于獲取源站區域和頻寬梯度價格
+        """該介面（DescribeRegionAndPrice）用於獲取源站區域和頻寬梯度價格
 
         :param request: Request instance for DescribeRegionAndPrice.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRegionAndPriceRequest`
@@ -1512,7 +1512,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeResourcesByTag(self, request):
-        """本介面（DescribeResourcesByTag）用于根據标簽來查詢對應的資源訊息，包括通道，通道組和源站。
+        """本介面（DescribeResourcesByTag）用於根據標簽來查詢對應的資源訊息，包括通道，通道組和源站。
 
         :param request: Request instance for DescribeResourcesByTag.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeResourcesByTagRequest`
@@ -1540,7 +1540,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeRuleRealServers(self, request):
-        """本介面（DescribeRuleRealServers）用于查詢轉發規則相關的源站訊息， 包括該規則可綁定的源站訊息和已綁定的源站訊息。
+        """本介面（DescribeRuleRealServers）用於查詢轉發規則相關的源站訊息， 包括該規則可綁定的源站訊息和已綁定的源站訊息。
 
         :param request: Request instance for DescribeRuleRealServers.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRuleRealServersRequest`
@@ -1568,7 +1568,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeRules(self, request):
-        """本介面（DescribeRules）用于查詢監聽器下的所有規則訊息，包括規則域名，路徑以及該規則下所綁定的源站清單。當通道版本爲3.0時，該介面會返回該域名對應的高級認證配置訊息。
+        """本介面（DescribeRules）用於查詢監聽器下的所有規則訊息，包括規則域名，路徑以及該規則下所綁定的源站清單。當通道版本爲3.0時，該介面會返回該域名對應的高級認證配置訊息。
 
         :param request: Request instance for DescribeRules.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRulesRequest`
@@ -1596,7 +1596,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeRulesByRuleIds(self, request):
-        """本介面（DescribeRulesByRuleIds）用于根據規則ID拉取規則訊息清單。支援一個或者多個規則訊息的拉取。一次最多支援10個規則訊息的拉取。
+        """本介面（DescribeRulesByRuleIds）用於根據規則ID拉取規則訊息清單。支援一個或者多個規則訊息的拉取。一次最多支援10個規則訊息的拉取。
 
         :param request: Request instance for DescribeRulesByRuleIds.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeRulesByRuleIdsRequest`
@@ -1652,7 +1652,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeSecurityRules(self, request):
-        """本介面（DescribeSecurityRules）用于根據安全規則ID查詢安全規則詳情清單。支援一個或多個安全規則的查詢。一次最多支援20個安全規則的查詢。
+        """本介面（DescribeSecurityRules）用於根據安全規則ID查詢安全規則詳情清單。支援一個或多個安全規則的查詢。一次最多支援20個安全規則的查詢。
 
         :param request: Request instance for DescribeSecurityRules.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeSecurityRulesRequest`
@@ -1680,7 +1680,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeTCPListeners(self, request):
-        """該介面（DescribeTCPListeners）用于查詢單通道或者通道組下的TCP監聽器訊息。
+        """該介面（DescribeTCPListeners）用於查詢單通道或者通道組下的TCP監聽器訊息。
 
         :param request: Request instance for DescribeTCPListeners.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeTCPListenersRequest`
@@ -1708,7 +1708,7 @@ class GaapClient(AbstractClient):
 
 
     def DescribeUDPListeners(self, request):
-        """該介面（DescribeUDPListeners）用于查詢單通道或者通道組下的UDP監聽器訊息
+        """該介面（DescribeUDPListeners）用於查詢單通道或者通道組下的UDP監聽器訊息
 
         :param request: Request instance for DescribeUDPListeners.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DescribeUDPListenersRequest`
@@ -1736,7 +1736,7 @@ class GaapClient(AbstractClient):
 
 
     def DestroyProxies(self, request):
-        """本介面（DestroyProxies）用于銷毀。通道銷毀後，不再産生任何費用。
+        """本介面（DestroyProxies）用於銷毀。通道銷毀後，不再産生任何費用。
 
         :param request: Request instance for DestroyProxies.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.DestroyProxiesRequest`
@@ -1764,7 +1764,7 @@ class GaapClient(AbstractClient):
 
 
     def InquiryPriceCreateProxy(self, request):
-        """本介面（InquiryPriceCreateProxy）用于創建加速通道詢價。
+        """本介面（InquiryPriceCreateProxy）用於創建加速通道詢價。
 
         :param request: Request instance for InquiryPriceCreateProxy.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.InquiryPriceCreateProxyRequest`
@@ -1792,7 +1792,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyCertificate(self, request):
-        """本介面（ModifyCertificate）用于修改監聽器下的域名對應的證書。該介面僅适用于version3.0的通道。
+        """本介面（ModifyCertificate）用於修改監聽器下的域名對應的證書。該介面僅适用於version3.0的通道。
 
         :param request: Request instance for ModifyCertificate.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyCertificateRequest`
@@ -1820,7 +1820,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyCertificateAttributes(self, request):
-        """本介面（ModifyCertificateAttributes）用于修改證書，包括證明名字以及證書内容。
+        """本介面（ModifyCertificateAttributes）用於修改證書，包括證明名字以及證書内容。
 
         :param request: Request instance for ModifyCertificateAttributes.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyCertificateAttributesRequest`
@@ -1848,7 +1848,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyDomain(self, request):
-        """本介面（ModifyDomain）用于監聽器下的域名。當通道版本爲3.0時，支援對該域名所對應的證書修改。
+        """本介面（ModifyDomain）用於監聽器下的域名。當通道版本爲3.0時，支援對該域名所對應的證書修改。
 
         :param request: Request instance for ModifyDomain.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyDomainRequest`
@@ -1876,7 +1876,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyGroupDomainConfig(self, request):
-        """本介面（ModifyGroupDomainConfig）用于配置通道組就近接入域名。
+        """本介面（ModifyGroupDomainConfig）用於配置通道組就近接入域名。
 
         :param request: Request instance for ModifyGroupDomainConfig.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyGroupDomainConfigRequest`
@@ -1904,7 +1904,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyHTTPListenerAttribute(self, request):
-        """該介面（ModifyHTTPListenerAttribute）用于修改通道的HTTP監聽器配置訊息，目前僅支援修改監聽器的名稱。
+        """該介面（ModifyHTTPListenerAttribute）用於修改通道的HTTP監聽器配置訊息，目前僅支援修改監聽器的名稱。
         注意：通道組通道暫時不支援HTTP/HTTPS監聽器。
 
         :param request: Request instance for ModifyHTTPListenerAttribute.
@@ -1933,7 +1933,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyHTTPSListenerAttribute(self, request):
-        """該介面（ModifyHTTPSListenerAttribute）用于修改HTTPS監聽器配置，當前不支援通道組和v1版本通道。
+        """該介面（ModifyHTTPSListenerAttribute）用於修改HTTPS監聽器配置，當前不支援通道組和v1版本通道。
 
         :param request: Request instance for ModifyHTTPSListenerAttribute.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyHTTPSListenerAttributeRequest`
@@ -1961,7 +1961,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyProxiesAttribute(self, request):
-        """本介面（ModifyProxiesAttribute）用于修改實例的屬性（目前只支援修改通道的名稱）。
+        """本介面（ModifyProxiesAttribute）用於修改實例的屬性（目前只支援修改通道的名稱）。
 
         :param request: Request instance for ModifyProxiesAttribute.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyProxiesAttributeRequest`
@@ -1989,7 +1989,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyProxiesProject(self, request):
-        """本介面（ModifyProxiesProject）用于修改通道所屬項目。
+        """本介面（ModifyProxiesProject）用於修改通道所屬項目。
 
         :param request: Request instance for ModifyProxiesProject.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyProxiesProjectRequest`
@@ -2017,7 +2017,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyProxyConfiguration(self, request):
-        """本介面（ModifyProxyConfiguration）用于修改通道的配置。根據當前業務的容量需求，擴容或縮容相關通道的配置。僅支援Scalarable爲1的通道,Scalarable可通過介面DescribeProxies獲取。
+        """本介面（ModifyProxyConfiguration）用於修改通道的配置。根據當前業務的容量需求，擴容或縮容相關通道的配置。僅支援Scalarable爲1的通道,Scalarable可通過介面DescribeProxies獲取。
 
         :param request: Request instance for ModifyProxyConfiguration.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyProxyConfigurationRequest`
@@ -2045,7 +2045,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyProxyGroupAttribute(self, request):
-        """本介面（ModifyProxyGroupAttribute）用于修改通道組屬性，目前僅支援修改通道組名稱。
+        """本介面（ModifyProxyGroupAttribute）用於修改通道組屬性，目前僅支援修改通道組名稱。
 
         :param request: Request instance for ModifyProxyGroupAttribute.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyProxyGroupAttributeRequest`
@@ -2073,7 +2073,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyRealServerName(self, request):
-        """本介面（ModifyRealServerName）用于修改源站的名稱
+        """本介面（ModifyRealServerName）用於修改源站的名稱
 
         :param request: Request instance for ModifyRealServerName.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyRealServerNameRequest`
@@ -2101,7 +2101,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyRuleAttribute(self, request):
-        """本介面（ModifyRuleAttribute）用于修改轉發規則的訊息，包括健康檢查的配置以及轉發策略。
+        """本介面（ModifyRuleAttribute）用於修改轉發規則的訊息，包括健康檢查的配置以及轉發策略。
 
         :param request: Request instance for ModifyRuleAttribute.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyRuleAttributeRequest`
@@ -2157,7 +2157,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyTCPListenerAttribute(self, request):
-        """本介面（ModifyTCPListenerAttribute）用于修改通道實例下TCP監聽器配置，包括健康檢查的配置，調度策略。
+        """本介面（ModifyTCPListenerAttribute）用於修改通道實例下TCP監聽器配置，包括健康檢查的配置，調度策略。
 
         :param request: Request instance for ModifyTCPListenerAttribute.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyTCPListenerAttributeRequest`
@@ -2185,7 +2185,7 @@ class GaapClient(AbstractClient):
 
 
     def ModifyUDPListenerAttribute(self, request):
-        """本介面（ModifyUDPListenerAttribute）用于修改通道實例下UDP監聽器配置，包括監聽器名稱和調度策略的修改。
+        """本介面（ModifyUDPListenerAttribute）用於修改通道實例下UDP監聽器配置，包括監聽器名稱和調度策略的修改。
 
         :param request: Request instance for ModifyUDPListenerAttribute.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.ModifyUDPListenerAttributeRequest`
@@ -2213,7 +2213,7 @@ class GaapClient(AbstractClient):
 
 
     def OpenProxies(self, request):
-        """該介面（OpenProxies）用于開啓一條或者多條通道。
+        """該介面（OpenProxies）用於開啓一條或者多條通道。
 
         :param request: Request instance for OpenProxies.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.OpenProxiesRequest`
@@ -2297,7 +2297,7 @@ class GaapClient(AbstractClient):
 
 
     def SetAuthentication(self, request):
-        """本介面（SetAuthentication）用于通道的高級認證配置，包括認證方式選擇，以及各種認證方式對應的證書選擇。僅支援Version3.0的通道。
+        """本介面（SetAuthentication）用於通道的高級認證配置，包括認證方式選擇，以及各種認證方式對應的證書選擇。僅支援Version3.0的通道。
 
         :param request: Request instance for SetAuthentication.
         :type request: :class:`taifucloudcloud.gaap.v20180529.models.SetAuthenticationRequest`

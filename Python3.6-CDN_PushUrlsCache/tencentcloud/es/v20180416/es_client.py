@@ -166,7 +166,7 @@ class EsClient(AbstractClient):
 
 
     def RestartInstance(self, request):
-        """重啓ES集群實例(用于系統版本更新等操作)
+        """重啓ES集群實例(用於系統版本更新等操作)
 
         :param request: Request instance for RestartInstance.
         :type request: :class:`taifucloudcloud.es.v20180416.models.RestartInstanceRequest`
@@ -195,7 +195,7 @@ class EsClient(AbstractClient):
 
     def UpdateInstance(self, request):
         """對集群進行節點規格變更，修改實例名稱，修改配置，重置密碼， 添加Kibana黑白名單等操作。參數中InstanceId爲必傳參數，ForceRestart爲選填參數，剩餘參數傳遞組合及含義如下：
-        - InstanceName：修改實例名稱(僅用于标識實例)
+        - InstanceName：修改實例名稱(僅用於標識實例)
         - NodeInfoList: 修改節點配置（節點橫向擴縮容，縱向擴縮容，增加主節點，增加冷節點等）
         - EsConfig：修改集群配置
         - Password：修改預設用戶elastic的密碼

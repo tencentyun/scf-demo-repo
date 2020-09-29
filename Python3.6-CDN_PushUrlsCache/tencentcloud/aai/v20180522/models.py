@@ -79,9 +79,9 @@ class SentenceRecognitionRequest(AbstractModel):
         :type SourceType: int
         :param VoiceFormat: 識别音訊的音訊格式（支援mp3,wav）。
         :type VoiceFormat: str
-        :param UsrAudioKey: 用戶端對此任務的唯一标識，用戶自助生成，用于用戶查找識别結果。
+        :param UsrAudioKey: 用戶端對此任務的唯一標識，用戶自助生成，用於用戶查找識别結果。
         :type UsrAudioKey: str
-        :param Url: 語音 URL，公網可下載。當 SourceType 值爲 0 時須填寫該欄位，爲 1 時不填；URL 的長度大于 0，小於 2048，需進行urlencode編碼。音訊時間長度要小於60s。
+        :param Url: 語音 URL，公網可下載。當 SourceType 值爲 0 時須填寫該欄位，爲 1 時不填；URL 的長度大於 0，小於 2048，需進行urlencode編碼。音訊時間長度要小於60s。
         :type Url: str
         :param Data: 語音數據，當SourceType 值爲1時必須填寫，爲0可不寫。要base64編碼(采用python語言時注意讀取文件應該爲string而不是byte，以byte格式讀取後要decode()。編碼後的數據不可帶有回車換行符)。音訊數據要小於600kB。
         :type Data: str
@@ -149,7 +149,7 @@ class SimultaneousInterpretingRequest(AbstractModel):
         :type Data: str
         :param DataLen: 數據長度。
         :type DataLen: int
-        :param VoiceId: 聲音id，标識一句話。
+        :param VoiceId: 聲音id，標識一句話。
         :type VoiceId: str
         :param IsEnd: 是否是一句話的結束。
         :type IsEnd: int
@@ -159,7 +159,7 @@ class SimultaneousInterpretingRequest(AbstractModel):
         :type OpenTranslate: int
         :param SourceLanguage: 如果需要翻譯，表示源語言類型，可取值：zh，en。
         :type SourceLanguage: str
-        :param TargetLanguage: 如果需要翻譯，表示目标語言類型，可取值：zh，en。
+        :param TargetLanguage: 如果需要翻譯，表示目標語言類型，可取值：zh，en。
         :type TargetLanguage: str
         :param Seq: 表明當前語音分片的索引，從0開始
         :type Seq: int
@@ -226,9 +226,9 @@ class TextToVoiceRequest(AbstractModel):
     def __init__(self):
         """
         :param Text: 合成語音的源文本，按UTF-8編碼統一計算。
-中文最大支援100個漢字（全角标點符号算一個漢字）；英文最大支援400個字母（半角标點符号算一個字母）。包含空格等字元時需要url encode再傳輸。
+中文最大支援100個漢字（全角標點符號算一個漢字）；英文最大支援400個字母（半角標點符號算一個字母）。包含空格等字元時需要url encode再傳輸。
         :type Text: str
-        :param SessionId: 一次請求對應一個SessionId，會原樣返回，建議傳入類似于uuid的字串防止重複。
+        :param SessionId: 一次請求對應一個SessionId，會原樣返回，建議傳入類似於uuid的字串防止重複。
         :type SessionId: str
         :param ModelType: 模型類型，1-預設模型。
         :type ModelType: int

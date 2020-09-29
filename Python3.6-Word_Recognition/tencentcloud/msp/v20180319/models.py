@@ -352,9 +352,9 @@ class RegisterMigrationTaskRequest(AbstractModel):
         :type SrcAccessType: str
         :param SrcDatabaseType: 源實例資料庫類型
         :type SrcDatabaseType: str
-        :param DstAccessType: 目标實例接入類型
+        :param DstAccessType: 目標實例接入類型
         :type DstAccessType: str
-        :param DstDatabaseType: 目标實例資料庫類型
+        :param DstDatabaseType: 目標實例資料庫類型
         :type DstDatabaseType: str
         """
         self.TaskType = None

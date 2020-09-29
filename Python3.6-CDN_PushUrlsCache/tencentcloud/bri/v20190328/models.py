@@ -37,7 +37,7 @@ class BRIRequest(AbstractModel):
         :type Ip: str
         :param PackageName: Apk安裝包名 (業務名爲bri_apk時必填，除非已填FileMd5)
         :type PackageName: str
-        :param PhoneNumber: 電話号碼 (業務名爲bri_num時必填)
+        :param PhoneNumber: 電話號碼 (業務名爲bri_num時必填)
         :type PhoneNumber: str
         :param Url: 網址 (業務名爲bri_url時必填)
         :type Url: str
@@ -74,19 +74,19 @@ class BRIResponse(AbstractModel):
         """
         :param Score: 風險分值，取值[0,100], 分值越高風險越高
         :type Score: float
-        :param Tags: 當Service爲bri_num時,返回的風險标簽有:
-1) 疑似垃圾流量     說明: 結合号碼的曆史數據表現，判斷該号碼曆史用網際網路業務作惡行爲，其産生的網際網路行爲對于其他業務來說屬于作弊或垃圾流量。 
-2) 疑似新客戶       說明: 通過号碼網際網路行爲（社交，浏覽等）是否異常判斷爲小号或接碼平台帳号。 
+        :param Tags: 當Service爲bri_num時,返回的風險標簽有:
+1) 疑似垃圾流量     說明: 結合號碼的曆史數據表現，判斷該號碼曆史用網際網路業務作惡行爲，其産生的網際網路行爲對於其他業務來說屬於作弊或垃圾流量。 
+2) 疑似新客戶       說明: 通過號碼網際網路行爲（社交，浏覽等）是否異常判斷爲小號或接碼平台帳號。 
 
-當Service爲bri_dev時,返回的風險标簽有:
+當Service爲bri_dev時,返回的風險標簽有:
 1) 疑似真機假用戶    說明: 根據設備的一些數據表現，我們判定爲群控設備
 2) 疑似假機         說明: 根據設備的一些數據表現，我們判定爲模拟器或虛假設備ID
 3) 疑似真用戶假行爲  說明: 根據設備的用戶使用情況，我們判定該用戶存在使用腳本、外挂、病毒等作弊行爲
 
-當Service爲bri_ip時,返回的風險标簽有:
-1) 疑似垃圾流量     說明:結合IP的曆史數據表現，判斷該IP曆史用網際網路業務作惡行爲，其産生的網際網路行爲對于其他業務來說屬于作弊或垃圾流量。
+當Service爲bri_ip時,返回的風險標簽有:
+1) 疑似垃圾流量     說明:結合IP的曆史數據表現，判斷該IP曆史用網際網路業務作惡行爲，其産生的網際網路行爲對於其他業務來說屬於作弊或垃圾流量。
 
-當Service爲bri_url時,返回的風險标簽有:
+當Service爲bri_url時,返回的風險標簽有:
 1) 社工欺詐    說明: URL爲社工欺詐
 2) 訊息詐騙    說明: URL爲訊息詐騙
 3) 虛假銷售    說明: URL爲虛假銷售
@@ -94,7 +94,7 @@ class BRIResponse(AbstractModel):
 5) 博彩網站    說明: URL爲博彩網站
 6) 色情網站    說明: URL爲色情網站
 
-當Service爲bri_apk時,返回的風險标簽有:
+當Service爲bri_apk時,返回的風險標簽有:
 1) 安全   說明: APK爲正規應用
 2) 一般   說明: APK爲未發現問題的正常應用
 3) 風險   說明: APK爲外挂或色情等風險應用
@@ -119,7 +119,7 @@ class DescribeBRIRequest(AbstractModel):
         """
         :param RequestData: 業務風險情報請求體
         :type RequestData: :class:`taifucloudcloud.bri.v20190328.models.BRIRequest`
-        :param ResourceId: 客戶用于計費的資源ID
+        :param ResourceId: 客戶用於計費的資源ID
         :type ResourceId: str
         """
         self.RequestData = None

@@ -22,7 +22,7 @@ def kafka_consumer_api_handler(cred, partition_id, region, consumer_function_nam
         # 介面參數,輸入需要調用的函數名，RequestResponse(同步) 和 Event(異步)
         function_name = consumer_function_name
         logger.debug('Start Hello World function')
-        # 調用介面，發起請求，并列印返回結果
+        # 調用介面，發起請求，並列印返回結果
         req = scf_models.InvokeRequest()
         req.FunctionName = function_name
         req.Namespace = namespace

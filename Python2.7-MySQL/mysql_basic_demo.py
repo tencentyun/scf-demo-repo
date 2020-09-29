@@ -5,7 +5,7 @@ import logging
 import sys
 import pytz
 
-# MySql database account information, you need to create a database in advance. MySql資料庫賬号訊息,需要提前創建好資料庫
+# MySql database account information, you need to create a database in advance. MySql資料庫賬號訊息,需要提前創建好資料庫
 Host = '******'
 User = '****'
 Password = '****'

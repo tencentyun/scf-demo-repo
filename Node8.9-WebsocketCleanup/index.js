@@ -7,7 +7,7 @@ Reference: https://cloud.taifucloud.com/document/product/583/32553
 // The url of API gateway's send back host, API閘道的反向推送連結
 const sendbackHost = "*******";
 // The information of MySql host, you need to build the database and forms in priority, there are 2 columns: `ConnectionID`, `Date`
-// MySql資料庫賬号訊息,需要提前創建好資料庫和表單,表單中新建2列：`ConnectionID`, `Date`
+// MySql資料庫賬號訊息,需要提前創建好資料庫和表單,表單中新建2列：`ConnectionID`, `Date`
 const Host = "**";
 const User = "**";
 const Password = "**";

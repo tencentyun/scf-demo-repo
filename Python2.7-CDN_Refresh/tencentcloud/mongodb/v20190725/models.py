@@ -168,7 +168,7 @@ class CreateDBInstanceHourRequest(AbstractModel):
         :type ReplicateSetNum: int
         :param NodeNum: 每個副本集内節點個數，當前副本集節點數固定爲3，分片從節點數可選，具體參照查詢雲資料庫的售賣規格返回參數
         :type NodeNum: int
-        :param MongoVersion: 版本号，具體支援的售賣版本請參照查詢雲資料庫的售賣規格（DescribeSpecInfo）返回結果。參數與版本對應關系是MONGO_3_WT：MongoDB 3.2 WiredTiger儲存引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB儲存引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger儲存引擎版本
+        :param MongoVersion: 版本號，具體支援的售賣版本請參照查詢雲資料庫的售賣規格（DescribeSpecInfo）返回結果。參數與版本對應關系是MONGO_3_WT：MongoDB 3.2 WiredTiger儲存引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB儲存引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger儲存引擎版本
         :type MongoVersion: str
         :param MachineCode: 機器類型，HIO：高IO型；HIO10G：高IO萬兆
         :type MachineCode: str
@@ -186,7 +186,7 @@ class CreateDBInstanceHourRequest(AbstractModel):
         :type Password: str
         :param ProjectId: 項目ID，不設置爲預設項目
         :type ProjectId: int
-        :param Tags: 實例标簽訊息
+        :param Tags: 實例標簽訊息
         :type Tags: list of TagInfo
         """
         self.Memory = None
@@ -265,7 +265,7 @@ class CreateDBInstanceRequest(AbstractModel):
         :type Memory: int
         :param Volume: 實例硬碟大小，單位：GB
         :type Volume: int
-        :param MongoVersion: 版本号，具體支援的售賣版本請參照查詢雲資料庫的售賣規格（DescribeSpecInfo）返回結果。參數與版本對應關系是MONGO_3_WT：MongoDB 3.2 WiredTiger儲存引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB儲存引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger儲存引擎版本
+        :param MongoVersion: 版本號，具體支援的售賣版本請參照查詢雲資料庫的售賣規格（DescribeSpecInfo）返回結果。參數與版本對應關系是MONGO_3_WT：MongoDB 3.2 WiredTiger儲存引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB儲存引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger儲存引擎版本
         :type MongoVersion: str
         :param GoodsNum: 實例數量, 最小值1，最大值爲10
         :type GoodsNum: int
@@ -287,9 +287,9 @@ class CreateDBInstanceRequest(AbstractModel):
         :type SubnetId: str
         :param Password: 實例密碼，不設置該參數則需要在創建完成後通過設置密碼介面初始化實例密碼。密碼必須是8-16位字元，且至少包含字母、數字和字元 !@#%^*() 中的兩種
         :type Password: str
-        :param Tags: 實例标簽訊息
+        :param Tags: 實例標簽訊息
         :type Tags: list of TagInfo
-        :param AutoRenewFlag: 自動續約标記，可選值爲：0 - 不自動續約；1 - 自動續約。預設爲不自動續約
+        :param AutoRenewFlag: 自動續約標記，可選值爲：0 - 不自動續約；1 - 自動續約。預設爲不自動續約
         :type AutoRenewFlag: int
         """
         self.NodeNum = None
@@ -495,7 +495,7 @@ class DescribeClientConnectionsResponse(AbstractModel):
         """
         :param Clients: 用戶端連接訊息，包括用戶端IP和對應IP的連接數量。
         :type Clients: list of ClientConnection
-        :param TotalCount: 滿足條件的記錄總條數，可用于分頁查詢。
+        :param TotalCount: 滿足條件的記錄總條數，可用於分頁查詢。
         :type TotalCount: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -896,9 +896,9 @@ class InquirePriceCreateDBInstancesRequest(AbstractModel):
         :type Memory: int
         :param Volume: 實例硬碟大小，單位：GB
         :type Volume: int
-        :param MongoVersion: 版本号，具體支援的售賣版本請參照查詢雲資料庫的售賣規格（DescribeSpecInfo）返回結果。參數與版本對應關系是MONGO_3_WT：MongoDB 3.2 WiredTiger儲存引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB儲存引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger儲存引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger儲存引擎版本
+        :param MongoVersion: 版本號，具體支援的售賣版本請參照查詢雲資料庫的售賣規格（DescribeSpecInfo）返回結果。參數與版本對應關系是MONGO_3_WT：MongoDB 3.2 WiredTiger儲存引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB儲存引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger儲存引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger儲存引擎版本
         :type MongoVersion: str
-        :param MachineCode: 機器類型，HIO：高IO型；HIO10G：高IO萬兆型；STDS5：标準型
+        :param MachineCode: 機器類型，HIO：高IO型；HIO10G：高IO萬兆型；STDS5：標準型
         :type MachineCode: str
         :param GoodsNum: 實例數量, 最小值1，最大值爲10
         :type GoodsNum: int
@@ -1060,7 +1060,7 @@ class InstanceChargePrepaid(AbstractModel):
         """
         :param Period: 購買實例的時長，單位：月。取值範圍：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。預設爲1。
         :type Period: int
-        :param RenewFlag: 自動續約标識。取值範圍：
+        :param RenewFlag: 自動續約標識。取值範圍：
 NOTIFY_AND_AUTO_RENEW：通知過期且自動續約
 NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約
 DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約
@@ -1108,7 +1108,7 @@ class InstanceDetail(AbstractModel):
         :type Status: int
         :param Vip: 實例IP
         :type Vip: str
-        :param Vport: 端口号
+        :param Vport: 端口號
         :type Vport: int
         :param CreateTime: 實例創建時間
         :type CreateTime: str
@@ -1128,7 +1128,7 @@ class InstanceDetail(AbstractModel):
         :type SecondaryNum: int
         :param ReplicationSetNum: 實例分片數
         :type ReplicationSetNum: int
-        :param AutoRenewFlag: 實例自動續約标志，可能的返回值：0-手動續約，1-自動續約，2-确認不續約
+        :param AutoRenewFlag: 實例自動續約標志，可能的返回值：0-手動續約，1-自動續約，2-确認不續約
         :type AutoRenewFlag: int
         :param UsedVolume: 已用容量，單位MB
         :type UsedVolume: int
@@ -1144,13 +1144,13 @@ class InstanceDetail(AbstractModel):
         :type StandbyInstances: list of DBInstanceInfo
         :param CloneInstances: 臨時實例訊息
         :type CloneInstances: list of DBInstanceInfo
-        :param RelatedInstance: 關聯實例訊息，對于正式實例，該欄位表示它的臨時實例訊息；對于臨時實例，則表示它的正式實例訊息;如果爲只讀/災備實例,則表示他的主實例訊息
+        :param RelatedInstance: 關聯實例訊息，對於正式實例，該欄位表示它的臨時實例訊息；對於臨時實例，則表示它的正式實例訊息;如果爲只讀/災備實例,則表示他的主實例訊息
         :type RelatedInstance: :class:`taifucloudcloud.mongodb.v20190725.models.DBInstanceInfo`
-        :param Tags: 實例标簽訊息集合
+        :param Tags: 實例標簽訊息集合
         :type Tags: list of TagInfo
-        :param InstanceVer: 實例版本标記
+        :param InstanceVer: 實例版本標記
         :type InstanceVer: int
-        :param ClusterVer: 實例版本标記
+        :param ClusterVer: 實例版本標記
         :type ClusterVer: int
         :param Protocol: 協議訊息，可能的返回值：1-mongodb，2-dynamodb
         :type Protocol: int
@@ -1158,7 +1158,7 @@ class InstanceDetail(AbstractModel):
         :type InstanceType: int
         :param InstanceStatusDesc: 實例狀态描述
         :type InstanceStatusDesc: str
-        :param RealInstanceId: 實例對應的物理實例id，回檔并替換過的實例有不同的InstanceId和RealInstanceId，從barad獲取監控數據等場景下需要用物理id獲取
+        :param RealInstanceId: 實例對應的物理實例id，回檔並替換過的實例有不同的InstanceId和RealInstanceId，從barad獲取監控數據等場景下需要用物理id獲取
         :type RealInstanceId: str
         """
         self.InstanceId = None
@@ -1318,7 +1318,7 @@ class ModifyDBInstanceSpecRequest(AbstractModel):
         :type InstanceId: str
         :param Memory: 實例配置變更後的内存大小，單位：GB。内存和磁盤必須同時升配或同時降配
         :type Memory: int
-        :param Volume: 實例配置變更後的硬碟大小，單位：GB。内存和磁盤必須同時升配或同時降配。降配時，新的磁盤參數必須大于已用磁盤容量的1.2倍
+        :param Volume: 實例配置變更後的硬碟大小，單位：GB。内存和磁盤必須同時升配或同時降配。降配時，新的磁盤參數必須大於已用磁盤容量的1.2倍
         :type Volume: int
         :param OplogSize: 實例配置變更後oplog的大小，單位：GB，預設爲磁盤空間的10%，允許設置的最小值爲磁盤的10%，最大值爲磁盤的90%
         :type OplogSize: int
@@ -1519,7 +1519,7 @@ class ShardInfo(AbstractModel):
 
 
 class SlowLogPattern(AbstractModel):
-    """用于描述MongoDB資料庫慢日志統計訊息
+    """用於描述MongoDB資料庫慢日志統計訊息
 
     """
 
@@ -1554,11 +1554,11 @@ class SpecItem(AbstractModel):
 
     def __init__(self):
         """
-        :param SpecCode: 規格訊息标識
+        :param SpecCode: 規格訊息標識
         :type SpecCode: str
-        :param Status: 規格有效标志，取值：0-停止售賣，1-開放售賣
+        :param Status: 規格有效標志，取值：0-停止售賣，1-開放售賣
         :type Status: int
-        :param Cpu: 規格有效标志，取值：0-停止售賣，1-開放售賣
+        :param Cpu: 規格有效標志，取值：0-停止售賣，1-開放售賣
         :type Cpu: int
         :param Memory: 内存規格，單位爲MB
         :type Memory: int
@@ -1574,9 +1574,9 @@ class SpecItem(AbstractModel):
         :type Conns: int
         :param MongoVersionCode: 實例mongodb版本訊息
         :type MongoVersionCode: str
-        :param MongoVersionValue: 實例mongodb版本号
+        :param MongoVersionValue: 實例mongodb版本號
         :type MongoVersionValue: int
-        :param Version: 實例mongodb版本号（短）
+        :param Version: 實例mongodb版本號（短）
         :type Version: str
         :param EngineName: 儲存引擎
         :type EngineName: str
@@ -1675,15 +1675,15 @@ class SpecificationInfo(AbstractModel):
 
 
 class TagInfo(AbstractModel):
-    """實例标簽訊息
+    """實例標簽訊息
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
         :type TagValue: str
         """
         self.TagKey = None

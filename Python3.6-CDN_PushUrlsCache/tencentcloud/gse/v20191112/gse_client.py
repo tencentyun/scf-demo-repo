@@ -26,7 +26,7 @@ class GseClient(AbstractClient):
 
 
     def CreateGameServerSession(self, request):
-        """本介面（CreateGameServerSession）用于創建遊戲服務會話
+        """本介面（CreateGameServerSession）用於創建遊戲服務會話
 
         :param request: Request instance for CreateGameServerSession.
         :type request: :class:`taifucloudcloud.gse.v20191112.models.CreateGameServerSessionRequest`
@@ -54,7 +54,7 @@ class GseClient(AbstractClient):
 
 
     def DescribeGameServerSessionDetails(self, request):
-        """本介面（DescribeGameServerSessionDetails）用于查詢遊戲服務器會話詳情清單
+        """本介面（DescribeGameServerSessionDetails）用於查詢遊戲服務器會話詳情清單
 
         :param request: Request instance for DescribeGameServerSessionDetails.
         :type request: :class:`taifucloudcloud.gse.v20191112.models.DescribeGameServerSessionDetailsRequest`
@@ -82,7 +82,7 @@ class GseClient(AbstractClient):
 
 
     def DescribeGameServerSessionPlacement(self, request):
-        """本介面（DescribeGameServerSessionPlacement）用于查詢遊戲服務器會話的放置
+        """本介面（DescribeGameServerSessionPlacement）用於查詢遊戲服務器會話的放置
 
         :param request: Request instance for DescribeGameServerSessionPlacement.
         :type request: :class:`taifucloudcloud.gse.v20191112.models.DescribeGameServerSessionPlacementRequest`
@@ -110,7 +110,7 @@ class GseClient(AbstractClient):
 
 
     def DescribeGameServerSessions(self, request):
-        """本介面（DescribeGameServerSessions）用于查詢遊戲服務器會話清單
+        """本介面（DescribeGameServerSessions）用於查詢遊戲服務器會話清單
 
         :param request: Request instance for DescribeGameServerSessions.
         :type request: :class:`taifucloudcloud.gse.v20191112.models.DescribeGameServerSessionsRequest`
@@ -138,7 +138,7 @@ class GseClient(AbstractClient):
 
 
     def DescribeInstances(self, request):
-        """用于查詢服務器實例清單
+        """用於查詢服務器實例清單
 
         :param request: Request instance for DescribeInstances.
         :type request: :class:`taifucloudcloud.gse.v20191112.models.DescribeInstancesRequest`
@@ -166,7 +166,7 @@ class GseClient(AbstractClient):
 
 
     def DescribePlayerSessions(self, request):
-        """本介面（DescribePlayerSessions）用于獲取玩家會話清單
+        """本介面（DescribePlayerSessions）用於獲取玩家會話清單
 
         :param request: Request instance for DescribePlayerSessions.
         :type request: :class:`taifucloudcloud.gse.v20191112.models.DescribePlayerSessionsRequest`
@@ -194,7 +194,7 @@ class GseClient(AbstractClient):
 
 
     def GetGameServerSessionLogUrl(self, request):
-        """本介面（GetGameServerSessionLogUrl）用于獲取遊戲服務器會話的日志URL
+        """本介面（GetGameServerSessionLogUrl）用於獲取遊戲服務器會話的日志URL
 
         :param request: Request instance for GetGameServerSessionLogUrl.
         :type request: :class:`taifucloudcloud.gse.v20191112.models.GetGameServerSessionLogUrlRequest`
@@ -250,7 +250,7 @@ class GseClient(AbstractClient):
 
 
     def JoinGameServerSession(self, request):
-        """本介面（JoinGameServerSession）用于加入遊戲服務器會話
+        """本介面（JoinGameServerSession）用於加入遊戲服務器會話
 
         :param request: Request instance for JoinGameServerSession.
         :type request: :class:`taifucloudcloud.gse.v20191112.models.JoinGameServerSessionRequest`
@@ -278,7 +278,7 @@ class GseClient(AbstractClient):
 
 
     def SearchGameServerSessions(self, request):
-        """本介面（SearchGameServerSessions）用于搜索遊戲服務器會話清單
+        """本介面（SearchGameServerSessions）用於搜索遊戲服務器會話清單
 
         :param request: Request instance for SearchGameServerSessions.
         :type request: :class:`taifucloudcloud.gse.v20191112.models.SearchGameServerSessionsRequest`
@@ -306,7 +306,7 @@ class GseClient(AbstractClient):
 
 
     def StartGameServerSessionPlacement(self, request):
-        """本介面（StartGameServerSessionPlacement）用于開始放置遊戲服務器會話
+        """本介面（StartGameServerSessionPlacement）用於開始放置遊戲服務器會話
 
         :param request: Request instance for StartGameServerSessionPlacement.
         :type request: :class:`taifucloudcloud.gse.v20191112.models.StartGameServerSessionPlacementRequest`
@@ -334,7 +334,7 @@ class GseClient(AbstractClient):
 
 
     def StopGameServerSessionPlacement(self, request):
-        """本介面（StopGameServerSessionPlacement）用于停止放置遊戲服務器會話
+        """本介面（StopGameServerSessionPlacement）用於停止放置遊戲服務器會話
 
         :param request: Request instance for StopGameServerSessionPlacement.
         :type request: :class:`taifucloudcloud.gse.v20191112.models.StopGameServerSessionPlacementRequest`
@@ -362,7 +362,7 @@ class GseClient(AbstractClient):
 
 
     def UpdateGameServerSession(self, request):
-        """本介面（UpdateGameServerSession）用于更新遊戲服務器會話
+        """本介面（UpdateGameServerSession）用於更新遊戲服務器會話
 
         :param request: Request instance for UpdateGameServerSession.
         :type request: :class:`taifucloudcloud.gse.v20191112.models.UpdateGameServerSessionRequest`

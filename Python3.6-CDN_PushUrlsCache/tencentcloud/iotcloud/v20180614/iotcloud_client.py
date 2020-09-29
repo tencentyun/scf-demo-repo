@@ -26,7 +26,7 @@ class IotcloudClient(AbstractClient):
 
 
     def BindDevices(self, request):
-        """本介面（BindDevices）用于閘道設備批次綁定子設備
+        """本介面（BindDevices）用於閘道設備批次綁定子設備
 
         :param request: Request instance for BindDevices.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.BindDevicesRequest`
@@ -54,7 +54,7 @@ class IotcloudClient(AbstractClient):
 
 
     def CancelTask(self, request):
-        """本介面（CancelTask）用于取消一個未被調度的任務。
+        """本介面（CancelTask）用於取消一個未被調度的任務。
 
         :param request: Request instance for CancelTask.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.CancelTaskRequest`
@@ -82,7 +82,7 @@ class IotcloudClient(AbstractClient):
 
 
     def CreateDevice(self, request):
-        """本介面（CreateDevice）用于新建一個物聯網通信設備。
+        """本介面（CreateDevice）用於新建一個物聯網通信設備。
 
         :param request: Request instance for CreateDevice.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateDeviceRequest`
@@ -138,7 +138,7 @@ class IotcloudClient(AbstractClient):
 
 
     def CreateMultiDevice(self, request):
-        """本介面（CreateMultiDevice）用于批次創建物聯雲設備。
+        """本介面（CreateMultiDevice）用於批次創建物聯雲設備。
 
         :param request: Request instance for CreateMultiDevice.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateMultiDeviceRequest`
@@ -166,7 +166,7 @@ class IotcloudClient(AbstractClient):
 
 
     def CreateProduct(self, request):
-        """本介面（CreateProduct）用于創建一個新的物聯網通信産品
+        """本介面（CreateProduct）用於創建一個新的物聯網通信産品
 
         :param request: Request instance for CreateProduct.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateProductRequest`
@@ -194,7 +194,7 @@ class IotcloudClient(AbstractClient):
 
 
     def CreateTask(self, request):
-        """本介面（CreateTask）用于創建一個批次任務。目前此介面可以創建批次更新影子以及批次下發訊息的任務
+        """本介面（CreateTask）用於創建一個批次任務。目前此介面可以創建批次更新影子以及批次下發訊息的任務
 
         :param request: Request instance for CreateTask.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateTaskRequest`
@@ -222,7 +222,7 @@ class IotcloudClient(AbstractClient):
 
 
     def CreateTopicPolicy(self, request):
-        """本介面（CreateTopicPolicy）用于創建一個Topic
+        """本介面（CreateTopicPolicy）用於創建一個Topic
 
         :param request: Request instance for CreateTopicPolicy.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateTopicPolicyRequest`
@@ -250,7 +250,7 @@ class IotcloudClient(AbstractClient):
 
 
     def CreateTopicRule(self, request):
-        """本介面（CreateTopicRule）用于創建一個規則
+        """本介面（CreateTopicRule）用於創建一個規則
 
         :param request: Request instance for CreateTopicRule.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.CreateTopicRuleRequest`
@@ -278,7 +278,7 @@ class IotcloudClient(AbstractClient):
 
 
     def DeleteDevice(self, request):
-        """本介面（DeleteDevice）用于删除物聯網通信設備。
+        """本介面（DeleteDevice）用於删除物聯網通信設備。
 
         :param request: Request instance for DeleteDevice.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DeleteDeviceRequest`
@@ -334,7 +334,7 @@ class IotcloudClient(AbstractClient):
 
 
     def DeleteProduct(self, request):
-        """本介面（DeleteProduct）用于删除一個物聯網通信産品
+        """本介面（DeleteProduct）用於删除一個物聯網通信産品
 
         :param request: Request instance for DeleteProduct.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DeleteProductRequest`
@@ -362,7 +362,7 @@ class IotcloudClient(AbstractClient):
 
 
     def DeleteTopicRule(self, request):
-        """本介面（DeleteTopicRule）用于删除規則
+        """本介面（DeleteTopicRule）用於删除規則
 
         :param request: Request instance for DeleteTopicRule.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DeleteTopicRuleRequest`
@@ -390,7 +390,7 @@ class IotcloudClient(AbstractClient):
 
 
     def DescribeDevice(self, request):
-        """本介面（DescribeDevice）用于檢視設備訊息
+        """本介面（DescribeDevice）用於檢視設備訊息
 
         :param request: Request instance for DescribeDevice.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeDeviceRequest`
@@ -446,7 +446,7 @@ class IotcloudClient(AbstractClient):
 
 
     def DescribeDeviceShadow(self, request):
-        """本介面（DescribeDeviceShadow）用于查詢虛拟設備訊息。
+        """本介面（DescribeDeviceShadow）用於查詢虛拟設備訊息。
 
         :param request: Request instance for DescribeDeviceShadow.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeDeviceShadowRequest`
@@ -474,7 +474,7 @@ class IotcloudClient(AbstractClient):
 
 
     def DescribeDevices(self, request):
-        """本介面（DescribeDevices）用于查詢物聯網通信設備的設備清單。
+        """本介面（DescribeDevices）用於查詢物聯網通信設備的設備清單。
 
         :param request: Request instance for DescribeDevices.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeDevicesRequest`
@@ -530,7 +530,7 @@ class IotcloudClient(AbstractClient):
 
 
     def DescribeMultiDevTask(self, request):
-        """本介面（DescribeMultiDevTask）用于查詢批次創建設備任務的執行狀态。
+        """本介面（DescribeMultiDevTask）用於查詢批次創建設備任務的執行狀态。
 
         :param request: Request instance for DescribeMultiDevTask.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeMultiDevTaskRequest`
@@ -558,7 +558,7 @@ class IotcloudClient(AbstractClient):
 
 
     def DescribeMultiDevices(self, request):
-        """本介面（DescribeMultiDevices）用于查詢批次創建設備的執行結果。
+        """本介面（DescribeMultiDevices）用於查詢批次創建設備的執行結果。
 
         :param request: Request instance for DescribeMultiDevices.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeMultiDevicesRequest`
@@ -586,7 +586,7 @@ class IotcloudClient(AbstractClient):
 
 
     def DescribeProducts(self, request):
-        """本介面（DescribeProducts）用于列出産品清單。
+        """本介面（DescribeProducts）用於列出産品清單。
 
         :param request: Request instance for DescribeProducts.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeProductsRequest`
@@ -614,7 +614,7 @@ class IotcloudClient(AbstractClient):
 
 
     def DescribeTask(self, request):
-        """本介面（DescribeTask）用于查詢一個已創建任務的詳情，任務保留一個月
+        """本介面（DescribeTask）用於查詢一個已創建任務的詳情，任務保留一個月
 
         :param request: Request instance for DescribeTask.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeTaskRequest`
@@ -642,7 +642,7 @@ class IotcloudClient(AbstractClient):
 
 
     def DescribeTasks(self, request):
-        """本介面（DescribeTasks）用于查詢已創建的任務清單，任務保留一個月
+        """本介面（DescribeTasks）用於查詢已創建的任務清單，任務保留一個月
 
         :param request: Request instance for DescribeTasks.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DescribeTasksRequest`
@@ -670,7 +670,7 @@ class IotcloudClient(AbstractClient):
 
 
     def DisableTopicRule(self, request):
-        """本介面（DisableTopicRule）用于禁用規則
+        """本介面（DisableTopicRule）用於禁用規則
 
         :param request: Request instance for DisableTopicRule.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.DisableTopicRuleRequest`
@@ -698,7 +698,7 @@ class IotcloudClient(AbstractClient):
 
 
     def EnableTopicRule(self, request):
-        """本介面（EnableTopicRule）用于啓用規則
+        """本介面（EnableTopicRule）用於啓用規則
 
         :param request: Request instance for EnableTopicRule.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.EnableTopicRuleRequest`
@@ -754,7 +754,7 @@ class IotcloudClient(AbstractClient):
 
 
     def PublishMessage(self, request):
-        """本介面（PublishMessage）用于向某個主題發訊息。
+        """本介面（PublishMessage）用於向某個主題發訊息。
 
         :param request: Request instance for PublishMessage.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.PublishMessageRequest`
@@ -810,7 +810,7 @@ class IotcloudClient(AbstractClient):
 
 
     def ReplaceTopicRule(self, request):
-        """本介面（ReplaceTopicRule）用于修改替換規則
+        """本介面（ReplaceTopicRule）用於修改替換規則
 
         :param request: Request instance for ReplaceTopicRule.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.ReplaceTopicRuleRequest`
@@ -866,7 +866,7 @@ class IotcloudClient(AbstractClient):
 
 
     def UnbindDevices(self, request):
-        """本介面（UnbindDevices）用于閘道設備批次解綁子設備
+        """本介面（UnbindDevices）用於閘道設備批次解綁子設備
 
         :param request: Request instance for UnbindDevices.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.UnbindDevicesRequest`
@@ -922,7 +922,7 @@ class IotcloudClient(AbstractClient):
 
 
     def UpdateDeviceShadow(self, request):
-        """本介面（UpdateDeviceShadow）用于更新虛拟設備訊息。
+        """本介面（UpdateDeviceShadow）用於更新虛拟設備訊息。
 
         :param request: Request instance for UpdateDeviceShadow.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.UpdateDeviceShadowRequest`
@@ -950,7 +950,7 @@ class IotcloudClient(AbstractClient):
 
 
     def UpdateTopicPolicy(self, request):
-        """本介面（UpdateTopicPolicy）用于更新Topic訊息
+        """本介面（UpdateTopicPolicy）用於更新Topic訊息
 
         :param request: Request instance for UpdateTopicPolicy.
         :type request: :class:`taifucloudcloud.iotcloud.v20180614.models.UpdateTopicPolicyRequest`

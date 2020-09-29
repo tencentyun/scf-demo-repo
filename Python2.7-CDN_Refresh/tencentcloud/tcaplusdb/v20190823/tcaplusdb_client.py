@@ -54,7 +54,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def CompareIdlFiles(self, request):
-        """選中目标表格，上傳并校驗改表文件，返回是否允許修改表格結構的結果。
+        """選中目標表格，上傳並校驗改表文件，返回是否允許修改表格結構的結果。
 
         :param request: Request instance for CompareIdlFiles.
         :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.CompareIdlFilesRequest`
@@ -110,7 +110,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def CreateCluster(self, request):
-        """本介面用于創建TcaplusDB集群
+        """本介面用於創建TcaplusDB集群
 
         :param request: Request instance for CreateCluster.
         :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.CreateClusterRequest`
@@ -222,7 +222,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def DeleteIdlFiles(self, request):
-        """指定集群ID和待删除IDL文件的訊息，删除目标文件，如果文件正在被表關聯則删除失敗。
+        """指定集群ID和待删除IDL文件的訊息，删除目標文件，如果文件正在被表關聯則删除失敗。
 
         :param request: Request instance for DeleteIdlFiles.
         :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.DeleteIdlFilesRequest`
@@ -754,7 +754,7 @@ class TcaplusdbClient(AbstractClient):
 
 
     def VerifyIdlFiles(self, request):
-        """上傳并校驗創建表格文件，返回校驗合法的表格定義
+        """上傳並校驗創建表格文件，返回校驗合法的表格定義
 
         :param request: Request instance for VerifyIdlFiles.
         :type request: :class:`taifucloudcloud.tcaplusdb.v20190823.models.VerifyIdlFilesRequest`

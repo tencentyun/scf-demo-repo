@@ -1374,7 +1374,7 @@ class Instance(AbstractModel):
         :type DeadlineTime: str
         :param ResourceGroupId: 所屬資源組 ID
         :type ResourceGroupId: str
-        :param RenewFlag: 自動續約标簽
+        :param RenewFlag: 自動續約標簽
         :type RenewFlag: str
         :param Region: 節點所在地域
         :type Region: str
@@ -2211,7 +2211,7 @@ class Scaler(AbstractModel):
         :type MinReplicas: int
         :param StartReplicas: 起始副本數
         :type StartReplicas: int
-        :param HpaMetrics: 擴縮容指标，選擇自動擴縮容時至少需要選擇一個指标，支援CPU-UTIL、MEMORY-UTIL
+        :param HpaMetrics: 擴縮容指標，選擇自動擴縮容時至少需要選擇一個指標，支援CPU-UTIL、MEMORY-UTIL
         :type HpaMetrics: list of Option
         """
         self.MaxReplicas = None
@@ -2245,7 +2245,7 @@ class ServiceStatus(AbstractModel):
         :type CurrentReplicas: int
         :param Status: Normal：正常運作中；Abnormal：服務異常，例如容器啓動失敗等；Waiting：服務等待中，例如容器下載映像過程等；Stopped：已停止 Stopping 停止中；Resuming：重啓中；Updating：服務更新中
         :type Status: str
-        :param Conditions: 服務處于當前狀态的原因集合
+        :param Conditions: 服務處於當前狀态的原因集合
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Conditions: list of Conditions
         :param Replicas: 副本名稱

@@ -27,7 +27,7 @@ class CreateDBInstanceHourRequest(AbstractModel):
         :type Memory: int
         :param Volume: 實例硬碟大小，單位：GB
         :type Volume: int
-        :param ReplicateSetNum: 副本集個數，1爲單副本集實例，大于1爲分片集群實例，最大不超過10
+        :param ReplicateSetNum: 副本集個數，1爲單副本集實例，大於1爲分片集群實例，最大不超過10
         :type ReplicateSetNum: int
         :param SecondaryNum: 每個副本集内從節點個數，目前只支援從節點數爲2
         :type SecondaryNum: int
@@ -123,7 +123,7 @@ class CreateDBInstanceRequest(AbstractModel):
         :type Memory: int
         :param Volume: 實例硬碟大小，單位：GB
         :type Volume: int
-        :param MongoVersion: 版本号，當前僅支援 MONGO_3_WT
+        :param MongoVersion: 版本號，當前僅支援 MONGO_3_WT
         :type MongoVersion: str
         :param MachineCode: 機器類型，GIO：高IO版；TGIO：高IO萬兆
         :type MachineCode: str

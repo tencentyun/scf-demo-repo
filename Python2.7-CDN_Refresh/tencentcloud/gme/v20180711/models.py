@@ -75,7 +75,7 @@ class CreateAppRequest(AbstractModel):
         :type VoiceMessageConf: :class:`taifucloudcloud.gme.v20180711.models.VoiceMessageConf`
         :param VoiceFilterConf: 語音分析服務配置數據
         :type VoiceFilterConf: :class:`taifucloudcloud.gme.v20180711.models.VoiceFilterConf`
-        :param Tags: 需要添加的标簽清單
+        :param Tags: 需要添加的標簽清單
         :type Tags: list of Tag
         """
         self.AppName = None
@@ -452,7 +452,7 @@ class ModifyAppStatusRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BizId: 應用ID，創建應用後由後台生成并返回。
+        :param BizId: 應用ID，創建應用後由後台生成並返回。
         :type BizId: int
         :param Status: 應用狀态，取值：open/close
         :type Status: str
@@ -692,7 +692,7 @@ class ScanVoiceResponse(AbstractModel):
     def __init__(self):
         """
         :param Data: 語音檢測返回。Data 欄位是 JSON 數組，每一個元素包含：<li>DataId： 請求中對應的 DataId。</li>
-<li>TaskID ：該檢測任務的 ID，用于輪詢語音檢測結果。</li>
+<li>TaskID ：該檢測任務的 ID，用於輪詢語音檢測結果。</li>
         :type Data: list of ScanVoiceResult
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -733,16 +733,16 @@ class ScanVoiceResult(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """标簽清單
+    """標簽清單
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagValue: str
         """

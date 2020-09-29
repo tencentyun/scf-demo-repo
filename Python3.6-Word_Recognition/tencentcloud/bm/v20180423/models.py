@@ -25,9 +25,9 @@ class BindPsaTagRequest(AbstractModel):
         """
         :param PsaId: 預授權規則ID
         :type PsaId: str
-        :param TagKey: 需要綁定的标簽key
+        :param TagKey: 需要綁定的標簽key
         :type TagKey: str
-        :param TagValue: 需要綁定的标簽value
+        :param TagValue: 需要綁定的標簽value
         :type TagValue: str
         """
         self.PsaId = None
@@ -77,7 +77,7 @@ class BuyDevicesRequest(AbstractModel):
         :type VpcId: str
         :param SubnetId: 購買至子網ID
         :type SubnetId: str
-        :param DeviceClassCode: 購買的機型ID。通過介面[查詢設備型号(DescribeDeviceClass)](https://cloud.taifucloud.com/document/api/386/6636)獲取機型訊息
+        :param DeviceClassCode: 購買的機型ID。通過介面[查詢設備型號(DescribeDeviceClass)](https://cloud.taifucloud.com/document/api/386/6636)獲取機型訊息
         :type DeviceClassCode: str
         :param TimeUnit: 購買時長單位，取值：M(月) D(天)
         :type TimeUnit: str
@@ -105,15 +105,15 @@ class BuyDevicesRequest(AbstractModel):
         :type ImageId: str
         :param Password: 設置Linux root或Windows Administrator的密碼
         :type Password: str
-        :param AutoRenewFlag: 自動續約标志位，取值：1(自動續約) 0(不自動續約)，預設取值0
+        :param AutoRenewFlag: 自動續約標志位，取值：1(自動續約) 0(不自動續約)，預設取值0
         :type AutoRenewFlag: int
         :param SysRootSpace: 系統盤根分區大小，單位爲G，預設取值10G。通過介面[查詢機型RAID方式以及系統盤大小(DescribeDeviceClassPartition)](https://cloud.taifucloud.com/document/api/386/7370)獲取根分區訊息
         :type SysRootSpace: int
-        :param SysSwaporuefiSpace: 系統盤swap分區或/boot/efi分區的大小，單位爲G。若是uefi啓動的機器，分區爲/boot/efi，且此值是預設是2G。 普通機器爲swap分區，可以不指定此分區。 機型是否是uefi啓動，參見介面[查詢設備型号(DescribeDeviceClass)](https://cloud.taifucloud.com/document/api/386/6636)
+        :param SysSwaporuefiSpace: 系統盤swap分區或/boot/efi分區的大小，單位爲G。若是uefi啓動的機器，分區爲/boot/efi，且此值是預設是2G。 普通機器爲swap分區，可以不指定此分區。 機型是否是uefi啓動，參見介面[查詢設備型號(DescribeDeviceClass)](https://cloud.taifucloud.com/document/api/386/6636)
         :type SysSwaporuefiSpace: int
         :param SysUsrlocalSpace: /usr/local分區大小，單位爲G
         :type SysUsrlocalSpace: int
-        :param SysDataSpace: /data分區大小，單位爲G。如果系統盤還有剩餘大小，會分配給/data分區。（特殊情況：如果剩餘空間不足10G，并且沒有指定/data分區，則剩餘空間會分配給Root分區）
+        :param SysDataSpace: /data分區大小，單位爲G。如果系統盤還有剩餘大小，會分配給/data分區。（特殊情況：如果剩餘空間不足10G，並且沒有指定/data分區，則剩餘空間會分配給Root分區）
         :type SysDataSpace: int
         :param HyperThreading: 是否開啓超線程，取值：1(開啓) 0(關閉)，預設取值1
         :type HyperThreading: int
@@ -121,7 +121,7 @@ class BuyDevicesRequest(AbstractModel):
         :type LanIps: list of str
         :param Aliases: 設備名稱清單
         :type Aliases: list of str
-        :param CpuId: CPU型号ID，自定義機型需要傳入，取值：
+        :param CpuId: CPU型號ID，自定義機型需要傳入，取值：
 <br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
         :type CpuId: int
         :param ContainRaidCard: 是否有RAID卡，取值：1(有) 0(無)，自定義機型需要傳入
@@ -136,9 +136,9 @@ class BuyDevicesRequest(AbstractModel):
         :type DataDiskTypeId: int
         :param DataDiskCount: 數據盤數量，自定義機型需要傳入。取值參考介面[查詢自定義機型部件訊息(DescribeHardwareSpecification)](https://cloud.taifucloud.com/document/api/386/10968)返回值
         :type DataDiskCount: int
-        :param Tags: 綁定的标簽清單
+        :param Tags: 綁定的標簽清單
         :type Tags: list of Tag
-        :param FileSystem: 指定數據盤的文件系統格式，當前支援 EXT4和XFS選項， 預設爲EXT4。 參數适用于數據盤和Linux， 且在IsZoning爲1時生效
+        :param FileSystem: 指定數據盤的文件系統格式，當前支援 EXT4和XFS選項， 預設爲EXT4。 參數适用於數據盤和Linux， 且在IsZoning爲1時生效
         :type FileSystem: str
         """
         self.Zone = None
@@ -255,7 +255,7 @@ class CpuInfo(AbstractModel):
         """
         :param CpuId: CPU的ID
         :type CpuId: int
-        :param CpuDescription: CPU型号描述
+        :param CpuDescription: CPU型號描述
         :type CpuDescription: str
         :param Series: 機型序列
         :type Series: int
@@ -282,7 +282,7 @@ class CreateCustomImageRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 用于制作映像的物理機ID
+        :param InstanceId: 用於制作映像的物理機ID
         :type InstanceId: str
         :param ImageName: 映像别名
         :type ImageName: str
@@ -390,7 +390,7 @@ class CreateSpotDeviceRequest(AbstractModel):
         :type SubnetId: str
         :param GoodsNum: 購買的計算單元個數
         :type GoodsNum: int
-        :param SpotStrategy: 出價策略。可取值爲SpotWithPriceLimit和SpotAsPriceGo。SpotWithPriceLimit，用戶設置價格上限，需要傳SpotPriceLimit參數， 如果市場價高于用戶的指定價格，則購買不成功;  SpotAsPriceGo 是随市場價的策略。
+        :param SpotStrategy: 出價策略。可取值爲SpotWithPriceLimit和SpotAsPriceGo。SpotWithPriceLimit，用戶設置價格上限，需要傳SpotPriceLimit參數， 如果市場價高於用戶的指定價格，則購買不成功;  SpotAsPriceGo 是随市場價的策略。
         :type SpotStrategy: str
         :param SpotPriceLimit: 用戶設置的價格。當爲SpotWithPriceLimit競價策略時有效
         :type SpotPriceLimit: float
@@ -815,7 +815,7 @@ class DescribeDeviceClassPartitionRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param DeviceClassCode: 設備類型代号。代号通過介面[查詢設備型号(DescribeDeviceClass)](https://cloud.taifucloud.com/document/api/386/17602)查詢。标準機型需要傳入此參數
+        :param DeviceClassCode: 設備類型代號。代號通過介面[查詢設備型號(DescribeDeviceClass)](https://cloud.taifucloud.com/document/api/386/17602)查詢。標準機型需要傳入此參數
         :type DeviceClassCode: str
         :param InstanceId: 需要查詢自定義機型RAID訊息時，傳入自定義機型實例ID。InstanceId存在時DeviceClassCode失效
         :type InstanceId: str
@@ -939,7 +939,7 @@ class DescribeDeviceInventoryRequest(AbstractModel):
         """
         :param Zone: 可用區
         :type Zone: str
-        :param DeviceClassCode: 設備型号
+        :param DeviceClassCode: 設備型號
         :type DeviceClassCode: str
         :param VpcId: 私有網絡ID
         :type VpcId: str
@@ -1236,7 +1236,7 @@ class DescribeDevicesRequest(AbstractModel):
         :type Offset: int
         :param Limit: 返回數量
         :type Limit: int
-        :param DeviceClassCode: 機型ID，通過介面[查詢設備型号(DescribeDeviceClass)](https://cloud.taifucloud.com/document/api/386/31968)查詢
+        :param DeviceClassCode: 機型ID，通過介面[查詢設備型號(DescribeDeviceClass)](https://cloud.taifucloud.com/document/api/386/31968)查詢
         :type DeviceClassCode: str
         :param InstanceIds: 設備ID數組
         :type InstanceIds: list of str
@@ -1252,15 +1252,15 @@ class DescribeDevicesRequest(AbstractModel):
         :type DeadlineStartTime: str
         :param DeadlineEndTime: 設備到期時間查詢的結束時間
         :type DeadlineEndTime: str
-        :param AutoRenewFlag: 自動續約标志 0:不自動續約，1:自動續約
+        :param AutoRenewFlag: 自動續約標志 0:不自動續約，1:自動續約
         :type AutoRenewFlag: int
         :param VpcId: 私有網絡唯一ID
         :type VpcId: str
         :param SubnetId: 子網唯一ID
         :type SubnetId: str
-        :param Tags: 标簽清單
+        :param Tags: 標簽清單
         :type Tags: list of Tag
-        :param DeviceType: 設備類型，取值有: compute(計算型), standard(标準型), storage(儲存型) 等
+        :param DeviceType: 設備類型，取值有: compute(計算型), standard(標準型), storage(儲存型) 等
         :type DeviceType: str
         :param IsLuckyDevice: 競價實例機器的過濾。如果未指定此參數，則不做過濾。0: 查詢非競價實例的機器; 1: 查詢競價實例的機器。
         :type IsLuckyDevice: int
@@ -1358,11 +1358,11 @@ class DescribeHardwareSpecificationResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param CpuInfoSet: CPU型号清單
+        :param CpuInfoSet: CPU型號清單
         :type CpuInfoSet: list of CpuInfo
         :param MemSet: 内存的取值，單位爲G
         :type MemSet: list of int non-negative
-        :param DiskInfoSet: 硬碟型号清單
+        :param DiskInfoSet: 硬碟型號清單
         :type DiskInfoSet: list of DiskInfo
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1498,7 +1498,7 @@ class DescribeOsInfoRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param DeviceClassCode: 設備類型代号。 可以從DescribeDeviceClass查詢設備類型清單
+        :param DeviceClassCode: 設備類型代號。 可以從DescribeDeviceClass查詢設備類型清單
         :type DeviceClassCode: str
         """
         self.DeviceClassCode = None
@@ -1549,7 +1549,7 @@ class DescribePsaRegulationsRequest(AbstractModel):
         :type PsaIds: list of str
         :param PsaNames: 規則别名過濾，支援模糊查詢
         :type PsaNames: list of str
-        :param Tags: 标簽過濾
+        :param Tags: 標簽過濾
         :type Tags: list of Tag
         :param OrderField: 排序欄位，取值支援：CreateTime
         :type OrderField: str
@@ -2202,7 +2202,7 @@ class DeviceHardwareInfo(AbstractModel):
         :type IsElastic: int
         :param CpmPayMode: 機型計費模式，1 爲預付費，2 爲後付費
         :type CpmPayMode: int
-        :param CpuId: 自定義機型，CPU 型号 ID（非自定義機型返回0）
+        :param CpuId: 自定義機型，CPU 型號 ID（非自定義機型返回0）
         :type CpuId: int
         :param Mem: 自定義機型，内存大小, 單位 GB（非自定義機型返回0）
         :type Mem: int
@@ -2216,7 +2216,7 @@ class DeviceHardwareInfo(AbstractModel):
         :type DataDiskTypeId: int
         :param DataDiskCount: 自定義機型數據盤數量（若沒有則返回0）
         :type DataDiskCount: int
-        :param CpuDescription: CPU 型号描述
+        :param CpuDescription: CPU 型號描述
         :type CpuDescription: str
         :param MemDescription: 内存描述
         :type MemDescription: str
@@ -2298,11 +2298,11 @@ class DeviceInfo(AbstractModel):
         :type DeliverTime: str
         :param Deadline: 設備到期時間
         :type Deadline: str
-        :param AutoRenewFlag: 自動續約标識。0: 不自動續約; 1:自動續約
+        :param AutoRenewFlag: 自動續約標識。0: 不自動續約; 1:自動續約
         :type AutoRenewFlag: int
         :param DeviceClassCode: 設備類型
         :type DeviceClassCode: str
-        :param Tags: 标簽清單
+        :param Tags: 標簽清單
         :type Tags: list of Tag
         :param CpmPayMode: 計費模式。1: 預付費; 2: 後付費; 3:預付費轉後付費中
         :type CpmPayMode: int
@@ -2316,7 +2316,7 @@ class DeviceInfo(AbstractModel):
         :type VpcCidrBlock: str
         :param SubnetCidrBlock: 所在子網CIDR
         :type SubnetCidrBlock: str
-        :param IsLuckyDevice: 标識是否是競價實例。0: 普通設備; 1: 競價實例設備
+        :param IsLuckyDevice: 標識是否是競價實例。0: 普通設備; 1: 競價實例設備
         :type IsLuckyDevice: int
         """
         self.InstanceId = None
@@ -2546,7 +2546,7 @@ class DevicePriceInfo(AbstractModel):
         """
         :param InstanceId: 物理機ID
         :type InstanceId: str
-        :param DeviceClassCode: 設備型号
+        :param DeviceClassCode: 設備型號
         :type DeviceClassCode: str
         :param IsElastic: 是否是彈性機型，1：是，0：否
         :type IsElastic: int
@@ -2781,7 +2781,7 @@ class ModifyDeviceAutoRenewFlagRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AutoRenewFlag: 自動續約标志位。0: 不自動續約; 1: 自動續約
+        :param AutoRenewFlag: 自動續約標志位。0: 不自動續約; 1: 自動續約
         :type AutoRenewFlag: int
         :param InstanceIds: 需要修改的設備ID清單
         :type InstanceIds: list of str
@@ -3051,7 +3051,7 @@ class OsInfo(AbstractModel):
         :type OsEnglishDescription: str
         :param OsClass: 作業系統的分類，如CentOs Debian
         :type OsClass: str
-        :param ImageTag: 标識映像分類。public:公共映像; private: 專屬映像
+        :param ImageTag: 標識映像分類。public:公共映像; private: 專屬映像
         :type ImageTag: str
         :param MaxPartitionSize: 作業系統，ext4文件下所支援的最大的磁盤大小。單位爲T
         :type MaxPartitionSize: int
@@ -3107,7 +3107,7 @@ class PsaRegulation(AbstractModel):
         :type PsaId: str
         :param PsaName: 規則别名
         :type PsaName: str
-        :param TagCount: 關聯标簽數量
+        :param TagCount: 關聯標簽數量
         :type TagCount: int
         :param InstanceCount: 關聯實例數量
         :type InstanceCount: int
@@ -3119,7 +3119,7 @@ class PsaRegulation(AbstractModel):
         :type CreateTime: str
         :param PsaDescription: 規則備注
         :type PsaDescription: str
-        :param Tags: 關聯标簽
+        :param Tags: 關聯標簽
         :type Tags: list of Tag
         :param TaskTypeIds: 關聯故障類型id
         :type TaskTypeIds: list of int non-negative
@@ -3292,7 +3292,7 @@ class RepairTaskControlResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param TaskId: 出參TaskId是黑石異步任務ID，不同于入參TaskId欄位。
+        :param TaskId: 出參TaskId是黑石異步任務ID，不同於入參TaskId欄位。
 此欄位可作爲DescriptionOperationResult查詢異步任務狀态介面的入參，查詢異步任務執行結果。
         :type TaskId: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -3623,15 +3623,15 @@ class SuccessTaskInfo(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """标簽鍵與值
+    """標簽鍵與值
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽鍵
+        :param TagKey: 標簽鍵
         :type TagKey: str
-        :param TagValues: 标簽鍵對應的值
+        :param TagValues: 標簽鍵對應的值
         :type TagValues: list of str
         """
         self.TagKey = None
@@ -3807,9 +3807,9 @@ class UnbindPsaTagRequest(AbstractModel):
         """
         :param PsaId: 預授權規則ID
         :type PsaId: str
-        :param TagKey: 需要解綁的标簽key
+        :param TagKey: 需要解綁的標簽key
         :type TagKey: str
-        :param TagValue: 需要解綁的标簽value
+        :param TagValue: 需要解綁的標簽value
         :type TagValue: str
         """
         self.PsaId = None
@@ -3941,7 +3941,7 @@ class UserCmdTaskInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param AutoId: 自動編号，可忽略
+        :param AutoId: 自動編號，可忽略
         :type AutoId: int
         :param TaskId: 任務ID
         :type TaskId: str

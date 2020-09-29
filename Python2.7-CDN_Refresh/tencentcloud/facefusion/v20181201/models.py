@@ -91,9 +91,9 @@ class FaceRect(AbstractModel):
 
     def __init__(self):
         """
-        :param X: 人臉框左上角橫坐标。
+        :param X: 人臉框左上角橫坐標。
         :type X: int
-        :param Y: 人臉框左上角縱坐标。
+        :param Y: 人臉框左上角縱坐標。
         :type Y: int
         :param Width: 人臉框寬度。
         :type Width: int

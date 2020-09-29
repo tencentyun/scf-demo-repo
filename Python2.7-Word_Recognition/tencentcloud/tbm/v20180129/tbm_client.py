@@ -54,7 +54,7 @@ class TbmClient(AbstractClient):
 
 
     def DescribeBrandExposure(self, request):
-        """監測品牌關鍵詞命中文章标題或全文的文章篇數，按天輸出數據。
+        """監測品牌關鍵詞命中文章標題或全文的文章篇數，按天輸出數據。
 
         :param request: 調用DescribeBrandExposure所需參數的結構體。
         :type request: :class:`taifucloudcloud.tbm.v20180129.models.DescribeBrandExposureRequest`
@@ -82,7 +82,7 @@ class TbmClient(AbstractClient):
 
 
     def DescribeBrandMediaReport(self, request):
-        """監測品牌關鍵詞出現在媒體網站（新聞媒體、網絡門戶、政府網站、 公衆号、天天快報等）發布資訊标題和正文中的報道數。按天輸出結果。
+        """監測品牌關鍵詞出現在媒體網站（新聞媒體、網絡門戶、政府網站、 公衆號、天天快報等）發布資訊標題和正文中的報道數。按天輸出結果。
 
         :param request: 調用DescribeBrandMediaReport所需參數的結構體。
         :type request: :class:`taifucloudcloud.tbm.v20180129.models.DescribeBrandMediaReportRequest`
@@ -222,7 +222,7 @@ class TbmClient(AbstractClient):
 
 
     def DescribeIndustryNews(self, request):
-        """根據客戶定制的行業關鍵詞，監測關鍵詞出現在媒體網站（新聞媒體、網絡門戶、政府網站、 公衆号、天天快報等）發布資訊标題和正文中的報道數，以及文章清單、來源管道、作者、發布時間等。
+        """根據客戶定制的行業關鍵詞，監測關鍵詞出現在媒體網站（新聞媒體、網絡門戶、政府網站、 公衆號、天天快報等）發布資訊標題和正文中的報道數，以及文章清單、來源管道、作者、發布時間等。
 
         :param request: 調用DescribeIndustryNews所需參數的結構體。
         :type request: :class:`taifucloudcloud.tbm.v20180129.models.DescribeIndustryNewsRequest`

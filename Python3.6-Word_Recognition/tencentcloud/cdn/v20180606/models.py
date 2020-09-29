@@ -46,7 +46,7 @@ class CdnData(AbstractModel):
 
     def __init__(self):
         """
-        :param Metric: 查詢指定的指标名稱：
+        :param Metric: 查詢指定的指標名稱：
 flux：流量，單位爲 byte
 bandwidth：頻寬，單位爲 bps
 request：請求數，單位爲 次
@@ -88,15 +88,15 @@ class DescribeCdnDataRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:00，返回結果大于等于指定時間
+        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:00，返回結果大於等於指定時間
 根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:00 在按 1 小時的時間粒度查詢時，返回的第一個數據對應時間點爲 2018-09-04 10:00:00
-起始時間與結束時間間隔小於等于 90 天
+起始時間與結束時間間隔小於等於 90 天
         :type StartTime: str
-        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:00，返回結果小於等于指定時間
+        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:00，返回結果小於等於指定時間
 根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:00 在按 1 小時的時間粒度查詢時，返回的最後一個數據對應時間點爲 2018-09-04 10:00:00
-起始時間與結束時間間隔小於等于 90 天
+起始時間與結束時間間隔小於等於 90 天
         :type EndTime: str
-        :param Metric: 指定查詢指标，支援的類型有：
+        :param Metric: 指定查詢指標，支援的類型有：
 flux：流量，單位爲 byte
 bandwidth：頻寬，單位爲 bps
 request：請求數，單位爲 次
@@ -118,10 +118,10 @@ statusCode：狀态碼，返回 2xx、3xx、4xx、5xx 匯總數據，單位爲 �
 min：1 分鍾粒度，指定查詢區間 24 小時内（含 24 小時），可返回 1 分鍾粒度明細數據
 5min：5 分鍾粒度，指定查詢區間 31 天内（含 31 天），可返回 5 分鍾粒度明細數據
 hour：1 小時粒度，指定查詢區間 31 天内（含 31 天），可返回 1 小時粒度明細數據
-day：天粒度，指定查詢區間大于 31 天，可返回天粒度明細數據
+day：天粒度，指定查詢區間大於 31 天，可返回天粒度明細數據
         :type Interval: str
         :param Detail: 多域名查詢時，預設（false)返回多個域名的匯總數據
-可按需指定爲 true，返回每一個 Domain 的明細數據（statusCode 指标暫不支援）
+可按需指定爲 true，返回每一個 Domain 的明細數據（statusCode 指標暫不支援）
         :type Detail: bool
         :param Isp: 指定運營商查詢，不填充表示查詢所有運營商
 運營商編碼可以檢視 [運營商編碼映射](https://cloud.taifucloud.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
@@ -131,15 +131,15 @@ day：天粒度，指定查詢區間大于 31 天，可返回天粒度明細數�
         :type District: int
         :param Protocol: 指定協議查詢，不填充表示查詢所有協議
 all：所有協議
-http：指定查詢 HTTP 對應指标
-https：指定查詢 HTTPS 對應指标
+http：指定查詢 HTTP 對應指標
+https：指定查詢 HTTPS 對應指標
         :type Protocol: str
         :param DataSource: 指定數據源查詢，白名單功能
         :type DataSource: str
         :param IpProtocol: 指定IP協議查詢，不填充表示查詢所有協議
 all：所有協議
-ipv4：指定查詢 ipv4對應指标
-ipv6：指定查詢 ipv6 對應指标
+ipv4：指定查詢 ipv4對應指標
+ipv6：指定查詢 ipv6 對應指標
         :type IpProtocol: str
         """
         self.StartTime = None
@@ -212,10 +212,10 @@ class DescribeIpVisitRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:10，返回結果大于等于指定時間
+        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:10，返回結果大於等於指定時間
 根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:10 在按 5 分鍾的時間粒度查詢時，返回的第一個數據對應時間點爲 2018-09-04 10:40:00
         :type StartTime: str
-        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:10，返回結果小於等于指定時間
+        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:10，返回結果小於等於指定時間
 根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:10 在按 5 分鍾的時間粒度查詢時，返回的最後一個數據對應時間點爲 2018-09-04 10:40:00
         :type EndTime: str
         :param Domains: 指定查詢域名清單，最多可一次性查詢 30 個加速域名明細
@@ -225,7 +225,7 @@ class DescribeIpVisitRequest(AbstractModel):
         :type Project: int
         :param Interval: 時間粒度，支援以下幾種模式：
 5min：5 分鍾粒度，查詢時間區間 24 小時内，預設返回 5 分鍾粒度活躍用戶數
-day：天粒度，查詢時間區間大于 1 天時，預設返回天粒度活躍用戶數
+day：天粒度，查詢時間區間大於 1 天時，預設返回天粒度活躍用戶數
         :type Interval: str
         """
         self.StartTime = None
@@ -325,15 +325,15 @@ class DescribeOriginDataRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:00，返回結果大于等于指定時間
+        :param StartTime: 查詢起始時間，如：2018-09-04 10:40:00，返回結果大於等於指定時間
 根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:00 在按 1 小時的時間粒度查詢時，返回的第一個數據對應時間點爲 2018-09-04 10:00:00
-起始時間與結束時間間隔小於等于 90 天
+起始時間與結束時間間隔小於等於 90 天
         :type StartTime: str
-        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:00，返回結果小於等于指定時間
+        :param EndTime: 查詢結束時間，如：2018-09-04 10:40:00，返回結果小於等於指定時間
 根據指定時間粒度不同，會進行向前歸整，如 2018-09-04 10:40:00 在按 1 小時的時間粒度查詢時，返回的最後一個數據對應時間點爲 2018-09-04 10:00:00
-起始時間與結束時間間隔小於等于 90 天
+起始時間與結束時間間隔小於等於 90 天
         :type EndTime: str
-        :param Metric: 指定查詢指标，支援的類型有：
+        :param Metric: 指定查詢指標，支援的類型有：
 flux：回源流量，單位爲 byte
 bandwidth：回源頻寬，單位爲 bps
 request：回源請求數，單位爲 次
@@ -355,10 +355,10 @@ statusCode：回源狀态碼，返回 2xx、3xx、4xx、5xx 匯總數據，單�
 min：1 分鍾粒度，指定查詢區間 24 小時内（含 24 小時），可返回 1 分鍾粒度明細數據
 5min：5 分鍾粒度，指定查詢區間 31 天内（含 31 天），可返回 5 分鍾粒度明細數據
 hour：1 小時粒度，指定查詢區間 31 天内（含 31 天），可返回 1 小時粒度明細數據
-day：天粒度，指定查詢區間大于 31 天，可返回天粒度明細數據
+day：天粒度，指定查詢區間大於 31 天，可返回天粒度明細數據
         :type Interval: str
         :param Detail: Domains 傳入多個時，預設（false)返回多個域名的匯總數據
-可按需指定爲 true，返回每一個 Domain 的明細數據（statusCode 指标暫不支援）
+可按需指定爲 true，返回每一個 Domain 的明細數據（statusCode 指標暫不支援）
         :type Detail: bool
         """
         self.StartTime = None
@@ -614,7 +614,7 @@ Isp：運營商排序，支援的 Filter 爲 flux、request
 Host：域名訪問數據排序，支援的 Filter 爲：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具體狀态碼統計
 originHost：域名回源數據排序，支援的 Filter 爲 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具體回源狀态碼統計
         :type Metric: str
-        :param Filter: 排序使用的指标名稱：
+        :param Filter: 排序使用的指標名稱：
 flux：Metric 爲 host 時指代訪問流量，originHost 時指代回源流量
 bandwidth：Metric 爲 host 時指代訪問頻寬，originHost 時指代回源頻寬
 request：Metric 爲 host 時指代訪問請求數，originHost 時指代回源請求數
@@ -720,7 +720,7 @@ class ResourceData(AbstractModel):
 具體域名：表示該域名明細數據
 multiDomains：表示多域名匯總明細數據
 項目 ID：指定項目查詢時，顯示爲項目 ID
-all：賬号維度明細數據
+all：賬號維度明細數據
         :type Resource: str
         :param CdnData: 資源對應的數據明細
         :type CdnData: list of CdnData
@@ -750,7 +750,7 @@ class ResourceOriginData(AbstractModel):
 具體域名：表示該域名明細數據
 multiDomains：表示多域名匯總明細數據
 項目 ID：指定項目查詢時，顯示爲項目 ID
-all：賬号維度明細數據
+all：賬號維度明細數據
         :type Resource: str
         :param OriginData: 回源數據詳情
         :type OriginData: list of CdnData
@@ -770,7 +770,7 @@ all：賬号維度明細數據
 
 
 class SummarizedData(AbstractModel):
-    """明細數據的匯總值，各指标根據其特性不同擁有不同匯總方式
+    """明細數據的匯總值，各指標根據其特性不同擁有不同匯總方式
 
     """
 
@@ -826,7 +826,7 @@ class TopData(AbstractModel):
 具體域名：表示該域名明細數據
 multiDomains：表示多域名匯總明細數據
 項目 ID：指定項目查詢時，顯示爲項目 ID
-all：賬号維度明細數據
+all：賬號維度明細數據
         :type Resource: str
         :param DetailData: 排序結果詳情
         :type DetailData: list of TopDetailData

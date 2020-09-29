@@ -110,7 +110,7 @@ class BmvpcClient(AbstractClient):
 
 
     def BindIpsToNatGateway(self, request):
-        """可用于将子網的部分IP綁定到NAT閘道
+        """可用於将子網的部分IP綁定到NAT閘道
 
         :param request: Request instance for BindIpsToNatGateway.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.BindIpsToNatGatewayRequest`
@@ -166,7 +166,7 @@ class BmvpcClient(AbstractClient):
 
 
     def CreateCustomerGateway(self, request):
-        """本介面（CreateCustomerGateway）用于創建對端閘道。
+        """本介面（CreateCustomerGateway）用於創建對端閘道。
 
         :param request: Request instance for CreateCustomerGateway.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateCustomerGatewayRequest`
@@ -222,7 +222,7 @@ class BmvpcClient(AbstractClient):
 
 
     def CreateHostedInterface(self, request):
-        """本介面（CreateHostedInterface）用于黑石托管機器加入帶VLANID不爲5的子網。
+        """本介面（CreateHostedInterface）用於黑石托管機器加入帶VLANID不爲5的子網。
 
         1) 不能加入vlanId 爲5的子網，只能加入VLANID範圍爲2000-2999的子網。
         2) 每台托管機器最多可以加入20個子網。
@@ -367,7 +367,7 @@ class BmvpcClient(AbstractClient):
 
 
     def CreateVirtualSubnetWithVlan(self, request):
-        """創建黑石虛拟子網， 虛拟子網用于在黑石上創建虛拟網絡，與黑石子網要做好規劃。虛拟子網會分配2000-2999的VlanId。
+        """創建黑石虛拟子網， 虛拟子網用於在黑石上創建虛拟網絡，與黑石子網要做好規劃。虛拟子網會分配2000-2999的VlanId。
 
         :param request: Request instance for CreateVirtualSubnetWithVlan.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.CreateVirtualSubnetWithVlanRequest`
@@ -451,7 +451,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteCustomerGateway(self, request):
-        """本介面（DeleteCustomerGateway）用于删除對端閘道。
+        """本介面（DeleteCustomerGateway）用於删除對端閘道。
 
         :param request: Request instance for DeleteCustomerGateway.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteCustomerGatewayRequest`
@@ -479,7 +479,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteHostedInterface(self, request):
-        """本介面用于托管機器從VLANID不爲5的子網中移除。
+        """本介面用於托管機器從VLANID不爲5的子網中移除。
         1) 不能從vlanId 爲5的子網中移除。
         2) 每次調用最多能支援傳入10台物理機。
 
@@ -621,7 +621,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteSubnet(self, request):
-        """本介面（DeleteSubnet）用于删除黑石私有網絡子網。
+        """本介面（DeleteSubnet）用於删除黑石私有網絡子網。
         删除子網前，請清理該子網下所有資源，包括物理機、負載均衡、黑石資料庫、彈性IP、NAT閘道等資源
 
         :param request: Request instance for DeleteSubnet.
@@ -678,7 +678,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteVpc(self, request):
-        """本介面(DeleteVpc)用于删除黑石私有網絡(VPC)。
+        """本介面(DeleteVpc)用於删除黑石私有網絡(VPC)。
 
         删除私有網絡前，請清理該私有網絡下所有資源，包括子網、負載均衡、彈性 IP、對等連接、NAT 閘道、專線通道、SSLVPN 等資源。
 
@@ -736,7 +736,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteVpnConnection(self, request):
-        """本介面(DeleteVpnConnection)用于删除VPN通道。
+        """本介面(DeleteVpnConnection)用於删除VPN通道。
 
         :param request: Request instance for DeleteVpnConnection.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteVpnConnectionRequest`
@@ -764,7 +764,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DeleteVpnGateway(self, request):
-        """本介面（DeleteVpnGateway）用于删除VPN閘道。
+        """本介面（DeleteVpnGateway）用於删除VPN閘道。
 
         :param request: Request instance for DeleteVpnGateway.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DeleteVpnGatewayRequest`
@@ -820,7 +820,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeCustomerGateways(self, request):
-        """本介面（DescribeCustomerGateways）用于查詢對端閘道清單。
+        """本介面（DescribeCustomerGateways）用於查詢對端閘道清單。
 
         :param request: Request instance for DescribeCustomerGateways.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeCustomerGatewaysRequest`
@@ -848,7 +848,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeNatGateways(self, request):
-        """獲取NAT閘道訊息，包括NAT閘道 ID、閘道名稱、私有網絡、閘道并發連接上限、綁定EIP清單等
+        """獲取NAT閘道訊息，包括NAT閘道 ID、閘道名稱、私有網絡、閘道並發連接上限、綁定EIP清單等
 
         :param request: Request instance for DescribeNatGateways.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeNatGatewaysRequest`
@@ -904,7 +904,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeRoutePolicies(self, request):
-        """本介面（DescribeRoutePolicies）用于查詢路由表條目。
+        """本介面（DescribeRoutePolicies）用於查詢路由表條目。
 
         :param request: Request instance for DescribeRoutePolicies.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeRoutePoliciesRequest`
@@ -932,7 +932,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeRouteTables(self, request):
-        """本介面（DescribeRouteTables）用于查詢路由表。
+        """本介面（DescribeRouteTables）用於查詢路由表。
 
         :param request: Request instance for DescribeRouteTables.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeRouteTablesRequest`
@@ -1044,7 +1044,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeSubnets(self, request):
-        """本介面（DescribeSubnets）用于查詢黑石子網清單。
+        """本介面（DescribeSubnets）用於查詢黑石子網清單。
 
         :param request: Request instance for DescribeSubnets.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeSubnetsRequest`
@@ -1128,7 +1128,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeVpcQuota(self, request):
-        """本介面（DescribeVpcQuota）用于查詢用戶VPC相關配額限制。
+        """本介面（DescribeVpcQuota）用於查詢用戶VPC相關配額限制。
 
         :param request: Request instance for DescribeVpcQuota.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeVpcQuotaRequest`
@@ -1184,7 +1184,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeVpcView(self, request):
-        """本介面（DescribeVpcView）用于查詢VPC網絡拓撲視圖。
+        """本介面（DescribeVpcView）用於查詢VPC網絡拓撲視圖。
 
         :param request: Request instance for DescribeVpcView.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeVpcViewRequest`
@@ -1212,7 +1212,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeVpcs(self, request):
-        """本介面（DescribeVpcs）用于查詢私有網絡清單。
+        """本介面（DescribeVpcs）用於查詢私有網絡清單。
         本介面不傳參數時，返回預設排序下的前20條VPC訊息。
 
         :param request: Request instance for DescribeVpcs.
@@ -1269,7 +1269,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DescribeVpnGateways(self, request):
-        """本介面（DescribeVpnGateways）用于查詢VPN閘道清單。
+        """本介面（DescribeVpnGateways）用於查詢VPN閘道清單。
 
         :param request: Request instance for DescribeVpnGateways.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DescribeVpnGatewaysRequest`
@@ -1297,7 +1297,7 @@ class BmvpcClient(AbstractClient):
 
 
     def DownloadCustomerGatewayConfiguration(self, request):
-        """本介面(DownloadCustomerGatewayConfiguration)用于下載VPN通道配置。
+        """本介面(DownloadCustomerGatewayConfiguration)用於下載VPN通道配置。
 
         :param request: Request instance for DownloadCustomerGatewayConfiguration.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.DownloadCustomerGatewayConfigurationRequest`
@@ -1325,7 +1325,7 @@ class BmvpcClient(AbstractClient):
 
 
     def ModifyCustomerGatewayAttribute(self, request):
-        """本介面（ModifyCustomerGatewayAttribute）用于修改對端閘道訊息。
+        """本介面（ModifyCustomerGatewayAttribute）用於修改對端閘道訊息。
 
         :param request: Request instance for ModifyCustomerGatewayAttribute.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyCustomerGatewayAttributeRequest`
@@ -1465,7 +1465,7 @@ class BmvpcClient(AbstractClient):
 
 
     def ModifyVpcAttribute(self, request):
-        """本介面（ModifyVpcAttribute）用于修改VPC的标識名稱和控制VPC的監控起停。
+        """本介面（ModifyVpcAttribute）用於修改VPC的標識名稱和控制VPC的監控起停。
 
         :param request: Request instance for ModifyVpcAttribute.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyVpcAttributeRequest`
@@ -1521,7 +1521,7 @@ class BmvpcClient(AbstractClient):
 
 
     def ModifyVpnConnectionAttribute(self, request):
-        """本介面（ModifyVpnConnectionAttribute）用于修改VPN通道。
+        """本介面（ModifyVpnConnectionAttribute）用於修改VPN通道。
 
         :param request: Request instance for ModifyVpnConnectionAttribute.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyVpnConnectionAttributeRequest`
@@ -1549,7 +1549,7 @@ class BmvpcClient(AbstractClient):
 
 
     def ModifyVpnGatewayAttribute(self, request):
-        """本介面（ModifyVpnGatewayAttribute）用于修改VPN閘道屬性。
+        """本介面（ModifyVpnGatewayAttribute）用於修改VPN閘道屬性。
 
         :param request: Request instance for ModifyVpnGatewayAttribute.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.ModifyVpnGatewayAttributeRequest`
@@ -1605,7 +1605,7 @@ class BmvpcClient(AbstractClient):
 
 
     def ResetVpnConnection(self, request):
-        """本介面(ResetVpnConnection)用于重置VPN通道。
+        """本介面(ResetVpnConnection)用於重置VPN通道。
 
         :param request: Request instance for ResetVpnConnection.
         :type request: :class:`taifucloudcloud.bmvpc.v20180625.models.ResetVpnConnectionRequest`

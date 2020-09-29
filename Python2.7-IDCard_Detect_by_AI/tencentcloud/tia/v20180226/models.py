@@ -119,11 +119,11 @@ class CreateModelRequest(AbstractModel):
         :type Name: str
         :param Model: 要佈署的模型文件路徑名
         :type Model: str
-        :param Description: 關于模型的描述
+        :param Description: 關於模型的描述
         :type Description: str
-        :param Cluster: 佈署目标集群的名稱，`集群模式` 必填
+        :param Cluster: 佈署目標集群的名稱，`集群模式` 必填
         :type Cluster: str
-        :param RuntimeVersion: 運作環境映像的标簽，詳見 [Serving 環境](https://cloud.taifucloud.com/document/product/851/17320#serving-.E7.8E.AF.E5.A2.83)
+        :param RuntimeVersion: 運作環境映像的標簽，詳見 [Serving 環境](https://cloud.taifucloud.com/document/product/851/17320#serving-.E7.8E.AF.E5.A2.83)
         :type RuntimeVersion: str
         :param Replicas: 要佈署的模型副本數目，`集群模式` 選填
         :type Replicas: int
@@ -361,7 +361,7 @@ class InstallAgentRequest(AbstractModel):
         """
         :param Cluster: 集群名稱
         :type Cluster: str
-        :param TiaVersion: Agent版本, 用于私有集群的agent安裝，預設爲“private-training”
+        :param TiaVersion: Agent版本, 用於私有集群的agent安裝，預設爲“private-training”
         :type TiaVersion: str
         :param Update: 是否允許更新Agent
         :type Update: bool
@@ -384,7 +384,7 @@ class InstallAgentResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param TiaVersion: Agent版本, 用于私有集群的agent安裝
+        :param TiaVersion: Agent版本, 用於私有集群的agent安裝
         :type TiaVersion: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -647,7 +647,7 @@ class Log(AbstractModel):
 
 
 class Model(AbstractModel):
-    """用于描述模型的詳細情況
+    """用於描述模型的詳細情況
             "Model": {
                 "Name": "test-model",
                 "Description": "test-model",
@@ -674,7 +674,7 @@ class Model(AbstractModel):
         :type Cluster: str
         :param Model: 模型網址
         :type Model: str
-        :param RuntimeVersion: 運作環境編号
+        :param RuntimeVersion: 運作環境編號
         :type RuntimeVersion: str
         :param CreateTime: 模型創建時間
         :type CreateTime: str
@@ -684,7 +684,7 @@ class Model(AbstractModel):
         :type ServingUrl: str
         :param Message: 相關訊息
         :type Message: str
-        :param AppId: 編号
+        :param AppId: 編號
         :type AppId: int
         :param ServType: 機型
         :type ServType: str
@@ -780,7 +780,7 @@ class QueryLogsResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Context: 日志查詢上下文，用于加載更多日志
+        :param Context: 日志查詢上下文，用於加載更多日志
         :type Context: str
         :param Logs: 日志内容清單
         :type Logs: list of Log

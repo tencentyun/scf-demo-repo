@@ -54,7 +54,7 @@ class TkgdqClient(AbstractClient):
 
 
     def DescribeRelation(self, request):
-        """輸入兩個實體，返回兩個實體間的關系，例如馬化騰與 公司不僅是相關實體，二者還存在隸屬關系（馬化騰屬于 公司）。
+        """輸入兩個實體，返回兩個實體間的關系，例如公司不僅是相關實體，二者還存在隸屬關系。
 
         :param request: Request instance for DescribeRelation.
         :type request: :class:`taifucloudcloud.tkgdq.v20190411.models.DescribeRelationRequest`

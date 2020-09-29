@@ -28,12 +28,12 @@ class AssessQualityRequest(AbstractModel):
 • 圖片格式：PNG、JPG、JPEG。 
 • 圖片大小：所下載圖片經Base64編碼後不超過4M。圖片下載時間不超過3秒。 
 建議：
-• 圖片像素：大于50*50像素，否則影響識别效果； 
+• 圖片像素：大於50*50像素，否則影響識别效果； 
 • 長寬比：長邊：短邊<5； 
 介面響應時間會受到圖片下載時間的影響，建議使用更可靠的儲存服務，推薦将圖片儲存在Top Cloud COS。
         :type ImageUrl: str
         :param ImageBase64: 圖片經過base64編碼的内容。最大不超過4M。與ImageUrl同時存在時優先使用ImageUrl欄位。
-**注意：圖片需要base64編碼，并且要去掉編碼頭部。**
+**注意：圖片需要base64編碼，並且要去掉編碼頭部。**
         :type ImageBase64: str
         """
         self.ImageUrl = None
@@ -52,19 +52,19 @@ class AssessQualityResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param LongImage: 取值爲TRUE或FALSE，TRUE爲長圖，FALSE爲正常圖，長圖定義爲長寬比大于等于3或小於等于1/3的圖片。
+        :param LongImage: 取值爲TRUE或FALSE，TRUE爲長圖，FALSE爲正常圖，長圖定義爲長寬比大於等於3或小於等於1/3的圖片。
         :type LongImage: bool
-        :param BlackAndWhite: 取值爲TRUE或FALSE，TRUE爲黑白圖，FALSE爲否。黑白圖即灰度圖，指紅綠藍三個通道都是以灰度色階顯示的圖片，并非視覺上的“黑白圖片”。
+        :param BlackAndWhite: 取值爲TRUE或FALSE，TRUE爲黑白圖，FALSE爲否。黑白圖即灰度圖，指紅綠藍三個通道都是以灰度色階顯示的圖片，並非視覺上的“黑白圖片”。
         :type BlackAndWhite: bool
         :param SmallImage: 取值爲TRUE或FALSE，TRUE爲小圖，FALSE爲否, 小圖定義爲最長邊小於179像素的圖片。當一張圖片被判斷爲小圖時，不建議做推薦和展示，其他欄位統一輸出爲0或FALSE。
         :type SmallImage: bool
-        :param BigImage: 取值爲TRUE或FALSE，TRUE爲大圖，FALSE爲否，定義爲最短邊大于1000像素的圖片
+        :param BigImage: 取值爲TRUE或FALSE，TRUE爲大圖，FALSE爲否，定義爲最短邊大於1000像素的圖片
         :type BigImage: bool
         :param PureImage: 取值爲TRUE或FALSE，TRUE爲純色圖或純文字圖，即沒有内容或只有簡單内容的圖片，FALSE爲正常圖片。
         :type PureImage: bool
-        :param ClarityScore: 綜合評分。圖像清晰度的得分，對圖片的噪聲、曝光、模糊、壓縮等因素進行綜合評估，取值爲[0, 100]，值越大，越清晰。一般大于50爲較清晰圖片，标準可以自行把握。
+        :param ClarityScore: 綜合評分。圖像清晰度的得分，對圖片的噪聲、曝光、模糊、壓縮等因素進行綜合評估，取值爲[0, 100]，值越大，越清晰。一般大於50爲較清晰圖片，標準可以自行把握。
         :type ClarityScore: int
-        :param AestheticScore: 綜合評分。圖像美觀度得分， 從構圖、色彩等多個藝術性維度評價圖片，取值爲[0, 100]，值越大，越美觀。一般大于50爲較美觀圖片，标準可以自行把握。
+        :param AestheticScore: 綜合評分。圖像美觀度得分， 從構圖、色彩等多個藝術性維度評價圖片，取值爲[0, 100]，值越大，越美觀。一般大於50爲較美觀圖片，標準可以自行把握。
         :type AestheticScore: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -109,7 +109,7 @@ class CarTagItem(AbstractModel):
         :type Confidence: int
         :param Year: 年份，沒識别出年份的時候返回0
         :type Year: int
-        :param CarLocation: 車輛在圖片中的坐标訊息
+        :param CarLocation: 車輛在圖片中的坐標訊息
         :type CarLocation: list of Coord
         """
         self.Serial = None
@@ -137,15 +137,15 @@ class CarTagItem(AbstractModel):
 
 
 class Coord(AbstractModel):
-    """汽車坐标訊息
+    """汽車坐標訊息
 
     """
 
     def __init__(self):
         """
-        :param X: 橫坐标x
+        :param X: 橫坐標x
         :type X: int
-        :param Y: 縱坐标y
+        :param Y: 縱坐標y
         :type Y: int
         """
         self.X = None
@@ -165,10 +165,10 @@ class CropImageRequest(AbstractModel):
     def __init__(self):
         """
         :param Width: 需要裁剪區域的寬度，與Height共同組成所需裁剪的圖片寬高比例；
-輸入數字請大于0、小於圖片寬度的像素值；
+輸入數字請大於0、小於圖片寬度的像素值；
         :type Width: int
         :param Height: 需要裁剪區域的高度，與Width共同組成所需裁剪的圖片寬高比例；
-輸入數字請請大于0、小於圖片高度的像素值；
+輸入數字請請大於0、小於圖片高度的像素值；
 寬高比例（Width : Height）會簡化爲最簡分數，即如果Width輸入10、Height輸入20，會簡化爲1：2。
 Width : Height建議取值在[1, 2.5]之間，超過這個範圍可能會影響效果；
         :type Height: int
@@ -177,12 +177,12 @@ Width : Height建議取值在[1, 2.5]之間，超過這個範圍可能會影響�
 • 圖片格式：PNG、JPG、JPEG。 
 • 圖片大小：所下載圖片經Base64編碼後不超過4M。圖片下載時間不超過3秒。 
 建議：
-• 圖片像素：大于50*50像素，否則影響識别效果； 
+• 圖片像素：大於50*50像素，否則影響識别效果； 
 • 長寬比：長邊：短邊<5； 
 介面響應時間會受到圖片下載時間的影響，建議使用更可靠的儲存服務，推薦将圖片儲存在Top Cloud COS。
         :type ImageUrl: str
         :param ImageBase64: 圖片經過base64編碼的内容。最大不超過4M。與ImageUrl同時存在時優先使用ImageUrl欄位。
-**注意：圖片需要base64編碼，并且要去掉編碼頭部。**
+**注意：圖片需要base64編碼，並且要去掉編碼頭部。**
         :type ImageBase64: str
         """
         self.Width = None
@@ -205,9 +205,9 @@ class CropImageResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param X: 裁剪區域左上角X坐标值
+        :param X: 裁剪區域左上角X坐標值
         :type X: int
-        :param Y: 裁剪區域左上角Y坐标值
+        :param Y: 裁剪區域左上角Y坐標值
         :type Y: int
         :param Width: 裁剪區域的寬度，單位爲像素
         :type Width: int
@@ -263,12 +263,12 @@ class DetectCelebrityRequest(AbstractModel):
 • 圖片格式：PNG、JPG、JPEG。 
 • 圖片大小：所下載圖片經Base64編碼後不超過4M。圖片下載時間不超過3秒。 
 建議：
-• 圖片像素：大于50*50像素，否則影響識别效果； 
+• 圖片像素：大於50*50像素，否則影響識别效果； 
 • 長寬比：長邊：短邊<5； 
 介面響應時間會受到圖片下載時間的影響，建議使用更可靠的儲存服務，推薦将圖片儲存在Top Cloud COS。
         :type ImageUrl: str
         :param ImageBase64: 圖片經過base64編碼的内容。最大不超過4M。與ImageUrl同時存在時優先使用ImageUrl欄位。
-**注意：圖片需要base64編碼，并且要去掉編碼頭部。**
+**注意：圖片需要base64編碼，並且要去掉編碼頭部。**
         :type ImageBase64: str
         """
         self.ImageUrl = None
@@ -289,7 +289,7 @@ class DetectCelebrityResponse(AbstractModel):
         """
         :param Faces: 公衆人物識别結果數組。如果檢測不到人臉，返回爲空；最多可以返回10個人臉識别結果。
         :type Faces: list of Face
-        :param Threshold: 本服務在不同誤識率水平下（将圖片中的人物識别錯誤的比例）的推薦阈值，可以用于控制識别結果的精度。 
+        :param Threshold: 本服務在不同誤識率水平下（将圖片中的人物識别錯誤的比例）的推薦阈值，可以用於控制識别結果的精度。 
 FalseRate1Percent, FalseRate5Permil, FalseRate1Permil分别代表誤識率在百分之一、千分之五、千分之一情況下的推薦阈值。 
 因爲阈值會存在變動，請勿将此處輸出的固定值處理，而是每次取值與confidence對比，來判斷本次的識别結果是否可信。
  例如，如果您業務中可以接受的誤識率是1%，則可以将所有confidence>=FalseRate1Percent的結論認爲是正确的。
@@ -328,12 +328,12 @@ class DetectDisgustRequest(AbstractModel):
 • 圖片格式：PNG、JPG、JPEG。 
 • 圖片大小：所下載圖片經Base64編碼後不超過4M。圖片下載時間不超過3秒。 
 建議：
-• 圖片像素：大于50*50像素，否則影響識别效果； 
+• 圖片像素：大於50*50像素，否則影響識别效果； 
 • 長寬比：長邊：短邊<5； 
 介面響應時間會受到圖片下載時間的影響，建議使用更可靠的儲存服務，推薦将圖片儲存在Top Cloud COS。
         :type ImageUrl: str
         :param ImageBase64: 圖片經過base64編碼的内容。最大不超過4M。與ImageUrl同時存在時優先使用ImageUrl欄位。
-**注意：圖片需要base64編碼，并且要去掉編碼頭部。**
+**注意：圖片需要base64編碼，並且要去掉編碼頭部。**
         :type ImageBase64: str
         """
         self.ImageUrl = None
@@ -352,7 +352,7 @@ class DetectDisgustResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Confidence: 對于圖片中包含惡心内容的置信度，取值[0,1]，一般超過0.5則表明可能是惡心圖片。
+        :param Confidence: 對於圖片中包含惡心内容的置信度，取值[0,1]，一般超過0.5則表明可能是惡心圖片。
         :type Confidence: float
         :param Type: 與圖像内容最相似的惡心内容的類别，包含腐爛、密集、畸形、血腥、蛇、蟲子、牙齒等。
         :type Type: str
@@ -371,7 +371,7 @@ class DetectDisgustResponse(AbstractModel):
 
 
 class DetectLabelItem(AbstractModel):
-    """圖像标簽檢測結果。
+    """圖像標簽檢測結果。
 
     """
 
@@ -379,11 +379,11 @@ class DetectLabelItem(AbstractModel):
         """
         :param Name: 圖片中的物體名稱。
         :type Name: str
-        :param Confidence: 算法對于Name的置信度，0-100之間，值越高，表示對于Name越确定。
+        :param Confidence: 算法對於Name的置信度，0-100之間，值越高，表示對於Name越确定。
         :type Confidence: int
-        :param FirstCategory: 标簽的一級分類
+        :param FirstCategory: 標簽的一級分類
         :type FirstCategory: str
-        :param SecondCategory: 标簽的二級分類
+        :param SecondCategory: 標簽的二級分類
         :type SecondCategory: str
         """
         self.Name = None
@@ -411,12 +411,12 @@ class DetectLabelRequest(AbstractModel):
 • 圖片格式：PNG、JPG、JPEG。 
 • 圖片大小：所下載圖片經Base64編碼後不超過4M。圖片下載時間不超過3秒。 
 建議：
-• 圖片像素：大于50*50像素，否則影響識别效果； 
+• 圖片像素：大於50*50像素，否則影響識别效果； 
 • 長寬比：長邊：短邊<5； 
 介面響應時間會受到圖片下載時間的影響，建議使用更可靠的儲存服務，推薦将圖片儲存在Top Cloud COS。
         :type ImageUrl: str
         :param ImageBase64: 圖片經過base64編碼的内容。最大不超過4M。與ImageUrl同時存在時優先使用ImageUrl欄位。
-**注意：圖片需要base64編碼，并且要去掉編碼頭部。**
+**注意：圖片需要base64編碼，並且要去掉編碼頭部。**
         :type ImageBase64: str
         :param Scenes: 本次調用支援的識别場景，可選值如下：
 WEB，針對網絡圖片優化;
@@ -445,13 +445,13 @@ class DetectLabelResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Labels: Web網絡版标簽結果數組。如未選擇WEB場景，則爲空。
+        :param Labels: Web網絡版標簽結果數組。如未選擇WEB場景，則爲空。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Labels: list of DetectLabelItem
-        :param CameraLabels: Camera攝像頭版标簽結果數組。如未選擇CAMERA場景，則爲空。
+        :param CameraLabels: Camera攝像頭版標簽結果數組。如未選擇CAMERA場景，則爲空。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CameraLabels: list of DetectLabelItem
-        :param AlbumLabels: Album相冊版标簽結果數組。如未選擇ALBUM場景，則爲空。
+        :param AlbumLabels: Album相冊版標簽結果數組。如未選擇ALBUM場景，則爲空。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AlbumLabels: list of DetectLabelItem
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -497,12 +497,12 @@ class DetectMisbehaviorRequest(AbstractModel):
 • 圖片格式：PNG、JPG、JPEG。 
 • 圖片大小：所下載圖片經Base64編碼後不超過4M。圖片下載時間不超過3秒。 
 建議：
-• 圖片像素：大于50*50像素，否則影響識别效果； 
+• 圖片像素：大於50*50像素，否則影響識别效果； 
 • 長寬比：長邊：短邊<5； 
 介面響應時間會受到圖片下載時間的影響，建議使用更可靠的儲存服務，推薦将圖片儲存在Top Cloud COS。
         :type ImageUrl: str
         :param ImageBase64: 圖片經過base64編碼的内容。最大不超過4M。與ImageUrl同時存在時優先使用ImageUrl欄位。
-**注意：圖片需要base64編碼，并且要去掉編碼頭部。**
+**注意：圖片需要base64編碼，並且要去掉編碼頭部。**
         :type ImageBase64: str
         """
         self.ImageUrl = None
@@ -521,7 +521,7 @@ class DetectMisbehaviorResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Confidence: 對于圖片中包含不良行爲的置信度，取值[0,1]，一般超過0.5則表明可能包含不良行爲内容；
+        :param Confidence: 對於圖片中包含不良行爲的置信度，取值[0,1]，一般超過0.5則表明可能包含不良行爲内容；
         :type Confidence: float
         :param Type: 圖像中最可能包含的不良行爲類别，包括賭博、打架鬥毆、吸毒等。
         :type Type: str
@@ -570,7 +570,7 @@ class DetectProductBetaResponse(AbstractModel):
     def __init__(self):
         """
         :param RegionDetected: 檢測到的圖片中的商品位置和品類預測。 
-當圖片中存在多個商品時，輸出多組坐标，按照__顯著性__排序（綜合考慮面積、是否在中心、檢測算法置信度）。 
+當圖片中存在多個商品時，輸出多組坐標，按照__顯著性__排序（綜合考慮面積、是否在中心、檢測算法置信度）。 
 最多可以輸出__3組__檢測結果。
         :type RegionDetected: list of RegionDetected
         :param ProductInfo: 圖像識别出的商品的詳細訊息。 
@@ -609,12 +609,12 @@ class DetectProductRequest(AbstractModel):
 • 圖片格式：PNG、JPG、JPEG。 
 • 圖片大小：所下載圖片經Base64編碼後不超過4M。圖片下載時間不超過3秒。 
 建議：
-• 圖片像素：大于50*50像素，否則影響識别效果； 
+• 圖片像素：大於50*50像素，否則影響識别效果； 
 • 長寬比：長邊：短邊<5； 
 介面響應時間會受到圖片下載時間的影響，建議使用更可靠的儲存服務，推薦将圖片儲存在Top Cloud COS。
         :type ImageUrl: str
         :param ImageBase64: 圖片經過base64編碼的内容。最大不超過4M。與ImageUrl同時存在時優先使用ImageUrl欄位。
-**注意：圖片需要base64編碼，并且要去掉編碼頭部。**
+**注意：圖片需要base64編碼，並且要去掉編碼頭部。**
         :type ImageBase64: str
         """
         self.ImageUrl = None
@@ -664,12 +664,12 @@ class EnhanceImageRequest(AbstractModel):
 • 圖片格式：PNG、JPG、JPEG。 
 • 圖片大小：所下載圖片經Base64編碼後不超過4M。圖片下載時間不超過3秒。 
 建議：
-• 圖片像素：大于50*50像素，否則影響識别效果； 
+• 圖片像素：大於50*50像素，否則影響識别效果； 
 • 長寬比：長邊：短邊<5； 
 介面響應時間會受到圖片下載時間的影響，建議使用更可靠的儲存服務，推薦将圖片儲存在Top Cloud COS。
         :type ImageUrl: str
         :param ImageBase64: 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。圖片經過base64編碼的内容。最大不超過4M。與ImageUrl同時存在時優先使用ImageUrl欄位。
-**注意：圖片需要base64編碼，并且要去掉編碼頭部。**
+**注意：圖片需要base64編碼，並且要去掉編碼頭部。**
         :type ImageBase64: str
         """
         self.ImageUrl = None
@@ -711,21 +711,21 @@ class Face(AbstractModel):
         """
         :param Name: 與圖片中人臉最相似的公衆人物的名字。
         :type Name: str
-        :param Labels: 公衆人物身份标簽的數組，一個公衆人物可能有多個身份标簽。
+        :param Labels: 公衆人物身份標簽的數組，一個公衆人物可能有多個身份標簽。
         :type Labels: list of Labels
         :param BasicInfo: 對人物的簡介。
         :type BasicInfo: str
-        :param Confidence: 算法對于Name的置信度（圖像中人臉與公衆人物的相似度），0-100之間，值越高，表示對于Name越确定。
+        :param Confidence: 算法對於Name的置信度（圖像中人臉與公衆人物的相似度），0-100之間，值越高，表示對於Name越确定。
         :type Confidence: int
-        :param X: 人臉區域左上角橫坐标。
+        :param X: 人臉區域左上角橫坐標。
         :type X: int
-        :param Y: 人臉區域左上角縱坐标。
+        :param Y: 人臉區域左上角縱坐標。
         :type Y: int
         :param Width: 人臉區域寬度。
         :type Width: int
         :param Height: 人臉區域高度。
         :type Height: int
-        :param ID: 公衆人物的唯一編号，可以用于區分同名人物、一個人物不同稱呼等情況。唯一編号爲8個字元構成的字串。
+        :param ID: 公衆人物的唯一編號，可以用於區分同名人物、一個人物不同稱呼等情況。唯一編號爲8個字元構成的字串。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ID: str
         """
@@ -758,16 +758,16 @@ class Face(AbstractModel):
 
 
 class Labels(AbstractModel):
-    """名人識别的标簽
+    """名人識别的標簽
 
     """
 
     def __init__(self):
         """
-        :param FirstLabel: 公衆人物身份标簽的一級分類，例如體育明星、娛樂明星、政治人物等；
+        :param FirstLabel: 公衆人物身份標簽的一級分類，例如體育明星、娛樂明星、政治人物等；
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FirstLabel: str
-        :param SecondLabel: 公衆人物身份标簽的二級分類，例如歌手（對應一級标簽爲“娛樂明星”）；
+        :param SecondLabel: 公衆人物身份標簽的二級分類，例如歌手（對應一級標簽爲“娛樂明星”）；
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SecondLabel: str
         """
@@ -781,19 +781,19 @@ class Labels(AbstractModel):
 
 
 class Location(AbstractModel):
-    """檢測到的主體在圖片中的矩形框位置（四個頂點坐标）
+    """檢測到的主體在圖片中的矩形框位置（四個頂點坐標）
 
     """
 
     def __init__(self):
         """
-        :param XMin: 位置矩形框的左上角橫坐标
+        :param XMin: 位置矩形框的左上角橫坐標
         :type XMin: int
-        :param YMin: 位置矩形框的左上角縱坐标
+        :param YMin: 位置矩形框的左上角縱坐標
         :type YMin: int
-        :param XMax: 位置矩形框的右下角橫坐标
+        :param XMax: 位置矩形框的右下角橫坐標
         :type XMax: int
-        :param YMax: 位置矩形框的右下角縱坐标
+        :param YMax: 位置矩形框的右下角縱坐標
         :type YMax: int
         """
         self.XMin = None
@@ -820,15 +820,15 @@ class Product(AbstractModel):
         :type Name: str
         :param Parents: 三級商品分類對應的一級分類和二級分類，兩級之間用“-”（中劃線）隔開，例如商品名稱是“硬碟”，那麽Parents輸出爲“電腦、辦公-電腦配件”
         :type Parents: str
-        :param Confidence: 算法對于Name的置信度，0-100之間，值越高，表示對于Name越确定
+        :param Confidence: 算法對於Name的置信度，0-100之間，值越高，表示對於Name越确定
         :type Confidence: int
-        :param XMin: 商品坐标X軸的最小值
+        :param XMin: 商品坐標X軸的最小值
         :type XMin: int
-        :param YMin: 商品坐标Y軸的最小值
+        :param YMin: 商品坐標Y軸的最小值
         :type YMin: int
-        :param XMax: 商品坐标X軸的最大值
+        :param XMax: 商品坐標X軸的最大值
         :type XMax: int
-        :param YMax: 商品坐标Y軸的最大值
+        :param YMax: 商品坐標Y軸的最大值
         :type YMax: int
         """
         self.Name = None
@@ -862,7 +862,7 @@ class ProductInfo(AbstractModel):
 0表示未找到同款商品， 具體商品訊息爲空（參考價格、名稱、品牌等），僅提供商品類目。  
 是否找到同款的判斷依據爲Score分值，分值越大則同款的可能性越大。
         :type FindSKU: int
-        :param Location: 本商品在圖片中的坐标，表示爲矩形框的四個頂點坐标。
+        :param Location: 本商品在圖片中的坐標，表示爲矩形框的四個頂點坐標。
         :type Location: :class:`taifucloudcloud.tiia.v20190529.models.Location`
         :param Name: 商品名稱
         :type Name: str
@@ -914,12 +914,12 @@ class RecognizeCarRequest(AbstractModel):
 • 圖片格式：PNG、JPG、JPEG。 
 • 圖片大小：所下載圖片經Base64編碼後不超過4M。圖片下載時間不超過3秒。 
 建議：
-• 圖片像素：大于50*50像素，否則影響識别效果； 
+• 圖片像素：大於50*50像素，否則影響識别效果； 
 • 長寬比：長邊：短邊<5； 
 介面響應時間會受到圖片下載時間的影響，建議使用更可靠的儲存服務，推薦将圖片儲存在Top Cloud COS。
         :type ImageUrl: str
         :param ImageBase64: 圖片經過base64編碼的内容。最大不超過4M。與ImageUrl同時存在時優先使用ImageUrl欄位。
-**注意：圖片需要base64編碼，并且要去掉編碼頭部。**
+**注意：圖片需要base64編碼，並且要去掉編碼頭部。**
 支援的圖片格式：PNG、JPG、JPEG、BMP，暫不支援GIF格式。支援的圖片大小：所下載圖片經Base64編碼後不超過4M。圖片下載時間不超過3秒。
         :type ImageBase64: str
         """
@@ -939,7 +939,7 @@ class RecognizeCarResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param CarCoords: 汽車的四個矩形頂點坐标，如果圖片中存在多輛車，則輸出最大車輛的坐标。
+        :param CarCoords: 汽車的四個矩形頂點坐標，如果圖片中存在多輛車，則輸出最大車輛的坐標。
         :type CarCoords: list of Coord
         :param CarTags: 車輛屬性識别的結果數組，如果識别到多輛車，則會輸出每輛車的top1結果。
         :type CarTags: list of CarTagItem
@@ -969,7 +969,7 @@ class RecognizeCarResponse(AbstractModel):
 
 class RegionDetected(AbstractModel):
     """檢測到的圖片中的商品位置和品類預測。
-    當圖片中存在多個商品時，輸出多組坐标，按照__顯著性__排序（綜合考慮面積、是否在中心、檢測算法置信度）。
+    當圖片中存在多個商品時，輸出多組坐標，按照__顯著性__排序（綜合考慮面積、是否在中心、檢測算法置信度）。
     最多可以輸出__3組__檢測結果。
 
     """
@@ -981,7 +981,7 @@ class RegionDetected(AbstractModel):
         :type Category: str
         :param CategoryScore: 商品品類預測的置信度
         :type CategoryScore: float
-        :param Location: 檢測到的主體在圖片中的坐标，表示爲矩形框的四個頂點坐标
+        :param Location: 檢測到的主體在圖片中的坐標，表示爲矩形框的四個頂點坐標
         :type Location: :class:`taifucloudcloud.tiia.v20190529.models.Location`
         """
         self.Category = None
@@ -998,7 +998,7 @@ class RegionDetected(AbstractModel):
 
 
 class Threshold(AbstractModel):
-    """本服務在不同誤識率水平下（将圖片中的人物識别錯誤的比例）的推薦阈值，可以用于控制識别結果的精度。
+    """本服務在不同誤識率水平下（将圖片中的人物識别錯誤的比例）的推薦阈值，可以用於控制識别結果的精度。
     {FalseRate1Percent, FalseRate5Permil, FalseRate1Permil}分别代表誤識率在百分之一、千分之五、千分之一情況下的推薦阈值。
     因爲阈值會存在變動，請勿将此處輸出的固定值處理，而是每次取值與confidence對比，來判斷本次的識别結果是否可信。
     例如，如果您業務中可以接受的誤識率是1%，則可以将所有confidence>=FalseRate1Percent的結論認爲是正确的。

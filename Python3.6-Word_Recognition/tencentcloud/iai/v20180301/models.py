@@ -28,7 +28,7 @@ class AnalyzeFaceRequest(AbstractModel):
         :param Image: 圖片 base64 數據。支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
         :param Url: 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。  
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
@@ -124,13 +124,13 @@ class CompareFaceRequest(AbstractModel):
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type ImageB: str
         :param UrlA: A 圖片的 Url 。A 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type UrlA: str
         :param UrlB: B 圖片的 Url 。B 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
@@ -233,7 +233,7 @@ class CreateFaceRequest(AbstractModel):
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Images: list of str
         :param Urls: 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。 
 人員人臉總數量不可超過5張。
 若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
@@ -291,13 +291,13 @@ class CreateGroupRequest(AbstractModel):
         :type GroupName: str
         :param GroupId: 人員庫 ID，不可修改，不可重複。支援英文、數字、-%@#&_，長度限制64B。
         :type GroupId: str
-        :param GroupExDescriptions: 人員庫自定義描述欄位，用于描述人員庫中人員屬性，該人員庫下所有人員将擁有此描述欄位。 
+        :param GroupExDescriptions: 人員庫自定義描述欄位，用於描述人員庫中人員屬性，該人員庫下所有人員将擁有此描述欄位。 
 最多可以創建5個。 
 每個自定義描述欄位支援[1,30]個字元。 
 在同一人員庫中自定義描述欄位不可重複。 
-例： 設置某人員庫“自定義描述欄位”爲["學号","工号","手機号"]， 
-則該人員庫下所有人員将擁有名爲“學号”、“工号”、“手機号”的描述欄位， 
-可在對應人員描述欄位中填寫内容，登記該人員的學号、工号、手機号等訊息。
+例： 設置某人員庫“自定義描述欄位”爲["學號","工號","手機號"]， 
+則該人員庫下所有人員将擁有名爲“學號”、“工號”、“手機號”的描述欄位， 
+可在對應人員描述欄位中填寫内容，登記該人員的學號、工號、手機號等訊息。
         :type GroupExDescriptions: list of str
         :param Tag: 人員庫訊息備注，[0，40]個字元。
         :type Tag: str
@@ -343,7 +343,7 @@ class CreatePersonRequest(AbstractModel):
         :type GroupId: str
         :param PersonName: 人員名稱。[1，60]個字元，可修改，可重複。
         :type PersonName: str
-        :param PersonId: 人員ID，單個Top Cloud 賬号下不可修改，不可重複。支援英文、數字、-%@#&_，長度限制64B。
+        :param PersonId: 人員ID，單個Top Cloud 賬號下不可修改，不可重複。支援英文、數字、-%@#&_，長度限制64B。
         :type PersonId: str
         :param Gender: 0代表未填寫，1代表男性，2代表女性。
         :type Gender: int
@@ -354,7 +354,7 @@ class CreatePersonRequest(AbstractModel):
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
         :param Url: 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
@@ -391,7 +391,7 @@ class CreatePersonResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param FaceId: 人臉圖片唯一标識。
+        :param FaceId: 人臉圖片唯一標識。
         :type FaceId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -565,14 +565,14 @@ class DetectFaceRequest(AbstractModel):
     def __init__(self):
         """
         :param MaxFaceNum: 最多處理的人臉數目。預設值爲1（僅檢測圖片中面積最大的那張人臉），最大值爲120。 
-此參數用于控制處理待檢測圖片中的人臉個數，值越小，處理速度越快。
+此參數用於控制處理待檢測圖片中的人臉個數，值越小，處理速度越快。
         :type MaxFaceNum: int
-        :param MinFaceSize: 人臉長和寬的最小尺寸，單位爲像素。預設爲40。低于此尺寸的人臉不會被檢測。
+        :param MinFaceSize: 人臉長和寬的最小尺寸，單位爲像素。預設爲40。低於此尺寸的人臉不會被檢測。
         :type MinFaceSize: int
         :param Image: 圖片 base64 數據。支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
         :param Url: 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
@@ -650,7 +650,7 @@ class DetectLiveFaceRequest(AbstractModel):
         :type Image: str
         :param Url: 圖片的 Url 。圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
 （圖片的寬高比請接近 3:4，不符合寬高比的圖片返回的分值不具備參考意義） 
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
@@ -671,7 +671,7 @@ class DetectLiveFaceResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Score: 活體打分，取值範圍 [0,100]，分數一般落于[80, 100]區間内，0分也爲常見值。推薦相大于 87 時可判斷爲活體。可根據具體場景自行調整阈值。
+        :param Score: 活體打分，取值範圍 [0,100]，分數一般落於[80, 100]區間内，0分也爲常見值。推薦相大於 87 時可判斷爲活體。可根據具體場景自行調整阈值。
         :type Score: float
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -791,13 +791,13 @@ class FaceInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param X: 人臉框左上角橫坐标。
-人臉框包含人臉五官位置并在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐标負值。 
-若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐标取0。
+        :param X: 人臉框左上角橫坐標。
+人臉框包含人臉五官位置並在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐標負值。 
+若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐標取0。
         :type X: int
-        :param Y: 人臉框左上角縱坐标。 
-人臉框包含人臉五官位置并在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐标負值。 
-若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐标取0。
+        :param Y: 人臉框左上角縱坐標。 
+人臉框包含人臉五官位置並在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐標負值。 
+若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐標取0。
         :type Y: int
         :param Width: 人臉框寬度。
         :type Width: int
@@ -928,13 +928,13 @@ class FaceRect(AbstractModel):
 
     def __init__(self):
         """
-        :param X: 人臉框左上角橫坐标。 
-人臉框包含人臉五官位置并在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐标負值。 
-若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐标取0。
+        :param X: 人臉框左上角橫坐標。 
+人臉框包含人臉五官位置並在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐標負值。 
+若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐標取0。
         :type X: int
-        :param Y: 人臉框左上角縱坐标。 
-人臉框包含人臉五官位置并在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐标負值。 
-若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐标取0。
+        :param Y: 人臉框左上角縱坐標。 
+人臉框包含人臉五官位置並在此基礎上進行一定的擴展，若人臉框超出圖片範圍，會導緻坐標負值。 
+若需截取完整人臉，可以在完整分completess滿足需求的情況下，将負值坐標取0。
         :type Y: int
         :param Width: 人臉寬度
         :type Width: int
@@ -1055,7 +1055,7 @@ class GetGroupListRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Offset: 起始序号，預設值爲0
+        :param Offset: 起始序號，預設值爲0
         :type Offset: int
         :param Limit: 返回數量，預設值爲10，最大值爲1000
         :type Limit: int
@@ -1155,7 +1155,7 @@ class GetPersonGroupInfoRequest(AbstractModel):
         """
         :param PersonId: 人員ID
         :type PersonId: str
-        :param Offset: 起始序号，預設值爲0
+        :param Offset: 起始序號，預設值爲0
         :type Offset: int
         :param Limit: 返回數量，預設值爲10，最大值爲100
         :type Limit: int
@@ -1253,7 +1253,7 @@ class GetPersonListRequest(AbstractModel):
         """
         :param GroupId: 人員庫ID
         :type GroupId: str
-        :param Offset: 起始序号，預設值爲0
+        :param Offset: 起始序號，預設值爲0
         :type Offset: int
         :param Limit: 返回數量，預設值爲10，最大值爲1000
         :type Limit: int
@@ -1573,15 +1573,15 @@ class PersonInfo(AbstractModel):
 
 
 class Point(AbstractModel):
-    """坐标
+    """坐標
 
     """
 
     def __init__(self):
         """
-        :param X: x坐标
+        :param X: x坐標
         :type X: int
-        :param Y: Y坐标
+        :param Y: Y坐標
         :type Y: int
         """
         self.X = None
@@ -1633,15 +1633,15 @@ class SearchFacesRequest(AbstractModel):
         :param Image: 圖片 base64 數據。支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
         :param Url: 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Url: str
         :param MaxFaceNum: 最多處理的人臉數目。預設值爲1（僅檢測圖片中面積最大的那張人臉），最大值爲10。 
-MaxFaceNum用于，當待識别圖片包含多張人臉時，要搜索的人臉數量。 
+MaxFaceNum用於，當待識别圖片包含多張人臉時，要搜索的人臉數量。 
 當 MaxFaceNum 不爲1時，設MaxFaceNum=M，則實際上是 M:N 的人臉搜索。
         :type MaxFaceNum: int
-        :param MinFaceSize: 人臉長和寬的最小尺寸，單位爲像素。預設爲80。低于40将影響搜索精度。建議設置爲80。
+        :param MinFaceSize: 人臉長和寬的最小尺寸，單位爲像素。預設爲80。低於40将影響搜索精度。建議設置爲80。
         :type MinFaceSize: int
         :param MaxPersonNum: 被檢測到的人臉，對應最多返回的最相似人員數目。預設值爲5，最大值爲10。  
 例，設MaxFaceNum爲3，MaxPersonNum爲5，則最多可能返回3*5=15個人員。
@@ -1708,7 +1708,7 @@ class VerifyFaceRequest(AbstractModel):
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。
         :type Image: str
         :param Url: 圖片的 Url 。 圖片的 Url、Image必須提供一個，如果都提供，只使用 Url。 
-圖片儲存于Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存于Top Cloud 。 
+圖片儲存於Top Cloud 的Url可保障更高下載速度和穩定性，建議圖片儲存於Top Cloud 。 
 非Top Cloud 儲存的Url速度和穩定性可能受一定影響。
 若圖片中包含多張人臉，只選取其中人臉面積最大的人臉。
 支援PNG、JPG、JPEG、BMP，不支援 GIF 圖片。

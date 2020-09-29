@@ -522,15 +522,15 @@ class DescribeCaptchaResultRequest(AbstractModel):
         :type Randstr: str
         :param CaptchaAppId: 驗證碼應用ID
         :type CaptchaAppId: int
-        :param AppSecretKey: 用于服務器端校驗驗證碼票據的驗證金鑰，請妥善保密，請勿洩露給第三方
+        :param AppSecretKey: 用於服務器端校驗驗證碼票據的驗證金鑰，請妥善保密，請勿洩露給第三方
         :type AppSecretKey: str
         :param BusinessId: 業務 ID，網站或應用在多個業務中使用此服務，通過此 ID 區分統計數據
         :type BusinessId: int
         :param SceneId: 場景 ID，網站或應用的業務下有多個場景使用此服務，通過此 ID 區分統計數據
         :type SceneId: int
-        :param MacAddress: mac 網址或設備唯一标識
+        :param MacAddress: mac 網址或設備唯一標識
         :type MacAddress: str
-        :param Imei: 手機設備号
+        :param Imei: 手機設備號
         :type Imei: str
         :param NeedGetCaptchaTime: 是否返回前端獲取驗證碼時間，取值1：需要返回
         :type NeedGetCaptchaTime: int
@@ -581,7 +581,7 @@ class DescribeCaptchaResultResponse(AbstractModel):
 15	decrypt fail	驗證碼簽名解密失敗
 16	appid no match	驗證碼強校驗appid錯誤
 17	cmd no much	驗證碼系統命令不比對
-18	uin no match	号碼不比對
+18	uin no match	號碼不比對
 19	seq redirect	重定向驗證
 20	opt no vcode	操作使用pt免驗證碼校驗錯誤
 21	diff	差别，驗證錯誤

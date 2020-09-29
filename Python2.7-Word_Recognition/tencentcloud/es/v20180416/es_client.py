@@ -166,7 +166,7 @@ class EsClient(AbstractClient):
 
 
     def RestartInstance(self, request):
-        """重啓ES集群實例(用于系統版本更新等操作)
+        """重啓ES集群實例(用於系統版本更新等操作)
 
         :param request: 調用RestartInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.es.v20180416.models.RestartInstanceRequest`
@@ -195,7 +195,7 @@ class EsClient(AbstractClient):
 
     def UpdateInstance(self, request):
         """對集群進行擴縮容，修改實例名稱，修改配置，重置密碼， 添加Kibana黑白名單等操作。參數中InstanceId爲必傳參數，ForceRestart爲選填參數，剩餘參數傳遞組合及含義如下：
-        - InstanceName：修改實例名稱(僅用于标識實例)
+        - InstanceName：修改實例名稱(僅用於標識實例)
         - NodeNum：集群數據節點橫向擴縮容
         - NodeType, DiskSize：集群數據節點縱向擴縮容
         - MasterNodeNum: 集群專用主節點橫向擴縮容

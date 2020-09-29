@@ -25,24 +25,24 @@ class QueryLoginProtectionRequest(AbstractModel):
         """
         :param LoginIp: 登入來源的外網 IP。
         :type LoginIp: str
-        :param Uid: 用戶 ID 不同的 accountType 對應不同的用戶 ID。如果是  ，則填入對應的 openid， 用戶則填入對應的 openid/unionid，手機号則填入對應真實用戶手機号（如13123456789）。
+        :param Uid: 用戶 ID 不同的 accountType 對應不同的用戶 ID。如果是  ，則填入對應的 openid， 用戶則填入對應的 openid/unionid，手機號則填入對應真實用戶手機號（如13123456789）。
         :type Uid: str
         :param LoginTime: 登入時間戳，單位：秒。
         :type LoginTime: str
-        :param AccountType: 用戶賬号類型（  開放帳号、 開放賬号需要 提交工單 由Top Cloud 進行資格審核）：
-1：  開放帳号。
-2： 開放賬号。
-4：手機号。
+        :param AccountType: 用戶賬號類型（  開放帳號、 開放賬號需要 提交工單 由Top Cloud 進行資格審核）：
+1：  開放帳號。
+2： 開放賬號。
+4：手機號。
 0：其他。
-10004：手機号 MD5。
+10004：手機號 MD5。
         :type AccountType: str
-        :param AppIdU: accountType 是   或 開放賬号時，該參數必填，表示   或 分配給網站或應用的 AppID，用來唯一标識網站或應用。
+        :param AppIdU: accountType 是   或 開放賬號時，該參數必填，表示   或 分配給網站或應用的 AppID，用來唯一標識網站或應用。
         :type AppIdU: str
-        :param AssociateAccount: accountType 是   或 開放賬号時，用于标識   或 用戶登入後關聯業務自身的賬号 ID。
+        :param AssociateAccount: accountType 是   或 開放賬號時，用於標識   或 用戶登入後關聯業務自身的賬號 ID。
         :type AssociateAccount: str
         :param NickName: 昵稱，UTF-8 編碼。
         :type NickName: str
-        :param PhoneNumber: 手機号：國家代碼-手機号， 如0086-15912345687（0086前不需要+号）。
+        :param PhoneNumber: 手機號：國家代碼-手機號， 如0086-15912345687（0086前不需要+號）。
         :type PhoneNumber: str
         :param EmailAddress: 用戶電子信箱網址（非系統自動生成）。
         :type EmailAddress: str
@@ -57,11 +57,11 @@ class QueryLoginProtectionRequest(AbstractModel):
 1：PC 網頁
 2： 頁面
 3：App
-4： 公衆号
+4： 公衆號
         :type LoginSource: str
         :param LoginType: 登入方式：
 0：其他
-1：手動帳号密碼輸入
+1：手動帳號密碼輸入
 2：動态簡訊密碼登入
 3：二維碼掃描登入
         :type LoginType: str
@@ -73,7 +73,7 @@ class QueryLoginProtectionRequest(AbstractModel):
         :type UserAgent: str
         :param XForwardedFor: 用戶 HTTP 請求中的 x_forward_for。
         :type XForwardedFor: str
-        :param MouseClickCount: 用戶操作過程中鼠标點擊次數。
+        :param MouseClickCount: 用戶操作過程中鼠標點擊次數。
         :type MouseClickCount: str
         :param KeyboardClickCount: 用戶操作過程中鍵盤點擊次數。
         :type KeyboardClickCount: str
@@ -84,28 +84,28 @@ class QueryLoginProtectionRequest(AbstractModel):
         :param Reason: 失敗原因：
 0：其他
 1：參數錯誤
-2：帳号沖突
+2：帳號沖突
 3：驗證錯誤
         :type Reason: str
         :param LoginSpend: 登入耗時，單位：秒。
         :type LoginSpend: str
-        :param MacAddress: MAC 網址或設備唯一标識。
+        :param MacAddress: MAC 網址或設備唯一標識。
         :type MacAddress: str
         :param VendorId: 手機制造商 ID，如果手機注冊，請帶上此訊息。
         :type VendorId: str
         :param AppVersion: App 用戶端版本。
         :type AppVersion: str
-        :param Imei: 手機設備号。
+        :param Imei: 手機設備號。
         :type Imei: str
         :param BusinessId: 業務 ID 網站或應用在多個業務中使用此服務，通過此 ID 區分統計數據。
         :type BusinessId: str
-        :param WxSubType: 1： 公衆号
+        :param WxSubType: 1： 公衆號
 2： 小程式
         :type WxSubType: str
         :param RandNum: Token 簽名随機數， 小程式必填，建議16個字元。
         :type RandNum: str
         :param WxToken: 如果是 小程式，該欄位爲以 ssesion_key 爲 key 去簽名随機數radnNum得到的值（hmac_sha256 簽名算法）。
-如果是 公衆号或第三方登入，則爲授權的 access_token（注意：不是普通 access_token，具體看  官方文件）。
+如果是 公衆號或第三方登入，則爲授權的 access_token（注意：不是普通 access_token，具體看  官方文件）。
         :type WxToken: str
         """
         self.LoginIp = None
@@ -184,13 +184,13 @@ class QueryLoginProtectionResponse(AbstractModel):
         """
         :param CodeDesc: AssociateAccount
 
-accountType 是   或 開放賬号時，用于标識   或 用戶登入後關聯業務自身的賬号 ID。
+accountType 是   或 開放賬號時，用於標識   或 用戶登入後關聯業務自身的賬號 ID。
 LoginTime
 
 操作時間。
 Uid
 
-用戶 ID 不同的 accountType 對應不同的用戶 ID。如果是  ，則填入對應的 openid， 用戶則填入對應的 openid/unionid，手機号則填入對應真實用戶手機号（如13123456789）。
+用戶 ID 不同的 accountType 對應不同的用戶 ID。如果是  ，則填入對應的 openid， 用戶則填入對應的 openid/unionid，手機號則填入對應真實用戶手機號（如13123456789）。
 LoginIp
 
 登入 IP。
@@ -204,13 +204,13 @@ RiskType
 出參不用填"Req業務側錯誤碼。成功時返回 Success，錯誤時返回具體業務錯誤原因。uestId"等公共出參， 詳細解釋>>>
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CodeDesc: str
-        :param AssociateAccount: accountType 是   或 開放賬号時，用于标識   或 用戶登入後關聯業務自身的賬号 ID。
+        :param AssociateAccount: accountType 是   或 開放賬號時，用於標識   或 用戶登入後關聯業務自身的賬號 ID。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AssociateAccount: str
         :param LoginTime: 操作時間。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type LoginTime: str
-        :param Uid: 用戶 ID 不同的 accountType 對應不同的用戶 ID。如果是  ，則填入對應的 openid， 用戶則填入對應的 openid/unionid，手機号則填入對應真實用戶手機号（如13123456789）。
+        :param Uid: 用戶 ID 不同的 accountType 對應不同的用戶 ID。如果是  ，則填入對應的 openid， 用戶則填入對應的 openid/unionid，手機號則填入對應真實用戶手機號（如13123456789）。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Uid: str
         :param LoginIp: 登入 IP。
@@ -221,7 +221,7 @@ RiskType
         :type Level: int
         :param RiskType: 風險類型。
         :type RiskType: list of int
-        :param RootId: accountType 是   或 開放賬号時，用于标識   或 用戶登入後關聯業務自身的賬号 ID。
+        :param RootId: accountType 是   或 開放賬號時，用於標識   或 用戶登入後關聯業務自身的賬號 ID。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RootId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。

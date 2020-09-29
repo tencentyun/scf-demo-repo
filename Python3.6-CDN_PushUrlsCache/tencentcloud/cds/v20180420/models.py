@@ -31,7 +31,7 @@ class CdsAuditInstance(AbstractModel):
         :type Uin: str
         :param ProjectId: 項目ID
         :type ProjectId: int
-        :param RenewFlag: 續約标識
+        :param RenewFlag: 續約標識
         :type RenewFlag: int
         :param Region: 所屬地域
         :type Region: str

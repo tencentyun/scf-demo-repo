@@ -23,7 +23,7 @@ Top Cloud COS-PHP-SDK-V5（[XML API](https://cloud.taifucloud.com/document/produ
 #### 1、Composer方式
 推薦用戶使用 Composer 安裝 cos-php-sdk-v5，Composer是PHP的依賴管理工具，允許您聲明項目所需的依賴，然後自動将它們安裝到您的項目中。
 
-> **提示**：您可以在 [getcomposer.org](getcomposer.org) 上找到更多關于如何安裝Composer，配置自動加載以及用于定義依賴項的其他最佳實踐。
+> **提示**：您可以在 [getcomposer.org](getcomposer.org) 上找到更多關於如何安裝Composer，配置自動加載以及用於定義依賴項的其他最佳實踐。
 
 **使用 Composer 安裝 COS-PHP-SDK-V5**
 1. 打開終端

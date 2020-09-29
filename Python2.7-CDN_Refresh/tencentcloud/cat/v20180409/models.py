@@ -321,7 +321,7 @@ class CatReturnDetail(AbstractModel):
         :type ProvinceName: str
         :param MapKey: Map鍵值
         :type MapKey: str
-        :param ServerIp: 撥測目标的IP
+        :param ServerIp: 撥測目標的IP
         :type ServerIp: str
         :param ResultCount: 撥測失敗個數
         :type ResultCount: int
@@ -409,7 +409,7 @@ class CatTaskDetail(AbstractModel):
         :type AlarmStatus: int
         :param Host: 指定的域名
         :type Host: str
-        :param Port: 撥測目标的端口号
+        :param Port: 撥測目標的端口號
         :type Port: int
         :param CheckStr: 要在結果中進行比對的字串
         :type CheckStr: str
@@ -431,7 +431,7 @@ class CatTaskDetail(AbstractModel):
         :type DnsCheckIp: str
         :param DnsQueryType: DNS查詢類型
         :type DnsQueryType: str
-        :param UserName: 登入服務器的賬号
+        :param UserName: 登入服務器的賬號
         :type UserName: str
         :param PassWord: 登入服務器的密碼
         :type PassWord: str
@@ -583,7 +583,7 @@ class CreateTaskExRequest(AbstractModel):
         :type CatTypeName: str
         :param Url: 撥測的URL， 例如：www.qq.com (URL域名解析需要能解析出具體的IP)
         :type Url: str
-        :param Period: 撥測週期。取值可爲1,5,15,30之一, 單位：分鍾。精度不能低于用戶等級規定的最小精度
+        :param Period: 撥測週期。取值可爲1,5,15,30之一, 單位：分鍾。精度不能低於用戶等級規定的最小精度
         :type Period: int
         :param TaskName: 撥測任務名稱不能超過32個字元。同一個用戶創建的任務名不可重複
         :type TaskName: str
@@ -605,9 +605,9 @@ class CreateTaskExRequest(AbstractModel):
         :type CheckType: int
         :param Cookie: 需要設置的Cookie訊息
         :type Cookie: str
-        :param TaskId: 任務ID，用于驗證且修改任務時傳入原任務ID
+        :param TaskId: 任務ID，用於驗證且修改任務時傳入原任務ID
         :type TaskId: int
-        :param UserName: 登入服務器的賬号。如果爲空字串，表示不用校驗用戶密碼。只做簡單連接服務器的撥測
+        :param UserName: 登入服務器的賬號。如果爲空字串，表示不用校驗用戶密碼。只做簡單連接服務器的撥測
         :type UserName: str
         :param PassWord: 登入服務器的密碼
         :type PassWord: str
@@ -617,7 +617,7 @@ class CreateTaskExRequest(AbstractModel):
         :type ReqData: str
         :param RespDataType: 缺省爲0。0 表示響應爲字串類型。1表示爲二進制類型
         :type RespDataType: int
-        :param RespData: 預期的UDP請求的回應數據。字串型，只需要返回的結果裏包含本字串算校驗通過。二進制型，則需要嚴格等于才算通過
+        :param RespData: 預期的UDP請求的回應數據。字串型，只需要返回的結果裏包含本字串算校驗通過。二進制型，則需要嚴格等於才算通過
         :type RespData: str
         :param DnsSvr: 目的DNS服務器  可以爲空字串
         :type DnsSvr: str
@@ -629,7 +629,7 @@ class CreateTaskExRequest(AbstractModel):
         :type UseSecConn: int
         :param NeedAuth: FTP登入驗證方式， 0 不驗證 ， 1 匿名登入， 2 需要身份驗證
         :type NeedAuth: int
-        :param Port: 撥測目标的端口号
+        :param Port: 撥測目標的端口號
         :type Port: int
         :param Type: Type=0 預設 （站點監控）Type=2 可用率監控
         :type Type: int
@@ -1985,7 +1985,7 @@ class ModifyTaskExRequest(AbstractModel):
         :type CatTypeName: str
         :param Url: 撥測的URL，例如：www.qq.com (URL域名解析需要能解析出具體的IP)
         :type Url: str
-        :param Period: 撥測週期。取值可爲1,5,15,30之一, 單位：分鍾。精度不能低于用戶等級規定的最小精度
+        :param Period: 撥測週期。取值可爲1,5,15,30之一, 單位：分鍾。精度不能低於用戶等級規定的最小精度
         :type Period: int
         :param TaskName: 撥測任務名稱不能超過32個字元。同一個用戶創建的任務名不可重複
         :type TaskName: str
@@ -1995,7 +1995,7 @@ class ModifyTaskExRequest(AbstractModel):
         :type AgentGroupId: int
         :param Host: 指定域名(如需要)
         :type Host: str
-        :param Port: 撥測目标的端口号
+        :param Port: 撥測目標的端口號
         :type Port: int
         :param IsHeader: 是否爲Header請求（非0 發起Header 請求。爲0，且PostData非空，發起POST請求。爲0，PostData爲空，發起GET請求）
         :type IsHeader: int
@@ -2011,7 +2011,7 @@ class ModifyTaskExRequest(AbstractModel):
         :type CheckType: int
         :param Cookie: 需要設置的Cookie訊息
         :type Cookie: str
-        :param UserName: 登入服務器的賬号。如果爲空字串，表示不用校驗用戶密碼。只做簡單連接服務器的撥測
+        :param UserName: 登入服務器的賬號。如果爲空字串，表示不用校驗用戶密碼。只做簡單連接服務器的撥測
         :type UserName: str
         :param PassWord: 登入服務器的密碼
         :type PassWord: str
@@ -2021,7 +2021,7 @@ class ModifyTaskExRequest(AbstractModel):
         :type ReqData: str
         :param RespDataType: 缺省爲0。0 表示請求爲字串類型。1表示爲二進制類型
         :type RespDataType: str
-        :param RespData: 預期的UDP請求的回應數據。字串型，只需要返回的結果裏包含本字串算校驗通過。二進制型，則需要嚴格等于才算通過
+        :param RespData: 預期的UDP請求的回應數據。字串型，只需要返回的結果裏包含本字串算校驗通過。二進制型，則需要嚴格等於才算通過
         :type RespData: str
         :param DnsSvr: 目的DNS服務器，可以爲空字串
         :type DnsSvr: str
@@ -2342,7 +2342,7 @@ class VerifyResultResponse(AbstractModel):
         """
         :param ErrorReason: 錯誤的原因
         :type ErrorReason: str
-        :param ResultCode: 錯誤号
+        :param ResultCode: 錯誤號
         :type ResultCode: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str

@@ -58,7 +58,7 @@ class DtsClient(AbstractClient):
     def CreateMigrateCheckJob(self, request):
         """創建校驗遷移任務
         在開始遷移前, 必須調用本介面創建校驗, 且校驗成功後才能開始遷移. 校驗的結果可以通過DescribeMigrateCheckJob檢視.
-        校驗成功後,遷移任務若有修改, 則必須重新創建校驗并通過後, 才能開始遷移.
+        校驗成功後,遷移任務若有修改, 則必須重新創建校驗並通過後, 才能開始遷移.
 
         :param request: 調用CreateMigrateCheckJob所需參數的結構體。
         :type request: :class:`taifucloudcloud.dts.v20180330.models.CreateMigrateCheckJobRequest`
@@ -86,7 +86,7 @@ class DtsClient(AbstractClient):
 
 
     def CreateMigrateJob(self, request):
-        """本介面用于創建數據遷移任務。
+        """本介面用於創建數據遷移任務。
 
         如果是金融區鏈路, 請使用域名: dts.ap-shenzhen-fsi.taifucloudcloudapi.com
 
@@ -145,7 +145,7 @@ class DtsClient(AbstractClient):
 
 
     def CreateSyncJob(self, request):
-        """本介面(CreateSyncJob)用于創建災備同步任務。
+        """本介面(CreateSyncJob)用於創建災備同步任務。
         創建同步任務後，可以通過 CreateSyncCheckJob 介面發起校驗任務。校驗成功後才可以通過 StartSyncJob 介面啓動同步任務。
 
         :param request: 調用CreateSyncJob所需參數的結構體。
@@ -230,9 +230,9 @@ class DtsClient(AbstractClient):
 
 
     def DescribeMigrateCheckJob(self, request):
-        """本介面用于創建校驗後,獲取校驗的結果. 能查詢到當前校驗的狀态和進度.
+        """本介面用於創建校驗後,獲取校驗的結果. 能查詢到當前校驗的狀态和進度.
         若通過校驗, 則可調用'StartMigrateJob' 開始遷移.
-        若未通過校驗, 則能查詢到校驗失敗的原因. 請按照報錯, 通過'ModifyMigrateJob'修改遷移配置或是調整源/目标實例的相關參數.
+        若未通過校驗, 則能查詢到校驗失敗的原因. 請按照報錯, 通過'ModifyMigrateJob'修改遷移配置或是調整源/目標實例的相關參數.
 
         :param request: 調用DescribeMigrateCheckJob所需參數的結構體。
         :type request: :class:`taifucloudcloud.dts.v20180330.models.DescribeMigrateCheckJobRequest`
@@ -289,7 +289,7 @@ class DtsClient(AbstractClient):
 
 
     def DescribeSyncCheckJob(self, request):
-        """本介面用于在通過 CreateSyncCheckJob 介面創建災備同步校驗任務後，獲取校驗的結果。能查詢到當前校驗的狀态和進度。
+        """本介面用於在通過 CreateSyncCheckJob 介面創建災備同步校驗任務後，獲取校驗的結果。能查詢到當前校驗的狀态和進度。
         若通過校驗, 則可調用 StartSyncJob 啓動同步任務。
         若未通過校驗, 則會返回校驗失敗的原因。 可通過 ModifySyncJob 修改配置，然後再次發起校驗。
         校驗任務需要大概約30秒，當返回的 Status 不爲 finished 時表示尚未校驗完成，需要輪詢該介面。
@@ -351,8 +351,8 @@ class DtsClient(AbstractClient):
 
     def ModifyMigrateJob(self, request):
         """修改數據遷移任務.
-        當遷移任務處于下述狀态時, 允許調用本介面: 遷移創建中, 創建完成, 校驗成功, 校驗失敗, 遷移失敗.
-        源實例和目标實例類型不允許修改, 目标實例地域不允許修改。
+        當遷移任務處於下述狀态時, 允許調用本介面: 遷移創建中, 創建完成, 校驗成功, 校驗失敗, 遷移失敗.
+        源實例和目標實例類型不允許修改, 目標實例地域不允許修改。
 
         如果是金融區鏈路, 請使用域名: dts.ap-shenzhen-fsi.taifucloudcloudapi.com
 
@@ -383,8 +383,8 @@ class DtsClient(AbstractClient):
 
     def ModifySyncJob(self, request):
         """修改災備同步任務.
-        當同步任務處于下述狀态時, 允許調用本介面: 同步任務創建中, 創建完成, 校驗成功, 校驗失敗.
-        源實例和目标實例訊息不允許修改，可以修改任務名、需要同步的庫表。
+        當同步任務處於下述狀态時, 允許調用本介面: 同步任務創建中, 創建完成, 校驗成功, 校驗失敗.
+        源實例和目標實例訊息不允許修改，可以修改任務名、需要同步的庫表。
 
         :param request: 調用ModifySyncJob所需參數的結構體。
         :type request: :class:`taifucloudcloud.dts.v20180330.models.ModifySyncJobRequest`

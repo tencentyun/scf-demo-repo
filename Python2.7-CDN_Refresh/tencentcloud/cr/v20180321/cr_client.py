@@ -26,7 +26,7 @@ class CrClient(AbstractClient):
 
 
     def ApplyBlackList(self, request):
-        """提交黑名單後，黑名單中有效期内的号碼将停止撥打，适用于到期/逾期提醒、回訪場景。
+        """提交黑名單後，黑名單中有效期内的號碼将停止撥打，适用於到期/逾期提醒、回訪場景。
 
         :param request: Request instance for ApplyBlackList.
         :type request: :class:`taifucloudcloud.cr.v20180321.models.ApplyBlackListRequest`
@@ -110,7 +110,7 @@ class CrClient(AbstractClient):
 
 
     def DescribeRecords(self, request):
-        """用于獲取指定案件的錄音網址，次日早上8:00後可查詢前日錄音。
+        """用於獲取指定案件的錄音網址，次日早上8:00後可查詢前日錄音。
 
         :param request: Request instance for DescribeRecords.
         :type request: :class:`taifucloudcloud.cr.v20180321.models.DescribeRecordsRequest`
@@ -166,7 +166,7 @@ class CrClient(AbstractClient):
 
 
     def DownloadDialogueText(self, request):
-        """用于獲取指定案件的對話文本内容，次日早上8:00後可查詢前日對話文本内容。
+        """用於獲取指定案件的對話文本内容，次日早上8:00後可查詢前日對話文本内容。
 
         :param request: Request instance for DownloadDialogueText.
         :type request: :class:`taifucloudcloud.cr.v20180321.models.DownloadDialogueTextRequest`
@@ -194,7 +194,7 @@ class CrClient(AbstractClient):
 
 
     def DownloadRecordList(self, request):
-        """<p>用于獲取錄音下載連結清單，次日早上8:00後可查詢前日錄音清單。</p>
+        """<p>用於獲取錄音下載連結清單，次日早上8:00後可查詢前日錄音清單。</p>
         <p>注意：錄音清單中的錄音下載連結僅次日20:00之前有效，請及時下載。</p>
 
         :param request: Request instance for DownloadRecordList.
@@ -223,7 +223,7 @@ class CrClient(AbstractClient):
 
 
     def DownloadReport(self, request):
-        """用于下載結果報表。當日23:00後，可獲取當日到期/逾期提醒結果，次日00:30後，可獲取昨日回訪結果。
+        """用於下載結果報表。當日23:00後，可獲取當日到期/逾期提醒結果，次日00:30後，可獲取昨日回訪結果。
 
         :param request: Request instance for DownloadReport.
         :type request: :class:`taifucloudcloud.cr.v20180321.models.DownloadReportRequest`

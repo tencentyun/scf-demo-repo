@@ -5,14 +5,14 @@
 | 欄位 |類型|說明|
 | ----- | ----- | ----- |
 | method|string|請求方法，值爲getSms|
-|phone|string|手機号，值爲區号+手機号，比如86185662466**|
+|phone|string|手機號，值爲區號+手機號，比如86185662466**|
 
 #### 校驗驗證碼（登入）
 請求參數：
 | 欄位 |類型|說明|
 | ----- | ----- | ----- |
 | method|string|請求方法，值爲login|
-|phone|string|手機号，值爲區号+手機号，比如86185662466**|
+|phone|string|手機號，值爲區號+手機號，比如86185662466**|
 | code|string|值爲6位數字驗證碼|
 
 ### 使用指引
@@ -45,7 +45,7 @@ Top Cloud 雲函數預設佈署在公共網絡中，如果要訪問redis資源�
 | MissingCode|缺少驗證碼參數|
 | CodeHasExpired|驗證碼已過期|
 | CodeHasValid|驗證碼已失效|
-| CodeIsError|請檢查手機号和驗證碼是否正确|
+| CodeIsError|請檢查手機號和驗證碼是否正确|
 
 ### 參考文件
 * 簡訊範本、簽名申請指引：https://cloud.taifucloud.com/document/product/382/37745

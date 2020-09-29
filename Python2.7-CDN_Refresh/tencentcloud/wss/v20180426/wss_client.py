@@ -26,7 +26,7 @@ class WssClient(AbstractClient):
 
 
     def DeleteCert(self, request):
-        """本介面（DeleteCert）用于删除證書。
+        """本介面（DeleteCert）用於删除證書。
 
         :param request: Request instance for DeleteCert.
         :type request: :class:`taifucloudcloud.wss.v20180426.models.DeleteCertRequest`
@@ -54,7 +54,7 @@ class WssClient(AbstractClient):
 
 
     def DescribeCertList(self, request):
-        """本介面(DescribeCertList)用于獲驗證書清單。
+        """本介面(DescribeCertList)用於獲驗證書清單。
 
         :param request: Request instance for DescribeCertList.
         :type request: :class:`taifucloudcloud.wss.v20180426.models.DescribeCertListRequest`
@@ -82,7 +82,7 @@ class WssClient(AbstractClient):
 
 
     def UploadCert(self, request):
-        """本介面（UploadCert）用于上傳證書。
+        """本介面（UploadCert）用於上傳證書。
 
         :param request: Request instance for UploadCert.
         :type request: :class:`taifucloudcloud.wss.v20180426.models.UploadCertRequest`

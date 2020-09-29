@@ -386,7 +386,7 @@ class DescribeEipAclsRequest(AbstractModel):
         """
         :param AclName: ACL 名稱，支援模糊查找
         :type AclName: str
-        :param AclIds: ACL 實例 ID 清單，數組下标從 0 開始
+        :param AclIds: ACL 實例 ID 清單，數組下標從 0 開始
         :type AclIds: list of str
         :param Offset: 分頁參數。偏移量，預設爲 0
         :type Offset: int
@@ -548,7 +548,7 @@ class DescribeEipsRequest(AbstractModel):
         :type VpcId: str
         :param BindTypes: 綁定類型，-1：未綁定，0：物理機，1：nat閘道，2：虛拟IP, 3:托管機器
         :type BindTypes: list of int
-        :param ExclusiveTag: 獨占标志，0：共享，1：獨占
+        :param ExclusiveTag: 獨占標志，0：共享，1：獨占
         :type ExclusiveTag: int
         :param AclId: EIP ACL實例ID
         :type AclId: int
@@ -697,7 +697,7 @@ class EipAclRule(AbstractModel):
         """
         :param Ip: 源 IP
         :type Ip: str
-        :param Port: 目标端口
+        :param Port: 目標端口
         :type Port: str
         :param Protocol: 協議(TCP/UDP/ICMP/ANY)
         :type Protocol: str

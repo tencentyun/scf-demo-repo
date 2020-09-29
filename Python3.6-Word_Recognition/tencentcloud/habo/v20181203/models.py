@@ -23,7 +23,7 @@ class DescribeStatusRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Pk: 購買服務後獲得的授權帳号，用于保證請求有效性
+        :param Pk: 購買服務後獲得的授權帳號，用於保證請求有效性
         :type Pk: str
         :param Md5: 需要獲取分析結果的樣本md5
         :type Md5: str
@@ -73,9 +73,9 @@ class StartAnalyseRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Pk: 購買服務後獲得的授權帳号，用于保證請求有效性
+        :param Pk: 購買服務後獲得的授權帳號，用於保證請求有效性
         :type Pk: str
-        :param Md5: 樣本md5，用于對下載獲得的樣本完整性進行校驗
+        :param Md5: 樣本md5，用於對下載獲得的樣本完整性進行校驗
         :type Md5: str
         :param DlUrl: 待分析樣本下載網址
         :type DlUrl: str

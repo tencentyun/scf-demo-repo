@@ -55,7 +55,7 @@ class DescribeBaseMetricsRequest(AbstractModel):
         """
         :param Namespace: 業務命名空間
         :type Namespace: str
-        :param MetricName: 指标名
+        :param MetricName: 指標名
         :type MetricName: str
         """
         self.Namespace = None
@@ -74,7 +74,7 @@ class DescribeBaseMetricsResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param MetricSet: 查詢得到的指标描述清單
+        :param MetricSet: 查詢得到的指標描述清單
         :type MetricSet: list of MetricSet
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -140,7 +140,7 @@ class GetMonitorDataRequest(AbstractModel):
         """
         :param Namespace: 命名空間，每個雲産品會有一個命名空間
         :type Namespace: str
-        :param MetricName: 指标名稱，各個雲産品的詳細指标說明請參閱各個産品[監控介面](https://cloud.taifucloud.com/document/product/248/30384)文件
+        :param MetricName: 指標名稱，各個雲産品的詳細指標說明請參閱各個産品[監控介面](https://cloud.taifucloud.com/document/product/248/30384)文件
         :type MetricName: str
         :param Instances: 實例對象的維度組合
         :type Instances: list of Instance
@@ -182,7 +182,7 @@ class GetMonitorDataResponse(AbstractModel):
         """
         :param Period: 統計週期
         :type Period: int
-        :param MetricName: 指标名
+        :param MetricName: 指標名
         :type MetricName: str
         :param DataPoints: 數據點數組
         :type DataPoints: list of DataPoint
@@ -238,15 +238,15 @@ class Instance(AbstractModel):
 
 
 class MetricObjectMeaning(AbstractModel):
-    """指标數據的解釋
+    """指標數據的解釋
 
     """
 
     def __init__(self):
         """
-        :param En: 指标英文解釋
+        :param En: 指標英文解釋
         :type En: str
-        :param Zh: 指标中文解釋
+        :param Zh: 指標中文解釋
         :type Zh: str
         """
         self.En = None
@@ -259,7 +259,7 @@ class MetricObjectMeaning(AbstractModel):
 
 
 class MetricSet(AbstractModel):
-    """對業務指标的單位及支援統計週期的描述
+    """對業務指標的單位及支援統計週期的描述
 
     """
 
@@ -267,17 +267,17 @@ class MetricSet(AbstractModel):
         """
         :param Namespace: 命名空間，每個雲産品會有一個命名空間
         :type Namespace: str
-        :param MetricName: 指标名稱
+        :param MetricName: 指標名稱
         :type MetricName: str
-        :param Unit: 指标使用的單位
+        :param Unit: 指標使用的單位
         :type Unit: str
-        :param UnitCname: 指标使用的單位
+        :param UnitCname: 指標使用的單位
         :type UnitCname: str
-        :param Period: 指标支援的統計週期，單位是秒，如60、300
+        :param Period: 指標支援的統計週期，單位是秒，如60、300
         :type Period: list of int
-        :param Periods: 統計週期内指标方式
+        :param Periods: 統計週期内指標方式
         :type Periods: list of PeriodsSt
-        :param Meaning: 統計指标含義解釋
+        :param Meaning: 統計指標含義解釋
         :type Meaning: :class:`taifucloudcloud.monitor.v20180724.models.MetricObjectMeaning`
         :param Dimensions: 維度描述訊息
         :type Dimensions: list of DimensionsDesc

@@ -27,7 +27,7 @@ class BindDevInfo(AbstractModel):
         :type Tid: str
         :param DeviceName: 設備名稱
         :type DeviceName: str
-        :param DeviceModel: 設備型号
+        :param DeviceModel: 設備型號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DeviceModel: str
         :param Role: 用戶角色，owner：主人，guest：訪客
@@ -74,7 +74,7 @@ class CreateAppUsrRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param CunionId: 标識用戶的唯一ID，防止同一個用戶多次注冊
+        :param CunionId: 標識用戶的唯一ID，防止同一個用戶多次注冊
         :type CunionId: str
         """
         self.CunionId = None
@@ -91,9 +91,9 @@ class CreateAppUsrResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param CunionId: 廠商雲标識用戶的唯一ID
+        :param CunionId: 廠商雲標識用戶的唯一ID
         :type CunionId: str
-        :param AccessId: 客戶的終端用戶在IoT Video上的唯一标識ID
+        :param AccessId: 客戶的終端用戶在IoT Video上的唯一標識ID
         :type AccessId: str
         :param NewRegist: 用戶是否爲新創建
         :type NewRegist: bool
@@ -120,7 +120,7 @@ class CreateBindingRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AccessId: 終端用戶在IoT Video上的唯一标識ID
+        :param AccessId: 終端用戶在IoT Video上的唯一標識ID
         :type AccessId: str
         :param Tid: 設備TID
         :type Tid: str
@@ -170,7 +170,7 @@ class CreateDevTokenRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AccessId: 客戶的終端用戶在IoT Video上的唯一标識ID
+        :param AccessId: 客戶的終端用戶在IoT Video上的唯一標識ID
         :type AccessId: str
         :param Tids: 設備TID清單,0<元素數量<=100
         :type Tids: list of str
@@ -279,7 +279,7 @@ class CreateGencodeRequest(AbstractModel):
         """
         :param ProductId: 産品ID
         :type ProductId: str
-        :param Revision: 物模型發布版本号，-1代表最新編輯（未發布）的版本
+        :param Revision: 物模型發布版本號，-1代表最新編輯（未發布）的版本
         :type Revision: int
         """
         self.ProductId = None
@@ -392,7 +392,7 @@ class CreateProductRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ProductModel: 産器型号(APP産品,爲APP包名)
+        :param ProductModel: 産器型號(APP産品,爲APP包名)
         :type ProductModel: str
         :param Features: 設備功能碼（ypsxth:音訊雙向通話 ，spdxth:視訊單向通話）
         :type Features: list of str
@@ -400,7 +400,7 @@ class CreateProductRequest(AbstractModel):
 僅支援中文、英文、數字、下劃線，不超過32個字元
         :type ProductName: str
         :param ProductDescription: 産品描述訊息
-不支援單引号、雙引号、退格符、回車符、換行符、制表符、反斜杠、下劃線、“%”、“#”、“$”，不超過128字元
+不支援單引號、雙引號、退格符、回車符、換行符、制表符、反斜杠、下劃線、“%”、“#”、“$”，不超過128字元
         :type ProductDescription: str
         :param ChipManufactureId: 主晶片産商ID
         :type ChipManufactureId: str
@@ -458,7 +458,7 @@ class CreateStorageRequest(AbstractModel):
         :type PkgId: str
         :param Tid: 設備TID
         :type Tid: str
-        :param UserTag: 用戶唯一标識，由廠商保證内部唯一性
+        :param UserTag: 用戶唯一標識，由廠商保證内部唯一性
         :type UserTag: str
         """
         self.PkgId = None
@@ -573,9 +573,9 @@ class CreateUsrTokenRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AccessId: 終端用戶在IoT Video上的唯一标識ID
+        :param AccessId: 終端用戶在IoT Video上的唯一標識ID
         :type AccessId: str
-        :param UniqueId: 終端唯一ID，用于區分同一個用戶的多個終端
+        :param UniqueId: 終端唯一ID，用於區分同一個用戶的多個終端
         :type UniqueId: str
         :param TtlMinutes: Token的TTL(time to alive)分鍾數
         :type TtlMinutes: int
@@ -598,7 +598,7 @@ class CreateUsrTokenResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param AccessId: 終端用戶在IoT Video上的唯一标識ID
+        :param AccessId: 終端用戶在IoT Video上的唯一標識ID
         :type AccessId: str
         :param AccessToken: IoT Video平台的AccessToken
         :type AccessToken: str
@@ -631,7 +631,7 @@ class DeleteAppUsrRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AccessId: 客戶的終端用戶在IoT Video上的唯一标識ID
+        :param AccessId: 客戶的終端用戶在IoT Video上的唯一標識ID
         :type AccessId: str
         """
         self.AccessId = None
@@ -665,7 +665,7 @@ class DeleteBindingRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AccessId: 終端用戶在IoT Video上的唯一标識ID
+        :param AccessId: 終端用戶在IoT Video上的唯一標識ID
         :type AccessId: str
         :param Tid: 設備TID
         :type Tid: str
@@ -741,7 +741,7 @@ class DeleteIotDataTypeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TypeId: 自定義數據類型的标識符
+        :param TypeId: 自定義數據類型的標識符
         :type TypeId: str
         """
         self.TypeId = None
@@ -811,7 +811,7 @@ class DeleteOtaVersionRequest(AbstractModel):
         """
         :param ProductId: 産品ID
         :type ProductId: str
-        :param OtaVersion: 固件版本号，格式爲x.y.z， x，y 範圍0-63，z範圍1~524288
+        :param OtaVersion: 固件版本號，格式爲x.y.z， x，y 範圍0-63，z範圍1~524288
         :type OtaVersion: str
         :param Operator: 操作人
         :type Operator: str
@@ -919,7 +919,7 @@ class DescribeBindDevRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param AccessId: 終端用戶在IoT Video上的唯一标識ID
+        :param AccessId: 終端用戶在IoT Video上的唯一標識ID
         :type AccessId: str
         """
         self.AccessId = None
@@ -1106,7 +1106,7 @@ class DescribeDevicesRequest(AbstractModel):
         :type Limit: int
         :param Offset: 分頁偏移，取值＞0
         :type Offset: int
-        :param OtaVersion: 指定固件版本号，爲空查詢此産品下所有設備
+        :param OtaVersion: 指定固件版本號，爲空查詢此産品下所有設備
         :type OtaVersion: str
         :param DeviceName: 設備名稱，支援左前綴模糊比對
         :type DeviceName: str
@@ -1166,7 +1166,7 @@ class DescribeIotDataTypeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TypeId: 自定義數據類型的标識符，爲空則返回全量自定義類型的清單
+        :param TypeId: 自定義數據類型的標識符，爲空則返回全量自定義類型的清單
         :type TypeId: str
         """
         self.TypeId = None
@@ -1207,7 +1207,7 @@ class DescribeIotModelRequest(AbstractModel):
         """
         :param ProductId: 産品ID
         :type ProductId: str
-        :param Revision: 物模型版本号， -1表示最新編輯的（未發布）
+        :param Revision: 物模型版本號， -1表示最新編輯的（未發布）
         :type Revision: int
         """
         self.ProductId = None
@@ -1302,7 +1302,7 @@ class DescribeLogsRequest(AbstractModel):
         :type LogType: int
         :param StartTime: 查詢的起始時間 UNIX時間戳，單位秒
         :type StartTime: int
-        :param DataObject: 物模型對象索引，用于模糊查詢，字元長度<=255，每層節點的字元長度<=16
+        :param DataObject: 物模型對象索引，用於模糊查詢，字元長度<=255，每層節點的字元長度<=16
         :type DataObject: str
         :param EndTime: 查詢的結束時間 UNIX時間戳，單位秒
         :type EndTime: int
@@ -1450,7 +1450,7 @@ class DescribeOtaVersionsRequest(AbstractModel):
         :type Limit: int
         :param ProductId: 産品ID，爲空時查詢客戶所有産品的版本訊息
         :type ProductId: str
-        :param OtaVersion: 版本号，支援模糊比對
+        :param OtaVersion: 版本號，支援模糊比對
         :type OtaVersion: str
         :param PubStatus: 版本類型 1未發布 2測試發布 3正式發布 4禁用
         :type PubStatus: int
@@ -1553,7 +1553,7 @@ class DescribeProductsRequest(AbstractModel):
         :type Limit: int
         :param Offset: 分頁偏移，Offset從0開始
         :type Offset: int
-        :param ProductModel: 産器型号(APP産品,爲APP包名)
+        :param ProductModel: 産器型號(APP産品,爲APP包名)
         :type ProductModel: str
         :param StartTime: 開始時間 ，UNIX 時間戳，單位秒
         :type StartTime: int
@@ -1805,13 +1805,13 @@ class DescribeTraceStatusResponse(AbstractModel):
 
 
 class DevTokenInfo(AbstractModel):
-    """用于終端用戶臨時訪問設備的token授權訊息
+    """用於終端用戶臨時訪問設備的token授權訊息
 
     """
 
     def __init__(self):
         """
-        :param AccessId: 客戶的終端用戶在IotVideo上的唯一标識id
+        :param AccessId: 客戶的終端用戶在IotVideo上的唯一標識id
         :type AccessId: str
         :param Tid: 設備TID
         :type Tid: str
@@ -2088,7 +2088,7 @@ class DisableOtaVersionRequest(AbstractModel):
         """
         :param ProductId: 産品ID
         :type ProductId: str
-        :param OtaVersion: 固件版本号，格式爲x.y.z， x，y 範圍0-63，z範圍1~524288
+        :param OtaVersion: 固件版本號，格式爲x.y.z， x，y 範圍0-63，z範圍1~524288
         :type OtaVersion: str
         :param Operator: 操作人
         :type Operator: str
@@ -2128,7 +2128,7 @@ class IotModelData(AbstractModel):
 
     def __init__(self):
         """
-        :param Revision: 版本号
+        :param Revision: 版本號
         :type Revision: int
         :param ReleaseTime: 發布時間
         :type ReleaseTime: int
@@ -2187,7 +2187,7 @@ class ModifyDeviceActionRequest(AbstractModel):
         """
         :param Tid: 設備TID
         :type Tid: str
-        :param Wakeup: 如果設備處于休眠狀态，是否喚醒設備
+        :param Wakeup: 如果設備處於休眠狀态，是否喚醒設備
         :type Wakeup: bool
         :param Branch: 物模型的分支路徑
         :type Branch: str
@@ -2248,7 +2248,7 @@ class ModifyDevicePropertyRequest(AbstractModel):
         """
         :param Tid: 設備TID
         :type Tid: str
-        :param Wakeup: 如果設備處于休眠狀态，是否喚醒設備
+        :param Wakeup: 如果設備處於休眠狀态，是否喚醒設備
         :type Wakeup: bool
         :param Branch: 物模型的分支路徑
         :type Branch: str
@@ -2402,7 +2402,7 @@ class ProductBase(AbstractModel):
         """
         :param ProductId: 産品ID
         :type ProductId: str
-        :param ProductModel: 産器型号(APP産品,爲APP包名)
+        :param ProductModel: 産器型號(APP産品,爲APP包名)
         :type ProductModel: str
         :param ProductName: 産品名稱
         :type ProductName: str
@@ -2410,7 +2410,7 @@ class ProductBase(AbstractModel):
         :type ProductDescription: str
         :param CreateTime: 創建時間，UNIX 時間戳，單位秒
         :type CreateTime: int
-        :param IotModelRevision: 物模型發布版本号,0代表物模型尚未發布
+        :param IotModelRevision: 物模型發布版本號,0代表物模型尚未發布
         :type IotModelRevision: int
         :param SecretKey: 産品金鑰
         :type SecretKey: str
@@ -2453,7 +2453,7 @@ class ProductData(AbstractModel):
         :param CreateTime: 創建時間，UNIX 時間戳，單位秒
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateTime: int
-        :param IotModelRevision: 物模型發布版本号,0代表物模型尚未發布
+        :param IotModelRevision: 物模型發布版本號,0代表物模型尚未發布
 注意：此欄位可能返回 null，表示取不到有效值。
         :type IotModelRevision: int
         :param SecretKey: 産品金鑰
@@ -2462,13 +2462,13 @@ class ProductData(AbstractModel):
         :param Features: 設備功能碼
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Features: list of str
-        :param ProductModel: 産器型号(APP産品,爲APP包名)
+        :param ProductModel: 産器型號(APP産品,爲APP包名)
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ProductModel: str
         :param ChipManufactureId: 主晶片廠商id
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ChipManufactureId: str
-        :param ChipId: 主晶片型号
+        :param ChipId: 主晶片型號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ChipId: str
         """
@@ -2633,9 +2633,9 @@ class RunOtaVersionRequest(AbstractModel):
         """
         :param ProductId: 産品ID
         :type ProductId: str
-        :param OtaVersion: 固件版本号，格式爲x.y.z， x，y 範圍0-63，z範圍1~524288
+        :param OtaVersion: 固件版本號，格式爲x.y.z， x，y 範圍0-63，z範圍1~524288
         :type OtaVersion: str
-        :param GrayValue: 灰度值,取值範圍0-100，爲0時相當于暫停發布
+        :param GrayValue: 灰度值,取值範圍0-100，爲0時相當於暫停發布
         :type GrayValue: int
         :param OldVersions: 指定的舊版本
         :type OldVersions: list of str
@@ -2683,7 +2683,7 @@ class RunTestOtaVersionRequest(AbstractModel):
         """
         :param ProductId: 産品ID
         :type ProductId: str
-        :param OtaVersion: 固件版本号，格式爲x.y.z， x，y 範圍0-63，z範圍1~524288
+        :param OtaVersion: 固件版本號，格式爲x.y.z， x，y 範圍0-63，z範圍1~524288
         :type OtaVersion: str
         :param Tids: 指定可升級的設備TID
         :type Tids: list of str
@@ -2729,7 +2729,7 @@ class SendOnlineMsgRequest(AbstractModel):
         """
         :param Tid: 設備TID
         :type Tid: str
-        :param Wakeup: 如果設備處于休眠狀态，是否喚醒設備
+        :param Wakeup: 如果設備處於休眠狀态，是否喚醒設備
         :type Wakeup: bool
         :param WaitResp: 等待回應類型
 0：不等待設備回應直接響應請求;
@@ -2763,7 +2763,7 @@ class SendOnlineMsgResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param TaskId: 若返回此項則表明需要用戶用此taskID進行查詢請求是否成功(只有waitresp不等于0的情況下才可能會返回該taskID項)
+        :param TaskId: 若返回此項則表明需要用戶用此taskID進行查詢請求是否成功(只有waitresp不等於0的情況下才可能會返回該taskID項)
         :type TaskId: str
         :param Data: 設備響應訊息
         :type Data: str
@@ -2842,7 +2842,7 @@ class SetMessageQueueResponse(AbstractModel):
 
 
 class TraceStatus(AbstractModel):
-    """布爾值，标識指定設備是否在白名單中
+    """布爾值，標識指定設備是否在白名單中
 
     """
 
@@ -2871,7 +2871,7 @@ class UpgradeDeviceRequest(AbstractModel):
         """
         :param Tid: 設備TID
         :type Tid: str
-        :param OtaVersion: 固件版本号
+        :param OtaVersion: 固件版本號
         :type OtaVersion: str
         :param UpgradeNow: 是否立即升級
         :type UpgradeNow: bool
@@ -2918,7 +2918,7 @@ class UploadOtaVersionRequest(AbstractModel):
         """
         :param ProductId: 産品ID
         :type ProductId: str
-        :param OtaVersion: 固件版本号，格式爲x.y.z， x，y 範圍0-63，z範圍1~524288
+        :param OtaVersion: 固件版本號，格式爲x.y.z， x，y 範圍0-63，z範圍1~524288
         :type OtaVersion: str
         :param VersionUrl: 固件版本URL
         :type VersionUrl: str
@@ -2973,7 +2973,7 @@ class VersionData(AbstractModel):
         :param ProductId: 産品ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ProductId: str
-        :param OtaVersion: 固件版本号
+        :param OtaVersion: 固件版本號
 注意：此欄位可能返回 null，表示取不到有效值。
         :type OtaVersion: str
         :param PubStatus: 版本類型 1未發布 2測試發布 3正式發布 4禁用

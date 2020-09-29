@@ -222,7 +222,7 @@ class CpdpClient(AbstractClient):
 
 
     def BindRelateAccReUnionPay(self, request):
-        """會員綁定提現帳戶-回填銀聯鑒權簡訊碼。用于會員填寫動态驗證碼後，發往銀行進行驗證，驗證成功則完成綁定。
+        """會員綁定提現帳戶-回填銀聯鑒權簡訊碼。用於會員填寫動态驗證碼後，發往銀行進行驗證，驗證成功則完成綁定。
 
         :param request: Request instance for BindRelateAccReUnionPay.
         :type request: :class:`taifucloudcloud.cpdp.v20190820.models.BindRelateAccReUnionPayRequest`
@@ -252,8 +252,8 @@ class CpdpClient(AbstractClient):
     def BindRelateAcctSmallAmount(self, request):
         """會員綁定提現帳戶-小額鑒權。會員申請綁定提現帳戶，綁定後從會員子帳戶中提現到綁定帳戶。
         轉賬鑒權有兩種形式：往賬鑒權和來賬鑒權。
-        往賬鑒權：該介面發起成功後，銀行會向提現帳戶轉入小於等于0.5元的随機金額，并簡訊通知客戶檢視，客戶檢視後，需将收到的金額大小，在電商平台頁面上回填，并通知銀行。銀行驗證通過後，完成提現帳戶綁定。
-        來賬鑒權：該介面發起成功後，銀行以簡訊通知客戶檢視，客戶檢視後，需通過待綁定的帳戶往市場的監管帳戶轉入簡訊上指定的金額。銀行檢索到該筆指定金額的來賬是源自待綁定帳戶，則綁定成功。平安銀行的帳戶，即BankType送1時，大小額行号和超級網銀号都不用送。
+        往賬鑒權：該介面發起成功後，銀行會向提現帳戶轉入小於等於0.5元的随機金額，並簡訊通知客戶檢視，客戶檢視後，需将收到的金額大小，在電商平台頁面上回填，並通知銀行。銀行驗證通過後，完成提現帳戶綁定。
+        來賬鑒權：該介面發起成功後，銀行以簡訊通知客戶檢視，客戶檢視後，需通過待綁定的帳戶往市場的監管帳戶轉入簡訊上指定的金額。銀行檢索到該筆指定金額的來賬是源自待綁定帳戶，則綁定成功。平安銀行的帳戶，即BankType送1時，大小額行號和超級網銀號都不用送。
 
         :param request: Request instance for BindRelateAcctSmallAmount.
         :type request: :class:`taifucloudcloud.cpdp.v20190820.models.BindRelateAcctSmallAmountRequest`
@@ -281,11 +281,11 @@ class CpdpClient(AbstractClient):
 
 
     def BindRelateAcctUnionPay(self, request):
-        """會員綁定提現帳戶-銀聯鑒權。用于會員申請綁定提現帳戶，申請後銀行前往銀聯驗證卡訊息：姓名、證件、卡号、銀行預留手機是否相符，相符則發送給會員手機動态驗證碼并返回成功，不相符則返回失敗。
+        """會員綁定提現帳戶-銀聯鑒權。用於會員申請綁定提現帳戶，申請後銀行前往銀聯驗證卡訊息：姓名、證件、卡號、銀行預留手機是否相符，相符則發送給會員手機動态驗證碼並返回成功，不相符則返回失敗。
         平台接收到銀行返回成功後，進入輸入動态驗證碼的頁面，有效期120秒，若120秒未輸入，客戶可點擊重新發送動态驗證碼，這個步驟重新調用該介面即可。
-        平安銀行的帳戶，大小額行号和超級網銀号都不用送。
-        超級網銀号：單筆轉賬金額不超過5萬，不限制筆數，只用選XX銀行，不用具體到支行，可實時知道對方是否收款成功。
-        大小額聯行号：單筆轉賬可超過5萬，需具體到支行，不能實時知道對方是否收款成功。金額超過5萬的，在工作日的8點30-17點間才會成功。
+        平安銀行的帳戶，大小額行號和超級網銀號都不用送。
+        超級網銀號：單筆轉賬金額不超過5萬，不限制筆數，只用選XX銀行，不用具體到支行，可實時知道對方是否收款成功。
+        大小額聯行號：單筆轉賬可超過5萬，需具體到支行，不能實時知道對方是否收款成功。金額超過5萬的，在工作日的8點30-17點間才會成功。
 
         :param request: Request instance for BindRelateAcctUnionPay.
         :type request: :class:`taifucloudcloud.cpdp.v20190820.models.BindRelateAcctUnionPayRequest`
@@ -425,8 +425,8 @@ class CpdpClient(AbstractClient):
 
 
     def CreateCustAcctId(self, request):
-        """會員子帳戶開立。會員在銀行注冊，并開立會員子帳戶，交易網會員代碼即會員在平台端系統的會員編号。
-        平台需保存銀行返回的子帳戶賬号，後續交易介面都會用到。會員屬性欄位爲預留擴展欄位，當前必須送預設值。
+        """會員子帳戶開立。會員在銀行注冊，並開立會員子帳戶，交易網會員代碼即會員在平台端系統的會員編號。
+        平台需保存銀行返回的子帳戶賬號，後續交易介面都會用到。會員屬性欄位爲預留擴展欄位，當前必須送預設值。
 
         :param request: Request instance for CreateCustAcctId.
         :type request: :class:`taifucloudcloud.cpdp.v20190820.models.CreateCustAcctIdRequest`
@@ -566,7 +566,7 @@ class CpdpClient(AbstractClient):
 
 
     def ModifyMntMbrBindRelateAcctBankCode(self, request):
-        """維護會員綁定提現帳戶聯行号。此介面可以支援市場修改會員的提現帳戶的開戶行訊息，具體包括開戶行行名、開戶行的銀行聯行号（大小額聯行号）和超級網銀行号。
+        """維護會員綁定提現帳戶聯行號。此介面可以支援市場修改會員的提現帳戶的開戶行訊息，具體包括開戶行行名、開戶行的銀行聯行號（大小額聯行號）和超級網銀行號。
 
         :param request: Request instance for ModifyMntMbrBindRelateAcctBankCode.
         :type request: :class:`taifucloudcloud.cpdp.v20190820.models.ModifyMntMbrBindRelateAcctBankCodeRequest`
@@ -790,7 +790,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryBankWithdrawCashDetails(self, request):
-        """查詢銀行時間段内清分提現明細。查詢銀行時間段内清分提現明細介面：若爲“見證+收單退款”“見證+收單儲值”記錄時備注Note爲“見證+收單儲值,訂單号”“見證+收單退款,訂單号”，此介面可以查到T0/T1的儲值明細和退款記錄。查詢标志：儲值記錄仍用3清分選項查詢，退款記錄同提現用2選項查詢。
+        """查詢銀行時間段内清分提現明細。查詢銀行時間段内清分提現明細介面：若爲“見證+收單退款”“見證+收單儲值”記錄時備注Note爲“見證+收單儲值,訂單號”“見證+收單退款,訂單號”，此介面可以查到T0/T1的儲值明細和退款記錄。查詢標志：儲值記錄仍用3清分選項查詢，退款記錄同提現用2選項查詢。
 
         :param request: Request instance for QueryBankWithdrawCashDetails.
         :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryBankWithdrawCashDetailsRequest`
@@ -818,7 +818,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryCommonTransferRecharge(self, request):
-        """查詢普通轉賬儲值明細。介面用于查詢會員主動轉賬進資金匯總帳戶的明細情況。若會員使用綁定賬号轉入，則直接入賬到會員子帳戶。若未使用綁定賬号轉入，則系統無法自動清分到對應子帳戶，則轉入挂賬子帳戶由平台自行清分。若是 “見證+收單儲值”T0儲值記錄時備注Note爲“見證+收單儲值,訂單号” 此介面可以查到T0到賬的“見證+收單儲值”儲值記錄。
+        """查詢普通轉賬儲值明細。介面用於查詢會員主動轉賬進資金匯總帳戶的明細情況。若會員使用綁定賬號轉入，則直接入賬到會員子帳戶。若未使用綁定賬號轉入，則系統無法自動清分到對應子帳戶，則轉入挂賬子帳戶由平台自行清分。若是 “見證+收單儲值”T0儲值記錄時備注Note爲“見證+收單儲值,訂單號” 此介面可以查到T0到賬的“見證+收單儲值”儲值記錄。
 
         :param request: Request instance for QueryCommonTransferRecharge.
         :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryCommonTransferRechargeRequest`
@@ -930,8 +930,8 @@ class CpdpClient(AbstractClient):
 
 
     def QueryMemberBind(self, request):
-        """會員綁定訊息查詢。查詢标志爲“單個會員”的情況下，返回該會員的有效的綁定帳戶訊息。
-        查詢标志爲“全部會員”的情況下，返回市場下的全部的有效的綁定帳戶訊息。查詢标志爲“單個會員的證件訊息”的情況下，返回市場下的指定的會員的留存在電商見證寶系統的證件訊息。
+        """會員綁定訊息查詢。查詢標志爲“單個會員”的情況下，返回該會員的有效的綁定帳戶訊息。
+        查詢標志爲“全部會員”的情況下，返回市場下的全部的有效的綁定帳戶訊息。查詢標志爲“單個會員的證件訊息”的情況下，返回市場下的指定的會員的留存在電商見證寶系統的證件訊息。
 
         :param request: Request instance for QueryMemberBind.
         :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryMemberBindRequest`
@@ -1015,7 +1015,7 @@ class CpdpClient(AbstractClient):
 
 
     def QueryOrder(self, request):
-        """根據訂單号，或者用戶Id，查詢支付訂單狀态
+        """根據訂單號，或者用戶Id，查詢支付訂單狀态
 
         :param request: Request instance for QueryOrder.
         :type request: :class:`taifucloudcloud.cpdp.v20190820.models.QueryOrderRequest`
@@ -1267,7 +1267,7 @@ class CpdpClient(AbstractClient):
 
 
     def Refund(self, request):
-        """如交易訂單需退款，可以通過本介面将支付款全部或部分退還給付款方，聚鑫将在收到退款請求并且驗證成功之後，按照退款規則将支付款按原路退回到支付帳号。最長支援1年的訂單退款。在訂單包含多個子訂單的情況下，如果使用本介面傳入OutTradeNo或TransactionId退款，則只支援全單退款；如果需要部分退款，請通過傳入子訂單的方式來指定部分金額退款。
+        """如交易訂單需退款，可以通過本介面将支付款全部或部分退還給付款方，聚鑫将在收到退款請求並且驗證成功之後，按照退款規則将支付款按原路退回到支付帳號。最長支援1年的訂單退款。在訂單包含多個子訂單的情況下，如果使用本介面傳入OutTradeNo或TransactionId退款，則只支援全單退款；如果需要部分退款，請通過傳入子訂單的方式來指定部分金額退款。
 
         :param request: Request instance for Refund.
         :type request: :class:`taifucloudcloud.cpdp.v20190820.models.RefundRequest`
@@ -1491,7 +1491,7 @@ class CpdpClient(AbstractClient):
 
 
     def UnifiedOrder(self, request):
-        """應用需要先調用本介面生成支付訂單号，并将應答的PayInfo透傳給聚鑫SDK，拉起用戶端（包括 公衆号/ 小程式/用戶端App）支付。
+        """應用需要先調用本介面生成支付訂單號，並将應答的PayInfo透傳給聚鑫SDK，拉起用戶端（包括 公衆號/ 小程式/用戶端App）支付。
 
         :param request: Request instance for UnifiedOrder.
         :type request: :class:`taifucloudcloud.cpdp.v20190820.models.UnifiedOrderRequest`

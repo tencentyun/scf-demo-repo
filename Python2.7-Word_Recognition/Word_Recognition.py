@@ -21,8 +21,8 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
-bucket_region = os.environ.get('bucket_region') # Adding the environment variable 'bucket_region' to the function configuration and fill in the area where your COS Bucket is located.請在函數配置中添加環境變量bucket_region，并填入您COS Bucket所在的地域
-bucket_upload = os.environ.get('bucket_upload')  # Adding the environment variable 'bucket_upload' to the function configuration and fill in the bucket name which is used to storage pictures. 請在函數配置中添加環境變量bucket_upload，并填入您要用來存放圖片的Bucket名
+bucket_region = os.environ.get('bucket_region') # Adding the environment variable 'bucket_region' to the function configuration and fill in the area where your COS Bucket is located.請在函數配置中添加環境變量bucket_region，並填入您COS Bucket所在的地域
+bucket_upload = os.environ.get('bucket_upload')  # Adding the environment variable 'bucket_upload' to the function configuration and fill in the bucket name which is used to storage pictures. 請在函數配置中添加環境變量bucket_upload，並填入您要用來存放圖片的Bucket名
 
 def delete_local_file(src):
     logger.info("delete files and folders")

@@ -6,7 +6,7 @@ stage: dev
 inputs:
   name: Cos_Merge_File
   src: ./
-  description: 本範例通過從源bucket下載多個小文件，合并之後，上傳到另一個bucket
+  description: 本範例通過從源bucket下載多個小文件，合並之後，上傳到另一個bucket
   handler: index.main_handler
   runtime: Nodejs8.9
   namespace: default

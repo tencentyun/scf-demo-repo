@@ -102,7 +102,7 @@ class DescribeItemsRequest(AbstractModel):
         """
         :param Offset: offset (Default = 0)，(當前頁-1) * Limit
         :type Offset: int
-        :param Limit: 條數，必須大于0，最大值爲30
+        :param Limit: 條數，必須大於0，最大值爲30
         :type Limit: int
         :param CategoryId: （電台/歌單）ID，CategoryId和CategoryCode兩個必傳1個，可以從<a href="https://cloud.taifucloud.com/document/product/1155/40109">獲取分類内容（Station）清單介面</a>中獲取。
         :type CategoryId: str
@@ -220,7 +220,7 @@ class DescribeMusicRequest(AbstractModel):
         """
         :param ItemId: 歌曲ID
         :type ItemId: str
-        :param IdentityId: 在應用前端播放音樂C端用戶的唯一标識。無需是帳戶訊息，用戶唯一标識即可。
+        :param IdentityId: 在應用前端播放音樂C端用戶的唯一標識。無需是帳戶訊息，用戶唯一標識即可。
         :type IdentityId: str
         :param SubItemType: 填 MP3-64K-FTD-P 獲取歌曲熱門片段
         :type SubItemType: str
@@ -272,7 +272,7 @@ class DescribeStationsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Limit: 條數，必須大于0
+        :param Limit: 條數，必須大於0
         :type Limit: int
         :param Offset: offset (Default = 0)，(當前頁-1) * Limit
         :type Offset: int

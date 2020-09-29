@@ -250,7 +250,7 @@ class BillingClient(AbstractClient):
 
 
     def DescribeBillSummaryByTag(self, request):
-        """獲取按标簽匯總費用分布
+        """獲取按標簽匯總費用分布
 
         :param request: Request instance for DescribeBillSummaryByTag.
         :type request: :class:`taifucloudcloud.billing.v20180709.models.DescribeBillSummaryByTagRequest`

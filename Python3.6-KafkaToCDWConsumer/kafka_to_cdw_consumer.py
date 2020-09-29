@@ -10,7 +10,7 @@ logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
 ## 各種系統常數，以下常數均可通過同名環境變量進行函蓋
-MAX_CONSUME_COUNT = 50000  #每次消費的最大條數，注意該參數并非越大越好
+MAX_CONSUME_COUNT = 50000  #每次消費的最大條數，注意該參數並非越大越好
 MSG_SEPARATOR = ',' #kafka中訊息的分隔符
 CONSUMER_TIMEOUT_MS = 3000 #讀取kafka的超時時間，單位毫秒
 DB_PORT = 5436 #CDW的端口，預設應該是5436

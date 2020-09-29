@@ -31,9 +31,9 @@ class FaceFusionRequest(AbstractModel):
         :type Image: str
         :param RspImgType: 返回圖像方式（url 或 base64) ，二選一。當前僅支援 url 方式，base64 方式後期開放。
         :type RspImgType: str
-        :param PornDetect: 0表示不需要 ，1表示需要 。2018年12月1号以前創建的活動預設值爲0，其他情況預設值爲1.
+        :param PornDetect: 0表示不需要 ，1表示需要 。2018年12月1號以前創建的活動預設值爲0，其他情況預設值爲1.
         :type PornDetect: int
-        :param CelebrityIdentify: 0表示不需要鑒政，1表示需要鑒政。2018年12月1号以前創建的活動預設值爲0，其他情況預設值爲1。鑒政介面同時會對名人明星進行識别，您可以根據實際需要過濾。
+        :param CelebrityIdentify: 0表示不需要鑒政，1表示需要鑒政。2018年12月1號以前創建的活動預設值爲0，其他情況預設值爲1。鑒政介面同時會對名人明星進行識别，您可以根據實際需要過濾。
         :type CelebrityIdentify: int
         """
         self.ProjectId = None

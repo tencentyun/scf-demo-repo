@@ -328,7 +328,7 @@ class UploadCertRequest(AbstractModel):
         :type Cert: str
         :param CertType: 證書類型（目前支援：CA 爲用戶端證書，SVR 爲服務器證書）。
         :type CertType: str
-        :param ProjectId: 項目ID，詳見用戶指南的 [項目與标簽](https://cloud.taifucloud.com/document/product/598/32738)。
+        :param ProjectId: 項目ID，詳見用戶指南的 [項目與標簽](https://cloud.taifucloud.com/document/product/598/32738)。
         :type ProjectId: str
         :param ModuleType: 模組名稱，應填 ssl。
         :type ModuleType: str

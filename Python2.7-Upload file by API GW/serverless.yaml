@@ -9,7 +9,7 @@ inputs:
   description: >-
     This demo uses API GW trigger and SCF to build WEB backend service.It can
     upload object to SCF by API GW. 本範例使用 API
-    閘道觸發器和雲函數快速構建web後台，實現從前端通過API上傳文件到雲函數，并下載文件到雲函數的本地目錄/tmp，然後上傳到COS bucket
+    閘道觸發器和雲函數快速構建web後台，實現從前端通過API上傳文件到雲函數，並下載文件到雲函數的本地目錄/tmp，然後上傳到COS bucket
   handler: upload_file_to_COS_by_APIGW.main_handler
   runtime: Python2.7
   namespace: default

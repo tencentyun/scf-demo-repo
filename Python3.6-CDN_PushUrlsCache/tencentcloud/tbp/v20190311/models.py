@@ -69,11 +69,11 @@ class ResetRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BotId: 機器人标識
+        :param BotId: 機器人標識
         :type BotId: str
         :param UserId: 子帳戶id，每個終端對應一個
         :type UserId: str
-        :param BotVersion: 機器人版本号。BotVersion/BotEnv二選一：二者均填，僅BotVersion有效；二者均不填，預設BotEnv=dev
+        :param BotVersion: 機器人版本號。BotVersion/BotEnv二選一：二者均填，僅BotVersion有效；二者均不填，預設BotEnv=dev
         :type BotVersion: str
         :param BotEnv: 機器人環境{dev:測試;release:線上}。BotVersion/BotEnv二選一：二者均填，僅BotVersion有效；二者均不填，預設BotEnv=dev
         :type BotEnv: str
@@ -187,9 +187,9 @@ class TextProcessRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BotId: 機器人标識，用于定義抽象機器人。
+        :param BotId: 機器人標識，用於定義抽象機器人。
         :type BotId: str
-        :param TerminalId: 終端标識，每個終端(或線程)對應一個，區分并發多用戶。
+        :param TerminalId: 終端標識，每個終端(或線程)對應一個，區分並發多用戶。
         :type TerminalId: str
         :param InputText: 請求的文本。
         :type InputText: str
@@ -277,9 +277,9 @@ class TextResetRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BotId: 機器人标識，用于定義抽象機器人。
+        :param BotId: 機器人標識，用於定義抽象機器人。
         :type BotId: str
-        :param TerminalId: 終端标識，每個終端(或線程)對應一個，區分并發多用戶。
+        :param TerminalId: 終端標識，每個終端(或線程)對應一個，區分並發多用戶。
         :type TerminalId: str
         :param BotEnv: 機器人版本，取值"dev"或"release"，{調試版本：dev；線上版本：release}。
         :type BotEnv: str

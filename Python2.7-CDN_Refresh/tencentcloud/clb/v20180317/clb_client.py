@@ -26,7 +26,7 @@ class ClbClient(AbstractClient):
 
 
     def AssociateTargetGroups(self, request):
-        """本介面(AssociateTargetGroups)用來将目标組綁定到負載均衡的監聽器（四層協議）或轉發規則（七層協議）上。
+        """本介面(AssociateTargetGroups)用來将目標組綁定到負載均衡的監聽器（四層協議）或轉發規則（七層協議）上。
         本介面爲異步介面，本介面返回成功後需以返回的 RequestID 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for AssociateTargetGroups.
@@ -55,7 +55,7 @@ class ClbClient(AbstractClient):
 
 
     def AutoRewrite(self, request):
-        """用戶需要先創建出一個HTTPS:443監聽器，并在其下創建轉發規則。通過調用本介面，系統會自動創建出一個HTTP:80監聽器（如果之前不存在），并在其下創建轉發規則，與HTTPS:443監聽器下的Domains（在入參中指定）對應。創建成功後可以通過HTTP:80網址自動跳轉爲HTTPS:443網址進行訪問。
+        """用戶需要先創建出一個HTTPS:443監聽器，並在其下創建轉發規則。通過調用本介面，系統會自動創建出一個HTTP:80監聽器（如果之前不存在），並在其下創建轉發規則，與HTTPS:443監聽器下的Domains（在入參中指定）對應。創建成功後可以通過HTTP:80網址自動跳轉爲HTTPS:443網址進行訪問。
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for AutoRewrite.
@@ -112,7 +112,7 @@ class ClbClient(AbstractClient):
 
 
     def BatchModifyTargetWeight(self, request):
-        """本介面(BatchModifyTargetWeight)用于批次修改負載均衡監聽器綁定的後端機器的轉發權重，支援負載均衡的4層和7層監聽器；不支援傳統型負載均衡。
+        """本介面(BatchModifyTargetWeight)用於批次修改負載均衡監聽器綁定的後端機器的轉發權重，支援負載均衡的4層和7層監聽器；不支援傳統型負載均衡。
         本介面爲異步介面，本介面返回成功後需以返回的 RequestID 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for BatchModifyTargetWeight.
@@ -199,7 +199,7 @@ class ClbClient(AbstractClient):
 
     def CreateLoadBalancer(self, request):
         """本介面(CreateLoadBalancer)用來創建負載均衡實例（本介面只支援購買按量計費的負載均衡，包年包月的負載均衡請通過控制台購買）。爲了使用負載均衡服務，您必須購買一個或多個負載均衡實例。成功調用該介面後，會返回負載均衡實例的唯一 ID。負載均衡實例的類型分爲：公網、内網。詳情可參考産品說明中的産品類型。
-        注意：(1)指定可用區申請負載均衡、跨zone容災(僅 支援)【如果您需要體驗該功能，請通過 [工單申請](https://console.cloud.taifucloud.com/workorder/category)】；(2)目前只有 、 、 支援IPv6；(3)一個賬号在每個地域的預設購買配額爲：公網100個，内網100個。
+        注意：(1)指定可用區申請負載均衡、跨zone容災(僅 支援)【如果您需要體驗該功能，請通過 [工單申請](https://console.cloud.taifucloud.com/workorder/category)】；(2)目前只有 、 、 支援IPv6；(3)一個賬號在每個地域的預設購買配額爲：公網100個，内網100個。
         本介面爲異步介面，介面成功返回後，可使用 DescribeLoadBalancers 介面查詢負載均衡實例的狀态（如創建中、正常），以确定是否創建成功。
 
         :param request: Request instance for CreateLoadBalancer.
@@ -228,7 +228,7 @@ class ClbClient(AbstractClient):
 
 
     def CreateLoadBalancerSnatIps(self, request):
-        """針對SnatPro負載均衡，這個介面用于添加SnatIp，如果負載均衡沒有開啓SnatPro，添加SnatIp後會自動開啓
+        """針對SnatPro負載均衡，這個介面用於添加SnatIp，如果負載均衡沒有開啓SnatPro，添加SnatIp後會自動開啓
 
         :param request: Request instance for CreateLoadBalancerSnatIps.
         :type request: :class:`taifucloudcloud.clb.v20180317.models.CreateLoadBalancerSnatIpsRequest`
@@ -256,7 +256,7 @@ class ClbClient(AbstractClient):
 
 
     def CreateRule(self, request):
-        """CreateRule 介面用于在一個已存在的負載均衡七層監聽器下創建轉發規則，七層監聽器中，後端服務必須綁定到規則上而非監聽器上。
+        """CreateRule 介面用於在一個已存在的負載均衡七層監聽器下創建轉發規則，七層監聽器中，後端服務必須綁定到規則上而非監聽器上。
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for CreateRule.
@@ -285,7 +285,7 @@ class ClbClient(AbstractClient):
 
 
     def CreateTargetGroup(self, request):
-        """創建目标組。（目标組功能正在灰度中，需要開通白名單支援）
+        """創建目標組。（目標組功能正在灰度中，需要開通白名單支援）
 
         :param request: Request instance for CreateTargetGroup.
         :type request: :class:`taifucloudcloud.clb.v20180317.models.CreateTargetGroupRequest`
@@ -400,7 +400,7 @@ class ClbClient(AbstractClient):
 
 
     def DeleteLoadBalancerSnatIps(self, request):
-        """對于SnatPro的負載均衡，這個介面用于删除SnatIp
+        """對於SnatPro的負載均衡，這個介面用於删除SnatIp
 
         :param request: Request instance for DeleteLoadBalancerSnatIps.
         :type request: :class:`taifucloudcloud.clb.v20180317.models.DeleteLoadBalancerSnatIpsRequest`
@@ -486,7 +486,7 @@ class ClbClient(AbstractClient):
 
 
     def DeleteTargetGroups(self, request):
-        """删除目标組
+        """删除目標組
 
         :param request: Request instance for DeleteTargetGroups.
         :type request: :class:`taifucloudcloud.clb.v20180317.models.DeleteTargetGroupsRequest`
@@ -514,7 +514,7 @@ class ClbClient(AbstractClient):
 
 
     def DeregisterTargetGroupInstances(self, request):
-        """将服務器從目标組中解綁。
+        """将服務器從目標組中解綁。
         本介面爲異步介面，本介面返回成功後需以返回的 RequestID 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for DeregisterTargetGroupInstances.
@@ -543,7 +543,7 @@ class ClbClient(AbstractClient):
 
 
     def DeregisterTargets(self, request):
-        """DeregisterTargets 介面用來将一台或多台後端服務從負載均衡的監聽器或轉發規則上解綁，對于四層監聽器，只需指定監聽器ID即可，對于七層監聽器，還需通過LocationId或Domain+Url指定轉發規則。
+        """DeregisterTargets 介面用來将一台或多台後端服務從負載均衡的監聽器或轉發規則上解綁，對於四層監聽器，只需指定監聽器ID即可，對於七層監聽器，還需通過LocationId或Domain+Url指定轉發規則。
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for DeregisterTargets.
@@ -572,7 +572,7 @@ class ClbClient(AbstractClient):
 
 
     def DeregisterTargetsFromClassicalLB(self, request):
-        """DeregisterTargetsFromClassicalLB 介面用于解綁負載均衡後端服務。
+        """DeregisterTargetsFromClassicalLB 介面用於解綁負載均衡後端服務。
         本介面爲異步介面，介面返回成功後，需以返回的 RequestId 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for DeregisterTargetsFromClassicalLB.
@@ -657,7 +657,7 @@ class ClbClient(AbstractClient):
 
 
     def DescribeClassicalLBByInstanceId(self, request):
-        """DescribeClassicalLBByInstanceId用于通過後端實例ID獲取傳統型負載均衡ID清單
+        """DescribeClassicalLBByInstanceId用於通過後端實例ID獲取傳統型負載均衡ID清單
 
         :param request: Request instance for DescribeClassicalLBByInstanceId.
         :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeClassicalLBByInstanceIdRequest`
@@ -685,7 +685,7 @@ class ClbClient(AbstractClient):
 
 
     def DescribeClassicalLBHealthStatus(self, request):
-        """DescribeClassicalLBHealthStatus用于獲取傳統型負載均衡後端的健康狀态
+        """DescribeClassicalLBHealthStatus用於獲取傳統型負載均衡後端的健康狀态
 
         :param request: Request instance for DescribeClassicalLBHealthStatus.
         :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeClassicalLBHealthStatusRequest`
@@ -713,7 +713,7 @@ class ClbClient(AbstractClient):
 
 
     def DescribeClassicalLBListeners(self, request):
-        """DescribeClassicalLBListeners 介面用于獲取傳統型負載均衡的監聽器訊息。
+        """DescribeClassicalLBListeners 介面用於獲取傳統型負載均衡的監聽器訊息。
 
         :param request: Request instance for DescribeClassicalLBListeners.
         :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeClassicalLBListenersRequest`
@@ -741,7 +741,7 @@ class ClbClient(AbstractClient):
 
 
     def DescribeClassicalLBTargets(self, request):
-        """DescribeClassicalLBTargets用于獲取傳統型負載均衡綁定的後端服務
+        """DescribeClassicalLBTargets用於獲取傳統型負載均衡綁定的後端服務
 
         :param request: Request instance for DescribeClassicalLBTargets.
         :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeClassicalLBTargetsRequest`
@@ -881,7 +881,7 @@ class ClbClient(AbstractClient):
 
 
     def DescribeTargetGroupInstances(self, request):
-        """獲取目标組綁定的服務器訊息
+        """獲取目標組綁定的服務器訊息
 
         :param request: Request instance for DescribeTargetGroupInstances.
         :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeTargetGroupInstancesRequest`
@@ -909,7 +909,7 @@ class ClbClient(AbstractClient):
 
 
     def DescribeTargetGroupList(self, request):
-        """獲取目标組清單
+        """獲取目標組清單
 
         :param request: Request instance for DescribeTargetGroupList.
         :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeTargetGroupListRequest`
@@ -937,7 +937,7 @@ class ClbClient(AbstractClient):
 
 
     def DescribeTargetGroups(self, request):
-        """查詢目标組訊息
+        """查詢目標組訊息
 
         :param request: Request instance for DescribeTargetGroups.
         :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeTargetGroupsRequest`
@@ -1021,7 +1021,7 @@ class ClbClient(AbstractClient):
 
 
     def DescribeTaskStatus(self, request):
-        """本介面用于查詢異步任務的執行狀态，對于非查詢類的介面（創建/删除負載均衡實例、監聽器、規則以及綁定或解綁後端服務等），在介面調用成功後，都需要使用本介面查詢任務最終是否執行成功。
+        """本介面用於查詢異步任務的執行狀态，對於非查詢類的介面（創建/删除負載均衡實例、監聽器、規則以及綁定或解綁後端服務等），在介面調用成功後，都需要使用本介面查詢任務最終是否執行成功。
 
         :param request: Request instance for DescribeTaskStatus.
         :type request: :class:`taifucloudcloud.clb.v20180317.models.DescribeTaskStatusRequest`
@@ -1049,7 +1049,7 @@ class ClbClient(AbstractClient):
 
 
     def DisassociateTargetGroups(self, request):
-        """解除規則的目标組關聯關系。
+        """解除規則的目標組關聯關系。
         本介面爲異步介面，本介面返回成功後需以返回的 RequestID 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for DisassociateTargetGroups.
@@ -1165,7 +1165,7 @@ class ClbClient(AbstractClient):
 
 
     def ModifyDomainAttributes(self, request):
-        """ModifyDomainAttributes介面用于修改負載均衡7層監聽器轉發規則的域名級别屬性，如修改域名、修改DefaultServer、開啓/關閉Http2、修改證書。
+        """ModifyDomainAttributes介面用於修改負載均衡7層監聽器轉發規則的域名級别屬性，如修改域名、修改DefaultServer、開啓/關閉Http2、修改證書。
         本介面爲異步介面，本介面返回成功後，需以返回的RequestId爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for ModifyDomainAttributes.
@@ -1280,7 +1280,7 @@ class ClbClient(AbstractClient):
 
 
     def ModifyTargetGroupAttribute(self, request):
-        """修改目标組的名稱或者預設端口屬性
+        """修改目標組的名稱或者預設端口屬性
 
         :param request: Request instance for ModifyTargetGroupAttribute.
         :type request: :class:`taifucloudcloud.clb.v20180317.models.ModifyTargetGroupAttributeRequest`
@@ -1308,7 +1308,7 @@ class ClbClient(AbstractClient):
 
 
     def ModifyTargetGroupInstancesPort(self, request):
-        """批次修改目标組服務器端口。
+        """批次修改目標組服務器端口。
         本介面爲異步介面，本介面返回成功後需以返回的 RequestID 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for ModifyTargetGroupInstancesPort.
@@ -1337,7 +1337,7 @@ class ClbClient(AbstractClient):
 
 
     def ModifyTargetGroupInstancesWeight(self, request):
-        """批次修改目标組的服務器權重。
+        """批次修改目標組的服務器權重。
         本介面爲異步介面，本介面返回成功後需以返回的 RequestID 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for ModifyTargetGroupInstancesWeight.
@@ -1366,7 +1366,7 @@ class ClbClient(AbstractClient):
 
 
     def ModifyTargetPort(self, request):
-        """ModifyTargetPort介面用于修改監聽器綁定的後端服務的端口。
+        """ModifyTargetPort介面用於修改監聽器綁定的後端服務的端口。
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for ModifyTargetPort.
@@ -1395,7 +1395,7 @@ class ClbClient(AbstractClient):
 
 
     def ModifyTargetWeight(self, request):
-        """ModifyTargetWeight 介面用于修改負載均衡綁定的後端服務的轉發權重。
+        """ModifyTargetWeight 介面用於修改負載均衡綁定的後端服務的轉發權重。
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for ModifyTargetWeight.
@@ -1424,7 +1424,7 @@ class ClbClient(AbstractClient):
 
 
     def RegisterTargetGroupInstances(self, request):
-        """注冊服務器到目标組。
+        """注冊服務器到目標組。
         本介面爲異步介面，本介面返回成功後需以返回的 RequestID 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for RegisterTargetGroupInstances.
@@ -1453,7 +1453,7 @@ class ClbClient(AbstractClient):
 
 
     def RegisterTargets(self, request):
-        """RegisterTargets 介面用來将一台或多台後端服務綁定到負載均衡的監聽器（或7層轉發規則），在此之前您需要先行創建相關的4層監聽器或7層轉發規則。對于四層監聽器（TCP、UDP），只需指定監聽器ID即可，對于七層監聽器（HTTP、HTTPS），還需通過LocationId或者Domain+Url指定轉發規則。
+        """RegisterTargets 介面用來将一台或多台後端服務綁定到負載均衡的監聽器（或7層轉發規則），在此之前您需要先行創建相關的4層監聽器或7層轉發規則。對於四層監聽器（TCP、UDP），只需指定監聽器ID即可，對於七層監聽器（HTTP、HTTPS），還需通過LocationId或者Domain+Url指定轉發規則。
         本介面爲異步介面，本介面返回成功後需以返回的RequestID爲入參，調用DescribeTaskStatus介面查詢本次任務是否成功。
 
         :param request: Request instance for RegisterTargets.
@@ -1482,7 +1482,7 @@ class ClbClient(AbstractClient):
 
 
     def RegisterTargetsWithClassicalLB(self, request):
-        """RegisterTargetsWithClassicalLB 介面用于綁定後端服務到傳統型負載均衡。
+        """RegisterTargetsWithClassicalLB 介面用於綁定後端服務到傳統型負載均衡。
         本介面爲異步介面，介面返回成功後，需以返回的 RequestId 爲入參，調用 DescribeTaskStatus 介面查詢本次任務是否成功。
 
         :param request: Request instance for RegisterTargetsWithClassicalLB.
@@ -1511,9 +1511,9 @@ class ClbClient(AbstractClient):
 
 
     def ReplaceCertForLoadBalancers(self, request):
-        """ReplaceCertForLoadBalancers 介面用以替換負載均衡實例所關聯的證書，對于各個地域的負載均衡，如果指定的老的證書ID與其有關聯關系，則會先解除關聯，再建立新證書與該負載均衡的關聯關系。
+        """ReplaceCertForLoadBalancers 介面用以替換負載均衡實例所關聯的證書，對於各個地域的負載均衡，如果指定的老的證書ID與其有關聯關系，則會先解除關聯，再建立新證書與該負載均衡的關聯關系。
         此介面支援替換服務端證書或用戶端證書。
-        需要使用的新證書，可以通過傳入證書ID來指定，如果不指定證書ID，則必須傳入證書内容等相關訊息，用以新建證書并綁定至負載均衡。
+        需要使用的新證書，可以通過傳入證書ID來指定，如果不指定證書ID，則必須傳入證書内容等相關訊息，用以新建證書並綁定至負載均衡。
         注：本介面僅可從 地域調用。
 
         :param request: Request instance for ReplaceCertForLoadBalancers.

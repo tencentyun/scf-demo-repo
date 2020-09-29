@@ -26,7 +26,7 @@ class DsClient(AbstractClient):
 
 
     def CheckVcode(self, request):
-        """檢測驗證碼介面。此介面用于企業電子合同平台通過給用戶發送簡訊驗證碼，以簡訊授權方式簽署合同。此介面配合發送驗證碼介面使用。
+        """檢測驗證碼介面。此介面用於企業電子合同平台通過給用戶發送簡訊驗證碼，以簡訊授權方式簽署合同。此介面配合發送驗證碼介面使用。
 
         用戶在企業電子合同平台輸入收到的驗證碼後，由企業電子合同平台調用該介面向Top Cloud 提交确認受托簽署合同驗證碼命令。驗證碼驗證正确時，本次合同簽署的授權成功。
 
@@ -56,7 +56,7 @@ class DsClient(AbstractClient):
 
 
     def CreateContractByUpload(self, request):
-        """此介面适用于：客戶平台通過上傳PDF文件作爲合同，以備未來進行簽署。介面返回任務号，可調用DescribeTaskStatus介面檢視任務執行結果。
+        """此介面适用於：客戶平台通過上傳PDF文件作爲合同，以備未來進行簽署。介面返回任務號，可調用DescribeTaskStatus介面檢視任務執行結果。
 
         :param request: 調用CreateContractByUpload所需參數的結構體。
         :type request: :class:`taifucloudcloud.ds.v20180523.models.CreateContractByUploadRequest`
@@ -140,7 +140,7 @@ class DsClient(AbstractClient):
 
 
     def CreateSeal(self, request):
-        """此介面用于客戶電子合同平台增加某用戶的印章圖片。客戶平台可以調用此介面增加某用戶的印章圖片。
+        """此介面用於客戶電子合同平台增加某用戶的印章圖片。客戶平台可以調用此介面增加某用戶的印章圖片。
 
         :param request: 調用CreateSeal所需參數的結構體。
         :type request: :class:`taifucloudcloud.ds.v20180523.models.CreateSealRequest`
@@ -168,7 +168,7 @@ class DsClient(AbstractClient):
 
 
     def DeleteAccount(self, request):
-        """删除企業電子合同平台的最終用戶。調用該介面後，Top Cloud 将删除該用戶賬号。删除賬号後，已經簽名的合同不受影響。
+        """删除企業電子合同平台的最終用戶。調用該介面後，Top Cloud 将删除該用戶賬號。删除賬號後，已經簽名的合同不受影響。
 
         :param request: 調用DeleteAccount所需參數的結構體。
         :type request: :class:`taifucloudcloud.ds.v20180523.models.DeleteAccountRequest`
@@ -196,7 +196,7 @@ class DsClient(AbstractClient):
 
 
     def DeleteSeal(self, request):
-        """删除印章介面，删除指定賬号的某個印章
+        """删除印章介面，删除指定賬號的某個印章
 
         :param request: 調用DeleteSeal所需參數的結構體。
         :type request: :class:`taifucloudcloud.ds.v20180523.models.DeleteSealRequest`
@@ -224,7 +224,7 @@ class DsClient(AbstractClient):
 
 
     def DescribeTaskStatus(self, request):
-        """介面使用于：客戶平台可使用該介面查詢任務執行狀态或者執行結果
+        """介面使用於：客戶平台可使用該介面查詢任務執行狀态或者執行結果
 
         :param request: 調用DescribeTaskStatus所需參數的結構體。
         :type request: :class:`taifucloudcloud.ds.v20180523.models.DescribeTaskStatusRequest`
@@ -252,7 +252,7 @@ class DsClient(AbstractClient):
 
 
     def DownloadContract(self, request):
-        """下載合同介面。調用該介面可以下載簽署中和簽署完成的合同。介面返回任務号，可調用DescribeTaskStatus介面檢視任務執行結果。
+        """下載合同介面。調用該介面可以下載簽署中和簽署完成的合同。介面返回任務號，可調用DescribeTaskStatus介面檢視任務執行結果。
 
         :param request: 調用DownloadContract所需參數的結構體。
         :type request: :class:`taifucloudcloud.ds.v20180523.models.DownloadContractRequest`
@@ -280,7 +280,7 @@ class DsClient(AbstractClient):
 
 
     def SendVcode(self, request):
-        """發送驗證碼介面。此介面用于：企業電子合同平台需要Top Cloud 發送驗證碼對其用戶進行驗證時調用，Top Cloud 将向其用戶聯系手機(企業電子合同平台爲用戶開戶時通過介面傳入)發送驗證碼，以驗證碼授權方式簽署合同。用戶驗證工作由企業電子合同平台自身完成。
+        """發送驗證碼介面。此介面用於：企業電子合同平台需要Top Cloud 發送驗證碼對其用戶進行驗證時調用，Top Cloud 将向其用戶聯系手機(企業電子合同平台爲用戶開戶時通過介面傳入)發送驗證碼，以驗證碼授權方式簽署合同。用戶驗證工作由企業電子合同平台自身完成。
 
         :param request: 調用SendVcode所需參數的結構體。
         :type request: :class:`taifucloudcloud.ds.v20180523.models.SendVcodeRequest`
@@ -308,7 +308,7 @@ class DsClient(AbstractClient):
 
 
     def SignContractByCoordinate(self, request):
-        """此介面适用于：客戶平台在創建好合同後，由合同簽署方對創建的合同内容進行确認，無誤後再進行簽署。客戶平台使用該介面提供詳細的PDF文件簽名坐标進行簽署。
+        """此介面适用於：客戶平台在創建好合同後，由合同簽署方對創建的合同内容進行确認，無誤後再進行簽署。客戶平台使用該介面提供詳細的PDF文件簽名坐標進行簽署。
 
         :param request: 調用SignContractByCoordinate所需參數的結構體。
         :type request: :class:`taifucloudcloud.ds.v20180523.models.SignContractByCoordinateRequest`
@@ -336,7 +336,7 @@ class DsClient(AbstractClient):
 
 
     def SignContractByKeyword(self, request):
-        """此介面适用于：客戶平台在創建好合同後，由合同簽署方對創建的合同内容進行确認，無誤後再進行簽署。客戶平台使用該介面對PDF合同文件按照關鍵字和坐标進行簽署。
+        """此介面适用於：客戶平台在創建好合同後，由合同簽署方對創建的合同内容進行确認，無誤後再進行簽署。客戶平台使用該介面對PDF合同文件按照關鍵字和坐標進行簽署。
 
         :param request: 調用SignContractByKeyword所需參數的結構體。
         :type request: :class:`taifucloudcloud.ds.v20180523.models.SignContractByKeywordRequest`

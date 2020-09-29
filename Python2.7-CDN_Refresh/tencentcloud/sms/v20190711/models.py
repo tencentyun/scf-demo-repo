@@ -46,12 +46,12 @@ class AddSmsSignRequest(AbstractModel):
         """
         :param SignName: 簽名名稱。
         :type SignName: str
-        :param SignType: 簽名類型。其中每種類型後面标注了其可選的 DocumentType（證明類型）：
+        :param SignType: 簽名類型。其中每種類型後面標注了其可選的 DocumentType（證明類型）：
 0：公司（0，1，2，3）。
 1：APP（0，1，2，3，4） 。
 2：網站（0，1，2，3，5）。
-3：公衆号或者小程式（0，1，2，3，6）。
-4：商标（7）。
+3：公衆號或者小程式（0，1，2，3，6）。
+4：商標（7）。
 5：政府/機關事業單位/其他機構（2，3）。
 注：必須按照對應關系選擇證明類型，否則會審核失敗。
         :type SignType: int
@@ -63,7 +63,7 @@ class AddSmsSignRequest(AbstractModel):
 4：應用後台管理截圖（個人開發APP）。
 5：網站備案後台截圖（個人開發網站）。
 6：小程式設置頁面截圖（個人認證小程式）。
-7：商标注冊書。
+7：商標注冊書。
         :type DocumentType: int
         :param International: 是否國際/ 簡訊：
 0：表示國内簡訊。
@@ -218,11 +218,11 @@ class CallbackStatusStatistics(AbstractModel):
         :type CallbackSuccessCount: int
         :param InternalErrorCount: 運營商内部錯誤統計。
         :type InternalErrorCount: int
-        :param InvalidNumberCount: 号碼無效或空号統計。
+        :param InvalidNumberCount: 號碼無效或空號統計。
         :type InvalidNumberCount: int
         :param ShutdownErrorCount: 停機、關機等錯誤統計。
         :type ShutdownErrorCount: int
-        :param BlackListCount: 号碼拉入黑名單統計。
+        :param BlackListCount: 號碼拉入黑名單統計。
         :type BlackListCount: int
         :param FrequencyLimitCount: 運營商頻率限制統計。
         :type FrequencyLimitCount: int
@@ -260,7 +260,7 @@ class CallbackStatusStatisticsRequest(AbstractModel):
         :param StartDateTime: 開始時間，yyyymmddhh 需要拉取的起始時間，精确到小時。
         :type StartDateTime: int
         :param EndDataTime: 結束時間，yyyymmddhh 需要拉取的截止時間，精确到小時。
-注：EndDataTime 必須大于 StartDateTime。
+注：EndDataTime 必須大於 StartDateTime。
         :type EndDataTime: int
         :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.taifucloud.com/sms/smslist) 添加應用後生成的實際SdkAppid，範例如1400006666。
         :type SmsSdkAppid: str
@@ -643,12 +643,12 @@ class ModifySmsSignRequest(AbstractModel):
         :type SignId: int
         :param SignName: 簽名名稱。
         :type SignName: str
-        :param SignType: 簽名類型。其中每種類型後面标注了其可選的 DocumentType（證明類型）：
+        :param SignType: 簽名類型。其中每種類型後面標注了其可選的 DocumentType（證明類型）：
 0：公司（0，1，2，3）。
 1：APP（0，1，2，3，4） 。
 2：網站（0，1，2，3，5）。
-3：公衆号或者小程式（0，1，2，3，6）。
-4：商标（7）。
+3：公衆號或者小程式（0，1，2，3，6）。
+4：商標（7）。
 5：政府/機關事業單位/其他機構（2，3）。
 注：必須按照對應關系選擇證明類型，否則會審核失敗。
         :type SignType: int
@@ -660,7 +660,7 @@ class ModifySmsSignRequest(AbstractModel):
 4：應用後台管理截圖(個人開發APP)。
 5：網站備案後台截圖(個人開發網站)。
 6：小程式設置頁面截圖(個人認證小程式)。
-7：商标注冊書。
+7：商標注冊書。
         :type DocumentType: int
         :param International: 是否國際/ 簡訊：
 0：表示國内簡訊。
@@ -811,11 +811,11 @@ class PullSmsReplyStatus(AbstractModel):
 
     def __init__(self):
         """
-        :param ExtendCode: 簡訊碼号擴展号，預設未開通，如需開通請聯系 [sms helper](https://cloud.taifucloud.com/document/product/382/3773)。
+        :param ExtendCode: 簡訊碼號擴展號，預設未開通，如需開通請聯系 [sms helper](https://cloud.taifucloud.com/document/product/382/3773)。
         :type ExtendCode: str
         :param NationCode: 國家（或地區）碼。
         :type NationCode: str
-        :param PhoneNumber: 手機号碼,e.164标準，+[國家或地區碼][手機号] ，範例如：+8613711112222， 其中前面有一個+号 ，86爲國家碼，13711112222爲手機号。
+        :param PhoneNumber: 手機號碼,e.164標準，+[國家或地區碼][手機號] ，範例如：+8613711112222， 其中前面有一個+號 ，86爲國家碼，13711112222爲手機號。
         :type PhoneNumber: str
         :param Sign: 簡訊簽名。
         :type Sign: str
@@ -859,7 +859,7 @@ class PullSmsReplyStatusByPhoneNumberRequest(AbstractModel):
         :type Offset: int
         :param Limit: 拉取最大條數，最多 100。
         :type Limit: int
-        :param PhoneNumber: 下發目的手機号碼，依據 e.164 标準爲：+[國家（或地區）碼][手機号] ，範例如：+8613711112222， 其中前面有一個+号 ，86爲國家碼，13711112222爲手機号。
+        :param PhoneNumber: 下發目的手機號碼，依據 e.164 標準爲：+[國家（或地區）碼][手機號] ，範例如：+8613711112222， 其中前面有一個+號 ，86爲國家碼，13711112222爲手機號。
         :type PhoneNumber: str
         :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.taifucloud.com/sms/smslist) 添加應用後生成的實際SdkAppid，例如1400006666。
         :type SmsSdkAppid: str
@@ -965,11 +965,11 @@ class PullSmsSendStatus(AbstractModel):
         :type UserReceiveUnixTime: int
         :param NationCode: 國家（或地區）碼。
         :type NationCode: str
-        :param PurePhoneNumber: 手機号碼,e.164标準，+[國家或地區碼][手機号] ，範例如：+8613711112222， 其中前面有一個+号 ，86爲國家碼，13711112222爲手機号。
+        :param PurePhoneNumber: 手機號碼,e.164標準，+[國家或地區碼][手機號] ，範例如：+8613711112222， 其中前面有一個+號 ，86爲國家碼，13711112222爲手機號。
         :type PurePhoneNumber: str
-        :param PhoneNumber: 手機号碼，普通格式，範例如：13711112222。
+        :param PhoneNumber: 手機號碼，普通格式，範例如：13711112222。
         :type PhoneNumber: str
-        :param SerialNo: 本次發送标識 ID。
+        :param SerialNo: 本次發送標識 ID。
         :type SerialNo: str
         :param ReportStatus: 實際是否收到簡訊接收狀态，SUCCESS（成功）、FAIL（失敗）。
         :type ReportStatus: str
@@ -1011,7 +1011,7 @@ class PullSmsSendStatusByPhoneNumberRequest(AbstractModel):
         :type Offset: int
         :param Limit: 拉取最大條數，最多 100。
         :type Limit: int
-        :param PhoneNumber: 下發目的手機号碼，依據 e.164 标準爲：+[國家（或地區）碼][手機号] ，範例如：+8613711112222， 其中前面有一個+号 ，86爲國家碼，13711112222爲手機号。
+        :param PhoneNumber: 下發目的手機號碼，依據 e.164 標準爲：+[國家（或地區）碼][手機號] ，範例如：+8613711112222， 其中前面有一個+號 ，86爲國家碼，13711112222爲手機號。
         :type PhoneNumber: str
         :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.taifucloud.com/sms/smslist) 添加應用後生成的實際SdkAppid，例如1400006666。
         :type SmsSdkAppid: str
@@ -1111,8 +1111,8 @@ class SendSmsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param PhoneNumberSet: 下發手機号碼，采用 e.164 标準，格式爲+[國家或地區碼][手機号]，單次請求最多支援200個手機号且要求全爲境内手機号或全爲境外手機号。
-例如：+8613711112222， 其中前面有一個+号 ，86爲國家碼，13711112222爲手機号。
+        :param PhoneNumberSet: 下發手機號碼，采用 e.164 標準，格式爲+[國家或地區碼][手機號]，單次請求最多支援200個手機號且要求全爲境内手機號或全爲境外手機號。
+例如：+8613711112222， 其中前面有一個+號 ，86爲國家碼，13711112222爲手機號。
         :type PhoneNumberSet: list of str
         :param TemplateID: 範本 ID，必須填寫已審核通過的範本 ID。範本ID可登入 [簡訊控制台](https://console.cloud.taifucloud.com/sms/smslist) 檢視。
         :type TemplateID: str
@@ -1122,7 +1122,7 @@ class SendSmsRequest(AbstractModel):
         :type Sign: str
         :param TemplateParamSet: 範本參數，若無範本參數，則設置爲空。
         :type TemplateParamSet: list of str
-        :param ExtendCode: 簡訊碼号擴展号，預設未開通，如需開通請聯系 [sms helper](https://cloud.taifucloud.com/document/product/382/3773)。
+        :param ExtendCode: 簡訊碼號擴展號，預設未開通，如需開通請聯系 [sms helper](https://cloud.taifucloud.com/document/product/382/3773)。
         :type ExtendCode: str
         :param SessionContext: 用戶的 session 内容，可以攜帶用戶側 ID 等上下文訊息，server 會原樣返回。
         :type SessionContext: str
@@ -1183,9 +1183,9 @@ class SendStatus(AbstractModel):
 
     def __init__(self):
         """
-        :param SerialNo: 發送流水号。
+        :param SerialNo: 發送流水號。
         :type SerialNo: str
-        :param PhoneNumber: 手機号碼,e.164标準，+[國家或地區碼][手機号] ，範例如：+8613711112222， 其中前面有一個+号 ，86爲國家碼，13711112222爲手機号。
+        :param PhoneNumber: 手機號碼,e.164標準，+[國家或地區碼][手機號] ，範例如：+8613711112222， 其中前面有一個+號 ，86爲國家碼，13711112222爲手機號。
         :type PhoneNumber: str
         :param Fee: 計費條數，計費規則請查詢 [計費策略](https://cloud.taifucloud.com/document/product/382/36135)。
         :type Fee: int
@@ -1248,7 +1248,7 @@ class SendStatusStatisticsRequest(AbstractModel):
         :param StartDateTime: 拉取起始時間，yyyymmddhh 需要拉取的起始時間，精确到小時。
         :type StartDateTime: int
         :param EndDataTime: 結束時間，yyyymmddhh 需要拉取的截止時間，精确到小時
-注：EndDataTime 必須大于 StartDateTime。
+注：EndDataTime 必須大於 StartDateTime。
         :type EndDataTime: int
         :param SmsSdkAppid: 簡訊SdkAppid在 [簡訊控制台](https://console.cloud.taifucloud.com/sms/smslist) 添加應用後生成的實際SdkAppid，範例如1400006666。
         :type SmsSdkAppid: str
@@ -1304,15 +1304,15 @@ class SmsPackagesStatistics(AbstractModel):
 
     def __init__(self):
         """
-        :param PackageCreateTime: 套餐包創建時間，标準時間，例如：2019-10-08 17:18:37。
+        :param PackageCreateTime: 套餐包創建時間，標準時間，例如：2019-10-08 17:18:37。
         :type PackageCreateTime: str
         :param PackageCreateUnixTime: 套餐包創建時間，UNIX 時間戳（單位：秒）。
         :type PackageCreateUnixTime: int
-        :param PackageEffectiveTime: 套餐包生效時間，标準時間，例如：2019-10-08 17:18:37。
+        :param PackageEffectiveTime: 套餐包生效時間，標準時間，例如：2019-10-08 17:18:37。
         :type PackageEffectiveTime: str
         :param PackageEffectiveUnixTime: 套餐包生效時間，UNIX 時間戳（單位：秒）。
         :type PackageEffectiveUnixTime: int
-        :param PackageExpiredTime: 套餐包過期時間，标準時間，例如：2019-10-08 17:18:37。
+        :param PackageExpiredTime: 套餐包過期時間，標準時間，例如：2019-10-08 17:18:37。
         :type PackageExpiredTime: str
         :param PackageExpiredUnixTime: 套餐包過期時間，UNIX 時間戳（單位：秒）。
         :type PackageExpiredUnixTime: int

@@ -26,7 +26,7 @@ class CdsClient(AbstractClient):
 
 
     def DescribeDbauditInstanceType(self, request):
-        """本介面 (DescribeDbauditInstanceType) 用于查詢可售賣的産品規格清單。
+        """本介面 (DescribeDbauditInstanceType) 用於查詢可售賣的産品規格清單。
 
         :param request: 調用DescribeDbauditInstanceType所需參數的結構體。
         :type request: :class:`taifucloudcloud.cds.v20180420.models.DescribeDbauditInstanceTypeRequest`
@@ -54,7 +54,7 @@ class CdsClient(AbstractClient):
 
 
     def DescribeDbauditInstances(self, request):
-        """本介面 (DescribeDbauditInstances) 用于查詢數據安全審計實例清單
+        """本介面 (DescribeDbauditInstances) 用於查詢數據安全審計實例清單
 
         :param request: 調用DescribeDbauditInstances所需參數的結構體。
         :type request: :class:`taifucloudcloud.cds.v20180420.models.DescribeDbauditInstancesRequest`
@@ -82,7 +82,7 @@ class CdsClient(AbstractClient):
 
 
     def DescribeDbauditUsedRegions(self, request):
-        """本介面 (DescribeDbauditUsedRegions) 用于查詢可售賣地域清單。
+        """本介面 (DescribeDbauditUsedRegions) 用於查詢可售賣地域清單。
 
         :param request: 調用DescribeDbauditUsedRegions所需參數的結構體。
         :type request: :class:`taifucloudcloud.cds.v20180420.models.DescribeDbauditUsedRegionsRequest`
@@ -110,7 +110,7 @@ class CdsClient(AbstractClient):
 
 
     def InquiryPriceDbauditInstance(self, request):
-        """用于查詢數據安全審計産品實例價格
+        """用於查詢數據安全審計産品實例價格
 
         :param request: 調用InquiryPriceDbauditInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.cds.v20180420.models.InquiryPriceDbauditInstanceRequest`
@@ -138,7 +138,7 @@ class CdsClient(AbstractClient):
 
 
     def ModifyDbauditInstancesRenewFlag(self, request):
-        """本介面 (ModifyDbauditInstancesRenewFlag) 用于修改數據安全審計産品實例續約标識
+        """本介面 (ModifyDbauditInstancesRenewFlag) 用於修改數據安全審計産品實例續約標識
 
         :param request: 調用ModifyDbauditInstancesRenewFlag所需參數的結構體。
         :type request: :class:`taifucloudcloud.cds.v20180420.models.ModifyDbauditInstancesRenewFlagRequest`

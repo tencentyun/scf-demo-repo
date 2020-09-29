@@ -23,7 +23,7 @@ class ClearQueueRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param QueueName: 隊列名字，在單個地域同一帳号下唯一。隊列名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
+        :param QueueName: 隊列名字，在單個地域同一帳號下唯一。隊列名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type QueueName: str
         """
         self.QueueName = None
@@ -57,9 +57,9 @@ class ClearSubscriptionFilterTagsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TopicName: 主題名字，在單個地域同一帳号下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線（-）。
+        :param TopicName: 主題名字，在單個地域同一帳號下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線（-）。
         :type TopicName: str
-        :param SubscriptionName: 訂閱名字，在單個地域同一帳号的同一主題下唯一。訂閱名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
+        :param SubscriptionName: 訂閱名字，在單個地域同一帳號的同一主題下唯一。訂閱名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type SubscriptionName: str
         """
         self.TopicName = None
@@ -95,7 +95,7 @@ class CreateQueueRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param QueueName: 隊列名字，在單個地域同一帳号下唯一。隊列名稱是一個不超過 64 個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
+        :param QueueName: 隊列名字，在單個地域同一帳號下唯一。隊列名稱是一個不超過 64 個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type QueueName: str
         :param MaxMsgHeapNum: 最大堆積訊息數。取值範圍在公測期間爲 1,000,000 - 10,000,000，正式上線後範圍可達到 1000,000-1000,000,000。預設取值在公測期間爲 10,000,000，正式上線後爲 100,000,000。
         :type MaxMsgHeapNum: int
@@ -189,17 +189,17 @@ class CreateSubscribeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TopicName: 主題名字，在單個地域同一帳号下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線（-）。
+        :param TopicName: 主題名字，在單個地域同一帳號下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線（-）。
         :type TopicName: str
-        :param SubscriptionName: 訂閱名字，在單個地域同一帳号的同一主題下唯一。訂閱名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
+        :param SubscriptionName: 訂閱名字，在單個地域同一帳號的同一主題下唯一。訂閱名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type SubscriptionName: str
-        :param Protocol: 訂閱的協議，目前支援兩種協議：http、queue。使用http協議，用戶需自己搭建接受訊息的web server。使用queue，訊息會自動推送到CMQ queue，用戶可以并發地拉取訊息。
+        :param Protocol: 訂閱的協議，目前支援兩種協議：http、queue。使用http協議，用戶需自己搭建接受訊息的web server。使用queue，訊息會自動推送到CMQ queue，用戶可以並發地拉取訊息。
         :type Protocol: str
-        :param Endpoint: 接收通知的Endpoint，根據協議Protocol區分：對于http，Endpoint必須以“`http://`”開頭，host可以是域名或IP；對于Queue，則填QueueName。 請注意，目前推送服務不能推送到私有網絡中，因此Endpoint填寫爲私有網絡域名或網址将接收不到推送的訊息，目前支援推送到公網和基礎網絡。
+        :param Endpoint: 接收通知的Endpoint，根據協議Protocol區分：對於http，Endpoint必須以“`http://`”開頭，host可以是域名或IP；對於Queue，則填QueueName。 請注意，目前推送服務不能推送到私有網絡中，因此Endpoint填寫爲私有網絡域名或網址将接收不到推送的訊息，目前支援推送到公網和基礎網絡。
         :type Endpoint: str
-        :param NotifyStrategy: 向Endpoint推送訊息出現錯誤時，CMQ推送服務器的重試策略。取值有：1）BACKOFF_RETRY，退避重試。每隔一定時間重試一次，重試夠一定次數後，就把該訊息丢棄，繼續推送下一條訊息；2）EXPONENTIAL_DECAY_RETRY，指數衰退重試。每次重試的間隔是指數遞增的，例如開始1s，後面是2s，4s，8s...由于Topic訊息的週期是一天，所以最多重試一天就把訊息丢棄。預設值是EXPONENTIAL_DECAY_RETRY。
+        :param NotifyStrategy: 向Endpoint推送訊息出現錯誤時，CMQ推送服務器的重試策略。取值有：1）BACKOFF_RETRY，退避重試。每隔一定時間重試一次，重試夠一定次數後，就把該訊息丢棄，繼續推送下一條訊息；2）EXPONENTIAL_DECAY_RETRY，指數衰退重試。每次重試的間隔是指數遞增的，例如開始1s，後面是2s，4s，8s...由於Topic訊息的週期是一天，所以最多重試一天就把訊息丢棄。預設值是EXPONENTIAL_DECAY_RETRY。
         :type NotifyStrategy: str
-        :param FilterTag: 訊息正文。訊息标簽（用于訊息過濾)。标簽數量不能超過5個，每個标簽不超過16個字元。與(Batch)PublishMessage的MsgTag參數配合使用，規則：1）如果FilterTag沒有設置，則無論MsgTag是否有設置，訂閱接收所有發布到Topic的訊息；2）如果FilterTag數組有值，則只有數組中至少有一個值在MsgTag數組中也存在時（即FilterTag和MsgTag有交集），訂閱才接收該發布到Topic的訊息；3）如果FilterTag數組有值，但MsgTag沒設置，則不接收任何發布到Topic的訊息，可以認爲是2）的一種特例，此時FilterTag和MsgTag沒有交集。規則整體的設計思想是以訂閱者的意願爲主。
+        :param FilterTag: 訊息正文。訊息標簽（用於訊息過濾)。標簽數量不能超過5個，每個標簽不超過16個字元。與(Batch)PublishMessage的MsgTag參數配合使用，規則：1）如果FilterTag沒有設置，則無論MsgTag是否有設置，訂閱接收所有發布到Topic的訊息；2）如果FilterTag數組有值，則只有數組中至少有一個值在MsgTag數組中也存在時（即FilterTag和MsgTag有交集），訂閱才接收該發布到Topic的訊息；3）如果FilterTag數組有值，但MsgTag沒設置，則不接收任何發布到Topic的訊息，可以認爲是2）的一種特例，此時FilterTag和MsgTag沒有交集。規則整體的設計思想是以訂閱者的意願爲主。
         :type FilterTag: list of str
         :param BindingKey: BindingKey數量不超過5個， 每個BindingKey長度不超過64位元，該欄位表示訂閱接收訊息的過濾策略，每個BindingKey最多含有15個“.”， 即最多16個詞組。
         :type BindingKey: list of str
@@ -255,15 +255,15 @@ class CreateTopicRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TopicName: 主題名字，在單個地域同一帳号下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線（-）。
+        :param TopicName: 主題名字，在單個地域同一帳號下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線（-）。
         :type TopicName: str
         :param MaxMsgSize: 訊息最大長度。取值範圍 1024-65536 Byte（即1-64K），預設值 65536。
         :type MaxMsgSize: int
-        :param FilterType: 用于指定主題的訊息比對策略。
+        :param FilterType: 用於指定主題的訊息比對策略。
         :type FilterType: int
         :param MsgRetentionSeconds: 訊息保存時間。取值範圍60 - 86400 s（即1分鍾 - 1天），預設值86400。
         :type MsgRetentionSeconds: int
-        :param Trace: 是否開啓訊息軌迹标識，true表示開啓，false表示不開啓，不填表示不開啓。
+        :param Trace: 是否開啓訊息軌迹標識，true表示開啓，false表示不開啓，不填表示不開啓。
         :type Trace: bool
         """
         self.TopicName = None
@@ -370,7 +370,7 @@ class DeleteQueueRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param QueueName: 隊列名字，在單個地域同一帳号下唯一。隊列名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
+        :param QueueName: 隊列名字，在單個地域同一帳號下唯一。隊列名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type QueueName: str
         """
         self.QueueName = None
@@ -404,9 +404,9 @@ class DeleteSubscribeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TopicName: 主題名字，在單個地域同一帳号下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
+        :param TopicName: 主題名字，在單個地域同一帳號下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type TopicName: str
-        :param SubscriptionName: 訂閱名字，在單個地域同一帳号的同一主題下唯一。訂閱名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
+        :param SubscriptionName: 訂閱名字，在單個地域同一帳號的同一主題下唯一。訂閱名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type SubscriptionName: str
         """
         self.TopicName = None
@@ -442,7 +442,7 @@ class DeleteTopicRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TopicName: 主題名字，在單個地域同一帳号下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
+        :param TopicName: 主題名字，在單個地域同一帳號下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type TopicName: str
         """
         self.TopicName = None
@@ -546,7 +546,7 @@ class DescribeQueueDetailRequest(AbstractModel):
         :type Limit: int
         :param Filters: 篩選參數，目前支援QueueName篩選，且僅支援一個關鍵字
         :type Filters: list of Filter
-        :param TagKey: 标簽搜索
+        :param TagKey: 標簽搜索
         :type TagKey: str
         :param QueueName: 精确比對QueueName
         :type QueueName: str
@@ -608,7 +608,7 @@ class DescribeSubscriptionDetailRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TopicName: 主題名字，在單個地域同一帳号下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線（-）。
+        :param TopicName: 主題名字，在單個地域同一帳號下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線（-）。
         :type TopicName: str
         :param Offset: 分頁時本頁獲取主題清單的起始位置。如果填寫了該值，必須也要填寫 limit 。該值缺省時，後台取預設值 0
         :type Offset: int
@@ -679,7 +679,7 @@ class DescribeTopicDetailRequest(AbstractModel):
         :type Limit: int
         :param Filters: 目前只支援過濾TopicName ， 且只能填一個過濾值
         :type Filters: list of Filter
-        :param TagKey: 标簽比對
+        :param TagKey: 標簽比對
         :type TagKey: str
         :param TopicName: 精确比對TopicName
         :type TopicName: str
@@ -762,7 +762,7 @@ class ModifyQueueAttributeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param QueueName: 隊列名字，在單個地域同一帳号下唯一。隊列名稱是一個不超過 64 個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
+        :param QueueName: 隊列名字，在單個地域同一帳號下唯一。隊列名稱是一個不超過 64 個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type QueueName: str
         :param MaxMsgHeapNum: 最大堆積訊息數。取值範圍在公測期間爲 1,000,000 - 10,000,000，正式上線後範圍可達到 1000,000-1000,000,000。預設取值在公測期間爲 10,000,000，正式上線後爲 100,000,000。
         :type MaxMsgHeapNum: int
@@ -788,7 +788,7 @@ class ModifyQueueAttributeRequest(AbstractModel):
         :type MaxReceiveCount: int
         :param Policy: 死信隊列策略
         :type Policy: int
-        :param Trace: 是否開啓訊息軌迹标識，true表示開啓，false表示不開啓，不填表示不開啓。
+        :param Trace: 是否開啓訊息軌迹標識，true表示開啓，false表示不開啓，不填表示不開啓。
         :type Trace: bool
         """
         self.QueueName = None
@@ -848,17 +848,17 @@ class ModifySubscriptionAttributeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TopicName: 主題名字，在單個地域同一帳号下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線（-）。
+        :param TopicName: 主題名字，在單個地域同一帳號下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線（-）。
         :type TopicName: str
-        :param SubscriptionName: 訂閱名字，在單個地域同一帳号的同一主題下唯一。訂閱名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
+        :param SubscriptionName: 訂閱名字，在單個地域同一帳號的同一主題下唯一。訂閱名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type SubscriptionName: str
         :param NotifyStrategy: 向 Endpoint 推送訊息出現錯誤時，CMQ 推送服務器的重試策略。取值如下：
 （1）BACKOFF_RETRY，退避重試。每隔一定時間重試一次，重試夠一定次數後，就把該訊息丢棄，繼續推送下一條訊息。
-（2）EXPONENTIAL_DECAY_RETRY，指數衰退重試。每次重試的間隔是指數遞增的，例如開始1s，後面是2s，4s，8s···由于 Topic 訊息的週期是一天，所以最多重試一天就把訊息丢棄。預設值是 EXPONENTIAL_DECAY_RETRY。
+（2）EXPONENTIAL_DECAY_RETRY，指數衰退重試。每次重試的間隔是指數遞增的，例如開始1s，後面是2s，4s，8s···由於 Topic 訊息的週期是一天，所以最多重試一天就把訊息丢棄。預設值是 EXPONENTIAL_DECAY_RETRY。
         :type NotifyStrategy: str
         :param NotifyContentFormat: 推送内容的格式。取值：（1）JSON；（2）SIMPLIFIED，即 raw 格式。如果 Protocol 是 queue，則取值必須爲 SIMPLIFIED。如果 Protocol 是 HTTP，兩個值均可以，預設值是 JSON。
         :type NotifyContentFormat: str
-        :param FilterTags: 訊息正文。訊息标簽（用于訊息過濾)。标簽數量不能超過5個，每個标簽不超過16個字元。與(Batch)PublishMessage的MsgTag參數配合使用，規則：1）如果FilterTag沒有設置，則無論MsgTag是否有設置，訂閱接收所有發布到Topic的訊息；2）如果FilterTag數組有值，則只有數組中至少有一個值在MsgTag數組中也存在時（即FilterTag和MsgTag有交集），訂閱才接收該發布到Topic的訊息；3）如果FilterTag數組有值，但MsgTag沒設置，則不接收任何發布到Topic的訊息，可以認爲是2）的一種特例，此時FilterTag和MsgTag沒有交集。規則整體的設計思想是以訂閱者的意願爲主。
+        :param FilterTags: 訊息正文。訊息標簽（用於訊息過濾)。標簽數量不能超過5個，每個標簽不超過16個字元。與(Batch)PublishMessage的MsgTag參數配合使用，規則：1）如果FilterTag沒有設置，則無論MsgTag是否有設置，訂閱接收所有發布到Topic的訊息；2）如果FilterTag數組有值，則只有數組中至少有一個值在MsgTag數組中也存在時（即FilterTag和MsgTag有交集），訂閱才接收該發布到Topic的訊息；3）如果FilterTag數組有值，但MsgTag沒設置，則不接收任何發布到Topic的訊息，可以認爲是2）的一種特例，此時FilterTag和MsgTag沒有交集。規則整體的設計思想是以訂閱者的意願爲主。
         :type FilterTags: list of str
         :param BindingKey: BindingKey數量不超過5個， 每個BindingKey長度不超過64位元，該欄位表示訂閱接收訊息的過濾策略，每個BindingKey最多含有15個“.”， 即最多16個詞組。
         :type BindingKey: list of str
@@ -904,13 +904,13 @@ class ModifyTopicAttributeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TopicName: 主題名字，在單個地域同一帳号下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
+        :param TopicName: 主題名字，在單個地域同一帳號下唯一。主題名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type TopicName: str
         :param MaxMsgSize: 訊息最大長度。取值範圍1024 - 65536 Byte（即1 - 64K），預設值65536。
         :type MaxMsgSize: int
         :param MsgRetentionSeconds: 訊息保存時間。取值範圍60 - 86400 s（即1分鍾 - 1天），預設值86400。
         :type MsgRetentionSeconds: int
-        :param Trace: 是否開啓訊息軌迹标識，true表示開啓，false表示不開啓，不填表示不開啓。
+        :param Trace: 是否開啓訊息軌迹標識，true表示開啓，false表示不開啓，不填表示不開啓。
         :type Trace: bool
         """
         self.TopicName = None
@@ -1017,7 +1017,7 @@ class QueueSet(AbstractModel):
         :param CreateUin: 創建者uin
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CreateUin: int
-        :param Tags: 标簽
+        :param Tags: 標簽
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of Tag
         :param Trace: 訊息軌迹表示，true表示開啓，false表示不開啓
@@ -1100,7 +1100,7 @@ class RewindQueueRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param QueueName: 隊列名字，在單個地域同一帳号下唯一。隊列名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
+        :param QueueName: 隊列名字，在單個地域同一帳號下唯一。隊列名稱是一個不超過64個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)。
         :type QueueName: str
         :param StartConsumeTime: 設定該時間，則（Batch）receiveMessage介面，會按照生産訊息的先後順序消費該時間戳以後的訊息。
         :type StartConsumeTime: int
@@ -1205,16 +1205,16 @@ class Subscription(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """标簽
+    """標簽
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽Key
+        :param TagKey: 標簽Key
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagKey: str
-        :param TagValue: 标簽值
+        :param TagValue: 標簽值
 注意：此欄位可能返回 null，表示取不到有效值。
         :type TagValue: str
         """

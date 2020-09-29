@@ -313,13 +313,13 @@ class CreateAclRequest(AbstractModel):
         """
         :param InstanceId: 實例id訊息
         :type InstanceId: str
-        :param ResourceType: Acl資源類型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，當前只有TOPIC，其它欄位用于後續兼容開源kafka的acl時使用
+        :param ResourceType: Acl資源類型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，當前只有TOPIC，其它欄位用於後續兼容開源kafka的acl時使用
         :type ResourceType: int
         :param ResourceName: 資源名稱，和resourceType相關，如當resourceType爲TOPIC時，則該欄位表示topic名稱，當resourceType爲GROUP時，該欄位表示group名稱
         :type ResourceName: str
         :param Operation: Acl操作方式，(0:UNKNOWN，1:ANY，2:ALL，3:READ，4:WRITE，5:CREATE，6:DELETE，7:ALTER，8:DESCRIBE，9:CLUSTER_ACTION，10:DESCRIBE_CONFIGS，11:ALTER_CONFIGS)
         :type Operation: int
-        :param PermissionType: 權限類型，(0:UNKNOWN，1:ANY，2:DENY，3:ALLOW)，當前ckakfa支援ALLOW(相當于白名單)，其它用于後續兼容開源kafka的acl時使用
+        :param PermissionType: 權限類型，(0:UNKNOWN，1:ANY，2:DENY，3:ALLOW)，當前ckakfa支援ALLOW(相當於白名單)，其它用於後續兼容開源kafka的acl時使用
         :type PermissionType: int
         :param Host: 預設爲\*，表示任何host都可以訪問，當前ckafka不支援host爲\*，但是後面開源kafka的産品化會直接支援
         :type Host: str
@@ -475,9 +475,9 @@ class CreateTopicRequest(AbstractModel):
         :type InstanceId: str
         :param TopicName: 主題名稱，是一個不超過 64 個字元的字串，必須以字母爲首字元，剩餘部分可以包含字母、數字和橫劃線(-)
         :type TopicName: str
-        :param PartitionNum: Partition個數，大于0
+        :param PartitionNum: Partition個數，大於0
         :type PartitionNum: int
-        :param ReplicaNum: 副本個數，不能多于 broker 數，最大爲3
+        :param ReplicaNum: 副本個數，不能多於 broker 數，最大爲3
         :type ReplicaNum: int
         :param EnableWhiteList: ip白名單開關, 1:打開  0:關閉，預設不打開
         :type EnableWhiteList: int
@@ -622,13 +622,13 @@ class DeleteAclRequest(AbstractModel):
         """
         :param InstanceId: 實例id訊息
         :type InstanceId: str
-        :param ResourceType: Acl資源類型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，當前只有TOPIC，其它欄位用于後續兼容開源kafka的acl時使用
+        :param ResourceType: Acl資源類型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，當前只有TOPIC，其它欄位用於後續兼容開源kafka的acl時使用
         :type ResourceType: int
         :param ResourceName: 資源名稱，和resourceType相關，如當resourceType爲TOPIC時，則該欄位表示topic名稱，當resourceType爲GROUP時，該欄位表示group名稱
         :type ResourceName: str
-        :param Operation: Acl操作方式，(0:UNKNOWN，1:ANY，2:ALL，3:READ，4:WRITE，5:CREATE，6:DELETE，7:ALTER，8:DESCRIBE，9:CLUSTER_ACTION，10:DESCRIBE_CONFIGS，11:ALTER_CONFIGS，12:IDEMPOTEN_WRITE)，當前ckafka只支援READ,WRITE，其它用于後續兼容開源kafka的acl時使用
+        :param Operation: Acl操作方式，(0:UNKNOWN，1:ANY，2:ALL，3:READ，4:WRITE，5:CREATE，6:DELETE，7:ALTER，8:DESCRIBE，9:CLUSTER_ACTION，10:DESCRIBE_CONFIGS，11:ALTER_CONFIGS，12:IDEMPOTEN_WRITE)，當前ckafka只支援READ,WRITE，其它用於後續兼容開源kafka的acl時使用
         :type Operation: int
-        :param PermissionType: 權限類型，(0:UNKNOWN，1:ANY，2:DENY，3:ALLOW)，當前ckakfa支援ALLOW(相當于白名單)，其它用于後續兼容開源kafka的acl時使用
+        :param PermissionType: 權限類型，(0:UNKNOWN，1:ANY，2:DENY，3:ALLOW)，當前ckakfa支援ALLOW(相當於白名單)，其它用於後續兼容開源kafka的acl時使用
         :type PermissionType: int
         :param Host: 預設爲\*，表示任何host都可以訪問，當前ckafka不支援host爲\*，但是後面開源kafka的産品化會直接支援
         :type Host: str
@@ -822,7 +822,7 @@ class DescribeACLRequest(AbstractModel):
         """
         :param InstanceId: 實例Id
         :type InstanceId: str
-        :param ResourceType: Acl資源類型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，當前只有TOPIC，其它欄位用于後續兼容開源kafka的acl時使用
+        :param ResourceType: Acl資源類型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，當前只有TOPIC，其它欄位用於後續兼容開源kafka的acl時使用
         :type ResourceType: int
         :param ResourceName: 資源名稱，和resourceType相關，如當resourceType爲TOPIC時，則該欄位表示topic名稱，當resourceType爲GROUP時，該欄位表示group名稱
         :type ResourceName: str
@@ -1211,7 +1211,7 @@ class DescribeInstancesDetailRequest(AbstractModel):
         :type Offset: int
         :param Limit: 返回數量，不填則預設10，最大值20
         :type Limit: int
-        :param TagKey: 比對标簽key值。
+        :param TagKey: 比對標簽key值。
         :type TagKey: str
         :param Filters: 過濾器
         :type Filters: list of Filter
@@ -1280,7 +1280,7 @@ class DescribeInstancesRequest(AbstractModel):
         :type Offset: int
         :param Limit: 返回數量，不填則預設10，最大值20
         :type Limit: int
-        :param TagKey: 比對标簽key值。
+        :param TagKey: 比對標簽key值。
         :type TagKey: str
         """
         self.InstanceId = None
@@ -1380,7 +1380,7 @@ class DescribeTopicDetailRequest(AbstractModel):
         :type SearchWord: str
         :param Offset: 偏移量，不填預設爲0
         :type Offset: int
-        :param Limit: 返回數量，不填則預設 10，最大值20，取值要大于0
+        :param Limit: 返回數量，不填則預設 10，最大值20，取值要大於0
         :type Limit: int
         """
         self.InstanceId = None
@@ -1526,7 +1526,7 @@ class DescribeUserResponse(AbstractModel):
 
 class Filter(AbstractModel):
     """查詢過濾器
-    >描述鍵值對過濾器，用于條件過濾查詢。例如過濾ID、名稱、狀态等
+    >描述鍵值對過濾器，用於條件過濾查詢。例如過濾ID、名稱、狀态等
     > * 若存在多個`Filter`時，`Filter`間的關系爲邏輯與（`AND`）關系。
     > * 若同一個`Filter`存在多個`Values`，同一`Filter`下`Values`間的關系爲邏輯或（`OR`）關系。
     >
@@ -1609,11 +1609,11 @@ class GroupInfoResponse(AbstractModel):
         :param State: group 狀态描述（常見的爲 Empty、Stable、Dead 三種狀态）：
 Dead：消費分組不存在
 Empty：消費分組，當前沒有任何消費者訂閱
-PreparingRebalance：消費分組處于 rebalance 狀态
-CompletingRebalance：消費分組處于 rebalance 狀态
-Stable：消費分組中各個消費者已經加入，處于穩定狀态
+PreparingRebalance：消費分組處於 rebalance 狀态
+CompletingRebalance：消費分組處於 rebalance 狀态
+Stable：消費分組中各個消費者已經加入，處於穩定狀态
         :type State: str
-        :param ProtocolType: 消費分組選擇的協議類型正常的消費者一般爲 consumer 但有些系統采用了自己的協議如 kafka-connect 用的就是 connect。只有标準的 consumer 協議，本介面才知道具體的分配方式的格式，才能解析到具體的 partition 的分配情況
+        :param ProtocolType: 消費分組選擇的協議類型正常的消費者一般爲 consumer 但有些系統采用了自己的協議如 kafka-connect 用的就是 connect。只有標準的 consumer 協議，本介面才知道具體的分配方式的格式，才能解析到具體的 partition 的分配情況
         :type ProtocolType: str
         :param Protocol: 消費者 partition 分配算法常見的有如下幾種(Kafka 消費者 SDK 預設的選擇項爲 range)：range、 roundrobin、 sticky
         :type Protocol: str
@@ -1863,7 +1863,7 @@ class InstanceAttributesResponse(AbstractModel):
         :type CreatedPartitions: int
         :param CreatedTopics: 當前創建主題數
         :type CreatedTopics: int
-        :param Tags: 标簽數組
+        :param Tags: 標簽數組
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Tags: list of Tag
         :param ExpireTime: 過期時間
@@ -2019,7 +2019,7 @@ class InstanceDetail(AbstractModel):
         :type IsInternal: int
         :param TopicNum: Topic個數
         :type TopicNum: int
-        :param Tags: 标識tag
+        :param Tags: 標識tag
         :type Tags: list of Tag
         :param Version: kafka版本訊息
 注意：此欄位可能返回 null，表示取不到有效值。
@@ -2187,9 +2187,9 @@ class ModifyGroupOffsetsRequest(AbstractModel):
         :type Strategy: int
         :param Topics: 表示需要重置的topics， 不填表示全部
         :type Topics: list of str
-        :param Shift: 當strategy爲0時，必須包含該欄位，可以大于零代表會把offset向後 shift條，小於零則将offset向前回溯shift條數。正确重置後新的offset應該是(old_offset + shift)，需要注意的是如果新的offset小於partition的earliest則會設置爲earliest，如果大于partition 的latest則會設置爲latest
+        :param Shift: 當strategy爲0時，必須包含該欄位，可以大於零代表會把offset向後 shift條，小於零則将offset向前回溯shift條數。正确重置後新的offset應該是(old_offset + shift)，需要注意的是如果新的offset小於partition的earliest則會設置爲earliest，如果大於partition 的latest則會設置爲latest
         :type Shift: int
-        :param ShiftTimestamp: 單位ms。當strategy爲1時，必須包含該欄位，其中-2表示重置offset到最開始的位置，-1表示重置到最新的位置(相當于清空)，其它值則代表指定的時間，會獲取topic中指定時間的offset然後進行重置，需要注意的時，如果指定的時間不存在訊息，則獲取最末尾的offset。
+        :param ShiftTimestamp: 單位ms。當strategy爲1時，必須包含該欄位，其中-2表示重置offset到最開始的位置，-1表示重置到最新的位置(相當於清空)，其它值則代表指定的時間，會獲取topic中指定時間的offset然後進行重置，需要注意的時，如果指定的時間不存在訊息，則獲取最末尾的offset。
         :type ShiftTimestamp: int
         :param Offset: 需要重新設置的offset位置。當strategy爲2，必須包含該欄位。
         :type Offset: int
@@ -2534,15 +2534,15 @@ class SubscribedInfo(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """實例詳情中的标簽對象
+    """實例詳情中的標簽對象
 
     """
 
     def __init__(self):
         """
-        :param TagKey: 标簽的key
+        :param TagKey: 標簽的key
         :type TagKey: str
-        :param TagValue: 标簽的值
+        :param TagValue: 標簽的值
         :type TagValue: str
         """
         self.TagKey = None

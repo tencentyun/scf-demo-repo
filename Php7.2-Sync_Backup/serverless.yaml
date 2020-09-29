@@ -8,7 +8,7 @@ inputs:
   src: ./
   description: >-
     This demo will backup the COS bucket object to another bucket when you
-    upload the file. 此範例使用COS作爲觸發器，在用戶上傳文件到指定bucket時，将該文件複制到另一個用于備份的bucket儲存
+    upload the file. 此範例使用COS作爲觸發器，在用戶上傳文件到指定bucket時，将該文件複制到另一個用於備份的bucket儲存
   handler: sync_backup.main_handler
   runtime: Php7
   namespace: default

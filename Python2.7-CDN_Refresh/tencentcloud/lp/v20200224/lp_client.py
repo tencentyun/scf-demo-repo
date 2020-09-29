@@ -26,7 +26,7 @@ class LpClient(AbstractClient):
 
 
     def QueryLoginProtection(self, request):
-        """登入保護服務（LoginProtection，LP）針對網站和 APP 的用戶登入場景，實時檢測是否存在盜号、撞庫等惡意登入行爲，幫助開發者發現異常登入，降低惡意用戶登入給業務帶來的風險。
+        """登入保護服務（LoginProtection，LP）針對網站和 APP 的用戶登入場景，實時檢測是否存在盜號、撞庫等惡意登入行爲，幫助開發者發現異常登入，降低惡意用戶登入給業務帶來的風險。
 
         :param request: Request instance for QueryLoginProtection.
         :type request: :class:`taifucloudcloud.lp.v20200224.models.QueryLoginProtectionRequest`

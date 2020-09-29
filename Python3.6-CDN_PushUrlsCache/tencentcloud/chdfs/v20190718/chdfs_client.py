@@ -110,7 +110,7 @@ class ChdfsClient(AbstractClient):
 
 
     def CreateMountPoint(self, request):
-        """創建文件系統掛載點，僅限于創建成功的文件系統。
+        """創建文件系統掛載點，僅限於創建成功的文件系統。
 
         :param request: Request instance for CreateMountPoint.
         :type request: :class:`taifucloudcloud.chdfs.v20190718.models.CreateMountPointRequest`
@@ -474,7 +474,7 @@ class ChdfsClient(AbstractClient):
 
 
     def ModifyFileSystem(self, request):
-        """修改文件系統屬性，僅限于創建成功的文件系統。
+        """修改文件系統屬性，僅限於創建成功的文件系統。
 
         :param request: Request instance for ModifyFileSystem.
         :type request: :class:`taifucloudcloud.chdfs.v20190718.models.ModifyFileSystemRequest`

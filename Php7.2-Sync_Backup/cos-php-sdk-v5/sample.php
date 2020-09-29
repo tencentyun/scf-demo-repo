@@ -314,7 +314,7 @@ try {
 ## listObjects
 ### 列出所有object
 /*
- * 該介面一次最多列出1000個，需要列出所有請參考其他服務中的清空并删除bucket介面
+ * 該介面一次最多列出1000個，需要列出所有請參考其他服務中的清空並删除bucket介面
  */
 try {
     $result = $cosClient->listObjects(array(
@@ -555,7 +555,7 @@ try {
     print_r($e);
 }
 
-## Copy(分塊并發複制)
+## Copy(分塊並發複制)
 /*
  * 将{bucket},{region},{cos_path},{versionId}替換成複制源的真實訊息
  */
@@ -652,7 +652,7 @@ try {
 
 ## 分塊上傳斷點重傳
 /*
- * 僅适用于分塊上傳失敗的情況
+ * 僅适用於分塊上傳失敗的情況
  * 需要填寫上傳失敗的uploadId
  */
 try {

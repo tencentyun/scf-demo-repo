@@ -290,7 +290,7 @@ class DescribeDomainsConfigResponse(AbstractModel):
         """
         :param Domains: 域名清單。
         :type Domains: list of DomainDetailInfo
-        :param TotalCount: 符合查詢條件的域名總數，用于分頁查詢。
+        :param TotalCount: 符合查詢條件的域名總數，用於分頁查詢。
         :type TotalCount: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -448,7 +448,7 @@ class DescribeEcdnDomainStatisticsRequest(AbstractModel):
         :param EndTime: 查詢結束時間，如：2019-12-13 23:59:59。
 起止時間不超過90天。
         :type EndTime: str
-        :param Metrics: 統計指标名稱。flux：流量，單位爲 byte
+        :param Metrics: 統計指標名稱。flux：流量，單位爲 byte
 bandwidth：頻寬，單位爲 bps
 request：請求數，單位爲 次
 delay：響應時間，單位爲ms
@@ -529,7 +529,7 @@ class DescribeEcdnStatisticsRequest(AbstractModel):
         :type StartTime: str
         :param EndTime: 查詢結束時間，如：2019-12-13 23:59:59
         :type EndTime: str
-        :param Metrics: 指定查詢指标，支援的類型有：
+        :param Metrics: 指定查詢指標，支援的類型有：
 flux：流量，單位爲 byte
 bandwidth：頻寬，單位爲 bps
 request：請求數，單位爲 次
@@ -691,7 +691,7 @@ class DescribePurgeTasksResponse(AbstractModel):
         """
         :param PurgeLogs: 重新整理曆史記錄。
         :type PurgeLogs: list of PurgeTask
-        :param TotalCount: 任務總數，用于分頁。
+        :param TotalCount: 任務總數，用於分頁。
         :type TotalCount: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -742,7 +742,7 @@ class DomainBriefInfo(AbstractModel):
         """
         :param ResourceId: 域名ID。
         :type ResourceId: str
-        :param AppId: Top Cloud 賬号ID。
+        :param AppId: Top Cloud 賬號ID。
         :type AppId: int
         :param Domain: CDN加速域名。
         :type Domain: str
@@ -831,7 +831,7 @@ class DomainDetailInfo(AbstractModel):
         """
         :param ResourceId: 域名ID。
         :type ResourceId: str
-        :param AppId: Top Cloud 賬号ID。
+        :param AppId: Top Cloud 賬號ID。
         :type AppId: int
         :param Domain: 加速域名。
         :type Domain: str
@@ -1005,7 +1005,7 @@ class EcdnData(AbstractModel):
 
     def __init__(self):
         """
-        :param Metrics: 查詢指定的指标名稱：Bandwidth，Flux，Request，Delay，狀态碼，LogBandwidth，LogFlux，LogRequest
+        :param Metrics: 查詢指定的指標名稱：Bandwidth，Flux，Request，Delay，狀态碼，LogBandwidth，LogFlux，LogRequest
         :type Metrics: list of str
         :param DetailData: 明細數據組合
         :type DetailData: list of TimestampData
@@ -1394,7 +1394,7 @@ class ResourceData(AbstractModel):
 具體域名：表示該域名明細數據
 multiDomains：表示多域名匯總明細數據
 項目 ID：指定項目查詢時，顯示爲項目 ID
-all：賬号維度明細數據
+all：賬號維度明細數據
         :type Resource: str
         :param EcdnData: 資源對應的數據明細
         :type EcdnData: :class:`taifucloudcloud.ecdn.v20191012.models.EcdnData`

@@ -26,7 +26,7 @@ class CwsClient(AbstractClient):
 
 
     def CreateMonitors(self, request):
-        """本介面（CreateMonitors）用于新增一個或多個站點的監測任務。
+        """本介面（CreateMonitors）用於新增一個或多個站點的監測任務。
 
         :param request: Request instance for CreateMonitors.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.CreateMonitorsRequest`
@@ -54,7 +54,7 @@ class CwsClient(AbstractClient):
 
 
     def CreateSites(self, request):
-        """本介面（CreateSites）用于新增一個或多個站點。
+        """本介面（CreateSites）用於新增一個或多個站點。
 
         :param request: Request instance for CreateSites.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.CreateSitesRequest`
@@ -82,7 +82,7 @@ class CwsClient(AbstractClient):
 
 
     def CreateSitesScans(self, request):
-        """本介面（CreateSitesScans）用于新增一個或多個站點的單次掃描任務。
+        """本介面（CreateSitesScans）用於新增一個或多個站點的單次掃描任務。
 
         :param request: Request instance for CreateSitesScans.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.CreateSitesScansRequest`
@@ -110,7 +110,7 @@ class CwsClient(AbstractClient):
 
 
     def CreateVulsMisinformation(self, request):
-        """本介面（CreateVulsMisinformation）可以用于新增一個或多個漏洞誤報訊息。
+        """本介面（CreateVulsMisinformation）可以用於新增一個或多個漏洞誤報訊息。
 
         :param request: Request instance for CreateVulsMisinformation.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.CreateVulsMisinformationRequest`
@@ -138,7 +138,7 @@ class CwsClient(AbstractClient):
 
 
     def CreateVulsReport(self, request):
-        """本介面 (CreateVulsReport) 用于生成漏洞報告并返回下載連結。
+        """本介面 (CreateVulsReport) 用於生成漏洞報告並返回下載連結。
 
         :param request: Request instance for CreateVulsReport.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.CreateVulsReportRequest`
@@ -166,7 +166,7 @@ class CwsClient(AbstractClient):
 
 
     def DeleteMonitors(self, request):
-        """本介面 (DeleteMonitors) 用于删除用戶監控任務。
+        """本介面 (DeleteMonitors) 用於删除用戶監控任務。
 
         :param request: Request instance for DeleteMonitors.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.DeleteMonitorsRequest`
@@ -194,7 +194,7 @@ class CwsClient(AbstractClient):
 
 
     def DeleteSites(self, request):
-        """本介面 (DeleteSites) 用于删除站點。
+        """本介面 (DeleteSites) 用於删除站點。
 
         :param request: Request instance for DeleteSites.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.DeleteSitesRequest`
@@ -222,7 +222,7 @@ class CwsClient(AbstractClient):
 
 
     def DescribeConfig(self, request):
-        """本介面 (DescribeConfig) 用于查詢用戶配置的詳細訊息。
+        """本介面 (DescribeConfig) 用於查詢用戶配置的詳細訊息。
 
         :param request: Request instance for DescribeConfig.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.DescribeConfigRequest`
@@ -250,7 +250,7 @@ class CwsClient(AbstractClient):
 
 
     def DescribeMonitors(self, request):
-        """本介面 (DescribeMonitors) 用于查詢一個或多個監控任務的詳細訊息。
+        """本介面 (DescribeMonitors) 用於查詢一個或多個監控任務的詳細訊息。
 
         :param request: Request instance for DescribeMonitors.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.DescribeMonitorsRequest`
@@ -278,7 +278,7 @@ class CwsClient(AbstractClient):
 
 
     def DescribeSiteQuota(self, request):
-        """本介面 (DescribeSiteQuota) 用于查詢用戶購買的掃描次數總數和已使用數。
+        """本介面 (DescribeSiteQuota) 用於查詢用戶購買的掃描次數總數和已使用數。
 
         :param request: Request instance for DescribeSiteQuota.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.DescribeSiteQuotaRequest`
@@ -306,7 +306,7 @@ class CwsClient(AbstractClient):
 
 
     def DescribeSites(self, request):
-        """本介面 (DescribeSites) 用于查詢一個或多個站點的詳細訊息。
+        """本介面 (DescribeSites) 用於查詢一個或多個站點的詳細訊息。
 
         :param request: Request instance for DescribeSites.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.DescribeSitesRequest`
@@ -334,7 +334,7 @@ class CwsClient(AbstractClient):
 
 
     def DescribeSitesVerification(self, request):
-        """本介面 (DescribeSitesVerification) 用于查詢一個或多個待驗證站點的驗證訊息。
+        """本介面 (DescribeSitesVerification) 用於查詢一個或多個待驗證站點的驗證訊息。
 
         :param request: Request instance for DescribeSitesVerification.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.DescribeSitesVerificationRequest`
@@ -362,7 +362,7 @@ class CwsClient(AbstractClient):
 
 
     def DescribeVuls(self, request):
-        """本介面 (DescribeVuls) 用于查詢一個或多個漏洞的詳細訊息。
+        """本介面 (DescribeVuls) 用於查詢一個或多個漏洞的詳細訊息。
 
         :param request: Request instance for DescribeVuls.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.DescribeVulsRequest`
@@ -390,7 +390,7 @@ class CwsClient(AbstractClient):
 
 
     def DescribeVulsNumber(self, request):
-        """本介面 (DescribeVulsNumber) 用于查詢用戶網站的漏洞總計數量。
+        """本介面 (DescribeVulsNumber) 用於查詢用戶網站的漏洞總計數量。
 
         :param request: Request instance for DescribeVulsNumber.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.DescribeVulsNumberRequest`
@@ -418,7 +418,7 @@ class CwsClient(AbstractClient):
 
 
     def DescribeVulsNumberTimeline(self, request):
-        """本介面 (DescribeVulsNumberTimeline) 用于查詢漏洞數随時間變化統計訊息。
+        """本介面 (DescribeVulsNumberTimeline) 用於查詢漏洞數随時間變化統計訊息。
 
         :param request: Request instance for DescribeVulsNumberTimeline.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.DescribeVulsNumberTimelineRequest`
@@ -446,7 +446,7 @@ class CwsClient(AbstractClient):
 
 
     def ModifyConfigAttribute(self, request):
-        """本介面 (ModifyConfigAttribute) 用于修改用戶配置的屬性。
+        """本介面 (ModifyConfigAttribute) 用於修改用戶配置的屬性。
 
         :param request: Request instance for ModifyConfigAttribute.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.ModifyConfigAttributeRequest`
@@ -474,7 +474,7 @@ class CwsClient(AbstractClient):
 
 
     def ModifyMonitorAttribute(self, request):
-        """本介面 (ModifyMonitorAttribute) 用于修改監測任務的屬性。
+        """本介面 (ModifyMonitorAttribute) 用於修改監測任務的屬性。
 
         :param request: Request instance for ModifyMonitorAttribute.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.ModifyMonitorAttributeRequest`
@@ -502,7 +502,7 @@ class CwsClient(AbstractClient):
 
 
     def ModifySiteAttribute(self, request):
-        """本介面 (ModifySiteAttribute) 用于修改站點的屬性。
+        """本介面 (ModifySiteAttribute) 用於修改站點的屬性。
 
         :param request: Request instance for ModifySiteAttribute.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.ModifySiteAttributeRequest`
@@ -530,7 +530,7 @@ class CwsClient(AbstractClient):
 
 
     def VerifySites(self, request):
-        """本介面 (VerifySites) 用于驗證一個或多個待驗證站點。
+        """本介面 (VerifySites) 用於驗證一個或多個待驗證站點。
 
         :param request: Request instance for VerifySites.
         :type request: :class:`taifucloudcloud.cws.v20180312.models.VerifySitesRequest`

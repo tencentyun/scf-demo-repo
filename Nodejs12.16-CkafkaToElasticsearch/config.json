@@ -43,16 +43,16 @@
       "tags":[
               "Ckafka", "Nodejs12.16", "ES","Logstash"
               // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on.
-              // 标簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
+              // 標簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
       ],
       "version": "1.91"
       // Version number, which identifies the demo version status. 
       // Demo will not to update to the page if the version number unmodified.
-      //版本号，通過版本号标識 demo 升級情況，未修改版本号會導緻 demo 不更新至頁面
+      //版本號，通過版本號標識 demo 升級情況，未修改版本號會導緻 demo 不更新至頁面
     },
     "functions": {
       "name": "Ckafka To Elasticsearch",  // Function name which only be in English. 函數名稱，只支援英文
-      "description": "This demo will connect Ckafca and consume message automatically. The SCF will write each message to txt by each line. Then SCF will name this file by time and upload this txt to COS bucket. 本範例會根據觸發器配置的最大批次訊息數去觸發雲函數運作，雲函數每次運作都會創建一個以時間戳加随機數爲名字的文本文件，并把拉取到的 Ckafca 訊息換行寫入文本文件。最後把寫好的文件上傳到 COS bucket，并以小時爲單位在 COS bucket 中創建文件夾。",
+      "description": "This demo will connect Ckafca and consume message automatically. The SCF will write each message to txt by each line. Then SCF will name this file by time and upload this txt to COS bucket. 本範例會根據觸發器配置的最大批次訊息數去觸發雲函數運作，雲函數每次運作都會創建一個以時間戳加随機數爲名字的文本文件，並把拉取到的 Ckafca 訊息換行寫入文本文件。最後把寫好的文件上傳到 COS bucket，並以小時爲單位在 COS bucket 中創建文件夾。",
       "handler":"index.main_handler",
       "memorySize": 128,  // Running memory.  運作配置内存
       "timeout": 30,  // Running timeout. 運作超時時間
@@ -62,16 +62,16 @@
         "ES_User":"name",
         "ES_Password":"xxxx",
         "ES_Index_KeyWord":"Log"
-      },      // Optional, used to define environment variables. 可選，用于定義環境變量
+      },      // Optional, used to define environment variables. 可選，用於定義環境變量
       "Events":{
         "Type": "Ckafka",
         "Name":"",
         "Topic":"",
         "Message":50,
         "Enable": "true"
-      },      // Optional, used define the event source that triggers this function.  可選，用于定義觸發此函數的事件源
+      },      // Optional, used define the event source that triggers this function.  可選，用於定義觸發此函數的事件源
       "VpcConfig":{
-      },      // Optional, used configure cloud function's private network. 可選， 用于配置雲函數訪問 VPC 私有網絡。
+      },      // Optional, used configure cloud function's private network. 可選， 用於配置雲函數訪問 VPC 私有網絡。
       "codeObject": {
           "codeFile": [
               "index.js"

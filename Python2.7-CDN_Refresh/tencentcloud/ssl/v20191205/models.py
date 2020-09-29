@@ -45,7 +45,7 @@ class ApplyCertificateRequest(AbstractModel):
         :type CsrKeyPassword: str
         :param Alias: 備注名稱。
         :type Alias: str
-        :param OldCertificateId: 原證書 ID，用于重新申請。
+        :param OldCertificateId: 原證書 ID，用於重新申請。
         :type OldCertificateId: str
         """
         self.DvAuthMethod = None
@@ -360,7 +360,7 @@ class CommitCertificateInformationResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param OrderId: 亞信訂單号。
+        :param OrderId: 亞信訂單號。
         :type OrderId: str
         :param Status: 證書狀态：0 = 審核中，1 = 已通過，2 = 審核失敗，3 = 已過期，4 = 已添加DNS記錄，5 = 企業證書，待提交，6 = 訂單取消中，7 = 已取消，8 = 已提交資料， 待上傳确認函，9 = 證書吊銷中，10 = 已吊銷，11 = 重頒發中，12 = 待上傳吊銷确認函。
         :type Status: int
@@ -1333,9 +1333,9 @@ class SubmitCertificateInformationRequest(AbstractModel):
         :type OrganizationRegion: str
         :param PostalCode: 公司郵編。
         :type PostalCode: str
-        :param PhoneAreaCode: 公司座機區号。
+        :param PhoneAreaCode: 公司座機區號。
         :type PhoneAreaCode: str
-        :param PhoneNumber: 公司座機号碼。
+        :param PhoneNumber: 公司座機號碼。
         :type PhoneNumber: str
         :param VerifyType: 證書驗證方式。
         :type VerifyType: str
@@ -1343,7 +1343,7 @@ class SubmitCertificateInformationRequest(AbstractModel):
         :type AdminFirstName: str
         :param AdminLastName: 管理人名。
         :type AdminLastName: str
-        :param AdminPhoneNum: 管理人手機号碼。
+        :param AdminPhoneNum: 管理人手機號碼。
         :type AdminPhoneNum: str
         :param AdminEmail: 管理人電子信箱網址。
         :type AdminEmail: str
@@ -1355,7 +1355,7 @@ class SubmitCertificateInformationRequest(AbstractModel):
         :type ContactLastName: str
         :param ContactEmail: 聯系人電子信箱網址。
         :type ContactEmail: str
-        :param ContactNumber: 聯系人手機号碼。
+        :param ContactNumber: 聯系人手機號碼。
         :type ContactNumber: str
         :param ContactPosition: 聯系人職位。
         :type ContactPosition: str
@@ -1481,10 +1481,10 @@ class SubmittedData(AbstractModel):
         :param PostalCode: 郵政編碼。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PostalCode: str
-        :param PhoneAreaCode: 座機區号。
+        :param PhoneAreaCode: 座機區號。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PhoneAreaCode: str
-        :param PhoneNumber: 座機号碼。
+        :param PhoneNumber: 座機號碼。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type PhoneNumber: str
         :param AdminFirstName: 管理員名。
@@ -1493,7 +1493,7 @@ class SubmittedData(AbstractModel):
         :param AdminLastName: 管理員姓。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AdminLastName: str
-        :param AdminPhoneNum: 管理員電話号碼。
+        :param AdminPhoneNum: 管理員電話號碼。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AdminPhoneNum: str
         :param AdminEmail: 管理員電子信箱網址。
@@ -1508,7 +1508,7 @@ class SubmittedData(AbstractModel):
         :param ContactLastName: 聯系人姓。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ContactLastName: str
-        :param ContactNumber: 聯系人電話号碼。
+        :param ContactNumber: 聯系人電話號碼。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ContactNumber: str
         :param ContactEmail: 聯系人電子信箱網址，

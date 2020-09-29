@@ -17,7 +17,7 @@ from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Account(AbstractModel):
-    """帳号清單訊息數據。
+    """帳號清單訊息數據。
 
     """
 
@@ -31,17 +31,17 @@ class Account(AbstractModel):
         :type MachineIp: str
         :param MachineName: 主機名稱。
         :type MachineName: str
-        :param Username: 帳号名。
+        :param Username: 帳號名。
         :type Username: str
-        :param Groups: 帳号所屬組。
+        :param Groups: 帳號所屬組。
         :type Groups: str
-        :param Privilege: 帳号類型。
-<li>ORDINARY：普通帳号</li>
-<li>SUPPER：超級管理員帳号</li>
+        :param Privilege: 帳號類型。
+<li>ORDINARY：普通帳號</li>
+<li>SUPPER：超級管理員帳號</li>
         :type Privilege: str
-        :param AccountCreateTime: 帳号創建時間。
+        :param AccountCreateTime: 帳號創建時間。
         :type AccountCreateTime: str
-        :param LastLoginTime: 帳号最後登入時間。
+        :param LastLoginTime: 帳號最後登入時間。
         :type LastLoginTime: str
         """
         self.Id = None
@@ -68,7 +68,7 @@ class Account(AbstractModel):
 
 
 class AccountStatistics(AbstractModel):
-    """帳号統計數據。
+    """帳號統計數據。
 
     """
 
@@ -133,7 +133,7 @@ class AddMachineTagRequest(AbstractModel):
         """
         :param Quuid: 雲伺服器ID
         :type Quuid: str
-        :param TagId: 标簽ID
+        :param TagId: 標簽ID
         :type TagId: int
         :param MRegion: 雲伺服器地區
         :type MRegion: str
@@ -359,8 +359,8 @@ class BruteAttack(AbstractModel):
         :param MachineIp: 主機IP。
         :type MachineIp: str
         :param Status: 破解事件狀态
-<li>BRUTEATTACK_FAIL_ACCOUNT： 暴力破解事件-失敗(存在帳号)  </li>
-<li>BRUTEATTACK_FAIL_NOACCOUNT：暴力破解事件-失敗(帳号不存在)</li>
+<li>BRUTEATTACK_FAIL_ACCOUNT： 暴力破解事件-失敗(存在帳號)  </li>
+<li>BRUTEATTACK_FAIL_NOACCOUNT：暴力破解事件-失敗(帳號不存在)</li>
 <li>BRUTEATTACK_SUCCESS：暴力破解事件-成功</li>
         :type Status: str
         :param UserName: 用戶名稱。
@@ -379,7 +379,7 @@ class BruteAttack(AbstractModel):
         :type CreateTime: str
         :param MachineName: 主機名稱。
         :type MachineName: str
-        :param Uuid: 雲鏡用戶端唯一标識UUID。
+        :param Uuid: 雲鏡用戶端唯一標識UUID。
         :type Uuid: str
         :param IsProVersion: 是否專業版。
         :type IsProVersion: bool
@@ -432,7 +432,7 @@ class ChargePrepaid(AbstractModel):
         """
         :param Period: 購買實例的時長，單位：月。取值範圍：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
         :type Period: int
-        :param RenewFlag: 自動續約标識。取值範圍：
+        :param RenewFlag: 自動續約標識。取值範圍：
 <li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約</li>
 <li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約</li>
 <li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約</li>
@@ -456,7 +456,7 @@ class CloseProVersionRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Quuid: 主機唯一标識Uuid。
+        :param Quuid: 主機唯一標識Uuid。
 黑石的InstanceId，CVM的Uuid
         :type Quuid: str
         """
@@ -499,7 +499,7 @@ class Component(AbstractModel):
         :type MachineIp: str
         :param MachineName: 主機名。
         :type MachineName: str
-        :param ComponentVersion: 元件版本号。
+        :param ComponentVersion: 元件版本號。
         :type ComponentVersion: str
         :param ComponentType: 元件類型。
 <li>SYSTEM：系統元件</li>
@@ -702,13 +702,13 @@ class DefendAttackLog(AbstractModel):
         :type VulType: str
         :param CreatedAt: 攻擊時間
         :type CreatedAt: str
-        :param MachineIp: 目标服務器IP
+        :param MachineIp: 目標服務器IP
         :type MachineIp: str
-        :param MachineName: 目标服務器名稱
+        :param MachineName: 目標服務器名稱
         :type MachineName: str
-        :param DstIp: 目标IP
+        :param DstIp: 目標IP
         :type DstIp: str
-        :param DstPort: 目标端口
+        :param DstPort: 目標端口
         :type DstPort: int
         :param HttpContent: 攻擊内容
         :type HttpContent: str
@@ -957,7 +957,7 @@ class DeleteMachineTagRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Rid: 關聯的标簽ID
+        :param Rid: 關聯的標簽ID
         :type Rid: int
         """
         self.Rid = None
@@ -1229,7 +1229,7 @@ class DeleteTagsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Ids: 标簽ID
+        :param Ids: 標簽ID
         :type Ids: list of int non-negative
         """
         self.Ids = None
@@ -1306,7 +1306,7 @@ class DescribeAccountStatisticsRequest(AbstractModel):
         :param Offset: 偏移量，預設爲0。
         :type Offset: int
         :param Filters: 過濾條件。
-<li>Username - String - 是否必填：否 - 帳号用戶名</li>
+<li>Username - String - 是否必填：否 - 帳號用戶名</li>
         :type Filters: list of Filter
         """
         self.Limit = None
@@ -1332,9 +1332,9 @@ class DescribeAccountStatisticsResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param TotalCount: 帳号統計清單記錄總數。
+        :param TotalCount: 帳號統計清單記錄總數。
         :type TotalCount: int
-        :param AccountStatistics: 帳号統計清單。
+        :param AccountStatistics: 帳號統計清單。
         :type AccountStatistics: list of AccountStatistics
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1371,8 +1371,8 @@ class DescribeAccountsRequest(AbstractModel):
         :param Offset: 偏移量，預設爲0。
         :type Offset: int
         :param Filters: 過濾條件。
-<li>Username - String - 是否必填：否 - 帳号名</li>
-<li>Privilege - String - 是否必填：否 - 帳号類型（ORDINARY: 普通帳号 | SUPPER: 超級管理員帳号）</li>
+<li>Username - String - 是否必填：否 - 帳號名</li>
+<li>Privilege - String - 是否必填：否 - 帳號類型（ORDINARY: 普通帳號 | SUPPER: 超級管理員帳號）</li>
 <li>MachineIp - String - 是否必填：否 - 主機内網IP</li>
         :type Filters: list of Filter
         """
@@ -1403,9 +1403,9 @@ class DescribeAccountsResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param TotalCount: 帳号清單記錄總數。
+        :param TotalCount: 帳號清單記錄總數。
         :type TotalCount: int
-        :param Accounts: 帳号數據清單。
+        :param Accounts: 帳號數據清單。
         :type Accounts: list of Account
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1577,17 +1577,17 @@ class DescribeAttackLogInfoResponse(AbstractModel):
         :type SrcPort: int
         :param SrcIp: 攻擊來源IP
         :type SrcIp: str
-        :param DstPort: 攻擊目标端口
+        :param DstPort: 攻擊目標端口
         :type DstPort: int
-        :param DstIp: 攻擊目标IP
+        :param DstIp: 攻擊目標IP
         :type DstIp: str
         :param HttpMethod: 攻擊方法
         :type HttpMethod: str
-        :param HttpHost: 攻擊目标主機
+        :param HttpHost: 攻擊目標主機
         :type HttpHost: str
         :param HttpHead: 攻擊頭訊息
         :type HttpHead: str
-        :param HttpUserAgent: 攻擊者浏覽器标識
+        :param HttpUserAgent: 攻擊者浏覽器標識
         :type HttpUserAgent: str
         :param HttpReferer: 請求源
         :type HttpReferer: str
@@ -2032,7 +2032,7 @@ class DescribeComponentsRequest(AbstractModel):
         :param Offset: 偏移量，預設爲0。
         :type Offset: int
         :param Filters: 過濾條件。
-<li>ComponentVersion - String - 是否必填：否 - 元件版本号</li>
+<li>ComponentVersion - String - 是否必填：否 - 元件版本號</li>
 <li>MachineIp - String - 是否必填：否 - 主機内網IP</li>
         :type Filters: list of Filter
         """
@@ -2100,7 +2100,7 @@ class DescribeHistoryAccountsRequest(AbstractModel):
         :param Offset: 偏移量，預設爲0。
         :type Offset: int
         :param Filters: 過濾條件。
-<li>Username - String - 是否必填：否 - 帳号名</li>
+<li>Username - String - 是否必填：否 - 帳號名</li>
         :type Filters: list of Filter
         """
         self.Uuid = None
@@ -2128,9 +2128,9 @@ class DescribeHistoryAccountsResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param TotalCount: 帳号變更曆史清單記錄總數。
+        :param TotalCount: 帳號變更曆史清單記錄總數。
         :type TotalCount: int
-        :param HistoryAccounts: 帳号變更曆史數據數組。
+        :param HistoryAccounts: 帳號變更曆史數據數組。
         :type HistoryAccounts: list of HistoryAccount
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -2313,7 +2313,7 @@ class DescribeMachineInfoResponse(AbstractModel):
 <li>ONLINE： 在線</li>
 <li>OFFLINE：離線</li>
         :type MachineStatus: str
-        :param InstanceId: CVM或BM主機唯一标識。
+        :param InstanceId: CVM或BM主機唯一標識。
         :type InstanceId: str
         :param MachineWanIp: 主機外網IP。
         :type MachineWanIp: str
@@ -2669,7 +2669,7 @@ class DescribeOpenPortStatisticsRequest(AbstractModel):
         :param Offset: 偏移量，預設爲0。
         :type Offset: int
         :param Filters: 過濾條件。
-<li>Port - Uint64 - 是否必填：否 - 端口号</li>
+<li>Port - Uint64 - 是否必填：否 - 端口號</li>
         :type Filters: list of Filter
         """
         self.Limit = None
@@ -2769,14 +2769,14 @@ class DescribeOpenPortsRequest(AbstractModel):
         """
         :param Uuid: 雲鏡用戶端唯一Uuid。Port和Uuid必填其一，使用Uuid表示，查詢該主機清單訊息。
         :type Uuid: str
-        :param Port: 開放端口号。Port和Uuid必填其一，使用Port表示查詢該端口的清單訊息。
+        :param Port: 開放端口號。Port和Uuid必填其一，使用Port表示查詢該端口的清單訊息。
         :type Port: int
         :param Limit: 返回數量，預設爲10，最大值爲100。
         :type Limit: int
         :param Offset: 偏移量，預設爲0。
         :type Offset: int
         :param Filters: 過濾條件。
-<li>Port - Uint64 - 是否必填：否 - 端口号</li>
+<li>Port - Uint64 - 是否必填：否 - 端口號</li>
 <li>ProcessName - String - 是否必填：否 - 程式名</li>
 <li>MachineIp - String - 是否必填：否 - 主機内網IP</li>
         :type Filters: list of Filter
@@ -3475,7 +3475,7 @@ class DescribeTagMachinesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Id: 标簽ID
+        :param Id: 標簽ID
         :type Id: int
         """
         self.Id = None
@@ -3844,7 +3844,7 @@ class DescribeWeeklyReportInfoResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param CompanyName: 賬号所屬公司或個人名稱。
+        :param CompanyName: 賬號所屬公司或個人名稱。
         :type CompanyName: str
         :param MachineNum: 機器總數。
         :type MachineNum: int
@@ -4250,9 +4250,9 @@ class EditReverseShellRuleRequest(AbstractModel):
         :type Uuid: str
         :param Hostip: 主機IP(IsGlobal爲1時，Uuid或Hostip必填一個)
         :type Hostip: str
-        :param DestIp: 目标IP
+        :param DestIp: 目標IP
         :type DestIp: str
-        :param DestPort: 目标端口
+        :param DestPort: 目標端口
         :type DestPort: str
         :param ProcessName: 程式名
         :type ProcessName: str
@@ -4302,9 +4302,9 @@ class EditTagsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Name: 标簽名
+        :param Name: 標簽名
         :type Name: str
-        :param Id: 标簽ID
+        :param Id: 標簽ID
         :type Id: int
         :param Quuids: CVM主機ID
         :type Quuids: list of str
@@ -4554,7 +4554,7 @@ class ExportReverseShellEventsResponse(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """描述鍵值對過濾器，用于條件過濾查詢。例如過濾ID、名稱、狀态等
+    """描述鍵值對過濾器，用於條件過濾查詢。例如過濾ID、名稱、狀态等
 
     若存在多個Filter時，Filter間的關系爲邏輯與（AND）關系。
     若同一個Filter存在多個Values，同一Filter下Values間的關系爲邏輯或（OR）關系。
@@ -4581,7 +4581,7 @@ class Filter(AbstractModel):
 
 
 class HistoryAccount(AbstractModel):
-    """賬号變更曆史數據。
+    """賬號變更曆史數據。
 
     """
 
@@ -4595,12 +4595,12 @@ class HistoryAccount(AbstractModel):
         :type MachineIp: str
         :param MachineName: 主機名。
         :type MachineName: str
-        :param Username: 帳号名。
+        :param Username: 帳號名。
         :type Username: str
-        :param ModifyType: 帳号變更類型。
-<li>CREATE：表示新增帳号</li>
-<li>MODIFY：表示修改帳号</li>
-<li>DELETE：表示删除帳号</li>
+        :param ModifyType: 帳號變更類型。
+<li>CREATE：表示新增帳號</li>
+<li>MODIFY：表示修改帳號</li>
+<li>DELETE：表示删除帳號</li>
         :type ModifyType: str
         :param ModifyTime: 變更時間。
         :type ModifyTime: str
@@ -4678,7 +4678,7 @@ class ImpactedHost(AbstractModel):
 <li>SCANING : 掃描中</li>
 <li>FIXED : 已修複</li>
         :type VulStatus: str
-        :param Uuid: 雲鏡用戶端唯一标識UUID。
+        :param Uuid: 雲鏡用戶端唯一標識UUID。
         :type Uuid: str
         :param Description: 漏洞描述。
         :type Description: str
@@ -4776,9 +4776,9 @@ class LoginWhiteLists(AbstractModel):
         :type Uuid: str
         :param Places: 白名單地域
         :type Places: list of Place
-        :param UserName: 白名單用戶（多個用戶逗号隔開）
+        :param UserName: 白名單用戶（多個用戶逗號隔開）
         :type UserName: str
-        :param SrcIp: 白名單IP（多個IP逗号隔開）
+        :param SrcIp: 白名單IP（多個IP逗號隔開）
         :type SrcIp: str
         :param IsGlobal: 是否爲全局規則
         :type IsGlobal: bool
@@ -4830,15 +4830,15 @@ class LoginWhiteListsRule(AbstractModel):
         """
         :param Places: 加白地域
         :type Places: list of Place
-        :param SrcIp: 加白源IP，支援網段，多個IP以逗号隔開
+        :param SrcIp: 加白源IP，支援網段，多個IP以逗號隔開
         :type SrcIp: str
-        :param UserName: 加白用戶名，多個用戶名以逗号隔開
+        :param UserName: 加白用戶名，多個用戶名以逗號隔開
         :type UserName: str
         :param IsGlobal: 是否對全局生效
         :type IsGlobal: bool
         :param HostIp: 白名單生效的機器
         :type HostIp: str
-        :param Id: 規則ID，用于更新規則
+        :param Id: 規則ID，用於更新規則
         :type Id: int
         """
         self.Places = None
@@ -4899,7 +4899,7 @@ class Machine(AbstractModel):
         :type PayMode: str
         :param MalwareNum: 木馬數。
         :type MalwareNum: int
-        :param Tag: 标簽訊息
+        :param Tag: 標簽訊息
         :type Tag: list of MachineTag
         """
         self.MachineName = None
@@ -4937,15 +4937,15 @@ class Machine(AbstractModel):
 
 
 class MachineTag(AbstractModel):
-    """服務器标簽訊息
+    """服務器標簽訊息
 
     """
 
     def __init__(self):
         """
-        :param Rid: 關聯标簽ID
+        :param Rid: 關聯標簽ID
         :type Rid: int
-        :param Name: 标簽名
+        :param Name: 標簽名
         :type Name: str
         """
         self.Rid = None
@@ -4989,7 +4989,7 @@ class MaliciousRequest(AbstractModel):
         :type Reference: str
         :param CreateTime: 發現時間。
         :type CreateTime: str
-        :param MergeTime: 記錄合并時間。
+        :param MergeTime: 記錄合並時間。
         :type MergeTime: str
         :param ProcessMd5: 程式MD5
 值。
@@ -5059,7 +5059,7 @@ class Malware(AbstractModel):
         :type FileCreateTime: str
         :param ModifyTime: 木馬文件修改時間。
         :type ModifyTime: str
-        :param Uuid: 雲鏡用戶端唯一标識UUID。
+        :param Uuid: 雲鏡用戶端唯一標識UUID。
         :type Uuid: str
         """
         self.Id = None
@@ -5242,7 +5242,7 @@ class ModifyProVersionRenewFlagRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param RenewFlag: 自動續約标識。取值範圍：
+        :param RenewFlag: 自動續約標識。取值範圍：
 <li>NOTIFY_AND_AUTO_RENEW：通知過期且自動續約</li>
 <li>NOTIFY_AND_MANUAL_RENEW：通知過期不自動續約</li>
 <li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知過期不自動續約</li>
@@ -5305,7 +5305,7 @@ class NonLocalLoginPlace(AbstractModel):
         :type MachineName: str
         :param LoginTime: 登入時間。
         :type LoginTime: str
-        :param Uuid: 雲鏡用戶端唯一标識Uuid。
+        :param Uuid: 雲鏡用戶端唯一標識Uuid。
         :type Uuid: str
         """
         self.Id = None
@@ -5346,7 +5346,7 @@ class OpenPort(AbstractModel):
         :type Id: int
         :param Uuid: 雲鏡用戶端唯一UUID。
         :type Uuid: str
-        :param Port: 開放端口号。
+        :param Port: 開放端口號。
         :type Port: int
         :param MachineIp: 主機IP。
         :type MachineIp: str
@@ -5391,7 +5391,7 @@ class OpenPortStatistics(AbstractModel):
 
     def __init__(self):
         """
-        :param Port: 端口号
+        :param Port: 端口號
         :type Port: int
         :param MachineNum: 主機數量
         :type MachineNum: int
@@ -5468,7 +5468,7 @@ class OpenProVersionRequest(AbstractModel):
         :param MachineRegion: 機器所屬地域。
 如：ap-guangzhou，ap-shanghai
         :type MachineRegion: str
-        :param Quuids: 主機唯一标識Uuid數組。
+        :param Quuids: 主機唯一標識Uuid數組。
 黑石的InstanceId，CVM的Uuid
         :type Quuids: list of str
         :param ActivityId: 活動ID。
@@ -5681,7 +5681,7 @@ class ProVersionMachine(AbstractModel):
         :param MachineRegion: 主機所在地域。
 如：ap-guangzhou、ap-beijing
         :type MachineRegion: str
-        :param Quuid: 主機唯一标識Uuid。
+        :param Quuid: 主機唯一標識Uuid。
 黑石的InstanceId，CVM的Uuid
         :type Quuid: str
         """
@@ -5909,9 +5909,9 @@ class ReverseShell(AbstractModel):
         :type Quuid: str
         :param Hostip: 主機内網IP
         :type Hostip: str
-        :param DstIp: 目标IP
+        :param DstIp: 目標IP
         :type DstIp: str
-        :param DstPort: 目标端口
+        :param DstPort: 目標端口
         :type DstPort: int
         :param ProcessName: 程式名
         :type ProcessName: str
@@ -5996,9 +5996,9 @@ class ReverseShellRule(AbstractModel):
         :type Uuid: str
         :param ProcessName: 程式名稱
         :type ProcessName: str
-        :param DestIp: 目标IP
+        :param DestIp: 目標IP
         :type DestIp: str
-        :param DestPort: 目标端口
+        :param DestPort: 目標端口
         :type DestPort: str
         :param Operator: 操作人
         :type Operator: str
@@ -6214,15 +6214,15 @@ class SwitchBashRulesResponse(AbstractModel):
 
 
 class Tag(AbstractModel):
-    """标簽訊息
+    """標簽訊息
 
     """
 
     def __init__(self):
         """
-        :param Id: 标簽ID
+        :param Id: 標簽ID
         :type Id: int
-        :param Name: 标簽名
+        :param Name: 標簽名
         :type Name: str
         :param Count: 服務器數
         :type Count: int
@@ -6239,7 +6239,7 @@ class Tag(AbstractModel):
 
 
 class TagMachine(AbstractModel):
-    """标簽相關服務器訊息
+    """標簽相關服務器訊息
 
     """
 
@@ -6424,7 +6424,7 @@ class UsualPlace(AbstractModel):
         """
         :param Id: ID。
         :type Id: int
-        :param Uuid: 雲鏡用戶端唯一标識UUID。
+        :param Uuid: 雲鏡用戶端唯一標識UUID。
         :type Uuid: str
         :param CountryId: 國家 ID。
         :type CountryId: int

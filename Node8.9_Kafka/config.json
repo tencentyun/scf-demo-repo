@@ -4,7 +4,7 @@
         "Chinese": {
           "name": "給kafka發訊息",
           "description": "本範例通過kafka node用戶端，給kafka發訊息",
-          "attention": "雲函數需與kafka處于相同vpc内，已經在代碼中注明",
+          "attention": "雲函數需與kafka處於相同vpc内，已經在代碼中注明",
           "readme": {
             "file": "",
             "content": ""
@@ -43,23 +43,23 @@
           "Ckafka",
           "Nodejs8.9"
           // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on
-          // 标簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
+          // 標簽統一爲英文，可編寫多個，建議使用runtime、觸發器、場景等關鍵字，用戶可以通過該關鍵字搜索。前台需要展示，請認真填寫，不支援中文
         ],
         "version": "1.0.5" 
         // Version number, which identifies the demo version status. 
         // Demo will not to update to the page if the version number unmodified.
-        //版本号，通過版本号标識 demo 升級情況，未修改版本号會導緻 demo 不更新至頁面
+        //版本號，通過版本號標識 demo 升級情況，未修改版本號會導緻 demo 不更新至頁面
       },
       "functions": {
         "name": "Cos_Merge_File", // Function name which only be in English. 函數名稱，只支援英文
-        "description": "本範例通過從源bucket下載多個小文件，合并之後，上傳到另一個bucket",
+        "description": "本範例通過從源bucket下載多個小文件，合並之後，上傳到另一個bucket",
         "handler": "index.main_handler",
         "memorySize": 128, //Running memory.  運作配置内存
         "timeout": 3, // Running timeout.運作超時時間
         "runtime": "Nodejs8.9", //Runtime which users can search demo by this keyword. 運作環境，用戶可以通過該關鍵字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
-        "Environment": {}, // Optional, used to define environment variables. 可選，用于定義環境變量
-        "Events": {}, // Optional, used define the event source that triggers this function.  可選，用于定義觸發此函數的事件源
-        "VpcConfig": {}, // Optional, used configure cloud function's private network. 可選， 用于配置雲函數訪問 VPC 私有網絡。
+        "Environment": {}, // Optional, used to define environment variables. 可選，用於定義環境變量
+        "Events": {}, // Optional, used define the event source that triggers this function.  可選，用於定義觸發此函數的事件源
+        "VpcConfig": {}, // Optional, used configure cloud function's private network. 可選， 用於配置雲函數訪問 VPC 私有網絡。
         "codeObject": {
           "codeFile": [
             "index.js"

@@ -23,7 +23,7 @@ class BankCardVerificationRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param IdCard: 身份證号
+        :param IdCard: 身份證號
         :type IdCard: str
         :param Name: 姓名
         :type Name: str
@@ -52,12 +52,12 @@ class BankCardVerificationResponse(AbstractModel):
 '0': '認證通過'
 '-1': '認證未通過'
 '-2': '姓名校驗不通過'
-'-3': '身份證号碼有誤'
-'-4': '銀行卡号碼有誤'
+'-3': '身份證號碼有誤'
+'-4': '銀行卡號碼有誤'
 '-5': '持卡人訊息有誤'
 '-6': '未開通無卡支付'
 '-7': '此卡被沒收'
-'-8': '無效卡号'
+'-8': '無效卡號'
 '-9': '此卡無對應發卡行'
 '-10': '該卡未初始化或睡眠卡'
 '-11': '作弊卡、吞卡'
@@ -91,11 +91,11 @@ class DetectAuthRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param RuleId: 用于細分客戶使用場景，由 側在線下對接時分配。
+        :param RuleId: 用於細分客戶使用場景，由 側在線下對接時分配。
         :type RuleId: str
         :param TerminalType: 本介面不需要傳遞此參數。
         :type TerminalType: str
-        :param IdCard: 身份标識（與警察權威庫比對時必須是身份證号）。
+        :param IdCard: 身份標識（與警察權威庫比對時必須是身份證號）。
 規則：a-zA-Z0-9組合。最長長度32位。
         :type IdCard: str
         :param Name: 姓名。最長長度32位。中文請使用UTF-8編碼。
@@ -104,7 +104,7 @@ class DetectAuthRequest(AbstractModel):
         :type RedirectUrl: str
         :param Extra: 透傳欄位，在獲取驗證結果時返回。
         :type Extra: str
-        :param ImageBase64: 用于人臉比對的照片，圖片的BASE64值；
+        :param ImageBase64: 用於人臉比對的照片，圖片的BASE64值；
 BASE64編碼後的圖片數據大小不超過3M，僅支援jpg、png格式。
         :type ImageBase64: str
         """
@@ -134,10 +134,10 @@ class DetectAuthResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Url: 用于發起核身流程的URL，僅 H5場景使用。
+        :param Url: 用於發起核身流程的URL，僅 H5場景使用。
         :type Url: str
-        :param BizToken: 一次核身流程的标識，有效時間爲7,200秒；
-完成核身後，可用該标識獲取驗證結果訊息。
+        :param BizToken: 一次核身流程的標識，有效時間爲7,200秒；
+完成核身後，可用該標識獲取驗證結果訊息。
         :type BizToken: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -187,9 +187,9 @@ class GetDetectInfoRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param BizToken: 人臉核身流程的标識，調用DetectAuth介面時生成。
+        :param BizToken: 人臉核身流程的標識，調用DetectAuth介面時生成。
         :type BizToken: str
-        :param RuleId: 用于細分客戶使用場景，由 側在線下對接時分配。
+        :param RuleId: 用於細分客戶使用場景，由 側在線下對接時分配。
         :type RuleId: str
         :param InfoType: 指定拉取的結果訊息，取值（0：全部；1：文本類；2：身份證正反面；3：視訊最佳截圖照片；4：視訊）。
 如 134表示拉取文本類、視訊最佳截圖照片、視訊。
@@ -219,7 +219,7 @@ class GetDetectInfoResponse(AbstractModel):
   "Text": {
     "ErrCode": null,      // 本次核身最終結果。0爲成功
     "ErrMsg": null,       // 本次核身的錯誤訊息。
-    "IdCard": "",         // 本次核身最終獲得的身份證号。
+    "IdCard": "",         // 本次核身最終獲得的身份證號。
     "Name": "",           // 本次核身最終獲得的姓名。
     "OcrNation": null,    // ocr階段獲取的民族
     "OcrAddress": null,   // ocr階段獲取的網址
@@ -227,7 +227,7 @@ class GetDetectInfoResponse(AbstractModel):
     "OcrAuthority": null, // ocr階段獲取的證件簽發機關
     "OcrValidDate": null, // ocr階段獲取的證件有效期
     "OcrName": null,      // ocr階段獲取的姓名
-    "OcrIdCard": null,    // ocr階段獲取的身份證号
+    "OcrIdCard": null,    // ocr階段獲取的身份證號
     "OcrGender": null,    // ocr階段獲取的性别
     "LiveStatus": null,   // 活體檢測階段的錯誤碼。0爲成功
     "LiveMsg": null,      // 活體檢測階段的錯誤訊息
@@ -299,7 +299,7 @@ class IdCardVerificationRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param IdCard: 身份證号
+        :param IdCard: 身份證號
         :type IdCard: str
         :param Name: 姓名
         :type Name: str
@@ -321,9 +321,9 @@ class IdCardVerificationResponse(AbstractModel):
     def __init__(self):
         """
         :param Result: 認證結果碼。
-0: 姓名和身份證号一緻
--1: 姓名和身份證号不一緻
--2: 身份證号錯誤
+0: 姓名和身份證號一緻
+-1: 姓名和身份證號不一緻
+-2: 身份證號錯誤
 -3: 姓名錯誤
 -4: 認證出錯
         :type Result: str
@@ -350,11 +350,11 @@ class ImageRecognitionRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param IdCard: 身份證号
+        :param IdCard: 身份證號
         :type IdCard: str
         :param Name: 姓名。中文請使用UTF-8編碼。
         :type Name: str
-        :param ImageBase64: 用于人臉比對的照片，圖片的BASE64值；
+        :param ImageBase64: 用於人臉比對的照片，圖片的BASE64值；
 BASE64編碼後的圖片數據大小不超過3M，僅支援jpg、png格式。
         :type ImageBase64: str
         :param Optional: 本介面不需要傳遞此參數。
@@ -380,7 +380,7 @@ class ImageRecognitionResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Sim: 相似度，取值範圍 [0.00, 100.00]。推薦相似度大于等于70時可判斷爲同一人，可根據具體場景自行調整阈值（阈值70的誤通過率爲千分之一，阈值80的誤通過率是萬分之一）
+        :param Sim: 相似度，取值範圍 [0.00, 100.00]。推薦相似度大於等於70時可判斷爲同一人，可根據具體場景自行調整阈值（阈值70的誤通過率爲千分之一，阈值80的誤通過率是萬分之一）
         :type Sim: float
         :param Result: 業務錯誤碼，成功情況返回Success, 錯誤情況請參考下方錯誤碼 清單中FailedOperation部分
         :type Result: str
@@ -409,10 +409,10 @@ class LivenessCompareRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param ImageBase64: 用于人臉比對的照片，圖片的BASE64值；
+        :param ImageBase64: 用於人臉比對的照片，圖片的BASE64值；
 BASE64編碼後的圖片數據大小不超過3M，僅支援jpg、png格式。
         :type ImageBase64: str
-        :param VideoBase64: 用于活體檢測的視訊，視訊的BASE64值；
+        :param VideoBase64: 用於活體檢測的視訊，視訊的BASE64值；
 BASE64編碼後的大小不超過5M，支援mp4、avi、flv格式。
         :type VideoBase64: str
         :param LivenessType: 活體檢測類型，取值：LIP/ACTION/SILENT。
@@ -449,7 +449,7 @@ class LivenessCompareResponse(AbstractModel):
         """
         :param BestFrameBase64: 驗證通過後的視訊最佳截圖照片，照片爲BASE64編碼後的值，jpg格式。
         :type BestFrameBase64: str
-        :param Sim: 相似度，取值範圍 [0.00, 100.00]。推薦相似度大于等于70時可判斷爲同一人，可根據具體場景自行調整阈值（阈值70的誤通過率爲千分之一，阈值80的誤通過率是萬分之一）。
+        :param Sim: 相似度，取值範圍 [0.00, 100.00]。推薦相似度大於等於70時可判斷爲同一人，可根據具體場景自行調整阈值（阈值70的誤通過率爲千分之一，阈值80的誤通過率是萬分之一）。
         :type Sim: float
         :param Result: 業務錯誤碼，成功情況返回Success, 錯誤情況請參考下方錯誤碼 清單中FailedOperation部分
         :type Result: str
@@ -480,11 +480,11 @@ class LivenessRecognitionRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param IdCard: 身份證号
+        :param IdCard: 身份證號
         :type IdCard: str
         :param Name: 姓名。中文請使用UTF-8編碼。
         :type Name: str
-        :param VideoBase64: 用于活體檢測的視訊，視訊的BASE64值；
+        :param VideoBase64: 用於活體檢測的視訊，視訊的BASE64值；
 BASE64編碼後的大小不超過5M，支援mp4、avi、flv格式。
         :type VideoBase64: str
         :param LivenessType: 活體檢測類型，取值：LIP/ACTION/SILENT。
@@ -523,7 +523,7 @@ class LivenessRecognitionResponse(AbstractModel):
         """
         :param BestFrameBase64: 驗證通過後的視訊最佳截圖照片，照片爲BASE64編碼後的值，jpg格式。
         :type BestFrameBase64: str
-        :param Sim: 相似度，取值範圍 [0.00, 100.00]。推薦相似度大于等于70時可判斷爲同一人，可根據具體場景自行調整阈值（阈值70的誤通過率爲千分之一，阈值80的誤通過率是萬分之一）
+        :param Sim: 相似度，取值範圍 [0.00, 100.00]。推薦相似度大於等於70時可判斷爲同一人，可根據具體場景自行調整阈值（阈值70的誤通過率爲千分之一，阈值80的誤通過率是萬分之一）
         :type Sim: float
         :param Result: 業務錯誤碼，成功情況返回Success, 錯誤情況請參考下方錯誤碼 清單中FailedOperation部分
         :type Result: str

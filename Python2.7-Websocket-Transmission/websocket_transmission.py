@@ -17,7 +17,7 @@ logger.setLevel(level=logging.INFO)
 # The reverse push link for API gateway. API閘道的反向推送連結
 sendbackHost = "*******"
 # MySql database account information, you need to create a database and form in advance, the new two columns in the form: `ConnectionID`, `Date` 
-# MySql資料庫賬号訊息,需要提前創建好資料庫和表單,表單中新建2列：`ConnectionID`, `Date`
+# MySql資料庫賬號訊息,需要提前創建好資料庫和表單,表單中新建2列：`ConnectionID`, `Date`
 Host = '******'
 User = '****'
 Password = '****'

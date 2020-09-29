@@ -30,7 +30,7 @@ class ScfClient(AbstractClient):
         注：本介面**不會**複制函數的以下對象或屬性：
         1. 函數的觸發器
         2. 除了$LATEST以外的其它版本
-        3. 函數配置的日志投遞到的CLS目标。
+        3. 函數配置的日志投遞到的CLS目標。
 
         如有需要，您可以在複制後手動配置新函數。
 
@@ -284,7 +284,7 @@ class ScfClient(AbstractClient):
 
 
     def GetFunctionAddress(self, request):
-        """該介面用于獲取函數代碼包的下載網址。
+        """該介面用於獲取函數代碼包的下載網址。
 
         :param request: Request instance for GetFunctionAddress.
         :type request: :class:`taifucloudcloud.scf.v20180416.models.GetFunctionAddressRequest`
@@ -340,7 +340,7 @@ class ScfClient(AbstractClient):
 
 
     def GetLayerVersion(self, request):
-        """獲取層版本詳細訊息，包括用于下載層中文件的連結。
+        """獲取層版本詳細訊息，包括用於下載層中文件的連結。
 
         :param request: Request instance for GetLayerVersion.
         :type request: :class:`taifucloudcloud.scf.v20180416.models.GetLayerVersionRequest`
@@ -368,7 +368,7 @@ class ScfClient(AbstractClient):
 
 
     def Invoke(self, request):
-        """該介面用于運作函數。
+        """該介面用於運作函數。
 
         :param request: Request instance for Invoke.
         :type request: :class:`taifucloudcloud.scf.v20180416.models.InvokeRequest`
@@ -564,7 +564,7 @@ class ScfClient(AbstractClient):
 
 
     def PublishVersion(self, request):
-        """該介面用于用戶發布新版本函數。
+        """該介面用於用戶發布新版本函數。
 
         :param request: Request instance for PublishVersion.
         :type request: :class:`taifucloudcloud.scf.v20180416.models.PublishVersionRequest`

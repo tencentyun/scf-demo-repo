@@ -54,7 +54,7 @@ class BmClient(AbstractClient):
 
 
     def BindPsaTag(self, request):
-        """爲預授權規則綁定标簽
+        """爲預授權規則綁定標簽
 
         :param request: Request instance for BindPsaTag.
         :type request: :class:`taifucloudcloud.bm.v20180423.models.BindPsaTagRequest`
@@ -224,7 +224,7 @@ class BmClient(AbstractClient):
 
     def DeleteCustomImages(self, request):
         """删除自定義映像<br>
-        正用于佈署或重裝中的映像被删除後，映像文件将保留一段時間，直到佈署或重裝結束
+        正用於佈署或重裝中的映像被删除後，映像文件将保留一段時間，直到佈署或重裝結束
 
         :param request: Request instance for DeleteCustomImages.
         :type request: :class:`taifucloudcloud.bm.v20180423.models.DeleteCustomImagesRequest`
@@ -392,7 +392,7 @@ class BmClient(AbstractClient):
 
 
     def DescribeDeviceClassPartition(self, request):
-        """查詢機型支援的RAID方式， 并返回系統盤的分區和邏輯盤的清單
+        """查詢機型支援的RAID方式， 並返回系統盤的分區和邏輯盤的清單
 
         :param request: Request instance for DescribeDeviceClassPartition.
         :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeDeviceClassPartitionRequest`
@@ -420,7 +420,7 @@ class BmClient(AbstractClient):
 
 
     def DescribeDeviceHardwareInfo(self, request):
-        """查詢設備硬體配置訊息，如 CPU 型号，内存大小，磁盤大小和數量
+        """查詢設備硬體配置訊息，如 CPU 型號，内存大小，磁盤大小和數量
 
         :param request: Request instance for DescribeDeviceHardwareInfo.
         :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeDeviceHardwareInfoRequest`
@@ -560,7 +560,7 @@ class BmClient(AbstractClient):
 
 
     def DescribeDevicePriceInfo(self, request):
-        """查詢服務器價格訊息，支援設備的批次查找，支援标準機型和彈性機型的混合查找
+        """查詢服務器價格訊息，支援設備的批次查找，支援標準機型和彈性機型的混合查找
 
         :param request: Request instance for DescribeDevicePriceInfo.
         :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeDevicePriceInfoRequest`
@@ -616,7 +616,7 @@ class BmClient(AbstractClient):
 
 
     def DescribeHardwareSpecification(self, request):
-        """查詢自定義機型部件訊息，包括CpuId對應的型号，DiskTypeId對應的磁盤類型
+        """查詢自定義機型部件訊息，包括CpuId對應的型號，DiskTypeId對應的磁盤類型
 
         :param request: Request instance for DescribeHardwareSpecification.
         :type request: :class:`taifucloudcloud.bm.v20180423.models.DescribeHardwareSpecificationRequest`
@@ -988,7 +988,7 @@ class BmClient(AbstractClient):
 
 
     def ModifyCustomImageAttribute(self, request):
-        """用于修改自定義映像名或描述
+        """用於修改自定義映像名或描述
 
         :param request: Request instance for ModifyCustomImageAttribute.
         :type request: :class:`taifucloudcloud.bm.v20180423.models.ModifyCustomImageAttributeRequest`
@@ -1044,7 +1044,7 @@ class BmClient(AbstractClient):
 
 
     def ModifyDeviceAutoRenewFlag(self, request):
-        """修改物理機服務器自動續約标志
+        """修改物理機服務器自動續約標志
 
         :param request: Request instance for ModifyDeviceAutoRenewFlag.
         :type request: :class:`taifucloudcloud.bm.v20180423.models.ModifyDeviceAutoRenewFlagRequest`
@@ -1296,7 +1296,7 @@ class BmClient(AbstractClient):
 
 
     def RepairTaskControl(self, request):
-        """此介面用于操作維修任務<br>
+        """此介面用於操作維修任務<br>
         入參TaskId爲維修任務ID<br>
         入參Operate表示對維修任務的操作，支援如下取值：<br>
         AuthorizeRepair（授權維修）<br>
@@ -1310,7 +1310,7 @@ class BmClient(AbstractClient):
         待确認(3)->确認故障恢複；确認故障未恢複<br>
         未恢複(6)->确認故障恢複<br>
         <br>
-        對于Ping不可達故障的任務，還允許：<br>
+        對於Ping不可達故障的任務，還允許：<br>
         未授權->确認故障恢複<br>
         暫不處理->确認故障恢複<br>
         <br>
@@ -1512,7 +1512,7 @@ class BmClient(AbstractClient):
 
 
     def UnbindPsaTag(self, request):
-        """解除标簽與預授權規則的綁定
+        """解除標簽與預授權規則的綁定
 
         :param request: Request instance for UnbindPsaTag.
         :type request: :class:`taifucloudcloud.bm.v20180423.models.UnbindPsaTagRequest`

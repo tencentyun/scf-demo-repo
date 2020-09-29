@@ -186,16 +186,16 @@ class CreateMigrateJobRequest(AbstractModel):
         :type SrcAccessType: str
         :param SrcInfo: 源實例訊息，具體内容跟遷移任務類型相關
         :type SrcInfo: :class:`taifucloudcloud.dts.v20180330.models.SrcInfo`
-        :param DstDatabaseType: 目标實例資料庫類型，目前支援：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域資料庫類型的具體支援情況，請參考控制台創建遷移頁面。
+        :param DstDatabaseType: 目標實例資料庫類型，目前支援：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域資料庫類型的具體支援情況，請參考控制台創建遷移頁面。
         :type DstDatabaseType: str
-        :param DstAccessType: 目标實例接入類型，目前支援：cdb（Top Cloud 資料庫實例）
+        :param DstAccessType: 目標實例接入類型，目前支援：cdb（Top Cloud 資料庫實例）
         :type DstAccessType: str
-        :param DstInfo: 目标實例訊息
+        :param DstInfo: 目標實例訊息
         :type DstInfo: :class:`taifucloudcloud.dts.v20180330.models.DstInfo`
         :param DatabaseInfo: 需要遷移的源資料庫表訊息，用json格式的字串描述。當MigrateOption.MigrateObject配置爲2（指定庫表遷移）時必填。
-對于database-table兩級結構的資料庫：
+對於database-table兩級結構的資料庫：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
-對于database-schema-table三級結構：
+對於database-schema-table三級結構：
 [{Database:db1,Schema:s1
 Table:[table1,table2]},{Database:db1,Schema:s2
 Table:[table1,table2]},{Database:db2,Schema:s1
@@ -268,7 +268,7 @@ class CreateSubscribeRequest(AbstractModel):
         :type Duration: int
         :param Count: 購買數量,預設爲1，最大爲10
         :type Count: int
-        :param AutoRenew: 是否自動續約，預設爲0，1表示自動續約。小時計費實例設置該标識無效。
+        :param AutoRenew: 是否自動續約，預設爲0，1表示自動續約。小時計費實例設置該標識無效。
         :type AutoRenew: int
         """
         self.Product = None
@@ -359,14 +359,14 @@ class CreateSyncJobRequest(AbstractModel):
         :type SrcAccessType: str
         :param SrcInfo: 源實例訊息
         :type SrcInfo: :class:`taifucloudcloud.dts.v20180330.models.SyncInstanceInfo`
-        :param DstDatabaseType: 目标實例資料庫類型，目前僅包括：mysql
+        :param DstDatabaseType: 目標實例資料庫類型，目前僅包括：mysql
         :type DstDatabaseType: str
-        :param DstAccessType: 目标實例接入類型，目前僅包括：cdb(雲上cdb實例)
+        :param DstAccessType: 目標實例接入類型，目前僅包括：cdb(雲上cdb實例)
         :type DstAccessType: str
-        :param DstInfo: 目标實例訊息
+        :param DstInfo: 目標實例訊息
         :type DstInfo: :class:`taifucloudcloud.dts.v20180330.models.SyncInstanceInfo`
         :param DatabaseInfo: 需要同步的源資料庫表訊息，用json格式的字串描述。
-對于database-table兩級結構的資料庫：
+對於database-table兩級結構的資料庫：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
         :type DatabaseInfo: str
         """
@@ -941,7 +941,7 @@ class DescribeSyncCheckJobResponse(AbstractModel):
         :type ErrorMessage: str
         :param StepInfo: 任務執行步驟描述
         :type StepInfo: list of SyncCheckStepInfo
-        :param CheckFlag: 校驗标志：0（尚未校驗成功） ， 1（校驗成功）
+        :param CheckFlag: 校驗標志：0（尚未校驗成功） ， 1（校驗成功）
         :type CheckFlag: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -1042,19 +1042,19 @@ class DstInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 目标實例ID，如cdb-jd92ijd8
+        :param InstanceId: 目標實例ID，如cdb-jd92ijd8
         :type InstanceId: str
-        :param Region: 目标實例地域，如ap-guangzhou
+        :param Region: 目標實例地域，如ap-guangzhou
         :type Region: str
-        :param Ip: 目标實例vip。已廢棄，無需填寫
+        :param Ip: 目標實例vip。已廢棄，無需填寫
         :type Ip: str
-        :param Port: 目标實例vport。已廢棄，無需填寫
+        :param Port: 目標實例vport。已廢棄，無需填寫
         :type Port: int
         :param ReadOnly: 目前只對MySQL有效。當爲整實例遷移時，1-只讀，0-可讀寫。
         :type ReadOnly: int
-        :param User: 目标資料庫賬号
+        :param User: 目標資料庫賬號
         :type User: str
-        :param Password: 目标資料庫密碼
+        :param Password: 目標資料庫密碼
         :type Password: str
         """
         self.InstanceId = None
@@ -1196,11 +1196,11 @@ class MigrateJobInfo(AbstractModel):
         :type SrcAccessType: str
         :param SrcInfo: 源實例訊息，具體内容跟遷移任務類型相關
         :type SrcInfo: :class:`taifucloudcloud.dts.v20180330.models.SrcInfo`
-        :param DstDatabaseType: 目标實例資料庫類型:mysql，redis，mongodb，postgresql，mariadb，percona
+        :param DstDatabaseType: 目標實例資料庫類型:mysql，redis，mongodb，postgresql，mariadb，percona
         :type DstDatabaseType: str
-        :param DstAccessType: 目标實例接入類型，目前支援：cdb(Top Cloud 資料庫實例)
+        :param DstAccessType: 目標實例接入類型，目前支援：cdb(Top Cloud 資料庫實例)
         :type DstAccessType: str
-        :param DstInfo: 目标實例訊息
+        :param DstInfo: 目標實例訊息
         :type DstInfo: :class:`taifucloudcloud.dts.v20180330.models.DstInfo`
         :param DatabaseInfo: 需要遷移的源資料庫表訊息，如果需要遷移的是整個實例，該欄位爲[]
         :type DatabaseInfo: str
@@ -1284,7 +1284,7 @@ class MigrateOption(AbstractModel):
         :type MigrateObject: int
         :param ConsistencyType: 抽樣數據一緻性檢測參數，1-未配置,2-全量檢測,3-抽樣檢測, 4-僅校驗不一緻表,5-不檢測
         :type ConsistencyType: int
-        :param IsOverrideRoot: 是否用源庫Root帳戶函蓋目标庫，值包括：0-不函蓋，1-函蓋，選擇庫表或者結構遷移時應該爲0
+        :param IsOverrideRoot: 是否用源庫Root帳戶函蓋目標庫，值包括：0-不函蓋，1-函蓋，選擇庫表或者結構遷移時應該爲0
         :type IsOverrideRoot: int
         :param ExternParams: 不同資料庫用到的額外參數.以JSON格式描述. 
 Redis可定義如下的參數: 
@@ -1303,7 +1303,7 @@ MongoDB可定義如下的參數:
 }
 MySQL暫不支援額外參數設置。
         :type ExternParams: str
-        :param ConsistencyParams: 僅用于“抽樣數據一緻性檢測”，ConsistencyType配置爲抽樣檢測時，必選
+        :param ConsistencyParams: 僅用於“抽樣數據一緻性檢測”，ConsistencyType配置爲抽樣檢測時，必選
         :type ConsistencyParams: :class:`taifucloudcloud.dts.v20180330.models.ConsistencyParams`
         """
         self.RunMode = None
@@ -1340,7 +1340,7 @@ class MigrateStepDetailInfo(AbstractModel):
         :type StepNo: int
         :param StepName: 步驟展現名稱
         :type StepName: str
-        :param StepId: 步驟英文标識
+        :param StepId: 步驟英文標識
         :type StepId: str
         :param Status: 步驟狀态:0-預設值,1-成功,2-失敗,3-執行中,4-未執行
         :type Status: int
@@ -1380,15 +1380,15 @@ class ModifyMigrateJobRequest(AbstractModel):
         :type SrcAccessType: str
         :param SrcInfo: 源實例訊息，具體内容跟遷移任務類型相關
         :type SrcInfo: :class:`taifucloudcloud.dts.v20180330.models.SrcInfo`
-        :param DstAccessType: 目标實例接入類型，值包括：extranet(外網),cvm(CVM自建實例),dcg(專線接入的實例),vpncloud(雲VPN接入的實例)，cdb(雲上CDB實例). 目前只支援cdb.
+        :param DstAccessType: 目標實例接入類型，值包括：extranet(外網),cvm(CVM自建實例),dcg(專線接入的實例),vpncloud(雲VPN接入的實例)，cdb(雲上CDB實例). 目前只支援cdb.
         :type DstAccessType: str
-        :param DstInfo: 目标實例訊息, 其中目标實例地域不允許修改.
+        :param DstInfo: 目標實例訊息, 其中目標實例地域不允許修改.
         :type DstInfo: :class:`taifucloudcloud.dts.v20180330.models.DstInfo`
         :param DatabaseInfo: 當選擇'指定庫表'遷移的時候, 需要設置待遷移的源資料庫表訊息,用符合json數組格式的字串描述, 如下所例。
 
-對于database-table兩級結構的資料庫：
+對於database-table兩級結構的資料庫：
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
-對于database-schema-table三級結構：
+對於database-schema-table三級結構：
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
 
 如果是'整個實例'的遷移模式,不需設置該欄位
@@ -1576,9 +1576,9 @@ class ModifySubscribeVipVportRequest(AbstractModel):
         :type SubscribeId: str
         :param DstUniqSubnetId: 指定目的子網，如果傳此參數，DstIp必須在目的子網内
         :type DstUniqSubnetId: str
-        :param DstIp: 目标IP，與DstPort至少傳一個
+        :param DstIp: 目標IP，與DstPort至少傳一個
         :type DstIp: str
-        :param DstPort: 目标PORT，支援範圍爲：[1025-65535]
+        :param DstPort: 目標PORT，支援範圍爲：[1025-65535]
         :type DstPort: int
         """
         self.SubscribeId = None
@@ -1625,7 +1625,7 @@ class ModifySyncJobRequest(AbstractModel):
         :param SyncOption: 災備同步任務配置選項
         :type SyncOption: :class:`taifucloudcloud.dts.v20180330.models.SyncOption`
         :param DatabaseInfo: 當選擇'指定庫表'災備同步的時候, 需要設置待同步的源資料庫表訊息,用符合json數組格式的字串描述, 如下所例。
-對于database-table兩級結構的資料庫：
+對於database-table兩級結構的資料庫：
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
         :type DatabaseInfo: str
         """
@@ -2044,7 +2044,7 @@ class SubscribeRegionConf(AbstractModel):
         :param RegionName: 地域名稱，如 
 注意：此欄位可能返回 null，表示取不到有效值。
         :type RegionName: str
-        :param Region: 地區标識，如ap-guangzhou
+        :param Region: 地區標識，如ap-guangzhou
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Region: str
         :param Area: 地域名稱，如華南地區
@@ -2329,13 +2329,13 @@ class SyncStepDetailInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param StepNo: 步驟編号
+        :param StepNo: 步驟編號
         :type StepNo: int
         :param StepName: 步驟名
         :type StepName: str
         :param CanStop: 能否中止
         :type CanStop: int
-        :param StepId: 步驟号
+        :param StepId: 步驟號
         :type StepId: int
         """
         self.StepNo = None

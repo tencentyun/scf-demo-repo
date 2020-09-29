@@ -23,11 +23,11 @@ class Block(AbstractModel):
 
     def __init__(self):
         """
-        :param BlockNum: 區塊編号
+        :param BlockNum: 區塊編號
         :type BlockNum: int
         :param DataHash: 區塊Hash數值
         :type DataHash: str
-        :param BlockId: 區塊ID，與區塊編号一直
+        :param BlockId: 區塊ID，與區塊編號一直
         :type BlockId: int
         :param PreHash: 前一個區塊Hash（未使用）,與區塊Hash數值一直
         :type PreHash: str
@@ -440,7 +440,7 @@ class InvokeRequest(AbstractModel):
         :type GroupName: str
         :param Args: 被調用的函數參數清單
         :type Args: list of str
-        :param AsyncFlag: 同步調用标識，可選參數，值爲0或者不傳表示使用同步方法調用，調用後會等待交易執行後再返回執行結果；值爲1時表示使用異步方式調用Invoke，執行後會立即返回交易對應的Txid，後續需要通過GetInvokeTx這個API查詢該交易的執行結果。（對于邏輯較爲簡單的交易，可以使用同步模式；對于邏輯較爲複雜的交易，建議使用異步模式，否則容易導緻API因等待時間過長，返回等待超時）
+        :param AsyncFlag: 同步調用標識，可選參數，值爲0或者不傳表示使用同步方法調用，調用後會等待交易執行後再返回執行結果；值爲1時表示使用異步方式調用Invoke，執行後會立即返回交易對應的Txid，後續需要通過GetInvokeTx這個API查詢該交易的執行結果。（對於邏輯較爲簡單的交易，可以使用同步模式；對於邏輯較爲複雜的交易，建議使用異步模式，否則容易導緻API因等待時間過長，返回等待超時）
         :type AsyncFlag: int
         """
         self.Module = None
@@ -607,7 +607,7 @@ class TransactionItem(AbstractModel):
         :type TransactionHash: str
         :param CreateOrgName: 創建交易的組織名
         :type CreateOrgName: str
-        :param BlockId: 交易所在區塊号
+        :param BlockId: 交易所在區塊號
         :type BlockId: int
         :param TransactionType: 交易類型（普通交易和配置交易）
         :type TransactionType: str

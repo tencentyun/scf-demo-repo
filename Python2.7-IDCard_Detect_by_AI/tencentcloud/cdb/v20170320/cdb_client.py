@@ -26,7 +26,7 @@ class CdbClient(AbstractClient):
 
 
     def AddTimeWindow(self, request):
-        """本介面(AddTimeWindow)用于添加雲資料庫實例的維護時間視窗，以指定實例在哪些時間段可以自動執行切換訪問操作。
+        """本介面(AddTimeWindow)用於添加雲資料庫實例的維護時間視窗，以指定實例在哪些時間段可以自動執行切換訪問操作。
 
         :param request: 調用AddTimeWindow所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.AddTimeWindowRequest`
@@ -54,7 +54,7 @@ class CdbClient(AbstractClient):
 
 
     def AssociateSecurityGroups(self, request):
-        """本介面(AssociateSecurityGroups)用于安全組批次綁定實例。
+        """本介面(AssociateSecurityGroups)用於安全組批次綁定實例。
 
         :param request: 調用AssociateSecurityGroups所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.AssociateSecurityGroupsRequest`
@@ -82,7 +82,7 @@ class CdbClient(AbstractClient):
 
 
     def CloseWanService(self, request):
-        """本介面(CloseWanService)用于關閉雲資料庫實例的外網訪問。關閉外網訪問後，外網網址将不可訪問。
+        """本介面(CloseWanService)用於關閉雲資料庫實例的外網訪問。關閉外網訪問後，外網網址将不可訪問。
 
         :param request: 調用CloseWanService所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.CloseWanServiceRequest`
@@ -110,7 +110,7 @@ class CdbClient(AbstractClient):
 
 
     def CreateAccounts(self, request):
-        """本介面(CreateAccounts)用于創建雲資料庫的帳戶，需要指定新的帳戶名和域名，以及所對應的密碼，同時可以設置賬号的備注訊息。
+        """本介面(CreateAccounts)用於創建雲資料庫的帳戶，需要指定新的帳戶名和域名，以及所對應的密碼，同時可以設置賬號的備注訊息。
 
         :param request: 調用CreateAccounts所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.CreateAccountsRequest`
@@ -138,7 +138,7 @@ class CdbClient(AbstractClient):
 
 
     def CreateBackup(self, request):
-        """本介面(CreateBackup)用于創建資料庫備份。
+        """本介面(CreateBackup)用於創建資料庫備份。
 
         :param request: 調用CreateBackup所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.CreateBackupRequest`
@@ -166,7 +166,7 @@ class CdbClient(AbstractClient):
 
 
     def CreateDBImportJob(self, request):
-        """本介面(CreateDBImportJob)用于創建雲資料庫數據導入任務。
+        """本介面(CreateDBImportJob)用於創建雲資料庫數據導入任務。
 
         注意，用戶進行數據導入任務的文件，必須提前上傳到Top Cloud 。用戶須在控制台進行文件導入。
 
@@ -196,7 +196,7 @@ class CdbClient(AbstractClient):
 
 
     def CreateDBInstance(self, request):
-        """本介面(CreateDBInstance)用于創建包年包月的雲資料庫實例（包括主實例、災備實例和只讀實例），可通過傳入實例規格、MySQL 版本号、購買時長和數量等訊息創建雲資料庫實例。
+        """本介面(CreateDBInstance)用於創建包年包月的雲資料庫實例（包括主實例、災備實例和只讀實例），可通過傳入實例規格、MySQL 版本號、購買時長和數量等訊息創建雲資料庫實例。
 
         該介面爲異步介面，您還可以使用[查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872)介面查詢該實例的詳細訊息。當該實例的Status爲1，且TaskStatus爲0，表示實例已經發貨成功。
 
@@ -232,7 +232,7 @@ class CdbClient(AbstractClient):
 
 
     def CreateDBInstanceHour(self, request):
-        """本介面(CreateDBInstanceHour)用于創建按量計費的實例，可通過傳入實例規格、MySQL 版本号和數量等訊息創建雲資料庫實例，支援主實例、災備實例和只讀實例的創建。
+        """本介面(CreateDBInstanceHour)用於創建按量計費的實例，可通過傳入實例規格、MySQL 版本號和數量等訊息創建雲資料庫實例，支援主實例、災備實例和只讀實例的創建。
 
         該介面爲異步介面，您還可以使用[查詢實例清單](https://cloud.taifucloud.com/document/api/236/15872)介面查詢該實例的詳細訊息。當該實例的Status爲1，且TaskStatus爲0，表示實例已經發貨成功。
 
@@ -268,7 +268,7 @@ class CdbClient(AbstractClient):
 
 
     def CreateParamTemplate(self, request):
-        """該介面（CreateParamTemplate）用于創建參數範本。
+        """該介面（CreateParamTemplate）用於創建參數範本。
 
         :param request: 調用CreateParamTemplate所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.CreateParamTemplateRequest`
@@ -296,7 +296,7 @@ class CdbClient(AbstractClient):
 
 
     def DeleteAccounts(self, request):
-        """本介面(DeleteAccounts)用于删除雲資料庫的帳戶。
+        """本介面(DeleteAccounts)用於删除雲資料庫的帳戶。
 
         :param request: 調用DeleteAccounts所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DeleteAccountsRequest`
@@ -324,7 +324,7 @@ class CdbClient(AbstractClient):
 
 
     def DeleteBackup(self, request):
-        """本介面(DeleteBackup)用于删除資料庫備份。
+        """本介面(DeleteBackup)用於删除資料庫備份。
 
         :param request: 調用DeleteBackup所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DeleteBackupRequest`
@@ -352,7 +352,7 @@ class CdbClient(AbstractClient):
 
 
     def DeleteParamTemplate(self, request):
-        """該介面（DeleteParamTemplate）用于删除參數範本。
+        """該介面（DeleteParamTemplate）用於删除參數範本。
 
         :param request: 調用DeleteParamTemplate所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DeleteParamTemplateRequest`
@@ -380,7 +380,7 @@ class CdbClient(AbstractClient):
 
 
     def DeleteTimeWindow(self, request):
-        """本介面(DeleteTimeWindow)用于删除雲資料庫實例的維護時間視窗。删除實例維護時間視窗之後，預設的維護時間窗爲 03:00-04:00，即當選擇在維護時間視窗内切換訪問新實例時，預設會在03:00-04:00點進行切換訪問新實例。
+        """本介面(DeleteTimeWindow)用於删除雲資料庫實例的維護時間視窗。删除實例維護時間視窗之後，預設的維護時間窗爲 03:00-04:00，即當選擇在維護時間視窗内切換訪問新實例時，預設會在03:00-04:00點進行切換訪問新實例。
 
         :param request: 調用DeleteTimeWindow所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DeleteTimeWindowRequest`
@@ -408,7 +408,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeAccountPrivileges(self, request):
-        """本介面(DescribeAccountPrivileges)用于查詢雲資料庫帳戶支援的權限訊息。
+        """本介面(DescribeAccountPrivileges)用於查詢雲資料庫帳戶支援的權限訊息。
 
         :param request: 調用DescribeAccountPrivileges所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeAccountPrivilegesRequest`
@@ -436,7 +436,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeAccounts(self, request):
-        """本介面(DescribeAccounts)用于查詢雲資料庫的所有帳戶訊息。
+        """本介面(DescribeAccounts)用於查詢雲資料庫的所有帳戶訊息。
 
         :param request: 調用DescribeAccounts所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeAccountsRequest`
@@ -464,7 +464,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeAsyncRequestInfo(self, request):
-        """本介面(DescribeAsyncRequestInfo)用于查詢雲資料庫實例異步任務的執行結果。
+        """本介面(DescribeAsyncRequestInfo)用於查詢雲資料庫實例異步任務的執行結果。
 
         :param request: 調用DescribeAsyncRequestInfo所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeAsyncRequestInfoRequest`
@@ -492,7 +492,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeBackupConfig(self, request):
-        """本介面(DescribeBackupConfig)用于查詢資料庫備份配置訊息。
+        """本介面(DescribeBackupConfig)用於查詢資料庫備份配置訊息。
 
         :param request: 調用DescribeBackupConfig所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeBackupConfigRequest`
@@ -520,7 +520,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeBackupDatabases(self, request):
-        """本介面(DescribeBackupDatabases)用于查詢備份資料庫清單 (将廢棄)。
+        """本介面(DescribeBackupDatabases)用於查詢備份資料庫清單 (将廢棄)。
 
         :param request: 調用DescribeBackupDatabases所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeBackupDatabasesRequest`
@@ -548,7 +548,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeBackupTables(self, request):
-        """本介面(DescribeBackupTables)用于查詢指定的資料庫的備份數據表名 (将廢棄)。
+        """本介面(DescribeBackupTables)用於查詢指定的資料庫的備份數據表名 (将廢棄)。
 
         :param request: 調用DescribeBackupTables所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeBackupTablesRequest`
@@ -576,7 +576,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeBackups(self, request):
-        """本介面(DescribeBackups)用于查詢雲資料庫實例的備份數據。
+        """本介面(DescribeBackups)用於查詢雲資料庫實例的備份數據。
 
         :param request: 調用DescribeBackups所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeBackupsRequest`
@@ -604,7 +604,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeBinlogs(self, request):
-        """本介面(DescribeBinlogs)用于查詢雲資料庫實例的二進制數據。
+        """本介面(DescribeBinlogs)用於查詢雲資料庫實例的二進制數據。
 
         :param request: 調用DescribeBinlogs所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeBinlogsRequest`
@@ -632,7 +632,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeDBImportRecords(self, request):
-        """本介面(DescribeDBImportRecords)用于查詢雲資料庫導入任務操作日志。
+        """本介面(DescribeDBImportRecords)用於查詢雲資料庫導入任務操作日志。
 
         :param request: 調用DescribeDBImportRecords所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBImportRecordsRequest`
@@ -660,7 +660,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeDBInstanceCharset(self, request):
-        """本介面(DescribeDBInstanceCharset)用于查詢雲資料庫實例的字元集，獲取字元集的名稱。
+        """本介面(DescribeDBInstanceCharset)用於查詢雲資料庫實例的字元集，獲取字元集的名稱。
 
         :param request: 調用DescribeDBInstanceCharset所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBInstanceCharsetRequest`
@@ -688,7 +688,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeDBInstanceConfig(self, request):
-        """本介面(DescribeDBInstanceConfig)用于雲資料庫實例的配置訊息，包括同步模式，佈署模式等。
+        """本介面(DescribeDBInstanceConfig)用於雲資料庫實例的配置訊息，包括同步模式，佈署模式等。
 
         :param request: 調用DescribeDBInstanceConfig所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBInstanceConfigRequest`
@@ -716,7 +716,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeDBInstanceGTID(self, request):
-        """本介面(DescribeDBInstanceGTID)用于查詢雲資料庫實例是否開通了GTID，不支援版本爲5.5以及以下的實例。
+        """本介面(DescribeDBInstanceGTID)用於查詢雲資料庫實例是否開通了GTID，不支援版本爲5.5以及以下的實例。
 
         :param request: 調用DescribeDBInstanceGTID所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBInstanceGTIDRequest`
@@ -744,7 +744,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeDBInstanceRebootTime(self, request):
-        """本介面(DescribeDBInstanceRebootTime)用于查詢雲資料庫實例重啓預計所需的時間。
+        """本介面(DescribeDBInstanceRebootTime)用於查詢雲資料庫實例重啓預計所需的時間。
 
         :param request: 調用DescribeDBInstanceRebootTime所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBInstanceRebootTimeRequest`
@@ -772,7 +772,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeDBInstances(self, request):
-        """本介面(DescribeDBInstances)用于查詢雲資料庫實例清單，支援通過項目ID、實例ID、訪問網址、實例狀态等過濾條件來篩選實例。支援查詢主實例、災備實例和只讀實例訊息清單。
+        """本介面(DescribeDBInstances)用於查詢雲資料庫實例清單，支援通過項目ID、實例ID、訪問網址、實例狀态等過濾條件來篩選實例。支援查詢主實例、災備實例和只讀實例訊息清單。
 
         :param request: 調用DescribeDBInstances所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBInstancesRequest`
@@ -800,7 +800,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeDBPrice(self, request):
-        """本介面(DescribeDBPrice)用于查詢雲資料庫實例的價格，支援查詢按量計費或者包年包月的價格。可傳入實例類型、購買時長、購買數量、内存大小、硬碟大小和可用區訊息等來查詢實例價格。
+        """本介面(DescribeDBPrice)用於查詢雲資料庫實例的價格，支援查詢按量計費或者包年包月的價格。可傳入實例類型、購買時長、購買數量、内存大小、硬碟大小和可用區訊息等來查詢實例價格。
 
         注意：對某個地域進行詢價，請使用對應地域的接入點，接入點訊息請參照<a href="https://cloud.taifucloud.com/document/api/236/15832">服務網址</a>文件。例如：對 地域進行詢價，請把請求發到：cdb.ap-guangzhou.taifucloudcloudapi.com。同理對 地域詢價，把請求發到：cdb.ap-shanghai.taifucloudcloudapi.com
 
@@ -830,7 +830,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeDBSecurityGroups(self, request):
-        """本介面(DescribeDBSecurityGroups)用于查詢實例的安全組詳情。
+        """本介面(DescribeDBSecurityGroups)用於查詢實例的安全組詳情。
 
         :param request: 調用DescribeDBSecurityGroups所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBSecurityGroupsRequest`
@@ -858,7 +858,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeDBSwitchRecords(self, request):
-        """本介面(DescribeDBSwitchRecords)用于查詢雲資料庫實例切換記錄。
+        """本介面(DescribeDBSwitchRecords)用於查詢雲資料庫實例切換記錄。
 
         :param request: 調用DescribeDBSwitchRecords所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBSwitchRecordsRequest`
@@ -886,7 +886,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeDBZoneConfig(self, request):
-        """本介面(DescribeDBZoneConfig)用于查詢可創建的雲資料庫各地域可售賣的規格配置。
+        """本介面(DescribeDBZoneConfig)用於查詢可創建的雲資料庫各地域可售賣的規格配置。
 
         :param request: 調用DescribeDBZoneConfig所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDBZoneConfigRequest`
@@ -914,7 +914,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeDatabases(self, request):
-        """本介面(DescribeDatabases)用于查詢雲資料庫實例的資料庫訊息。
+        """本介面(DescribeDatabases)用於查詢雲資料庫實例的資料庫訊息。
 
         :param request: 調用DescribeDatabases所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDatabasesRequest`
@@ -942,7 +942,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeDefaultParams(self, request):
-        """該介面（DescribeDefaultParams）用于查詢預設的可設置參數清單。
+        """該介面（DescribeDefaultParams）用於查詢預設的可設置參數清單。
 
         :param request: 調用DescribeDefaultParams所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDefaultParamsRequest`
@@ -970,7 +970,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeDeviceMonitorInfo(self, request):
-        """本介面（DescribeDeviceMonitorInfo）用于查詢雲資料庫物理機當天的監控訊息，暫只支援内存488G、硬碟6T的實例查詢。
+        """本介面（DescribeDeviceMonitorInfo）用於查詢雲資料庫物理機當天的監控訊息，暫只支援内存488G、硬碟6T的實例查詢。
 
         :param request: 調用DescribeDeviceMonitorInfo所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeDeviceMonitorInfoRequest`
@@ -998,7 +998,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeInstanceParamRecords(self, request):
-        """該介面（DescribeInstanceParamRecords）用于查詢實例參數修改曆史。
+        """該介面（DescribeInstanceParamRecords）用於查詢實例參數修改曆史。
 
         :param request: 調用DescribeInstanceParamRecords所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeInstanceParamRecordsRequest`
@@ -1026,7 +1026,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeInstanceParams(self, request):
-        """該介面（DescribeInstanceParams）用于查詢實例的參數清單。
+        """該介面（DescribeInstanceParams）用於查詢實例的參數清單。
 
         :param request: 調用DescribeInstanceParams所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeInstanceParamsRequest`
@@ -1054,7 +1054,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeParamTemplateInfo(self, request):
-        """該介面（DescribeParamTemplateInfo）用于查詢參數範本詳情。
+        """該介面（DescribeParamTemplateInfo）用於查詢參數範本詳情。
 
         :param request: 調用DescribeParamTemplateInfo所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeParamTemplateInfoRequest`
@@ -1110,7 +1110,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeProjectSecurityGroups(self, request):
-        """本介面(DescribeProjectSecurityGroups)用于查詢項目的安全組詳情。
+        """本介面(DescribeProjectSecurityGroups)用於查詢項目的安全組詳情。
 
         :param request: 調用DescribeProjectSecurityGroups所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeProjectSecurityGroupsRequest`
@@ -1138,7 +1138,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeRollbackRangeTime(self, request):
-        """本介面(DescribeRollbackRangeTime)用于查詢雲資料庫實例可回檔的時間範圍。
+        """本介面(DescribeRollbackRangeTime)用於查詢雲資料庫實例可回檔的時間範圍。
 
         :param request: 調用DescribeRollbackRangeTime所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeRollbackRangeTimeRequest`
@@ -1166,7 +1166,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeSlowLogs(self, request):
-        """本介面(DescribeSlowLogs)用于獲取雲資料庫實例的慢查詢日志。
+        """本介面(DescribeSlowLogs)用於獲取雲資料庫實例的慢查詢日志。
 
         :param request: 調用DescribeSlowLogs所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeSlowLogsRequest`
@@ -1194,7 +1194,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeSupportedPrivileges(self, request):
-        """本介面(DescribeSupportedPrivileges)用于查詢雲資料庫的支援的權限訊息，包括全局權限，資料庫權限，表權限以及列權限。
+        """本介面(DescribeSupportedPrivileges)用於查詢雲資料庫的支援的權限訊息，包括全局權限，資料庫權限，表權限以及列權限。
 
         :param request: 調用DescribeSupportedPrivileges所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeSupportedPrivilegesRequest`
@@ -1222,7 +1222,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeTables(self, request):
-        """本介面(DescribeTables)用于查詢雲資料庫實例的資料庫表訊息。
+        """本介面(DescribeTables)用於查詢雲資料庫實例的資料庫表訊息。
 
         :param request: 調用DescribeTables所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeTablesRequest`
@@ -1250,7 +1250,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeTagsOfInstanceIds(self, request):
-        """獲取實例綁定的标簽
+        """獲取實例綁定的標簽
 
         :param request: 調用DescribeTagsOfInstanceIds所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeTagsOfInstanceIdsRequest`
@@ -1278,7 +1278,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeTasks(self, request):
-        """本介面(DescribeTasks)用于查詢雲資料庫實例任務清單。
+        """本介面(DescribeTasks)用於查詢雲資料庫實例任務清單。
 
         :param request: 調用DescribeTasks所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeTasksRequest`
@@ -1306,7 +1306,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeTimeWindow(self, request):
-        """本介面(DescribeTimeWindow)用于查詢雲資料庫實例的維護時間視窗。
+        """本介面(DescribeTimeWindow)用於查詢雲資料庫實例的維護時間視窗。
 
         :param request: 調用DescribeTimeWindow所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeTimeWindowRequest`
@@ -1334,7 +1334,7 @@ class CdbClient(AbstractClient):
 
 
     def DescribeUploadedFiles(self, request):
-        """本介面(DescribeUploadedFiles)用于查詢用戶導入的SQL文件清單。
+        """本介面(DescribeUploadedFiles)用於查詢用戶導入的SQL文件清單。
 
         :param request: 調用DescribeUploadedFiles所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DescribeUploadedFilesRequest`
@@ -1362,7 +1362,7 @@ class CdbClient(AbstractClient):
 
 
     def DisassociateSecurityGroups(self, request):
-        """本介面(DisassociateSecurityGroups)用于安全組批次解綁實例。
+        """本介面(DisassociateSecurityGroups)用於安全組批次解綁實例。
 
         :param request: 調用DisassociateSecurityGroups所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.DisassociateSecurityGroupsRequest`
@@ -1390,7 +1390,7 @@ class CdbClient(AbstractClient):
 
 
     def InitDBInstances(self, request):
-        """本介面(InitDBInstances)用于初始化雲資料庫實例，包括初始化密碼、預設字元集、實例端口号等
+        """本介面(InitDBInstances)用於初始化雲資料庫實例，包括初始化密碼、預設字元集、實例端口號等
 
         :param request: 調用InitDBInstances所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.InitDBInstancesRequest`
@@ -1418,7 +1418,7 @@ class CdbClient(AbstractClient):
 
 
     def InquiryPriceUpgradeInstances(self, request):
-        """本介面(InquiryPriceUpgradeInstances)用于查詢雲資料庫實例升級的價格，支援查詢按量計費或者包年包月實例的升級價格，實例類型支援主實例、災備實例和只讀實例。
+        """本介面(InquiryPriceUpgradeInstances)用於查詢雲資料庫實例升級的價格，支援查詢按量計費或者包年包月實例的升級價格，實例類型支援主實例、災備實例和只讀實例。
 
         :param request: 調用InquiryPriceUpgradeInstances所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.InquiryPriceUpgradeInstancesRequest`
@@ -1446,7 +1446,7 @@ class CdbClient(AbstractClient):
 
 
     def IsolateDBInstance(self, request):
-        """本介面(IsolateDBInstance)用于銷毀雲資料庫實例，銷毀之後不能通過IP和端口訪問資料庫，按量計費實例銷毀後直接下線。
+        """本介面(IsolateDBInstance)用於銷毀雲資料庫實例，銷毀之後不能通過IP和端口訪問資料庫，按量計費實例銷毀後直接下線。
 
         :param request: 調用IsolateDBInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.IsolateDBInstanceRequest`
@@ -1474,7 +1474,7 @@ class CdbClient(AbstractClient):
 
 
     def ModifyAccountDescription(self, request):
-        """本介面(ModifyAccountDescription)用于修改雲資料庫帳戶的備注訊息。
+        """本介面(ModifyAccountDescription)用於修改雲資料庫帳戶的備注訊息。
 
         :param request: 調用ModifyAccountDescription所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyAccountDescriptionRequest`
@@ -1502,7 +1502,7 @@ class CdbClient(AbstractClient):
 
 
     def ModifyAccountPassword(self, request):
-        """本介面(ModifyAccountPassword)用于修改雲資料庫帳戶的密碼。
+        """本介面(ModifyAccountPassword)用於修改雲資料庫帳戶的密碼。
 
         :param request: 調用ModifyAccountPassword所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyAccountPasswordRequest`
@@ -1530,7 +1530,7 @@ class CdbClient(AbstractClient):
 
 
     def ModifyAccountPrivileges(self, request):
-        """本介面(ModifyAccountPrivileges)用于修改雲資料庫的帳戶的權限訊息。
+        """本介面(ModifyAccountPrivileges)用於修改雲資料庫的帳戶的權限訊息。
 
         :param request: 調用ModifyAccountPrivileges所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyAccountPrivilegesRequest`
@@ -1558,7 +1558,7 @@ class CdbClient(AbstractClient):
 
 
     def ModifyAutoRenewFlag(self, request):
-        """本介面(ModifyAutoRenewFlag)用于修改雲資料庫實例的自動續約标記。僅支援包年包月的實例設置自動續約标記。
+        """本介面(ModifyAutoRenewFlag)用於修改雲資料庫實例的自動續約標記。僅支援包年包月的實例設置自動續約標記。
 
         :param request: 調用ModifyAutoRenewFlag所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyAutoRenewFlagRequest`
@@ -1586,7 +1586,7 @@ class CdbClient(AbstractClient):
 
 
     def ModifyBackupConfig(self, request):
-        """本介面(ModifyBackupConfig)用于修改資料庫備份配置訊息。
+        """本介面(ModifyBackupConfig)用於修改資料庫備份配置訊息。
 
         :param request: 調用ModifyBackupConfig所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyBackupConfigRequest`
@@ -1614,7 +1614,7 @@ class CdbClient(AbstractClient):
 
 
     def ModifyDBInstanceName(self, request):
-        """本介面(ModifyDBInstanceName)用于修改雲資料庫實例的名稱。
+        """本介面(ModifyDBInstanceName)用於修改雲資料庫實例的名稱。
 
         :param request: 調用ModifyDBInstanceName所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyDBInstanceNameRequest`
@@ -1642,7 +1642,7 @@ class CdbClient(AbstractClient):
 
 
     def ModifyDBInstanceProject(self, request):
-        """本介面(ModifyDBInstanceProject)用于修改雲資料庫實例的所屬項目。
+        """本介面(ModifyDBInstanceProject)用於修改雲資料庫實例的所屬項目。
 
         :param request: 調用ModifyDBInstanceProject所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyDBInstanceProjectRequest`
@@ -1670,7 +1670,7 @@ class CdbClient(AbstractClient):
 
 
     def ModifyDBInstanceSecurityGroups(self, request):
-        """本介面(ModifyDBInstanceSecurityGroups)用于修改實例綁定的安全組。
+        """本介面(ModifyDBInstanceSecurityGroups)用於修改實例綁定的安全組。
 
         :param request: 調用ModifyDBInstanceSecurityGroups所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyDBInstanceSecurityGroupsRequest`
@@ -1698,7 +1698,7 @@ class CdbClient(AbstractClient):
 
 
     def ModifyDBInstanceVipVport(self, request):
-        """本介面(ModifyDBInstanceVipVport)用于修改雲資料庫實例的IP和端口号，也可進行基礎網絡轉VPC網絡和VPC網絡下的子網變更。
+        """本介面(ModifyDBInstanceVipVport)用於修改雲資料庫實例的IP和端口號，也可進行基礎網絡轉VPC網絡和VPC網絡下的子網變更。
 
         :param request: 調用ModifyDBInstanceVipVport所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyDBInstanceVipVportRequest`
@@ -1726,7 +1726,7 @@ class CdbClient(AbstractClient):
 
 
     def ModifyInstanceParam(self, request):
-        """本介面(ModifyInstanceParam)用于修改雲資料庫實例的參數。
+        """本介面(ModifyInstanceParam)用於修改雲資料庫實例的參數。
 
         :param request: 調用ModifyInstanceParam所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyInstanceParamRequest`
@@ -1754,7 +1754,7 @@ class CdbClient(AbstractClient):
 
 
     def ModifyInstanceTag(self, request):
-        """可以對實例标簽進行添加、修改或者删除
+        """可以對實例標簽進行添加、修改或者删除
 
         :param request: 調用ModifyInstanceTag所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyInstanceTagRequest`
@@ -1782,7 +1782,7 @@ class CdbClient(AbstractClient):
 
 
     def ModifyParamTemplate(self, request):
-        """該介面（ModifyParamTemplate）用于修改參數範本。
+        """該介面（ModifyParamTemplate）用於修改參數範本。
 
         :param request: 調用ModifyParamTemplate所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyParamTemplateRequest`
@@ -1810,7 +1810,7 @@ class CdbClient(AbstractClient):
 
 
     def ModifyTimeWindow(self, request):
-        """本介面(ModifyTimeWindow)用于更新雲資料庫實例的維護時間視窗。
+        """本介面(ModifyTimeWindow)用於更新雲資料庫實例的維護時間視窗。
 
         :param request: 調用ModifyTimeWindow所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.ModifyTimeWindowRequest`
@@ -1838,7 +1838,7 @@ class CdbClient(AbstractClient):
 
 
     def OpenDBInstanceGTID(self, request):
-        """本介面(OpenDBInstanceGTID)用于開啓雲資料庫實例的GTID，只支援版本爲5.6以及以上的實例。
+        """本介面(OpenDBInstanceGTID)用於開啓雲資料庫實例的GTID，只支援版本爲5.6以及以上的實例。
 
         :param request: 調用OpenDBInstanceGTID所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.OpenDBInstanceGTIDRequest`
@@ -1866,7 +1866,7 @@ class CdbClient(AbstractClient):
 
 
     def OpenWanService(self, request):
-        """本介面(OpenWanService)用于開通實例外網訪問。
+        """本介面(OpenWanService)用於開通實例外網訪問。
 
         注意，實例開通外網訪問之前，需要先将實例進行[實例初始化](https://cloud.taifucloud.com/document/api/236/15873)操作。
 
@@ -1896,7 +1896,7 @@ class CdbClient(AbstractClient):
 
 
     def RenewDBInstance(self, request):
-        """本介面(RenewDBInstance)用于續約雲資料庫實例，僅支援付費模式爲包年包月的實例。按量計費實例不需要續約。
+        """本介面(RenewDBInstance)用於續約雲資料庫實例，僅支援付費模式爲包年包月的實例。按量計費實例不需要續約。
 
         :param request: 調用RenewDBInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.RenewDBInstanceRequest`
@@ -1924,11 +1924,11 @@ class CdbClient(AbstractClient):
 
 
     def RestartDBInstances(self, request):
-        """本介面(RestartDBInstances)用于重啓雲資料庫實例。
+        """本介面(RestartDBInstances)用於重啓雲資料庫實例。
 
         注意：
         1、本介面只支援主實例進行重啓操作；
-        2、實例狀态必須爲正常，并且沒有其他異步任務在執行中。
+        2、實例狀态必須爲正常，並且沒有其他異步任務在執行中。
 
         :param request: 調用RestartDBInstances所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.RestartDBInstancesRequest`
@@ -1956,7 +1956,7 @@ class CdbClient(AbstractClient):
 
 
     def StartBatchRollback(self, request):
-        """該介面（StartBatchRollback）用于批次回檔雲資料庫實例的庫表。
+        """該介面（StartBatchRollback）用於批次回檔雲資料庫實例的庫表。
 
         :param request: 調用StartBatchRollback所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.StartBatchRollbackRequest`
@@ -1984,7 +1984,7 @@ class CdbClient(AbstractClient):
 
 
     def StopDBImportJob(self, request):
-        """本介面(StopDBImportJob)用于終止數據導入任務。
+        """本介面(StopDBImportJob)用於終止數據導入任務。
 
         :param request: 調用StopDBImportJob所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.StopDBImportJobRequest`
@@ -2012,7 +2012,7 @@ class CdbClient(AbstractClient):
 
 
     def SwitchForUpgrade(self, request):
-        """本介面(SwitchForUpgrade)用于切換訪問新實例，針對主升級中的實例處于待切換狀态時，用戶可主動發起該流程
+        """本介面(SwitchForUpgrade)用於切換訪問新實例，針對主升級中的實例處於待切換狀态時，用戶可主動發起該流程
 
         :param request: 調用SwitchForUpgrade所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.SwitchForUpgradeRequest`
@@ -2040,7 +2040,7 @@ class CdbClient(AbstractClient):
 
 
     def UpgradeDBInstance(self, request):
-        """本介面(UpgradeDBInstance)用于升級雲資料庫實例，實例類型支援主實例、災備實例和只讀實例
+        """本介面(UpgradeDBInstance)用於升級雲資料庫實例，實例類型支援主實例、災備實例和只讀實例
 
         :param request: 調用UpgradeDBInstance所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.UpgradeDBInstanceRequest`
@@ -2068,7 +2068,7 @@ class CdbClient(AbstractClient):
 
 
     def UpgradeDBInstanceEngineVersion(self, request):
-        """本介面(UpgradeDBInstanceEngineVersion)用于升級雲資料庫實例版本，實例類型支援主實例、災備實例和只讀實例。
+        """本介面(UpgradeDBInstanceEngineVersion)用於升級雲資料庫實例版本，實例類型支援主實例、災備實例和只讀實例。
 
         :param request: 調用UpgradeDBInstanceEngineVersion所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.UpgradeDBInstanceEngineVersionRequest`
@@ -2096,7 +2096,7 @@ class CdbClient(AbstractClient):
 
 
     def VerifyRootAccount(self, request):
-        """本介面(VerifyRootAccount)用于校驗雲資料庫實例的ROOT賬号是否有足夠的權限進行授權操作。
+        """本介面(VerifyRootAccount)用於校驗雲資料庫實例的ROOT賬號是否有足夠的權限進行授權操作。
 
         :param request: 調用VerifyRootAccount所需參數的結構體。
         :type request: :class:`taifucloudcloud.cdb.v20170320.models.VerifyRootAccountRequest`

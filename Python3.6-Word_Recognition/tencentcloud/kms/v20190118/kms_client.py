@@ -54,7 +54,7 @@ class KmsClient(AbstractClient):
 
 
     def Decrypt(self, request):
-        """本介面用于解密密文，得到明文數據。
+        """本介面用於解密密文，得到明文數據。
 
         :param request: 調用Decrypt所需參數的結構體。
         :type request: :class:`taifucloudcloud.kms.v20190118.models.DecryptRequest`
@@ -82,7 +82,7 @@ class KmsClient(AbstractClient):
 
 
     def DescribeKey(self, request):
-        """用于獲取指定KeyId的主金鑰屬性詳情訊息。
+        """用於獲取指定KeyId的主金鑰屬性詳情訊息。
 
         :param request: 調用DescribeKey所需參數的結構體。
         :type request: :class:`taifucloudcloud.kms.v20190118.models.DescribeKeyRequest`
@@ -110,7 +110,7 @@ class KmsClient(AbstractClient):
 
 
     def DescribeKeys(self, request):
-        """該介面用于批次獲取主金鑰屬性訊息。
+        """該介面用於批次獲取主金鑰屬性訊息。
 
         :param request: 調用DescribeKeys所需參數的結構體。
         :type request: :class:`taifucloudcloud.kms.v20190118.models.DescribeKeysRequest`
@@ -138,7 +138,7 @@ class KmsClient(AbstractClient):
 
 
     def DisableKey(self, request):
-        """本介面用于禁用一個主金鑰，處于禁用狀态的Key無法用于加密、解密操作。
+        """本介面用於禁用一個主金鑰，處於禁用狀态的Key無法用於加密、解密操作。
 
         :param request: 調用DisableKey所需參數的結構體。
         :type request: :class:`taifucloudcloud.kms.v20190118.models.DisableKeyRequest`
@@ -194,7 +194,7 @@ class KmsClient(AbstractClient):
 
 
     def DisableKeys(self, request):
-        """該介面用于批次禁止CMK的使用。
+        """該介面用於批次禁止CMK的使用。
 
         :param request: 調用DisableKeys所需參數的結構體。
         :type request: :class:`taifucloudcloud.kms.v20190118.models.DisableKeysRequest`
@@ -222,7 +222,7 @@ class KmsClient(AbstractClient):
 
 
     def EnableKey(self, request):
-        """用于啓用一個指定的CMK。
+        """用於啓用一個指定的CMK。
 
         :param request: 調用EnableKey所需參數的結構體。
         :type request: :class:`taifucloudcloud.kms.v20190118.models.EnableKeyRequest`
@@ -278,7 +278,7 @@ class KmsClient(AbstractClient):
 
 
     def EnableKeys(self, request):
-        """該介面用于批次啓用CMK。
+        """該介面用於批次啓用CMK。
 
         :param request: 調用EnableKeys所需參數的結構體。
         :type request: :class:`taifucloudcloud.kms.v20190118.models.EnableKeysRequest`
@@ -306,7 +306,7 @@ class KmsClient(AbstractClient):
 
 
     def Encrypt(self, request):
-        """本介面用于加密最多爲4KB任意數據，可用于加密資料庫密碼，RSA Key，或其它較小的敏感訊息。對于應用的數據加密，使用GenerateDataKey生成的DataKey進行本地數據的加解密操作
+        """本介面用於加密最多爲4KB任意數據，可用於加密資料庫密碼，RSA Key，或其它較小的敏感訊息。對於應用的數據加密，使用GenerateDataKey生成的DataKey進行本地數據的加解密操作
 
         :param request: 調用Encrypt所需參數的結構體。
         :type request: :class:`taifucloudcloud.kms.v20190118.models.EncryptRequest`
@@ -390,7 +390,7 @@ class KmsClient(AbstractClient):
 
 
     def GetServiceStatus(self, request):
-        """用于查詢該用戶是否已開通KMS服務
+        """用於查詢該用戶是否已開通KMS服務
 
         :param request: 調用GetServiceStatus所需參數的結構體。
         :type request: :class:`taifucloudcloud.kms.v20190118.models.GetServiceStatusRequest`
@@ -446,7 +446,7 @@ class KmsClient(AbstractClient):
 
 
     def ListKeys(self, request):
-        """列出賬号下面的金鑰清單（KeyId訊息）。
+        """列出賬號下面的金鑰清單（KeyId訊息）。
 
         :param request: 調用ListKeys所需參數的結構體。
         :type request: :class:`taifucloudcloud.kms.v20190118.models.ListKeysRequest`
@@ -502,7 +502,7 @@ class KmsClient(AbstractClient):
 
 
     def UpdateAlias(self, request):
-        """用于修改CMK的别名。
+        """用於修改CMK的别名。
 
         :param request: 調用UpdateAlias所需參數的結構體。
         :type request: :class:`taifucloudcloud.kms.v20190118.models.UpdateAliasRequest`
@@ -530,7 +530,7 @@ class KmsClient(AbstractClient):
 
 
     def UpdateKeyDescription(self, request):
-        """該介面用于對指定的cmk修改描述訊息。
+        """該介面用於對指定的cmk修改描述訊息。
 
         :param request: 調用UpdateKeyDescription所需參數的結構體。
         :type request: :class:`taifucloudcloud.kms.v20190118.models.UpdateKeyDescriptionRequest`

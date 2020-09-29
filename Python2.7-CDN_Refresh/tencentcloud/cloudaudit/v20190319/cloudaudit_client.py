@@ -30,7 +30,7 @@ class CloudauditClient(AbstractClient):
         1、如果IsCreateNewBucket的值存在的話，cosRegion和cosBucketName都是必填參數。
         2、如果IsEnableCmqNotify的值是1的話，IsCreateNewQueue、CmqRegion和CmqQueueName都是必填參數。
         3、如果IsEnableCmqNotify的值是0的話，IsCreateNewQueue、CmqRegion和CmqQueueName都不能傳。
-        4、如果IsEnableKmsEncry的值是1的話，KmsRegion和KeyId屬于必填項
+        4、如果IsEnableKmsEncry的值是1的話，KmsRegion和KeyId屬於必填項
 
         :param request: Request instance for CreateAudit.
         :type request: :class:`taifucloudcloud.cloudaudit.v20190319.models.CreateAuditRequest`
@@ -254,7 +254,7 @@ class CloudauditClient(AbstractClient):
 
 
     def LookUpEvents(self, request):
-        """用于對操作日志進行檢索，便于用戶進行查詢相關的操作訊息。
+        """用於對操作日志進行檢索，便於用戶進行查詢相關的操作訊息。
 
         :param request: Request instance for LookUpEvents.
         :type request: :class:`taifucloudcloud.cloudaudit.v20190319.models.LookUpEventsRequest`
@@ -342,7 +342,7 @@ class CloudauditClient(AbstractClient):
         1、如果IsCreateNewBucket的值存在的話，cosRegion和cosBucketName都是必填參數。
         2、如果IsEnableCmqNotify的值是1的話，IsCreateNewQueue、CmqRegion和CmqQueueName都是必填參數。
         3、如果IsEnableCmqNotify的值是0的話，IsCreateNewQueue、CmqRegion和CmqQueueName都不能傳。
-        4、如果IsEnableKmsEncry的值是1的話，KmsRegion和KeyId屬于必填項
+        4、如果IsEnableKmsEncry的值是1的話，KmsRegion和KeyId屬於必填項
 
         :param request: Request instance for UpdateAudit.
         :type request: :class:`taifucloudcloud.cloudaudit.v20190319.models.UpdateAuditRequest`

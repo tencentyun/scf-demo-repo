@@ -103,21 +103,21 @@ class CreatePolicyGroupCondition(AbstractModel):
 
     def __init__(self):
         """
-        :param MetricId: 指标Id
+        :param MetricId: 指標Id
         :type MetricId: int
         :param AlarmNotifyType: 告警發送收斂類型。0連續告警，1指數告警
         :type AlarmNotifyType: int
         :param AlarmNotifyPeriod: 告警發送週期單位秒。<0 不觸發, 0 只觸發一次, >0 每隔triggerTime秒觸發一次
         :type AlarmNotifyPeriod: int
-        :param CalcType: 比較類型，1表示大于，2表示大于等于，3表示小於，4表示小於等于，5表示相等，6表示不相等。如果指标有配置預設比較類型值可以不填。
+        :param CalcType: 比較類型，1表示大於，2表示大於等於，3表示小於，4表示小於等於，5表示相等，6表示不相等。如果指標有配置預設比較類型值可以不填。
         :type CalcType: int
-        :param CalcValue: 比較的值，如果指标不必須CalcValue可不填
+        :param CalcValue: 比較的值，如果指標不必須CalcValue可不填
         :type CalcValue: float
-        :param CalcPeriod: 數據聚合週期(單位秒)，若指标有預設值可不填
+        :param CalcPeriod: 數據聚合週期(單位秒)，若指標有預設值可不填
         :type CalcPeriod: int
         :param ContinuePeriod: 持續幾個檢測週期觸發規則會告警
         :type ContinuePeriod: int
-        :param RuleId: 如果通過模版創建，需要傳入模版中該指标的對應RuleId
+        :param RuleId: 如果通過模版創建，需要傳入模版中該指標的對應RuleId
         :type RuleId: int
         """
         self.MetricId = None
@@ -154,7 +154,7 @@ class CreatePolicyGroupEventCondition(AbstractModel):
         :type AlarmNotifyType: int
         :param AlarmNotifyPeriod: 告警發送週期單位秒。<0 不觸發, 0 只觸發一次, >0 每隔triggerTime秒觸發一次
         :type AlarmNotifyPeriod: int
-        :param RuleId: 如果通過模版創建，需要傳入模版中該指标的對應RuleId
+        :param RuleId: 如果通過模版創建，需要傳入模版中該指標的對應RuleId
         :type RuleId: int
         """
         self.EventId = None
@@ -199,7 +199,7 @@ class CreatePolicyGroupRequest(AbstractModel):
         :type EventConditions: list of CreatePolicyGroupEventCondition
         :param BackEndCall: 是否爲後端調用。當且僅當值爲1時，後台拉取策略模版中的規則填充入Conditions以及EventConditions欄位
         :type BackEndCall: int
-        :param IsUnionRule: 指标告警規則的且或關系，0表示或規則(滿足任意規則就告警)，1表示且規則(滿足所有規則才告警)
+        :param IsUnionRule: 指標告警規則的且或關系，0表示或規則(滿足任意規則就告警)，1表示且規則(滿足所有規則才告警)
         :type IsUnionRule: int
         """
         self.GroupName = None
@@ -485,7 +485,7 @@ class DescribeBaseMetricsRequest(AbstractModel):
         """
         :param Namespace: 業務命名空間，各個雲産品的業務命名空間不同。如需獲取業務命名空間，請前往各産品監控介面文件，例如雲伺服器的命名空間，可參見 [雲伺服器監控介面](https://cloud.taifucloud.com/document/api/248/30385)
         :type Namespace: str
-        :param MetricName: 指标名，各個雲産品的指标名不同。如需獲取指标名，請前往各産品監控介面文件，例如雲伺服器的指标名，可參見 [雲伺服器監控介面](https://cloud.taifucloud.com/document/api/248/30385)
+        :param MetricName: 指標名，各個雲産品的指標名不同。如需獲取指標名，請前往各産品監控介面文件，例如雲伺服器的指標名，可參見 [雲伺服器監控介面](https://cloud.taifucloud.com/document/api/248/30385)
         :type MetricName: str
         """
         self.Namespace = None
@@ -504,7 +504,7 @@ class DescribeBaseMetricsResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param MetricSet: 查詢得到的指标描述清單
+        :param MetricSet: 查詢得到的指標描述清單
         :type MetricSet: list of MetricSet
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -574,13 +574,13 @@ class DescribeBasicAlarmListAlarms(AbstractModel):
         :param Vpc: VPC，只有CVM有
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Vpc: str
-        :param MetricId: 指标ID
+        :param MetricId: 指標ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type MetricId: int
-        :param MetricName: 指标名
+        :param MetricName: 指標名
 注意：此欄位可能返回 null，表示取不到有效值。
         :type MetricName: str
-        :param AlarmType: 告警類型，0表示指标告警，2表示産品事件告警，3表示平台事件告警
+        :param AlarmType: 告警類型，0表示指標告警，2表示産品事件告警，3表示平台事件告警
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AlarmType: int
         :param Region: 地域
@@ -937,7 +937,7 @@ class DescribePolicyConditionListCondition(AbstractModel):
         :type EventMetrics: list of DescribePolicyConditionListEventMetric
         :param IsSupportMultiRegion: 是否支援多地域
         :type IsSupportMultiRegion: bool
-        :param Metrics: 指标告警條件
+        :param Metrics: 指標告警條件
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Metrics: list of DescribePolicyConditionListMetric
         :param Name: 策略類型名稱
@@ -1259,20 +1259,20 @@ class DescribePolicyConditionListEventMetric(AbstractModel):
 
 
 class DescribePolicyConditionListMetric(AbstractModel):
-    """指标告警配置
+    """指標告警配置
 
     """
 
     def __init__(self):
         """
-        :param ConfigManual: 指标配置
+        :param ConfigManual: 指標配置
 注意：此欄位可能返回 null，表示取不到有效值。
         :type ConfigManual: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyConditionListConfigManual`
-        :param MetricId: 指标id
+        :param MetricId: 指標id
         :type MetricId: int
-        :param MetricShowName: 指标名稱
+        :param MetricShowName: 指標名稱
         :type MetricShowName: str
-        :param MetricUnit: 指标單位
+        :param MetricUnit: 指標單位
         :type MetricUnit: str
         """
         self.ConfigManual = None
@@ -1365,21 +1365,21 @@ class DescribePolicyGroupInfoCondition(AbstractModel):
 
     def __init__(self):
         """
-        :param MetricShowName: 指标名稱
+        :param MetricShowName: 指標名稱
         :type MetricShowName: str
         :param Period: 數據聚合週期(單位秒)
         :type Period: int
-        :param MetricId: 指标id
+        :param MetricId: 指標id
         :type MetricId: int
         :param RuleId: 阈值規則id
         :type RuleId: int
-        :param Unit: 指标單位
+        :param Unit: 指標單位
         :type Unit: str
         :param AlarmNotifyType: 告警發送收斂類型。0連續告警，1指數告警
         :type AlarmNotifyType: int
         :param AlarmNotifyPeriod: 告警發送週期單位秒。<0 不觸發, 0 只觸發一次, >0 每隔triggerTime秒觸發一次
         :type AlarmNotifyPeriod: int
-        :param CalcType: 比較類型，1表示大于，2表示大于等于，3表示小於，4表示小於等于，5表示相等，6表示不相等，7表示日同比上漲，8表示日同比下降，9表示周同比上漲，10表示周同比下降，11表示週期環比上漲，12表示週期環比下降
+        :param CalcType: 比較類型，1表示大於，2表示大於等於，3表示小於，4表示小於等於，5表示相等，6表示不相等，7表示日同比上漲，8表示日同比下降，9表示周同比上漲，10表示周同比下降，11表示週期環比上漲，12表示週期環比下降
 注意：此欄位可能返回 null，表示取不到有效值。
         :type CalcType: int
         :param CalcValue: 檢測阈值
@@ -1747,7 +1747,7 @@ class DescribePolicyGroupListGroup(AbstractModel):
         :param InstanceGroup: 策略組綁定的實例組訊息
 注意：此欄位可能返回 null，表示取不到有效值。
         :type InstanceGroup: :class:`taifucloudcloud.monitor.v20180724.models.DescribePolicyGroupListGroupInstanceGroup`
-        :param IsUnionRule: 且或規則标識, 0表示或規則(任意一條規則滿足阈值條件就告警), 1表示且規則(所有規則都滿足阈值條件才告警)
+        :param IsUnionRule: 且或規則標識, 0表示或規則(任意一條規則滿足阈值條件就告警), 1表示且規則(所有規則都滿足阈值條件才告警)
 注意：此欄位可能返回 null，表示取不到有效值。
         :type IsUnionRule: int
         """
@@ -1887,7 +1887,7 @@ class DescribePolicyGroupListRequest(AbstractModel):
         :type ReceiverUserList: list of str
         :param Dimensions: 維度組合欄位(json字串), 例如[[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]]
         :type Dimensions: str
-        :param ConditionTempGroupId: 範本策略組id, 多個id用逗号分隔
+        :param ConditionTempGroupId: 範本策略組id, 多個id用逗號分隔
         :type ConditionTempGroupId: str
         :param ReceiverType: 過濾條件, 接收人或者接收組, user表示接收人, group表示接收組
         :type ReceiverType: str
@@ -2352,7 +2352,7 @@ class GetMonitorDataRequest(AbstractModel):
         """
         :param Namespace: 命名空間，每個雲産品會有一個命名空間
         :type Namespace: str
-        :param MetricName: 指标名稱，各個雲産品的詳細指标說明請參閱各個産品[監控介面](https://cloud.taifucloud.com/document/product/248/30384)文件
+        :param MetricName: 指標名稱，各個雲産品的詳細指標說明請參閱各個産品[監控介面](https://cloud.taifucloud.com/document/product/248/30384)文件
         :type MetricName: str
         :param Instances: 實例對象的維度組合
         :type Instances: list of Instance
@@ -2394,7 +2394,7 @@ class GetMonitorDataResponse(AbstractModel):
         """
         :param Period: 統計週期
         :type Period: int
-        :param MetricName: 指标名
+        :param MetricName: 指標名
         :type MetricName: str
         :param DataPoints: 數據點數組
         :type DataPoints: list of DataPoint
@@ -2473,15 +2473,15 @@ class InstanceGroup(AbstractModel):
 
 
 class MetricDatum(AbstractModel):
-    """指标名稱和值的封裝
+    """指標名稱和值的封裝
 
     """
 
     def __init__(self):
         """
-        :param MetricName: 指标名稱
+        :param MetricName: 指標名稱
         :type MetricName: str
-        :param Value: 指标的值
+        :param Value: 指標的值
         :type Value: int
         """
         self.MetricName = None
@@ -2494,15 +2494,15 @@ class MetricDatum(AbstractModel):
 
 
 class MetricObjectMeaning(AbstractModel):
-    """指标數據的解釋
+    """指標數據的解釋
 
     """
 
     def __init__(self):
         """
-        :param En: 指标英文解釋
+        :param En: 指標英文解釋
         :type En: str
-        :param Zh: 指标中文解釋
+        :param Zh: 指標中文解釋
         :type Zh: str
         """
         self.En = None
@@ -2515,7 +2515,7 @@ class MetricObjectMeaning(AbstractModel):
 
 
 class MetricSet(AbstractModel):
-    """對業務指标的單位及支援統計週期的描述
+    """對業務指標的單位及支援統計週期的描述
 
     """
 
@@ -2523,17 +2523,17 @@ class MetricSet(AbstractModel):
         """
         :param Namespace: 命名空間，每個雲産品會有一個命名空間
         :type Namespace: str
-        :param MetricName: 指标名稱
+        :param MetricName: 指標名稱
         :type MetricName: str
-        :param Unit: 指标使用的單位
+        :param Unit: 指標使用的單位
         :type Unit: str
-        :param UnitCname: 指标使用的單位
+        :param UnitCname: 指標使用的單位
         :type UnitCname: str
-        :param Period: 指标支援的統計週期，單位是秒，如60、300
+        :param Period: 指標支援的統計週期，單位是秒，如60、300
         :type Period: list of int
-        :param Periods: 統計週期内指标方式
+        :param Periods: 統計週期内指標方式
         :type Periods: list of PeriodsSt
-        :param Meaning: 統計指标含義解釋
+        :param Meaning: 統計指標含義解釋
         :type Meaning: :class:`taifucloudcloud.monitor.v20180724.models.MetricObjectMeaning`
         :param Dimensions: 維度描述訊息
         :type Dimensions: list of DimensionsDesc
@@ -2646,7 +2646,7 @@ class PutMonitorDataRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Metrics: 一組指标和數據
+        :param Metrics: 一組指標和數據
         :type Metrics: list of MetricDatum
         :param AnnounceIp: 上報時自行指定的 IP
         :type AnnounceIp: str

@@ -23,27 +23,27 @@ class InitOralProcessRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param SessionId: 語音段唯一标識，一段語音一個SessionId
+        :param SessionId: 語音段唯一標識，一段語音一個SessionId
         :type SessionId: str
-        :param RefText: 被評估語音對應的文本，句子模式下不超過個 20 單詞或者中文文字，段落模式不超過 120 單詞或者中文文字，中文評估使用 utf-8 編碼，自由說模式該值傳空。如需要在單詞模式和句子模式下使用自定義音素，可以通過設置 TextMode 使用[音素标注](https://cloud.taifucloud.com/document/product/884/33698)。
+        :param RefText: 被評估語音對應的文本，句子模式下不超過個 20 單詞或者中文文字，段落模式不超過 120 單詞或者中文文字，中文評估使用 utf-8 編碼，自由說模式該值傳空。如需要在單詞模式和句子模式下使用自定義音素，可以通過設置 TextMode 使用[音素標注](https://cloud.taifucloud.com/document/product/884/33698)。
         :type RefText: str
         :param WorkMode: 語音輸入模式，0：流式分片，1：非流式一次性評估
         :type WorkMode: int
         :param EvalMode: 評估模式，0：詞模式（中文評測模式下爲文字模式），1：句子模式，2：段落模式，3：自由說模式，當爲詞模式評估時，能夠提供每個音節的評估訊息，當爲句子模式時，能夠提供完整度和流利度訊息。
         :type EvalMode: int
-        :param ScoreCoeff: 評價苛刻指數，取值爲[1.0 - 4.0]範圍内的浮點數，用于平滑不同年齡段的分數，1.0爲小年齡段，4.0爲最高年齡段
+        :param ScoreCoeff: 評價苛刻指數，取值爲[1.0 - 4.0]範圍内的浮點數，用於平滑不同年齡段的分數，1.0爲小年齡段，4.0爲最高年齡段
         :type ScoreCoeff: float
-        :param SoeAppId: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數，新的 SoeAppId 可以在[控制台](https://console.cloud.taifucloud.com/soe)【應用管理】下新建。
+        :param SoeAppId: 業務應用ID，與賬號應用APPID無關，是用來方便客戶管理服務的參數，新的 SoeAppId 可以在[控制台](https://console.cloud.taifucloud.com/soe)【應用管理】下新建。
         :type SoeAppId: str
-        :param IsLongLifeSession: 長效session标識，當該參數爲1時，session的持續時間爲300s，但會一定程度上影響第一個數據包的返回速度，且TransmitOralProcess必須同時爲1才可生效。
+        :param IsLongLifeSession: 長效session標識，當該參數爲1時，session的持續時間爲300s，但會一定程度上影響第一個數據包的返回速度，且TransmitOralProcess必須同時爲1才可生效。
         :type IsLongLifeSession: int
         :param StorageMode: 音訊儲存模式，0：不儲存，1：儲存到公共物件儲存，輸出結果爲該會話最後一個分片TransmitOralProcess 返回結果 AudioUrl 欄位。
         :type StorageMode: int
-        :param SentenceInfoEnabled: 輸出斷句中間結果标識，0：不輸出，1：輸出，通過設置該參數，可以在評估過程中的分片傳輸請求中，返回已經評估斷句的中間結果，中間結果可用于用戶端 UI 更新，輸出結果爲TransmitOralProcess請求返回結果 SentenceInfoSet 欄位。
+        :param SentenceInfoEnabled: 輸出斷句中間結果標識，0：不輸出，1：輸出，通過設置該參數，可以在評估過程中的分片傳輸請求中，返回已經評估斷句的中間結果，中間結果可用於用戶端 UI 更新，輸出結果爲TransmitOralProcess請求返回結果 SentenceInfoSet 欄位。
         :type SentenceInfoEnabled: int
         :param ServerType: 評估語言，0：英文，1：中文。
         :type ServerType: int
-        :param IsAsync: 異步模式标識，0：同步模式，1：異步模式，可選值參考[服務模式](https://cloud.taifucloud.com/document/product/884/33697)。
+        :param IsAsync: 異步模式標識，0：同步模式，1：異步模式，可選值參考[服務模式](https://cloud.taifucloud.com/document/product/884/33697)。
         :type IsAsync: int
         :param TextMode: 輸入文本模式，0: 普通文本，1：[音素結構](https://cloud.taifucloud.com/document/product/884/33698)文本。
         :type TextMode: int
@@ -84,7 +84,7 @@ class InitOralProcessResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param SessionId: 語音段唯一标識，一個完整語音一個SessionId
+        :param SessionId: 語音段唯一標識，一個完整語音一個SessionId
         :type SessionId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -142,7 +142,7 @@ class SentenceInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param SentenceId: 句子序号，在段落、自由說模式下有效，表示斷句序号，最後的綜合結果的爲-1.
+        :param SentenceId: 句子序號，在段落、自由說模式下有效，表示斷句序號，最後的綜合結果的爲-1.
         :type SentenceId: int
         :param Words: 詳細發音評估結果
         :type Words: list of WordRsp
@@ -184,9 +184,9 @@ class TransmitOralProcessRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param SeqId: 流式數據包的序号，從1開始，當IsEnd欄位爲1後後續序号無意義，當IsLongLifeSession不爲1且爲非流式模式時無意義。
+        :param SeqId: 流式數據包的序號，從1開始，當IsEnd欄位爲1後後續序號無意義，當IsLongLifeSession不爲1且爲非流式模式時無意義。
         :type SeqId: int
-        :param IsEnd: 是否傳輸完畢标志，若爲0表示未完畢，若爲1則傳輸完畢開始評估，非流式模式下無意義。
+        :param IsEnd: 是否傳輸完畢標志，若爲0表示未完畢，若爲1則傳輸完畢開始評估，非流式模式下無意義。
         :type IsEnd: int
         :param VoiceFileType: 語音文件類型 	1:raw, 2:wav, 3:mp3(三種格式目前僅支援16k采樣率16bit編碼單聲道，如有不一緻可能導緻評估不準确或失敗)。
         :type VoiceFileType: int
@@ -194,13 +194,13 @@ class TransmitOralProcessRequest(AbstractModel):
         :type VoiceEncodeType: int
         :param UserVoiceData: 當前數據包數據, 流式模式下數據包大小可以按需設置，在網絡穩定時，分片大小建議設置0.5k，且必須保證分片幀完整（16bit的數據必須保證音訊長度爲偶數），編碼格式要求爲BASE64。
         :type UserVoiceData: str
-        :param SessionId: 語音段唯一标識，一個完整語音一個SessionId。
+        :param SessionId: 語音段唯一標識，一個完整語音一個SessionId。
         :type SessionId: str
-        :param SoeAppId: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數，新的 SoeAppId 可以在[控制台](https://console.cloud.taifucloud.com/soe)【應用管理】下新建。
+        :param SoeAppId: 業務應用ID，與賬號應用APPID無關，是用來方便客戶管理服務的參數，新的 SoeAppId 可以在[控制台](https://console.cloud.taifucloud.com/soe)【應用管理】下新建。
         :type SoeAppId: str
-        :param IsLongLifeSession: 長效session标識，當該參數爲1時，session的持續時間爲300s，但會一定程度上影響第一個數據包的返回速度。當InitOralProcess介面調用時此項爲1時，此項必填1才可生效。
+        :param IsLongLifeSession: 長效session標識，當該參數爲1時，session的持續時間爲300s，但會一定程度上影響第一個數據包的返回速度。當InitOralProcess介面調用時此項爲1時，此項必填1才可生效。
         :type IsLongLifeSession: int
-        :param IsQuery: 查詢标識，當該參數爲1時，該請求爲查詢請求，請求返回該 Session 的評估結果。
+        :param IsQuery: 查詢標識，當該參數爲1時，該請求爲查詢請求，請求返回該 Session 的評估結果。
         :type IsQuery: int
         """
         self.SeqId = None
@@ -241,11 +241,11 @@ class TransmitOralProcessResponse(AbstractModel):
         :type PronCompletion: float
         :param Words: 詳細發音評估結果
         :type Words: list of WordRsp
-        :param SessionId: 語音段唯一标識，一段語音一個SessionId
+        :param SessionId: 語音段唯一標識，一段語音一個SessionId
         :type SessionId: str
         :param AudioUrl: 保存語音音訊文件下載網址
         :type AudioUrl: str
-        :param SentenceInfoSet: 斷句中間結果，中間結果是局部最優而非全局最優的結果，所以中間結果有可能和最終整體結果對應部分不一緻；中間結果的輸出便于用戶端UI更新；待用戶發音完全結束後，系統會給出一個綜合所有句子的整體結果。
+        :param SentenceInfoSet: 斷句中間結果，中間結果是局部最優而非全局最優的結果，所以中間結果有可能和最終整體結果對應部分不一緻；中間結果的輸出便於用戶端UI更新；待用戶發音完全結束後，系統會給出一個綜合所有句子的整體結果。
         :type SentenceInfoSet: list of SentenceInfo
         :param Status: 評估 session 狀态，“Evaluating"：評估中、"Failed"：評估失敗、"Finished"：評估完成
         :type Status: str
@@ -296,9 +296,9 @@ class TransmitOralProcessWithInitRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param SeqId: 流式數據包的序号，從1開始，當IsEnd欄位爲1後後續序号無意義，當IsLongLifeSession不爲1且爲非流式模式時無意義。
+        :param SeqId: 流式數據包的序號，從1開始，當IsEnd欄位爲1後後續序號無意義，當IsLongLifeSession不爲1且爲非流式模式時無意義。
         :type SeqId: int
-        :param IsEnd: 是否傳輸完畢标志，若爲0表示未完畢，若爲1則傳輸完畢開始評估，非流式模式下無意義。
+        :param IsEnd: 是否傳輸完畢標志，若爲0表示未完畢，若爲1則傳輸完畢開始評估，非流式模式下無意義。
         :type IsEnd: int
         :param VoiceFileType: 語音文件類型 	1:raw, 2:wav, 3:mp3(三種格式目前僅支援16k采樣率16bit編碼單聲道，如有不一緻可能導緻評估不準确或失敗)。
         :type VoiceFileType: int
@@ -306,27 +306,27 @@ class TransmitOralProcessWithInitRequest(AbstractModel):
         :type VoiceEncodeType: int
         :param UserVoiceData: 當前數據包數據, 流式模式下數據包大小可以按需設置，在網絡良好的情況下，建議設置爲0.5k，且必須保證分片幀完整（16bit的數據必須保證音訊長度爲偶數），編碼格式要求爲BASE64。
         :type UserVoiceData: str
-        :param SessionId: 語音段唯一标識，一個完整語音一個SessionId。
+        :param SessionId: 語音段唯一標識，一個完整語音一個SessionId。
         :type SessionId: str
-        :param RefText: 被評估語音對應的文本，句子模式下不超過個 20 單詞或者中文文字，段落模式不超過 120 單詞或者中文文字，中文評估使用 utf-8 編碼，自由說模式該值無效。如需要在單詞模式和句子模式下使用自定義音素，可以通過設置 TextMode 使用[音素标注](https://cloud.taifucloud.com/document/product/884/33698)。
+        :param RefText: 被評估語音對應的文本，句子模式下不超過個 20 單詞或者中文文字，段落模式不超過 120 單詞或者中文文字，中文評估使用 utf-8 編碼，自由說模式該值無效。如需要在單詞模式和句子模式下使用自定義音素，可以通過設置 TextMode 使用[音素標注](https://cloud.taifucloud.com/document/product/884/33698)。
         :type RefText: str
         :param WorkMode: 語音輸入模式，0：流式分片，1：非流式一次性評估
         :type WorkMode: int
         :param EvalMode: 評估模式，0：詞模式（中文評測模式下爲文字模式），1：句子模式，2：段落模式，3：自由說模式，當爲詞模式評估時，能夠提供每個音節的評估訊息，當爲句子模式時，能夠提供完整度和流利度訊息。
         :type EvalMode: int
-        :param ScoreCoeff: 評價苛刻指數，取值爲[1.0 - 4.0]範圍内的浮點數，用于平滑不同年齡段的分數，1.0爲小年齡段，4.0爲最高年齡段
+        :param ScoreCoeff: 評價苛刻指數，取值爲[1.0 - 4.0]範圍内的浮點數，用於平滑不同年齡段的分數，1.0爲小年齡段，4.0爲最高年齡段
         :type ScoreCoeff: float
-        :param SoeAppId: 業務應用ID，與賬号應用APPID無關，是用來方便客戶管理服務的參數，新的 SoeAppId 可以在[控制台](https://console.cloud.taifucloud.com/soe)【應用管理】下新建。
+        :param SoeAppId: 業務應用ID，與賬號應用APPID無關，是用來方便客戶管理服務的參數，新的 SoeAppId 可以在[控制台](https://console.cloud.taifucloud.com/soe)【應用管理】下新建。
         :type SoeAppId: str
         :param StorageMode: 音訊儲存模式，0：不儲存，1：儲存到公共物件儲存，輸出結果爲該會話最後一個分片TransmitOralProcess 返回結果 AudioUrl 欄位。
         :type StorageMode: int
-        :param SentenceInfoEnabled: 輸出斷句中間結果标識，0：不輸出，1：輸出，通過設置該參數，可以在評估過程中的分片傳輸請求中，返回已經評估斷句的中間結果，中間結果可用于用戶端 UI 更新，輸出結果爲TransmitOralProcess請求返回結果 SentenceInfoSet 欄位。
+        :param SentenceInfoEnabled: 輸出斷句中間結果標識，0：不輸出，1：輸出，通過設置該參數，可以在評估過程中的分片傳輸請求中，返回已經評估斷句的中間結果，中間結果可用於用戶端 UI 更新，輸出結果爲TransmitOralProcess請求返回結果 SentenceInfoSet 欄位。
         :type SentenceInfoEnabled: int
         :param ServerType: 評估語言，0：英文，1：中文。
         :type ServerType: int
-        :param IsAsync: 異步模式标識，0：同步模式，1：異步模式，可選值參考[服務模式](https://cloud.taifucloud.com/document/product/884/33697)。
+        :param IsAsync: 異步模式標識，0：同步模式，1：異步模式，可選值參考[服務模式](https://cloud.taifucloud.com/document/product/884/33697)。
         :type IsAsync: int
-        :param IsQuery: 查詢标識，當該參數爲1時，該請求爲查詢請求，請求返回該 Session 評估結果。
+        :param IsQuery: 查詢標識，當該參數爲1時，該請求爲查詢請求，請求返回該 Session 評估結果。
         :type IsQuery: int
         :param TextMode: 輸入文本模式，0: 普通文本，1：[音素結構](https://cloud.taifucloud.com/document/product/884/33698)文本。
         :type TextMode: int
@@ -385,11 +385,11 @@ class TransmitOralProcessWithInitResponse(AbstractModel):
         :type PronCompletion: float
         :param Words: 詳細發音評估結果
         :type Words: list of WordRsp
-        :param SessionId: 語音段唯一标識，一段語音一個SessionId
+        :param SessionId: 語音段唯一標識，一段語音一個SessionId
         :type SessionId: str
         :param AudioUrl: 保存語音音訊文件下載網址
         :type AudioUrl: str
-        :param SentenceInfoSet: 斷句中間結果，中間結果是局部最優而非全局最優的結果，所以中間結果有可能和最終整體結果對應部分不一緻；中間結果的輸出便于用戶端UI更新；待用戶發音完全結束後，系統會給出一個綜合所有句子的整體結果。
+        :param SentenceInfoSet: 斷句中間結果，中間結果是局部最優而非全局最優的結果，所以中間結果有可能和最終整體結果對應部分不一緻；中間結果的輸出便於用戶端UI更新；待用戶發音完全結束後，系統會給出一個綜合所有句子的整體結果。
         :type SentenceInfoSet: list of SentenceInfo
         :param Status: 評估 session 狀态，“Evaluating"：評估中、"Failed"：評估失敗、"Finished"：評估完成
         :type Status: str

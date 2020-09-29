@@ -306,7 +306,7 @@ class SolarClient(AbstractClient):
 
 
     def DescribeResourceTemplateHeaders(self, request):
-        """素材查詢服務号範本的清單（樣例）
+        """素材查詢服務號範本的清單（樣例）
 
         :param request: Request instance for DescribeResourceTemplateHeaders.
         :type request: :class:`taifucloudcloud.solar.v20181011.models.DescribeResourceTemplateHeadersRequest`

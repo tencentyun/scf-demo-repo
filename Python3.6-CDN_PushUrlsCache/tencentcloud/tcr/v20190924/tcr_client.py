@@ -26,7 +26,7 @@ class TcrClient(AbstractClient):
 
 
     def BatchDeleteImagePersonal(self, request):
-        """用于在個人版映像倉庫中批次删除Tag
+        """用於在個人版映像倉庫中批次删除Tag
 
         :param request: Request instance for BatchDeleteImagePersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.BatchDeleteImagePersonalRequest`
@@ -54,7 +54,7 @@ class TcrClient(AbstractClient):
 
 
     def BatchDeleteRepositoryPersonal(self, request):
-        """用于個人版映像倉庫中批次删除映像倉庫
+        """用於個人版映像倉庫中批次删除映像倉庫
 
         :param request: Request instance for BatchDeleteRepositoryPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.BatchDeleteRepositoryPersonalRequest`
@@ -82,7 +82,7 @@ class TcrClient(AbstractClient):
 
 
     def CreateApplicationTriggerPersonal(self, request):
-        """用于創建應用更新觸發器
+        """用於創建應用更新觸發器
 
         :param request: Request instance for CreateApplicationTriggerPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.CreateApplicationTriggerPersonalRequest`
@@ -110,7 +110,7 @@ class TcrClient(AbstractClient):
 
 
     def CreateImageLifecyclePersonal(self, request):
-        """用于在個人版中創建清理策略
+        """用於在個人版中創建清理策略
 
         :param request: Request instance for CreateImageLifecyclePersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.CreateImageLifecyclePersonalRequest`
@@ -194,7 +194,7 @@ class TcrClient(AbstractClient):
 
 
     def CreateNamespace(self, request):
-        """用于在企業版中創建命名空間
+        """用於在企業版中創建命名空間
 
         :param request: Request instance for CreateNamespace.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.CreateNamespaceRequest`
@@ -250,7 +250,7 @@ class TcrClient(AbstractClient):
 
 
     def CreateRepository(self, request):
-        """用于企業版創建映像倉庫
+        """用於企業版創建映像倉庫
 
         :param request: Request instance for CreateRepository.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.CreateRepositoryRequest`
@@ -278,7 +278,7 @@ class TcrClient(AbstractClient):
 
 
     def CreateRepositoryPersonal(self, request):
-        """用于在個人版倉庫中創建映像倉庫
+        """用於在個人版倉庫中創建映像倉庫
 
         :param request: Request instance for CreateRepositoryPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.CreateRepositoryPersonalRequest`
@@ -362,7 +362,7 @@ class TcrClient(AbstractClient):
 
 
     def DeleteApplicationTriggerPersonal(self, request):
-        """用于删除應用更新觸發器
+        """用於删除應用更新觸發器
 
         :param request: Request instance for DeleteApplicationTriggerPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.DeleteApplicationTriggerPersonalRequest`
@@ -390,7 +390,7 @@ class TcrClient(AbstractClient):
 
 
     def DeleteImageLifecycleGlobalPersonal(self, request):
-        """用于删除個人版全局映像版本自動清理策略
+        """用於删除個人版全局映像版本自動清理策略
 
         :param request: Request instance for DeleteImageLifecycleGlobalPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.DeleteImageLifecycleGlobalPersonalRequest`
@@ -418,7 +418,7 @@ class TcrClient(AbstractClient):
 
 
     def DeleteImageLifecyclePersonal(self, request):
-        """用于在個人版映像倉庫中删除倉庫Tag自動清理策略
+        """用於在個人版映像倉庫中删除倉庫Tag自動清理策略
 
         :param request: Request instance for DeleteImageLifecyclePersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.DeleteImageLifecyclePersonalRequest`
@@ -446,7 +446,7 @@ class TcrClient(AbstractClient):
 
 
     def DeleteImagePersonal(self, request):
-        """用于在個人版中删除tag
+        """用於在個人版中删除tag
 
         :param request: Request instance for DeleteImagePersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.DeleteImagePersonalRequest`
@@ -586,7 +586,7 @@ class TcrClient(AbstractClient):
 
 
     def DeleteRepositoryPersonal(self, request):
-        """用于個人版映像倉庫中删除
+        """用於個人版映像倉庫中删除
 
         :param request: Request instance for DeleteRepositoryPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.DeleteRepositoryPersonalRequest`
@@ -642,7 +642,7 @@ class TcrClient(AbstractClient):
 
 
     def DescribeApplicationTriggerLogPersonal(self, request):
-        """用于查詢應用更新觸發器觸發日志
+        """用於查詢應用更新觸發器觸發日志
 
         :param request: Request instance for DescribeApplicationTriggerLogPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeApplicationTriggerLogPersonalRequest`
@@ -670,7 +670,7 @@ class TcrClient(AbstractClient):
 
 
     def DescribeApplicationTriggerPersonal(self, request):
-        """用于查詢應用更新觸發器
+        """用於查詢應用更新觸發器
 
         :param request: Request instance for DescribeApplicationTriggerPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeApplicationTriggerPersonalRequest`
@@ -726,7 +726,7 @@ class TcrClient(AbstractClient):
 
 
     def DescribeImageFilterPersonal(self, request):
-        """用于在個人版中查詢與指定tag映像内容相同的tag清單
+        """用於在個人版中查詢與指定tag映像内容相同的tag清單
 
         :param request: Request instance for DescribeImageFilterPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeImageFilterPersonalRequest`
@@ -754,7 +754,7 @@ class TcrClient(AbstractClient):
 
 
     def DescribeImageLifecycleGlobalPersonal(self, request):
-        """用于獲取個人版全局映像版本自動清理策略
+        """用於獲取個人版全局映像版本自動清理策略
 
         :param request: Request instance for DescribeImageLifecycleGlobalPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeImageLifecycleGlobalPersonalRequest`
@@ -782,7 +782,7 @@ class TcrClient(AbstractClient):
 
 
     def DescribeImageLifecyclePersonal(self, request):
-        """用于獲取個人版倉庫中自動清理策略
+        """用於獲取個人版倉庫中自動清理策略
 
         :param request: Request instance for DescribeImageLifecyclePersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeImageLifecyclePersonalRequest`
@@ -838,7 +838,7 @@ class TcrClient(AbstractClient):
 
 
     def DescribeImagePersonal(self, request):
-        """用于獲取個人版映像倉庫tag清單
+        """用於獲取個人版映像倉庫tag清單
 
         :param request: Request instance for DescribeImagePersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeImagePersonalRequest`
@@ -1062,7 +1062,7 @@ class TcrClient(AbstractClient):
 
 
     def DescribeRepositoryFilterPersonal(self, request):
-        """用于在個人版映像倉庫中，獲取滿足輸入搜索條件的用戶映像倉庫
+        """用於在個人版映像倉庫中，獲取滿足輸入搜索條件的用戶映像倉庫
 
         :param request: Request instance for DescribeRepositoryFilterPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeRepositoryFilterPersonalRequest`
@@ -1090,7 +1090,7 @@ class TcrClient(AbstractClient):
 
 
     def DescribeRepositoryOwnerPersonal(self, request):
-        """用于在個人版中獲取用戶全部的映像倉庫清單
+        """用於在個人版中獲取用戶全部的映像倉庫清單
 
         :param request: Request instance for DescribeRepositoryOwnerPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.DescribeRepositoryOwnerPersonalRequest`
@@ -1230,7 +1230,7 @@ class TcrClient(AbstractClient):
 
 
     def DuplicateImagePersonal(self, request):
-        """用于在個人版映像倉庫中複制映像版本
+        """用於在個人版映像倉庫中複制映像版本
 
         :param request: Request instance for DuplicateImagePersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.DuplicateImagePersonalRequest`
@@ -1258,7 +1258,7 @@ class TcrClient(AbstractClient):
 
 
     def ManageImageLifecycleGlobalPersonal(self, request):
-        """用于設置個人版全局映像版本自動清理策略
+        """用於設置個人版全局映像版本自動清理策略
 
         :param request: Request instance for ManageImageLifecycleGlobalPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.ManageImageLifecycleGlobalPersonalRequest`
@@ -1286,7 +1286,7 @@ class TcrClient(AbstractClient):
 
 
     def ModifyApplicationTriggerPersonal(self, request):
-        """用于修改應用更新觸發器
+        """用於修改應用更新觸發器
 
         :param request: Request instance for ModifyApplicationTriggerPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.ModifyApplicationTriggerPersonalRequest`
@@ -1398,7 +1398,7 @@ class TcrClient(AbstractClient):
 
 
     def ModifyRepositoryAccessPersonal(self, request):
-        """用于更新個人版映像倉庫的訪問屬性
+        """用於更新個人版映像倉庫的訪問屬性
 
         :param request: Request instance for ModifyRepositoryAccessPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.ModifyRepositoryAccessPersonalRequest`
@@ -1426,7 +1426,7 @@ class TcrClient(AbstractClient):
 
 
     def ModifyRepositoryInfoPersonal(self, request):
-        """用于在個人版映像倉庫中更新容器映像描述
+        """用於在個人版映像倉庫中更新容器映像描述
 
         :param request: Request instance for ModifyRepositoryInfoPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.ModifyRepositoryInfoPersonalRequest`
@@ -1538,7 +1538,7 @@ class TcrClient(AbstractClient):
 
 
     def ValidateRepositoryExistPersonal(self, request):
-        """用于判斷個人版倉庫是否存在
+        """用於判斷個人版倉庫是否存在
 
         :param request: Request instance for ValidateRepositoryExistPersonal.
         :type request: :class:`taifucloudcloud.tcr.v20190924.models.ValidateRepositoryExistPersonalRequest`

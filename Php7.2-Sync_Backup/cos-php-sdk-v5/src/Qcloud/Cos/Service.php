@@ -16,9 +16,9 @@ class Service {
 
                 COS 支援舍棄一個分塊上傳且删除已上傳的分片塊. 注意，已上傳但是未終止的分片塊會占用儲存空間進 而産生儲存費用.因此，建議及時完成分塊上傳 或者舍棄分塊上傳.
 
-                關于分塊上傳的具體描述，請檢視 https://cloud.taifucloud.com/document/product/436/14112.
+                關於分塊上傳的具體描述，請檢視 https://cloud.taifucloud.com/document/product/436/14112.
 
-                關于舍棄一個分塊上傳且删除已上傳的分片塊介面的描述，請檢視 https://cloud.taifucloud.com/document/product/436/7740.
+                關於舍棄一個分塊上傳且删除已上傳的分片塊介面的描述，請檢視 https://cloud.taifucloud.com/document/product/436/7740.
 
                 cos php SDK 中舍棄一個分塊上傳且删除已上傳的分片塊請求的方法具體步驟如下：
 
@@ -56,13 +56,13 @@ class Service {
                 /**
                 創建儲存桶（Bucket）的方法.
 
-                在開始使用 COS 時，需要在指定的賬号下先創建一個 Bucket 以便于對象的使用和管理. 并指定 Bucket 所屬的地域.創建 Bucket 的用戶預設成爲 Bucket 的持有者.若創建 Bucket 時沒有指定訪問權限，則預設 爲私有讀寫（private）權限.
+                在開始使用 COS 時，需要在指定的賬號下先創建一個 Bucket 以便於對象的使用和管理. 並指定 Bucket 所屬的地域.創建 Bucket 的用戶預設成爲 Bucket 的持有者.若創建 Bucket 時沒有指定訪問權限，則預設 爲私有讀寫（private）權限.
 
                 可用地域，可以檢視https://cloud.taifucloud.com/document/product/436/6224.
 
-                關于創建 Bucket 描述，請檢視 https://cloud.taifucloud.com/document/product/436/14106.
+                關於創建 Bucket 描述，請檢視 https://cloud.taifucloud.com/document/product/436/14106.
 
-                關于創建儲存桶（Bucket）介面的具體 描述，請檢視 https://cloud.taifucloud.com/document/product/436/7738.
+                關於創建儲存桶（Bucket）介面的具體 描述，請檢視 https://cloud.taifucloud.com/document/product/436/7738.
 
                 cos php SDK 中創建 Bucket的方法具體步驟如下：
 
@@ -102,11 +102,11 @@ class Service {
 
                 當使用分塊上傳（uploadPart(UploadPartRequest)）完對象的所有塊以後，必須調用該 completeMultiUpload(CompleteMultiUploadRequest) 或者 completeMultiUploadAsync(CompleteMultiUploadRequest, CosXmlResultListener) 來完成整個文件的分塊上傳.且在該請求的 Body 中需要給出每一個塊的 PartNumber 和 ETag，用來校驗塊的準 确性.
 
-                分塊上傳适合于在弱網絡或高頻寬環境下上傳較大的對象.SDK 支援自行切分對象并分别調用uploadPart(UploadPartRequest)上傳各 個分塊.
+                分塊上傳适合於在弱網絡或高頻寬環境下上傳較大的對象.SDK 支援自行切分對象並分别調用uploadPart(UploadPartRequest)上傳各 個分塊.
 
-                關于分塊上傳的描述，請檢視 https://cloud.taifucloud.com/document/product/436/14112.
+                關於分塊上傳的描述，請檢視 https://cloud.taifucloud.com/document/product/436/14112.
 
-                關于完成整個分片上傳介面的描述，請檢視 https://cloud.taifucloud.com/document/product/436/7742.
+                關於完成整個分片上傳介面的描述，請檢視 https://cloud.taifucloud.com/document/product/436/7742.
 
                 1. 初始化用戶端cosClient，填入儲存桶名，和一些額外需要的參數，如授權的具體訊息等。
 
@@ -487,11 +487,11 @@ class Service {
                 /**
                 删除儲存桶 (Bucket)的方法.
 
-                COS 目前僅支援删除已經清空的 Bucket，如果 Bucket 中仍有對象，将會删除失敗. 因此，在執行删除 Bucket 前，需确保 Bucket 内已經沒有對象. 删除 Bucket 時，還需要确保操作的身份已被授權該操作，并确認 傳入了正确的儲存桶名稱和地域參數, 請參閱 putBucket(PutBucketRequest).
+                COS 目前僅支援删除已經清空的 Bucket，如果 Bucket 中仍有對象，将會删除失敗. 因此，在執行删除 Bucket 前，需确保 Bucket 内已經沒有對象. 删除 Bucket 時，還需要确保操作的身份已被授權該操作，並确認 傳入了正确的儲存桶名稱和地域參數, 請參閱 putBucket(PutBucketRequest).
 
-                關于删除 Bucket 的描述,請檢視 https://cloud.taifucloud.com/document/product/436/14105.
+                關於删除 Bucket 的描述,請檢視 https://cloud.taifucloud.com/document/product/436/14105.
 
-                關于删除 Bucket 介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/7732.
+                關於删除 Bucket 介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/7732.
 
                 cos php SDK 中删除 Bucket 的方法具體步驟如下：
 
@@ -522,7 +522,7 @@ class Service {
 
                 若是 Bucket 不需要支援跨域訪問配置，可以調用此介面删除已配置的跨域訪問訊息. 跨域訪問配置可以通過 putBucketCORS(PutBucketCORSRequest) 或者 putBucketCORSAsync(PutBucketCORSRequest, CosXmlResultListener) 方法來開啓 Bucket 的跨域訪問 支援.
 
-                關于删除跨域訪問配置訊息介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/8283.
+                關於删除跨域訪問配置訊息介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/8283.
 
                 cos php SDK 中删除跨域訪問配置訊息的方法具體步驟如下：
 
@@ -557,9 +557,9 @@ class Service {
 
                 COS 支援直接删除一個或多個對象，當僅需要删除一個對象時,只需要提供對象的名稱（即對象鍵)即可.
 
-                關于删除 COS 上單個對象的具體描述，請檢視 https://cloud.taifucloud.com/document/product/436/14119.
+                關於删除 COS 上單個對象的具體描述，請檢視 https://cloud.taifucloud.com/document/product/436/14119.
 
-                關于删除 COS 上單個對象介面的具體描述，請檢視 https://cloud.taifucloud.com/document/product/436/7743.
+                關於删除 COS 上單個對象介面的具體描述，請檢視 https://cloud.taifucloud.com/document/product/436/7743.
 
                 cos php SDK 中删除 COS 上單個對象請求的方法具體步驟如下：
 
@@ -609,9 +609,9 @@ class Service {
                 /**
                 批次删除 COS 對象的方法.
 
-                COS 支援批次删除指定 Bucket 中 對象，單次請求最大支援批次删除 1000 個 對象. 請求中删除一個不存在的對象，仍然認爲是成功的. 對于響應結果，COS提供 Verbose 和 Quiet 兩種模式：Verbose 模式将返回每個對象的删除結果;Quiet 模式只返回删除報錯的對象訊息. 請求必須攜帶 Content-MD5 用來校驗請求Body 的完整性.
+                COS 支援批次删除指定 Bucket 中 對象，單次請求最大支援批次删除 1000 個 對象. 請求中删除一個不存在的對象，仍然認爲是成功的. 對於響應結果，COS提供 Verbose 和 Quiet 兩種模式：Verbose 模式将返回每個對象的删除結果;Quiet 模式只返回删除報錯的對象訊息. 請求必須攜帶 Content-MD5 用來校驗請求Body 的完整性.
 
-                關于批次删除 COS 對象介面的描述，請檢視https://cloud.taifucloud.com/document/product/436/8289.
+                關於批次删除 COS 對象介面的描述，請檢視https://cloud.taifucloud.com/document/product/436/8289.
 
                 cos php SDK 中批次删除 COS 對象的方法具體步驟如下：
 
@@ -701,9 +701,9 @@ class Service {
                 /**
                 删除儲存桶（Bucket） 的生命周期配置的方法.
 
-                COS 支援删除已配置的 Bucket 的生命週期清單. COS 支援以生命週期配置的方式來管理 Bucket 中 對象的生命週期，生命週期配置包含一個或多個将 應用于一組對象規則的規則集 (其中每個規則爲 COS 定義一個操作)，請參閱 putBucketLifecycle(PutBucketLifecycleRequest).
+                COS 支援删除已配置的 Bucket 的生命週期清單. COS 支援以生命週期配置的方式來管理 Bucket 中 對象的生命週期，生命週期配置包含一個或多個将 應用於一組對象規則的規則集 (其中每個規則爲 COS 定義一個操作)，請參閱 putBucketLifecycle(PutBucketLifecycleRequest).
 
-                關于删除 Bucket 的生命週期配置介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/8284.
+                關於删除 Bucket 的生命週期配置介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/8284.
 
                 cos php SDK 中删除 Bucket 的生命週期配置的方法具體步驟如下：
 
@@ -848,7 +848,7 @@ class Service {
 
                 Bucket 的持有者可獲取該 Bucket 下的某個對象的 ACL 訊息，如被授權者以及被授權的訊息. ACL 權限包括讀、寫、讀寫權限.
 
-                關于獲取 COS 對象的 ACL 介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/7744.
+                關於獲取 COS 對象的 ACL 介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/7744.
 
                 cos php SDK 中獲取 COS 對象的 ACL 的方法具體步驟如下：
 
@@ -908,7 +908,7 @@ class Service {
 
                 ACL 權限包括讀、寫、讀寫權限. COS 中 Bucket 是有訪問權限控制的.可以通過獲取 Bucket 的 ACL 表(putBucketACL(PutBucketACLRequest))，來檢視那些用戶擁有 Bucket 訪 問權限.
 
-                關于獲取 Bucket 的 ACL 介面的具體描述，請檢視 https://cloud.taifucloud.com/document/product/436/7733.
+                關於獲取 Bucket 的 ACL 介面的具體描述，請檢視 https://cloud.taifucloud.com/document/product/436/7733.
 
                 cos php SDK 中獲取 Bucket 的 ACL 的方法具體步驟如下：
 
@@ -942,7 +942,7 @@ class Service {
 
                 COS 支援查詢當前 Bucket 跨域訪問配置訊息，以确定是否配置跨域訊息.當跨域訪問配置不存在時，請求 返回403 Forbidden. 跨域訪問配置可以通過 putBucketCORS(PutBucketCORSRequest) 或者 putBucketCORSAsync(PutBucketCORSRequest, CosXmlResultListener) 方法來開啓 Bucket 的跨域訪問 支援.
 
-                關于查詢 Bucket 跨域訪問配置訊息介面的具體描述， 請檢視 https://cloud.taifucloud.com/document/product/436/8274.
+                關於查詢 Bucket 跨域訪問配置訊息介面的具體描述， 請檢視 https://cloud.taifucloud.com/document/product/436/8274.
 
                 cos php SDK 中查詢 Bucket 跨域訪問配置訊息的方法具體步驟如下：
 
@@ -980,9 +980,9 @@ class Service {
                 /**
                 查詢儲存桶（Bucket) 的生命週期配置的方法.
 
-                COS 支援以生命週期配置的方式來管理 Bucket 中對象的生命週期，生命週期配置包含一個或多個将 應用于一組對象規則的規則集 (其中每個規則爲 COS 定義一個操作)，請參閱 putBucketLifecycle(PutBucketLifecycleRequest).
+                COS 支援以生命週期配置的方式來管理 Bucket 中對象的生命週期，生命週期配置包含一個或多個将 應用於一組對象規則的規則集 (其中每個規則爲 COS 定義一個操作)，請參閱 putBucketLifecycle(PutBucketLifecycleRequest).
 
-                關于查詢 Bucket 的生命週期配置介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/8278.
+                關於查詢 Bucket 的生命週期配置介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/8278.
 
                 cos php SDK 中查詢 Bucket 的生命週期配置的方法具體步驟如下：
 
@@ -1019,7 +1019,7 @@ class Service {
                 /**
                 獲取儲存桶（Bucket）版本控制訊息的方法.
 
-                通過查詢版本控制訊息，可以得知該 Bucket 的版本控制功能是處于禁用狀态還是啓用狀态（Enabled 或者 Suspended）, 開啓版本控制功能，可參考putBucketVersioning(PutBucketVersioningRequest).
+                通過查詢版本控制訊息，可以得知該 Bucket 的版本控制功能是處於禁用狀态還是啓用狀态（Enabled 或者 Suspended）, 開啓版本控制功能，可參考putBucketVersioning(PutBucketVersioningRequest).
 
                 cos php SDK 中獲取 Bucket 版本控制訊息的方法具體步驟如下：
 
@@ -1090,7 +1090,7 @@ class Service {
 
                 COS 支援的地域訊息，可檢視https://cloud.taifucloud.com/document/product/436/6224.
 
-                關于獲取 Bucket 所在的地域訊息介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/8275.
+                關於獲取 Bucket 所在的地域訊息介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/8275.
 
                 cos php SDK 中獲取 Bucket 所在的地域訊息的方法具體步驟如下：
 
@@ -1303,7 +1303,7 @@ class Service {
 
                 ACL權限包括讀、寫、讀寫權限. COS 對象的 ACL 可以通過 header頭部："x-cos-acl"，"x-cos-grant-read"，"x-cos-grant-write"， "x-cos-grant-full-control" 傳入 ACL 訊息，或者通過 Body 以 XML 格式傳入 ACL 訊息.這兩種方式只 能選擇其中一種，否則引起沖突. 傳入新的 ACL 将函蓋原有 ACL訊息.ACL策略數上限1000，建議用戶不要每個上傳文件都設置 ACL.
 
-                關于設置 COS 對象的ACL介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/7748.
+                關於設置 COS 對象的ACL介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/7748.
 
                 cos PHP SDK 中設置 COS 對象的 ACL 的方法具體步驟如下：
 
@@ -1449,7 +1449,7 @@ class Service {
 
                 ACL 權限包括讀、寫、讀寫權限. 寫入 Bucket 的 ACL 可以通過 header頭部："x-cos-acl"，"x-cos-grant-read"，"x-cos-grant-write"， "x-cos-grant-full-control" 傳入 ACL 訊息，或者通過 Body 以 XML 格式傳入 ACL 訊息.這兩種方式只 能選擇其中一種，否則引起沖突. 傳入新的 ACL 将函蓋原有 ACL訊息. 私有 Bucket 可以下可以給某個文件夾設置成公有，那麽該文件夾下的文件都是公有；但是把文件夾設置成私有後，在該文件夾下的文件設置 的公有屬性，不會生效.
 
-                關于設置 Bucket 的ACL介面的具體描述，請檢視 https://cloud.taifucloud.com/document/product/436/7737.
+                關於設置 Bucket 的ACL介面的具體描述，請檢視 https://cloud.taifucloud.com/document/product/436/7737.
 
                 cos php SDK 中設置 Bucket 的ACL的方法具體步驟如下：
 
@@ -1588,11 +1588,11 @@ class Service {
                 /**
                 設置儲存桶（Bucket） 的跨域配置訊息的方法.
 
-                跨域訪問配置的預請求是指在發送跨域請求之前會發送一個 OPTIONS 請求并帶上特定的來源域，HTTP 方 法和 header 訊息等給 COS，以決定是否可以發送真正的跨域請求. 當跨域訪問配置不存在時，請求返回403 Forbidden.
+                跨域訪問配置的預請求是指在發送跨域請求之前會發送一個 OPTIONS 請求並帶上特定的來源域，HTTP 方 法和 header 訊息等給 COS，以決定是否可以發送真正的跨域請求. 當跨域訪問配置不存在時，請求返回403 Forbidden.
 
                 預設情況下，Bucket的持有者可以直接配置 Bucket的跨域訊息 ，Bucket 持有者也可以将配置權限授予其他用戶.新的配置是函蓋當前的所有配置信 息，而不是新增一條配置.可以通過傳入 XML 格式的配置文件來實現配置，文件大小限制爲64 KB.
 
-                關于設置 Bucket 的跨域配置訊息介面的具體描述，請檢視 https://cloud.taifucloud.com/document/product/436/8279.
+                關於設置 Bucket 的跨域配置訊息介面的具體描述，請檢視 https://cloud.taifucloud.com/document/product/436/8279.
 
                 cos php SDK 中設置 Bucket 的跨域配置訊息的方法具體步驟如下：
 
@@ -1710,13 +1710,13 @@ class Service {
                 /**
                 設置儲存桶（Bucket) 生命週期配置的方法.
 
-                COS 支援以生命週期配置的方式來管理 Bucket 中對象的生命週期. 如果該 Bucket 已配置生命週期，新的配置的同時則會函蓋原有的配置. 生命週期配置包含一個或多個将應用于一組對象規則的規則集 (其中每個規則爲 COS 定義一個操作)。這些操作分爲以下兩種：轉換操作，過期操作.
+                COS 支援以生命週期配置的方式來管理 Bucket 中對象的生命週期. 如果該 Bucket 已配置生命週期，新的配置的同時則會函蓋原有的配置. 生命週期配置包含一個或多個将應用於一組對象規則的規則集 (其中每個規則爲 COS 定義一個操作)。這些操作分爲以下兩種：轉換操作，過期操作.
 
                 轉換操作,定義對象轉換爲另一個儲存類的時間(例如，您可以選擇在對象創建 30 天後将其轉換爲低頻儲存類别，同 時也支援将數據沉降到歸檔儲存類别.
 
                 過期操作，指定 Object 的過期時間，COS 将會自動爲用戶删除過期的 Object.
 
-                關于Bucket 生命週期配置介面的具體描述，請檢視 https://cloud.taifucloud.com/document/product/436/8280
+                關於Bucket 生命週期配置介面的具體描述，請檢視 https://cloud.taifucloud.com/document/product/436/8280
 
                 cos php SDK 中Bucket 生命週期配置的方法具體步驟如下：
 
@@ -1879,7 +1879,7 @@ class Service {
                 /**
                 儲存桶（Bucket）版本控制的方法.
 
-                版本管理功能一經打開，只能暫停，不能關閉. 通過版本控制，可以在一個 Bucket 中保留一個對象的多個版本. 版本控制可以防止意外函蓋和删除對象，以便檢索早期版本的對象. 預設情況下，版本控制功能處于禁用狀态，需要主動去啓用或者暫停（Enabled 或者 Suspended）.
+                版本管理功能一經打開，只能暫停，不能關閉. 通過版本控制，可以在一個 Bucket 中保留一個對象的多個版本. 版本控制可以防止意外函蓋和删除對象，以便檢索早期版本的對象. 預設情況下，版本控制功能處於禁用狀态，需要主動去啓用或者暫停（Enabled 或者 Suspended）.
 
                 cos php SDK 中 Bucket 版本控制啓用或者暫停的方法具體步驟如下：
 
@@ -1930,7 +1930,7 @@ class Service {
                 /**
                 配置跨區域複制的方法.
 
-                跨區域複制是支援不同區域 Bucket 自動異步複制對象.注意，不能是同區域的 Bucket, 且源 Bucket 和目 标 Bucket 必須已啓用版本控制putBucketVersioning(PutBucketVersioningRequest).
+                跨區域複制是支援不同區域 Bucket 自動異步複制對象.注意，不能是同區域的 Bucket, 且源 Bucket 和目 標 Bucket 必須已啓用版本控制putBucketVersioning(PutBucketVersioningRequest).
 
                 cos php SDK 中配置跨區域複制的方法具體步驟如下：
 
@@ -2068,7 +2068,7 @@ class Service {
 
                 COS 支援查詢 Bucket 中有哪些正在進行中的分塊上傳對象，單次請求操作最多列出 1000 個正在進行中的 分塊上傳對象.
 
-                關于查詢 Bucket 中正在進行中的分塊上傳對象介面的具體描述，請檢視 https://cloud.taifucloud.com/document/product/436/7736.
+                關於查詢 Bucket 中正在進行中的分塊上傳對象介面的具體描述，請檢視 https://cloud.taifucloud.com/document/product/436/7736.
 
                 cos php SDK 中查詢 Bucket 中正在進行中的分塊上傳對象的方法具體步驟如下：
 
@@ -2126,7 +2126,7 @@ class Service {
 
                 如果再設置 delimiter 定界符爲 “/”，則只列出該文件夾下的文件，子文件夾下遞歸的文件和文件夾名 将不被列出.而子文件夾名将會以 CommonPrefix 的形式給出.
 
-                關于查詢Bucket 下的部分或者全部對象介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/7734.
+                關於查詢Bucket 下的部分或者全部對象介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/7734.
 
                 cos php SDK 中查詢 Bucket 下的部分或者全部對象的方法具體步驟如下：
 
@@ -2183,7 +2183,7 @@ class Service {
 
                 通過使用帯 Authorization 簽名認證的請求，可以獲取簽名中 APPID 所屬帳戶的所有儲存空間清單 (Bucket list).
 
-                關于獲取所有儲存空間清單介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/8291.
+                關於獲取所有儲存空間清單介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/8291.
 
                 cos php SDK 中獲取所屬帳戶的所有儲存空間清單的方法具體步驟如下：
 
@@ -2396,7 +2396,7 @@ class Service {
 
                 在開始使用 COS 時，需要确認該 Bucket 是否存在，是否有權限訪問.若不存在，則可以調用putBucket(PutBucketRequest) 創建.
 
-                關于确認該 Bucket 是否存在，是否有權限訪問介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/7735.
+                關於确認該 Bucket 是否存在，是否有權限訪問介面的具體描述，請檢視https://cloud.taifucloud.com/document/product/436/7735.
 
                 cos php SDK 中Bucket 是否存在的方法具體步驟如下：
 

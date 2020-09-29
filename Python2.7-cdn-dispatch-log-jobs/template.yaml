@@ -4,7 +4,7 @@ Resources:
       Type: TencentCloud::Serverless::Function
       Properties:
         Description: get CDN logs by url and upload to COS. this is control function.
-          本範例介紹如何把CDN的日志拉取并儲存到物件儲存，一共需要創建2個函數，任務分發函數和儲存函數，通過任務分發函數調用“下載URL文件并儲存到COS”函數完成日志儲存，該函數爲任務分發函數
+          本範例介紹如何把CDN的日志拉取並儲存到物件儲存，一共需要創建2個函數，任務分發函數和儲存函數，通過任務分發函數調用“下載URL文件並儲存到COS”函數完成日志儲存，該函數爲任務分發函數
         MemorySize: 128
         Handler: index.main_handler
         Timeout: 300

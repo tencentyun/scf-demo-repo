@@ -17,7 +17,7 @@ from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class AccountCreateInfo(AbstractModel):
-    """賬号創建訊息
+    """賬號創建訊息
 
     """
 
@@ -29,7 +29,7 @@ class AccountCreateInfo(AbstractModel):
         :type Password: str
         :param DBPrivileges: DB權限清單
         :type DBPrivileges: list of DBPrivilege
-        :param Remark: 賬号備注訊息
+        :param Remark: 賬號備注訊息
         :type Remark: str
         :param IsAdmin: 是否爲管理員帳戶，預設爲否
         :type IsAdmin: bool
@@ -105,7 +105,7 @@ class AccountDetail(AbstractModel):
 
 
 class AccountPassword(AbstractModel):
-    """實例賬号密碼訊息
+    """實例賬號密碼訊息
 
     """
 
@@ -126,7 +126,7 @@ class AccountPassword(AbstractModel):
 
 
 class AccountPrivilege(AbstractModel):
-    """資料庫賬号權限訊息。創建資料庫時設置
+    """資料庫賬號權限訊息。創建資料庫時設置
 
     """
 
@@ -147,7 +147,7 @@ class AccountPrivilege(AbstractModel):
 
 
 class AccountPrivilegeModifyInfo(AbstractModel):
-    """資料庫賬号權限變更訊息
+    """資料庫賬號權限變更訊息
 
     """
 
@@ -155,7 +155,7 @@ class AccountPrivilegeModifyInfo(AbstractModel):
         """
         :param UserName: 資料庫用戶名
         :type UserName: str
-        :param DBPrivileges: 賬号權限變更訊息
+        :param DBPrivileges: 賬號權限變更訊息
         :type DBPrivileges: list of DBPrivilegeModifyInfo
         """
         self.UserName = None
@@ -212,7 +212,7 @@ class Backup(AbstractModel):
         :type InternalAddr: str
         :param ExternalAddr: 外網下載網址
         :type ExternalAddr: str
-        :param Id: 備份文件唯一标識，RestoreInstance介面會用到該欄位
+        :param Id: 備份文件唯一標識，RestoreInstance介面會用到該欄位
         :type Id: int
         :param Status: 備份文件狀态（0-創建中；1-成功；2-失敗）
         :type Status: int
@@ -374,7 +374,7 @@ class CreateDBInstancesRequest(AbstractModel):
         :type VoucherIds: list of str
         :param DBVersion: sqlserver版本，目前只支援：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。每個地域支援售賣的版本不同，可通過DescribeProductConfig介面來拉取每個地域可售賣的版本訊息。不填，預設爲版本2008R2。
         :type DBVersion: str
-        :param AutoRenewFlag: 自動續約标志：0-正常續約  1-自動續約，預設爲1自動續約。只在購買預付費實例時有效。
+        :param AutoRenewFlag: 自動續約標志：0-正常續約  1-自動續約，預設爲1自動續約。只在購買預付費實例時有效。
         :type AutoRenewFlag: int
         """
         self.Zone = None
@@ -495,7 +495,7 @@ class CreateMigrationRequest(AbstractModel):
         :type SourceType: int
         :param Source: 遷移源
         :type Source: :class:`taifucloudcloud.sqlserver.v20180328.models.MigrateSource`
-        :param Target: 遷移目标
+        :param Target: 遷移目標
         :type Target: :class:`taifucloudcloud.sqlserver.v20180328.models.MigrateTarget`
         :param MigrateDBSet: 遷移DB對象 ，離線遷移不使用（SourceType=4或SourceType=5）。
         :type MigrateDBSet: list of MigrateDB
@@ -558,7 +558,7 @@ class DBCreateInfo(AbstractModel):
         :type DBName: str
         :param Charset: 字元集。可選值包括：Chinese_PRC_CI_AS, Chinese_PRC_CS_AS, Chinese_PRC_BIN, Chinese_Taiwan_Stroke_CI_AS, SQL_Latin1_General_CP1_CI_AS, SQL_Latin1_General_CP1_CS_AS。不填預設爲Chinese_PRC_CI_AS
         :type Charset: str
-        :param Accounts: 資料庫賬号權限訊息
+        :param Accounts: 資料庫賬號權限訊息
         :type Accounts: list of AccountPrivilege
         :param Remark: 備注
         :type Remark: str
@@ -598,7 +598,7 @@ class DBDetail(AbstractModel):
         :type CreateTime: str
         :param Status: 資料庫狀态。1--創建中， 2--運作中， 3--修改中，-1--删除中
         :type Status: int
-        :param Accounts: 資料庫賬号權限訊息
+        :param Accounts: 資料庫賬號權限訊息
         :type Accounts: list of AccountPrivilege
         :param InternalStatus: 内部狀态。ONLINE表示運作中
         :type InternalStatus: str
@@ -672,7 +672,7 @@ class DBInstance(AbstractModel):
         :type Storage: int
         :param VersionName: 實例版本
         :type VersionName: str
-        :param RenewFlag: 實例續約标記，0-正常續約，1-自動續約，2-到期不續約
+        :param RenewFlag: 實例續約標記，0-正常續約，1-自動續約，2-到期不續約
         :type RenewFlag: int
         :param Model: 實例高可用， 1-雙機高可用，2-單機
         :type Model: int
@@ -688,9 +688,9 @@ class DBInstance(AbstractModel):
         :type Uid: str
         :param Cpu: 實例cpu核心數
         :type Cpu: int
-        :param Version: 實例版本代号
+        :param Version: 實例版本代號
         :type Version: str
-        :param Type: 物理機代号
+        :param Type: 物理機代號
         :type Type: str
         :param Pid: 計費ID
         :type Pid: int
@@ -769,7 +769,7 @@ class DBInstance(AbstractModel):
 
 
 class DBPrivilege(AbstractModel):
-    """賬号的資料庫權限訊息
+    """賬號的資料庫權限訊息
 
     """
 
@@ -798,7 +798,7 @@ class DBPrivilegeModifyInfo(AbstractModel):
         """
         :param DBName: 資料庫名
         :type DBName: str
-        :param Privilege: 權限變更訊息。ReadWrite表示可讀寫，ReadOnly表示只讀，Delete表示删除賬号對該DB的權限
+        :param Privilege: 權限變更訊息。ReadWrite表示可讀寫，ReadOnly表示只讀，Delete表示删除賬號對該DB的權限
         :type Privilege: str
         """
         self.DBName = None
@@ -867,11 +867,11 @@ class DealInfo(AbstractModel):
         :type DealName: str
         :param Count: 商品數量
         :type Count: int
-        :param FlowId: 關聯的流程 ID，可用于查詢流程執行狀态
+        :param FlowId: 關聯的流程 ID，可用於查詢流程執行狀态
         :type FlowId: int
         :param InstanceIdSet: 只有創建實例的訂單會填充該欄位，表示該訂單創建的實例的 ID。
         :type InstanceIdSet: list of str
-        :param OwnerUin: 所屬賬号
+        :param OwnerUin: 所屬賬號
         :type OwnerUin: str
         :param InstanceChargeType: 實例付費類型
         :type InstanceChargeType: str
@@ -1022,7 +1022,7 @@ class DescribeAccountsRequest(AbstractModel):
         :type InstanceId: str
         :param Limit: 分頁返回，每頁返回的數目，取值爲1-100，預設值爲20
         :type Limit: int
-        :param Offset: 分頁返回，頁編号，預設值爲第0頁
+        :param Offset: 分頁返回，頁編號，預設值爲第0頁
         :type Offset: int
         """
         self.InstanceId = None
@@ -1085,7 +1085,7 @@ class DescribeBackupsRequest(AbstractModel):
         :type InstanceId: str
         :param Limit: 分頁返回，每頁返回的數目，取值爲1-100，預設值爲20
         :type Limit: int
-        :param Offset: 分頁返回，頁編号，預設值爲第0頁
+        :param Offset: 分頁返回，頁編號，預設值爲第0頁
         :type Offset: int
         """
         self.StartTime = None
@@ -1156,7 +1156,7 @@ class DescribeDBInstancesRequest(AbstractModel):
 <li>11：只讀</li>
 <li>12：重啓中</li>
         :type Status: int
-        :param Offset: 分頁返回，頁編号，預設值爲第0頁
+        :param Offset: 分頁返回，頁編號，預設值爲第0頁
         :type Offset: int
         :param Limit: 分頁返回，每頁返回的數目，取值爲1-100，預設值爲100
         :type Limit: int
@@ -1231,7 +1231,7 @@ class DescribeDBsRequest(AbstractModel):
         :type InstanceIdSet: list of str
         :param Limit: 分頁返回，每頁返回的數目，取值爲1-100，預設值爲20
         :type Limit: int
-        :param Offset: 分頁返回，頁編号，預設值爲第0頁
+        :param Offset: 分頁返回，頁編號，預設值爲第0頁
         :type Offset: int
         """
         self.InstanceIdSet = None
@@ -1361,7 +1361,7 @@ class DescribeMigrationDetailResponse(AbstractModel):
         :type MigrateType: int
         :param Source: 遷移源
         :type Source: :class:`taifucloudcloud.sqlserver.v20180328.models.MigrateSource`
-        :param Target: 遷移目标
+        :param Target: 遷移目標
         :type Target: :class:`taifucloudcloud.sqlserver.v20180328.models.MigrateTarget`
         :param MigrateDBSet: 遷移DB對象 ，離線遷移（SourceType=4或SourceType=5）不使用。
         :type MigrateDBSet: list of MigrateDB
@@ -1425,7 +1425,7 @@ class DescribeMigrationsRequest(AbstractModel):
         :type MigrateName: str
         :param Limit: 分頁返回，每頁返回的數目，取值爲1-100，預設值爲100
         :type Limit: int
-        :param Offset: 分頁返回，頁編号，預設值爲第0頁
+        :param Offset: 分頁返回，頁編號，預設值爲第0頁
         :type Offset: int
         :param OrderBy: 查詢結果按照關鍵字排序，可選值爲name、createTime、startTime，endTime，status
         :type OrderBy: str
@@ -1671,7 +1671,7 @@ class DescribeSlowlogsRequest(AbstractModel):
         :type EndTime: str
         :param Limit: 分頁返回，每頁返回的數目，取值爲1-100，預設值爲20
         :type Limit: int
-        :param Offset: 分頁返回，頁編号，預設值爲第0頁
+        :param Offset: 分頁返回，頁編號，預設值爲第0頁
         :type Offset: int
         """
         self.InstanceId = None
@@ -1956,7 +1956,7 @@ class InstanceRenewInfo(AbstractModel):
         """
         :param InstanceId: 實例ID，形如mssql-j8kv137v
         :type InstanceId: str
-        :param RenewFlag: 實例續約标記。0：正常續約，1：自動續約，2：到期不續
+        :param RenewFlag: 實例續約標記。0：正常續約，1：自動續約，2：到期不續
         :type RenewFlag: int
         """
         self.InstanceId = None
@@ -2017,9 +2017,9 @@ class MigrateSource(AbstractModel):
         :type InstanceId: str
         :param CvmId: 遷移源Cvm的ID，MigrateType=2(雲伺服器自建SQLServer資料庫)時使用
         :type CvmId: str
-        :param VpcId: 遷移源Cvm的Vpc網絡标識，MigrateType=2(雲伺服器自建SQLServer資料庫)時使用，格式如：vpc-6ys9ont9
+        :param VpcId: 遷移源Cvm的Vpc網絡標識，MigrateType=2(雲伺服器自建SQLServer資料庫)時使用，格式如：vpc-6ys9ont9
         :type VpcId: str
-        :param SubnetId: 遷移源Cvm的Vpc下的子網标識，MigrateType=2(雲伺服器自建SQLServer資料庫)時使用，格式如：subnet-h9extioi
+        :param SubnetId: 遷移源Cvm的Vpc下的子網標識，MigrateType=2(雲伺服器自建SQLServer資料庫)時使用，格式如：subnet-h9extioi
         :type SubnetId: str
         :param UserName: 用戶名，MigrateType=1或MigrateType=2使用
         :type UserName: str
@@ -2027,7 +2027,7 @@ class MigrateSource(AbstractModel):
         :type Password: str
         :param Ip: 遷移源Cvm自建庫的内網IP，MigrateType=2(雲伺服器自建SQLServer資料庫)時使用
         :type Ip: str
-        :param Port: 遷移源Cvm自建庫的端口号，MigrateType=2(雲伺服器自建SQLServer資料庫)時使用
+        :param Port: 遷移源Cvm自建庫的端口號，MigrateType=2(雲伺服器自建SQLServer資料庫)時使用
         :type Port: int
         :param Url: 離線遷移的源備份網址，MigrateType=4或MigrateType=5使用
         :type Url: list of str
@@ -2060,17 +2060,17 @@ class MigrateSource(AbstractModel):
 
 
 class MigrateTarget(AbstractModel):
-    """遷移任務的目标類型
+    """遷移任務的目標類型
 
     """
 
     def __init__(self):
         """
-        :param InstanceId: 遷移目标實例的ID，格式如：mssql-si2823jyl
+        :param InstanceId: 遷移目標實例的ID，格式如：mssql-si2823jyl
         :type InstanceId: str
-        :param UserName: 遷移目标實例的用戶名
+        :param UserName: 遷移目標實例的用戶名
         :type UserName: str
-        :param Password: 遷移目标實例的密碼
+        :param Password: 遷移目標實例的密碼
         :type Password: str
         """
         self.InstanceId = None
@@ -2160,7 +2160,7 @@ class ModifyAccountPrivilegeRequest(AbstractModel):
         """
         :param InstanceId: 資料庫實例ID，形如mssql-njj2mtpl
         :type InstanceId: str
-        :param Accounts: 賬号權限變更訊息
+        :param Accounts: 賬號權限變更訊息
         :type Accounts: list of AccountPrivilegeModifyInfo
         """
         self.InstanceId = None
@@ -2328,7 +2328,7 @@ class ModifyDBInstanceRenewFlagRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param RenewFlags: 實例續約狀态标記訊息
+        :param RenewFlags: 實例續約狀态標記訊息
         :type RenewFlags: list of InstanceRenewInfo
         """
         self.RenewFlags = None
@@ -2470,7 +2470,7 @@ class ModifyMigrationRequest(AbstractModel):
         :type SourceType: int
         :param Source: 遷移源，若不填則不修改
         :type Source: :class:`taifucloudcloud.sqlserver.v20180328.models.MigrateSource`
-        :param Target: 遷移目标，若不填則不修改
+        :param Target: 遷移目標，若不填則不修改
         :type Target: :class:`taifucloudcloud.sqlserver.v20180328.models.MigrateTarget`
         :param MigrateDBSet: 遷移DB對象 ，離線遷移（SourceType=4或SourceType=5）不使用，若不填則不修改
         :type MigrateDBSet: list of MigrateDB
@@ -2636,7 +2636,7 @@ class ResetAccountPasswordResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param FlowId: 修改帳号密碼的異步任務流程ID
+        :param FlowId: 修改帳號密碼的異步任務流程ID
         :type FlowId: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -2743,7 +2743,7 @@ class RollbackInstanceRequest(AbstractModel):
         :type Type: int
         :param DBs: 需要回檔的資料庫
         :type DBs: list of str
-        :param Time: 回檔目标時間點
+        :param Time: 回檔目標時間點
         :type Time: str
         """
         self.InstanceId = None
@@ -2825,7 +2825,7 @@ class SlowlogInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param Id: 慢查詢日志文件唯一标識
+        :param Id: 慢查詢日志文件唯一標識
         :type Id: int
         :param StartTime: 文件生成的開始時間
         :type StartTime: str

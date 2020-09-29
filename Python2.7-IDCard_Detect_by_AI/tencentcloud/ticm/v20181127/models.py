@@ -79,9 +79,9 @@ class FaceRect(AbstractModel):
 
     def __init__(self):
         """
-        :param X: 人臉區域左上角橫坐标。
+        :param X: 人臉區域左上角橫坐標。
         :type X: int
-        :param Y: 人臉區域左上角縱坐标。
+        :param Y: 人臉區域左上角縱坐標。
         :type Y: int
         :param Width: 人臉區域寬度。
         :type Width: int
@@ -147,11 +147,11 @@ class ImageModerationRequest(AbstractModel):
 圖片限制： 
  • 圖片格式：PNG、JPG、JPEG。 
  • 圖片大小：所下載圖片經Base64編碼後不超過4M。圖片下載時間不超過3秒。 
- • 圖片像素：大于50*50像素，否則影響識别效果； 
+ • 圖片像素：大於50*50像素，否則影響識别效果； 
  • 長寬比：長邊：短邊<5； 
 介面響應時間會受到圖片下載時間的影響，建議使用更可靠的儲存服務，推薦将圖片儲存在Top Cloud COS。
         :type ImageUrl: str
-        :param Config: 預留欄位，後期用于展示更多識别訊息。
+        :param Config: 預留欄位，後期用於展示更多識别訊息。
         :type Config: str
         :param Extra: 透傳欄位，透傳簡單訊息。
         :type Extra: str
@@ -260,11 +260,11 @@ Type爲FACE時：
 55到60，Suggestion建議爲REVIEW
 60到100，Suggestion建議爲BLOCK
         :type Confidence: int
-        :param FaceResults: Type取值爲‘FACE’時，人臉識别的結果清單。基于圖片中實際檢測到的人臉數，返回數組最大值不超過5個。
+        :param FaceResults: Type取值爲‘FACE’時，人臉識别的結果清單。基於圖片中實際檢測到的人臉數，返回數組最大值不超過5個。
         :type FaceResults: list of FaceResult
         :param Type: 取值'DNA' 或‘FACE’。DNA表示結論和置信度來自圖像指紋，FACE表示結論和置信度來自人臉識别。
         :type Type: str
-        :param AdvancedInfo: 鑒政識别返回的詳細标簽後期開放。
+        :param AdvancedInfo: 鑒政識别返回的詳細標簽後期開放。
         :type AdvancedInfo: str
         """
         self.Code = None
@@ -311,11 +311,11 @@ PASS：正常
 REVIEW：疑似
 BLOCK：違規
         :type Suggestion: str
-        :param Confidence: 算法對于Suggestion的置信度，0-100之間，值越高，表示對于Suggestion越确定。
+        :param Confidence: 算法對於Suggestion的置信度，0-100之間，值越高，表示對於Suggestion越确定。
         :type Confidence: int
-        :param AdvancedInfo: 預留欄位，後期用于展示更多識别訊息。
+        :param AdvancedInfo: 預留欄位，後期用於展示更多識别訊息。
         :type AdvancedInfo: str
-        :param Type: 取值'LABEL‘，LABEL表示結論和置信度來自标簽分類。
+        :param Type: 取值'LABEL‘，LABEL表示結論和置信度來自標簽分類。
         :type Type: str
         """
         self.Code = None
@@ -365,11 +365,11 @@ Type爲FACE時：
 55到60，Suggestion建議爲REVIEW
 60到100，Suggestion建議爲BLOCK
         :type Confidence: int
-        :param FaceResults: Type取值爲‘FACE’時，人臉識别的結果清單。基于圖片中實際檢測到的人臉數，返回數組最大值不超過5個。
+        :param FaceResults: Type取值爲‘FACE’時，人臉識别的結果清單。基於圖片中實際檢測到的人臉數，返回數組最大值不超過5個。
         :type FaceResults: list of FaceResult
-        :param AdvancedInfo: 暴恐識别返回的詳細标簽後期開放。
+        :param AdvancedInfo: 暴恐識别返回的詳細標簽後期開放。
         :type AdvancedInfo: str
-        :param Type: 取值'LABEL' 或‘FACE’，LABEL表示結論和置信度來自标簽分類，FACE表示結論和置信度來自人臉識别。
+        :param Type: 取值'LABEL' 或‘FACE’，LABEL表示結論和置信度來自標簽分類，FACE表示結論和置信度來自人臉識别。
         :type Type: str
         """
         self.Code = None

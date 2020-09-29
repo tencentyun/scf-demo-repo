@@ -403,7 +403,7 @@ class CreateNatGatewayRequest(AbstractModel):
         :type VpcId: str
         :param NatName: NAT名稱
         :type NatName: str
-        :param MaxConcurrent: 并發連接數規格；取值爲1000000、3000000、10000000，分别對應小型、中型、大型NAT閘道
+        :param MaxConcurrent: 並發連接數規格；取值爲1000000、3000000、10000000，分别對應小型、中型、大型NAT閘道
         :type MaxConcurrent: int
         :param SubnetIds: 子網ID清單，子網下全部IP将加入NAT，不區分閘道轉發方式
         :type SubnetIds: list of str
@@ -413,7 +413,7 @@ class CreateNatGatewayRequest(AbstractModel):
         :type AssignedEips: list of str
         :param AutoAllocEipNum: 新建EIP數目，系統将會按您的要求生産該數目個數EIP, AssignedEips和AutoAllocEipNum至少輸入一個
         :type AutoAllocEipNum: int
-        :param Exclusive: 獨占标識，取值爲0和1，預設值爲0；0和1分别表示創建共享型NAT閘道和獨占NAT型閘道；由于同一個VPC網絡内，指向NAT集群的預設路由只有一條，因此VPC内只能創建一種類型NAT閘道；創建獨占型NAT閘道時，需聯系對應架構師進行獨占NAT集群搭建，否則無法創建獨占型NAT閘道。
+        :param Exclusive: 獨占標識，取值爲0和1，預設值爲0；0和1分别表示創建共享型NAT閘道和獨占NAT型閘道；由於同一個VPC網絡内，指向NAT集群的預設路由只有一條，因此VPC内只能創建一種類型NAT閘道；創建獨占型NAT閘道時，需聯系對應架構師進行獨占NAT集群搭建，否則無法創建獨占型NAT閘道。
         :type Exclusive: int
         """
         self.ForwardMode = None
@@ -1302,7 +1302,7 @@ class DescribeCustomerGatewaysRequest(AbstractModel):
 <li>customergateway-id - String - （過濾條件）對端閘道唯一ID。</li>
 <li>zone - String - （過濾條件）對端所在可用區，形如：ap-guangzhou-2。</li>
         :type Filters: list of Filter
-        :param Offset: 偏移量，預設爲0。關于Offset的更進一步介紹請參考 API 簡介中的相關小節。
+        :param Offset: 偏移量，預設爲0。關於Offset的更進一步介紹請參考 API 簡介中的相關小節。
         :type Offset: int
         :param Limit: 返回數量，預設爲20，最大值爲100。
         :type Limit: int
@@ -2183,17 +2183,17 @@ class IKEOptionsSpecification(AbstractModel):
         :type PropoAuthenAlgorithm: str
         :param ExchangeMode: 協商模式：可選值：'AGGRESSIVE', 'MAIN'，預設爲MAIN
         :type ExchangeMode: str
-        :param LocalIdentity: 本端标識類型：可選值：'ADDRESS', 'FQDN'，預設爲ADDRESS
+        :param LocalIdentity: 本端標識類型：可選值：'ADDRESS', 'FQDN'，預設爲ADDRESS
         :type LocalIdentity: str
-        :param RemoteIdentity: 對端标識類型：可選值：'ADDRESS', 'FQDN'，預設爲ADDRESS
+        :param RemoteIdentity: 對端標識類型：可選值：'ADDRESS', 'FQDN'，預設爲ADDRESS
         :type RemoteIdentity: str
-        :param LocalAddress: 本端标識，當LocalIdentity選爲ADDRESS時，LocalAddress必填。localAddress預設爲vpn閘道公網IP
+        :param LocalAddress: 本端標識，當LocalIdentity選爲ADDRESS時，LocalAddress必填。localAddress預設爲vpn閘道公網IP
         :type LocalAddress: str
-        :param RemoteAddress: 對端标識，當RemoteIdentity選爲ADDRESS時，RemoteAddress必填
+        :param RemoteAddress: 對端標識，當RemoteIdentity選爲ADDRESS時，RemoteAddress必填
         :type RemoteAddress: str
-        :param LocalFqdnName: 本端标識，當LocalIdentity選爲FQDN時，LocalFqdnName必填
+        :param LocalFqdnName: 本端標識，當LocalIdentity選爲FQDN時，LocalFqdnName必填
         :type LocalFqdnName: str
-        :param RemoteFqdnName: 對端标識，當remoteIdentity選爲FQDN時，RemoteFqdnName必填
+        :param RemoteFqdnName: 對端標識，當remoteIdentity選爲FQDN時，RemoteFqdnName必填
         :type RemoteFqdnName: str
         :param DhGroupName: DH group，指定IKE交換金鑰時使用的DH組，可選值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
         :type DhGroupName: str
@@ -2717,11 +2717,11 @@ class NatGatewayInfo(AbstractModel):
         :type ProductionStatus: int
         :param Eips: EIP清單
         :type Eips: list of str
-        :param MaxConcurrent: 并發連接數規格，取值爲1000000, 3000000, 10000000
+        :param MaxConcurrent: 並發連接數規格，取值爲1000000, 3000000, 10000000
         :type MaxConcurrent: int
         :param Zone: 可用區
         :type Zone: str
-        :param Exclusive: 獨占标識，其中0表示共享，1表示獨占，預設值爲0
+        :param Exclusive: 獨占標識，其中0表示共享，1表示獨占，預設值爲0
         :type Exclusive: int
         :param ForwardMode: 轉發模式，其中0表示IP方式，1表示網段方式
         :type ForwardMode: int
@@ -2993,13 +2993,13 @@ class SubnetCreateInputInfo(AbstractModel):
         :type SubnetName: str
         :param CidrBlock: 子網網段，子網網段必須在VPC網段内，相同VPC内子網網段不能重疊
         :type CidrBlock: str
-        :param DistributedFlag: 是否開啓子網分布式閘道，預設傳1，傳0爲關閉子網分布式閘道。關閉分布式閘道子網用于雲伺服器化子網，此子網中只能有一台物理機，同時此物理機及其上子機只能在此子網中
+        :param DistributedFlag: 是否開啓子網分布式閘道，預設傳1，傳0爲關閉子網分布式閘道。關閉分布式閘道子網用於雲伺服器化子網，此子網中只能有一台物理機，同時此物理機及其上子機只能在此子網中
         :type DistributedFlag: int
         :param DhcpEnable: 是否開啓dhcp relay ，關閉爲0，開啓爲1。預設爲0
         :type DhcpEnable: int
         :param DhcpServerIp: DHCP SERVER 的IP網址數組。IP網址爲相同VPC的子網内分配的IP
         :type DhcpServerIp: list of str
-        :param IpReserve: 預留的IP個數。從該子網的最大可分配IP倒序分配N個IP 用于DHCP 動态分配使用的網址段
+        :param IpReserve: 預留的IP個數。從該子網的最大可分配IP倒序分配N個IP 用於DHCP 動态分配使用的網址段
         :type IpReserve: int
         :param VlanId: 子網綁定的vlanId。VlanId取值範圍爲2000-2999。創建物理機子網，VlanId預設爲5; 創建docker子網或者虛拟子網，VlanId預設會分配2000--2999未使用的數值。
         :type VlanId: int
@@ -3064,7 +3064,7 @@ class SubnetInfo(AbstractModel):
         :type DhcpEnable: int
         :param DhcpServerIp: DHCP SERVER 的IP網址數組。IP網址爲相同VPC的子網内分配的IP。
         :type DhcpServerIp: list of str
-        :param IpReserve: 預留的IP個數。從該子網的最大可分配IP倒序分配N個IP 用于DHCP 動态分配使用的網址段。
+        :param IpReserve: 預留的IP個數。從該子網的最大可分配IP倒序分配N個IP 用於DHCP 動态分配使用的網址段。
         :type IpReserve: int
         :param AvailableIpNum: 子網中可用的IP個數
         :type AvailableIpNum: int
@@ -3072,7 +3072,7 @@ class SubnetInfo(AbstractModel):
         :type TotalIpNum: int
         :param SubnetCreateTime: 子網創建時間
         :type SubnetCreateTime: str
-        :param IsSmartNic: 25G子網标識
+        :param IsSmartNic: 25G子網標識
         :type IsSmartNic: int
         """
         self.VpcId = None
@@ -3270,7 +3270,7 @@ class UpgradeNatGatewayRequest(AbstractModel):
         :type NatId: str
         :param VpcId: 私有網絡ID，例如：vpc-kd7d06of
         :type VpcId: str
-        :param MaxConcurrent: 并發連接數規格；取值爲1000000、3000000、10000000，分别對應小型、中型、大型NAT閘道
+        :param MaxConcurrent: 並發連接數規格；取值爲1000000、3000000、10000000，分别對應小型、中型、大型NAT閘道
         :type MaxConcurrent: int
         """
         self.NatId = None

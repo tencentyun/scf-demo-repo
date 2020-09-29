@@ -93,7 +93,7 @@ class DescribeKeysRequest(AbstractModel):
         :param RsaPublicKey: Base64編碼的Rsa公鑰，用來加密出參中的SessionKey。
 如果該參數爲空，則出參中SessionKey爲明文。
         :type RsaPublicKey: str
-        :param ContentId: 一個加密内容的唯一标識。
+        :param ContentId: 一個加密内容的唯一標識。
 如果該參數爲空，則後台自動生成
         :type ContentId: str
         """
@@ -202,7 +202,7 @@ class DrmOutputPara(AbstractModel):
 
 
 class DrmSourceObject(AbstractModel):
-    """用于DRM加密的源對象
+    """用於DRM加密的源對象
 
     """
 

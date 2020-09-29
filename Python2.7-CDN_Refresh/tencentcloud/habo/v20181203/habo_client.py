@@ -26,7 +26,7 @@ class HaboClient(AbstractClient):
 
 
     def DescribeStatus(self, request):
-        """查詢指定md5樣本是否分析完成，并獲取分析日志下載網址。
+        """查詢指定md5樣本是否分析完成，並獲取分析日志下載網址。
 
         :param request: Request instance for DescribeStatus.
         :type request: :class:`taifucloudcloud.habo.v20181203.models.DescribeStatusRequest`

@@ -172,7 +172,7 @@ class PriceInfo(AbstractModel):
         :type Price: int
         :param RealPrice: 域名現價
         :type RealPrice: int
-        :param Operation: 商品的購買類型，新購，續約，贖回，轉入，續約并轉入
+        :param Operation: 商品的購買類型，新購，續約，贖回，轉入，續約並轉入
         :type Operation: str
         """
         self.Tld = None

@@ -176,7 +176,7 @@ class ControlDeviceDataResponse(AbstractModel):
         :param Data: 返回訊息
         :type Data: str
         :param Result: JSON字串， 返回下發控制的結果訊息, 
-Sent = 1 表示設備已經在線并且訂閱了控制下發的mqtt topic
+Sent = 1 表示設備已經在線並且訂閱了控制下發的mqtt topic
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Result: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
@@ -208,7 +208,7 @@ class CreateDeviceRequest(AbstractModel):
         :type DevAddr: str
         :param AppKey: LoRaWAN 應用金鑰
         :type AppKey: str
-        :param DevEUI: LoRaWAN 設備唯一标識
+        :param DevEUI: LoRaWAN 設備唯一標識
         :type DevEUI: str
         :param AppSKey: LoRaWAN 應用會話金鑰
         :type AppSKey: str
@@ -490,7 +490,7 @@ class DescribeDeviceDataHistoryRequest(AbstractModel):
         :type ProductId: str
         :param DeviceName: 設備名稱
         :type DeviceName: str
-        :param FieldName: 屬性欄位名稱，對應數據範本中功能屬性的标識符
+        :param FieldName: 屬性欄位名稱，對應數據範本中功能屬性的標識符
         :type FieldName: str
         :param Limit: 返回條數
         :type Limit: int
@@ -523,7 +523,7 @@ class DescribeDeviceDataHistoryResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param FieldName: 屬性欄位名稱，對應數據範本中功能屬性的标識符
+        :param FieldName: 屬性欄位名稱，對應數據範本中功能屬性的標識符
 注意：此欄位可能返回 null，表示取不到有效值。
         :type FieldName: str
         :param Listover: 數據是否已全部返回，true 表示數據全部返回，false 表示還有數據待返回，可将 Context 作爲入參，繼續查詢返回結果。
@@ -779,13 +779,13 @@ class DeviceData(AbstractModel):
 
     def __init__(self):
         """
-        :param DeviceCert: 設備證書，用于 TLS 建立連結時校驗用戶端身份。采用非對稱加密時返回該參數。
+        :param DeviceCert: 設備證書，用於 TLS 建立連結時校驗用戶端身份。采用非對稱加密時返回該參數。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DeviceCert: str
         :param DeviceName: 設備名稱。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DeviceName: str
-        :param DevicePrivateKey: 設備私鑰，用于 TLS 建立連結時校驗用戶端身份，Top Cloud 後台不保存，請妥善保管。采用非對稱加密時返回該參數。
+        :param DevicePrivateKey: 設備私鑰，用於 TLS 建立連結時校驗用戶端身份，Top Cloud 後台不保存，請妥善保管。采用非對稱加密時返回該參數。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DevicePrivateKey: str
         :param DevicePsk: 對稱加密金鑰，base64編碼。采用對稱加密時返回該參數。
@@ -864,7 +864,7 @@ class DeviceInfo(AbstractModel):
         :param AppKey: LoRaWAN 應用金鑰
 注意：此欄位可能返回 null，表示取不到有效值。
         :type AppKey: str
-        :param DevEUI: LoRaWAN 設備唯一标識
+        :param DevEUI: LoRaWAN 設備唯一標識
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DevEUI: str
         :param AppSKey: LoRaWAN 應用會話金鑰
@@ -923,7 +923,7 @@ class EventHistoryItem(AbstractModel):
         :param DeviceName: 事件的設備名稱
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DeviceName: str
-        :param EventId: 事件的标識符ID
+        :param EventId: 事件的標識符ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EventId: str
         :param Type: 事件的類型
@@ -1136,7 +1136,7 @@ class ListEventHistoryRequest(AbstractModel):
         :type StartTime: int
         :param EndTime: 結束時間（Unix 時間戳，秒級）, 爲0 表示當前時間
         :type EndTime: int
-        :param Context: 搜索上下文, 用作查詢遊标
+        :param Context: 搜索上下文, 用作查詢遊標
         :type Context: str
         :param Size: 單次獲取的曆史數據項目的最大數量
         :type Size: int
@@ -1167,7 +1167,7 @@ class ListEventHistoryResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Context: 搜索上下文, 用作查詢遊标
+        :param Context: 搜索上下文, 用作查詢遊標
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Context: str
         :param Total: 搜索結果數量

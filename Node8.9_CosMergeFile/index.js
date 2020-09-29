@@ -46,7 +46,7 @@ exports.main_handler = async (event, context, callback) => {
       Body: fs.createReadStream(local_file)
     })
 
-    console.log('文件合并并寫入cos成功')
+    console.log('文件合並並寫入cos成功')
 
     return true
   } catch (err) {

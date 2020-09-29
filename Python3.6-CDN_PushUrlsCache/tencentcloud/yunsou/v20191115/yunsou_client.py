@@ -54,7 +54,7 @@ class YunsouClient(AbstractClient):
 
 
     def DataSearch(self, request):
-        """用于檢索雲搜中的數據。
+        """用於檢索雲搜中的數據。
 
         :param request: Request instance for DataSearch.
         :type request: :class:`taifucloudcloud.yunsou.v20191115.models.DataSearchRequest`

@@ -1596,7 +1596,7 @@ class TsfClient(AbstractClient):
 
 
     def DescribeUploadInfo(self, request):
-        """TSF會将軟體包上傳到Top Cloud 物件儲存（COS）。調用此介面獲取上傳訊息，如目标地域，桶，包Id，儲存路徑，鑒權訊息等，之後請使用COS API（或SDK）進行上傳。
+        """TSF會将軟體包上傳到Top Cloud 物件儲存（COS）。調用此介面獲取上傳訊息，如目標地域，桶，包Id，儲存路徑，鑒權訊息等，之後請使用COS API（或SDK）進行上傳。
         COS相關文件請查閱：https://cloud.taifucloud.com/document/product/436
 
         :param request: Request instance for DescribeUploadInfo.
@@ -1738,7 +1738,7 @@ class TsfClient(AbstractClient):
 
     def ModifyUploadInfo(self, request):
         """調用該介面和COS的上傳介面後，需要調用此介面更新TSF中保存的程式包狀态。
-        調用此介面完成後，才标志上傳包流程結束。
+        調用此介面完成後，才標志上傳包流程結束。
 
         :param request: Request instance for ModifyUploadInfo.
         :type request: :class:`taifucloudcloud.tsf.v20180326.models.ModifyUploadInfoRequest`

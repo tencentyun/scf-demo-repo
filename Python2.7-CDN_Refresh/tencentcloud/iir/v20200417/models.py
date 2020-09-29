@@ -17,19 +17,19 @@ from taifucloudcloud.common.abstract_model import AbstractModel
 
 
 class Location(AbstractModel):
-    """檢測到的主體在圖片中的矩形框位置（四個頂點坐标）
+    """檢測到的主體在圖片中的矩形框位置（四個頂點坐標）
 
     """
 
     def __init__(self):
         """
-        :param XMin: 位置矩形框的左上角橫坐标
+        :param XMin: 位置矩形框的左上角橫坐標
         :type XMin: int
-        :param YMin: 位置矩形框的左上角縱坐标
+        :param YMin: 位置矩形框的左上角縱坐標
         :type YMin: int
-        :param XMax: 位置矩形框的右下角橫坐标
+        :param XMax: 位置矩形框的右下角橫坐標
         :type XMax: int
-        :param YMax: 位置矩形框的右下角縱坐标
+        :param YMax: 位置矩形框的右下角縱坐標
         :type YMax: int
         """
         self.XMin = None
@@ -57,7 +57,7 @@ class ProductInfo(AbstractModel):
 0表示未找到同款商品， 具體商品訊息爲空（參考價格、名稱、品牌等），僅提供商品類目。  
 是否找到同款的判斷依據爲Score分值，分值越大則同款的可能性越大。
         :type FindSKU: int
-        :param Location: 本商品在圖片中的坐标，表示爲矩形框的四個頂點坐标。
+        :param Location: 本商品在圖片中的坐標，表示爲矩形框的四個頂點坐標。
         :type Location: :class:`taifucloudcloud.iir.v20200417.models.Location`
         :param Name: 商品名稱
         :type Name: str
@@ -109,7 +109,7 @@ class RecognizeProductRequest(AbstractModel):
         :type ImageUrl: str
         :param ImageBase64: 圖片經過base64編碼的内容。最大不超過1M，分辨率在25萬到100萬之間。 
 與ImageUrl同時存在時優先使用ImageUrl欄位。
-**注意：圖片需要base64編碼，并且要去掉編碼頭部。**
+**注意：圖片需要base64編碼，並且要去掉編碼頭部。**
         :type ImageBase64: str
         """
         self.ImageUrl = None
@@ -129,7 +129,7 @@ class RecognizeProductResponse(AbstractModel):
     def __init__(self):
         """
         :param RegionDetected: 檢測到的圖片中的商品位置和品類預測。 
-當圖片中存在多個商品時，輸出多組坐标，按照__顯著性__排序（綜合考慮面積、是否在中心、檢測算法置信度）。 
+當圖片中存在多個商品時，輸出多組坐標，按照__顯著性__排序（綜合考慮面積、是否在中心、檢測算法置信度）。 
 最多可以輸出__3組__檢測結果。
         :type RegionDetected: list of RegionDetected
         :param ProductInfo: 圖像識别出的商品的詳細訊息。 
@@ -158,7 +158,7 @@ class RecognizeProductResponse(AbstractModel):
 
 class RegionDetected(AbstractModel):
     """檢測到的圖片中的商品位置和品類預測。
-    當圖片中存在多個商品時，輸出多組坐标，按照__顯著性__排序（綜合考慮面積、是否在中心、檢測算法置信度）。
+    當圖片中存在多個商品時，輸出多組坐標，按照__顯著性__排序（綜合考慮面積、是否在中心、檢測算法置信度）。
     最多可以輸出__3組__檢測結果。
 
     """
@@ -170,7 +170,7 @@ class RegionDetected(AbstractModel):
         :type Category: str
         :param CategoryScore: 商品品類預測的置信度
         :type CategoryScore: float
-        :param Location: 檢測到的主體在圖片中的坐标，表示爲矩形框的四個頂點坐标
+        :param Location: 檢測到的主體在圖片中的坐標，表示爲矩形框的四個頂點坐標
         :type Location: :class:`taifucloudcloud.iir.v20200417.models.Location`
         """
         self.Category = None

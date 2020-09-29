@@ -126,16 +126,16 @@ class CreateMigrateJobRequest(AbstractModel):
         :type SrcAccessType: str
         :param SrcInfo: 源實例訊息，具體内容跟遷移任務類型相關
         :type SrcInfo: :class:`taifucloudcloud.dts.v20180330.models.SrcInfo`
-        :param DstDatabaseType: 目标實例資料庫類型,mysql,redis,mongodb
+        :param DstDatabaseType: 目標實例資料庫類型,mysql,redis,mongodb
         :type DstDatabaseType: str
-        :param DstAccessType: 目标實例接入類型，值包括：extranet(外網),cvm(cvm自建實例),dcg(專線接入的實例),vpncloud(雲vpn接入的實例),vpnselfbuild(自建vpn接入的實例)，cdb(雲上cdb實例). 目前只支援cdb.
+        :param DstAccessType: 目標實例接入類型，值包括：extranet(外網),cvm(cvm自建實例),dcg(專線接入的實例),vpncloud(雲vpn接入的實例),vpnselfbuild(自建vpn接入的實例)，cdb(雲上cdb實例). 目前只支援cdb.
         :type DstAccessType: str
-        :param DstInfo: 目标實例訊息
+        :param DstInfo: 目標實例訊息
         :type DstInfo: :class:`taifucloudcloud.dts.v20180330.models.DstInfo`
         :param DatabaseInfo: 需要遷移的源資料庫表訊息，用json格式的字串描述。
-對于database-table兩級結構的資料庫：
+對於database-table兩級結構的資料庫：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
-對于database-schema-table三級結構：
+對於database-schema-table三級結構：
 [{Database:db1,Schema:s1
 Table:[table1,table2]},{Database:db1,Schema:s2
 Table:[table1,table2]},{Database:db2,Schema:s1
@@ -244,14 +244,14 @@ class CreateSyncJobRequest(AbstractModel):
         :type SrcAccessType: str
         :param SrcInfo: 源實例訊息
         :type SrcInfo: :class:`taifucloudcloud.dts.v20180330.models.SyncInstanceInfo`
-        :param DstDatabaseType: 目标實例資料庫類型，目前僅包括：mysql
+        :param DstDatabaseType: 目標實例資料庫類型，目前僅包括：mysql
         :type DstDatabaseType: str
-        :param DstAccessType: 目标實例接入類型，目前僅包括：cdb(雲上cdb實例)
+        :param DstAccessType: 目標實例接入類型，目前僅包括：cdb(雲上cdb實例)
         :type DstAccessType: str
-        :param DstInfo: 目标實例訊息
+        :param DstInfo: 目標實例訊息
         :type DstInfo: :class:`taifucloudcloud.dts.v20180330.models.SyncInstanceInfo`
         :param DatabaseInfo: 需要同步的源資料庫表訊息，用json格式的字串描述。
-對于database-table兩級結構的資料庫：
+對於database-table兩級結構的資料庫：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
         :type DatabaseInfo: str
         """
@@ -526,7 +526,7 @@ class DescribeSyncCheckJobResponse(AbstractModel):
         :type ErrorMessage: str
         :param StepInfo: 任務執行步驟描述
         :type StepInfo: list of SyncCheckStepInfo
-        :param CheckFlag: 校驗标志：0（尚未校驗成功） ， 1（校驗成功）
+        :param CheckFlag: 校驗標志：0（尚未校驗成功） ， 1（校驗成功）
         :type CheckFlag: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -627,13 +627,13 @@ class DstInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param InstanceId: 目标實例Id
+        :param InstanceId: 目標實例Id
         :type InstanceId: str
-        :param Ip: 目标實例vip
+        :param Ip: 目標實例vip
         :type Ip: str
-        :param Port: 目标實例vport
+        :param Port: 目標實例vport
         :type Port: int
-        :param Region: 目标實例Id
+        :param Region: 目標實例Id
         :type Region: str
         :param ReadOnly: 只讀開關
         :type ReadOnly: int
@@ -718,7 +718,7 @@ class MigrateJobInfo(AbstractModel):
         :type SrcAccessType: str
         :param SrcInfo: 源實例訊息，具體内容跟遷移任務類型相關
         :type SrcInfo: :class:`taifucloudcloud.dts.v20180330.models.SrcInfo`
-        :param DstDatabaseType: 目标實例資料庫類型,mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+        :param DstDatabaseType: 目標實例資料庫類型,mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
         :type DstDatabaseType: str
         :param DstAccessType: 源實例接入類型，值包括：extranet(外網),cvm(cvm自建實例),dcg(專線接入的實例),vpncloud(雲vpn接入的實例),vpnselfbuild(自建vpn接入的實例)，cdb(雲上cdb實例)
         :type DstAccessType: str
@@ -797,7 +797,7 @@ class MigrateOption(AbstractModel):
         :type MigrateObject: int
         :param ConsistencyType: 數據對比類型，1-未配置,2-全量檢測,3-抽樣檢測, 4-僅校驗不一緻表,5-不檢測
         :type ConsistencyType: int
-        :param IsOverrideRoot: 是否用源庫Root帳戶函蓋目标庫，值包括：0-不函蓋，1-函蓋，選擇庫表或者結構遷移時應該爲0
+        :param IsOverrideRoot: 是否用源庫Root帳戶函蓋目標庫，值包括：0-不函蓋，1-函蓋，選擇庫表或者結構遷移時應該爲0
         :type IsOverrideRoot: int
         :param ExternParams: 不同資料庫用到的額外參數.以JSON格式描述. 
 Redis可定義如下的參數: 
@@ -852,7 +852,7 @@ class MigrateStepDetailInfo(AbstractModel):
         :type StepNo: int
         :param StepName: 步驟展現名稱
         :type StepName: str
-        :param StepId: 步驟英文标識
+        :param StepId: 步驟英文標識
         :type StepId: str
         :param Status: 步驟狀态:0-預設值,1-成功,2-失敗,3-執行中,4-未執行
         :type Status: int
@@ -887,15 +887,15 @@ class ModifyMigrateJobRequest(AbstractModel):
         :type SrcAccessType: str
         :param SrcInfo: 源實例訊息，具體内容跟遷移任務類型相關
         :type SrcInfo: :class:`taifucloudcloud.dts.v20180330.models.SrcInfo`
-        :param DstAccessType: 目标實例接入類型，值包括：extranet(外網),cvm(cvm自建實例),dcg(專線接入的實例),vpncloud(雲vpn接入的實例),vpnselfbuild(自建vpn接入的實例)，cdb(雲上cdb實例). 目前只支援cdb.
+        :param DstAccessType: 目標實例接入類型，值包括：extranet(外網),cvm(cvm自建實例),dcg(專線接入的實例),vpncloud(雲vpn接入的實例),vpnselfbuild(自建vpn接入的實例)，cdb(雲上cdb實例). 目前只支援cdb.
         :type DstAccessType: str
-        :param DstInfo: 目标實例訊息, 其中目标實例地域不允許修改.
+        :param DstInfo: 目標實例訊息, 其中目標實例地域不允許修改.
         :type DstInfo: :class:`taifucloudcloud.dts.v20180330.models.DstInfo`
         :param DatabaseInfo: 當選擇'指定庫表'遷移的時候, 需要設置待遷移的源資料庫表訊息,用符合json數組格式的字串描述, 如下所例。
 
-對于database-table兩級結構的資料庫：
+對於database-table兩級結構的資料庫：
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
-對于database-schema-table三級結構：
+對於database-schema-table三級結構：
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
 
 如果是'整個實例'的遷移模式,不需設置該欄位
@@ -959,7 +959,7 @@ class ModifySyncJobRequest(AbstractModel):
         :param SyncOption: 災備同步任務配置選項
         :type SyncOption: :class:`taifucloudcloud.dts.v20180330.models.SyncOption`
         :param DatabaseInfo: 當選擇'指定庫表'災備同步的時候, 需要設置待同步的源資料庫表訊息,用符合json數組格式的字串描述, 如下所例。
-對于database-table兩級結構的資料庫：
+對於database-table兩級結構的資料庫：
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
         :type DatabaseInfo: str
         """
@@ -1423,13 +1423,13 @@ class SyncStepDetailInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param StepNo: 步驟編号
+        :param StepNo: 步驟編號
         :type StepNo: int
         :param StepName: 步驟名
         :type StepName: str
         :param CanStop: 能否中止
         :type CanStop: int
-        :param StepId: 步驟号
+        :param StepId: 步驟號
         :type StepId: int
         """
         self.StepNo = None

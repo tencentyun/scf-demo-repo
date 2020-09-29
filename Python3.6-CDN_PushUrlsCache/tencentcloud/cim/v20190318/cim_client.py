@@ -26,7 +26,7 @@ class CimClient(AbstractClient):
 
 
     def DescribeSdkAppid(self, request):
-        """獲取雲通信IM中Top Cloud 賬号對應的SDKAppID
+        """獲取雲通信IM中Top Cloud 賬號對應的SDKAppID
 
         :param request: Request instance for DescribeSdkAppid.
         :type request: :class:`taifucloudcloud.cim.v20190318.models.DescribeSdkAppidRequest`

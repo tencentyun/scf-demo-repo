@@ -138,7 +138,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def CreateProject(self, request):
-        """爲用戶提供新建項目的能力，用于集中管理産品和應用。
+        """爲用戶提供新建項目的能力，用於集中管理産品和應用。
 
         :param request: Request instance for CreateProject.
         :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.CreateProjectRequest`
@@ -166,7 +166,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def CreateStudioProduct(self, request):
-        """爲用戶提供新建産品的能力，用于管理用戶的設備
+        """爲用戶提供新建産品的能力，用於管理用戶的設備
 
         :param request: Request instance for CreateStudioProduct.
         :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.CreateStudioProductRequest`
@@ -278,7 +278,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def DescribeDevice(self, request):
-        """用于檢視某個設備的詳細訊息
+        """用於檢視某個設備的詳細訊息
 
         :param request: Request instance for DescribeDevice.
         :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.DescribeDeviceRequest`
@@ -446,7 +446,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def GetDeviceList(self, request):
-        """用于查詢某個産品下的設備清單
+        """用於查詢某個産品下的設備清單
 
         :param request: Request instance for GetDeviceList.
         :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.GetDeviceListRequest`
@@ -614,7 +614,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def ModifyStudioProduct(self, request):
-        """提供修改産品的名稱和描述等訊息的能力，對于已發布産品不允許進行修改。
+        """提供修改産品的名稱和描述等訊息的能力，對於已發布産品不允許進行修改。
 
         :param request: Request instance for ModifyStudioProduct.
         :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.ModifyStudioProductRequest`
@@ -642,7 +642,7 @@ class IotexplorerClient(AbstractClient):
 
 
     def ReleaseStudioProduct(self, request):
-        """産品開發完成并測試通過後，通過發布産品将産品設置爲發布狀态
+        """産品開發完成並測試通過後，通過發布産品将産品設置爲發布狀态
 
         :param request: Request instance for ReleaseStudioProduct.
         :type request: :class:`taifucloudcloud.iotexplorer.v20190423.models.ReleaseStudioProductRequest`

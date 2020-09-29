@@ -23,7 +23,7 @@ class BaradData(AbstractModel):
 
     def __init__(self):
         """
-        :param MetricName: 指标名（connum表示TCP活躍連接數；
+        :param MetricName: 指標名（connum表示TCP活躍連接數；
 new_conn表示新建TCP連接數；
 inactive_conn表示非活躍連接數;
 intraffic表示入流量；
@@ -101,7 +101,7 @@ class CCEventRecord(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -335,7 +335,7 @@ class CreateBasicDDoSAlarmThresholdRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（basic表示DDoS基礎防護）
+        :param Business: 大禹子産品代號（basic表示DDoS基礎防護）
         :type Business: str
         :param Method: =get表示讀取告警阈值；=set表示設置告警阈值；
         :type Method: str
@@ -364,9 +364,9 @@ class CreateBasicDDoSAlarmThresholdResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param AlarmThreshold: 當存在告警阈值配置時，返回告警阈值大于0，當不存在告警配置時，返回告警阈值爲0；
+        :param AlarmThreshold: 當存在告警阈值配置時，返回告警阈值大於0，當不存在告警配置時，返回告警阈值爲0；
         :type AlarmThreshold: int
-        :param AlarmType: 告警阈值類型，1-入流量，2-清洗流量；當AlarmThreshold大于0時有效；
+        :param AlarmType: 告警阈值類型，1-入流量，2-清洗流量；當AlarmThreshold大於0時有效；
         :type AlarmType: int
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -389,7 +389,7 @@ class CreateBoundIPRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgp表示獨享包；bgp-multip表示共享包）
+        :param Business: 大禹子産品代號（bgp表示獨享包；bgp-multip表示共享包）
         :type Business: str
         :param Id: 資源實例ID
         :type Id: str
@@ -455,7 +455,7 @@ class CreateCCFrequencyRulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -533,7 +533,7 @@ class CreateCCSelfDefinePolicyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -583,7 +583,7 @@ class CreateDDoSPolicyCaseRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param CaseName: 策略場景名，字串長度小於64
         :type CaseName: str
@@ -595,11 +595,11 @@ class CreateDDoSPolicyCaseRequest(AbstractModel):
         :type AppProtocols: list of str
         :param TcpSportStart: TCP業務起始端口，取值(0, 65535]
         :type TcpSportStart: str
-        :param TcpSportEnd: TCP業務結束端口，取值(0, 65535]，必須大于等于TCP業務起始端口
+        :param TcpSportEnd: TCP業務結束端口，取值(0, 65535]，必須大於等於TCP業務起始端口
         :type TcpSportEnd: str
         :param UdpSportStart: UDP業務起始端口，取值範圍(0, 65535]
         :type UdpSportStart: str
-        :param UdpSportEnd: UDP業務結束端口，取值範圍(0, 65535)，必須大于等于UDP業務起始端口
+        :param UdpSportEnd: UDP業務結束端口，取值範圍(0, 65535)，必須大於等於UDP業務起始端口
         :type UdpSportEnd: str
         :param HasAbroad: 是否有海外客戶，取值[no（沒有）, yes（有）]
         :type HasAbroad: str
@@ -619,11 +619,11 @@ class CreateDDoSPolicyCaseRequest(AbstractModel):
         :type WebApiUrl: list of str
         :param MinTcpPackageLen: TCP業務報文長度最小值，取值範圍(0, 1500)
         :type MinTcpPackageLen: str
-        :param MaxTcpPackageLen: TCP業務報文長度最大值，取值範圍(0, 1500)，必須大于等于TCP業務報文長度最小值
+        :param MaxTcpPackageLen: TCP業務報文長度最大值，取值範圍(0, 1500)，必須大於等於TCP業務報文長度最小值
         :type MaxTcpPackageLen: str
         :param MinUdpPackageLen: UDP業務報文長度最小值，取值範圍(0, 1500)
         :type MinUdpPackageLen: str
-        :param MaxUdpPackageLen: UDP業務報文長度最大值，取值範圍(0, 1500)，必須大于等于UDP業務報文長度最小值
+        :param MaxUdpPackageLen: UDP業務報文長度最大值，取值範圍(0, 1500)，必須大於等於UDP業務報文長度最小值
         :type MaxUdpPackageLen: str
         :param HasVPN: 是否有VPN業務，取值[no（沒有）, yes（有）]
         :type HasVPN: str
@@ -713,7 +713,7 @@ class CreateDDoSPolicyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param DropOptions: 協議禁用，必須填寫且數組長度必須爲1
         :type DropOptions: list of DDoSPolicyDropOption
@@ -800,7 +800,7 @@ class CreateInstanceNameRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -848,7 +848,7 @@ class CreateL4HealthConfigRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -901,7 +901,7 @@ class CreateL4RulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -954,7 +954,7 @@ class CreateL7CCRuleRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -1018,7 +1018,7 @@ class CreateL7HealthConfigRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -1071,7 +1071,7 @@ class CreateL7RuleCertRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源實例ID，比如高防IP實例的ID，高防IP專業版實例的ID
         :type Id: str
@@ -1135,7 +1135,7 @@ class CreateL7RulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -1188,7 +1188,7 @@ class CreateL7RulesUploadRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -1241,7 +1241,7 @@ class CreateNetReturnRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（net表示高防IP專業版）
+        :param Business: 大禹子産品代號（net表示高防IP專業版）
         :type Business: str
         :param Id: 資源實例ID
         :type Id: str
@@ -1279,7 +1279,7 @@ class CreateNewL4RulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 高防産品代号：bgpip
+        :param Business: 高防産品代號：bgpip
         :type Business: str
         :param IdList: 添加規則資源清單
         :type IdList: list of str
@@ -1336,7 +1336,7 @@ class CreateNewL7RulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP）
+        :param Business: 大禹子産品代號（bgpip表示高防IP）
         :type Business: str
         :param IdList: 資源ID清單
         :type IdList: list of str
@@ -1445,7 +1445,7 @@ class DDoSAlarmThreshold(AbstractModel):
         """
         :param AlarmType: 告警阈值類型，1-入流量，2-清洗流量
         :type AlarmType: int
-        :param AlarmThreshold: 告警阈值，大于0（目前排定的值）
+        :param AlarmThreshold: 告警阈值，大於0（目前排定的值）
         :type AlarmThreshold: int
         """
         self.AlarmType = None
@@ -1497,7 +1497,7 @@ class DDoSEventRecord(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -1576,15 +1576,15 @@ class DDoSPolicyDropOption(AbstractModel):
         :type DropAbroad: int
         :param CheckSyncConn: 空連接防護，取值範圍[0,1]
         :type CheckSyncConn: int
-        :param SdNewLimit: 基于來源IP及目的IP的新建連接抑制，取值範圍[0,4294967295]
+        :param SdNewLimit: 基於來源IP及目的IP的新建連接抑制，取值範圍[0,4294967295]
         :type SdNewLimit: int
-        :param DstNewLimit: 基于目的IP的新建連接抑制，取值範圍[0,4294967295]
+        :param DstNewLimit: 基於目的IP的新建連接抑制，取值範圍[0,4294967295]
         :type DstNewLimit: int
-        :param SdConnLimit: 基于來源IP及目的IP的并發連接抑制，取值範圍[0,4294967295]
+        :param SdConnLimit: 基於來源IP及目的IP的並發連接抑制，取值範圍[0,4294967295]
         :type SdConnLimit: int
-        :param DstConnLimit: 基于目的IP的并發連接抑制，取值範圍[0,4294967295]
+        :param DstConnLimit: 基於目的IP的並發連接抑制，取值範圍[0,4294967295]
         :type DstConnLimit: int
-        :param BadConnThreshold: 基于連接抑制觸發阈值，取值範圍[0,4294967295]
+        :param BadConnThreshold: 基於連接抑制觸發阈值，取值範圍[0,4294967295]
         :type BadConnThreshold: int
         :param NullConnEnable: 異常連接檢測條件，空連接防護開關，，取值範圍[0,1]
         :type NullConnEnable: int
@@ -1731,12 +1731,12 @@ class DDoSPolicyPortLimit(AbstractModel):
         :type Protocol: str
         :param DPortStart: 開始目的端口，取值範圍[0,65535]
         :type DPortStart: int
-        :param DPortEnd: 結束目的端口，取值範圍[0,65535]，要求大于等于開始目的端口
+        :param DPortEnd: 結束目的端口，取值範圍[0,65535]，要求大於等於開始目的端口
         :type DPortEnd: int
         :param SPortStart: 開始源端口，取值範圍[0,65535]
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SPortStart: int
-        :param SPortEnd: 結束源端口，取值範圍[0,65535]，要求大于等于開始源端口
+        :param SPortEnd: 結束源端口，取值範圍[0,65535]，要求大於等於開始源端口
 注意：此欄位可能返回 null，表示取不到有效值。
         :type SPortEnd: int
         :param Action: 執行動作，取值[drop(丢棄) ，transmit(轉發)]
@@ -1867,7 +1867,7 @@ class DeleteCCFrequencyRulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param CCFrequencyRuleId: CC防護的訪問頻率控制規則ID
         :type CCFrequencyRuleId: str
@@ -1911,7 +1911,7 @@ class DeleteCCSelfDefinePolicyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -1959,7 +1959,7 @@ class DeleteDDoSPolicyCaseRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param SceneId: 策略場景ID
         :type SceneId: str
@@ -2003,7 +2003,7 @@ class DeleteDDoSPolicyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param PolicyId: 策略ID
         :type PolicyId: str
@@ -2047,7 +2047,7 @@ class DeleteL4RulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -2095,7 +2095,7 @@ class DeleteL7RulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -2143,7 +2143,7 @@ class DeleteNewL4RulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP）
+        :param Business: 大禹子産品代號（bgpip表示高防IP）
         :type Business: str
         :param Rule: 删除介面結構體
         :type Rule: list of L4DelRule
@@ -2192,7 +2192,7 @@ class DeleteNewL7RulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP)
+        :param Business: 大禹子産品代號（bgpip表示高防IP)
         :type Business: str
         :param Rule: 删除規則清單
         :type Rule: list of L4DelRule
@@ -2245,7 +2245,7 @@ class DescribeActionLogRequest(AbstractModel):
         :type StartTime: str
         :param EndTime: 結束時間
         :type EndTime: str
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Filter: 搜索值，只支援資源ID或用戶UIN
         :type Filter: str
@@ -2308,7 +2308,7 @@ class DescribeBGPIPL7RuleMaxCntRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP）
+        :param Business: 大禹子産品代號（bgpip表示高防IP）
         :type Business: str
         :param Id: 資源實例ID
         :type Id: str
@@ -2350,11 +2350,11 @@ class DescribeBaradDataRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源實例ID
         :type Id: str
-        :param MetricName: 指标名，取值：
+        :param MetricName: 指標名，取值：
 connum表示TCP活躍連接數；
 new_conn表示新建TCP連接數；
 inactive_conn表示非活躍連接數;
@@ -2415,7 +2415,7 @@ class DescribeBaradDataResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param DataList: 返回指标的值
+        :param DataList: 返回指標的值
         :type DataList: list of BaradData
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -2565,7 +2565,7 @@ class DescribeCCAlarmThresholdRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP專業版）
         :type Business: str
         :param RsId: 資源ID,字串類型
         :type RsId: str
@@ -2609,7 +2609,7 @@ class DescribeCCEvListRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
         :type Business: str
         :param StartTime: 開始時間
         :type StartTime: str
@@ -2650,7 +2650,7 @@ class DescribeCCEvListResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（shield表示棋牌盾；bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
+        :param Business: 大禹子産品代號（shield表示棋牌盾；bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
         :type Business: str
         :param Id: 資源實例ID
         :type Id: str
@@ -2701,7 +2701,7 @@ class DescribeCCFrequencyRulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -2756,7 +2756,7 @@ class DescribeCCIpAllowDenyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -2837,7 +2837,7 @@ class DescribeCCSelfDefinePolicyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgp高防包；bgp-multip共享包）
+        :param Business: 大禹子産品代號（bgp高防包；bgp-multip共享包）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -2896,11 +2896,11 @@ class DescribeCCTrendRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
         :type Business: str
         :param Ip: 資源的IP
         :type Ip: str
-        :param MetricName: 指标，取值[inqps(總請求峰值，dropqps(攻擊請求峰值))]
+        :param MetricName: 指標，取值[inqps(總請求峰值，dropqps(攻擊請求峰值))]
         :type MetricName: str
         :param Period: 統計粒度，取值[300(5分鍾)，3600(小時)，86400(天)]
         :type Period: int
@@ -2937,14 +2937,14 @@ class DescribeCCTrendResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
         :type Business: str
         :param Id: 資源ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Id: str
         :param Ip: 資源的IP
         :type Ip: str
-        :param MetricName: 指标，取值[inqps(總請求峰值，dropqps(攻擊請求峰值))]
+        :param MetricName: 指標，取值[inqps(總請求峰值，dropqps(攻擊請求峰值))]
         :type MetricName: str
         :param Period: 統計粒度，取值[300(5分鍾)，3600(小時)，86400(天)]
         :type Period: int
@@ -2991,7 +2991,7 @@ class DescribeCCUrlAllowRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -3072,7 +3072,7 @@ class DescribeDDoSAlarmThresholdRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP專業版）
         :type Business: str
         :param RsId: 資源ID,字串類型
         :type RsId: str
@@ -3116,7 +3116,7 @@ class DescribeDDoSAttackIPRegionMapRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -3184,7 +3184,7 @@ class DescribeDDoSAttackSourceRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -3255,7 +3255,7 @@ class DescribeDDoSCountRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -3265,7 +3265,7 @@ class DescribeDDoSCountRequest(AbstractModel):
         :type StartTime: str
         :param EndTime: 統計結束時間
         :type EndTime: str
-        :param MetricName: 指标，取值[traffic（攻擊協議流量, 單位KB）, pkg（攻擊協議報文數）, classnum（攻擊事件次數）]
+        :param MetricName: 指標，取值[traffic（攻擊協議流量, 單位KB）, pkg（攻擊協議報文數）, classnum（攻擊事件次數）]
         :type MetricName: str
         """
         self.Business = None
@@ -3292,7 +3292,7 @@ class DescribeDDoSCountResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -3302,7 +3302,7 @@ class DescribeDDoSCountResponse(AbstractModel):
         :type StartTime: str
         :param EndTime: 統計結束時間
         :type EndTime: str
-        :param MetricName: 指标，取值[traffic（攻擊協議流量, 單位KB）, pkg（攻擊協議報文數）, classnum（攻擊事件次數）]
+        :param MetricName: 指標，取值[traffic（攻擊協議流量, 單位KB）, pkg（攻擊協議報文數）, classnum（攻擊事件次數）]
         :type MetricName: str
         :param Data: Key-Value值數組，Key說明如下，
 當MetricName爲traffic時：
@@ -3356,7 +3356,7 @@ class DescribeDDoSDefendStatusRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（basic表示基礎防護；bgp表示獨享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（basic表示基礎防護；bgp表示獨享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源實例ID，只有當Business不是基礎防護時才需要填寫此欄位；
         :type Id: str
@@ -3419,7 +3419,7 @@ class DescribeDDoSDefendStatusResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param DefendStatus: 防護狀态，爲0表示防護處于關閉狀态，爲1表示防護處于開啓狀态
+        :param DefendStatus: 防護狀态，爲0表示防護處於關閉狀态，爲1表示防護處於開啓狀态
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DefendStatus: int
         :param UndefendExpire: 防護臨時關閉的過期時間，當防護狀态爲開啓時此欄位爲空；
@@ -3451,7 +3451,7 @@ class DescribeDDoSEvInfoRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -3484,7 +3484,7 @@ class DescribeDDoSEvInfoResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -3569,7 +3569,7 @@ class DescribeDDoSEvListRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
         :type Business: str
         :param StartTime: 開始時間
         :type StartTime: str
@@ -3614,7 +3614,7 @@ class DescribeDDoSEvListResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -3665,7 +3665,7 @@ class DescribeDDoSIpLogRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（net表示高防IP專業版）
+        :param Business: 大禹子産品代號（net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -3698,7 +3698,7 @@ class DescribeDDoSIpLogResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（net表示高防IP專業版）
+        :param Business: 大禹子産品代號（net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -3746,7 +3746,7 @@ class DescribeDDoSNetCountRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（net表示高防IP專業版）
+        :param Business: 大禹子産品代號（net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -3754,7 +3754,7 @@ class DescribeDDoSNetCountRequest(AbstractModel):
         :type StartTime: str
         :param EndTime: 統計結束時間
         :type EndTime: str
-        :param MetricName: 指标，取值[traffic（攻擊協議流量, 單位KB）, pkg（攻擊協議報文數）, classnum（攻擊事件次數）]
+        :param MetricName: 指標，取值[traffic（攻擊協議流量, 單位KB）, pkg（攻擊協議報文數）, classnum（攻擊事件次數）]
         :type MetricName: str
         """
         self.Business = None
@@ -3779,7 +3779,7 @@ class DescribeDDoSNetCountResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（net表示高防IP專業版）
+        :param Business: 大禹子産品代號（net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -3787,7 +3787,7 @@ class DescribeDDoSNetCountResponse(AbstractModel):
         :type StartTime: str
         :param EndTime: 統計結束時間
         :type EndTime: str
-        :param MetricName: 指标，取值[traffic（攻擊協議流量, 單位KB）, pkg（攻擊協議報文數）, classnum（攻擊事件次數）]
+        :param MetricName: 指標，取值[traffic（攻擊協議流量, 單位KB）, pkg（攻擊協議報文數）, classnum（攻擊事件次數）]
         :type MetricName: str
         :param Data: Key-Value值數組，Key說明如下，
 當MetricName爲traffic時：
@@ -3839,7 +3839,7 @@ class DescribeDDoSNetEvInfoRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（net表示高防IP專業版）
+        :param Business: 大禹子産品代號（net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -3868,7 +3868,7 @@ class DescribeDDoSNetEvInfoResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（net表示高防IP專業版）
+        :param Business: 大禹子産品代號（net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -3949,7 +3949,7 @@ class DescribeDDoSNetEvListRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（net表示高防IP專業版）
+        :param Business: 大禹子産品代號（net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -3986,7 +3986,7 @@ class DescribeDDoSNetEvListResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（net表示高防IP專業版）
+        :param Business: 大禹子産品代號（net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -4032,7 +4032,7 @@ class DescribeDDoSNetIpLogRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（net表示高防IP專業版）
+        :param Business: 大禹子産品代號（net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -4061,7 +4061,7 @@ class DescribeDDoSNetIpLogResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（net表示高防IP專業版）
+        :param Business: 大禹子産品代號（net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -4105,11 +4105,11 @@ class DescribeDDoSNetTrendRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（net表示高防IP專業版）
+        :param Business: 大禹子産品代號（net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
-        :param MetricName: 指标，取值[bps(攻擊流量頻寬，pps(攻擊包速率))]
+        :param MetricName: 指標，取值[bps(攻擊流量頻寬，pps(攻擊包速率))]
         :type MetricName: str
         :param Period: 統計粒度，取值[300(5分鍾)，3600(小時)，86400(天)]
         :type Period: int
@@ -4142,11 +4142,11 @@ class DescribeDDoSNetTrendResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（net表示高防IP專業版）
+        :param Business: 大禹子産品代號（net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
-        :param MetricName: 指标，取值[bps(攻擊流量頻寬，pps(攻擊包速率))]
+        :param MetricName: 指標，取值[bps(攻擊流量頻寬，pps(攻擊包速率))]
         :type MetricName: str
         :param Period: 統計粒度，取值[300(5分鍾)，3600(小時)，86400(天)]
         :type Period: int
@@ -4191,7 +4191,7 @@ class DescribeDDoSPolicyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 可選欄位，資源ID，如果填寫則表示該資源綁定的DDoS高級策略
         :type Id: str
@@ -4238,11 +4238,11 @@ class DescribeDDoSTrendRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
         :type Business: str
         :param Ip: 資源實例的IP
         :type Ip: str
-        :param MetricName: 指标，取值[bps(攻擊流量頻寬，pps(攻擊包速率))]
+        :param MetricName: 指標，取值[bps(攻擊流量頻寬，pps(攻擊包速率))]
         :type MetricName: str
         :param Period: 統計粒度，取值[300(5分鍾)，3600(小時)，86400(天)]
         :type Period: int
@@ -4279,14 +4279,14 @@ class DescribeDDoSTrendResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示DDoS基礎防護）
         :type Business: str
         :param Id: 資源ID
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Id: str
         :param Ip: 資源的IP
         :type Ip: str
-        :param MetricName: 指标，取值[bps(攻擊流量頻寬，pps(攻擊包速率))]
+        :param MetricName: 指標，取值[bps(攻擊流量頻寬，pps(攻擊包速率))]
         :type MetricName: str
         :param Period: 統計粒度，取值[300(5分鍾)，3600(小時)，86400(天)]
         :type Period: int
@@ -4333,7 +4333,7 @@ class DescribeDDoSUsedStatisRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP）
+        :param Business: 大禹子産品代號（bgpip表示高防IP）
         :type Business: str
         """
         self.Business = None
@@ -4378,7 +4378,7 @@ class DescribeIPProductInfoRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgp表示獨享包；bgp-multip表示共享包）
+        :param Business: 大禹子産品代號（bgp表示獨享包；bgp-multip表示共享包）
         :type Business: str
         :param IpList: IP清單
         :type IpList: list of str
@@ -4581,7 +4581,7 @@ class DescribeL4HealthConfigRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -4632,7 +4632,7 @@ class DescribeL4RulesErrHealthRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -4698,7 +4698,7 @@ class DescribeL7HealthConfigRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -4749,7 +4749,7 @@ class DescribeNewL4RulesErrHealthRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP）
+        :param Business: 大禹子産品代號（bgpip表示高防IP）
         :type Business: str
         :param RuleIdList: 規則ID清單
         :type RuleIdList: list of str
@@ -4800,7 +4800,7 @@ class DescribeNewL4RulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP）
+        :param Business: 大禹子産品代號（bgpip表示高防IP）
         :type Business: str
         :param Ip: 指定IP查詢
         :type Ip: str
@@ -4872,7 +4872,7 @@ class DescribeNewL7RulesErrHealthRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP)
+        :param Business: 大禹子産品代號（bgpip表示高防IP)
         :type Business: str
         :param RuleIdList: 規則Id清單
         :type RuleIdList: list of str
@@ -4923,7 +4923,7 @@ class DescribePackIndexRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示高防包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示高防包；net表示高防IP專業版）
         :type Business: str
         """
         self.Business = None
@@ -4972,7 +4972,7 @@ class DescribePcapRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源實例ID
         :type Id: str
@@ -5026,7 +5026,7 @@ class DescribePolicyCaseRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param SceneId: 策略場景ID
         :type SceneId: str
@@ -5073,7 +5073,7 @@ class DescribeResIpListRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param IdList: 資源ID, 如果不填，則獲取用戶所有資源的IP
         :type IdList: list of str
@@ -5120,7 +5120,7 @@ class DescribeResourceListRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgp表示獨享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgp表示獨享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param RegionList: 地域碼搜索，可選，當不指定地域時空數組，當指定地域時，填地域碼。例如：["gz", "sh"]
         :type RegionList: list of str
@@ -5221,7 +5221,7 @@ class DescribeResourceListResponse(AbstractModel):
 "Key": "UndefendExpire" 表示資源實例的DDoS防護臨時關閉結束時間
 "Key": "Tgw" 表示資源實例是否是新資源
         :type ServicePacks: list of KeyValueRecord
-        :param Business: 大禹子産品代号（bgp表示獨享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgp表示獨享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -5251,7 +5251,7 @@ class DescribeRuleSetsRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param IdList: 資源ID清單
         :type IdList: list of str
@@ -5415,7 +5415,7 @@ class DescribeSourceIpSegmentRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -5457,11 +5457,11 @@ class DescribeTransmitStatisRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版；bgp表示獨享包；bgp-multip表示共享包）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版；bgp表示獨享包；bgp-multip表示共享包）
         :type Business: str
         :param Id: 資源實例ID
         :type Id: str
-        :param MetricName: 指标名，取值：
+        :param MetricName: 指標名，取值：
 traffic表示流量頻寬；
 pkg表示包速率；
         :type MetricName: str
@@ -5506,7 +5506,7 @@ class DescribeTransmitStatisResponse(AbstractModel):
         :param OutDataList: 當MetricName=traffic時，表示出流量頻寬，單位bps；
 當MetricName=pkg時，表示出包速率，單位pps；
         :type OutDataList: list of float
-        :param MetricName: 指标名：
+        :param MetricName: 指標名：
 traffic表示流量頻寬；
 pkg表示包速率；
         :type MetricName: str
@@ -5572,7 +5572,7 @@ class DescribleL4RulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -5644,7 +5644,7 @@ class DescribleL7RulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -5728,7 +5728,7 @@ class DescribleNewL7RulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP）
+        :param Business: 大禹子産品代號（bgpip表示高防IP）
         :type Business: str
         :param Limit: 一頁條數，填0表示不分頁
         :type Limit: int
@@ -5808,7 +5808,7 @@ class DescribleRegionCountRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；）
         :type Business: str
         :param LineList: 根據線路統計，取值爲[1（BGP線路），2（南京電信），3（南京 ），99（第三方合作線路）]；只對高防IP産品有效，其他産品此欄位忽略
         :type LineList: list of int non-negative
@@ -6119,7 +6119,7 @@ class L4RuleHealth(AbstractModel):
         :type Enable: int
         :param TimeOut: 響應超時時間，單位秒
         :type TimeOut: int
-        :param Interval: 檢測間隔時間，單位秒，必須要大于響應超時時間
+        :param Interval: 檢測間隔時間，單位秒，必須要大於響應超時時間
         :type Interval: int
         :param KickNum: 不健康阈值，單位次
         :type KickNum: int
@@ -6364,11 +6364,11 @@ class ModifyCCAlarmThresholdRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP專業版）
         :type Business: str
         :param RsId: 資源ID,字串類型
         :type RsId: str
-        :param AlarmThreshold: 告警阈值，大于0（目前排定的值），後台設置預設值爲1000
+        :param AlarmThreshold: 告警阈值，大於0（目前排定的值），後台設置預設值爲1000
         :type AlarmThreshold: int
         :param IpList: 資源關聯的IP清單，高防包未綁定時，傳空數組，高防IP專業版傳多個IP的數據
         :type IpList: list of str
@@ -6416,7 +6416,7 @@ class ModifyCCFrequencyRulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param CCFrequencyRuleId: CC的訪問頻率控制規則ID
         :type CCFrequencyRuleId: str
@@ -6492,7 +6492,7 @@ class ModifyCCFrequencyRulesStatusRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -6544,7 +6544,7 @@ class ModifyCCHostProtectionRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -6596,7 +6596,7 @@ class ModifyCCIpAllowDenyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -6665,7 +6665,7 @@ class ModifyCCLevelRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -6721,7 +6721,7 @@ class ModifyCCPolicySwitchRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -6773,7 +6773,7 @@ class ModifyCCSelfDefinePolicyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -6827,7 +6827,7 @@ class ModifyCCThresholdRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示基礎防護）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版；basic表示基礎防護）
         :type Business: str
         :param Threshold: CC防護阈值，取值(0 100 150 240 350 480 550 700 850 1000 1500 2000 3000 5000 10000 20000);
 當Business爲高防IP、高防IP專業版時，其CC防護最大阈值跟資源的保底防護頻寬有關，對應關系如下：
@@ -6918,7 +6918,7 @@ class ModifyCCUrlAllowRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -6934,7 +6934,7 @@ https://域名/cgi
         :type Protocol: str
         :param Domain: 可選欄位，表示HTTPS協議的7層轉發規則域名（通過獲取7層轉發規則介面可以獲取域名），只有當Protocol欄位爲https時才必須填寫此欄位；
         :type Domain: str
-        :param RuleId: 可選欄位，表示HTTPS協議的7層轉發規則ID（通過獲取7層轉發規則介面可以獲取規則ID），當添加并且Protocol=https時必須填寫；
+        :param RuleId: 可選欄位，表示HTTPS協議的7層轉發規則ID（通過獲取7層轉發規則介面可以獲取規則ID），當添加並且Protocol=https時必須填寫；
 當Method爲delete時，可以不用填寫此欄位；
         :type RuleId: str
         """
@@ -6989,7 +6989,7 @@ class ModifyDDoSAIStatusRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -7043,13 +7043,13 @@ class ModifyDDoSAlarmThresholdRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP專業版）
         :type Business: str
         :param RsId: 資源ID,字串類型
         :type RsId: str
         :param AlarmType: 告警阈值類型，0-未設置，1-入流量，2-清洗流量
         :type AlarmType: int
-        :param AlarmThreshold: 告警阈值，大于0（目前暫定的值）
+        :param AlarmThreshold: 告警阈值，大於0（目前暫定的值）
         :type AlarmThreshold: int
         :param IpList: 資源關聯的IP清單，高防包未綁定時，傳空數組，高防IP專業版傳多個IP的數據
         :type IpList: list of str
@@ -7099,11 +7099,11 @@ class ModifyDDoSDefendStatusRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgp表示獨享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP專業版；basic表示基礎防護）
+        :param Business: 大禹子産品代號（bgp表示獨享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP專業版；basic表示基礎防護）
         :type Business: str
         :param Status: 防護狀态值，取值[0（關閉），1（開啓）]
         :type Status: int
-        :param Hour: 關閉時長，單位小時，取值[0，1，2，3，4，5，6]；當Status=0表示關閉時，Hour必須大于0；
+        :param Hour: 關閉時長，單位小時，取值[0，1，2，3，4，5，6]；當Status=0表示關閉時，Hour必須大於0；
         :type Hour: int
         :param Id: 資源ID；當Business不是基礎防護時必須填寫此欄位；
         :type Id: str
@@ -7193,7 +7193,7 @@ class ModifyDDoSLevelRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -7247,7 +7247,7 @@ class ModifyDDoSPolicyCaseRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param SceneId: 策略場景ID
         :type SceneId: str
@@ -7259,11 +7259,11 @@ class ModifyDDoSPolicyCaseRequest(AbstractModel):
         :type AppProtocols: list of str
         :param TcpSportStart: TCP業務起始端口，取值(0, 65535]
         :type TcpSportStart: str
-        :param TcpSportEnd: TCP業務結束端口，取值(0, 65535]，必須大于等于TCP業務起始端口
+        :param TcpSportEnd: TCP業務結束端口，取值(0, 65535]，必須大於等於TCP業務起始端口
         :type TcpSportEnd: str
         :param UdpSportStart: UDP業務起始端口，取值範圍(0, 65535]
         :type UdpSportStart: str
-        :param UdpSportEnd: UDP業務結束端口，取值範圍(0, 65535)，必須大于等于UDP業務起始端口
+        :param UdpSportEnd: UDP業務結束端口，取值範圍(0, 65535)，必須大於等於UDP業務起始端口
         :type UdpSportEnd: str
         :param HasAbroad: 是否有海外客戶，取值[no（沒有）, yes（有）]
         :type HasAbroad: str
@@ -7283,11 +7283,11 @@ class ModifyDDoSPolicyCaseRequest(AbstractModel):
         :type WebApiUrl: list of str
         :param MinTcpPackageLen: TCP業務報文長度最小值，取值範圍(0, 1500)
         :type MinTcpPackageLen: str
-        :param MaxTcpPackageLen: TCP業務報文長度最大值，取值範圍(0, 1500)，必須大于等于TCP業務報文長度最小值
+        :param MaxTcpPackageLen: TCP業務報文長度最大值，取值範圍(0, 1500)，必須大於等於TCP業務報文長度最小值
         :type MaxTcpPackageLen: str
         :param MinUdpPackageLen: UDP業務報文長度最小值，取值範圍(0, 1500)
         :type MinUdpPackageLen: str
-        :param MaxUdpPackageLen: UDP業務報文長度最大值，取值範圍(0, 1500)，必須大于等于UDP業務報文長度最小值
+        :param MaxUdpPackageLen: UDP業務報文長度最大值，取值範圍(0, 1500)，必須大於等於UDP業務報文長度最小值
         :type MaxUdpPackageLen: str
         :param HasVPN: 是否有VPN業務，取值[no（沒有）, yes（有）]
         :type HasVPN: str
@@ -7379,7 +7379,7 @@ class ModifyDDoSPolicyNameRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param PolicyId: 策略ID
         :type PolicyId: str
@@ -7427,7 +7427,7 @@ class ModifyDDoSPolicyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param PolicyId: 策略ID
         :type PolicyId: str
@@ -7516,7 +7516,7 @@ class ModifyDDoSSwitchRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（basic表示基礎防護）
+        :param Business: 大禹子産品代號（basic表示基礎防護）
         :type Business: str
         :param Method: =get表示讀取DDoS防護狀态；=set表示修改DDoS防護狀态；
         :type Method: str
@@ -7604,7 +7604,7 @@ class ModifyDDoSThresholdRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -7653,7 +7653,7 @@ class ModifyDDoSWaterKeyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param PolicyId: 策略ID
         :type PolicyId: str
@@ -7708,7 +7708,7 @@ class ModifyElasticLimitRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -7756,7 +7756,7 @@ class ModifyL4HealthRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -7809,7 +7809,7 @@ class ModifyL4KeepTimeRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -7865,7 +7865,7 @@ class ModifyL4RulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -7915,7 +7915,7 @@ class ModifyL7RulesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -7965,7 +7965,7 @@ class ModifyNetReturnSwitchRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（net表示高防IP專業版）
+        :param Business: 大禹子産品代號（net表示高防IP專業版）
         :type Business: str
         :param Id: 資源實例ID
         :type Id: str
@@ -8011,7 +8011,7 @@ class ModifyResBindDDoSPolicyRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；bgp表示獨享包；bgp-multip表示共享包；net表示高防IP專業版）
         :type Business: str
         :param Id: 資源ID
         :type Id: str
@@ -8063,11 +8063,11 @@ class ModifyResourceRenewFlagRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param Business: 大禹子産品代号（bgpip表示高防IP；net表示高防IP專業版；shield表示棋牌盾；bgp表示獨享包；bgp-multip表示共享包；insurance表示保險包；staticpack表示三網套餐包）
+        :param Business: 大禹子産品代號（bgpip表示高防IP；net表示高防IP專業版；shield表示棋牌盾；bgp表示獨享包；bgp-multip表示共享包；insurance表示保險包；staticpack表示三網套餐包）
         :type Business: str
         :param Id: 資源Id
         :type Id: str
-        :param RenewFlag: 自動續約标記（0手動續約；1自動續約；2到期不續約）
+        :param RenewFlag: 自動續約標記（0手動續約；1自動續約；2到期不續約）
         :type RenewFlag: int
         """
         self.Business = None
@@ -8464,7 +8464,7 @@ class SchedulingDomain(AbstractModel):
 
 
 class SuccessCode(AbstractModel):
-    """操作返回碼，只用于返回成功的情況
+    """操作返回碼，只用於返回成功的情況
 
     """
 
@@ -8495,7 +8495,7 @@ class WaterPrintKey(AbstractModel):
         :type KeyId: str
         :param KeyContent: 浮水印Key值
         :type KeyContent: str
-        :param KeyVersion: 浮水印Key的版本号
+        :param KeyVersion: 浮水印Key的版本號
         :type KeyVersion: str
         :param OpenStatus: 是否開啓，取值[0（沒有開啓），1（已開啓）]
         :type OpenStatus: int

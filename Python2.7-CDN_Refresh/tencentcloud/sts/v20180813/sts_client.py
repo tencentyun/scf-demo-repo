@@ -54,7 +54,7 @@ class StsClient(AbstractClient):
 
 
     def AssumeRoleWithSAML(self, request):
-        """本介面（AssumeRoleWithSAML）用于根據 SAML 斷言申請角色臨時憑證。
+        """本介面（AssumeRoleWithSAML）用於根據 SAML 斷言申請角色臨時憑證。
 
         :param request: Request instance for AssumeRoleWithSAML.
         :type request: :class:`taifucloudcloud.sts.v20180813.models.AssumeRoleWithSAMLRequest`

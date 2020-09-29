@@ -109,7 +109,7 @@ class AnonymousComputeEnv(AbstractModel):
         :type EnvData: :class:`taifucloudcloud.batch.v20170312.models.EnvData`
         :param MountDataDisks: 數據盤掛載選項
         :type MountDataDisks: list of MountDataDisk
-        :param AgentRunningMode: agent運作模式，适用于Windows系統
+        :param AgentRunningMode: agent運作模式，适用於Windows系統
         :type AgentRunningMode: :class:`taifucloudcloud.batch.v20170312.models.AgentRunningMode`
         """
         self.EnvType = None
@@ -147,7 +147,7 @@ class Application(AbstractModel):
         :type DeliveryForm: str
         :param PackagePath: 應用程式軟體包的遠端儲存路徑
         :type PackagePath: str
-        :param Docker: 應用使用Docker的相關配置。在使用Docker配置的情況下，DeliveryForm 爲 LOCAL 表示直接使用Docker映像内部的應用軟體，通過Docker方式運作；DeliveryForm 爲 PACKAGE，表示将遠端應用包注入到Docker映像後，通過Docker方式運作。爲避免Docker不同版本的相容性問題，Docker安裝包及相關依賴由Batch統一負責，對于已安裝Docker的自定義映像，請卸載後再使用Docker特性。
+        :param Docker: 應用使用Docker的相關配置。在使用Docker配置的情況下，DeliveryForm 爲 LOCAL 表示直接使用Docker映像内部的應用軟體，通過Docker方式運作；DeliveryForm 爲 PACKAGE，表示将遠端應用包注入到Docker映像後，通過Docker方式運作。爲避免Docker不同版本的相容性問題，Docker安裝包及相關依賴由Batch統一負責，對於已安裝Docker的自定義映像，請卸載後再使用Docker特性。
         :type Docker: :class:`taifucloudcloud.batch.v20170312.models.Docker`
         """
         self.Command = None
@@ -346,7 +346,7 @@ class ComputeEnvView(AbstractModel):
         :type Placement: :class:`taifucloudcloud.batch.v20170312.models.Placement`
         :param CreateTime: 創建時間
         :type CreateTime: str
-        :param ComputeNodeMetrics: 計算節點統計指标
+        :param ComputeNodeMetrics: 計算節點統計指標
         :type ComputeNodeMetrics: :class:`taifucloudcloud.batch.v20170312.models.ComputeNodeMetrics`
         :param EnvType: 計算環境類型
         :type EnvType: str
@@ -397,7 +397,7 @@ class ComputeNode(AbstractModel):
         """
         :param ComputeNodeId: 計算節點ID
         :type ComputeNodeId: str
-        :param ComputeNodeInstanceId: 計算節點實例ID，對于CVM場景，即爲CVM的InstanceId
+        :param ComputeNodeInstanceId: 計算節點實例ID，對於CVM場景，即爲CVM的InstanceId
         :type ComputeNodeInstanceId: str
         :param ComputeNodeState: 計算節點狀态
         :type ComputeNodeState: str
@@ -451,7 +451,7 @@ USER_ATTACHED：用戶添加到計算環境中的實例資源。
 
 
 class ComputeNodeMetrics(AbstractModel):
-    """計算節點統計指标
+    """計算節點統計指標
 
     """
 
@@ -523,7 +523,7 @@ class CreateComputeEnvRequest(AbstractModel):
         :type ComputeEnv: :class:`taifucloudcloud.batch.v20170312.models.NamedComputeEnv`
         :param Placement: 位置訊息
         :type Placement: :class:`taifucloudcloud.batch.v20170312.models.Placement`
-        :param ClientToken: 用于保證請求幂等性的字串。該字串由用戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+        :param ClientToken: 用於保證請求幂等性的字串。該字串由用戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
         :type ClientToken: str
         """
         self.ComputeEnv = None
@@ -573,7 +573,7 @@ class CreateCpmComputeEnvRequest(AbstractModel):
         :type ComputeEnv: :class:`taifucloudcloud.batch.v20170312.models.NamedCpmComputeEnv`
         :param Placement: 位置訊息
         :type Placement: :class:`taifucloudcloud.batch.v20170312.models.Placement`
-        :param ClientToken: 用于保證請求幂等性的字串。該字串由用戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+        :param ClientToken: 用於保證請求幂等性的字串。該字串由用戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
         :type ClientToken: str
         """
         self.ComputeEnv = None
@@ -677,7 +677,7 @@ class DataDisk(AbstractModel):
 <li>TRUE：子機銷毀時，銷毀數據盤，只支援按小時後付費雲盤
 <li>FALSE：子機銷毀時，保留數據盤<br>
 預設取值：TRUE<br>
-該參數目前僅用于 `RunInstances` 介面。
+該參數目前僅用於 `RunInstances` 介面。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type DeleteWithInstance: bool
         :param SnapshotId: 數據盤快照ID。選擇的數據盤快照大小需小於數據盤大小。
@@ -687,7 +687,7 @@ class DataDisk(AbstractModel):
 <li>TRUE：加密
 <li>FALSE：不加密<br>
 預設取值：FALSE<br>
-該參數目前僅用于 `RunInstances` 介面。
+該參數目前僅用於 `RunInstances` 介面。
 注意：此欄位可能返回 null，表示取不到有效值。
         :type Encrypt: bool
         """
@@ -783,7 +783,7 @@ class DeleteTaskTemplatesRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param TaskTemplateIds: 用于删除任務範本訊息
+        :param TaskTemplateIds: 用於删除任務範本訊息
         :type TaskTemplateIds: list of str
         """
         self.TaskTemplateIds = None
@@ -1142,7 +1142,7 @@ class DescribeComputeEnvResponse(AbstractModel):
         :type CreateTime: str
         :param ComputeNodeSet: 計算節點清單訊息
         :type ComputeNodeSet: list of ComputeNode
-        :param ComputeNodeMetrics: 計算節點統計指标
+        :param ComputeNodeMetrics: 計算節點統計指標
         :type ComputeNodeMetrics: :class:`taifucloudcloud.batch.v20170312.models.ComputeNodeMetrics`
         :param DesiredComputeNodeCount: 計算節點期望個數
         :type DesiredComputeNodeCount: int
@@ -1271,7 +1271,7 @@ class DescribeCpmOsInfoRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param DeviceClassCode: 黑石設備類型代号。 可以從[DescribeDeviceClass](https://cloud.taifucloud.com/document/api/386/32911)查詢設備類型清單。
+        :param DeviceClassCode: 黑石設備類型代號。 可以從[DescribeDeviceClass](https://cloud.taifucloud.com/document/api/386/32911)查詢設備類型清單。
         :type DeviceClassCode: str
         """
         self.DeviceClassCode = None
@@ -1398,7 +1398,7 @@ class DescribeJobRequest(AbstractModel):
 
     def __init__(self):
         """
-        :param JobId: 作業标識
+        :param JobId: 作業標識
         :type JobId: str
         """
         self.JobId = None
@@ -1433,9 +1433,9 @@ class DescribeJobResponse(AbstractModel):
         :type TaskSet: list of TaskView
         :param DependenceSet: 任務間依賴訊息
         :type DependenceSet: list of Dependence
-        :param TaskMetrics: 任務統計指标
+        :param TaskMetrics: 任務統計指標
         :type TaskMetrics: :class:`taifucloudcloud.batch.v20170312.models.TaskMetrics`
-        :param TaskInstanceMetrics: 任務實例統計指标
+        :param TaskInstanceMetrics: 任務實例統計指標
         :type TaskInstanceMetrics: :class:`taifucloudcloud.batch.v20170312.models.TaskInstanceView`
         :param StateReason: 作業失敗原因
         :type StateReason: str
@@ -1747,7 +1747,7 @@ class DescribeTaskResponse(AbstractModel):
         :type TaskInstanceTotalCount: int
         :param TaskInstanceSet: 任務實例訊息
         :type TaskInstanceSet: list of TaskInstanceView
-        :param TaskInstanceMetrics: 任務實例統計指标
+        :param TaskInstanceMetrics: 任務實例統計指標
         :type TaskInstanceMetrics: :class:`taifucloudcloud.batch.v20170312.models.TaskInstanceMetrics`
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -2050,7 +2050,7 @@ class EnvDataCpm(AbstractModel):
         """
         :param Zones: 黑石可用區名稱清單。如ap-guangzhou-bls-1, 可通過黑石介面[DescribeRegions]( https://cloud.taifucloud.com/document/api/386/33564)介面獲取。不是Batch可用區名稱。目前僅支援一個可用區名稱。
         :type Zones: list of str
-        :param InstanceTypes: 購買的機型ID。通過黑石介面[DescribeDeviceClass]( https://cloud.taifucloud.com/document/api/386/32911)查詢設備型号，獲取機型訊息。
+        :param InstanceTypes: 購買的機型ID。通過黑石介面[DescribeDeviceClass]( https://cloud.taifucloud.com/document/api/386/32911)查詢設備型號，獲取機型訊息。
         :type InstanceTypes: list of str
         :param TimeUnit: 購買時長單位，取值：m(月)。
         :type TimeUnit: str
@@ -2066,13 +2066,13 @@ class EnvDataCpm(AbstractModel):
         :type NeedSecurityAgent: int
         :param NeedMonitorAgent: 是否安裝監控Agent，取值：1(安裝) 0(不安裝)，預設取值0。
         :type NeedMonitorAgent: int
-        :param AutoRenewFlag: 自動續約标志位，取值：1(自動續約) 0(不自動續約)，預設取值0。
+        :param AutoRenewFlag: 自動續約標志位，取值：1(自動續約) 0(不自動續約)，預設取值0。
         :type AutoRenewFlag: int
         :param IsZoning: 數據盤是否格式化，取值：1(格式化) 0(不格式化)，預設取值爲1。
         :type IsZoning: int
-        :param FileSystem: 指定數據盤的文件系統格式，當前支援 ext4和xfs選項， 預設爲ext4。 參數适用于數據盤和Linux， 且在IsZoning爲1時生效。
+        :param FileSystem: 指定數據盤的文件系統格式，當前支援 ext4和xfs選項， 預設爲ext4。 參數适用於數據盤和Linux， 且在IsZoning爲1時生效。
         :type FileSystem: str
-        :param Password: 設置Linux root或Windows Administrator的密碼。若不設置此參數，預設情況下會随機生成密碼，并以站内信方式通知到用戶。
+        :param Password: 設置Linux root或Windows Administrator的密碼。若不設置此參數，預設情況下會随機生成密碼，並以站内信方式通知到用戶。
         :type Password: str
         :param ApplyEip: 是否分配彈性公網IP，取值：1(分配) 0(不分配)，預設取值0。
         :type ApplyEip: int
@@ -2084,7 +2084,7 @@ class EnvDataCpm(AbstractModel):
         :type ImageId: str
         :param SysRootSpace: 系統盤根分區大小，單位爲G，預設取值10G。通過黑石介面[DescribeDeviceClassPartition]( https://cloud.taifucloud.com/document/api/386/32910)查詢機型RAID方式以及系統盤大小，獲取根分區訊息。
         :type SysRootSpace: int
-        :param SysDataSpace: /data分區大小，單位爲G。如果系統盤還有剩餘大小，會分配給/data分區。（特殊情況：如果剩餘空間不足10G，并且沒有指定/data分區，則剩餘空間會分配給Root分區）。
+        :param SysDataSpace: /data分區大小，單位爲G。如果系統盤還有剩餘大小，會分配給/data分區。（特殊情況：如果剩餘空間不足10G，並且沒有指定/data分區，則剩餘空間會分配給Root分區）。
         :type SysDataSpace: int
         :param HyperThreading: 是否開啓超線程，取值：1(開啓) 0(關閉)，預設取值1。
         :type HyperThreading: int
@@ -2171,7 +2171,7 @@ class EventConfig(AbstractModel):
 
     def __init__(self):
         """
-        :param EventName: 事件類型，包括：<br/><li>“JOB_RUNNING”：作業運作，适用于"SubmitJob"。</li><li>“JOB_SUCCEED”：作業成功，适用于"SubmitJob"。</li><li>“JOB_FAILED”：作業失敗，适用于"SubmitJob"。</li><li>“JOB_FAILED_INTERRUPTED”：作業失敗，保留實例，适用于"SubmitJob"。</li><li>“TASK_RUNNING”：任務運作，适用于"SubmitJob"。</li><li>“TASK_SUCCEED”：任務成功，适用于"SubmitJob"。</li><li>“TASK_FAILED”：任務失敗，适用于"SubmitJob"。</li><li>“TASK_FAILED_INTERRUPTED”：任務失敗，保留實例，适用于"SubmitJob"。</li><li>“TASK_INSTANCE_RUNNING”：任務實例運作，适用于"SubmitJob"。</li><li>“TASK_INSTANCE_SUCCEED”：任務實例成功，适用于"SubmitJob"。</li><li>“TASK_INSTANCE_FAILED”：任務實例失敗，适用于"SubmitJob"。</li><li>“TASK_INSTANCE_FAILED_INTERRUPTED”：任務實例失敗，保留實例，适用于"SubmitJob"。</li><li>“COMPUTE_ENV_CREATED”：計算環境已創建，适用于"CreateComputeEnv"。</li><li>“COMPUTE_ENV_DELETED”：計算環境已删除，适用于"CreateComputeEnv"。</li><li>“COMPUTE_NODE_CREATED”：計算節點已創建，适用于"CreateComputeEnv"和"SubmitJob"。</li><li>“COMPUTE_NODE_CREATION_FAILED”：計算節點創建失敗，适用于"CreateComputeEnv"和"SubmitJob"。</li><li>“COMPUTE_NODE_RUNNING”：計算節點運作中，适用于"CreateComputeEnv"和"SubmitJob"。</li><li>“COMPUTE_NODE_ABNORMAL”：計算節點異常，适用于"CreateComputeEnv"和"SubmitJob"。</li><li>“COMPUTE_NODE_DELETING”：計算節點已删除，适用于"CreateComputeEnv"和"SubmitJob"。</li>
+        :param EventName: 事件類型，包括：<br/><li>“JOB_RUNNING”：作業運作，适用於"SubmitJob"。</li><li>“JOB_SUCCEED”：作業成功，适用於"SubmitJob"。</li><li>“JOB_FAILED”：作業失敗，适用於"SubmitJob"。</li><li>“JOB_FAILED_INTERRUPTED”：作業失敗，保留實例，适用於"SubmitJob"。</li><li>“TASK_RUNNING”：任務運作，适用於"SubmitJob"。</li><li>“TASK_SUCCEED”：任務成功，适用於"SubmitJob"。</li><li>“TASK_FAILED”：任務失敗，适用於"SubmitJob"。</li><li>“TASK_FAILED_INTERRUPTED”：任務失敗，保留實例，适用於"SubmitJob"。</li><li>“TASK_INSTANCE_RUNNING”：任務實例運作，适用於"SubmitJob"。</li><li>“TASK_INSTANCE_SUCCEED”：任務實例成功，适用於"SubmitJob"。</li><li>“TASK_INSTANCE_FAILED”：任務實例失敗，适用於"SubmitJob"。</li><li>“TASK_INSTANCE_FAILED_INTERRUPTED”：任務實例失敗，保留實例，适用於"SubmitJob"。</li><li>“COMPUTE_ENV_CREATED”：計算環境已創建，适用於"CreateComputeEnv"。</li><li>“COMPUTE_ENV_DELETED”：計算環境已删除，适用於"CreateComputeEnv"。</li><li>“COMPUTE_NODE_CREATED”：計算節點已創建，适用於"CreateComputeEnv"和"SubmitJob"。</li><li>“COMPUTE_NODE_CREATION_FAILED”：計算節點創建失敗，适用於"CreateComputeEnv"和"SubmitJob"。</li><li>“COMPUTE_NODE_RUNNING”：計算節點運作中，适用於"CreateComputeEnv"和"SubmitJob"。</li><li>“COMPUTE_NODE_ABNORMAL”：計算節點異常，适用於"CreateComputeEnv"和"SubmitJob"。</li><li>“COMPUTE_NODE_DELETING”：計算節點已删除，适用於"CreateComputeEnv"和"SubmitJob"。</li>
         :type EventName: str
         :param EventVars: 自定義鍵值對
         :type EventVars: list of EventVar
@@ -2242,11 +2242,11 @@ class Externals(AbstractModel):
 
 
 class Filter(AbstractModel):
-    """>描述鍵值對過濾器，用于條件過濾查詢。例如過濾ID、名稱、狀态等
+    """>描述鍵值對過濾器，用於條件過濾查詢。例如過濾ID、名稱、狀态等
     > * 若存在多個`Filter`時，`Filter`間的關系爲邏輯與（`AND`）關系。
     > * 若同一個`Filter`存在多個`Values`，同一`Filter`下`Values`間的關系爲邏輯或（`OR`）關系。
     >
-    > 以[DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲 一區 ***并且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
+    > 以[DescribeInstances](https://cloud.taifucloud.com/document/api/213/15728)介面的`Filter`爲例。若我們需要查詢可用區（`zone`）爲 一區 ***並且*** 實例計費模式（`instance-charge-type`）爲包年包月 ***或者*** 按量計費的實例時，可如下實現：
     ```
     Filters.0.Name=zone
     &Filters.0.Values.0=ap-guangzhou-1
@@ -2514,7 +2514,7 @@ class InternetAccessible(AbstractModel):
         :type InternetChargeType: str
         :param InternetMaxBandwidthOut: 公網出頻寬上限，單位：Mbps。預設值：0Mbps。不同機型頻寬上限範圍不一緻，具體限制詳見[購買網絡頻寬](https://cloud.taifucloud.com/document/product/213/12523)。
         :type InternetMaxBandwidthOut: int
-        :param PublicIpAssigned: 是否分配公網IP。取值範圍：<br><li>TRUE：表示分配公網IP<br><li>FALSE：表示不分配公網IP<br><br>當公網頻寬大于0Mbps時，可自由選擇開通與否，預設開通公網IP；當公網頻寬爲0，則不允許分配公網IP。該參數僅在RunInstances介面中作爲入參使用。
+        :param PublicIpAssigned: 是否分配公網IP。取值範圍：<br><li>TRUE：表示分配公網IP<br><li>FALSE：表示不分配公網IP<br><br>當公網頻寬大於0Mbps時，可自由選擇開通與否，預設開通公網IP；當公網頻寬爲0，則不允許分配公網IP。該參數僅在RunInstances介面中作爲入參使用。
         :type PublicIpAssigned: bool
         :param BandwidthPackageId: 頻寬包ID。可通過[`DescribeBandwidthPackages`](https://cloud.taifucloud.com/document/api/215/19209)介面返回值中的`BandwidthPackageId`獲取。該參數僅在RunInstances介面中作爲入參使用。
         :type BandwidthPackageId: str
@@ -2614,9 +2614,9 @@ class Job(AbstractModel):
         :type Dependences: list of Dependence
         :param Notifications: 通知訊息
         :type Notifications: list of Notification
-        :param TaskExecutionDependOn: 對于存在依賴關系的任務中，後序任務執行對于前序任務的依賴條件。取值範圍包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，預設值爲PRE_TASK_SUCCEED。
+        :param TaskExecutionDependOn: 對於存在依賴關系的任務中，後序任務執行對於前序任務的依賴條件。取值範圍包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，預設值爲PRE_TASK_SUCCEED。
         :type TaskExecutionDependOn: str
-        :param StateIfCreateCvmFailed: 表示創建 CVM 失敗按照何種策略處理。取值範圍包括 FAILED，RUNNABLE。FAILED 表示創建 CVM 失敗按照一次執行失敗處理，RUNNABLE 表示創建 CVM 失敗按照繼續等待處理。預設值爲FAILED。StateIfCreateCvmFailed對于提交的指定計算環境的作業無效。
+        :param StateIfCreateCvmFailed: 表示創建 CVM 失敗按照何種策略處理。取值範圍包括 FAILED，RUNNABLE。FAILED 表示創建 CVM 失敗按照一次執行失敗處理，RUNNABLE 表示創建 CVM 失敗按照繼續等待處理。預設值爲FAILED。StateIfCreateCvmFailed對於提交的指定計算環境的作業無效。
         :type StateIfCreateCvmFailed: str
         """
         self.Tasks = None
@@ -2678,7 +2678,7 @@ class JobView(AbstractModel):
         :param EndTime: 結束時間
 注意：此欄位可能返回 null，表示取不到有效值。
         :type EndTime: str
-        :param TaskMetrics: 任務統計指标
+        :param TaskMetrics: 任務統計指標
         :type TaskMetrics: :class:`taifucloudcloud.batch.v20170312.models.TaskMetrics`
         """
         self.JobId = None
@@ -2746,7 +2746,7 @@ class LoginSettings(AbstractModel):
 
     def __init__(self):
         """
-        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>Linux實例密碼必須8到16位，至少包括兩項[a-z，A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? \/ ]中的特殊符号。<br><li>Windows實例密碼必須12到16位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = { } [ ] : ; ' , . ? \/]中的特殊符号。<br><br>若不指定該參數，則由系統随機生成密碼，并通過站内信方式通知到用戶。
+        :param Password: 實例登入密碼。不同作業系統類型密碼複雜度限制不一樣，具體如下：<br><li>Linux實例密碼必須8到16位，至少包括兩項[a-z，A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? \/ ]中的特殊符號。<br><li>Windows實例密碼必須12到16位，至少包括三項[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & * - + = { } [ ] : ; ' , . ? \/]中的特殊符號。<br><br>若不指定該參數，則由系統随機生成密碼，並通過站内信方式通知到用戶。
         :type Password: str
         :param KeyIds: 金鑰ID清單。關聯金鑰後，就可以通過對應的私鑰來訪問實例；KeyId可通過介面DescribeKeyPairs獲取，金鑰與密碼不能同時指定，同時Windows作業系統不支援指定金鑰。當前僅支援購買的時候指定一個金鑰。
         :type KeyIds: list of str
@@ -2908,13 +2908,13 @@ class NamedComputeEnv(AbstractModel):
         :type Authentications: list of Authentication
         :param InputMappings: 輸入映射訊息
         :type InputMappings: list of InputMapping
-        :param AgentRunningMode: agent運作模式，适用于Windows系統
+        :param AgentRunningMode: agent運作模式，适用於Windows系統
         :type AgentRunningMode: :class:`taifucloudcloud.batch.v20170312.models.AgentRunningMode`
         :param Notifications: 通知訊息
         :type Notifications: :class:`taifucloudcloud.batch.v20170312.models.Notification`
-        :param ActionIfComputeNodeInactive: 非活躍節點處理策略，預設“RECREATE”，即對于實例創建失敗或異常退還的計算節點，定期重新創建實例資源。
+        :param ActionIfComputeNodeInactive: 非活躍節點處理策略，預設“RECREATE”，即對於實例創建失敗或異常退還的計算節點，定期重新創建實例資源。
         :type ActionIfComputeNodeInactive: str
-        :param ResourceMaxRetryCount: 對于實例創建失敗或異常退還的計算節點，定期重新創建實例資源的最大重試次數，最大值11，如果不設置的話，系統會設置一個預設值，當前爲7
+        :param ResourceMaxRetryCount: 對於實例創建失敗或異常退還的計算節點，定期重新創建實例資源的最大重試次數，最大值11，如果不設置的話，系統會設置一個預設值，當前爲7
         :type ResourceMaxRetryCount: int
         """
         self.EnvName = None
@@ -2990,9 +2990,9 @@ class NamedCpmComputeEnv(AbstractModel):
         :type InputMappings: list of InputMapping
         :param Notifications: 通知訊息
         :type Notifications: :class:`taifucloudcloud.batch.v20170312.models.Notification`
-        :param ActionIfComputeNodeInactive: 非活躍節點處理策略，預設“RECREATE”，即對于實例創建失敗或異常退還的計算節點，定期重新創建實例資源。
+        :param ActionIfComputeNodeInactive: 非活躍節點處理策略，預設“RECREATE”，即對於實例創建失敗或異常退還的計算節點，定期重新創建實例資源。
         :type ActionIfComputeNodeInactive: str
-        :param ResourceMaxRetryCount: 對于實例創建失敗或異常退還的計算節點，定期重新創建實例資源的最大重試次數，最大值11，如果不設置的話，系統會設置一個預設值，當前爲7
+        :param ResourceMaxRetryCount: 對於實例創建失敗或異常退還的計算節點，定期重新創建實例資源的最大重試次數，最大值11，如果不設置的話，系統會設置一個預設值，當前爲7
         :type ResourceMaxRetryCount: int
         """
         self.EnvName = None
@@ -3077,7 +3077,7 @@ class OsInfo(AbstractModel):
         :type OsEnglishDescription: str
         :param OsClass: 作業系統的分類，如CentOs Debian。
         :type OsClass: str
-        :param ImageTag: 标識映像分類。public:公共映像; private: 專屬映像。
+        :param ImageTag: 標識映像分類。public:公共映像; private: 專屬映像。
         :type ImageTag: str
         :param MaxPartitionSize: 作業系統，ext4文件下所支援的最大的磁盤大小。單位爲T。
         :type MaxPartitionSize: int
@@ -3158,11 +3158,11 @@ class Placement(AbstractModel):
         :type Zone: str
         :param ProjectId: 實例所屬項目ID。該參數可以通過調用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 欄位來獲取。不填爲預設項目。
         :type ProjectId: int
-        :param HostIds: 實例所屬的專用宿主機ID清單，僅用于入參。如果您有購買專用宿主機并且指定了該參數，則您購買的實例就會随機的佈署在這些專用宿主機上。
+        :param HostIds: 實例所屬的專用宿主機ID清單，僅用於入參。如果您有購買專用宿主機並且指定了該參數，則您購買的實例就會随機的佈署在這些專用宿主機上。
         :type HostIds: list of str
         :param HostIps: 指定母機ip生産子機
         :type HostIps: list of str
-        :param HostId: 實例所屬的專用宿主機ID，僅用于出參。
+        :param HostId: 實例所屬的專用宿主機ID，僅用於出參。
         :type HostId: str
         """
         self.Zone = None
@@ -3187,13 +3187,13 @@ class RedirectInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param StdoutRedirectPath: 标準輸出重定向路徑
+        :param StdoutRedirectPath: 標準輸出重定向路徑
         :type StdoutRedirectPath: str
-        :param StderrRedirectPath: 标準錯誤重定向路徑
+        :param StderrRedirectPath: 標準錯誤重定向路徑
         :type StderrRedirectPath: str
-        :param StdoutRedirectFileName: 标準輸出重定向文件名，支援三個占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+        :param StdoutRedirectFileName: 標準輸出重定向文件名，支援三個占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
         :type StdoutRedirectFileName: str
-        :param StderrRedirectFileName: 标準錯誤重定向文件名，支援三個占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+        :param StderrRedirectFileName: 標準錯誤重定向文件名，支援三個占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
         :type StderrRedirectFileName: str
         """
         self.StdoutRedirectPath = None
@@ -3216,13 +3216,13 @@ class RedirectLocalInfo(AbstractModel):
 
     def __init__(self):
         """
-        :param StdoutLocalPath: 标準輸出重定向本地路徑
+        :param StdoutLocalPath: 標準輸出重定向本地路徑
         :type StdoutLocalPath: str
-        :param StderrLocalPath: 标準錯誤重定向本地路徑
+        :param StderrLocalPath: 標準錯誤重定向本地路徑
         :type StderrLocalPath: str
-        :param StdoutLocalFileName: 标準輸出重定向本地文件名，支援三個占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+        :param StdoutLocalFileName: 標準輸出重定向本地文件名，支援三個占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
         :type StdoutLocalFileName: str
-        :param StderrLocalFileName: 标準錯誤重定向本地文件名，支援三個占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+        :param StderrLocalFileName: 標準錯誤重定向本地文件名，支援三個占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
         :type StderrLocalFileName: str
         """
         self.StdoutLocalPath = None
@@ -3366,7 +3366,7 @@ class SubmitJobRequest(AbstractModel):
         :type Placement: :class:`taifucloudcloud.batch.v20170312.models.Placement`
         :param Job: 作業訊息
         :type Job: :class:`taifucloudcloud.batch.v20170312.models.Job`
-        :param ClientToken: 用于保證請求幂等性的字串。該字串由用戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
+        :param ClientToken: 用於保證請求幂等性的字串。該字串由用戶生成，需保證不同請求之間唯一，最大值不超過64個ASCII字元。若不指定該參數，則無法保證請求的幂等性。
         :type ClientToken: str
         """
         self.Placement = None
@@ -3391,7 +3391,7 @@ class SubmitJobResponse(AbstractModel):
 
     def __init__(self):
         """
-        :param JobId: 當通過本介面來提交作業時會返回該參數，表示一個作業ID。返回作業ID清單并不代表作業解析/運作成功，可根據 DescribeJob 介面查詢其狀态。
+        :param JobId: 當通過本介面來提交作業時會返回該參數，表示一個作業ID。返回作業ID清單並不代表作業解析/運作成功，可根據 DescribeJob 介面查詢其狀态。
         :type JobId: str
         :param RequestId: 唯一請求 ID，每次請求都會返回。定位問題時需要提供該次請求的 RequestId。
         :type RequestId: str
@@ -3467,9 +3467,9 @@ class Task(AbstractModel):
         :type MaxRetryCount: int
         :param Timeout: 任務啓動後的超時時間，單位秒，預設爲86400秒
         :type Timeout: int
-        :param MaxConcurrentNum: 任務最大并發數限制，預設沒有限制。
+        :param MaxConcurrentNum: 任務最大並發數限制，預設沒有限制。
         :type MaxConcurrentNum: int
-        :param RestartComputeNode: 任務完成後，重啓計算節點。适用于指定計算環境執行任務。
+        :param RestartComputeNode: 任務完成後，重啓計算節點。适用於指定計算環境執行任務。
         :type RestartComputeNode: bool
         :param ResourceMaxRetryCount: 啓動任務過程中，創建計算資源如CVM失敗後的最大重試次數，預設爲0。
         :type ResourceMaxRetryCount: int
@@ -3557,22 +3557,22 @@ class TaskInstanceLog(AbstractModel):
         """
         :param TaskInstanceIndex: 任務實例
         :type TaskInstanceIndex: int
-        :param StdoutLog: 标準輸出日志（Base64編碼）
+        :param StdoutLog: 標準輸出日志（Base64編碼）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type StdoutLog: str
-        :param StderrLog: 标準錯誤日志（Base64編碼）
+        :param StderrLog: 標準錯誤日志（Base64編碼）
 注意：此欄位可能返回 null，表示取不到有效值。
         :type StderrLog: str
-        :param StdoutRedirectPath: 标準輸出重定向路徑
+        :param StdoutRedirectPath: 標準輸出重定向路徑
 注意：此欄位可能返回 null，表示取不到有效值。
         :type StdoutRedirectPath: str
-        :param StderrRedirectPath: 标準錯誤重定向路徑
+        :param StderrRedirectPath: 標準錯誤重定向路徑
 注意：此欄位可能返回 null，表示取不到有效值。
         :type StderrRedirectPath: str
-        :param StdoutRedirectFileName: 标準輸出重定向文件名
+        :param StdoutRedirectFileName: 標準輸出重定向文件名
 注意：此欄位可能返回 null，表示取不到有效值。
         :type StdoutRedirectFileName: str
-        :param StderrRedirectFileName: 标準錯誤重定向文件名
+        :param StderrRedirectFileName: 標準錯誤重定向文件名
 注意：此欄位可能返回 null，表示取不到有效值。
         :type StderrRedirectFileName: str
         """
@@ -3596,7 +3596,7 @@ class TaskInstanceLog(AbstractModel):
 
 
 class TaskInstanceMetrics(AbstractModel):
-    """任務實例統計指标
+    """任務實例統計指標
 
     """
 
@@ -3705,7 +3705,7 @@ class TaskInstanceView(AbstractModel):
 
 
 class TaskMetrics(AbstractModel):
-    """任務統計指标
+    """任務統計指標
 
     """
 
@@ -3977,7 +3977,7 @@ class VirtualPrivateCloud(AbstractModel):
         :type VpcId: str
         :param SubnetId: 私有網絡子網ID，形如`subnet-xxx`。有效的私有網絡子網ID可通過登入[控制台](https://console.cloud.taifucloud.com/vpc/subnet?rid=1)查詢；也可以調用介面  [DescribeSubnets](/document/api/215/15784) ，從介面返回中的`unSubnetId`欄位獲取。若在創建子機時SubnetId與VpcId同時傳入`DEFAULT`，則強制使用預設vpc網絡。
         :type SubnetId: str
-        :param AsVpcGateway: 是否用作公網閘道。公網閘道只有在實例擁有公網IP以及處于私有網絡下時才能正常使用。取值範圍：<br><li>TRUE：表示用作公網閘道<br><li>FALSE：表示不用作公網閘道<br><br>預設取值：FALSE。
+        :param AsVpcGateway: 是否用作公網閘道。公網閘道只有在實例擁有公網IP以及處於私有網絡下時才能正常使用。取值範圍：<br><li>TRUE：表示用作公網閘道<br><li>FALSE：表示不用作公網閘道<br><br>預設取值：FALSE。
         :type AsVpcGateway: bool
         :param PrivateIpAddresses: 私有網絡子網 IP 數組，在創建實例、修改實例vpc屬性操作中可使用此參數。當前僅批次創建多台實例時支援傳入相同子網的多個 IP。
         :type PrivateIpAddresses: list of str
