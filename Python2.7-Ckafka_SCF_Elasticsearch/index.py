@@ -51,6 +51,7 @@ def cleanData(data):
         return data
     except:
         logger.error("Error occured when cleanning data")
+        raise
 
 # 处理ckafka数据
 def dealWithData(record):
@@ -75,6 +76,7 @@ def dealWithData(record):
         yield data
     except:
         logger.error("Error occured when dealing data")
+        raise
 
 # 写入es
 def writeDataToEs(records):
@@ -86,6 +88,7 @@ def writeDataToEs(records):
             bulk(es, data)
         except:
             logger.error("Error occured when writing to es")
+            raise
 
 
 def main_handler(event, context):

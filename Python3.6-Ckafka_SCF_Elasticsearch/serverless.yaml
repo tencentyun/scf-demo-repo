@@ -8,9 +8,6 @@ inputs:
   name: Ckafka_SCF_Elasticsearch
   src: ./
   description: >-
-    This demo will connect Ckafca and consume message automatically. The SCF
-    will write each message to txt by each line. Then SCF will name this file by
-    time and upload this txt to COS bucket.
     使用Ckafka+云函数+ES+Kibana，提供日志转存和清洗能力，支持功能自定义。
   handler: index.main_handler
   runtime: Python3.6
