@@ -51,7 +51,7 @@
     "functions": {
       "name": "dial_url_by_timer",  // Function name, only support English, 函数名称，只支持英文
       "description": "本示例主要演示定时拨测 URL 列表中的地址，当拨测失败时，通过邮件发送告警",
-      "handler":"dial_url_by_timer.main_handler",
+      "handler":"index.main_handler",
       "memorySize": 128, // Memorysize, 运行配置内存
       "timeout": 10, // Timeout, 运行超时时间
       "runtime": "Php7", //Runtime, users can search by this keyword, 运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
