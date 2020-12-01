@@ -49,7 +49,7 @@
         "functions": {
             "name": "COS_Sync_Backup",// Function name which only be in English. // 函数名称，只支持英文
             "description": "This demo will backup the COS bucket object to another bucket when you upload the file. 此示例使用COS作为触发器，在用户上传文件到指定bucket时，将该文件复制到另一个用于备份的bucket存储",
-            "handler": "sync_backup.main_handler",
+            "handler": "index.main_handler",
             "memorySize": 128,// Running memory. 运行配置内存
             "timeout": 10,// Running timeout. 运行超时时间
             "runtime": "Php7",//Runtime which users can search demo by this keyword. 运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
