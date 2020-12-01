@@ -43,7 +43,7 @@
               // The tags only support English and can be multiple, we suggest you to use keywords such as runtime, trigger, environment and so on. 
               // 标签统一为英文，可编写多个，建议使用runtime、触发器、场景等关键字，用户可以通过该关键字搜索。前台需要展示，请认真填写，不支持中文
       ],
-      "version": "1.1"  
+      "version": "1.1.1"  
       // Version number, which identifies the demo version status. 
       // Demo will not to update to the page if the version number unmodified.
       //版本号，通过版本号标识 demo 升级情况，未修改版本号会导致 demo 不更新至页面
@@ -51,7 +51,7 @@
     "functions": {
       "name": "map_function",  // Function name which only be in English. 函数名称，只支持英文
       "description": "his is one of the MapReduce function which is map_function. 本示例Demo演示怎么利用COS来做MapReduce，一共需要2个函数：map_function和reduce_function，3个COS Bucket：srcmr、middlestagebucket 和 destmr",
-      "handler":"map_function.main_handler",
+      "handler":"index.main_handler",
       "memorySize": 128,  // Running memory. 运行配置内存
       "timeout": 3,  // Running timeout. 运行超时时间
       "runtime": "Python2.7", // Runtime which users can search demo by this keyword. 运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
