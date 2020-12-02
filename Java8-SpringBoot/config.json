@@ -41,12 +41,12 @@
             "tags":[
                 "Java8", "springboot", "API GW"
             ],
-            "version": "1.0.0"
+            "version": "1.0.1"
             },
             "functions": {
                 "name": "scf-springboot-web",
                 "description": "使用 SCF 部署 Spring Boot 并通过 API 网关测试事件模拟请求和获取 spring 返回的处理结构。",
-                "handler":"example.MyHandler::handleRequest",
+                "handler":"example.Hello::mainHandler",
                 "memorySize": 128,
                 "timeout": 25,
                 "runtime": "Java8",
