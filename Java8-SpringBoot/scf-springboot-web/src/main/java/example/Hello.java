@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.Map;
 
-public class MyHandler {
+public class Hello {
     private static volatile boolean cold_launch;
     // initialize phase, initialize cold_launch
    static {
@@ -19,7 +19,7 @@ public class MyHandler {
 
     // function entry, use ApiGatewayEvent to get request
     // send to localhost:8080/hello as defined in helloSpringBoot.java
-    public String handleRequest(APIGatewayProxyRequestEvent req) {
+    public String mainHandler(APIGatewayProxyRequestEvent req) {
 
         System.out.println("start main handler");
         if (cold_launch) {
