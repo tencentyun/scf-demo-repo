@@ -11,7 +11,7 @@ from qcloud_cos_v5 import CosClientError
 
 # Setting user properties, including secret_id, secret_key, region, bucket
 # 设置用户属性, 包括secret_id, secret_key, region，bucket
-appid = '1251762227'  # Please replace with your APPID. 请替换为您的 APPID
+appid = '1251762***'  # Please replace with your APPID. 请替换为您的 APPID
 secret_id = u'*********'  # Please replace with your SecretId. 请替换为您的 SecretId
 secret_key = u'********'  # Please replace with your SecretKey. 请替换为您的 SecretKey
 region = 'ap-guangzhou'  # Please replace with your region. 替换为用户的region
