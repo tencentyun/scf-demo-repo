@@ -52,7 +52,7 @@
         "functions": {
             "name": "kafka_to_cos_consumer", // Function name which only be in English. 函数名称，只支持英文
             "description": "CKAFKA data backup to COS. CKAFKA数据备份到COS",
-            "handler": "kafka_to_cos_consumer.main_handler",
+            "handler": "index.main_handler",
             "memorySize": 128, // Running memory. 运行配置内存
             "timeout": 300, // Running timeout. 运行超时时间
             "runtime": "Python2.7", // Runtime which users can search demo by this keyword. 运行环境，用户可以通过该关键字搜索["Python2.7", "Python3.6", "Nodejs6.10", "Java8", "LuaCDN", "NodejsCDN", "Php5", "Php7", "Nodejs8.9", "Go1"]
