@@ -1,0 +1,14 @@
+Resources:
+  default:
+    Type: TencentCloud::Serverless::Namespace
+    Cos_Merge_File:
+      Type: TencentCloud::Serverless::Function
+      Properties:
+        CodeUri: ./
+        Description: 本示例使用 COS 触发器，完成 COS SELECT 数据检索
+        Environment:
+          Variables:
+        Handler: index.main_handler
+        MemorySize: 896
+        Runtime: Nodejs10.15
+        Timeout: 900
